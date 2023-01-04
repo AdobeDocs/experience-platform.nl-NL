@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd;profiel;rtcp;XDM-grafieken
-title: Overzicht van realtime-klantprofiel
+title: Real-Time overzicht van klantprofiel
 topic-legacy: guide
-description: In realtime Klantprofiel worden gegevens uit verschillende bronnen samengevoegd en biedt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
+description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] - overzicht
+# [!DNL Real-Time Customer Profile]-overzicht
 
-Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. [!DNL Profile] staat u toe om uw klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt. Dit overzicht helpt u de rol en het gebruik van [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
+Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-Time Customer Profile], kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. [!DNL Profile] staat u toe om uw klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt. Dit overzicht helpt u de rol en het gebruik van [!DNL Real-Time Customer Profile] in [!DNL Experience Platform].
 
 ## [!DNL Profile] in Experience Platform
 
@@ -23,11 +23,11 @@ De verhouding tussen het Profiel van de Klant in real time en andere diensten bi
 
 ## Werken met profielen
 
-[!DNL Real-time Customer Profile] voegt gegevens van verschillende bedrijfssystemen samen en verleent dan toegang tot die gegevens in de vorm van klantenprofielen met verwante gebeurtenissen van de tijdreeksen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek. In de volgende secties worden enkele kernconcepten beschreven die u moet begrijpen om profielen op effectieve wijze te kunnen maken en onderhouden binnen het Platform.
+[!DNL Real-Time Customer Profile] voegt gegevens van verschillende bedrijfssystemen samen en verleent dan toegang tot die gegevens in de vorm van klantenprofielen met verwante gebeurtenissen van de tijdreeksen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek. In de volgende secties worden enkele kernconcepten beschreven die u moet begrijpen om profielen op effectieve wijze te kunnen maken en onderhouden binnen het Platform.
 
 ### Samenstelling van profielentiteit
 
-Een profiel van de Klant in real time wordt samengesteld uit een belangrijkste entiteit, genoemd **primaire entiteit** en diverse ondersteunende entiteiten. De primaire entiteit bestaat uit eigenschappen, gedrag, en segmentlidmaatschap van een profiel. Andere entiteiten staan de segmenteringsmotor toe om gegevens buiten de primaire entiteit van het profiel te gebruiken, en omvatten het volgende:
+Een Real-Time Klantprofiel bestaat uit een hoofdentiteit, de **primaire entiteit** en diverse ondersteunende entiteiten. De primaire entiteit bestaat uit eigenschappen, gedrag, en segmentlidmaatschap van een profiel. Andere entiteiten staan de segmenteringsmotor toe om gegevens buiten de primaire entiteit van het profiel te gebruiken, en omvatten het volgende:
 
 - **Maateenheid**: De entiteit die wordt gebruikt om het proces voor gegevensmodellering voor informatie te vereenvoudigen die over gebeurtenissen of profielverslagen wordt gedeeld. Dit wordt ook wel de opgezochte entiteit of classificatieentiteit genoemd.
 - **B2B-entiteit**: Entiteiten die de verhouding van het profiel met zaken-aan-zaken rekeningen en kansen beschrijven.
@@ -40,17 +40,17 @@ Een profiel van de Klant in real time wordt samengesteld uit een belangrijkste e
 
 ### Profielgegevensopslag
 
-Hoewel [!DNL Real-time Customer Profile] verwerkt ingesloten gegevens en gebruikt Adobe Experience Platform [!DNL Identity Service] om gerelateerde gegevens samen te voegen via identiteitstoewijzing, worden er eigen gegevens bijgehouden in de [!DNL Profile] gegevensopslag. De [!DNL Profile] store is gescheiden van catalogusgegevens in het datumpeer en [!DNL Identity Service] gegevens in de identiteitsgrafiek.
+Hoewel [!DNL Real-Time Customer Profile] verwerkt ingesloten gegevens en gebruikt Adobe Experience Platform [!DNL Identity Service] om gerelateerde gegevens samen te voegen via identiteitstoewijzing, worden er eigen gegevens bijgehouden in de [!DNL Profile] gegevensopslag. De [!DNL Profile] store is gescheiden van catalogusgegevens in het datumpeer en [!DNL Identity Service] gegevens in de identiteitsgrafiek.
 
 De profielopslag gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Platform Data Lake gebruikt de opslag van Microsoft Azure Data Lake.
 
 ### Profielhulplijnen
 
-Experience Platform biedt een aantal hulplijnen om te voorkomen dat u [XDM-schema&#39;s (Experience Data Model)](../xdm/home.md) die niet kunnen worden ondersteund door het realtime-klantprofiel. Dit omvat zachte grenzen die in prestatiesdegradatie zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Lees voor meer informatie, zoals een lijst met richtlijnen en voorbeelden van gebruiksgevallen de [Profielhulplijnen](guardrails.md) documentatie.
+Experience Platform biedt een aantal hulplijnen om te voorkomen dat u [XDM-schema&#39;s (Experience Data Model)](../xdm/home.md) die in real time profiel van de Klant niet kan steunen. Dit omvat zachte grenzen die in prestatiesdegradatie zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Lees voor meer informatie, zoals een lijst met richtlijnen en voorbeelden van gebruiksgevallen de [Profielhulplijnen](guardrails.md) documentatie.
 
 ### Profieldashboard {#profile-dashboard}
 
-De interface van het Experience Platform biedt een dashboard waarmee u belangrijke informatie over uw gegevens van het Profiel van de Klant in real time kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Leren hoe u toegang krijgt tot en werkt met de [!DNL Profile] het dashboard in UI, en gedetailleerde informatie over de metriek die in het dashboard wordt getoond, verwijs naar [UI-gids voor profieldashboard](ui/profile-dashboard.md).
+De interface van het Experience Platform biedt een dashboard waardoor u belangrijke informatie over uw gegevens van het Profiel van de Klant in real time kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Leren hoe u toegang krijgt tot en werkt met de [!DNL Profile] het dashboard in UI, en gedetailleerde informatie over de metriek die in het dashboard wordt getoond, verwijs naar [UI-gids voor profieldashboard](ui/profile-dashboard.md).
 
 ### Profielfragmenten versus samengevoegde profielen {#profile-fragments-vs-merged-profiles}
 
@@ -82,7 +82,7 @@ Als u meer wilt weten over samenvoegingsbeleid en hun rol in het Experience Plat
 
 ### Unieregelingen {#profile-fragments-and-union-schemas}
 
-Een van de belangrijkste kenmerken van [!DNL Real-time Customer Profile] is de mogelijkheid om gegevens met meerdere kanalen te verenigen. Wanneer [!DNL Real-time Customer Profile] wordt gebruikt om tot een entiteit toegang te hebben, kan het u van een samengevoegde mening van alle profielfragmenten voor die entiteit over datasets voorzien, die als &quot;verenigingsmening&quot;wordt bedoeld en door wat als verenigingsschema wordt genoemd mogelijk gemaakt.
+Een van de belangrijkste kenmerken van [!DNL Real-Time Customer Profile] is de mogelijkheid om gegevens met meerdere kanalen te verenigen. Wanneer [!DNL Real-Time Customer Profile] wordt gebruikt om tot een entiteit toegang te hebben, kan het u van een samengevoegde mening van alle profielfragmenten voor die entiteit over datasets voorzien, die als &quot;verenigingsmening&quot;wordt bedoeld en door wat als verenigingsschema wordt genoemd mogelijk gemaakt.
 
 Ga voor meer informatie over vakbondsschema&#39;s, waaronder hoe u vakbondsschema&#39;s kunt openen in de gebruikersinterface naar de [UI-hulplijn verenigingsschema](ui/union-schema.md).
 
@@ -96,15 +96,15 @@ Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenis
 
 ## Profielen en segmenten
 
-Adobe Experience Platform [!DNL Segmentation Service] produceert het publiek nodig om ervaringen voor uw individuele klanten van energie te voorzien. Wanneer een publiekssegment wordt gecreeerd, wordt identiteitskaart van dat segment toegevoegd aan de lijst van segmentlidmaatschap voor alle kwalificerende profielen. Segmentregels worden gemaakt en toegepast op [!DNL Real-time Customer Profile] gegevens die RESTful APIs en het gebruikersinterface van de Bouwer van het Segment gebruiken. Om meer over segmentatie te leren, gelieve te beginnen door te lezen [Overzicht van segmentatieservice](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] produceert het publiek nodig om ervaringen voor uw individuele klanten van energie te voorzien. Wanneer een publiekssegment wordt gecreeerd, wordt identiteitskaart van dat segment toegevoegd aan de lijst van segmentlidmaatschap voor alle kwalificerende profielen. Segmentregels worden gemaakt en toegepast op [!DNL Real-Time Customer Profile] gegevens die RESTful APIs en het gebruikersinterface van de Bouwer van het Segment gebruiken. Om meer over segmentatie te leren, gelieve te beginnen door te lezen [Overzicht van segmentatieservice](../segmentation/home.md).
 
 ### Streaming opname en streamingsegmentatie
 
-Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wordt genoemd. Wanneer gegevens uit profiel- en tijdreeksen worden opgenomen, [!DNL Real-time Customer Profile] besluit automatisch om die gegevens van segmenten op te nemen of uit te sluiten door een lopend proces genoemd het stromen segmentatie, alvorens het met bestaande gegevens samen te voegen en de verenigingsmening bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan. Terwijl het worden opgenomen, ondergaat de gegevens ook bevestiging om ervoor te zorgen het behoorlijk wordt opgenomen en conform het schema is waarop de dataset gebaseerd is. Voor meer informatie over welke validatie tijdens inname wordt uitgevoerd, leest u eerst de [kwaliteitsoverzicht van gegevensinvoer](../ingestion/quality/overview.md).
+Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wordt genoemd. Wanneer gegevens uit profiel- en tijdreeksen worden opgenomen, [!DNL Real-Time Customer Profile] besluit automatisch om die gegevens van segmenten op te nemen of uit te sluiten door een lopend proces genoemd het stromen segmentatie, alvorens het met bestaande gegevens samen te voegen en de verenigingsmening bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan. Terwijl het worden opgenomen, ondergaat de gegevens ook bevestiging om ervoor te zorgen het behoorlijk wordt opgenomen en conform het schema is waarop de dataset gebaseerd is. Voor meer informatie over welke validatie tijdens inname wordt uitgevoerd, leest u eerst de [kwaliteitsoverzicht van gegevensinvoer](../ingestion/quality/overview.md).
 
 ## Edge-prognoses
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in echt te drijven - tijd, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform biedt realtime toegang tot gegevens via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in echt te verstrekken - tijd. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Als u meer wilt leren en wilt werken met de projecties, gebruikt u de optie [!DNL Real-time Customer Profile] API, verwijs naar [eindpunthulplijn randprojectie](api/edge-projections.md).
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in echt te drijven - tijd, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform biedt realtime toegang tot gegevens via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in echt te verstrekken - tijd. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Als u meer wilt leren en wilt werken met de projecties, gebruikt u de optie [!DNL Real-Time Customer Profile] API, verwijs naar [eindpunthulplijn randprojectie](api/edge-projections.md).
 
 ## Gegevens invoegen in [!DNL Profile]
 
@@ -116,7 +116,7 @@ Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten
 
 ### Metrische gegevens voor het opnemen van profielen
 
-Met observability Insights kunt u belangrijke metriek in Adobe Experience Platform onthullen. Naast [!DNL Experience Platform] gebruiksstatistieken en prestatie-indicatoren voor diverse [!DNL Platform] functionaliteit, zijn er specifieke op profiel betrekking hebbende metriek die u toestaan om inzicht in inkomende verzoektarieven, succesvolle innametarieven, ingebedde verslaggrootte, en meer te krijgen. Om meer te leren, begin door te lezen [Overzicht van de API voor waarnemingsinformatie](../observability/api/overview.md), en voor een volledige lijst van de metriek van het Profiel van de Klant in real time, zie de documentatie over [beschikbare cijfers](../observability/api/metrics.md#available-metrics).
+Met observability Insights kunt u belangrijke metriek in Adobe Experience Platform onthullen. Naast [!DNL Experience Platform] gebruiksstatistieken en prestatie-indicatoren voor diverse [!DNL Platform] functionaliteit, zijn er specifieke op profiel betrekking hebbende metriek die u toestaan om inzicht in inkomende verzoektarieven, succesvolle innametarieven, ingebedde verslaggrootte, en meer te krijgen. Om meer te leren, begin door te lezen [Overzicht van de API voor waarnemingsinformatie](../observability/api/overview.md)en voor een volledige lijst van de metriek van het Profiel van de Klant in real time, zie de documentatie over [beschikbare cijfers](../observability/api/metrics.md#available-metrics).
 
 ## Profielopslaggegevens bijwerken
 
@@ -136,7 +136,7 @@ Gegevensbeheer wordt op verschillende punten beheerd. Dit zijn onder andere het 
 
 ### Verzoeken om opt-out en privacy van gegevens verwerken
 
-[!DNL Experience Platform] biedt uw klanten de mogelijkheid om aanvragen voor een opt-out te verzenden met betrekking tot het gebruik en de opslag van hun gegevens binnen [!DNL Real-time Customer Profile]. Raadpleeg de documentatie over voor meer informatie over de manier waarop aanvragen voor een opt-out worden afgehandeld [naleven van opt-out-verzoeken](../segmentation/consents.md).
+[!DNL Experience Platform] biedt uw klanten de mogelijkheid om aanvragen voor een opt-out te verzenden met betrekking tot het gebruik en de opslag van hun gegevens binnen [!DNL Real-Time Customer Profile]. Raadpleeg de documentatie over voor meer informatie over de manier waarop aanvragen voor een opt-out worden afgehandeld [naleven van opt-out-verzoeken](../segmentation/consents.md).
 
 ## Volgende stappen en extra bronnen
 

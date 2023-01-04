@@ -3,7 +3,7 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Overzicht van dashboard-aanpassing
 description: Meer informatie over de manieren waarop u de gegevens die in uw Adobe Experience Platform-dashboards worden weergegeven, kunt aanpassen.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 0%

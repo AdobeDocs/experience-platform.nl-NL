@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Selecteren **[!UICONTROL Datasets]** in de linkernavigatie om tot de werkruimte 
 
 >[!NOTE]
 >
->Selecteer het filterpictogram naast de zoekbalk om filtermogelijkheden te gebruiken om alleen die datasets weer te geven die zijn ingeschakeld voor [!DNL Real-time Customer Profile].
+>Selecteer het filterpictogram naast de zoekbalk om filtermogelijkheden te gebruiken om alleen die datasets weer te geven die zijn ingeschakeld voor [!DNL Real-Time Customer Profile].
 
 ![De werkruimte van datasets wordt getoond.](../images/tutorials/segment-export-dataset/browse.png)
 
@@ -57,7 +57,7 @@ Als u de optie [!DNL XDM Individual Profile Union Schema] voor gebruik in uw dat
 
 >[!NOTE]
 >
->Ondanks het feit dat de unieschema&#39;s aan het Profiel van de Klant in real time door definitie deelnemen, zijn zij vermeld als &quot;Niet toegelaten&quot;wegens het feit dat zij niet voor Profiel op de zelfde manier zoals traditionele schema&#39;s worden toegelaten.
+>Ondanks het feit dat de verenigingsschema&#39;s aan het Profiel van de Klant in real time door definitie deelnemen, zijn zij vermeld als &quot;Niet toegelaten&quot;wegens het feit dat zij niet voor Profiel op de zelfde manier zoals traditionele schema&#39;s worden toegelaten.
 
 Selecteer het keuzerondje naast **[!UICONTROL XDM Individual Profile]** selecteert u vervolgens **[!UICONTROL Next]**.
 

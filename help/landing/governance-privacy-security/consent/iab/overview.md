@@ -5,7 +5,7 @@ title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic-legacy: privacy events
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2544'
 ht-degree: 0%
@@ -40,10 +40,10 @@ Deze gids vereist ook een werkend begrip van de volgende diensten van de Platfor
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](../../../../profile/home.md): Hefboomwerking [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
+* [Klantprofiel in realtime](../../../../profile/home.md): Hefboomwerking [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende services voor Platforms kunt integreren in uw klantgerichte website.
    * [Opdrachten voor SDK-toestemming](../../../../edge/consent/supporting-consent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde bevelen van SDK in deze gids wordt getoond die.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Hiermee kunt u delen [!DNL Real-time Customer Profile] gegevens in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren als marketingstrategieën.
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Hiermee kunt u delen [!DNL Real-Time Customer Profile] gegevens in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren als marketingstrategieën.
 
 Naast de hierboven vermelde diensten van het Platform, zou u ook vertrouwd moeten zijn met [bestemmingen](../../../../data-governance/home.md) en hun rol in het ecosysteem van de Platform.
 
@@ -68,7 +68,7 @@ Alle segmenten die Adobe Audience Manager met Platform deelt (via de [!DNL Audie
 
 Zodra TCF toestemmingsgegevens met succes is opgenomen, vinden de volgende processen in de stroomafwaartse diensten van het Platform plaats:
 
-1. [!DNL Real-time Customer Profile] werkt de opgeslagen toestemmingsgegevens voor het profiel van die klant bij.
+1. [!DNL Real-Time Customer Profile] werkt de opgeslagen toestemmingsgegevens voor het profiel van die klant bij.
 1. Het Platform verwerkt klant IDs slechts als de verkoperstoestemming voor Platform (565) voor elke identiteitskaart in een cluster wordt verstrekt.
 1. Wanneer het uitvoeren van segmenten aan bestemmingen tot leden van de TCF 2.0 verkoperslijst behoort, omvat het Platform slechts profielen als de verkoperstoestemmingen voor beide Platform (565) *en* de individuele bestemming wordt verstrekt voor elke identiteitskaart in een cluster.
 

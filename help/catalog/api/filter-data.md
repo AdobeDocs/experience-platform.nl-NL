@@ -5,7 +5,7 @@ title: Catalogusgegevens filteren met zoekopdrachtparameters
 topic-legacy: developer guide
 description: De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 0%
@@ -210,7 +210,7 @@ Er zijn enkele beperkingen waarmee u rekening kunt houden wanneer u tags gebruik
 * Tagnamen zijn uniek voor uw IMS-organisatie.
 * Adobe-processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
 * De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform]en kan daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
-   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Identity Service]](../../identity-service/home.md).
 
 Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap. De tags binnen die eigenschap hebben de vorm van sleutel-waardeparen, waarbij elke tagwaarde wordt weergegeven als een array met één tekenreeks:

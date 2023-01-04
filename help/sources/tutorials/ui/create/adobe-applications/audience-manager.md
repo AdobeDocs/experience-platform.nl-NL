@@ -3,7 +3,7 @@ keywords: Experience Platform;huis;populaire onderwerpen;de bronschakelaar van d
 title: Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface
 description: Deze zelfstudie begeleidt u door de stappen om een bronverbinding voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]
 
 ## Volgende stappen
 
-Terwijl een gegevensstroom van de Audience Manager actief is, worden de inkomende gegevens automatisch opgenomen in de Profielen van de Klant in real time. U kunt deze inkomende gegevens nu gebruiken en publiekssegmenten maken met de Dienst van de Segmentatie van het Platform. Raadpleeg de volgende documenten voor meer informatie:
+Terwijl een Audience Manager dataflow actief is, worden inkomende gegevens automatisch opgenomen in Real-Time Klantprofielen. U kunt deze inkomende gegevens nu gebruiken en publiekssegmenten maken met de Dienst van de Segmentatie van het Platform. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van het realtime klantprofiel](../../../../../profile/home.md)
 * [Overzicht van segmentatieservice](../../../../../segmentation/home.md)

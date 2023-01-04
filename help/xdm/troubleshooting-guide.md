@@ -5,7 +5,7 @@ title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Zie voor meer informatie de [resource-id](api/getting-started.md#resource-identi
 
 ### Wanneer begint een schema het breken van veranderingen te verhinderen?
 
-Het breken kan veranderingen in een schema worden aangebracht zolang het nooit in de verwezenlijking van een dataset of toegelaten voor gebruik in is gebruikt [[!DNL Real-time Customer Profile]](../profile/home.md). Zodra een schema in datasetverwezenlijking is gebruikt of voor gebruik met toegelaten [!DNL Real-time Customer Profile], de regels van [Schemaevolutie](schema/composition.md#evolution) strikt door het systeem worden gehandhaafd.
+Het breken kan veranderingen in een schema worden aangebracht zolang het nooit in de verwezenlijking van een dataset of toegelaten voor gebruik in is gebruikt [[!DNL Real-Time Customer Profile]](../profile/home.md). Zodra een schema in datasetverwezenlijking is gebruikt of voor gebruik met toegelaten [!DNL Real-Time Customer Profile], de regels van [Schemaevolutie](schema/composition.md#evolution) strikt door het systeem worden gehandhaafd.
 
 ### Wat is de maximumgrootte van een lang gebiedstype?
 
@@ -72,24 +72,24 @@ Zie de sectie over het [identiteitsvelden definiëren](./tutorials/create-schema
 
 ### Heeft mijn schema een primaire identiteit nodig?
 
-Primaire identiteiten zijn optioneel, omdat schema&#39;s ofwel nul ofwel één ervan kunnen hebben. Een schema moet echter een primaire identiteit hebben voordat het schema kan worden ingeschakeld voor gebruik in [!DNL Real-time Customer Profile]. Zie de [identiteit](./tutorials/create-schema-ui.md#identity-field) voor meer informatie.
+Primaire identiteiten zijn optioneel, omdat schema&#39;s ofwel nul ofwel één ervan kunnen hebben. Een schema moet echter een primaire identiteit hebben voordat het schema kan worden ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile]. Zie de [identiteit](./tutorials/create-schema-ui.md#identity-field) voor meer informatie.
 
-### Hoe laat ik een schema voor gebruik binnen toe [!DNL Real-time Customer Profile]?
+### Hoe laat ik een schema voor gebruik binnen toe [!DNL Real-Time Customer Profile]?
 
-Schema&#39;s zijn ingeschakeld voor gebruik in [[!DNL Real-time Customer Profile]](../profile/home.md) door de toevoeging van een tag &quot; union &quot; binnen de `meta:immutableTags` kenmerk van het schema. Een schema inschakelen voor gebruik met [!DNL Profile] kan worden uitgevoerd met de API of de gebruikersinterface.
+Schema&#39;s zijn ingeschakeld voor gebruik in [[!DNL Real-Time Customer Profile]](../profile/home.md) door de toevoeging van een tag &quot; union &quot; binnen de `meta:immutableTags` kenmerk van het schema. Een schema inschakelen voor gebruik met [!DNL Profile] kan worden uitgevoerd met de API of de gebruikersinterface.
 
 #### Een bestaand schema inschakelen voor [!DNL Profile] API gebruiken
 
 Voer een PATCH-verzoek in om het schema bij te werken en het `meta:immutableTags` attribuut as an array containing the value &quot;union&quot;. Als de update succesvol is, zal de reactie het bijgewerkte schema tonen dat nu de verenigingsmarkering bevat.
 
-Voor meer informatie over het gebruiken van API om een schema voor gebruik toe te laten binnen [!DNL Real-time Customer Profile], zie de [vakbonden](./api/unions.md) document van de [!DNL Schema Registry] ontwikkelaarshandleiding.
+Voor meer informatie over het gebruiken van API om een schema voor gebruik toe te laten binnen [!DNL Real-Time Customer Profile], zie de [vakbonden](./api/unions.md) document van de [!DNL Schema Registry] ontwikkelaarshandleiding.
 
 #### Een bestaand schema inschakelen voor [!DNL Profile] gebruiken van UI
 
 In [!DNL Experience Platform], selecteert u **[!UICONTROL Schemas]** in de linkernavigatie, en selecteer de naam van het schema u wenst om van de lijst van schema&#39;s toe te laten. Dan, aan de rechterkant van de redacteur onder **[!UICONTROL Schema Properties]**, selecteert u **[!UICONTROL Profile]** om het aan te schakelen.
 
 
-Zie de sectie over [gebruik in het profiel van de Klant in real time](./tutorials/create-schema-ui.md#profile) in de [!UICONTROL Schema Editor] zelfstudie.
+Zie de sectie over [gebruik in het Profiel van de Klant in real time](./tutorials/create-schema-ui.md#profile) in de [!UICONTROL Schema Editor] zelfstudie.
 
 ### Kan ik een samenvoegingsschema direct uitgeven?
 
@@ -230,9 +230,9 @@ Afhankelijk van het eindpunt gebruikt u, `detailed-message` eigenschap geeft aan
 
 Voor lijsten met compatibele Accept-headers voor verschillende API-aanvragen raadpleegt u de bijbehorende secties in het dialoogvenster [Handleiding voor ontwikkelaars van het schema Register](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] fouten
+### [!DNL Real-Time Customer Profile] fouten
 
-De volgende foutberichten zijn gekoppeld aan bewerkingen die zijn betrokken bij het inschakelen van schema&#39;s voor [!DNL Real-time Customer Profile]. Zie de [vakbonden](./api/unions.md) in de [!DNL Schema Registry] API-handleiding voor meer informatie.
+De volgende foutberichten zijn gekoppeld aan bewerkingen die zijn betrokken bij het inschakelen van schema&#39;s voor [!DNL Real-Time Customer Profile]. Zie de [vakbonden](./api/unions.md) in de [!DNL Schema Registry] API-handleiding voor meer informatie.
 
 #### Er moet een identiteitsbeschrijving voor verwijzingen zijn
 

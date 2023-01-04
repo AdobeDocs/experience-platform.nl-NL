@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2161'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Updates voor bestaande functies:
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] Service](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Adobe Experience Platform Data Lake-migratie {#migration}
@@ -60,7 +60,7 @@ Zie voor meer informatie de [toegangsbeheeroverzicht](../../access-control/home.
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Centrale aanbiedingenbibliotheek | De interface waar u creeert en de verschillende elementen beheert die uw aanbiedingen vormen, en hun regels en beperkingen bepalen. |
-| Beslissingsengine voorstellen | De hefboomwerkingen van de de Beslissingsmotor van de Aanbieding [!DNL Platform] gegevens en [!DNL Real-time Customer Profiles], samen met de bibliotheek met aanbiedingen, om de juiste tijd, klanten en kanalen te selecteren waaraan aanbiedingen worden geleverd. |
+| Beslissingsengine voorstellen | De hefboomwerkingen van de de Beslissingsmotor van de Aanbieding [!DNL Platform] gegevens en [!DNL Real-Time Customer Profiles], samen met de bibliotheek met aanbiedingen, om de juiste tijd, klanten en kanalen te selecteren waaraan aanbiedingen worden geleverd. |
 
 Zie voor meer informatie de [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentatie.
 

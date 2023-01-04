@@ -3,7 +3,7 @@ keywords: segmentatie; segmentatie rtcdp;realtime segmentering van klantgegevens
 title: Segmenteringsservice in Real-time Customer Data Platform
 description: Adobe Real-Time Customer Data Platformå is gebouwd boven op Adobe Experience Platform en gebruikt veel van de services en functionaliteit van het Experience Platform. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een 
 * Het verstrekken van zeer nauwkeurige klantenaandrijvingsmodellen voor sterkere segmentatie en het richten.
 * Inzicht in de invloedrijke factoren en de waarschijnlijkheid achter bepaalde gedragingen van klanten.
 * Het bieden van klantgerichte opties voor de unieke gebruiksgevallen en de gegevens van uw bedrijf.
-* Verbetering van het Real-Time Klantprofiel met klantennestscores zoals churn en conversie.
+* Verbetering van het Real-Time Klantprofiel met klantennestscores zoals kurn en conversie.
 * Klantenprofielen verbeteren met invloedrijke factoren voor populatiescore.
 * Het creëren van segmenten van klanten die op invloedrijke factoren en aandrijvingsscores worden gebaseerd.
 

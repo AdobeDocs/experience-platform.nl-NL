@@ -5,7 +5,7 @@ title: Overzicht van streaming inscriptie
 topic-legacy: overview
 description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Streaming invoer voor Adobe Experience Platform biedt gebruikers een methode om 
 
 ## Wat kan je doen met streaming opname?
 
-Met Adobe Experience Platform kunt u zorgen voor een gecoördineerde, consistente en relevante ervaring door een [!DNL Real-time Customer Profile] voor elk van uw individuele klanten. Streaming opname speelt een sleutelrol bij het samenstellen van deze profielen doordat u [!DNL Profile] gegevens in de [!DNL Data Lake] met zo weinig mogelijk vertraging.
+Met Adobe Experience Platform kunt u zorgen voor een gecoördineerde, consistente en relevante ervaring door een [!DNL Real-Time Customer Profile] voor elk van uw individuele klanten. Streaming opname speelt een sleutelrol bij het samenstellen van deze profielen doordat u [!DNL Profile] gegevens in de [!DNL Data Lake] met zo weinig mogelijk vertraging.
 
 De volgende video is ontworpen om u te helpen bij het begrijpen van streaming opname en geeft een overzicht van de bovenstaande concepten.
 
@@ -32,7 +32,7 @@ Lees de [een verbindingsgids voor streaming maken](../tutorials/create-streaming
 
 ### Stream naar gegevenssets
 
-Zodra u zeker bent dat uw gegevens schoon zijn, kunt u uw datasets toelaten voor [!DNL Real-time Customer Profile] en [!DNL Identity Service].
+Zodra u zeker bent dat uw gegevens schoon zijn, kunt u uw datasets toelaten voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service].
 
 Voor meer informatie over het toelaten van een dataset voor [!DNL Profile] en [!DNL Identity Service], lees de [vormen een datasetgids](../../profile/tutorials/dataset-configuration.md).
 

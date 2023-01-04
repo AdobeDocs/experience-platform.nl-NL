@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;profiel;real-time klantprofiel;het oplossen van problemen;gidsen;richtlijnen;grens;entiteit;primaire entiteit;dimensie entiteit;
-title: Standaardhulplijnen voor gegevens in realtime klantprofiel
+title: Standaardhulplijnen voor realtime klantprofielgegevens
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1929'
 ht-degree: 1%
 
 ---
 
-# Standaardgeleiding voor [!DNL Real-time Customer Profile] data
+# Standaardgeleiding voor [!DNL Real-Time Customer Profile] data
 
 Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden op basis van gedragsinzichten en klantkenmerken in de vorm van realtime klantprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
 
@@ -25,9 +25,9 @@ Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgege
 
 ## Aan de slag
 
-De volgende services van het Experience Platform zijn betrokken bij het modelleren van gegevens van het realtime klantprofiel:
+De volgende services van het Experience Platform zijn betrokken bij het modelleren van realtime gegevens van het klantprofiel:
 
-* [[!DNL Real-time Customer Profile]](home.md): Uniforme consumentenprofielen maken met gegevens uit meerdere bronnen.
+* [[!DNL Real-Time Customer Profile]](home.md): Uniforme consumentenprofielen maken met gegevens uit meerdere bronnen.
 * [Identiteiten](../identity-service/home.md): De identiteiten van de brug van ongelijksoortige gegevensbronnen aangezien zij in Platform worden opgenomen.
 * [Schemas](../xdm/home.md): De schema&#39;s van het Model van de Gegevens van de ervaring (XDM) zijn het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 * [Segmenten](../segmentation/home.md): De segmenteringsmotor binnen Platform wordt gebruikt om segmenten van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
@@ -124,9 +124,9 @@ Deze sectie bevat aanvullende details voor de limieten in dit document.
 
 De [!DNL Profile] opslaggegevensmodel bestaat uit twee kerneenheidstypen:
 
-* **Primaire entiteit:** Een primaire entiteit, of profielentiteit, voegt gegevens samen om een &quot;enige bron van waarheid&quot;voor een individu te vormen. Deze verenigde gegevens worden vertegenwoordigd gebruikend wat als &quot;verenigingsmening&quot;wordt bekend is. Een verenigingsmening voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkel samenvoegingsschema uitvoeren. Het samenvoegingsschema voor [!DNL Real-time Customer Profile] is een gedenormaliseerd hybride gegevensmodel dat als container voor alle profielattributen en gedragsgebeurtenissen dienst doet.
+* **Primaire entiteit:** Een primaire entiteit, of profielentiteit, voegt gegevens samen om een &quot;enige bron van waarheid&quot;voor een individu te vormen. Deze verenigde gegevens worden vertegenwoordigd gebruikend wat als &quot;verenigingsmening&quot;wordt bekend is. Een verenigingsmening voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkel samenvoegingsschema uitvoeren. Het samenvoegingsschema voor [!DNL Real-Time Customer Profile] is een gedenormaliseerd hybride gegevensmodel dat als container voor alle profielattributen en gedragsgebeurtenissen dienst doet.
 
-   Tijdonafhankelijke kenmerken, ook bekend als &quot;recordgegevens&quot;, worden gemodelleerd met behulp van [!DNL XDM Individual Profile], terwijl tijdreeksgegevens, ook wel &quot;gebeurtenisgegevens&quot; genoemd, worden gemodelleerd met [!DNL XDM ExperienceEvent]. Als in Adobe Experience Platform record- en tijdreeksgegevens worden ingevoerd, wordt dit geactiveerd [!DNL Real-time Customer Profile] beginnen gegevens in te voeren die voor het gebruik ervan zijn ingeschakeld. Hoe meer interacties en details worden opgenomen, hoe robuuster de afzonderlijke profielen worden.
+   Tijdonafhankelijke kenmerken, ook bekend als &quot;recordgegevens&quot;, worden gemodelleerd met behulp van [!DNL XDM Individual Profile], terwijl tijdreeksgegevens, ook wel &quot;gebeurtenisgegevens&quot; genoemd, worden gemodelleerd met [!DNL XDM ExperienceEvent]. Als in Adobe Experience Platform record- en tijdreeksgegevens worden ingevoerd, wordt dit geactiveerd [!DNL Real-Time Customer Profile] beginnen gegevens in te voeren die voor het gebruik ervan zijn ingeschakeld. Hoe meer interacties en details worden opgenomen, hoe robuuster de afzonderlijke profielen worden.
 
    ![Een infografisch waarin de verschillen tussen recordgegevens en tijdreeksgegevens worden beschreven.](images/guardrails/profile-entity.png)
 

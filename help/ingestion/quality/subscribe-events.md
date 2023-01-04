@@ -5,7 +5,7 @@ title: Gegevensinscriptie
 topic-legacy: overview
 description: Om bij het controleren van het innameproces te helpen, maakt Adobe Experience Platform het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van de status van de opgenomen gegevens en om het even welke mogelijke mislukkingen.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit meerdere stappen. Zodra u gegevensbestanden identificeert waarin moeten worden opgenomen [!DNL Platform], begint het innameproces en elke stap komt achtereenvolgens voor tot de gegevens met succes worden opgenomen of ontbreken. Het innameproces kan worden gestart met behulp van de [Adobe Experience Platform-API voor gegevensverwerking](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) of door [!DNL Experience Platform] gebruikersinterface.
 
-Gegevens geladen in [!DNL Platform] moet door veelvoudige stappen gaan om zijn bestemming te bereiken, [!DNL Data Lake] of de [!DNL Real-time Customer Profile] gegevensopslag. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
+Gegevens geladen in [!DNL Platform] moet door veelvoudige stappen gaan om zijn bestemming te bereiken, [!DNL Data Lake] of de [!DNL Real-Time Customer Profile] gegevensopslag. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
 
 Bijstaan bij het toezicht op het inslikken [!DNL Experience Platform] maakt het mogelijk om op een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van de status van de opgenomen gegevens en om het even welke mogelijke mislukkingen.
 
@@ -86,9 +86,9 @@ In de volgende tabel staan de statusmeldingen voor gegevensinvoer waarop u zich 
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | success | Een partij werd succesvol opgenomen in een dataset binnen [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | fout | Een partij kon niet in een dataset binnen worden opgenomen [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | succes | Een batch is opgenomen in de [!DNL Profile] gegevensopslag. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | fout | Er kan geen batch in de [!DNL Profile] gegevensopslag. |
-| `ig_load_success` | [!DNL Identity Service] | succes | Gegevens zijn geladen in de identiteitsgrafiek. |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | success | Een batch is opgenomen in de [!DNL Profile] gegevensopslag. |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | fout | Er kan geen batch in de [!DNL Profile] gegevensopslag. |
+| `ig_load_success` | [!DNL Identity Service] | success | Gegevens zijn geladen in de identiteitsgrafiek. |
 | `ig_load_failure` | [!DNL Identity Service] | fout | Gegevens kunnen niet in de identiteitsgrafiek worden geladen. |
 
 >[!NOTE]

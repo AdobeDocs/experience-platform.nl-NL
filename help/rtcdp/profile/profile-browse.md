@@ -3,7 +3,7 @@ keywords: weergaveprofielen rtcdp;rtcdp, profielweergave;rtcdp-profielen
 title: Bladeren door profielen in Real-time Customer Data Platform
 description: Met Adobe Real-time Customer Data Platform kunt u in real-time door de gegevens van het klantprofiel bladeren via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%

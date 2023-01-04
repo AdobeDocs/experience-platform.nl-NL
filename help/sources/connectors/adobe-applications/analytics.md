@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;Analytics Source Connec
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -18,11 +18,11 @@ Dit document biedt een overzicht van [!DNL Analytics] en beschrijft de gebruiksg
 
 ## Adobe Analytics- en analysegegevens
 
-[!DNL Analytics] is een krachtige motor die u meer over uw klanten helpt leren, hoe zij met uw Web-eigenschappen in wisselwerking staan, zien waar uw digitale marketing uitgaven efficiënt is, en gebieden van verbetering identificeren. [!DNL Analytics] verwerkt miljarden webtransacties per jaar en de [!DNL Analytics] Met de bronaansluiting kunt u eenvoudig op deze rijke gedragsgegevens tikken en de [!DNL Real-time Customer Profile] over een paar minuten.
+[!DNL Analytics] is een krachtige motor die u meer over uw klanten helpt leren, hoe zij met uw Web-eigenschappen in wisselwerking staan, zien waar uw digitale marketing uitgaven efficiënt is, en gebieden van verbetering identificeren. [!DNL Analytics] verwerkt miljarden webtransacties per jaar en de [!DNL Analytics] Met de bronaansluiting kunt u eenvoudig op deze rijke gedragsgegevens tikken en de [!DNL Real-Time Customer Profile] over een paar minuten.
 
 ![](./images/analytics-data-experience-platform.png)
 
-Op hoog niveau [!DNL Analytics] verzamelt gegevens via verschillende digitale kanalen en meerdere datacenters over de hele wereld. Zodra de gegevens worden verzameld, worden de de Identificatie van de Bezoeker, de Regels van de Segmentatie en van de Transformatie van de Architectuur (VISTA), en verwerkingsregels toegepast om de inkomende gegevens te vormen. Nadat de ruwe gegevens door deze lichte verwerking zijn gegaan, wordt het dan beschouwd klaar voor consumptie door [!DNL Real-time Customer Profile]. In een parallel aan het bovenstaande proces worden dezelfde verwerkte gegevens op micro-basis verzameld en opgenomen in gegevensverzamelingen van de Platform voor gebruik door [!DNL Data Science Workspace], [!DNL Query Service]en andere toepassingen voor gegevensdetectie.
+Op hoog niveau [!DNL Analytics] verzamelt gegevens via verschillende digitale kanalen en meerdere datacenters over de hele wereld. Zodra de gegevens worden verzameld, worden de de Identificatie van de Bezoeker, de Regels van de Segmentatie en van de Transformatie van de Architectuur (VISTA), en verwerkingsregels toegepast om de inkomende gegevens te vormen. Nadat de ruwe gegevens door deze lichte verwerking zijn gegaan, wordt het dan beschouwd klaar voor consumptie door [!DNL Real-Time Customer Profile]. In een parallel aan het bovenstaande proces worden dezelfde verwerkte gegevens op micro-basis verzameld en opgenomen in gegevensverzamelingen van de Platform voor gebruik door [!DNL Data Science Workspace], [!DNL Query Service]en andere toepassingen voor gegevensdetectie.
 
 Zie de [overzicht van verwerkingsregels](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) voor meer informatie over verwerkingsregels.
 
@@ -36,7 +36,7 @@ Voor meer informatie over XDM raadpleegt u de [XDM System, overzicht](../../../x
 
 ## Hoe worden velden toegewezen van Adobe Analytics aan XDM?
 
-Wanneer een bronverbinding wordt gevestigd voor het brengen [!DNL Analytics] gegevens in Experience Platform die het gebruikersinterface van het Platform gebruiken, worden de gegevensgebieden automatisch in kaart gebracht en opgenomen in [!DNL Real-time Customer Profile] binnen minuten. Voor instructies over het maken van een bronverbinding met [!DNL Analytics] het gebruiken van Platform UI, zie [Zelfstudie over de bronaansluiting voor analyse](../../tutorials/ui/create/adobe-applications/analytics.md).
+Wanneer een bronverbinding wordt gevestigd voor het brengen [!DNL Analytics] gegevens in Experience Platform die het gebruikersinterface van het Platform gebruiken, worden de gegevensgebieden automatisch in kaart gebracht en opgenomen in [!DNL Real-Time Customer Profile] binnen minuten. Voor instructies over het maken van een bronverbinding met [!DNL Analytics] het gebruiken van Platform UI, zie [Zelfstudie over de bronaansluiting voor analyse](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 Voor gedetailleerde informatie over veldtoewijzing tussen [!DNL Analytics] en Experience Platform, zie [Adobe Analytics-veldtoewijzing](./mapping/analytics.md) hulplijn.
 
@@ -46,8 +46,8 @@ De verwachte latentie voor Analytics Data on Platform wordt in de onderstaande t
 
 | Analysegegevens | Verwachte vertraging |
 | -------------- | ---------------- |
-| Nieuwe gegevens naar [!DNL Real-time Customer Profile] (A4T **niet** ingeschakeld) | &lt; 2 minuten |
-| Nieuwe gegevens naar [!DNL Real-time Customer Profile] (A4T **is** ingeschakeld) | &lt; 15 minuten |
+| Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **niet** ingeschakeld) | &lt; 2 minuten |
+| Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **is** ingeschakeld) | &lt; 15 minuten |
 | Nieuwe gegevens voor Data Lake | &lt; 90 minuten |
 | Terugvulling van gebeurtenissen van minder dan 10 miljard | &lt; 4 weken |
 

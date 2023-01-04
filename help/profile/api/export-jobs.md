@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: API-eindpunt voor exporteren van profielen
 topic-legacy: guide
 type: Documentation
-description: In realtime klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
+description: In real-time klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Het eindpunt voor exporteren van profielen
 
-[!DNL Real-time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. Bijvoorbeeld, publiekssegmenten van [!DNL Profile] gegevens kunnen worden geëxporteerd voor activering en profielkenmerken kunnen worden geëxporteerd voor rapportage.
+[!DNL Real-Time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. Bijvoorbeeld, publiekssegmenten van [!DNL Profile] gegevens kunnen worden geëxporteerd voor activering en profielkenmerken kunnen worden geëxporteerd voor rapportage.
 
 Dit document bevat stapsgewijze instructies voor het maken en beheren van exporttaken met de opdracht [Profiel-API](https://www.adobe.com/go/profile-apis-en).
 
@@ -26,11 +26,11 @@ Naast het maken van een exporttaak kunt u ook [!DNL Profile] gegevens die `/enti
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Real-time Customer Profile] API. Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
+De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Real-Time Customer Profile] API. Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 ## Een exporttaak maken
 
-Exporteren [!DNL Profile] gegevens moeten eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend Experience Platform APIs, met het eerste gebruikend de Dienst API van de Catalogus en het laatste gebruikend Real-time het Profiel van de Klant. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
+Exporteren [!DNL Profile] gegevens moeten eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend Experience Platform APIs, met het eerste gebruikend de Dienst API van de Catalogus en het tweede gebruikend Real-Time de Profiel van de Klant API. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
 
 ### Een doelgegevensset maken
 
@@ -86,7 +86,7 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 
 ### Exporttaak starten {#initiate}
 
-Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset door een verzoek van de POST aan te stellen voort te zetten `/export/jobs` eindpunt in het Real-time Profiel van de Klant API en het verstrekken van de details van de gegevens u wenst om in het lichaam van het verzoek uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset door een verzoek van de POST aan te stellen voort te zetten `/export/jobs` eindpunt in het Real-Time Profiel van de Klant API en het verstrekken van de details van de gegevens u wenst om in het lichaam van het verzoek uit te voeren.
 
 **API-indeling**
 

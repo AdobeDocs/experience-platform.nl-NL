@@ -5,7 +5,7 @@ title: XDM-systeemoverzicht
 topic-legacy: overview
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 0%
@@ -116,15 +116,15 @@ Zie de [Overzicht van Query Service](../query-service/home.md) voor meer informa
 
 ### Klantprofiel in realtime
 
-Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt.
+Het profiel van de Klant in real time verstrekt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt.
 
 In real time het Profiel van de Klant verbruikt schema-geformatteerde gegevens die op het [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent] en reageert op query&#39;s die op die gegevens zijn gebaseerd. Profiel ondersteunt het gebruik van schema&#39;s die op andere klassen zijn gebaseerd niet.
 
 Het systeem onderhoudt een geval van elk klantenprofiel, die gegevens samenvoegen om een &quot;enige bron van waarheid&quot;voor het individu te vormen. Deze verenigde gegevens worden vertegenwoordigd gebruikend wat als &quot;verenigingsschema&quot;wordt bekend (die soms als &quot;verenigingsmening wordt bedoeld). Een verenigingsschema voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkel schema uitvoeren.  Wanneer het samenstellen van een schema gebruikend UI of API, kunt u het schema voor gebruik met het Profiel van de Klant in real time toelaten en het etiketteren voor opneming in de unie. Het gelabelde schema neemt dan deel aan de schemadefinitie die aan Profiel wordt doorgegeven.
 
-Als [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent] gegevens worden opgenomen in het meer van Gegevens, het Real-time Profiel van de Klant neemt om het even welke gegevens in die voor zijn gebruik zijn toegelaten. Hoe meer interacties en details worden opgenomen, hoe robuuster de afzonderlijke profielen worden.
+Als [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent] gegevens worden opgenomen in het meer van Gegevens, het Real-Time Profiel van de Klant neemt om het even welke gegevens in die voor zijn gebruik zijn toegelaten. Hoe meer interacties en details worden opgenomen, hoe robuuster de afzonderlijke profielen worden.
 
-[!UICONTROL XDM Individual Profile] gegevens helpen acties te informeren en in staat te stellen via elk kanaal of Adobe-productintegratie. Als deze gegevens worden gecombineerd met een rijke geschiedenis van gedrags- en interactiegegevens, kunnen ze worden gebruikt om het leren van machines te stimuleren. De Real-time API van het Profiel van de Klant kan ook worden gebruikt om de functionaliteit van derdeoplossingen, CRMs, en merkgebonden oplossingen te verrijken.
+[!UICONTROL XDM Individual Profile] gegevens helpen acties te informeren en in staat te stellen via elk kanaal of Adobe-productintegratie. Als deze gegevens worden gecombineerd met een rijke geschiedenis van gedrags- en interactiegegevens, kunnen ze worden gebruikt om het leren van machines te stimuleren. De real-time API van het Profiel van de Klant kan ook worden gebruikt om de functionaliteit van derdeoplossingen, CRMs, en merkgebonden oplossingen te verrijken.
 
 Zie de [Overzicht van het realtime klantprofiel](../profile/home.md) voor meer informatie .
 

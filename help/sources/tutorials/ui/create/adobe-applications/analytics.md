@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
@@ -179,7 +179,7 @@ Nadat u de toewijzingen voor uw [!DNL Analytics] de gegevens van de rapportreeks
 >
 >Filteren op rijniveau gebruiken om voorwaarden toe te passen en te bepalen op welke gegevens **include for Profile ingestion**. Het kolom-vlakke filtreren gebruiken om de kolommen van gegevens te selecteren die u wilt **uitsluiten voor opnemen van profiel**.
 
-U kunt gegevens filteren voor [!DNL Profile] opname op rij- en kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt het rijen-niveau filtreren ook gebruiken om voorwaarden te verbinden gebruikend `AND` alsmede `OR`en de omstandigheden negeren bij gebruik van `NOT`.
+U kunt gegevens filteren voor [!DNL Profile] opname op rij- en kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt het rijen-niveau filtreren ook gebruiken om voorwaarden te verbinden gebruikend `AND` alsmede `OR`en de omstandigheden negeren bij `NOT`.
 
 Als u uw [!DNL Analytics] gegevens op rijniveau, selecteer **[!UICONTROL Row filter]**.
 
@@ -290,9 +290,9 @@ Als u een gegevensstroom wilt verwijderen, gaat u naar de [!UICONTROL Dataflows]
 
 ## Volgende stappen en extra bronnen
 
-Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste inname is voltooid, [!DNL Analytics] gegevens en worden gebruikt door downstreamdiensten van Platforms, zoals [!DNL Real-time Customer Profile] en Segmenteringsservice. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste inname is voltooid, [!DNL Analytics] gegevens en worden gebruikt door downstreamdiensten van Platforms, zoals [!DNL Real-Time Customer Profile] en Segmenteringsservice. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile]-overzicht](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)
 * [[!DNL Data Science Workspace]-overzicht](../../../../../data-science-workspace/home.md)
 * [[!DNL Query Service]-overzicht](../../../../../query-service/home.md)

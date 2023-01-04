@@ -5,14 +5,14 @@ title: Overzicht van identiteitsservice
 topic-legacy: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
 
 ---
 
-# [!DNL Identity Service] - overzicht
+# [!DNL Identity Service]-overzicht
 
 Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen.
 
@@ -52,7 +52,7 @@ Bekijk een dagelijks voorbeeld van de relatie van een consument met je merk:
 
 ![Identiteitskoppeling op Platform](./images/identity-service-stitching.png)
 
-Hoofdzakelijk [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid. De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt, worden gebruikt door het Real-time Klantprofiel om een volledig beeld van een klant en hun interactie met uw merk te maken. Zie voor meer informatie de [Overzicht van het realtime klantprofiel](../profile/home.md).
+Hoofdzakelijk [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid. De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt u met behulp van Real-Time Customer Profile een volledig beeld van een klant en zijn interactie met uw merk. Zie voor meer informatie de [Overzicht van het realtime klantprofiel](../profile/home.md).
 
 ### Gebruiksscenario’s
 
@@ -134,7 +134,7 @@ Door bijvoorbeeld velden met telefoonnummers als identiteitsvelden te labelen, [
 
 ### Een gegevensset configureren voor [!DNL Identity Service]
 
-Tijdens het streamingingproces [!DNL Identity Service ]haalt automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Voordat gegevens kunnen worden ingevoerd, moet deze echter zijn ingeschakeld voor [!DNL Identity Service]. Zie de zelfstudie aan  [een Dataset configureren voor realtime gebruikersprofiel en identiteitsservice met behulp van API&#39;s](../profile/tutorials/dataset-configuration.md) voor meer informatie .
+Tijdens het streamingingproces [!DNL Identity Service ]haalt automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Voordat gegevens kunnen worden ingevoerd, moet deze echter zijn ingeschakeld voor [!DNL Identity Service]. Zie de zelfstudie aan  [het vormen van een Dataset voor het Profiel van de Klant in real time en de Dienst van de Identiteit gebruikend APIs](../profile/tutorials/dataset-configuration.md) voor meer informatie .
 
 ### Gegevens samenvoegen tot [!DNL Identity Service]
 

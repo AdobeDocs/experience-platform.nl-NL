@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: API-eindpunt voor profielsysteemtaken
 topic-legacy: guide
 type: Documentation
-description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het profiel in real-time te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
+description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het realtime-klantprofiel te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Het taakeindpunt van het profielsysteem (verzoeken van de Schrapping)
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens ingevoerd in [!DNL Platform] wordt opgeslagen in het dialoogvenster [!DNL Data Lake]en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens opgeslagen in de [!DNL Real-time Customer Profile] ook gegevens opslaan. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-time Customer Profile] API om een [!DNL Profile] systeemtaak, of `delete request`, die indien nodig ook kunnen worden gewijzigd, bewaakt of verwijderd.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens ingevoerd in [!DNL Platform] wordt opgeslagen in het dialoogvenster [!DNL Data Lake]en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens opgeslagen in de [!DNL Real-Time Customer Profile] ook gegevens opslaan. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-Time Customer Profile] API om een [!DNL Profile] systeemtaak, of `delete request`, die indien nodig ook kunnen worden gewijzigd, bewaakt of verwijderd.
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en r
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 ## Verzoeken om verwijderen weergeven
 

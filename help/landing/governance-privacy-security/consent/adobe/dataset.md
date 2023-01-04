@@ -5,7 +5,7 @@ title: Een gegevensset configureren voor het vastleggen van toestemmings- en voo
 topic-legacy: getting started
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen
 
-Adobe Experience Platform kan uw toestemming-/voorkeursgegevens van de klant alleen verwerken als die gegevens worden verzonden naar een gegevensset waarvan het schema velden bevat die betrekking hebben op toestemmingen en andere machtigingen. Deze gegevensset moet met name gebaseerd zijn op de [!DNL XDM Individual Profile] en ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
+Adobe Experience Platform kan uw toestemming-/voorkeursgegevens van de klant alleen verwerken als die gegevens worden verzonden naar een gegevensset waarvan het schema velden bevat die betrekking hebben op toestemmingen en andere machtigingen. Deze gegevensset moet met name gebaseerd zijn op de [!DNL XDM Individual Profile] en ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile].
 
 Dit document verstrekt stappen om een dataset te vormen om toestemmingsgegevens in Experience Platform te verwerken. Voor een overzicht van de volledige workflow voor het verwerken van toestemmings-/voorkeursgegevens in Platform raadpleegt u de [overzicht van verwerking van toestemming](./overview.md).
 
@@ -133,7 +133,7 @@ Als het schema dat u hebt bewerkt door de [!UICONTROL Profile Dataset] gespecifi
 
 ## Een gegevensset maken op basis van uw toestemmingsschema {#dataset}
 
-Zodra u een schema met toestemmingsgebieden hebt gecreeerd, moet u een dataset tot stand brengen die uiteindelijk de gegevens van de klantentoestemming zal opnemen. Deze gegevensset moet zijn ingeschakeld voor [!DNL Real-time Customer Profile].
+Zodra u een schema met toestemmingsgebieden hebt gecreeerd, moet u een dataset tot stand brengen die uiteindelijk de gegevens van de klantentoestemming zal opnemen. Deze gegevensset moet zijn ingeschakeld voor [!DNL Real-Time Customer Profile].
 
 Selecteer **[!UICONTROL Datasets]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Create dataset]** in de rechterbovenhoek.
 
@@ -151,7 +151,7 @@ De **[!UICONTROL Configure dataset]** wordt weergegeven. Geef een unieke, gemakk
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
-De detailspagina voor de pas gecreëerde dataset verschijnt. Als de dataset op uw tijd-reeksen schema gebaseerd is, dan is het proces volledig. Als de dataset op uw verslagschema gebaseerd is, moet de definitieve stap in het proces de dataset voor gebruik toelaten binnen [!DNL Real-time Customer Profile].
+De detailspagina voor de pas gecreëerde dataset verschijnt. Als de dataset op uw tijd-reeksen schema gebaseerd is, dan is het proces volledig. Als de dataset op uw verslagschema gebaseerd is, moet de definitieve stap in het proces de dataset voor gebruik toelaten binnen [!DNL Real-Time Customer Profile].
 
 Selecteer in het rechterspoor de optie **[!UICONTROL Profile]** schakelen.
 

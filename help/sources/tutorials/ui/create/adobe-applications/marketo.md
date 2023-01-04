@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronconnector in de UI om B2B-gegevens over te brengen naar Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1408'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Schema&#39;s maken en bewerken in de gebruikersinterface](../../../../../xdm/ui/resources/schemas.md): Leer om schema&#39;s in UI tot stand te brengen en uit te geven.
 * [Identiteitsnaamruimten](../../../../../identity-service/namespaces.md): Identiteitsnaamruimten zijn een component van [!DNL Identity Service] die dienen als indicatoren van de context waarop een identiteit betrekking heeft. Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace.
-* [[!DNL Real-time Customer Profile]](/help/profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Vereiste referenties verzamelen
@@ -171,7 +171,7 @@ U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeer
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt die u wilt gebruiken [!DNL Marketo] gegevens. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt die u wilt gebruiken [!DNL Marketo] gegevens. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] - overzicht](/help/profile/home.md)
-* [[!DNL Data Science Workspace] - overzicht](/help/data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile]-overzicht](/help/profile/home.md)
+* [[!DNL Data Science Workspace]-overzicht](/help/data-science-workspace/home.md)

@@ -3,7 +3,7 @@ keywords: gegevensbeheer rtcdp;rtcdp gegevensbeheer;realtime gegevensprofielbehe
 title: Privacy in Real-time Customer Data Platform
 description: Met Adobe Real-time Customer Data Platform kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen voldoen aan de privacyregels.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Wettelijke privacyvoorschriften zoals [!DNL General Data Protection Regulation] 
 
 ## Mogelijkheden voor uitschakelen
 
-[!DNL Real-Time CDP] kunnen klanten ervoor kiezen hun persoonsgegevens niet in gevallen van segmentatiegebruik op te nemen. De voorkeuren voor de optie om te weigeren van klanten worden vastgelegd en opgeslagen door [!DNL Real-time Customer Profile], en kan worden afgedwongen door gebruikers uit te sluiten die uit een segment gebruikend booleaanse logica (&quot;EN NIET&quot;) in het segment voorspellen.
+[!DNL Real-Time CDP] kunnen klanten ervoor kiezen hun persoonsgegevens niet in gevallen van segmentatiegebruik op te nemen. De voorkeuren voor de optie om te weigeren van klanten worden vastgelegd en opgeslagen door [!DNL Real-Time Customer Profile], en kan worden afgedwongen door gebruikers uit te sluiten die uit een segment gebruikend booleaanse logica (&quot;EN NIET&quot;) in het segment voorspellen.
 
 Document weergeven op [naleven van opt-out-verzoeken](../../segmentation/consents.md) in de documentatie van de Adobe Experience Platform Segmentation Service voor meer informatie.
 

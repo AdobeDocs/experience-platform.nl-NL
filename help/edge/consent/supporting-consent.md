@@ -3,7 +3,7 @@ title: Voorkeuren voor toestemming van de klant ondersteunen met de Adobe Experi
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK.
 keywords: toestemming;defaultConsent;default toestemming;setConsent;Profile Privacy field group;Experience Event Privacy field group;Privacy field group;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -138,7 +138,7 @@ alloy("setConsent", {
 });
 ```
 
-Wanneer de toestemming op deze manier wordt geplaatst, wordt het Profiel van de Klant in real time bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het XDM-profielschema het volgende bevat: [Veld groep profielprivacyschema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, [Experience Event Privacy, veldgroep](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) moet worden toegevoegd aan het schema Experience Event.
+Wanneer de toestemming op deze manier wordt geplaatst, wordt het Real-Time Profiel van de Klant bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het XDM-profielschema het volgende bevat: [Veld groep profielprivacyschema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, [Experience Event Privacy, veldgroep](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) moet worden toegevoegd aan het schema Experience Event.
 
 ## Meerdere standaarden verzenden in één aanvraag
 

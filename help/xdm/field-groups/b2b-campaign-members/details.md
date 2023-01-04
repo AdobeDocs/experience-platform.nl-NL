@@ -1,7 +1,8 @@
 ---
 title: XDM Business Campaign Member Details Schema Field Group
 description: Dit document verstrekt een overzicht van de XDM Business Campagne het schemagebiedgroep van de Gegevens van het Lid van de Campagne.
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -21,7 +22,7 @@ ht-degree: 0%
 | `firstRespondedDate` | [!UICONTROL DateTime] | Een tijdstempel van ISO 8601 van wanneer de persoon voor het eerst op de campagne heeft gereageerd. |
 | `hasReachedSuccess` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid heeft geresulteerd in een geslaagde conversie. |
 | `hasResponded` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid op de campagne heeft gereageerd. |
-| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in het realtime profiel van de klant. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
+| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
 | `isExhausted` | [!UICONTROL Boolean] | Geeft aan of dit campagnerelid alle campagneinteracties heeft voltooid. |
 | `lastStatus` | [!UICONTROL String] | De laatste status voor het campagnelid. |
 | `memberStatus` | [!UICONTROL String] | De huidige status voor het campagnelid. |

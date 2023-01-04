@@ -3,7 +3,7 @@ keywords: Experience Platform;huis;populaire onderwerpen;bronnen;schakelaars;bro
 title: Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de gebruikersinterface van het Platform
 description: Leer hoe u Adobe Experience Platform met Adobe Campaign Managed Cloud Services kunt verbinden via de gebruikersinterface van het Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: b9f032c903da2bdb9f37179b1693119bf7b0029d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%
@@ -137,7 +137,7 @@ Deze pagina voorziet u ook van een interface om de meta-gegevensbeschrijving van
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om uw de leveringslogboeken van de Berichten van de Campagne v8 en het volgen logboekgegevens aan Platform te brengen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om uw de leveringslogboeken van de Berichten van de Campagne v8 en het volgen logboekgegevens aan Platform te brengen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] - overzicht](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace] - overzicht](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace]-overzicht](../../../../../data-science-workspace/home.md)

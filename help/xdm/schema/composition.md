@@ -5,7 +5,7 @@ title: Basisbeginselen van de schemacompositie
 topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4062'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Zowel de verslagen als de tijdreeksschema&#39;s bevatten een kaart van identitei
 
 Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform]. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk wanneer het denken over schema&#39;s om over klantenidentiteiten te denken en welke gebieden kunnen worden gebruikt om een onderwerp te identificeren ongeacht waar de gegevens uit kunnen komen.
 
-Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in &quot;[!UICONTROL Identity Graph]&quot; voor die persoon. De grafiekgegevens zijn vervolgens toegankelijk via [[!DNL Real-time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] de diensten om een geneutraliseerde mening van elke individuele klant te verstrekken.
+Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in &quot;[!UICONTROL Identity Graph]&quot; voor die persoon. De grafiekgegevens zijn vervolgens toegankelijk via [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] de diensten om een geneutraliseerde mening van elke individuele klant te verstrekken.
 
 Velden die doorgaans zijn gemarkeerd als &quot;[!UICONTROL Identity]&quot; omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij kunnen goed zijn &quot;[!UICONTROL Identity]&quot; ook velden.
 
@@ -114,7 +114,7 @@ Zoals in het bovenstaande voorbeeld wordt getoond, wordt elke toets in het dialo
 
 >[!NOTE]
 >
->Een Booleaanse waarde waarmee wordt bepaald of de waarde een primaire identiteit is (`primary`) kan ook worden opgegeven voor elke identiteitswaarde. De primaire identiteiten hoeven alleen te worden vastgesteld voor schema&#39;s die bestemd zijn om te worden gebruikt in [!DNL Real-time Customer Profile]. Zie de sectie over [vakbondsschema&#39;s](#union) voor meer informatie .
+>Een Booleaanse waarde waarmee wordt bepaald of de waarde een primaire identiteit is (`primary`) kan ook worden opgegeven voor elke identiteitswaarde. De primaire identiteiten hoeven alleen te worden vastgesteld voor schema&#39;s die bestemd zijn om te worden gebruikt in [!DNL Real-Time Customer Profile]. Zie de sectie over [vakbondsschema&#39;s](#union) voor meer informatie .
 
 ### Beginselen voor de ontwikkeling van schema&#39;s {#evolution}
 
@@ -124,7 +124,7 @@ Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schema
 
 >[!NOTE]
 >
->Als een schema nog niet is gebruikt om gegevens in te voeren [!DNL Experience Platform] en is niet toegelaten voor gebruik in het Profiel van de Klant In real time, kunt u een het breken verandering in dat schema introduceren. Nochtans, zodra het schema binnen is gebruikt [!DNL Platform], moet zij zich houden aan het additieve versieringsbeleid.
+>Als een schema nog niet is gebruikt om gegevens in te voeren [!DNL Experience Platform] en is niet toegelaten voor gebruik in het Profiel van de Klant in real time, kunt u een het breken verandering in dat schema introduceren. Nochtans, zodra het schema binnen is gebruikt [!DNL Platform], moet zij zich houden aan het additieve versieringsbeleid.
 
 In de volgende tabel wordt aangegeven welke wijzigingen worden ondersteund bij het bewerken van schema&#39;s, veldgroepen en gegevenstypen:
 
@@ -273,7 +273,7 @@ while [!DNL Experience Platform] staat u toe om schema&#39;s voor bepaalde gebru
 
 ![](../images/schema-composition/union.png)
 
-Door een schema in te schakelen voor gebruik met [!DNL Real-time Customer Profile], wordt het opgenomen in de union voor dat klassetype. [!DNL Profile] levert robuuste, gecentraliseerde profielen van klantenattributen evenals een timestamped rekening van elke gebeurtenis die de klant over om het even welk systeem heeft gehad dat met wordt geïntegreerd [!DNL Platform]. [!DNL Profile] gebruikt de verenigingsmening om deze gegevens te vertegenwoordigen en een holistische mening van elke individuele klant te verstrekken.
+Door een schema in te schakelen voor gebruik met [!DNL Real-Time Customer Profile], wordt het opgenomen in de union voor dat klassetype. [!DNL Profile] levert robuuste, gecentraliseerde profielen van klantenattributen evenals een timestamped rekening van elke gebeurtenis die de klant over om het even welk systeem heeft gehad dat met wordt geïntegreerd [!DNL Platform]. [!DNL Profile] gebruikt de verenigingsmening om deze gegevens te vertegenwoordigen en een holistische mening van elke individuele klant te verstrekken.
 
 Meer informatie over het werken met [!DNL Profile], zie de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 

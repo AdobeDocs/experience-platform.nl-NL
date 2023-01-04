@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert ervaringsgegevens.
    - [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/getting-started.md): Een uitgebreide gids die elk van de beschikbare eindpunten van [!DNL Schema Registry] API en hoe te om tot hen te richten. Hieronder valt ook het weten van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ### Platform-API&#39;s gebruiken
 
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | De naam die u voor het schema wilt gebruiken. Deze naam moet uniek zijn. |
 | `description` | Een betekenisvolle beschrijving van het schema dat u maakt. |
-| `meta:immutableTags` | In dit voorbeeld wordt `union` -tag wordt gebruikt om uw gegevens door te zetten in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In dit voorbeeld wordt `union` -tag wordt gebruikt om uw gegevens door te zetten in [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Antwoord**
 
@@ -139,7 +139,7 @@ Voeg vervolgens een [identiteitsbeschrijving](../../xdm/api/descriptors.md) naar
 
 1. Het werk-e-mailadres wordt een verplicht veld. Dit betekent dat berichten die zonder dit veld worden verzonden, niet worden gevalideerd en niet worden ingevoerd.
 
-2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon te koppelen.
+2. [!DNL Real-Time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon te koppelen.
 
 ### Verzoek
 
@@ -199,7 +199,7 @@ Zodra u uw schema hebt gecreeerd, zult u een dataset moeten tot stand brengen om
 
 >[!NOTE]
 >
->Deze gegevensset wordt ingeschakeld voor **[!DNL Real-time Customer Profile]** en **[!DNL Identity Service]**.
+>Deze gegevensset wordt ingeschakeld voor **[!DNL Real-Time Customer Profile]** en **[!DNL Identity Service]**.
 
 **API-indeling**
 

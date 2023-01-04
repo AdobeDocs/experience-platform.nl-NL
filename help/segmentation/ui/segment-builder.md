@@ -5,7 +5,7 @@ title: UI-gids voor segmentBuilder
 topic-legacy: ui guide
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3038'
 ht-degree: 0%
@@ -254,7 +254,7 @@ Meer informatie over de verschillende evaluatiemethodes van de segmentdefinitie 
 
 ## Volgende stappen {#next-steps}
 
-De Bouwer van het segment verstrekt een rijk werkschema toelatend u om verhandelbare doelgroepen van te isoleren [!DNL Real-time Customer Profile] gegevens. Na het lezen van deze handleiding moet u nu in staat zijn om:
+De Bouwer van het segment verstrekt een rijk werkschema toelatend u om verhandelbare doelgroepen van te isoleren [!DNL Real-Time Customer Profile] gegevens. Na het lezen van deze handleiding moet u nu in staat zijn om:
 
 - Maak segmentdefinities met een combinatie van kenmerken, gebeurtenissen en bestaand publiek als bouwstenen.
 - Gebruik het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmentregels worden uitgevoerd.

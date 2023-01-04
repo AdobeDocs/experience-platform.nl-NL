@@ -5,7 +5,7 @@ title: Schemas API Endpoint
 description: Het /schemas eindpunt in de Registratie API van het Schema staat u toe om schema's XDM binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
@@ -110,7 +110,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt schema of `tenant` voor een schema dat eigendom is van uw organisatie. |
+| `{CONTAINER_ID}` | De container die het schema bevat dat u wilt ophalen: `global` voor een door Adobe gemaakt schema of `tenant` voor een schema dat eigendom is van uw organisatie. |
 | `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -454,7 +454,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgr
 }
 ```
 
-## Een schema inschakelen voor gebruik in realtime klantprofiel {#union}
+## Een schema inschakelen voor gebruik in realtime-klantprofiel {#union}
 
 Om aan een schema deel te nemen [Klantprofiel in realtime](../../profile/home.md), moet u een `union` tag toevoegen aan schema&#39;s `meta:immutableTags` array. U kunt dit bereiken door een PATCH-verzoek voor het desbetreffende schema in te dienen.
 

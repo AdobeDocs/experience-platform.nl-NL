@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunt u gegevens eenvoudig importeren als batchbestanden in de vorm van Parquet-bestanden of gegevens die overeenkomen met een bekend XDM-schema (Experience Data Model).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1261'
 ht-degree: 0%
@@ -75,23 +75,23 @@ Er is nu een lege dataset gemaakt en u bent teruggestuurd naar de **[!UICONTROL 
 
 Rechts in de werkruimte Datasets ziet u de **[!UICONTROL Info]** tabblad met informatie over uw nieuwe gegevensset, zoals id van de gegevensset, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad Info bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
 
-Ook op het tabblad Info is een  **[!UICONTROL Profile]** knevel dat voor het toelaten van uw dataset voor gebruik met wordt gebruikt [!DNL Real-time Customer Profile]. gebruik van deze schakeloptie, en [!DNL Real-time Customer Profile], zal nader worden toegelicht in het volgende gedeelte.
+Ook op het tabblad Info is een  **[!UICONTROL Profile]** knevel dat voor het toelaten van uw dataset voor gebruik met wordt gebruikt [!DNL Real-Time Customer Profile]. gebruik van deze schakeloptie, en [!DNL Real-Time Customer Profile], zal nader worden toegelicht in het volgende gedeelte.
 
 ![Gegevensactiviteit](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Gegevensset inschakelen voor [!DNL Real-time Customer Profile]
+## Gegevensset inschakelen voor [!DNL Real-Time Customer Profile]
 
 Datasets worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform], en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie uit meerdere bronnen te koppelen. Die samengevoegde informatie wordt een [!DNL Real-Time Customer Profile]. Om [!DNL Platform] te weten welke informatie in de [!DNL Real-Time Profile]kunnen gegevenssets worden gemarkeerd voor opname met behulp van de **[!UICONTROL Profile]** schakelen.
 
 Deze schakeloptie is standaard uitgeschakeld. Als u schakelt [!DNL Profile], worden alle gegevens die in de gegevensset worden opgenomen, gebruikt om een individu te identificeren en zijn [!DNL Real-Time Profile].
 
-Meer informatie over [!DNL Real-time Customer Profile] en werken met identiteiten, raadpleeg de [Identiteitsservice](../../identity-service/home.md) documentatie.
+Meer informatie over [!DNL Real-Time Customer Profile] en werken met identiteiten, raadpleeg de [Identiteitsservice](../../identity-service/home.md) documentatie.
 
-Om de dataset voor toe te laten [!DNL Real-time Customer Profile]klikt u op de knop **[!UICONTROL Profile]** schakelen in de **[!UICONTROL Info]** tab.
+Om de dataset voor toe te laten [!DNL Real-Time Customer Profile]klikt u op de knop **[!UICONTROL Profile]** schakelen in de **[!UICONTROL Info]** tab.
 
 ![Schakelen tussen profielen](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd te bevestigen dat u de gegevensset wilt inschakelen voor [!DNL Real-time Customer Profile].
+Er verschijnt een dialoogvenster waarin u wordt gevraagd te bevestigen dat u de gegevensset wilt inschakelen voor [!DNL Real-Time Customer Profile].
 
 ![Dialoogvenster Profiel inschakelen](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
@@ -119,7 +119,7 @@ Nadat u een Parquet- of JSON-bestand dat u wilt uploaden hebt gesleept en neerge
 
 ## Dataset-meetgegevens
 
-Nadat het bestand is geüpload, wordt het **[!UICONTROL Dataset Activity]** toont niet meer dat &quot;Er zijn geen batches toegevoegd&quot;. In plaats daarvan **[!UICONTROL Dataset Activity]** op het tabblad ziet u nu de metriek van de gegevensset. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
+Nadat het bestand is geüpload, wordt het **[!UICONTROL Dataset Activity]** geeft niet langer aan dat er geen batches zijn toegevoegd. In plaats daarvan **[!UICONTROL Dataset Activity]** op het tabblad ziet u nu de metriek van de gegevensset. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
 
 Onder aan het tabblad vindt u een lijst met de **[!UICONTROL Batch ID]** van de gegevens die zojuist via de [&quot;Gegevens toevoegen aan gegevensset&quot;](#add-data-to-dataset) proces. Ook wordt informatie over de batch opgenomen, zoals de datum waarop de gegevens zijn ingevoerd, het aantal records dat is ingevoerd en de huidige status van de batch.
 

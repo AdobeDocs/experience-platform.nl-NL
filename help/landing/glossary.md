@@ -5,7 +5,7 @@ title: Adobe Experience Platform Verklarende woordenlijst
 topic-legacy: getting started
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '7913'
 ht-degree: 0%
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 **Attributen**: Kenmerken zijn opgegeven kenmerken die een profiel vertegenwoordigen.
 
-**Kenmerk samenvoegen**: Wanneer u een samenvoegbeleid definieert met de Real-time Customer Profile API, wordt de `attributeMerge` Dit object geeft aan op welke manier in het samenvoegbeleid de profielkenmerken voorrang krijgen bij gegevensconflicten. Het is gelijk aan het selecteren van een [!UICONTROL Merge method] wanneer het bepalen van een fusiebeleid in het Platform UI.
+**Kenmerk samenvoegen**: Wanneer u een samenvoegbeleid definieert met de Real-Time Customer Profile API, wordt de `attributeMerge` Dit object geeft aan op welke manier in het samenvoegbeleid de profielkenmerken voorrang krijgen bij gegevensconflicten. Het is gelijk aan het selecteren van een [!UICONTROL Merge method] wanneer het bepalen van een fusiebeleid in het Platform UI.
 
 **Attribution AI**: [!DNL Attribution AI] is een Intelligent Service aangedreven door Adobe Sensei die algoritmische multi-channel attributiemogelijkheden over de volledige klantenlevenscyclus levert.
 
@@ -278,7 +278,7 @@ ht-degree: 0%
 
 **Identiteit**: Een identiteit is een id die uniek een individuele klant vertegenwoordigt, zoals een cookie-id, apparaat-id of e-mailadres.
 
-**Identiteitsvelden**: Identiteitsvelden zijn XDM-velden die worden gebruikt om informatie over individuele klanten die uit meerdere gegevensbronnen afkomstig zijn, aan elkaar te koppelen. Er moet één primaire identiteit worden gedefinieerd voordat het schema kan worden ingeschakeld voor gebruik in het realtime profiel van de klant.
+**Identiteitsvelden**: Identiteitsvelden zijn XDM-velden die worden gebruikt om informatie over individuele klanten die uit meerdere gegevensbronnen afkomstig zijn, aan elkaar te koppelen. Eén primaire identiteit moet worden gedefinieerd voordat het schema kan worden ingeschakeld voor gebruik in Real-Time Klantprofiel.
 
 **Identiteitslabels**: De etiketten van het gegevensgebruik van de identiteit (&quot;I&quot;) worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren.
 
@@ -342,7 +342,7 @@ ht-degree: 0%
 
 **Handeling**: In het kader van gegevensbeheer is een marketingactie (ook wel een geval van marketinggebruik genoemd) een actie die een consument van gegevens in een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 
-**Samenvoegen, methode**: Wanneer u een samenvoegbeleid definieert met de interface van het Platform, geeft de samenvoegmethode aan hoe gegevensfragmenten voorrang moeten krijgen wanneer er een conflict optreedt. Wanneer het gebruiken van het In real time Profiel van de Klant API om een fusiebeleid te bepalen, wordt de fusiemethode bepaald gebruikend `attributeMerge` object.
+**Samenvoegen, methode**: Wanneer u een samenvoegbeleid definieert met de interface van het Platform, geeft de samenvoegmethode aan hoe gegevensfragmenten voorrang moeten krijgen wanneer er een conflict optreedt. Wanneer het gebruiken van het Echte-tijdProfiel van de Klant API om een fusiebeleid te bepalen, wordt de fusiemethode bepaald gebruikend `attributeMerge` object.
 
 **Samenvoegbeleid**: Het beleid van de fusie is regels die het Experience Platform gebruikt om te bepalen hoe de fragmenten van klantengegevens van veelvoudige bronnen zullen worden gecombineerd om een individueel profiel tot stand te brengen. Wanneer een gegevensconflict voorkomt, bepaalt het fusiebeleid welke gegevens voor opneming in het profiel zouden moeten worden voorrang gegeven.
 
@@ -404,11 +404,11 @@ ht-degree: 0%
 
 **Profiel**: Om niet met het Profiel van de Klant in real time als dienst te worden verward, is een profiel een volledige vertegenwoordiging van een individuele klant, die van samengevoegde verslag en tijdreeksgegevens uit veelvoudige bronnen wordt geconstrueerd.
 
-**Profieltoegang**: De `/entities` Het eindpunt in het in real time profiel API van de Klant staat u toe om tot verslaggegevens en tijd-reeksgebeurtenissen in de de gegevensopslag van het Profiel toegang te hebben. Zie ook: Profielentiteiten
+**Profieltoegang**: De `/entities` Het eindpunt in Real-Time API van het Profiel van de Klant staat u toe om tot verslaggegevens en tijd-reeksgebeurtenissen in de de gegevensopslag van het Profiel toegang te hebben. Zie ook: Profielentiteiten
 
 **Profielgegevens**: Profielgegevens hebben betrekking op alle gegevens die zich bevinden in de profielgegevensopslag.
 
-**Profielgegevensopslag**: De profielgegevensopslag (ook wel de profielopslag genoemd) is een gegevensopslagsysteem dat los staat van het datumpeer en dat door het Real-time profiel van de Klant wordt gebruikt om profielen te maken en op te slaan.
+**Profielgegevensopslag**: De profielgegevensopslag (ook wel de profielopslag genoemd) is een gegevensopslagsysteem dat los staat van het datumpeer en dat door het Real-Time Klantprofiel wordt gebruikt om profielen te maken en op te slaan.
 
 **Profielentiteiten**: Profielentiteiten vertegenwoordigen kenmerken die betrekking hebben op een individuele persoon, doorgaans een klant. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door middel van schema&#39;s die zijn gebaseerd op de [!DNL XDM Individual Profile] klasse. Zie ook: Profieltoegang
 
@@ -522,9 +522,9 @@ ht-degree: 0%
 
 **Streaming opname**: Met streaming opname kunt u gegevens van client- en server-side apparaten in real-time naar het Experience Platform verzenden.
 
-**Streaming segmentering**: Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en bewaard, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
+**Streaming segmentering**: Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en bewaard, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-Time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
-**Systeemweergave**: De Mening van het systeem is een visuele vertegenwoordiging van brondatasets die door stromen [!DNL Real-time Customer Profile] naar bestemmingen.
+**Systeemweergave**: De Mening van het systeem is een visuele vertegenwoordiging van brondatasets die door stromen [!DNL Real-Time Customer Profile] naar bestemmingen.
 
 ## T
 
@@ -540,7 +540,7 @@ ht-degree: 0%
 
 ## U
 
-**Unieschema**: Een samenvoegingsschema is een consolidatie van schema&#39;s die dezelfde klasse delen en waarvoor [!DNL Real-time Customer Profile]. De veelvoudige verenigingsschema&#39;s kunnen voor een organisatie bestaan, maar er kan slechts één verenigingsschema per klasse zijn.
+**Unieschema**: Een samenvoegingsschema is een consolidatie van schema&#39;s die dezelfde klasse delen en waarvoor [!DNL Real-Time Customer Profile]. De veelvoudige verenigingsschema&#39;s kunnen voor een organisatie bestaan, maar er kan slechts één verenigingsschema per klasse zijn.
 
 ## V
 

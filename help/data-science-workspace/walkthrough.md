@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Cursus over wetenschapswerkruimte
 description: Dit document bevat een koppeling en een beschrijving voor de cursus Adobe Experience Platform Data Science Workspace.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-source-git-commit: 7733fe16984cacf04c1070e92673a7ee19eaea47
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -36,7 +36,7 @@ De volgende leerresultaten worden behandeld in de cursus van de Werkruimte van d
 - Methoden voor het trainen en scoren van een model
 - De rol van hyper-parameters in modelontwikkeling
 - Hoe te om opgeleide modellen als dienst te publiceren
-- Hoe te om de Werkruimte van de Wetenschap van Gegevens te gebruiken om uw gegevens van het Profiel van de Klant in real time te verrijken
+- Hoe te de Werkruimte van de Wetenschap van Gegevens gebruiken om uw gegevens van het Profiel van de Klant in real time te verrijken
 - Hoe te om een het stromen segment met uw modeloutput te creëren
 
 ## Lessen
@@ -61,7 +61,7 @@ De cursus Data Science Workspace bestaat uit vijf lessen.
 
 ### Les 5
 
-**Inzicht in gegevenswetenschap gebruiken en leveren (11 minuten):** Leer hoe de de modeloutput van de Werkruimte van de Wetenschap van Gegevens in het Profiel van de Klant in real time kan worden gebruikt om gepersonaliseerde ervaringen met de toepassingen en de diensten van de Adobe te leveren.
+**Inzicht in gegevenswetenschap gebruiken en leveren (11 minuten):** Leer hoe de modeloutput van de Werkruimte van de Wetenschap van Gegevens in het Profiel van de Klant in real time kan worden gebruikt om gepersonaliseerde ervaringen met de toepassingen en de diensten van de Adobe te leveren.
 
 ## Volgende stappen
 

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -21,8 +21,8 @@ Dit document biedt een zelfstudie voor het evalueren van segmenten en het benade
 
 Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] de diensten betrokken bij het creëren van publiekssegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u publiekssegmenten maken op basis van [!DNL Real-time Customer Profile] gegevens.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u publiekssegmenten maken op basis van [!DNL Real-Time Customer Profile] gegevens.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -86,9 +86,9 @@ De evaluatie op bestelling staat u toe om een segmentbaan tot stand te brengen o
 
 ### Een segmenttaak maken
 
-Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een segmentdefinitie evenals om het even welk samenvoegbeleid dat controleert hoe [!DNL Real-time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen. Een segmentbaan moet in werking worden gesteld telkens als u het publiek wilt verfrissen dat momenteel voor de segmentdefinitie kwalificeert.
+Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een segmentdefinitie evenals om het even welk samenvoegbeleid dat controleert hoe [!DNL Real-Time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen. Een segmentbaan moet in werking worden gesteld telkens als u het publiek wilt verfrissen dat momenteel voor de segmentdefinitie kwalificeert.
 
-U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan `/segment/jobs` in de [!DNL Real-time Customer Profile] API.
+U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan `/segment/jobs` in de [!DNL Real-Time Customer Profile] API.
 
 Meer gedetailleerde informatie over het gebruik van dit eindpunt vindt u in de [eindgids voor segmenttaken](../api/segment-jobs.md#create)
 
@@ -140,7 +140,7 @@ In de volgende secties worden deze opties gedetailleerder beschreven.
 
 ## Een profiel opzoeken
 
-Als u het specifieke profiel kent waartoe u toegang wilt hebben, kunt u dit doen door [!DNL Real-time Customer Profile] API. De volledige stappen voor toegang tot individuele profielen zijn beschikbaar in het dialoogvenster [Toegang tot gegevens in realtime klantprofiel met de profiel-API](../../profile/api/entities.md) zelfstudie.
+Als u het specifieke profiel kent waartoe u toegang wilt hebben, kunt u dit doen door [!DNL Real-Time Customer Profile] API. De volledige stappen voor toegang tot individuele profielen zijn beschikbaar in het dialoogvenster [Toegang krijgen tot realtime klantprofielgegevens met de profiel-API](../../profile/api/entities.md) zelfstudie.
 
 ## Een segment exporteren {#export}
 
@@ -157,7 +157,7 @@ De volgende stappen zijn vereist om uw publiek te exporteren:
 
 Wanneer het uitvoeren van een publiek, moet een doeldataset eerst worden gecreeerd. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
 
-Één van de belangrijkste overwegingen is het schema waarop de dataset wordt gebaseerd (`schemaRef.id` in de API voorbeeldaanvraag hieronder). Voor het exporteren van een segment moet de gegevensset gebaseerd zijn op de [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de uniview, gelieve te zien [Het gedeelte Klantprofiel in realtime van de handleiding voor ontwikkelaars van het schemaregister](../../xdm/api/getting-started.md).
+Één van de belangrijkste overwegingen is het schema waarop de dataset wordt gebaseerd (`schemaRef.id` in de API voorbeeldaanvraag hieronder). Voor het exporteren van een segment moet de gegevensset gebaseerd zijn op de [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de uniview, gelieve te zien [Realtime sectie van het Profiel van de Klant van de Klant van het Registratie van het Schema ontwikkelaarsgids](../../xdm/api/getting-started.md).
 
 Er zijn twee manieren om de noodzakelijke dataset tot stand te brengen:
 
@@ -210,7 +210,7 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 
 ### Profielen genereren voor publieksleden {#generate-profiles}
 
-Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de publieksleden aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` in de [!DNL Real-time Customer Profile] API en het verstrekken van dataset identiteitskaart en de segmentinformatie voor de segmenten die u wenst om uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de publieksleden aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` in de [!DNL Real-Time Customer Profile] API en het verstrekken van dataset identiteitskaart en de segmentinformatie voor de segmenten die u wenst om uit te voeren.
 
 Meer gedetailleerde informatie over het gebruik van dit eindpunt vindt u in de [eindgebruikershandleiding exporttaken](../api/export-jobs.md#create)
 

@@ -4,7 +4,7 @@ title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Que
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, segment, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '960'
 ht-degree: 0%

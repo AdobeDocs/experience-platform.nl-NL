@@ -4,7 +4,7 @@ title: Inhoud en Voorkeuren voor schemaveldgroep
 topic-legacy: overview
 description: Dit document bevat een overzicht van de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%
@@ -109,7 +109,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 >* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld, of de klant heeft ervoor gekozen, worden de equivalente toestemmingen of voorkeuren in `idSpecific` zijn vereerd.
 
 
-Elke toets in het dialoogvenster `idSpecific` -object staat voor een specifieke naamruimte die door Adobe Experience Platform Identity Service wordt herkend. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-time klantprofiel te reduceren. Voor meer informatie over naamruimten raadpleegt u de [Overzicht van naamruimte in identiteit](../../../identity-service/namespaces.md) in de documentatie van de identiteitsdienst.
+Elke toets in het dialoogvenster `idSpecific` -object staat voor een specifieke naamruimte die door Adobe Experience Platform Identity Service wordt herkend. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-Time Klantprofiel te reduceren. Voor meer informatie over naamruimten raadpleegt u de [Overzicht van naamruimte in identiteit](../../../identity-service/namespaces.md) in de documentatie van de identiteitsdienst.
 
 De sleutels voor elk namespacevoorwerp vertegenwoordigen de unieke identiteitswaarden waarvoor de klant voorkeur heeft geplaatst. Elke identiteitswaarde kan een volledige reeks toestemmingen en voorkeur bevatten, die op de zelfde manier wordt geformatteerd zoals `consents`.
 
@@ -182,7 +182,7 @@ Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/
 
 >[!IMPORTANT]
 >
->Als u toestemmingsgegevens wilt verzenden naar [!DNL Real-time Customer Profile]moet u een [!DNL Profile]- toegelaten schema dat op wordt gebaseerd [!DNL XDM Individual Profile] klasse die de [!UICONTROL Consents and Preferences] veldgroep. De dataset die u creeert die op dat schema wordt gebaseerd moet ook worden toegelaten voor [!DNL Profile]. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-time Customer Profile] voorschriften voor schema&#39;s en gegevensreeksen.
+>Als u toestemmingsgegevens wilt verzenden naar [!DNL Real-Time Customer Profile]moet u een [!DNL Profile]- toegelaten schema dat op wordt gebaseerd [!DNL XDM Individual Profile] klasse die de [!UICONTROL Consents and Preferences] veldgroep. De dataset die u creeert die op dat schema wordt gebaseerd moet ook worden toegelaten voor [!DNL Profile]. Raadpleeg de bovenstaande zelfstudies voor specifieke stappen met betrekking tot [!DNL Real-Time Customer Profile] voorschriften voor schema&#39;s en gegevensreeksen.
 >
 >Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [beleid samenvoegen](../../../rtcdp/profile/merge-policies.md) voor meer informatie .
 

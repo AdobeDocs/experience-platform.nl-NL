@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2472'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Als u met een UI voor het samenvoegen wilt werken, raadpleegt u de [UI-hulplijn 
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
@@ -194,7 +194,7 @@ Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren,
 
 ## Beleid voor samenvoegen openen {#access-merge-policies}
 
-Met de [!DNL Real-time Customer Profile] API, de `/config/mergePolicies` het eindpunt staat u toe een raadplegingsverzoek uitvoert om een specifiek samenvoegbeleid door zijn identiteitskaart te bekijken, of toegang tot elk van het fusiebeleid in uw IMS Organisatie, die door specifieke criteria wordt gefiltreerd. U kunt ook de opdracht `/config/mergePolicies/bulk-get` eindpunt om veelvoudige samenvoegbeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
+Met de [!DNL Real-Time Customer Profile] API, de `/config/mergePolicies` het eindpunt staat u toe een raadplegingsverzoek uitvoert om een specifiek samenvoegbeleid door zijn identiteitskaart te bekijken, of toegang tot elk van het fusiebeleid in uw IMS Organisatie, die door specifieke criteria wordt gefiltreerd. U kunt ook de opdracht `/config/mergePolicies/bulk-get` eindpunt om veelvoudige samenvoegbeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
 
 ### Heb toegang tot één enkel fusiebeleid door identiteitskaart
 
@@ -762,6 +762,6 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiekssegmenten van uw te creëren [!DNL Real-time Customer Profile] gegevens.
+Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiekssegmenten van uw te creëren [!DNL Real-Time Customer Profile] gegevens.
 
 Zie de [Adobe Experience Platform Segmentation Service-documentatie](../../segmentation/home.md) om te beginnen met het definiëren en werken met segmenten.

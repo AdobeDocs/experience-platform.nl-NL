@@ -2,7 +2,7 @@
 title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
 description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B Edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk
 
 Het bronschema &quot;[!DNL Opportunities]&quot; is gebaseerd op de [!UICONTROL XDM Business Opportunity] klasse. Een van de velden die door de klasse worden verschaft. `opportunityKey`, dient als id voor het schema. In het bijzonder de `sourceKey` onder de `opportunityKey` object wordt ingesteld als de primaire identiteit van het schema onder een aangepaste naamruimte [!DNL B2B Opportunity].
 
-Zoals onder **[!UICONTROL Schema Properties]**, is dit schema ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
+Zoals onder **[!UICONTROL Schema Properties]**, is dit schema ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile].
 
 ![Opportuniteitsschema](../images/tutorials/relationship-b2b/opportunities.png)
 

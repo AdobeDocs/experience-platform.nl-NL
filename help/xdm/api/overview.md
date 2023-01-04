@@ -5,7 +5,7 @@ title: Handleiding voor schema-registratie-API
 description: Met de API voor het schemaregister kunnen ontwikkelaars programmatisch alle schema's en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Voor een geleidelijke gids over hoe te om een volledig schema in de Registratie 
 
 ## Gedrag
 
-Gedragingen bepalen de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie de [gedragseindpunt-hulplijn](./behaviors.md) voor meer informatie over het weergeven van beschikbare gedragingen in de API.
+Het gedrag bepaalt de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie de [gedragseindpunt-hulplijn](./behaviors.md) voor meer informatie over het weergeven van beschikbare gedragingen in de API.
 
 ## Klassen
 

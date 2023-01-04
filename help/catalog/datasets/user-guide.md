@@ -5,7 +5,7 @@ title: UI-gids voor gegevensbestanden
 topic-legacy: datasets
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Schema-editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe u uw eigen aangepaste XDM-schema&#39;s maakt met de [!DNL Schema Editor] binnen de [!DNL Platform] gebruikersinterface.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ervoor zorgen dat de regels, beperkingen en beleidsregels betreffende het gebruik van klantgegevens worden nageleefd.
 
 ## Gegevensbestanden weergeven {#view-datasets}
@@ -106,9 +106,9 @@ De **[!UICONTROL Add data]** wordt weergegeven. Upload het CSV-bestand door het 
 
 ![Het gegevensscherm Toevoegen wordt weergegeven. De plaats waar u het Csv- dossier voor de dataset kunt uploaden wordt benadrukt.](../images/datasets/user-guide/add-csv-data.png)
 
-## Een gegevensset inschakelen voor realtime klantprofiel {#enable-profile}
+## Een gegevensset inschakelen voor realtime-klantprofiel {#enable-profile}
 
-Elke dataset heeft de capaciteit om klantenprofielen met zijn ingebedde gegevens te verrijken. Om dit te doen, moet het schema dat de dataset hanteert voor gebruik binnen compatibel zijn [!DNL Real-time Customer Profile]. Een compatibel schema voldoet aan de volgende vereisten:
+Elke dataset heeft de capaciteit om klantenprofielen met zijn ingebedde gegevens te verrijken. Om dit te doen, moet het schema dat de dataset hanteert voor gebruik binnen compatibel zijn [!DNL Real-Time Customer Profile]. Een compatibel schema voldoet aan de volgende vereisten:
 
 * Het schema heeft minstens één die attribuut als identiteitseigenschap wordt gespecificeerd.
 * Het schema heeft een identiteitseigenschap die als primaire identiteit wordt bepaald.
@@ -145,7 +145,7 @@ Er verschijnt een bevestigingsvak. Selecteren **[!UICONTROL Delete]** om de schr
 
 Als een dataset voor Profiel wordt toegelaten, zal het schrappen van die dataset door UI het van gegevens meer, de Dienst van de Identiteit, en de opslag van het Profiel binnen Platform schrappen.
 
-U kunt een dataset van [!DNL Profile] alleen opslaan (en de gegevens in het Data Lake bewaren) met behulp van de Real-time Customer Profile API. Zie voor meer informatie de [API-eindgids voor profielsysteemtaken](../../profile/api/profile-system-jobs.md).
+U kunt een dataset van [!DNL Profile] Alleen opslaan (waarbij de gegevens in het Data Lake blijven) met behulp van de Real-Time Customer Profile API. Zie voor meer informatie de [API-eindgids voor profielsysteemtaken](../../profile/api/profile-system-jobs.md).
 
 ## Gegevens bijhouden
 

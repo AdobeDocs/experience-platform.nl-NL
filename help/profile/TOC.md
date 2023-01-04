@@ -1,9 +1,9 @@
 ---
 audience: user
-user-guide-title: Handleiding voor realtime-klantprofiel
+user-guide-title: Handleiding voor realtime klantprofiel
 user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
 feature: Profiles
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 5%
@@ -11,7 +11,7 @@ ht-degree: 5%
 ---
 
 
-# [!DNL Real-time Customer Profile] {#profile}
+# [!DNL Real-Time Customer Profile] {#profile}
 
 * [[!DNL Profile]-overzicht](home.md)
 * [Profieloverzicht (video)](video/profile-overview.md)

@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
-title: Handleiding voor het oplossen van problemen in realtime-profielen van klanten
+title: Handleiding voor het oplossen van problemen in realtime-klantprofiel
 topic-legacy: guide
 type: Documentation
-description: Dit document bevat antwoorden op veelgestelde vragen over het realtime-klantprofiel en een gids voor probleemoplossing voor algemene fouten bij het werken met profielgegevens met Adobe Experience Platform.
+description: Dit document bevat antwoorden op veelgestelde vragen over Real-Time klantprofiel en een gids voor probleemoplossing voor algemene fouten bij het werken met profielgegevens met Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -15,31 +14,31 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen in realtime van klantprofielen
 
-Dit document biedt antwoorden op veelgestelde vragen over het Real-time profiel van de Klant en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services in Adobe Experience Platform.
+Dit document biedt antwoorden op veelgestelde vragen over Real-Time klantprofiel en een gids voor probleemoplossing voor algemene fouten. Voor vragen en problemen met betrekking tot andere services in Adobe Experience Platform raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
-Met [!DNL Real-time Customer Profile] kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Dit laat marketers toe om gecoördineerde, verenigbare, en relevante ervaringen voor klanten over veelvoudige kanalen te drijven.
+Met [!DNL Real-Time Customer Profile], kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Dit laat marketers toe om gecoördineerde, verenigbare, en relevante ervaringen voor klanten over veelvoudige kanalen te drijven.
 
 ## Veelgestelde vragen
 
-Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Real-time klantprofiel.
+Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Real-Time klantprofiel.
 
-### Welke soorten gegevens worden goedgekeurd voor het Profiel van de Klant in real time?
+### Welke soorten gegevens worden geaccepteerd voor Real-Time Klantprofiel?
 
-Profiel accepteert zowel **record**- als **tijdreeks**-gegevens, mits de gegevens in kwestie ten minste één identiteitswaarde bevatten die de gegevens aan een unieke individuele persoon koppelt.
+Profiel accepteert beide **opnemen** en **tijdreeks** gegevens, mits de gegevens in kwestie ten minste één identiteitswaarde bevatten die de gegevens aan een unieke individuele persoon koppelt.
 
-Zoals alle diensten van het Platform, vereist het Profiel dat zijn gegevens semantisch onder een schema van de Gegevens van de Ervaring van het Model (XDM) worden gestructureerd. Dit schema moet op zijn beurt een **primaire identiteit** hebben gedefinieerd en zijn ingeschakeld voor gebruik in Profiel.
+Zoals alle diensten van het Platform, vereist het Profiel dat zijn gegevens semantisch onder een schema van de Gegevens van de Ervaring van het Model (XDM) worden gestructureerd. Dit schema moet een **primaire identiteit** gedefinieerd en ingeschakeld voor gebruik in profiel.
 
-Als u niet vertrouwd met XDM bent, begin met [XDM overzicht](../xdm/home.md) om meer te leren. Zie vervolgens de XDM-gebruikershandleiding voor stappen voor het [instellen van identiteitsvelden](../xdm/tutorials/create-schema-ui.md#identity-field) en [inschakelen van een schema voor Profiel](../xdm/tutorials/create-schema-ui.md#profile).
+Als u niet bekend bent met XDM, start u met de [XDM-overzicht](../xdm/home.md) voor meer informatie. Raadpleeg de XDM-gebruikershandleiding voor meer informatie over [identiteitsvelden instellen](../xdm/tutorials/create-schema-ui.md#identity-field) en [een schema voor profiel inschakelen](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Waar worden profielgegevens opgeslagen?
 
-Klantprofiel in realtime onderhoudt zijn eigen gegevensopslag (de &quot;profielopslag&quot; genoemd), gescheiden van het Data Lake dat andere opgenomen gegevens van het Platform bevat.
+Het profiel van de Klant in real time handhaaft zijn eigen gegevensopslag (die als &quot;opslag van het Profiel&quot;wordt bedoeld), los van het meer van Gegevens dat andere opgenomen Platform gegevens bevat.
 
 ### Als ik al gegevens in het Platform heb ingevoerd, kan ik deze dan beschikbaar stellen in het archief met profielen?
 
 Als de gegevens in een niet-Profiel dataset zijn opgenomen, moet u die gegevens in een profiel-Toegelaten dataset opnieuw opnemen om het in de opslag van het Profiel ter beschikking te stellen. Het is mogelijk om een bestaande dataset voor Profiel toe te laten, echter om het even welke gegevens die voorafgaand aan die configuratie werden opgenomen zullen nog niet in de opslag van het Profiel verschijnen.
 
-Als u wenst om eerder ingebedde gegevens aan de opslag van het Profiel toe te voegen, volg [de zelfstudie van de datasetconfiguratie](./tutorials/dataset-configuration.md) om een nieuwe dataset tot stand te brengen of een bestaande dataset om te zetten die voor Profiel moet worden toegelaten, en dan de gewenste gegevens in die dataset opnieuw op te nemen.
+Als u eerder opgenomen gegevens wilt toevoegen aan de profielopslag, volgt u de [Zelfstudie over configuratie van gegevensset](./tutorials/dataset-configuration.md) om een nieuwe dataset tot stand te brengen of een bestaande dataset om te zetten die voor Profiel moet worden toegelaten, en dan de gewenste gegevens in die dataset opnieuw op te nemen.
 
 ### Hoe kan ik mijn ingesloten profielgegevens bekijken?
 
@@ -47,19 +46,19 @@ Er zijn meerdere methoden om profielgegevens weer te geven, afhankelijk van het 
 
 #### De API gebruiken
 
-Als u de id&#39;s kent van de profielentiteiten waartoe u toegang wilt hebben, kunt u het `/entities`-eindpunt (toegang tot profiel) in de profiel-API gebruiken om die entiteiten op te zoeken. Zie de sectie over [entiteiten](./api/entities.md) in de ontwikkelaarsgids voor meer informatie.
+Als u de id&#39;s kent van de profielentiteiten waartoe u toegang wilt hebben, kunt u de opdracht `/entities` (Toegang tot profiel) in de profiel-API om die entiteiten op te zoeken. Zie de sectie over [entiteiten](./api/entities.md) in de ontwikkelaarsgids voor meer informatie.
 
-U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om tot de individuele profielen van klanten toegang te hebben die voor een segmentlidmaatschap gekwalificeerd zijn. Zie [Overzicht van de Dienst van de Segmentatie](../segmentation/home.md) voor meer informatie.
+U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om tot de individuele profielen van klanten toegang te hebben die voor een segmentlidmaatschap gekwalificeerd zijn. Zie de [Overzicht van segmentatieservice](../segmentation/home.md) voor meer informatie .
 
 #### De gebruikersinterface gebruiken
 
-In de interface van het Experience Platform kunt u op het tabblad **[!UICONTROL Browse]** in de werkruimte **[!UICONTROL Profiles]** het totale aantal profielen weergeven en op basis van hun identiteitswaarde naar afzonderlijke profielen zoeken. Zie [Gebruikershandleiding voor profielen](./ui/user-guide.md) voor meer informatie.
+In de interface van het Experience Platform **[!UICONTROL Browse]** in de **[!UICONTROL Profiles]** in de werkruimte kunt u het totale aantal profielen weergeven en naar afzonderlijke profielen zoeken op basis van hun identiteitswaarde. Zie de [Gebruikershandleiding voor profielen](./ui/user-guide.md) voor meer informatie .
 
-U kunt ook een lijst met uw segmenten weergeven onder het tabblad **[!UICONTROL Browse]** in de werkruimte **[!UICONTROL Segments]**. Nadat u een segment hebt geselecteerd, wordt een voorbeeld met profielen weergegeven die voor dat segment zijn gekwalificeerd. Vervolgens kunt u een van deze profielen selecteren om de details weer te geven. Zie [Overzicht van de Segmentatie UI](../segmentation/ui/overview.md) voor meer informatie.
+U kunt ook een lijst met uw segmenten onder de **[!UICONTROL Browse]** in de **[!UICONTROL Segments]** werkruimte. Nadat u een segment hebt geselecteerd, wordt een voorbeeld met profielen weergegeven die voor dat segment zijn gekwalificeerd. Vervolgens kunt u een van deze profielen selecteren om de details weer te geven. Zie de [Overzicht van de segmenteringsinterface](../segmentation/ui/overview.md) voor meer informatie .
 
 ## Foutcodes
 
-Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werkt met de Real-Time Customer Profile API. Als de fout u ontmoet niet hier vermeld is, kunt u het in plaats daarvan in de algemene [gids van de het oplossen van problemenoplossing van het Platform](../landing/troubleshooting.md) vinden.
+Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werkt met de Real-Time Customer Profile API. Als de fout die u tegenkomt hier niet wordt vermeld, kunt u deze in het algemeen vinden [Handleiding voor het oplossen van problemen met Platforms](../landing/troubleshooting.md) in plaats daarvan.
 
 ### Kan het opzoekschema van het berekende kenmerk voor het opgegeven pad niet opzoeken
 
@@ -70,9 +69,9 @@ Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werk
 }
 ```
 
-Wanneer het creëren van een nieuw gegevens verwerkt attribuut, komt deze fout voor wanneer het systeem niet het schema kon vinden dat in de verzoeklading wordt verstrekt. Zorg ervoor dat u correcte huurdersidentiteitskaart in het bezit `path` van de lading hebt verstrekt, en dat de waarden van `schema.name` een geldige schemanaam zijn.
+Wanneer het creëren van een nieuw gegevens verwerkt attribuut, komt deze fout voor wanneer het systeem niet het schema kon vinden dat in de verzoeklading wordt verstrekt. Zorg ervoor dat u de juiste huurder-id in de lading hebt opgegeven `path` en dat de waarden van `schema.name` is een geldige schemanaam.
 
-Als u uw huurder identiteitskaart niet kent, kunt u het terugwinnen door de stappen in [de ontwikkelaarsgids van de Registratie van het Schema](../xdm/api/getting-started.md) te volgen.
+Als u uw huurder-id niet kent, kunt u deze ophalen door de stappen in het dialoogvenster [Handleiding voor ontwikkelaars van het schema Register](../xdm/api/getting-started.md).
 
 ### Functie met dezelfde naam bestaat al voor het opgegeven schema of definedOn
 
@@ -83,7 +82,7 @@ Als u uw huurder identiteitskaart niet kent, kunt u het terugwinnen door de stap
 }
 ```
 
-Wanneer het creëren van een nieuw gegevens verwerkt attribuut, komt deze fout voor wanneer het verstrekte `name` bezit reeds voor het schema wordt gebruikt dat onder `schema.name` wordt vermeld. Vervang de waarde door een unieke naam voordat u het opnieuw probeert.
+Bij het maken van een nieuw berekende kenmerk treedt deze fout op wanneer de opgegeven `name` eigenschap wordt al gebruikt voor het schema dat onder `schema.name`. Vervang de waarde door een unieke naam voordat u het opnieuw probeert.
 
 ### Retourschema van de expressie is niet hetzelfde als het schema van het berekende kenmerk in het XDM-schema
 
@@ -94,7 +93,7 @@ Wanneer het creëren van een nieuw gegevens verwerkt attribuut, komt deze fout v
 }
 ```
 
-Wanneer het creëren van een nieuw gegevens verwerkt attribuut, komt deze fout voor wanneer het verstrekte `name` bezit reeds voor het schema wordt gebruikt dat onder `schema.name` wordt vermeld. Vervang de waarde door een unieke naam voordat u het opnieuw probeert.
+Bij het maken van een nieuw berekende kenmerk treedt deze fout op wanneer de opgegeven `name` eigenschap wordt al gebruikt voor het schema dat onder `schema.name`. Vervang de waarde door een unieke naam voordat u het opnieuw probeert.
 
 ### Ongeldig verwijderingsverzoek (profielsysteemtaak)
 
@@ -105,7 +104,7 @@ Wanneer het creëren van een nieuw gegevens verwerkt attribuut, komt deze fout v
 }
 ```
 
-Deze fout treedt op wanneer een ongeldige lading voor een verwijdersysteembaan wordt verstrekt. Zorg ervoor dat u een geldige dataset of batch-id opgeeft onder de eigenschap `dataSetID` of `batchID` van de payload. Zie de sectie over [het creëren van een schrappingsverzoek](./api/profile-system-jobs.md#create-a-delete-request) in de de ontwikkelaarsgids van het Profiel voor meer informatie.
+Deze fout treedt op wanneer een ongeldige lading voor een verwijdersysteembaan wordt verstrekt. Zorg ervoor dat u een geldige dataset of batch-id opgeeft onder de payload `dataSetID` of `batchID` eigenschap. Zie de sectie over [een verwijderaanvraag maken](./api/profile-system-jobs.md#create-a-delete-request) in de gids voor ontwikkelaars van het Profiel voor meer informatie.
 
 ### Batch niet gevonden voor profielgegevensset
 
@@ -135,7 +134,7 @@ Deze fout treedt op wanneer een geldige batch niet kan worden gevonden tijdens e
 }
 ```
 
-Deze fout treedt op wanneer de `destinationId` die in een `POST /config/projections` verzoek wordt verstrekt ongeldig is. Controleer of u een geldige doel-id hebt opgegeven voordat u het opnieuw probeert. Om een nieuwe bestemming tot stand te brengen, volg de stappen in [de gids van de ontwikkelaar van het profiel](./api/edge-projections.md#create-a-destination) worden geschetst.
+Deze fout treedt op wanneer de `destinationId` in een `POST /config/projections` request is invalid. Controleer of u een geldige doel-id hebt opgegeven voordat u het opnieuw probeert. Als u een nieuwe bestemming wilt maken, voert u de stappen uit die in het dialoogvenster [Handleiding voor ontwikkelaars van profielen](./api/edge-projections.md#create-a-destination).
 
 ### Niet-ondersteund mediatype
 

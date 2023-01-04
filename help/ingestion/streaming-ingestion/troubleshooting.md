@@ -5,7 +5,7 @@ title: Handleiding voor het oplossen van problemen met streaming-inname
 topic-legacy: troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 0%
@@ -46,9 +46,9 @@ Wanneer synchrone validatie niet wordt ondersteund voor de aangevraagde locatie,
 
 [!DNL Experience Platform] ondersteunt beveiligde gegevensverzameling. Wanneer geverifieerde gegevensverzameling is ingeschakeld, moeten clients een JSON Web Token (JWT) en hun IMS-organisatie-id verzenden als aanvraagheaders. Voor meer informatie over hoe te om voor authentiek verklaarde gegevens te verzenden naar [!DNL Platform], raadpleeg de handleiding op [geverifieerde gegevensverzameling](../tutorials/create-authenticated-streaming-connection.md).
 
-### Wat is de latentie voor het stromen gegevens aan [!DNL Real-time Customer Profile]?
+### Wat is de latentie voor het stromen gegevens aan [!DNL Real-Time Customer Profile]?
 
-Gestroomde gebeurtenissen worden over het algemeen weerspiegeld in [!DNL Real-time Customer Profile] in minder dan 60 seconden. De daadwerkelijke latentie kan door gegevensvolume, berichtgrootte, en bandbreedtebeperkingen variëren.
+Gestroomde gebeurtenissen worden over het algemeen weerspiegeld in [!DNL Real-Time Customer Profile] in minder dan 60 seconden. De daadwerkelijke latentie kan door gegevensvolume, berichtgrootte, en bandbreedtebeperkingen variëren.
 
 ### Kan ik meerdere berichten opnemen in dezelfde API-aanvraag?
 
@@ -94,9 +94,9 @@ De volgende JSON is een voorbeeld van een reactieobject voor een API-aanvraag me
 }
 ```
 
-### Waarom worden mijn verzonden berichten niet ontvangen door [!DNL Real-time Customer Profile]?
+### Waarom worden mijn verzonden berichten niet ontvangen door [!DNL Real-Time Customer Profile]?
 
-Indien [!DNL Real-time Customer Profile] Hiermee wordt een bericht afgewezen. Dit is vooral te wijten aan onjuiste identiteitsgegevens. Dit kan het resultaat zijn van het opgeven van een ongeldige waarde of naamruimte voor een identiteit.
+Indien [!DNL Real-Time Customer Profile] Hiermee wordt een bericht afgewezen. Dit is vooral te wijten aan onjuiste identiteitsgegevens. Dit kan het resultaat zijn van het opgeven van een ongeldige waarde of naamruimte voor een identiteit.
 
 Er zijn twee typen naamruimten: standaard en aangepast. Wanneer u aangepaste naamruimten gebruikt, moet u ervoor zorgen dat de naamruimte is geregistreerd binnen [!DNL Identity Service]. Zie de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md) voor meer informatie over het gebruik van standaard- en aangepaste naamruimten.
 

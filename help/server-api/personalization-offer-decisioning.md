@@ -2,7 +2,7 @@
 title: Personalisatie via Offer decisioning
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen via Offer decisioning te leveren en weer te geven.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../edge/
 
 ## Bepaling van beslissingsbereik {#creating-decision-scopes}
 
-De [!DNL Offer Decision Engine] gebruikt Adobe Experience Platform-gegevens en [Klantprofielen in realtime](../profile/home.md), samen met de [!DNL Offer Library], om aanbiedingen aan de juiste klanten en kanalen op het juiste ogenblik te leveren.
+De [!DNL Offer Decision Engine] gebruikt Adobe Experience Platform-gegevens en [Klantprofielen voor realtime](../profile/home.md), samen met de [!DNL Offer Library], om aanbiedingen aan de juiste klanten en kanalen op het juiste ogenblik te leveren.
 
 Meer informatie over de [!DNL Offer Decisioning Engine], zie de toegewijde [documentatie](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html).
 

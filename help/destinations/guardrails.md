@@ -5,7 +5,8 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 1%
@@ -33,7 +34,7 @@ Dit document bevat twee typen standaardlimieten:
 
 ## Activeringslimieten {#activation-limits}
 
-De volgende instructies bieden aanbevolen limieten bij het activeren van gegevens in realtime-klantprofiel voor bestemmingen.
+De volgende gidsen verstrekken geadviseerde grenzen wanneer het activeren van gegevens van het Profiel van de Klant in real time aan bestemmingen.
 
 ### Algemene activeringsinstructies {#general-activation-guardrails}
 
@@ -121,5 +122,5 @@ Informatie over hulplijnen weergeven voor andere services van Experience Platfor
 
 * Guardrails voor [gegevensinvoer](/help/ingestion/guardrails.md)
 * Guardrails voor [[!DNL Identity Service] data](/help/identity-service/guardrails.md)
-* Guardrails voor [[!DNL Real-time Customer Profile] data](/help/profile/guardrails.md)
+* Guardrails voor [[!DNL Real-Time Customer Profile] data](/help/profile/guardrails.md)
 * Guardrails voor [[!DNL Query Service] data](/help/query-service/guardrails.md)

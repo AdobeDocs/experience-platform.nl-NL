@@ -3,20 +3,20 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
-description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-time Klantprofiel.
+description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-Time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
 
 ---
 
-# Behandeling van privacyverzoek in [!DNL Real-time Customer Profile]
+# Behandeling van privacyverzoek in [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform [!DNL Privacy Service] verwerkt verzoeken van klanten om toegang tot hun persoonsgegevens, om te weigeren deze te verkopen of om hun persoonsgegevens te verwijderen, zoals bepaald in privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR), en [!DNL California Consumer Privacy Act] (CCPA).
 
-In dit document worden de belangrijkste concepten besproken die betrekking hebben op de verwerking van verzoeken om privacy voor [!DNL Real-time Customer Profile] in Adobe Experience Platform.
+In dit document worden de belangrijkste concepten besproken die betrekking hebben op de verwerking van verzoeken om privacy voor [!DNL Real-Time Customer Profile] in Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ U wordt aangeraden het volgende goed te begrijpen: [!DNL Experience Platform] se
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [[!DNL Real-time Customer Profile]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
@@ -42,7 +42,7 @@ Voor meer informatie over naamruimten in [!DNL Experience Platform], zie de [Ove
 
 ## Verzoeken indienen {#submit}
 
-In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voor [!DNL Real-time Customer Profile] met de [!DNL Privacy Service] API of UI. Voordat u deze secties leest, wordt u ten zeerste aangeraden de [Privacy Service-API](../privacy-service/api/getting-started.md) of [UI Privacy Service](../privacy-service/ui/overview.md) documentatie voor volledige stappen over hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om ingediende gegevens van de gebruikersidentiteit in verzoek te formatteren lading.
+In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voor [!DNL Real-Time Customer Profile] met de [!DNL Privacy Service] API of UI. Voordat u deze secties leest, wordt u ten zeerste aangeraden de [Privacy Service-API](../privacy-service/api/getting-started.md) of [UI Privacy Service](../privacy-service/ui/overview.md) documentatie voor volledige stappen over hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om ingediende gegevens van de gebruikersidentiteit in verzoek te formatteren lading.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### De gebruikersinterface gebruiken
 
-Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL AEP Data Lake]** en/of **[!UICONTROL Profile]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die in het datumpeer of [!DNL Real-time Customer Profile], respectievelijk.
+Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!UICONTROL AEP Data Lake]** en/of **[!UICONTROL Profile]** krachtens **[!UICONTROL Products]** om taken te verwerken voor gegevens die in het datumpeer of [!DNL Real-Time Customer Profile], respectievelijk.
 
 ![Een verzoek van de toegangstaak die in UI wordt gecreeerd, met de optie van het Profiel die onder Producten wordt geselecteerd](./images/privacy/product-value.png)
 

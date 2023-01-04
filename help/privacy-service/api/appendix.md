@@ -5,7 +5,7 @@ title: Bijlage Privacy Service API-handleiding
 topic-legacy: developer guide
 description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 1a84ebfa0ad7801e14896dffd28302f057ae171d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 3%
@@ -28,7 +28,7 @@ In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identite
 | Telefoon | `Phone` | `7` |
 | Adobe Advertising Cloud-id | `AdCloud` | `411` |
 | Adobe Audience Manager UUID | `CORE` | `0` |
-| Adobe Experience Cloud-id | `ECID` | `4` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
 | Adobe Target-id | `TNTID` | `9` |
 | [!DNL Apple] ID voor adverteerders | `IDFA` | `20915` |
 | [!DNL Google] ID advertentie | `GAID` | `20914` |
@@ -69,7 +69,7 @@ In de volgende tabel worden de toegestane waarden voor het opgeven van een Adobe
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
-| Adobe Experience Platform (Real-time klantprofiel) | `profileService` |
+| Adobe Experience Platform (Real-Time Klantprofiel) | `profileService` |
 | Adobe Primetime-verificatie | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Klantkenmerken (CRS) | `CRS` |

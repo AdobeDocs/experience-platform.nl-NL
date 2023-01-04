@@ -1,17 +1,17 @@
 ---
 title: Sjablonen voor rapporten van Power BI voor dashboards van Platforms
 description: Gebruik rapportsjablonen om gegevens van Experience Platforms te verkennen met behulp van Power BI.
-source-git-commit: 19b0ce2c8125fa5253cbba34adbd2884e27b5133
+exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1443'
 ht-degree: 0%
 
 ---
 
-
 # Sjablonen voor Power BI-rapporten voor dashboards
 
-Met de functie voor het rapportsjabloon van Power BI kunt u aansprekende rapporten maken die zijn gevuld met gegevens van Adobe Experience Platform. Het gestroomlijnde installatieproces installeert automatisch standaardwidgets voor het Profiel, de segmentatie, en de bestemmingen in real time van de Klant. De installatie verbindt ook Power BI met uw gegevensmodellen zodat kunt u uw rapportmalplaatjes gemakkelijk aanpassen en uitbreiden. Deze rapporten kunnen over uw volledige organisatie worden gedeeld zonder de ontvangers die geloofsbrieven voor uw organisatie IMS op Platform nodig hebben.
+Met de functie voor het rapportsjabloon van Power BI kunt u aansprekende rapporten maken die zijn gevuld met gegevens van Adobe Experience Platform. Het gestroomlijnde installatieproces installeert automatisch standaardwidgets voor Real-Time Klantprofiel, segmentatie, en bestemmingen. De installatie verbindt ook Power BI met uw gegevensmodellen zodat kunt u uw rapportmalplaatjes gemakkelijk aanpassen en uitbreiden. Deze rapporten kunnen over uw volledige organisatie worden gedeeld zonder de ontvangers die geloofsbrieven voor uw organisatie IMS op Platform nodig hebben.
 
 In dit document vindt u instructies voor het tot stand brengen van een verbinding tussen Adobe Experience Platform en de toepassing Power BI en het gebruik van rapportsjablonen om belangrijke gegevens van het Platform met externe gebruikers te delen.
 

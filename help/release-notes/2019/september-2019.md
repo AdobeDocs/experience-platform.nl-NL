@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Ga voor meer informatie naar de [Documentatie over gegevensinname](../../ingesti
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde dienst binnen [!DNL Experience Platform] dat gegevenswetenschappers in staat stelt naadloos inzichten van gegevens en inhoud over Adobe oplossingen en derdesystemen te produceren door de Modellen van het Leren van de Machine te bouwen en te exploiteren. [!DNL Data Science Workspace] is nauw geïntegreerd met [!DNL Platform] en maakt de levenscyclus van de end-to-end gegevenswetenschap mogelijk, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de operationele implementatie van Modellen om automatisch te verrijken [!DNL Real-time Customer Profile] met Inzichten van het leren van de machine.
+Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde dienst binnen [!DNL Experience Platform] dat gegevenswetenschappers in staat stelt naadloos inzichten van gegevens en inhoud over Adobe oplossingen en derdesystemen te produceren door de Modellen van het Leren van de Machine te bouwen en te exploiteren. [!DNL Data Science Workspace] is nauw geïntegreerd met [!DNL Platform] en maakt de levenscyclus van de end-to-end gegevenswetenschap mogelijk, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de operationele implementatie van Modellen om automatisch te verrijken [!DNL Real-Time Customer Profile] met Inzichten van het leren van de machine.
 
 **Nieuwe functies**
 
@@ -44,7 +44,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde
 | -----------| ---------- |
 | Planning van de Diensten via UI | Geïntegreerd met [!DNL Platform] Orchestration Service om modeltraining en -scoring te automatiseren met door de gebruiker gedefinieerde schema&#39;s met behulp van de UI. |
 | [!DNL Service Gallery] | Blader door, monitor en toegang tot services voor computerleren met de mogelijkheid om geautomatiseerde training en scoring taken te plannen, allemaal binnen de herontworpen [!DNL Service Gallery]. |
-| [!DNL JupyterLab] 5.0.0. | [!DNL JupyterLab] Verbeteringen in de gebruikersinterface. |
+| [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] Verbeteringen in de gebruikersinterface. |
 
 **Bekende problemen**
 
@@ -56,7 +56,7 @@ Ga voor meer informatie naar de [Overzicht van de Data Science Workspace](../../
 
 ## [!DNL Query Service] {#query}
 
-[!DNL Query Service] biedt de mogelijkheid om standaard SQL te gebruiken voor het zoeken naar gegevens in Adobe Experience Platform ter ondersteuning van een groot aantal gebruiksgevallen voor analyses en gegevensbeheer. Het is een serverloos hulpmiddel dat u toestaat om zich bij datasets van aan te sluiten [!DNL Data Lake] en vangen de vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Science Workspace]of voor inname in [!DNL Real-time Customer Profile].
+[!DNL Query Service] biedt de mogelijkheid om standaard SQL te gebruiken voor het zoeken naar gegevens in Adobe Experience Platform ter ondersteuning van een groot aantal gebruiksgevallen voor analyses en gegevensbeheer. Het is een serverloos hulpmiddel dat u toestaat om zich bij datasets van aan te sluiten [!DNL Data Lake] en vangen de vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Science Workspace]of voor inname in [!DNL Real-Time Customer Profile].
 
 U kunt [!DNL Query Service] het bouwen van ecosystemen voor gegevensanalyse, waarbij een beeld wordt geschetst van klanten over hun verschillende interactiekanalen. Deze kanalen kunnen verkooppuntsystemen, web-, mobiele of CRM-systemen omvatten.
 

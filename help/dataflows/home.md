@@ -5,8 +5,7 @@ title: Overzicht van gegevensstromen
 topic-legacy: overview
 description: In dit document worden gegevensstromen geïntroduceerd, waarmee wordt aangegeven hoe deze in Adobe Experience Platform worden gebruikt.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
@@ -19,16 +18,16 @@ In Adobe Experience Platform worden gegevens uit een groot aantal verschillende 
 
 ## Dataflows gebruiken
 
-Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Deze gegevensstromen worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
+Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
 
-Lees voor meer informatie over het gebruik van gegevensstromen in bronconnectors het [overzicht van bronnen](../sources/home.md).
+Lees voor meer informatie over het gebruik van gegevensstromen in bronconnectors de [overzicht van bronnen](../sources/home.md).
 
 ## Gegevens voorbereiden
 
 Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
 
-Lees voor meer informatie over het voorbereiden van gegevens nadat deze zijn opgenomen het [Data Prep-overzicht](../data-prep/home.md).
+Als u meer wilt weten over het voorbereiden van gegevens nadat deze zijn opgenomen, leest u de [Overzicht van Data Prep](../data-prep/home.md).
 
 ## Gegevensstromen controleren
 
-De gegevens van de controle kunnen worden gedaan door of Platform APIs of Platform UI te gebruiken. Lees de [API-zelfstudie voor het controleren van gegevensstromen](./api/monitor.md) voor meer informatie over het controleren van gegevensstromen met behulp van de API. Leer hoe te om gegevensstromen binnen de interface van het Platform te controleren, te lezen gelieve de leerprogramma&#39;s op [controledataflows voor bronnen](./ui/monitor-sources.md) en [controledataflows voor bestemmingen](./ui/monitor-destinations.md).
+De gegevens van de controle kunnen worden gedaan door of Platform APIs of Platform UI te gebruiken. Lees de [API-zelfstudie voor controle van gegevensstromen](./api/monitor.md). Lees de zelfstudies voor meer informatie over het controleren van gegevensstromen binnen de gebruikersinterface van het Platform [gegevensstromen controleren voor bronnen](./ui/monitor-sources.md) en [dataflow voor bestemmingen controleren](./ui/monitor-destinations.md).

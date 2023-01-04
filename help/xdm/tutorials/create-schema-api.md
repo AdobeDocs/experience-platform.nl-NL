@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Lees voordat u deze zelfstudie start de [ontwikkelaarsgids](../api/getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan te maken [!DNL Schema Registry] API. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
@@ -955,7 +955,7 @@ Wanneer u een GET-verzoek uitvoert om het schema op te zoeken, wordt nu de verwi
 
 ### Een identiteitsdescriptor definiëren
 
-Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform]. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens zijn vervolgens toegankelijk via [[!DNL Real-time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] de diensten om een verbonden mening van elke individuele klant te verstrekken.
+Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform]. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens zijn vervolgens toegankelijk via [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] de diensten om een verbonden mening van elke individuele klant te verstrekken.
 
 Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-id of andere unieke id-velden.
 
@@ -1016,9 +1016,9 @@ Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinst
 }
 ```
 
-## Schema inschakelen voor gebruik in [!DNL Real-time Customer Profile] {#profile}
+## Schema inschakelen voor gebruik in [!DNL Real-Time Customer Profile] {#profile}
 
-Door de tag &quot;union&quot; toe te voegen aan de tag `meta:immutableTags` attribuut, kunt u het schema van Leden Loyalty voor gebruik toelaten door [!DNL Real-time Customer Profile].
+Door de tag &quot;union&quot; toe te voegen aan de tag `meta:immutableTags` attribuut, kunt u het schema van Leden Loyalty voor gebruik toelaten door [!DNL Real-Time Customer Profile].
 
 Zie de sectie over [vakbonden](../api/unions.md) in de [!DNL Schema Registry] ontwikkelaarshandleiding.
 

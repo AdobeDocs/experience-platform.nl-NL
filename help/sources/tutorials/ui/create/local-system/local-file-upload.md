@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een bronverbinding maakt voor uw lokale systeem om lokale bestanden naar het Platform te brengen
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platf
 * [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Lokale bestanden uploaden naar Platform
 
@@ -92,4 +92,4 @@ Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens die ermee wor
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het in Platform opgenomen. Deze gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) voor meer informatie .
+Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het in Platform opgenomen. Deze gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile]. Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) voor meer informatie .

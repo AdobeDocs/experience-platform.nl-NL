@@ -5,7 +5,7 @@ title: Voorvertoningen en schattingen van API-eindpunten
 topic-legacy: developer guide
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Terwijl u een segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoning
 
 >[!NOTE]
 >
->Als u toegang wilt tot vergelijkbare gegevens met betrekking tot gegevens in realtime klantprofiel, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke naamruimten of het profielgegevensbestand als geheel, raadpleegt u de [profielvoorbeeld (voorbeeldstatus), eindhulplijn](../../profile/api/preview-sample-status.md), onderdeel van de ontwikkelaarsgids voor profiel API.
+>Als u toegang wilt tot vergelijkbare metriek met betrekking tot realtime klantprofielgegevens, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke naamruimten of het profielgegevensbestand als geheel, raadpleegt u de [profielvoorbeeld (voorbeeldstatus), eindhulplijn](../../profile/api/preview-sample-status.md), onderdeel van de ontwikkelaarsgids voor profiel API.
 
 ## Aan de slag
 

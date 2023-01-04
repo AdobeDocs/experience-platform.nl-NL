@@ -6,7 +6,7 @@ title: Inzichten met Customer AI ontdekken
 topic-legacy: Discovering insights
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 0%
@@ -151,7 +151,7 @@ Het selecteren van **[!UICONTROL Create Segment]** de knoop in om het even welke
 
 >[!NOTE]
 >
->De **[!UICONTROL Create Segment]** De knoop is slechts beschikbaar als het Profiel van de Klant in real time voor de dataset wordt toegelaten. Ga voor meer informatie over hoe u het profiel van de real-time klant kunt inschakelen naar de [Overzicht van het realtime klantprofiel](../../../rtcdp/overview.md).
+>De **[!UICONTROL Create Segment]** De knoop is slechts beschikbaar als het Profiel van de Klant in real time voor de dataset wordt toegelaten. Ga voor meer informatie over hoe u Real-Time klantprofiel kunt inschakelen naar de [Overzicht van het realtime klantprofiel](../../../rtcdp/overview.md).
 
 ![Klikken om segment te maken](../images/insights/influential-factors-create-segment.png)
 

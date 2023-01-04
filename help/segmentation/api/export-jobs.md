@@ -5,7 +5,7 @@ title: API-eindpunt voor segmentexporttaken
 topic-legacy: developer guide
 description: De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het /export/job eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform gebruiken, die u toestaat om, uitvoerbanen programmatically terug te winnen tot stand te brengen en te annuleren.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1682'
 ht-degree: 1%
@@ -18,7 +18,7 @@ De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de lede
 
 >[!NOTE]
 >
->Deze handleiding behandelt het gebruik van exportbanen in de [!DNL Segmentation API]. Voor informatie over het beheren van exporttaken voor [!DNL Real-time Customer Profile] gegevens, zie de gids over [taken exporteren in de profiel-API](../../profile/api/export-jobs.md)
+>Deze handleiding behandelt het gebruik van exportbanen in de [!DNL Segmentation API]. Voor informatie over het beheren van exporttaken voor [!DNL Real-Time Customer Profile] gegevens, zie de gids over [taken exporteren in de profiel-API](../../profile/api/export-jobs.md)
 
 ## Aan de slag
 

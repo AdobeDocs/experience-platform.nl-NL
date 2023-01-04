@@ -6,7 +6,7 @@ title: Invoer en uitvoer in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '3183'
 ht-degree: 0%
@@ -44,7 +44,7 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in di
 | [Veldengroepen](../../xdm/schema/composition.md) | Een component die een of meer velden in een schema definieert. Veldgroepen dwingen af hoe hun velden worden weergegeven in de hiërarchie van het schema en tonen daarom in elk schema dezelfde structuur aan waarin ze zijn opgenomen. Veldgroepen zijn alleen compatibel met specifieke klassen, zoals bepaald door hun `meta:intendedToExtend` kenmerk. |
 | [Gegevenstype](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
 | Churn | Een meting van het percentage accounts dat de abonnementen annuleert of niet vernieuwt. Een hoge wisselkoers kan een negatief effect hebben op de maandelijkse terugkerende inkomsten (MRR) en kan ook wijzen op ontevredenheid over een product of dienst. |
-| [Klantprofiel in realtime](../../profile/home.md) | Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt. |
+| [Klantprofiel in realtime](../../profile/home.md) | Het profiel van de Klant in real time verstrekt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt. |
 
 ## Invoergegevens van AI van de klant
 
@@ -259,11 +259,11 @@ Een van de resterende [gebeurtenistypen](#standard-events) kan vereist zijn op b
 
 Als u kenmerken van Adobe Audience Manager wilt gebruiken, moet u een bronverbinding maken met de [Audience Manager-bronaansluiting](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). De bronschakelaar leidt automatisch tot het schema met de juiste gebiedsgroep(en). U hoeft niet handmatig extra gebeurtenistypen toe te voegen om het schema te laten werken met Customer AI.
 
-Wanneer u een nieuwe klant-AI-instantie configureert, `audienceName` en `audienceID` U kunt een bepaalde eigenschap selecteren om te scoren terwijl u uw doel definieert.
+Wanneer u een nieuwe klant-AI-instantie configureert, `audienceName` en `audienceID` U kunt een bepaalde eigenschap voor scoring selecteren bij het definiëren van uw doel.
 
 ## AI-uitvoergegevens van klant
 
-De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een Real-time dataset van het Profiel van de Klant hebt toegelaten, kunt u inzichten van het Profiel van de Klant in real time in [Segment Builder](../../segmentation/ui/segment-builder.md). Als u geen profiel-Toegelaten dataset hebt, kunt u [De AI-uitvoer van de klant downloaden](./user-guide/download-scores.md) dataset beschikbaar op het data Lake.
+De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een Real-Time Klantprofiel-Toegelaten dataset hebt, kunt u inzichten van het Profiel van de Klant in real time in [Segment Builder](../../segmentation/ui/segment-builder.md). Als u geen profiel-Toegelaten dataset hebt, kunt u [De AI-uitvoer van de klant downloaden](./user-guide/download-scores.md) dataset beschikbaar op het data Lake.
 
 U kunt de outputdataset onder vinden **Gegevenssets** in Platform. Alle AI-uitvoergegevenssets van de klant beginnen met de naam **AI-scores van klant - Naam_van_app**. Evenzo beginnen alle AI-uitvoerschema&#39;s van de Klant met de naam **AI-schema van klant - Naam_van_app**.
 
@@ -287,7 +287,7 @@ In de onderstaande tabel worden de verschillende kenmerken beschreven die in de 
 >[!NOTE]
 >
 > - Klanten-AI gebruiken alleen bijgewerkte gegevens voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.
-> - Klant-AI maakt gebruik van gegevenssets van Platforms. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, dienen merken de Privacy Service van het Platform te gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-time Customer Profile te verwijderen.
+> - Klant-AI maakt gebruik van gegevenssets van Platforms. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Privacy Service van het Platform gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, de Identiteitsservice en het Real-Time Klantprofiel te verwijderen.
 > - Alle datasets die wij voor input/output van modellen gebruiken zullen de richtlijnen van het Platform volgen. De Encryptie van Gegevens van het Platform is op gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md)
 
 

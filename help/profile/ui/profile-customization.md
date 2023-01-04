@@ -4,16 +4,16 @@ title: Aanpassing profieldetails in de gebruikersinterface
 description: Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop gegevens van het realtime-klantprofiel worden weergegeven in de gebruikersinterface van Adobe Experience Platform.
 topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] detailaanpassing {#profile-detail-customization}
+# [!DNL Real-Time Customer Profile] detailaanpassing {#profile-detail-customization}
 
-In de Adobe Experience Platform-gebruikersinterface kunt u bekijken en communiceren met [!DNL Real-time Customer Profile] gegevens in de vorm van klantprofielen. De profielgegevens die in de gebruikersinterface worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van elke afzonderlijke klant. Dit omvat details zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De standaardvelden in profielen kunnen ook op organisatorisch niveau worden gewijzigd en de voorkeur krijgen [!DNL Profile] kenmerken. Deze gids verstrekt geleidelijke instructies voor het aanpassen van de manier waarin [!DNL Profile] gegevens worden weergegeven in de gebruikersinterface van het Platform.
+In de Adobe Experience Platform-gebruikersinterface kunt u bekijken en communiceren met [!DNL Real-Time Customer Profile] gegevens in de vorm van klantprofielen. De profielgegevens die in de gebruikersinterface worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van elke afzonderlijke klant. Dit omvat details zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De standaardvelden in profielen kunnen ook op organisatorisch niveau worden gewijzigd en de voorkeur krijgen [!DNL Profile] kenmerken. Deze gids verstrekt geleidelijke instructies voor het aanpassen van de manier waarin [!DNL Profile] gegevens worden weergegeven in de gebruikersinterface van het Platform.
 
 Voor een volledige handleiding naar de profielgebruikersinterface gaat u naar de [Handleiding voor profielgebruikersinterface](user-guide.md).
 

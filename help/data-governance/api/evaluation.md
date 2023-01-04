@@ -5,7 +5,7 @@ title: API-eindpunten voor beleidsevaluatie
 topic-legacy: developer guide
 description: Zodra de marketing acties zijn gecreeerd en het beleid is bepaald, kunt u de Dienst API van het Beleid gebruiken om te evalueren of om het even welk beleid door bepaalde acties wordt geschonden. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -682,6 +682,6 @@ Een succesvolle reactie retourneert een array met evaluatieresultaten. één voo
 ]
 ```
 
-## Beleidsevaluatie voor [!DNL Real-time Customer Profile]
+## Beleidsevaluatie voor [!DNL Real-Time Customer Profile]
 
-De [!DNL Policy Service] API kan ook worden gebruikt om te controleren op beleidsovertredingen waarbij het gebruik van [!DNL Real-time Customer Profile] segmenten. Zie de zelfstudie aan [naleving van gegevensgebruik afdwingen voor publiekssegmenten](../../segmentation/tutorials/governance.md) voor meer informatie .
+De [!DNL Policy Service] API kan ook worden gebruikt om te controleren op beleidsovertredingen waarbij het gebruik van [!DNL Real-Time Customer Profile] segmenten. Zie de zelfstudie aan [naleving van gegevensgebruik afdwingen voor publiekssegmenten](../../segmentation/tutorials/governance.md) voor meer informatie .

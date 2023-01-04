@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen
 title: Privacy Request-verwerking in Identity-service
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor identiteitsdiensten.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 0%
@@ -18,7 +18,7 @@ In dit document worden de belangrijkste concepten besproken die betrekking hebbe
 
 >[!NOTE]
 >
->In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen voor de opslag van identiteitsgegevens in Experience Platform kunt indienen. Als u ook privacyverzoeken wilt indienen voor het Platform Data Lake of [!DNL Real-time Customer Profile], raadpleeg de handleiding op [verwerking van privacyverzoeken in het datumpigment](../catalog/privacy.md) en de gids [verwerking van privacyverzoeken voor profiel](../profile/privacy.md) in aanvulling op deze zelfstudie.
+>In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen voor de opslag van identiteitsgegevens in Experience Platform kunt indienen. Als u ook privacyverzoeken wilt indienen voor het Platform Data Lake of [!DNL Real-Time Customer Profile], raadpleeg de handleiding op [verwerking van privacyverzoeken in het datumpigment](../catalog/privacy.md) en de gids [verwerking van privacyverzoeken voor profiel](../profile/privacy.md) in aanvulling op deze zelfstudie.
 >
 >Raadpleeg voor meer informatie over het indienen van privacyverzoeken voor andere Adobe Experience Cloud-toepassingen de [Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -28,7 +28,7 @@ U wordt aangeraden het volgende goed te begrijpen: [!DNL Experience Platform] se
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [[!DNL Real-time Customer Profile]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
@@ -106,7 +106,7 @@ Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!
 
 Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL Privacy Service], [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] dat het verzoek is ontvangen en de betrokken gegevens zijn gemarkeerd voor verwijdering. De verwijdering van de individuele identiteit is gebaseerd op de opgegeven naamruimte en/of ID-waarde. Bovendien wordt de verwijdering uitgevoerd voor alle sandboxen die bij een bepaalde IMS-organisatie horen.
 
-Afhankelijk van of u ook het profiel van de Klant in real time opnam (`ProfileService`) en het datumpeer (`aepDataLake`) als producten in uw privacyaanvraag voor identiteitsservice (`identity`), worden verschillende gegevenssets met betrekking tot de identiteit op mogelijk verschillende tijdstippen uit het systeem verwijderd:
+Afhankelijk van of u ook Real-Time Klantprofiel (`ProfileService`) en het datumpeer (`aepDataLake`) als producten in uw privacyaanvraag voor identiteitsservice (`identity`), worden verschillende gegevenssets met betrekking tot de identiteit op mogelijk verschillende tijdstippen uit het systeem verwijderd:
 
 | Producten inbegrepen | Effecten |
 | --- | --- |

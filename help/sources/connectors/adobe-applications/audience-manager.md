@@ -5,7 +5,7 @@ title: Overzicht van Bron Audience Manager
 topic-legacy: overview
 description: De Adobe Audience Manager-bronstroom streamt gegevens van de eerste partij die in Audience Manager naar Adobe Experience Platform zijn verzameld.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -84,4 +84,4 @@ U kunt ook het profielgebruik controleren dat uw account beschikbaar heeft via d
 | --- | --- | --- | --- |
 | Gegevens in realtime | Gebeurtenissen | &lt;25 minuten | Tijd vanaf het vastleggen bij het knooppunt Audience Manager Edge tot het verschijnen in het datumpeer. |
 | Gegevens in realtime | Profielupdates | &lt;10 minuten | Tijd om in het Profiel van de Klant in real time te landen. |
-| Gegevens in realtime en ongeboekt | Profielupdates | 24 tot 36 uur | Tijd vanaf het vastleggen via DCS/PCS Edge-gegevens en opgenomen gegevens, dat wordt verwerkt naar een gebruikersprofiel en vervolgens wordt weergegeven in Real-time klantprofiel. Momenteel landen deze gegevens niet rechtstreeks in het datumpeer. De knevel van het profiel kan voor de datasets van het Profiel van de Audience Manager worden toegelaten om deze gegevens direct in het Profiel van de Klant in real time in te voeren. |
+| Gegevens in realtime en ongeboekt | Profielupdates | 24 tot 36 uur | Tijd vanaf het vastleggen via DCS/PCS Edge-gegevens en opgenomen gegevens, dat wordt verwerkt naar een gebruikersprofiel en vervolgens wordt weergegeven in Real-Time klantprofiel. Momenteel landen deze gegevens niet rechtstreeks in het datumpeer. De knevel van het profiel kan voor de datasets van het Profiel van de Audience Manager worden toegelaten om deze gegevens direct in het Profiel van de Klant in real time in te voeren. |

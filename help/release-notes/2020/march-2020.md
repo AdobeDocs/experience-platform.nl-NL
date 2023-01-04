@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: opmerkingen bij de release;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 3%
@@ -25,7 +25,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 * [[!DNL Identity Service]](#identity)
 * [[!DNL Sources]](#sources)
 
-## Gegevensbeheer {#governance}
+## Data Governance {#governance}
 
 [!DNL Experience Platform] staat bedrijven toe om gegevens van veelvoudige ondernemingssystemen samen te brengen om marketers beter toe te staan om, klanten te identificeren te begrijpen en in dienst te nemen. [!DNL Experience Platform] omvat een end-to-end infrastructuur voor gegevensbeheer om het juiste gebruik van gegevens binnen [!DNL Platform] en wanneer deze worden gedeeld tussen systemen.
 
@@ -111,7 +111,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 | ------- | ----------- |
 | Verouderde signalen voor Adobe Audience Manager-connector | Gegevens op signaalniveau van Audience Manger worden niet meer verzonden. Merk op dat segmentlidmaatschap voor Traits en Segmenten nog zal worden omvat. Als gevolg van deze wijziging worden er geen binnenkomende gegevenssets meer gegenereerd. |
 | Naam van gegevensset wijzigen | Datasets die door de schakelaar van de Manager van de Publiek worden geproduceerd zullen bijgewerkte namen en beschrijvingen hebben. |
-| Inschakelen [!DNL Profile] schakelen in Audience Manger | [!DNL Profile] schakelt u in of uit om gegevensset te promoten naar [!DNL Real-time Customer Profile]. Schakelen wordt standaard ingeschakeld. |
+| Inschakelen [!DNL Profile] schakelen in Audience Manger | [!DNL Profile] schakelt u in of uit om gegevensset te promoten naar [!DNL Real-Time Customer Profile]. Schakelen wordt standaard ingeschakeld. |
 | UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronconnector voor [!DNL Azure Data Lake Storage Gen2] in de gebruikersinterface. |
 | UI-ondersteuning voor CRM-systemen | Nieuwe bronconnector voor [!DNL HubSpot], [!DNL Salesforce Service Cloud], en [!DNL ServiceNow] in de gebruikersinterface. |
 | UI-ondersteuning voor databasesystemen | Nieuwe bronconnector voor [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server], en [!DNL MySQL] in de gebruikersinterface. |

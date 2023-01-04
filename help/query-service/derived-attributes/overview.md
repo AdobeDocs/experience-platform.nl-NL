@@ -2,7 +2,7 @@
 title: Afgeleide kenmerken
 description: Afgeleide attributen verstrekken een geschikte manier om attributen van uw keus te produceren die bij om het even welke regelmatige kappigheid en naar keuze gepubliceerd in uw gegevens van het Profiel van de Klant in real time kunnen worden vernieuwd. Dit document biedt een overzicht van hoe u de Query-service kunt gebruiken om afgeleide kenmerken te maken voor gebruik met uw profielgegevens.
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Afgeleide kenmerken
 
-De afgeleide attributeneigenschap verstrekt een geschikte manier om attributen van uw keus van andere informatie te produceren beschikbaar in het gegevenspeer. Deze kenmerken kunnen op elke normale manier worden vernieuwd en optioneel worden gepubliceerd in uw gegevens van het profiel van de klant in realtime. Afgeleide attributen richten zich op de behoefte om complexe attributen zoals decile, percentiel, en kwartiel over eenvoudigere degenen zoals maximum, telling, en gemiddelde te bouwen. Deze eigenschappen kunnen specifiek voor een individuele gebruiker of voor een bedrijfsentiteit worden berekend. Hierdoor kunt u kenmerken afleiden die rechtstreeks aan een id kunnen worden geaccrediteerd, zoals e-mailadressen, apparaat-id&#39;s en telefoonnummers, en ook kenmerken afleiden die indirect aan dat gebruikers- of bedrijfsprofiel zijn gekoppeld.
+De afgeleide attributeneigenschap verstrekt een geschikte manier om attributen van uw keus van andere informatie te produceren beschikbaar in het gegevenspeer. Deze kenmerken kunnen op elke normale manier worden vernieuwd en optioneel worden gepubliceerd in uw gegevens in het realtime klantprofiel. Afgeleide attributen richten zich op de behoefte om complexe attributen zoals decile, percentiel, en kwartiel over eenvoudigere degenen zoals maximum, telling, en gemiddelde te bouwen. Deze eigenschappen kunnen specifiek voor een individuele gebruiker of voor een bedrijfsentiteit worden berekend. Hierdoor kunt u kenmerken afleiden die rechtstreeks aan een id kunnen worden geaccrediteerd, zoals e-mailadressen, apparaat-id&#39;s en telefoonnummers, en ook kenmerken afleiden die indirect aan dat gebruikers- of bedrijfsprofiel zijn gekoppeld.
 
-Afgeleide attributen zijn nodig voor een verscheidenheid van gebruiksgevallen wanneer de gegevens op het gegevens meer worden geanalyseerd. Deze gegevens kunnen vervolgens worden gemarkeerd voor gebruik in het Real-time Klantprofiel en worden gebruikt in gevallen van downstreamgebruik, zoals het creëren van een sterk gericht publiek. U kunt deze functie bijvoorbeeld gebruiken in de volgende gevallen:
+Afgeleide attributen zijn nodig voor een verscheidenheid van gebruiksgevallen wanneer de gegevens op het gegevens meer worden geanalyseerd. Deze gegevens kunnen vervolgens worden gemarkeerd voor gebruik in Real-Time Klantprofiel en worden gebruikt in gevallen van downstreamgebruik, zoals het creëren van een sterk gericht publiek. U kunt deze functie bijvoorbeeld gebruiken in de volgende gevallen:
 
 * De laagste 10% van de abonnees identificeren op basis van viewer per kanaal. Op die manier kunnen marketeers zich richten op een bepaald publiek en een nieuw abonneepakket verkopen.
 * Een publiek identificeren dat zich in de top 10% van de vliegers bevindt op basis van hun totale afgelegde kilometers en de &quot;Flyer&quot;-status hebben. Dit publiek zou kunnen worden gebruikt om selectief de verkoop van een nieuw creditcardaanbod te richten.
@@ -34,7 +34,7 @@ De kwartjes worden gebruikt om de verdeling door vier en percentielen door 100 t
 
 ## Analytische afgeleide kenmerken
 
-De Dienst van de vraag verstrekt ingebouwde functies zoals sessionization en laatste aanraking, onder andere, die u op om het even welke gegevens van de tijdreeksen kunt toepassen om zaken verwante afleidingsattributen te produceren. U kunt deze analytische afgeleide kenmerken baseren op een of meer identiteiten en de gegevens desgewenst publiceren naar het realtime profiel van de klant.
+De Dienst van de vraag verstrekt ingebouwde functies zoals sessionization en laatste aanraking, onder andere, die u op om het even welke gegevens van de tijdreeksen kunt toepassen om zaken verwante afleidingsattributen te produceren. U hebt de optie om deze analytische afgeleide attributen op één of meerdere identiteit te baseren en naar keuze de gegevens aan het Profiel van de Klant in real time te publiceren indien vereist.
 
 Sommige mogelijke gebruiksgevallen voor dit type van afgeleid attribuut zouden kunnen omvatten:
 

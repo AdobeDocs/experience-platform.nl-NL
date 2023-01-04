@@ -1,7 +1,8 @@
 ---
 title: XDM Business Campagne Details Schema Field Group
 description: Dit document biedt een overzicht van de XDM Business Campagne Details schema veldgroep.
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -28,7 +29,7 @@ ht-degree: 0%
 | `expectedResponse` | [!UICONTROL String] | De verwachte reactie voor de campagne. |
 | `integrationPartnerName` | [!UICONTROL String] | De naam van de partner die met deze campagne is geïntegreerd. |
 | `isActive` | [!UICONTROL Boolean] | Geeft aan of deze campagne actief is. |
-| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of deze campagne is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in het realtime profiel van de klant. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
+| `isDeleted` | [!UICONTROL Boolean] | Geeft aan of deze campagne is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Een ISO 8601-tijdstempel van de laatste activiteit die aan de campagne is gekoppeld. |
 | `timeZone` | [!UICONTROL String] | De tijdzone waarin de campagne wordt uitgevoerd. |
 | `timeZoneDelivery` | [!UICONTROL String] | De tijdzone van de levering waarin de campagne werkt. |

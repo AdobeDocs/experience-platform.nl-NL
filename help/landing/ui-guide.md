@@ -5,7 +5,7 @@ title: Overzicht gebruikersinterface Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1751'
 ht-degree: 0%
@@ -128,7 +128,7 @@ De **[!UICONTROL Destinations]** in de sectie kunt u doelen maken, bijwerken en 
 
 ### [!UICONTROL Customer]
 
-De **[!UICONTROL Profiles]** in deze sectie kunt u door klantprofielen bladeren, profielmetriek bekijken, samenvoegbeleid maken en beheren en vakbondsschema&#39;s weergeven. Meer informatie over het gebruik van de [!UICONTROL Profiles] te lezen [[!DNL Profile] gebruikershandleiding](../profile/ui/user-guide.md). Meer informatie over het profiel van de Klant in real time vindt u in het gedeelte [Overzicht van het realtime klantprofiel](../profile/home.md).
+De **[!UICONTROL Profiles]** in deze sectie kunt u door klantprofielen bladeren, profielmetriek bekijken, samenvoegbeleid maken en beheren en vakbondsschema&#39;s weergeven. Meer informatie over het gebruik van de [!UICONTROL Profiles] te lezen [[!DNL Profile] gebruikershandleiding](../profile/ui/user-guide.md). Meer informatie over het Real-Time Klantprofiel vindt u in het gedeelte [Overzicht van het realtime klantprofiel](../profile/home.md).
 
 De **[!UICONTROL Segments]** in deze sectie kunt u segmentdefinities maken en beheren. Meer informatie over het gebruik van de [!UICONTROL Segments] te lezen [gebruikershandleiding voor segmentatie](../segmentation/ui/overview.md). Meer informatie over de Dienst van de Segmentatie kan in worden gevonden [Overzicht van segmentatieservice](../segmentation/home.md).
 

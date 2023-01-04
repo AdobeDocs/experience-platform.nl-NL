@@ -5,7 +5,8 @@ title: Creeer een Dataflow gebruikend een Versie van de Toestemming en van de Vo
 topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een toestemmings- en voorkeursbron met behulp van de gebruikersinterface van het Platform.
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 0%
@@ -28,7 +29,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platf
 * [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Zelfstudie Schema Editor](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Staat gegevensingenieurs toe om, gegevens aan en van het Model van de Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
 ## Gegevens toevoegen
@@ -142,10 +143,10 @@ U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeer
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om gegevens van uw toestemmings- en voorkeursbron naar het Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om gegevens van uw toestemmings- en voorkeursbron naar het Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] - overzicht](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] - overzicht](../../../../data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile]-overzicht](../../../../profile/home.md)
+* [[!DNL Data Science Workspace]-overzicht](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

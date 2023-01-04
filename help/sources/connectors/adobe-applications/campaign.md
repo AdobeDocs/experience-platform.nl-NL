@@ -2,7 +2,8 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Adobe Campaign Managed Cloud Services;campagne;campagne beheerde services
 title: Adobe Campaign Managed Cloud Services
 description: Leer hoe te om Campagne Beheerde Cloud Services met Platform te verbinden gebruikend het gebruikersinterface
-source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -61,7 +62,7 @@ Maak vervolgens een XDM ExperienceEvent-schema voor zowel leveringslogboeken als
 
 >[!NOTE]
 >
->Uw XDM ExperienceEvent-schema moet geschikt zijn voor profiel om uw Campagnegegevens in te voeren op [!DNL Real-time Customer Profile].
+>Uw XDM ExperienceEvent-schema moet geschikt zijn voor profiel om uw Campagnegegevens in te voeren op [!DNL Real-Time Customer Profile].
 
 Voor gedetailleerde instructies over hoe te om een schema tot stand te brengen, lees de gids op [een XDM-schema maken in de gebruikersinterface](../../../xdm/tutorials/create-schema-ui.md).
 

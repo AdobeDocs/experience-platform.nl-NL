@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Entiteiten (Profile Access) API-eindpunt
 topic-legacy: guide
 type: Documentation
-description: Met Adobe Experience Platform hebt u toegang tot gegevens van het profiel Real-time klanten met behulp van RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
+description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met behulp van RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
 
-Adobe Experience Platform biedt toegang tot [!DNL Real-time Customer Profile] gegevens die RESTful APIs of het gebruikersinterface gebruiken. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie over het gebruik van profielen via het dialoogvenster [!DNL Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor profielen](../ui/user-guide.md).
+Adobe Experience Platform biedt toegang tot [!DNL Real-Time Customer Profile] gegevens die RESTful APIs of het gebruikersinterface gebruiken. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie over het gebruik van profielen via het dialoogvenster [!DNL Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor profielen](../ui/user-guide.md).
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk [!DNL Experience Platform] API.
 
 ## Profielgegevens benaderen op identiteit
 
@@ -888,7 +888,7 @@ Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als e
 
 ## Volgende stappen
 
-Door deze handleiding te volgen, hebt u toegang tot [!DNL Real-time Customer Profile] gegevensvelden, profielen en tijdreeksgegevens. Leren hoe u toegang krijgt tot andere gegevensbronnen die zijn opgeslagen in [!DNL Platform], zie de [Overzicht van gegevenstoegang](../../data-access/home.md).
+Door deze handleiding te volgen, hebt u toegang tot [!DNL Real-Time Customer Profile] gegevensvelden, profielen en tijdreeksgegevens. Leren hoe u toegang krijgt tot andere gegevensbronnen die zijn opgeslagen in [!DNL Platform], zie de [Overzicht van gegevenstoegang](../../data-access/home.md).
 
 ## Aanhangsel {#appendix}
 

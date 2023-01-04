@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar profielservice verzenden met Data Prep
 description: Dit document bevat informatie over het verzenden van gedeeltelijke rijupdates naar de profielservice met behulp van Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 0%

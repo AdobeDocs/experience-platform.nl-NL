@@ -5,7 +5,7 @@ title: Aan de slag met Adobe Experience Platform API's
 topic-legacy: api guide
 description: Adobe Experience Platform biedt API-services die nauw met elkaar zijn verbonden. Deze handleiding bevat informatie over de beschikbare services, vereiste headers voor CRUD-bewerkingen, foutberichten, Postman-verzamelingen en voorbeeld-API-aanroepen.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%
@@ -130,7 +130,7 @@ Voor meer informatie over specifieke eindpunten in Platform APIs, met inbegrip v
 | [[!DNL Policy Service] API-handleiding](.././data-governance/api/overview.md) <br> (Gegevensbeheer) | De [!DNL Policy Service] Met API kunt u labels en beleidsregels voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten. Als u labels wilt toepassen op gegevenssets en velden, raadpleegt u de [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) hulplijn |
 | [[!DNL Privacy Service] API-handleiding](.././privacy-service/api/getting-started.md) | De [!DNL Privacy Service] Met API kunnen ontwikkelaars hun verzoeken om toegang tot of verwijdering van hun persoonlijke gegevens in Experience Cloud-toepassingen maken en beheren, in overeenstemming met de wettelijke privacyregels. |
 | [[!DNL Query Service] API-handleiding](.././query-service/api/getting-started.md) | De [!DNL Query Service] Met API kunnen ontwikkelaars hun Adobe Experience Platform-gegevens opvragen met behulp van standaard SQL. |
-| [[!DNL Real-time Customer Profile] API-handleiding](.././profile/api/overview.md) | Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, zoals het weergeven van profielen, het maken en bijwerken van samenvoegbeleid, het exporteren of samplen van profielgegevens en het verwijderen van profielgegevens die niet langer vereist zijn of die bij fout zijn toegevoegd. |
+| [[!DNL Real-Time Customer Profile] API-handleiding](.././profile/api/overview.md) | Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, zoals het weergeven van profielen, het maken en bijwerken van samenvoegbeleid, het exporteren of samplen van profielgegevens en het verwijderen van profielgegevens die niet langer vereist zijn of die bij fout zijn toegevoegd. |
 | [Handleiding voor sandbox-API](.././sandboxes/api/getting-started.md) | Met de sandbox-API kunnen ontwikkelaars via programmacode geïsoleerde virtuele sandboxomgevingen in Adobe Experience Platform beheren. |
 | [[!DNL Schema Registry] API-handleiding](.././xdm/api/overview.md) <br> (XDM) | De [!DNL Schema Registry] Met API kunnen ontwikkelaars programmatisch alle schema&#39;s en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. |
 | [[!DNL Segmentation Service] API-handleiding](.././segmentation/api/overview.md) | De [!DNL Segmentation Service] Met API kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Dit omvat het bouwen van segmenten en het produceren van publiek van uw gegevens van het Profiel van de Klant in real time. |

@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Met Adobe Experience Platform Query Service kunt u gegevenssets maken vanuit de gebruikersinterface. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gegevenssets genereren op basis van resultaten in [!DNL Query Service]
 
-[!DNL Query Service] staat u toe om vragen te gebruiken om datasets in te produceren [!DNL Data Lake]. Deze datasets kunnen dan als input voor meer vragen of in andere diensten zoals worden gebruikt [!DNL Data Science Workspace], realtime klantprofiel, of [!DNL Analysis Workspace].
+[!DNL Query Service] staat u toe om vragen te gebruiken om datasets in te produceren [!DNL Data Lake]. Deze datasets kunnen dan als input voor meer vragen of in andere diensten zoals worden gebruikt [!DNL Data Science Workspace], realtime-klantprofiel, of [!DNL Analysis Workspace].
 
 ## Gegevenssets genereren vanuit de gebruikersinterface van Adobe Experience Platform
 

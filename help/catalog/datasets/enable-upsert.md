@@ -4,7 +4,7 @@ title: Een gegevensset voor profielupdates inschakelen met behulp van API's
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform API's kunt gebruiken om een gegevensset met "upsert"-mogelijkheden in te schakelen om updates uit te voeren naar gegevens in het realtime profiel van klanten.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 0%
@@ -23,8 +23,8 @@ Deze zelfstudie behandelt het proces waarbij een dataset met &quot;upsert&quot;m
 
 Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor deze verwante onderwerpen [!DNL Platform] diensten:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful API die u toestaat om datasets tot stand te brengen en hen te vormen voor [!DNL Real-time Customer Profile] en [!DNL Identity Service].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful API die u toestaat om datasets tot stand te brengen en hen te vormen voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
 - [Inname in batch](../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
 
@@ -119,7 +119,7 @@ De volgende stappen behandelen hoe te om een bestaande profiel-Toegelaten datase
 
 ### Controleren of de gegevensset is ingeschakeld voor profiel
 
-Met de [!DNL Catalog] API, kunt u een bestaande dataset inspecteren om te bepalen of het voor gebruik binnen wordt toegelaten [!DNL Real-time Customer Profile]. De volgende vraag wint de details van een dataset door identiteitskaart terug
+Met de [!DNL Catalog] API, kunt u een bestaande dataset inspecteren om te bepalen of het voor gebruik binnen wordt toegelaten [!DNL Real-Time Customer Profile]. De volgende vraag wint de details van een dataset door identiteitskaart terug
 
 **API-indeling**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-Onder de `tags` eigenschap, kunt u zien dat `unifiedProfile` is aanwezig met de waarde `enabled:true`. Daarom [!DNL Real-time Customer Profile] wordt toegelaten voor deze dataset.
+Onder de `tags` eigenschap, kunt u zien dat `unifiedProfile` is aanwezig met de waarde `enabled:true`. Daarom [!DNL Real-Time Customer Profile] wordt toegelaten voor deze dataset.
 
 ### De gegevensset voor profiel uitschakelen
 

@@ -5,7 +5,7 @@ title: Aanhangsel voor schema-registratie-API
 description: Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Handboek Schema Register API-handleiding
 
-Dit document bevat aanvullende informatie over het werken met de [!DNL Schema Registry]-API.
+Dit document bevat aanvullende informatie over het werken met de [!DNL Schema Registry] API.
 
 ## Query-parameters gebruiken {#query}
 
-[!DNL Schema Registry] steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het vermelden van middelen.
+De [!DNL Schema Registry] ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van bronnen.
 
 >[!NOTE]
 >
->Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (`&`) worden gescheiden.
+>Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands ( worden gescheiden`&`).
 
 ### Paginering {#paging}
 
@@ -30,15 +30,15 @@ De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `orderby` | Resultaten sorteren op een bepaalde eigenschap. Voorbeeld: `orderby=title` sorteert de resultaten op titel in oplopende volgorde (A-Z). Als u een `-` toevoegt vóór de parameterwaarde (`orderby=-title`), worden items op titel gesorteerd in aflopende volgorde (Z-A). |
-| `limit` | Wanneer gebruikt samen met een `orderby` parameter, `limit` beperkt het maximumaantal punten die voor een bepaald verzoek zouden moeten zijn teruggekeerd. Deze parameter kan niet worden gebruikt zonder een aanwezige parameter `orderby`.<br><br>De  `limit` parameter specificeert een positief geheel (tussen  `0` en  `500`) als  ** wenken aan het maximumaantal punten dat zou moeten zijn teruggekeerd. `limit=5` retourneert bijvoorbeeld slechts vijf bronnen in de lijst. Deze waarde wordt echter niet strikt nageleefd. De werkelijke responsgrootte kan kleiner of groter zijn, zoals beperkt door de noodzaak om de betrouwbare werking van de parameter `start` te bieden, als er een wordt opgegeven. |
-| `start` | Wanneer gebruikt in combinatie met een `orderby` parameter, `start` specificeert waar de sub-vastgestelde lijst van punten zou moeten beginnen. Deze parameter kan niet worden gebruikt zonder een aanwezige parameter `orderby`. Deze waarde kan uit het `_page.next` attribuut van een lijstreactie worden verkregen, en worden gebruikt om tot de volgende pagina van resultaten toegang te hebben. Als de waarde `_page.next` null is, is er geen extra pagina beschikbaar.<br><br>Deze parameter wordt meestal weggelaten om de eerste pagina met resultaten te verkrijgen. Vervolgens moet `start` worden ingesteld op de maximumwaarde van de primaire sorteereigenschap van het veld `orderby` dat in de vorige pagina is ontvangen. De API reactie keert dan ingangen terug die met die beginnen die een primaire soortbezit van `orderby` strikt groter dan (voor het stijgen) of strikt minder dan (voor het dalende) de gespecificeerde waarde hebben.<br><br>Als de  `orderby` parameter bijvoorbeeld is ingesteld op  `orderby=name,firstname`, bevat de  `start` parameter een waarde voor de  `name` eigenschap. In dit geval, als u de volgende 20 ingangen van een middel onmiddellijk na de naam &quot;Miller&quot;wilde tonen, zou u gebruiken: `?orderby=name,firstname&start=Miller&limit=20`. |
+| `orderby` | Resultaten sorteren op een bepaalde eigenschap. Voorbeeld: `orderby=title` sorteert de resultaten op titel in oplopende volgorde (A-Z). Een `-` vóór de parameterwaarde (`orderby=-title`) worden objecten op titel gesorteerd in aflopende volgorde (Z-A). |
+| `limit` | Indien gebruikt in combinatie met een `orderby` parameter, `limit` beperkt het maximumaantal items dat voor een bepaald verzoek moet worden geretourneerd. Deze parameter kan niet worden gebruikt zonder een `orderby` parameter aanwezig.<br><br>De `limit` parameter geeft een positief geheel getal aan (tussen `0` en `500`) als *hint* over het maximumaantal objecten dat moet worden geretourneerd. Bijvoorbeeld: `limit=5` retourneert slechts vijf bronnen in de lijst. Deze waarde wordt echter niet strikt nageleefd. De werkelijke responsgrootte kan kleiner of groter zijn, omdat de betrouwbare werking van de `start` parameter, als er een wordt opgegeven. |
+| `start` | Indien gebruikt in combinatie met een `orderby` parameter, `start` Hiermee geeft u aan waar de sublijst met items moet beginnen. Deze parameter kan niet worden gebruikt zonder een `orderby` parameter aanwezig. Deze waarde kan worden verkregen via de `_page.next` kenmerk van een reactie in een lijst en gebruikt voor toegang tot de volgende pagina met resultaten. Als de `_page.next` De waarde is null en er is geen extra pagina beschikbaar.<br><br>Deze parameter wordt meestal weggelaten om de eerste pagina met resultaten te verkrijgen. Daarna, `start` moet worden ingesteld op de maximumwaarde van de primaire sorteereigenschap van de `orderby` veld ontvangen op de vorige pagina. De API-reactie retourneert vervolgens items die beginnen met items met een primaire sorteereigenschap van `orderby` strikt groter dan (voor oplopend) of strikt kleiner dan (voor aflopend) de gespecificeerde waarde.<br><br>Als de `orderby` parameter is ingesteld op `orderby=name,firstname`de `start` parameter zou een waarde voor de `name` eigenschap. In dit geval, als u de volgende 20 ingangen van een middel onmiddellijk na de naam &quot;Miller&quot;wilde tonen, zou u gebruiken: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Filteren {#filtering}
 
-U kunt resultaten filtreren door de `property` parameter te gebruiken, die wordt gebruikt om een specifieke exploitant op een bepaalde bezit JSON binnen de teruggewonnen middelen toe te passen. Tot de ondersteunde operatoren behoren:
+U kunt de resultaten filteren met de `property` parameter, die wordt gebruikt om een specifieke exploitant op een bepaalde bezit JSON binnen de teruggewonnen middelen toe te passen. Tot de ondersteunde operatoren behoren:
 
 | Operator | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -55,13 +55,13 @@ U kunt resultaten filtreren door de `property` parameter te gebruiken, die wordt
 
 >[!TIP]
 >
->U kunt de parameter `property` gebruiken om schemagebiedgroepen door hun compatibele klasse te filtreren. `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retourneert bijvoorbeeld alleen veldgroepen die compatibel zijn met de klasse [!DNL XDM Individual Profile].
+>U kunt de `property` parameter om schemagebiedgroepen door hun compatibele klasse te filtreren. Bijvoorbeeld: `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` Hiermee worden alleen veldgroepen geretourneerd die compatibel zijn met de [!DNL XDM Individual Profile] klasse.
 
 ## Compatibiliteitsmodus {#compatibility}
 
-[!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [open bronproject op GitHub](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van Objecten JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van XDM schema&#39;s.
+[!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [open-bronproject op GitHub](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van Objecten JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van XDM schema&#39;s.
 
-Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, ziet u dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u in [!DNL Experience Platform] ziet wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaardXDM en de manier het binnen [!DNL Platform] wordt gebruikt.
+Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, ziet u dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u ziet in [!DNL Experience Platform] wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaard XDM en de manier het binnen wordt gebruikt [!DNL Platform].
 
 ### Hoe de Wijze van de Verenigbaarheid werkt
 
@@ -78,20 +78,20 @@ Hieronder volgt een vergelijking naast elkaar van verjaardagsgerelateerde velden
   <td>
   <pre class=" language-json">
 {
-  "xdm:bornDate": {
-    "titel": "Geboortedatum",
+  "xdm:birthDate": {
+    "title": "Birth Date",
     "type": "string",
-    "formaat": "date"
+    "format": "date"
   },
-  "xdm:bornDayAndMonth": {
-    "titel": "Geboortedatum",
+  "xdm:birthDayAndMonth": {
+    "title": "Birth Date",
     "type": "string",
-    "patroon": "[0-1][0-9]-[0-9][0-9]"
+    "pattern": "[0-1][0-9]-[0-9][0-9]"
   },
-  "xdm:bornYear": {
-    "titel": "Geboortejaar",
+  "xdm:birthYear": {
+    "title": "Birth year",
     "type": "integer",
-    "minimum": 1
+    "minimum": 1,
     "maximum": 32767
   }
 }
@@ -100,26 +100,26 @@ Hieronder volgt een vergelijking naast elkaar van verjaardagsgerelateerde velden
   <td>
   <pre class=" language-json">
 {
-  "geboortedatum": {
-    "titel": "Geboortedatum",
+  "birthDate": {
+    "title": "Birth Date",
     "type": "string",
-    "formaat": "date",
-    "meta:xdmField": "xdm:bornDate",
+    "format": "date",
+    "meta:xdmField": "xdm:birthDate",
     "meta:xdmType": "date"
   },
-  "bornDayAndMonth": {
-    "titel": "Geboortedatum",
+  "birthDayAndMonth": {
+    "title": "Birth Date",
     "type": "string",
-    "patroon": "[0-1][0-9]-[0-9][0-9]",
-    "meta:xdmField": "xdm:bornDayAndMonth",
+    "pattern": "[0-1][0-9]-[0-9][0-9]",
+    "meta:xdmField": "xdm:birthDayAndMonth",
     "meta:xdmType": "string"
   },
-  "geboortejaar": {
-    "titel": "Geboortejaar",
+  "birthYear": {
+    "title": "Birth year",
     "type": "integer",
-    "minimum": 1
+    "minimum": 1,
     "maximum": 32767,
-    "meta:xdmField": "xdm:bornYear",
+    "meta:xdmField": "xdm:birthYear",
     "meta:xdmType": "short"
   }
 }
@@ -132,8 +132,8 @@ Hieronder volgt een vergelijking naast elkaar van verjaardagsgerelateerde velden
 
 Adobe Experience Platform is ontworpen om met meerdere oplossingen en services te werken, elk met hun eigen technische uitdagingen en beperkingen (bijvoorbeeld hoe bepaalde technologieën speciale tekens verwerken). Om deze beperkingen te verhelpen, werd de compatibiliteitsmodus ontwikkeld.
 
-De meeste [!DNL Experience Platform] services, inclusief [!DNL Catalog], [!DNL Data Lake] en [!DNL Real-time Customer Profile] gebruiken [!DNL Compatibility Mode] in plaats van standaard XDM. De [!DNL Schema Registry] API gebruikt ook [!DNL Compatibility Mode], en de voorbeelden in dit document allen worden getoond gebruikend [!DNL Compatibility Mode].
+Meeste [!DNL Experience Platform] diensten, waaronder [!DNL Catalog], [!DNL Data Lake], en [!DNL Real-Time Customer Profile] gebruiken [!DNL Compatibility Mode] in plaats van standaard-XDM. De [!DNL Schema Registry] API gebruikt ook [!DNL Compatibility Mode]en de voorbeelden in dit document worden allemaal weergegeven met [!DNL Compatibility Mode].
 
-Het is nuttig om te weten dat een afbeelding tussen standaardXDM en de manier plaatsvindt het in [!DNL Experience Platform] wordt in werking gesteld, maar het zou uw gebruik van [!DNL Platform] de diensten niet moeten beïnvloeden.
+Het is nuttig om te weten dat een afbeelding tussen standaard XDM en de manier plaatsvindt het binnen [!DNL Experience Platform], maar het mag uw gebruik van [!DNL Platform] diensten.
 
-Het opensource-project is beschikbaar voor u, maar wanneer u via [!DNL Schema Registry] communiceert met bronnen, bieden de API-voorbeelden in dit document de beste praktijken die u moet kennen en volgen.
+Het open bronproject is beschikbaar aan u, maar wanneer het over het in wisselwerking staan met middelen door [!DNL Schema Registry]De API-voorbeelden in dit document bieden de aanbevolen procedures die u moet kennen en volgen.

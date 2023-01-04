@@ -5,7 +5,7 @@ title: Overzicht van gegevenssets
 topic-legacy: datasets
 description: Dit document verstrekt een overzicht op hoog niveau van datasets in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 0%
@@ -61,10 +61,10 @@ Hieronder volgt een lijst met downstreamservices die gegevenssets gebruiken voor
 
 * [[!DNL Data Access API]](../../data-access/home.md): Staat u toe om tot de inhoud van dossiers toegang te hebben en te downloaden die binnen datasets worden opgeslagen.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bruggen identiteiten over apparaten en systemen, die datasets verbinden samen op de identiteitsgebieden worden bepaald die door de schema&#39;s XDM worden bepaald zij met in overeenstemming zijn.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Hefboomwerking [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-time Customer Profile] Hiermee worden gegevens opgehaald van de [!DNL Data Lake] en blijven klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Hiermee kunt u segmenten samenstellen en soorten publiek genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze doelgroepen kunnen vervolgens naar hun eigen gegevensbestanden worden geëxporteerd binnen de [!DNL Data Lake].
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Hefboomwerking [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] Hiermee worden gegevens opgehaald van de [!DNL Data Lake] en blijven klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Hiermee kunt u segmenten samenstellen en soorten publiek genereren op basis van uw [!DNL Real-Time Customer Profile] gegevens. Deze doelgroepen kunnen vervolgens naar hun eigen gegevensbestanden worden geëxporteerd binnen de [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Gebruikt machinaal leren en kunstmatige intelligentie om inzichten in grote datasets te ontdekken.
-* [Adobe Experience Platform Query Service](../../query-service/home.md): Hiermee kunt u standaard-SQL gebruiken om gegevens op te vragen in [!DNL Experience Platform], worden alle gegevenssets binnen de [!DNL Data Lake] en het vangen van vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Science Workspace], of [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform Query Service](../../query-service/home.md): Hiermee kunt u standaard-SQL gebruiken om gegevens op te vragen in [!DNL Experience Platform], worden alle gegevenssets binnen de [!DNL Data Lake] en het vangen van vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Science Workspace], of [!DNL Real-Time Customer Profile].
 * [Adobe Experience Platform-bestemmingsservice](../../destinations/home.md): Hiermee kunt u [exportgegevenssets](/help/destinations/ui/export-datasets.md) naar uw gewenste locatie voor cloudopslag of e-mailmarketing, voor rapportage of gegevenswetenschappelijke activiteiten.
 
 ## Volgende stappen

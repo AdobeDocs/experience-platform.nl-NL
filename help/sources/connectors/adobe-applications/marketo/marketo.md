@@ -5,7 +5,7 @@ title: Marketo Engage-aansluiting
 topic-legacy: overview
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Met de [!DNL Marketo] bronaansluiting, kunt u B2B-gegevens van [!DNL Marketo] om
 
 >[!IMPORTANT]
 >
->U moet toegang hebben tot [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) om alle Marketo datasets voor segmentatie met te gebruiken [Klantprofiel in realtime](../../../../profile/home.md). Zonder Real-Time CDP B2B Edition kunt u nog steeds de Marketo-bron gebruiken om gegevens van de personen- en activiteitengegevenssets naar Real-time klantprofiel te verzenden voor segmentatie.
+>U moet toegang hebben tot [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) om alle Marketo datasets voor segmentatie met te gebruiken [Klantprofiel in realtime](../../../../profile/home.md). Zonder Real-Time CDP B2B Edition kunt u nog steeds de Marketo-bron gebruiken om gegevens van de personen- en activiteitengegevenssets naar Real-Time klantprofiel te verzenden voor segmentatie.
 
 Dit document biedt een overzicht van de [!DNL Marketo] bronschakelaar, met inbegrip van informatie over hoe te om de schakelaar voor authentiek te verklaren, hoe te om in kaart te brengen [!DNL Marketo] velden naar Experience Data Model (XDM) en de gegevenslatentie van de connector.
 
@@ -71,7 +71,7 @@ In de volgende tabel wordt de verwachte vertraging voor het introduceren weergeg
 
 | Bestemming | Verwachte vertraging |
 | ----------- | ---------------- |
-| [!DNL Real-time Customer Profile] | &lt; 1 minuut |
+| [!DNL Real-Time Customer Profile] | &lt; 1 minuut |
 | Data Lake | &lt; 60 minuten |
 
 ## Volgende stappen en extra bronnen

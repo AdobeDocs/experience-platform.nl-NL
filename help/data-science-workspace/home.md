@@ -5,7 +5,7 @@ title: Overzicht van de Data Science Workspace
 topic-legacy: overview
 description: Deze handleiding biedt een overzicht van de belangrijkste concepten met betrekking tot de Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Met [!DNL Data Science Workspace]Uw gegevenswetenschappers kunnen het lastige pr
 
 Gegevens zijn de hoeksteen van het leren van AI en machines.
 
-[!DNL Data Science Workspace] volledig geïntegreerd is met Adobe Experience Platform, met inbegrip van het Data Lake, [!DNL Real-time Customer Profile], en [!DNL Unified Edge]. Ontdek al uw organisatiegegevens die in Adobe Experience Platform tegelijk zijn opgeslagen, samen met veelgebruikte gegevens en uitgebreide leerbibliotheken, zoals [!DNL Spark] ML en [!DNL TensorFlow]. Als u niet vindt wat u nodig hebt, neemt uw eigen datasets op gebruikend het XDM gestandaardiseerde schema.
+[!DNL Data Science Workspace] volledig geïntegreerd is met Adobe Experience Platform, met inbegrip van het Data Lake, [!DNL Real-Time Customer Profile], en [!DNL Unified Edge]. Ontdek al uw organisatiegegevens die in Adobe Experience Platform tegelijk zijn opgeslagen, samen met veelgebruikte gegevens en uitgebreide leerbibliotheken, zoals [!DNL Spark] ML en [!DNL TensorFlow]. Als u niet vindt wat u nodig hebt, neemt uw eigen datasets op gebruikend het XDM gestandaardiseerde schema.
 
 ### Prebuilt machine het leren recepten
 

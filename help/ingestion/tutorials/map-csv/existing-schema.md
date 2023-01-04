@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een bestaand XDM-schema.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 1%
@@ -121,4 +121,4 @@ Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren d
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [[!DNL Real-time Customer Profile]](../../../profile/home.md) voor meer informatie .
+Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile]. Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../profile/home.md) voor meer informatie .

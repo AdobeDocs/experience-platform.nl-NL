@@ -2,9 +2,9 @@
 keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;rapportering;dataset overlapt rapport;profiel gegevens
 title: Het rapport Gegevensset-overlap genereren
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven die nodig zijn om het overlappingsrapport van de gegevensset te genereren met behulp van de Real-time Customer Profile API.
+description: In deze zelfstudie worden de stappen beschreven die nodig zijn om het overlappingsrapport van de gegevensset te genereren met behulp van de Real-Time Customer Profile API.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van uw
 
 Dit rapport biedt niet alleen inzichten in uw gegevens, maar kan u ook helpen bij het nemen van acties om uw licentiegebruik te optimaliseren, zoals het instellen van een limiet voor de levensduur van bepaalde gegevens.
 
-In deze zelfstudie worden de stappen beschreven die nodig zijn om het overlappende rapport voor de gegevensset te genereren met behulp van [!DNL Real-time Customer Profile] API en interpreteer de resultaten voor uw organisatie.
+In deze zelfstudie worden de stappen beschreven die nodig zijn om het overlappende rapport voor de gegevensset te genereren met behulp van [!DNL Real-Time Customer Profile] API en interpreteer de resultaten voor uw organisatie.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ De vereiste kopballen voor alle API vraag in dit leerprogramma zijn:
 * `x-api-key: {API_KEY}`: De `API Key` ook bekend als a `Client ID` en is een waarde die slechts eenmaal hoeft te worden gegenereerd.
 * `x-gw-ims-org-id: {ORG_ID}`: De `IMS Org` staat ook bekend als een `Organization ID` en hoeft slechts eenmaal te worden gegenereerd.
 
-Na de voltooiing van de authentificatiezelfstudie en het verzamelen van de waarden voor de vereiste kopballen, bent u bereid beginnen het richten vraag aan de Klant API in real time.
+Na de voltooiing van de authentificatiezelfstudie en het verzamelen van de waarden voor de vereiste kopballen, bent u bereid beginnen het maken van vraag aan Real-Time Klant API.
 
 ## Gegevenssetoverlapping genereren met gebruik van de opdrachtregel
 

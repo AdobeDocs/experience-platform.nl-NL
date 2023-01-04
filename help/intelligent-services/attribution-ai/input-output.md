@@ -5,7 +5,7 @@ title: Invoer en Uitvoer in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2497'
 ht-degree: 0%
@@ -220,7 +220,7 @@ In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewe
 
 | Kolomnaam | Referentiekolom Onbewerkte score |
 | --- | --- |
-| customerevents_date | tijdstempel |
+| customerevents_date | timestamp |
 | mediatouchpoints_date | _huurderID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
 | segment | _huurderID.your_schema_name.segmentation |
 | conversion_scope | _huurderID.your_schema_name.conversion.conversionName |
@@ -238,7 +238,7 @@ In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewe
 >[!IMPORTANT]
 >
 > - Attribution AI gebruikt alleen bijgewerkte gegevens voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.
-> - Attribution AI gebruikt Platform datasets. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, dienen merken de Privacy Service van het Platform te gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, Identity Service en Real-time Customer Profile te verwijderen.
+> - Attribution AI gebruikt Platform datasets. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Privacy Service van het Platform gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, de Identiteitsservice en het Real-Time Klantprofiel te verwijderen.
 > - Alle datasets die wij voor input/output van modellen gebruiken zullen de richtlijnen van het Platform volgen. De Encryptie van Gegevens van het Platform is op gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md)
 
 

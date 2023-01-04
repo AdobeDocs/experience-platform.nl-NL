@@ -3,7 +3,8 @@ keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de ana
 title: Adobe Experience Platform End-to-end voorbeeldworkflow
 topic-legacy: getting started
 description: Leer op hoog niveau de standaard end-to-end workflow voor Adobe Experience Platform.
-source-git-commit: 9ed521c4e2ebcd20da662e93b9591ef690f51c5e
+exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 0%
@@ -26,7 +27,7 @@ Voor deze end-to-end workflow worden meerdere Adobe Experience Platform-services
 - [[!DNL Identity Service]](../identity-service/home.md): Verstrekt u van een uitvoerige mening van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 - [Bronnen](../sources/home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] staat u toe om gegevens te verdelen die in worden opgeslagen [!DNL Experience Platform] dat betrekking heeft op individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) in kleinere groepen.
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [Gegevenssets](../catalog/datasets/overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in [!DNL Experience Platform].
 - [Doelen](../destinations/home.md): Doelen zijn voorgebouwde integraties met veelgebruikte toepassingen die het mogelijk maken om gegevens van Platform naadloos te activeren voor kanaalmarketingcampagnes, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 
@@ -34,7 +35,7 @@ Voor deze end-to-end workflow worden meerdere Adobe Experience Platform-services
 
 Voordat u gegevens in Platform invoert, moet u eerst een XDM-schema maken om de structuur van die gegevens te beschrijven. Wanneer u uw gegevens in de volgende stap opneemt, zult u uw inkomende gegevens aan dit schema in kaart brengen. Lees de zelfstudie voor meer informatie over het maken van een voorbeeld-XDM-schema [een schema maken met de Schema-editor](../xdm/tutorials/create-schema-ui.md).
 
-De bovenstaande zelfstudie laat zien hoe u identiteitsvelden kunt instellen voor uw schema&#39;s. Een identiteitsveld vertegenwoordigt een veld dat kan worden gebruikt om een individuele persoon te identificeren die gerelateerd is aan een record- of tijdreeksgebeurtenis. Identiteitsvelden vormen een cruciaal onderdeel van de manier waarop identiteitsgrafieken van klanten in Platform worden samengesteld. Dit beïnvloedt uiteindelijk de manier waarop in realtime-klantprofiel afzonderlijke gegevensfragmenten worden samengevoegd om een volledig beeld van de klant te krijgen. Raadpleeg de zelfstudie voor meer informatie over het weergeven van identiteitsgrafieken in Platform [gebruiken van de viewer voor identiteitsgrafieken](../identity-service/ui/identity-graph-viewer.md).
+De bovenstaande zelfstudie laat zien hoe u identiteitsvelden kunt instellen voor uw schema&#39;s. Een identiteitsveld vertegenwoordigt een veld dat kan worden gebruikt om een individuele persoon te identificeren die gerelateerd is aan een record- of tijdreeksgebeurtenis. Identiteitsvelden vormen een cruciaal onderdeel van de manier waarop identiteitsgrafieken van klanten in Platform worden samengesteld. Dit beïnvloedt uiteindelijk de manier waarop in Real-Time Customer Profile verschillende gegevensfragmenten worden samengevoegd om een volledig beeld van de klant te krijgen. Raadpleeg de zelfstudie voor meer informatie over het weergeven van identiteitsgrafieken in Platform [gebruiken van de viewer voor identiteitsgrafieken](../identity-service/ui/identity-graph-viewer.md).
 
 U moet uw schema voor gebruik in het Profiel van de Klant in real time toelaten zodat de klantenprofielen van de gegevens kunnen worden geconstrueerd die op uw schema worden gebaseerd. Zie de sectie over [een schema inschakelen voor profiel](../xdm/ui/resources/schemas.md#profile) in de gids van schema&#39;s UI voor meer informatie.
 
@@ -42,7 +43,7 @@ U moet uw schema voor gebruik in het Profiel van de Klant in real time toelaten 
 
 Nadat u een XDM-schema hebt gemaakt, kunt u uw gegevens in het systeem opnemen.
 
-Alle gegevens die in Platform worden gebracht worden opgeslagen aan individuele datasets bij opname. Een dataset is een inzameling van gegevensverslagen die aan een specifiek schema XDM in kaart brengen. Voordat uw gegevens kunnen worden gebruikt door [!DNL Real-time Customer Profile], moet de betrokken gegevensset specifiek worden geconfigureerd. Voor volledige instructies over hoe te om een dataset voor Profiel toe te laten, zie [UI-gids voor gegevensbestanden](../catalog/datasets/user-guide.md#enable-profile) en de [API-zelfstudie voor gegevenssetconfiguratie](../profile/tutorials/dataset-configuration.md). Zodra de dataset is gevormd, kunt u beginnen gegevens in het op te nemen.
+Alle gegevens die in Platform worden gebracht worden opgeslagen aan individuele datasets bij opname. Een dataset is een inzameling van gegevensverslagen die aan een specifiek schema XDM in kaart brengen. Voordat uw gegevens kunnen worden gebruikt door [!DNL Real-Time Customer Profile], moet de betrokken gegevensset specifiek worden geconfigureerd. Voor volledige instructies over hoe te om een dataset voor Profiel toe te laten, zie [UI-gids voor gegevensbestanden](../catalog/datasets/user-guide.md#enable-profile) en de [API-zelfstudie voor gegevenssetconfiguratie](../profile/tutorials/dataset-configuration.md). Zodra de dataset is gevormd, kunt u beginnen gegevens in het op te nemen.
 
 Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens uit diverse bronnen invoeren, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere. U kunt bijvoorbeeld uw gegevens invoeren met [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). Een volledige lijst van beschikbare bronnen is te vinden in de [overzicht van bronconnectors](../sources/home.md).
 
@@ -52,7 +53,7 @@ Voor meer gedetailleerde instructies op bronschakelaars, gelieve te lezen [overz
 
 Zodra uw gegevens in Platform door de bronschakelaar worden gebracht en in uw profiel-Toegelaten dataset worden opgeslagen, worden de klantenprofielen automatisch gecreeerd gebaseerd op de identiteitsgegevens u in uw schema XDM vormde.
 
-Wanneer het uploaden van gegevens aan een nieuwe dataset voor het eerst, of wanneer het opzetten van een nieuw proces ETL of een gegevensbron, wordt geadviseerd om de gegevens zorgvuldig te controleren om ervoor te zorgen het correct is geupload en dat de geproduceerde profielen de gegevens bevatten u verwacht. Voor meer informatie over hoe te om tot klantenprofielen in de UI van het Platform toegang te hebben, zie [Gebruikershandleiding voor gebruikersprofiel voor realtime klanten](../profile/ui/user-guide.md). Raadpleeg de handleiding voor meer informatie over hoe u toegang krijgt tot profielen met de Real-Time Customer Profile API [het gebruiken van het entiteitseindpunt](../profile/api/entities.md).
+Wanneer het uploaden van gegevens aan een nieuwe dataset voor het eerst, of wanneer het opzetten van een nieuw proces ETL of een gegevensbron, wordt geadviseerd om de gegevens zorgvuldig te controleren om ervoor te zorgen het correct is geupload en dat de geproduceerde profielen de gegevens bevatten u verwacht. Voor meer informatie over hoe te om tot klantenprofielen in de UI van het Platform toegang te hebben, zie [Gebruikershandleiding voor realtime gebruikersprofiel van klanten](../profile/ui/user-guide.md). Raadpleeg de handleiding voor meer informatie over het gebruik van de Real-Time Customer Profile API voor toegang tot profielen [het gebruiken van het entiteitseindpunt](../profile/api/entities.md).
 
 ## Uw gegevens evalueren
 
@@ -92,7 +93,7 @@ Voor instructies over hoe te om gegevens aan partij of e-mail marketing bestemmi
 
 ## De gegevensactiviteiten van uw Platform controleren
 
-Met Platform kunt u bijhouden hoe gegevens worden verwerkt met behulp van gegevensstromen. Dit zijn weergaven van taken die gegevens over verschillende componenten van het Platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door wordt gebruikt [!DNL Identity Service] en [!DNL Real-time Customer Profile] alvorens uiteindelijk aan bestemmingen worden geactiveerd. Het controledashboard voorziet u van een visuele vertegenwoordiging van de reis van een gegevensstroom. Leer hoe te om dataflows binnen de UI van het Platform te controleren, zie de leerprogramma&#39;s op [gegevensstromen controleren voor bronnen](../dataflows/ui/monitor-sources.md) en [dataflow voor bestemmingen controleren](../dataflows/ui/monitor-destinations.md).
+Met Platform kunt u bijhouden hoe gegevens worden verwerkt met behulp van gegevensstromen. Dit zijn weergaven van taken die gegevens over verschillende componenten van het Platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door wordt gebruikt [!DNL Identity Service] en [!DNL Real-Time Customer Profile] alvorens uiteindelijk aan bestemmingen worden geactiveerd. Het controledashboard voorziet u van een visuele vertegenwoordiging van de reis van een gegevensstroom. Leer hoe te om dataflows binnen de UI van het Platform te controleren, zie de leerprogramma&#39;s op [gegevensstromen controleren voor bronnen](../dataflows/ui/monitor-sources.md) en [dataflow voor bestemmingen controleren](../dataflows/ui/monitor-destinations.md).
 
 U kunt de activiteiten van Platforms ook controleren door statistische gegevens en gebeurtenismeldingen te gebruiken [!DNL Observability Insights]. U kunt zich aan waakzame berichten door Platform UI intekenen of hen verzenden naar een gevormde webhaak. Voor meer informatie over het bekijken, toelaten, onbruikbaar maken, en intekenen aan beschikbare alarm van het Experience Platform UI, zie [[!UICONTROL Alerts] UI-hulplijn](../observability/alerts/ui.md). Zie de handleiding voor meer informatie over het ontvangen van waarschuwingen via websites [abonneren op Adobe I/O Event-berichten](../observability/alerts/subscribe.md).
 

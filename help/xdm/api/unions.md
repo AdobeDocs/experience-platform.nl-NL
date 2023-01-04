@@ -5,7 +5,7 @@ title: Unions API-eindpunt
 description: Het /union eindpunt in de Registratie API van het Schema staat u toe om XDM vakingsschema's in uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Uniepunten
 
-Unions (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema&#39;s die de gebieden van alle schema&#39;s samenvoegen die de zelfde klasse delen ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile]) en zijn ingeschakeld voor [[!DNL Real-time Customer Profile]](../../profile/home.md).
+Unions (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema&#39;s die de gebieden van alle schema&#39;s samenvoegen die de zelfde klasse delen ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile]) en zijn ingeschakeld voor [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 Dit document behandelt essentiële concepten voor het werken met vakbonden in de API van de Registratie van het Schema, met inbegrip van steekproefvraag voor diverse verrichtingen. Voor meer algemene informatie over vakbonden in XDM, zie de sectie over vakbonden in [grondbeginselen van de schemacompositie](../schema/composition.md#union).
 

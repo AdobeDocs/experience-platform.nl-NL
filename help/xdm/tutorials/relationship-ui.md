@@ -6,7 +6,7 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een verb
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Deze relaties definiëren binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staan u toe om complexe inzichten in uw klantengegevens te bereiken.
 
-Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het union-schema en [!DNL Real-time Customer Profile]Dit geldt alleen voor schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema van verwijzingen voorziet.
+Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het union-schema en [!DNL Real-Time Customer Profile]Dit geldt alleen voor schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema van verwijzingen voorziet.
 
 Dit document bevat een zelfstudie voor het definiëren van een relatie tussen twee schema&#39;s met behulp van de Schema-editor in het dialoogvenster [!DNL Experience Platform] gebruikersinterface. Raadpleeg de zelfstudie voor meer informatie over het definiëren van schema-relaties met de API [een relatie definiëren met de API voor het schemaregister](relationship-api.md).
 
@@ -54,7 +54,7 @@ Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhoud
 
 >[!IMPORTANT]
 >
->Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en geschikt zijn gemaakt voor [!DNL Real-time Customer Profile]. Zie de sectie over [een schema inschakelen voor gebruik in profiel](./create-schema-ui.md#profile) in de zelfstudie van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
+>Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en geschikt zijn gemaakt voor [!DNL Real-Time Customer Profile]. Zie de sectie over [een schema inschakelen voor gebruik in profiel](./create-schema-ui.md#profile) in de zelfstudie van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
 Schemarelaties worden vertegenwoordigd door een specifiek veld binnen een **bronschema** dat verwijst naar een ander veld binnen een **doelschema**. In de volgende stappen: &quot;[!DNL Loyalty Members]&quot; wordt het bronschema, terwijl &quot;[!DNL Hotels]&quot; fungeert als het doelschema.
 
@@ -62,7 +62,7 @@ Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk
 
 ### [!DNL Loyalty Members] schema
 
-Het bronschema &quot;[!DNL Loyalty Members]&quot; is gebaseerd op de [!DNL XDM Individual Profile] en is het schema dat in de zelfstudie voor [het creëren van een schema in UI](create-schema-ui.md). Het omvat een `loyalty` object onder `_tenantId` namespace, die verscheidene loyaliteitsspecifieke gebieden omvat. Een van deze velden, `loyaltyId`, dient als primaire identiteit voor het schema onder het [!UICONTROL Email] naamruimte. Zoals onder **[!UICONTROL Schema Properties]**, is dit schema ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
+Het bronschema &quot;[!DNL Loyalty Members]&quot; is gebaseerd op de [!DNL XDM Individual Profile] en is het schema dat in de zelfstudie voor [het creëren van een schema in UI](create-schema-ui.md). Het omvat een `loyalty` object onder `_tenantId` namespace, die verscheidene loyaliteitsspecifieke gebieden omvat. Een van deze velden, `loyaltyId`, dient als primaire identiteit voor het schema onder het [!UICONTROL Email] naamruimte. Zoals onder **[!UICONTROL Schema Properties]**, is dit schema ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -80,7 +80,7 @@ Om aan een verhouding deel te nemen, moet het bestemmingsschema een primaire ide
 >
 >Als u wilt leren hoe u aangepaste naamruimten kunt maken, raadpleegt u de [Identiteitsdocumentatie](../../identity-service/namespaces.md#manage-namespaces).
 
-Zodra de primaire identiteit is geplaatst, moet het bestemmingsschema dan worden toegelaten voor [!DNL Real-time Customer Profile].
+Zodra de primaire identiteit is geplaatst, moet het bestemmingsschema dan worden toegelaten voor [!DNL Real-Time Customer Profile].
 
 ![Inschakelen voor profiel](../images/tutorials/relationship/hotel-profile.png)
 

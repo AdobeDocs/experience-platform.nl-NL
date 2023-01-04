@@ -4,13 +4,13 @@ description: In real time het Profiel van de Klant laat u een holistische mening
 title: Dataflows for Profiles in de UI controleren
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
 
 ---
-
 
 # Dataflows for Profiles in de UI controleren
 

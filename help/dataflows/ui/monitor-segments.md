@@ -4,7 +4,8 @@ description: De segmentatie staat u toe om segmenten en publiek van uw gegevens 
 title: Dataflows for Segments in UI controleren
 topic-legacy: overview
 type: Tutorial
-source-git-commit: cec27197d47d2dd979bdf29f16fef77e8ff855e3
+exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1783'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 # Dataflows for segments in UI
 
-Met de segmentatieservice kunt u segmenten en publiek maken op basis van uw gegevens in het realtime klantprofiel in Adobe Experience Platform. Platform verstrekt gegevensstromen om deze stroom van gegevens van bronnen aan bestemmingen doorzichtig te volgen.
+De Dienst van de segmentatie staat u toe om segmenten en publiek van uw gegevens van het Profiel van de Klant in real time in Adobe Experience Platform tot stand te brengen. Platform verstrekt gegevensstromen om deze stroom van gegevens van bronnen aan bestemmingen doorzichtig te volgen.
 
 Het controledashboard voorziet u van een visuele vertegenwoordiging van de activiteit van de gegevens binnen een segment, met inbegrip van de status van de segmentatie van uw gegevens. Deze zelfstudie bevat instructies over hoe u het dashboard voor bewaking kunt gebruiken om de segmentatie van uw gegevens te controleren met behulp van de gebruikersinterface van het Experience Platform, zodat u de status van segmentactivering, -evaluatie en -exporttaken kunt bijhouden.
 

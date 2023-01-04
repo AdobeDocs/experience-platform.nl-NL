@@ -5,7 +5,7 @@ breadcrumb-title: Werkruimtegids voor gegevenswetenschappen
 user-guide-description: Gebruik computerleren om modellen en recepten te ontwikkelen, te trainen en te scoren met Adobe Sensei- en JupyterLab-laptops.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: ec69c859a7b40f3d527c73405b358862ebdb92e7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 1%
@@ -58,7 +58,7 @@ ht-degree: 1%
    * [Score een model (UI)](models-recipes/score-model-ui.md)
    * [Score een model (API)](models-recipes/score-model-api.md)
    * [Een model optimaliseren](models-recipes/optimize-model.md)
-   * [Klantprofiel in realtime verrijken met kennis van machinaal leren](models-recipes/enrich-profile.md)
+   * [Klantprofiel in real-time verrijken met kennis van machinaal leren](models-recipes/enrich-profile.md)
    * [Een model publiceren als service (UI)](models-recipes/publish-model-service-ui.md)
    * [Een model publiceren als service (API)](models-recipes/publish-model-service-api.md)
    * [Geautomatiseerde training en scoring op een service (UI) plannen](models-recipes/schedule-models-ui.md)

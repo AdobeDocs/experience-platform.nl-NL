@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Computed Attributes API Endpoint
 topic-legacy: guide
 type: Documentation
-description: In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding laat zien hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
+description: In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. In deze handleiding ziet u hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Als u meer wilt weten over berekende kenmerken, leest u eerst de [overzicht van 
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [Real-time API voor klantprofiel](https://www.adobe.com/go/profile-apis-en).
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het [Real-Time Customer Profile API](https://www.adobe.com/go/profile-apis-en).
 
 Controleer voordat je doorgaat de [Aan de slag-handleiding voor profiel-API](../api/getting-started.md) voor verbindingen aan geadviseerde documentatie, een gids aan het lezen van de steekproefAPI vraag die in dit document verschijnt, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 

@@ -3,22 +3,22 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Aan de slag met de Real-Time Customer Profile API
 topic-legacy: guide
 type: Documentation
-description: In de gids Aan de slag met profiel API worden de belangrijkste concepten en basisfuncties beschreven die u moet kennen om de eindpunten van de API-eindpunten van het profiel van de klant in real time te kunnen gebruiken om standaard-CRUD-bewerkingen uit te voeren ten opzichte van profielgegevens.
+description: De gids van het begin van het Profiel API schetst de belangrijkste concepten en de basisfunctionaliteit die u moet kennen om eindpunten van API van het Profiel van de Klant in real time te gebruiken om basisbewerkingen van CRUD tegen de gegevens van het Profiel uit te voeren.
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# Aan de slag met de [!DNL Real-time Customer Profile] API {#getting-started}
+# Aan de slag met de [!DNL Real-Time Customer Profile] API {#getting-started}
 
-Met de eindpunten van de API van het Profiel van de Klant in real time, kunt u basisbewerkingen van CRUD tegen de gegevens van het Profiel uitvoeren, zoals het vormen van gegevens verwerkte attributen, de toegang tot entiteiten, het uitvoeren van de gegevens van het Profiel, en het schrappen van onnodige datasets of partijen.
+Gebruikend Echte - de eindpunten van het Profiel van de Klant van tijdProfiel, kunt u basisbewerkingen van CRUD tegen de gegevens van het Profiel uitvoeren, zoals het vormen van gegevens verwerkte attributen, de toegang tot entiteiten, het uitvoeren van de gegevens van het Profiel, en het schrappen van onnodige datasets of partijen.
 
-Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het werken met [!DNL Profile] gegevens. Voordat u begint te werken met de [!DNL Real-time Customer Profile] API, raadpleeg de documentatie voor de volgende services:
+Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het werken met [!DNL Profile] gegevens. Voordat u begint te werken met de [!DNL Real-Time Customer Profile] API, raadpleeg de documentatie voor de volgende services:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Verbeter een beter beeld van uw klant en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
@@ -28,7 +28,7 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om met 
 
 ## API-voorbeeldaanroepen lezen
 
-De [!DNL Real-time Customer Profile] API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe aanvragen correct moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
+De [!DNL Real-Time Customer Profile] API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe aanvragen correct moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
 
 ## Vereiste koppen
 
@@ -48,4 +48,4 @@ Alle verzoeken met een nuttige lading in het verzoeklichaam (zoals POST, PUT, en
 
 ## Volgende stappen
 
-Beginnen het maken vraag gebruikend [!DNL Real-time Customer Profile] API, selecteert u een van de beschikbare eindpunthulplijnen.
+Beginnen het maken vraag gebruikend [!DNL Real-Time Customer Profile] API, selecteert u een van de beschikbare eindpunthulplijnen.

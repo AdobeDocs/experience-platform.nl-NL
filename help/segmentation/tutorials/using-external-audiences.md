@@ -5,7 +5,7 @@ title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1582'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Nu uw schema is gecreeerd, zult u moeten specificeren welk gebied segmentidentit
 
 ![De selectievakjes om het geselecteerde veld als de primaire identiteit te markeren, worden gemarkeerd in de Schema-editor.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Na het markeren van `_id` veld als primaire identiteit, selecteer de titel van het schema, gevolgd door de schakeloptie met het label **[!UICONTROL Profile]**. Selecteren **[!UICONTROL Enable]** om het schema in te schakelen voor [!DNL Real-time Customer Profile].
+Na het markeren van `_id` veld als primaire identiteit, selecteer de titel van het schema, gevolgd door de schakeloptie met het label **[!UICONTROL Profile]**. Selecteren **[!UICONTROL Enable]** om het schema in te schakelen voor [!DNL Real-Time Customer Profile].
 
 ![De knevel om het schema voor Profiel toe te laten wordt benadrukt in de Redacteur van het Schema.](../images/tutorials/external-audiences/schema-profile.png)
 

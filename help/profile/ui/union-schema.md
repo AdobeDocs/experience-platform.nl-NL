@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema's voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema's te bekijken en te onderzoeken gebruikend het Platform UI.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 0%
@@ -18,17 +18,17 @@ In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk 
 
 ## Aan de slag
 
-Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] services die betrokken zijn bij het beheren van gegevens in realtime-klantprofiel. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
+Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] services die betrokken zijn bij het beheren van realtime-klantprofielgegevens. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Identity Service]](../../identity-service/home.md): Inschakelen [!DNL Real-time Customer Profile] door identiteiten van verschillende gegevensbronnen te overbruggen aangezien zij worden opgenomen in [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Identity Service]](../../identity-service/home.md): Inschakelen [!DNL Real-Time Customer Profile] door identiteiten van verschillende gegevensbronnen te overbruggen aangezien zij worden opgenomen in [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
 ## Verenigingsschema&#39;s begrijpen
 
 Met het realtime klantprofiel kunt u robuuste, gecentraliseerde profielen maken met klantkenmerken en gebeurtenissen met een tijdstempel die door elke klant worden gebruikt voor systemen die met Adobe Experience Platform zijn geïntegreerd. Het formaat en de structuur van deze gegevens worden verstrekt door schema&#39;s van het Gegevensmodel van de Ervaring (XDM), met elk schema dat op een klasse XDM wordt gebaseerd en die gebieden bevatten die met die klasse compatibel zijn.
 
-Schema&#39;s kunnen worden gemaakt voor meerdere gebruiksgevallen, waarbij wordt verwezen naar dezelfde klasse maar die velden bevatten die specifiek zijn voor het gebruik ervan. Wanneer een schema voor Profiel wordt toegelaten, wordt het deel van een verenigingsschema. Met andere woorden, verenigingsschema&#39;s zijn samengesteld uit veelvoudige schema&#39;s die de zelfde klasse delen en voor Profiel toegelaten. Met het samenvoegingsschema kunt u een samenvoeging zien van alle velden in schema&#39;s die dezelfde klasse delen. Het Profiel van de Klant in real time gebruikt het verenigingsschema om een holistische mening van elke individuele klant tot stand te brengen.
+Schema&#39;s kunnen worden gemaakt voor meerdere gebruiksgevallen, waarbij wordt verwezen naar dezelfde klasse maar die velden bevatten die specifiek zijn voor het gebruik ervan. Wanneer een schema voor Profiel wordt toegelaten, wordt het deel van een verenigingsschema. Met andere woorden, verenigingsschema&#39;s zijn samengesteld uit veelvoudige schema&#39;s die de zelfde klasse delen en voor Profiel toegelaten. Met het samenvoegingsschema kunt u een samenvoeging zien van alle velden in schema&#39;s die dezelfde klasse delen. In real time het Profiel van de Klant gebruikt het verenigingsschema om een holistische mening van elke individuele klant tot stand te brengen.
 
 Het werken met unieschema&#39;s vereist een diep inzicht in schema&#39;s XDM. Voor meer informatie, gelieve te beginnen door te lezen [grondbeginselen van de schemacompositie](../../xdm/schema/composition.md).
 

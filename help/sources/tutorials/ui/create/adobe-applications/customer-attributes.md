@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een bronverbinding maakt in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -76,7 +76,7 @@ De [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevensstroom kunt 
 
 ## Volgende stappen
 
-Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de aanvankelijke opname voltooit, kunnen de gegevens van het klantenkenmerkprofiel door de stroomafwaartse diensten van het Platform zoals worden gebruikt [!DNL Real-time Customer Profile] en [!DNL Segmentation Service]. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de aanvankelijke opname voltooit, kunnen de gegevens van het klantenkenmerkprofiel door de stroomafwaartse diensten van het Platform zoals worden gebruikt [!DNL Real-Time Customer Profile] en [!DNL Segmentation Service]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] - overzicht](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] - overzicht](../../../../../segmentation/home.md)
+* [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
+* [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)

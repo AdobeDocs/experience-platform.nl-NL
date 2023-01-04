@@ -3,7 +3,7 @@ keywords: rtcdp segmenten;segment builder rtcdp;rtcdp segment;klant ai rtcdp
 title: AI van klant in Real-time Customer Data Platform
 description: Een overzicht van de AI van de Klant en hoe deze kan helpen bij het genereren van scores voor specifieke resultaten zoals conversies of churn.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een 
 * Het verstrekken van zeer nauwkeurige klantenaandrijvingsmodellen voor sterkere segmentatie en het richten.
 * Inzicht in de invloedrijke factoren en de waarschijnlijkheid achter bepaalde gedragingen van klanten.
 * Het verstrekken van klantgerichte opties voor de unieke gebruiksgevallen van uw bedrijf en gegevens.
-* Verbetering van het Real-Time Klantprofiel met klantennestscores zoals churn en conversie.
+* Verbetering van het Real-Time Klantprofiel met klantennestscores zoals kurn en conversie.
 * Klantenprofielen verbeteren met invloedrijke factoren voor populatiescore.
 * Het creëren van segmenten van klanten die op invloedrijke factoren en aandrijvingsscores worden gebaseerd.
 

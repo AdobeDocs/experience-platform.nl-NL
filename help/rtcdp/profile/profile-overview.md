@@ -1,9 +1,9 @@
 ---
 keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbeleid;realtime klantprofiel
 title: Klantprofiel in realtime begrijpen in Real-Time CDP
-description: Leer hoe u met Adobe Real-time Customer Data Platform gecoördineerde, consistente en relevante ervaringen voor uw klanten kunt aansturen met het Real-time klantprofiel.
+description: Leer hoe u met Adobe Real-time Customer Data Platform gecoördineerde, consistente en relevante ervaringen voor uw klanten kunt aansturen met Real-Time Customer Profile.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Overzicht van het realtime klantprofiel
 
-Het Profiel van de Klant in real time laat u toe om een holistische mening van elke individuele klant te zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens te combineren. Elk individueel klantenprofiel staat u toe om uw verschillende klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+In real time het Profiel van de Klant laat u toe om een holistische mening van elke individuele klant te zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens te combineren. Elk individueel klantenprofiel staat u toe om uw verschillende klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
 ## Profielen in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Adobe Real-Time Customer Data Platform] biedt u de mogelijkheid om gecoördineerde en consistente ervaringen voor uw klanten te gebruiken, ongeacht waar of wanneer ze met uw merk communiceren. Het leveren van deze persoonlijke ervaringen, zodat zij zich relevant en tijdig voelen, is geen klein kenmerk, maar het kan worden bereikt door het gebruik van Real-time Customer Profile, een onderdeel van Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] biedt u de mogelijkheid om gecoördineerde en consistente ervaringen voor uw klanten te gebruiken, ongeacht waar of wanneer ze met uw merk communiceren. Het leveren van deze persoonlijke ervaringen, zodat zij zich relevant en tijdig voelen, is geen klein kenmerk, maar het kan worden bereikt door het gebruik van Real-Time Customer Profile, een onderdeel van Adobe Experience Platform.
 
 Real-Time CDP is bovenop Experience Platform gebouwd en maakt gebruik van veel van de basisfuncties en -functionaliteit voor Experience Platforms, waaronder het maken van profielen. Deze samengevoegde meningen van een individuele klant brengen gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om klantengegevens op te slaan.
 
@@ -38,4 +38,4 @@ Met Platform kunt u eenvoudig klantprofielen bekijken en naar specifieke profiel
 
 ## Volgende stappen
 
-Door gegevens uit verschillende bronnen samen te voegen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Raadpleeg voor meer gedetailleerde informatie, zoals best practices en zelfstudies voor het werken met gegevens van het realtime-klantprofiel in de gebruikersinterface en via API&#39;s de [Documentatie van het profiel van de klant in realtime](../../profile/home.md).
+Door gegevens uit verschillende bronnen samen te voegen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Raadpleeg voor meer gedetailleerde informatie, zoals best practices en zelfstudies voor het werken met gegevens van realtime-klantprofielen in de gebruikersinterface en via API&#39;s de [Real-Time documentatie voor klantprofiel](../../profile/home.md).

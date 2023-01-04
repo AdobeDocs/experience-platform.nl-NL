@@ -3,7 +3,8 @@ keywords: Experience Platform;home;populaire onderwerpen;analyse;mixpanel
 solution: Experience Platform
 title: Creeer een Dataflow Gebruikend een Bron Analytics in UI
 description: Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een analysebron met behulp van de gebruikersinterface van het Platform.
-source-git-commit: d23f3791b040a856c0e3c048be31ac36a60e0cf1
+exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
@@ -26,7 +27,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platf
 * [[!DNL Experience Data Model (XDM)] Systeem](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Zelfstudie Schema Editor](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Staat gegevensingenieurs toe om, gegevens aan en van het Model van de Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 
 <!-- ## Add data
@@ -140,10 +141,10 @@ U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeer
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om gegevens van uw analysebron naar het Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om gegevens van uw analysebron naar het Platform te brengen. Binnenkomende gegevens kunnen nu door downstreamgebruikers worden gebruikt [!DNL Platform] diensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] - overzicht](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] - overzicht](../../../../data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile]-overzicht](../../../../profile/home.md)
+* [[!DNL Data Science Workspace]-overzicht](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

@@ -6,8 +6,7 @@ title: Monitorgegevensstromen
 topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-translation-type: tm+mt
-source-git-commit: 63158e7322ae91d5b36a7b2aa22fd93512f9bebb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
@@ -18,6 +17,6 @@ ht-degree: 0%
 
 [!UICONTROL Destinations] u toestaan om uw gegevens van Adobe Experience Platform aan talloze externe partners te activeren.
 
-Dataflows zijn een representatie van gegevenstaken waarmee gegevens worden verplaatst over [!DNL Platform]. Deze gegevensstromen worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door [!DNL Identity Service] en[!DNL Real-time Customer Profile] wordt gebruikt alvorens uiteindelijk aan bestemmingen wordt geactiveerd.
+Gegevensstromen zijn een representatie van gegevenstaken die gegevens verplaatsen [!DNL Platform]. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door wordt gebruikt [!DNL Identity Service] en[!DNL Real-Time Customer Profile] alvorens uiteindelijk aan bestemmingen worden geactiveerd.
 
-Meer over het controleren van gegevensstromen voor bestemmingen, te lezen gelieve [dataflows voor bestemmingen in UI](../../dataflows/ui/monitor-destinations.md) leerprogramma.
+Lees voor meer informatie over het controleren van gegevensstromen voor bestemmingen de [Dataflows voor doelen in de UI controleren](../../dataflows/ui/monitor-destinations.md) zelfstudie.

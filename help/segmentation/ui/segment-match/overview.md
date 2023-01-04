@@ -5,14 +5,14 @@ title: Overzicht van afstemming van segment
 topic-legacy: overview
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] - overzicht
+# [!DNL Segment Match]-overzicht
 
 Adobe Experience Platform Segment Match is een segment-delende dienst die voor twee of meer gebruikers van het Platform toestaat om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen. [!DNL Segment Match] gebruikt de privacynormen van het Platform en persoonlijke herkenningstekens zoals gehakte e-mails, gehakte telefoonaantallen, en apparatenherkenningstekens zoals IDFAs en GAIDs.
 
@@ -37,7 +37,7 @@ De eerste stap om aan de slag te gaan met [!DNL Segment Match] moet ervoor zorge
 
 Identiteitsnaamruimten zijn een component van [Adobe Experience Platform Identity Service](../../../identity-service/home.md). Elke identiteit van de klant bevat een bijbehorende naamruimte die de context van de identiteit aangeeft. Een naamruimte kan bijvoorbeeld een waarde onderscheiden van &quot;name&quot;<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id.
 
-Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace. Bij het afstemmen van recordgegevens in profielfragmenten (bijvoorbeeld wanneer [!DNL Real-time Customer Profile] Voegt profielgegevens samen), zowel de identiteitswaarde als de naamruimte moeten overeenkomen.
+Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace. Bij het afstemmen van recordgegevens in profielfragmenten (bijvoorbeeld wanneer [!DNL Real-Time Customer Profile] Voegt profielgegevens samen), zowel de identiteitswaarde als de naamruimte moeten overeenkomen.
 
 In de context van [!DNL Segment Match]naamruimten worden gebruikt in het overlappingsproces bij het delen van gegevens.
 
@@ -204,4 +204,4 @@ Door dit document te lezen, hebt u meer inzicht gekregen in [!DNL Segment Match]
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] - overzicht](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile]-overzicht](../../../profile/home.md)

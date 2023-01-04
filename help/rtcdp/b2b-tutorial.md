@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aan de slag met Real-time Customer Data Platform B2B Edition
 description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1196'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Het nut van de auto-generatie bepaalde de structuur van het gegevensmodel voor d
 > 
 >Als u niet het auto-generatornut gebruikt of een nieuwe verhouding zou moeten tot stand worden gebracht, zie het leerprogramma op [relaties creëren tussen B2B-schema&#39;s](../xdm/tutorials/relationship-b2b.md).
 
-In realtime Klantprofiel voegt gegevens van verschillende bronnen samen om geconsolideerde profielen van de belangrijkste B2B-entiteiten te maken. Aangezien de profielen worden geproduceerd gebaseerd op één enkele klasse, plaatst het auto-generatienut omhoog verhoudingen tussen schema&#39;s die op gemeenschappelijke bedrijfsgebruikscenario&#39;s worden gebaseerd. Dientengevolge, is het team van Bodea nu bereid om gegevens in te voeren die op hun B2B schema&#39;s worden gebaseerd.
+In realtime klantprofiel worden gegevens uit verschillende bronnen samengevoegd om geconsolideerde profielen van belangrijke B2B-entiteiten te maken. Aangezien de profielen worden geproduceerd gebaseerd op één enkele klasse, plaatst het auto-generatienut omhoog verhoudingen tussen schema&#39;s die op gemeenschappelijke bedrijfsgebruikscenario&#39;s worden gebaseerd. Dientengevolge, is het team van Bodea nu bereid om gegevens in te voeren die op hun B2B schema&#39;s worden gebaseerd.
 
 >[!NOTE]
 > 
@@ -86,7 +86,7 @@ In dit voorbeeld vindt het segment alle mensen die in de verkoopafdeling werken 
 > 
 >Voor instructies over hoe te om segmenten tot stand te brengen om uw gegevens te evalueren zie [Handleiding voor de gebruikersinterface van Segment Builder](../segmentation/ui/segment-builder.md). Raadpleeg voor specifiekere gevallen van B2B-segmentatiegebruik de [segmentatieoverzicht voor Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
-De Bouwer van het Segment staat u toe om een verhandelbaar publiek van de gegevens van het Profiel van de Klant in real time tot stand te brengen en ramingen van uw prospectief publiek te bekijken die op de combinatie attributen, gebeurtenissen, en bestaand publiek worden gebaseerd u bepaalde.
+De Bouwer van het Segment staat u toe om een verhandelbaar publiek van de gegevens van het Profiel van de Klant in real time tot stand te brengen en ramingen van uw prospectief publiek te bekijken die op de combinatie attributen, gebeurtenissen, en bestaande publiek worden gebaseerd u bepaalde.
 
 ## Uw geëvalueerde gegevens naar een doel activeren
 

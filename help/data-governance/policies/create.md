@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: Leer hoe u een beleid voor gegevensbeheer maakt met de API voor beleidsservice.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 1%
@@ -423,6 +423,6 @@ Een succesvolle reactie keert HTTP status 200 (O.K.) en de details van het bijge
 
 Aan de hand van deze zelfstudie hebt u een beleid voor gegevensgebruik voor een marketingactie gemaakt. U kunt nu doorgaan met de zelfstudie op [gegevensgebruiksbeleid afdwingen](../enforcement/api-enforcement.md) om te leren hoe u kunt controleren op beleidsovertredingen en deze kunt verwerken in uw ervaringstoepassing.
 
-Voor meer informatie over de verschillende beschikbare bewerkingen in de [!DNL Policy Service] API, zie [Handleiding voor ontwikkelaars van beleidsservices](../api/getting-started.md). Voor informatie over hoe beleidsregels kunnen worden afgedwongen voor [!DNL Real-time Customer Profile] gegevens, raadpleeg de zelfstudie over [naleving van gegevensgebruik afdwingen voor publiekssegmenten](../../segmentation/tutorials/governance.md).
+Voor meer informatie over de verschillende beschikbare bewerkingen in de [!DNL Policy Service] API, zie [Handleiding voor ontwikkelaars van beleidsservices](../api/getting-started.md). Voor informatie over hoe beleidsregels kunnen worden afgedwongen voor [!DNL Real-Time Customer Profile] gegevens, raadpleeg de zelfstudie over [naleving van gegevensgebruik afdwingen voor publiekssegmenten](../../segmentation/tutorials/governance.md).
 
 Leren hoe u het gebruiksbeleid kunt beheren in het dialoogvenster [!DNL Experience Platform] gebruikersinterface, zie [beleidsgebruikershandleiding](user-guide.md).

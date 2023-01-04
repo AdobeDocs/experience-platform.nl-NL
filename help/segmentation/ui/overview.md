@@ -5,7 +5,7 @@ title: UI-gids voor segmentatieservice
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2566'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 Het werken met segmentdefinities vereist een begrip van de diverse [!DNL Experience Platform] diensten in verband met segmentatie. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] staat u toe om gegevens te verdelen die in worden opgeslagen [!DNL Experience Platform] dat betrekking heeft op individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) in kleinere groepen.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Laat de verwezenlijking van klantenprofielen toe door identiteiten van verschillende gegevensbronnen te overbruggen die in worden opgenomen [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 
@@ -156,7 +156,7 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 | 1 tot 20 miljoen | 1 miljoen |
 | Meer dan 20 miljoen | 5% van het totaal |
 
-Meer gedetailleerde informatie over elk [!DNL Profile] kunt u zien door de [!DNL Profile] ID. Als u meer wilt weten over de details van een profiel, leest u de [[!DNL Real-time Customer Profile] gebruikershandleiding](../../profile/ui/user-guide.md#profile-detail).
+Meer gedetailleerde informatie over elk [!DNL Profile] kunt u zien door de [!DNL Profile] ID. Als u meer wilt weten over de details van een profiel, leest u de [[!DNL Real-Time Customer Profile] gebruikershandleiding](../../profile/ui/user-guide.md#profile-detail).
 
 ![De voorbeeldprofielen voor de segmentdefinitie worden gemarkeerd. Voorbeelden van profielgegevens zijn de profiel-id, de voornaam, de achternaam en het e-mailadres van de persoon.](../images/ui/overview/segment-details-profiles.png)
 
@@ -176,7 +176,7 @@ Voor meer informatie over het gebruik van de [!DNL Segment Builder] werkruimte, 
 
 ## Geplande segmentatie {#scheduled-segmentation}
 
-Zodra de segmentdefinities zijn gecreeerd, kunt u hen door op bestelling of geplande (ononderbroken) evaluatie dan evalueren. Evaluatie betekent verplaatsen [!DNL Real-time Customer Profile] gegevens door segmentdefinities om het overeenkomstige publiek te bereiken. Nadat het publiek is gemaakt, wordt het opgeslagen en opgeslagen zodat het de doelgroep kan exporteren [!DNL Experience Platform] API&#39;s.
+Zodra de segmentdefinities zijn gecreeerd, kunt u hen door op bestelling of geplande (ononderbroken) evaluatie dan evalueren. Evaluatie betekent verplaatsen [!DNL Real-Time Customer Profile] gegevens door segmentdefinities om het overeenkomstige publiek te bereiken. Nadat het publiek is gemaakt, wordt het opgeslagen en opgeslagen zodat het de doelgroep kan exporteren [!DNL Experience Platform] API&#39;s.
 
 De evaluatie op bestelling impliceert het gebruiken van API om evaluatie uit te voeren en publiek te bouwen zoals nodig, terwijl de geplande evaluatie (die ook als &quot;geplande segmentatie&quot;wordt bekend) u toestaat om een terugkerend programma tot stand te brengen om segmentdefinities op een specifieke tijd (bij een maximum, eenmaal per dag) te evalueren.
 
@@ -294,6 +294,6 @@ Als u klaar bent met het maken van uw segment, wordt het segment geanalyseerd do
 
 ## Volgende stappen en extra bronnen {#next-steps}
 
-De [!DNL Segmentation Service] UI verstrekt een rijk werkschema dat u toestaat om verhandelbare doelgroepen van te isoleren [!DNL Real-time Customer Profile] gegevens.
+De [!DNL Segmentation Service] UI verstrekt een rijk werkschema dat u toestaat om verhandelbare doelgroepen van te isoleren [!DNL Real-Time Customer Profile] gegevens.
 
 Meer informatie over [!DNL Segmentation Service], doorgaat u met het lezen van de documentatie. Leren hoe u de [!DNL Segmentation Service] API, lees de [[!DNL Segmentation Service] ontwikkelaarsgids](../api/overview.md).

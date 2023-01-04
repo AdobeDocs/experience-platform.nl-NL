@@ -4,7 +4,7 @@ title: Aan de slag met de API voor gegevensverwerking
 type: Documentation
 description: De gids Aan de slag van de Ingestie van Gegevens API schetst de belangrijkste concepten en de basisfunctionaliteit die u moet kennen alvorens u kunt beginnen gegevens in Experience Platform in te voeren gebruikend APIs.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Met de eindpunten van de API voor gegevensinname kunt u standaard-CRUD-bewerking
 Het gebruik van de API-handleidingen vereist een goed begrip van de verschillende Adobe Experience Platform-services die betrokken zijn bij het werken met gegevens. Lees de documentatie voor de volgende services voordat u de API voor gegevensinname gebruikt:
 
 * [Inname in batch](./overview.md): Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren.
-* [[!DNL Real-time Customer Profile]](../home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 

@@ -2,7 +2,7 @@
 title: Hoofdlettergebruik van op decile gebaseerde afgeleide kenmerken
 description: Deze gids toont de stappen die worden vereist om de Dienst van de Vraag te gebruiken om op decile-Gebaseerde afgeleide attributen voor gebruik met uw gegevens van het Profiel tot stand te brengen.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 De afgeleide attributen vergemakkelijken gecompliceerde gebruiksgevallen voor het analyseren van gegevens van het gegevensmeer die met andere stroomafwaartse diensten van het Platform kunnen worden gebruikt of in uw gegevens van het Profiel van de Klant in real time worden gepubliceerd.
 
-In dit voorbeeldgebruik wordt getoond hoe u op decile gebaseerde afgeleide kenmerken kunt maken voor gebruik met uw gegevens van het profiel van de klant in real time. Gebruikend een scenario van de luchtvaartloyaliteit als voorbeeld, vertelt deze gids u hoe te om een dataset tot stand te brengen die categoriale deciles gebruikt om te segmenteren en publiek tot stand te brengen dat op gerangschikte attributen wordt gebaseerd.
+In dit voorbeeldgebruik wordt getoond hoe u op decile gebaseerde afgeleide kenmerken kunt maken voor gebruik met uw gegevens in real-time klantprofiel. Gebruikend een scenario van de luchtvaartloyaliteit als voorbeeld, vertelt deze gids u hoe te om een dataset tot stand te brengen die categoriale deciles gebruikt om te segmenteren en publiek tot stand te brengen dat op gerangschikte attributen wordt gebaseerd.
 
 De volgende belangrijke concepten worden geïllustreerd:
 
@@ -64,7 +64,7 @@ In de volgende tabel worden de voorbeeldgegevens in het dialoogvenster `_profile
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 01-01-2022 | STATUS_MILES | Nieuw lid | 5000 | FLYER |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nieuw lid | 5000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILVER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILVER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | SILVER |
@@ -80,9 +80,9 @@ Creeer een &quot;Airline Loyalty Decile Schema&quot;om een decile dataset tot st
 
 ![Een diagram van het &quot;Airline Loyalty Decile Schema&quot;.](../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
 
-### Het schema inschakelen voor Real-time klantprofiel
+### Het schema inschakelen voor realtime-klantprofiel
 
-Gegevens die in Experience Platform worden opgenomen voor gebruik door Real-time Klantprofiel moeten in overeenstemming zijn met [een XDM-schema (Experience Data Model) dat is ingeschakeld voor Profiel](../../xdm/ui/resources/schemas.md). Een schema kan alleen worden ingeschakeld voor Profiel als het de klasse XDM Individual Profile of XDM ExperienceEvent implementeert.
+Gegevens die in Experience Platform worden opgenomen voor gebruik door Real-Time Klantprofiel moeten in overeenstemming zijn met [een XDM-schema (Experience Data Model) dat is ingeschakeld voor Profiel](../../xdm/ui/resources/schemas.md). Een schema kan alleen worden ingeschakeld voor Profiel als het de klasse XDM Individual Profile of XDM ExperienceEvent implementeert.
 
 [Laat uw schema voor gebruik in het Profiel van de Klant in real time toe gebruikend de Registratie API van het Schema](../../xdm/tutorials/create-schema-api.md) of de [Gebruikersinterface Schema-editor](../../xdm/tutorials/create-schema-ui.md).  Gedetailleerde instructies over hoe te om een schema voor Profiel toe te laten zijn beschikbaar in hun respectieve documentatie.
 
@@ -299,4 +299,4 @@ Stel de vraag in werking om de decile dataset te bevolken. U kunt de vraag als m
 
 ## Volgende stappen
 
-Het bovenstaande voorbeeld van het gebruik markeert de stappen waarmee u decile-kenmerken beschikbaar kunt maken in het realtime profiel van de klant. Dit staat voor de Dienst van de Segmentatie, of via een gebruikersinterface of RESTful API, toe om publiek te kunnen produceren dat op deze decile emmers wordt gebaseerd. Zie de [Overzicht van segmentatieservice](../../segmentation/home.md) voor informatie over om, segmenten tot stand te brengen te evalueren en toegang te hebben.
+Het bovenstaande voorbeeld van het gebruik markeert de stappen waarmee u decile-kenmerken beschikbaar kunt maken in Real-Time Klantprofiel. Dit staat voor de Dienst van de Segmentatie, of via een gebruikersinterface of RESTful API, toe om publiek te kunnen produceren dat op deze decile emmers wordt gebaseerd. Zie de [Overzicht van segmentatieservice](../../segmentation/home.md) voor informatie over om, segmenten tot stand te brengen te evalueren en toegang te hebben.

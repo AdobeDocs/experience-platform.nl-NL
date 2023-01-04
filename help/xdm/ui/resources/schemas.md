@@ -5,7 +5,7 @@ title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3fc498de60256006d27ada72a7b5f4fff71c4472
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3071'
 ht-degree: 0%
@@ -244,7 +244,7 @@ Nadat u de wijzigingen hebt toegepast, wordt het nieuwe veld onder de naamruimte
 
 ![Veld toegevoegd aan standaardobject](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Een schema voor realtime klantprofiel inschakelen {#profile}
+## Een schema inschakelen voor realtime-klantprofiel {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
@@ -275,7 +275,7 @@ Selecteer **[!UICONTROL Save]** om het schema op te slaan.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-Het schema is nu ingeschakeld voor gebruik in het Real-time profiel van de Klant. Wanneer het Platform gegevens in datasets opneemt die op dit schema worden gebaseerd, zullen die gegevens in uw samengevoegde gegevens van het Profiel worden opgenomen.
+Het schema is nu ingeschakeld voor gebruik in Real-Time Klantprofiel. Wanneer het Platform gegevens in datasets opneemt die op dit schema worden gebaseerd, zullen die gegevens in uw samengevoegde gegevens van het Profiel worden opgenomen.
 
 ## Weergavenamen voor schemavelden bewerken {#display-names}
 

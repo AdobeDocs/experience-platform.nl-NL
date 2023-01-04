@@ -3,7 +3,7 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Schema bewerken om aangepaste dashboardwidgets te maken
 description: Deze handleiding bevat stapsgewijze instructies voor het selecteren van kenmerken en het configureren van het schema van uw organisatie om aangepaste widgets voor Adobe Experience Platform-dashboards te maken.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Schema bewerken om aangepaste widgets te maken
 
-Als u aangepaste widgets voor Adobe Experience Platform-dashboards wilt maken, moet u eerst de realtime kenmerken van het klantprofiel identificeren waarop de widgets worden gebaseerd.
+Als u aangepaste widgets voor Adobe Experience Platform-dashboards wilt maken, moet u eerst de kenmerken van het realtime-klantprofiel identificeren waarop de widgets worden gebaseerd.
 
 Deze handleiding bevat stapsgewijze instructies voor het bewerken van het schema van uw organisatie door kenmerken te selecteren om aangepaste dashboardwidgets te maken.
 
@@ -30,7 +30,7 @@ Deze gids vereist toegang tot [!UICONTROL Widget library] in Experience Platform
 
 In de widgetbibliotheek **[!UICONTROL Custom]** kunt u widgets maken en deze delen met andere gebruikers in uw organisatie om de weergave van uw dashboards aan te passen.
 
-Voordat u aangepaste widgets kunt maken, moeten de kenmerken van het profiel van de klant in realtime worden geselecteerd om ervoor te zorgen dat de gegevens worden opgenomen als onderdeel van de dagelijkse momentopname.
+Voordat u aangepaste widgets kunt maken, moeten de kenmerken van het realtime-klantprofiel zijn geselecteerd om ervoor te zorgen dat de gegevens worden opgenomen als onderdeel van de dagelijkse momentopname.
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ Als u een kenmerk wilt selecteren in het dialoogvenster **[!UICONTROL Select uni
 
 >[!NOTE]
 >
->Een kenmerk is alleen zichtbaar voor selectie als het een van de volgende kenmerken is: Tekenreeks, datum, datum en tijd, Boolean, kort, lang, geheel getal of byte. De gegevenstypen Map en Double worden niet ondersteund en worden grijs weergegeven zodat ze niet kunnen worden geselecteerd.
+>Een kenmerk kan alleen zichtbaar zijn voor selectie als het een van de volgende kenmerken is: Tekenreeks, datum, datum en tijd, Boolean, kort, lang, geheel getal of byte. De gegevenstypen Map en Double worden niet ondersteund en worden grijs weergegeven zodat ze niet kunnen worden geselecteerd.
 
 Nadat u de kenmerken hebt gekozen die u wilt toevoegen, selecteert u **[!UICONTROL Save]** om uw kenmerken op te slaan en terug te keren naar het tabblad Aangepaste widgets.
 
@@ -61,4 +61,4 @@ Nadat u de kenmerken hebt gekozen die u wilt toevoegen, selecteert u **[!UICONTR
 
 ## Volgende stappen
 
-Na het lezen van deze gids kunt u aan de widgetbibliotheek navigeren en de attributen van het Profiel van de Klant in real time selecteren om uw schema te vormen. Als Profielkenmerken zijn geselecteerd, kunt u beginnen [aangepaste widgets maken voor uw dashboards](custom-widgets.md).
+Na het lezen van deze gids kunt u aan de widgetbibliotheek navigeren en de attributen van het Profiel van de Klant selecteren in real time om uw schema te vormen. Als Profielkenmerken zijn geselecteerd, kunt u beginnen [aangepaste widgets maken voor uw dashboards](custom-widgets.md).

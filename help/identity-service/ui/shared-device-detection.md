@@ -5,7 +5,7 @@ description: De gedeelde Detectie van het Apparaat identificeert verschillende v
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1331'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Wanneer [!DNL Shared Device Detection] is ingeschakeld, [!DNL Profile] Hiermee d
 
 An **geverifieerde ervaringsgebeurtenis** is een actie die door een gebruiker wordt voltooid terwijl het programma geopend aan een apparaat. Voor geverifieerde ervaringsgebeurtenissen is de primaire identiteit de **Naamruimte gebruikersnaam gebruiker** (Aanmeldings-id). An **niet-geverifieerde ervaringsgebeurtenis** is een actie die door een gebruiker wordt voltooid die niet het programma wordt geopend aan een apparaat. Voor niet-geverifieerde ervaringsgebeurtenissen is de primaire identiteit de **Naamruimte van gedeelde identiteit** (ECID).
 
-Zie voor meer informatie de  [[!DNL Real-time Customer Profile] overzicht](../../profile/home.md).
+Zie voor meer informatie de  [[!DNL Real-Time Customer Profile] overzicht](../../profile/home.md).
 
 ## Gebruikersinterface voor gedeelde apparaten
 

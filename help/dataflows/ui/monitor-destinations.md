@@ -6,7 +6,7 @@ title: Dataflows voor Doelen in UI controleren
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: bbace3c3768ef9b130c94f3d7519d52dfadeafa1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3062'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Zie de volgende tabel voor meer informatie over statussen:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Gegevens gegevensstroom"
->abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van het segment en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Voor meer informatie raadpleegt u de handleiding voor metrische definities."
+>abstract="De de looppasdetails van de bestemmingsdataflow bevatten informatie over de activeringsstatus van het segment en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Voor meer informatie raadpleegt u de handleiding voor metrische definities."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -113,7 +113,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Gegevens gegevensstroom"
->abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van het segment en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Voor meer informatie raadpleegt u de handleiding voor metrische definities."
+>abstract="De de looppasdetails van de bestemmingsdataflow bevatten informatie over de activeringsstatus van het segment en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Voor meer informatie raadpleegt u de handleiding voor metrische definities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
 
 >[!CONTEXTUALHELP]

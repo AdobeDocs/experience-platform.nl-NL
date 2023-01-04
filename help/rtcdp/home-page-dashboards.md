@@ -3,7 +3,7 @@ keywords: metriek-overzicht; rtcdp metriek - overzicht
 title: Homepage van Real-time Customer Data Platform en dashboards
 description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Voor meer informatie over datasets, zie [Overzicht van gegevenssets](../catalog/
 
 ### Profielen
 
-De **[!UICONTROL Profiles]** het totale aantal personen met profielen in het deelvenster [!DNL Real-time Customer Profile]. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek.
+De **[!UICONTROL Profiles]** het totale aantal personen met profielen in het deelvenster [!DNL Real-Time Customer Profile]. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek.
 
 Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in Verenigd Profiel wordt geplaatst.
 

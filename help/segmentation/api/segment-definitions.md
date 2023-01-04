@@ -5,7 +5,7 @@ title: Segment Definition API Endpoint
 topic-legacy: developer guide
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Definitieeindpunt van segment
 
-Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor het segment die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens worden gebaseerd u verstrekt aan [!DNL Real-time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
+Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor het segment die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens worden gebaseerd u verstrekt aan [!DNL Real-Time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
 
 Deze gids verstrekt informatie om u te helpen segmentdefinities beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 
@@ -40,12 +40,12 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `start` | Geeft de beginverschuiving aan voor de gesegmenteerde definities die worden geretourneerd. | `start=4` |
-| `limit` | Specifies the number of segment definitions returned per page. | `limit=20` |
+| `limit` | Geeft het aantal segmentdefinities op dat per pagina wordt geretourneerd. | `limit=20` |
 | `page` | Geeft aan vanaf welke pagina de resultaten van segmentdefinities moeten beginnen. | `page=5` |
-| `sort` | Hiermee geeft u aan op welk veld de resultaten moeten worden gesorteerd. Is written in the following format: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `sort` | Hiermee geeft u aan op welk veld de resultaten moeten worden gesorteerd. Wordt geschreven in de volgende indeling: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Geeft aan of de segmentdefinitie streaming-ingeschakeld is. | `evaluationInfo.continuous.enabled=true` |
 
-**Request**
+**Verzoek**
 
 Het volgende verzoek zal de laatste twee segmentdefinities terugwinnen die binnen uw IMS Organisatie worden gepost.
 
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Antwoord**
 
-A successful response returns HTTP status 200 with a list of segment definitions for the specified IMS organization as JSON.
+Een geslaagde reactie retourneert HTTP-status 200 met een lijst van segmentdefinities voor de opgegeven IMS-organisatie als JSON.
 
 ```json
 {
@@ -155,7 +155,7 @@ A successful response returns HTTP status 200 with a list of segment definitions
 
 U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` eindpunt.
 
-**API format**
+**API-indeling**
 
 ```http
 POST /segment/definitions
@@ -190,9 +190,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `name` | **Vereist.** Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Consists of either an `id` or `name` field. |
+| `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | **Vereist.** Een entiteit die veldinformatie over de segmentdefinitie bevat. |
-| `expression.type` | Specifies the expression type. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
+| `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 | `description` | Een door de mens leesbare beschrijving van de definitie. |
@@ -252,13 +252,13 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde id van de zojuist gemaakte segmentdefinitie. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation the segment definition will undergo. Het kan batch, ononderbroken (ook wel streaming genoemd) of synchrone segmentatie zijn. |
+| `evaluationInfo` | Een systeem-geproduceerd voorwerp dat vertelt welk type van evaluatie de segmentdefinitie zal ondergaan. Het kan batch, ononderbroken (ook wel streaming genoemd) of synchrone segmentatie zijn. |
 
 ## Een specifieke segmentdefinitie ophalen {#get}
 
 U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een verzoek van de GET tot de `/segment/definitions` eindpunt en het verstrekken van identiteitskaart van de segmentdefinitie u wenst om in de verzoekweg terug te winnen.
 
-**API format**
+**API-indeling**
 
 ```http
 GET /segment/definitions/{SEGMENT_ID}
@@ -340,13 +340,13 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 U kunt gedetailleerde informatie over veelvoudige gespecificeerde segmentdefinities terugwinnen door een verzoek van de POST aan `/segment/definitions/bulk-get` en het verstrekken van `id` waarden van de segmentdefinities in de aanvraaginstantie.
 
-**API format**
+**API-indeling**
 
 ```http
 POST /segment/definitions/bulk-get
 ```
 
-**Request**
+**Verzoek**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -457,9 +457,9 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 }
 ```
 
-| Property | Beschrijving |
+| Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `id` | A system-generated read-only ID of the segment definition. |
+| `id` | Een door het systeem gegenereerde alleen-lezen-id van de segmentdefinitie. |
 | `name` | Een unieke naam waarmee naar het segment moet worden verwezen. |
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
@@ -471,7 +471,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 
 ## Een specifieke segmentdefinitie verwijderen {#delete}
 
-You can request to delete a specific segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to delete in the request path.
+U kunt verzoeken om een specifieke segmentdefinitie te schrappen door een verzoek van de DELETE tot de `/segment/definitions` eindpunt en het verstrekken van identiteitskaart van de segmentdefinitie u wenst om in de verzoekweg te schrappen.
 
 >[!NOTE]
 >
