@@ -5,7 +5,7 @@ title: Schemas API Endpoint
 description: Het /schemas eindpunt in de Registratie API van het Schema staat u toe om schema's XDM binnen uw ervaringstoepassing programmatically te beheren.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Schemas, eindpunt
 
-Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt opnemen. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. De `/schemas` in de [!DNL Schema Registry] Met API kunt u schema&#39;s programmatisch beheren binnen uw ervaringstoepassing.
+Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt invoeren. Elk schema bestaat uit een klasse en nul of meer groepen schemavelden. De `/schemas` in de [!DNL Schema Registry] Met API kunt u schema&#39;s programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
@@ -110,7 +110,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container die het schema bevat dat u wilt ophalen: `global` voor een door Adobe gemaakt schema of `tenant` voor een schema dat eigendom is van uw organisatie. |
+| `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt schema of `tenant` voor een schema dat eigendom is van uw organisatie. |
 | `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u wilt opzoeken. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -374,7 +374,7 @@ Een van de meest gangbare PATCH-bewerkingen bestaat uit het toevoegen van eerder
 **API-indeling**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Beschrijving |
@@ -465,7 +465,7 @@ Om aan een schema deel te nemen [Klantprofiel in realtime](../../profile/home.md
 **API-indeling**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Beschrijving |
