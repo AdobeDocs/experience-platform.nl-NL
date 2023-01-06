@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Platform Identity Service Guide
 user-guide-description: De klantenidentiteiten van de brug over apparaten en systemen om gepersonaliseerde digitale ervaringen te leveren.
 feature: Identities
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 11%
+source-wordcount: '112'
+ht-degree: 10%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 11%
    - [Gedeelde apparaatdetectie](ui/shared-device-detection.md)
    - [Identiteitsvelden definiëren in de gebruikersinterface](ui/label-identities.md)
 - [ECID-overzicht](ecid.md)
+- [Verwijderen in identiteitsservice](deletion.md)
 - [Verwerking van privacyverzoeken](privacy.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/identity-service)
