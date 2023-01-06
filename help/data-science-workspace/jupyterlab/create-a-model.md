@@ -2,13 +2,12 @@
 keywords: Experience Platform;JupyterLab;recept;laptops;Data Science Workspace;populaire onderwerpen;recept maken
 solution: Experience Platform
 title: Een model maken met JupyterLab-laptops
-topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie begeleidt u door de vereiste stappen om een recept te maken met behulp van de sjabloon voor het maken van het recept voor JupyterLab-laptops.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2090'
 ht-degree: 0%
 
 ---

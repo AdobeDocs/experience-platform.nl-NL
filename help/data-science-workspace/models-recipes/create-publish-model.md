@@ -2,11 +2,10 @@
 keywords: Experience Platform;machine het leren model;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;creeer en publiceer een model
 solution: Experience Platform
 title: Een leermodel voor machines maken en publiceren
-topic-legacy: tutorial
 type: Tutorial
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een model voor machinaal leren te maken en te publiceren.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%

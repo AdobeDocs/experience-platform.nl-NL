@@ -2,11 +2,9 @@
 keywords: Experience Platform;ontwikkelaarsgids;SDK;Model creatie;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;het testen
 solution: Experience Platform
 title: Model Authoring SDK
-topic-legacy: Overview
 description: De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen voor het leren van Ontvangers en functies die kunnen worden gebruikt in de Adobe Experience Platform Data Science Workspace en implementeerbare sjablonen te bieden in PySpark en Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 1%
@@ -15,13 +13,13 @@ ht-degree: 1%
 
 # Model Authoring SDK
 
-De ModelAuthoring SDK laat u toe om aangepaste machine leerlende Ontvangers en de Pijpleidingen van de Eigenschap te ontwikkelen die in [!DNL Adobe Experience Platform] de Werkruimte van de Wetenschap van Gegevens kunnen worden gebruikt, die uitvoerbare malplaatjes in [!DNL PySpark] en [!DNL Spark (Scala)] verstrekken.
+Met de SDK voor modelontwerp kunt u ontwikkel- en functiepijpleidingen voor aangepaste machines ontwikkelen die u kunt gebruiken in [!DNL Adobe Experience Platform] De Werkruimte van de Wetenschap van gegevens, die implementeerbare malplaatjes verstrekken in [!DNL PySpark] en [!DNL Spark (Scala)].
 
 Dit document bevat informatie over de verschillende klassen in de ModelontwerpSDK.
 
 ## DataLoader {#dataloader}
 
-Met de klasse DataLoader wordt alles ingekapseld wat te maken heeft met het ophalen, filteren en retourneren van onbewerkte invoergegevens. Voorbeelden van invoergegevens zijn bijvoorbeeld gegevens voor training, scoring of functietechniek. Gegevenslezers breiden de abstracte klasse `DataLoader` uit en moeten de abstracte methode `load` met voeten treden.
+Met de klasse DataLoader wordt alles ingekapseld wat te maken heeft met het ophalen, filteren en retourneren van onbewerkte invoergegevens. Voorbeelden van invoergegevens zijn bijvoorbeeld gegevens voor training, scoring of functietechniek. Gegevenslezers breiden de abstracte klasse uit `DataLoader` en moet de abstracte methode overschrijven `load`.
 
 **PySpark**
 
@@ -53,7 +51,7 @@ In de volgende tabel worden de abstracte methoden van de klasse PySpark Data Loa
 
 **Spark**
 
-In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Data Loader beschreven:
+In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Data Loader, klasse:
 
 <table>
     <thead>
@@ -78,9 +76,9 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Da
     </tbody>
 </table>
 
-### Gegevens laden uit een [!DNL Platform]-gegevensset {#load-data-from-a-platform-dataset}
+### Gegevens laden uit een [!DNL Platform] gegevensset {#load-data-from-a-platform-dataset}
 
-In het volgende voorbeeld worden [!DNL Platform]-gegevens opgehaald op ID en wordt een DataFrame geretourneerd, waarbij de gegevensset-id (`datasetId`) een gedefinieerde eigenschap is in het configuratiebestand.
+In het volgende voorbeeld wordt opgehaald [!DNL Platform] gegevens door identiteitskaart en keert een DataFrame terug, waar dataset ID (`datasetId`) is een gedefinieerde eigenschap in het configuratiebestand.
 
 **PySpark**
 
@@ -195,11 +193,11 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-De klasse DataSaver kapselt om het even wat verwant met het opslaan van outputgegevens met inbegrip van die van het scoring of eigenschapengineering. Gegevensbeveiliging breidt de abstracte klasse `DataSaver` uit en moet de abstracte methode `save` met voeten treden.
+De klasse DataSaver kapselt om het even wat verwant met het opslaan van outputgegevens met inbegrip van die van het scoring of eigenschapengineering. Gegevensbeveiliging breidt de abstracte klasse uit `DataSaver` en moet de abstracte methode overschrijven `save`.
 
 **PySpark**
 
-In de volgende tabel worden de abstracte methoden van een klasse [!DNL PySpark] Data Saver beschreven:
+In de volgende tabel worden de abstracte methoden van een [!DNL PySpark] Gegevensopslagklasse:
 
 <table>
     <thead>
@@ -227,7 +225,7 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL PySpark] 
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Data Saver beschreven:
+In de volgende tabel worden de abstracte methoden van een [!DNL Spark] Gegevensopslagklasse:
 
 <table>
     <thead>
@@ -252,14 +250,14 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Da
     </tbody>
 </table>
 
-### Gegevens opslaan in een [!DNL Platform]-gegevensset {#save-data-to-a-platform-dataset}
+### Gegevens opslaan in een [!DNL Platform] gegevensset {#save-data-to-a-platform-dataset}
 
-Om gegevens op een [!DNL Platform] dataset op te slaan, moeten de eigenschappen of in het configuratiedossier worden verstrekt of worden bepaald:
+Om gegevens op te slaan op een [!DNL Platform] dataset, moeten de eigenschappen of in het configuratiedossier worden verstrekt of worden bepaald:
 
-- Een geldige [!DNL Platform] dataset-id waarop de gegevens worden opgeslagen
+- Een geldige [!DNL Platform] dataset-id waarop gegevens worden opgeslagen
 - De huurder-id van uw organisatie
 
-In de volgende voorbeelden worden gegevens (`prediction`) opgeslagen op een [!DNL Platform]-gegevensset, waarbij de gegevensset-id (`datasetId`) en huurder-id (`tenantId`) gedefinieerde eigenschappen zijn in het configuratiebestand.
+In de volgende voorbeelden worden gegevens opgeslagen (`prediction`) op een [!DNL Platform] dataset, waarbij de gegevensset-id (`datasetId`) en huurder-id (`tenantId`) zijn gedefinieerde eigenschappen in het configuratiebestand.
 
 
 **PySpark**
@@ -395,7 +393,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-De klasse DatasetTransformer wijzigt en transformeert de structuur van een dataset. [!DNL Sensei Machine Learning Runtime] vereist niet dat deze component wordt bepaald, en wordt uitgevoerd gebaseerd op uw vereisten.
+De klasse DatasetTransformer wijzigt en transformeert de structuur van een dataset. De [!DNL Sensei Machine Learning Runtime] vereist niet dat deze component wordt gedefinieerd en op basis van uw vereisten wordt geïmplementeerd.
 
 Met betrekking tot een eigenschappijpleiding, kunnen de datasettransformatoren samen met een eigenschappijpleidingsfabriek worden gebruikt om gegevens voor eigenschapengineering voor te bereiden.
 
@@ -429,7 +427,7 @@ De volgende lijst beschrijft de klassenmethodes van een PySpark dataset transfor
 
 **Vonk (Scala)**
 
-De volgende lijst beschrijft de abstracte methodes van een [!DNL Spark] klasse van de datasettransformator:
+In de volgende tabel worden de abstracte methoden van een [!DNL Spark] gegevenssettransformatorklasse:
 
 <table>
     <thead>
@@ -500,7 +498,7 @@ In de volgende tabel worden de klassemethoden van een PySpark FeaturePipelineFac
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipelineFactory beschreven:
+In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
@@ -538,7 +536,7 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipeli
 
 ## PipelineFactory {#pipelinefactory}
 
-De klasse PipelineFactory omvat methodes en definities voor modelopleiding en het scoren, waar de opleidingslogica en algoritmen in de vorm van een [!DNL Spark] Pijpleiding worden bepaald.
+De klasse PipelineFactory omvat methoden en definities voor modeltraining en -scoring, waarbij trainingslogica en algoritmen worden gedefinieerd in de vorm van een [!DNL Spark] Pijpleiding.
 
 **PySpark**
 
@@ -609,7 +607,7 @@ In de volgende tabel worden de klassemethoden van een PySpark PipelineFactory be
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de klassemethoden van een [!DNL Spark] PipelineFactory beschreven:
+In de volgende tabel worden de klassemethoden van een [!DNL Spark] PipelineFactory:
 
 <table>
     <thead>
@@ -693,7 +691,7 @@ In de volgende tabel worden de klassemethoden van een PySpark MLEvaluator beschr
 
 **Vonk (Scala)**
 
-In de volgende tabel worden de klassemethoden van een MLEvaluator beschreven:[!DNL Spark]
+In de volgende tabel worden de klassemethoden van een [!DNL Spark] MLEvaluator:
 
 <table>
     <thead>

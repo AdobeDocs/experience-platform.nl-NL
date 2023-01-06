@@ -2,12 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevenstoegang;spark sdk;gegevenstoegang api;spark recept;read spark;write spark
 solution: Experience Platform
 title: Toegang tot gegevens die Vonk in de Werkruimte van de Wetenschap van Gegevens gebruiken
-topic-legacy: tutorial
 type: Tutorial
 description: Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens.
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
@@ -16,11 +14,11 @@ ht-degree: 0%
 
 # Toegang tot gegevens die Vonk in de Werkruimte van de Wetenschap van Gegevens gebruiken
 
-Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens. Raadpleeg de [JupyterLab-laptops voor toegang tot gegevens](../jupyterlab/access-notebook-data.md) documentatie voor informatie over toegang tot gegevens met JupyterLab-laptops.
+Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens. Ga voor informatie over toegang tot gegevens met JupyterLab-laptops naar de [Toegang tot gegevens van JupyterLab-laptops](../jupyterlab/access-notebook-data.md) documentatie.
 
 ## Aan de slag
 
-Het gebruik van [!DNL Spark] vereist prestatieoptimalisaties die aan `SparkSession` moeten worden toegevoegd. Bovendien, kunt u `configProperties` voor recenter ook opstelling om aan datasets te lezen en te schrijven.
+Gebruiken [!DNL Spark] vereist optimalisaties die moeten worden toegevoegd aan de `SparkSession`. Bovendien kunt u ook instellen `configProperties` voor later om aan datasets te lezen en te schrijven.
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -51,9 +49,9 @@ Class Helper {
 
 Terwijl het gebruiken van Vonk hebt u toegang tot twee wijzen van lezing: interactief en batchgewijs.
 
-De interactieve wijze leidt tot een verbinding van de Connectiviteit van het Gegevensbestand van Java (JDBC) aan [!DNL Query Service] en krijgt resultaten door een regelmatige JDBC `ResultSet` die automatisch aan `DataFrame` wordt vertaald. Deze modus werkt net als de ingebouwde [!DNL Spark]-methode `spark.read.jdbc()`. Deze wijze wordt bedoeld slechts voor kleine datasets. Als uw dataset 5 miljoen rijen overschrijdt, wordt het geadviseerd u aan partijwijze ruilt.
+De interactieve wijze leidt tot een verbinding van de Connectiviteit van het Gegevensbestand van Java (JDBC) aan [!DNL Query Service] en krijgt resultaten door regelmatige JDBC `ResultSet` dat automatisch wordt omgezet in een `DataFrame`. Deze modus werkt op dezelfde manier als de ingebouwde [!DNL Spark] methode `spark.read.jdbc()`. Deze wijze wordt bedoeld slechts voor kleine datasets. Als uw dataset 5 miljoen rijen overschrijdt, wordt het geadviseerd u aan partijwijze ruilt.
 
-In de modus Batch wordt de opdracht COPY van [!DNL Query Service] gebruikt om de set met het resultaat van het Parket te genereren op een gedeelde locatie. Deze Parquet-bestanden kunnen vervolgens verder worden verwerkt.
+Batchmodus wordt gebruikt [!DNL Query Service]De opdracht COPY van de toepassing om set resultaten van het Parket te genereren op een gedeelde locatie. Deze Parquet-bestanden kunnen vervolgens verder worden verwerkt.
 
 Een voorbeeld van het lezen van een dataset in interactieve wijze kan hieronder worden gezien:
 
@@ -105,7 +103,7 @@ df = df.select("column-a", "column-b").show()
 
 Met de component DISTINCT kunt u alle afzonderlijke waarden op rij-/kolomniveau ophalen, waarbij alle dubbele waarden uit de reactie worden verwijderd.
 
-Hieronder ziet u een voorbeeld van het gebruik van de functie `distinct()`:
+Een voorbeeld van het gebruik van de `distinct()` Deze functie is hieronder te zien:
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -113,7 +111,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### WHERE-component
 
-Met de SDK [!DNL Spark] zijn twee filtermethoden mogelijk: Een SQL-expressie gebruiken of filteren door voorwaarden.
+De [!DNL Spark] SDK staat voor twee methodes toe voor het filtreren: Een SQL-expressie gebruiken of filteren door voorwaarden.
 
 Hieronder ziet u een voorbeeld van het gebruik van deze filterfuncties:
 
@@ -131,9 +129,9 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### ORDER BY-component
 
-Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). In de [!DNL Spark] SDK, wordt dit gedaan door de `sort()` functie te gebruiken.
+Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). In de [!DNL Spark] SDK, dit wordt gedaan door te gebruiken `sort()` functie.
 
-Hieronder ziet u een voorbeeld van het gebruik van de functie `sort()`:
+Een voorbeeld van het gebruik van de `sort()` Deze functie is hieronder te zien:
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
@@ -143,7 +141,7 @@ df = df.sort($"column1", $"column2".desc)
 
 De clausule LIMIT staat u toe om het aantal verslagen te beperken die van de dataset worden ontvangen.
 
-Hieronder ziet u een voorbeeld van het gebruik van de functie `limit()`:
+Een voorbeeld van het gebruik van de `limit()` Deze functie is hieronder te zien:
 
 ```scala
 df = df.limit(100)
@@ -151,7 +149,7 @@ df = df.limit(100)
 
 ## Schrijven naar een gegevensset
 
-Gebruikend uw `configProperties` afbeelding, kunt u aan een dataset in Experience Platform schrijven gebruikend `QSOption`.
+Uw `configProperties` in kaart brengen, kunt u aan een dataset in Experience Platform schrijven gebruikend `QSOption`.
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
@@ -171,4 +169,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## Volgende stappen
 
-De Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform verstrekt een Scala (Vonk) receptensteekproef die de bovengenoemde codesteekproeven gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Vonk voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve [de Werkruimte van de Wetenschap van Gegevens Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
+De Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform verstrekt een Scala (Vonk) receptensteekproef die de bovengenoemde codesteekproeven gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Vonk voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve [Opslagplaats gegevenswetenschapswerkruimte Scala GitHub](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;modellen;sensei machine learning api
 solution: Experience Platform
 title: Modellen-API-eindpunt
-topic-legacy: Developer guide
 description: Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 1%

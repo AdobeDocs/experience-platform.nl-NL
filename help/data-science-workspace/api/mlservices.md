@@ -2,10 +2,9 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;mlservices;sensei machine learning api
 solution: Experience Platform
 title: XMLServices API-eindpunt
-topic-legacy: Developer guide
 description: Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 0%

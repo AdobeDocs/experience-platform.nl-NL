@@ -2,10 +2,9 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;mlinstances;sensei machine learning api
 solution: Experience Platform
 title: XMLInstances API Endpoint
-topic-legacy: Developer guide
 description: Een MLInstance is een huur van een bestaande Motor met een aangewezen reeks configuraties die om het even welke trainingsparameters, het scoren parameters, of configuraties van hardwaremiddelen bepalen.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%

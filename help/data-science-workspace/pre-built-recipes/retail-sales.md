@@ -2,10 +2,9 @@
 keywords: Experience Platform;winkelrecept;Data Science Workspace;populaire onderwerpen;recepten;prebuild recept
 solution: Experience Platform
 title: Recipe detailhandel
-topic-legacy: overview
 description: Met het recept voor detailhandel kunt u de verkoopprognose voor alle winkels die gedurende een bepaalde periode worden ingezaaid, voorspellen. Met een accuraat voorspellingsmodel zou de detailhandelaar de relatie tussen vraag en prijsbeleid kunnen vinden en geoptimaliseerde prijsbeslissingen kunnen nemen om verkoop en inkomsten te maximaliseren.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%

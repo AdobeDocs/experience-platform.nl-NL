@@ -2,11 +2,10 @@
 keywords: Experience Platform;trainen en evalueren;Data Science Workspace;populaire onderwerpen;Sensei Machine Learning API
 solution: Experience Platform
 title: Een model trainen en evalueren met de API voor leren van Sensei Machine
-topic-legacy: tutorial
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen voor leren van Sensei-machines.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 0%

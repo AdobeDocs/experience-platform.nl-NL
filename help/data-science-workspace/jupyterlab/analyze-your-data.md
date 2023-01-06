@@ -2,13 +2,12 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;analyseren gegevenslaptops
 solution: Experience Platform
 title: Uw gegevens analyseren met laptops
-topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, gebouwd in de Data Science Workspace, voor toegang tot, verkenning en visualisatie van uw gegevens.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 1e240c710da3fa7ae863377d044308b0bca47c7f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1721'
 ht-degree: 0%
 
 ---

@@ -2,21 +2,19 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;Git;Github
 solution: Experience Platform
 title: Samenwerken in JupyterLab met behulp van kit
-topic-legacy: tutorial
 type: Tutorial
 description: Git is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git is vooraf geïnstalleerd in de JupyterLab-omgeving van de Data Science Workspace.
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 1%
 
 ---
 
-# Samenwerken in [!DNL JupyterLab] met [!DNL Git]
+# Samenwerken in [!DNL JupyterLab] gebruiken [!DNL Git]
 
-[!DNL Git] is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git wordt vooraf geïnstalleerd in de [!DNL Data Science Workspace JupyterLab]-omgeving.
+[!DNL Git] is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git is vooraf geïnstalleerd in de [!DNL Data Science Workspace JupyterLab] milieu.
 
 ## Vereisten
 
@@ -24,25 +22,25 @@ ht-degree: 1%
 >
 > De Git-server die u wilt gebruiken, moet via internet toegankelijk zijn.
 
-De [!DNL Data Science Workspace JupyterLab]-omgeving is een gehoste omgeving en wordt niet geïmplementeerd binnen uw bedrijfsfirewall. Daarom moet de Git-server waarmee u verbinding maakt, toegankelijk zijn via het openbare internet. Dit zou een openbare of privé bewaarplaats op [GitHub](https://github.com/) of een ander geval van een [!DNL Git] server kunnen zijn die u hebt besloten om zich te ontvangen.
+De [!DNL Data Science Workspace JupyterLab] de omgeving is een gehoste omgeving en wordt niet geïmplementeerd binnen uw bedrijfsfirewall. Daarom moet de Git-server waarmee u verbinding maakt, toegankelijk zijn via het openbare internet. Dit kan een openbare of particuliere opslagplaats zijn op [GitHub](https://github.com/) of een andere instantie van een [!DNL Git] server die u zelf hebt gehost.
 
-## [!DNL Git] verbinden met de [!DNL Data Science Workspace JupyterLab Notebooks]-omgeving
+## Verbinden [!DNL Git] aan de [!DNL Data Science Workspace JupyterLab Notebooks] milieu
 
-Start door [!DNL Adobe Experience Platform] te starten en naar de [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab)-omgeving te navigeren.
+Starten met starten [!DNL Adobe Experience Platform] en naar de [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) milieu.
 
-Selecteer **[!UICONTROL File]** in [!DNL JupyterLab] en houd de muisaanwijzer boven **[!UICONTROL New]**. Selecteer **[!UICONTROL Terminal]** in het vervolgkeuzemenu dat wordt weergegeven.
+Within [!DNL JupyterLab], selecteert u **[!UICONTROL File]** dan boven **[!UICONTROL New]**. Selecteer in het vervolgkeuzemenu dat wordt weergegeven de optie **[!UICONTROL Terminal]**.
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
-Daarna, binnen *Terminal* navigeer aan uw werkruimte door het volgende bevel te gebruiken: `cd my-workspace`.
+Volgende, binnen *Terminal* navigeer aan uw werkruimte door het volgende bevel te gebruiken: `cd my-workspace`.
 
 ![cd-werkruimte](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
 >
-> Als u een lijst met beschikbare it-opdrachten wilt weergeven, geeft u de opdracht: `git -help` binnen uw Terminal.
+> Als u een lijst met beschikbare it-opdrachten wilt weergeven, geeft u de opdracht: `git -help` in uw terminal.
 
-Vervolgens kloont u de opslagplaats die u wilt gebruiken met de opdracht `git clone`. U kunt uw project klonen met een `https://`-URL in plaats van `ssh://`.
+Vervolgens kloont u de opslagplaats die u wilt gebruiken met de `git clone` gebruiken. Uw project klonen met een `https://` URL in plaats van `ssh://`.
 
 **Voorbeeld**:
 
@@ -52,7 +50,7 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de opdracht `git cl
 
 >[!NOTE]
 >
-> Om om het even welke schrijfverrichtingen (`git push` bijvoorbeeld) uit te voeren moeten de volgende configuratiebevelen voor elke nieuwe zitting worden in werking gesteld. Houd er ook rekening mee dat een pushopdracht vraagt om een gebruikersnaam en wachtwoord.
+> Om schrijfbewerkingen uit te voeren (`git push` bijvoorbeeld) de volgende configuratiebevelen moeten voor elke nieuwe zitting worden in werking gesteld. Houd er ook rekening mee dat een pushopdracht vraagt om een gebruikersnaam en wachtwoord.
 >
 >`git config --global user.email "you@example.com"`
 >
@@ -60,4 +58,4 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de opdracht `git cl
 
 ## Volgende stappen
 
-Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Voor meer informatie over wat u binnen [!DNL JupyterLab] kunt doen, zie [[!DNL JupyterLab user guide]](./overview.md).
+Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Voor meer informatie over wat u kunt doen binnen [!DNL JupyterLab], zie de [[!DNL JupyterLab user guide]](./overview.md).

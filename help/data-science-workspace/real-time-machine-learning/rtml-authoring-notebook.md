@@ -2,10 +2,9 @@
 keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;knoopverwijzing;
 solution: Experience Platform
 title: Real-time Machine Learning-laptops beheren
-topic-legacy: Training and scoring a ML model
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te maken in Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 0%
@@ -409,7 +408,7 @@ U bent teruggekeerd bijgewerkte DSL.
 
 ## Scores {#scoring}
 
-Na publicatie naar [!DNL Edge]scoring wordt uitgevoerd door een verzoek van een POST van een client. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. De **[!UICONTROL Real-time ML]** het malplaatjegebruik EdgeUtils om dit proces aan te tonen.
+Na publicatie naar [!DNL Edge]scoring wordt uitgevoerd door een verzoek van een POST van een client. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook vanuit Postman doen. De **[!UICONTROL Real-time ML]** het malplaatjegebruik EdgeUtils om dit proces aan te tonen.
 
 >[!NOTE]
 >

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;experimenten;sensei machine learningapi
 solution: Experience Platform
 title: API-eindpunt voor experimenten
-topic-legacy: Developer guide
 description: Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, waarbij een experiment bestaat uit een MLInstance, trainingsrun en scoring run.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 1%

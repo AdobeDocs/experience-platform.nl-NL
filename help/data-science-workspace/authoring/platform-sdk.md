@@ -2,10 +2,9 @@
 keywords: Experience Platform;ontwikkelaarshandleiding;SDK;Data Access SDK;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
 title: Modellen ontwerpen met de SDK van het Adobe Experience Platform-Platform
-topic-legacy: SDK authoring
 description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 4%

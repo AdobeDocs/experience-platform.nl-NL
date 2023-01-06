@@ -2,10 +2,9 @@
 keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;Het Leren van de machine in real time;knoopverwijzing;
 solution: Experience Platform
 title: Naslaggids voor het leren van machines in realtime
-topic-legacy: Nodes reference
 description: Een knooppunt is de fundamentele eenheid waarvan grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### Splitsen
 
-Gebruik het volgende knooppunt om uw dataframe op te splitsen in een trein en te testen door te slagen `train_size` of `test_size`. Dit retourneert een dataframe met een meervoudige index. U kunt tot trein en testgegevenskaders toegang hebben gebruikend het volgende voorbeeld: `msg5.data.xs(“train”)`.
+Gebruik het volgende knooppunt om uw dataframe op te splitsen in een trein en te testen door te slagen `train_size` of `test_size`. Dit retourneert een dataframe met een meervoudige index. U kunt tot trein en testgegevenskaders toegang hebben gebruikend het volgende voorbeeld: `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

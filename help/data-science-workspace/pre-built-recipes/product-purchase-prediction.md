@@ -2,11 +2,9 @@
 keywords: Experience Platform;product aankoop recept;Data Science Workspace;populaire onderwerpen;recepten;pre-build recept
 solution: Experience Platform
 title: Recipe voor productaankoopprognose
-topic-legacy: overview
 description: Met het product Purchase Prediction recipe kunt u de waarschijnlijkheid voorspellen van een bepaald type aankoopgebeurtenis van de klant, bijvoorbeeld een aankoop van een product.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 2%
@@ -33,7 +31,7 @@ Het product Purchase Prediction recipe maakt gebruik van machinaal leren om het 
 
 ## Gegevensschema
 
-Dit recept gebruikt [XDM schema&#39;s](../../xdm/home.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
+Dit recept gebruikt [XDM-schema&#39;s](../../xdm/home.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
 
 | Veldnaam | Type |
 | --- | --- |
@@ -48,16 +46,16 @@ Dit recept gebruikt [XDM schema&#39;s](../../xdm/home.md) om de gegevens te mode
 | totalOrders | Getal |
 | totalItems | Getal |
 | orderDate1 | Getal |
-| ShippingDate1 | Getal |
+| shippingDate1 | Getal |
 | totalPrice1 | Getal |
 | tax1 | Getal |
 | orderDate2 | Getal |
-| ShippingDate2 | Getal |
+| shippingDate2 | Getal |
 | totalPrice2 | Getal |
 
 
 ## Algorithm
 
-Eerst, wordt de trainingsdataset in het *schema ProductPrediction* geladen. Van hier, wordt het model getraind gebruikend een [willekeurige bosclassificator](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
+Ten eerste, de opleidingsdataset in het *ProductPrediction* schema is geladen. Vanaf hier wordt het model getraind met behulp van een [willekeurige bosclassificatie](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
 
 Dit proces begint met het maken van een reeks beslissingsstructuren die willekeurig subsets van trainingsgegevens selecteren. Daarna wordt het gemiddelde van de resultaten van elke beslissingsboom genomen.

@@ -2,11 +2,10 @@
 keywords: Experience Platform;Score a model;Data Science Workspace;populaire onderwerpen;sensei machine learning api
 solution: Experience Platform
 title: Score een model met de Sensei Machine Learning-API
-topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u de API's voor leren van Sensei Machine Learning kunt gebruiken om een expert en een experimentele run te maken.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%

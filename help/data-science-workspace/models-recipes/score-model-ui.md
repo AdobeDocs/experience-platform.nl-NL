@@ -2,12 +2,10 @@
 keywords: Experience Platform;score een model;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;ui;scoring looppas;scores resultaten
 solution: Experience Platform
 title: Score een Model in de Werkruimte van de Wetenschap van Gegevens UI
-topic-legacy: tutorial
 type: Tutorial
 description: Scores in de Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -16,15 +14,15 @@ ht-degree: 0%
 
 # Score een model in de Werkruimte van de Wetenschap van Gegevens UI
 
-Scores in Adobe Experience Platform [!DNL Data Science Workspace] kunnen worden bereikt door inputgegevens in een bestaand getraind Model in te voeren. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
+Scores in Adobe Experience Platform [!DNL Data Science Workspace] kan worden bereikt door invoergegevens in een bestaand opgeleid model in te voeren. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
 
-Deze zelfstudie demonstreert de stappen die nodig zijn om een model te scoren in de gebruikersinterface [!DNL Data Science Workspace].
+Deze zelfstudie demonstreert de stappen die nodig zijn om een model te scoren in het dialoogvenster [!DNL Data Science Workspace] gebruikersinterface.
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, moet u toegang hebben tot [!DNL Experience Platform]. Als u geen toegang tot een Organisatie IMS in [!DNL Experience Platform] hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+Als u deze zelfstudie wilt voltooien, moet u toegang hebben tot [!DNL Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
 
-Voor deze zelfstudie is een getraind model vereist. Als u geen getraind Model hebt, volg [trein en evalueer een Model in UI](./train-evaluate-model-ui.md) leerprogramma alvorens verder te gaan.
+Voor deze zelfstudie is een getraind model vereist. Als u geen getraind model hebt, volg [Een model trainen en evalueren in de gebruikersinterface](./train-evaluate-model-ui.md) zelfstudie voordat u verdergaat.
 
 ## Nieuwe scores maken
 
@@ -34,11 +32,11 @@ Vind de meest optimale trainingslooppas om zijn configuraties voor het scoren te
 
 ![Trainingsrun selecteren](../images/models-recipes/score/select-run.png)
 
-Selecteer **[!UICONTROL Score]** in de tabel **[!UICONTROL Evaluation]** van de trainingsrun rechtsboven in het scherm. Er wordt een nieuwe workflow voor scoren gestart.
+Vanaf de trainingsrun **[!UICONTROL Evaluation]** tab, selecteert u **[!UICONTROL Score]** zich rechtsboven in het scherm bevindt. Er wordt een nieuwe workflow voor scoren gestart.
 
 ![](../images/models-recipes/score/training_run_overview.png)
 
-Selecteer de gegevensset voor het invoeren van de score en selecteer **[!UICONTROL Next]**.
+Selecteer de gegevensset voor de invoerscoring en selecteer **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/score/scoring_input.png)
 
@@ -51,7 +49,7 @@ U kunt overgeërfde parameters die tijdens het maken van modellen zijn ingesteld
 
 ![configuratie](../images/models-recipes/score/configuration.png)
 
-Controleer en bevestig de scoreconfiguraties en selecteer **[!UICONTROL Finish]** om de scoring-run te maken en uit te voeren. U wordt naar het tabblad **[!UICONTROL Scoring Runs]** geleid en de nieuwe scoringstijd met de status **[!UICONTROL Pending]** wordt weergegeven.
+Bekijk en bevestig de scores en selecteer **[!UICONTROL Finish]**  om de scoring-run te maken en uit te voeren. U wordt naar de **[!UICONTROL Scoring Runs]** en de nieuwe scoring uitvoeren met de **[!UICONTROL Pending]** status wordt weergegeven.
 
 ![tabblad scores](../images/models-recipes/score/scoring_runs_tab.png)
 
@@ -61,7 +59,7 @@ Een scoring kan worden weergegeven met een van de volgende statussen:
 - Mislukt
 - Wordt uitgevoerd
 
-Statussen worden automatisch bijgewerkt. Ga naar de volgende stap als de status **[!UICONTROL Complete]** of **[!UICONTROL Failed]** is.
+Statussen worden automatisch bijgewerkt. Ga naar de volgende stap als de status **[!UICONTROL Complete]** of **[!UICONTROL Failed]**.
 
 ## De resultaten van scores weergeven
 
@@ -69,7 +67,7 @@ Als u de resultaten van scores wilt weergeven, selecteert u eerst een trainingsp
 
 ![Trainingsrun selecteren](../images/models-recipes/score/select-run.png)
 
-U wordt omgeleid aan de trainingslooppas **[!UICONTROL Evaluation]** pagina. Selecteer boven aan de evaluatiepagina van de trainingsrun het tabblad **[!UICONTROL Scoring Runs]** om een lijst met bestaande scoring-run weer te geven.
+U wordt omgeleid naar de trainingsrun **[!UICONTROL Evaluation]** pagina. Selecteer boven aan de evaluatiepagina van de trainingsrun de optie **[!UICONTROL Scoring Runs]** om een lijst met bestaande scores weer te geven.
 
 ![evaluatiepagina](../images/models-recipes/score/view_scoring_runs.png)
 
@@ -77,15 +75,15 @@ Selecteer vervolgens een scoring om de uitvoergegevens weer te geven.
 
 ![details uitvoeren](../images/models-recipes/score/view_details.png)
 
-Als de geselecteerde scoring-run de status &quot;Voltooid&quot; of &quot;Mislukt&quot; heeft, wordt de koppeling **[!UICONTROL View Activity Logs]** beschikbaar gesteld. Als een scoring mislukt, kunnen uitvoeringslogboeken nuttige informatie bevatten om de oorzaak van de fout te bepalen. Selecteer **[!UICONTROL View Activity Logs]** om de uitvoeringslogboeken te downloaden.
+Als de geselecteerde scoring-runtime de status &quot;Voltooid&quot; of &quot;Mislukt&quot; heeft, wordt de **[!UICONTROL View Activity Logs]** de koppeling is beschikbaar gesteld. Als een scoring mislukt, kunnen uitvoeringslogboeken nuttige informatie bevatten om de oorzaak van de fout te bepalen. Selecteer **[!UICONTROL View Activity Logs]**.
 
 ![Weergavelogboeken selecteren](../images/models-recipes/score/view_logs.png)
 
-De pop-up **[!UICONTROL View activity logs]** wordt weergegeven. Selecteer een URL om de bijbehorende logboeken automatisch te downloaden.
+De **[!UICONTROL View activity logs]** wordt weergegeven. Selecteer een URL om de bijbehorende logboeken automatisch te downloaden.
 
 ![](../images/models-recipes/score/activity_logs.png)
 
-U kunt ook de resultaten van uw scoring weergeven door **[!UICONTROL Preview scoring results dataset]** te selecteren.
+U hebt ook de optie om de resultaten van uw scores weer te geven door  **[!UICONTROL Preview scoring results dataset]**.
 
 ![Voorvertoningsresultaten selecteren](../images/models-recipes/score/view_results.png)
 
@@ -93,8 +91,8 @@ Er wordt een voorvertoning van de uitvoergegevensset weergegeven.
 
 ![voorbeeldresultaten](../images/models-recipes/score/preview_results.png)
 
-Voor de volledige reeks het scoren resultaten, selecteer **[!UICONTROL Scoring Results Dataset]** verbinding die in de juiste kolom wordt gevonden.
+Selecteer voor de volledige set met scoringresultaten de optie **[!UICONTROL Scoring Results Dataset]** koppeling gevonden in de rechterkolom.
 
 ## Volgende stappen
 
-In deze zelfstudie werden de stappen doorlopen om gegevens te scoren met behulp van een getraind model in [!DNL Data Science Workspace]. Volg de zelfstudie over [het publiceren van een Model als Dienst in UI](./publish-model-service-ui.md) om gebruikers binnen uw organisatie toe te staan om gegevens te scoren door gemakkelijke toegang tot een machine het leren Dienst te verlenen.
+In deze zelfstudie werden de stappen doorlopen om gegevens te scoren met behulp van een getraind model in [!DNL Data Science Workspace]. Volg de zelfstudie op [het publiceren van een Model als Dienst in UI](./publish-model-service-ui.md) om gebruikers binnen uw organisatie in staat te stellen gegevens te scoren door eenvoudige toegang te bieden tot een service voor machinaal leren.

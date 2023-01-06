@@ -2,11 +2,10 @@
 keywords: Experience Platform;een model publiceren;Data Science Workspace;populaire onderwerpen;sensei machine learning api
 solution: Experience Platform
 title: Een model publiceren als een service met de API voor leren door Sensei Machine
-topic-legacy: tutorial
 type: Tutorial
 description: In deze zelfstudie wordt beschreven hoe u een model publiceert als service met de API voor leren van Sensei Machine.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Deze zelfstudie vereist een goed begrip van de Adobe Experience Platform Data Sc
 
 Om samen met dit leerprogramma te volgen, moet u een bestaande Motor van ML, Instantie van XML, en Experiment hebben. Raadpleeg de zelfstudie voor meer informatie over het maken van deze bestanden in de API [een verpakt recept importeren](./import-packaged-recipe-api.md).
 
-Voordat u met deze zelfstudie begint, moet u eerst de [aan de slag](../api/getting-started.md) van de ontwikkelaarsgids voor belangrijke informatie die u moet kennen om met succes vraag aan te maken [!DNL Sensei Machine Learning] API, inclusief de vereiste kopteksten die in deze zelfstudie worden gebruikt:
+Voordat u met deze zelfstudie begint, moet u eerst de [aan de slag](../api/getting-started.md) van de ontwikkelaarsgids voor belangrijke informatie die u moet weten om met succes vraag aan te maken [!DNL Sensei Machine Learning] API, inclusief de vereiste kopteksten die in deze zelfstudie worden gebruikt:
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`

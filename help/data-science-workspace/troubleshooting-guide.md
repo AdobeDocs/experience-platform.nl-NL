@@ -2,10 +2,9 @@
 keywords: Experience Platform;problemen oplossen;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
 title: Handleiding voor probleemoplossing in de Data Science Workspace
-topic-legacy: Troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over de Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: ec42d80e695ccf57c10c539ae1b5104c7948c473
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
