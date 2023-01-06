@@ -1,9 +1,9 @@
 ---
 title: Verwijderen in identiteitsservice
 description: Dit document biedt een overzicht van de verschillende methoden waarmee u uw identiteitsgegevens in Experience Platform kunt verwijderen en om duidelijk te maken hoe identiteitsgrafieken worden beïnvloed.
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ In de onderstaande tabel wordt een overzicht gegeven van de verschillen tussen h
 | Gebruikskwesties | Alleen gegevensprivacyverzoeken (GDPR, CCPA). | Beheer van in Experience Platform opgeslagen gegevens. |
 | Geschatte vertraging | Dagen tot weken | Dagen |
 | Betrokken services | Eén identiteitsverwijdering in Privacy Service stelt u in staat te selecteren of gegevens worden verwijderd uit Identiteitsservice, Real-Time Klantprofiel of Gegevensbestand. | De enige identiteitsschrapping in de hygiëne van Gegevens schrapt de geselecteerde gegevens over de Dienst van de Identiteit, het Profiel van de Klant in real time, en het gegevenspeer. |
-| Verwijderingspatronen | Verwijder een identiteit uit Identiteitsservice. | Schrap een identiteit en al zijn overeenkomstige verbindingen volledig van de Dienst van de Identiteit, over alle datasets of voor één enkele dataset. |
+| Verwijderingspatronen | Verwijder een identiteit uit Identiteitsservice. | Verwijder een identiteit uit Identiteitsservice. |
 
 {style=&quot;table-layout:auto&quot;}
 
