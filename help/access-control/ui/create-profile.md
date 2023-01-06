@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;productprofiel
 solution: Experience Platform
 title: Een nieuw productprofiel maken in Adobe Admin Console
-topic-legacy: user guide
 description: In dit document worden de stappen beschreven die nodig zijn om een nieuw productprofiel in de Adobe Admin Console te maken. Als u een nieuw profiel wilt maken, navigeert u naar het tabblad Productprofielen en klikt u op Nieuw profiel.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 1%

@@ -1,16 +1,15 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd;profiel;rtcp;XDM-grafieken
 title: Algemene toegankelijkheidsfuncties in Platform
-topic-legacy: guide
 type: Documentation
 description: Meer informatie over de algemene toegankelijkheidsfuncties die door Adobe Experience Platform worden ondersteund, zoals toetsenbordnavigatie, kleurenpaletten en contrast, en ondersteuning voor ondersteunende hulpmiddelen.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 1%
 
 ---
-
 
 # Toegankelijkheidsfuncties in Experience Platform
 
@@ -36,7 +35,7 @@ De volgende navigatie-elementen vergemakkelijken de toegankelijkheid:
 
 ## Kleurenpaletten en contrast
 
-Experience Platform streeft naar [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/)-conformiteit, inclusief vereisten voor kleurcontrast. De gebruikersinterface van het Experience Platform biedt voldoende contrast in de toepassing voor een toegankelijke weergave voor gebruikers met een laag gezichtsvermogen of een laag kleurfalen.
+Experience Platform streeft naar [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformiteit, inclusief vereisten voor kleurcontrast. De gebruikersinterface van het Experience Platform biedt voldoende contrast in de toepassing voor een toegankelijke weergave voor gebruikers met een laag gezichtsvermogen of een laag kleurfalen.
 
 ![Het kleurenpalet en het contrast aanwezig op de homepage van de interface van het Experience Platform.](images/homepage.png)
 
@@ -44,4 +43,4 @@ Experience Platform streeft naar [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/)-conf
 
 Wanneer u gegevens toevoegt, schema&#39;s maakt of segmenten definieert, worden vereiste velden zowel visueel, met een sterretje naast het tekstlabel van een veld als programmatisch aangegeven. Deze velden activeren validatie wanneer u ongeldige gegevens in velden invoert en bij het opslaan. Als een vereist veld de validatie niet doorgeeft, wordt dit veld rood weergegeven met een foutpictogram en verschijnt ook een schriftelijke beschrijving van het probleem dat moet worden gecorrigeerd.
 
-![Een close-up van een vereist veld waarvoor de validatie niet is geslaagd. Het veld wordt rood weergegeven en er is een foutpictogram aanwezig.](images/field-validation.png)
+![Een close-up van een vereist veld waarvoor de validatie niet is geslaagd. Het veld wordt rood weergegeven en er is een foutpictogram weergegeven.](images/field-validation.png)
