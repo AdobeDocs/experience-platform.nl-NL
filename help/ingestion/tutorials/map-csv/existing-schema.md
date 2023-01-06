@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;
 solution: Experience Platform
 title: Een CSV-bestand toewijzen aan een bestaand XDM-schema
-topic-legacy: tutorial
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een bestaand XDM-schema.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 1%

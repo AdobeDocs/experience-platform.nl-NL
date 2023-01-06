@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;partiële inname;Partiële inname;Fout ophalen;Fout ophalen;Onvolledige batch-opname;gedeeltelijke batch-opname;gedeeltelijke;Inslitie;Ingestie;
 solution: Experience Platform
 title: Overzicht van partiële batchverwerking
-topic-legacy: overview
 description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%

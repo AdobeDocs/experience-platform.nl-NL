@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;meldingen over het opnemen van gegevens;meldingen;subscribe gebeurtenissen;statusgebeurtenissen voor het invoeren van gegevens;statusgebeurtenissen;subscribe;statusmeldingen;
 solution: Experience Platform
 title: Gegevensinscriptie
-topic-legacy: overview
 description: Om bij het controleren van het innameproces te helpen, maakt Adobe Experience Platform het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van de status van de opgenomen gegevens en om het even welke mogelijke mislukkingen.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 1%

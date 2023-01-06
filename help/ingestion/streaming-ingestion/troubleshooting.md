@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;streaming;streaming opname;problemen oplossen;streaming opname oplossen;streaming opname ophalen faq;faq;
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met streaming-inname
-topic-legacy: troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 0%

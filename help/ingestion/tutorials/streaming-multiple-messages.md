@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;het stromen ingestie;ingestie;het stromen veelvoudige berichten;veelvoudige berichten;
 solution: Experience Platform
 title: Meerdere berichten verzenden in één HTTP-aanvraag
-topic-legacy: tutorial
 type: Tutorial
 description: Dit document bevat een zelfstudie voor het verzenden van meerdere berichten naar Adobe Experience Platform binnen één HTTP-aanvraag via streaming invoer.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1488'
 ht-degree: 1%

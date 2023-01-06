@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;controle;monitor;gegevensstromen;controle opname;gegevensopname;gegevensopname;gegevensopname;meningsverslagen;meningspartijen;
 solution: Experience Platform
 title: Gegevensinname controleren
-topic-legacy: overview
 description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%

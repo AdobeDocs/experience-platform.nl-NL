@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;ingestie;ingest batchgegevens;zelfstudie;batch-opname;zelfstudie;ui-handleiding;
 solution: Experience Platform
 title: Gegevens in Experience Platform opnemen
-topic-legacy: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunt u gegevens eenvoudig importeren als batchbestanden in de vorm van Parquet-bestanden of gegevens die overeenkomen met een bekend XDM-schema (Experience Data Model).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1261'
 ht-degree: 0%

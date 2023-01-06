@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensinvoer;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;gegevensbeheer;Lineaire;line;batch;Geëxtraheerde gegevens
 solution: Experience Platform
 title: Overzicht van gegevensinname
-topic-legacy: overview
 description: Dit document introduceert de drie belangrijkste manieren waarop gegevens in Platform worden opgenomen, met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;ophalen mislukte batches;mislukte batches;batch-opname;Batch-opname;Mislukte batches;Get failed batches;get failed batches;Download failed batches;download mislukte batches; download mislukte batches;
 solution: Experience Platform
 title: Mislukte batches ophalen met de API voor gegevenstoegang
-topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie behandelt stappen voor het ophalen van informatie over een mislukte batch met gebruik van API's voor gegevensinname.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
