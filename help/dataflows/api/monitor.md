@@ -2,11 +2,10 @@
 keywords: Experience Platform;huis;populaire onderwerpen;monitordataflows;de stroomdienst api;De Dienst van de stroom
 solution: Experience Platform
 title: Gegevensstromen controleren met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten en metriek met behulp van de Flow Service API.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%

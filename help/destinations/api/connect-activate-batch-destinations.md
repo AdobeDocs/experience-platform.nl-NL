@@ -3,10 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Verbinden met batchbestemmingen en gegevens activeren met de Flow Service API
 description: Stapsgewijze instructies voor het gebruik van de Flow Service API voor het maken van een batch-cloudopslag of e-mailmarketingbestemming in het Experience Platform en het activeren van gegevens
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3410'
 ht-degree: 0%

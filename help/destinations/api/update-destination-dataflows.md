@@ -2,11 +2,10 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de stroomdienst;update bestemmingsdataflows
 solution: Experience Platform
 title: Doelgegevens bijwerken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe u de gegevensstroom in- of uitschakelt, de basisinformatie bijwerkt of segmenten en kenmerken toevoegt en verwijdert met behulp van de Flow Service API.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 0%

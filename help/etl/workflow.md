@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;ETL;etl;etl workflow;ETL-workflow
 solution: Experience Platform
 title: ETL-workflow
-topic-legacy: overview
 description: Verschillende extractie-, transformatie- en laadprogramma's (ETL) verschillen mogelijk in indeling, maar de meeste van deze gereedschappen bieden vergelijkbare functionaliteit als hulpmiddel bij het combineren van meerdere gegevensbronnen.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
@@ -21,13 +19,13 @@ Verschillende extractie-, transformatie- en laadprogramma&#39;s (ETL) verschille
 
 De volgende diagrammen verstrekken mock-ups van gemeenschappelijke acties ETL en een generische gebruikerservaring die op standaardinteractie wordt gebaseerd. Deze afbeeldingen kunnen eenvoudig worden aangepast voor een specifieke ETL-gebruikerservaring.
 
-De hieronder weergegeven acties worden beschreven in de stappen die worden beschreven in de [ETL Integration Guide](home.md). In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
+De hieronder weergegeven acties worden beschreven in de stappen die worden beschreven in het dialoogvenster [Handleiding voor ETL-integratie](home.md). In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
 
 ### Afbeelding 1 - Nieuwe Adobe Experience Platform-connector configureren:
 
 ![](images/image2.png)
 
-### Afbeelding 2 - [!DNL Experience Platform] Aansluiting geactiveerd:
+### Figuur 2 - [!DNL Experience Platform] Connector geactiveerd:
 
 ![](images/image3.png)
 
@@ -35,11 +33,11 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image4.png)
 
-### Figuur 4 - Nieuwe Transformatie UI, die [!DNL Experience Platform] Verbinding selecteert:
+### Afbeelding 4 - Nieuwe transformatie-interface selecteren [!DNL Experience Platform] Verbinding:
 
 ![](images/image5.png)
 
-### Figuur 5 - het doorbladeren voor bron [!DNL Experience Platform] Datasets:
+### Afbeelding 5 - Bladeren naar bron [!DNL Experience Platform] Gegevenssets:
 
 ![](images/image6.png)
 
@@ -59,7 +57,7 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image10.png)
 
-### Figuur 10 - die [!DNL Experience Data Model] (XDM) doel Dataset bepaalt:
+### Figuur 10 - het bepalen van [!DNL Experience Data Model] (XDM) doel Dataset:
 
 ![](images/image11.png)
 

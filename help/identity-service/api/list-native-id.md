@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;identity xid;XID
 solution: Experience Platform
 title: Native ID ophalen voor een identiteit
-topic-legacy: API guide
 description: Identiteitsgegevens worden doorgaans verstrekt als een ID-tekenreekswaarde en naamruimte in opgenomen XDM-gegevens en wanneer een identiteit wordt opgegeven voor gebruik in een API-aanroep. Wanneer identiteiten in de Dienst van de Identiteit worden voortgeduurd, wordt een identiteitskaart geproduceerd en aan die identiteit toegewezen, genoemd inheemse XID. Platform-API's die ondersteuning voor identiteitsgegevens vereisen, gebruiken dit compactere formulier voor de samengevoegde id en naamruimte. XID is een base64-gecodeerde tekenreeks.
 exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%

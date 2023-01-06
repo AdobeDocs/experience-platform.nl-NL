@@ -3,10 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen; API-zelfstudies; stre
 solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API in Adobe Experience Platform
 description: In dit document wordt beschreven hoe u streaming doelen kunt maken met de Adobe Experience Platform API
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2231'
 ht-degree: 0%

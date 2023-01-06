@@ -3,10 +3,9 @@ keywords: Experience Platform;doel-API;ad-hocactivering;segmenten ad-hoc activer
 solution: Experience Platform
 title: Doelsegmenten activeren naar batchbestemmingen via de API voor ad-hocactivering
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van publiekssegmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 0%

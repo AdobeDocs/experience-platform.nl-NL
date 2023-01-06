@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;monitorprofielen;monitordataflows;dataflows;profiel;real-time klantprofiel;
 description: In real time het Profiel van de Klant laat u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Deze zelfstudie bevat instructies voor het controleren van gegevensstromen met profielen via de gebruikersinterface van het Experience Platform.
 title: Dataflows for Profiles in de UI controleren
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%

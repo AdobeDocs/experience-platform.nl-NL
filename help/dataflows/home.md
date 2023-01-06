@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;gegevensstromen;dataflows;gegevens;controle;controle;monitorgegevens stromen;monitor gegevensstromen;monitor;controle dataflows;controle gegevensstromen;stroom;stroom de dienst van de stroom;
 solution: Experience Platform
 title: Overzicht van gegevensstromen
-topic-legacy: overview
 description: In dit document worden gegevensstromen geïntroduceerd, waarmee wordt aangegeven hoe deze in Adobe Experience Platform worden gebruikt.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%

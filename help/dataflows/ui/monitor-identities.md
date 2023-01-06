@@ -2,15 +2,14 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;monitoridentiteiten;monitordataflows;dataflows;identiteiten;
 description: De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden. Deze zelfstudie bevat instructies voor het controleren van gegevensstromen met identiteiten via de gebruikersinterface van het Experience Platform.
 title: Gegevensstromen van de monitor voor Identiteiten in UI
-topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%
 
 ---
-
 
 # Dataflows for identity&#39;s in de UI controleren
 

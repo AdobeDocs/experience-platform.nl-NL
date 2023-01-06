@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;monitorsegmenten;monitordataflows;dataflows;segmentatie
 description: De segmentatie staat u toe om segmenten en publiek van uw gegevens van het Profiel van de Klant in real time tot stand te brengen. Deze zelfstudie bevat instructies voor het controleren van gegevensstromen tijdens segmentatie met behulp van de gebruikersinterface van het Experience Platform.
 title: Dataflows for Segments in UI controleren
-topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1783'
 ht-degree: 0%

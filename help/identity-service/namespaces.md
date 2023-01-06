@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;naamruimte;Naamruimte;Naamruimten;naamruimten;Naamruimte;Naamruimte;Identiteitsnaamruimte;Identiteit;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van id-naamruimte
-topic-legacy: overview
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1620'
 ht-degree: 0%
