@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevensbeheer;gegevensgebruiksbeleid
 solution: Experience Platform
 title: Een beleid voor gegevensbeheer maken in de API
-topic-legacy: policies
 type: Tutorial
 description: Leer hoe u een beleid voor gegevensbeheer maakt met de API voor beleidsservice.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 1%

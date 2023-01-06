@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;marketingacties api;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
 title: API-eindpunt voor marketinghandelingen
-topic-legacy: developer guide
 description: Een marketingactie in het kader van de Adobe Experience Platform Data Governance is een actie die een consument van gegevens uit een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%

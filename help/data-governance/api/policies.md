@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
 title: API-eindpunt voor beleidsregels voor gegevensbeheer
-topic-legacy: developer guide
 description: Beleid voor gegevensbeheer is regels die door uw organisatie worden toegepast en die een beschrijving geven van de soorten marketingacties die u mag uitvoeren op gegevens binnen het Experience Platform of waarvan u een beperking hebt ingesteld. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensbeheer.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 0%
