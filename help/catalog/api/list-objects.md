@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;filter;Filter;filtergegevens;Filter gegevens
 solution: Experience Platform
 title: Catalogusobjecten weergeven
-topic-legacy: developer guide
 description: U kunt een lijst van alle beschikbare voorwerpen van een specifiek type door één enkele API vraag terugwinnen, met beste praktijken die filters omvatten die de grootte van de reactie beperken.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%

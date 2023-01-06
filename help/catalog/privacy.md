@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevens meer privacy;identiteit namespaces;privacy;gegevens meer
 solution: Experience Platform
 title: De verwerking van het privacy- verzoek in het meer van Gegevens
-topic-legacy: overview
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het datumpigment zijn opgeslagen.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1423'
 ht-degree: 0%

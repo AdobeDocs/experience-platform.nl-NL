@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;catalogus;api;een object bijwerken
 solution: Experience Platform
 title: Een catalogusobject bijwerken
-topic-legacy: developer guide
 description: U kunt een deel van een object Catalog bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag. Dit document behandelt het gebruik van velden en het gebruik van JSON Patch-notatie voor het uitvoeren van PATCH-bewerkingen op Catalog-objecten.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 1%

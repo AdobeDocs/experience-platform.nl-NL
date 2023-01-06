@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;Catalogusservice;Catalogus api;appendix
 solution: Experience Platform
 title: Bijlage Catalog Service API-handleiding
-topic-legacy: developer guide
 description: Dit document bevat aanvullende informatie die u helpt bij het werken met de Catalog-API in Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 0%
@@ -145,7 +144,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | Door de gebruiker opgegeven id die aan het reactieobject is gekoppeld, zodat u verzoeken aan reacties kunt koppelen. [!DNL Catalog] slaat deze waarde niet op en retourneert deze gewoon in de reactie voor referentiedoeleinden. |
-| `resource` | Het bronnenpad ten opzichte van de hoofdmap van het [!DNL Catalog] API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Bij het gebruik van PATCH of DELETE als de subaanvraag `method`, neemt u de object-id op in het bronnenpad. Niet verward te worden met de door de gebruiker opgegeven `id`, gebruikt het bronpad de id van het [!DNL Catalog] object zelf (bijvoorbeeld `resource: "/dataSets/1234567890"`). |
+| `resource` | Het bronnenpad ten opzichte van de hoofdmap van het [!DNL Catalog] API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Wanneer u PATCH of DELETE gebruikt als subaanvraag `method`, neemt u de object-id op in het bronnenpad. Niet verward te worden met de door de gebruiker opgegeven `id`, gebruikt het bronpad de id van het [!DNL Catalog] object zelf (bijvoorbeeld `resource: "/dataSets/1234567890"`). |
 | `method` | De naam van de methode (GET, PUT, POST, PATCH of DELETE) met betrekking tot de actie die in het verzoek wordt uitgevoerd. |
 | `body` | Het JSON-document dat normaal gesproken zou worden doorgegeven als de payload in een POST-, PUT- of PATCH-aanvraag. Deze eigenschap is niet vereist voor GET- of DELETE-aanvragen. |
 

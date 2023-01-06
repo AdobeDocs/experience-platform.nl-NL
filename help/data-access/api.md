@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevenstoegang;python sdk;spark sdk;gegevenstoegang api;export;Export
 solution: Experience Platform
 title: API-handleiding voor gegevenstoegang
-topic-legacy: developer guide
 description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 1%
