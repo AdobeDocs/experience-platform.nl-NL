@@ -5,9 +5,9 @@ title: Handleiding voor het oplossen van problemen bij Query Service
 topic-legacy: troubleshooting
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4344'
+source-wordcount: '4365'
 ht-degree: 0%
 
 ---
@@ -531,6 +531,11 @@ WHERE T2.ID IS NULL
 ### Kan ik toegang tot specifieke datasets en kolommen voor een bepaalde verbinding controleren? Hoe wordt dit gevormd?
 
 +++Antwoord ja, op attribuut-gebaseerde toegangsbeheer wordt afgedwongen als gevormd. Zie de [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md) voor meer informatie .
++++
+
+### Steunt de Dienst van de Vraag het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel?
+
++++Antwoord nr, de Dienst van de Vraag steunt niet het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel.
 +++
 
 ## Data exporteren {#exporting-data}
