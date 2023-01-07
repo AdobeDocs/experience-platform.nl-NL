@@ -5,9 +5,9 @@ title: Groep met schemavelden maken en bewerken in de gebruikersinterface
 description: Leer hoe u groepen met schemavelden maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,13 @@ Als u het schema eenmaal hebt geopend in het dialoogvenster [!DNL Schema Editor]
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Er wordt een dialoogvenster weergegeven met een lijst met bestaande veldgroepen voor uw organisatie. Selecteer boven in het dialoogvenster de optie **[!UICONTROL Create new field group]**. Hier kunt u een **[!UICONTROL Display name]** en **[!UICONTROL Description]** voor de veldgroep. Als u klaar bent, selecteert u **[!UICONTROL Add field group]**.
+Selecteer in het dialoogvenster dat wordt weergegeven **[!UICONTROL Create new field group]**. Hier kunt u een **[!UICONTROL Display name]** en **[!UICONTROL Description]** voor de veldgroep. Als u klaar bent, selecteert u **[!UICONTROL Add field groups]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
 De [!DNL Schema Editor] komt opnieuw voor, met de nieuwe veldgroep in de linkerspoorlijn. Aangezien dit een gloednieuwe veldgroep is, biedt deze momenteel geen velden aan het schema en blijft het canvas daarom ongewijzigd. U kunt nu beginnen [velden toevoegen aan de veldgroep](#add-fields).
+
+![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## Een bestaande veldgroep bewerken {#edit}
 
@@ -58,13 +60,17 @@ Als u het schema hebt geopend in de editor, kunt u beginnen [velden toevoegen aa
 >
 >Deze sectie richt zich op het toevoegen van velden aan aangepaste veldgroepen. Voor informatie over het toevoegen van aangepaste velden aan standaardveldgroepen raadpleegt u de [UI-hulplijn voor schema&#39;s](./schemas.md#custom-fields-for-standard-groups).
 
-Als u velden wilt toevoegen aan een aangepaste veldgroep in het dialoogvenster [!DNL Schema Editor]selecteert u eerst de naam van de veldgroep in het linkerspoor en selecteert u vervolgens de **plus (+)** op het canvas naast de naam van het schema.
+Als u velden wilt toevoegen aan een aangepaste veldgroep, selecteert u eerst de optie **plus (+)** op het canvas naast de naam van het schema.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL New field]** verschijnt in het canvas, en de juiste spoorupdates om controles te tonen om de eigenschappen van het gebied te vormen. Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de gebiedsgroep te vormen en toe te voegen.
+A **[!UICONTROL New field]** verschijnt in het canvas, en de juiste spoorupdates om controles te tonen om de eigenschappen van het gebied te vormen. Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op hoe te om verschillende gebiedstypes te vormen.
 
-Voeg zo veel velden toe aan de veldgroep. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de veldgroep op te slaan.
+Onder **[!UICONTROL Assign to]**, selecteert u de **[!UICONTROL Field Group]** gebruikt u vervolgens het vervolgkeuzemenu om de gewenste veldgroep in de lijst te selecteren. U kunt beginnen in naam van de gebiedsgroep in te typen om benedenresultaten te beperken.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Nadat het veld aan het schema is toegevoegd, wordt het toegewezen aan de geselecteerde veldgroep. Voeg zo veel velden toe aan de veldgroep. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de veldgroep op te slaan.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 

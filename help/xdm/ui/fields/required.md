@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systee
 title: Vereiste velden definiëren in de gebruikersinterface
 description: Leer hoe u een vereist XDM-veld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Als het veld een kenmerk op hoofdniveau is onder het ID-object van de huurder, v
 
 Als een vereist veld echter is genest in een object dat zelf niet is gemarkeerd als vereist, wordt het geneste veld niet weergegeven onder **[!UICONTROL Required fields]** in het linkerspoor.
 
-In het onderstaande voorbeeld wordt `loyaltyId` veld wordt ingesteld als vereist, maar het bovenliggende object `loyalty` is niet. In dit geval treden er geen validatiefouten op als `loyalty` is uitgesloten bij het invoeren van gegevens, ook al wordt het onderliggende veld `loyaltyId` is gemarkeerd als vereist. Met andere woorden: `loyalty` is optioneel; bevat een `loyaltyId` in het geval dat het wordt opgenomen.
+In het onderstaande voorbeeld wordt `internalSKU` veld wordt ingesteld als vereist, maar het bovenliggende object `SKUs` is niet. In dit geval treden er geen validatiefouten op als `SKUs` wordt uitgesloten bij het invoeren van gegevens, ook al wordt het onderliggende veld `internalSKU` is gemarkeerd als vereist. Met andere woorden: `SKUs` is optioneel; bevat een `internalSKU` in het geval dat het wordt opgenomen.
 
 ![Genest vereist veld](../../images/ui/fields/required/nested.png)
 

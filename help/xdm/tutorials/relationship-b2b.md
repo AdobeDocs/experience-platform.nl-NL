@@ -2,9 +2,9 @@
 title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
 description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B Edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Als u de structuur van het bestemmingsschema bekijkt, verschijnt de relatiemarke
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u met succes een vele-aan-één verhouding tussen twee schema&#39;s gecreeerd gebruikend [!DNL Schema Editor]. Zodra het gegeven is opgenomen gebruikend datasets die op deze schema&#39;s worden gebaseerd en dat het gegeven in de de gegevensopslag van het Profiel is geactiveerd, kunt u attributen van beide schema&#39;s voor multi-klassensegmenteringsgebruiksgevallen gebruiken. Raadpleeg de documentatie bij Real-Time CDP B2B Edition voor meer informatie.
+Door dit leerprogramma te volgen, hebt u met succes een vele-aan-één verhouding tussen twee schema&#39;s gecreeerd gebruikend [!DNL Schema Editor]. Zodra het gegeven is opgenomen gebruikend datasets die op deze schema&#39;s worden gebaseerd en dat het gegeven in de de gegevensopslag van het Profiel is geactiveerd, kunt u attributen van beide schema&#39;s voor gebruiken [Gebruiksgevallen voor segmentatie van meerdere klassen](../../rtcdp/segmentation/b2b.md).

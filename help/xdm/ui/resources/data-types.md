@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Dit toont aan hoe de flexibele gegevenstypes in termen van het beschrijven van u
 
 Nadat u alle velden aan het gegevenstype hebt toegevoegd, selecteert u **[!UICONTROL Save]** om uw wijzigingen op te slaan en het gegevenstype aan de [!DNL Schema Library].
 
-## Het gegevenstype toevoegen aan een klasse of veldgroep
+## Het gegevenstype toevoegen aan een schema
 
 Nadat u een gegevenstype hebt gemaakt, kunt u het in uw schema&#39;s gebruiken. Aangezien XDM-schema&#39;s bestaan uit een klasse en nul of meer veldgroepen, kunnen velden die door een gegevenstype worden verschaft, niet rechtstreeks aan een schema worden toegevoegd. In plaats daarvan moeten ze worden opgenomen in een klasse of een veldgroep.
 
-Begin door de stappen te volgen betrokken bij [een veld toevoegen aan een klasse](./classes.md#add-fields) of [een veld toevoegen aan een veldgroep](./field-groups.md#add-fields). Wanneer u **[!UICONTROL Type]** voor het nieuwe veld selecteert u de naam van het gegevenstype in het vervolgkeuzemenu.
+Begin door de stappen te volgen betrokken bij [een veld toevoegen aan een klasse](./classes.md#add-fields) of [een veld toevoegen aan een veldgroep](./field-groups.md#add-fields). U kunt ook beginnen [een veld rechtstreeks aan een schema toevoegen](./schemas.md#add-individual-fields) en kiest u de bovenliggende klasse of veldgroep. Wanneer u **[!UICONTROL Type]** voor het nieuwe veld selecteert u de naam van het gegevenstype in het vervolgkeuzemenu.
 
 ## Een object met meerdere velden omzetten in een gegevenstype {#convert}
 
@@ -102,7 +102,7 @@ Als u een objecttypeveld wilt omzetten in een gegevenstype, selecteert u het vel
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Het canvas werkt het gegevenstype van het veld bij van &quot;[!UICONTROL Object]&quot; aan het nieuwe gegevenstype. De subvelden bevatten ook kleine vergrendelingspictogrammen naast de subvelden. Dit betekent dat het niet langer om afzonderlijke velden gaat, maar om een gebied dat deel uitmaakt van een gegevenstype met meerdere velden. Deze structuur kan nu opnieuw worden gebruikt in andere klassen en veldgroepen door dit gegevenstype te selecteren in het menu **[!UICONTROL Type]** vervolgkeuzelijst bij het definiëren van een nieuw veld.
+Het canvas werkt het gegevenstype van het veld bij van &quot;[!UICONTROL Object]&quot; aan het nieuwe gegevenstype. Deze structuur kan nu opnieuw worden gebruikt in andere klassen en veldgroepen door dit gegevenstype te selecteren in het menu **[!UICONTROL Type]** vervolgkeuzelijst bij het definiëren van een nieuw veld.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

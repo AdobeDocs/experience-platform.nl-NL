@@ -5,20 +5,20 @@ title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
+source-git-commit: a854a40034666159fabca550227efe9f3a47fb53
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
 
 # Klassen maken en bewerken in de gebruikersinterface
 
-In het Model van Gegevens van de Ervaring (XDM), bepalen de klassen de gedragsaspecten van de gegevens die een schema (verslag of tijdreeks) zal bevatten. Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
+In Adobe Experience Platform definieert de klasse van een schema de gedragsaspecten van de gegevens die het schema zal bevatten (record of tijdreeks). Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
 
-Adobe biedt verschillende standaard (&quot;core&quot;) XDM-klassen, waaronder [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent]. Naast deze kernklassen kunt u ook uw eigen aangepaste klassen maken om specifieke gebruiksgevallen voor uw organisatie te beschrijven.
+Adobe biedt verschillende standaard (&quot;core&quot;) Experience Data Model (XDM)-klassen, waaronder [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent]. Naast deze kernklassen kunt u ook uw eigen aangepaste klassen maken om specifieke gebruiksgevallen voor uw organisatie te beschrijven.
 
-Dit document biedt een overzicht van het maken, bewerken en beheren van aangepaste klassen in de gebruikersinterface van Adobe Experience Platform.
+Dit document biedt een overzicht van het maken, bewerken en beheren van aangepaste klassen in de gebruikersinterface van het Experience Platform.
 
 ## Vereisten
 
@@ -32,7 +32,7 @@ In de **[!UICONTROL Schemas]** werkruimte, selecteert u **[!UICONTROL Create sch
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-Er wordt een dialoogvenster weergegeven waarin u een keuze kunt maken uit een lijst met beschikbare klassen. Selecteer boven aan het dialoogvenster de optie **[!UICONTROL Create new class]**. U kunt uw nieuwe klasse dan een vertoningsnaam (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een beschrijving, en een gedrag voor de gegevens geven die het schema zal bepalen (&quot;[!UICONTROL Record]&quot; of &quot;[!UICONTROL Time-series]&quot;).
+Er wordt een dialoogvenster weergegeven waarin u een keuze kunt maken uit een lijst met beschikbare klassen. Selecteer boven aan het dialoogvenster de optie **[!UICONTROL Create new class]**. U kunt uw nieuwe klasse dan een vertoningsnaam (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een beschrijving, en een gedrag voor de gegevens geven die het schema zal bepalen (**[!UICONTROL Record]** of **[!UICONTROL Time-series]**).
 
 Als u klaar bent, selecteert u **[!UICONTROL Assign class]**.
 
@@ -78,9 +78,11 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 >
 >Onthoud dat alle velden die u aan een klasse toevoegt, worden gebruikt in alle schema&#39;s waarin die klasse wordt gebruikt. Daarom moet u zorgvuldig overwegen welke velden handig zijn in alle gevallen waarin het schema wordt gebruikt. Als u van plan bent een gebied toe te voegen dat slechts gebruik in sommige schema&#39;s onder deze klasse kan zien, kunt u het aan die schema&#39;s willen toevoegen door [een veldgroep maken](./field-groups.md#create) in plaats daarvan.
 
-A **[!UICONTROL New field]** verschijnt in het canvas, en de juiste spoorupdates om controles te tonen om de eigenschappen van het gebied te vormen. Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen.
+A **[!UICONTROL New field]** verschijnt in het canvas, en de juiste spoorupdates om controles te tonen om de eigenschappen van het gebied te vormen. Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]**.
 
-Ga door met het toevoegen van zoveel velden als nodig zijn voor de klasse. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
+![](../../images/ui/resources/classes/assign-to-class.png)
+
+Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen. Ga door met het toevoegen van zoveel velden als nodig zijn voor de klasse. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
 
 ![](../../images/ui/resources/classes/save.png)
 

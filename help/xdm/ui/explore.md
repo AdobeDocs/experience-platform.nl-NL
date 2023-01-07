@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Onderzoek;klasse;veldgroep;gegevenstype;schema;
 solution: Experience Platform
-title: XDM-bronnen verkennen in de gebruikersinterface
+title: De Middelen van het Schema in UI onderzoeken
 description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
 
-# XDM-bronnen verkennen in de gebruikersinterface
+# Schema-bronnen in de gebruikersinterface verkennen
 
-In Adobe Experience Platform worden alle XDM-bronnen (Experience Data Model) opgeslagen in de [!DNL Schema Library], inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die zijn gedefinieerd door uw organisatie. In de interface van het Experience Platform kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, schemagebiedgroep, of gegevenstype in bekijken [!DNL Schema Library]. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
+In Adobe Experience Platform worden alle XDM-schemabronnen (Experience Data Model) opgeslagen in het [!DNL Schema Library], inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die zijn gedefinieerd door uw organisatie. In de interface van het Experience Platform kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, gebiedsgroep, of gegevenstype in bekijken [!DNL Schema Library]. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
 
 Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39;s, klassen, gebiedsgroepen, en gegevenstypes in Experience Platform UI.
 
-## Een XDM-bron opzoeken {#lookup}
+## Een schemabron opzoeken {#lookup}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. De [!UICONTROL Schemas] werkruimte biedt een **[!UICONTROL Browse]** tabblad om alle bestaande XDM-bronnen in uw organisatie te verkennen, samen met extra speciale tabbladen voor het verkennen van **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, en **[!UICONTROL Data types]** specifiek.
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. De [!UICONTROL Schemas] werkruimte biedt een **[!UICONTROL Browse]** tabblad om alle schema&#39;s in uw organisatie te verkennen, samen met extra speciale tabbladen voor het verkennen van **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, en **[!UICONTROL Data types]** respectievelijk.
 
 ![](../images/ui/explore/tabs.png)
 
-Op de [!UICONTROL Browse] kunt u het filterpictogram (![Pictogramafbeelding filteren](../images/ui/explore/icon.png)) om de besturingselementen in de linkerspoorstaaf zichtbaar te maken om de vermelde resultaten te beperken.
+Het filterpictogram (![Pictogramafbeelding filteren](../images/ui/explore/icon.png)) onthult controles in de linkerspoorstaaf om de vermelde resultaten te beperken. De weergegeven besturingselementen verschillen afhankelijk van het type bron dat wordt vermeld.
 
 Als u bijvoorbeeld de lijst wilt filteren zodat alleen standaardgegevenstypen worden weergegeven die door Adobe worden geleverd, selecteert u **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder de **[!UICONTROL Type]** en **[!UICONTROL Owner]** secties.
 
@@ -33,15 +33,15 @@ De **[!UICONTROL Included in Profile]** knevel staat u toe om resultaten te filt
 
 ![](../images/ui/explore/filter.png)
 
-U kunt de zoekbalk ook gebruiken om de resultaten verder omlaag te brengen. Wanneer u naar een termijn zoekt, vertegenwoordigen de hoogste punten middelen de waarvan namen de onderzoeksvraag aanpassen. Onder deze objecten, onder **[!UICONTROL Standard Fields]**, worden alle bronnen weergegeven die velden bevatten die overeenkomen met de query. Dit staat u toe om naar middelen te zoeken XDM die op het type van gegevens worden gebaseerd zij bevatten, zonder het moeten de naam van het middel vooraf kennen.
+Wanneer u bronnen op de **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, of **[!UICONTROL Data types]** tabs, kunt u selecteren **[!UICONTROL Adobe]** alleen standaardbronnen tonen of **[!UICONTROL Customer]** om alleen bronnen weer te geven die door uw organisatie zijn gemaakt.
+
+![](../images/ui/explore/filter-data-type.png)
+
+U kunt de zoekbalk ook gebruiken om de resultaten verder omlaag te brengen.
 
 ![](../images/ui/explore/search.png)
 
 De middelen die in onderzoeksresultaten worden getoond worden bevolen eerst door titelgelijken, dan door beschrijvingsgelijken. Hoe meer woorden in een van deze categorieën overeenkomen, hoe hoger de bron in de lijst.
-
->[!NOTE]
->
->Voor standaard XDM-bronnen retourneert de zoekfunctie alleen afzonderlijke velden die een `xdm` naamruimte. Velden die zich onder een andere naamruimte bevinden (zoals uw huurder-id), worden alleen geretourneerd als ze zich in een aangepaste bron bevinden.
 
 Wanneer u de bron hebt gevonden die u wilt verkennen, selecteert u de naam in de lijst om de structuur ervan op het canvas weer te geven.
 
