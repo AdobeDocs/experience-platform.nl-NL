@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;stel geplande vragen in werking;stel geplande vraag;de dienst van de vraag;geplande vragen;geplande vraag;
 solution: Experience Platform
 title: Het geplande Eindpunt van de Vraag loopt API
-topic-legacy: runs for scheduled queries
 description: De volgende secties lopen door de diverse API vraag u voor het runnen van geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 0%

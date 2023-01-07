@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;Db Visualizer;DbVisualizer;db visulaizer;verbind met de vraagdienst;
 solution: Experience Platform
 title: Connect DbVisualizer aan de Dienst van de Vraag
-topic-legacy: connect
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 0%

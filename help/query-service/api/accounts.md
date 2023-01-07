@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;api gids;de dienst van de vraag;de rekeningen van de vraagdienst;rekeningen van de rekeningen van de;vraag;
 solution: Experience Platform
 title: Accounts-API-eindpunt
-topic-legacy: connection parameters
 description: U kunt een account voor Query Service maken voor een blijvende verbinding.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
@@ -14,25 +13,25 @@ ht-degree: 1%
 
 # Rekeningeindpunt
 
-In Adobe Experience Platform Query Service, accounts are used to create non-expiring credentials that you can use with external SQL clients. You can use the `/accounts` endpoint in the Query Service API, which allows you to programatically create, retrieve, edit, and delete your Query Service integration accounts (also known as a technical account).
+In de Dienst van de Vraag van Adobe Experience Platform, worden de rekeningen gebruikt om niet-vervallende geloofsbrieven tot stand te brengen die u met externe SQL cliënten kunt gebruiken. U kunt de `/accounts` eindpunt in de Dienst API van de Vraag, die u toestaat om programmatically uw de integratierekeningen van de Dienst van de Vraag tot stand te brengen, terug te winnen uit te geven en te schrappen (die ook als technische rekening wordt bekend).
 
 ## Aan de slag
 
-The endpoints used in this guide are part of the Query Service API. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze gids worden gebruikt maken deel uit van de Dienst API van de Vraag. Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een account maken
 
 U kunt een de integratierekening van de Dienst van de Vraag tot stand brengen door een verzoek van de POST aan `/accounts` eindpunt.
 
-**API format**
+**API-indeling**
 
 ```http
 POST /accounts
 ```
 
-**Request**
+**Verzoek**
 
-The following request will create a new Query Service integration account for your IMS Organization.
+Het volgende verzoek zal tot een nieuwe de integratierekening van de Dienst van de Vraag voor uw organisatie IMS leiden.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
@@ -52,14 +51,14 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `accountName` | **Required** The name of the Query Service integration account. |
+| `accountName` | **Vereist** De naam van de de integratierekening van de Dienst van de Vraag. |
 | `assignedToUser` | **Vereist** De Adobe ID waarvoor de Integratieaccount van Query Service wordt gemaakt. |
 | `credential` | *(Optioneel)* De referentie die voor de integratie van de Dienst van de Vraag wordt gebruikt. Als deze optie niet is opgegeven, genereert het systeem automatisch een referentie voor u. |
-| `description` | *(Optional)* A description for the Query Service integration account. |
+| `description` | *(Optioneel)* Een beschrijving voor de de integratierekening van de Dienst van de Vraag. |
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP, met details van uw onlangs gecreeerde de integratierekening van de Dienst van de Vraag terug. You can use these account details to connect Query Service with external clients.
+Een succesvolle reactie keert status 200 van HTTP, met details van uw onlangs gecreeerde de integratierekening van de Dienst van de Vraag terug. U kunt deze accountdetails gebruiken om de Query Service te verbinden met externe clients.
 
 ```json
 {
@@ -73,7 +72,7 @@ Een succesvolle reactie keert status 200 van HTTP, met details van uw onlangs ge
 | -------- | ----------- |
 | `technicalAccountName` | De naam van uw de integratierekening van de Dienst van de Vraag. |
 | `technicalAccountId` | De id van uw de integratierekening van de Dienst van de Vraag. Dit samen met de `credential`, stelt uw wachtwoord voor uw account samen. |
-| `credential` | De referentie van uw de integratierekening van de Dienst van de Vraag. This, along with the `technicalAccountId`, composes your password for your account. |
+| `credential` | De referentie van uw de integratierekening van de Dienst van de Vraag. Dit samen met de `technicalAccountId`, stelt uw wachtwoord voor uw account samen. |
 
 ## Een account bijwerken
 
@@ -87,9 +86,9 @@ POST /accounts/{ACCOUNT_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | The ID of the Query Service integration account you want to update. |
+| `{ACCOUNT_ID}` | De id van de de integratierekening van de Dienst van de Vraag u wilt bijwerken. |
 
-**Request**
+**Verzoek**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DFB5FDB25D90A494012 \
@@ -107,16 +106,16 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
  }'
 ```
 
-| Property | Beschrijving |
+| Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `accountName` | *(Optional)* The updated name for the Query Service integration account. |
-| `assignedToUser` | *(Optional)* The updated Adobe ID that the Query Service integration account is linked to. |
+| `accountName` | *(Optioneel)* De bijgewerkte naam voor de de integratierekening van de Dienst van de Vraag. |
+| `assignedToUser` | *(Optioneel)* De bijgewerkte Adobe ID waaraan de integratieaccount van Query Service is gekoppeld. |
 | `credential` | *(Optioneel)* De bijgewerkte referentie voor uw account bij Query Service. |
-| `description` | *(Optional)* The updated description for the Query Service integration account. |
+| `description` | *(Optioneel)* De bijgewerkte beschrijving voor de de integratierekening van de Dienst van de Vraag. |
 
-**Response**
+**Antwoord**
 
-A successful response returns HTTP status 200 with information about your newly updated Query Service integration account.
+Een succesvolle reactie keert HTTP status 200 met informatie over uw onlangs bijgewerkte de integratierekening van de Dienst van de Vraag terug.
 
 ```json
 {
@@ -155,7 +154,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 **Antwoord**
 
-A successful response returns HTTP status 200 with a list of all the Query Service integration accounts.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van alle de integratierekeningen van de Dienst van de Vraag terug.
 
 ```json
 {
@@ -206,9 +205,9 @@ A successful response returns HTTP status 200 with a list of all the Query Servi
 
 ## Een account verwijderen
 
-You can delete your Query Service integration account by making a DELETE request to the `/accounts` endpoint.
+U kunt uw de integratierekening van de Dienst van de Vraag schrappen door een verzoek van de DELETE aan `/accounts` eindpunt.
 
-**API format**
+**API-indeling**
 
 ```http
 DELETE /accounts/{ACCOUNT_ID}
@@ -218,7 +217,7 @@ DELETE /accounts/{ACCOUNT_ID}
 | --------- | ----------- |
 | `{ACCOUNT_ID}` | De id van de de integratierekening van de Dienst van de Vraag u wilt schrappen. |
 
-**Request**
+**Verzoek**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DFB5FDB25D90A494012 \
@@ -230,7 +229,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A
 
 **Antwoord**
 
-A successful response returns HTTP status 200 with a message stating that the account was successfully deleted.
+Een geslaagde reactie retourneert HTTP-status 200 met een bericht dat aangeeft dat de account is verwijderd.
 
 ```json
 {

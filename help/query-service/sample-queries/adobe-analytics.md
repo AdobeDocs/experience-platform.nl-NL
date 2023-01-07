@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;steekproefvragen;steekproefvraag;adobe analytics;
 solution: Experience Platform
 title: Voorbeeldquery's voor Adobe Analytics-gegevens
-topic-legacy: queries
 description: Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden getransformeerd in XDM ExperienceEvents en als datasets opgenomen in Adobe Experience Platform. Dit document schetst een aantal gebruiksgevallen waarin de Dienst van de Vraag van deze gegevens gebruik maakt en steekproefvragen omvat die worden ontworpen om met uw datasets van Adobe Analytics te werken.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 1%
@@ -121,8 +120,8 @@ Bij de rapportage worden de orders, opbrengsten, productweergaven en winkelwagen
 
 | eVar6 (productzoekmethode) | omzet | orders | productweergave | cartografische objecten |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| intern zoeken:zomershirt | 19,99 | 1 | 1 | 1 |
-| interne zoekopdracht:winterhoed | 12,99 | 1 | 1 | 1 |
+| intern zoeken:zomershirt | 19.99 | 1 | 1 | 1 |
+| interne zoekopdracht:winterhoed | 12.99 | 1 | 1 | 1 |
 
 Meer informatie over het gebruik van de conversiesyntaxis vindt u in de Adobe Analytics-documentatie op [eVars implementeren met conversiesyntaxis](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 

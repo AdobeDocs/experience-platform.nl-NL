@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;PSQL;psqlconnect met de vraagdienst;de dienst van de vraag;de vraagdienst;
 solution: Experience Platform
 title: PSQL verbinden met Query Service
-topic-legacy: connect
 description: PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u PostgreSQL op uw computer installeert. U kunt het installeren door deze instructies te volgen.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%

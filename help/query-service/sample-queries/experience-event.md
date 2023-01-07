@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;ExperienceEvent-query;ExperienceEvent-query;ExperienceEvent-query;
 solution: Experience Platform
 title: Voorbeeldquery's voor Experience Events
-topic-legacy: queries
 type: Tutorial
 description: In het volgende document worden voorbeelden gegeven van query's voor Experience Events in Adobe Experience Platform Query Service.
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-source-git-commit: d79d466602d77f8a3eb1162ee67572973b3e08c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%

@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;query-service;Query-service;query
 title: Voorbeeld van gebruik van hoofdletters/kleine letters voor Adobe Experience Platform Query Service
-topic-legacy: tutorial
 description: Een end-to-end voorbeeld om de veelzijdigheid en de voordelen van de Dienst van de Vraag van Adobe Experience Platform aan te tonen.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 0%
@@ -76,7 +75,7 @@ Adobe Experience Platform biedt een gegevensopslagplaats en de benodigde hulpmid
 
 Door dit document te lezen, moet u nu begrijpen hoe [!DNL Query Service] beïnvloedt niet alleen de kwaliteit van uw gegevens en het gemak van segmentatie maar ook zijn belang binnen uw gegevensarchitectuur voor het volledige werkschema van begin tot eind. Voor meer toepasbare SQL-voorbeelden die Adobe Analytics gebruiken met [!DNL Query Service], zie de [Documentatie met voorbeeldvragen voor Adobe Analytics](../sample-queries/adobe-analytics.md).
 
-Andere documenten die de voordelen van [!DNL Query Service] voor de strategische bedrijfsinzichten van uw organisatie: [beide filters gebruiken](./bot-filtering.md) voorbeeld.
+Andere documenten die de voordelen van [!DNL Query Service] volgens de strategische bedrijfsinzichten van uw organisatie [beide filters gebruiken](./bot-filtering.md) voorbeeld.
 
 U kunt deze documenten ook gebruiken als u het [!DNL Query Service] functies:
 
