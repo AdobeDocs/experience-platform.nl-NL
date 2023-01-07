@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 solution: Experience Platform
 title: Adobe Experience Platform - Overzicht
-topic-legacy: getting started
 description: Adobe Experience Platform stelt organisaties in staat klantgegevens te centraliseren en te standaardiseren voordat ze dataletterdheid en computerleren toepassen, zodat ze het ontwerp en de levering van rijke, persoonlijke ervaringen aanzienlijk kunnen verbeteren.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Verwerking van toestemming in Adobe Experience Platform
-topic-legacy: getting started
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 0%

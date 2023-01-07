@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 title: Adobe Experience Platform End-to-end voorbeeldworkflow
-topic-legacy: getting started
 description: Leer op hoog niveau de standaard end-to-end workflow voor Adobe Experience Platform.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 0%

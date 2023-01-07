@@ -2,11 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;werkschema
 solution: Experience Platform
 title: Documentatieoverzicht Experience Platform
-topic-legacy: overview
 description: De documentatie van Adobe Experience Platform wordt verstrekt in veelvoudige formaten, met inbegrip van overzichten, leerprogramma's, en gidsen voor zowel de gebruikersinterface als API. Hier is een korte beschrijving van de gemeenschappelijkste documentatietypen die voor de diensten van het Experience Platform beschikbaar zijn.
 exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
@@ -19,20 +17,20 @@ ht-degree: 0%
 >
 >Adobe Experience Platform-documentatie is onlangs verplaatst. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
-De documentatie van Adobe Experience Platform is beschikbaar voor een aantal eigenschappen en de diensten van het Platform. Als u toegang wilt krijgen tot documentatie over het Experience Platform, gaat u terug naar de openingspagina ](https://experienceleague.adobe.com/docs/experience-platform.html) van de documentatie en selecteert u de hulplijn die u wilt weergeven.[
+De documentatie van Adobe Experience Platform is beschikbaar voor een aantal eigenschappen en de diensten van het Platform. Ga als volgt te werk om de documentatie van het Experience Platform te openen: [openingspagina van documentatie](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteer de gids u wilt bekijken.
 
 ## Typen documentatie van Experience Platforms
 
 De documentatie van het Experience Platform wordt verstrekt in veelvoudige formaten, met inbegrip van overzichten, leerprogramma&#39;s, en gidsen voor zowel de gebruikersinterface (UI) als API. De meest gebruikelijke documentatietypen worden samengevat in de volgende lijst:
 
-* **API-naslaggids:** raadpleeg de API-naslagdocumentatie voor elke service voor meer informatie over beschikbare eindpunten, zoals kopteksten, parameters, voorbeeldaanvragen en reacties. Deze referentiematerialen zijn niet even gedetailleerd als de documentatie. Het wordt aanbevolen de servicespecifieke ontwikkelaarsgids te raadplegen voor gedetailleerde voorbeelden van API-gebruik.
+* **API-referentie:** Raadpleeg de API-naslagdocumentatie voor elke service voor meer informatie over de beschikbare eindpunten, zoals kopteksten, parameters, voorbeeldaanvragen en antwoorden. Deze referentiematerialen zijn niet even gedetailleerd als de documentatie. Het wordt aanbevolen de servicespecifieke ontwikkelaarsgids te raadplegen voor gedetailleerde voorbeelden van API-gebruik.
 
-* **Handleiding voor ontwikkelaars:** Elke handleiding voor ontwikkelaars bevat uitgebreide gebruiksinformatie voor alle API-eindpunten die beschikbaar zijn voor een specifieke service. De gids omvat beschikbare vraagparameters, steekproefverzoeken, en steekproefreacties, evenals het schetsen &quot;gotchas&quot;vermijden wanneer het maken van vraag aan [!DNL Platform] APIs.
+* **Handleiding voor ontwikkelaars:** Elke ontwikkelaarsgids verstrekt diepgaande gebruiksinformatie voor alle API eindpunten beschikbaar voor de specifieke dienst. De gids omvat beschikbare vraagparameters, steekproefverzoeken, en steekproefreacties, evenals het schetsen &quot;gotchas&quot;om te vermijden wanneer het maken van vraag aan [!DNL Platform] API&#39;s.
 
-* **Overzicht:** Een overzicht verstrekt een overzicht op hoog niveau van de dienst of de eigenschap en hoe het met andere  [!DNL Platform] diensten in wisselwerking staat. Het overzicht is de beste plaats om te beginnen wanneer het leren over nieuwe eigenschappen en functionaliteit binnen [!DNL Platform].
+* **Overzicht:** Een overzicht verstrekt een overzicht op hoog niveau van de dienst of de eigenschap en hoe het met andere interactie aangaat [!DNL Platform] diensten. Het overzicht is de beste plek om te beginnen wanneer u leert over nieuwe functies en functionaliteit binnen [!DNL Platform].
 
-* **Handleiding voor probleemoplossing:** gebruik de gids voor probleemoplossing om antwoorden te vinden op veelgestelde vragen en informatie over foutberichten die u tijdens het gebruik van de API waarschijnlijk zult tegenkomen. De [!DNL Experience Platform] gids voor probleemoplossing biedt ondersteuning voor algemene vragen en fouten, terwijl de afzonderlijke services probleemoplossingsgidsen bieden die specifiek zijn voor hun gebied.
+* **Handleiding voor probleemoplossing:** Gebruik de gids voor het oplossen van problemenoplossing om antwoorden op vaak gestelde vragen en informatie betreffende foutenmeldingen te vinden die u waarschijnlijk zult ontmoeten wanneer het gebruiken van API. De [!DNL Experience Platform] de het oplossen van problemengids verleent steun voor algemene vragen en fouten, terwijl de individuele diensten het oplossen van problemengidsen specifiek voor hun gebied verstrekken.
 
-* **Zelfstudie:** een zelfstudie is een stapsgewijze handleiding via de gebruikersinterface, de API of een combinatie van beide, die tot een specifiek resultaat leidt. In tegenstelling tot een ontwikkelaarsgids, kan een API leerprogramma zich slechts op één of twee eindpunten concentreren en is geen volledige API middel. Op dezelfde manier kunnen de zelfstudies UI slechts op specifieke stappen, niet de volledige gebruikersinterface beschikbaar voor die dienst concentreren. Tutorials maken vaak deel uit van een grotere werkstroom en hebben de functie &quot;volgende stappen&quot; die beschrijven welke zelfstudies u wilt proberen volgende.
+* **Zelfstudie:** Een zelfstudie is een stapsgewijze handleiding via de UI, API of een combinatie van beide die tot een specifiek resultaat leidt. In tegenstelling tot een ontwikkelaarsgids, kan een API leerprogramma zich slechts op één of twee eindpunten concentreren en is geen volledige API middel. Op dezelfde manier kunnen de zelfstudies UI slechts op specifieke stappen, niet de volledige gebruikersinterface beschikbaar voor die dienst concentreren. Tutorials maken vaak deel uit van een grotere werkstroom en hebben de functie &quot;volgende stappen&quot; die beschrijven welke zelfstudies u wilt proberen volgende.
 
-* **UI-gids:** Een UI-hulplijn schetst acties die beschikbaar zijn in de  [!DNL Platform] gebruikersinterface voor een specifieke service. Deze documenten bevatten schermafbeeldingen en stappen die zijn gericht op interactie met Platform via de gebruikersinterface. Net als in een handleiding voor ontwikkelaars worden in de UI-handleiding alle beschikbare acties en opties beschreven, inclusief &#39;gotchas&#39; die moeten worden vermeden. Dit is het meest gedetailleerde middel voor het werken met UI.
+* **UI-gids:** Een UI-hulplijn schetst acties die beschikbaar zijn in het dialoogvenster [!DNL Platform] gebruikersinterface voor een specifieke dienst. Deze documenten bevatten schermafbeeldingen en stappen die zijn gericht op interactie met Platform via de gebruikersinterface. Net als in een handleiding voor ontwikkelaars worden in de UI-handleiding alle beschikbare acties en opties beschreven, inclusief &#39;gotchas&#39; die moeten worden vermeden. Dit is het meest gedetailleerde middel voor het werken met UI.

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Aan de slag met de API voor observatiegegevens
-topic-legacy: developer guide
 description: Met de API Observability Insights kunt u metrische gegevens ophalen voor verschillende Adobe Experience Platform-functies. Dit document biedt een inleiding op de kernconcepten die u moet kennen voordat u probeert aanroepen te doen naar de API voor observatiegegevens.
 exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%

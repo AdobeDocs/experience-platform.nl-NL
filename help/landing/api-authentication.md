@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Authenticeren;toegang
 solution: Experience Platform
 title: API's van Experience Platforms verifiëren en benaderen
-topic-legacy: tutorial
 type: Tutorial
 description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API's.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 1%
@@ -43,7 +42,7 @@ U moet ook over een Adobe ID beschikken om deze zelfstudie te voltooien. Als u g
 
 ## Verbeter ontwikkelaar en gebruikerstoegang voor Experience Platform
 
-Voordat u integratie kunt maken in de Adobe Developer Console, moet uw account ontwikkelings- en gebruikersmachtigingen hebben voor een productprofiel voor een Experience Platform in Adobe Admin Console.
+Voordat u integratie in Adobe Developer Console maakt, moet uw account ontwikkelings- en gebruikersmachtigingen hebben voor een productprofiel voor een Experience Platform in Adobe Admin Console.
 
 ### Toegang voor ontwikkelaars verkrijgen
 
