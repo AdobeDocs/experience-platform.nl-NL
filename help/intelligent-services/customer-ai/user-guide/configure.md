@@ -3,10 +3,9 @@ keywords: Experience Platform;gebruikershandleiding;klant ai;populaire onderwerp
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Een AI-instantie van een klant configureren
-topic-legacy: Instance creation
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3227'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;aan de slag;inhoud ai;handel ai;inhoud en handel ai;sleutelwoordextractie;Trefwoordextractie
 solution: Experience Platform
 title: Trefwoordextractie in de API voor Inhoud en Handel
-topic-legacy: Developer guide
 description: De service voor het uitnemen van trefwoorden extraheert bij een tekstdocument automatisch trefwoorden of trefwoorden die het onderwerp van het document het best beschrijven. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor het extraheren van trefwoorden.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 2%

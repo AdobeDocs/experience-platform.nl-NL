@@ -2,10 +2,9 @@
 keywords: OCR;aanwezigheid van tekst;optische tekenherkenning
 solution: Experience Platform
 title: Aanwezigheid van tekst en optische tekenherkenning
-topic-legacy: Developer guide
 description: In de AI API voor Inhoud en Handel kan de dienst van de Erkenning van het Karakter van de Tekst Aanwezigheid/Optische (OCR) van het Karakter erop wijzen als de tekst in een bepaalde beeld aanwezig is. Als er tekst aanwezig is, kan OCR de tekst retourneren.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 2%
@@ -83,7 +82,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | Het aantal resultaten dat moet worden geretourneerd (mag geen negatief geheel getal zijn). De waarde gebruiken `0` om alle resultaten te retourneren. Indien gebruikt in combinatie met `threshold`, is het aantal geretourneerde resultaten het laagste van de twee ingestelde limieten. De standaardwaarde voor deze eigenschap is `0`. | Nee |
 | `custom` | Aangepaste parameters die moeten worden doorgegeven. Voor deze eigenschap is een geldig JSON-object vereist. | Nee |
 | `content-id` | De unieke id voor het gegevenselement dat in de reactie wordt geretourneerd. Als dit niet wordt overgegaan, wordt een auto-geproduceerde identiteitskaart toegewezen. | Nee |
-| `content` | De inhoud kan een Raw-afbeelding zijn (inline-inhoudstype). <br> Als de inhoud een bestand is op S3 (inhoudstype s3-bucket), geeft u de ondertekende URL door. | Ja |
+| `content` | De inhoud kan onbewerkte afbeeldingen zijn (&#39;inline&#39;-inhoudstype). <br> Als de inhoud een bestand is op S3 (inhoudstype s3-bucket), geeft u de ondertekende URL door. | Ja |
 
 **Antwoord**
 

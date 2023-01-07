@@ -3,10 +3,9 @@ keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klanten
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Inzichten met Customer AI ontdekken
-topic-legacy: Discovering insights
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 0%

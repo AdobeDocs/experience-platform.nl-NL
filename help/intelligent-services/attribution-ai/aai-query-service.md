@@ -2,10 +2,9 @@
 keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores
 feature: Attribution AI
 title: Kenmerkscores analyseren met Query-service
-topic-legacy: Attribution AI queries
 description: Leer hoe u Adobe Experience Platform Query Service kunt gebruiken om de Attribution AI-scores te analyseren.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 # Kenmerkscores analyseren met gebruik van Query-service
 
-Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor verwante aanraakpunten wordt opgeslagen als een array van structs onder de kolom `touchpointsDetail`.
+Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor verwante aanraakpunten wordt opgeslagen als een array met instructies onder de `touchpointsDetail` kolom.
 
 | Informatie over aanraakpunten | Kolom |
 | ---------------------- | ------ |
@@ -24,7 +23,7 @@ Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor 
 
 ## Gegevenspaden zoeken
 
-Selecteer **[!UICONTROL Datasets]** in de linkernavigatie in de gebruikersinterface van Adobe Experience Platform. De pagina **[!UICONTROL Datasets]** wordt weergegeven. Selecteer vervolgens het tabblad **[!UICONTROL Browse]** en zoek de uitvoergegevensset voor uw Attribution AI-scores.
+Selecteer in de gebruikersinterface van Adobe Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatie. De **[!UICONTROL Datasets]** wordt weergegeven. Selecteer vervolgens de **[!UICONTROL Browse]** en zoek de gegevensset met uitvoergegevens voor uw Attribution AI-scores.
 
 ![Toegang tot uw exemplaar](./images/aai-query/datasets_browse.png)
 
@@ -32,21 +31,21 @@ Selecteer uw uitvoerdataset. De pagina met gegevenssetactiviteiten wordt weergeg
 
 ![pagina met gegevenssetactiviteiten](./images/aai-query/select_preview.png)
 
-Selecteer **[!UICONTROL Preview dataset]** in de rechterbovenhoek van de activiteitenpagina van de gegevensset om een voorvertoning van uw gegevens weer te geven en ervoor te zorgen dat de gegevens op de verwachte manier zijn opgenomen.
+Selecteer binnen de pagina met gegevenssetactiviteiten de optie **[!UICONTROL Preview dataset]** in de rechterbovenhoek om een voorvertoning van uw gegevens weer te geven en te controleren of de gegevens op de juiste wijze zijn ingevoerd.
 
-![voorbeeldgegevensset](./images/aai-query/preview_dataset.JPG)
+![voorvertoningsgegevensset](./images/aai-query/preview_dataset.JPG)
 
 Nadat u een voorvertoning van uw gegevens hebt weergegeven, selecteert u het schema in de rechtertrack. Er verschijnt een pop-up met de schemanaam en de beschrijving. Selecteer de hyperlink naar de schemanaam om deze om te leiden naar het scoreschema.
 
 ![selecteer het schema](./images/aai-query/select_schema.png)
 
-Met het scoreschema kunt u een waarde selecteren of zoeken. Als deze optie is geselecteerd, wordt de **[!UICONTROL Field properties]** side-rail geopend, waarmee u het pad kunt kopiëren voor gebruik bij het maken van query&#39;s.
+Met het scoreschema kunt u een waarde selecteren of zoeken. Als deze optie is geselecteerd, wordt **[!UICONTROL Field properties]** zijspoor opent u die u toestaat om de weg voor gebruik in het creëren van vragen te kopiëren.
 
 ![het pad kopiëren](./images/aai-query/copy_path.png)
 
 ## Access Query Service
 
-Als u de Query-service wilt openen vanuit de gebruikersinterface van het Platform, selecteert u **[!UICONTROL Queries]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Browse]**. Er wordt een lijst met eerder opgeslagen query&#39;s geladen.
+Om tot de Dienst van de Vraag van binnen UI van het Platform toegang te hebben, begin door te selecteren **[!UICONTROL Queries]** in de linkernavigatie, dan selecteer **[!UICONTROL Browse]** tab. Er wordt een lijst met eerder opgeslagen query&#39;s geladen.
 
 ![queryservice-browser](./images/aai-query/query_tab.png)
 
@@ -54,15 +53,15 @@ Selecteer vervolgens **[!UICONTROL Create query]** in de rechterbovenhoek. De Qu
 
 ![queryeditor](./images/aai-query/query_example.png)
 
-Voor meer informatie over de Redacteur van de Vraag, bezoek [de gebruikersgids van de Redacteur van de Vraag](../../query-service/ui/user-guide.md).
+Voor meer informatie over de Redacteur van de Vraag, bezoek [Gebruikershandleiding voor de Query Editor](../../query-service/ui/user-guide.md).
 
 ## Zoeksjablonen voor analyse van de toewijzingsscore
 
-De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van de scoreanalyse worden gebruikt. U moet `_tenantId` en `your_score_output_dataset` met de juiste waarden vervangen die in uw het scoren outputschema worden gevonden.
+De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van de scoreanalyse worden gebruikt. U moet de opdracht `_tenantId` en `your_score_output_dataset` met de juiste waarden die in het scoringsuitvoerschema worden gevonden.
 
 >[!NOTE]
 >
-> Afhankelijk van de manier waarop uw gegevens zijn ingevoerd, kunnen de waarden die hieronder worden gebruikt, zoals `timestamp`, een andere indeling hebben.
+> Afhankelijk van de manier waarop uw gegevens zijn opgenomen, worden de hieronder gebruikte waarden, zoals `timestamp` kan een andere indeling hebben.
 
 ### Validatievoorbeelden
 
@@ -306,7 +305,7 @@ Met deze query wordt de struct-kolom samengevoegd tot meerdere aparte kolommen e
 
 >[!TIP]
 >
-> In dit voorbeeld moet u `{COLUMN_NAME}` naast `_tenantId` en `your_score_output_dataset` vervangen. De `COLUMN_NAME` variabele kan de waarden van facultatieve overgaan door kolomnamen (het melden van kolommen) nemen die tijdens het vormen van uw instantie van de Attribution AI werden toegevoegd. Controleer het uitvoerschema voor de score om de `{COLUMN_NAME}` waarden te zoeken die nodig zijn om deze query te voltooien.
+> In dit voorbeeld moet u vervangen `{COLUMN_NAME}` naast `_tenantId` en `your_score_output_dataset`. De `COLUMN_NAME` De variabele kan de waarden van facultatieve overgaan door kolomnamen (rapporterend kolommen) nemen die tijdens het vormen van uw instantie van de Attribution AI werden toegevoegd. Controleer het uitvoerschema voor het zoeken naar de `{COLUMN_NAME}` waarden nodig om deze query te voltooien.
 
 ```sql
 SELECT 

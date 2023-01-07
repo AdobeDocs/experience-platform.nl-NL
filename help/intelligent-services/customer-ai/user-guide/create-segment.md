@@ -3,10 +3,9 @@ keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klant a
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Klantsegmenten maken met voorspelde scores
-topic-legacy: Create a segment
 description: Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid automatisch verbruikt door Profielen. Door profielen te verrijken met AI-scores van de Klant, kunnen klantsegmenten worden gemaakt om een publiek te zoeken op basis van hun populatiescore. Deze sectie verstrekt stappen voor het creëren van segmenten gebruikend de Bouwer van het Segment.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%

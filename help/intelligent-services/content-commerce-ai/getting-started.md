@@ -2,10 +2,9 @@
 keywords: Experience Platform;aan de slag;content ai;commerce ai;content en commerce ai
 solution: Experience Platform
 title: Aan de slag met AI voor Inhoud en Handel
-topic-legacy: Getting started
 description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. Om vraag aan Adobe I/O APIs en de I/O Integratie van de Console te maken, moet u het authentificatieleerprogramma eerst voltooien.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 0%
@@ -32,7 +31,7 @@ Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk
 
 ## Een Postman-omgeving maken (optioneel)
 
-Nadat u uw project en API hebt ingesteld in de Adobe Developer Console, kunt u een omgevingsbestand voor Postman downloaden. Onder **[!UICONTROL APIs]** het linkerspoor van uw project, selecteer **[!UICONTROL Content and Commerce AI]**. Er wordt een nieuw tabblad geopend met een kaart met het label &quot;[!DNL Try it out]&quot;. Selecteren **Downloaden naar Postman** om een JSON-bestand te downloaden dat wordt gebruikt om uw postmanomgeving te configureren.
+Als u uw project en API hebt ingesteld in Adobe Developer Console, kunt u een omgevingsbestand voor Postman downloaden. Onder **[!UICONTROL APIs]** het linkerspoor van uw project, selecteer **[!UICONTROL Content and Commerce AI]**. Er wordt een nieuw tabblad geopend met een kaart met het label &quot;[!DNL Try it out]&quot;. Selecteren **Downloaden naar Postman** om een JSON-bestand te downloaden dat wordt gebruikt om uw postmanomgeving te configureren.
 
 ![download voor postbode](./images/add-to-postman.png)
 

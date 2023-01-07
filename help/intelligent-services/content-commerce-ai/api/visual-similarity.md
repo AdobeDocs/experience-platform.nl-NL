@@ -2,10 +2,9 @@
 keywords: Visuele gelijkenis;visuele gelijkenis;ccai api
 solution: Experience Platform
 title: Visuele gelijkenis in de API voor Inhoud en Handel
-topic-legacy: Developer guide
 description: Wanneer u een afbeelding krijgt met de visuele gelijkenis, worden in de catalogus automatisch visueel vergelijkbare afbeeldingen gevonden.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: Experience Cloud;aan de slag;inhoud en handel ai;populaire onderwerpen;Intelligente services;ccai
 solution: Experience Platform
 title: Overzicht van Content and Commerce AI
-topic-legacy: Content and Commerce AI
 description: AI van de Inhoud en van de Handel is een reeks diensten van AI die u toestaat om intelligente eigenschappen uit uw inhoud te halen, inhoudsstroom te organiseren, te stroomlijnen, en nuttigere, gepersonaliseerde ervaringen aan uw klanten te leveren.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%

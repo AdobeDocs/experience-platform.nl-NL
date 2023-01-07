@@ -2,10 +2,9 @@
 keywords: Experience Platform;attributie ai;access scores;populaire onderwerpen;download scores;attributie ai scores;export;Export
 feature: Attribution AI
 title: Scores downloaden in Attribution AI
-topic-legacy: Downloading scores
 description: Dit document dient als richtlijn voor het downloaden van scores voor Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 0%

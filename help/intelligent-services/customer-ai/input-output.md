@@ -3,10 +3,9 @@ keywords: Experience Platform;aan de slag;klantenhulp;populaire onderwerpen;inpu
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Invoer en uitvoer in AI van de Klant
-topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3183'
 ht-degree: 0%

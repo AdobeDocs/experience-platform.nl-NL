@@ -2,13 +2,12 @@
 keywords: Experience Platform;attributie ai overview;populaire onderwerpen;attributie ai;Attribution ai
 feature: Attribution AI
 title: Overzicht van Attribution AI
-topic-legacy: Attribution AI
 description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren. Voorbeelden van aanraakpunten zijn weergave- en impressies, e-mail verzenden, e-mail openen en klikken met betaalde zoekopdrachten.
 landing-page-description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---

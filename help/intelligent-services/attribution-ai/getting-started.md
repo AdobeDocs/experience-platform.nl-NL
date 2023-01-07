@@ -2,10 +2,9 @@
 keywords: Experience Platform;aan de slag;attributie ai;populaire onderwerpen
 feature: Attribution AI
 title: Aan de slag in de Attribution AI
-topic-legacy: Getting started
 description: De volgende gidsen vereisen een inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het gebruiken van Attribution AI. Lees de volgende documenten voordat u de zelfstudies start.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
