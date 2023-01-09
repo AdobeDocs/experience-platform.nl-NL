@@ -1,9 +1,10 @@
 ---
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '1236'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,15 @@ De [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-
 
 Met de [!DNL Meta Conversions API] kunt u de API-mogelijkheden in uw [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) regels voor het verzenden van gegevens naar [!DNL Meta] van het Adobe Experience Platform Edge Network. In dit document wordt beschreven hoe u de extensie installeert en de mogelijkheden van de extensie gebruikt bij het doorsturen van gebeurtenissen [regel](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->Als u gebeurtenissen wilt verzenden naar [!DNL Meta] van de client in plaats van van de server [[!DNL Meta Pixiel] tagextensie](../../client/meta/overview.md) in plaats daarvan.
-
 ## Vereisten
 
-Als u de extensie wilt gebruiken, moet u toegang hebben tot het doorsturen van gebeurtenissen en een geldige waarde hebben [!DNL Meta] account met toegang tot [!DNL Ad Manager] en [!DNL Event Manager]. U moet met name de id van een bestaande id kopiëren [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (of [een nieuwe [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) in plaats daarvan), zodat de extensie kan worden geconfigureerd voor uw account.
+Het wordt sterk aanbevolen om [!DNL Meta Pixel] en de [!DNL Conversions API] om dezelfde gebeurtenissen te delen en te verzenden van respectievelijk de zijde van de client en de server, aangezien dit ertoe kan bijdragen gebeurtenissen te herstellen die niet zijn opgepikt door [!DNL Meta Pixel]. Voordat u de [!DNL Conversions API] voor meer informatie, raadpleegt u de handleiding op de [[!DNL Meta Pixel] extension](../../client/meta/overview.md) voor stappen over hoe te om het in uw cliënt-zijmarkeringsimplementaties te integreren.
+
+>[!NOTE]
+>
+>Het gedeelte over [deduplicatie van gebeurtenissen](#deduplication) verderop in dit document worden de stappen beschreven om ervoor te zorgen dat dezelfde gebeurtenis niet tweemaal wordt gebruikt, aangezien deze mogelijk van zowel de browser als de server wordt ontvangen.
+
+Voor het gebruik van de [!DNL Conversions API] uitbreiding, moet u toegang tot gebeurtenis hebben door:sturen en een geldige [!DNL Meta] account met toegang tot [!DNL Ad Manager] en [!DNL Event Manager]. U moet met name de id van een bestaande id kopiëren [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (of [een nieuwe [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) in plaats daarvan), zodat de extensie kan worden geconfigureerd voor uw account.
 
 ## De extensie installeren
 
@@ -38,9 +41,15 @@ Als u klaar bent, selecteert u **[!UICONTROL Save]**
 
 ![De [!DNL Pixel] ID verstrekt als gegevenselement in de mening van de uitbreidingsconfiguratie.](../../../images/extensions/server/meta/configure.png)
 
-De extensie is geïnstalleerd en u kunt nu de mogelijkheden van de extensie gebruiken in de labelregels.
+De uitbreiding is geïnstalleerd en u kunt zijn mogelijkheden in uw gebeurtenis nu gebruiken die regels door:sturen.
 
 ## Vorm een gebeurtenis door:sturen regel {#rule}
+
+In deze sectie wordt beschreven hoe u de [!DNL Conversions API] uitbreiding in een generische gebeurtenis die regel door:sturen. In de praktijk, zou u verscheidene regels moeten vormen om allen te verzenden toegelaten [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] en [!DNL Conversions API].
+
+>[!NOTE]
+>
+>Gebeurtenissen moeten [verzonden in real time](https://www.facebook.com/business/help/379226453470947?id=818859032317965) of zo dicht mogelijk bij real time voor betere optimalisering van de advertentiecampagne.
 
 Begin creërend een nieuwe gebeurtenis door:sturen regel en vorm zijn voorwaarden zoals gewenst. Selecteer bij het selecteren van de handelingen voor de regel de optie **[!UICONTROL Meta Conversions API Extension]** voor de extensie selecteert u vervolgens **[!UICONTROL Send Conversions API Event]** voor het actietype.
 
@@ -50,8 +59,8 @@ De controles verschijnen die u toestaan om de gebeurtenisgegevens te vormen die 
 
 | Config-sectie | Beschrijving |
 | --- | --- |
-| [!UICONTROL Server Event Parameters] | Algemene informatie over de gebeurtenis, waaronder de tijd dat deze heeft plaatsgevonden en de bronactie die deze heeft geactiveerd. Zie de [[!DNL Conversions API] documentatie](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) voor meer informatie over deze parameters.<br><br>U kunt ook **[!UICONTROL Enable Limited Data Use]** om te helpen voldoen aan de opt-outs van klanten. Zie de [!DNL Conversions API] documentatie over [gegevensverwerkingsopties](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) voor meer informatie over deze functie. |
-| [!UICONTROL Customer Information Parameters] | De identiteitsgegevens van de gebruiker die worden gebruikt om de gebeurtenis aan een klant toe te schrijven. Sommige van deze waarden moeten worden gehasht voordat ze naar de API kunnen worden verzonden. Zie de [[!DNL Conversions API] documentatie](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) voor meer informatie over deze parameters. |
+| [!UICONTROL Server Event Parameters] | Algemene informatie over de gebeurtenis, waaronder de tijd dat deze heeft plaatsgevonden en de bronactie die deze heeft geactiveerd. Zie de [!DNL Meta] ontwikkelaarsdocumentatie voor meer informatie over de [standaardparameters voor gebeurtenissen](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) door de [!DNL Conversions API].<br><br>Als u beide gebruikt [!DNL Meta Pixel] en de [!DNL Conversions API] om gebeurtenissen te verzenden, zorg ervoor zowel als omvat **[!UICONTROL Event Name]** (`event_name`) en **[!UICONTROL Event ID]** (`event_id`) bij elke gebeurtenis, aangezien deze waarden worden gebruikt voor [deduplicatie van gebeurtenissen](#deduplication).<br><br>U kunt ook **[!UICONTROL Enable Limited Data Use]** om te helpen voldoen aan de opt-outs van klanten. Zie de [!DNL Conversions API] documentatie over [gegevensverwerkingsopties](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) voor meer informatie over deze functie. |
+| [!UICONTROL Customer Information Parameters] | De identiteitsgegevens van de gebruiker die worden gebruikt om de gebeurtenis aan een klant toe te schrijven. Sommige van deze waarden moeten worden gehasht voordat ze naar de API kunnen worden verzonden.<br><br>Voor een goede algemene API-verbinding en een hoge evenementkwaliteit (EMQ) is het raadzaam alle [geaccepteerde parameters voor klantinformatie](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) naast servergebeurtenissen. Deze parameters moeten ook [prioriteit op basis van hun belang en impact op het EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
 | [!UICONTROL Custom Data] | Aanvullende gegevens die moeten worden gebruikt voor optimalisatie van levering voor advertenties, opgegeven in de vorm van een JSON-object. Zie de [[!DNL Conversions API] documentatie](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) voor meer informatie over de geaccepteerde eigenschappen voor dit object.<br><br>Als u een aankoopgebeurtenis verzendt, moet u deze sectie gebruiken om de vereiste kenmerken op te geven `currency` en `value`. |
 | [!UICONTROL Test Event] | Deze optie wordt gebruikt om te verifiëren of uw configuratie servergebeurtenissen om veroorzaakt te ontvangen door [!DNL Meta] zoals verwacht. Als u deze functie wilt gebruiken, selecteert u de optie **[!UICONTROL Send as Test Event]** Schakel het selectievakje in en geef een gewenste testgebeurteniscode op in de onderstaande invoer. Zodra de gebeurtenis door:sturen regel wordt opgesteld, als u de uitbreiding en de actie correct vormde zou u activiteiten zien die binnen het **[!DNL Test Events]** weergeven in [!DNL Meta Events Manager]. |
 
@@ -63,6 +72,19 @@ Als u klaar bent, selecteert u **[!UICONTROL Keep Changes]** om de actie aan de 
 
 Als u tevreden bent met de regel, selecteert u **[!UICONTROL Save to Library]**. Ten slotte publiceert u een nieuwe gebeurtenis die wordt doorgestuurd [build](../../../ui/publishing/builds.md) om de wijzigingen in de bibliotheek mogelijk te maken.
 
+## Gebeurtenisdeduplicatie {#deduplication}
+
+Zoals vermeld in het [sectie voorwaarden](#prerequisites)wordt aangeraden beide [!DNL Meta Pixel] de extensie van de tag en de [!DNL Conversions API] gebeurtenis die uitbreiding door:sturen om de zelfde gebeurtenissen van de cliënt en de server in een overtollige opstelling te verzenden. Dit kan helpen gebeurtenissen herstellen die niet door één of andere uitbreiding werden opgepikt.
+
+Als u verschillende gebeurtenistypen verzendt van de client en de server zonder overlapping tussen beide, is deduplicatie niet nodig. Als echter één gebeurtenis wordt gedeeld door beide [!DNL Meta Pixel] en de [!DNL Conversions API], moet u ervoor zorgen dat deze overtollige gebeurtenissen worden gededupliceerd zodat uw rapport niet negatief wordt beïnvloed.
+
+Wanneer u gedeelde gebeurtenissen verzendt, moet u een gebeurtenis-id en een naam opnemen voor elke gebeurtenis die u verzendt van zowel de client als de server. Wanneer meerdere gebeurtenissen met dezelfde id en naam worden ontvangen, [!DNL Meta] maakt automatisch gebruik van verschillende strategieën om deze te dedupliceren en de meest relevante gegevens te bewaren. Zie de [!DNL Meta] documentatie over [deduplicatie voor [!DNL Meta Pixel] en [!DNL Conversions API] gebeurtenissen](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) voor meer informatie over dit proces.
+
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u gebeurtenisgegevens op de server kunt verzenden naar [!DNL Meta] met de [!DNL Meta Conversions API] extensie. Raadpleeg voor meer informatie over tags en het doorsturen van gebeurtenissen de [overzicht van tags](../../../home.md).
+In deze handleiding wordt beschreven hoe u gebeurtenisgegevens op de server kunt verzenden naar [!DNL Meta] met de [!DNL Meta Conversions API] extensie. Het wordt aanbevolen om vanaf hier uw integratie uit te breiden door meer verbinding te maken [!DNL Pixels] en delen van meer gebeurtenissen, indien van toepassing. Voer een van de volgende twee handelingen uit om uw advertentieprestaties verder te verbeteren:
+
+* Andere verbindingen maken [!DNL Pixels] die nog niet zijn verbonden met een [!DNL Conversions API] integratie.
+* Als u bepaalde gebeurtenissen uitsluitend via [!DNL Meta Pixel] op de client, stuur dezelfde gebeurtenissen naar de [!DNL Conversions API] ook aan de serverzijde.
+
+Zie de [!DNL Meta] documentatie over [beste praktijken voor [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) voor meer begeleiding over hoe te om uw integratie effectief uit te voeren. Raadpleeg voor meer algemene informatie over tags en het doorsturen van gebeurtenissen in Adobe Experience Cloud de [overzicht van tags](../../../home.md).

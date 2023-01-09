@@ -1,9 +1,10 @@
 ---
 title: Overzicht van Meta-pixelextensie
 description: Meer informatie over de extensie Meta Pixel in Adobe Experience Platform.
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,11 @@ ht-degree: 0%
 
 De [!DNL Meta Pixel] met de extensie van tags kunt u gebruikmaken van [!DNL Pixel] functies in de tagbibliotheken aan de clientzijde. In dit document wordt beschreven hoe u de extensie installeert en de mogelijkheden ervan kunt gebruiken in een [regel](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->Als u servergebeurtenissen probeert te verzenden naar [!DNL Meta] in plaats van vanaf de client [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) in plaats daarvan.
-
 ## Vereisten
 
 Als u de extensie wilt gebruiken, moet u een geldige [!DNL Meta] account met toegang tot [!DNL Ads Manager]. Specifiek, moet u [een nieuwe [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) en kopieert [!DNL Pixel ID] kan de extensie dus worden geconfigureerd voor uw account. Als u al een bestaande [!DNL Meta Pixel], kunt u in plaats daarvan de id gebruiken.
+
+Het wordt sterk aanbevolen om [!DNL Meta Pixel] in combinatie met de [!DNL Meta Conversions API] om dezelfde gebeurtenissen te delen en te verzenden van respectievelijk de zijde van de client en de server, aangezien dit ertoe kan bijdragen gebeurtenissen te herstellen die niet zijn opgepikt door [!DNL Meta Pixel]. Zie de handleiding op de [[!DNL Meta Conversions API] extensie voor het doorsturen van gebeurtenissen](../../client/meta/overview.md) voor stappen op hoe te om het in uw server-zijimplementaties te integreren. Merk op dat uw organisatie toegang moet hebben tot [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) om de serverextensie te gebruiken.
 
 ## De extensie installeren
 
@@ -36,7 +35,7 @@ In de configuratieweergave die wordt weergegeven, moet u de opdracht [!DNL Pixel
 >
 >Als u een gegevenselement gebruikt, kunt u de optie [!DNL Pixel] ID wordt gebruikt afhankelijk van andere factoren zoals de bouwstijlomgeving. Zie het aanhangsel over [verschillend gebruiken [!DNL Pixel] ID&#39;s voor verschillende omgevingen](#id-data-element) voor meer informatie .
 
-U kunt ook een gebeurtenis-id opgeven die u aan de extensie wilt koppelen. Dit wordt gebruikt om identieke gebeurtenissen tussen [!DNL Meta Pixel] en de [!DNL Meta Conversions API]. Zie de [!DNL Meta] documentatie over [dupliceren [!DNL Pixel] en [!DNL Conversions API] gebeurtenissen](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) voor meer informatie.
+U kunt ook een gebeurtenis-id opgeven die u aan de extensie wilt koppelen. Dit wordt gebruikt om identieke gebeurtenissen tussen [!DNL Meta Pixel] en de [!DNL Meta Conversions API]. Zie de sectie over [deduplicatie van gebeurtenissen](../../server/meta/overview.md#event-deduplication) in het overzicht van de [!DNL Conversions API] extensie.
 
 Als u klaar bent, selecteert u **[!UICONTROL Save]**
 
@@ -64,7 +63,9 @@ Nadat uw bijgewerkte build op uw website is geïmplementeerd, kunt u bevestigen 
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe gegevens worden verzonden naar [!DNL Meta] met de [!DNL Meta Pixel] tagextensie. Raadpleeg voor meer informatie over tags in Experience Platform de [overzicht van tags](../../../home.md).
+In deze handleiding wordt beschreven hoe gegevens worden verzonden naar [!DNL Meta] met de [!DNL Meta Pixel] tagextensie. Als u ook servergebeurtenissen wilt verzenden naar [!DNL Meta]kunt u nu doorgaan met het installeren en configureren van de [[!DNL Conversions API] extensie voor doorsturen van gebeurtenissen](../../server/meta/overview.md).
+
+Raadpleeg voor meer informatie over tags in Experience Platform de [overzicht van tags](../../../home.md).
 
 ## Aanhangsel: Verschil gebruiken [!DNL Pixel] ID&#39;s voor verschillende omgevingen {#id-data-element}
 
@@ -77,4 +78,3 @@ In het volgende voorbeeld wordt een onechte productie-id geretourneerd `exampleP
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
-
