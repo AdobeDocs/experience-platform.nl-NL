@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;
 solution: Experience Platform
 title: Gegevenslandingszone verbinden met Adobe Experience Platform met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Data Landing Zone met behulp van de Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 1%
@@ -81,7 +80,7 @@ Om geloofsbrieven voor een terug te winnen [!DNL Data Landing Zone]een verzoek t
 **API-indeling**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **Verzoek**
@@ -125,7 +124,7 @@ U kunt uw `SASToken` door een POST aan de `/credentials` van het [!DNL Connector
 **API-indeling**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | Kopteksten | Beschrijving |
