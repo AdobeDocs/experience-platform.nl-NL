@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-eindpunt voor querysjablonen
 description: Deze gids specificeert de diverse vraag API van het vraagmalplaatje u kunt maken gebruikend de Dienst API van de Vraag.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 1%
+source-wordcount: '894'
+ht-degree: 0%
 
 ---
 
@@ -129,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `sql` | De SQL-query die u wilt maken. |
+| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$`. Bijvoorbeeld: `$key`en geef de parameters op die in de SQL als JSON-sleutelwaardeparen in de `queryParameters` veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
 | `name` | De naam van de querysjabloon. |
+| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Alleen vereist **indien** u gebruikt parametervervangingen binnen SQL u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
 
 **Antwoord**
 
@@ -145,7 +149,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -265,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `sql` | De SQL-query die u wilt bijwerken. |
-| `name` | De naam van de geplande query. |
+| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$`. Bijvoorbeeld: `$key`en geef de parameters op die in de SQL als JSON-sleutelwaardeparen in de `queryParameters` veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
+| `name` | De naam van de querysjabloon. |
+| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Alleen vereist **indien** u gebruikt parametervervangingen binnen SQL u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
 
 **Antwoord**
 

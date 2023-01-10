@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor query's
 description: De volgende secties lopen door vraag u het gebruiken van het /query eindpunt in de Dienst API van de Vraag kunt maken.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,7 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 | `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `updated`, `state`, en `id`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan), en `~` (bevat). Bijvoorbeeld: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert alle query&#39;s met de opgegeven id. |
 | `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. Bijvoorbeeld: `excludeSoftDeleted=false` zal **include** verwijderde softquery&#39;s. (*Boolean, standaardwaarde: true*) |
 | `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Als deze waarde is ingesteld op false, wordt **include** query&#39;s die niet door gebruikers worden gestuurd, zoals CURSOR-definities, FETCH of metagegevensquery&#39;s. (*Boolean, standaardwaarde: true*) |
+| `isPrevLink` | De `isPrevLink` queryparameter wordt gebruikt voor paginering. Resultaten van de API-aanroep worden gesorteerd op basis van hun `created` tijdstempel en de `orderby` eigenschap. Tijdens het navigeren door de resultatenpagina&#39;s `isPrevLink` wordt ingesteld op true wanneer achterwaarts wordt gepagineerd. Het keert de orde van de vraag om. Zie &quot;volgende&quot; en &quot;vorige&quot; koppelingen als voorbeelden. |
 
 **Verzoek**
 
@@ -128,7 +129,7 @@ POST /queries
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe vraag, die door de waarden wordt gevormd die in de lading worden verstrekt:
+Het volgende verzoek leidt tot een nieuwe vraag, met een SQL verklaring die in de nuttige lading wordt verstrekt:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -139,7 +140,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "queryParameters": {
+            $user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+In het onderstaande aanvraagvoorbeeld wordt een nieuwe query gemaakt met een bestaande querysjabloon-id.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -151,6 +172,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | De SQL-query die u wilt maken. |
 | `name` | De naam van uw SQL-query. |
 | `description` | De beschrijving van uw SQL-query. |
+| `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Alleen vereist **indien** u gebruikt parametervervangingen binnen SQL u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
+| `templateId` | De unieke id voor een bestaande query. U kunt dit opgeven in plaats van een SQL-instructie. |
+| `insertIntoParameters` | (Optioneel) Als deze eigenschap is gedefinieerd, wordt deze query omgezet in een INSERT INTO-query. |
+| `ctasParameters` | (Optioneel) Als deze eigenschap is gedefinieerd, wordt deze query omgezet in een CTAS-query. |
 
 **Antwoord**
 
