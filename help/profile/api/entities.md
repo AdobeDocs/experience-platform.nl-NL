@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Entiteiten (Profile Access) API-eindpunt
-topic-legacy: guide
 type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met behulp van RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 0%

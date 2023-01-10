@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;verenigd profiel;verenigd profiel;verenigd;Profiel;rtcp;inschakelen profiel;Profiel inschakelen;Unieschema;UNION-PROFIEL;verenigingsprofiel
 title: UI-gids Unieschema
-topic-legacy: guide
 type: Documentation
 description: In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema's voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema's te bekijken en te onderzoeken gebruikend het Platform UI.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 0%

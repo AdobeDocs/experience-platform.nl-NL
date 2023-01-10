@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd profiel;profiel;rtcp;inschakelen profiel;Inschakelen profiel;Unieschema;UNION-PROFIEL;vakbondsprofiel
 title: Gebruikersgids voor realtime gebruikersprofiel
-topic-legacy: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Customer Profile in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1875'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Privacy Service- en Experience Cloud-toepassingen
-topic-legacy: overview
 description: Dit document bevat een referentie voor het configureren van verschillende Experience Cloud-toepassingen voor bewerkingen met betrekking tot privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 5%

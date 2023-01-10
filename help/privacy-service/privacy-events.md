@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Abonneren op Privacy Service Events
-topic-legacy: privacy events
 description: Leer hoe te om aan de gebeurtenissen van de Privacy Service in te schrijven gebruikend een vooraf gevormde webhaak.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 1%

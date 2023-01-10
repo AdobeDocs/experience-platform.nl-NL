@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd;profiel;rtcp;XDM-grafieken
 title: Real-Time overzicht van klantprofiel
-topic-legacy: guide
 description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 0%

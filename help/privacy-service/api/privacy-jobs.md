@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: API-eindpunt voor privacytaken
-topic-legacy: developer guide
 description: Leer hoe u privacytaken voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 0%

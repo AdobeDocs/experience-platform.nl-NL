@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: Hoe te om een Berekend Veld van Attributen te vormen
-topic-legacy: guide
 type: Documentation
 description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit gebied kan worden gecreeerd gebruikend de Registratie API van het Schema om een schema en een groep van het douanegebied te bepalen die het gegevens verwerkte attributengebied zal houden.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%

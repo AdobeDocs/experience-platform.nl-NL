@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Privacy Service probleemoplossingsgids
-topic-legacy: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over Privacy Service en informatie over veelvoorkomende fouten in de API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 0%
@@ -66,7 +65,7 @@ Zie de handleiding voor meer informatie over het opgeven van identiteitsgegevens
 
 ## Kan ik gebruiken [!DNL Privacy Service] om gegevens op te schonen die per ongeluk zijn verzonden naar [!DNL Platform]?
 
-Adobe ondersteunt het gebruik van [!DNL Privacy Service] voor het wissen van gegevens die per ongeluk bij een product zijn ingediend. [!DNL Privacy Service] is ontworpen om u te helpen bij het voldoen aan uw verplichtingen voor toegang tot of het verwijderen van verzoeken van betrokkenen (of consumenten). Deze verzoeken zijn tijdgevoelig en worden met betrekking tot het toepasselijke privacyrecht afgerond. Het indienen van verzoeken die geen toegang tot of verwijderingsverzoeken voor betrokkenen/consumenten zijn, heeft gevolgen voor alle [!DNL Privacy Service] klanten en de mogelijkheden voor [!DNL Privacy Service] de passende wettelijke termijnen te ondersteunen.
+Adobe ondersteunt het gebruik van [!DNL Privacy Service] voor het wissen van gegevens die per ongeluk bij een product zijn ingediend. [!DNL Privacy Service] is ontworpen om u te helpen bij het voldoen aan uw verplichtingen voor toegang tot of het verwijderen van verzoeken van betrokkenen (of consumenten). Deze verzoeken zijn tijdgevoelig en zijn afgerond in verband met het toepasselijke privacyrecht. Het indienen van verzoeken die geen toegang tot of verwijderingsverzoeken voor betrokkenen/consumenten zijn, heeft gevolgen voor alle [!DNL Privacy Service] klanten en de mogelijkheden voor [!DNL Privacy Service] de passende wettelijke termijnen te ondersteunen.
 
 Neem contact op met uw accountmanager (CDM) om problemen met PII&#39;s of gegevens te coördineren en een inspanningsniveau te bieden.
 
@@ -88,7 +87,7 @@ De [!DNL Privacy Service] API en gebruikersinterface bieden beide methoden voor 
 
 ### De API gebruiken
 
-Een aanvraag indienen bij de hoofdmap (`GET /`) in de [!DNL Privacy Service] API, met de id van de taak waarvan u de resultaten wilt downloaden in het aanvraagpad. Als de status van de taak is voltooid, bevat de API een `downloadURL` in de reactiehoofdtekst. Dit kenmerk bevat een URL die u in de adresbalk van uw browser kunt plakken om het ZIP-bestand te downloaden.
+Een aanvraag indienen bij de hoofdmap (`GET /`) in de [!DNL Privacy Service] API, met de id van de taak waarvan u de resultaten wilt downloaden in het aanvraagpad. Als de status van de taak is voltooid, bevat de API een `downloadURL` in de hoofdtekst van de reactie. Dit kenmerk bevat een URL die u in de adresbalk van uw browser kunt plakken om het ZIP-bestand te downloaden.
 
 Zie de sectie over [een taak zoeken op basis van de id](api/privacy-jobs.md#check-the-status-of-a-job) in de [!DNL Privacy Service] API-handleiding.
 

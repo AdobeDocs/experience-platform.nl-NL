@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: API-eindpunt voor toestemming
-topic-legacy: developer guide
 description: Leer hoe u verzoeken om toestemming van klanten voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%

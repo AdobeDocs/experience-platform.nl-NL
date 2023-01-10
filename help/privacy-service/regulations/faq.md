@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;Regulation;Regulations;Regulations;Regulations;Privacy;Privacy; Privacy;
 solution: Experience Platform
 title: Veelgestelde vragen over privacyregels
-topic-legacy: troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteunde wettelijke privacyregels en de toepassing ervan in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
@@ -19,7 +17,7 @@ In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteun
 
 >[!NOTE]
 >
->Definities voor de verschillende termen die in dit document worden gebruikt, vindt u in de [handleiding voor privacyregelgeving](terminology.md).
+>Definities voor de verschillende termen die in dit document worden gebruikt, zijn te vinden in de [terminologie van privacyregelgeving](terminology.md) hulplijn.
 
 ## Algemene vragen
 
@@ -27,7 +25,7 @@ De volgende vragen hebben betrekking op alle privacyregels die door Experience C
 
 ### Welke gevolgen hebben de ondersteunde privacyregels?
 
-De [privacyregels die worden ondersteund door Experience Cloud](./overview.md) zijn van toepassing op alle organisaties die de persoonsgegevens van burgers opslaan en verwerken binnen de respectieve rechtsgebieden van de regelgeving, ongeacht de geografische locatie van de organisatie.
+De [privacyregels ondersteund door Experience Cloud](./overview.md) van toepassing zijn op alle organisaties die de persoonsgegevens van burgers opslaan en verwerken binnen de respectieve rechtsgebieden van de verordeningen, ongeacht de geografische locatie van de organisatie.
 
 ### Wat zijn persoonlijke gegevens?
 
@@ -49,19 +47,19 @@ Persoonlijke informatie kan ook informatie over internet of andere elektronische
 * Zoekgeschiedenis
 * Informatie over de interactie van een consument met een website, toepassing of advertentie
 
-Hoewel de privacyregels een groot aantal persoonlijke gegevens bestrijken, wordt in de standaardcontractvoorwaarden van Adobe bepaald dat gevoelige persoonlijke gegevens (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mogen worden ingevoerd en gebruikt in Experience Cloud-toepassingen.
+Hoewel de privacyregels betrekking hebben op persoonlijke informatie, is in een breed scala aan standaardcontractvoorwaarden bepaald dat gevoelige persoonlijke informatie (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mag worden ingevoerd en gebruikt in Experience Cloud-toepassingen.
 
 ### Wat is het verschil tussen een gegevenscontroller en een gegevensverwerker?
 
-Een **gegevenscontroller** is de entiteit die het doel, de voorwaarden en de wijze van verwerking van persoonsgegevens bepaalt, terwijl de **gegevensverwerker** een entiteit is die persoonsgegevens verwerkt namens de gegevensverwerker.
+A **gegevenscontroller** de entiteit is die het doel, de voorwaarden en de middelen voor de verwerking van persoonsgegevens bepaalt, terwijl de **gegevensverwerker** een entiteit is die namens de voor de verwerking verantwoordelijke persoonsgegevens verwerkt.
 
-Een **gegevenscontroller** is de persoon of organisatie die de bevoegdheid en verantwoordelijkheid heeft om beslissingen te nemen met betrekking tot het verzamelen, gebruiken of openbaar maken van persoonsgegevens. Een **gegevensverwerker** is de persoon of organisatie die werkt met betrekking tot het verzamelen, gebruiken of openbaar maken van de persoonsgegevens en de richting van de gegevensverwerkingsverantwoordelijke.
+A **gegevenscontroller** de persoon of organisatie is die de bevoegdheid en verantwoordelijkheid heeft om besluiten te nemen met betrekking tot het verzamelen, gebruiken of openbaar maken van persoonsgegevens. A **gegevensverwerker** de persoon of organisatie is die werkzaam is met betrekking tot het verzamelen, gebruiken of openbaar maken van de persoonsgegevens en de leiding van de verantwoordelijke voor de verwerking.
 
 ### Wat is het verschil tussen expliciete en ondubbelzinnige toestemming van de betrokkene?
 
-**De uitdrukkelijke** instemming heeft betrekking op een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige indicatie van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga ermee akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
+**Expliciete toestemming** verwijst naar een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige aanduiding van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
 
-**Ondubbelzinnige (impliciete)** instemming heeft betrekking op toestemming die niet expliciet door de betrokkene is gegeven, maar die niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een bedrijfswebsite wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als ondubbelzinnige toestemming te worden beschouwd.
+**ondubbelzinnige (impliciete) toestemming** verwijst naar toestemming die niet expliciet door de betrokkene is gegeven, maar niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een bedrijfswebsite wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als ondubbelzinnige toestemming te worden beschouwd.
 
 Voor veel verordeningen zoals de GDPR is uitdrukkelijke toestemming vereist voor de verwerking van gevoelige persoonsgegevens, waarbij niets anders dan &quot;opt in&quot; voldoende is. Voor niet-gevoelige gegevens is echter ondubbelzinnige (impliciete) toestemming aanvaardbaar.
 
@@ -85,7 +83,7 @@ Ervan uitgaande dat het bedrijf persoonlijke informatie heeft verzameld en dat h
 | Verordening | Compatibiliteitsvenster | Notities |
 | --- | --- | --- |
 | CCPA (Californië) | 45 dagen |  |
-| GDPR (Europese Unie) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken zijn ingediend door dezelfde betrokkene, kan het verzoek worden verlengd tot 60 dagen. |
+| GDPR (Europese Unie) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
 | LGPD (Brazilië) | 15 dagen |  |
 | PDPA (Thailand) | 30 dagen | Als een onderneming niet binnen het nalevingsvenster op het verzoek van een betrokkene kan reageren, krijgt de onderneming een extra termijn van 30 dagen vanaf de datum waarop zij het verzoek om schriftelijk aan de betrokkene te antwoorden niet kon inwilligen. |
 
@@ -105,7 +103,7 @@ Als de gegevensbewerkingen van uw organisatie onder de rechtsbevoegdheid van de 
 
 ### Hoe kan ik verzoeken om privacy van consumenten ondersteunen als ik gegevens bijhoud die onder privacyregels vallen?
 
-Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de aangewezen wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie [[!DNL Privacy Service] overzicht](../home.md) voor meer informatie. Voor informatie over hoe uw bepaalde toepassingen van de Experience Cloud privacyverzoeken kunnen respecteren, gelieve te verwijzen naar de gids op [Privacy Service en Experience Cloud toepassingen](../experience-cloud-apps.md).
+Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de aangewezen wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie de [[!DNL Privacy Service] overzicht](../home.md) voor meer informatie . Voor informatie over hoe uw specifieke Experience Cloud-toepassingen privacyverzoeken kunnen naleven, raadpleegt u de handleiding op [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -119,14 +117,14 @@ De volgende vragen hebben specifiek betrekking op de CCPA.
 
 Zoals bepaald door CCPA, zijn de volgende rollen op Adobe en zijn klanten van toepassing:
 
-* Adobe klanten (de partij die om de inzameling en het gebruik van persoonlijke informatie van de ingezetenen van Californië verzoekt) zouden als **Zaken** worden beschouwd.
-* Adobe zou, in zijn rol van het verlenen van de dienst, als **Service Provider** worden beschouwd.
+* De klanten van Adobe (de partij die om de inzameling en het gebruik van persoonlijke informatie van de ingezetenen van Californië verzoekt) zouden als a worden beschouwd **Zakelijk**.
+* Adobe zou in zijn hoedanigheid van dienstverlener worden beschouwd als een **Serviceprovider**.
 
 Als dienstverlener, verzamelt en verwerkt Adobe persoonlijke informatie namens de Zaken en is contractueel gebonden om die informatie slechts voor de specifieke doeleinden te gebruiken die in de overeenkomst worden vermeld.
 
 Gezien deze relatie en de taal van het Adobe contract zou openbaarmaking van informatie aan Adobe waarschijnlijk niet worden beschouwd als een &quot;verkoop&quot; waarvoor bedrijven een kennisgeving moeten doen en toestemming moeten vragen.
 
-De diensten van de Adobe kunnen echter worden gebruikt om bepaalde gegevensuitwisseling en doorgifte aan derden mogelijk te maken. Deze overdrachten door derden kunnen worden beschouwd als een &quot;verkoop&quot; en vereisen wettelijk openbaarmaking en toestemming. Klanten moeten met hun juridische adviseur samenwerken om specifieke gebruiksgevallen te evalueren om toepasselijke vereisten te beoordelen.
+Adobe-services kunnen echter worden gebruikt om bepaalde gegevens te delen en over te dragen aan derden. Deze overdrachten door derden kunnen worden beschouwd als een &quot;verkoop&quot; en vereisen wettelijk openbaarmaking en toestemming. Klanten moeten met hun juridische adviseur samenwerken om specifieke gebruiksgevallen te evalueren om toepasselijke vereisten te beoordelen.
 
 ### Biedt Adobe andere hulpmiddelen aan die in het richten van vereisten kunnen nuttig zijn CCPA?
 
@@ -140,7 +138,7 @@ De volgende vragen hebben specifiek betrekking op de GDPR.
 
 ### Wat is het verschil tussen een verordening en een richtlijn?
 
-Een **verordening** is een bindend wetgevingsbesluit en moet in de gehele EU worden toegepast. Een **richtlijn** is een wetgevingshandeling waarin een doel wordt vastgelegd dat alle EU-landen moeten bereiken, maar het is aan de afzonderlijke landen om te beslissen hoe ze dat willen.
+A **verordening** is een bindend wetgevingsbesluit en moet in de gehele EU worden toegepast. A **richtlijn** Het is een wetgevingshandeling waarin een doel wordt vastgesteld dat alle EU-landen moeten bereiken, maar het is aan de afzonderlijke landen om zelf te beslissen hoe ze dat willen.
 
 Het is belangrijk om op te merken dat de GDPR een verordening is, in tegenstelling tot de eerdere wetgeving (de richtlijn gegevensbescherming), die een richtlijn is.
 

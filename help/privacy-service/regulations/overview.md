@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy; Privacy;
 solution: Experience Platform
 title: Overzicht van privacy Regulations
-topic-legacy: troubleshooting
 description: Dit document biedt een overzicht van de verschillende privacyregels die door Adobe Experience Cloud worden ondersteund.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 0%
