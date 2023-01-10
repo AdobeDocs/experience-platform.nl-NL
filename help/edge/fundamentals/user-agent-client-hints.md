@@ -2,13 +2,13 @@
 title: Client-tips voor gebruikersagent
 description: Leer hoe de gebruikers-agent de Hints van de Cliënt in Web SDK werken
 keywords: user-agent;client hints; tekenreeks; user-agent string; lage entropie; hoge entropie
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1065'
 ht-degree: 2%
 
 ---
-
 
 # Client-tips voor gebruikersagent
 
@@ -32,9 +32,9 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Softwareversie | 105 |
 | Volledige softwareversie | 105.0.0.0 |
 | Naam van lay-outengine | AppleWebKit |
-| Versie van lay-outengine | 537,36 |
+| Versie van lay-outengine | 537.36 |
 | Besturingssysteem | Mac OS X |
-| Versie besturingssysteem | 10.15.7. |
+| Versie besturingssysteem | 10.15.7 |
 | Apparaat | Intel Mac OS X 10_15_7 |
 
 ## Gebruiksscenario’s {#use-cases}
@@ -116,13 +116,7 @@ Als u geen hoge entropieclientiptips inschakelt in uw omgeving, werken de Adobe 
 
 ### Adobe Analytics rapporteert op basis van hoge entropclient-hints {#analytics}
 
-De volgende Adobe Analytics-rapporten werken niet als de hoge entropiecliptips zijn uitgeschakeld.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [Browsertype](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Besturingssysteem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Typen besturingssystemen](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Mobiele afmetingen](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+De [Besturingssysteem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) dimensie omvat de versie van het besturingssysteem die is opgeslagen als een hoge entropieclient-hint. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
 
 ### Audience Manager-eigenschappen die afhankelijk zijn van hoge entropieclientiptips {#aam}
 
