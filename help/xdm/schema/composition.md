@@ -2,12 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;enum;mixin;Veldgroep;Veldgroepen;mixins;Gegevenstypen;Gegevenstypen;Gegevenstype;Primaire identiteit;XDM individueel profiel;XDM velden;enum datatype;Experience gebeurtenis;XDM Experience Event;XDM ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;schema;design;klasse;Class klassen;Klassen;datatype;Datatype;gegevenstype;Gegevenstype;schema's;Schema's;Identiteitskaart;Identiteitskaart;Schemaontwerp;Kaart;Verenigingsschema;Vereniging
 solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
-topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
 workflow-type: tm+mt
-source-wordcount: '4062'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -88,7 +87,7 @@ Een voorbeeld van een eenvoudige identiteitskaart zou als het volgende kijken:
   "email": [
     {
       "id": "jsmith@example.com",
-      "primary": false
+      "primary": true
     }
   ],
   "ECID": [
@@ -101,10 +100,10 @@ Een voorbeeld van een eenvoudige identiteitskaart zou als het volgende kijken:
       "primary": false
     }
   ],
-  "loyaltyId": [
+  "CRMID": [
     {
       "id": "2e33192000007456-0365c00000000000",
-      "primary": true
+      "primary": false
     }
   ]
 }
@@ -198,7 +197,7 @@ Veldgroepen definiëren met welke klasse(n) ze compatibel zijn op basis van het 
 
 [!DNL Experience Platform] omvat vele standaard Adobe gebiedsgroepen terwijl ook het toestaan van verkopers om gebiedsgroepen voor hun gebruikers te bepalen, en individuele gebruikers om gebiedsgroepen voor hun eigen specifieke concepten te bepalen.
 
-Als u bijvoorbeeld details wilt vastleggen, zoals &quot;[!UICONTROL First Name]&quot; en &quot;[!UICONTROL Home Address]&quot; voor je &quot;[!UICONTROL Loyalty Members]&quot; schema, zou u standaardgebiedsgroepen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Concepten die echter specifiek zijn voor minder gangbare gebruiksgevallen (zoals &quot;[!UICONTROL Loyalty Program Level]&quot;) hebben vaak geen vooraf gedefinieerde veldgroep. In dit geval moet u uw eigen veldgroep definiëren om deze gegevens vast te leggen.
+Als u bijvoorbeeld details wilt vastleggen, zoals &quot;[!UICONTROL First Name]&quot; en &quot;[!UICONTROL Home Address]&quot; voor je &quot;[!UICONTROL Loyalty Members]&quot; schema, zou u standaardgebiedsgroepen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Nochtans, concepten die specifieker voor uw organisatie (zoals de details van het douaneloyaliteitsprogramma of productattributen) zijn die niet door standaardgebiedsgroepen kunnen worden behandeld. In dit geval moet u uw eigen veldgroep definiëren om deze gegevens vast te leggen.
 
 >[!NOTE]
 >
