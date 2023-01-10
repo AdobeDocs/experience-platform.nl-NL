@@ -2,9 +2,9 @@
 title: Adobe Media Analytics (3.x SDK) voor overzicht van audio- en videoextensie
 description: Meer informatie over de Adobe Media Analytics (3.x SDK) voor de extensie van de tags Audio en Video in Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ De uitbreiding Media Analytics (MA) voegt de kernJavaScript Media SDK (Media 3.x
 
 >[!IMPORTANT]
 >
->Deze uitbreiding stelt met Media 3.x SDK op, die niet achterwaarts compatibel met Media 2.x SDK is. Als de pagina al de SDK van Media 2.x gebruikt, gebruikt u [Adobe Media Analytics voor audio- en video-extensie](../media-analytics/overview.md) in plaats van deze extensie.
+>Deze uitbreiding stelt met Media 3.x SDK op, die niet achterwaarts compatibel met Media 2.x SDK is. Aangezien 2.x is afgekeurd, moet u een update naar 3.x uitvoeren.
 
 Nadat u alle drie bovengenoemde uitbreidingen in uw markering-toegelaten project hebt omvat, kunt u op één van twee manieren te werk gaan:
 
