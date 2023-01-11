@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Diagnostiek gegevensinscriptiefout ophalen
 description: Dit document bevat informatie over het controleren van batch-inname, het beheren van fouten bij gedeeltelijke batch-inname en een verwijzing naar typen partiële batch-inname.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 1%
 
 ---
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwoord**
 
-Als de reactie succesvol is, worden JSON-objecten geretourneerd die `path` objecten waarin wordt aangegeven waar de diagnostiek is opgeslagen. De reactie retourneert de `path` objecten in [JSON Lines](https://jsonlines.org/) gebruiken.
+Als de reactie succesvol is, worden JSON-objecten geretourneerd die `path` objecten waarin wordt aangegeven waar de diagnostiek is opgeslagen. De reactie retourneert de `path` objecten in [JSON Lines](https://jsonlines.readthedocs.io/en/latest/) gebruiken.
 
 ```json
 {"path": "F1.json"}

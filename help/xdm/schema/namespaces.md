@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Naamruimte in XDM (Experience Data Model)
 description: Leer hoe het namespacing in het Model van de Gegevens van de Ervaring (XDM) u toestaat om uw schema's uit te breiden en gebiedsbotsingen te verhinderen aangezien de verschillende schemacomponenten samen worden gebracht.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ In de volgende secties ziet u hoe naamruimten worden toegewezen in XDM-syntaxis.
 
 De standaard XDM syntaxis verstrekt inzicht in hoe namespaces in schema&#39;s (met inbegrip van [hoe ze in Adobe Experience Platform worden vertaald](#compatibility)).
 
-Standaard XDM-gebruik [JSON-LD](https://json-ld.org/) syntaxis om naamruimten toe te wijzen aan velden. Deze naamruimte heeft de vorm van een URI (bijvoorbeeld `https://ns.adobe.com/xdm` voor de `xdm` namespace), of als steno prefix die in wordt gevormd `@context` kenmerk van een schema.
+Standaard XDM-gebruik [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) syntaxis om naamruimten toe te wijzen aan velden. Deze naamruimte heeft de vorm van een URI (bijvoorbeeld `https://ns.adobe.com/xdm` voor de `xdm` namespace), of als steno prefix die in wordt gevormd `@context` kenmerk van een schema.
 
 Hier volgt een voorbeeldschema voor een product in de standaard XDM-syntaxis. Met uitzondering van `@id` (de unieke id zoals gedefinieerd door de specificatie JSON-LD), elk veld onder `properties` begint met een naamruimte en eindigt met de veldnaam. Als u een korte prefix gebruikt die onder `@context`, de naamruimte en de veldnaam worden gescheiden door een dubbele punt (`:`). Als u geen voorvoegsel gebruikt, worden de naamruimte en de veldnaam gescheiden door een schuine streep (`/`).
 
@@ -75,7 +75,7 @@ Hier volgt een voorbeeldschema voor een product in de standaard XDM-syntaxis. Me
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `@context` | Een object dat de steno-voorvoegsels definieert die kunnen worden gebruikt in plaats van een volledige naamruimte-URI onder `properties`. |
-| `@id` | Een unieke id voor de record, zoals gedefinieerd door de [JSON-LD spec](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | Een unieke id voor de record, zoals gedefinieerd door de [JSON-LD spec](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | Een voorbeeld van een veld dat een voorvoegsel uit de steno gebruikt om een naamruimte aan te duiden. In dit geval: `xdm` is de naamruimte (`https://ns.adobe.com/xdm`), en `sku` is de veldnaam. |
 | `https://ns.adobe.com/xdm/channels/application` | Een voorbeeld van een veld dat de volledige naamruimte-URI gebruikt. In dit geval: `https://ns.adobe.com/xdm/channels` de naamruimte is, en `application` is de veldnaam. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Velden die worden geleverd door bronnen van leveranciers, gebruiken hun eigen unieke naamruimten. In dit voorbeeld: `https://ns.adobe.com/vendorA/product` de naamruimte van de leverancier is, en `stockNumber` is de veldnaam. |
