@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Het geplande Eindpunt van Vragen API
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -311,7 +311,7 @@ De PATCH-aanvraag ondersteunt twee verschillende paden: `/state` en `/schedule/s
 
 ### Geplande querystatus bijwerken
 
-U kunt `/state` om de staat van de geselecteerde geplande vraag bij te werken - INGESCHAKELD of UITGESCHAKELD. Als u de status wilt bijwerken, moet u de waarde instellen op `enable` of `disable`.
+U kunt de status van de geselecteerde geplande query bijwerken door het dialoogvenster `path` eigenschap aan `/state` en de `value` eigenschap als ofwel `enable` of `disable`.
 
 **API-indeling**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
+| `op` | De bewerking die op het queryprogramma moet worden uitgevoerd. De geaccepteerde waarde is `replace`. |
 | `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de geplande staat van de vraag bijwerkt, moet u de waarde van plaatsen `path` tot `/state`. |
 | `value` | De bijgewerkte waarde van de `/state`. Deze waarde kan worden ingesteld als `enable` of `disable` om de geplande query in of uit te schakelen. |
 
@@ -363,7 +364,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Geplande queryplanning bijwerken
 
-U kunt `/schedule/schedule` om het cron programma van de geplande vraag bij te werken. Lees voor meer informatie over de cron-planningen de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
+U kunt het bijsnijdschema van de geplande query bijwerken door het dialoogvenster `path` eigenschap aan `/schedule/schedule` in de verzoekende instantie. Lees voor meer informatie over de cron-planningen de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
 
 **API-indeling**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
+| `op` | De bewerking die op het queryprogramma moet worden uitgevoerd. De geaccepteerde waarde is `replace`. |
 | `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u het geplande programma van de vraag bijwerkt, moet u de waarde van plaatsen `path` tot `/schedule/schedule`. |
 | `value` | De bijgewerkte waarde van de `/schedule`. Deze waarde moet de vorm hebben van een uitsnijdschema. Dus, in dit voorbeeld, zal de geplande vraag elk uur bij het 45 minieme teken in werking stellen. |
 

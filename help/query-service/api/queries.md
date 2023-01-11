@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor query's
 description: De volgende secties lopen door vraag u het gebruiken van het /query eindpunt in de Dienst API van de Vraag kunt maken.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,9 +295,9 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 >
 >U kunt de waarde van `_links.cancel` tot [uw gemaakte query annuleren](#cancel-a-query).
 
-### Een query annuleren
+### Een query annuleren of verwijderen op een andere manier
 
-U kunt verzoeken om een opgegeven query te verwijderen door een PATCH-aanvraag in te dienen bij de `/queries` eindpunt en het verstrekken van de vraag `id` waarde in het aanvraagpad.
+U kunt verzoeken om een opgegeven query te annuleren of te verwijderen door een PATCH-aanvraag in te dienen bij de `/queries` eindpunt en het verstrekken van de vraag `id` waarde in het aanvraagpad.
 
 **API-indeling**
 
@@ -305,9 +305,9 @@ U kunt verzoeken om een opgegeven query te verwijderen door een PATCH-aanvraag i
 PATCH /queries/{QUERY_ID}
 ```
 
-| Eigenschap | Beschrijving |
+| Parameter | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_ID}` | De `id` De waarde van de query die u wilt annuleren. |
+| `{QUERY_ID}` | De `id` waarde van de vraag u de verrichting wilt uitvoeren op. |
 
 
 **Verzoek**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `op` | Als u de query wilt annuleren, moet u de parameter op met de waarde instellen `cancel `. |
+| `op` | Het type bewerking dat op de bron moet worden uitgevoerd. Accepteerde waarden zijn `cancel` en `soft_delete`. Als u de query wilt annuleren, moet u de parameter op met de waarde instellen `cancel `. Merk op dat de zachte schrappingsverrichting de vraag tegenhoudt van zijn teruggekeerd op verzoeken van de GET maar schrapt het niet van het systeem. |
 
 **Antwoord**
 

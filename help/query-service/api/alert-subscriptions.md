@@ -2,9 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;alarm;
 title: API-eindpunt voor abonnementen waarschuwen
 description: Deze gids verstrekt steekproefHTTP- verzoeken en reacties voor diverse API vraag u aan het waakzame abonnementseindpunt met de Dienst API van de Vraag kunt maken.
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
+source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2668'
 ht-degree: 0%
 
 ---
@@ -49,7 +50,23 @@ Hiermee wordt een lijst met alle waarschuwingen voor een organisatie-sandbox opg
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+| Eigenschap | Beschrijving |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | (Facultatief) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). De beschikbare parameters worden hieronder weergegeven. |
+
+**Parameters query**
+
+Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van query&#39;s. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle vragen terugwinnen beschikbaar voor uw organisatie.
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `orderby` | Het veld dat de volgorde van de resultaten aangeeft. De ondersteunde velden zijn `created` en `updated`. De eigenschapsnaam vooraf samenvoegen met `+` voor oplopende en `-` voor aflopende volgorde. De standaardwaarde is `-created`. Het plusteken (`+`) moet worden afgeschaft `%2B`. Bijvoorbeeld `%2Bcreated` is de waarde voor een oplopende gemaakte volgorde. |
+| `pagesize` | Gebruik deze parameter om het aantal verslagen te controleren u van de API vraag per pagina wilt halen. De standaardlimiet is ingesteld op een maximum van 50 records per pagina. |
+| `page` | Geef het paginanummer op van de geretourneerde resultaten waarvoor u de records wilt zien. |
+| `property` | De resultaten filteren op basis van gekozen velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. Met de volgende eigenschappen kunt u filteren: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> De ondersteunde operatoren zijn `==` (gelijk aan). Bijvoorbeeld: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert de waarschuwing met een overeenkomende id. |
 
 **Verzoek**
 
@@ -283,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `ALERT_TYPE` | Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
+| `ALERT_TYPE` | This property describes the state of query implementation that triggers an alert. Het antwoord bevat alleen waarschuwingsabonnementsgegevens voor dit type waarschuwingen. Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: Hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: Meldt de gebruiker wanneer de query is voltooid.</li><li>`failure`: Hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
 | `QUERY_ID` | De unieke id voor de query die moet worden bijgewerkt. |
 | `SCHEDULE_ID` | De unieke id voor de geplande query die moet worden bijgewerkt. |
 
@@ -370,6 +387,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parameters | Beschrijving |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Een e-mailadres dat is geregistreerd voor een Adobe-account, wordt gebruikt om de gebruikers te identificeren die zijn geabonneerd op waarschuwingen. |
+| `orderby` | Het veld dat de volgorde van de resultaten aangeeft. De ondersteunde velden zijn `created` en `updated`. De eigenschapsnaam vooraf samenvoegen met `+` voor oplopende en `-` voor aflopende volgorde. De standaardwaarde is `-created`. Het plusteken (`+`) moet worden afgeschaft `%2B`. Bijvoorbeeld `%2Bcreated` is de waarde voor een oplopende gemaakte volgorde. |
+| `pagesize` | Gebruik deze parameter om het aantal verslagen te controleren u van de API vraag per pagina wilt halen. De standaardlimiet is ingesteld op een maximum van 50 records per pagina. |
+| `page` | Geef het paginanummer op van de geretourneerde resultaten waarvoor u de records wilt zien. |
+| `property` | De resultaten filteren op basis van gekozen velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De volgende eigenschappen staan filtering toe: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> De ondersteunde operatoren zijn `==` (gelijk aan). Bijvoorbeeld: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert de waarschuwing met een overeenkomende id. |
 
 **Verzoek**
 
