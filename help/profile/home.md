@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-Time overzicht van klantprofiel
 description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2098'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ De verhouding tussen het Profiel van de Klant in real time en andere diensten bi
 
 ### Samenstelling van profielentiteit
 
-Een Real-Time Klantprofiel bestaat uit een hoofdentiteit, de **primaire entiteit** en diverse ondersteunende entiteiten. De primaire entiteit bestaat uit eigenschappen, gedrag, en segmentlidmaatschap van een profiel. Andere entiteiten staan de segmenteringsmotor toe om gegevens buiten de primaire entiteit van het profiel te gebruiken, en omvatten het volgende:
+Een Real-Time Klantprofiel bestaat uit een hoofdentiteit, de **primaire entiteit** en diverse ondersteunende entiteiten. In de context van Experience Platform is de primaire entiteit doorgaans een **profielentiteit**, die bestaat uit eigenschappen, gedrag, en segmentlidmaatschap van een individuele persoon. Andere entiteiten staan de segmenteringsmotor toe om gegevens buiten de primaire entiteit van het profiel te gebruiken, en omvatten het volgende:
 
 - **Maateenheid**: De entiteit die wordt gebruikt om het proces voor gegevensmodellering voor informatie te vereenvoudigen die over gebeurtenissen of profielverslagen wordt gedeeld. Dit wordt ook wel de opgezochte entiteit of classificatieentiteit genoemd.
 - **B2B-entiteit**: Entiteiten die de verhouding van het profiel met zaken-aan-zaken rekeningen en kansen beschrijven.
@@ -36,6 +36,11 @@ Een Real-Time Klantprofiel bestaat uit een hoofdentiteit, de **primaire entiteit
 >[!IMPORTANT]
 >
 >Aangezien dimensionale en B2B-entiteiten alleen buiten de primaire entiteit bestaan, worden deze alleen gebruikt voor batchsegmentatie.
+
+Maateenheden en B2B-entiteiten zijn via **schema-relaties**. Raadpleeg de volgende documentatie voor meer informatie:
+
+- [Creeer een één-op-één schemaverhouding voor raadplegingsentiteiten](../xdm/tutorials/relationship-ui.md)
+- [Creeer een vele-aan-één schemaverhouding voor B2B-entiteiten](../xdm/tutorials/relationship-b2b.md)
 
 ### Profielgegevensopslag
 

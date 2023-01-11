@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2718'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ Als u eenmaal een Europese beoordelingsruimte hebt gecreëerd om de essentiële 
 | Categorie | Beschrijving |
 | --- | --- |
 | Profielentiteiten | Profielentiteiten vertegenwoordigen kenmerken die betrekking hebben op een individuele persoon, doorgaans een klant. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door middel van schema&#39;s die zijn gebaseerd op de **[!DNL XDM Individual Profile]class**. |
-| Entiteiten opzoeken | Opzoekentiteiten zijn concepten die betrekking kunnen hebben op een individuele persoon, maar die niet rechtstreeks kunnen worden gebruikt om de persoon te identificeren. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door middel van schema&#39;s op basis van **aangepaste klassen**. |
+| Entiteiten opzoeken | Opzoekentiteiten zijn concepten die betrekking kunnen hebben op een individuele persoon, maar die niet rechtstreeks kunnen worden gebruikt om de persoon te identificeren. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door middel van schema&#39;s op basis van **aangepaste klassen** en zijn gekoppeld aan profielen en gebeurtenissen via [schema-relaties](../tutorials/relationship-ui.md). |
 | Gebeurtenisentiteiten | Gebeurtenisentiteiten vertegenwoordigen concepten met betrekking tot acties die een klant kan uitvoeren, systeemgebeurtenissen of andere concepten waarbij u wijzigingen in de loop van de tijd wilt bijhouden. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door middel van schema&#39;s die zijn gebaseerd op de **[!DNL XDM ExperienceEvent]class**. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -186,7 +186,7 @@ De categorie waarop een entiteit is gesorteerd, moet de XDM-klasse bepalen waaro
 
 * Profielentiteiten moeten de opdracht [!DNL XDM Individual Profile] klasse.
 * Gebeurtenisentiteiten moeten de [!DNL XDM ExperienceEvent] klasse.
-* Bij opzoeken moeten entiteiten aangepaste XDM-klassen gebruiken die door uw organisatie zijn gedefinieerd.
+* Bij opzoeken moeten entiteiten aangepaste XDM-klassen gebruiken die door uw organisatie zijn gedefinieerd. Profiel- en gebeurtenisentiteiten kunnen dan via schemarelaties verwijzen naar deze opzoekentiteiten.
 
 >[!NOTE]
 >

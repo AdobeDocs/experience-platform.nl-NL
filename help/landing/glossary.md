@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7913'
+source-wordcount: '7923'
 ht-degree: 0%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 0%
 
 **Bibliotheek**: In de context van tags is een bibliotheek een set bedrijfslogica die instructies bevat voor hoe de tagbibliotheek zich moet gedragen op het clientapparaat.
 
-**Entiteiten opzoeken**: In de context van gegevensmodellering, vertegenwoordigen de raadplegingsentiteiten concepten die op een individuele persoon kunnen betrekking hebben, maar niet direct kunnen worden gebruikt om het individu te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op de klassen van het Model van de Gegevens van de Douane van de Ervaring (XDM) worden gebaseerd.
+**Entiteiten opzoeken**: In de context van gegevensmodellering, vertegenwoordigen de raadplegingsentiteiten concepten die op een individuele persoon kunnen betrekking hebben, maar niet direct kunnen worden gebruikt om het individu te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op de klassen van het Model van de Gegevens van de Douane van de Ervaring (XDM) worden gebaseerd, en met een profielentiteit verbonden door een [schemarelatie](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
