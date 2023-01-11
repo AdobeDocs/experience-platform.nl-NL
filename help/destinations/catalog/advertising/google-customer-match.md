@@ -3,9 +3,9 @@ keywords: Google klant match;Google klant match;Google Customer Match
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
+source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1736'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) Hiermee kunt u uw online- en offlinegegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere Google-eigendommen, zoals: [!DNL Search], [!DNL Shopping], [!DNL Gmail], en [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) Hiermee kunt u uw online- en offlinegegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere Google-eigendommen, zoals: [!DNL Search], [!DNL Shopping], [!DNL Gmail], en [!DNL YouTube].
 
 ![Google Customer Match-bestemming in de gebruikersinterface van Adobe Experience Platform.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -69,7 +69,7 @@ Controleer vervolgens of [!DNL Google] account is geconfigureerd voor een [!DNL 
 
 ### Lijst van gewenste personen {#allowlist}
 
-Voordat u het dialoogvenster [!DNL Google Customer Match] doel in Experience Platform, zorg ervoor uw [!DNL Google Ads] voldoet aan de [Beleid voor afstemming van Google-klanten](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Voordat u het dialoogvenster [!DNL Google Customer Match] doel in Experience Platform, zorg ervoor uw [!DNL Google Ads] voldoet aan de [[!DNL Google Customer Match] beleid](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Klanten met compatibele accounts worden automatisch door Google aangeboden.
 
@@ -96,10 +96,10 @@ U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nem
 
 Raadpleeg de volgende secties in de documentatie bij Google voor meer informatie over de hashingvereisten voor Google en andere activeringsbeperkingen:
 
-* [[!DNL Customer Match] met e-mailadres, adres of gebruikersnaam](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
-* [[!DNL Customer Match] overwegingen](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
-* [Klanten komen overeen met telefoonnummer](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
-* [Klanten komen overeen met mobiele apparaat-id&#39;s](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
+* [[!DNL Customer Match] met e-mailadres, adres of gebruikersnaam](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match] overwegingen](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
+* [[!DNL Customer Match] met telefoonnummer](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match] met mobiele apparaat-id&#39;s](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
 Als u meer wilt weten over het invoeren van e-mailadressen in Experience Platform, raadpleegt u de [overzicht van batch-opname](../../../ingestion/batch-ingestion/overview.md) en de [overzicht van streaming opname](../../../ingestion/streaming-ingestion/overview.md).
@@ -209,5 +209,5 @@ Deze fout treedt op wanneer de klantenrekeningen niet aan [voorwaarden](#google-
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [Google Customer Match integreren - videozelfstudie](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+* [Integreren [!DNL Google Customer Match] - Videozelfstudie](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
 
