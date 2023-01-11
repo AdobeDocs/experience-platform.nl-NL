@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbronverbinding
 solution: Experience Platform
 title: Bovenliggende gegevens uit een Cloud Storage-systeem van derden verzamelen met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Apache Parquet-gegevens van een extern cloudopslagsysteem in te voeren.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 1%

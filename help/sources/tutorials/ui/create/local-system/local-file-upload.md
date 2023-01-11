@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;lokaal systeem;bestandsupload;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;
 solution: Experience Platform
 title: Creeer een Lokaal Dossier uploadt Bronschakelaar in UI
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een bronverbinding maakt voor uw lokale systeem om lokale bestanden naar het Platform te brengen
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 0%

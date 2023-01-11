@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;database;database van derden
 solution: Experience Platform
 title: Creeer een Dataflow voor de Bronnen van het Gegevensbestand Gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 0%

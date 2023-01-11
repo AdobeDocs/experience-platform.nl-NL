@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;servicenow;ServiceNow
 solution: Experience Platform
 title: Creeer een Verbinding van de Basis ServiceNow gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een ServiceNow-server met behulp van de Flow Service API.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%
@@ -37,7 +36,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL ServiceNow]moet u waarde
 | `endpoint` | Het eindpunt van het [!DNL ServiceNow] server. |
 | `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
 | `password` | Het wachtwoord waarmee verbinding moet worden gemaakt met de [!DNL ServiceNow] server voor verificatie. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL ServiceNow] is: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL ServiceNow] is: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [dit ServiceNow-document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 

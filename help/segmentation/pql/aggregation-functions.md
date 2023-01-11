@@ -2,11 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;samenvoegingsfuncties;samenvoeging;
 solution: Experience Platform
 title: PQL-aggregatiefuncties
-topic-legacy: developer guide
 description: Samenvoegfuncties worden gebruikt om meerdere waarden binnen PQL-arrays (Profile Query Language) te groeperen en één samenvattingswaarde te maken.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 3%
@@ -15,11 +13,11 @@ ht-degree: 3%
 
 # Samenvoegingsfuncties
 
-Samenvoegfuncties worden gebruikt om meerdere waarden binnen [!DNL Profile Query Language] (PQL) arrays te groeperen en één samenvattingswaarde te vormen. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Samenvoegfuncties worden gebruikt om meerdere waarden binnen [!DNL Profile Query Language] (PQL) tot één samenvattingswaarde. Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Aantal
 
-De functie `count` retourneert het aantal elementen binnen de opgegeven array.
+De `count` function retourneert het aantal elementen binnen de opgegeven array.
 
 **Indeling**
 
@@ -37,7 +35,7 @@ orders.count()
 
 ## Som
 
-De functie `sum` retourneert de som van alle geselecteerde waarden binnen de array.
+De `sum` Deze functie retourneert de som van alle geselecteerde waarden binnen de array.
 
 **Indeling**
 
@@ -55,7 +53,7 @@ orders.sum(order.price)
 
 ## Gemiddelde
 
-De functie `average` retourneert het rekenkundig gemiddelde van alle geselecteerde waarden binnen de array.
+De `average` Deze functie retourneert het rekenkundig gemiddelde van alle geselecteerde waarden binnen de array.
 
 **Indeling**
 
@@ -73,7 +71,7 @@ orders.average(order.price)
 
 ## Minimaal
 
-De functie `min` retourneert de kleinste van alle geselecteerde waarden binnen de array.
+De `min` Deze functie retourneert het kleinste van alle geselecteerde waarden binnen de array.
 
 **Indeling**
 
@@ -91,7 +89,7 @@ orders.min(order.price)
 
 ## Maximum
 
-De functie `max` retourneert de grootste van alle geselecteerde waarden binnen de array.
+De `max` functie retourneert de grootste van alle geselecteerde waarden binnen de array.
 
 **Indeling**
 
@@ -109,4 +107,4 @@ orders.max(order.price)
 
 ## Volgende stappen
 
-Nu u over samenvoegingsfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
+Nu u over samenvoegingsfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;emailAddress;xdm:emailAddress;email;email adres;datatype;data-type;data-type; data-type;
 solution: Experience Platform
 title: Gegevenstype e-mailadres
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor e-mailadressen.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: fe6abe468025ab3373f802954aedceeb1af625fe
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%

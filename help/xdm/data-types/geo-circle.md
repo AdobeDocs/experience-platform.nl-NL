@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;geo;circle;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype Geo-cirkel
-topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Geo Circle XDM.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 2%

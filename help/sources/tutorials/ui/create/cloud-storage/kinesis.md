@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Een Amazon Kinesis Source Connection maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Amazon Kinesis-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 1%

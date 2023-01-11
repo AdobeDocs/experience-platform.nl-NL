@@ -3,10 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;
 solution: Experience Platform
 title: De Middelen van het Schema in UI onderzoeken
 description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 0%

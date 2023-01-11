@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;enum;primaire identiteit;primaire identiteit;XDM individueel profiel;ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;schema ontwerp;best practices
 solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
-topic-legacy: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2695'
 ht-degree: 1%

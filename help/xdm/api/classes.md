@@ -3,9 +3,8 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem
 solution: Experience Platform
 title: Klassen API-eindpunt
 description: Het /classes eindpunt in de Registratie API van het Schema staat u toe om klassen programmatically te beheren XDM binnen uw ervaringstoepassing.
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1525'
 ht-degree: 0%

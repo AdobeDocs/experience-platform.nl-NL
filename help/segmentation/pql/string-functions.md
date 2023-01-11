@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;string functies;string;
 solution: Experience Platform
 title: PQL-tekenreeksfuncties
-topic-legacy: developer guide
 description: PQL (Profile Query Language) biedt functies om interactie met tekenreeksen eenvoudiger te maken.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 3%

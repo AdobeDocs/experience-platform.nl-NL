@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Data Lake Storage Gen2;azure data Lake storage;Azure
 solution: Experience Platform
 title: Een Azure Data Lake Storage Gen2 Base Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Azure Data Lake Storage Gen2 met behulp van de Flow Service API.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 1%
@@ -38,7 +37,7 @@ Om [!DNL Flow Service] Als u verbinding wilt maken met ADLS Gen2, moet u waarden
 | `servicePrincipalId` | De client-id van de toepassing. |
 | `servicePrincipalKey` | De sleutel van de toepassing. |
 | `tenant` | De huurdersinformatie die uw toepassing bevat. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 Zie voor meer informatie over deze waarden [dit ADLS Gen2-document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 

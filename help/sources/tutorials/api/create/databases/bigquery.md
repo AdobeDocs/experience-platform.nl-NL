@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
 title: Een Google BigQuery Base-verbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Google BigQuery met behulp van de Flow Service API.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 015a4fa06fc2157bb8374228380bb31826add37e
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 1%
@@ -39,7 +38,7 @@ Om [!DNL Flow Service] om verbinding te maken [!DNL Google BigQuery] aan Platfor
 | `clientSecret` | De geheime waarde die wordt gebruikt om het te produceren vernieuwt teken. |
 | `refreshToken` | Het vernieuwingstoken dat wordt verkregen van [!DNL Google] gebruikt om toegang te verlenen tot [!DNL Google BigQuery]. |
 | `largeResultsDataSetId` | De vooraf gemaakte  [!DNL Google BigQuery] dataset ID die wordt vereist om steun voor grote resultaatreeksen toe te laten. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Google BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Google BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 Raadpleeg deze voor meer informatie over deze waarden [[!DNL Google BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 

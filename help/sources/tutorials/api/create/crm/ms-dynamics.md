@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Een Microsoft Dynamics Base Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Platform met behulp van de Flow Service API kunt verbinden met een Microsoft Dynamics-account.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 1%
@@ -39,7 +38,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL Dynamics]moet u waarden 
 | `password` | Het wachtwoord voor uw [!DNL Dynamics] account. |
 | `servicePrincipalId` | De client-id van uw [!DNL Dynamics] account. Deze ID wordt vereist wanneer het gebruiken van de dienst hoofd en op sleutel-gebaseerde authentificatie. |
 | `servicePrincipalKey` | De geheime sleutel van de dienst belangrijkste geheim. Deze referentie wordt vereist wanneer het gebruiken van de dienst belangrijkste en op sleutel-gebaseerde authentificatie. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Dynamics] is: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Dynamics] is: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
 Ga voor meer informatie over aan de slag gaan [dit [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 

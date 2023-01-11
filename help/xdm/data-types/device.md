@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;apparaat;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype apparaat
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het apparaat.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 3%
@@ -25,11 +24,11 @@ ht-degree: 3%
 | `model` | Tekenreeks | De naam van het model voor het apparaat. Dit is de algemene, leesbare of marketingnaam voor het apparaat. De &quot;iPhone 6S&quot; is bijvoorbeeld een bepaald model voor mobiele telefoons. |
 | `modelNumber` | Tekenreeks | De unieke modelnummeraanduiding die door de fabrikant voor deze voorziening is toegekend. Modelnummers zijn geen versies, maar unieke id&#39;s die een bepaalde modelconfiguratie identificeren. |
 | `screenHeight` | Geheel | Het aantal verticale pixels van de actieve weergave van het apparaat in de standaardoriëntatie. |
-| `screenOrientation` | Tekenreeks | De huidige schermstand. Tot de geaccepteerde waarden behoren `portrait` en `landscape`. |
+| `screenOrientation` | Tekenreeks | De huidige schermstand. Inclusief geaccepteerde waarden `portrait` en `landscape`. |
 | `screenWidth` | Tekenreeks | Het aantal horizontale pixels van de actieve weergave van het apparaat in de standaardoriëntatie. |
 | `type` | Tekenreeks | Het type apparaat dat wordt bijgehouden. Tot de geaccepteerde waarden behoren: <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | Tekenreeks | Een id voor het apparaat. Dit kan een herkenningsteken van DeviceAtlas of een andere dienst zijn die de hardware identificeert die wordt gebruikt. |
-| `typeIDService` | Tekenreeks | De naamruimte van de service die wordt gebruikt om het apparaattype te identificeren. Zie [appendix](#typeIDService) voor meer informatie over toegestane waarden. |
+| `typeIDService` | Tekenreeks | De naamruimte van de service die wordt gebruikt om het apparaattype te identificeren. Zie de [aanhangsel](#typeIDService) voor meer informatie over toegestane waarden. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -40,11 +39,11 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 ## Aanhangsel
 
-De volgende sectie bevat aanvullende informatie over het gegevenstype [!UICONTROL Device].
+De volgende sectie bevat aanvullende informatie over de [!UICONTROL Device] gegevenstype.
 
 ## Geaccepteerde waarden voor typeIDService {#typeIDService}
 
-In de volgende tabel worden de geaccepteerde waarden voor `typeIDService` en de bijbehorende betekenissen weergegeven:
+In de volgende tabel worden de toegestane waarden voor `typeIDService` en de betekenis ervan:
 
 | Waarde | Beschrijving |
 | --- | --- |

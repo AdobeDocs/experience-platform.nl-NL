@@ -3,9 +3,8 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: XDM-velden definiëren in de gebruikersinterface
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
-topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1299'
 ht-degree: 2%

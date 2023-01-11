@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;oracle;eloqua;oracle eloqua
 solution: Experience Platform
 title: Een Eloqua-basisverbinding voor Oracles maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met Oracle Eloqua kunt verbinden met behulp van de Flow Service API.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 1%
@@ -37,7 +36,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Oracle Eloqua]moet u waarden op
 | `endpoint` | Het eindpunt van uw [!DNL Oracle Eloqua]. |
 | `username` | De gebruikersnaam van uw [!DNL Oracle Eloqua] account. De gebruikersnaam moet zijn opgemaakt als `siteName + \\ + username`, waarbij `siteName` is de bedrijfsnaam waarmee u zich hebt aangemeld [!DNL Oracle Eloqua] en `username` is uw gebruikersnaam. Uw gebruikersnaam voor aanmelding kan bijvoorbeeld: `adobe\\emily`. |
 | `password` | Het wachtwoord dat overeenkomt met uw [!DNL Oracle Eloqua] gebruikersnaam. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De waarde van de verbindingsspecificatie-id van het dialoogvenster [!DNL Oracle Eloqua] bron is vast als: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De waarde van de verbindingsspecificatie-id van het dialoogvenster [!DNL Oracle Eloqua] bron is vast als: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 Voor meer informatie over verificatiereferenties voor [!DNL Oracle Eloqua], zie de [[!DNL Oracle Eloqua] handleiding voor verificatie](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 

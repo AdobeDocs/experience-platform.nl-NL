@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;activeer binnenkomende gegevens;bevolk profiel;bevolkt rtcp;bevolkt verenigd profiel
 solution: Experience Platform
 title: Activeer Binnenkomende Brongegevens om Klantprofielen in UI te bevolken
-topic-legacy: overview
 type: Tutorial
 description: De binnenkomende gegevens van uw bronschakelaar kunnen worden gebruikt om uw gegevens van het Profiel van de Klant in real time te verrijken en te bevolken.
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -64,7 +63,7 @@ Met zowel die schema als dataset voor wordt toegelaten [!DNL Profile]Gegevens di
 
 >[!NOTE]
 >
->Bestaande gegevens binnen een onlangs toegelaten dataset worden niet verbruikt door [!DNL Profile].
+>Bestaande gegevens binnen een recent ingeschakelde gegevensset worden niet gebruikt door [!DNL Profile].
 
 ## Volgende stappen
 

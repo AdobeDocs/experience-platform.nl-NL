@@ -3,9 +3,8 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Relatievelden definiëren in de gebruikersinterface
 description: Leer hoe u een relatieveld in de gebruikersinterface van het Experience Platform definieert.
-topic-legacy: user guide
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

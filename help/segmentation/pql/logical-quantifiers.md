@@ -2,11 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;logische kwantoren;logische kwantor;
 solution: Experience Platform
 title: Logische kwantoren van PQL
-topic-legacy: developer guide
 description: Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in Profile Query Language (PQL) te bepalen.
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 2%
@@ -15,11 +13,11 @@ ht-degree: 2%
 
 # Logische kwantor-functies
 
-Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in [!DNL Profile Query Language] (PQL) te bevestigen. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in te stellen [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Exists
 
-De functie `exists` bepaalt het bestaan van een punt in een serie, op voorwaarde dat het aan de verstrekte voorwaarde voldoet.
+De `exists` functie bepaalt het bestaan van een item in een array, op voorwaarde dat het aan de opgegeven voorwaarde voldoet.
 
 **Indeling**
 
@@ -44,7 +42,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Voor alles
 
-De functie `forall` bepaalt alle items in een array die aan alle opgegeven voorwaarden voldoen.
+De `forall` Deze functie bepaalt alle items in een array die aan alle opgegeven voorwaarden voldoen.
 
 **Indeling**
 
@@ -69,4 +67,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Volgende stappen
 
-Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
+Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).

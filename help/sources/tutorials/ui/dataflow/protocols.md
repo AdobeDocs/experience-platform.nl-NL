@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;protocolaansluiting
 solution: Experience Platform
 title: Creeer een Dataflow Gebruikend een Bron van Protocollen in UI
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een protocolbron tot stand te brengen gebruikend Platform UI.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 0%

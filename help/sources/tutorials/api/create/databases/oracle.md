@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Oracle;oracle
 solution: Experience Platform
 title: Creeer een Verbinding van de Basis van het Oracle gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Oracle met Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 1%
@@ -31,7 +30,7 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks waarmee verbinding wordt gemaakt [!DNL Oracle]. De [!DNL Oracle] patroon verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Zie voor meer informatie over aan de slag gaan [[!DNL Oracle] document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 

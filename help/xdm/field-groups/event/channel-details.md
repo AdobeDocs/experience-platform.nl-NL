@@ -2,23 +2,22 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;
 solution: Experience Platform
 title: Veld groep kanaaldetails
-topic-legacy: overview
 description: Dit document biedt een overzicht van de veldgroep Kanaaldetails.
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
-
 # [!UICONTROL Channel Details] schemaveldgroep
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL Channel Details] is een standaardschemaveldgroep voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/experienceevent.md), die wordt gebruikt om kanaalinformatie zoals identiteitskaart, kanaaltype, media type, en plaatstype te beschrijven.
+[!UICONTROL Channel Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), gebruikt om kanaalinformatie zoals identiteitskaart, kanaaltype, media type, en plaatstype te beschrijven.
 
 ![](../../images/field-groups/channel-details.png)
 

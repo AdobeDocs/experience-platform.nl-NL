@@ -2,23 +2,22 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;
 solution: Experience Platform
 title: Campagne Marketing Details Schema Veld Groep
-topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van de Marketing van de Campagne.
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
 
-
 # [!UICONTROL Campaign Marketing Details] schemaveldgroep
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL Campaign Marketing Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/experienceevent.md), die wordt gebruikt om de informatie van de marketing campagne zoals campagnegroep, naam, en het volgen code te beschrijven.
+[!UICONTROL Campaign Marketing Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), gebruikt voor het beschrijven van marketingcampagnemaatgegevens zoals campagnegroep, naam en trackingcode.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Salesforce Service Cloud;salesforce-serviccloud
 solution: Experience Platform
 title: Een Cloud Source Connection van de Salesforce-service maken met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Salesforce Service Cloud.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -37,7 +36,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Salesforce Service Cloud]moet u
 | `username` | De gebruikersnaam voor uw [!DNL Salesforce Service Cloud] gebruikersaccount. |
 | `password` | Het wachtwoord voor uw [!DNL Salesforce Service Cloud] account. |
 | `securityToken` | Het beveiligingstoken voor uw [!DNL Salesforce Service Cloud] account. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 Zie voor meer informatie over het aan de slag gaan [dit document voor de Salesforce Service Cloud](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 

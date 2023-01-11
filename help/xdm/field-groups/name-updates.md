@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schemaontwerp;veldgroep;veldgroep;enduserids;eindgebruiker;eindgebruiker;ids;updates;
 solution: Experience Platform
 title: Updates voor naam van schemaveld
-topic-legacy: overview
 description: Een lijst met recente wijzigingen in de naam van de XDM-schemaveldgroep.
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%

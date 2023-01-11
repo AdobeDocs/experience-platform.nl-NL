@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;crm;CRM
 solution: Experience Platform
 title: Creeer een Dataflow voor de Bronnen van CRM die de Dienst API van de Stroom gebruiken
-topic-legacy: overview
 type: Tutorial
 description: Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een systeem van derdeCRM en het brengen van hen in Platform gebruikend bronschakelaars en APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 0%

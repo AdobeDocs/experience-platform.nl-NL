@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Snowflake
 title: Een Snowflake-bronverbinding maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '431'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

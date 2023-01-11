@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Apache Spark;apache spark;Azure HDInsights
 solution: Experience Platform
 title: Een Apache Spark maken op Azure HDInsights Base Connection met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Apache Spark op Azure HDInsights kunt aansluiten op Adobe Experience Platform met behulp van de Flow Service API.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%
@@ -41,7 +40,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Spark]moet u waarden opgeven vo
 | `host` | Het IP-adres of de hostnaam van de [!DNL Spark] server. |
 | `username` | De gebruikersnaam die u gebruikt om toegang te krijgen tot [!DNL Spark] Server. |
 | `password` | Het wachtwoord dat overeenkomt met de gebruiker. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Spark] is: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Spark] is: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 
 Zie voor meer informatie over het aan de slag gaan [dit Spark-document](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
 

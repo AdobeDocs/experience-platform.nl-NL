@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Google PubSub;Google pubsub
 solution: Experience Platform
 title: Een Google PubSub-bronverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 0%
@@ -34,7 +33,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL PubSub]moet u waarden op
 | ---------- | ----------- |
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `credentials` | De referentie of sleutel die vereist is voor verificatie [!DNL PubSub]. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en brondoelverbindingen terug. De [!DNL PubSub] Verbindingsspecificatie-id is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en brondoelverbindingen terug. De [!DNL PubSub] Verbindingsspecificatie-id is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Zie deze voor meer informatie over deze waarden [[!DNL PubSub] verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Om de op rekening-gebaseerde authentificatie van de dienst te gebruiken, zie dit [[!DNL PubSub] handleiding voor het maken van serviceaccounts](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
 

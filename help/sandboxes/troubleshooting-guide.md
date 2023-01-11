@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;problemen met sandbox
 solution: Experience Platform
 title: Handleiding voor probleemoplossing voor sandboxen
-topic-legacy: troubleshooting guide
 description: Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%

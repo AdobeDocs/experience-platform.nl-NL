@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;redshift;Opnieuw verschuiven;Amazon Opnieuw verschuiven;amazon opnieuw verschuiven
 solution: Experience Platform
 title: Een Amazon Redshift Base-verbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Amazon Redshift met behulp van de Flow Service API.
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 1%
@@ -38,7 +37,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Amazon Redshift]moet u de volge
 | `username` | De gebruikersnaam die aan uw [!DNL Amazon Redshift] account. |
 | `password` | Het wachtwoord dat aan uw [!DNL Amazon Redshift] account. |
 | `database` | De [!DNL Amazon Redshift] database die u opent. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Marketo Engage;marketo engageren;Marketo;mapping
 solution: Experience Platform
 title: Velden toewijzen voor de Marketo Engage-bron
-topic-legacy: overview
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 0%

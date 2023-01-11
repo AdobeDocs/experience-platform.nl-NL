@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;Abonnement;datatype;data-type;gegevenstype.
 solution: Experience Platform
 title: Gegevenstype abonnement
-topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Subscription Experience Data Model (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: d99ddc65849a88350bf61977b399b07989554426
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 8%
@@ -25,19 +24,19 @@ ht-degree: 8%
 | `subscriber` | [[!UICONTROL Person]](./person.md) | Beschrijft een individuele persoon. Dit kan ook een persoon vertegenwoordigen die in diverse rollen, zoals een klant, een contact, of een eigenaar handelt. |
 | `SKU` | Tekenreeks | De voorraadeenheid (SKU), een unieke identificatiecode voor een product. |
 | `billingPeriod` | Tekenreeks | De duur tussen factureringen. |
-| `billingStartDate` | Datum | De datum waarop de eerste rekening verschuldigd is. De datumnotatie (zonder tijd) moet de [RFC 3339, sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) norm volgen. |
+| `billingStartDate` | Datum | De datum waarop de eerste rekening verschuldigd is. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
 | `category` | Tekenreeks | De belangrijkste categorisering op hoofdniveau van dit type abonnement. |
 | `chargeMethod` | Tekenreeks | De manier waarop de facturering wordt ingesteld om de klant in rekening te brengen. |
 | `contractID` | Tekenreeks | De unieke id voor het contract dat dit abonnement regelt. |
 | `country` | Tekenreeks | Het land waarin de contractvoorwaarden voor de inschrijving en de overeenkomst zijn geworteld. |
-| `endDate` | Datum | De datum waarop de huidige abonnementsduur afloopt. De datumnotatie (zonder tijd) moet de [RFC 3339, sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) norm volgen. |
+| `endDate` | Datum | De datum waarop de huidige abonnementsduur afloopt. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
 | `paymentMethod` | Tekenreeks | De betalingsmethode voor terugkerende betalingen. |
 | `paymentStatus` | Tekenreeks | De betalingsstatus van de rekening. |
 | `planName` | Tekenreeks | De leesbare naam voor het abonnement. |
 | `reason` | Tekenreeks | De algemene intentie van het lid voor het gebruik van het abonnement. |
 | `renew` | Tekenreeks | De overeengekomen manier waarop het abonnement na de einddatum kan worden voortgezet. |
 | `revision` | Tekenreeks | De identificatie tussen abonnementen van dezelfde naam en categoriehiërarchie. |
-| `startDate` | Datum | De datum waarop het abonnement begint. De datumnotatie (zonder tijd) moet de [RFC 3339, sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) norm volgen. |
+| `startDate` | Datum | De datum waarop het abonnement begint. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
 | `status` | Tekenreeks | De huidige status van het abonnement. |
 | `subCategory` | Tekenreeks | De specifieke subcategorisering van het abonnement. |
 | `term` | Geheel | De numerieke waarde van de abonnementstermijn. |

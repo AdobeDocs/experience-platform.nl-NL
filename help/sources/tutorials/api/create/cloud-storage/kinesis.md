@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
 title: Een Amazon Kinesis Source Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Amazon Kinesis-bron met behulp van de Flow Service API.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 0%
@@ -35,7 +34,7 @@ Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Amazon Kinesis] accou
 | `accessKeyId` | De toegangs belangrijkste identiteitskaart is één helft van het sleutelpaar dat wordt gebruikt om uw voor authentiek te verklaren [!DNL Kinesis] aan Platform. |
 | `secretKey` | De geheime toegangstoets is de andere helft van het sleutelpaar van de toegang dat wordt gebruikt om uw voor authentiek te verklaren [!DNL Kinesis] aan Platform. |
 | `region` | Het gebied voor uw [!DNL Kinesis] account. Zie de handleiding op [het toevoegen van IP adressen aan uw lijst van gewenste personen](../../../../ip-address-allow-list.md) voor meer informatie over de regio &#39; s . |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Kinesis] Verbindingsspecificatie-id is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Kinesis] Verbindingsspecificatie-id is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Voor meer informatie over [!DNL Kinesis] zie deze [[!DNL AWS] handleiding voor het beheren van toegangstoetsen voor IAM-gebruikers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 

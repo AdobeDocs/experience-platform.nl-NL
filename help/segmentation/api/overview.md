@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;API;api;
 title: API-handleiding voor segmentatieservice
-topic-legacy: guide
 description: Met de segmentatieservice-API kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;xdm;ervaringsgegevensmodel;naamruimte;naamruimte;compatibiliteitsmodus;Gereed;
 solution: Experience Platform
 title: Naamruimte in XDM (Experience Data Model)
-topic-legacy: overviews
 description: Leer hoe het namespacing in het Model van de Gegevens van de Ervaring (XDM) u toestaat om uw schema's uit te breiden en gebiedsbotsingen te verhinderen aangezien de verschillende schemacomponenten samen worden gebracht.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%

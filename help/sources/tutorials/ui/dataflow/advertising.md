@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;vorm dataflow;reclameschakelaar
 solution: Experience Platform
 title: Een gegevensstroom maken met een publicatiebron in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een advertentiebron met behulp van de gebruikersinterface van het Platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 0%

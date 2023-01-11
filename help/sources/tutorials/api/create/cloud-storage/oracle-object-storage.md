@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle object storage
 solution: Experience Platform
 title: Een Oracle Object Storage Base-verbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Oracle Object Storage.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 1%
@@ -39,7 +38,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL Oracle Object Storage]mo
 | `secretKey` | De [!DNL Oracle Object Storage] wachtwoord vereist voor verificatie. |
 | `bucketName` | De toegestane emmernaam wordt vereist als de gebruiker toegang beperkt heeft. De naam van het emmertje moet tussen drie en 63 karakters lang zijn, moet beginnen en met of een letter of een aantal beëindigen, en kan slechts kleine letters, aantallen, of koppeltekens bevatten (`-`). De emmernaam kan niet als IP adres worden geformatteerd. |
 | `folderPath` | Het toegestane mappad dat is vereist als de gebruiker de toegang heeft beperkt. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle Object Storage] is: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle Object Storage] is: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 Raadpleeg voor meer informatie over het verkrijgen van deze waarden de [Handleiding voor verificatie van oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 

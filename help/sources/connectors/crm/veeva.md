@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Veeva CRM;veeva crm;veeva;crm
 solution: Experience Platform
 title: Overzicht van Veva CRM Source Connector
-topic-legacy: overview
 description: Leer hoe u Veeva CRM met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: ec0d6be6fde8ea7a0378769810079e3e62e9fd60
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%

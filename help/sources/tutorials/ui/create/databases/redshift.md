@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Amazon Redshift;amazon redshift;Opnieuw verschuiven;Opnieuw verschuiven
 solution: Experience Platform
 title: Een Amazon Redshift Source Connection maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Amazon Redshift-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 1%

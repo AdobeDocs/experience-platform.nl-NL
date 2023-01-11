@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;verzamelen klantensucces;klantensucces
 solution: Experience Platform
 title: Een gegevensstroom maken voor de succesbronnen van de Klant met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 0%

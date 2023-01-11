@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;crm-schema;crm;CRM;dataflow;DataFlow
 solution: Experience Platform
 title: Creeer een Dataflow Gebruikend een Bron van CRM in UI
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een bron van CRM tot stand te brengen gebruikend Platform UI.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 0%

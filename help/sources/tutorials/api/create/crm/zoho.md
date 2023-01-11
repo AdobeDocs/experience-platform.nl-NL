@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Creeer een Verbinding van de Basis van Zoho CRM gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Zoho CRM met behulp van de Flow Service API.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%
@@ -40,7 +39,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Zoho CRM]moet u waarden opgeven
 | `clientSecret` | Het clientgeheim dat overeenkomt met uw [!DNL Zoho CRM] gebruikersaccount. |
 | `accessToken` | Het toegangstoken verleent uw veilige en tijdelijke toegang tot uw [!DNL Zoho CRM] account. |
 | `refreshToken` | Een vernieuwingstoken is een teken dat wordt gebruikt om een nieuw toegangstoken te produceren, zodra uw toegangstoken is verlopen. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Zoho CRM] is: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Zoho CRM] is: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
 Zie de documentatie over [[!DNL Zoho CRM] verificatie](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 

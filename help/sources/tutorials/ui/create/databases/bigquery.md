@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
 title: Een Google Big Query Source Connection maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Google Big Query-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;telecommunicatie;telecommunicatie;Schema ontwerp;gebiedsgroep;De groep van het Gebied;
 solution: Experience Platform
 title: Telecom Subscription Schema Field Group
-topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van het Abonnement van Telecom.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 1%

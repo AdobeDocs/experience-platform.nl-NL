@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
 title: Een MailChimp-bronverbinding voor leden maken met de gebruikersinterface van het Platform
-topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform met MailChimp-leden verbindt via de gebruikersinterface van het Platform.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 1%

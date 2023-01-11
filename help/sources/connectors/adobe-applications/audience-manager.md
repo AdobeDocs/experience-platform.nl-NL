@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Audience Manager-aansluiting;Audience Manager;publieksmanager
 solution: Experience Platform
 title: Overzicht van Bron Audience Manager
-topic-legacy: overview
 description: De Adobe Audience Manager-bronstroom streamt gegevens van de eerste partij die in Audience Manager naar Adobe Experience Platform zijn verzameld.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%

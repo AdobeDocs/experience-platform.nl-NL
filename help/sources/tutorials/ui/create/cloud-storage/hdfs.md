@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
 title: Een Apache HDFS-bronverbinding maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Apache Hadoop Distributed File System-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;randsegmentatie;Edge-segmentatie;streamingrand;
 solution: Experience Platform
 title: Edge Segmentation met de API
-topic-legacy: developer guide
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 0%

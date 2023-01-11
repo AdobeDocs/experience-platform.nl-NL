@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;search;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype zoeken
-topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Search Experience Data Model (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 2%
@@ -26,7 +25,7 @@ ht-degree: 2%
 | `position` | Geheel | De positie of rang van de aanbieding op de pagina met zoekresultaten. |
 | `searchEngine` | Tekenreeks | Het zoekprogramma dat door de zoekopdracht wordt gebruikt. |
 | `searchEngineID` | Tekenreeks | De toepassingsspecifieke id die wordt gebruikt om het zoekprogramma te identificeren. |
-| `slot` | Tekenreeks | De benoemde sectie van de pagina waar het zoekresultaat werd weergegeven. De waarde van deze eigenschap moet gelijk zijn aan een van de bekende opsommingswaarden die u definieert, zoals `top`, `side` of `bottom`. |
+| `slot` | Tekenreeks | De benoemde sectie van de pagina waar het zoekresultaat werd weergegeven. De waarde van deze eigenschap moet gelijk zijn aan een van de bekende opsommingswaarden die u definieert, zoals `top`, `side`, of `bottom`. |
 
 {style=&quot;table-layout:auto&quot;}
 

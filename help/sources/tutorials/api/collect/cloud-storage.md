@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevens over cloudopslag
 solution: Experience Platform
 title: Een gegevensstroom maken voor Cloud Storage-bronnen met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 0%

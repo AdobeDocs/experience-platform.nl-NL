@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Schemaontwerp;mixin;mixin;het werkdetails;het profielwerk;
 solution: Experience Platform
 title: Werkgroep Contactgegevens schema
-topic-legacy: overview
 description: Dit document biedt een overzicht van de veldgroep met het schema Contactgegevens werken.
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
@@ -17,9 +16,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL Work Contact Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De veldgroep bevat verschillende velden waarin beroepsinformatie over een individuele persoon wordt vastgelegd, zoals het werkadres, e-mail over het werk, het telefoonnummer van de werkplek en de organisaties waartoe de persoon behoort.
+[!UICONTROL Work Contact Details] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). De veldgroep bevat verschillende velden waarin beroepsinformatie over een individuele persoon wordt vastgelegd, zoals het werkadres, e-mail over het werk, het telefoonnummer van de werkplek en de organisaties waartoe de persoon behoort.
 
 ![](../../images/field-groups/work-contact-details.png)
 

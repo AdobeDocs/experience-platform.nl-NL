@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;array-functies;array;
 solution: Experience Platform
 title: Array, List en Set PQL-functies
-topic-legacy: developer guide
 description: De Taal van de Vraag van het profiel (PQL) biedt functies om interactie met series, lijsten, en koorden gemakkelijker te maken.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 2%
@@ -15,11 +13,11 @@ ht-degree: 2%
 
 # Array, list en set-functies
 
-[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## In
 
-De functie `in` wordt gebruikt om te bepalen of een punt een lid van een serie of een lijst is.
+De `in` wordt gebruikt om te bepalen of een punt een lid van een serie of een lijst is.
 
 **Indeling**
 
@@ -37,11 +35,11 @@ person.birthMonth in [3, 6, 9]
 
 ## Niet in
 
-De functie `notIn` wordt gebruikt om te bepalen als een punt geen lid van een serie of een lijst is.
+De `notIn` wordt gebruikt om te bepalen of een item geen lid is van een array of lijst.
 
 >[!NOTE]
 >
->De `notIn` functie *also* zorgt ervoor dat geen van beide waarden gelijk aan null is. Daarom zijn de resultaten geen exacte negatie van de functie `in`.
+>De `notIn` function *ook* zorgt ervoor dat geen van beide waarden gelijk is aan null. Daarom zijn de resultaten geen exacte ontkenning van de `in` functie.
 
 **Indeling**
 
@@ -59,7 +57,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Doorsnede
 
-De functie `intersects` wordt gebruikt om te bepalen of twee series of lijsten minstens één gemeenschappelijk lid hebben.
+De `intersects` functie wordt gebruikt om te bepalen of twee series of lijsten minstens één gemeenschappelijk lid hebben.
 
 **Indeling**
 
@@ -77,7 +75,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Doorsnede
 
-De functie `intersection` wordt gebruikt om de gemeenschappelijke leden van twee series of lijsten te bepalen.
+De `intersection` wordt gebruikt om de gemeenschappelijke leden van twee series of lijsten te bepalen.
 
 **Indeling**
 
@@ -95,7 +93,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset van
 
-De functie `subsetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een subset is van een andere array (array B). Met andere woorden, alle elementen in array A zijn elementen van array B.
+De `subsetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een subset is van een andere array (array B). Met andere woorden, alle elementen in array A zijn elementen van array B.
 
 **Indeling**
 
@@ -113,7 +111,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset van
 
-De functie `supersetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een superset is van een andere array (array B). Met andere woorden, die array A bevat alle elementen in array B.
+De `supersetOf` wordt gebruikt om te bepalen of een specifieke array (array A) een superset is van een andere array (array B). Met andere woorden, die array A bevat alle elementen in array B.
 
 **Indeling**
 
@@ -131,7 +129,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Inclusief
 
-De functie `includes` wordt gebruikt om te bepalen of een serie of een lijst een bepaald punt bevat.
+De `includes` wordt gebruikt om te bepalen of een array of lijst een bepaald item bevat.
 
 **Indeling**
 
@@ -149,7 +147,7 @@ person.favoriteColors.includes("red")
 
 ## Afzonderlijk
 
-De functie `distinct` wordt gebruikt om dubbele waarden uit een serie of een lijst te verwijderen.
+De `distinct` wordt gebruikt om dubbele waarden uit een array of lijst te verwijderen.
 
 **Indeling**
 
@@ -167,7 +165,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Groeperen op
 
-De functie `groupBy` wordt gebruikt om waarden van een serie of lijst in een groep te verdelen die op de waarde van de uitdrukking wordt gebaseerd.
+De `groupBy` Deze functie wordt gebruikt om waarden van een array of lijst op te delen in een groep op basis van de waarde van de expressie.
 
 **Indeling**
 
@@ -190,7 +188,7 @@ orders.groupBy(storeId)
 
 ## Filter
 
-De functie `filter` wordt gebruikt om een serie of een lijst te filtreren die op een uitdrukking wordt gebaseerd.
+De `filter` wordt gebruikt om een array of lijst te filteren op basis van een expressie.
 
 **Indeling**
 
@@ -213,7 +211,7 @@ person.filter(age >= 21)
 
 ## Kaart
 
-De functie `map` wordt gebruikt om een nieuwe serie tot stand te brengen door een uitdrukking op elk punt in een bepaalde serie toe te passen.
+De `map` wordt gebruikt om een nieuwe array te maken door een expressie toe te passen op elk item in een bepaalde array.
 
 **Indeling**
 
@@ -231,7 +229,7 @@ numbers.map(square)
 
 ## Eerste `n` in array {#first-n}
 
-De functie `topN` wordt gebruikt om de eerste `N` punten in een serie terug te keren, wanneer gesorteerd in oplopende orde die op de bepaalde numerieke uitdrukking wordt gebaseerd.
+De `topN` function wordt gebruikt om de eerste te retourneren `N` items in een array, indien gesorteerd in oplopende volgorde op basis van de opgegeven numerieke expressie.
 
 **Indeling**
 
@@ -255,7 +253,7 @@ orders.topN(price, 5)
 
 ## Laatste `n` in array
 
-De functie `bottomN` wordt gebruikt om de laatste `N` punten in een serie terug te keren, wanneer gesorteerd in oplopende orde die op de bepaalde numerieke uitdrukking wordt gebaseerd.
+De `bottomN` function wordt gebruikt om de laatste te retourneren `N` items in een array, indien gesorteerd in oplopende volgorde op basis van de opgegeven numerieke expressie.
 
 **Indeling**
 
@@ -279,7 +277,7 @@ orders.bottomN(price, 5)
 
 ## Eerste object
 
-De functie `head` wordt gebruikt om het eerste item in de array of lijst te retourneren.
+De `head` functie wordt gebruikt om het eerste item in de array of lijst te retourneren.
 
 **Indeling**
 
@@ -289,7 +287,7 @@ De functie `head` wordt gebruikt om het eerste item in de array of lijst te reto
 
 **Voorbeeld**
 
-De volgende vraag PQL keert eerste van de hoogste vijf orden met de hoogste prijs terug. Meer informatie over de functie `topN` vindt u in de sectie [first `n` in array](#first-n).
+De volgende vraag PQL keert eerste van de hoogste vijf orden met de hoogste prijs terug. Meer informatie over de `topN` kan worden gevonden in de [first `n` in array](#first-n) sectie.
 
 ```sql
 orders.topN(price, 5).head()
@@ -297,4 +295,4 @@ orders.topN(price, 5).head()
 
 ## Volgende stappen
 
-Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
+Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).

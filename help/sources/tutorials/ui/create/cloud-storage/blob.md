@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Azure Blob;azure blob;Azure blob-connector
 solution: Experience Platform
 title: Een Azure Blob Source Connection maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure Blob-bronconnector kunt maken via de gebruikersinterface van het Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 1%

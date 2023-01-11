@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Een PostSQL-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API verbindt met PostgreSQL.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 1%
@@ -36,7 +35,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL PostgreSQL]moet u de volgende e
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die aan uw [!DNL PostgreSQL] account. De [!DNL PostgreSQL] patroon verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 Raadpleeg deze voor meer informatie over het verkrijgen van een verbindingstekenreeks [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
 

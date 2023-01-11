@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;Webpagina-details;datatype;gegevenstype;gegevenstype;webpagina
 solution: Experience Platform
 title: Gegevenstype webpagina Details
-topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Experience Data Model (XDM) van de webpagina voor details.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 2%
@@ -16,14 +15,14 @@ ht-degree: 2%
 
 [!UICONTROL Web page details] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat details over een Web-pagina beschrijft die net is geladen en bekeken, zoals geregistreerd door een ExperienceEvent.
 
-Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen die uit één pagina bestaan (SPA). Zie het gegevenstype [webinteractie](./web-interaction.md) voor interacties die plaatsvinden op een geladen pagina die geen nieuwe paginading activeren.
+Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen die uit één pagina bestaan (SPA). Zie voor interacties die plaatsvinden op een geladen pagina die geen nieuwe pagina laden, de klasse [webinteractie](./web-interaction.md) gegevenstype.
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `pageViews` | [[!UICONTROL Measure]](./measure.md) | Het aantal weergaven op een webpagina. |
-| `URL` | Tekenreeks | De normatieve of gebruikelijke URL van de webpagina. Dit kan al dan niet de daadwerkelijke URL zijn die wordt gebruikt om de pagina te bereiken. Gebruik `webLink` om de URL op te nemen die wordt gebruikt om de pagina te bereiken. De indeling URI moet de [RFC 3986](https://tools.ietf.org/html/rfc3986)-standaard volgen. |
+| `URL` | Tekenreeks | De normatieve of gebruikelijke URL van de webpagina. Dit kan al dan niet de daadwerkelijke URL zijn die wordt gebruikt om de pagina te bereiken. Om URL te registreren die wordt gebruikt om het paginagebruik te bereiken `webLink`. De URI-indeling moet de volgende [RFC 3986](https://tools.ietf.org/html/rfc3986) standaard. |
 | `isErrorPage` | Boolean | Deze eigenschap gebruikt een markering om aan te geven of de pagina een foutpagina is of niet. Deze markering wordt gebruikt om webinteracties breed te categoriseren. De fout wordt gedefinieerd door de toepassing en kan overeenkomen met een pagina die wordt aangeboden met een HTTP-foutcode. |
 | `isHomePage` | Boolean | Deze eigenschap gebruikt een markering om aan te geven of de pagina een homepage is of niet. Deze markering wordt gebruikt om webinteracties breed te categoriseren. De definitie van de homepage wordt bepaald door de toepassing. |
 | `name` | Tekenreeks | De normatieve naam van de webpagina. Deze naam is niet noodzakelijkerwijs de paginatitel of is rechtstreeks gekoppeld aan pagina-inhoud, maar wordt gebruikt om de pagina&#39;s van een site te ordenen voor classificatiedoeleinden. |

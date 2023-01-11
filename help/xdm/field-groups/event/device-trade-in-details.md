@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;field-groep;device;tradein;trade-in;trade in;
 solution: Experience Platform
 title: Device Trade-In Details-schemaveldgroep
-topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van Gegevens handel-binnen van het Apparaat.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 1%
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [updates van de gebiedsgroepnaam](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL Device Trade-In Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/experienceevent.md). Het verstrekt één enkel gebied (`deviceTradeInDetails`) dat een apparaat handel-binnen transactie, met inbegrip van handel-binnen waarde, originele apparatenidentiteitskaart, en nieuwe apparatenidentiteitskaart beschrijft
+[!UICONTROL Device Trade-In Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Het biedt één veld (`deviceTradeInDetails`), waarin een transactie voor de inruil van een apparaat wordt beschreven, inclusief de inruilwaarde, de oorspronkelijke apparaat-id en de nieuwe apparaat-id.
 
 ![Device Trade-In-detailstructuur](../../images/field-groups/device-trade-in-details.png)
 

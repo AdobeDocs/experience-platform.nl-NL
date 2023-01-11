@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;hubspot;Hubspot
 solution: Experience Platform
 title: Creeer een Verbinding van de Basis HubSpot Gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om Adobe Experience Platform met HubSpot te verbinden gebruikend de Dienst API van de Stroom.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 1%
@@ -38,7 +37,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL HubSpot]moet u de volgende eige
 | `clientSecret` | Het clientgeheim dat aan uw [!DNL HubSpot] toepassing. |
 | `accessToken` | Het toegangstoken werd verkregen toen aanvankelijk het voor authentiek verklaren van uw integratie OAuth. |
 | `refreshToken` | Het vernieuwingstoken dat wordt verkregen toen aanvankelijk het voor authentiek verklaren van uw integratie OAuth. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL HubSpot] is: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL HubSpot] is: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [HubSpot-document](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 

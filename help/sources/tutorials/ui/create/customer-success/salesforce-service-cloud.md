@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Salesforce Service Cloud;salesforce-serviccloud
 solution: Experience Platform
 title: Creëer een verbinding van de Bron van de Dienst van Salesforce Cloud in UI
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Salesforce Service Cloud-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 1%

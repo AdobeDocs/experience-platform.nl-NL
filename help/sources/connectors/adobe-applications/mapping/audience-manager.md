@@ -2,11 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Audience Manager toewijzen;publieksbeheertoewijzing
 solution: Experience Platform
 title: Toewijzingsvelden voor de Adobe Audience Manager Source Connector
-topic-legacy: overview
-description: Leer hoe u Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) toewijst aan corresponderende XDM-velden (Experience Data Model) voor de Audience Manager-bronaansluiting.
+description: Leer hoe u Adobe Audience Manager-gegevens (Realtime, Onboded en Profielgegevens) toewijst aan corresponderende XDM-velden (Experience Data Model) voor de Audience Manager-bronaansluiting.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
@@ -17,7 +15,7 @@ ht-degree: 0%
 
 De onderstaande tabellen bevatten de toewijzingen tussen de velden in Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) en de bijbehorende XDM-velden.
 
-Zie [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk XDM-veld.
+Zie de [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk XDM-veld.
 
 ## Realtime gegevens
 
@@ -26,9 +24,9 @@ Type: Realtime gegevens
 | Realtime-gegevensveld | XDM-veld |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` -  *Alleen voor naamruimten in endUserIds en alleen voor de eerste waarde.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *Alleen voor naamruimten in endUserIds en alleen voor eerste waarden.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds - *Alleen voor naamruimten aanwezig in endUserIds en alleen de eerste waarde.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *Alleen voor naamruimten in endUserIds en alleen voor eerste waarden.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |

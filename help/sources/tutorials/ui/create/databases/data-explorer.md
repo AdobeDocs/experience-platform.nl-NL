@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Data Explorer;azure data explorer;data explorer;Data Explorer
 solution: Experience Platform
 title: Een Azure Data Explorer Source Connection maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure Data Explorer-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 561bf948-fc92-4401-8631-e2a408667507
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 1%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Vertica;vertica
 solution: Experience Platform
 title: Creeer een Verbinding van de Basis van HP Vertica gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe te om HP Vertica met Adobe Experience Platform te verbinden gebruikend de Dienst API van de Stroom.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%
@@ -39,7 +38,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL HP Vertica]moet u waarden opgev
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL HP Vertica] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL HP Vertica] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL HP Vertica] is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL HP Vertica] is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [dit HP Vertica-document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 

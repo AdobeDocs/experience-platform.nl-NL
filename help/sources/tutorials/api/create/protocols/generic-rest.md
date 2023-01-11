@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;generische REST;generische rest
 solution: Experience Platform
 title: Een algemene REST API-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Generic REST API met de Flow Service API kunt verbinden met Adobe Experience Platform.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
@@ -49,7 +48,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Generic REST API], moet u geldi
 | `expirationDate` | (Optioneel) Een verborgen waarde die de vervaldatum van uw toegangstoken definieert. |
 | `accessTokenUrl` | (Optioneel) Het URL-eindpunt dat wordt gebruikt om uw toegangstoken op te halen. |
 | `requestParameterOverride` | (Optioneel) Een eigenschap waarmee u kunt opgeven welke referentie-parameters moeten worden overschreven. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 
 #### Basisverificatie
 
@@ -58,7 +57,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Generic REST API], moet u geldi
 | `host` | De host-URL van de bron waarnaar u een verzoek indient. |
 | `username` | De gebruikersnaam die overeenkomt met uw gebruikersaccount. |
 | `password` | Het wachtwoord dat overeenkomt met uw gebruikersaccount. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 
 ## Een basisverbinding maken
 

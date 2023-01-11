@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;lijstsandboxen
 solution: Experience Platform
 title: API-eindpunt voor sandboxtypen
-topic-legacy: developer guide
 description: U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door een verzoek van de GET aan het /sandboxTypes eindpunt te richten.
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 1%

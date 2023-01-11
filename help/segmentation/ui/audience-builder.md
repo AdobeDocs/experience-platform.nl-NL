@@ -2,11 +2,11 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Segmenteringsdienst;segmentatie;segmenteringsservice;gebruikershandleiding;ui-gids;gebruikershandleiding;publiek ontwerper;publiek ontwikkelaar;publiek;publiek;publiek ui-gids; publiek
 solution: Experience Platform
 title: UI-gids voor soorten publiek
-topic-legacy: ui guide
 description: De Audience Builder in de gebruikersinterface van Adobe Experience Platform biedt een rijke werkruimte die u in staat stelt te werken met de gegevenselementen van het Profiel. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%

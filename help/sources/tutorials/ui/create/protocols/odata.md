@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;OData;odata;Generic Open Data Protocol
 solution: Experience Platform
 title: Een Generic OData Source Connection maken in de UI
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een algemene Open Data Protocol-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 1%

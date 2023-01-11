@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;marketingautomatiseringssysteem;Gegevens over marketingautomatisering verzamelen
 solution: Experience Platform
 title: Creeer een Dataflow voor de Bronnen van de Automatisering van de Marketing die de Dienst API van de Stroom gebruiken
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het overbrengen van gegevens naar Adobe Experience Platform met behulp van bronconnectors en API's.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%

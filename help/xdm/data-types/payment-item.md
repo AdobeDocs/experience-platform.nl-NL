@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;betalings punt;datatype;gegeven-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype betalingsobject
-topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Data Model (XDM) van het betalingsitemervaringsgegevensmodel.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 2%
@@ -20,7 +19,7 @@ ht-degree: 2%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `currencyCode` | Tekenreeks | De ISO 4217-valutacode die wordt gebruikt voor de totalen van de orders. Alle instanties moeten aan de regelmatige uitdrukking `^[A-Z]{3}$` voldoen. Voorbeelden zijn `USD` en `EUR`. |
+| `currencyCode` | Tekenreeks | De ISO 4217-valutacode die wordt gebruikt voor de totalen van de orders. Alle instanties moeten overeenkomen met de reguliere expressie `^[A-Z]{3}$`. Voorbeelden zijn `USD` en `EUR`. |
 | `paymentAmount` | Dubbel | De waarde van de betaling. |
 | `paymentType` | Tekenreeks | De betalingsmethode voor deze bestelling. Tot de geaccepteerde opsommingswaarden behoren: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | Tekenreeks | De unieke transactie-id voor dit betalingsobject. |

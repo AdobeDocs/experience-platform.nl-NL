@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;MySQL;mysql
 solution: Experience Platform
 title: Een [!DNL MySQL] Basisverbinding met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met MySQL kunt verbinden met behulp van de Flow Service API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 1%
@@ -35,7 +34,7 @@ Om [!DNL Flow Service] om verbinding te maken met uw [!DNL MySQL] opslag, moet u
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De [!DNL MySQL] verbindingstekenreeks die aan uw account is gekoppeld. De [!DNL MySQL] patroon verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 Raadpleeg deze voor meer informatie over het verkrijgen van een verbindingstekenreeks [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 

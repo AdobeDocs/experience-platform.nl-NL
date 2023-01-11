@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;sandbox-ontwikkelaarsgids
 solution: Experience Platform
 title: API-eindpunt voor sandboxbeheer
-topic-legacy: developer guide
 description: Met het eindpunt /sandboxen in de sandbox-API kunt u sandboxen in Adobe Experience Platform programmatisch beheren.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1489'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -405,7 +404,7 @@ Als de reactie succesvol was, worden de details van de bijgewerkte sandbox geret
 }
 ```
 
-De standaardproductiesandbox en door de gebruiker gemaakte productiessandboxen kunnen niet opnieuw worden ingesteld als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) -functie, of als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) gebruiken.
+De standaardproductiesandbox en door de gebruiker gemaakte productiessandboxen kunnen niet opnieuw worden ingesteld als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) -functie, of als de identiteitsgrafiek die erin wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) gebruiken.
 
 Hieronder volgt een lijst met mogelijke uitzonderingen die kunnen voorkomen dat een sandbox opnieuw wordt ingesteld:
 

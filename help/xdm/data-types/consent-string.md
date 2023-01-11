@@ -1,9 +1,9 @@
 ---
 solution: Experience Platform
 title: Gegevenstype van goedgekeurde tekenreeks
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor tekenreeks met toestemming.
-source-git-commit: 7a0ac3970713e95438c6f0fdbd6175545ea7fdd0
+exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!UICONTROL Consent String] gegevenstype
 
-[!UICONTROL Consent String] is een standaard XDM gegevenstype dat een koordwaarde beschrijft die de toestemming van een klant vertegenwoordigt. Het omvat contextuele informatie zoals de norm voor het toestemmingskoord (bijvoorbeeld, [IAB Transparantie en het Kader van de Toestemming (TCF) 2.0](../field-groups/profile/iab.md)).
+[!UICONTROL Consent String] is een standaard XDM gegevenstype dat een koordwaarde beschrijft die de toestemming van een klant vertegenwoordigt. Het bevat contextafhankelijke informatie zoals de standaard voor de toestemmingstekenreeks (bijvoorbeeld de [IAB Transparency and Consent Framework (TCF) 2.0](../field-groups/profile/iab.md)).
 
 ![](../images/data-types/consent-string.png)
 
@@ -20,7 +20,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `consentStandard` | Tekenreeks | De standaard voor de toestemmingstekenreeks. Dit helpt de formaat van het toestemmingskoord bepalen zoals die door de diensten van het toestemmingsbeheer wordt geplaatst. |
 | `consentStandardVersion` | Tekenreeks | De versie van de toestemmingsnorm, die wordt gebruikt om het formaat van het toestemmingskoord nauwkeurig te bepalen zoals die door de diensten van het toestemmingsbeheer wordt geplaatst. |
-| `consentStringValue` | Tekenreeks | De tekenreeks voor volledige toestemming zoals verstrekt door de service voor het beheer van de toestemming. `consentStandard` en  `consentStandardVersion` help definiëren hoe deze tekenreeks moet worden geparseerd. |
+| `consentStringValue` | Tekenreeks | De tekenreeks voor volledige toestemming zoals verstrekt door de service voor het beheer van de toestemming. `consentStandard` en `consentStandardVersion` help bepalen hoe deze tekenreeks moet worden geparseerd. |
 | `containsPersonalData` | Boolean | Als dit veld waar is, betekent dit dat deze toestemmingsreeks moet worden verwerkt voor het afdwingen van toestemming. |
 | `gdprApplies` | Boolean | Als dit veld waar is, betekent dit dat er toestemming komt met persoonsgegevens. |
 

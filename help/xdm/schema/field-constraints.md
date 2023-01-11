@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;veldgroep;Veldgroep;Veldgroepen;veldgroepen;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;schemaontwerp;datatype;Datatype;Gegevenstype;Schema's;Schema's;Schema-ontwerp;Kaart;Kaart;
 solution: Experience Platform
 title: Beperkingen voor XDM-veldtypen
-topic-legacy: overview
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 1%

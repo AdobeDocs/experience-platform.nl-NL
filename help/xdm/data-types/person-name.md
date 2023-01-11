@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;fullName;xdm:fullName;person name;name;datatype;data-type;data-type; data-type;
 solution: Experience Platform
 title: Gegevenstype naam persoon
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Personnaam.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -22,12 +21,12 @@ Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen w
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `courtesyTitle` | Een afkorting van de titel, de eerlijkheid of de aanhef van een persoon (zoals `Mr.`, `Miss.` of `Dr.`). |
+| `courtesyTitle` | Een afkorting van de titel, de eerlijkheid of de aanhef van een persoon (zoals `Mr.`, `Miss.`, of `Dr.`). |
 | `firstName` | Het eerste segment van de naam in de schrijfvolgorde dat het meest wordt geaccepteerd in de taal van de naam. |
 | `fullName` | De volledige naam van de persoon, in de schrijfvolgorde die het meest wordt aanvaard in de taal van de naam. |
 | `lastName` | Het laatste segment van de naam in de schrijfvolgorde dat het meest wordt geaccepteerd in de taal van de naam. |
 | `middleName` | Midden-, alternatieve of aanvullende namen opgegeven tussen de voornaam en achternaam. |
-| `suffix` | Een groep letters die na de naam van een persoon wordt opgegeven voor aanvullende informatie (zoals `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, enzovoort). |
+| `suffix` | Een groep letters die na de naam van een persoon wordt verstrekt om aanvullende informatie te verstrekken (zoals `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, enzovoort). |
 
 {style=&quot;table-layout:auto&quot;}
 

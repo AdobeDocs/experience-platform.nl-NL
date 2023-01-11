@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;iab;tcf;toestemming;
 solution: Experience Platform
 title: IAB TCF 2.0 de Groep van het Gebied van de Goedkeuring voor de Schema's van het Profiel
-topic-legacy: overview
 description: Dit document verstrekt een overzicht van de IAB TCF 2.0 het gebiedsgroep van het schema van de Toestemming voor de klasse van het Individuele Profiel XDM.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%

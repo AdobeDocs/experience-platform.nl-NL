@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;greenplum;Greenplum
 solution: Experience Platform
 title: Creeer een GroenPlum Verbinding van de Basis gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u GreenPlum met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 1%
@@ -31,7 +30,7 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL GreenPlum] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [dit GreenPlum-document](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 

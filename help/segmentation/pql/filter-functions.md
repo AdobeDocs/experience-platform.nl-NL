@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;filter;filter;
 solution: Experience Platform
 title: PQL-filterfuncties
-topic-legacy: developer guide
 description: Filterfuncties worden gebruikt voor het filteren van gegevens binnen arrays in Profile Query Language (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 2%
@@ -15,11 +13,11 @@ ht-degree: 2%
 
 # Filterfuncties
 
-Filterfuncties worden gebruikt om gegevens te filteren binnen arrays in [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Filterfuncties worden gebruikt om gegevens binnen arrays te filteren in [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Filter
 
-Met de functie `[]` (filter) kunnen filters worden toegepast op een array en wordt een subset van de array geretourneerd die overeenkomt met de opgegeven voorwaarde.
+De `[]` (filter) laat filters toe om op een serie worden toegepast en keert een ondergroep van de serie terug die de gespecificeerde voorwaarde aanpast.
 
 **Indeling**
 
@@ -37,7 +35,7 @@ xEvent[productListItems[SKU="PS"]]
 
 ## Omhoog, operator
 
-Met de operator `^` (up) kunt u naar eigenschappen in de bovenste niveaus van filters verwijzen.
+De `^` (up) operator staat u toe te verwijzen naar eigenschappen in de bovenste niveaus van filters.
 
 **Indeling**
 
@@ -50,11 +48,11 @@ Met de operator `^` (up) kunt u naar eigenschappen in de bovenste niveaus van fi
 | `{ARRAY}` | De array die wordt gefilterd. |
 | `{FILTER_1}` | De buitenste laag van het filtreren. |
 | `{FILTER_2}` | De binnenlaag van het filtreren |
-| `^{PROPERTY}` | De eigenschap waarop ook wordt gefilterd. Vanwege de `^` controleert het een eigenschap op basis van filter1. |
+| `^{PROPERTY}` | De eigenschap waarop ook wordt gefilterd. Als gevolg van de `^`, controleert deze een eigenschap op basis van filter1. |
 
 **Voorbeeld**
 
-De volgende PQL-query krijgt alle gebeurtenissen die ten minste één product-item hebben met een SKU gelijk aan &quot;PS&quot; **of** hebben een persoon met een vrouwelijk geslacht.
+De volgende PQL-query krijgt alle gebeurtenissen die ten minste één product-item hebben met een SKU die gelijk is aan &quot;PS&quot; **of** een persoon hebben van wie het geslacht vrouwelijk is.
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
@@ -62,4 +60,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## Volgende stappen
 
-Nu u over filterfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
+Nu u over filterfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).

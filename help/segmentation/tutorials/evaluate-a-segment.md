@@ -2,11 +2,10 @@
 keywords: Experience Platform;huis;populaire onderwerpen;segmentbeoordeling;Segmenteringsdienst;segmentatie;segmentatie;evalueer een segment;toegangssegmentresultaten;evalueer en toegangssegment;
 solution: Experience Platform
 title: Evalueer en de Resultaten van het Segment van de Toegang
-topic-legacy: tutorial
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%

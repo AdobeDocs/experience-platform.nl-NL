@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;flowservice;reclame;Google-trefwoorden;reclame
 solution: Experience Platform
 title: Een gegevensstroom maken voor publicatiebronnen met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe advertentietoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en de Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 0%

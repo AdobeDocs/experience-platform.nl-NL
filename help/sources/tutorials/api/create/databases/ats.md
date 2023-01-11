@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;[!DNL Azure Table Storage];[!DNL Azure Table Storage];Azure table storage
 solution: Experience Platform
 title: Een Azure Table Storage Base Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Azure Table Storage met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 1%
@@ -39,7 +38,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Azure Table Storage]moet u waar
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een [!DNL Azure Table Storage] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Azure Table Storage] is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [dit [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 

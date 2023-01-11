@@ -3,43 +3,41 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Overzicht van de interface Schemas
 description: In dit overzicht worden de belangrijkste mogelijkheden van de werkruimte Schemas in Experience Platform besproken.
-topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Schemas] Overzicht van gebruikersinterface
 
-De [!UICONTROL Schemas] werkruimte in het gebruikersinterface van Adobe Experience Platform staat u toe om de middelen van het Gegevensmodel van de Ervaring (XDM), met inbegrip van schema&#39;s, klassen, de groepen van het schemagebied, en gegevenstypes te beheren. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
+De [!UICONTROL Schemas] In de Adobe Experience Platform-gebruikersinterface kunt u bronnen van het Experience Data Model (XDM) beheren, zoals schema&#39;s, klassen, groepen van schemavelden en gegevenstypen. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
 
-Als u toegang wilt tot de werkruimte in de interface van het Platform, selecteert u **[!UICONTROL Schemas]** in de linkertrack.
+Als u toegang wilt tot de werkruimte in de gebruikersinterface van het Platform, selecteert u **[!UICONTROL Schemas]** in het linkerspoor.
 
 ![](../images/ui/overview/schemas-tab.png)
 
 ## Aan de slag
 
-Als u de werkruimte voor het eerst gebruikt, begin met de gids op [het onderzoeken van bestaande middelen in UI](./explore.md) om met de verschillende lusjes en het schemacanvas vertrouwd te maken.
+Als u de werkruimte voor het eerst gebruikt, begint u met de hulplijn op [het onderzoeken van bestaande middelen in UI](./explore.md) om uzelf bekend te maken met de verschillende tabbladen en het schemacanvas.
 
-Het wordt ook geadviseerd dat u de [zelfstudie van de schemaverwezenlijking ](../tutorials/create-schema-ui.md) volgt om een voorbeeldschema tot stand te brengen en een volledige tour van de mogelijkheden van [!DNL Schema Editor] in het proces te krijgen.
+U wordt ook aangeraden het [zelfstudie over het maken van schema&#39;s](../tutorials/create-schema-ui.md) om een voorbeeldschema tot stand te brengen en een volledige rondleiding van te krijgen [!DNL Schema Editor]De mogelijkheden van de klant in het proces.
 
 ## XDM-bronnen maken en beheren
 
-De [!UICONTROL Schemas] werkruimte biedt krachtige gereedschappen voor het maken en aanpassen van de XDM-bronnen van uw organisatie. Verwijs naar de volgende documentatie om te leren om elk middeltype in UI tot stand te brengen en uit te geven:
+De [!UICONTROL Schemas] De werkruimte biedt krachtige gereedschappen voor het maken en aanpassen van de XDM-bronnen van uw organisatie. Verwijs naar de volgende documentatie om te leren om elk middeltype in UI tot stand te brengen en uit te geven:
 
-* [Schemas](./resources/schemas.md)
+* [Schema&#39;s](./resources/schemas.md)
 * [Klassen](./resources/classes.md)
-* [Veldengroepen](./resources/field-groups.md)
+* [Veldgroepen](./resources/field-groups.md)
 * [Datatypen](./resources/data-types.md)
 
 ## XDM-velden definiëren
 
-Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Raadpleeg de handleiding bij [XDM-velden definiëren in de UI](./fields/overview.md) voor meer informatie.
+Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Raadpleeg de handleiding op [XDM-velden definiëren in de gebruikersinterface](./fields/overview.md) voor meer informatie .
 
 ## Volgende stappen
 
-Dit document biedt een inleiding tot de [!UICONTROL Schemas]-werkruimte in de gebruikersinterface van het Platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.
+In dit document werd een inleiding gegeven op de [!UICONTROL Schemas] in de gebruikersinterface van het Platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.

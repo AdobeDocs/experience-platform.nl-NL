@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
 title: Een Apache HDFS-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Apache Hadoop Distributed File System met de Flow Service API kunt verbinden.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%
@@ -37,7 +36,7 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `url` | De URL definieert de auteparams die vereist zijn voor verbinding met [!DNL HDFS] anoniem. Voor meer informatie over hoe u deze waarde kunt verkrijgen, raadpleegt u [dit [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AdWords] is: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AdWords] is: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 ### Platform-API&#39;s gebruiken
 

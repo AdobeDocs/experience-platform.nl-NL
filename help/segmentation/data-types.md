@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;Gegevenstypen voor segmentatie;Segmentatie;Segmentatie;Segmenteringsdienst;Segmenteringsservicetypen;
 solution: Experience Platform
 title: Ondersteunde gegevenstypen in Segmentatieservice
-topic-legacy: overview
 description: Alle gegevenstypes van het Model van de Gegevens van de Ervaring (XDM) worden gesteund binnen de Dienst van de Segmentatie van Adobe. De regels die een segmentdefinitie vormen worden contextualiseerd door de volgende gegevenstypes.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 1%
@@ -25,21 +24,21 @@ Tekenreeksgegevens worden opgenomen in segmentdefinities met behulp van logische
 | Type instructie | Voorbeelden |
 | -------------- | -------- |
 | Logisch | `and`, `or`, `not` |
-| Inclusief/exclusief | `include`,  `must` `exist`,  `exclude`,  `must not exist` |
+| Inclusief/exclusief | `include`, `must` `exist`, `exclude`, `must not exist` |
 | Vergelijking | `equals`, `does not equal`, `contains`, `starts with` |
 
 ## Datumgegevens
 
-Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefinities door specifieke begin- en einddatums te gebruiken of door datumrelevante instructies te gebruiken, zoals in de onderstaande tabel wordt getoond. Één implementatie zou een publiek van klanten kunnen creëren die met uw merk op elk ogenblik *dit jaar* hebben in wisselwerking gestaan en ook *binnen* de laatste dagen actief geweest.
+Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefinities door specifieke begin- en einddatums te gebruiken of door datumrelevante instructies te gebruiken, zoals in de onderstaande tabel wordt getoond. Eén implementatie zou een publiek kunnen maken van klanten die op elk moment met uw merk hebben gewerkt *dit jaar* en is ook actief *binnen* de laatste dagen.
 
 | Voorbeeldveld | Datum-relevante verklaringen | Tijdlijn |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`,  `yesterday`,  `this month`,  `this year` | Relevant aan de dag het segment werd gebouwd. |
-| person.lastPurchase | `in last`,  `during`,  `before`,  `after`,  `within` | Relevant binnen een bepaalde week/maand. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant aan de dag het segment werd gebouwd. |
+| person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevant binnen een bepaalde week/maand. |
 
 ## Experience Events
 
-Als Adobe Experience Platform-schema registreert [!DNL XDM ExperienceEvents] expliciete en impliciete klanteninteractie met [!DNL Platform] geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. [!DNL ExperienceEvents] Dit zijn feiten. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
+Als Adobe Experience Platform-schema: [!DNL XDM ExperienceEvents] expliciete en impliciete klanteninteractie registreren met [!DNL Platform]- geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. [!DNL ExperienceEvents] Dit zijn feiten. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
 
 Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergegeven met behulp van trefwoorden die het gedrag van gebeurtenissen verfijnen en gebeurteniskenmerken opgeven.
 
@@ -54,11 +53,11 @@ Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergeg
 
 Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan het nieuwe segment.
 
-Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruik van Adobe Audience Manager-soorten publiek met Platform vindt u in de [handleiding voor het delen van publiek in de documentatie van Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruik van Adobe Audience Manager-soorten met Platform vindt u in de [Handleiding voor het delen van publiek in de Adobe Audience Manager-documentatie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Segment delen
 
-Segmenten die in Platform zijn gemaakt, kunnen binnen andere [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) worden gebruikt. Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
+Segmenten die in Platform zijn gemaakt, kunnen binnen andere segmenten worden gebruikt [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
 
 ## Andere gegevenstypen
 

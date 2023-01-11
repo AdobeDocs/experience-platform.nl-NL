@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;adres;xdm:adres;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype van productlijst
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het item in de productlijst.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 0%

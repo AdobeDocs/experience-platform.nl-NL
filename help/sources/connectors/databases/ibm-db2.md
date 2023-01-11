@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: Overzicht van IBM DB2 Source Connector
-topic-legacy: overview
 description: Leer hoe u IBM DB2 met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%

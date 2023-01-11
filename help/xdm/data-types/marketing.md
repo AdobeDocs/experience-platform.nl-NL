@@ -2,15 +2,14 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;apparaat;datatype;data-type;data-type;
 solution: Experience Platform
 title: Type marketinggegevens
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor marketing.
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Marketing] gegevenstype
 
@@ -20,7 +19,7 @@ ht-degree: 2%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `campaignGroup` | Tekenreeks | De naam van de campagnegroep (in gevallen waarin meerdere campagnes zijn gegroepeerd, zoals `50%_DISCOUNT`). |
+| `campaignGroup` | Tekenreeks | De naam van de campagnegroep (wanneer meerdere campagnes op dezelfde manier worden gegroepeerd) `50%_DISCOUNT`). |
 | `campaignName` | Tekenreeks | De naam van de marketingcampagne, zoals `50%_DISCOUNT_USA` of `50%_DISCOUNT_ASIA`. |
 | `trackingCode` | Tekenreeks | De code voor bijhouden die kan worden gebruikt om de marketingcampagne te identificeren waaraan de gebeurtenis is gekoppeld. |
 

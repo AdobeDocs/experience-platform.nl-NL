@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;salesforce marketing cloud;Salesforce Marketing Cloud
 solution: Experience Platform
 title: Creeer een Verbinding van de Basis van de Marketing Cloud Salesforce gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Salesforce-Marketing Cloud.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 1%
@@ -45,7 +44,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Salesforce Marketing Cloud]moet
 | `host` | De hostserver van uw toepassing. Dit is vaak uw subdomein. **Opmerking:** Wanneer u uw `host` waarde, hoeft u alleen het subdomein op te geven en niet de volledige URL. Als de host-URL bijvoorbeeld `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, hoeft u alleen maar in te voeren `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` als uw hostwaarde. |
 | `clientId` | De client-id die aan uw [!DNL Salesforce Marketing Cloud] toepassing. |
 | `clientSecret` | Het clientgeheim dat aan uw [!DNL Salesforce Marketing Cloud] toepassing. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 

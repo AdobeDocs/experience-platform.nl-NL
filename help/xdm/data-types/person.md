@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;persoon;datatype;gegeven-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype Persoon
-topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Person Experience Data Model (XDM).
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 3%
@@ -21,12 +20,12 @@ ht-degree: 3%
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `name` | [[!UICONTROL Person name]](./person-name.md) | Beschrijft details over de volledige naam van de persoon. |
-| `birthDate` | Datum | De volledige datum waarop een persoon is geboren. De datumnotatie (zonder tijd) moet de [RFC 3339, sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) norm volgen. |
-| `birthDayAndMonth` | Tekenreeks | De dag en de maand waarin een persoon is geboren, in de notatie MM-DD. Dit veld moet worden gebruikt wanneer de dag en de maand van de geboorte van een persoon bekend is, maar niet het jaar. De opmaak van deze eigenschap moet overeenkomen met deze reguliere expressie `[0-1][0-9]-[0-9][0-9]`. |
-| `birthYear` | Geheel | Het jaar waarin een persoon is geboren, inclusief de eeuw (bijvoorbeeld `1983`). Dit veld moet worden gebruikt wanneer alleen de leeftijd van de persoon bekend is en niet de volledige geboortedatum. Deze waarde moet liggen tussen 1 en 32767. |
+| `birthDate` | Datum | De volledige datum waarop een persoon is geboren. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
+| `birthDayAndMonth` | Tekenreeks | De dag en de maand waarin een persoon is geboren, in de notatie MM-DD. Dit veld moet worden gebruikt wanneer de dag en de maand van de geboorte van een persoon bekend is, maar niet het jaar. De indeling van deze eigenschap moet in overeenstemming zijn met deze reguliere expressie `[0-1][0-9]-[0-9][0-9]`. |
+| `birthYear` | Geheel | Het jaar waarin een persoon geboren is, inclusief de eeuw (bijvoorbeeld `1983`). Dit veld moet worden gebruikt wanneer alleen de leeftijd van de persoon bekend is en niet de volledige geboortedatum. Deze waarde moet liggen tussen 1 en 32767. |
 | `gender` | Tekenreeks | De genderidentiteit van de persoon. De waarde van deze eigenschap moet gelijk zijn aan een van de volgende bekende opsommingswaarden. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> De standaardwaarde voor deze waarde is `not_specified`. |
 | `maritalStatus` | Tekenreeks | Beschrijft de verhouding van een persoon met significante andere. De waarde van deze eigenschap moet gelijk zijn aan een van de volgende opsommingswaarden. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> De standaardwaarde voor deze waarde is `not_specified`. |
-| `nationality` | Tekenreeks | De juridische relatie tussen een persoon en zijn staat die wordt vertegenwoordigd door middel van de ISO 3166-1 Alpha-2-code. De opmaak van deze eigenschap moet overeenkomen met deze reguliere expressie `^[A-Z]{2}$`. |
+| `nationality` | Tekenreeks | De juridische relatie tussen een persoon en zijn staat die wordt vertegenwoordigd door middel van de ISO 3166-1 Alpha-2-code. De indeling van deze eigenschap moet in overeenstemming zijn met deze reguliere expressie `^[A-Z]{2}$`. |
 | `taxId` | Tekenreeks | De belasting- of fiscale ID van de persoon, zoals het fiscaal identificatienummer (TIN) in de VS of het Certificado de Identificación Fiscal (CIF/NIF) in Spanje. |
 
 {style=&quot;table-layout:auto&quot;}

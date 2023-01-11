@@ -2,11 +2,10 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de Dienst van de segmentatie;segmentatie;creeer een dataset;de segmenten van het de uitvoerpubliek;de uitvoersegment;
 solution: Experience Platform
 title: Creeer een Dataset voor het Uitvoeren van een Segment van de Publiek
-topic-legacy: tutorial
 type: Tutorial
 description: Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 0%

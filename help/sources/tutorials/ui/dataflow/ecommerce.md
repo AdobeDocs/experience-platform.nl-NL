@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;eCommerce-connector;eCommerce
 solution: Experience Platform
 title: Creeer een Dataflow Gebruikend een Bron van de e-Handel in UI
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een e-commercebron tot stand te brengen gebruikend Platform UI.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 0%

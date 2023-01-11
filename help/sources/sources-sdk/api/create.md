@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
 title: Een nieuwe verbindingsspecificatie maken met de Flow Service API
-topic-legacy: tutorial
 description: Het volgende document verstrekt stappen op hoe te om een verbindingsspecificatie tot stand te brengen gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen te integreren.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 1%

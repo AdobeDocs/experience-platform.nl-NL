@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;boolean-functies;boolean;
 solution: Experience Platform
 title: Booleaanse functies PQL
-topic-legacy: developer guide
 description: Booleaanse functies worden gebruikt voor het uitvoeren van Booleaanse logica op verschillende elementen in PQL (Profile Query Language).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 2%
@@ -15,11 +13,11 @@ ht-degree: 2%
 
 # Booleaanse functies
 
-Booleaanse functies worden gebruikt om booleaanse logica uit te voeren op verschillende elementen in [!DNL Profile Query Language] (PQL).  Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Booleaanse functies worden gebruikt voor het uitvoeren van Booleaanse logica op verschillende elementen in [!DNL Profile Query Language] (PQL).  Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## en
 
-De functie `and` wordt gebruikt om een logische samenhang tot stand te brengen.
+De `and` Deze functie wordt gebruikt om een logische combinatie te maken.
 
 **Indeling**
 
@@ -37,7 +35,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## of
 
-De functie `or` wordt gebruikt om een logische scheiding tot stand te brengen.
+De `or` Deze functie wordt gebruikt om een logische scheiding te maken.
 
 **Indeling**
 
@@ -55,7 +53,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ## Niet
 
-De functie `not` (of `!`) wordt gebruikt om een logische negatie tot stand te brengen.
+De `not` (of `!`) wordt gebruikt om een logische negatie te maken.
 
 **Indeling**
 
@@ -74,7 +72,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Indien
 
-De functie `if` wordt gebruikt om een uitdrukking op te lossen afhankelijk van of een gespecificeerde voorwaarde waar is.
+De `if` wordt gebruikt om een expressie op te lossen, afhankelijk van het feit of een opgegeven voorwaarde waar is.
 
 **Indeling**
 
@@ -85,12 +83,12 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 | Argument | Beschrijving |
 | --------- | ----------- |
 | `{TEST_EXPRESSION}` | De booleaanse expressie die wordt getest. |
-| `{TRUE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` waar is. |
-| `{FALSE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` false is. |
+| `{TRUE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` is waar. |
+| `{FALSE_EXPRESSION}` | De expressie waarvan de waarde wordt gebruikt als `{TEST_EXPRESSION}` is false. |
 
 **Voorbeeld**
 
-De volgende PQL-query stelt de waarde in als `1` als het thuisland Canada is en `2` als het thuisland geen Canada is.
+De volgende PQL-query stelt de waarde in als `1` als het land van herkomst Canada is en `2` als het land van herkomst geen Canada is.
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -98,4 +96,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Volgende stappen
 
-Nu u over booleaanse functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
+Nu u over booleaanse functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).

@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Salesforce;salesforce
 solution: Experience Platform
 title: Een Salesforce Base-verbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Salesforce-account met behulp van de Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
@@ -38,7 +37,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL Salesforce]moet u waarde
 | `username` | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
 | `password` | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
 | `securityToken` | De beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AdWords] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AdWords] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Ga voor meer informatie over aan de slag gaan [dit Salesforce-document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;huis;populaire onderwerpen;vorm dataflow;de schakelaar van het klantensucces
 solution: Experience Platform
 title: Een gegevensstroom maken met een succesbron van de klant in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een bron van het klantensucces tot stand te brengen gebruikend Platform UI.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1356'
 ht-degree: 0%

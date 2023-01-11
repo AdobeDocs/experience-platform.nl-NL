@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Gegevenstype van voorkeursveld voor algemene marketing
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype van het veld Generic Marketing Preference.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%

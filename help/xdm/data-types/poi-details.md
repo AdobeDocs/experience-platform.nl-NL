@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;poi;poi details;punt van belang;punt details;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype interessdetails
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Details.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 3%

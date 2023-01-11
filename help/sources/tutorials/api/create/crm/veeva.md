@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;veeva crm;Veeva CRM;Veeva CRM;
 solution: Experience Platform
 title: Een Veeva CRM-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Veeva CRM met behulp van de Flow Service API.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 1%
@@ -38,7 +37,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Veeva CRM]moet u waarden opgeve
 | `username` | De gebruikersnaam van uw [!DNL Veeva CRM] account. |
 | `password` | De wachtwoordwaarde van uw [!DNL Veeva CRM] account. |
 | `securityToken` | Het beveiligingstoken voor uw [!DNL Veeva CRM] -instantie. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
 Raadpleeg deze voor meer informatie over deze waarden [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 

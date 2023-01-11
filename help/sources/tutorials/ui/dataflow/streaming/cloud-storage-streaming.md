@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;streaming;cloudopslagaansluiting;cloudopslag
 solution: Experience Platform
 title: Een streaminggegevensstroom maken voor een bron voor cloudopslag in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met behulp van de basisaansluiting voor cloudopslag.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%

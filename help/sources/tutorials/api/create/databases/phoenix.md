@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Phoenix;phoenix
 solution: Experience Platform
 title: Een Phoenix Base-verbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Phoenix-database met de Flow Service API met Adobe Experience Platform kunt verbinden.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -44,7 +43,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Phoenix]moet u waarden opgeven 
 | `port` | De TCP-poort die de [!DNL Phoenix] server gebruikt om naar clientverbindingen te luisteren. Als u verbinding maakt met [!DNL Azure] HDInsights, geef poort 443 op. |
 | `httpPath` | De gedeeltelijke URL die overeenkomt met de [!DNL Phoenix] server. /hbasephoenix0 opgeven bij gebruik [!DNL Azure] HDInsightcluster. |
 | `enableSsl` | Een booleaanse waarde. Geeft aan of de verbindingen met de server via SSL zijn gecodeerd. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Phoenix] is: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Phoenix] is: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 
 Zie voor meer informatie over het aan de slag gaan [dit Phoenix-document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;MariaDB;mariadb
 solution: Experience Platform
 title: Een MariaDB-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met MariaDB verbindt met behulp van de Flow Service API.
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 1%
@@ -35,7 +34,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL MariaDB]moet u de volgende eige
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die aan uw [!DNL MariaDB] verificatie. De [!DNL MariaDB] patroon verbindingstekenreeks is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 Raadpleeg deze voor meer informatie over het verkrijgen van een verbindingstekenreeks [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 

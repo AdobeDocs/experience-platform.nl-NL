@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;analytische toewijzingsvelden;analytische toewijzing
 solution: Experience Platform
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
-topic-legacy: overview
 description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 0%
@@ -114,10 +113,10 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analy
 | videobeelden | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Object | Aantal fouten in videokwaliteit | {id (string), value (number)} |
 | videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoprogress10 | media.mediaTimed.progress10 | Object | <!-- MISSING --> | {id (string), value (number)} |
-| videovoortgang25 | media.mediaTimed.progress25 | Object | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress25 | media.mediaTimed.progress25 | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoprogress50 | media.mediaTimed.progress50 | Object | <!-- MISSING --> | {id (string), value (number)} |
-| videovoortgang75 | media.mediaTimed.progress75 | Object | <!-- MISSING --> | {id (string), value (number)} |
-| videovoortgang95 | media.mediaTimed.progress95 | Object | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress75 | media.mediaTimed.progress75 | Object | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress95 | media.mediaTimed.progress95 | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoresuim | media.mediaTimed.resumes | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videopausecount | media.mediaTimed.pauses | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videopausetime | media.mediaTimed.pauseTime | Object | <!-- MISSING --> | {id (string), value (number)} |

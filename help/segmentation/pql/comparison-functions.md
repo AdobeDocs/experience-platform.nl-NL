@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;vergelijkingsfuncties;vergelijking;
 solution: Experience Platform
 title: PQL-vergelijkingsfuncties
-topic-legacy: developer guide
 description: Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken, waarbij "true" of "false" overeenkomstig wordt geretourneerd.
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 7%
@@ -15,11 +13,11 @@ ht-degree: 7%
 
 # Vergelijkingsfuncties
 
-Vergelijkingsfuncties worden gebruikt om tussen verschillende expressies en waarden te vergelijken en `true` of `false` dienovereenkomstig te retourneren. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken en retourneren `true` of `false` dienovereenkomstig. Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Equals (Is gelijk aan)
 
-De functie `=` (equals) controleert of één waarde of expressie gelijk is aan een andere waarde of expressie.
+De `=` (equals) functie controleert of één waarde of expressie gelijk is aan een andere waarde of expressie.
 
 **Indeling**
 
@@ -37,7 +35,7 @@ homeAddress.countryISO = "CA"
 
 ## Niet gelijk
 
-De functie `!=` (niet gelijk aan) controleert of één waarde of expressie **niet** gelijk is aan een andere waarde of expressie.
+De `!=` (niet gelijk aan) functie controleert of één waarde of expressie **niet** gelijk aan een andere waarde of expressie.
 
 **Indeling**
 
@@ -55,7 +53,7 @@ homeAddress.countryISO != "CA"
 
 ## Greater than
 
-De functie `>` (groter dan) wordt gebruikt om te controleren of de eerste waarde groter is dan de tweede waarde.
+De `>` (groter dan) wordt gebruikt om te controleren of de eerste waarde groter is dan de tweede waarde.
 
 **Indeling**
 
@@ -73,7 +71,7 @@ person.birthMonth > 2
 
 ## Greater than or equal to
 
-De functie `>=` (groter dan of gelijk aan) wordt gebruikt om te controleren of de eerste waarde groter dan of gelijk aan de tweede waarde is.
+De `>=` (groter dan of gelijk aan) functie wordt gebruikt om te controleren of de eerste waarde groter dan of gelijk aan de tweede waarde is.
 
 **Indeling**
 
@@ -91,7 +89,7 @@ person.birthMonth >= 3
 
 ## Less than
 
-De vergelijkingsfunctie `<` (kleiner dan) wordt gebruikt om te controleren of de eerste waarde minder is dan de tweede waarde.
+De `<` (kleiner dan) vergelijkingsfunctie wordt gebruikt om te controleren of de eerste waarde kleiner is dan de tweede waarde.
 
 **Indeling**
 
@@ -109,7 +107,7 @@ person.birthMonth < 2
 
 ## Less than or equal to
 
-De vergelijkingsfunctie `<=` (kleiner dan of gelijk aan) wordt gebruikt om te controleren of de eerste waarde kleiner dan of gelijk aan de tweede waarde is.
+De `<=` (kleiner dan of gelijk aan) vergelijkingsfunctie wordt gebruikt om te controleren of de eerste waarde kleiner dan of gelijk is aan de tweede waarde.
 
 **Indeling**
 
@@ -127,4 +125,4 @@ person.birthMonth <= 2
 
 ## Volgende stappen
 
-Nu u over vergelijkingsfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
+Nu u over vergelijkingsfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).

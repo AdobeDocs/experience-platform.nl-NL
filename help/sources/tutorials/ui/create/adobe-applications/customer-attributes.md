@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;klantkenmerken
 solution: Experience Platform
 title: Creeer een BronVerbinding van de Attributen van de Klant in UI
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een bronverbinding maakt in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%

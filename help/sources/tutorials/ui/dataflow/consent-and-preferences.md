@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;toestemming en voorkeuren;toestemming;onTrust;OneTrust
 solution: Experience Platform
 title: Creeer een Dataflow gebruikend een Versie van de Toestemming en van de Voorkeur in UI
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een toestemmings- en voorkeursbron met behulp van de gebruikersinterface van het Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 0%

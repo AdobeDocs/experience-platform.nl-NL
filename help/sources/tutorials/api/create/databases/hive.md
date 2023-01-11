@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Apache-bijenkorf;hive;Hive
 solution: Experience Platform
 title: Een Apache Hive maken op Azure HDInsights Base Connection met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Apache Hive op Azure HDInsights kunt aansluiten op Adobe Experience Platform met behulp van de Flow Service API.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 1%
@@ -41,7 +40,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Hive]moet u waarden opgeven voo
 | `host` | Het IP-adres of de hostnaam van de [!DNL Hive] server. |
 | `username` | De gebruikersnaam die u gebruikt om toegang te krijgen tot [!DNL Hive] server. |
 | `password` | Het wachtwoord dat overeenkomt met de gebruiker. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
 Zie voor meer informatie over het aan de slag gaan [dit Hive-document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 

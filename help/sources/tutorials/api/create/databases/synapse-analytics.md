@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Synapse;synapse;Azure synapse Analytics
 solution: Experience Platform
 title: Een Azure synapse Analytics Base Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Azure synapse Analytics met Adobe Experience Platform verbindt via de Flow Service API.
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -35,7 +34,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Synapse]moet u waarden opgeven 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks waarmee verbinding wordt gemaakt [!DNL Synapse]. De [!DNL Synapse] verbindingstekenpatroon is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Synapse] is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Synapse] is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
 Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [this Synapse document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
 

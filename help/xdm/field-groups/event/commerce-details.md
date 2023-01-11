@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;
 solution: Experience Platform
 title: Detailsvakgroep handel
-topic-legacy: overview
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van de Handel.
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
 
 ---
 
-
 # [!UICONTROL Commerce Details] schemaveldgroep
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. See the document on [field group name updates](../name-updates.md) for more information.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL Commerce Details] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/experienceevent.md), die wordt gebruikt om handelsgegevens zoals productinformatie (SKU, naam, hoeveelheid), en standaardkartverrichtingen (orde, checkout, verlaten) te beschrijven.
+[!UICONTROL Commerce Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), gebruikt om handelsgegevens te beschrijven zoals productinformatie (SKU, naam, hoeveelheid), en standaard kartverrichtingen (orde, kassa, verlaten).
 
 ![](../../images/field-groups/commerce-details.png)
 
-| Eigenschap | Data type | Beschrijving |
+| Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `commerce` | [Commerce](../../data-types/commerce.md) | Een object dat productretourneert, garantieregistratie en processen voor winkelwagentjes/bestellingen beschrijft. |
-| `productListItems` | Array of [Product list items](../../data-types/product-list-item.md) | Een lijst met items die de door een klant geselecteerde producten vertegenwoordigen, met specifieke opties en prijzen op een bepaald tijdstip (die kunnen verschillen van de productregistratie). |
+| `productListItems` | Array van [Objecten in de productlijst](../../data-types/product-list-item.md) | Een lijst met items die de door een klant geselecteerde producten vertegenwoordigen, met specifieke opties en prijzen op een bepaald tijdstip (die kunnen verschillen van de productregistratie). |
 
 {style=&quot;table-layout:auto&quot;}
 

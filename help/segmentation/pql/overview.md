@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;PQL;pql;taal voor profielquery
 solution: Experience Platform
 title: Overzicht van de profielquery Language (PQL)
-topic-legacy: developer guide
 description: Deze handleiding biedt een algemeen overzicht van PQL, met opmaakrichtlijnen en voorbeelden van PQL-expressies.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 1%

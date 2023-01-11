@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;salesforce marketing cloud;Salesforce Marketing Clud
 solution: Experience Platform
 title: Creeer een Verbinding van de Bron van de Marketing Cloud Salesforce in UI
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Salesforce-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 1%

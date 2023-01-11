@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Azure Data Explorer;Azure Data Explorer;Azure Data Explorer
 solution: Experience Platform
 title: Een Azure Azure Azure Data Explorer Base Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Azure Azure Data Explorer verbindt met Adobe Experience Platform met behulp van de Flow Service API.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 1%
@@ -40,7 +39,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Azure Data Explorer]moet u waar
 | `tenant` | De unieke huurder-id die wordt gebruikt om verbinding te maken met de [!DNL Azure Data Explorer] database. |
 | `servicePrincipalId` | De unieke dienst belangrijkste identiteitskaart die wordt gebruikt om met [!DNL Azure Data Explorer] database. |
 | `servicePrincipalKey` | De unieke sleutel van de dienst belangrijkste die wordt gebruikt om met [!DNL Azure Data Explorer] database. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 Zie voor meer informatie over aan de slag gaan [[!DNL Azure Data Explorer] document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 

@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;Webpagina-details;datatype;gegevenstype;gegevenstype;webpagina
 solution: Experience Platform
 title: Gegevenstype Ervaring Channel
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype (Experience Channel Experience Data Model).
-source-git-commit: b9168052174c250810e59e403cb77419d510df3b
+exl-id: 209654f7-0bde-439a-989c-ce2e41599105
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 2%

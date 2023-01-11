@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 title: Uw bron verzenden
-topic-legacy: overview
 description: Het volgende document verstrekt stappen op hoe te om een nieuwe bron te testen en te verifiëren gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen (de Band SDK) te integreren.
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 0%

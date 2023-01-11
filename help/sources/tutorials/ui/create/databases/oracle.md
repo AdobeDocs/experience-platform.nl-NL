@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Oracle DB;oracle db
 solution: Experience Platform
 title: Een Oracle DB-bronverbinding maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Oracle DB-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 1%

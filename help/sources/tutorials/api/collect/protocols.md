@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Verzamel protocolgegevens;protocolgegevens
 solution: Experience Platform
 title: Creeer een Dataflow voor de Bronnen van Protocollen Gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 0%

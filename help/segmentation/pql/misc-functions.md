@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;overige functies;misc;
 solution: Experience Platform
 title: PQL Overige functies
-topic-legacy: developer guide
 description: De volgende functie is een diverse functie voor de Taal van de Vraag van het Profiel (PQL).
 exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 2%
@@ -15,11 +13,11 @@ ht-degree: 2%
 
 # Diverse functies
 
-De volgende functie is een diverse functie voor [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+De volgende functie is een andere functie voor [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in de [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Laat
 
-Met de functie `let` kan een expressie worden opgeslagen als een variabele die later in een query moet worden gebruikt.
+De `let` De functie staat een uitdrukking toe om als variabele worden opgeslagen die later in een vraag moet worden gebruikt.
 
 **Indeling**
 
@@ -37,4 +35,4 @@ let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.ord
 
 ## Volgende stappen
 
-Nu u over diverse functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
+Nu u over diverse functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere PQL functies, gelieve te lezen [Overzicht van taal voor profielquery](./overview.md).

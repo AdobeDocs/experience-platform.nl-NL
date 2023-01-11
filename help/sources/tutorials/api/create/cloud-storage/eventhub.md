@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;gebeurtenishub;Azure-gebeurtenishub;Event-hub
 solution: Experience Platform
 title: Een Azure Event Hubs Source Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 0%
@@ -36,7 +35,7 @@ Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Event Hubs] account, 
 | `sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `sasKey` | De primaire sleutel van de [!DNL Event Hubs] naamruimte. De `sasPolicy` de `sasKey` komt overeen met `manage` rechten die zijn geconfigureerd voor de [!DNL Event Hubs] in te vullen lijst. |
 | `namespace` | De naamruimte van de [!DNL Event Hubs] u hebt toegang. An [!DNL Event Hubs] namespace verstrekt een unieke bereikcontainer, waarin u één of meerdere kunt tot stand brengen [!DNL Event Hubs]. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] Verbindingsspecificatie-id is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 Zie voor meer informatie over deze waarden [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 

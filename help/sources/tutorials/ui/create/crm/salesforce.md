@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Salesforce;salesforce
 solution: Experience Platform
 title: Een Salesforce-bronverbinding maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Salesforce-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%

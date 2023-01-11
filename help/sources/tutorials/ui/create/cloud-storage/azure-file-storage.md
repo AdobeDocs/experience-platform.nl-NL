@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Azure File Storage;Azure File Storage-connector
 solution: Experience Platform
 title: Een Azure File Storage Source Connection maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure File Storage-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 1%

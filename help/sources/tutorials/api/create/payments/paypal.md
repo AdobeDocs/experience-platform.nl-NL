@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;PayPal-aansluiting;paypal;Paypal
 solution: Experience Platform
 title: Een PayPal-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u PayPal met Adobe Experience Platform verbindt via de Flow Service API.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 1%
@@ -37,7 +36,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL PayPal]moet u waarden opgeven v
 | `host` | De URL van de [!DNL PayPal] -instantie. (standaard: api.sandbox.paypal.com). |
 | `clientId` | De client-id die aan uw [!DNL PayPal] toepassing. |
 | `clientSecret` | Het clientgeheim dat aan uw [!DNL PayPal] toepassing. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PayPal] is: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PayPal] is: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 Zie voor meer informatie over het aan de slag gaan [dit PayPal-document](https://developer.paypal.com/docs/api/overview/#get-credentials).
 

@@ -3,10 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen; analyses;classificati
 description: Leer hoe u een Adobe Analytics-bronaansluiting voor de gebruikersinterface maakt om classificatiegegevens over te brengen naar Adobe Experience Platform.
 solution: Experience Platform
 title: Een Adobe Analytics-bronverbinding maken voor classificatiegegevens in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 0%

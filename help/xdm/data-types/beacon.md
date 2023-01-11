@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schemas;baken;interactiedetails;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype baken
-topic-legacy: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 2%
@@ -22,7 +21,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `beaconMajor` | Dubbel | De belangrijkste waarden identificeren en onderscheiden een groep en unsigned geheelwaarden tussen 1 en 65.535. |
 | `beaconMinor` | Dubbel | Kleine waarden identificeren en onderscheiden een individueel geheel getal en waarden zonder teken tussen 1 en 65.535. |
-| `proximity` | Tekenreeks | Geschatte afstand tot het baken. Zie [appendix](#proximity) voor geaccepteerde waarden en definities. |
+| `proximity` | Tekenreeks | Geschatte afstand tot het baken. Zie de [aanhangsel](#proximity) voor aanvaarde waarden en definities. |
 | `proximityUUID` | Tekenreeks | Een nabijheid UUID (Universally Unique Identifier) is een speciaal type herkenningsteken dat wordt gebruikt om bakens in uw netwerk van alle andere bakens in netwerken buiten uw controle te onderscheiden. De nabijheid UUID wordt gevormd in een baken, dat aan mobiele apparaten in waaier moet worden overgebracht om de bakens van een organisatie te identificeren. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -34,11 +33,11 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstyp
 
 ## Aanhangsel
 
-De volgende sectie bevat aanvullende informatie over het gegevenstype [!UICONTROL Beacon].
+De volgende sectie bevat aanvullende informatie over de [!UICONTROL Beacon] gegevenstype.
 
 ## Geaccepteerde waarden voor nabijheid {#proximity}
 
-In de volgende tabel worden de geaccepteerde waarden voor `proximity` en de bijbehorende betekenissen weergegeven:
+In de volgende tabel worden de toegestane waarden voor `proximity` en de betekenis ervan:
 
 | Waarde | Beschrijving |
 | --- | --- |

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;flowservice;API;api;delete;delete dataflows
 solution: Experience Platform
 title: Een DataFlow verwijderen met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u batch- en streaming-gegevensstromen verwijdert met de Flow Service API.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 1%

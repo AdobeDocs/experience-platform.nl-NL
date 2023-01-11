@@ -3,11 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;bijgewerkte accounts
 description: In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De werkruimte Bronnen biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en referenties.
 solution: Experience Platform
 title: Accountgegevens van bronverbinding bijwerken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 0%
@@ -16,9 +14,9 @@ ht-degree: 0%
 
 # Accountgegevens bijwerken in de gebruikersinterface
 
-In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De [!UICONTROL Sources] werkruimte biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en referenties.
+In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De [!UICONTROL Sources] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en gegevens.
 
-Deze zelfstudie bevat stappen voor het bijwerken van de details en gegevens van een bestaand account in de werkruimte [!UICONTROL Sources].
+Deze zelfstudie bevat stappen voor het bijwerken van de gegevens en referenties van een bestaande account via het dialoogvenster [!UICONTROL Sources] werkruimte.
 
 ## Aan de slag
 
@@ -29,13 +27,13 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## Accounts bijwerken
 
-Meld u aan bij [Experience Platform UI](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatie om de [!UICONTROL Sources] werkruimte te openen. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om bestaande accounts weer te geven.
+Aanmelden bij de [UI Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. Selecteren **[!UICONTROL Accounts]** in de bovenste koptekst om bestaande accounts weer te geven.
 
 ![catalogus](../../images/tutorials/update/catalog.png)
 
-De pagina **[!UICONTROL Accounts]** wordt weergegeven. Op deze pagina vindt u een lijst met weer te geven accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de aanmaakdatum.
+De **[!UICONTROL Accounts]** wordt weergegeven. Op deze pagina vindt u een lijst met weer te geven accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de aanmaakdatum.
 
-Selecteer het filterpictogram ![filter](../../images/tutorials/update/filter.png) linksboven om het deelvenster Sorteren te starten.
+Filterpictogram selecteren ![filter](../../images/tutorials/update/filter.png) bovenaan links om het deelvenster Sorteren te starten.
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 
@@ -45,11 +43,11 @@ Selecteer de bron waarmee u wilt werken om een lijst met bestaande accounts weer
 
 ![rekeningen sorteren](../../images/tutorials/update/accounts-sort.png)
 
-Er wordt een vervolgkeuzemenu weergegeven waarin u de opties **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** kunt kiezen. Selecteer **[!UICONTROL Edit details]** in het menu om uw account bij te werken.
+Er wordt een vervolgkeuzemenu weergegeven met opties voor **[!UICONTROL Add data]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]**. Selecteren **[!UICONTROL Edit details]** in het menu om uw account bij te werken.
 
 ![update](../../images/tutorials/update/update.png)
 
-In het dialoogvenster **[!UICONTROL Edit account details]** kunt u de naam, beschrijving en verificatiegegevens van een account bijwerken. Als u de gewenste informatie hebt bijgewerkt, selecteert u **[!UICONTROL Save]**.
+De **[!UICONTROL Edit account details]** kunt u de naam, beschrijving en verificatiereferenties van een account bijwerken. Als u de gewenste gegevens hebt bijgewerkt, selecteert u **[!UICONTROL Save]**.
 
 ![bewerken van accountgegevens](../../images/tutorials/update/edit-account-details.png)
 
@@ -59,6 +57,6 @@ Na enkele ogenblikken verschijnt onder aan het scherm een bevestigingsvak om te 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes de [!UICONTROL Sources] werkruimte gebruikt om de informatie van een bestaand bronaccount bij te werken.
+Door deze zelfstudie te volgen, hebt u de opdracht [!UICONTROL Sources] werkruimte om de informatie van een bestaand bronaccount bij te werken.
 
-Voor stappen over hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Flow Service] API, gelieve te verwijzen naar de zelfstudie over [het bijwerken van verbindingsinformatie gebruikend de Dienst API van de Stroom](../../tutorials/api/update.md).
+Voor stappen op hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Flow Service] API, raadpleeg de zelfstudie op [bijwerken, verbindingsgegevens met behulp van de Flow Service API](../../tutorials/api/update.md).

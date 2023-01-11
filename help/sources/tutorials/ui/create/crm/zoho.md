@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Creeer een BronVerbinding van Zoho CRM in UI
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Zoho CRM-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%

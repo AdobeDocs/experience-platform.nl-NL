@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;e-commerce
 solution: Experience Platform
 title: Ontdek een eCommerce-verbinding met behulp van de Flow Service API
-topic-legacy: overview
 description: Deze zelfstudie gebruikt de Flow Service API om eCommerce-verbindingen te verkennen.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 1%

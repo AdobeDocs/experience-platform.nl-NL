@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Bronaansluiting voor analyse;Analytische aansluiting;Analytische bron;Analytics
 solution: Experience Platform
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
@@ -179,7 +178,7 @@ Nadat u de toewijzingen voor uw [!DNL Analytics] de gegevens van de rapportreeks
 >
 >Filteren op rijniveau gebruiken om voorwaarden toe te passen en te bepalen op welke gegevens **include for Profile ingestion**. Het kolom-vlakke filtreren gebruiken om de kolommen van gegevens te selecteren die u wilt **uitsluiten voor opnemen van profiel**.
 
-U kunt gegevens filteren voor [!DNL Profile] opname op rij- en kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt het rijen-niveau filtreren ook gebruiken om voorwaarden te verbinden gebruikend `AND` alsmede `OR`en de omstandigheden negeren bij `NOT`.
+U kunt gegevens filteren voor [!DNL Profile] opname op rij- en kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt het rijen-niveau filtreren ook gebruiken om voorwaarden te verbinden gebruikend `AND` alsmede `OR`en de omstandigheden negeren bij gebruik van `NOT`.
 
 Als u uw [!DNL Analytics] gegevens op rijniveau, selecteer **[!UICONTROL Row filter]**.
 

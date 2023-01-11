@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;databaseverbinding
 solution: Experience Platform
 title: Creeer een Dataflow Gebruikend een Bron van het Gegevensbestand in UI
-topic-legacy: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie biedt stappen voor het maken van een gegevensstroom voor een databasebron met behulp van Platform-UI.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%

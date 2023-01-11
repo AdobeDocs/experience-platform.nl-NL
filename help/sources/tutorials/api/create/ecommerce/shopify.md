@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Schopify;winkelen;e-commerce
 solution: Experience Platform
 title: Een Shopify-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Shopify met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 1%
@@ -36,7 +35,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Shopify]moet u waarden opgeven 
 | ---------- | ----------- |
 | `host` | Het eindpunt van uw [!DNL Shopify] server. |
 | `accessToken` | Het toegangstoken voor uw [!DNL Shopify] gebruikersaccount. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Shopify] is: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Shopify] is: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [Verificatiedocument delen](https://shopify.dev/concepts/about-apis/authentication).
 

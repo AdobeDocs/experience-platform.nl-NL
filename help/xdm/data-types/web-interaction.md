@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;webinteractie;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype webinteractie
-topic-legacy: overview
 description: Dit document biedt een overzicht van het gegevenstype Data Model (XDM) van het webinteractiemodel.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 2%

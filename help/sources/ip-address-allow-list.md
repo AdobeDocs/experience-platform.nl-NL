@@ -3,9 +3,8 @@ keywords: Experience Platform;huis;populaire onderwerpen;ip adres;ip adressen;ip
 description: IP de adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken.
 solution: Experience Platform
 title: IP de Lijst van gewenste personen van het Adres voor BronVerbindingen
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

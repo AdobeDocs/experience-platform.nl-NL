@@ -1,13 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Algemene REST API
 title: Een algemene REST API-bronverbinding maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een algemene REST API-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 94809a8e98c8de7a9a474fb5543b590fc51cb075
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

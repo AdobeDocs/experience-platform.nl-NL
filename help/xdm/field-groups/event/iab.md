@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;field-groep;iab;tcf;permission;
 solution: Experience Platform
 title: IAB TCF 2.0 De Toegelaten Groep van het Gebied voor Gebeurtenisschema's
-topic-legacy: overview
 description: Dit document biedt een overzicht van de IAB TCF 2.0-groep met het schema voor instemming voor de XDM ExperienceEvent-klasse.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%

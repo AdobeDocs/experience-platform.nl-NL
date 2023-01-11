@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle object storage
 solution: Experience Platform
 title: Overzicht van oracle Object Storage Source Connector
-topic-legacy: overview
 description: Leer hoe u Oracle Object Storage met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -14,13 +13,13 @@ ht-degree: 0%
 
 # Oracle Object Storage-connector
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], zodat u gegevens van deze systemen in Platform kunt brengen voor gebruik in downstreamservices en -bestemmingen.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], zodat u gegevens van deze systemen in Platform kunt brengen voor gebruik in downstreamdiensten en -bestemmingen.
 
-Met bronnen voor cloudopslag kunt u uw gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens uit [!DNL Oracle Object Storage] tot batches invoegen.
+Met bronnen voor cloudopslag kunt u uw gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens van [!DNL Oracle Object Storage] door partijen.
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) document voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -30,10 +29,10 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens niet toegestaan, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.). Zie [RFC 2616, Section 2.2 voor regels die Unicode-tekenreeksen in HTTP/1.1 besturen: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens niet toegestaan, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.). Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, punt 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
 
-## [!DNL Oracle Object Storage] verbinden met Platform
+## Verbinden [!DNL Oracle Object Storage] naar Platform
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Oracle Object Storage en Adobe Experience Platform via API&#39;s of de gebruikersinterface:
 

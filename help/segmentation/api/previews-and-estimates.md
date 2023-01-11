@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;voorvertoningen;schattingen;voorvertoningen en ramingen;schattingen en voorvertoningen;api;API;
 solution: Experience Platform
 title: Voorvertoningen en schattingen van API-eindpunten
-topic-legacy: developer guide
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 1%

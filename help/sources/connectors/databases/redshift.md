@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;Amazon Opnieuw verschuiven;Amazon opnieuw verschuiven;opnieuw verschuiven;Opnieuw verschuiven
 solution: Experience Platform
 title: Overzicht van Amazon Redshift Source Connector
-topic-legacy: overview
 description: Leer hoe u Amazon Redshift kunt verbinden met Adobe Experience Platform met behulp van API's of de gebruikersinterface.
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;couchbase;Couchbase
 solution: Experience Platform
 title: Een Couchbase-verbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Couchbase aan Adobe Experience Platform koppelt met behulp van de Flow Service API.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 1%
@@ -37,7 +36,7 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Couchbase] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Couchbase] is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [this Couchbase document](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Couchbase] is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Couchbase] is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 ### Platform-API&#39;s gebruiken
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Azure;Azure File Storage;Azure-bestandsopslag
 solution: Experience Platform
 title: Een Azure File Storage Base Connection maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Azure File Storage met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -37,7 +36,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Azure File Storage]moet u waard
 | `host` | Het eindpunt van het [!DNL Azure File Storag]e instantie waartoe u toegang hebt. |
 | `userId` | De gebruiker heeft voldoende toegang tot de [!DNL Azure File Storage] eindpunt. |
 | `password` | Het wachtwoord voor uw [!DNL Azure File Storage] instance |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 Zie voor meer informatie over het aan de slag gaan [dit Azure File Storage-document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 

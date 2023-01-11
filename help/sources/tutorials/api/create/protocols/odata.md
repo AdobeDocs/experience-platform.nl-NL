@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Generic OData;generieke gegevens
 solution: Experience Platform
 title: Een algemene OData-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Generic OData met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 1%
@@ -35,7 +34,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Generic OData]moet u waarden op
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `url` | De basis-URL van het dialoogvenster [!DNL Generic OData] service. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic Generic OData] is: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Generic Generic OData] is: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 Zie voor meer informatie over het aan de slag gaan [dit [!DNL Generic OData] document](https://www.odata.org/getting-started/basic-tutorial/).
 

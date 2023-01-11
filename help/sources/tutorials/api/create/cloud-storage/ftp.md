@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen; Protocol inzake bestandsoverdracht; bestandsoverdrachtprotocol
 solution: Experience Platform
 title: Een FTP-basisverbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een FTP-server (File Transfer Protocol) met behulp van de Flow Service API.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 1%
@@ -41,7 +40,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL FTP]moet u waarden opgev
 | `host` | De naam of IP adres verbonden aan uw [!DNL FTP] server. |
 | `username` | De gebruikersnaam met toegang tot uw [!DNL FTP] server. |
 | `password` | Het wachtwoord voor uw [!DNL FTP] server. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL FTP] is: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL FTP] is: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
 
 ### Platform-API&#39;s gebruiken
 

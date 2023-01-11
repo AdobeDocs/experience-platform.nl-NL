@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Azure Table Storage;azure table storage;ats;ATS
 solution: Experience Platform
 title: Een Azure Table Storage Source Connection maken in de gebruikersinterface
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een Azure Table Storage-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%

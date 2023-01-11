@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;marketingautomatisering
 solution: Experience Platform
 title: Ontdek een Systeem van de Automatisering van de Marketing gebruikend de Dienst API van de Stroom
-topic-legacy: overview
 description: Deze zelfstudie gebruikt de Flow Service API om op zoek te gaan naar systemen voor marketingautomatisering.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%

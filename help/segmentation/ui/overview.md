@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de Dienst van de segmentatie;segmentatie;de segmenteringsdienst;gebruikersgids;ui gids;segmentation ui gids;segmentbouwer;Segmentbouwer;gerealiseerd;bestaand;het weggaan;
 solution: Experience Platform
 title: UI-gids voor segmentatieservice
-topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2566'
 ht-degree: 0%

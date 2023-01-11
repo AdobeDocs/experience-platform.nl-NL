@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Reis- en ziekenhuisgegevensmodel ERD
-topic-legacy: overview
 description: Bekijk een diagram van de entiteitverhouding (ERD) dat een gestandaardiseerd gegevensmodel voor de reis en gastvrijheid industrie beschrijft, compatibel met het Model van de Gegevens van de Ervaring (XDM) voor gebruik in Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%
@@ -17,12 +16,12 @@ Het volgende entiteitsrelatiediagram (ERD) vertegenwoordigt een gestandaardiseer
 
 >[!NOTE]
 >
->De ERD zoals beschreven is een aanbeveling voor hoe u uw gegevens moet modelleren voor deze branche-gebruikscase. Om van dit gegevensmodel in Platform gebruik te maken, moet u de geadviseerde schema&#39;s en hun verhoudingen zelf construeren. Zie de gidsen over het beheren van [schema&#39;s](../../ui/resources/schemas.md) en [verhoudingen](../../tutorials/relationship-ui.md) in UI voor meer informatie.
+>De ERD zoals beschreven is een aanbeveling voor hoe u uw gegevens moet modelleren voor deze branche-gebruikscase. Om van dit gegevensmodel in Platform gebruik te maken, moet u de geadviseerde schema&#39;s en hun verhoudingen zelf construeren. Zie de handleidingen over het beheer [schema&#39;s](../../ui/resources/schemas.md) en [relaties](../../tutorials/relationship-ui.md) in UI voor meer informatie.
 
 Gebruik de volgende legenda om dit ERD te interpreteren:
 
-* Elke entiteit die in wordt getoond is gebaseerd op een onderliggende [Klasse van het Gegevensmodel van de Ervaring (XDM)](../composition.md#class).
-* Voor een bepaalde entiteit vertegenwoordigt elke rij die in **bold** wordt gemarkeerd, een veldgroep of een gegevenstype, met de relevante velden die hieronder in onbolle tekst worden weergegeven.
+* Elke entiteit die wordt vermeld in is gebaseerd op een onderliggende waarde [Experience Data Model (XDM)-klasse](../composition.md#class).
+* Voor een bepaalde entiteit wordt elke in **vet** vertegenwoordigt een veldgroep of een gegevenstype, waarvan de relevante velden hieronder in onbolde tekst worden vermeld.
 * De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
 * Alle eigenschappen die zouden kunnen worden gebruikt om individuele klanten te identificeren zijn duidelijk als &quot;identiteit&quot;, met één van deze eigenschappen duidelijk als &quot;primaire identiteit&quot;.
 * Entiteitsrelaties zijn gemarkeerd als niet-afhankelijk, omdat op cookies gebaseerde gebeurtenissen vaak niet kunnen bepalen wie de transactie heeft uitgevoerd.
@@ -31,7 +30,7 @@ Gebruik de volgende legenda om dit ERD te interpreteren:
 
 >[!NOTE]
 >
->De Experience Event-entiteit bevat het veld &quot;_ID&quot;, dat het unieke id-kenmerk (`_id`) vertegenwoordigt dat door de XDM ExperienceEvent-klasse wordt verschaft. Zie het referentiedocument op [XDM ExperienceEvent](../../classes/experienceevent.md) voor meer details over wat voor deze waarde wordt verwacht.
+>De Experience Event-entiteit bevat het veld &quot;_ID&quot;, dat de unieke id vertegenwoordigt (`_id`), opgegeven door de klasse XDM ExperienceEvent. Zie het referentiedocument op [XDM ExperienceEvent](../../classes/experienceevent.md) voor meer informatie over wat er voor deze waarde wordt verwacht.
 
 ## [!UICONTROL Travel and hospitality] use cases
 

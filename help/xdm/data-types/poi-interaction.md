@@ -2,10 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;poi;interactie;point-of-interest;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype Interactie punt
-topic-legacy: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Interaction.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%

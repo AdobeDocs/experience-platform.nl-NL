@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de Dienst van de segmentatie;segmentatie;segmenteringsdienst;gebruikersgids;ui gids;segmentation ui gids;segmentbouwer;de bouwer van het segment;
 solution: Experience Platform
 title: UI-gids voor segmentBuilder
-topic-legacy: ui guide
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3038'
 ht-degree: 0%

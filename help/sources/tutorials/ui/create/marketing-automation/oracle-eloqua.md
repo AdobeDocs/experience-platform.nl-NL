@@ -2,15 +2,14 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;oracle;oracle eloqua;eloqua
 solution: Experience Platform
 title: Een Eloqua-bronverbinding met een Oracle maken met de gebruikersinterface van het Platform
-topic-legacy: tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Oracle Eloqua via de gebruikersinterface van het Platform.
-source-git-commit: a40a1b8fae41c495afd9cdfc3c8d68148e90f2cd
+exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
 
 ---
-
 
 # Een [!DNL Oracle Eloqua] bronverbinding met gebruikersinterface van Platform
 
@@ -66,4 +65,3 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 ## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u een bronverbinding tussen uw [!DNL Oracle Eloqua] account en Platform. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom maken om gegevens over marketingautomatisering naar het Platform te brengen](../../dataflow/marketing-automation.md).
-

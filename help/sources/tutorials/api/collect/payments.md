@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Betalingsgegevens verzamelen;Betalingsgegevens
 solution: Experience Platform
 title: Een gegevensstroom maken voor betalingsbronnen met behulp van de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%

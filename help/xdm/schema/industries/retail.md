@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Gegevensmodel detailhandel
-topic-legacy: overview
 description: Bekijk een gestandaardiseerd gegevensmodel voor de detailhandel, compatibel met het Model van de Gegevens van de Ervaring (XDM) voor gebruik in Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 2d7314f11837ca5c5ca1411553f20f58c4cad1ec
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 1%

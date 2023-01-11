@@ -2,11 +2,10 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Snowflake;snowflake
 solution: Experience Platform
 title: Een Snowflake Base-verbinding maken met de Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Snowflake.
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: b1c0c3ea0d7170f76728de06e05787b7c9aaffe9
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 1%
@@ -44,7 +43,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Snowflake]moet u de volgende ei
 | `username` | De gebruikersnaam voor de [!DNL Snowflake] account. |
 | `password` | Het wachtwoord voor de [!DNL Snowflake] gebruikersaccount. |
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
-| `connectionSpec.id` | De verbindingsspecificatie keert de eigenschappen van de bronschakelaar, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;populaire onderwerpen;Greenplum;greenplum
 solution: Experience Platform
 title: Creeer een GroenPlum BronVerbinding in UI
-topic-legacy: overview
 type: Tutorial
 description: Leer hoe u een GreenPlum-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 1%

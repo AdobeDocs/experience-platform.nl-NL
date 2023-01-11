@@ -2,10 +2,9 @@
 keywords: Experience Platform;huis;populaire onderwerpen;derdegegevensbestand;de dienst van de gegevensbestandstroom
 solution: Experience Platform
 title: Een database verkennen met de Flow Service API
-topic-legacy: overview
 description: Deze zelfstudie gebruikt de Flow Service API om de inhoud en de bestandsstructuur van een database van derden te verkennen.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 1%
