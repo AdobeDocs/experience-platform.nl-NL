@@ -4,9 +4,9 @@ title: Standaardwaarschuwingsregels
 description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ De volgende waarschuwingsregels gelden specifiek voor [Segmenteringsservice](../
 | --- | --- | --- |
 | Informatie segmentevaluatie | Start segmenttaak | Deze waarschuwing treedt in werking wanneer een baan van de segmentevaluatie begint gegevens te verwerken. |
 | Informatie segmentevaluatie | Segmenttaken voltooid | Deze waarschuwing treedt op wanneer een baan van de segmentevaluatie met succes voltooit. |
-| Vertragingen, fouten en fouten bij de evaluatie van segmenten | Vertraging segmenttaak | Deze waarschuwing treedt in werking wanneer een segmentevaluatietaak langer duurt dan 150 minuten om te voltooien. |
+| Vertragingen, fouten en fouten bij de evaluatie van segmenten | Vertraging segmenttaak | Deze waarschuwing treedt in werking wanneer een segmentevaluatietaak langer duurt dan 150 minuten om te voltooien. <br> Een van de volgende statussen wordt weergegeven: <br>- FIRING: er is voldaan aan de voorwaarde voor mislukking of vertraging (zie deze in een actieve staat). <br>- INACTIEF - Aan de voorwaarde is niet voldaan of deze is niet opgelost (kan worden beschouwd als een OPGELOST frame). |
 | Vertragingen, fouten en fouten bij de evaluatie van segmenten | Fout in segmenttaak | Deze waarschuwing treedt in werking wanneer een baan van de segmentevaluatie in een fout resulteert. |
 | Vertragingen, fouten en fouten bij de evaluatie van segmenten | Segmentdefinitie uitgeschakeld | Deze waarschuwing wordt geactiveerd wanneer een segmentdefinitie is uitgeschakeld als gevolg van een interne fout. Dit leidt automatisch tot een oorlogsruimte voor een technische team van Adobe om de kwestie te onderzoeken. Deze waarschuwing is alleen bedoeld als informatief en vereist geen actie van u. |
 
