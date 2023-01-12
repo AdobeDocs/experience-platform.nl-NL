@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2064'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,13 @@ Dit foutbericht wordt weergegeven wanneer u een schema wilt inschakelen voor [!D
 }
 ```
 
-Om schema&#39;s toe te laten die relatiebeschrijvers voor gebruik binnen bevatten [!DNL Profile], moeten de naamruimte van het bronveld en de primaire naamruimte van het doelveld gelijk zijn. Dit foutbericht wordt weergegeven wanneer u een schema wilt inschakelen dat een naamruimte zonder overeenkomst bevat voor de verwijzingsidentiteitsbeschrijving. Zorg ervoor dat de `xdm:namespace` de waarde van het de identiteitsgebied van het bestemmingsschema past dat van aan `xdm:identityNamespace` in de ID-beschrijving van de bronveld om dit probleem op te lossen.
+>[!NOTE]
+>
+>Voor deze fout verwijst het &quot;bestemmingsschema&quot;naar het verwijzingsschema in de verhouding.
+
+Om schema&#39;s toe te laten die relatiebeschrijvers voor gebruik binnen bevatten [!DNL Profile], moeten de naamruimte van het bronveld en de primaire naamruimte van het verwijzingsveld gelijk zijn. Dit foutbericht wordt weergegeven wanneer u een schema wilt inschakelen dat een naamruimte zonder overeenkomst bevat voor de verwijzingsidentiteitsbeschrijving.
+
+Zorg ervoor dat de `xdm:namespace` De waarde van het de identiteitsgebied van het verwijzingsschema past dat van aan `xdm:identityNamespace` in de ID-beschrijving van de bronveld om dit probleem op te lossen.
 
 Zie de sectie over een lijst met standaardnaamruimtecodes voor identiteiten [standaardnaamruimten](../identity-service/namespaces.md) in het naamruimteoverzicht van de identiteit.
 

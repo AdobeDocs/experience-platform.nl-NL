@@ -2,7 +2,7 @@
 title: Gebruiksscenario's voor segmentatie voor Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de verschillende beschikbare Adobe Real-time Customer Data Platform B2B Edition-gebruiksscenario's.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 0%
@@ -42,7 +42,7 @@ De onderstaande afbeelding illustreert de relaties tussen de B2B-klassen die bes
 
 Aangezien uw gegevensmodel gecompliceerd kan zijn, kunt u de interface van het Platform gebruiken om een gedetailleerdere visuele weergave van uw gegevensmodel te bekijken om de relevante kenmerken voor uw gebruikscase te vinden. Ga om te beginnen naar de gebruikersinterface van het Platform en selecteer Schema&#39;s in de linkernavigatie.
 
-Selecteer het gewenste schema in de beschikbare lijst en selecteer de gewenste relatie in het menu [!UICONTROL Composition] zijspoor. In het onderstaande voorbeeld, onthult het selecteren van de &quot;Persoon&quot;verhouding welke attributen in het huidige schema verwijzingen het verwante &quot;Person&quot;schema (als het het bronschema in de verhouding is), of door het &quot;Persoon&quot;schema van verwijzingen wordt voorzien (als het het bestemmingsschema in de verhouding is).
+Selecteer het gewenste schema in de beschikbare lijst en selecteer de gewenste relatie in het menu [!UICONTROL Composition] zijspoor. In het onderstaande voorbeeld wordt door het selecteren van de relatie &quot;Persoon&quot; duidelijk welk kenmerk in het huidige schema verwijst naar het gerelateerde schema &quot;Persoon&quot; (als dit het bronschema in de relatie is) of dat naar het schema &quot;Persoon&quot; wordt verwezen (als dit het referentieschema in de relatie is).
 
 ![bron-zeer belangrijk voorbeeld gebruikend de personenverhouding in de schemawerkruimte](../assets/segmentation/source-key-schema-relationship-example.png)
 

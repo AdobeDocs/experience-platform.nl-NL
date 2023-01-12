@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -385,15 +385,15 @@ Relatiebeschrijvingen beschrijven een relatie tussen twee verschillende schema&#
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de relatie wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
-| `xdm:destinationSchema` | De `$id` URI of the destination schema this descriptor is define a relationship with. |
-| `xdm:destinationVersion` | De belangrijkste versie van het bestemmingsschema. |
-| `xdm:destinationProperty` | Optioneel pad naar een doelveld binnen het doelschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
+| `xdm:destinationSchema` | De `$id` URI van het referentieschema waarmee deze descriptor een relatie definieert. |
+| `xdm:destinationVersion` | De belangrijkste versie van het referentieschema. |
+| `xdm:destinationProperty` | Optioneel pad naar een doelveld binnen het referentieschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### Referentie-identiteitsdescriptor
 
-De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext aan de primaire identiteit van een schemagebied, toelatend het om door gebieden in andere schema&#39;s worden van verwijzingen voorzien. Het bestemmingsschema moet reeds een primair identiteitsgebied hebben dat alvorens het door andere schema&#39;s door dit beschrijver kan worden bedoeld.
+De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext aan de primaire identiteit van een schemagebied, toelatend het om door gebieden in andere schema&#39;s worden van verwijzingen voorzien. In het referentieschema moet al een primair identiteitsveld zijn gedefinieerd voordat naar het kan worden verwezen door andere schema&#39;s via dit beschrijvingsbestand.
 
 ```json
 {
@@ -410,7 +410,7 @@ De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext 
 | `@type` | Het type descriptor dat wordt gedefinieerd. Voor een identiteitsbeschrijving van een referentie moet deze waarde worden ingesteld op `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
-| `xdm:sourceProperty` | Pad naar het veld in het bronschema dat wordt gebruikt om naar het doelschema te verwijzen. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Pad naar het veld in het bronschema dat wordt gebruikt om naar het referentieschema te verwijzen. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | De naamruimtecode van de identiteit voor de eigenschap source. |
 
 {style=&quot;table-layout:auto&quot;}
