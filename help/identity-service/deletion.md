@@ -1,9 +1,9 @@
 ---
 title: Verwijderen in identiteitsservice
 description: Dit document biedt een overzicht van de verschillende methoden waarmee u uw identiteitsgegevens in Experience Platform kunt verwijderen en om duidelijk te maken hoe identiteitsgrafieken worden beïnvloed.
-source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
+source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1203'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ In het onderstaande document wordt verwezen naar de volgende kenmerken van Exper
 
 ## Eén enkele identiteitsschrapping
 
-Met één aanvraag voor het verwijderen van identiteiten kunt u een identiteit binnen een grafiek verwijderen. Dit leidt tot het verwijderen van koppelingen die zijn gekoppeld aan één gebruikersidentiteit die is gekoppeld aan een naamruimte voor identiteiten. U kunt [Gegevenshygiëne](../hygiene/home.md) voor gegevens het zuiveren, het verwijderen van anonieme gegevens, of gegevensminimalisering voor de gegevens die u hebt verzameld. Voor gebruiksgevallen zoals verzoeken van klanten om gegevens te verwijderen en naleving van privacyregels zoals de algemene gegevensbeschermingsverordening (GDPR), kunt u mechanismen gebruiken die worden geboden door [Privacy Service](../privacy-service/home.md).
+Met één aanvraag voor het verwijderen van identiteiten kunt u een identiteit binnen een grafiek verwijderen. Dit leidt tot het verwijderen van koppelingen die zijn gekoppeld aan één gebruikersidentiteit die is gekoppeld aan een naamruimte voor identiteiten. U kunt gebruikmaken van mechanismen die worden geleverd door [Privacy Service](../privacy-service/home.md) voor gebruiksgevallen zoals verzoeken van klanten om gegevensverwijdering en naleving van privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR).
 
 In de volgende secties worden de mechanismen beschreven die u kunt gebruiken voor verzoeken om één identiteit te verwijderen in Experience Platform.
 
@@ -38,18 +38,14 @@ In de volgende secties worden de mechanismen beschreven die u kunt gebruiken voo
 
 Privacy Service verwerkt verzoeken van klanten om toegang, om zich uit verkoop te laten of om hun persoonsgegevens te verwijderen, zoals die zijn omschreven in privacyregels zoals de General Data Protection Regulation (GDPR) en de California Consumer Privacy Act (CCPA). Met Privacy Service kunt u taakaanvragen verzenden via de API of de gebruikersinterface. Wanneer het Experience Platform een schrappingsverzoek van Privacy Service ontvangt, verzendt het Platform bevestiging aan Privacy Service dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De verwijdering van de individuele identiteit is gebaseerd op de opgegeven naamruimte en/of ID-waarde. Bovendien wordt de verwijdering uitgevoerd voor alle sandboxen die bij een bepaalde organisatie horen. Lees voor meer informatie de handleiding op [verwerking van privacyverzoeken in identiteitsservice](privacy.md).
 
-### Eén identiteitsverwijdering in het dialoogvenster [!UICONTROL Data Hygiene] werkruimte
+In de onderstaande tabel wordt een uitsplitsing gegeven van één enkele identiteitsschrapping in de Privacy Service:
 
-De [[!UICONTROL Data Hygiene] werkruimte](../hygiene/ui/overview.md) in de gebruikersinterface van het Platform kunt u de consumentengegevens verwijderen die deelnemen aan Identiteitsservice en Real-Time klantprofiel. Voor een uitgebreide handleiding over het gebruik van de [!UICONTROL Data Hygiene] werkruimte, raadpleeg de zelfstudie op [verwijderen van consumentengegevens](../hygiene/ui/record-delete.md).
-
-In de onderstaande tabel wordt een overzicht gegeven van de verschillen tussen het afzonderlijk verwijderen van de identiteit in Privacy Service en gegevenshygiëne:
-
-| Eén identiteit verwijderen | Privacy Service | Gegevenshygiëne |
-| --- | --- | --- |
-| Gebruikskwesties | Alleen gegevensprivacyverzoeken (GDPR, CCPA). | Beheer van in Experience Platform opgeslagen gegevens. |
-| Geschatte vertraging | Dagen tot weken | Dagen |
-| Betrokken services | Eén identiteitsverwijdering in Privacy Service stelt u in staat te selecteren of gegevens worden verwijderd uit Identiteitsservice, Real-Time Klantprofiel of Gegevensbestand. | De enige identiteitsschrapping in de hygiëne van Gegevens schrapt de geselecteerde gegevens over de Dienst van de Identiteit, het Profiel van de Klant in real time, en het gegevenspeer. |
-| Verwijderingspatronen | Verwijder een identiteit uit Identiteitsservice. | Verwijder een identiteit uit Identiteitsservice. |
+| Eén identiteit verwijderen | Privacy Service |
+| --- | --- |
+| Gebruikskwesties | Alleen gegevensprivacyverzoeken (GDPR, CCPA). |
+| Geschatte vertraging | Dagen tot weken |
+| Betrokken services | Eén identiteitsverwijdering in Privacy Service stelt u in staat te selecteren of gegevens worden verwijderd uit Identiteitsservice, Real-Time Klantprofiel of Gegevensbestand. |
+| Verwijderingspatronen | Verwijder een identiteit uit Identiteitsservice. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -93,3 +89,22 @@ Hieronder ziet u een overzicht van de mogelijke effecten die verwijderingen kunn
 ## Volgende stappen
 
 Dit document behandelde de diverse mechanismen die u kunt gebruiken om identiteiten en datasets op Experience Platform te schrappen. In dit document wordt ook beschreven hoe het verwijderen van identiteits- en gegevenssets invloed kan hebben op identiteitsgrafieken. Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](home.md).
+
+<!--
+
+You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected.
+
+### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
+
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+
+The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
+
+| Single identity deletion | Privacy Service | Data hygiene |
+| --- | --- | --- |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
+| Estimated latency | Days to weeks | Days |
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
+| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. |
+
+-->
