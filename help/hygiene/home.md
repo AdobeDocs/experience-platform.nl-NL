@@ -2,9 +2,9 @@
 title: Overzicht van gegevenshygiëne
 description: Met Adobe Experience Platform Data Hygiene kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
 
-Met de mogelijkheden voor gegevenshygiëne van Platform kunt u de opgeslagen gegevens als volgt beheren:
+<!-- Platform's data hygiene capabilities allow you to manage your stored data through the following:
 
-* Het plannen van geautomatiseerde datasetvervaldatums
-* Afzonderlijke records uit een of alle gegevenssets verwijderen
+* Scheduling automated dataset expirations
+* Deleting individual records from one or all datasets
 
 >[!IMPORTANT]
 >
->Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../privacy-service/home.md) in plaats daarvan.
+>Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 Deze activiteiten kunnen worden uitgevoerd met behulp van de [[!UICONTROL Data Hygiene] UI-werkruimte](#ui) of de [API voor gegevenshygiëne](#api). Wanneer een taak voor gegevenshygiëne wordt uitgevoerd, zorgt het systeem voor transparantie-updates bij elke stap van het proces. Zie de sectie over [tijdlijnen en transparantie](#timelines-and-transparency) voor meer informatie over hoe elk baantype in het systeem wordt vertegenwoordigd.
 
@@ -40,9 +40,9 @@ De [!UICONTROL Data Hygiene] De gebruikersinterface is gebaseerd op de API voor 
 
 ## Tijdlijnen en transparantie
 
-Verzoeken om gegevens te verwijderen en gegevenssets te laten vervallen hebben elk hun eigen verwerkingstijden en verschaffen transparantie-updates op de belangrijkste punten in hun respectieve workflows. Raadpleeg de onderstaande secties voor meer informatie over elk taaktype.
+Verzoeken om gegevens te verwijderen en gegevenssets te laten vervallen hebben elk hun eigen verwerkingstijden en verschaffen transparantie-updates op de belangrijkste punten in hun respectieve workflows.
 
-### Verlopen gegevensset {#dataset-expiration-transparency}
+<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
 Het volgende gebeurt wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expiration.md) wordt gemaakt:
 
@@ -57,24 +57,24 @@ Het volgende gebeurt wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expir
 
 {style=&quot;table-layout:auto&quot;}
 
-### Opnemen wordt verwijderd {#record-delete-transparency}
+<!-- ### Record deletes {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->Verwijderen van records is alleen beschikbaar voor organisaties die Adobe Healthcare Shield hebben aangeschaft.
+>Record deletes are only available for organizations that have purchased Adobe Healthcare Shield.
 
-Het volgende gebeurt wanneer een [recordverwijderaanvraag](./ui/record-delete.md) wordt gemaakt:
+The following takes place when a [record delete request](./ui/record-delete.md) is created:
 
-| Werkgebied | Tijd na indiening van verzoek | Beschrijving |
+| Stage | Time after request submission | Description |
 | --- | --- | --- |
-| Verzoek is ingediend | 0 uur | Een gegevensbeheerder of privacyanalist verzendt een verzoek om een record te verwijderen. De aanvraag is zichtbaar in het dialoogvenster [!UICONTROL Data Hygiene UI] nadat zij is ingediend. |
-| Profielzoekopdrachten bijgewerkt | 3 uur | De wijziging in het aantal profielen die wordt veroorzaakt door de verwijderde identiteit wordt weerspiegeld in [dashboardwidgets](../dashboards/guides/profiles.md#profile-count-trend) en andere verslagen. |
-| Segmenten bijgewerkt | 24 uur | Als profielen eenmaal zijn verwijderd, gelden alle verwante [segmenten](../segmentation/home.md) worden aangepast aan de nieuwe grootte. |
-| Reizen en bestemmingen bijgewerkt | 26 uur | [Reizen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), en [bestemmingen](../destinations/home.md) worden bijgewerkt op basis van wijzigingen in gerelateerde segmenten. |
-| Verslagen worden zacht verwijderd in gegevensmeer | 7 dagen | De gegevens worden zacht verwijderd uit het data-meer. |
-| Gegevensvacuüm voltooid | 14 dagen | De [status van het hygiënisch werk](./ui/browse.md#view-details) updates om aan te geven dat de taak is voltooid, wat betekent dat het gegevensvacuüm op het datumpeer is voltooid en dat de relevante gegevens hard zijn verwijderd. |
+| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
+| Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
+| Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
+| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
+| Data vacuuming completed | 14 days | The [status of the hygiene job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"} -->
 
 ## Volgende stappen
 
