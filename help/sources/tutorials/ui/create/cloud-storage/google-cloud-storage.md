@@ -5,9 +5,9 @@ title: Een Google Cloud Storage Source Connection maken in de gebruikersinterfac
 type: Tutorial
 description: Leer hoe u een Google Cloud Storage-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '548'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Als u al een geldige GCS-verbinding hebt, kunt u de rest van dit document oversl
 
 [!DNL Experience Platform] ondersteunt de volgende bestandsindelingen die door externe opslagmedia moeten worden ingevoerd:
 
-* Door scheidingstekens gescheiden waarden (DSV): De ondersteuning voor gegevensbestanden met DSV-indeling is momenteel beperkt tot door komma&#39;s gescheiden waarden. De waarde van veldkoppen in bestanden met DSV-indeling mag alleen bestaan uit alfanumerieke tekens en onderstrepingstekens. Algemene DSV-bestanden worden in de toekomst ondersteund.
+* Door scheidingstekens gescheiden waarden (DSV): Elke waarde van één teken kan worden gebruikt als scheidingsteken voor gegevensbestanden met DSV-indeling.
 * JavaScript Object Notation (JSON): Gegevensbestanden met JSON-indeling moeten XDM-compatibel zijn.
 * Apache Parquet: Gegevensbestanden met Parketindeling moeten XDM-compatibel zijn.
 
