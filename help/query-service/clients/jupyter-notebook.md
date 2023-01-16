@@ -1,9 +1,10 @@
 ---
 title: Verbind Jupyter Notitieboekje aan de Dienst van de Vraag
 description: Leer hoe u Jupyter-laptop kunt verbinden met Adobe Experience Platform Query Service.
-source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
+exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
+source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
@@ -21,16 +22,15 @@ Om de vereiste geloofsbrieven te verkrijgen voor het verbinden [!DNL Jupyter Not
 >[!TIP]
 >
 >[!DNL Anaconda Navigator] is een grafische gebruikersinterface voor bureaublad (GUI) die een eenvoudigere manier biedt om veelgebruikte toepassingen te installeren en te starten [!DNL Python] programma&#39;s zoals [!DNL Jupyter Notebook]. Het helpt ook om pakketten, milieu&#39;s, en kanalen te beheren zonder bevel-lijn bevelen te gebruiken.
->U kunt [uw voorkeursversie van de toepassing installeren](https://docs.anaconda.com/anaconda/install/) van hun website.
->Volg het geleide installatieproces. Selecteer in het beginscherm van de Anaconda Navigator de optie **[!DNL Jupyter Notebook]** in de lijst met ondersteunde toepassingen om het programma te starten.
->![De [!DNL Anaconda Navigator] beginscherm met [!DNL Jupyter Notebook] gemarkeerd.](../images/clients/jupyter-notebook/anaconda-navigator-home.png)
->Meer informatie vindt u in de [officiële documentatie](https://docs.anaconda.com/anaconda/navigator/).
+>Volg het geleide installatieproces op hun website om [uw voorkeursversie van de toepassing installeren](https://docs.anaconda.com/anaconda/install/).
+>Selecteer in het beginscherm van de Anaconda Navigator de optie **[!DNL Jupyter Notebook]** in de lijst met ondersteunde toepassingen om het programma te starten.
+>Meer informatie vindt u in de [Officiële Anaconda-documentatie](https://docs.anaconda.com/anaconda/navigator/).
+
+De officiële Jupyter-documentatie bevat instructies voor [de laptop uitvoeren vanuit de opdrachtregelinterface](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
 
 ## Starten [!DNL Jupyter Notebook]
 
-Nadat u een nieuwe [!DNL Jupyter Notebook] webtoepassing, selecteert u de **[!DNL New]** vervolgkeuzelijst gevolgd door **[!DNL Python 3]** om een nieuw notebook te maken. De [!DNL Notebook] wordt weergegeven.
-
-![De [!DNL Jupiter Notebook] Het lusje van het dossier met [!DNL New] dropdown en [!DNL Python] 3 gemarkeerd.](../images/clients/jupyter-notebook/new-notebook.png)
+Nadat u een nieuwe [!DNL Jupyter Notebook] webtoepassing, selecteert u de **[!DNL New]** vervolgkeuzelijst vanuit de gebruikersinterface, gevolgd door **[!DNL Python 3]** om een nieuw notebook te maken. De [!DNL Notebook] wordt weergegeven.
 
 Op de eerste regel van de [!DNL Notebook] Voer de volgende waarde in in de editor: `pip install psycopg2-binary` en selecteert u **[!DNL Run]** in de opdrachtbalk. Onder de invoerregel wordt een succesbericht weergegeven.
 
@@ -38,11 +38,7 @@ Op de eerste regel van de [!DNL Notebook] Voer de volgende waarde in in de edito
 >
 >Als onderdeel van dit proces om een verbinding te maken, moet u **[!DNL Run]** om elke coderegel uit te voeren.
 
-![De [!DNL Notebook] UI met de opdracht van de installatiebibliotheken gemarkeerd.](../images/clients/jupyter-notebook/install-library.png)
-
 Importeer vervolgens een [!DNL PostgreSQL] databaseadapter voor [!DNL Python]. Voer de waarde in: `import psycopg2`en selecteert u **[!DNL Run]**. Er is geen succesbericht voor dit proces. Ga door met de volgende stap als er geen foutbericht wordt weergegeven.
-
-![De [!DNL Notebook] UI met de code van het de gegevensbestandbestuurder van de invoer benadrukte.](../images/clients/jupyter-notebook/import-dbdriver.png)
 
 U moet nu uw Adobe Experience Platform-gebruikersgegevens opgeven door de waarde in te voeren: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. De verbindingsgegevens vindt u in het dialoogvenster [!UICONTROL Queries] onder [!UICONTROL Credentials] van de gebruikersinterface van het Platform. Zie de documentatie over hoe u [zoeken uw organisatiegeloofsbrieven](../ui/credentials.md) voor gedetailleerde instructies.
 
@@ -50,9 +46,11 @@ Het gebruik van niet-vervallende gegevens wordt aanbevolen wanneer u clients van
 
 >[!IMPORTANT]
 >
->Wanneer het kopiëren van geloofsbrieven van UI van het Platform, zorg ervoor dat er geen extra het formatteren van de geloofsbrieven is. Ze moeten allemaal op één regel staan, met één spatie tussen de eigenschappen en waarden. De referenties staan tussen aanhalingstekens en **niet** gescheiden door komma&#39;s.
+>Wanneer het kopiëren van geloofsbrieven van UI van het Platform, is er geen behoefte aan extra het formatteren van de geloofsbrieven. Ze kunnen op één regel worden gegeven, met één spatie tussen de eigenschappen en waarden. De referenties staan tussen aanhalingstekens en **niet** gescheiden door komma&#39;s.
 
-![De [!DNL Notebook] UI met de benadrukte verbindingsgeloofsbrieven.](../images/clients/jupyter-notebook/provide-credentials.png)
+```python
+conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"
+```
 
 Uw [!DNL Jupyter Notebook] -instantie is nu verbonden met Query Service.
 
@@ -62,29 +60,25 @@ Nu hebt u verbinding [!DNL Jupyter Notebook] aan de Dienst van de Vraag, kunt u 
 
 Voer de volgende waarden in:
 
-```console
+```python
 cur = conn.cursor()
-cur.execute('''{YOUR_QUERY_HERE}''')
+cur.execute('''<YOUR_QUERY_HERE>''')
 data = [r for r in cur]
 ```
 
 Roep vervolgens de parameter (`data` in het bovenstaande voorbeeld) als u de query wilt weergeven, resulteert dit in een reactie zonder opmaak.
-
-![De [!DNL Notebook] UI met bevelen om SQL resultaten binnen de Notitie terug te keren en te tonen.](../images/clients/jupyter-notebook/example-query.png)
 
 Gebruik de volgende opdrachten om de resultaten op een meer leesbare manier op te maken:
 
 - `colnames = [desc[0] for desc in cur.description]`
 - `import pandas as pd`
 - `import numpy as np`
+- `df = pd.DataFrame(samples,columns=colnames)`
+- `df.fillna(0,inplace=True)`
 
 Deze opdrachten genereren geen succesbericht. Als er geen foutbericht is, kunt u vervolgens een functie gebruiken om de resultaten van uw SQL-query in een tabelindeling uit te voeren.
 
-![De opdrachten die nodig zijn om de SQL-resultaten op te maken.](../images/clients/jupyter-notebook/format-results-commands.png)
-
 Voer de `df.head()` om de in tabelvorm weergegeven queryresultaten te zien.
-
-![In tabelvorm geschreven resultaten van uw SQL-query binnen [!DNL Jupyter Notebook].](../images/clients/jupyter-notebook/format-results-output.png)
 
 ## Volgende stappen
 

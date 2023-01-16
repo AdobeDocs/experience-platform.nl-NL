@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connect Aqua Data Studio aan de Dienst van de Vraag
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -27,19 +27,15 @@ Om de vereiste geloofsbrieven te verkrijgen voor het verbinden [!DNL Aqua Data S
 
 ## De server registreren {#register-server}
 
-Na installatie [!DNL Aqua Data Studio], moet u de server eerst registreren. Selecteer in het hoofdmenu de optie **[!DNL Server]**, gevolgd door **[!DNL Register Server]**.
+Na installatie [!DNL Aqua Data Studio], moet u de server eerst registreren. Zie de officiële documentatie van de Studio van Gegevens van Aqua voor instructies over hoe te [start de [!DNL Register Server] dialoogvenster](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) en [de server registreren](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
 
-![Het vervolgkeuzemenu Server met registerserver gemarkeerd.](../images/clients/aqua-data-studio/register-server.png)
-
-De **[!DNL Register Server]** wordt weergegeven. Onder de **[!DNL General]** tab, selecteert u **[!DNL PostgreSQL]** in de lijst aan de linkerkant. Geef in het dialoogvenster dat wordt weergegeven de volgende gegevens op voor de serverinstellingen.
+Wanneer de **[!DNL Register Server]** wordt weergegeven voor een PostgresSQL-server. Geef de volgende gegevens op voor de serverinstellingen.
 
 - **[!DNL Name]**: De naam van de verbinding. U wordt aangeraden een vriendelijke naam op te geven om de verbinding te herkennen.
 - **[!DNL Login Name]**: De aanmeldingsnaam is uw organisatie-id voor het Platform. Het heeft de vorm van `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: Dit is een alfanumerieke tekenreeks die wordt gevonden op het tabblad [!DNL Query Service] verificatiedashboard.
 - **[!DNL Host and Port]**: Het gastheereindpunt en zijn haven voor [!DNL Query Service]. U moet poort 80 gebruiken om verbinding te maken met [!DNL Query Service].
 - **[!DNL Database]:** De database die wordt gebruikt. De waarde voor de gebruikersinterface van het Platform gebruiken `dbname`: `prod:all`.
-
-![De [!DNL Aqua Data Studio] Het tabblad Algemeen met de vereiste invoervelden gemarkeerd.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] geloofsbrieven
 
@@ -49,15 +45,13 @@ Meld u aan bij de [!DNL Platform] UI en selecteer **[!UICONTROL Queries]** van d
 
 ### SSL-modus instellen
 
-Selecteer vervolgens de **[!DNL Driver]** tab. Onder **[!DNL Parameters]**, stelt u de waarde in als `?sslmode=require`
+Vervolgens moet u de waarde van de SSL-modus instellen als `?sslmode=require`. Dit wordt gedaan van [!DNL Driver] tabblad van het dialoogvenster [!DNL Edit Server Properties] . Zie de officiële documentatie van de Studio van Gegevens van Aqua voor instructies over hoe te [bestuurderseigenschappen bewerken](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) en [SSL configureren voor [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). Gebruik de zoekbalk om de `sslmode` eigenschap.
 
 >[!IMPORTANT]
 >
 >Zie de [[!DNL Query Service] SSL-documentatie](./ssl-modes.md) voor meer informatie over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en over het maken van verbindingen met deze service `verify-full` SSL-modus.
 
-![De [!DNL Aqua Data Studio] Het tabblad Stuurprogramma met het veld Parameters gemarkeerd.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
-
-Selecteer **[!DNL Test Connection]** om ervoor te zorgen dat uw gegevens correct werken. Selecteer **[!DNL Save]** om uw server te registreren. Er verschijnt een bevestigingsvenster waarin de verbinding wordt bevestigd en de verbinding wordt weergegeven op het dashboard. U kunt nu verbinding maken met de server en de bijbehorende schemaobjecten weergeven.
+Na het invoeren van uw verbindingsdetails, van het zelfde lusje, selecteer **[!DNL Test Connection]** om ervoor te zorgen dat uw gegevens correct werken. Selecteer **[!DNL Save]** om uw server te registreren. Er verschijnt een bevestigingsvenster waarin de verbinding wordt bevestigd en het verbindingspictogram wordt weergegeven op het dashboard. U kunt nu verbinding maken met de server en de bijbehorende schemaobjecten weergeven.
 
 ## Volgende stappen
 

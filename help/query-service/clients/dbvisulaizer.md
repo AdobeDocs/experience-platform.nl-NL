@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connect DbVisualizer aan de Dienst van de Vraag
 description: Dit document doorloopt de stappen voor het verbinden van DbVisualizer met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 106a2e4606e94f71d6359cf947e05f193c19c660
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -19,27 +19,17 @@ In dit document worden de stappen beschreven voor het verbinden van het [!DNL Db
 
 Voor deze handleiding hebt u al toegang tot de [!DNL DbVisualizer] bureaubladtoepassing en weet hoe u door de interface kunt navigeren. Als u het dialoogvenster [!DNL DbVisualizer] bureaubladtoepassing of raadpleeg voor meer informatie de [ambtenaar [!DNL DbVisualizer] documentatie](https://www.dbvis.com/download/).
 
->[!NOTE]
->
->Er zijn [!DNL Windows], [!DNL macOS], en [!DNL Linux] versies van [!DNL DbVisualizer]. Screenshots in deze gids werden genomen gebruikend [!DNL macOS] bureaubladtoepassing. Er kunnen kleine discrepanties in UI tussen de versies zijn.
-
 Om de vereiste geloofsbrieven te verkrijgen voor het verbinden [!DNL  DbVisualizer] aan Experience Platform, moet u toegang tot de werkruimte van Vragen in Platform UI hebben. Neem contact op met de beheerder van de IMS-organisatie als u momenteel geen toegang hebt tot de werkruimte Query&#39;s.
 
 ## Een databaseverbinding maken {#connect-database}
 
-Nadat u de bureaubladtoepassing op uw lokale computer hebt geïnstalleerd, start u de toepassing en selecteert u **[!DNL Create a Database Connection]** vanaf de eerste [!DNL DbVisualizer] -menu. Selecteer vervolgens **[!DNL Create a Connection]** in het deelvenster rechts.
+Nadat u de bureaubladtoepassing op uw lokale computer hebt geïnstalleerd, volgt u de officiële instructies van BDVisualizer op [een nieuwe databaseverbinding maken](https://confluence.dbvis.com/display/UG130/Create+a+New+Database+Connection).
 
-![De [!DNL DbVisualizer] hoofdmenu met de markering &#39;Een databaseverbinding maken&#39;.](../images/clients/dbvisualizer/create-db-connection.png)
+Nadat u **[!DNL PostgreSQL]** van de [!DNL Connections] list, an [!DNL Object View] tab voor de nieuwe [!DNL PostgreSQL] wordt weergegeven.
 
-Gebruik de zoekbalk of selecteer [!DNL PostgreSQL] in de vervolgkeuzelijst met bestuurdersnaam. De werkruimte Databaseverbinding wordt weergegeven.
+### Eigenschappen van stuurprogramma instellen voor uw verbinding {#properties}
 
-![Het vervolgkeuzemenu voor de bestuurdersnaam met [!DNL PostgreSQL] gemarkeerd.](../images/clients/dbvisualizer/driver-name.png)
-
-### Eigenschappen instellen voor uw verbinding {#properties}
-
-Selecteer in de werkruimte Databaseverbinding de optie **[!DNL Properties]** tab, gevolgd door de **[!DNL Driver Properties]** op de navigatiezijbalk.
-
-![De werkruimte Databaseverbinding met Eigenschappen en Eigenschappen van stuurprogramma gemarkeerd.](../images/clients/dbvisualizer/driver-properties.png)
+Van de [!DNL PostgreSQL] tabblad objectweergave, selecteert u het tabblad **[!DNL Properties]** tab, gevolgd door de **[!DNL Driver Properties]** op de navigatiezijbalk. Meer informatie over [stuurprogramma-eigenschappen](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties) te vinden in de officiële documentatie.
 
 Voer vervolgens de stuurprogramma-eigenschappen in die in de onderstaande tabel worden beschreven.
 
@@ -56,15 +46,13 @@ Voer vervolgens de stuurprogramma-eigenschappen in die in de onderstaande tabel 
 
 Gebruik de zoekbalk om elke eigenschap te zoeken en selecteer vervolgens de bijbehorende cel voor de waarde van de parameter. De cel wordt in blauw gemarkeerd. Voer de referentie van het Platform in het veld Waarde in en selecteer **[!DNL Apply]** om de bestuurderseigenschap toe te voegen.
 
-![Het tabblad Eigenschappen van DBVisulaizer-stuurprogramma met een ingevoerde waarde en de optie Toepassen gemarkeerd.](../images/clients/dbvisualizer/apply-parameter-value.png)
-
 >[!NOTE]
 >
 >Een seconde toevoegen `user` profiel, selecteren `user` Selecteer vervolgens in de parameterkolom het pictogram blauw + (plus) om referenties voor elke gebruiker toe te voegen. Selecteren **[!DNL Apply]** om de bestuurderseigenschap toe te voegen.
 
 De [!DNL Edited] de kolom toont een controleteken om erop te wijzen dat de parameterwaarde is bijgewerkt.
 
-### Invoer[!DNL Query Service] geloofsbrieven
+### Invoerquery-servicegegevens {#query-service-credentials}
 
 Als u de referenties wilt zoeken die nodig zijn om BBVisualizer te verbinden met Query Service, meldt u zich aan bij de gebruikersinterface van het Platform en selecteert u **[!UICONTROL Queries]** van de linkernavigatie, gevolgd door **[!UICONTROL Credentials]**. Meer informatie over het zoeken naar uw **host**, **poort**, **database**, **gebruikersnaam**, en **password** referenties, lees de [aanmeldingsgids](../ui/credentials.md).
 
@@ -74,17 +62,15 @@ Als u de referenties wilt zoeken die nodig zijn om BBVisualizer te verbinden met
 >
 >[!DNL Query Service] biedt ook niet-vervallende geloofsbrieven aan om voor eenmalig opstelling met derdecliënten toe te staan. Zie de documentatie voor [volledige instructies op hoe te om niet vervallende geloofsbrieven te produceren en te gebruiken](../ui/credentials.md#non-expiring-credentials). U moet dit proces voltooien als u BDVisualizer wilt aansluiten als een eenmalige installatie. De `credential` en `technicalAccountId` De verkregen waarden omvatten de waarde voor DBVisualizer `password` parameter.
 
-## Verificatie
+## Verificatie {#authentication}
 
-Selecteer **[!DNL Authentication]** vanaf de navigatiezijbalk onder [!DNL PostgreSQL].
+Navigeer naar het dialoogvenster voor het vereisen van een gebruikers-id en op een wachtwoord gebaseerde verificatie telkens wanneer een verbinding tot stand wordt gebracht. [!DNL Properties] en selecteert u **[!DNL Authentication]** vanaf de navigatiezijbalk onder [!DNL PostgreSQL].
 
-Controleer in het deelvenster Verbindingsverificatie beide de opties **[!DNL Require Userid]** en **[!DNL Require Password]** selectievakjes en selecteer vervolgens **[!DNL Apply]**.
-
-![Het deelvenster Verificatie voor [!DNL PostgreSQL] Databaseverbinding met de selectievakjes Gebruiker vereisen en Wachtwoord gemarkeerd.](../images/clients/dbvisualizer/connection-authentication.png)
+Controleer in het deelvenster Verbindingsverificatie beide de opties **[!DNL Require Userid]** en **[!DNL Require Password]** selectievakjes en selecteer vervolgens **[!DNL Apply]**. Meer informatie over [verificatieopties instellen](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options) kunnen worden gevonden in de officiële documentatie.
 
 ## Verbinding maken met Platform
 
-U kunt een verbinding maken met vervallende of niet-vervallende gegevens. Als u een verbinding wilt maken, selecteert u de optie **[!DNL Connection]** in de werkruimte Databaseverbinding en voer uw gegevens voor het Experience Platform in voor de volgende instellingen.
+U kunt een verbinding maken met vervallende of niet-vervallende gegevens. Als u een verbinding wilt maken, selecteert u de optie **[!DNL Connection]** van de [!DNL PostgreSQL] het lusje van de objecten mening en ga uw geloofsbrieven van het Experience Platform voor de volgende montages in. Aanvullende instructies voor [een handmatige verbinding instellen](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) zijn beschikbaar op de officiële DBVisualizer-website.
 
 >[!NOTE]
 >
@@ -94,20 +80,14 @@ U kunt een verbinding maken met vervallende of niet-vervallende gegevens. Als u 
 |---|---|
 | **[!UICONTROL Name]** | Maak een naam voor de verbinding. U wordt geadviseerd om een mensvriendelijke naam te verstrekken om de verbinding te erkennen. |
 | **[!UICONTROL Database Server]** | Dit is uw Experience Platform **[!UICONTROL Host]** referentie. |
-| **[!UICONTROL Database Port]** | De poort voor [!DNL Query Service]. U moet poort gebruiken **80** om te verbinden met [!DNL Query Service]. |
+| **[!UICONTROL Database Port]** | De poort voor [!DNL Query Service]. U moet poort gebruiken **80** of **5432** om te verbinden met [!DNL Query Service]. |
 | **[!UICONTROL Database]** | Uw Experience Platform gebruiken **[!UICONTROL Database]** referentie waarde: `prod:all`. |
 | **[!UICONTROL Database Userid]** | Dit is uw organisatie-id voor Platform. Uw Experience Platform gebruiken **[!UICONTROL Username]** referentie. De id heeft de notatie `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL Database Password]** | Deze alfanumerieke tekenreeks is uw Experience Platform **[!UICONTROL Password]** credential.If you want non-expiring credentials, this value is the concatenated arguments from the `technicalAccountID` en de `credential` gedownload in de configuratie JSON-bestand. De wachtwoordwaarde heeft de vorm: {technicalAccountId}:{credential}. Het configuratieJSON dossier voor niet-vervallende geloofsbrieven is een eenmalig download tijdens hun initialisering die Adobe geen exemplaar van houdt. |
+| **[!UICONTROL Database Password]** | Deze alfanumerieke tekenreeks is uw Experience Platform **[!UICONTROL Password]** referentie. Als u niet-vervallende geloofsbrieven wilt gebruiken, is deze waarde de samengevoegde argumenten van `technicalAccountID` en de `credential` gedownload in de configuratie JSON-bestand. De wachtwoordwaarde heeft de vorm: {technicalAccountId}:{credential}. Het configuratieJSON dossier voor niet-vervallende geloofsbrieven is een eenmalig download tijdens hun initialisering die Adobe geen exemplaar van houdt. |
 
 Nadat u alle relevante gegevens hebt ingevoerd, selecteert u **[!DNL Connect]**.
 
-![De [!DNL PostgreSQL] De werkruimte Databaseverbinding met het tabblad Verbinding en de knop Verbinding gemarkeerd.](../images/clients/dbvisualizer/connect.png)
-
-De [!DNL Connect] wordt bij de eerste gelegenheid van de sessie weergegeven.
-
-![De verbinding: [!DNL PostgreSQL] met de gemarkeerde tekstvelden Database-gebruikersnaam en Database-wachtwoord.](../images/clients/dbvisualizer/connect-dialog.png)
-
-Voer uw gebruikersnaam en wachtwoord in en selecteer **[!DNL Connect]**. Er verschijnt een bericht in het logbestand ter bevestiging van een geslaagde verbinding.
+De [!DNL Connect] wordt bij de eerste gelegenheid van de sessie weergegeven. Voer uw gebruikersnaam en wachtwoord in en selecteer **[!DNL Connect]**. Er verschijnt een bericht in het logbestand ter bevestiging van een geslaagde verbinding.
 
 ## Volgende stappen
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connect Postico aan de Dienst van de Vraag
 description: Dit document bevat de koppeling voor de installatie van de back-upclient Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -21,35 +21,27 @@ In dit document worden de stappen beschreven voor het verbinden [!DNL Postico] m
 > 
 > Daarnaast [!DNL Postico] is **alleen** beschikbaar op macOS-apparaten.
 
-Verbinding maken [!DNL Postico] naar Query Service, openen [!DNL Postico] en selecteert u **[!DNL New Favorite]**.
+Verbinding maken [!DNL Postico] naar Query Service, openen [!DNL Postico] en selecteert u **[!DNL New Favorite]**. Het dialoogvenster voor verbindingsinstellingen wordt weergegeven. Vanaf hier kunt u parameterwaarden invoeren om verbinding te maken met Adobe Experience Platform. Voer de hieronder vermelde verbindingsinstellingen in. Instructies over hoe [verbinding maken met een PostgreSQL-server met Postico](https://eggerapps.at/postico/docs/v1.5.21/favorite-window.html) zijn ook beschikbaar op de officiële website van Postico.
 
-![De [!DNL Postico] UI met Nieuwe Favoriet gemarkeerd.](../images/clients/postico/open-postico.png)
-
-U kunt nu waarden invoeren om verbinding te maken met Adobe Experience Platform.
+| Verbindingsparameter | Beschrijving |
+|---|---|
+| **[!DNL Host]:** | De hostnaam van de PostSQL-server. |
+| **[!DNL Port]:** | De poort voor [!DNL Query Service]. U moet poort gebruiken **80** of **5432** om te verbinden met [!DNL Query Service]. |
+| **[!DNL User]** | Maak een naam voor uw specifieke verbinding. Laat het veld leeg om uw Mac-aanmeldnaam te gebruiken. |
+| **[!DNL Password]** | Deze alfanumerieke tekenreeks is uw Experience Platform **[!UICONTROL Password]** referentie. Als u niet-vervallende geloofsbrieven wilt gebruiken, is deze waarde de samengevoegde argumenten van `technicalAccountID` en de `credential` gedownload in de configuratie JSON-bestand. De wachtwoordwaarde heeft de vorm: {technicalAccountId}:{credential}. Het configuratieJSON dossier voor niet-vervallende geloofsbrieven is een eenmalig download tijdens hun initialisering die Adobe geen exemplaar van houdt. |
+| **[!DNL Database]** | Uw Experience Platform gebruiken **[!UICONTROL Database]** referentie waarde: `prod:all`. |
 
 Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [aanmeldingsgids](../ui/credentials.md). Meld u aan om uw referenties te zoeken [!DNL Platform]selecteert u vervolgens **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
 Nadat u uw referenties hebt ingevoegd, selecteert u **[!DNL Connect]** om met de Dienst van de Vraag te verbinden.
 
-![Het dialoogvenster Nieuwe favoriet met verbinding gemarkeerd.](../images/clients/postico/authentication-details.png)
-
 Na het verbinden met Platform, zult u een lijst van alle relaties kunnen zien die eerder met de Dienst van de Vraag worden gemaakt.
-
-![Een lijst met verbindingen in het dialoogvenster [!DNL Postico] UI.](../images/clients/postico/show-queries.png)
 
 ## SQL-instructies maken
 
-Als u een nieuwe SQL-query wilt maken, selecteert en opent u &quot;SQL-query&quot;.
+Als u een nieuwe SQL-query wilt maken, selecteert u **[!DNL SQL Query]** op de zijbalk. U kunt ook de sneltoets ( ⇧ ⌘ T) gebruiken om naar de queryweergave te navigeren en de query in te voeren die u wilt uitvoeren. Als u klaar bent, selecteert u **[!DNL Execute Statement]** om de query uit te voeren. Er wordt een tabel weergegeven met de resultaten van de voltooide query.
 
-![De [!DNL Postico] UI met de SQL benadrukte kortere weg van de Vraag.](../images/clients/postico/create-query.png)
-
-Er wordt een vak weergegeven en van hieruit kunt u de query typen die u wilt uitvoeren. Als u klaar bent, selecteert u **[!DNL Execute Statement]** om de query uit te voeren.
-
-![De SQL-editor met de markering Uitvoeren.](../images/clients/postico/run-statement.png)
-
-Er wordt een tabel weergegeven met de resultaten van de voltooide query.
-
-![Een lijst van resultaten van de voorbeeldvraag.](../images/clients/postico/query-results.png)
+Zie de officiële Postico documentatie voor meer informatie over [de queryweergave gebruiken](https://eggerapps.at/postico/docs/v1.3.1/sql-query-view.html).
 
 ## Volgende stappen
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: RStudio verbinden met Query Service
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ Dit document doorloopt de stappen voor het verbinden [!DNL RStudio] met Adobe Ex
 
 >[!NOTE]
 >
+> [!DNL RStudio] is nu herbrandd als [!DNL Posit]. [!DNL RStudio] producten zijn hernoemd naar [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud], en [!DNL Posit Academy].
+>
 > Deze handleiding gaat ervan uit dat u al toegang hebt tot [!DNL RStudio] en zijn vertrouwd met het gebruik ervan. Meer informatie over [!DNL RStudio] kunt u vinden in het dialoogvenster [ambtenaar [!DNL RStudio] documentatie](https://rstudio.com/products/rstudio/).
 > 
 > Daarnaast te gebruiken [!DNL RStudio] met de Dienst van de Vraag, moet u installeren [!DNL PostgreSQL] JDBC 4.2-stuurprogramma. U kunt het JDBC-stuurprogramma downloaden van het dialoogvenster [[!DNL PostgreSQL] officiële site](https://jdbc.postgresql.org/download/).
 
 ## Een [!DNL Query Service] verbinding in de [!DNL RStudio] interface
 
-Na installatie [!DNL RStudio]moet u het RJDBC-pakket installeren. Ga naar de **[!DNL Packages]** en selecteert u **[!DNL Install]**.
+Na installatie [!DNL RStudio]moet u het RJDBC-pakket installeren. Instructies over hoe [een database verbinden via de opdrachtregel](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) te vinden in de officiële documentatie van Posit.
 
-![De [!DNL RStudio] dashboard met pakketten en installatie gemarkeerd.](../images/clients/rstudio/install-package.png)
+Als u een Mac-besturingssysteem gebruikt, kunt u **[!UICONTROL Tools]** in de menubalk gevolgd door **[!UICONTROL Install Packages]** in het vervolgkeuzemenu. U kunt ook de **[!DNL Packages]** en selecteer **[!DNL Install]**.
 
-Er wordt een pop-up weergegeven met de **[!DNL Install Packages]** scherm. Zorg ervoor dat **[!DNL Repository (CRAN)]** is geselecteerd voor de **[!DNL Install from]** sectie. De waarde voor **[!DNL Packages]** moeten `RJDBC`. Zorgen **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren.
-
-![Het dialoogvenster Pakketten installeren met RJDBC is in het veld Pakketten ingevoerd en is gemarkeerd.](../images/clients/rstudio/install-jrdbc.png)
-
-Nu het RJDBC-pakket is geïnstalleerd, start u het opnieuw op [!DNL RStudio] om het installatieproces te voltooien.
+Er wordt een pop-up weergegeven met de **[!DNL Install Packages]** scherm. Zorg ervoor dat **[!DNL Repository (CRAN)]** is geselecteerd voor de **[!DNL Install from]** sectie. De waarde voor **[!DNL Packages]** moeten `RJDBC`. Zorgen **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren. Nu het RJDBC-pakket is geïnstalleerd, start u het opnieuw op [!DNL RStudio] om het installatieproces te voltooien.
 
 Na [!DNL RStudio] opnieuw is gestart, kunt u nu verbinding maken met Query Service. Selecteer **[!DNL RJDBC]** in de **[!DNL Packages]** en voert u de volgende opdracht in de console in:
 
@@ -53,7 +51,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Voor meer informatie over het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, gelieve te lezen [aanmeldingsgids](../ui/credentials.md). Meld u aan om uw referenties te zoeken [!DNL Platform]selecteert u vervolgens **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]**.
 
-![De console-uitvoer in [!DNL RStudio] van de verbinding aan de Dienst van de Vraag.](../images/clients/rstudio/connection-rjdbc.png)
+Een bericht in de consoleoutput bevestigt de verbinding aan de Dienst van de Vraag.
 
 ## Bezig met schrijven van query&#39;s
 
