@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
+source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **Naam**: Vul de voorkeursnaam voor dit doel in.
 * **Beschrijving**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
-* **DataStream-id**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten zullen worden omvat. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemming van het Doel hebben. Zie [configureren van een gegevensstroom](../../../edge/datastreams/overview.md#target) voor gedetailleerde informatie over hoe te om een gegevensstroom voor Adobe Target te vormen.
+* **DataStream-id**: Dit bepaalt in welke gegevensstroom van de Inzameling van Gegevens de segmenten zullen worden omvat. In het keuzemenu worden alleen gegevensstromen weergegeven waarvoor de services Doel en Adobe Experience Platform zijn ingeschakeld. Zie [configureren van een gegevensstroom](../../../edge/datastreams/configure.md#aep) voor meer informatie over het configureren van een gegevensstroom voor Adobe Experience Platform en Adobe Target.
    * **[!UICONTROL None]**: Selecteer deze optie als u de personalisatie van Adobe Target moet configureren, maar u de optie [Experience Platform Web SDK](../../../edge/home.md). Als u deze optie gebruikt, ondersteunen segmenten die van Experience Platform naar doel zijn geëxporteerd, alleen verpersoonlijking van volgende sessie en wordt randsegmentatie uitgeschakeld. Zie de onderstaande tabel voor meer informatie.
 
 | Geen gegevensstroom geselecteerd | Gegevensstroom geselecteerd |
