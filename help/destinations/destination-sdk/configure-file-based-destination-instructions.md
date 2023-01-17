@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -261,16 +261,16 @@ Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"auth
 * Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"`, verwijst u naar de [Verificatieconfiguratie](./authentication-configuration.md#when-to-use).
 
 
-<!-- ## Step 5: Test your destination {#test-destination}
+## Stap 5: Doel testen {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de vorige stappen, kunt u de opdracht [doeltestgereedschap](./file-based-destination-testing-overview.md) om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
+Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Verwijs naar de twee hieronder middelen voor instructies hoe te om segmenten in Experience Platform tot stand te brengen:
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
+* [Een pagina met segmentdocumentatie maken](/help/segmentation/ui/overview.md#create-segment)
+* [Een doorlopende segmentvideo maken](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-## Stap 5: Uw doel publiceren {#publish-destination}
+## Stap 6: Uw doel publiceren {#publish-destination}
 
 >[!NOTE]
 >
@@ -278,10 +278,18 @@ As part of the process to test your destination, you must use the Experience Pla
 
 Na het vormen van en het testen van uw bestemming, gebruik [doel-publicatie-API](./destination-publish-api.md) om uw configuratie ter controle naar Adobe te verzenden.
 
-## Stap 6: Uw doel documenteren {#document-destination}
+## Stap 7: Uw doel documenteren {#document-destination}
 
 >[!NOTE]
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
 Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](./overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in te stellen in [Catalogus Experience Platform doelen](/help/destinations/catalog/overview.md).
+
+## Stap 8: Doel verzenden voor revisie Adobe {#submit-for-review}
+
+>[!NOTE]
+>
+>Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
+
+Tot slot kan de bestemming in de catalogus van het Experience Platform worden gepubliceerd en zichtbaar aan alle klanten van het Experience Platform, u de bestemming voor overzicht van de Adobe officieel moeten voorleggen. Volledige informatie over hoe te vinden [een in Destination SDK gefabriceerde bestemming ter controle indienen](/help/destinations/destination-sdk/submit-destination.md).

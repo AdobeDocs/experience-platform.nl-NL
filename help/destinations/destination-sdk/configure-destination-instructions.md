@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de
 
 Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Verwijs naar de twee hieronder middelen voor instructies hoe te om segmenten in Experience Platform tot stand te brengen:
 
-* [Een pagina met segmentdocumentatie maken](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
+* [Een pagina met segmentdocumentatie maken](/help/segmentation/ui/overview.md#create-segment)
 * [Een doorlopende segmentvideo maken](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Stap 7: Uw doel publiceren {#publish-destination}
@@ -187,3 +187,11 @@ Na het vormen van en het testen van uw bestemming, gebruik [doel-publicatie-API]
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
 Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](./overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](./docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in te stellen in [Catalogus Experience Platform doelen](/help/destinations/catalog/overview.md).
+
+## Stap 9: Doel verzenden voor revisie Adobe {#submit-for-review}
+
+>[!NOTE]
+>
+>Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
+
+Tot slot kan de bestemming in de catalogus van het Experience Platform worden gepubliceerd en zichtbaar aan alle klanten van het Experience Platform, u de bestemming voor overzicht van de Adobe officieel moeten voorleggen. Volledige informatie over hoe te vinden [een in Destination SDK gefabriceerde bestemming ter controle indienen](/help/destinations/destination-sdk/submit-destination.md).
