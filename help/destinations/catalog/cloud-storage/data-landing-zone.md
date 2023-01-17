@@ -2,9 +2,9 @@
 title: Bestemming landingszone gegevens
 description: Leer hoe te met Gegevens het Landing Zone te verbinden om segmenten te activeren en datasets uit te voeren.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Data Landing Zone] verbinding, neem contact op met uw Adobe-vertegenwoordiger en geef uw [!DNL Organization ID].
+>* Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Data Landing Zone] verbinding, neem contact op met uw Adobe-vertegenwoordiger en geef uw [!DNL Organization ID].
+>* Deze documentatiepagina verwijst naar de [!DNL Data Landing Zone] *doel*. Er is ook een [!DNL Data Landing Zone] *bron* in de broncatalogus. Lees voor meer informatie de [[!DNL Data Landing Zone] bron](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentatie.
+
 
 
 ## Overzicht {#overview}
@@ -35,9 +37,13 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 {style=&quot;table-layout:auto&quot;}
 
-## De inhoud van uw [!DNL Data Landing Zone]
+## Vereisten {#prerequisites}
 
-U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container.
+Houd rekening met de volgende voorwaarden waaraan moet worden voldaan voordat u de opdracht [!DNL Data Landing Zone] bestemming.
+
+### Verbind uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer]
+
+U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container. Als u wilt beginnen met [!DNL Data Landing Zone]moet u eerst uw referenties ophalen en deze invoeren in [!DNL Azure Storage Explorer]en sluit uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer].
 
 In de [!DNL Azure Storage Explorer] UI, selecteer het verbindingspictogram in de linkernavigatiebar. De **Bron selecteren** wordt weergegeven, zodat u beschikt over opties voor het maken van een verbinding. Selecteren **[!DNL Blob container]** om verbinding te maken met uw [!DNL Data Landing Zone] opslag.
 
@@ -49,13 +55,54 @@ Selecteer vervolgens **URL voor gedeelde toegangshandtekening (SAS)** als uw ver
 
 Nadat u de verbindingsmethode hebt geselecteerd, moet u een **weergavenaam** en de **[!DNL Blob]SAS-URL van container** dat overeenkomt met uw [!DNL Data Landing Zone] container.
 
->[!IMPORTANT]
->
->U moet de Platform APIs gebruiken om uw geloofsbrieven van de Gebied van Gegevens terug te winnen Landing. Voor volledige informatie, zie [Referenties gegevenslandingszone ophalen](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en#retrieve-data-landing-zone-credentials).
->
-> Als u de referenties wilt ophalen en de geëxporteerde bestanden wilt openen, moet u de queryparameter vervangen `type=user_drop_zone` with `type=dlz_destination` in om het even welke HTTP- vraag die in de pagina hierboven wordt beschreven.
+>[!BEGINSHADEBOX]
 
-Geef uw [!DNL Data Landing Zone] SAS URL en selecteer dan **Volgende**.
+### Haal de referenties voor uw [!DNL Data Landing Zone]
+
+U moet de Platform APIs gebruiken om uw terug te winnen [!DNL Data Landing Zone] referenties. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs naar [Aan de slag met Adobe Experience Platform API&#39;s](/help/landing/api-guide.md) hulplijn.
+
+**API-indeling**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+```
+
+**Verzoek**
+
+In het volgende aanvraagvoorbeeld worden de gegevens voor een bestaande landingszone opgehaald.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Antwoord**
+
+De volgende reactie retourneert de referentie-informatie voor uw landingszone, inclusief uw huidige `SASToken` en `SASUri`en de `storageAccountName` die overeenkomt met uw landingszonecontainer.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3df123",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `containerName` | De naam van uw landingszone. |
+| `SASToken` | Het token voor gedeelde toegangshandtekeningen voor uw landingszone. Deze tekenreeks bevat alle informatie die nodig is om een aanvraag te autoriseren. |
+| `SASUri` | De URI van de gedeelde toegangshandtekening voor uw landingszone. Deze tekenreeks is een combinatie van de URI naar de landingszone waarvoor u geauthenticeerd wordt en de bijbehorende SAS-token, |
+
+>[!ENDSHADEBOX]
+
+Geef uw weergavenaam op (`containerName`) en [!DNL Data Landing Zone] SAS URL, zoals die in de hierboven beschreven API vraag is teruggekeerd, en dan selecteren **Volgende**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -79,7 +126,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Omdat [!DNL Data Landing Zone] is een Adobe-provisioned opslag, te hoeven u geen stappen uit te voeren om aan de bestemming voor authentiek te verklaren.
+Zorg ervoor dat u verbinding hebt gemaakt met uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer] zoals beschreven in de [voorwaarden](#prerequisites) sectie. Omdat [!DNL Data Landing Zone] is een Adobe-provisioned opslag, te hoeven u geen verdere stappen in het Experience Platform UI uit te voeren om aan de bestemming voor authentiek te verklaren.
 
 ### Doelgegevens invullen {#destination-details}
 

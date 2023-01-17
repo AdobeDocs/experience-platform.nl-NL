@@ -3,14 +3,18 @@ keywords: Experience Platform;thuis;populaire onderwerpen;Data Landing Zone;data
 title: Gegevenslandingszone verbinden met Platform via de gebruikersinterface
 description: Leer hoe te om een van de Bron van de Gebied van Gegevens te creëren die de gebruikersinterface van het Platform gebruiken.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
 
 # Verbinden [!DNL Data Landing Zone] naar Platform met behulp van de gebruikersinterface
+
+>[!IMPORTANT]
+>
+>Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* -aansluiting in Experience Platform. Voor informatie over het verbinden met [!DNL Data Landing Zone] *doel* -aansluiting, verwijzen naar de [[!DNL Data Landing Zone] doeldocumentatiepagina](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] is een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden die naar Adobe Experience Platform kunnen worden overgebracht. Gegevens worden automatisch verwijderd uit de [!DNL Data Landing Zone] na zeven dagen.
 
