@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin tot eind
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
 workflow-type: tm+mt
-source-wordcount: '2305'
+source-wordcount: '2303'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ U zult:
 
 * [Label de rollen voor uw gebruikers](#label-roles): Gebruik het voorbeeld van een zorgleverancier (ACME Business Group) wiens marketinggroep samenwerkt met externe bureaus.
 * [Etiketteer uw middelen (schemagebieden en segmenten)](#label-resources): Wijs het **[!UICONTROL PHI/ Regulated Health Data]** label aan schemamiddelen en segmenten.
-* [Het beleid maken dat ze met elkaar verbindt](#policy): Creeer een beleid om de etiketten op uw middelen aan de etiketten in uw rol te verbinden, ontkennend toegang tot schemagebieden en segmenten. Hierdoor wordt toegang tot het schemaveld en -segment in alle sandboxen geweigerd voor gebruikers die geen overeenkomende labels hebben.
+* [Het beleid maken dat ze met elkaar verbindt](#policy): Creeer een beleid om de etiketten op uw middelen aan de etiketten in uw rol te verbinden, ontkennend toegang tot schemagebieden en segmenten. Hierdoor krijgen gebruikers die overeenkomende labels hebben toegang tot het schemaveld en -segment in alle sandboxen.
 
 ## Toestemmingen
 
