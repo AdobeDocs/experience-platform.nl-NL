@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor schema-registratie-API
 description: Met de API voor het schemaregister kunnen ontwikkelaars programmatisch alle schema's en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,13 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naa
 
 De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat van gegevens die in Platform worden opgenomen. Een schema bestaat uit een klasse en nul of meer groepen schemavelden. U kunt schema&#39;s maken, weergeven, bewerken en verwijderen met de opdracht `/schemas` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, zie [schema&#39;s eindpuntgids](./schemas.md).
 
-Voor een geleidelijke gids over hoe te om een volledig schema in de Registratie API van het Schema tot stand te brengen, met inbegrip van het creëren van en het toevoegen van gebiedsgroepen en gegevenstypes, zie [Zelfstudie over het maken van API-schema](../tutorials/create-schema-api.md).
+Voor een geleidelijke gids over hoe te om een volledig schema in de Registratie API van het Schema manueel tot stand te brengen, met inbegrip van het creëren van en het toevoegen van gebiedsgroepen en gegevenstypes, zie [Zelfstudie over het maken van API-schema](../tutorials/create-schema-api.md).
+
+Als u CSV-gegevens gebruikt, raadpleegt u de sectie over [CSV naar schemaomzetting](#csv-to-schema).
 
 ## Gedrag
 
-Het gedrag bepaalt de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie de [gedragseindpunt-hulplijn](./behaviors.md) voor meer informatie over het weergeven van beschikbare gedragingen in de API.
+Gedragingen bepalen de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie de [gedragseindpunt-hulplijn](./behaviors.md) voor meer informatie over het weergeven van beschikbare gedragingen in de API.
 
 ## Klassen
 
@@ -62,6 +64,10 @@ Zie voor meer informatie over het weergeven van vakbonden in de API voor schemar
 U kunt automatisch een XDM-schema genereren door een CSV-bestand als sjabloon te gebruiken, zodat u sjablonen kunt maken voor het bulksgewijs importeren van schemavelden en kunt knippen op handmatig API- of UI-werk.
 
 Zie de [CSV aan de eindgids van de schemaomzetting](./export.md) voor meer informatie .
+
+>[!NOTE]
+>
+>U kunt ook de interface gebruiken voor [Wijs een CSV aan een schema toe gebruikend door AI geproduceerde aanbevelingen](../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta).
 
 ## Exporteren {#export}
 

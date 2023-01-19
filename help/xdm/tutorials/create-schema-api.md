@@ -5,9 +5,9 @@ title: Een schema maken met de API voor het schemaregister
 type: Tutorial
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2542'
+source-wordcount: '2574'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 De [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot [!DNL Schema Library] in Adobe Experience Platform. De [!DNL Schema Library] bevat middelen die door Adobe aan u ter beschikking worden gesteld, [!DNL Experience Platform] partners, en verkopers waarvan toepassingen u gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
 Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te lopen om een schema samen te stellen gebruikend een standaardklasse. Als u liever de gebruikersinterface gebruikt in [!DNL Experience Platform]de [Zelfstudie Schema-editor](create-schema-ui.md) verstrekt geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
+
+>[!NOTE]
+>
+>Als u CSV-gegevens in het Platform opgeeft, kunt u [kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen wordt gecreeerd](../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta) zonder het schema zelf manueel te moeten creëren.
 
 ## Aan de slag
 

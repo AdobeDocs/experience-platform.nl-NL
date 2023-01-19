@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3763'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 Met de Adobe Experience Platform-gebruikersinterface kunt u [!DNL Experience Data Model] (XDM) schema&#39;s in een interactief visueel canvas genoemd [!DNL Schema Editor]. In deze zelfstudie wordt uitgelegd hoe u een schema kunt maken met de [!DNL Schema Editor].
 
+Voor demonstratiedoeleinden, impliceren de stappen in dit leerprogramma het creëren van een voorbeeldschema dat leden van een programma van de klantenloyaliteit beschrijft. Terwijl u deze stappen kunt gebruiken om een verschillend schema voor uw eigen doeleinden tot stand te brengen, adviseert men dat u eerst samen met het creëren van het voorbeeldschema volgt om de mogelijkheden van te leren [!DNL Schema Editor].
+
 >[!NOTE]
 >
->Voor demonstratiedoeleinden, impliceren de stappen in dit leerprogramma het creëren van een voorbeeldschema dat leden van een programma van de klantenloyaliteit beschrijft. Terwijl u deze stappen kunt gebruiken om een verschillend schema voor uw eigen doeleinden tot stand te brengen, adviseert men dat u eerst samen met het creëren van het voorbeeldschema volgt om de mogelijkheden van te leren [!DNL Schema Editor].
-
-Als u liever een schema samenstelt met de opdracht [!DNL Schema Registry] API in plaats daarvan, begin door te lezen [[!DNL Schema Registry] ontwikkelaarsgids](../api/getting-started.md) voordat u de zelfstudie hebt ingeschakeld [een schema maken met de API](create-schema-api.md).
+>Als u CSV-gegevens in het Platform opgeeft, kunt u [kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen wordt gecreeerd](../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta) zonder het schema zelf manueel te moeten creëren.
+>
+>Als u liever een schema samenstelt met de opdracht [!DNL Schema Registry] API, begin door te lezen [[!DNL Schema Registry] ontwikkelaarsgids](../api/getting-started.md) voordat u de zelfstudie hebt ingeschakeld [een schema maken met de API](create-schema-api.md).
 
 ## Aan de slag
 
