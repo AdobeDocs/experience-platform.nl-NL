@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform Insights-gegevensmodel
 description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksproblemen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights-gegevensmodel
 
-De functie Real-time Customer Data Platform Insights Data Model stelt de gegevensmodellen en SQL beschikbaar die de inzichten voor diverse profiel-, doel- en segmentatiewidgets kracht geven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documenten rapporteert om te leren [hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+De functie Real-time Customer Data Platform Insights Data Model stelt de gegevensmodellen en SQL beschikbaar die de inzichten voor verschillende profiel-, doel- en segmentatiewidgets kracht geven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documenten rapporteert om te leren [hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Vereisten
 

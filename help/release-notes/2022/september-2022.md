@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '2883'
 ht-degree: 1%
@@ -217,7 +217,7 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 | Functie | Beschrijving |
 | --- | --- |
 | Alert-abonnements-API | Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het Platform of beide. Op dit moment kunnen querywaarschuwingen alleen worden geabonneerd op [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Gegevenssetvoorbeelden | De datasetsteekproeven van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer verminderde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. Zie de [Gegevenssetvoorbeeldgids](../../query-service/sql/dataset-samples.md) voor meer informatie. |
+| Gegevenssetvoorbeelden | De datasetsteekproeven van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer verminderde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. Zie de [Gegevenssetvoorbeeldgids](../../query-service/essential-concepts/dataset-samples.md) voor meer informatie. |
 
 Voor meer informatie over [!DNL Query Service], zie de [[!DNL Query Service] overzicht](../../query-service/home.md).
 

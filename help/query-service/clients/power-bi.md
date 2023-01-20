@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbinding maken met Power BI-zoekservice
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1064'
 ht-degree: 1%
@@ -51,7 +51,7 @@ De **[!DNL Database]** het veld kan &quot;all&quot; of een tabelnaam van een geg
 
 >[!IMPORTANT]
 >
->De genestelde gegevensstructuren in derdehulpmiddelen van BI kunnen worden afgevlakt om hun bruikbaarheid te verbeteren en de vereiste werkbelasting te verminderen om gegevens terug te winnen, te analyseren, om te zetten en te melden. Zie de documentatie op de[`FLATTEN` functie](../best-practices/flatten-nested-data.md) voor instructies over het activeren van deze instelling wanneer u verbinding maakt met een database.
+>De genestelde gegevensstructuren in derdehulpmiddelen van BI kunnen worden afgevlakt om hun bruikbaarheid te verbeteren en de vereiste werkbelasting te verminderen om gegevens terug te winnen, te analyseren, om te zetten en te melden. Zie de documentatie op de[`FLATTEN` functie](../essential-concepts/flatten-nested-data.md) voor instructies over het activeren van deze instelling wanneer u verbinding maakt met een database.
 
 ### De modus Gegevensconnectiviteit {#data-connectivity-mode}
 

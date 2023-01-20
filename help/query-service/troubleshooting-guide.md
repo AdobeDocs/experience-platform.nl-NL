@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;het oplossen van problemengids;faq;het oplossen van problemen;
 solution: Experience Platform
-title: Handleiding voor het oplossen van problemen bij Query Service
+title: Veelgestelde vragen
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4365'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] gids voor problemen
+# Veelgestelde vragen
 
 Dit document verstrekt antwoorden op vaak gestelde vragen over de Dienst van de Vraag en verstrekt een lijst van algemeen gezien foutencodes wanneer het gebruiken van de Dienst van de Vraag. Voor vragen en problemen met betrekking tot andere services in Adobe Experience Platform raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![Het XDM-schema en de tabelweergave van de samengevoegde gegevens. De kolomnaam van een genestelde dataset wordt benadrukt in UI.](./images/troubleshooting/column-name.png)
 
-Zie de documentatie voor meer informatie over [hoe te werken met geneste gegevensstructuren](./best-practices/nested-data-structures.md) het gebruiken van de Redacteur van de Vraag of een derdecliënt.
+Zie de documentatie voor meer informatie over [hoe te werken met geneste gegevensstructuren](./essential-concepts/nested-data-structures.md) het gebruiken van de Redacteur van de Vraag of een derdecliënt.
 +++
 
 ### Hoe kan ik een vraag over een dataset versnellen die series bevat?
@@ -142,7 +142,7 @@ Een vervolgkeuzelijst wordt weergegeven met een [!UICONTROL Help and support] se
 
 +++Antwoord Met de functie Anonieme blokken kunt u een of meer SQL-instructies ketenen die op volgorde worden uitgevoerd. Zij bieden ook de mogelijkheid om uitzonderingen af te handelen.
 
-Zie de [anonieme blokdocumentatie](./best-practices/anonymous-block.md) voor meer informatie .
+Zie de [anonieme blokdocumentatie](./essential-concepts/anonymous-block.md) voor meer informatie .
 +++
 
 ### Hoe voer ik douaneattributie in de Dienst van de Vraag uit?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### Hoe kan ik de nieuwe gegevens die dagelijks in het systeem komen, snel verwerken?
 
-++ beantwoord [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) De clausule kan worden gebruikt om gegevens over een lijst incrementeel te lezen die op een momentopname identiteitskaart wordt gebaseerd. Dit is ideaal voor gebruik met de [incrementele belasting](./best-practices/incremental-load.md) ontwerppatroon dat slechts informatie in de dataset verwerkt die sinds de laatste ladingsuitvoering is gecreeerd of gewijzigd. Hierdoor neemt de verwerkingsefficiëntie toe en kan deze zowel bij het streamen als bij het verwerken van batchgegevens worden gebruikt.
+++ beantwoord [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) De clausule kan worden gebruikt om gegevens over een lijst incrementeel te lezen die op een momentopname identiteitskaart wordt gebaseerd. Dit is ideaal voor gebruik met de [incrementele belasting](./essential-concepts/incremental-load.md) ontwerppatroon dat slechts informatie in de dataset verwerkt die sinds de laatste ladingsuitvoering is gecreeerd of gewijzigd. Hierdoor neemt de verwerkingsefficiëntie toe en kan deze zowel bij het streamen als bij het verwerken van batchgegevens worden gebruikt.
 +++
 
 ### Waarom is er een verschil tussen de aantallen die in Profiel UI worden getoond en de aantallen die van de dataset van de profieluitvoer worden berekend?

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor zoekservice
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Zodra een vraag is gepland verschijnt het in de lijst van geplande vragen op [!U
 | **[!UICONTROL Last run timestamp]** | De meest recente tijdstempel toen de query werd uitgevoerd. Deze kolom benadrukt of een vraag volgens zijn huidig programma is uitgevoerd. |
 | **[!UICONTROL Last run status]** | De status van de meest recente queryuitvoering. De drie statuswaarden zijn: `successful` `failed` of `in progress`. |
 
-Raadpleeg de documentatie voor meer informatie over hoe u [controleert vragen door de Dienst UI van de Vraag](../monitor-queries.md).
+Raadpleeg de documentatie voor meer informatie over hoe u [controleert vragen door de Dienst UI van de Vraag](./monitor-queries.md).
 
 ## Sjablonen {#browse}
 

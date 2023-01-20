@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2022
 description: In de releaseopmerkingen van oktober 2022 voor Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 1%
@@ -104,8 +104,8 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 
 | Functie | Beschrijving |
 | --- | --- |
-| De vragen van de monitor door Platform UI | De Query-service [!UICONTROL Scheduled Queries] biedt een verbeterde zichtbaarheid voor de status van alle querytaken via de gebruikersinterface. U kunt belangrijke informatie over de status van uw vraaglooppas nu vinden, met inbegrip van foutenmeldingen en codes indien zij ontbreken, van [!UICONTROL Scheduled Queries] tab. U kunt ook op alarm door UI voor om het even welk van deze vragen intekenen die op hun status worden gebaseerd. Zie de [Document met query&#39;s controleren](../../query-service/monitor-queries.md) voor meer informatie over deze functie. |
-| Vraag versnelde het melden van inzichten gegevensmodel | Als deel van Gegevens Distiller SKU, staat de vraag versnelde opslag u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Met de opslag met versnelde query kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Adobe Real-time Customer Data Platform-gegevensmodellen om uw rapporteringsinzichten en hun visualisaties te verbeteren. Zie de [document met query-versnelde gegevens voor winkelrapporten](../../query-service/query-accelerated-store/reporting-insights-data-model.md) voor meer informatie over deze functie. |
+| De vragen van de monitor door Platform UI | De Query-service [!UICONTROL Scheduled Queries] biedt een verbeterde zichtbaarheid voor de status van alle querytaken via de gebruikersinterface. U kunt belangrijke informatie over de status van uw vraaglooppas nu vinden, met inbegrip van foutenmeldingen en codes indien zij ontbreken, van [!UICONTROL Scheduled Queries] tab. U kunt ook op alarm door UI voor om het even welk van deze vragen intekenen die op hun status worden gebaseerd. Zie de [Document met query&#39;s controleren](../../query-service/ui/monitor-queries.md) voor meer informatie over deze functie. |
+| Vraag versnelde het melden van inzichten gegevensmodel | Als deel van Gegevens Distiller SKU, staat de vraag versnelde opslag u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Met de opslag met versnelde query kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Adobe Real-time Customer Data Platform-gegevensmodellen om uw rapporteringsinzichten en hun visualisaties te verbeteren. Zie de [document met query-versnelde gegevens voor winkelrapporten](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) voor meer informatie over deze functie. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor kla
 title: Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
 description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van uw implementatie van Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 0%
@@ -42,7 +42,7 @@ In de laatste maand `p2@townsend.com` Marketo 1 bezocht de nieuwe productpagina 
 
 ## Het probleem
 
-Lijn 1 heeft onlangs een nieuw softwareproduct vrijgegeven en zou het aan Bodea&#39;s bestaande top-tier klantenbasis willen omhoog-verkopen. Bodea lanceert een marketing campagne met dat specifieke doelpubliek in mening.
+Lijn 1 heeft zojuist een nieuw softwareproduct uitgebracht en wil het naar de bestaande top-tier klantenbasis van Bodea upsell. Bodea lanceert een marketing campagne met dat specifieke doelpubliek in mening.
 
 Aangezien de relevante informatie over de stad wordt geregistreerd als account 1 in Marketo 1 en account 2 in Marketo 2, kan het marketingteam van Bodea de opgeslagen informatie niet efficiënt gebruiken.
 
@@ -87,7 +87,7 @@ Door de bestemmingen van Marketo Engage en van LinkedIn te gebruiken, heeft Bode
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een overzicht gekregen van de typen doelstellingen en problemen die met Real-Time CDP B2B Edition kunnen worden opgelost.
+Door dit document te lezen, bent u nu geïntroduceerd in de typen doelstellingen en problemen die met Real-Time CDP B2B Edition kunnen worden opgelost.
 
 De volgende documentatie wordt aanbevolen om meer inzicht te krijgen in B2B-specifieke functies:
 

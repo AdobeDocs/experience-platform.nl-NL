@@ -2,7 +2,7 @@
 title: Integratie van auditlogboek voor query-service
 description: De controlelogboeken van de Dienst van de vraag handhaven verslagen voor diverse gebruikersacties om een controletraject voor het oplossen van problemenkwesties te vormen of het naleven van het beleid van het collectieve gegevensbeheer en regelgevende vereisten. Dit leerprogramma verstrekt een overzicht van de eigenschappen van het controlelogboek specifiek voor de Dienst van de Vraag.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 1%
@@ -87,6 +87,6 @@ Welke filters beschikbaar zijn, is afhankelijk van de categorie die is geselecte
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u een beter inzicht in de [!DNL Query Service] de capaciteit van het controlelogboek en hoe het kan worden gebruikt om uw te filtreren [!DNL Query Service] gebruikershandelingen.
+Door dit document te lezen, krijgt u een beter inzicht in de [!DNL Query Service] de capaciteit van het controlelogboek en hoe het kan worden gebruikt om uw te filtreren [!DNL Query Service] gebruikershandelingen.
 
 Als u het [!DNL Query Service] het vermogen van het controlelogboek voor het oplossen van problemendoeleinden, wordt u geadviseerd om te lezen [gids voor problemen](../troubleshooting-guide.md).

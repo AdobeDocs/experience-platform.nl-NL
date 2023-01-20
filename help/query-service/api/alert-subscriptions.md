@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;alarm;
-title: API-eindpunt voor abonnementen waarschuwen
+title: Alert Subscriptions Endpoint
 description: Deze gids verstrekt steekproefHTTP- verzoeken en reacties voor diverse API vraag u aan het waakzame abonnementseindpunt met de Dienst API van de Vraag kunt maken.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2667'
 ht-degree: 0%
 
 ---
 
-# API-eindpunt voor abonnementen waarschuwen
+# Alert Abonnementen, eindpunt
 
 Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het Platform of beide. De inhoud van het bericht is hetzelfde voor waarschuwingen in het Platform en e-mailwaarschuwingen. Op dit moment kunnen querywaarschuwingen alleen worden geabonneerd op [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 

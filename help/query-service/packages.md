@@ -1,7 +1,8 @@
 ---
 title: Query Service-pakketten
 description: Het volgende document schetst de pakketten mogelijkheden en producten beschikbaar voor de Dienst van de Vraag en benadrukt de verschillen tussen ad hoc en partijvragen.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 2%
@@ -65,4 +66,4 @@ Sandboxen zijn virtuele partities binnen één instantie van Experience Platform
 
 ## Volgende stappen
 
-Door dit document te lezen zou u een beter inzicht in de verschillende pakkettypes en mogelijkheden van de vraaguitvoering beschikbaar in de Dienst van de Vraag moeten hebben. Om meer over de Dienst van de Vraag, zoals bekende de dienstgevallen van het de industrietak te leren, te lezen gelieve [case-documentatie gebruiken](./use-cases/abandoned-browse.md). Ga voor meer algemene informatie naar de [Overzicht van Query Service](./home.md).
+Door dit document te lezen, zou u een beter inzicht in de verschillende pakkettypes en mogelijkheden van de vraaguitvoering beschikbaar in de Dienst van de Vraag moeten hebben. Om meer over de Dienst van de Vraag, zoals bekende de dienstgevallen van het de industrietak te leren, te lezen gelieve [case-documentatie gebruiken](./use-cases/abandoned-browse.md). Ga voor meer algemene informatie naar de [Overzicht van Query Service](./home.md).

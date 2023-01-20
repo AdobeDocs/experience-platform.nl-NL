@@ -5,9 +5,9 @@ title: Algemene begeleiding voor de Uitvoering van de Vraag in de Dienst van de 
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1072'
 ht-degree: 2%
 
 ---
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Deduplicatie
 
-De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Lees voor meer informatie over deduplicatie de [Handleiding voor deduplicatie van Query Service](./deduplication.md).
+De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Lees voor meer informatie over deduplicatie de [Handleiding voor deduplicatie van Query Service](../essential-concepts/deduplication.md).
 
 ## De berekeningen van de tijdzone in de Dienst van de Vraag
 
@@ -325,4 +325,7 @@ Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worde
 
 - [Analyseinzichten](../use-cases/analytics-insights.md)
 - [Activiteitenanalyse met Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [Voorbeeldquery&#39;s van ExperienceEvent](../sample-queries/experience-event.md).
+- [Een vernieuwd rapport van gebeurtenissen maken](../use-cases/trended-report-of-events.md)
+- [Een roll-uprapport van een bezoeker weergeven](../use-cases/roll-up-report-of-a-visitor.md)
+- [De paginaweergaven van een gebruiker weergeven](../use-cases/list-visitor-sessions.md)
+- [Bezoekers weergeven op basis van hun aantal paginaweergaven](../use-cases/visitors-by-number-of-page-views.md)

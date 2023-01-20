@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connect Tableau naar Query Service
 description: Dit document doorloopt de stappen voor het verbinden van Tableau met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 1d71cc4336747eb258ec2d8dcdc545cb2233692d
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Controleer of u de **[!UICONTROL Require SSL]** voordat u probeert verbinding te
 
 >[!IMPORTANT]
 >
->De genestelde gegevensstructuren in derdehulpmiddelen van BI kunnen worden afgevlakt om hun bruikbaarheid te verbeteren en de vereiste werkbelasting te verminderen om gegevens terug te winnen, te analyseren, om te zetten en te melden. Zie de documentatie op de[`FLATTEN` functie](../best-practices/flatten-nested-data.md) voor instructies over het activeren van deze instelling wanneer u verbinding maakt met een database.
+>De genestelde gegevensstructuren in derdehulpmiddelen van BI kunnen worden afgevlakt om hun bruikbaarheid te verbeteren en de vereiste werkbelasting te verminderen om gegevens terug te winnen, te analyseren, om te zetten en te melden. Zie de documentatie op de[`FLATTEN` functie](../essential-concepts/flatten-nested-data.md) voor instructies over het activeren van deze instelling wanneer u verbinding maakt met een database.
 
 Nadat u al uw referenties hebt ingevuld, bevestigt u uw instellingen om door te gaan. U hebt nu verbinding met Adobe Experience Platform.
 

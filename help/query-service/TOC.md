@@ -4,10 +4,10 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL aan vraaggegevens binnen het gegevens meer in Experience Platform.
 feature: Queries
-source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
+source-git-commit: 3d549b14571be7ec3455da0e23181951cb991a9d
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 5%
+source-wordcount: '264'
+ht-degree: 6%
 
 ---
 
@@ -17,58 +17,30 @@ ht-degree: 5%
 - [Overzicht van Query Service](home.md)
 - [Query Service verpakken](packages.md)
 - [Query Service-handleidingen](guardrails.md)
-- Data Distiller {#data-distiller}
-   - [Licentiegebruik](data-distiller/licence-usage.md)
 - Aan de slag {#get-started}
    - [Vereisten](get-started/prerequisites.md)
+- Data Distiller {#data-distiller}
+   - [Licentiegebruik](data-distiller/licence-usage.md)
+   - Winkel met query-versnelling {#query-accelerated-store}
+      - [Verstuur versnelde vragen](data-distiller/query-accelerated-store/send-accelerated-queries.md)
+      - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - Afgeleide kenmerken {#derived-attributes}
+      - [Overzicht](data-distiller/derived-attributes/overview.md)
+      - [Op decile gebaseerde afgeleide kenmerken maken](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Gebruiksscenario’s {#use-cases}
    - [Verlaten browsers](use-cases/abandoned-browse.md)
    - [Activiteitenanalyse met Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
    - [Attributieanalyse](use-cases/attribution-analysis.md)
    - [Bot filteren](use-cases/bot-filtering.md)
-   - [Web- en mobiele analysemogelijkheden](use-cases/analytics-insights.md)
+   - [Een vernieuwd rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
+   - [Afgeleide kenmerken op basis van een bestand](use-cases/deciles-use-case.md)
+   - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
+   - [Bezoekers weergeven op basis van hun paginaweergaven](use-cases/visitors-by-number-of-page-views.md)
    - [Propensiteitsscore](use-cases/propensity-score.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
-- Query Service-API {#api}
-   - [Aan de slag](api/getting-started.md)
-   - [Zoekopdrachten](api/queries.md)
-   - [Verbindingsparameters](api/connection-parameters.md)
-   - [Geplande query&#39;s](api/scheduled-queries.md)
-   - [Runs voor geplande vragen](api/runs-scheduled-queries.md)
-   - [Zoeksjablonen](api/query-templates.md)
-   - [Versnelde query&#39;s](api/accelerated-queries.md)
-   - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
-- Gebruikersinterface Query Service {#ui}
-   - [Overzicht van gebruikersinterface](ui/overview.md)
-   - [Gebruikershandleiding voor de Query Editor](ui/user-guide.md)
-   - [Zoeksjablonen](ui/query-templates.md)
-   - [Referenties van Query Service gebruiken](ui/credentials.md)
-   - [Gegevenssets genereren op basis van queryresultaten](ui/create-datasets.md)
-- [Bewakingsvragen](monitor-queries.md)
-- Winkel met query-versnelling{#query-accelerated-store}
-   - [Gegevensmodel met inzichten rapporteren](query-accelerated-store/reporting-insights-data-model.md)
-- Best practices {#best-practices}
-   - [Algemene richtlijnen voor het uitvoeren van query&#39;s](best-practices/writing-queries.md)
-   - [Richtlijnen voor de organisatie van gegevenselementen](./best-practices/organize-data-assets.md)
-   - [Werken met geneste gegevensstructuren](best-practices/nested-data-structures.md)
-   - [Geneste gegevensstructuren samenvoegen](best-practices/flatten-nested-data.md)
-   - [Anoniem blok](best-practices/anonymous-block.md)
-   - [Incrementeel laden](best-practices/incremental-load.md)
-   - [Gegevensdeduplicatie](best-practices/deduplication.md)
-- Afgeleide kenmerken {#derived-attributes}
-   - [Overzicht](derived-attributes/overview.md)
-   - [Gebruiksscenario voor Deciles](derived-attributes/deciles-use-case.md)
-- Voorbeeldquery&#39;s {#sample-queries}
-   - [Voorbeeld van query&#39;s voor ervaringsgebeurtenissen](sample-queries/experience-event.md)
-   - [Voorbeeld van Adobe Analytics-query&#39;s](sample-queries/adobe-analytics.md)
-- SQL-referentie {#sql}
-   - [SQL-overzicht](sql/overview.md)
-   - [SQL-syntaxis](sql/syntax.md)
-   - [Adobe-gedefinieerde functies](sql/adobe-defined-functions.md)
-   - [SQL-functies in Spark](sql/spark-sql-functions.md)
-   - [Opdrachten Metagegevens](sql/metadata.md)
-   - [Vooraf voorbereide instructies](sql/prepared-statements.md)
-   - [Gegevenssetvoorbeelden](sql/dataset-samples.md)
+   - [Commerciële variabelen uit analysegegevens retourneren en gebruiken](use-cases/merchandising-variables.md)
+   - [Het roll-uprapport voor een bezoeker weergeven](use-cases/roll-up-report-of-a-visitor.md)
+   - [Web- en mobiele analysemogelijkheden](use-cases/analytics-insights.md)
 - Client verbinden met Query-service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [SSL-modi](./clients/ssl-modes.md)
@@ -81,11 +53,45 @@ ht-degree: 5%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- Gebruikersinterface Query Service {#ui}
+   - [Overzicht van gebruikersinterface](ui/overview.md)
+   - [Gebruikershandleiding voor de Query Editor](ui/user-guide.md)
+   - [Zoeksjablonen](ui/query-templates.md)
+   - [Zoekprogramma&#39;s](ui/query-schedules.md)
+   - [Geplande query&#39;s controleren](ui/monitor-queries.md)
+   - [Referentiegids](ui/credentials.md)
+   - [Uitvoerdatasets genereren op basis van queryresultaten](ui/create-datasets.md)
+- API-eindpunten voor query-service {#api}
+   - [Aan de slag](api/getting-started.md)
+   - [Zoekopdrachten](api/queries.md)
+   - [Verbindingsparameters](api/connection-parameters.md)
+   - [Planningen](api/scheduled-queries.md)
+   - [Runs voor geplande vragen](api/runs-scheduled-queries.md)
+   - [Zoeksjablonen](api/query-templates.md)
+   - [Versnelde query&#39;s](api/accelerated-queries.md)
+   - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
 - Data Governance {#data-governance}
    - [Overzicht](data-governance/overview.md)
    - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
    - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
    - [Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema&#39;s](./data-governance/ad-hoc-schema-labels.md)
-- [Handleiding voor probleemoplossing](troubleshooting-guide.md)
+- Best practices {#best-practices}
+   - [Zoekopdracht uitvoeren](best-practices/writing-queries.md)
+   - [Gegevensmiddelenorganisatie](./best-practices/organize-data-assets.md)
+- Essentiële concepten {#essential-concepts}
+   - [Werken met geneste gegevensstructuren](essential-concepts/nested-data-structures.md)
+   - [Geneste gegevensstructuren samenvoegen](essential-concepts/flatten-nested-data.md)
+   - [Anoniem blok](essential-concepts/anonymous-block.md)
+   - [Incrementeel laden](essential-concepts/incremental-load.md)
+   - [Gegevensdeduplicatie](essential-concepts/deduplication.md)
+   - [Gegevenssetvoorbeelden](essential-concepts/dataset-samples.md)
+- SQL-referentie {#sql}
+   - [SQL-overzicht](sql/overview.md)
+   - [SQL-syntaxis](sql/syntax.md)
+   - [Adobe-gedefinieerde functies](sql/adobe-defined-functions.md)
+   - [SQL-functies in Spark](sql/spark-sql-functions.md)
+   - [Opdrachten Metagegevens](sql/metadata.md)
+   - [Vooraf voorbereide instructies](sql/prepared-statements.md)
+- [Veelgestelde vragen](troubleshooting-guide.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

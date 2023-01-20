@@ -1,16 +1,17 @@
 ---
-title: 'Analytische inzichten voor web- en mobiele interacties '
+title: Analytische inzichten voor web- en mobiele interacties
 description: In dit document wordt uitgelegd hoe u Query Service kunt gebruiken om uitvoerbare inzichten te maken op basis van opgenomen Adobe Analytics-gegevens.
-source-git-commit: cdceba9caf035831f4c376edf34356f666b79aa8
+exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
 # Analyseinzichten voor web- en mobiele interacties
 
-Met Adobe Experience Platform kunt u gegevens uit Adobe Analytics-rapportreeksen invoeren met XDM-velden (Experience Data Model) voor het vullen van gegevenssets. De Dienst van de vraag kan dan gebruik van deze analysegegevens maken door SQL vragen in werking te stellen om waardevolle inzichten van een gebruikersgedrag over de digitale platforms te produceren.
+Met Adobe Experience Platform kunt u gegevens uit Adobe Analytics-rapportreeksen invoeren met XDM-velden (Experience Data Model) voor het vullen van gegevenssets. Deze analysegegevens worden gewijzigd om te voldoen aan de [!DNL XDM ExperienceEvent] klasse. De Dienst van de vraag kan dan gebruik van deze gegevens maken door SQL vragen in werking te stellen om waardevolle inzichten van het gedrag van een gebruiker over de digitale platforms te produceren.
 
 Dit document bevat een groot aantal voorbeeld-SQL-query&#39;s die veelvoorkomende gebruiksgevallen aantonen bij het maken van inzichten van gegevens van Analytics via internet en mobiele apparatuur.
 
