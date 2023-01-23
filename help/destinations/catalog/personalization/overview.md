@@ -3,9 +3,9 @@ keywords: personalisatie;Personalisatie
 title: Overzicht van personalisatiedoelen
 description: Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: f3c58dd95730393f899378ffedec4a49363df204
+source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '154'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,7 @@ Momenteel, steunt Platform de verpersoonlijkingsbestemmingen die hieronder worde
 * [(bèta) Adobe Commerce](adobe-commerce.md)
 * [Aangepaste aanpassingsverbinding](custom-personalization.md)
 * [Verbinding met PEGA-client](pega.md)
+* [Verbinding met Pega-profiel](pega-profile.md)
 
 **Extensies**
 
