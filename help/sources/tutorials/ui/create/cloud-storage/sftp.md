@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
-solution: Experience Platform
 title: Een SFTP-bronverbinding maken in de gebruikersinterface
-type: Tutorial
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -44,12 +41,13 @@ Als u verbinding wilt maken met [!DNL SFTP]moet u waarden opgeven voor de volgen
 | `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 | `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Opmerking**: Als deze instelling is ingeschakeld voor een bestaande SFTP-account, heeft dit alleen invloed op toekomstige gegevensstromen en niet op bestaande gegevensstromen. |
+| Mappad | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] bron, kunt u het omslagweg verstrekken om gebruikerstoegang tot de subomslag van uw keus te specificeren. |
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om een nieuwe [!DNL SFTP] account om verbinding te maken met Platform.
 
 ## Verbinding maken met uw [!DNL SFTP] server
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] het scherm toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening kunt tot stand brengen met.
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -67,31 +65,31 @@ Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam en een optionele beschrijving voor uw nieuwe [!DNL SFTP] account.
-
-![Het nieuwe accountscherm voor SFTP](../../../../images/tutorials/create/sftp/new.png)
-
-#### Verifiëren met wachtwoord
-
-[!DNL SFTP] ondersteunt verschillende verificatietypen voor toegang. Onder **[!UICONTROL Account authentication]** selecteren **[!UICONTROL Password]** en geef vervolgens de host- en poortwaarden op waarmee u verbinding wilt maken, naast uw gebruikersnaam en wachtwoord.
-
-![Het nieuwe accountscherm voor de SFTP-bron met behulp van basisverificatie](../../../../images/tutorials/create/sftp/password.png)
-
-#### Verifiëren met SSH-openbare sleutel
-
-Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, selecteert u **[!UICONTROL SSH public key]**  en geef vervolgens uw host- en poortwaarden op, evenals de inhoud van de persoonlijke sleutel en de combinatie van passphrase.
-
 >[!IMPORTANT]
 >
 >SFTP steunt een RSA of DSA type OpenSSH sleutel. Zorg ervoor dat de inhoud van uw sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"`. Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
 
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam en een optionele beschrijving voor uw nieuwe [!DNL SFTP] account.
+
+![Het nieuwe accountscherm voor SFTP](../../../../images/tutorials/create/sftp/new.png)
+
+De [!DNL SFTP] de bron steunt zowel basisauthentificatie als authentificatie via SSH openbare sleutel.
+
+>[!BEGINTABS]
+
+>[!TAB Basisverificatie]
+
+Selecteer **[!UICONTROL Password]** en geef vervolgens de host- en poortwaarden op waarmee u verbinding wilt maken, naast uw gebruikersnaam en wachtwoord. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]**.
+
+![Het nieuwe accountscherm voor de SFTP-bron met behulp van basisverificatie](../../../../images/tutorials/create/sftp/password.png)
+
+>[!TAB SSH-verificatie met openbare sleutel]
+
+Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, selecteert u **[!UICONTROL SSH public key]**  en geef vervolgens uw host- en poortwaarden op, evenals de inhoud van de persoonlijke sleutel en de combinatie van passphrase. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]**.
+
 ![Het nieuwe accountscherm voor de SFTP-bron met behulp van SSH public key.](../../../../images/tutorials/create/sftp/ssh.png)
 
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| Persoonlijke toetsinhoud | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
-| Passphrase | Hiermee geeft u de woordgroep of het wachtwoord op waarmee de persoonlijke sleutel wordt gedecodeerd als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
-
+>[!ENDTABS]
 
 ## Volgende stappen
 

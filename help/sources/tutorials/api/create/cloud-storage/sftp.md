@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp;Secure File Transfer Protocol;Secure File Transfer Protocol
-solution: Experience Platform
 title: Een SFTP-basisverbinding maken met de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een SFTP-server (Secure File Transfer Protocol) met behulp van de Flow Service API.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -44,6 +41,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL SFTP]moet u waarden opge
 | `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als de `privateKeyContent` is met een wachtwoord beveiligd, moet deze parameter worden gebruikt met passphrase van de inhoud van de persoonlijke sleutel als waarde. |
 | `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Opmerking**: Als deze instelling is ingeschakeld voor een bestaande SFTP-account, heeft dit alleen invloed op toekomstige gegevensstromen en niet op bestaande gegevensstromen. |
+| `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] bron, kunt u het omslagweg verstrekken om gebruikerstoegang tot subomslag van uw keus te specificeren. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 ### Platform-API&#39;s gebruiken
@@ -54,7 +52,7 @@ Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s 
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-De [!DNL SFTP] de bron steunt zowel basisauthentificatie als authentificatie via SSH openbare sleutel.
+De [!DNL SFTP] de bron steunt zowel basisauthentificatie als authentificatie via SSH openbare sleutel. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen.
 
 Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL SFTP] verificatiereferenties als onderdeel van de aanvraagparameters.
 
@@ -94,7 +92,8 @@ curl -X POST \
               "port": 22,
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
-              "maxConcurrentConnections": 1
+              "maxConcurrentConnections": 5,
+              "folderPath": "acme/business/customers/holidaySales"
           }
       },
       "connectionSpec": {
@@ -111,6 +110,7 @@ curl -X POST \
 | `auth.params.username` | De gebruikersnaam die aan uw SFTP-server is gekoppeld. |
 | `auth.params.password` | Het wachtwoord dat aan uw SFTP-server is gekoppeld. |
 | `auth.params.maxConcurrentConnections` | Het maximumaantal gezamenlijke verbindingen dat is opgegeven bij het verbinden van Platform met SFTP. Wanneer deze optie is ingeschakeld, moet deze waarde op ten minste 1 worden ingesteld. |
+| `auth.params.folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |
 | `connectionSpec.id` | De specificatie-id van de SFTP-serververbinding: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!TAB SSH-verificatie met openbare sleutel]
@@ -134,8 +134,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
-              "maxConcurrentConnections": 1
-
+              "maxConcurrentConnections": 5,
+              "folderPath": "acme/business/customers/holidaySales"
           }
       },
       "connectionSpec": {
@@ -153,6 +153,7 @@ curl -X POST \
 | `auth.params.privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | `auth.params.passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 | `auth.params.maxConcurrentConnections` | Het maximumaantal gezamenlijke verbindingen dat is opgegeven bij het verbinden van Platform met SFTP. Wanneer deze optie is ingeschakeld, moet deze waarde op ten minste 1 worden ingesteld. |
+| `auth.params.folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |
 | `connectionSpec.id` | De [!DNL SFTP] server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!ENDTABS]

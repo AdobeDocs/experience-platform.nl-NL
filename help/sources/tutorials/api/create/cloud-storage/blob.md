@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Azure;azure blob;blob;Blob
-solution: Experience Platform
 title: Een Azure Blob Base Connection maken met de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Azure Blob met behulp van de Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 1%
+source-wordcount: '711'
+ht-degree: 0%
 
 ---
 
@@ -35,6 +32,8 @@ Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Blob] opslag, moet u 
 | ---------- | ----------- |
 | `connectionString` | Een tekenreeks die de verificatiegegevens bevat die nodig zijn voor verificatie [!DNL Blob] naar Experience Platform. De [!DNL Blob] patroon verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Zie deze voor meer informatie over verbindingstekenreeksen [!DNL Blob] document op [verbindingstekenreeksen configureren](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `sasUri` | De URI van de handtekening voor gedeelde toegang die u kunt gebruiken als alternatief verificatietype om uw [!DNL Blob] account. De [!DNL Blob] SAS URI-patroon is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Zie deze voor meer informatie [!DNL Blob] document op [handtekening-URI&#39;s voor gedeelde toegang](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+| `container` | De naam van de container waartoe u toegang wilt toewijzen. Wanneer u een nieuwe account maakt met de [!DNL Blob] bron, kunt u een containernaam verstrekken om gebruikerstoegang tot subomslag van uw keus te specificeren. |
+| `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Blob] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 ### Platform-API&#39;s gebruiken
@@ -45,11 +44,11 @@ Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s 
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
+De [!DNL Blob] De bron ondersteunt zowel de verbindingstekenreeks als de verificatie van de gedeelde toegangshandtekening (SAS). Een gedeelde toegangshandtekening (SAS) URI staat veilige gedelegeerde toestemming aan uw toe [!DNL Blob] account. Met SAS kunt u verificatiereferenties maken met verschillende toegangsgraden, aangezien een SAS-gebaseerde verificatie u in staat stelt machtigingen, begin- en vervaldatums en bepalingen voor specifieke bronnen in te stellen.
+
+Tijdens deze stap kunt u ook de submappen aangeven waartoe uw account toegang heeft door de naam van de container en het pad naar de submap te definiëren.
+
 Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Blob] verificatiereferenties als onderdeel van de aanvraagparameters.
-
-### Een [!DNL Blob] basisverbinding met verificatie op basis van verbindingstekenreeksen
-
-Als u een [!DNL Blob] basisverbinding die verbinding op koord-gebaseerde authentificatie gebruikt, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl u uw [!DNL Blob] `connectionString`.
 
 **API-indeling**
 
@@ -59,30 +58,36 @@ POST /connections
 
 **Verzoek**
 
+>[!BEGINTABS]
+
+>[!TAB Verbindingstekenreeks]
+
 Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Blob] verificatie op basis van een verbindingstekenreeks gebruiken:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Azure Blob connection using connectionString",
-        "description": "Azure Blob connection using connectionString",
-        "auth": {
-            "specName": "ConnectionString",
-            "params": {
-                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
-            }
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Blob connection using connectionString",
+      "description": "Azure Blob connection using connectionString",
+      "auth": {
+          "specName": "ConnectionString",
+          "params": {
+              "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}",
+              "container": "acme-blob-container",
+              "folderPath": "/acme/customers/salesData"
+          }
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
@@ -90,61 +95,44 @@ curl -X POST \
 | `auth.params.connectionString` | De verbindingstekenreeks die is vereist voor toegang tot gegevens in de blob-opslag. Het patroon van de Blob-verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | De Klob-specificatie voor de opslagverbinding is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-**Antwoord**
-
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een bronverbinding te maken.
-
-```json
-{
-    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
-    "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
-}
-```
-
-### Een [!DNL Blob] basisverbinding met URI voor handtekening voor gedeelde toegang
-
-Een gedeelde toegangshandtekening (SAS) URI staat veilige gedelegeerde toestemming aan uw toe [!DNL Blob] account. Met SAS kunt u verificatiereferenties maken met verschillende toegangsgraden, aangezien een SAS-gebaseerde verificatie u in staat stelt machtigingen, begin- en vervaldatums en bepalingen voor specifieke bronnen in te stellen.
+>[!TAB SAS URI-verificatie]
 
 Als u een [!DNL Blob] blob verbinding gebruikend gedeelde toegangshandtekening URI, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van waarden voor uw [!DNL Blob] `sasUri`.
-
-**API-indeling**
-
-```http
-POST /connections
-```
-
-**Verzoek**
 
 Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Blob] URI voor handtekening voor gedeelde toegang gebruiken:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Azure Blob source connection using SAS URI",
-        "description": "Azure Blob source connection using SAS URI",
-        "auth": {
-            "specName": "SAS URI Authentication",
-            "params": {
-                "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>"
-            }
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Blob source connection using SAS URI",
+      "description": "Azure Blob source connection using SAS URI",
+      "auth": {
+          "specName": "SAS URI Authentication",
+          "params": {
+              "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>",
+              "container": "acme-blob-container",
+              "folderPath": "/acme/customers/salesData"
+          }
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `auth.params.connectionString` | De SAS-URI die vereist is voor toegang tot gegevens in uw [!DNL Blob] opslag. De [!DNL Blob] SAS URI-patroon is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
 | `connectionSpec.id` | De [!DNL Blob] Opslagverbindingsspecificatie-id is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+
+>[!ENDTABS]
 
 **Antwoord**
 
