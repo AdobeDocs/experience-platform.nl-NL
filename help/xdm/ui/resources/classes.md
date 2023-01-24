@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,9 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 >
 >Onthoud dat alle velden die u aan een klasse toevoegt, worden gebruikt in alle schema&#39;s waarin die klasse wordt gebruikt. Daarom moet u zorgvuldig overwegen welke velden handig zijn in alle gevallen waarin het schema wordt gebruikt. Als u van plan bent een gebied toe te voegen dat slechts gebruik in sommige schema&#39;s onder deze klasse kan zien, kunt u het aan die schema&#39;s willen toevoegen door [een veldgroep maken](./field-groups.md#create) in plaats daarvan.
 
-A **[!UICONTROL New field]** verschijnt in het canvas, en de juiste spoorupdates om controles te tonen om de eigenschappen van het gebied te vormen. Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]**.
+An **[!UICONTROL Untitled Field]** wordt de tijdelijke aanduiding weergegeven in het canvas en wordt de rechterrails bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]**.
+
+![](../../images/ui/resources/classes/assign-to-class.png)
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 

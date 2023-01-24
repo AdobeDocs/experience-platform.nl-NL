@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Groep met schemavelden maken en bewerken in de gebruikersinterface
 description: Leer hoe u groepen met schemavelden maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Als u velden wilt toevoegen aan een aangepaste veldgroep, selecteert u eerst de 
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL New field]** verschijnt in het canvas, en de juiste spoorupdates om controles te tonen om de eigenschappen van het gebied te vormen. Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op hoe te om verschillende gebiedstypes te vormen.
+An **[!UICONTROL Untitled Field]** wordt de tijdelijke aanduiding weergegeven in het canvas en wordt de rechterrails bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op hoe te om verschillende gebiedstypes te vormen.
+
+Onder **[!UICONTROL Assign to]**, selecteert u de **[!UICONTROL Field Group]** gebruikt u vervolgens het vervolgkeuzemenu om de gewenste veldgroep in de lijst te selecteren. U kunt beginnen in naam van de gebiedsgroep in te typen om benedenresultaten te beperken.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Onder **[!UICONTROL Assign to]**, selecteert u de **[!UICONTROL Field Group]** gebruikt u vervolgens het vervolgkeuzemenu om de gewenste veldgroep in de lijst te selecteren. U kunt beginnen in naam van de gebiedsgroep in te typen om benedenresultaten te beperken.
 
