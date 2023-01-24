@@ -4,7 +4,7 @@ title: Handleiding voor het gebruiksdashboard voor licenties
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Het licentiegebruikdashboard bestaat uit widgets, die alleen-lezen cijfers weerg
 
 Elke widget geeft een lijngrafiek weer waarin de werkelijke nummers voor uw organisatie worden vergeleken met het totale beschikbare aantal voor licenties van uw organisatie en een percentage van het totale gebruik.
 
-![Het tabblad Overzicht van het dashboard voor licentiegebruik met de lijngrafiek van de metrische widget voor samplelicentiegebruik gemarkeerd.](../images/license-usage/widgets.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de lijngrafiek van de metrische widget voor licentiegebruik van Sample gemarkeerd.](../images/license-usage/widgets.png)
 
 ## Beschikbare cijfers
 

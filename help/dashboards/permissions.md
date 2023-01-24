@@ -4,7 +4,7 @@ title: Toegang voor dashboards van Experience Platforms verkrijgen en verlenen
 type: Documentation
 description: Gebruikers de mogelijkheid bieden om dashboards van Experience Platforms weer te geven, te bewerken en bij te werken met Adobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 6%
@@ -23,12 +23,12 @@ Om toegangsbeheer voor te vormen [!DNL Experience Platform], moet u beheerdersre
 
 ## Beschikbare dashboardmachtigingen {#available-permissions}
 
-De [!DNL Dashboards] de dienst verleent drie toestemmingen die, wanneer gecombineerd, volledige toegang tot [!UICONTROL Profiles], [!UICONTROL Segments], [!UICONTROL Destinations], en [!UICONTROL Licence Usage] dashboards in Adobe Experience Platform. Deze machtigingen zijn:
+De [!DNL Dashboards] de dienst verleent drie toestemmingen die, wanneer gecombineerd, volledige toegang tot [!UICONTROL Profiles], [!UICONTROL Segments], [!UICONTROL Destinations], en [!UICONTROL License Usage] dashboards in Adobe Experience Platform. Deze machtigingen zijn:
 
 | Machtiging | Beschrijving |
 |---|---|
 | **Standaarddashboards beheren** | Deze machtiging is **algemene lees- en schrijfmachtigingen**. Hiermee kunt u [aangepaste widgets maken](./customize/custom-widgets.md) en [Het widgetschema bewerken](./customize/edit-schema.md) via de [!UICONTROL Widget library]. |
-| **Standaarddashboards weergeven** | Dit biedt **alleen-lezen** functionaliteit voor de [!UICONTROL Profiles], [!UICONTROL Destinations], en [!UICONTROL Segments] dashboards en verleent toegang tot hen door de linkernavigatie van het Platform. Het voegt er ook aan toe [!UICONTROL Dashboards] aan de linkernavigatie en toegang tot [!UICONTROL Dashboards] tabblad Overzicht en integratie. |
+| **Standaarddashboards weergeven** | Dit biedt **alleen-lezen** functionaliteit voor de [!UICONTROL Profiles], [!UICONTROL Destinations], en [!UICONTROL Segments] dashboards en verleent toegang tot hen door Platform linkernavigatie. Het voegt er ook aan toe [!UICONTROL Dashboards] aan de linkernavigatie en toegang tot [!UICONTROL Dashboards] tabblad Overzicht en integratie. |
 | **Licentieverbruikdashboard weergeven** | Met deze machtiging kunnen gebruikers **alleen-lezen** toegang tot [het licentiegebruiksdashboard](./guides/license-usage.md) in de interface van het Experience Platform. |
 
 Er zijn vijf machtigingen die niet zijn opgenomen in het dialoogvenster [!DNL Dashboard] rubriek die mogelijk vereist is, afhankelijk van uw behoeften. In de volgende tabel worden de categorielocaties in de Admin Console weergegeven:

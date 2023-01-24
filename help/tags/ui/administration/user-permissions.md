@@ -2,7 +2,7 @@
 title: Gebruikersmachtigingen voor tags
 description: Leer over de verschillende soorten toestemmingen beschikbaar voor markeringen en sommige basisimplementatiestrategieën voor verschillende zaken van bedrijfsgebruik.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Binnen een productprofiel worden de machtigingen voor tags onderverdeeld in vier
 
 Elke eigenschap tag heeft een platform. Er zijn momenteel twee platforms die u voor tags kunt gebruiken: Web en mobiel. U kunt dit toestemmingstype gebruiken om toegang tot een bepaald type van bezit te beperken of te verlenen. Dit kan handig zijn als het team dat uw mobiele apps beheert, anders is dan het team dat uw websites beheert.
 
-### Eigenschappen
+### Properties
 
 Standaard bieden productprofielen toegang tot alle eigenschappen die binnen uw bedrijf bestaan, zowel momenteel als in de toekomst. Gebruikend dit toestemmingstype, kunt u toegang tot specifieke bestaande eigenschappen door naam beperken of verlenen.
 
@@ -108,7 +108,7 @@ Dit is vergelijkbaar met &quot;Scheiding van rechten&quot; hierboven, maar georg
 
 De volgende lijst verstrekt sommige voorbeelden van de soorten rollen u in uw organisatie zou kunnen hebben en welke toestemmingen u hen zou moeten toewijzen:
 
-| Rol | Beschrijving | Eigenschappen | Eigendomsrechten | Bedrijfsrechten |
+| Rol | Beschrijving | Properties | Eigendomsrechten | Bedrijfsrechten |
 | --- | --- | --- | --- | --- |
 | Manager | Wil zien wat er in het systeem gebeurt, maar mag geen wijzigingen kunnen aanbrengen. | Automatisch opnemen | (Geen) | (Geen) |
 | De markt | Kan extensies installeren en nieuwe tags instellen voor bestaande eigenschappen, maar kan niet publiceren naar de testomgeving of productieomgeving. | Automatisch opnemen | <ul><li>Ontwikkelen</li><li>Extensies beheren</li></ul> | <ul><li>Eigenschappen beheren</li></ul> |

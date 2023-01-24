@@ -2,7 +2,7 @@
 title: Sjablonen voor rapporten van Power BI voor dashboards van Platforms
 description: Gebruik rapportsjablonen om gegevens van Experience Platforms te verkennen met behulp van Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1443'
 ht-degree: 0%

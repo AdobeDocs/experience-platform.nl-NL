@@ -1,7 +1,7 @@
 ---
 title: Distiller-overzicht van gegevens
 description: Een overzicht van de Distiller-gebruikslimieten voor gegevens van Query Service met betrekking tot uw licentierechten.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 Data Distiller is een pakket dat een subset van de functies van Adobe Experience Platform bevat. Met Data Distiller kunt u gegevensvoorbereiding na inname (zoals reinigen, vormen en manipulatie) uitvoeren voor realtime klantprofiel of analytische gebruiksgevallen door batchquery&#39;s uit te voeren in Query Service. Uw gebruik van Data Distiller is afhankelijk van uw huidige en voortgezette licentie van ten minste een van de volgende: Adobe Real-time Customer Data Platform, Customer Journey Analytics en/of Adobe Journey Optimizer.
 
-## Licentiegebruik {#licence-usage}
+## Licentiegebruik {#license-usage}
 
-Zie de [Distiller-gebruiksdocument voor gegevens](./licence-usage.md) om belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie te bekijken.
+Zie de [Distiller-gebruiksdocument voor gegevens](./license-usage.md) om belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie te bekijken.
 
 ## Parameters voor segmentering {#scoping-parameters}
 

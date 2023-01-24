@@ -1,7 +1,8 @@
 ---
 title: Eindpunt van versnelde query's
 description: Leer hoe te om tot vraag versnelde opslag op een stateless manier toegang te hebben om resultaten snel terug te keren die op bijeengevoegde gegevens worden gebaseerd. Dit document verstrekt een verzoek en een antwoord van steekproefHTTP voor het versnelde-vragen van de Dienst van de Vraag eindpunt.
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -16,7 +17,7 @@ Voordat u verdergaat met deze handleiding, moet u controleren of u de [API-handl
 
 ## Aan de slag
 
-De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Zie de [verpakking](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), en [licenties](../data-distiller/licence-usage.md) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens Distiller SKU hebt, kunt u voor meer informatie contact opnemen met een medewerker van de klantenservice van de Adobe.
+De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Zie de [verpakking](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), en [licenties](../data-distiller/license-usage.md) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens Distiller SKU hebt, kunt u voor meer informatie contact opnemen met een medewerker van de klantenservice van de Adobe.
 
 In de volgende secties worden de API-aanroepen beschreven die nodig zijn om de versnelde opslag zonder status te openen via de API voor Query-service. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
@@ -210,4 +211,3 @@ Een geslaagde reactie retourneert HTTP-status 200 met het ad-hocschema dat door 
 | `resultsMeta._adhoc.meta:xdmType` | Dit is een door het systeem gegenereerde waarde voor het XDM-veldtype. Raadpleeg de documentatie over de beschikbare typen voor meer informatie over de beschikbare typen [beschikbare XDM-typen](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
 | `resultsMeta._adhoc.properties` | Dit zijn de kolomnamen van de gevraagde dataset. |
 | `resultsMeta._adhoc.results` | Dit zijn de rijnamen van de gevraagde dataset. Ze weerspiegelen elk van de geretourneerde kolommen. |
-
