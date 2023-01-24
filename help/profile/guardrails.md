@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -90,6 +90,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 | Maximale framegrootte profiel | 50MB | Hard | **De maximale grootte van één profielfragment is 50 MB.** De segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welke ontbreken [profielfragment](#profile-fragments) dat groter is dan 50 MB. |
 | Maximale grootte voor profielopslag | 50MB | Zacht | **De maximale grootte van een opgeslagen profiel is 50 MB.** Nieuw toevoegen [profielfragmenten](#profile-fragments) in een profiel dat groter is dan 50 MB, de systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | 90 | Zacht | **Het maximumaantal per dag ingenomen Profile of ExperienceEvent-batches is 90.** Dit houdt in dat het gecombineerde totaal van de elke dag ingeslikte Profile en ExperienceEvent batches niet meer dan 90 mag bedragen. Door extra batches in te voeren worden de systeemprestaties beïnvloed. |
+| Aantal ExperienceEvents per profielrecord | 5000 | Zacht | **Het maximumaantal ExperienceEvents per profielrecord is 5000.** Profielen met meer dan 5000 ervaringGebeurtenissen zullen **niet** voor segmentatie in aanmerking worden genomen. |
 
 {style=&quot;table-layout:auto&quot;}
 
