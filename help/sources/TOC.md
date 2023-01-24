@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '872'
 ht-degree: 5%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 5%
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-aansluiting](connectors/crm/salesforce.md)
+      - [SugarCRM-connector](connectors/crm/sugarcrm.md)
       - [Veeva CRM-connector](connectors/crm/veeva.md)
       - [Zoho CRM-aansluiting](connectors/crm/zoho.md)
    - Klantsucces {#customer-success}
@@ -108,7 +109,7 @@ ht-degree: 5%
    - Een basisverbinding maken {#create}
       - Reclame {#advertising}
          - [Google-advertenties](tutorials/api/create/advertising/ads.md)
-      - Analyse {#analytics}
+      - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
@@ -129,6 +130,8 @@ ht-degree: 5%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [SugarCRM-rekeningen en -contactpersonen](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM-gebeurtenissen](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Klantsucces {#customer-success}
@@ -215,7 +218,7 @@ ht-degree: 5%
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Reclame {#advertising}
          - [Google-advertenties](tutorials/ui/create/advertising/ads.md)
-      - Analyse {#analytics}
+      - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
@@ -237,6 +240,8 @@ ht-degree: 5%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [SugarCRM-rekeningen en -contactpersonen](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM-gebeurtenissen](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Klant geslaagd {#customer-success}
