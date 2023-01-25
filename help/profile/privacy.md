@@ -5,9 +5,9 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-Time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ In dit document worden de belangrijkste concepten besproken die betrekking hebbe
 
 ## Aan de slag
 
-U wordt aangeraden het volgende goed te begrijpen: [!DNL Experience Platform] services vóór het lezen van deze handleiding:
+Deze handleiding vereist een goed begrip van het volgende: [!DNL Platform] componenten:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
@@ -48,7 +48,7 @@ In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voo
 >
 >Privacy Service kan alleen verwerken [!DNL Profile] gegevens die een samenvoegbeleid gebruiken dat geen identiteitsstitching uitvoert. Zie de sectie over [beleidsbeperkingen samenvoegen](#merge-policy-limitations) voor meer informatie .
 >
->Het is ook belangrijk om op te merken dat de hoeveelheid tijd die een privacyverzoek kan duren om te voltooien niet kan worden gewaarborgd. Als er wijzigingen optreden in uw [!DNL Profile] terwijl een verzoek nog wordt verwerkt, kan ook niet worden gegarandeerd of die gegevens al dan niet worden verwerkt.
+>Houd er rekening mee dat het voltooien van een privacyaanvraag veel tijd in beslag kan nemen **kan** worden gegarandeerd. Als er wijzigingen optreden in uw [!DNL Profile] terwijl een verzoek nog wordt verwerkt, kan ook niet worden gegarandeerd of die gegevens al dan niet worden verwerkt.
 
 ### De API gebruiken
 
@@ -65,6 +65,8 @@ Bovendien `include` array van de aanvraag payload moet de productwaarden voor de
 >Zie de sectie over [profielaanvragen en identiteitsverzoeken](#profile-v-identity) later in dit document vindt u gedetailleerde informatie over de effecten van het gebruik van `ProfileService` en `identity` binnen de `include` array.
 
 Met het volgende verzoek wordt een nieuwe privacytaak gemaakt voor de gegevens van één klant in het dialoogvenster [!DNL Profile] opslaan. Er zijn twee identiteitswaarden voor de klant in de `userIDs` array; één met de norm `Email` naamruimte identiteit en de andere naamruimte met behulp van een aangepaste naamruimte `Customer_ID` naamruimte. Het omvat ook de productwaarde voor [!DNL Profile] (`ProfileService`) in de `include` array:
+
+**Verzoek**
 
 ```shell
 curl -X POST \
@@ -108,6 +110,56 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Platform verwerkt privacyverzoeken voor alle [sandboxen](../sandboxes/home.md) die deel uitmaken van uw organisatie. Dientengevolge, om het even welke `x-sandbox-name` header die in de aanvraag is opgenomen, wordt genegeerd door het systeem.
+
+**Productrespons**
+
+Als de privacytaak eenmaal is voltooid, wordt een antwoord in JSON-indeling geretourneerd met informatie over de aangevraagde gebruikers-id&#39;s.
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
 
 ### De gebruikersinterface gebruiken
 
@@ -161,6 +213,6 @@ Privacy Service kan alleen verwerken [!DNL Profile] gegevens die een samenvoegbe
 >
 ## Volgende stappen
 
-Door dit document te lezen, hebt u kennis gemaakt met de belangrijke concepten voor het verwerken van privacyverzoeken in [!DNL Experience Platform]. U wordt aangeraden de documentatie in deze handleiding te blijven lezen om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken.
+Door dit document te lezen, hebt u kennis gemaakt met de belangrijke concepten voor het verwerken van privacyverzoeken in [!DNL Experience Platform]. Om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken, moet u de documentatie in deze handleiding blijven lezen.
 
 Voor informatie over het verwerken van privacyverzoeken voor [!DNL Platform] middelen die niet worden gebruikt door [!DNL Profile], zie het document op [verwerking van privacyverzoeken in het datumpigment](../catalog/privacy.md).
