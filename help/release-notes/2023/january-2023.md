@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
+source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Gegevensverzameling](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Klantprofiel in realtime](#profile)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Betrouwbaarheid {#assurance}
@@ -93,15 +94,6 @@ Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm
 
 Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Door Platform gegenereerde vervaldatum van segmentlidmaatschap | Om het even welk segmentlidmaatschap dat in is `Exited` staat gedurende meer dan 30 dagen op basis van de `lastQualificationTime` wordt geschrapt. |
-| Vervaldatum extern publiekslidmaatschap | Standaard blijven leden van externe doelgroepen 30 dagen behouden. Als u deze nog langer wilt behouden, gebruikt u de `validUntil` veld tijdens de opname van publieksgegevens. |
-
-{style=&quot;table-layout:auto&quot;}
-
 **Binnenkomende veroudering** {#deprecation}
 
 Om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen, `Existing` status wordt vervangen door [segmentlidmaatschapskaart](../../xdm/field-groups/profile/segmentation.md) eind maart 2023. Een vervolgaankondiging zal de exacte vervaldatum bevatten.
@@ -111,6 +103,21 @@ Post deprecrection, profielen die in een segment worden gekwalificeerd zullen wo
 Deze wijziging kan van invloed zijn op het gebruik van [ondernemingsbestemmingen](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) en hebben geautomatiseerde downstream processen geïmplementeerd, gebaseerd op de `Existing` status. Gelieve te herzien uw downstreamintegratie als dit voor u het geval is. Als u pas na een bepaalde tijd gekwalificeerde profielen wilt identificeren, kunt u een combinatie van de `Realized` en de `lastQualificationTime` in uw overzicht van het segmentlidmaatschap. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 Als u meer wilt weten over het realtime profiel van de klant, inclusief zelfstudies en aanbevolen procedures voor het werken met profielgegevens, leest u eerst de [Overzicht van het realtime klantprofiel](../../profile/home.md).
+
+## Segmenteringsservice {#segmentation}
+
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Door Platform gegenereerde vervaldatum van segmentlidmaatschap | Om het even welk segmentlidmaatschap dat in is `Exited` staat gedurende meer dan 30 dagen op basis van de `lastQualificationTime` wordt geschrapt. |
+| Vervaldatum extern publiekslidmaatschap | Standaard blijven leden van externe doelgroepen 30 dagen behouden. Als u deze nog langer wilt behouden, gebruikt u de `validUntil` veld tijdens de opname van publieksgegevens. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
