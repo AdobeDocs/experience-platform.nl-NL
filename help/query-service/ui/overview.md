@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekservice
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ De **[!UICONTROL Templates]** tabblad geeft query&#39;s weer die zijn opgeslagen
 
 Zie de [querysjablonen](./query-templates.md) documentatie voor meer informatie over malplaatjes in de UI van het Platform.
 
-## Logboek
+## Logboek {#log}
 
 De **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn uitgevoerd. Door gebrek, maakt een lijst van het logboek van de vragen in omgekeerde chronologie.
 
@@ -81,6 +81,8 @@ De **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn uitgevoe
 
 >!![Note]
 Selecteer het potloodpictogram (![Een potloodpictogram.](../images/ui/overview/edit-icon.png)) van om het even welke rij van het vraaglogboek om aan [!DNL Query Editor]. De query is vooraf ingevuld voor handige bewerking.
+
+Zie de [documentatie met querylogbestanden](./query-logs.md) voor meer informatie over de logboekdossiers die automatisch door een vraaggebeurtenis worden geproduceerd.
 
 ## Credentials
 
