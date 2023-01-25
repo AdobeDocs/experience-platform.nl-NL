@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;google cloud-opslag;google;Google
-solution: Experience Platform
 title: Een Google Cloud Storage Base Connection maken met de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google Cloud Storage-account met behulp van de Flow Service API.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -35,6 +32,8 @@ Om [!DNL Flow Service] om verbinding te maken met uw [!DNL Google Cloud Storage]
 | ---------- | ----------- |
 | `accessKeyId` | Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] aan Platform. |
 | `secretAccessKey` | Een tekenreeks van 40 tekens met een basiscodering van 64 tekens die wordt gebruikt voor de verificatie van uw [!DNL Google Cloud Storage] aan Platform. |
+| `bucketName` | De naam van uw [!DNL Google Cloud Storage] emmertje. U moet een emmernaam specificeren als u toegang tot een specifieke subomslag in uw wolkenopslag wilt verlenen. |
+| `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |
 
 Voor meer informatie over deze waarden raadpleegt u de [HMAC-sleutels voor Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) hulplijn. Raadpleeg voor meer informatie over het genereren van uw eigen toegangstoets-id en geheime toegangstoets de [[!DNL Google Cloud Storage] overzicht](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
@@ -48,6 +47,10 @@ Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip 
 
 Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Google Cloud Storage] verificatiereferenties als onderdeel van de aanvraagparameters.
 
+>[!TIP]
+>
+>Tijdens deze stap kunt u ook de submappen aangeven waartoe uw account toegang heeft door de naam van de emmertje en het pad naar de submap te definiëren.
+
 **API-indeling**
 
 ```http
@@ -60,33 +63,37 @@ Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Google Clo
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Google Cloud Storage connection",
-        "description": "Connector for Google Cloud Storage",
-        "auth": {
-            "specName": "Basic Authentication for google-cloud",
-            "params": {
-                "accessKeyId": "accessKeyId",
-                "secretAccessKey": "secretAccessKey"
-            }
-        },
-        "connectionSpec": {
-            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google Cloud Storage connection",
+      "description": "Connector for Google Cloud Storage",
+      "auth": {
+          "specName": "Basic Authentication for google-cloud",
+          "params": {
+              "accessKeyId": "accessKeyId",
+              "secretAccessKey": "secretAccessKey",
+              "bucketName": "acme-google-cloud-bucket",
+              "folderPath": "/acme/customers/sales"
+          }
+      },
+      "connectionSpec": {
+          "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `auth.params.accessKeyId` | De toegangstoets-id die aan uw [!DNL Google Cloud Storage] account. |
 | `auth.params.secretAccessKey` | De geheime toegangssleutel verbonden aan uw [!DNL Google Cloud Storage] account. |
+| `auth.params.bucketName` | De naam van uw [!DNL Google Cloud Storage] emmertje. U moet een emmernaam specificeren als u toegang tot specifieke subfolder in uw wolkenopslag wilt verlenen. |
+| `auth.params.folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |
 | `connectionSpec.id` | De [!DNL Google Cloud Storage] Verbindingsspecificatie-id: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Antwoord**

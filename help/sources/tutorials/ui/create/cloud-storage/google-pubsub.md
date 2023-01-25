@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Google PubSub;Google pubsub
-solution: Experience Platform
 title: Een Google PubSub-bronverbinding maken in de gebruikersinterface
-type: Tutorial
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van het Platform.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 1%
+source-wordcount: '593'
+ht-degree: 0%
 
 ---
 
@@ -31,8 +28,9 @@ Om verbinding te maken [!DNL PubSub] aan Platform, moet u een geldige waarde voo
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
-| `credentials` | De referentie- of persoonlijke sleutel-id die is vereist voor verificatie [!DNL PubSub]. |
+| Project-id | De project-id die is vereist voor verificatie [!DNL PubSub]. |
+| Credentials | De referentie- of persoonlijke sleutel-id die is vereist voor verificatie [!DNL PubSub]. |
+| Onderwerp-id | De id voor de [!DNL PubSub] resource die een feed met berichten vertegenwoordigt. U moet een onderwerpidentiteitskaart specificeren als u toegang tot een specifieke stroom van gegevens in uw wilt verlenen [!DNL Google PubSub] bron. |
 
 Raadpleeg de volgende secties voor meer informatie over deze waarden [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie het volgende [PubSub-hulplijn](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
 
@@ -44,9 +42,9 @@ Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volg
 
 ## Verbind uw [!DNL PubSub] account
 
-In de [UI Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de [!UICONTROL Cloud storage] categorie, selecteert u **[!UICONTROL Google PubSub]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
@@ -62,7 +60,13 @@ Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL PubSub] 
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw [!DNL PubSub] verificatiereferenties op het invoerformulier. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw [!DNL PubSub] verificatiereferenties op het invoerformulier. Tijdens deze stap, kunt u de gegevens bepalen die uw rekening toegang tot heeft door een onderwerpidentiteitskaart te verstrekken. Slechts zullen de abonnementen verbonden aan dat onderwerpidentiteitskaart toegankelijk zijn.
+
+>[!NOTE]
+>
+>Hoofd (rollen) die aan een pubsubproject wordt toegewezen wordt geërft in alle onderwerpen en abonnementen die binnen worden gecreeerd [!DNL PubSub] project. Als u een hoofd (rol) wilt toevoegen om toegang tot een specifiek onderwerp te hebben, dan moet dat hoofd (rol) ook aan het overeenkomstige abonnement van het onderwerp worden toegevoegd. Lees voor meer informatie de [[!DNL PubSub] documentatie over toegangscontrole](https://cloud.google.com/pubsub/docs/access-control).
+
+Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 
