@@ -1,9 +1,10 @@
 ---
 description: Leer hoe u opties voor bestandsindeling kunt configureren wanneer u gegevens activeert naar bestandsbestemmingen
 title: (Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen
-source-git-commit: 23a7a1997e05d2bde26de5b73a23ea051bf2b3bb
+exl-id: f59b1952-e317-40ba-81d1-35535e132a72
+source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -28,17 +29,25 @@ U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met
 
 ## Configuratie bestandsindeling {#file-configuration}
 
+Als u de opties voor de bestandsindeling wilt weergeven, start u de [verbinding maken met doel](/help/destinations/ui/connect-destination.md) workflow. Selecteren **Gegevenstype: Segmenten** en **Bestandstype: CSV** om de instellingen voor de bestandsindeling die beschikbaar zijn voor het geëxporteerde `CSV` bestanden.
+
 >[!IMPORTANT]
 >
 >Mogelijk zijn niet al deze opties beschikbaar voor de bestemming waarmee u verbinding maakt. Het is aan de bestemmingsontwikkelaar om te bepalen welke dossier het formatteren opties zij in hun bestemming willen steunen. De bestemmingsontwikkelaar kan bepalen welke opties beschikbaar zijn wanneer het verbinden met de bestemming. De vereiste opties zijn duidelijk met een asterisk in de UI van het Experience Platform.
-
-Als u de opties voor de bestandsindeling wilt weergeven, start u de [verbinding maken met doel](/help/destinations/ui/connect-destination.md) workflow en selecteer segmenten als **Bestandstype**. In deze sectie worden de instellingen voor de bestandsindeling beschreven die beschikbaar zijn voor het geëxporteerde `CSV` bestanden.
+> 
+>De nieuwe bestemmingen voor cloudopslag - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Bèta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(bèta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(bèta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel worden alleen de zes onderstaande CSV-opties ondersteund.
 
 ![Afbeelding met enkele beschikbare opties voor bestandsindeling.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
-### Scheidingsteken
+### Scheidingsteken {#delimiter}
 
-Hiermee stelt u een scheidingsteken in voor elk veld en elke waarde. Bijvoorbeeld: `,` voor door komma&#39;s gescheiden waarden of `/t` voor tabgescheiden waarden.
+Hiermee stelt u een scheidingsteken in voor elk veld en elke waarde. Beschikbare opties zijn:
+
+* Colon `(:)`
+* Komma `(,)`
+* Pijp `(|)`
+* Puntkomma `(;)`
+* Tabtoets `(\\t)`
 
 ### Aanhalingsteken
 
