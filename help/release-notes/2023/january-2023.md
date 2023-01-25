@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
+source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1925'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Betrouwbaarheid](#assurance)
 - [Gegevensverzameling](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Klantprofiel in realtime](#profile)
 - [Segmenteringsservice](#segmentation)
@@ -47,6 +48,53 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Gegevens verzenden naar [!DNL Google Ads] gebruiken, gebeurtenis doorsturen | U kunt nu de opdracht [[!DNL Google Ads Enhanced Conversions] API-extensie](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) voor gebeurtenis door:sturen, gecombineerd met [Google Oauth 2 geheimen](../../tags/ui/event-forwarding/secrets.md#google-oauth2), om servergegevens veilig te verzenden naar [!DNL Google Ads] in real time. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [(bèta) Adobe Experience Cloud-verbinding Soorten publiek](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Gebruik de [!UICONTROL (Beta) Adobe Experience Cloud Audiences] verbinding om segmenten van Experience Platform aan diverse oplossingen van het Experience Platform, zoals Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Doel, of Marketo te delen. |
+| [Verbinding met Pega-profiel](../../destinations/catalog/personalization/pega-profile.md) | Gebruik de [!DNL Pega Profile Connector] in Adobe Experience Platform om een live uitgaande verbinding met uw [!DNL Amazon] S3-opslag om profielgegevens periodiek naar CSV-bestanden vanuit Adobe Experience Platform naar uw eigen S3-emmers te exporteren. In [!DNL Pega Customer Decision Hub], kunt u gegevenstaken plannen om deze profielgegevens uit S3-opslag te importeren om de [!DNL Pega Customer Decision Hub] profiel. |
+| [Beta) EU-verbinding voor de handelsbank CRM](../../destinations/catalog/advertising/tradedesk-emails.md) | Met de release van EUID (European Unified ID) ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [doelcatalogus](/help/destinations/catalog/overview.md). <ul><li> Als u gegevens in de EU verzamelt, moet u de **[!DNL The Trade Desk - CRM (EU)]** bestemming.</li><li> Als u gegevens in de APAC- of NAMER-gebieden bront, gebruikt u de **[!DNL The Trade Desk - CRM (NAMER & APAC)]** bestemming. </li></ul> |
+
+**Nieuwe of bijgewerkte functionaliteit**
+
+| Functionaliteit | Beschrijving |
+| ----------- | ----------- |
+| Nieuwe scheidingstekenopties voor bètaboudopslagdoelconnectors | Drie nieuwe scheidingsopties (dubbelpunt) `:`, pijp `|`, puntkomma `;`) zijn nu beschikbaar voor de nieuwe bètawolopslagbestemmingen - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Bèta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(bèta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(bèta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Meer informatie over de ondersteunde [opties voor bestandsindeling](/help/destinations/ui/batch-destinations-file-formatting-options.md) voor op bestanden gebaseerde doelen. |
+| Nieuwe optionele parameter beschikbaar in [klantgegevensvelden](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configuraties in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Gebruik dit wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. <br> De **[!UICONTROL Integration alias]** in het [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
+
+**Oplossingen en verbeteringen** {#fixes-and-enhancements}
+
+<!--
+
+| Fix or enhancement | Description |
+| ----------- | ----------- |
+| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
+| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
+
+-->
+
+<table>
+    <tr>
+        <td><b>Oplossen of verbeteren</b></td>
+        <td><b>Beschrijving</b></td>
+    </tr>
+    <tr>
+        <td>UI- en API-validatie voor vereiste toewijzingen en dubbele toewijzingen (PLAT-123316)</td>
+        <td>Validatie wordt nu als volgt afgedwongen in de gebruikersinterface en de API wanneer <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">toewijzingsvelden</a> in de workflow voor het activeren van doelen:<ul><li><b>Vereiste toewijzingen</b>: Als de bestemming door de bestemmingsontwikkelaar met vereiste afbeeldingen (bijvoorbeeld) is opstelling <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> doel), dan moeten deze vereiste afbeeldingen door de gebruiker worden toegevoegd wanneer het activeren van gegevens aan de bestemming. </li><li><b>Toewijzingen dupliceren</b>: In de toewijzingsstap van de activeringsworkflow kunt u dubbele waarden toevoegen in de bronvelden, maar niet in de doelvelden. Zie de onderstaande tabel voor een voorbeeld van toegestane en verboden combinaties van toewijzingen. <br><table><thead><tr><th>Toegestaan/verboden</th><th>Bronveld</th><th>Doelveld</th></tr></thead><tbody><tr><td>Toegestaan</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>e-mailalias2</li></ul></td></tr><tr><td>Verboden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>
+    <tr>
+        <td>Bijgewerkt exportgedrag naar op een bestand gebaseerde doelen (PLAT-123316)</td>
+        <td>We hebben een probleem opgelost in het gedrag van <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">verplichte kenmerken</a> bij het exporteren van gegevensbestanden naar batchbestemmingen. <br> Eerder werd gecontroleerd dat elke record in de uitvoerbestanden beide bevatte: <ol><li>Een waarde die niet gelijk is aan null <code>mandatoryField</code> kolom en</li><li>Een waarde groter dan null op ten minste een van de andere niet-verplichte velden.</li></ol> De tweede voorwaarde is verwijderd. Hierdoor ziet u mogelijk meer uitvoerrijen in uw geëxporteerde gegevensbestanden, zoals in het onderstaande voorbeeld wordt getoond:<br> <b> Voorbeeldgedrag vóór release januari 2023 </b> <br> Verplicht veld: <code>emailAddress</code> <br> <b>Te activeren invoergegevens</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Uitvoer van activering</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Voorbeeldgedrag na release januari 2023 </b> <br> <b>Uitvoer van activering</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
