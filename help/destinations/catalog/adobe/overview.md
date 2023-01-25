@@ -3,9 +3,9 @@ keywords: doelen;ervaring met cloudoplossingen; doel;doelbestemming; en cloud; r
 title: Overzicht van Adobe-doelen
 description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,14 @@ Beheer uw klantervaring door uw gegevens in Adobe Experience Platform aan te slu
 
 Platform ondersteunt momenteel de onderstaande Adobe-doelen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindingen](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u [Verbindingen](../../destination-types.md#connections) op de pagina Doeltypen en -categorieën.
 
 ### Verbindingen
 
+* [Adobe Advertising Cloud DSP-verbinding](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign-verbinding](../email-marketing/adobe-campaign.md)
+* [Adobe Target-verbinding](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(Bèta) Experience Cloud-publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage-verbinding](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### Extensies

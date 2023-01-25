@@ -4,9 +4,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor publicatiecampagnes voor meerdere kanalen, e-mailcampagnes, gerichte advertenties en nog veel meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
+source-git-commit: f89c6a11199bff2d91414e8370c1fd9693308fc6
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '992'
 ht-degree: 1%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 1%
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
    * Adobe-bestemmingen{#adobe}
       * [Overzicht van Adobe-doelen](./catalog/adobe/overview.md)
+      * [(Bèta) Experience Cloud-publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [Delen van Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Reclamebestemmingen{#advertising}
