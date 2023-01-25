@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -257,3 +257,7 @@ Hieronder ziet u een voorbeeld van de downloadbelasting voor het externe publiek
 | `xdmEntity._id` | Een geschikte id die wordt gebruikt om de record in de gegevensset op unieke wijze te identificeren. |
 | `{TENANT_NAME}.identities` | Deze sectie wordt gebruikt om de het gebiedsgroep van douaneidentiteiten met de gebruikers te verbinden u eerder invoerde. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | Dit is het label van de eerder gemaakte naamruimte voor aangepaste identiteit. Als u bijvoorbeeld uw naamruimte ExternalAudience hebt aangeroepen, gebruikt u die als de sleutel van de array. |
+
+>[!NOTE]
+>
+>Door gebrek, worden de externe publiekslidmaatschappen slechts behouden voor 30 dagen. Als u deze langer dan 30 dagen wilt bewaren, gebruikt u de `validUntil` veld tijdens het opnemen van uw publieksgegevens. Lees voor meer informatie over dit veld de handleiding op [Segment Membership Details schema veldgroepen](../../xdm/field-groups/profile/segmentation.md).

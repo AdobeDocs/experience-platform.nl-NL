@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segment Membership Details Schema Field Group
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van het Lidmaatschap van het Segment.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -75,11 +75,15 @@ Hier volgt een voorbeeld `segmentMembership` kaart die het systeem voor een bepa
 | --- | --- |
 | `xdm:version` | De versie van het segment waarvoor dit profiel in aanmerking kwam. |
 | `xdm:lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
-| `xdm:validUntil` | Een tijdstempel waarin wordt aangegeven wanneer het segmentlidmaatschap niet langer geldig is. |
+| `xdm:validUntil` | Een tijdstempel waarin wordt aangegeven wanneer het segmentlidmaatschap niet langer geldig is. Als dit veld niet is ingesteld voor externe doelgroepen, wordt het segmentlidmaatschap slechts 30 dagen na de datum van `lastQualificationTime`. |
 | `xdm:status` | Een koordgebied dat erop wijst of het segmentlidmaatschap als deel van het huidige verzoek is gerealiseerd. De volgende waarden worden geaccepteerd: <ul><li>`existing`: Het profiel maakte al deel uit van het segment voorafgaand aan de aanvraag en blijft bij het lidmaatschap.</li><li>`realized`: Het profiel voert het segment in als onderdeel van de huidige aanvraag.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
 | `xdm:payload` | Sommige segmentlidmaatschappen omvatten een lading die extra waarden beschrijft die direct met het lidmaatschap verband houden. Voor elk lidmaatschap kan slechts één lading van een bepaald type worden verstrekt. `xdm:payloadType` Hiermee wordt het type lading aangegeven (`boolean`, `number`, `propensity`, of `string`), terwijl de eigenschap sibling de waarde voor het ladingstype bevat. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Om het even welk segmentlidmaatschap dat in is `exited` gedurende meer dan 30 dagen, op basis van de `lastQualificationTime`, worden geschrapt.
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

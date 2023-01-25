@@ -5,9 +5,9 @@ title: Evalueer en de Resultaten van het Segment van de Toegang
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -130,6 +130,10 @@ In het volgende voorbeeld wordt getoond wat de `segmentMembership` Het kenmerk z
 | -------- | ----------- |
 | `lastQualificationTime` | De tijdstempel op het moment dat de bevestiging van het segmentlidmaatschap werd uitgevoerd en het profiel het segment inging of verlaat. |
 | `status` | De status van segmentdeelname als onderdeel van het huidige verzoek. Moet gelijk zijn aan een van de volgende bekende waarden: <ul><li>`existing`: Entiteit blijft deel uitmaken van het segment.</li><li>`realized`: De entiteit gaat het segment in.</li><li>`exited`: Entiteit verlaat het segment.</li></ul> |
+
+>[!NOTE]
+>
+>Om het even welk segmentlidmaatschap dat in is `exited` gedurende meer dan 30 dagen, op basis van de `lastQualificationTime`, worden geschrapt.
 
 ## Resultaten van toegangssegmenten
 
