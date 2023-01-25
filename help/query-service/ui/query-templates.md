@@ -2,9 +2,9 @@
 title: Query-sjablonen
 description: Zoeksjablonen zijn herbruikbare opgeslagen SQL-query's die andere gebruikers opnieuw kunnen gebruiken om tijd en moeite te besparen. Zij kunnen worden gecreeerd gebruikend de Redacteur van de Vraag of de Dienst API van de Vraag en zijn beschikbaar voor gebruik op alle datasets van het Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,8 @@ U kunt vraagmalplaatjes door twee methodes tot stand brengen, of door een verzoe
 
 Zie de documentatie voor instructies op hoe te om de Redacteur van de Vraag te gebruiken aan [schrijven](./user-guide.md#query-authoring) en [query&#39;s opslaan](./user-guide.md#saving-queries). Nadat u een naam hebt gegeven aan de query en de query hebt opgeslagen, kunt u deze opnieuw gebruiken als een querysjabloon in het menu [!UICONTROL Templates] tab.
 
+## Zoeksjablonen zoeken {#browse}
+
 Selecteer in de werkruimte Query&#39;s van de gebruikersinterface van het Platform de optie **[!UICONTROL Templates]** om de lijst met beschikbare opgeslagen query&#39;s weer te geven.
 
 ![De zoekwerkruimte met het tabblad Sjablonen gemarkeerd.](../images/ui/query-templates/query-templates.png)
@@ -34,6 +36,13 @@ Selecteer in de werkruimte Query&#39;s van de gebruikersinterface van het Platfo
 Als u relevante sjabloongegevens wilt zoeken, selecteert u een querysjabloon in de lijst die beschikbaar is om het deelvenster Details te openen.
 
 ![Het detailpaneel in de zoekwerkruimte met de query-id gemarkeerd.](../images/ui/query-templates/details-panel.png)
+
+In het deelvenster Details kunt u vier afzonderlijke handelingen uitvoeren:
+
+* Selecteren **[!UICONTROL Output dataset]** om de outputdataset voor het geselecteerde malplaatje uit te geven.
+* Selecteren **[!UICONTROL View schedule]** om naar de [!UICONTROL Schedules] tab. Deze mening bevat om het even welke planningsinformatie verbonden aan de vraag.
+* Selecteren **[!UICONTROL Delete query]** om de sjabloon te verwijderen.
+* Selecteer de sjabloonnaam om naar de Query Editor te navigeren waar de SQL al is ingevuld voor bewerking.
 
 ### Gebruik de API van de Dienst van de Vraag om een malplaatje tot stand te brengen
 

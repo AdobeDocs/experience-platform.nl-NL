@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekservice
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,8 @@ De **[!UICONTROL Templates]** tabblad geeft query&#39;s weer die zijn opgeslagen
 | **[!UICONTROL Modified by]** | De laatste gebruiker die de query heeft gewijzigd. Elke gebruiker in uw organisatie die toegang heeft tot [!DNL Query Service] kan query&#39;s wijzigen. |
 | **[!UICONTROL Last modified]** | De datum en de tijd van de laatste wijziging in de query, in de tijdzone van de browser. |
 
+Zie de [querysjablonen](./query-templates.md) documentatie voor meer informatie over malplaatjes in de UI van het Platform.
+
 ## Logboek
 
 De **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn uitgevoerd. Door gebrek, maakt een lijst van het logboek van de vragen in omgekeerde chronologie.
@@ -69,13 +71,16 @@ De **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn uitgevoe
 
 | Kolom | Beschrijving |
 | --- | --- |
-| **[!UICONTROL Name]** | De naam van de query, die bestaat uit de eerste verschillende tekens van de SQL-query. Als u de naam selecteert, wordt het dialoogvenster [!DNL Query Editor], zodat u de query kunt bewerken. Met de zoekbalk kunt u zoeken op de naam van een query. Zoekopdrachten zijn hoofdlettergevoelig. |
-| **[!UICONTROL Created by]** | De naam van de persoon die de query heeft gemaakt. |
-| **[!UICONTROL Client]** | De client die voor de query wordt gebruikt. |
-| **[!UICONTROL Dataset]** | De inputdataset die door de vraag wordt gebruikt. Selecteer de dataset om naar het scherm van de details van de inputdataset te gaan. |
+| **[!UICONTROL Name]** | De naam van de query, die bestaat uit de eerste verschillende tekens van de SQL-query. Selecteer de sjabloonnaam om het dialoogvenster [!UICONTROL Query log details] voor die uitvoering. U kunt de zoekbalk gebruiken om te zoeken op de naam van een query. Zoekopdrachten zijn hoofdlettergevoelig. |
+| **[!UICONTROL Start time]** | De tijd dat de query werd uitgevoerd. |
+| **[!UICONTROL Complete time]** | De tijd dat de vraag voltooide. |
 | **[!UICONTROL Status]** | De huidige status van de query. |
-| **[!UICONTROL Last run]** | Wanneer de query voor het laatst is uitgevoerd. U kunt de lijst in oplopende of aflopende volgorde sorteren door de pijl boven deze kolom te selecteren. |
-| **[!UICONTROL Run time]** | De hoeveelheid tijd nam het om de vraag in werking te stellen. |
+| **[!UICONTROL Dataset]** | De inputdataset die door de vraag wordt gebruikt. Selecteer de dataset om naar het scherm van de details van de inputdataset te gaan. |
+| **[!UICONTROL Client]** | De client die voor de query wordt gebruikt. |
+| **[!UICONTROL Created by]** | De naam van de persoon die de query heeft gemaakt. |
+
+>!![Note]
+Selecteer het potloodpictogram (![Een potloodpictogram.](../images/ui/overview/edit-icon.png)) van om het even welke rij van het vraaglogboek om aan [!DNL Query Editor]. De query is vooraf ingevuld voor handige bewerking.
 
 ## Credentials
 

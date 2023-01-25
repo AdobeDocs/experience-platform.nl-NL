@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding Query Service Credentials
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ U kunt verlopen referenties gebruiken om snel een verbinding met een externe cli
 
 De **[!UICONTROL Expiring credentials]** Deze sectie bevat de volgende informatie:
 
-- **[!UICONTROL Host]**: De naam van de host waarmee u verbinding wilt maken. Voor het verbinden met de Dienst van de Vraag, zal dit de naam van de IMS Organisatie omvatten u momenteel gebruikt.
-- **[!UICONTROL Port]**: Het poortnummer van de host waarmee u verbinding wilt maken.
-- **[!UICONTROL Database]**: De naam van de database waarmee u verbinding wilt maken.
-- **[!UICONTROL Username]**: De gebruikersnaam die u gebruikt om verbinding te maken met Query Service.
-- **[!UICONTROL Password]**: Het wachtwoord dat u zult gebruiken om met de Dienst van de Vraag te verbinden.
+- **[!UICONTROL Host]**: De naam van de host waarmee de client verbinding moet maken. Dit neemt de naam van uw organisatie zoals die in het hoogste lint van het Platform UI wordt gezien op.
+- **[!UICONTROL Port]**: Het poortnummer van de host waarmee verbinding moet worden gemaakt.
+- **[!UICONTROL Database]**: De naam van de database waarmee een client verbinding moet maken.
+- **[!UICONTROL Username]**: De gebruikersnaam die wordt gebruikt om verbinding te maken met Query Service.
+- **[!UICONTROL Password]**: Het wachtwoord dat wordt gebruikt om met de Dienst van de Vraag te verbinden. De wachtwoorden in UI zijn gehakt voor veiligheid. Selecteer het pictogram Kopiëren (![Het kopieerpictogram.](../images/ui/credentials/copy-icon.png)) om uw volledige, niet-gehashte gegevens naar het klembord te kopiëren.
 - **[!UICONTROL PSQL command]**: Een bevel dat automatisch alle relevante informatie voor u heeft opgenomen om met de Dienst van de Vraag te verbinden gebruikend PSQL op de bevellijn.
 - **[!UICONTROL Expires]**: De vervaldatum en tijd voor de verloopgeloofsbrieven. De standaard geldigheidstermijn van het token is 24 uur, maar deze kan worden gewijzigd in de geavanceerde instellingen van de Admin Console.
 
