@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 0%
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](extension/web-sdk-ext-release-notes.md).
+
+## Versie 2.14.0 - 25 januari 2023
+
+**Nieuwe functies**
+
+* (Beta) Extra ondersteuning voor AJO-oppervlakken en -voorstellingen.
+
+**Oplossingen en verbeteringen**
+
+* Probleem verholpen met aangepaste code-acties voor Adobe Target VEC waarbij de code op een andere locatie werd geïnjecteerd dan met [!DNL at.js].
+* Probleem verholpen waarbij de koptekst van de &quot;referentie&quot; in sommige randgevallen niet correct was ingesteld bij aanvragen bij het Edge-netwerk.
+* Probleem verholpen waarbij [client-tip voor gebruikersagent](fundamentals/user-agent-client-hints.md) eigenschappen kunnen op een onjuist type worden ingesteld.
+* Probleem verholpen waarbij `placeContext.localTime` komt niet overeen met het schema.
 
 ## Versie 2.13.1 - 13 oktober 2022
 

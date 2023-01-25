@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 47e92e4e7475a23c5c65085db57dfc7a2822b8b6
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1525'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,14 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.15.0 - 25 januari 2023
+
+* Probleem verholpen waarbij gebruikers zonder toegang tot gegevensstromen de extensieconfiguratie niet konden bewerken.
+* Extra ondersteuning voor oppervlakken in het dialoogvenster `sendEvent` handeling.
+
+Bevat versie 2.14.0 van Adobe Experience Platform Web SDK.
+
 
 ## Versie 2.14.1 - 13 oktober 2022
 
