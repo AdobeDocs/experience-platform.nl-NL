@@ -3,18 +3,25 @@ keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;acti
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 0%
 
 ---
 
-# [!DNL Destinations] - overzicht {#overview}
+# [!DNL Destinations]-overzicht {#overview}
 
 ![Overzicht van doelen banner](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Doelen en bronnen {#destinations-and-sources}
 
