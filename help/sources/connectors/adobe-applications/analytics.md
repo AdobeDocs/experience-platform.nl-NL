@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Analytics Source Connector;analytics;Analytics;AID;
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -20,7 +19,7 @@ Dit document biedt een overzicht van [!DNL Analytics] en beschrijft de gebruiksg
 
 [!DNL Analytics] is een krachtige motor die u meer over uw klanten helpt leren, hoe zij met uw Web-eigenschappen in wisselwerking staan, zien waar uw digitale marketing uitgaven efficiënt is, en gebieden van verbetering identificeren. [!DNL Analytics] verwerkt miljarden webtransacties per jaar en de [!DNL Analytics] Met de bronaansluiting kunt u eenvoudig op deze rijke gedragsgegevens tikken en de [!DNL Real-Time Customer Profile] over een paar minuten.
 
-![](./images/analytics-data-experience-platform.png)
+![Een afbeelding die de reis van gegevens van verschillende Adobe toepassingen, met inbegrip van Adobe Analytics, illustreert.](./images/analytics-data-experience-platform.png)
 
 Op hoog niveau [!DNL Analytics] verzamelt gegevens via verschillende digitale kanalen en meerdere datacenters over de hele wereld. Zodra de gegevens worden verzameld, worden de de Identificatie van de Bezoeker, de Regels van de Segmentatie en van de Transformatie van de Architectuur (VISTA), en verwerkingsregels toegepast om de inkomende gegevens te vormen. Nadat de ruwe gegevens door deze lichte verwerking zijn gegaan, wordt het dan beschouwd klaar voor consumptie door [!DNL Real-Time Customer Profile]. In een parallel aan het bovenstaande proces worden dezelfde verwerkte gegevens op micro-basis verzameld en opgenomen in gegevensverzamelingen van de Platform voor gebruik door [!DNL Data Science Workspace], [!DNL Query Service]en andere toepassingen voor gegevensdetectie.
 
@@ -35,6 +34,10 @@ Door te voldoen aan XDM-standaarden kunnen gegevens op uniforme wijze worden opg
 Voor meer informatie over XDM raadpleegt u de [XDM System, overzicht](../../../xdm/home.md).
 
 ## Hoe worden velden toegewezen van Adobe Analytics aan XDM?
+
+>[!IMPORTANT]
+>
+>Transformaties van de Prep van gegevens kunnen latentie aan algemene dataflow toevoegen. De extra toegevoegde latentie is afhankelijk van de complexiteit van de transformatielogica.
 
 Wanneer een bronverbinding wordt gevestigd voor het brengen [!DNL Analytics] gegevens in Experience Platform die het gebruikersinterface van het Platform gebruiken, worden de gegevensgebieden automatisch in kaart gebracht en opgenomen in [!DNL Real-Time Customer Profile] binnen minuten. Voor instructies over het maken van een bronverbinding met [!DNL Analytics] het gebruiken van Platform UI, zie [Zelfstudie over de bronaansluiting voor analyse](../../tutorials/ui/create/adobe-applications/analytics.md).
 
@@ -79,8 +82,8 @@ De [!DNL Analytics] De bron geeft deze identiteiten aan Experience Platform in v
 
 Deze velden zijn niet gemarkeerd als identiteiten. In plaats daarvan worden dezelfde identiteiten gekopieerd naar XDM&#39;s `identityMap` als sleutel-waardeparen:
 
-* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 Als ECID aanwezig is in het identiteitsoverzicht, wordt dit gemarkeerd als de primaire identiteit voor de gebeurtenis. In dat geval kan de steun op ECID gebaseerd zijn vanwege de [Abonnementsserviceperiode](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Anders wordt STEUN gemarkeerd als de primaire identiteit voor de gebeurtenis. AACUSTOMID is nooit gemarkeerd als primaire id voor de gebeurtenis. Als AACUSTOMID echter aanwezig is, is de STEUN gebaseerd op AACUSTOMID vanwege de Experience Cloud volgorde van de activiteiten.
