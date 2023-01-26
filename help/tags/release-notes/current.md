@@ -2,14 +2,23 @@
 title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
 description: De nieuwste releaseopmerkingen voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
+
+## 25 januari 2022
+
+* **Nieuw beginscherm**: De homepage voor de UI van de Inzameling van Gegevens is bijgewerkt om nuttige onboarding informatie en verbindingen te omvatten om productiviteit te stroomlijnen. Dit omvat:
+   1. Documentatie en aanbevolen workflows om aan de slag te gaan
+   1. Recente eigenschappen, regels en gegevenselementen
+   1. Populaire extensies
+   1. Nieuwe extensies worden bijgewerkt met een functie voor snelle installatie
+* **Gegevens verzenden naar [!DNL Google Ads] gebruiken, gebeurtenis doorsturen**: U kunt nu de opdracht [[!DNL Google Ads Enhanced Conversions] API-extensie](../extensions/server/google-ads-enhanced-conversions/overview.md) voor gebeurtenis door:sturen, gecombineerd met [Google Oauth 2 geheimen](../ui/event-forwarding/secrets.md#google-oauth2), om servergegevens veilig te verzenden naar [!DNL Google Ads] in real time.
 
 ## 23 november 2022
 
