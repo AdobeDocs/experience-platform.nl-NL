@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1779'
 ht-degree: 1%
 
 ---
@@ -74,10 +74,6 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
     <tr>
         <td><b>Oplossen of verbeteren</b></td>
         <td><b>Beschrijving</b></td>
-    </tr>
-    <tr>
-        <td>UI- en API-validatie voor vereiste toewijzingen en dubbele toewijzingen (PLAT-123316)</td>
-        <td>Validatie wordt nu als volgt afgedwongen in de gebruikersinterface en de API wanneer <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">toewijzingsvelden</a> in de workflow voor het activeren van doelen:<ul><li><b>Vereiste toewijzingen</b>: Als de bestemming door de bestemmingsontwikkelaar met vereiste afbeeldingen (bijvoorbeeld) is opstelling <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> doel), dan moeten deze vereiste afbeeldingen door de gebruiker worden toegevoegd wanneer het activeren van gegevens aan de bestemming. </li><li><b>Toewijzingen dupliceren</b>: In de toewijzingsstap van de activeringsworkflow kunt u dubbele waarden toevoegen in de bronvelden, maar niet in de doelvelden. Zie de onderstaande tabel voor een voorbeeld van toegestane en verboden combinaties van toewijzingen. <br><table><thead><tr><th>Toegestaan/verboden</th><th>Bronveld</th><th>Doelveld</th></tr></thead><tbody><tr><td>Toegestaan</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>e-mailalias2</li></ul></td></tr><tr><td>Verboden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>Bijgewerkt exportgedrag naar op een bestand gebaseerde doelen (PLAT-123316)</td>
