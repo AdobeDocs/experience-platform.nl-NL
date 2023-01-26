@@ -3,20 +3,20 @@ title: Persoonlijke inhoud renderen met de SDK van het Adobe Experience Platform
 description: Leer hoe u persoonlijke inhoud kunt renderen met de SDK van Adobe Experience Platform Web.
 keywords: personalisatie;renderDecisions;sendEvent;DecisionScopes;proposities;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
+source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 0%
+source-wordcount: '962'
+ht-degree: 1%
 
 ---
 
 # Aangepaste inhoud renderen
 
-Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de oplossingen van de verpersoonlijking van Adobe, met inbegrip van [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) en [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl).
+Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de oplossingen van de verpersoonlijking van Adobe, met inbegrip van [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl) en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl).
 
 Bovendien, de bevoegdheden van SDK van het Web zelfde-pagina en volgende-pagina verpersoonlijkingsmogelijkheden door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../../destinations/ui/configure-personalization-destinations.md).
 
-Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) kan automatisch worden opgehaald en gerenderd door de SDK. Inhoud die is gemaakt in Adobe Target [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) of Offer decisioning kan niet automatisch worden gerenderd door de SDK. In plaats daarvan moet u deze inhoud aanvragen met de SDK en de inhoud vervolgens zelf handmatig renderen.
+Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en Adobe Journey Optimizer [Gebruikersinterface webcampagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kan automatisch worden opgehaald en gerenderd door de SDK. Inhoud die is gemaakt in Adobe Target [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) of Offer decisioning kan niet automatisch worden gerenderd door de SDK. In plaats daarvan moet u deze inhoud aanvragen met de SDK en de inhoud vervolgens zelf handmatig renderen.
 
 ## Inhoud automatisch renderen
 
@@ -107,7 +107,7 @@ In het voorbeeld wordt `renderDecisions` optie is niet ingesteld op `true` wanne
 
 Als u in plaats daarvan de opdracht `renderDecisions` optie voor `true` bij het verzenden van de gebeurtenis zou de SDK hebben geprobeerd om alle voorstellingen die in aanmerking komen voor automatische rendering, te renderen (zoals eerder beschreven). Dientengevolge zou elk van de propositievoorwerpen zijn hebben `renderAttempted` eigenschap ingesteld op `true`. In dit geval is het niet nodig deze voorstellen handmatig weer te geven.
 
-Tot dusver, hebben wij slechts verpersoonlijkingsinhoud besproken die voor automatische teruggeven (namelijk om het even welke inhoud die in Adobe Target Visual Experience Composer wordt gecreeerd) verkiest. Om het even welke verpersoonlijkingsinhoud terug te winnen _niet_ geschikt voor automatische rendering, moet u de inhoud opvragen door de `decisionScopes` wanneer u de gebeurtenis verzendt. Een werkingsgebied is een koord dat een bepaald voorstel identificeert u van de server zou willen terugwinnen.
+Tot dusver, hebben wij slechts verpersoonlijkingsinhoud besproken die voor automatische teruggeven (namelijk om het even welke inhoud die in de Composer van de Visual Experience van Adobe Target of de Campagne UI van het Web van Adobe Journey Optimizer wordt gecreeerd) verkiesbaar is. Om het even welke verpersoonlijkingsinhoud terug te winnen _niet_ geschikt voor automatische rendering, moet u de inhoud opvragen door de `decisionScopes` wanneer u de gebeurtenis verzendt. Een werkingsgebied is een koord dat een bepaald voorstel identificeert u van de server zou willen terugwinnen.
 
 Hier volgt een voorbeeld:
 
@@ -303,7 +303,7 @@ De `applyPropositions` met de opdracht kunt u een array met voorstellingen rende
 
 >[!IMPORTANT]
 >
->Indien voorstellen voor de `__view__` bereik is weergegeven bij laden van pagina, hun `renderAttempted` markering wordt ingesteld op `true`. De `applyPropositions` de opdracht wordt niet opnieuw gerenderd `__view__` bereikvoorstellingen die de `renderAttempted: true` markering.
+>Indien voorstellen voor de `__view__` bereik (of een weboppervlak) weergegeven tijdens het laden van de pagina, hun `renderAttempted` markering wordt ingesteld op `true`. De `applyPropositions` de opdracht wordt niet opnieuw gerenderd `__view__` bereik- (of weboppervlak-)voorstellingen met de `renderAttempted: true` markering.
 
 ### Hoofdlettergebruik 1: Weergavevoorstellingen van één pagina opnieuw renderen
 
