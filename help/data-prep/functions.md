@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
+source-git-commit: 9dd05980bdb360fba23b01f2b3e3ecc5d8d3e9e0
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4392'
 ht-degree: 2%
 
 ---
@@ -139,7 +139,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Controleert of een object leeg is. | <ul><li>INVOER: **Vereist** Het object dat u wilt controleren, is leeg.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
-| arrays_to_object | Hiermee maakt u een lijst met objecten. | <ul><li>INVOER: **Vereist** Een groepering van sleutel- en arrayparen.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;: &quot;id1&quot;, &quot;price&quot;: 22.5 }, { &quot;sku&quot;: &quot;id2&quot;, &quot;price&quot;: } 14,35 }] |
+| arrays_to_object | Hiermee maakt u een lijst met objecten. | <ul><li>INVOER: **Vereist** Een groepering van sleutel- en arrayparen.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Hiermee maakt u een object op basis van de opgegeven platte sleutel/waardeparen. | <ul><li>INVOER: **Vereist** Een platte lijst met sleutel/waardeparen.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Maakt een object van de invoertekenreeks. | <ul><li>TEKENREEKS: **Vereist** De tekenreeks die wordt geparseerd om een object te maken.</li><li>VALUE_DELIMITER: *Optioneel* Het scheidingsteken dat een veld van de waarde scheidt. Het standaardscheidingsteken is `:`.</li><li>FIELD_DELIMITER: *Optioneel* Het scheidingsteken dat de waardeparen van het gebied scheidt. Het standaardscheidingsteken is `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Opmerking**: U kunt de `get()` samen met `str_to_object()` om waarden op te halen voor de toetsen in de tekenreeks. | <ul><li>Voorbeeld 1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Voorbeeld 2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Voorbeeld 1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Voorbeeld 2: &quot;John&quot;</li></ul> |
 | contains_key | Controleert of het object bestaat in de brongegevens. **Opmerking:** Deze functie vervangt de vervangen `is_set()` functie. | <ul><li>INVOER: **Vereist** Het pad dat moet worden gecontroleerd als het bestaat in de brongegevens.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
