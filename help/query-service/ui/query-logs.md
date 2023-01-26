@@ -1,14 +1,18 @@
 ---
 title: Query-logbestanden
 description: Logboeken van de vraag worden automatisch geproduceerd telkens als een vraag wordt uitgevoerd en beschikbaar door UI om met het oplossen van problemen te helpen. Dit document schetst hoe te om de sectie van de Logboeken van de Dienst van de Vraag van UI te gebruiken en te navigeren.
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
 # Zoekopdrachtlogs
+
+>[!IMPORTANT]
+>
+>Bepaalde functies voor querylogbestanden bevinden zich momenteel in een beperkte versie en zijn niet beschikbaar voor alle klanten. De gebruikersinterface kan er anders uitzien zonder een bewerkingspictogram. Ook, kan het proces om een vraagnaam te selecteren aan de Redacteur van de Vraag in plaats van het [!UICONTROL Query log details] weergeven.
 
 Adobe Experience Platform houdt een logboek bij van alle vraaggebeurtenissen die door zowel API als UI voorkomen. Deze informatie is beschikbaar in de gebruikersinterface van de Query-service via de [!UICONTROL Logs] tab.
 
@@ -39,6 +43,10 @@ Elke rij vertegenwoordigt logboekgegevens voor een vraaglooppas verbonden aan ee
 In het paneel van logboekdetails, kunt u een nieuwe outputdataset selecteren en de volledige SQL vraag zien of kopiëren die in de looppas werd gebruikt.
 
 ![De werkruimte van het Logboek van Vragen met een geselecteerde rij en de benadrukte outputdataset en SQL vraag.](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>Bepaalde functies voor querylogbestanden bevinden zich momenteel in een beperkte versie en zijn niet beschikbaar voor alle klanten.
 
 U kunt ook een naam voor een querysjabloon selecteren in het menu [!UICONTROL Name] om rechtstreeks naar de [!UICONTROL Query log details] weergeven.
 
