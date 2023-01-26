@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
+source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '875'
 ht-degree: 5%
 
 ---
@@ -206,6 +206,7 @@ ht-degree: 5%
    - [Opnieuw mislukte gegevensstroomuitvoering](tutorials/api/retry-flows.md)
    - [Accounts verwijderen](tutorials/api/delete.md)
    - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
+   - [Gecodeerde gegevens verzamelen](tutorials/api/encrypt-data.md)
 - UI-zelfstudies {#ui-tutorials}
    - Een bronverbinding maken {#create}
       - Adobe-toepassingen {#adobe-applications}
