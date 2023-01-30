@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-velden definiëren in de gebruikersinterface
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1332'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ Afhankelijk van het feit of u een veld rechtstreeks aan een schema of aan de dee
 
 ## De eigenschappen van een veld definiëren {#define}
 
-Na het selecteren van **plus (+)** pictogram, a **[!UICONTROL New field]** verschijnt in het canvas, dat binnen een voorwerp wordt gevestigd dat aan uw unieke huurderID (getoond zoals `_tenantId` in het onderstaande voorbeeld). Alle aangepaste velden die aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten te voorkomen met andere velden van door Adobe verschafte klassen en veldgroepen.
+Na het selecteren van **plus (+)** pictogram, an **[!UICONTROL Untitled field]** wordt weergegeven in het canvas.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ In de rechtertrein onder **[!UICONTROL Field properties]** kunt u de details van
 
 | Field, eigenschap | Beschrijving |
 | --- | --- |
-| [!UICONTROL Field name] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen.<br><br>De naam moet idealiter in camelCase worden geschreven. Het kan alfanumerieke, streepje- of onderstrepingstekens bevatten, maar het kan **mag** begint met een onderstrepingsteken.<ul><li>**Juist**: `fieldName`</li><li>**Aanvaardbaar:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Onjuist**: `_fieldName`</li></ul> |
-| [!UICONTROL Display name] | Een mensvriendelijke naam voor het veld. |
+| [!UICONTROL Field name] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen. Deze waarde wordt gebruikt om het veld in code en in andere downstreamtoepassingen te identificeren en ernaar te verwijzen<br><br>De naam moet idealiter in camelCase worden geschreven. Het kan alfanumerieke, streepje- of onderstrepingstekens bevatten, maar het kan **mag** begint met een onderstrepingsteken.<ul><li>**Juist**: `fieldName`</li><li>**Aanvaardbaar:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Onjuist**: `_fieldName`</li></ul> |
+| [!UICONTROL Display name] | Een weergavenaam voor het veld. Dit is de naam die wordt gebruikt om het veld in het canvas van de Schema-editor weer te geven. |
 | [!UICONTROL Type] | Het type gegevens dat het veld zal bevatten. In dit vervolgkeuzemenu kunt u een van de [standaard scalaire typen](../../schema/field-constraints.md) ondersteund door XDM of een van de velden met meerdere velden [gegevenstypen](../resources/data-types.md) die eerder zijn gedefinieerd in de [!DNL Schema Registry].<br><br>U kunt ook **[!UICONTROL Advanced type search]** om bestaande gegevenstypen te zoeken en te filteren en het gewenste type gemakkelijker te vinden. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ Nadat u het veld hebt geconfigureerd, selecteert u **[!UICONTROL Apply]**.
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-Het canvas wordt bijgewerkt om de naam en het type van het veld weer te geven en het rechterspoor geeft nu naast de andere eigenschappen ook het pad van het veld weer.
+Het canvas wordt bijgewerkt om het nieuwe toegevoegde veld weer te geven dat zich binnen een object bevindt dat een naamruimte heeft naar uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle aangepaste velden die aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten te voorkomen met andere velden van door Adobe verschafte klassen en veldgroepen. Het rechterspoor geeft nu naast de andere eigenschappen ook het pad van het veld weer.
 
 ![](../../images/ui/fields/overview/field-added.png)
 

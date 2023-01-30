@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '4070'
+source-wordcount: '4082'
 ht-degree: 0%
 
 ---
@@ -215,11 +215,11 @@ Voor de meest recente lijst van beschikbare standaard XDM gebiedsgroepen, verwij
 
 ### Gegevenstype {#data-type}
 
-Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als referentieveldtypen in klassen of schema&#39;s. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Net als bij een veldgroep staat een gegevenstype voor een consistent gebruik van een structuur met meerdere velden, maar heeft het een grotere flexibiliteit dan een veldgroep omdat een gegevenstype overal in een schema kan worden opgenomen door het als het gegevenstype van een veld toe te voegen.
+Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als referentieveldtypen in klassen of schema&#39;s. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Ze kunnen meerdere subvelden op dezelfde manier definiëren als veldgroepen, maar het belangrijkste verschil is dat gegevenstypen overal in een schema kunnen worden opgenomen door ze toe te voegen als het &quot;gegevenstype&quot; van een veld. Veldgroepen zijn alleen compatibel met bepaalde klassen, maar gegevenstypen kunnen in elke bovenliggende klasse of veldgroep worden opgenomen.
 
 [!DNL Experience Platform] verstrekt een aantal gemeenschappelijke gegevenstypes als deel van [!DNL Schema Registry] ondersteuning van het gebruik van standaardpatronen voor het beschrijven van gemeenschappelijke gegevensstructuren. Dit wordt nader toegelicht in de [!DNL Schema Registry] zelfstudies, waarbij het duidelijker wordt wanneer u de stappen doorloopt om gegevenstypen te definiëren.
 
-De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de gebruikersinterface van het Platform. Een van de velden die door de [!UICONTROL Demographic Details] veldgroep gebruikt &quot;[!UICONTROL Person name]&quot; gegevenstype, zoals aangegeven door de tekst na het verticale streepje (`|`) naast de naam van het veld. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
+De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de gebruikersinterface van het Platform. Een van de velden die door de [!UICONTROL Demographic Details] veldgroep gebruikt &quot;[!UICONTROL Object]&quot; gegevenstype, zoals aangegeven door de tekst na het verticale streepje (`|`) naast de naam van het veld. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
 
 ![](../images/schema-composition/data-type.png)
 

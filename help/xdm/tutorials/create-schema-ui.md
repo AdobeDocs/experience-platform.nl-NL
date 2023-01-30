@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3786'
+source-wordcount: '3824'
 ht-degree: 0%
 
 ---
@@ -177,8 +177,10 @@ Selecteer **plus (+)** pictogram naast `loyaltyTier` -object om subvelden toe te
 
 Voor elk veld is de volgende informatie vereist:
 
-* **[!UICONTROL Field Name]:** De naam van het veld, geschreven in camelcase. Voorbeeld: loyaltyLevel
-* **[!UICONTROL Display Name]:** De naam van het veld, geschreven in hoofdletters/kleine letters. Voorbeeld: Loyaliteitsniveau
+* **[!UICONTROL Field Name]:** De naam van het veld, bij voorkeur geschreven in camelCase. Spaties zijn niet toegestaan. Dit is de naam die wordt gebruikt om in code en in andere downstreamtoepassingen naar het veld te verwijzen.
+   * Voorbeeld: loyaltyLevel
+* **[!UICONTROL Display Name]:** De naam van het veld, geschreven in hoofdletters/kleine letters. Dit is de naam die op het canvas wordt weergegeven wanneer u het schema weergeeft of bewerkt.
+   * Voorbeeld: Loyaliteitsniveau
 * **[!UICONTROL Type]:** Het gegevenstype van het veld. Dit omvat fundamentele scalaire types en om het even welke gegevenstypes die in [!DNL Schema Registry]. Voorbeelden: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], enz.
 * **[!UICONTROL Description]:** Een optionele beschrijving van het veld moet maximaal 200 tekens bevatten.
 
