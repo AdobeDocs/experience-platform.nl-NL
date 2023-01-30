@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
+source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1836'
 ht-degree: 1%
 
 ---
@@ -61,11 +61,11 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | [Verbinding met Pega-profiel](../../destinations/catalog/personalization/pega-profile.md) | Gebruik de [!DNL Pega Profile Connector] in Adobe Experience Platform om een live uitgaande verbinding met uw [!DNL Amazon] S3-opslag om profielgegevens periodiek naar CSV-bestanden vanuit Adobe Experience Platform naar uw eigen S3-emmers te exporteren. In [!DNL Pega Customer Decision Hub], kunt u gegevenstaken plannen om deze profielgegevens uit S3-opslag te importeren om de [!DNL Pega Customer Decision Hub] profiel. |
 | [Beta) EU-verbinding voor de handelsbank CRM](../../destinations/catalog/advertising/tradedesk-emails.md) | Met de release van EUID (European Unified ID) ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [doelcatalogus](/help/destinations/catalog/overview.md). <ul><li> Als u gegevens in de EU verzamelt, moet u de **[!DNL The Trade Desk - CRM (EU)]** bestemming.</li><li> Als u gegevens in de APAC- of NAMER-gebieden bront, gebruikt u de **[!DNL The Trade Desk - CRM (NAMER & APAC)]** bestemming. </li></ul> |
 
-**Nieuwe of bijgewerkte functionaliteit**
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Verbetering van de toestemming voor betaalde media voor integratie met streamingdoelen | Verbetering van [wetshandhaving](/help/data-governance/enforcement/auto-enforcement.md) op [streaming doelen](/help/destinations/destination-types.md#streaming-destinations) voor gebruiksgevallen voor activering van betaalde media. Profielen die de toestemming van een bepaalde ervaring hebben ingetrokken, worden nu proactief uit deze doelen verwijderd. <br> <b>Opmerking</b>: Deze functionaliteit is alleen beschikbaar voor klanten van **[!UICONTROL Privacy and Security Shield]** en de **[!UICONTROL Healthcare Shield]**. |
+| Verbetering van het beleid voor betaalde mediaconcept voor integratie met streaming doelen | Verbetering van [wetshandhaving](/help/data-governance/enforcement/auto-enforcement.md) op [streaming doelen](/help/destinations/destination-types.md#streaming-destinations) voor gebruiksgevallen voor activering van betaalde media. Wanneer profielen niet meer voor een toestemmingsbeleid in aanmerking komen, deelt Experience Platform nu proactief hun beleidsuitgang aan het stromen bestemmingen mee. <br> <b>Opmerking</b>: Deze functionaliteit is alleen beschikbaar voor klanten van **[!UICONTROL Privacy and Security Shield]** en de **[!UICONTROL Healthcare Shield]**. |
 | Nieuwe scheidingstekenopties voor bètaboudopslagdoelconnectors | Drie nieuwe scheidingsopties (dubbelpunt) `:`, Pijp, puntkomma `;`) zijn nu beschikbaar voor de nieuwe bètawolopslagbestemmingen - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Bèta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(bèta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(bèta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Meer informatie over de ondersteunde [opties voor bestandsindeling](/help/destinations/ui/batch-destinations-file-formatting-options.md) voor op bestanden gebaseerde doelen. |
 | Nieuwe optionele parameter beschikbaar in [klantgegevensvelden](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configuraties in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. <br> De **[!UICONTROL Integration alias]** in het [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
 
