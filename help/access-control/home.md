@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -79,6 +79,12 @@ In de volgende tabel worden de beschikbare machtigingen voor [!DNL Experience Pl
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL View Alerts History] | Alleen-lezen toegang voor waarschuwingsgeschiedenis. |
+| [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Toegang tot het lezen, bewerken en verwijderen van waarschuwingen. |
+| [!DNL Alerts] | [!UICONTROL View Alerts] | Alleen-lezen toegang voor waarschuwingen. |
+| [!DNL Alerts] | [!UICONTROL Manage Alerts] | Toegang tot het lezen, maken, bewerken en verwijderen van waarschuwingsgeschiedenis. |
+| [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Alleen-lezen toegang voor gegevenshygiëne. |
+| [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Toegang tot het lezen, maken, bewerken en verwijderen van gegevenshygiëne. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Toegang tot het lezen, maken, bewerken en verwijderen van schema&#39;s en gerelateerde bronnen. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Alleen-lezen toegang tot schema&#39;s en gerelateerde bronnen. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Toegang tot het lezen, maken, bewerken en verwijderen van schemarelaties. |
@@ -94,9 +100,9 @@ In de volgende tabel worden de beschikbare machtigingen voor [!DNL Experience Pl
 | [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Alleen-lezen toegang tot beschikbaar samenvoegbeleid. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Capaciteit om een geëvalueerd publiekssegment naar een dataset uit te voeren. |
 | [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Mogelijkheid om profielen te genereren voor een publiek door een segmentdefinitie te evalueren. |
-| [!DNL Identities] | [!UICONTROL Manage Identity Namespaces] | Toegang tot het lezen, maken, bewerken en verwijderen van naamruimten. |
-| [!DNL Identities] | [!UICONTROL View Identity Namespaces] | Alleen-lezen toegang voor naamruimten. |
-| [!DNL Identities] | [!UICONTROL View Identity Graph] | Alleen-lezen toegang voor identiteitsgrafieken. |
+| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Toegang tot het lezen, maken, bewerken en verwijderen van naamruimten. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Alleen-lezen toegang voor naamruimten. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Alleen-lezen toegang voor identiteitsgrafieken. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Toegang tot het lezen, maken, bewerken en verwijderen van sandboxen. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Alleen-lezen toegang voor sandboxen die tot uw organisatie behoren. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Mogelijkheid om een sandbox opnieuw in te stellen. |
