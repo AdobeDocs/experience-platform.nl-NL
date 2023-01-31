@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3038'
+source-wordcount: '3187'
 ht-degree: 0%
 
 ---
@@ -125,6 +125,22 @@ Wanneer u een waarde voor het kenmerk selecteert, wordt een lijst met opsommings
 Als u een waarde in deze lijst met nummers selecteert, krijgt de waarde een effen rand. Voor velden die `meta:enum` (soft) opsommingen, kunt u ook een waarde selecteren die **niet** in de lijst van opsommingen. Als u uw eigen waarde maakt, krijgt deze de omtrek met een gestippelde rand en een waarschuwing dat deze waarde niet in de opsommingslijst voorkomt.
 
 ![Een waarschuwing die wordt weergegeven als u een waarde invoegt die geen deel uitmaakt van de opsommingslijst.](../images/ui/segment-builder/enum-warning.png)
+
+Als u meerdere waarden maakt, kunt u deze allemaal tegelijk toevoegen met de bulkupload. Selecteer ![pluspictogram](../images/ui/segment-builder/plus-icon.png) om de **[!UICONTROL Add values in bulk]** popover.
+
+![Het pluspictogram wordt gemarkeerd en geeft de knop weer die u kunt selecteren voor toegang tot de bulkupload.](../images/ui/segment-builder/add-bulk-values.png)
+
+Op de **[!UICONTROL Add values in bulk]** kunt u een CSV- of TSV-bestand uploaden.
+
+![De waarden voor Toevoegen in de bulkpop-up worden weergegeven. Het dialoogvenster dat u kunt selecteren om een CSV- of TSV-bestand te uploaden, wordt gemarkeerd.](../images/ui/segment-builder/bulk-values-popover.png)
+
+U kunt ook handmatig door komma&#39;s gescheiden waarden toevoegen.
+
+![De waarden voor Toevoegen in de bulkpop-up worden weergegeven. Zowel het dialoogvenster waarin u waarden kunt invoegen als de toegevoegde waarden worden gemarkeerd.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+Er zijn maximaal 250 waarden toegestaan. Als u deze hoeveelheid overschrijdt, moet u enkele waarden verwijderen voordat u meer waarden toevoegt.
+
+![Er wordt een waarschuwing weergegeven die aangeeft dat u het maximumaantal waarden hebt bereikt.](../images/ui/segment-builder/maximum-values.png)
 
 ### Soorten publiek toevoegen
 

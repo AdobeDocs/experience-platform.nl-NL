@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1874'
 ht-degree: 1%
 
 ---
@@ -148,8 +148,9 @@ Als u meer wilt weten over het realtime profiel van de klant, inclusief zelfstud
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Door Platform gegenereerde vervaldatum van segmentlidmaatschap | Om het even welk segmentlidmaatschap dat in is `Exited` staat gedurende meer dan 30 dagen op basis van de `lastQualificationTime` wordt geschrapt. |
+| Bulkwaarde importeren in Segment Builder | De Bouwer van het segment steunt nu het invoeren veelvoudige waarden, of door een CSV of TSV dossier te uploaden of door komma&#39;s gescheiden waarden manueel op te nemen. Meer informatie vindt u in het gedeelte [Handleiding Segment Builder](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Vervaldatum extern publiekslidmaatschap | Standaard blijven leden van externe doelgroepen 30 dagen behouden. Als u deze nog langer wilt behouden, gebruikt u de `validUntil` veld tijdens de opname van publieksgegevens. |
+| Door Platform gegenereerde vervaldatum van segmentlidmaatschap | Om het even welk segmentlidmaatschap dat in is `Exited` staat gedurende meer dan 30 dagen op basis van de `lastQualificationTime` wordt geschrapt. |
 
 {style=&quot;table-layout:auto&quot;}
 
