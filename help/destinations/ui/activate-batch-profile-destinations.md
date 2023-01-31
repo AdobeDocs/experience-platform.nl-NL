@@ -4,9 +4,9 @@ title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '3299'
+source-wordcount: '3417'
 ht-degree: 0%
 
 ---
@@ -463,19 +463,29 @@ Als tijdelijke oplossing kunt u:
 
 Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selecteren **[!UICONTROL Cancel]** om de stroom op te delen, **[!UICONTROL Back]** om uw instellingen te wijzigen, of **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
->[!IMPORTANT]
->
->In deze stap controleert Adobe Experience Platform op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [Beleidshandhaving](../../rtcdp/privacy/data-governance-overview.md#enforcement) in de sectie Documentatie inzake gegevensbeheer.
+![Selectieoverzicht in de revisiestap.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
-![Afbeelding met een voorbeeld van een schending van gegevensbeleid.](../assets/common/data-policy-violation.png)
+### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
+Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 
-![Afbeelding die het revisiescherm van de workflow voor segmentactivering weergeeft.](../assets/ui/activate-batch-profile-destinations/review.png)
+### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
+
+In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
+
+![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
+
+### Segmenten filteren {#filter-segments}
+
+In deze stap kunt u ook de beschikbare filters op de pagina gebruiken om alleen de segmenten weer te geven waarvan het schema of de toewijzing is bijgewerkt als onderdeel van deze workflow. U kunt ook schakelen welke tabelkolommen u wilt zien.
+
+![De opname van het scherm die de beschikbare segmentfilters in de overzichtsstap toont.](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+
+Als u tevreden bent met de selectie en er zijn geen beleidsovertredingen vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
 ## Segmentactivering verifiëren {#verify}
 
-Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een `.csv` in de opslaglocatie die u hebt opgegeven. Er wordt een nieuw bestand verwacht dat op uw opslaglocatie wordt gemaakt volgens het schema dat u instelt in de workflow. De standaardbestandsindeling is:
+Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een `.csv` in de opslaglocatie die u hebt opgegeven. Er wordt een nieuw bestand verwacht dat op uw opslaglocatie wordt gemaakt volgens het schema dat u instelt in de workflow. De standaardbestandsindeling wordt hieronder weergegeven, maar u kunt [de componenten van de bestandsnaam bewerken](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Als u bijvoorbeeld een dagelijkse exportfrequentie selecteert, kunnen de bestanden die u op drie opeenvolgende dagen ontvangt er als volgt uitzien:

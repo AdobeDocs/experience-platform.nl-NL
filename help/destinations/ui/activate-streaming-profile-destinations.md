@@ -4,9 +4,9 @@ title: De publieksgegevens van de activering aan het stromen profiel de uitvoerb
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -80,15 +80,25 @@ Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmen
 
 Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selecteren **[!UICONTROL Cancel]** om de stroom op te delen, **[!UICONTROL Back]** om uw instellingen te wijzigen, of **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
->[!IMPORTANT]
->
->In deze stap controleert Adobe Experience Platform op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [Beleidshandhaving](../../rtcdp/privacy/data-governance-overview.md#enforcement) in de sectie Documentatie inzake gegevensbeheer.
+![Selectieoverzicht in de revisiestap.](/help/destinations/assets/ui/activate-streaming-profile-destinations/review.png)
 
-![Afbeelding die een schending van een gegevensbeleid in de revisiestap weergeeft.](../assets/common/data-policy-violation.png)
+### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
+Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 
-![Afbeelding met de revisiestap van de activeringsworkflow.](../assets/ui/activate-streaming-profile-destinations/review.png)
+### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
+
+In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
+
+![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
+
+### Segmenten filteren {#filter-segments}
+
+In deze stap kunt u ook de beschikbare filters op de pagina gebruiken om alleen de segmenten weer te geven waarvan het schema of de toewijzing is bijgewerkt als onderdeel van deze workflow.
+
+![De opname van het scherm die de beschikbare segmentfilters in de overzichtsstap toont.](/help/destinations/assets/ui/activate-streaming-profile-destinations/filter-segments-review-step.gif)
+
+Als u tevreden bent met de selectie en er zijn geen beleidsovertredingen vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
 ## Segmentactivering verifiëren {#verify}
 
