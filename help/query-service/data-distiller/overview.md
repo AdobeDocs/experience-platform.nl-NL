@@ -1,24 +1,24 @@
 ---
 title: Distiller-overzicht van gegevens
 description: Een overzicht van de Distiller-gebruikslimieten voor gegevens van Query Service met betrekking tot uw licentierechten.
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: b3003cc62e8d3555b887a23f0614020bd2c5e81e
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
 
 # Overzicht van Data Distiller
 
-Data Distiller is een pakket dat een subset van de functies van Adobe Experience Platform bevat. Met Data Distiller kunt u gegevensvoorbereiding na inname (zoals reinigen, vormen en manipulatie) uitvoeren voor realtime klantprofiel of analytische gebruiksgevallen door batchquery&#39;s uit te voeren in Query Service. Uw gebruik van Data Distiller is afhankelijk van uw huidige en voortgezette licentie van ten minste een van de volgende: Adobe Real-time Customer Data Platform, Customer Journey Analytics en/of Adobe Journey Optimizer.
+Data Distiller is een pakket dat een subset van de functies van Adobe Experience Platform bevat. Met Data Distiller kunt u gegevensvoorbereiding na inname (zoals reinigen, vormen en manipulatie) uitvoeren voor realtime klantprofiel of analytische gebruiksgevallen door batchquery&#39;s uit te voeren in Query Service. Uw gebruik van Data Distiller is afhankelijk van uw machtiging voor toepassingen op basis van Platforms.
 
 ## Licentiegebruik {#license-usage}
 
-Zie de [Distiller-gebruiksdocument voor gegevens](./license-usage.md) om belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie te bekijken.
+De  [Distiller-gebruiksdashboard voor gegevens](./license-usage.md) is beschikbaar zodra u Data Distiller-computeruren hebt aangeschaft. Met het gebruiksdashboard voor licenties kunt u het gebruik van de juiste computeruren controleren. Zie de [Distiller-gebruiksdocument voor gegevens](./license-usage.md) om belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie te bekijken.
 
 ## Parameters voor segmentering {#scoping-parameters}
 
-Scoping-parameters zijn gebruikslimieten die betrekking hebben op het bereik van uw voorgestelde gebruiksscenario, zoals gedefinieerd door uw licentiecapaciteit. Zonder add-ons zijn de bereikparameters voor gegevens-Distiller als volgt:
+Scoping-parameters zijn gebruikslimieten die betrekking hebben op het bereik van de vereiste instelling en die worden gedefinieerd door de capaciteit van uw licentie. Zonder add-ons zijn de bereikparameters voor gegevens-Distiller als volgt:
 
 * **Rekenuren**: U kunt PSQL of de API van de Dienst van de Vraag gebruiken om partijvragen in om het even welke (geplande of anders) uitgevoerde zandbak in werking te stellen om gegevens af te tasten en te schrijven. Hierbij worden de toegewezen rekenuren per jaar gebruikt, zoals bepaald in het bereikproces van uw licentieovereenkomst. Het totaal aantal rekenuren wordt geaccumuleerd over alle Sandboxen.
 * **Gegevens gebruikt**: Voor de gegevens die in Adobe Experience Platform worden ingevoerd en die via Data Distiller kunnen worden aangevraagd, gelden de beperkingen die worden beschreven in uw huidige licentie voor Adobe Real-time Customer Data Platform, Customer Journey Analytics en/of Adobe Journey Optimizer.
@@ -38,6 +38,7 @@ Een statische limiet is de gebruikslimiet die betrekking heeft op de functionele
    * SQL-query&#39;s uitvoeren voor gegevensanalyse en gegevensvoorbereiding na inname (opschonen, vormgeven en manipuleren).
    * Om SQL vragen in werking te stellen om roll-up metriek aan oppervlakte direct in een hulpmiddel van BI tot stand te brengen.
    * Gegevens snel inspecteren in Adobe Experience Platform.
+   * Om betekenisvolle inzichten van uw gegevens te produceren.
 * **API-aanroep melden**: Om ervoor te zorgen dat query&#39;s die worden uitgevoerd op geaggregeerde gegevens met behulp van de API voor rapportage over voldoende bronnen beschikken om efficiënt te kunnen worden uitgevoerd. Dit omvat vragen die bestaande gegevensmodellen zoals die door Real-time Customer Data Platform worden verstrekt verbeteren. De rapporterende API volgt middelgebruik door gelijktijdig muntgroeven aan elke vraag toe te wijzen. Er zijn maximaal vier API-aanroepen voor rapportage tegelijk beschikbaar. Als u toegang hebt tot de API voor rapportage via een BI-programma en meer sleuven voor gelijktijdige uitvoering nodig hebt, is een BI-server vereist.
 
 
