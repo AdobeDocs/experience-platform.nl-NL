@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '2219'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,7 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Betrouwbaarheid](#assurance)
 - [Gegevensverzameling](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Klantprofiel in realtime](#profile)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+## Kunstmatige inlichtingendiensten/leerdiensten voor machines {#ai-ml}
+
+Artificial Intelligence and Machine Learning services stellen marketinganalisten en artsen in staat om de kracht van AI/ML te benutten in gevallen waarin de klant gebruikmaakt van ervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten, zonder de behoefte aan de deskundigheid van de gegevenswetenschap, specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties.
+
+### Attribution AI
+
+Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die tot conversiegebeurtenissen leiden. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Attribution AI en bepaalde andere op Experience Platform gebaseerde toepassingen. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Lees de documentatie over [HIPAA en de Producten van de Adobe en de Diensten](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Kolommen met aanvullende scoregegevens bewerken | U kunt extra kolommen van de scoredataset (het melden van kolommen) nu toevoegen of verwijderen wanneer u bestaande modellen uitgeeft. Hierdoor wordt de flexibiliteit van de toewijzingsscores uitgebreid om u inzichten aan extra dimensies te verstrekken nadat een model reeds is gecreeerd. Zie de [Handleiding voor gebruikersinterface voor kenmerken](../../intelligent-services/attribution-ai/user-guide.md) voor meer informatie. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Zie de [AI/ML-services](../../intelligent-services/attribution-ai/overview.md) voor meer informatie .
+
+### Customer AI
+
+De AI van de Klant voor Real-time Customer Data Platform, wordt gebruikt om douanescore zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Customer AI voor Real-time Customer Data Platform en bepaalde andere toepassingen op basis van Experience Platforms. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Zie de documentatie over [HIPAA en de Producten van de Adobe en de Diensten](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+Zie de [AI/ML-services](../../intelligent-services/customer-ai/overview.md) voor meer informatie .
 
 ## Betrouwbaarheid {#assurance}
 
