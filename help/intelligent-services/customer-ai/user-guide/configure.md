@@ -5,9 +5,9 @@ feature: Customer AI
 title: Een AI-instantie van een klant configureren
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '2741'
 ht-degree: 0%
 
 ---
@@ -250,46 +250,6 @@ Als de instantie met succes wordt gecreeerd, wordt een voorspelling onmiddellijk
 >Afhankelijk van de grootte van de invoergegevens kan het voltooien van de voorspelling 24 uur duren.
 
 Door deze sectie te volgen, hebt u een geval van AI van de Klant gevormd en een voorspelling in werking gesteld. Als de profielschakeloptie is ingeschakeld, worden profielen met ingesneden inzichten automatisch met voorspelde scores gevuld. Wacht tot 24 uur voordat u doorgaat naar de volgende sectie van deze zelfstudie.
-
-## Beleid inzake governance
-
-Zodra u door het werkschema gaat om een instantie tot stand te brengen en de configuratie van het model voor te leggen, [beleidshandhaving](/help/data-governance/enforcement/auto-enforcement.md) controleert of er overtredingen zijn. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties binnen het Platform in overeenstemming zijn met het beleid voor gegevensgebruik.
-
-![popup met beleidsovertreding](../images/user-guide/policy-violation-popover-cai.png)
-
-De popover biedt specifieke informatie over de schending. U kunt deze schendingen door beleidsmontages en andere maatregelen oplossen die niet direct met het configuratiewerkschema verwant zijn. U kunt bijvoorbeeld de labels wijzigen, zodat bepaalde velden mogen worden gebruikt voor wetenschappelijke doeleinden. Alternatief, kon u de modelconfiguratie zelf ook wijzigen zodat het om het even wat met een etiket op het niet gebruikt. Raadpleeg de documentatie voor meer informatie over het instellen van [beleid](/help/data-governance/policies/overview.md).
-
-## Op kenmerken gebaseerd toegangsbeheer
-
->[!IMPORTANT]
->
->Toegangsbeheer op basis van kenmerken is momenteel alleen beschikbaar in een beperkte versie.
-
-[Op kenmerken gebaseerd toegangsbeheer](../../../access-control/abac/overview.md) is een mogelijkheid van Adobe Experience Platform die beheerders in staat stelt de toegang tot specifieke objecten en/of mogelijkheden te beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
-
-Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen met labels die bereik voor organisatie of gegevensgebruik definiëren. Parallel hieraan kunnen beheerders de gebruikers- en rolbeheerinterface gebruiken om toegangsbeleid te definiëren rondom XDM-schemavelden en de toegang die gebruikers of groepen gebruikers (interne, externe of externe gebruikers) krijgen beter te beheren. Bovendien, op attribuut-gebaseerde toegangsbeheer staat beheerders toe om toegang tot specifieke segmenten te beheren.
-
-Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
-
-Als gevolg van attribuut-gebaseerde toegangscontrole, zouden sommige gebieden en functionaliteiten toegang beperkt hebben en niet voor bepaalde de dienstinstanties van AI van de Klant onbeschikbaar zijn. Voorbeelden zijn Identiteit, Score Definition en Klonen.
-
-![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van de service.](../images/user-guide/unavailable-functionalities.png)
-
-Bovenaan in de AI-werkruimte van de klant **pagina met inzichten**, merk op dat de details in de zijbalk, de score, de identiteit, en de profielattributen allen &quot;Toegang Beperkt tonen.&quot;
-
-![De AI-werkruimte van de Klant met de beperkte velden van het schema gemarkeerd.](../images/user-guide/access-restricted.png)
-
-<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
-
-Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create instance workflow]** pagina, lijkt een waarschuwing u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
-
-![De AI-werkruimte van de Klant met de beperkte velden van de voorvertoningsdatasets met de beperkte schemaresultaten gemarkeerd.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
-
-Nadat u een instantie met beperkte informatie hebt gemaakt, gaat u verder naar **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
-
-![De AI-werkruimte van de Klant met de beperkte velden van de resultaten van de service.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Volgende stappen {#next-steps}
 

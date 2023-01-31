@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Handleiding voor Attribution AI-gebruikersinterface
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2385'
 ht-degree: 0%
 
 ---
@@ -17,41 +17,41 @@ Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, al
 
 Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 
-## Een instantie maken
+## Een model maken
 
 In de [!DNL Adobe Experience Platform] UI, selecteer **[!UICONTROL Services]** in de linkernavigatie. De **[!UICONTROL Services]** browser verschijnt en toont beschikbare Adobe intelligente diensten. Selecteer in de container voor Attribution AI de optie **[!UICONTROL Open]**.
 
-![Toegang tot uw exemplaar](./images/user-guide/open_Attribution_ai.png)
+![Uw model openen](./images/user-guide/open_Attribution_ai.png)
 
-De de dienstpagina van de Attribution AI verschijnt. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update.
+De de dienstpagina van de Attribution AI verschijnt. Deze pagina maakt een lijst van de dienstmodellen van Attribution AI en toont informatie over hen, met inbegrip van de naam van het model, omzettingsgebeurtenissen, hoe vaak het model in werking wordt gesteld, en de status van de laatste update.
 
-U kunt de **[!UICONTROL Total conversion events scored]** metrisch die in de bodem-juiste kant van wordt gevestigd **[!UICONTROL Create instance]** container. Deze metrisch spoor het totale aantal omzettingsgebeurtenissen door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties worden gemeten die.
+U kunt de **[!UICONTROL Total conversion events scored]** metrisch die in de bodem-juiste kant van wordt gevestigd **[!UICONTROL Create model]** container. Deze metrische waarde houdt het totale aantal omzettingsgebeurtenissen bij die door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstmodellen worden genoteerd.
 
 ![totale omzettingen](./images/user-guide/total_conversions.png)
 
-De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Als u deze besturingselementen wilt weergeven, selecteert u een instantie uit uw bestaande **[!UICONTROL Service instances]**. De besturingselementen bevatten de volgende informatie:
+De modellen van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Als u deze besturingselementen wilt weergeven, selecteert u een model in uw bestaande **[!UICONTROL Service models]**. De besturingselementen bevatten de volgende informatie:
 
-- **[!UICONTROL Edit]**: Selecteren **[!UICONTROL Edit]** staat u toe om een bestaande de dienstinstantie te wijzigen. U kunt de naam, beschrijving, status en scores van de instantie bewerken.
-- **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** Hiermee wordt de geselecteerde service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
-- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal uit Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
+- **[!UICONTROL Edit]**: Selecteren **[!UICONTROL Edit]** staat u toe om een bestaand de dienstmodel te wijzigen. U kunt de naam, de beschrijving, de status, het scoren frequentie van het model, en de extra kolommen van de scoredataset uitgeven.
+- **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** Hiermee kopieert u het geselecteerde servicemodel. Vervolgens kunt u de workflow wijzigen om kleine wijzigingen aan te brengen en de naam ervan wijzigen in een nieuw model.
+- **[!UICONTROL Delete]**: U kunt een de dienstmodel met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal uit Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
 - **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die wordt gebruikt. Als meer dan één dataset door Attribution AI wordt gebruikt, &quot;Veelvoud&quot;die door het aantal datasets wordt gevolgd wordt getoond. Als u de hyperlink selecteert, wordt de voorvertoning van de datasets weergegeven.
 - **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 
 ![Zijpaneel](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Conversion events]**: Een kort overzicht van de conversiegebeurtenissen die voor deze instantie zijn geconfigureerd.
+- **[!UICONTROL Conversion events]**: Een kort overzicht van de conversiegebeurtenissen die voor dit model zijn geconfigureerd.
 - **[!UICONTROL Lookback window]**: Het tijdframe dat u hebt gedefinieerd, geeft aan hoeveel dagen voor de conversiegebeurtenis de aanraakpunten worden opgenomen.
-- **[!UICONTROL Touchpoints]**: Een lijst met alle aanraakpunten die u tijdens het maken van deze instantie hebt gedefinieerd.
+- **[!UICONTROL Touchpoints]**: Een lijst met alle aanraakpunten die u tijdens het maken van dit model hebt gedefinieerd.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Selecteren **[!UICONTROL Create instance]** om te beginnen.
+Selecteren **[!UICONTROL Create model]** om te beginnen.
 
-![Instantie maken](./images/user-guide/landing_page.png)
+![Model maken](./images/user-guide/landing_page.png)
 
-Vervolgens wordt de instellingspagina voor Attribution AI weergegeven waar u een naam en een optionele beschrijving voor de serviceversie kunt opgeven.
+Vervolgens wordt de instellingspagina voor Attribution AI weergegeven waar u een naam en een optionele beschrijving voor het servicemodel kunt opgeven.
 
-![een instantie een naam geven](./images/user-guide/naming_instance.png)
+![een model benoemen](./images/user-guide/naming_instance.png)
 
 ## Gegevens selecteren {#select-data}
 
@@ -227,7 +227,7 @@ Selecteer het klokpictogram om de tijd van de dag te wijzigen waarop u wilt scor
 
 ### Aanvullende kolommen met scoregegevens (optioneel)
 
-Door gebrek, wordt een score dataset gecreeerd voor elke de dienstinstantie in een standaardschema. U kunt desgewenst extra kolommen toevoegen op basis van uw Conversion-gebeurtenis en aanraakpuntconfiguraties aan de uitvoer van de scoredataset. Begin door kolommen te selecteren uit uw inputdataset, kunt u hen dan slepen en laten vallen om de orde te veranderen door de linkermuisknoop over het hamburgerpictogram te onderdrukken.
+Door gebrek, wordt een score dataset gecreeerd voor elk de dienstmodel in een standaardschema. U kunt desgewenst extra kolommen toevoegen op basis van uw Conversion-gebeurtenis en aanraakpuntconfiguraties aan de uitvoer van de scoredataset. Begin door kolommen te selecteren uit uw inputdataset, kunt u hen dan slepen en laten vallen om de orde te veranderen door de linkermuisknoop over het hamburgerpictogram te onderdrukken.
 
 ![optellen van kolom met scoregegevens](./images/user-guide/Add-score-dataset.png)
 
@@ -264,44 +264,6 @@ Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het be
 Als u uw trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finish]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Selecteren **[!UICONTROL Ok]** om naar de **[!UICONTROL Service instances]** pagina waar u uw de dienstinstantie kunt zien.
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
-
-## Beleid inzake governance
-
-Zodra u door het werkschema gaat om een instantie tot stand te brengen en de configuratie van het model voor te leggen, [beleidshandhaving](/help/data-governance/enforcement/auto-enforcement.md) controleert of er overtredingen zijn. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties binnen het Platform in overeenstemming zijn met het beleid voor gegevensgebruik.
-
-![popup met beleidsovertreding](./images/user-guide/policy-violation-popover-aai.png)
-
-De popover biedt specifieke informatie over de schending. U kunt deze schendingen door beleidsmontages en andere maatregelen oplossen die niet direct met het configuratiewerkschema verwant zijn. U kunt bijvoorbeeld de labels wijzigen, zodat bepaalde velden mogen worden gebruikt voor wetenschappelijke doeleinden. Alternatief, kon u de modelconfiguratie zelf ook wijzigen zodat het om het even wat met een etiket op het niet gebruikt. Raadpleeg de documentatie voor meer informatie over het instellen van [beleid](/help/data-governance/policies/overview.md).
-
-## Op kenmerken gebaseerd toegangsbeheer
-
->[!IMPORTANT]
->
->Toegangsbeheer op basis van kenmerken is momenteel alleen beschikbaar in een beperkte versie.
-
-[Op kenmerken gebaseerd toegangsbeheer](../../../help/access-control/abac/overview.md) is een mogelijkheid van Adobe Experience Platform die beheerders in staat stelt de toegang tot specifieke objecten en/of mogelijkheden te beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
-
-Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen met labels die bereik voor organisatie of gegevensgebruik definiëren. Parallel hieraan kunnen beheerders de gebruikers- en rolbeheerinterface gebruiken om toegangsbeleid te definiëren rondom XDM-schemavelden en de toegang die gebruikers of groepen gebruikers (interne, externe of externe gebruikers) krijgen beter te beheren. Bovendien, op attribuut-gebaseerde toegangsbeheer staat beheerders toe om toegang tot specifieke segmenten te beheren.
-
-Via attribuut-based toegangsbeheer, kunnen de beheerders gebruikers&#39; toegang tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
-
-Wegens op attribuut-gebaseerde toegangsbeheer, zouden sommige gebieden en functionaliteiten toegang beperkt kunnen hebben en voor bepaalde de dienstinstanties van de Attribution AI niet beschikbaar zijn. Voorbeelden zijn Identiteit, Score Definition en Klonen.
-
-Bovenaan in de werkruimte Attribution AI **pagina met inzichten** hebben de gegevens die in de zijbalk worden weergegeven beperkte toegang.
-
-![De werkruimte van de Attribution AI met de beperkte schemagebieden benadrukt.](./images/user-guide/access-restricted.png)
-
-Als u datasets met beperkte schema&#39;s op selecteert **[!UICONTROL Create instance workflow]** pagina, verschijnt een waarschuwingsteken naast de naam van de dataset met het bericht: [!UICONTROL Restricted information is excluded].
-
-![De werkruimte van de Attribution AI met de beperkte benadrukt datasetgebieden.](./images/user-guide/restricted-info-excluded.png)
-
-Wanneer u datasets met beperkt schema op voorproef **[!UICONTROL Create instance workflow]** pagina, lijkt een waarschuwing u te laten weten dat [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
-
-![De werkruimte Attribution AI met de beperkte resultaten van de voorvertoonde schemavelden gemarkeerd.](./images/user-guide/restricted-dataset-preview.png)
-
-Nadat u een instantie met beperkte informatie hebt gemaakt, gaat u verder naar **[!UICONTROL Define goal]** stap, wordt een waarschuwing getoond bij de bovenkant: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
-
-![De werkruimte Attribution AI met de beperkte velden van de instantieresultaten gemarkeerd.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Volgende stappen
 

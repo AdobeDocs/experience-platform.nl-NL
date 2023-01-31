@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Kenmerkscores analyseren met Query-service
 description: Leer hoe u Adobe Experience Platform Query Service kunt gebruiken om de Attribution AI-scores te analyseren.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor 
 
 Selecteer in de gebruikersinterface van Adobe Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatie. De **[!UICONTROL Datasets]** wordt weergegeven. Selecteer vervolgens de **[!UICONTROL Browse]** en zoek de gegevensset met uitvoergegevens voor uw Attribution AI-scores.
 
-![Toegang tot uw exemplaar](./images/aai-query/datasets_browse.png)
+![Uw model openen](./images/aai-query/datasets_browse.png)
 
 Selecteer uw uitvoerdataset. De pagina met gegevenssetactiviteiten wordt weergegeven.
 
@@ -305,7 +305,7 @@ Met deze query wordt de struct-kolom samengevoegd tot meerdere aparte kolommen e
 
 >[!TIP]
 >
-> In dit voorbeeld moet u vervangen `{COLUMN_NAME}` naast `_tenantId` en `your_score_output_dataset`. De `COLUMN_NAME` De variabele kan de waarden van facultatieve overgaan door kolomnamen (rapporterend kolommen) nemen die tijdens het vormen van uw instantie van de Attribution AI werden toegevoegd. Controleer het uitvoerschema voor het zoeken naar de `{COLUMN_NAME}` waarden nodig om deze query te voltooien.
+> In dit voorbeeld moet u vervangen `{COLUMN_NAME}` naast `_tenantId` en `your_score_output_dataset`. De `COLUMN_NAME` De variabele kan de waarden van facultatieve overgaan door kolomnamen (rapporterend kolommen) nemen die tijdens het vormen van uw model van Attribution AI werden toegevoegd. Controleer het uitvoerschema voor het zoeken naar de `{COLUMN_NAME}` waarden nodig om deze query te voltooien.
 
 ```sql
 SELECT 
