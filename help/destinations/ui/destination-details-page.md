@@ -1,11 +1,11 @@
 ---
 keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
+description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '757'
 ht-degree: 0%
 
 ---
@@ -78,11 +78,17 @@ De [!UICONTROL Dataflow runs] tab bevat metrische gegevens over uw gegevensstroo
 
 >[!NOTE]
 >
->* Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
+>* Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) en [Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingen.
 >* Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) bestemmingen, uitgesloten identiteiten worden momenteel niet weergegeven.
 
 
 ![Dataflow-runweergave](../assets/ui/details-page/dataflow-runs.png)
+
+### Runtimeduur gegevensstroom {#dataflow-runs-duration}
+
+Er is een bekend probleem in de weergaveduur van gegevensstroomuitvoering. Terwijl de **[!UICONTROL Processing duration]** de meeste dataflow-runtime wordt aangegeven met ongeveer vier uur, zoals in de onderstaande afbeelding wordt getoond, de werkelijke verwerkingstijd voor elke dataflow-run veel korter is. Dataflow looppas vensters blijven open voor langer in het geval dat het Experience Platform moet opnieuw proberen makend vraag aan de bestemming.
+
+![Afbeelding van de DataFlow voert de pagina uit met de kolom Verwerkingstijd gemarkeerd.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
 
 ## [!UICONTROL Activation data] {#activation-data}
 
