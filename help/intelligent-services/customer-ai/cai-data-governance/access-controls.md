@@ -4,9 +4,9 @@ solution: Experience Platform
 feature: Customer AI
 title: Toegangsbeheer voor AI van de Klant
 description: Dit document bevat informatie over op kenmerken gebaseerde toegangscontrole voor AI van de Klant.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,8 @@ Nadat u een model met beperkte informatie creeert en te werk gaat **[!UICONTROL 
 
 Wanneer u toegangsbeheer gebruikt, **AI van klant weergeven** en **AI van klant beheren** toegangsrechten verlenen toegang tot verschillende functies van de AI van de Klant. De **AI van klant beheren** met bevoegdheid **maken**,**update**, **delete**, **enable**, of **disable** een model terwijl **AI van klant weergeven** Hiermee kunt u het document lezen of weergeven. De **maken**, **update** en **delete** acties worden vastgelegd in auditlogboeken.
 
-Raadpleeg de documentatie voor meer informatie [toewijzen van machtigingen voor toegangsbeheer](../../../help/access-control/home.md) of hoe [gebruik controlelogboeken om toegang en activiteit te controleren](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+Raadpleeg de documentatie voor meer informatie [toewijzen van machtigingen voor toegangsbeheer](../../../access-control/home.md) of hoe [gebruik controlelogboeken om toegang en activiteit te controleren](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u geïntroduceerd aan de belangrijkste principes van toegangscontrole in [!DNL Experience Platform]. U kunt nu doorgaan naar het dialoogvenster [gebruikershandleiding voor toegangsbeheer](./ui/overview.md) voor gedetailleerde stappen over het gebruik van de [!DNL Admin Console] om productprofielen te maken en machtigingen toe te wijzen voor [!DNL Platform].
+Door deze gids te lezen, bent u geïntroduceerd aan de belangrijkste principes van toegangscontrole in [!DNL Experience Platform]. U kunt nu doorgaan naar het dialoogvenster [gebruikershandleiding voor toegangsbeheer](../overview.md) voor gedetailleerde stappen over het gebruik van de [!DNL Admin Console] om productprofielen te maken en machtigingen toe te wijzen voor [!DNL Platform].

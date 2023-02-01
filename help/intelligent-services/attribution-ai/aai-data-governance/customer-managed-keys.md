@@ -1,11 +1,10 @@
 ---
 keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores; door klanten beheerde sleutels in AAI
-feature: Customer-Managed Keys in Attribution AI
 title: Door de klant beheerde toetsen
 description: Leer hoe u door de klant beheerde sleutels voor Attribution AI instelt.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

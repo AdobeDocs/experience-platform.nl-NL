@@ -1,11 +1,10 @@
 ---
 keywords: inzichten;klantenondersteuning;klantinzicht;AAI-queryservice;query's voor klanten;klanten-ai-scores; door klanten beheerde sleutels in CAI
-feature: Customer-Managed Keys in Customer AI
-title: Door de klant beheerde toetsen
+title: Door de klant beheerde sleutels in AI van de Klant.
 description: Leer hoe u door de klant beheerde sleutels instelt voor AI van de klant.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

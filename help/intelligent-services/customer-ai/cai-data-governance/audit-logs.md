@@ -1,11 +1,10 @@
 ---
 keywords: inzichten;klantenai;klantenInzichten;CAI vraagdienst;klantenai vragen;klantenai scores
-feature: Customer AI audit logs
-title: Overzicht controlelogboeken
+title: Overzicht controlelogbestanden in AI van klant
 description: Leer hoe u controlelogboeken kunt weergeven en beheren in Customer AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -22,4 +21,4 @@ In wezen vertelt een controlelogboek wie welke actie heeft uitgevoerd, en wannee
 
 Wanneer de eigenschap voor uw organisatie wordt toegelaten, worden de controlelogboeken automatisch verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten.
 
-Om controlelogboeken te bekijken en uit te voeren, moet u de de toegangsbeheertoestemming van de Toegang van Logboeken van de Controle in de Console van Adobe hebben gekregen. Raadpleeg voor meer informatie over het beheren van individuele machtigingen voor AI-functies van klanten de [toegangsbeheerdocumentatie](../../customer-ai/user-guide/access-controls.md).
+Om controlelogboeken te bekijken en uit te voeren, moet u de de toegangsbeheertoestemming van de Toegang van Logboeken van de Controle in de Console van Adobe hebben gekregen. Raadpleeg voor meer informatie over het beheren van individuele machtigingen voor AI-functies van klanten de [toegangsbeheerdocumentatie](../cai-data-governance/access-controls.md).
