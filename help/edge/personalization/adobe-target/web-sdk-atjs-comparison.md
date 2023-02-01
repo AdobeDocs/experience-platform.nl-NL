@@ -3,7 +3,7 @@ title: Het vergelijken bij.js met het Web SDK van het Experience Platform
 description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 3c229dfced2ea404e8b333a25cd8148ac81a91c2
+source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 2%
@@ -30,8 +30,8 @@ URL-structuur: https://cdn1.adoberesources.net/alloy/[VERSIE]/alloy.min.js OR al
 
 Bijvoorbeeld:
 
-* Gepiliseerd: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
-* Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
+* Gepiliseerd: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
+* Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 [Meer informatie](../../fundamentals/installing-the-sdk.md)
 
