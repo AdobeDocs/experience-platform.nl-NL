@@ -4,9 +4,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '928'
 ht-degree: 5%
 
 ---
@@ -329,6 +329,15 @@ ht-degree: 5%
       - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
       - [Zelfbediening API-sjabloon voor documentatie](sources-sdk/documentation/template.md)
       - [Zelfbediening UI-sjabloon voor documentatie](sources-sdk/documentation/ui-template.md)
+   - Streaming SDK {#streaming-sdk}
+      - [Aan de slag met Self-Serve Sources (Streaming SDK)](sources-sdk/streaming/getting-started.md)
+      - [Een verbindingsspecificatie maken voor een streamingbron](sources-sdk/streaming/create.md)
+      - [Een verbindingsspecificatie bijwerken voor een streamingbron](sources-sdk/streaming/update-connection-specs.md)
+      - [De streamingstroomspecificatie bijwerken](sources-sdk/streaming/update-flow-specs.md)
+      - [De verbindingsspecificatie testen en verzenden ter verificatie](sources-sdk/streaming/submit.md)
+      - [Uw bron documenteren (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
+      - [API-streamingsjabloon voor zelfbediening van documentatie](sources-sdk/streaming/streaming-template-api.md)
+      - [UI-streamingsjabloon voor documentatie voor zelfbediening](sources-sdk/streaming/streaming-template-ui.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
