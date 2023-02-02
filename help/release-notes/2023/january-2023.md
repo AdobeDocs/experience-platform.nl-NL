@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2369'
 ht-degree: 1%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 {style=&quot;table-layout:auto&quot;}
 
-## Doelen {#destinations}
+## Doelen (bijgewerkt op 2 februari) {#destinations}
 
 [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
@@ -114,6 +114,10 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
         <td>Bijgewerkt exportgedrag naar op een bestand gebaseerde doelen (PLAT-123316)</td>
         <td>We hebben een probleem opgelost in het gedrag van <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">verplichte kenmerken</a> bij het exporteren van gegevensbestanden naar batchbestemmingen. <br> Eerder werd gecontroleerd dat elke record in de uitvoerbestanden beide bevatte: <ol><li>Een waarde die niet gelijk is aan null <code>mandatoryField</code> kolom en</li><li>Een waarde groter dan null op ten minste een van de andere niet-verplichte velden.</li></ol> De tweede voorwaarde is verwijderd. Hierdoor ziet u mogelijk meer uitvoerrijen in uw geëxporteerde gegevensbestanden, zoals in het onderstaande voorbeeld wordt getoond:<br> <b> Voorbeeldgedrag vóór release januari 2023 </b> <br> Verplicht veld: <code>emailAddress</code> <br> <b>Te activeren invoergegevens</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Uitvoer van activering</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Voorbeeldgedrag na release januari 2023 </b> <br> <b>Uitvoer van activering</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>UI- en API-validatie voor vereiste toewijzingen en dubbele toewijzingen (PLAT-123316)</td>
+        <td>Validatie wordt nu als volgt afgedwongen in de gebruikersinterface en de API wanneer <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">toewijzingsvelden</a> in de workflow voor het activeren van doelen:<ul><li><b>Vereiste toewijzingen</b>: Als de bestemming door de bestemmingsontwikkelaar met vereiste afbeeldingen (bijvoorbeeld) is opstelling <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> doel), dan moeten deze vereiste afbeeldingen door de gebruiker worden toegevoegd wanneer het activeren van gegevens aan de bestemming. </li><li><b>Toewijzingen dupliceren</b>: In de toewijzingsstap van de activeringsworkflow kunt u dubbele waarden toevoegen in de bronvelden, maar niet in de doelvelden. Zie de onderstaande tabel voor een voorbeeld van toegestane en verboden combinaties van toewijzingen. <br><table><thead><tr><th>Toegestaan/verboden</th><th>Bronveld</th><th>Doelveld</th></tr></thead><tbody><tr><td>Toegestaan</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>e-mailalias2</li></ul></td></tr><tr><td>Verboden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
