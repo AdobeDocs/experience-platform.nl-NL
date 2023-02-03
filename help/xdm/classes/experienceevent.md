@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent-klasse
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent en aanbevolen procedures voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1820'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ De basis `timestamp` veld van een gebeurtenisschema kan **alleen** de waarneming
 
 Als een bedrijf in de reis- en gastsector bijvoorbeeld een vluchtreserveringsevenement modelleert, `timestamp` wordt het tijdstip weergegeven waarop de reserveringsgebeurtenis is waargenomen. Andere tijdstempels die verband houden met de gebeurtenis, zoals de begindatum van de reisreservering, moeten worden vastgelegd in afzonderlijke velden die worden verschaft door standaard- of aangepaste veldgroepen.
 
-![](../images/classes/experienceevent/timestamps.png)
+![Een voorbeeldweergave van het gebeurtenisschema van de ervaring met de vluchtreservering en de begindatum gemarkeerd.](../images/classes/experienceevent/timestamps.png)
 
 Door de klasse-vlakke timestamp gescheiden van andere verwante datetime waarden in uw gebeurtenisschema&#39;s te houden, kunt u de flexibele gevallen van het segmentatiegebruik uitvoeren terwijl het bewaren van een timestamped rekening van klantenreizen in uw ervaringstoepassing.
 
