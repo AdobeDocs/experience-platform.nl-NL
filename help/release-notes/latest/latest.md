@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
+source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
 workflow-type: tm+mt
 source-wordcount: '2368'
 ht-degree: 1%
@@ -99,7 +99,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Verbetering van het beleid voor betaalde mediaconcept voor integratie met streaming doelen | Verbetering van [wetshandhaving](/help/data-governance/enforcement/auto-enforcement.md) op [streaming doelen](/help/destinations/destination-types.md#streaming-destinations) voor gebruiksgevallen voor activering van betaalde media. Wanneer profielen niet meer voor een toestemmingsbeleid in aanmerking komen, deelt Experience Platform nu proactief hun beleidsuitgang aan het stromen bestemmingen mee. <br> <b>Opmerking</b>: Deze functionaliteit is alleen beschikbaar voor klanten van **[!UICONTROL Privacy and Security Shield]** en de **[!UICONTROL Healthcare Shield]**. |
+| Verbetering van het beleid voor betaalde mediaconcept voor integratie met streaming doelen | An [versterking van de wetshandhaving](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) op [streaming doelen](/help/destinations/destination-types.md#streaming-destinations) voor gebruiksgevallen voor activering van betaalde media. Wanneer profielen niet meer voor een toestemmingsbeleid in aanmerking komen, deelt Experience Platform nu proactief hun beleidsuitgang aan het stromen bestemmingen mee. <br> <b>Opmerking</b>: Deze functionaliteit is alleen beschikbaar voor klanten van **[!UICONTROL Privacy and Security Shield]** en de **[!UICONTROL Healthcare Shield]**. |
 | Nieuwe scheidingstekenopties voor bètaboudopslagdoelconnectors | Drie nieuwe scheidingsopties (dubbelpunt) `:`, Pijp, puntkomma `;`) zijn nu beschikbaar voor de nieuwe bètawolopslagbestemmingen - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Bèta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(bèta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(bèta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Meer informatie over de ondersteunde [opties voor bestandsindeling](/help/destinations/ui/batch-destinations-file-formatting-options.md) voor op bestanden gebaseerde doelen. |
 | Nieuwe optionele parameter beschikbaar in [klantgegevensvelden](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configuraties in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. <br> De **[!UICONTROL Integration alias]** in het [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
 

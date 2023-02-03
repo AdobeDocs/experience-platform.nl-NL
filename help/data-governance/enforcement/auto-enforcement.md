@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,16 @@ Selecteren **[!UICONTROL List view]** om de gegevenskoppeling als een lijst weer
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
 Als u [gemaakt toestemmingsbeleid](../policies/user-guide.md#consent-policy) en u activeert een segment naar een bestemming, kunt u zien hoe uw toestemmingsbeleid het percentage profielen beïnvloedt die in de activering inbegrepen zijn.
+
+#### Verbetering van het beleid voor goedkeuring voor betaalde media {#consent-policy-enhancement}
+
+Er is een verbetering aangebracht in de toestemming voor beleidshandhaving op streamingbestemmingen, waaronder betaalde media-activering. Deze uitbreiding is beschikbaar voor klanten van het privacyschild en het beveiligingsschild of het gezondheidsschild en verwijdert proactief profielen van streamingbestemmingen wanneer de status van de toestemming verandert. Het zorgt er ook voor dat wijzigingen in de toestemming onmiddellijk worden doorgevoerd, zodat het juiste publiek altijd wordt aangewezen.
+
+Deze verbeteringen staan voor groter vertrouwen in uw marketing strategie toe aangezien het de behoefte voor marketers verwijdert om toestemmingsattributen aan hun segmentuitdrukking manueel toe te voegen. Dit zorgt ervoor dat er geen profielen onbedoeld worden gebruikt voor marketingervaringen wanneer de toestemming is ingetrokken of niet langer in aanmerking komt voor een toestemmingsbeleid. Het beleid van de marketingtoestemming dat regels vastlegt voor hoe toestemmings- of voorkeursgegevens moeten worden beheerd in verschillende marketingworkflows, wordt nu automatisch toegepast in activeringsworkflows in downstreamoplossingen.
+
+>[!NOTE]
+>
+>Er zijn geen wijzigingen in de gebruikersinterface als gevolg van deze verbetering.
 
 #### Evaluatie vóór activering
 
