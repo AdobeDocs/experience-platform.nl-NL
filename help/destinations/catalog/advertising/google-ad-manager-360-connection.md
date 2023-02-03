@@ -2,10 +2,10 @@
 title: (bèta) [!DNL Google Ad Manager 360] verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '876'
-ht-degree: 0%
+source-wordcount: '882'
+ht-degree: 1%
 
 ---
 
@@ -54,19 +54,15 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Aanbieding toestaan {#allow-listing}
 
+Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager 360] bestemming in Platform. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
+
 >[!NOTE]
 >
->De lijst van gewenste personen is verplicht voordat u de eerste [!DNL Google Ad Manager] bestemming in Platform. Controleer of de hieronder beschreven lijst van gewenste personen is voltooid door [!DNL Google] voordat u een doel maakt.
+>De uitzondering op deze regel geldt voor bestaande [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
->[!IMPORTANT]
->
->Google heeft het proces vereenvoudigd om externe publieksbeheerplatforms te verbinden met Google Ad Manager 360. U kunt nu het proces doorlopen om op zelfbediening een koppeling te maken naar Google Ad Manager 360. Lezen [Segmenten van platforms voor gegevensbeheer](https://support.google.com/admanager/answer/3289669?hl=en) in de documentatie van Google. Je moet de onderstaande id&#39;s laten weergeven.
+1. Voer de stappen uit die in het dialoogvenster [Google Ad Manager-documentatie](https://support.google.com/admanager/answer/3289669?hl=en) om Adobe toe te voegen als een gekoppeld Platform voor gegevensbeheer (DMP).
+2. In de [!DNL Google Ad Manager] interface, ga naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en de **[!UICONTROL API Access]** schuifregelaar.
 
-* **Account-id**: Adobe-id met Google. Account-id: 87933855.
-* **Klant-id**: Adobe-id met Google. Klant-id: 89690775.
-* **Netwerkcode**: Dit is uw [!DNL Google Ad Manager] netwerk-id, gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface en in de URL.
-* **Koppeling-id voor publiek**: Dit is een specifieke id die aan uw [!DNL Google Ad Manager] netwerk (niet uw [!DNL Network code]), ook gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface.
-* Je accounttype. DFP door Google of AdX koper.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -91,12 +87,12 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt.
 * **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL Account ID]**: Vul uw identiteitskaart van de Verbinding van het publiek met in [!DNL Google].
-* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
-   * Gebruiken `DFP by Google` for [!DNL DoubleClick] voor uitgevers
+* **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt.
+* **[!UICONTROL Account ID]**: Voer uw [!DNL Audience Link ID] van uw [!DNL Google] account. Dit is een specifieke id die aan uw [!DNL Google Ad Manager] netwerk (niet uw [!DNL Network code]). U vindt dit onder **[!UICONTROL Admin > Global settings]** in de [!DNL Google Ad Manager] interface.
+* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw [!DNL Google] account:
    * Gebruiken `AdX buyer` for [!DNL Google AdX]
+   * Gebruiken `DFP by Google` for [!DNL DoubleClick] voor uitgevers
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -127,3 +123,12 @@ Deze toewijzingen zijn vereist door [!DNL Google Ad Manager 360] en worden autom
 ## Geëxporteerde gegevens {#exported-data}
 
 Controleer uw [!DNL Google Cloud Storage] emmertje en zorg ervoor de uitgevoerde dossiers de verwachte profielpopulaties bevatten.
+
+## Problemen oplossen {#troubleshooting}
+
+Voor het geval u om het even welke fouten terwijl het gebruiken van deze bestemming tegenkomt en uit naar of Adobe of Google moet reiken, houd de volgende IDs bij.
+
+Dit zijn Adobe Google-account-id&#39;s:
+
+* **[!UICONTROL Account ID]**: 87933855
+* **[!UICONTROL Customer ID]**: 89690775

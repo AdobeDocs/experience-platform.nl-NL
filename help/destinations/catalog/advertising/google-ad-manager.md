@@ -3,10 +3,10 @@ keywords: google en manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: Google Ad Manager, voorheen bekend als DoubleClick voor Publishers of DoubleClick AdX, is een advertentieplatform uit Google dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '929'
-ht-degree: 0%
+source-wordcount: '858'
+ht-degree: 1%
 
 ---
 
@@ -58,18 +58,10 @@ Als u uw eerste bestemming wilt maken met [!DNL Google Ad Manager] en hebben de 
 
 ### Aanbieding toestaan {#allow-listing}
 
->[!NOTE]
->
->Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager] bestemming in Platform. Controleer of het hieronder beschreven proces voor het aanbieden van een aanbieding is voltooid door [!DNL Google] voordat u een doel maakt.
->De uitzondering op deze regel is [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
+Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager] bestemming in Platform. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
-Voordat u het dialoogvenster [!DNL Google Ad Manager] bestemming in Platform, moet u contact opnemen [!DNL Google] voor Adobe die op de lijst met toegestane gegevensproviders moet worden geplaatst, en dat uw account aan de lijst van gewenste personen wordt toegevoegd. Contact [!DNL Google] en verstrekt de volgende informatie:
-
-* **Account-id**: Adobe-id met Google. Account-id: 87933855.
-* **Klant-id**: Adobe-id met Google. Klant-id: 89690775.
-* **Netwerkcode**: Dit is uw [!DNL Google Ad Manager] netwerk-id, gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface en in de URL.
-* **Koppeling-id voor publiek**: Dit is een specifieke id die aan uw [!DNL Google Ad Manager] netwerk (niet uw [!DNL Network code]), ook gevonden onder **[!UICONTROL Admin > Global settings]** in de Google-interface.
-* Je accounttype. DFP door Google of AdX koper.
+1. Voer de stappen uit die in het dialoogvenster [Google Ad Manager-documentatie](https://support.google.com/admanager/answer/3289669?hl=en) om Adobe toe te voegen als een gekoppeld Platform voor gegevensbeheer (DMP).
+2. In de [!DNL Google Ad Manager] interface, ga naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en de **[!UICONTROL API Access]** schuifregelaar.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -85,10 +77,11 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Account ID]**: Voer uw [!DNL Audience Link ID] van uw [!DNL Google] account. Dit is een specifieke id die aan uw [!DNL Google Ad Manager] netwerk (niet uw [!DNL Network code]). U vindt dit onder **[!UICONTROL Admin > Global settings]** in de [!DNL Google Ad Manager] interface.
 * **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * Gebruiken `DFP by Google` for [!DNL DoubleClick] voor uitgevers
    * Gebruiken `AdX buyer` for [!DNL Google AdX]
-* **[!UICONTROL Account ID]**: Vul uw identiteitskaart van de Verbinding van het publiek met in [!DNL Google].
+
 
 >[!NOTE]
 >
@@ -111,3 +104,12 @@ Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbes
 ## Geëxporteerde gegevens {#exported-data}
 
 Controleren of gegevens zijn geëxporteerd naar de [!DNL Google Ad Manager] doel, controleer uw [!DNL Google Ad Manager] account. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+
+## Problemen oplossen {#troubleshooting}
+
+Voor het geval u om het even welke fouten terwijl het gebruiken van deze bestemming tegenkomt en uit naar of Adobe of Google moet reiken, houd de volgende IDs bij.
+
+Dit zijn Adobe Google-account-id&#39;s:
+
+* **[!UICONTROL Account ID]**: 87933855
+* **[!UICONTROL Customer ID]**: 89690775
