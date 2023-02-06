@@ -1,7 +1,7 @@
 ---
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
 workflow-type: tm+mt
 source-wordcount: '2926'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door 
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de drie bovenstaande kenmerken het exporteren van de bestemming.
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## Batchbestemmingen (op basis van bestanden) {#file-based-destinations}
 
