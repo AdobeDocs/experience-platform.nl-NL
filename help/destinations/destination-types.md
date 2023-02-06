@@ -3,9 +3,9 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,11 @@ Lees deze pagina om de verschillende typen en categorieën Adobe Experience Plat
 
 ## Doeltypen {#destination-types}
 
-In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbindingen en extensies. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
+In Adobe Experience Platform maken we onderscheid tussen verschillende doeltypen - verbindingen, gegevenssetexport en extensies. Er zijn verschillende typen verbindingsdoelen waarmee u gegevens kunt exporteren naar op API gebaseerde doelen.
 
-![Soorten bestemmingen](./assets/destination-types/types-of-destinations.png)
+Tot slot kunnen de verbindingen ook tussen openbare bestemmingen beschikbaar over alle organisaties in de bestemmingscatalogus worden onderscheiden, en privé bestemmingen die de klanten in real time CDP Ultimate kunnen creëren om aan hun specifieke uitvoergebruiksgevallen te voldoen.
+
+![Soorten bestemmingsdiagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Verbindingen {#connections}
 

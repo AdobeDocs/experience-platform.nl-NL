@@ -3,9 +3,9 @@ keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;acti
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerst
 
 ## Besturingselementen {#controls}
 
-De besturingselementen in de [Werkruimte Doelen](./ui/destinations-workspace.md) staat u toe:
+De besturingselementen in de [werkruimte doelen](./ui/destinations-workspace.md) staat u toe:
 
 * Blader door de catalogus met doelplatforms waar u uw gegevens kunt activeren;
 * Gegevensstromen naar de doelen in de catalogus maken, bewerken, activeren en uitschakelen;
@@ -45,7 +45,7 @@ De besturingselementen in de [Werkruimte Doelen](./ui/destinations-workspace.md)
 
 ## Doeltypen en -categorieën {#types-and-categories}
 
-Zie voor meer informatie de [doeltypen en -categorieën, overzicht](./destination-types.md).
+Met Experience Platform, kunt u gegevens aan diverse soorten bestemmingen activeren, om aan uw activeringsgebruiksgevallen te voldoen. De bestemmingen variëren van op API-Gebaseerde integratie, tot integratie met dossierontvangstsystemen, de bestemmingen van de profielraadpleging, en meer. Voor gedetailleerde informatie over alle beschikbare bestemmingen, zie [doeltypen en -categorieën, overzicht](./destination-types.md).
 
 ## Doelen en toegangscontroles {#access-controls}
 
@@ -69,6 +69,12 @@ Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen be
 Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op gebieden toepassen die u toestemmingen hebt. Bovendien kunt u geen gegevens naar een bestemming uitvoeren als u geen toegang tot alle gebieden in de dataset hebt.
 
 Voor meer informatie over hoe de bestemmingen met op attribuut-gebaseerde toegangscontroles werken, lees [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md#destinations).
+
+## Controle van de bestemmingen {#destinations-monitoring}
+
+Nadat u een verbinding met een doel hebt gemaakt en de activeringsworkflow hebt voltooid, kunt u de gegevens die u exporteert naar uw ontvangstsysteem controleren. Lees de [gids over het controleren van gegevensstromen aan bestemmingen in UI](/help/dataflows/ui/monitor-destinations.md) voor meer informatie .
+
+U kunt ook controleren of gegevens naar uw bestemming zijn gekomen. De meeste doeldocumentatiepagina&#39;s in de catalogus hebben een *Sectie Gegevens exporteren valideren*, die erop wijst hoe u in het bestemmingsplatform kunt controleren dat de gegevens met succes van Experience Platform worden gebracht.
 
 ## Beperkingen op gegevensbeheer bij het activeren van gegevens naar bestemmingen {#data-governance}
 

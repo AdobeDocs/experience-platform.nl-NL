@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van de Identity Graph Viewer
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Als u met de viewer voor identiteitsgrafieken werkt, moet u de verschillende bet
 - **Koppeling (rand):** Een koppeling of rand vertegenwoordigt de verbinding tussen identiteiten.
 - **Grafiek (cluster):** Een grafiek of een cluster is een groep identiteiten en koppelingen die een persoon vertegenwoordigen.
 
-## De viewer voor identiteitsgrafieken openen
+## De viewer voor identiteitsgrafieken openen {#access-identity-graph-viewer}
 
 Selecteer **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens de **[!UICONTROL Identity graph]** tab. Van de **[!UICONTROL Identity Namespace]** scherm, klik **[!UICONTROL Select identity namespace]** gebruiken om te zoeken naar de naamruimte die u wilt gebruiken.
 

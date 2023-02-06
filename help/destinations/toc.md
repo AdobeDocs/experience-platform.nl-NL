@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Doelgids
-user-guide-description: Activeer uw bekende en onbekende gegevens voor publicatiecampagnes voor meerdere kanalen, e-mailcampagnes, gerichte advertenties en nog veel meer.
+user-guide-title: Handleiding voor bestemmingen
+user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: f89c6a11199bff2d91414e8370c1fd9693308fc6
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '992'
-ht-degree: 1%
+source-wordcount: '1016'
+ht-degree: 3%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 1%
 * [Overzicht van doelen](./home.md)
 * [Doeltypen en -categorieën](./destination-types.md)
 * [Garanties voor bestemmingen (activering)](./guardrails.md)
+* Hoe werken bestemmingen? {#how-destinations-work}
+   * [Configureerbare en algemene exportinstellingen in doelen](./how-destinations-work/destinations-configurations.md)
+   * [Profielexportgedrag voor verschillende doeltypen](./how-destinations-work/profile-export-behavior.md)
+   * [Identiteitsverwerking in de workflow voor doelactivering](./how-destinations-work/identity-handling.md)
 * API-zelfstudies {#api}
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbinding maken met locaties voor opslag en marketing in batches en gegevens activeren met de Flow Service API](./api/connect-activate-batch-destinations.md)
@@ -214,7 +218,7 @@ ht-degree: 1%
             * [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](./destination-sdk/file-based-destination-testing-api.md)
             * [Gedetailleerde activeringsresultaten weergeven](./destination-sdk/file-based-destination-results-api.md)
             * [Gevalideerde klantvelden valideren](./destination-sdk/file-based-render-template-api.md)
-   * Hulplijnen {#guides}
+   * Handleidingen {#guides}
       * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
       * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/submit-destination.md)
