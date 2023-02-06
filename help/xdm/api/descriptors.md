@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -357,7 +357,7 @@ Met beschrijvingen van familienaam kan een gebruiker de `title`, `description`, 
 | `xdm:title` | De nieuwe titel die u voor dit veld wilt weergeven, geschreven in Alles Beginhoofdletter. |
 | `xdm:description` | Een optionele beschrijving kan samen met de titel worden toegevoegd. |
 | `meta:enum` | Indien het veld wordt aangegeven door `xdm:sourceProperty` is een tekenreeksveld, `meta:enum` U kunt voorgestelde waarden toevoegen voor het veld in de Segmenteringsinterface. Het is belangrijk op te merken dat `meta:enum` declareert geen opsomming of biedt geen gegevensvalidatie voor het XDM-veld.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe worden gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de veldcode `meta:enum` rechtstreeks via een PATCH-verzoek aan de bovenliggende bron van het veld. |
-| `meta:excludeMetaEnum` | Indien het veld wordt aangegeven door `xdm:sourceProperty` is een tekenreeksveld met bestaande voorgestelde waarden die zijn opgegeven onder een `meta:enum` kunt u dit object opnemen in een beschrijvingsbestand voor vriendelijke namen om sommige of al deze waarden van segmentatie uit te sluiten. De sleutel en de waarde voor elk item moeten overeenkomen met die in het origineel `meta:enum` van het veld om de vermelding uit te sluiten.<br><br>Het is belangrijk om op te merken dat u alleen waarden kunt uitsluiten voor tekenreeksvelden die **alleen voorgestelde waarden**. Als het tekenreeksveld het werkelijke veld bevat `enum` beperkingen, de bijbehorende voorgestelde waarden kunnen niet worden uitgeschakeld. `enum` velden uit aangepaste bronnen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt via een PATCH-aanvraag, maar `enum` velden uit standaard Adobe-gedefinieerde bronnen kunnen niet worden verwijderd. |
+| `meta:excludeMetaEnum` | Indien het veld wordt aangegeven door `xdm:sourceProperty` is een tekenreeksveld met bestaande voorgestelde waarden die zijn opgegeven onder een `meta:enum` kunt u dit object opnemen in een beschrijvingsbestand voor vriendelijke namen om sommige of al deze waarden van segmentatie uit te sluiten. De sleutel en de waarde voor elk item moeten overeenkomen met die in het origineel `meta:enum` van het veld om de vermelding uit te sluiten. |
 
 {style=&quot;table-layout:auto&quot;}
 

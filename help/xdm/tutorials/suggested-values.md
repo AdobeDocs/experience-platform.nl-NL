@@ -2,9 +2,9 @@
 title: Voorgestelde waarden beheren in de API
 description: Leer hoe u voorgestelde waarden toevoegt aan een tekenreeksveld in de API voor schemaregistratie.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -69,11 +69,11 @@ U kunt ook een tekenreeksveld definiëren dat geen `enum` -array en gebruikt all
 
 Aangezien de tekenreeks geen `enum` array om beperkingen te definiëren, `meta:enum` Deze eigenschap kan worden uitgebreid met nieuwe waarden.
 
-## Voorgestelde waarden voor standaardvelden beheren
+<!-- ## Manage suggested values for standard fields
 
-Voor bestaande standaardvelden kunt u [voorgestelde waarden toevoegen](#add-suggested-standard) of [voorgestelde waarden uitschakelen](#disable-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### Voorgestelde waarden toevoegen aan een standaardveld {#add-suggested-standard}
+## Voorgestelde waarden toevoegen aan een standaardveld {#add-suggested-standard}
 
 De `meta:enum` van een standaardtekenreeksveld kunt u een [beschrijvingsbestand vriendelijke naam](../api/descriptors.md#friendly-name) voor het betrokken veld in een bepaald schema.
 
@@ -151,25 +151,19 @@ Nadat de descriptor is toegepast, reageert de schemaregistratie met het volgende
 >}
 >```
 
-### Voorgestelde waarden voor een standaardveld uitschakelen {#disable-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
-Als een standaardtekenreeksveld vooraf gedefinieerde voorgestelde waarden heeft onder `meta:enum`U kunt alle waarden uitschakelen die u niet in de segmentatie wilt zien. Dit doet u door een [beschrijvingsbestand vriendelijke naam](../api/descriptors.md#friendly-name) voor het schema dat een `xdm:excludeMetaEnum` eigenschap.
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
->[!IMPORTANT]
->
->U kunt voorgestelde waarden alleen uitschakelen voor standaardvelden waarvoor geen corresponderende opsommingsbeperkingen gelden. Met andere woorden, als het veld een `enum` array, dan `meta:excludeMetaEnum` heeft geen effect.
->
->Zie de sectie over [evolutieregels voor nummers en voorgestelde waarden](../ui/fields/enum.md#evolution) voor meer informatie over beperkingen voor het bewerken van bestaande velden.
-
-**API-indeling**
+**API format**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Verzoek**
+**Request**
 
-In het volgende verzoek worden de voorgestelde waarden uitgeschakeld &quot;[!DNL Web Form Filled Out]&quot; en &quot;[!DNL Media ping]&quot; for `eventType` in een schema gebaseerd op de [XDM ExperienceEvent, klasse](../classes/experienceevent.md).
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -191,19 +185,19 @@ curl -X POST \
       }'
 ```
 
-| Eigenschap | Beschrijving |
+| Property | Description |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een beschrijvende naam moet deze waarde worden ingesteld op `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
-| `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
-| `xdm:sourceProperty` | Het pad naar de specifieke eigenschap waarvan u de voorgestelde waarden wilt beheren. Het pad moet beginnen met een schuine streep (`/`) en niet met één. Niet opnemen `properties` in het pad (bijvoorbeeld `/personalEmail/address` in plaats van `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | Een object dat de voorgestelde waarden beschrijft die moeten worden uitgesloten voor het veld in segmentatie. De sleutel en de waarde voor elk item moeten overeenkomen met die in het origineel `meta:enum` van het veld om de vermelding uit te sluiten. |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Antwoord**
+**Response**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de nieuwe descriptor. De voorgestelde waarden die onder `xdm:excludeMetaEnum` wordt nu verborgen voor de segmentatie-interface.
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
 
 ```json
 {
@@ -217,7 +211,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## Voorgestelde waarden voor een aangepast veld beheren {#suggested-custom}
 

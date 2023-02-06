@@ -2,9 +2,9 @@
 title: XDM-velden definiëren in de API voor schemaregister
 description: Leer hoe u verschillende velden definieert bij het maken van XDM-bronnen (Custom Experience Data Model) in de Schema Registry API.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ U kunt klant-onder ogen ziet etiketten voor elke waarde naar keuze verstrekken o
 
 >[!NOTE]
 >
->De `meta:enum` waarde is **niet** een opsomming declareren of gegevensvalidatie zelfstandig uitvoeren. In de meeste gevallen worden tekenreeksen onder `meta:enum` ook `enum` om ervoor te zorgen dat gegevens worden beperkt. Er zijn echter gevallen waarin `meta:enum` wordt verstrekt zonder overeenkomstige `enum` array. Zie de zelfstudie aan [voorgestelde waarden in de API definiëren](../tutorials/suggested-values.md) voor meer informatie .
+>De `meta:enum` waarde is **niet** een opsomming declareren of gegevensvalidatie zelfstandig uitvoeren. In de meeste gevallen worden tekenreeksen onder `meta:enum` ook `enum` om ervoor te zorgen dat gegevens worden beperkt. Er zijn echter gevallen waarin `meta:enum` wordt verstrekt zonder overeenkomstige `enum` array. Zie de zelfstudie aan [voorgestelde waarden definiëren](../tutorials/suggested-values.md) voor meer informatie .
 
 U kunt desgewenst een `default` eigenschap om de standaardwaarde aan te geven `enum` waarde die het veld zal gebruiken als er geen waarde is opgegeven.
 
