@@ -2,7 +2,7 @@
 description: Deze configuratie staat u toe om essentiële informatie voor uw op dossier-gebaseerde bestemming, zoals uw bestemmingsnaam, categorie, beschrijving, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Bestandsgebaseerde opties voor doelconfiguratie voor Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: 74f617afe8a0f678d43fb7b949d43cef25e78b9d
 workflow-type: tm+mt
 source-wordcount: '2976'
 ht-degree: 2%
@@ -40,11 +40,12 @@ Hieronder ziet u een voorbeeld van een aangepaste, persoonlijke Amazon S3-bestem
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Amazon S3 bucket name",
          "description":"Enter your Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
+         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
          "readOnly":false,
          "hidden":false
       },
@@ -54,7 +55,7 @@ Hieronder ziet u een voorbeeld van een aangepaste, persoonlijke Amazon S3-bestem
          "description":"Enter your S3 bucket path",
          "type":"string",
          "isRequired":true,
-         "pattern":"^[A-Za-z]+$",
+         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
          "readOnly":false,
          "hidden":false
       },
