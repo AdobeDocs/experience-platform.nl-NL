@@ -1,9 +1,9 @@
 ---
 title: Identiteitsverwerking in de workflow voor doelactivering
 description: Leer hoe identiteitsexport wordt verwerkt in de activeringsworkflow, afhankelijk van het doeltype
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -107,3 +107,5 @@ Wanneer u een gegevensstroom configureert zoals wordt beschreven in de bovenstaa
 Nadat u dit document hebt gelezen, weet u nu hoe u kunt achterhalen welke identiteiten worden ondersteund of vereist voor afzonderlijke doelen. U weet nu ook hoe identiteitsselectie voor elk bestemmingstype werkt.
 
 Vervolgens kunt u lezen over welke [exportinstellingen](/help/destinations/how-destinations-work/destinations-configurations.md) voor bestemmingen zijn gemeenschappelijk over bestemmingstypes, die op een individueel bestemmingsniveau door ontwikkelaars kunnen worden gevormd, en welke montages door gebruikers in het activeringswerkschema kunnen worden uitgegeven.
+
+U kunt ook alle beschikbare doelen uitchecken in het dialoogvenster [catalogus](/help/destinations/catalog/overview.md).

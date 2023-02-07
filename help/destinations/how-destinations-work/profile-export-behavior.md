@@ -1,9 +1,9 @@
 ---
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,9 @@ Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaa
 
 ## Streaming op API gebaseerde doelen {#streaming-api-based-destinations}
 
-Het gedrag voor het exporteren van profielen voor streamingdoelen zoals Facebook, Trade Desk en andere op API&#39;s gebaseerde integraties is identiek aan het bovenstaande.
+Het gedrag voor het exporteren van profielen voor streamingdoelen zoals Facebook, Trade Desk en andere op API&#39;s gebaseerde integraties lijkt sterk op het gedrag dat hierboven voor ondernemingsdoelen wordt beschreven.
 
-Doelvoorbeelden: reclame, sociale, enz.
+Voorbeelden van streamingdoelen zijn de doelen die bij de [sociale en reclamecategorieën](/help/destinations/destination-types.md#categories) in de catalogus.
 
 Experience Platform optimaliseert het gedrag voor het exporteren van profielen naar uw streamingdoel, zodat gegevens alleen worden geëxporteerd naar op streaming API gebaseerde doelen wanneer relevante updates voor een profiel zijn opgetreden na segmentkwalificatie of andere belangrijke gebeurtenissen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
 

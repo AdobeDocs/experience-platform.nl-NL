@@ -1,9 +1,9 @@
 ---
 title: Configureerbare en algemene exportinstellingen in doelen
 description: Leer welke de uitvoermontages in bestemmingen configureerbaar op een bestemmingsniveau zijn en die vast zijn en niet kunnen worden uitgegeven.
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -63,5 +63,7 @@ Lees meer over de verschillende opties en stappen in de activeringsworkflow:
 ## Volgende stappen {#next-steps}
 
 Na het lezen van dit document, weet u nu welke de uitvoermontages voor bestemmingen over bestemmingstypes gemeenschappelijk zijn, die op een individueel bestemmingsniveau door ontwikkelaars kunnen worden gevormd, en welke montages door gebruikers in het activeringswerkschema kunnen worden uitgegeven.
+
+Vervolgens kunt u meer gedetailleerde informatie lezen over de [algemene exportgedragspatronen per doeltype](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 Voor doelontwikkelaars kunt u [Aan de slag](/help/destinations/destination-sdk/getting-started.md) met Destination SDK. Voor gebruikers die gegevens willen activeren, kunt u alle beschikbare doelen uitchecken in het dialoogvenster [catalogus](/help/destinations/catalog/overview.md).
