@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Efficiënt beleid API-eindpunt
 description: Leer hoe u effectief toegangsbeleid kunt weergeven met de API voor toegangsbeheer voor Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 1%
+source-wordcount: '315'
+ht-degree: 0%
 
 ---
 
 # Doeltreffend beleidseindpunt
+
+>[!NOTE]
+>
+>Als een gebruikerstoken wordt overgegaan, dan moet de gebruiker van het teken een &quot;org admin&quot;rol voor gevraagde org hebben.
 
 Om effectief toegangsbeheerbeleid voor de huidige gebruiker te bekijken, doe een verzoek van de POST aan `/acl/effective-policies` in de [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
 

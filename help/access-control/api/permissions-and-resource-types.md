@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Referentie-API-eindpunt
 description: Het verwijzingspunten in Toegangsbeheer API staat u toe om de namen van beschikbare toestemmingen en middeltypes te bekijken, die dan kunnen worden gebruikt om efficiënt toegangsbeheerbeleid voor de huidige gebruiker te bekijken.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
 # Referentie-eindpunt
+
+>[!NOTE]
+>
+>Als een gebruikerstoken wordt overgegaan, dan moet de gebruiker van het teken een &quot;org admin&quot;rol voor gevraagde org hebben.
 
 U kunt een lijst maken van de namen van alle toestemmingen en middeltypes door een verzoek van de GET tot de `/acl/reference` eindpunt. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen naar [doeltreffend beleid voor toegangscontrole weergeven](./effective-policies.md) voor de huidige gebruiker.
 
