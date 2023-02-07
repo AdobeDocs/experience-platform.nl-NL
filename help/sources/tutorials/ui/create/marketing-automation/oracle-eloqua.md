@@ -1,19 +1,17 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;oracle;oracle eloqua;eloqua
-solution: Experience Platform
 title: Een Eloqua-bronverbinding met een Oracle maken met de gebruikersinterface van het Platform
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Oracle Eloqua via de gebruikersinterface van het Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Oracle Eloqua] bronverbinding met gebruikersinterface van Platform
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Oracle Eloqua] bronaansluiting die gebruikmaakt van de Adobe Experience Platform-gebruikersinterface.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Oracle Eloqua] bronverbinding via de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
@@ -30,8 +28,8 @@ Om verbinding te maken [!DNL Oracle Eloqua] aan Platform, moet u waarden voor de
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Endpoint | Het eindpunt van uw [!DNL Oracle Eloqua]. |
-| Gebruikersnaam | De gebruikersnaam van uw [!DNL Oracle Eloqua] account. De gebruikersnaam moet zijn opgemaakt als `siteName + \\ + username`, waarbij `siteName` is de bedrijfsnaam waarmee u zich hebt aangemeld [!DNL Oracle Eloqua] en `username` is uw gebruikersnaam. Uw gebruikersnaam voor aanmelding kan bijvoorbeeld: `adobe\\emily`. |
+| Endpoint | Het eindpunt van uw [!DNL Oracle Eloqua] server. [!DNL Oracle Eloqua] ondersteunt meerdere datacenters. Om uw eindpunt te vinden, login aan [[!DNL Oracle Eloqua] interface](https://login.eloqua.com) met uw referenties en kopieer vervolgens het basis-URL-gedeelte van de omleidings-URL. De notatie voor uw URL-patroon is `xxx.xx.eloqua.com` en moet zonder `http` of `https`. |
+| Gebruikersnaam | De gebruikersnaam van uw [!DNL Oracle Eloqua] server. De gebruikersnaam moet zijn opgemaakt als `siteName + \\ + username`, waarbij `siteName` is de bedrijfsnaam waarmee u zich hebt aangemeld [!DNL Oracle Eloqua] en `username` is uw gebruikersnaam. Uw gebruikersnaam voor aanmelding kan bijvoorbeeld: `Eloqua\Andy`. **Opmerking**: U moet één backslash gebruiken (`\`) bij het gebruik van de gebruikersinterface omdat de gebruikersinterface van het Experience Platform automatisch een extra backslash toevoegt (`\`) bij het invoeren van een gebruikersnaam. |
 | Wachtwoord | Het wachtwoord dat overeenkomt met uw [!DNL Oracle Eloqua] gebruikersnaam. |
 
 Voor meer informatie over verificatiereferenties voor [!DNL Oracle Eloqua], zie de [[!DNL Oracle Eloqua] handleiding voor verificatie](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
