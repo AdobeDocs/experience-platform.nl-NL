@@ -2,9 +2,9 @@
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
+source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Door de klant beheerde sleutels in Adobe Experience Platform
 
 Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecodeerd met systeemtoetsen. Als u een toepassing gebruikt die bovenop Platform wordt gebouwd, kunt u verkiezen om uw eigen encryptiesleutels in plaats daarvan te gebruiken, die u grotere controle over uw gegevensveiligheid geven.
+
+>[!NOTE]
+>
+>Gegevens in Adobe Experience Platform Data Lake en Profile Store (CosmosDB) worden gecodeerd met CMK.
 
 Dit document behandelt het proces voor het toelaten van de klant-geleide sleuteleigenschap (CMK) in Platform.
 
