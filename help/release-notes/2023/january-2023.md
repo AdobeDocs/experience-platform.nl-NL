@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2369'
-ht-degree: 1%
+source-wordcount: '2358'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ Artificial Intelligence and Machine Learning services stellen marketinganalisten
 
 ### Attribution AI
 
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die tot conversiegebeurtenissen leiden. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die tot conversiegebeurtenissen leiden. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
 **Bijgewerkte functies**
 
@@ -44,7 +44,7 @@ Zie de [AI/ML-services](../../intelligent-services/attribution-ai/overview.md) v
 
 ### Customer AI
 
-De AI van de Klant voor Real-time Customer Data Platform, wordt gebruikt om douanescore zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+De AI van de Klant voor Real-time Customer Data Platform, wordt gebruikt om douanescore zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
 
 **Bijgewerkte functies**
 
@@ -130,7 +130,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 | Functie | Beschrijving |
 | --- | --- |
-| Voorgestelde waarden voor tekenreeksvelden uitschakelen | U kunt nu [afzonderlijke voorgestelde waarden voor tekenreeksvelden uitschakelen](../../xdm/ui/fields/enum.md) in de [!UICONTROL Schemas] werkruimte, inclusief die van standaardcomponenten. Deze functie is alleen beschikbaar voor velden met voorgestelde waarden en wordt niet ondersteund voor opsommingsbeperkingen. |
+| Verbeteringen in weergavenamen van boomstructuur | Eerder werden veldnamen weergegeven in de gebruikersinterface, maar nu zijn de weergavenamen voor schemavelden op het schemacanvas mensvriendelijker voor lezen. |
 
 **Nieuwe XDM-componenten**
 
