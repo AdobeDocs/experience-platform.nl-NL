@@ -2,9 +2,9 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een geproduceerde bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
+source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Plat
 
 Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming verzendt of bijwerkt die u met Adobe Experience Platform Destination SDK hebt gemaakt. Als u een bestemming in Adobe Experience Platform wilt verzenden, stuurt u een e-mail naar <aepdestsdk@adobe.com> waaronder:
 
-* Een beschrijving van de gebruiksgevallen die uw bestemming oplost. Dit wordt niet vereist als u een bestaande bestemmingsconfiguratie bijwerkt.
+* Een beschrijving van de gebruiksgevallen die uw bestemming oplost. Dit wordt slechts vereist als u een nieuwe bestemmingsconfiguratie voorlegt.
+* Een beschrijving van de reden voor het verzenden van uw bestemming. Dit wordt slechts vereist als u een bestaande bestemmingsconfiguratie bijwerkt.
 * De resultaten van de test na het gebruiken van het bestemmingsAPI eindpunt om een vraag van HTTP aan uw bestemming uit te voeren. Gelieve te delen met Adobe een API vraag die aan uw bestemmingshindpunt wordt gemaakt en de API reactie die van uw bestemmingshindpunt wordt ontvangen.
 * Aanvullende vereisten voor bestandsgebaseerde doelen:
    * Een aanvraag en een reactievoorbeeld delen nadat de API voor testen is gebruikt [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
@@ -46,6 +47,14 @@ Verstrek een beschrijving van de gebruiksgevallen die uw bestemming voor klanten
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen kiezen met e-mailadressen die in VMG (Verizon Media) zijn uitgeschakeld, zodat ze snel een nieuw segment kunnen maken en de gewenste doelgroep kunnen duwen met de bijna-real-time API van VMG.
+
+## Reden voor update {#reason-for-update}
+
+>[!NOTE]
+>
+>Deze sectie is alleen vereist wanneer u een bestaande configuratie bijwerkt.
+
+Geef een korte beschrijving van de kwestie die door uw verzending wordt opgelost voor de bestaande bestemming. Als u bijvoorbeeld een bericht verzendt, worden de naam, beschrijving en het logo van uw bestemming mogelijk bijgewerkt wanneer u overschakelt van bèta naar algemene beschikbaarheid. Of, zou uw voorlegging een insect kunnen bevestigen dat in uw bestemmingsconfiguratie wordt ontdekt.
 
 ## Testresultaten na gebruik van de API voor testbestemming {#testing-api-response}
 
