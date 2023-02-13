@@ -4,7 +4,7 @@ title: IP adres lijst van gewenste personen voor het stromen bestemmingen
 type: Documentation
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw het eindpunt van HTTP REST API, Amazon Kinesis, of de instantie van de Hubs van de Gebeurtenis veilig uit te voeren Azure.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
+source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%
@@ -68,6 +68,7 @@ Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste personen
 `40.74.7.208/28`
 `52.142.236.87`
 `20.50.23.153`
+`20.101.246.9`
 `40.74.4.144/28`
 `40.74.7.160/28`
 `40.74.3.176/28`
