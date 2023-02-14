@@ -4,9 +4,9 @@ title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3417'
+source-wordcount: '3471'
 ht-degree: 0%
 
 ---
@@ -466,6 +466,11 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 ![Selectieoverzicht in de revisiestap.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Toepasselijk toestemmingsbeleid weergeven"
+>abstract="Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
 
 Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 
