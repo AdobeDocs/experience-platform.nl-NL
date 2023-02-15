@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verlopen van gebeurtenissen ervaren
 description: Dit document biedt algemene richtlijnen voor het configureren van vervaltijden voor afzonderlijke Experience Events in een Adobe Experience Platform-gegevensset.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Verlopen van ervaringsgebeurtenissen kunnen niet worden geconfigureerd via de ge
 Nadat de Verlopen van de Gebeurtenis van de Ervaring op een profiel-Toegelaten dataset zijn toegelaten, past het Platform automatisch de vervalwaarden voor elke gevangen gebeurtenis in een proces in twee stappen toe:
 
 1. Voor alle nieuwe gegevens die in de gegevensset worden opgenomen, wordt de vervalwaarde toegepast op de ingangstijd op basis van de tijdstempel van de gebeurtenis.
-1. Alle bestaande gegevens in de dataset hebben de vervalwaarde met terugwerkende kracht wordt toegepast als eenmalig backfill systeembaan. Zodra de vervalwaarde op de dataset is geplaatst, zullen de gebeurtenissen die ouder zijn dan de vervalwaarde onmiddellijk worden gelaten vallen zodra de systeembaan loopt. Alle andere gebeurtenissen worden geannuleerd zodra ze hun vervalwaarden uit de tijdstempel van de gebeurtenis bereiken.
+1. Alle bestaande gegevens in de dataset hebben de vervalwaarde met terugwerkende kracht wordt toegepast als eenmalig backfill systeembaan. Zodra de vervalwaarde op de dataset is geplaatst, zullen de gebeurtenissen die ouder zijn dan de vervalwaarde onmiddellijk worden gelaten vallen zodra de systeembaan loopt. Alle andere gebeurtenissen worden geannuleerd zodra ze hun vervalwaarden uit de tijdstempel van de gebeurtenis bereiken. Als alle Experience Events zijn verwijderd en het profiel geen profielkenmerken meer heeft, bestaat het profiel niet meer.
 
 >[!WARNING]
 >
