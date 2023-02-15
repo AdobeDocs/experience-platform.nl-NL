@@ -1,14 +1,14 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Help bij Adobe Experience Platform Web SDK
-breadcrumb-title: Web SDK Guide
-user-guide-description: Interactie met de diensten van Experience Cloud door het netwerk van de Rand.
+user-guide-title: Adobe Experience Platform Web SDK Help
+breadcrumb-title: Handleiding voor Web SDK
+user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 12%
+source-wordcount: '209'
+ht-degree: 21%
 
 ---
 
@@ -27,10 +27,13 @@ ht-degree: 12%
    * [Een CSP configureren](fundamentals/configuring-a-csp.md)
    * [Interactie met meerdere eigenschappen](fundamentals/interacting-with-multiple-properties.md)
    * [Client-tips voor gebruikersagent](fundamentals/user-agent-client-hints.md)
-* DataStreams {#datastreams}
+* Gegevensstromen {#datastreams}
    * [Overzicht](./datastreams/overview.md)
    * [Een gegevensstroom configureren](./datastreams/configure.md)
    * [Gegevensvoorvoegsel voor gegevensverzameling](./datastreams/data-prep.md)
+   * Gegevensverrijking {#data-enrichment}
+      * [Weezelgegevens via het weerkanaal](./datastreams/data-enrichment/weather.md)
+      * [Weather data field mappings](./datastreams/data-enrichment/weather-reference.md)
 * Identiteit {#identity}
    * [Overzicht](identity/overview.md)
    * [Apparaat-id&#39;s van eerste partij](identity/first-party-device-ids.md)
