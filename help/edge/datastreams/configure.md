@@ -1,10 +1,11 @@
 ---
 title: Een gegevensstroom configureren
-description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
+description: Sluit de integratie van uw Experience Platform SDK aan clientzijde aan op Adobe-producten en bestemmingen van derden.
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
 workflow-type: tm+mt
 source-wordcount: '1564'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -38,11 +39,11 @@ Als u deze gegevensstroom voor gebruik in Experience Platform vormt en SDK van h
 
 Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om de gegevensstroom te vormen.
 
-![Geavanceerde configuratieopties](../assets/datastreams/configure/advanced-options.png)
+![Geavanceerde configuratieopties](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | Instelling | Beschrijving |
 | --- | --- |
-| [!UICONTROL Geo Location] | Hiermee bepaalt u of GPS-opzoekingen worden uitgevoerd op basis van het IP-adres van de gebruiker. De standaardinstelling **[!UICONTROL None]** schakelt GPS-opzoekingen uit terwijl de **[!UICONTROL City]** Met deze instelling krijgt u GPS-coördinaten met twee decimalen. |
+| [!UICONTROL Geo Location] | Bepaalt of de raadplegingen van Geo voorkomen die op het IP van de gebruiker adres worden gebaseerd. De standaardinstelling **[!UICONTROL None]** schakelt alle Geo-zoekopdrachten uit terwijl de **[!UICONTROL City]** Met deze instelling krijgt u GPS-coördinaten met twee decimalen. |
 | [!UICONTROL First Party ID Cookie] | Als deze instelling is ingeschakeld, geeft het Edge Network de opdracht naar een opgegeven cookie te verwijzen wanneer u een [apparaat-id van eerste partij](../identity/first-party-device-ids.md)in plaats van deze waarde op te zoeken in het identiteitsoverzicht.<br><br>Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen. |
 | [!UICONTROL Third Party ID Sync] | De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Als deze instelling is ingeschakeld, kunt u opgeven welke container met id-syncs wordt uitgevoerd voor deze gegevensstroom. |
 | [!UICONTROL Access Type] | Bepaalt het authentificatietype dat het Netwerk van de Rand voor de gegevensstroom goedkeurt. <ul><li>**[!UICONTROL Mixed Authentication]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand zowel voor authentiek verklaarde als unauthenticated verzoeken goed. Selecteer deze optie als u de SDK van het Web wilt gebruiken of [Mobile SDK](https://aep-sdks.gitbook.io/docs/), samen met de [Server-API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: Wanneer deze optie wordt geselecteerd, keurt het Netwerk van de Rand slechts voor authentiek verklaarde verzoeken goed. Selecteer deze optie als u alleen de server-API wilt gebruiken en niet-geverifieerde aanvragen niet door het Edge-netwerk moeten worden verwerkt.</li></ul> |
