@@ -3,7 +3,7 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 2%
@@ -48,7 +48,7 @@ In de volgende tabel worden de bestaande regels beschreven die u moet volgen om 
 
 ### Naamnaamruimte-opname
 
-Vanaf 31 januari 2023 blokkeert Identity Service de inname van Adobe Analytics ID (AID) voor nieuwe klanten. Deze identiteit wordt doorgaans via het dialoogvenster [Adobe Analytics-bron](../sources/connectors/adobe-applications/analytics.md) en de [Adobe Audience Manager-bron](../sources//connectors/adobe-applications/audience-manager.md) en is overbodig omdat de ECID dezelfde webbrowser vertegenwoordigt. Neem contact op met uw accountmanager als u deze standaardconfiguratie wilt wijzigen.
+Vanaf 31 maart 2023 blokkeert Identity Service de inname van Adobe Analytics ID (AID) voor nieuwe klanten. Deze identiteit wordt doorgaans via het dialoogvenster [Adobe Analytics-bron](../sources/connectors/adobe-applications/analytics.md) en de [Adobe Audience Manager-bron](../sources//connectors/adobe-applications/audience-manager.md) en is overbodig omdat de ECID dezelfde webbrowser vertegenwoordigt. Neem contact op met uw accountmanager als u deze standaardconfiguratie wilt wijzigen.
 
 ## Volgende stappen
 
