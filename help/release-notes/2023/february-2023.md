@@ -1,21 +1,16 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
-description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: 78b21c0eee2a1b29ee2d2bd647fec1ce8f535705
+title: Opmerkingen bij de release van Adobe Experience Platform, februari 2023
+description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
+source-git-commit: b14ef8783a39fc063183e385f195af473acbc33d
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '30'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 25 januari 2023**
+**Releasedatum: 22 februari 2023**
 
 Updates voor bestaande functies in Adobe Experience Platform:
-
-- [Betrouwbaarheid](#assurance)
-
-## Kunstmatige intelligentie en machinaal leren {#assurance}
-
 
