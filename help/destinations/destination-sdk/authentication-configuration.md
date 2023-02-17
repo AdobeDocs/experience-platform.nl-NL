@@ -2,9 +2,9 @@
 description: Gebruik de gesteunde authentificatieconfiguraties in Adobe Experience Platform Destination SDK om gebruikers voor authentiek te verklaren en gegevens te activeren aan uw bestemmingspunt.
 title: Verificatieconfiguratie
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,7 @@ De authentificatieconfiguratie die u selecteert bepaalt hoe het Experience Platf
 Adobe Experience Platform Destination SDK ondersteunt verschillende verificatietypen:
 
 * [Waardere verificatie](#bearer)
+* [Basisverificatie](#basic)
 * [[!DNL Amazon S3] verificatie](#s3)
 * [[!DNL Azure Blob] Opslag](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
@@ -34,6 +35,22 @@ Verwijs naar de volgende secties voor de details van de authentificatieconfigura
 
 * [Verificatieconfiguraties voor streamingdoelen](destination-configuration.md#customer-authentication-configurations)
 * [Verificatieconfiguraties voor bestandsgebaseerde doelen](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## Basisverificatie {#basic}
+
+Basisverificatie wordt ondersteund voor streamingdoelen in Experience Platform.
+
+Wanneer u het basisidentificatietype vormt, moeten de gebruikers een gebruikersbenaming en een wachtwoord invoeren om met uw bestemming te verbinden.
+
+Aan opstellings basisauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` de `/destinations` eindpunt zoals hieronder getoond:
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## Waardere verificatie {#bearer}
 

@@ -2,9 +2,9 @@
 description: Deze configuratie staat u toe om basisinformatie zoals uw bestemmingsnaam, categorie, beschrijving, embleem, en meer te wijzen. De montages in deze configuratie bepalen ook hoe de gebruikers van het Experience Platform aan uw bestemming voor authentiek verklaren, hoe het in het gebruikersinterface van het Experience Platform en de identiteiten verschijnt die naar uw bestemming kunnen worden uitgevoerd.
 title: Streaming doelconfiguratieopties voor Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1904'
 ht-degree: 1%
 
 ---
@@ -152,7 +152,7 @@ Gebruikers selecteren **[!UICONTROL Connect to destination]** om de OAuth 2 auth
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Tekenreeks | Wijst op de configuratie die wordt gebruikt om de klanten van het Experience Platform aan uw server voor authentiek te verklaren. Zie `authType` hieronder voor geaccepteerde waarden. |
-| `authType` | Tekenreeks | Accepteerde waarden voor streamingdoelen zijn:<ul><li>`BEARER`. Als uw bestemming dragerauthentificatie steunt, plaats `"authType":"Bearer"` en  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in de [leveringssectie bestemming](./destination-configuration.md).</li><li>`OAUTH2`. Als uw bestemming OAuth 2 authentificatie steunt, plaats `"authType":"OAUTH2"` en voeg de vereiste gebieden voor OAuth 2 toe, zoals aangetoond in [Destination SDK OAuth 2-verificatiepagina](./oauth2-authentication.md). Bovendien instellen `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in de [leveringssectie bestemming](./destination-configuration.md).</li> |
+| `authType` | Tekenreeks | Accepteerde waarden voor streamingdoelen zijn:<ul><li>`BASIC`. Als uw bestemming basisauthentificatie steunt, plaats `"authType":"Basic"` en  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in de [leveringssectie bestemming](./destination-configuration.md).</li><li>`BEARER`. Als uw bestemming dragerauthentificatie steunt, plaats `"authType":"Bearer"` en  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in de [leveringssectie bestemming](./destination-configuration.md).</li><li>`OAUTH2`. Als uw bestemming OAuth 2 authentificatie steunt, plaats `"authType":"OAUTH2"` en voeg de vereiste gebieden voor OAuth 2 toe, zoals aangetoond in [Destination SDK OAuth 2-verificatiepagina](./oauth2-authentication.md). Bovendien instellen `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in de [leveringssectie bestemming](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
