@@ -3,10 +3,10 @@ title: Gerelateerde accounts in Real-Time CDP B2B Edition
 type: Documentation
 description: In Experience Platform Real-Time CDP B2B wordt een overzicht en meer informatie over de desbetreffende rekeningen gegeven.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 4%
+source-wordcount: '427'
+ht-degree: 3%
 
 ---
 
@@ -31,6 +31,16 @@ Met bijbehorende rekeningen [!DNL Real-Time CDP B2B] Hier ziet u een lijst met a
 ![Scherm met verwante accounts in de gebruikersinterface van het Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Gebruik deze functie om verwante accountprofielen voor een accountprofiel weer te geven in de gebruikersinterface van het Experience Platform en neem de verwante accounts op in uw segmentdefinities om uw bereik te vergroten of om bredere criteria toe te passen in uw segmenten.
+
+## De verwante accountservice inschakelen {#enable}
+
+Selecteer **[!UICONTROL Profiles]** op de zijbalk, gevolgd door **[!UICONTROL Settings]**.
+
+![Gebruikersinterface van Experience Platform markeert profielen en instellingen.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+De schakeloptie naast elkaar selecteren [!UICONTROL Enable related accounts] om de dienst toe te laten, en dan te selecteren **[!UICONTROL Save]**.
+
+![Het scherm met accountinstellingen waarin de schakeloptie wordt gemarkeerd en opgeslagen.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Werking {#how-it-works}
 
