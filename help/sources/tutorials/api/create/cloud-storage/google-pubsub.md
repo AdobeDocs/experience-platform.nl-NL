@@ -2,9 +2,9 @@
 title: Een Google PubSub-bronverbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,7 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL PubSub]moet u waarden op
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `credentials` | De referentie of sleutel die vereist is voor verificatie [!DNL PubSub]. |
 | `topicId` | De id voor de [!DNL PubSub] resource die een feed met berichten vertegenwoordigt. U moet een onderwerpidentiteitskaart specificeren als u toegang tot een specifieke stroom van gegevens in uw wilt verlenen [!DNL Google PubSub] bron. |
+| `subscriptionId` | De id van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en brondoelverbindingen terug. De [!DNL PubSub] Verbindingsspecificatie-id is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Zie deze voor meer informatie over deze waarden [[!DNL PubSub] verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Om de op rekening-gebaseerde authentificatie van de dienst te gebruiken, zie dit [[!DNL PubSub] handleiding voor het maken van serviceaccounts](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
@@ -79,7 +80,8 @@ curl -X POST \
           "params": {
               "projectId": "acme-project",
               "credentials": "{CREDENTIALS}",
-              "topicID": "acmeProjectAPI"
+              "topicId": "acmeProjectAPI",
+              "subscriptionId": "acme-project-api-new"
           }
       },
       "connectionSpec": {
@@ -93,7 +95,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `auth.params.credentials` | De referentie of sleutel die vereist is voor verificatie [!DNL PubSub]. |
-| `auth.params.topicID` | De onderwerp-id van uw [!DNL PubSub] bron waartoe u toegang wilt verlenen. |
+| `auth.params.topicId` | De onderwerp-id van uw [!DNL PubSub] bron waartoe u toegang wilt verlenen. |
+| `auth.params.subscriptionId` | De id van het abonnement voor uw [!DNL PubSub] onderwerp. |
 | `connectionSpec.id` | De [!DNL PubSub] verbinding, specificatie-id: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **Antwoord**

@@ -2,9 +2,9 @@
 title: Een Google PubSub-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van het Platform.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,7 @@ Om verbinding te maken [!DNL PubSub] aan Platform, moet u een geldige waarde voo
 | Project-id | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | Credentials | De referentie- of persoonlijke sleutel-id die is vereist voor verificatie [!DNL PubSub]. |
 | Onderwerp-id | De id voor de [!DNL PubSub] resource die een feed met berichten vertegenwoordigt. U moet een onderwerpidentiteitskaart specificeren als u toegang tot een specifieke stroom van gegevens in uw wilt verlenen [!DNL Google PubSub] bron. |
+| Abonnement-id | De id van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. |
 
 Raadpleeg de volgende secties voor meer informatie over deze waarden [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie het volgende [PubSub-hulplijn](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
 
@@ -48,7 +49,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Onder de [!UICONTROL Cloud storage] categorie, selecteert u **[!UICONTROL Google PubSub]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
-![catalogus](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![De broncatalogus op Experience Platform UI.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 De **[!UICONTROL Connect to Google PubSub]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -56,7 +57,7 @@ De **[!UICONTROL Connect to Google PubSub]** wordt weergegeven. Op deze pagina k
 
 Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL PubSub] account waarmee u een nieuwe gegevensstroom wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
 
-![bestaand](../../../../images/tutorials/create/google-pubsub/existing.png)
+![De bestaande accountselectie in de workflow voor bronnen.](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Nieuwe account
 
@@ -68,7 +69,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
-![new](../../../../images/tutorials/create/google-pubsub/new.png)
+![De nieuwe accountinterface in de workflow voor bronnen.](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## Volgende stappen
 
