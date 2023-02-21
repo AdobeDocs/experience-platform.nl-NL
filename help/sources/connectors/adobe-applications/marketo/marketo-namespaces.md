@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Marketo-bronaansluiting;naamruimten;schema's;b2b;B2B
-solution: Experience Platform
 title: B2B-naamruimten en -schema's
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1727'
 ht-degree: 1%
 
 ---
 
 # B2B-naamruimten en -schema&#39;s
+
+>[!NOTE]
+>
+>U kunt sjablonen in de gebruikersinterface van Adobe Experience Platform gebruiken om het maken van elementen voor B2B- en B2C-gegevens te versnellen. Lees voor meer informatie de handleiding op [sjablonen gebruiken in de gebruikersinterface van Platforms](../../../tutorials/ui/templates.md).
 
 Dit document bevat informatie over de onderliggende instelling voor de naamruimten en schema&#39;s die met B2B-bronnen moeten worden gebruikt. Dit document bevat ook informatie over het instellen van het Postman-hulpprogramma voor automatisering dat vereist is voor het genereren van B2B-naamruimten en -schema&#39;s.
 

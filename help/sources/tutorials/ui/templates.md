@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;
 description: Adobe Experience Platform biedt vooraf geconfigureerde sjablonen die u kunt gebruiken om uw gegevensinvoer te versnellen. De malplaatjes omvatten auto-geproduceerde activa zoals schema's, datasets, toewijzingsregels, identiteiten, identiteitsnamespaces, en dataflows die u kunt gebruiken wanneer het brengen van gegevens van een bron aan Experience Platform.
-title: (Alfa) Maak een gegevensstroom voor bronnen met behulp van sjablonen in de gebruikersinterface
+title: (Beta) Creeer een gegevensstroom van bronnen gebruikend malplaatjes in UI
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 1%
+source-wordcount: '1307'
+ht-degree: 0%
 
 ---
 
-# (Alfa) Maak een gegevensstroom voor bronnen met behulp van sjablonen in de gebruikersinterface
+# (Beta) Creeer een gegevensstroom van bronnen gebruikend malplaatjes in UI
 
 >[!IMPORTANT]
 >
->Sjablonen bevinden zich in Alfa en worden momenteel alleen ondersteund door de [[!DNL Marketo Engage] bron](../../connectors/adobe-applications/marketo/marketo.md). De documentatie en functies kunnen worden gewijzigd.
+>De malplaatjes zijn in bèta en door de volgende bronnen gesteund:
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>De documentatie en functies kunnen worden gewijzigd.
 
 Adobe Experience Platform biedt vooraf geconfigureerde sjablonen die u kunt gebruiken om uw gegevensinvoer te versnellen. De malplaatjes omvatten auto-geproduceerde activa zoals schema&#39;s, datasets, identiteiten, toewijzingsregels, identiteitsnamespaces, en dataflows die u kunt gebruiken wanneer het brengen van gegevens van een bron aan Experience Platform.
 
@@ -25,7 +32,7 @@ Met sjablonen kunt u:
 * Minimaliseer fouten die tijdens het proces van handmatige gegevensinvoer kunnen voorkomen.
 * Werk automatisch gegenereerde elementen op elk gewenst moment bij om deze aan te passen aan uw gebruiksscenario&#39;s.
 
-De volgende zelfstudie biedt stappen voor het gebruik van sjablonen in de gebruikersinterface van het Platform met behulp van de [[!DNL Marketo Engage] bron](../../connectors/adobe-applications/marketo/marketo.md).
+De volgende zelfstudie biedt stappen voor het gebruik van sjablonen in de gebruikersinterface van het Platform.
 
 ## Aan de slag
 
@@ -43,11 +50,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 >abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-time Customer Data Platform-abonnementaccount."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl" text="Real-Time CDP-overzicht"
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] op het scherm worden diverse bronnen weergegeven die kunnen worden gebruikt om een account te maken.
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
+Gebruik de *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
-Onder de [!UICONTROL Adobe applications] categorie, selecteert u **[!UICONTROL Marketo Engage]** en selecteer vervolgens **[!UICONTROL Add data]**.
+Ga naar de [!UICONTROL Adobe applications] categorie om de [!DNL Marketo Engage] bronkaart en selecteer vervolgens [!UICONTROL Add data] om te beginnen.
 
 ![Een catalogus van de werkruimte Bronnen met de Marketo Engage-bron gemarkeerd.](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Als u automatisch gegenereerde elementen wilt gebruiken, selecteert u **[!UICONT
 
 De verificatiestap wordt weergegeven en u wordt gevraagd een nieuw account te maken of een bestaand account te gebruiken.
 
-#### Bestaande account
+>[!BEGINTABS]
+
+>[!TAB Een bestaande account gebruiken]
 
 Als u een bestaande account wilt gebruiken, selecteert u [!UICONTROL Existing account] en selecteer vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven.
 
 ![De selectiepagina voor een bestaande account met een lijst met bestaande accounts waartoe u toegang hebt.](../../images/tutorials/templates/existing-account.png)
 
-#### Nieuwe account
+>[!TAB Een nieuwe account maken]
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geef vervolgens uw bronverbindingsgegevens en accountverificatiegegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de nieuwe verbinding enige tijd tot stand brengen.
 
 ![De verificatiepagina voor een nieuwe account met gegevens over de bronverbinding en verificatiegegevens van de account.](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### Sjablonen selecteren
 
-Nadat u uw account hebt geverifieerd en geselecteerd, wordt een lijst met sjablonen weergegeven. Selecteer het voorvertoningspictogram naast een sjabloonnaam om een voorvertoning weer te geven van voorbeeldgegevens uit de sjabloon.
+Afhankelijk van het geselecteerde bedrijfstype, verschijnt een lijst van malplaatjes. Het voorvertoningspictogram selecteren ![voorvertoningspictogram](../../images/tutorials/templates/preview-icon.png) naast een sjabloonnaam om voorbeeldgegevens van de sjabloon voor te vertonen.
 
 ![Een lijst met sjablonen waarop het voorvertoningspictogram is gemarkeerd.](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Als u één of gedeeltelijke punten van de lijst van beschikbare malplaatjes sel
 >Sjablonen die al zijn gebruikt, worden uitgeschakeld in de selectie.
 
 ![De lijst van malplaatjes met het malplaatje van de Rol van het Contact van de Kans geselecteerd.](../../images/tutorials/templates/select-template.png)
+
+### Een schema instellen
+
+De [!DNL Microsoft Dynamics] en de [!DNL Salesforce] bronnen beide ondersteuning bij het plannen van gegevensstromen.
+
+Gebruik de het plannen interface om een innameprogramma voor uw gegevensstromen te vormen. Invoerfrequentie instellen op **Eenmaal** om een eenmalige opname te maken.
+
+![De het plannen interface voor de malplaatjes van de Dynamiek en van Salesforce.](../../images/tutorials/templates/schedule.png)
+
+U kunt ook de innamefrequentie instellen op **Minuut**, **Uur**, **Dag**, of **Week**. Als u uw gegevensstroom voor veelvoudige ingesties plant, dan moet u een interval plaatsen om een tijdkader tussen elke opname te vestigen. Bijvoorbeeld een innamefrequentie ingesteld op **Uur** en een interval instellen op **15** betekent dat uw gegevensstroom gepland is om gegevens elke **15 uur**.
+
+Tijdens deze stap kunt u ook **backfill** en definieert u een kolom voor de incrementele opname van gegevens. Backfill wordt gebruikt om historische gegevens in te voeren, terwijl in de kolom die u voor incrementele inname definieert, nieuwe gegevens kunnen worden onderscheiden van bestaande gegevens.
+
+Nadat u het configureren van uw innameschema hebt voltooid, selecteert u **[!UICONTROL Finish]**.
+
+![De het plannen interface voor Dynamica en malplaatjes Salesforce met toegelaten backfill.](../../images/tutorials/templates/backfill.png)
 
 ### Elementen bekijken {#review-assets}
 
