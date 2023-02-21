@@ -1,17 +1,17 @@
 ---
 title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
-description: De nieuwste releaseopmerkingen voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
+description: De nieuwste aanvullende informatie voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
+source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '495'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
 # Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
 
-## 25 januari 2022
+## 25 januari 2023
 
 * **Nieuw beginscherm**: De homepage voor de UI van de Inzameling van Gegevens is bijgewerkt om nuttige onboarding informatie en verbindingen te omvatten om productiviteit te stroomlijnen. Dit omvat:
    1. Documentatie en aanbevolen workflows om aan de slag te gaan
