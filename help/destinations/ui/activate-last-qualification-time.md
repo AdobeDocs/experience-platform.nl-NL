@@ -3,7 +3,7 @@ title: Gebruik het laatste kwalificatietijd XDM attribuut in de nieuwe bètawolo
 description: Leer hoe u het laatste XDM-attribuut voor kwalificatietijd in de nieuwe bètawolkenopslagbestemmingen gebruikt
 hidefromtoc: y
 hide: y
-source-git-commit: 7dd525d8c71cdfb9fb2393181faa3270ad1dc4cc
+source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -24,7 +24,7 @@ De laatste kwalificatietijd gebruiken (`lastQualificationTime`) XDM-kenmerk, moe
 
 ## Hoe te om de laatste kwalificatietijd XDM attributen te gebruiken {#how-to-use}
 
-Als u een van de zes nieuwe bètaconnectors voor cloudopslag gebruikt, kunt u het laatste XDM-attribuut voor kwalificatietijd in het dialoogvenster [toewijzingsstap](//help/destinations/ui/activate-batch-profile-destinations.md#mapping) van de activeringsworkflow om een kolom in het geëxporteerde bestand te maken met de nieuwste tijdstempel van wanneer een profiel in aanmerking komt voor een segment. Dit kan u helpen bij het gebruik van bepaalde maateenheden of analysemogelijkheden en u een beter idee geven van wanneer u bepaalde soorten publiek moet activeren.
+Als u een van de zes nieuwe bètaconnectors voor cloudopslag gebruikt, kunt u het laatste XDM-attribuut voor kwalificatietijd in het dialoogvenster [toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) van de activeringsworkflow om een kolom in het geëxporteerde bestand te maken met de nieuwste tijdstempel van wanneer een profiel in aanmerking komt voor een segment. Dit kan u helpen bij het gebruik van bepaalde maateenheden of analysemogelijkheden en u een beter idee geven van wanneer u bepaalde soorten publiek moet activeren.
 
 Opmerking: toevoegen `lastQualificationTime` naar het geëxporteerde bestand moet u de waarde momenteel handmatig invoegen `xdm: segmentMembership.ups.seg_id.lastQualificationTime` in het bronveld, zoals hieronder wordt weergegeven. U kunt het doelveld ook bewerken naar `lastQualificationTime` of een andere waarde die u deze kolom een naam wilt geven. Aangezien dit een bètafunctionaliteit is, is de syntaxis van de `xdm: segmentMembership.ups.seg_id.lastQualificationTime` De waarde kan in de toekomst veranderen.
 
