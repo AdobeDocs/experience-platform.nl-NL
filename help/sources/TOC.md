@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Help bij Adobe Experience Platform Source Connectors
-breadcrumb-title: Handleiding voor bronaansluitingen
-user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
+user-guide-title: Adobe Experience Platform Source Connectors Help
+breadcrumb-title: Gids voor Source Connectors
+user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 5%
+source-wordcount: '931'
+ht-degree: 8%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 5%
          - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage-verificatiegids](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Reclame {#advertising}
+   - Advertising {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
@@ -107,7 +107,7 @@ ht-degree: 5%
       - [HTTP API-connector](connectors/streaming/http.md)
 - API-zelfstudies {#api-tutorials}
    - Een basisverbinding maken {#create}
-      - Reclame {#advertising}
+      - Advertising {#advertising}
          - [Google-advertenties](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
@@ -216,8 +216,9 @@ ht-degree: 5%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Aangepaste Marketo-activiteiten](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
-      - Reclame {#advertising}
+      - Advertising {#advertising}
          - [Google-advertenties](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)

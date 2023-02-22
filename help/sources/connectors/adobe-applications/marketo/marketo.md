@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketo Engage-aansluiting
 description: Dit document verstrekt een overzicht van de Marketo Engage bronschakelaar, met inbegrip van informatie over zijn authentificatie, afbeelding, en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -77,8 +77,9 @@ In de volgende tabel wordt de verwachte vertraging voor het introduceren weergeg
 
 In de volgende documentatie vindt u meer informatie over het maken van een [!DNL Marketo] bronverbinding:
 
-* Voor informatie over hoe u verbinding kunt maken met uw [!DNL Marketo] gegevens aan Platform, zie de zelfstudie over [Marketo-bronaansluiting maken in de gebruikersinterface](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met worden gebruikt [!DNL Marketo], zie de documentatie voor [B2B-naamruimten en -schema&#39;s](./marketo-namespaces.md).
-* Voor informatie over het zoeken naar uw [!DNL Marketo] munchkin-id en het genereren van uw referenties raadpleegt u de [[!DNL Marketo] verificatiegids](./marketo-auth.md).
-* Voor informatie over de specifieke toewijzingsregels die van toepassing zijn op [!DNL Marketo] datasets, zie de documentatie over [[!DNL Marketo] veldtoewijzingen](../mapping/marketo.md).
-* Voor algemene informatie over [!DNL Real-Time Customer Data Platform B2B Edition] en de bijbehorende functies, raadpleegt u de documentatie over [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* Voor informatie over hoe u verbinding kunt maken met uw [!DNL Marketo] gegevens naar Platform, lees de zelfstudie op [een [!DNL Marketo] bronverbinding in de gebruikersinterface](../../../tutorials/ui/create/adobe-applications/marketo.md).
+   * Lees de zelfstudie voor informatie over hoe u schema&#39;s kunt instellen en aangepaste activiteitgegevens kunt invoeren [een bronverbinding en gegevensstroom maken voor [!DNL Marketo] aangepaste activiteitsgegevens](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+* Voor informatie over de onderliggende opstelling voor B2B namespaces en schema&#39;s die met worden gebruikt [!DNL Marketo], lees de documentatie voor [B2B-naamruimten en -schema&#39;s](./marketo-namespaces.md).
+* Voor informatie over het zoeken naar uw [!DNL Marketo] munchkin-id en het genereren van uw referenties lezen de [[!DNL Marketo] verificatiegids](./marketo-auth.md).
+* Voor informatie over de specifieke toewijzingsregels die van toepassing zijn op [!DNL Marketo] datasets, lees de documentatie over [[!DNL Marketo] veldtoewijzingen](../mapping/marketo.md).
+* Voor algemene informatie over [!DNL Real-Time Customer Data Platform B2B Edition] en de bijbehorende functies, lees de documentatie op [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e4fa36ebbb52ba0e5b37cda8d220e571d8afa4aa
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -39,10 +39,11 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Ado
    - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] bronoverzicht](connectors/adobe-applications/marketo/marketo.md)
    - [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [Een [!DNL Marketo Engage] bronverbinding en gegevensstroom voor gegevens met aangepaste activiteit](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 - [Adobe Workfront-bronoverzicht](connectors/adobe-applications/workfront.md)
    - [Een Workfront-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/workfront.md)
 
-### Reclame {#advertising}
+### Advertising {#advertising}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 

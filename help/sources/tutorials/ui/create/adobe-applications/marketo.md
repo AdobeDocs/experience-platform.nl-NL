@@ -1,22 +1,19 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Marketo-bronaansluiting;Marketo-aansluiting;Marketo-bron;Marketo
-solution: Experience Platform
-title: Creeer een Marketo Engage bronschakelaar in UI
-type: Tutorial
-description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronconnector in de UI om B2B-gegevens over te brengen naar Adobe Experience Platform.
+title: Creeer een Verbinding van de Bron van Marketo Engage en Dataflow in UI
+description: Deze zelfstudie bevat stappen voor het maken van een Marketo Engage-bronverbinding en gegevensstroom in de gebruikersinterface om B2B-gegevens over te brengen naar Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1486'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Marketo Engage] bronschakelaar in UI
+# Een [!DNL Marketo Engage] bronverbinding en gegevensstroom in de gebruikersinterface
 
 >[!IMPORTANT]
 >
->Voordat u een [!DNL Marketo Engage] bronverbinding en een gegevensstroom, moet u eerst ervoor zorgen dat u hebt [Adobe IMS-organisatie-id is toegewezen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Bovendien moet u ervoor zorgen dat u hebt voltooid [automatisch vullen [!DNL Marketo] B2B-naamruimten en -schema&#39;s](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) voordat u een bronverbinding en een gegevensstroom maakt.
+>Voordat u een [!DNL Marketo Engage] bronverbinding en een gegevensstroom, moet u eerst ervoor zorgen dat u hebt [aan uw Adobe Organisatie-id toegewezen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Bovendien moet u ervoor zorgen dat u hebt voltooid [automatisch vullen [!DNL Marketo] B2B-naamruimten en -schema&#39;s](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) voordat u een bronverbinding en een gegevensstroom maakt.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Marketo Engage] (hierna &quot;[!DNL Marketo]&quot;) bronaansluiting in de gebruikersinterface om B2B-gegevens naar Adobe Experience Platform te brengen.
 
@@ -84,23 +81,27 @@ Selecteer eerst de gegevensset die u wilt invoeren en selecteer vervolgens **[!U
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Gegevens over gegevensstroom opgeven
+## Gegevens over gegevensstroom opgeven {#provide-dataflow-details}
 
 De [!UICONTROL Dataflow detail] De pagina staat u toe om te selecteren of u een bestaande dataset of een nieuwe dataset wilt gebruiken. Tijdens dit proces kunt u ook instellingen configureren voor [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], en [!UICONTROL Alerts].
 
 ![details gegevensstroom](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
-### Een bestaande gegevensset gebruiken
+>[!BEGINTABS]
+
+>[!TAB Een bestaande gegevensset gebruiken]
 
 Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Existing dataset]**. U kunt of een bestaande dataset terugwinnen gebruikend [!UICONTROL Advanced search] of door door de lijst van bestaande datasets in het dropdown menu te scrollen. Zodra u een dataset hebt geselecteerd, verstrek een naam en een beschrijving voor uw gegevensstroom.
 
 ![bestaande gegevensset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-### Een nieuwe gegevensset gebruiken
+>[!TAB Een nieuwe gegevensset gebruiken]
 
 Om in een nieuwe dataset in te gaan, selecteer **[!UICONTROL New dataset]** en geef vervolgens een naam voor de uitvoergegevensset en een optionele beschrijving op. Selecteer vervolgens het schema waaraan u wilt toewijzen [!UICONTROL Advanced search] of door door de lijst van bestaande schema&#39;s in het dropdown menu te scrollen. Nadat u een schema hebt geselecteerd, geeft u een naam en een beschrijving voor de gegevensstroom op.
 
 ![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!ENDTABS]
 
 ### Inschakelen [!DNL Profile] en foutdiagnostiek
 
@@ -110,7 +111,7 @@ Selecteer vervolgens de **[!UICONTROL Profile dataset]** schakelen om uw gegeven
 
 >[!IMPORTANT]
 >
->De [!DNL Marketo] de schakelaar gebruikt batch-opname om alle historische verslagen in te voeren en gebruikt het stromen ingestie voor updates in real time. Hierdoor kan de connector doorgaan met streamen terwijl onjuiste records worden ingeslikt. De optie **[!UICONTROL Partial ingestion]** schakelen en vervolgens instellen [!UICONTROL Error threshold %] maximaal gebruiken om te voorkomen dat de gegevensstroom mislukt.
+>De [!DNL Marketo] de bron gebruikt batch-opname om alle historische records in te voeren en gebruikt streaming opname voor realtime updates. Hierdoor kan de bron doorgaan met streamen terwijl onjuiste records worden ingeslikt. De optie **[!UICONTROL Partial ingestion]** schakelen en vervolgens instellen [!UICONTROL Error threshold %] maximaal gebruiken om te voorkomen dat de gegevensstroom mislukt.
 
 ![met profiel en fouten](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
@@ -121,6 +122,14 @@ U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van u
 Wanneer u klaar bent met het opgeven van details voor uw gegevensstroom, selecteert u **[!UICONTROL Next]**.
 
 ![waarschuwingen](../../../../images/tutorials/create/marketo/alerts.png)
+
+### Niet-geclaimde accounts overslaan bij het invoeren van bedrijfsgegevens
+
+Wanneer het creëren van een dataflow om gegevens van de bedrijfsdataset in te voeren, kunt u vormen [!UICONTROL Exclude unclaimed accounts] om niet-geclaimde accounts uit te sluiten of op te nemen.
+
+Wanneer personen een formulier invullen, [!DNL Marketo] leidt tot een fantoomrekeningsverslag dat op de Naam van het Bedrijf wordt gebaseerd dat geen andere gegevens bevat. Voor nieuwe gegevensstromen, wordt de knevel om niet geclaimde rekeningen uit te sluiten toegelaten door gebrek. Voor bestaande gegevensstromen, kunt u de eigenschap toelaten of onbruikbaar maken, met veranderingen die op nieuw opgenomen gegevens en niet bestaande gegevens van toepassing zijn.
+
+![niet-opgevraagde rekeningen](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Uw kaart toewijzen [!DNL Marketo] Gegevenssetbronvelden naar doel-XDM-velden
 
