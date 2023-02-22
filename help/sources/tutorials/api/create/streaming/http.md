@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
 description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `auth.params.sourceId` | Een extra id die kan worden gebruikt bij het maken van een geverifieerde basisverbinding. Deze parameter is optioneel en gebruikt dezelfde waarde als de parameter `name` kenmerk, als dit niet wordt opgegeven. |
-| `auth.params.authenticationRequired` | De parameter die opgeeft dat de gemaakte streamingverbinding |
+| `auth.params.authenticationRequired` | Deze parameter geeft aan of verificatie vereist is voor de streamingverbinding. Indien `authenticationRequired` is ingesteld op `true` dan moet de authentificatie voor de het stromen verbinding worden verstrekt. Indien `authenticationRequired` is ingesteld op `false` dan wordt de authentificatie niet vereist. |
 
 **Antwoord**
 

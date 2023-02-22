@@ -3,7 +3,7 @@ title: Versleutelde gegevensinsluiting
 description: Met Adobe Experience Platform kunt u gecodeerde bestanden opnemen via batchbronnen voor cloudopslag.
 hide: true
 hidefromtoc: true
-source-git-commit: 0457784b8aa97d55882b794077aecdbd2a9a612a
+source-git-commit: 526c9665843efaeb0e98423dc424a4193434f583
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 0%
@@ -53,15 +53,15 @@ Het volgende verzoek produceert een encryptiesleutel gebruikend het PGP encrypti
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
       "encryptionAlgorithm": "PGP",
       "params": {
-          "passPhrase": "{PASSPHRASE}"
+          "passPhrase": "{{PASSPHRASE}}"
       }
   }'
 ```
@@ -128,9 +128,9 @@ Met de volgende aanvraag wordt een gegevensstroom gemaakt voor het invoeren van 
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "ACME Customer Data",
