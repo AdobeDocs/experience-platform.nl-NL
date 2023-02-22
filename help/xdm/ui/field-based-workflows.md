@@ -4,7 +4,7 @@ description: Leer hoe u velden van bestaande veldgroepen afzonderlijk kunt toevo
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Deze handleiding behandelt de verschillende methoden voor het toevoegen van afzo
 
 In deze zelfstudie wordt ervan uitgegaan dat u bekend bent met de [compositie van XDM-schema&#39;s](../schema/composition.md) en hoe te om de Redacteur van het Schema in Platform UI te gebruiken. Als u de stappen wilt volgen, moet u beginnen met het proces van [een nieuw schema maken](./resources/schemas.md) en toewijzen aan een standaardklasse voordat u doorgaat met deze handleiding.
 
-## Velden verwijderen die zijn toegevoegd uit standaardveldgroepen
+## Velden verwijderen die zijn toegevoegd uit standaardveldgroepen {#remove-field-group}
 
 Nadat u een standaardveldgroep aan een schema hebt toegevoegd, kunt u alle standaardvelden verwijderen die u niet nodig hebt.
 

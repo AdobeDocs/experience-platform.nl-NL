@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Help-systeem voor Experience Data Model (XDM)
-breadcrumb-title: Handleiding Experience Data Model (XDM)
-user-guide-description: Gebruik de klassen van het Gegevensmodel van de Ervaring (XDM) en de groepen van het schemagebied om ervaringsgegevens te standaardiseren.
+user-guide-title: Hulp bij Experience Data Model (XDM) System
+breadcrumb-title: Handleiding voor Experience Data Model (XDM)
+user-guide-description: Gebruik de klassen en schemaveldgroepen van Experience Data Model (XDM) om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: fda856051af104ca6363274d93ca65807f9881a3
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 5%
+source-wordcount: '517'
+ht-degree: 10%
 
 ---
 
@@ -193,7 +193,8 @@ ht-degree: 5%
    * [Specifieke velden toevoegen aan een schema (API)](./tutorials/specific-fields-api.md)
    * [Aangepaste velden definiëren (API)](./tutorials/custom-fields-api.md)
    * [Voorgestelde waarden toevoegen aan een veld (API)](tutorials/suggested-values.md)
-   * [Een XDM-veld verwijderen](tutorials/field-deprecation.md)
+   * [Een XDM-veld in de gebruikersinterface verwijderen](tutorials/field-deprecation-ui.md)
+   * [Een XDM-veld in de API verwijderen](tutorials/field-deprecation-api.md)
    * [Een schemarelatie definiëren in de UI](tutorials/relationship-ui.md)
    * [Een schemarelatie definiëren in de API](tutorials/relationship-api.md)
    * [Een schemarelatie definiëren in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)

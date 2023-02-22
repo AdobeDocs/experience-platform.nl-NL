@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -417,7 +417,7 @@ De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext 
 
 #### Vervangen velddescriptor
 
-U kunt [een veld binnen een aangepaste XDM-bron vervangen](../tutorials/field-deprecation.md#custom) door een `meta:status` kenmerk ingesteld op `deprecated` op het betrokken gebied. Als u velden die worden verschaft door standaard XDM-bronnen in uw schema&#39;s wilt vervangen, kunt u echter een vervangen velddescriptor toewijzen aan het desbetreffende schema om hetzelfde effect te bereiken. Met de [correct `Accept` header](../tutorials/field-deprecation.md#verify-deprecation)kunt u vervolgens bekijken welke standaardvelden zijn vervangen voor een schema wanneer u het opzoekt in de API.
+U kunt [een veld binnen een aangepaste XDM-bron vervangen](../tutorials/field-deprecation-api.md#custom) door een `meta:status` kenmerk ingesteld op `deprecated` op het betrokken gebied. Als u velden die worden verschaft door standaard XDM-bronnen in uw schema&#39;s wilt vervangen, kunt u echter een vervangen velddescriptor toewijzen aan het desbetreffende schema om hetzelfde effect te bereiken. Met de [correct `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation)kunt u vervolgens bekijken welke standaardvelden zijn vervangen voor een schema wanneer u het opzoekt in de API.
 
 ```json
 {
