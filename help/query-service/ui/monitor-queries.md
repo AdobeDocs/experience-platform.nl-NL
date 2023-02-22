@@ -2,9 +2,9 @@
 title: Geplande query's controleren
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1129'
 ht-degree: 0%
 
 ---
@@ -118,11 +118,7 @@ U kunt de SQL-query van deze weergave naar het klembord kopiëren. Selecteer het
 
 ![Het scherm met details van de uitvoering waarin het SQL-kopieerpictogram is gemarkeerd.](../images/ui/monitor-queries/copy-sql.png)
 
-### (Beperkte versie) Voer details in voor query&#39;s met anonieme blokken {#anonymous-block-queries}
-
->[!IMPORTANT]
->
->De eigenschap van de vraagcontrole die looppasdetails voor anonieme blokvragen toont, is momenteel in een beperkte versie en niet beschikbaar aan alle klanten.
+### Details uitvoeren voor query&#39;s met anoniem blok {#anonymous-block-queries}
 
 Vragen die anonieme blokken gebruiken om uit hun SQL-instructies te bestaan, worden gescheiden in hun individuele query&#39;s. Dit staat u toe om de looppasdetails voor elk vraagblok individueel te inspecteren.
 

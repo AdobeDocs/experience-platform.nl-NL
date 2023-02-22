@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3355'
 ht-degree: 2%
 
 ---
@@ -184,7 +184,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt opgegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
+| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
 | `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
 **Voorbeeld**
@@ -371,6 +371,85 @@ EXCEPTION
     SELECT 'ERROR';
 END;
 ```
+
+### Automatisch naar JSON {#auto-to-json}
+
+De Dienst van de vraag steunt een facultatieve zitting-vlakke instelling om complexe gebieden van het hoogste niveau van interactieve UITGEZOCHTE vragen als koorden van JSON terug te keren. De `auto_to_json` Met deze instelling kunnen gegevens van complexe velden worden geretourneerd als JSON en vervolgens in JSON-objecten worden geparseerd met behulp van standaardbibliotheken.
+
+De functiemarkering instellen `auto_to_json` op true voordat u de SELECT-query met complexe velden uitvoert.
+
+```sql
+set auto_to_json=true; 
+```
+
+#### Voordat u de `auto_to_json` markeren
+
+De volgende tabel bevat een voorbeeld van een queryresultaat vóór de `auto_to_json` wordt ingesteld. In beide scenario&#39;s werd dezelfde SELECT-query (zoals hieronder wordt weergegeven) gebruikt die een tabel met complexe velden als doel had.
+
+```sql
+SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
+```
+
+De resultaten zijn als volgt:
+
+```console
+                _id                |                                _experience                                 | application  |                   commerce                   | dataSource |                               device                               |                       endUserIDs                       |                                                                                                environment                                                                                                |                     identityMap                     |                              placeContext                               |   receivedTimestamp   |       timestamp       | userActivityRegion |                                         web                                          | _adcstageforpqs
+-----------------------------------+----------------------------------------------------------------------------+--------------+----------------------------------------------+------------+--------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+-----------------------+-----------------------+--------------------+--------------------------------------------------------------------------------------+-----------------
+ 31892EE15DE00000-401D52664FF48A52 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE080007B35-E6CE00000000000,"(AAID)",t)")")  | ("(en-US,f,f,t,1.6,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",490,1125)",xo.net,64.3.235.13)     | [AAID -> "{(31892EE080007B35-E6CE00000000000,t)}"]  | ("("(34.01,-84.0)",lawrenceville,US,524,30043,ga)",600)                 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Search Results,"(1.0)")","(http://www.google.com/search?ie=UTF-8&q=,internal)") |
+ 31892EE15DE00000-401B92664FF48AE8 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE100007BF3-215FE00000000001,"(AAID)",t)")") | ("(en-US,f,f,t,1.5,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",768,556)",ntt.net,219.165.108.145) | [AAID -> "{(31892EE100007BF3-215FE00000000001,t)}"] | ("("(34.989999999999995,138.42)",shizuoka,JP,392005,420-0812,22)",-240) | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Home - JJEsquire,"(1.0)")","(NULL,typed_bookmarked)")                           |
+(2 rows)  
+```
+
+#### Na het instellen van de `auto_to_json` markeren
+
+In de volgende tabel ziet u het verschil in resultaten dat de `auto_to_json` het plaatsen heeft op de resulterende dataset. Dezelfde SELECT-query werd in beide scenario&#39;s gebruikt.
+
+```console
+                _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
+-----------------------------------+-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
+ 31892EE15DE00000-401D52664FF48A52 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE080007B35-E6CE00000000000","namespace":{"code":"AAID"},"primary":true}}}  | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.6","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":490,"viewportWidth":1125},"domain":"xo.net","ipV4":"64.3.235.13"}     | {"AAID":[{"id":"31892EE080007B35-E6CE00000000000","primary":true}]}  | {"geo":{"_schema":{"latitude":34.01,"longitude":-84.0},"city":"lawrenceville","countryCode":"US","dmaID":524,"postalCode":"30043","stateProvince":"ga"},"localTimezoneOffset":600}                 | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Search Results","pageViews":{"value":1.0}},"webReferrer":{"URL":"http://www.google.com/search?ie=UTF-8&q=","type":"internal"}} |
+ 31892EE15DE00000-401B92664FF48AE8 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE100007BF3-215FE00000000001","namespace":{"code":"AAID"},"primary":true}}} | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.5","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":768,"viewportWidth":556},"domain":"ntt.net","ipV4":"219.165.108.145"} | {"AAID":[{"id":"31892EE100007BF3-215FE00000000001","primary":true}]} | {"geo":{"_schema":{"latitude":34.989999999999995,"longitude":138.42},"city":"shizuoka","countryCode":"JP","dmaID":392005,"postalCode":"420-0812","stateProvince":"22"},"localTimezoneOffset":-240} | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Home - JJEsquire","pageViews":{"value":1.0}},"webReferrer":{"type":"typed_bookmarked"}}                                        |
+(2 rows)
+```
+
+### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
+
+De `resolve_fallback_snapshot_on_failure` wordt gebruikt om het probleem van een verlopen momentopname-id op te lossen. Metagegevens voor momentopnamen verlopen na twee dagen en een verlopen momentopname kan de logica van een script ongeldig maken. Dit kan een probleem zijn wanneer anonieme blokken worden gebruikt.
+
+Stel de `resolve_fallback_snapshot_on_failure` -optie in op true als u een opname wilt overschrijven met een vorige opname-id.
+
+```sql
+SET resolve_fallback_snapshot_on_failure=true;
+```
+
+De volgende coderegel overschrijft de `@from_snapshot_id` met de laagste beschikbare `snapshot_id` uit metagegevens.
+
+```sql
+$$ BEGIN
+    SET resolve_fallback_snapshot_on_failure=true;
+    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
+                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
+                                WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
+                                on a.process_timestamp=b.process_timestamp;
+    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
+    SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
+    INSERT INTO DIM_TABLE_ABC_Incremental
+     SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
+
+Insert Into
+   checkpoint_log
+   SELECT
+       'DIM_TABLE_ABC' process_name,
+       'SUCCESSFUL' process_status,
+      cast( @to_snapshot_id AS string) last_snapshot_id,
+      cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
+EXCEPTION
+  WHEN OTHER THEN
+    SELECT 'ERROR';
+END
+$$;
+```
+
 
 ## Gegevensmiddelenorganisatie
 
