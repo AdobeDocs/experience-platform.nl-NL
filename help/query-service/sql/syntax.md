@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
+source-git-commit: c26a60f0d0fc9f5b7253851baf73e1a3edfffe0f
 workflow-type: tm+mt
 source-wordcount: '3355'
 ht-degree: 2%
@@ -184,7 +184,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
+| `rowvalidation` | (Optioneel) Hiermee wordt opgegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
 | `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
 **Voorbeeld**
@@ -342,10 +342,10 @@ Een anoniem blok bestaat uit twee secties: secties voor uitvoerbaar en uitzonder
 In het volgende voorbeeld ziet u hoe u een blok maakt met een of meer instructies die samen moeten worden uitgevoerd:
 
 ```sql
-BEGIN
+$$BEGIN
   statementList
 [EXCEPTION exceptionHandler]
-END
+$$END
 
 exceptionHandler:
       WHEN OTHER
@@ -358,7 +358,7 @@ statementList:
 Hieronder ziet u een voorbeeld waarin anonieme blokken worden gebruikt.
 
 ```sql
-BEGIN
+$$BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_log_id = select now();
@@ -369,7 +369,7 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END;
+$$END;
 ```
 
 ### Automatisch naar JSON {#auto-to-json}
