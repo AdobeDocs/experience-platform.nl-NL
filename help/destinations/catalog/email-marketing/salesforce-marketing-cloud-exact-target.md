@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;api salesforce mark
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: d75c272b3c86e25d3f162c630963c10e8206bd9d
+source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2372'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,9 @@ Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL
 
 #### U hebt een [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-Bereik uit naar uw [!DNL Salesforce Account Executive] om zich te abonneren op de [!DNL Salesforce Marketing Cloud Account Engagement] product als u dit nog niet hebt.
+A [!DNL Salesforce Marketing Cloud] account met een abonnement op de [Betrokkenheid Marketing Cloud account](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) Het product is verplicht verder te gaan.
+
+Uitstrekken tot [[!DNL Salesforce] Ondersteuning](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) als u geen [!DNL Salesforce Marketing Cloud] -account of uw account ontbreekt het [!DNL Marketing Cloud Account Engagement] productabonnement.
 
 #### Kenmerken maken binnen [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
