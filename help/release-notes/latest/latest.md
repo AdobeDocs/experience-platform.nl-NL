@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 38c9325e2eb5d396472ea55ca082083040d6e590
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '981'
 ht-degree: 1%
 
 ---
@@ -14,10 +14,31 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Gerelateerde accounts in Real-Time CDP B2B Edition](#related-accounts)
 - [Bronnen](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functies** {#destinations-new-updated-features}
+
+| Functie | Beschrijving |
+| ----------- | ----------- |
+| [Verbetering van beleid voor goedkeuring](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) voor integratie met [bestandsgebaseerde (batch) doelen](/help/destinations/destination-types.md#file-based) | <p> Wanneer de profielen niet meer voor een toestemmingsbeleid gekwalificeerd zijn, deelt Experience Platform nu proactief hun beleidsuitgang aan op dossier-gebaseerde bestemmingen mee. Dit volgt op [release in februari 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) van dezelfde functionaliteit voor streamingdoelen. </p> <p> <b>Opmerking</b>: Deze functionaliteit is alleen beschikbaar voor klanten van **[!UICONTROL Privacy and Security Shield]** en de **[!UICONTROL Healthcare Shield]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe of bijgewerkte documentatie** {#destinations-new-updated-documentation}
+
+| Documentatie | Beschrijving |
+| ----------- | ----------- |
+| Hoe werken de bestemmingen documentatie | <p>We hebben drie nieuwe artikelen gepubliceerd waarin wordt uitgelegd hoe bestemmingen werken, op basis van gemeenschappelijke vragen van gebruikers:</p> <p><ul><li>[Configureerbare en algemene exportinstellingen in doelen](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Profielexportgedrag voor verschillende doeltypen](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Identiteitsverwerking in de workflow voor doelactivering](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
