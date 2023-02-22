@@ -3,9 +3,9 @@ title: Client-tips voor gebruikersagent
 description: Leer hoe de gebruikers-agent de Hints van de Cliënt in Web SDK werken
 keywords: user-agent;client hints; tekenreeks; user-agent string; lage entropie; hoge entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
+source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1132'
 ht-degree: 2%
 
 ---
@@ -120,12 +120,9 @@ De [Besturingssysteem](https://experienceleague.adobe.com/docs/analytics/compone
 
 ### Audience Manager-eigenschappen die afhankelijk zijn van hoge entropieclientiptips {#aam}
 
-Als de eigenschappen van uw Audience Manager een van de volgende eigenschappen gebruiken, moet u hoge entropiecliëntwenken toelaten. Anders werken de kenmerken niet meer.
+[!DNL Google] heeft de [!DNL Chrome] browserfunctionaliteit om de informatie die via de `User-Agent` header. Dientengevolge, gebruiken de klanten van de Audience Manager [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) geen betrouwbare informatie meer ontvangen op basis van [toetsen op platformniveau](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=en).
 
-* Versie besturingssysteem
-* Apparaatmodel
-* Apparaatfabrikant
-* Apparaatleverancier
+De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten schakelen naar [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) in plaats van [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)en [Tips voor High Entropy-clients](#enabling-high-entropy-client-hints) betrouwbare gegevens over de eigenschap te blijven ontvangen.
 
 ## Hoog entropclient-tips inschakelen {#enabling-high-entropy-client-hints}
 
