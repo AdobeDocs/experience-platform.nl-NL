@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '1096'
 ht-degree: 3%
 
 ---
@@ -45,10 +45,31 @@ Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van d
 XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
 
 **Bijgewerkte functies**
-&#x200B; | Functie | Beschrijving | | — | — | | Veldverval via de gebruikersinterface | U kunt nu velden uit uw schema&#39;s verwijderen nadat u gegevens hebt ingevoerd. Met XDM-veldafleiding kunt u velden verwijderen uit de UI-weergave en deze voor gebruik behouden. Indien nodig kunt u afgekeurde velden opnieuw tonen en worden alle segmenten, query&#39;s of downstreamoplossingen die verwijzen naar de velden, op de gebruikelijke wijze uitgevoerd. |
+&#x200B; | Functie | Beschrijving | | — | — | | Veldverval via de gebruikersinterface | U kunt nu [velden uit uw schema&#39;s verwijderen nadat gegevens zijn ingepakt](../../xdm/tutorials/field-deprecation-ui.md). Met XDM-veldafleiding kunt u velden verwijderen uit de UI-weergave en deze voor gebruik behouden. Indien nodig kunt u afgekeurde velden opnieuw tonen en worden alle segmenten, query&#39;s of downstreamoplossingen die verwijzen naar de velden, op de gebruikelijke wijze uitgevoerd. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Voor meer informatie over XDM in Platform leest u de [XDM System, overzicht](../../xdm/home.md). &#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | De klasse van het Profiel van het Individuele Vooruitzicht XDM brengt in partner-Geleverde IDs. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Veldgroep | [!UICONTROL Frequency Capping Constraints] | De [!UICONTROL Frequency Capping Constraints] veldgroep is [bijgewerkt om herhaalde en aangepaste gebeurtenissen te ondersteunen](https://github.com/adobe/xdm/pull/1641/files). |
+| Gegevenstype | [!UICONTROL Web referrer] | De eigenschappen van de webreferentie zijn [bijgewerkt om op te nemen `xdm:linkName` en `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Dit zijn respectievelijk de naam en het gebied van het HTML-element dat op de vorige pagina is geselecteerd. |
+| Veldgroep | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction details] | [De [!UICONTROL Tracker URL] veld toegevoegd](https://github.com/adobe/xdm/pull/1665/files) aan de [!UICONTROL Adobe CJM ExperienceEvent]. Deze tracker bevat de URL die door de gebruiker is geselecteerd. |
+| Veldgroep | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [De lege `meta:enum` eigenschap is verwijderd](https://github.com/adobe/xdm/pull/1668/files) via de URL [!UICONTROL Tracking Type] veld. |
+| Gegevenstype | [!UICONTROL Media information] | [Het regex-patroon van de `videoSegment` eigenschap in [!UICONTROL Media information] datatype is verwijderd](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Voor meer informatie over XDM in Platform, lees [XDM System, overzicht](../../xdm/home.md).
 
 ## Query-service {#query-service}
 
