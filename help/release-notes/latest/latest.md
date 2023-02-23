@@ -47,7 +47,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 **Bijgewerkte functies**
 &#x200B; | Functie | Beschrijving | | — | — | | Veldverval via de gebruikersinterface | U kunt nu velden uit uw schema&#39;s verwijderen nadat u gegevens hebt ingevoerd. Met XDM-veldafleiding kunt u velden verwijderen uit de UI-weergave en deze voor gebruik behouden. Indien nodig kunt u afgekeurde velden opnieuw tonen en worden alle segmenten, query&#39;s of downstreamoplossingen die verwijzen naar de velden, op de gebruikelijke wijze uitgevoerd. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Voor meer informatie over XDM in Platform leest u de [XDM System, overzicht](../../xdm/home.md). &#x200B;
+&#x200B; Voor meer informatie over XDM in Platform leest u de [XDM System, overzicht](../../xdm/home.md). &#x200B;
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## Query-service {#query-service}
@@ -57,7 +57,7 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 **Bijgewerkte functies**
 &#x200B; | Functie | Beschrijving | | — | — | | Gegevenssets inschakelen voor profiel met SQL | ETIKETTEN van het gebruik in vragen CTAS om een dataset &quot;toegelaten profiel&quot;te maken, of gebruik ALTER om bestaande datasets bij te werken om voor profiel worden toegelaten. | | Geplande query&#39;s controleren | Gebruik het Geplande lusje van Vragen om belangrijke informatie over uw vraaglooppas te vinden en aan alarm in te schrijven. De vragen van de monitor voor planningsdetails, status, en foutenmeldingen/codes zouden moeten ontbreken.  | | Automatisch aanvullen in-/uitschakelen | Verwijder bepaalde metagegevensopdrachten en verbeter de verwerkingstijd door de functie voor automatisch aanvullen in of uit te schakelen in de Query Editor. Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. | | Gegevensverzameling | Geef een bemonsteringsfrequentie op in uw query en gebruik gegevenssetvoorbeelden om een uniforme willekeurige steekproef te maken, of maak voorwaardelijke voorbeelden op basis van specifieke criteria. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md). &#x200B;
+&#x200B; Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
