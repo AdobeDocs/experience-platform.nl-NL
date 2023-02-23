@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, februari 2023
 description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
+source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
 workflow-type: tm+mt
-source-wordcount: '982'
-ht-degree: 1%
+source-wordcount: '947'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
-- [Gerelateerde accounts in Real-Time CDP B2B Edition](#related-accounts)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Bronnen](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -47,7 +47,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 **Bijgewerkte functies**
 &#x200B; | Functie | Beschrijving | | — | — | | Veldverval via de gebruikersinterface | U kunt nu velden uit uw schema&#39;s verwijderen nadat u gegevens hebt ingevoerd. Met XDM-veldafleiding kunt u velden verwijderen uit de UI-weergave en deze voor gebruik behouden. Indien nodig kunt u afgekeurde velden opnieuw tonen en worden alle segmenten, query&#39;s of downstreamoplossingen die verwijzen naar de velden, op de gebruikelijke wijze uitgevoerd. |
 
-&#x200B; Voor meer informatie over XDM in Platform leest u de [XDM System, overzicht](../../xdm/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Voor meer informatie over XDM in Platform leest u de [XDM System, overzicht](../../xdm/home.md). &#x200B;
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## Query-service {#query-service}
@@ -57,20 +57,16 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 **Bijgewerkte functies**
 &#x200B; | Functie | Beschrijving | | — | — | | Gegevenssets inschakelen voor profiel met SQL | ETIKETTEN van het gebruik in vragen CTAS om een dataset &quot;toegelaten profiel&quot;te maken, of gebruik ALTER om bestaande datasets bij te werken om voor profiel worden toegelaten. | | Geplande query&#39;s controleren | Gebruik het Geplande lusje van Vragen om belangrijke informatie over uw vraaglooppas te vinden en aan alarm in te schrijven. De vragen van de monitor voor planningsdetails, status, en foutenmeldingen/codes zouden moeten ontbreken.  | | Automatisch aanvullen in-/uitschakelen | Verwijder bepaalde metagegevensopdrachten en verbeter de verwerkingstijd door de functie voor automatisch aanvullen in of uit te schakelen in de Query Editor. Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. | | Gegevensverzameling | Geef een bemonsteringsfrequentie op in uw query en gebruik gegevenssetvoorbeelden om een uniforme willekeurige steekproef te maken, of maak voorwaardelijke voorbeelden op basis van specifieke criteria. |
 
-&#x200B; Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Gerelateerde accounts in Real-Time CDP B2B Edition {#related-accounts}
+## Real-Time Customer Data Platform B2B Edition {#b2b}
 
->[!NOTE]
->
->De functie Verwante accounts is alleen beschikbaar voor klanten van de Real-Time CDP B2B Edition.
-
-Verwante rekeningen [!DNL Real-Time CDP B2B] Hiermee kunt u een lijst weergeven met accounts die lijken op de account waarin u bladert. U kunt de verwante rekeningen in uw segmentdefinities omvatten om uw bereik uit te breiden of bredere criteria in uw segmenten toe te passen.
+Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
 
 **Bijgewerkte functies**
 
@@ -79,12 +75,6 @@ Verwante rekeningen [!DNL Real-Time CDP B2B] Hiermee kunt u een lijst weergeven 
 | Gerelateerde accountservice inschakelen | Met de nieuwe schakelfunctie kunt u de verwante accountservice op uw account inschakelen. Lees voor meer informatie de handleiding op [inschakelen van de gerelateerde accountantsdienst](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
-
-Meer informatie over de functies van verwante accounts vindt u op de volgende documentatiepagina&#39;s:
-
-- [Gerelateerde accounts in Real-Time CDP B2B Edition overzicht](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Het tabblad Verwante accounts in de gebruikersinterface voor het accountprofiel](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Hoe verwant rekeningen in segmentdefinities gebruiken](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Lees voor meer informatie over de Real-Time CDP B2B Edition de [Overzicht van Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
