@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
+source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,12 @@ ht-degree: 0%
 ## v0.19.2 (14 februari 2023)
 
 - Probleem verholpen waarbij de time-out kon worden ingesteld op een gegevenselement.
+
+## v0.19.1 (3 februari 2023)
+
+- Bijgewerkt voor ondersteuning `at.js` v2.10.1
+- Aangepaste Mbox-parameters van de client ondersteunen nu de puntnotatie correct
+- Oproepen tot levering niet meer in VEC
 
 ## v0.19.0 (19 september 2022)
 
