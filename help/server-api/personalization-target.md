@@ -2,9 +2,9 @@
 title: Personalisatie via Adobe Target
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen die in Adobe Target zijn gemaakt, te leveren en te renderen.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,6 @@ Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../edge/
 Bij het configureren van de gegevensstroom kunt u (optioneel) waarden opgeven voor [!DNL Property Token], [!DNL Target Environment ID], en [!DNL Target Third Party ID Namespace].
 
 ![UI-afbeelding die het configuratiescherm van de datastream-service weergeeft, met Adobe Target geselecteerd](assets/target-datastream.png)
-
-U kunt kiezen uit de volgende opties: [!DNL Analytics Logging] opties:
-
-* **[!DNL Server Side]**: Dit is de standaardoptie voor [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html). Als deze optie is geselecteerd, wordt telkens wanneer de personalisatie-inhoud door Target wordt geretourneerd, de relevante [!DNL A4T] gegevens worden automatisch naar Analytics verzonden, op basis van de reactie van de Target personalization engine.
-* **[!DNL Client Side]**: Als deze optie is geselecteerd, wordt telkens wanneer de personalisatie-inhoud door Target wordt geretourneerd, de relevante [!DNL A4T] gegevens worden geretourneerd aan de aanroepende toepassing. Als u deze gegevens wilt opnemen in Analytics, moet u ervoor zorgen dat deze worden gerapporteerd bij een volgende oproep tot [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >Naast het selecteren **[!UICONTROL Client Side]** in de Configuratie van het Doel, moet u Analytics ook onbruikbaar maken, voor het Netwerk van de Rand om terug te keren [!DNL A4T] informatie terug naar het antwoord.
 
 
 ## Aangepaste parameters {#custom-parameters}
