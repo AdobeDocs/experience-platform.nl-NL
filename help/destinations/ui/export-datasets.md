@@ -2,9 +2,10 @@
 title: (bèta) Datasets exporteren naar Cloud Storage-doelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
+source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1276'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,9 @@ ht-degree: 0%
 >* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 
-In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage].
+In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage] door het Experience Platform UI te gebruiken.
+
+U kunt de Experience Platform APIs ook gebruiken om datasets uit te voeren. Lees de [API-zelfstudie voor exporteren](/help/destinations/api/export-datasets.md) voor meer informatie .
 
 ## Wanneer moet u segmenten activeren of gegevenssets exporteren {#when-to-activate-segments-or-activate-datasets}
 
