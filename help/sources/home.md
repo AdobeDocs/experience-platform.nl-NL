@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
+source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
 source-wordcount: '1103'
 ht-degree: 0%
@@ -54,6 +54,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een de
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een extern analyseplatform. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
 
 ### Cloud Storage {#cloud-storage}
 

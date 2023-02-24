@@ -2,7 +2,7 @@
 title: Een Chatlio Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Chatlio-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 badge: "Bèta"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 0%
@@ -111,7 +111,7 @@ De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom k
 * **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
 * **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
 
-Nadat u de gegevensstroom hebt gecontroleerd, klikt u op **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
+Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
 ![De revisiestap van de workflow voor bronnen.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 

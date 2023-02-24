@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
+source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '940'
 ht-degree: 8%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 8%
       - [Google Ads-connector](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
+      - [Pendo](connectors/analytics/pendo-webhook.md)
    - Cloud-opslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-connector](connectors/cloud-storage/s3.md)
@@ -113,6 +114,7 @@ ht-degree: 8%
          - [Google-advertenties](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
+         - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -226,6 +228,7 @@ ht-degree: 8%
          - [Google-advertenties](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
+         - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
