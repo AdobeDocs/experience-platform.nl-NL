@@ -2,9 +2,9 @@
 title: Een Customer.io-bronverbinding en gegevensstroom maken in de gebruikersinterface
 description: Leer hoe u een Customer.io-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 badge: "Bèta"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
@@ -64,13 +64,13 @@ Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sour
 
 Gebruik de *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
-Ga naar de [!UICONTROL Marketing automation] categorie om de [!DNL Customer.io] bronkaart. Selecteer [!UICONTROL Add data].
+Ga naar de [!UICONTROL Marketing automation] categorie om de [!DNL Customer.io] bronkaart. Selecteer **[!UICONTROL Add data]**.
 
 ![Screenshot van Platform-interface voor catalogus met Customer.io-kaart](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Gegevens selecteren {#select-data}
 
-De **[!UICONTROL Select data]** wordt weergegeven, zodat u de gegevens kunt selecteren die u naar het Platform verzendt.
+De **[!UICONTROL Select data]** wordt weergegeven, zodat u de gegevens kunt selecteren die u naar het Platform wilt brengen.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.

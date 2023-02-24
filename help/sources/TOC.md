@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
+source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '937'
 ht-degree: 8%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 8%
    - Lokaal systeem {#local-system}
       - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
    - Marketing automatiseren {#marketing-automation}
+      - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
       - [Mailchimp-connector](connectors/marketing-automation/mailchimp.md)
@@ -163,6 +164,7 @@ ht-degree: 8%
       - eCommerce {#ecommerce}
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketing automatiseren {#marketing-automation}
+         - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp-campagne](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
@@ -278,6 +280,7 @@ ht-degree: 8%
       - Lokaal systeem {#local-system}
          - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing automatiseren {#marketing-automation}
+         - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp-campagnes](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)

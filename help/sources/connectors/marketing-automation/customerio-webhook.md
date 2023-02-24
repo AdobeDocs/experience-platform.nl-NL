@@ -2,7 +2,7 @@
 title: Overzicht van Customer.io-bron
 description: Leer hoe u Customer.io met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface door gebruik te maken van webhaken
 badge: "Bèta"
-source-git-commit: cb4b92f4d71d42d57363e16d4764217b6de7f8ee
+source-git-commit: 516ec2cbfb954764f1a6fb2007e20acac425607d
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -21,9 +21,9 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens uit stream
 
 [[!DNL Customer.io]](https://customer.io/) is een geautomatiseerd berichtenplatform voor marketers die meer controle en flexibiliteit willen om gegevensgestuurde e-mails, pushberichten, in-app berichten en SMS te verzenden en te verzorgen.
 
-De [!DNL Customer.io] bron staat u toe om gesteunde Schema&#39;s van de Gebeurtenis WebHaak en hun bijbehorende gebeurtenisgegevens van in te voeren [!DNL Customer.io] met de [[!DNL Customer.io] Webhaken melden](https://customer.io/docs/api/webhooks/).
+De [!DNL Customer.io] bron staat u toe om gesteunde schema&#39;s van de webhaakgebeurtenis en hun bijbehorende gebeurtenisgegevens van in te voeren [!DNL Customer.io] met de [[!DNL Customer.io] Webhaken melden](https://customer.io/docs/api/webhooks/).
 
-De ondersteunde WebHaak-gebeurtenisschema&#39;s zijn:
+De ondersteunde webhaakgebeurtenisschema&#39;s zijn:
 
 * Gebeurtenissen van klant
 * E-mailgebeurtenissen
