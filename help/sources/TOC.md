@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
+source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '934'
 ht-degree: 8%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 8%
    - Lokaal systeem {#local-system}
       - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
    - Marketing automatiseren {#marketing-automation}
+      - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
       - [Mailchimp-connector](connectors/marketing-automation/mailchimp.md)
       - [Oracle Eloqua-aansluiting](connectors/marketing-automation/oracle-eloqua.md)
@@ -162,6 +163,7 @@ ht-degree: 8%
       - eCommerce {#ecommerce}
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketing automatiseren {#marketing-automation}
+         - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp-campagne](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp-leden](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -276,6 +278,7 @@ ht-degree: 8%
       - Lokaal systeem {#local-system}
          - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing automatiseren {#marketing-automation}
+         - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp-campagnes](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp-leden](tutorials/ui/create/marketing-automation/mailchimp-members.md)
