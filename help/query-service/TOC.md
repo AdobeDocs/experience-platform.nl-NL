@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Help bij Adobe Experience Platform Query Service
-breadcrumb-title: Handleiding Query Service
-user-guide-description: Gebruik standaard SQL aan vraaggegevens binnen het gegevens meer in Experience Platform.
+user-guide-title: Adobe Experience Platform Query Service Help
+breadcrumb-title: Gids voor Query Service
+user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: 3c91e39958a9cba001ae0f0ac70f920263fa041d
+source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 6%
+source-wordcount: '270'
+ht-degree: 16%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 6%
       - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
    - Afgeleide kenmerken {#derived-attributes}
       - [Overzicht](data-distiller/derived-attributes/overview.md)
+      - [Naadloze SQL-stroom](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Op decile gebaseerde afgeleide kenmerken maken](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Gebruiksscenario’s {#use-cases}
    - [Verlaten browsers](use-cases/abandoned-browse.md)
@@ -72,7 +73,7 @@ ht-degree: 6%
    - [Zoeksjablonen](api/query-templates.md)
    - [Versnelde query&#39;s](api/accelerated-queries.md)
    - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
-- Data Governance {#data-governance}
+- Gegevensbeheer {#data-governance}
    - [Overzicht](data-governance/overview.md)
    - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
    - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
