@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
+source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1130'
 ht-degree: 3%
 
 ---
@@ -82,20 +82,14 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gegevenssets inschakelen voor profiel met SQL | Gebruik LABELs in vragen CTAS om een dataset &quot;toegelaten profiel&quot;te maken, of gebruik ALTER om bestaande datasets bij te werken om voor profiel worden toegelaten. |
-| Geplande query&#39;s controleren | Gebruik het Geplande lusje van Vragen om belangrijke informatie over uw vraaglooppas te vinden en aan alarm in te gaan. De vragen van de monitor voor planningsdetails, status, en foutenmeldingen/codes zouden moeten ontbreken. |
-| Automatisch aanvullen in-/uitschakelen | Elimineer bepaalde meta-gegevensbevelen en verbeter verwerkingstijden door de van de Redacteur van de Vraag auto-volledige eigenschap van een knevel te voorzien. Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. |
-| Gegevenssetvoorbeelden | Geef een samplingfrequentie op in uw query en gebruik gegevenssetvoorbeelden om een uniforme willekeurige steekproef te maken, of maak voorwaardelijke voorbeelden op basis van specifieke criteria. |
+| Gegevenssets inschakelen voor profiel met SQL | [De ETIKETTEN van het gebruik in vragen CTAS om een dataset &quot;toegelaten profiel&quot;te maken](../../query-service/sql/syntax.md#create-table-as-select)of gebruik ALTER om bestaande datasets bij te werken die voor profiel moeten worden toegelaten. U kunt dit uitgebreide SQL concept gebruiken om naadloze steun voor afgeleide attributen voor uw zaken van het bedrijfsgebruik van het Profiel van de Klant in real time te verstrekken. Zie de [Naadloze SQL-stroom voor document met afgeleide kenmerken](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) voor meer informatie . |
+| Geplande query&#39;s controleren | Gebruik de [Tabblad Geplande query&#39;s](../../query-service/ui/monitor-queries.md) om belangrijke informatie over uw vraaglooppas te vinden en aan alarm in te schrijven. De vragen van de monitor voor planningsdetails, status, en foutenmeldingen/codes zouden moeten ontbreken. |
+| Automatisch aanvullen in-/uitschakelen | Verwijder bepaalde metagegevensopdrachten en verbeter de verwerkingstijd met [het van een knevel voorzien van de Redacteur van de Vraag auto-volledige eigenschap](../../query-service/ui/user-guide.md#auto-complete). Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. |
+| Gegevenssetvoorbeelden | Geef een bemonsteringsfrequentie op in uw query en [gebruik datasetsteekproeven om een eenvormige willekeurige steekproef tot stand te brengen](../../query-service/essential-concepts/dataset-samples.md)of maak voorwaardelijke voorbeelden op basis van specifieke criteria. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over de Diensten van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
-
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
 ## Real-Time Customer Data Platform B2B Edition {#b2b}
 
