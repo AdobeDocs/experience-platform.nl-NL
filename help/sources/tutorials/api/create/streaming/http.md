@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
 description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1544'
 ht-degree: 0%
 
 ---
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB Zonder transformaties]
 
+Met de volgende aanvraag wordt een streaminggegevensstroom voor de HTTP-API zonder gegevenstransformaties gemaakt.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB Met transformaties]
+
+Met de volgende aanvragen wordt een streaming gegevensstroom voor de HTTP-API gemaakt, waarbij transformaties worden toegepast op de gegevens.
+
+Wanneer u een gegevensstroom maakt met transformaties, worden de `name` parameter kan niet worden gewijzigd. Deze waarde moet altijd worden ingesteld op `Mapping`.
 
 ```shell
 curl -X POST \
