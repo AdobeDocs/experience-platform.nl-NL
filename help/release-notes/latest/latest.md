@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
+source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1275'
 ht-degree: 3%
 
 ---
@@ -14,11 +14,30 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Gegevensverzameling](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Bronnen](#sources)
+
+## Gegevensverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+### Betrouwbaarheid {#assurance}
+
+Met Adobe Assurance kunt u controleren, testen, simuleren en valideren hoe u gegevens verzamelt of ervaringen opdoet in uw mobiele app.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Openbare API&#39;s | De Adobe Assurance API&#39;s zijn nu beschikbaar. De API&#39;s voor Betrouwbaarheid zijn een verzameling API&#39;s waarmee gebruikers hun eigen web- en mobiele apps kunnen testen en er fouten in kunnen opsporen, wanneer deze zijn uitgerust met de extensie Adobe Assurance met Mobile SDK. Voor meer informatie over de API&#39;s voor betrouwbaarheid leest u de [Overzicht van de API voor betrouwbaarheid](https://developer.adobe.com/adobe-assurance-public-apis/). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Lees voor meer informatie over Verzekering de [Betrouwbaarheidsdocumentatie](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
