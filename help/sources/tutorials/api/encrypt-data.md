@@ -3,9 +3,9 @@ title: Versleutelde gegevensinsluiting
 description: Met Adobe Experience Platform kunt u gecodeerde bestanden opnemen via batchbronnen voor cloudopslag.
 hide: true
 hidefromtoc: true
-source-git-commit: f0bbefcd9b4595f02c400ea0c5bb76bfa6c5e33e
+source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '967'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,15 @@ Met Adobe Experience Platform kunt u gecodeerde bestanden opnemen via batchbronn
 
 De gecodeerde gegevensinvoer verloopt als volgt:
 
-1. [Een sleutelpaar maken met Experience Platform-API&#39;s](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door het Experience Platform in een veilige kluis opgeslagen.
+1. [Een sleutelpaar maken met Experience Platform-API&#39;s](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door het Experience Platform in een veilige kluis opgeslagen. **OPMERKING:** De openbare sleutel in de reactie is Base64-Gecodeerd en moet voorafgaand aan het gebruiken worden gedecrypteerd.
 2. Gebruik de openbare sleutel om het gegevensbestand te coderen dat u wilt opnemen.
 3. Plaats het gecodeerde bestand in de cloudopslag.
 4. Zodra het gecodeerde bestand gereed is, [een bronverbinding en een gegevensstroom maken voor uw bron voor cloudopslag](#create-a-dataflow-for-encrypted-data). Tijdens de stap voor het maken van flow moet u een `encryption` en neem uw openbare sleutel-id op.
 5. Het Experience Platform wint de privé sleutel van de veilige kluis terug om de gegevens op het tijdstip van inname te decrypteren.
+
+>[!IMPORTANT]
+>
+>De maximale grootte van één gecodeerd bestand is 100 MB. U kunt bijvoorbeeld gegevens van 2 GB invoeren in een enkele gegevensstroom, maar elk afzonderlijk bestand in die gegevens kan niet groter zijn dan 100 MB.
 
 Dit document bevat stappen voor het genereren van een sleutelpaar voor versleuteling van gegevens en het invoeren van gecodeerde gegevens naar het Experience Platform met behulp van bronnen voor cloudopslag.
 
@@ -73,7 +77,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert uw openbare sleutel, openbare sleutel-id en de vervaltijd van de toetsen. De verlooptijd wordt automatisch ingesteld op 180 dagen na de datum waarop de sleutel wordt gegenereerd. Vervaltijd kan momenteel niet worden geconfigureerd.
+Een succesvolle reactie keert uw Base64-Gecodeerde openbare sleutel, openbare zeer belangrijke identiteitskaart, en de vervaltijd van uw sleutels terug. De verlooptijd wordt automatisch ingesteld op 180 dagen na de datum waarop de sleutel wordt gegenereerd. Vervaltijd kan momenteel niet worden geconfigureerd.
 
 ```json
 {
