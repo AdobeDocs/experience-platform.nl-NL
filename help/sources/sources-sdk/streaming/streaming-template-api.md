@@ -3,9 +3,9 @@ title: Zelfservicesjabloon voor documentatie voor Streaming SDK API
 description: Leer hoe u streaminggegevens van een bron naar Adobe Experience Platform kunt overbrengen met behulp van de Flow Service API.
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
 workflow-type: tm+mt
-source-wordcount: '1775'
+source-wordcount: '1699'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ De volgende zelfstudie begeleidt u door de stappen om een *UURSOURCE* bronverbin
 
 ### Een bronverbinding maken {#source-connection}
 
-Als u een bronverbinding voor uw streamingbron wilt maken, vraagt u de POST de `/sourceConnections` van het [!DNL Flow Service] API terwijl het verstrekken van een naam voor uw verbinding, de identiteitskaart van de verbindingsspecificatie van uw bron, en het formaat van uw gegevens.
+Maak een bronverbinding door een POST aan te vragen bij de [!DNL Flow Service] API, terwijl de verbindings specificatie-id van uw bron, details zoals naam en beschrijving, en het formaat van uw gegevens wordt verstrekt.
 
 **API-indeling**
 
@@ -252,16 +252,13 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de *UURSOURCE* aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar de *UURSOURCE* aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
-
-Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft echter de periode tussen twee opeenvolgende inname aan. Voor een eenmalige inname hoeft geen interval te worden ingesteld. Voor alle andere frequenties moet de intervalwaarde op gelijk aan of groter dan `15`.
-
 
 **API-indeling**
 
