@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1261'
 ht-degree: 1%
 
 ---
@@ -178,6 +178,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
             "format": "pql/text",
             "value": "workAddress.country = \"US\""
         },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -189,6 +200,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `name` | **Vereist.** Een unieke naam waarmee naar het segment moet worden verwezen. |
+| `description` | Een beschrijving van de segmentdefinitie die u maakt. |
+| `evaluationInfo` | Het type segment dat u maakt. Als u een batchsegment wilt maken, stelt u `evaluationInfo.batch.enabled` om waar te zijn. Als u een streaming segment wilt maken, stelt u `evaluationInfo.continuous.enabled` om waar te zijn. Als u een randsegment wilt maken, stelt u `evaluationInfo.synchronous.enabled` om waar te zijn. Als het segment leeg blijft, wordt het als een **partij** segment. |
 | `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | **Vereist.** Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
@@ -251,7 +264,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde id van de zojuist gemaakte segmentdefinitie. |
-| `evaluationInfo` | Een systeem-geproduceerd voorwerp dat vertelt welk type van evaluatie de segmentdefinitie zal ondergaan. Het kan batch, ononderbroken (ook wel streaming genoemd) of synchrone segmentatie zijn. |
+| `evaluationInfo` | Een object dat aangeeft welk type evaluatie de segmentdefinitie zal ondergaan. Het kan batch-, streaming- (ook wel doorlopend genoemd) of randsegmentatie (ook wel synchroon genoemd) zijn. |
 
 ## Een specifieke segmentdefinitie ophalen {#get}
 
@@ -333,7 +346,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 | `description` | Een door mensen leesbare beschrijving van de definitie. |
-| `evaluationInfo` | Een door het systeem gegenereerd object dat aangeeft welk type evaluatie, batch, ononderbroken (ook wel streaming genoemd) of synchroon de segmentdefinitie wordt uitgevoerd. |
+| `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |
 
 ## Bulk haalt segmentdefinities op {#bulk-get}
 
@@ -466,7 +479,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 | `description` | Een door mensen leesbare beschrijving van de definitie. |
-| `evaluationInfo` | Een door het systeem gegenereerd object dat aangeeft welk type evaluatie, batch, ononderbroken (ook wel streaming genoemd) of synchroon de segmentdefinitie wordt uitgevoerd. |
+| `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |
 
 ## Een specifieke segmentdefinitie verwijderen {#delete}
 

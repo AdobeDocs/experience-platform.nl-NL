@@ -4,7 +4,7 @@ title: Computed Attributes API Endpoint
 type: Documentation
 description: In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. In deze handleiding ziet u hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 0%
@@ -610,6 +610,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         },
         "dataGovernancePolicy": {
             "excludeOptOut": true
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": false
+            },
+            "continuous": {
+                "enabled": true
+            },
+            "synchronous": {
+                "enabled": false
+            }
         }
     }'
 ```
