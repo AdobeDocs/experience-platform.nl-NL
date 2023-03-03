@@ -1,9 +1,9 @@
 ---
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
-source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
+source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2954'
 ht-degree: 0%
 
 ---
@@ -173,7 +173,7 @@ De volledige actieve populatie van het segment wordt uitgevoerd elke dag.
 
 | Wat bepaalt de doelexport | Wat is opgenomen in het geëxporteerde bestand |
 |---------|----------|
-| <ul><li>Het exportschema dat is ingesteld in de gebruikersinterface of de API en in de actie van de gebruiker (selecteren [Bestand nu exporteren](/help/destinations/ui/export-file-now.md) in de gebruikersinterface of met de [API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md)) bepaalt u het begin van een doelexport.</li><li>Eventuele wijzigingen in het segmentlidmaatschap van een profiel, ongeacht of deze in aanmerking komen voor of niet in aanmerking komen voor het segment, komen in aanmerking voor een profiel dat wordt opgenomen in incrementele export.</li></ul> | In volledige dossieruitvoer, is de volledige actieve profielpopulatie van een segment, die op de recentste segmentevaluatie wordt gebaseerd, inbegrepen met elke dossieruitvoer. De meest recente waarden voor elk XDM-kenmerk dat is geselecteerd voor export, worden ook als kolommen opgenomen in elk bestand. Profielen met de status Verlaat worden niet opgenomen in de geëxporteerde bestanden. |
+| <ul><li>Het exportschema dat is ingesteld in de gebruikersinterface of de API en in de actie van de gebruiker (selecteren [Bestand nu exporteren](/help/destinations/ui/export-file-now.md) in de gebruikersinterface of met de [API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md)) bepaalt u het begin van een doelexport.</li></ul> | In volledige dossieruitvoer, is de volledige actieve profielpopulatie van een segment, die op de recentste segmentevaluatie wordt gebaseerd, inbegrepen met elke dossieruitvoer. De meest recente waarden voor elk XDM-kenmerk dat is geselecteerd voor export, worden ook als kolommen opgenomen in elk bestand. Profielen met de status Verlaat worden niet opgenomen in de geëxporteerde bestanden. |
 
 {style=&quot;table-layout:fixed&quot;}
 
