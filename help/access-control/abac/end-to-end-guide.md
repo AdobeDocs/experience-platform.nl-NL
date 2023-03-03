@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin tot eind
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
+source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
 workflow-type: tm+mt
-source-wordcount: '2303'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,8 @@ U zult:
 
 * [Label de rollen voor uw gebruikers](#label-roles): Gebruik het voorbeeld van een zorgleverancier (ACME Business Group) wiens marketinggroep samenwerkt met externe bureaus.
 * [Etiketteer uw middelen (schemagebieden en segmenten)](#label-resources): Wijs het **[!UICONTROL PHI/ Regulated Health Data]** label aan schemamiddelen en segmenten.
-* [Het beleid maken dat ze met elkaar verbindt](#policy): Creeer een beleid om de etiketten op uw middelen aan de etiketten in uw rol te verbinden, ontkennend toegang tot schemagebieden en segmenten. Hierdoor krijgen gebruikers die overeenkomende labels hebben toegang tot het schemaveld en -segment in alle sandboxen.
+* 
+   * [Activeer het beleid dat hen verbindt: ](#policy): Laat het standaardbeleid toe om toegang tot schemagebieden en segmenten te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
 
 ## Toestemmingen
 
@@ -152,82 +153,102 @@ De **[!UICONTROL Edit labels]** wordt weergegeven, zodat u de labels kunt kiezen
 
 Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]**.
 
-## Creeer een beleid van de toegangscontrole {#policy}
+## Activeer het beleid van de toegangscontrole {#policy}
+
+Het standaardtoegangsbeheerbeleid zal hefboometiketten gebruiken om te bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. In dit voorbeeld wordt toegang tot schemavelden en -segmenten in alle sandboxen geweigerd voor gebruikers die zich niet in een rol bevinden die de bijbehorende labels in het schemaveld heeft.
+
+Selecteer [!UICONTROL Permissions] van de linkernavigatie en selecteer dan **[!UICONTROL Policies]**.
+
+![Lijst met weergegeven beleidsregels](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Selecteer vervolgens de ellips (`...`) naast de naam van het beleid en een vervolgkeuzelijst bevat besturingselementen voor het bewerken, activeren, verwijderen of dupliceren van de rol. Selecteren **[!UICONTROL Activate]** in de vervolgkeuzelijst.
+
+![Vervolgkeuzelijst om beleid te activeren](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+
+Het dialoogvenster voor het activeren van het beleid wordt weergegeven waarin u wordt gevraagd de activering te bevestigen. Selecteer **[!UICONTROL Confirm]**.
+
+![Beleidsdialoogvenster activeren](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
+Bevestiging van beleidsactivering is ontvangen en u wordt teruggestuurd naar de [!UICONTROL Policies] pagina.
+
+![Beleidsbevestiging activeren](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+
+<!-- ## Create an access control policy {#policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
->title="Wat is het beleid?"
->abstract="Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Elke organisatie komt met een standaardbeleid dat u moet activeren om regels voor middelen zoals segmenten en schemagebieden te bepalen. Standaardbeleid kan niet worden bewerkt of verwijderd. Het standaardbeleid kan echter worden geactiveerd of gedeactiveerd."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Beleid beheren"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
->title="Een beleid maken"
->abstract="Creeer een beleid om de acties te bepalen die uw gebruikers tegen uw segmenten en schemagebieden kunnen en kunnen nemen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Een beleid maken"
+>title="Create a policy"
+>abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
->title="Toelaatbare en ontoelaatbare acties voor een beleid configureren"
->abstract="A <b>toegang weigeren tot</b> beleid zal gebruikers toegang ontzeggen wanneer aan de criteria wordt voldaan. Gecombineerd met <b>De volgende fout is onwaar</b> - alle gebruikers krijgen geen toegang tenzij zij voldoen aan de desbetreffende criteria. Dit type beleid staat u toe om een gevoelig middel te beschermen en slechts toegang tot gebruikers met passende etiketten toe te staan. <br>A <b>toegang tot</b> het beleid zal gebruikers toegang verlenen wanneer aan de criteria wordt voldaan . Indien gecombineerd met <b>Het volgende is waar</b> - gebruikers krijgen toegang als zij voldoen aan de criteria die hiervoor zijn vastgesteld. Dit ontkent niet uitdrukkelijk toegang tot gebruikers, maar voegt een vergunningstoegang toe. Dit type van beleid staat u toe om extra toegang tot middel en naast die gebruikers te verlenen die reeds toegang door roltoestemmingen zouden kunnen hebben.&quot;</br>
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Een beleid bewerken"
+>title="Configure permissible and impermissible actions for a policy"
+>abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."</br>
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
->title="Machtigingen voor een bron configureren"
->abstract="Een bron is het element dat of het object dat een gebruiker kan of kan benaderen. De middelen kunnen segmenten of schemagebieden zijn. U kunt schrijven vormen, lezen, of schrappen toestemmingen voor segmenten en schemagebieden."
+>title="Configure permissions for a resource"
+>abstract="A resource is the asset or object that a user can or cannot access. Resources can be segments or schemas fields. You can configure write, read, or delete permissions for segments and schema fields."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
->title="Voorwaarden bewerken"
->abstract="Pas voorwaardelijke verklaringen op uw beleid toe om gebruikerstoegang tot bepaalde middelen te vormen. Selecteer gelijke allen om gebruikers te vereisen om rollen met de zelfde etiketten te hebben zoals een middel om toegang te worden toegestaan. Selecteer gelijke om het even welk om gebruikers te vereisen om een rol met enkel één etiket te hebben die een etiket op een middel aanpassen. De etiketten kunnen of als kern of douanelabels worden bepaald, met kernetiketten die etiketten vertegenwoordigen die worden gecreeerd en door Adobe en douanelabels worden verstrekt die etiketten vertegenwoordigen die u voor uw organisatie creeerde."
+>title="Edit conditions"
+>abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Het beleid van de controle van de toegang hefboomhefboometiketten om te bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. Het beleid kan of lokaal of globaal zijn en kan ander beleid met voeten treden. In dit voorbeeld wordt toegang tot schemavelden en -segmenten in alle sandboxen geweigerd voor gebruikers die niet over de overeenkomende labels in het schemaveld beschikken.
+Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
->Een &quot;ontkent beleid&quot;wordt gecreeerd om toegang tot gevoelige middelen te verlenen omdat de rol toestemmingen aan de onderwerpen verleent. Het geschreven beleid in dit voorbeeld **ontzegging** als u de vereiste labels niet hebt.
+>A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
 
-Als u een toegangsbeheerbeleid wilt maken, selecteert u **[!UICONTROL Permissions]** van de linkernavigatie en selecteer dan **[!UICONTROL Policies]**. Selecteer vervolgens **[!UICONTROL Create policy]**.
+To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
-![Afbeelding met het pictogram Beleid maken dat wordt geselecteerd in de machtigingen](../images/abac-end-to-end-user-guide/abac-create-policy.png)
+![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
 
-De **[!UICONTROL Create new policy]** wordt weergegeven en u wordt gevraagd een naam en een optionele beschrijving in te voeren. Selecteren **[!UICONTROL Confirm]** wanneer gereed.
+The **[!UICONTROL Create new policy]** dialog appears, prompting you to enter a name and an optional description. Select **[!UICONTROL Confirm]** when finished.
 
-![Afbeelding met het dialoogvenster Nieuw beleid maken en de optie Bevestigen](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
+![Image showing the Create new policy dialog and selecting Confirm](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
 
-Als u toegang tot de schemavelden wilt weigeren, gebruikt u de vervolgkeuzepijl en selecteert u **[!UICONTROL Deny access to]** en selecteer vervolgens **[!UICONTROL No resource selected]**. Selecteer vervolgens **[!UICONTROL Schema Field]** en selecteer vervolgens **[!UICONTROL All]**.
+To deny access to the schema fields, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Schema Field]** and then select **[!UICONTROL All]**.
 
-![Afbeelding met Weigeren toegang en geselecteerde bronnen](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
+![Image showing Deny access and resources selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
 
-In de onderstaande tabel staan de voorwaarden die beschikbaar zijn bij het maken van een beleid:
+The table below shows the conditions available when creating a policy:
 
-| Voorwaarden | Beschrijving |
+| Conditions | Description |
 | --- | --- |
-| De volgende fout is onwaar | Wanneer &#39;Toegang weigeren&#39; is ingesteld, wordt de toegang beperkt als de gebruiker niet voldoet aan de geselecteerde criteria. |
-| Het volgende is waar | Wanneer &#39;Toegang toestaan tot&#39; is ingesteld, is toegang toegestaan als de gebruiker aan de geselecteerde criteria voldoet. |
-| Komt overeen met alle | De gebruiker heeft een label dat overeenkomt met een willekeurig label dat op een bron is toegepast. |
-| Komt overeen met alles | De gebruiker heeft alle labels die overeenkomen met alle labels die op een bron zijn toegepast. |
-| Kernlabel | Een kernlabel is een door Adobe gedefinieerd label dat in alle instanties van het Platform beschikbaar is. |
-| Aangepast label | Een aangepast label is een label dat door uw organisatie is gemaakt. |
+| The following being false| When 'Deny access to' is set, access will be restricted if the user does not meet the criteria selected. |
+| The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
+| Matches any| The user has a label that matches any label applied to a resource. |
+| Matches all| The user has all labels that matches all labels applied to a resource. |
+| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Custom label| A custom label is a label that has been created by your organization.|
 
-Selecteren **[!UICONTROL The following being false]** en selecteer vervolgens **[!UICONTROL No attribute selected]**. Selecteer vervolgens de gebruiker **[!UICONTROL Core label]** selecteert u vervolgens **[!UICONTROL Matches all]**. Selecteer de bron **[!UICONTROL Core label]** en selecteert u **[!UICONTROL Add resource]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.
 
-![Afbeelding met de voorwaarden die worden geselecteerd en Bron toevoegen die wordt geselecteerd](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
+![Image showing the conditions being selected and Add resource being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
 
 >[!TIP]
 >
->Een bron is het element dat of het object dat een onderwerp kan of kan benaderen. De middelen kunnen segmenten of schema&#39;s zijn.
+>A resource is the asset or object that a subject can or cannot access. Resources can be segments or schemas.
 
-Als u toegang tot de segmenten wilt weigeren, gebruikt u de vervolgkeuzepijl en selecteert u **[!UICONTROL Deny access to]** en selecteer vervolgens **[!UICONTROL No resource selected]**. Selecteer vervolgens **[!UICONTROL Segment]** en selecteer vervolgens **[!UICONTROL All]**.
+To deny access to the segments, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Segment]** and then select **[!UICONTROL All]**.
 
-Selecteren **[!UICONTROL The following being false]** en selecteer vervolgens **[!UICONTROL No attribute selected]**. Selecteer vervolgens de gebruiker **[!UICONTROL Core label]** selecteert u vervolgens **[!UICONTROL Matches all]**. Selecteer de bron **[!UICONTROL Core label]** en selecteert u **[!UICONTROL Save]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Save]**.
 
-![Afbeelding met de geselecteerde voorwaarden en Opslaan geselecteerd](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
+![Image showing conditions selected and Save being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
 
-Selecteren **[!UICONTROL Activate]** om het beleid te activeren, en er verschijnt een dialoogvenster waarin u wordt gevraagd de activering te bevestigen. Selecteren **[!UICONTROL Confirm]** en selecteer vervolgens **[!UICONTROL Close]**.
+Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Afbeelding waarin het beleid wordt weergegeven dat wordt geactiveerd ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
+![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## Volgende stappen
 
