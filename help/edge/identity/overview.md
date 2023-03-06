@@ -3,9 +3,9 @@ title: Identiteitsgegevens in het Web SDK van het Platform
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;Primaire;Identiteitskaart Namespace;Naamruimte id;AuthenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
+source-git-commit: 0edd9422d6ea1b8e3aeaba1b24bc38b42ca809d8
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -114,6 +114,8 @@ Elk identiteitsobject in de array identities bevat de volgende eigenschappen:
 | `authenticationState` | Tekenreeks | **(Vereist)** De verificatiestatus van de id. Mogelijke waarden zijn `ambiguous`, `authenticated`, en `loggedOut`. |
 | `primary` | Boolean | Hiermee wordt bepaald of deze identiteit moet worden gebruikt als primair fragment in het profiel. Standaard wordt de ECID ingesteld als de primaire id voor de gebruiker. Indien weggelaten, wordt deze waarde standaard ingesteld op `false`. |
 
+Met de `identityMap` -veld om apparaten of gebruikers te identificeren, leidt tot hetzelfde resultaat als het gebruik van het [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) van de [!DNL ID Service API]. Zie de [ID Service API-documentatie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) voor meer informatie .
+
 ## Migreren van Bezoeker-API naar ECID
 
 Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies migreren. Als u ECID-migratie wilt inschakelen, stelt u de `idMigrationEnabled` in de configuratie. Bij ID-migratie zijn de volgende gebruiksgevallen mogelijk:
@@ -128,4 +130,4 @@ Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten
 
 ## Gebruiken in gebeurtenis door:sturen
 
-Als u momenteel [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) ingeschakeld en gebruikt `appmeasurement.js` en `visitor.js`, kunt u gebeurtenis-door:sturen toegelaten eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt Adobe om het even welke AAM segmenten en voegt hen aan de vraag aan Analytics toe. Als de aanroep naar Analytics deze segmenten bevat, roept Analytics geen Audience Manager aan om gegevens door te sturen, zodat er geen dubbele gegevensverzameling is. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van SDK van het Web omdat de zelfde segmentatie eindpunten in het achtereind worden geroepen.
+Als u momenteel [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) ingeschakeld en gebruikt `appmeasurement.js` en `visitor.js`, kunt u gebeurtenis-door:sturen toegelaten eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt Adobe om het even welke AAM segmenten en voegt hen aan de vraag aan Analytics toe. Als de vraag aan Analytics die segmenten bevat, zal Analytics geen Audience Manager roepen om het even welke gegevens door:sturen, zodat is er geen dubbele gegevensinzameling. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van SDK van het Web omdat de zelfde segmentatie eindpunten in het achtereind worden geroepen.
