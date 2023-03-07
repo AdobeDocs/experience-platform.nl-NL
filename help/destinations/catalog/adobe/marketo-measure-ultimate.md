@@ -2,9 +2,9 @@
 title: Marketo Measure Ultimate-bestemming
 description: Leer hoe u verbinding maakt met en gegevens activeert voor de Marketo Measure Ultimate-bestemming.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
+source-git-commit: c2c7a4cd860fed2c8124fe46fe3fd405ba49ecf4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,5 @@ Om een succesvolle uitvoer van datasets te bevestigen, kunt u controleren dat uw
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
 Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
-
-<!--## Additional resources {#additional-resources}-->
 
 
