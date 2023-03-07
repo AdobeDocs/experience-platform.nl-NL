@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
 workflow-type: tm+mt
-source-wordcount: '3165'
+source-wordcount: '3166'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 * [[!UICONTROL Single identity profiles]](#single-identity-profiles)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
-* [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented profiles change trend]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
@@ -262,21 +262,22 @@ De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen we
 
 ![De widget Niet-gesegmenteerde profielen.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Unsegmented profiles trend] {#unsegmented-profiles-trend}
+### [!UICONTROL Unsegmented profiles change trend] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Trend voor niet-gesegmenteerde profielen"
 >abstract="Deze widget verschaft een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een segment is gekoppeld. De trend van profielen die niet aan om het even welk segment verbonden zijn kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd."
 
-De [!UICONTROL Unsegmented Profiles Trend] widget geeft een illustratie van de lijngrafiek voor het aantal profielen die niet aan om het even welk segment over een bepaalde periode in bijlage zijn. De trend van profielen die niet aan om het even welk segment verbonden zijn kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld op de y-as en de tijd op de x-as.
+De [!UICONTROL Unsegmented profiles change trend] widget gebruikt een lijngrafiek om het aantal profielen te illustreren dat sinds de laatste dagelijkse momentopname wordt toegevoegd die niet aan om het even welk segment in bijlage zijn. De verandering-trend van profielen niet verbonden aan om het even welk segment kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld op de y-as en de tijd op de x-as.
 
-![De trendwidget voor niet-gesegmenteerde profielen.](../images/profiles/unsegmented-profiles-trend.png)
+![De trendwidget voor niet-gesegmenteerde profielen verandert.](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
 
->!![NOTE]
-De niet-gesegmenteerde profielen per identiteitswidget zijn vanaf oktober 2022 afgekeurd en zijn niet meer beschikbaar.
+>[!NOTE]
+>
+>De niet-gesegmenteerde profielen per identiteitswidget zijn vanaf oktober 2022 afgekeurd en zijn niet meer beschikbaar.
 
 <!-- 
 
@@ -323,7 +324,8 @@ De [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster ka
 ![Het dialoogvenster Publiek overlapt het rapport.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
-Selecteer **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
+>
+>Selecteer **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
 
 Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]**.
 
