@@ -2,10 +2,10 @@
 title: Marketo Measure Ultimate-bestemming
 description: Leer hoe u verbinding maakt met en gegevens activeert voor de Marketo Measure Ultimate-bestemming.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: 60ea8a608b85661f3a5d23dc3ba52cb0952fe2d2
+source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,21 +60,23 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
+![De Connect to-bestemmingsworkflow voor de Marketo Measure-bestemming.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+
 ### Waarschuwingen inschakelen {#enable-alerts}
 
 U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Gegevenssets exporteren naar deze bestemming {#export-datasets}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [(bètaversie) Gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md) voor uitgebreide instructies over het uitvoeren van datasets naar deze bestemming.
+Lees de [(bètaversie) Gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md) zelfstudie voor uitgebreide instructies over het exporteren van datasets naar deze bestemming.
 
-## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
+## Gegevens exporteren valideren {#exported-data}
 
 Om een succesvolle uitvoer van datasets te bevestigen, kunt u controleren dat uw dataset het aan uw met succes heeft gemaakt [Snowflake-gegevenspakhuis](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
 
@@ -82,5 +84,6 @@ Om een succesvolle uitvoer van datasets te bevestigen, kunt u controleren dat uw
 
 Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
 
-## Aanvullende bronnen {#additional-resources}
+<!--## Additional resources {#additional-resources}-->
+
 
