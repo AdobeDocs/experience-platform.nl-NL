@@ -2,7 +2,7 @@
 title: Incrementele belasting in Query-service
 description: De stijgende ladingseigenschap gebruikt zowel anonieme blok als momentopnamefuncties om een dichtbij oplossing in real time te verstrekken voor het bewegen van gegevens van het gegevensholoader aan uw gegevenspakhuis terwijl het negeren van passende gegevens.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: 11a947addce65887385c983ac81d884fb4244291
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -27,100 +27,100 @@ Zie voor een overzicht van alle terminologie die in deze handleiding wordt gebru
 
 In de onderstaande stappen wordt getoond hoe u gegevens kunt maken en incrementeel kunt laden met behulp van momentopnamen en de anonieme blokfunctie. Het ontwerppatroon kan als malplaatje voor uw eigen opeenvolging van vragen worden gebruikt.
 
-1 Maak een `checkpoint_log` tabel voor het bijhouden van de meest recente momentopname die is gebruikt om gegevens te verwerken. De tabel voor reeksspatiëring (`checkpoint_log` in dit voorbeeld) moet eerst worden geïnitialiseerd naar `null` om een dataset stapsgewijs te verwerken.
+1. Een `checkpoint_log` tabel voor het bijhouden van de meest recente momentopname die is gebruikt om gegevens te verwerken. De tabel voor reeksspatiëring (`checkpoint_log` in dit voorbeeld) moet eerst worden geïnitialiseerd naar `null` om een dataset stapsgewijs te verwerken.
 
-```SQL
-DROP TABLE IF EXISTS checkpoint_log;
-CREATE TABLE  checkpoint_log AS
-SELECT
-   cast(NULL AS string) process_name,
-   cast(NULL AS string) process_status,
-   cast(NULL AS string) last_snapshot_id,
-   cast(NULL AS TIMESTAMP) process_timestamp
-   WHERE false;
-```
-
-2 Vul de `checkpoint_log` tabel met één lege record voor de gegevensset die incrementele verwerking nodig heeft. `DIM_TABLE_ABC` is de gegevensset die in het onderstaande voorbeeld moet worden verwerkt. Bij de eerste verwerkingstijd `DIM_TABLE_ABC`de `last_snapshot_id` is geïnitialiseerd als `null`. Dit staat u toe om de volledige dataset bij de eerste gelegenheid en incrementeel daarna te verwerken.
-
-```SQL
-INSERT INTO
-   checkpoint_log
+   ```SQL
+   DROP TABLE IF EXISTS checkpoint_log;
+   CREATE TABLE  checkpoint_log AS
    SELECT
-       'DIM_TABLE_ABC' process_name,
-       'SUCCESSFUL' process_status,
-       cast(NULL AS string) last_snapshot_id,
-       CURRENT_TIMESTAMP process_timestamp;
-```
+      cast(NULL AS string) process_name,
+      cast(NULL AS string) process_status,
+      cast(NULL AS string) last_snapshot_id,
+      cast(NULL AS TIMESTAMP) process_timestamp
+      WHERE false;
+   ```
 
-3 Volgende, initialiseren `DIM_TABLE_ABC_Incremental` om verwerkte output van te bevatten `DIM_TABLE_ABC`. Het anonieme blok in de **vereist** de uitvoeringssectie van het hieronder beschreven SQL-voorbeeld, zoals beschreven in stap 1 tot en met 4, wordt opeenvolgend uitgevoerd om gegevens incrementeel te verwerken.
+1. Vul de `checkpoint_log` tabel met één lege record voor de gegevensset die incrementele verwerking nodig heeft. `DIM_TABLE_ABC` is de gegevensset die in het onderstaande voorbeeld moet worden verwerkt. Bij de eerste verwerkingstijd `DIM_TABLE_ABC`de `last_snapshot_id` is geïnitialiseerd als `null`. Dit staat u toe om de volledige dataset bij de eerste gelegenheid en incrementeel daarna te verwerken.
 
-1. Stel de `from_snapshot_id` Dit geeft aan waar de verwerking begint. De `from_snapshot_id` in het voorbeeld wordt gevraagd vanuit de `checkpoint_log` tabel voor gebruik met `DIM_TABLE_ABC`. Bij de eerste uitvoering wordt de opname-id `null` dat wil zeggen dat de gehele gegevensset zal worden verwerkt.
-2. Stel de `to_snapshot_id` als huidige momentopname-id van de brontabel (`DIM_TABLE_ABC`). In het voorbeeld wordt dit gevraagd vanuit de metagegevenstabel van de brontabel.
-3. Gebruik de `CREATE` trefwoord om te maken `DIM_TABLE_ABC_Incremenal` als de doeltabel. De bestemmingslijst voortduurt de verwerkte gegevens van de brondataset (`DIM_TABLE_ABC`). Hierdoor kunnen de verwerkte gegevens van de brontabel tussen `from_snapshot_id` en `to_snapshot_id`, die incrementeel aan de doeltabel moet worden toegevoegd.
-4. Werk de `checkpoint_log` met de `to_snapshot_id` voor de brongegevens die `DIM_TABLE_ABC` is verwerkt.
-5. Als om het even welke opeenvolgend uitgevoerde vragen van het anonieme blok ontbreken, **optioneel** uitzonderingssectie wordt uitgevoerd. Dit retourneert een fout en beëindigt het proces.
+   ```SQL
+   INSERT INTO
+      checkpoint_log
+      SELECT
+         'DIM_TABLE_ABC' process_name,
+         'SUCCESSFUL' process_status,
+         cast(NULL AS string) last_snapshot_id,
+         CURRENT_TIMESTAMP process_timestamp;
+   ```
 
->[!NOTE]
->
->De `history_meta('source table name')` is een geschikte methode die wordt gebruikt om toegang tot beschikbare momentopname in een dataset te verkrijgen.
+1. Volgende, initialiseren `DIM_TABLE_ABC_Incremental` om verwerkte output van te bevatten `DIM_TABLE_ABC`. Het anonieme blok in de **vereist** de uitvoeringssectie van het hieronder beschreven SQL-voorbeeld, zoals beschreven in stap 1 tot en met 4, wordt opeenvolgend uitgevoerd om gegevens incrementeel te verwerken.
 
-```SQL
-$$ BEGIN
-    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
-                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
-                                WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
-                                ON a.process_timestamp=b.process_timestamp;
-    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
-    SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
-    CREATE TABLE DIM_TABLE_ABC_Incremental AS
-     SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
- 
-INSERT INTO
-   checkpoint_log
-   SELECT
-       'DIM_TABLE_ABC' process_name,
-       'SUCCESSFUL' process_status,
-      cast( @to_snapshot_id AS string) last_snapshot_id,
-      cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
- 
-EXCEPTION
-  WHEN OTHER THEN
-    SELECT 'ERROR';
-END 
-$$;
-```
+   1. Stel de `from_snapshot_id` Dit geeft aan waar de verwerking begint. De `from_snapshot_id` in het voorbeeld wordt gevraagd vanuit de `checkpoint_log` tabel voor gebruik met `DIM_TABLE_ABC`. Bij de eerste uitvoering wordt de opname-id `null` dat wil zeggen dat de gehele gegevensset zal worden verwerkt.
+   1. Stel de `to_snapshot_id` als huidige momentopname-id van de brontabel (`DIM_TABLE_ABC`). In het voorbeeld wordt dit gevraagd vanuit de metagegevenstabel van de brontabel.
+   1. Gebruik de `CREATE` trefwoord om te maken `DIM_TABLE_ABC_Incremenal` als de doeltabel. De bestemmingslijst voortduurt de verwerkte gegevens van de brondataset (`DIM_TABLE_ABC`). Hierdoor kunnen de verwerkte gegevens van de brontabel tussen `from_snapshot_id` en `to_snapshot_id`, die incrementeel aan de doeltabel moet worden toegevoegd.
+   1. Werk de `checkpoint_log` met de `to_snapshot_id` voor de brongegevens die `DIM_TABLE_ABC` is verwerkt.
+   1. Als om het even welke opeenvolgend uitgevoerde vragen van het anonieme blok ontbreken, **optioneel** uitzonderingssectie wordt uitgevoerd. Dit retourneert een fout en beëindigt het proces.
 
-4 Gebruik de incrementele gegevensbelastingslogica in het anonieme blokvoorbeeld hieronder om het even welke nieuwe gegevens van de brondataset (sinds meest recente timestamp) toe te staan om aan de bestemmingstabel bij een regelmatige kadentie worden verwerkt en worden toegevoegd. In het voorbeeld worden gegevens gewijzigd in `DIM_TABLE_ABC` wordt verwerkt en toegevoegd aan `DIM_TABLE_ABC_incremental`.
+   >[!NOTE]
+   >
+   >De `history_meta('source table name')` is een geschikte methode die wordt gebruikt om toegang tot beschikbare momentopname in een dataset te verkrijgen.
 
->[!NOTE]
->
-> `_ID` is de primaire sleutel in beide `DIM_TABLE_ABC_Incremental` en `SELECT history_meta('DIM_TABLE_ABC')`.
+   ```SQL
+   $$ BEGIN
+       SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
+                               (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
+                                   WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
+                                   ON a.process_timestamp=b.process_timestamp;
+       SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
+       SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
+       CREATE TABLE DIM_TABLE_ABC_Incremental AS
+        SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
+   
+   INSERT INTO
+      checkpoint_log
+      SELECT
+          'DIM_TABLE_ABC' process_name,
+          'SUCCESSFUL' process_status,
+         cast( @to_snapshot_id AS string) last_snapshot_id,
+         cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
+   
+   EXCEPTION
+     WHEN OTHER THEN
+       SELECT 'ERROR';
+   END 
+   $$;
+   ```
 
-```SQL
-$$ BEGIN
-    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
-                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
-                                WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
-                                ON a.process_timestamp=b.process_timestamp;
-    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
-    SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
-    INSERT INTO DIM_TABLE_ABC_Incremental
-     SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
- 
-INSERT INTO
-   checkpoint_log
-   SELECT
-       'DIM_TABLE_ABC' process_name,
-       'SUCCESSFUL' process_status,
-      cast( @to_snapshot_id AS string) last_snapshot_id,
-      cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
- 
-EXCEPTION
-  WHEN OTHER THEN
-    SELECT 'ERROR';
-END
-$$;
-```
+1. Gebruik de stijgende logica van de gegevenslading in het anonieme blokvoorbeeld hieronder om het even welke nieuwe gegevens van de brondataset (sinds meest recente timestamp) toe te staan om aan de bestemmingstabel bij een regelmatige kadentie worden verwerkt en worden toegevoegd. In het voorbeeld worden gegevens gewijzigd in `DIM_TABLE_ABC` wordt verwerkt en toegevoegd aan `DIM_TABLE_ABC_incremental`.
+
+   >[!NOTE]
+   >
+   > `_ID` is de primaire sleutel in beide `DIM_TABLE_ABC_Incremental` en `SELECT history_meta('DIM_TABLE_ABC')`.
+
+   ```SQL
+   $$ BEGIN
+       SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
+                               (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
+                                   WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
+                                   ON a.process_timestamp=b.process_timestamp;
+       SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
+       SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
+       INSERT INTO DIM_TABLE_ABC_Incremental
+        SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
+   
+   INSERT INTO
+      checkpoint_log
+      SELECT
+          'DIM_TABLE_ABC' process_name,
+          'SUCCESSFUL' process_status,
+         cast( @to_snapshot_id AS string) last_snapshot_id,
+         cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
+   
+   EXCEPTION
+     WHEN OTHER THEN
+       SELECT 'ERROR';
+   END
+   $$;
+   ```
 
 Deze logica kan op om het even welke lijst worden toegepast om stijgende lasten uit te voeren.
 
