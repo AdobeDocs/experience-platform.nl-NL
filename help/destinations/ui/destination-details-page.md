@@ -3,9 +3,9 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
+source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | [!UICONTROL Created by] | Geeft de gebruiker aan die deze bestemming heeft gemaakt. |
 | [!UICONTROL Created] | Hiermee wordt de UTC-datetime aangegeven waarop deze bestemming is gemaakt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] schakelen {#enabled-disabled-toggle}
 
@@ -86,9 +86,23 @@ De [!UICONTROL Dataflow runs] tab bevat metrische gegevens over uw gegevensstroo
 
 ### Runtimeduur gegevensstroom {#dataflow-runs-duration}
 
-Er is een bekend probleem in de weergaveduur van gegevensstroomuitvoering. Terwijl de **[!UICONTROL Processing duration]** de meeste dataflow-runtime wordt aangegeven met ongeveer vier uur, zoals in de onderstaande afbeelding wordt getoond, de werkelijke verwerkingstijd voor elke dataflow-run veel korter is. Dataflow looppas vensters blijven open voor langer in het geval dat het Experience Platform moet opnieuw proberen makend vraag aan de bestemming.
+Er is een verschil in de getoonde duur van dataflow looppas tussen het stromen en op dossier-gebaseerde bestemmingen.
 
-![Afbeelding van de DataFlow voert de pagina uit met de kolom Verwerkingstijd gemarkeerd.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+### Streaming doelen {#streaming}
+
+Terwijl de **[!UICONTROL Processing duration]** Voor de meeste streaming dataflow-runtime is dit ongeveer vier uur, zoals in de onderstaande afbeelding wordt getoond, is de werkelijke verwerkingstijd voor elke dataflow-run veel korter. Dataflow runtime vensters blijven open voor langer in het geval dat het Experience Platform moet opnieuw proberen makend vraag aan de bestemming en ook ervoor zorgen het niet op om het even welk laat aankomen gegevens voor zelfde tijdvenster mist.
+
+![Afbeelding van de DataFlow voert de pagina uit met de kolom Verwerkingstijd gemarkeerd voor een streamingdoel.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+Lees voor meer informatie over [dataflow wordt uitgevoerd naar streamingdoelen](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) in de monitoringdocumentatie.
+
+### Bestandsgebaseerde doelen {#file-based}
+
+Voor dataflow wordt uitgevoerd naar op een bestand gebaseerde doelen, wordt de **[!UICONTROL Processing duration]** is afhankelijk van de grootte van de gegevens die worden geëxporteerd en het laden van het systeem. Bericht ook dat de dataflow looppas aan op dossier-gebaseerde bestemmingen uitgesplitst per segment is.
+
+![Afbeelding van de DataFlow voert de pagina uit met de kolom Verwerkingstijd gemarkeerd voor een op een bestand gebaseerd doel.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+Lees voor meer informatie over [dataflow wordt uitgevoerd naar batchbestemmingen (op basis van bestanden)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) in de monitoringdocumentatie.
 
 ## [!UICONTROL Activation data] {#activation-data}
 
