@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van id-naamruimte
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,12 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Platform worde
 | TNTID | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [Doel](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) voor meer informatie. |
 | Windows-ID | A namespace that represents a Windows Advertising ID. Zie het volgende document op [Windows-advertentie-id](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) voor meer informatie . |
 
-### Identiteitsnaamruimten weergeven
+### Identiteitsnaamruimten weergeven {#view-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_view_integration_identities"
+>title="Integratie-id&#39;s weergeven"
+>abstract="Integratie-id&#39;s zijn naamruimten die worden gebruikt om verbinding te maken met andere systemen en die niet worden gebruikt in identiteitsresolutie of om identiteiten aan te sluiten. <br> Deze identiteiten zijn standaard verborgen. Met de schakeloptie kunt u integratienaamruimten weergeven."
 
 Selecteer **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]**.
 
