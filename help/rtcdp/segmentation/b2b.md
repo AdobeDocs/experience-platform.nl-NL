@@ -2,9 +2,9 @@
 title: Gebruiksscenario's voor segmentatie voor Real-time Customer Data Platform B2B Edition
 description: Een overzicht van de verschillende beschikbare Adobe Real-time Customer Data Platform B2B Edition-gebruiksscenario's.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b436aeb8a8628d9b481041be518c1113fb54c342
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -84,13 +84,13 @@ Vind alle mensen die een &quot;Beslissingsmaker&quot;van om het even welke kans 
 
 ### Voorbeeld 5: B2B-profielen zoeken voor mogelijkheden per afdelingsnaam en opportuniteitsbedrag {#find-department-opportunity-amount}
 
-Vind alle mensen die in een afdeling van het Personeel (HR) werken en met om het even welke rekening verwant zijn die minstens één open kans heeft die het bepaalde bedrag ($1 miljoen) of meer waard is. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM Business Opportunity] klasse.
+Vind alle mensen die in een afdeling van het Personeel (HR) werken en om het even welke rekening hebben die minstens één open kans heeft die het bepaalde bedrag ($1 miljoen) of meer waard is. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM Business Opportunity] klasse.
 
 ![UI die voorbeeld 5 montages toont](../assets/segmentation/example-5.png)
 
 ### Voorbeeld 6: B2B-profielen zoeken op basis van functie- en jaarrekeninginkomsten {#find-by-job-title-and-revenue}
 
-Zoek alle personen van wie de functie Vice President is en die verbonden zijn met om het even welke rekening met jaarlijkse inkomsten van het bepaalde bedrag ($100 miljoen) of meer, en hebben de prijsstellingspagina minstens driemaal bezocht in de afgelopen maand. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM ExperienceEvent] klasse.
+Zoek alle personen van wie de functie Vice President is en die een rekening hebben met jaarinkomsten van het gegeven bedrag ($ 100 miljoen) of meer, en de prijspagina ten minste drie keer in de afgelopen maand hebben bezocht. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM ExperienceEvent] klasse.
 
 ![UI die voorbeeld 6 montages toont](../assets/segmentation/example-6.png)
 
@@ -104,13 +104,37 @@ Zoek alle mensen die een &quot;Beslissingsmaker&quot;van om het even welke geslo
 
 Zoek alle mensen die werken in een afdeling Personeelszaken (HR) en die verwant zijn aan om het even welke rekening *of een van de aan de rekening gerelateerde rekeningen* dat minstens één open kans heeft ter waarde van het gegeven bedrag ( $ 1 miljoen) of meer. Voor dit segment is een koppeling vereist tussen [!UICONTROL XDM Individual Profile] klasse, [!UICONTROL XDM Business Account] klasse, en [!UICONTROL XDM Business Opportunity] klasse.
 
-![UI die segmentatie voor verwante rekeningen toont](../assets/segmentation/segmentation-related-accounts.png)
+![UI die segmentatie voor verwante rekeningen toont](../assets/segmentation/example-8.png)
 
 ### Voorbeeld 9: Gebruik loodscores en/of accountscores om profiel te kwalificeren {#account-scoring}
 
 Alle profielen zoeken met een hoofdscore van meer dan 80.
 
-![UI die segmentatie voor voorspelbare lood en rekeningshet tonen van account toont](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
+![UI die segmentatie voor voorspelbare lood en rekeningshet tonen van account toont](../assets/segmentation/example-9.png)
+
+### Voorbeeld 10: B2B-profielen zoeken voor accounts waarvan de bovenliggende org inkomsten heeft boven een bepaald dollarbedrag {#find-parent-org-amount}
+
+Vind alle mensen die met rekeningen worden geassocieerd waarvan Parent Org een opbrengst meer dan het bepaalde bedrag ($100.000.000) heeft.
+
+![UI met bovenliggende org voor segmentatie](../assets/segmentation/example-10.png)
+
+### Voorbeeld 11: B2B-profielen zoeken op basis van functie- en accountnaam met een actieve relatie {#find-by-job-title-and-account-name}
+
+Vind alle mensen die een &quot;Manager&quot;op de rekening &quot;Acme&quot;zijn, waar de rekeningsverhouding &quot;Actief is.
+
+![UI met bovenliggende org voor segmentatie](../assets/segmentation/example-11.png)
+
+### Voorbeeld 12: Zoek B2B-profielen die zijn bedoeld voor campagnes waarbij de werkelijkeKosten hoger is dan de gebudgetteerdeKosten {#find-actualcost-exceed-budgetcost}
+
+Vind alle mensen die voor campagnes worden gericht waar actualCost de budgetedCost overtrof.
+
+![UI met bovenliggende org voor segmentatie](../assets/segmentation/example-12.png)
+
+### Voorbeeld 13: B2B-profielen zoeken die horen bij een statische lijst van Marketo en die wordt verwijderd als onwaar {#find-marketo-static-list}
+
+Vind alle mensen die tot de Statische lijst van Marketo &quot;Verherende gebruikers&quot;behoren waar isDelette=false.
+
+![UI met bovenliggende org voor segmentatie](../assets/segmentation/example-13.png)
 
 ## Volgende stappen {#next-steps}
 
