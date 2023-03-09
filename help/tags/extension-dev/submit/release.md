@@ -2,7 +2,7 @@
 title: Een extensie opheffen
 description: Leer hoe u een tagextensie privé of openbaar kunt maken in Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
@@ -36,4 +36,4 @@ Als u uw extensie rechtstreeks wilt vrijgeven met persoonlijke beschikbaarheid v
 
 Nadat u de privérelease hebt voltooid, kunt u Adobe vragen deze openbaar te maken.  Hierdoor wordt uw extensie beschikbaar in de openbare catalogus. Om het even welke gebruiker van de gegevensinzameling kan uw uitbreiding aan om het even welk bezit installeren.
 
-Voltooi de [aanvraagformulier voor openbare release](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) om het releaseproces te starten.
+Voltooi de [aanvraagformulier voor openbare release](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) om het releaseproces te starten.
