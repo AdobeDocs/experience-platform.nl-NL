@@ -1,9 +1,9 @@
 ---
 title: Een Marketo Engage-bronverbinding en gegevensstroom maken voor aangepaste activiteitgegevens in de gebruikersinterface
 description: Deze zelfstudie bevat stappen voor het maken van een Marketo Engage-bronverbinding en gegevensstroom in de gebruikersinterface om gegevens van aangepaste activiteiten over te brengen naar Adobe Experience Platform.
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -145,9 +145,30 @@ Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Save & 
 
 ![De laatste revisiestap waarin informatie over de verbinding, gegevensset en toewijzingsvelden wordt samengevat.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
->[!NOTE]
->
->Zodra ingebed wordt voltooid, zal de dataset ingesloten alle activiteiten, met inbegrip van zowel standaard als douaneactiviteiten van uw bevatten [!DNL Marketo] -instantie. Als u aangepaste activiteitenrecords op Platform wilt selecteren, moet u [Query-service](../../../../../query-service/home.md) en de geschikte voorspellingen te verstrekken.
+### Aangepaste activiteiten toevoegen aan een bestaande activiteitengegevensstroom {#add-to-existing-dataflows}
+
+Om de gegevens van de douaneactiviteit aan een bestaande gegevensstroom toe te voegen, wijzig de afbeeldingen van een bestaande activiteitendataflow met de gegevens van de douaneactiviteit die u wilt opnemen. Dit staat u toe om douaneactiviteit in de zelfde bestaande activiteitendataset in te voeren. Lees voor meer informatie over het bijwerken van de toewijzingen van een bestaande gegevensstroom de handleiding op [bijwerken, gegevensstromen in UI](../../update-dataflows.md).
+
+### Gebruiken [!DNL Query Service] aan filteractiviteiten voor douaneactiviteiten {#query-service-filter}
+
+Zodra uw gegevensstroom volledig is, kunt u gebruiken [Query-service](../../../../../query-service/home.md) om activiteiten voor uw gegevens van de douaneactiviteit te filtreren.
+
+Wanneer aangepaste activiteiten in het Platform worden opgenomen, wordt de API-naam van de aangepaste activiteit automatisch gewijzigd `eventType`. Gebruiken `eventType={API_NAME}` om te filteren op aangepaste activiteitsgegevens.
+
+```sql
+SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
+```
+
+Gebruik de `IN` clausule om meerdere aangepaste activiteiten te filteren:
+
+```sql
+SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
+SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
+```
+
+In de onderstaande afbeelding ziet u een voorbeeld van een SQL-instructie in het dialoogvenster [Query-editor](../../../../../query-service/ui/user-guide.md) dat filters voor de gegevens van de douaneactiviteit.
+
+![UI van het Platform die een vraagvoorbeeld voor douaneactiviteiten toont.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Volgende stappen
 
