@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
+source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
 workflow-type: tm+mt
-source-wordcount: '4082'
+source-wordcount: '4103'
 ht-degree: 0%
 
 ---
@@ -191,6 +191,11 @@ Voor de meest recente lijst van beschikbare standaardXDM klassen, verwijs naar [
 >title="Veldgroep"
 >abstract="Veldgroepen zijn herbruikbare componenten waarmee u schema&#39;s met extra kenmerken kunt uitbreiden. De meeste veldgroepen zijn alleen compatibel met bepaalde klassen. U kunt standaardveldgroepen gebruiken die door Adobe worden gedefinieerd of u kunt handmatig uw eigen aangepaste veldgroepen definiëren. Zie de documentatie om meer over te leren hoe de gebiedsgroepen in schemacompositie betrokken zijn."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_requiredFieldgroup"
+>title="Vereiste veldgroep"
+>abstract="Deze veldgroep wordt vereist door de bron die u gebruikt. Om deze reden, kunt u niet het van uw schema schrappen."
+
 Een veldgroep is een herbruikbare component die een of meer velden definieert die bepaalde functies implementeren, zoals persoonlijke gegevens, hotelvoorkeuren of adres. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert.
 
 Veldgroepen definiëren met welke klasse(n) ze compatibel zijn op basis van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Dit betekent dat niet alle veldgroepen beschikbaar zijn voor gebruik met alle klassen.
@@ -327,7 +332,7 @@ Bij het ontwerpen van uw schema&#39;s moet u rekening houden met een aantal bela
 | Meer nesten | Minder of geen nesten |
 | Hiermee maakt u logische veldgroepen | Velden worden op ad-hoclocaties geplaatst |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Objecten
 

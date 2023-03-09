@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identiteitsvelden definiëren in de gebruikersinterface
 description: Leer hoe u een identiteitsveld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,12 @@ Identiteitsvelden vormen een cruciaal onderdeel van de manier waarop identiteits
    * [Identiteitsnaamruimten](../../../identity-service/namespaces.md): Naamruimten definiëren de verschillende typen identiteitsgegevens die betrekking kunnen hebben op één persoon en die een vereiste component zijn voor elk identiteitsveld.
 * [Klantprofiel in realtime](../../../profile/home.md): Gebruikt de grafieken van de klantenidentiteit van hefboomwerkingen om een verenigd consumentenprofiel te verstrekken dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd, die in bijna-real-time wordt bijgewerkt.
 
-## Een identiteitsveld definiëren
+## Een identiteitsveld definiëren {#define-a-identity-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identityField_primaryIdentityRestriction"
+>title="Beperkingen van de primaire identiteit"
+>abstract="In dit schema wordt een veldgroep gebruikt die is bedoeld voor gebruik in een specifieke bronverbinding. Voor de verbinding moet identityMap worden gebruikt als primaire identiteit en automatisch worden ingesteld."
 
 Wanneer [een nieuw veld definiëren](./overview.md#define) in UI, kunt u het als identiteitsgebied plaatsen door te selecteren **[!UICONTROL Identity]** selectievakje in de rechterspoorstaaf.
 
