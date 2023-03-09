@@ -2,18 +2,18 @@
 title: Gebruik van batch-query's controleren
 description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van de Data Distiller-licentie van uw organisatie.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: a1c5b687108a9fc8729008e2b0e39ec6b1842f54
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
 
-# (bèta) Het gebruik van batch query&#39;s controleren {#monitor-license-usage}
+# (Alpha) Gebruik van batch-querylicenties controleren {#monitor-license-usage}
 
 >[!IMPORTANT]
 >
->De capaciteit om het gebruik van de partijvraagvergunning door UI te controleren is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
+>De capaciteit om het gebruik van de partijvraagvergunning door UI te controleren is nog niet beschikbaar aan alle gebruikers. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie kunt bekijken.
 
