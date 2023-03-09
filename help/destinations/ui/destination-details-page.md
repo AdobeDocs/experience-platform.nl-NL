@@ -3,9 +3,9 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
+source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ De [!UICONTROL Dataflow runs] tab bevat metrische gegevens over uw gegevensstroo
 >[!NOTE]
 >
 >* Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) en [Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingen.
->* Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) doelen, identiteiten die zijn uitgesloten, mislukt en geactiveerd, worden momenteel niet weergegeven.
+>* Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) doelen, de metriek met betrekking tot uitgesloten, mislukte en geactiveerde identiteiten worden geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
 
 
 ![Dataflow-runweergave](../assets/ui/details-page/dataflow-runs.png)

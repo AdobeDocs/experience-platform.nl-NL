@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
+source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
 workflow-type: tm+mt
-source-wordcount: '3065'
+source-wordcount: '3079'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 >[!NOTE]
 >
 >- Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen.
->- Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) doelen, identiteiten die zijn uitgesloten, mislukt en geactiveerd, worden momenteel niet weergegeven.
+>- Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) doelen, de metriek met betrekking tot uitgesloten, mislukte en geactiveerde identiteiten worden geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
 
 
 >[!CONTEXTUALHELP]
