@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: fd82f109b8af665540e2ff30e92c6546ef9f3d2c
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1292'
 ht-degree: 0%
 
 ---
@@ -184,11 +184,21 @@ De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combin
 
 Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van de Adobe worden verleend, lees [toegangsbeheeroverzicht](../access-control/home.md).
 
-### Op kenmerken gebaseerd toegangsbeheer voor bronnen
+### Op kenmerken gebaseerd toegangsbeheer
 
 Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van kenmerken.
 
 Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op gebieden toepassen die u toestemmingen hebt. Bovendien kunt u geen gegevens aan een dataset opnemen als u geen toegang tot alle gebieden in de dataset hebt.
+
+#### Ondersteuning voor op kenmerken gebaseerd toegangsbeheer in bronnen [!BADGE Nieuwe functie]
+
+>[!TIP]
+>
+>Toegangsbeheer op basis van kenmerken werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan. **Labels** worden toegepast op **rollen** de toegang tot die bepaalde rol aan te wijzen. **Labels** worden ook toegepast op bronnen zoals schemavelden en segmenten. Als u wilt dat een gebruiker toegang heeft tot bepaalde schemavelden en segmenten, moet u deze toevoegen aan *een rol met het zelfde etiket dat aan het gevraagde middel wordt toegewezen*. Lees voor meer informatie de [attribuut-based toegangsbeheergids van begin tot eind](../access-control/abac/end-to-end-guide.md).
+
+- Pas etiketten op schemagebieden toe om toegang tot specifieke schemagebieden in uw organisatie te bepalen. Zodra de toegang tot specifieke schemagebieden wordt gevestigd, zullen de gebruikers slechts afbeeldingen voor de gebieden kunnen tot stand brengen die zij toegang hebben tot.
+- De gebruikers zonder de aangewezen rollen zullen geen dataflows met afbeeldingen kunnen tot stand brengen of bijwerken die ontoegankelijke schemagebieden impliceren. Bovendien kunnen onbevoegde gebruikers bestaande gegevensstromen met ontoegankelijke schemavelden niet bijwerken, verwijderen, inschakelen of uitschakelen.
+- Bovendien, moet een dataflow precies zelfde schema identiteitskaart en versie in zijn afbeelding, doeldataset, en doelverbinding hebben.
 
 Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md).
 
