@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Handleiding voor realtime klantprofiel
-user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
+user-guide-title: Handleiding voor Real-time klantprofiel
+user-guide-description: Voeg klantgegevens samen om een uniform beeld te krijgen van klantinteracties via verschillende kanalen.
 feature: Profiles
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81d219116479aa71e9540e4efa636bec8dea5d23
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 5%
+source-wordcount: '138'
+ht-degree: 18%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 5%
 * [[!DNL Profile] en segmentatiegids](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
 * [Verlopen van gebeurtenissen beleven](event-expirations.md)
+* [Verlopen van pseudoniem profiel](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
