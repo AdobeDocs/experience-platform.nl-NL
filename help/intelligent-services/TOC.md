@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
 audience: user
-user-guide-title: Help bij Intelligente services
-breadcrumb-title: Handleiding voor intelligente services
-user-guide-description: Gebruik de intelligente diensten van AI om scores te produceren, inzichten te ontdekken, en segmenten van uw gegevens van de marketinggebeurtenissen tot stand te brengen.
-source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
+user-guide-title: Hulp bij Intelligent Services
+breadcrumb-title: Handleiding voor Intelligent Services
+user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken op basis van uw marketinggebeurtenisgegevens.
+source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 6%
+source-wordcount: '141'
+ht-degree: 22%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
    - [Handleiding gebruikersinterface](attribution-ai/user-guide.md)
    - [Inzichten ontdekken](attribution-ai/discover-insights.md)
    - [Muziek downloaden](attribution-ai/download-scores.md)
-   - Data Governance {#aai-data-governance}
+   - Gegevensbeheer {#aai-data-governance}
       - [Toegangsbesturingselementen](attribution-ai/aai-data-governance/access-controls.md)
       - [Controlelogboeken](attribution-ai/aai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](attribution-ai/aai-data-governance/customer-managed-keys.md)
@@ -31,15 +31,13 @@ ht-degree: 6%
       - [Beleid inzake governance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Muziek analyseren met Query Service](attribution-ai/aai-query-service.md)
    - [Problemen oplossen](attribution-ai/troubleshooting.md)
-- AI (Content and Commerce AI) {#content-commerce-ai}
-   - [Overzicht](content-commerce-ai/overview.md)
-   - [Aan de slag](content-commerce-ai/getting-started.md)
-   - AI API voor inhoud en handel{#api}
-      - [Kleurextractie](content-commerce-ai/api/color-extraction.md)
-      - [Trefwoordextractie](content-commerce-ai/api/keyword-extraction.md)
-      - [Tekstclassificatie](content-commerce-ai/api/text-classification.md)
-      - [Visuele gelijkenis](content-commerce-ai/api/visual-similarity.md)
-      - [Tekstaanwezigheid en optische tekenherkenning](content-commerce-ai/api/optical-character-recognition.md)
+- Inhoud labelen {#content-tagging-ai}
+   - [Overzicht](content-tagging/overview.md)
+   - [Aan de slag](content-tagging/getting-started.md)
+   - AI API voor tags van inhoud{#api}
+      - [Kleurlabels](content-tagging/api/color-tagging.md)
+      - [Trefwoordtags](content-tagging/api/keyword-tagging.md)
+      - [Tekstaanwezigheid en optische tekenherkenning](content-tagging/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
    - [Overzicht](customer-ai/overview.md)
    - [Aan de slag met Customer AI](customer-ai/getting-started.md)
@@ -50,7 +48,7 @@ ht-degree: 6%
       - [Segmenten maken met behulp van AI-scores van de klant](customer-ai/user-guide/create-segment.md)
       - [Muziek downloaden](customer-ai/user-guide/download-scores.md)
    - [Problemen oplossen](customer-ai/troubleshooting.md)
-   - Data Governance {#cai-data-governance}
+   - Gegevensbeheer {#cai-data-governance}
       - [Toegangsbesturingselementen](customer-ai/cai-data-governance/access-controls.md)
       - [Controlelogboeken](customer-ai/cai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)
