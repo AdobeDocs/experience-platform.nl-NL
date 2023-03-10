@@ -1,15 +1,19 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;beheertags;tags;
-title: Overzicht van administratieve tags
-description: Dit document bevat informatie over beheertags in Adobe Experience Platform
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+keywords: Experience Platform;thuis;populaire onderwerpen;verenigde markeringen;markeringen;
+title: (Bèta) het Verenigde Overzicht van Markeringen
+description: Dit document bevat informatie over uniforme tags in Adobe Experience Platform
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Overzicht van codes
+# (Beta) Overzicht van Unified Tags
+
+>[!IMPORTANT]
+>
+>De verenigde markeringen zijn in bèta. Als u feedback wilt geven, selecteert u de knop boven aan de pagina Tags-beheer.
 
 Tags zijn een mogelijkheid van Adobe Experience Platform waarmee beheerders metagegevenstaxonomieën kunnen beheren om bedrijfsobjecten te classificeren voor een eenvoudigere detectie en categorisering. Tags zijn metagegevens die kunnen worden beschouwd als trefwoorden die kunnen worden gekoppeld aan een segment, gegevensset, reis of andere objecten, zodat zoekopdrachten naar dat object en verwante objecten kunnen worden uitgevoerd. Tags worden in twee typen geclassificeerd: gecategoriseerd en niet gecategoriseerd.
 

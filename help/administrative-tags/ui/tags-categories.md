@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;categorieën tags;tags;
 title: Labelcategorieën
-description: Dit document bevat informatie over het beheer van beheercategorieën voor tags in Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+description: Dit document bevat informatie over het beheer van categorieën van uniforme tags in Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;beheren, tags;tags;
-title: Beheerderstags beheren
-description: Dit document bevat informatie over het beheer van beheertags in Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+title: Verenigde tags beheren
+description: Dit document bevat informatie over het beheer van uniforme tags in Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
