@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;aan de slag;content ai;commerce ai;content tagging ai;trefwoordtags;Trefwoordtags
+keywords: Experience Platform;aan de slag;inhoud;inhoud taggen ai;trefwoordtags;Trefwoordtags
 solution: Experience Platform
 title: Trefwoordtags toepassen in de API voor inhoudtags
-description: De service Trefwoordtags extraheert bij een tekstdocument automatisch trefwoorden of trefwoorden die het onderwerp van het document het best beschrijven. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor trefwoordtags.
+description: Als u een tekstdocument opgeeft met de service Trefwoordtags, worden trefwoorden of trefwoorden die het onderwerp van het document het beste beschrijven automatisch geëxtraheerd. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor trefwoordtags.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '450'
 ht-degree: 3%
 
 ---

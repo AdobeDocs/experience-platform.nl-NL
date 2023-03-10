@@ -1,12 +1,12 @@
 ---
-keywords: Experience Cloud;aan de slag;inhoud en handel ai;populaire onderwerpen;Intelligente services;ccai
+keywords: Experience Cloud;aan de slag;inhoud etiketteren;populaire onderwerpen;De Intelligente Diensten
 solution: Experience Platform
 title: Overzicht van inhoudstags
-description: AI van de Inhoud en van de Handel is een reeks diensten van AI die u toestaat om intelligente eigenschappen uit uw inhoud te halen, inhoudsstroom te organiseren, te stroomlijnen, en nuttigere, gepersonaliseerde ervaringen aan uw klanten te leveren.
+description: Content Tagging is een reeks AI-services waarmee u intelligente functies van uw inhoud kunt extraheren, de inhoudsstroom kunt ordenen, stroomlijnen en uw klanten meer effectieve, persoonlijke ervaringen kunt bieden.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
