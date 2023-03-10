@@ -5,9 +5,9 @@ title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3f776255ca858a86f501fd587c44fe176c45e103
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ De vervaldatum van gegevens van het Pseudoniem Profiel kan niet door de Platform
 
 - De identiteitstypen die voor het Pseudoniem-profiel moeten worden gebruikt, worden verwijderd.
    - Bijvoorbeeld: `ECID` alleen, `AAID` alleen, of een combinatie van `ECID` en `AAID`.
-- De hoeveelheid tijd die moet worden gewacht voordat een pseudoniem profiel wordt verwijderd. De standaardaanbeveling voor klanten is 30 dagen. Deze waarde kan echter afwijken, afhankelijk van uw gebruiksscenario.
+- De hoeveelheid tijd die moet worden gewacht voordat een pseudoniem profiel wordt verwijderd. De standaardaanbeveling voor klanten is 14 dagen. Deze waarde kan echter afwijken, afhankelijk van uw gebruiksscenario.
 - Het huidige aantal profielen in vergelijking met het aantal licentieprofielen.
 
 ## Veelgestelde vragen {#faq}
@@ -37,10 +37,10 @@ In de volgende sectie worden vaak gestelde vragen over de vervaldatum van gegeve
 
 ### Welke gebruikers zouden de vervaldatum van Pseudoniem profielgegevens moeten gebruiken?
 
-- Als u een schakelaar gebruikt die direct gegevens van hun bron naar Platform verzendt.
+- Als u een streamingbron gebruikt die gegevens rechtstreeks naar het Platform verzendt.
 - Als u een website hebt die ongeautoriseerde klanten massaal bedient.
 - Als u buitensporige profieltellingen in uw datasets hebt en bevestigd dat dit bovenmatige profieltelling wegens anonieme op koekje-gebaseerde identiteitstype is.
-   - Om dit te bepalen, zou u het identiteitstype overlappende rapport moeten gebruiken. Meer informatie over dit rapport vindt u in LINK
+   - Om dit te bepalen, zou u het identiteitstype overlappende rapport moeten gebruiken. Meer informatie over dit rapport vindt u in de [sectie over overlappingsrapporten voor identiteiten](./api/preview-sample-status.md#identity-overlap-report) van de voorbeeldstatus-API-handleiding.
 
 ### Wat zijn sommige bedenkingen u zich van zou moeten bewust zijn alvorens de gegevensvervaldatum van de Pseudoniem- profielenprofielen te gebruiken?
 

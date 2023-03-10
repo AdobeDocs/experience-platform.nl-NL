@@ -3,7 +3,7 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Voorbeeld van voorbeeldstatus (Profile Preview) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
 source-wordcount: '2869'
 ht-degree: 0%
@@ -369,7 +369,7 @@ Dit rapport bevat de volgende informatie:
 * Er zijn 107 profielen die slechts van gegevens van dataset worden samengesteld `5eeda0032af7bb19162172a7`.
 * Er zijn in totaal 454.642 profielen in de organisatie.
 
-## Rapport voor overlappende naamruimte genereren
+## Rapport voor overlappende naamruimte genereren {#identity-overlap-report}
 
 De identiteitsnaamruimte overlapt rapport geeft inzicht in de samenstelling van de profielopslag van uw organisatie door de naamruimten die het meest bijdragen aan uw adresseerbare publiek (samengevoegde profielen) toegankelijk te maken. Dit omvat zowel de standaardnaamruimten die door Adobe worden verstrekt, als de naamruimten van de douaneidentiteit die door uw organisatie worden bepaald.
 
