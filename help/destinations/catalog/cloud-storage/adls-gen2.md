@@ -2,9 +2,9 @@
 title: (Beta) Azure Data Lake Storage Gen2-verbinding
 description: Leer hoe u verbinding maakt met Azure Data Lake Storage Gen2 om segmenten te activeren en gegevenssets te exporteren.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de toepasselijke schemavelden (bijvoorbeeld uw PPID), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten {#prerequisites}
 
@@ -44,7 +44,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL URL]**: Het eindpunt voor [!DNL Azure Data Lake Storage Gen2]. Het eindpuntpatroon is: `https://<accountname>.dfs.core.windows.net`.
+* **[!UICONTROL URL]**: Het eindpunt voor [!DNL Azure Data Lake Storage Gen2]. Het eindpuntpatroon is: `abfss://<container>@<accountname>.dfs.core.windows.net`.
 * **[!UICONTROL Tenant]**: De huurdersinformatie die uw toepassing bevat.
 * **[!UICONTROL Service principal ID]**: De client-id van de toepassing.
 * **[!UICONTROL Service principal key]**: De sleutel van de toepassing.
