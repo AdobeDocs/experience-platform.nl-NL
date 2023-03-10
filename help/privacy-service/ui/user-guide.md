@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
 
-# Privacy-taken beheren in de gebruikersinterface van de Privacy Service
+# Privacy-taken beheren in de gebruikersinterface van de Privacy Service {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="Beschrijving"
+>abstract=""
 
 Dit document bevat stappen voor het maken en beheren van privacyverzoeken met de [!DNL Privacy Service] gebruikersinterface.
 
@@ -37,7 +42,7 @@ Het dashboard voor de [!DNL Privacy Service] De gebruikersinterface bevat twee w
 | [!UICONTROL APA_AUS] | De [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL HIPAA_AUS] | De [!DNL Health Insurance Portability and Accountability Act] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -93,7 +98,12 @@ Als een oplossing om het even welke extra gegevens heeft verstrekt, is het viewa
 
 Selecteer **[!UICONTROL Export to CSV]** rechtsboven in het dialoogvenster.
 
-## Een nieuw verzoek voor een privacytaak maken
+## Een nieuw verzoek voor een privacytaak maken {#create-a-new-privacy-job-request}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="Instructies"
+>abstract=""
 
 >[!NOTE]
 >

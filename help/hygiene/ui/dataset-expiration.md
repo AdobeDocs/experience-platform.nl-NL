@@ -2,14 +2,19 @@
 title: Verlopen gegevensset beheren
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
 
-# Verlopen gegevenssets beheren
+# Verlopen gegevenssets beheren {#dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_description"
+>title="Beschrijving"
+>abstract=""
 
 >[!IMPORTANT]
 >
@@ -23,7 +28,12 @@ De [[!UICONTROL Data Hygiene] werkruimte](./overview.md) in Adobe Experience Pla
 
 Dit document behandelt hoe te om datasettermijnen in de UI van het Platform te plannen en te beheren.
 
-## Een gegevensset plannen die vervalt
+## Een gegevensset plannen die vervalt {#schedule-dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
+>title="Instructies"
+>abstract=""
 
 Als u een nieuwe aanvraag wilt maken, selecteert u **[!UICONTROL Create request]** van de hoofdpagina in de werkruimte.
 

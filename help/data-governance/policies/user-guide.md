@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
 
-# Beleid voor gegevensgebruik beheren in de gebruikersinterface
+# Beleid voor gegevensgebruik beheren in de gebruikersinterface {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_description"
+>title="Beschrijving"
+>abstract=""
 
 In dit document wordt beschreven hoe u het **[!UICONTROL Policies]** in de gebruikersinterface van Adobe Experience Platform om beleid voor gegevensgebruik te maken en te beheren.
 
@@ -84,6 +89,11 @@ De **[!UICONTROL Browse]** wordt opnieuw weergegeven. Dit betekent dat het nieuw
 
 ### Een toestemmingsbeleid maken {#consent-policy}
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_instructions"
+>title="Instructies"
+>abstract=""
+
 >[!IMPORTANT]
 >
 >Beleid voor toestemming is alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**.
@@ -121,7 +131,7 @@ Als u meer dan één voorwaarde selecteert, kunt u het pictogram gebruiken dat t
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Dan voorwaarde"
->abstract="Zodra uw &quot;als&quot;voorwaarde is bepaald, gebruik de sectie &quot;toen&quot;om minstens één toestemmingsattribuut van het unieschema te selecteren. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is."
+>abstract="Zodra uw &quot;als&quot;voorwaarde is bepaald, gebruik de sectie &quot;toen&quot;om minstens één toestemmingsattribuut van het unieschema te selecteren. Dit is het kenmerk dat aanwezig moet zijn om profielen te kunnen opnemen in de actie waarop dit beleid betrekking heeft."
 
 Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
 

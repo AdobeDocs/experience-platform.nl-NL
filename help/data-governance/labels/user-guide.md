@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
 
-# Labels voor gegevensgebruik beheren in de gebruikersinterface
+# Labels voor gegevensgebruik beheren in de gebruikersinterface {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_description"
+>title="Beschrijving"
+>abstract=""
 
 In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface.
 
@@ -77,7 +82,12 @@ De **[!UICONTROL Show Inherited Labels]** de knevel is door gebrek, dat u toesta
 
 ![Overerfde labels verbergen](../images/labels/inherited-labels.png)
 
-## Labels beheren op het niveau van het gegevenssetveld
+## Labels beheren op het niveau van het gegevenssetveld {#manage-labels-at-dataset-field-level}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="Instructies"
+>abstract=""
 
 >[!IMPORTANT]
 >
