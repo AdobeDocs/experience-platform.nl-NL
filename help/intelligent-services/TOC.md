@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Hulp bij Intelligent Services
 breadcrumb-title: Handleiding voor Intelligent Services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken op basis van uw marketinggebeurtenisgegevens.
-source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
+source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '140'
 ht-degree: 22%
 
 ---
@@ -31,13 +31,13 @@ ht-degree: 22%
       - [Beleid inzake governance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Muziek analyseren met Query Service](attribution-ai/aai-query-service.md)
    - [Problemen oplossen](attribution-ai/troubleshooting.md)
-- Inhoud labelen {#content-tagging-ai}
-   - [Overzicht](content-tagging/overview.md)
-   - [Aan de slag](content-tagging/getting-started.md)
-   - AI API voor tags van inhoud{#api}
-      - [Kleurlabels](content-tagging/api/color-tagging.md)
-      - [Trefwoordtags](content-tagging/api/keyword-tagging.md)
-      - [Tekstaanwezigheid en optische tekenherkenning](content-tagging/api/optical-character-recognition.md)
+- Inhoud labelen {#content-commerce-ai}
+   - [Overzicht](content-commerce-ai/overview.md)
+   - [Aan de slag](content-commerce-ai/getting-started.md)
+   - API voor inhoudtags{#api}
+      - [Kleurlabels](content-commerce-ai/api/color-tagging.md)
+      - [Trefwoordtags](content-commerce-ai/api/keyword-tagging.md)
+      - [Tekstaanwezigheid en optische tekenherkenning](content-commerce-ai/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
    - [Overzicht](customer-ai/overview.md)
    - [Aan de slag met Customer AI](customer-ai/getting-started.md)
