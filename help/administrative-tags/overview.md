@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;verenigde markeringen;markeringen;
-title: (Bèta) het Verenigde Overzicht van Markeringen
+title: Overzicht van Unified Tags (bèta)
 description: Dit document bevat informatie over uniforme tags in Adobe Experience Platform
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
-# (Beta) Overzicht van Unified Tags
+# Overzicht van Unified-tags (bèta)
 
 >[!IMPORTANT]
 >

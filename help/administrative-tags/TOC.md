@@ -1,19 +1,19 @@
 ---
 audience: user
-user-guide-title: Systeemcodes in Adobe Experience Platform Help
-breadcrumb-title: Handleiding voor administratieve tags
-user-guide-description: Gebruik beheertags om metagegevenstolomieën te beheren. Leer hoe u tagcategorieën en -tags maakt.
-source-git-commit: c72b2244e7905c3823fd60212c071614222d0c4f
+user-guide-title: Verenigde Markeringen in Adobe Experience Platform Help
+breadcrumb-title: Gids voor Verenigde tags
+user-guide-description: Unieke tags gebruiken om metagegevenstolomes te beheren. Leer hoe u tagcategorieën en -tags maakt.
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 8%
+source-wordcount: '39'
+ht-degree: 0%
 
 ---
 
 
-# Administratieve codes {#administrative-tags}
+# Verenigde tags (bèta){#administrative-tags}
 
-* [Overzicht van administratieve codes](overview.md)
-* Gebruikersinterface voor administratieve codes {#ui}
+* [Overzicht van Unified-tags (bèta)](overview.md)
+* Gebruikersinterface voor Verenigde tags {#ui}
    * [Tags beheren](ui/managing-tags.md)
    * [Categorieën tags](ui/tags-categories.md)
