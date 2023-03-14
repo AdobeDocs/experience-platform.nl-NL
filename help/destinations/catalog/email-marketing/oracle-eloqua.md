@@ -1,16 +1,16 @@
 ---
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle eloqua;oracle
-title: Oracle Eloqua-verbinding
+title: (Bestanden) Oracle Eloqua-verbinding
 description: Oracle Eloqua is een softwareplatform als service (SaaS) voor marketingautomatisering dat door Oracle wordt aangeboden en dat bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkooplood te beheren.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: e986fd9479ca2258fc9aab752e2d0376c608554b
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
-# [!DNL Oracle Eloqua] verbinding
+# [!DNL (Files) Oracle Eloqua] verbinding
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) is software als serviceplatform voor marketingautomatisering die wordt aangeboden door [!DNL Oracle] die bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en productie van verkooplood te beheren.
 
@@ -25,7 +25,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## IP adres lijst van gewenste personen {#allow-list}
 

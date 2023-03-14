@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
+source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1044'
 ht-degree: 3%
 
 ---
@@ -135,7 +135,8 @@ ht-degree: 3%
       * [Overzicht van e-mailmarketingdoelen](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-verbinding](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services-verbinding](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
+      * [(API) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [(Bestanden) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
       * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(Bestanden) Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
