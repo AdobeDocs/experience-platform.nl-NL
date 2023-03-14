@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1039'
 ht-degree: 3%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 3%
       * [Salesforce CRM-verbinding](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365-verbinding](./catalog/crm/microsoft-dynamics-365.md)
       * [Verbinding buiten bereik](catalog/crm/outreach.md)
+      * [Zendesk-verbinding](catalog/crm/zendesk.md)
    * Platforms voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
