@@ -3,9 +3,9 @@ keywords: streaming; HTTP-bestemming
 title: HTTP API-verbinding
 description: Gebruik de HTTP API bestemming in Adobe Experience Platform om profielgegevens naar derdeeindpunt van HTTP te verzenden om uw eigen analyses in werking te stellen of andere verrichtingen uit te voeren u op profielgegevens kunt nodig hebben die uit Experience Platform worden uitgevoerd.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
+source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2356'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Als u **[!UICONTROL OAuth 2 Client Credentials]** autorisatietype voor verbindin
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Tijdstempels segment opnemen"
->abstract="Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd.<p>inhoud van eerste opsommingsteken</p><p>inhoud van tweede opsommingsteken</p><ul><li>Lijstitem één.</li><li>Lijstitem twee.</li></ul> - Meer tekstregels. - Nog meer tekstregels. Opmaaktest om te zien of we het volgende kunnen: <br>HTML-opmaak gebruiken</p><p>Of gebruik zelfs alinealabels. Dit is regel één.</p><p>En meer alinealabels voor regel twee.</p><p>Alle alinealabels. Voor regel drie.</p>Tot slot een test om verbindingen met prijsdaling te omvatten [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](absolute koppeling) en HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=nl">koppelingstekst</a> syntaxis.Een test om koppelingen met markering op te nemen [../overview.md](relatieve koppelingen) en HTML <a href="../overview.md">relatieve koppelingstekst</a> syntaxis."
+>abstract="Schakel deze optie in als u wilt dat de gegevensexport de UNIX-tijdstempel bevat wanneer de segmenten zijn gemaakt en bijgewerkt, evenals de UNIX-tijdstempel wanneer de segmenten voor activering aan de bestemming zijn toegewezen. Bekijk de documentatie voor een voorbeeld van de gegevensuitvoer met deze optie geselecteerd."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
