@@ -1,9 +1,9 @@
 ---
 title: Distiller-overzicht van gegevens
 description: Een overzicht van de Distiller-gebruikslimieten voor gegevens van Query Service met betrekking tot uw licentierechten.
-source-git-commit: b3003cc62e8d3555b887a23f0614020bd2c5e81e
+source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -16,29 +16,32 @@ Data Distiller is een pakket dat een subset van de functies van Adobe Experience
 
 De  [Distiller-gebruiksdashboard voor gegevens](./license-usage.md) is beschikbaar zodra u Data Distiller-computeruren hebt aangeschaft. Met het gebruiksdashboard voor licenties kunt u het gebruik van de juiste computeruren controleren. Zie de [Distiller-gebruiksdocument voor gegevens](./license-usage.md) om belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie te bekijken.
 
-## Parameters voor segmentering {#scoping-parameters}
+<!-- Update these descriptions post 23.3 release
+## Scoping parameters {#scoping-parameters}
 
-Scoping-parameters zijn gebruikslimieten die betrekking hebben op het bereik van de vereiste instelling en die worden gedefinieerd door de capaciteit van uw licentie. Zonder add-ons zijn de bereikparameters voor gegevens-Distiller als volgt:
+Scoping parameters are usage limits that relate to the scoping of your required set up, and are defined by your license capacity. Without add-ons, Data Distiller's scoping parameters are as follows: 
 
-* **Rekenuren**: U kunt PSQL of de API van de Dienst van de Vraag gebruiken om partijvragen in om het even welke (geplande of anders) uitgevoerde zandbak in werking te stellen om gegevens af te tasten en te schrijven. Hierbij worden de toegewezen rekenuren per jaar gebruikt, zoals bepaald in het bereikproces van uw licentieovereenkomst. Het totaal aantal rekenuren wordt geaccumuleerd over alle Sandboxen.
-* **Gegevens gebruikt**: Voor de gegevens die in Adobe Experience Platform worden ingevoerd en die via Data Distiller kunnen worden aangevraagd, gelden de beperkingen die worden beschreven in uw huidige licentie voor Adobe Real-time Customer Data Platform, Customer Journey Analytics en/of Adobe Journey Optimizer.
-* **Opslag gegevensmeer**: De opslag van gegevens in het meer die in uw toenmalige vergunning aan Adobe Real-time Customer Data Platform, Customer Journey Analytics, en/of Adobe Journey Optimizer wordt verstrekt kan ook met de Distiller van Gegevens worden gebruikt. Data Lake Storage is een gedeelde functie.
-* **Query Service-gebruikers**: Het aantal gebruikers van de Dienst van de Vraag die in uw toen huidige vergunning aan Adobe Real-time Customer Data Platform, Customer Journey Analytics, en/of Adobe Journey Optimizer worden gedetailleerd kan ook met Gegevens Distiller worden gebruikt. Gebruikers van de Query-service zijn een gedeelde functie.
+* **Compute Hours**: You can use PSQL or the Query Service API to run batch queries executed in any sandbox (scheduled or otherwise) to scan and write data. This uses your allotted Compute Hours per year as determined in the scoping process of your license agreement. Total Compute Hours is accumulated across all Sandboxes.
+* **Data Ingested**: The data ingested into Adobe Experience Platform which can be queried using Data Distiller is subject to the limitations described in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer.
+* **Data Lake Storage**: The data lake storage provided in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer may also be used with Data Distiller. Data Lake Storage is a shared feature.
+* **Query Service Users**: The number of Query Service users detailed in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer may also be used with Data Distiller. Query Service Users is a shared feature. 
+-->
 
 ## Guardrails
 
 Zie de [Query Service-handleidingen](../guardrails.md) document met betrekking tot standaardgebruikslimieten voor Query Service-gegevens met betrekking tot uw licentierechten.
 
-## Statische grenswaarden
+<!-- Update these descriptions post 23.3 release
+## Static limits
 
-Een statische limiet is de gebruikslimiet die betrekking heeft op de functionele grenzen van Adobe Experience Platform Activation. [Meer informatie over Adobe Experience Platform-activering](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) vindt u in de Help-documenten voor Adobe. Hieronder vindt u een overzicht van de statische limieten van Data Distiller. Raadpleeg het handboek Query Service voor meer informatie.
+A static limit is the usage limit that relates to the functional boundaries of Adobe Experience Platform Activation. [More information on Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) can be found in the Adobe help documents. A summary of Data Distiller static limits are listed below, for more complete information please refer to the Query Service guardrail document.  
 
-* **Batchquery&#39;s**: De geplande tijd van partijvragen uit na 24 uren.
-* **Query-service**: U kunt de Dienst van de Vraag voor de volgende doeleinden gebruiken:
-   * SQL-query&#39;s uitvoeren voor gegevensanalyse en gegevensvoorbereiding na inname (opschonen, vormgeven en manipuleren).
-   * Om SQL vragen in werking te stellen om roll-up metriek aan oppervlakte direct in een hulpmiddel van BI tot stand te brengen.
-   * Gegevens snel inspecteren in Adobe Experience Platform.
-   * Om betekenisvolle inzichten van uw gegevens te produceren.
-* **API-aanroep melden**: Om ervoor te zorgen dat query&#39;s die worden uitgevoerd op geaggregeerde gegevens met behulp van de API voor rapportage over voldoende bronnen beschikken om efficiënt te kunnen worden uitgevoerd. Dit omvat vragen die bestaande gegevensmodellen zoals die door Real-time Customer Data Platform worden verstrekt verbeteren. De rapporterende API volgt middelgebruik door gelijktijdig muntgroeven aan elke vraag toe te wijzen. Er zijn maximaal vier API-aanroepen voor rapportage tegelijk beschikbaar. Als u toegang hebt tot de API voor rapportage via een BI-programma en meer sleuven voor gelijktijdige uitvoering nodig hebt, is een BI-server vereist.
-
+* **Batch Queries**: Scheduled batch queries time out after 24 hours.
+* **Query Service**: You can use Query Service for the following purposes: 
+    * To run SQL queries for data analysis and post ingestion data preparation (cleaning, shaping, and manipulation).
+    * To run SQL queries to create roll-up metrics to surface directly into a BI tool.
+    * To quickly inspect data within Adobe Experience Platform.
+    * To generate meaningful insights from your data.
+* **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
+-->
 
