@@ -5,9 +5,9 @@ title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
+source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 In Adobe Experience Platform wordt een profiel voor het verlopen van Pseudoniem-gegevens overwogen als het aan de volgende voorwaarden voldoet:
 
-- De identiteitstypen van het gekoppelde profiel komen overeen met het door de klant opgegeven pseudoniem of onbekend identiteitstype.
-   - Als het identiteitstype van het profiel bijvoorbeeld `ECID`, `GAID`, of `AAID`. Het gekoppelde profiel heeft geen id&#39;s van een ander type identiteit. In dit voorbeeld wordt een vast profiel wel **niet** beschikken over een e-mail- of CRM-identiteit.
+- De identiteitsnaamruimten van het verbonden profiel komen overeen met de naamruimte die de klant heeft opgegeven als een pseudoniem of onbekend naamgebied.
+   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID`, of `AAID`. Het opgeslagen profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld wordt een vast profiel wel **niet** beschikken over een e-mail- of CRM-identiteit.
 - Er heeft zich geen activiteit voorgedaan in een door de gebruiker gedefinieerde hoeveelheid tijd. De activiteit wordt bepaald of door om het even welke Gebeurtenissen van de Ervaring die of klant-in werking gestelde updates aan de profielattributen worden opgenomen.
    - Bijvoorbeeld, wordt een nieuwe gebeurtenis van de paginamening of de update van het paginakenmerk beschouwd als een activiteit. Nochtans, is een niet gebruiker-in werking gestelde update van het segmentlidmaatschap **niet** beschouwd als een activiteit. Op dit moment is het bijhouden van gegevens op profielniveau gebaseerd op de tijd van inname om de gegevensvervaldatum te berekenen.
 
@@ -26,7 +26,7 @@ In Adobe Experience Platform wordt een profiel voor het verlopen van Pseudoniem-
 
 De vervaldatum van gegevens van het Pseudoniem Profiel kan niet door de Platform UI of APIs worden gevormd. In plaats daarvan moet u contact opnemen met ondersteuning om deze functie in te schakelen. Neem de volgende gegevens op wanneer u contact opneemt met de ondersteuningsafdeling:
 
-- De identiteitstypen die voor het Pseudoniem-profiel moeten worden gebruikt, worden verwijderd.
+- De naamruimten die in overweging moeten worden genomen voor het Pseudoniem-profiel, worden verwijderd.
    - Bijvoorbeeld: `ECID` alleen, `AAID` alleen, of een combinatie van `ECID` en `AAID`.
 - De hoeveelheid tijd die moet worden gewacht voordat een pseudoniem profiel wordt verwijderd. De standaardaanbeveling voor klanten is 14 dagen. Deze waarde kan echter afwijken, afhankelijk van uw gebruiksscenario.
 - Het huidige aantal profielen in vergelijking met het aantal licentieprofielen.
@@ -37,10 +37,10 @@ In de volgende sectie worden vaak gestelde vragen over de vervaldatum van gegeve
 
 ### Welke gebruikers zouden de vervaldatum van Pseudoniem profielgegevens moeten gebruiken?
 
-- Als u een streamingbron gebruikt die gegevens rechtstreeks naar het Platform verzendt.
+- Als u SDK van het Web gebruikt om gegevens naar Platform direct te verzenden.
 - Als u een website hebt die ongeautoriseerde klanten massaal bedient.
-- Als u buitensporige profieltellingen in uw datasets hebt en bevestigd dat dit bovenmatige profieltelling wegens anonieme op koekje-gebaseerde identiteitstype is.
-   - Om dit te bepalen, zou u het identiteitstype overlappende rapport moeten gebruiken. Meer informatie over dit rapport vindt u in de [sectie over overlappingsrapporten voor identiteiten](./api/preview-sample-status.md#identity-overlap-report) van de voorbeeldstatus-API-handleiding.
+- Als u buitensporige profieltellingen in uw datasets hebt en bevestigd dat deze bovenmatige profieltelling wegens anonieme op koekje-gebaseerde identiteitsnaamruimte is.
+   - Om dit te bepalen, zou u het overlappende rapport van de identiteitsnaamruimte moeten gebruiken. Meer informatie over dit rapport vindt u in de [sectie over overlappingsrapporten voor identiteiten](./api/preview-sample-status.md#identity-overlap-report) van de voorbeeldstatus-API-handleiding.
 
 ### Wat zijn sommige bedenkingen u zich van zou moeten bewust zijn alvorens de gegevensvervaldatum van de Pseudoniem- profielenprofielen te gebruiken?
 
@@ -62,9 +62,9 @@ De vervaldatum van gegevens van het Pseudoniem Profiel werkt op een **sandbox** 
 
 #### Identiteitstypen
 
-Ervaring gebeurtenisgegevens verlopen verwijdert gebeurtenissen **alleen** op basis van de tijdstempel van de gebeurtenisrecord. De opgenomen identiteitstypen zijn **genegeerd** voor vervaldoeleinden.
+Ervaring gebeurtenisgegevens verlopen verwijdert gebeurtenissen **alleen** op basis van de tijdstempel van de gebeurtenisrecord. De opgenomen naamruimten zijn **genegeerd** voor vervaldoeleinden.
 
-Vervaldatum van gegevens van pseudoniem profiel **alleen** overweegt profielen met identiteitsgrafieken die identiteitstypes bevatten die door de klant werden geselecteerd, zoals `ECID`, `AAID`of andere soorten cookies. Als het profiel **alle** aanvullend identiteitstype **niet** in de geselecteerde lijst van de klant, zal het profiel **niet** worden geschrapt.
+Vervaldatum van gegevens van pseudoniem profiel **alleen** overweegt profielen met identiteitsgrafieken die identiteitsnaamruimten bevatten die door de klant werden geselecteerd, zoals `ECID`, `AAID`of andere soorten cookies. Als het profiel **alle** extra naamruimte voor identiteit **niet** in de geselecteerde lijst van de klant, zal het profiel **niet** worden geschrapt.
 
 #### Verwijderde items
 
