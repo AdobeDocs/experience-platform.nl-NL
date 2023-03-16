@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 30d8cc73128cff444ce06a8ab913aeb8fa816ed1
+source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
 workflow-type: tm+mt
 source-wordcount: '1873'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Als u [gemaakt toestemmingsbeleid](../policies/user-guide.md#consent-policy) en 
 
 #### Verbetering van het beleid voor goedkeuring voor betaalde media {#consent-policy-enhancement}
 
-Er is een verbetering aangebracht in het toezicht op de naleving van het beleid voor batchbestemmingen en streamingbestemmingen, inclusief betaalde media-activering. Deze uitbreiding is beschikbaar voor klanten van het privacyschild en het beveiligingsschild of het gezondheidsschild en verwijdert proactief profielen van batch- en streamingbestemmingen als de status van toestemming verandert. Het zorgt er ook voor dat wijzigingen in de toestemming onmiddellijk worden doorgevoerd, zodat het juiste publiek altijd wordt aangewezen.
+Verbetering van de toestemming voor beleidshandhaving op [partij](../../destinations/destination-types.md#file-based) en [streaming](../../destinations/destination-types.md#streaming-destinations) er zijn bestemmingen gemaakt, inclusief betaalde mediaperichtingen. Deze uitbreiding is beschikbaar voor klanten van het privacyschild en het beveiligingsschild of het gezondheidsschild en verwijdert proactief profielen van batch- en streamingbestemmingen als de status van toestemming verandert. Het zorgt er ook voor dat wijzigingen in de toestemming onmiddellijk worden doorgevoerd, zodat het juiste publiek altijd wordt aangewezen.
 
 Deze verbeteringen staan voor groter vertrouwen in uw marketing strategie toe aangezien het de behoefte voor marketers verwijdert om toestemmingsattributen aan hun segmentuitdrukking manueel toe te voegen. Dit zorgt ervoor dat er geen profielen onbedoeld worden gebruikt voor marketingervaringen wanneer de toestemming is ingetrokken of niet langer in aanmerking komt voor een toestemmingsbeleid. Het beleid van de marketingtoestemming dat regels vastlegt voor hoe toestemmings- of voorkeursgegevens moeten worden beheerd in verschillende marketingworkflows, wordt nu automatisch toegepast in activeringsworkflows in downstreamoplossingen.
 
