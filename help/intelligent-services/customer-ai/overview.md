@@ -2,19 +2,20 @@
 keywords: Experience Platform;overzicht;klantenhulp;populaire onderwerpen;het overzicht van de klantenhulp
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
-title: AI-overzicht van klant
-description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
-landing-page-description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren.
+title: AI-klantoverzicht
+description: Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
+landing-page-description: Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren.
+short-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 0%
+ht-degree: 19%
 
 ---
 
 
-# AI-overzicht van klant
+# AI-klantoverzicht
 
 Als onderdeel van Intelligent Services biedt AI van de klant marketers de mogelijkheid om klantprognoses op individueel niveau met uitleg te genereren.
 
@@ -22,7 +23,7 @@ Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een 
 
 ## Klantenservice
 
-AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
 
 AI van de klant is gebouwd aan:
 

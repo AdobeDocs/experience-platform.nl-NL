@@ -2,13 +2,14 @@
 keywords: Experience Platform;attributie ai overview;populaire onderwerpen;attributie ai;Attribution ai
 feature: Attribution AI
 title: Overzicht van Attribution AI
-description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren. Voorbeelden van aanraakpunten zijn weergave- en impressies, e-mail verzenden, e-mail openen en klikken met betaalde zoekopdrachten.
-landing-page-description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+description: Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren. Voorbeelden van touchpoints zijn weergaven en impressies van advertenties, verzonden e-mails, geopende e-mails en betaalde zoekklikken.
+landing-page-description: Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
+short-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 0%
+ht-degree: 26%
 
 ---
 
@@ -18,7 +19,7 @@ Attribution AI, als onderdeel van Intelligent Services, is een multi-channel alg
 
 ## Attribution AI begrijpen
 
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren. Voorbeelden van aanraakpunten zijn weergave- en impressies, e-mail verzenden, e-mail openen en klikken met betaalde zoekopdrachten.
+Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren. Voorbeelden van touchpoints zijn weergaven en impressies van advertenties, verzonden e-mails, geopende e-mails en betaalde zoekklikken.
 
 De output van de Attribution AI kan over diverse dimensies worden gescheiden en kan over verschillende stadia van de klantenreis worden gebruikt. Dit wordt verwezenlijkt zonder het moeten bedrijfsbehoeften vertalen om het leren problemen van de machine, het kiezen van algoritmen, opleiding, of het opstellen van modellen te machineren.
 
