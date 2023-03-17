@@ -2,9 +2,9 @@
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
+source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ De verwachte latentie voor Analytics Data on Platform wordt in de onderstaande t
 | Analysegegevens | Verwachte vertraging |
 | -------------- | ---------------- |
 | Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **niet** ingeschakeld) | &lt; 2 minuten |
-| Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **is** ingeschakeld) | &lt; 15 minuten |
+| Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **is** ingeschakeld) | tot 30 minuten |
 | Nieuwe gegevens voor Data Lake | &lt; 90 minuten |
 | Terugvulling van gebeurtenissen van minder dan 10 miljard | &lt; 4 weken |
 
