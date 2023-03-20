@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
+source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1046'
 ht-degree: 3%
 
 ---
@@ -169,6 +169,7 @@ ht-degree: 3%
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [linkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
+      * [TikTok-verbinding](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
    * Streaming doelen {#streaming}
       * [HTTP API-verbinding](./catalog/streaming/http-destination.md)
