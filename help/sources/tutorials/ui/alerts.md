@@ -3,14 +3,18 @@ keywords: Experience Platform;thuis;populaire onderwerpen; waarschuwingen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-waarschuwingen in de gebruikersinterface
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
+source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
 
 # Abonneren op waarschuwingen voor brongegevens in de gebruikersinterface
+
+>[!NOTE]
+>
+>Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt.
 
 Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../../../observability/api/overview.md) om na te gaan of een baan heeft voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
 
@@ -57,7 +61,7 @@ Selecteer de waarschuwingen waarop u zich wilt abonneren en selecteer **[!UICONT
 
 Zie de volgende handleidingen voor gedetailleerde stappen bij het maken van een gegevensstroom voor bronnen in de gebruikersinterface:
 
-* [Reclame](./dataflow/advertising.md)
+* [Advertising](./dataflow/advertising.md)
 * [Cloud-opslag](./dataflow/batch/cloud-storage.md)
 * [CRM](./dataflow/crm.md)
 * [Database](./dataflow/databases.md)

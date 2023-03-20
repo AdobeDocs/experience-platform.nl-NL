@@ -1,17 +1,21 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 title: Overzicht van waarschuwingen
-description: Meer informatie over waarschuwingen in Adobe Experience Platform, waaronder de structuur van de definitie van waarschuwingsregels.
+description: Meer informatie over waarschuwingen in Adobe Experience Platform, inclusief de structuur van hoe waarschuwingsregels worden gedefinieerd.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
+source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 1%
+source-wordcount: '769'
+ht-degree: 3%
 
 ---
 
 # Overzicht van waarschuwingen
+
+>[!NOTE]
+>
+>Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt.
 
 Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../api/overview.md) om na te gaan of een baan heeft voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
 
@@ -29,7 +33,7 @@ Platform waarschuwingen kunnen één keer worden verzonden, of ze kunnen met een
 | Wordt niet herhaald. | Kan herhalen als de afwijkende situatie aanhoudt. |
 | Voorbeelden zijn:<ul><li>Gegevens zijn ingevoerd.</li><li>De uitvoering van een query is voltooid.</li><li>Gegevens zijn verwijderd.</li></ul> | Voorbeelden zijn:<ul><li>De insluitingsduur overschrijdt de service-level overeenkomst (SLA).</li><li>Dagelijkse inname vond niet plaats in de afgelopen 24 uur.</li><li>De foutensnelheid van de stroombewerker is boven de gevormde drempel.</li><li>Het totale aantal profielen overschrijdt de machtiging.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anatomie van een waarschuwing
 
@@ -43,7 +47,7 @@ Een alarm kan in de volgende componenten worden verdeeld:
 | **Actie** | Wanneer een alarm wordt teweeggebracht, wordt een actie uitgevoerd. Specifiek, worden de berichten verzonden naar toepasselijke ontvangers door een leveringskanaal, zoals een pre-gevormde webhaak of Experience Platform UI. |
 | **Frequentie** | (Optioneel) Een waarschuwing kan worden geconfigureerd om de handeling met een bepaald interval te herhalen als de voorwaarde waar blijft of op een andere manier niet wordt opgelost. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ontvangen en beheren van waarschuwingen
 
@@ -71,7 +75,7 @@ Als u met waarschuwingen wilt werken in de gebruikersinterface van het Platform,
 | Waarschuwingen beheren* | Hiermee kunt u waarschuwingsregels in- en uitschakelen via het dialoogvenster [!UICONTROL Alerts] tab. |
 | Waarschuwingen oplossen* | Hiermee kunt u getriggerde waarschuwingen oplossen via het dialoogvenster [!UICONTROL Alerts] tab. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Om toegang te krijgen tot [!UICONTROL Alerts] , moet u ook de toestemming van het Alarm van de Mening in combinatie met één van de andere toestemmingen worden verleend.*
 
