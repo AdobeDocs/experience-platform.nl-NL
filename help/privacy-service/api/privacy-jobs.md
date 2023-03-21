@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor privacytaken
 description: Leer hoe u privacytaken voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1549'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -63,6 +63,12 @@ Een succesvol antwoord retourneert een lijst met taken, waarbij elke taak detail
 Om de volgende reeks resultaten in een gepagineerde reactie te halen, moet u een andere API vraag aan het zelfde eindpunt maken terwijl het verhogen van `page` query parameter by 1.
 
 ## Een privacytaak maken {#create-job}
+
+>[!IMPORTANT]
+>
+>Privacy Service is alleen bedoeld voor betrokkenen en verzoeken om consumentenrechten. Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan. Adobe is wettelijk verplicht deze tijdig te vervullen. Als zodanig is het testen van belasting op Privacy Service niet toegestaan, omdat dit een productieomgeving is en een onnodige achterstand oplevert bij geldige privacyverzoeken.
+>
+>Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen. Gebruikers die misbruik van het systeem kunnen maken, hebben toegang tot de service uitgeschakeld. Daarna zal er een vergadering met hen worden gehouden om hun acties te bespreken en te bespreken of Privacy Service aanvaardbaar is.
 
 Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verzamelen over de betrokkenen van wie u de gegevens wilt benaderen, verwijderen of niet wilt verkopen. Zodra u de vereiste gegevens hebt, moet het in de lading van een verzoek van de POST aan `/jobs` eindpunt.
 
@@ -162,7 +168,7 @@ curl -X POST \
 | `mergePolicyId` | Bij het indienen van privacyverzoeken voor realtime-klantprofiel (`profileService`), kunt u naar keuze identiteitskaart van specifiek verstrekken [samenvoegingsbeleid](../../profile/merge-policies/overview.md) die u wilt gebruiken voor het stikken van id&#39;s. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken segmentinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
 | `regulation` **(Vereist)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -214,7 +220,7 @@ Een succesvol antwoord geeft de details van de nieuwe banen terug.
 | --- | --- |
 | `jobId` | Een alleen-lezen, unieke door het systeem gegenereerde id voor een taak. Deze waarde wordt gebruikt in de volgende stap van het opzoeken van een specifieke taak. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Nadat de taakaanvraag is verzonden, kunt u verdergaan met de volgende stap van [de status van de taak controleren](#check-status).
 
@@ -236,7 +242,7 @@ GET /jobs/{JOB_ID}
 | --- | --- |
 | `{JOB_ID}` | De id van de taak die u wilt opzoeken. Deze id is geretourneerd onder `jobId` in geslaagde API-reacties voor [een taak maken](#create-job) en [aanbieden, alle taken](#list). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -334,7 +340,7 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
 | `productStatusResponse.results` | Voor bepaalde statussen kunnen sommige producten a `results` object dat aanvullende informatie biedt die niet wordt gedekt door `responseMsgDetail`. |
 | `downloadURL` | Als de status van de taak `complete`, biedt dit kenmerk een URL om de taakresultaten te downloaden als een ZIP-bestand. Dit bestand kan 60 dagen nadat de taak is voltooid, worden gedownload. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Taakstatuscategorieën {#status-categories}
 
@@ -347,7 +353,7 @@ In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en
 | `submitted` | De taak wordt voorgelegd aan elke toepasselijke toepassing. |
 | `error` | Er is iets misgegaan in de verwerking van de taak - er kan meer specifieke informatie worden verkregen door individuele taakdetails op te halen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

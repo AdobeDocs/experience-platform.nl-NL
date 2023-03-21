@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service probleemoplossingsgids
 description: Dit document bevat antwoorden op veelgestelde vragen over Privacy Service en informatie over veelvoorkomende fouten in de API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '914'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,9 @@ Zie de handleiding voor meer informatie over het opgeven van identiteitsgegevens
 
 ## Kan ik gebruiken [!DNL Privacy Service] om gegevens op te schonen die per ongeluk zijn verzonden naar [!DNL Platform]?
 
-Adobe ondersteunt het gebruik van [!DNL Privacy Service] voor het wissen van gegevens die per ongeluk bij een product zijn ingediend. [!DNL Privacy Service] is ontworpen om u te helpen bij het voldoen aan uw verplichtingen voor toegang tot of het verwijderen van verzoeken van betrokkenen (of consumenten). Deze verzoeken zijn tijdgevoelig en zijn afgerond in verband met het toepasselijke privacyrecht. Het indienen van verzoeken die geen toegang tot of verwijderingsverzoeken voor betrokkenen/consumenten zijn, heeft gevolgen voor alle [!DNL Privacy Service] klanten en de mogelijkheden voor [!DNL Privacy Service] de passende wettelijke termijnen te ondersteunen.
+Adobe ondersteunt het gebruik van [!DNL Privacy Service] voor het wissen van gegevens die per ongeluk bij een product zijn ingediend. [!DNL Privacy Service] is ontworpen om u te helpen bij het voldoen aan uw verplichtingen voor toegang tot of het verwijderen van verzoeken van betrokkenen (of consumenten). Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan.
+
+De verzoeken om privacy zijn tijdgevoelig en zijn voltooid met betrekking tot de toepasselijke privacywetgeving. de indiening van verzoeken die geen toegang tot of schrapping van verzoeken van betrokkenen/consumenten zijn, heeft gevolgen voor alle [!DNL Privacy Service] klanten en de mogelijkheden voor [!DNL Privacy Service] de passende wettelijke termijnen te ondersteunen. Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen.
 
 Neem contact op met uw accountmanager (CDM) om problemen met PII&#39;s of gegevens te coördineren en een inspanningsniveau te bieden.
 

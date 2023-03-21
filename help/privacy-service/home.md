@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Privacy Service
 description: Met Privacy Service kunt u de automatische naleving van wettelijke privacyregels in uw gegevensbewerkingen met Experience Cloud vergemakkelijken.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1385'
+source-wordcount: '1501'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,12 @@ Om betere klantenervaringen te leveren, moet u persoonlijke gegevens van uw klan
 Adobe Experience Platform [!DNL Privacy Service] is ontwikkeld als reactie op een fundamentele verschuiving in de manier waarop bedrijven de persoonsgegevens van hun klanten moeten beheren. Het centrale doel van [!DNL Privacy Service] is om naleving van de regels van de gegevensprivacy te automatiseren die, wanneer geschonden, in grote boetes kunnen resulteren en gegevensverrichtingen voor uw zaken kunnen verstoren.
 
 [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u verzoeken om klantgegevens kunt beheren. Met [!DNL Privacy Service]kunt u verzoeken om toegang tot en verwijdering van persoonsgegevens van klanten uit Adobe Experience Cloud-toepassingen verzenden, zodat u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
+
+>[!IMPORTANT]
+>
+>Privacy Service is alleen bedoeld voor betrokkenen en verzoeken om consumentenrechten. Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan. Adobe is wettelijk verplicht deze tijdig te vervullen. Als zodanig is het testen van belasting op Privacy Service niet toegestaan, omdat dit een productieomgeving is en een onnodige achterstand oplevert bij geldige privacyverzoeken.
+>
+>Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen. Gebruikers die misbruik van het systeem kunnen maken, hebben toegang tot de service uitgeschakeld. Daarna zal er een vergadering met hen worden gehouden om hun acties te bespreken en te bespreken of Privacy Service aanvaardbaar is.
 
 ## Aan de slag met [!DNL Privacy Service] {#getting-started}
 
