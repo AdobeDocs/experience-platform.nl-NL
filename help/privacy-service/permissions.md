@@ -1,14 +1,21 @@
 ---
 title: Rechten voor Privacy Service beheren
 description: Leer hoe u gebruikersmachtigingen voor Adobe Experience Platform Privacy Service beheert met Adobe Admin Console.
-source-git-commit: 59dc28a84971dc8c21d633741cfe2dc1b44ea1a6
+exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
+source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '992'
 ht-degree: 1%
 
 ---
 
 # Machtigingen voor Privacy Service beheren
+
+>[!IMPORTANT]
+>
+>De machtigingen voor Adobe Experience Platform Privacy Service zijn verbeterd om hun granulariteit te verhogen. Deze veranderingen laten organisatiebeheerders toe om meer gebruikers toegang met de gewenste rol en toestemmingsniveau te verlenen. Gebruikers van technische accounts moeten hun machtigingen voor Privacys Service bijwerken, omdat deze op handen zijnde update voor hen een baanbrekende wijziging vormt. De handhaving van deze wijziging van machtigingen vindt plaats op **28 maart 2023**.
+>
+>De technische rekeningen zijn beschikbaar aan ondernemingsklanten en gecreeerd door de Console van de Ontwikkelaars van Adobe. De Adobe ID van een technische rekeninghouder eindigt in `@techacct.adobe.com`. Als u niet zeker weet of u een technische rekeninghouder bent, neemt u contact op met uw organisatiebeheerder.
 
 Toegang tot [Adobe Experience Platform Privacy Service](./home.md) wordt gecontroleerd door granulaire op rol-gebaseerde toestemmingen in Adobe Admin Console. Door productprofielen te creëren die toestemmingen aan groepen gebruikers toewijzen, kunt u bepalen wie toegang heeft tot welke eigenschappen in de Privacy Service [UI](./ui/overview.md) en [API](./api/overview.md).
 
@@ -22,7 +29,7 @@ In deze handleiding ziet u hoe u machtigingen voor Privacy Service beheert.
 
 Om toegangsbeheer voor Privacy Service te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met Adobe Experience Platform Privacy Service heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een **productprofielbeheerder**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen in een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise Administration guide voor meer informatie.
 
-Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie voor meer informatie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie voor meer informatie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 ## Beschikbare machtigingen
 
@@ -36,7 +43,7 @@ De volgende lijst schetst de beschikbare toestemmingen voor Privacy Service met 
 | [!UICONTROL Opt Out of Sale Permissions] | [!UICONTROL Read Permission - Opt Out of Sale] | Bepaalt of de gebruiker bestaande opt-out-of-sales verzoeken, samen met hun details kan bekijken. |
 | [!UICONTROL Opt Out of Sale Permissions] | [!UICONTROL Write Permission - Opt Out of Sale] | Bepaalt of een gebruiker nieuwe opt-out-of-verkoop verzoeken kan tot stand brengen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Machtigingen beheren {#manage}
 

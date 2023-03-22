@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Overzicht van Privacy Service
 description: Met Privacy Service kunt u de automatische naleving van wettelijke privacyregels in uw gegevensbewerkingen met Experience Cloud vergemakkelijken.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1604'
 ht-degree: 0%
 
 ---
 
 # [!DNL Privacy Service]-overzicht
+
+>[!IMPORTANT]
+>
+>De machtigingen voor Adobe Experience Platform Privacy Service zijn verbeterd om hun granulariteit te verhogen. Deze veranderingen laten organisatiebeheerders toe om meer gebruikers toegang met de gewenste rol en toestemmingsniveau te verlenen. Gebruikers van technische accounts moeten hun machtigingen voor Privacys Service bijwerken, omdat deze op handen zijnde update voor hen een baanbrekende wijziging vormt. De handhaving van deze wijziging van machtigingen vindt plaats op **28 maart 2023**.
+>
+>De technische rekeningen zijn beschikbaar aan ondernemingsklanten en gecreeerd door de Console van de Ontwikkelaars van Adobe. De Adobe ID van een technische rekeninghouder eindigt in `@techacct.adobe.com`. Als u niet zeker weet of u een technische rekeninghouder bent, neemt u contact op met uw organisatiebeheerder.
 
 Om betere klantenervaringen te leveren, moet u persoonlijke gegevens van uw klanten verzamelen en opslaan. Wanneer u deze gegevens gebruikt, is het belangrijk dat u de privacy van uw klanten begrijpt en respecteert. De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek.
 
