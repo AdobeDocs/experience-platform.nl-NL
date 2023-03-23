@@ -2,9 +2,9 @@
 title: Handleiding voor het oplossen van problemen met tags
 description: Antwoorden op veelgestelde vragen over tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: b0cc02478273c0b6035488a5d21191ce5cc0e268
+source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1044'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,8 @@ Tags hebben het vrijwel zelfbedieningsportaal geopend, dat extensieontwikkelaars
 
 Wij hebben vele klanten die ook verkiezen om hun eigen privé uitbreidingen voor gebruik slechts binnen hun eigen bedrijven te bouwen gebruikend de zelfde methodes van de uitbreidingsontwikkeling.
 
+Als u een extensie wilt ontwikkelen, checkt u de [Overzicht van Extension Development](./extension-dev/overview.md) pagina.
+
 ## Voldoen de labels aan de beveiligingsnormen van mijn bedrijf?
 
 Tags zijn gereed voor SOC-2 en Gramm-Leach-Bliley Act. Tags bieden ook de mogelijkheid om zelf te worden gehost. JavaScript-bibliotheken en mobiele configuraties kunnen via uw eigen servers of de CDN van uw keuze worden aangeboden. Voor IT. en veiligheidsteams, geeft dit u de capaciteit om geautomatiseerde het testen in werking te stellen, de dossiers in uw eigen systeem van de versiecontrole te controleren, en om volledig om het even welke interne processen van de productiemigratie, veiligheid-gerelateerd of anders te voldoen.
@@ -71,22 +73,7 @@ Tags zijn ontworpen om marketing- en advertentietechnologieën zo efficiënt mog
 
 ## Welke browsers ondersteunen tags?
 
-Browserondersteuning voor tags:
-
-- [!DNL Chrome] (laatste)
-- [!DNL Safari] (laatste)
-- [!DNL Firefox] (laatste)
-- [!DNL Microsoft Edge] (laatste)
-- [!DNL Internet Explorer] (10 en hoger)
-- [!DNL iOS Safari] (laatste)
-- [!DNL Android Chrome] (laatste)
-
-Browserondersteuning voor de interface van de tagtoepassing:
-
-- [!DNL Chrome] (laatste)
-- [!DNL Safari] (laatste)
-- [!DNL Firefox] (laatste)
-- [!DNL Microsoft Edge] (laatste)
+Zie de ondersteunde browsers [hier](./extension-dev/browsers.md).
 
 De meeste Adobe-clients maken gebruik van modernere webplatformfuncties in de huidige browsers om betere gebruikerservaring te creëren, waaronder toepassingen van één pagina en interactieve Ajax-zware websites en pagina&#39;s. Terwijl de meeste klanten naar modernere benaderingen met hun sites gaan, vragen ze om een oplossing zoals tags die deze benaderingen mogelijk maakt.
 

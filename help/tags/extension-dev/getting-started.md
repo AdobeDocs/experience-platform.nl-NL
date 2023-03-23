@@ -1,9 +1,10 @@
 ---
 title: Aan de slag met Extension Development
 description: Ga aan de slag met het ontwikkelen van je eigen tag-extensies in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Als u extensies wilt gaan maken en gebruiken, gebruikt u het opensource-steigere
 
 ## Vereisten
 
-* Installeer [Node.js](https://nodejs.org/en/download/).
+* Installeren [Node.js](https://nodejs.org/en/download/).
 
 ## Extensie instellen
 
@@ -45,12 +46,12 @@ In het basisgereedschap worden enkele initiële configuratieopties als volgt wee
 
 Het basisgereedschap bevat vervolgens opties voor het bouwen van de extensiestructuur:
 
-* [Weergave](./configuration.md) voor extensieconfiguratie: De weergave, HTML-bestand, waarin een extensie algemene instellingen van een gebruiker verzamelt.
+* [Weergave voor extensieconfiguratie](./configuration.md): De weergave, het HTML-bestand waarmee een extensie algemene instellingen van een gebruiker verzamelt.
 * [Gebeurtenistypen](./web/event-types.md): Definieert een activiteit voor observatie. U moet bijvoorbeeld weten wanneer een gebruiker snel schuift of wanneer een gebruiker interactie heeft gehad met een pagina-element. Gebeurtenissen kunnen vervolgens in regels worden gebruikt om handelingen uit te voeren.
-* [Type](./web/condition-types.md) voorwaarde: Voorwaardetypen evalueren of iets waar of onwaar is.
+* [Type voorwaarde](./web/condition-types.md): Voorwaardetypen evalueren of iets waar of onwaar is.
 Dit kan bijvoorbeeld worden geretourneerd als de browser van de gebruiker Chrome is, als de gebruiker een iPad gebruikt of als de gebruiker zich in een specifiek domein bevindt.
-* [Typen](./web/action-types.md) handelingen: De handeling die moet worden uitgevoerd wanneer een gebeurtenis plaatsvindt. U kunt bijvoorbeeld een analysebaken verzenden, een aanbod weergeven, een cookie opslaan of een ondersteuningschat openen.
-* [Gegevenselementstypen](./web/data-element-types.md): Een gegevenstype van een gegevenselement wint een stuk gegevens terug. Deze gegevens kunnen lokaal worden opgeslagen, in een cookie, in een DOM-element of op een aangepaste locatie.
+* [Typen handelingen](./web/action-types.md): De handeling die moet worden uitgevoerd wanneer een gebeurtenis plaatsvindt. U kunt bijvoorbeeld een analysebaken verzenden, een aanbod weergeven, een cookie opslaan of een ondersteuningschat openen.
+* [Gegevenstelelementtypen](./web/data-element-types.md): Een gegevenstype van een gegevenselement wint een stuk gegevens terug. Deze gegevens kunnen lokaal worden opgeslagen, in een cookie, in een DOM-element of op een aangepaste locatie.
 * [Gedeelde modules](./web/shared.md): Een gedeelde module is een mechanisme waarmee extensies kunnen communiceren met andere extensies.
 * [Weergaven](./web/views.md): Elke gebeurtenis, voorwaarde, actie, of het type van gegevenselement kan een mening verstrekken die een gebruiker toestaat om montages te leveren.
 
@@ -60,3 +61,7 @@ Dit kan bijvoorbeeld worden geretourneerd als de browser van de gebruiker Chrome
 >* Er kunnen meerdere gebeurtenissen, voorwaarden en handelingen worden toegevoegd.
 >* Er kan slechts één configuratieweergave bestaan.
 
+
+## Volgende stappen
+
+* Volg de [Overzicht verzendproces](./submit/overview.md) en zich voorbereiden op [validate](./submit/upload-and-test.md#validate) en [uploaden](./submit/upload-and-test.md#integration) uw extensie voor testen binnen het ecosysteem van de tag.

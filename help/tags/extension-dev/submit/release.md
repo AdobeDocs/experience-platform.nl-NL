@@ -2,9 +2,9 @@
 title: Een extensie opheffen
 description: Leer hoe u een tagextensie privé of openbaar kunt maken in Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ U moet de extensie vrijgeven als een persoonlijke extensie voordat u deze openba
 
 De eenvoudigste manier om uw extensie vrij te geven met persoonlijke beschikbaarheid is om de [tagextensie-releaseprogramma](https://www.npmjs.com/package/@adobe/reactor-releaser). Meer instructies vindt u in de documentatie.
 
-Als u uw extensie rechtstreeks wilt vrijgeven met persoonlijke beschikbaarheid via de API, raadpleegt u de voorbeeldaanroep voor [een extensiepakket privé vrijgeven](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) in de API-documenten voor meer informatie.
+Als u uw extensie rechtstreeks wilt vrijgeven met persoonlijke beschikbaarheid via de API, raadpleegt u de voorbeeldaanroep voor [een extensiepakket privé vrijgeven](../../api/endpoints/extension-packages.md/#private-release) in de API-documenten voor meer informatie.
 
 ## Openbare release
 

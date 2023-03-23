@@ -2,9 +2,9 @@
 title: End-to-end testen uploaden en implementeren voor een extensie
 description: Leer hoe u uw extensie kunt valideren, uploaden en testen in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2379'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Een specifiek voorbeeld hiervan is uw logobestand: Een `"iconPath": "example.svg
 
 Als u de API- of opdrachtregelprogramma&#39;s wilt gebruiken, hebt u een technisch account met Adobe I/O nodig. U moet de technische account maken in de I/O-console en vervolgens het gereedschap Uploader gebruiken om het extensiepakket te uploaden.
 
-Voor informatie over het maken van een technisch account voor gebruik met tags in Adobe Experience Platform raadpleegt u de [Toegangstokens](https://developer.adobelaunch.com/api/guides/access_tokens/) hulplijn.
+Voor informatie over het maken van een technisch account voor gebruik met tags in Adobe Experience Platform raadpleegt u de [Aan de slag met Reactor-API](../../api/getting-started.md) hulplijn.
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ Als u de extensie wilt toevoegen, selecteert u de optie **Catalogus** tab.
 
 De catalogus bevat kaartpictogrammen voor elke beschikbare extensie. Als uw extensie niet wordt weergegeven in de catalogus, controleert u of u de bovenstaande stappen hebt uitgevoerd in de secties Stel Adobe beheerconsole in en Creating Your Extension Package. Uw extensiepakket wordt mogelijk ook weergegeven als In behandeling als het Platform de eerste verwerking niet heeft voltooid.
 
-Als u de vorige stappen hebt gevolgd en nog steeds geen extensiepakket in behandeling of Mislukt ziet in de catalogus, moet u de status van het extensiepakket rechtstreeks controleren met de API. Voor informatie over hoe u de juiste API-aanroep kunt maken, leest u [Een ExtensionPackage ophalen](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/fetch/) in de API-documentatie.
+Als u de vorige stappen hebt uitgevoerd en nog steeds geen extensiepakket in behandeling of Mislukt ziet in de catalogus, moet u de status van het extensiepakket rechtstreeks controleren met de API. Voor informatie over hoe u de juiste API-aanroep kunt maken, leest u [Een ExtensionPackage ophalen](../../api/endpoints/extension-packages.md#lookup) in de API-documentatie.
 
 Selecteer **Installeren** onder aan de kaart.
 

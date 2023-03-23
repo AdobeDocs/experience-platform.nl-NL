@@ -2,9 +2,9 @@
 title: Aan de slag met de Reactor-API
 description: Leer hoe u aan de slag kunt met de Reactor-API, inclusief stappen voor het genereren van de vereiste toegangsreferenties.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ In deze handleiding wordt uitgelegd hoe u de Adobe Developer Console kunt gebrui
 
 ## Toegang voor ontwikkelaars tot Adobe Experience Platform
 
-Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u ontwikkelaarstoegang tot het Experience Platform hebben. Volg de eerste stappen in het dialoogvenster [Zelfstudie over verificatie van Experience Platforms](https://www.adobe.com/go/platform-api-authentication-en). Wanneer u de stap &#39;Toegangsgegevens genereren in Adobe Developer Console&#39; hebt bereikt, gaat u terug naar deze zelfstudie om de referenties te genereren die specifiek zijn voor de Reactor-API.
+Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u ontwikkelaarstoegang tot het Experience Platform hebben. Volg de eerste stappen in het dialoogvenster [Zelfstudie over verificatie van Experience Platforms](https://www.adobe.com/go/platform-api-authentication-en). Als u de stap Toegang van gebruiker verkrijgen hebt voltooid, gaat u terug naar deze zelfstudie om de referenties te genereren die specifiek zijn voor de Reactor-API.
 
 ## Toegangsreferenties genereren
 
@@ -37,7 +37,7 @@ De stappen voor het genereren van deze waarden worden hieronder in detail bespro
 
 ### Eenmalige installatie
 
-Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die in de zelfstudie worden beschreven [een leeg project maken](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Developer Console.
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die in de zelfstudie worden beschreven [een leeg project maken](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in de documentatie van de Developer Console.
 
 Als u een project hebt gemaakt, selecteert u **API toevoegen** op de **Overzicht van project** scherm.
 
@@ -149,7 +149,7 @@ Een succesvolle reactie keert een nieuw toegangstoken, evenals het aantal second
 | `access_token` | De zojuist gegenereerde waarde van het toegangstoken. Deze waarde wordt gebruikt voor de vereiste `Authorization` en moet worden opgegeven in de vorm `Bearer {ACCESS_TOKEN}`. |
 | `expires_in` | De resterende tijd tot het token verloopt, in milliseconden. Nadat een token is verlopen, moet er een nieuw token worden gegenereerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 

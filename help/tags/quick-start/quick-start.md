@@ -2,9 +2,9 @@
 title: Snelstartgids
 description: Leer hoe u snel aan de slag kunt met tags in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1521'
 ht-degree: 0%
 
 ---
@@ -135,5 +135,5 @@ Voor meer informatie over de verschillende staten en opties beschikbaar tijdens 
 Raadpleeg de volgende bronnen voor meer informatie over tags:
 
 * **[Gemeenschap voor gegevensverzameling](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Stel vragen en beantwoord vragen, geef ideeën en stem over de ideeën van anderen. Meld u aan bij uw Adobe ID.
-* **[Developer Docs](https://developer.adobelaunch.com/)**: Neem contact op met de ontwikkelaarscommunity voor tags om extensies te maken of de tags-API&#39;s te gebruiken
+* **[Developer Docs](../api/overview.md)**: Neem contact op met de ontwikkelaarscommunity voor tags om extensies te maken of de tags-API&#39;s te gebruiken
 * **[Overzicht Tutorials](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: Deze documenten introduceren u aan etiketteringsconcepten met inbegrip van gebeurtenis het door:sturen en Mobiele SDK in Android Apps.
