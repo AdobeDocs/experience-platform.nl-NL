@@ -3,9 +3,9 @@ solution: Experience Platform
 title: (Bèta) de datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
-source-git-commit: c16fbc89b7bc7a8f1ee4a0ca4fd9f7541df095ca
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '3312'
+source-wordcount: '3333'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,19 @@ In dit artikel wordt uitgelegd welke workflow is vereist voor het gebruik van de
 >[!TIP]
 >
 >U kunt het gebruikersinterface van het Experience Platform ook gebruiken om datasets uit te voeren. Lees de [UI-zelfstudie voor het exporteren van gegevenssets](/help/destinations/ui/export-datasets.md) voor meer informatie .
+
+## Ondersteunde doelen {#supported-destinations}
+
+Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren die in het schermafbeelding worden benadrukt en hieronder worden vermeld.
+
+![Doelen die de uitvoer van gegevenssets ondersteunen](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Aan de slag {#get-started}
 
@@ -88,7 +101,7 @@ Alvorens de werkschema te beginnen om een dataset uit te voeren, identificeer de
 | [!DNL Google Cloud Storage] | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 U hebt deze id&#39;s nodig om verschillende [!DNL Flow Service] entiteiten. U moet ook naar delen van het dialoogvenster [!DNL Connection Spec] om bepaalde entiteiten in te stellen zodat u de [!DNL Connection Spec] van [!DNL Flow Service APIs]. Zie de voorbeelden hieronder van het terugwinnen van verbindingsspecificaties voor alle bestemmingen in de lijst:
 
@@ -966,14 +979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection",
-  "auth": {
-    "name": "Data Landing Zone(DLZ) Base Connection",
-    "description": "Data Landing Zone(DLZ) Base Connection",
-    "connectionSpec": {
-        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
-        "version": "1.0"
-    }
+  "name": "Data Landing Zone(DLZ) Base Connection"
 }'
 ```
 

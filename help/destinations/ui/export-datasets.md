@@ -3,9 +3,9 @@ title: (bèta) Datasets exporteren naar Cloud Storage-doelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1300'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,19 @@ ht-degree: 0%
 In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage] door het Experience Platform UI te gebruiken.
 
 U kunt de Experience Platform APIs ook gebruiken om datasets uit te voeren. Lees de [API-zelfstudie voor exporteren](/help/destinations/api/export-datasets.md) voor meer informatie .
+
+## Ondersteunde doelen {#supported-destinations}
+
+Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren die in het schermafbeelding worden benadrukt en hieronder worden vermeld.
+
+![Doelen die de uitvoer van gegevenssets ondersteunen](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Wanneer moet u segmenten activeren of gegevenssets exporteren {#when-to-activate-segments-or-activate-datasets}
 
