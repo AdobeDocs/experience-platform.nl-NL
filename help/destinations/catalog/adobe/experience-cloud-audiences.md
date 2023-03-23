@@ -2,9 +2,9 @@
 title: (Bèta) Experience Cloud-publiek
 description: Leer hoe te om segmenten van Experience Platform aan diverse oplossingen van het Experience Platform te delen.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -61,8 +61,8 @@ Note: briefly talk about when to share segments to these destinations using the 
 >[!IMPORTANT]
 >
 > * Deze bestemming is beschikbaar voor [Adobe Real-time Customer Data Platform Prime en Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
-> * U hebt een licentie voor Audience Managers nodig om de in de bovenstaande sectie vermelde gebruiksgevallen voor het Platform voor gegevensbeheer in te schakelen.
-> * U *niet nodig* een licentie van de Audience Manager om Experience Platform-segmenten te delen met Adobe Advertising Cloud, Adobe Target, Marketo en andere Experience Cloud-oplossingen, via de integratie van het Experience Cloud publiek.
+> * U hebt een licentie voor Audience Managers nodig om de [Gebruiksgevallen van Platforms voor gegevensbeheer](#dmp-use-cases) genoemd.
+> * U *niet nodig* een licentie van de Audience Manager om Experience Platform-segmenten te delen met Adobe Advertising Cloud, Adobe Target, Marketo en andere Experience Cloud-oplossingen die in de [sectie hierboven](#share-segments-with-other-solutions).
 
 
 ### Voor klanten die de oplossing voor het delen van het verouderde segment gebruiken
@@ -96,7 +96,7 @@ De profielen die worden geëxporteerd naar de [!UICONTROL Experience Cloud Audie
 | IDFA | Apple-id voor adverteerders | Profielen die in Experience Platform worden opgenomen met een primaire Apple-id voor adverteerders (IDFA), kunnen naar deze bestemming worden geëxporteerd. |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Profielen die in Experience Platform worden opgenomen met een primair e-mailadres voor hashes, kunnen naar dit doel worden geëxporteerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -107,7 +107,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) die zijn afgesneden van de identiteiten die in de bovenstaande sectie worden vermeld. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 
