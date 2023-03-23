@@ -2,7 +2,8 @@
 keywords: Experience Platform;thuis;populaire onderwerpen; waarschuwingen;doelen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-bestemmingswaarschuwingen
-source-git-commit: 56f1d5a6a1e90910cedb21fafb6b2ecf16d5b6d7
+exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
+source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 0%

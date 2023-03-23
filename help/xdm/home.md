@@ -127,7 +127,7 @@ Als [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent] gege
 
 Zie de [Overzicht van het realtime klantprofiel](../profile/home.md) voor meer informatie .
 
-### Werkruimte voor gegevenswetenschap
+### Data Science-werkruimte
 
 Adobe Experience Platform Data Science Workspace maakt gebruik van machinaal leren en kunstmatige intelligentie om inzicht te krijgen in gegevens die in Experience Platform zijn opgeslagen. De Werkruimte van de Wetenschap van gegevens staat gegevenswetenschappers toe om recepten te bouwen die op worden gebaseerd [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent] gegevens over klanten en hun activiteiten, die voorspellingen zoals het kopen van neiging vergemakkelijken en aanbevolen aanbiedingen die de betrokkene waarschijnlijk zal waarderen en gebruiken.
 

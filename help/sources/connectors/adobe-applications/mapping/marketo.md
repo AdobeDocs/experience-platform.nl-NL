@@ -6,7 +6,7 @@ description: De onderstaande tabellen bevatten de toewijzingen tussen de velden 
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -133,7 +133,7 @@ Zie de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/exp
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Programma&#39;s {#programs}
 
@@ -164,7 +164,7 @@ Lees de [Overzicht van XDM Business Campaign](../../../../xdm/classes/b2b/busine
 | `endDate` | `campaignEndDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Lidmaatschap van programma {#program-memberships}
 
@@ -197,7 +197,7 @@ Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Bedrijven {#companies}
 
@@ -229,7 +229,7 @@ Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/busines
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Statische lijsten {#static-lists}
 
@@ -247,7 +247,7 @@ Lees de [Overzicht van XDM Business Marketing List](../../../../xdm/classes/b2b/
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Statische lijstlidmaatschap {#static-list-memberships}
 
@@ -264,7 +264,7 @@ Lees de [Overzicht van leden van XDM Business Marketing List](../../../../xdm/cl
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Benoemde accounts {#named-accounts}
 
@@ -296,7 +296,7 @@ Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/busines
 | `sourceType` | `accountSourceType` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kansen {#opportunities}
 
@@ -333,7 +333,7 @@ Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/bus
 | `nextStep` | `nextStep` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Contactrollen opportunity {#opportunity-contact-roles}
 
@@ -354,7 +354,7 @@ Lees de [Overzicht van de XDM Business Opportunity Person Relatie](../../../../x
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Personen {#persons}
 
@@ -412,7 +412,7 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Dit is een berekend veld. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Dit is een berekend veld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

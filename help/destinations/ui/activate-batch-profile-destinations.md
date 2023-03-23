@@ -6,7 +6,7 @@ description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform h
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3471'
+source-wordcount: '3468'
 ht-degree: 0%
 
 ---
@@ -185,7 +185,7 @@ De doelnaam en segment-id kunnen niet uit bestandsnamen worden verwijderd. Naast
 | **[!UICONTROL Organization name]** | Uw organisatienaam binnen Experience Platform. <br> **Opmerking**: Deze optie voor het toevoegen van bestanden is alleen beschikbaar voor bètaklanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden. Neem contact op met uw Adobe-vertegenwoordiger of de klantenservice als u toegang wilt tot het bètaprogramma. |
 | **[!UICONTROL Sandbox name]** | De id van de sandbox die u gebruikt om het segment te exporteren. <br> **Opmerking**: Deze optie voor het toevoegen van bestanden is alleen beschikbaar voor bètaklanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden. Neem contact op met uw Adobe-vertegenwoordiger of de klantenservice als u toegang wilt tot het bètaprogramma. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Selecteren **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 

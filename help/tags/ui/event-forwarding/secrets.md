@@ -4,7 +4,7 @@ description: Leer hoe te om geheimen in UI te vormen voor authentiek te verklare
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Er zijn momenteel drie ondersteunde geheime typen:
 | [!UICONTROL OAuth 2] | Bevat diverse kenmerken die de [type clientverificatietype](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) voor de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 | [!UICONTROL Google OAuth 2] | Bevat diverse kenmerken die de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie voor gebruik in de [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) en [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor een gebeurtenis te vormen door:sturen ([!UICONTROL Edge]) in de gebruikersinterface van het Experience Platform of de gebruikersinterface van de gegevensverzameling.
 

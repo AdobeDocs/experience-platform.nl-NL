@@ -4,7 +4,7 @@ description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe E
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 | [!UICONTROL Expiration date] | Verzoeken voor de vervaldatum van de gegevensset voor filters op basis van de geplande verwijderingsdatum voor de gegevensset in kwestie. |
 | [!UICONTROL Date updated] | Filter op basis van de datum waarop de werkorder voor het laatst is bijgewerkt. Ontwerpen en vervaldatums worden als updates geteld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## De details van een werkorder weergeven {#view-details}
 
