@@ -2,7 +2,7 @@
 description: Leer hoe u opties voor bestandsindeling kunt configureren wanneer u gegevens activeert naar bestandsbestemmingen
 title: (Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
+source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Hiermee stelt u een scheidingsteken in voor elk veld en elke waarde. Beschikbare
 * Komma `(,)`
 * Pijp `(|)`
 * Puntkomma `(;)`
-* Tabtoets `(\\t)`
+* Tabtoets `(\t)`
 
 ### Aanhalingsteken
 
