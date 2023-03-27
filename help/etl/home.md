@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ontwikkeling van ETL-integratie voor Adobe Experience Platform
 description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '4075'
+source-wordcount: '4081'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krac
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
-- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Verificatie en autorisatie voor Experience Platform-API&#39;s](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
@@ -490,7 +491,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Gegevens worden geschreven naar [!DNL Experience Platform] gebruiken [Data Ingestie-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  Het schrijven van gegevens is een asynchroon proces. Wanneer gegevens naar Adobe Experience Platform worden geschreven, wordt alleen een batch gemaakt en gemarkeerd als een succes nadat de gegevens volledig zijn geschreven.
+Gegevens worden geschreven naar [!DNL Experience Platform] met de [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).  Het schrijven van gegevens is een asynchroon proces. Wanneer gegevens naar Adobe Experience Platform worden geschreven, wordt alleen een batch gemaakt en gemarkeerd als een succes nadat de gegevens volledig zijn geschreven.
 
 Gegevens in [!DNL Experience Platform] moet worden geschreven in de vorm van Parquet-bestanden.
 
@@ -579,7 +580,7 @@ Validatie kan worden uitgevoerd voor logische XDM-typen, met kenmerken zoals `mi
 
 ### Een batch maken
 
-Zodra de gegevens worden verwerkt, zal het hulpmiddel ETL de gegevens terug schrijven naar [!DNL Experience Platform] met de [Batchverwerking-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Voordat gegevens kunnen worden toegevoegd aan een gegevensset, moet deze worden gekoppeld aan een batch die later wordt geüpload naar een specifieke gegevensset.
+Zodra de gegevens worden verwerkt, zal het hulpmiddel ETL de gegevens terug schrijven naar [!DNL Experience Platform] met de [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Voordat gegevens kunnen worden toegevoegd aan een gegevensset, moet deze worden gekoppeld aan een batch die later wordt geüpload naar een specifieke gegevensset.
 
 **Verzoek**
 

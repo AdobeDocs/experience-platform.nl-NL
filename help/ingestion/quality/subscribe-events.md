@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevensinscriptie
 description: Om bij het controleren van het innameproces te helpen, maakt Adobe Experience Platform het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van de status van de opgenomen gegevens en om het even welke mogelijke mislukkingen.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Meldingen voor gegevensinvoer
 
-Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit meerdere stappen. Zodra u gegevensbestanden identificeert waarin moeten worden opgenomen [!DNL Platform], begint het innameproces en elke stap komt achtereenvolgens voor tot de gegevens met succes worden opgenomen of ontbreken. Het innameproces kan worden gestart met behulp van de [Adobe Experience Platform-API voor gegevensverwerking](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) of door [!DNL Experience Platform] gebruikersinterface.
+Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit meerdere stappen. Zodra u gegevensbestanden identificeert waarin moeten worden opgenomen [!DNL Platform], begint het innameproces en elke stap komt achtereenvolgens voor tot de gegevens met succes worden opgenomen of ontbreken. Het innameproces kan worden gestart met behulp van de [Adobe Experience Platform-API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) of door [!DNL Experience Platform] gebruikersinterface.
 
 Gegevens geladen in [!DNL Platform] moet door veelvoudige stappen gaan om zijn bestemming te bereiken, [!DNL Data Lake] of de [!DNL Real-Time Customer Profile] gegevensopslag. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
 

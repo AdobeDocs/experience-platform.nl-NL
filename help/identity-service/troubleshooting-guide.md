@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor probleemoplossing voor identiteitsservice
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 0%
@@ -282,7 +282,7 @@ Deze fout wordt weergegeven wanneer er een onverwachte uitzondering optreedt bij
 
 [!DNL Identity Service] neemt identiteitsgegevens van verslag en tijdreeksgegevens op die worden geupload aan [!DNL Platform] gebruik van Batch-inname. Aangezien batch-opname een asynchroon proces is, moet u de details van een batch bekijken om fouten weer te geven. Fouten zullen zich ophopen aangezien de partij vordert tot de partij volledig is.
 
-Hieronder volgt een lijst met foutberichten die betrekking hebben op [!DNL Identity Service] u kunt ontmoeten wanneer het gebruiken van [Data Ingestie-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+Hieronder volgt een lijst met foutberichten die betrekking hebben op [!DNL Identity Service] u kunt ontmoeten wanneer het gebruiken van [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### Onbekend XDM-schema
 

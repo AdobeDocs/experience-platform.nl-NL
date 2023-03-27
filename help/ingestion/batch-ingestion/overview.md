@@ -2,9 +2,9 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevensopname;partij;Partij;Gegevensset inschakelen;Overzicht van inname van batch;overzicht;overzicht;overzicht van inname van batch
 solution: Experience Platform
 title: Overzicht van de API voor batchverwerking
-description: Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
+description: Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 4%
@@ -13,9 +13,9 @@ ht-degree: 4%
 
 # Overzicht van de API voor inname van batch
 
-Met de Adobe Experience Platform Data Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden ingevoerd, kunnen profielgegevens zijn van een vlak bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het [!DNL Experience Data Model] (XDM) register.
+Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in het Platform invoeren. Gegevens die worden ingevoerd, kunnen profielgegevens zijn van een vlak bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het [!DNL Experience Data Model] (XDM) register.
 
-De [Referentie voor API voor gegevensverwerking](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) bevat aanvullende informatie over deze API-aanroepen.
+De [Referentie voor API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) bevat aanvullende informatie over deze API-aanroepen.
 
 Het volgende diagram schetst het proces van partijingestie:
 
@@ -23,7 +23,7 @@ Het volgende diagram schetst het proces van partijingestie:
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [Data Ingestie-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Controleer voordat je doorgaat de [gids Aan de slag](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 ### [!DNL Data Ingestion] voorwaarden
 

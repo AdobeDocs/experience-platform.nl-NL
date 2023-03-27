@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Help bij Adobe Experience Platform-gegevensverwerking
-breadcrumb-title: Handleiding voor gegevensinname
-user-guide-description: Breng uw gegevens in Experience Platform door partij of het stromen ingestie.
+user-guide-title: Hulp bij Adobe Experience Platform-gegevensopname
+breadcrumb-title: Gids voor gegevensopname
+user-guide-description: Breng uw gegevens naar Experience Platform via batch- of streamingopname.
 feature: Data Ingestion
-source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
+source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 16%
 
 ---
 
@@ -46,5 +46,6 @@ ht-degree: 4%
    - [Meldingen voor gegevensinvoer](quality/subscribe-events.md)
 - [Guardrails voor gegevensinvoer](guardrails.md)
 - [Bronaansluitingen](source-connectors.md)
-- [API-referentie](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [Referentie voor API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Referentie voor API voor streaming](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)

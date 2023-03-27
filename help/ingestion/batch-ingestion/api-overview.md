@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
 description: Dit document bevat een uitgebreide handleiding voor ontwikkelaars die werken met batch-opname-API's voor Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '2413'
+source-wordcount: '2412'
 ht-degree: 1%
 
 ---
 
 # Handleiding voor het ontwikkelen van batterijen
 
-Dit document biedt een uitgebreide handleiding voor het gebruik van [batch-opname-API-eindpunten](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Voor een overzicht van batch-opname-API&#39;s, inclusief voorwaarden en aanbevolen procedures, begint u met het lezen van de [overzicht van batch-invoer-API](overview.md).
+Dit document biedt een uitgebreide handleiding voor het gebruik van [batch-opname-API-eindpunten](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. Voor een overzicht van batch-opname-API&#39;s, inclusief voorwaarden en aanbevolen procedures, begint u met het lezen van de [overzicht van batch-invoer-API](overview.md).
 
 De bijlage bij dit document bevat informatie voor [formatteren van gegevens die voor opname moeten worden gebruikt](#data-transformation-for-batch-ingestion), inclusief voorbeeld-CSV- en JSON-gegevensbestanden.
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [Data Ingestie-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Gegevensinvoer biedt een RESTful-API waarmee u standaard CRUD-bewerkingen kunt uitvoeren op de ondersteunde objecttypen.
+De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). De opname van de partij wordt verstrekt door RESTful API waar u basisbewerkingen van CRUD tegen de gesteunde objecten types kunt uitvoeren.
 
 Controleer voordat je doorgaat de [overzicht van batch-invoer-API](overview.md) en de [gids Aan de slag](getting-started.md).
 

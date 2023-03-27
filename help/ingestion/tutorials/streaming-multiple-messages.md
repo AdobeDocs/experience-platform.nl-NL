@@ -5,9 +5,9 @@ title: Meerdere berichten verzenden in één HTTP-aanvraag
 type: Tutorial
 description: Dit document bevat een zelfstudie voor het verzenden van meerdere berichten naar Adobe Experience Platform binnen één HTTP-aanvraag via streaming invoer.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 3ad5c06db07b360df255d3afb1c177cc5de613bb
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -508,7 +508,7 @@ Het tweede bericht is mislukt omdat het geen berichttekst bevatte. Het inzamelin
     },
 ```
 
-Het derde bericht is mislukt omdat een ongeldige IMS-organisatie-id in de koptekst wordt gebruikt. De IMS-organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke IMS-organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet` verzoek met [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Zie [streamingverbinding ophalen](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van hoe u eerder gemaakte streamingverbindingen kunt ophalen.
+Het derde bericht is mislukt als gevolg van een ongeldige organisatie-id die in de koptekst wordt gebruikt. De organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet` verzoek met [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). Zie [streamingverbinding ophalen](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van hoe u eerder gemaakte streamingverbindingen kunt ophalen.
 
 Het vierde bericht is mislukt omdat het niet het verwachte XDM-schema heeft gevolgd. De `xdmSchema` in de koptekst en hoofdtekst van het verzoek komt niet overeen met het XDM-schema van het `{DATASET_ID}`. Het verbeteren van het schema in de berichtkopbal en het lichaam staat het toe om bevestiging DCCS over te gaan en met succes verzonden naar [!DNL Platform]. Het berichtlichaam moet ook worden bijgewerkt om het XDM schema van te passen `{DATASET_ID}` voor het doorgeven van streamingvalidatie [!DNL Platform]. Voor meer informatie over wat met berichten gebeurt die met succes aan Platform stromen, zie [bevestiging van ontvangen berichten](#confirm-messages-ingested) in deze zelfstudie.
 
