@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2022
 description: In de releaseopmerkingen van oktober 2022 voor Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,13 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Gegevensverzameling](#data-collection)
-- [Doelen](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Query-service](#query-service)
-- [Bronnen](#sources)
+- [Opmerkingen bij de release van Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Door de klant beheerde sleutels {#cmk}](#customer-managed-keys-cmk)
+   - [Gegevensverzameling {#data-collection}](#data-collection-data-collection)
+   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
+   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Query-service {#query-service}](#query-service-query-service)
+   - [Bronnen {#sources}](#sources-sources)
 
 ## Door de klant beheerde sleutels {#cmk}
 
@@ -41,7 +43,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | [!DNL Splunk] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Splunk] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Splunk] extensieoverzicht](../../tags/extensions/server/splunk/overview.md) voor meer informatie . |
 | [!DNL Zendesk] extensie voor het doorsturen van gebeurtenissen | U kunt nu gegevens verzenden naar [!DNL Zendesk] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Zendesk] extensieoverzicht](../../tags/extensions/server/zendesk/overview.md) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Destinations] {#destinations}
 
@@ -54,9 +56,9 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | (bèta) Gegevensset exporteren | De [Dataset exporteert bètafunctionaliteit](/help/destinations/ui/export-datasets.md) kunt u gegevens van de eerste generatie exporteren (zoals gedefinieerd in het dialoogvenster [Real-time Customer Data Platform-productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) van Adobe Experience Platform naar uw eigen systemen voor externe klanten, via de gebruikersinterface voor bestemmingen. Hierdoor kunt u gegevens uit het Experience Platform halen met een workflow zonder code/lage code naar zes cloudopslagbestemmingen (vermeld in de onderstaande tabel) voor analytische en compatibiliteitsgevallen. |
 | (bèta) Verbeterde mogelijkheden voor het exporteren van bestanden | U kunt nu profiteren van de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit het Experience Platform: <br><ul><li>Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Deze functionaliteit wordt ondersteund door de zes nieuwe bètacloud-opslagkaarten die in de onderstaande tabel worden vermeld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Nieuwe of bijgewerkte doelen**
+**Nieuwe of bijgewerkte doelen** {#new-or-updated-destinations}
 
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
@@ -70,7 +72,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Bètadeelnemers zien nu twee [!DNL Azure Blob] doelkaarten naast elkaar in de doelcatalogus. De nieuwe bètabestemming biedt verbeterde functionaliteit voor het exporteren van bestanden en ondersteunt het exporteren van gegevenssets. |
 | [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Bètadeelnemers zien nu twee [!DNL SFTP] doelkaarten naast elkaar in de doelcatalogus. De nieuwe bètabestemming biedt verbeterde functionaliteit voor het exporteren van bestanden en ondersteunt het exporteren van gegevenssets. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nieuwe of bijgewerkte documentatie**
 
@@ -92,7 +94,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Gegevenstype | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` is hernoemd naar `friendlyName`, en `ID` is hernoemd naar `name`. |
 | Gegevenstype | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` is hernoemd naar `name`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
@@ -107,7 +109,7 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 | De vragen van de monitor door Platform UI | De Query-service [!UICONTROL Scheduled Queries] biedt een verbeterde zichtbaarheid voor de status van alle querytaken via de gebruikersinterface. U kunt belangrijke informatie over de status van uw vraaglooppas nu vinden, met inbegrip van foutenmeldingen en codes indien zij ontbreken, van [!UICONTROL Scheduled Queries] tab. U kunt ook op alarm door UI voor om het even welk van deze vragen intekenen die op hun status worden gebaseerd. Zie de [Document met query&#39;s controleren](../../query-service/ui/monitor-queries.md) voor meer informatie over deze functie. |
 | Vraag versnelde het melden van inzichten gegevensmodel | Als deel van Gegevens Distiller SKU, staat de vraag versnelde opslag u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Met de opslag met versnelde query kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Adobe Real-time Customer Data Platform-gegevensmodellen om uw rapporteringsinzichten en hun visualisaties te verbeteren. Zie de [document met query-versnelde gegevens voor winkelrapporten](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) voor meer informatie over deze functie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de Diensten van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
 Nieuwe functies in Adobe Experience Platform:
