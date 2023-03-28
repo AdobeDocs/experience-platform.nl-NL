@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4331'
 ht-degree: 0%
@@ -3645,6 +3645,8 @@ De id in de reactie vertegenwoordigt de unieke id van het invoerschema dat u heb
 
 Daarna, moet u opstelling het outputschema voor uw uitvoer. Eerst, moet u uw bestaand partnerschema vinden en inspecteren.
 
+>[!BEGINSHADEBOX]
+
 **Verzoek**
 
 +++Verzoek om partnerschema voor het outputschema te krijgen
@@ -3957,7 +3959,7 @@ Vervolgens moet u een uitvoerschema maken. Kopieer de JSON-reactie die u hierbov
 
 **Verzoek**
 
-+++ Een uitvoerschema maken - aanvragen
++++Een uitvoerschema maken - Verzoek
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Antwoord**
 
-+++ Uitvoerschema maken - Reactie
++++Uitvoerschema maken - Reactie
 
 ```json
 {
@@ -4287,7 +4289,7 @@ De id in de reactie vertegenwoordigt de unieke id van het invoerschema dat u heb
 
 >[!ENDSHADEBOX]
 
-### Toewijzingssets maken
+### Toewijzingsset maken {#create-mapping-set}
 
 Gebruik vervolgens de [API voor gegevenprep](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) om de toewijzingenset te creëren door invoerschema-id, uitvoerschema-id en de gewenste veldtoewijzingen te gebruiken.
 
@@ -4295,7 +4297,7 @@ Gebruik vervolgens de [API voor gegevenprep](https://developer.adobe.com/experie
 
 **Verzoek**
 
-+++ Toewijzingsset maken - Verzoek
++++Toewijzingsset maken - Verzoek
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ Gebruik vervolgens de [API voor gegevenprep](https://developer.adobe.com/experie
 >* Merk ook op dat alhoewel de voorbeeldconfiguratie hieronder omvat `Email` en `Phone_E.164`, kunt u slechts één identiteitskenmerk per gegevensstroom exporteren.
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
