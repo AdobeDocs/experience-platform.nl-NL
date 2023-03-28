@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
 workflow-type: tm+mt
-source-wordcount: '2883'
-ht-degree: 1%
+source-wordcount: '2889'
+ht-degree: 2%
 
 ---
 
@@ -52,7 +52,7 @@ Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van 
 
 ### Attribution AI
 
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -72,7 +72,7 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 
 Voor meer informatie over AI van de Klant, lees [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Voor informatie over het beleid inzake gegevensbeheer, lees [beleidsoverzicht](../../data-governance/policies/overview.md).
 
-## Controlelogboeken {#audit-logs}
+## Auditlogboeken {#audit-logs}
 
 Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en mogelijkheden te controleren. De auditlogboeken bevatten informatie over wie wat heeft gedaan en wanneer.
 
@@ -82,7 +82,7 @@ Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en
 | --- | --- | --- |
 | Toegevoegde bronnen | <ul><li>Attribution AI-instantie</li><li>AI-exemplaar van klant</li><li>DataStream</li></ul> | De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt. Als de eigenschap wordt toegelaten moet u niet manueel logboekinzameling toelaten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de verschillende middel-specifieke gebeurtenistypen die door controlelogboeken in Platform worden gevolgd, verwijs naar [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -112,11 +112,9 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | [[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) voor gebeurtenis doorsturen | U kunt nu gegevens verzenden naar de [!DNL Snapchat Conversions API] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Voor meer informatie over het verifiëren en gebruiken van API, verwijs naar [[!DNL Snapchat Marketing API] documentatie](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | De SDK van het Web ondersteunt nu [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met clienttips hebben websiteeigenaars toegang tot veel van de informatie die in het dialoogvenster [!DNL User-Agent] -tekenreeks, maar op een meer privacyvriendelijke manier. |
 | [Web SDK pagina-voor-pagina migratie](../../edge/home.md#migrating-to-web-sdk) | U kunt nu bestaande wegeigenschappen migreren uit andere Experience Cloud-bibliotheken, zoals [!DNL at.js], naar Web SDK, één pagina tegelijk. Dit laat een gefaseerde benadering van de migratie van SDK van het Web toe, zonder de behoefte om al uw pagina&#39;s in één keer te migreren. |
+| [[!DNL Adobe Journey Optimizer] ondersteuning voor gegevensstromen](../../edge/datastreams/overview.md#aep) | De Adobe Experience Platform-service voor gegevensstromen ondersteunt nu [!DNL Adobe Journey Optimizer]. Met deze optie kunt u inkomende kanalen via het web en op apps gebaseerde kanalen gebruiken in [!DNL Adobe Journey Optimizer]. |
 
-{style=&quot;table-layout:auto&quot;}
-
-<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
--->
+{style="table-layout:auto"}
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 
@@ -130,7 +128,7 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 | ----------- | ----------- |
 | Destination SDK | Destination SDK biedt nu volledige ondersteuning voor partners en klanten die in batch (of op bestand gebaseerd) gemaakte of persoonlijke doelen maken. Lees de volgende documentatiepagina&#39;s voor meer informatie: <ul><li>[Overzicht van Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Een op een bestand gebaseerde bestemming configureren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test uw op een bestand gebaseerde doelen](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nieuwe of bijgewerkte doelen**
 
@@ -139,7 +137,7 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 | [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen. [Aan de slag met campagne](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Deze integratie werkt met [Adobe Campaign versie 8.4 of hoger](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | De [!DNL Salesforce CRM] de bestemming is bijgewerkt om zowel contacten en leidt updates, als prestatiesverbeteringen voor snellere updates te steunen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nieuwe of bijgewerkte documentatie**
 
@@ -168,7 +166,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Veldgroep | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Hier vindt u informatie over mediagegevens. |
 | Veldgroep | [[!UICONTROL Adobe CJM ExperienceEvent - Surfaces]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Beschrijft oppervlakken voor Experience Events in Adobe Journey Optimizer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Bijgewerkte XDM-componenten**
 
@@ -190,7 +188,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | (Meerdere) | (Meerdere) | Adobe Journey Optimizer-entiteiten zijn [gestabiliseerd](https://github.com/adobe/xdm/pull/1625/files). |
 | (Meerdere) | (Meerdere) | De naamruimten van bepaalde velden in verschillende experimentele componenten zijn: [bijgewerkt voor consistentie](https://github.com/adobe/xdm/pull/1626/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
