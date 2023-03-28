@@ -1,11 +1,11 @@
 ---
 title: Client-tips voor gebruikersagent
-description: Leer hoe de gebruikers-agent de Hints van de Cliënt in Web SDK werken
+description: Leer hoe de gebruikers-Agent wenken van de Cliënt in Web SDK werken. Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de user-Agent-tekenreeks, maar op een meer privacyvriendelijke manier.
 keywords: user-agent;client hints; tekenreeks; user-agent string; lage entropie; hoge entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
+source-git-commit: 29679e85943f16bcb02064cc60a249a3de61e022
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1155'
 ht-degree: 2%
 
 ---
