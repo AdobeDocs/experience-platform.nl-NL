@@ -4,9 +4,9 @@ title: De publieksgegevens van de activering aan de bestemmingen van het profiel
 type: Tutorial
 description: Leer hoe te om de publieksgegevens te activeren u in Adobe Experience Platform hebt door segmenten aan de bestemmingen van het profielverzoek in kaart te brengen.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 811aba50fb4509e77910499f8d01c4bc13d06841
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-In dit artikel wordt uitgelegd welke workflow is vereist voor het activeren van publieksgegevens in Adobe Experience Platform-profielen voor aanvraagdoelen. Indien samen gebruikt met [randsegmentatie](../../segmentation/ui/edge-segmentation.md), laten deze bestemmingen zelfde-pagina en volgende-pagina het gebruiksgevallen van de verpersoonlijking op uw Web-eigenschappen toe. Meer informatie over [het toelaten van zelfde pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen](/help/destinations/ui/configure-personalization-destinations.md).
+In dit artikel wordt uitgelegd welke workflow is vereist voor het activeren van publieksgegevens in Adobe Experience Platform-profielen voor aanvraagdoelen. Indien samen gebruikt met [randsegmentatie](../../segmentation/ui/edge-segmentation.md)Met deze doelen kunnen gebruikers van dezelfde pagina en van de volgende pagina gebruikmaken van hoofdlettergebruik op uw web- en mobiele eigenschappen. Meer informatie over [het toelaten van zelfde pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen](/help/destinations/ui/configure-personalization-destinations.md).
 
 De voorbeelden van de bestemmingen van het profielverzoek zijn [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepaste personalisatie](../../destinations/catalog/personalization/custom-personalization.md) verbindingen.
 
