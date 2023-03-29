@@ -4,9 +4,9 @@ title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3468'
+source-wordcount: '3495'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,12 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+> * Om gegevens te activeren en de [toewijzingsstap](#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
+> * Gegevens activeren zonder de opdracht [toewijzingsstap](#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
+> 
+> Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 >
->Sommige klanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden, zien het nieuwe **[!UICONTROL Mapping]** stap als onderdeel van hun activeringsworkflow naar de [nieuwe bètawolopslagbestemmingen](/help/release-notes/2022/october-2022.md#destinations). Let ook op het volgende: [bekende beperkingen](#known-limitations) als onderdeel van de release.
+> Sommige klanten die deelnemen aan het verbeterde bètaprogramma voor het exporteren van bestanden, zien het nieuwe **[!UICONTROL Mapping]** stap als onderdeel van hun activeringsworkflow naar de [nieuwe bètawolopslagbestemmingen](/help/release-notes/2022/october-2022.md#destinations). Let ook op het volgende: [bekende beperkingen](#known-limitations) als onderdeel van de release.
 
 ## Overzicht {#overview}
 
