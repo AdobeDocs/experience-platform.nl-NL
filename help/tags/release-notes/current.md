@@ -2,14 +2,27 @@
 title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
 description: De nieuwste aanvullende informatie voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
+source-git-commit: f2f2f9abc50f2016e41fd23bfbb66553fadf6fce
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 3%
+source-wordcount: '677'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
+
+## 29 maart 2023
+
+**Quick Stark Workflows (bèta)**
+
+Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. De volgende workflows zijn nu beschikbaar voor klanten als openbare bètaversie.
+* **[Meta-conversie-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Klanten die gebeurtenissen doorsturen, kunnen gebeurtenisgegevens, server-side naar Meta voor advertenties snel verzamelen en doorsturen in een paar eenvoudige stappen.
+* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Klanten kunnen de Mobile SDK snel implementeren en mobiele basisgebeurtenissen in slechts een paar eenvoudige stappen valideren.
+
+Nieuwe extensies zijn vrijgegeven:
+
+* **[!DNL Braze]extensie voor doorsturen van gebeurtenissen**: De [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Met de extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge-netwerk, benutten en verzenden naar [!DNL Braze] in de vorm van server-side-gebeurtenissen die de [!DNL Braze] Gebruikerstrack-API&#39;s.
+* **[!DNL Mixpanel]extensie voor doorsturen van gebeurtenissen**: De [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Met de extensie kunt u gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in het Adobe Experience Platform Edge-netwerk en deze via de API Gebeurtenissen bijhouden naar Mixpanel te verzenden.
 
 ## 25 januari 2023
 
