@@ -1,15 +1,15 @@
 ---
-title: (Bèta) Magnetische Inc-verbinding
+title: Magnetische Inc-verbinding
 description: Leer hoe u verbinding maakt met het Platform Snapchat Ads en uw publiekssegmenten exporteert vanuit Experience Platform.
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
+source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '969'
 ht-degree: 1%
 
 ---
 
-
-# (Beta) Snap Inc
+# Magnetische Inc-verbinding
 
 ## Overzicht {#overview}
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door de *Magnetische Inc.* team. Dit is momenteel een bètaproduct en de functionaliteit kan worden gewijzigd. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *dev-support@snap.com*
+>Deze documentatiepagina is gemaakt door de *Magnetische Inc.* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *dev-support@snap.com*
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -57,7 +57,7 @@ Alle id&#39;s die naar de *Magnetische Inc.* het doel moet worden gehasht in for
 | GAID | SHA-256 gehashte Google Advertising ID | Advertentie-id&#39;s voor Google toewijzen aan het veld Doelidentiteit *onbeschaamd*. |
 | IDFA | SHA-256 gehashte Apple Advertising ID | Advertentie-id&#39;s voor Apple toewijzen aan het veld Doelidentiteit *idfa*. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -68,7 +68,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *UW BESTEMMING* bestemming. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinding maken met Magnetische Inc. {#connect}
 
