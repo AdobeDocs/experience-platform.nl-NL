@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Help bij tags
+user-guide-title: Tags Help
 breadcrumb-title: Tags
-user-guide-description: Leer analyses, marketing en advertenties te implementeren en te beheren om de ervaring van klanten te verbeteren.
+user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
+source-git-commit: 7bff76b6c06e3d596dd811d04b3673c08ed9c250
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 12%
+source-wordcount: '960'
+ht-degree: 14%
 
 ---
 
@@ -222,6 +222,8 @@ ht-degree: 12%
          * [Overzicht](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [Overzicht](./extensions/server/azure/overview.md)
+      * [!DNL Mixpanel] {#mixpanel}
+         * [Overzicht](./extensions/server/mixpanel/overview.md)
       * [PegPeg-klantbeslissingshub](https://exchange.adobe.com/apps/ec/107597)
       * [Conversie-API magnetisch](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
@@ -284,7 +286,7 @@ ht-degree: 12%
       * [Profiel](./api/endpoints/profile.md)
       * [Zoeken](./api/endpoints/search.md)
       * [Geheimen](./api/endpoints/secrets.md)
-   * Hulplijnen {#guides}
+   * Handleidingen {#guides}
       * [Id&#39;s van beschrijvingsbestanden delegeren](./api/guides/delegate-descriptor-ids.md)
       * [Waarden versleutelen](./api/guides/encrypting-values.md)
       * [Foutafhandeling](./api/guides/error-handling.md)
