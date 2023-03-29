@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2023
 description: In de release van maart 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 2a7ff5d56ccc1a0b4c86018936d139f2e6d46cd6
+source-git-commit: 48cd7f670ab7d42d2b0c54bb549d37aa3b9ebe66
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 2%
+source-wordcount: '715'
+ht-degree: 3%
 
 ---
 
@@ -28,6 +28,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Functie | Beschrijving |
 | --- | --- |
 | Nieuwe snelstartworkflow voor Meta Conversions API (Bèta) | Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. De [quick start workflow voor Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) biedt klanten de mogelijkheid om gebeurtenisgegevens snel te verzamelen en door te sturen, servergegevens naar Meta voor conversie van advertenties in een paar eenvoudige stappen. |
+| Nieuwe snelstartworkflow voor Mobile SDK (bèta) | Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. De [Snelstartworkflow voor Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) kunt u de Mobile SDK snel implementeren en mobiele basisgebeurtenissen in slechts een paar eenvoudige stappen valideren. |
 | [!DNL Braze] extensie voor doorsturen van gebeurtenissen | De [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Met de extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge-netwerk, benutten en verzenden naar [!DNL Braze] in de vorm van server-side-gebeurtenissen die de [!DNL Braze] Gebruikerstrack-API&#39;s. |
 | [!DNL Mixpanel] extensie voor doorsturen van gebeurtenissen | De [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Met de extensie kunnen klanten gebeurtenisberichten gebruiken om gebeurtenisgegevens vast te leggen in het Adobe Experience Platform Edge-netwerk en deze via de API Gebeurtenissen bijhouden naar Mixpanel te verzenden. |
 
