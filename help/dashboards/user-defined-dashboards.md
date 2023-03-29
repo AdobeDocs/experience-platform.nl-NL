@@ -2,9 +2,9 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,17 @@ Met Adobe Experience Platform-dashboards kunt u snel inzicht krijgen en de visua
 
 To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
-## Aangepaste dashboards maken
+## Een aangepast dashboard maken
 
 Als u eerst een aangepast dashboard wilt maken, navigeert u naar het dashboardoverzicht. Selecteren **[!UICONTROL Dashboards]** van de linkernavigatie van het Platform UI gevolgd door **[!UICONTROL Create dashboard]**.
 
 ![Het dashboardoverzicht met dashboards in de linkernavigatie en &quot;creëren dashboard&quot;benadrukte.](./images/user-defined-dashboards/create-dashboard.png)
 
 Voordat u een aangepast dashboard toevoegt, is de dashboardvoorraad leeg en wordt &#39;&#39;Geen dashboards gevonden&#39;&#39; weergegeven. bericht. Zodra u hebt gemaakt, worden alle door de gebruiker gedefinieerde dashboards vermeld in de dashboardvoorraad.
+
+>[!NOTE]
+>
+>Als u een bestaand dashboard wilt bewerken, selecteert u de naam van het dashboard in de inventarislijst gevolgd door het potloodpictogram (![Een potloodpictogram.](./images/user-defined-dashboards/edit-icon.png))
 
 De [!UICONTROL Create dashboard] wordt weergegeven. Voer een beschrijvende naam in voor de verzameling widgets die u wilt maken en selecteer **[!UICONTROL Save]**.
 
@@ -54,13 +58,15 @@ De werkruimte van de widgetcomposer wordt weergegeven. Selecteer vervolgens **[!
 
 ![De werkruimte van de widgetcomposer.](./images/user-defined-dashboards/widget-composer.png)
 
-De [!UICONTROL Select data] wordt weergegeven. Selecteer een gegevensmodel in de linkerkolom om een voorvertoningslijst van alle beschikbare lijsten te tonen.
+#### Gegevensmodel selecteren {#select-data-model}
 
->[!NOTE]
+De [!UICONTROL Select data model] wordt weergegeven. Selecteer een gegevensmodel in de linkerkolom om een voorvertoningslijst van alle beschikbare lijsten te tonen. Het vooraf geconfigureerde gegevensmodel voor Real-time Customer Data Platform is benoemd [!UICONTROL CDPInsights].
+
+>[!TIP]
 >
->Door de gebruiker gedefinieerde dashboards ondersteunen momenteel alleen het model met profielgegevens. Meer opties worden ondersteund.
+>Selecteer het informatiepictogram (![Een informatiepictogram.](./images/user-defined-dashboards/info-icon.png)) om de volledige naam van het gegevensmodel te zien als het te lang is om in de dataroil te worden weergegeven.
 
-![Het dialoogvenster Gegevens selecteren.](./images/user-defined-dashboards/select-data-dialog.png)
+![Het dialoogvenster Gegevens selecteren.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
 De voorvertoningslijst bevat informatie over de tabellen in het gegevensmodel. De onderstaande tabel bevat een beschrijving van de kolomvelden en de mogelijke waarden ervan.
 
@@ -68,9 +74,13 @@ De voorvertoningslijst bevat informatie over de tabellen in het gegevensmodel. D
 |---|---|
 | [!UICONTROL Title] | De naam van de tabel. |
 | [!UICONTROL Table type] | Het type tabel. Mogelijke typen zijn: `fact`, `dimension`, en `none`. |
+| [!UICONTROL Records] | Het aantal records dat aan de gekozen tabel is gekoppeld. |
 | [!UICONTROL Lookups] | Het aantal tabellen dat is gekoppeld aan de gekozen tabel. |
+| [!UICONTROL Attributes] | Het aantal kenmerken voor de gekozen tabel. |
 
 Selecteren **[!UICONTROL Next]** om uw keuze van het gegevensmodel te bevestigen. In de volgende weergave wordt een lijst weergegeven met de beschikbare tabellen in de linkertrack. Selecteer een tabel voor een uitgebreide uitsplitsing van de gegevens in de geselecteerde tabel.
+
+### Widget vullen {#populate-widget}
 
 De [!UICONTROL Preview] deelvenster bevat tabbladen voor [!UICONTROL Sample records] en [!UICONTROL Attributes]. De [!UICONTROL Sample records] bevat een subset van de records uit de geselecteerde tabel in een tabelweergave. De [!UICONTROL Attributes] bevat de kenmerknaam, het gegevenstype en de brontabel voor elk kenmerk dat aan de geselecteerde tabel is gekoppeld.
 
@@ -80,37 +90,45 @@ Selecteer een tabel in de lijst in de linkertrack om gegevens voor de widget op 
 
 De widgetcomposer is nu gevuld met gegevens uit de door u gekozen tabel.
 
-Het gegevensmodel en de geselecteerde tabel worden boven aan de linkertrack weergegeven. De kenmerken die beschikbaar zijn om de widget te maken, worden in de kolom Kenmerken weergegeven.
+Het gegevensmodel en de momenteel geselecteerde tabel worden boven aan de linkertrack weergegeven. De kenmerken die beschikbaar zijn om de widget te maken, worden in het dialoogvenster [!UICONTROL Attributes] kolom. U kunt de zoekbalk gebruiken om naar kenmerken te zoeken in plaats van door de lijst te schuiven, of u kunt het gekozen gegevensmodel wijzigen door het potloodpictogram te selecteren (![Potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) in het linkerspoor.
 
 ![Een widget die is gevuld met gegevens binnen de widgetcomposer.](./images/user-defined-dashboards/populated-widget-composer.png)
 
+#### Kenmerken toevoegen en filteren {#add-and-filter-attributes}
+
+Selecteer het pictogram Toevoegen (![Een pictogram voor toevoegen.](./images/user-defined-dashboards/add-icon.png)) naast een kenmerknaam om een kenmerk aan de widget toe te voegen. In het vervolgkeuzemenu dat wordt weergegeven, kunt u een kenmerk toevoegen als de X-as, de Y-as, een kleur of een filter voor de widget. De [!UICONTROL Color] kunt u de resultaten van de markeringen op de X- en Y-as onderscheiden op basis van kleur. Dit wordt gedaan door de resultaten in verschillende kleuren te verdelen die op hun samenstelling van een derde attribuut worden gebaseerd.
+
 >[!TIP]
 >
->U kunt het gekozen gegevensmodel wijzigen door het potloodpictogram te selecteren (![Potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) in het linkerspoor.
+>Als u de rangschikking van de X- en Y-as wilt omdraaien, selecteert u het pictogram Pijl-omhoog en Pijl-omlaag (![Het pictogram Pijl-omhoog en Pijl-omlaag.](./images/user-defined-dashboards/switch-axis-icon.png)) om van regeling te veranderen.
 
-Selecteer het pictogram Toevoegen (./images/user-defined-dashboards/add-icon.png) naast een kenmerknaam om een kenmerk aan de X- of Y-as toe te voegen.
+![De widgetcomposer met het vervolgkeuzemenu voor het invoegpictogram gemarkeerd.](./images/user-defined-dashboards/attributes-dropdown.png)
 
-![De widgetcomposer met het vervolgkeuzemenu voor het pictogram Toevoegen gemarkeerd om kenmerken aan een widgetas toe te voegen.](./images/user-defined-dashboards/attributes-dropdown.png)
+Als u het type grafiek of grafiek van de widget wilt wijzigen, selecteert u de optie [!UICONTROL Marks] en kiest u een van de beschikbare opties. U kunt onder andere balken, punten, tikken, lijnen of gebieden kiezen. Als deze optie is geselecteerd, wordt een voorvertoning van de huidige instellingen van de widget gegenereerd.
 
-Selecteer vervolgens het type grafiek of grafiek in het menu [!UICONTROL Marks] vervolgkeuzelijst voor het genereren van een voorvertoning van de huidige instellingen van de widget. In de [!UICONTROL Properties] aan de rechterkant van het scherm typt u een naam voor de widget in het deelvenster [!UICONTROL Widget title] tekstveld.
+![De widgetcomposer met de markering van de vervolgkeuzelijst Tekens.](./images/user-defined-dashboards/marks-dropdown.png)
 
-![De widgetcomposer met het tekstveld Markeringen in de vervolgkeuzelijst en de widgettitel gemarkeerd.](./images/user-defined-dashboards/marks-dropdown-widget-title.png)
+Door een kenmerk toe te voegen als filter, kunt u selecteren welke waarden u wilt opnemen in of uitsluiten van de widget. Nadat u een filter uit de lijst met kenmerken hebt toegevoegd, kunt u [!UICONTROL Filter] wordt weergegeven waar u waarden kunt in- of uitschakelen via het selectievakje.
 
-Wanneer u tevreden bent met uw widget, selecteert u **[!UICONTROL Save]**. Een tikpictogram onder de widgetnaam geeft aan dat de widget is opgeslagen.
+![Het filterdialoogvenster voor het filteren van waarden uit de widget.](./images/user-defined-dashboards/filter-dialog.png)
 
->[!NOTE]
->
->Als u de widget opslaat in de widgetcomposer, wordt de widget lokaal op het dashboard opgeslagen. Als u de dashboardeditor verlaat zonder het dashboard op te slaan, wordt de widget niet opgeslagen op het dashboard.
+### Eigenschappen van Widget
+
+Selecteer het pictogram Eigenschappen (![Het pictogram Eigenschappen.](./images/user-defined-dashboards/properties-icon.png)) in het rechterspoor om het deelvenster Eigenschappen te openen. In de [!UICONTROL Properties] een naam voor de widget in het deelvenster [!UICONTROL Widget title] tekstveld.
+
+![Het deelvenster Eigenschappen met het pictogram Eigenschappen en het veld Widgettitel gemarkeerd.](./images/user-defined-dashboards/properties-panel.png)
+
+Vanuit het deelvenster met widgeigenschappen kunt u verschillende aspecten van uw widget bewerken. U hebt volledige controle om de plaats van widgetlegenda uit te geven. Als u de legenda wilt verplaatsen, selecteert u de [!UICONTROL Legend placement] en kiest u de gewenste locatie in de lijst met beschikbare opties. U kunt ook de naam wijzigen van het label dat is gekoppeld aan de legenda en de X- of Y-as door een nieuwe naam in te voeren in het dialoogvenster [!UICONTROL Legend title] tekstveld, of [!UICONTROL Axis label] respectievelijk tekstveld.
+
+#### Uw widget opslaan {#save-widget}
+
+Als u de widget opslaat in de widgetcomposer, wordt de widget lokaal op het dashboard opgeslagen. Als u uw werk wilt opslaan en later wilt hervatten, selecteert u **[!UICONTROL Save]**. Een tikpictogram onder de widgetnaam geeft aan dat de widget is opgeslagen. Als u tevreden bent met de widget, selecteert u **[!UICONTROL Save and close]** om de widget beschikbaar te maken voor alle andere gebruikers die toegang hebben tot het dashboard. Selecteren **[!UICONTROL Cancel]** om af te zien van uw werk en terug te keren naar het aangepaste dashboard.
 
 ![Bevestiging van opslaan van nieuwe widget.](./images/user-defined-dashboards/save-confirmation.png)
 
-Selecteren **[!UICONTROL Cancel]** om terug te keren naar uw aangepaste dashboard.
-
-![De widgetcomposer met een voorbeeldwidget gemaakt.](./images/user-defined-dashboards/composed-widget.png)
-
 >[!TIP]
 >
->Selecteer het instellingspictogram naast de naam van het dashboard om meer informatie over het maken van het dashboard weer te geven. U kunt de naam van het dashboard wijzigen in het dialoogvenster dat verschijnt.
+>Selecteer het pictogram Eigenschappen (![Het pictogram Eigenschappen.](./images/user-defined-dashboards/properties-icon.png)) naast de naam van het dashboard voor meer informatie over het maken ervan. U kunt de naam van het dashboard wijzigen in het dialoogvenster dat verschijnt.
 
 U kunt widgets opnieuw rangschikken en de grootte ervan wijzigen in deze werkruimte. Selecteren **[!UICONTROL Save]** om de naam en de geconfigureerde indeling van het dashboard te behouden.
 
