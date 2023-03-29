@@ -4,7 +4,9 @@ title: Voorbeeld-PQL-expressies voor berekende kenmerken
 type: Documentation
 description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies vereisen het gebruik van geldige PQL-expressies (Profile Query Language). In deze handleiding worden enkele van de meestgebruikte PQL-expressies voor berekende kenmerken beschreven.
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%

@@ -3,7 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Hoe te om een Berekend Veld van Attributen te vormen
 type: Documentation
 description: Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit veld kan worden gemaakt met behulp van een schemaveldgroep om het veld toe te voegen aan een bestaand schema of door een veld te selecteren dat u al in een schema hebt gedefinieerd.
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%

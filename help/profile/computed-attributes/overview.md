@@ -4,7 +4,9 @@ title: Inleiding tot berekende kenmerken
 type: Documentation
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 0%

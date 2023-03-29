@@ -3,7 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Berekende kenmerken in Platform gebruiken
 type: Documentation
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot profielniveaukenmerken. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
