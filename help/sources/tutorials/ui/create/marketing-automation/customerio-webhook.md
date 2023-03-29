@@ -1,10 +1,8 @@
 ---
 title: Een Customer.io-bronverbinding en gegevensstroom maken in de gebruikersinterface
 description: Leer hoe u een Customer.io-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 badge: "Bèta"
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 0%

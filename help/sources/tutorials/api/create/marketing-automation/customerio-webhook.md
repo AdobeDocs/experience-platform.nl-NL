@@ -1,10 +1,8 @@
 ---
 title: Een bronverbinding en gegevensstroom maken voor Klant.io met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform met Customer.io kunt verbinden met behulp van de Flow Service API.
-hide: true
-hidefromtoc: true
 badge: "Bèta"
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 0%
@@ -253,7 +251,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL Customer.io] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar de [!DNL Customer.io] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)

@@ -1,71 +1,78 @@
 ---
 keywords: metriek-overzicht; rtcdp metriek - overzicht
 title: Homepage van Real-time Customer Data Platform en dashboards
-description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
+description: Dashboards, startpagina en eerste gebruikerservaring van Adobe Experience Platform
+badge: "Bèta"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: cc6d962e1c4a9afe1b608dfa06e9812b33dc7e6d
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
 
-# [!DNL Real-Time Customer Data Platform] homepage en dashboards
+# [!DNL Real-Time Customer Data Platform] homepage
 
-De startpagina van Adobe Real-time Customer Data Platform (Real-Time CDP), die een dashboard voor cijfergegevens bevat, wordt weergegeven wanneer u zich aanmeldt bij Real-Time CDP.
+>[!NOTE]
+>
+>De [!DNL Real-Time Customer Data Platform] de homepage is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
 
-De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. Real-Time CDP biedt metrische kaarten voor je hele ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
+De startpagina van Adobe Real-time Customer Data Platform (Real-Time CDP) is de eerste pagina die wordt weergegeven nadat u zich hebt aangemeld bij Real-Time CDP.
 
-![afbeelding](assets/home.png)
+De Real-Time CDP-startpagina bevat een widget Aan de slag waarmee u snel toegang kunt krijgen tot verschillende functies en een sectie Metrics die bijgewerkte informatie over gegevens binnen uw organisatie weergeeft.
 
-Als het systeem geen gegevens bevat wanneer u zich aanmeldt bij Real-Time CDP, wordt het dashboard op de startpagina niet weergegeven. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Als gegevens worden verzameld, met andere woorden als <!--sources-->datasets, profielen, segmenten, en bestemmingen worden gecreeerd en de gegevens stromen in systeem-dashboard automatisch updates aan vertoningsinformatie over die gegevens<!-- in metric cards-->.
+Dit document biedt een overzicht van de Real-Time CDP-startpagina en het dashboard voor meetgegevens.
 
-## Dashboardweergave startpagina
+![De homepage van UI van het Platform.](assets/platform-home/home.png)
 
-<!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
+## Aan de slag-widget
 
-Het dashboard bestaat uit<!-- two areas.-->:
+De [!UICONTROL Getting started with Real-Time Customer Profile] widget bestaat uit vier secties:
 
-* **Het leaderboard** bevindt zich boven aan het dashboard. Het leaderboard toont het aantal gegevenssets, profielen, segmenten en doelen in het systeem.
+* **Gegevens in Platform opnemen**: Deze widget leidt u naar de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren in het Experience Platform. Lees voor meer informatie de [overzicht van bronnen](../sources/home.md)
+* **Modelgegevensstructuren**: Deze widget leidt u naar het overzicht van schema&#39;s. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of bouwstenen tot stand te brengen die de structuur van uw gegevens beschrijven. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
+* **Segmentpubliek**: Deze widget leidt u naar de [!DNL Segment Builder] in de gebruikersinterface. Gebruik de [!DNL Segment Builder] om met de gegevenselementen van het Profiel in wisselwerking te staan en regels voor uw segmenten te bepalen. Lees voor meer informatie de [Overzicht van segmentatieservice](../segmentation/home.md).
+* **Gegevens verzenden naar doelen**: Deze widget stuurt u naar de doelcatalogus. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en segmenten verzenden naar. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md)
 
-   ![afbeelding](assets/leaderboard.png)
+![De startpagina van de gebruikersinterface van het Platform met de widget Aan de slag](assets/platform-home/getting-started-widget.png)
 
-<!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
-    ![image](assets/home-metrics.jpg)
-Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **Recente objecten** maakt een lijst van de vijf meest recente datasets, bronnen, segmenten, en bestemmingen die aan het systeem worden toegevoegd.
+## Metrisch dashboard
 
-   ![afbeelding](assets/recent.png)
+Het dashboard Metrics toont bijgewerkte informatie over uw Experience Platform gegevens. Het dashboard bestaat uit twee gedeelten:
 
-Extra meetgegevens, bijvoorbeeld voor profielen en segmenten, zijn beschikbaar in andere delen van Real-time Customer Data Platform.
+### Het leaderboard
 
-### Gegevenssets
+Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profielen en segmenten in uw organisatie en hun meest recente updatedatum.
 
-De **[!UICONTROL Datasets]** de teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in [!DNL Platform]. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd.
+![De leaderboard-sectie in de gebruikersinterface van het Platform.](assets/platform-home/leaderboard.png)
 
-Voor meer informatie over datasets, zie [Overzicht van gegevenssets](../catalog/datasets/overview.md).
+* **Totaal aantal schema&#39;s**: De **Totaal schema&#39;s** de teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
+* **Totaal aantal gegevenssets**: De **Totaal aantal gegevensbestanden** de teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in [!DNL Platform]. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees [Overzicht van gegevenssets](../catalog/datasets/overview.md).
+* **Totaal aantal profielen**: De **Profielen** het totale aantal personen met profielen in het deelvenster [!DNL Real-Time Customer Profile]. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in Verenigd Profiel wordt geplaatst. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Voor meer informatie over profielen leest u de [Overzicht van het realtime klantprofiel](../profile/home.md).
+* **Totaal aantal segmenten**: **Segmenten** toont het totale aantal segmenten die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe segmenten worden gecreeerd. Voor meer informatie over segmenten leest u de [Overzicht van segmentatieservice](../segmentation/home.md).
 
-### Profielen
+### Recente objecten
 
-De **[!UICONTROL Profiles]** het totale aantal personen met profielen in het deelvenster [!DNL Real-Time Customer Profile]. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek.
+Recente items geven een overzicht van de meest recente wijzigingen in uw organisatie. In het onderstaande voorbeeld hebben de meest recente wijzigingen betrekking op gegevenssets, bronnen, segmenten en bestemmingen.
 
-Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in Verenigd Profiel wordt geplaatst.
+![De recente puntensectie in de homepage van UI van het Platform.](assets/platform-home/recent-items.png)
 
-Het aantal profielen wordt eenmaal per 24 uur bijgewerkt.
+* **Recente gegevensbestanden**: De **[!UICONTROL Recent datasets]** De kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Selecteer een dataset om de details voor dat punt te bekijken, of selecteer **[!UICONTROL View all]** voor een lijst van gegevensbestanden. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over datasets, zie [Overzicht van gegevenssets](../catalog/datasets/overview.md).
+* **Recente bronnen**: De **[!UICONTROL Recent sources]** De metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt. Selecteer een bron om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van bronnen. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over bronnen raadpleegt u [Overzicht van bronnen](../sources/home.md).
+* **Recente segmenten**: De **[!UICONTROL Recent segments]** De metrische kaart toont de vijf meest recente die segmenten binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd. Selecteer een segment om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met segmenten. Zie voor meer informatie over segmenten [Overzicht van segmentatieservice](../segmentation/home.md).
+* **Recente bestemmingen**: De **[!UICONTROL Recent destinations]** De metrische kaart toont de vijf meest recente bestemmingen binnen de organisatie worden gecreeerd die. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Selecteer een bestemming om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst van bestemmingen. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md).
 
-Zie voor meer informatie over profielen [Een uniforme weergave van uw klant in Real-Time CDP](profile/profile-overview.md).
+## Bronnen
 
-### Segmenten
+Tot slot verstrekt de middelen widget u van extra documentatiemiddelen die u kunt verwijzen. Deze omvatten:
 
-**[!UICONTROL Segments]** toont het totale aantal segmenten die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe segmenten worden gecreeerd.
+![De middelensectie in de homepage van UI van het Platform.](assets/platform-home/resources.png)
 
-Zie voor meer informatie over segmenten [Overzicht van segmentatieservice](segmentation/segmentation-overview.md).
-
-### Doelen
-
-**[!UICONTROL Destinations]** toont het totale aantal bestemmingen die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe bestemmingen worden gecreeerd.
-
-Voor meer informatie over bestemmingen, zie [Overzicht van doelen](destinations/overview.md).
+* [Schema&#39;s begrijpen](../xdm/schema/composition.md)
+* [Bronnen verbinden](../sources/home.md)
+* [Hoe te om uw Real-Time Profiel van de Klant te bevolken](../profile/home.md)
+* [Verbindingsdoelen](../destinations/home.md)
+* [Toegang beheren](../access-control/abac/overview.md)
 
 <!-- ### Successful profile records
 
@@ -100,35 +107,3 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
-
-### Recente gegevensbestanden
-
-De **[!UICONTROL Recent datasets]** De kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd.
-
-Selecteer een dataset om de details voor dat punt te bekijken, of **[!UICONTROL View all]** om de lijst met gegevenssets te zien. Van daar, kunt u een specifieke bron voor details selecteren.
-
-Voor meer informatie over datasets, zie [Overzicht van gegevenssets](../catalog/datasets/overview.md).
-
-### Recente bronnen
-
-De **[!UICONTROL Recent sources]** De metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt.
-
-Selecteer een bron om de details voor dat item weer te geven, of **[!UICONTROL View all]** om de lijst met bronnen weer te geven. Van daar, kunt u een specifieke bron voor details selecteren.
-
-Voor meer informatie over bronnen raadpleegt u [Overzicht van bronnen](sources/sources-overview.md).
-
-### Recente segmenten
-
-De **[!UICONTROL Recent segments]** De metrische kaart toont de vijf meest recente die segmenten binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd.
-
-Selecteer een segment om de details voor dat item weer te geven, of **[!UICONTROL View all]** om informatie over meer segmenten te zien.
-
-Zie voor meer informatie over segmenten [Overzicht van segmentatieservice](segmentation/segmentation-overview.md).
-
-### Recente bestemmingen
-
-De **[!UICONTROL Recent destinations]** De metrische kaart toont de vijf meest recente bestemmingen binnen de organisatie worden gecreeerd die. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd.
-
-Selecteer een bestemming om de details voor dat item weer te geven, of **[!UICONTROL View all]** om informatie over meer bestemmingen te zien.
-
-Voor meer informatie over bestemmingen, zie [Overzicht van doelen](destinations/overview.md).

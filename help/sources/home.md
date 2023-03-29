@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: fd82f109b8af665540e2ff30e92c6546ef9f3d2c
+source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -140,13 +140,12 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van uw lok
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
-
 <!-- 
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 -->
 
