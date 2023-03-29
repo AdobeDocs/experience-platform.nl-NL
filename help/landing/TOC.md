@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform - Overzicht
+user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
-user-guide-description: Leer hoe Experience Platform uw klanten in real time persoonlijke ervaringen kan bieden.
-source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
+user-guide-description: Leer hoe Experience Platform uw klanten in real time gepersonaliseerde ervaringen kan bieden.
+source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 8%
+source-wordcount: '258'
+ht-degree: 18%
 
 ---
 
@@ -29,9 +29,10 @@ ht-degree: 8%
    * [Rondleiding gebruikersinterface Platform (video)](video/platform-ui.md)
    * [Handleiding Workflows-gebruikersinterface](workflows.md)
    * [Browserondersteuning en taalondersteuning](browser-language-support.md)
+   * [Zelfidentificatie-enquête](self-identification.md)
 * Experience Platform-API&#39;s {#platform-apis}
    * [Aan de slag met Platform-API&#39;s](api-guide.md)
-   * [API&#39;s van Platforms verifiëren en openen](api-authentication.md)
+   * [ Platform-API&#39;s verifiëren en openen](api-authentication.md)
    * [API-basisbeginselen](api-fundamentals.md)
    * [Postman gebruiken met Platform-API&#39;s](postman.md)
    * [API-naslagdocumenten](https://www.adobe.com/go/platform-api-reference-en)
