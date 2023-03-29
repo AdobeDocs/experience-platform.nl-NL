@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7bff76b6c06e3d596dd811d04b3673c08ed9c250
+source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '961'
 ht-degree: 14%
 
 ---
@@ -211,6 +211,8 @@ ht-degree: 14%
          * [Aanvullende informatie](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
          * [Overzicht](./extensions/server/aws/overview.md)
+      * [!DNL Braze] {#braze}
+         * [Overzicht](./extensions/server/braze/overview.md)
       * [Cloud Connector voor Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
