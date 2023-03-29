@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Aanvullende informatie over Adobe Experience Platform
 breadcrumb-title: Aanvullende informatie over Platform
 user-guide-description: Hier vindt u maandelijks aanvullende informatie over Adobe Experience Platform.
-source-git-commit: 48120894235fb86e5ab69ee09903c48ce3bd1e3e
+source-git-commit: 676ce76a75330ade53a0150f50dfc3966060c5e3
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '73'
 ht-degree: 87%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 87%
 
 * [Opmerkingen bij de release Huidige Platform](latest/latest.md)
 * 2023 {#2023}
+   * [Maart 2022](2023/march-2023.md)
    * [Februari 2023](2023/february-2023.md)
    * [Januari 2023](2023/january-2023.md)
 * 2022 {#2022}
