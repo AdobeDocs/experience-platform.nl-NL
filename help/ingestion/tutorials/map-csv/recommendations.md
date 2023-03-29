@@ -1,18 +1,17 @@
 ---
-title: Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde Recommendations (bèta)
+title: Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde Recommendations
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand met behulp van door AI gegenereerde aanbevelingen kunt toewijzen aan een XDM-schema.
-source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
+exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
+source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
 
-# Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde aanbevelingen (bèta)
+# Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde aanbevelingen
 
->[!IMPORTANT]
->
->Deze functie bevindt zich momenteel in bèta en uw organisatie heeft er wellicht nog geen toegang toe. De documentatie en functionaliteit kunnen worden gewijzigd.
+>[!NOTE]
 >
 >Zie het document over [een CSV-bestand toewijzen aan een bestaand schema](./existing-schema.md).
 
@@ -31,7 +30,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Pla
 
 Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie. Op de **[!UICONTROL Catalog]** bekijken, naar de **[!UICONTROL Local system]** categorie. Selecteer onder **[!UICONTROL Local file upload]** de optie **[!UICONTROL Add data]**.
 
-![De [!UICONTROL Sources] catalogus in de gebruikersinterface van het Platform, met [!UICONTROL Add data] krachtens [!UICONTROL Local file upload] geselecteerd](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![De [!UICONTROL Sources] catalogus in de gebruikersinterface van het Platform, met [!UICONTROL Add data] krachtens [!UICONTROL Local file upload] geselecteerd.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 De **[!UICONTROL Map CSV XDM schema]** wordt weergegeven, vanaf de **[!UICONTROL Dataflow detail]** stap.
 
@@ -51,17 +50,17 @@ U kunt naar keuze de volgende extra eigenschappen voor dataflow vormen alvorens 
 | [!UICONTROL Dataflow details] | Geef een naam en een optionele beschrijving op voor de gegevensstroom waarmee de CSV-gegevens in het Platform worden geplaatst. Aan de gegevensstroom wordt automatisch een standaardnaam toegewezen wanneer u deze workflow start. Het wijzigen van de naam is optioneel. |
 | [!UICONTROL Alerts] | Selecteren in een lijst met [waarschuwingen in producten](../../../observability/alerts/overview.md) dat u betreffende de status van de gegevensstroom wilt ontvangen zodra het in werking is gesteld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wanneer u klaar bent met het configureren van de gegevensstroom, selecteert u **[!UICONTROL Next]**.
 
-![De [!UICONTROL Dataflow detail] sectie is voltooid](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![De [!UICONTROL Dataflow detail] is voltooid.](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## Gegevens selecteren
 
 Op de **[!UICONTROL Select data]** de linkerkolom gebruiken om uw CSV-bestand te uploaden. U kunt **[!UICONTROL Choose files]** om een dialoogvenster voor bestandsverkenning te openen waarin u het bestand kunt selecteren. U kunt het bestand ook rechtstreeks naar de kolom slepen.
 
-![De [!UICONTROL Choose files] en gebied voor slepen en neerzetten gemarkeerd in het deelvenster [!UICONTROL Select data] stap](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![De [!UICONTROL Choose files] en gebied voor slepen en neerzetten gemarkeerd in het deelvenster [!UICONTROL Select data] stap.](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 Na het uploaden van het bestand wordt een voorbeeldgegevenssectie weergegeven met de eerste tien rijen van de ontvangen gegevens, zodat u kunt controleren of deze correct zijn geüpload. Selecteren **[!UICONTROL Next]** om door te gaan.
 
@@ -71,11 +70,11 @@ Na het uploaden van het bestand wordt een voorbeeldgegevenssectie weergegeven me
 
 De modellen van XML worden in werking gesteld om een nieuw schema te produceren dat op uw dataflow configuratie en uw geupload Csv- dossier wordt gebaseerd. Wanneer het proces is voltooid, wordt [!UICONTROL Mapping] De stap wordt gevuld om de toewijzingen voor elk afzonderlijk veld weer te geven naast de volledig navigeerbare weergave van de gegenereerde schemastructuur.
 
-![De [!UICONTROL Mapping] stap in UI, tonend alle CSV in kaart gebrachte gebieden en de resulterende schemastructuur](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![De [!UICONTROL Mapping] stap in UI, tonend alle CSV in kaart gebrachte gebieden en de resulterende schemastructuur.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
 Van hier kunt u optioneel [veldtoewijzingen bewerken](#edit-mappings) of [de veldgroepen wijzigen waaraan ze zijn gekoppeld](#edit-schema) afhankelijk van uw behoeften. Selecteer **[!UICONTROL Finish]** om de afbeelding te voltooien en de dataflow in werking te stellen u vroeger vormde. De CSV-gegevens worden in het systeem opgenomen en vullen een gegevensset in die is gebaseerd op de gegenereerde schemastructuur en die klaar is om te worden verbruikt door downstream-services van Platforms.
 
-![De [!UICONTROL Finish] knop die wordt geselecteerd, het CSV-toewijzingsproces voltooien](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![De [!UICONTROL Finish] knop die wordt geselecteerd, het CSV-toewijzingsproces voltooien.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### Veldtoewijzingen bewerken {#edit-mappings}
 
@@ -85,11 +84,11 @@ Gebruik de voorvertoning van de veldtoewijzing om bestaande toewijzingen te bewe
 
 De CSV-velden worden automatisch toegewezen aan bestaande XDM-veldgroepen met behulp van XML-modellen. Als u de veldgroep voor een bepaald CSV-veld wilt wijzigen, selecteert u **[!UICONTROL Edit]** naast de schemastructuur.
 
-![De [!UICONTROL Edit] knop die wordt geselecteerd naast de schemaboom](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![De [!UICONTROL Edit] knop die naast de schemastructuur wordt geselecteerd.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
 Er wordt een dialoogvenster weergegeven waarin u de weergavenaam, het gegevenstype en de veldgroep voor een veld in de toewijzing kunt bewerken. Selecteer het bewerkingspictogram (![Pictogram Bewerken](../../images/tutorials/map-csv-recommendations/edit-icon.png)) naast een bronveld om de details in de rechterkolom te bewerken voordat u het veld selecteert **[!UICONTROL Apply]**.
 
-![De aanbevolen veldgroep voor een bronveld dat wordt gewijzigd](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
+![De aanbevolen veldgroep voor een bronveld dat wordt gewijzigd.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
 Wanneer u klaar bent met het aanpassen van de schemaaanbevelingen voor uw brongebieden, selecteer **[!UICONTROL Save]** om de wijzigingen toe te passen.
 
