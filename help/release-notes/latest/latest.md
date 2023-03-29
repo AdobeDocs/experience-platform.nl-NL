@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van maart 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 2a7ff5d56ccc1a0b4c86018936d139f2e6d46cd6
+source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '663'
 ht-degree: 3%
 
 ---
@@ -53,7 +53,7 @@ Voor meer informatie over Data Prep, gelieve te lezen [Overzicht van Data Prep](
 
 | Functie | Beschrijving |
 | --- | --- |
-| Profielafmetingen | Om u een nauwkeurigere vertegenwoordiging van profielmetriek te geven, worden de lidmaatschapsuitsplitsing en de cijfers van de kroon gecombineerd en nu berekend over een periode van 24 uur. Meer informatie vindt u in de [Handleiding voor segmenteringsinterface](../../segmentation/ui/overview.md) |
+| Profielafmetingen | Om u een nauwkeurigere vertegenwoordiging van profielmetriek te geven, worden de lidmaatschapsuitsplitsing en de cijfers van de kroon gecombineerd en nu berekend over een periode van 24 uur. Meer informatie is beschikbaar in het dialoogvenster [Handleiding voor segmenteringsinterface](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
