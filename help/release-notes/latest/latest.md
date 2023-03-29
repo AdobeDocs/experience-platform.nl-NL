@@ -1,10 +1,10 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van maart 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
+source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 3%
+source-wordcount: '1012'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +16,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Gegevensverzameling](#data-collection)
 - [Gegevensvoorbereiding](#data-prep)
+- [Doelen](#destinations)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
@@ -44,6 +45,41 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 | Nieuwe functies voor het coderen en decoderen van URL-tekenreeksen | <ul><li>De `get_url_encoded` Deze functie neemt een URL als invoer en vervangt of codeert speciale tekens door ASCII-tekens.</li><li>De `get_url_decoded` De functie neemt een URL als input en decodeert ASCII karakters in speciale karakters.</li></ul> Lees voor meer informatie de [Handleiding voor functies Data Prep](../../data-prep/functions.md). Lees de handleiding voor een uitgebreide lijst met gereserveerde tekens en de bijbehorende gecodeerde tekens [speciale tekens](../../data-prep/functions.md#special-characters). |
 
 Voor meer informatie over Data Prep, gelieve te lezen [Overzicht van Data Prep](../../data-prep/home.md).
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe bestemmingen** {#new-destinations}
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL Adobe Commerce] aansluiting voor GA](../../destinations/catalog/personalization/adobe-commerce.md) | De [!DNL Adobe Commerce] met de doelconnector (nu algemeen beschikbaar) kunt u een of meer Real-Time CDP-soorten selecteren die u voor uw [!DNL Adobe Commerce] -account voor een dynamische, op maat gesneden ervaring voor kopers. |
+| [[!DNL Snap Inc] aansluiting voor GA](../../destinations/catalog/advertising/snap-inc.md) | De [!DNL Snap Inc] bestemmingsschakelaar (nu algemeen beschikbaar) staat marketers toe om gebruikerssegmenten die in Experience Platform worden gecreeerd in te voeren [!DNL Snapchat Ads] en gebruik ze om hun advertenties te richten. |
+| [(API) Oracle Eloqua-verbinding](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | De op API gebaseerde verbinding gebruiken voor [!DNL Oracle Eloqua] om campagnes te plannen en uit te voeren terwijl het leveren van een gepersonaliseerde klantenervaring voor hun vooruitzichten in [!DNL Oracle Eloqua]. |
+| [(bèta) [!DNL Amazon Ads] verbinding](../../destinations/catalog/advertising/amazon-ads.md) | De [!DNL Amazon Ads] integratie met Adobe Experience Platform biedt een sleutelintegratie voor [!DNL Amazon Ads] producten, met inbegrip van [!DNL Amazon DSP (ADSP)]. Met de [!DNL Amazon Ads] doel in Adobe Experience Platform, kunnen gebruikers adverteerderspubliek voor doelgericht en activering op het [!DNL Amazon DSP]. |
+| [[!DNL Marketo Measure Ultimate] verbinding](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (voorheen Bizible) geeft marketeers inzicht in welke marketinginspanningen het meest effectief zijn in het aansturen van inkomsten en het maximaliseren van het rendement van investeringen voor hun bedrijf. De bestemming laat de zaken-aan-zaken (B2B) gegevensstromen van Adobe Experience Platform aan toe [!DNL Marketo Measure]. De kaart is alleen beschikbaar voor [!DNL Marketo Measure Ultimate] klanten. |
+| [TikTok-verbinding](../../destinations/catalog/social/tiktok.md) | Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. |
+| [Zendesk-verbinding](../../destinations/catalog/crm/zendesk.md) | Gebruik deze bestemming om identiteiten binnen een segment als contacten binnen tot stand te brengen en bij te werken [!DNL Zendesk]. |
+
+{style="table-layout:auto"}
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+| Functionaliteit | Beschrijving |
+| ----------- | ----------- |
+| Nieuwe toegangsbeheermachtigingen voor bestemmingen: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | De nieuwe toestemming geeft gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren, zonder het tonen van [toewijzingsstap](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Gebruikers kunnen segmenten toevoegen en verwijderen in activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. |
+
+{style="table-layout:auto"}
+
+**Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
+
+Wij geven een insectenmoeilijke situatie voor encryptie PGP/GPG in op dossier-gebaseerde bestemmingen voor CDP in real time vrij. Met deze wijziging genereren bestaande op bestanden gebaseerde doelen die momenteel codering gebruiken een bestandsnaam met een andere extensie dan voorheen.
+
+- Huidige extensie bij gebruik van codering: `filename.csv`
+- Toekomstige extensie bij gebruik van codering: `filename.csv.gpg`
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Segmenteringsservice {#segmentation}
 
