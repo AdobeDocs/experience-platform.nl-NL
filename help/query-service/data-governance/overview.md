@@ -2,9 +2,9 @@
 title: Gegevensbeheer in Query-service
 description: Dit overzicht behandelt de belangrijkste elementen van gegevensbeheer in de Dienst van de Vraag van het Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2832'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,16 @@ De Dienst van de vraag verstrekt de capaciteit standaardANSI SQL voor te gebruik
 
 De `CREATE VIEW` het sleutelwoord bepaalt een mening van een vraag maar de mening is fysisch niet materialized. In plaats daarvan, wordt de vraag in werking gesteld telkens als de mening in een vraag van verwijzingen wordt voorzien. Wanneer een gebruiker een mening van een dataset creeert, zijn de op rol en attribuut-gebaseerde toegangsbeheerregels voor de ouderdataset **niet** hiërarchisch toegepast. Dientengevolge, moet u toestemmingen op elk van de kolommen uitdrukkelijk plaatsen wanneer een mening wordt gecreeerd.
 
+#### Creeer op gebied-gebaseerde toegangsbeperkingen op versnelde datasets {#create-field-based-access-restrictions-on-accelerated-datasets}
+
+Met de [attribuut-based toegangsbeheervermogen](../../access-control/abac/overview.md) u kunt organisatorische of gegevensgebruikswerkingsgebieden op feiten en afmetingsdatasets in bepalen [versnelde opslag](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Dit staat beheerders toe om toegang tot specifieke segmenten te beheren en beter de toegang te beheren die aan gebruikers of groepen gebruikers wordt gegeven.
+
+Om op gebied-gebaseerde toegangsbeperkingen op versnelde datasets tot stand te brengen, kunt u de vragen van de Dienst CTAS van de Vraag gebruiken om versnelde datasets tot stand te brengen en deze datasets te structureren die op bestaande XDM schema&#39;s of ad hoc schema&#39;s worden gebaseerd. Beheerders kunnen vervolgens [labels voor gegevensgebruik toevoegen en bewerken voor het schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) of [ad-hocschema](./ad-hoc-schema-labels.md#edit-governance-labels). U kunt labels op uw schema&#39;s toepassen, maken en bewerken via het menu [!UICONTROL Labels] werkruimte in de [!UICONTROL Schemas] UI.
+
+Met labels voor gegevensgebruik kunt u ook [rechtstreeks toegepast of bewerkt op de gegevensset](../../data-governance/labels/user-guide.md#add-labels) door Datasets UI, of gecreeerd van het Toegangsbeheer [!UICONTROL Labels] werkruimte. Zie de handleiding over hoe u [een nieuw label maken](../../access-control/abac/ui/labels.md) voor meer informatie .
+
+De toegang van de gebruiker tot individuele kolommen kan dan door de etiketten van het gegevensgebruik in bijlage worden gecontroleerd en de toestemmingsreeksen die op de rollen worden toegepast die aan gebruikers worden toegewezen.
+
 ### Connectiviteit {#connectivity}
 
 De Dienst van de vraag is toegankelijk door het Platform UI of door een verbinding met externe compatibele cliënten te vormen. De toegang tot alle beschikbare fronten wordt gecontroleerd door een reeks geloofsbrieven.
@@ -131,7 +141,7 @@ Zie de handleiding op beschikbaar [SSL-opties voor clientverbindingen van derden
 
 Codering is het gebruik van een algoritmisch proces om gegevens om te zetten in gecodeerde en onleesbare tekst om ervoor te zorgen dat de informatie zonder een decoderingssleutel wordt beschermd en ontoegankelijk is.
 
-De de gegevensnaleving van de Dienst van de vraag zorgt ervoor dat het gegeven altijd wordt gecodeerd. Data-in-transit is altijd HTTPS-compatibel en data-at-rest wordt gecodeerd in een Azure Data Lake Store met systeemtoetsen. Zie de documentatie op [hoe gegevens in Adobe Experience Platform worden gecodeerd](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html) voor meer informatie . Zie voor meer informatie over hoe gegevens in rust in Azure Data Lake Storage gecodeerd zijn [officiële Azure-documentatie](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+De de gegevensnaleving van de Dienst van de vraag zorgt ervoor dat het gegeven altijd wordt gecodeerd. Data-in-transit is altijd HTTPS-compatibel en data-at-rest wordt gecodeerd in een Azure Data Lake Store met systeemtoetsen. Zie de documentatie op [hoe gegevens in Adobe Experience Platform worden gecodeerd](../../landing/governance-privacy-security/encryption.md) voor meer informatie . Zie voor meer informatie over hoe gegevens in rust in Azure Data Lake Storage gecodeerd zijn [officiële Azure-documentatie](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
@@ -195,7 +205,7 @@ Raadpleeg de documentatie bij de Privacy Service voor meer informatie over [iden
 
 De eigenschappen van de Dienst van de vraag voor gegevensbeheer vereenvoudigen en stroomlijnen het proces van gegevenscategorisering en naleving van de verordeningen van het gegevensgebruik. Zodra het gegeven is geïdentificeerd, laat de Dienst van de Vraag u toe om de primaire identiteit op alle outputdatasets toe te wijzen. U **moet** toevoegen van identiteiten aan de dataset om verzoeken om privacy van gegevens te vergemakkelijken en te werken aan de naleving van de gegevensvereisten.
 
-De de gegevensgebieden van het schema kunnen als identiteitsgebied door het Platform UI en de Dienst van de Vraag ook worden geplaatst staat u toe om [markeer de primaire identiteiten door het SQL bevel &quot;ALTER TABLE&quot; te gebruiken](../sql/syntax.md#alter-table). Een identiteit instellen met de opdracht `ALTER TABLE` bevel is vooral nuttig wanneer datasets gebruikend SQL eerder dan direct van een schema door het Platform UI worden gecreeerd. Zie de documentatie voor instructies over hoe u kunt [identiteitsvelden definiëren in de gebruikersinterface](../../xdm/ui/fields/identity.md) bij het gebruik van standaardschema&#39;s.
+De de gegevensgebieden van het schema kunnen als identiteitsgebied door het Platform UI en de Dienst van de Vraag ook worden geplaatst staat u toe om [markeer de primaire identiteiten door het SQL bevel &quot;ALTER TABLE&quot;te gebruiken](../sql/syntax.md#alter-table). Een identiteit instellen met de opdracht `ALTER TABLE` bevel is vooral nuttig wanneer datasets gebruikend SQL eerder dan direct van een schema door het Platform UI worden gecreeerd. Zie de documentatie voor instructies over hoe u kunt [identiteitsvelden definiëren in de gebruikersinterface](../../xdm/ui/fields/identity.md) bij het gebruik van standaardschema&#39;s.
 
 <!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
 
