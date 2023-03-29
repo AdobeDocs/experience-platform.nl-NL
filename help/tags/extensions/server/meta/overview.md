@@ -2,9 +2,9 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
+source-git-commit: ec1e2b792ff827fd791576d904858ef9abb98947
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '2150'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ De controles verschijnen die u toestaan om de gebeurtenisgegevens te vormen die 
 | [!UICONTROL Custom Data] | Aanvullende gegevens die moeten worden gebruikt voor optimalisatie van levering voor advertenties, opgegeven in de vorm van een JSON-object. Zie de [[!DNL Conversions API] documentatie](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) voor meer informatie over de geaccepteerde eigenschappen voor dit object.<br><br>Als u een aankoopgebeurtenis verzendt, moet u deze sectie gebruiken om de vereiste kenmerken op te geven `currency` en `value`. |
 | [!UICONTROL Test Event] | Deze optie wordt gebruikt om te verifiëren of uw configuratie servergebeurtenissen om veroorzaakt te ontvangen door [!DNL Meta] zoals verwacht. Als u deze functie wilt gebruiken, selecteert u de optie **[!UICONTROL Send as Test Event]** Schakel het selectievakje in en geef een gewenste testgebeurteniscode op in de onderstaande invoer. Zodra de gebeurtenis door:sturen regel wordt opgesteld, als u de uitbreiding en de actie correct vormde zou u activiteiten zien die binnen het **[!DNL Test Events]** weergeven in [!DNL Meta Events Manager]. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u klaar bent, selecteert u **[!UICONTROL Keep Changes]** om de actie aan de regelconfiguratie toe te voegen.
 
@@ -79,6 +79,113 @@ Zoals vermeld in het [sectie voorwaarden](#prerequisites)wordt aangeraden beide 
 Als u verschillende gebeurtenistypen verzendt van de client en de server zonder overlapping tussen beide, is deduplicatie niet nodig. Als echter één gebeurtenis wordt gedeeld door beide [!DNL Meta Pixel] en de [!DNL Conversions API], moet u ervoor zorgen dat deze overtollige gebeurtenissen worden gededupliceerd zodat uw rapport niet negatief wordt beïnvloed.
 
 Wanneer u gedeelde gebeurtenissen verzendt, moet u een gebeurtenis-id en een naam opnemen voor elke gebeurtenis die u verzendt van zowel de client als de server. Wanneer meerdere gebeurtenissen met dezelfde id en naam worden ontvangen, [!DNL Meta] maakt automatisch gebruik van verschillende strategieën om deze te dedupliceren en de meest relevante gegevens te bewaren. Zie de [!DNL Meta] documentatie over [deduplicatie voor [!DNL Meta Pixel] en [!DNL Conversions API] gebeurtenissen](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) voor meer informatie over dit proces.
+
+## Workflow voor snel starten: Meta Conversions API Extension (bèta) {#quick-start}
+
+>[!IMPORTANT]
+>
+>* De functie Snel starten is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>* Deze eigenschap is voor netto nieuwe implementaties en steunt momenteel niet auto installerende uitbreidingen en configuraties op bestaande markeringen en gebeurtenis die eigenschappen door:sturen.
+
+
+Met de functie Snel starten kunt u eenvoudig en efficiënt werken met de API voor metaconversie en de Pixel-extensies Meta. Dit hulpmiddel automatiseert veelvoudige stappen die in de markeringen van Adobe en gebeurtenis door:sturen worden uitgevoerd, beduidend verminderend de opstellingstijd.
+
+Deze functie installeert en configureert automatisch de API voor metaconversie en de Pixel-extensies van Meta op nieuwe automatisch gegenereerde tags en de eigenschap voor het doorsturen van gebeurtenissen met de vereiste regels en gegevenselementen. Bovendien, installeert het ook auto en vormt het Web SDK van het Experience Platform en de Datstream. Ten slotte publiceert de functie Snel starten de bibliotheek automatisch naar de opgegeven URL in een ontwikkelomgeving, zodat gegevensverzameling aan de clientzijde en gebeurtenisdoorsturen aan de serverzijde in real-time mogelijk zijn via Event Forwarding and Experience Edge.
+
+In de volgende video wordt een inleiding gegeven op de functie Snel starten.
+
+>[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
+
+### Snelstartfunctie installeren
+
+>[!NOTE]
+>
+>Deze eigenschap wordt ontworpen om u te helpen met een gebeurtenis begonnen worden die implementatie door:sturen. Het zal geen eind-aan-eind, volledig functionele implementatie leveren die alle gebruiksgevallen aanpast.
+
+Deze setup wordt automatisch uitgevoerd om de API voor metaconversie en de Pixel-extensies van Meta te installeren. Deze hybride implementatie wordt aanbevolen door Meta voor het verzamelen en doorsturen van de serverzijde van de conversie van gebeurtenissen.
+De snelle opstellingseigenschap wordt ontworpen om klanten te helpen met een gebeurtenis beginnen die implementatie door:sturen en is niet bedoeld om een eind aan eind te leveren, volledig functionele implementatie die alle gebruiksgevallen aanpast.
+
+Selecteer **[!UICONTROL Get Started]** for **[!DNL Send Conversions Data to Meta]** over de Adobe Experience Platform-gegevensverzameling **[!UICONTROL Home]** pagina.
+
+![Homepage van gegevensverzameling met conversiegegevens naar meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
+
+Voer uw **[!UICONTROL Domain]** selecteert u vervolgens **[!UICONTROL Next]**. Dit domein zal als noemende overeenkomst voor uw auto geproduceerde Markeringen en Gebeurtenis worden gebruikt die eigenschappen, regels, gegevenselementen, gegevensstromen, etc. door:sturen.
+
+![Welkomstscherm voor het aanvragen van een domeinnaam](../../../images/extensions/server/meta/welcome.png)
+
+In de **[!UICONTROL Initial Setup]** dialoogvenster voert u uw **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]**, en **[!UICONTROL Data Layer Path]** selecteert u vervolgens **[!UICONTROL Next]**.
+
+![Het dialoogvenster Eerste configuratie](../../../images/extensions/server/meta/initial-setup.png)
+
+Wacht enkele minuten tot het initiële installatieproces is voltooid en selecteer vervolgens **[!UICONTROL Next]**.
+
+![Eerste installatie voltooid bevestigingsscherm](../../../images/extensions/server/meta/setup-complete.png)
+
+Van de **[!UICONTROL Add Code on Your Site]** dialoogvenster de code kopiëren die is opgegeven met de kopie ![Kopiëren](../../../images/extensions/server/meta/copy-icon.png) functie en plak deze in de `<head>` van uw bronwebsite. Na implementatie selecteert u **[!UICONTROL Start Validation]**
+
+![Code toevoegen aan het dialoogvenster van uw site](../../../images/extensions/server/meta/add-code-on-your-site.png)
+
+De [!UICONTROL Validation Results] geeft de resultaten van de implementatie van de extensie Meta weer. Selecteer **[!UICONTROL Next]**. U kunt ook aanvullende validatieresultaten zien door de optie **[!UICONTROL Assurance]** koppeling.
+
+![Dialoogvenster met testresultaten met de resultaten van de implementatie](../../../images/extensions/server/meta/test-results.png)
+
+De **[!UICONTROL Next Steps]** schermweergave bevestigt de voltooiing van de installatie. Van hieruit hebt u de optie om uw implementatie te optimaliseren door nieuwe gebeurtenissen toe te voegen, die in de volgende sectie worden getoond.
+
+Als u geen extra gebeurtenissen wilt toevoegen, selecteert u **[!UICONTROL Close]**.
+
+![Dialoogvenster Volgende stappen](../../../images/extensions/server/meta/next-steps.png)
+
+#### Extra gebeurtenissen toevoegen
+
+Als u nieuwe gebeurtenissen wilt toevoegen, selecteert u **[!UICONTROL Edit Your Tags Web Property]**.
+
+![Dialoogvenster Volgende stappen waarin de webeigenschap voor tags wordt weergegeven](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
+
+Selecteer de regel die overeenkomt met de meta-gebeurtenis die u wilt bewerken. Bijvoorbeeld: **MetaConversion_AddToCart**.
+
+>[!NOTE]
+>
+>Als er geen gebeurtenis is, zal deze regel niet lopen. Dit geldt voor alle regels, met de **MetaConversion_PageView** regel is de uitzondering.
+
+Om een gebeurtenis toe te voegen selecteert u **[!UICONTROL Add]** onder de [!UICONTROL Events] kop.
+
+![Pagina met eigenschappen van tag die geen gebeurtenissen weergeeft](../../../images/extensions/server/meta/edit-rule.png)
+
+Selecteer het [!UICONTROL Event Type]. In dit voorbeeld hebben we de [!UICONTROL Click] gebeurtenis en geconfigureerd om te activeren wanneer de **.add-to-cart-button** is geselecteerd. Selecteer **[!UICONTROL Keep Changes]**.
+
+![Gebeurtenisconfiguratiescherm met klikgebeurtenis](../../../images/extensions/server/meta/event-configuration.png)
+
+De nieuwe gebeurtenis is opgeslagen. Selecteren **[!UICONTROL Select a working library]** en selecteer de bibliotheek die u wilt maken.
+
+![Een vervolgkeuzelijst met werkbibliotheken selecteren](../../../images/extensions/server/meta/working-library.png)
+
+Selecteer de vervolgkeuzelijst naast **[!UICONTROL Save to Library]** en selecteert u **[!UICONTROL Save to Library and Build]**. Hiermee wordt de wijziging in de bibliotheek gepubliceerd.
+
+![Opslaan in bibliotheek selecteren en samenstellen](../../../images/extensions/server/meta/save-and-build.png)
+
+Herhaal deze stappen voor elke andere meta-omzettingsgebeurtenis u zou willen vormen.
+
+#### Configuratie van gegevenslaag
+
+>[!IMPORTANT]
+>
+>De manier waarop u deze algemene gegevenslaag bijwerkt, is afhankelijk van uw websitearchitectuur. Een toepassing op één pagina verschilt van een renderingtoepassing op de server. Het is ook mogelijk dat u volledig verantwoordelijk bent voor het maken en bijwerken van deze gegevens in het product Tags. In alle gevallen moet de gegevenslaag worden bijgewerkt tussen het uitvoeren van elk van de `MetaConversion_* rules`. Als u de gegevens niet tussen regels bijwerkt, kunt u ook in een geval lopen waar u stapelgegevens van het laatste verzendt `MetaConversion_* rule` in de huidige `MetaConversion_* rule`.
+
+Tijdens de configuratie, werd u gevraagd waar uw gegevenslaag leeft. Standaard is dit `window.dataLayer.meta`en binnen de `meta` -object, worden uw gegevens verwacht zoals hieronder wordt weergegeven.
+
+![Metagegevens gegevenslaag](../../../images/extensions/server/meta/data-layer-meta.png)
+
+Dit is belangrijk om te begrijpen zoals elke `MetaConversion_*` regel gebruikt deze gegevensstructuur om de relevante gegevens door te geven aan de [!DNL Meta Pixel] en de [!DNL Meta Conversions API]. Raadpleeg de documentatie bij [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) voor meer informatie over welke gegevens verschillende meta - gebeurtenissen vereisen.
+
+Als u bijvoorbeeld de opdracht `MetaConversion_Subscribe` regel, u zou moeten bijwerken `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`, en `window.dataLayer.meta.value` zoals beschreven in de documentatie over [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+
+Hieronder ziet u een voorbeeld van wat er op een website moet worden uitgevoerd om de gegevenslaag bij te werken voordat de regel wordt uitgevoerd.
+
+![Metagegevens gegevenslaag bijwerken](../../../images/extensions/server/meta/update-data-layer-meta.png)
+
+Standaard worden de `<datalayerpath>.conversionData.eventId` wordt willekeurig gegenereerd door de actie &quot;Nieuwe gebeurtenis-id genereren&quot; op een van de `MetaConversion_* rules`.
+
+Voor een lokale verwijzing naar hoe de gegevenslaag zou moeten kijken, kunt u de redacteur van de douanecode op `MetaConversion_DataLayer` data element on your property.
 
 ## Volgende stappen
 
