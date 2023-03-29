@@ -2,12 +2,12 @@
 product: adobe experience platform
 solution: Real-time Customer Data Platform
 audience: user
-user-guide-title: Real-time Customer Data Platform Guide
-user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+user-guide-title: Gids voor Real-time Customer Data Platform
+user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
+source-git-commit: a36ec71cbec2316eaa08daf5f1edb36509271e7c
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 6%
+ht-degree: 28%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 6%
 * Aan de slag {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Aan de slag met Real-Time CDP](get-started.md)
-      * [Overzicht van cijfers](home-page-dashboards.md)
+      * [Startpagina](home-page-dashboards.md)
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
       * [Voorbeeld van gebruik](./b2b-use-case.md)
       * [Volledige zelfstudie](./b2b-tutorial.md)
@@ -63,4 +63,4 @@ ht-degree: 6%
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
-* [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)
+* [Woordenlijst voor Experience Platform](https://www.adobe.com/go/platform-glossary-en)
