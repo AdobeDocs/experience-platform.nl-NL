@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 1%
+source-wordcount: '1654'
+ht-degree: 2%
 
 ---
 
@@ -14,6 +14,26 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## 29 maart 2023
+
+v3.4.1
+
+* Nieuwe native gedelegeerde webgebeurtenissen toevoegen:
+   * Keydown
+   * KeyUp
+* Voegt de capaciteit toe om tegen vele waarden (&quot;Voeg nog&quot;opties) tegen de volgende afgevaardigden te testen:
+   * Gebeurtenissen
+      * Wijzigen
+   * Voorwaarden
+      * Cookie
+      * Openingspagina
+      * Parameter querytekenreeks
+      * Verkeersbron
+      * Variabele
+* Wijzigt de afgevaardigde events/EntersView om de [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) in plaats van dat elementen die de viewport binnenkomen handmatig worden gedetecteerd.
+* Verwijdert code die DTM koekjes aan LocalStorage migreerde.
+* Logs een waarschuwing aan de console wanneer LocalStorage en SessionStorage APIs niet beschikbaar zijn.
 
 ## 4 januari 2022
 
