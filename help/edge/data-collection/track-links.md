@@ -3,9 +3,9 @@ title: Koppelingen bijhouden met de Adobe Experience Platform Web SDK
 description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page views;link tracking;links;track links;clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: dac14cd358922b577c71f8d9b7f7c9b7e1b4f87d
+source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,8 @@ alloy("sendEvent", {
   }
 });
 ```
+
+Vanaf versie 2.15.0 legt de SDK van het Web de `region` van het aangeklikte HTML-element. Hierdoor wordt de [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) rapportagefuncties in Adobe Analytics.
 
 Het verbindingstype kan één van drie waarden zijn:
 
@@ -90,3 +92,23 @@ alloy("configure", {
 });
 ```
 
+Vanaf Web SDK versie 2.15.0 kunnen de gegevens die met automatische link tracking worden verzameld, worden geïnspecteerd, aangevuld of gefilterd door een [onBeforeLinkClickSend, callback-functie](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+
+Deze callback functie wordt uitgevoerd slechts wanneer een automatische gebeurtenis van de verbindingsklik voorkomt.
+
+```javascript
+alloy("configure", {
+  onBeforeLinkClickSend: function(options) {
+    if (options.xdm.web.webInteraction.type === "download") {
+      options.xdm.web.webInteraction.name = undefined;
+    }
+  }
+});
+```
+
+Wanneer het filtreren van de verbinding het volgen gebeurtenissen gebruikend `onBeforeLinkClickSend` opdracht, Adobe raadt aan terug te keren `false` voor de koppeling klikt u die u niet wilt bijhouden. Om het even welke andere reactie zal SDK van het Web de gegevens naar het Netwerk van de Rand verzenden.
+
+
+>[!NOTE]
+>
+>** Wanneer beide `onBeforeEventSend` en `onBeforeLinkClickSend` callback functies worden geplaatst, de looppas van SDK van het Web `onBeforeLinkClickSend` callback-functie om de gebeurtenis link click te filteren en aan te vullen, gevolgd door de `onBeforeEventSend` callback-functie.
