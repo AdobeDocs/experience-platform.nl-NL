@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '963'
 ht-degree: 8%
 
 ---
@@ -352,6 +352,9 @@ ht-degree: 8%
       - [Uw bron documenteren (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
       - [API-streamingsjabloon voor zelfbediening van documentatie](sources-sdk/streaming/streaming-template-api.md)
       - [UI-streamingsjabloon voor documentatie voor zelfbediening](sources-sdk/streaming/streaming-template-ui.md)
+- Foutberichten {#errors}
+   - [Foutberichten in bronnen](./errors/sources-errors.md)
+   - [Foutberichten in Flow Service](./errors/flow-service-errors.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
