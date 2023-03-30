@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1290'
 ht-degree: 0%
 
 ---
@@ -189,7 +189,7 @@ Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen be
 
 Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op gebieden toepassen die u toestemmingen hebt. Bovendien kunt u geen gegevens aan een dataset opnemen als u geen toegang tot alle gebieden in de dataset hebt.
 
-#### Ondersteuning voor op kenmerken gebaseerd toegangsbeheer in bronnen [!BADGE Nieuwe functie]
+#### Ondersteuning voor op kenmerken gebaseerd toegangsbeheer in bronnen
 
 >[!TIP]
 >
