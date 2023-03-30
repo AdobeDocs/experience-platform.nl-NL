@@ -1,26 +1,26 @@
 ---
 title: Fuzzy Match in de Dienst van de Vraag
 description: Leer hoe te om een gelijke op uw Platform gegevens uit te voeren die resultaten van veelvoudige datasets door ongeveer een koord van uw keus combineert te passen.
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# Fuzzy match
+# Fuzzy match in de Dienst van de Vraag
 
-Gebruik een &#39;vage&#39; overeenkomst op de gegevens van uw Platform om de meest waarschijnlijke, bijna overeenkomende overeenkomsten te retourneren zonder dat u naar tekenreeksen met identieke tekens hoeft te zoeken. Hierdoor kunt u uw gegevens veel flexibeler doorzoeken en uw gegevens toegankelijker maken door tijd en moeite te besparen.
+Gebruik een &#39;vage&#39; match op je Adobe Experience Platform-gegevens om de meest waarschijnlijke, bijna overeenkomende overeenkomsten te retourneren zonder dat er naar tekenreeksen met identieke tekens moet worden gezocht. Hierdoor kunt u uw gegevens veel flexibeler doorzoeken en uw gegevens toegankelijker maken door tijd en moeite te besparen.
 
-In plaats van te proberen om de onderzoekskoorden opnieuw te formatteren om hen aan te passen, analyseert de vage gelijke de verhouding van gelijkenis tussen twee opeenvolgingen en keert het percentage van gelijkenis terug. [!DNL FuzzyWuzzy] wordt aanbevolen voor dit proces, aangezien de functies ervan geschikter zijn om tekenreeksen in complexere situaties aan te passen in vergelijking met [!DNL regex] of [!DNL difflib].
+In plaats van te proberen om de onderzoekskoorden opnieuw te formatteren om hen aan te passen, analyseert de vage gelijke de verhouding van gelijkenis tussen twee opeenvolgingen en keert het percentage van gelijkenis terug. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) wordt aanbevolen voor dit proces, aangezien de functies ervan geschikter zijn om tekenreeksen in complexere situaties aan te passen in vergelijking met [!DNL regex] of [!DNL difflib].
 
-Het voorbeeld dat in dit gebruiksgeval wordt gegeven, richt zich op het afstemmen van vergelijkbare kenmerken van een zoekopdracht in een hotelkamer over twee verschillende gegevenssets voor reisbureaus. In het document wordt weergegeven hoe tekenreeksen op basis van de mate van overeenkomst met grote, afzonderlijke gegevensbronnen moeten worden vergeleken. In dit voorbeeld vergelijkt de wazzy match de zoekresultaten met de functies van een kamer van de reisbureaus Luma en Acme.
+Het voorbeeld dat in dit gebruiksgeval wordt gegeven, is gericht op het afstemmen van vergelijkbare kenmerken van een zoekopdracht in een hotelkamer in twee verschillende gegevensbestanden voor reisbureaus. In het document wordt weergegeven hoe tekenreeksen op basis van de mate van overeenkomst met grote, afzonderlijke gegevensbronnen moeten worden vergeleken. In dit voorbeeld vergelijkt de wazzy match de zoekresultaten met de functies van een kamer van de reisbureaus Luma en Acme.
 
 ## Aan de slag {#getting-started}
 
 Als onderdeel van dit proces moet u een model voor machinaal leren trainen, wordt in dit document uitgegaan van een praktische kennis van een of meer computerleeromgevingen.
 
-Dit voorbeeld gebruikt [!DNL Python] en de [!DNL Jupyter Notebook] ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, [!DNL Jupyter Notebook] wordt aanbevolen omdat het een opensource webtoepassing is met lage computervereisten. Het kan [gedownload van de officiële Jupyter-site](https://jupyter.org/).
+Dit voorbeeld gebruikt [!DNL Python] en de [!DNL Jupyter Notebook] ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, [!DNL Jupyter Notebook] wordt aanbevolen omdat het een opensource webtoepassing is met lage computervereisten. Het kan worden gedownload van [de officiële Jupyter-site](https://jupyter.org/).
 
 Voordat u begint, moet u de benodigde bibliotheken importeren. [!DNL FuzzyWuzzy] is een open-sourced [!DNL Python] op de [!DNL difflib] en wordt gebruikt om tekenreeksen aan te passen. Gebruikt [!DNL Levenshtein Distance] om de verschillen tussen reeksen en patronen te berekenen. [!DNL FuzzyWuzzy] heeft de volgende eisen:
 
@@ -43,7 +43,7 @@ Meer technische informatie over [!DNL Fuzzywuzzy] kan worden gevonden in hun [of
 
 ### Verbinding maken met Query-service
 
-U moet het model van het machinleren aan de Dienst van de Vraag verbinden door uw verbindingsgeloofsbrieven te verstrekken. Zowel kunnen het verlopen als niet-het verlopen geloofsbrieven worden verstrekt. Zie de [aanmeldingsgids](../ui/credentials.md) voor meer informatie over hoe te om de noodzakelijke geloofsbrieven te verkrijgen. Als u [!DNL Jupyter Notebook], zie de volledige handleiding op [hoe te met de Dienst van de Vraag te verbinden](../clients/jupyter-notebook.md).
+U moet het model van het machinleren aan de Dienst van de Vraag verbinden door uw verbindingsgeloofsbrieven te verstrekken. Zowel kunnen het verlopen als niet-het verlopen geloofsbrieven worden verstrekt. Zie de [aanmeldingsgids](../ui/credentials.md) voor meer informatie over hoe te om de noodzakelijke geloofsbrieven te verkrijgen. Als u [!DNL Jupyter Notebook], lees de volledige handleiding op [hoe te met de Dienst van de Vraag te verbinden](../clients/jupyter-notebook.md).
 
 Zorg er ook voor dat u de [!DNL numpy] in uw [!DNL Python] omgeving om lineaire algebra mogelijk te maken.
 
