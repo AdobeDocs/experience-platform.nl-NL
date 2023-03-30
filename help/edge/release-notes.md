@@ -1,12 +1,12 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
-description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
+description: De recentste versieopmerkingen voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
+source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 0%
+source-wordcount: '1507'
+ht-degree: 1%
 
 ---
 
@@ -16,11 +16,21 @@ ht-degree: 0%
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](extension/web-sdk-ext-release-notes.md).
 
-## Versie 2.14.0 - 25 januari 2023
+## Versie 2.15.0 - 30 maart 2023
 
 **Nieuwe functies**
 
-* (Beta) Extra ondersteuning voor AJO-oppervlakken en -voorstellingen.
+* Extra ondersteuning voor [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) koppeling klikken op callback.
+* Extra ondersteuning voor Adobe Journey Optimizer klik tracking.
+
+**Oplossingen en verbeteringen**
+
+* De koppelingsverzameling bevat nu de naam van de koppeling en het bezoekersgebied.
+* Fout met betrekking tot console verwijderd voor mislukte URL-doelen.
+
+## Versie 2.14.0 - 25 januari 2023
+
+* (bèta) Extra ondersteuning voor Adobe Journey Optimizer-oppervlakken en -voorstellingen.
 
 **Oplossingen en verbeteringen**
 

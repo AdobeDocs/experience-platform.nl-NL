@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
+source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1588'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,20 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.16.0 - 30 maart 2023
+
+**Nieuwe functies**
+
+* (bètaversie) toegevoegd **[!UICONTROL Update variable]** actie en **[!UICONTROL Variable]** gegevenselement.
+* Toegevoegde configuratie voor [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback-functie.
+
+**Oplossingen en verbeteringen**
+
+* Probleem verholpen waarbij klikken op elementen binnen een ankertag niet werkte als de opdracht **[!UICONTROL Redirect with identity]** actie is gebruikt.
+* Probleem verholpen waarbij gegevenselementen van XDM-objectgegevens niet werkten als er slechts één schema aanwezig was.
+* Bevat versie 2.15.0 van Adobe Experience Platform Web SDK.
+
 
 ## Versie 2.15.1 - 26 januari 2023
 
