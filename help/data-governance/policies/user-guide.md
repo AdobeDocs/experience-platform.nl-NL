@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="Beschrijving"
->abstract=""
+>title="Integreer en handhaaf klanteninstemming in uw profielgegevens"
+>abstract="<h2>Beschrijving</h2><p>Met Platform kunt u de gegevens die u van uw klanten hebt verzameld, integreren in hun respectievelijke profielen. U kunt dan vormtoestemmingsbeleid bepalen of deze gegevens in segmenten kunnen worden omvat die aan bepaalde bestemmingen worden geactiveerd.</p>"
 
 In dit document wordt beschreven hoe u het **[!UICONTROL Policies]** in de gebruikersinterface van Adobe Experience Platform om beleid voor gegevensgebruik te maken en te beheren.
 
@@ -92,7 +92,7 @@ De **[!UICONTROL Browse]** wordt opnieuw weergegeven. Dit betekent dat het nieuw
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instructies"
->abstract=""
+>abstract="<ul><li>Zorg ervoor dat u voorkeursgegevens in uw verenigingsschema&#39;s via de OneTrust bronschakelaar of het standaard XDM schema voor toestemming opneemt.</li><li>Selecteren <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Beleid</a> in de linkernavigatie selecteert u vervolgens <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Beleid maken</a>.</li><li>Onder de <b>Indien</b> , beschrijft de voorwaarden of acties die de beleidscontrole zullen teweegbrengen.</li><li>Onder de <b>Vervolgens</b> in, voert u de toestemmingskenmerken in die aanwezig moeten zijn om een profiel te kunnen opnemen in de actie die het beleid heeft geactiveerd.</li><li>Selecteren <b>Opslaan</b> om het beleid te creëren. Selecteer de optie <b>Status</b> schakelen in de rechterspoorstaaf.</li><li>Het Experience Platform dwingt automatisch uw toegelaten toestemmingsbeleid af wanneer u segmenten aan bestemmingen activeert, en verstrekt details over hoe elk beleid uw publieksgrootte beïnvloedt.</li><li>Raadpleeg de handleiding voor meer informatie over deze functie <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">beleid voor het maken van toestemming</a> op Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >

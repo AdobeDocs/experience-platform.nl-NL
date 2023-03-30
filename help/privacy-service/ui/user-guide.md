@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
->title="Beschrijving"
->abstract=""
+>title="Privacyverzoeken van betrokkenen in acht nemen"
+>abstract="<h2>Beschrijving</h2><p>Met Adobe Experience Platform Privacy Service kunt u privacyverzoeken maken en beheren namens klanten die hun persoonsgegevens willen openen of verwijderen in overeenstemming met de wettelijke privacyregels.</p>"
 
 Dit document bevat stappen voor het maken en beheren van privacyverzoeken met de [!DNL Privacy Service] gebruikersinterface.
 
@@ -109,7 +109,7 @@ Selecteer **[!UICONTROL Export to CSV]** rechtsboven in het dialoogvenster.
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="Instructies"
->abstract=""
+>abstract="<ul><li>Selecteren <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">Verzoeken</a> in de linkernavigatie om Ul van de Privacy te openen, dan uitgezocht <b>Aanvraag maken</b>.</li><li>Vanaf hier kunt u de aanvraagbuilder gebruiken of een JSON-bestand van betrokkenen uploaden.</li><li>Als u de aanvraagbuilder gebruikt, selecteert u het taaktype (toegang en/of verwijderen) en kiest u het type identiteit dat u opgeeft (e-mail, ECID of AID), of voert u een naamruimte voor een aangepaste identiteit in. Voer de juiste identiteitswaarden voor de klanten in en selecteer <b>Maken</b> wanneer gereed.</li><li>Als u een JSON-bestand uploadt, selecteert u de pijl naast Verzoek maken. Selecteer in de lijst met opties de optie <b>JSON uploaden</b> en uploadt u het bestand. Als u geen JSON-bestand hebt om te uploaden, selecteert u <b>Download Adobe-GDPR-Request.json</b> om een sjabloon te downloaden dat u kunt vullen. Upload JSON en selecteer <b>Maken</b> wanneer gereed.</li><li>Raadpleeg voor meer informatie over deze functie de <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html">Gebruikershandleiding voor Privacy Service</a> op Experience League.</li></ul>"
 
 >[!NOTE]
 >

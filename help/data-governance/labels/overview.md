@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 description: Leer hoe labels voor gegevensgebruik worden gebruikt om naleving van gegevensbeheer in Adobe Experience Platform af te dwingen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="Beschrijving"
->abstract=""
+>title="Toegang tot gevoelige en beveiligde gegevens beheren"
+>abstract="<h2>Beschrijving</h2><p>De toegang van de controle tot specifieke gegevensattributen en/of segmenten, die u toestaan om flexibele werkschema&#39;s voor de diverse persona&#39;s en teams te ontwerpen die Experience Platform gebruiken gevallen.</p>"
 
 Met Adobe Experience Platform kunt u gegevensgebruikslabels toepassen op gegevenssets en velden, waarbij elke tag wordt ingedeeld op basis van verwante [beleid inzake gegevensbeheer](../policies/overview.md) en [toegangsbeheerbeleid](../../access-control/abac/ui/policies.md).
 
@@ -51,7 +51,7 @@ Voor een verwijzing naar hoe de specifieke Controles van de Uitvoer van Gegevens
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Instructies"
->abstract=""
+>abstract="<ul><li>Etiketteer XDM Gebieden en Segmenten om de gebieden en of de segmenten te classificeren die u toegang tot wilt beperken.</li><li>Met labelrollen kunt u labels toevoegen aan een rol en zo de leden van deze rol met labels definiëren waarvoor beperkingen gelden.</li><li>Creeer beleid, leidt een beleid tot een verhouding tussen de etiketten op geëtiketteerde voorwerpen zoals gebieden XDM en Segmenten en de etiketten op rollen. Als de etiketten aanpassen, dan of kan een vergunning of een beperkte toegang worden bepaald.</li></ul>"
 
 U kunt gegevensgebruikslabels beheren met [!DNL Experience Platform] API&#39;s of de gebruikersinterface. Raadpleeg de onderstaande subsecties voor meer informatie over elke subsectie.
 

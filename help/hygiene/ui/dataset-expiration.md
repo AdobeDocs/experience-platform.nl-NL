@@ -2,9 +2,9 @@
 title: Verlopen gegevensset beheren
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Beschrijving"
->abstract=""
+>title="Ongewenste of verlopen klantenverslagen en datasets verwijderen"
+>abstract="<h2>Beschrijving</h2><p>Om de levenscyclus van uw gegevens van het Experience Platform niet met regelgevende naleving te beheren, kunt u consumentenverslagen en planningsvervaldata voor datasets schrappen. Zie het gebruiksgevenblok &#39;Privacy-aanvragen voor betrokkenen in acht nemen&#39; voor het maken of beheren van verzoeken om gegevens over onderwerpen.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Dit document behandelt hoe te om datasettermijnen in de UI van het Platform te p
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instructies"
->abstract=""
+>abstract="<ul><li>Selecteren <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Gegevenshygiëne</a> in de linkernavigatie selecteert u vervolgens <b>Aanvraag maken</b>.</li><li>Als u records wilt verwijderen:</li>   <li>Selecteren <b>Opnemen</b>.</li>   <li>Selecteer een specifieke dataset om verslagen van te schrappen of de optie te kiezen om hen van alle datasets te schrappen.</li>   <li>Vermeld de identiteit van de consumenten van wie de gegevens moeten worden verwijderd. Selecteren <b>Identiteit toevoegen</b> om de identiteiten één voor één te verstrekken of selecteren <b>Bestanden kiezen</b> om in plaats daarvan een JSON-bestand met identiteiten te uploaden.</li>   <li>Selecteer indien nodig <b>Sjabloon</b> om de verwachte indeling van het JSON-bestand weer te geven.</li><li>Zie de documentatie voor instructies als u wilt <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">vervaldata voor gegevenssets</a>.</li></ul>"
 
 Als u een nieuwe aanvraag wilt maken, selecteert u **[!UICONTROL Create request]** van de hoofdpagina in de werkruimte.
 
@@ -54,8 +54,7 @@ Volgende, onder **[!UICONTROL Dataset Details]**, selecteert u het databasepicto
 ![Afbeelding met een gegevensset die wordt geselecteerd](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->Alleen gegevenssets die tot de huidige sandbox behoren, worden weergegeven.
+Alleen gegevenssets die tot de huidige sandbox behoren, worden weergegeven.
 
 ### De aanvraag verzenden
 
@@ -68,8 +67,7 @@ U wordt gevraagd de datum te bevestigen dat de dataset door zal worden geschrapt
 Nadat het verzoek is verzonden, wordt een werkorder gemaakt en wordt deze weergegeven op het hoofdtabblad van het dialoogvenster [!UICONTROL Data Hygiene] werkruimte. Van hier, kunt u de status van de het werkorde controleren aangezien het het verzoek verwerkt.
 
 >[!NOTE]
->
->Zie de overzichtssectie over [tijdlijnen en transparantie](../home.md#dataset-expiration-transparency) voor details over hoe de gegevensreeksen verlopen worden verwerkt zodra zij worden uitgevoerd.
+Zie de overzichtssectie over [tijdlijnen en transparantie](../home.md#dataset-expiration-transparency) voor details over hoe de gegevensreeksen verlopen worden verwerkt zodra zij worden uitgevoerd.
 
 ## Een gegevensset bewerken of annuleren
 

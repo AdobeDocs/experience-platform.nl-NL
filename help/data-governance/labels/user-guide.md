@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Beschrijving"
->abstract=""
+>title="Gegevensgebruik in Platform beheren"
+>abstract="<h2>Beschrijving</h2><p>Met het gegevensbeheerkader in Experience Platform kunt u kenmerken en gegevenssets labelen op basis van beperkingen voor gegevensgebruik en beleidsregels instellen die deze beperkingen voor specifieke marketingacties identificeren en naleven.</p>"
 
 In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface.
 
@@ -87,7 +87,7 @@ De **[!UICONTROL Show Inherited Labels]** de knevel is door gebrek, dat u toesta
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instructies"
->abstract=""
+>abstract="<ul><li>Selecteren <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Gegevenssets</a> in de linkernavigatie, dan selecteer de dataset waarvan gegevens u wilt beperken.</li><li>Selecteer in de weergave Gegevens van de gegevensset de <b>Gegevensbeheer</b> tab.</li><li>Selecteer de gegevenssetvelden die u wilt beperken en selecteer vervolgens <b>Regelgevingslabels bewerken</b> om de gegevens te etiketteren die op gebruiksbeperkingen worden gebaseerd.</li><li>Nadat u de gegevens van een label hebt voorzien, selecteert u <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Beleid</a> in de linkernavigatie selecteert u vervolgens <b>Beleid maken</b>.</li><li>Maak een <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Beleid inzake gegevensbeheer</a>Selecteer vervolgens de labels voor gegevensgebruik die het beleid op het beleid toepast.</li><li>Selecteer de marketingactie(s) die het beleid zal weigeren voor gegevens die deze labels bevatten. Nadat het beleid is gemaakt, selecteert u het in de lijst en schakelt u het in met de schakeloptie in het rechterspoor.</li><li>Voor elk toegelaten beleid, verhindert het Platform om het even welke gegevens die de gespecificeerde etiketten bevatten voor de bepaalde marketing actie(s) worden gebruikt. Deze handhaving vindt automatisch plaats wanneer u probeert om geëtiketteerde gegevens aan een bestemming met bijbehorende marketing acties (gebruiksgevallen) te activeren.</li></ul>"
 
 >[!IMPORTANT]
 >
