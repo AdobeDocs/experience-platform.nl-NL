@@ -1,10 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2023
 description: In de release van maart 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
+source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 2%
+source-wordcount: '1723'
+ht-degree: 3%
 
 ---
 
@@ -14,11 +14,29 @@ ht-degree: 2%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Gegevensverzameling](#data-collection)
 - [Gegevensvoorbereiding](#data-prep)
 - [Doelen](#destinations)
+- [Experience Data Model](#xdm)
+- [Query-service](#query-service)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+
+**Nieuwe of bijgewerkte functies** {#dashboards-new-updated-features}
+
+| Functie | Beschrijving |
+| --- | --- |
+| Door gebruiker gedefinieerde dashboards | U kunt nu **kenmerkwaarden van voorbeeld** voordat u een kenmerk aan een widget toevoegt in de door de gebruiker gedefinieerde dashboards-widgetcomposer. Er zijn enkele voorbeeldwaarden uit die kenmerkkolom beschikbaar voor afzonderlijke kenmerken wanneer u een widget maakt.<br>U kunt nu **X- en Y-as omwisselen** op uw widget met de knop voor wisselen van as. Dit bespaart tijd en biedt een ergonomische ervaring wanneer u kenmerken toevoegt aan uw widgets. Op deze manier kunt u beide kenmerken opnieuw zoeken in het deelvenster Kenmerken.<br> U kunt nu **de locatie en titel van de legenda wijzigen** binnen uw widgets. Nadat een legenda op een widget aanwezig is, kunt u die legenda overal om het diagram verplaatsen en ook de legenda titel hernoemen, zoals u met asetiketten en de widgettitel kunt. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
 
 ## Gegevensverzameling {#data-collection}
 
@@ -82,6 +100,48 @@ Wij geven een insectenmoeilijke situatie voor encryptie PGP/GPG in op dossier-ge
 - Toekomstige extensie bij gebruik van codering: `filename.csv.gpg`
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| CSV naar schemaaanbeveling | U kunt nu uw lokale bestanden uploaden om via een computer opgeleide schema&#39;s te maken die het niet nodig maken om handmatig een schema te maken. Van de [!UICONTROL Sources] werkruimte, uploadt u een CSV-voorbeeldbestand en leert u algoritmes voor Adobe-computers een schema voor u op basis van de doelvelden. Zie de [documentatie](../../ingestion/tutorials/map-csv/recommendations.md) voor meer informatie.&quot; |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over XDM in Platform, lees [XDM System, overzicht](../../xdm/home.md).
+
+## Query-service {#query-service}
+
+De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL Data Lake]. U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Kenmerk gebaseerd toegangsbeheer op de versnelde opslag | Het op attributen-gebaseerde Toegangsbeheer van het gebruik met Gegevens Distiller om toegangsbeheer op alle datasets op de versnelde opslag te bepalen. Dit controleert toegang tot de modellen van douanegegevens die door gebruikers worden gecreeerd en op een versnelde opslag worden opgeslagen om douanedashboards te aandrijven. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over de Diensten van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
+
+## Real-Time Customer Data Platform B2B Edition {#b2b}
+
+Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| rugvoegsel | Voor een nauwkeurigere weergave van profielen in uw systeem bevat het systeem geen interne profielen meer in het totale aantal profielen of de meetwaarde voor het adresseerbare publiek voor de Real-time Customer Data Platform B2B Edition. Vanaf vandaag is het mogelijk dat het totale aantal profielen/adresseerbare publiek slechts één keer daalt. Geen van uw gegevens is gewist, dit is gewoon een wijziging in de telling. Neem contact op met uw Adobe-medewerker voor eventuele problemen |
+
+{style="table-layout:auto"}
+
+Lees voor meer informatie over de Real-Time CDP B2B Edition de [Overzicht van Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Segmenteringsservice {#segmentation}
 
