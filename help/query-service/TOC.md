@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: 9df75958d3945a52c219e96f18f9fc07f8036076
+source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '275'
 ht-degree: 16%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 16%
    - [Attributieanalyse](use-cases/attribution-analysis.md)
    - [Bot filteren](use-cases/bot-filtering.md)
    - [Een vernieuwd rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
+   - [Levensduurwaarde van klant](use-cases/customer-lifetime-value.md)
    - [Afgeleide kenmerken op basis van een bestand](use-cases/deciles-use-case.md)
    - [Fuzzy match](use-cases/fuzzy-match.md)
    - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
