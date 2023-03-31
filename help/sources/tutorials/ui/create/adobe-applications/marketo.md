@@ -2,9 +2,9 @@
 title: Creeer een Verbinding van de Bron van Marketo Engage en Dataflow in UI
 description: Deze zelfstudie bevat stappen voor het maken van een Marketo Engage-bronverbinding en gegevensstroom in de gebruikersinterface om B2B-gegevens over te brengen naar Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -183,3 +183,24 @@ Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt die u wilt geb
 
 * [[!DNL Real-Time Customer Profile]-overzicht](/help/profile/home.md)
 * [[!DNL Data Science Workspace]-overzicht](/help/data-science-workspace/home.md)
+
+## Aanhangsel {#appendix}
+
+De volgende secties bevatten aanvullende richtlijnen die u kunt volgen bij het gebruik van de [!DNL Marketo] bron.
+
+### Foutberichten in de gebruikersinterface {#error-messages}
+
+De volgende foutberichten worden weergegeven in de gebruikersinterface wanneer Platform problemen detecteert met de configuratie:
+
+#### [!DNL Munchkin ID] is niet toegewezen aan de desbetreffende organisatie
+
+Verificatie wordt geweigerd als uw [!DNL Munchkin ID] wordt niet toegewezen aan de organisatie van het Platform die u gebruikt. Vorm de afbeelding tussen uw [!DNL Munchkin ID] en uw organisatie die [[!DNL Marketo] interface](https://app-sjint.marketo.com/#MM0A1).
+
+![Een foutbericht waarin wordt aangegeven dat de Marketo-instantie niet correct is toegewezen aan de Adobe-organisatie.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
+
+#### Primaire identiteit ontbreekt
+
+Een dataflow kan niet worden opgeslagen en opgenomen als een primaire identiteit ontbreekt. Zorg ervoor dat [er bestaat een primaire identiteit binnen uw XDM-schema](../../../../../xdm/tutorials/create-schema-ui.md), voordat u probeert een gegevensstroom te configureren.
+
+![Een foutbericht waarin wordt aangegeven dat de primaire identiteit ontbreekt in het XDM-schema.](../../../../images/tutorials/create/marketo/no-primary-identity.png)
+
