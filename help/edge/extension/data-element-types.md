@@ -2,50 +2,64 @@
 title: Typen gegevenselementen in de Adobe Experience Platform Web SDK-extensie
 description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 4caab19e1f58fc5cec5a3c56c43e47786d49c3dc
+source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 1%
+source-wordcount: '611'
+ht-degree: 0%
 
 ---
 
+
 # Gegevenstelelementtypen
 
-Nadat u de [actietypen](action-types.md) in [Adobe Experience Platform Web SDK markeringsuitbreiding](web-sdk-extension-configuration.md) plaatst, vorm uw types van gegevenselement.
+Nadat u de [actietypen](action-types.md) in de [Adobe Experience Platform Web SDK-tagextensie](web-sdk-extension-configuration.md), moet u uw types van gegevenselement vormen. Op deze pagina worden de beschikbare gegevenselemetypen beschreven.
 
-Op deze pagina worden de beschikbare gegevenselemetypen beschreven.
+## Samenvoegen-id gebeurtenis {#event-merge-id}
 
+Dit gegevenselement verstrekt een identiteitskaart van de gebeurtenisfusie wanneer gebruikt. Er is geen configuratie nodig voor dit gegevenselement. Het gegevenselement dat wordt opgegeven, blijft hetzelfde totdat de bezoeker de pagina verlaat of totdat de **[!UICONTROL Reset Event Merge ID]** actietype wordt gebruikt.
 
-## Samenvoegings-id gebeurtenis
+## Identiteitskaart {#identity-map}
 
-Dit gegevenselement verstrekt een identiteitskaart van de gebeurtenisfusie wanneer gebruikt. Er is geen configuratie nodig voor dit gegevenselement. Het gegevenselement dat wordt opgegeven, blijft hetzelfde totdat de bezoeker de pagina verlaat of totdat het handelingstype &quot;Id van handeling voor samenvoegen van gebeurtenissen opnieuw instellen&quot; wordt gebruikt.
+Met een identiteitsoverzicht kunt u identiteiten instellen voor de bezoeker van uw webpagina. Een identiteitsoverzicht bestaat uit naamruimten, zoals _telefoon_ of _email_, met elke naamruimte die een of meer id&#39;s bevat. Als de persoon op uw website bijvoorbeeld twee telefoonnummers heeft opgegeven, moet uw naamruimte voor de telefoon twee id&#39;s bevatten.
 
-## Identiteitskaart
+In de [!UICONTROL Identity map] data element, zult u de volgende stukken informatie voor elke herkenningsteken verstrekken:
 
-Met een identiteitsoverzicht kunt u identiteiten instellen voor de bezoeker van uw webpagina. Een identiteitsoverzicht bestaat uit namespaces, zoals _phone_ of _email_, met elke namespace die één of meerdere herkenningstekens bevatten. Als de persoon op uw website bijvoorbeeld twee telefoonnummers heeft opgegeven, moet uw naamruimte voor de telefoon twee id&#39;s bevatten.
-
-In het [!UICONTROL Identity map] gegevenselement, zult u de volgende stukken informatie voor elk herkenningsteken verstrekken:
-
-* **[!UICONTROL ID]**: De waarde die de bezoeker identificeert. Als de id bijvoorbeeld tot de naamruimte _phone_ behoort, kan [!UICONTROL ID] _555-555-555_ zijn. Deze waarde wordt doorgaans afgeleid van een JavaScript-variabele of een ander stukje gegevens op de pagina. Het is daarom verstandig een gegevenselement te maken dat verwijst naar de paginagegevens en vervolgens te verwijzen naar het gegevenselement in het veld [!UICONTROL ID] in het gegevenselement [!UICONTROL Identity map]. Als de id op de pagina wordt uitgevoerd en de id-waarde alleen een gevulde tekenreeks is, wordt de id automatisch verwijderd uit het identiteitsoverzicht.
+* **[!UICONTROL ID]**: De waarde die de bezoeker identificeert. Als de id bijvoorbeeld tot de _telefoon_ naamruimte, de [!UICONTROL ID] kan _555-555-5555_. Deze waarde wordt doorgaans afgeleid van een JavaScript-variabele of een ander stukje gegevens op de pagina. Het is daarom verstandig een gegevenselement te maken dat verwijst naar de paginagegevens en vervolgens verwijst naar het gegevenselement in de [!UICONTROL ID] in het veld [!UICONTROL Identity map] gegevenselement. Als de id op de pagina wordt uitgevoerd en de id-waarde alleen een gevulde tekenreeks is, wordt de id automatisch verwijderd uit het identiteitsoverzicht.
 * **[!UICONTROL Authenticated state]**: Een selectie die aangeeft of de bezoeker is geverifieerd.
 * **[!UICONTROL Primary]**: Een selectie die aangeeft of de id moet worden gebruikt als primaire id voor de persoon. Als er geen id als primair wordt gemarkeerd, wordt de ECID gebruikt als primaire id.
 
-U moet geen ECID opgeven wanneer u een identiteitsoverzicht maakt. Wanneer u de SDK gebruikt, wordt automatisch een ECID gegenereerd op de server en opgenomen in het identiteitsoverzicht.
+![UI-afbeelding die het scherm Gegevenselement bewerken weergeeft.](./assets/identity-map-data-element.png)
 
-Het gegevenselement van de identiteitskaartgegevens wordt vaak gebruikt in combinatie met het [[!UICONTROL XDM object] gegevenstype](#xdm-object) en het [[!UICONTROL Set consent] handelingstype](action-types.md#set-consent).
+U moet geen [!DNL ECID] wanneer u een identiteitsoverzicht maakt. Wanneer u de SDK gebruikt, wordt een [!DNL ECID] wordt automatisch gegenereerd op de server en opgenomen in het identiteitsoverzicht.
 
-Meer informatie over [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=nl).
+Het gegevenselement van de identiteitskaarten wordt vaak gebruikt in combinatie met [[!UICONTROL XDM object] type gegevenselement](#xdm-object) en de [[!UICONTROL Set consent] actietype](action-types.md#set-consent).
 
-![](./assets/identity-map-data-element.png)
+Meer informatie over [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ## XDM-object {#xdm-object}
 
-Gebruik XDM-indeling om gegevens naar de Adobe Experience Platform Web SDK te verzenden. Het formatteren van uw gegevens is gemakkelijker met het XDM objectelement. Wanneer u dit gegevenselement voor het eerst opent, selecteert u de juiste Adobe Experience Platform-sandbox en -schema. Nadat u het schema hebt geselecteerd, ziet u de structuur van uw schema, dat u gemakkelijk kunt invullen.
+Het formatteren van uw gegevens aan XDM is gemakkelijker met het XDM objectelement. Wanneer u dit gegevenselement voor het eerst opent, selecteert u de juiste Adobe Experience Platform-sandbox en -schema. Nadat u het schema hebt geselecteerd, ziet u de structuur van uw schema, dat u gemakkelijk kunt invullen.
 
-![](./assets/XDM-object.png)
+![UI-afbeelding die de XDM-objectstructuur weergeeft.](assets/XDM-object.png)
 
-Wanneer u bepaalde velden in uw schema opent, zoals `web.webPageDetails.URL`, worden sommige items automatisch verzameld. Hoewel meerdere items automatisch worden verzameld, kunt u indien nodig alle items overschrijven. Alle waarden kunnen handmatig of met andere gegevenselementen worden ingevuld.
+Wanneer u bepaalde velden van uw schema opent, zoals `web.webPageDetails.URL`, worden sommige objecten automatisch verzameld. Hoewel meerdere items automatisch worden verzameld, kunt u indien nodig alle items overschrijven. Alle waarden kunnen handmatig of met andere gegevenselementen worden ingevuld.
 
 >[!NOTE]
 >
 >Vul alleen de gegevens in die u wilt verzamelen. Alles wat niet is ingevuld, wordt weggelaten wanneer de gegevens naar de oplossingen worden verzonden.
+
+## (bèta) Variabele {#variable}
+
+>[!IMPORTANT]
+>
+>Dit is momenteel een bètafunctionaliteit en kan worden gewijzigd. Toekomstige versies kunnen doorbrekende wijzigingen bevatten.
+
+Een andere manier om XDM-objecten te maken, is het gebruik van de **[!UICONTROL Variable]** gegevenselement. Terwijl het XDM-objectelement wordt gemaakt wanneer ernaar wordt verwezen, bijvoorbeeld binnen een `sendEvent` de **[!UICONTROL Variable]** gegevenselement kan worden bijgewerkt via [!UICONTROL Update variable] handelingen. Als u het gegevenselement wilt gebruiken, selecteert u de juiste Adobe Experience Platform-sandbox en -schema.
+
+![UI-afbeelding die het scherm Gegevenselement maken weergeeft.](assets/variable-data-element.png)
+
+Zodra u dit gegevenselement hebt gecreeerd kunt u gebruiken [Variabele bijwerken](./action-types.md#update-variable) handelingen om het gegevenselement te wijzigen. Gebruik vervolgens binnen de send-gebeurtenisacties het element met variabele gegevens voor de XDM-optie.
+
+## Volgende stappen {#next-steps}
+
+Meer informatie over specifieke gebruiksgevallen, zoals [toegang krijgen tot ECID](accessing-the-ecid.md).
