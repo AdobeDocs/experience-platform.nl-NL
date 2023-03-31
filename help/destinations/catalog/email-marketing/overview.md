@@ -2,12 +2,12 @@
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen
 title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
+description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes. Leer welke ESPs als bestemmingen van het Experience Platform worden gesteund.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,16 +17,17 @@ ht-degree: 2%
 
 Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Adobe Experience Platform integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
 
-Platform exporteert uw segmenten als `.csv` en levert deze naar de gewenste locatie. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die is ingeschakeld in [!DNL Platform]. Het proces om gegevens in te voeren varieert voor elke partner. Lees de afzonderlijke bestemmingsartikelen voor meer informatie.
-
 ## Ondersteunde e-mailmarketingdoelen {#supported-destinations}
 
 Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 
 * [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
+* [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [(API) Oracle Eloqua](oracle-eloqua-api.md)
+* [(API) Salesforce-Marketing Cloud](salesforce-marketing-cloud-exact-target.md)
+* [(Bestanden) Eloqua Oracle](oracle-eloqua.md)
+* [(Bestanden) Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
 * [SendGrid](sendgrid.md)
 
 ## Verbinding maken met een nieuwe marketingbestemming voor e-mail {#connect-destination}
@@ -45,7 +46,9 @@ Adobe raadt u aan een unieke id te selecteren in uw [samenvoegingsschema](../../
 | Telefoon | `mobilePhone.number` |
 | ID Loyalty-programma | `Customer-defined XDM field` |
 
-### Andere doelkenmerken
+{style="table-layout:auto"}
+
+### Andere doelkenmerken {#other-destination-attributes}
 
 Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt exporteren. Enkele aanbevolen opties zijn:
 
@@ -60,20 +63,17 @@ Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt
 | Geboortedatum | `person.birthDayAndMonth` |
 | Segmentlidmaatschap | `segmentMembership.status` |
 
-## Gegevens van de opslaglocatie naar de bestemming importeren {#import-data-into-destination}
-
-Lees de afzonderlijke artikelen van de e-mailmarketing bestemming om te leren hoe te om gegevens van uw opslagplaats in bestemmingen in te voeren:
-
-* [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
-* [Oracle Responsys](oracle-responsys.md)
-* [Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
+{style="table-layout:auto"}
 
 ## Segmenten activeren voor e-mailmarketingdoelen {#activate}
 
-Voor instructies over hoe te om segmenten aan e-mail marketing bestemmingen te activeren, verwijs naar [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md).
+Sommige e-mailmarketingdoelen in de catalogus exporteren profielen op streamingwijze, via API-integratie met de bestemming.
 
-## Aanvullende bronnen
+Andere doelen exporteren bestanden naar een locatie voor cloudopslag. Nadat het exporteren is voltooid, moet u gegevens importeren van de locatie voor cloudopslag naar uw marketingbestemming voor e-mail.
+
+Volg de koppelingen in het dialoogvenster [ondersteunde e-mailmarketingdoelen](#supported-destinations) sectie leren hoe te om segmenten aan elke e-mailmarketing bestemming te activeren.
+
+## Aanvullende bronnen {#additional-resources}
 
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md)
 * [E-mailmarketingdoelen maken en gegevens activeren met de Flow Service API](../../api/connect-activate-batch-destinations.md)
