@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
+source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '968'
 ht-degree: 14%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 14%
       * [Cloud Connector voor Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
+      * [Epsilon-gebeurtenis-API](https://exchange.adobe.com/apps/ec/109127)
       * Verbeterde Google-conversies toevoegen {#google-ads-enhanced-conversions}
          * [Overzicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Rand {#mailchimp}
