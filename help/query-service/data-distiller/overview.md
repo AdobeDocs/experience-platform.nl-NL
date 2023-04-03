@@ -1,9 +1,9 @@
 ---
 title: Distiller-overzicht van gegevens
 description: Een overzicht van de Distiller-gebruikslimieten voor gegevens van Query Service met betrekking tot uw licentierechten.
-source-git-commit: c7e753e54f087ee45daabb9094edeb51e54271fc
+source-git-commit: e4337dcebaf313365ed9e403a5891f49decb29e9
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ Data Distiller is een pakket dat een subset van de functies van Adobe Experience
 
 ## Licentiegebruik {#license-usage}
 
-De [Distiller-gebruiksdashboard voor gegevens](./license-usage.md) is beschikbaar zodra u Data Distiller-computeruren hebt aangeschaft. Met het gebruiksdashboard voor licenties kunt u het gebruik van de juiste computeruren controleren. Zie de [Distiller-gebruiksdocument voor gegevens](./license-usage.md) om belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie te bekijken.
+<!-- Commented out references to licence usage dashboard. It is temporarily hidden:
+The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
+-->
+
+Het gegevensgebruiksdashboard voor Distiller-licenties is beschikbaar nadat u Data Distiller-computeruren hebt aangeschaft. Met het gebruiksdashboard voor licenties kunt u het gebruik van de juiste computeruren controleren.
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
