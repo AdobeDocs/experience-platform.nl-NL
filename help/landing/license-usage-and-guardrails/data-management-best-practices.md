@@ -3,10 +3,10 @@ keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentie
 title: Aanbevolen werkwijzen voor gegevensbeheer
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
+source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
 workflow-type: tm+mt
-source-wordcount: '2134'
-ht-degree: 0%
+source-wordcount: '2130'
+ht-degree: 1%
 
 ---
 
@@ -20,22 +20,22 @@ In dit document worden aanbevolen procedures beschreven en gereedschappen waarme
 
 ## Adobe Experience Platform-gegevensopslag
 
-Experience Platform bestaat voornamelijk uit twee gegevensopslagplaatsen: de [!DNL Data Lake] en de profielopslag.
+Experience Platform bestaat voornamelijk uit twee gegevensopslagplaatsen: de [!DNL data lake] en de profielopslag.
 
-De **[!DNL Data Lake]** hoofdzakelijk de volgende doeleinden dienen:
+De **[!DNL data lake]** hoofdzakelijk de volgende doeleinden dienen:
 
 * fungeert als testgebied voor gegevens aan boord in Experience Platform;
 * fungeert als de gegevensopslag op lange termijn voor alle gegevens van het Experience Platform;
 * Hiermee worden gebruiksgevallen ingeschakeld, zoals gegevensanalyse en gegevenswetenschap.
 
-De **Profielopslag** is waar klantprofielen worden gecreeerd en hoofdzakelijk de volgende doeleinden dienen:
+De **Profielenarchief** is waar klantprofielen worden gecreeerd en hoofdzakelijk de volgende doeleinden dienen:
 
 * treedt op als gegevensopslag voor profielen die worden gebruikt om ervaring in real time te steunen;
 * Laat gebruiksgevallen zoals segmentatie, activering, en verpersoonlijking toe.
 
 >[!NOTE]
 >
->Uw toegang tot de [!DNL Data Lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem voor meer informatie over product-SKU&#39;s contact op met uw Adobe-vertegenwoordiger.
+>Uw toegang tot de [!DNL data lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem voor meer informatie over product-SKU&#39;s contact op met uw Adobe-vertegenwoordiger.
 
 ## Licentiegebruik {#license-usage}
 
@@ -47,8 +47,8 @@ Wanneer u Experience Platform vergunning geeft, wordt u voorzien van de toestemm
 
 De [!DNL Profile Richness] De metrische waarde is afhankelijk van de licentie die u hebt aangeschaft. Er zijn twee berekeningen voor [!DNL Profile Richness] beschikbaar:
 
-* De som van alle productiegegevens die in Adobe Real-time Customer Data Platform zijn opgeslagen (d.w.z. profielservice en identiteitsdienst) op elk moment, gedeeld door de [!DNL Addressable Audience];
-* De som van alle gegevens die in het Platform zijn opgeslagen (inclusief, maar niet beperkt tot [!DNL Data Lake], de Dienst van het Profiel, en de Dienst van de Identiteit) op om het even welk punt in tijd en om het even welke gegevens die u door (in plaats van het opslaan binnen) Platform in de afgelopen 12 maanden stroomt, gedeeld door [!DNL Addressable Audience].
+* De som van alle productiegegevens die op elk moment in Adobe Real-time Customer Data Platform zijn opgeslagen (d.w.z. het realtime profiel en de identiteitsservice van de klant), gedeeld door de [!DNL Addressable Audience];
+* De som van alle gegevens die in het Platform zijn opgeslagen (inclusief, maar niet beperkt tot [!DNL data lake], Real-Time Klantprofiel en Identiteitsservice) op elk gewenst moment en alle gegevens die u via het Platform (in plaats van binnen op te slaan) in de afgelopen 12 maanden hebt gestreamd, gedeeld door de [!DNL Addressable Audience].
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft.
 
@@ -80,11 +80,11 @@ Er zijn twee centrale scenario&#39;s om in overweging te nemen wanneer u ervoor 
 
 ### Welke gegevens moeten in Platform worden gebracht?
 
-Gegevens kunnen in een of meer systemen in Platform worden ingevoerd, namelijk de [!DNL Data Lake] en/of de profielopslag. Dit betekent dat er in beide systemen verschillende gegevens kunnen bestaan voor verschillende gebruiksgevallen. U kunt bijvoorbeeld historische gegevens in het dialoogvenster [!DNL Data Lake], maar niet in de profielopslag. U kunt selecteren welke gegevens naar de Opslag van het Profiel moeten verzenden door een dataset voor de opname van het Profiel toe te laten.
+Gegevens kunnen in een of meer systemen in Platform worden ingevoerd, namelijk de [!DNL data lake] en/of het archief met profielen. Dit betekent dat er in beide systemen verschillende gegevens kunnen bestaan voor verschillende gebruiksgevallen. U kunt bijvoorbeeld historische gegevens in het dialoogvenster [!DNL data lake], maar niet in de profielopslag. U kunt selecteren welke gegevens naar de opslag van het Profiel moeten verzenden door een dataset voor de opname van het Profiel toe te laten.
 
 >[!NOTE]
 >
->Uw toegang tot de [!DNL Data Lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem voor meer informatie over product-SKU&#39;s contact op met uw Adobe-vertegenwoordiger.
+>Uw toegang tot de [!DNL data lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem voor meer informatie over product-SKU&#39;s contact op met uw Adobe-vertegenwoordiger.
 
 ### Welke gegevens moeten worden bewaard?
 
@@ -93,7 +93,7 @@ U kunt zowel gegevensinnamefilters als vervalregels toepassen om gegevens te ver
 U kunt een aantal tools gebruiken om binnen uw gebruiksrechten voor licenties te blijven:
 
 * [Inktfilters](#ingestion-filters)
-* [Profielopslag](#profile-service)
+* [Profielenarchief](#profile-service)
 
 ### Inktfilters {#ingestion-filters}
 
@@ -101,17 +101,17 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 
 | Inslikken, filter | Beschrijving |
 | --- | --- |
-| Adobe Audience Manager-bronfiltering | Wanneer u een Adobe Audience Manager-bronverbinding maakt, kunt u kiezen welke segmenten en kenmerken u in de [!DNL Data Lake] en de Dienst van het Profiel, eerder dan het opnemen van de gegevens van de Audience Manager in zijn geheel. Zie de handleiding op [een Audience Manager-bronverbinding maken](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie . |
-| Adobe Analytics Data Prep | U kunt [!DNL Data Prep] functionaliteit wanneer het creëren van een bron van de Analyse verbinding om uit gegevens uit te filtreren die niet voor uw gebruiksgevallen wordt vereist. Doorheen [!DNL Data Prep], kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om het Platform te laten weten of gegevens naar verwachting worden gepubliceerd in het profiel of alleen in het dialoogvenster [!DNL Data Lake]. Zie de handleiding op [een verbinding met een bron voor Analytics maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
-| Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in de Dienst van het Profiel in te voeren, moet u een dataset voor gebruik in de Opslag van het Profiel toelaten. Hiermee voegt u [!DNL Addressable Audience] en [!DNL Profile Richness] toeslagrechten. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de handleiding op [het toelaten van en het onbruikbaar maken van datasets voor Profiel](../../catalog/datasets/enable-for-profile.md) voor meer informatie . |
+| Adobe Audience Manager-bronfiltering | Wanneer u een Adobe Audience Manager-bronverbinding maakt, kunt u kiezen welke segmenten en kenmerken u in de [!DNL data lake] en Real-Time Klantprofiel, in plaats van de gegevens van de Audience Manager in zijn geheel in te voeren. Zie de handleiding op [een Audience Manager-bronverbinding maken](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie . |
+| Adobe Analytics Data Prep | U kunt [!DNL Data Prep] functionaliteit wanneer het creëren van een bron van de Analyse verbinding om uit gegevens uit te filtreren die niet voor uw gebruiksgevallen wordt vereist. Doorheen [!DNL Data Prep], kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om het Platform te laten weten of gegevens naar verwachting worden gepubliceerd in het profiel of alleen in het dialoogvenster [!DNL data lake]. Zie de handleiding op [een verbinding met een bron voor Analytics maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
+| Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u [!DNL Addressable Audience] en [!DNL Profile Richness] toeslagrechten. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de handleiding op [het toelaten van en het onbruikbaar maken van datasets voor Profiel](../../catalog/datasets/enable-for-profile.md) voor meer informatie . |
 | Web SDK en Mobile SDK-gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch worden verzameld en gegevens die expliciet door de ontwikkelaar worden verzameld. Om de naleving van de licentie beter te beheren, kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. Zie de handleiding op [basisbeginselen van SDK configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) voor meer informatie . |
 | Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie op [gebeurtenissen en omstandigheden](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### Profielopslag {#profile-service}
+### Profielenarchief {#profile-service}
 
-De profielopslag bestaat uit de volgende componenten:
+Het archief Profiel bestaat uit de volgende componenten:
 
 | Profielopslagcomponent | Beschrijving |
 | --- | --- |
@@ -120,13 +120,13 @@ De profielopslag bestaat uit de volgende componenten:
 | Gegevens uit tijdreeksen (gedrag) | **Gegevens uit tijdreeksen** biedt informatie over een gebruikersgedrag. Vertegenwoordigd door het standaard model van de Gegevens van de Ervaring van het Schema (XDM) [!DNL ExperienceEvent]Gegevens uit tijdreeksen kunnen gebeurtenissen beschrijven, zoals items die aan een winkelwagentje worden toegevoegd, koppelingen waarop wordt geklikt en weergegeven video&#39;s. De waarde van gedrag kan in de loop der tijd afnemen. |
 | Naamruimte (identiteiten) | Wanneer klantgegevens worden samengevoegd, worden deze samengevoegd tot één profiel door middel van het gebruik van **naamruimten** en de mogelijkheid om deze identiteiten bij elkaar te houden wanneer meer informatie over de gebruiker bekend wordt. Zie de [Overzicht van naamruimten](../../identity-service/namespaces.md) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 
-#### Compositierapporten voor profielopslag
+#### Compositierapporten opslaan van profiel
 
-Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de Opslag van het Profiel begrijpen. Met deze rapporten kunt u geïnformeerde beslissingen nemen over hoe en waar u de vervaldatum van de Experience Event moet instellen om uw licentiegebruik beter te optimaliseren:
+Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de opslag van het Profiel begrijpen. Met deze rapporten kunt u geïnformeerde beslissingen nemen over hoe en waar u de vervaldatum van de Experience Event moet instellen om uw licentiegebruik beter te optimaliseren:
 
 * **API voor gegevensset-overlap**: Toont de datasets die het meest aan uw Adresseerbare Publiek bijdragen. U kunt dit rapport gebruiken om te bepalen welke [!DNL ExperienceEvent] datasets om een vervaldatum in te stellen voor. Zie de zelfstudie aan [het produceren van de dataset overlappend rapport](../../profile/tutorials/dataset-overlap-report.md) voor meer informatie .
 * **API voor overlappen van identiteiten**: Toont de identiteit namespaces die het meest aan uw Adresseerbare Publiek bijdragen. Zie de zelfstudie aan [het genereren van het overlappingsrapport voor de identiteit](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) voor meer informatie .
@@ -145,7 +145,7 @@ Hieronder volgt een lijst met aanbevolen tips die u kunt volgen om ervoor te zor
 * Configureren [innamefilters](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
 * Zorg ervoor dat u alleen [ingeschakelde gegevenssets voor profiel](#ingestion-filters) die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
 * Een [Ervaring gebeurtenisvervaldatum](#event-expirations) voor hoogfrequente gegevens zoals webgegevens.
-* Controleer de [Profielsamenstellingsrapporten](#profile-store-composition-reports) om inzicht te krijgen in de samenstelling van je profielwinkel. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
+* Controleer de [Profielsamenstellingsrapporten](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
 
 ## Overzicht en beschikbaarheid van functies {#feature-summary}
 
@@ -155,7 +155,7 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 
 | Functie | Beschrijving |
 | --- | --- |
-| [Datasets voor profiel in-/uitschakelen](../../catalog/datasets/user-guide.md) | Gegevenssetopname in de profielservice in- of uitschakelen |
+| [Datasets voor profiel in-/uitschakelen](../../catalog/datasets/user-guide.md) | Schakel gegevenssetinvoer in of uit in realtime-klantprofiel. |
 | [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe Support-vertegenwoordiger om deze functie in te schakelen. |
 | [Adobe Analytics Data Prep-filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname |
 | [Adobe Audience Manager-bronverbindingsfilters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Bronverbindingsfilters van Audience Manager toepassen om onnodige gegevens uit te sluiten van inname |
@@ -165,4 +165,4 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 | [API voor gegevensset-overlap](../../profile/tutorials/dataset-overlap-report.md) | Output de datasets die het meest aan uw Adresseerbare Publiek bijdraagt |
 | [API voor overlappen van identiteiten](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Output de identiteitsnaamruimten die het meest aan uw Adresseerbare Publiek bijdragen |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
