@@ -2,9 +2,9 @@
 title: Rechten voor Privacy Service beheren
 description: Leer hoe u gebruikersmachtigingen voor Adobe Experience Platform Privacy Service beheert met Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
+source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1019'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,10 @@ Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoal
 ## Beschikbare machtigingen
 
 De volgende lijst schetst de beschikbare toestemmingen voor Privacy Service met beschrijvingen van de specifieke mogelijkheden die zij toegang verlenen tot:
+
+>[!NOTE]
+>
+>Alle Privacy Service en [!UICONTROL Opt Out of Sale] machtigingen zijn gescheiden en gescheiden van elkaar, zonder functionele overlapping. Dit is mogelijk omdat de Privacy Service-API als een epidemie wordt beschouwd.
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
