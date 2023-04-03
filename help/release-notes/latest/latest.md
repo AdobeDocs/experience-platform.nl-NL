@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van maart 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 1ead97aa9b197cd1c046175bdcd06c03fd35ac17
+source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '2092'
 ht-degree: 3%
 
 ---
@@ -110,6 +110,38 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Functie | Beschrijving |
 | --- | --- |
 | CSV naar schemaaanbeveling | U kunt nu uw lokale bestanden uploaden om via een computer opgeleide schema&#39;s te maken die het niet nodig maken om handmatig een schema te maken. Van de [!UICONTROL Sources] werkruimte, uploadt u een CSV-voorbeeldbestand en leert u algoritmes voor Adobe-computers een schema voor u op basis van de doelvelden. Zie de [documentatie](../../ingestion/tutorials/map-csv/recommendations.md) voor meer informatie.&quot; |
+
+{style="table-layout:auto"}
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Klasse | [[!UICONTROL Offer Item]](https://github.com/adobe/xdm/pull/1678/files) | Klasse die een voorstel vertegenwoordigt. |
+| Klasse | [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1678/files) | Een punt dat aan een beslissing kan worden onderworpen. De output van een besluitvormingsproces is één of meerdere besluitvormingspunten. |
+| Klasse | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | Dit wijst op de hoeveelheid tijd, in seconden, die tussen de laatste bekende interactie van de gebruiker en het ogenblik inging de zitting werd gesloten. |
+| Veldgroep | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | Hiermee voegt u berekende kenmerken van interne Adobe-services toe aan inkomende klantgegevens. Dit zou niet door klanten moeten worden gebruikt om gegevens in te voeren. |
+| Datatype | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Hiermee wordt aangegeven of een restitutie aan een bestelling is gekoppeld en wordt het type restitutie, het bedrag en de bijbehorende valuta gedefinieerd. |
+| Datatype | [[!UICONTROL Category data]](https://github.com/adobe/xdm/pull/1677/files) | Dit nieuwe datatype vertegenwoordigt de categorie van een product. |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | Er is een nieuw XDM-schema gemaakt voor de gegevenssets van de doelclassificatie. Het bevat een reeks meta-gegevensgebieden die de activiteiten en de ervaringen van het Doel classificeren. |
+
+{style="table-layout:auto"}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Veldgroep | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` is verwijderd uit [!UICONTROL Content Component Details] |
+| Veldgroep | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO-eenheidtags toegevoegd aan [!UICONTROL AJO Entity Fields], die overeenkomen met een reis of campagne |
+| Veldgroep | (Meerdere) | Verschillende velden toegevoegd voor [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) |
+| Veldgroep | (Meerdere) | [Verschillende XDM-gebeurtenistypen toegevoegd voor [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files). |
+| Veldgroep | [!UICONTROL Workfront Change Event] | De `Full Record` en `Accessor Employee Ids` er zijn veldgroepen toegevoegd. |
+| Datatype | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | De [!UICONTROL Refund Amount] is toegevoegd om het bedrag aan te geven dat eventueel voor het object is terugbetaald. |
+| Datatype | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] is toegevoegd aan de lijst van restituties voor deze bestelling. |
+| Datatype | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Productcategorieën zijn toegevoegd aan de lijst met categoriegegevens van dit product. |
+| Gegevenstype | [!UICONTROL Session details information] | De `pev3` tekenreeksveld dat [Hiermee wordt het type mediastream aangegeven dat wordt gebruikt voor rapportage](https://github.com/adobe/xdm/pull/1676/files). Ook de `pccr` geeft aan of een omleiding heeft plaatsgevonden. |
+| Gegevenstype | [!UICONTROL Requisition List] | Verstrekt [eigenschappen van aanvraaglijst](https://github.com/adobe/xdm/pull/1675/files). Deze bevatten naam, id en beschrijving. |
+| Gegevenstype | [!UICONTROL Commerce] | De [Gegevenstype Handel bijgewerkt](https://github.com/adobe/xdm/pull/1675/files) om `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, en `requisitionList`. |
 
 {style="table-layout:auto"}
 
