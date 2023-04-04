@@ -3,9 +3,9 @@ keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Dit document biedt richtlijnen voor het opnemen van gegevens in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 96ab28f9f909cedd1148d6b27610aebb7cf61b29
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ In de volgende tabel worden de hulplijnen weergegeven die u moet gebruiken bij h
 | --- | --- | --- |
 | Inname van gegevens in een meer met behulp van de batch-opname-API | <ul><li>Met de batch-opname-API kunt u maximaal 20 GB aan gegevens per uur opnemen in het datumpomeer.</li><li>Het maximumaantal bestanden per batch is 1500.</li><li>De maximale batchgrootte is 100 GB.</li><li>Het maximumaantal eigenschappen of velden per rij is 10000.</li><li>Het maximumaantal batches per minuut per gebruiker is 138.</li></ul> |
 | Inname van gegevenslagen met behulp van batchbronnen | <ul><li>U kunt maximaal 200 GB gegevens per uur aan datumpeer opnemen gebruikend batch-ingestigenbronnen zoals [!DNL Azure Blob], [!DNL Amazon S3], en [!DNL SFTP].</li><li>Een batch moet tussen 256 MB en 100 GB groot zijn.</li><li>Het maximumaantal bestanden per batch is 1500.</li></ul> | Zie de [overzicht van bronnen](../sources/home.md) voor een catalogus met bronnen die u kunt gebruiken voor gegevensinvoer. |
-| Inname in batch naar profiel | <ul><li>U kunt maximaal 120 GB aan gegevens per uur invoeren.</li><li>De maximale grootte van een recordklasse is 100 kB (zacht).</li><li>De maximale grootte van een klasse ExperienceEvent is 10 KB (soft).</li><li>De maximale grootte van één record is 1 MB.</li></ul> |
+| Inname in batch naar profiel | <ul><li>De maximale grootte van een recordklasse is 100 kB (zacht).</li><li>De maximale grootte van een klasse ExperienceEvent is 10 KB (soft).</li><li>De maximale grootte van één record is 1 MB.</li></ul> |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | **Het maximumaantal per dag ingenomen Profile of ExperienceEvent-batches is 90.** Dit houdt in dat het gecombineerde totaal van de elke dag ingeslikte Profile en ExperienceEvent batches niet meer dan 90 mag bedragen. Door extra batches in te voeren worden de systeemprestaties beïnvloed. | Dit is een zachte limiet. Het is mogelijk om verder te gaan dan een zachte limiet, maar zachte limieten bieden een aanbevolen richtlijn voor systeemprestaties. |
 
 ## Guardrails voor streaming opname
