@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen over privacyregels
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteunde wettelijke privacyregels en de toepassing ervan in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,11 @@ In veel privacyverordeningen is bepaald dat een betrokkene die jonger is dan een
 
 Ervan uitgaande dat het bedrijf persoonlijke informatie heeft verzameld en dat het de identiteit van een bepaalde consument kan verifiëren of verifiëren, staan de privacyregels toe dat een specifieke tijdspanne wordt vervuld om aan een verzoek van de consument te voldoen. In de volgende tabel worden de toepasselijke termijnen voor elke verordening weergegeven, met enkele uitzonderingen:
 
-| Verordening | Compatibiliteitsvenster | Notities |
+>[!NOTE]
+>
+>Het tijdsbestek waarbinnen binnen &quot;dagen&quot; moet worden gereageerd, is een weerspiegeling van de termijnen die in elke regelgeving zijn vastgelegd om een verzoek van consumenten af te handelen.
+
+| Verordening | Te reageren tijdsbestek | Notities |
 | --- | --- | --- |
 | CCPA (Californië) | 45 dagen |  |
 | GDPR (Europese Unie) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
