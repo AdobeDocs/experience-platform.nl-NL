@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 11a4bb90b5d88f86ac14d702a213f56432a30c24
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '2605'
+source-wordcount: '2570'
 ht-degree: 0%
 
 ---
@@ -69,12 +69,11 @@ Deze weergave bevat informatie over de segmentdefinitie, inclusief het aantal pr
 
 U kunt extra velden aan deze weergave toevoegen door ![het pictogram van het filterkenmerk](../images/ui/overview/filter-attribute.png). Deze extra gebieden omvatten uitsplitsing, evaluatiemethode, en baanidentiteitskaart
 
-Als de indeling is geselecteerd, wordt in het scherm een staafgrafiek weergegeven met het percentage profielen dat tot elk van de volgende berekende profielstatussen behoort: [!UICONTROL Realized], [!UICONTROL Existing], en [!UICONTROL Exiting]. Daarnaast wordt de uitsplitsing in de [!UICONTROL Browse] tab is de nauwkeurigste uitsplitsing van de segmentstatus. Als dit getal afwijkt van wat staat vermeld op de knop [!UICONTROL Overview] gebruikt u de nummers op het tabblad [!UICONTROL Browse] als de juiste bron van informatie, aangezien [!UICONTROL Overview] tabnummers worden slechts eenmaal per dag bijgewerkt.
+Als de indeling is geselecteerd, wordt in het scherm een staafgrafiek weergegeven met het percentage profielen dat tot elk van de volgende berekende profielstatussen behoort: [!UICONTROL Realized] en [!UICONTROL Exiting]. Daarnaast wordt de uitsplitsing in de [!UICONTROL Browse] tab is de nauwkeurigste uitsplitsing van de segmentstatus. Als dit getal afwijkt van wat staat vermeld op de knop [!UICONTROL Overview] gebruikt u de nummers op het tabblad [!UICONTROL Browse] als de juiste bron van informatie, aangezien [!UICONTROL Overview] tabnummers worden slechts eenmaal per dag bijgewerkt.
 
 | Status | Beschrijving |
 | ------ | ----------- |
 | Gerealiseerd | Het aantal profielen dat in de afgelopen 24 uur in aanmerking kwam voor het segment. Het aantal profielen dat in aanmerking komt voor het segment sinds de laatste keer dat de batchsegmenttaak werd uitgevoerd. |
-| Bestaande | Het aantal profielen dat in de afgelopen 24 uur voor het segment is gekwalificeerd. Dus, het aantal profielen die voor het segment sinds de laatste tijd gekwalificeerd bleven de baan van het partijsegment liep. |
 | Afsluiten | Het aantal profielen dat het segment in de laatste 24 uur heeft verlaten. Het aantal profielen dat dus niet meer in aanmerking komt voor het segment sinds de laatste keer dat de batchsegmenttaak werd uitgevoerd. |
 
 De evaluatiemethode kan streaming, batch of edge zijn. Streaming segmenten worden voortdurend geëvalueerd terwijl gegevens in het systeem worden ingevoerd. De segmenten van de partij worden geëvalueerd volgens een vastgesteld programma. De segmenten van de rand worden geëvalueerd in real time, die voor de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte toestaan.

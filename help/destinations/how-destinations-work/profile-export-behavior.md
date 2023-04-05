@@ -1,9 +1,9 @@
 ---
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
-source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2933'
 ht-degree: 0%
 
 ---
@@ -61,9 +61,9 @@ Met betrekking tot de gegevens die voor een bepaald profiel worden geëxporteerd
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als om het even welke in kaart gebrachte segmenten staten (van ongeldig aan gerealiseerd of van gerealiseerde/bestaande aan het weggaan) veranderen of om het even welke in kaart gebrachte attributen worden bijgewerkt, een bestemmingsuitvoer zou worden weggeduwd.</li><li>Aangezien identiteiten momenteel niet aan ondernemingsbestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>De `segmentMembership` Dit object bevat het segment dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een afsluitgebeurtenis voor kwalificatie of segment. Merk op dat andere niet in kaart gebrachte segmenten waarvoor het profiel dat voor wordt gekwalificeerd deel van de bestemmingsuitvoer kan uitmaken, als deze segmenten tot het zelfde behoren [samenvoegingsbeleid](/help/profile/merge-policies/overview.md) als het segment dat is toegewezen in de activeringsgegevensstroom. </li><li>Alle identiteiten in de `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de doellocatie van de onderneming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen segment de status wijzigt (van `null` tot `realized` of van `realized` tot `exiting`) of toegewezen kenmerken worden bijgewerkt, wordt een doelexport uitgeschakeld.</li><li>Aangezien identiteiten momenteel niet aan ondernemingsbestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>De `segmentMembership` Dit object bevat het segment dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een afsluitgebeurtenis voor kwalificatie of segment. Merk op dat andere niet in kaart gebrachte segmenten waarvoor het profiel dat voor wordt gekwalificeerd deel van de bestemmingsuitvoer kan uitmaken, als deze segmenten tot het zelfde behoren [samenvoegingsbeleid](/help/profile/merge-policies/overview.md) als het segment dat is toegewezen in de activeringsgegevensstroom. </li><li>Alle identiteiten in de `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de doellocatie van de onderneming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -108,9 +108,9 @@ Met betrekking tot de gegevens die voor een bepaald profiel worden geëxporteerd
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als om het even welke in kaart gebrachte segmenten staten (van ongeldig aan gerealiseerd of van gerealiseerde/bestaande aan het weggaan) veranderen of om het even welke in kaart gebrachte attributen worden bijgewerkt, een bestemmingsuitvoer zou worden weggeduwd.</li><li>Een wijziging in het identiteitsoverzicht wordt gedefinieerd als een identiteit die wordt toegevoegd/verwijderd voor de [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md) van het profiel, voor naamruimten die zijn toegewezen voor exporteren.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, voor kenmerken die aan het doel zijn toegewezen.</li></ul> | <ul><li>De segmenten die aan de bestemming in kaart worden gebracht en zijn veranderd zullen in omvatten `segmentMembership` object. In sommige scenario&#39;s zouden zij gebruikend veelvoudige vraag kunnen worden uitgevoerd. Ook, in sommige scenario&#39;s, zouden sommige segmenten die niet zijn veranderd in de vraag ook kunnen worden omvat. In elk geval worden alleen toegewezen segmenten geëxporteerd.</li><li>Alle identiteiten van namespaces die aan de bestemming in in kaart worden gebracht `identityMap` -object wordt ook opgenomen.</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen segment de status wijzigt (van `null` tot `realized` of van `realized` tot `exiting`) of toegewezen kenmerken worden bijgewerkt, wordt een doelexport uitgeschakeld.</li><li>Een wijziging in het identiteitsoverzicht wordt gedefinieerd als een identiteit die wordt toegevoegd/verwijderd voor de [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md) van het profiel, voor naamruimten die zijn toegewezen voor exporteren.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, voor kenmerken die aan het doel zijn toegewezen.</li></ul> | <ul><li>De segmenten die aan de bestemming in kaart worden gebracht en zijn veranderd zullen in omvatten `segmentMembership` object. In sommige scenario&#39;s zouden zij gebruikend veelvoudige vraag kunnen worden uitgevoerd. Ook, in sommige scenario&#39;s, zouden sommige segmenten die niet zijn veranderd in de vraag ook kunnen worden omvat. In elk geval worden alleen toegewezen segmenten geëxporteerd.</li><li>Alle identiteiten van namespaces die aan de bestemming in in kaart worden gebracht `identityMap` -object wordt ook opgenomen.</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ Neem bijvoorbeeld deze gegevensstroom naar een streamingbestemming waar drie seg
 
 ![streaming doelgegevensstroom](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
 
-Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de drie toegewezen segmenten verlaat. Als een profiel gekwalificeerd is voor de **Klant met DeLorean Auto&#39;s** segmenteren, wordt het exporteren geactiveerd. De andere segmenten (**Plaats - Dallas** en **Basissite actief**) kan ook worden geëxporteerd als het profiel dat segment bevat met een van de mogelijke statussen (`realized`, `existing`, `exited`). Niet-toegewezen segmenten (zoals **Favorieten voor science fiction**) wordt niet geëxporteerd.
+Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de drie toegewezen segmenten verlaat. Als een profiel gekwalificeerd is voor de **Klant met DeLorean Auto&#39;s** segmenteren, wordt het exporteren geactiveerd. De andere segmenten (**Plaats - Dallas** en **Basissite actief**) kan ook worden geëxporteerd als het profiel dat segment bevat met een van de mogelijke statussen (`realized` of `exited`). Niet-toegewezen segmenten (zoals **Favorieten voor science fiction**) wordt niet geëxporteerd.
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de drie bovenstaande kenmerken het exporteren van de bestemming.
 
@@ -175,7 +175,7 @@ De volledige actieve populatie van het segment wordt uitgevoerd elke dag.
 |---------|----------|
 | <ul><li>Het exportschema dat is ingesteld in de gebruikersinterface of de API en in de actie van de gebruiker (selecteren [Bestand nu exporteren](/help/destinations/ui/export-file-now.md) in de gebruikersinterface of met de [API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md)) bepaalt u het begin van een doelexport.</li></ul> | In volledige dossieruitvoer, is de volledige actieve profielpopulatie van een segment, die op de recentste segmentevaluatie wordt gebaseerd, inbegrepen met elke dossieruitvoer. De meest recente waarden voor elk XDM-kenmerk dat is geselecteerd voor export, worden ook als kolommen opgenomen in elk bestand. Profielen met de status Verlaat worden niet opgenomen in de geëxporteerde bestanden. |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 **Incrementele bestandsuitvoer**
 
@@ -185,7 +185,7 @@ In de eerste bestandsuitvoer na het instellen van de activeringsworkflow wordt d
 |---------|----------|
 | <ul><li>Het exportschema dat is ingesteld in de UI of API bepaalt het begin van een doelexport.</li><li>Eventuele wijzigingen in het segmentlidmaatschap van een profiel, ongeacht of deze in aanmerking komen voor of niet in aanmerking komen voor het segment, komen in aanmerking voor een profiel dat wordt opgenomen in incrementele export. Wijzigingen in kenmerken of in identiteitskaarten voor een profiel *niet* in aanmerking komen voor een profiel dat in incrementele uitvoer moet worden opgenomen.</li></ul> | <p>De profielen waarvoor het segmentlidmaatschap is gewijzigd, samen met de meest recente informatie voor elk XDM-kenmerk dat is geselecteerd voor export.</p><p>Profielen met de verlaten status worden opgenomen in de export van de bestemming als de `segmentMembership.status` Het XDM-veld wordt geselecteerd in de toewijzingsstap.</p> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!TIP]
 >

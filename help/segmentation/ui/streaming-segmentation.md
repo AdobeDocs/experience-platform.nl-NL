@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor streamingsegmentatie
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Onderliggende lijn is een lijngrafiek die het aantal nieuwe doelgroepen toont di
 
 >[!NOTE]
 >
->Een segment wordt als gekwalificeerd beschouwd als het van het hebben van geen status naar gerealiseerde gaat of als het van verlaten naar gerealiseerde gaat. Een segment wordt als ongekwalificeerd beschouwd als het van gerealiseerde naar verlaten gaat of van bestaand naar verlaten.
+>Een segment wordt als gekwalificeerd beschouwd als het van het hebben van geen status naar gerealiseerde gaat of als het van verlaten naar gerealiseerde gaat. Een segment wordt als niet-gekwalificeerd beschouwd als het van gerealiseerde naar verlaten gaat.
 >
 >Meer informatie over deze statussen vindt u in de statustabel in het dialoogvenster [segmentatieoverzicht](./overview.md#browse).
 

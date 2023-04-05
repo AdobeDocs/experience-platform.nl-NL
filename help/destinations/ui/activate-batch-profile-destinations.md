@@ -4,7 +4,7 @@ title: Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar batchbestemmingen te verzenden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '3495'
 ht-degree: 0%
@@ -293,7 +293,7 @@ Laten we eens kijken naar de volgende twee profielen.
   "segmentMembership": {
     "ups": {
       "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
-        "status": "existing",
+        "status": "realized",
         "lastQualificationTime": "2021-03-10 10:03:08"
       }
     }
@@ -327,7 +327,7 @@ Laten we eens kijken naar de volgende twee profielen.
   "segmentMembership": {
     "ups": {
       "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
-        "status": "existing",
+        "status": "realized",
         "lastQualificationTime": "2021-04-10 11:33:28"
       }
     }

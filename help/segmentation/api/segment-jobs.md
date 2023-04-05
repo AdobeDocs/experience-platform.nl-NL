@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-eindpunt segmenttaken
 description: Het eindpunt van segmentbanen in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om segmentbanen voor uw organisatie programmatically te beheren.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 0%
+source-wordcount: '1498'
+ht-degree: 1%
 
 ---
 
@@ -130,7 +130,6 @@ Als u minder dan 1500 segmenten hebt die in uw segmentbaan in werking worden ges
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -226,7 +225,6 @@ Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking geste
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -275,7 +273,7 @@ Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking geste
 | `metrics.profileSegmentationTime` | Een object dat informatie bevat over de tijd waarop de segmentatieevaluatie is gestart en beëindigd, en over de totale tijd die is verstreken. |
 | `metrics.segmentProfileCounter` | Het aantal profielen dat per segment wordt gekwalificeerd. |
 | `metrics.segmentedProfileByNamespaceCounter` | Het aantal profielen dat voor elke identiteitsnaamruimte op een per-segmentbasis wordt gekwalificeerd. |
-| `metrics.segmentProfileByStatusCounter` | Het aantal profielen voor elke status. De volgende drie statussen worden ondersteund: <ul><li>&quot;gerealiseerde&quot; - Het aantal nieuwe profielen dat in het segment is ingevoerd.</li><li>&quot;existing&quot; - Het aantal profielen dat in het segment blijft bestaan.</li><li>&quot;exited&quot; - Het aantal profielsegmenten dat niet meer in het segment bestaat.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | Het aantal profielen voor elke status. De volgende drie statussen worden ondersteund: <ul><li>&quot;gerealiseerd&quot; - Het aantal profielen dat voor het segment in aanmerking komt.</li><li>&quot;exited&quot; - Het aantal profielsegmenten dat niet meer in het segment bestaat.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Het totale aantal samengevoegde profielen op een per de beleidsbasis van de fusie. |
 
 ## Een nieuwe segmenttaak maken {#create}
@@ -373,7 +371,6 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -494,7 +491,6 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -674,7 +670,6 @@ Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking geste
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },

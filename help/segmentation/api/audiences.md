@@ -5,7 +5,7 @@ description: Het publiek eindpunt in de API van de Dienst van de Segmentatie van
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 0%
@@ -254,7 +254,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van soorten publ
                         "crmid": 11400769
                     },
                     "totalProfilesByStatus": {
-                        "existing": 11400769
+                        "realized": 11400769
                     }
                 },
                 "createEpoch": 1653583927,
