@@ -2,24 +2,25 @@
 title: (API) Oracle Eloqua-verbinding
 description: Met de Eloqua-bestemming (API) van het Oracle kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw bedrijfsbehoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1575'
 ht-degree: 0%
 
 ---
+
 
 # [!DNL (API) Oracle Eloqua] verbinding
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) laat marketers toe om campagnes te plannen en uit te voeren terwijl het leveren van een gepersonaliseerde klantenervaring voor hun vooruitzichten. Dankzij geïntegreerd beheer van leads en het eenvoudig maken van campagnes, kunnen marketers op het juiste moment het juiste publiek betrekken bij de reis van hun koper en schalen ze elegant om het publiek te bereiken via verschillende kanalen, zoals e-mail, display, search, video en mobile. Verkoopteams kunnen meer deals sluiten in een sneller tempo, waardoor het marketingrendement toeneemt dankzij realtime inzicht.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [Een contactpersoon bijwerken](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) van de [!DNL Oracle Eloqua] REST API, waarmee u identiteiten binnen een segment kunt bijwerken naar [!DNL Oracle Eloqua].
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [Een contactpersoon bijwerken](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) van de [!DNL Oracle Eloqua] REST API, waarmee u **identiteiten bijwerken** binnen een segment naar [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] gebruik [Basisverificatie](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) om te communiceren met de [!DNL Oracle Eloqua] REST API. Instructies voor verificatie aan uw [!DNL Oracle Eloqua] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als markeerteken kunt u uw gebruikers een persoonlijke ervaring bieden op basis van kenmerken uit hun Adobe Experience Platform-profielen. U kunt segmenten maken van uw offlinegegevens en deze segmenten verzenden naar [!DNL Oracle Eloqua], om in de feeds van de gebruikers weer te geven zodra de segmenten en profielen in Adobe Experience Platform zijn bijgewerkt.
+De marketingafdeling van een onlineplatform wil een marketingcampagne op basis van e-mail uitzenden naar een publiek met nieuwsberichten. Het marketingteam van het platform kan bestaande informatie over leads bijwerken via Adobe Experience Platform, segmenten van hun eigen offlinegegevens maken en deze segmenten verzenden naar [!DNL Oracle Eloqua], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
 
 ## Vereisten {#prerequisites}
 
@@ -54,15 +55,26 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Oracle Eloq
 * Als deze limiet wordt overschreden, treedt er een fout op in het Experience Platform. Dit komt omdat de [!DNL Oracle Eloqua] API kan de aanvraag niet valideren en reageert met een - *400: Er is een validatiefout opgetreden* - foutbericht met een beschrijving van het probleem.
 * Als u de hierboven opgegeven limiet hebt bereikt, moet u bestaande toewijzingen verwijderen uit uw bestemming en de bijbehorende aangepaste contactvelden in uw [!DNL Oracle Eloqua] voordat u meer segmenten kunt exporteren.
 
-* Zie de [Oracle Eloqua maken van contactvelden](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) pagina voor informatie over extra limieten.
+* Zie de [[!DNL Oracle Eloqua] Contactvelden maken](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) pagina voor informatie over extra limieten.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
 [!DNL Oracle Eloqua] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
 
-| Doelidentiteit | Voorbeeld | Beschrijving | Verplicht |
-|---|---|---|---|
-| `EloquaId` | `111111` | Unieke id van het contact. | Ja |
+| Doelidentiteit | Beschrijving | Verplicht |
+|---|---|---|
+| `EloquaId` | Unieke id van het contact. | Ja |
+
+## Type en frequentie exporteren {#export-type-frequency}
+
+Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+---------|----------|---------|
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd segment in Platform, het overeenkomstige [!DNL Oracle Eloqua] de segmentstatus wordt bijgewerkt met zijn segmentstatus van Platform.</li></ul> |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 
@@ -111,42 +123,37 @@ Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/hel
 
 Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Oracle Eloqua] doel, moet u door de stap van de gebiedstoewijzing gaan. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming.
 
-`EloquaID` is vereist om kenmerken bij te werken die overeenkomen met de identiteit. De `emailAddress` is ook nodig omdat de API zonder deze fout een fout genereert, zoals hieronder wordt aangegeven:
-
-```json
-{
-   "type":"ObjectValidationError",
-   "container":{
-      "type":"ObjectKey",
-      "objectType":"Contact"
-   },
-   "property":"emailAddress",
-   "requirement":{
-      "type":"EmailAddressRequirement"
-   },
-   "value":"<null>"
-}
-```
-
-Kenmerken die zijn opgegeven in het dialoogvenster **[!UICONTROL Target field]** zou precies moeten worden genoemd zoals die in de lijst van de attributenafbeeldingen wordt beschreven aangezien deze attributen verzoeklichaam zullen vormen.
-
-Kenmerken die zijn opgegeven in het dialoogvenster **[!UICONTROL Source field]** zich niet aan een dergelijke beperking houden. U kunt deze toewijzen op basis van uw behoefte, maar als de gegevensindeling niet correct is wanneer u naar [!DNL Oracle Eloqua] resulteert in een fout.
-
-U kunt bijvoorbeeld een toewijzing maken **[!UICONTROL Source field]** naamruimte identity `contact key`, `ABC ID` enz. tot **[!UICONTROL Target field]** : `EloquaID` nadat de id-waarden in overeenstemming zijn met de indeling die is geaccepteerd door [!DNL Oracle Eloqua].
-
-Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Oracle Eloqua] doelvelden, voer de volgende stappen uit:
+Uw XDM-velden toewijzen aan de [!DNL Oracle Eloqua] doelvelden, voer de volgende stappen uit:
 
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en selecteer een kenmerk.
-   * Herhaal deze stappen om de volgende toewijzingen tussen uw XDM-profielschema en uw [!DNL Oracle Eloqua] instantie: |Bronveld|Doelveld| Verplicht| |—|—|—| |`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja | |`IdentityMap: Eid`|`Identity: EloquaId`| Ja |
+1. In de **[!UICONTROL Select target field]** venster, kiest u **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en typ de gewenste kenmerknaam in het dialoogvenster **[!UICONTROL Attribute name]** veld. De kenmerknaam die u opgeeft, moet overeenkomen met een bestaand contactkenmerk in [!DNL Oracle Eloqua]. Zie [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) voor de exacte kenmerknamen die u kunt gebruiken in [!DNL Oracle Eloqua].
+   * Herhaal deze stappen om de vereiste en gewenste kenmerktoewijzingen toe te voegen tussen uw XDM-profielschema en [!DNL Oracle Eloqua]: | Bronveld | Doelveld | Verplicht | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| Ja | |`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
-   * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
+   * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
       ![Voorbeeld van schermopname met gebruikersinterface van Platform met kenmerktoewijzingen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >Beide `emailAddress` en `EloquaId` toewijzen van doelkenmerken is verplicht.
+>[!IMPORTANT]
+>
+>* Kenmerken die zijn opgegeven in het dialoogvenster **[!UICONTROL Target field]** moet een naam hebben die exact overeenkomt met de naam die is opgegeven in het dialoogvenster [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) aangezien deze kenmerken de aanvraaginstantie vormen.
+>* Kenmerken die zijn opgegeven in het dialoogvenster **[!UICONTROL Source field]** zich niet aan een dergelijke beperking houden. U kunt deze toewijzen op basis van uw behoefte, maar als de gegevensindeling niet correct is wanneer u naar [!DNL Oracle Eloqua] resulteert in een fout. U kunt bijvoorbeeld de **[!UICONTROL Source field]** naamruimte identity `contact key`, `ABC ID` enz. tot **[!UICONTROL Target field]** : `EloquaId` nadat de id-waarden overeenkomen met de indeling die is geaccepteerd door [!DNL Oracle Eloqua].
+>* De `EloquaID` toewijzen is verplicht om kenmerken bij te werken die overeenkomen met de identiteit.
+>* De `emailAddress` toewijzing is vereist. Zonder deze API genereert de API een fout zoals hieronder wordt weergegeven:
+>
+>```json
+>{
+>     "type":"ObjectValidationError",
+>     "container":{
+>           "type":"ObjectKey",
+>           "objectType":"Contact"
+>     },
+>     "property":"emailAddress",
+>     "requirement":{
+>           "type":"EmailAddressRequirement"
+>     },
+>     "value":"<null>"
+>}
+>```
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -182,6 +189,7 @@ Zie de [[!DNL Oracle Eloqua] HTTP-statuscodes](https://docs.oracle.com/en/cloud/
 
 ## Aanvullende bronnen {#additional-resources}
 
-Aanvullende nuttige informatie uit de [!DNL Oracle ELoqua] de documentatie is hieronder:
+Zie voor meer informatie de [!DNL Oracle Eloqua] documentatie:
+
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST API voor Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
