@@ -2,9 +2,9 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van Adobe Experience Platform-mogelijkheden voor gegevensverzameling.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '2537'
+source-wordcount: '2539'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Dit leerprogramma gebruikt UI van de Inzameling van Gegevens om een schema tot s
 
 Zie de handleiding op [machtigingen voor gegevensverzameling beheren](./permissions.md) leren hoe u toegang tot eigendommen en eigendomsrechten kunt verlenen.
 
-Om de diverse producten van de Inzameling van Gegevens te gebruiken die in deze gids worden vermeld, moet u toegang tot gegevensstromen en de capaciteit ook hebben om schema&#39;s tot stand te brengen en te beheren. Als u toegang tot één van deze eigenschappen nodig hebt, gelieve uw CSM te contacteren om u te helpen de noodzakelijke toegang krijgen. Houd er rekening mee dat als u Adobe Experience Platform niet hebt aangeschaft, Adobe u zonder extra kosten toegang krijgt tot de SDK.
+Om de diverse producten van de Inzameling van Gegevens te gebruiken die in deze gids worden vermeld, moet u toegang tot gegevensstromen en de capaciteit ook hebben om schema&#39;s tot stand te brengen en te beheren. Als u toegang tot een van deze functies nodig hebt, neemt u contact op met uw Adobe-accountteam om u te helpen de benodigde toegang te krijgen. Houd er rekening mee dat als u Adobe Experience Platform niet hebt aangeschaft, Adobe u zonder extra kosten toegang krijgt tot de SDK.
 
 Als u al toegang tot Platform hebt, moet u ervoor zorgen dat u allen hebt [machtigingen](../access-control/home.md#permissions) onder de volgende categorieën ingeschakeld:
 
@@ -101,7 +101,7 @@ Een gegevensstroom is een configuratie die het Netwerk van de Rand vertelt waar 
 
 Selecteren **[!UICONTROL Datastreams]** in de linkernavigatie. Van hier kunt u een bestaande gegevensstroom van de lijst selecteren om uit te geven, of u kunt een nieuwe configuratie tot stand brengen door te selecteren **[!UICONTROL New Datastream]**.
 
-![DataStreams](./images/e2e/datastreams.png)
+![Gegevensstromen](./images/e2e/datastreams.png)
 
 De configuratievereisten voor een gegevensstroom hangen af van welke producten en mogelijkheden u gegevens naar verzendt. Voor gedetailleerde informatie over de configuratieopties voor elk product raadpleegt u de [datastreams, overzicht](../edge/datastreams/overview.md).
 

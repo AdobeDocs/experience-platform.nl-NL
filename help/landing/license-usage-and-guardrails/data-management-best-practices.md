@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentie
 title: Aanbevolen werkwijzen voor gegevensbeheer
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 1%
 
 ---
@@ -156,7 +156,7 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 | Functie | Beschrijving |
 | --- | --- |
 | [Datasets voor profiel in-/uitschakelen](../../catalog/datasets/user-guide.md) | Schakel gegevenssetinvoer in of uit in realtime-klantprofiel. |
-| [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe Support-vertegenwoordiger om deze functie in te schakelen. |
+| [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe-accountteam of de klantenservice om deze functie in te schakelen. |
 | [Adobe Analytics Data Prep-filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname |
 | [Adobe Audience Manager-bronverbindingsfilters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Bronverbindingsfilters van Audience Manager toepassen om onnodige gegevens uit te sluiten van inname |
 | [SDK-gegevensfilters toestaan](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Alloy-filters toepassen om onnodige gegevens uit te sluiten van inname |

@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2104'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ Adobe Experience Platform Web SDK is ontwikkeld voor de volgende personen:
 
 ## Hoe krijg ik toegang om te beginnen Adobe Experience Platform Web SDK te gebruiken?
 
-De SDK van het Web is momenteel beschikbaar aan het grote publiek en kan worden gebruikt om gegevens naar de producten van Adobe Experience Cloud te verzenden. De capaciteit om gegevens naar derdeoplossingen te verzenden komt in de nabije toekomst. De SDK is gratis, wordt gratis door Adobe gehost en kan worden gedownload, zodat u deze desgewenst gratis op uw eigen servers kunt hosten. Het Web SDK van het Platform van het Web vereist toegang tot configuraties DataStream en Adobe Experience Platform XDM, voor het schema bouwer Adobe om binnenkomende van SDK behoorlijk te behandelen. Als u toegang wilt krijgen, neemt u contact op met de Customer Success Manager (CSM) om het aanvraagproces te starten.
+De SDK van het Web is momenteel beschikbaar aan het grote publiek en kan worden gebruikt om gegevens naar de producten van Adobe Experience Cloud te verzenden. De capaciteit om gegevens naar derdeoplossingen te verzenden komt in de nabije toekomst. Er zijn geen kosten voor de SDK en deze worden gratis door Adobe gehost. Indien nodig, kunt u het downloaden en op uw eigen servers hosten zonder kosten. Het Web SDK van het Platform van het Web vereist toegang tot configuraties DataStream en Adobe Experience Platform XDM, voor het schema bouwer Adobe om binnenkomende van SDK behoorlijk te behandelen. Als u toegang wilt krijgen, neemt u contact op met uw Adobe-accountteam om het aanvraagproces te starten.
 
 ## Welke gebruiksgevallen worden momenteel ondersteund door de Web SDK?
 

@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Een Adobe Analytics-bronverbinding maken voor classificatiegegevens in de gebruikersinterface
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Voor de gegevensverbinding Analytics Classifications moeten uw gegevens zijn gemigreerd naar de nieuwe [!DNL Classifications] infrastructuur van Adobe Analytics vóór gebruik. Neem contact op met uw Adobe Customer Success Manager om de migratiestatus van uw gegevens te bevestigen.
+Voor de gegevensverbinding Analytics Classifications moeten uw gegevens zijn gemigreerd naar de nieuwe [!DNL Classifications] infrastructuur van Adobe Analytics vóór gebruik. Neem contact op met uw Adobe-accountteam om de migratiestatus van uw gegevens te bevestigen.
 
 ## Uw classificaties selecteren
 

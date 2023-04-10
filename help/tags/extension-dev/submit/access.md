@@ -2,9 +2,9 @@
 title: Gebruikerstoegang verlenen
 description: Stel de gebruikersaccounts en machtigingen voor tags van uw teamleden in Adobe Experience Platform in.
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '218'
 ht-degree: 1%
 
 ---
@@ -23,4 +23,4 @@ Een beheerder moet zijn accounts toevoegen aan een productprofiel in Adobe Admin
 
 ## Levering bevestigen
 
-Nadat uw bedrijf van toegang tot markeringen wordt voorzien en uw gebruikers opstelling zoals hierboven beschreven zijn, zou u tot de Inzameling van Gegevens UI en Experience Platform UI van de Inzameling van Gegevens moeten kunnen toegang hebben van [Adobe Experience Cloud-dashboard](https://experience.adobe.com/). Neem contact op met uw Adobe-ondersteuningsvertegenwoordigers als u na het voltooien van de bovenstaande stappen nog steeds geen toegang hebt tot een van de UI.
+Nadat uw bedrijf van toegang tot markeringen wordt voorzien en uw gebruikers opstelling zoals hierboven beschreven zijn, zou u tot de Inzameling van Gegevens UI en Experience Platform UI van de Inzameling van Gegevens moeten kunnen toegang hebben van [Adobe Experience Cloud-dashboard](https://experience.adobe.com/). Neem contact op met het team van uw Adobe-account of de klantenservice als u na het uitvoeren van de bovenstaande stappen nog steeds geen toegang hebt tot een van de UI.

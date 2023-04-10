@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van afstemming van segment
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 0%
@@ -56,7 +56,7 @@ U moet een toestemmingsconfiguratie verstrekken en zijn standaardwaarde plaatsen
 
 De controle van de opt-in en opt-out toestemming bepaalt of u met de toestemming kunt werken om gebruikersgegevens door gebrek te delen. Als het gebrek van de toestemmingsconfiguratie aan wordt geplaatst `opt-out`, kunnen gebruikersgegevens worden gedeeld, tenzij een gebruiker expliciet weigert. Als de standaardwaarde is ingesteld op `opt-in`, kunnen gebruikersgegevens niet worden gedeeld, tenzij een gebruiker expliciet binnen kiest.
 
-De standaardtoestemmingsconfiguratie voor [!DNL Segment Match] is ingesteld op `opt-out`. Als u een aanmeldingsmodel voor uw gegevens wilt afdwingen, stuurt u een e-mailverzoek naar uw accountmanager van Adobe.
+De standaardtoestemmingsconfiguratie voor [!DNL Segment Match] is ingesteld op `opt-out`. Als u een aanmeldingsmodel voor uw gegevens wilt afdwingen, stuurt u een e-mailverzoek naar het team van uw Adobe-account.
 
 Voor meer informatie over de `share` kenmerk dat wordt gebruikt voor het instellen van de toestemmingswaarde voor gegevensdeling, zie de volgende documentatie over [privacy en toestemmingsgebiedsgroep](../../../xdm/field-groups/profile/consents.md). Voor informatie over de specifieke veldgroep die wordt gebruikt om de toestemming van de consument voor het verzamelen en gebruiken van gegevens met betrekking tot privacy, personalisatie en marketingvoorkeuren, zie het volgende [Toestemming voor het voorbeeld van GitHub van de Voorkeur van de Privacy, van de Personalisatie en van de Marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

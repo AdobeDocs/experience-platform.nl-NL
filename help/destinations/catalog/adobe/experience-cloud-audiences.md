@@ -2,9 +2,9 @@
 title: (Bèta) Experience Cloud-publiek
 description: Leer hoe te om segmenten van Experience Platform aan diverse oplossingen van het Experience Platform te delen.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1476'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### Voor klanten die de oplossing voor het delen van het verouderde segment gebruiken
 
-Als u reeds segmenten van Experience Platform aan Audience Manager en andere oplossingen van Experience Cloud via deelt [integratie van oudere segmenten delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), dient u contact op te nemen met de klantenservice of met de succesmanager van de klant om de integratie van oudere systemen uit te schakelen. De teams van het Beheer van de Zorg van de Klant en van de Steun van de Klant moeten een Jira kaartje (zie malplaatjekaartje AAM-52354) indienen om de integratie onbruikbaar te maken.
+Als u reeds segmenten van Experience Platform aan Audience Manager en andere oplossingen van Experience Cloud via deelt [integratie van oudere segmenten delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice of uw Adobe-accountteam om de verouderde integratie uit te schakelen. De de rekeningsteams van de Zorg van de klant en van de Adobe- rekening moeten een kaartje van Jira (zie malplaatjekaartje AAM-52354) indienen om de integratie onbruikbaar te maken.
 
 De doorlooptijd voor het oplossen van het deprovisioning-ticket voor bètaklanten is zes werkdagen of minder. Nadat de bestaande oudere integratie is uitgeschakeld, kunt u doorgaan naar [verbinding maken](#connect) via de zelfbedieningsdoelkaart.
 

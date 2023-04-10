@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service probleemoplossingsgids
 description: Dit document bevat antwoorden op veelgestelde vragen over Privacy Service en informatie over veelvoorkomende fouten in de API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Adobe ondersteunt het gebruik van [!DNL Privacy Service] voor het wissen van geg
 
 De verzoeken om privacy zijn tijdgevoelig en zijn voltooid met betrekking tot de toepasselijke privacywetgeving. de indiening van verzoeken die geen toegang tot of schrapping van verzoeken van betrokkenen/consumenten zijn, heeft gevolgen voor alle [!DNL Privacy Service] klanten en de mogelijkheden voor [!DNL Privacy Service] de passende wettelijke termijnen te ondersteunen. Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen.
 
-Neem contact op met uw accountmanager (CDM) om problemen met PII&#39;s of gegevens te coördineren en een inspanningsniveau te bieden.
+Neem contact op met het accountteam van uw Adobe om problemen met PII&#39;s of gegevens te coördineren en te verhelpen.
 
 ## Hoe krijg ik informatie over de status van mijn privacyverzoek of baan?
 

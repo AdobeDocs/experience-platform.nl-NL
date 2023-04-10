@@ -3,9 +3,9 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Nadat u gegevens naar het Edge-netwerk hebt verzonden, kunt u Adobe-oplossingen 
 
 ## Vereisten
 
-* Adobe Experience Platform Collection Enterprise (neem contact op met uw accountmanager voor prijzen)
+* Adobe Experience Platform Collection Enterprise (neem contact op met uw Adobe-accountteam voor prijzen)
 * Gebeurtenis doorsturen in Adobe Experience Platform
 * Adobe Experience Platform Web of Mobile SDK, die wordt gevormd om gegevens naar het Netwerk van Edge te verzenden
 * Gegevens toewijzen aan XDM (Experience Data Model) (voor deze toewijzing kunt u codes gebruiken)
