@@ -2,7 +2,7 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
+source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
 workflow-type: tm+mt
 source-wordcount: '2145'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Selecteer de vervolgkeuzelijst naast **[!UICONTROL Save to Library]** en selecte
 
 Herhaal deze stappen voor elke andere meta-omzettingsgebeurtenis u zou willen vormen.
 
-#### Configuratie van gegevenslaag
+#### Configuratie van gegevenslaag {#configuration}
 
 >[!IMPORTANT]
 >
