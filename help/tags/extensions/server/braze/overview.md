@@ -2,9 +2,9 @@
 keywords: gebeurtenis door:sturen uitbreiding;breze;breze gebeurtenis door:sturen uitbreiding
 title: Braze Event Forwarding Extension
 description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Braze.
-source-git-commit: 88e589eb17c249a8bdc82fe7a041a5581a60c7e6
+source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1735'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 - Doelspecifieke gebruikers voor marketing- en promotiecampagnes om het aantal herhaalde klanten te vergroten.
 - Het gebruikersgedrag en de patronen van de studie om specifieke doelgroepen met aangepaste berichten te richten, die zouden kunnen helpen opbrengst verhogen.
 
-De [!DNL Braze Track Events API] [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network gebruiken en verzenden naar [!DNL Braze] in de vorm van server-side-gebeurtenissen die de [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) en [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API&#39;s.
+De [!DNL Braze Track Events API] [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network gebruiken en verzenden naar [!DNL Braze] in de vorm van server-side-gebeurtenissen die de [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 Dit document behandelt de gebruiksgevallen van de uitbreiding, hoe te om het in uw gebeurtenis te installeren die bibliotheken door:sturen, en hoe te om zijn mogelijkheden in een gebeurtenis aan te wenden die door:sturen [regel](../../../ui/managing-resources/rules.md).
 
