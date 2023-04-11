@@ -3,10 +3,10 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;api salesforce mark
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
+source-git-commit: 017ccadc1689663059aa1214c5440549b509e81b
 workflow-type: tm+mt
-source-wordcount: '2372'
-ht-degree: 0%
+source-wordcount: '2527'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Let op het verschil tussen deze verbinding en de andere [[!DNL Salesforce Marketing Cloud] verbinding](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) bestaat in de sectie E-mailmarketingcatalogus. Met de andere verbinding met de Salesforce-Marketing Cloud kunt u bestanden exporteren naar een opgegeven opslaglocatie, terwijl dit een op API gebaseerde streamingverbinding is.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [!DNL Salesforce Marketing Cloud] [update contacten](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, die u toestaat om contacten toe te voegen/contactgegevens voor uw bedrijfsbehoeften bij te werken na het activeren van hen binnen een nieuwe [!DNL Salesforce Marketing Cloud] segment.
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [!DNL Salesforce Marketing Cloud] [update contacten](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, waarmee u **contactpersonen toevoegen en contactgegevens bijwerken** voor uw bedrijfsbehoeften na het activeren van hen binnen een nieuw [!DNL Salesforce Marketing Cloud] segment.
 
 [!DNL Salesforce Marketing Cloud] gebruikt OAuth 2 met de Referenties van de Cliënt als authentificatiemechanisme om met te communiceren [!DNL Salesforce Marketing Cloud] API. Instructies voor verificatie aan uw [!DNL Salesforce Marketing Cloud] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
 
@@ -92,7 +92,7 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL (API) Sales
 | Client-id | Zie de [!DNL Salesforce Marketing Cloud] [documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) om te leren hoe u deze waarde kunt verkrijgen via de [!DNL Salesforce Marketing Cloud] interface. | r23kxxxxxxxx0z05xxxxxx |
 | Clientgeheim | Zie de [!DNL Salesforce Marketing Cloud] [documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) om te leren hoe u deze waarde kunt verkrijgen via de [!DNL Salesforce Marketing Cloud] interface. | ipxxxxxxxxxxT4xxxxxxxxxx |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Guardrails {#guardrails}
 
@@ -124,7 +124,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Salesforce Marketing Cloud] wordt bijgewerkt met de corresponderende segmentstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [segment plannen](#schedule-segment-export-example) stap.</li></ul> |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 
@@ -260,3 +260,20 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) verklaren hoe de contacten met de gespecificeerde informatie in de gespecificeerde attributengroepen worden bijgewerkt.
+
+### Changelog {#changelog}
+
+Deze sectie vangt de functionaliteit en de significante documentatieupdates aan deze bestemmingsschakelaar worden aangebracht die.
+
++++ Wijzigingen weergeven
+
+| Releasedatum | Type bijwerken | Beschrijving |
+|---|---|---|
+| Februari 2023 | Documentatie bijwerken | We hebben de [Vereisten in (API) Salesforce-Marketing Cloud](#prerequisites-destination) om een verwijzingskoppeling op te nemen die [!DNL Salesforce Marketing Cloud Account Engagement] is een verplicht abonnement om deze bestemming te gebruiken. |
+| Februari 2023 | Functionaliteitsupdate | We hebben een probleem opgelost waarbij een onjuiste configuratie in de bestemming ertoe leidde dat een verkeerd gevormde JSON naar Salesforce werd gestuurd. Dit heeft ertoe geleid dat sommige gebruikers hoge aantallen identiteiten ontbrak bij activering zagen. (PLATIR-26299) |
+| Januari 2023 | Documentatie bijwerken | <ul><li>We hebben de [Vereisten in [!DNL Salesforce]](#prerequisites-destination) sectie om uit te roepen dat de attributen op moeten worden gecreeerd [!DNL Salesforce] zijde. Deze sectie bevat nu gedetailleerde instructies over hoe u dat kunt doen en aanbevolen procedures voor het benoemen van de kenmerken in [!DNL Salesforce]. (PLATIR-25602)</li><li>We hebben duidelijke instructies toegevoegd over het gebruik van de toewijzingsid voor elk geactiveerd segment in het dialoogvenster [segment plannen](#schedule-segment-export-example) stap. (PLATIR-25602)</li></ul> |
+| Oktober 2022 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
+
+{style="table-layout:auto"}
+
++++
