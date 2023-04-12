@@ -3,9 +3,9 @@ title: (Alpha) [!DNL LiveRamp SFTP] verbinding
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 hidefromtoc: true
 hide: true
-source-git-commit: 875610178449ddade78462dc74ea4e3dbadb2907
+source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ Als gevolg van dataflow looppas die voor een groep segmenten worden geproduceerd
 
 Nadat uw gegevens naar de [!DNL LiveRamp - SFTP] -opslag, moet u de gegevens uploaden naar de [!DNL LiveRamp] platform.
 
-Zie de **Volgende stappen** in de [gegevens in LiveRamp opnemen](https://docs.liveramp.com/connect/en/getting-your-data-into-liveramp.html) documentatie voor meer instructies.
+Voor meer informatie over het uploaden van uw bestanden vanuit de [!DNL LiveRamp - SFTP] opslag in een [!DNL LiveRamp] publiek, zie de volgende documentatie: [Overwegingen bij het uploaden van het eerste bestand naar een publiek](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
