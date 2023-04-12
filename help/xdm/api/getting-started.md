@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met de API voor schemaregistratie
 description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1350'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Weet uw TENANT_ID {#know-your-tenant_id}
 
-In de API-hulplijnen worden verwijzingen naar een `TENANT_ID`. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door de volgende GET-aanvraag uit te voeren:
+In de API-hulplijnen worden verwijzingen naar een `TENANT_ID`. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw organisatie bevinden. Als u uw id niet kent, kunt u deze openen door de volgende GET-aanvraag uit te voeren:
 
 **API-indeling**
 
@@ -168,7 +168,7 @@ GET /global/classes
 
 ### Trekcontainer
 
-Niet verward met je unieke `TENANT_ID`de `tenant` container bevat alle klassen, veldgroepen, gegevenstypen, schema&#39;s en descriptoren die zijn gedefinieerd door een IMS-organisatie. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren tegen bronnen die u maakt in het dialoogvenster `tenant` container.
+Niet verward met je unieke `TENANT_ID`de `tenant` container bevat alle klassen, veldgroepen, gegevenstypen, schema&#39;s en descriptoren die door een organisatie zijn gedefinieerd. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere organisaties zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren tegen bronnen die u maakt in het dialoogvenster `tenant` container.
 
 Een voorbeeld van een vraag die gebruikt `tenant` de container ziet er als volgt uit:
 
@@ -212,7 +212,7 @@ De volgende tabel bevat compatibele `Accept` headerwaarden, inclusief waarden me
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` kenmerken en `allOf` opgelost. Beschrijvers worden opgenomen. |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. Verouderde velden worden aangegeven met een `meta:status` kenmerk van `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

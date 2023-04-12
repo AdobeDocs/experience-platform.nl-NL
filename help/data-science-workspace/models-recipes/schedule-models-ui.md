@@ -5,9 +5,9 @@ title: Een model plannen in de gebruikersinterface van de Data Science Workspace
 type: Tutorial
 description: Met de Adobe Experience Platform Data Science Workspace kunt u geplande scoring- en trainingsprogramma's instellen voor een computerleerservice. Door het trainings- en scoringsproces te automatiseren, kunt u de efficiëntie van een service op tijd behouden en verbeteren door patronen in uw gegevens bij te houden.
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Dit leerprogramma loopt door de stappen om opleiding en het schrapen programma&#
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, moet u toegang hebben tot [!DNL Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
+Als u deze zelfstudie wilt voltooien, moet u toegang hebben tot [!DNL Experience Platform]. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
 
 Voor deze zelfstudie is een bestaande service vereist. Als u geen toegankelijke service hebt waarmee u kunt werken, kunt u een service maken door de zelfstudie te volgen voor [het publiceren van een model als dienst](./publish-model-service-ui.md).
 

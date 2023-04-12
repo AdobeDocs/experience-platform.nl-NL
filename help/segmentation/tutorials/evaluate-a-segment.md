@@ -5,9 +5,9 @@ title: Evalueer en de Resultaten van het Segment van de Toegang
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Als u nog niet de [een segment maken met de segmentatie-API](./create-a-segment.
 
 ## Geplande evaluatie {#scheduled-evaluation}
 
-Via een geplande evaluatie kan uw IMS-organisatie een terugkerend schema maken om exporttaken automatisch uit te voeren.
+Via een geplande evaluatie kan uw organisatie een terugkerend programma maken om exporttaken automatisch uit te voeren.
 
 >[!NOTE]
 >

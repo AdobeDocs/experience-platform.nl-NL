@@ -2,16 +2,16 @@
 title: Ondernemingen, eindpunt
 description: Leer hoe te om vraag aan het /companies eindpunt in Reactor API te maken.
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '239'
 ht-degree: 1%
 
 ---
 
 # Ondernemingen, eindpunt
 
-Een bedrijf vertegenwoordigt een klantenorganisatie, typisch een zaken. In de Reactor-API komen deze bedrijven overeen met 1:1 met IMS-organisatie-id. API-gebruikers hebben alleen zichtbaarheid in de bedrijven waartoe ze toegang hebben. Een bedrijf kan vele [eigenschappen](./properties.md). Een eigendom behoort tot precies één bedrijf.
+Een bedrijf vertegenwoordigt een klantenorganisatie, typisch een zaken. In de Reactor-API komen deze bedrijven overeen met 1:1 met de organisatie-id. API-gebruikers hebben alleen zichtbaarheid in de bedrijven waartoe ze toegang hebben. Een bedrijf kan vele [eigenschappen](./properties.md). Een eigendom behoort tot precies één bedrijf.
 
 De `/companies` Het eindpunt in Reactor API staat u toe om de bedrijven programmatically terug te winnen die u binnen uw ervaringstoepassing toegang hebt tot.
 
@@ -121,7 +121,7 @@ GET /companies/{COMPANY_ID}
 | --- | --- |
 | `{COMPANY_ID}` | De `id` waarde van het bedrijf u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

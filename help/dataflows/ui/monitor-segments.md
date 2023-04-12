@@ -4,9 +4,9 @@ description: De segmentatie staat u toe om segmenten en publiek van uw gegevens 
 title: Dataflows for Segments in UI controleren
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmenten"
->abstract="De segmentweergave bevat informatie over alle segmenten van uw IMS-organisatie, met meer informatie over hun activerings- en evaluatietaken."
+>abstract="De segmentweergave bevat informatie over alle segmenten van uw organisatie, met meer informatie over hun activerings- en evaluatietaken."
 
 Om toegang te krijgen tot **[!UICONTROL Segments]** dashboard, selecteren **[!UICONTROL Monitoring]** in de linkernavigatie. Eén keer op de knop **[!UICONTROL Monitoring]** pagina, selecteert u de **[!UICONTROL Segments]** kaart.
 
@@ -48,7 +48,7 @@ Het dashboard zelf bevat meetgegevens voor zowel segmenten als segmenttaken. Sta
 >
 >Momenteel worden alleen segmenten geactiveerd waarop [batchbestemmingen (op basis van bestanden)](../../destinations/destination-types.md#file-based) worden ondersteund voor het dashboard voor monitoringssegmenten.
 
-![Het segmentdashboard. Informatie over de verschillende segmenten in uw IMS-organisatie en -sandbox wordt weergegeven.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![Het segmentdashboard. Informatie over de verschillende segmenten in uw organisatie en sandbox wordt weergegeven.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
@@ -109,7 +109,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Dataflow run start]** | De datum en tijd waarop de activeringstaak is gestart. |
 | **[!UICONTROL Dataflow run end]** | De datum en tijd waarop de activeringstaak is beëindigd. |
 | **[!UICONTROL Dataflow run ID]** | De id van de huidige activeringstaak. |
-| **[!UICONTROL IMS org ID]** | De id van de IMS-organisatie waartoe de activeringstaak behoort. |
+| **[!UICONTROL IMS org ID]** | De id van de organisatie waartoe de activeringstaak behoort. |
 | **[!UICONTROL Destination name]** | De naam van het doel waarop de gegevens worden geactiveerd. |
 
 Onder de metriek, wordt een knevel om tussen de dataflow loopfouten en de segmenten te selecteren getoond.
@@ -151,7 +151,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Job type]** | Het type segmenttaak. In dit geval zal het altijd een segmentevaluatietaak zijn. |
 | **[!UICONTROL Evaluation type]** | Het soort evaluatie dat wordt uitgevoerd. Dit kan **[!UICONTROL Batch]** of **[!UICONTROL Streaming]**. |
 | **[!UICONTROL Job ID]** | De id van de evaluatietaak. |
-| **[!UICONTROL IMS org ID]** | De id van de IMS-organisatie waartoe de evaluatietaak behoort. |
+| **[!UICONTROL IMS org ID]** | De id van de organisatie waartoe de evaluatietaak behoort. |
 | **[!UICONTROL Segment name]** | De naam van het segment dat wordt geëvalueerd. |
 | **[!UICONTROL Segment ID]** | De id van het segment dat wordt geëvalueerd. |
 

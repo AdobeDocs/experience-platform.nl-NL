@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toegang tot gegevens in Jupyterlab-laptops
 description: Deze gids concentreert zich op hoe te om Notities van Jupyter te gebruiken, die binnen de Werkruimte van de Wetenschap van Gegevens worden gebouwd om tot uw gegevens toegang te hebben.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3222'
 ht-degree: 8%
 
 ---
@@ -115,7 +115,7 @@ In de onderstaande Python-documentatie worden de volgende concepten beschreven:
 
 - [Lezen van een dataset](#python-read-dataset)
 - [Schrijven naar een gegevensset](#write-python)
-- [Query-gegevens](#query-data-python)
+- [Querygegevens](#query-data-python)
 - [Filter ExperienceEvent-gegevens](#python-filter)
 
 ### Lezen van een dataset in Python {#python-read-dataset}
@@ -519,7 +519,7 @@ df1.show(10)
 | df1 | Een variabele die het dataframe van Pandas vertegenwoordigt dat wordt gebruikt om gegevens te lezen en te schrijven. |
 | user-token | Uw gebruikerstoken die automatisch wordt opgehaald gebruikend `clientContext.getUserToken()`. |
 | service-token | Uw servicetoken dat automatisch wordt opgehaald met `clientContext.getServiceToken()`. |
-| ims-org | Uw IMS-organisatie-id die automatisch wordt opgehaald met `clientContext.getOrgId()`. |
+| ims-org | Uw organisatie-id die automatisch wordt opgehaald met `clientContext.getOrgId()`. |
 | api-toets | De API-sleutel die automatisch wordt opgehaald met `clientContext.getApiKey()`. |
 
 >[!TIP]
@@ -571,7 +571,7 @@ df1.write.format("com.adobe.platform.query")
 | df1 | Een variabele die het dataframe van Pandas vertegenwoordigt dat wordt gebruikt om gegevens te lezen en te schrijven. |
 | user-token | Uw gebruikerstoken die automatisch wordt opgehaald gebruikend `clientContext.getUserToken()`. |
 | service-token | Uw servicetoken dat automatisch wordt opgehaald met `clientContext.getServiceToken()`. |
-| ims-org | Uw IMS-organisatie-id die automatisch wordt opgehaald met `clientContext.getOrgId()`. |
+| ims-org | Uw organisatie-id die automatisch wordt opgehaald met `clientContext.getOrgId()`. |
 | api-toets | De API-sleutel die automatisch wordt opgehaald met `clientContext.getApiKey()`. |
 
 >[!TIP]

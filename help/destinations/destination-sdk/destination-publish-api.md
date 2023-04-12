@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination/publish`.
 title: API-eindpuntbewerkingen voor doelen publiceren
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '770'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationId` | Tekenreeks | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren voorlegt. Krijg bestemmingsidentiteitskaart van een bestemmingsconfiguratie door te gebruiken [API-naslaggids voor doelconfiguratie](./destination-configuration-api.md#retrieve-list). |
 | `destinationAccess` | Tekenreeks | Gebruiken `ALL` voor uw bestemming om in de catalogus voor alle klanten van het Experience Platform te verschijnen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -75,7 +75,7 @@ Een succesvolle reactie keert status 201 van HTTP met details van uw bestemmings
 
 ## Publicatieverzoeken voor bestemming weergeven {#retrieve-list}
 
-U kunt een lijst van alle bestemmingen terugwinnen die voor publicatie voor uw organisatie IMS door een verzoek van de GET aan wordt voorgelegd `/authoring/destinations/publish` eindpunt.
+U kunt een lijst van alle bestemmingen terugwinnen die voor publicatie voor uw organisatie door een verzoek van de GET aan wordt voorgelegd `/authoring/destinations/publish` eindpunt.
 
 **API-indeling**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **Verzoek**
 
-Het volgende verzoek wint de lijst van bestemmingen terug die voor publicatie worden voorgelegd die u toegang tot hebt, die op Organisatie IMS en zandbakconfiguratie wordt gebaseerd.
+Het volgende verzoek wint de lijst van bestemmingen terug die voor publicatie worden voorgelegd die u toegang tot hebt, op organisatie en zandbakconfiguratie wordt gebaseerd die.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwoord**
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van doelen die zijn ingediend voor publicatie waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `configId` komt overeen met de publicatieaanvraag voor één bestemming.
+De volgende reactie keert HTTP status 200 met een lijst van bestemmingen terug die voor publicatie worden voorgelegd die u toegang tot hebt, die op organisatieidentiteitskaart en zandbaknaam wordt gebaseerd die u gebruikte. Eén `configId` komt overeen met de publicatieaanvraag voor één bestemming.
 
 ```json
 {
@@ -125,7 +125,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van doelen die zij
 | `publishDetailsList.destinationType` | Tekenreeks | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC`. `DEV` komt overeen met het doel in uw organisatie Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waar de `DEV` versie staat voor uw lokale ontwerpvertakking en de `PUBLIC` versie staat voor de externe hoofdvertakking. |
 | `publishDetailsList.publishedDate` | Tekenreeks | De datum waarop de bestemming voor publicatie werd voorgelegd, in tijdperk. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Hiermee wordt de status van een specifiek publicatieverzoek voor een doel opgehaald {#get}
 

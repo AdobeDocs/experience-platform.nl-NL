@@ -3,10 +3,10 @@ keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids
 solution: Experience Platform
 title: API-eindpunt voor voorbeeldgegevens
 description: U kunt het `-/steekproeven' eindpunt in Adobe Experience Platform API gebruiken om kaartsteekproefgegevens programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 0%
+source-wordcount: '399'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ Voorbeeldgegevens kunnen worden gebruikt bij het maken van een schema voor uw to
 
 ## Voorbeeldgegevens weergeven
 
-U kunt een lijst van alle gegevens van de toewijzingssteekproef voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/samples` eindpunt.
+U kunt een lijst van alle gegevens van de toewijzingssteekproef voor uw organisatie terugwinnen door een verzoek van de GET aan `/samples` eindpunt.
 
 **API-indeling**
 
@@ -34,7 +34,7 @@ GET /samples?limit={LIMIT}&start={START}
 
 **Verzoek**
 
-Met het volgende verzoek worden de laatste twee voorbeeldgegevens van de toewijzing binnen uw IMS-organisatie opgehaald.
+Het volgende verzoek zal de laatste twee gegevens van het kaartmonster binnen uw organisatie terugwinnen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \

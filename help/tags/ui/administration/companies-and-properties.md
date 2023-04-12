@@ -1,14 +1,15 @@
 ---
 title: Properties
 description: Leer hoe uw extensies, omgevingen en bibliotheken zijn georganiseerd en gegroepeerd voor uw organisatie in Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1153'
 ht-degree: 0%
 
 ---
 
-# Eigenschappen
+# Properties
 
 >[!NOTE]
 >
@@ -24,7 +25,7 @@ Een eigenschap van het type mobile kan meerdere toepassingen bevatten. In een mo
 
 ## Aanbevolen procedures voor het plannen van eigenschappen {#best-practices-for-planning-properties}
 
-Elke implementatie van tags in Adobe Experience Platform kan heel anders zijn. Ze hebben een groot aantal verschillende behoeften op het gebied van gegevensverzameling, variabel gebruik, extensies, tags van derden, andere systemen en technologieën, mensen, teams, geografische regio&#39;s enzovoort. U moet de eigenschappen zodanig structureren dat deze overeenkomen met de workflow en processen van uw IMS-organisatie.
+Elke implementatie van tags in Adobe Experience Platform kan heel anders zijn. Ze hebben een groot aantal verschillende behoeften op het gebied van gegevensverzameling, variabel gebruik, extensies, tags van derden, andere systemen en technologieën, mensen, teams, geografische regio&#39;s enzovoort. U moet de eigenschappen zodanig structureren dat deze overeenkomen met de workflow en processen van uw organisatie.
 
 Houd rekening met het volgende wanneer u eigenschappen plant:
 
@@ -36,7 +37,7 @@ Houd rekening met het volgende wanneer u eigenschappen plant:
 
 ### Codestructuur
 
-Sites zijn gebaseerd op HTML-toepassingen voor mobiele apparaten op code.  Als de onderliggende HTML-sjablonen of -codebases hetzelfde zijn voor meerdere sites en toepassingen, kunt u overwegen één tag-eigenschap te gebruiken om meerdere sites of apps te beheren.
+Sites zijn gebaseerd op HTML, mobiele toepassingen op code.  Als de onderliggende sjablonen of codebases voor HTML voor meerdere sites en toepassingen gelijk zijn, kunt u overwegen één eigenschap voor tags te gebruiken om meerdere sites of apps te beheren.
 
 ### Gegevens
 
@@ -48,7 +49,7 @@ Als uw gegevensinzamelingsbehoeften voor elke plaats of toepassing uniek zijn, z
 
 ### Variabelen
 
-Gelijkaardig aan gegevens, zijn de variabelen u in uw [!DNL Analytics] en andere uitbreidingen gaat plaatsen zeer gelijkaardig, enigszins gelijkaardig, of uniek?
+Gelijkaardig aan gegevens, zijn de variabelen u in uw gaat plaatsen [!DNL Analytics] en andere extensies die veel op elkaar lijken, enigszins lijken of uniek zijn?
 
 Als eVar27 bijvoorbeeld wordt gebruikt voor dezelfde bronwaarde op al uw websites of toepassingen, kan het zinvol zijn die sites of toepassingen te groeperen, zodat u die algemene variabelen in slechts één eigenschap kunt instellen.
 
@@ -58,15 +59,15 @@ Zijn de uitbreidingen, de markeringen, en de systemen u gaat opstellen zeer geli
 
 Als de uitbreidingen, de markeringen, en de systemen u op uw plaatsen of de toepassingen zult opstellen zeer gelijkaardig zijn, zou u hen in het zelfde bezit kunnen willen omvatten.
 
-Als u [!DNL Adobe Analytics] op slechts één plaats of toepassing opstelt, en uw andere uitbreidingen en markeringen ook uniek zijn, zou u afzonderlijke eigenschappen kunnen willen tot stand brengen zodat u meer controle hebt.
+Als u implementeert [!DNL Adobe Analytics] op slechts één site of toepassing, en uw andere extensies en tags zijn ook uniek, kunt u afzonderlijke eigenschappen maken zodat u meer controle hebt.
 
-Bijvoorbeeld, als u [!DNL Adobe Analytics], [!DNL Target], en de zelfde derdeuitbreidingen over al uw plaatsen of toepassingen opstelt, is dat een reden om samen te groeperen.
+Als u bijvoorbeeld [!DNL Adobe Analytics], [!DNL Target]en dezelfde extensies van derden voor al uw sites of toepassingen. Dat is een reden om deze extensies samen te groeperen.
 
 ### Mensen
 
 Voor de personen, teams en organisaties die in Adobe Experience Platform werken, hebben ze toegang nodig tot al uw websites en toepassingen, sommige of slechts één.
 
-De eigenschappen van het Beheer van de Gebruiker staan u toe om verschillende rollen aan verschillende mensen voor elk van uw eigenschappen, of op een per-bezitsbasis toe te wijzen. Als iemand voldoende rechten heeft, kan die persoon administratieve acties uitvoeren over alle eigenschappen in die Platform IMS Organisatie. Alle andere rollen kunnen op een per-bezitsbasis worden toegewezen. U kunt zelfs een bezit voor bepaalde gebruikers (niet-admins) verbergen door hen geen rol in dat bezit te geven.
+De eigenschappen van het Beheer van de Gebruiker staan u toe om verschillende rollen aan verschillende mensen voor elk van uw eigenschappen, of op een per-bezitsbasis toe te wijzen. Als iemand voldoende rechten heeft, kan die persoon administratieve handelingen uitvoeren over alle eigenschappen in die organisatie van het Platform. Alle andere rollen kunnen op een per-bezitsbasis worden toegewezen. U kunt zelfs een bezit voor bepaalde gebruikers (niet-admins) verbergen door hen geen rol in dat bezit te geven.
 
 ## Pagina Eigenschappen
 
@@ -74,7 +75,7 @@ Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidinge
 
 Een eigenschap kan elke groepering van een of meer domeinen en subdomeinen zijn. U kunt deze elementen op dezelfde manier beheren en bijhouden. Stel dat u meerdere websites hebt die op één sjabloon zijn gebaseerd en dat u dezelfde elementen op alle websites wilt bijhouden. U kunt één eigenschap toepassen op meerdere domeinen.
 
-De linkerkant van het scherm toont de bedrijven in uw organisatie. Dit is vooral handig als u meerdere accounts beheert. Selecteer een bedrijf om de eigenschappen en de controlelogboeken voor dat bedrijf te zien.
+De linkerkant van het scherm toont de bedrijven in uw organisatie. Dit is vooral handig als u meerdere accounts beheert. Selecteer een bedrijf om de eigenschappen en controlelogboeken voor dat bedrijf te zien.
 
 Elke eigenschap wordt weergegeven in de lijst Eigenschappen.
 
@@ -94,7 +95,7 @@ Deze sectie biedt richtlijnen voor het maken of configureren van een tag-eigensc
 >
 >Alleen gebruikers met voldoende rechten kunnen een eigenschap maken. Zie [Gebruikersbeheer](user-permissions.md).
 
-Lees vóór het begin de [Aanbevolen werkwijzen voor het plannen van eigenschappen](companies-and-properties.md#best-practices-for-planning-properties) voor eigenschappen.
+Controleer voordat u begint de [Aanbevolen procedures voor het plannen van eigenschappen](companies-and-properties.md#best-practices-for-planning-properties) voor eigenschappen.
 
 Navigeer naar uw bedrijfspagina en selecteer **[!UICONTROL Add Property]** of selecteer een bestaande eigenschap in de lijst en selecteer **[!UICONTROL Configure]**.
 
@@ -106,12 +107,12 @@ Volg de instructies om een webeigenschap te maken.
 
 1. Vul de velden in:
 
-   **Naam:** de naam van de eigenschap.
+   **Naam:** De naam van uw eigenschap.
 
-   **Domeinen:** de basis-URL van sites waarop u deze eigenschap wilt implementeren
+   **Domeinen:** De basis-URL van sites waarop u deze eigenschap wilt implementeren
 
-1. (Geavanceerd) **[!UICONTROL Run rule components in sequence]** Schakel dit selectievakje in als u voorwaarden en handelingen wilt laten wachten tot de vorige is voltooid voordat deze worden uitgevoerd
-1. (Geavanceerd) **[!UICONTROL Return an empty string for missing data elements:]** Als u naar een gegevenselement verwijst dat niet binnen een bibliotheek bestaat, zou dat normaal `undefined` terugkeren.  Schakel dit selectievakje in als u wilt dat dat scenario een lege tekenreeks retourneert.
+1. (Geavanceerd) **[!UICONTROL Run rule components in sequence]** Schakel dit selectievakje in als u voorwaarden en handelingen wilt laten wachten tot de vorige zijn voltooid voordat deze worden uitgevoerd
+1. (Geavanceerd) **[!UICONTROL Return an empty string for missing data elements:]** Als u naar een gegevenselement verwijst dat niet binnen een bibliotheek bestaat, zou dat normaal terugkeren `undefined`.  Schakel dit selectievakje in als u wilt dat dat scenario een lege tekenreeks retourneert.
 1. (Geavanceerd) **[!UICONTROL Configure for extension development:]** Schakel dit selectievakje in als u ontwikkelextensies wilt installeren die actief door uw bedrijf worden ontwikkeld
 1. Selecteer **[!UICONTROL Save]**.
 
@@ -121,14 +122,14 @@ Volg de instructies om een eigenschap mobile te maken.
 
 1. Vul de velden in:
 
-   * **Naam:** de naam van de eigenschap.
+   * **Naam:** De naam van uw eigenschap.
    * **Privacy:** Standaard is de privacy-instelling ingesteld op Opted In (Opted In), wat betekent dat u gegevens wilt verzamelen en verzenden naar oplossingen. Als u Opted Out selecteert, verzendt de SDK standaard GEEN gegevens naar oplossingen. Als u Onbekend kiest als instelling, vereist de SDK dat de toepassing de gebruiker eerst vraagt om gegevensverzameling en -deling toe te staan.
 
       >[!NOTE]
       >
       >Deze instellingen kunnen verder worden beheerd via de API in de mobiele toepassing.
 
-   * **Gebruik HTTPS:** kies of al gegevensmededeling over HTTP of HTTPS zou moeten worden verzonden.
+   * **HTTPS gebruiken:** Kies of alle gegevenscommunicatie via HTTP of HTTPS moet worden verzonden.
 
 1. Selecteer **[!UICONTROL Save]**.
 
@@ -146,4 +147,4 @@ Voer de onderstaande stappen uit om een eigenschap tag te verwijderen.
 
    U kunt meerdere eigenschappen selecteren om te verwijderen.
 
-1. Selecteer **[!UICONTROL Delete]** en bevestig vervolgens de verwijdering van de eigenschap.
+1. Selecteren **[!UICONTROL Delete]** bevestig vervolgens de verwijdering van de eigenschap.

@@ -2,9 +2,9 @@
 title: B2B-naamruimten en -schema's
 description: Dit document biedt een overzicht van aangepaste naamruimten die zijn vereist voor het maken van een B2B-bronconnector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1717'
 ht-degree: 1%
 
 ---
@@ -47,10 +47,10 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | `IMS` | Het Identity Management System (IMS) biedt het framework voor verificatie van Adobe-services. Met betrekking tot [!DNL Marketo]Deze waarde is vast en wordt altijd ingesteld op: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie de zelfstudie aan [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../../landing/postman.md) voor instructies over hoe u uw `{ORG_ID}` informatie. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | De naam van de virtuele sandboxpartitie die u gebruikt. | `prod` |
-| `TENANT_ID` | Een id die wordt gebruikt om ervoor te zorgen dat de bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. | `b2bcdpproductiontest` |
+| `TENANT_ID` | Een id die wordt gebruikt om ervoor te zorgen dat de bronnen die u maakt, correct worden genoemd en zich binnen uw organisatie bevinden. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Het URL-eindpunt waarnaar u API-aanroepen maakt. Deze waarde is vast en wordt altijd ingesteld op: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scripts uitvoeren
 
@@ -90,7 +90,7 @@ De volgende tabel bevat informatie over de onderliggende instelling voor B2B-naa
 | B2B Marketing List Member | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
 | B2B Betrekking van rekeningpersoon | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## B2B-schema&#39;s
 
@@ -119,7 +119,7 @@ De volgende tabel bevat informatie over de onderliggende opstelling van B2B-sche
 | B2B-activiteit | [XDM ExperienceEvent](../../../../xdm/classes/experienceevent.md) | <ul><li>Webpagina bezoeken</li><li>Nieuwe lead</li><li>Regelafstand omzetten</li><li>Toevoegen aan lijst</li><li>Verwijderen uit lijst</li><li>Toevoegen aan opportunity</li><li>Verwijderen uit opportunity</li><li>Formulier ingevuld</li><li>Koppelingsklikken</li><li>E-mail bezorgd</li><li>E-mail geopend</li><li>E-mail geklikt</li><li>E-mail verzonden</li><li>Door e-mail teruggekaatst</li><li>E-mail niet geabonneerd</li><li>Gewijzigde score</li><li>Opportunity bijgewerkt</li><li>Status in gewijzigde campagnevoortgang</li><li>Persoon-id</li><li>Marketo-webURL</li><li>Interessant moment</li><li>Bellen Webhaak</li><li>Campagne wissen</li><li>Gewijzigde omzettingsfase</li><li>Leads samenvoegen</li><li>E-mail verzonden</li><li>Campagnestroom wijzigen</li><li>Toevoegen aan campagne</li></ul> | Ingeschakeld | `personKey.sourceKey` van Person Identifier-veldgroep | B2B-persoon | Geen | Geen | **Eerste relatie**<ul><li>`listOperations.listKey.sourceKey` field</li><li>Type: één-op-één</li><li>Referentieschema: B2B-marketinglijst</li><li>Naamruimte: B2B-marketinglijst</li></ul>**Tweede relatie**<ul><li>`opportunityEvent.opportunityKey.sourceKey` field</li><li>Type: één-op-één</li><li>Referentieschema: B2B-opportuniteit</li><li>Naamruimte: B2B-opportuniteit</li></ul>**Derde relatie**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` field</li><li>Type: één-op-één</li><li>Referentieschema: B2B-campagne</li><li>Naamruimte: B2B-campagne</li></ul> | `ExperienceEvent` verschilt van entiteiten. De identiteitsgebeurtenis is de persoon die de activiteit heeft uitgevoerd. |
 | B2B Betrekking van rekeningpersoon | [XDM Zakelijke account Person Relatie](../../../../xdm/classes/b2b/business-account-person-relation.md) | Identiteitskaart | Ingeschakeld | `accountPersonKey.sourceKey` in de basisklasse | B2B Betrekking van rekeningpersoon | Geen | Geen | **Eerste relatie**<ul><li>`personKey.sourceKey` in de basisklasse</li><li>Type: Veel-op-één</li><li>Referentieschema: B2B-persoon</li><li>Naamruimte: B2B-persoon</li><li>Eigenschap van bestemming: `b2b.personKey.SourceKey`</li><li>Relatienaam uit huidig schema: Mensen</li><li>Relatienaam van referentieschema: Account</li></ul>**Tweede relatie**<ul><li>`accountKey.sourceKey` in de basisklasse</li><li>Type: Veel-op-één</li><li>Referentieschema: B2B-account</li><li>Naamruimte: B2B-account</li><li>Eigenschap van bestemming: `accountKey.sourceKey`</li><li>Relatienaam uit huidig schema: Account</li><li>Relatienaam van referentieschema: Mensen</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 

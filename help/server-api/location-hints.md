@@ -1,13 +1,13 @@
 ---
 title: Tips voor locatie
 description: Dit artikel verklaart hoe plaatswenken in de Server API van het Netwerk van Edge werken, zodat de eindgebruikerverzoeken altijd aan de zelfde server kunnen worden verpletterd.
-source-git-commit: 7f1d8fba34c5478f0d6e727a5a52af642852c9dd
+exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
+source-git-commit: 2c7a5f007189d897ed32302a2a80c1e16af6af80
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
-
 
 # Tips voor locatie
 
@@ -62,4 +62,4 @@ POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={Data
 
 Om ervoor te zorgen dat de plaatswenk door het Netwerk van de Rand voor de duur van de zitting is teruggekeerd, kunt u de waarde van de plaatswenk in een koekje, samen met het koekjesleven opslaan, dat in bevat is `ttlSeconds` veld (doorgaans 1800 seconden).
 
-Net als bij de meeste cookies dient u de levensduur van deze cookie te verlengen telkens wanneer er een reactie van het Edge-netwerk wordt ontvangen. Gebruik de cookienaam om maximale compatibiliteit met de Web SDK te garanderen `kndctr_{IMSORG}_AdobeOrg_cluster`. IMS-organisatie-id&#39;s eindigen doorgaans met `@AdobeOrg`. De `@` Deze waarde moet worden omgezet in een onderstrepingsteken om ervoor te zorgen dat de cookie de juiste notatie heeft.
+Net als bij de meeste cookies dient u de levensduur van deze cookie te verlengen telkens wanneer er een reactie van het Edge-netwerk wordt ontvangen. Gebruik de cookienaam om maximale compatibiliteit met de Web SDK te garanderen `kndctr_{IMSORG}_AdobeOrg_cluster`. Organisatie-id&#39;s eindigen doorgaans met `@AdobeOrg`. De `@` Deze waarde moet worden omgezet in een onderstrepingsteken om ervoor te zorgen dat de cookie de juiste notatie heeft.

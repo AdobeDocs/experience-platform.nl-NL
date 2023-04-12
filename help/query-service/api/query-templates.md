@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor querysjablonen
 description: Deze gids specificeert de diverse vraag API van het vraagmalplaatje u kunt maken gebruikend de Dienst API van de Vraag.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: ee6a54aeba4ddfeb98ee5e11283c299f00969a53
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Zie de [UI-query sjabloondocumentatie](../ui/query-templates.md) voor informatie
 
 ### Een lijst met querysjablonen ophalen
 
-U kunt een lijst van alle vraagmalplaatjes voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan `/query-templates` eindpunt.
+U kunt een lijst van alle vraagmalplaatjes voor uw organisatie terugwinnen door een verzoek van de GET tot de `/query-templates` eindpunt.
 
 **API-indeling**
 
@@ -47,7 +47,7 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 **Verzoek**
 
-Het volgende verzoek wint het recentste vraagmalplaatje terug dat voor uw organisatie IMS wordt gecreeerd.
+Het volgende verzoek wint het recentste vraagmalplaatje terug dat voor uw organisatie wordt gecreeerd.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Antwoord**
 
-Een succesvolle reactie keert HTTP status 200 met een lijst van vraagmalplaatjes voor de gespecificeerde IMS Organisatie terug. De volgende reactie keert het recentste vraagmalplaatje terug dat voor uw organisatie IMS wordt gecreeerd.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van vraagmalplaatjes voor de gespecificeerde organisatie terug. De volgende reactie keert het recentste vraagmalplaatje terug dat voor uw organisatie wordt gecreeerd.
 
 ```json
 {

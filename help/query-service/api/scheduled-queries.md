@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Planningeindpunt
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Nu u begrijpt welke kopballen aan gebruik zijn, bent u bereid beginnen het richt
 
 ### Hiermee wordt een lijst met geplande query&#39;s opgehaald
 
-U kunt een lijst van alle geplande vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te dienen `/schedules` eindpunt.
+U kunt een lijst van alle geplande vragen voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/schedules` eindpunt.
 
 **API-indeling**
 
@@ -45,7 +45,7 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 **Verzoek**
 
-Het volgende verzoek wint de recentste geplande vraag terug die voor uw organisatie IMS wordt gecreeerd.
+Het volgende verzoek wint de recentste geplande vraag terug die voor uw organisatie wordt gecreeerd.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vragen voor de gespecificeerde IMS Organisatie terug. De volgende reactie keert de recentste geplande vraag terug die voor uw organisatie IMS wordt gecreeerd.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vragen voor de gespecificeerde organisatie terug. De volgende reactie keert de recentste geplande vraag terug die voor uw organisatie wordt gecreeerd.
 
 ```json
 {

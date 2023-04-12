@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor probleemoplossing voor identiteitsservice
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2176'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Dit foutbericht wordt weergegeven wanneer een `graph-type` De vraagparameter wor
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer uw IMS-organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
+Dit foutbericht wordt weergegeven wanneer uw organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
 
 ### Het de dienstteken van de gateway is niet geldig
 
@@ -264,7 +264,7 @@ Wanneer [!DNL Identity Service] Blijft een identiteit, identiteitskaart van de i
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer uw IMS-organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
+Dit foutbericht wordt weergegeven wanneer uw organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
 
 ### Interne serverfout
 
@@ -330,7 +330,7 @@ Deze fout wordt weergegeven wanneer de eerste 100 rijen van een batch geen id&#3
 }
 ```
 
-Deze fout wordt weergegeven wanneer een opgenomen record een identiteit voorstelt waarvan de bijbehorende naamruimte niet bestaat of niet toegankelijk is voor uw IMS-organisatie.
+Deze fout wordt weergegeven wanneer een opgenomen record een identiteit voorstelt waarvan de bijbehorende naamruimte niet bestaat of niet toegankelijk is voor uw organisatie.
 
 ### Het overslaan van batch-opname als IMS Org is niet voorzien voor Private Identity Graph
 
@@ -342,7 +342,7 @@ Deze fout wordt weergegeven wanneer een opgenomen record een identiteit voorstel
 }
 ```
 
-Bij het invoeren van batchgegevens wordt dit foutbericht weergegeven wanneer uw IMS-organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
+Bij het invoeren van batchgegevens wordt dit foutbericht weergegeven wanneer uw organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
 
 ### Interne fout
 

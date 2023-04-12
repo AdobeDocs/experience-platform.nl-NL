@@ -2,9 +2,9 @@
 title: Data Lake Migration to Gen2
 description: Leer meer over de nieuwe functies van de migratie van het Data Lake naar Gen2 in Adobe Experience Platform.
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -26,4 +26,4 @@ Terwijl Adobe het Data Lake van Gen1 naar Gen2 migreert, kunnen gebruikers **lez
 
 ## Communicatie naar gebruikers in de Platform
 
-Adobe zal contact opnemen met systeembeheerders om de gevolgen van de migratie in detail te bespreken en de migratiedata en -tijden voor specifieke IMS-organisaties te bevestigen.
+Adobe zal contact opnemen met systeembeheerders om de gevolgen van de migratie in detail te bespreken en de migratiedata en -tijden voor specifieke organisaties te bevestigen.

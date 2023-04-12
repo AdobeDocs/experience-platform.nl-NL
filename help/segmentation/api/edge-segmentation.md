@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Edge Segmentation met de API
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Een segmentdefinitie zal **niet** voor randsegmentatie in de volgende scenario&#
 
 ## Alle segmenten ophalen die zijn ingeschakeld voor segmentatie van randen
 
-U kunt een lijst van alle segmenten terugwinnen die voor randsegmentatie binnen uw IMS Organisatie door een verzoek van de GET aan te dienen worden toegelaten `/segment/definitions` eindpunt.
+U kunt een lijst van alle segmenten terugwinnen die voor randsegmentatie binnen uw organisatie door een verzoek van de GET aan te dienen worden toegelaten `/segment/definitions` eindpunt.
 
 **API-indeling**
 
@@ -90,7 +90,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie van segmenten in uw IMS Organisatie terug die voor randsegmentatie worden toegelaten. Meer gedetailleerde informatie over de teruggekeerde segmentdefinitie kan in worden gevonden [segmentdefinities, eindhulplijn](./segment-definitions.md).
+Een succesvolle reactie keert een serie van segmenten in uw organisatie terug die voor randsegmentatie worden toegelaten. Meer gedetailleerde informatie over de teruggekeerde segmentdefinitie kan in worden gevonden [segmentdefinities, eindhulplijn](./segment-definitions.md).
 
 ```json
 {

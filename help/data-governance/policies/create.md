@@ -5,9 +5,9 @@ title: Een beleid voor gegevensbeheer maken in de API
 type: Tutorial
 description: Leer hoe u een beleid voor gegevensbeheer maakt met de API voor beleidsservice.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1199'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ GET /marketingActions/custom
 
 **Verzoek**
 
-In het volgende verzoek wordt het `marketingActions/custom` eindpunt, dat een lijst van alle marketing acties haalt die door uw organisatie IMS worden bepaald.
+In het volgende verzoek wordt het `marketingActions/custom` eindpunt, dat een lijst van alle marketing acties haalt die door uw organisatie worden bepaald.
 
 ```shell
 curl -X GET \

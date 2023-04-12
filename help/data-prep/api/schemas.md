@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids
 solution: Experience Platform
 title: Schemas API Endpoint
 description: U kunt het `/schema's' eindpunt in Adobe Experience Platform API gebruiken om schema's voor gebruik met Mapper in Platform programmatically terug te winnen, tot stand te brengen en bij te werken.
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '611'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Schema&#39;s kunnen met Mapper worden gebruikt om ervoor te zorgen dat de gegeve
 
 ## Alle schema&#39;s ophalen
 
-U kunt een lijst van alle beschikbare schema&#39;s van de Toewijzing voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/schemas` eindpunt.
+U kunt een lijst van alle beschikbare schema&#39;s van de Apper voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/schemas` eindpunt.
 
 **API-indeling**
 
@@ -43,7 +43,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 **Verzoek**
 
-Met het volgende verzoek worden de laatste twee gemaakte schema&#39;s voor uw IMS-organisatie opgehaald.
+Het volgende verzoek wint de laatste twee gecreeerde schema&#39;s voor uw organisatie terug.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \

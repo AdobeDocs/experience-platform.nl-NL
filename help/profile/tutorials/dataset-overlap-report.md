@@ -4,9 +4,9 @@ title: Het rapport Gegevensset-overlap genereren
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om het overlappingsrapport van de gegevensset te genereren met behulp van de Real-Time Customer Profile API.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '884'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ De vereiste kopballen voor alle API vraag in dit leerprogramma zijn:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`: De `Authorization` header vereist een toegangstoken die wordt voorafgegaan door het woord `Bearer`. Elke 24 uur moet een nieuwe toegangstoken-waarde worden gegenereerd.
 * `x-api-key: {API_KEY}`: De `API Key` ook bekend als a `Client ID` en is een waarde die slechts eenmaal hoeft te worden gegenereerd.
-* `x-gw-ims-org-id: {ORG_ID}`: De `IMS Org` staat ook bekend als een `Organization ID` en hoeft slechts eenmaal te worden gegenereerd.
+* `x-gw-ims-org-id: {ORG_ID}`: De organisatie-id hoeft slechts eenmaal te worden gegenereerd.
 
 Na de voltooiing van de authentificatiezelfstudie en het verzamelen van de waarden voor de vereiste kopballen, bent u bereid beginnen het maken van vraag aan Real-Time Klant API.
 

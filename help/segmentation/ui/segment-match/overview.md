@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van afstemming van segment
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1918'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Er zijn twee machtigingen gekoppeld aan [!DNL Segment Match]:
 
 | Machtiging | Beschrijving |
 | --- | --- |
-| Verbindingen voor delen van publiek beheren | Deze toestemming staat u toe om het proces van de partnerhanddruk te voltooien, dat twee organisaties IMS verbindt om toe te laten [!DNL Segment Match] stromen. |
+| Verbindingen voor delen van publiek beheren | Deze toestemming staat u toe om het proces van de partnerhanddruk te voltooien, dat twee organisaties verbindt om toe te laten [!DNL Segment Match] stromen. |
 | Aandelen van publiek beheren | Met deze machtiging kunt u feeds maken, bewerken en publiceren (het pakket gegevens dat wordt gebruikt voor [!DNL Segment Match]) met actieve partners (partners die door de admin gebruiker met zijn verbonden **[!UICONTROL Audience Share Connections]** toegang). |
 
 Zie de [toegangsbeheeroverzicht](../../../access-control/home.md) voor meer informatie over toegangsbeheer en toestemmingen.

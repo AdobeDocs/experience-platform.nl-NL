@@ -5,9 +5,9 @@ title: Een gecomprimeerde ontvanger importeren met de API voor leren van de Sens
 type: Tutorial
 description: Deze zelfstudie gebruikt de API voor het leren van Sensei-machines om een engine te maken, die ook wel een recept in de gebruikersinterface wordt genoemd.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van 
 Voor deze zelfstudie hebt u het volgende nodig: [Zelfstudie voor verificatie naar Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) om met succes vraag te maken aan [!DNL Platform] API&#39;s. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
-- `{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+- `{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 - `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 ## Een engine maken

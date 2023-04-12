@@ -4,9 +4,9 @@ title: API-eindpunt voor exporteren van profielen
 type: Documentation
 description: In real-time klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -180,7 +180,7 @@ Een succesvolle reactie keert een dataset terug die met de gegevens van het Prof
 
 ## Alle exporttaken weergeven
 
-U kunt een lijst met alle exporttaken voor een bepaalde IMS-organisatie retourneren door een aanvraag voor een GET in te dienen bij de `export/jobs` eindpunt. Het verzoek steunt ook de vraagparameters `limit` en `offset`, zoals hieronder weergegeven.
+U kunt een lijst met alle exporttaken voor een bepaalde organisatie retourneren door een aanvraag voor een GET in te dienen bij de `export/jobs` eindpunt. Het verzoek steunt ook de vraagparameters `limit` en `offset`, zoals hieronder weergegeven.
 
 **API-indeling**
 
@@ -209,7 +209,7 @@ curl -X GET \
 
 **Antwoord**
 
-De reactie omvat een `records` -object dat de exporttaken bevat die door uw IMS-organisatie zijn gemaakt.
+De reactie omvat een `records` -object dat de exporttaken bevat die door uw organisatie zijn gemaakt.
 
 ```json
 {

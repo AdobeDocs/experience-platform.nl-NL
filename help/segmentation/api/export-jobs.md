@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor segmentexporttaken
 description: De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het /export/job eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform gebruiken, die u toestaat om, uitvoerbanen programmatically terug te winnen tot stand te brengen en te annuleren.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: d28cebaf4b9fe5c35240e28653e99424db08d9d2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1629'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met exporttaken ophalen {#retrieve-list}
 
-U kunt een lijst met alle exporttaken voor uw IMS-organisatie opvragen door een GET-aanvraag in te dienen bij de `/export/jobs` eindpunt.
+U kunt een lijst met alle exporttaken voor uw organisatie opvragen door een GET-aanvraag in te dienen bij de `/export/jobs` eindpunt.
 
 **API-indeling**
 
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 
 **Verzoek**
 
-De volgende aanvraag haalt de laatste twee exporttaken binnen uw IMS-organisatie op.
+Het volgende verzoek zal de laatste twee uitvoerbanen binnen uw organisatie terugwinnen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \

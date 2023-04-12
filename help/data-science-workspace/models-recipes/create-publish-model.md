@@ -5,9 +5,9 @@ title: Een leermodel voor machines maken en publiceren
 type: Tutorial
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een model voor machinaal leren te maken en te publiceren.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ In de volgende handleiding worden de stappen beschreven die nodig zijn om een mo
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
+- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
 
 - Alle zelfstudies in de werkruimte voor wetenschappen van gegevens maken gebruik van het model Luminantie. Als u de stappen wilt volgen, moet u de opdracht [Luminantiemodel, schema&#39;s en gegevenssets](./create-luma-data.md).
 
@@ -79,7 +79,7 @@ Ga voor meer informatie over het behalen van uw model naar de score van een mode
 
 ## Een model met een score publiceren als service
 
-De Werkruimte van de Wetenschap van gegevens staat u toe om uw opgeleid model als dienst te publiceren. Hierdoor kunnen gebruikers binnen uw IMS-organisatie gegevens behalen zonder dat ze zelf modellen hoeven te maken.
+De Werkruimte van de Wetenschap van gegevens staat u toe om uw opgeleid model als dienst te publiceren. Dit laat gebruikers binnen uw organisatie toe om gegevens te scoren zonder de behoefte om hun eigen modellen tot stand te brengen.
 
 Ga voor meer informatie over het publiceren van een model als service naar de [UI-zelfstudie](./publish-model-service-ui.md) of [API-zelfstudie](./publish-model-service-api.md).
 

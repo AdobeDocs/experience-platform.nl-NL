@@ -4,9 +4,9 @@ title: Een gegevensset voor profiel- en identiteitsservice inschakelen met behul
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een gegevensset kunt inschakelen voor gebruik met Real-Time Customer Profile and Identity Service met Adobe Experience Platform API's.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 |---|---|
 | `schemaRef.id` | De id van de [!DNL Profile]- toegelaten schema waarop de dataset zal worden gebaseerd. |
-| `{TENANT_ID}` | De naamruimte binnen de [!DNL Schema Registry] die bronnen van uw IMS-organisatie bevat. Zie de [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
+| `{TENANT_ID}` | De naamruimte binnen de [!DNL Schema Registry] die bronnen van uw organisatie bevat. Zie de [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
 
 **Antwoord**
 
@@ -220,6 +220,7 @@ curl -X PATCH \
 De verzoekende instantie omvat een `path` tot twee typen tags, `unifiedProfile` en `unifiedIdentity`. De `value` van elk zijn arrays die de tekenreeks bevatten `enabled:true`.
 
 **Antwoord**
+
 Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `unifiedProfile` en `unifiedIdentity` Er zijn nu codes toegevoegd en de gegevensset is ingeschakeld voor gebruik door de services Profiel en Identiteit.
 
 ```json

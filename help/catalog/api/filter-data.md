@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Catalogusgegevens filteren met zoekopdrachtparameters
 description: De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2120'
 ht-degree: 0%
 
 ---
@@ -206,7 +206,7 @@ Sommige catalogusobjecten ondersteunen het gebruik van een `tags` kenmerk. Tags 
 Er zijn enkele beperkingen waarmee u rekening kunt houden wanneer u tags gebruikt:
 
 * De enige voorwerpen van de Catalogus die momenteel markeringen steunen zijn datasets, partijen, en verbindingen.
-* Tagnamen zijn uniek voor uw IMS-organisatie.
+* Tagnamen zijn uniek voor uw organisatie.
 * Adobe-processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
 * De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform]en kan daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
    * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Real-Time Customer Profile]](../../profile/home.md).

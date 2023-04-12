@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Query Service
 description: Dit document verstrekt een overzicht van de rol van de Dienst van de Vraag binnen Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform neemt gegevens op uit een groot aantal verschillende b
 
 ## Gebruiken [!DNL Query Service]
 
-[!DNL Query Service] biedt een gebruikersinterface en een RESTful-API waarmee u SQL-query&#39;s kunt maken voor een betere analyse van uw gegevens. Met de gebruikersinterface kunt u query&#39;s schrijven en uitvoeren, eerder uitgevoerde query&#39;s weergeven en toegang krijgen tot query&#39;s die zijn opgeslagen door gebruikers binnen uw IMS-organisatie. De gebruikersinterface is bedoeld om als zandbak te worden gebruikt om uw vragen uit te testen alvorens hen op uw bredere dataset uit te voeren. Meer informatie over het gebruik van de interactieve service in [!DNL Platform] kunt u vinden in het dialoogvenster [Handleiding voor gebruikersinterface van Query Service](ui/overview.md). De RESTful API verstrekt een gelijkaardige ervaring, die u toestaat om vragen programmatically te schrijven en uit te voeren, vragen voor toekomstig gebruik en herhaling te plannen, evenals malplaatjes voor vragen te creëren u wenst te schrijven. Meer informatie over het gebruik van de [!DNL Query Service] API kan worden gevonden in de [Handleiding voor ontwikkelaars van Query Service](api/getting-started.md).
+[!DNL Query Service] biedt een gebruikersinterface en een RESTful-API waarmee u SQL-query&#39;s kunt maken voor een betere analyse van uw gegevens. Met de gebruikersinterface kunt u query&#39;s schrijven en uitvoeren, eerder uitgevoerde query&#39;s weergeven en query&#39;s openen die door gebruikers binnen uw organisatie zijn opgeslagen. De gebruikersinterface is bedoeld om als zandbak te worden gebruikt om uw vragen uit te testen alvorens hen op uw bredere dataset uit te voeren. Meer informatie over het gebruik van de interactieve service in [!DNL Platform] kunt u vinden in het dialoogvenster [Handleiding voor gebruikersinterface van Query Service](ui/overview.md). De RESTful API verstrekt een gelijkaardige ervaring, die u toestaat om vragen programmatically te schrijven en uit te voeren, vragen voor toekomstig gebruik en herhaling te plannen, evenals malplaatjes voor vragen te creëren u wenst te schrijven. Meer informatie over het gebruik van de [!DNL Query Service] API kan worden gevonden in de [Handleiding voor ontwikkelaars van Query Service](api/getting-started.md).
 
 ## [!DNL Query Service] en [!DNL Experience Platform] diensten
 

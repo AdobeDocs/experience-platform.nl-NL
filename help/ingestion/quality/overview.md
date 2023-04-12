@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenskwaliteit
 description: Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 3%
 
 ---
@@ -49,7 +49,7 @@ De volgende validaties worden uitgevoerd voor streaming invoer:
 | Schema | Zorgt ervoor dat het schema is **niet** leeg en bevat als volgt een verwijzing naar het schema union: `"meta:immutableTags": ["union"]` |
 | `identityField` | Hiermee zorgt u ervoor dat alle geldige identiteitsbeschrijvingen zijn gedefinieerd. |
 | JSON | Zorgt ervoor dat de JSON geldig is. |
-| IMS-organisatie | Zorgt ervoor dat de vermelde IMS-organisatie een geldige organisatie is. |
+| Organisatie | Zorgt ervoor dat de organisatie die vermeld is een geldige organisatie is. |
 | Bronnaam | Zorgt ervoor dat de naam van de gegevensbron wordt gespecificeerd. |
 | Gegevensset | Zorgt ervoor dat de dataset wordt gespecificeerd, toegelaten en niet is verwijderd. |
 | Koptekst | Zorgt ervoor dat de kopbal wordt gespecificeerd en geldig is. |

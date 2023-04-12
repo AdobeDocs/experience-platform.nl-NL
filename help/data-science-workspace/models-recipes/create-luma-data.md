@@ -5,16 +5,16 @@ title: Webschema's en gegevenssets voor Luma's maken
 type: Tutorial
 description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor het Luma-model voor de demo-eigenschappen.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
 
 # Maak de schema&#39;s en gegevenssets van het model Luminantie
 
-Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere onderdelen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] zelfstudies. Zodra volledig, zullen de volgende schema&#39;s en datasets aan u en uw organisatie IMS beschikbaar zijn.
+Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere onderdelen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] zelfstudies. Zodra volledig, zullen de volgende schema&#39;s en datasets aan u en uw organisatie beschikbaar zijn.
 
 **Schema&#39;s:**
 

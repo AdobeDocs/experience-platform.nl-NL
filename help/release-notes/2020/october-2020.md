@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 1%
+source-wordcount: '1015'
+ht-degree: 2%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 1%
 
 **Releasedatum: 14 oktober 2020**
 
-- [Gegevensprep](#data-prep)
+- [Gegevensvoorbereiding](#data-prep)
 - [Klantprofiel in realtime](#profile)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 - [Tijd tot waarde](#time-to-value)
 
-## Gegevensprep {#data-prep}
+## Gegevensvoorbereiding {#data-prep}
 
 Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
 
@@ -41,7 +41,7 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| API-uitbreidingen voor voorvertoning van profiel | De API voor de voorvertoning van profielen (`/previewsamplestatus`) bevat nu de mogelijkheid om een uitsplitsing weer te geven van de totale profielfragmenten in uw IMS-organisatie en om de distributie van profielfragmenten in alle naamruimten weer te geven. |
+| API-uitbreidingen voor voorvertoning van profiel | De API voor de voorvertoning van profielen (`/previewsamplestatus`) bevat nu de mogelijkheid om een uitsplitsing te bekijken van de totale profielfragmenten in uw organisatie en om de distributie van profielfragmenten over naamruimten van identiteiten te bekijken. |
 | Updates van de Unieschemaweergave | In het Experience Platform UI, kunnen de gebruikers informatie over alle schema&#39;s en datasets gemakkelijker vinden die tot het unieschema bijdragen, evenals oppervlakte zeer belangrijke attributen zoals identiteit en relatievelden. Deze updates verbeteren de capaciteit om problemen op te lossen en te bevestigen dat de profielen correct worden gevormd, worden de identiteiten correct vastgemaakt, en de gegevens zijn met succes opgenomen. |
 
 Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van zelfstudies en aanbevolen procedures voor het werken met [!DNL Profile] gegevens, lees de [Overzicht van het realtime klantprofiel](../../profile/home.md).

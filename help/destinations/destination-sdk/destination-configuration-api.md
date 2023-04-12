@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination.
 title: API-eindpuntbewerkingen voor doelen
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2536'
 ht-degree: 1%
 
 ---
@@ -180,7 +180,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Zie parameter in voorbeeldconfiguratie [hier](./destination-configuration.md#example-configuration). Gebruik deze parameter om op te geven of u wilt dat de geëxporteerde profielen worden samengevoegd tot groepen met één identiteit (GAID, IDFA, telefoonnummers, e-mail, enz.). |
 | `aggregation.configurableAggregation.aggregationKey.groups` | Tekenreeks | Zie parameter in voorbeeldconfiguratie [hier](./destination-configuration.md#example-configuration). Maak lijsten met identiteitsgroepen als u profielen wilt groeperen die naar uw doel zijn geëxporteerd door groepen naamruimte. U kunt bijvoorbeeld profielen die de mobiele id&#39;s IDFA en GAID bevatten, combineren in één aanroep naar uw bestemming en e-mails in een andere aanroep met behulp van de configuratie in het voorbeeld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -443,7 +443,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Doelconfiguraties weergeven {#retrieve-list}
 
-U kunt een lijst van alle bestemmingsconfiguraties voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te dienen `/authoring/destinations` eindpunt.
+U kunt een lijst van alle bestemmingsconfiguraties voor uw organisatie terugwinnen door een verzoek van de GET tot de `/authoring/destinations` eindpunt.
 
 **API-indeling**
 
@@ -454,7 +454,7 @@ GET /authoring/destinations
 
 **Verzoek**
 
-Het volgende verzoek zal de lijst van bestemmingsconfiguraties terugwinnen die u toegang tot hebt, die op Organisatie IMS en zandbakconfiguratie wordt gebaseerd.
+Het volgende verzoek zal de lijst van bestemmingsconfiguraties terugwinnen die u toegang tot hebt, die op organisatie en zandbakconfiguratie wordt gebaseerd.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -466,7 +466,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwoord**
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingsconfiguraties waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `instanceId` komt overeen met de sjabloon voor één bestemming. De reactie is afgebroken voor de beknoptheid.
+De volgende reactie keert status 200 van HTTP met een lijst van bestemmingsconfiguraties terug die u toegang tot hebt, die op organisatieidentiteitskaart en zandbaknaam wordt gebaseerd die u gebruikte. Eén `instanceId` komt overeen met de sjabloon voor één bestemming. De reactie is afgebroken voor de beknoptheid.
 
 ```json
 {
@@ -604,7 +604,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van bestemmingscon
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment name. |
 | `segmentMappingConfig.audienceTemplateId` | Boolean | De `instanceId` van de [sjabloon voor doelmetagegevens](./audience-metadata-management.md) gebruikt voor deze bestemming. Als u een sjabloon voor publieksmetagegevens wilt instellen, leest u de [API-naslaggids voor doelmetagegevens](./audience-metadata-api.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Een bestaande doelconfiguratie bijwerken {#update}
 

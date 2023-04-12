@@ -2,9 +2,9 @@
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Een naam voor de configuratie. Zorg ervoor dat u deze waarde onthoudt omdat deze nodig is om de status van de configuratie bij een [latere stap](#check-status). De waarde is hoofdlettergevoelig. |
 | `type` | Het configuratietype. Moet worden ingesteld op `BYOK_CONFIG`. |
-| `imsOrgId` | Uw IMS-organisatie-id. Dit moet dezelfde waarde zijn als in het kader van de `x-gw-ims-org-id` header. |
+| `imsOrgId` | Uw organisatie-id. Dit moet dezelfde waarde zijn als in het kader van de `x-gw-ims-org-id` header. |
 | `configData` | Bevat de volgende details over de configuratie:<ul><li>`providerType`: Moet worden ingesteld op `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: De sleutelkluis-URI die u hebt gekopieerd [eerder](#send-to-adobe).</li></ul> |
 
 **Antwoord**

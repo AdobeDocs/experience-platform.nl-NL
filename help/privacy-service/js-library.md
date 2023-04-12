@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Privacy JavaScript-bibliotheek
 description: Met de Adobe Privacy JavaScript-bibliotheek kunt u gegevenssubject-id's ophalen voor gebruik in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 4%
 
 ---
@@ -207,7 +207,7 @@ Hieronder volgt een lijst met de geaccepteerde configuratieparameters voor onder
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `imsOrgID` | Uw IMS-organisatie-id. |
+| `imsOrgID` | Uw organisatie-id. |
 
 **Adobe Target**
 

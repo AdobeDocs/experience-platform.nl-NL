@@ -5,9 +5,9 @@ title: API's van Experience Platforms verifiëren en benaderen
 type: Tutorial
 description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API's.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ In deze zelfstudie wordt uitgelegd hoe u de vereiste gegevens verzamelt om API-a
 
 Om met succes vraag aan Experience Platform APIs te maken, moet u het volgende hebben:
 
-* Een IMS-organisatie met toegang tot Adobe Experience Platform.
+* Een organisatie met toegang tot Adobe Experience Platform.
 * Een beheerder van de Admin Console die u als ontwikkelaar en gebruiker voor een productprofiel kan toevoegen.
 
 U moet ook over een Adobe ID beschikken om deze zelfstudie te voltooien. Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
@@ -54,7 +54,7 @@ Als u eenmaal als ontwikkelaar bent toegewezen, kunt u beginnen met het maken va
 
 Uw [!DNL Admin Console] beheerder moet u ook als gebruiker toevoegen aan hetzelfde productprofiel. Zie de handleiding op [gebruikersgroepen beheren in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie .
 
-## Een API-sleutel, IMS Org ID en een clientgeheim genereren {#api-ims-secret}
+## Een API-sleutel, organisatie-id en clientgeheim genereren {#api-ims-secret}
 
 >[!NOTE]
 >

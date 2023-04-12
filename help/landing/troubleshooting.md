@@ -7,9 +7,9 @@ landing-page-description: Vind antwoorden op veelgestelde vragen en een gids voo
 short-description: Vind antwoorden op veelgestelde vragen en een gids voor het oplossen van veelvoorkomende problemen in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1868'
 ht-degree: 5%
 
 ---
@@ -32,9 +32,9 @@ De aanvraagindelingen variëren afhankelijk van [!DNL Platform] API die wordt ge
 
 Voor meer informatie over het opmaken van API-aanvragen raadpleegt u de gids Platform API aan de slag [voorbeeld-API-aanroepen lezen](./api-guide.md#sample-api) sectie.
 
-## Wat is mijn IMS-organisatie? {#what-is-my-ims-organization}
+## Wat is mijn organisatie? {#what-is-my-ims-organization}
 
-Een IMS-organisatie is een Adobe-representatie van een klant. Om het even welke vergunning gegeven Adobe oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie [!DNL Experience Platform], kan het toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) staat voor de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als header in alle API-aanvragen. Deze id is te vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een bepaalde integratie om de id onder te zoeken **Client Credentials**. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
+Een organisatie is een Adobe-representatie van een klant. Om het even welke vergunning gegeven Adobe oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een organisatie recht heeft op [!DNL Experience Platform], kan het toegang toewijzen aan ontwikkelaars. De organisatie-id (`x-gw-ims-org-id`) staat voor de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als header in alle API-aanvragen. Deze id is te vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een bepaalde integratie om de id onder te zoeken **Client Credentials**. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 
@@ -42,7 +42,7 @@ Een API-sleutel is vereist als een header in alle API-aanvragen. Het kan via [Ad
 
 ## Hoe krijg ik een toegangstoken? {#how-do-i-get-an-access-token}
 
-Toegangstempens zijn vereist in de machtigingheader van alle API-aanroepen. Ze kunnen worden gegenereerd met behulp van een `curl` gebruiken, op voorwaarde dat u toegang hebt tot een integratie voor een IMS-organisatie. Toegangstokens zijn slechts geldig gedurende 24 uur, waarna een nieuw teken moet worden geproduceerd om verder te gebruiken API. Voor details bij het produceren van toegangstokens, zie [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
+Toegangstempens zijn vereist in de machtigingheader van alle API-aanroepen. Ze kunnen worden gegenereerd met een CURL-opdracht, op voorwaarde dat u toegang hebt tot een integratie voor een organisatie. Toegangstokens zijn slechts geldig gedurende 24 uur, waarna een nieuw teken moet worden geproduceerd om verder te gebruiken API. Voor details bij het produceren van toegangstokens, zie [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Hoe gebruik ik queryparameters? {#how-do-i-user-query-parameters}
 
@@ -151,7 +151,7 @@ Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutel
 }
 ```
 
-Dit foutbericht wordt weergegeven als een IMS org-header (`x-gw-ims-org-id`) ontbreekt in een API-aanvraag. Zorg ervoor dat de koptekst is opgenomen in de id van uw IMS-organisatie voordat u het opnieuw probeert.
+Dit foutbericht wordt weergegeven wanneer een organisatiekoptekst (`x-gw-ims-org-id`) ontbreekt in een API-aanvraag. Zorg ervoor dat de koptekst is opgenomen in de id van uw organisatie voordat u het opnieuw probeert.
 
 ### Profiel is niet geldig {#profile-is-not-valid}
 
@@ -162,7 +162,7 @@ Dit foutbericht wordt weergegeven als een IMS org-header (`x-gw-ims-org-id`) ont
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de gebruiker of de Adobe I/O-integratie (geïdentificeerd door de [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` header) heeft geen recht om te bellen naar [!DNL Experience Platform] API&#39;s voor de IMS Org die worden geleverd in het dialoogvenster `x-gw-ims-org-id` header. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, kunt u deze vinden in de [Adobe I/O-console](https://console.adobe.io): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een specifieke integratie om de id onder te zoeken **Client Credentials**.
+Dit foutbericht wordt weergegeven wanneer de gebruiker of de Adobe I/O-integratie (geïdentificeerd door de [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` header) heeft geen recht om te bellen naar [!DNL Experience Platform] API&#39;s voor de organisatie die in het `x-gw-ims-org-id` header. Zorg ervoor dat u de juiste id voor uw organisatie hebt opgegeven in de koptekst voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, kunt u deze vinden in de [Adobe I/O-console](https://console.adobe.io): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een specifieke integratie om de id onder te zoeken **Client Credentials**.
 
 ### Fout bij vernieuwen van tag {#refresh-etag-error}
 
@@ -199,7 +199,7 @@ Dit foutbericht wordt weergegeven wanneer een POST-, PUT- of PATCH-aanvraag onge
 ```
 
 Dit foutbericht wordt weergegeven in een van de twee onderstaande gevallen:
-- Wanneer een onjuiste of onjuist gevormde IMS Org-header (`x-gw-ims-org-id`) wordt doorgegeven in een API-aanvraag. Zorg ervoor dat de juiste id van uw IMS-organisatie is opgenomen voordat u het opnieuw probeert.
+- Wanneer een onjuiste of onjuist gevormde organisatie-id-header (`x-gw-ims-org-id`) wordt doorgegeven in een API-aanvraag. Zorg ervoor dat de juiste id van uw organisatie is opgenomen voordat u het opnieuw probeert.
 - Wanneer uw account (weergegeven door de opgegeven verificatiereferenties) niet is gekoppeld aan een productprofiel voor Experience Platform. Voer de volgende stappen uit [toegangsreferenties genereren](./api-authentication.md#authentication-for-each-session) in de Platform API-verificatiezelfstudie om Platform toe te voegen aan uw account en uw verificatiegegevens dienovereenkomstig bij te werken.
 
 ## Servicemap voor probleemoplossing {#service-troubleshooting-directory}

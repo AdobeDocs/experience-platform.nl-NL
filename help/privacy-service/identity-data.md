@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identiteitsgegevens voor privacyverzoeken
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens voor privacyverzoeken van klanten op te halen.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerk
 
 Wanneer een klant met uw merk door verscheidene verschillende kanalen kan in wisselwerking staan, kan het lastig zijn om de ongelijke herkenningstekens te verzoenen die van die vele interactie worden geregistreerd. Dit kan het op zijn beurt moeilijk maken te bepalen welke gegevens bij een bepaalde persoon in uw [!DNL Experience Cloud] toepassingen.
 
-Bijvoorbeeld bij het verwerken van verzoeken om klantgegevens in [!DNL Privacy Service], kan een identiteit een koekjeswaarde vertegenwoordigen die onder een Adobe-gecontroleerd domein, een koekjeswaarde onder een derdedomein wordt geplaatst en met Adobe wordt gedeeld, of een douaneherkenningsteken die u uitdrukkelijk binnen uw IMS Organisatie bepaalt.
+Bijvoorbeeld bij het verwerken van verzoeken om klantgegevens in [!DNL Privacy Service], kan een identiteit een koekjeswaarde vertegenwoordigen die onder een Adobe-gecontroleerd domein, een koekjeswaarde onder een derdedomein wordt geplaatst en met Adobe wordt gedeeld, of een douaneherkenningsteken die u uitdrukkelijk binnen uw organisatie bepaalt.
 
 Daarom moet elke identiteit die aan [!DNL Privacy Service] gaat vergezeld van een naamruimte die context biedt door de identiteitswaarde te koppelen aan het systeem van oorsprong. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 

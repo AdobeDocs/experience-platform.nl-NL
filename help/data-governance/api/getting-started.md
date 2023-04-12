@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met de API voor beleidsservice
 description: Met de API voor beleidsservice kunt u verschillende bronnen maken en beheren die te maken hebben met Adobe Experience Platform Data Governance. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Dienst API van het Beleid te maken.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Binnen de [!DNL Policy Service] API, alle beleid en marketingacties worden aangeduid als `core` of `custom` middelen.
 
-`core` de middelen zijn die welke door Adobe worden gedefinieerd en gehandhaafd, terwijl `custom` bronnen zijn bronnen die door uw organisatie worden gemaakt en onderhouden en zijn daarom uniek en alleen zichtbaar voor uw IMS-organisatie. Als dusdanig, lijst en raadplegingsverrichtingen (`GET`) zijn de enige bewerkingen die zijn toegestaan op `core` bronnen, terwijl bewerkingen voor het weergeven, opzoeken en bijwerken (`POST`, `PUT`, `PATCH`, en `DELETE`) is beschikbaar voor `custom` middelen.
+`core` de middelen zijn die welke door Adobe worden gedefinieerd en gehandhaafd, terwijl `custom` bronnen zijn bronnen die door uw organisatie worden gemaakt en onderhouden en zijn daarom uniek en alleen zichtbaar voor uw organisatie. Als dusdanig, lijst en raadplegingsverrichtingen (`GET`) zijn de enige bewerkingen die zijn toegestaan op `core` bronnen, terwijl bewerkingen voor het weergeven, opzoeken en bijwerken (`POST`, `PUT`, `PATCH`, en `DELETE`) is beschikbaar voor `custom` middelen.
 
 ## Volgende stappen
 

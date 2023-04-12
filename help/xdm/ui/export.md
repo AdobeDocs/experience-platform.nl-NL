@@ -1,21 +1,21 @@
 ---
 solution: Experience Platform
 title: XDM-schema's exporteren in de gebruikersinterface
-description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of IMS-organisatie in de Adobe Experience Platform-gebruikersinterface.
+description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of organisatie in de Adobe Experience Platform-gebruikersinterface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
 
 # XDM-schema&#39;s exporteren in de gebruikersinterface
 
-Alle bronnen in de Schemabibliotheek bevinden zich in een specifieke sandbox binnen een IMS-organisatie. In sommige gevallen wilt u mogelijk bronnen van het Experience Data Model (XDM) delen tussen sandboxen en IMS Orgs.
+Alle bronnen in de Schemabibliotheek bevinden zich in een specifieke sandbox binnen een organisatie. In sommige gevallen wilt u wellicht XDM-bronnen (Experience Data Model) delen tussen sandboxen en organisaties.
 
-Om aan deze behoefte tegemoet te komen, [!UICONTROL Schemas] in de Adobe Experience Platform-gebruikersinterface kunt u een exportlading genereren voor elk schema in de Schemabibliotheek. Deze nuttige lading kan dan in een vraag aan de Registratie-API van het Schema worden gebruikt om het schema (en alle afhankelijke middelen) in een doelzandbak en IMS Org in te voeren.
+Om aan deze behoefte tegemoet te komen, [!UICONTROL Schemas] in de Adobe Experience Platform-gebruikersinterface kunt u een exportlading genereren voor elk schema in de Schemabibliotheek. Deze nuttige lading kan dan in een vraag aan de Registratie API van het Schema worden gebruikt om het schema (en alle afhankelijke middelen) in een doelzandbak en een organisatie in te voeren.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ Om aan deze behoefte tegemoet te komen, [!UICONTROL Schemas] in de Adobe Experie
 
 ## Vereisten
 
-Terwijl de interface van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of IMS te importeren Orgs om het werkschema te voltooien. Zie voor handleiding [aan de slag gaan met de Schema Registry-API](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
+Terwijl de interface van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of organisaties in te voeren om het werkschema te voltooien. Zie voor handleiding [aan de slag gaan met de Schema Registry-API](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
 
 ## Een exportlading genereren
 
@@ -201,14 +201,14 @@ Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de 
 ]
 ```
 
-De payload heeft de vorm van een array, waarbij elk arrayitem een object is dat een aangepaste XDM-bron vertegenwoordigt die geëxporteerd moet worden. In het bovenstaande voorbeeld wordt &quot;[!DNL Loyalty details]&quot; aangepaste veldgroep en &quot;[!DNL Loyalty Members]&quot; schema is opgenomen. Alle kernbronnen die door het schema worden gebruikt, worden niet in de exportbewerking opgenomen, aangezien deze bronnen beschikbaar zijn in alle sandboxen en IMS-organisaties.
+De payload heeft de vorm van een array, waarbij elk arrayitem een object is dat een aangepaste XDM-bron vertegenwoordigt die geëxporteerd moet worden. In het bovenstaande voorbeeld wordt &quot;[!DNL Loyalty details]&quot; aangepaste veldgroep en &quot;[!DNL Loyalty Members]&quot; schema is opgenomen. Alle kernbronnen die door het schema worden gebruikt, worden niet opgenomen in de exportbewerking, aangezien deze bronnen beschikbaar zijn in alle sandboxen en organisaties.
 
 Merk op dat elk geval van de huurder ID van uw organisatie verschijnt zoals `<XDM_TENANTID_PLACEHOLDER>` in de lading. Deze placeholders zullen automatisch met de aangewezen waarde van huurdersidentiteitskaart afhankelijk van worden vervangen waar u het schema in de volgende stap invoert.
 
 ## De bron importeren met de API
 
-Nadat u de JSON-exportbewerking voor het schema hebt gekopieerd, kunt u deze gebruiken als de payload voor een aanvraag van een POST naar de `/rpc/import` eindpunt in de schemaregistratie-API. Zie de [hulplijn voor importeindpunt](../api/import.md) voor details op hoe te om de vraag te vormen om het schema naar de gewenste IMS Org en zandbak te verzenden.
+Nadat u de JSON-exportbewerking voor het schema hebt gekopieerd, kunt u deze gebruiken als de payload voor een aanvraag van een POST naar de `/rpc/import` eindpunt in de schemaregistratie-API. Zie de [hulplijn voor importeindpunt](../api/import.md) voor details op hoe te om de vraag te vormen om het schema naar de gewenste organisatie en zandbak te verzenden.
 
 ## Volgende stappen
 
-Als u deze handleiding volgt, hebt u een XDM-schema geëxporteerd naar een andere IMS-organisatie of -sandbox. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] UI, verwijs naar [[!UICONTROL Schemas] Overzicht van gebruikersinterface](./overview.md).
+In deze handleiding hebt u een XDM-schema geëxporteerd naar een andere organisatie of sandbox. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] UI, verwijs naar [[!UICONTROL Schemas] Overzicht van gebruikersinterface](./overview.md).

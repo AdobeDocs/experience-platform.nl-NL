@@ -5,9 +5,9 @@ title: Een model trainen en evalueren met de API voor leren van Sensei Machine
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen voor leren van Sensei-machines.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Volg de [Zelfstudie over Experience Platform API-verificatie](https://www.adobe.
 In de zelfstudie hebt u nu de volgende waarden:
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
-- `{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+- `{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 - `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 - Koppeling naar een Docker-afbeelding van een intelligente service
@@ -65,7 +65,7 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: De configuratie van onze MLInstance. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
@@ -176,7 +176,7 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Het gemaakte experimentele object. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
@@ -232,7 +232,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Te posten gegevensset. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
@@ -320,7 +320,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
-`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Als u een trainingsrun wilt maken, moet u het volgende opnemen in het hoofdgedeelte:
@@ -391,7 +391,7 @@ curl -X GET \
 `{EXPERIMENT_ID}`: De id die het experiment vertegenwoordigt.\
 `{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 **Antwoord**
@@ -454,7 +454,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de uitvoering van het experiment waarop u zich wilt richten. Dit vindt u in het antwoord bij het maken van uw experimentele versie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
@@ -501,7 +501,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{ORG_ID}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+`{ORG_ID}`: De verificatiegegevens van uw organisatie zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 >[!NOTE]
 >

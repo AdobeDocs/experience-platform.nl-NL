@@ -4,9 +4,9 @@ title: API-eindpunt voor beleid samenvoegen
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2468'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het 
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
-Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. API-toegang [!DNL Profile] de gegevens vereisen een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een samenvoegbeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
+Het beleid van de fusie is privé aan uw organisatie, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. API-toegang [!DNL Profile] de gegevens vereisen een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een samenvoegbeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
 
 Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklasse kan hebben, kan elke klasse slechts één standaardsamenvoegbeleid hebben. Om het even welk samenvoegbeleid dat als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de naam van de schemacategorie wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt.
 
@@ -37,7 +37,7 @@ Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklass
 
 Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Als u wilt dat een segment aan de rand wordt geactiveerd (gemarkeerd als een randsegment), moet het segment zijn gekoppeld aan een samenvoegingsbeleid dat is gemarkeerd als actief aan de rand. Als een segment **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het segment niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming segment.
 
-Bovendien kan elke IMS-organisatie alleen **één** samenvoegbeleid dat op rand actief is. Als een samenvoegbeleid op rand actief is, kan het voor andere systemen op rand, zoals het Profiel van de Rand, de Segmentatie van de Rand, en Doelen op Rand worden gebruikt.
+Bovendien kan elke organisatie alleen **één** samenvoegbeleid dat op rand actief is. Als een samenvoegbeleid op rand actief is, kan het voor andere systemen op rand, zoals het Profiel van de Rand, de Segmentatie van de Rand, en Doelen op Rand worden gebruikt.
 
 ### Object voor samenvoegbeleid voltooien
 
@@ -193,7 +193,7 @@ Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren,
 
 ## Beleid voor samenvoegen openen {#access-merge-policies}
 
-Met de [!DNL Real-Time Customer Profile] API, de `/config/mergePolicies` het eindpunt staat u toe een raadplegingsverzoek uitvoert om een specifiek samenvoegbeleid door zijn identiteitskaart te bekijken, of toegang tot elk van het fusiebeleid in uw IMS Organisatie, die door specifieke criteria wordt gefiltreerd. U kunt ook de opdracht `/config/mergePolicies/bulk-get` eindpunt om veelvoudige samenvoegbeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
+Met de [!DNL Real-Time Customer Profile] API, de `/config/mergePolicies` het eindpunt staat u toe een raadplegingsverzoek uitvoert om een specifiek fusiebeleid door zijn identiteitskaart te bekijken, of toegang tot elk van het fusiebeleid in uw organisatie, gefilterd door specifieke criteria. U kunt ook de opdracht `/config/mergePolicies/bulk-get` eindpunt om veelvoudige samenvoegbeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
 
 ### Heb toegang tot één enkel fusiebeleid door identiteitskaart
 
@@ -347,7 +347,7 @@ Zie de [componenten van samenvoegingsbeleid](#components-of-merge-policies) aan 
 
 ### Meerdere vormen van samenvoegingsbeleid weergeven op basis van criteria
 
-U kunt meerdere samenvoegbeleidsregels weergeven binnen uw IMS-organisatie door een verzoek tot GET te richten aan de `/config/mergePolicies` eindpunt en het gebruiken van facultatieve vraagparameters aan filter, orde, en pagineren de reactie. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
+U kunt meerdere samenvoegbeleidsregels binnen uw organisatie weergeven door een verzoek om GET aan de `/config/mergePolicies` eindpunt en het gebruiken van facultatieve vraagparameters aan filter, orde, en pagineren de reactie. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
 
 **API-indeling**
 

@@ -1,9 +1,10 @@
 ---
 title: API-eindpunt exporteren
 description: Het /export eindpunt in de Registratie API van het Schema staat u toe om middelen XDM tussen zandbakken te delen.
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -32,7 +33,7 @@ GET /rpc/export/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de XDM-bron die u wilt exporteren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -50,7 +51,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door de gebruiker gemaakt object `Property` gegevenstype dat `Restaurant` veldgroep werkt, terwijl het tweede object het `Restaurant` veldgroep zelf. Deze lading kan dan worden gebruikt aan [de bron importeren](#import) naar een andere sandbox of IMS-organisatie.
+Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door de gebruiker gemaakt object `Property` gegevenstype dat `Restaurant` veldgroep werkt, terwijl het tweede object het `Restaurant` veldgroep zelf. Deze lading kan dan worden gebruikt aan [de bron importeren](#import) in een andere sandbox of organisatie.
 
 Merk op dat alle instanties van huurder ID van het middel met worden vervangen `<XDM_TENANTID_PLACEHOLDER>`. Dit staat de Registratie van het Schema toe om correcte huurdersidentiteitskaart op de middelen automatisch toe te passen afhankelijk van waar zij in de verdere de invoervraag worden verzonden.
 

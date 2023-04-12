@@ -2,18 +2,18 @@
 keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;vraag;vraagredacteur;de redacteur van de vraag;de redacteur van de Vraag;
 solution: Experience Platform
 title: UI-gids voor zoekservice
-description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
+description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
 
 # [!DNL Query Service] UI-hulplijn
 
-De Adobe Experience Platform [!DNL Query Service] biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query&#39;s, het weergeven van eerder uitgevoerde query&#39;s en het openen van query&#39;s die zijn opgeslagen door gebruikers binnen uw IMS-organisatie. Om tot UI binnen toegang te hebben [Adobe Experience Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Queries]** in de linkernavigatie.
+De Adobe Experience Platform [!DNL Query Service] verstrekt een gebruikersinterface die kan worden gebruikt om vragen te schrijven en uit te voeren, eerder uitgevoerde vragen, en toegangsvragen te bekijken die door gebruikers binnen uw organisatie worden bewaard. Om tot UI binnen toegang te hebben [Adobe Experience Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Queries]** in de linkernavigatie.
 
 ## [!DNL Query Editor]
 

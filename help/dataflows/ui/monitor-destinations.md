@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3078'
 ht-degree: 0%
 
 ---
@@ -289,7 +289,7 @@ Als u meer details wilt zien over een specifieke gegevensstroomuitvoering, selec
 De dataflow looppas detailpagina, naast de details die op de dataflow looppas lijst worden getoond, toont specifiekere informatie over dataflow:
 
 - **[!UICONTROL Dataflow run ID]**: De id van de gegevensstroom.
-- **[!UICONTROL IMS org ID]**: De IMS-organisatie waartoe de gegevensstroom behoort.
+- **[!UICONTROL IMS org ID]**: De organisatie waartoe de gegevensstroom behoort.
 - **[!UICONTROL Last updated]**: De tijd de dataflow looppas werd laatst bijgewerkt.
 
 De detailspagina heeft ook een knevel om tussen dataflow loopfouten en segmenten te schakelen. Deze optie is slechts beschikbaar voor dataflow looppas in partijbestemmingen.

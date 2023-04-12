@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van sandboxen
 description: Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Plat
 
 Een instantie van het Experience Platform steunt veelvoudige productie en ontwikkelingszandbakken, met elke zandbak die zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.) handhaaft. Bovendien hebben zowel productie als ontwikkelingszandbakken een terugstellende eigenschap die alle klant-gecreeerde middelen uit de zandbak verwijdert. Ontwikkelingssandboxen kunnen niet worden geconverteerd naar productiesandboxen.
 
-Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal. Deze extra sandboxen kunnen worden gebruikt om zowel productie- als ontwikkelingssandboxen te maken. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
+Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal. Deze extra sandboxen kunnen worden gebruikt om zowel productie- als ontwikkelingssandboxen te maken. Neem voor meer informatie contact op met de systeembeheerder van de organisatie of uw Adobe-vertegenwoordiger.
 
-Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt gecreeerd wanneer een IMS Org voor het eerst wordt gecreeerd. Met de standaardproductiesandbox kunt u gegevens van het Platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten.
+Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt gecreeerd wanneer een organisatie eerst wordt gecreeerd. Met de standaardproductiesandbox kunt u gegevens van het Platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Tot slot is de standaardproductiesandbox de eerste productiesandbox die wordt ge
 Samengevat bieden sandboxen de volgende voordelen:
 
 * **Levenscyclusbeheer van toepassingen**: Maak afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-* **Project- en merkbeheer**: Toestaan dat meerdere projecten parallel lopen binnen dezelfde IMS-organisatie, terwijl isolatie en toegangsbeheer worden geboden. De toekomstige versies zullen steun voor het opstellen in veelvoudige regio&#39;s verstrekken.
+* **Project- en merkbeheer**: Toestaan dat meerdere projecten parallel binnen dezelfde organisatie worden uitgevoerd, terwijl isolatie en toegangsbeheer worden geboden. De toekomstige versies zullen steun voor het opstellen in veelvoudige regio&#39;s verstrekken.
 * **Flexibele ontwikkeling-ecosysteem**: Biedt sandboxen op een naadloze, schaalbare en voordelige manier voor exploratie, activering en demonstratie.
 
 ## Toegangsbeheer voor sandboxen

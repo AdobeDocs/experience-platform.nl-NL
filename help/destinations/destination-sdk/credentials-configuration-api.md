@@ -2,9 +2,9 @@
 description: Op deze pagina worden alle API-bewerkingen beschreven die u kunt uitvoeren met het API-eindpunt `/authoring/credentials`.
 title: API-bewerkingen van het eindpunt Credentials
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '791'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `servicePrincipalKey` | Tekenreeks | Azure Service Principal Key for Azure Data Lake Storage |
 | `connectionString` | Tekenreeks | Azure Blob Storage connection string |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -140,7 +140,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Configuraties van lijstreferenties {#retrieve-list}
 
-U kunt een lijst van alle geloofsbrieven configuraties voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te dienen `/authoring/credentials` eindpunt.
+U kunt een lijst van alle geloofsbrieven configuraties voor uw organisatie terugwinnen door een verzoek van de GET tot de `/authoring/credentials` eindpunt.
 
 **API-indeling**
 
@@ -151,7 +151,7 @@ GET /authoring/credentials
 
 **Verzoek**
 
-Het volgende verzoek zal de lijst van geloofsgeloofsconfiguraties terugwinnen die u toegang tot hebt, op organisatie IMS en zandbakconfiguratie wordt gebaseerd.
+Het volgende verzoek zal de lijst van geloofsgeloofsconfiguraties terugwinnen die u toegang tot hebt, op organisatie en zandbakconfiguratie wordt gebaseerd.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Antwoord**
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van aanmeldingsconfiguraties waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `instanceId` komt overeen met de sjabloon voor één aanmeldingsconfiguratie. De reactie is afgebroken voor de beknoptheid.
+De volgende reactie keert status 200 van HTTP met een lijst van geloofsbrieven configuraties terug die u toegang tot hebt, die op organisatie identiteitskaart en zandbaknaam wordt gebaseerd die u gebruikte. Eén `instanceId` komt overeen met de sjabloon voor één aanmeldingsconfiguratie. De reactie is afgebroken voor de beknoptheid.
 
 ```json
 {

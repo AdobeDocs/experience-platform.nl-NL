@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor probleemoplossing voor sandboxen
 description: Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Sandboxen zijn geïsoleerde partities van één Platform-instantie, waarbij elke
 
 ## Wat is de standaardproductiesandbox?
 
-De standaardproductiessandbox is de eerste productiesandbox die wordt gemaakt wanneer een IMS-organisatie voor het eerst wordt ingericht. Met de standaardproductiesandbox kunt u gegevens van het Platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten. De standaardproductiesandbox kan worden opnieuw ingesteld maar niet worden verwijderd.
+De standaardproductiesandbox is de eerste productiesandbox die wordt gecreeerd wanneer een organisatie eerst provisioned is. Met de standaardproductiesandbox kunt u gegevens van het Platform invoeren of gebruiken en kunt u aanvragen accepteren die geen waarden voor de naam van een sandbox of een sandbox-id bevatten. De standaardproductiesandbox kan worden opnieuw ingesteld maar niet worden verwijderd.
 
 ## Hoeveel productiesandboxen kan ik hebben?
 
@@ -63,7 +63,7 @@ U kunt de titel van een productiesandbox bijwerken. De naam van een productiesan
 
 ## Hoeveel ontwikkelingssandboxen kan ik hebben?
 
-Met Experience Platform kunnen momenteel maximaal 75 sandboxen (productie en ontwikkeling) actief zijn binnen één IMS-organisatie.
+Met Experience Platform kunnen momenteel maximaal 75 sandboxen (productie en ontwikkeling) actief zijn binnen één organisatie.
 
 Ontwikkelingssandboxen bieden ondersteuning voor functies voor opnieuw instellen en verwijderen.
 

@@ -4,9 +4,9 @@ description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Ad
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -107,10 +107,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `companyContexts` | Een array met verificatiegegevens voor uw organisatie. Het moet één object met de volgende eigenschappen bevatten: <ul><li>`namespace`: Moet worden ingesteld op `imsOrgID`.</li><li>`value`: Uw IMS-organisatie-id. Dit is dezelfde waarde als in het dialoogvenster `x-gw-ims-org-id` header.</li></ul> |
+| `companyContexts` | Een array met verificatiegegevens voor uw organisatie. Het moet één object met de volgende eigenschappen bevatten: <ul><li>`namespace`: Moet worden ingesteld op `imsOrgID`.</li><li>`value`: Uw organisatie-id. Dit is dezelfde waarde als in het dialoogvenster `x-gw-ims-org-id` header.</li></ul> |
 | `users` | Een array met een verzameling van ten minste één gebruiker waarvan u de gegevens wilt verwijderen. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Moet één tekenreekswaarde bevatten: `delete`.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bevat de volgende eigenschappen: <ul><li>`namespace`: De [naamruimte identity](../../identity-service/namespaces.md) is gekoppeld aan de id. Dit kan een [standaardnaamruimte](../../privacy-service/api/appendix.md#standard-namespaces) herkend door Platform, of het kan een aangepaste naamruimte zijn die door uw organisatie wordt gedefinieerd. Het type gebruikte naamruimte moet worden weerspiegeld in het dialoogvenster `type` eigenschap.</li><li>`value`: De identiteitswaarde.</li><li>`type`: Moet worden ingesteld op `standard` als een algemeen erkende naamruimte wordt gebruikt, of `custom` als u een naamruimte gebruikt die door uw organisatie is gedefinieerd.</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 

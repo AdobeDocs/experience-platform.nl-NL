@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor planningen
 description: Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2009'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst met schema&#39;s voor de opgegeven IMS-organisatie als JSON.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#39;s voor de gespecificeerde organisatie als JSON terug.
 
 >[!NOTE]
 >
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de staat van het programma bijwerkt, moet u de waarde van plaatsen `path` naar &quot;/state&quot;. |
-| `value` | De bijgewerkte waarde van de staat van het programma. Deze waarde kan worden ingesteld op &quot;actief&quot; of &quot;inactief&quot; om het schema te activeren of deactiveren. Houd er rekening mee dat u **kan** Schakel een schema uit als de IMS-organisatie is ingeschakeld voor streaming. |
+| `value` | De bijgewerkte waarde van de staat van het programma. Deze waarde kan worden ingesteld op &quot;actief&quot; of &quot;inactief&quot; om het schema te activeren of deactiveren. Houd er rekening mee dat u **kan** maak een programma onbruikbaar als de organisatie voor het stromen is toegelaten. |
 
 **Antwoord**
 

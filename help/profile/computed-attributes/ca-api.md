@@ -6,9 +6,9 @@ description: In Adobe Experience Platform zijn berekende kenmerken functies die 
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2274'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | De naam van het berekende kenmerkveld, als een tekenreeks. |
 | `path` | Het pad naar het veld met het berekende kenmerk. Dit pad is gevonden in het dialoogvenster `properties` kenmerk van het schema en mag de veldnaam NIET in het pad opnemen. Laat bij het schrijven van het pad de verschillende niveaus van `properties` kenmerken. |
 | `{TENANT_ID}` | Als u niet bekend bent met uw huurder-id, raadpleegt u de stappen voor het zoeken van uw huurder-id in het dialoogvenster [Handleiding voor ontwikkelaars van het schema Register](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat hierdoor anderen binnen uw IMS-organisatie kunnen bepalen welk kenmerk correct moet worden berekend. |
+| `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat dit anderen binnen uw organisatie helpt te bepalen welk kenmerk correct moet worden berekend. |
 | `expression.value` | Een geldige [!DNL Profile Query Language] (PQL) expression. De berekende kenmerken ondersteunen momenteel de volgende functies: som, aantal, min, max en boolean. Voor een lijst met voorbeeldexpressies raadpleegt u de [Voorbeeld-PQL-expressies](expressions.md) documentatie. |
 | `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema op basis van de klasse XDM ExperienceEvent. |
 

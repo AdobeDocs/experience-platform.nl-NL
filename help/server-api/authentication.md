@@ -2,9 +2,9 @@
 title: Verificatie
 description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Network Server-API configureert.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ API-aanroepen die afkomstig zijn van een privéserver op `server.adobedc.net` mo
 
 Alvorens u vraag kunt maken aan [!DNL Server API]moet u aan de volgende voorwaarden voldoen:
 
-* U hebt een IMS-organisatie-account met toegang tot Adobe Experience Platform.
+* U hebt een organisatie-account met toegang tot Adobe Experience Platform.
 * Je Experience Platform account heeft de `developer` en `user` rollen die zijn ingeschakeld voor het Adobe Experience Platform API-productprofiel. Neem contact op met uw [Admin Console](../access-control/home.md) beheerder om deze rollen voor uw rekening toe te laten.
 * Je hebt een Adobe ID. Als je geen Adobe ID hebt, ga dan naar de [Adobe Developer Console](https://developer.adobe.com/console) en maak een nieuwe account.
 

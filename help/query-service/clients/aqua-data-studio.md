@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connect Aqua Data Studio aan de Dienst van de Vraag
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Voor deze handleiding hebt u al toegang tot [!DNL Aqua Data Studio] en vertrouwd
 >
 >Er zijn [!DNL Windows] en [!DNL macOS] versies van [!DNL Aqua Data Studio]. Screenshots in deze gids werden genomen gebruikend [!DNL macOS] bureaubladtoepassing. Er kunnen kleine discrepanties in UI tussen de versies zijn.
 
-Om de vereiste geloofsbrieven te verkrijgen voor het verbinden [!DNL Aqua Data Studio] aan Experience Platform, moet u toegang hebben tot [!UICONTROL Queries] in de gebruikersinterface van het Platform. Neem contact op met uw IMS-systeembeheerder als u momenteel geen toegang hebt tot de [!UICONTROL Queries] werkruimte.
+Om de vereiste geloofsbrieven te verkrijgen voor het verbinden [!DNL Aqua Data Studio] aan Experience Platform, moet u toegang hebben tot [!UICONTROL Queries] in de gebruikersinterface van het Platform. Neem contact op met uw systeembeheerder als u momenteel geen toegang hebt tot de [!UICONTROL Queries] werkruimte.
 
 ## De server registreren {#register-server}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Modellen ontwerpen met de SDK van het Adobe Experience Platform-Platform
 description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '489'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Deze zelfstudie biedt u informatie over het converteren `data_access_sdk_python`
 
 ## Verificatie opbouwen {#build-authentication}
 
-De authentificatie wordt vereist om vraag te maken aan [!DNL Adobe Experience Platform]en bestaat uit API-sleutel, IMS Org-id, een gebruikerstoken en een servicetoken.
+De authentificatie wordt vereist om vraag te maken aan [!DNL Adobe Experience Platform]en bestaat uit API-sleutel, organisatie-id, een gebruikerstoken en een servicetoken.
 
 ### Python
 
@@ -31,7 +31,7 @@ Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_con
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Als u geen Jupyter-laptop gebruikt of als u de IMS-modus moet wijzigen, gebruikt u het onderstaande codevoorbeeld:
+Als u geen Jupyter-laptop gebruikt of als u de organisatie moet wijzigen, gebruikt u het onderstaande codevoorbeeld:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Als u geen Jupyter-laptop gebruikt of als u de IMS-modus moet wijzigen, gebruikt u het onderstaande codevoorbeeld:
+Als u geen Jupyter-laptop gebruikt of als u een andere organisatie wilt gebruiken, gebruikt u het onderstaande codevoorbeeld:
 
 ```r
 library(reticulate)
@@ -79,7 +79,7 @@ Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken
 
 >[!NOTE]
 >
->De IMS-organisatie wordt ingesteld binnen de `client_context`.
+>De organisatie wordt ingesteld binnen de `client_context`.
 
 ### Python
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->De IMS-organisatie wordt ingesteld binnen de `client_context`.
+>De organisatie wordt ingesteld binnen de `client_context`.
 
 Gebruik een van de volgende voorbeelden om gegevens in Python en R te schrijven:
 

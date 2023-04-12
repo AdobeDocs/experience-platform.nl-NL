@@ -5,9 +5,9 @@ title: Een gegevensstroom voor streaming maken voor Raw-gegevens met de Flow Ser
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 
 ## Een doelverbinding maken {#target-connection}
 
-De verbindingen van het doel leiden tot en leiden een bestemmingsverbinding aan Platform of om het even welke plaats waar de overgebrachte gegevens zullen landen. De verbindingen van het doel bevatten informatie betreffende gegevensbestemming, gegevensformaat, en identiteitskaart van de doelverbinding die wordt vereist om een gegevensstroom tot stand te brengen. De instanties van de doelverbinding zijn specifiek voor een huurder en IMS Organisatie.
+De verbindingen van het doel leiden tot en leiden een bestemmingsverbinding aan Platform of om het even welke plaats waar de overgebrachte gegevens zullen landen. De verbindingen van het doel bevatten informatie betreffende gegevensbestemming, gegevensformaat, en identiteitskaart van de doelverbinding die wordt vereist om een gegevensstroom tot stand te brengen. De de verbindingsinstanties van het doel zijn specifiek voor een huurder en organisatie.
 
 Om een doelverbinding tot stand te brengen, doe een verzoek van de POST aan `/targetConnections` van het [!DNL Flow Service] API. Als onderdeel van de aanvraag moet u de volgende gegevens opgeven: `dataSetId` opgehaald in de vorige stap, en vaste identiteitskaart van de verbindingsspecificatie verbonden aan [!DNL Data Lake]. Deze id is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 

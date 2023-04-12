@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsservice-api;handleiding voor ontwikkelaars van identiteitsservices;regio
 solution: Experience Platform
 title: Identiteitsservice-API-handleiding
-description: Met de Identiteitsservice-API kunnen ontwikkelaars de identificatie van uw klanten via verschillende apparaten, kanalen en in de buurt van realtime beheren met behulp van identiteitsgrafieken in Adobe Experience Platform. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+description: Met de Identiteitsservice-API kunnen ontwikkelaars de identificatie van uw klanten via verschillende apparaten, kanalen en in de buurt van realtime beheren met behulp van identiteitsgrafieken in Adobe Experience Platform. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 0%
+source-wordcount: '764'
+ht-degree: 2%
 
 ---
 
@@ -51,7 +51,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ### Regionaal verpletteren
 
-De [!DNL Identity Service] API gebruikt regio-specifieke eindpunten die de opname van een `{REGION}` als onderdeel van het aanvraagpad. Tijdens de provisioning van uw IMS-organisatie wordt een gebied bepaald en opgeslagen binnen uw IMS Org-profiel. Het gebruiken van het correcte gebied met elk eindpunt zorgt ervoor dat alle die verzoeken gebruikend worden gemaakt [!DNL Identity Service] API worden naar het juiste gebied gerouteerd.
+De [!DNL Identity Service] API gebruikt regio-specifieke eindpunten die de opname van een `{REGION}` als onderdeel van het aanvraagpad. Tijdens de levering van uw organisatie, wordt een gebied bepaald en opgeslagen binnen uw organisatieprofiel. Het gebruiken van het correcte gebied met elk eindpunt zorgt ervoor dat alle die verzoeken gebruikend worden gemaakt [!DNL Identity Service] API worden naar het juiste gebied gerouteerd.
 
 Er zijn momenteel twee gebieden die worden ondersteund door [!DNL Identity Service] API&#39;s: VA7 en NLD2.
 
@@ -66,7 +66,7 @@ In de onderstaande tabel worden voorbeeldpaden met behulp van gebieden weergegev
 >
 >De verzoeken die zonder een gebied worden gemaakt te specificeren kunnen in vraag resulteren die aan het onjuiste gebied verplettert of vraag veroorzaken om onverwacht te ontbreken.
 
-Als u het gebied niet kunt vinden binnen uw IMS Org-profiel, gelieve uw systeembeheerder voor steun te contacteren.
+Als u het gebied niet kunt vinden binnen uw organisatieprofiel, gelieve uw systeembeheerder voor steun te contacteren.
 
 ## Met de [!DNL Identity Service] API
 

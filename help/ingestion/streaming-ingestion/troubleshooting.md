@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met streaming-inname
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1018'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Wanneer synchrone validatie niet wordt ondersteund voor de aangevraagde locatie,
 
 ### Hoe kan ik ervoor zorgen dat gegevens alleen worden verzameld van vertrouwde bronnen?
 
-[!DNL Experience Platform] ondersteunt beveiligde gegevensverzameling. Wanneer geverifieerde gegevensverzameling is ingeschakeld, moeten clients een JSON Web Token (JWT) en hun IMS-organisatie-id verzenden als aanvraagheaders. Voor meer informatie over hoe te om voor authentiek verklaarde gegevens te verzenden naar [!DNL Platform], raadpleeg de handleiding op [geverifieerde gegevensverzameling](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] ondersteunt beveiligde gegevensverzameling. Wanneer de voor authentiek verklaarde gegevensinzameling wordt toegelaten, moeten de cliënten een Token van het Web JSON (JWT) en hun organisatie-identiteitskaart als verzoekkopballen verzenden. Voor meer informatie over hoe te om voor authentiek verklaarde gegevens te verzenden naar [!DNL Platform], raadpleeg de handleiding op [geverifieerde gegevensverzameling](../tutorials/create-authenticated-streaming-connection.md).
 
 ### Wat is de latentie voor het stromen gegevens aan [!DNL Real-Time Customer Profile]?
 

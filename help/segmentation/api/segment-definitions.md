@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1258'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met segmentdefinities ophalen {#list}
 
-U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/segment/definitions` eindpunt.
+U kunt een lijst van alle segmentdefinities voor uw organisatie terugwinnen door een verzoek van de GET tot de `/segment/definitions` eindpunt.
 
 **API-indeling**
 
@@ -46,7 +46,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **Verzoek**
 
-Het volgende verzoek zal de laatste twee segmentdefinities terugwinnen die binnen uw IMS Organisatie worden gepost.
+Het volgende verzoek zal de laatste twee segmentdefinities terugwinnen die binnen uw organisatie worden gepost.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst van segmentdefinities voor de opgegeven IMS-organisatie als JSON.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentdefinities voor de gespecificeerde organisatie als JSON terug.
 
 ```json
 {

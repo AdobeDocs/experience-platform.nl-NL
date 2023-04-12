@@ -5,9 +5,9 @@ title: Gegevens stroomrecord met API's voor streaming-insluiting
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Een succesvolle reactie keert status 201 van HTTP met details van uw onlangs gec
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{TENANT_ID}` | Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Voor meer informatie over de huurder-id leest u de [schemaregistergids](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw organisatie bevinden. Voor meer informatie over de huurder-id leest u de [schemaregistergids](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
 Neem nota van het `$id` en de `version` attributen, aangezien allebei van deze zullen worden gebruikt wanneer het creëren van uw dataset.
 

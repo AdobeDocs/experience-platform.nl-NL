@@ -1,13 +1,13 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Debugger
-description: De meest recente release bevat informatie over Adobe Experience Platform Debugger.
+description: De nieuwste aanvullende informatie voor Adobe Experience Platform Debugger.
 keywords: debugger;ervaar de uitbreiding van Foutopsporing van het Platform;chroom;uitbreiding;versie nota's
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 96a092efe5ceefeb7b6c3ddd9845d78b8862ac68
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 0%
+source-wordcount: '429'
+ht-degree: 2%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 ## Versie 1.1.0 - 5 oktober 2021
 
 * Visualisatie van foutopsporing op afstand - Organiseer de gebeurtenissen voor foutopsporing op afstand in een visueel stroomdiagram in de sectie Adobe Experience Platform Web SDK > Edge Transactions.
-* Vereisen de Adobe Experience Platform Web SDK IMS org die op de pagina wordt gebruikt de het programma geopende org wanneer het beginnen van een nieuwe verre het zuiveren zitting aanpast.
+* Vereisen de organisatie van SDK van het Web van Adobe Experience Platform die op de pagina wordt gebruikt de het programma geopende org wanneer het beginnen van een nieuwe verre het zuiveren zitting aanpast.
 * Alleen de randtransacties voor het verbonden tabblad weergeven. Logbestanden met doelsporen zijn nog steeds beschikbaar in de sectie Logs > Edge.
 * Sta afzonderlijke de configuratieopheffing van identiteitskaart van de gegevensstroom voor elke instantie van het Web SDK van Adobe Experience Platform op de pagina toe. Schakelen tussen foutopsporing ingeschakeld toevoegen.
 * Probleem verholpen waarbij het Adobe Target-traceringstoken niet altijd werd verzonden met foutopsporingssessies op afstand voor de Adobe Experience Platform Web SDK.

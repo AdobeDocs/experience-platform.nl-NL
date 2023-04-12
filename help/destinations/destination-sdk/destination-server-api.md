@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met het API-eindpunt `/authoring/destination-servers'. De server en malplaatjespecs voor uw bestemming kunnen in Adobe Experience Platform Destination SDK via het gemeenschappelijke eindpunt `/authoring/bestemmings-servers worden gevormd.
 title: API-bewerkingen voor eindpunt doelserver
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1355'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.requestBody.value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](./message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [Profielkenmerken](./message-format.md#attributes) transformatie. </li></ul> |
 | `httpTemplate.contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -603,7 +603,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Bestemmingsserverconfiguraties weergeven {#retrieve-list}
 
-U kunt een lijst van alle configuraties van de bestemmingsserver voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot de `/authoring/destination-servers` eindpunt.
+U kunt een lijst van alle configuraties van de bestemmingsserver voor uw organisatie terugwinnen door een verzoek van de GET tot de `/authoring/destination-servers` eindpunt.
 
 **API-indeling**
 
@@ -613,7 +613,7 @@ GET /authoring/destination-servers
 
 **Verzoek**
 
-Het volgende verzoek zal de lijst van de configuraties van de bestemmingsserver terugwinnen die u toegang tot hebt, die op Organisatie IMS en zandbakconfiguratie wordt gebaseerd.
+Het volgende verzoek zal de lijst van configuraties van de bestemmingsserver terugwinnen die u toegang tot hebt, op organisatie en zandbakconfiguratie wordt gebaseerd.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -625,7 +625,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwoord**
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van configuraties van doelservers waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `instanceId` komt overeen met de sjabloon voor één doelserver. De reactie is afgebroken voor de beknoptheid.
+De volgende reactie keert status 200 van HTTP met een lijst van configuraties van de bestemmingsserver terug die u toegang tot hebt, die op organisatieidentiteitskaart en zandbaknaam wordt gebaseerd die u gebruikte. Eén `instanceId` komt overeen met de sjabloon voor één doelserver. De reactie is afgebroken voor de beknoptheid.
 
 ```json
 {

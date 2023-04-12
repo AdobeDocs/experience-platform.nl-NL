@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service probleemoplossingsgids
 description: Dit document bevat antwoorden op veelgestelde vragen over Privacy Service en informatie over veelvoorkomende fouten in de API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ In de volgende tabel worden enkele veelvoorkomende fouten in [!DNL Privacy Servi
 | Ongeldige naamruimte | Een opgegeven naamruimte voor de identiteit van een gebruiker-id is ongeldig. Zie de sectie over [standaardnaamruimten](./api/appendix.md#standard-namespaces) in de [!DNL Privacy Service] API-handleiding voor een lijst met toegestane naamruimten. Als u een aangepaste naamruimte gebruikt, moet u controleren of u de id&#39;s instelt `type` eigenschap aan &quot;custom&quot;. |
 | Gedeeltelijk voltooid | De taak is voltooid, maar sommige gegevens zijn niet van toepassing op de opgegeven aanvraag en zijn overgeslagen. |
 | De gegevens hebben niet de vereiste indeling. | Een of meer gegevenswaarden voor de opgegeven toepassing zijn onjuist opgemaakt. Controleer de taakdetails voor meer informatie. |
-| De IMS-organisatie is niet ingericht. | Dit bericht treedt op wanneer uw IMS-organisatie niet is ingericht voor [!DNL Privacy Service]. Neem contact op met de beheerder voor meer informatie. |
+| De IMS-organisatie is niet ingericht. | Dit bericht treedt op wanneer uw organisatie niet is ingericht voor [!DNL Privacy Service]. Neem contact op met de beheerder voor meer informatie. |
 | Toegang en machtigingen zijn vereist. | Toegang en machtigingen zijn vereist voor gebruik [!DNL Privacy Service]. Neem contact op met de beheerder om toegang te krijgen. |
 | Er is een probleem opgetreden bij het uploaden en archiveren van de toegangsgegevens. | Wanneer deze fout optreedt, uploadt u de toegangsgegevens opnieuw en probeert u het opnieuw. |
 | De werkbelasting is overschreden voor de huidige documentsnelheidslimiet. | Als deze fout optreedt, verlaagt u de verzendfrequentie en probeert u het opnieuw. |

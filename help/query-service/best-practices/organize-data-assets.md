@@ -2,9 +2,9 @@
 title: Beste praktijken voor de Organisatie van gegevensactiva in de Dienst van de Vraag
 description: Dit document schetst een logisch middel om gegevens voor gebruiksgemak met de Dienst van de Vraag te organiseren.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ dataset3| table
 
 ## Gegevenselementen bijwerken of verwijderen uit een gegevenscontainer
 
-Naarmate de hoeveelheid gegevenselementen in uw IMS-organisatie (of sandbox) toeneemt, wordt het nodig gegevenselementen bij te werken of te verwijderen uit een gegevenscontainer. Individuele elementen kunnen uit de organisatiecontainer worden verwijderd door met behulp van puntnotatie te verwijzen naar de juiste database- en schemanaam. De tabel en weergave (`t1` en `v1` respectievelijk) toegevoegd aan `databaseA.schema1` in het eerste voorbeeld worden verwijderd met behulp van de syntaxis in het volgende voorbeeld.
+Naarmate de hoeveelheid gegevenselementen in uw organisatie (of sandbox) toeneemt, moet u gegevenselementen bijwerken of verwijderen uit een gegevenscontainer. Individuele elementen kunnen uit de organisatiecontainer worden verwijderd door met behulp van puntnotatie te verwijzen naar de juiste database- en schemanaam. De tabel en weergave (`t1` en `v1` respectievelijk) toegevoegd aan `databaseA.schema1` in het eerste voorbeeld worden verwijderd met behulp van de syntaxis in het volgende voorbeeld.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Gegevenselementen verwijderen
 
-De [DROP TABLE](../sql/syntax.md#drop-table) functie verwijdert een gegevenselement alleen fysiek uit het [!DNL Data Lake] wanneer er één verwijzing naar de tabel bestaat voor alle databases in uw IMS-organisatie.
+De [DROP TABLE](../sql/syntax.md#drop-table) functie verwijdert een gegevenselement alleen fysiek uit het [!DNL Data Lake] wanneer er één verwijzing naar de tabel bestaat voor alle databases in uw organisatie.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

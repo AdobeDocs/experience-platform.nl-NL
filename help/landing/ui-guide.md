@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht gebruikersinterface Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,13 @@ Het dashboard Metrics verstrekt kaarten die u informatie over datasets, profiele
 
 ![](images/user-guide/homepage-dashboard.png)
 
-De **[!UICONTROL Datasets]** toont het aantal datasets binnen uw IMS Organisatie. Dit aantal wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Meer informatie over datasets vindt u in het gedeelte [Overzicht van gegevenssets](../catalog/datasets/overview.md).
+De **[!UICONTROL Datasets]** de sectie toont het aantal datasets binnen uw organisatie. Dit aantal wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Meer informatie over datasets vindt u in het gedeelte [Overzicht van gegevenssets](../catalog/datasets/overview.md).
 
-De **[!UICONTROL Profiles]** wordt het totale aantal personen met profielen binnen uw IMS-organisatie weergegeven, met uitzondering van profielfragmenten. Dit totale aantal personen vertegenwoordigt het totale adresseerbare publiek en wordt elke 24 uur bijgewerkt. Meer informatie over profielen vindt u in het gedeelte [Overzicht van het realtime klantprofiel](../profile/home.md).
+De **[!UICONTROL Profiles]** wordt het totale aantal personen met profielen binnen uw organisatie weergegeven, met uitzondering van profielfragmenten. Dit totale aantal personen vertegenwoordigt het totale adresseerbare publiek en wordt elke 24 uur bijgewerkt. Meer informatie over profielen vindt u in het gedeelte [Overzicht van het realtime klantprofiel](../profile/home.md).
 
-De **[!UICONTROL Segments]** toont het totale aantal segmenten die binnen uw IMS-organisatie zijn gemaakt. Dit aantal wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd. Meer informatie over segmenten vindt u in de [Overzicht van segmentatieservice](../segmentation/home.md).
+De **[!UICONTROL Segments]** toont het totale aantal segmenten die binnen uw organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd. Meer informatie over segmenten vindt u in de [Overzicht van segmentatieservice](../segmentation/home.md).
 
-De **[!UICONTROL Destinations]** wordt het totale aantal doelen weergegeven dat voor de IMS-organisatie is gemaakt. Dit aantal wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Meer informatie over bestemmingen vindt u in het gedeelte [Overzicht van doelen](../destinations/home.md).
+De **[!UICONTROL Destinations]** toont het totale aantal bestemmingen die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Meer informatie over bestemmingen vindt u in het gedeelte [Overzicht van doelen](../destinations/home.md).
 
 ### Recente gegevens
 
@@ -43,13 +43,13 @@ Het recente gegevensdashboard verstrekt informatie over onlangs gecreeerde datas
 
 ![](images/user-guide/homepage-recent.png)
 
-De **[!UICONTROL Recent datasets]** de sectie maakt een lijst van de vijf onlangs gecreeerde datasets binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens als een nieuwe dataset wordt gecreeerd. U kunt een dataset van de lijst selecteren om meer informatie over de gespecificeerde dataset te bekijken of te selecteren **[!UICONTROL View all]** om een lijst van alle gecreeerde datasets te zien. Meer informatie over datasets vindt u in het gedeelte [Overzicht van gegevenssets](../catalog/datasets/overview.md).
+De **[!UICONTROL Recent datasets]** de sectie maakt een lijst van de vijf onlangs gecreeerde datasets binnen uw organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe dataset wordt gecreeerd. U kunt een dataset van de lijst selecteren om meer informatie over de gespecificeerde dataset te bekijken of te selecteren **[!UICONTROL View all]** om een lijst van alle gecreeerde datasets te zien. Meer informatie over datasets vindt u in het gedeelte [Overzicht van gegevenssets](../catalog/datasets/overview.md).
 
-De **[!UICONTROL Recent sources]** de sectie maakt een lijst van de vijf onlangs gecreeerde bronschakelaars binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens als een nieuwe bronschakelaar wordt gecreeerd. U kunt een bronverbinding in de lijst selecteren om meer informatie over de opgegeven aansluiting te bekijken of **[!UICONTROL View all]** om een lijst van alle gecreeerde bronverbindingen te zien. Meer informatie over bronnen vindt u in de [overzicht van bronnen](../sources/home.md).
+De **[!UICONTROL Recent sources]** de sectie maakt een lijst van de vijf onlangs gecreeerde bronschakelaars binnen uw organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe bronschakelaar wordt gecreeerd. U kunt een bronverbinding in de lijst selecteren om meer informatie over de opgegeven aansluiting te bekijken of **[!UICONTROL View all]** om een lijst van alle gecreeerde bronverbindingen te zien. Meer informatie over bronnen vindt u in de [overzicht van bronnen](../sources/home.md).
 
-De **[!UICONTROL Recent segments]** de sectie maakt een lijst van de vijf onlangs gecreeerd segmentdefinities binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens als een nieuwe segmentdefinitie wordt gecreeerd. U kunt een segmentdefinitie in de lijst selecteren om meer informatie over de opgegeven segmentdefinitie te bekijken of **[!UICONTROL View all]** om een lijst van alle gecreeerde segmentdefinities te zien. Meer informatie over segmenten vindt u in de [Overzicht van segmentatieservice](../segmentation/home.md).
+De **[!UICONTROL Recent segments]** de sectie maakt een lijst van de vijf onlangs gecreeerde segmentdefinities binnen uw organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe segmentdefinitie wordt gecreeerd. U kunt een segmentdefinitie in de lijst selecteren om meer informatie over de opgegeven segmentdefinitie te bekijken of **[!UICONTROL View all]** om een lijst van alle gecreeerde segmentdefinities te zien. Meer informatie over segmenten vindt u in de [Overzicht van segmentatieservice](../segmentation/home.md).
 
-De **[!UICONTROL Recent destinations]** de sectie maakt een lijst van de vijf onlangs gecreeerde bestemmingen binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens wanneer een nieuwe bestemming wordt gecreeerd. U kunt een doel in de lijst selecteren om meer informatie over het opgegeven doel weer te geven of **[!UICONTROL View all]** om een lijst van alle gecreeerde bestemmingen te zien. Meer informatie over bestemmingen vindt u in het gedeelte [Overzicht van doelen](../destinations/home.md).
+De **[!UICONTROL Recent destinations]** de sectie maakt een lijst van de vijf onlangs gecreeerde bestemmingen binnen uw organisatie. Deze lijst wordt bijgewerkt telkens wanneer een nieuwe bestemming wordt gecreeerd. U kunt een doel in de lijst selecteren om meer informatie over het opgegeven doel weer te geven of **[!UICONTROL View all]** om een lijst van alle gecreeerde bestemmingen te zien. Meer informatie over bestemmingen vindt u in het gedeelte [Overzicht van doelen](../destinations/home.md).
 
 ### Aanbevolen training
 
@@ -59,23 +59,23 @@ De **[!UICONTROL Recommended learning]** bevat koppelingen naar handige document
 
 ## Bovenste navigatiebalk
 
-Op de bovenste navigatiebalk in de gebruikersinterface van het Platform wordt de IMS-organisatie weergegeven waarvoor u zich momenteel hebt aangemeld en zijn diverse belangrijke besturingselementen beschikbaar.
+De hoogste navigatiebar in het Platform UI toont de organisatie u momenteel wordt ondertekend, en verstrekt verscheidene belangrijke controles.
 
 Links op de navigatiebalk bevindt zich het Adobe Experience Platform-logo. Als u dit logo op elk gewenst moment selecteert, keert u terug naar het hoofdscherm van de gebruikersinterface van het Platform.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
-### IMS-organisatieschakelaar
+### Organisatieschakelaar
 
-Het eerste item aan de rechterkant van de bovenste navigatiebalk is het **IMS-organisatieschakelaar**.
+Het eerste item aan de rechterkant van de bovenste navigatiebalk is het **Organisatieschakelaar**.
 
 ![](./images/user-guide/homepage-ims-org-switcher.png)
 
-Als u de schakeloptie selecteert, wordt een vervolgkeuzemenu geopend met IMS-organisaties waartoe u toegang hebt, indien aanwezig. Als u wilt overschakelen naar een andere IMS-organisatie, selecteert u een weergegeven optie.
+Als u de schakeloptie selecteert, wordt een vervolgkeuzemenu geopend met organisaties waartoe u toegang hebt, indien beschikbaar. Als u naar een andere organisatie wilt overschakelen, selecteert u een vermelde optie.
 
 ### Overschakelen op toepassingen
 
-Het volgende item aan de rechterkant van de bovenste navigatie is de **toepassingsschakelaar**, vertegenwoordigd door de ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) pictogram. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw IMS-organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en andere.
+Het volgende item aan de rechterkant van de bovenste navigatie is de **toepassingsschakelaar**, vertegenwoordigd door de ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) pictogram. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en andere.
 
 ### Help
 
@@ -95,7 +95,7 @@ U kunt schakelen tussen het lichte en donkere thema voor de interface van het Pl
 
 ![](images/theme.png)
 
-### Sandboxen
+### Sandboxes
 
 Direct onder de bovenste navigatiebalk bevindt zich de sandboxbalk. Deze balk geeft aan welke sandbox u momenteel gebruikt voor Platform. Meer informatie over sandboxen vindt u in de [sandboxen, overzicht](../sandboxes/home.md).
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met Real-time Customer Data Platform B2B Edition
 description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Vervolgens gebruikt de Bodea-markering de [Marketo Engage-aansluiting](../source
 
 Als u een verbinding wilt maken tussen een Marketo-account en een Platform, moet u verificatiegegevens verkrijgen. Zie de [handleiding voor het verkrijgen van verificatiereferenties van Marketo-bronconnector](../sources/connectors/adobe-applications/marketo/marketo-auth.md) voor gedetailleerde instructies.
 
-Nadat de Bodea-markering de verificatiereferenties heeft opgehaald, maakt deze een verbinding tussen de Marketo-account en de IMS-organisatie van het Platform. Zie de documentatie voor instructies op [hoe u verbinding maakt met een Marketo-account via de gebruikersinterface van het Platform](../sources/tutorials/ui/create/adobe-applications/marketo.md).
+Nadat de Bodea-markering de verificatiegegevens heeft opgehaald, maakt deze een verbinding tussen de Marketo-account en de organisatie van het Platform. Zie de documentatie voor instructies op [hoe u verbinding maakt met een Marketo-account via de gebruikersinterface van het Platform](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 De bronschakelaar van de Marketo Engage verstrekt een auto-toewijzingseigenschap om het proces te maken om al uw gegevensgebieden aan die van de pas gecreëerde schema&#39;s in kaart te brengen veel gemakkelijker.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor query's
 description: De volgende secties lopen door vraag u het gebruiken van het /query eindpunt in de Dienst API van de Vraag kunt maken.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De volgende secties lopen door vraag u kunt maken gebruikend `/queries` in de [!
 
 ### Een lijst met query&#39;s ophalen
 
-U kunt een lijst van alle vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan `/queries` eindpunt.
+U kunt een lijst van alle vragen voor uw organisatie terugwinnen door een verzoek van de GET tot de `/queries` eindpunt.
 
 **API-indeling**
 
@@ -46,7 +46,7 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 **Verzoek**
 
-Met het volgende verzoek wordt de laatste query opgehaald die voor uw IMS-organisatie is gemaakt.
+Het volgende verzoek wint de recentste vraag terug die voor uw organisatie wordt gecreeerd.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst met query&#39;s voor de opgegeven IMS-organisatie als JSON. De volgende reactie keert de recentste vraag terug die voor uw organisatie IMS wordt gecreeerd.
+Een succesvolle reactie keert HTTP status 200 met een lijst van vragen voor de gespecificeerde organisatie als JSON terug. De volgende reactie keert de recentste vraag terug die voor uw organisatie wordt gecreeerd.
 
 ```json
 {

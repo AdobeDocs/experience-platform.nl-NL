@@ -4,16 +4,16 @@ solution: Experience Platform
 title: API-handleiding voor sandbox
 description: Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen waarmee u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit gevolgen heeft voor uw productieomgeving.
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
 # [!DNL Sandbox] API-handleiding
 
-De [!DNL Sandbox] API biedt verschillende eindpunten waarmee u programmatisch alle sandboxen kunt beheren die binnen uw IMS-organisatie beschikbaar zijn. Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
+De [!DNL Sandbox] API biedt verschillende eindpunten waarmee u programmatisch alle sandboxen kunt beheren die binnen uw organisatie beschikbaar zijn. Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
 
 Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt zien, gaat u naar de [[!DNL Sandbox] API-referentie](https://www.adobe.io/experience-platform-apis/references/sandbox).
 

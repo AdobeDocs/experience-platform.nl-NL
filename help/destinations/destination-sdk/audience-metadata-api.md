@@ -2,9 +2,9 @@
 description: Op deze pagina worden alle API-bewerkingen beschreven die u kunt uitvoeren met het API-eindpunt `/authoring/publiek-templates`.
 title: API-bewerkingen voor het eindpunt van metagegevens van het publiek
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -196,7 +196,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `validations.field` | Tekenreeks | Geeft aan of validaties voor velden moeten worden uitgevoerd voordat API-aanroepen naar uw doel worden uitgevoerd. U kunt bijvoorbeeld `{{validations.accountId}}` om de account-id van de gebruiker te valideren. |
 | `validations.regex` | Tekenreeks | Hiermee geeft u aan hoe het veld moet worden gestructureerd voordat de validatie wordt doorgegeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -318,7 +318,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## Een lijst met publiekssjablonen ophalen {#retrieve-list}
 
-U kunt een lijst van alle publiekssjablonen voor uw IMS-organisatie ophalen door een GET-aanvraag in te dienen bij de `/authoring/audience-templates` eindpunt.
+U kunt een lijst van alle publiekssjablonen voor uw organisatie terugwinnen door een verzoek van de GET tot de `/authoring/audience-templates` eindpunt.
 
 **API-indeling**
 
@@ -329,7 +329,7 @@ GET /authoring/audience-templates
 
 **Verzoek**
 
-Het volgende verzoek zal de lijst van publieksmalplaatjes terugwinnen die u toegang tot hebt, die op Organisatie IMS en zandbakconfiguratie wordt gebaseerd.
+Het volgende verzoek zal de lijst van publieksmalplaatjes terugwinnen die u toegang tot hebt, op organisatie en zandbakconfiguratie wordt gebaseerd.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Antwoord**
 
-De volgende reactie retourneert HTTP-status 200 met een lijst van publiekmetagegevenssjablonen waartoe u toegang hebt, op basis van de IMS-organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `instanceId` komt overeen met de sjabloon voor één bestemming. De reactie is afgebroken voor de beknoptheid.
+De volgende reactie retourneert HTTP-status 200 met een lijst van publiekmetagegevenssjablonen waartoe u toegang hebt, op basis van de organisatie-id en de sandboxnaam die u hebt gebruikt. Eén `instanceId` komt overeen met de sjabloon voor één bestemming. De reactie is afgebroken voor de beknoptheid.
 
 ```json
 {

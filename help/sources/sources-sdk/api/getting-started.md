@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met Self-Serve Sources (Batch SDK)
 description: Dit document verstrekt een inleiding aan de eerste vereiste informatie u moet kennen alvorens te proberen om een nieuwe bron tot stand te brengen gebruikend Zelfbediening Bronnen (de Band SDK).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Met Self-Serve Sources (Batch SDK) kunt u uw eigen REST-gebaseerde bron integrer
 
 ## Vereisten
 
-Als u Self-Serve Sources (Batch SDK) wilt gebruiken, dient u ervoor te zorgen dat u toegang hebt tot een IMS Organisatie-sandbox die is ingericht met Adobe Experience Platform Sources.
+Als u Self-Serve Sources (Batch SDK) wilt gebruiken, moet u ervoor zorgen dat u toegang hebt tot een organisatie-sandbox die is ingericht met Adobe Experience Platform Sources.
 
 Deze handleiding vereist ook een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 

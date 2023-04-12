@@ -5,9 +5,9 @@ title: Mislukte batches ophalen met de API voor gegevenstoegang
 type: Tutorial
 description: Deze zelfstudie behandelt stappen voor het ophalen van informatie over een mislukte batch met gebruik van API's voor gegevensinname.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -194,9 +194,9 @@ Deze sectie bevat informatie over andere typen innamefouten die kunnen optreden.
 
 Net als de tijdstempelfout in de vorige voorbeeldstroom zijn deze fouten het gevolg van onjuist opgemaakte XDM. Deze foutberichten variëren, afhankelijk van de aard van het probleem. Er kan dan ook geen specifiek foutvoorbeeld worden weergegeven.
 
-### Ontbrekende of ongeldige IMS-organisatie-id
+### Ontbrekende of ongeldige organisatie-id
 
-Deze fout wordt weergegeven als de IMS-organisatie-id ontbreekt in de payload.
+Deze fout wordt weergegeven als de organisatie-id ontbreekt in de payload.
 
 ```json
 {

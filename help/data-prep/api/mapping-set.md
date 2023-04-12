@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor toewijzingssets
 description: U kunt het `/mappingSets eindpunt ` in Adobe Experience Platform API gebruiken om kaartreeksen programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Toewijzingssets kunnen worden gebruikt om te definiëren hoe gegevens in een bro
 
 ## Lijsttoewijzingssets
 
-U kunt een lijst van alle toewijzingsreeksen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan te richten `/mappingSets` eindpunt.
+U kunt een lijst van alle afbeeldingsreeksen voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/mappingSets` eindpunt.
 
 **API-indeling**
 
@@ -40,7 +40,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **Verzoek**
 
-Het volgende verzoek zal de laatste twee kaartreeksen binnen uw IMS Organisatie terugwinnen.
+Het volgende verzoek zal de laatste twee kaartreeksen binnen uw organisatie terugwinnen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \

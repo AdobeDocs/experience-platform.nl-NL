@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2064'
+source-wordcount: '2063'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,7 @@ Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met een t
 
 Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met velden met een onjuiste naam of wanneer u onjuist benoemde velden toevoegt aan een bestaande bron.
 
-De middelen die door uw organisatie IMS worden bepaald moeten hun gebieden onder uw huurdersidentiteitskaart namespace om conflicten met andere industrie en verkopersmiddelen te vermijden. Wanneer het bouwen van een schema gebruikend standaardgebiedsgroepen, om het even welke douanevelden die u binnen de structuur van die gebiedsgroepen toevoegt moeten ook namespaced onder uw huurdersidentiteitskaart zijn.
+De middelen die door uw organisatie worden bepaald moeten hun gebieden onder uw huurdersidentiteitskaart namespace om conflicten met andere industrie en verkopersmiddelen te vermijden. Wanneer het bouwen van een schema gebruikend standaardgebiedsgroepen, om het even welke douanevelden die u binnen de structuur van die gebiedsgroepen toevoegt moeten ook namespaced onder uw huurdersidentiteitskaart zijn.
 
 >[!NOTE]
 >

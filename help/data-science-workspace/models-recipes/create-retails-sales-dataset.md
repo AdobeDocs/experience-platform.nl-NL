@@ -3,11 +3,11 @@ keywords: Experience Platform;winkelrecept;Data Science Workspace;populaire onde
 solution: Experience Platform
 title: Het detailhandelsschema en de gegevensset maken
 type: Tutorial
-description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies voor de Adobe Experience Platform Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie IMS op Experience Platform beschikbaar zijn.
+description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies voor de Adobe Experience Platform Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie op Experience Platform beschikbaar zijn.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 # Het detailhandelschema en de dataset maken
 
-Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere onderdelen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] zelfstudies. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw IMS Organisatie op [!DNL Experience Platform].
+Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere onderdelen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] zelfstudies. Na voltooiing, zullen het schema en de datasets van de Verkoop van de Detailhandel voor u en leden van uw organisatie beschikbaar zijn op [!DNL Experience Platform].
 
 ## Aan de slag
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
-- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
+- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform], spreek gelieve met uw systeembeheerder alvorens te werk te gaan.
 - Toestemming om [!DNL Experience Platform] API-aanroepen. Voltooi de [Adobe Experience Platform API&#39;s verifiëren en openen](https://www.adobe.com/go/platform-api-authentication-en) zelfstudie voor het verkrijgen van de volgende waarden om deze zelfstudie te voltooien:
    - Autorisatie: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`

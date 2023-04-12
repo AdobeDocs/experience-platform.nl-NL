@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor probleemoplossing bij toegangsbeheer
 description: Dit document bevat antwoorden op veelgestelde vragen over toegangsbeheer in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Dit document bevat antwoorden op veelgestelde vragen over toegangsbeheer in Adob
 
 ## Waar kan ik mijn huidige toegangstoestemmingen vinden?
 
-Als u een systeembeheerder, productbeheerder of productprofielbeheerder voor uw IMS-organisatie bent, kunt u het toegewezen productprofiel en de machtigingen die het biedt in de Adobe Admin Console bekijken. Zie de [gebruikershandleiding voor toegangsbeheer](./ui/overview.md) voor instructies over hoe te om te navigeren [!DNL Admin Console] om de machtigingen van een productprofiel weer te geven.
+Als u een systeembeheerder, productbeheerder, of product-profielbeheerder voor uw organisatie bent, kunt u uw toegewezen productprofiel en de toestemmingen bekijken het binnen Adobe Admin Console verstrekt. Zie de [gebruikershandleiding voor toegangsbeheer](./ui/overview.md) voor instructies over hoe te om te navigeren [!DNL Admin Console] om de machtigingen van een productprofiel weer te geven.
 
 Als u geen beheerder bent, kunt u uw huidige toegangstoestemmingen nog bekijken door een verzoek naar te verzenden `/acl/effective-policies` eindpunt in het Toegangsbeheer-API. Zie de sectie &quot;Effectief beleid weergeven&quot; in [toegangsbeheerontwikkelaarsgids](./api/effective-policies.md) voor meer informatie .
 

@@ -5,9 +5,9 @@ title: Gegevens gegevensset weergeven met de API voor gegevenstoegang
 type: Tutorial
 description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Voordat u begint met het gebruik van de [!DNL Data Access] API, moet u de plaats
 
 Voor een uitgebreide lijst met eindpunten in het dialoogvenster [!DNL Catalog] API, gelieve te verwijzen naar [API-naslag](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## Een lijst met batches ophalen onder uw IMS-organisatie
+## Een lijst met batches in uw organisatie ophalen
 
 Met de [!DNL Catalog] API, kunt u een lijst van partijen onder uw organisatie terugkeren:
 
@@ -84,7 +84,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **Antwoord**
 
-De reactie bevat een object dat een lijst bevat met alle batches die betrekking hebben op de IMS-organisatie, waarbij elke waarde op hoofdniveau een batch vertegenwoordigt. De afzonderlijke batchobjecten bevatten de gegevens voor die specifieke batch. De onderstaande reactie is geminimaliseerd voor ruimte.
+De reactie omvat een voorwerp dat van alle partijen met betrekking tot de organisatie een lijst maakt, met elke top-level waarde die een partij vertegenwoordigt. De afzonderlijke batchobjecten bevatten de gegevens voor die specifieke batch. De onderstaande reactie is geminimaliseerd voor ruimte.
 
 ```json
 {

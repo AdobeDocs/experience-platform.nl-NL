@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Metrics API Endpoint
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1384'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ curl -X POST \
 | `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Voor gedetailleerde informatie over beschikbare aggregators, verwijs naar [OpenTSDB-documentatie](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 | `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor downsampling wordt bepaald door `granularity` eigenschap. Voor gedetailleerde informatie over downsampling raadpleegt u de [OpenTSDB-documentatie](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -180,7 +180,7 @@ Een succesvolle reactie keert de resulterende datapoints voor de metriek en de f
 | `groupBy` | Als er meerdere gegevenssets zijn opgegeven in het dialoogvenster `filter` eigenschap voor metrisch, en `groupBy` optie is ingesteld op true in het verzoek, dit object bevat de id van de dataset die de overeenkomstige `dps` eigenschap is van toepassing op.<br><br>Als dit object leeg wordt weergegeven in het antwoord, wordt het corresponderende `dps` eigenschap is van toepassing op alle gegevenssets die in de `filters` array (of alle gegevenssets in [!DNL Platform] als er geen filters zijn opgegeven). |
 | `dps` | De teruggekeerde gegevens voor bepaalde metrisch, filter, en tijdwaaier. Elke sleutel in dit object vertegenwoordigt een tijdstempel met een overeenkomende waarde voor de opgegeven metrische waarde. De tijdperiode tussen elke datapoint is afhankelijk van `granularity` in de aanvraag opgegeven waarde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aanhangsel
 
@@ -211,7 +211,7 @@ In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergeg
 | **timeseries.data.collection.inlet.success** | Het totale aantal geslaagde HTTP-aanroepen naar één gegevensinlaat of naar alle gegevensinlaten. | Inlet-id |
 | **timeseries.data.collection.inlet.failure** | Het totale aantal mislukte HTTP-aanroepen naar één gegevensinlaat of naar alle gegevensinlaten. | Inlet-id |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Identity Service] {#identity}
 
@@ -223,11 +223,11 @@ In de volgende tabel worden de maatstaven voor Adobe Experience Platform weergeg
 | timeseries.identity.dataset.recordfailed.count | Aantal records mislukt door [!DNL Identity Service]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Aantal identiteitsrecords dat is mislukt door een naamruimte. | Namespace-id (**Vereist**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Aantal identiteitsrecords dat door een naamruimte is overgeslagen. | Namespace-id (**Vereist**) |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | Aantal unieke identiteiten dat is opgeslagen in de identiteitsgrafiek voor uw IMS-organisatie. | N.v.t. |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw organisatie worden opgeslagen. | N.v.t. |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor een namespace worden opgeslagen. | Namespace-id (**Vereist**) |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw IMS Organisatie voor een bepaalde grafieksterkte worden opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot;, of &quot;sterk&quot;). | Grafieksterkte (**Vereist**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten dat in de identiteitsgrafiek voor uw organisatie voor een bepaalde grafieksterkte wordt opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot; of &quot;sterk&quot;). | Grafieksterkte (**Vereist**) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Real-Time Customer Profile] {#profile}
 
@@ -239,7 +239,7 @@ De volgende tabel bevat metriek voor [!DNL Real-Time Customer Profile].
 | timeseries.profiles.dataset.recordsuccess.count | Aantal records dat naar de gegevensbron is geschreven door [!DNL Profile]voor één gegevensset of voor alle gegevensreeksen. | Dataset-id |
 | timeseries.profiles.dataset.batchsuccess.count | Aantal [!DNL Profile] partijen die voor een dataset of voor alle datasets worden opgenomen. | Dataset-id |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Foutberichten
 
@@ -272,9 +272,9 @@ Reacties van de `/metrics` het eindpunt kan foutenmeldingen onder bepaalde voorw
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `title` | Een tekenreeks met het foutbericht en de mogelijke reden waarom het is opgetreden. |
-| `report` | Bevat contextafhankelijke informatie over de fout, inclusief de sandbox en IMS Org die worden gebruikt in de bewerking die de fout heeft geactiveerd. |
+| `report` | Bevat contextuele informatie over de fout, met inbegrip van de zandbak en de organisatie die in de verrichting worden gebruikt die het teweegbracht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 In de volgende tabel worden de verschillende foutcodes weergegeven die door de API kunnen worden geretourneerd:
 
@@ -284,6 +284,6 @@ In de volgende tabel worden de verschillende foutcodes weergegeven die door de A
 | `INSGHT-1001-400` | Metrische query mislukt | Er is een fout opgetreden bij het zoeken naar de metrische database, omdat een onjuiste aanvraag of de query zelf niet kan worden gescheiden. Zorg ervoor dat uw verzoek correct is geformatteerd alvorens opnieuw te proberen. |
 | `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
 | `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
-| `INSGHT-1003-401` | Validatiefout van sandbox | De aanvraag kan niet worden verwerkt vanwege een sandboxvalidatiefout. Zorg ervoor dat de naam van de sandbox die u hebt opgegeven in het dialoogvenster `x-sandbox-name` vertegenwoordigt een geldige, ingeschakelde sandbox voor uw IMS-organisatie voordat u het verzoek opnieuw probeert. |
+| `INSGHT-1003-401` | Validatiefout van sandbox | De aanvraag kan niet worden verwerkt vanwege een sandboxvalidatiefout. Zorg ervoor dat de naam van de sandbox die u hebt opgegeven in het dialoogvenster `x-sandbox-name` header staat voor een geldige, ingeschakelde sandbox voor uw organisatie voordat u het verzoek opnieuw probeert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
