@@ -2,9 +2,10 @@
 title: Extensie Google Ads Enhanced Conversies
 description: Meer informatie over de extensie Google Ads Enhanced Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -59,7 +60,7 @@ Het installatiedialoogvenster wordt weergegeven. Selecteer **[!UICONTROL Add Acc
 | Account-id | Uw [!DNL Google Ads] account-id. Meld u aan om deze waarde te vinden [!DNL Google Ads] en navigeer naar: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. De account-id-tekenreeks vindt u in het venster met het codefragment dat begint met `AW-` of `d`. |
 | Product | Selecteer **[!UICONTROL Google Ads (AdWords)]**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u klaar bent, selecteert u **[!UICONTROL Add Account]** selecteert u vervolgens **[!UICONTROL Save]**.
 

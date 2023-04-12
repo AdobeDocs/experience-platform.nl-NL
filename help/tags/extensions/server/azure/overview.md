@@ -2,9 +2,10 @@
 title: Microsoft Azure Extension Overview
 description: Meer informatie over de Microsoft Azure-extensie voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -53,7 +54,7 @@ Het rechterdeelvenster wordt bijgewerkt om configuratieopties weer te geven voor
 | [!UICONTROL SAS Access Key] | De primaire sleutel van de gedeelde toegangsvergunningsregel voor uw volledig [!DNL Event Hubs] naamruimte of de specifieke instantie van de gebeurtenishub waarnaar u gegevens wilt verzenden. Zie het aanhangsel over [waarden voor SAS-autorisaties verkrijgen](#sas) voor meer informatie . |
 | [!UICONTROL Partition ID] | [!DNL Event Hubs] staat u toe [verzendt gebeurtenissen rechtstreeks naar specifieke partities](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). Als u deze functie wilt gebruiken, moet u de id opgeven van de partitie die u de gebeurtenissen wilt ontvangen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Gegevens**
 
@@ -61,7 +62,7 @@ Het rechterdeelvenster wordt bijgewerkt om configuratieopties weer te geven voor
 | --- | --- |
 | [!UICONTROL Payload] | Dit veld bevat de gegevens die worden doorgestuurd naar de [!DNL Event Hubs]. De gegevens kunnen een JSON-object, een tekenreeks of een gegevenselement zijn. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u klaar bent, selecteert u **[!UICONTROL Keep Changes]** om de actie aan de regelconfiguratie toe te voegen. Als u tevreden bent met de regel, selecteert u **[!UICONTROL Save to Library]**.
 

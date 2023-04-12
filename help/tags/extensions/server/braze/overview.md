@@ -2,7 +2,8 @@
 keywords: gebeurtenis door:sturen uitbreiding;breze;breze gebeurtenis door:sturen uitbreiding
 title: Braze Event Forwarding Extension
 description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Braze.
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 1%
@@ -132,7 +133,7 @@ Gebruikerskenmerken kunnen een JSON-object zijn dat velden bevat waarmee een ken
 | [!UICONTROL Country] | Land als tekenreeks in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) gebruiken. |
 | [!UICONTROL Language] | Taal als tekenreeks in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) gebruiken. |
 | [!UICONTROL Date of Birth] | Tekenreeks in de notatie &quot;YYYY-MM-DD&quot; (bijvoorbeeld 1980-12-21). |
-| [!UICONTROL Time Zone] | Naam tijdzone van [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (bijvoorbeeld ’America/New_York’ of ’Eastern Time (VS en Canada)’). |
+| [!UICONTROL Time Zone] | Naam tijdzone van [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (bijvoorbeeld &#39;America/New_York&#39; of &#39;Eastern Time (VS en Canada)&#39;). |
 | [!UICONTROL Facebook] | Hash met id (string), like (array of strings), num_friends (integer). |
 | [!UICONTROL Twitter] | Hash met id (integer), screen_name (string, Twitter handle), followers_count (integer), friends_count (integer), statuses_count(integer). |
 
@@ -191,7 +192,7 @@ Gebruikerskenmerken kunnen een JSON-object zijn dat velden bevat waarmee een ken
 | [!UICONTROL Country] | Land als tekenreeks in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) gebruiken. |
 | [!UICONTROL Language] | Taal als tekenreeks in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) gebruiken. |
 | [!UICONTROL Date of Birth] | Tekenreeks in de notatie &quot;YYYY-MM-DD&quot; (bijvoorbeeld 1980-12-21). |
-| [!UICONTROL Time Zone] | Naam tijdzone van [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (bijvoorbeeld ’America/New_York’ of ’Eastern Time (VS en Canada)’). |
+| [!UICONTROL Time Zone] | Naam tijdzone van [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (bijvoorbeeld &#39;America/New_York&#39; of &#39;Eastern Time (VS en Canada)&#39;). |
 | [!UICONTROL Facebook] | Hash met id (string), like (array of strings), num_friends (integer). |
 | [!UICONTROL Twitter] | Hash met id (integer), screen_name (string, Twitter handle), followers_count (integer), friends_count (integer), statuses_count(integer). |
 

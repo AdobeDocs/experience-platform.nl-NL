@@ -2,9 +2,10 @@
 title: Overzicht AWS-extensie
 description: Meer informatie over de AWS-extensie voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
@@ -59,7 +60,7 @@ Het rechterdeelvenster wordt bijgewerkt om configuratieopties weer te geven voor
 | [!UICONTROL AWS Region] | De [!DNL AWS] regio waar [!DNL Kinesis] gegevensstroom wordt gemaakt. |
 | [!UICONTROL Partition Key] | De [partitietoets](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) dat de extensie wordt gebruikt wanneer gegevens naar de gegevensstroom worden verzonden.<br><br>[!DNL Kinesis Data Streams] Hiermee worden de gegevensrecords die bij een stream horen, op meerdere locaties gescheiden. Het gebruikt de verdelingssleutel die met elk gegevensverslag wordt verzonden om te bepalen tot welk deel een bepaald gegevensverslag behoort.<br><br>Een goede verdelingssleutel voor het verdelen van klanten zou het klantenaantal kunnen zijn, aangezien het voor elke klant verschillend is. Een slechte verdelingssleutel zou hun postcode kunnen zijn omdat zij allen in het zelfde gebied dichtbij kunnen leven. In het algemeen, zou u een verdelingssleutel moeten kiezen die de hoogste waaier van verschillende potentiële waarden heeft. Zie de [!DNL AWS] artikel over [uw [!DNL Kinesis] gegevensstromen](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) voor beste praktijken bij het beheren van verdelingssleutels. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **[!UICONTROL Data]**
 
@@ -67,7 +68,7 @@ Het rechterdeelvenster wordt bijgewerkt om configuratieopties weer te geven voor
 | --- | --- |
 | [!UICONTROL Payload] | Dit veld bevat de gegevens die worden doorgestuurd naar de [!DNL Kinesis] gegevensstroom, in JSON-indeling.<br><br>Onder de **[!UICONTROL Raw]** kunt u het JSON-object rechtstreeks in het opgegeven tekstveld plakken of het pictogram voor het gegevenselement selecteren (![Dataset-pictogram](../../../images/extensions/server/aws/data-element-icon.png)) om een keuze te maken uit een lijst met bestaande gegevenselementen die de lading vertegenwoordigen.<br><br>U kunt ook de opdracht **[!UICONTROL JSON Key-Value Pairs Editor]** optie om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar er kan ook een gegevenselement worden geselecteerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u klaar bent, selecteert u **[!UICONTROL Keep Changes]** om de actie aan de regelconfiguratie toe te voegen. Als u tevreden bent met de regel, selecteert u **[!UICONTROL Save to Library]**.
 
