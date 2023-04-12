@@ -5,12 +5,12 @@ feature: Customer AI
 title: AI-klantoverzicht
 description: Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
 landing-page-description: Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren.
-short-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+short-description: Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 19%
+source-wordcount: '571'
+ht-degree: 21%
 
 ---
 
