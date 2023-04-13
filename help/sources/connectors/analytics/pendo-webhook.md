@@ -1,8 +1,10 @@
 ---
 title: Overzicht van PNO-bron
 description: Leer hoe u verbinding maakt tussen Pendo en Adobe Experience Platform met behulp van API's of de gebruikersinterface met behulp van webhaken
-badge: "Bèta"
-source-git-commit: 24691e3ded33c3af31fd0cee107f2f3ca898585f
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -50,4 +52,3 @@ In de onderstaande documentatie vindt u informatie over het maken van een [!DNL 
 ### Verbinden [!DNL Pendo] naar Platform met behulp van de gebruikersinterface {#connect-to-platform-using-ui}
 
 * [Een bronverbinding maken voor [!DNL Pendo] gegevens naar Platform met behulp van de gebruikersinterface](../../tutorials/ui/create/analytics/pendo-webhook.md)
-

@@ -1,8 +1,10 @@
 ---
 title: Overzicht van Customer.io-bron
 description: Leer hoe u Customer.io met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface door gebruik te maken van webhaken
-badge: "Bèta"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -57,4 +59,3 @@ In de onderstaande documentatie vindt u informatie over het maken van een [!DNL 
 ### Verbinden [!DNL Customer.io] naar Platform met behulp van de gebruikersinterface {#connect-to-platform-using-ui}
 
 * [Een bronverbinding en gegevensstroom maken om te zorgen [!DNL Customer.io] gegevens naar Platform met behulp van de gebruikersinterface](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
-
