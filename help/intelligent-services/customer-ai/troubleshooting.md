@@ -6,7 +6,7 @@ title: Probleemoplossing van AI-fouten van klant
 description: Zoek antwoorden op algemene fouten in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Als de fout &quot;[!UICONTROL Model Quality is poor. We recommend creating a new
 Begin door de nauwkeurigheid van uw gegevens te controleren. Het is belangrijk dat uw gegevens de velden bevatten die nodig zijn voor uw voorspelbare resultaat.
 
 - Controleer of uw dataset de recentste data heeft. De AI van de Klant veronderstelt altijd dat de gegevens bijgewerkt zijn wanneer het model wordt teweeggebracht.
-- Controleer of er gegevens ontbreken in het gedefinieerde voorspellings- en geschiktheidsvenster. Uw gegevens moeten volledig zijn zonder tussenruimten. Zorg er ook voor dat uw gegevensset voldoet aan de [Vereisten voor historische gegevens van AI-klanten](./input-output.md#data-requirements).
+- Controleer of er gegevens ontbreken in het gedefinieerde voorspellings- en geschiktheidsvenster. Uw gegevens moeten volledig zijn zonder tussenruimten. Zorg er ook voor dat uw gegevensset voldoet aan de [Vereisten voor historische gegevens van AI-klanten](./data-requirements.md#data-requirements).
 - Controle voor ontbrekende gegevens in handel, toepassing, Web, en onderzoek, binnen uw eigenschappen van het schemagebied.
 
 Als uw gegevens niet het probleem lijken te zijn, probeer veranderend de toelatingsvoorwaarde van de bevolking om het model tot bepaalde profielen (bijvoorbeeld) te beperken `_experience.analytics.customDimensions.eVars.eVar142` bestaat in de afgelopen 56 dagen). Dit beperkt de populatie en de grootte van de gegevens die in het trainingsvenster worden gebruikt.

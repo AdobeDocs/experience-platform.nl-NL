@@ -5,7 +5,7 @@ feature: Customer AI
 title: Een AI-instantie van een klant configureren
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '2741'
 ht-degree: 0%
@@ -163,7 +163,7 @@ Standaard worden voor alle profielen densiteitsscores gegenereerd, tenzij een in
 
 ### Aangepaste gebeurtenissen (*optioneel*) {#custom-events}
 
-Als u aanvullende informatie hebt naast de [standaardgebeurtenisvelden](../input-output.md#standard-events) die door de AI van de Klant worden gebruikt om eigenschapscores te genereren, wordt een optie voor aangepaste gebeurtenissen geboden. Met deze optie kunt u aanvullende gebeurtenissen toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model verbeteren en kunnen nauwkeurigere resultaten worden verkregen. Als de dataset u selecteerde douanegebeurtenissen omvat die in uw schema worden bepaald, kunt u hen aan uw instantie toevoegen.
+Als u aanvullende informatie hebt naast de [standaardgebeurtenisvelden](../data-requirements.md#standard-events) die door de AI van de Klant worden gebruikt om eigenschapscores te genereren, wordt een optie voor aangepaste gebeurtenissen geboden. Met deze optie kunt u aanvullende gebeurtenissen toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model verbeteren en kunnen nauwkeurigere resultaten worden verkregen. Als de dataset u selecteerde douanegebeurtenissen omvat die in uw schema worden bepaald, kunt u hen aan uw instantie toevoegen.
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ Selecteer **[!UICONTROL Next]** rechtsboven om door te gaan.
 
 ### Aangepaste profielkenmerken (*optioneel*)
 
-U kunt belangrijke gegevenssetvelden voor profielen definiëren (met tijdstempels) in uw gegevens naast de gegevens [standaardgebeurtenisvelden](../input-output.md#standard-events) door de AI van de Klant worden gebruikt om eigenschapscores te genereren. Met deze optie kunt u aanvullende profielkenmerken toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model worden verbeterd en kunnen de resultaten nauwkeuriger worden weergegeven. Bovendien kunnen door het toevoegen van kenmerken voor aangepaste profielen AI van de Klant beter laten zien hoe bepaalde profielen in een eigenschapssemmer zijn terechtgekomen.
+U kunt belangrijke gegevenssetvelden voor profielen definiëren (met tijdstempels) in uw gegevens naast de gegevens [standaardgebeurtenisvelden](../data-requirements.md#standard-events) door de AI van de Klant worden gebruikt om eigenschapscores te genereren. Met deze optie kunt u aanvullende profielkenmerken toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model worden verbeterd en kunnen de resultaten nauwkeuriger worden weergegeven. Bovendien kunnen door het toevoegen van kenmerken voor aangepaste profielen AI van de Klant beter laten zien hoe bepaalde profielen in een eigenschapssemmer zijn terechtgekomen.
 
 >[!NOTE]
 >

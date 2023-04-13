@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services gebruiken XDM-schema's (Experience Data Model) om dit te bereiken.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
 workflow-type: tm+mt
 source-wordcount: '2923'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Dit document verstrekt algemene begeleiding bij het in kaart brengen van uw gege
 
 Als u bijvoorbeeld de AI van de Klant gebruikt om de neiging te voorspellen om een product te kopen, heeft het model voor AI van de Klant zowel voorbeelden van succesvolle aankoopwegen als voorbeelden van mislukte wegen nodig. Dit komt omdat de AI van de Klant tijdens modeltraining probeert te begrijpen welke gebeurtenissen en reizen tot een aankoop leiden. Dit omvat ook de acties die zijn ondernomen door klanten die geen goederen hebben gekocht, zoals een persoon die zijn reis heeft stopgezet door een artikel aan het winkelwagentje toe te voegen. Deze klanten kunnen echter op vergelijkbare wijze te werk gaan. Klantenservice kan echter inzichten verschaffen en de belangrijkste verschillen en factoren die tot een hogere prioriteitsscore leiden, opruimen. Op dezelfde manier vereist Attribution AI zowel soorten gebeurtenissen als reizen om metriek zoals touchpoint doeltreffendheid, hoogste omzettingswegen, en onderverdelingen door touchpoint positie te tonen.
 
-Ga voor meer voorbeelden en informatie over historische gegevensvereisten naar de [Customer AI](./customer-ai/input-output.md#data-requirements) of [Attribution AI](./attribution-ai/input-output.md#data-requirements) sectie historische gegevensvereisten in de input / output documentatie.
+Ga voor meer voorbeelden en informatie over historische gegevensvereisten naar de [Customer AI](./customer-ai/data-requirements.md#data-requirements) of [Attribution AI](./attribution-ai/input-output.md#data-requirements) sectie historische gegevensvereisten in de input / output documentatie.
 
 ### Richtlijnen voor het koppelen van gegevens
 
@@ -39,7 +39,7 @@ Het voorbereidingsproces is afhankelijk van het feit of uw gegevens in Adobe Exp
 
 Als uw gegevens buiten het Experience Platform worden opgeslagen, moet u uw gegevens aan de vereiste en relevante gebieden in kaart brengen [Consumer ExperienceEvent-schema](#cee-schema). Dit schema kan worden aangevuld met aangepaste veldgroepen om uw klantgegevens beter vast te leggen. Zodra in kaart gebracht, kunt u een dataset tot stand brengen gebruikend uw schema Consumer ExperienceEvent en [gegevens opnemen naar Platform](../ingestion/home.md). De CEE dataset kan dan worden geselecteerd wanneer het vormen van een [!DNL Intelligent Service].
 
-Afhankelijk van de [!DNL Intelligent Service] Als u wilt gebruiken, zijn mogelijk verschillende velden vereist. Houd er rekening mee dat u het beste gegevens aan een veld kunt toevoegen als u over de beschikbare gegevens beschikt. Ga voor meer informatie over de vereiste velden naar [Attribution AI](./attribution-ai/input-output.md) of [Customer AI](./customer-ai/input-output.md) invoer-/uitvoerhulplijn.
+Afhankelijk van de [!DNL Intelligent Service] Als u wilt gebruiken, zijn mogelijk verschillende velden vereist. Houd er rekening mee dat u het beste gegevens aan een veld kunt toevoegen als u over de beschikbare gegevens beschikt. Ga voor meer informatie over de vereiste velden naar [Attribution AI](./attribution-ai/input-output.md) of [Customer AI](./customer-ai/data-requirements.md) handleiding voor gegevensvereisten.
 
 ### Adobe Analytics-gegevensvoorbereiding {#analytics-data}
 
@@ -65,7 +65,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->De Adobe Analytics-connector duurt maximaal vier weken om gegevens te herstellen. Als u onlangs opstelling een verbinding zou moeten verifiëren u dat de dataset de minimumlengte van gegevens heeft die voor Klant of Attribution AI wordt vereist. Controleer de historische gegevenssecties in [Customer AI](./customer-ai/input-output.md#data-requirements) of [Attribution AI](./attribution-ai/input-output.md#data-requirements)en controleer of u voldoende gegevens hebt voor uw voorspellingsdoel.
+>De Adobe Analytics-connector duurt maximaal vier weken om gegevens te herstellen. Als u onlangs opstelling een verbinding zou moeten verifiëren u dat de dataset de minimumlengte van gegevens heeft die voor Klant of Attribution AI wordt vereist. Controleer de historische gegevenssecties in [Customer AI](./customer-ai/data-requirements.md#data-requirements) of [Attribution AI](./attribution-ai/input-output.md#data-requirements)en controleer of u voldoende gegevens hebt voor uw voorspellingsdoel.
 
 ### Adobe Audience Manager-gegevensvoorbereiding (alleen voor AI van klant) {#AAM-data}
 
@@ -75,7 +75,7 @@ Zodra de bronschakelaar uw gegevens in Experience Platform stroomt, kunt u Adobe
 
 >[!IMPORTANT]
 >
->Als u onlangs opstelling een schakelaar zou moeten verifiëren u dat de dataset de minimumlengte van vereiste gegevens heeft. Controleer het gedeelte met historische gegevens in het dialoogvenster [input/output documentatie](./customer-ai/input-output.md) voor de AI van de Klant, en verifieer u genoeg gegevens voor uw vooruitgangsdoel hebt.
+>Als u onlangs opstelling een schakelaar zou moeten verifiëren u dat de dataset de minimumlengte van vereiste gegevens heeft. Controleer het gedeelte met historische gegevens in het dialoogvenster [input/output documentatie](./customer-ai/data-requirements.md) voor de AI van de Klant, en verifieer u genoeg gegevens voor uw vooruitgangsdoel hebt.
 
 ### [!DNL Experience Platform] gegevensvoorbereiding
 
@@ -368,4 +368,4 @@ Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens vo
 Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u gebruiken [!DNL Intelligent Services] om inzichten te genereren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
 * [Overzicht van Attribution AI](./attribution-ai/overview.md)
-* [AI-overzicht van klant](./customer-ai/overview.md)
+* [AI-klantoverzicht](./customer-ai/overview.md)

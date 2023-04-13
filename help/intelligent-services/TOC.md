@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Hulp bij Intelligent Services
 breadcrumb-title: Handleiding voor Intelligent Services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken op basis van uw marketinggebeurtenisgegevens.
-source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
+source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 22%
+source-wordcount: '139'
+ht-degree: 23%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 22%
 - Customer AI {#customer-ai}
    - [Overzicht](customer-ai/overview.md)
    - [Aan de slag met Customer AI](customer-ai/getting-started.md)
-   - [Invoer en uitvoer](customer-ai/input-output.md)
+   - [Gegevensvereisten](customer-ai/data-requirements.md)
    - UI-hulplijnen{#user-guide}
       - [Een instantie configureren](customer-ai/user-guide/configure.md)
       - [Inzichten ontdekken](customer-ai/user-guide/discover-insights.md)
