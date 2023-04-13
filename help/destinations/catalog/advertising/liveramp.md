@@ -3,7 +3,7 @@ title: (Alpha) [!DNL LiveRamp SFTP] verbinding
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 hidefromtoc: true
 hide: true
-source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
+source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
 workflow-type: tm+mt
 source-wordcount: '1647'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 >id="platform_destinations_liveramp_subkey"
 >title="Id van coderingssubsleutel"
 >abstract="De subsleutel-id die voor codering wordt gebruikt, op basis van de openbare coderingssleutel van LiveRamp. Dit gebied wordt vereist als u een encryptiesleutel in de authentificatiestap verstrekte."
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Leer hoe u de subsleutel-id ophaalt."
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Leer hoe u de subsleutel-id verkrijgt"
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
