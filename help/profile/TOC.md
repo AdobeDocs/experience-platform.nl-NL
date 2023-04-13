@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Handleiding voor Real-time klantprofiel
 user-guide-description: Voeg klantgegevens samen om een uniform beeld te krijgen van klantinteracties via verschillende kanalen.
 feature: Profiles
-source-git-commit: 81d219116479aa71e9540e4efa636bec8dea5d23
+source-git-commit: 9de3af9402a245779cfaf765c40bb54da57b91e2
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 18%
+source-wordcount: '124'
+ht-degree: 19%
 
 ---
 
@@ -30,11 +30,6 @@ ht-degree: 18%
 * Profielinterface {#ui}
    * [[!DNL Profile] UI-hulplijn](ui/user-guide.md)
    * [[!DNL Profile] detailaanpassing](ui/profile-customization.md)
-* (Alpha) Berekende kenmerken {#computed-attributes}
-   * [Overzicht](computed-attributes/overview.md)
-   * [API voor berekende kenmerken](computed-attributes/ca-api.md)
-   * [Veld voor berekende kenmerken configureren](computed-attributes/configure-api.md)
-   * [Voorbeeldexpressies](computed-attributes/expressions.md)
 * Beleid samenvoegen {#merge-policies}
    * [Overzicht](merge-policies/overview.md)
    * [API voor beleid samenvoegen](api/merge-policies.md)

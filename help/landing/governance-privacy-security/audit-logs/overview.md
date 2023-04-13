@@ -2,7 +2,7 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 4%
@@ -43,7 +43,7 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 | [Attribution AI-instantie](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
 | [Controlelogboeken](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exporteren</li></ul> |
 | [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [Berekend kenmerk](../../../profile/computed-attributes/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| Berekend kenmerk | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [AI-exemplaar van klant](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
 | [Gegevensset](../../../catalog/datasets/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen voor [Klantprofiel in realtime](../../../profile/home.md)</li><li>Uitschakelen voor profiel</li><li>Gegevens toevoegen</li><li>Batch verwijderen</li></ul> |
 | [DataStream](../../../edge/datastreams/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>[Toewijzing bewerken](../../../edge/datastreams/data-prep.md)</li></ul> |

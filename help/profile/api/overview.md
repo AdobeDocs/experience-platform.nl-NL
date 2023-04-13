@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd profiel;profiel;rtcp;inschakelen profiel;profiel inschakelen
 title: Real-Time API-handleiding voor klantprofiel
-description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 0%
+source-wordcount: '792'
+ht-degree: 1%
 
 ---
 
@@ -20,17 +20,17 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naa
 
 Voor een gids voor het werken met [!DNL Real-Time Customer Profile] gegevens in de [!DNL Experience Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor profielen](../ui/user-guide.md).
 
-## (Alpha) Berekende kenmerken {#computed-attributes}
+<!-- ## (Alpha) Computed attributes {#computed-attributes}
 
 >[!IMPORTANT]
 >
->De functie voor berekende kenmerken staat in alfa en is niet beschikbaar voor alle gebruikers. Documentatie en functionaliteit kunnen worden gewijzigd.
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
 
-Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
-Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde in een profielkenmerk opslaat. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Deze berekende kenmerkwaarden kunnen dan in een profiel worden bekeken, worden gebruikt om een segment tot stand te brengen, of door een aantal verschillende toegangspatronen worden betreden.
+Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
 
-U kunt berekende kenmerken maken, weergeven, bewerken en verwijderen met de opdracht `config/computedAttributes` eindpunt. Als u wilt weten hoe u berekende kenmerken gebruikt, raadpleegt u de [overzicht van berekende kenmerken](../computed-attributes/overview.md). Ga voor API-bewerkingen naar de [API-eindpuntgids voor berekende kenmerken](../computed-attributes/ca-api.md).
+You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md). -->
 
 ## Edge-prognoses {#edge-projections}
 

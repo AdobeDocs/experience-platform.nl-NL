@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1216'
 ht-degree: 1%
 
 ---
@@ -209,11 +209,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 | `description` | Een door de mens leesbare beschrijving van de definitie. |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Een segmentdefinitieexpressie kan ook verwijzen naar een berekend kenmerk. Voor meer informatie raadpleegt u de [berekende attribuut API eindpuntgids](../../profile/computed-attributes/ca-api.md)
+>A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->De functie voor berekende kenmerken staat in alfa en is niet beschikbaar voor alle gebruikers. Documentatie en functionaliteit kunnen worden gewijzigd.
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **Antwoord**
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-Time overzicht van klantprofiel
 description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,13 @@ Een van de belangrijkste kenmerken van [!DNL Real-Time Customer Profile] is de m
 
 Ga voor meer informatie over vakbondsschema&#39;s, waaronder hoe u vakbondsschema&#39;s kunt openen in de gebruikersinterface naar de [UI-hulplijn verenigingsschema](ui/union-schema.md).
 
-### (Alpha) Berekende kenmerken
+<!-- ### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
->De berekende kenmerkfunctionaliteit staat in alpha. De documentatie en functionaliteit kunnen worden gewijzigd.
+>Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Voor meer informatie over berekende kenmerken, waaronder het begrip van de rol die berekende kenmerken spelen in Adobe Experience Platform, moet u eerst de [overzicht van berekende kenmerken](computed-attributes/overview.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
 ## Profielen en segmenten
 
