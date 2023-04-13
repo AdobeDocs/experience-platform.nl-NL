@@ -2,7 +2,7 @@
 title: Verwijzing naar extensies doorsturen van gebeurtenissen
 description: Documentatie zoeken voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -14,6 +14,13 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan de serverzijde. Voor een lijst met beschikbare clientextensies raadpleegt u de [verwijzing naar extensies tag](../client/overview.md) in plaats daarvan.
 
