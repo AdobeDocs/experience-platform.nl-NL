@@ -5,9 +5,9 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-Time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
+source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -186,6 +186,10 @@ Om ervoor te zorgen dat uw privacyverzoeken alle relevante klantenattributen ver
 ## Verzoek om verwerking verwijderen {#delete}
 
 Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL Privacy Service], [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] dat het verzoek is ontvangen en de betrokken gegevens zijn gemarkeerd voor verwijdering. De records worden vervolgens verwijderd nadat de privacytaak is voltooid.
+
+>[!IMPORTANT]
+>
+>De verzoeken om privacy te schrappen zijn niet onmiddellijk en kunnen variëren afhankelijk van de betrokken diensten en andere beïnvloedende factoren zoals geografische plaats. De termijn voor het voltooien van privacytaken kan variëren van 15 tot 45 dagen, maar is niet gegarandeerd.
 
 Afhankelijk van of u ook Identiteitsservice hebt opgenomen (`identity`) en het datumpeer (`aepDataLake`) als producten in uw privacyaanvraag voor profiel (`ProfileService`), worden verschillende gegevenssets met betrekking tot het profiel op mogelijk verschillende tijdstippen uit het systeem verwijderd:
 
