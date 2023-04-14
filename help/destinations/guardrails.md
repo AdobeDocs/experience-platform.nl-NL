@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ De onderstaande instructies zijn over het algemeen van toepassing op activering 
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Hard | Momenteel is het alleen mogelijk om te exporteren *profielrecordkenmerken* naar bestemmingen. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
 | Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Niet beschikbaar | Hard | Op dit moment is het **niet** kunnen worden geëxporteerd *array- of toewijzingskenmerken* naar bestemmingen. De uitzondering op deze regel is de [identiteitsbewijs](/help/xdm/field-groups/profile/identitymap.md), die wordt geëxporteerd in zowel streaming als bestandgebaseerde activering. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Streaming activering {#streaming-activation}
 
@@ -58,7 +58,7 @@ De onderstaande instructies zijn van toepassing op activering via [streaming doe
 | --- | --- | --- | --- |
 | Aantal activeringen (HTTP-berichten met profielexport) per seconde | N.v.t. | - | Er is momenteel geen grens aan het aantal berichten per seconde die van Experience Platform naar API eindpunten van partnerbestemmingen worden verzonden. <br> Om het even welke grenzen of latentie worden gedicteerd door het eindpunt waar het Experience Platform gegevens verzendt. Controleer ook of [catalogus](/help/destinations/catalog/overview.md) pagina van het doel waarmee u verbinding maakt en gegevens activeert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Batch (op bestand gebaseerd) activeren {#batch-file-based-activation}
 
@@ -70,7 +70,7 @@ De onderstaande instructies zijn van toepassing op activering via [batchbestemmi
 | Maximumaantal segmenten dat in een bepaald uur kan worden geëxporteerd | 100 | Zacht | De aanbeveling moet een maximum van 100 segmenten aan partijbestemmingsdataflows toevoegen. |
 | Maximumaantal rijen (records) per bestand dat moet worden geactiveerd | 5 miljoen | Hard | Adobe Experience Platform splitst de geëxporteerde bestanden automatisch op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel. Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Lees voor meer informatie de [sectie plannen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) van de activerende batchdoelzelfstudie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Ad-hocactivering {#ad-hoc-activation}
 
@@ -81,7 +81,7 @@ De onderstaande instructies zijn van toepassing op de [ad-hocactivering](/help/d
 | Segmenten geactiveerd per ad-hocactiveringstaak | 80 | Hard | Momenteel kan elke ad-hocactiveringstaak maximaal 80 segmenten activeren. Als u probeert meer dan 80 segmenten per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd. |
 | Gelijktijdige ad-hocactiveringstaken per segment | 1 | Hard | Voer niet meer dan één gelijktijdige ad-hocactiveringstaak per segment uit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Activering van Edge-verpersoonlijkingsdoelen {#edge-destinations-activation}
 
@@ -90,10 +90,10 @@ De onderstaande instructies zijn van toepassing op activering via [Edge-verperso
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Maximum aantal [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen | 10 | Zacht | U kunt gegevensstromen aan 10 Aangepaste verpersoonlijkingsbestemmingen per zandbak plaatsen. |
-| Maximumaantal kenmerken dat per sandbox aan een verpersoonlijkingsdoel is toegewezen | 20 | Hard | Een maximum van 20 attributen kan in een dataflow aan een verpersoonlijkingsbestemming, per zandbak worden in kaart gebracht. |
+| Maximumaantal kenmerken dat per sandbox aan een verpersoonlijkingsdoel is toegewezen | 30 | Hard | Een maximum van 30 attributen kan in een dataflow aan een verpersoonlijkingsbestemming, per zandbak worden in kaart gebracht. |
 | Maximumaantal segmenten toegewezen aan één [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) doel | 50 | Zacht | U kunt maximaal 50 segmenten in een activeringsstroom activeren naar één Adobe Target-bestemming. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
@@ -104,7 +104,7 @@ De onderstaande instructies zijn van toepassing op activering via [Edge-verperso
 | Maximum aantal [persoonlijke aangepaste bestemmingen](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Zacht | U kunt maximaal vijf aangepaste streaming privédoelen of batchdoelen maken met behulp van Destination SDK. Neem contact op met een aangepaste zorgvertegenwoordiger als u meer dan vijf van dergelijke doelen moet maken. |
 | Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 1 800 en maximaal 3 600)</li><li>`maxNumEventsInBatch` (minimaal 1 000, maximaal 10 000)</li></ul> | Hard | Wanneer u de [configureerbare samenvoeging](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) Houd rekening met de minimum- en maximumwaarden die bepalen hoe vaak HTTP-berichten naar de op API gebaseerde bestemming worden verzonden en hoeveel profielen de berichten moeten bevatten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Beleidswijziging en opnieuw proberen van bestemming {#destination-throttling-and-retry-policy}
 
@@ -114,7 +114,7 @@ Gegevens over drempelwaarden of beperkingen voor bepaalde bestemmingen. Deze sec
 | --- | --- |
 | Enterprise-bestemmingen (HTTP-API, Amazon Kinesis, Azure EventHubs) | In 95 percent van de tijd, probeert het Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een ondernemingsbestemming aan te bieden. <br> In het geval van ontbroken verzoeken aan uw ondernemingsbestemming, slaat het Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Guardrails voor ander Experience Platform {#guardrails-other-services}
 
