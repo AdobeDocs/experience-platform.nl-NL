@@ -2,9 +2,9 @@
 title: Geplande query's controleren
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
+source-git-commit: 1b4554e204663d40c3a18da792614305abb7d296
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -120,11 +120,15 @@ U kunt de SQL-query van deze weergave naar het klembord kopiëren. Selecteer het
 
 ### Details uitvoeren voor query&#39;s met anoniem blok {#anonymous-block-queries}
 
-Vragen die anonieme blokken gebruiken om uit hun SQL-instructies te bestaan, worden gescheiden in hun individuele query&#39;s. Dit staat u toe om de looppasdetails voor elk vraagblok individueel te inspecteren.
+Vragen die anonieme blokken gebruiken om uit hun SQL-instructies te bestaan, worden gescheiden in hun individuele subquery&#39;s. Dit staat u toe om de looppasdetails voor elk vraagblok individueel te inspecteren.
+
+>[!NOTE]
+>
+>De loopingdetails van een anoniem blok dat het bevel DROP gebruikt zullen **niet** worden gerapporteerd als een aparte subquery. De afzonderlijke looppasdetails zijn beschikbaar voor vragen CTAS, vragen ITAS, en verklaringen van de KOPIE die als anonieme die bloksubquery&#39;s worden gebruikt. Details uitvoeren voor de opdracht DROP wordt momenteel niet ondersteund.
 
 Anonieme blokken worden aangeduid door het gebruik van een `$$` voor de query. Zie de [anoniem blokdocument](../essential-concepts/anonymous-block.md) om meer over anonieme blokken in de vraagdienst te weten te komen.
 
-De anonieme blokvragen hebben lusjes links van de looppasstatus. Selecteer een tabblad om de details van de uitvoering weer te geven.
+Anonieme subquery&#39;s voor blokken hebben tabs links van de status van de run. Selecteer een tabblad om de details van de uitvoering weer te geven.
 
 ![Het overzicht van de looppas van de Vraag die een anonieme blokvraag toont. De veelvoudige vraaglusjes worden benadrukt.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
