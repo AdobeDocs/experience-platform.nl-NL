@@ -4,10 +4,10 @@ title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes. Leer welke ESPs als bestemmingen van het Experience Platform worden gesteund.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
+source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '371'
+ht-degree: 2%
 
 ---
 
@@ -24,9 +24,10 @@ Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
-* [(API) Salesforce-Marketing Cloud](salesforce-marketing-cloud-exact-target.md)
+* [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(Bestanden) Eloqua Oracle](oracle-eloqua.md)
-* [(Bestanden) Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
+* [(Bestanden) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
+* [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [SendGrid](sendgrid.md)
 
