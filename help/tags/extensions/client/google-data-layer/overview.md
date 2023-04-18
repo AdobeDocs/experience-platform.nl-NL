@@ -2,18 +2,14 @@
 title: Google Data Layer Extension
 description: Meer informatie over de tagextensie Google Client Data Layer in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
 
-# Google Data Layer extension (bèta)
-
->[!IMPORTANT]
->
->Deze extensie is momenteel in bèta en is nog niet volledig getest in productie.
+# Google Data Layer-extensie
 
 Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van tags. De extensie kan onafhankelijk of gelijktijdig worden gebruikt met Google-oplossingen en met open source uit Google [Helpbibliotheek gegevenslaag](https://github.com/google/data-layer-helper).
 
@@ -21,45 +17,50 @@ De Helper Library biedt functionaliteit die door gebeurtenissen wordt aangestuur
 
 ## Looptijd
 
-Versie 1.0.x van de extensie is een bètaversie. Deze uitbreiding is niet volledig getest in productie.
+Versie 1.2.x is een late bètaversie die in productie wordt gebruikt.
 
 ## Installatie
 
-Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface van het Experience Platform of de gebruikersinterface van de gegevensverzameling en selecteert u **Google-gegevenslaag**.
+Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface voor gegevensverzameling en selecteert u **[!UICONTROL Google Data Layer]**.
 
-Nadat de extensie is geïnstalleerd, wordt elke keer dat de tagbibliotheek op uw website wordt geladen, een gegevenslaag gemaakt of geopend.
+Nadat de extensie is geïnstalleerd, wordt een gegevenslaag gemaakt of geopend bij elke keer dat de Adobe Experience Platform-tagbibliotheek wordt geladen.
 
 ## Extensieweergave
 
-Wanneer u de extensie configureert (tijdens de installatie van de extensie of door **[!UICONTROL Configure]** in de extensiecatalogus) moet u de naam definiëren van de gegevenslaag die de extensie gebruikt. Als er geen gegevenslaag met de geconfigureerde naam aanwezig is wanneer de bibliotheek wordt geladen, maakt de extensie er een.
+De extensieconfiguratie kan worden gebruikt om de naam te definiëren van de gegevenslaag die de extensie gebruikt. Als geen gegevenslaag met de gevormde naam aanwezig is wanneer de Markeringen van Adobe Experience Platform wordt geladen, leidt de uitbreiding tot één.
+
+De standaardnaam van de gegevenslaag is de Google-standaardnaam `dataLayer`.
 
 >[!NOTE]
 >
->Het maakt niet uit of Google- of Adobe-code het eerst wordt geladen en dat de gegevenslaag wordt gemaakt. Beide systemen zullen tot de gegevenslaag leiden indien niet aanwezig, of gebruiken de bestaande gegevenslaag.
-
-Standaard gebruikt de gegevenslaag de Google-standaardnaam `dataLayer`.
+>Het maakt niet uit of Google- of Adobe-code het eerst wordt geladen en dat de gegevenslaag wordt gemaakt. Beide systemen gedragen zich het zelfde - creeer de gegevenslaag als het niet aanwezig is of gebruik de bestaande gegevenslaag.
 
 ## Gebeurtenissen
 
-Met de extensie kunt u luisteren naar wijzigingen (gebeurtenissen) in de gegevenslaag. Een gebeurtenis kan een van de volgende zijn:
+>[!NOTE]
+>
+>Het woord _event_ wordt overgeladen wanneer een gebeurtenisgestuurde gegevenslaag wordt gebruikt in Adobe Experience Platform-tags. _Gebeurtenissen_ kan:
+> - Gebeurtenissen van Adobe Experience Platform-tags (Bibliotheek geladen enzovoort).
+> - JavaScript-gebeurtenissen.
+> - Gegevens die met de _event_ trefwoord.
 
-* Taggebeurtenissen (zoals een bibliotheek die wordt geladen)
-* JavaScript-gebeurtenissen
-* Gegevens die met de `event` trefwoord.
 
-Het is belangrijk om het gebruik van het [`event` trefwoord](https://developers.google.com/tag-platform/devguides/datalayer#use_a_data_layer_with_event_handlers) wanneer de gegevens aan een de gegevenslaag van Google, gelijkaardig aan de Laag van de Gegevens van de Cliënt van Adobe worden geduwd. De `event` trefwoord wijzigt het gedrag van de Google-gegevenslaag en het gedrag van de extensie wordt daarom dienovereenkomstig bijgewerkt.
+De extensie biedt u de mogelijkheid te luisteren naar wijzigingen in de gegevenslaag.
 
-In de onderstaande secties worden de verschillende gebeurtenistypen beschreven waarnaar de extensie kan luisteren.
+>[!NOTE]
+>
+>Het is belangrijk om het gebruik van het _event_ sleutelwoord wanneer het gegeven aan een de gegevenslaag van Google wordt geduwd, gelijkaardig aan de Laag van de Gegevens van de Cliënt van Adobe. De _event_ wijzigt het gedrag van de Google-gegevenslaag en dus ook deze extensie.\
+> Lees de documentatie van Google of doe onderzoek als u op dit punt onzeker bent.
 
 ### Luisteren naar alle markeringen op de gegevenslaag
 
-Als u deze optie selecteert, luistert de extensie naar elke wijziging die in de gegevenslaag wordt aangebracht.
+Als u deze optie selecteert, luistert uw gebeurtenislistener naar elke wijziging die in de gegevenslaag is aangebracht.
 
 ### Luisteren naar pushberichten, gebeurtenissen uitsluiten
 
-Als u deze optie selecteert, luistert de extensie naar alles wat naar de gegevenslaag wordt geduwd, met uitzondering van gebeurtenissen.
+Als u deze optie selecteert, luistert uw gebeurtenislistener naar een willekeurige druk op de gegevens in de gegevenslaag, gebeurtenissen niet inbegrepen.
 
-De volgende voorbeeldpushgebeurtenis wordt door de listener bijgehouden:
+De volgende voorbeeldpushgebeurtenissen worden door de listener bijgehouden:
 
 ```js
 dataLayer.push({"data":"something"})
@@ -74,7 +75,7 @@ dataLayer.push({"event":"myevent","data":"something"})
 
 ### Luisteren naar alle gebeurtenissen
 
-Als u deze optie selecteert, luistert de extensie naar gebeurtenissen die naar de gegevenslaag worden geduwd.
+Als u deze optie selecteert, luistert uw gebeurtenislistener naar elke gebeurtenis die naar de gegevenslaag wordt geduwd.
 
 De volgende voorbeeldpushgebeurtenissen worden door de listener bijgehouden:
 
@@ -91,7 +92,7 @@ dataLayer.push({"data":"something"})
 
 ### Luisteren naar specifieke gebeurtenis
 
-Als u naar een specifieke gebeurtenis wilt luisteren, selecteert u deze optie zodat de gebeurtenislistener gebeurtenissen bijhoudt die overeenkomen met een specifieke tekenreeks.
+Als u een gebeurtenis opgeeft, houdt de gebeurtenislistener alle gebeurtenissen bij die overeenkomen met een bepaalde tekenreeks.
 
 Stel bijvoorbeeld `myEvent` wanneer u deze configuratie gebruikt, wordt in de listener alleen de volgende pushgebeurtenis bijgehouden:
 
@@ -99,7 +100,9 @@ Stel bijvoorbeeld `myEvent` wanneer u deze configuratie gebruikt, wordt in de li
 dataLayer.push({"event":"myEvent"})
 ```
 
-U kunt ook een regex-tekenreeks gebruiken om namen van gebeurtenissen aan te passen. Stel bijvoorbeeld `myEvent\d` zou gebeurtenissen volgen die beginnen met `myEvent` gevolgd door een cijfer:
+Een regex (ECMAScript / JavaScript) kan worden gebruikt om gebeurtenisnamen aan te passen.
+
+Als u bijvoorbeeld &#39;myEvent\d&#39; instelt, wordt bijgehouden `myEvent` met een cijfer (\d):
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -108,11 +111,13 @@ dataLayer.push({"event":"myEvent2"})
 
 ## Acties
 
-In de volgende secties worden de verschillende acties beschreven die de extensie kan uitvoeren wanneer deze deel uitmaakt van een [regel](../../../ui/managing-resources/rules.md).
-
 ### Naar gegevenslaag duwen {#push-to-data-layer}
 
-Met deze actie wordt JSON-inhoud naar de gegevenslaag zelf verplaatst, zodat gegevenselementen rechtstreeks in JSON-ladingen kunnen worden gebruikt. Binnen de verstrekte redacteur JSON, kunt u gegevenselementen van verwijzingen voorzien gebruikend percentenaantekening (bijvoorbeeld `%dataElementName%`).
+De extensie biedt u twee handelingen om JSON naar de gegevenslaag te duwen. een gratis tekstveld om handmatig de JSON te maken die moet worden geduwd, en vanaf versie 1.2.0 een sleutelwaardevenster met meerdere velden.
+
+#### Vrije tekst JSON
+
+Met de actie Vrije tekst kunt u gegevenselementen rechtstreeks in de JSON gebruiken. Binnen de redacteur JSON, gegevenselementen zouden moeten worden van verwijzingen voorzien gebruikend percentenaantekening. Bijvoorbeeld, `%dataElementName%`.
 
 ```json
 {
@@ -124,27 +129,27 @@ Met deze actie wordt JSON-inhoud naar de gegevenslaag zelf verplaatst, zodat geg
 }
 ```
 
+#### Sleutelwaarde multifield
+
+De nieuwere zeer belangrijke multifield dialoog is een gebruikersvriendelijker interface die een duw om toestaat worden gevormd zonder JSON manueel te schrijven.
+
 ### Google DL Herstellen naar computerstatus
 
->[!NOTE]
->
->Deze actie is beschikbaar vanaf v1.0.5.
-
-Met deze handeling wordt de gegevenslaag opnieuw ingesteld. Indien gebruikt in een regel die een verandering van de gegevenslaag van Google verwerkt, wordt de gegevenslaag teruggesteld aan de gegevens verwerkte staat van de gegevenslaag op het tijdstip dat de regel werd teweeggebracht. Als de handeling wordt gebruikt in een regel die geen wijziging in een Google-gegevenslaag verwerkt, wordt de gegevenslaag gewist door de handeling.
+De extensie biedt u een handeling om de gegevenslaag opnieuw in te stellen. Indien gebruikt in een regel die een verandering van de gegevenslaag van Google verwerkt, wordt de gegevenslaag teruggesteld aan de gegevens verwerkte staat van de gegevenslaag op het tijdstip dat de regel werd teweeggebracht. Als de handeling wordt gebruikt in een regel die geen wijziging in een Google-gegevenslaag verwerkt, wordt de gegevenslaag gewist door de handeling.
 
 ## Gegevenselementen
 
-De extensie biedt een uniek gegevenselement dat de gegevenslaag benadert met behulp van een sleutel (bijvoorbeeld `page.url` in de [fragment boven](#push-to-data-layer)).
+Het opgegeven gegevenselement kan worden gebruikt tijdens de uitvoering van een regel die wordt geactiveerd door een wijziging in de Google-gegevenslaag (push-gebeurtenis) of in een niet-gerelateerde regel zoals Bibliotheek geladen. In het eerste geval retourneert het gegevenselement een waarde die is ontleend aan de berekende status op het moment van de wijziging van de gegevenslaag. In het laatste geval wordt de berekende status op het tijdstip van de uitvoering van de regel gebruikt.
 
-Het gegevenselement kan het volgende bieden:
+Een knevelschakelaar staat u toe om te selecteren of het gegevenselement waarden van de volledige gegevens verwerkte staat, of slechts van gebeurtenisinformatie zou moeten terugkeren (als gebruikt in een regel die door een verandering van de gegevenslaag wordt teweeggebracht).
 
-* Een specifieke waarde uit de gegevenslaag (bijvoorbeeld `page.url`)
-* De volledige array met gegevenslagen (leeg veld toets)
-* Waarden van een gegevenslaaggebeurtenis met de toets (als de `event` trefwoord gebruikt)
-* Het gehele gebeurtenisobject (leeg toetsveld)
+Het gegevenselement kan daarom worden geretourneerd:
 
-De extensie geeft altijd prioriteit aan gebeurtenisinformatie. Als een gegevenslaag `event` worden verwerkt, worden waarden altijd gelezen van die gebeurtenis. Als een `event` niet aanwezig is, worden de waarden gelezen van de directe gegevenslaag.
+- Leeg veld: status van gegevenslaag berekend.
+- Veld met sleutel (zoals page.previous_url in het bovenstaande voorbeeld): waarde van de sleutel in het gebeurtenisobject of de berekende status.
 
 ## Aanvullende informatie
 
-Aanvullende informatie is beschikbaar in het dialoogvenster [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md) en in de dialoogvensters voor gegevenselementen en gebeurtenissen van de extensie.
+Het gegevenselement en de gebeurtenisdialoogvensters van de extensie bevatten gedetailleerde gebruiksinformatie en voorbeelden.
+
+Aanvullende algemene informatie vindt u in het gedeelte [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
