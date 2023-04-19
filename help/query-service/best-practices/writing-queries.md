@@ -5,9 +5,9 @@ title: Algemene begeleiding voor de Uitvoering van de Vraag in de Dienst van de 
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1067'
 ht-degree: 2%
 
 ---
@@ -324,7 +324,6 @@ Door dit document te lezen, bent u op enkele belangrijke overwegingen geïntrodu
 Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, gelieve de volgende documentatie van het gebruiksgeval te lezen:
 
 - [Analyseinzichten](../use-cases/analytics-insights.md)
-- [Activiteitenanalyse met Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
 - [Een vernieuwd rapport van gebeurtenissen maken](../use-cases/trended-report-of-events.md)
 - [Een roll-uprapport van een bezoeker weergeven](../use-cases/roll-up-report-of-a-visitor.md)
 - [De paginaweergaven van een gebruiker weergeven](../use-cases/list-visitor-sessions.md)
