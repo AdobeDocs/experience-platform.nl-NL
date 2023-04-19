@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '270'
 ht-degree: 16%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 16%
       - [Op decile gebaseerde afgeleide kenmerken maken](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Gebruiksscenario’s {#use-cases}
    - [Verlaten browsers](use-cases/abandoned-browse.md)
-   - [Activiteitenanalyse met Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
    - [Attributieanalyse](use-cases/attribution-analysis.md)
    - [Bot filteren](use-cases/bot-filtering.md)
    - [Een vernieuwd rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
