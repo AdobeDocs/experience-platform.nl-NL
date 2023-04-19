@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aanwezigheid van tekst en optische tekenherkenning
 description: In de API voor inhoudslabeling kan de service Aanwezigheid van tekst/Optische tekenherkenning (OCR) aangeven of er tekst aanwezig is in een bepaalde afbeelding. Als er tekst aanwezig is, kan OCR de tekst retourneren.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 2%
@@ -110,7 +110,7 @@ Als het antwoord met succes is beantwoord, wordt de tekst geretourneerd die is a
       "tags": [
         {
           "text": "yosemite",
-          "relevance": 0.05604639115920341
+          "relevance": 0.06
         }
       ],
       "request_element_id": 0

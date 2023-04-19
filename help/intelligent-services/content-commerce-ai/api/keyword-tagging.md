@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Trefwoordtags toepassen in de API voor inhoudtags
 description: Als u een tekstdocument opgeeft met de service Trefwoordtags, worden trefwoorden of trefwoorden die het onderwerp van het document het beste beschrijven automatisch geëxtraheerd. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor trefwoordtags.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 3%
+source-wordcount: '447'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 Bij een tekstdocument worden trefwoorden of trefwoorden die het beste het onderwerp van het document beschrijven, automatisch door de service Trefwoordtags geëxtraheerd. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor trefwoordtags.
 
-In de volgende tabel worden de benoemde entiteiten weergegeven [!DNL Content Tagging] heeft vastgesteld:
+In de volgende tabel worden de benoemde entiteiten weergegeven [!DNL Content Tagging] kan identificeren:
 
 | Entiteitsnaam | Beschrijving |
 | --- | --- |
@@ -86,15 +86,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**Invoerparameters**
+
 | Eigenschap | Beschrijving | Verplicht |
 | --- | --- | --- |
-| `application-id` | De id van de gemaakte toepassing. | Ja |
 | `top_n` | Aantal resultaten dat moet worden geretourneerd. 0, om alle resultaten te retourneren. Wanneer gebruikt in combinatie met een drempelwaarde, zal het aantal geretourneerde resultaten kleiner zijn dan een van beide limieten. | Nee |
 | `min_relevance` | Score-drempel waaronder resultaten moeten worden geretourneerd. Sluit de parameter uit om alle resultaten te retourneren. | Nee |
 | `min_key_phrase_length` | Minimumaantal woorden vereist in de belangrijkste zinnen. | Nee |
 | `max_key_phrase_length` | Maximumaantal woorden vereist in de sleutelzinnen. | Nee |
 | `last_semantic_unit_type` | Retourneer alleen semantische eenheden tot het opgegeven niveau in de hiërarchische reactie. &quot;key_qua&quot; retourneert alleen de sleutelzinnen, &quot;linked_entity&quot; retourneert alleen de sleutelzinnen en de bijbehorende gekoppelde entiteiten, en &quot;concept&quot; retourneert toetszinnen, gekoppelde entiteiten en concepten. | Nee |
 | `entity_types` | Typen entiteiten die als sleutelzinnen moeten worden geretourneerd. | Nee |
+
+**Object Document**
 
 | Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
 | -----| --------- | -------- | ------- | ------ | ----------- |

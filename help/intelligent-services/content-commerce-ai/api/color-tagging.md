@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Kleurlabels in de API voor inhoudtags
 description: Als u een afbeelding opgeeft met kleurcodes, kunt u het histogram van pixelkleuren berekenen en deze sorteren op dominante kleuren in emmers.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '676'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,14 @@ Met deze methode extraheert u een kleurenhistogram over de hele afbeelding.
 
 **Kleurlabels (met masker)**
 
-Deze methode gebruikt een op diepleren gebaseerde voorgrondextractor om objecten op de voorgrond te identificeren. Het model is opgeleid voor een catalogus met e-commerceafbeeldingen. Nadat het voorgrondobject is geëxtraheerd, wordt een histogram berekend over de dominante kleuren, zoals eerder beschreven.
+Deze methode gebruikt een op diepleren gebaseerde voorgrondextractor om objecten op de voorgrond te identificeren. Nadat de voorgrondobjecten zijn geëxtraheerd, wordt een histogram samen met de hele afbeelding berekend over de dominante kleuren voor zowel de voor- als de achtergrondgebieden.
+
+**Toonextractie**
+
+Naast de hierboven vermelde varianten, kunt u de dienst vormen om een histogram van tonen voor terug te winnen:
+
+- De algemene afbeelding (bij gebruik van de volledige afbeeldingsvariant)
+- De algemene afbeelding en de voor- en achtergrondgebieden (wanneer de variant wordt gebruikt met maskering)
 
 De volgende afbeelding is gebruikt in het voorbeeld dat in dit document wordt weergegeven:
 
@@ -33,11 +40,9 @@ De volgende afbeelding is gebruikt in het voorbeeld dat in dit document wordt we
 POST /services/v2/predict
 ```
 
-**Verzoek**
+**Verzoek - volledige afbeeldingsvariant**
 
-In het volgende voorbeeldverzoek wordt de methode full-image gebruikt voor kleurlabeling.
-
-In het volgende verzoek worden kleuren uit een afbeelding geëxtraheerd op basis van de invoerparameters die in de lading zijn opgegeven. Zie de tabel onder de voorbeeldlading voor meer informatie over de getoonde inputparameters.
+In het volgende voorbeeldverzoek wordt de methode full-image gebruikt voor kleurlabeling en worden kleuren uit een afbeelding geëxtraheerd op basis van de invoerparameters die in de payload zijn opgegeven. Zie de tabel onder de voorbeeldlading voor meer informatie over de getoonde inputparameters.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -46,13 +51,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H "content-type: multipart/form-data" \
 -H "authorization: Bearer $API_TOKEN" \
 -F 'contentAnalyzerRequests={
-  "sensei:name": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
   "sensei:invocation_mode": "synchronous",
   "sensei:invocation_batch": false,
   "sensei:engines": [
     {
       "sensei:execution_info": {
-        "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58"
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
       },
       "sensei:inputs": {
         "documents": [{
@@ -61,8 +66,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
           }]
       },
       "sensei:params": {
-        "application-id": "1234",
-        "enable_mask": 0
+        "top_n": 5,
+        "min_coverage": 0.005      
       },
       "sensei:outputs":{
         "result" : {
@@ -76,23 +81,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
-| Eigenschap | Beschrijving | Verplicht |
-| --- | --- | --- |
-| `application-id` | De id van de toepassing die u hebt gemaakt. | Ja |
-| `documents` | Een lijst met JSON-elementen waarbij elk item in de lijst één document vertegenwoordigt. | Ja |
-| `top_n` | Het aantal resultaten dat moet worden geretourneerd (dit kan geen negatief geheel getal zijn). De waarde gebruiken `0` om alle resultaten te retourneren. Indien gebruikt in combinatie met `threshold`, is het aantal geretourneerde resultaten het laagste van de twee ingestelde limieten. De standaardwaarde voor deze eigenschap is `0`. | Nee |
-| `min_coverage` | Drempel van dekking waarboven de resultaten moeten worden geretourneerd. Sluit de parameter uit om alle resultaten te retourneren. | Nee |
-| `resize_image` | Geeft aan of de grootte van de invoerafbeelding moet worden gewijzigd. Standaard wordt de grootte van de afbeeldingen gewijzigd in 320*320 pixels voordat kleurlabels worden uitgevoerd. Voor het zuiveren doeleinden kunnen wij de code toestaan om op volledig-beeld te lopen, door dit aan Vals te plaatsen. | Nee |
-| `enable_mask` | Schakelt kleurlabeling binnen masker in of uit. | Nee |
-
-| Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
-| -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Voorgetekende URL van het document waaruit de belangrijkste zinnen moeten worden geëxtraheerd. |
-| `sensei:repoType` | string | - | - | HTTPS | Type repo waar de afbeelding wordt opgeslagen. |
-| `sensei:multipart_field_name` | string | - | - | - | Gebruik dit wanneer u een afbeeldingsbestand doorgeeft als een meerdelig argument in plaats van vooraf ondertekende URL&#39;s te gebruiken. |
-| `dc:format` | string | Ja | - | &quot;image/jpg&quot;, <br> &quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | De codering van afbeeldingen wordt gecontroleerd aan de hand van toegestane invoercoderingstypen voordat deze wordt verwerkt. |
-
-**Antwoord**
+**Reactie - volledige afbeeldingsvariant**
 
 Wanneer de reactie is gelukt, worden de details van de geëxtraheerde kleuren geretourneerd. Elke kleur wordt vertegenwoordigd door een `feature_value` key, die de volgende informatie bevat:
 
@@ -100,89 +89,287 @@ Wanneer de reactie is gelukt, worden de details van de geëxtraheerde kleuren ge
 - Het percentage waarmee deze kleur wordt weergegeven in verhouding tot de afbeelding
 - De RGB-waarde van de kleur
 
-In het eerste onderstaande voorbeeldobject wordt de `feature_value` van `Mud_Green,0.069,102,72,95` betekent dat de gevonden kleur moddergroen is, moddergroen wordt aangetroffen in 6,9% van de afbeelding en de RGB-waarde 102,72,95 is.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`De gevonden kleur is wit, die wordt aangetroffen in 58,34% van de afbeelding, en heeft een gemiddelde RGB-waarde van 254, 254, 243.
 
 ```json
 {
-  "status": 200,
-  "content_id": "test_image.jpg",
-  "cas_responses": [
-    {
-{
-  "statuses": [
-    {
-      "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
-      "invocations": [
-        {
-          "sensei:outputs": {
-            "result": {
-              "sensei:multipart_field_name": "result",
-              "dc:format": "application/json"
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "bfpzaJxKDxtgxpjUj5QDrN1jasjUw2RM"
+}  
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
+                }
             }
-          },
-          "message": null,
-          "status": "200"
         }
-      ]
     }
-  ],
-  "request_id": "hsxycVq5Q9KbZ7MWrt6NXcSNWbonSLf3"
-}
+}]
+```
 
-[
-  {
-    "request_element_id": "0",
-    "colors": {
-      "Mud_Green": {
-        "coverage": 0.0694,
-        "rgb": {
-          "red": 102,
-          "blue": 72,
-          "green": 95
-        }
+Het resultaat hier heeft kleur die is uitgepakt voor het &quot;algemene&quot; afbeeldingsgebied.
+
+**Verzoek - variant gemaskeerde afbeelding**
+
+In het volgende voorbeeldverzoek wordt de maskeringsmethode gebruikt voor kleurlabeling. We maken dit mogelijk door de `enable_mask` parameter to `true` in het verzoek.
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+  "sensei:invocation_mode": "synchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
       },
-      "Dark_Brown": {
-        "coverage": 0.1226,
-        "rgb": {
-          "red": 113,
-          "blue": 77,
-          "green": 84
-        }
+      "sensei:inputs": {
+        "documents": [{
+            "sensei:multipart_field_name": "infile_1",
+            "dc:format": "image/jpg"
+          }]
       },
-      "Pink": {
-        "coverage": 0.0731,
-        "rgb": {
-          "red": 234,
-          "blue": 201,
-          "green": 209
-        }
+      "sensei:params": {
+        "top_n": 5,
+        "min_coverage": 0.005,
+        "enable_mask": true,
+        "retrieve_tone": true     
       },
-      "Dark_Gray": {
-        "coverage": 0.1533,
-        "rgb": {
-          "red": 63,
-          "blue": 58,
-          "green": 59
-        }
-      },
-      "Olive": {
-        "coverage": 0.492,
-        "rgb": {
-          "red": 177,
-          "blue": 126,
-          "green": 170
-        }
-      },
-      "Brown": {
-        "coverage": 0.0896,
-        "rgb": {
-          "red": 141,
-          "blue": 85,
-          "green": 105
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
         }
       }
     }
-  }
-]
-}
+  ]
+}' \
+-F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
+
+>Opmerking: Daarnaast stellen we ook de `retrieve_tone` parameter to `true` in bovengenoemd verzoek. Op deze manier kunnen we een histogram ophalen voor de distributie van kleurtinten over warme, neutrale en koele tonen in de algemene, voor- en achtergrondgebieden van de afbeelding.
+
+**Reactie - variant gemaskeerde afbeelding**
+
+```json
+{
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "gpeCyJsrJvOWd94WwZOyPBPrKi2BQyla"
+}  
+ 
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.4084,
+            "neutral": 0.5916,
+            "cool": 0
+        }
+    },
+    "foreground": {
+        "colors": {
+            "Orange": {
+                "coverage": 0.6022,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.1935,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.1722,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0173,
+                "rgb": {
+                    "red": 253,
+                    "green": 235,
+                    "blue": 170
+                }
+            },
+            "Yellow": {
+                "coverage": 0.0148,
+                "rgb": {
+                    "red": 254,
+                    "green": 229,
+                    "blue": 117
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.9827,
+            "neutral": 0.0173,
+            "cool": 0
+        }
+    },
+    "background": {
+        "colors": {
+            "White": {
+                "coverage": 0.9923,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Dark_Brown": {
+                "coverage": 0.0077,
+                "rgb": {
+                    "red": 83,
+                    "green": 68,
+                    "blue": 57
+                }
+            }
+        },
+        "tones": {
+            "warm": 0,
+            "neutral": 1.0,
+            "cool": 0
+        }
+    }
+}]
+```
+
+Naast de kleuren uit de hele afbeelding, kunt u nu ook kleuren uit de voor- en achtergrondgebieden zien. Omdat we het ophalen van kleurtonen voor elk van de bovenstaande gebieden mogelijk maken, kunnen we ook een histogram met kleurtonen ophalen.
+
+**Invoerparameters**
+
+| Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
+| --- | --- | --- | --- | --- | --- |
+| `documents` | array (Document-Object) | Ja | - | Zie hieronder | Lijst met json-elementen waarbij elk item in de lijst één document vertegenwoordigt. |
+| `top_n` | getal | Nee | 0 | Niet-negatief geheel getal | Aantal resultaten dat moet worden geretourneerd. 0, om alle resultaten te retourneren. Wanneer gebruikt in combinatie met een drempelwaarde, zal het aantal geretourneerde resultaten kleiner zijn dan een van beide limieten. |
+| `min_coverage` | getal | Nee | 0.05 | Reëel nummer | Drempel van dekking waarboven de resultaten moeten worden geretourneerd. Sluit parameter uit om alle resultaten te retourneren. |
+| `resize_image` | getal | Nee | Waar | Waar/Onwaar | Of de invoerafbeelding moet worden vergroot of verkleind. Standaard wordt de grootte van de afbeeldingen gewijzigd in 320*320 pixels voordat kleurextractie wordt uitgevoerd. Voor het zuiveren doeleinden kunnen wij de code toestaan om op volledig-beeld te lopen, door dit aan Vals te plaatsen. |
+| `enable_mask` | getal | Nee | Onwaar | Waar/Onwaar | Schakelt kleurextractie in/uit |
+| `retrieve_tone` | getal | Nee | Onwaar | Waar/Onwaar | Schakelt toonextractie in/uit |
+
+**Object Document**
+
+| Naam | Datatype | Vereist | Standaard | Waarden | Beschrijving |
+| -----| --------- | -------- | ------- | ------ | ----------- |
+| `repo:path` | string | - | - | - | Voorgetekende URL van het document waaruit de belangrijkste zinnen moeten worden geëxtraheerd. |
+| `sensei:repoType` | string | - | - | HTTPS | Type repo waar het document wordt opgeslagen. |
+| `sensei:multipart_field_name` | string | - | - | - | Gebruik deze optie wanneer u het document doorgeeft als een meerdelig argument in plaats van vooraf ondertekende URL&#39;s te gebruiken. |
+| `dc:format` | string | Ja | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | Documentcodering wordt gecontroleerd op basis van toegestane invoercoderingstypen voordat deze worden verwerkt. |
