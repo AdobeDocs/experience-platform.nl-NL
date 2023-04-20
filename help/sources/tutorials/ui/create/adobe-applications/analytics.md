@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Bronaansluiting voor analyse;Analytische aansluiting;Analytische bron;Analytics
-solution: Experience Platform
+keywords: Experience Platform;home;populaire onderwerpen;Analytics-bronconnector;Analytics-connector;Analytics-bron;Analytics;filtering;filtering voor profiel;real-time klantprofiel;filter;filter;filter;filter op profielgegevens;filter op rij;filter op kolomniveau
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
-type: Tutorial
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
+source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2245'
 ht-degree: 0%
 
 ---
