@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '968'
 ht-degree: 8%
 
 ---
@@ -90,7 +90,8 @@ ht-degree: 8%
       - [Snowflake-aansluiting](connectors/databases/snowflake.md)
       - [Teradata Vantage-connector](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
-      - [Shopify-connector](connectors/ecommerce/shopify.md)
+      - [Schopify](connectors/ecommerce/shopify.md)
+      - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
       - [Aansluiting voor lokale bestandsupload](connectors/local-system/local-file-upload.md)
    - Marketing automatiseren {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 8%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Streaming optimaliseren](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Marketing automatiseren {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 8%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
          - [Lokale bestanden uploaden](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing automatiseren {#marketing-automation}
