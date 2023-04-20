@@ -3,9 +3,9 @@ keywords: google en manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: Google Ad Manager, voorheen bekend als DoubleClick voor Publishers of DoubleClick AdX, is een advertentieplatform uit Google dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '879'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] best
 | GEMAAKT | Microsoft-advertentie-id. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
 | Amazon Fire TV ID | Deze id is uniek voor Amazon Fire TV&#39;s. |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -50,7 +50,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de Google-bestemming. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten {#prerequisites}
 
@@ -73,6 +73,11 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 ### Verbindingsparameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam_appendSegmentID"
+>title="Segment-id toevoegen aan segmentnaam"
+>abstract="Selecteer deze optie als u de segmentnaam in Google Ad Manager ook de segment-id van het Experience Platform wilt opnemen, zoals in dit voorbeeld: `Segment Name (Segment ID)`"
+
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
@@ -82,6 +87,11 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
    * Gebruiken `DFP by Google` for [!DNL DoubleClick] voor uitgevers
    * Gebruiken `AdX buyer` for [!DNL Google AdX]
 
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 >[!NOTE]
 >
