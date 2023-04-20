@@ -3,9 +3,9 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1311'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,10 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->De [Adobe Target-documentatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) omvat onderwerpen die informatie specifiek voor het Web SDK van het Platform bevatten aangezien het op de eigenschappen en de functionaliteit van het Doel betrekking heeft.
+>Leer hoe te om uw implementatie van het Doel aan het Web SDK van het Platform met te migreren [Doel migreren van at.js 2.x aan het Web SDK van het Platform](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) zelfstudie.
+>
+>Leer hoe te om Doel voor het eerst uit te voeren met [Adobe Experience Cloud implementeren met Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) zelfstudie. Voor informatie specifiek voor Doel, zie de sectie van de zelfstudie getiteld [Doel instellen met Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+
 
 De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target]:
 
@@ -168,9 +171,9 @@ De [!DNL Platform Web SDK] Hiermee kunt u het profiel bijwerken naar de [!DNL Ta
 
 Als u een [!DNL Target] , zorgt u ervoor dat de profielgegevens worden doorgegeven met het volgende:
 
-* Onder `“data {“`
-* Onder `“__adobe.target”`
-* Voorvoegsel `“profile.”` zoals hieronder
+* Onder `"data {"`
+* Onder `"__adobe.target"`
+* Voorvoegsel `"profile."` zoals hieronder
 
 | Sleutel | Type | Beschrijving |
 | --- | --- | --- |
