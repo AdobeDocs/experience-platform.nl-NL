@@ -3,10 +3,10 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;api salesforce mark
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 017ccadc1689663059aa1214c5440549b509e81b
+source-git-commit: 877bf4886e563e8a571f067c06107776a0c81d5d
 workflow-type: tm+mt
-source-wordcount: '2527'
-ht-degree: 1%
+source-wordcount: '2819'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +14,13 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (voorheen bekend als [!DNL ExactTarget]) is een digitale marketingsuite waarmee u reizen kunt maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (voorheen bekend als [!DNL ExactTarget]) is een digitale marketingsuite waarmee u reizen kunt maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
 
 >[!IMPORTANT]
 >
 >Let op het verschil tussen deze verbinding en de andere [[!DNL Salesforce Marketing Cloud] verbinding](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) bestaat in de sectie E-mailmarketingcatalogus. Met de andere verbinding met de Salesforce-Marketing Cloud kunt u bestanden exporteren naar een opgegeven opslaglocatie, terwijl dit een op API gebaseerde streamingverbinding is.
+
+Vergeleken met [!DNL Salesforce Marketing Cloud Account Engagement] dat meer gericht is op **B2B** de [!DNL (API) Salesforce Marketing Cloud] doel is ideaal voor **B2C** gebruik van gevallen met kortere transactionele besluitvormingscycli. U kunt grotere datasets consolideren die het gedrag van uw doelpubliek vertegenwoordigen om marketing campagnes aan te passen en te verbeteren door contacten, vooral van datasets buiten voorrang te geven en te segmenteren [!DNL Salesforce]. *Opmerking: Experience Platform heeft ook een verbinding voor de [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
 Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [!DNL Salesforce Marketing Cloud] [update contacten](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, waarmee u **contactpersonen toevoegen en contactgegevens bijwerken** voor uw bedrijfsbehoeften na het activeren van hen binnen een nieuw [!DNL Salesforce Marketing Cloud] segment.
 
@@ -44,9 +46,9 @@ Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL
 
 #### U hebt een [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-A [!DNL Salesforce Marketing Cloud] account met een abonnement op de [Betrokkenheid Marketing Cloud account](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) Het product is verplicht verder te gaan.
+A [!DNL Salesforce Marketing Cloud] account met een abonnement op de [[!DNL Marketing Cloud Engagement]](https://www.salesforce.com/products/marketing-cloud/engagement/) Het product is verplicht verder te gaan.
 
-Uitstrekken tot [[!DNL Salesforce] Ondersteuning](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) als u geen [!DNL Salesforce Marketing Cloud] -account of uw account ontbreekt het [!DNL Marketing Cloud Account Engagement] productabonnement.
+Uitstrekken tot [[!DNL Salesforce] Ondersteuning](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) als u geen [!DNL Salesforce Marketing Cloud] -account of uw account ontbreekt het [!DNL Marketing Cloud Engagement] productabonnement.
 
 #### Kenmerken maken binnen [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
@@ -81,6 +83,21 @@ Een voorbeeld van het maken van kenmerken in [!DNL Salesforce Marketing Cloud], 
 >* Een onderscheid maken tussen kenmerken die worden gebruikt voor Platform-segmenten en andere kenmerken binnen [!DNL Salesforce Marketing Cloud]kunt u een herkenbaar voor- of achtervoegsel opnemen voor de kenmerken die worden gebruikt voor Adobe-segmenten. In plaats van `test_segment`, gebruik `Adobe_test_segment` of `test_segment_Adobe`.
 >* Als u al andere kenmerken hebt gemaakt in [!DNL Salesforce Marketing Cloud], kunt u de zelfde naam gebruiken zoals het segment van het Platform, om het segment in gemakkelijk te identificeren [!DNL Salesforce Marketing Cloud].
 
+
+#### Gebruikersrollen en machtigingen toewijzen binnen [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
+
+Als [!DNL Salesforce Marketing Cloud] steunt douanerollen afhankelijk van uw gebruik-geval, zou uw gebruiker de relevante rollen moeten worden toegewezen om uw attributen binnen uw bij te werken [!DNL Salesforce Marketing Cloud] kenmerksets. Hieronder ziet u een voorbeeld van rollen die aan een gebruiker zijn toegewezen:
+![De Marketing Cloud UI van Salesforce voor een geselecteerde gebruiker die hun toegewezen rollen toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
+
+Afhankelijk van welke rollen uw [!DNL Salesforce Marketing Cloud] gebruiker is toegewezen, zou u ook toestemmingen aan moeten toewijzen [!DNL Salesforce Marketing Cloud] kenmerksets die de velden bevatten die u wilt bijwerken.
+
+Aangezien deze bestemming toegang tot vereist `[!DNL Email Demographics system attribute-set]`, moet u toestaan `Email` zoals hieronder weergegeven:
+![De gebruikersinterface van de Salesforce-Marketing Cloud geeft de kenmerkset van e-mail weer met toegestane machtigingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+
+Om het niveau van toegang te beperken, kunt u individuele toegang ook met voeten treden door korrelvoorrechten te gebruiken.
+![De interface van de Marketing Cloud van Salesforce die e-mailattributen-reeks met korrelige toestemmingen toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+
+Zie de [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) en [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) pagina&#39;s voor gedetailleerde begeleiding.
 
 #### Gather [!DNL Salesforce Marketing Cloud] geloofsbrieven {#gather-credentials}
 
@@ -269,7 +286,8 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| Februari 2023 | Documentatie bijwerken | We hebben de [Vereisten in (API) Salesforce-Marketing Cloud](#prerequisites-destination) om een verwijzingskoppeling op te nemen die [!DNL Salesforce Marketing Cloud Account Engagement] is een verplicht abonnement om deze bestemming te gebruiken. |
+| April 2023 | Documentatie bijwerken | <ul><li>We hebben een verklaring en een verwijzing in de [Vereisten in (API) Salesforce-Marketing Cloud](#prerequisites-destination) deel uit te roepen dat [!DNL Salesforce Marketing Cloud Engagement] is een verplicht abonnement om deze bestemming te gebruiken. In de eerder genoemde sectie wordt ten onrechte aangegeven dat gebruikers een abonnement op de Marketing Cloud nodig hebben **Account** Betrokkenheid om door te gaan.</li> <li>We hebben een sectie toegevoegd onder [voorwaarden](#prerequisites) for [rollen en machtigingen](#prerequisites-roles-permissions) aan de [!DNL Salesforce] gebruiker voor deze bestemming aan het werk. (PLATIR-26299)</li></ul> |
+| Februari 2023 | Documentatie bijwerken | We hebben de [Vereisten in (API) Salesforce-Marketing Cloud](#prerequisites-destination) om een verwijzingskoppeling op te nemen die [!DNL Salesforce Marketing Cloud Engagement] is een verplicht abonnement om deze bestemming te gebruiken. |
 | Februari 2023 | Functionaliteitsupdate | We hebben een probleem opgelost waarbij een onjuiste configuratie in de bestemming ertoe leidde dat een verkeerd gevormde JSON naar Salesforce werd gestuurd. Dit heeft ertoe geleid dat sommige gebruikers hoge aantallen identiteiten ontbrak bij activering zagen. (PLATIR-26299) |
 | Januari 2023 | Documentatie bijwerken | <ul><li>We hebben de [Vereisten in [!DNL Salesforce]](#prerequisites-destination) sectie om uit te roepen dat de attributen op moeten worden gecreeerd [!DNL Salesforce] zijde. Deze sectie bevat nu gedetailleerde instructies over hoe u dat kunt doen en aanbevolen procedures voor het benoemen van de kenmerken in [!DNL Salesforce]. (PLATIR-25602)</li><li>We hebben duidelijke instructies toegevoegd over het gebruik van de toewijzingsid voor elk geactiveerd segment in het dialoogvenster [segment plannen](#schedule-segment-export-example) stap. (PLATIR-25602)</li></ul> |
 | Oktober 2022 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
