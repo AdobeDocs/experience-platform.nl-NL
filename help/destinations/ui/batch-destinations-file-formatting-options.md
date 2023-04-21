@@ -2,9 +2,9 @@
 description: Leer hoe u opties voor bestandsindeling kunt configureren wanneer u gegevens activeert naar bestandsbestemmingen
 title: (Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
+source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## Configuratie bestandsindeling {#file-configuration}
+## Configuratie van bestandsindeling voor CSV-bestanden {#file-configuration}
 
 Als u de opties voor de bestandsindeling wilt weergeven, start u de [verbinding maken met doel](/help/destinations/ui/connect-destination.md) workflow. Selecteren **Gegevenstype: Segmenten** en **Bestandstype: CSV** om de instellingen voor de bestandsindeling die beschikbaar zijn voor het geëxporteerde `CSV` bestanden.
 
@@ -41,7 +41,12 @@ Als u de opties voor de bestandsindeling wilt weergeven, start u de [verbinding 
 
 ### Scheidingsteken {#delimiter}
 
-Hiermee stelt u een scheidingsteken in voor elk veld en elke waarde. Beschikbare opties zijn:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="Scheidingsteken"
+>abstract="Gebruik dit besturingselement om een scheidingsteken in te stellen voor elk veld en elke waarde. Raadpleeg de documentatie voor voorbeelden van elke selectie."
+
+Met dit besturingselement kunt u een scheidingsteken instellen voor elk veld en elke waarde in de geëxporteerde CSV-bestanden. Beschikbare opties zijn:
 
 * Colon `(:)`
 * Komma `(,)`
@@ -49,29 +54,108 @@ Hiermee stelt u een scheidingsteken in voor elk veld en elke waarde. Beschikbare
 * Puntkomma `(;)`
 * Tabtoets `(\t)`
 
-### Aanhalingsteken
+#### Voorbeelden
 
-Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken van geciteerde waarden, waarbij het scheidingsteken deel kan uitmaken van de waarde.
+Bekijk de voorbeelden hieronder van de inhoud in de geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
 
-### Escape-teken
+* Voorbeeld van uitvoer met **[!UICONTROL Colon `(:)`]** geselecteerd: `male:John:Doe`
+* Voorbeeld van uitvoer met **[!UICONTROL Comma `(,)`]** geselecteerd: `male,John,Doe`
+* Voorbeeld van uitvoer met **[!UICONTROL Pipe `(|)`]** geselecteerd: `male|John|Doe`
+* Voorbeeld van uitvoer met **[!UICONTROL Semicolon `(;)`]** geselecteerd: `male;John;Doe`
+* Voorbeeld van uitvoer met **[!UICONTROL Tab `(\t)`]** geselecteerd: `male \t John \t Doe`
 
-Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken voor aanhalingstekens binnen een reeds geciteerde waarde.
+### Aanhalingsteken {#quote-character}
 
-### Uitvoer van lege waarde
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="Aanhalingsteken"
+>abstract="Gebruik deze optie als u dubbele aanhalingstekens wilt verwijderen uit geëxporteerde tekenreeksen. Raadpleeg de documentatie voor voorbeelden van elke selectie."
 
-Stelt de tekenreeksrepresentatie in van een lege waarde.
+Gebruik deze optie als u dubbele aanhalingstekens wilt verwijderen uit geëxporteerde tekenreeksen. Beschikbare opties zijn:
 
-### Uitvoer van waarde Null
+* **[!UICONTROL Null Character (\0000)]**. Gebruik deze optie om dubbele aanhalingstekens te verwijderen uit geëxporteerde CSV-bestanden.
+* **[!UICONTROL Double Quotes (")]**. Gebruik deze optie als u dubbele aanhalingstekens wilt behouden in geëxporteerde CSV-bestanden.
 
-Hiermee stelt u de tekenreeksrepresentatie in van een waarde null in de geëxporteerde bestanden.
+#### Voorbeelden
 
-Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName`
-Voorbeeld van uitvoer met **&quot;&quot;** geselecteerd: `male,"",TestLastName`
-Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName`
+Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
 
-### Compressie-indeling
+* Voorbeeld van uitvoer met **[!UICONTROL Null Character (\0000)]** geselecteerd: `Test,John,LastName`
+* Voorbeeld van uitvoer met **[!UICONTROL Double Quotes (")]** geselecteerd: `"Test","John","LastName"`
 
-Hiermee stelt u in welke compressiecodec moet worden gebruikt bij het opslaan van gegevens naar bestand. Ondersteunde opties zijn GZIP en NONE.
+### Escape-teken {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="Escape-teken"
+>abstract="Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken voor aanhalingstekens binnen een reeds geciteerde waarde. Raadpleeg de documentatie voor voorbeelden van elke selectie."
+
+Gebruik deze optie om één teken in te stellen voor het omzeilen van aanhalingstekens binnen een reeds geciteerde waarde. Deze optie is bijvoorbeeld handig wanneer u een tekenreeks tussen dubbele aanhalingstekens plaatst, waarbij een deel van de tekenreeks al tussen dubbele aanhalingstekens staat. Met deze optie bepaalt u welk teken de binnenste dubbele aanhalingstekens moet vervangen. Beschikbare opties zijn:
+
+* backslash `(\)`
+* Enkel aanhalingsteken `(')`
+
+#### Voorbeelden
+
+Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
+
+* Voorbeeld van uitvoer met **[!UICONTROL Back slash `(\)`]** geselecteerd: `"Test,\"John\",LastName"`
+* Voorbeeld van uitvoer met **[!UICONTROL Single quote `(')`]** geselecteerd: `"Test,'"John'",LastName"`
+
+### Uitvoer van lege waarde {#empty-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="Uitvoer van lege waarde"
+>abstract="Gebruik deze optie om in te stellen hoe lege waarden moeten worden weergegeven in de geëxporteerde CSV-bestanden. Raadpleeg de documentatie voor voorbeelden van elke selectie."
+
+Gebruik dit besturingselement om de tekenreeksrepresentatie van een lege waarde in te stellen. Met deze optie bepaalt u hoe lege waarden worden weergegeven in uw geëxporteerde CSV-bestanden. Beschikbare opties zijn:
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL Empty string]**
+
+#### Voorbeelden
+
+Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
+
+* Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName`. In dit geval transformeert Experience Platform de lege waarde in een null-waarde.
+* Voorbeeld van uitvoer met **&quot;&quot;** geselecteerd: `male,"",TestLastName`. In dit geval transformeert Experience Platform de lege waarde in twee dubbele aanhalingstekens.
+* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName`. In dit geval behoudt het Experience Platform de lege waarde en exporteert het zoals het is (zonder dubbele aanhalingstekens).
+
+>[!TIP]
+>
+>Het verschil tussen de lege uitvoer van waarden en de null-waarde die in de onderstaande sectie wordt uitgevoerd, is dat een lege waarde een werkelijke waarde heeft die leeg is. De waarde NULL heeft helemaal geen waarde. Beschouw de lege waarde als een leeg glas op de tafel en de null-waarde als een geheel niet-glazen glas op de tafel.
+
+### Uitvoer van waarde Null {#null-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Uitvoer van waarde Null"
+>abstract="Gebruik dit besturingselement om de tekenreeksrepresentatie van een null-waarde in te stellen in de geëxporteerde bestanden. Raadpleeg de documentatie voor voorbeelden van elke selectie."
+
+Gebruik dit besturingselement om de tekenreeksrepresentatie van een null-waarde in te stellen in de geëxporteerde bestanden. Met deze optie bepaalt u hoe null-waarden worden weergegeven in uw geëxporteerde CSV-bestanden. Beschikbare opties zijn:
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL Empty string]**
+
+#### Voorbeelden
+
+Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
+
+* Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName`. In dit geval vindt geen transformatie plaats en bevat het CSV-bestand de null-waarde.
+* Voorbeeld van uitvoer met **&quot;&quot;** geselecteerd: `male,"",TestLastName`. In dit geval vervangt Experience Platform de null-waarde door dubbele aanhalingstekens om een lege tekenreeks.
+* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName`. In dit geval vervangt Experience Platform de null-waarde door een lege tekenreeks (zonder dubbele aanhalingstekens).
+
+### Compressie-indeling {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="Compressie-indeling"
+>abstract="Hiermee stelt u in welk compressietype u wilt gebruiken bij het opslaan van gegevens naar het bestand. Ondersteunde opties zijn GZIP en NONE. Raadpleeg de documentatie voor voorbeelden van elke selectie."
+
+Hiermee stelt u in welk compressietype u wilt gebruiken bij het opslaan van gegevens naar het bestand. Ondersteunde opties zijn GZIP en NONE. Met deze optie bepaalt u of u gecomprimeerde bestanden wilt exporteren.
 
 ### Codering
 
