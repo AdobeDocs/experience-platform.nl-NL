@@ -5,10 +5,10 @@ title: API's van Experience Platforms verifiëren en benaderen
 type: Tutorial
 description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API's.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 1%
+source-wordcount: '1498'
+ht-degree: 2%
 
 ---
 
@@ -198,8 +198,70 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw ge
 
 [Postman](https://www.postman.com/) is een populair hulpmiddel dat ontwikkelaars toestaat om RESTful APIs te onderzoeken en te testen. Dit [Normale post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) beschrijft hoe u Postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken om Platform-API&#39;s te gebruiken.
 
+## Toegangsbeheer voor ontwikkelaars en API&#39;s met Experience Platform-machtigingen
+
+>[!NOTE]
+>
+>Alleen systeembeheerders kunnen API-referenties weergeven en beheren in Machtigingen.
+
+Voordat u integratie in Adobe Developer Console maakt, moet uw account ontwikkelings- en gebruikersmachtigingen hebben voor een productprofiel voor een Experience Platform in Adobe Admin Console.
+
+### Ontwikkelaars toevoegen aan productprofiel
+
+Ga naar [[!DNL Admin Console]](https://adminconsole.adobe.com/) en meld u aan met uw Adobe ID.
+
+Selecteren **[!UICONTROL Products]** selecteert u vervolgens **[!UICONTROL Adobe Experience Platform]** in de lijst van producten.
+
+![Lijst met producten op Admin Console](././images/api-authentication/products.png)
+
+Selecteer op het tabblad **[!UICONTROL Product Profiles]** de optie **[!UICONTROL AEP-Default-All-Users]**. U kunt ook de zoekbalk gebruiken om het productprofiel te zoeken door de naam in te voeren.
+
+![Zoeken naar het productprofiel](././images/api-authentication/select-product-profile.png)
+
+Selecteer **[!UICONTROL Developers]** tab, dan selecteren **[!UICONTROL Add Developer]**.
+
+![Ontwikkelaar toevoegen via het tabblad Ontwikkelaars](././images/api-authentication/add-developer1.png)
+
+Voer de **[!UICONTROL Email or username]**. Een geldige [!UICONTROL Email or username] geeft de ontwikkelaardetails weer. Selecteer **[!UICONTROL Save]**.
+
+![Ontwikkelaars toevoegen met hun e-mail- of gebruikersnaam](././images/api-authentication/add-developer-email.png)
+
+De ontwikkelaar is toegevoegd en wordt weergegeven op het tabblad [!UICONTROL Developers] tab.
+
+![Ontwikkelaars vermeld op het tabblad Ontwikkelaars](././images/api-authentication/developer-added.png)
+
+### Een API instellen
+
+Een ontwikkelaar kan een API toevoegen en configureren binnen een project in de Adobe Developer-console.
+
+Selecteer uw project en selecteer vervolgens **[!UICONTROL Add API]**.
+
+![API toevoegen aan een project](././images/api-authentication/add-api-project.png)
+
+In de **[!UICONTROL Add an API]** dialoogvenster selecteren **[!UICONTROL Adobe Experience Platform]** selecteert u vervolgens **[!UICONTROL Experience Platform API]**.
+
+![Een API toevoegen in Experience Platform](././images/api-authentication/add-api-platform.png)
+
+In de **[!UICONTROL Configure API]** scherm, selecteren **[!UICONTROL AEP-Default-All-Users]**.
+
+### API aan een rol toewijzen
+
+Een systeembeheerder kan APIs aan rollen in het Experience Platform UI toewijzen.
+
+Selecteren **[!UICONTROL Permissions]** en de rol waaraan u de API wilt toevoegen. Selecteer **[!UICONTROL API credentials]** tab, dan selecteren **[!UICONTROL Add API credentials]**.
+
+![Tabblad API-referenties in geselecteerde rol](././images/api-authentication/api-credentials.png)
+
+Selecteer de API die u aan de rol wilt toevoegen en selecteer **[!UICONTROL Save]**.
+
+![Lijst met beschikbare API&#39;s voor selectie](././images/api-authentication/select-api.png)
+
+U bent teruggekeerd aan [!UICONTROL API credentials] , waarin de nieuw toegevoegde API wordt weergegeven.
+
+![Tabblad API-referenties met zojuist toegevoegde API](././images/api-authentication/api-credentials-with-added-api.png)
+
 ## Volgende stappen
 
 Door dit document te lezen, hebt u uw toegangsreferenties voor Platform-API&#39;s verzameld en getest. U kunt nu de voorbeeld-API-aanroepen volgen die via de [documentatie](../landing/documentation/overview.md).
 
-Naast de authentificatiewaarden u in dit leerprogramma hebt verzameld, vereisen vele Platform APIs ook een geldig `{SANDBOX_NAME}` te verstrekken als koptekst. Zie de [sandboxen, overzicht](../sandboxes/home.md) voor meer informatie .
+Naast de authentificatiewaarden u in dit leerprogramma hebt verzameld, vereisen vele Platform APIs ook een geldig `{SANDBOX_NAME}` te verstrekken als koptekst. Zie het [sandboxoverzicht](../sandboxes/home.md) voor meer informatie.
