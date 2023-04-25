@@ -3,18 +3,14 @@ keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;or
 title: Een Cloud Source Connection voor de service Oracle maken in de gebruikersinterface
 description: Leer hoe u een Oracle Service Cloud-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
 
-# (Beta) Een Cloud-bronverbinding voor Oracles maken in de gebruikersinterface
-
->[!NOTE]
->
->De Oracle Service Cloud-bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# Een Oracle Service Cloud-bronverbinding maken in de gebruikersinterface
 
 Deze zelfstudie bevat stappen voor het maken van een Oracle Service Cloud-bronverbinding via de Adobe Experience Platform-gebruikersinterface.
 

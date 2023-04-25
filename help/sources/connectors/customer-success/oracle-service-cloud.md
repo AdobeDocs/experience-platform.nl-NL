@@ -2,18 +2,15 @@
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;oracle service cloud
 title: Overzicht van oracle Service Cloud Source Connector
 description: Leer hoe u Oracle Service Cloud kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
+exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-# (Bèta) Oracle Service Cloud-bron
-
->[!NOTE]
->
->De Oracle Service Cloud-bron is in bèta. Zie de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# Cloud-bron voor oracle Service
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 

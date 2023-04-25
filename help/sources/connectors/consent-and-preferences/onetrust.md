@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;OneTrust;onRust;toestemming;toestemming en voorkeuren;naleving
 solution: Experience Platform
-title: (Bèta) OneTrust Integration Source Connector - Overzicht
+title: OneTrust Integration Source Connector - Overzicht
 description: Leer hoe u OneTrust Integration kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL OneTrust Integration] bron
+# [!DNL OneTrust Integration] bron
 
 >[!NOTE]
 >
->De [!DNL OneTrust Integration] De bron is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd. Voor informatie over het gebruik van bèta-gelabelde bronnen raadpleegt u de [overzicht van bronnen](../../home.md#terms-and-conditions).
+>De [!DNL OneTrust Integration] bron ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en niet cookies.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 

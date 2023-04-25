@@ -2,7 +2,8 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de stroomdienst;De Dienst API van de stroom;bronnen;Bronnen
 title: Gegevens op rijniveau voor een bron filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
-source-git-commit: 122f6bda2fbcf72bf098b972ff7b081f4c5e3388
+exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
+source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 1%
@@ -13,7 +14,14 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->De steun voor het filtreren van rij-vlakke gegevens voor een bron is momenteel slechts beschikbaar voor [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) en [[!DNL Snowflake]](../../connectors/databases/snowflake.md) bronnen.
+>De steun voor het filtreren van rij-vlakke gegevens is momenteel slechts beschikbaar aan de volgende bronnen:
+>
+>* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
+>* [Salesforce](../../connectors/crm/salesforce.md)
+>* [Salesforce-Marketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
+>* [Snowflake](../../connectors/databases/snowflake.md)
+
 
 Deze zelfstudie bevat stappen voor het filteren van gegevens op rijniveau voor een bron met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -103,7 +111,7 @@ Een succesvol antwoord keert de verbindingsspecificaties voor terug [!DNL Google
 | `attributes.filterAtSource.columnNameEscapeChar` | Bepaalt het teken dat moet worden gebruikt om kolommen te laten ontsnappen. |
 | `attributes.filterAtSource.valueEscapeChar` | Bepaalt hoe waarden worden omringd wanneer het schrijven van een SQL vraag. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Vergelijkingsoperatoren
 
@@ -118,7 +126,7 @@ Een succesvol antwoord keert de verbindingsspecificaties voor terug [!DNL Google
 | `like` | Filters die worden gebruikt in een `WHERE` naar een opgegeven patroon te zoeken. |
 | `in` | Filtert op of het bezit binnen een gespecificeerde waaier is. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Filtervoorwaarden voor inname opgeven
 

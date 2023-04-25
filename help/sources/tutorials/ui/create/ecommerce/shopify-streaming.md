@@ -1,10 +1,9 @@
 ---
 title: Een slimme streamingverbinding en gegevensstroom maken in de gebruikersinterface
 description: Leer hoe u via de gebruikersinterface van het Platform een Shopify Streaming-bronverbinding en -gegevensstroom maakt
-badge: "Bèta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
@@ -95,4 +94,3 @@ Ga naar het tabblad [!UICONTROL Dataflow activity] pagina van de gegevensstroom 
 ## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u een bronverbinding en gegevensstroom tot stand gebracht [!DNL Shopify Streaming] account. Voor instructies over hoe te om uw te verbinden [!DNL Shopify Streaming] account met de API, lees de zelfstudie op [een bronverbinding en gegevensstroom maken [!DNL Shopify] gegevens die de Flow Service API gebruiken](../../../api/create/ecommerce/shopify-streaming.md).
-
