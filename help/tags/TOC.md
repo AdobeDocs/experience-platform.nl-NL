@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
+source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '981'
 ht-degree: 14%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 14%
          * [Overzicht](./extensions/client/product-string/overview.md)
          * [Aanvullende informatie](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
+      * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Overzicht](./extensions/client/audience-manager/overview.md)
       * Gegevenslaag Adobe-client {#client-data-layer}

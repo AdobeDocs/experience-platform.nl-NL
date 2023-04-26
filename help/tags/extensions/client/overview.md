@@ -2,9 +2,9 @@
 title: Verwijzing naar extensies voor tags
 description: Documentatie voor extensies voor tags zoeken in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '714'
 ht-degree: 2%
 
 ---
@@ -32,6 +32,7 @@ Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijd
 * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics-producttekenreeks](./product-string/overview.md)
 * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)*
+* [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Gegevenslaag Adobe-client](./client-data-layer/overview.md)
 * [Adobe ContextHub](./contexthub/overview.md)
