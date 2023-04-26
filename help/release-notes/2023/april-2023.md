@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2023
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
-source-git-commit: 9f50ca4b2a4c576af5ce8ee5c085a7603fed2560
+source-git-commit: 938b4ba7affadc7ad0eca086d7cc2c9ce1a54a83
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '780'
 ht-degree: 2%
 
 ---
@@ -14,8 +14,25 @@ ht-degree: 2%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Gegevensvoorbereiding](#data-prep)
+- [Experience Data Model](#xdm)
+- [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+
+**Nieuwe of bijgewerkte functies** {#dashboards-new-updated-features}
+
+| Functie | Beschrijving |
+| --- | --- |
+| Door gebruiker gedefinieerde dashboards | U kunt nu **historische gegevens filteren** vanuit uw widgetinzichten en gebruik recente gegevens of een aangepaste analyseperiode.<br>U kunt nu ook **bestaande widgets dupliceren**. Door een duplicaat aan te passen en de kenmerken ervan te bewerken, kunt u voorkomen dat u bij het maken van een nieuwe, unieke widget opnieuw begint. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
 
 ## Gegevensvoorbereiding {#data-prep}
 
@@ -31,6 +48,30 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 {style="table-layout:auto"}
 
 Voor meer informatie over Data Prep, gelieve te lezen [Overzicht van Data Prep](../../data-prep/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen. Dankzij deze flexibiliteit is het mogelijk uw schema&#39;s beter te detecteren en te bewerken. De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over XDM in Platform, lees [XDM System, overzicht](../../xdm/home.md).
+
+## Klantprofiel in realtime {#profile}
+
+Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Vervaldatum van pseudoniem profielgegevens | De vervaldatum van pseudoniem profielgegevens is nu over het algemeen beschikbaar. Deze release verwijdert ononderbroken pseudoniem-profielen uit uw Experience Platform-exemplaar als deze zijn ingeschakeld. Lees voor meer informatie over deze functie en Pseudoniem-profielen de [Handleiding voor het verlopen van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md). |
 
 ## Bronnen {#sources}
 
