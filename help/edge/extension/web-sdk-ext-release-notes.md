@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,17 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.17.0 - 25 april 2023
+
+**Nieuwe functies**
+
+* Toegevoegde ondersteuning voor overschrijvingen van de gegevensstroomconfiguratie.
+* Afvalmelding toevoegen aan de `datasetId` de optie `sendEvent` gebruiken.
+
+**Oplossingen en verbeteringen**
+
+* Probleem verholpen waarbij schuiven in Safari de gegevensstroomkiezer zou sluiten.
 
 ## Versie 2.16.1 - 14 april 2023
 
