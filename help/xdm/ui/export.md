@@ -4,9 +4,9 @@ title: XDM-schema's exporteren in de gebruikersinterface
 description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of organisatie in de Adobe Experience Platform-gebruikersinterface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ Om aan deze behoefte tegemoet te komen, [!UICONTROL Schemas] in de Adobe Experie
 
 Terwijl de interface van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of organisaties in te voeren om het werkschema te voltooien. Zie voor handleiding [aan de slag gaan met de Schema Registry-API](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
 
-## Een exportlading genereren
+## Een exportlading genereren {#generate-export-payload}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. Binnen de [!UICONTROL Schemas] , zoekt u het schema dat u wilt exporteren en opent u het in het dialoogvenster [!DNL Schema Editor].
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. Binnen de [!UICONTROL Schemas] in de werkruimte selecteert u de rij voor het schema dat u wilt exporteren naar de schemagegevens in de rechterzijbalk.
 
 >[!TIP]
 >
 >Zie de handleiding op [XDM-bronnen verkennen](./explore.md) voor details op hoe te om het middel te vinden XDM u zoekt.
 
-Als u het schema hebt geopend, selecteert u de optie **[!UICONTROL Copy JSON]** icon (![Pictogram kopiëren](../images/ui/export/icon.png)) rechtsboven op het canvas.
+Selecteer vervolgens de **[!UICONTROL Copy JSON]** icon (![Pictogram kopiëren](../images/ui/export/icon.png)) van de beschikbare opties.
 
-![](../images/ui/export/copy-json.png)
+![De werkruimte Schema&#39;s met een schemarij en [!UICONTROL Copy to JSON] gemarkeerd.](../images/ui/export/copy-json.png)
 
 Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de schemastructuur wordt gegenereerd. Voor &quot;[!DNL Loyalty Members]&quot; hierboven weergegeven schema, wordt de volgende JSON gegenereerd:
 

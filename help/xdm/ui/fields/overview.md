@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-velden definiëren in de gebruikersinterface
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '1332'
+source-wordcount: '1339'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie
 
 Als u nieuwe XDM-velden in de gebruikersinterface wilt definiëren, moet u eerst een schema openen in het dialoogvenster [!DNL Schema Editor]. Afhankelijk van welke schema&#39;s momenteel beschikbaar zijn in de [!DNL Schema Library]kunt u [een nieuw schema maken](../resources/schemas.md#create) of [een bestaand schema selecteren om te bewerken](../resources/schemas.md#edit).
 
-Zodra u [!DNL Schema Editor] op het canvas worden besturingselementen voor het toevoegen of bewerken van velden weergegeven. Deze besturingselementen worden naast de naam van het schema weergegeven, evenals alle velden van het objecttype die zijn gedefinieerd onder de geselecteerde klasse of veldgroep.
+Zodra u [!DNL Schema Editor] openen, worden besturingselementen voor het toevoegen van velden weergegeven op het canvas. Deze besturingselementen worden naast de naam van het schema weergegeven, evenals alle velden van het objecttype die zijn gedefinieerd onder de geselecteerde klasse of veldgroep.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
@@ -53,10 +53,10 @@ In de rechtertrein onder **[!UICONTROL Field properties]** kunt u de details van
 | Field, eigenschap | Beschrijving |
 | --- | --- |
 | [!UICONTROL Field name] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen. Deze waarde wordt gebruikt om het veld in code en in andere downstreamtoepassingen te identificeren en ernaar te verwijzen<br><br>De naam moet idealiter in camelCase worden geschreven. Het kan alfanumerieke, streepje- of onderstrepingstekens bevatten, maar het kan **mag** begint met een onderstrepingsteken.<ul><li>**Juist**: `fieldName`</li><li>**Aanvaardbaar:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Onjuist**: `_fieldName`</li></ul> |
-| [!UICONTROL Display name] | Een weergavenaam voor het veld. Dit is de naam die wordt gebruikt om het veld in het canvas van de Schema-editor weer te geven. |
+| [!UICONTROL Display name] | Een weergavenaam voor het veld. Dit is de naam die wordt gebruikt om het veld in het canvas van de Schema-editor weer te geven. U kunt de veldnaam wijzigen in de weergavenaam met de [weergavenaam](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Type] | Het type gegevens dat het veld zal bevatten. In dit vervolgkeuzemenu kunt u een van de [standaard scalaire typen](../../schema/field-constraints.md) ondersteund door XDM of een van de velden met meerdere velden [gegevenstypen](../resources/data-types.md) die eerder zijn gedefinieerd in de [!DNL Schema Registry].<br><br>U kunt ook **[!UICONTROL Advanced type search]** om bestaande gegevenstypen te zoeken en te filteren en het gewenste type gemakkelijker te vinden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 U kunt ook een optionele, leesbare **[!UICONTROL Description]** op het veld voor meer context met betrekking tot het beoogde gebruik van het veld.
 
@@ -96,7 +96,7 @@ Wanneer u een nieuw veld definieert, kunnen er aanvullende configuratieopties wo
 | [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, wordt &quot;[!UICONTROL Minimum value]&quot;(niet-exclusieve) beperking moet leeg blijven. |
 | [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | De maximumwaarde voor het dubbel dat tijdens inname moet worden geaccepteerd. Als de ingevoerde waarde precies overeenkomt met de waarde die hier is ingevoerd, wordt de waarde afgewezen. Wanneer u deze beperking gebruikt, wordt &quot;[!UICONTROL Maximum value]&quot;(niet-exclusieve) beperking moet leeg blijven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Speciale veldtypen {#special}
 

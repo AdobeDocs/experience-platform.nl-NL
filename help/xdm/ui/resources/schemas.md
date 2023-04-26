@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3118'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,18 @@ Als u een bestaand schema wilt bewerken, selecteert u de optie **[!UICONTROL Bro
 
 Nadat u een schema hebt geselecteerd, [!DNL Schema Editor] wordt weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [veldgroepen toevoegen](#add-field-groups) naar het schema (of [afzonderlijke velden toevoegen](#add-individual-fields) van deze groepen), [weergavenamen van velden bewerken](#display-names), of [bestaande aangepaste veldgroepen bewerken](./field-groups.md#edit) als het schema om het even welk gebruikt.
 
+## Schakelen tussen weergavenamen {#display-name-toggle}
+
+Voor uw gemak, verstrekt de Redacteur van het Schema een knevel om tussen de originele gebiedsnamen en de meer leesbare vertoningsnamen te veranderen. Dankzij deze flexibiliteit is het mogelijk uw schema&#39;s beter te detecteren en te bewerken. De knevel wordt gevonden bij het hoogste recht van de mening van de Redacteur van het Schema.
+
+>[!NOTE]
+>
+>De overgang van veldnamen naar weergavenamen is puur cosmetisch en verandert geen downstreambronnen.
+
+![De Schema-editor met [!UICONTROL Show display names for fields] gemarkeerd.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen worden aangepast, zoals beschreven in het dialoogvenster [weergavenamen](#display-names) sectie. De namen van de vertoning worden weerspiegeld over veelvoudige meningen UI, met inbegrip van afbeelding en datasetvoorproeven. De standaardinstelling is uitgeschakeld en geeft de oorspronkelijke waarden van veldnamen weer.
+
 ## Veldgroepen toevoegen aan een schema {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ Nadat u een schema hebt geselecteerd, [!DNL Schema Editor] wordt weergegeven met
 
 Als u een schema hebt geopend in het dialoogvenster [!DNL Schema Editor]U kunt velden toevoegen aan het schema door veldgroepen te gebruiken. Selecteer **[!UICONTROL Add]** naast **[!UICONTROL Field groups]** in het linkerspoor.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![De Schema-editor met de [!UICONTROL Add] van de [!UICONTROL Field groups] gemarkeerd.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 Er wordt een dialoogvenster weergegeven met een lijst met veldgroepen die u voor het schema kunt selecteren. Aangezien de gebiedsgroepen slechts met één klasse compatibel zijn, slechts die gebiedsgroepen die met de geselecteerde klasse van het schema worden geassocieerd zullen worden vermeld. Standaard worden vermelde veldgroepen gesorteerd op basis van hun populariteit in uw organisatie.
 
