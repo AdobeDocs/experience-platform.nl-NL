@@ -2,9 +2,9 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -112,6 +112,20 @@ Door een kenmerk toe te voegen als filter, kunt u selecteren welke waarden u wil
 
 ![Het filterdialoogvenster voor het filteren van waarden uit de widget.](./images/user-defined-dashboards/filter-dialog.png)
 
+#### Historische gegevens uitfilteren {#filter-historical-data}
+
+Als u historische gegevens wilt filteren uit de inzichten die door de widget zijn gegenereerd, voegt u de opdracht `date_key` kenmerk als filter en selecteer **[!UICONTROL Recent date]** gevolgd door **[!UICONTROL Apply]**. Dit filter zorgt ervoor dat de gegevens die worden gebruikt om inzichten af te leiden uit de meest recente systeemmomentopname worden genomen.
+
+![De [!UICONTROL Filter: date_key] dialoog met [!UICONTROL Recent date] en [!UICONTROL Apply] gemarkeerd.](./images/user-defined-dashboards/recent-date.png)
+
+U kunt ook een aangepaste periode maken om de gegevens op te filteren. Selecteren **[!UICONTROL Select dates]** om het dialoogvenster uit te breiden met een lijst met beschikbare datums. Gebruik de **[!UICONTROL Select all]** Schakel het selectievakje in om alle beschikbare opties in of uit te schakelen, of schakel het selectievakje voor elke dag afzonderlijk in. Tot slot selecteert u **[!UICONTROL Apply]** om je keuzes te bevestigen.
+
+>[!NOTE]
+>
+>Als de `date_key` kenmerk is al toegevoegd als filter, selecteer de ellips gevolgd door **[!UICONTROL Edit]** in de vervolgkeuzelijst om de filterperiode te wijzigen.
+
+![De [!UICONTROL Filter: date_key] met afzonderlijke selectievakjes voor dagen ingeschakeld en uitgeschakeld.](./images/user-defined-dashboards/select-dates.png)
+
 ### Eigenschappen van Widget
 
 Selecteer het pictogram Eigenschappen (![Het pictogram Eigenschappen.](./images/user-defined-dashboards/properties-icon.png)) in het rechterspoor om het deelvenster Eigenschappen te openen. In de [!UICONTROL Properties] een naam voor de widget in het deelvenster [!UICONTROL Widget title] tekstveld.
@@ -135,6 +149,22 @@ U kunt widgets opnieuw rangschikken en de grootte ervan wijzigen in deze werkrui
 ![Het door de gebruiker gedefinieerde dashboard met een aangepaste widget en de knop Opslaan gemarkeerd.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 Om ervoor te zorgen dat elke vraag voor een Adobe Real-time Customer Data Platform inzichten dashboard genoeg middelen heeft om efficiënt uit te voeren, volgt API middelgebruik door gelijkheidsgroeven aan elke vraag toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
+
+### Een widget dupliceren
+
+Nadat u een widget hebt gemaakt, kunt u de gehele widget dupliceren en de kenmerken ervan aanpassen om een unieke widget te maken zonder dat u helemaal opnieuw hoeft te beginnen. Als u een widget wilt dupliceren, navigeert u eerst naar het dashboardoverzicht. Selecteer vervolgens de naam van het dashboard in de inventarislijst. Het aangepaste dashboard wordt weergegeven.
+
+![De gebruikersinterface van het Platform met dashboards en een naam van het aangepaste dashboard benadrukt.](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+Selecteer het potloodpictogram (![Een potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) rechtsboven in het aangepaste dashboard om naar de bewerkingsmodus te gaan.
+
+![Een aangepast dashboard met het potloodpictogram gemarkeerd.](./images/user-defined-dashboards/edit-mode.png)
+
+Selecteer vervolgens de ellipsen in de rechterbovenhoek van de widget die u wilt kopiëren, gevolgd door **[!UICONTROL Duplicate]** in de lijst met beschikbare opties.
+
+![Een widget in een door de gebruiker gedefinieerd dashboard met de ellipsen en de widget Dupliceren gemarkeerd.](./images/user-defined-dashboards/duplicate.png)
+
+Er wordt een dubbele widget weergegeven in het door de gebruiker gedefinieerde dashboard. Selecteer de ovalen van de nieuwe widget, gevolgd door **[!UICONTROL Edit]**, om uw nieuwe widget aan te passen.
 
 ## Volgende stappen en extra bronnen
 
