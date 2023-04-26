@@ -2,9 +2,10 @@
 title: (API) Oracle Eloqua-verbinding
 description: Met de Eloqua-bestemming (API) van het Oracle kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw bedrijfsbehoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
+exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
+source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '2053'
 ht-degree: 0%
 
 ---
@@ -34,14 +35,20 @@ Raadpleeg de documentatie bij het Experience Platform voor [Segment Membership D
 
 Als u gegevens van Platform wilt exporteren naar uw [!DNL Oracle Eloqua] account die u nodig hebt [!DNL Oracle Eloqua] account.
 
+Bovendien hebt u minimaal de *&quot;Advanced Users - Marketing permissions&quot;* voor uw [!DNL Oracle Eloqua] -instantie. Zie de *&quot;Beveiligingsgroepen&quot;* de [Beveiligde gebruikerstoegang](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) pagina voor hulp. De toegang wordt vereist door de bestemming programmatically [de basis-URL bepalen](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) wanneer het aanroepen van [!DNL Oracle Eloqua] API.
+
 #### Gather [!DNL Oracle Eloqua] geloofsbrieven {#gather-credentials}
 
 Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Oracle Eloqua] bestemming:
 
 | Credentials | Beschrijving |
 | --- | --- |
+| `Company Name` | De bedrijfsnaam die aan uw [!DNL Oracle Eloqua] account. <br>U gebruikt later de `Company Name` en [!DNL Oracle Eloqua] `Username` als een samengevoegde tekenreeks die als de **[!UICONTROL Username]** wanneer [authenticeren aan de bestemming](#authenticate). |
 | `Username` | De gebruikersnaam van uw [!DNL Oracle Eloqua] account. |
 | `Password` | Het wachtwoord van uw [!DNL Oracle Eloqua] account. |
+| `Pod` | [!DNL Oracle Eloqua] ondersteunt meerdere datacenters, elk met een unieke domeinnaam. [!DNL Oracle Eloqua] Deze worden &quot;pods&quot; genoemd. Momenteel zijn er in totaal zeven - p01, p02, p03, p04, p06, p07 en p08. Meld u aan bij [!DNL Oracle Eloqua] en noteer de URL in uw browser nadat u zich met succes hebt aangemeld. Als de URL van uw browser bijvoorbeeld `secure.p01.eloqua.com` uw `pod` is `p01`. Zie de [de POD bepalen](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) pagina voor aanvullende instructies. |
+
+Zie de [Aanmelden bij [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) ter begeleiding.
 
 ## Guardrails {#guardrails}
 
@@ -88,9 +95,14 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** zoeken naar [!DN
 
 ### Verifiëren voor bestemming {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_companyname_username"
+>title="Bedrijfsnaam\Gebruikersnaam"
+>abstract="Vul dit gebied met uw bedrijfsnaam en gebruikersbenaming van Oracle Eloqua in de vorm in `{COMPANY_NAME}\{USERNAME}`"
+
 Vul de vereiste velden hieronder in. Zie de [Gather [!DNL Oracle Eloqua] geloofsbrieven](#gather-credentials) voor eventuele richtsnoeren.
 * **[!UICONTROL Password]**: Het wachtwoord van uw [!DNL Oracle Eloqua] account.
-* **[!UICONTROL Username]**: De gebruikersnaam van uw [!DNL Oracle Eloqua] account.
+* **[!UICONTROL Username]**: Een samengevoegde tekenreeks die bestaat uit uw [!DNL Oracle Eloqua] Bedrijfsnaam en de [!DNL Oracle Eloqua] Gebruikersnaam.<br>De samengevoegde waarde bestaat uit: `{COMPANY_NAME}\{USERNAME}`.<br> Let op: gebruik geen accolades of spaties en bewaar de `\`. <br>Als u bijvoorbeeld [!DNL Oracle Eloqua] Bedrijfsnaam is `MyCompany` en [!DNL Oracle Eloqua] Gebruikersnaam is `Username`, de samengevoegde waarde die u in het dialoogvenster **[!UICONTROL Username]** field is `MyCompany\Username`.
 
 Om voor authentiek te verklaren aan de bestemming, selecteer **[!UICONTROL Connect to destination]**.
 ![Het schermschot van het Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
@@ -99,11 +111,18 @@ Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Con
 
 ### Doelgegevens invullen {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_pod"
+>title="Pod"
+>abstract="Meld u aan bij Eloqua Oracle om uw podnummer te vinden. Noteer de URL in uw browser nadat u zich hebt aangemeld. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge Base - ontdek uw podnummer"
+
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 ![Het schermschot van het Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
+* **[!UICONTROL Pod]**: Om te verkrijgen welke `pod` u bent aan, login aan [!DNL Oracle Eloqua] en noteer de URL in uw browser nadat u zich met succes hebt aangemeld. Als de URL van uw browser bijvoorbeeld `secure.p01.eloqua.com` de `pod` waarde die u moet selecteren, is `p01`. Zie de [Gather [!DNL Oracle Eloqua] geloofsbrieven](#gather-credentials) voor aanvullende richtsnoeren.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -193,3 +212,18 @@ Zie voor meer informatie de [!DNL Oracle Eloqua] documentatie:
 
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST API voor Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+
+### Changelog
+
+Deze sectie vangt de functionaliteit en de significante documentatieupdates aan deze bestemmingsschakelaar worden aangebracht die.
+
++++ Wijzigingen weergeven
+
+| Releasedatum | Type bijwerken | Beschrijving |
+|---|---|---|
+| April 2023 | Documentatie bijwerken | <ul><li>We hebben de [gebruik](#use-cases) een duidelijker voorbeeld van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>We hebben de [toewijzing](#mapping-considerations-example) met duidelijke voorbeelden van zowel verplichte als optionele toewijzingen.</li> <li>We hebben de [Verbinden met de bestemming](#connect) met een voorbeeld van hoe u de samengevoegde waarde voor de component **[!UICONTROL Username]** veld met [!DNL Oracle Eloqua] Bedrijfsnaam en de [!DNL Oracle Eloqua] Gebruikersnaam. (PLATIR-28343)</li><li>We hebben de [Gather [!DNL Oracle Eloqua] geloofsbrieven](#gather-credentials) en de [Doelgegevens invullen](#destination-details) secties met richtsnoeren over [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selectie. De *&quot;Pod&quot;* De waarde wordt gebruikt door de bestemming om de basis-URL voor de API-aanroepen samen te stellen. De [[!DNL Oracle Eloqua] voorwaarden](#prerequisites-destination) dit gedeelte is ook bijgewerkt met richtlijnen voor het toewijzen van *&quot;Advanced Users - Marketing permissions&quot;* als vereist *&quot;Beveiligingsgroepen&quot;* voor uw [!DNL Oracle Eloqua] -instantie.</li></ul> |
+| Maart 2023 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
+
+{style="table-layout:auto"}
+
++++
