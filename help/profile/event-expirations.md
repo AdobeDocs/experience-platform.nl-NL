@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verlopen van gebeurtenissen ervaren
 description: Dit document biedt algemene richtlijnen voor het configureren van vervaltijden voor afzonderlijke Experience Events in een Adobe Experience Platform-gegevensset.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
+source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -43,3 +43,37 @@ Als u bijvoorbeeld op 15 mei een vervalwaarde van 30 dagen hebt toegepast, worde
 U moet ervoor zorgen dat de raadplegingsvensters voor uw segmenten binnen de vervalgrenzen van hun afhankelijke datasets zijn om resultaten nauwkeurig te houden. Als u bijvoorbeeld een vervalwaarde van 30 dagen toepast en een segment hebt dat probeert gegevens van maximaal 45 dagen geleden weer te geven, is het resulterende publiek waarschijnlijk onjuist.
 
 Daarom zou u de zelfde waarde van de Vervaltijd van de Gebeurtenis van de Ervaring voor alle datasets, indien mogelijk, moeten houden om het effect van verschillende vervalwaarden over verschillende datasets in uw segmenteringslogica te vermijden.
+
+## Veelgestelde vragen {#faq}
+
+In de volgende sectie worden vaak gestelde vragen over het verlopen van Experience Event-gegevens weergegeven:
+
+### Hoe vervalt de vervaldatum van de gegevens van de Ervaring Gebeurtenis van de gegevensvervaldatum van het Pseudoniem Profiel?
+
+De de gegevensvervaldatum van de Ervaring van de Gebeurtenisgegevens en de gegevensvervaldatum van het Pseudoniem Profiel zijn complementaire eigenschappen.
+
+#### Granulariteit
+
+Ervaar de gegevensvervaldatum van de Gebeurtenis werkt op een **gegevensset** niveau. Dientengevolge, kan elke dataset een verschillende het aflopen van gegevens hebben plaatsen.
+
+De vervaldatum van gegevens van het Pseudoniem Profiel werkt op een **sandbox** niveau. Als gevolg hiervan is het verlopen van de gegevens van invloed op alle profielen in de sandbox.
+
+#### Identiteitstypen
+
+Ervaring gebeurtenisgegevens verlopen verwijdert gebeurtenissen **alleen** op basis van de tijdstempel van de gebeurtenisrecord. De opgenomen naamruimten zijn **genegeerd** voor vervaldoeleinden.
+
+Vervaldatum van gegevens van pseudoniem profiel **alleen** overweegt profielen met identiteitsgrafieken die identiteitsnaamruimten bevatten die door de klant werden geselecteerd, zoals `ECID`, `AAID`of andere soorten cookies. Als het profiel **alle** extra naamruimte voor identiteit **niet** in de geselecteerde lijst van de klant, zal het profiel **niet** worden geschrapt.
+
+#### Verwijderde items
+
+Ervaring gebeurtenisgegevens verlopen **alleen** verwijdert gebeurtenissen en doet **niet** profielklassegegevens verwijderen. De profielklassegegevens worden alleen verwijderd wanneer alle gegevens over het profiel zijn verwijderd **alles** gegevenssets en er zijn **nee** nog resterende profielklassecords voor het profiel.
+
+Vervaldatum van gegevens van pseudoniem profiel wordt verwijderd **beide** gebeurtenis- en profielrecords. Hierdoor worden ook de profielklassegegevens verwijderd.
+
+### Hoe kan de gegevensvervaldatum van het Pseudoniem Profiel samen met de gegevensvervaldatum van de Gebeurtenis van de Ervaring worden gebruikt?
+
+De vervaldatum van Pseudoniem Profielgegevens en Experience Event-gegevens kunnen worden gebruikt om elkaar aan te vullen.
+
+U moet **altijd** De gegevensvervaldatum van de de Ervaring van de opstelling Gebeurtenis in uw datasets, die op uw behoeften wordt gebaseerd om gegevens over uw bekende klanten te behouden. Als de geldigheids-gebeurtenisgegevensvervaldatum is ingesteld, kunt u de gegevensvervaldatum van het Pseudoniem-profiel gebruiken om automatisch Pseudoniem-profielen te verwijderen. Doorgaans is de vervalperiode van de gegevens voor Pseudoniem Profielen korter dan de vervalperiode van de gegevens voor Experience Events.
+
+Voor een typisch geval van gebruik, kunt u de gegevensvervaldatum van de Gebeurtenis van de Ervaring plaatsen gebaseerd op de waarden van uw bekende gebruikersgegevens en u kunt uw Pseudoniem gegevensvervaldatum van het Profiel aan een veel kortere duur plaatsen om de invloed van Pseudoniem profielen op uw Platform vergunningsnaleving te beperken.

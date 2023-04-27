@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentie
 title: Aanbevolen werkwijzen voor gegevensbeheer
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2169'
 ht-degree: 1%
 
 ---
@@ -122,8 +122,6 @@ Het archief Profiel bestaat uit de volgende componenten:
 
 {style="table-layout:auto"}
 
-
-
 #### Compositierapporten opslaan van profiel
 
 Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de opslag van het Profiel begrijpen. Met deze rapporten kunt u geïnformeerde beslissingen nemen over hoe en waar u de vervaldatum van de Experience Event moet instellen om uw licentiegebruik beter te optimaliseren:
@@ -132,6 +130,10 @@ Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de 
 * **API voor overlappen van identiteiten**: Toont de identiteit namespaces die het meest aan uw Adresseerbare Publiek bijdragen. Zie de zelfstudie aan [het genereren van het overlappingsrapport voor de identiteit](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) voor meer informatie .
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Verlopen van gegevens van pseudoniem profiel {#pseudonymous-profile-expirations}
+
+Op deze manier kunt u automatisch schijnbare profielen uit het profielarchief verwijderen. Lees voor meer informatie over deze functie de [Overzicht van de vervaldatum van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md).
 
 #### Verlopen van gebeurtenissen beleven {#event-expirations}
 
@@ -144,7 +146,7 @@ Hieronder volgt een lijst met aanbevolen tips die u kunt volgen om ervoor te zor
 * Gebruik de [licentiegebruiksdashboard](../../dashboards/guides/license-usage.md) om de trends van het klantengebruik te volgen en te controleren. Hierdoor kunt u eventuele overschrijdingen die zich kunnen voordoen, overtreffen.
 * Configureren [innamefilters](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
 * Zorg ervoor dat u alleen [ingeschakelde gegevenssets voor profiel](#ingestion-filters) die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
-* Een [Ervaring gebeurtenisvervaldatum](#event-expirations) voor hoogfrequente gegevens zoals webgegevens.
+* Configureren [Verlopen van gebeurtenissen beleven](#event-expirations) en [Verlopen van gegevens van pseudoniem profiel](#pseudonymous-profile-expirations) voor hoogfrequente gegevens zoals webgegevens.
 * Controleer de [Profielsamenstellingsrapporten](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
 
 ## Overzicht en beschikbaarheid van functies {#feature-summary}
