@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2023
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1414'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 | Functie | Beschrijving |
 | --- | --- |
-| Door gebruiker gedefinieerde dashboards | U kunt nu **historische gegevens filteren** vanuit uw widgetinzichten en gebruik recente gegevens of een aangepaste analyseperiode.<br>U kunt nu ook **bestaande widgets dupliceren**. Door een duplicaat aan te passen en de kenmerken ervan te bewerken, kunt u voorkomen dat u bij het maken van een nieuwe, unieke widget opnieuw begint. |
+| Door gebruiker gedefinieerde dashboards | U kunt nu **historische gegevens filteren** vanuit uw widgetinzichten en gebruik recente gegevens of een aangepaste analyseperiode. Zie de [door de gebruiker gedefinieerde handleiding voor dashboards](../../dashboards/user-defined-dashboards.md#filter-historical-data) voor meer informatie .<br>U kunt nu ook **bestaande widgets dupliceren**. Door een duplicaat aan te passen en de kenmerken ervan te bewerken, kunt u voorkomen dat u bij het maken van een nieuwe, unieke widget opnieuw begint. Lees de [widget duplicatiegids](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 | Functie | Beschrijving |
 | --- | --- |
-| Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen. Dankzij deze flexibiliteit is het mogelijk uw schema&#39;s beter te detecteren en te bewerken. De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. |
+| Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen.<br>![De Schema-editor met de schakeloptie voor weergavenaam gemarkeerd.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Schakelen tussen weergavenamen van schema-editor"){width="100" zoomable="yes"}<br>Dankzij deze flexibiliteit is het mogelijk uw schema&#39;s beter te detecteren en te bewerken. De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. Lees de [documentatie over naamschakelen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) voor meer informatie. |
 
 {style="table-layout:auto"}
 
