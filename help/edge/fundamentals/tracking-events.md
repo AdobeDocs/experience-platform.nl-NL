@@ -3,9 +3,9 @@ title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
+source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1194'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,12 @@ alloy("sendEvent", {
 
 ### De gegevensset-id overschrijven
 
+>[!IMPORTANT]
+>
+>De `datasetId` door de `sendEvent` is vervangen. Om een dataset ID met voeten te treden, gebruik [configuratieoverschrijvingen](../datastreams/overrides.md) in plaats daarvan.
+
 In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de `datasetId` de optie `sendEvent` opdracht:
+
 
 
 ```javascript

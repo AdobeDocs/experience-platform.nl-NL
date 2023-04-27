@@ -2,9 +2,9 @@
 title: De extensie Adobe Experience Platform Web SDK configureren
 description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in UI te vormen.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,23 @@ De SDK kan automatisch koppelingsklikgegevens voor u verzamelen. Deze functie is
 ### [!UICONTROL Automatically collected context data]
 
 Door gebrek, verzamelt SDK bepaalde contextgegevens betreffende apparaat, Web, milieu, en plaatcontext. Als u een lijst van de informatie wilt zien Adobe verzamelt, kunt u het vinden [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Als u deze gegevens niet wilt verzamelen of slechts bepaalde categorieën gegevens wilt verzamelen, kunt u deze opties veranderen.
+
+## [!UICONTROL Datastream Configuration Overrides]
+
+Met de gegevensstroom overschrijft kunt u aanvullende configuraties voor uw gegevensstromen definiëren. Deze configuraties worden via de SDK van het Web doorgegeven aan het Edge-netwerk.
+
+Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbrengen, zonder het creëren van een nieuwe gegevensstroom of het wijzigen van uw bestaande montages.
+
+De configuratieopheffing van gegevensstroom is een proces in twee stappen:
+
+1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [databaseconfiguratiepagina](../datastreams/configure.md).
+2. Dan, moet u de met voeten treden naar het Netwerk van de Rand of via een bevel van SDK van het Web, of door de de markeringsuitbreiding van SDK van het Web te gebruiken.
+
+Zie de gegevensstroom [documentatie bij overschrijvingen van configuratie](../datastreams/overrides.md) voor gedetailleerde instructies op hoe te om configuraties met betrekking tot gegevensstroom met voeten te treden.
+
+Als alternatief voor het overgaan van de met voeten treedt door een bevel van SDK van het Web, kunt u de met voeten treden in het scherm van de markeringsuitbreiding vormen hieronder wordt getoond die.
+
+![Afbeelding die de configuratie van de gegevensstroom overschrijft in de webSDK-tagextensiepagina.](../assets/extension/overview/datastream-overrides.png)
 
 ## [!UICONTROL Advanced Settings]
 

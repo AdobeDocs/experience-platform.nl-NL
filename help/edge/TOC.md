@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
-source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
+source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 21%
+source-wordcount: '212'
+ht-degree: 20%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 21%
 * Gegevensstromen {#datastreams}
    * [Overzicht](./datastreams/overview.md)
    * [Een gegevensstroom configureren](./datastreams/configure.md)
+   * [Gegevensstroomoverschrijvingen configureren](./datastreams/overrides.md)
    * [Gegevensvoorvoegsel voor gegevensverzameling](./datastreams/data-prep.md)
    * Gegevensverrijking {#data-enrichment}
       * [Weezelgegevens via het weerkanaal](./datastreams/data-enrichment/weather.md)
