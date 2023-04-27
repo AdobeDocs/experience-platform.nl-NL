@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 0%
@@ -18,7 +18,7 @@ In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experienc
 
 **Nieuwe functies**
 
-* Toegevoegde ondersteuning voor overschrijvingen van de gegevensstroomconfiguratie.
+* Extra ondersteuning voor [gegevensstroomconfiguratie overschrijft](../datastreams/overrides.md).
 * Afvalmelding toevoegen aan de `datasetId` de optie `sendEvent` gebruiken.
 
 **Oplossingen en verbeteringen**
