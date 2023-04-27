@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1288'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
 | Dataflow-controle voor [!DNL Custom Personalization] en [!DNL Adobe Commerce] bestemmingen | <p> U ziet nu activeringsmaatstaven voor de [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Aangepaste aanpassing](../../destinations/catalog/personalization/custom-personalization.md) en de [Aangepaste aanpassing met kenmerken](../../destinations/catalog/personalization/custom-personalization.md) verbindingen. </p> <p>![Adobe Commerce-afbeelding](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce-meetgegevens"){width="100" zoomable="yes"}</p>  Zie [Gegevens controleren in de werkruimte Doelen](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) voor meer informatie . |
-| Nieuw **[!UICONTROL Append segment ID to segment name]** veld voor de [!DNL Google Ad Manager] en [!DNL Google Ad Manager 360] bestemmingen | U kunt nu de segmentnaam hebben in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) en [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) omvat segmentidentiteitskaart van Experience Platform, als dit: `Segment Name (Segment ID)`. |
+| Nieuw **[!UICONTROL Append segment ID to segment name]** veld voor de [!DNL Google Ad Manager] en [!DNL Google Ad Manager 360] bestemmingen | <p>U kunt nu de segmentnaam hebben in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) en [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) omvat segmentidentiteitskaart van Experience Platform, als dit: `Segment Name (Segment ID)`.</p><p>![Segment-id-afbeelding toevoegen](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nieuw segment-id toevoegen aan segmentnaamveld "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 **Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
 
 - We hebben een probleem opgelost in het **Uitgesloten identiteiten** rapporteringsmetriek voor op dossier-gebaseerde bestemmingsuitvoer. Klanten ontvingen alle geëxporteerde id&#39;s van de geactiveerde exportbewerking zoals verwacht. De **Uitgesloten identiteiten** Bij de rapportage van metrische gegevens in de gebruikersinterface werden ten onrechte grote aantallen uitgesloten identiteiten weergegeven als gevolg van onjuist tellende identiteiten die nooit werden geacht te zijn geëxporteerd. (PLAT-149774)
-- We hebben een probleem opgelost in de planningsstap van de activeringsworkflow. Voor bestemmingen die een afbeeldingID vereisen, konden de klanten geen afbeeldingidentiteitskaart voor segmenten toevoegen die aan bestaande bestemmingsverbindingen worden toegevoegd. (PLAT-148808)
+- We hebben een probleem opgelost in het **Planning** stap van de activeringsworkflow. Voor bestemmingen die een afbeeldingID vereisen, konden de klanten geen afbeeldingidentiteitskaart voor segmenten toevoegen die aan bestaande bestemmingsverbindingen worden toegevoegd. (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
