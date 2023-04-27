@@ -3,9 +3,9 @@ keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave 
 title: Google Display & Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
+source-git-commit: 326127996a27df41383ef67da765f7b0818f17f2
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '967'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 360] bestemmingen:
 
 * Geactiveerd publiek wordt programmatically gecreeerd in het platform van Google.
-* [!DNL Platform] bevat momenteel geen metrische waarde om een geslaagde activering te valideren. Raadpleeg het aantal gebruikers in Google om de integratie te valideren en te begrijpen waar de doelgroep zich op richt.
+* De activering van publieksback-ups voor de [!DNL Google Display & Video 360] de bestemming is gepland om 24-48 uur voor te komen nadat een segment eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is in reactie op het beleid van Google om 24 uur te wachten tot het opnemen van gegevens en is bedoeld om gelijke tarieven tussen Real-time CDP en te verbeteren [!DNL Google Display & Video 360]. Merk op dat dit een achtergrondconfiguratie is die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.
 
 >[!IMPORTANT]
 >
@@ -61,8 +61,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Voordat u het dialoogvenster [!DNL Google Display & Video 360] Als u de bestemming in Platform hebt, moet u contact opnemen met Google om Adobe op de lijst met toegestane gegevensproviders te plaatsen en om uw account aan de lijst van gewenste personen toe te voegen. Neem contact op met Google en geef de volgende informatie op:
 
-* **Account-id**: De account-id van Adobe met Google. Account-id: 87933855.
-* **Klant-id**: De klant-id van Adobe met Google. Klant-id: 89690775.
+* **Account-id**: Adobe-id met Google. Account-id: 87933855.
+* **Klant-id**: Adobe-id met Google. Klant-id: 89690775.
 * **Je accounttype**: gebruiken **[!DNL Invite advertiser]** om het publiek alleen te laten delen naar een specifiek merk in uw Display &amp; Video 360-account of -gebruik **[!DNL Invite partner]** om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
 
 ## Verbinden met de bestemming {#connect}
