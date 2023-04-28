@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1634'
 ht-degree: 2%
 
 ---
@@ -110,6 +110,26 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Functie | Beschrijving |
 | --- | --- |
 | Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen.<br>![De Schema-editor met de schakeloptie voor weergavenaam gemarkeerd.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Schakelen tussen weergavenamen van schema-editor"){width="100" zoomable="yes"}<br>Dankzij deze flexibiliteit is het mogelijk uw schema&#39;s beter te detecteren en te bewerken. De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. Lees de [documentatie over naamschakelen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) voor meer informatie. |
+
+{style="table-layout:auto"}
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files) | Een nieuw XDM-schema voor de datasets van de Classificatie van het Doel die een reeks meta-gegevens gebieden bevatten om de activiteiten en de ervaringen van het Doel te classificeren. |
+
+{style="table-layout:auto"}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Veldgroep | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | Er is een accountextensieveldgroep toegevoegd voor Real-Time Klantprofiel waarmee gebruikers segmentlidmaatschap kunnen toevoegen aan de Account union. |
+| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1696/files) | De de gebiedsgroep van de Attributen die door het Profiel van de Klant in real time wordt gebruikt is bijgewerkt aan een systeem read-only globaal schema. |
+| Veldgroep | Meerdere | Verschillende gebeurtenissen zijn toegevoegd als velden voor [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/pull/1718/files). |
+| Veldgroep | Profiellogo | [De titel is gecorrigeerd](https://github.com/adobe/xdm/pull/1717/files) for `xdm:upgradeDate` van &quot;Programmanaam&quot; naar &quot;Datum van upgrade&quot;. |
+| Veldgroep | Meerdere | Verschillende velden van [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1714/files) zijn bijgewerkt om de dubbele geneste hiërarchie te verwijderen. |
 
 {style="table-layout:auto"}
 
