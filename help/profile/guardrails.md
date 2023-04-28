@@ -4,12 +4,12 @@ title: Standaardhulplijnen voor realtime klantprofielgegevens
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties.
+description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document bevat standaard gebruiks- en snelheidslimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
+source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 1%
+source-wordcount: '1980'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden op basis van gedragsinzichten en klantkenmerken in de vorm van realtime klantprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
 
-Dit document bevat standaardgebruiks- en tarieflimieten waarmee u uw profielgegevens kunt modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
+Dit document bevat standaard gebruiks- en snelheidslimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
 >[!NOTE]
 >
@@ -48,6 +48,8 @@ Dit document bevat twee typen standaardlimieten:
 
 De volgende instructies bieden aanbevolen limieten bij het modelleren van gegevens in realtime-klantprofiel. Zie de sectie over primaire entiteiten en dimensie-entiteiten voor meer informatie over primaire entiteiten en dimensie-entiteiten [entiteitstypen](#entity-types) in het aanhangsel.
 
+![Een diagram met de verschillende geleidingen voor profielgegevens in Adobe Experience Platform.](./images/guardrails/profile-guardrails.png)
+
 ### Primaire entiteitsinstructies
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
@@ -61,7 +63,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 | Array-kardinaliteit in ExperienceEvent | &lt;=10 | Zacht | De optimale arraycardinaliteit in een ExperienceEvent (tijdreeksgegevens) is &lt;=10. |
 | Identiteitstelling voor individueel profiel Identiteitsgrafiek | 50 | Hard | **Het maximumaantal identiteiten in een identiteitsgrafiek voor een individueel profiel is 50.** Profielen met meer dan 50 identiteiten worden uitgesloten van segmentatie, export en lookups. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Dimension-entiteitsgeleidingen
 
@@ -71,7 +73,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 | Geen geneste relaties | 0 | Zacht | U moet geen relatie maken tussen twee niet-[!DNL XDM Individual Profile] schema&#39;s. De capaciteit om verhoudingen tot stand te brengen wordt niet geadviseerd voor om het even welke schema&#39;s die geen deel van zijn [!DNL Profile] samenvoegingsschema. |
 | JSON-diepte voor veld primaire id | 4 | Zacht | De aanbevolen maximale JSON-diepte voor het veld primaire id is 4. Dit betekent dat in een hoogst genest schema, u geen gebied als primaire identiteitskaart zou moeten selecteren als het meer dan 4 niveaus diep wordt genesteld. Een veld op het vierde geneste niveau kan als primaire id worden gebruikt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Limieten voor gegevensgrootte
 
@@ -92,7 +94,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | 90 | Zacht | **Het maximumaantal per dag ingenomen Profile of ExperienceEvent-batches is 90.** Dit houdt in dat het gecombineerde totaal van de elke dag ingeslikte Profile en ExperienceEvent batches niet meer dan 90 mag bedragen. Door extra batches in te voeren worden de systeemprestaties beïnvloed. |
 | Aantal ExperienceEvents per profielrecord | 5000 | Zacht | **Het maximumaantal ExperienceEvents per profielrecord is 5000.** Profielen met meer dan 5000 ervaringGebeurtenissen zullen **niet** voor segmentatie in aanmerking worden genomen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Dimension-entiteitsgeleidingen
 
@@ -102,7 +104,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 | Datasets per dimensionaal eenheidschema | 5 | Zacht | Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema. Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
 | Per dag ingenomen partijen van Dimension-entiteit | 4 per entiteit | Zacht | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Segmenteringsgeleiding
 
@@ -115,7 +117,7 @@ De instructies in deze sectie verwijzen naar het aantal en de aard van de segmen
 | Streaming segmenten per sandbox | 500 | Zacht | Een organisatie kan in totaal meer dan 500 streaming segmenten hebben, zolang er zich in elke sandbox minder dan 500 streaming segmenten bevinden. Het maken van extra streaming segmenten kan van invloed zijn op de systeemprestaties. |
 | Batchsegmenten per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 batchsegmenten hebben, zolang er zich in elke sandbox minder dan 4000 batchsegmenten bevinden. Het maken van extra batchsegmenten kan van invloed zijn op de systeemprestaties. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aanhangsel
 
