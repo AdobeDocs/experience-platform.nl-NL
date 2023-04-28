@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '982'
 ht-degree: 14%
 
 ---
@@ -229,6 +229,8 @@ ht-degree: 14%
       * [!DNL Mixpanel] {#mixpanel}
          * [Overzicht](./extensions/server/mixpanel/overview.md)
       * [PegPeg-klantbeslissingshub](https://exchange.adobe.com/apps/ec/107597)
+      * [!DNL Pinterest] {#pinterest}
+         * [Overzicht](./extensions/server/pinterest/overview.md)
       * [Conversie-API magnetisch](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Overzicht](./extensions/server/splunk/overview.md)
