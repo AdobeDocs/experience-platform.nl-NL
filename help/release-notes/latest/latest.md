@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 2%
@@ -122,6 +122,8 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Vervaldatum van pseudoniem profielgegevens | De vervaldatum van pseudoniem profielgegevens is nu over het algemeen beschikbaar. Deze release verwijdert ononderbroken pseudoniem-profielen uit uw Experience Platform-exemplaar als deze zijn ingeschakeld. Lees voor meer informatie over deze functie en Pseudoniem-profielen de [Handleiding voor het verlopen van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## Bronnen {#sources}
 
