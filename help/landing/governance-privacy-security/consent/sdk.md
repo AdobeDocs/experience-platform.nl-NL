@@ -2,9 +2,9 @@
 title: Gegevens met toestemming van de klant verwerken met de Adobe Experience Platform Web SDK
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten te verwerken in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,6 @@ Nadat u een nieuwe gegevensstroom hebt gemaakt of een bestaande gegevensstroom h
 | Veld DataStream | Waarde |
 | --- | --- |
 | [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling de gegevensstroom bevat. |
-| [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie aan [streaming verbinding maken](../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streaminginlaat hebt. |
 | [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset die u bij het verzenden van gebeurtenisgegevens naar het gebruiken van SDK van plan bent. Terwijl u een gebeurtenisdataset moet verstrekken om een gegevensstroom van het Platform tot stand te brengen, gelieve te merken dat de toestemmingsgegevens die via gebeurtenissen worden verzonden niet in stroomafwaartse handhavingswerkschema&#39;s worden nageleefd. |
 | [!UICONTROL Profile Dataset] | De [!DNL Profile]-enabled dataset met de gebieden van de klanteninstemming die u creeerde [eerder](#prerequisites). |
 
