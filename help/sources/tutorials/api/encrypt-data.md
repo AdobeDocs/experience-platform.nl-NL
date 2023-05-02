@@ -3,7 +3,8 @@ title: Versleutelde gegevensinsluiting
 description: Met Adobe Experience Platform kunt u gecodeerde bestanden opnemen via batchbronnen voor cloudopslag.
 hide: true
 hidefromtoc: true
-source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
+exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
+source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
@@ -24,7 +25,7 @@ De gecodeerde gegevensinvoer verloopt als volgt:
 
 >[!IMPORTANT]
 >
->De maximale grootte van één gecodeerd bestand is 100 MB. U kunt bijvoorbeeld gegevens van 2 GB invoeren in een enkele gegevensstroom, maar elk afzonderlijk bestand in die gegevens kan niet groter zijn dan 100 MB.
+>De maximale grootte van één gecodeerd bestand is 1 GB. U kunt bijvoorbeeld gegevens van 2 GB invoeren in één gegevensstroom, maar elk afzonderlijk bestand in die gegevens mag niet groter zijn dan 1 GB.
 
 Dit document bevat stappen voor het genereren van een sleutelpaar voor versleuteling van gegevens en het invoeren van gecodeerde gegevens naar het Experience Platform met behulp van bronnen voor cloudopslag.
 
