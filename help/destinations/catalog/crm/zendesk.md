@@ -2,10 +2,10 @@
 title: Zendesk-verbinding
 description: Met de Zendesk-bestemming kunt u uw accountgegevens exporteren en activeren in Zendesk voor uw zakelijke behoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: 55f1eafa68124b044d20f8f909f6238766076a7a
 workflow-type: tm+mt
-source-wordcount: '1273'
-ht-degree: 0%
+source-wordcount: '1405'
+ht-degree: 1%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 [[!DNL Zendesk]](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Zendesk] Contactpersonen-API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), om identiteiten binnen een segment als contacten binnen te creëren en bij te werken [!DNL Zendesk].
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Zendesk] Contactpersonen-API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), naar **identiteiten maken en bijwerken** binnen een segment als contacten binnen [!DNL Zendesk].
 
 [!DNL Zendesk] gebruikt dragertokens als authentificatiemechanisme om met het [!DNL Zendesk] Contactpersonen-API. Instructies voor verificatie aan uw [!DNL Zendesk] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als markeerteken kunt u uw gebruikers een persoonlijke ervaring bieden op basis van kenmerken uit hun Adobe Experience Platform-profielen. U kunt segmenten maken van uw offlinegegevens en deze segmenten verzenden naar [!DNL Zendesk], om in de feeds van de gebruikers weer te geven zodra de segmenten en profielen in Adobe Experience Platform zijn bijgewerkt.
+De klantendienst van een multichannel B2C platform wil een naadloze gepersonaliseerde ervaring voor zijn klanten verzekeren. De afdeling kan segmenten van hun eigen off-line gegevens bouwen om nieuwe gebruikersprofielen tot stand te brengen of bestaande profielinformatie van verschillende interactie bij te werken (bijvoorbeeld aankopen, terugkeren enz.) en stuur deze segmenten vanuit Adobe Experience Platform naar [!DNL Zendesk]. De bijgewerkte informatie wordt [!DNL Zendesk] zorgt ervoor dat de agent van de klantendienst de recente informatie van de klant onmiddellijk beschikbaar heeft, toelatend snellere reacties en resolutie.
 
 ## Vereisten {#prerequisites}
 
@@ -118,17 +118,15 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Zendesk] doelvelden, voe
 
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en selecteer een kenmerk.
-   * Herhaal deze stappen om de volgende toewijzingen tussen uw XDM-profielschema en uw [!DNL Zendesk] instantie: |Bronveld|Doelveld| Verplicht| |—|—|—| |`xdm: person.name.lastName`|`Attribute: last_name` <br>of `Attribute: name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja |
+1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een doelidentiteit of kies de **[!UICONTROL Select attributes]** en selecteer een van de ondersteunde schemakenmerken.
+   * Herhaal deze stappen om de volgende verplichte toewijzingen toe te voegen, kunt u ook andere kenmerken toevoegen die u tussen uw XDM-profielschema en uw [!DNL Zendesk] instantie: |Bronveld|Doelveld| Verplicht| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
       ![Voorbeeld van schermopname met gebruikersinterface van Platform met kenmerktoewijzingen.](../../assets/catalog/crm/zendesk/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >Zowel zijn de afbeeldingen van het doelveld verplicht en vereist voor [!DNL Zendesk] om te werken.
-      >
-      >De toewijzing voor *Achternaam* of *Naam* anders is de [!DNL Zendesk] API reageert niet met een fout en doorgegeven kenmerkwaarden worden genegeerd.
+>[!IMPORTANT]
+>
+>De `Attribute: last_name` en `Identity: email` doeltoewijzingen zijn verplicht voor deze bestemming. Als deze toewijzingen ontbreken, worden andere toewijzingen genegeerd en niet verzonden naar [!DNL Zendesk].
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -167,3 +165,18 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 Aanvullende nuttige informatie uit de [!DNL Zendesk] de documentatie is hieronder:
 * [Je eerste telefoontje maken](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Aangepaste velden](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
+
+### Changelog
+
+Deze sectie vangt de functionaliteit en de significante documentatieupdates aan deze bestemmingsschakelaar worden aangebracht die.
+
++++ Wijzigingen weergeven
+
+| Releasedatum | Type bijwerken | Beschrijving |
+|---|---|---|
+| April 2023 | Documentatie bijwerken | <ul><li>We hebben de [gebruik](#use-cases) een duidelijker voorbeeld van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>We hebben de [toewijzing](#mapping-considerations-example) om de juiste vereiste toewijzingen te weerspiegelen. De `Attribute: last_name` en `Identity: email` doeltoewijzingen zijn verplicht voor deze bestemming. Als deze toewijzingen ontbreken, worden andere toewijzingen genegeerd en niet verzonden naar [!DNL Zendesk].</li> <li>We hebben de [toewijzing](#mapping-considerations-example) met duidelijke voorbeelden van zowel verplichte als optionele toewijzingen.</li></ul> |
+| Maart 2023 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
+
+{style="table-layout:auto"}
+
++++
