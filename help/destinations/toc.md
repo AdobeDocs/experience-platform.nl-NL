@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
+source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1074'
 ht-degree: 2%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 2%
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbinding maken met locaties voor opslag en marketing in batches en gegevens activeren met de Flow Service API](./api/connect-activate-batch-destinations.md)
    * [(bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
+   * [Doel bewerken](./api/edit-destination.md)
    * [Doelgegevens bijwerken](./api/update-destination-dataflows.md)
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
