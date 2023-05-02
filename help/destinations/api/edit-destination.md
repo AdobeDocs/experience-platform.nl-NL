@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Doelverbindingen bewerken met de Flow Service API
 type: Tutorial
 description: Leer hoe u verschillende componenten van een doelverbinding kunt bewerken met de Flow Service API.
-source-git-commit: 52fe0ef2ab195756c381b3ef0a5792dffe459b8d
+source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -196,9 +196,6 @@ Haal de gegevensstroom-id op van de verbinding > verkrijg de doel-verbindings-id
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
->[!ENDSHADEBOX]
-
-
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -244,11 +241,11 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag
 }
 ```
 
->[!TAB Google Ad Manager 360]
+>[!TAB Google Ad Manager en Google Ad Manager 360]
 
 **Verzoek**
 
-Met het volgende verzoek worden de parameters van een [[!DNL Google Ad Manager 360] doel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding om nieuwe toevoegings segmentidentiteitskaart aan het gebied van de segmentnaam toe te voegen.
+Met het volgende verzoek worden de parameters van een [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) of [[!DNL Google Ad Manager 360] doel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding om de nieuwe [**[!UICONTROL Append segment ID to segment name]**](/help/release-notes/2023/april-2023.md#destinations) veld.
 
 ```shell
 curl -X PATCH \
@@ -328,6 +325,8 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label
 
 >[!ENDTABS]
 
+>[!ENDSHADEBOX]
+
 ## Basisverbindingscomponenten bewerken (verificatieparameters en andere componenten) {#patch-base-connection}
 
 De componenten van een basisverbinding verschillen door bestemming. Bijvoorbeeld: [!DNL Amazon S3] bestemmingen, kunt u de toegangssleutel en geheime sleutel aan uw bijwerken [!DNL Amazon S3] locatie.
@@ -340,11 +339,13 @@ Herinner me, kreeg u uw identiteitskaart van de basisverbinding in een vorige st
 >
 >De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de basisverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, basisverbinding, en anderen bij.
 >
-> Om de recentste versie van de etiketwaarde te krijgen, doe een verzoek van de GET aan `/connections/{BASE_CONNECTION_ID}` eindpunt, waarbij `{BASE_CONNECTION_ID}` Dit is de basisverbindings-id die u wilt bijwerken.
+> Als u de meest recente versie van de Etag-waarde wilt ophalen, dient u een GET-aanvraag uit te voeren bij de `/connections/{BASE_CONNECTION_ID}` eindpunt, waarbij `{BASE_CONNECTION_ID}` Dit is de basisverbindings-id die u wilt bijwerken.
 
 Hieronder staan enkele voorbeelden van het bijwerken van parameters in de specificatie van de basisverbinding voor verschillende soorten doelen. Maar de algemene regel om parameters voor om het even welke bestemming bij te werken is als volgt:
 
 Krijg dataflow identiteitskaart van de verbinding > verkrijg identiteitskaart van de basisverbinding > PATCH de basisverbinding met bijgewerkte waarden voor de gewenste parameters.
+
+>[!BEGINSHADEBOX]
 
 **API-indeling**
 
@@ -440,6 +441,8 @@ Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt labe
 ```
 
 >[!ENDTABS]
+
+>[!ENDSHADEBOX]
 
 ## API-foutafhandeling {#api-error-handling}
 
