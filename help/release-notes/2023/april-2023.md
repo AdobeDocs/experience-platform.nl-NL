@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2023
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
+source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1815'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Gegevensverzameling](#data-collection)
 - [Doelen](#destinations)
 - [Experience Data Model](#xdm)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
 
@@ -134,6 +135,19 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 {style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, lees [XDM System, overzicht](../../xdm/home.md).
+
+## Real-Time Customer Data Platform
+
+Gebouwd op Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen met intelligente besluitvorming door de klantenreis te activeren. [!DNL Real-Time CDP] combineert veelvoudige bronnen van ondernemingsgegevens om klantenprofielen in real time tot stand te brengen. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Verbeterde Real-Time CDP-startpagina | De [Homepage van Real-Time CDP](https://experience.adobe.com) is verbeterd dankzij een vernieuwde vormgeving en verbeterde prestaties. De homepage is nu toestemmingsbewust en zal widgets relevant voor de eigenschappen voorstellen die u toegang tot hebt. Lees voor meer informatie de [Overzicht van het dashboard voor Real-Time CDP-homepage](../../rtcdp/home-page-dashboards.md). |
+| Zelfidentificatie-onderzoek | De zelfidentificatiecode-enquête is een korte vragenlijst die wordt weergegeven op de homepage van de gebruikersinterface van Adobe Experience Platform. Gebruik de zelfidentificatiecode-enquête om uw persoonlijke profiel voor het Experience Platform te maken en op maat gemaakte richtlijnen te ontvangen op basis van uw selecties. Lees voor meer informatie de [overzicht van de zelfidentificatie-enquête](../../landing/self-identification.md). |
+
+Voor meer informatie over [!DNL Real-Time CDP], zie de [[!DNL Real-Time CDP] overzicht](../../rtcdp/overview.md).
 
 ## Klantprofiel in realtime {#profile}
 

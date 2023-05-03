@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2022
 description: In de releaseopmerkingen van oktober 2022 voor Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
+source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1315'
 ht-degree: 1%
 
 ---
@@ -14,16 +14,11 @@ ht-degree: 1%
 **Releasedatum: 26 oktober 2022**
 
 - [Door de klant beheerde sleutels](#cmk)
-
-Updates voor bestaande functies in Adobe Experience Platform:
-
-- [Opmerkingen bij de release van Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Door de klant beheerde sleutels {#cmk}](#customer-managed-keys-cmk)
-   - [Gegevensverzameling {#data-collection}](#data-collection-data-collection)
-   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Query-service {#query-service}](#query-service-query-service)
-   - [Bronnen {#sources}](#sources-sources)
+- [Gegevensverzameling](#data-collection)
+- [Doelen](#destinations)
+- [Experience Data Model](#xdm)
+- [Query-service](#query-service)
+- [Bronnen](#sources-sources)
 
 ## Door de klant beheerde sleutels {#cmk}
 
