@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
 title: Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
-description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van uw implementatie van Adobe Real-time Customer Data Platform B2B Edition.
+description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van uw implementatie van Adobe Real-Time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1135'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 

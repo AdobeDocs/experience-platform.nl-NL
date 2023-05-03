@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
 title: Aan de slag met Real-time Customer Data Platform
-description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-time Customer Data Platform.
+description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-Time Customer Data Platform.
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2328'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

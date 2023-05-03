@@ -1,12 +1,12 @@
 ---
 title: Overzicht gegevensstromen
-description: Sluit de integratie van uw client-side Experience Platform SDK aan op Adobe-producten en andere doelen.
+description: Sluit de integratie van uw Experience Platform SDK aan clientzijde aan op Adobe-producten en bestemmingen van derden.
 keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
 workflow-type: tm+mt
 source-wordcount: '777'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

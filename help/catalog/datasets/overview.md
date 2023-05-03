@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;gegevensbeheer;Lineaire;lengte;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype
 solution: Experience Platform
 title: Overzicht van gegevenssets
-description: Dit document verstrekt een overzicht op hoog niveau van datasets in Experience Platform.
+description: Dit document biedt een overzicht op hoog niveau van gegevenssets in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '784'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
