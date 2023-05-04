@@ -1,10 +1,10 @@
 ---
 title: Toegang tot de ECID
-description: Leer hoe u toegang krijgt tot de Experience Cloud-id (ECID) in Adobe Experience Platform-tags
+description: Leer hoe u de Experience Cloud-id kunt openen met Data Prep of Tags
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: dee04f2cdeb9057ac10e27a17f9db3f065712618
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -12,22 +12,38 @@ ht-degree: 0%
 
 # Toegang tot de ECID
 
-De [!DNL Experience Cloud ID (ECID)] is een permanente Experience Cloud-id waarmee u bezoekers van uw website kunt identificeren. In bepaalde omstandigheden, zoals het verzenden van het herkenningsteken naar een derdeplatform, zou u toegang tot kunnen nodig hebben [!DNL ECID].
+De [!DNL Experience Cloud Identity (ECID)] is een permanente id die aan een gebruiker wordt toegewezen wanneer deze uw website bezoekt. In bepaalde omstandigheden hebt u wellicht liever toegang tot de [!DNL ECID] (bijvoorbeeld om het naar een derde te verzenden). Een ander gebruiksgeval stelt het [!DNL ECID] in een aangepast XDM-veld, naast het opnemen ervan in het identiteitsoverzicht.
 
-Om toegang te krijgen tot [!DNL ECID] Voer binnen de tags de onderstaande stappen uit:
+U kunt toegang krijgen tot de ECID via [Gegevensvoorvoegsel voor gegevensverzameling](../datastreams/data-prep.md) (aanbevolen) of via tags.
+
+## Toegang tot de ECID via Data Prep (voorkeursmethode) {#accessing-ecid-data-prep}
+
+Als u de ECID wilt instellen in een aangepast XDM-veld, kunt u dit niet alleen doen in het identiteitsoverzicht, maar ook `source` naar het volgende pad:
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+Stel het doel vervolgens in op een XDM-pad waar het veld van het type is `string`.
+
+![](./assets/access-ecid-data-prep.png)
+
+## Tags
+
+Als u toegang moet krijgen tot de [!DNL ECID] op de client gebruikt u de onderstaande tagaanpak.
 
 1. Verzeker uw bezit met wordt gevormd [regelcomponentvolgorde](../../tags/ui/managing-resources/rules.md#sequencing) ingeschakeld.
-2. Maak een nieuwe regel.
-3. Voeg een [!UICONTROL Library Loaded] aan de regel.
-4. Voeg een [!UICONTROL Custom Condition] actie aan de regel, met de volgende code (veronderstellend de naam u voor de instantie van SDK hebt gevormd is `alloy`):
+1. Maak een nieuwe regel.
+1. Voeg een [!UICONTROL Library Loaded] aan de regel.
+1. Voeg een [!UICONTROL Custom Condition] actie aan de regel met de volgende code (veronderstellend de naam u voor de instantie van SDK hebt gevormd is `alloy`):
 
-   ```javascript
-   return alloy("getIdentity")
-       .then(function(result) {
-           _satellite.setVar("ECID", result.identity.ECID);
-       });
+   ```js
+    return alloy("getIdentity")
+      .then(function(result) {
+        _satellite.setVar("ECID", result.identity.ECID);
+      });
    ```
 
-5. Sla de regel op.
+1. Sla de regel op.
 
-U moet nu toegang hebben tot de [!DNL ECID] in volgende regels, gebruiken `%ECID%` of `_satellite.getVar("ECID")`, vergelijkbaar met hoe u toegang krijgt tot andere gegevenselementen.
+U zou dan tot [!DNL ECID] in de volgende regels `%ECID%` of `_satellite.getVar("ECID")`, zoals u tot een ander gegevenselement zou toegang hebben.
