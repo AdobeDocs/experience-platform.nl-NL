@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
+source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
 workflow-type: tm+mt
-source-wordcount: '4591'
+source-wordcount: '4916'
 ht-degree: 2%
 
 ---
@@ -246,6 +246,8 @@ Om het even welke gebruikersagent functies in de lijst hieronder kunnen één va
 * Telefoon - Een mobiel apparaat met een klein scherm (gewoonlijk &lt; 7 inch)
 * Mobiel - Een mobiel apparaat dat nog moet worden geïdentificeerd. Dit mobiele apparaat kan een eReader, een tablet, een telefoon, een horloge, enz. zijn.
 
+Voor meer informatie over apparaatveldwaarden leest u de [lijst met apparaatveldwaarden](#device-field-values) in de bijlage van dit document.
+
 >[!NOTE]
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
@@ -343,5 +345,36 @@ In de onderstaande tabel ziet u een lijst met gereserveerde tekens en de bijbeho
 | ^ | %5E |
 | ` | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Waarden voor apparaatvelden {#device-field-values}
+
+In de onderstaande tabel wordt een lijst met apparaatveldwaarden en de bijbehorende beschrijvingen weergegeven.
+
+| Apparaat | Beschrijving |
+| --- | --- |
+| Desktop | Een desktop of laptop. |
+| Anonymiet | Een anoniem apparaat. In sommige gevallen gaat het om `useragents` die zijn gewijzigd door een anonimisatiesoftware. |
+| Onbekend | Een onbekend apparaat. Dit zijn meestal `useragents` die geen informatie over het apparaat bevatten. |
+| Mobile | Een mobiel apparaat dat nog moet worden geïdentificeerd. Dit mobiele apparaat kan een eReader, een tablet, een telefoon, een horloge, enz. zijn. |
+| Tablet | Een mobiel apparaat met een groot scherm (gewoonlijk > 7 inch). |
+| Telefoon | Een mobiel apparaat met een klein scherm (doorgaans &lt; 7 inch). |
+| Controle | Een mobiel apparaat met een klein scherm (normaal &lt; 2 inch). Deze apparaten werken normaal als extra scherm voor een telefoon/tablettype van apparaat. |
+| Augmented Reality | Een mobiel apparaat met AR-mogelijkheden. |
+| Virtuele realiteit | Een mobiel apparaat met VR-mogelijkheden. |
+| eReader | Een apparaat dat lijkt op een tablet, maar meestal met een [!DNL eInk] scherm. |
+| Vak Boven instellen | Een aangesloten apparaat dat interactie mogelijk maakt via een scherm ter grootte van een televisie. |
+| TV | Een apparaat dat lijkt op de set-top box, maar dat in de tv is ingebouwd. |
+| Toestel thuis | Een (gewoonlijk groot) huisapparaat, zoals een koelkast. |
+| Gameconsole | Een vast gamesysteem zoals [!DNL Playstation] of [!DNL XBox]. |
+| Handheldspelconsole | Een mobiel gamesysteem zoals [!DNL Nintendo Switch]. |
+| Stem | Een spraakgestuurd apparaat als een [!DNL Amazon Alexa] of [!DNL Google Home]. |
+| Auto | Een op voertuigen gebaseerde browser. |
+| Robot | Robots die een website bezoeken. |
+| Robot Mobile | Robots die een website bezoeken, maar aangeven dat ze als een mobiele bezoeker willen worden beschouwd. |
+| Robot Imitator | Robots die een website bezoeken, doen alsof dat robots zijn [!DNL Google], maar dat zijn ze niet. **Opmerking**: In de meeste gevallen zijn robots inderdaad robots. |
+| Wolk | Een cloudgebaseerde toepassing. Dit zijn geen robots of hackers, maar toepassingen die verbinding moeten maken. Dit omvat [!DNL Mastodon] servers. |
+| Hacker | Deze apparaatwaarde wordt gebruikt als scripts worden gedetecteerd in het dialoogvenster `useragent` tekenreeks. |
 
 {style="table-layout:auto"}
