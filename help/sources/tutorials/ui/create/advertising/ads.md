@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Google-advertenties;Google Ads-bronaansluiting;Google-advertentiesconnector
 title: Een Google Ads Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Google Ads-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ac87434c857a39f4be3714cba57519cbb4fa54a6
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -16,13 +15,13 @@ ht-degree: 0%
 >
 >De Google Ads-bron is bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
-Deze zelfstudie bevat stappen voor het maken van een Google Ads-bronconnector via de Adobe Experience Platform-gebruikersinterface.
+Deze zelfstudie bevat stappen voor het maken van een Google Ads-bronverbinding via de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -36,6 +35,7 @@ Geef de volgende waarden op om toegang te krijgen tot het Platform voor Google A
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | Client-id | De client-id is het accountnummer dat overeenkomt met de Google Ads-clientaccount die u wilt beheren met de Google Ads-API. Deze id volgt de sjabloon van `123-456-7890`. |
+| Gebruikersnaam klant aanmelden | De inlogklant-id is het accountnummer dat overeenkomt met uw Google Ads Manager-account en wordt gebruikt om rapportgegevens van een specifieke operationele klant op te halen. Voor meer informatie over de login identiteitskaart van de klant [Google Ads API-documentatie](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
 | Developer token | Met de ontwikkelaarstoken hebt u toegang tot de API voor Google Ads. U kunt dezelfde ontwikkelaarstoken gebruiken om aanvragen in te dienen voor al uw Google Ads-accounts. Haal de ontwikkelaarstoken op door [aanmelden bij uw beheerdersaccount](https://ads.google.com/home/tools/manager-accounts/) en navigeer naar de pagina API Center. |
 | Token vernieuwen | Het token Vernieuwen maakt deel uit van [!DNL OAuth2] verificatie. Dit teken staat u toe om uw toegangstokens na het verlopen opnieuw te produceren. |
 | Client-id | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van [!DNL OAuth2] verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing te identificeren bij Google. |
@@ -51,7 +51,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Onder de **[!UICONTROL Advertising]** categorie, selecteert u **[!UICONTROL Google Ads]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
-![Een afbeelding van de Google Ads-bron in de Experience Platform UI-broncatalogus](../../../../images/tutorials/create/ads/catalog.png).
+![De broncatalogus in de gebruikersinterface van het Experience Platform.](../../../../images/tutorials/create/ads/catalog.png).
 
 De **[!UICONTROL Connect to Google Ads]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -59,13 +59,13 @@ De **[!UICONTROL Connect to Google Ads]** wordt weergegeven. Op deze pagina kunt
 
 Als u verbinding wilt maken met een bestaande account, selecteert u het Google Ads-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om verder te gaan.
 
-![Een afbeelding van een lijst met bestaande accounts waarmee u een Google Ads-gegevensstroom kunt maken met](../../../../images/tutorials/create/ads/existing.png).
+![De selectiepagina voor bestaande accounts in de workflow voor bronnen.](../../../../images/tutorials/create/ads/existing.png).
 
 ### Nieuwe account
 
 Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw referenties voor Google Ads op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
-![Een afbeelding van het nieuwe scherm voor accountverbinding op de gebruikersinterface van het Experience Platform](../../../../images/tutorials/create/ads/connect.png).
+![De nieuwe accountinterface in de workflow voor bronnen.](../../../../images/tutorials/create/ads/new.png).
 
 ## Volgende stappen
 
