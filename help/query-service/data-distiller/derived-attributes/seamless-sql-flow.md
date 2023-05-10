@@ -1,9 +1,10 @@
 ---
 title: Naadloze SQL-stroom voor afgeleide kenmerken
 description: SQL van de Dienst van de vraag is uitgebreid om naadloze steun voor afgeleide attributen te verlenen. Leer hoe te om deze SQL uitbreiding te gebruiken om een afgeleid attribuut tot stand te brengen dat voor profiel wordt toegelaten, en hoe te om de attributen voor het Profiel en de Dienst van de Segmentatie van de Klant in real time te gebruiken.
-source-git-commit: 1ff66d0ac8e0491a6db518545d122555d9d54c75
+exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
+source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -40,6 +41,16 @@ Gebruik een Create Lijst als Uitgezochte vraag (CTAS) om een dataset tot stand t
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
+De volgende gegevenstypen worden ondersteund: boolean, date, datetime, text, float, bigint, integer, map, array en struct/row.
+
+Het SQl-codeblok hieronder biedt voorbeelden om struct/row-, map- en arraydatatypen te definiëren. Regel één toont rijsyntaxis. Regel twee toont kaartsyntaxis, en lijn drie, seriesyntaxis.
+
+```sql {line-numbers="true"}
+ROW (Column_name <data_type> [, column name <data_type> ]*)
+MAP <data_type, data_type>
+ARRAY <data_type>
+```
+
 Alternatief, kunnen de datasets ook voor profiel door het Platform UI worden toegelaten. Voor meer informatie over het merken van een dataset zoals toegelaten voor profiel, zie [laat een dataset voor de documentatie van het Profiel van de Klant in real time toe](../../../catalog/datasets/user-guide.md#enable-profile).
 
 In de onderstaande voorbeeldquery worden de `decile_table` dataset wordt gecreeerd met `id` als primaire identiteitskolom en heeft de naamruimte `IDFA`. Het heeft ook een veld met de naam `decile1Month` van het gegevenstype Map. De gemaakte tabel (`decile_table`) is ingeschakeld voor profiel.
@@ -48,12 +59,6 @@ In de onderstaande voorbeeldquery worden de `decile_table` dataset wordt gecreee
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
             decile1Month map<text, integer>) WITH (label='PROFILE');
 ```
-
-<!--        decile3Month map<text, integer>,
-            decile6Month map<text, integer>,
-            decile9month map<text, integer>,
-            decile12month map<text, integer>,
-            decilelifetime map<text, integer> -->
 
 Bij succesvolle uitvoering van de vraag, wordt dataset identiteitskaart teruggekeerd aan de console, zoals die in het hieronder voorbeeld wordt gezien.
 
