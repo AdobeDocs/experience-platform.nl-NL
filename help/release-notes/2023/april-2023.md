@@ -2,14 +2,18 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2023
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
+source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '2068'
 ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>Vanaf 15 mei 2023 `Existing` status zal van de kaart van het segmentlidmaatschap worden verouderd om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen. Na deze wijziging worden profielen die in een segment zijn gekwalificeerd, weergegeven als `Realized` en de gediskwalificeerde profielen blijven worden weergegeven als `Exited`. Lees voor meer informatie over deze wijziging de [Sectie Segmenteringsservice](#segmentation).
 
 **Releasedatum: 26 april 2023**
 
@@ -22,6 +26,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Experience Data Model](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Klantprofiel in realtime](#profile)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Dashboards {#dashboards}
@@ -160,6 +165,20 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 | Vervaldatum van pseudoniem profielgegevens | De vervaldatum van pseudoniem profielgegevens is nu over het algemeen beschikbaar. Deze release verwijdert ononderbroken pseudoniem-profielen uit uw Experience Platform-exemplaar als deze zijn ingeschakeld. Lees voor meer informatie over deze functie en Pseudoniem-profielen de [Handleiding voor het verlopen van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
+
+## Segmenteringsservice {#segmentation}
+
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Segmentlidmaatschapstoewijzing | Als vervolg op de vorige aankondiging in februari, op 15 mei 2023, `Existing` status zal van de kaart van het segmentlidmaatschap worden verouderd om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen. Na deze wijziging worden profielen die in een segment zijn gekwalificeerd, weergegeven als `Realized` en de gediskwalificeerde profielen blijven worden weergegeven als `Exited`.<br/><br/> Deze wijziging kan van invloed zijn op [ondernemingsbestemmingen](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) en hebben mogelijk stroomafwaartse processen op hun plaats geautomatiseerd op basis van de `Existing` status. Als dit voor u het geval is, gelieve uw downstreamintegratie te herzien. Als u pas na een bepaalde tijd gekwalificeerde profielen wilt identificeren, kunt u een combinatie van de `Realized` en de `lastQualificationTime` in uw overzicht van het segmentlidmaatschap. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
