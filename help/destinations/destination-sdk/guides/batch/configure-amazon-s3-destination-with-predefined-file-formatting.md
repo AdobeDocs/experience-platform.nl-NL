@@ -2,9 +2,9 @@
 description: Leer hoe u Destination SDK gebruikt om een Amazon S3-bestemming te configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 title: Configureer een Amazon S3-bestemming met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnamen.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 04e4b0f6b6d84d04d0a24a462383420ebd9a2daf
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Op deze pagina wordt beschreven hoe u Destination SDK kunt gebruiken om een Amazon S3-bestemming te configureren met vooraf gedefinieerde, standaard [opties voor bestandsindeling](../../server-and-file-configuration.md#file-configuration) en een aangepaste [bestandsnaamconfiguratie](../../file-based-destination-configuration.md#file-name-configuration).
+Op deze pagina wordt beschreven hoe u Destination SDK kunt gebruiken om een Amazon S3-bestemming te configureren met vooraf gedefinieerde, standaard [opties voor bestandsindeling](configure-file-formatting-options.md) en een aangepaste [bestandsnaamconfiguratie](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Op deze pagina worden alle configuratieopties weergegeven die beschikbaar zijn voor [!DNL Amazon S3] bestemmingen. U kunt de configuraties bewerken die in de onderstaande stappen worden weergegeven, of u kunt desgewenst bepaalde onderdelen van de configuraties verwijderen.
+
+Zie voor gedetailleerde beschrijvingen van de hieronder gebruikte parameters: [configuratieopties in de SDK van Doelen](../../functionality/configuration-options.md).
 
 ## Vereisten {#prerequisites}
 
@@ -23,7 +25,7 @@ Lees de [Aan de slag met Destination SDK](../../getting-started.md) pagina voor 
 
 ## Stap 1: Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
-Begin met het gebruik van de `/destination-server` eindpunt om een server en dossierconfiguratie tot stand te brengen. Voor gedetailleerde beschrijvingen van de parameters in het HTTP- verzoek, lees [server- en bestandsconfiguratiespecificaties voor op bestanden gebaseerde doelen](../../server-and-file-configuration.md#s3-example) en de bijbehorende [bestandsindelingen, configuraties](../../server-and-file-configuration.md#file-configuration).
+Begin met het gebruik van de `/destination-server` eindpunt tot [een server- en bestandsconfiguratie maken](../../authoring-api/destination-server/create-destination-server.md).
 
 **API-indeling**
 
@@ -34,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Verzoek**
 
 Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver, die door de parameters wordt gevormd die in de lading worden verstrekt.
-De onderstaande lading bevat een algemeen [!DNL Amazon S3] configuratie, met vooraf gedefinieerd, standaard [CSV-bestandsindeling](../../server-and-file-configuration.md#file-configuration) configuratieparameters die de gebruikers in de UI van het Experience Platform kunnen bepalen.
+De onderstaande lading bevat een algemeen [!DNL Amazon S3] configuratie, met vooraf gedefinieerd, standaard [CSV-bestandsindeling](../../functionality/destination-server/file-formatting.md) configuratieparameters die de gebruikers in de UI van het Experience Platform kunnen bepalen.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -128,12 +130,6 @@ Nadat u in de vorige stap de configuratie voor de doelserver en bestandsindeling
 
 Als u verbinding wilt maken met de serverconfiguratie in [stap 1](#create-server-file-configuration) aan deze bestemmingsconfiguratie, vervang `destinationServerId` waarde in de API-aanvraag hieronder met de `instanceId` waarde verkregen bij het maken van uw doelserver in [stap 1](#create-server-file-configuration).
 
-Zie de volgende pagina&#39;s voor een gedetailleerde beschrijving van de hieronder gebruikte parameters:
-
-* [Verificatieconfiguratie](../../authentication-configuration.md#s3)
-* [Batchdoelconfiguratie](../../file-based-destination-configuration.md#batch-configuration)
-* [API-bewerkingen voor doelconfiguratie op basis van bestanden](../../destination-configuration-api.md#create-file-based)
-
 **API-indeling**
 
 ```http
@@ -153,7 +149,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Amazon S3 destination with predefined CSV formatting options",
    "description":"Amazon S3 destination with predefined CSV formatting options",
-   "releaseNotes":"Amazon S3 destination with predefined CSV formatting options",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -288,9 +283,9 @@ Een succesvolle reactie keert de nieuwe bestemmingsconfiguratie, met inbegrip va
 
 Op basis van de bovenstaande configuraties wordt in de catalogus met Experience Platforms nu een nieuwe persoonlijke doelkaart weergegeven die u kunt gebruiken.
 
-![De opname van het scherm die de pagina van de bestemmingscatalogus met een geselecteerde bestemmingskaart toont.](../../assets/destination-card.gif)
+![De opname van het scherm die de pagina van de bestemmingscatalogus met een geselecteerde bestemmingskaart toont.](../../assets/guides/batch/destination-card.gif)
 
-Houd in de onderstaande afbeeldingen en opnamen rekening met de opties in het dialoogvenster [activeringsworkflow voor op bestanden gebaseerde doelen](/help/destinations/ui/activate-batch-profile-destinations.md) passen de opties aan die u in de bestemmingsconfiguratie selecteerde.
+Houd in de onderstaande afbeeldingen en opnamen rekening met de opties in het dialoogvenster [activeringsworkflow voor op bestanden gebaseerde doelen](../../../ui/activate-batch-profile-destinations.md) passen de opties aan die u in de bestemmingsconfiguratie selecteerde.
 
 Wanneer u details over de bestemming invult, ziet u hoe de velden omringd zijn de aangepaste gegevensvelden die u instelt in de configuratie.
 
@@ -298,13 +293,13 @@ Wanneer u details over de bestemming invult, ziet u hoe de velden omringd zijn d
 >
 >De orde waarin u de gebieden van douanegegevens aan de bestemmingsconfiguratie toevoegt wordt niet weerspiegeld in UI. De gegevensvelden van de klant worden altijd weergegeven in de volgorde die hieronder in de schermopname wordt weergegeven.
 
-![Het registreren van het scherm die de gebieden van klantengegevens tonen die in uw configuratie worden bepaald.](../../assets/file-configuration-options.gif)
+![Het registreren van het scherm die de gebieden van klantengegevens tonen die in uw configuratie worden bepaald.](../../assets/guides/batch/file-configuration-options.gif)
 
 Wanneer u exportintervallen instelt, ziet u hoe de velden die u ziet, de velden zijn die u instelt in het dialoogvenster `batchConfig` configuratie.
-![opties voor exportplanning](../../assets/file-export-scheduling.png)
+![opties voor exportplanning](../../assets/guides/batch/file-export-scheduling.png)
 
 Als u de opties voor bestandsnaamconfiguratie weergeeft, ziet u hoe de velden worden weergegeven in de `filenameConfig` opties die u instelt in de configuratie.
-![opties voor bestandsnaamconfiguratie](../../assets/file-naming-options.gif)
+![opties voor bestandsnaamconfiguratie](../../assets/guides/batch/file-naming-options.gif)
 
 Als u een van de bovenstaande velden wilt aanpassen, herhaalt u [stap één](#create-server-file-configuration) en [twee](#create-destination-configuration) om de configuraties aan uw behoeften aan te passen.
 
@@ -314,7 +309,7 @@ Als u een van de bovenstaande velden wilt aanpassen, herhaalt u [stap één](#cr
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Na het vormen van uw bestemming, gebruik [doel-publicatie-API](../../destination-publish-api.md) om uw configuratie ter controle naar Adobe te verzenden.
+Na het vormen van uw bestemming, gebruik [doel-publicatie-API](../../publishing-api/create-publishing-request.md) om uw configuratie ter controle naar Adobe te verzenden.
 
 ## Stap 5: (Optioneel) De bestemming documenteren {#document-destination}
 

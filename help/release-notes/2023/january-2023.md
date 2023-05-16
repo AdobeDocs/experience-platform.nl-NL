@@ -1,9 +1,10 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: In de releaseopmerkingen van januari 2023 voor Adobe Experience Platform.
-source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
+exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
-source-wordcount: '2358'
+source-wordcount: '2340'
 ht-degree: 3%
 
 ---
@@ -38,7 +39,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die tot
 | Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Attribution AI en bepaalde andere op Experience Platform gebaseerde toepassingen. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Lees de documentatie over [HIPAA en de Producten van de Adobe en de Diensten](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
 | Kolommen met aanvullende scoregegevens bewerken | U kunt extra kolommen van de scoredataset (het melden van kolommen) nu toevoegen of verwijderen wanneer u bestaande modellen uitgeeft. Hierdoor wordt de flexibiliteit van de toewijzingsscores uitgebreid om u inzichten aan extra dimensies te verstrekken nadat een model reeds is gecreeerd. Zie de [Handleiding voor gebruikersinterface voor kenmerken](../../intelligent-services/attribution-ai/user-guide.md) voor meer informatie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de [AI/ML-services](../../intelligent-services/attribution-ai/overview.md) voor meer informatie .
 
@@ -52,7 +53,7 @@ De AI van de Klant voor Real-time Customer Data Platform, wordt gebruikt om doua
 | ------- | ----------- |
 | Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Customer AI voor Real-time Customer Data Platform en bepaalde andere toepassingen op basis van Experience Platforms. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Zie de documentatie over [HIPAA en de Producten van de Adobe en de Diensten](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de [AI/ML-services](../../intelligent-services/customer-ai/overview.md) voor meer informatie .
 
@@ -66,7 +67,7 @@ Met Adobe Assurance kunt u controleren, testen, simuleren en valideren hoe u geg
 | ------- | ----------- |
 | Validatie-editor | Er zijn nieuwe verbeteringen toegevoegd aan de validatie-editor. Deze verbeteringen zijn onder andere validatiekolommen, nieuwe gereedschappen voor het samenstellen van code en verbeterde weergaven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lees voor meer informatie over Verzekering de [Betrouwbaarheidsdocumentatie](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -81,7 +82,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Nieuw beginscherm | De homepage voor de UI van de Inzameling van Gegevens is bijgewerkt om nuttige onboarding informatie en verbindingen te omvatten om productiviteit te stroomlijnen. Dit omvat:<ol><li>Documentatie en aanbevolen workflows om aan de slag te gaan</li><li>Recente eigenschappen, regels en gegevenselementen</li><li>Populaire extensies</li><li>Nieuwe extensies worden bijgewerkt met een functie voor snelle installatie</li></ol> |
 | Gegevens verzenden naar [!DNL Google Ads] gebruiken, gebeurtenis doorsturen | U kunt nu de opdracht [[!DNL Google Ads Enhanced Conversions] API-extensie](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) voor gebeurtenis door:sturen, gecombineerd met [Google Oauth 2 geheimen](../../tags/ui/event-forwarding/secrets.md#google-oauth2), om servergegevens veilig te verzenden naar [!DNL Google Ads] in real time. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Doelen (bijgewerkt op 2 februari) {#destinations}
 
@@ -101,7 +102,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | ----------- | ----------- |
 | Verbetering van het beleid voor betaalde mediaconcept voor integratie met streaming doelen | An [versterking van de wetshandhaving](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) op [streaming doelen](/help/destinations/destination-types.md#streaming-destinations) voor gebruiksgevallen voor activering van betaalde media. Wanneer profielen niet meer voor een toestemmingsbeleid in aanmerking komen, deelt Experience Platform nu proactief hun beleidsuitgang aan het stromen bestemmingen mee. <br> <b>Opmerking</b>: Deze functionaliteit is alleen beschikbaar voor klanten van **[!UICONTROL Privacy and Security Shield]** en de **[!UICONTROL Healthcare Shield]**. |
 | Nieuwe scheidingstekenopties voor bètaboudopslagdoelconnectors | Drie nieuwe scheidingsopties (dubbelpunt) `:`, Pijp, puntkomma `;`) zijn nu beschikbaar voor de nieuwe bètawolopslagbestemmingen - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Bèta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(bèta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(bèta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Meer informatie over de ondersteunde [opties voor bestandsindeling](/help/destinations/ui/batch-destinations-file-formatting-options.md) voor op bestanden gebaseerde doelen. |
-| Nieuwe optionele parameter beschikbaar in [klantgegevensvelden](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configuraties in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. <br> De **[!UICONTROL Integration alias]** in het [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
+| Nieuwe optionele parameter beschikbaar in [klantgegevensvelden](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md) configuraties in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. <br> De **[!UICONTROL Integration alias]** in het [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
 
 **Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
 
@@ -160,7 +161,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Veldgroep | [[!UICONTROL Weather Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | De `weatherTriggers` veld is nu genest onder een `weather` object. |
 | Veldgroep | [[!UICONTROL XDM Related Business Accounts]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | De veldgroep is nu stabiel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
@@ -190,7 +191,7 @@ Als u meer wilt weten over het realtime profiel van de klant, inclusief zelfstud
 | Vervaldatum extern publiekslidmaatschap | Standaard blijven leden van externe doelgroepen 30 dagen behouden. Als u deze nog langer wilt behouden, gebruikt u de `validUntil` veld tijdens de opname van publieksgegevens. |
 | Door Platform gegenereerde vervaldatum van segmentlidmaatschap | Om het even welk segmentlidmaatschap dat in is `Exited` staat gedurende meer dan 30 dagen op basis van de `lastQualificationTime` wordt geschrapt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
 

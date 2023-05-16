@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
+source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 2%
@@ -126,7 +126,7 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| Destination SDK | Destination SDK biedt nu volledige ondersteuning voor partners en klanten die in batch (of op bestand gebaseerd) gemaakte of persoonlijke doelen maken. Lees de volgende documentatiepagina&#39;s voor meer informatie: <ul><li>[Overzicht van Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Een op een bestand gebaseerde bestemming configureren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test uw op een bestand gebaseerde doelen](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK biedt nu volledige ondersteuning voor partners en klanten die in batch (of op bestand gebaseerd) gemaakte of persoonlijke doelen maken. Lees de volgende documentatiepagina&#39;s voor meer informatie: <ul><li>[Overzicht van Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Een op een bestand gebaseerde bestemming configureren](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Test uw op een bestand gebaseerde doelen](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 

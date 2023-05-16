@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
+source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1178'
 ht-degree: 2%
 
 ---
@@ -196,44 +196,34 @@ ht-degree: 2%
 * Destination SDK {#destination-sdk}
    * [Overzicht](./destination-sdk/overview.md)
    * [Integratievereisten](./destination-sdk/integration-prerequisites.md)
-   * [Aan de slag](./destination-sdk/getting-started.md)
-   * Destination SDK-functionaliteit {#functionality}
-      * [Configuratieopties](./destination-sdk/configuration-options.md)
-      * [Streaming doelconfiguratie](./destination-sdk/destination-configuration.md)
-      * [Bestandsgebaseerde doelconfiguratie](./destination-sdk/file-based-destination-configuration.md)
-      * [Streaming doelserver- en sjabloonspecificaties](./destination-sdk/server-and-template-configuration.md)
-      * [Bestandsgebaseerde server- en bestandsdoelbestanden](./destination-sdk/server-and-file-configuration.md)
-      * [Berichtindeling](./destination-sdk/message-format.md)
-      * [Metagegevensbeheer voor het publiek](./destination-sdk/audience-metadata-management.md)
-      * Verificatie {#authentication}
-         * [Verificatieconfiguratie](./destination-sdk/authentication-configuration.md)
-         * [OAuth 2-verificatie](./destination-sdk/oauth2-authentication.md)
-      * Gereedschappen voor ontwikkelaars {#developer-tools}
-         * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/create-template.md)
-         * [De doelconfiguratie testen](./destination-sdk/test-destination.md)
-   * API-bewerkingen {#api}
-      * [Referentie voor de Destination SDK-API (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [API-bewerkingen voor bestemmingspunten](./destination-sdk/destination-configuration-api.md)
-      * [API-bewerkingen voor eindpunt doelserver](./destination-sdk/destination-server-api.md)
-      * [API-bewerkingen voor het eindpunt van metagegevens van het publiek](./destination-sdk/audience-metadata-api.md)
-      * [API-bewerkingen van het eindpunt Credentials](./destination-sdk/credentials-configuration-api.md)
-      * [API-bewerkingen voor eindpunten publiceren](./destination-sdk/destination-publish-api.md)
-      * Referentie voor ontwikkelaarsgereedschappen {#developer-tools-reference}
-         * API voor streaming doeltest {#streaming-destination-testing-api}
-            * [API-bewerkingen voor voorbeeldsjablonen ophalen](./destination-sdk/sample-template-api.md)
-            * [API-bewerkingen voor sjablonen renderen](./destination-sdk/render-template-api.md)
-            * [API-bewerkingen voor doeltesten](./destination-sdk/destination-testing-api.md)
-            * [Voorbeeld van API-bewerkingen voor het genereren van profielen](./destination-sdk/sample-profile-generation-api.md)
-         * API voor doeltesten op basis van bestanden {#file-based-destination-testing-api}
-            * [API-overzicht voor testen op basis van bestand](./destination-sdk/file-based-destination-testing-overview.md)
-            * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](./destination-sdk/file-based-destination-testing-api.md)
-            * [Gedetailleerde activeringsresultaten weergeven](./destination-sdk/file-based-destination-results-api.md)
-            * [Gevalideerde klantvelden valideren](./destination-sdk/file-based-render-template-api.md)
+   * [Aan de slag met Destination SDK](./destination-sdk/getting-started.md)
+   * Functionaliteit {#functionality}
+      * [Configuratieopties](./destination-sdk/functionality/configuration-options.md)
+      * Bestemmingsservercomponenten {#destination-server}
+         * [Serverspecificaties](./destination-sdk/functionality/destination-server/server-specs.md)
+         * [Sjabloonspecificaties](./destination-sdk/functionality/destination-server/templating-specs.md)
+         * [Berichtindeling](./destination-sdk/functionality/destination-server/message-format.md)
+         * [Ondersteunde transformatiefuncties](./destination-sdk/functionality/destination-server/supported-functions.md)
+         * [Configuratie bestandsindeling](./destination-sdk/functionality/destination-server/file-formatting.md)
+      * Componenten voor doelconfiguratie {#destination-configuration}
+         * [Configuratie van klantverificatie](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
+         * [OAuth2-verificatie](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [Gegevensvelden van de klant](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
+         * [UI-kenmerken](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
+         * [Configuratie partnerschema](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
+         * [Configuratie naamruimte identiteit](./destination-sdk/functionality/destination-configuration/identity-namespace-configuration.md)
+         * [Ondersteunde toewijzingsconfiguraties](./destination-sdk/functionality/destination-configuration/supported-mapping-configurations.md)
+         * [Levering bestemming](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
+         * [Configuratie van metagegevens voor publiek](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
+         * [Samenvoegingsbeleid](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
+         * [Batchconfiguratie](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
+         * [Historische profielkwalificaties](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
+      * [Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen](./destination-sdk/functionality/rate-limiting-retry-policy.md)
+      * [Metagegevensbeheer voor het publiek](./destination-sdk/functionality/audience-metadata-management.md)
    * Handleidingen {#guides}
-      * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/configure-destination-instructions.md)
-      * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/submit-destination.md)
+      * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/guides/configure-destination-instructions.md)
+      * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+      * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/guides/submit-destination.md)
       * Bestandsgebaseerde doelen configureren {#configure-file-based-destinations}
          * [Opties voor bestandsindeling configureren](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Een Amazon S3-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
@@ -242,9 +232,45 @@ ht-degree: 2%
          * [Een Azure Data Lake Storage-bestemming configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnamen](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Vorm een bestemming van de Landing van Gegevens (DLZ) met de opties van de douanedossier het formatteren en de configuratie van de douanenaam van het dossier](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Een SFTP-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-   * Referenties {#reference}
-      * [Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen](./destination-sdk/rate-limiting-retry-policy.md)
-      * [Ondersteunde transformatiefuncties](./destination-sdk/supported-functions.md)
+   * Referentie voor API voor doelontwerp {#authoring-api}
+      * [Referentie voor de Destination SDK-API (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * Bestemmingsserverbewerkingen {#server-operations}
+         * [Een doelserverconfiguratie maken](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
+         * [De configuratie van een doelserver ophalen](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
+         * [Een doelserverconfiguratie bijwerken](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
+         * [Een doelserverconfiguratie verwijderen](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
+      * Doelconfiguratiebewerkingen {#destination-operations}
+         * [Een doelconfiguratie maken](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
+         * [Een doelconfiguratie ophalen](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+         * [Een doelconfiguratie bijwerken](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
+         * [Een doelconfiguratie verwijderen](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
+   * Referentie voor API-metagegevens van het publiek {#audience-template-api}
+      * [Een publiekssjabloon maken](./destination-sdk/metadata-api/create-audience-template.md)
+      * [Een publiekssjabloon ophalen](./destination-sdk/metadata-api/retrieve-audience-template.md)
+      * [Een publiekssjabloon bijwerken](./destination-sdk/metadata-api/update-audience-template.md)
+      * [Een publiekssjabloon verwijderen](./destination-sdk/metadata-api/delete-audience-template.md)
+   * Referentie voor API voor referentieconfiguratie {#credentials-api}
+      * [Een referentieconfiguratie maken](./destination-sdk/credentials-api/create-credential-configuration.md)
+      * [Een referentieconfiguratie ophalen](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
+      * [Een referentieconfiguratie bijwerken](./destination-sdk/credentials-api/update-credential-configuration.md)
+      * [Een referentieconfiguratie verwijderen](./destination-sdk/credentials-api/delete-credential-configuration.md)
+   * Referentie voor API voor doeltests {#testing-api}
+      * API voor streaming doeltest {#streaming-destinations}
+         * [Overzicht van de API voor streaming-bestemming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
+         * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
+         * [Een transformatiesjabloon voor een voorbeeldbericht genereren ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [Geëxporteerde profielstructuur valideren](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
+         * [Streaming doel testen met voorbeeldprofielen](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
+         * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/testing-api/streaming-destinations/create-template.md)
+      * API voor doeltesten op basis van bestanden {#batch-destinations}
+         * [API-overzicht voor testen op basis van bestand](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
+         * [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
+         * [Gedetailleerde activeringsresultaten weergeven](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
+         * [Gevalideerde klantvelden valideren](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
+   * Referentie voor publicatie-API van bestemming {#publishing-api}
+      * [Een doelpublicatieverzoek maken](./destination-sdk/publishing-api/create-publishing-request.md)
+      * [Een doelpublicatieverzoek ophalen](./destination-sdk/publishing-api/retrieve-publishing-request.md)
    * Uw doel documenteren {#document-destination}
       * [Uw doel documenteren in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

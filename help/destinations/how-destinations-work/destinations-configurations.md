@@ -1,13 +1,13 @@
 ---
 title: Configureerbare en algemene exportinstellingen in doelen
 description: Leer welke de uitvoermontages in bestemmingen configureerbaar op een bestemmingsniveau zijn en die vast zijn en niet kunnen worden uitgegeven.
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 0%
 
 ---
-
 
 # Configureerbare en algemene exportinstellingen in doelen
 
@@ -32,7 +32,7 @@ Wat in de bestemmingsuitvoer inbegrepen is varieert lichtjes tussen bestemmingst
 Doelontwikkelaars kunnen [Destination SDK](/help/destinations/destination-sdk/overview.md) om aangepaste of productieve (particuliere of openbare) bestemmingen te maken. Destination SDK biedt ontwikkelaars grote flexibiliteit om doelen te configureren op basis van de downstreammogelijkheden van hun API-eindpunten en systemen voor het ontvangen van bestanden. Gebaseerd op de stroomafwaartse mogelijkheden, hebben de bestemmingsontwikkelaars de volgende configuratieopties beschikbaar wanneer het vormen van een bestemming gebruikend Destination SDK:
 
 * Bepaal welke kenmerken en identiteiten uit het Experience Platform naar het doel kunnen worden geëxporteerd. Bepaal ook welke identiteiten door hun bestemmingen voor een succesvolle gegevensuitvoer worden vereist.
-* Stel een samenvoegingsbeleid in dat bepaalt hoe lang Experience Platform moet wachten wanneer HTTP-berichten worden samengevoegd die naar API-integratie moeten worden verzonden. Doelontwikkelaars kunnen verschillende aggregatietypen configureren om te bepalen hoeveel profielen moeten worden opgenomen in uitgaande HTTP-berichten en hoe lang het Experience Platform moet wachten tot het HTTP-bericht wordt verzonden. Meer informatie over de [configuratieopties voor samenvoegingsbeleid](/help/destinations/destination-sdk/destination-configuration.md#aggregation) beschikbaar aan bestemmingsontwikkelaars in de documentatie van de Destination SDK.
+* Stel een samenvoegingsbeleid in dat bepaalt hoe lang Experience Platform moet wachten wanneer HTTP-berichten worden samengevoegd die naar API-integratie moeten worden verzonden. Doelontwikkelaars kunnen verschillende aggregatietypen configureren om te bepalen hoeveel profielen moeten worden opgenomen in uitgaande HTTP-berichten en hoe lang het Experience Platform moet wachten tot het HTTP-bericht wordt verzonden. Meer informatie over de [configuratieopties voor samenvoegingsbeleid](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) beschikbaar aan bestemmingsontwikkelaars in de documentatie van de Destination SDK.
 * Bepaal als de het berichtuitvoer van HTTP profielen zou moeten omvatten die voor segmenten kwalificeren, die uit segmenten, of allebei worden verwijderd.
 * Bepaal welke bestandsnaam en opmaakconfiguraties bij het exporteren van bestanden beschikbaar moeten zijn voor gebruikers.
 

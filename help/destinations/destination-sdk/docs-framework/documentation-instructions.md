@@ -2,7 +2,7 @@
 title: Uw doel documenteren in Adobe Experience Platform
 description: Stapsgewijze instructies voor het maken van een documentatiepagina voor uw bestemming in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Op hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moet u 
 
 Om u te helpen bij het maken van uw documentatiepagina, heeft Adobe een [documentatiesjabloon](./self-service-template.md) voor jou. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. Het documentatieteam van Adobe zal de documentatie voor uw nieuwe bestemming herzien en publiceren.
 
-[Download de sjabloon hier](assets/yourdestination-template.zip) en decomprimeer het bestand om het uit te pakken `yourdestination.md` bestand.
+[Download de sjabloon hier](../assets/docs-framework/yourdestination-template.zip) en decomprimeer het bestand om het uit te pakken `yourdestination.md` bestand.
 
 Hieronder vindt u instructies over het gebruik van de sjabloon voor het maken van de documentatiepagina.
 

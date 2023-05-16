@@ -1,8 +1,8 @@
 ---
-title: 'Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen '
+title: Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen
 description: De instructies op deze pagina tonen u hoe te om de het Webinterface te gebruiken GitHub aan auteur een documentatiepagina voor uw bestemming van het Experience Platform en het voor overzicht voor te leggen.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
+source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Gebruik de het Webinterface van GitHub om een pagina van de bestemmingsdocumentatie tot stand te brengen {#github-interface}
 
-De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan auteursdocumentatie te gebruiken en een trekkingsverzoek (PR) voor te leggen. Voordat u de hier aangegeven stappen doorloopt, moet u [Uw doel documenteren in Adobe Experience Platform-doelen](./documentation-instructions.md).
+De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan auteursdocumentatie te gebruiken en een trekkingsverzoek (PR) voor te leggen. Voordat u de hier aangegeven stappen doorloopt, moet u ervoor zorgen dat u [Uw doel documenteren in Adobe Experience Platform-doelen](./documentation-instructions.md).
 
 >[!TIP]
 >
@@ -23,37 +23,37 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
 
 ## Opstelling uw GitHub auteursmilieu {#set-up-environment}
 
-1. Navigeer in uw browser naar `https://github.com/AdobeDocs/experience-platform.en`.
-2. Als u [vork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) de opslagplaats wilt, klikt u op **Fork** zoals hieronder wordt weergegeven. Dit leidt tot een exemplaar van de bewaarplaats van het Experience Platform in uw eigen rekening GitHub.
+1. Blader in uw browser naar `https://github.com/AdobeDocs/experience-platform.en`.
+2. Naar [vork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) in de repository klikt u op **Vork** zoals hieronder weergegeven. Dit leidt tot een exemplaar van de bewaarplaats van het Experience Platform in uw eigen rekening GitHub.
 
-   ![Documentatieregister voor vork Adobe](./assets/ssd-fork-repository.gif)
+   ![Documentatieregister voor vork Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
 3. Maak op uw vork van de repository een nieuwe vertakking voor uw project, zoals hieronder wordt weergegeven. Gebruik deze nieuwe vertakking voor uw werk.
 
-   ![Nieuwe GitHub-vertakking maken](./assets/new-branch-github.gif)
+   ![Nieuwe GitHub-vertakking maken](../assets/docs-framework/new-branch-github.gif)
 
-4. Navigeer in de GitHub-mapstructuur van de forked-opslagplaats naar `experience-platform.en/help/destinations/catalog/[...]`, waarbij `[...]` de gewenste categorie voor uw bestemming is. Als u bijvoorbeeld een verpersoonlijkingsbestemming aan Experience Platform toevoegt, selecteert u de categorie `personalization`. Selecteer **Bestand toevoegen > Nieuw bestand maken**.
+4. In de de omslagstructuur van GitHub van de forked bewaarplaats, navigeer aan `experience-platform.en/help/destinations/catalog/[...]`, waarbij `[...]` is de gewenste rubriek voor uw bestemming. Als u bijvoorbeeld een verpersoonlijkingsbestemming aan Experience Platform toevoegt, selecteert u de optie `personalization` categorie. Selecteren **Bestand toevoegen > Nieuw bestand maken**.
 
-   ![Nieuw bestand toevoegen](./assets/github-navigate-and-create-file.gif)
+   ![Nieuw bestand toevoegen](../assets/docs-framework/github-navigate-and-create-file.gif)
 
-5. Geef uw bestemming `YOURDESTINATION.md` een naam, waarbij UW BESTEMMING de naam van uw bestemming in Adobe Experience Platform is. Als uw bedrijf bijvoorbeeld Moviestar heet, geeft u het bestand `moviestar.md` een naam.
+5. Geef uw bestemming een naam `YOURDESTINATION.md`, waarbij YOURDESTINATION de naam van je bestemming in Adobe Experience Platform is. Als uw bedrijf bijvoorbeeld Moviestar heet, geeft u het bestand een naam `moviestar.md`.
 
 ## Auteur de documentatiepagina voor uw bestemming {#author-documentation}
 
-1. U zult de inhoud van uw bestemmingspagina tot stand brengen die op [documentzelf-dienstmalplaatje](./self-service-template.md) wordt gebaseerd. **[De sjabloon](assets/yourdestination-template.zip)** downloaden en uitpakken om de  `.md` bestandssjabloon te extraheren.
-2. Plak en bewerk de inhoud van de sjabloon met relevante informatie voor uw bestemming in een online markeringseditor, zoals [dillinger.io](https://dillinger.io/). Volg de instructies in de sjabloon voor meer informatie over wat u moet invullen en welke alinea&#39;s kunnen worden verwijderd.
+1. U maakt de inhoud van de doelpagina op basis van de [zelfservicesjabloon voor documentatie](./self-service-template.md). **[Downloaden](../assets/docs-framework/yourdestination-template.zip)** de sjabloon uit en decomprimeer deze om de `.md` bestandssjabloon.
+2. Plak en bewerk de inhoud van de sjabloon met relevante informatie voor uw doel in een online markeringseditor, zoals [dillinger.io](https://dillinger.io/). Volg de instructies in de sjabloon voor meer informatie over wat u moet invullen en welke alinea&#39;s kunnen worden verwijderd.
 
    >[!TIP]
    >
    >U kunt uw browservenster op elk gewenst moment sluiten en later opnieuw openen. Uw werk wordt automatisch opgeslagen en u zult op u wachten wanneer u browser opnieuw opent.
 3. Kopieer de inhoud van de prijsverhogingsredacteur in uw nieuw dossier in GitHub.
-4. Voor om het even welke screenshots of beelden die u op het gebruiken van plan bent, gebruik de interface GitHub om de dossiers aan `experience-platform.en/help/destinations/assets/catalog/[...]` te uploaden, waar `[...]` de gewenste categorie voor uw bestemming is. Als u bijvoorbeeld een verpersoonlijkingsbestemming aan Experience Platform toevoegt, selecteert u de categorie `personalization`. U moet een koppeling maken naar de afbeeldingen op de pagina die u maakt. Zie [instructies voor het koppelen naar afbeeldingen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4. Voor om het even welke screenshots of beelden die u op het gebruiken van plan bent, gebruik de interface GitHub om de dossiers te uploaden aan `experience-platform.en/help/destinations/assets/catalog/[...]`, waarbij `[...]` is de gewenste rubriek voor uw bestemming. Als u bijvoorbeeld een verpersoonlijkingsbestemming aan Experience Platform toevoegt, selecteert u de optie `personalization` categorie. U moet een koppeling maken naar de afbeeldingen op de pagina die u maakt. Zie [instructies voor het koppelen naar afbeeldingen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
 
-   ![Afbeelding uploaden naar GitHub](./assets/upload-image.gif)
+   ![Afbeelding uploaden naar GitHub](../assets/docs-framework/upload-image.gif)
 
 5. Sla het bestand op in de vertakking als u klaar bent.
 
-![Maken van bestand bevestigen](./assets/ssd-confirm-file-creation.png)
+![Maken van bestand bevestigen](../assets/docs-framework/ssd-confirm-file-creation.png)
 
 ## De documentatie ter controle verzenden {#submit-review}
 
@@ -61,26 +61,26 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
 >
 >U kunt hier niets breken. Door de instructies in deze sectie te volgen, stelt u eenvoudig een documentupdate voor. De door u voorgestelde update wordt goedgekeurd of bewerkt door het Adobe Experience Platform-documentatieteam.
 
-1. Nadat u het bestand hebt opgeslagen en de gewenste afbeeldingen hebt geüpload, kunt u een pull-verzoek (PR) openen om uw werkvertakking samen te voegen in de master vertakking van de documentatieopslagplaats van Adobe. Controleer of de vertakking waaraan u hebt gewerkt, is geselecteerd en selecteer **Contribute > pull request** openen.
+1. Nadat u het bestand hebt opgeslagen en de gewenste afbeeldingen hebt geüpload, kunt u een pull-verzoek (PR) openen om uw werkvertakking samen te voegen in de master vertakking van de documentatieopslagplaats van Adobe. Zorg ervoor dat de vertakking is geselecteerd waaraan u hebt gewerkt en selecteer **Contribute > pull-verzoek openen**.
 
-![pull-verzoek maken](./assets/ssd-create-pull-request-1.gif)
+![pull-verzoek maken](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
-1. Zorg ervoor dat de basis en vergelijkingstakken correct zijn. Voeg een nota aan PR toe, beschrijvend uw update, en selecteer **Create trekkingsverzoek**. Dit opent een PR om de werkende tak van uw vork in de master tak van de opslagplaats van de Adobe samen te voegen.
+1. Zorg ervoor dat de basis en vergelijkingstakken correct zijn. Voeg een notitie toe aan de PR, beschrijf de update en selecteer **pull-verzoek maken**. Dit opent een PR om de werkende tak van uw vork in de master tak van de opslagplaats van de Adobe samen te voegen.
 
    >[!TIP]
    >
-   >Laat het selectievakje **Bewerkingen door onderhoudspersoneel toestaan** ingeschakeld zodat het documentatieteam Adobe wijzigingen in de PR kan aanbrengen.
+   >Laat de **Bewerkingen door onderhoudsleiders toestaan** Schakel het selectievakje in zodat het documentatieteam Adobe de PR kan bewerken.
 
-   ![Een pull-verzoek maken naar de gegevensopslagplaats van Adobe-documentatie](./assets/ssd-create-pull-request-2.png)
+   ![Een pull-verzoek maken naar de gegevensopslagplaats van Adobe-documentatie](../assets/docs-framework/ssd-create-pull-request-2.png)
 
 1. Op dit punt, lijkt een bericht dat u ertoe aanzet om de Overeenkomst van de Vergunning van de Medewerker van de Adobe te ondertekenen (CLA). Dit is een verplichte stap. Nadat u CLA ondertekent, vernieuw de PR pagina en verzend het trekkingsverzoek.
 
-1. U kunt bevestigen dat het trekkingsverzoek is voorgelegd door **Pull- verzoeken** tabel in `https://github.com/AdobeDocs/experience-platform.en` te inspecteren.
+1. U kunt bevestigen dat het trekkingsverzoek is verzonden door de **Pull-aanvragen** tab in `https://github.com/AdobeDocs/experience-platform.en`.
 
-   ![PR is gelukt](./assets/ssd-pr-successful.png)
+   ![PR is gelukt](../assets/docs-framework/ssd-pr-successful.png)
 
 1. Bedankt! Het documentatieteam van de Adobe zal in het PR bereiken voor het geval dat om het even welk uitgeeft wordt vereist en u te laten weten wanneer de documentatie zal worden gepubliceerd.
 
 >[!TIP]
 >
->Als u afbeeldingen en koppelingen wilt toevoegen aan uw documentatie en voor andere vragen over Markdown, leest u [Using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) in de handleiding voor gezamenlijk schrijven van Adobe.
+>Als u afbeeldingen en koppelingen wilt toevoegen aan uw documentatie en voor andere vragen over Markdown, leest u [Markering gebruiken](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) in Adobe .

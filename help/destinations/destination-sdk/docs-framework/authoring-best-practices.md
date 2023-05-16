@@ -2,7 +2,7 @@
 title: Aanbevolen werkwijzen ontwerpen
 description: Leer welke regels en tips u moet volgen wanneer u de pagina met doeldocumentatie ontwerpt, om te controleren of deze voldoet aan de kwaliteitsnormen voor Adobe Experience Platform-documentatie.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
+source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Op deze pagina worden de regels beschreven die u moet volgen wanneer [ontwerpen 
 * Houd je zinnen kort en kom snel tot het punt. Als uw zin langer is dan 20 woorden of meerdere komma&#39;s gebruikt, kunt u het opsplitsen in aparte zinnen. Zinnen van meer dan 20 woorden kunnen vooral lastig zijn voor lezers.
 * Wees niet al te beleefd. Vermijd het gebruik van &quot;alsjeblieft&quot; of &quot;aardig doen ...&quot; in technische documentatie.
 
-## Koppeling {#linking}
+## Koppelen {#linking}
 
 Volg de meegeleverde documentatiesjabloon en bewerk de bestaande koppelingen in de sjabloon niet. Lees bij het opnemen van nieuwe koppelingen [gebruiken van verbindingen in documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) in de handleiding voor contribuanten.
 
@@ -56,5 +56,5 @@ Volg de meegeleverde documentatiesjabloon en bewerk de bestaande koppelingen in 
 
 ## Proces {#process}
 
-* De [documentatiesjabloon](./self-service-template.md) wordt niet regelmatig bijgewerkt, gebaseerd op partner terugkoppelt. Voordat u begint met het ontwerpen van documentatie voor uw bestemming, moet u controleren of u het gereedschap [laatste versie van de sjabloon](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+* De [documentatiesjabloon](./self-service-template.md) wordt niet regelmatig bijgewerkt, gebaseerd op partner terugkoppelt. Voordat u begint met het ontwerpen van documentatie voor uw bestemming, moet u controleren of u het gereedschap [laatste versie van de sjabloon](../assets/docs-framework/yourdestination-template.zip).
 * Maak de documentatie en maak de documentatie (PR) van een tak in uw vork. *andere dan het hoofdbijkantoor*. Verwijs naar de verzendbestemming voor overzichtssectie wanneer creatie in [GitHub-interface](./use-github-interface-to-create-documentation.md#submit-review) of in [uw lokale omgeving](./work-in-local-environment.md#submit-review).

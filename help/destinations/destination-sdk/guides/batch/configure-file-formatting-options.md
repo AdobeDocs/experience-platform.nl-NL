@@ -1,9 +1,10 @@
 ---
 description: Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen
 title: Leer hoe u Destination SDK gebruikt om opties voor bestandsindeling voor op bestanden gebaseerde doelen te configureren.
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -22,18 +23,14 @@ Lees de [Aan de slag met Destination SDK](../../getting-started.md) pagina voor 
 
 Adobe raadt u ook aan de volgende documentatie te lezen en bekend te maken voordat u verdergaat:
 
-* Elke beschikbare optie voor bestandsindeling wordt in het gedeelte [bestandsindelingconfiguratie](../../server-and-file-configuration.md#file-configuration) sectie.
-* Stappen voltooien om [een op een bestand gebaseerde bestemming configureren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) met Destination SDK.
+* Elke beschikbare optie voor bestandsindeling wordt in het gedeelte [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) sectie.
+* Stappen voltooien om [een op een bestand gebaseerde bestemming configureren](../../guides/configure-file-based-destination-instructions.md) met Destination SDK.
 
 ## Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
 Begin met het gebruik van de `/destination-server` eindpunt om te bepalen welke de configuratieopties van het dossierformatteren u opstelling voor de uitgevoerde dossiers wilt.
 
 Hieronder ziet u een voorbeeld van een configuratie van een doelserver voor een [!DNL Amazon S3] doel, met verschillende opties voor bestandsindeling geselecteerd.
-
->[!TIP]
->
->Ter herinnering, alle beschikbare opties voor bestandsindeling worden beschreven in het gedeelte [bestandsindelingconfiguratie](../../server-and-file-configuration.md#file-configuration) sectie.
 
 **API-indeling**
 
@@ -115,13 +112,13 @@ Nadat u de gewenste opties voor bestandsindeling in de vorige stap hebt toegevoe
 
 In deze stap kunt u de weergegeven opties groeperen in elke gewenste volgorde, u kunt aangepaste groepen, vervolgkeuzelijsten en voorwaardelijke groepen maken op basis van de geselecteerde bestandstypen. Al deze instellingen worden weergegeven in de opname en in de volgende secties.
 
-![Schermopname met verschillende opties voor de bestandsindeling van batchbestanden.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-options.gif)
+![Schermopname met verschillende opties voor de bestandsindeling van batchbestanden.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### De opties voor de bestandsindeling bepalen {#ordering}
 
 De volgorde waarin u de opmaakopties voor bestanden toevoegt als gegevensvelden van klanten in de doelconfiguratie, wordt weerspiegeld in de gebruikersinterface. De onderstaande configuratie wordt bijvoorbeeld weerspiegeld in de gebruikersinterface, waarbij de opties in de volgorde worden weergegeven **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
 
-![Afbeelding met de volgorde van opties voor bestandsindeling in de gebruikersinterface van het Experience Platform.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-order.png)
+![Afbeelding met de volgorde van opties voor bestandsindeling in de gebruikersinterface van het Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -246,38 +243,43 @@ U kunt meerdere opmaakopties voor bestanden groeperen in één sectie. Wanneer u
 
 Om dit te doen, gebruik `"type": "object"` om de groep te maken en de gewenste opties voor bestandsindeling te verzamelen binnen een `properties` parameter, zoals in het onderstaande voorbeeld wordt getoond, waarbij de groepering **[!UICONTROL CSV Options]** wordt gemarkeerd.
 
-```json
-        {
-            "name": "csvOptions",
-            "title": "CSV Options",
-            "description": "Select your CSV options",
-            "type": "object",
-            "properties": [
-                {
-                    "name": "delimiter",
-                    "title": "Delimiter",
-                    "description": "Select your Delimiter",
-                    "type": "string",
-                    "isRequired": false,
-                    "default": ",",
-                    "namedEnum": [
-                        {
-                            "name": "Comma (,)",
-                            "value": ","
-                        },
-                        {
-                            "name": "Tab (\\t)",
-                            "value": "\t"
-                        }
-                    ],
-                    "readOnly": false,
-                    "hidden": false
-                },
-
+```json {line-numbers="true" start-number="100" highlight="106-128"}
+"customerDataFields":[
 [...]
+{
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![Afbeelding met de CSV-opties in de gebruikersinterface.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-grouping.png)
+![Afbeelding met de CSV-opties in de gebruikersinterface.](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### Vervolgkeuzekiezers maken voor de opties voor de bestandsindeling {#dropdown-selectors}
 
@@ -285,27 +287,44 @@ In situaties waarin u gebruikers de keuze wilt laten tussen verschillende opties
 
 Om dit te doen, gebruik `namedEnum` object als hieronder weergegeven en een `default` waarde voor de opties die de gebruiker kan selecteren.
 
-```json
+```json {line-numbers="true" start-number="100" highlight="114-124"}
+[...]
+"customerDataFields":[
+[...]
 {
-   "name": "delimiter",
-   "type": "string",
-   "title": "Delimiter",
-   "description": "Select your Delimiter",
-   "namedEnum": [
-   {
-      "name": "Comma (,)",
-      "value": ","
-   },
-   {
-      "name": "Tab (\\t)",
-      "value": "\t"
-   }
-   ],
-   "default": ","
-},
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![Het registreren van het scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
+![Het registreren van het scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Opties voor voorwaardelijke bestandsindeling maken {#conditional-options}
 
@@ -466,7 +485,7 @@ In een bredere context kunt u de `conditional` veld dat wordt gebruikt in de ond
 
 Hieronder ziet u het resulterende UI-scherm op basis van de bovenstaande configuratie. Wanneer de gebruiker het bestandstype CSV selecteert, worden aanvullende opties voor bestandsindeling die verwijzen naar het CSV-bestandstype weergegeven in de gebruikersinterface.
 
-![Schermopname met de optie voor voorwaardelijke bestandsindeling voor CSV-bestanden.](/help/destinations/destination-sdk/assets/guides/batch/conditional-file-formatting.gif)
+![Schermopname met de optie voor voorwaardelijke bestandsindeling voor CSV-bestanden.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### Volledige API-aanvraag die alle hierboven weergegeven opties bevat
 
@@ -485,7 +504,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
   "name": "My S3 Destination",
   "description": "Test destination",
-  "releaseNotes": "Test destination",
   "status": "TEST",
   "sources": [
     "UNIFIED_PROFILE"
@@ -713,7 +731,7 @@ Als u de beperking wilt verduidelijken, kunt u overwegen een bestand met de volg
 | Michael | Roze | VS | NY |
 | James | Smith |  | null |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Dit zou resulteren in een uitvoer zoals hieronder wordt getoond. U ziet hoe de null-waarde uit de tabel onjuist wordt geëxporteerd als een escape-aanhalingsteken.
 

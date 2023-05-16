@@ -2,7 +2,7 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >* Vul alle secties in deze sjabloon in in de volgorde waarin ze in de sjabloon worden beschreven.
->* Deze sjabloon wordt niet regelmatig bijgewerkt, op basis van feedback van partners. Voordat u begint met het ontwerpen van documentatie voor uw bestemming, moet u controleren of u het gereedschap [laatste versie van de sjabloon](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Deze sjabloon wordt niet regelmatig bijgewerkt, op basis van feedback van partners. Voordat u begint met het ontwerpen van documentatie voor uw bestemming, moet u controleren of u het gereedschap [laatste versie van de sjabloon](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## Overzicht {#overview}
@@ -103,7 +103,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
 
-![Voorbeeldscreenshot waarin wordt getoond hoe u verificatie uitvoert voor de bestemming](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Voorbeeldscreenshot waarin wordt getoond hoe u verificatie uitvoert voor de bestemming](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL Bearer token]**: Vul de token van de drager in om te verifiëren bij de bestemming.
 
@@ -113,7 +113,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Voorbeeldschermafbeelding met informatie over het invullen van details voor uw bestemming](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Voorbeeldschermafbeelding met informatie over het invullen van details voor uw bestemming](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.

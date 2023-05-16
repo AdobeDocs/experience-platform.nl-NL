@@ -1,7 +1,8 @@
 ---
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -26,16 +27,16 @@ De bestemmingen van het Experience Platform voeren gegevens naar op API-Gebaseer
 
 Het proces waarmee profielen worden samengevoegd tot HTTPS-berichten voordat ze worden verzonden naar eindpunten van de bestemmings-API wordt aangeroepen *microbatchverwerking*.
 
-Neem de [Facebook-bestemming](/help/destinations/catalog/social/facebook.md) met een *[configureerbare samenvoeging](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* beleid als voorbeeld - de gegevens worden verzonden op een samengevoegde manier, waar de bestemmingsdienst alle inkomende gegevens van de profieldienst upstream neemt en het door één van het volgende samenvoegt, alvorens het naar Facebook te verzenden:
+Neem de [Facebook-bestemming](/help/destinations/catalog/social/facebook.md) met een *[configureerbare samenvoeging](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* beleid als voorbeeld - de gegevens worden verzonden op een samengevoegde manier, waar de bestemmingsdienst alle inkomende gegevens van de profieldienst upstream neemt en het door één van het volgende samenvoegt, alvorens het naar Facebook te verzenden:
 
 * Aantal records (maximaal 10.000) of
 * Tijdvensterinterval (30 minuten)
 
 Welke van de bovengenoemde drempels het eerst wordt gehaald, leidt tot een export naar Facebook. Dus in de [!DNL Facebook Custom Audiences] in het dashboard ziet u wellicht doelgroepen uit Experience Platform komen in stappen van 10.000 records. Mogelijk ziet u 10.000 records elke 10-15 minuten, omdat de gegevens sneller worden verwerkt en samengevoegd dan het exportinterval van 30 minuten en sneller worden verzonden, dus ongeveer om de 10-15 minuten totdat alle records zijn verwerkt. Als er onvoldoende records zijn om een batch van 10.000 samen te stellen, wordt het huidige aantal records verzonden, net als wanneer de drempel voor het tijdvenster is bereikt, zodat u ook kleinere batches naar Facebook kunt zien.
 
-Als een ander voorbeeld: [HTTP API-bestemming](/help/destinations/catalog/streaming/http-destination.md), die een *[beste inspanningsaggregatie](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* beleid, met `maxUsersPerRequest: 10`. Dit betekent dat een maximum van tien profielen zal worden bijeengevoegd alvorens een vraag van HTTP aan deze bestemming in brand wordt gestoken, maar het Experience Platform probeert om profielen naar de bestemming te verzenden zodra de bestemmingsdienst bijgewerkte herbeoordelingsinformatie van een stroomopwaartse dienst ontvangt.
+Als een ander voorbeeld: [HTTP API-bestemming](/help/destinations/catalog/streaming/http-destination.md), die een *[beste inspanningsaggregatie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* beleid, met `maxUsersPerRequest: 10`. Dit betekent dat een maximum van tien profielen zal worden bijeengevoegd alvorens een vraag van HTTP aan deze bestemming in brand wordt gestoken, maar het Experience Platform probeert om profielen naar de bestemming te verzenden zodra de bestemmingsdienst bijgewerkte herbeoordelingsinformatie van een stroomopwaartse dienst ontvangt.
 
-Het samenvoegingsbeleid is configureerbaar, en de bestemmingsontwikkelaars kunnen beslissen hoe te om het samenvoegingsbeleid te vormen om aan de tariefbeperkingen van de API eindpunten stroomafwaarts te voldoen. Meer informatie over [samenvoegingsbeleid](/help/destinations/destination-sdk/destination-configuration.md#aggregation) in de documentatie van Destination SDK.
+Het samenvoegingsbeleid is configureerbaar, en de bestemmingsontwikkelaars kunnen beslissen hoe te om het samenvoegingsbeleid te vormen om aan de tariefbeperkingen van de API eindpunten stroomafwaarts te voldoen. Meer informatie over [samenvoegingsbeleid](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) in de documentatie van Destination SDK.
 
 ## Streaming profiel exporteren (Enterprise) doelen {#streaming-profile-destinations}
 
