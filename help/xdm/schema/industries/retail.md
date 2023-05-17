@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Gegevensmodel detailhandel
 description: Bekijk een gestandaardiseerd gegevensmodel voor de detailhandel, compatibel met het Model van de Gegevens van de Ervaring (XDM) voor gebruik in Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '456'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,4 @@ De volgende lijst schetst de geadviseerde klassen en de groepen van het schemage
 | Verhoog loyaliteitsgegevens (partner) om relevante productinformatie over Web, e-mail, en digitale marketing kanalen te verhogen. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Webdetails](../../field-groups/event/web-details.md)</li></ul></li><li>**[Afzonderlijk XDM-profiel](../../classes/individual-profile.md)**:<ul><li>[Demografische details](../../field-groups/profile/demographic-details.md)</li><li>[Loyalty-details](../../field-groups/profile/loyalty-details.md)</li></ul></li><li>**[Product](../../classes/product.md)**:<ul><li>[Productcatalogus](../../field-groups/product/product-catalog.md)</li><li>[Productcategorie](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 | Retarget winkelwagentjes verlaten via geautomatiseerde en persoonlijke e-mails. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Handelsgegevens](../../field-groups/event/commerce-details.md)</li><li>[Webdetails](../../field-groups/event/web-details.md)</li></ul></li><li>**[Product](../../classes/product.md)**:<ul><li>[Productcatalogus](../../field-groups/product/product-catalog.md)</li><li>[Productcategorie](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
-
-*\*Hoewel een standaardproductklasse voor een toekomstige versie gepland is, moeten de productschema&#39;s momenteel worden gebouwd gebruikend een douaneklasse in plaats daarvan. Daarom moet u de structuur van de klasse van het schema, evenals die van om het even welke gebiedsgroepen manueel bouwen u aan het toevoegt. Zie de sectie over [een aangepaste klasse maken](../../ui/resources/classes.md#create) in de XDM UI-handleiding voor meer informatie.*
+{style="table-layout:auto"}

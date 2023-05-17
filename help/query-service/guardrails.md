@@ -3,9 +3,9 @@ keywords: Experience Platform;query;query-service;problemen oplossen;instructies
 title: Guardrails voor Query-service
 description: Dit document bevat informatie over gebruiksbeperkingen voor gegevens van Query Service om u te helpen uw querygebruik te optimaliseren.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1004'
 ht-degree: 1%
 
 ---
@@ -34,8 +34,6 @@ Alvorens met dit document verder te gaan, zou u een goed inzicht in de belangrij
 
 In de onderstaande afbeelding ziet u hoe de mogelijkheden van Query Service momenteel zijn verpakt en in licentie worden gegeven:
 
-![Een diagram om de distributie en de verpakking van de mogelijkheden van de Dienst van de Vraag met betrekking tot vergunning te verklaren.](./images/guardrails/query-capabilities.png)
-
 ## Limiettypen
 
 Dit document bevat twee typen standaardlimieten:
@@ -62,7 +60,7 @@ De lijsten hieronder verstrekken de geadviseerde guardrailgrenzen en beschrijvin
 | Client-connector en resultaatuitvoerlimiet | Clientconnector<ul><li>Query-gebruikersinterface (100 rijen)</li><li>Client van derden (50.000)</li><li>[!DNL PostgresSQL] client (50.000)</li></ul> | Hard | Het resultaat van een vraag kan door de volgende middelen worden ontvangen:<ul><li>Gebruikersinterface Query Service</li><li>Client van derden</li><li>[!DNL PostgresSQL] client</li></ul>Opmerking: Het toevoegen van een beperking aan de outputtelling kan resultaten sneller terugkeren. Bijvoorbeeld: `LIMIT 5`, `LIMIT 10`, enzovoort. |
 | Resultaten geretourneerd via | Gebruikersinterface client | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Batchquery&#39;s**
 
@@ -76,7 +74,7 @@ De lijsten hieronder verstrekken de geadviseerde guardrailgrenzen en beschrijvin
 | Clientconnector en uitvoerlimiet van resultaat | Clientconnector<ul><li>Query-gebruikersinterface (geen bovenlimiet voor rijen)</li><li>Client van derden (geen bovenlimiet voor rijen)</li><li>[!DNL PostgresSQL] client (geen bovenlimiet voor rijen)</li><li>REST API&#39;s (geen bovengrens voor rijen)</li></ul> | Hard | Het resultaat van een query kan op de volgende manieren beschikbaar worden gemaakt:<ul><li>Kan worden opgeslagen als afgeleide gegevenssets</li><li>Kan in de bestaande afgeleide gegevenssets worden opgenomen</li></ul>Opmerking: Er is geen bovengrens aan het aantal van de verslagtelling van het vraagresultaat. |
 | Resultaten geretourneerd via | Gegevensset | N.v.t. | Hiermee bepaalt u hoe de resultaten ter beschikking worden gesteld van de gebruikers. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Winkel met query-versnelling {#query-accelerated-store}
 
@@ -86,7 +84,7 @@ De lijst hieronder verstrekt de geadviseerde guardrailgrenzen en beschrijving vo
 |---|---|---|---|
 | Gelijktijdige query | 4 | Hard | Om ervoor te zorgen dat de vragen over samengevoegde gegevens via rapporteringsAPI (met inbegrip van vragen die gegevensmodellen zoals de gegevensmodellen van Real-Time CDP verbeteren) de middelen hebben om efficiënt uit te voeren, houdt het rapporterende API middelgebruik door de opeenvolgingen van de wisselingscapaciteit aan elke vraag toe te wijzen. Het systeem zet vragen in een rij en wacht tot de opeenslagen van de gelijktijdige dienst beschikbaar worden of zij van het geheime voorgeheugen kunnen worden gediend. Een maximum van vier gezamenlijke vraaggroeven is beschikbaar op elk bepaald ogenblik.<br>Als u toegang hebt tot de API voor rapportage via een BI-programma en meer gelijktijdige uitvoering nodig hebt, is een BI-server vereist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 
