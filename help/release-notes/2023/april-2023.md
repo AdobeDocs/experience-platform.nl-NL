@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2023
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2057'
 ht-degree: 2%
 
 ---
@@ -190,7 +190,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
-| API steun voor het filtreren van rij-vlakke gegevens voor de Dynamica van Microsoft, Salesforce CRM, en Marketing Cloud Salesforce | Gebruik logische operatoren en vergelijkingsoperatoren om gegevens op rijniveau te filteren voor de bronnen van de Marketing Cloud Microsoft Dynamics, Salesforce CRM en Salesforce. Lees de handleiding op [gegevens filteren voor een bron met behulp van de API](../../sources/tutorials/api/filter.md) voor meer informatie . |
+| API steun voor het filtreren van rij-vlakke gegevens voor bron Salesforce CRM. | Gebruik logische en vergelijkingsoperatoren om gegevens op rijniveau te filteren voor de Salesforce CRM-bron. Lees de handleiding op [gegevens filteren voor een bron met behulp van de API](../../sources/tutorials/api/filter.md) voor meer informatie . |
 | Beta beschikbaarheid van Shopify Streaming | De [Streaming bron optimaliseren](../../sources/connectors/ecommerce/shopify-streaming.md) is nu beschikbaar in bèta. Gebruik de Shopify Streaming bron om gegevens van uw Shopify partnerrekening aan Experience Platform te stromen. |
 | Algemene beschikbaarheid van OneTrust Integration | De [OneTrust Integration-bron](../../sources/connectors/consent-and-preferences/onetrust.md) is nu GA. Gebruik de OneTrust Integration-bron om toestemmings- en voorkeursgegevens van uw OneTrust Integration-account naar Experience Platform te verzenden. |
 | Algemene beschikbaarheid van Oracle Service Cloud | De [Cloud-bron voor oracle Service](../../sources/connectors/customer-success/oracle-service-cloud.md) is nu GA. Gebruik de Cloud-bron van de service Oracle om uw Oracle Service Cloud-gegevens naar het Experience Platform te brengen. |
