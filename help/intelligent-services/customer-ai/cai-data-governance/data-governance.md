@@ -5,9 +5,9 @@ feature: Customer AI
 title: Gegevensbeheer in AI van Klant
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f0bd35d8fb592900c61ed4a1a74d05901bc32810
+source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevenssteward
 
 ## Toestemmingsbeleid {#consent-policy}
 
-Klant-AI houdt zich aan uw voorkeuren voor toestemming. Zodra u uw toestemmingsbeleid hebt opgesteld en het zoals die hier wordt gedocumenteerd toegelaten, zal AI van de Klant de toestemmingsgegevens naleven die van u worden verzameld. Alleen gegevens met toestemming worden gebruikt om het model te scoren in volgende uitvoeringen van het model. De nieuwe scores vervangen de oude scores en kunnen in segmentatie worden gebruikt. Deze functie is alleen beschikbaar voor klanten van het HealthCare Shield- en het Privacy- en beveiligingsschild.
+Klant-AI houdt zich aan uw voorkeuren voor toestemming. Eenmaal [opstelling en uw toestemmingsbeleid toegelaten](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=en#consent-policy), zal de Klant AI de toestemmingsgegevens naleven die van u worden verzameld. Alleen gegevens met toestemming worden gebruikt om het model te scoren in volgende uitvoeringen van het model. De nieuwe scores vervangen de oude scores en kunnen in segmentatie worden gebruikt. Deze functie is momenteel alleen beschikbaar voor klanten van het HealthCare Shield- en het Privacy- en beveiligingsschild.
 
 Meer informatie over deze functie vindt u hier:
 
