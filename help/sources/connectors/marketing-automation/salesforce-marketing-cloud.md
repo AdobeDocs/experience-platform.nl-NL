@@ -1,25 +1,20 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;verkoopsforce-marketingcloud;Salesforce-Marketing Cloud;marketingautomatisering
 solution: Experience Platform
 title: Bronoverzicht van Salesforce-Marketing Cloud
 description: Leer hoe u Salesforce-Marketing Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
 
-# (bèta) [!DNL Salesforce Marketing Cloud]
-
->[!NOTE]
->
->De [!DNL Salesforce Marketing Cloud] De bron is in bèta. Zie de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# [!DNL Salesforce Marketing Cloud]
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van derde marketingautomatiseringssystemen. De ondersteuning voor leveranciers van marketingautomatisering omvat: [!DNL Salesforce Marketing Cloud].
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van derde marketingautomatiseringssystemen. De ondersteuning voor leveranciers van marketingautomatisering omvat: [!DNL Salesforce Marketing Cloud].
 
 ## Vereisten
 
@@ -28,9 +23,13 @@ Voordat u verbinding kunt maken met uw [!DNL Salesforce Marketing Cloud] bron aa
 * `campaign_read`
 * `list_and_subscribers_read`
 
-U kunt om werkingsgebied verzoeken door een vraag aan te stellen `v2/userinfo` van de [!DNL Salesforce Marketing Cloud] API. Zie de [[!DNL Salesforce Marketing Cloud] Document met API-integratierechten](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) voor richtsnoeren over het aanvragen en vergelijken van het bereik.
+U kunt om werkingsgebied verzoeken door een vraag aan te stellen `v2/userinfo` van de [!DNL Salesforce Marketing Cloud] API. Zie de [[!DNL Salesforce Marketing Cloud] Document met API-integratierechten](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) voor richtsnoeren over het aanvragen en vergelijken van het bereik.
 
-Voor meer informatie over werkingsgebied met inbegrip van een lijst van hun verwante toestemmingen en gedrag, zie dit [[!DNL Salesforce Marketing Cloud] REST API-document](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
+Voor meer informatie over werkingsgebied met inbegrip van een lijst van hun verwante toestemmingen en gedrag, zie dit [[!DNL Salesforce Marketing Cloud] REST API-document](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+
+>[!IMPORTANT]
+>
+>Aangepaste objectinvoer wordt momenteel niet ondersteund door de [!DNL Salesforce Marketing Cloud] bronintegratie.
 
 ## IP adres lijst van gewenste personen
 
