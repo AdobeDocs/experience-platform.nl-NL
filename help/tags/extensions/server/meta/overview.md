@@ -2,9 +2,9 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
+source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
 workflow-type: tm+mt
-source-wordcount: '2145'
+source-wordcount: '2257'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,10 @@ Het wordt sterk aanbevolen om [!DNL Meta Pixel] en de [!DNL Conversions API] om 
 >Het gedeelte over [deduplicatie van gebeurtenissen](#deduplication) verderop in dit document worden de stappen beschreven om ervoor te zorgen dat dezelfde gebeurtenis niet tweemaal wordt gebruikt, aangezien deze mogelijk van zowel de browser als de server wordt ontvangen.
 
 Voor het gebruik van de [!DNL Conversions API] uitbreiding, moet u toegang tot gebeurtenis hebben door:sturen en een geldige [!DNL Meta] account met toegang tot [!DNL Ad Manager] en [!DNL Event Manager]. U moet met name de id van een bestaande id kopiëren [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (of [een nieuwe [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) in plaats daarvan), zodat de extensie kan worden geconfigureerd voor uw account.
+
+>[!INFO]
+>
+>Als u deze extensie wilt gebruiken met gegevens van mobiele apps of als u ook werkt met gegevens van offlinegebeurtenissen in uw [!DNL Meta] campagnes, zult u uw dataset door een bestaande app moeten creëren en selecteren **Maken met een pixel-id** wanneer hierom wordt gevraagd. Zie het artikel [Bepaal welke optie van de datasetverwezenlijking voor uw zaken juist is](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) voor meer informatie. Zie de [Conversies-API voor toepassingsgebeurtenissen](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document voor alle vereiste en optionele parameters voor het bijhouden van apps.
 
 ## De extensie installeren
 
@@ -45,7 +49,7 @@ De uitbreiding is geïnstalleerd en u kunt zijn mogelijkheden in uw gebeurtenis 
 
 ## Vorm een gebeurtenis door:sturen regel {#rule}
 
-In deze sectie wordt beschreven hoe u de [!DNL Conversions API] uitbreiding in een generische gebeurtenis die regel door:sturen. In de praktijk, zou u verscheidene regels moeten vormen om allen te verzenden toegelaten [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] en [!DNL Conversions API].
+In deze sectie wordt beschreven hoe u de [!DNL Conversions API] uitbreiding in een generische gebeurtenis die regel door:sturen. In de praktijk, zou u verscheidene regels moeten vormen om allen te verzenden toegelaten [standaardgebeurtenissen](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] en [!DNL Conversions API]. Voor mobiele toepassingsgegevens raadpleegt u de vereiste velden, toepassingsgegevensvelden, parameters voor klantgegevens en aangepaste gegevens [hier](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
 
 >[!NOTE]
 >
