@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
+source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '974'
 ht-degree: 8%
 
 ---
@@ -326,6 +326,7 @@ ht-degree: 8%
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
    - [Abonneren op waarschuwingen voor bronnen](tutorials/ui/alerts.md)
+   - [Een gegevensstroom opslaan als concept](tutorials/ui/draft.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
    - [Overzicht](sources-sdk/overview.md)
    - Uw verbindingsspecificatie configureren {#config}
