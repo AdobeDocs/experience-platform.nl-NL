@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;licentierechten;licenties;aanbevolen procedures
 title: Aanbevolen werkwijzen voor gegevensbeheer
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
+source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
 workflow-type: tm+mt
-source-wordcount: '2169'
+source-wordcount: '2203'
 ht-degree: 1%
 
 ---
@@ -106,6 +105,7 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 | Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u [!DNL Addressable Audience] en [!DNL Profile Richness] toeslagrechten. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de handleiding op [het toelaten van en het onbruikbaar maken van datasets voor Profiel](../../catalog/datasets/enable-for-profile.md) voor meer informatie . |
 | Web SDK en Mobile SDK-gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch worden verzameld en gegevens die expliciet door de ontwikkelaar worden verzameld. Om de naleving van de licentie beter te beheren, kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. Zie de handleiding op [basisbeginselen van SDK configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) voor meer informatie . |
 | Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie op [gebeurtenissen en omstandigheden](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) voor meer informatie . |
+| Gegevens filteren op bronniveau | U kunt logische en vergelijkingsexploitanten gebruiken om rij-vlakke gegevens van uw bronnen te filtreren alvorens een verbinding tot stand te brengen en gegevens aan Experience Platform op te nemen. Lees voor meer informatie de handleiding op [het filtreren van rij-vlakke gegevens voor een bron gebruikend [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
