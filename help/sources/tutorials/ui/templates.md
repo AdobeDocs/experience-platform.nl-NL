@@ -1,18 +1,16 @@
 ---
-description: Adobe Experience Platform biedt vooraf geconfigureerde sjablonen die u kunt gebruiken om uw gegevensinvoer te versnellen. De malplaatjes omvatten auto-geproduceerde activa zoals schema's, datasets, toewijzingsregels, identiteiten, identiteitsnamespaces, en dataflows die u kunt gebruiken wanneer het brengen van gegevens van een bron aan Experience Platform.
-title: (Beta) Creeer een gegevensstroom van bronnen gebruikend malplaatjes in UI
+description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience Platform kunt gebruiken om uw gegevensverwerking voor B2B-gegevens te versnellen.
+title: Een gegevensstroom voor bronnen maken met behulp van sjablonen in de gebruikersinterface
 badge1: "Beta"
-hide: true
-hidefromtoc: true
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
+source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1511'
 ht-degree: 0%
 
 ---
 
-# (Beta) Creeer een gegevensstroom van bronnen gebruikend malplaatjes in UI
+# Een gegevensstroom voor bronnen maken met behulp van sjablonen in de gebruikersinterface
 
 >[!IMPORTANT]
 >
@@ -132,7 +130,7 @@ Nadat u het configureren van uw innameschema hebt voltooid, selecteert u **[!UIC
 
 De [!UICONTROL Review template assets] op de pagina worden de elementen weergegeven die automatisch zijn gegenereerd als onderdeel van de sjabloon. In deze pagina, kunt u de auto-geproduceerde schema&#39;s, datasets, identiteitsnamespaces, en dataflows bekijken verbonden aan uw bronverbinding. Het kan tot vijf minuten duren om alle activa te produceren. Als u ervoor kiest om de pagina te verlaten, ontvangt u een melding om terug te keren zodra de elementen zijn voltooid. U kunt de elementen bekijken zodra ze zijn gegenereerd en op elk gewenst moment aanvullende configuraties aan de gegevensstroom toevoegen.
 
-Automatisch gegenereerde gegevensstromen worden standaard ingeschakeld. De ovalen selecteren (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Preview mappings]** om de toewijzingssets te zien die voor uw gegevensstroom zijn gemaakt.
+Door gebrek, worden de auto-geproduceerde dataflows geplaatst aan een ontwerpstaat om verdere aanpassing op configuraties, zoals toewijzingsregels of geplande frequenties toe te staan. De ovalen selecteren (`...`) naast de naam van de gegevensstroom en selecteer vervolgens **[!UICONTROL Preview mappings]** om de toewijzingssets te zien die voor uw conceptgegevensstroom zijn gemaakt.
 
 ![Een vervolgkeuzevenster met de optie voor voorvertoningstoewijzingen geselecteerd.](../../images/tutorials/templates/preview.png)
 
@@ -146,18 +144,44 @@ U kunt de mening van de schemaredacteur gebruiken om updates aan uw auto-geprodu
 
 ![Een vervolgkeuzevenster met de optie voor het bijwerken van gegevens geselecteerd.](../../images/tutorials/templates/update.png)
 
+>[!TIP]
+>
+>U hebt toegang tot uw conceptgegevensstroom via de [!UICONTROL Dataflows] cataloguspagina in de werkruimte Bronnen. Selecteren **[!UICONTROL Dataflows]** in de bovenste koptekst en selecteer vervolgens de gegevensstroom die u wilt bijwerken in de lijst.
+>
+>![Een lijst van bestaande gegevens in de dataflow catalogus van de bronwerkruimte.](../../images/tutorials/templates/dataflows.png)
+
+### Uw gegevensstroom publiceren
+
+Begin met het publicatieproces door de bronworkflow te doorlopen. Nadat u [!UICONTROL Update dataflow], wordt u doorgestuurd naar de *[!UICONTROL Add data]* stap van de workflow. Selecteren **[!UICONTROL Next]** om verder te gaan.
+
+![De add gegevensstap voor een ontwerp dataflow](../../images/tutorials/templates/continue-draft.png)
+
+Bevestig vervolgens de gegevens in de gegevensstroom en configureer instellingen voor foutdiagnose, gedeeltelijke inname en waarschuwingsmeldingen. Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+
+![De stap met de details van de gegevensstroom voor een conceptgegevensstroom.](../../images/tutorials/templates/dataflow-detail.png)
+
+>[!NOTE]
+>
+>U kunt **[!UICONTROL Save as draft]** op om het even welk punt om de veranderingen te stoppen en te bewaren u aan uw gegevensstroom hebt aangebracht.
+
+De toewijzingsstap wordt weergegeven. Tijdens deze stap, kunt u de kaartconfiguraties van uw dataflow aanpassen. Voor een uitgebreide gids over de gegevens prep functies die voor afbeelding worden gebruikt, bezoek [UI-hulplijn voor gegevenprep](../../../data-prep/ui/mapping.md).
+
+![De toewijzingsstap voor een conceptgegevensstroom.](../../images/tutorials/templates/mapping.png)
+
+Tot slot herzie de details van uw gegevensstroom en selecteer dan **[!UICONTROL Save & ingest]** om uw concept te publiceren.
+
+![De overzichtsstap voor een ontwerp dataflow.](../../images/tutorials/templates/review.png)
+
 ## Volgende stappen
 
 Door dit leerprogramma te volgen, hebt u nu dataflows, evenals activa zoals schema&#39;s, datasets, en identiteitsnamespaces gebruikend malplaatjes gecreeerd. Voor algemene informatie over bronnen gaat u naar de [overzicht van bronnen](../../home.md).
 
-## Aanhangsel
+## Waarschuwingen en meldingen {#alerts-and-notifications}
 
-In de volgende sectie vindt u aanvullende informatie over sjablonen.
-
-### Het venster Meldingen gebruiken om terug te keren naar de overzichtspagina
-
-Sjablonen worden ondersteund door Adobe Experience Platform-waarschuwingen en u kunt het deelvenster Meldingen gebruiken om updates over de status van uw middelen te ontvangen en ook om terug te gaan naar de overzichtspagina.
+Sjablonen worden ondersteund door Adobe Experience Platform Alerts en u kunt het deelvenster Meldingen gebruiken om updates over de status van uw middelen te ontvangen en ook om terug te gaan naar de overzichtspagina.
 
 Selecteer het berichtpictogram de hoogste kopbal van Platform UI en selecteer dan de statusalarm om de activa te zien die u wilt herzien.
 
 ![Het deelvenster Meldingen in de gebruikersinterface van het Platform met een melding die een mislukte gegevensstroom waarschuwt.](../../images/tutorials/templates/notifications.png)
+
+U kunt de waakzame montages van uw malplaatjes bijwerken om zowel e-mail als in-Platform berichten over de status van uw gegevensstroom te ontvangen. Voor meer informatie bij het vormen van alarm, lees de gids op [hoe u zich op waarschuwingen voor gegevensstromen van bronnen kunt abonneren](../ui/alerts.md).
