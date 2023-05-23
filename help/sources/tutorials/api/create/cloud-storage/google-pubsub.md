@@ -2,16 +2,16 @@
 title: Een Google PubSub-bronverbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 371947cff518c16816692210054680367fd6504c
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Google PubSub] Bronverbinding met de Flow Service API
 
-Dit leerprogramma begeleidt u door de stappen om te verbinden [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot;) naar Experience Platform, met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om te verbinden [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot;) naar Experience Platform, met de [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
@@ -30,8 +30,8 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL PubSub]moet u waarden op
 | ---------- | ----------- |
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `credentials` | De referentie of sleutel die vereist is voor verificatie [!DNL PubSub]. |
-| `topicId` | De id voor de [!DNL PubSub] resource die een feed met berichten vertegenwoordigt. U moet een onderwerpidentiteitskaart specificeren als u toegang tot een specifieke stroom van gegevens in uw wilt verlenen [!DNL Google PubSub] bron. |
-| `subscriptionId` | De id van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. |
+| `topicName` | De naam van de bron die een feed met berichten vertegenwoordigt. U moet een onderwerpnaam specificeren als u toegang tot een specifieke stroom van gegevens in uw wilt verlenen [!DNL PubSub] bron. De indeling van de onderwerpnaam is: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
+| `subscriptionName` | De naam van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. **Opmerking**: Eén [!DNL PubSub] abonnement kan slechts voor één dataflow worden gebruikt. Als u meerdere gegevensstromen wilt maken, hebt u meerdere abonnementen nodig. De notatie voor abonnementsnaam is: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en brondoelverbindingen terug. De [!DNL PubSub] Verbindingsspecificatie-id is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Zie deze voor meer informatie over deze waarden [[!DNL PubSub] verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Om de op rekening-gebaseerde authentificatie van de dienst te gebruiken, zie dit [[!DNL PubSub] handleiding voor het maken van serviceaccounts](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
@@ -50,11 +50,11 @@ De eerste stap bij het maken van een bronverbinding is het verifiëren van uw [!
 
 Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL PubSub] verificatiereferenties als onderdeel van de aanvraagparameters.
 
-Tijdens deze stap, kunt u de gegevens bepalen die uw rekening toegang tot heeft door een onderwerpidentiteitskaart te verstrekken. Slechts zullen de abonnementen verbonden aan dat onderwerpidentiteitskaart toegankelijk zijn.
+De [!DNL PubSub] bron staat u toe om het type van toegang te specificeren dat u tijdens authentificatie wilt toestaan. U kunt uw account zo instellen dat deze toegang tot een bepaald netwerk heeft of beperkt [!DNL PubSub] onderwerp en abonnement.
 
 >[!NOTE]
 >
->Hoofd (rollen) die aan een pubsubproject wordt toegewezen wordt geërft in alle onderwerpen en abonnementen die binnen worden gecreeerd [!DNL PubSub] project. Als u een hoofd (rol) wilt toevoegen om toegang tot een specifiek onderwerp te hebben, dan moet dat hoofd (rol) ook aan het overeenkomstige abonnement van het onderwerp worden toegevoegd. Lees voor meer informatie de [[!DNL PubSub] documentatie over toegangscontrole](https://cloud.google.com/pubsub/docs/access-control).
+>Hoofd (rollen) toegewezen aan een [!DNL PubSub] het project wordt geërft in alle onderwerpen en abonnementen binnen gecreeerd [!DNL PubSub] project. Als u een hoofd (rol) toegang tot een specifiek onderwerp wilt hebben, dan moet dat hoofd (rol) ook aan het overeenkomstige abonnement van het onderwerp worden toegevoegd. Lees voor meer informatie de [[!DNL PubSub] documentatie over toegangscontrole](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **API-indeling**
 
@@ -63,6 +63,10 @@ POST /connections
 ```
 
 **Verzoek**
+
+>[!BEGINTABS]
+
+>[!TAB Op projecten gebaseerde verificatie]
 
 ```shell
 curl -X POST \
@@ -76,12 +80,10 @@ curl -X POST \
       "name": "Google PubSub connection",
       "description": "Google PubSub connection",
       "auth": {
-          "specName": "Google PubSub authentication credentials",
+          "specName": "Project Based Authentication",
           "params": {
-              "projectId": "acme-project",
-              "credentials": "{CREDENTIALS}",
-              "topicId": "acmeProjectAPI",
-              "subscriptionId": "acme-project-api-new"
+              "projectId": "{PROJECT_ID}",
+              "credentials": "{CREDENTIALS}"
           }
       },
       "connectionSpec": {
@@ -95,9 +97,44 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `auth.params.credentials` | De referentie of sleutel die vereist is voor verificatie [!DNL PubSub]. |
-| `auth.params.topicId` | De onderwerp-id van uw [!DNL PubSub] bron waartoe u toegang wilt verlenen. |
-| `auth.params.subscriptionId` | De id van het abonnement voor uw [!DNL PubSub] onderwerp. |
 | `connectionSpec.id` | De [!DNL PubSub] verbinding, specificatie-id: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Onderwerp en op abonnement gebaseerde authentificatie]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google PubSub connection",
+      "description": "Google PubSub connection",
+      "auth": {
+          "specName": "Topic & Subscription Based Authentication",
+          "params": {
+              "credentials": "{CREDENTIALS}",
+              "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+              "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
+          }
+      },
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `auth.params.credentials` | De referentie of sleutel die vereist is voor verificatie [!DNL PubSub]. |
+| `auth.params.topicName` | Projectidentiteitskaart en onderwerpidentiteitskaart paar voor [!DNL PubSub] bron waartoe u toegang wilt verlenen. |
+| `auth.params.subscriptionName` | De project-id en het paar met abonnements-id voor de [!DNL PubSub] bron waartoe u toegang wilt verlenen. |
+| `connectionSpec.id` | De [!DNL PubSub] verbinding, specificatie-id: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 **Antwoord**
 
@@ -144,8 +181,8 @@ curl -X POST \
           "format": "json"
       },
       "params": {
-          "topicId": "acme-project",
-          "subscriptionId": "{SUBSCRIPTION_ID}",
+          "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+          "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}",
           "dataType": "raw"
       }
   }'
@@ -158,8 +195,8 @@ curl -X POST \
 | `baseConnectionId` | De basis verbindings-id van uw [!DNL PubSub] bron die in de vorige stap is gegenereerd. |
 | `connectionSpec.id` | De vaste-verbindingsspecificatie-id voor [!DNL PubSub]. Deze id is: `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | Het formaat van de [!DNL PubSub] gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
-| `params.topicId` | De naam of id van uw [!DNL PubSub] onderwerp. In [!DNL PubSub], is een onderwerp een genoemd middel dat een voer van berichten vertegenwoordigt. |
-| `params.subscriptionId` | De abonnement-id die overeenkomt met een bepaald onderwerp. In [!DNL PubSub], staan de abonnementen u toe om berichten van een onderwerp te lezen. Één of vele abonnementen kunnen aan één enkel onderwerp worden toegewezen. |
+| `params.topicName` | De naam van uw [!DNL PubSub] onderwerp. In [!DNL PubSub], is een onderwerp een genoemd middel dat een voer van berichten vertegenwoordigt. |
+| `params.subscriptionName` | De abonnementsnaam die met een bepaald onderwerp beantwoordt. In [!DNL PubSub], staan de abonnementen u toe om berichten van een onderwerp te lezen. Één of vele abonnementen kunnen aan één enkel onderwerp worden toegewezen. |
 | `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm`. |
 
 **Antwoord**
