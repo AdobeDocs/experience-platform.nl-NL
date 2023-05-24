@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '273'
 ht-degree: 16%
 
 ---
@@ -89,6 +89,7 @@ ht-degree: 16%
    - [Incrementeel laden](essential-concepts/incremental-load.md)
    - [Gegevensdeduplicatie](essential-concepts/deduplication.md)
    - [Gegevenssetvoorbeelden](essential-concepts/dataset-samples.md)
+   - [Berekening van gegevenssetstatistieken](essential-concepts/dataset-statistics.md)
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)

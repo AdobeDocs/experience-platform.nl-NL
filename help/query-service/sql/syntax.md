@@ -4,10 +4,10 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3406'
-ht-degree: 2%
+source-wordcount: '3706'
+ht-degree: 1%
 
 ---
 
@@ -184,7 +184,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt opgegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
+| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
 | `label` | Wanneer u een dataset met een vraag CTAS creeert, gebruik dit etiket met de waarde van `profile` om uw dataset zoals toegelaten voor profiel te etiketteren. Dit betekent dat uw dataset automatisch voor profiel duidelijk wordt aangezien het wordt gecreeerd. Zie het afgeleide document van de attributenuitbreiding voor meer informatie over het gebruik van `label`. |
 | `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
@@ -568,7 +568,7 @@ Als u de waarde voor een instelling wilt retourneren, gebruikt u `SET [property 
 
 In de onderstaande subsecties worden de [!DNL PostgreSQL] bevelen die door de Dienst van de Vraag worden gesteund.
 
-### TABEL ANALYSEREN
+### TABEL ANALYSEREN {#analyze-table}
 
 De `ANALYZE TABLE` het bevel berekent statistieken voor een lijst op de versnelde opslag. De statistieken worden berekend over uitgevoerde vragen CTAS of ITAS voor een bepaalde lijst op versnelde opslag.
 
@@ -591,6 +591,61 @@ Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na 
 | `min` | De minimumwaarde uit de geanalyseerde tabel. |
 | `mean` | De gemiddelde waarde van de geanalyseerde tabel. |
 | `stdev` | De standaardafwijking van de geanalyseerde tabel. |
+
+#### COMPUTERSTATISTIEKEN {#compute-statistics}
+
+U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` en `SHOW STATISTICS` SQL-opdrachten. Bereid kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen samen.
+
+`COMPUTE STATISTICS` breidt de `ANALYZE TABLE` gebruiken. De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` bevelen worden niet gesteund op de lijsten van het gegevenspakhuis. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen.
+
+**Voorbeeld**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` berekent statistieken over een subset van de dataset op basis van de verstrekte filtervoorwaarde, en `FOR COLUMNS` specifieke kolommen voor analyse.
+
+De uitvoer van de console wordt weergegeven zoals hieronder.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+U kunt teruggekeerde statistiekidentiteitskaart dan gebruiken om omhoog de gegevens verwerkte statistieken met te zoeken `SHOW STATISTICS` gebruiken.
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` biedt geen ondersteuning voor de gegevenstypen array of map. U kunt een `skip_stats_for_complex_datatypes` markering die moet worden gewaarschuwd of die moet worden weergegeven als het invoerdataframe kolommen met arrays en kaartgegevenstypen bevat. De markering is standaard ingesteld op true. Gebruik de volgende opdracht om meldingen of fouten in te schakelen: `SET skip_stats_for_complex_datatypes = false`.
+
+Zie de [Gegevenssetstatistiek](../essential-concepts/dataset-statistics.md) voor meer informatie .
+
+#### TABLESAMPLE {#tablesample}
+
+De Dienst van de Vraag van Adobe Experience Platform verstrekt steekproefdatasets als deel van zijn benaderende mogelijkheden van de vraagverwerking.
+Gegevenssetvoorbeelden kunnen het best worden gebruikt wanneer u geen exact antwoord nodig hebt voor een geaggregeerde bewerking via een gegevensset. Deze eigenschap staat u toe om efficiëntere verkennende vragen over grote datasets te leiden door een benaderende vraag uit te geven om een benaderend antwoord terug te keren.
+
+Voorbeeldgegevenssets worden gemaakt met uniforme willekeurige steekproeven op basis van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets, die slechts een percentage van verslagen van origineel gebruiken. De eigenschap van de datasetsteekproef breidt uit `ANALYZE TABLE` gebruiken met de `TABLESAMPLE` en `SAMPLERATE` SQL-opdrachten.
+
+In de onderstaande voorbeelden laat regel 1 zien hoe u een 5%-monster van de tabel berekent. Regel twee toont aan hoe te om een 5% steekproef van een gefilterde mening van de gegevens binnen de lijst te berekenen.
+
+**voorbeeld**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+Zie de [Documentatie met gegevenssets](../essential-concepts/dataset-samples.md) voor meer informatie .
 
 ### BEGINNEN
 
