@@ -2,10 +2,10 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Deze gids toont u hoe te om toestemmingen voor de eigenschappen van de gegevensi
 
 Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een **productprofielbeheerder**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen in een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise Administration guide voor meer informatie.
 
-Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie voor meer informatie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie voor meer informatie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 ## Beschikbare machtigingen
 
@@ -31,7 +31,7 @@ De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensst
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
-| Sandboxen | (N.v.t.) | Afhankelijk van de [sandboxen](../sandboxes/home.md) die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingencategorie in Admin Console controleren. |
+| Sandboxes | (N.v.t.) | Afhankelijk van de [sandboxen](../sandboxes/home.md) die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingencategorie in Admin Console controleren. |
 | Gegevensmodellering | Schema&#39;s beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [XDM-schema&#39;s (Experience Data Model)](../xdm/home.md). |
 | Gegevensmodellering | Schema&#39;s weergeven | Hiermee verleent u alleen-lezen toegang tot schema&#39;s. |
 | Identity Management | Identiteitsnaamruimten beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [naamruimten](../identity-service/namespaces.md). |
@@ -39,7 +39,7 @@ De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensst
 | Gegevensverzameling | Gegevensstromen beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [gegevensstromen](../edge/datastreams/overview.md). |
 | Gegevensverzameling | Gegevensstromen weergeven | Biedt alleen-lezen toegang tot gegevensstreams. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- (Feature not yet available?)
 | Dashboards | Manage Custom Dashboards | |
@@ -54,6 +54,7 @@ Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot
 | --- | --- | --- |
 | Platforms | Web | Toegang tot [webeigenschappen](../tags/ui/administration/companies-and-properties.md) in combinatie met andere eigendomsrechten. |
 | Platforms | Mobile | Toegang tot [mobiele eigenschappen](../tags/ui/administration/companies-and-properties.md) in combinatie met andere eigendomsrechten. |
+| Platforms | Rand | Toegang tot [Eigenschappen van Event Forwarding Edge](../tags/ui/event-forwarding/getting-started.md) in combinatie met andere eigendomsrechten. |
 | Properties | (N.v.t.) | Afhankelijk van de eigenschappen die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingscategorie in Admin Console controleren.<br><br>De toegewezen bezitsrechten van een gebruiker zijn slechts op de eigenschappen van toepassing zij toegang tot door deze toestemmingscategorie zijn verleend. |
 | Eigendomsrechten | Goedkeuren | Biedt de mogelijkheid om een bibliotheekbuild goed te keuren als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
 | Eigendomsrechten | Ontwikkelen | Biedt de mogelijkheid om een bibliotheekbuild te ontwikkelen als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
@@ -64,7 +65,7 @@ Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot
 | Bedrijfsrechten | Extensies ontwikkelen | Biedt de mogelijkheid extensiepakketten te maken en te wijzigen die eigendom zijn van uw organisatie, inclusief persoonlijke releases en verzoeken om openbare release. |
 | Bedrijfsrechten | Extensies beheren | Deze machtiging is alleen van toepassing als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en via pushberichten. Op deze manier kunt u de apps beheren die Adobe Experience Cloud kent, samen met de vereiste pushgegevens die nodig zijn om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification-service. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
