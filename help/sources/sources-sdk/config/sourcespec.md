@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bro
 title: Bronspecificaties configureren voor Self-Serve Sources (Batch SDK)
 description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -439,9 +439,11 @@ De `PAGE` Door het type paginering kunt u terugkerende gegevens doorlopen op het
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ De `PAGE` Door het type paginering kunt u terugkerende gegevens doorlopen op het
 | `type` | Het type paginering dat wordt gebruikt om gegevens te retourneren. |
 | `limitName` | De naam voor de limiet waarmee de API het aantal records kan opgeven dat op een pagina moet worden opgehaald. |
 | `limitValue` | Het aantal records dat op een pagina moet worden opgehaald. |
+| `initialPageIndex` | (Optioneel) De eerste pagina-index definieert het paginanummer van waaruit de paginering begint. Dit veld kan worden gebruikt voor bronnen waarvan de paginering niet begint bij 0. Als deze optie niet is opgegeven, wordt de index van de eerste pagina standaard ingesteld op 0. Dit veld verwacht een geheel getal. |
+| `endPageIndex` | (Optioneel) Met de index van de eindpagina kunt u een eindvoorwaarde instellen en de paginering stoppen. Dit veld kan worden gebruikt als de standaardeindvoorwaarden voor het stoppen van paginering niet beschikbaar zijn. Dit veld kan ook worden gebruikt als het aantal pagina&#39;s dat moet worden ingevoerd of het laatste paginanummer via de antwoordkoptekst wordt opgegeven. Dit is gebruikelijk bij het gebruik van `PAGE` tekstpaginering. De waarde voor de index van de eindpagina kan het laatste paginanummer zijn of een expressiewaarde van het type tekenreeks in de reactiekop. U kunt bijvoorbeeld `headers.x-pagecount` om index aan het einde van de pagina toe te wijzen aan `x-pagecount` waarde uit de reactiekoppen. **Opmerking**: `x-pagecount` is een verplichte antwoordheader voor sommige bronnen en bevat het waardeaantal pagina&#39;s dat moet worden ingevoerd. |
 | `pageParamName` | De naam van de parameter die u aan vraagparameters moet toevoegen om door verschillende pagina&#39;s van de terugkeergegevens te oversteken. Bijvoorbeeld: `https://abc.com?pageIndex=1` retourneert de tweede pagina van de retourlading van een API. |
 | `maximumRequest` | Het maximumaantal verzoeken een bron voor een bepaalde stijgende looppas kan maken. De huidige standaardlimiet is 10000. |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
