@@ -2,7 +2,8 @@
 keywords: event forward extension;twitter;twitter event forward extension
 title: Twitter-gebeurtenis door:sturen, extensie
 description: Deze Adobe Experience Platform-gebeurtenis die extensie doorstuurt, stelt u in staat om gebeurtenissen in te voeren in Twitter voor uw zakelijke vereisten.
-source-git-commit: d51dae024da0cce770be91601c52b8c2958c3f64
+last-substantial-update: 2023-05-24T00:00:00Z
+source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 2%
