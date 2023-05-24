@@ -1,49 +1,860 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de stroomdienst;
-title: Conceptgegevensstromen met behulp van de Flow Service API
-description: Leer hoe u uw gegevensstromen in een ontwerpstaat plaatst gebruikend de Dienst API van de Stroom.
-badge: label="New Feature" type="Positive"
+title: Concepten maken van de API voor Flow Service Entities
+description: Leer hoe u concepten van uw basisverbinding, bronverbinding, doelverbinding en gegevensstroom maakt met de Flow Service API
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 0%
+source-wordcount: '1192'
+ht-degree: 1%
 
 ---
 
-# Conceptgegevensstromen met behulp van de Flow Service API
+# Concepten van uw [!DNL Flow Service] entiteiten die de API gebruiken
 
-Sla uw gegevensstromen op als concepten wanneer u de Flow Service API gebruikt door de `mode=draft` de vraagparameter tijdens de vraag van de stroomverwezenlijking. Concepten kunnen later met nieuwe informatie worden bijgewerkt en vervolgens worden gepubliceerd zodra ze gereed zijn. In deze zelfstudie worden de stappen beschreven waarmee u uw gegevens in een conceptstatus instelt met behulp van de Flow Service API.
+U kunt de `mode=draft` queryparameter in het dialoogvenster [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) om uw [!DNL Flow Service] entiteiten zoals uw basisverbindingen, bronverbindingen, doelverbindingen en dataflows naar een conceptstatus.
+
+Concepten kunnen later worden bijgewerkt met nieuwe informatie en vervolgens worden gepubliceerd zodra ze gereed zijn, met behulp van de `op=publish` queryparameter.
+
+Deze zelfstudie bevat stappen voor het instellen van uw [!DNL Flow Service] Hiermee voegt u een status toe aan een concept en kunt u uw workflows pauzeren en opslaan zodat deze later kunnen worden voltooid.
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-
-### Vereisten
-
-Deze zelfstudie vereist dat u al de benodigde middelen hebt gegenereerd om een gegevensstroom te maken. Dit omvat het volgende:
-
-* Een geverifieerde basisverbinding
-* Een bronverbinding
-* Een doel-XDM-schema
-* Een doelgegevensset
-* Een doelverbinding
-* Een toewijzing
-
-Als u deze waarden nog niet hebt, selecteert u een bron uit [de catalogus in het overzicht van de bronnen](../../home.md). Volg vervolgens de instructies van die bron om de benodigde elementen te genereren voor het samenstellen van een gegevensstroom.
+* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
 Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
 
-## Een gegevensstroom instellen op een concept-status
+### Controleren op ondersteuning voor conceptmodus
 
-In de volgende secties wordt een overzicht gegeven van het proces om een gegevensstroom in te stellen als concept, de gegevensstroom bij te werken, de gegevensstroom te publiceren en uiteindelijk de gegevensstroom te verwijderen.
+U moet ook controleren of de verbinding-specificatie-id en de bijbehorende flow-specificatie-id van de bron die u gebruikt, zijn ingeschakeld voor de conceptmodus.
 
-### Concepten van gegevensstroom
+>[!BEGINTABS]
+
+>[!TAB Details van verbindingsspecificaties opzoeken]
+
++++Aanvragen De volgende aanvraag haalt de informatie over de verbindingsspecificatie op voor [!DNL Azure File Storage]:
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be5ec48c-5b78-49d5-b8fa-7c89ec4569b8' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+Een succesvolle reactie keert de informatie van de verbindingsspecificatie voor uw bron terug. Als u wilt controleren of de conceptmodus voor uw bron wordt ondersteund, controleert u of de optie `items[0].attributes.isDraftModeSupported` heeft een waarde van `true`.
+
+```json {line-numbers="true" start-line="1" highlight="252"}
+{
+    "items": [
+        {
+            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "name": "azure-file-storage",
+            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "Basic Authentication",
+                    "type": "basicAuthentication",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "description": "defines auth params",
+                        "properties": {
+                            "host": {
+                                "type": "string",
+                                "description": "Specifies the Azure File Storage endpoint."
+                            },
+                            "userid": {
+                                "type": "string",
+                                "description": "Specify the user to access the Azure File Storage."
+                            },
+                            "password": {
+                                "type": "string",
+                                "description": "Specify the storage access key",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "host",
+                            "userid",
+                            "password"
+                        ]
+                    }
+                }
+            ],
+            "sourceSpec": {
+                "name": "CloudStorage",
+                "type": "CloudStorage",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string",
+                            "description": "input path for copying files, can be a folder path, file path or a wildcard pattern"
+                        },
+                        "recursive": {
+                            "type": "boolean",
+                            "description": "indicates recursive copy in case of folder or wild card path, default is false"
+                        }
+                    },
+                    "required": [
+                        "path"
+                    ]
+                },
+                "attributes": {
+                    "uiAttributes": {
+                        "documentationLink": "http://www.adobe.com/go/sources-azure-file-storage-en",
+                        "isSource": true,
+                        "category": {
+                            "key": "cloudStorage"
+                        },
+                        "icon": {
+                            "key": "azureFileStorage"
+                        },
+                        "description": {
+                            "key": "azureFileStorageDescription"
+                        },
+                        "label": {
+                            "key": "azureFileStorageLabel"
+                        }
+                    }
+                }
+            },
+            "exploreSpec": {
+                "name": "FileSystem",
+                "type": "FileSystem",
+                "requestSpec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "description": "defines explorable objects",
+                    "properties": {
+                        "objectType": {
+                            "type": "string",
+                            "enum": [
+                                "file",
+                                "folder",
+                                "root"
+                            ]
+                        }
+                    },
+                    "allOf": [
+                        {
+                            "if": {
+                                "properties": {
+                                    "objectType": {
+                                        "enum": [
+                                            "file"
+                                        ]
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "object": {
+                                        "type": "string",
+                                        "description": "defines file to get schema or preview of."
+                                    },
+                                    "fileType": {
+                                        "type": "string",
+                                        "enum": [
+                                            "delimited"
+                                        ]
+                                    },
+                                    "preview": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": [
+                                    "object",
+                                    "fileType"
+                                ]
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "objectType": {
+                                        "enum": [
+                                            "folder"
+                                        ]
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "object": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "object"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "responseSpec": {
+                    "root": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "array",
+                        "description": "lists tables/items under the database/container requested.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "description": "defines type of an item."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "defines display name of an item."
+                                },
+                                "path": {
+                                    "type": "string",
+                                    "description": "defines path of an item."
+                                },
+                                "canPreview": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "description": "defines whether an item is previewable or not."
+                                },
+                                "canFetchSchema": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "description": "defines whether schema can be fetched for an item or not."
+                                }
+                            }
+                        }
+                    },
+                    "folder": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "path": {
+                                    "type": "string"
+                                },
+                                "canPreview": {
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "canFetchSchema": {
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        }
+                    },
+                    "file": {
+                        "delimited": {
+                            "$schema": "http://json-schema.org/draft-07/schema#",
+                            "type": "object",
+                            "properties": {
+                                "format": {
+                                    "type": "string"
+                                },
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "columns": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "type": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "attributes": {
+                "category": "Cloud Storage",
+                "connectorName": "Azure File Storage",
+                "isSource": true,
+                "isDraftModeSupported": true,
+                "uiAttributes": {
+                    "apiFeatures": {
+                        "explorePaginationSupported": false
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ],
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
++++
+
+>[!TAB Details van stroomspecificaties opzoeken]
+
++++Aanvragen De volgende aanvraag haalt de gegevens van de flowspecificatie voor een bron voor cloudopslag op:
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name==%22CloudStorageToAEP%22' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+Een succesvolle reactie keert de stroom specifieke informatie voor uw bron terug. Als u wilt controleren of de conceptmodus voor uw bron wordt ondersteund, controleert u of de optie `items[0].attributes.isDraftModeSupported` heeft een waarde van `true`.
+
+```json {line-numbers="true" start-line="1" highlight="167"}
+{
+  "items": [
+    {
+      "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+      "name": "CloudStorageToAEP",
+      "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+      "version": "1.0",
+      "sourceConnectionSpecIds": [
+        "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+        "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+        "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
+        "4c10e202-c428-4796-9208-5f1f5732b1cf",
+        "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
+        "32e8f412-cdf7-464c-9885-78184cb113fd",
+        "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
+        "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+        "54e221aa-d342-4707-bcff-7a4bceef0001",
+        "c85f9425-fb21-426c-ad0b-405e9bd8a46c",
+        "26f526f2-58f4-4712-961d-e41bf1ccc0e8"
+      ],
+      "targetConnectionSpecIds": [
+        "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+      ],
+      "optionSpec": {
+        "name": "OptionSpec",
+        "spec": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "errorDiagnosticsEnabled": {
+              "title": "Error diagnostics.",
+              "description": "Flag to enable detailed and sample error diagnostics summary.",
+              "type": "boolean",
+              "default": false
+            },
+            "partialIngestionPercent": {
+              "title": "Partial ingestion threshold.",
+              "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        }
+      },
+      "transformationSpecs": [
+        {
+          "name": "Mapping",
+          "spec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "defines various params required for different mapping from source to target",
+            "properties": {
+              "mappingId": {
+                "type": "string"
+              },
+              "mappingVersion": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "Encryption",
+          "spec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "defines various params required for encrypted data ingestion",
+            "properties": {
+              "publicKeyId": {
+                "type": "string",
+                "description": "publicKeyId returned in encryptionKey creation API. One must use the publicKeyId corresponding to the same publicKey they used for encrypting the files"
+              }
+            }
+          }
+        }
+      ],
+      "scheduleSpec": {
+        "name": "PeriodicSchedule",
+        "type": "Periodic",
+        "spec": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "startTime": {
+              "description": "epoch time",
+              "type": "integer"
+            },
+            "frequency": {
+              "type": "string",
+              "enum": [
+                "once",
+                "minute",
+                "hour",
+                "day",
+                "week"
+              ]
+            },
+            "interval": {
+              "type": "integer"
+            },
+            "backfill": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          "required": [
+            "startTime",
+            "frequency"
+          ],
+          "if": {
+            "properties": {
+              "frequency": {
+                "const": "once"
+              }
+            }
+          },
+          "then": {
+            "allOf": [
+              {
+                "not": {
+                  "required": [
+                    "interval"
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "required": [
+                    "backfill"
+                  ]
+                }
+              }
+            ]
+          },
+          "else": {
+            "required": [
+              "interval"
+            ],
+            "if": {
+              "properties": {
+                "frequency": {
+                  "const": "minute"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "interval": {
+                  "minimum": 15
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "interval": {
+                  "minimum": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "attributes": {
+        "isSourceFlow": true,
+        "flacValidationSupported": true,
+        "isDraftModeSupported": true,
+        "frequency": "batch",
+        "notification": {
+          "category": "sources",
+          "flowRun": {
+            "enabled": true
+          }
+        }
+      },
+      "permissionsInfo": {
+        "manage": [
+          {
+            "@type": "lowLevel",
+            "name": "EnterpriseSource",
+            "permissions": [
+              "write"
+            ]
+          }
+        ],
+        "view": [
+          {
+            "@type": "lowLevel",
+            "name": "EnterpriseSource",
+            "permissions": [
+              "read"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
++++
+
+>[!ENDTABS]
+
+
+
+## Concepten van basisverbindingen maken {#create-a-draft-base-connection}
+
+Als u een conceptbasisverbinding wilt maken, vraagt u een POST aan de `/connections` van het [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+
+**API-indeling**
+
+```http
+POST /connections?mode=draft
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de basisverbinding bepaalt. Als u een basisverbinding als concept wilt instellen, stelt u `mode` tot `draft`. |
+
+**Verzoek**
+
+Met het volgende verzoek maakt u een conceptbasisverbinding voor de [!DNL Azure File Storage] bron:
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name": "ACME Azure File Storage Base Connection",
+        "description": "Azure File Storage base connection for ACME data (DRAFT)",
+        "auth": {
+            "specName": "Basic Authentication",
+            "params": {
+                    "host": "{HOST}",
+                    "userId": "{USER_ID}",
+                    "password": "{PASSWORD}"
+                }
+        },
+        "connectionSpec": {
+            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "version": "1.0"
+        }
+      }'
+```
+
+**Antwoord**
+
+Een geslaagde reactie retourneert de basis-verbindings-id en het bijbehorende label voor de conceptbasisverbinding. U kunt deze id later gebruiken om uw basisverbinding bij te werken en te publiceren.
+
+```json
+{
+    "id": "f9377f50-607a-4818-b77f-50607a181860",
+    "etag": "\"2f0276fa-0000-0200-0000-5eab3abb0000\""
+}
+```
+
+## Uw basisverbinding voor concepten publiceren {#publish-your-draft-base-connection}
+
+Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/connections` eindpunt en verstrek identiteitskaart van de verbinding van de ontwerpbasis die u, evenals actieverrichting voor het publiceren wilt publiceren.
+
+**API-indeling**
+
+```http
+POST /connections/{BASE_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `op` | Een handelingsverrichting die de staat van de gevraagde basisverbinding bijwerkt. Als u een conceptbasisverbinding wilt publiceren, stelt u `op` tot `publish`. |
+
+**Verzoek**
+
+In het volgende verzoek wordt de conceptbasisverbinding gepubliceerd voor [!DNL Azure File Storage] die in een eerdere stap is gemaakt.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/f9377f50-607a-4818-b77f-50607a181860/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde basisverbinding terug.
+
+```json
+{
+    "id": "f9377f50-607a-4818-b77f-50607a181860",
+    "etag": "\"2f0276fa-0000-0200-0000-5eab3abb0000\""
+}
+```
+
+## Concepten van bronverbindingen maken {#create-a-draft-source-connection}
+
+Als u een conceptbronverbinding wilt maken, vraagt u een POST aan de `/sourceConnections` van het [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+
+**API-indeling**
+
+```http
+POST /sourceConnections?mode=draft
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de bronverbinding bepaalt. Als u een bronverbinding als concept wilt instellen, stelt u `mode` tot `draft`. |
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections?mode=draft' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "ACME Azure File Storage Source Connection",
+      "description: "Azure File Storage source connection for ACME data (DRAFT)",
+      "baseConnectionId": "f9377f50-607a-4818-b77f-50607a181860",
+      "data": {
+          "format": "delimited",
+      },
+      "params": {
+          "path": "/acme/summerCampaign/account.csv",
+          "type": "file"
+      },
+      "connectionSpec": {
+          "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+          "version": "1.0"
+      }
+  }'
+```
+
+**Antwoord**
+
+Een geslaagde reactie retourneert de bron-verbindings-id en de bijbehorende tag voor de conceptbronverbinding. U kunt deze id later gebruiken om uw bronverbinding bij te werken en te publiceren.
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+## Uw conceptbronverbinding publiceren {#publish-your-draft-source-connection}
+
+>[!NOTE]
+>
+>U kunt geen bronverbinding publiceren als de bijbehorende basisverbinding zich nog in het concept bevindt. Controleer of uw basisverbinding eerst is gepubliceerd voordat u uw bronverbinding publiceert.
+
+Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/sourceConnections` eindpunt en verstrek identiteitskaart van de ontwerp bronverbinding die u, evenals actieverrichting voor het publiceren wilt publiceren.
+
+**API-indeling**
+
+```http
+POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `op` | Een handelingsverrichting die de staat van de gevraagde bronverbinding bijwerkt. Als u een conceptbronverbinding wilt publiceren, stelt u `op` tot `publish`. |
+
+**Verzoek**
+
+In het volgende verzoek wordt de conceptbronverbinding gepubliceerd voor [!DNL Azure File Storage] die in een eerdere stap is gemaakt.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/26b53912-1005-49f0-b539-12100559f0e2/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde bronverbinding terug.
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+## Concepten van doelverbinding maken {#create-a-draft-target-connection}
+
+Als u een conceptdoelverbinding wilt maken, vraagt u een POST aan de `/targetConnections` van het [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+
+**API-indeling**
+
+```http
+POST /targetConnections?mode=draft
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `mode` | Een door de gebruiker opgegeven queryparameter die de status van de doelverbinding bepaalt. Als u een doelverbinding wilt instellen als concept, stelt u `mode` tot `draft`. |
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections?mode=draft' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "ACME Azure File Storage Target Connection",
+      "description": "Azure File Storage target connection ACME data (DRAFT)",
+      "data": {
+          "schema": {
+              "id": "{SCHEMA_ID}",
+              "version": "application/vnd.adobe.xed-full+json;version=1"
+          }
+      },
+      "params": {
+          "dataSetId": "{DATASET_ID}"
+      },
+          "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      }
+  }'
+```
+
+**Antwoord**
+
+Een geslaagde reactie retourneert de doel-verbindings-id en de bijbehorende tag voor de conceptdoelverbinding. U kunt deze id later gebruiken om uw doelverbinding bij te werken en te publiceren.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
+## Conceptdoelverbinding publiceren {#publish-your-draft-target-connection}
+
+>[!NOTE]
+>
+>U kunt geen doelverbinding publiceren als de bijbehorende basisverbinding zich nog in de conceptstatus bevindt. Controleer of uw basisverbinding eerst is gepubliceerd voordat u de doelverbinding publiceert.
+
+Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/targetConnections` eindpunt en verstrek identiteitskaart van de ontwerp doelverbinding die u, evenals een actieverrichting voor het publiceren wilt publiceren.
+
+**API-indeling**
+
+```http
+POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `op` | Een handelingsverrichting die de staat van de gevraagde doelverbinding bijwerkt. Als u een conceptdoelverbinding wilt publiceren, stelt u `op` tot `publish`. |
+
+**Verzoek**
+
+In het volgende verzoek wordt de conceptdoelverbinding gepubliceerd voor [!DNL Azure File Storage] die in een eerdere stap is gemaakt.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/dbc5c132-bc2a-4625-85c1-32bc2a262558/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde doelverbinding terug.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
+## Concepten van gegevensstroom maken {#create-a-draft-dataflow}
 
 Als u een gegevensstroom wilt instellen als concept, vraagt u een POST naar de `/flows` eindpunt terwijl het toevoegen van `mode=draft` als een queryparameter. Op deze manier kunt u een gegevensstroom maken en deze opslaan als concept.
 
@@ -62,22 +873,23 @@ POST /flows?mode=draft
 Met het volgende verzoek wordt een concept-gegevensstroom gemaakt.
 
 ```shell
-  'https://platform-int.adobe.io/data/foundation/flowservice/flows?mode=draft' \
+  'https://platform.adobe.io/data/foundation/flowservice/flows?mode=draft' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
   -d '{
-    "name": "HTTP source dataflow for ACME data",
+    "name": "ACME Azure File Storage Dataflow",
+    "description": "Azure File Storage dataflow for ACME data (DRAFT)",
     "sourceConnectionIds": [
-        "61c0c5f1-bfe5-40f7-8f8c-a4dc175ddac6"
+        "26b53912-1005-49f0-b539-12100559f0e2"
     ],
     "targetConnectionIds": [
-        "78f41c31-3652-4a5e-b264-74331226dcf3"
+        "dbc5c132-bc2a-4625-85c1-32bc2a262558"
     ],
     "flowSpec": {
-        "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
         "version": "1.0"
     }
   }'
@@ -85,7 +897,7 @@ Met het volgende verzoek wordt een concept-gegevensstroom gemaakt.
 
 **Antwoord**
 
-Als de reactie succesvol was, worden de `id` en de overeenkomstige `etag` van uw gegevensstroom.
+Een geslaagde reactie retourneert de stroom-id en de bijbehorende tag voor de conceptgegevensstroom. U kunt deze id later gebruiken om uw gegevensstroom bij te werken en te publiceren.
 
 ```json
 {
@@ -94,57 +906,11 @@ Als de reactie succesvol was, worden de `id` en de overeenkomstige `etag` van uw
 }
 ```
 
-### Een gegevensstroom bijwerken
+## Uw conceptgegevensstroom publiceren {#publish-your-draft-dataflow}
 
-Als u uw concept wilt bijwerken, vraagt u de PATCH aan `/flows` eindpunt terwijl het verstrekken van identiteitskaart van dataflow die u wilt bijwerken. Tijdens deze stap moet u ook een `If-Match` header parameter, die overeenkomt met de `etag` van de gegevensstroom die u wilt bijwerken.
-
-**API-indeling**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Verzoek**
-
-Met de volgende verzoeken voegt u toewijzingstransformaties toe aan de opgestelde gegevensstroom.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/c9751426-dff8-49b0-965f-50defcf4187b' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: "69057131-0000-0200-0000-640f48320000"' \
-  -d '[
-        {
-          "op": "add",
-          "path": "/transformations",
-          "value": [
-              {
-                  "name": "Mapping",
-                  "params": {
-                      "mappingId": "44d42ed27c46499a80eb0c0705c38cbd",
-                      "mappingVersion": 0
-                  }
-              }
-          ]
-      }
-  ]'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert uw flow-id en `etag`. Om de wijziging te verifiëren, kunt u een verzoek van de GET indienen aan `/flows` eindpunt terwijl het verstrekken van uw stroom ID.
-
-```json
-{
-  "id": "c9751426-dff8-49b0-965f-50defcf4187b",
-  "etag": "\"69057131-0000-0200-0000-640f48320000\""
-}
-```
-
-### Een gegevensstroom publiceren
+>[!NOTE]
+>
+>U kunt geen gegevensstroom publiceren als zijn bijbehorende bron en doelverbindingen nog in ontwerpstaat zijn. Zorg ervoor dat uw bron- en doelverbindingen eerst worden gepubliceerd voordat u uw gegevensstroom publiceert.
 
 Wanneer uw concept klaar is om te worden gepubliceerd, kunt u de POST `/flows` eindpunt terwijl het verstrekken van identiteitskaart van het ontwerp dataflow die u wilt publiceren, evenals een actieverrichting voor het publiceren.
 
@@ -166,6 +932,7 @@ Met het volgende verzoek wordt uw conceptgegevensstroom gepubliceerd.
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows/c9751426-dff8-49b0-965f-50defcf4187b/action?op=publish' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -182,6 +949,6 @@ Een geslaagde reactie retourneert de id en de bijbehorende `etag` van uw gegeven
 }
 ```
 
-### Een gegevensstroom verwijderen
+## Volgende stappen
 
-Als u de gegevensstroom wilt verwijderen, vraagt u de DELETE aan `/flows` eindpunt terwijl het verstrekken van identiteitskaart van dataflow die u wilt schrappen. Voor gedetailleerde stappen over hoe te om een gegevensstroom te schrappen gebruikend de Dienst API van de Stroom, lees de gids op [verwijderen, een gegevensstroom in de API](./delete-dataflows.md).
+Aan de hand van deze zelfstudie hebt u geleerd hoe u concepten van uw [!DNL Flow Service] entiteiten en deze concepten publiceren. Lees voor meer informatie over bronnen de [overzicht van bronnen](../../home.md).
