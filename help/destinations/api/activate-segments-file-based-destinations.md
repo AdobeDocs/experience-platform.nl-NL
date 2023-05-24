@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '4331'
 ht-degree: 0%

@@ -1,16 +1,16 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform-toegankelijkheid
-user-guide-description: Leer over de verbintenis van de Experience Platform om toegankelijke en inclusieve eigenschappen aan alle individuen te verstrekken.
+user-guide-title: Toegankelijkheid van Adobe Experience Platform
+user-guide-description: Meer informatie over de toezegging van het Experience Platform om alle individuen toegankelijke en inclusieve functies te bieden.
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 4%
+ht-degree: 50%
 
 ---
 
 
-# Adobe Experience Platform-toegankelijkheid {#accessibility}
+# Toegankelijkheid van Adobe Experience Platform {#accessibility}
 
 * [Overzicht van toegankelijkheid](home.md)
 * [Toegankelijkheidsfuncties](features.md)

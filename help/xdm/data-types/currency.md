@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype voor valu
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '125'
+source-wordcount: '122'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 | `conversionDate` | DateTime | Een tijdstempel met het tijdstip waarop de valutaomrekening is uitgevoerd. |
 | `currencyCode` | Tekenreeks | Een ISO 4217-code die het type valuta aangeeft dat `amount` vertegenwoordigt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

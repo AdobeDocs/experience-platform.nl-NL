@@ -6,7 +6,7 @@ description: Leer hoe het namespacing in het Model van de Gegevens van de Ervari
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Hier volgt een voorbeeldschema voor een product in de standaard XDM-syntaxis. Me
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Velden die worden geleverd door bronnen van leveranciers, gebruiken hun eigen unieke naamruimten. In dit voorbeeld: `https://ns.adobe.com/vendorA/product` de naamruimte van de leverancier is, en `stockNumber` is de veldnaam. |
 | `tenantId:internalSku` | De gebieden die door uw organisatie worden bepaald gebruiken uw unieke huurdersidentiteitskaart als hun namespace. In dit voorbeeld: `tenantId` is de huurdersnaamruimte (`https://ns.adobe.com/tenantId`), en `internalSku` is de veldnaam. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Compatibiliteitsmodus {#compatibility}
 

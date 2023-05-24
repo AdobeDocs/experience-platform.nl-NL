@@ -6,7 +6,7 @@ description: Dit document verstrekt een overzicht van de het schemagebiedgroep v
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '177'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 | `commerce` | [Commerce](../../data-types/commerce.md) | Een object dat productretourneert, garantieregistratie en processen voor winkelwagentjes/bestellingen beschrijft. |
 | `productListItems` | Array van [Objecten in de productlijst](../../data-types/product-list-item.md) | Een lijst met items die de door een klant geselecteerde producten vertegenwoordigen, met specifieke opties en prijzen op een bepaald tijdstip (die kunnen verschillen van de productregistratie). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

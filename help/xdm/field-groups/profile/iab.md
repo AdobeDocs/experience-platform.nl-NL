@@ -6,7 +6,7 @@ description: Dit document verstrekt een overzicht van de IAB TCF 2.0 het gebieds
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 | --- | --- | --- |
 | `identityPrivacyInfo` | Kaart | Een map-type object dat de individuele identiteitswaarden van een klant koppelt aan verschillende TCF toestemmingstekenreeksen. Hieronder ziet u een voorbeeld van de structuur van dit object. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Het volgende JSON demonstreert de structuur van de `identityPrivacyInfo` kaart.
 

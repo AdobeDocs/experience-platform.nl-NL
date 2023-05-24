@@ -1,10 +1,11 @@
 ---
 title: Gegevenstype implementatiedetails
 description: Dit document biedt een overzicht van het gegevenstype Experience Data Model (XDM) van de implementatiedetails.
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 0%
 | `name` | Tekenreeks | De id voor de SDK of het eindpunt. Alle SDK&#39;s of eindpunten worden geïdentificeerd aan de hand van een URI, inclusief extensies. |
 | `version` | Tekenreeks | De versie van de API of SDK. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

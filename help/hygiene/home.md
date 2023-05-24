@@ -46,7 +46,7 @@ Verzoeken om gegevens te verwijderen en gegevenssets te laten vervallen hebben e
 
 Het volgende gebeurt wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expiration.md) wordt gemaakt:
 
-| Stage | Tijd na geplande vervaldatum | Beschrijving |
+| Stadium | Tijd na geplande vervaldatum | Beschrijving |
 | --- | --- | --- |
 | Verzoek is ingediend | 0 uur | Een gegevensbeheerder of privacyanalist dient een verzoek in om een dataset op een bepaald tijdstip te laten verlopen. De aanvraag is zichtbaar in het dialoogvenster [!UICONTROL Data Hygiene UI] nadat de aanvraag is ingediend en in behandeling blijft tot de geplande vervaldatum, waarna de aanvraag zal worden uitgevoerd. |
 | Gegevensset wordt verwijderd | 1 uur | De dataset wordt geschrapt van [inventarisatiepagina van gegevensset](../catalog/datasets/user-guide.md) in de gebruikersinterface. De gegevens in het datumpeer worden slechts zachte geschrapt, en zullen zo tot het eind van het proces blijven, waarna het hard zal worden geschrapt. |

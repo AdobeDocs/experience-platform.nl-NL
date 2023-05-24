@@ -2,8 +2,8 @@
 title: Adobe Journey Optimizer gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe road optimizer;renderDecisions;surfaces;decisions;proposities;scope;schema
-exl-id: e608952c-9598-11ed-b382-d72064651cac
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -148,5 +148,3 @@ Voorbeeld Journey Optimizer-inhoudsvoorstel:
 Voor foutopsporing in Adobe Journey Optimizer-implementaties kunt u [[!DNL Web SDK] foutopsporing](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] foutopsporingssporen zijn beschikbaar bij het oplossen van problemen met [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Controleren op gebeurtenissen met de opdracht `AJO:` voorvoegsel.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)
-
-

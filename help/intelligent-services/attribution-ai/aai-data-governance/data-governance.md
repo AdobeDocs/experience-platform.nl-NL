@@ -4,7 +4,8 @@ solution: Experience Platform
 feature: Attribution AI
 title: Beheer van gegevens in Attribution AI
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 Eventuele instellingen met betrekking tot gegevensbeheer in Attribution AI worden overgenomen van Adobe Experience Platform.
 
-## Data Governance {#governance}
+## Gegevensbeheer {#governance}
 
 De integratie tussen Attribution AI en Adobe Experience Platform Data Governance geeft u de capaciteit om uw gegevens door zijn reis door Platform te controleren en te begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
 

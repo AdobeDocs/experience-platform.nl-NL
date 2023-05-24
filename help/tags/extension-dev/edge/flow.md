@@ -1,7 +1,8 @@
 ---
 title: Edge Extension Flow
 description: Leer hoe de componenten van een randuitbreiding in Adobe Experience Platform met elkaar in runtime communiceren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -26,8 +27,8 @@ In het volgende diagram kunt u het verband tussen gebeurtenissen, voorwaarden en
 
 De stroom van de regelverwerking bevat de volgende fasen:
 
-1. De `settings` en de `trigger` methode worden verstrekt aan de module van de gebeurtenisbibliotheek bij opstarten.
+1. De `settings` en de `trigger` Deze methode wordt bij het opstarten aan de module van de gebeurtenisbibliotheek gegeven.
 1. Wanneer de module van de gebeurtenisbibliotheek bepaalt de gebeurtenis is voorgekomen, roept de module van de gebeurtenisbibliotheek `trigger`.
-1. Het Platform gaat `settings` in de voorwaarde-type van de regel bibliotheekmodules over waar de voorwaarden dan worden geëvalueerd.
+1. Platform passeert `settings` in de voorwaarde-type van de regel bibliotheekmodules waar de voorwaarden dan worden geëvalueerd.
 1. Elk voorwaardetype keert terug of een voorwaarde aan waar evalueert.
 1. Als alle voorwaarden overgaan, worden de acties van de regel uitgevoerd.

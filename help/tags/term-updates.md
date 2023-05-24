@@ -1,10 +1,11 @@
 ---
 title: Terminologie-updates
 description: Een volledige lijst met termen en UI-elementen die worden beïnvloed door de Adobe Experience Platform Launch-herbranding.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+exl-id: 93dc0abf-c80d-4a67-bf0c-3fb09ca915a2
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -16,8 +17,8 @@ Daarom wordt de naam van Platform launch en diverse bijbehorende mogelijkheden g
 
 In de volgende tabel worden de termen weergegeven die in de productdocumentatie zijn bijgewerkt:
 
-| Vorige termijn | Bijgewerkte termijn |
+| Vorige termijn | Bijgewerkte term |
 |---|---|
 | platform launch (clientzijde) | [Tags](./home.md) |
 | platform launch Server-zijde | [Gebeurtenis doorsturen](./ui/event-forwarding/overview.md) |
-| Edge-configuraties | [DataStreams](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) |
+| Edge-configuraties | [Gegevensstromen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) |

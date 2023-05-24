@@ -6,7 +6,7 @@ description: Dit document verstrekt een overzicht van het de gegevenstype van de
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '597'
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 8%
 | `topUp` | Tekenreeks | Beschrijft de overeengekomen voorwaarden voor hoe de verbruiksaspecten van een abonnement tijdens een factureringsperiode worden teruggekocht. |
 | `type` | Tekenreeks | De omvang van het recht in verhouding tot het aantal personen dat onder het abonnement valt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
@@ -77,4 +77,4 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstyp
 | `storageCapacity` | Tekenreeks | De opslagcapaciteit van het apparaat. |
 | `type` | Tekenreeks | Het apparaattype. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

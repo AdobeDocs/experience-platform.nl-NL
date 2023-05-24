@@ -5,7 +5,7 @@ description: De onderstaande tabellen bevatten de toewijzingen tussen de bronvel
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `salutation` | `person.name.courtesyTitle` |
 | `telephone1` | `workPhone.number` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Leads {#leads}
 
@@ -96,7 +96,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `salutation` | `person.name.courtesyTitle` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Accounts {#accounts}
 
@@ -133,7 +133,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `websiteurl` | `accountOrganization.website` |
 | `concat(accountid,"@${CRM_ORG_ID}.Dynamics")` | `accountKey.sourceKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kansen {#opportunities}
 
@@ -157,7 +157,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `salesstage` | `opportunityStage` |
 | `stepname` | `nextStep` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Contactrollen opportunity {#opportunity-contact-roles}
 
@@ -175,7 +175,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `record1objecttypecode` | *Een aangepaste veldgroep moet worden gedefinieerd als een doelschema.* Zie de appendix sectie voor stappen op [hoe te om een het type van picklist brongebied aan een doelXDM schema in kaart te brengen](#picklist-type-fields) voor meer informatie . | Voor een lijst met mogelijke waarden en labels voor de `record1objecttypecode` bronveld, zie deze [[!DNL Microsoft Dynamics] referentiedocument van verbindingsentiteit](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
 | `record2objecttypecode` | *Een aangepaste veldgroep moet worden gedefinieerd als een doelschema.* Zie de appendix sectie voor stappen op [hoe te om een het type van picklist brongebied aan een doelXDM schema in kaart te brengen](#picklist-type-fields) voor meer informatie . | Voor een lijst met mogelijke waarden en labels voor de `record2objecttypecode` bronveld, zie deze [[!DNL Microsoft Dynamics] referentiedocument van verbindingsentiteit](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campagnes {#campaigns}
 
@@ -200,7 +200,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `utcconversiontimezonecode` | `timeZone` |
 | `utcconversiontimezonecode` | `timezoneName` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Marketinglijst {#marketing-list}
 
@@ -215,7 +215,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Leden van de marketinglijst {#marketing-list-members}
 
@@ -229,7 +229,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aanhangsel
 

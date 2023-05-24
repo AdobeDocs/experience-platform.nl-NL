@@ -6,8 +6,8 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype voor brow
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 4%
+source-wordcount: '259'
+ht-degree: 5%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 | `viewportHeight` | Geheel | De verticale grootte in pixels van het venster waarin de gebeurtenis werd weergegeven. Voor een webweergavegebeurtenis is dit de hoogte van de viewport van de browser. |
 | `viewportWidth` | Geheel | De horizontale grootte in pixels van het venster waarin de gebeurtenis werd weergegeven. Voor een webweergavegebeurtenis is dit de breedte van de viewport van de browser. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van de klasse Individueel profiel 
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De [!DNL XDM Individual Profile] -klasse zelf biedt meerdere door het systeem ge
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Compatibele veldgroepen {#field-groups}
 

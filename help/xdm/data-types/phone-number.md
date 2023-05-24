@@ -6,7 +6,7 @@ description: Dit document verstrekt een overzicht van het het gegevenstype van h
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 | `statusReason` | Een beschrijving van de huidige status. |
 | `validity` | Een niveau van technische correctheid van het telefoonaantal. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer details op het gegevenstype van het telefoonaantal, verwijs naar de openbare bewaarplaats XDM:
 

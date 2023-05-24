@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het gegevenstype Data Model (X
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '182'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 | `name` | Tekenreeks | De normatieve naam die voor deze webkoppeling wordt gebruikt. Dit wordt gebruikt voor classificatiedoeleinden. |
 | `type` | Tekenreeks | Het koppelingstype. Deze eigenschap moet gelijk zijn aan een van de volgende opsommingswaarden: <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

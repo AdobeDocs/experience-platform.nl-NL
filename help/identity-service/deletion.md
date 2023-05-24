@@ -1,9 +1,10 @@
 ---
 title: Verwijderen in identiteitsservice
 description: Dit document biedt een overzicht van de verschillende methoden waarmee u uw identiteitsgegevens in Experience Platform kunt verwijderen en om duidelijk te maken hoe identiteitsgrafieken worden beïnvloed.
-source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
+exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1194'
 ht-degree: 0%
 
 ---
@@ -40,14 +41,14 @@ Privacy Service verwerkt verzoeken van klanten om toegang, om zich uit verkoop t
 
 In de onderstaande tabel wordt een uitsplitsing gegeven van één enkele identiteitsschrapping in de Privacy Service:
 
-| Eén identiteit verwijderen | Privacy Service |
+| Eén identiteit verwijderen | Privacyservice |
 | --- | --- |
 | Gebruikskwesties | Alleen gegevensprivacyverzoeken (GDPR, CCPA). |
 | Geschatte vertraging | Dagen tot weken |
 | Betrokken services | Eén identiteitsverwijdering in Privacy Service stelt u in staat te selecteren of gegevens worden verwijderd uit Identiteitsservice, Real-Time Klantprofiel of Gegevensbestand. |
 | Verwijderingspatronen | Verwijder een identiteit uit Identiteitsservice. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gegevensset verwijderen
 
@@ -70,7 +71,7 @@ De onderstaande tabel geeft een overzicht van de verschillen tussen gegevenssetv
 | Betrokken services | De schrapping van de gegevensreeks door de Dienst van de Catalogus schrapt gegevens van de Dienst van de Identiteit, het Profiel van de Klant in real time, en het gegevenspeer. | De schrapping van de gegevensreeks door de hygiëne van Gegevens schrapt gegevens van de Dienst van de Identiteit, het Profiel van de Klant in real time, en het gegevenspeer. |
 | Verwijderingspatroon | Verbonden identiteiten verwijderen uit de identiteitsdienst die door een bepaalde gegevensset is ingesteld. | Schrap verbonden identiteiten van de Dienst van de Identiteit die door een bepaalde dataset wordt gevestigd, die op vervalprogramma wordt gebaseerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verschillende statussen van identiteitsgrafieken na verwijdering
 
@@ -84,7 +85,7 @@ Hieronder ziet u een overzicht van de mogelijke effecten die verwijderingen kunn
 | Volledige verwijdering | Een grafiek moet minstens twee gekoppelde identiteiten hebben om te bestaan. Daarom als een schrappingsverzoek in de verwijdering van alle bestaande verbindingen binnen een grafiek resulteert, dan zal de grafiek volledig worden verwijderd. |
 | Geen wijziging | Een grafiek zal niet beïnvloed worden als een bepaald schrappingsverzoek een identiteit of dataset bevat die niet met om het even welk lid van de grafiek wordt geassocieerd. Bovendien, wordt een grafiek niet bijgewerkt zelfs als het schrappingsverzoek een verband tussen een dataset of een identiteit-datasetcombinatie verwijdert, gegeven dat de verbinding door een andere verbinding werd gevestigd die niet werd geschrapt. Dit betekent dat als een verbinding in twee verschillende datasets bestaat, de grafiek niet zal worden bijgewerkt omdat slechts één van de datasets wordt verwijderd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 

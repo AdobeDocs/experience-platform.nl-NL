@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van de configuraties die u moet vo
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '519'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ OAuth 2 verfrist code voor veilige toegang tot een toepassing door een tijdelijk
 | `authSpec.spec.properties.requestParameterOverride` | Hiermee kunt u referentie-parameters opgeven die moeten worden overschreven bij verificatie. |
 | `authSpec.spec.required` | Toont de geloofsbrieven die worden vereist om voor authentiek te verklaren. | `accessToken` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 ### Basisverificatie
@@ -177,7 +177,7 @@ Basisverificatie is een verificatietype waarmee u toegang krijgt tot uw toepassi
 | `authSpec.spec.properties.password` | Het accountwachtwoord dat aan uw toepassing is gekoppeld. |
 | `authSpec.spec.required` | Hiermee geeft u de velden op die verplicht moeten worden ingevuld in het Platform. | `username` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Voorbeeld van verificatiespecificatie
 

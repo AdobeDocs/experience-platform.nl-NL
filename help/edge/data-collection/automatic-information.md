@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # Automatisch verzamelde gegevens
 
-De SDK van het Web van Adobe Experience Platform verzamelt automatisch een aantal stukken informatie zonder enige speciale configuratie. Deze informatie kan echter desgewenst worden uitgeschakeld met de optie `context` in de opdracht `configure`. [Zie De SDK](../fundamentals/configuring-the-sdk.md) configureren. Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
+De SDK van het Web van Adobe Experience Platform verzamelt automatisch een aantal stukken informatie zonder enige speciale configuratie. Deze informatie kan echter, indien nodig, worden uitgeschakeld met de `context` in de `configure` gebruiken. [Zie De SDK configureren](../fundamentals/configuring-the-sdk.md). Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
 
 ## Apparaat (`device`)
 
@@ -82,7 +82,7 @@ Informatie over de SDK die wordt gebruikt om de gebeurtenis te verzamelen.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-De id van de Software Development Kit (SDK).  In dit veld wordt een URI gebruikt om de unieke id&#39;s van verschillende softwarebibliotheken te verbeteren. Wanneer de standalone bibliotheek wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy`. Wanneer de bibliotheek als deel van de markeringsuitbreiding wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy+reactor`.
+De id van de Software Development Kit (SDK).  In dit veld wordt een URI gebruikt om de unieke id&#39;s van verschillende softwarebibliotheken te verbeteren. Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy`. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Versie
 
@@ -90,7 +90,7 @@ De id van de Software Development Kit (SDK).  In dit veld wordt een URI gebruikt
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde eenvoudig de bibliotheekversie. Wanneer de bibliotheek als deel van de markeringsuitbreiding wordt gebruikt, is dit de bibliotheekversie en de versie van de marktextensie ging met &quot;+&quot; samen. Als de bibliotheekversie bijvoorbeeld 2.1.0 was en de versie van de tagextensie 2.1.3 was, zou de waarde `2.1.0+2.1.3` zijn.
+Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde eenvoudig de bibliotheekversie. Wanneer de bibliotheek als deel van de markeringsuitbreiding wordt gebruikt, is dit de bibliotheekversie en de versie van de marktextensie ging met &quot;+&quot; samen. Als de bibliotheekversie bijvoorbeeld 2.1.0 is en de extensieversie 2.1.3 is, is de waarde `2.1.0+2.1.3`.
 
 ### Omgeving
 
@@ -98,7 +98,7 @@ Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde eenvoudig de bi
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-De omgeving waarin de gegevens zijn verzameld. Deze wordt altijd ingesteld op `browser`.
+De omgeving waarin de gegevens zijn verzameld. Dit is altijd ingesteld op `browser`.
 
 ## Context plaatsen (`placeContext`)
 
@@ -130,7 +130,7 @@ Het tijdstempel van de gebeurtenis.  Dit gedeelte van context kan niet worden ve
 
 UTC-tijdstempel voor de eindgebruiker in de vereenvoudigde uitgebreide ISO-indeling [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
-## Webdetails (`web`)
+## Webgegevens (`web`)
 
 Details over de pagina waarop de gebruiker staat.
 

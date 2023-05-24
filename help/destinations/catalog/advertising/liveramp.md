@@ -3,13 +3,13 @@ title: (Alpha) [!DNL LiveRamp SFTP] verbinding
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 hidefromtoc: true
 hide: true
-source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
+exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
+source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
 workflow-type: tm+mt
 source-wordcount: '1647'
 ht-degree: 0%
 
 ---
-
 
 # (Alpha) [!DNL LiveRamp - SFTP] verbinding {#liveramp-destination}
 

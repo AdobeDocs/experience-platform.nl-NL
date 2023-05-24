@@ -4,7 +4,7 @@ description: Het /quota eindpunt in de Hygiene API van Gegevens staat u toe om u
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '347'
 ht-degree: 1%
 
 ---
@@ -83,4 +83,4 @@ Als u met succes reageert, worden de details van uw quota voor gegevenshygiëne 
 | --- | --- |
 | `quotas` | Hier worden de quota-gegevens voor elk taaktype voor gegevenshygiëne weergegeven. Elk quotaobject bevat de volgende eigenschappen:<ul><li>`name`: Het taaktype voor gegevenshygiëne:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Opnemen wordt verwijderd</li></ul></li><li>`description`: Een beschrijving van het taaktype voor gegevenshygiëne.</li><li>`consumed`: Het aantal banen van dit type loopt in de huidige maandelijkse periode.</li><li>`quota`: De quota voor dit taaktype. Voor het verwijderen en bijwerken van records geeft dit het aantal taken aan dat voor elke maandelijkse periode kan worden uitgevoerd. Voor gegevenssetvervaldatums, vertegenwoordigt dit het aantal banen die op om het even welk bepaald ogenblik gelijktijdig actief kunnen zijn.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

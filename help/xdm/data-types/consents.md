@@ -5,7 +5,7 @@ description: Het gegevenstype Consent for Privacy, Personalization and Marketing
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '2015'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 | --- | --- |
 | `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie de [aanhangsel](#choice-values) voor aanvaarde waarden en definities. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `adID`
 
@@ -159,7 +159,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 | `idType` | Het type advertentie-id: `IDFA` voor Apple-id voor adverteerders of `GAID` voor Google Advertiser ID, ook wel Android Advertiser ID (AID) genoemd. |
 | `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie de [aanhangsel](#choice-values) voor aanvaarde waarden en definities. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `share`
 
@@ -175,7 +175,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 | --- | --- |
 | `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie de [aanhangsel](#choice-values) voor aanvaarde waarden en definities. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `personalize` {#personalize}
 
@@ -200,7 +200,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 | `content` | Vertegenwoordigt de voorkeuren van de klant voor gepersonaliseerde inhoud op uw website of toepassing. |
 | `val` | De door de klant opgegeven voorkeur voor personalisatie voor het opgegeven gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis de personalisatie moet plaatsvinden. Zie de [aanhangsel](#choice-values) voor aanvaarde waarden en definities. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `marketing` {#marketing}
 
@@ -236,7 +236,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 | `time` | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. Als de tijdstempel voor een bepaalde voorkeur gelijk is aan de tijdstempel onder `metadata`In dat geval hoeft dit veld niet voor die voorkeur te worden ingesteld. |
 | `reason` | Wanneer een klant kiest uit een geval van het marketinggebruik, vertegenwoordigt dit koordgebied de reden waarom de klant uit opteerde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `metadata`
 
@@ -252,7 +252,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 | --- | --- |
 | `time` | Een ISO 8601-tijdstempel voor de laatste keer dat de toestemming en voorkeuren van de klant zijn bijgewerkt. Dit veld kan worden gebruikt in plaats van tijdstempels toe te passen op individuele voorkeuren om het laden en de complexiteit te verminderen. Een `time` waarde onder een individuele voorkeur heeft voorrang op de `metadata` tijdstempel voor die voorkeur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gegevens invoegen met behulp van het gegevenstype {#ingest}
 
@@ -292,7 +292,7 @@ In de volgende tabel worden de toegestane waarden voor `val`:
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Geaccepteerde waarden voor `preferred` {#preferred-values}
 
@@ -314,7 +314,7 @@ In de volgende tabel worden de toegestane waarden voor `preferred`:
 | `none` | Geen voorkeurskanaal. |
 | `unknown` | Het voorkeurkanaal is onbekend. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Volledig [!UICONTROL Consents and Preferences] schema {#full-schema}
 

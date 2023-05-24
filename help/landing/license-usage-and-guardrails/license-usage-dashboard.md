@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiksdashboard;dashboard;licentiegebruik;machtiging;consumptie
 title: Licentiegebruiksdashboard
-description: 'De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over het gebruik van licenties voor uw organisatie kunt bekijken. '
+description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over het gebruik van licenties voor uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 8cf34653-acf6-4af3-af7b-6c07e68bbc03
 source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb

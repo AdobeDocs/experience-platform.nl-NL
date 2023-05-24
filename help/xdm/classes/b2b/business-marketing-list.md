@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de XDM Business Marketing List
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '292'
 ht-degree: 1%
 
 ---
@@ -29,6 +29,6 @@ ht-degree: 1%
 | `marketingListID` | Tekenreeks | Een unieke id voor de marketinglijstentiteit. |
 | `marketingListName` | Tekenreeks | De naam van de marketinglijst. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de handleiding op [schema-relaties in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) om te leren hoe deze klasse conceptueel op de andere klassen B2B betrekking heeft en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

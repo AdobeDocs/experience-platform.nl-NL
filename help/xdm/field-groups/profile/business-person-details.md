@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de XDM Business Person Details
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 2%
 | `isDeleted` | Boolean | Geeft aan of deze persoon is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
 | `organizations` | Array van tekenreeksen | Een lijst van organisatienamen waar de persoon werkt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

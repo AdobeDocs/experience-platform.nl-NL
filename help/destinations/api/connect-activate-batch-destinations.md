@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '3410'
+source-wordcount: '3392'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ Voor uw verwijzing, bevat de lijst hieronder de verbindingsspecificaties - IDs v
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
 | SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinding maken met uw [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
 
@@ -174,7 +174,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | U kunt desgewenst een beschrijving voor de basisverbinding opgeven. |
 | `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor de [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -227,7 +227,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `baseConnectionId` | Gebruik de basisverbindings-id die u in de vorige stap hebt verkregen. |
 | `data.format` | `CSV` is momenteel de enige ondersteunde indeling voor het exporteren van bestanden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -531,7 +531,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `auth.specname` | Wijst op het authentificatieformaat voor de bestemming. Om te weten te komen specName voor uw bestemming, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `authSpec.name` in de reactie. <br> Voor Adobe Campaign-doelen kunt u bijvoorbeeld elk van de volgende handelingen uitvoeren `S3`, `SFTP with Password`, of `SFTP with SSH Key`. |
 | `params` | Afhankelijk van het doel waarmee u verbinding maakt, moet u verschillende vereiste verificatieparameters opgeven. Voor Amazon S3-verbindingen moet u uw toegangs-id en geheime sleutel opgeven op de opslaglocatie van Amazon S3. <br> Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `authSpec.spec.required` in de reactie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -848,7 +848,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.path` | Geef voor S3-verbindingen het bestandspad op in de opslaglocatie waar de bestanden worden geëxporteerd. |
 | `params.format` | `CSV` is momenteel het enige ondersteunde exporttype voor bestanden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -1041,7 +1041,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop segmentleden stoppen met exporteren naar de bestemming. |
 | `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het segment moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

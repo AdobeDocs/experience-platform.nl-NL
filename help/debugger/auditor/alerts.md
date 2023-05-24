@@ -4,7 +4,7 @@ description: Leer hoe de controlefunctie in Adobe Experience Platform Debugger w
 exl-id: ac6f8675-6c34-48b4-b5dd-48e92af217fd
 source-git-commit: 10a5605c40143b58f6ba0108cc087956aa929866
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '634'
 ht-degree: 2%
 
 ---
@@ -31,4 +31,4 @@ Waarschuwingen tonen problemen waarvan je op de hoogte moet zijn, maar die geen 
 | Starten - moet asynchroon worden geïmplementeerd | 0 | Tags moeten asynchroon worden geïmplementeerd voor optimale prestaties. | Inclusief de `async` parameter in het inlinescript om juiste markeringsfunctionaliteit te verzekeren <br><br>[Aanvullende informatie](../../tags/ui/client-side/asynchronous-deployment.md) |
 | Doel - Inhoud in `mboxDefault` | 0 | Inhoud moet bestaan in `mboxDefault` wanneer u `at.js`. | Controleer of de inhoud beschikbaar is. <br><br>[Aanvullende informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

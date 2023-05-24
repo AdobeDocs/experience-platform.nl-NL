@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de klasse XDM Business Campaig
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Een samengestelde id voor de persoon die lid is van de bijbehorende campagne. |
 | `_id` | Tekenreeks | Een unieke id voor de record. Dit is een door het systeem gegenereerde waarde die los staat van de `campaignMemberID`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u wilt leren hoe deze klasse conceptueel betrekking heeft op de andere B2B-klassen en hoe u deze relaties kunt instellen in de gebruikersinterface van Adobe Experience Platform, raadpleegt u de handleiding op [schema-relaties in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 

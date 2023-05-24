@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent 
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1791'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ De [!DNL XDM ExperienceEvent] De klasse zelf verstrekt verscheidene op tijd-reek
 | `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor het individu waarop de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Voor een juist gebruik van dit veld voor [Klantprofiel in realtime](../../profile/home.md)Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan . |
 | `timestamp`<br>**(Vereist)** | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden, opgemaakt volgens [RFC 3339 — Sectie 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Deze tijdstempel moet in het verleden voorkomen. Zie de onderstaande sectie over [tijdstempels](#timestamps) voor beste praktijken op het gebruik van dit gebied. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aanbevolen procedures voor het modelleren van gebeurtenissen
 
@@ -144,7 +144,7 @@ In de volgende tabel worden de toegestane waarden voor `eventType`, alsmede de d
 | `web.webinteraction.linkClicks` | Een koppeling is een of meer keer geselecteerd. |
 | `web.webpagedetails.pageViews` | Een webpagina heeft een of meer weergaven ontvangen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Voorgestelde waarden voor `producedBy` {#producedBy}
 

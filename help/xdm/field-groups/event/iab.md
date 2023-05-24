@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van de IAB TCF 2.0-groep met het s
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 | --- | --- | --- |
 | `consentStrings` | Array van [Goedkeuringsstrings](../../data-types/consent-string.md) | Een array van waarden van de toestemmingstekenreeks die aan de gebeurtenis zijn gekoppeld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de handleiding op [IAB TCF 2.0-ondersteuning in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruik van deze veldgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
 

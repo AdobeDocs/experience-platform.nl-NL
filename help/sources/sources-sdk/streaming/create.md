@@ -3,9 +3,10 @@ title: Een nieuwe verbindingsspecificatie maken voor Streaming SDK met de Flow S
 description: Het volgende document verstrekt stappen op hoe te om een verbindingsspecificatie tot stand te brengen gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen te integreren.
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,7 @@ Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 | {your_source}-label.txt | De naam van de bron zoals deze moet worden weergegeven in de catalogus met bronnen van het Experience Platform. | Medallia |
 | {your_source}-connectionSpec.json | Een JSON-bestand dat de verbindingsspecificatie van uw bron bevat. Dit bestand is in eerste instantie niet vereist omdat u de verbindingsspecificatie invult als u deze handleiding invult. | `medallia-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

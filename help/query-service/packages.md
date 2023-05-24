@@ -4,7 +4,7 @@ description: Het volgende document schetst de pakketten mogelijkheden en product
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '714'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op 
 | Bewakingscapaciteit | Ja | Ja |
 | Setup-capaciteit voor query-waarschuwingen | Nee | Ja |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Toegangsbeheer
 
@@ -58,7 +58,7 @@ In de volgende tabel worden de effecten van de [!DNL Manage Queries] machtiging:
 | [!DNL Manage Queries] (zonder toestemming voor schrijven van gegevens) | Biedt toegang tot ad-hocquery&#39;s |
 | [!DNL Manage Queries] (met machtiging voor schrijven van gegevens) | Biedt toegang tot het uitvoeren van batchquery&#39;s |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sandbox-ondersteuning
 

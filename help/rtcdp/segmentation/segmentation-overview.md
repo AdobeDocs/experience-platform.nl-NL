@@ -28,7 +28,7 @@ De segmentatie is het proces om specifieke attributen of gedrag te bepalen die d
 
 De AI van de klant, inbegrepen bij Real-time Customer Data Platform, voorziet u van de macht om klantenvoorspellingen op het individuele niveau met uitleg te produceren.
 
-Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een klant waarschijnlijk zal doen en waarom. Bovendien kunt u profiteren van de voorspellingen en inzichten van de Klant AI om de ervaringen van de Klant te personaliseren door de meest aangewezen aanbiedingen en het overseinen te dienen. Klanten-AI kunnen hulp bieden bij:
+Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een klant waarschijnlijk zal doen en waarom. Bovendien kunt u profiteren van de voorspellingen en inzichten van de Klant AI om de ervaringen van de Klant te personaliseren door de meest aangewezen aanbiedingen en het overseinen te dienen. Klantenservice-AI kan u helpen bij:
 
 * Het verstrekken van zeer nauwkeurige klantenaandrijvingsmodellen voor sterkere segmentatie en het richten.
 * Inzicht in de invloedrijke factoren en de waarschijnlijkheid achter bepaalde gedragingen van klanten.

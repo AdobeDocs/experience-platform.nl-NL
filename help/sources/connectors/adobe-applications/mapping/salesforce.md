@@ -5,7 +5,7 @@ description: De onderstaande tabellen bevatten de toewijzingen tussen Salesforce
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `"Contact"` | `b2b.personType` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Lood {#lead}
 
@@ -123,7 +123,7 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 | `"Lead"` | `b2b.personType` |
 | `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Account {#account}
 
@@ -179,7 +179,7 @@ Lees de [Overzicht van XDM Business Account](../../../../xdm/classes/b2b/busines
 | `Type` | `accountType` |
 | `Website` | `accountOrganization.website` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunity {#opportunity}
 
@@ -220,7 +220,7 @@ Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/bus
 | `Type` | `opportunityType` |
 | `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Contactrol opportunity {#opportunity-contact-role}
 
@@ -246,7 +246,7 @@ Lees de [Overzicht van de XDM Business Opportunity Person Relatie-klasse](../../
 | `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campaign {#campaign}
 

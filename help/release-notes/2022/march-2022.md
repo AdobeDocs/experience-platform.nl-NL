@@ -4,8 +4,8 @@ description: In de release van maart 2022 staat Adobe Experience Platform vermel
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 1%
+source-wordcount: '1175'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Query Service]](#query-service)
 - [Bronnen](#sources)
 
-## Controlelogboeken {#audit-logs}
+## Auditlogboeken {#audit-logs}
 
 Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en mogelijkheden te controleren. De auditlogboeken bevatten informatie over wie wat heeft gedaan en wanneer.
 
@@ -37,7 +37,7 @@ Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en
 | Auditlogboeken voor Dataset, Schema, Klasse, Veldgroep, Gegevenstype, Sandbox, Doel, Segment, Samenvoegen, Beleid, Berekende kenmerken, Productprofiel en Account (Adobe) | Dit zijn de middelen die door auditlogboeken worden geregistreerd. Als de eigenschap wordt toegelaten, zullen de controlelogboeken automatisch worden verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten. |
 | Controleverslagen exporteren | De controlelogboeken kunnen als `CSV` of `JSON` bestand. De gegenereerde bestanden worden rechtstreeks op uw computer opgeslagen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg voor meer informatie over auditlogs in Platform de [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -67,7 +67,7 @@ Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van geb
 | --- | --- |
 | Nieuwe waarschuwingsregels | Er zijn nu twee nieuwe waarschuwingsregels beschikbaar voor bronnen die te maken hebben met gegevensinvoer. Zie het overzicht op [waarschuwingsregels](../../observability/alerts/rules.md) voor de bijgewerkte lijst met waarschuwingstypen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg voor meer informatie over waarschuwingen in Platform de [waarschuwingsoverzicht](../../observability/alerts/overview.md).
 
@@ -88,7 +88,7 @@ Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgege
 | Gesegmenteerde profielen opheffen op identiteitswidget | Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden weergegeven in een staafdiagram. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
 | Widget enkele identiteitsprofielen | Deze widget bevat een telling van de profielen van uw organisatie die slechts één type id hebben dat tot hun identiteit leidt, of een e-mail of ECID. Zie de [profielen, standaard widget-documentatie](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg voor meer informatie over profielen de [Overzicht van profieldashboards](../../dashboards/guides/profiles.md).
 
@@ -102,7 +102,7 @@ Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organ
 | --- | --- |
 | Widget aantal doelen | De widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen. Zie de [standaardwidgetdocumentatie voor doelen](../../dashboards/guides/destinations.md#standard-widgets) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de dashboards van Doelen in Platform, verwijs naar [Overzicht van doeldashboards](../../dashboards/guides/destinations.md).
 
@@ -115,7 +115,7 @@ Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen 
 | Functie | Beschrijving |
 | --- | --- |
 | Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../edge/datastreams/overview.md#create) in de UI-gids voor gegevensstromen voor meer informatie. |
-| [Edge Network Server-API](../../server-api/overview.md) | De server API staat klanten toe om met het Netwerk van de Rand van het Experience Platform in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te aandrijven. |
+| [Edge Network Server API](../../server-api/overview.md) | De server API staat klanten toe om met het Netwerk van de Rand van het Experience Platform in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te aandrijven. |
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
 
@@ -129,7 +129,7 @@ Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overz
 | --- | --- |
 | `table_exists` | De nieuwe eigenschapbevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. De opdracht retourneert een Booleaanse waarde: `true` if de tabel **doet** bestaan, en `false` als de tabel dat doet **niet** bestaan. Zie de [SQL-syntaxisdocumentatie](../../query-service/sql/syntax.md) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg voor meer informatie over de beschikbare functies de [Overzicht van Query Service](../../query-service/home.md).
 
@@ -147,6 +147,6 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 | Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de opdracht [!DNL Oracle Eloqua] bron voor naadloze invoer van gegevens uit uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) aan Platform. Zie de documentatie op [een [!DNL Oracle Eloqua] bronverbinding](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie . |
 | API-verbeteringen voor [!DNL Data Landing Zone] | De [!DNL Data Landing Zone] bron ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de [!DNL Flow Service] API. Zie de documentatie op [een [!DNL Data Landing Zone] bronverbinding](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).

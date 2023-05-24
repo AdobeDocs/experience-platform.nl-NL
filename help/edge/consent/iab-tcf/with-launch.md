@@ -81,7 +81,7 @@ De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat X
 1. Breid uit **[!UICONTROL consentString]** en vouw het eerste item uit en vul vervolgens de volgende waarden in:
 
 * `consentStandard`: IAB TCF
-* `consentStandardVersion`: 2,0
+* `consentStandardVersion`: 2.0
 * `consentStringValue`: %IAB TCF goedkeuring String%
 * `gdprApplies`: %IAB TCF toestemming GDPR%
 

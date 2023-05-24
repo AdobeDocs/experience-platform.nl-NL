@@ -1,7 +1,8 @@
 ---
 title: Notities
 description: Leer hoe u tekstuele annotaties kunt toevoegen aan bepaalde tagbronnen in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -38,10 +39,10 @@ Opmerkingen zijn opmerkingen die geen invloed hebben op het gedrag van de bronne
 
 Bij notebookbronnen wordt een smalle rail aan de rechterkant van het scherm weergegeven.  De rail bevat een pictogram voor notities.  Dit pictogram geeft het huidige aantal notities weer dat aan de bron is gekoppeld.
 
-Selecteer **[!UICONTROL Notes]** om de rechterrail uit te breiden en de nota&#39;s, met de meest recente nota&#39;s bij de bovenkant te tonen.  Als u een nieuwe notitie wilt toevoegen, typt u de notitietekst in het vak bovenaan en selecteert u **[!UICONTROL Add Note]**.
+Selecteren **[!UICONTROL Notes]** om de rechtse spoorlijn uit te breiden en de nota&#39;s te tonen, met de meest recente nota&#39;s bij de bovenkant.  Als u een nieuwe notitie wilt toevoegen, typt u de notitietekst in het vak bovenaan en selecteert u **[!UICONTROL Add Note]**.
 
 ## Overige
 
 * Opmerkingen over labelbronnen komen overeen met het gedrag van notities in DTM, omdat ze onveranderlijk zijn en niet kunnen worden bewerkt of verwijderd.
-* Wanneer het bekijken van oudere revisies van een middel, slechts worden de nota&#39;s die vóór de datum `created_at` van die revisie werden gecreeerd getoond.
+* Wanneer het bekijken van oudere revisies van een middel, slechts de nota&#39;s die vóór die revisie werden gecreeerd `created_at` de datum wordt weergegeven.
 * Wanneer u een bron verwijdert, worden alle notities die aan de bron zijn gekoppeld, ook verwijderd.

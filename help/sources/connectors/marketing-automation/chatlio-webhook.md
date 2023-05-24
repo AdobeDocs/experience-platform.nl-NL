@@ -30,7 +30,7 @@ De ondersteunde webhaken zijn:
 * Chattranscripties exporteren
 * Offlineberichten exporteren
 * Het nieuwe gesprek is begonnen
-* Bezoeker heeft niet tijdig antwoord gekregen
+* Bezoeker heeft niet tijdig een antwoord gekregen
 * Bezoeker heeft feedback gegeven na een chat
 
 ## Vereisten {#prerequisites}

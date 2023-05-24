@@ -6,7 +6,7 @@ exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '422'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Met Real-time Customer Data Platform kunt u:
 * Maak actionable inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
-## Real-time Customer Data Platform B2B Edition
+## Real-Time Customer Data Platform B2B Edition
 
 Er is ook een andere uitgave van Real-Time CDP beschikbaar om zaken-aan-zaken organisatorische behoeften aan te passen. Real-Time CDP B2B Edition is speciaal ontworpen om de functionaliteit van Real-Time CDP voor marketers uit te breiden. Het heeft verschillende mogelijkheden die binnen het ecosysteem van Adobe Experience Platform worden toegelaten om beter te passen werkend binnen een zaken-aan-zaken de dienstmodel.
 

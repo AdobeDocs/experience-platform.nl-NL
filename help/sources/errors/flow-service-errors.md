@@ -1,7 +1,8 @@
 ---
 title: Flow Service-foutberichten
 description: Leer over de foutenmeldingen die u wanneer het gebruiken van de Dienst van de Stroom voor bronnen kunt ontmoeten.
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+exl-id: af79c547-25d0-459a-8de7-eb14206a8694
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1698'
 ht-degree: 0%

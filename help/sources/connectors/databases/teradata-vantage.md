@@ -2,7 +2,8 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;teradata;het voordeel van teradata
 title: Overzicht van teradata Vantage Source Connector
 description: Leer hoe u Teradata Vantage met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
-source-git-commit: f140dac67ccd09ec1e6cab794f53e0090af55442
+exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%

@@ -2,13 +2,13 @@
 keywords: crm;CRM;crm bestemmingen;Outreach;Outreach crm destination
 title: Verbinding buiten bereik
 description: Met de Outreach-bestemming kunt u uw accountgegevens exporteren en deze activeren binnen Outreach voor uw bedrijfsbehoeften.
-source-git-commit: 27da0f8d7896fd32e8a1b828630db7e5e08185c2
+exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
+source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1655'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Outreach] verbinding
 
@@ -86,7 +86,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | <ul><li> U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Outreach] wordt bijgewerkt met de corresponderende segmentstatus van het Platform, gebaseerd op de [!UICONTROL Mapping ID] waarde die tijdens de [segment plannen](#schedule-segment-export-example) stap.</li></ul> |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li> Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 

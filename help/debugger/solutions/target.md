@@ -1,9 +1,10 @@
 ---
 title: Een Adobe Target-implementatie testen met Adobe Experience Platform Debugger
 description: Leer hoe u Adobe Experience Platform Debugger gebruikt om een website die met Adobe Target is ingeschakeld, te testen en er fouten in op te sporen.
-source-git-commit: 1ce7ac78936040d76faa3a58b92333a737fbeb66
+exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
+source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
@@ -37,7 +38,7 @@ De informatie over de globale configuratie van de implementatie wordt getoond bi
 | Algemene aanvraagnaam | De naam van de [global mbox](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/?) voor de doelimplementatie, waarbij de standaardnaam `target-global-mbox`. |
 | Gebeurtenis bij laden van pagina | Een Booleaanse waarde die aangeeft of een [page load, gebeurtenis](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/how-atjs-works/#atjs-2x-diagrams) heeft plaatsgevonden. Gebeurtenissen voor het laden van pagina&#39;s worden alleen ondersteund voor at.js 2.x. Voor niet-compatibele versies wordt deze waarde standaard ingesteld op `None`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Network Requests] {#network}
 
@@ -93,7 +94,7 @@ De volgende waarden worden vastgelegd:
 | [!DNL vst] | De [Experience Cloud Identity Service API-configuratie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
 | [!DNL webGLRenderer] | Verstrekt informatie over renderer WebGL die op de pagina wordt gebruikt, als toepasselijk. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Selecteer de tabelcel in kwestie om de details van een parameter voor een bepaalde netwerkgebeurtenis weer te geven. Er verschijnt een popover met nadere informatie over de parameter, waaronder een beschrijving en de waarde ervan. Als de waarde een JSON-object is, bevat het dialoogvenster een volledig navigeerbare weergave van de structuur van het object.
 
@@ -111,4 +112,4 @@ Selecteren **[!DNL Configuration]** om een selectie van extra het zuiveren hulpm
 | [!DNL Target Diable] | Als deze optie is ingeschakeld, worden alle functies van het doel op de pagina uitgeschakeld. Dit kan worden gebruikt om te bepalen als een specifiek aanbod van het Doel is wat de kwestie op de pagina veroorzaakt. |
 | [!DNL Target Trace] | **Opmerking**: U moet zijn aangemeld om deze functie in te schakelen.<br><br>Als deze optie is ingeschakeld, worden trackingtokens verzonden bij elke query en wordt in elke reactie een trace-object geretourneerd. `at.js` parseert de reactie `window.__targetTraces`. Elk trace-object bevat dezelfde informatie als [[!DNL Network Requests] tab], met de volgende toevoegingen:<ul><li>Een profielmomentopname, die u toestaat om attributen vóór en na verzoeken te zien.</li><li>Gelijkend en niet gematcht [activiteiten](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), waaruit blijkt waarom het huidige profiel al dan niet in aanmerking kwam voor specifieke activiteiten.<ul><li>Dit kan helpen identificeren voor welk publiek een profiel op een bepaald punt in aanmerking komt, en waarom.</li><li>Doeldocumenten bevatten meer informatie over verschillende activiteitstypen</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

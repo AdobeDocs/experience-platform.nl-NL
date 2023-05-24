@@ -184,7 +184,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
+| `rowvalidation` | (Optioneel) Hiermee wordt opgegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
 | `label` | Wanneer u een dataset met een vraag CTAS creeert, gebruik dit etiket met de waarde van `profile` om uw dataset zoals toegelaten voor profiel te etiketteren. Dit betekent dat uw dataset automatisch voor profiel duidelijk wordt aangezien het wordt gecreeerd. Zie het afgeleide document van de attributenuitbreiding voor meer informatie over het gebruik van `label`. |
 | `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 

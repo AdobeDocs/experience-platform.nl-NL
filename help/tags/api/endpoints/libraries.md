@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /libraries eindpunt in Reactor API te 
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ GET /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap die eigenaar is van de bibliotheken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ GET /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | De `id` van de bibliotheek die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -272,7 +272,7 @@ POST /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de bibliotheek onder aan het definiëren bent. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -300,7 +300,7 @@ curl -X POST \
 | `attributes.name` | **(Vereist)** Een voor mensen leesbare naam voor de bibliotheek. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -423,7 +423,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | De id van de bibliotheek waaraan u bronnen wilt toevoegen. |
 | `{RESOURCE_TYPE}` | Het type bron dat u toevoegt aan de bibliotheek. De volgende waarden worden geaccepteerd: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -456,7 +456,7 @@ curl -X POST \
 | `id` | De id van de bron die u toevoegt aan de bibliotheek. |
 | `type` | Het type bron dat u toevoegt aan de bibliotheek. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -496,7 +496,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | De id van de bibliotheek waarvan u de relaties wilt vervangen. |
 | `{RESOURCE_TYPE}` | Het type bron dat u vervangt. De volgende waarden worden geaccepteerd: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 | `id` | De id van de bron die u toevoegt aan de bibliotheek. |
 | `type` | Het type bron dat u toevoegt aan de bibliotheek. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -561,7 +561,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | De id van de bibliotheek waarvan u de bronnen wilt verwijderen. |
 | `{RESOURCE_TYPE}` | Het type bron dat u verwijdert. De volgende waarden worden geaccepteerd: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -590,7 +590,7 @@ curl -X DELETE \
 | `id` | De id van de bron die u uit de bibliotheek verwijdert. |
 | `type` | Het type bron dat u uit de bibliotheek verwijdert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -622,7 +622,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 | --- | --- |
 | `{LIBRARY_ID}` | De id van de bibliotheek die u wilt toewijzen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `id` | De id van de omgeving waaraan u de bibliotheek toewijst. |
 | `type` | Moet worden ingesteld op `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -680,7 +680,7 @@ PATCH /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | De `id` van de bibliotheek waarvan u een overgang wilt maken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -710,7 +710,7 @@ curl -X PATCH \
 | `id` | De `id` van de bibliotheek die u wilt bijwerken. Dit moet overeenkomen met de `{LIBRARY_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -816,7 +816,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | De `id` van de bibliotheek die u wilt publiceren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -927,7 +927,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 | --- | --- |
 | `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de gegevenselementen wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1068,7 +1068,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 | --- | --- |
 | `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de extensies wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1199,7 +1199,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 | --- | --- |
 | `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de regels wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1312,7 +1312,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 | --- | --- |
 | `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de omgeving wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1424,7 +1424,7 @@ GET  /libraries/{LIBRARY_ID}/property
 | --- | --- |
 | `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan bezit u omhoog wilt kijken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1547,7 +1547,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 | --- | --- |
 | `{LIBRARY_ID}` | De `id` van de bibliotheek waarvan u de upstream-bibliotheek wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

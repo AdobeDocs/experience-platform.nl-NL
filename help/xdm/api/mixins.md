@@ -6,7 +6,7 @@ description: Het /mixins eindpunt in de Registratie API van het Schema staat u t
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | De container u mengsels van wilt terugwinnen van: `global` voor door Adobe gemaakte mixen of `tenant` voor mengsels die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -68,7 +68,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-mix voor elke bron, met het origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -131,7 +131,7 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | De container die de mix bevat die u wilt ophalen: `global` voor een door Adobe gemaakte mix of `tenant` voor een mengsel dat eigendom is van uw organisatie. |
 | `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de mix die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -157,7 +157,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle op
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -411,7 +411,7 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de mix die u opnieuw wilt schrijven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -596,7 +596,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de mix die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -735,7 +735,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de mix die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

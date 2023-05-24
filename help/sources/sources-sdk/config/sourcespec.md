@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van de configuraties die u moet vo
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1690'
+source-wordcount: '1687'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ Zie de [aanhangsel](#source-spec) voor een voorbeeld van een volledig-bevolkte b
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Definieert de ondersteunde indeling voor de `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.spec.properties` | Bepaalt de user-provided parameters om middelwaarden te halen. | Zie de [extra middelen](#user-input) voor een voorbeeld van door de gebruiker ingevoerde parameters voor `spec.properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aanvullende bronnen {#appendix}
 

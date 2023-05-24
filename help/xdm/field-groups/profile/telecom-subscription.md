@@ -6,7 +6,7 @@ description: Dit document verstrekt een overzicht van de het schemagebiedgroep v
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '698'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ De veldgroep bevat één veld van het objecttype. `telecomSubscription`, waarvan
 | `bundleName` | Tekenreeks | Hiermee wordt de naam vastgelegd van elk type abonnementsbundel waarin de klant is ingeschreven, zoals `Internet + Media`. |
 | `primaryPartyID` | Tekenreeks | Een herkenningsteken voor de primaire persoon verantwoordelijk voor het abonnement, die typisch hun aantal van de apparatentelefoon zou kunnen zijn. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
@@ -55,7 +55,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | `selfSetup` | Boolean | Geeft aan of een klant in aanmerking komt voor de installatie van internet zonder bezoek van een technicus. |
 | `uploadSpeed` | Geheel | De maximale uploadsnelheid die beschikbaar is voor het abonnement, in megabytes (MB). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `landlineSubscription` {#landlineSubscription}
 
@@ -78,7 +78,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | `unlimitedLocalCalling` | Boolean | Geeft aan of de abonnementsfuncties van de vaste lijn een onbeperkte lokale aanroep bevatten. |
 | `voicemail` | Boolean | Wijst erop of de eigenschappen van het landlineabonnement audio-messagerie omvatten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mediaSubscription` {#mediaSubscription}
 
@@ -92,7 +92,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Beschrijft algemene details over het abonnement, met inbegrip van abonnementslengte, kosten, status, en meer. |
 | `channels` | Geheel | Het aantal kanalen dat is opgenomen in het mediaabonnement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mobileSubscription` {#mobileSubscription}
 
@@ -108,4 +108,4 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | `planLevel` | Tekenreeks | De naam van het mobiele abonnement dat aan dit abonnement is toegewezen. |
 | `portedNumber` | Boolean | Geeft aan of de klant zijn of haar nummer van een andere provider poorten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

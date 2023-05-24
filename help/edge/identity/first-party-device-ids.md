@@ -4,7 +4,7 @@ description: Leer hoe u FPID's (First-party device ID's) voor de Adobe Experienc
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1773'
 ht-degree: 0%
 
 ---
@@ -219,7 +219,7 @@ Om dit proces te illustreren, overweeg een scenario dat een klant impliceert die
 | Vierde bezoek | Tussen de derde en de vierde keer is er voldoende tijd verstreken om de ECID te verwijderen vanwege het browserbeleid. Net als bij het vorige bezoek blijft de FPID te wijten aan de wijze waarop zij is ingesteld. Deze keer wordt dezelfde ECID gegenereerd als het vorige bezoek. De gebruiker wordt door het Experience Platform en de oplossingen van de Experience Cloud gezien zoals de zelfde gebruiker zoals het vorige bezoek. |
 | Vijfde bezoek | Tussen de vierde en de vijfde keer dat de gebruiker het programma bezoekt, heeft de eindgebruiker alle cookies in zijn browser gewist. Er wordt een nieuwe FPID gegenereerd die wordt gebruikt om het maken van een nieuwe ECID te stimuleren. De gebruiker wordt nu beschouwd als een nieuwe bezoeker in de Adobe Experience Platform en de Experience Cloud. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Veelgestelde vragen
 

@@ -6,8 +6,8 @@ user-guide-description: Met Adobe Experience Platform Assurance kunt u controler
 feature: Assurance
 source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 64%
 
 ---
 

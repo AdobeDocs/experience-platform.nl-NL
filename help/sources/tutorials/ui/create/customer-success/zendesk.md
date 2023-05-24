@@ -5,7 +5,7 @@ description: Leer hoe u een Zendesk-bronverbinding maakt met de gebruikersinterf
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -153,7 +153,7 @@ In de onderstaande tabel staan de ondersteunde toewijzingen die moeten worden in
 | `results.url` | Tekenreeks |
 | `results.verified` | Boolean |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Limieten {#limits}
 

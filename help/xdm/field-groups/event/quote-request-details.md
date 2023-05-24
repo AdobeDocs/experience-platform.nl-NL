@@ -1,9 +1,10 @@
 ---
 title: Veld groep velden wijzigingsverzoek
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van het Verzoek van het Citaat.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
@@ -22,6 +23,6 @@ ht-degree: 0%
 | `requestID` | [!UICONTROL String] | Een unieke id voor de aanhalingsaanvraag. |
 | `selectedRetailer` | [!UICONTROL String] | De geselecteerde detailhandelaar voor het citaatverzoek, indien van toepassing. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

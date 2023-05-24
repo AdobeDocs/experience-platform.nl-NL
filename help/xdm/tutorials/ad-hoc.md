@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '819'
 ht-degree: 1%
 
 ---
@@ -85,7 +85,7 @@ curl -X POST \
 | `$ref` | Het gegevensgedrag voor de nieuwe klasse. Voor ad-hocklassen moet deze waarde worden ingesteld op `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Een object dat de aangepaste velden voor de klasse bevat, uitgedrukt als sleutel-waardeparen van veldnamen en gegevenstypen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -148,7 +148,7 @@ Als de reactie met succes is uitgevoerd, worden de details van de nieuwe klasse 
 | --- | --- |
 | `$id` | Een URI die fungeert als de alleen-lezen; door het systeem gegenereerde unieke id voor de nieuwe ad-hocklasse. Deze waarde wordt gebruikt in de volgende stap voor het maken van een ad-hocschema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Een ad-hocschema maken
 
@@ -241,7 +241,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het ad-hocschema waartoe u toegang wilt hebben. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

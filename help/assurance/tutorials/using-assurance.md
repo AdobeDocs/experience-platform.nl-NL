@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Assurance gebruiken
 description: In deze handleiding wordt uitgelegd hoe u Adobe Experience Platform Assurance kunt gebruiken nadat deze is geïnstalleerd en geïmplementeerd.
-source-git-commit: 24f452bdb923179eefe53fdb28d3a92d43e533cd
+exl-id: 872c83d1-82e8-40d8-9b66-3e51a91a955f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platform Assurance gebruiken
 

@@ -6,7 +6,7 @@ description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegeve
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '605'
 ht-degree: 1%
 
 ---
@@ -146,7 +146,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | [!UICONTROL Boolean] | Type: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` moet `STRING`) | `MapType`<br><br>(`keyType` moet `StringType`) | `java.util.Map` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scala, .NET en CosmosDB {#scala}
 
@@ -163,7 +163,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N.v.t.) | `object` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### MongoDB, Aerospike en Protobuf 2 {#mongo}
 
@@ -180,7 +180,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binair) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## XDM-veldtypen definiëren in de API {#define-fields}
 

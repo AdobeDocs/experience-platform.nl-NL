@@ -3,7 +3,8 @@ keywords: Experience Platform;thuis;populaire onderwerpen;de stroomdienst;
 title: Conceptgegevensstromen met behulp van de Flow Service API
 description: Leer hoe u uw gegevensstromen in een ontwerpstaat plaatst gebruikend de Dienst API van de Stroom.
 badge: label="New Feature" type="Positive"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%

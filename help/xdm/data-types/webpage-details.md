@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het gegevenstype Experience Da
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '401'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van
 | `siteSection` | Tekenreeks | De normatieve naam van de sitesectie waarin deze webpagina zich bevindt. Dit kan worden gebruikt om de interactie te classificeren of te categoriseren. |
 | `viewName` | Tekenreeks | De naam van de weergave, binnen een pagina. Deze eigenschap wordt meestal gebruikt bij toepassingen of pagina&#39;s van één pagina die tabs of besturingselementen hebben die het merendeel van de paginalay-out wijzigen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

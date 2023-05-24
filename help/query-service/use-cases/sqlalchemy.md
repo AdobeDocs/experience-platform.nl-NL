@@ -1,7 +1,8 @@
 ---
 title: Platform-gegevens beheren met Python en SQLAlchemy
 description: Leer hoe u SQLAlchemy kunt gebruiken om uw Platform gegevens te beheren met Python in plaats van SQL.
-source-git-commit: 6b7de4236982181eaac2aa37d525604cba31198e
+exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
+source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%

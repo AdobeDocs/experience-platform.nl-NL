@@ -2,14 +2,13 @@
 title: Interactie met meerdere eigenschappen in de Adobe Experience Platform Web SDK
 description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Experience Platform in wisselwerking te staan.
 keywords: meerdere eigenschappen;configure;sendEvent;edgeConfigId;orgId;
-translation-type: tm+mt
-source-git-commit: b865b7fb940ca2d5f8b44f71eb58e62e3473f52d
+exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
-
 
 # Interactie met meerdere eigenschappen
 
@@ -19,7 +18,7 @@ Er zijn bepaalde gevallen waarin u mogelijk wilt werken met twee verschillende e
 * Relaties tussen meerdere bedrijven voor het uitwisselen van gegevens
 * Klanten die nieuwe Adobe-oplossingen testen en hun bestaande implementatie niet willen verstoren
 
-Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een andere naam toe te voegen aan de array in de basiscode. Het volgende voorbeeld verstrekt twee namen, `mycustomname1` en `mycustomname2`.
+Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een andere naam toe te voegen aan de array in de basiscode. In het volgende voorbeeld worden twee namen weergegeven: `mycustomname1` en `mycustomname2`.
 
 ```markup
 <script>
@@ -31,9 +30,9 @@ Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een ander
 <script src="alloy.js" async></script>
 ```
 
-Hierdoor worden in het script twee instanties van de SDK gemaakt. De algemene functie voor interactie met de eerste instantie heeft de naam `mycustomname1` en de algemene functie voor interactie met de tweede instantie krijgt de naam `mycustomname2`.
+Hierdoor worden in het script twee instanties van de SDK gemaakt. De algemene functie voor interactie met de eerste instantie wordt `mycustomname1` en de algemene functie voor interactie met de tweede instantie wordt genoemd `mycustomname2`.
 
-Door twee afzonderlijke instanties te creëren, kan elk voor een verschillend bezit worden gevormd. Elke communicatie- of gegevenspersistentie die optreedt als gevolg van interactie met `mycustomname1`, wordt gescheiden gehouden van `mycustomname2`.
+Door twee afzonderlijke instanties te creëren, kan elk voor een verschillend bezit worden gevormd. Elke communicatie- of gegevenspersistentie die optreedt als gevolg van interactie met `mycustomname1` wordt geïsoleerd gehouden van `mycustomname2`.
 
 In het volgende voorbeeld kunt u als volgt opdrachten uitvoeren met elk van de instanties:
 
@@ -61,8 +60,8 @@ mycustomname2("sendEvent", {
 });
 ```
 
-Zorg ervoor dat u de opdracht `configure` voor elke instantie uitvoert voordat u andere opdrachten voor dezelfde instantie uitvoert.
+Zorg ervoor dat u de opdracht `configure` voor elke instantie voordat andere opdrachten op dezelfde instantie worden uitgevoerd.
 
 ## Beperkingen
 
-Om conflicten met cookies te voorkomen, kan slechts één exemplaar van Adobe Experience Platform [!DNL Web SDK] binnen een pagina een bepaalde `edgeConfigId` hebben. Op dezelfde manier kan slechts één instantie van Adobe Experience Platform [!DNL Web SDK] een bepaalde `orgId` hebben.
+Om conflicten met cookies te voorkomen, doet u slechts één exemplaar van Adobe Experience Platform [!DNL Web SDK] binnen een pagina kan een bepaalde `edgeConfigId`. En slechts één exemplaar van Adobe Experience Platform [!DNL Web SDK] kan een bepaalde `orgId`.

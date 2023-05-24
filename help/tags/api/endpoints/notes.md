@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /notes eindpunt in Reactor API te make
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '515'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | Het type bron waarvoor u notities ophaalt. Moet een van de volgende waarden zijn: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | De `id` van de specifieke bron waarvan u de notities wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -133,7 +133,7 @@ GET /notes/{NOTE_ID}
 | --- | --- |
 | `NOTE_ID` | De `id` van de notitie die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -200,7 +200,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | Het type bron waarvoor u een notitie maakt. Moet een van de volgende waarden zijn: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | De `id` van de specifieke bron waarvoor u een notitie wilt maken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `type` | **(Vereist)** Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `notes`. |
 | `attributes.text` | **(Vereist)** De tekst die de notitie bevat. Elke notitie is beperkt tot 512 Unicode-tekens. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 

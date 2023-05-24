@@ -2,31 +2,31 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;field-groep;reservering;vlucht;
 title: Veldgroep vluchtreservatieschema
 description: Dit document bevat een overzicht van de veldgroep Vluchtreserveringsschema.
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '639'
 ht-degree: 2%
 
 ---
 
-
 # [!UICONTROL Flight Reservation] schemaveldgroep
 
-[!UICONTROL Flight Reservation] is een standaardschemaveldgroep voor de  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) klasse die wordt gebruikt om informatie betreffende een vluchtreservering vast te leggen.
+[!UICONTROL Flight Reservation] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt om informatie over een vluchtreservering vast te leggen.
 
-De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] gebiedsgroep, en bevat alle zelfde gebieden onder één enkel voorwerp-type gebied, `reservations`. Naast deze generieke velden bevat [!UICONTROL Flight Reservation] ook `flightReservations`-array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor luchtvervoer.
+De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] veldgroep en bevat dezelfde velden onder één veld van het objecttype, `reservations`. Naast deze generieke velden [!UICONTROL Flight Reservation] omvat ook `flightReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor luchtvervoer.
 
 >[!NOTE]
 >
->In dit document worden de details van de array `flightReservations` besproken. Raadpleeg de [[!UICONTROL Reservation Details]-veldgroepreferentie](./reservation-details.md) voor informatie over de andere velden die worden opgegeven onder het `reservations`-object.
+>In dit document worden de details van het `flightReservations` array. Voor informatie over de andere velden die in het kader van de `reservations` object, raadpleeg de [[!UICONTROL Reservation Details] veldgroepverwijzing](./reservation-details.md).
 
 ![Vluchtreserveringsstructuur](../../images/field-groups/flight-reservation/structure.png)
 
 ## `flightReservations`
 
-`flightReservations` is een array met objecten die een lijst met vluchtreserveringen vertegenwoordigt. Als een reserveringsgebeurtenis reserveringen voor meerdere aansluitende vluchten op een vlucht inhoudt, kunnen deze reserveringen bijvoorbeeld worden vermeld als afzonderlijke objecten onder `flightReservations` voor één gebeurtenis.
+`flightReservations` is een array met objecten die een lijst met vluchtreserveringen vertegenwoordigt. Als een reserveringsgebeurtenis reserveringen voor meerdere aansluitende vluchten op een reis inhoudt, kunnen deze reserveringen bijvoorbeeld als afzonderlijke objecten worden vermeld onder `flightReservations` voor één gebeurtenis.
 
-Hieronder vindt u de structuur van elk object dat onder `flightReservations` wordt geleverd.
+De structuur van elk object dat wordt geleverd onder `flightReservations` wordt hieronder gegeven.
 
 ![flightReservations-structuur](../../images/field-groups/flight-reservation/flightReservations.png)
 
@@ -61,7 +61,7 @@ Hieronder vindt u de structuur van elk object dat onder `flightReservations` wor
 | `ticketNumber` | Tekenreeks | Het reserveringsnummer of de identificatiecode. |
 | `tripType` | Tekenreeks | Hiermee geeft u aan of de boeking betrekking heeft op een eenmalige reis, een retourvlucht of een meervoudige retourvlucht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

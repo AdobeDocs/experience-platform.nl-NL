@@ -3,7 +3,8 @@ keywords: bestemmingsaccount, bestemmingsaccounts verwijderen, accounts verwijde
 title: Doelaccounts verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen die moeten worden gezet om bestemmingsaccounts te verwijderen in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
+source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 1%

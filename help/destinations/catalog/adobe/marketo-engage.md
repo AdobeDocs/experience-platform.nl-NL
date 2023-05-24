@@ -4,7 +4,7 @@ description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Exper
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ De bestemming laat marketers toe om segmenten te duwen die in Adobe Experience P
 | ECID | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
 | Email | Een naamruimte die een e-mailadres vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Ondersteunde kenmerken {#supported-attributes}
 
@@ -61,7 +61,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail, ECID) die worden gebruikt in het dialoogvenster [!DNL Marketo Engage] bestemming. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Doel instellen en segmenten activeren {#set-up}
 

@@ -1,13 +1,13 @@
 ---
 title: Overzicht van Adobe Experience Platform Assurance
-description: Met Adobe Experience Platform Assurance kunt u controleren, testen, simuleren en valideren hoe u gegevens verzamelt of ervaringen opdoet in uw mobiele toepassingen.
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+description: Met Adobe Experience Platform Assurance kunt u controleren, testen, simuleren en valideren hoe u gegevens verzamelt of ervaringen aanbiedt in uw mobiele toepassingen.
+exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '824'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
-
 
 # Adobe Experience Platform Assurance
 

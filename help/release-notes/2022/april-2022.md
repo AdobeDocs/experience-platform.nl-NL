@@ -4,8 +4,8 @@ description: In de release van april 2022 staat een opmerking voor Adobe Experie
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '2793'
-ht-degree: 1%
+source-wordcount: '2781'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [Bronnen](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -55,7 +55,7 @@ De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve
 | ------- | --------- | ----------- |
 | Opschonen van segment met weesprofiel | Profielen en licentiegebruik | De Dienst van het profiel verwijdert nu achtergebleven segmentleden op een dagelijkse basis om een nauwkeurigere vertegenwoordiging van uw profielen in uw systeem te geven. Deze opschoning vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd. Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek overgebleven segmentfragmenten voorafgaand aan deze versie omvatte. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de documentatie voor meer informatie over [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), en [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
 
@@ -126,7 +126,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | --- | --- |
 | Afzonderlijke standaardvelden voor een schema toevoegen of verwijderen | De Redacteur UI van het Schema staat u nu toe om gedeelten standaardgebiedsgroepen aan uw schema&#39;s toe te voegen, die meer flexibiliteit voor de gebieden verstrekken u verkiest te omvatten zonder het moeten douanemiddelen van kras bouwen.<br><br>U kunt aangepaste ad-hocvelden nu ook rechtstreeks definiëren in de schemastructuur en deze toewijzen aan een nieuwe of bestaande aangepaste veldgroep zonder dat u de veldgroep vooraf hoeft te maken of te bewerken.<br><br>Zie de handleiding op [schema&#39;s maken en bewerken in de gebruikersinterface](../../xdm/ui/resources/schemas.md) voor meer informatie over deze nieuwe workflows. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nieuwe XDM-componenten**
 
@@ -151,7 +151,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Extensie (Workfront) | [[!UICONTROL Work Program Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Hiermee legt u de details van een werkprogramma vast. |
 | Extensie (Workfront) | [[!UICONTROL Work Project Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Hiermee legt u de details van een werkproject vast. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Bijgewerkte XDM-componenten**
 
@@ -167,7 +167,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Extensie (Workfront) | [[!UICONTROL Work Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Verschillende velden toegevoegd. |
 | Extensie (Workfront) | [[!UICONTROL Work Object]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Nieuwe velden voor het type bovenliggend object en aangepaste formuliervelden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
@@ -177,7 +177,7 @@ Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van 
 
 ### Attribution AI
 
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
 **Bijgewerkte functies**
 
@@ -189,7 +189,7 @@ Voor meer informatie over [!DNL Intelligent Services], zie de [[!DNL Intelligent
 
 ### Customer AI
 
-De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
 
 **Bijgewerkte functies**
 
@@ -200,7 +200,7 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 
 Voor meer informatie over [!DNL Intelligent Services], zie de [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-Time Customer Data Platform B2B Edition {#B2B}
 
 Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen te betrekken.
 

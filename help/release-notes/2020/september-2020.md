@@ -18,7 +18,7 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Data Governance](#governance)
+- [Gegevensbeheer](#governance)
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
@@ -26,7 +26,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
-## Data Governance {#governance}
+## Gegevensbeheer {#governance}
 
 Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving van regelgeving, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik te waarborgen. Het speelt een sleutelrol binnen [!DNL Experience Platform] op verschillende niveaus, waaronder catalogisering, gegevenskoppeling, etikettering van het gegevensgebruik, beleid inzake gegevenstoegang en toegangscontrole voor marketingacties.
 

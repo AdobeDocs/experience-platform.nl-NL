@@ -4,7 +4,7 @@ description: De release van november 2022 bevat notities voor Adobe Experience P
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '451'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | --- | --- |
 | Velden toewijzen aan aangepaste klassen wanneer deze rechtstreeks aan een schema worden toegevoegd | Wanneer [een afzonderlijk veld rechtstreeks aan een schema toevoegen](../../xdm/ui/resources/schemas.md#add-individual-fields), voorheen kon u het veld alleen aan een veldgroep toewijzen als bovenliggende bron. Naast veldgroepen kunt u nu [het veld toewijzen aan een aangepaste klasse](../../xdm/ui/resources/schemas.md#add-to-class) als bovenliggende bron. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 

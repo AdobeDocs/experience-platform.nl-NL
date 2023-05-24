@@ -6,7 +6,7 @@ description: Het /auditlog eindpunt in de Registratie API van het Schema staat u
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het middel waarvan controlelogboek u wilt terugwinnen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -125,4 +125,4 @@ Een succesvolle reactie keert een chronologische lijst van veranderingen terug d
 | `path` | A [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer) tekenreeks die het pad aangeeft naar het specifieke veld dat is gewijzigd of toegevoegd. |
 | `value` | De waarde die is toegewezen aan het nieuwe of bijgewerkte veld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

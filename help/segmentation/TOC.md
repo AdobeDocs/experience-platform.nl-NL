@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
-breadcrumb-title: Segmentatieservicehandleiding
-user-guide-description: Bouw segmenten en produceer publiek van uw gegevens van het Profiel van de Klant in real time.
+breadcrumb-title: Gids voor Segmentation Service
+user-guide-description: Bouw segmenten en genereer doelgroepen op basis van uw gegevens van realtimeklantprofielen.
 feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 6%
+ht-degree: 20%
 
 ---
 

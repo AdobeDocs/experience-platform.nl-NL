@@ -3,7 +3,8 @@ title: Zelfservicesjabloon voor documentatie voor Streaming SDK API
 description: Leer hoe u streaminggegevens van een bron naar Adobe Experience Platform kunt overbrengen met behulp van de Flow Service API.
 hide: true
 hidefromtoc: true
-source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
+exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1699'
 ht-degree: 0%
@@ -252,7 +253,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de *UURSOURCE* aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar de *UURSOURCE* aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)

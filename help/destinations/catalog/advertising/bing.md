@@ -5,7 +5,7 @@ description: Met de Microsoft Bing-verbindingsbestemming kunt u gerichte digital
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '592'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Als telleraar, wil ik segmenten kunnen gebruiken die van worden gebouwd [!DNL Mi
 |---|---|
 | GEMAAKT | Microsoft-advertentie-id |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -43,7 +43,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de [!DNL Microsoft Bing] bestemming. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten {#prerequisites}
 

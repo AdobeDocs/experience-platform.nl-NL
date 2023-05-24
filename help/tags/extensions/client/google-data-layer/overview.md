@@ -39,7 +39,7 @@ De standaardnaam van de gegevenslaag is de Google-standaardnaam `dataLayer`.
 
 >[!NOTE]
 >
->Het woord _event_ wordt overgeladen wanneer een gebeurtenisgestuurde gegevenslaag wordt gebruikt in Adobe Experience Platform-tags. _Gebeurtenissen_ kan:
+>Het woord _event_ wordt overbelast wanneer een gebeurtenisgestuurde gegevenslaag wordt gebruikt in Adobe Experience Platform-tags. _Gebeurtenissen_ kan:
 > - Gebeurtenissen van Adobe Experience Platform-tags (Bibliotheek geladen enzovoort).
 > - JavaScript-gebeurtenissen.
 > - Gegevens die met de _event_ trefwoord.

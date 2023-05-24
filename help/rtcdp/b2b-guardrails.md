@@ -2,12 +2,12 @@
 keywords: profiel;real-time profiel van de klant;het oplossen van problemen;gidsen;grens;entiteit;primaire entiteit;dimensie-entiteit;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform van de klantengegevens;real-time cdp;b2b;cdp;
 title: Standaardhulplijnen voor Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt. Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties met Adobe Real-time Customer Data Platform B2B Edition.
+description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties met Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
 source-wordcount: '1651'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

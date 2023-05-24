@@ -6,7 +6,7 @@ description: Het volgende document verstrekt stappen op hoe te om een verbinding
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '797'
 ht-degree: 1%
 
 ---
@@ -39,13 +39,13 @@ Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 | Artefacten (bestandsnamen) | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | {your_source} | De naam van de bron. Deze map moet alle artefacten bevatten die betrekking hebben op uw bron, in uw persoonlijke Git-opslagplaats. | `mailchimp-members` |
-| {your_source}-category.txt | De categorie waartoe uw bron behoort, opgemaakt als een tekstbestand. De lijst van beschikbare broncategorieën die door Zelfbediening Bronnen (de Band SDK) worden gesteund omvat: <ul><li>Reclame</li><li>Analytics</li><li>Toestemming en voorkeuren</li><li>CRM</li><li>Klant geslaagd</li><li>Database</li><li>e-commerce</li><li>Marketing Automation</li><li>Betalingen</li><li>Protocollen</li></ul> **Opmerking**: Neem contact op met uw Adobe als u van mening bent dat de bron niet in een van de bovenstaande categorieën past. | `mailchimp-members-category.txt` Geef in het bestand de categorie van de bron op, bijvoorbeeld: `marketingAutomation`. |
+| {your_source}-category.txt | De categorie waartoe uw bron behoort, opgemaakt als een tekstbestand. De lijst van beschikbare broncategorieën die door Zelfbediening Bronnen (de Band SDK) worden gesteund omvat: <ul><li>Advertising</li><li>Analytics</li><li>Toestemming en voorkeuren</li><li>CRM</li><li>Klant geslaagd</li><li>Database</li><li>e-commerce</li><li>Marketing Automation</li><li>Betalingen</li><li>Protocollen</li></ul> **Opmerking**: Neem contact op met uw Adobe als u van mening bent dat de bron niet in een van de bovenstaande categorieën past. | `mailchimp-members-category.txt` Geef in het bestand de categorie van de bron op, bijvoorbeeld: `marketingAutomation`. |
 | {your_source}-description.txt | Een korte beschrijving van de bron. | [!DNL Mailchimp Members] is een marketingautomatiseringsbron die u kunt gebruiken om [!DNL Mailchimp Members] gegevens naar Experience Platform. |
 | {your_source}-icon.svg | De afbeelding die moet worden gebruikt om uw bron weer te geven in de catalogus met bronnen in het Experience Platform. Dit pictogram moet een SVG-bestand zijn. |
 | {your_source}-label.txt | De naam van de bron zoals deze moet worden weergegeven in de catalogus met bronnen van het Experience Platform. | Mailchimp-leden |
 | {your_source}-connectionSpec.json | Een JSON-bestand dat de verbindingsspecificatie van uw bron bevat. Dit bestand is in eerste instantie niet vereist omdat u de verbindingsspecificatie invult als u deze handleiding invult. | `mailchimp-members-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

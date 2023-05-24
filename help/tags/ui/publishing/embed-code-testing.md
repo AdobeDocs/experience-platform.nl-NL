@@ -5,7 +5,7 @@ exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en inslui
 Deze zelfstudie vereist ook dat u de browserextensie van Foutopsporing voor Platforms hebt geïnstalleerd. Foutopsporing voor Platforms is alleen beschikbaar voor Chrome- en Firefox-browsers. Gebruik een van de volgende koppelingen om de extensie te installeren voordat u de zelfstudie start:
 
 * [Foutopsporing Platform voor Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Foutopsporing voor Platform voor Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
+* [Foutopsporing voor Platform voor Firefox](https://addons.mozilla.org/nl/firefox/addon/adobe-experience-platform-dbg/)
 
 ## Foutopsporing Platform openen op uw website
 

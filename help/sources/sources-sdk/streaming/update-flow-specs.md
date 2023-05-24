@@ -3,7 +3,8 @@ title: Stroomspecificaties bijwerken voor Streaming SDK met behulp van de Flow S
 description: Het volgende document bevat stappen voor het ophalen en bijwerken van stroomspecificaties met behulp van de Flow Service API voor Self-Serve Sources (Streaming SDK).
 hide: true
 hidefromtoc: true
-source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
+exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%

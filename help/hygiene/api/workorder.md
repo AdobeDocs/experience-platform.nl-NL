@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ curl -X POST \
 | `description` | Een beschrijving voor het verzoek om record te verwijderen. |
 | `identities` | Een array met de identiteiten van ten minste één gebruiker van wie u de gegevens wilt verwijderen. Elke identiteit bestaat uit een [naamruimte identity](../../identity-service/namespaces.md) en een waarde:<ul><li>`namespace`: Bevat één tekenreekseigenschap, `code`, die staat voor de naamruimte identity. </li><li>`id`: De identiteitswaarde.</ul>Indien `datasetId` geeft één gegevensset aan, elke entiteit onder `identities` moet dezelfde naamruimte gebruiken als de primaire identiteit van het schema.<br><br>Indien `datasetId` is ingesteld op `ALL`de `identities` array is niet beperkt tot één naamruimte omdat elke dataset anders kan zijn. Uw verzoeken blijven echter beperkt tot de naamruimten die beschikbaar zijn voor uw organisatie, zoals gerapporteerd door [Identiteitsservice](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -118,7 +118,7 @@ Als de reactie succesvol was, worden de details van de record delete geretournee
 | `createdBy` | De gebruiker die de schrappingsorde creeerde. |
 | `datasetId` | De id van de gegevensset waarop het verzoek betrekking heeft. Als het verzoek voor alle datasets is, zal de waarde worden geplaatst aan `ALL`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## De status van een record verwijderen (#lookup)
 
@@ -134,7 +134,7 @@ GET /workorder/{WORK_ORDER_ID}
 | --- | --- |
 | `{WORK_ORDER_ID}` | De `workorderId` van de record verwijderen die u opzoekt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -211,7 +211,7 @@ PUT /workorder{WORK_ORDER_ID}
 | --- | --- |
 | `{WORK_ORDER_ID}` | De `workorderId` van de record verwijderen die u opzoekt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -233,7 +233,7 @@ curl -X GET \
 | `displayName` | Een bijgewerkte weergavenaam voor het verzoek om het verwijderen van records. |
 | `description` | Een bijgewerkte beschrijving voor de aanvraag om het record te verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -285,4 +285,4 @@ Als de reactie succesvol was, worden de details van de record delete geretournee
 | `datasetId` | De id van de gegevensset waarop het verzoek betrekking heeft. Als het verzoek voor alle datasets is, zal de waarde worden geplaatst aan `ALL`. |
 | `productStatusDetails` | Een array die de huidige status van downstreamprocessen met betrekking tot de aanvraag opsomt. Elk matrixobject bevat de volgende eigenschappen:<ul><li>`productName`: De naam van de downstreamservice.</li><li>`productStatus`: De huidige verwerkingsstatus van het verzoek van de downstreamdienst.</li><li>`createdAt`: Een tijdstempel van wanneer de meest recente status door de service is gepost.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

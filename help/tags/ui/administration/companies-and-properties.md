@@ -75,7 +75,7 @@ Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidinge
 
 Een eigenschap kan elke groepering van een of meer domeinen en subdomeinen zijn. U kunt deze elementen op dezelfde manier beheren en bijhouden. Stel dat u meerdere websites hebt die op één sjabloon zijn gebaseerd en dat u dezelfde elementen op alle websites wilt bijhouden. U kunt één eigenschap toepassen op meerdere domeinen.
 
-De linkerkant van het scherm toont de bedrijven in uw organisatie. Dit is vooral handig als u meerdere accounts beheert. Selecteer een bedrijf om de eigenschappen en controlelogboeken voor dat bedrijf te zien.
+De linkerkant van het scherm toont de bedrijven in uw organisatie. Dit is vooral handig als u meerdere accounts beheert. Selecteer een bedrijf om de eigenschappen en de controlelogboeken voor dat bedrijf te zien.
 
 Elke eigenschap wordt weergegeven in de lijst Eigenschappen.
 

@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /rule_components eindpunt in Reactor A
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1152'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Regelcomponenten hebben drie basistypen:
 | Voorwaarden | Een voorwaarde is een evaluatie van de vraag of aan bepaalde criteria is voldaan voordat enige actie wordt uitgevoerd. Wanneer een gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd. De handelingen van de regel worden alleen uitgevoerd als aan alle voorwaarden is voldaan. |
 | Acties | Dit zijn de acties u de regel eigenlijk wilt uitvoeren, zoals het verzenden van een baken van Adobe Analytics, het terugwinnen van een identiteitskaart van de douanebezoeker, of het vuren van een bepaalde mbox. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Een regelcomponent behoort tot exact één regel. Een regel kan (en zou) vele regelcomponenten moeten hebben.
 
@@ -49,7 +49,7 @@ GET /rules/{RULE_ID}/rule_components
 | --- | --- |
 | `RULE_ID` | De `id` van de regel waarvan de componenten u wilt vermelden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | De `id` van de regelcomponent die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -312,7 +312,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 | --- | --- |
 | `PROPERTY_ID` | De `id` van het bezit dat u de regelcomponent onder bepaalt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -369,7 +369,7 @@ curl -X POST \
 | `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de `delegate_descriptor_id`.</li><li>`rules`: De regel waaronder deze component wordt gedefinieerd.</li></ol>Voor meer algemene informatie over relaties raadpleegt u de [relatiehulplijn](../guides/relationships.md). |
 | `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde zijn `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -485,7 +485,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | De `id` van de regelcomponent die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -516,7 +516,7 @@ curl -X PATCH \
 | `id` | De `id` van de regelcomponent die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_COMPONENT_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -628,7 +628,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | De `id` van de regelcomponent die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -668,7 +668,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | De `id` van de regelcomponent waarvan u de regels wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -772,7 +772,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | De `id` van de regelcomponent waarvan u de extensie wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -892,7 +892,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | De `id` van de component rule waarvan u de oorsprong wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

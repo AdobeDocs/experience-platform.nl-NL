@@ -9,8 +9,8 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1290'
-ht-degree: 1%
+source-wordcount: '1287'
+ht-degree: 2%
 
 ---
 
@@ -126,7 +126,7 @@ In de onderstaande tabel vindt u meer details voor elke mogelijke waarde.
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> of<br /> `arc.event.data._tenant.isSyncing` | boolean | Gebeurtenissen gemaakt met `is_syncing` instellen op `true` **niet** triggerautomatisering | Nee |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> of `arc.event.data._tenant.occuredAt` | Tekenreeks | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden | Nee |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  

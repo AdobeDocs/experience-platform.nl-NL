@@ -7,7 +7,7 @@ description: Deze zelfstudie behandelt de stappen voor het maken van een schema 
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '3801'
+source-wordcount: '3798'
 ht-degree: 0%
 
 ---
@@ -218,7 +218,7 @@ Wanneer u velden definieert in het dialoogvenster [!DNL Schema Editor]Er zijn en
 | [!UICONTROL Identity] | Geeft aan dat dit veld een identiteitsveld is. Meer informatie over identiteitsvelden is beschikbaar [later in deze zelfstudie](#identity-field). |
 | [!UICONTROL Relationship] | Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het union-schema en [!DNL Real-Time Customer Profile]Dit geldt alleen voor schema&#39;s die dezelfde klasse delen. De [!UICONTROL Relationship] beperking geeft aan dat dit veld verwijst naar de primaire identiteit van een schema op basis van een andere klasse, wat een relatie tussen de twee schema&#39;s impliceert. Zie de zelfstudie aan [definiëren van een relatie](./relationship-ui.md) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

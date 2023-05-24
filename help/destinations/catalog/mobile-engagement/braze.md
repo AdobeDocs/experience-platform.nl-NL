@@ -5,7 +5,7 @@ description: Braze is een uitgebreid platform voor klantbetrokkenheid dat releva
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten,
 |---|---|---|
 | external_id | Aangepast [!DNL Braze] id die het toewijzen van om het even welke identiteit steunt. | U kunt elke [identiteit](../../../identity-service/namespaces.md) aan de [!DNL Braze] doel, zolang u deze toewijst aan de [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -53,7 +53,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing.[!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 

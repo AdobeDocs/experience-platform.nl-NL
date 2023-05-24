@@ -2,31 +2,31 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;reservering;onderbrenging;
 title: Veld groep voor reservatieschema indienen
 description: Dit document biedt een overzicht van de veldgroep met het schema Opmerking overbrengen.
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+exl-id: f0eafc83-21f1-483d-9397-1133e3777699
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '667'
 ht-degree: 2%
 
 ---
 
-
 # [!UICONTROL Lodging Reservation] schemaveldgroep
 
-[!UICONTROL Lodging Reservation] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) klasse die wordt gebruikt om informatie betreffende een indieningsreserve te vangen.
+[!UICONTROL Lodging Reservation] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt om informatie over een boeking te verzamelen.
 
-De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] gebiedsgroep, en bevat alle zelfde gebieden onder één enkel voorwerp-type gebied, `reservations`. Naast deze generieke velden bevat [!UICONTROL Lodging Reservation] ook `lodgingReservations`-array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor het indienen van objecten.
+De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] veldgroep en bevat dezelfde velden onder één veld van het objecttype, `reservations`. Naast deze generieke velden [!UICONTROL Lodging Reservation] omvat ook `lodgingReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor het indienen van objecten.
 
 >[!NOTE]
 >
->In dit document worden de details van de array `lodgingReservations` besproken. Raadpleeg de [[!UICONTROL Reservation Details]-veldgroepreferentie](./reservation-details.md) voor informatie over de andere velden die worden opgegeven onder het `reservations`-object.
+>In dit document worden de details van het `lodgingReservations` array. Voor informatie over de andere velden die in het kader van de `reservations` object, raadpleeg de [[!UICONTROL Reservation Details] veldgroepverwijzing](./reservation-details.md).
 
 ![Boekingsstructuur voor indiening](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` is een array met objecten die een lijst met reserveringen bevat. Als een reserveringsgebeurtenis reserveringen bij meerdere verschillende hotels langs de route van een reis inhoudt, kunnen deze reserveringen bijvoorbeeld worden vermeld als afzonderlijke objecten onder `lodgingReservations` voor één gebeurtenis.
+`lodgingReservations` is een array met objecten die een lijst met reserveringen bevat. Indien bij een reserveringsgebeurtenis reserveringen worden gemaakt bij meerdere verschillende hotels langs de route van een reis, kunnen deze reserveringen bijvoorbeeld worden vermeld als afzonderlijke objecten onder `lodgingReservations` voor één gebeurtenis.
 
-Hieronder vindt u de structuur van elk object dat onder `lodgingReservations` wordt geleverd.
+De structuur van elk object dat wordt geleverd onder `lodgingReservations` wordt hieronder gegeven.
 
 ![reserve-structuur](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
@@ -68,7 +68,7 @@ Hieronder vindt u de structuur van elk object dat onder `lodgingReservations` wo
 | `smoking` | Boolean | Geeft aan of de ruimte roken toestaat. |
 | `tripType` | Tekenreeks | Hiermee geeft u aan of de boeking betrekking heeft op een eenmalige reis, een retourvlucht of een meervoudige retourvlucht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

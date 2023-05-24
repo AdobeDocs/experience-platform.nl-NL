@@ -5,7 +5,7 @@ description: Adobe Target is een toepassing die realtime, door AI aangedreven pe
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '998'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!DNL Profile request]** | U vraagt om alle segmenten die in de Adobe Target-bestemming zijn toegewezen voor één profiel. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gebruiksscenario’s {#use-cases}
 

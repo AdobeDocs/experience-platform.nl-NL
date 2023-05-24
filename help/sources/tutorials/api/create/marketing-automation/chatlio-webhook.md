@@ -1,8 +1,9 @@
 ---
 title: Creeer een BronVerbinding en Dataflow voor Chatlio gebruikend de Dienst API van de Stroom
 description: Leer hoe u Adobe Experience Platform met Chatlio kunt verbinden met behulp van de Flow Service API.
-badge: "Bèta"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+badge: Beta
+exl-id: 867b8096-0841-4462-9888-e60c97c2115e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 0%
@@ -251,7 +252,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL Chatlio] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar de [!DNL Chatlio] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)

@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype Point of 
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '189'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 | `poiID` | Tekenreeks | Een unieke id van de POI. |
 | `type` | Tekenreeks | Het algemene type van POI die een typend die schema gebruikt door de beheerder van de POI definities wordt geselecteerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

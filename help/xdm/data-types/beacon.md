@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van de klasse Individueel profiel 
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '247'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 | `proximity` | Tekenreeks | Geschatte afstand tot het baken. Zie de [aanhangsel](#proximity) voor aanvaarde waarden en definities. |
 | `proximityUUID` | Tekenreeks | Een nabijheid UUID (Universally Unique Identifier) is een speciaal type herkenningsteken dat wordt gebruikt om bakens in uw netwerk van alle andere bakens in netwerken buiten uw controle te onderscheiden. De nabijheid UUID wordt gevormd in een baken, dat aan mobiele apparaten in waaier moet worden overgebracht om de bakens van een organisatie te identificeren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

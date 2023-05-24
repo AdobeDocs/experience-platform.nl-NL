@@ -1,9 +1,10 @@
 ---
 title: Werkgebiedgroep Gezondheidszorgverlener
 description: Dit document biedt een overzicht van de veldgroep met het schema van de zorgleverancier.
-source-git-commit: cf39f943e27cd11b0eabbc344774fa12482a8f92
+exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '252'
 ht-degree: 1%
 
 ---
@@ -29,6 +30,6 @@ ht-degree: 1%
 | `practiceType` | Tekenreeks | Het praktijktype voor de dienstverlener. |
 | `specialties` | Array van tekenreeksen | Een lijst van specialisaties die door deze leverancier worden aangeboden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

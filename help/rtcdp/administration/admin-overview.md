@@ -6,7 +6,7 @@ exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '283'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../../ac
 >
 >Volg de stappen in het dialoogvenster [gebruikershandleiding voor toegangsbeheer](../../access-control/ui/overview.md), met name voor het beheer van details en aanvullende services voor een productprofiel.
 
-## Sandboxen
+## Sandboxes
 
 Adobe Experience Platform (en Real-Time CDP via de extensie) is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
 

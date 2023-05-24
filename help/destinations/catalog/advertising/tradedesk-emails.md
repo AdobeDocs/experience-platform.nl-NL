@@ -5,7 +5,7 @@ last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1055'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA25
 | Email | E-mailadressen (tekst wissen) | Invoer `email` als de doelidentiteit wanneer uw bronidentiteit een e-mailnaamruimte of attribuut is. |
 | Email_LC_SHA256 | E-mailadressen moeten worden gehasht met behulp van SHA256 en verlaagd. Zorg ervoor dat u alle [e-mailnormalisatie](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) vereiste regels. U kunt deze instelling later niet wijzigen. | Invoer `hashed_email` als de doelidentiteit wanneer uw bronidentiteit een naamruimte of attribuut Email_LC_SHA256 is. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten voor e-mailhashing {#hashing-requirements}
 
@@ -76,7 +76,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail of gehashte e-mail) die worden gebruikt in de bestemming Handelsbureau. |
 | Uitvoerfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, wordt het profiel (identiteiten) één keer per dag bijgewerkt stroomafwaarts aan het bestemmingsplatform. Meer informatie over [batchexport](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 

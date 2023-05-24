@@ -6,7 +6,7 @@ description: Dit document bevat aanvullende informatie over het werken met de AP
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
 | `limit` | Indien gebruikt in combinatie met een `orderby` parameter, `limit` beperkt het maximumaantal items dat voor een bepaald verzoek moet worden geretourneerd. Deze parameter kan niet worden gebruikt zonder een `orderby` parameter aanwezig.<br><br>De `limit` parameter geeft een positief geheel getal aan (tussen `0` en `500`) als *hint* over het maximumaantal objecten dat moet worden geretourneerd. Bijvoorbeeld: `limit=5` retourneert slechts vijf bronnen in de lijst. Deze waarde wordt echter niet strikt nageleefd. De werkelijke responsgrootte kan kleiner of groter zijn, omdat de betrouwbare werking van de `start` parameter, als er een wordt opgegeven. |
 | `start` | Indien gebruikt in combinatie met een `orderby` parameter, `start` Hiermee geeft u aan waar de sublijst met items moet beginnen. Deze parameter kan niet worden gebruikt zonder een `orderby` parameter aanwezig. Deze waarde kan worden verkregen via de `_page.next` kenmerk van een reactie in een lijst en gebruikt voor toegang tot de volgende pagina met resultaten. Als de `_page.next` De waarde is null en er is geen extra pagina beschikbaar.<br><br>Deze parameter wordt meestal weggelaten om de eerste pagina met resultaten te verkrijgen. Daarna, `start` moet worden ingesteld op de maximumwaarde van de primaire sorteereigenschap van de `orderby` veld ontvangen op de vorige pagina. De API-reactie retourneert vervolgens items die beginnen met items met een primaire sorteereigenschap van `orderby` strikt groter dan (voor oplopend) of strikt kleiner dan (voor aflopend) de gespecificeerde waarde.<br><br>Als de `orderby` parameter is ingesteld op `orderby=name,firstname`de `start` parameter zou een waarde voor de `name` eigenschap. In dit geval, als u de volgende 20 ingangen van een middel onmiddellijk na de naam &quot;Miller&quot;wilde tonen, zou u gebruiken: `?orderby=name,firstname&start=Miller&limit=20`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Filteren {#filtering}
 
@@ -50,7 +50,7 @@ U kunt de resultaten filteren met de `property` parameter, die wordt gebruikt om
 | `~` | Filtert op of de eigenschap overeenkomt met een opgegeven reguliere expressie. | `property=title~test$` |
 | (Geen) | Wanneer alleen de naam van de eigenschap wordt opgegeven, worden alleen items geretourneerd waar de eigenschap bestaat. | `property=title` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

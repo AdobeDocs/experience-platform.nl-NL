@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het gegevenstype Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '195'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 | `postalCode` | Tekenreeks | De postcode van de locatie. Postcodes zijn niet voor alle landen beschikbaar. In sommige landen zal dit slechts een deel van de postcode bevatten. |
 | `stateProvince` | Tekenreeks | De staat of provincie van de observatie. De notatie volgt de [ISO 3166-2 (land en deelsector)](https://www.unece.org/cefact/locode/subdivisions.html) standaard. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

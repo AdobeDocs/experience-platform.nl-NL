@@ -1,13 +1,13 @@
 ---
 title: Veld groep productcatalogusschema
 description: Dit document biedt een overzicht van de veldgroep met het schema van de productcatalogus.
-source-git-commit: 9c06c58553aef4937454ced82d3e89867b5567b7
+exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '79'
 ht-degree: 3%
 
 ---
-
 
 # [!UICONTROL Product Catalog] schemaveldgroep
 
@@ -20,6 +20,6 @@ ht-degree: 3%
 | `productCatalogDescription` | Tekenreeks | Een beschrijving voor de productcatalogus. |
 | `productCatalogName` | Tekenreeks | De naam van de productcatalogus. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

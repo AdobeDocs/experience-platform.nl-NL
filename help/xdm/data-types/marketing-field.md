@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype van het v
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 | `time` | DateTime | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. |
 | `val` | Tekenreeks | De door de klant opgegeven voorkeursoptie voor dit marketinggeval. Zie de onderstaande tabel voor toegestane waarden en definities. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 In de volgende tabel worden de toegestane waarden voor `val`:
 
@@ -46,7 +46,7 @@ In de volgende tabel worden de toegestane waarden voor `val`:
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

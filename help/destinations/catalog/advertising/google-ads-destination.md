@@ -5,7 +5,7 @@ description: Google Ads, voorheen bekend als Google AdWords, is een online adver
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '919'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ads] bestemminge
 | GEMAAKT | Microsoft-advertentie-id. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
 | Amazon Fire TV ID | Deze id is uniek voor Amazon Fire TV&#39;s. |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -52,7 +52,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de Google-bestemming. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten {#prerequisites}
 

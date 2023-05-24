@@ -1,7 +1,8 @@
 ---
 title: Ondersteuning voor aflopen van tags in Internet Explorer 10 en 11
 description: Adobe Experience Platform biedt geen ondersteuning meer voor updates voor tags in Internet Explorer 10 en 11.
-source-git-commit: 0103f1af37dc202087d3c81d495de88d3de7c377
+exl-id: 35491c80-2a8a-4e07-baa7-a5db373b6852
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%

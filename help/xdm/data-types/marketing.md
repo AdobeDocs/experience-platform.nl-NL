@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype voor mark
 exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 | `campaignName` | Tekenreeks | De naam van de marketingcampagne, zoals `50%_DISCOUNT_USA` of `50%_DISCOUNT_ASIA`. |
 | `trackingCode` | Tekenreeks | De code voor bijhouden die kan worden gebruikt om de marketingcampagne te identificeren waaraan de gebeurtenis is gekoppeld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

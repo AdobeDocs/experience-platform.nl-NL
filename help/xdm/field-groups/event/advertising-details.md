@@ -1,9 +1,10 @@
 ---
 title: Advertentiedetails-schema-veldgroep
 description: Dit document biedt een overzicht van de veldgroep met het schema Advertising Details.
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '976'
 ht-degree: 1%
 
 ---
@@ -31,7 +32,7 @@ ht-degree: 1%
 | `timePlayed` | [[!UICONTROL Measure]](../../data-types/measure.md) | De hoeveelheid tijd die door een eindgebruiker aan een specifiek getimed media middel wordt doorgebracht. |
 | `downloadedPlayback` | Boolean | Wanneer ingesteld op `true`, geeft aan dat de hit wordt gegenereerd als gevolg van het afspelen van een gedownloade advertentiesessie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetReference` {#adAssetReference}
 
@@ -51,7 +52,7 @@ De `adAssetReference` worden de elementgegevens van de advertentie vastgelegd.
 | `placementID` | Tekenreeks | De plaatsing-id van de advertentie. |
 | `siteID` | Tekenreeks | De id van de advertentiesite. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
@@ -65,7 +66,7 @@ De `adAssetViewDetails` worden weergavegegevens voor het afspelen van de adverte
 | `index` | Geheel | De index van de advertentie binnen het bovenliggende element en het einde. De eerste advertentie heeft bijvoorbeeld index `0` en de tweede advertentie heeft index `1`. |
 | `playerName` | Tekenreeks | De naam van de speler die verantwoordelijk is voor het renderen van de advertentie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adViewability` {#adViewability}
 
@@ -97,6 +98,6 @@ De `adViewability` worden het aantal indrukken vastgelegd dat eindgebruikers kun
 | `viewportHeight` | Geheel | De verticale grootte (in pixels) van het venster dat tijdens de runtime werd weergegeven. Voor een webweergavegebeurtenis geeft deze waarde de hoogte van de viewport van de browser aan. |
 | `viewportWidth` | Geheel | De horizontale grootte (in pixels) van het venster dat tijdens de runtime werd weergegeven. Voor een webweergavegebeurtenis geeft deze waarde de breedte van de viewport van de browser aan. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

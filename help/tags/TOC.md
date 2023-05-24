@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '982'
 ht-degree: 14%
 
 ---
@@ -234,8 +234,6 @@ ht-degree: 14%
       * [Conversie-API magnetisch](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Overzicht](./extensions/server/splunk/overview.md)
-      * [!DNL Twitter] {#twitter}
-         * [Overzicht](./extensions/server/twitter/overview.md)
       * [!DNL Zendesk] API voor gebeurtenissen {#zendesk}
          * [Overzicht](./extensions/server/zendesk/overview.md)
 * Uitbreiding {#extension-dev}

@@ -3,8 +3,8 @@ title: Overzicht van de privacyconsole
 description: Leer hoe u uw workflows met betrekking tot privacy kunt controleren in de gebruikersinterface van Adobe Experience Platform.
 source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 1%
+source-wordcount: '391'
+ht-degree: 2%
 
 ---
 
@@ -38,7 +38,7 @@ De functie van elke widget wordt hieronder uitgelegd:
 | Meest actieve gebruikers | Toont de meest actieve gebruikers van het Platform binnen uw organisatie zoals die door wordt gevangen [auditlogboeken](./audit-logs/overview.md) voor het geselecteerde tijdkader. Gebruik het vervolgkeuzemenu om het tijdskader te wijzigen tussen de laatste 7 dagen, 14 dagen en 30 dagen. |
 | Verzoeken om gegevens | Hier wordt het aantal verzoeken van het gegevenssubject weergegeven dat is ingediend en ingevuld door [Privacy Service](../../privacy-service/home.md) voor een bepaalde dag. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Hulplijnen voor hoofdletters/kleine letters gebruiken
 
@@ -52,6 +52,6 @@ Raadpleeg de volgende documentatie voor meer informatie over de verschillende se
 
 * [Op kenmerken gebaseerd toegangsbeheer](../../access-control/abac/overview.md)
 * [Controlelogboeken](./audit-logs/overview.md)
-* [Data Governance](../../data-governance/home.md)
+* [Gegevensbeheer](../../data-governance/home.md)
 * [Gegevenshygiëne](../../hygiene/home.md)
-* [Privacy Service](../../privacy-service/home.md)
+* [Privacyservice](../../privacy-service/home.md)

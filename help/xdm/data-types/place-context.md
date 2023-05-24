@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype Context p
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 | `localTime` | DateTime | Een tijdstempel in [RFC 3339](https://tools.ietf.org/html/rfc3339) notatie die de lokale tijd aangeeft met een opgegeven verschuiving van de tijdzone. Het opmaakpatroon is `yyyy-MM-dd'T'HH:mm:ssXXX` (bijvoorbeeld `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Geheel | De huidige lokale tijdzone wordt in minuten verschoven van UTC voor de `localTime` waarde. Dit moet, indien van toepassing, de huidige DST-verschuiving omvatten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

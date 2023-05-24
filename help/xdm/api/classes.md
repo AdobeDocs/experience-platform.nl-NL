@@ -6,7 +6,7 @@ description: Het /classes eindpunt in de Registratie API van het Schema staat u 
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1501'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | De container waarvan u klassen wilt ophalen: `global` voor klassen die door Adobe zijn gemaakt of `tenant` voor klassen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -70,7 +70,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-klasse voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -127,7 +127,7 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | De container die de klasse bevat die u wilt ophalen: `global` voor een door Adobe gemaakte klasse of `tenant` voor een klasse die eigendom is van uw organisatie. |
 | `{CLASS_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de klasse die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -153,7 +153,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle op
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -320,7 +320,7 @@ curl -X POST \
 | `_{TENANT_ID}` | De `TENANT_ID` naamruimte voor uw organisatie. Alle die middelen door uw organisatie worden gecreeerd moeten dit bezit omvatten om botsingen met andere middelen in te vermijden [!DNL Schema Registry]. |
 | `allOf` | Een lijst met bronnen waarvan de eigenschappen door de nieuwe klasse moeten worden overgeërfd. Een van de `$ref` objecten binnen de array definiëren het gedrag van de klasse. In dit voorbeeld overerft de klasse het gedrag &#39;record&#39;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -408,7 +408,7 @@ PUT /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de klasse die u opnieuw wilt schrijven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -545,7 +545,7 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de klasse die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -647,7 +647,7 @@ DELETE /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de klasse die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

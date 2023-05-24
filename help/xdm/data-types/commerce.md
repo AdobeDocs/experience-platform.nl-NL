@@ -6,7 +6,7 @@ description: Dit document verstrekt een overzicht van het gegevenstype van het M
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 | `purchases` | [[!UICONTROL Measure]](./measure.md) | Wordt gebruikt om bij te houden wanneer een bestelling is geaccepteerd. De aankoopgebeurtenis is de enige vereiste actie bij een commerciële conversie. Er moet naar de aankoopgebeurtenis worden verwezen in een productlijst. |
 | `saveForLaters` | [[!UICONTROL Measure]](./measure.md) | Een productlijst wordt opgeslagen voor toekomstig gebruik, zoals een verlanglijst. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

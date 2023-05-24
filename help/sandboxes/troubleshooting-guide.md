@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en problemen met betrekking tot andere services van Platforms raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
-Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie de [sandboxen, overzicht](home.md) voor meer informatie .
+Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
 
 ## Wat is een sandbox?
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie de [sandboxen, overzicht](home.md) voor meer informatie .
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
 
 ## Welke typen sandboxen zijn beschikbaar en wat zijn de verschillen tussen deze typen? {#sandbox-types}
 
@@ -37,7 +37,7 @@ Het Experience Platform bevat twee sandboxtypen:
    * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
    * Gemiddeld 120 [!DNL Profile] API-aanroepen, per [!DNL Profile], per jaar (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen.
 
-Zie de [sandboxen, overzicht](./home.md) voor meer informatie .
+Zie het [sandboxoverzicht](./home.md) voor meer informatie.
 
 ## Kan ik toegang krijgen tot een bron van meerdere sandboxen?
 

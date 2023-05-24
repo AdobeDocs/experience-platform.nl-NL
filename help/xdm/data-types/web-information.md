@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het gegevenstype van het XDM (
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 | `webPageDetails` | [[!UICONTROL Web page details]](./webpage-details.md) | Beschrijft de details over de Web-pagina waar de Webinteractie voorkwam. |
 | `webReferrer` | [!UICONTROL Object] | Beschrijft de referentie van een Webinteractie, die URL is een bezoeker van onmiddellijk vóór de huidige Webinteractie kwam werd geregistreerd. Bevat de volgende subeigenschappen: <ul><li>`URL`: De referentie-URL.</li><li>`type`: Het verwijzingstype.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

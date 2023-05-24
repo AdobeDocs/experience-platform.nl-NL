@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de XDM Business Opportunity-kl
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '302'
 ht-degree: 2%
 
 ---
@@ -33,6 +33,6 @@ ht-degree: 2%
 | `opportunityStage` | Tekenreeks | De verkoopfase van de opportuniteit. |
 | `opportunityType` | Tekenreeks | Het soort kans. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de handleiding op [schema-relaties in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) om te leren hoe deze klasse conceptueel op de andere klassen B2B betrekking heeft en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /data_elements eindpunt in Reactor API
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1369'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap die eigenaar is van de gegevenselementen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | De `id` van het gegevenselement dat u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -316,7 +316,7 @@ POST /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u het gegevenselement onder definieert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -364,7 +364,7 @@ curl -X POST \
 | `attributes.clean_text` | Een booleaanse waarde die aangeeft of voorafgaande en navolgende witruimte uit de waarde van het gegevenselement moet worden verwijderd voordat deze wordt opgeslagen. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -482,7 +482,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | De `id` van het gegevenselement dat u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -512,7 +512,7 @@ curl -X PATCH \
 | `id` | De `id` van het gegevenselement dat u wilt bijwerken. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -632,7 +632,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | De `id` van het gegevenselement dat u wilt herzien. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -664,7 +664,7 @@ curl -X PATCH \
 | `id` | De `id` van het gegevenselement dat u wilt herzien. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type bron dat wordt herzien. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -782,7 +782,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | De `id` van het gegevenselement dat u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -822,7 +822,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u bibliotheken wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -944,7 +944,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u de revisies wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1178,7 +1178,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u de extensie wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1298,7 +1298,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan u de oorsprong wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1428,7 +1428,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | De `id` van het gegevenselement waarvan bezit u omhoog wilt kijken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

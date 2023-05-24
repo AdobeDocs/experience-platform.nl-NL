@@ -1,9 +1,10 @@
 ---
 title: Groep kaarthandelingen
 description: Dit document biedt een overzicht van de veldgroep met het schema Kaarthandelingen.
-source-git-commit: eaea904ddda6b7ffee6f52cd4af897c2a8885714
+exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '186'
 ht-degree: 2%
 
 ---
@@ -28,6 +29,6 @@ ht-degree: 2%
 | `cardType` | Tekenreeks | Het type kaart. |
 | `cardUnlocked` | Geheel | Tracks wanneer een kaart is ontgrendeld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).

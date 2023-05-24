@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Gegevensstroomgids
-user-guide-description: Leer over gegevensstromen en hoe te om hen over de verschillende diensten te vormen.
+user-guide-title: Handleiding voor gegevensstromen
+user-guide-description: Leer meer over gegevensstromen en hoe u deze kunt configureren voor verschillende services.
 feature: Dataflows
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 0%
+ht-degree: 22%
 
 ---
 

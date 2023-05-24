@@ -4,7 +4,7 @@ description: Maak een publiek op basis van uw klantlijsten, personen die uw site
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezoc
 
 ## Vereisten {#prerequisites}
 
-* De gebruiker moet zich verifiëren met een Pinterest-account dat toegang heeft tot het advertentieaccount waaraan hij of zij een publiek wil toevoegen. Meer informatie over het delen van adverteerderaccounts vindt u [hier](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Specifiek, zou de gebruiker de &quot;publiek&quot;toegangsniveaus nodig hebben.
+* De gebruiker moet zich verifiëren met een Pinterest-account dat toegang heeft tot de advertentieaccount waaraan hij of zij een publiek wil toevoegen. Meer informatie over het delen van adverteerderaccounts vindt u [hier](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Specifiek, zou de gebruiker de &quot;publiek&quot;toegangsniveaus nodig hebben.
 * Gegevens over identiteitsindelingen van klantenlijsten zijn te vinden [hier](https://help.pinterest.com/en/business/article/audience-targeting).
 
 ## Ondersteunde identiteiten {#supported-identities}
@@ -36,7 +36,7 @@ In de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destina
 | IDFA | [!DNL Apple ID for Advertisers] | Wijs de *IDFA* naamruimte van bronidentiteit naar het doelidentiteitsveld *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
 | EMAIL | E-mailadressen (tekst wissen of hashed met het algoritme SHA256) | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. <br> Wijs de *E-mail* of *Email_LC_SHA256* naamruimte van bronidentiteit naar het doelidentiteitsveld *pinterest_publiek*. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -47,7 +47,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in de Pinterest Customer List-bestemming. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gevallen gebruiken {#use-cases}
 

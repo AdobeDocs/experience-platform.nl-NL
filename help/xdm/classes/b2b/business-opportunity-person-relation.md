@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de XDM Business Opportunity Pe
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '341'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,6 @@ ht-degree: 1%
 | `personID` | Tekenreeks | Een unieke id voor de persoon in de opportuniterelatie. |
 | `personRole` | Tekenreeks | De rol voor de persoon in de opportuniteits-persoonverhouding. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de handleiding op [schema-relaties in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) om te leren hoe deze klasse conceptueel op de andere klassen B2B betrekking heeft en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

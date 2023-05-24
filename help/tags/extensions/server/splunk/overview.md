@@ -4,7 +4,7 @@ description: Leer over de uitbreiding Splunk voor gebeurtenis door:sturen in Ado
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Marketing teams kunnen de extensie voor de volgende gebruiksgevallen gebruiken:
 | Analyse van klantgedrag | Organisaties kunnen gegevens over klantinteractiegebeurtenissen vastleggen vanaf hun website en relevante gebeurtenissen doorsturen naar Splunk. Marketing- en analyseteams kunnen vervolgens binnen het Splunk-platform een analyse uitvoeren om inzicht te krijgen in de interactie en het gedrag van belangrijke gebruikers. Het platform Splunk kan worden gebruikt om grafieken, dashboards, of andere visualisaties te produceren om bedrijfsbelanghebbenden te informeren. |
 | Schaalbaar zoeken op grote gegevenssets | Organisaties kunnen transactie- of gespreksinvoer vastleggen als gebeurtenisgegevens van de website en gebeurtenissen doorsturen naar Splunk. De teams van Analytics kunnen dan hefboomwerking Splunk&#39;s scalable indexatievermogen om grote datasets te filtreren en te verwerken om het even welke bedrijfsinzichten af te leiden en geïnformeerde besluiten te nemen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten {#prerequisites}
 

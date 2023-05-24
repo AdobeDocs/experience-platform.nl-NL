@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype voor post
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
 | `statusReason` | Een beschrijving van de huidige `status`. |
 | `street1` - `street4` | Deze vier velden zijn bedoeld om informatie op het niveau van de primaire straat, het appartementnummer, het straatnummer en de straatnaam te bevatten. `street2` tot `street4` zijn optioneel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het postadres:
 

@@ -1,7 +1,8 @@
 ---
 title: Een bronverbinding en gegevensstroom maken voor SugarCRM-accounts en -contactpersonen met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met SugarCRM-accounts en -contactpersonen met behulp van de Flow Service API.
-source-git-commit: e3ae650c70b07e8682ea77f94791d5b320d89425
+exl-id: 2b422b39-5b86-4313-a214-725044d9812c
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 0%
@@ -886,7 +887,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL SugarCRM Accounts & Contacts] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar de [!DNL SugarCRM Accounts & Contacts] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)

@@ -1,9 +1,10 @@
 ---
 title: Gegevenstype Impressies
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor afdrukken.
-source-git-commit: 7fc16546176d196582a3cdfcee51f799eeef9788
+exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '136'
 ht-degree: 2%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 2%
 | `selected` | Geheel | Het aantal keren dat het afbeeldingsitem is geselecteerd of geklikt. |
 | `type` | Tekenreeks | Het type indruk. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

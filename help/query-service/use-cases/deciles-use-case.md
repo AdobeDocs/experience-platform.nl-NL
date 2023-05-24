@@ -4,7 +4,7 @@ description: Deze gids toont de stappen die worden vereist om de Dienst van de V
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1505'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,7 @@ In de volgende tabel worden de voorbeeldgegevens in het dialoogvenster `_profile
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | SILVER |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nieuwe creditcard | 10000 | FLYER |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Decile-gegevenssets genereren
 

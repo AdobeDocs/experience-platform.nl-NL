@@ -1,10 +1,11 @@
 ---
 title: API-handleiding voor auditquery
 description: De Vraag van de controle is RESTful API die ontwikkelaars toestaat om te zien wie deed wat acties in Adobe Experience Platform.
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
+source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

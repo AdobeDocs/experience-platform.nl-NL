@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype van het v
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | --- | --- | --- |
 | `val` | Tekenreeks | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie de onderstaande tabel voor toegestane waarden en definities. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 In de volgende tabel worden de toegestane waarden voor `val`:
 
@@ -42,7 +42,7 @@ In de volgende tabel worden de toegestane waarden voor `val`:
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

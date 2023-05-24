@@ -83,7 +83,7 @@ De **[!DNL Installed services]** De pagina bevat een lijst met bestaande service
 
 Geef uw nieuwe service een beschrijvende weergavenaam en selecteer **[!DNL Custom]** van de **[!DNL Service]** vervolgkeuzemenu. Geef een geschikte beschrijving op en selecteer vervolgens de gebruiker die u van de **[!DNL API Only User]** vervolgkeuzemenu. Nadat u de benodigde gegevens hebt ingevuld, selecteert u **[!DNL Create]** om uw nieuwe aangepaste service te maken.
 
-![maken](../images/marketo/create.png)
+![create](../images/marketo/create.png)
 
 ## Je client-id en clientgeheim ophalen
 

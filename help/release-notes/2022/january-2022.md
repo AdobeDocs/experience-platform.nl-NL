@@ -5,7 +5,7 @@ exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1341'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [Query-service](#query-service)
-- [Sandboxen](#sandboxes)
+- [Sandboxes](#sandboxes)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
@@ -96,7 +96,7 @@ Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van d
 
 Voor meer informatie over [!DNL Query Service], zie de [[!DNL Query Service] overzicht](../../query-service/home.md).
 
-## Sandboxen {#sandboxes}
+## Sandboxes {#sandboxes}
 
 Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 

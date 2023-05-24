@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype voor teke
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '194'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 | `containsPersonalData` | Boolean | Als dit veld waar is, betekent dit dat deze toestemmingsreeks moet worden verwerkt voor het afdwingen van toestemming. |
 | `gdprApplies` | Boolean | Als dit veld waar is, betekent dit dat er toestemming komt met persoonsgegevens. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

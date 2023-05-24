@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype Personnaa
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen w
 | `middleName` | Midden-, alternatieve of aanvullende namen opgegeven tussen de voornaam en achternaam. |
 | `suffix` | Een groep letters die na de naam van een persoon wordt verstrekt om aanvullende informatie te verstrekken (zoals `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, enzovoort). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer details over het gegevenstype van de persoonnaam, verwijs naar de openbare bewaarplaats XDM:
 

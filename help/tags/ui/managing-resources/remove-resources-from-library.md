@@ -1,7 +1,8 @@
 ---
 title: Bronnen uit een bibliotheek verwijderen
 description: Leer hoe u bronnen uit een tagbibliotheek kunt verwijderen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -48,7 +49,7 @@ In plaats daarvan moet u de resource uitschakelen. Dit het onbruikbaar maken is 
    1. Selecteer de bron in de lijstweergave.
    1. Selecteer **[!UICONTROL Disable]**.
 1. Maak een nieuwe ontwikkelingsbibliotheek.
-1. Voeg de `latest`-versie van de uitgeschakelde bron toe.
+1. Voeg de `latest` versie van de uitgeschakelde bron.
 1. Opslaan en samenstellen.
 1. Volg uw normale proces voor het promoten van bibliotheken naar Productie.
 1. Publiceren naar productie om de bron te verwijderen.

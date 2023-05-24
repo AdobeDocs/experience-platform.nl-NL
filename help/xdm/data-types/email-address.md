@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype voor e-ma
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 | `statusReason` | Een beschrijving van de huidige `status`. |
 | `type` | De wijze waarop de rekening op de persoon betrekking heeft (zoals `work` of `personal`). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het e-mailadres:

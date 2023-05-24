@@ -4,7 +4,7 @@ description: Leer hoe u resultaten kunt filteren wanneer u bronnen opsomt in de 
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | `{OPERATOR}` | De exploitant die bepaalt hoe de resultaten tegen verstrekte `{VALUE}`. Ondersteunde operatoren worden vermeld in de [aanhangsel](#supported-operators). |
 | `{VALUE}` | De waarde waarmee de geretourneerde resultaten moeten worden vergeleken. Bij vergelijking voor gelijkheid met de `EQ` -operator, moet de waarde een exacte, hoofdlettergevoelige overeenkomst zijn om in de reactie te worden opgenomen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

@@ -7,7 +7,6 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 exl-id: 514b73cd-d1f1-472d-8021-ecfb2abeb411
-translation-type: tm+mt
 source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
@@ -21,7 +20,7 @@ Deze video biedt een snelle rondleiding van de gebruikersinterface van Adobe Exp
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie, gelieve [de gids van de UI van Adobe Experience Platform](../ui-guide.md) te bezoeken.
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest actuele informatie gaat u naar de [Handleiding Adobe Experience Platform UI](../ui-guide.md).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

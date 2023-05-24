@@ -4,7 +4,7 @@ description: Activeer profielen voor gerichte Media enquêtes en koppel inzameli
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Medallia ondersteunt de activering van de identiteiten die in de onderstaande ta
 | email | E-mailadres | Selecteer de identiteit van het e-maildoel wanneer u enquêtes wilt verzenden naar een e-mailuitnodiging. Als een profiel is gekoppeld aan meerdere e-mailadressen, wordt de uitnodiging alleen voor de eerste e-mail geactiveerd. |
 | telefoon | Telefoonnummers in E.164-indeling | Selecteer de identiteit van het telefoondoel wanneer u op SMS-Gebaseerde onderzoeken wilt verzenden. Het telefoonnummer moet de E.164-indeling hebben, die een plusteken (+), een internationale aanroepcode van het land, een lokale netcode en een telefoonnummer bevat. Bijvoorbeeld: (+)(landcode)(netnummer)(telefoonnummer). Wanneer een profiel met veelvoudige telefoonaantallen wordt geassocieerd, zal Medallia de uitnodiging aan het eerste slechts telefoonaantal teweegbrengen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -62,7 +62,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle zojuist gekwalificeerde leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 

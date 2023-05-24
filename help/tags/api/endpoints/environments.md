@@ -1,22 +1,22 @@
 ---
-title: Environments endpoint
-description: Learn how to make calls to the /environments endpoint in the Reactor API.
+title: Het eindpunt van omgevingen
+description: Leer hoe te om vraag aan het /environment eindpunt in Reactor API te maken.
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1002'
 ht-degree: 1%
 
 ---
 
-# Environments endpoint
+# Het eindpunt van omgevingen
 
 Wanneer een [bibliotheek](./libraries.md) wordt gecompileerd in een [build](./builds.md) in de Reactor-API is de exacte inhoud van de build afhankelijk van de omgevingsinstellingen en de bronnen in de bibliotheek. De omgeving bepaalt met name het volgende:
 
 1. **Doel**: De plaats waar u de bouwstijl wilt worden opgesteld. Dit wordt bepaald door een [host](./hosts.md) voor het milieu.
 1. **Archief**: U kunt ervoor kiezen om de build op te halen als een implementeerbare set bestanden of om de build op te slaan in een archiefindeling. Dit wordt gecontroleerd door de `archive` milieu.
 
-Het doel en archiefformaat dat door het milieu wordt gevormd verandert hoe u in uw toepassing van verwijzingen voorziet bouwt (die verwijzing is [code insluiten](../../ui/publishing/environments.md#embed-code)). If you make any changes to destination or file format, you must make a matching update to your application to use the new reference.
+Het doel en archiefformaat dat door het milieu wordt gevormd verandert hoe u in uw toepassing van verwijzingen voorziet bouwt (die verwijzing is [code insluiten](../../ui/publishing/environments.md#embed-code)). Als u wijzigingen aanbrengt in de doel- of bestandsindeling, moet u een overeenkomende update uitvoeren naar uw toepassing om de nieuwe referentie te kunnen gebruiken.
 
 De milieu&#39;s komen in drie types (of stadia), met elk type dat een verschillende grens van het totale aantal heeft u kunt hebben:
 
@@ -26,7 +26,7 @@ De milieu&#39;s komen in drie types (of stadia), met elk type dat een verschille
 | Staging | Eén |
 | Productie | Eén |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Deze omgevingstypen gedragen zich op dezelfde manier, maar worden in verschillende stadia van de [publicatieworkflow voor tags](../../ui/publishing/publishing-flow.md).
 
@@ -36,7 +36,7 @@ Zie de sectie over [omgevingen](../../ui/publishing/environments.md) in de publi
 
 ## Aan de slag
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor belangrijke informatie over hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met omgevingen ophalen {#list}
 
@@ -52,11 +52,11 @@ GET /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap die eigenaar is van de omgevingen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde milieu&#39;s op de volgende attributen worden gefiltreerd:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>See the guide on [filtering responses](../guides/filtering.md) for more information.
+>Gebruikend vraagparameters, kunnen de vermelde milieu&#39;s op de volgende attributen worden gefiltreerd:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de handleiding op [filterreacties](../guides/filtering.md) voor meer informatie .
 
 **Verzoek**
 
@@ -176,7 +176,7 @@ GET /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | De `id` van de omgeving die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -285,7 +285,7 @@ POST /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de omgeving definieert onder. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -320,19 +320,19 @@ curl -X POST \
       }'
 ```
 
-| Property | Beschrijving |
+| Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Required)** A human-readable name for the environment. |
-| `attributes.archive` | A boolean value indicating whether the build she be in archive format. |
+| `attributes.name` | **(Vereist)** Een door de mens leesbare naam voor het milieu. |
+| `attributes.archive` | Een booleaanse waarde die aangeeft of de build een archiefindeling heeft. |
 | `attributes.archive_passphrase` | Een tekenreekswachtwoord waarmee het archiefbestand kan worden ontgrendeld. |
 | `attributes.path` | Een pad vanaf de host-URL voor de omgeving. |
 | `attributes.stage` | Het stadium voor het milieu (ontwikkeling, staging of productie). |
 | `id` | De `id` van de omgeving die u wilt bijwerken. Dit moet overeenkomen met de `{ENVIRONMENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | The type of resource being updated. Voor dit eindpunt, moet de waarde zijn `environments`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Response**
+**Antwoord**
 
 Een geslaagde reactie retourneert de details van de nieuwe omgeving.
 
@@ -427,7 +427,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | De `id` van de omgeving die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -455,9 +455,9 @@ curl -X PATCH \
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de omgeving moeten worden bijgewerkt. De volgende omgevingskenmerken kunnen worden bijgewerkt: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Zie de voorbeeldvraag voor [creëren van een omgeving](#create) voor een lijst van kenmerken en het gebruik ervan. |
 | `id` | De `id` van de omgeving die u wilt bijwerken. Dit moet overeenkomen met de `{ENVIRONMENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | The type of resource being updated. Voor dit eindpunt, moet de waarde zijn `environments`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -554,7 +554,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | De `id` van de omgeving die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -574,7 +574,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responsst
 
 De volgende vraag toont aan hoe te om de verwante middelen voor een milieu terug te winnen. Wanneer [een omgeving opzoeken](#lookup), worden deze relaties vermeld in het `relationships` eigenschap.
 
-See the [relationships guide](../guides/relationships.md) for more information on relationships in the Reactor API.
+Zie de [relatiehulplijn](../guides/relationships.md) voor meer informatie over relaties in de Reactor-API.
 
 ### Verwante builds voor een omgeving weergeven {#builds}
 
@@ -590,9 +590,9 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 | --- | --- |
 | `{ENVIRONMENT_ID}` | De `id` van de omgeving waarvan u de builds wilt vermelden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Request**
+**Verzoek**
 
 ```shell
 curl -X GET \
@@ -606,7 +606,7 @@ curl -X GET \
 
 **Antwoord**
 
-A successful response returns a list of builds that use the specified environment.
+Een succesvolle reactie keert een lijst van bouwstijlen terug die het gespecificeerde milieu gebruiken.
 
 ```json
 {
@@ -705,9 +705,9 @@ GET  /environments/{ENVIRONMENT_ID}/host
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | The `id` of the environment whose host you want to look up. |
+| `{ENVIRONMENT_ID}` | De `id` van de omgeving waarvan u de host wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -723,7 +723,7 @@ curl -X GET \
 
 **Antwoord**
 
-A successful response returns the details of the host that uses the specified environment.
+Een succesvolle reactie keert de details van de gastheer terug die het gespecificeerde milieu gebruikt.
 
 ```json
 {
@@ -764,7 +764,7 @@ A successful response returns the details of the host that uses the specified en
 
 U kunt de bibliotheek die een omgeving gebruikt, opzoeken door deze toe te voegen `/library` naar het pad van een GET-aanvraag.
 
-**API format**
+**API-indeling**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/library
@@ -774,7 +774,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 | --- | --- |
 | `{ENVIRONMENT_ID}` | De `id` van de omgeving waarvan u de bibliotheek wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -889,7 +889,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 | --- | --- |
 | `{ENVIRONMENT_ID}` | De `id` van de omgeving waarvan u de eigenschap wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

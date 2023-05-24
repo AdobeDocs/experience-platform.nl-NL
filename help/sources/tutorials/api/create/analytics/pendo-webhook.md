@@ -1,8 +1,9 @@
 ---
 title: Creeer een Verbinding Bron en Dataflow voor Pendo gebruikend de Dienst API van de Stroom
 description: Leer hoe u Adobe Experience Platform verbindt met Pendo met behulp van de Flow Service API.
-badge: "Bèta"
-source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
+badge: Beta
+exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 0%
@@ -245,7 +246,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL Pendo] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar de [!DNL Pendo] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)

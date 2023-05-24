@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;ExperienceEvent-query;ExperienceEvent-query;ExperienceEvent-query;
 title: Een trendrapport van gebeurtenissen maken
 description: Leer hoe te om vragen te schrijven die de Gebeurtenissen van de Ervaring gebruiken om een trended rapport van gebeurtenissen over een gespecificeerde datumwaaier, gegroepeerd door datum tot stand te brengen.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%

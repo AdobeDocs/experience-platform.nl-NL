@@ -9,13 +9,13 @@ exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '259'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
 # Overzicht van Adobe Experience Platform Debugger
 
-De Adobe Experience Platform Debugger-extensie voor [Chroom](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) en [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) onderzoekt uw webpagina&#39;s en helpt u problemen te vinden met de manier waarop uw Adobe Experience Cloud-oplossingen zijn geïmplementeerd.
+De Adobe Experience Platform Debugger-extensie voor [Chroom](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) en [Firefox](https://addons.mozilla.org/nl/firefox/addon/adobe-experience-platform-dbg/) onderzoekt uw webpagina&#39;s en helpt u problemen te vinden met de manier waarop uw Adobe Experience Cloud-oplossingen zijn geïmplementeerd.
 
 U kunt Foutopsporing van het Platform met de andere oplossingen van de activering van Adobe gebruiken om het volgende uit te voeren:
 

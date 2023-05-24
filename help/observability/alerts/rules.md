@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 0%
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform biedt verschillende vooraf gedefinieerde waarschuwings
 
 Wanneer [het bekijken alarmregels in UI van het Platform](./ui.md), kunt u zich op elke regel afzonderlijk abonneren. Wanneer u zich abonneert op waarschuwingen via [I/O-gebeurtenismeldingen](./subscribe.md)De waarschuwingsregels zijn echter ingedeeld in verschillende abonnementspakketten. In de onderstaande tabellen wordt elke regel weergegeven met de corresponderende naam van het I/O-gebeurtenisabonnement.
 
-## Gegevensinname
+## Gegevensopname
 
 De volgende waarschuwingsregels gelden specifiek voor [Gegevensinname](../../ingestion/home.md) en  [bronnen](../../sources/home.md):
 
@@ -29,7 +29,7 @@ De volgende waarschuwingsregels gelden specifiek voor [Gegevensinname](../../ing
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Vertraging bij inname | Deze waarschuwing wordt geactiveerd wanneer een batch-opname-flow langer duurt dan 150 minuten om te verwerken. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Ingestief | Deze waarschuwing treedt op wanneer de verhouding van mislukte records ten opzichte van alle records een drempel van 0,5% overschrijdt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u zich eerder hebt geabonneerd op het volgende type waarschuwingen, ontvangt u geen waarschuwingen meer omdat deze waarschuwing is afgekeurd:
 
@@ -37,7 +37,7 @@ Als u zich eerder hebt geabonneerd op het volgende type waarschuwingen, ontvangt
 | --- | --- | --- |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identiteitsservice
 
@@ -50,7 +50,7 @@ De volgende waarschuwingsregels gelden specifiek voor [Identiteitsservice](../..
 | Vertragingen, fouten en fouten bij identiteitsverdenking | Vertraging bij uitvoering identiteitsservicestroom | Deze waarschuwing treedt in werking wanneer een stroom van de Dienst van de Identiteit duurt langer dan 150 minuten om te verwerken. |
 | Vertragingen, fouten en fouten bij identiteitsverdenking | Fout bij uitvoeren van identiteitsservicestroom | Deze waarschuwing treedt op wanneer een fout optreedt bij het invoeren van gegevens in Identity Service. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Klantprofiel in realtime
 
@@ -63,7 +63,7 @@ De volgende waarschuwingsregels gelden specifiek voor [Klantprofiel in realtime]
 | Vertragingen, fouten en fouten bij het verwerken van profielen | Vertraging bij uitvoering van profielstroom | Deze waarschuwing wordt geactiveerd wanneer het laden van gegevens van het Data Lake in Profile langer duurt dan 150 minuten om te verwerken. |
 | Vertragingen, fouten en fouten bij het verwerken van profielen | Fout bij uitvoeren van profielstroom | Deze waarschuwing treedt op wanneer een fout optreedt bij het opnemen van gegevens in het profiel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Segmentatie
 
@@ -77,7 +77,7 @@ De volgende waarschuwingsregels gelden specifiek voor [Segmenteringsservice](../
 | Vertragingen, fouten en fouten bij de evaluatie van segmenten | Fout in segmenttaak | Deze waarschuwing treedt in werking wanneer een baan van de segmentevaluatie in een fout resulteert. |
 | Vertragingen, fouten en fouten bij de evaluatie van segmenten | Segmentdefinitie uitgeschakeld | Deze waarschuwing wordt geactiveerd wanneer een segmentdefinitie is uitgeschakeld als gevolg van een interne fout. Dit leidt automatisch tot een oorlogsruimte voor een technische team van Adobe om de kwestie te onderzoeken. Deze waarschuwing is alleen bedoeld als informatief en vereist geen actie van u. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Doelen
 
@@ -91,7 +91,7 @@ De volgende waarschuwingsregels gelden specifiek voor [bestemmingen](../../desti
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Uitvoerfout bestemming | Deze waarschuwing wordt geactiveerd wanneer een fout optreedt tijdens het activeren van een segment op een doel. |
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Het percentage kippingen overschrijdt de drempel | Deze waarschuwing wordt geactiveerd wanneer de verhouding van overgeslagen id&#39;s tot totale id&#39;s een drempel overschrijdt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Query-service
 

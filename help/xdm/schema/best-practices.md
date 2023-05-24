@@ -6,7 +6,7 @@ description: Dit document verstrekt een inleiding aan de schema's van het Gegeve
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2709'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Als u eenmaal een Europese beoordelingsruimte hebt gecreëerd om de essentiële 
 | Entiteiten opzoeken | Opzoekentiteiten zijn concepten die betrekking kunnen hebben op een individuele persoon, maar die niet rechtstreeks kunnen worden gebruikt om de persoon te identificeren. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door middel van schema&#39;s op basis van **aangepaste klassen** en zijn gekoppeld aan profielen en gebeurtenissen via [schema-relaties](../tutorials/relationship-ui.md). |
 | Gebeurtenisentiteiten | Gebeurtenisentiteiten vertegenwoordigen concepten met betrekking tot acties die een klant kan uitvoeren, systeemgebeurtenissen of andere concepten waarbij u wijzigingen in de loop van de tijd wilt bijhouden. Entiteiten die onder deze categorie vallen, moeten worden vertegenwoordigd door middel van schema&#39;s die zijn gebaseerd op de **[!DNL XDM ExperienceEvent]class**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Overwegingen bij het sorteren van entiteiten
 
@@ -88,7 +88,7 @@ Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der 
 | 1234567 | Toevoegen | 486502 | 1 | 1 okt. 10:41 |
 | 1234567 | Toevoegen | 910482 | 5 | 3 okt. 14:15 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Gebruiksgevallen voor segmentatie
 
@@ -131,7 +131,7 @@ In de volgende tabel worden enkele gemeenschappelijke entiteitsrelaties en de ca
 | Klanten en klantenaccounts | Eén op één | Één enkele klant kan slechts één loyaliteitsrekening hebben, en vice versa. Aangezien de relatie één-op-één is, vertegenwoordigen zowel Klanten als Loyalty&#39;s profielentiteiten. |
 | Klanten en abonnementen | Eén naar vele | Eén klant kan vele abonnementen hebben. Aangezien het bedrijf slechts met de huidige abonnementen van een klant betrokken is, zijn de Klanten een profielentiteit, terwijl de Abonnementen een raadplegingsentiteit is. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Pros en cons van verschillende entiteitsklassen {#pros-and-cons}
 

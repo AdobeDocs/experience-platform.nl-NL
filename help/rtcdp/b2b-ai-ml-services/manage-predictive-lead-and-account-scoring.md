@@ -130,27 +130,27 @@ U bent teruggekeerd aan **[!UICONTROL Services]** waar u de score niet meer in d
 
 | Foutcode | Foutbericht |
 | --- | --- |
-| 401 | FOUT 401. De AI-pijpleiding van leads is gestopt: onvoldoende geldige accounts voor accountscoring. Aantal rekeningen: {} . |
-| 402 | FOUT 402. De AI-pijpleiding van leads is gestopt: niet genoeg geldige contacten voor contactscore. Aantal contactpersonen: {} . |
-| 403 | FOUT 403. De AI-pijpleiding van leads is gestopt: onvoldoende activiteitenvolume voor modeltraining. Aantal gebeurtenissen: {} . |
-| 404 | FOUT 404. De AI-pijpleiding van leads is gestopt: onvoldoende conversies voor modeltraining. Aantal omzettingen: {} . |
-| 405 | FOUT 405. De AI-pijpleiding van leads is gestopt: te weinig activiteit voor een geldige modelopleiding. Slechts {} procent van de accounts heeft activiteit. |
-| 406 | FOUT 406. De AI-pijpleiding van leads is gestopt: te weinig activiteit voor een geldige modelopleiding. Slechts {} percent van contacten heeft activiteit. |
+| 401 | FOUT 401. De AI-pijpleiding van leads is gestopt: onvoldoende geldige accounts voor accountscoring. Aantal accounts: {}. |
+| 402 | FOUT 402. De AI-pijpleiding van leads is gestopt: niet genoeg geldige contacten voor contactscore. Aantal contactpersonen: {}. |
+| 403 | FOUT 403. De AI-pijpleiding van leads is gestopt: onvoldoende activiteitenvolume voor modeltraining. Aantal gebeurtenissen: {}. |
+| 404 | FOUT 404. De AI-pijpleiding van leads is gestopt: onvoldoende conversies voor modeltraining. Aantal conversies: {}. |
+| 405 | FOUT 405. De AI-pijpleiding van leads is gestopt: te weinig activiteit voor een geldige modelopleiding. Slechts {} procent van de accounts heeft een activiteit. |
+| 406 | FOUT 406. De AI-pijpleiding van leads is gestopt: te weinig activiteit voor een geldige modelopleiding. Slechts {} procent van de contacten heeft een activiteit. |
 | 407 | FOUT 407. De AI-pijpleiding van leads is gestopt: de typen scoring van gegevensactiviteiten komen niet overeen met de trainingsgegevens. |
-| 408 | FOUT 408. De AI-pijpleiding van leads is gestopt: de ontbrekende snelheid is te hoog voor activiteitsfuncties. Ontbrekende frequentie: {} . |
-| 409 | FOUT 409. De AI-pijpleiding van leads is gestopt: test auc is te laag. Auc testen: {} . |
-| 410 | FOUT 410. De AI-pijpleiding van leads is gestopt: test auc is te laag na parameterinstelling. Auc testen: {} . |
+| 408 | FOUT 408. De AI-pijpleiding van leads is gestopt: de ontbrekende snelheid is te hoog voor activiteitsfuncties. Ontbrekend percentage: {}. |
+| 409 | FOUT 409. De AI-pijpleiding van leads is gestopt: test auc is te laag. Test AUC: {}. |
+| 410 | FOUT 410. De AI-pijpleiding van leads is gestopt: test auc is te laag na parameterinstelling. Test AUC: {}. |
 | 411 | FOUT 411. De AI-pijpleiding van leads is gestopt: de opleidingsgegevens hebben niet genoeg omzettingen om betrouwbaar model te produceren. conversies: {}. |
 | 412 | FOUT 412. De AI-pijpleiding van leads is gestopt: de testgegevens hebben geen conversie om de AUC-ROC te berekenen. |
 
 | Waarschuwing/informatiecode | Bericht |
 | --- | --- |
-| 100 | INFO 100. Leidt AI-kwaliteitscontrole: het aantal rekeningen bedraagt : {} . |
-| 101 | INFO 101. Leidt AI-kwaliteitscontrole: het aantal contacten is : {} . |
-| 102 | INFO 102. Leidt AI-kwaliteitscontrole: het aantal kansen is : {} . |
-| 103 | INFO 103. Leidt AI-kwaliteitscontrole: de testauc is laag . Start parameterinstelling. Testauc: {} . |
-| 200 | WAARSCHUWING 200. Leidt AI-kwaliteitscontrole: het ontbrekende aantal ontstekingsfuncties is: {} . |
-| 201 | WAARSCHUWING 201. Leidt AI-kwaliteitscontrole: de ontbrekende activiteitskenmerken zijn : {} . |
+| 100 | INFO 100. Leads voor AI-kwaliteitscontrole: het aantal accounts is: {}. |
+| 101 | INFO 101. Leads AI-kwaliteitscontrole: het aantal contacten is: {}. |
+| 102 | INFO 102. Leads AI-kwaliteitscontrole: het aantal kansen is: {}. |
+| 103 | INFO 103. Leidt AI-kwaliteitscontrole: de testauc is laag . Start parameterinstelling. AUC van test: {}. |
+| 200 | WAARSCHUWING 200. Leads AI-kwaliteitscontrole: het ontbrekende percentage van firmografische functies is: {}. |
+| 201 | WAARSCHUWING 201. Leads voor AI-kwaliteitscontrole: het ontbrekende percentage activiteitsfuncties is: {}. |
 
 ## Volgende stappen
 

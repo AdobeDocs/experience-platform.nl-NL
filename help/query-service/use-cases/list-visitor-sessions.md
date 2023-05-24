@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;ExperienceEvent-query;ExperienceEvent-query;ExperienceEvent-query;
 title: De paginaweergaven van een gebruiker weergeven
 description: Leer hoe te vragen schrijven die de Gebeurtenissen van de Ervaring gebruiken om een lijst van de laatste 100 pagina's tot stand te brengen die een gespecificeerde gebruiker heeft gebruikt.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%

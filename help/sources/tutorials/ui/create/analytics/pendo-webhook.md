@@ -1,8 +1,9 @@
 ---
 title: Een verbinding met een endo-bron maken in de gebruikersinterface
 description: Leer hoe u een Pendo-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-badge: "Bèta"
-source-git-commit: 5a199262acd517516b1e5313a25ddff8f1b11959
+badge: Beta
+exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 0%

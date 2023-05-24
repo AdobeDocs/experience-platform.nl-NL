@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype (Experien
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '264'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Er zijn veelvoudige ervaringskanalen, elk met verschillende beperkingen op hoe d
 | `mode` | Tekenreeks | Hoe ervaringen worden opgedaan in dit kanaal. |
 | `typeAtSource` | Tekenreeks | Een aangepaste naam voor het kanaal. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

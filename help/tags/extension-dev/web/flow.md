@@ -1,7 +1,8 @@
 ---
 title: Web Extension Flow
 description: Leer hoe webextensiecomponenten tijdens runtime in Adobe Experience Platform met elkaar communiceren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -26,8 +27,8 @@ In het volgende diagram kunt u het verband tussen gebeurtenissen, voorwaarden en
 
 De stroom van de regelverwerking bevat de volgende fasen:
 
-1. De `settings` en de `trigger` methode worden verstrekt aan de module van de gebeurtenisbibliotheek bij opstarten.
+1. De `settings` en de `trigger` Deze methode wordt bij het opstarten aan de module van de gebeurtenisbibliotheek gegeven.
 1. Wanneer de module van de gebeurtenisbibliotheek bepaalt de gebeurtenis is voorgekomen, roept de module van de gebeurtenisbibliotheek `trigger`.
-1. De markeringen gaat `settings` in de modules van de voorwaardenbibliotheek van de regel over waar de voorwaarden worden geëvalueerd.
+1. Labels passeren `settings` in de modules van de voorwaardenbibliotheek van de regel waar de voorwaarden worden geëvalueerd.
 1. Elke module van de voorwaardenbibliotheek keert terug of een voorwaarde aan waar evalueert.
 1. Als alle voorwaarden overgaan, worden de acties van de regel uitgevoerd.

@@ -5,7 +5,7 @@ description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij 
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1512'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ SendGrid ondersteunt de activering van identiteiten die in de onderstaande tabel
 |---|---|---|
 | email | E-mailadres | Merk op dat zowel onbewerkte tekst als SHA256 gehashte e-mailadressen worden ondersteund door [!DNL Adobe Experience Platform]. Als het bronveld van het Experience-platform hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen.<br/><br/> Let op: **SendGrid** Hashed-e-mailadressen worden niet ondersteund, dus alleen onbewerkte tekstgegevens zonder transformatie worden naar de bestemming verzonden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -62,7 +62,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gebruiksscenario’s {#use-cases}
 

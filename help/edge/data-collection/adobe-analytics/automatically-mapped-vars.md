@@ -6,7 +6,7 @@ keywords: adobe analytics;variables;analytics;automatic map;automatically mapped
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 source-git-commit: dcbe4c1b5a085878562990ed2db8e5cb27b93e28
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '915'
 ht-degree: 4%
 
 ---
@@ -23,20 +23,20 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | application.id | c.a.appid | Contextgegevens van AppMeasurement `c.a.appid` toewijzing. |
 | application.launches.value | c.a.launches | Contextgegevens van AppMeasurement `c.a.launches` toewijzing. |
 | commerce.checkouts.id | events | `scCheckout` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.checkouts.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_CHECKOUT, met behulp van scheidingsteken `,`. |
+| commerce.checkouts.value | events | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_CHECKOUT, met behulp van scheidingsteken `,`. |
 | commerce.order.currencyCode | cc | Toewijzing van de query voor de parameter CURRENCY voor AppMeasurement. |
 | commerce.order.purchaseID | pi | PURCHASEID-toewijzing voor queryparameter AppMeturement. |
-| commerce.productListAdds.id | gebeurtenissen | `scAdd` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListAdds.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_ADD, met behulp van scheidingsteken `,`. |
-| commerce.productListOpens.id | gebeurtenissen | `scOpen` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListOpens.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_OPEN, met scheidingsteken `,`. |
-| commerce.productListRemovals.id | gebeurtenissen | `scRemove` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListRemovals.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_REMOVE, met behulp van scheidingsteken `,`. |
-| commerce.productListViews.id | gebeurtenissen | `scView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productListViews.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_VIEW, met scheidingsteken `,`. |
-| commerce.productViews.id | gebeurtenissen | `prodView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
-| commerce.productViews.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PROD_VIEW, met scheidingsteken `,`. |
-| commerce.purchases.value | gebeurtenissen | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PURCHASE, met scheidingsteken `,`. |
+| commerce.productListAdds.id | events | `scAdd` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| commerce.productListAdds.value | events | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_ADD, met behulp van scheidingsteken `,`. |
+| commerce.productListOpens.id | events | `scOpen` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| commerce.productListOpens.value | events | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_OPEN, met scheidingsteken `,`. |
+| commerce.productListRemovals.id | events | `scRemove` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| commerce.productListRemovals.value | events | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_REMOVE, met behulp van scheidingsteken `,`. |
+| commerce.productListViews.id | events | `scView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| commerce.productListViews.value | events | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_SC_VIEW, met scheidingsteken `,`. |
+| commerce.productViews.id | events | `prodView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| commerce.productViews.value | events | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PROD_VIEW, met scheidingsteken `,`. |
+| commerce.purchases.value | events | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PURCHASE, met scheidingsteken `,`. |
 | device.colorDepth | c | Query-parameter C_COLOR voor AppMeasurement. |
 | device.screenHeight | s | Schermresolutie toepassingsparameters. |
 | device.screenWidth | s | Schermresolutie toepassingsparameters. |
@@ -92,9 +92,9 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | placeContext.geo.postalCode | zip | Zoekparameter ZIP-toewijzing voor AppMeasurement-query. |
 | placeContext.geo.stateProvince | state | STATE-toewijzing voor queryparameter AppMeturement. |
 | productListItems[N].lineItemId | products | Toewijzing van de categorie Producten van de vraagparameter AppMeasurement. |
-| productlistitems[N].name | producten | Toewijzing van naam van toepassingsparameter voor queryparameter voor producten. |
-| productlistitems[N].priceTotal | producten | AppMeasurement-queryparameter Products Price mapping. |
-| productlistitems[N].quantity | producten | AppMeasurement de parameterproducten van de vraagparameterProducts Quantity mapping. |
+| productlistitems[N].name | products | Toewijzing van naam van toepassingsparameter voor queryparameter voor producten. |
+| productlistitems[N].priceTotal | products | AppMeasurement-queryparameter Products Price mapping. |
+| productlistitems[N].quantity | products | AppMeasurement de parameterproducten van de vraagparameterProducts Quantity mapping. |
 | web.webInteraction.URL | pev1 | Toepassingsmetingqueryparameter PAGE_EVENT_VAR1-toewijzing. |
 | web.webInteraction.name | pev2 | Toepassingsmetingqueryparameter PAGE_EVENT_VAR2-toewijzing. |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` tot `pe=lnk_o`; `web.webInteraction.type=download` tot `pe=lnk_d`; `web.webInteraction.type=exit` tot `pe=lnk_e` |
@@ -106,4 +106,4 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | web.webPageDetails.siteSection | ch | CHANNEL-toewijzing voor queryparameter voor AppMeasurement. |
 | web.webReferrer.URL | r | REFERRER-toewijzing voor query-parameter voor AppMeasurement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;ExperienceEvent-query;ExperienceEvent-query;ExperienceEvent-query;
 title: Bezoekers weergeven op basis van aantal paginaweergaven
 description: Leer hoe u query's schrijft die Experience Events gebruiken om een lijst met bezoekers op te halen die is ingedeeld op basis van het aantal paginaweergaven.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%

@@ -5,7 +5,7 @@ description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders d
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '637'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Als telleraar, wil ik segmenten kunnen gebruiken die van worden gebouwd [!DNL Tr
 | IDFA | [!DNL Apple ID for Advertisers] |
 | Handelsbureau-id | Advertiser-id in het Trade Desk-platform |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -45,7 +45,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de bestemming. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten {#prerequisites}
 

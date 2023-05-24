@@ -2,7 +2,8 @@
 keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores
 title: Overzicht van controlelogbestanden in Attribution AI
 description: Leer hoe u controlelogboeken in Attribution AI kunt weergeven en beheren.
-source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%
@@ -22,4 +23,3 @@ In wezen vertelt een controlelogboek wie welke actie heeft uitgevoerd, en wannee
 Wanneer de eigenschap voor uw organisatie wordt toegelaten, worden de controlelogboeken automatisch verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten.
 
 Om controlelogboeken te bekijken en uit te voeren, moet u de de toegangsbeheertoestemming van de Toegang van Logboeken van de Controle in de Console van Adobe hebben gekregen. Raadpleeg voor meer informatie over het beheren van individuele machtigingen voor functies van Attribution AI de [toegangsbeheerdocumentatie](../aai-data-governance/access-controls.md).
-

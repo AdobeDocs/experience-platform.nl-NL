@@ -8,7 +8,7 @@ exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1887'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -70,7 +70,7 @@ Zie voor meer informatie de [Overzicht van Real-time Customer Data Platform-meet
 
 Met de versie van November, steunt Adobe Real-time Customer Data Platform de volgende bestemmingen:
 
-* Reclame: [!DNL Google]
+* Advertising: [!DNL Google]
 * E-mailmarketing: Adobe Campaign [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
 Zie de [doelcatalogus](../../destinations/catalog/overview.md) voor informatie over elk van de bestemmingen.
@@ -111,7 +111,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] stelt gegevenswetenschap
 | Functie | Beschrijving |
 | -----------| ---------- |
 | Toegang tot gegevens met [!DNL Platform] SDK | De vooraf gebouwde Ontvangers en lanceerlaptops in [!DNL Python] nu gebruiken [!DNL Platform] SDK voor toegang tot gegevens. |
-| Ondersteuning voor sandboxen | Ondersteuning voor aanstaande sandboxfunctionaliteit (momenteel in bèta), waaronder de mogelijkheid om laptops en recept te isoleren in ontwikkelings- of productiesandboxen. Zie de [sandboxen, overzicht](../../sandboxes/home.md) voor meer informatie . |
+| Ondersteuning voor sandboxen | Ondersteuning voor aanstaande sandboxfunctionaliteit (momenteel in bèta), waaronder de mogelijkheid om laptops en recept te isoleren in ontwikkelings- of productiesandboxen. Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie. |
 
 Zie voor meer informatie de [Overzicht van de Data Science Workspace](../../data-science-workspace/home.md).
 

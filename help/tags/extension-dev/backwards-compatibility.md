@@ -1,7 +1,8 @@
 ---
 title: Compatibiliteitsnorm met achterwaartse compatibiliteit
 description: Leer meer over de standaard voor achterwaartse compatibiliteit in Adobe Experience Platform die ervoor zorgt dat bijgewerkte versies van tagextensies compatibel zijn met eerdere versies.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 0%

@@ -1,7 +1,8 @@
 ---
 title: Handleiding voor Privacy Service-API
 description: Leer hoe u de Privacy Service-API kunt gebruiken voor het programmatisch beheren van privacytaken voor ondersteunde Adobe Experience Cloud-toepassingen.
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
+source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%

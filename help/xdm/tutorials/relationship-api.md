@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
@@ -232,7 +232,7 @@ Een geslaagde reactie retourneert de details van de nieuwe veldgroep.
 | --- | --- |
 | `$id` | De alleen-lezen, door het systeem gegenereerde unieke id van de nieuwe veldgroep. De vorm van een URI. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Neem de `$id` URI van de veldgroep, te gebruiken in de volgende stap van het toevoegen van de veldgroep aan het bronschema.
 
@@ -250,7 +250,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het bronschema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -281,7 +281,7 @@ curl -X PATCH \
 | `path` | De weg aan het schemagebied waar het nieuwe middel zal worden toegevoegd. Wanneer u veldgroepen toevoegt aan schema&#39;s, moet de waarde &quot;/allOf/-&quot; zijn. |
 | `value.$ref` | De `$id` van de veldgroep die moet worden toegevoegd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -385,7 +385,7 @@ curl -X POST \
 | `sourceProperty` | Het pad naar het veld in het bronschema dat wordt gebruikt om naar de primaire identiteit van het referentieschema te verwijzen. |
 | `xdm:identityNamespace` | De naamruimte van de identiteit van het verwijzingsveld. Dit moet dezelfde naamruimte zijn als de primaire identiteit van het referentieschema. Zie de [Overzicht van naamruimte in identiteit](../../identity-service/home.md) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -446,7 +446,7 @@ curl -X POST \
 | `xdm:destinationVersion` | Het versienummer van het referentieschema. |
 | `xdm:destinationProperty` | Het pad naar het primaire identiteitsveld in het referentieschema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Antwoord
 

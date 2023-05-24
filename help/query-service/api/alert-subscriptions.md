@@ -5,7 +5,7 @@ description: Deze gids verstrekt steekproefHTTP- verzoeken en reacties voor dive
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2661'
 ht-degree: 0%
 
 ---
@@ -553,7 +553,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | `subscriptions.inContextNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. A `true` waarde bevestigt dat waarschuwingen via de gebruikersinterface moeten worden verstrekt. A `false` zorgt ervoor dat de gebruikers niet via dat kanaal op de hoogte worden gesteld. |
 | `subscriptions.emailNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. A `true` value bevestigt dat waarschuwingen via e-mail moeten worden verzonden . A `false` zorgt ervoor dat de gebruikers niet via dat kanaal op de hoogte worden gesteld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -643,7 +643,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | `path` | Deze waarde heeft betrekking op de naamruimte in het eindpunt. Momenteel is de enige toegestane waarde `/status`. |
 | `value` | In een succesvol verzoek van de PATCH verandert dit `status` waarde van de waarschuwing. Momenteel zijn de geaccepteerde waarden `enable` of `disable`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 

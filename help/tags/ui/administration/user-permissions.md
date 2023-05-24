@@ -4,7 +4,7 @@ description: Leer over de verschillende soorten toestemmingen beschikbaar voor m
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1299'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ De volgende tabel geeft een overzicht van de beschikbare eigendomsrechten en de 
 | **Extensies beheren** | Op deze manier kunt u de volgende handelingen uitvoeren: <ul><li>Nieuwe extensies installeren op een eigenschap</li><li>De configuratie voor een reeds geïnstalleerde extensie wijzigen</li><li>Een extensie verwijderen</li></ul>Raadpleeg de documentatie bij het overzicht van extensies voor [meer informatie over extensies](../managing-resources/extensions/overview.md). Deze rol behoort gewoonlijk tot IT of Marketing, afhankelijk van uw organisatie. |
 | **Omgevingen beheren** | Hierdoor kunt u omgevingen maken en wijzigen. Zie de [omgevingdocumentatie](../publishing/environments.md) voor meer informatie . Deze rol behoort gewoonlijk tot de IT-groep. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Vennootschapsrechten
 
@@ -70,7 +70,7 @@ De rechten van het bedrijf zijn op toestemmingen van toepassing die veelvoudige 
 | **Extensies ontwikkelen** | Biedt de mogelijkheid extensiepakketten te maken en aan te passen die eigendom zijn van het bedrijf, inclusief privéreleases en verzoeken om openbare publicatie. |
 | **App Configurations beheren** | Dit is alleen beschikbaar als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en push-berichten.  Op deze manier kunt u de apps beheren die Experience Cloud bekend zijn, samen met de vereiste pushreferenties om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification Service. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Totaal aantal gebruikersmachtigingen
 
@@ -117,7 +117,7 @@ De volgende lijst verstrekt sommige voorbeelden van de soorten rollen u in uw or
 | Extensieontwikkelaar | Hiermee ontwikkelt u extensies en kunt u deze ter goedkeuring verzenden, maar u kunt ze niet publiceren of toevoegen aan bestaande eigenschappen. | Automatisch opnemen | <ul><li>Ontwikkelen</li></ul> | <ul><li>Eigenschappen beheren</li><li>Extensies ontwikkelen</li></ul> |
 | De supergebruiker | Doe alles. | Automatisch opnemen | <ul><li>Ontwikkelen</li><li>Goedkeuren</li><li>Publicatie</li><li>Extensies beheren</li><li>Omgevingen beheren</li></ul> | <ul><li>Eigenschappen beheren</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 

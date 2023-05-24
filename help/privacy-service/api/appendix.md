@@ -6,8 +6,8 @@ description: Dit document bevat aanvullende informatie voor het werken met de Pr
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 3%
+source-wordcount: '476'
+ht-degree: 4%
 
 ---
 
@@ -33,7 +33,7 @@ In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identite
 | [!DNL Google] ID advertentie | `GAID` | `20914` |
 | [!DNL Windows] STEUN | `WAID` | `8` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Wanneer u een `namespace` in de [!DNL Privacy Service] API, a **naamruimtekwalif
 | `analytics` | Een aangepaste naamruimte die intern is toegewezen in [!DNL Analytics], niet in de naamruimteservice. Dit wordt direct doorgegeven zoals opgegeven door de oorspronkelijke aanvraag, zonder naamruimte-id |
 | `target` | Een aangepaste naamruimte die intern wordt begrepen door [!DNL Target], niet in de naamruimteservice. Dit wordt direct doorgegeven zoals opgegeven door de oorspronkelijke aanvraag, zonder naamruimte-id |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Geaccepteerde productwaarden
 
@@ -75,4 +75,4 @@ In de volgende tabel worden de toegestane waarden voor het opgeven van een Adobe
 | Identiteitsservice | `identity` |
 | Marketo Engage | `marketo` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

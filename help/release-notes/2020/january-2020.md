@@ -8,7 +8,7 @@ exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '885'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -80,8 +80,8 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Categorie | Machtiging | Beschrijving |
 |--- | --- | ---|
-| Gegevensinname | Bronnen beheren | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
-| Gegevensinname | Bronnen weergeven | Alleen-lezen toegang tot beschikbare bronnen in het dialoogvenster **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** tab. |
+| Gegevensopname | Bronnen beheren | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
+| Gegevensopname | Bronnen weergeven | Alleen-lezen toegang tot beschikbare bronnen in het dialoogvenster **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** tab. |
 
 **Bekende problemen**
 

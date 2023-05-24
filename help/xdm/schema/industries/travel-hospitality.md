@@ -5,7 +5,7 @@ description: Bekijk een diagram van de entiteitverhouding (ERD) dat een gestanda
 exl-id: 4d454160-9066-4702-815b-9509942f709e
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -43,4 +43,4 @@ De volgende lijst schetst de geadviseerde klassen en de groepen van het schemage
 | Hotels en andere in het land wonende attracties voor gasten en gasten op de markt met aankomende hotelreserveringen verkopen. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Reserveringsdetails](../../field-groups/event/reservation-details.md)</li><li>[Voorbehoud voor indiening](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[Afzonderlijk XDM-profiel](../../classes/individual-profile.md)**:<ul><li>[Demografische details](../../field-groups/profile/demographic-details.md)</li><li>[Persoonlijke contactgegevens](../../field-groups/profile/personal-contact-details.md)</li><li>[Contactgegevens werken](../../field-groups/profile/work-contact-details.md)</li><li>[Loyalty-details](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
 | Up-sell-vluchten en andere in het land gevestigde attracties voor gasten en gasten die in de handel zijn en binnenkort een hotelreservering hebben. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Reserveringsdetails](../../field-groups/event/reservation-details.md)</li><li>[Vluchtreservering](../../field-groups/event/flight-reservation.md)</li></ul></li><li>**[Afzonderlijk XDM-profiel](../../classes/individual-profile.md)**:<ul><li>[Demografische details](../../field-groups/profile/demographic-details.md)</li><li>[Persoonlijke contactgegevens](../../field-groups/profile/personal-contact-details.md)</li><li>[Contactgegevens werken](../../field-groups/profile/work-contact-details.md)</li><li>[Loyalty-details](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

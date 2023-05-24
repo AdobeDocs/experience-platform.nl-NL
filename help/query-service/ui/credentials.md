@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1291'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -57,7 +57,7 @@ Voordat u niet-vervallende gegevens kunt genereren, moet u de volgende stappen i
 3. [Vorm beide **Sandboxen** en **De integratie van Query Service beheren** machtigingen](../../access-control/ui/permissions.md) voor het productprofiel.
 4. [Een nieuwe gebruiker toevoegen aan een productprofiel](../../access-control/ui/users.md) zodat wordt hun gevormd toestemmingen verleend.
 5. [De gebruiker toevoegen als beheerder van een productprofiel](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) om een account te maken voor een actief productprofiel.
-6. [De gebruiker toevoegen als ontwikkelaar van een productprofiel](https://helpx.adobe.com/enterprise/using/manage-developers.html) om een integratie tot stand te brengen.
+6. [De gebruiker toevoegen als ontwikkelaar van een productprofiel](https://helpx.adobe.com/nl/enterprise/using/manage-developers.html) om een integratie tot stand te brengen.
 
 Voor meer informatie over het toewijzen van machtigingen leest u de documentatie op [toegangsbeheer](../../access-control/home.md).
 

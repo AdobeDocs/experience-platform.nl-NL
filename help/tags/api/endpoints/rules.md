@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /rules eindpunt in Reactor API te make
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '898'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ GET /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap waarvan u de componenten wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ GET /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | De `id` van de regel die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -260,7 +260,7 @@ POST /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap waarop u een regel definieert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -288,7 +288,7 @@ curl -X POST \
 | `attributes.enabled` | Een booleaanse waarde die aangeeft of de regel is ingeschakeld. |
 | `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde zijn `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -382,7 +382,7 @@ PATCH /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | De `id` van de regel die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -412,7 +412,7 @@ curl -X PATCH \
 | `id` | De `id` van de regel die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -502,7 +502,7 @@ DELETE /rules/{RULE_ID}
 | --- | --- |
 | `RULE_ID` | De `id` van de regel die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -542,7 +542,7 @@ GET  /rules/{RULE_ID}/libraries
 | --- | --- |
 | `{RULE_ID}` | De `id` van de regel waarvan u bibliotheken wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -664,7 +664,7 @@ GET  /rules/{RULE_ID}/revisions
 | --- | --- |
 | `{RULE_ID}` | De `id` van de regel waarvan u de revisies wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -842,7 +842,7 @@ GET /rules/{RULE_ID}/origin
 | --- | --- |
 | `{RULE_ID}` | De `id` van de regel waarvan u de oorsprong wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -944,7 +944,7 @@ GET /rules/{RULE_ID}/property
 | --- | --- |
 | `{RULE_ID}` | De `id` van de regel waarvan bezit u omhoog wilt kijken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /secrets eindpunt in Reactor API te ma
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1247'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ GET /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | De id van de eigenschap waarvan u de geheimen wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -129,7 +129,7 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 | --- | --- |
 | `{ENVIRONMENT_ID}` | De id van de omgeving waarvan u de geheimen wilt vermelden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -225,7 +225,7 @@ GET /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | De id van het geheim dat u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -314,7 +314,7 @@ POST /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | De id van de eigenschap waarop u het geheim wilt definiëren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -357,7 +357,7 @@ curl -X POST \
 | `relationships.environment` | Elk geheim moet met een milieu worden geassocieerd wanneer het eerst wordt gecreeerd. De `data` object binnen deze eigenschap moet het `id` van het milieu, het geheim dat wordt toegekend, samen met een `type` waarde van `environments`. |
 | `type` | Het type resource dat wordt gemaakt. Voor deze aanroep moet de waarde `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -435,7 +435,7 @@ PATCH /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | De id van de `oauth2` geheim dat u wilt testen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -468,7 +468,7 @@ curl -X PATCH \
 | `id` | De id van het geheim dat u test. Dit moet overeenkomen met de id die is opgegeven in het aanvraagpad. |
 | `type` | Het type bron dat wordt gebruikt. Moet worden ingesteld op `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -552,7 +552,7 @@ PATCH /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | De id van het geheim dat u opnieuw wilt proberen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -585,7 +585,7 @@ curl -X PATCH \
 | `id` | De id van het geheim dat u opnieuw probeert. Dit moet overeenkomen met de id die is opgegeven in het aanvraagpad. |
 | `type` | Het type bron dat wordt gebruikt. Moet worden ingesteld op `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -771,7 +771,7 @@ DELETE /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | De id van het geheim dat u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -809,7 +809,7 @@ GET /secrets/{SECRET_ID}/notes
 | --- | --- |
 | `{SECRET_ID}` | De id van het geheim waarvan u de notities wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -888,7 +888,7 @@ GET /secrets/{SECRET_ID}/environment
 | --- | --- |
 | `{SECRET_ID}` | De id van het geheim waarvan u de omgeving wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -997,7 +997,7 @@ GET /secrets/{SECRET_ID}/property
 | --- | --- |
 | `{SECRET_ID}` | De id van het geheim waarvan u het bezit wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

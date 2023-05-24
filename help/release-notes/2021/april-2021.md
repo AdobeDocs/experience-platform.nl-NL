@@ -8,7 +8,7 @@ exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -51,7 +51,7 @@ Intelligente services stellen marketinganalisten en praktijkmensen in staat om g
 
 ### Customer AI
 
-De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -63,7 +63,7 @@ Voor meer informatie over ondersteunde gegevenssets raadpleegt u de [[!DNL Intel
 
 ### Attribution AI
 
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
 | Functie | Beschrijving |
 | ------- | ----------- |

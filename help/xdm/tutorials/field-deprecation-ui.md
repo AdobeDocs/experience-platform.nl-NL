@@ -1,7 +1,8 @@
 ---
 title: Een XDM-veld in de gebruikersinterface verwijderen
 description: Leer hoe te om de gebieden van de Gegevens van de Ervaring van het Model (XDM) te verwerpen gebruikend de Redacteur van het Schema binnen Experience Platform.
-source-git-commit: f791d32ae38dffe82723800aa9fb5b44bb4f0109
+exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 0%

@@ -6,7 +6,7 @@ description: Het /datatypes eindpunt in de Registratie API van het Schema staat 
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | De container waarvan u gegevenstypen wilt ophalen: `global` voor gegevenstypen die door Adobe zijn gemaakt of `tenant` voor gegevenstypen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -61,7 +61,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-gegevenstype voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | De container waarin het gegevenstype is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt gegevenstype of `tenant` voor een gegevenstype dat eigendom is van uw organisatie. |
 | `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het gegevenstype dat u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -138,7 +138,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle op
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -369,7 +369,7 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het gegevenstype dat u opnieuw wilt schrijven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -500,7 +500,7 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het gegevenstype dat u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -639,7 +639,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het gegevenstype dat u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

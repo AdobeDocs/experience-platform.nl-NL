@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de productklasse in het XDM (E
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
 source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '205'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Product] klasse 
 | `productName` | Tekenreeks | De naam van het product. |
 | `productRating` | Tekenreeks | De beoordeling van het product door de klant. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Compatibele veldgroepen {#field-groups}
 

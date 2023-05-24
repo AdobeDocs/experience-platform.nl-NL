@@ -1,7 +1,8 @@
 ---
 title: Ondersteuning voor Content Security Policy (CSP)
 description: Leer hoe u met CSP-beperkingen (Content Security Policy) omgaat wanneer u uw website integreert met tags in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 0%
@@ -16,11 +17,11 @@ ht-degree: 0%
 
 Een inhoudsbeveiligingsbeleid (CSP) is een beveiligingsfunctie waarmee XSS (cross-site scripting aanvallen) wordt voorkomen. Dit gebeurt wanneer browser in het runnen van kwaadwillige inhoud wordt gesleept die uit een vertrouwde op bron schijnt te komen maar echt van elders komt. CSPs staat browser (namens de gebruiker) toe om te verifiëren dat het manuscript eigenlijk uit een vertrouwde op bron komt.
 
-CSPs wordt uitgevoerd door een `Content-Security-Policy` kopbal van HTTP aan uw serverreacties toe te voegen, of door een gevormd `<meta>` element in de `<head>` sectie van uw HTML- dossiers toe te voegen.
+CSP&#39;s worden geïmplementeerd door een `Content-Security-Policy` HTTP-header naar de reacties van de server of door een geconfigureerde header toe te voegen `<meta>` in het `<head>` van uw HTML-bestanden.
 
 >[!NOTE]
 >
-> Raadpleeg de [MDN-webdocumenten](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) voor meer informatie over CSP.
+> Voor meer gedetailleerde informatie over CDV raadpleegt u de [MDN-webdocumenten](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
 Tags in Adobe Experience Platform zijn een systeem voor tagbeheer dat is ontworpen om scripts op uw website dynamisch te laden. Een standaard CSP blokkeert deze dynamisch geladen manuscripten toe te schrijven aan potentiële veiligheidsproblemen. In dit document wordt uitgelegd hoe u uw CSP zo configureert dat dynamisch geladen scripts van tags worden toegestaan.
 
@@ -33,11 +34,11 @@ De verhoogde veiligheid vereist een verhoogde hoeveelheid werk namens de tevrede
 
 ## Tags toevoegen als vertrouwde bron
 
-Wanneer u een CSP gebruikt, moet u vertrouwde domeinen opnemen in de waarde van de koptekst `Content-Security-Policy`. De waarde die u moet opgeven voor tags, is afhankelijk van het type host dat u gebruikt.
+Wanneer u een CSP gebruikt, moet u vertrouwde domeinen opnemen in de waarde van de `Content-Security-Policy` header. De waarde die u moet opgeven voor tags, is afhankelijk van het type host dat u gebruikt.
 
 ### Zelfhosting
 
-Als u [self-hosting](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek bent, dan is de bron voor uw bouwstijl waarschijnlijk uw eigen domein. U kunt specificeren dat het gastheerdomein een veilige bron door de volgende configuratie te gebruiken is:
+Als u [zelfhosting](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek, dan is de bron voor uw bouwstijl waarschijnlijk uw eigen domein. U kunt specificeren dat het gastheerdomein een veilige bron door de volgende configuratie te gebruiken is:
 
 **HTTP-header**
 
@@ -45,7 +46,7 @@ Als u [self-hosting](../publishing/hosts/self-hosting-libraries.md) uw bibliothe
 Content-Security-Policy: script-src 'self'
 ```
 
-**HTML- `<meta>` tag**
+**HTML `<meta>` tag**
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
@@ -53,7 +54,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Door Adobe beheerde hosting
 
-Als u een [Adobe-geleide gastheer](../publishing/hosts/managed-by-adobe-host.md) gebruikt, dan wordt uw bouwstijl gehandhaafd op `assets.adobedtm.com`. U moet `self` als veilig domein specificeren zodat breekt u geen manuscripten die u reeds laadt, maar u moet ook `assets.adobedtm.com` worden vermeld als veilig of uw markeringsbibliotheek zal niet op de pagina laden. In dit geval, zou u de volgende configuratie moeten gebruiken:
+Als u een [Door Adobe beheerde host](../publishing/hosts/managed-by-adobe-host.md), dan blijft uw build behouden op `assets.adobedtm.com`. U moet `self` als een veilig domein zodat breekt u geen manuscripten die u reeds laadt, maar u ook nodig `assets.adobedtm.com` om als veilig te worden vermeld of uw tagbibliotheek wordt niet op de pagina geladen. In dit geval, zou u de volgende configuratie moeten gebruiken:
 
 **HTTP-header**
 
@@ -61,27 +62,27 @@ Als u een [Adobe-geleide gastheer](../publishing/hosts/managed-by-adobe-host.md)
 Content-Security-Policy: script-src 'self' assets.adobedtm.com
 ```
 
-**HTML- `<meta>` tag**
+**HTML `<meta>` tag**
 
 
-Er is een zeer belangrijke voorwaarde: U moet de tagbibliotheek [asynchroon](./asynchronous-deployment.md) laden. Dit werkt niet met een synchrone lading van de markeringsbibliotheek (wat in consolefouten en regels resulteert niet behoorlijk).
+Er is een zeer belangrijke voorwaarde: U moet de tagbibliotheek laden [asynchroon](./asynchronous-deployment.md). Dit werkt niet met een synchrone lading van de markeringsbibliotheek (wat in consolefouten en regels resulteert niet behoorlijk).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
 ```
 
-U moet `self` als een veilig domein specificeren zodat om het even welke manuscripten die u reeds laadt blijven werken, maar u moet ook `assets.adobedtm.com` worden vermeld om als veilig te worden vermeld of uw bibliotheek bouwt niet op de pagina zal laden.
+U moet `self` als een veilig domein, zodat alle scripts die u al laadt, blijven werken, maar ook `assets.adobedtm.com` om als veilig te worden vermeld of uw bibliotheekbouwstijl zal niet laden op de pagina.
 
 ## Inline-scripts
 
 CSP maakt gealigneerde manuscripten door gebrek onbruikbaar, en daarom moet manueel worden gevormd om hen toe te staan. U hebt twee opties om inlinescripts toe te staan:
 
-* [Eenmaal](#nonce)  toestaan (goede beveiliging)
-* [Alle inline scripts](#unsafe-inline)  toestaan (minst beveiligd)
+* [Eenmaal toestaan](#nonce) (goede veiligheid)
+* [Alle inline scripts toestaan](#unsafe-inline) (minst veilig)
 
 >[!NOTE]
 >
->De CSP-specificatie bevat details voor een derde optie met behulp van hashes, maar deze aanpak is niet mogelijk voor systemen voor tagbeheer zoals tags. Voor meer informatie over de beperkingen om haken met markeringen in Platform te gebruiken, zie [Subresource Integrity (SRI) gids](./sri.md).
+>De CSP-specificatie bevat details voor een derde optie met behulp van hashes, maar deze aanpak is niet mogelijk voor systemen voor tagbeheer zoals tags. Raadpleeg voor meer informatie over de beperkingen van het gebruik van hashes met tags in Platform de klasse [Handleiding Subresource Integrity (SRI)](./sri.md).
 
 ### Eenmaal toestaan {#nonce}
 
@@ -89,9 +90,9 @@ Deze methode omvat het genereren van een cryptografische id en het toevoegen erv
 
 >[!IMPORTANT]
 >
->Als u deze methode wilt gebruiken, moet u de build asynchroon laden. Dit werkt niet wanneer het laden van de bouwstijl synchroon, wat in consolefouten en regels resulteert niet behoorlijk uitvoeren. Zie de handleiding bij [asynchrone implementatie](./asynchronous-deployment.md) voor meer informatie.
+>Als u deze methode wilt gebruiken, moet u de build asynchroon laden. Dit werkt niet wanneer het laden van de bouwstijl synchroon, wat in consolefouten en regels resulteert niet behoorlijk uitvoeren. Zie de handleiding op [asynchrone implementatie](./asynchronous-deployment.md) voor meer informatie .
 
-De voorbeelden tonen hieronder hoe u uw nonce aan de CSP configuratie voor een Adobe-beheerde gastheer kunt toevoegen. Als u zelfhosting gebruikt, kunt u `assets.adobedtm.com` uitsluiten.
+De voorbeelden tonen hieronder hoe u uw nonce aan de CSP configuratie voor een Adobe-beheerde gastheer kunt toevoegen. Als u zelfhosting gebruikt, kunt u `assets.adobedtm.com`.
 
 **HTTP-header**
 
@@ -99,13 +100,13 @@ De voorbeelden tonen hieronder hoe u uw nonce aan de CSP configuratie voor een A
 Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'
 ```
 
-**HTML- `<meta>` tag**
+**HTML `<meta>` tag**
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'">
 ```
 
-Nadat u de koptekst of HTML-tag hebt geconfigureerd, moet u de tag aangeven waar de nonce moet worden gevonden bij het laden van een inline script. Als u wilt dat een tag de nonce gebruikt bij het laden van het script, moet u:
+Nadat u de koptekst- of HTML-tag hebt geconfigureerd, moet u de tag aangeven waar de nonce moet worden gevonden tijdens het laden van een inline-script. Als u wilt dat een tag de nonce gebruikt bij het laden van het script, moet u:
 
 1. Creeer een gegevenselement dat verwijzingen waar nonce binnen uw gegevenslaag wordt gevestigd.
 1. Vorm de Uitbreiding van de Kern en specificeer welk gegevenselement u gebruikte.
@@ -131,7 +132,7 @@ Gebruik de volgende configuraties als u zelfhosting gebruikt:
 Content-Security-Policy: script-src 'self' 'unsafe-inline'
 ```
 
-**HTML- `<meta>` tag**
+**HTML `<meta>` tag**
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
@@ -147,7 +148,7 @@ Gebruik de volgende configuraties als u Adobe-beheerde hosting gebruikt:
 Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 ```
 
-**HTML- `<meta>` tag**
+**HTML `<meta>` tag**
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'unsafe-inline'">
@@ -157,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Door dit document te lezen, moet u nu begrijpen hoe u de CSP-header zo kunt configureren dat het bibliotheekbestand van de tag en inlinescripts worden geaccepteerd.
 
-Als extra veiligheidsmaatregel, kunt u ook verkiezen om de Integriteit Subresource (SRI) te gebruiken om opgehaalde bibliotheekbouwt te bevestigen. Deze functie heeft echter enkele belangrijke beperkingen bij gebruik in systemen voor tagbeheer, zoals tags. Zie de gids op [SRI verenigbaarheid in Platform](./sri.md) voor meer informatie.
+Als extra veiligheidsmaatregel, kunt u ook verkiezen om de Integriteit Subresource (SRI) te gebruiken om opgehaalde bibliotheekbouwt te bevestigen. Deze functie heeft echter enkele belangrijke beperkingen bij gebruik in systemen voor tagbeheer, zoals tags. Zie de handleiding op [SRI-compatibiliteit in Platform](./sri.md) voor meer informatie .

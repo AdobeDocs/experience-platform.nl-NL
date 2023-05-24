@@ -4,7 +4,7 @@ description: Leer hoe de controlefunctie configuraties in Adobe Experience Platf
 exl-id: 92b07224-57f1-4891-9923-aa079945e6bc
 source-git-commit: 797d4f305b4a6884ada4e0619beadff6a45ab42d
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '737'
 ht-degree: 4%
 
 ---
@@ -34,4 +34,4 @@ De tests van de configuratie kunnen voor specifieke montages, waarden, of potent
 | Doel - mboxDefault komt eerder dan mboxCreate | 5 | Het juiste gebruik van mboxCreate ziet er als volgt uit:<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | Zorg ervoor dat u een  `<div class="mboxDefault"></div>` tag voordat mboxCreate() wordt aangeroepen. om.js zal geen één voor u toevoegen.<br><br>[Aanvullende informatie](https://developer.adobe.com/target/implement/client-side/) |
 | Doel: geldig DOCTYPE | 5 | Er is een ongeldig DOCTYPE gedetecteerd. In dit scenario worden geen vakjes geactiveerd.  Voor at.js, moet DOCTYPE op de wijze van Normen zijn of het Doel zal niet werken. | Werk het DOCTYPE op de pagina bij.<br><br>[Aanvullende informatie](https://developer.adobe.com/target/implement/client-side/atjs/target-atjs-faq/) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -4,7 +4,7 @@ description: Adobe Advertising Cloud DSP is een geïntegreerde bestemming voor A
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ De Adobe Advertising Cloud DSP-bestemming ondersteunt de activering van identite
 |---|---|---|
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Experience Platform ondersteunt zowel normale tekst- als SHA256-gehashed e-mailadressen. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** als u wilt dat Experience Platform de gegevens automatisch verbergt bij activering. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -58,7 +58,7 @@ Raadpleeg de volgende tabel voor informatie over het exporttype en de exportfreq
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail of gehashte e-mail) die in de Advertising Cloud DSP-bestemming worden gebruikt. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 

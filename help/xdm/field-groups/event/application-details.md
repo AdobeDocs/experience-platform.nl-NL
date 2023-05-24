@@ -1,9 +1,10 @@
 ---
 title: Toepassingsdetails, schema, veldgroep
 description: Dit document biedt een overzicht van de veldgroep Application Details-schema.
-source-git-commit: 3937963ceee8502b0669a3f007fd38ecf2824e9b
+exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -18,6 +19,6 @@ ht-degree: 0%
 | --- | --- | --- |
 | `application` | [[!UICONTROL Application]](../../data-types/financial-account.md) | Hiermee worden toepassingsgegevens vastgelegd die betrekking hebben op een gebeurtenis, zoals de naam van de toepassing, de toepassingsversie, de installatie, het starten, het vastlopen en het sluiten van de toepassing. Het kan ofwel de toepassing zijn waarop de gebeurtenis betrekking heeft (zoals de bestemming voor een pushmelding die wordt verzonden) of de toepassing die de gebeurtenis veroorzaakt (zoals een klik of een aanmelding). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).

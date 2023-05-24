@@ -4,7 +4,7 @@ description: Gebruik de bestemming van de Hub van het Besluit van de Klant van P
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platfo
 |---|---|
 | *CustomerID* | Algemene gebruikersnaam die een profiel op unieke wijze identificeert in [!DNL Pega Customer Decision Hub] en Adobe Experience Platform |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -60,7 +60,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Exporttype | **[!UICONTROL Profile-based]** | Alle leden van een segment met id exporteren (*CustomerID*), kenmerken (achternaam, voornaam, locatie, enz.) en Segmentlidmaatschapsgegevens. |
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn altijd op API gebaseerde verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt, dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Zie voor meer informatie [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden met de bestemming {#connect}
 

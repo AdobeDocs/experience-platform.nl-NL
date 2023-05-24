@@ -5,7 +5,7 @@ description: Bekijk een diagram van de entiteitverhouding (ERD) dat een gestanda
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -43,4 +43,4 @@ De volgende lijst schetst de geadviseerde klassen en groepen van het schemagebie
 | Retarget winkelwagentje verlaat de betreffende advertenties en geautomatiseerde persoonlijke e-mails. Advertenties onderdrukken wanneer ze worden omgezet. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Commerce Details]](../../field-groups/event/upsell-details.md) (Ophalen van winkels met winkelwagentjes)</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Telecom Subscription]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 | Wanneer een klant is gemarkeerd als een klant die waarschijnlijk zal klappen (op basis van een werknemersinteractie of een geautomatiseerd machine-learningalgoritme), stuurt u de klantgegevens naar digitale en niet-digitale kanalen. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Campaign Marketing Details]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL Channel Details]](../../field-groups/event/channel-details.md)</li><li>Een aangepaste veldgroep met gepersonaliseerde inhoud</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

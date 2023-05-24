@@ -2,31 +2,31 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;field-groep;reservering;dining;
 title: Veldengroep voor denningsreservatieschema
 description: Dit document biedt een overzicht van de veldgroep met het indelingsschema voor reservaten.
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '449'
 ht-degree: 2%
 
 ---
 
-
 # [!UICONTROL Dining Reservation] schemaveldgroep
 
-[!UICONTROL Dining Reservation] is een standaardschemagebiedgroep voor de  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) klasse die wordt gebruikt om informatie betreffende een het dineren reserve te vangen.
+[!UICONTROL Dining Reservation] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt om informatie over een diningsreservering vast te leggen.
 
-De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] gebiedsgroep, en bevat alle zelfde gebieden onder één enkel voorwerp-type gebied, `reservations`. Naast deze generieke velden bevat [!UICONTROL Dining Reservation] ook `diningReservations`-array. Deze array met objecten wordt gebruikt om een of meer reserveringen met restaurantspecifieke eigenschappen te beschrijven.
+De veldgroep is een uitbreiding van de [!UICONTROL Reservation Details] veldgroep en bevat dezelfde velden onder één veld van het objecttype, `reservations`. Naast deze generieke velden [!UICONTROL Dining Reservation] omvat ook `diningReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen met restaurantspecifieke eigenschappen te beschrijven.
 
 >[!NOTE]
 >
->In dit document worden de details van de array `diningReservations` besproken. Raadpleeg de [[!UICONTROL Reservation Details]-veldgroepreferentie](./reservation-details.md) voor informatie over de andere velden die worden opgegeven onder het `reservations`-object.
+>In dit document worden de details van het `diningReservations` array. Voor informatie over de andere velden die in het kader van de `reservations` object, raadpleeg de [[!UICONTROL Reservation Details] veldgroepverwijzing](./reservation-details.md).
 
 ![Boekingsstructuur](../../images/field-groups/dining-reservation/structure.png)
 
 ## `diningReservations`
 
-`diningReservations` is een array met objecten die een lijst met diningsreserveringen vertegenwoordigt. Als een reserveringsgebeurtenis reserveringen in meerdere verschillende restaurants op verschillende tijdstippen van de dag inhoudt, kunnen deze reserveringen bijvoorbeeld als afzonderlijke objecten onder `diningReservations` voor één gebeurtenis worden vermeld.
+`diningReservations` is een array met objecten die een lijst met diningsreserveringen vertegenwoordigt. Als bij een reserveringsgebeurtenis reserveringen worden gemaakt in meerdere verschillende restaurants op verschillende tijdstippen van de dag, kunnen deze reserveringen bijvoorbeeld als afzonderlijke objecten worden vermeld onder `diningReservations` voor één gebeurtenis.
 
-Hieronder vindt u de structuur van elk object dat onder `diningReservations` wordt geleverd.
+De structuur van elk object dat wordt geleverd onder `diningReservations` wordt hieronder gegeven.
 
 ![diningReservations-structuur](../../images/field-groups/dining-reservation/diningReservations.png)
 
@@ -57,7 +57,7 @@ Hieronder vindt u de structuur van elk object dat onder `diningReservations` wor
 | `specialOccasion` | Boolean | Geeft aan of het voorbehoud voor een bijzondere gelegenheid wordt gemaakt. |
 | `status` | Geheel | De status van de diningsreservering. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

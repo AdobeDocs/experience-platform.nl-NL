@@ -19,13 +19,13 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-* [Data Governance](#governance)
+* [Gegevensbeheer](#governance)
 * [[!DNL Data Ingestion]](#ingestion)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Identity Service]](#identity)
 * [[!DNL Sources]](#sources)
 
-## Data Governance {#governance}
+## Gegevensbeheer {#governance}
 
 [!DNL Experience Platform] staat bedrijven toe om gegevens van veelvoudige ondernemingssystemen samen te brengen om marketers beter toe te staan om, klanten te identificeren te begrijpen en in dienst te nemen. [!DNL Experience Platform] omvat een end-to-end infrastructuur voor gegevensbeheer om het juiste gebruik van gegevens binnen [!DNL Platform] en wanneer deze worden gedeeld tussen systemen.
 
@@ -49,7 +49,7 @@ Adobe Experience Platform Data Governance is een reeks strategieën en technolog
 
 Voor meer informatie over het Beheer van Gegevens, zie [Overzicht van gegevensbeheer](../../data-governance/home.md).
 
-## Gegevensinname {#ingestion}
+## Gegevensopname {#ingestion}
 
 Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. Adobe Experience Platform [!DNL Data Ingestion] biedt meerdere alternatieven voor het opnemen van gegevens, waaronder batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de Adobe Experience Platform-interface.
 

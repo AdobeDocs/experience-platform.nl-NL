@@ -5,7 +5,7 @@ description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catal
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ De bestemmingskaarten bevatten primaire en secundaire controleopties. De primair
 | [!UICONTROL View dataflows] | Bekijk de gegevensactiveringsstromen die voor een bestemming bestaan. |
 | [!UICONTROL View documentation] | Opent een verbinding aan de documentatiepagina voor die specifieke bestemming, voor meer informatie en om u te helpen opstelling het. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![Controles op de bestemmingskaart](../assets/ui/workspace/destination-card-options.png)
 
@@ -84,7 +84,7 @@ De **[!UICONTROL Accounts]** bevat details over de verbindingen die u hebt gemaa
 | [!UICONTROL Destinations] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsdataflows die met basisinformatie worden verbonden voor een bestemming worden gecreeerd. |
 | [!UICONTROL Authorized] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL Browse] {#browse}
 
@@ -122,8 +122,8 @@ Selecteer de doelnaam om informatie over de segmenten te zien die aan deze beste
 
 De **[!UICONTROL System View]** wordt een grafische weergave weergegeven van de activeringsstromen die u hebt ingesteld in de Adobe Experience Platform.
 
-![Gegevensstromen1](../assets/ui/workspace/data-flows1.png)
+![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
 Selecteer om het even welke bestemmingen die op de pagina worden getoond en klik **[!UICONTROL View dataflows]** om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
 
-![Gegevensstromen2](../assets/ui/workspace/data-flows2.png)
+![Data-flows2](../assets/ui/workspace/data-flows2.png)

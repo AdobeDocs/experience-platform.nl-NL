@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /app_configuration eindpunt in Reactor
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | De `id` van de [bedrijf](./companies.md) die eigenaar is van de toepassingsconfiguraties. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | De `id` van de toepassingsconfiguratie die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -178,7 +178,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | De `id` van de [bedrijf](./companies.md) dat u de toepassingsconfiguratie onder definieert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -217,7 +217,7 @@ curl -X POST \
 | `key_type` | Vertegenwoordigt het protocol dat een duw-dienst verkoper steunt en bepaalt het formaat van `push_credential` object. Aangezien de protocollen voor overseinendiensten evolueren, nieuw `key_type` waarden worden gecreeerd om de bijgewerkte protocollen te steunen. |
 | `push_credential` | De eigenlijke credentiewaarde, die in rust wordt gecodeerd. Dit veld wordt gewoonlijk niet gedecodeerd of opgenomen in API-reacties. Alleen bepaalde Adobe-services kunnen een antwoord krijgen met een gedecodeerde pushreferentie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -270,7 +270,7 @@ PATCH /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | De `id` van de toepassingsconfiguratie die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -301,7 +301,7 @@ curl -X PATCH \
 | `id` | De `id` van de toepassingsconfiguratie die u wilt bijwerken. Dit moet overeenkomen met de `{APP_CONFIGURATION_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `app_configurations`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -354,7 +354,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | De `id` van de toepassingsconfiguratie die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

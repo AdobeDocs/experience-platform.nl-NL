@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van de configuraties die u moet vo
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '255'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ De specificaties van het onderzoek bepalen de parameters die voor het onderzoeke
 | `responseSpec.schema.properties.columns.items.properties.name` | Hiermee geeft u de naam van het bestand weer. |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | Hiermee definieert u het gegevenstype van de bestandsnaam. | `string` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 

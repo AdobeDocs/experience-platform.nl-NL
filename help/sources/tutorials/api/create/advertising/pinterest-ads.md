@@ -1,10 +1,11 @@
 ---
 title: Een bronverbinding en gegevensstroom maken voor Pinterest Ads met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform met Pinterest Ads kunt verbinden met behulp van de Flow Service API.
-badge: "Bèta"
+badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 6a549a8c747db8e0e4b9c2feaeb8e84386c63d32
+exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2333'
 ht-degree: 0%
@@ -778,7 +779,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL Pinterest Ads] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar de [!DNL Pinterest Ads] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doelverbinding-id](#target-connection)

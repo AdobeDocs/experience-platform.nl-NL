@@ -1,7 +1,8 @@
 ---
 title: Fuzzy Match in de Dienst van de Vraag
 description: Leer hoe te om een gelijke op uw Platform gegevens uit te voeren die resultaten van veelvoudige datasets door ongeveer een koord van uw keus combineert te passen.
-source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
+exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
@@ -363,5 +364,3 @@ WHERE
 {})
 '''.format(matching_sql))
 ```
-
-

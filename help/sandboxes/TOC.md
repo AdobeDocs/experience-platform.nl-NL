@@ -1,18 +1,18 @@
 ---
 audience: user
-user-guide-title: Sandboxen in Adobe Experience Platform Help
-breadcrumb-title: Handleiding voor Sandoxes
-user-guide-description: Een Platform-instantie partitioneren in virtuele omgevingen voor ontwikkeling, testen en implementatie van toepassingen.
+user-guide-title: Sandboxes in Adobe Experience Platform Help
+breadcrumb-title: Gids voor Sandboxes
+user-guide-description: Partitioneer een Platform-instantie in virtuele omgevingen voor ontwikkelen, testen en implementeren van toepassingen.
 feature: Sandboxes
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '60'
-ht-degree: 5%
+ht-degree: 41%
 
 ---
 
 
-# Sandboxen {#sandbox}
+# Sandboxes {#sandbox}
 
 * [Overzicht van sandboxen](home.md)
 * Sandbox-interface {#ui}

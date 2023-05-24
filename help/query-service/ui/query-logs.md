@@ -1,7 +1,8 @@
 ---
 title: Query-logbestanden
 description: Logboeken van de vraag worden automatisch geproduceerd telkens als een vraag wordt uitgevoerd en beschikbaar door UI om met het oplossen van problemen te helpen. Dit document schetst hoe te om de sectie van de Logboeken van de Dienst van de Vraag van UI te gebruiken en te navigeren.
-source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
+exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%

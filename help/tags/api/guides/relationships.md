@@ -4,8 +4,8 @@ description: Leer hoe u bronrelaties vastlegt in de Reactor-API, inclusief de re
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 0%
+source-wordcount: '762'
+ht-degree: 1%
 
 ---
 
@@ -40,7 +40,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | `{PROPERTY_ID}` | De id van de eigenschap waartoe de resource behoort. |
 | `{RESOURCE_TYPE}` | Het type bron dat moet worden gemaakt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `id` | De unieke id van een bron. Elk `id` moet vergezeld gaan van een `type` eigenschap, met vermelding van het soort bron in kwestie. |
 | `type` | Het type resource waarnaar wordt verwezen door een zustergebruiker `id` veld. Inclusief geaccepteerde waarden `data_elements`, `rules`, `extensions`, en `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Een relatie via URL maken {#url}
 
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | De unieke id van een bron. Elk `id` moet vergezeld gaan van een `type` eigenschap, met vermelding van het soort bron in kwestie. |
 | `type` | Het type resource waarnaar wordt verwezen door een zustergebruiker `id` veld. Inclusief geaccepteerde waarden `data_elements`, `rules`, `extensions`, en `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vereisten inzake relatie per bron {#requirements}
 
@@ -153,7 +153,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Builds
 
@@ -166,7 +166,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `library` | ✓ |  |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Callbacks
 
@@ -174,7 +174,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Bedrijven
 
@@ -182,7 +182,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Gegevenselementen
 
@@ -197,7 +197,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `updated_with_extension` | ✓ |  |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Omgevingen
 
@@ -208,7 +208,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `host` | ✓ | ✓ |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Extensies
 
@@ -222,7 +222,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `extension_package` | ✓ | ✓ |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Gastheren
 
@@ -230,7 +230,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Bibliotheken
 
@@ -246,7 +246,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Notities
 
@@ -254,7 +254,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Properties
 
@@ -268,7 +268,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Regelcomponenten
 
@@ -283,7 +283,7 @@ De volgende lijsten schetsen de beschikbare verhoudingen voor elk middeltype, al
 | `rules` | ✓ | ✓ |  |
 | `revisions` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Regels
 

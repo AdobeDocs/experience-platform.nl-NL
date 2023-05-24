@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /callbacks eindpunt in Reactor API te 
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '600'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van het bezit waarvan callbacks u wilt een lijst maken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ GET /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | De `id` van de callback die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -194,7 +194,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de [eigenschap](./properties.md) dat u de callback onder bepaalt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -223,7 +223,7 @@ curl -X POST \
 | `url` | De bestemming URL voor het callback bericht. De URL moet de HTTPS-protocolextensie gebruiken. |
 | `subscriptions` | Een array van tekenreeksen die de gebeurtenistypen van de audit aangeven die de callback zullen activeren. Zie de [eindhandleiding voor auditgebeurtenissen](./audit-events.md) voor een lijst met mogelijke gebeurtenistypen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -275,7 +275,7 @@ PATCH /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | De `id` van de callback die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -310,7 +310,7 @@ curl -X PATCH \
 | `id` | De `id` van de callback die u wilt bijwerken. Dit moet overeenkomen met de `{CALLBACK_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `callbacks`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -363,7 +363,7 @@ DELETE /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | De `id` van de callback die u wilt schrappen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

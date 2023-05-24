@@ -63,7 +63,7 @@ Met zowel die schema als dataset voor wordt toegelaten [!DNL Profile]Gegevens di
 
 >[!NOTE]
 >
->Bestaande gegevens binnen een recent ingeschakelde gegevensset worden niet gebruikt door [!DNL Profile].
+>Bestaande gegevens binnen een onlangs toegelaten dataset worden niet verbruikt door [!DNL Profile].
 
 ## Volgende stappen
 

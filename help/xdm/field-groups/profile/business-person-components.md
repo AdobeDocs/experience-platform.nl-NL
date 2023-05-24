@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de XDM Business Person Compone
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '527'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ De veldgroep biedt een basisniveau `personComponents` field, een array van objec
 | `sourceExternalID` | Tekenreeks | Een unieke op tekenreeks gebaseerde id voor het bronsysteem waaruit de gegevens van de persoon afkomstig zijn. |
 | `sourcePersonID` | Tekenreeks | Een unieke op tekenreeks gebaseerde id voor de persoon. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

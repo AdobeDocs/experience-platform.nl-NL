@@ -35,7 +35,7 @@ Als u CSV-gegevens gebruikt, raadpleegt u de sectie over [CSV naar schemaomzetti
 
 ## Gedrag
 
-Het gedrag bepaalt de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie de [gedragseindpunt-hulplijn](./behaviors.md) voor meer informatie over het weergeven van beschikbare gedragingen in de API.
+Gedragingen bepalen de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie de [gedragseindpunt-hulplijn](./behaviors.md) voor meer informatie over het weergeven van beschikbare gedragingen in de API.
 
 ## Klassen
 

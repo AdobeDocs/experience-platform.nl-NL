@@ -4,7 +4,7 @@ description: Het /rpc/csv2schema eindpunt in de Registratie API van het Schema s
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '854'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ Als u van dit eindpunt gebruik wilt maken, moet u eerst een CSV-bestand maken me
 | 22 | `$ref` | (Zie beschrijving) | Vereist indien `dataType` is ingesteld op `object` en `properties` is niet gedefinieerd. Dit bepaalt `$id` van het object waarnaar wordt verwezen voor het objecttype (bijvoorbeeld `https://ns.adobe.com/xdm/context/person`). |
 | 23 | `comment` | Optioneel | Wanneer `isIgnored` is ingesteld op `true`, wordt deze kolom gebruikt om de de kopbalinformatie van het schema te verstrekken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg het volgende: [CSV-sjabloon](../assets/sample-csv-template.csv) om te bepalen hoe uw CSV-bestand moet worden opgemaakt.
 

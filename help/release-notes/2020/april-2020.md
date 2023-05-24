@@ -22,7 +22,7 @@ Nieuwe functies in Adobe Experience Platform:
 
 Updates voor bestaande functies:
 * [[!DNL Experience Data Model (XDM)]](#xdm)
-* [Data Governance](#governance)
+* [Gegevensbeheer](#governance)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Privacy Service]](#privacy)
 * [[!DNL Sources]](#sources)

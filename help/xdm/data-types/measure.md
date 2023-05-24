@@ -6,7 +6,7 @@ description: Dit document verstrekt een overzicht van het het gegevenstype van h
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 | `id` | Tekenreeks | De unieke id van deze maatregel. In geval van gegevensverzameling met communicatiekanalen met verlies, zoals mobiele apps of websites met offlinefunctionaliteit waarbij de verzending van maatregelen niet kan worden gegarandeerd, bevat deze eigenschap een door de klant gegenereerde, unieke id van de genomen maatregel. Het is de beste praktijk om dit voldoende lang te maken om voldoende willekeur te waarborgen. <br><br> Als gegevens zoals tijdstempel, apparaat-id, IP, MAC-adres of andere mogelijk door de gebruiker herkende waarden zijn opgenomen in het genereren van het dialoogvenster `id`, moet het resultaat worden gehasht. Dit zorgt ervoor dat geen PII in de waarde wordt gecodeerd, aangezien het doel niet is om een gebruiker of een apparaat te identificeren, maar de specifieke maatregel in tijd. |
 | `value` | Dubbel | De kwantificeerbare waarde van deze maatregel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van de configuraties die u moet vo
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Verbindingsspecificaties retourneren de verbindingseigenschappen van een bron. Z
 | `sourceSpec` | De `sourceSpec` array bevat algemene informatie met betrekking tot een bron, waaronder informatie over kenmerken die vereist zijn om de bron in de interface weer te geven, documentkoppeling en parameters betreffende paginering, koptekst, hoofdtekst en planning. Bovendien `sourceSpec` beschrijft het schema van de parameters die worden vereist om een bronverbinding van een basisverbinding tot stand te brengen, en is noodzakelijk om een bronverbinding tot stand te brengen. |
 | `exploreSpec` | De `exploreSpec` array definieert de parameters die nodig zijn voor het verkennen en inspecteren van objecten in uw bron. De `exploreSpec` definieert ook de indeling voor reacties die wordt geretourneerd wanneer objecten worden onderzocht en geïnspecteerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## De waarden van de verbindingsspecificatie invullen
 

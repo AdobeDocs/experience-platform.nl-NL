@@ -1,9 +1,10 @@
 ---
 title: Veldgroep aanbetalingsgegevens
 description: Dit document bevat een overzicht van de veldgroep van het schema Aanbetalingsgegevens.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '101'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,6 @@ ht-degree: 0%
 | `transaction` | [[!UICONTROL Transaction]](../../data-types/transaction.md) | Beschrijft de financiële transactie verbonden aan het deposito. |
 | `mobileDeposit` | [!UICONTROL Boolean] | Geeft aan of de aanbetaling is uitgevoerd via een mobiel platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).

@@ -6,7 +6,7 @@ description: Het /fieldgroups eindpunt in de Registratie API van het Schema staa
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | De container waaruit u veldgroepen wilt ophalen: `global` voor door Adobe gemaakte veldgroepen of `tenant` voor veldgroepen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -61,7 +61,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-veldgroep voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -124,7 +124,7 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | `{CONTAINER_ID}` | De container die de veldgroep bevat die u wilt ophalen: `global` voor een door Adobe gemaakte veldgroep of `tenant` voor een veldgroep die eigendom is van uw organisatie. |
 | `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de veldgroep die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -150,7 +150,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle op
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -404,7 +404,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | De `meta:altId` of URL-gecodeerd `$id` van de veldgroep die u opnieuw wilt schrijven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -589,7 +589,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de veldgroep die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -728,7 +728,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van de veldgroep die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

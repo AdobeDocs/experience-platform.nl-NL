@@ -6,7 +6,7 @@ description: Gebruikers de mogelijkheid bieden om dashboards van Experience Plat
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '610'
 ht-degree: 6%
 
 ---
@@ -59,7 +59,7 @@ De volgende toegang-controle matrijs verstrekt een verdeling waarvan toestemming
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashboards.<br/>De mogelijkheid om widgetschema&#39;s te bewerken en nieuwe kenmerken toe te voegen voor widgetaanpassing | **Standaard dashboard beheren vereist** | **VEREIST (voor elk respectieve dashboard)** | N.v.t. | N.v.t. |
 | [!DNL License Usage Dashboard] | N.v.t. | N.v.t. | N.v.t. | INGESCHAKELD |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Machtigingen toevoegen aan uw productprofiel
 

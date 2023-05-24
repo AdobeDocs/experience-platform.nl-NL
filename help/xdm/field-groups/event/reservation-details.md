@@ -2,19 +2,19 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;reservering;reserveringsgegevens;
 title: Reserveringsdetails schema veldgroep
 description: Dit document biedt een overzicht van de veldgroep Reserveringsdetails.
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
 
-
 # [!UICONTROL Reservation Details] schemaveldgroep
 
-[!UICONTROL Reservation Details] is een standaardschemaveldgroep voor de  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) klasse die wordt gebruikt om informatie over een reserve, met inbegrip van lengte, wijziging, terugvorderbare status, en aantal ruimten te vangen.
+[!UICONTROL Reservation Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) gebruikt om informatie over een reservering vast te leggen, zoals lengte, wijziging, terugvorderbare status en aantal ruimten.
 
-De veldgroep bevat één objecttype veld, `reservations`. De eigenschappen in dit object worden hieronder uitgelegd.
+De veldgroep bevat één veld van het objecttype. `reservations`. De eigenschappen in dit object worden hieronder uitgelegd.
 
 ![Structuur reserveringsdetails](../../images/field-groups/reservation-details.png)
 
@@ -37,7 +37,7 @@ De veldgroep bevat één objecttype veld, `reservations`. De eigenschappen in di
 | `startDate` | DateTime | De begindatum voor de reservatie, de uitgaande of incheckdatum. |
 | `triptype` | Tekenreeks | Hiermee geeft u aan of de boeking betrekking heeft op een eenmalige reis, een retourvlucht of een meervoudige retourvlucht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
@@ -46,7 +46,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 ## Industriespecifieke reserveringsgroepen
 
-Er zijn verscheidene andere standaardgebiedsgroepen die het [!UICONTROL Reservation Details] schema voor industrie-specifieke gebruiksgevallen uitbreiden. Raadpleeg de volgende documentatie voor meer informatie:
+Er zijn verschillende andere standaardveldgroepen die de [!UICONTROL Reservation Details] schema voor branchespecifieke gebruiksgevallen. Raadpleeg de volgende documentatie voor meer informatie:
 
 * [[!UICONTROL Dining Reservation]](./dining-reservation.md)
 * [[!UICONTROL Flight Reservation]](./flight-reservation.md)

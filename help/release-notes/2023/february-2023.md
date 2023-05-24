@@ -1,10 +1,11 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, februari 2023
 description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
+exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '1276'
-ht-degree: 2%
+source-wordcount: '1252'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +36,7 @@ Met Adobe Assurance kunt u controleren, testen, simuleren en valideren hoe u geg
 | ------- | ----------- |
 | Openbare API&#39;s | De Adobe Assurance API&#39;s zijn nu beschikbaar. De API&#39;s voor Betrouwbaarheid zijn een verzameling API&#39;s waarmee gebruikers hun eigen web- en mobiele apps kunnen testen en er fouten in kunnen opsporen, wanneer deze zijn uitgerust met de extensie Adobe Assurance met Mobile SDK. Voor meer informatie over de API&#39;s voor betrouwbaarheid leest u de [Overzicht van de API voor betrouwbaarheid](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lees voor meer informatie over Verzekering de [Betrouwbaarheidsdocumentatie](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -49,7 +50,7 @@ Lees voor meer informatie over Verzekering de [Betrouwbaarheidsdocumentatie](htt
 | ----------- | ----------- |
 | [Verbetering van beleid voor goedkeuring](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) voor integratie met [bestandsgebaseerde (batch) doelen](/help/destinations/destination-types.md#file-based) | <p> Wanneer de profielen niet meer voor een toestemmingsbeleid gekwalificeerd zijn, deelt Experience Platform nu proactief hun beleidsuitgang aan op dossier-gebaseerde bestemmingen mee. Dit volgt op [release in februari 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) van dezelfde functionaliteit voor streamingdoelen. </p> <p> <b>Opmerking</b>: Deze functionaliteit is alleen beschikbaar voor klanten van **[!UICONTROL Privacy and Security Shield]** en de **[!UICONTROL Healthcare Shield]**. </p> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nieuwe of bijgewerkte documentatie** {#destinations-new-updated-documentation}
 
@@ -69,7 +70,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | --- | --- |
 | Veldveroudering via de gebruikersinterface | U kunt nu [velden uit uw schema&#39;s verwijderen nadat gegevens zijn ingepakt](../../xdm/tutorials/field-deprecation-ui.md). Met XDM-veldafleiding kunt u velden verwijderen uit de UI-weergave en deze voor gebruik behouden. Indien nodig kunt u afgekeurde velden opnieuw tonen en worden alle segmenten, query&#39;s of downstreamoplossingen die verwijzen naar de velden, op de gebruikelijke wijze uitgevoerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nieuwe XDM-componenten**
 
@@ -77,7 +78,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | --- | --- | --- |
 | Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | De klasse van het Profiel van het Individuele Vooruitzicht XDM brengt in partner-Geleverde IDs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Bijgewerkte XDM-componenten**
 
@@ -89,7 +90,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Veldgroep | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [De lege `meta:enum` eigenschap is verwijderd](https://github.com/adobe/xdm/pull/1668/files) via de URL [!UICONTROL Tracking Type] veld. |
 | Gegevenstype | [!UICONTROL Media information] | [Het regex-patroon van de `videoSegment` eigenschap in [!UICONTROL Media information] datatype is verwijderd](https://github.com/adobe/xdm/pull/1667/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, lees [XDM System, overzicht](../../xdm/home.md). &#x200B;
 
@@ -106,7 +107,7 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 | Automatisch aanvullen in-/uitschakelen | Verwijder bepaalde metagegevensopdrachten en verbeter de verwerkingstijd met [het van een knevel voorzien van de Redacteur van de Vraag auto-volledige eigenschap](../../query-service/ui/user-guide.md#auto-complete). Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. |
 | Gegevenssetvoorbeelden | Geef een bemonsteringsfrequentie op in uw query en [gebruik datasetsteekproeven om een eenvormige willekeurige steekproef tot stand te brengen](../../query-service/essential-concepts/dataset-samples.md)of maak voorwaardelijke voorbeelden op basis van specifieke criteria. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de Diensten van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
 
@@ -121,7 +122,7 @@ Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real
 | --- | --- |
 | Gerelateerde accountservice inschakelen | Met de nieuwe schakelfunctie kunt u de verwante accountservice op uw account inschakelen. Lees voor meer informatie de handleiding op [inschakelen van de gerelateerde accountantsdienst](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lees voor meer informatie over de Real-Time CDP B2B Edition de [Overzicht van Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
@@ -139,6 +140,6 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 | Aangepaste activiteitsgegevens verzamelen van [!DNL Marketo] | U kunt nu aangepaste activiteitsgegevens van uw [!DNL Marketo] -instantie naar Experience Platform. Om de gegevens van de douaneactiviteit in te voeren, moet u de groepen van het gebied van douaneactiviteiten in het B2B schema van Activiteiten opzetten en een dataflow creëren gebruikend de activiteitendataset. Zodra dataflow volledig is, zal de ingesloten dataset zowel standaard als douaneactiviteiten van uw bevatten [!DNL Marketo] -instantie. U kunt vervolgens [Query-service](../../query-service/home.md) voor toegang tot uw aangepaste activiteitenrecords op het Platform. Lees voor meer informatie de handleiding op [een gegevensstroom maken voor aangepaste activiteitsgegevens](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Niet-geclaimde accounts uitsluiten van [!DNL Marketo] | U kunt nu configureren of u niet-geclaimde accounts wilt uitsluiten of opnemen in de opname wanneer u een gegevensstroom voor bedrijfsgegevens maakt. Lees voor meer informatie de handleiding op [een bronverbinding en gegevensstroom maken voor [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).

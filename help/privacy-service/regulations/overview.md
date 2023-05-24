@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van de verschillende privacyregels
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Door het gebruik van [Adobe Experience Platform Privacy Service](../home.md), st
 | PDPA (Thailand) | De [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) is ingevoerd om Thaise eigenaars van gegevens te beschermen tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens. |
 | VCDPA (Virginia) | De [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) biedt nieuwe rechten op privacy van gegevens aan inwoners van Virginia (&quot;Consumers&quot;), waaronder het recht op toegang tot, verwijdering en correctie van persoonsgegevens. Consumenten hebben ook het recht om zich uit te sluiten van de verkoop van persoonsgegevens, om af te zien van profilering op basis van persoonsgegevens en om persoonlijke reclame te verwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 

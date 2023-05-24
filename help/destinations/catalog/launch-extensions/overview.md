@@ -1,5 +1,5 @@
 ---
-keywords: tagextensies;tagextensie;lanceerdoelen; platformtagextensies;platform tagextensie;platform launch-bestemmingen
+keywords: tagextensies;tagextensie;lanceerdoelen; platformlabelextensies;platformtagextensie;platform launch-bestemmingen
 title: Tagextensies in Adobe Experience Platform
 description: Adobe Experience Platform biedt de volgende generatie mogelijkheden voor tagbeheer van Adobe. Platform biedt u een eenvoudige manier om alle analyses, marketing en reclametags te implementeren en te beheren die nodig zijn om de ervaring van klanten te verbeteren.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
@@ -61,7 +61,7 @@ De uitbreidingen laten u toe om diverse klantengebruiksgevallen tevreden te stel
 
 Extensies kunnen in Platform onder de volgende categorieën vallen:
 
-- [Reclame](../advertising/overview.md)
+- [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Platform voor gegevensbeheer](../data-management/overview.md)
 - [E-mailmarketingdoelen](../email-marketing/overview.md)

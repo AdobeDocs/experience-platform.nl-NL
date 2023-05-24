@@ -11,7 +11,7 @@ ht-degree: 4%
 
 ---
 
-# Ontwerpmodel met Adobe Experience Platform [!DNL Platform] SDK
+# Modellen ontwerpen met de Adobe Experience Platform [!DNL Platform] SDK
 
 Deze zelfstudie biedt u informatie over het converteren `data_access_sdk_python` naar de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
 

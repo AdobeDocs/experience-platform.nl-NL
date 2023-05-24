@@ -4,7 +4,7 @@ description: Zendesk event forward extension for Adobe Experience Platform.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1263'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ U moet ook de volgende gegevens verzamelen voor uw Zendesk-configuratie:
 | Subdomein | Tijdens het registratieproces is een unieke **subdomein** wordt specifiek voor de account gemaakt. Zie de [Documentatie van Zendesk](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) voor meer informatie . | `xxxxx.zendesk.com` waarbij `xxxxx` is de waarde die is opgegeven tijdens het aanmaken van de account) |
 | API-token | Zendesk gebruikt tokens aan toonder als verificatiemechanisme om te communiceren met de Zendesk-API. Nadat u zich hebt aangemeld bij de Zendesk-portal, genereert u een API-token. Zie de [Documentatie van Zendesk](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token) voor meer informatie . | `cwWyOtHAv12w4dhpiulfe9BdZFTz3OKaTSzn2QvV` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Tot slot moet u een gebeurtenis tot stand brengen die geheim voor het API teken door:sturen. Het geheime type instellen op **[!UICONTROL Token]** en stel de waarde in op het API-token dat u hebt opgehaald bij uw Zendesk-configuratie. Raadpleeg de documentatie bij [geheimen in gebeurtenis die door:sturen](../../../ui/event-forwarding/secrets.md) voor meer details bij het vormen geheimen.
 
@@ -78,7 +78,7 @@ Naar de volgende toetsen kan worden verwezen binnen de `event` object bij toewij
 | `created_at` | Tekenreeks | `arc.event.xdm.timestamp` | Een ISO-8601-tijdstempel die de tijd weergeeft waarop de gebeurtenis is gemaakt. | Nee | (N.v.t.) |
 | `properties` | Object | `arc.event.xdm._extconndev.EventProperties` | Een aangepast JSON-object met informatie over de gebeurtenis. | Ja | (N.v.t.) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Naar de volgende toetsen kan worden verwezen binnen de `profile` object bij toew
 | `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | Een array met ten minste één id. Elke id bestaat uit een type en een waarde. | Ja | Zie de [Documentatie van Zendesk](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) voor meer informatie over de `identifiers` array. Alle velden en waarden moeten uniek zijn. |
 | `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | Een object dat door de gebruiker gedefinieerde eigenschappen over de persoon bevat. | Nee | Zie de [Documentatie van Zendesk](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) voor meer informatie over profielkenmerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gegevens valideren in Zendesk {#validate}
 
@@ -125,7 +125,7 @@ Op basis van het accounttype [!DNL Events API] U kunt het volgende aantal aanvra
 | [!DNL Enterprise] | 750 |
 | [!DNL Enterprise Plus] | 1000 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de [Documentatie van Zendesk](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.) voor meer informatie over deze limieten .
 
@@ -141,7 +141,7 @@ Tijdens het gebruik of het configureren van de extensie kunnen de onderstaande f
 | 403 | **Onvoldoende machtigingen:** Deze fout treedt op wanneer er onvoldoende rechten zijn om toegang te krijgen tot de bron. | Controleer of de vereiste machtigingen zijn opgegeven. | `{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}` |
 | 429 | **Te veel verzoeken:** Deze fout treedt op wanneer de recordlimiet voor eindpuntobjecten is overschreden. | Zie de sectie hierboven op [aanvraaglimieten](#limits) voor nadere bijzonderheden over de drempelwaarden per grenswaarde. | `{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Volgende stappen
 

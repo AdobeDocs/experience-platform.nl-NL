@@ -5,7 +5,7 @@ description: Dit document biedt een overzicht van het veld Algemene marketingvoo
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '876'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 | `time` | DateTime | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. |
 | `val` | Tekenreeks | De door de klant opgegeven voorkeursoptie voor dit marketinggeval. Zie de [volgende sectie](#val) voor aanvaarde waarden en definities. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `val` {#val}
 
@@ -49,7 +49,7 @@ In de volgende tabel worden de toegestane waarden voor `val`:
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `subscriptions` {#subscriptions}
 
@@ -99,7 +99,7 @@ De volgende JSON vertegenwoordigt een voorbeeld marketing gebied voor een telefo
 | `topics` | Een array van tekenreeksen die de gebieden vertegenwoordigen waarop een klant zich heeft geabonneerd, en die kan worden gebruikt om relevante inhoud te verzenden. |
 | `subscribers` | Een optioneel veld van het type map dat een set id&#39;s vertegenwoordigt (zoals e-mailadressen of telefoonnummers) die zijn geabonneerd op een bepaald abonnement. Elke sleutel in dit object vertegenwoordigt de id in kwestie en bevat twee subeigenschappen: <ul><li>`time`: Een tijdstempel volgens ISO 8601 van het tijdstip waarop de identiteit is geabonneerd, indien van toepassing.</li><li>`source`: De bron die de abonnee van voortkwam. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aanvullende bronnen
 

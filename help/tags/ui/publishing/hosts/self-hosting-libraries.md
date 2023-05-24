@@ -53,7 +53,7 @@ Er zijn twee methodes u kunt gebruiken om voltooide bouwstijlen te verwerven zod
 * Download
 * Directe levering
 
-#### Downloaden
+#### Download
 
 De builds kunnen worden geleverd als een gecomprimeerd ZIP-bestand (codering optioneel). Vervolgens kunt u het pakket uitpakken en de inhoud in uw releasecyclus invoegen en deze op uw eigen servers plaatsen.
 

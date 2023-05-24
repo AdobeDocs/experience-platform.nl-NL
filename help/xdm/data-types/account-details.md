@@ -1,9 +1,10 @@
 ---
 title: Gegevenstype rekeninggegevens
 description: Dit document biedt een overzicht van het gegevenstype Data Model (XDM) van het rekeningdetailervaringsgegevensmodel.
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+exl-id: 17254393-263e-4000-9bd2-815a9e842533
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '427'
 ht-degree: 4%
 
 ---
@@ -37,7 +38,7 @@ ht-degree: 4%
 | `twitterHandleUrl` | Tekenreeks | Een websitekoppeling naar de twitter-handgreep van de organisatie. |
 | `website` | Tekenreeks | De URL van de website van de organisatie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

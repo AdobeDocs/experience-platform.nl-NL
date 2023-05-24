@@ -4,7 +4,7 @@ description: Leer hoe de fout wordt behandeld in de Reactor-API.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Foutreacties zijn bedoeld om te voldoen aan de [JSON:API foutspecificatie](http:
 | `source` | Een object met verwijzingen naar de bron van de fout, eventueel inclusief een van de volgende leden:<ul><li>`pointer`: a [JSON-aanwijzer (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) tekenreeks die verwijst naar de gekoppelde entiteit in het aanvraagdocument (bijvoorbeeld `/data` voor een primair gegevensobject, of `/data/attributes/title` voor een specifiek kenmerk).</li></ul> |
 | `meta` | Een object met niet-standaard metagegevens over de fout. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verwijzing fout
 
@@ -107,4 +107,4 @@ In de volgende tabel worden de verschillende fouten weergegeven die de API kan r
 | `upgraded-extension-required` | Nadat u een extensie-upgrade hebt geïnstalleerd, moet u deze in alle bibliotheken opnemen totdat de upgrade naar Productie gaat. De enige uitzondering is als de extensie nog niet is gepubliceerd. |
 | `upstream-build-required` | Een geslaagde build voor de upstream-bibliotheek is vereist voordat u deze kunt maken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

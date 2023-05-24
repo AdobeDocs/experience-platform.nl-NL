@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /search eindpunt in Reactor API te mak
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ curl -X POST \
 | `sort` | Een array met objecten die de volgorde aangeeft waarin de resultaten moeten worden gesorteerd. Elk object moet één eigenschap bevatten: De toets vertegenwoordigt het veldpad waarop moet worden gesorteerd en de waarde vertegenwoordigt de sorteervolgorde (`asc` in oplopende volgorde, `desc` voor aflopend). |
 | `resource_types` | Een array van tekenreeksen die de specifieke brontypen aangeven waarnaar moet worden gezocht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 

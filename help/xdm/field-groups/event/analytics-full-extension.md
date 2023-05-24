@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de veldgroep met het Adobe Ana
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '869'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ De veldgroep bevat één `_experience` object naar een schema, dat zelf één sc
 | `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | Object | De veldgroep bevat objectvelden voor het vastleggen van maximaal 1000 aangepaste gebeurtenissen. Zie de [onderafdeling](#events) voor meer informatie over deze velden. |
 | `session` | Object | Vangt informatie over de zitting die de gebeurtenis teweegbracht. Zie de [onderafdeling](#session) voor meer informatie over de inhoud van dit object. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `customDimensions` {#custom-dimensions}
 
@@ -51,7 +51,7 @@ De veldgroep bevat één `_experience` object naar een schema, dat zelf één sc
 | `postalCode` | Tekenreeks | Een door de klant opgegeven postcode. |
 | `stateProvince` | Tekenreeks | Een door de klant opgegeven staat of provincie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `endUser` {#end-user}
 

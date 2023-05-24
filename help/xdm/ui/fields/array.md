@@ -6,7 +6,7 @@ description: Leer hoe u een arrayveld definieert in de gebruikersinterface van h
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De extra configuratiecontroles voor series zijn als volgt:
 | [!UICONTROL Maximum length] | Het maximum aantal items dat de array moet bevatten om de opname te laten slagen. |
 | [!UICONTROL Unique items only] | Indien ingesteld op &quot;[!UICONTROL True]&quot;, moet elk item in de array uniek zijn om de opname te laten slagen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u klaar bent met het configureren van het veld, selecteert u **[!UICONTROL Apply]** om de wijziging op het schema toe te passen.
 

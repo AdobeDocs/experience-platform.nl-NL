@@ -6,7 +6,7 @@ description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform h
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
 source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---

@@ -1,7 +1,8 @@
 ---
 title: Builds
 description: Leer meer over het concept van builds en hoe ze binnen Adobe Experience Platform werken.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -41,7 +42,7 @@ De kleinere bestanden bevatten code en configuratie voor afzonderlijke handeling
 
 De standaardbestandsindeling voor builds is een pakket bestanden met alle vereiste code voor extensies, gegevenselementen en regels die op de gewenste manier worden uitgevoerd.
 
-In bepaalde gevallen hebt u echter de voorkeur aan een zip-archief van de bestanden in plaats van aan het uitvoerbare bestand met code op de client. Bijvoorbeeld, zou u een archief kunnen willen tot stand brengen als u uw bouwstijl zelf host en de bouwstijl in een andere plaatsing wilt gebruiken. Als u iets opgeeft in het zelfgehoste pad naar het bibliotheekveld, kunt u uw omgeving opslaan. Samen met uw nieuwe code, wordt een verbinding aan de gearchiveerde download beschikbaar. Nadat de bibliotheek is gemaakt, kunt u een ZIP-bestand implementeren in Akamai en dit downloaden van `assets.adobedtm.com/...`.
+In bepaalde gevallen hebt u echter de voorkeur aan een zip-archief van de bestanden in plaats van aan het uitvoerbare bestand met code op de client. Bijvoorbeeld, zou u een archief kunnen willen tot stand brengen als u uw bouwstijl zelf host en de bouwstijl in een andere plaatsing wilt gebruiken. Als u iets opgeeft in het zelfgehoste pad naar het bibliotheekveld, kunt u uw omgeving opslaan. Samen met uw nieuwe code, wordt een verbinding aan de gearchiveerde download beschikbaar. Nadat de bibliotheek is gemaakt, kunt u een zip-bestand naar Akamai implementeren en dit downloaden van `assets.adobedtm.com/...`.
 
 >[!NOTE]
 >
@@ -75,6 +76,6 @@ Als u de niet-geminiaterde code wilt zien, verwijdert u .min uit de bestandsnaam
 
 Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van het Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog geminiatuurd in niet-geminiatuurde bouwstijlen. Platform maakt niets uit.
 
-Voor meer informatie over minificatie, zie [dit stapelwegartikel](https://blog.stackpath.com/glossary/minification/).
+Voor meer informatie over minificatie raadpleegt u [dit stapelpadartikel](https://blog.stackpath.com/glossary/minification/).
 
 Wanneer het uitvoeren van een bouwstijl zal het eerst de niet-geminiateerde bibliotheek construeren, dan de volledige bibliotheek in één keer minieme.

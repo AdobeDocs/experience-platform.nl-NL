@@ -2,13 +2,13 @@
 title: Hybride verpersoonlijking die Web SDK en de Server API van het Netwerk van Edge gebruikt
 description: Dit artikel toont aan hoe u SDK van het Web samen met de Server API kunt gebruiken om hybride verpersoonlijking op uw Webeigenschappen op te stellen.
 keywords: personalisatie; hybride; server-API; serverzijde; hybride uitvoering;
-source-git-commit: f280d4cbcde434ccf36df37e95f1902cfd02c96c
+exl-id: 506991e8-701c-49b8-9d9d-265415779876
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 2%
 
 ---
-
 
 # Hybride verpersoonlijking die Web SDK en de Server API van het Netwerk van Edge gebruikt
 
@@ -281,9 +281,3 @@ function sendDisplayEvent(decision) {
 ## Voorbeeldtoepassing {#sample-app}
 
 Om u te helpen experimenteren en meer te leren over dit type van verpersoonlijking, verstrekken wij een steekproeftoepassing die u voor het testen kunt downloaden en gebruiken. U kunt de toepassing vanuit deze [GitHub-opslagplaats](https://github.com/adobe/alloy-samples).
-
-
-
-
-
-

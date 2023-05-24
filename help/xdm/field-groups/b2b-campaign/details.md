@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de XDM Business Campagne Detai
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,6 @@ ht-degree: 0%
 | `webinarSessionDescription` | [!UICONTROL String] | Een beschrijving van de webinar zitting verbonden aan deze campagne. |
 | `webinarSessionName` | [!UICONTROL String] | Een naam van de webinar zitting verbonden aan deze campagne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).

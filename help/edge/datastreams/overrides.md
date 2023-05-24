@@ -1,13 +1,13 @@
 ---
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
-
 
 # Gegevensstroomoverschrijvingen configureren
 
@@ -233,4 +233,3 @@ De bovenstaande voorbeelden genereren een [!DNL Edge Network] lading die als dit
   }
 }
 ```
-

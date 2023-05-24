@@ -16,7 +16,7 @@ Deze zelfstudie bevat stappen voor het verkennen en voorvertonen van de structuu
 
 >[!NOTE]
 >
-> Als u uw gegevenstabellen wilt verkennen, moet u al over een geldige basis-verbindings-id voor een tabelbron beschikken. Als u deze id niet hebt, raadpleegt u de volgende zelfstudies voor stappen voor het maken van een basis-verbindings-id voor een tabelbron: <ul><li>[Reclame](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[Klantsucces](../../../home.md#customer-success)</li><li>[Database](../../../home.md#database)</li><li>[E-handel](../../../home.md#ecommerce)</li><li>[Marketing automatiseren](../../../home.md#marketing-automation)</li><li>[Betalingen](../../../home.md#payments)</li><li>[Protocollen](../../../home.md#protocols)</li></ul>
+> Als u uw gegevenstabellen wilt verkennen, moet u al over een geldige basis-verbindings-id voor een tabelbron beschikken. Als u deze id niet hebt, raadpleegt u de volgende zelfstudies voor stappen voor het maken van een basis-verbindings-id voor een tabelbron: <ul><li>[Advertising](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[Klantsucces](../../../home.md#customer-success)</li><li>[Database](../../../home.md#database)</li><li>[E-handel](../../../home.md#ecommerce)</li><li>[Marketing automatiseren](../../../home.md#marketing-automation)</li><li>[Betalingen](../../../home.md#payments)</li><li>[Protocollen](../../../home.md#protocols)</li></ul>
 
 ## Aan de slag
 

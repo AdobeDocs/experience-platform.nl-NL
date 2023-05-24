@@ -6,7 +6,7 @@ description: Het /union eindpunt in de Registratie API van het Schema staat u to
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-klasse voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -108,7 +108,7 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | URL-gecodeerd `$id` URI van de union die u wilt opzoeken. URI&#39;s voor union-schema&#39;s worden toegevoegd met &quot;__union&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -131,7 +131,7 @@ De volgende Accept- kopballen zijn beschikbaar voor de raadplegingen van het uni
 | `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf`. Hier vindt u titels en beschrijvingen. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` kenmerken en `allOf` opgelost. Hier vindt u titels en beschrijvingen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -196,7 +196,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | De `$id` van de klasse waarvan de unie-Toegelaten schema&#39;s u wilt een lijst maken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -219,7 +219,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-schema voor elke bron, met het origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 

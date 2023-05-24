@@ -2,13 +2,13 @@
 title: TikTok-verbinding
 description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste segment van Adobe Experience Platform naar TikTok verplaatsen met behulp van Adobe real-time integratie met TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
-source-git-commit: 7bfcd0132380f0c847742ff05c1f334542adfba2
+exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 1%
 
 ---
-
 
 # TikTok-verbinding
 

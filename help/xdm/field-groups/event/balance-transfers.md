@@ -1,9 +1,10 @@
 ---
 title: Balans van groep van het schemaveld
 description: Dit document biedt een overzicht van de veldgroep Balansoverdrachten.
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,6 @@ ht-degree: 0%
 | `accountTo` | [[!UICONTROL Financial Account]](../../data-types/financial-account.md) | Beschrijft de financiële rekening die het saldo aan wordt overgebracht. |
 | `transaction` | [[!UICONTROL Transaction]](../../data-types/transaction.md) | Beschrijft de financiële transactie die aan de saldooverdracht is gekoppeld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).

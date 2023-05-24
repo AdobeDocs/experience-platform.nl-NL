@@ -1,9 +1,10 @@
 ---
 title: Gegevenstype voor zoeken interne site
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor zoeken op interne site.
-source-git-commit: eaea904ddda6b7ffee6f52cd4af897c2a8885714
+exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 0%
 | `postalCode` | [!UICONTROL String] | De postcode die voor de zoekopdracht wordt gebruikt, indien van toepassing. |
 | `productFindingMethods` | [!UICONTROL String] | De interne waarde van de het vraagtermijn van het plaatsenonderzoek met handelaardiserende band. Deze waarde geeft aan naar welke term is gezocht vlak voordat een product werd bekeken. |
 | `radiusDistance` | [!UICONTROL Integer] | Gecombineerd met `radiusType`, geeft de geselecteerde afstand van de zoekstraal aan. |
-| `radiusType` | [!UICONTROL Integer] | Het geselecteerde afstandstype `radiusDistance`, hetzij kilometers of kilometers. |
+| `radiusType` | [!UICONTROL Integer] | Het geselecteerde afstandstype `radiusDistance`, hetzij mijl of kilometer. |
 | `refinementInstances` | [!UICONTROL Integer] | Het aantal keren dat de interne sitezoekopdracht is verfijnd. |
 | `refinementType` | Array van tekenreeksen | Hier worden de verfijningstypen weergegeven die op de zoekresultaten worden toegepast. Voorbeelden zijn afdeling, merk, prijs, in-store, beoordeling, kleur, materiaal, enzovoort. |
 | `refinementValue` | [!UICONTROL String] | De waarde waarnaar de zoekopdracht is verfijnd. |
@@ -36,6 +37,6 @@ ht-degree: 0%
 | `sortOrder` | [!UICONTROL String] | Gecombineerd met `sortType`, geeft de sorteervolgorde van de zoekresultaten aan, in oplopende of aflopende volgorde. |
 | `term` | [!UICONTROL String] | De interne zoekterm voor de site die door de bezoeker is ingevoerd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer details over het gegevenstype raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json).

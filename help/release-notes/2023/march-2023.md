@@ -1,7 +1,8 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2023
 description: In de release van maart 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 5b8dd4b295f9363fd7e848070b1ec21ff519c524
+exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2145'
 ht-degree: 3%

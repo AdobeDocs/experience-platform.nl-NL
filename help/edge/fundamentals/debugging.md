@@ -6,7 +6,7 @@ exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '515'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ Foutopsporing is standaard uitgeschakeld, maar u kunt deze op vier verschillende
 * `configure` command
 * `setDebug` command
 * querytekenreeks, parameter
-* Foutopsporing inschakelen in Adobe Experience Platform Debugger inschakelen in-/uitschakelen. Adobe Experience Platform is een krachtig hulpmiddel waarmee u uw webpagina&#39;s kunt controleren en waarmee u problemen met de implementatie van uw Experience Cloud-producten kunt opsporen. Adobe Experience Platform Debugger is beschikbaar als beide [Chroom](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) en [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) extensie. Foutopsporing kan worden ingeschakeld op het tabblad Configuratie van de sectie AEP Web SDK.
+* Foutopsporing inschakelen in Adobe Experience Platform Debugger inschakelen in-/uitschakelen. Adobe Experience Platform is een krachtig hulpmiddel waarmee u uw webpagina&#39;s kunt controleren en waarmee u problemen met de implementatie van uw Experience Cloud-producten kunt opsporen. Adobe Experience Platform Debugger is beschikbaar als beide [Chroom](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) en [Firefox](https://addons.mozilla.org/nl/firefox/addon/adobe-experience-platform-dbg/) extensie. Foutopsporing kan worden ingeschakeld op het tabblad Configuratie van de sectie AEP Web SDK.
 
 ![](../assets/enable-debugging.png)
 

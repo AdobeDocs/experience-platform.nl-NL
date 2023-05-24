@@ -6,7 +6,7 @@ exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '342'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ Met [!UICONTROL Permissions]kunt u configureren:
 * [Labels](./labels.md)
 * [Toestemmingen](./permissions.md)
 * [Rollen](./roles.md)
-* [Sandboxen](./sandboxes.md)
+* [Sandboxes](./sandboxes.md)
 * [Gebruikers](./users.md)
 
 Om tot op attribuut-gebaseerde toegangsbeheertoestemmingen toegang te hebben voor [!DNL Experience Cloud], moet u een beheerder voor uw organisatie zijn die een abonnement op heeft [!DNL Experience Cloud]. Terwijl Adobe flexibele beheerderhiërarchieën voor uw organisaties steunt, moet u een productbeheerder voor Adobe Experience Platform zijn om toestemmingen te vormen. Zie het Adobe Help Center-artikel op [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie .
@@ -39,7 +39,7 @@ De op attributen-gebaseerde werkruimte van het toegangsbeheer voor Adobe Experie
 
 ![flash-select-rollen](../../images/flac-ui/flac-select-roles.png)
 
-Deze gebruikershandleiding is vooral bedoeld voor het gebruik van de [!DNL Experience Cloud] om toegangsmachtigingen voor Platform toe te wijzen. Meer algemene informatie over het navigeren door de [!DNL Admin Console], zie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Deze gebruikershandleiding is vooral bedoeld voor het gebruik van de [!DNL Experience Cloud] om toegangsmachtigingen voor Platform toe te wijzen. Meer algemene informatie over het navigeren door de [!DNL Admin Console], zie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 ## Volgende stappen
 

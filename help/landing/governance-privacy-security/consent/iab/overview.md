@@ -238,7 +238,7 @@ Klanten moeten instemmen met de volgende doeleinden (zoals beschreven door [TCF 
 * **Doel 1**: Informatie opslaan en/of openen op een apparaat
 * **Doel 10**: Producten ontwikkelen en verbeteren
 
-TCF 2.0 vereist ook dat de bron van gegevens de de verkoperstoestemming van de bestemming moet controleren alvorens gegevens naar die bestemming te verzenden. Als dusdanig, controleert het Platform als de de verkoperstoestemming van de bestemming binnen aan voor alle IDs in de cluster alvorens gegevens te omvatten die aan die bestemming worden gebonden.
+TCF 2.0 vereist ook dat de bron van gegevens de toestemming van de leverancier van de bestemming moet controleren alvorens gegevens naar die bestemming te verzenden. Als dusdanig, controleert het Platform als de de verkoperstoestemming van de bestemming binnen aan voor alle IDs in de cluster alvorens gegevens te omvatten die aan die bestemming worden gebonden.
 
 >[!NOTE]
 >

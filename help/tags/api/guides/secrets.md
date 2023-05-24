@@ -4,7 +4,7 @@ description: Leer de grondbeginselen van hoe te om geheimen in Reactor API voor 
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1228'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Er zijn momenteel drie ondersteunde geheime typen die in het dialoogvenster `typ
 | `simple-http` | Bevat respectievelijk twee tekenreekskenmerken voor een gebruikersnaam en wachtwoord. |
 | `oauth2-client_credentials` | Bevat diverse kenmerken die de [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. De gebeurtenis die u door:sturen vraagt om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor gebruik in gebeurtenis te vormen die door:sturen. Raadpleeg voor gedetailleerde informatie over het beheren van geheimen in de Reactor-API, zoals bijvoorbeeld JSON van de structuur van een geheim [punthulplijn voor geheimen](../endpoints/secrets.md).
 
@@ -42,7 +42,7 @@ Geheimen met een `type_of` waarde van `token` slechts één enkel attribuut onde
 | --- | --- | --- |
 | `token` | Tekenreeks | Een geheim teken dat door het bestemmingssysteem wordt begrepen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Het token wordt opgeslagen als een statische waarde en daarom is het geheim `expires_at` en `refresh_at` eigenschappen zijn ingesteld op `null` wanneer het geheim wordt gecreeerd.
 
@@ -55,7 +55,7 @@ Geheimen met een `type_of` waarde van `simple-http` de volgende kenmerken vereis
 | `username` | Tekenreeks | Een gebruikersnaam. |
 | `password` | Tekenreeks | Een wachtwoord. Deze waarde wordt niet opgenomen in de API-reactie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wanneer het geheim wordt gecreeerd, worden de twee attributen geruild met een codering BASE64 van `username:password`. Na de uitwisseling is het geheim `expires_at` en `refresh_at` eigenschappen zijn ingesteld op `null`.
 

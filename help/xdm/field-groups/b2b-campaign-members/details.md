@@ -4,7 +4,7 @@ description: Dit document verstrekt een overzicht van de XDM Business Campagne h
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 | `webinarConfirmationUrl` | [!UICONTROL String] | De URL voor bevestiging via het webinar voor het lid van de campagne. |
 | `webinarRegistrationID` | [!UICONTROL String] | De webinar-registratie-id voor het campagnetelid. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

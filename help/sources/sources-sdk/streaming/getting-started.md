@@ -3,7 +3,8 @@ title: Aan de slag met Self-Serve Bronnen (Streaming SDK)
 description: Dit document biedt een inleiding op de vereiste informatie die u moet weten voordat u een nieuwe bron probeert te maken met Self-Serve Sources (Streaming SDK).
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
 title: Planningsklasse
 description: Dit document verstrekt een overzicht van de klasse van het Plan in het Model van de Gegevens van de Ervaring (XDM).
-source-git-commit: cf39f943e27cd11b0eabbc344774fa12482a8f92
+exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,6 @@ In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Plan] klasse leg
 | `planId` | [!UICONTROL String] | Een unieke id voor het plan. |
 | `planName` | [!UICONTROL String] | De naam van het plan. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 De klasse kan worden uitgebreid met de [[!UICONTROL Healthcare Plan Details] veldgroep](../field-groups/plan/healthcare-plan-details.md) nadere bijzonderheden over een ziektekostenverzekering te verstrekken.

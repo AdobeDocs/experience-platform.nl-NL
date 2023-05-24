@@ -2,13 +2,13 @@
 title: Amazon-advertenties
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, boekverkopers, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
 last-substantial-update: 2023-03-29T00:00:00Z
-source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
+exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 0%
 
 ---
-
 
 # (bèta) Amazon Ads-verbinding {#amazon-ads}
 

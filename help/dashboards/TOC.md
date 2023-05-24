@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Help bij Adobe Experience Platform-dashboards
+user-guide-title: Hulp bij Adobe Experience Platform-dashboards
 breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
 source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 6%
+ht-degree: 28%
 
 ---
 

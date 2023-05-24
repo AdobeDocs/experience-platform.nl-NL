@@ -1,9 +1,10 @@
 ---
 title: Gezondheidszorg Lid Details Schema Veldgroep
 description: Dit document biedt een overzicht van de veldgroep Details schema van het zorglid.
-source-git-commit: a51079ff1686ecae3e5fe9f0170b28bc16bcef86
+exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -27,7 +28,7 @@ ht-degree: 1%
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Het persoonlijke e-mailadres van de persoon. |
 | `shippingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Het verzendadres van de persoon. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `memberDetails` {#memberDetails}
 
@@ -53,7 +54,7 @@ ht-degree: 1%
 | `preferredAvailability` | Tekenreeks | De voorkeursdag en -tijd van de persoon voor een afspraak. |
 | `primaryMemberID` | Tekenreeks | Een unieke id van de primaire abonnee als de persoon afhankelijk is. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 

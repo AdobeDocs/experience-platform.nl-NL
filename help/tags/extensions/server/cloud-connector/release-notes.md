@@ -1,7 +1,8 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Cloud Connector Extension
 description: De meest recente release bevat informatie over de extensie Cloud Connector in Adobe Experience Platform.
-source-git-commit: e232ad7a9b581e65f7f4240bbc06155aec409eb7
+exl-id: 5ee85d9f-71f4-46ee-9064-4ceee1cf90e7
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 1%
@@ -21,4 +22,3 @@ v1.0.1
 * Probleem verhelpen waarbij een geldige JSON die in het tekstgebied Body Raw is geplakt, als een tekenreeks is opgeslagen in plaats van als een JSON.
 * Instellen van Body op verzoek van GET of HEAD niet toestaan.
 * Los een insect waar het bewaren van een reactie groter dan 5kb de regeluitvoering zou doen ontbreken.
-

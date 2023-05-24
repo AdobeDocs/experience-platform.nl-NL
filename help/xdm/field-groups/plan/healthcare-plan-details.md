@@ -1,10 +1,11 @@
 ---
 title: Health Care Plan Details Schema Veld Groep
 description: Dit document biedt een overzicht van de veldgroep Details schema van het zorgplan.
-source-git-commit: 3937963ceee8502b0669a3f007fd38ecf2824e9b
+exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '209'
+ht-degree: 2%
 
 ---
 
@@ -26,6 +27,6 @@ ht-degree: 0%
 | `planType` | Tekenreeks | Geeft het overzichtstype aan. Accepteerde waarden zijn:<ul><li>`hmo`</li><li>`epo`</li><li>`pos`</li><li>`hdhp`</li></ul> |
 | `targetOwnerType` | Tekenreeks | Het type eigenaar waarvoor een abonnement is bedoeld. Voorbeelden zijn individu, groep, organisatie, enzovoort. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).

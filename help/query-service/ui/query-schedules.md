@@ -1,7 +1,8 @@
 ---
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '723'
 ht-degree: 0%
@@ -67,5 +68,3 @@ Selecteer een schema in de rijen met beschikbare schema&#39;s. U kunt de knevel 
 Selecteren **[!UICONTROL Delete a schedule]** om het uitgeschakelde schema te verwijderen.
 
 ![De planningswerkruimte met Uitschakelen programma en Schrapping benadrukt programma.](../images/ui/query-schedules/delete-schedule.png)
-
-

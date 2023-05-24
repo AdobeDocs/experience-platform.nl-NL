@@ -4,7 +4,7 @@ description: Leer hoe te om vraag aan het /properties eindpunt in Reactor API te
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1104'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ GET /companies/{COMPANY_ID}/properties
 | --- | --- |
 | `COMPANY_ID` | De `id` van het bedrijf dat eigenaar is van de eigenschappen die u wilt vermelden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ GET /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap die u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -394,7 +394,7 @@ POST /company/{COMPANY_ID}/properties
 | --- | --- |
 | `COMPANY_ID` | De `id` van het bedrijf waarop u de eigenschap definieert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -437,7 +437,7 @@ curl -X POST \
 | `attributes.undefined_vars_return_empty` | Een Booleaanse waarde die aangeeft of ongedefinieerde variabelen als leeg moeten worden geretourneerd voor deze eigenschap. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -548,7 +548,7 @@ PATCH /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap die u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -581,7 +581,7 @@ curl -X PATCH \
 | `id` | De `id` van de eigenschap die u wilt bijwerken. Dit moet overeenkomen met de `{PROPERTY_ID}` waarde opgegeven in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -692,7 +692,7 @@ DELETE /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | De `id` van de eigenschap die u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -732,7 +732,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van het bezit waarvan callbacks u wilt een lijst maken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -807,7 +807,7 @@ GET  /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de gegevenselementen wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -948,7 +948,7 @@ GET  /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de omgevingen wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1068,7 +1068,7 @@ GET  /properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de extensies wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1199,7 +1199,7 @@ GET  /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de hosts wilt vermelden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1277,7 +1277,7 @@ GET  /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van de eigenschap waarvan u de regels wilt weergeven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -1390,7 +1390,7 @@ GET /properties/{PROPERTY_ID}/company
 | --- | --- |
 | `{PROPERTY_ID}` | De `id` van het bezit het waarvan bedrijf u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

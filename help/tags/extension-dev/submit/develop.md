@@ -19,7 +19,7 @@ Een uitbreiding van een tag moet worden beschouwd als een (klein) product met ei
 
 Met die kennis, kunt u plannen welke componenten in uw uitbreiding zouden moeten worden verstrekt.
 
-## Hulplijnen
+## Handleidingen
 
 Met een plan op zijn plaats, kunnen deze gidsen u het proces van de uitbreidingsontwikkeling begrijpen:
 

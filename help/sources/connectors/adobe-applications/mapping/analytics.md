@@ -6,7 +6,7 @@ description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoe
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3419'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,7 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analy
 | videopausetime | media.mediaTimed.pauseTime | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoseconssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | integer |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Toewijzingsvelden splitsen
 
@@ -134,7 +134,7 @@ Deze velden hebben één bron, maar toewijzen aan **meerdere** XDM-locaties.
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | string | Versie van mobiel besturingssysteem. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | integer | Lengte van video-advertentie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gegenereerde toewijzingsvelden
 
@@ -194,7 +194,7 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analy
 | videohoofdstuk | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | integer | De naam van het videohoofdstuk. |
 | videolengte | media.mediaTimed.primaryAssetReference._xmpDM.duration | integer | De lengte van de video. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Geavanceerde toewijzingsvelden
 
@@ -274,4 +274,4 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*Veld Analy
 | visit_search_engine | _experience.analytics.session.search.searchEngine | string | Numerieke id van de eerste zoekfunctie van het bezoek. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | integer | Tijdstempel van de eerste hit van het bezoek in Unix-tijd. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

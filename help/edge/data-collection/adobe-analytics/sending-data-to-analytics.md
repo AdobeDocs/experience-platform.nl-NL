@@ -2,22 +2,21 @@
 title: Gegevens verzenden naar Adobe Analytics via de Adobe Experience Platform Web SDK
 description: Leer hoe u gegevens naar Adobe Analytics verzendt met de Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page views;link tracking;links;track links;clickCollection;click collection;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: cec4a9eb-2079-4386-88da-9b995e0673e6
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
-
 # Gegevens verzenden naar Adobe Analytics
 
-Terwijl er in het verleden verschillende functies waren om tussen een paginamening en een verbinding (bijvoorbeeld, `s.t(), s.tl()`) te onderscheiden, in het Web SDK is er enkel het `sendEvent` bevel. De gegevens die u met een gebeurtenis verzendt, bepalen of het een paginaweergave of een koppeling moet zijn. [Meer weten over het bijhouden van koppelingen](../track-links.md)?
+In het verleden waren er verschillende functies om onderscheid te maken tussen een paginaweergave en een koppeling (bijvoorbeeld `s.t(), s.tl()`), in de SDK van het Web is er alleen de `sendEvent` gebruiken. De gegevens die u met een gebeurtenis verzendt, bepalen of het een paginaweergave of een koppeling moet zijn. [Meer informatie over het bijhouden van koppelingen](../track-links.md).
 
 ## Een paginaweergave verzenden
 
-U kunt een paginaweergave opgeven door de variabele `web.webPageDetails.pageViews.value=1` in te stellen.
+U kunt een paginaweergave opgeven door het dialoogvenster `web.webPageDetails.pageViews.value=1` variabele.
 
 ```javascript
 alloy("sendEvent", {

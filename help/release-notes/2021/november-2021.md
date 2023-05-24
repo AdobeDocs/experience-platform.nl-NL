@@ -5,7 +5,7 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Nieuwe functies in Adobe Experience Platform:
 
-- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [(bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering](#ad-hoc-activation)
 
 ## Updates voor bestaande functies
@@ -27,7 +27,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Attribution AI](#attribution-ai)
 - [Customer AI](#customer-ai)
 
-### Real-time Customer Data Platform B2B Edition {#B2B}
+### Real-Time Customer Data Platform B2B Edition {#B2B}
 
 **Releasedatum: 12 november 2021**
 
@@ -70,7 +70,7 @@ Met de API voor ad-hocactivering kunnen marketers publiekssegmenten programmatis
 
 ### Attribution AI {#attribution-ai}
 
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
 | Functie | Beschrijving |
 |-----------|---------------|
@@ -81,7 +81,7 @@ Zie voor meer informatie over Attribution AI de [Attribution AI](../../intellige
 
 ### Customer AI {#customer-ai}
 
-De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
+De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
 
 **Bijgewerkte functies**
 

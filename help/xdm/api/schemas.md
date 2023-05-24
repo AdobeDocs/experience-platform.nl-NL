@@ -6,7 +6,7 @@ description: Het /schemas eindpunt in de Registratie API van het Schema staat u 
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | De container waarin de schema&#39;s zijn ondergebracht die u wilt ophalen: `global` voor door Adobe gemaakte schema&#39;s of `tenant` voor schema&#39;s die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -61,7 +61,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 | `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-schema voor elke bron, met het origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt schema of `tenant` voor een schema dat eigendom is van uw organisatie. |
 | `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -139,7 +139,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Alle op
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` en `allOf` heeft titels en beschrijvingen. Verouderde velden worden aangegeven met een `meta:status` kenmerk van `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -236,7 +236,7 @@ curl -X POST \
 | --- | --- |
 | `allOf` | Een array van objecten, waarbij elk object verwijst naar een klasse of veldgroep waarvan de velden door het schema worden geïmplementeerd. Elk object bevat één eigenschap (`$ref`) waarvan de waarde de `$id` van de klasse of de gebiedsgroep zal het nieuwe schema uitvoeren. Er moet één klasse worden opgegeven, met nul of meer extra veldgroepen. In het bovenstaande voorbeeld wordt het ene object in het dialoogvenster `allOf` array is de klasse van het schema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -297,7 +297,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het schema dat u opnieuw wilt schrijven. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -380,7 +380,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het schema dat u wilt bijwerken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -471,7 +471,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het schema dat u wilt inschakelen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -554,7 +554,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL-gecodeerd `$id` URI of `meta:altId` van het schema dat u wilt verwijderen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 

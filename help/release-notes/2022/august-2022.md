@@ -4,8 +4,8 @@ description: De release van augustus 2022 bevat opmerkingen voor Adobe Experienc
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '2062'
-ht-degree: 1%
+source-wordcount: '2035'
+ht-degree: 3%
 
 ---
 
@@ -30,7 +30,7 @@ Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van 
 
 ### Attribution AI
 
-Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
 **Bijgewerkte functies**
 
@@ -38,7 +38,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die lei
 | ------- | ----------- |
 | Ondersteuning voor privacy | <ul><li> Attribution AI ondersteunt nu het definiëren van gebruikersrollen en het te beheren toegangsbeleid [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Dit kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>Attribution AI gebruikt Platform datasets. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Privacy Service van het Platform gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, de Identiteitsservice en het Real-Time Klantprofiel te verwijderen.  </li><li>Alle datasets die voor input/output van modellen worden gebruikt zullen de richtlijnen van het Platform volgen. De Encryptie van Gegevens van het Platform is op gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Opmerking**: Attribution AI zal niet beschikbaar zijn bij bestaande klanten van het gezondheidsschild tot nader order.
 
@@ -54,7 +54,7 @@ De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruik
 | ------- | ----------- |
 | Ondersteuning voor privacy | <ul><li> De AI van de Klant steunt nu het bepalen van gebruikersrollen en toegangsbeleid om te leiden [machtigingen](../../../help/access-control/abac/ui/permissions.md) voor functies en objecten in een producttoepassing. </li><li>De middelen van het logboek van de controle worden geregistreerd automatisch aangezien de activiteit voorkomt.</li><li> Doorheen [attribuut-based toegangsbeheer](../../access-control/abac/overview.md)kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van bepaalde kenmerken. Deze kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals labels. Beheerders kunnen ook gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.</li><li>Klant-AI maakt gebruik van gegevenssets van Platforms. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, moeten merken de Privacy Service van het Platform gebruiken om verzoeken van de consument om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, de Identiteitsservice en het Real-Time Klantprofiel te verwijderen. </li><li>Alle datasets die voor input/output van modellen worden gebruikt zullen de richtlijnen van het Platform volgen. De Encryptie van Gegevens van het Platform is op gegevens in rust en in-transit van toepassing. Raadpleeg de documentatie voor meer informatie over [gegevenscodering](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Opmerking**: Klanten met AI zijn tot nader order niet beschikbaar bij bestaande klanten met het gezondheidsschild.
 
@@ -82,7 +82,7 @@ Voor meer informatie over [!DNL Dashboards], zie de [[!DNL Dashboards] overzicht
 | --- | --- |
 | Ondersteuning voor het opnemen van records met waarschuwingen | Met Data Prep worden nu waarschuwingen (niet-kritieke fouten) gelokaliseerd voor de velden en kan de rest van de rij worden ingevoegd. Alle maptransformatiefouten worden nu gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingepakt, worden als geslaagd beschouwd, met een waarschuwing.  De bewaking wordt ook ondersteund in registers met waarschuwingen en diagnostische details. Gedeeltelijke invoer van records met waarschuwingen is momenteel alleen beschikbaar voor streaming gegevens. Raadpleeg de documentatie over [opnemen, records met waarschuwingen](../../sources/tutorials/ui/monitor-streaming.md) voor meer informatie . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
@@ -96,7 +96,7 @@ Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../..
 | ----------- | ----------- |
 | (Bèta) Op attributen-gebaseerde verpersoonlijkingssteun voor verpersoonlijkingsbestemmingen | Met de bètaversie van op attribuut-gebaseerde verpersoonlijking, zult u twee nieuwe kaarten in zien [doelcatalogus](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: Deze connector is momenteel in bèta beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit van de Adobe Target V1-kaart voegt de Target V2-connector een [toewijzingsstap](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) aan de activeringswerkstroom, waarmee u profielkenmerken kunt toewijzen aan Adobe Target, waardoor op kenmerken gebaseerde personalisatie op dezelfde pagina en op een volgende pagina mogelijk is.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: Deze connector is momenteel in bèta beschikbaar voor een beperkt aantal klanten. Naast de door de **[!UICONTROL Custom Personalization]** de **[!UICONTROL Custom Personalization With Attributes]** connector voegt een optionele [toewijzingsstap](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) aan de activeringswerkstroom, die u toestaat om profielattributen aan uw douanebestemming van de douaneverpersoonlijking in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li></ul> <br> Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, **[!UICONTROL Custom Personalization With Attributes]** doel vereist dat u de [Edge Network Server-API](../../server-api/overview.md) voor gegevensverzameling. Bovendien moeten alle API-aanroepen van de server worden uitgevoerd in een [geverifieerde context](../../server-api/authentication.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nieuwe bestemmingen**
 
@@ -104,7 +104,7 @@ Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../..
 | ----------- | ----------- |
 | [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) is een Platform van de Uitvoering van de Verkoop met de meeste B2B koper-verkoper interactiegegevens in de wereld en significante investeringen in merkgebonden AI technologieën om verkoopgegevens in intelligentie om te zetten. [!DNL Outreach] helpt organisaties hun verkoopbetrokkenheid te automatiseren en op inkomstenintelligentie te handelen om hun efficiency, voorspelbaarheid, en groei te verbeteren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
@@ -119,7 +119,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Klasse | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Een op record gebaseerde klasse voor het maken van opzoekschema&#39;s voor Adobe Journey Optimizer. |
 | Veldgroep | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Een omvattende veldgroep die verwijst naar alle objectspecifieke veldgroepen op een lager niveau voor Adobe Workfront. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Bijgewerkte XDM-componenten**
 
@@ -135,7 +135,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Gegevenstypen en veldgroepen | (Meerdere) | Verschillende mediatypen en veldgroepen hebben nieuwe velden en bijgewerkte beschrijvingen. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1582/files) voor meer informatie. |
 | (Alle) | (Meerdere) | Alle schemaobjecten die een `enum` veld bevat nu ook een overeenkomend veld `meta:enum` veld voor het aangeven van de weergavewaarden voor elke restrictie. Zie het volgende [pull-verzoek](https://github.com/adobe/xdm/pull/1601/files) voor meer informatie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md).
 
@@ -148,7 +148,7 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 | Harde limiet voor beleid samenvoegen | Platform zal nu een harde limiet opleggen aan **vijf** samenvoegbeleid per sandbox. Als uw sandbox momenteel meer dan vijf samenvoegbeleidsregels heeft, **niet** kan nieuw samenvoegbeleid maken totdat de sandbox minder dan vijf samenvoegbeleidsregels heeft. |
 | Opschonen van kenmerken van rand met zwevend profiel | Voor alle organisaties, verwijdert de Dienst van het Profiel nu randattributen van gebruikersactiviteitengebied op een dagelijkse basis om een nauwkeurigere vertegenwoordiging van uw profielen in uw systeem te geven. Deze opschoonbewerking vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd. Dit heeft gevolgen voor profielen die worden samengevoegd in gegevenssets waarin `com_adobe_aep_profile_region_dataset` is gemarkeerd als `true`. Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek de fragmenten van het de randattribuut van het leftover voorafgaand aan deze versie omvatte. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Als u meer wilt weten over het realtime profiel van de klant, inclusief zelfstudies en aanbevolen procedures voor het werken met profielgegevens, leest u eerst de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
@@ -179,6 +179,6 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 | [!DNL Teradata Vantage] bron (bèta) | Gebruik de [!DNL Teradata Vantage] bron voor het opnemen van gegevens van hybride multi-wolkomgevingen naar Experience Platform. Voor meer informatie leest u de documentatie op het tabblad [[!DNL Teradata Vantage] bron](../../sources/connectors/databases/teradata-vantage.md). |
 | Ondersteuning voor verschillende regio&#39;s van Adobe Analytics-bronnen | U kunt nu rapportsuites uit om het even welke regio (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen. Rapportsuites moeten worden toegewezen aan dezelfde organisatie als de Sandbox-instantie van het Experience Platform waarin de bronverbinding wordt gemaakt. Lees voor meer informatie de handleiding op [een Adobe Analytics-bronverbinding maken in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).

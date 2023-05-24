@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;vraag
 solution: Experience Platform
 title: API-handleiding voor query-service
-description: Met de API van de Query Service kunnen ontwikkelaars hun Adobe Experience Platform-gegevens opvragen met behulp van standaard SQL. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+description: Met de API van de Query Service kunnen ontwikkelaars hun Adobe Experience Platform-gegevens opvragen met behulp van standaard SQL. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '399'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 

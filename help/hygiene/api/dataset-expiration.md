@@ -4,7 +4,7 @@ description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om dat
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ GET /ttl?{QUERY_PARAMETERS}
 | --- | --- |
 | `{QUERY_PARAMETERS}` | Een lijst met optionele queryparameters, met meerdere parameters gescheiden door `&` tekens. Veelvoorkomende parameters zijn `size` en `page` voor pagineringsdoeleinden. Voor een volledige lijst van gesteunde vraagparameters, verwijs naar [aanhangsel](#query-params). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -106,7 +106,7 @@ Een succesvolle reactie maakt een lijst van de resulterende datasetvervaldata. H
 | `totalRecords` | De telling van gegevenssetvervaltermijnen die de parameters van de lijstvraag aanstemden. |
 | `ttlDetails` | Bevat de details van de teruggekeerde datasettermijnen. Voor meer details over de eigenschappen van een datasetafloop, zie de reactiesectie voor het maken van a [opzoekvraag](#lookup). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Een gegevensset opzoeken die vervalt {#lookup}
 
@@ -122,7 +122,7 @@ GET /ttl/{DATASET_ID}
 | --- | --- |
 | `{DATASET_ID}` | De id van de gegevensset waarvan u de vervaldatum wilt opzoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -167,7 +167,7 @@ Een succesvolle reactie keert de details van de datasetvervaldatum terug.
 | `displayName` | De weergavenaam voor de vervalaanvraag. |
 | `description` | Een beschrijving van de vervalaanvraag. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Vervaltags voor catalogi
 
@@ -230,7 +230,7 @@ curl -X PUT \
 | `displayName` | Een weergavenaam voor de vervalaanvraag. |
 | `description` | Een optionele beschrijving voor de vervalaanvraag. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwoord**
 
@@ -260,7 +260,7 @@ Een geslaagde reactie retourneert de details van de gegevenssetvervaldatum, met 
 | `updatedAt` | Een tijdstempel van wanneer de vervaldatum voor het laatst is bijgewerkt. |
 | `updatedBy` | De gebruiker die de vervaldatum voor het laatst heeft bijgewerkt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vervaldatum gegevensset annuleren {#delete}
 
@@ -280,7 +280,7 @@ DELETE /ttl/{EXPIRATION_ID}
 | --- | --- |
 | `{EXPIRATION_ID}` | De `workorderId` van de gegevenssetvervaldatum die u wilt annuleren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -313,7 +313,7 @@ GET /ttl/{DATASET_ID}?include=history
 | --- | --- |
 | `{DATASET_ID}` | Identiteitskaart van de dataset de waarvan vervalgeschiedenis u omhoog wilt zoeken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Verzoek**
 
@@ -377,7 +377,7 @@ Een succesvolle reactie keert de details van de datasetvervaldatum, met terug `h
 | `imsOrg` | De id van uw organisatie. |
 | `history` | Hiermee wordt de geschiedenis van updates voor de vervaldatum weergegeven als een array van objecten, waarbij elk object het `status`, `expiry`, `updatedAt`, en `updatedBy` kenmerken voor de vervaldatum op het moment van de update. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aanhangsel
 
@@ -402,4 +402,4 @@ De volgende tabel geeft een overzicht van de beschikbare queryparameters wanneer
 | `completedDate` / `completedToDate` / `completedFromDate` | Komt overeen met verlopen die tijdens het opgegeven interval zijn voltooid. | `completedToDate=2021-11-11-06:00` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Komt overeen met vervaldata die moeten worden uitgevoerd, of reeds zijn uitgevoerd, tijdens het opgegeven interval. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

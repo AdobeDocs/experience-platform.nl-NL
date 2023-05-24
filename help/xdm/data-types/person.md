@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het gegevenstype Person Experi
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '334'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 | `nationality` | Tekenreeks | De juridische relatie tussen een persoon en zijn staat die wordt vertegenwoordigd door middel van de ISO 3166-1 Alpha-2-code. De indeling van deze eigenschap moet in overeenstemming zijn met deze reguliere expressie `^[A-Z]{2}$`. |
 | `taxId` | Tekenreeks | De belasting- of fiscale ID van de persoon, zoals het fiscaal identificatienummer (TIN) in de VS of het Certificado de Identificación Fiscal (CIF/NIF) in Spanje. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

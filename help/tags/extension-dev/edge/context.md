@@ -1,10 +1,11 @@
 ---
 title: Context in Edge-uitbreidingsmodules
 description: Leer over het contextvoorwerp en de rol het in interactie met bibliotheekmodules in markeringsuitbreidingen van randeigenschappen speelt.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '744'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -14,15 +15,15 @@ ht-degree: 0%
 >
 > Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Alle bibliotheekmodules in randuitbreidingen worden verstrekt een `context` voorwerp wanneer zij worden uitgevoerd. Dit document behandelt de eigenschappen die door het `context` voorwerp en de rol worden verstrekt zij in bibliotheekmodules spelen.
+Alle bibliotheekmodules in randextensies worden geleverd met een `context` -object wanneer deze worden uitgevoerd. Dit document behandelt de eigenschappen die door `context` -object en de rol die ze spelen in bibliotheekmodules.
 
 ## Context verzoek Adobe (boog)
 
-De eigenschap `arc` is een object dat informatie bevat over de gebeurtenis die de regel activeert. In de onderstaande secties worden de verschillende subeigenschappen in dit object besproken.
+De `arc` eigenschap is een object dat informatie bevat over de gebeurtenis die de regel activeert. In de onderstaande secties worden de verschillende subeigenschappen in dit object besproken.
 
 ### [!DNL event]
 
-Het object `event` vertegenwoordigt de gebeurtenis die de regel heeft geactiveerd en bevat de volgende waarden:
+De `event` object vertegenwoordigt de gebeurtenis die de regel heeft geactiveerd en bevat de volgende waarden:
 
 ```js
 logger.log(context.arc.event);
@@ -35,13 +36,13 @@ logger.log(context.arc.event);
 
 ### [!DNL request]
 
-`request` is een enigszins aangepast object dat afkomstig is van Adobe Experience Platform Edge Network om niet te worden verward met een aanvraag van het clientapparaat.
+niet worden verward met een verzoek van het clientapparaat; `request` is een enigszins gewijzigd object dat afkomstig is van Adobe Experience Platform Edge Network.
 
 ```js
 logger.log(context.arc.request)
 ```
 
-Het object `request` heeft twee eigenschappen op hoofdniveau: `body` en `head`. De eigenschap `body` bevat XDM-gegevens (Experience Data Model) en kan in Adobe Experience Platform Debugger worden geïnspecteerd wanneer u naar **[!UICONTROL Launch]** navigeert en het tabblad **[!UICONTROL Edge Trace]** selecteert.
+De `request` object heeft twee eigenschappen op hoofdniveau: `body` en `head`. De `body` eigenschap bevat XDM-informatie (Experience Data Model) en kan worden gecontroleerd in Adobe Experience Platform Debugger wanneer u navigeert naar **[!UICONTROL Launch]** en selecteert u de **[!UICONTROL Edge Trace]** tab.
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -51,13 +52,13 @@ Het object `request` heeft twee eigenschappen op hoofdniveau: `body` en `head`. 
 logger.log(context.arc.ruleStash);
 ```
 
-Elke extensie heeft een eigen naamruimte. Als uw extensie bijvoorbeeld de naam `send-beacon` heeft, worden alle resultaten van `send-beacon`-handelingen opgeslagen in de naamruimte `ruleStash['send-beacon']`.
+Elke extensie heeft een eigen naamruimte. Als uw extensie bijvoorbeeld de naam heeft `send-beacon`alle resultaten van `send-beacon` acties worden opgeslagen op de `ruleStash['send-beacon']` naamruimte.
 
-De naamruimte is uniek voor elke extensie en heeft aan het begin de waarde `undefined`.
+De naamruimte is uniek voor elke extensie en heeft de waarde `undefined` aan het begin.
 
-De naamruimte wordt overschreven door het geretourneerde resultaat van elke actie. Neem bijvoorbeeld een extensie `transform` die twee handelingen bevat: `generate-fullname` en `generate-fulladdress`. Deze twee acties worden dan toegevoegd aan een regel.
+De naamruimte wordt overschreven door het geretourneerde resultaat van elke actie. Neem bijvoorbeeld een `transform` extensie met twee acties: `generate-fullname` en `generate-fulladdress`. Deze twee acties worden dan toegevoegd aan een regel.
 
-Als het resultaat van de `generate-fullname` actie `Firstname Lastname` is, dan zal de regelstash als volgt verschijnen nadat de actie wordt voltooid:
+Indien het resultaat van de `generate-fullname` handeling is `Firstname Lastname`Vervolgens ziet de regelstash er als volgt uit nadat de handeling is voltooid:
 
 ```js
 {
@@ -65,7 +66,7 @@ Als het resultaat van de `generate-fullname` actie `Firstname Lastname` is, dan 
 }
 ```
 
-Als het resultaat van de `generate-address` actie `3900 Adobe Way` is, dan zal de regelstash als volgt verschijnen nadat de actie wordt voltooid:
+Indien het resultaat van de `generate-address` handeling is `3900 Adobe Way`Vervolgens ziet de regelstash er als volgt uit nadat de handeling is voltooid:
 
 ```js
 {
@@ -73,9 +74,9 @@ Als het resultaat van de `generate-address` actie `3900 Adobe Way` is, dan zal d
 }
 ```
 
-U ziet dat &quot;FirstName LastName&quot; niet meer bestaat binnen de regelstash omdat de handeling `generate-address` deze met een nieuwe waarde heeft overschreven.
+U ziet dat &quot;FirstName LastName&quot; niet langer bestaat binnen de regelstash omdat de optie `generate-address` actie heeft er een nieuwe waarde aan toegevoegd .
 
-Als u `ruleStash` de resultaten van beide acties binnen `transform` namespace wilt opslaan, kunt u uw actiemodule gelijkend op het volgende voorbeeld schrijven:
+Als u `ruleStash` om de resultaten van beide handelingen op te slaan in het dialoogvenster `transform` naamruimte, kunt u uw actiemodule schrijven, net als in het volgende voorbeeld:
 
 ```js
 module.exports = (context) => {
@@ -91,7 +92,7 @@ module.exports = (context) => {
 }
 ```
 
-De eerste keer dat deze handeling wordt uitgevoerd, begint `ruleStash` als `undefined` en wordt daarom geïnitialiseerd als een leeg object. De volgende keer dat de handeling wordt uitgevoerd, ontvangt deze `ruleStash` die is geretourneerd toen de handeling eerder werd aangeroepen. Door een object als `ruleStash` te gebruiken, kunt u nieuwe gegevens toevoegen zonder dat gegevens verloren gaan die eerder zijn ingesteld door andere handelingen van onze extensie.
+De eerste keer dat deze handeling wordt uitgevoerd, `ruleStash` begint als `undefined` en wordt daarom geïnitialiseerd als een leeg object. De volgende keer dat de handeling wordt uitgevoerd, ontvangt deze `ruleStash` die werd geretourneerd toen de handeling eerder werd aangeroepen. Een object gebruiken als `ruleStash` kunt u nieuwe gegevens toevoegen zonder gegevens te verliezen die eerder zijn ingesteld door andere handelingen uit onze extensie.
 
 >[!NOTE]
 >
@@ -99,17 +100,17 @@ De eerste keer dat deze handeling wordt uitgevoerd, begint `ruleStash` als `unde
 
 ## Hulpmiddelen
 
-De eigenschap `utils` vertegenwoordigt een object dat hulpprogramma&#39;s bevat die specifiek zijn voor de tagruntime.
+De `utils` Deze eigenschap vertegenwoordigt een object dat hulpprogramma&#39;s bevat die specifiek zijn voor de tagruntime.
 
 ### [!DNL logger]
 
-Met het hulpprogramma `logger` kunt u berichten registreren die tijdens foutopsporingssessies worden weergegeven wanneer u [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) gebruikt.
+De `logger` Het nut staat u toe om berichten te registreren die tijdens het zuiveren zittingen wanneer het gebruiken zullen worden getoond [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
 ```
 
-Het logger heeft de volgende methodes, waar `message` het bericht is u wilt registreren:
+De registreermachine heeft de volgende methodes, waar `message` is het bericht u wilt registreren:
 
 | Methode | Beschrijving |
 | --- | --- |
@@ -117,11 +118,11 @@ Het logger heeft de volgende methodes, waar `message` het bericht is u wilt regi
 | `info(message)` | Logs an informational message to the console. |
 | `warn(message)` | Logs a warning message to the console. |
 | `error(message)` | Logs an error message to the console. |
-| `debug(message)` | Logs a zuivert bericht aan de console. Dit is zichtbaar slechts wanneer `verbose` het registreren binnen uw browser console wordt toegelaten. |
+| `debug(message)` | Logs a zuivert bericht aan de console. Dit is alleen zichtbaar wanneer `verbose` het registreren wordt toegelaten binnen uw browser console. |
 
 ### [!DNL fetch]
 
-Dit hulpprogramma implementeert de [Fetch-API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). U kunt de functie gebruiken om verzoeken aan derdeeindpunten te doen.
+Dit hulpprogramma implementeert de [Ophalen-API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). U kunt de functie gebruiken om verzoeken aan derdeeindpunten te doen.
 
 ```js
 context.utils.fetch('http://example.com/movies.json')
@@ -140,12 +141,12 @@ Het object bevat de volgende waarden:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `turbineVersion` | De [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine-edge)-versie die in de huidige bibliotheek wordt gebruikt. |
-| `turbineBuildDate` | De ISO 8601-datum waarop de in de container gebruikte versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) is gemaakt. |
+| `turbineVersion` | De [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) in de huidige bibliotheek wordt gebruikt. |
+| `turbineBuildDate` | De ISO 8601-datum waarop de versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) in de container is gebruikt. |
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
-| `environment` | De omgeving waarvoor deze bibliotheek is gemaakt. Mogelijke waarden zijn `development`, `staging` en `production.` |
+| `environment` | De omgeving waarvoor deze bibliotheek is gemaakt. Mogelijke waarden zijn `development`, `staging`, en `production.` |
 
-In het volgende voorbeeld ziet u een `getBuildInfo`-object om de geretourneerde waarden aan te tonen:
+Hier volgt een voorbeeld `getBuildInfo` object om de geretourneerde waarden aan te tonen:
 
 ```js
 {
@@ -158,7 +159,7 @@ In het volgende voorbeeld ziet u een `getBuildInfo`-object om de geretourneerde 
 
 ### [!DNL getExtensionSettings]
 
-Dit nut keert het `settings` voorwerp terug dat het laatst van [uitbreidingsconfiguratie](../configuration.md) mening werd bewaard.
+Dit hulpprogramma retourneert de `settings` object dat het laatst is opgeslagen in het menu [extensieconfiguratie](../configuration.md) weergeven.
 
 ```js
 logger.log(context.utils.getExtensionSettings());
@@ -166,7 +167,7 @@ logger.log(context.utils.getExtensionSettings());
 
 ### [!DNL getSettings]
 
-Dit nut keert het `settings` voorwerp terug dat het laatst van de overeenkomstige mening van de bibliotheekmodule werd bewaard.
+Dit hulpprogramma retourneert de `settings` object dat het laatst is opgeslagen in de bijbehorende bibliotheekmodule-weergave.
 
 ```js
 logger.log(context.utils.getSettings());

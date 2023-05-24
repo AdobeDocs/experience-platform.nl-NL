@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het XDM-gegevenstype van het i
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ De waarden die in dit gegevenstype worden vastgelegd, kunnen afwijken van de pro
 | `quantity` | [!UICONTROL Integer] | Het aantal eenheden dat de klant heeft aangegeven te vragen voor het product. |
 | `unitOfMeasureCode` | [!UICONTROL String] | De norm [maateenheid](https://ucum.org/ucum) voor het product als gerelateerd aan de `quantity` eigenschap. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het postadres:
 

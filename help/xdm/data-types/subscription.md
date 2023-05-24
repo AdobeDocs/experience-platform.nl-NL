@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het gegevenstype Subscription 
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '412'
 ht-degree: 8%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 8%
 | `topUp` | Tekenreeks | Beschrijft de overeengekomen voorwaarden voor hoe de verbruiksaspecten van een abonnement tijdens een factureringsperiode worden teruggekocht. |
 | `type` | Tekenreeks | De omvang van het recht in verhouding tot het aantal personen dat onder het abonnement valt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

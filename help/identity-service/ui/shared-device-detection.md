@@ -7,7 +7,7 @@ hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Het is belangrijk de volgende terminologie te begrijpen wanneer het werken met
 | Naamruimte gebruikersnaam gebruiker | De naamruimte Gebruikers-id vertegenwoordigt de geverifieerde (aangemelde) gebruiker van een gedeeld apparaat. |
 | Laatst geverifieerde gebruiker | De laatste voor authentiek verklaarde gebruiker vertegenwoordigt de gebruiker die het laatst aan een apparaat het programma werd geopend, als een apparaat door veelvoudige rekeningen wordt het programma geopend. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [!DNL Shared Device Detection] werkt door twee naamruimten op te zetten: de **Naamruimte van gedeelde identiteit** en de **Naamruimte gebruikersnaam gebruiker**.
 

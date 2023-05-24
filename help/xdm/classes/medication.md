@@ -1,9 +1,10 @@
 ---
 title: Geneesmiddelenklasse
 description: Dit document biedt een overzicht van de klasse Medication in Experience Data Model (XDM).
-source-git-commit: cf39f943e27cd11b0eabbc344774fa12482a8f92
+exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,6 @@ In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Medication] klas
 | `medicationId` | [!UICONTROL String] | Een unieke identificatie voor de medicatie. |
 | `medicationName` | [!UICONTROL String] | De naam van het geneesmiddel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 De klasse kan worden uitgebreid met de [[!UICONTROL Healthcare medication] veldgroep](../field-groups/medication/healthcare-medication.md) voor meer informatie over het geneesmiddel of het geneesmiddel.

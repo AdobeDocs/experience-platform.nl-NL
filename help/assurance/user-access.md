@@ -2,9 +2,9 @@
 title: Toegang tot Adobe Experience Platform Assurance-gebruikers
 description: Deze gids verklaart hoe te om gebruikerstoegang tot de Verzekering van Adobe Experience Platform te houden door het door de Admin Console te leiden.
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
-source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---
@@ -19,14 +19,32 @@ ht-degree: 2%
 
 Om ononderbroken toegang tot Verzekering te ontvangen of te handhaven, zorg ervoor dat de volgende stappen in de Admin Console worden voltooid:
 
-## Gebruikers aan Experience Platform toevoegen via een productprofiel
+## Een productprofiel maken
 
-Als u een gebruiker aan een productprofiel wilt toevoegen, meldt u zich aan bij de Admin Console en selecteert u **Gebruikers toevoegen**.
+>[!NOTE]
+>
+>Als u een bestaand profiel gebruikt, kunt u naar de volgende sectie overslaan.
 
-![De knop Gebruikers toevoegen is gemarkeerd.](./images/get-access/product-profile-add-users.png)
+Aanmelden bij [Admin Console](https://adminconsole.adobe.com/) en maak een nieuw Adobe Experience Platform-productprofiel.
 
-De **Gebruikers aan uw team toevoegen** wordt weergegeven. In dit dialoogvenster kunt u de gegevens invoeren van de gebruiker die u wilt toevoegen. Voer het e-mailadres, de voornaam (optioneel) en de achternaam (optioneel) van de gebruiker in.
+Selecteer **Producten** , gevolgd door de Adobe Experience Platform-productkaart.
 
-Selecteer het potloodpictogram om de producten en gebruikersgroepen te kiezen. Selecteer **Adobe Experience Platform** vervolgens **AEP-Default-All-Users**, gevolgd door **Opslaan**.
+![Adobe Experience Platform Assurance Analytics-weergave](./images/get-access/analytics-view.png)
 
-![Het dialoogvenster waarin wordt weergegeven hoe u het productprofiel kunt toevoegen, wordt weergegeven.](./images/get-access/product-profile-add-profile.png)
+## Gebruikers toevoegen aan het productprofiel
+
+Nadat u de productkaart hebt geopend, geeft u een naam op en selecteert u **Opslaan**.
+
+>[!NOTE]
+>
+>Het productprofiel dat u wilt gebruiken voor Betrouwbaarheid, heeft geen **niet** aanvullende machtigingen vereisen.
+
+![Adobe Experience Platform-productprofiel](./images/get-access/product-profile.png)
+
+Nu u de productkaart hebt gemaakt, kunt u gebruikers toewijzen aan het Adobe Experience Platform-productprofiel. Selecteer **Producten** tab, gevolgd door **Gebruikers toewijzen** op de Adobe Experience Platform-kaart.
+
+![Gebruikers toewijzen aan productprofiel](./images/get-access/assign-users.png)
+
+Voeg een of meer gebruikers toe aan het productprofiel en sla het op.
+
+![Gebruikers toevoegen aan productprofiel](./images/get-access/add-users.png)

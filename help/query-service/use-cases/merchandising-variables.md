@@ -1,7 +1,8 @@
 ---
 title: Merchandising-variabelen uit analysegegevens retourneren en gebruiken
 description: Leer hoe te om gebieden XDM en steekproefvragen te verstrekken om tot de het verhandelen variabelen in uw datasets van Analytics toegang te hebben.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 1%

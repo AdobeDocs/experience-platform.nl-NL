@@ -222,7 +222,7 @@ In de onderstaande tabel worden de verschillende kenmerken beschreven die in de 
 | Percentage | Deze waarde biedt informatie over de prestaties van een profiel ten opzichte van andere profielen met een vergelijkbare score. Een profiel met een percentielrang van 99 voor churn geeft bijvoorbeeld aan dat het risico op churning groter is dan 99% van alle andere profielen die zijn gescaureerd. De percentielen variëren van 1 tot 100. |
 | Type volheid | Het geselecteerde type buigzaamheid. |
 | Score-datum | De datum waarop de scoring heeft plaatsgevonden. |
-| Influentiële factoren | Dit zijn voorspelde redenen waarom een profiel waarschijnlijk wordt omgezet of afgekapt. Deze factoren bestaan uit de volgende kenmerken:<ul><li>Code: Het profiel of gedragskenmerk dat de voorspelde score van een profiel positief beïnvloedt. </li><li>Waarde: De waarde van het profiel of gedragskenmerk.</li><li>Belangrijk: Hiermee wordt het gewicht van het profiel of gedragskenmerk op de voorspelde score aangegeven (laag, gemiddeld, hoog)</li></ul> |
+| Influentiële factoren | Dit zijn voorspelde redenen waarom een profiel waarschijnlijk zal omzetten of draaien. Deze factoren bestaan uit de volgende kenmerken:<ul><li>Code: Het profiel of gedragskenmerk dat de voorspelde score van een profiel positief beïnvloedt. </li><li>Waarde: De waarde van het profiel of gedragskenmerk.</li><li>Belangrijk: Hiermee wordt het gewicht van het profiel of gedragskenmerk op de voorspelde score aangegeven (laag, gemiddeld, hoog)</li></ul> |
 
 ## Volgende stappen {#next-steps}
 

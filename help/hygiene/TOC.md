@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Help bij Gegevenshygiëne
-breadcrumb-title: Handleiding gegevenshygiëne
-user-guide-description: Schrap individuele verslagen en de termijnen van de planningsdataset in Experience Platform voor gegevens het zuiveren, het verwijderen van anonieme gegevens, en gegevensminimalisering.
+user-guide-title: Data Hygiene Help
+breadcrumb-title: Gids Data Hygiene
+user-guide-description: Verwijder individuele verslagen en plan vervalmomenten van datasets in Experience Platform voor het opschonen van gegevens, het verwijderen van anonieme gegevens en gegevensminimalisering.
 feature: Data Hygiene
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '54'
-ht-degree: 3%
+ht-degree: 50%
 
 ---
 

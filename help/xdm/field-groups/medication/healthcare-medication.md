@@ -1,9 +1,10 @@
 ---
 title: Werkgroep Gezondheidszorg
 description: Dit document biedt een overzicht van de veldgroep van het medicatieschema in de gezondheidszorg.
-source-git-commit: 3b0c85eb5184dd116b1013e617cf528080fa0656
+exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '205'
 ht-degree: 3%
 
 ---
@@ -29,6 +30,6 @@ ht-degree: 3%
 | `status` | Tekenreeks | Een algemene status die aangeeft of het geneesmiddel/de medicatie al dan niet actief is. |
 | `volume` | Dubbel | De hoeveelheid van het geneesmiddel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Voor meer informatie over de veldgroep raadpleegt u de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

@@ -6,7 +6,7 @@ description: Dit document biedt een overzicht van het gegevenstype Search Experi
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 | `searchEngineID` | Tekenreeks | De toepassingsspecifieke id die wordt gebruikt om het zoekprogramma te identificeren. |
 | `slot` | Tekenreeks | De benoemde sectie van de pagina waar het zoekresultaat werd weergegeven. De waarde van deze eigenschap moet gelijk zijn aan een van de bekende opsommingswaarden die u definieert, zoals `top`, `side`, of `bottom`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

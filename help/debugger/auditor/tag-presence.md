@@ -4,7 +4,7 @@ description: Leer hoe de controlefunctie de aanwezigheid van tags in Adobe Exper
 exl-id: 8f01f89e-2a3b-41bc-b971-f3c60d0ae3fa
 source-git-commit: 10a5605c40143b58f6ba0108cc087956aa929866
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '572'
 ht-degree: 5%
 
 ---
@@ -34,4 +34,4 @@ Tests met tagaanwezigheid evalueren of bepaalde tags op de pagina voorkomen en o
 | Doel - Code-aanwezigheid | 5 | Adobe Target moet in het DOM worden gedefinieerd. | Installeer de meest recente versie van Target (at.js). <br><br>[Aanvullende informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
 | Doel - Bibliotheek geladen in `<head>` | 4 | De doelbibliotheek moet in het dialoogvenster `<head>` tag. | Controleer of de doelbibliotheek is geladen in het dialoogvenster `<head>` tag. <br><br>[Aanvullende informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

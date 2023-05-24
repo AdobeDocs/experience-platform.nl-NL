@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van het gegevenstype XDM (External
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '201'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 | `lastUpdatedDate` | DateTime | De laatste bijgewerkte datum voor het bronsysteem. |
 | `lastViewedDate` | DateTime | De laatst bekeken datum voor het bronsysteem. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 

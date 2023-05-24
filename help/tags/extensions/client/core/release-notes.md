@@ -141,7 +141,7 @@ v1.8.3
 
 v1.8.2
 
-* Probleem verholpen waarbij de aangepaste code-actie een fout genereerde voor HTML-code die tokens zonder tagnaam bevat (bijvoorbeeld opmerkingen).
+* Probleem verholpen waarbij de aangepaste code een fout veroorzaakte voor HTML-code die tokens zonder tagnaam bevat (bijvoorbeeld opmerkingen).
 
 ## 10 juli 2020
 

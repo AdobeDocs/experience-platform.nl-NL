@@ -7,7 +7,7 @@ exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -75,13 +75,13 @@ Experience Platform gebruikt Adobe Admin Console om op rol-gebaseerde toegangsbe
 
 Zie de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie .
 
-### Sandboxen {#sandboxes}
+### Sandboxes {#sandboxes}
 
 Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
 
 Om aan de behoefte aan ontwikkelingsflexibiliteit te voldoen, verstrekt het Experience Platform zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen om u te helpen uw digitale ervaringstoepassingen ontwikkelen die op uw eigen ontwikkelingscyclus worden gebaseerd.
 
-Zie de [sandboxen, overzicht](../../sandboxes/home.md) voor meer informatie .
+Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie.
 
 ## Volgende stappen
 

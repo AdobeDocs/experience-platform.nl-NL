@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Data Management Platform] (DMP) - Overzicht van doelen {#dmp-destinations}
+# [!DNL Data Management Platform] (DMP) Overzicht van doelen {#dmp-destinations}
 
 [!DNL Data Management Platforms] (DMPs) laat adverteerders, uitgevers, en agentschappen toe om unieke publieksprofielen te bouwen, hun waardevolste segmenten te identificeren, en hen over om het even welk digitaal kanaal te gebruiken. Zo kunt u een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek maken en activeren.
 

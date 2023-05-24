@@ -4,7 +4,7 @@ description: Dit document biedt een overzicht van de XDM Business Account Person
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '418'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,6 @@ ht-degree: 1%
 | `relationStartDate` | DateTime | De datum waarop de relatie tussen de rekening en de persoon is begonnen. |
 | `relationshipSource` | Tekenreeks | De bron van de relatie tussen de rekeningpersoon. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Zie de handleiding op [schema-relaties in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) om te leren hoe deze klasse conceptueel op de andere klassen B2B betrekking heeft en hoe u deze verhoudingen in Adobe Experience Platform UI kunt vestigen.

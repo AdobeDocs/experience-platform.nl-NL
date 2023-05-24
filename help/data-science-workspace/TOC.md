@@ -1,19 +1,19 @@
 ---
 audience: user
-user-guide-title: Help bij Adobe Experience Platform Data Science Workspace
-breadcrumb-title: Werkruimtegids voor gegevenswetenschappen
-user-guide-description: Gebruik computerleren om modellen en recepten te ontwikkelen, te trainen en te scoren met Adobe Sensei- en JupyterLab-laptops.
+user-guide-title: Hulp bij Adobe Experience Platform Data Science Workspace
+breadcrumb-title: Handleiding Data Science Workspace
+user-guide-description: Gebruik machine learning om modellen en recepten te ontwikkelen, trainen en scoren met Adobe Sensei- en JupyterLab-laptops.
 feature: Data Science Workspace
 solution: Experience Platform
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '236'
-ht-degree: 1%
+ht-degree: 14%
 
 ---
 
 
-# Werkruimte voor gegevenswetenschap {#data-science-workspace}
+# Data Science-werkruimte {#data-science-workspace}
 
 * [Overzicht van de Data Science Workspace](home.md)
 * [Toegang tot en functies van Data Science Workspace](access-features-dsw.md)

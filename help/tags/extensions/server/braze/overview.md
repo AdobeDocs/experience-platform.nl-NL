@@ -3,13 +3,13 @@ keywords: gebeurtenis door:sturen uitbreiding;breze;breze gebeurtenis door:sture
 title: Braze Event Forwarding Extension
 description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Braze Track Events API] extensie voor doorsturen van gebeurtenissen
 

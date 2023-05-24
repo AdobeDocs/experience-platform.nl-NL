@@ -5,7 +5,7 @@ exl-id: 96375409-803f-45af-805e-900207d972e4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '377'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Gegevensinname](#ingestion)
+- [Gegevensopname](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Bronnen](#sources)
 
-## Gegevensinname {#ingestion}
+## Gegevensopname {#ingestion}
 
 De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor Platform gegevens uit diverse bronnen inneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door de stroomafwaartse diensten van het Platform worden voortgeduurd.
 

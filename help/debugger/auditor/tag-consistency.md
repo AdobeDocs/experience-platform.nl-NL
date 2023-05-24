@@ -4,7 +4,7 @@ description: Leer hoe de controlefunctie de consistentie van tags test in Adobe 
 exl-id: 642b0c49-a7c7-4142-8189-67f00ed50015
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '123'
 ht-degree: 3%
 
 ---
@@ -23,4 +23,4 @@ Bij het testen van de consistentie van tags wordt gezocht naar inconsistenties o
 | --- | --- | --- | --- |
 | Adobe Analytics - Consistente codeversie | 5 | Er zijn meerdere versies van de Analytics-code gevonden. | Vervang alle instanties van Analytics door de huidige versie.<br><br>[Aanvullende informatie](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

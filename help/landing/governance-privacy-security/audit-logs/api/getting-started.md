@@ -1,7 +1,8 @@
 ---
 title: Aan de slag met de API voor auditquery
 description: Met de API voor zoekopdrachten kunt u metrische gegevens voor verschillende Adobe Experience Platform-functies ophalen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Vraag API van de Vraag van de Controle te maken.
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
+source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%

@@ -2,10 +2,11 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 title: Een Pinterest Ads-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Pinterest Ads-bronverbinding maakt met de Adobe Experience Platform-interface.
-badge: "Bèta"
+badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: a16264da68d9e5e9aeac86b1a3083c701407febb
+exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 1%
