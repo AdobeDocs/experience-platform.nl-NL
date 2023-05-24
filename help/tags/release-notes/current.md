@@ -2,14 +2,18 @@
 title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
 description: De nieuwste aanvullende informatie voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '839'
 ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
+
+>[!IMPORTANT]
+>
+>Het vooruit bewegen van de markeringen en de gebeurtenis door:sturen versienota&#39;s zullen niet meer op deze pagina worden verstrekt. Raadpleeg de meest recente [Opmerkingen bij de release van Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) voor gedetailleerde tags en updates voor het doorsturen van gebeurtenissen.
 
 ## 26 april 2023
 
