@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 description: Leer hoe labels voor gegevensgebruik worden gebruikt om naleving van gegevensbeheer in Adobe Experience Platform af te dwingen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -57,21 +57,17 @@ U kunt gegevensgebruikslabels beheren met [!DNL Experience Platform] API&#39;s o
 
 ### De gebruikersinterface gebruiken
 
-De **[!UICONTROL Policies]** werkruimte in de [!DNL Experience Platform] UI staat u toe om kern en douanelabels voor uw organisatie te bekijken en te beheren. U kunt de **[!UICONTROL Schemas]** werkruimte naar [labels toepassen op uw XDM-schema&#39;s (Experience Data Model)](../../xdm/tutorials/labels.md)of u kunt de **[!DNL Datasets]** werkruimte naar [labels toepassen op gegevenssets](./user-guide.md) in plaats daarvan.
+De **[!UICONTROL Policies]** werkruimte in de [!DNL Experience Platform] UI staat u toe om kern en douanelabels voor uw organisatie te bekijken en te beheren. U kunt de **[!UICONTROL Schemas]** werkruimte naar [labels toepassen op uw XDM-schema&#39;s (Experience Data Model)](../../xdm/tutorials/labels.md), of leer hoe te [aangepaste labels maken en beheren in de **[!UICONTROL Policies] UI](./user-guide.md) door in plaats daarvan de gebruikershandleiding voor de labels voor gegevensgebruik te lezen.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert om toegangsbeleid voor de gegevens tot stand te brengen, moet u etiketten op het schema toepassen dat de dataset op gebaseerd is. Zie het overzicht op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
+>Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van het Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](../e2e.md#migrate-labels) voor instructies over hoe te om dit te doen.
 
 ### API&#39;s gebruiken
 
 De `/labels` in de [Beleidsservice-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) Hiermee kunt u gegevensgebruikslabels programmatisch beheren, inclusief het maken van aangepaste labels. Zie de [eindhulplijn voor labels](../api/labels.md) voor meer informatie .
 
 De [Dataset-service-API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) wordt gebruikt om etiketten voor dataset en gebieden te beheren. Zie de handleiding op [gegevenssetlabels beheren](./dataset-api.md) voor meer informatie .
-
->[!NOTE]
->
->Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert toegangsbeleid voor de gegevens tot stand te brengen, moet u [labels toepassen op het schema](../../xdm/tutorials/labels.md) dat de gegevensset op die gegevens is gebaseerd. Zie het overzicht op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
 
 ## Volgende stappen
 

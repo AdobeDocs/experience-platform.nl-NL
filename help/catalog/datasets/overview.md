@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van gegevenssets
 description: Dit document biedt een overzicht op hoog niveau van gegevenssets in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '843'
 ht-degree: 2%
 
 ---
@@ -37,15 +37,13 @@ Adobe Experience Platform Data Ingestie vertegenwoordigt de veelvoudige methodes
 
 Zie de [Overzicht van gegevensinname](../../ingestion/home.md) voor meer informatie .
 
-## Gebruikslabels toepassen op gegevenssets
+## Labels die worden toegepast op gegevenssets van schema&#39;s
 
-Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren om ervoor te zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Met het gegevensbeheerframework kunt u gebruikslabels toepassen om gegevens te categoriseren volgens het gebruiksbeleid dat op die gegevens van toepassing is.
+Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren om ervoor te zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Met het gegevensbeheerframework kunt u gebruikslabels toepassen om gegevens te categoriseren volgens het gebruiksbeleid dat op die gegevens van toepassing is. De etiketten kunnen op individuele schema&#39;s, gebieden binnen die schema&#39;s, en volledige individuele datasets worden toegepast. Wanneer de etiketten rechtstreeks op een schema worden toegepast, worden die etiketten verspreid aan alle bestaande en toekomstige datasets die op dat schema gebaseerd zijn.
 
 >[!IMPORTANT]
 >
->Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert toegangsbeleid voor de gegevens tot stand te brengen, moet u [labels toepassen op het schema](../../xdm/tutorials/labels.md) dat de gegevensset op die gegevens is gebaseerd. Zie het overzicht op [attribuut-based toegangsbeheer](../../access-control/abac/overview.md) voor meer informatie .
-
-De etiketten van het gebruik van gegevens kunnen op volledige datasets of individuele datasetgebieden worden toegepast. De etiketten die op het datasetniveau worden toegevoegd worden geërft door alle gebieden binnen die dataset.
+>Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van het Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](../../data-governance/e2e.md#migrate-labels) voor instructies over hoe te om dit te doen.
 
 Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie over de dienst. Voor stappen voor het werken met gebruikslabels in [!DNL Platform]Raadpleeg de volgende hulplijnen:
 

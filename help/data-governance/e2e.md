@@ -2,9 +2,9 @@
 title: End-to-end handleiding voor gegevensbeheer
 description: Volg het volledige proces voor het afdwingen van beperkingen van het gegevensgebruik voor gebieden en datasets in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Als u wilt bepalen welke marketingacties op bepaalde gegevenssets en velden in Adobe Experience Platform kunnen worden uitgevoerd, moet u het volgende instellen:
 
-1. [Labels toepassen](#labels) op de datasets en de gebieden waarvan gebruik wilt beperken u.
+1. [Labels toepassen](#labels) aan de schemagebieden of volledige datasets, het waarvan gebruik wilt beperken u.
 1. [Beleid voor gegevensbeheer configureren en inschakelen](#policy) die bepalen welke soorten geëtiketteerde gegevens voor bepaalde marketing acties kunnen worden gebruikt.
 1. [Marketing-acties toepassen op uw doelen](#destinations) om aan te geven welk beleid van toepassing is op gegevens die naar die bestemmingen worden verzonden.
 
@@ -32,6 +32,12 @@ Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in
 
 ## Labels toepassen {#labels}
 
+>[!IMPORTANT]
+>
+>Labels kunnen niet langer op afzonderlijke velden op het niveau van de gegevensset worden toegepast. Deze workflow is vervangen door labels op schemaniveau. Nochtans, kunt u nog een volledige dataset etiketteren. Alle labels die eerder op afzonderlijke gegevenssetvelden zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van het Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](#migrate-labels) voor instructies over hoe te om dit te doen.
+
+U kunt [labels toepassen op een schema](#schema-labels) zodat alle datasets die op dat schema worden gebaseerd de zelfde etiketten erven. Hierdoor kunt u de labels voor gegevensbeheer, toestemming en toegangsbeheer op één locatie beheren. Door beperkingen van het gegevensgebruik op het schemaniveau af te dwingen, verspreidt het effect zich stroomafwaarts aan alle datasets die op dat schema gebaseerd zijn. De etiketten die op het niveau van de schemagebied worden toegepast steunen het gebruikscituaties van het Beleid van Gegevens en zijn ontdekkbaar in de werkruimte Datasets [!UICONTROL Data Governance] onder de [!UICONTROL Field Name] als alleen-lezen labels.
+
 Als er een specifieke dataset is die u beperkingen van het gegevensgebruik wilt afdwingen, kunt u [labels rechtstreeks toepassen op die gegevensset](#dataset-labels) of specifieke velden binnen die gegevensset.
 
 U kunt ook [labels toepassen op een schema](#schema-labels) zodat alle datasets die op dat schema worden gebaseerd de zelfde etiketten erven.
@@ -40,27 +46,19 @@ U kunt ook [labels toepassen op een schema](#schema-labels) zodat alle datasets 
 >
 >Raadpleeg voor meer informatie over de verschillende labels voor gegevensgebruik en het beoogde gebruik de [gegevensgebruikslabels, verwijzing](./labels/reference.md). Als de beschikbare kernlabels niet op alle gewenste gebruiksgevallen betrekking hebben, kunt u [uw eigen aangepaste labels definiëren](./labels/user-guide.md#manage-custom-labels) ook.
 
-### Labels toepassen op een gegevensset {#dataset-labels}
+### Labels toepassen op een volledige gegevensset {#dataset-labels}
 
 Selecteren **[!UICONTROL Datasets]** in de linkernavigatie, dan selecteer de naam van de dataset u etiketten op wilt toepassen. U kunt optioneel het onderzoeksgebied gebruiken om onderaan de lijst van getoonde datasets te versmallen.
 
-![Afbeelding die een gegevensset weergeeft die wordt geselecteerd in de gebruikersinterface van het Platform](./images/e2e/select-dataset.png)
+![De werkruimte van Datasets doorbladert lusje met Datasets en een benadrukte datasetrij.](./images/e2e/select-dataset.png)
 
-De detailweergave voor de gegevensset wordt weergegeven. Selecteer **[!UICONTROL Data governance]** om een lijst van de gebieden van de dataset en om het even welke etiketten te bekijken die reeds op hen zijn toegepast. Schakel de selectievakjes in naast de velden waaraan u labels wilt toevoegen en selecteer vervolgens **[!UICONTROL Edit governance labels]** in het rechterspoor.
+De detailweergave voor de gegevensset wordt weergegeven. Selecteer **[!UICONTROL Data governance]** om een lijst van de gebieden van de dataset en om het even welke etiketten te bekijken die reeds op hen zijn toegepast. Selecteer het potloodpictogram om de labels van gegevenssets te bewerken.
 
-![Afbeelding die verschillende gegevenssetvelden toont die zijn geselecteerd voor labeling](./images/e2e/dataset-field-label.png)
+![Het tabblad Gegevensbeheer voor de gegevensset Loyalty-leden met het potloodpictogram gemarkeerd.](./images/e2e/edit-dataset-labels.png)
 
->[!NOTE]
->
->Als u etiketten aan de volledige dataset wilt toevoegen, selecteer checkbox naast **[!UICONTROL Field name]** om alle velden te markeren voordat u **[!UICONTROL Edit governance labels]**.
->
->![Afbeelding met alle velden die zijn gemarkeerd voor een gegevensset](./images/e2e/label-whole-dataset.png)
+De [!UICONTROL Edit governance labels] wordt weergegeven. Selecteer het juiste governancelabel en selecteer **[!UICONTROL Save]**.
 
-In de volgende dialoog, selecteer de etiketten die u op de datasetgebieden wilt toepassen die u vroeger koos. Als u klaar bent, selecteert u **[!UICONTROL Save changes]**.
-
-![Afbeelding met alle velden die zijn gemarkeerd voor een gegevensset](./images/e2e/save-dataset-labels.png)
-
-Ga verder met de bovenstaande stappen om labels toe te passen op verschillende velden (of verschillende gegevenssets). Als u klaar bent, kunt u doorgaan naar de volgende stap van [beleid inzake gegevensbeheer inschakelen](#policy).
+![Het dialoogvenster Beheerslabels bewerken met het selectievakje Label en de optie Opslaan gemarkeerd.](./images/e2e/edit-dataset-governance-labels.png)
 
 ### Labels toepassen op een schema {#schema-labels}
 
@@ -72,9 +70,9 @@ Selecteren **[!UICONTROL Schemas]** in de linkernavigatie, dan selecteer het sch
 >
 >![Beeld dat een verbinding aan het schema van een dataset toont](./images/e2e/schema-from-dataset.png)
 
-De structuur van het schema wordt weergegeven in de Schema-editor. Selecteer hier de **[!UICONTROL Labels]** om een lijstmening van de gebieden van het schema en de etiketten te tonen die reeds op hen zijn toegepast. Schakel de selectievakjes in naast de velden waaraan u labels wilt toevoegen en selecteer vervolgens **[!UICONTROL Edit governance labels]** in het rechterspoor.
+De structuur van het schema wordt weergegeven in de Schema-editor. Selecteer hier de **[!UICONTROL Labels]** om een lijstmening van de gebieden van het schema en de etiketten te tonen die reeds op hen zijn toegepast. Schakel de selectievakjes in naast de velden waaraan u labels wilt toevoegen en selecteer vervolgens **[!UICONTROL Apply access and data governance labels]** in het rechterspoor.
 
-![Afbeelding die één schemaveld toont dat wordt geselecteerd voor governabels](./images/e2e/schema-field-label.png)
+![Het tabblad Labels van de werkruimte Schema met één schemaveld geselecteerd en de labels voor toegang en gegevensbeheer toegepast gemarkeerd.](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
@@ -82,11 +80,30 @@ De structuur van het schema wordt weergegeven in de Schema-editor. Selecteer hie
 >
 >![Afbeelding waarin het potloodpictogram wordt weergegeven dat in de weergave Schema-labels wordt geselecteerd](./images/e2e/label-whole-schema.png)
 
-Selecteer in het volgende dialoogvenster de labels die u wilt toepassen op de schemavelden die u eerder hebt gekozen. Als u klaar bent, selecteert u **[!UICONTROL Save]**.
+De [!UICONTROL Apply access and data governance labels] wordt weergegeven. Selecteer de labels die u wilt toepassen op het gekozen schemaveld. Als u klaar bent, selecteert u **[!UICONTROL Save]**.
 
-![Afbeelding die meerdere labels toont die aan een schemaveld worden toegevoegd](./images/e2e/save-schema-labels.png)
+![Het dialoogvenster Toegangs- en gegevensbeheerlabels toepassen waarin meerdere labels worden weergegeven die aan een schemaveld worden toegevoegd.](./images/e2e/save-schema-labels.png)
 
 Ga als volgt te werk om labels toe te passen op verschillende velden (of verschillende schema&#39;s). Als u klaar bent, kunt u doorgaan naar de volgende stap van [beleid inzake gegevensbeheer inschakelen](#policy).
+
+### Labels migreren die eerder op datasetniveau zijn toegepast {#migrate-labels}
+
+Selecteren **[!UICONTROL Dataset]** in de linkernavigatie, dan selecteer de naam van de dataset u etiketten van wilt migreren. U kunt optioneel het onderzoeksgebied gebruiken om onderaan de lijst van getoonde datasets te versmallen.
+
+![Het tabblad Bladeren van de werkruimte Datasets met de Dataset Loyalty-leden gemarkeerd.](./images/e2e/select-dataset.png)
+
+De detailweergave voor de gegevensset wordt weergegeven. Selecteer **[!UICONTROL Data governance]** om een lijst van de gebieden van de dataset en om het even welke etiketten te bekijken die reeds op hen zijn toegepast. Selecteer het pictogram Annuleren naast een label dat u uit een veld wilt verwijderen. Er verschijnt een bevestigingsvenster. Selecteer [!UICONTROL Remove label] om je keuzes te bevestigen.
+
+![Het tabblad Gegevensbeheer van de werkruimte Datasets bevat een label voor een veld dat is gemarkeerd voor verwijdering.](./images/e2e/remove-label.png)
+
+Nadat u het etiket van uw datasetgebied hebt verwijderd, navigeer aan de Redacteur van het Schema om het etiket aan het schema toe te voegen. Instructies over hoe u dit kunt doen vindt u in de [sectie over het toepassen van labels op een schema](#schema-labels).
+
+>[!TIP]
+>
+>U kunt de schemanaam in het juiste spoor selecteren, die door de verbinding in de dialoog wordt gevolgd die lijkt om aan het aangewezen schema te navigeren.
+>![Het tabblad Gegevensbeheer van de werkruimte Datasets met de schemanaam in de zijbalk en dialoogkoppeling gemarkeerd.](./images/e2e/navigate-to-schema.png)
+
+Nadat u de benodigde labels hebt gemigreerd, controleert u of u de juiste labels hebt [beleid voor gegevensbeheer ingeschakeld](#policy).
 
 ## Beleid voor gegevensbeheer inschakelen {#policy}
 

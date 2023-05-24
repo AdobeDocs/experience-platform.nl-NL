@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-handleiding voor beleidsservice
 description: Met de Beleidsservice-API kunnen ontwikkelaars labels en beleidsregels voor gegevensgebruik in Experience Platform beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '547'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naa
 
 ## Labels
 
-Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het wordt opgenomen in [!DNL Experience Platform]of zodra gegevens beschikbaar zijn voor gebruik in [!DNL Platform]. U kunt labels maken, weergeven, bewerken en verwijderen met de opdracht `/labels` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, bezoek [eindhulplijn voor labels](./labels.md).
+Pas de etiketten van het gegevensgebruik op schema&#39;s toe om datasets en gebieden volgens gebruiksbeleid te categoriseren die op die gegevens van toepassing zijn. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het wordt opgenomen in [!DNL Experience Platform]of zodra gegevens beschikbaar zijn voor gebruik in [!DNL Platform]. U kunt labels maken, weergeven, bewerken en verwijderen met de opdracht `/labels` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, bezoek [eindhulplijn voor labels](./labels.md).
 
 ## Marketingacties
 
@@ -44,7 +44,7 @@ Zie voor meer informatie over het beheren van beleid in de API [leidraad voor be
 
 ## Evaluatie
 
-Nadat labels voor gegevensgebruik zijn toegepast op [!DNL Platform] De datasets, en het beleid van het gegevensgebruik zijn bepaald voor marketing acties tegen die etiketten, de mogelijkheden van het Beleid van Gegevens staan u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
+Zodra de etiketten van het gegevensgebruik op schema&#39;s van het Platform zijn toegepast, en het beleid van het gegevensgebruik voor marketing acties tegen die etiketten is bepaald, staat de mogelijkheden van het Beleid van Gegevens u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
 
 De [!DNL Policy Service] API verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om te controleren als om het even welke beleidsschendingen voorkomen. Op basis van de API-reactie kunt u vervolgens protocollen instellen in uw ervaringstoepassing om op de juiste wijze de naleving van het gegevensgebruiksbeleid af te dwingen. Zie de [eindpuntgids voor evaluatie](./evaluation.md) voor meer informatie .
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht gegevensbeheer
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Het kader voor gegevensbeheer bestaat uit drie hoofdelementen: Labels, Beleid en
 
 ## Labels voor gegevensgebruik
 
-Met gegevensbeheer kunnen de gegevens in plaats daarvan worden gebruikt om labels op gegevensset en veldniveau toe te passen om gegevens te categoriseren op basis van het type beleid dat van toepassing is.
+Het Beleid van gegevens laat gegevensstewards toe om gebruiksetiketten op het niveau van het schemagebied en datasetniveau toe te passen om gegevens volgens het type van beleid te categoriseren dat van toepassing is.
 
 Het gegevensbeheerframework bevat vooraf gedefinieerde labels voor gegevensgebruik waarmee gegevens op drie manieren kunnen worden gecategoriseerd:
 
@@ -75,11 +75,11 @@ Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze
 
 Zie het overzicht op [gegevensgebruikslabels](./labels/overview.md) voor meer informatie .
 
-## Beleid voor gegevensgebruik
+## Beleid voor gegevensgebruik {#data-usage-policies}
 
 Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen mag uitvoeren [!DNL Experience Platform].
 
-Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat dat zegt dat Persoonlijk Identificeerbare Informatie (PII) niet kan worden uitgevoerd, en een &quot;I&quot;etiket (identiteitsgegevens) is toegepast op de dataset; [!DNL Policy Service] verhindert om het even welke actie die deze dataset naar een derdebestemming zou uitvoeren. Als één van deze actiepogingen voorkomt, verzendt de Dienst van het Beleid een bericht die u vertelt dat een beleid van het gegevensgebruik is geschonden.
+Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat waarin wordt verklaard dat Persoonlijk Identificeerbare Informatie (PII) niet kan worden uitgevoerd, en een &quot;I&quot;etiket (identiteitsgegevens) is toegepast op de dataset, [!DNL Policy Service] verhindert om het even welke actie die deze dataset naar een derdebestemming zou uitvoeren. Als één van deze actiepogingen voorkomt, verzendt de Dienst van het Beleid een bericht die u vertelt dat een beleid van het gegevensgebruik is geschonden.
 
 Er zijn twee soorten beleid beschikbaar:
 
@@ -100,7 +100,7 @@ Dit document bevatte een inleiding op hoog niveau op het gebied van gegevensbehe
 
 In het volgende gedeelte wordt aanvullende informatie gegeven over gegevensbeheer.
 
-### terminologie voor gegevensbeheer
+### terminologie voor gegevensbeheer {#data-governance-terminology}
 
 De volgende tabel geeft een overzicht van de belangrijkste termen met betrekking tot gegevensbeheer en het kader voor gegevensbeheer.
 
@@ -111,13 +111,14 @@ De volgende tabel geeft een overzicht van de belangrijkste termen met betrekking
 | **Gegevensbeheer** | Gegevensbeheer omvat de strategieën en technologieën die worden gebruikt om ervoor te zorgen dat gegevens in overeenstemming zijn met de regelgeving en het bedrijfsbeleid met betrekking tot gegevensgebruik. |
 | **Data steward** | De gegevensbeheerder is de persoon die verantwoordelijk is voor het beheer, het toezicht en de handhaving van de gegevensactiva van een organisatie. Een gegevensgestuurde functie zorgt er ook voor dat het beleid inzake gegevensbeheer wordt gewaarborgd en gehandhaafd om in overeenstemming te zijn met de overheidsvoorschriften en het organisatiebeleid. |
 | **Labels voor gegevensgebruik** | Met labels voor gegevensgebruik kunnen gebruikers gegevens categoriseren die privacygerelateerde overwegingen en contractuele voorwaarden weerspiegelen om te voldoen aan de regels en het bedrijfsbeleid. |
-| **Dataset-labels** | De etiketten kunnen aan een dataset worden toegevoegd. Alle gebieden binnen een dataset erven de etiketten van de dataset. |
-| **Veldlabels** | Veldlabels zijn labels voor gegevensbeheer die zijn overgeërfd van een gegevensset of die rechtstreeks op een veld zijn toegepast.  Labels voor gegevensbeheer die op een veld worden toegepast, worden niet overgeërfd tot een gegevensset. |
+| **Dataset-labels** | U kunt labels toevoegen aan een schema. Alle gebieden binnen een dataset erven de etiketten van het schema. |
+| **Veldlabels** | Veldlabels zijn labels voor gegevensbeheer die zijn overgeërfd van een schema of rechtstreeks zijn toegepast op een veld. Labels voor gegevensbeheer die op een veld worden toegepast, worden niet tot het schemaniveau overgeërfd. |
 | **Geofence** | Een geofence is een virtuele geografische grens, gedefinieerd door GPS- of RFID-technologie, die software in staat stelt een reactie te activeren wanneer een mobiel apparaat een bepaald gebied binnenkomt of verlaat. |
 | **Identiteitslabels** | De etiketten van de identiteit &quot;I&quot;worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren. |
 | **Rentegerichte gerichtheid** | Rentegerichte gericht zijn, ook bekend als verpersoonlijking, komt voor als aan de volgende drie voorwaarden wordt voldaan: gegevens die on-site worden verzameld, worden gebruikt om conclusies te trekken over de belangen van gebruikers, worden in een andere context gebruikt, zoals op een andere site of een andere app (off-site), en worden gebruikt om te selecteren welke inhoud of advertenties op basis van die conclusies worden aangeboden. |
 | **Handeling** | Een marketingactie, in het kader van het kader voor gegevensbeheer, is een actie die [!DNL Experience Platform] gegevens die de consument nodig heeft, waarvoor moet worden nagegaan of het beleid inzake gegevensgebruik wordt geschonden |
 | **Beleid** | In het kader van gegevensbeheer is een beleid een regel die beschrijft welke marketingacties al dan niet mogen worden ondernomen met betrekking tot specifieke gegevens. |
+| **Schemalabels** | Beheer de etiketten voor gegevensbeheer, toestemming, en toegangsbeheer op het schemaniveau. Dit stelt de etiketten aan elke dataset voor die dat schema gebruikt. |
 | **Gevoelige labels** | De gevoelige etiketten &quot;S&quot;worden gebruikt om gegevens te categoriseren die u, en uw organisatie, gevoelig overwegen. |
 
 ## Aanvullende bronnen
@@ -126,6 +127,8 @@ De volgende video is bedoeld om uw begrip van het kader van het Beleid van Gegev
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-In de volgende video wordt een inleiding gegeven op verschillende functies voor gegevensbeheer in Experience Platform.
+<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
 
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
+The following video provides an introduction to various Data Governance features in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->

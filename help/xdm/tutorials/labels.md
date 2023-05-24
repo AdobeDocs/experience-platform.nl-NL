@@ -2,9 +2,9 @@
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Alle gegevens die in Adobe Experience Platform worden gebracht worden beperkt do
 
 Een label dat wordt toegepast op een schemaveld, geeft het gebruiksbeleid aan dat van toepassing is op de gegevens in dat specifieke veld.
 
-Terwijl de etiketten kunnen worden toegepast op individuele datasets (en gebieden binnen die datasets), kunt u etiketten op het schemaniveau ook toepassen. Wanneer de etiketten rechtstreeks op een schema worden toegepast, worden die etiketten verspreid aan alle bestaande en toekomstige datasets die op dat schema gebaseerd zijn.
+Labels kunnen worden toegepast op afzonderlijke schema&#39;s en op velden binnen die schema&#39;s. Wanneer de etiketten rechtstreeks op een schema worden toegepast, worden die etiketten verspreid aan alle bestaande en toekomstige datasets die op dat schema gebaseerd zijn.
 
 Bovendien verspreidt om het even welk gebiedsetiket dat u in één schema toevoegt aan alle andere schema&#39;s die het zelfde gebied van een gedeelde klasse of een gebiedsgroep in dienst nemen. Dit helpt ervoor te zorgen dat de gebruiksregels voor gelijkaardige gebieden over uw volledig gegevensmodel verenigbaar zijn.
 
@@ -46,11 +46,11 @@ Als u de labels voor een afzonderlijk veld wilt bewerken, selecteert u het veld 
 
 ![Een veld selecteren in het canvas van de Schema-editor](../images/tutorials/labels/manage-access.png)
 
-U kunt ook de **[!UICONTROL Labels]** kiest u het gewenste veld in de lijst en selecteert u **[!UICONTROL Edit governance labels]** in het rechterspoor.
+U kunt ook de **[!UICONTROL Labels]** kiest u het gewenste veld in de lijst en selecteert u **[!UICONTROL Apply Access and Data Governance Labels]** in het rechterspoor.
 
 ![Selecteer een veld in het menu [!UICONTROL Labels] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Als u de labels voor het hele schema wilt bewerken, selecteert u het potloodpictogram (![](../images/tutorials/labels/pencil-icon.png)) naast de naam van het schema onder de **[!UICONTROL Labels]** tab.
+Als u de labels voor het volledige schema wilt bewerken, gaat u in het dialoogvenster **[!UICONTROL Labels]** selecteert u het selectievakje onder het filterpictogram. Hiermee selecteert u elk beschikbaar veld in het schema. Selecteer vervolgens **[!UICONTROL Apply Access and Data Governance Labels]** in het rechterspoor.
 
 ![Selecteer de naam van het schema in het menu [!UICONTROL Labels] tab](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
@@ -60,11 +60,11 @@ Als u de labels voor het hele schema wilt bewerken, selecteert u het potloodpict
 >
 >![Verklaring over labelgebruik](../images/tutorials/labels/disclaimer.png)
 
-## De labels voor het schema of veld bewerken
+## De labels voor het schema of veld bewerken {#edit-labels}
 
 Er wordt een dialoogvenster weergegeven waarin u de labels voor het geselecteerde veld kunt bewerken. Als u een afzonderlijk objecttype-veld hebt geselecteerd, worden in de rechterrail de subvelden weergegeven waarnaar de toegepaste labels zullen doorgeven.
 
-![Geselecteerde velden weergegeven](../images/tutorials/labels/edit-labels.png)
+![Het dialoogvenster Labels voor toegang en gegevensbeheer toepassen met de geselecteerde velden gemarkeerd.](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -72,19 +72,19 @@ Er wordt een dialoogvenster weergegeven waarin u de labels voor het geselecteerd
 
 Gebruik de weergegeven lijst om de labels te selecteren die u aan het schema of veld wilt toevoegen. Als labels worden gekozen, wordt de **[!UICONTROL Applied labels]** -sectie wordt bijgewerkt om de labels weer te geven die tot nu toe zijn geselecteerd.
 
-![Toegepaste weergegeven labels](../images/tutorials/labels/applied-labels.png)
+![Het dialoogvenster Labels voor toegang en gegevensbeheer toepassen met de toegepaste labels gemarkeerd.](../images/tutorials/labels/applied-labels.png)
 
 Als u de weergegeven labels op type wilt filteren, selecteert u de gewenste categorie in de linkertrack. Als u een nieuw aangepast label wilt maken, selecteert u **[!UICONTROL Create label]**.
 
-![Getoonde labels filteren of een nieuw label maken](../images/tutorials/labels/filter-and-create-custom.png)
+![Het dialoogvenster Labels voor toegang en gegevensbeheer toepassen waarop een filter voor labeltype is toegepast en het label Maken is gemarkeerd.](../images/tutorials/labels/filter-and-create-custom.png)
 
 Als u tevreden bent met de gekozen labels, selecteert u **[!UICONTROL Save]** om deze toe te passen op het veld of schema.
 
-![Geselecteerde labels opslaan](../images/tutorials/labels/save-labels.png)
+![Het dialoogvenster Labels voor toegang en gegevensbeheer toepassen met Opslaan gemarkeerd.](../images/tutorials/labels/save-labels.png)
 
 De **[!UICONTROL Labels]** opnieuw wordt weergegeven, met de toegepaste labels voor het schema.
 
-![Veldlabels toegepast](../images/tutorials/labels/field-labels-added.png)
+![Het tabblad Labels van de werkruimte Schema&#39;s met de toegepaste veldlabels gemarkeerd.](../images/tutorials/labels/field-labels-added.png)
 
 ## Volgende stappen
 

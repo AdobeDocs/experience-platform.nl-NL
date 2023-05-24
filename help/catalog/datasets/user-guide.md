@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -122,9 +122,9 @@ Om een dataset voor Profiel toe te laten, heb tot zijn toegang **[!UICONTROL Dat
 
 ![De schakeloptie Profiel wordt gemarkeerd in de detailpagina van de gegevensset.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## Beheer van gegevens beheren en afdwingen op een gegevensset
+## Beheer van gegevens beheren en afdwingen op een gegevensset {#manage-and-enforce-data-governance}
 
-Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie over labels, of raadpleegt u de [gebruikershandleiding voor gegevensgebruikslabels](../../data-governance/labels/overview.md) voor instructies over hoe te om etiketten op datasets toe te passen.
+Met labels voor gegevensgebruik, toegepast op schemaniveau, kunt u gegevenssets en velden categoriseren volgens het gebruiksbeleid dat van toepassing is op die gegevens. Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie over labels, of raadpleegt u de [gebruikershandleiding voor gegevensgebruikslabels](../../data-governance/labels/overview.md) voor instructies op hoe te om etiketten op schema&#39;s voor propagatie op datasets toe te passen.
 
 ## Een gegevensset verwijderen {#delete}
 
