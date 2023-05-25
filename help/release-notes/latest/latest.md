@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van mei 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85401e3abfd7d5d1d84e082d20a1a064760c4e19
+source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1217'
 ht-degree: 3%
 
 ---
@@ -32,6 +32,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Gegevensverzameling](#data-collection)
 - [Gegevensbeheer](#data-governance)
 - [Gegevensopname](#data-ingestion)
+- [Doelen](#destinations)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
 
@@ -75,6 +76,37 @@ Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren
 | Beta beschikbaarheid van gegevensinnamesjablonen | De malplaatjes van de opname van gegevens verstrekken gegevensarchitecten en ingenieurs van standaardmalplaatjes en automatiseringshulpmiddelen om het proces van gegevensopname, met inbegrip van schema en dataset verwezenlijking en de configuratie van kaartregels te versnellen. Sjablonen voor gegevensinvoer zijn momenteel beschikbaar voor de [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) en [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) bronnen. Lees voor meer informatie de handleiding op [het gebruiken van malplaatjes in UI](../../sources/tutorials/ui/templates.md). |
 
 Voor meer informatie over gegevensinvoer leest u de [gegevensinvoer - overzicht](../../ingestion/home.md).
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe bestemmingen** {#new-destinations}
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| **[[!UICONTROL Mailchimp Interest Categories]](../../destinations/catalog/email-marketing/mailchimp-interest-categories.md)** | **[!UICONTROL Mailchimp]** is een populair platform voor marketingautomatisering en marketingservices voor e-mail die door bedrijven worden gebruikt om contactpersonen (klanten, klanten of andere belanghebbende partijen) te beheren en met hen te spreken via mailinglijsten en marketingcampagnes voor e-mail. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
+| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+
+{style="table-layout:auto"}
+
+-->
+
+**Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
+
+- We hebben een beperking in de (Beta) SFTP-cloudopslagbestemming opgelost, waarbij gebruikers de waarde van de poortparameter niet konden aanpassen. De waarde is nu bewerkbaar wanneer u een (Beta) SFTP-doelverbinding instelt via de [API](/help/destinations/api/activate-segments-file-based-destinations.md) of [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Query-service {#query-service}
 
