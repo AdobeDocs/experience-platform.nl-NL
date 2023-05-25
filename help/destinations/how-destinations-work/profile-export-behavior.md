@@ -2,7 +2,7 @@
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Neem de [Facebook-bestemming](/help/destinations/catalog/social/facebook.md) met
 * Aantal records (maximaal 10.000) of
 * Tijdvensterinterval (30 minuten)
 
-Welke van de bovengenoemde drempels het eerst wordt gehaald, leidt tot een export naar Facebook. Dus in de [!DNL Facebook Custom Audiences] in het dashboard ziet u wellicht doelgroepen uit Experience Platform komen in stappen van 10.000 records. Mogelijk ziet u 10.000 records elke 10-15 minuten, omdat de gegevens sneller worden verwerkt en samengevoegd dan het exportinterval van 30 minuten en sneller worden verzonden, dus ongeveer om de 10-15 minuten totdat alle records zijn verwerkt. Als er onvoldoende records zijn om een batch van 10.000 samen te stellen, wordt het huidige aantal records verzonden, net als wanneer de drempel voor het tijdvenster is bereikt, zodat u ook kleinere batches naar Facebook kunt zien.
+Welke van de bovengenoemde drempels het eerst wordt gehaald, leidt tot een export naar Facebook. Dus in de [!DNL Facebook Custom Audiences] op het dashboard zien we publiek dat in stappen van 10.000 records vanuit het Experience Platform binnenkomt. Mogelijk ziet u 10.000 records elke 10-15 minuten, omdat de gegevens sneller worden verwerkt en samengevoegd dan het exportinterval van 30 minuten, en sneller worden verzonden, dus ongeveer om de 10-15 minuten totdat alle records zijn verwerkt. Als er onvoldoende records zijn om een batch van 10.000 samen te stellen, wordt het huidige aantal records verzonden, net als wanneer de drempel voor het tijdvenster is bereikt, zodat u ook kleinere batches naar Facebook kunt zien.
 
 Als een ander voorbeeld: [HTTP API-bestemming](/help/destinations/catalog/streaming/http-destination.md), die een *[beste inspanningsaggregatie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* beleid, met `maxUsersPerRequest: 10`. Dit betekent dat een maximum van tien profielen zal worden bijeengevoegd alvorens een vraag van HTTP aan deze bestemming in brand wordt gestoken, maar het Experience Platform probeert om profielen naar de bestemming te verzenden zodra de bestemmingsdienst bijgewerkte herbeoordelingsinformatie van een stroomopwaartse dienst ontvangt.
 
