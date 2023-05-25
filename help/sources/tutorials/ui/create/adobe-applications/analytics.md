@@ -2,9 +2,9 @@
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
+source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
 workflow-type: tm+mt
-source-wordcount: '2271'
+source-wordcount: '2175'
 ht-degree: 0%
 
 ---
@@ -120,49 +120,54 @@ Platform detecteert automatisch uw toewijzingssets voor eventuele conflicten met
 
 ![toewijzing](../../../../images/tutorials/create/analytics/mapping.png)
 
-Als er vriendschappelijke naamconflicten zijn tussen uw bronrapportsuite en uw geselecteerde schema, kunt u toch doorgaan met uw [!DNL Analytics] gegevensstroom, waarbij wordt erkend dat de velddescriptors niet worden gewijzigd. U kunt er ook voor kiezen om een nieuw schema te maken met een lege set beschrijvingen.
-
-Selecteren **[!UICONTROL Next]** om verder te gaan.
-
-![voorzichtigheid](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>Als er vriendschappelijke naamconflicten zijn tussen uw bronrapportsuite en uw geselecteerde schema, kunt u toch doorgaan met uw [!DNL Analytics] gegevensstroom, waarbij wordt erkend dat de velddescriptors niet worden gewijzigd. U kunt er ook voor kiezen om een nieuw schema te maken met een lege set beschrijvingen.
 
 #### Aangepaste toewijzingen
 
-Selecteer **[!UICONTROL View custom mappings]**.
+U kunt de functies van de Prep van Gegevens gebruiken om nieuwe douanetoewijzing of berekende gebieden voor douanekenmerken toe te voegen. Als u aangepaste toewijzingen wilt toevoegen, selecteert u **[!UICONTROL Custom]**.
 
-![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+![aangepast](../../../../images/tutorials/create/analytics/custom.png)
 
-Selecteer vervolgens **[!UICONTROL Add new mapping]**.
-
-Afhankelijk van uw behoeften kunt u kiezen uit **[!UICONTROL Add new mapping]** of **[!UICONTROL Add calculated field]** in de weergegeven opties.
-
-![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
-
-Er wordt een lege toewijzingsset weergegeven. Selecteer het toewijzingspictogram om een bronveld toe te voegen.
-
-![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
-
-U kunt de interface gebruiken om door de bronschemastructuur te navigeren en het nieuwe brongebied te identificeren dat u wilt gebruiken. Als u het bronveld hebt geselecteerd dat u wilt toewijzen, selecteert u **[!UICONTROL Select]**.
-
-![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
-
-Selecteer vervolgens het toewijzingspictogram onder [!UICONTROL Target Field] om het geselecteerde bronveld toe te wijzen aan het desbetreffende doelveld.
-
-![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
-
-Net als het bronschema kunt u met de interface door de doelschemastructuur navigeren en het doelveld selecteren waarnaar u wilt toewijzen. Als u het gewenste doelveld hebt geselecteerd, selecteert u **[!UICONTROL Select]**.
-
-![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
-
-Selecteer **[!UICONTROL Next]** om verder te gaan.
-
-![volledig-douaneafbeelding](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+Afhankelijk van uw behoeften kunt u kiezen uit **[!UICONTROL Add new mapping]** of **[!UICONTROL Add calculated field]** en gaat u verder om aangepaste toewijzingen voor uw aangepaste kenmerken te maken. Voor uitgebreide stappen over het gebruik van Data Prep-functies leest u de [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
 De volgende documentatie verstrekt verdere middelen bij het begrip Prep van Gegevens, berekende gebieden, en kaartfuncties:
 
 * [Overzicht van Data Prep](../../../../../data-prep/home.md)
 * [Toewijzingsfuncties van Data Prep](../../../../../data-prep/functions.md)
 * [Berekende velden toevoegen](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+<!-- 
+To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+Next, select **[!UICONTROL Add new mapping]**.
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. 
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+An empty mapping set appears. Select the mapping icon to add a source field.
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+You can use the interface to navigate through the source schema structure and identify the new source field that you want to use. Once you have selected the source field that you want to map, select **[!UICONTROL Select]**.
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+Next, select the mapping icon under [!UICONTROL Target Field] to map your selected source field to its appropriate target field.
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+Similar to the source schema, you can use the interface to navigate through the target schema structure and select the target field you want to map to. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
 ### Filteren voor realtime-klantprofiel {#filtering-for-profile}
 
