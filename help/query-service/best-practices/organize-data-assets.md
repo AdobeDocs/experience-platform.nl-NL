@@ -2,7 +2,7 @@
 title: Beste praktijken voor de Organisatie van gegevensactiva in de Dienst van de Vraag
 description: Dit document schetst een logisch middel om gegevens voor gebruiksgemak met de Dienst van de Vraag te organiseren.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -45,13 +45,13 @@ Zodra een schema is gecreeerd om als container voor de gegevensactiva te handele
 In het volgende voorbeeld wordt het volgende toegevoegd `dataset1`, `dataset2`, `dataset3` en `v1` aan de `databaseA.schema1` in het vorige voorbeeld gemaakte container.
 
 ```SQL
-ALTER TABLE dataset1 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset2 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset2 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset3 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset3 ADD SCHEMA databaseA.schema1;
  
-ALTER VIEW v1  SET SCHEMA databaseA.schema1;
+ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 ```
 
 ## Gegevenselementen openen vanuit de gegevenscontainer

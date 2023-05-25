@@ -1,9 +1,9 @@
 ---
 title: Gegevensset Statistieken berekenen
-description: In dit document wordt beschreven hoe u statistieken op kolomniveau kunt berekenen over ADLS-gegevenssets (Azure Data Lake Storage) met SQL-opdrachten.
-source-git-commit: b063bcf7b3d2079715ac18fde55f47cea078b609
+description: Dit document beschrijft hoe te om kolom-vlakke statistieken over de datasets van de Opslag van de Verkeer van Gegevens van de Azure (ADLS) met SQL bevelen gegevens te verwerken.
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 U kunt de kolomgrens en de filter combineren om hoogst specifieke computervragen voor uw datasetkolommen tot stand te brengen. De volgende query berekent bijvoorbeeld statistieken over de kolommen `commerce`, `id`, en `timestamp` voor de gegevensset `tableName`, waarbij de kolomtijdstempel waarden bevat tussen het opgegeven bereik van `2023-04-01 00:00:00` en `2023-04-05 00:00:00`.
 
 ```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR (columns commerce, id, timestamp);
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
 <!-- ## Create an alias name {#alias-name}
@@ -125,7 +125,6 @@ Een uitvoer kan er ongeveer zo uitzien als in het onderstaande voorbeeld.
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
- _experience.analytics.session.timestamp                    |            450 |          -2313 |          21903 |               7.0 |                 0.0 |         0 | Long
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
  web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
@@ -137,9 +136,9 @@ Een uitvoer kan er ongeveer zo uitzien als in het onderstaande voorbeeld.
  _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
  environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
-(13 rows)
+(12 rows)
 ```
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u nu een beter inzicht in hoe te om de statistieken van het kolomniveau van een dataset van ADLS te produceren gebruikend een SQL vraag. U wordt aangeraden de [SQl-syntaxishandleiding](../sql/syntax.md) voor meer functies van de Adobe Experience Platform Query Service.
+Door dit document te lezen, hebt u nu een beter inzicht in hoe te om kolom-vlakke statistieken van een dataset van ADLS te produceren gebruikend een SQL vraag. U wordt aangeraden de [SQl-syntaxishandleiding](../sql/syntax.md) voor meer functies van de Adobe Experience Platform Query Service.

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3761'
 ht-degree: 1%
 
 ---
@@ -184,7 +184,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
+| `rowvalidation` | (Optioneel) Hiermee wordt opgegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
 | `label` | Wanneer u een dataset met een vraag CTAS creeert, gebruik dit etiket met de waarde van `profile` om uw dataset zoals toegelaten voor profiel te etiketteren. Dit betekent dat uw dataset automatisch voor profiel duidelijk wordt aangezien het wordt gecreeerd. Zie het afgeleide document van de attributenuitbreiding voor meer informatie over het gebruik van `label`. |
 | `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
@@ -570,7 +570,11 @@ In de onderstaande subsecties worden de [!DNL PostgreSQL] bevelen die door de Di
 
 ### TABEL ANALYSEREN {#analyze-table}
 
-De `ANALYZE TABLE` het bevel berekent statistieken voor een lijst op de versnelde opslag. De statistieken worden berekend over uitgevoerde vragen CTAS of ITAS voor een bepaalde lijst op versnelde opslag.
+De `ANALYZE TABLE` voert het bevel een verdelingsanalyse en statistische berekeningen voor de genoemde lijst of de lijsten uit. Het gebruik van `ANALYZE TABLE` varieert afhankelijk van of de datasets op worden opgeslagen [versnelde opslag](#compute-statistics-accelerated-store) of de [gegevensmeer](#compute-statistics-data-lake). Zie de desbetreffende secties voor meer informatie over het gebruik ervan.
+
+#### COMPUTE STATISTIEKEN OP DE versnelde opslag {#compute-statistics-accelerated-store}
+
+De `ANALYZE TABLE` het bevel berekent statistieken voor een lijst op de versnelde opslag. De statistieken worden berekend over uitgevoerde vragen CTAS of ITAS voor een bepaalde lijst op de versnelde opslag.
 
 **Voorbeeld**
 
@@ -592,7 +596,7 @@ Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na 
 | `mean` | De gemiddelde waarde van de geanalyseerde tabel. |
 | `stdev` | De standaardafwijking van de geanalyseerde tabel. |
 
-#### COMPUTERSTATISTIEKEN {#compute-statistics}
+#### STATISTIEKEN COMPUTEREN op het datumpeer {#compute-statistics-data-lake}
 
 U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` en `SHOW STATISTICS` SQL-opdrachten. Bereid kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen samen.
 
@@ -608,7 +612,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 >
 >`FILTER CONTEXT` berekent statistieken over een subset van de dataset op basis van de verstrekte filtervoorwaarde, en `FOR COLUMNS` specifieke kolommen voor analyse.
 
-De uitvoer van de console wordt weergegeven zoals hieronder.
+De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 
 ```console
   Statistics ID 
