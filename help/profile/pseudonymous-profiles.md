@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
+source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,8 @@ Voor een typisch geval van gebruik, kunt u de gegevensvervaldatum van de Gebeurt
 
 ### Wat zijn sommige bedenkingen u zich van zou moeten bewust zijn alvorens de gegevensvervaldatum van de Pseudoniem- profielenprofielen te gebruiken?
 
-- De vervaldatum van pseudoniem profielgegevens wordt uitgevoerd op de **productie** sandbox.
+- Vervaldatum van pseudoniem profielgegevens wordt uitgevoerd op een **sandbox** niveau. U kunt kiezen voor verschillende configuraties voor productie- en ontwikkelingssandboxen.
 - Als u deze functie hebt geactiveerd, wordt het verwijderen van profielen **permanent**. Er is **nee** een manier om de verwijderde profielen terug te draaien of te herstellen.
 - Dit is **niet** een eenmalige opschoningstaak. De vervaldatum van Pseudoniem-profielgegevens wordt voortdurend één keer per dag uitgevoerd en er worden profielen verwijderd die overeenkomen met de invoer van de klant.
 - **Alles** De vervaldatum van de Pseudoniem-profielgegevens heeft invloed op profielen die zijn gedefinieerd als Pseudoniem. Het doet het **niet** Het maakt niet uit of het profiel alleen Experience Event is of alleen profielkenmerken bevat.
 - Deze opruiming zal **alleen** komt voor in Profiel. De identiteitsdienst kan de verwijderde identiteiten in de grafiek na de opruiming blijven weergeven in gevallen waarin het profiel twee of meer geassocieerde pseudoniem-identiteiten heeft (zoals `AAID` en `ECID`). Deze discrepantie zal in de nabije toekomst worden aangepakt.
-
