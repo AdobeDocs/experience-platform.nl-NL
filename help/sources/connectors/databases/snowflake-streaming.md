@@ -3,7 +3,8 @@ title: Overzicht van Snowflake-streamingbronconnector
 description: Leer hoe u een bronverbinding en gegevensstroom kunt maken om streaminggegevens van uw Snowflake-instantie naar Adobe Experience Platform in te voeren
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 8ca051a92a7f39bb6ec496693fada6a0f4414754
+last-substantial-update: 2023-05-25T00:00:00Z
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 1%
