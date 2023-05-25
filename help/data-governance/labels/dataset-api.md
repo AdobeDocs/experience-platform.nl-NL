@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik voor gegevenssets beheren met API's
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Het verzoek van de POST van het voorbeeld hieronder werkt de volledige dataset m
 
 >[!NOTE]
 >
->Als er momenteel labels voor de betrokken gegevensset bestaan, kunnen nieuwe labels alleen worden toegevoegd via een verzoek van de PUT, waarvoor een `If-Match` header. Nadat labels aan een gegevensset zijn toegevoegd, kunt u een `etag` Er wordt een waarde toegewezen die kan worden gebruikt om de labels op een later tijdstip bij te werken of te verwijderen.
+>Als er momenteel labels voor de betrokken gegevensset bestaan, kunnen nieuwe labels alleen worden toegevoegd via een verzoek van de PUT, waarvoor een `If-Match` header. Nadat labels aan een gegevensset zijn toegevoegd, is de meest recente `etag` Deze waarde is vereist als u de labels later wilt bijwerken of verwijderen.
 
 Om de meest recente versie van de dataset-etiket entiteit terug te winnen, maak een [Verzoek om GET](#look-up) aan de `/datasets/{DATASET_ID}/labels` eindpunt. De huidige waarde wordt geretourneerd in de reactie onder een `etag` header. Wanneer het bijwerken van bestaande datasetetiketten, moeten de beste praktijken eerst een raadplegingsverzoek voor de dataset uitvoeren om zijn recentste te halen `etag` waarde vóór gebruik van die waarde in het dialoogvenster `If-Match` koptekst van uw volgende verzoek om PUT.
 
