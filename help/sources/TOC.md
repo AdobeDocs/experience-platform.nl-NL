@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
+source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '979'
 ht-degree: 8%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 8%
       - [Oracle-aansluiting](connectors/databases/oracle.md)
       - [Phoenix-aansluiting](connectors/databases/phoenix.md)
       - [PostgreSQL-connector](connectors/databases/postgres.md)
+      - [Snowflake Streaming-aansluiting](connectors/databases/snowflake-streaming.md)
       - [Snowflake-aansluiting](connectors/databases/snowflake.md)
       - [Teradata Vantage-connector](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
@@ -163,6 +164,7 @@ ht-degree: 8%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
