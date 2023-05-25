@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding Query Service Credentials
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -48,6 +48,10 @@ De **[!UICONTROL Expiring credentials]** Deze sectie bevat de volgende informati
 
 U kunt niet-verlopen geloofsbrieven gebruiken aan opstelling een duurdere verbinding aan een externe cliënt.
 
+>[!NOTE]
+>
+>Niet-vervallende referenties hebben de volgende beperkingen:<br><ul><li>Gebruikers moeten zich aanmelden met hun gebruikersnaam en wachtwoord, die bestaan uit `{technicalAccountId}:{credential}`. Meer informatie vindt u in de [Referenties genereren](#generate-credentials) sectie.</li><li>Op de verwezenlijking van het verlopen geloofsbrieven, wordt een nieuwe rol met een reeks basistoestemmingen gecreeerd die gebruikers toestaat om schema&#39;s en datasets te bekijken. De toestemming &quot;beheert vragen&quot;wordt ook toegewezen aan deze rol voor gebruik met de Dienst van de Vraag.</li><li>Externe clients kunnen anders presteren dan u had verwacht bij het weergeven van queryobjecten. Bijvoorbeeld, sommige derdecliënten zoals [!DNL DB Visualizer] wordt de weergavenaam niet weergegeven in het linkerdeelvenster. De weergavenaam is echter toegankelijk als deze wordt aangeroepen binnen een SELECT-query. Evenzo [!DNL PowerUI] geeft mogelijk geen lijst weer van de tijdelijke weergaven die zijn gemaakt via de SQL die moeten worden geselecteerd voor het maken van het dashboard.</li></ul>
+
 ### Vereisten
 
 Voordat u niet-vervallende gegevens kunt genereren, moet u de volgende stappen in Adobe Admin Console uitvoeren:
@@ -63,7 +67,7 @@ Voor meer informatie over het toewijzen van machtigingen leest u de documentatie
 
 Alle vereiste machtigingen zijn nu geconfigureerd in Adobe Developer Console, zodat de gebruiker de functie voor het verlopen van referenties kan gebruiken.
 
-### Referenties genereren
+### Referenties genereren {#generate-credentials}
 
 Als u een set niet-vervallende gegevens wilt maken, gaat u terug naar de gebruikersinterface van het Platform en selecteert u **[!UICONTROL Queries]** van de linkernavigatie om tot [!UICONTROL Queries] werkruimte. Selecteer vervolgens de **[!UICONTROL Credentials]** tab gevolgd door **[!UICONTROL Generate credentials]**.
 
