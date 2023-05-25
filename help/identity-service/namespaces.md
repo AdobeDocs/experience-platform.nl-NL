@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;naamruimte;Naamruimte;Naamruimten;naamruimten;Naamruimte;Naamruimte;Identiteitsnaamruimte;Identiteit;Identiteitsservice;Identiteitsservice
-solution: Experience Platform
 title: Overzicht van id-naamruimte
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
+source-git-commit: 58fefcc0a590341922f0769a416e27cd1f13a617
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
@@ -50,6 +48,7 @@ De volgende identiteitstypen zijn beschikbaar binnen [!DNL Platform]:
 | Apparaat-id | Apparaat-id&#39;s identificeren hardwareapparaten, zoals IDFA (iPhone en iPad), GAID (Android) en RIDA (Roku), en kunnen door meerdere personen in huishoudens worden gedeeld. |
 | E-mailadres | E-mailadressen zijn vaak gekoppeld aan één persoon en kunnen daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. Tot dit type identiteiten behoren ook PII&#39;s (Persoonlijke identificeerbare informatie). Dit is een indicatie voor [!DNL Identity Service] om de waarde gevoelig af te handelen. |
 | Id van niet-personen | Niet-persoonlijke id&#39;s worden gebruikt voor het opslaan van id&#39;s die naamruimten vereisen maar niet zijn verbonden met een personencluster. Bijvoorbeeld een product-SKU, gegevens met betrekking tot producten, organisaties of winkels. |
+| Partner-id | Identiteitskaart van de partner is herkenningstekens die door gegevenspartners worden gebruikt om mensen te vertegenwoordigen. Identiteitskaart van de partner is vaak pseudoniem zodat om de ware identiteit van een persoon niet te onthullen, en kan probabilistisch zijn. In Real-time Customer Data Platform, worden de Partner IDs hoofdzakelijk gebruikt voor uitgebreide publieksactivering en gegevensverrijking, en niet voor de bouw van deterministische de grafiekverbindingen van de identiteitsgrafiek. |
 | Telefoonnummer | Telefoonnummers zijn vaak gekoppeld aan één persoon en kunnen daarom worden gebruikt om die persoon via verschillende kanalen te identificeren. Tot dit type identiteiten behoren PII. Dit is een indicatie voor [!DNL Identity Service] om de waarde gevoelig af te handelen. |
 
 ### Standaardnaamruimten {#standard}

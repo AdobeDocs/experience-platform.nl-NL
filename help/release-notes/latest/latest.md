@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van mei 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
+source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1353'
 ht-degree: 3%
 
 ---
@@ -33,6 +33,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Gegevensbeheer](#data-governance)
 - [Gegevensopname](#data-ingestion)
 - [Doelen](#destinations)
+- [Identiteitsservice](#identity-service)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
 
@@ -108,6 +109,18 @@ Voor meer informatie over gegevensinvoer leest u de [gegevensinvoer - overzicht]
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
+## Identiteitsservice {#identity-service}
+
+De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+
+**Functies bijwerken**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Ondersteuning voor partner-id&#39;s in Adobe Experience Cloud-toepassingen | Identiteitskaart van de partner is nu beschikbaar in de Dienst van de Identiteit. Identiteitskaart van de partner is herkenningstekens die door gegevenspartners worden gebruikt om mensen te vertegenwoordigen. In Real-time Customer Data Platform, worden de Partner IDs gebruikt hoofdzakelijk voor uitgebreide publieksactivering en gegevensverrijking. Identiteitskaart van de partner wordt niet opgeslagen in de identiteitsgrafiek. Lees de documentatie over [identiteitstypen](../../identity-service/namespaces.md#identity-types). |
+
+Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md)
+
 ## Query-service {#query-service}
 
 De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL data lake]. U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time.
@@ -132,6 +145,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
+| API-ondersteuning voor het streamen van gegevens van een [!DNL Snowflake] database | U kunt nu gegevens streamen vanuit een [[!DNL Snowflake] bron](../../sources/connectors/databases/snowflake-streaming.md) met de [!DNL Flow Service] API. |
 | Uitgebreide API-ondersteuning voor conceptmodus | U kunt de voortgang tijdens de workflow Bronnen nu pauzeren en opslaan wanneer u de functie [!DNL Flow Service] API op elk moment. Gebruik de `mode=draft` status om uw basis-, bron- en doelverbindingen als concepten op te slaan. Alle concepteigenschappen kunnen later worden herzien om te worden voltooid. Lees de handleiding op [uw [!DNL Flow Service] entiteiten in een ontwerpstaat](../../sources/tutorials/api/draft.md) voor meer informatie . |
 | Algemene beschikbaarheid van de [!DNL Salesforce Marketing Cloud] bron | De [[!DNL Salesforce Marketing Cloud source] is nu in GA](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Gebruik deze bron om uw [!DNL Salesforce Marketing Cloud] gegevens naar Experience Platform. |
 | [!DNL Google Ads] verificatie-updates | U kunt nu een aanmeldings-id opgeven wanneer u uw [!DNL Google Ads] bronrekening om rapportgegevens van een specifieke werkende klant te halen. Lees de [[!DNL Google Ads] brondocumentatie](../../sources/connectors/advertising/ads.md) voor meer informatie . |
@@ -142,5 +156,3 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 {style="table-layout:auto"}
 
 Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).
-
-<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->
