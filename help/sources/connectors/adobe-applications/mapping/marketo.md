@@ -4,19 +4,14 @@ solution: Experience Platform
 title: Velden toewijzen voor de Marketo Engage-bron
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
 
 # [!DNL Marketo Engage] veldtoewijzingen {#marketo-engage-field-mappings}
-
->[!CONTEXTUALHELP]
->id="platform_sources_marketo_mapping"
->title="Marketo-bronveldtoewijzingen"
->abstract="Om een bronverbinding tussen Marketo en Platform tot stand te brengen, moeten de de brongegevensgebieden van Marketo aan hun aangewezen doelXDM gebieden worden in kaart gebracht alvorens in Platform wordt opgenomen."
 
 De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [!DNL Marketo] datasets en hun overeenkomstige gebieden van de Gegevens van de Ervaring van het Model (XDM).
 

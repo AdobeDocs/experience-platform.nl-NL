@@ -3,14 +3,19 @@ description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience
 title: Een gegevensstroom voor bronnen maken met behulp van sjablonen in de gebruikersinterface
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
+source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1558'
 ht-degree: 0%
 
 ---
 
-# Een gegevensstroom voor bronnen maken met behulp van sjablonen in de gebruikersinterface
+# Een gegevensstroom voor bronnen maken met behulp van sjablonen in de gebruikersinterface {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Sjablonen voor bronnen in interface van Platform"
+>abstract="De malplaatjes omvatten auto-geproduceerde activa zoals schema&#39;s, datasets, identiteiten, toewijzingsregels, identiteitsnamespaces, en dataflows die u kunt gebruiken wanneer het brengen van gegevens van een bron aan Experience Platform. U kunt automatisch gegenereerde elementen bijwerken en deze aan uw wensen aanpassen."
 
 >[!IMPORTANT]
 >

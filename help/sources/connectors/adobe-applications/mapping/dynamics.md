@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Salesforce;salesforce;field mapping;Field mapping;marketo;B2B;b2b
 title: Toewijzingsvelden voor Microsoft Dynamics
 description: De onderstaande tabellen bevatten de toewijzingen tussen de bronvelden van Microsoft Dynamics en de bijbehorende XDM-velden.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---

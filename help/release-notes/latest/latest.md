@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van mei 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1354'
 ht-degree: 3%
 
 ---
@@ -117,7 +117,7 @@ De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht v
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor partner-id&#39;s in Adobe Experience Cloud-toepassingen | Identiteitskaart van de partner is nu beschikbaar in de Dienst van de Identiteit. Identiteitskaart van de partner is herkenningstekens die door gegevenspartners worden gebruikt om mensen te vertegenwoordigen. In Real-time Customer Data Platform, worden de Partner IDs gebruikt hoofdzakelijk voor uitgebreide publieksactivering en gegevensverrijking. Identiteitskaart van de partner wordt niet opgeslagen in de identiteitsgrafiek. Lees de documentatie over [identiteitstypen](../../identity-service/namespaces.md#identity-types). |
+| Ondersteuning voor partner-id&#39;s in Adobe Experience Cloud-toepassingen [!BADGE Beta]{type=Informative} | Identiteitskaart van de partner is nu beschikbaar in de Dienst van de Identiteit. Identiteitskaart van de partner is herkenningstekens die door gegevenspartners worden gebruikt om mensen te vertegenwoordigen. In Real-time Customer Data Platform, worden de Partner IDs gebruikt hoofdzakelijk voor uitgebreide publieksactivering en gegevensverrijking. Identiteitskaart van de partner wordt niet opgeslagen in de identiteitsgrafiek. Lees de documentatie over [identiteitstypen](../../identity-service/namespaces.md#identity-types). |
 
 Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md)
 
