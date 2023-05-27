@@ -2,9 +2,9 @@
 title: Verwijzing naar extensies doorsturen van gebeurtenissen
 description: Documentatie zoeken voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
+source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,6 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [[!DNL Braze]](./braze/overview.md)
 * [Kern](./core/overview.md)
 * [Epsilon-gebeurtenis-API](https://exchange.adobe.com/apps/ec/109127)*
-* [Facebook Conversies-API](https://exchange.adobe.com/apps/ec/105509)
 * [Verbeterde Google-conversies toevoegen](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Rand](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -42,4 +41,5 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Conversie-API magnetisch](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
+* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] API voor gebeurtenissen](./zendesk/overview.md)

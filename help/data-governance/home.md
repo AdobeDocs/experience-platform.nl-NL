@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht gegevensbeheer
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Zie het overzicht op [gegevensgebruikslabels](./labels/overview.md) voor meer in
 
 Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen mag uitvoeren [!DNL Experience Platform].
 
-Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat waarin wordt verklaard dat Persoonlijk Identificeerbare Informatie (PII) niet kan worden uitgevoerd, en een &quot;I&quot;etiket (identiteitsgegevens) is toegepast op de dataset, [!DNL Policy Service] verhindert om het even welke actie die deze dataset naar een derdebestemming zou uitvoeren. Als één van deze actiepogingen voorkomt, verzendt de Dienst van het Beleid een bericht die u vertelt dat een beleid van het gegevensgebruik is geschonden.
+Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Indien er een beleid bestaat waarin wordt verklaard dat PII (Personal Identified Information) niet kan worden uitgevoerd en er een I-label (identity data) is toegepast op het veldniveau of de gegevensset, [!DNL Policy Service] verhindert om het even welke actie die deze dataset naar een derdebestemming zou uitvoeren. Als één van deze actiepogingen voorkomt, verzendt de Dienst van het Beleid een bericht die u vertelt dat een beleid van het gegevensgebruik is geschonden.
 
 Er zijn twee soorten beleid beschikbaar:
 

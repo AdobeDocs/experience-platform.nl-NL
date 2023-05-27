@@ -2,9 +2,9 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1252'
 ht-degree: 2%
 
 ---
@@ -41,11 +41,6 @@ De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensst
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Machtigingen voor Adobe Experience Platform-gegevensverzameling
 
 Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot tags en mogelijkheden voor het doorsturen van gebeurtenissen, waaronder eigenschappen, extensies en omgevingen. Voor stappen op hoe te om de toestemmingen van de Inzameling van Gegevens van Adobe Experience Platform te vormen, zie [sectie hieronder](#manage).
@@ -54,6 +49,7 @@ Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot
 | --- | --- | --- |
 | Platforms | Web | Toegang tot [webeigenschappen](../tags/ui/administration/companies-and-properties.md) in combinatie met andere eigendomsrechten. |
 | Platforms | Mobile | Toegang tot [mobiele eigenschappen](../tags/ui/administration/companies-and-properties.md) in combinatie met andere eigendomsrechten. |
+| Platforms | Rand | Toegang tot [Eigenschappen van Event Forwarding Edge](../tags/ui/event-forwarding/getting-started.md) in combinatie met andere eigendomsrechten. |
 | Properties | (N.v.t.) | Afhankelijk van de eigenschappen die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingscategorie in Admin Console controleren.<br><br>De toegewezen bezitsrechten van een gebruiker zijn slechts op de eigenschappen van toepassing zij toegang tot door deze toestemmingscategorie zijn verleend. |
 | Eigendomsrechten | Goedkeuren | Biedt de mogelijkheid om een bibliotheekbuild goed te keuren als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
 | Eigendomsrechten | Ontwikkelen | Biedt de mogelijkheid om een bibliotheekbuild te ontwikkelen als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
@@ -72,16 +68,16 @@ Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot
 
 ## Machtigingen beheren {#manage}
 
-Zoals in de vorige sectie wordt geschetst, worden de toestemmingen voor gegevensinzameling beheerd door twee productbenamingen in Admin Console: **Adobe Experience Platform** en **Adobe Experience Platform-gegevensverzameling**.
+Machtigingen voor gegevensverzameling worden beheerd door middel van twee productbenamingen: **Adobe Experience Platform** en **Adobe Experience Platform-gegevensverzameling**.
 
-Meld u aan om deze machtigingen te beheren [Admin Console](https://adminconsole.adobe.com/) en selecteert u **[!UICONTROL Products]** in de bovenste navigatie. Van hier, selecteer de productkaart voor de toestemmingen u wilt vormen. Raadpleeg de onderstaande subsecties voor informatie over het beheren van de relevante machtigingen onder elk product in de Admin Console:
+Raadpleeg de onderstaande subsecties voor informatie over het beheren van de relevante machtigingen onder elk product in de Admin Console:
 
 * [Adobe Experience Platform-machtigingen](#manage-platform)
 * [Machtigingen voor Adobe Experience Platform-gegevensverzameling](#manage-collection)
 
 ### Rechten beheren onder Adobe Experience Platform {#manage-platform}
 
-Van de **[!UICONTROL Products]** weergave in Admin Console, selecteert u **[!UICONTROL Adobe Experience Platform Data Collection]**. Selecteer het productprofiel waarvoor u machtigingen wilt bewerken en navigeer naar het **[!UICONTROL Permissions]** tab.
+Van de **[!UICONTROL Permissions]** in Adobe Experience Platform selecteert u de rol die u wilt bewerken.
 
 Als u toegang wilt tot functies voor gegevensverzameling, moet u alle machtigingen inschakelen in het dialoogvenster **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]**, en **[!UICONTROL Data Collection]** categorieën.
 
@@ -95,7 +91,7 @@ Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview
 
 ### Rechten beheren in Adobe Experience Platform Data Collection {#manage-collection}
 
-Van de **[!UICONTROL Products]** weergave in Admin Console, selecteert u **[!UICONTROL Adobe Experience Platform Data Collection]**.
+U kunt deze machtigingen beheren door u aan te melden bij de Admin Console en de optie **[!UICONTROL Products]** in de bovenste navigatie selecteert u vervolgens **[!UICONTROL Adobe Experience Platform Data Collection]**.
 
 ![Afbeelding die de productkaart voor gegevensverzameling in Admin Console weergeeft](./images/permissions/data-collection-card.png)
 
