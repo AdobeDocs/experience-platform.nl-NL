@@ -5,7 +5,7 @@ title: Een IBM maken [!DNL IBM DB2] Basisverbinding met de Flow Service API
 type: Tutorial
 description: Leer hoe u verbinding maakt met IBM [!DNL IBM DB2] naar Adobe Experience Platform met behulp van de Flow Service API.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%

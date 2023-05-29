@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bro
 title: (Bèta) creeer een BronVerbinding en Dataflow voor Mixpanel gebruikend de Dienst API van de Stroom
 description: Leer hoe u Adobe Experience Platform met Mixpanel kunt verbinden met behulp van de Flow Service API.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 0%

@@ -5,7 +5,7 @@ title: Een IBM DB2-bronverbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een IBM DB2-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%

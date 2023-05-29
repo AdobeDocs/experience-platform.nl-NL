@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Zendesk Source Connector
 description: Leer hoe u Zendesk met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

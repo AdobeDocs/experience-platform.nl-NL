@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;
 title: (bèta) Adobe Workfront-bron
 description: Adobe Workfront is een marketingtoepassing waarmee u de volledige levenscyclus van uw werk op één locatie kunt beheren. Workfront bevat rapportage- en analyseprogramma's die u kunt gebruiken om de stroom van werk in uw organisatie beter te begrijpen en te optimaliseren.
 exl-id: ea714278-d84d-4929-9a34-81fc5fb70871
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 0%

@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;Teradata Vantage
 title: Een Teradata Vantage Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Teradata Vantage-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 1%
