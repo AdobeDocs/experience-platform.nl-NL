@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
+source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,11 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 >title="Negatieve getallen in gegevenssetactiviteit"
 >abstract="Negatieve getallen in geneste records betekenen dat een gebruiker bepaalde batches in een geselecteerd tijdbereik heeft verwijderd."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_daysRemaining"
+>title="Vervaldatum gegevensset"
+>abstract="Deze kolom wijst op het aantal dagen dat de doeldataset heeft verlaten alvorens het automatisch verloopt."
 
 In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Datasets]** in de linkernavigatie om het dialoogvenster **[!UICONTROL Datasets]** dashboard. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
 

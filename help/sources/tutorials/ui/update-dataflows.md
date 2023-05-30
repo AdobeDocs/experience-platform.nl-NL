@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Een gegevensstroom voor de bronverbinding bijwerken in de gebruikersinterface
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,12 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 * [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-## Gegevensstromen bijwerken
+## Gegevensstromen bijwerken {#update-dataflows}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflows_daysRemaining"
+>title="Vervaldatum gegevensset"
+>abstract="Deze kolom wijst op het aantal dagen dat de doeldataset heeft verlaten alvorens het automatisch verloopt.<br>Een dataflow zal ontbreken als de doeldataset is verlopen. Om dataflow te verhinderen te ontbreken, zorg ervoor dat een doeldataset wordt geplaatst om op de correcte datum te verlopen. Raadpleeg de documentatie voor informatie over het bijwerken van vervaldatums."
 
 Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. Selecteren **[!UICONTROL Dataflows]** in de bovenste koptekst om een lijst met bestaande gegevensstromen weer te geven.
 
