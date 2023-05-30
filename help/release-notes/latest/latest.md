@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van mei 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1535'
 ht-degree: 3%
 
 ---
@@ -33,9 +33,11 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Gegevensbeheer](#data-governance)
 - [Gegevensopname](#data-ingestion)
 - [Doelen](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
+
 
 ## Gegevensverzameling {#data-collection}
 
@@ -108,6 +110,24 @@ Voor meer informatie over gegevensinvoer leest u de [gegevensinvoer - overzicht]
 - We hebben een beperking in de (Beta) SFTP-cloudopslagbestemming opgelost, waarbij gebruikers de waarde van de poortparameter niet konden aanpassen. De waarde is nu bewerkbaar wanneer u een (Beta) SFTP-doelverbinding instelt via de [API](/help/destinations/api/activate-segments-file-based-destinations.md) of [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Veldgroep | (Meerdere) | Verschillende velden voor [Object aanbieden](https://github.com/adobe/xdm/pull/1720/files) zijn bijgewerkt om een dubbele hiërarchie uit het schema te verwijderen. |
+| Veldgroep | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1721/files) | De `partnerProspect` optie voor metagegevenstags is toegevoegd aan de [!UICONTROL XDM Individual Prospect Profile] klasse. |
+| Datatype | (Meerdere) | Er zijn verschillende velden toegevoegd voor de [!UICONTROL Media details information] datatype. |
+| Datatype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/pull/1716/files) | Er is een nieuw veld toegevoegd om aan te geven of een omleiding heeft plaatsgevonden. |
+| Veldgroep | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1716/files) | Er is een nieuw veld voor mediarapportage toegevoegd. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over XDM in Platform, lees [XDM System, overzicht](../../xdm/home.md).
 
 ## Identiteitsservice {#identity-service}
 
