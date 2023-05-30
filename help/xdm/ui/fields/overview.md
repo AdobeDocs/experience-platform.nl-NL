@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-velden definiëren in de gebruikersinterface
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1430'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ Wanneer u een nieuw veld definieert, kunnen er aanvullende configuratieopties wo
 
 | Field, eigenschap | Compatibele typen | Beschrijving |
 | --- | --- | --- |
-| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that will be assigned to this field if no other value is provided during ingestion. Deze waarde moet overeenkomen met het geselecteerde type van het veld. |
+| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that is assigned to this field if no other value is provided during ingestion. Deze waarde moet overeenkomen met het geselecteerde type van het veld.<br><br>De standaardwaarden worden niet opgeslagen in de gegevensset op het moment van inname, omdat ze in de loop der tijd kunnen veranderen. De standaardwaarden die in het schema worden geplaatst worden afgeleid door de stroomafwaartse diensten en de toepassingen van het Platform wanneer zij de gegevens van de dataset lezen. Bijvoorbeeld, wanneer het vragen van de gegevens gebruikend de Dienst van de Vraag, als de attributen een ONGELDIGE waarde hebben, maar het gebrek wordt geplaatst aan `5` op het schemaniveau, wordt verwacht dat de Dienst van de Vraag zal terugkeren `5` in plaats van NULL. Dit gedrag is momenteel niet uniform voor alle AEP-services. |
 | [!UICONTROL Pattern] | [!UICONTROL String] | A [reguliere expressie](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) dat de waarde voor dit veld in overeenstemming moet zijn om tijdens de inname te worden geaccepteerd. |
 | [!UICONTROL Format] | [!UICONTROL String] | Selecteer een optie in een lijst met vooraf gedefinieerde indelingen voor tekenreeksen die de waarde moet bevatten. Beschikbare indelingen zijn: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Minimum length] | [!UICONTROL String] | Het minimale aantal tekens dat de tekenreeks moet bevatten voordat de waarde wordt geaccepteerd tijdens de opname. |
