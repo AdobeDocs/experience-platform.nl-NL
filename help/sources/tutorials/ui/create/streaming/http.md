@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maak streamingverbinding;ui-handleiding;zelfstudie;maak een streamingverbinding;streaming opname;opname;
-solution: Experience Platform
 title: Een HTTP API-streamingverbinding maken met de gebruikersinterface
-type: Tutorial
 description: Deze UI-handleiding helpt u bij het maken van een streamingverbinding met Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -71,7 +68,7 @@ Als uw gegevens zijn geüpload, kunt u de rechterkant van de interface gebruiken
 
 De [!UICONTROL Mapping] stap verschijnt, verstrekkend een interface om de brongegevens aan een dataset van het Platform in kaart te brengen.
 
-De dossiers van het Parket moeten XDM volgzaam zijn en vereisen u niet om de afbeelding manueel te vormen, terwijl de Csv- dossiers u vereisen om de afbeelding uitdrukkelijk te vormen, maar u toe te staan om te kiezen welke brongegevensgebieden aan kaart te brengen. Voor JSON-bestanden die als XDM-klacht zijn gemarkeerd, is geen handmatige configuratie vereist. Nochtans, als het niet duidelijk als volgzaam XDM is, zal het u vereisen om de afbeelding uitdrukkelijk te vormen.
+De [!DNL HTTP API] bron ondersteunt inname van JSON-bestanden. Voor JSON-bestanden is geen handmatige configuratie vereist als deze bestanden als XDM-klacht zijn gemarkeerd. Als niet, dan moet u de afbeelding uitdrukkelijk vormen.
 
 Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
 
@@ -88,7 +85,6 @@ Als u een bestaande gegevensset wilt gebruiken, selecteert u **[!UICONTROL Exist
 ![bestaande gegevensset](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Standaardvelden toewijzen
-
 
 Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
