@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van mei 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
+source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1541'
 ht-degree: 3%
 
 ---
@@ -121,7 +121,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | --- | --- | --- |
 | Veldgroep | (Meerdere) | Verschillende velden voor [Object aanbieden](https://github.com/adobe/xdm/pull/1720/files) zijn bijgewerkt om een dubbele hiërarchie uit het schema te verwijderen. |
 | Veldgroep | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1721/files) | De `partnerProspect` optie voor metagegevenstags is toegevoegd aan de [!UICONTROL XDM Individual Prospect Profile] klasse. |
-| Datatype | (Meerdere) | Er zijn verschillende velden toegevoegd voor de [!UICONTROL Media details information] datatype. |
+| Datatype | (Meerdere) | Er zijn verschillende velden toegevoegd voor de [[!UICONTROL Media details information]](https://github.com/adobe/xdm/pull/1716/files) datatype. |
 | Datatype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/pull/1716/files) | Er is een nieuw veld toegevoegd om aan te geven of een omleiding heeft plaatsgevonden. |
 | Veldgroep | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1716/files) | Er is een nieuw veld voor mediarapportage toegevoegd. |
 
