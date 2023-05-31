@@ -3,10 +3,10 @@ keywords: bestemmingen; vragen; veelgestelde vragen; faq; bestemmingen - vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: abb6b598a2ec1f7589cb99204b6ccc2d4b55b5ec
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 4%
+source-wordcount: '1361'
+ht-degree: 3%
 
 ---
 
@@ -104,3 +104,53 @@ Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vere
 **Welk type identiteiten kan ik activeren? [!DNL LinkedIn]?**
 
 [!DNL LinkedIn Matched Audiences] ondersteunt de activering van de volgende identiteiten: gehashte e-mails, [!DNL GAID], en [!DNL IDFA].
+
+## Zelfde pagina en volgende-paginagrootte door de bestemmingen van de Aanpassing van Adobe Target en van de Aanpassing {#same-next-page-personalization}
+
+**Moet ik het Web SDK van het Experience Platform gebruiken om publiek en attributen naar Adobe Target te verzenden?**
+
+Nee, [Web SDK](../edge/home.md) is niet vereist om het publiek te activeren op [Adobe Target](catalog/personalization/adobe-target-connection.md).
+
+Als [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) wordt gebruikt in plaats van Web SDK, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
+
+Voor [personalisatie op dezelfde pagina en op de volgende pagina](ui/activate-edge-personalization-destinations.md) gebruik gevallen, moet u of [Web SDK](../edge/home.md) of de [Edge Network Server-API](../server-api/overview.md). Zie de documentatie op [activeren van publiek naar randbestemmingen](ui/activate-edge-personalization-destinations.md) voor meer details over de implementatie.
+
+**Is er een limiet voor het aantal kenmerken dat ik kan verzenden van Real-time Customer Data Platform naar Adobe Target of een aangepaste persoonlijke bestemming?**
+
+Ja, de gebruiksgevallen voor personalisatie op dezelfde pagina en op de volgende pagina bieden ondersteuning voor maximaal 30 kenmerken per sandbox wanneer een publiek wordt geactiveerd voor Adobe Target- of Custom Personalization-doelen. Meer informatie over activeringsinstructies vindt u in de [begeleidende documentatie](guardrails.md#edge-destinations-activation).
+
+**Welke typen kenmerken worden ondersteund voor activering (bijvoorbeeld arrays, kaarten, enz.)?**
+
+Momenteel worden alleen bladniveaukenmerken ondersteund voor activering.
+
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+
+**Nadat ik een publiek in Experience Platform creeer, hoe lang zal het voor dat publiek beschikbaar zijn om van de randsegmentatie te gebruiken gevallen?**
+
+De definities van het publiek worden verspreid aan [Edge Network](../edge/home.md) binnen een uur. Als een publiek echter binnen dit eerste uur wordt geactiveerd, kunnen sommige bezoekers die voor het publiek in aanmerking zouden zijn gekomen, worden overgeslagen.
+
+**Waar zie ik de geactiveerde kenmerken in Adobe Target?**
+
+Kenmerken kunnen worden gebruikt in Doel [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=en) voorstellen.
+
+**Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen?**
+
+Dit wordt momenteel niet gesteund door de Doelen UI. Neem contact op met uw Adobe-vertegenwoordiger als u in dit geval hulp nodig hebt.
+
+**Wat gebeurt er als ik een Adobe Target-bestemming verwijder?**
+
+Wanneer u een bestemming schrapt, worden alle publiek en attributen die onder de bestemming in kaart worden gebracht geschrapt uit Adobe Target en zij worden ook verwijderd uit het Netwerk van de Rand.
+
+**Werkt de integratie met de Edge Network Server-API?**
+
+Ja, de Edge Network Server-API werkt met de Custom Personalization-bestemming. Aangezien profielattributen gevoelige gegevens kunnen bevatten, vereist de bestemming van de Aangepaste Aanpassing u om de Server API van het Netwerk van de Rand voor gegevensinzameling te gebruiken. Bovendien moeten alle API-aanroepen worden uitgevoerd in een [geverifieerde context](../server-api/authentication.md).
+
+**Ik kan slechts één samenvoegbeleid hebben dat actief-op-rand is. Kan ik publiek bouwen dat een verschillend fusiebeleid gebruikt en hen nog naar Adobe Target als het stromen segmenten verzendt?**
+
+Nee. Alle soorten publiek die u naar Adobe Target wilt activeren, moeten een &#39;active-on-edge&#39; gebruiken [samenvoegingsbeleid](../profile/merge-policies/ui-guide.md).
+
+**Worden de Etikettering en de Handhaving van het Gebruik van Gegevens (DULE) en het Beleid van de Toestemming afgedwongen?**
+
+Ja. De [Beleid inzake gegevensbeheer en instemming](../data-governance/home.md) die zijn gemaakt en gekoppeld aan de geselecteerde marketingacties, worden toegepast op de activering van de geselecteerde kenmerken.
