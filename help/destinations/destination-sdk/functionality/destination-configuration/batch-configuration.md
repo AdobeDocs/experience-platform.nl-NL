@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om de montages van de dossieruitvoer voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Batchconfiguratie
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '1046'
 ht-degree: 3%
 
 ---
@@ -82,6 +82,7 @@ De waarden die u hier instelt, worden weergegeven in de [Segmentexport plannen](
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
       },
+   "segmentGroupingEnabled": true
    }
 ```
 
@@ -97,6 +98,7 @@ De waarden die u hier instelt, worden weergegeven in de [Segmentexport plannen](
 | `filenameConfig.allowedFilenameAppendOptions` | Tekenreeks | *Vereist*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Hiermee bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (onder andere segment-id, naam van de organisatie, datum en tijd van export). Wanneer instellen `defaultFilename`, moet u dubbele macro&#39;s voorkomen. <br><br>Ondersteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de orde waarin u de macro&#39;s bepaalt, zal Experience Platform UI altijd hen in de hier voorgestelde orde tonen. <br><br> Indien `defaultFilename` is leeg, de `allowedFilenameAppendOptions` lijst moet ten minste één macro bevatten. |
 | `filenameConfig.defaultFilenameAppendOptions` | Tekenreeks | *Vereist*. Vooraf geselecteerde standaardbestandsnaammacro&#39;s die gebruikers kunnen uitschakelen.<br><br> De macro&#39;s in deze lijst zijn een subset van de macro&#39;s die zijn gedefinieerd in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Tekenreeks | *Optioneel*. Hiermee definieert u de standaardbestandsnamen van macro&#39;s voor de geëxporteerde bestanden. Deze kunnen niet worden overschreven door gebruikers. <br><br>Elke macro gedefinieerd door `allowedFilenameAppendOptions` wordt toegevoegd na de `defaultFilename` macro&#39;s. <br><br>Indien `defaultFilename` is leeg, moet u ten minste één macro definiëren in `allowedFilenameAppendOptions`. |
+| `segmentGroupingEnabled` | Boolean | Hiermee bepaalt u of het geactiveerde publiek moet worden geëxporteerd in één bestand of in meerdere bestanden, op basis van het publiek [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md). Ondersteunde waarden: <ul><li>`true`: exporteert één bestand per samenvoegbeleid.</li><li>`false`: Hiermee exporteert u één bestand per publiek, ongeacht het samenvoegbeleid. Dit is het standaardgedrag. U kunt hetzelfde resultaat bereiken door deze parameter volledig in te zetten.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -120,6 +122,8 @@ Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geë
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` en `TIMESTAMP` beide definiëren wanneer het bestand is gegenereerd, maar in verschillende indelingen. <br><br><ul><li>`DATETIME` gebruikt de volgende indeling: YYYMMDD_HMMSS.</li><li>`TIMESTAMP` gebruikt de Unix-indeling van 10 cijfers. </li></ul> `DATETIME` en `TIMESTAMP` elkaar uitsluiten en niet gelijktijdig kunnen worden gebruikt. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | Door de gebruiker gedefinieerde aangepaste tekst die in de bestandsnaam moet worden opgenomen. Kan niet gebruiken in `defaultFilename`. | My_custom_text |
 | `TIMESTAMP` | [!UICONTROL Date and time] | Tijdstempel van 10 cijfers van het tijdstip waarop het bestand is gegenereerd, in Unix-indeling. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | De id van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde segmenten in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | De naam van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde segmenten in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | Mijn aangepaste samenvoegingsbeleid |
 
 {style="table-layout:auto"}
 
