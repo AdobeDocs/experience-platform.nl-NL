@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;salesforce bestemmi
 title: Verbinding met Salesforce-Marketing Cloud
 description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -53,15 +53,15 @@ Dit doel ondersteunt de volgende verbindingstypen:
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u verstrekken:
-   * [!UICONTROL Domain]
-   * [!UICONTROL Port]
-   * [!UICONTROL Username]
-   * [!UICONTROL Password]
+   * **[!UICONTROL Domain]**: Het IP-adres of de domeinnaam van uw SFTP-account;
+   * **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
+   * **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
+   * **[!UICONTROL Password]**: Het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie.
 * Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u verstrekken:
-   * [!UICONTROL Domain]
-   * [!UICONTROL Port]
-   * [!UICONTROL Username]
-   * [!UICONTROL SSH Key]
+   * **[!UICONTROL Domain]**: Het IP-adres of de domeinnaam van uw SFTP-account;
+   * **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
+   * **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
+   * **[!UICONTROL SSH Key]**: De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet zijn opgemaakt als een Base64-gecodeerde tekenreeks en mag niet met een wachtwoord zijn beveiligd.
 
 * U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan geëxporteerde bestanden onder de **[!UICONTROL Key]** sectie. Uw openbare sleutel moet worden geschreven als een [!DNL Base64] gecodeerde tekenreeks.
 * **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.

@@ -4,9 +4,9 @@ title: API-migratiegids voor cloudopslagdoelen
 description: Meer informatie over de wijzigingen in de workflow om cloudopslagbestemmingen te activeren als onderdeel van de migratie naar de nieuwe doelkaarten voor cloudopslag met extra functionaliteit.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -433,7 +433,6 @@ De achterwaarts incompatibele wijzigingen voor de API-gebruikers worden bijgewer
 Naast de bijgewerkte stroom en verbindingsspecificatie hierboven, zijn er veranderingen in de parameters die worden vereist wanneer het creëren van SFTP basisverbindingen.
 
 * Eerder was voor de basisverbinding voor SFTP-doelen een `host` parameter. De naam van deze parameter is gewijzigd in `domain`.
-* Voor de authentificatie met de zeer belangrijke optie van SSH, vereiste de authentificatieparameters in de basisverbinding: `port` optie. Deze parameter is nu vervangen en niet meer vereist.
 
 Bekijk de volledige erfenis en nieuwe basisverbinding en de voorbeelden van de doelverbinding voor SFTP in de hieronder lusjes, met de lijnen die veranderen benadrukt. De parameters die worden vereist om doelverbindingen voor bestemmingen tot stand te brengen SFTP veranderen niet.
 
@@ -567,7 +566,8 @@ Bekijk de volledige erfenis en nieuwe basisverbinding en de voorbeelden van de d
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {

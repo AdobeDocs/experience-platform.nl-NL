@@ -4,9 +4,9 @@ title: Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst 
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4331'
+source-wordcount: '4436'
 ht-degree: 0%
 
 ---
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Eigenschap | Beschrijving |
+| --------- | ----------- |
+| `specName` | Gebruik `SFTP with Password`. |
+| `domain` | Het IP-adres of de domeinnaam van uw SFTP-opslaglocatie. |
+| `username` | De gebruikersnaam die u wilt aanmelden bij uw SFTP-opslaglocatie. |
+| `password` | Het wachtwoord voor aanmelding bij uw SFTP-opslaglocatie. |
+| `port` | De poort die wordt gebruikt door uw SFTP-opslaglocatie. |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Eigenschap | Beschrijving |
+| --------- | ----------- |
+| `specName` | Gebruik `SFTP with Password`. |
+| `domain` | Het IP-adres of de domeinnaam van uw SFTP-opslaglocatie. |
+| `username` | De gebruikersnaam die u wilt aanmelden bij uw SFTP-opslaglocatie. |
+| `sshKey` | De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet zijn opgemaakt als een Base64-gecodeerde tekenreeks en mag niet met een wachtwoord zijn beveiligd. |
+| `port` | De poort die wordt gebruikt door uw SFTP-opslaglocatie. |
+
+{style="table-layout:auto"}
 
 +++
 

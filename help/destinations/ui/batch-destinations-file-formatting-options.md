@@ -2,9 +2,9 @@
 description: Leer hoe u opties voor bestandsindeling kunt configureren wanneer u gegevens activeert naar bestandsbestemmingen
 title: (Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
@@ -111,8 +111,8 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 
 Gebruik dit besturingselement om de tekenreeksrepresentatie van een lege waarde in te stellen. Met deze optie bepaalt u hoe lege waarden worden weergegeven in uw geëxporteerde CSV-bestanden. Beschikbare opties zijn:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Lege tekenreeks in dubbele aanhalingstekens (&quot;&quot;)**
 * **[!UICONTROL Empty string]**
 
 #### Voorbeelden
@@ -136,8 +136,8 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 
 Gebruik dit besturingselement om de tekenreeksrepresentatie van een null-waarde in te stellen in de geëxporteerde bestanden. Met deze optie bepaalt u hoe null-waarden worden weergegeven in uw geëxporteerde CSV-bestanden. Beschikbare opties zijn:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Lege tekenreeks in dubbele aanhalingstekens (&quot;&quot;)**
 * **[!UICONTROL Empty string]**
 
 #### Voorbeelden
