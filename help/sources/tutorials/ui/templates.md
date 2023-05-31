@@ -3,9 +3,9 @@ description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience
 title: Een gegevensstroom voor bronnen maken met behulp van sjablonen in de gebruikersinterface
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
+source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,83 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 >[!ENDTABS]
 
 ### Sjablonen selecteren
+
+Als uw account is geverifieerd, kunt u nu de sjabloon selecteren die u voor uw gegevensstroom wilt gebruiken.
+
++++[!DNL Marketo Engage] sjablonen In de volgende tabel worden de sjablonen weergegeven die beschikbaar zijn voor de [!DNL Marketo Engage] bron.
+
+| [!DNL Marketo Engage] sjablonen | Beschrijving |
+| --- | --- |
+| Activiteiten | In de sjabloon Activiteiten worden op gebeurtenissen gebaseerde momentopnamen van activiteiten vastgelegd, zoals e-mailinteracties, websiteinteracties en verkoopaanroepen. |
+| Bedrijven | Het malplaatje van Bedrijven vangt bedrijfsrekeningsdetails zoals bedrijf firmographic informatie, plaats, en het factureren informatie. |
+| Benoemde accounts | In de sjabloon Benoemde rekeningen worden details vastgelegd voor rekeningen die zijn vastgesteld als te voeren doelrekeningen. |
+| Kansen | In de sjabloon Opportunity worden zakelijke opportuniteitsgegevens vastgelegd, zoals type, verkoopstadium en verwante accounts. |
+| Functies contactpersoon opportunity | Het malplaatje van de Rollen van het Contact van de Kans vangt details over de rollen voor lood verbonden aan een bepaalde kans. |
+| Personen | In de sjabloon Personen worden kenmerken voor individuele personen vastgelegd, zoals demografische gegevens, contactgegevens en voorkeuren voor machtigingen. |
+| Programmalidmaatschappen | Het malplaatje van de Lidmaatschappen van het Programma vangt details voor contacten verbonden aan een bedrijfscampagne, omvat de kakken van de verpleegkunde en contactreacties. |
+| Programma&#39;s | In de sjabloon Programma&#39;s worden de details van de zakelijke campagne vastgelegd, zoals status, kanalen, tijdlijnen en kosten. |
+| Statische lijstlidmaatschappen | Het Statische malplaatje van Lidmaatschappen van de Lijst vangt de verhoudingen tussen mensen en hun lidmaatschap in statische lijsten. |
+| Statische lijsten | Het Statische malplaatje van de Lijst vangt geconcretiseerde lijsten van mensen voor specifieke gebruiksgevallen. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2B-sjablonen De volgende tabel geeft een overzicht van de B2B-sjablonen die beschikbaar zijn voor de [!DNL Salesforce] bron.
+
+| [!DNL Salesforce] B2B-sjablonen | Beschrijving |
+| --- | --- |
+| Contact opnemen met account | De sjabloon Relatie contactpersoon account legt de relatie vast tussen een contactpersoon en een of meer accounts. |
+| Accounts | In de accountsjabloon worden gegevens van zakelijke accounts vastgelegd, zoals bedrijfsinformatie, locatie en factureringsgegevens. |
+| Campagneleden | In de sjabloon Campagneleden wordt de relatie vastgelegd tussen een afzonderlijke lead of contactpersoon en een specifieke [!DNL Salesforce] campagne. |
+| Campagnes | Het malplaatje van Campagnes vangt bedrijfsrekeningsdetails zoals bedrijf firmographic informatie, plaats, en het factureren informatie. |
+| Contactpersonen | Het malplaatje van het Contact vangt attributen voor contacten zoals demografische details, contactinformatie, en verwante bedrijfsentiteiten. |
+| Leads | In de Leads-sjabloon worden kenmerken voor leads vastgelegd, zoals demografische gegevens, contactgegevens en gerelateerde bedrijfsentiteiten. |
+| Kansen | De sjabloon Opportunity legt zakelijke opportuniteitsdetails vast, zoals type, verkoopstadium en verwante account. |
+| Functies contactpersoon opportunity | Het malplaatje van de Rollen van het Contact van de Kans vangt details over de rollen voor lood verbonden aan een bepaalde kans. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2C-sjablonen De volgende tabel geeft een overzicht van de B2C-sjablonen die beschikbaar zijn voor de [!DNL Salesforce] bron.
+
+| [!DNL Salesforce] B2C-sjablonen | Beschrijving |
+| --- | --- |
+| Contact | Het malplaatje van het Contact vangt attributen voor contacten zoals demografische details, contactinformatie, en verwante bedrijfsentiteiten. |
+| Lood | In de Lead-sjabloon worden kenmerken voor leads vastgelegd, zoals demografische gegevens, contactgegevens en gerelateerde bedrijfsentiteiten. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2B-sjablonen De volgende tabel geeft een overzicht van de B2B-sjablonen die beschikbaar zijn voor de [!DNL Microsoft Dynamics] bron.
+
+| [!DNL Microsoft Dynamics] B2B-sjablonen | Beschrijving |
+| --- | --- |
+| Accounts | In de accountsjabloon worden gegevens van zakelijke accounts vastgelegd, zoals bedrijfsinformatie, locatie en factureringsgegevens. |
+| Campagnes | Het malplaatje van Campagnes vangt bedrijfsrekeningsdetails zoals bedrijf firmographic informatie, plaats, en het factureren informatie. |
+| Contactpersonen | Het malplaatje van het Contact vangt attributen voor contacten zoals demografische details, contactinformatie, en verwante bedrijfsentiteiten. |
+| Leads | In de Leads-sjabloon worden kenmerken voor leads vastgelegd, zoals demografische gegevens, contactgegevens en gerelateerde bedrijfsentiteiten. |
+| Marketinglijst | Het malplaatje van de Lijst van de Marketing vangt een groep bestaande of potentiële klanten die voor een marketing campagne of andere verkoopdoeleinden worden gecreeerd. |
+| Leden van de marketinglijst | De leden van de Lijst van de Marketing vangen de details van om het even welk één type van klantenverslag, zoals lood, rekeningen, of contacten, in een marketing lijst. |
+| Kansen | De sjabloon Opportunity legt zakelijke opportuniteitsdetails vast, zoals type, verkoopstadium en verwante account. |
+| Functies contactpersoon opportunity | Het malplaatje van de Rollen van het Contact van de Kans vangt details over de rollen voor lood verbonden aan een bepaalde kans. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2C-sjablonen De volgende tabel geeft een overzicht van de B2C-sjablonen die beschikbaar zijn voor de [!DNL Microsoft Dynamics] bron.
+
+| [!DNL Microsoft Dynamics] B2C-sjablonen | Beschrijving |
+| --- | --- |
+| Contact | Het malplaatje van het Contact vangt attributen voor contacten zoals demografische details, contactinformatie, en verwante bedrijfsentiteiten. |
+| Lood | In de Lead-sjabloon worden kenmerken voor leads vastgelegd, zoals demografische gegevens, contactgegevens en gerelateerde bedrijfsentiteiten. |
+
+{style="table-layout:auto"}
+
++++
 
 Afhankelijk van het geselecteerde bedrijfstype, verschijnt een lijst van malplaatjes. Het voorvertoningspictogram selecteren ![voorvertoningspictogram](../../images/tutorials/templates/preview-icon.png) naast een sjabloonnaam om voorbeeldgegevens van de sjabloon voor te vertonen.
 
