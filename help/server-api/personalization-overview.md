@@ -2,7 +2,7 @@
 title: Overzicht van personalisatie
 description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-oplossingen voor personalisatie, waaronder [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) en [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
-Daarnaast worden de [!DNL Server API] bevoegdheden personaliseringsmogelijkheden van zelfde pagina en van volgende pagina door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../destinations/ui/configure-personalization-destinations.md).
+Daarnaast worden de [!DNL Server API] bevoegdheden personaliseringsmogelijkheden van zelfde pagina en van volgende pagina door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../destinations/ui/activate-edge-personalization-destinations.md).
 
 Wanneer het gebruiken van de Server API, moet u de reactie integreren die door de verpersoonlijkingsmotor met de logica wordt verstrekt die wordt gebruikt om inhoud op uw plaats terug te geven. In tegenstelling tot [Web SDK](../edge/home.md)de [!DNL Server API] heeft geen mechanisme om automatisch inhoud toe te passen die is geretourneerd door [!DNL Adobe Target] en [!DNL Offer Decisioning].
 

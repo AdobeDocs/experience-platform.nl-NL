@@ -3,7 +3,7 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 0%
@@ -61,7 +61,7 @@ De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentg
 
 De het verpersoonlijkingsbestemmingen van de rand in Experience Platform omvatten [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) en de [Aangepast aanpassingsdoel](/help/destinations/catalog/personalization/custom-personalization.md). Door deze bestemmingen te gebruiken, kunt u zelfde-pagina en volgende-pagina gebruiksgevallen van het verpersoonlijkingsgebruik voor uw klanten toelaten.
 
-Meer informatie over hoe [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](/help/destinations/ui/configure-personalization-destinations.md).
+Meer informatie over hoe [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## Exporteren van profielen en segmentexportdoelen - video-overzicht {#video}
 

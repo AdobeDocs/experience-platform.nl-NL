@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: 991cd22bc28a72593512a36636806e6a8a4b2820
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1173'
 ht-degree: 2%
 
 ---
@@ -40,8 +40,7 @@ ht-degree: 2%
       * [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](./ui/activate-segment-streaming-destinations.md)
       * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md)
       * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](./ui/activate-batch-profile-destinations.md)
-      * [De publieksgegevens van de activering aan de bestemmingen van het profielverzoek](./ui/activate-profile-request-destinations.md)
-      * [Vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](./ui/configure-personalization-destinations.md)
+      * [Activeer publieksgegevens aan de bestemmingen van de randverpersoonlijking](./ui/activate-edge-personalization-destinations.md)
       * [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
       * [(Bèta) de datasets van de uitvoer gebruikend Experience Platform UI](./ui/export-datasets.md)
       * [(bèta) Gebruik de laatste kwalificatietijd XDM attribuut in de nieuwe bètawolkenopslagbestemmingen](./ui/activate-last-qualification-time.md)

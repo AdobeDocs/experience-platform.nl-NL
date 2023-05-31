@@ -2,7 +2,7 @@
 title: Adobe Commerce-bestemmingsconnector
 description: Leer hoe verkopers van Adobe Commerce en Real-Time CDP de winkelervaring kunnen aanpassen door zeer relevante site-inhoud en -promoties te leveren, aangepast aan klanten die in Real-Time CDP zijn gebouwd en beheerd.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 813a564eb02a5366945468ee689b2744e31baaa8
+source-git-commit: 276224303c7a65a53ff859bcbf47f64a6925bf77
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 1%
@@ -67,7 +67,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../ui/activate-profile-request-destinations.md) voor instructies over het activeren van het publiek aan de [!DNL Commerce] bestemming.
+Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../ui/activate-edge-personalization-destinations.md) voor instructies over het activeren van het publiek aan de [!DNL Commerce] bestemming.
 
 ## Volgende stappen in [!DNL Adobe Commerce]
 

@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
+source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,21 @@ ht-degree: 0%
 
 ## Doelwijziging {#changelog}
 
->[!IMPORTANT]
->
->Met de bètaversie van de verbeterde Adobe Target V2 bestemmingsschakelaar, zou u twee kaarten van Adobe Target in de bestemmingscatalogus kunnen zien.
->De Adobe Target V2 bestemmingsschakelaar is momenteel in bèta en slechts beschikbaar aan een geselecteerd aantal klanten. Naast de functionaliteit die door de kaart van Adobe V1 wordt verstrekt, voegt de schakelaar van het Doel V2 toe a [toewijzingsstap](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) aan de activeringswerkstroom, waarmee u profielkenmerken kunt toewijzen aan Adobe Target, waardoor op kenmerken gebaseerde personalisatie op dezelfde pagina en op een volgende pagina mogelijk is.
+| Releasedatum | Type bijwerken | Beschrijving |
+|---|---|---|
+| April 2023 | Bijwerken van functionaliteit en documentatie | Vanaf april 2023 **[!UICONTROL Adobe Target]** verbinding wordt ondersteund [kenmerkgebaseerde personalisatie](../../ui/activate-edge-personalization-destinations.md#map-attributes) en is algemeen beschikbaar voor alle klanten. |
 
-![Afbeelding van de twee Adobe Target-doelkaarten in een weergave Naast elkaar.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+{style="table-layout:auto"}
 
 ## Overzicht {#overview}
 
 Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 
 Adobe Target is een personalisatieverbinding in de Adobe Experience Platform-bestemmingscatalogus.
+
+Bekijk de onderstaande video voor een kort overzicht van het configureren van de Adobe Target-verbinding in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## Vereisten {#prerequisites}
 
@@ -37,7 +40,7 @@ Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te ge
 
 >[!IMPORTANT]
 >
->Voordat u een [!DNL Adobe Target] verbinding, lees de gids over hoe te [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/configure-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platforms. Voor personalisatie op dezelfde pagina en op de volgende pagina moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
+>Voordat u een [!DNL Adobe Target] verbinding, lees de gids over hoe te [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/activate-edge-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platforms. Voor personalisatie op dezelfde pagina en op de volgende pagina moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
 
 ### Vereisten in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -58,12 +61,6 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
-
-## Gebruiksscenario’s {#use-cases}
-
-**Banner homepage aanpassen**
-
-Een huisverhuurbedrijf en verkoopbedrijf willen hun homepage met een banner personaliseren, die op de kwalificaties van het klantensegment in Adobe Experience Platform wordt gebaseerd. Het bedrijf kan selecteren welk publiek een persoonlijke ervaring zou moeten krijgen en hen naar Adobe Target sturen als doelcriterium voor hun Target-aanbieding.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -92,7 +89,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 | Geen gegevensstroom geselecteerd | Gegevensstroom geselecteerd |
 |---|---|
-| <ul><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/configure-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt segmenten alleen delen met de Adobe Target-verbinding voor de *standaardproductiesandbox*.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/configure-personalization-destinations.md) worden ondersteund.</li><li>Delen van segmenten wordt ondersteund voor andere sandboxen.</li></ul> |
+| <ul><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt segmenten alleen delen met de Adobe Target-verbinding voor de *standaardproductiesandbox*.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden ondersteund.</li><li>Delen van segmenten wordt ondersteund voor andere sandboxen.</li></ul> |
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -106,7 +103,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../ui/activate-profile-request-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en segmenten activeren om aanvraagdoelen te profileren](../../ui/activate-edge-personalization-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
