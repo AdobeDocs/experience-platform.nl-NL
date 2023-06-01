@@ -3,9 +3,9 @@ title: (Bèta) Experience Cloud-publiek
 description: Leer hoe te om segmenten van Experience Platform aan diverse oplossingen van het Experience Platform te delen.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1543'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,14 @@ Neem nota van de volgende bekende beperkingen en belangrijke callouts in de bèt
 * Wanneer u verbinding maakt met het doel, kunt u een optie weergeven op [gegevensstroomwaarschuwingen inschakelen](#enable-alerts). Hoewel het zichtbaar is in de UI, **optie voor inschakelen van waarschuwingen wordt niet ondersteund** in de bètaversie.
 * **Back-ups worden niet ondersteund**. De eerste uitvoer naar Audience Manager of andere Experience Cloud-oplossingen omvat geen historische populatie van de segmenten.
 * In de bètaversie kunt u **één enkele bestemmingsverbinding aan de bestemming van het publiek van de Experience Cloud**, in alle sandboxen die tot uw organisatie van het Experience Platform behoren.
-* Er is een **4-uurs latentie** tussen de tijd dat de gegevens in het Experience Platform worden geactiveerd en de tijd dat de gegevens klaar zijn om te worden gebruikt in Audience Manager- en andere Experience Cloud-oplossingen.
+
+### Latentie bij activering van publiek {#audience-activation-latency}
+
+Er is een wachttijd van vier uur tussen de tijd dat het publiek voor het eerst in Experience Platform wordt geactiveerd en de tijd dat zij klaar zijn om te worden gebruikt in Audience Manager en andere Experience Cloud oplossingen voor bepaalde gebruiksgevallen.
+
+Het kan tot 24 uur duren voordat het publiek volledig beschikbaar is in de Audience Manager voor alle gebruiksgevallen en tot 48 uur voordat het publiek van het Experience Cloud publiek in de rapporten van de Audience Manager verschijnt.
+
+Metagegevens, zoals segmentnamen, zijn beschikbaar in Audience Manager binnen minuten na het instellen van de exportbewerking naar de doelgroep van het publiek Experience Cloud.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
