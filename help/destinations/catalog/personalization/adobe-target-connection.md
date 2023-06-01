@@ -3,7 +3,7 @@ keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
+source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| April 2023 | Bijwerken van functionaliteit en documentatie | Vanaf april 2023 **[!UICONTROL Adobe Target]** verbinding wordt ondersteund [kenmerkgebaseerde personalisatie](../../ui/activate-edge-personalization-destinations.md#map-attributes) en is algemeen beschikbaar voor alle klanten. |
+| Mei 2023 | Bijwerken van functionaliteit en documentatie | Vanaf mei 2023 **[!UICONTROL Adobe Target]** verbinding wordt ondersteund [kenmerkgebaseerde personalisatie](../../ui/activate-edge-personalization-destinations.md#map-attributes) en is algemeen beschikbaar voor alle klanten. |
 
 {style="table-layout:auto"}
 
