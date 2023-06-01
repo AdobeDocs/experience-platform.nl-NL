@@ -1,17 +1,16 @@
 ---
-keywords: IP adres, IP waaier, de bestemmingen van de lijst van gewenste personen, de lijst van gewenste personen
-title: IP adres lijst van gewenste personen voor wolkenopslagbestemmingen
+title: IP de bestemmingen van SFTP van de lijst van gewenste personen van het adres
 type: Documentation
-description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform aan uw server SFTP, Amazon S3, of opslag van Azure Blob veilig uit te voeren.
+description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw server veilig uit te voeren SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
-# IP adres lijst van gewenste personen voor wolkenopslagbestemmingen {#ip-address-allow-list}
+# IP adres lijst van gewenste personen voor bestemmingen SFTP {#ip-address-allow-list-sftp}
 
 >[!IMPORTANT]
 >
