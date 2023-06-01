@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om regelmatig CSV-gegevensbestanden uit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,8 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Container]**: Voer de naam in van de [!DNL Azure Blob Storage] container die door deze bestemming moet worden gebruikt.
 * **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Azure Blob beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Azure Blob beta]** bestemming.
+* 
+   * **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Deze optie is alleen beschikbaar voor de **[!UICONTROL Azure Blob beta]** bestemming.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 

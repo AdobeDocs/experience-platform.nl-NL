@@ -2,9 +2,9 @@
 title: (bèta) Google Cloud Storage-verbinding
 description: Leer hoe u verbinding maakt met Google Cloud Storage en segmenten activeert of gegevenssets exporteert.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,8 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
 * **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
+* 
+   * **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
