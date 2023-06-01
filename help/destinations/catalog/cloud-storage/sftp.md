@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
@@ -127,4 +127,4 @@ Voor [!DNL SFTP] doelen, Platform maakt een `.csv` in de opslaglocatie die u heb
 
 ## IP adres lijst van gewenste personen
 
-Zie [IP adres lijst van gewenste personen voor wolkenopslagbestemmingen](ip-address-allow-list.md) als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
+Zie [IP adres lijst van gewenste personen voor bestemmingen SFTP](ip-address-allow-list.md) als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
