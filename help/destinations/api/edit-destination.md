@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Doelverbindingen bewerken met de Flow Service API
 type: Tutorial
 description: Leer hoe u verschillende componenten van een doelverbinding kunt bewerken met de Flow Service API.
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -329,11 +329,11 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label
 
 ## Basisverbindingscomponenten bewerken (verificatieparameters en andere componenten) {#patch-base-connection}
 
-De componenten van een basisverbinding verschillen door bestemming. Bijvoorbeeld: [!DNL Amazon S3] bestemmingen, kunt u de toegangssleutel en geheime sleutel aan uw bijwerken [!DNL Amazon S3] locatie.
+Bewerk de basisverbinding wanneer u de referenties van een doel wilt bijwerken. De componenten van een basisverbinding verschillen door bestemming. Bijvoorbeeld: [!DNL Amazon S3] bestemmingen, kunt u de toegangssleutel en geheime sleutel aan uw bijwerken [!DNL Amazon S3] locatie.
 
 Als u componenten van een basisverbinding wilt bijwerken, voert u een PATCH-verzoek uit aan de `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding, versie, en de nieuwe waarden u wilt gebruiken.
 
-Herinner me, kreeg u uw identiteitskaart van de basisverbinding in een vorige stap, toen u een bestaande gegevensstroom aan uw gewenste bestemming inspecteerde.
+Je hebt je basis verbinding-id in een [vorige stap](#look-up-dataflow-details), wanneer u een bestaande gegevensstroom aan uw gewenste bestemming voor de parameter inspecteerde `baseConnection`.
 
 >[!IMPORTANT]
 >
