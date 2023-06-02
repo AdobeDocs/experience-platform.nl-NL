@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar profielservice verzenden met Data Prep
 description: Dit document bevat informatie over het verzenden van gedeeltelijke rijupdates naar de profielservice met behulp van Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d167975c9c7a267f2888153a05c5857748367822
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -37,20 +37,20 @@ Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-
 
 Streaming updates in [!DNL Data Prep] werkt als volgt:
 
-* U moet eerst een dataset creëren en toelaten voor [!DNL Profile] verbruik. Zie de handleiding op [het toelaten van een dataset voor [!DNL Profile]](../catalog/datasets/enable-for-profile.md) voor meer informatie;
-* Als nieuwe identiteiten moeten worden verbonden, dan moet u ook een extra dataset creëren **met hetzelfde schema** als uw [!DNL Profile] gegevensset;
+* U moet eerst een dataset creëren en toelaten voor [!DNL Profile] verbruik. Zie de handleiding op [het toelaten van een dataset voor [!DNL Profile]](../catalog/datasets/enable-for-profile.md) voor meer informatie .
+* Als nieuwe identiteiten moeten worden verbonden, dan moet u ook een extra dataset creëren **met hetzelfde schema** als uw [!DNL Profile] dataset.
 * Zodra uw dataset(s) worden voorbereid, moet u een dataflow creëren om uw inkomende verzoek aan in kaart te brengen [!DNL Profile] gegevensset;
 * Vervolgens moet u de binnenkomende aanvraag bijwerken om de benodigde koppen op te nemen. Deze kopteksten definiëren:
-   * De gegevensbewerking die moet worden uitgevoerd met [!DNL Profile]: `create`, `merge`, en `delete`;
+   * De gegevensbewerking die moet worden uitgevoerd met [!DNL Profile]: `create`, `merge`, en `delete`.
    * De optionele identiteitsbewerking die moet worden uitgevoerd met [!DNL Identity Service]: `create`.
 
 ### De identiteitsgegevensset configureren
 
 Als nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset in de inkomende lading creëren en overgaan. Wanneer het creëren van een identiteitsdataset, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan:
 
-* De identiteitsdataset moet zijn bijbehorend schema als hebben [!DNL Profile] dataset. Een afwijking van de schema&#39;s kan leiden tot inconsequent systeemgedrag;
-* Nochtans, moet u ervoor zorgen dat de identiteitsdataset van verschillend is [!DNL Profile] dataset. Als de datasets het zelfde zijn, dan zullen de gegevens in plaats van bijgewerkt worden beschreven;
-* Terwijl de aanvankelijke dataset moet worden toegelaten voor [!DNL Profile], de identiteitsgegevens **mogen** worden ingeschakeld voor [!DNL Profile]. Anders worden gegevens ook overschreven in plaats van bijgewerkt.
+* De identiteitsdataset moet zijn bijbehorend schema als hebben [!DNL Profile] dataset. Een afwijking van schema&#39;s kan tot inconsistent systeemgedrag leiden.
+* Nochtans, moet u ervoor zorgen dat de identiteitsdataset van verschillend is [!DNL Profile] dataset. Als de datasets het zelfde zijn, dan zullen de gegevens in plaats van bijgewerkt worden beschreven.
+* Terwijl de aanvankelijke dataset moet worden toegelaten voor [!DNL Profile], de identiteitsgegevens **mag niet worden ingeschakeld** for [!DNL Profile]. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, de identiteitsdataset **moet worden ingeschakeld** for [!DNL Identity Service].
 
 #### Vereiste gebieden in de schema&#39;s verbonden aan de identiteitsdataset {#identity-dataset-required-fileds}
 
@@ -64,9 +64,17 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "tags":{
-        "acp_validationContext": ["disabled"]
-        }
+    "tags": {
+        "acp_validationContext": [
+            "disabled"
+        ],
+        "unifiedProfile": [
+            "enabled:false"
+        ],
+        "unifiedIdentity": [
+            "enabled:true"
+        ]
+    }
 }'
 ```
 
