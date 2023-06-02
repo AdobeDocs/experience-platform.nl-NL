@@ -1,11 +1,10 @@
 ---
-keywords: SFTP;sftp
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '851'
 ht-degree: 0%
 
 ---
@@ -106,8 +105,7 @@ Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de
 * **[!UICONTROL Folder path]**: Voer het pad in naar de map op de SFTP-locatie waar de bestanden worden geëxporteerd.
 * **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming.
-* 
-   * **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming.
+* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming.
 
 ## Segmenten naar dit doel activeren {#activate}
 
