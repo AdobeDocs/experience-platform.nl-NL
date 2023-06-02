@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,15 @@ ht-degree: 0%
 
 In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface.
 
+## Labels beheren {#manage-labels}
+
+Als u labels op uw gegevens wilt toepassen, hebt u de opdracht **[!UICONTROL Manage Usage Labels]** toestemming voor gebruik in de productiesandbox. Als u een aangepast label wilt maken, moet u ook over beheerdersrechten voor het productprofiel beschikken. Elke organisatie heeft slechts één lijst van toepasselijke etiketten, en momenteel, wordt het schrappen van etiketten niet gesteund.
+
+Zie de handleiding over hoe u [machtigingen configureren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) of de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over hoe te om een toestemming toe te wijzen. Neem contact op met de beheerder van uw organisatie als u geen toegang hebt tot de Admin Console voor uw organisatie.
+
 ## Labels op schemaniveau beheren
+
+U kunt labels rechtstreeks toevoegen aan een schema of aan velden binnen dat schema. Om het even welke gebieden die op het schemaniveau worden toegepast zullen aan alle datasets verspreiden die op dat schema worden gebaseerd.
 
 Als u labels voor gegevensgebruik op schemaniveau wilt beheren, moet u een bestaand schema selecteren of een nieuw schema maken. Nadat u zich hebt aangemeld bij Adobe Experience Platform, selecteert u **[!UICONTROL Schemas]** op de linkernavigatie om de **[!UICONTROL Schemas]** werkruimte. Deze pagina bevat een overzicht van alle gemaakte schema&#39;s die tot uw organisatie behoren, samen met nuttige details over elk schema.
 
@@ -32,7 +40,7 @@ In de volgende sectie vindt u stappen voor het maken van een nieuw schema waarop
 
 Als u een nieuw schema wilt maken, selecteert u **[!UICONTROL Create schema]** in de rechterbovenhoek van het dialoogvenster **[!UICONTROL Schemas]** werkruimte. Zie de handleiding op [hoe te om een schema tot stand te brengen gebruikend de Redacteur van het Schema](../../xdm/tutorials/create-schema-ui.md#create) voor volledige instructies. U kunt ook [een schema maken met de API voor het schemaregister](../../xdm/tutorials/create-schema-api.md) indien nodig.
 
-### Labels voor gegevensgebruik toevoegen aan het schema {#add-labels-to-schema}
+### Gegevensgebruikslabels toevoegen aan een schema {#add-labels-to-schema}
 
 Nadat u een nieuw schema hebt gemaakt of een bestaand schema hebt geselecteerd in de lijst in het dialoogvenster [!UICONTROL Browse] tabblad van het dialoogvenster [!UICONTROL Schemas] in de werkruimte selecteert u een veld in uw schema in de Schema-editor. In de [!UICONTROL Field properties] zijbalk, selecteren **[!UICONTROL Apply Access and Data Governance Labels]**.
 
@@ -98,12 +106,6 @@ De **[!UICONTROL Show Inherited Labels]** de knevel is door gebrek, dat u toesta
 >De etiketten die werden toegepast alvorens de eigenschap van de datasetetikettering werd afgekeurd kunnen uit de dataset worden verwijderd door de relevante dataset te vinden en het annuleringspictogram op het etiket te selecteren.
 >![Het tabblad Gegevensbeheer van de werkruimte Datasets met een label voor de delabel gemarkeerd.](../images/labels/remove-governance-labels.png)
 >Zie de documentatie voor instructies op [hoe te om eerder toegepaste etiketten van de dataset aan het schemaniveau te migreren](../e2e.md#migrate-labels).
-
-## Labels op schemaniveau beheren
-
-U kunt labels rechtstreeks toevoegen aan een schema of aan velden binnen dat schema. Om het even welke gebieden die op het schemaniveau worden toegepast zullen aan alle datasets verspreiden die op dat schema worden gebaseerd.
-
-Zie de zelfstudie aan [beheren, labels op schemaniveau](../../xdm/tutorials/labels.md) voor meer informatie .
 
 ## Aangepaste labels beheren {#manage-custom-labels}
 
