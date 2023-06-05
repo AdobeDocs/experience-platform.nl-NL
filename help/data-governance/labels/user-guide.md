@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
+source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ In deze gebruikershandleiding worden de stappen beschreven voor het werken met l
 
 ## Labels beheren {#manage-labels}
 
-Als u labels op uw gegevens wilt toepassen, hebt u de opdracht **[!UICONTROL Manage Usage Labels]** toestemming voor gebruik in de productiesandbox. Als u een aangepast label wilt maken, moet u ook over beheerdersrechten voor het productprofiel beschikken. Elke organisatie heeft slechts één lijst van toepasselijke etiketten, en momenteel, wordt het schrappen van etiketten niet gesteund.
+Als u labels op uw gegevens wilt toepassen, hebt u de opdracht **[!UICONTROL Manage Usage Labels]** toestemming voor gebruik op de standaardproductiefandbox met de naam &quot;prod&quot;. Als u een aangepast label wilt maken, moet u ook over beheerdersrechten voor het productprofiel beschikken. Elke organisatie heeft slechts één lijst van toepasselijke etiketten, en momenteel, wordt het schrappen van etiketten niet gesteund.
 
 Zie de handleiding over hoe u [machtigingen configureren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) of de [toegangsbeheeroverzicht](../../access-control/home.md) voor meer informatie over hoe te om een toestemming toe te wijzen. Neem contact op met de beheerder van uw organisatie als u geen toegang hebt tot de Admin Console voor uw organisatie.
 
