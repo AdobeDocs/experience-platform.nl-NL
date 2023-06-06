@@ -2,10 +2,10 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 4%
+source-wordcount: '1264'
+ht-degree: 3%
 
 ---
 
@@ -79,13 +79,13 @@ Als u controlelogboeken wilt weergeven en exporteren, moet u beschikken over **[
 
 U kunt controlelogboeken voor verschillende eigenschappen van het Experience Platform binnen bekijken **[!UICONTROL Audits]** in de gebruikersinterface van het Platform. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
 
-![Het dashboard voor controlelogboeken](../../images/audit-logs/audits.png)
+![Het dashboard Audits markeert Audits in het linkermenu.](../../images/audit-logs/audits.png)
 
 Auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u gegevens van meer dan 365 dagen vereist, zou u logboeken bij een regelmatige kast moeten uitvoeren om aan uw interne beleidsvereisten te voldoen.
 
 Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven.
 
-![Gebeurtenisdetails](../../images/audit-logs/select-event.png)
+![Hiermee wordt het tabblad Activiteit van het dashboard gecontroleerd, waarbij het deelvenster met gebeurtenisdetails is gemarkeerd.](../../images/audit-logs/select-event.png)
 
 ### Controllerlogboeken filteren
 
@@ -95,31 +95,43 @@ Aangezien dit een nieuwe eigenschap is, gaan de getoonde gegevens slechts terug 
 
 Selecteer het trechter-pictogram (![Filterpictogram](../../images/audit-logs/icon.png)) om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de verschillende geselecteerde filters.
 
-![Filters](../../images/audit-logs/filters.png)
+![Het dashboard van Audits met het gefiltreerde activiteitenlogboek benadrukte.](../../images/audit-logs/filters.png)
 
 De volgende filters zijn beschikbaar voor controlegebeurtenissen in UI:
 
 | Filter | Beschrijving |
 | --- | --- |
 | [!UICONTROL Category] | Gebruik het vervolgkeuzemenu om de weergegeven resultaten te filteren op [categorie](#category). |
-| [!UICONTROL Action] | Filteren op handeling. Alleen op dit moment [!UICONTROL Create] en [!UICONTROL Delete] acties kunnen worden gefilterd. |
+| [!UICONTROL Action] | Filteren op handeling. De acties beschikbaar voor elke dienst kunnen in de middellijst hierboven worden gezien. |
 | [!UICONTROL User] | Voer de volledige gebruikersnaam in (bijvoorbeeld `johndoe@acme.com`) om te filteren op gebruiker. |
 | [!UICONTROL Status] | Filteren op de vraag of de handeling is toegestaan (voltooid) of geweigerd vanwege een gebrek aan [toegangsbeheer](../../../access-control/home.md) machtigingen. |
 | [!UICONTROL Date] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. De gegevens kunnen met een raadplegingsperiode van 90 dagen worden uitgevoerd (bijvoorbeeld, 2021-12-15 aan 2022-03-15). Dit kan per gebeurtenistype verschillen. |
 
 Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** om alle filters te verwijderen.
 
-![Filters wissen](../../images/audit-logs/clear-filters.png)
+![Het dashboard Audits met duidelijk benadrukt filter.](../../images/audit-logs/clear-filters.png)
+
+De teruggekeerde gegevens van het controlelogboek bevatten de volgende informatie over alle vragen die aan uw gekozen filtercriteria voldoen.
+
+| Kolomnaam | Beschrijving |
+|---|---|
+| [!UICONTROL Timestamp] | De exacte datum en tijd van de actie die in een `month/day/year hour:minute AM/PM` gebruiken. |
+| [!UICONTROL Asset Name] | De waarde voor de [!UICONTROL Asset Name] wordt bepaald door de categorie die als filter wordt gekozen. |
+| [!UICONTROL Category] | Dit veld komt overeen met de categorie die is geselecteerd in de vervolgkeuzelijst met filters. |
+| [!UICONTROL Action] | Welke acties beschikbaar zijn, is afhankelijk van de categorie die u als filter hebt gekozen. |
+| [!UICONTROL User] | Dit veld bevat de gebruikersnaam die de query heeft uitgevoerd. |
+
+![Het dashboard van Audits met het gefiltreerde activiteitenlogboek benadrukte.](../../images/audit-logs/filtered.png)
 
 ### Controleverslagen exporteren
 
 Selecteer **[!UICONTROL Download log]**.
 
-![Logbestand downloaden](../../images/audit-logs/download.png)
+![Het dashboard Audits met het [!UICONTROL Download log] gemarkeerd.](../../images/audit-logs/download.png)
 
 Selecteer in het dialoogvenster dat wordt weergegeven de gewenste indeling (een van de **[!UICONTROL CSV]** of **[!UICONTROL JSON]**), selecteert u vervolgens **[!UICONTROL Download]**. De browser downloadt het gegenereerde bestand en slaat het op uw computer op.
 
-![Downloadindeling selecteren](../../images/audit-logs/select-download-format.png)
+![Het dialoogvenster Bestandsindeling selecteren met [!UICONTROL Download] gemarkeerd.](../../images/audit-logs/select-download-format.png)
 
 ## Controlelogbestanden beheren in de API
 
