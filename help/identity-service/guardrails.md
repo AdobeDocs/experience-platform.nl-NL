@@ -3,10 +3,10 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 60bab17d2ecb2e68bf500aea2d68587a125b35bb
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 2%
+source-wordcount: '520'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ In de volgende tabel worden de statische limieten weergegeven die worden toegepa
 
 | Guardrail | Limiet | Notities |
 | --- | --- | --- |
-| Aantal identiteiten in een grafiek | 150 | De limiet wordt toegepast op sandboxniveau. De identiteitsgrafiek wordt niet bijgewerkt wanneer de limiet is bereikt. **Opmerking**: Het maximumaantal identiteiten in een identiteitsgrafiek **voor een afzonderlijk samengevoegd profiel** is 50. Samengevoegde profielen die zijn gebaseerd op identiteitsgrafieken met meer dan 50 identiteiten worden uitgesloten van het realtime profiel van de klant. Lees voor meer informatie de handleiding op [hulplijnen voor profielgegevens](../profile/guardrails.md). |
+| Aantal identiteiten in een grafiek | 150 | De limiet wordt toegepast op sandboxniveau. Wanneer het aantal identiteiten 150 of meer bedraagt, worden geen nieuwe identiteiten toegevoegd en wordt de identiteitsgrafiek niet bijgewerkt. Grafieken kunnen een identiteit van meer dan 150 vertonen doordat zij een of meer grafieken met minder dan 150 identiteiten koppelen. **Opmerking**: Het maximumaantal identiteiten in een identiteitsgrafiek **voor een afzonderlijk samengevoegd profiel** is 50. Samengevoegde profielen die zijn gebaseerd op identiteitsgrafieken met meer dan 50 identiteiten worden uitgesloten van het realtime profiel van de klant. Lees voor meer informatie de handleiding op [hulplijnen voor profielgegevens](../profile/guardrails.md). |
 | Aantal identiteiten in een XDM-record | 20 | Het minimum aantal vereiste XDM-records is twee. |
 | Aantal aangepaste naamruimten | Geen | Het aantal aangepaste naamruimten dat u kunt maken, is niet beperkt. |
 | Aantal grafieken | Geen | Het aantal identiteitsgrafieken dat u kunt maken, is niet beperkt. |
