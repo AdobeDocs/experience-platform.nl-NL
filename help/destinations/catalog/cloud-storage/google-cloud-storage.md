@@ -2,9 +2,9 @@
 title: (bèta) Google Cloud Storage-verbinding
 description: Leer hoe u verbinding maakt met Google Cloud Storage en segmenten activeert of gegevenssets exporteert.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 0%
 ## Overzicht {#overview}
 
 Een live uitgaande verbinding maken met [!DNL Google Cloud Storage] om gegevensbestanden van Adobe Experience Platform regelmatig naar uw eigen emmers te exporteren.
+
+## Verbinding maken met uw [!DNL Google Cloud Storage] opslag via API of UI {#connect-api-or-ui}
+
+* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslagplaats programmatically, lees de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -102,7 +107,10 @@ In de **[!UICONTROL Mapping]** U kunt kiezen welke kenmerken en identiteitsvelde
 
 ## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
 
-Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van de Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
 
 ## Geëxporteerde gegevens valideren {#exported-data}
 

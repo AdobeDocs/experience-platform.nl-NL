@@ -2,9 +2,9 @@
 title: Bestemming landingszone gegevens
 description: Leer hoe te met Gegevens het Landing Zone te verbinden om segmenten te activeren en datasets uit te voeren.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,11 @@ ht-degree: 0%
 
 Platform dwingt strenge tijd-aan-levende (TTL) zeven dagen op alle dossiers af die aan worden geupload [!DNL Data Landing Zone] container. Alle bestanden worden na zeven dagen verwijderd.
 
+## Verbinding maken met uw [!UICONTROL Data Landing Zone] opslag via API of UI {#connect-api-or-ui}
+
+* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslagplaats programmatically, lees de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
@@ -43,7 +48,7 @@ Houd rekening met de volgende voorwaarden waaraan moet worden voldaan voordat u 
 
 ### Verbind uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer]
 
-U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container. Als u wilt beginnen met [!DNL Data Landing Zone]moet u eerst uw referenties ophalen en deze invoeren in [!DNL Azure Storage Explorer]en sluit uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer].
+U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container. Als u wilt beginnen met [!DNL Data Landing Zone], moet u eerst uw referenties ophalen en deze invoeren in [!DNL Azure Storage Explorer]en sluit uw [!DNL Data Landing Zone] container naar [!DNL Azure Storage Explorer].
 
 In de [!DNL Azure Storage Explorer] UI, selecteer het verbindingspictogram in de linkernavigatiebar. De **Bron selecteren** wordt weergegeven, zodat u beschikt over opties voor het maken van een verbinding. Selecteren **[!DNL Blob container]** om verbinding te maken met uw [!DNL Data Landing Zone] opslag.
 
@@ -163,7 +168,10 @@ In de **[!UICONTROL Mapping]** U kunt kiezen welke kenmerken en identiteitsvelde
 
 ## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
 
-Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van de Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
 
 ## Geëxporteerde gegevens valideren {#exported-data}
 

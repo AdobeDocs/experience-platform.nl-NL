@@ -2,9 +2,9 @@
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL SFTP] kaarten in de lijst met bestemmingen.
 >* Als u al bestanden exporteert naar de **[!UICONTROL SFTP]** bestemming: Maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL SFTP beta]** bestemming.
->* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL SFTP]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL SFTP beta]** kaart om bestanden te exporteren naar **[!UICONTROL SFTP]**.
+>* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL SFTP]** doel, gebruik de nieuwe **[!UICONTROL SFTP beta]** kaart om bestanden te exporteren naar **[!UICONTROL SFTP]**.
 
 
 ![Afbeelding van de twee SFTP-doelkaarten in een weergave Naast elkaar.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
@@ -36,6 +36,11 @@ Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbest
 >[!IMPORTANT]
 >
 > Hoewel Experience Platform gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen locaties voor cloudopslag voor het exporteren van gegevens: [!DNL Amazon S3] en [!DNL SFTP].
+
+## Verbinding maken met SFTP via API of UI {#connect-api-or-ui}
+
+* Als u verbinding wilt maken met uw SFTP-opslaglocatie via de gebruikersinterface van het Platform, leest u de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
+* Als u via programmacode verbinding wilt maken met uw SFTP-opslaglocatie, leest u de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -70,12 +75,13 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 >title="Persoonlijke SSH-sleutel"
 >abstract="De persoonlijke sleutel van SSH moet als Base64-Gecodeerde koord worden geformatteerd en moet niet wachtwoord-beschermd zijn."
 
-Als u **[!UICONTROL Basic authentication]** type voor verbinding met uw SFTP-locatie:
+Als u **[!UICONTROL SFTP with password]** verificatietype voor verbinding met uw SFTP-locatie:
 
 ![Basisverificatie van SFTP-bestemming](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Host]**: Het adres van uw opslagplaats SFTP;
+* **[!UICONTROL Domain]**: Het adres van uw opslagplaats SFTP;
 * **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
+* **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
 * **[!UICONTROL Password]**: Het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
@@ -100,7 +106,7 @@ Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de
 
 ![Beschikbare bestemmingsdetails voor bestemming SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Name]**: Voer een naam in die u zal helpen deze bestemming in het gebruikersinterface van het Experience Platform identificeren;
+* **[!UICONTROL Name]**: Voer een naam in waarmee u deze bestemming kunt identificeren in de gebruikersinterface van het Experience Platform.
 * **[!UICONTROL Description]**: een beschrijving voor deze bestemming invoeren;
 * **[!UICONTROL Folder path]**: Voer het pad in naar de map op de SFTP-locatie waar de bestanden worden geëxporteerd.
 * **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
@@ -117,12 +123,15 @@ Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](
 
 ## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
 
-Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van de Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
 
 ## Geëxporteerde gegevens {#exported-data}
 
 Voor [!DNL SFTP] doelen, Platform maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor segmentactivering.
 
-## IP adres lijst van gewenste personen
+## IP adres lijst van gewenste personen {#ip-address-allow-list}
 
 Zie [IP adres lijst van gewenste personen voor bestemmingen SFTP](ip-address-allow-list.md) als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.

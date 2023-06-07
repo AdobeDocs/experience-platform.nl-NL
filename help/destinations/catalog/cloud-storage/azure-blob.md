@@ -2,9 +2,9 @@
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om regelmatig CSV-gegevensbestanden uit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,11 @@ Verbeteringen in de nieuwe [!DNL Azure Blob] bestemmingskaart omvat:
 ## Overzicht {#overview}
 
 [!DNL Azure Blob] (hierna [!DNL Blob]) is Microsoft-oplossing voor objectopslag voor de cloud. Deze zelfstudie bevat stappen voor het maken van een [!DNL Blob] bestemming die het [!DNL Platform] gebruikersinterface.
+
+## Verbinding maken met uw [!UICONTROL Azure Blob] opslag via API of UI {#connect-api-or-ui}
+
+* Als u verbinding wilt maken met uw [!UICONTROL Azure Blob] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!UICONTROL Azure Blob] opslagplaats programmatically, lees de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
 
 ## Aan de slag
 
@@ -79,7 +84,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Connection string]**: de verbindingstekenreeks is vereist voor toegang tot gegevens in uw blob-opslag. De [!DNL Blob] patroon verbindingstekenreeks begint met: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
-   * Voor meer informatie over het configureren van uw [!DNL Blob] verbindingstekenreeks, zie [Een verbindingstekenreeks configureren voor een Azure-opslagaccount](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in de documentatie van Microsoft.
+   * Voor meer informatie over het configureren van uw [!DNL Blob] verbindingstekenreeks, zie [Een verbindingstekenreeks configureren voor een Azure-opslagaccount](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in de documentatie van Microsoft.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
    ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -112,7 +117,10 @@ Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](
 
 ## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
 
-Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van de Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
 
 ## Geëxporteerde gegevens {#exported-data}
 

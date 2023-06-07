@@ -2,9 +2,9 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,11 @@ Verbeteringen in de nieuwe [!DNL Amazon S3] bestemmingskaart omvat:
 ## Overzicht {#overview}
 
 Een live uitgaande verbinding maken met uw [!DNL Amazon S3] opslag om periodiek gegevensbestanden van Adobe Experience Platform naar uw eigen S3 emmers uit te voeren.
+
+## Verbinding maken met uw [!DNL Amazon S3] opslag via API of UI {#connect-api-or-ui}
+
+* Als u verbinding wilt maken met uw [!DNL Amazon S3] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!DNL Amazon S3] opslagplaats programmatically, lees de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -132,7 +137,10 @@ Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](
 
 ## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
 
-Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees [zelfstudie over exportgegevensbestanden](/help/destinations/ui/export-datasets.md).
+Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van de Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
 
 ## Geëxporteerde gegevens {#exported-data}
 
