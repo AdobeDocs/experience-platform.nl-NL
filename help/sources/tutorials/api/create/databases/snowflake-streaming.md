@@ -3,7 +3,7 @@ title: Sluit uw Snowflake-streamingaccount aan op Adobe Experience Platform
 description: Leer hoe u Adobe Experience Platform kunt verbinden met Snowflake-streaming met behulp van de Flow Service API.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 8bc232034301fa713f61bd3f11fbde122afcdcf9
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* De [!DNL Snowflake] streamingbron is in bèta. Lees de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
->* De [!DNL Snowflake] De streamingbron is beschikbaar in de broncatalogus voor klanten die Real-Time CDP Ultimate hebben aangeschaft.
+>* API-ondersteuning voor de [!DNL Snowflake] De streamingbron is alleen beschikbaar voor klanten die Real-Time CDP Ultimate hebben aangeschaft.
 
 
 Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding en het streamen van gegevens vanuit uw [!DNL Snowflake] account aan Adobe Experience Platform met behulp van de [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
