@@ -3,7 +3,7 @@ title: Amazon-advertenties
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, boekverkopers, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
+source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 0%
@@ -81,9 +81,11 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Amazon Ads Advertiser ID]**: Selecteer de id voor het Amazon Ads-doelaccount dat voor het doel wordt gebruikt.
+
 >[!NOTE]
 >
 >Nadat u de doelconfiguratie hebt opgeslagen, kunt u de Adobe Advertiser-id voor Amazon Ads niet meer wijzigen, zelfs niet als u de verificatie opnieuw uitvoert via uw Amazon-account. Als u een andere advertentie-ID voor Amazon Ads wilt gebruiken, moet u een nieuwe doelverbinding maken.
+
 * **[!UICONTROL Advertiser Region]**: Selecteer het juiste gebied waarin uw adverteerder wordt gehost. Ga voor meer informatie over de markten die door elke regio worden ondersteund naar de [Amazon Ads-documentatie](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
@@ -136,7 +138,7 @@ Raadpleeg de volgende Help-bronnen voor Amazon Ads voor aanvullende Help-documen
 
 * [Amazon DSP Help Center](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
-### Changelog {#changelog}
+## Changelog {#changelog}
 
 Deze sectie vangt de functionaliteit en de significante documentatieupdates aan deze bestemmingsschakelaar worden aangebracht die.
 
@@ -144,7 +146,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| Mei 2023 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde ondersteuning voor selectie van advertentiegebied in de workflow van de doelverbinding.</li><li>Bijgewerkte documentatie waarin de toevoeging van de selectie van het advertentiegebied wordt weergegeven. Raadpleeg voor meer informatie over het selecteren van het juiste gebied Advertiser de [Amazon-documentatie](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| Mei 2023 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde ondersteuning voor selectie van advertentiegebied in het dialoogvenster [workflow voor doelverbinding](#destination-details).</li><li>Bijgewerkte documentatie waarin de toevoeging van de selectie van het advertentiegebied wordt weergegeven. Raadpleeg voor meer informatie over het selecteren van het juiste gebied Advertiser de [Amazon-documentatie](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Maart 2023 | Eerste release | Oorspronkelijke doelversie en gepubliceerde documentatie. |
 
 {style="table-layout:auto"}
