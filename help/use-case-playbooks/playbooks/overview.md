@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Overzicht van afspeelboeken
+title: Overzicht van afspeelboeken met hoofdletters en kleine letters gebruiken
 description: Leer hoe u de functie Hoofdletters gebruiken in Experience Platform kunt gebruiken om aan de slag te gaan met verschillende gebruikssituaties voor marketingdoeleinden
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 0%
 Wat u in deze documentatiehandleiding zult vinden:
 
 * **[Overzicht van afspeelboeken met gebruiksscenario&#39;s](#overview)**
-* [Afspeelboeken weergeven en elementen genereren](ui-guide.md#view-playbook-generate-assets)
-* [Een instantie van een afspeelboek inschakelen, gebruiken en opnieuw gebruiken ](ui-guide.md#enable-playbook)
+* [De juiste afspeelboek ontdekken](/help/use-case-playbooks/playbooks/discover.md)
+* [Afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Problemen oplossen en bekende beperkingen](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -46,9 +46,9 @@ Creeer een geval van playbook om specifieke activa zoals schema&#39;s, segmenten
 
 Sommige [!UICONTROL Use Case Playbooks] zijn aangepast aan CDP-gebruiksgevallen in realtime, terwijl andere het meest geschikt zijn voor klanten die Journey Optimizer gebruiken. Blader in de catalogus naar de afspeelboeken die het meest geschikt zijn voor uw product en gebruik.
 
-## UI-hulplijn
+## UI-hulplijnen
 
-Nadat u de gewenste versie van het afspeelboek hebt gekozen, selecteert u deze in de gebruikersinterface en gaat u ermee aan de slag. Lees de UI-handleiding op [afspeelboeken inschakelen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/ui-guide.md) voor volledige informatie over het maken van instanties en het optimaal benutten van een afspeelboek.
+Nadat u de gewenste versie van het afspeelboek hebt gekozen, selecteert u deze in de gebruikersinterface en gaat u ermee aan de slag. De UI-hulplijnen lezen op [hoe te om juiste playbook te ontdekken](/help/use-case-playbooks/playbooks/discover.md) voor u en [afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md) voor volledige informatie over het maken van instanties en het optimaal benutten van een afspeelboek.
 
 ## Problemen oplossen en bekende beperkingen
 
