@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,19 @@ Afhankelijk van of u deel uitmaakt van de bètaversie voor het toestemmingsbelei
 
 * Als u geen deel uitmaakt van de bètaversie, wordt u onmiddellijk naar de werkstroom gebracht voor [invoering van een beleid voor gegevensbeheer](#create-governance-policy).
 * Als u deel uitmaakt van de bètaversie, biedt een dialoogvenster een extra optie voor [een beleid voor instemming ontwikkelen](#consent-policy).
-   ![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
+
+### Beleid voor gegevensbeheer en instemming samen gebruiken {#combine-policies}
+
+>[!NOTE]
+>
+>Het beleid voor toestemming is momenteel alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Adobe Privacy &amp; Security Shield hebben aangeschaft.
+
+Het beleid van bestuur en toestemming kan samen worden gebruikt om robuuste regels te creëren voor het besturen van publiek dat aan een bestemming wordt toegewezen. Het beleid van de toestemming is inclusief van aard, wat betekent zij dicteren welke profielen in elke marketing ervaring kunnen worden omvat. Omgekeerd sluit het governancebeleid het gebruik van specifieke gelabelde kenmerken uit dat dit voor activering wordt geconfigureerd.
+
+Door dit gedrag te gebruiken, kunt u opstelling een combinatie beleid en toestemmingsregels die de correcte profielen omvatten, maar u verhindert om gegevens te omvatten die tegen uw vastgestelde organisatorische regels gaan. Een voorbeeldscenario zou zijn, waarbij u gevoelige gegevens wilt uitsluiten van opname, maar nog wel geconverteerde gebruikers voor marketing via sociale media kunt aanwijzen. De noodzakelijke stappen voor dit scenario worden geschetst in hieronder informatie.
+
+![Een infografische beschrijving van de stappen die moeten worden gezet om het beleid inzake governance en instemming samen te gebruiken om robuuste regels voor het bestuur van het publiek te creëren.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Een beleid voor gegevensbeheer maken {#create-governance-policy}
 

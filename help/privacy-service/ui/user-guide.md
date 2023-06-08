@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Het dashboard voor de [!DNL Privacy Service] De gebruikersinterface bevat twee w
 
 Taken voor elk type regelgeving worden afzonderlijk bijgehouden. Als u wilt schakelen tussen regelgevingstypen, selecteert u de optie **[!UICONTROL Regulation Type]** en selecteer de gewenste verordening in de lijst.
 
-![Vervolgkeuzelijst Type](../images/user-guide/regulation.png)
+![De console van de Privacy Service met de drop-down van het Type van Reglement.](../images/user-guide/regulation.png)
 
 Als u het regulatietype wijzigt, wordt het dashboard bijgewerkt en worden alle bewerkingen, filters, widgets en dialoogvensters voor het creëren van werkgelegenheid weergegeven die van toepassing zijn op de geselecteerde verordening.
 
