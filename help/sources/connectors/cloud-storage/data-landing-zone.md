@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bron gegevenslandingszone
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden bij het
 - Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Daarnaast zijn er sommige ASCII- of Unicode-tekens, zoals besturingstekens (zoals `0x00` tot `0x1F`, `\u0081`, enzovoort) zijn ook niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, punt 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
 
-## De inhoud van uw [!DNL Data Landing Zone]
+## De inhoud van uw gegevenslandingszone beheren{#manage-the-contents-of-your-data-landing-zone}
 
 U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container.
 
@@ -162,3 +162,8 @@ In de onderstaande documentatie vindt u informatie over de manier waarop u gegev
 
 - [Verbinden [!DNL Data Landing Zone] naar Platform met behulp van de gebruikersinterface](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met Experience Platform via de [!DNL Data Landing Zone]. De enige ondersteunde toegangsmethoden zijn de vermelde methoden [hier](#manage-the-contents-of-your-data-landing-zone).
+
