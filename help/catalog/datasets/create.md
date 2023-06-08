@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een gegevensset maken met API's
 description: Dit document bevat algemene stappen voor het maken van een gegevensset met Adobe Experience Platform API's en het vullen van de gegevensset met behulp van een bestand.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1303'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 >
 >Voor meer informatie over sandboxen in [!DNL Platform], zie de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
-
-* Inhoudstype: application/json
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra `Content-Type: application/json` header. Voor JSON+PATCH-aanvragen `Content-Type` moeten `application/json-patch+json`.
 
 ## Tutorial
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject met details van de nieuwe batch, inclusief de nieuwe batch `id`, een alleen-lezen tekenreeks die door het systeem wordt gegenereerd.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject. Het reactieobject bestaat uit een array met de id van de nieuwe batch in de indeling `"@/batches/{BATCH_ID}"`. De batch-id is een alleen-lezen, door het systeem gegenereerde tekenreeks die wordt gebruikt om naar de batch te verwijzen in API-aanroepen.
 
 ```JSON
 {
@@ -355,12 +353,12 @@ Een met succes voltooide partij keert een lege reactiekarakter en de Status 200 
 
 ## Inname van monitor
 
-Afhankelijk van de grootte van de gegevens, nemen de partijen variërende tijdsduur om in te nemen. U kunt de status van een batch controleren door een `batch` request parameter containing the batch&#39;s ID to a `GET /batches` verzoek. De API pollt de dataset voor de status van de partij van opname tot `status` in het antwoord staat voor voltooiing ( &quot; succes &quot; of &quot; mislukking &quot; ) .
+Afhankelijk van de grootte van de gegevens, nemen de partijen variërende tijdsduur om in te nemen. U kunt de status van een batch controleren door een batch-id aan een batch toe te voegen `GET /batches` verzoek.
 
 **API-indeling**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parameter | Beschrijving |

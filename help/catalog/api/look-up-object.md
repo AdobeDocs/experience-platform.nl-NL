@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een catalogusobject opzoeken
 description: Als u de unieke id voor een specifiek catalogusobject kent, kunt u een verzoek uitvoeren om de details van dat object weer te geven.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -28,16 +28,16 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt ophalen. |
 
 **Verzoek**
 
-Het volgende verzoek wint een dataset door zijn identiteitskaart terug, die zijn terugkeert `name`, `description`, `state`, `tags`, en `files` eigenschappen.
+Het volgende verzoek wint een dataset door zijn identiteitskaart terug, die zijn terugkeert `name`, `description`, `tags`, en `files` eigenschappen.
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,state,tags,files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,tags,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -53,7 +53,6 @@ Een succesvol antwoord keert de gespecificeerde dataset met slechts gevraagde te
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset",
         "description": "Sample dataset containing important data.",
-        "state": "DRAFT",
         "tags": {
             "adobe/pqs/table": [
                 "sample_dataset"

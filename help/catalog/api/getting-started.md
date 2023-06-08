@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-handleiding voor Catalogusservice
 description: Met de API voor catalogusservice kunnen ontwikkelaars metagegevens voor gegevenssets beheren in Adobe Experience Platform. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
@@ -63,6 +63,6 @@ Aangezien sommige query&#39;s een zware belasting voor de API kunnen betekenen, 
 
 Dit document bevatte de vereiste kennis die nodig was om oproepen te doen aan de [!DNL Catalog] API. U kunt nu aan de steekproefvraag verdergaan die in deze ontwikkelaarsgids wordt verstrekt en samen met hun instructies volgen.
 
-In de meeste voorbeelden in deze handleiding wordt gebruikgemaakt van de `/dataSets` , maar de beginselen kunnen worden toegepast op andere eindpunten binnen [!DNL Catalog] (zoals `/batches` en `/accounts`). Zie de [Referentie voor Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/) voor een volledige lijst van alle vraag en verrichtingen beschikbaar voor elk eindpunt.
+In de meeste voorbeelden in deze handleiding wordt gebruikgemaakt van de `/dataSets` , maar de beginselen kunnen worden toegepast op andere eindpunten binnen [!DNL Catalog] (zoals `/batches`). Zie de [Referentie voor Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/) voor een volledige lijst van alle vraag en verrichtingen beschikbaar voor elk eindpunt.
 
 Voor een stapsgewijze workflow die aantoont hoe de [!DNL Catalog] API is betrokken bij gegevensinvoer, raadpleeg de zelfstudie over [een gegevensset maken](../datasets/create.md).

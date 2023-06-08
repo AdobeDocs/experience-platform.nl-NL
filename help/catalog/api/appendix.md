@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bijlage Catalog Service API-handleiding
 description: Dit document bevat aanvullende informatie die u helpt bij het werken met de Catalog-API in Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Dit document bevat aanvullende informatie om u te helpen met de [!DNL Catalog] A
 
 Sommige [!DNL Catalog] objecten kunnen met andere [!DNL Catalog] objecten. Alle velden die vooraf zijn ingesteld door `@` in reactie op ladingen staan verwante objecten voor. De waarden voor deze velden hebben de vorm van een URI, die kan worden gebruikt in een afzonderlijke aanvraag voor een GET om de gerelateerde objecten op te halen die ze vertegenwoordigen.
 
-De voorbeelddataset die in het document op is teruggekeerd [het zoeken van een specifieke dataset](look-up-object.md) bevat een `files` veld met de volgende URI-waarde: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. De inhoud van de `files` U kunt dit veld weergeven door deze URI te gebruiken als het pad voor een nieuwe GET-aanvraag.
+De voorbeelddataset die in het document op is teruggekeerd [het zoeken van een specifieke dataset](look-up-object.md) bevat een `files` veld met de volgende URI-waarde: `"@/datasetFiles?datasetId={DATASET_ID}"`. De inhoud van de `files` U kunt dit veld weergeven door deze URI te gebruiken als het pad voor een nieuwe GET-aanvraag.
 
 **API-indeling**
 
@@ -37,7 +37,7 @@ In het volgende verzoek wordt de URI gebruikt die in de voorbeelddataset is opge
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/datasetFiles?datasetId={DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -88,90 +88,6 @@ Een geslaagde reactie retourneert een lijst met verwante objecten. In dit voorbe
     }
 }
 ```
-
-## Maak veelvoudige verzoeken in één enkele vraag
-
-Het worteleindpunt van [!DNL Catalog] API staat voor veelvoudige verzoeken toe om binnen één enkele vraag worden gemaakt. De aanvraaglading bevat een serie van voorwerpen die wat normaal individuele verzoeken vertegenwoordigen, die dan in orde worden uitgevoerd.
-
-Als deze verzoeken wijzigingen of toevoegingen zijn aan [!DNL Catalog] en een van de wijzigingen mislukt, worden alle wijzigingen ongedaan gemaakt.
-
-**API-indeling**
-
-```http
-POST /
-```
-
-**Verzoek**
-
-Het volgende verzoek leidt tot een nieuwe dataset, dan leidt tot verwante meningen voor die dataset. Dit voorbeeld toont het gebruik van malplaatjetaal aan toegangswaarden die in vorige vraag voor gebruik in verdere vraag zijn teruggekeerd.
-
-Als u bijvoorbeeld wilt verwijzen naar een waarde die is geretourneerd uit een vorige subaanvraag, kunt u een verwijzing maken in de indeling: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` waarbij `{REQUEST_ID}` is de door de gebruiker opgegeven id voor het subverzoek, zoals hieronder wordt getoond). U kunt naar elk kenmerk verwijzen dat beschikbaar is in de hoofdtekst van het reactieobject van een vorige subaanvraag door deze sjablonen te gebruiken.
-
->[!NOTE]
->
->Wanneer een uitgevoerde sub-request alleen de verwijzing naar een voorwerp terugkeert (zoals het gebrek voor de meeste POST en PUT verzoeken in Catalog API), wordt deze verwijzing aliased aan de waarde `id` en kan worden gebruikt zoals  `<<{OBJECT_ID}.id>>`.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '[
-    {
-      "id": "firstObjectId",
-      "resource": "/dataSets",
-      "method": "post",
-      "body": {
-        "type": "raw",
-        "name": "First Dataset"
-      }
-    }, 
-    {
-      "id": "secondObjectId",
-      "resource": "/datasetViews",
-      "method": "post",
-      "body": {
-        "status": "enabled",
-        "dataSetId": "<<firstObjectId.id>>"
-      }
-    }
-  ]'
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `id` | Door de gebruiker opgegeven id die aan het reactieobject is gekoppeld, zodat u verzoeken aan reacties kunt koppelen. [!DNL Catalog] slaat deze waarde niet op en retourneert deze gewoon in de reactie voor referentiedoeleinden. |
-| `resource` | Het bronnenpad ten opzichte van de hoofdmap van het [!DNL Catalog] API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Wanneer u PATCH of DELETE gebruikt als subaanvraag `method`, neemt u de object-id op in het bronnenpad. Niet verward te worden met de door de gebruiker opgegeven `id`, gebruikt het bronpad de id van het [!DNL Catalog] object zelf (bijvoorbeeld `resource: "/dataSets/1234567890"`). |
-| `method` | De naam van de methode (GET, PUT, POST, PATCH of DELETE) met betrekking tot de actie die in het verzoek wordt uitgevoerd. |
-| `body` | Het JSON-document dat normaal gesproken zou worden doorgegeven als de payload in een POST-, PUT- of PATCH-aanvraag. Deze eigenschap is niet vereist voor GET- of DELETE-aanvragen. |
-
-**Antwoord**
-
-Een succesvol antwoord retourneert een array met objecten die de `id` die u aan elke aanvraag hebt toegewezen, de HTTP-statuscode voor de individuele aanvraag en de reactie `body`. Aangezien de drie voorbeeldaanvragen allemaal bedoeld waren om nieuwe objecten te maken, worden `body` van elk object is een array die alleen de id bevat van het nieuwe object, zoals de standaard is met de meest succesvolle POST-reacties in [!DNL Catalog].
-
-```json
-[
-    {
-        "id": "firstObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSets/5be230aef5b02914cd52dbfa"
-        ]
-    },
-    {
-        "id": "secondObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSetViews/5be230aef5b02914cd52dbfb"
-        ]
-    }
-]
-```
-
-Wees voorzichtig bij het inspecteren van de reactie op een meervoudige aanvraag, aangezien u de code van elke individuele subaanvraag moet verifiëren en niet alleen op de HTTP-statuscode voor de aanvraag van de bovenliggende POST moet vertrouwen.  Het is mogelijk voor één enkel sub-verzoek om 404 (zoals een verzoek van de GET op een ongeldige middel) terug te keren terwijl het algemene verzoek 200 terugkeert.
 
 ## Aanvullende aanvraagheaders
 

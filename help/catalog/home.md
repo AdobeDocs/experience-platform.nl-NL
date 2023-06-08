@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Catalog Service
 description: Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de verbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -53,10 +53,7 @@ In de volgende tabel worden de verschillende objecttypen beschreven die worden o
 
 | Object | API-eindpunt | Definitie |
 |---|---|---|
-| Account | `/accounts` | Bij het maken van bronverbindingen moeten verificatiereferenties worden opgegeven. Een rekening vertegenwoordigt een inzameling van authentificatiegeloofsbrieven die werden gebruikt om een verbinding van een specifiek type tot stand te brengen. Elke verbinding heeft een reeks unieke parameters die door worden voortgeduurd [!DNL Catalog] en beveiligd in een [!DNL Azure Key Vault]. |
 | Batch | `/batches` | Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Een batchobject in [!DNL Catalog] schetst de de innamemetriek van de partij (zoals het aantal verwerkte verslagen of grootte op schijf) en kan verbindingen aan datasets, meningen, en andere middelen omvatten die door de partijverrichting werden beïnvloed. |
-| Verbinding | `/connections` | Een verbinding is één enkel geval van een bronschakelaar, uniek aan uw organisatie en gevormd gebruikend de aangewezen authentificatiereferenties voor het schakelaartype. |
-| Connector | `/connectors` | De schakelaars bepalen hoe de bronverbindingen gegevens van andere toepassingen van de Adobe (zoals Adobe Analytics en Adobe Audience Manager), derdewolkenopslagbronnen (zoals [!DNL Azure Blob], [!DNL Amazon S3], FTP-servers en SFTP-servers) en CRM-systemen van derden (zoals [!DNL Microsoft Dynamics] en [!DNL Salesforce]). |
 | Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. Zie de [Overzicht van gegevenssets](./datasets/overview.md) voor meer informatie . |
 | Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken waarop is opgeslagen [!DNL Platform]. Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
 

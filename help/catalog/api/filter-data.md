@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Catalogusgegevens filteren met zoekopdrachtparameters
 description: De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2099'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | Een geheel getal dat het aantal objecten aangeeft dat moet worden geretourneerd, van 1 tot en met 100. |
 
 **Verzoek**
@@ -79,7 +79,7 @@ Zelfs bij het filteren van het aantal objecten dat is geretourneerd met de opdra
 
 De `properties` parameterfilters reageren op objecten om alleen een set opgegeven eigenschappen te retourneren. De parameter kan worden ingesteld om een of meerdere eigenschappen te retourneren.
 
-De `properties` parameter accepteert alleen objecteigenschappen op hoofdniveau. Dit houdt in dat u voor het volgende voorbeeldobject filters kunt toepassen voor `name`, `description`, en `subItem`, maar NIET voor `sampleKey`.
+De `properties` parameter kan om het even welke eigenschappen van niveauobjecten goedkeuren. `sampleKey` kan worden geëxtraheerd met `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
 | `{OBJECT_ID}` | De unieke id van een specifieke [!DNL Catalog] object dat wordt opgehaald. |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OFFSET}` | Een geheel getal dat het aantal objecten aangeeft waarmee de reactie moet worden verschoven. |
 
 **Verzoek**
@@ -228,17 +228,6 @@ Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap. De
         },
         "name": "Sample Dataset",
         "description": "Same dataset containing sample data.",
-        "dule": {
-            "identity": [
-                "I1"
-            ]
-        },
-        "statsCache": {},
-        "state": "DRAFT",
-        "lastBatchId": "ca12b29612bf4052872edad59573703c",
-        "lastBatchStatus": "success",
-        "lastSuccessfulBatch": "ca12b29612bf4052872edad59573703c",
-        "namespace": "{NAMESPACE}",
         "createdUser": "{CREATED_USER}",
         "createdClient": "{CREATED_CLIENT}",
         "updatedUser": "{UPDATED_USER}",
@@ -264,7 +253,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | De naam van de tag waarop moet worden gefilterd. |
 | `{TAG_VALUE}` | De waarde van de tag waarop moet worden gefilterd. Ondersteunt jokertekens (`*`). |
 
@@ -304,8 +293,6 @@ Een succesvolle reactie keert een lijst van datasets terug die bevatten `sampleT
                     "Example tag value"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -327,8 +314,6 @@ Een succesvolle reactie keert een lijst van datasets terug die bevatten `sampleT
                     "2.0"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -375,8 +360,6 @@ Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die binnen he
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -387,8 +370,6 @@ Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die binnen he
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -412,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | De naam van een eigenschap waarop de resultaten moeten worden gesorteerd. |
 
 **Verzoek**
@@ -443,8 +424,6 @@ Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die worden ge
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -455,8 +434,6 @@ Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die worden ge
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
@@ -467,8 +444,6 @@ Een succesvol antwoord bevat een lijst met [!DNL Catalog] objecten die worden ge
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -499,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | De naam van de eigenschap waarop u wilt filteren. |
 | `{VALUE}` | Een eigenschapwaarde die bepaalt welke resultaten moeten worden opgenomen (of uitgesloten, afhankelijk van de query). |
 
@@ -531,8 +506,6 @@ Een succesvol antwoord bevat een lijst met gegevenssets, met uitzondering van ge
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -543,8 +516,6 @@ Een succesvol antwoord bevat een lijst met gegevenssets, met uitzondering van ge
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -553,7 +524,7 @@ Een succesvol antwoord bevat een lijst met gegevenssets, met uitzondering van ge
 
 De `property` De vraagparameter verstrekt meer flexibiliteit voor op bezit-gebaseerd filtreren dan eenvoudige filters. Naast het filtreren gebaseerd op of een bezit een specifieke waarde heeft, `property` parameter kan andere vergelijkingsoperatoren gebruiken (zoals &quot;more-than&quot; (`>`) en &quot;kleiner dan&quot; (`<`)) en reguliere expressies om te filteren op eigenschapswaarden. Het filter kan ook filteren op het al dan niet bestaan van een eigenschap, ongeacht de waarde ervan.
 
-De `property` parameter accepteert alleen objecteigenschappen op hoofdniveau. Dit houdt in dat u voor het volgende voorbeeldobject op eigenschap kunt filteren voor `name`, `description`, en `subItem`, maar NIET voor `sampleKey`.
+De `property` parameter kan om het even welke eigenschappen van niveauobjecten goedkeuren. `sampleKey` kan voor het filtreren worden gebruikt `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -575,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Een voorwaardelijke expressie die aangeeft voor welke eigenschap query moet worden uitgevoerd en hoe de waarde ervan moet worden geëvalueerd. Hieronder vindt u voorbeelden. |
 
 De waarde van de `property` parameter ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:
@@ -624,8 +595,6 @@ Een succesvolle reactie bevat een lijst met datasets waarvan de versienummers gr
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
@@ -636,8 +605,6 @@ Een succesvolle reactie bevat een lijst met datasets waarvan de versienummers gr
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
@@ -648,8 +615,6 @@ Een succesvolle reactie bevat een lijst met datasets waarvan de versienummers gr
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
