@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Aan de slag met Media Edge-API's
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 1%
 
 ---
@@ -206,6 +206,8 @@ In het bovenstaande voorbeeldverzoek is hetzelfde `sessionId` die in de vorige v
 
 Voor meer informatie over de parameters en voorbeelden van het eindpunt van het Begin van de Buffer, zie het dossier van de Rand van Media.
 
+De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
+
 ## Gebeurtenisverzoek afspelen
 
 De gebeurtenis Play wordt verzonden wanneer de mediaspeler de afspeelstatus wijzigt in een andere status, zoals &quot;buffering&quot;, &quot;gepauzeerd&quot; of &quot;fout&quot;. Als u een verzoek voor een Play-gebeurtenis wilt uitvoeren, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
 
 Zie het bestand Media Edge Swagger voor meer informatie over parameters en voorbeelden van het eindpunt Afspelen.
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-Voor meer informatie over Sessie Volledige eindpuntparameters en voorbeelden, zie het dossier van de Rand van Media.
+De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
 
 ## Antwoordcodes
 
