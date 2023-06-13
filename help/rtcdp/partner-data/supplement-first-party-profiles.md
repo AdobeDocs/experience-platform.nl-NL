@@ -4,9 +4,9 @@ description: Leer hoe te om eerste-partijprofielen met attributen van vertrouwde
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: c4f34afb7a05707ed9f62f09685ff50a1de2ef93
+source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -66,15 +66,21 @@ Lees de documentatiepagina&#39;s hieronder voor meer informatie:
 * [Overzicht van de [!UICONTROL XDM Individual Profile] class](/help/xdm/classes/individual-profile.md)
 * [Schema&#39;s maken en bewerken in de gebruikersinterface](/help/xdm/ui/resources/schemas.md)
 * [Groepen schemavelden maken en bewerken in de gebruikersinterface](/help/xdm/ui/resources/field-groups.md)
-* [Schema&#39;s maken en bewerken met de API](/help/xdm/api/schemas.md#create)
-* [Een bestaand schema bijwerken om veldgroepen toe te voegen met behulp van de API](/help/xdm/api/schemas.md#patch)
-* Koppeling maken naar nieuwe documentatiepagina van veldgroep wanneer deze bestaat
+
+<!--
+
+Commenting out links for now
+* [Create and edit schemas using the API](/help/xdm/api/schemas.md#create)
+* [Update an existing schema to add field groups using the API](/help/xdm/api/schemas.md#patch)
+* Link to new field group documentation page when it exists
+
+-->
 
 Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien u uw gegevensbeheerstrategie uitbreidt om dergegevens te omvatten die door de partner worden verstrekt. Verken de overwegingen in de documentatiekoppelingen hieronder:
 
-* (**Binnenkort beschikbaar**) Gegevens van derden in een aparte gegevensset houden, zodat het verwijderen en ongedaan maken van integraties eenvoudig is
-* (**Binnenkort beschikbaar**) Gebruik TTL op de dataset voor cliënten die de gegevenshygiëne toe:voegen-on hebben
-* (**Binnenkort beschikbaar**) Voorzichtigheid betrachten bij het maken van afgeleide gegevenssets die gegevens van derden opvragen, omdat de enige oplossing om de gegevens van derden te verwijderen, na elkaar bestaat uit het verwijderen van de gehele afgeleide gegevensset
+* (**Binnenkort beschikbaar**) Houd gegevens van derden in een aparte gegevensset, zodat u deze gegevens eenvoudig kunt verwijderen en integraties ongedaan kunt maken.
+* (**Binnenkort beschikbaar**) Gebruik Tijd-aan-levende (TTL) op de dataset voor cliënten die de toe:voegen-op van de gegevenshygiëne kochten.
+* (**Binnenkort beschikbaar**) Wees voorzichtig bij het maken van afgeleide gegevenssets die gegevens van derden opvragen, omdat de enige oplossing om de gegevens van derden te verwijderen, na elkaar is dat de gehele afgeleide gegevensset wordt verwijderd.
 
 >[!TIP]
 >
@@ -111,7 +117,7 @@ Sommige geadviseerde bronschakelaars voor dit doel zouden kunnen zijn:
 
 Houd rekening met de volgende beperkingen wanneer u het op deze pagina beschreven gebruiksgeval bekijkt:
 
-Als u om Partner IDs te gebruiken selecteert, merk op dat deze niet worden gebruikt in om uw te bouwen [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md).
+Als u om Partner IDs te gebruiken selecteert, ben zich ervan bewust dat deze IDs niet wanneer het bouwen van uw wordt gebruikt [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 
