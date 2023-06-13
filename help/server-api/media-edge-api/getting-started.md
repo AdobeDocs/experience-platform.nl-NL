@@ -3,8 +3,7 @@ keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Aan de slag met Media Edge-API's
-exl-id: null
-source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
+source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 1%

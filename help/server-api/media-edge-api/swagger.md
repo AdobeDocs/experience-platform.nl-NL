@@ -3,8 +3,7 @@ keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Met Media Edge-API's kunnen ontwikkelaars gegevens verzamelen voor Media Edge Analytics en Customer Journey Analytics.
-exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
