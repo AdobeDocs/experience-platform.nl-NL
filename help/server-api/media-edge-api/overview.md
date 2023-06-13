@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Media Edge-API's
 description: Overzicht van de mediarand-API's.
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '391'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Media Edge-API&#39;s zijn gebaseerd op de Adobe Experience Platform (AEP) en lev
 
 ## Gegevensstromen voor het bijhouden van media optimaliseren
 
-Beide [Media-verzameling](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) API&#39;s en Media Edge API&#39;s bieden mediatrackinggegevens als RESTful-services. Maar het gebruik van de Media Edge-service heeft de volgende voordelen:
+Beide [Media Collection-API&#39;s](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) en Media Edge-API&#39;s bieden mediatrackinggegevens als RESTful-services. Maar het gebruik van de Media Edge-service heeft de volgende voordelen:
 
 * Het is de eenvoudigste manier om XDM-schema&#39;s in uw gegevensstroom op te nemen.
 
@@ -33,14 +33,14 @@ Beide [Media-verzameling](https://experienceleague.adobe.com/docs/media-analytic
 
 * Mediagebeurtenissen worden het meest efficiënt bijgehouden.
 
-In de volgende tabel worden de beste Adobe API-service voor verschillende gevallen van mediaverlichting weergegeven:
+In de volgende tabel ziet u een mogelijke Adobe API-service voor verschillende gevallen van mediaverlichting:
 
-| Gebruiksscenario | Platform | API-service |
-| -------- | ------ | ---------- |
-| CJA | AEP | Mediarand |
-| CDP + CJA | AEP | Mediarand |
-| Analyse + CJA | AEP | Mediarand |
-| Verouderde analyse | N.v.t. | Media-verzameling |
+| Gebruiksscenario | API-service |
+| -------- | ------ |
+| AEP-oplossing (CJA, RTDCP, AJO, enz.) | Mediarand |
+| CDP + CJA | Mediarand |
+| Adobe Analytics + AEP-oplossing | Mediarand |
+| Alleen Adobe Analytics (al gevolgd) | Media-verzameling |
 
 >[!NOTE]
 >
