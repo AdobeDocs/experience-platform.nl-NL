@@ -5,7 +5,7 @@ title: Gegevens in Experience Platform opnemen
 type: Tutorial
 description: Met Adobe Experience Platform kunt u gegevens eenvoudig importeren als batchbestanden in de vorm van Parquet-bestanden of gegevens die overeenkomen met een bekend XDM-schema (Experience Data Model).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Als u wilt beginnen met het toevoegen van gegevens aan de gegevensset, klikt u o
 
 ![Tabblad Gegevens toevoegen](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## Een bestand uploaden
+## Een bestand uploaden {#upload-file}
 
 Nadat u een Parquet- of JSON-bestand dat u wilt uploaden hebt gesleept en neergezet (of door een Parquet- of JSON-bestand hebt gebladerd en geselecteerd), [!DNL Platform] zal onmiddellijk beginnen het dossier te verwerken en **[!UICONTROL Uploading]** wordt weergegeven op het tabblad **[!UICONTROL Add Data]** tabblad met de voortgang van het uploaden van bestanden.
 

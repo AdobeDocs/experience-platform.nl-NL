@@ -1,17 +1,17 @@
 ---
-title: (Bèta) Voeg eerste-partijprofielen met partner-verstrekte attributen toe
-description: Leer hoe te om eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aan te vullen om uw gegevensstichting te verbeteren, nieuwe inzichten in uw klantenbasis, en betere publieksoptimalisering te verkrijgen
+title: (Bèta) Supplement First-party Rrofiles met Partner-Geleverde Attributen
+description: Leer hoe te om eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aan te vullen om uw gegevensstichting te verbeteren, nieuwe inzichten in uw klantenbasis, en betere publieksoptimalisering te verkrijgen.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
+source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
 
-# Voeg eerste-partijprofielen met partner-verstrekte attributen toe
+# Voeg Eerste-partijProfielen met partner-Geleverde Attributen toe
 
 >[!AVAILABILITY]
 >
@@ -40,7 +40,7 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 
 1. Als **klant**, geeft u licenties voor kenmerken van de **gegevenspartner**.
 2. Als **klant**, breidt u uw profielgegevens en governancemodel uit om **partner**-provided attributes.
-3. Als **klant** Aan boord gaat u het publiek dat u wilt verrijken met de gegevenspartner. Over het algemeen worden deze doelgroepen afgezet tegen invoer-id&#39;s, zoals PII-elementen (Personeel Identified Information), zoals e-mail, naam, adres of andere elementen.
+3. Als **klant**, bevindt u zich aan boord van het publiek dat u wilt verrijken met de gegevenspartner. Over het algemeen worden deze doelgroepen afgezet tegen invoer-id&#39;s, zoals PII-elementen (Personeel Identified Information), zoals e-mail, naam, adres of andere elementen.
 4. De **partner** voegt gelicentieerde kenmerken toe voor de profielen waarmee ze kunnen overeenkomen. Optioneel: [Partner-id](/help/identity-service/namespaces.md) kan in partner worden omvat en worden opgenomen scoped identiteitskaart namespace.
 5. Als **klant**, laadt u kenmerken van de gegevenspartner in klantprofielen in Real-Time CDP.
 
@@ -50,15 +50,15 @@ Lees de onderstaande secties door, die koppelingen naar verdere documentatie bev
 
 ### De attributen van de vergunning van de partner {#license-attributes-from-partner}
 
-Deze stap wordt behandeld in de eerste vereisten en Adobe veronderstelt dat u de juiste contractuele overeenkomsten met vertrouwde gegevensverkopers hebt om uw eerste partijprofielen te verhogen.
+Deze stap wordt behandeld in [voorwaarden](#prerequisites-and-planning) en Adobe gaat ervan uit dat u de juiste contractuele overeenkomsten hebt met vertrouwde gegevensleveranciers om uw first-party profielen te verhogen.
 
 ### Breid uw profielgegevens en governancemodel uit om partner-verstrekte attributen aan te passen. {#extend-governance-model}
 
 Op dit punt, breidt u uw gegevensbeheerkader in Real-Time CDP uit om partner-verstrekte attributen aan te passen.
 
-U kunt nu een nieuw schema maken van de **[!UICONTROL XDM Individual Profile]** klasse, of breid een bestaand schema van het zelfde type uit om partner-verstrekte attributen te omvatten. Adobe adviseert sterk om een nieuw schema met een nieuwe reeks gebiedsgroepen te creëren die de extra attributen van de gegevensverkoper het best vertegenwoordigen. Dit zorgt ervoor dat uw gegevensschema&#39;s schoon zijn en van elkaar onafhankelijk kunnen evolueren.
+U kunt nu een nieuw schema maken van de **[!UICONTROL XDM Individual Profile]** klasse, of breid een bestaand schema van het zelfde type uit om partner-verstrekte attributen te omvatten. Adobe adviseert sterk om een nieuw schema met een nieuwe reeks gebiedsgroepen te creëren die de extra attributen van de gegevensverkoper het best vertegenwoordigen. Dit zorgt ervoor dat uw gegevensschema&#39;s schoon zijn en onafhankelijk van elkaar kunnen evolueren.
 
-Om partner-verstrekte attributen in een schema te omvatten, kunt u of een nieuwe gebiedsgroep met de attributen tot stand brengen die u verwacht, of u kunt één van de uit-van-de-doos gebiedsgroepen gebruiken die door Adobe worden verstrekt.
+Om partner-verstrekte attributen in een schema te omvatten, kunt u of een nieuwe gebiedsgroep met de attributen tot stand brengen die u verwacht, of u kunt één van de preconfigured gebiedsgroepen gebruiken die door Adobe worden verstrekt.
 
 Lees de documentatiepagina&#39;s hieronder voor meer informatie:
 
@@ -79,7 +79,7 @@ Commenting out links for now
 Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien u uw gegevensbeheerstrategie uitbreidt om dergegevens te omvatten die door de partner worden verstrekt. Verken de overwegingen in de documentatiekoppelingen hieronder:
 
 * (**Binnenkort beschikbaar**) Houd gegevens van derden in een aparte gegevensset, zodat u deze gegevens eenvoudig kunt verwijderen en integraties ongedaan kunt maken.
-* (**Binnenkort beschikbaar**) Gebruik Tijd-aan-levende (TTL) op de dataset voor cliënten die de toe:voegen-op van de gegevenshygiëne kochten.
+* (**Binnenkort beschikbaar**) Gebruik [Tijd-aan-levende (TTL)](/help/hygiene/ui/dataset-expiration.md) op de gegevensset voor klanten die de gegevenshygiëneinvoegtoepassing hebben aangeschaft.
 * (**Binnenkort beschikbaar**) Wees voorzichtig bij het maken van afgeleide gegevenssets die gegevens van derden opvragen, omdat de enige oplossing om de gegevens van derden te verwijderen, na elkaar is dat de gehele afgeleide gegevensset wordt verwijderd.
 
 >[!TIP]
@@ -87,10 +87,9 @@ Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien 
 >Als u ervoor kiest om uw klantprofielen aan te vullen met een op personen gebaseerde id van de gegevensleverancier, kunt u een nieuw identiteitstype van het type maken **[[!UICONTROL Partner ID]](/help/identity-service/namespaces.md)**.
 >
 >Lees meer over Partner ID in [sectie met identiteitstypen](/help/identity-service/namespaces.md).
-> Meer informatie [identiteitsvelden definiëren](/help/xdm/ui/fields/identity.md) in de gebruikersinterface van het Experience Platform.
+>Meer informatie [identiteitsvelden definiëren](/help/xdm/ui/fields/identity.md) in de gebruikersinterface van het Experience Platform.
 
-
-### Exporteer het publiek dat u wilt verrijken met PII (Personal Identified Information) of Hashed-PII {#export-audiences}
+### Exporteer het publiek dat u wilt verrijken wanneer u PII (Personal Identified Information) of PII (hashed-PII) uitschakelt {#export-audiences}
 
 Exporteer het publiek dat de partner moet verrijken. Gebruik de bestemmingen van de wolkenopslag die door CDP in real time, zoals Amazon S3 of SFTP worden verstrekt. Lees de volgende documentatiepagina&#39;s om deze stap te voltooien:
 
@@ -99,10 +98,9 @@ Exporteer het publiek dat de partner moet verrijken. Gebruik de bestemmingen van
 * Procedure [verbinding maken met een doel](/help/destinations/ui/connect-destination.md)
 * Procedure [gegevens exporteren naar een locatie voor cloudopslag](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### Uw gegevenspartner voegt erkende attributen voor de profielen toe die zij kunnen aanpassen {#partner-appends-attributes}
 
-### De partner voegt erkende attributen voor de profielen toe die zij tegenover kunnen aanpassen {#partner-appends-attributes}
-
-In deze stap, voegt de partner vergunning gegeven attributen voor het uitgevoerde publiek toe. De uitvoer is over het algemeen beschikbaar als een plat bestand dat weer in Real-Time CDP kan worden ingevoerd.
+In deze stap, voegt uw gegevenspartner vergunning gegeven attributen voor het uitgevoerde publiek toe. De uitvoer is over het algemeen beschikbaar als een plat bestand dat weer in Real-Time CDP kan worden ingevoerd. Meer informatie over [bestanden opnemen in Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP voegt verrijkte kenmerken toe aan het klantprofiel {#ingest-data}
 
@@ -117,7 +115,7 @@ Sommige geadviseerde bronschakelaars voor dit doel zouden kunnen zijn:
 
 Houd rekening met de volgende beperkingen wanneer u het op deze pagina beschreven gebruiksgeval bekijkt:
 
-Als u om Partner IDs te gebruiken selecteert, ben zich ervan bewust dat deze IDs niet wanneer het bouwen van uw wordt gebruikt [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md).
+* Als u om Partner IDs te gebruiken selecteert, ben zich ervan bewust dat deze IDs niet wanneer het bouwen van uw wordt gebruikt [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 
