@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen
 title: Privacy Request-verwerking in Identity-service
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor identiteitsdiensten.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 1930d235b57b59f9967f9f53c8c1faf25cea9051
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -110,10 +110,10 @@ Afhankelijk van of u ook Real-Time Klantprofiel (`ProfileService`) en het datump
 
 | Producten inbegrepen | Effecten |
 | --- | --- |
-| `identity` alleen | De identiteitsgrafiek die aan de verstrekte identiteit is gekoppeld, wordt onmiddellijk verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd. De gegevens die aan het profiel zijn gekoppeld, blijven ook in het datumpeer staan. |
-| `identity` en `ProfileService` | De identiteitsgrafiek en het bijbehorende profiel worden onmiddellijk verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. De gegevens die aan het profiel zijn gekoppeld, blijven in het datumpeer. |
-| `identity` en `aepDataLake` | De identiteitsgrafiek die aan de verstrekte identiteit is gekoppeld, wordt onmiddellijk verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
-| `identity`, `ProfileService`, en `aepDataLake` | De identiteitsgrafiek en het bijbehorende profiel worden onmiddellijk verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
+| `identity` alleen | De opgegeven identiteit wordt onmiddellijk verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd. De gegevens die aan het profiel zijn gekoppeld, blijven ook in het datumpeer staan. |
+| `identity` en `ProfileService` | De opgegeven identiteit wordt verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. De gegevens die aan het profiel zijn gekoppeld, blijven in het datumpeer. |
+| `identity` en `aepDataLake` | De opgegeven identiteit wordt onmiddellijk verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
+| `identity`, `ProfileService`, en `aepDataLake` | De opgegeven identiteit wordt verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
 
 Zie de [[!DNL Privacy Service] documentatie](../privacy-service/home.md#monitor) voor meer informatie over het bijhouden van de taakstatus.
 
