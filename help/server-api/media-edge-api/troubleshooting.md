@@ -3,9 +3,9 @@ keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Handleiding voor probleemoplossing voor mediarand-API's
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Deze gids verstrekt het oplossen van problemen instructies voor de behandeling v
 
 ## Foutreerhulpmiddelen gebruiken
 
-Om mislukte reacties te helpen oplossen, gaan fouten vergezeld van een antwoordinstantie die een foutobject bevat. In dit geval bevat de responsinstantie probleemdetails, zoals gedefinieerd door [RFC 7807 — Probleemdetails voor HTTP API&#39;s](https://datatracker.ietf.org/doc/html/rfc7807). Om de gebruikerservaring van de API te verbeteren, zijn de probleemdetails beschrijvend (de details van de seriesleutels worden getoond gebruikend JsonPath aan het ontbrekende of ongeldige gebied). Ze zijn ook cumulatief (alle ongeldige velden worden in dezelfde aanvraag gerapporteerd).
+Om het oplossen van problemen te helpen onsuccesvolle reacties problemen oplossen, gaan de fouten vergezeld van een antwoordlichaam dat een foutenvoorwerp bevat. In dit geval bevat de responsinstantie probleemdetails, zoals gedefinieerd door [RFC 7807 — Probleemdetails voor HTTP API&#39;s](https://datatracker.ietf.org/doc/html/rfc7807). Om de gebruikerservaring van de API te verbeteren, zijn de probleemdetails beschrijvend (de details van de seriesleutels worden getoond gebruikend JsonPath aan het ontbrekende of ongeldige gebied). Ze zijn ook cumulatief (alle ongeldige velden worden in dezelfde aanvraag gerapporteerd).
 
 
 ## Het valideren van de sessie start
@@ -110,17 +110,17 @@ In de volgende tabel vindt u instructies voor de verwerking van statusresponsfou
 
 | Foutcode | Beschrijving |
 | ---------- | --------- |
-| 4xx onjuist verzoek | De meeste 4xx-fouten (bijvoorbeeld 400, 403 en 404) mogen niet opnieuw worden geprobeerd door de gebruiker. Het opnieuw proberen van het verzoek zal niet in een succesvolle reactie resulteren. De gebruiker moet de fout verhelpen voordat hij of zij de aanvraag opnieuw probeert. Gebeurtenissen die resulteren in 4xx-statuscodes worden niet bijgehouden, wat de nauwkeurigheid van gegevens kan beïnvloeden in sessies die 4xx-reacties hebben ontvangen. |
-| 410 Gone | Geeft aan dat de sessie die bedoeld is voor &#39;tracking&#39; niet meer wordt berekend op de server. De meest voorkomende reden hiervoor is dat de zitting langer is dan 24 uur. Na ontvangst 410, probeer om een nieuwe zitting te beginnen en het te volgen. |
+| 4xx onjuist verzoek | De meeste 4xx-fouten (bijvoorbeeld `400`, `403`, `404`) mag niet opnieuw worden geprobeerd door de gebruiker. Het opnieuw proberen van het verzoek zal niet in een succesvolle reactie resulteren. De gebruiker moet de fout verhelpen voordat hij of zij de aanvraag opnieuw probeert. Gebeurtenissen die resulteren in 4xx-statuscodes worden niet bijgehouden, wat de nauwkeurigheid van gegevens kan beïnvloeden in sessies die 4xx-reacties hebben ontvangen. |
+| 410 Gone | Geeft aan dat de sessie die bedoeld is voor &#39;tracking&#39; niet meer wordt berekend op de server. De meest voorkomende reden hiervoor is dat de zitting langer is dan 24 uur. Na ontvangst van een `410`, probeer een nieuwe sessie te starten en volg deze. |
 | 429 Te veel verzoeken | Deze antwoordcode wijst erop dat de server tarief beperkt de verzoeken is. Volg de **Opnieuw proberen na** de instructies in de reactiekop zorgvuldig. Alle reacties die teruglopen, moeten de HTTP-antwoordcode bevatten met een domeinspecifieke foutcode. |
-| 500 Interne serverfout | 500 fouten zijn algemene, catch-all fouten. 500 fouten moeten niet opnieuw worden geprobeerd, behalve 502, 503 en 504. |
-| 502 Onjuiste gateway | Deze foutcode geeft aan dat de server, die als gateway fungeert, een ongeldige reactie van upstream-servers heeft ontvangen. Dit kan gebeuren door netwerkproblemen tussen servers. Het tijdelijke netwerkprobleem kan zichzelf oplossen zodat het opnieuw proberen van het verzoek het probleem kan oplossen. |
-| Service niet beschikbaar | Deze foutcode geeft aan dat de service tijdelijk niet beschikbaar is. Dit kan gebeuren tijdens onderhoudsperioden. Ontvangers van 503 fouten kunnen het verzoek opnieuw proberen, maar moeten ook de **Opnieuw proberen na** koptekstinstructies. |
+| 500 Interne serverfout | `500` Fouten zijn algemene, &#39;catch-all&#39;-fouten. `500` fouten moeten niet opnieuw worden geprobeerd, behalve voor `502`, `503` en `504`. |
+| 502 Onjuiste gateway | Deze foutcode geeft aan dat de server, die als gateway fungeert, een ongeldige reactie van upstream-servers heeft ontvangen. Dit kan gebeuren door netwerkproblemen tussen servers. Het tijdelijke netwerkprobleem kan zichzelf oplossen, dus het opnieuw proberen van het verzoek kan het probleem oplossen. |
+| 503 Service niet beschikbaar | Deze foutcode geeft aan dat de service tijdelijk niet beschikbaar is. Dit kan gebeuren tijdens onderhoudsperioden. Ontvangers van `503` De fouten kunnen het verzoek opnieuw proberen, maar zouden ook moeten volgen **Opnieuw proberen na** koptekstinstructies. |
 
 
-Gebeurtenissen in de wachtrij wanneer de reacties op de sessie traag zijn
+## Gebeurtenissen in de wachtrij wanneer de reacties op de sessie traag zijn
 
-Nadat een mediatrackingsessie is gestart, kan de mediaspeler branden voordat het antwoord op de sessie (met de parameter Session ID) vanaf de achtergrond wordt geretourneerd. Als dit gebeurt, moet uw toepassing alle volgende gebeurtenissen in de wachtrij plaatsen die tussen de aanvraag voor de sessie en het antwoord daarop aankomen. Wanneer de reactie van Sessies aankomt, moet u eerst gebeurtenissen in de wachtrij verwerken, waarna u kunt beginnen met het verwerken van live gebeurtenissen.
+Nadat een mediatrackingsessie is gestart, kan de mediaspeler branden voordat het antwoord op de sessie (met de parameter Session ID) vanaf de achtergrond wordt geretourneerd. Als dit gebeurt, moet uw toepassing alle volgende gebeurtenissen in de wachtrij plaatsen die aankomen tussen de aanvraag voor het starten van de sessie en het antwoord daarop. Wanneer de reactie van Sessies aankomt, moet u eerst gebeurtenissen in de wachtrij verwerken, waarna u kunt beginnen met het verwerken van live gebeurtenissen.
 
 Voor beste resultaten, controleer de Speler van de Verwijzing in uw distributie instructies op hoe te om gebeurtenissen te verwerken alvorens een identiteitskaart van de Zitting te ontvangen.
 

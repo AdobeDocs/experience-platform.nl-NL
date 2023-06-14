@@ -3,9 +3,9 @@ keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Media Edge-API's
 description: Overzicht van de mediarand-API's.
-source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Media Edge-API&#39;s zijn gebaseerd op de Adobe Experience Platform (AEP) en lev
 
 * Met [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=en), kunnen klanten bijna real-time, korrelige details van duur krijgen, beginnen, en einden om voor media metriek te evalueren en te combineren. Klanten die vanuit Adobe Analytics migreren, beschikken over alle rapporteringsgegevens in CJA.
 
-* Met [Adobe Real-time Customer Data Platform (CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl)klanten kunnen hun realtime profielen verrijken met gegevens over mediaverbruik.
+* Met [Adobe Real-time Customer Data Platform (RTCDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl)klanten kunnen hun realtime profielen verrijken met gegevens over mediaverbruik.
 
 * Met [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), kunnen klanten omnichannel campagnes optimaliseren en reizen automatiseren met signalen van mediaconsumptie.
 
@@ -30,7 +30,7 @@ Beide [Media Collection-API&#39;s](https://experienceleague.adobe.com/docs/media
 
 * De vraag van een media speler richt rechtstreeks aan [Ervaar Edge Platform Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
-* Mediagebeurtenissen worden het meest efficiënt bijgehouden.
+* Het volgt media gebeurtenissen efficiënt met een minimum van dwars-servervraag.
 
 In de volgende tabel ziet u een mogelijke Adobe API-service voor verschillende gevallen van mediaverlichting:
 
@@ -51,7 +51,7 @@ In de volgende afbeelding ziet u de gegevensstromen voor de twee API-services:
 ![Gegevensstromen van mediaveralyse](../assets/edge-api-dataflow.png)
 
 
-Raadpleeg de documentatie Aan de slag voor meer informatie over het gebruik van Media Edge API&#39;s.
+Raadpleeg voor meer informatie over het gebruik van Media Edge API&#39;s de [Aan de slag - documentatie](getting-started.md).
 
 Voor meer informatie over het werken met de Rand van het Platform, zie [Media Analytics installeren met Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Aan de slag met Media Edge-API's
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '979'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Deze handleiding bevat instructies voor het tot stand brengen van succesvolle in
 * sessionComplete
 * statesUpdate
 
-Elke gebeurtenis heeft zijn eigen eindpunt. Alle eindpunten van de mediarand-API zijn POST-methoden, met JSON-aanvraaginstanties voor gebeurtenisgegevens. Zie het Media Edge Swagger-bestand voor meer informatie over eindpunten, parameters en voorbeelden van de Media Edge API.
+Elke gebeurtenis heeft zijn eigen eindpunt. Alle eindpunten van de mediarand-API zijn POST-methoden, met JSON-aanvraaginstanties voor gebeurtenisgegevens. Voor meer informatie over de eindpunten, parameters en voorbeelden van de Media Edge API raadpleegt u de [Media Edge Swagger-bestand](swagger.md).
 
 In deze handleiding ziet u hoe de volgende gebeurtenissen worden bijgehouden na het starten van de sessie:
 
@@ -43,7 +43,7 @@ In deze handleiding ziet u hoe de volgende gebeurtenissen worden bijgehouden na 
 
 ## De API implementeren
 
-Naast kleine verschillen in het model en de geroepen wegen, is de Rand API van Media het zelfde als de Inzameling API van Media. De implementatiedetails van Media Collection blijven geldig voor Media Edge API, zoals die in de volgende documentatie wordt beschreven:
+Naast kleine verschillen in het model en de geroepen wegen, heeft Media Edge API de zelfde implementatie zoals de Inzameling API van Media. De implementatiedetails van Media Collection blijven geldig voor Media Edge API, zoals die in de volgende documentatie wordt beschreven:
 
 * [Het HTTP-aanvraagtype in de speler instellen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Pingsgebeurtenissen verzenden](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
@@ -61,7 +61,7 @@ Om de media zitting op de server te beginnen, gebruik het eindpunt van het Begin
 
 Voordat u de aanvraag voor het starten van de sessie indient, hebt u het volgende nodig:
 
-* De `datastreamId` is een vereiste parameter voor het verzoek van het Begin van de Zitting van de POST. Om een `datastreamId`, zie [Een gegevensstroom configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
+* De `datastreamId`—een vereiste parameter voor het verzoek van het Begin van de Zitting van de POST. Om een `datastreamId`, zie [Een gegevensstroom configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
 * Een JSON-object voor de payload van de aanvraag dat de minimaal vereiste gegevens bevat (zoals in de onderstaande voorbeeldaanvraag wordt getoond).
 
@@ -98,7 +98,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 }'
 ```
 
-In het bovenstaande voorbeeldverzoek worden de `eventType` value contains the prefix `media` volgens de [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) voor het opgeven van domeinen.
+In het bovenstaande voorbeeldverzoek worden de `eventType` value contains the prefix `media.` volgens de [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) voor het opgeven van domeinen.
 
 De datatypes-toewijzing voor `eventType` in het bovenstaande voorbeeld ziet het er als volgt uit :
 
@@ -165,14 +165,14 @@ x-content-type-options: nosniff
 
 In het bovenstaande voorbeeldantwoord worden de `sessionId` wordt weergegeven zoals `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. U gebruikt deze id in volgende verzoeken om gebeurtenissen als een vereiste parameter.
 
-Voor meer informatie over de parameters en voorbeelden van het eindpunt van het Begin van de Zitting, zie het dossier van de Rand van Media.
+Voor meer informatie over het eindpuntparameters en voorbeelden van het Begin van de Zitting, zie [Media Edge Swagger](swagger.md) bestand.
 
 Voor meer informatie over XDM media gegevensparameters, zie [Informatieschema voor mediagegevens](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
 ## Buffer Start-gebeurtenisaanvraag
 
-De gebeurtenissignalen van het Begin van de buffer wanneer het bufferen op de media speler begint. Buffer Resume is geen gebeurtenis in de API-service. in plaats daarvan wordt het afgeleid wanneer een playbackgebeurtenis wordt verzonden na het Begin van de Buffer. Als u een aanvraag voor een bufferstartgebeurtenis wilt indienen, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
+De gebeurtenissignalen van het Begin van de buffer wanneer het bufferen op de media speler begint. Buffer Resume is geen gebeurtenis in de API-service. in plaats daarvan, wordt het afgeleid wanneer een spelgebeurtenis wordt verzonden na het Begin van de Buffer. Als u een aanvraag voor een bufferstartgebeurtenis wilt indienen, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
 
 **POST**  `https://edge.adobedc.net/ee-pre-prd/va/v1/bufferStart \`
 
@@ -203,9 +203,10 @@ curl -X 'POST' \
 
 In het bovenstaande voorbeeldverzoek is hetzelfde `sessionId` die in de vorige vraag is teruggekeerd wordt gebruikt als vereiste parameter in het verzoek van het Begin van de Buffer.
 
-Voor meer informatie over de parameters en voorbeelden van het eindpunt van het Begin van de Buffer, zie het dossier van de Rand van Media.
-
 De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
+
+Voor meer informatie over de het eindpuntparameters en voorbeelden van het Begin van de Buffer, zie [Media Edge Swagger](swagger.md) bestand.
+
 
 ## Gebeurtenisverzoek afspelen
 
@@ -240,7 +241,7 @@ curl -X 'POST' \
 
 De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
 
-Zie het bestand Media Edge Swagger voor meer informatie over parameters en voorbeelden van het eindpunt Afspelen.
+Voor meer informatie over het eindpuntparameters en de voorbeelden van het Spel, zie [Media Edge Swagger](swagger.md) bestand.
 
 ## Gebeurtenisaanvraag voor sessie voltooid
 
@@ -275,6 +276,8 @@ curl -X 'POST' \
 
 De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
 
+Voor meer informatie over de Volledige eindpuntparameters en de voorbeelden van de Zitting, zie [Media Edge Swagger](swagger.md) bestand.
+
 ## Antwoordcodes
 
 In de volgende tabel worden de mogelijke responscodes weergegeven die het gevolg zijn van de verzoeken van de Media Edge API:
@@ -282,10 +285,10 @@ In de volgende tabel worden de mogelijke responscodes weergegeven die het gevolg
 | Status | Beschrijving |
 | ---------- | --------- |
 | 200 | Sessie is gemaakt |
-| 207 | Probleem met één van de diensten die met het Netwerk van de Rand van de Ervaring verbinden (zie meer in de het oplossen van problemen gids) |
+| 207 | Probleem met één van de diensten die met het Netwerk van de Rand van de Ervaring verbinden (zie meer in [gids voor problemen](troubleshooting.md)) |
 | 400-niveau | Ongeldig verzoek |
 | 500-niveau | Serverfout |
 
-Raadpleeg de handleiding voor het oplossen van problemen in Media Edge voor meer informatie over het verwerken van fouten en mislukte responscodes.
+Zie voor meer informatie over de verwerking van fouten en responscodes die niet zijn gelukt de [Handleiding voor probleemoplossing voor Media Edge](troubleshooting.md).
 
 
