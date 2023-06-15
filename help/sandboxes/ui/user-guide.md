@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruiksaanwijzing voor sandbox
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '926'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,30 @@ Als u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe san
 
 >[!WARNING]
 >
->Hieronder volgt een lijst met uitzonderingen die kunnen voorkomen dat u de standaardproductiessandbox of een door de gebruiker gemaakte productiesandbox opnieuw instelt: <ul><li>De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) gebruiken.</li><li>De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl).</li><li>De standaardproductiefandbox kan niet worden opnieuw ingesteld als het gegevens voor zowel eigenschappen CDA als PBD bevat.</li><li>Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of de Dienst van de Kern van de Audience kan na een waarschuwingsbericht worden teruggesteld.</li></ul>
+>Hieronder volgt een lijst met uitzonderingen die kunnen voorkomen dat u de standaardproductiessandbox of een door de gebruiker gemaakte productiesandbox opnieuw instelt:
+>* De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) gebruiken.
+>* De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl).
+>* De standaardproductiefandbox kan niet worden opnieuw ingesteld als het gegevens voor zowel eigenschappen CDA als PBD bevat.
+>* Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of de Dienst van de Kern van de Audience kan na een waarschuwingsbericht worden teruggesteld.
+>* Voordat u een sandbox-reset start, moet u de composities handmatig verwijderen om ervoor te zorgen dat de bijbehorende publieksgegevens op de juiste wijze worden opgeschoond.
+
+### Advertentiecomposities verwijderen
+
+De compositie van het publiek is momenteel niet geïntegreerd met de functie voor het opnieuw instellen van de sandbox, zodat het publiek handmatig moet worden verwijderd voordat de sandbox opnieuw wordt ingesteld.
+
+Selecteren **[!UICONTROL Audiences]** van de linkernavigatie en selecteer dan **[!UICONTROL Compositions]**.
+
+![De [!UICONTROL Compositions] in de [!UICONTROL Audiences] werkruimte.](../images/ui/audiences.png)
+
+Selecteer vervolgens de ellips (`...`) naast de eerste doelgroep en selecteer vervolgens **[!UICONTROL Delete]**.
+
+![Het publieksmenu markeert de [!UICONTROL Delete] optie.](../images/ui/delete-composition.png)
+
+Er wordt een bevestiging van een geslaagde verwijdering weergegeven en u wordt teruggestuurd naar de **[!UICONTROL Compositions]** tab.
+
+Herhaal bovenstaande stappen met al uw composities. Hiermee verwijdert u alle soorten publiek uit het overzicht van het publiek. Wanneer alle soorten publiek zijn verwijderd, kunt u de sandbox opnieuw instellen.
+
+### Sandbox opnieuw instellen
 
 Als u een productie- of ontwikkelingssandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
 
