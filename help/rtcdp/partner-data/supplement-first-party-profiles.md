@@ -1,12 +1,12 @@
 ---
-title: (Bèta) Supplement First-party Rrofiles met Partner-Geleverde Attributen
+title: (Bèta) Voeg Eerste-partijProfielen met partner-Geleverde Attributen toe
 description: Leer hoe te om eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aan te vullen om uw gegevensstichting te verbeteren, nieuwe inzichten in uw klantenbasis, en betere publieksoptimalisering te verkrijgen.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien u uw gegevensbeheerstrategie uitbreidt om dergegevens te omvatten die door de partner worden verstrekt. Verken de overwegingen in de documentatiekoppelingen hieronder:
 
 * (**Binnenkort beschikbaar**) Houd gegevens van derden in een aparte gegevensset, zodat u deze gegevens eenvoudig kunt verwijderen en integraties ongedaan kunt maken.
-* (**Binnenkort beschikbaar**) Gebruik [Tijd-aan-levende (TTL)](/help/hygiene/ui/dataset-expiration.md) op de gegevensset voor klanten die de gegevenshygiëneinvoegtoepassing hebben aangeschaft.
+* (**Binnenkort beschikbaar**) Gebruik de [gegevenssetvervaldatum](/help/hygiene/ui/dataset-expiration.md) functionaliteit op de dataset voor cliënten die de toe:voegen-op van de gegevenshygiëne kochten.
 * (**Binnenkort beschikbaar**) Wees voorzichtig bij het maken van afgeleide gegevenssets die gegevens van derden opvragen, omdat de enige oplossing om de gegevens van derden te verwijderen, na elkaar is dat de gehele afgeleide gegevensset wordt verwijderd.
 
 >[!TIP]
