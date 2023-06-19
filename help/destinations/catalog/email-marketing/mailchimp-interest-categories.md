@@ -2,9 +2,9 @@
 title: Mailchimp-rentecategorieën
 description: Mailchimp (ook wel Intuit Mailchimp genoemd) is een populair marketingplatform voor automatisering en marketing via e-mail dat door bedrijven wordt gebruikt om contactpersonen (klanten, klanten of andere belanghebbenden) te beheren en met hen te spreken via mailinglijsten en marketingcampagnes via e-mail. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: cdbbd7fa3e8c0a2128823db7279dcb606f3c74db
+source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
 workflow-type: tm+mt
-source-wordcount: '2282'
+source-wordcount: '2268'
 ht-degree: 0%
 
 ---
@@ -110,9 +110,9 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, zoeken naar [!D
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden hieronder in en selecteert u **[!UICONTROL Connect to destination]**.
 
-| [!DNL Mailchimp] doel | [!DNL Mailchimp] |
+| Veld | Beschrijving |
 | --- | --- |
-| **[!UICONTROL Username]** | Uw [!DNL Salesforce Marketing Cloud] domeinvoorvoegsel. <br>Als uw domein bijvoorbeeld<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> u moet `mcq4jrssqdlyc4lph19nnqgzzs84` als de gebruikersnaam. |
+| **[!UICONTROL Username]** | Uw [!DNL Mailchimp Interest Categories] gebruikersnaam. |
 | **[!UICONTROL Password]** | Uw [!DNL Mailchimp] **API-sleutel**, die u in het [Gather [!DNL Mailchimp] geloofsbrieven](#gather-credentials) sectie.<br> Uw API-sleutel bestaat uit `{KEY}-{DC}`, waarbij `{KEY}` gedeelte verwijst naar de waarde die in de [[!DNL Mailchimp] API-sleutel](#gather-credentials) en de `{DC}` portie verwijst naar de [[!DNL Mailchimp] datacenter](#identify-data-center). <br>U kunt de `{KEY}` of het hele formulier.<br> Als uw API-sleutel bijvoorbeeld <br>*`0123456789abcdef0123456789abcde-us14`*,<br> u kunt *`0123456789abcdef0123456789abcde`*of *`0123456789abcdef0123456789abcde-us14`*als de waarde. |
 
 {style="table-layout:auto"}
