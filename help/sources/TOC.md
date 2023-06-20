@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '991'
 ht-degree: 7%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 7%
       - [Analysebron](connectors/adobe-applications/analytics.md)
       - [Bron Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services-bron](connectors/adobe-applications/campaign.md)
+      - [Adobe Commerce-bron](connectors/adobe-applications/commerce.md)
       - [Kenmerkbron van klant](connectors/adobe-applications/customer-attributes.md)
       - [Bron gegevensverzameling](connectors/adobe-applications/data-collection.md)
       - [Workfront-bron](connectors/adobe-applications/workfront.md)
