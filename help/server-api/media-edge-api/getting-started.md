@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Aan de slag met Media Edge-API's
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '960'
 ht-degree: 1%
 
 ---
@@ -13,49 +12,49 @@ ht-degree: 1%
 
 # Media Edge API aan de slag
 
-Deze handleiding bevat instructies voor het tot stand brengen van succesvolle initiële interactie met de Media Edge API-service. Dit omvat het starten van een mediasessie en het volgen van gebeurtenissen die naar een Adobe Experience Platform-oplossing (AEP), zoals Customer Journey Analytics (CJA), worden verzonden. De dienst van Media Edge API wordt in werking gesteld met het eindpunt van het Begin van de Zitting. Nadat de sessie is gestart, kunnen een of meer van de volgende gebeurtenissen worden bijgehouden:
+Deze handleiding bevat instructies voor het tot stand brengen van succesvolle initiële interactie met de Media Edge API-service. Dit omvat het starten van een mediasessie en het volgen van gebeurtenissen die naar een Adobe Experience Platform-oplossing zoals Customer Journey Analytics (CJA) worden verzonden. De dienst van Media Edge API wordt in werking gesteld met het eindpunt van het Begin van de Zitting. Nadat de sessie is gestart, kunnen een of meer van de volgende gebeurtenissen worden bijgehouden:
 
-* play
-* pingelen
-* bitrateChange
-* bufferStart
-* pauseStart
-* adBreakStart
-* adStart
-* adComplete
-* adSkip
-* adBreakComplete
-* hoofdstukStart
-* hoofdstukComplete
-* hoofdstukSkip
-* error
-* sessionEnd
-* sessionComplete
-* statesUpdate
+* `play`
+* `ping`
+* `bitrateChange`
+* `bufferStart`
+* `pauseStart`
+* `adBreakStart`
+* `adStart`
+* `adComplete`
+* `adSkip`
+* `adBreakComplete`
+* `chapterStart`
+* `chapterComplete`
+* `chapterSkip`
+* `error`
+* `sessionEnd`
+* `sessionComplete`
+* `statesUpdate`
 
 Elke gebeurtenis heeft zijn eigen eindpunt. Alle eindpunten van de mediarand-API zijn POST-methoden, met JSON-aanvraaginstanties voor gebeurtenisgegevens. Voor meer informatie over de eindpunten, parameters en voorbeelden van de Media Edge API raadpleegt u de [Media Edge Swagger-bestand](swagger.md).
 
 In deze handleiding ziet u hoe de volgende gebeurtenissen worden bijgehouden na het starten van de sessie:
 
-* Begin buffer
-* Afspelen
-* Sessie voltooid
+* [Begin buffer](#buffer-start-event-request)
+* [Afspelen](#play-event-request)
+* [Sessie voltooid](#session-complete-event-request)
 
-## De API implementeren
+## De API implementeren {#implement-api}
 
-Naast kleine verschillen in het model en de geroepen wegen, heeft Media Edge API de zelfde implementatie zoals de Inzameling API van Media. De implementatiedetails van Media Collection blijven geldig voor Media Edge API, zoals die in de volgende documentatie wordt beschreven:
+Naast kleine verschillen in het model en de aangeroepen paden, heeft de Media Edge API dezelfde implementatie als de [Media Collection-API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). De implementatiedetails van Media Collection blijven geldig voor Media Edge API, zoals die in de volgende documentatie wordt beschreven:
 
 * [Het HTTP-aanvraagtype in de speler instellen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Pingsgebeurtenissen verzenden](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Tijdslimiet](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
 * [De volgorde van gebeurtenissen bepalen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
 
-## Toestemming
+## Toestemming {#authorization}
 
 Op dit moment vereisen de mediarand-API&#39;s geen machtigingskoppen in hun aanvragen.
 
 
-## De sessie starten
+## De sessie starten {#start-session}
 
 Om de media zitting op de server te beginnen, gebruik het eindpunt van het Begin van de Zitting. Een geslaagde reactie omvat een `sessionId`, een vereiste parameter voor volgende gebeurtenisaanvragen.
 
@@ -104,7 +103,7 @@ De datatypes-toewijzing voor `eventType` in het bovenstaande voorbeeld ziet het 
 
 | eventType | datatypen |
 | -------- | ------ |
-| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
 | media.chapterStart | [hoofdstukDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertentiePodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [adverterenDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
@@ -170,7 +169,7 @@ Voor meer informatie over het eindpuntparameters en voorbeelden van het Begin va
 Voor meer informatie over XDM media gegevensparameters, zie [Informatieschema voor mediagegevens](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
-## Buffer Start-gebeurtenisaanvraag
+## Buffer Start-gebeurtenisaanvraag {#buffer-start}
 
 De gebeurtenissignalen van het Begin van de buffer wanneer het bufferen op de media speler begint. Buffer Resume is geen gebeurtenis in de API-service. in plaats daarvan, wordt het afgeleid wanneer een spelgebeurtenis wordt verzonden na het Begin van de Buffer. Als u een aanvraag voor een bufferstartgebeurtenis wilt indienen, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
 
@@ -208,7 +207,7 @@ De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
 Voor meer informatie over de het eindpuntparameters en voorbeelden van het Begin van de Buffer, zie [Media Edge Swagger](swagger.md) bestand.
 
 
-## Gebeurtenisverzoek afspelen
+## Gebeurtenisverzoek afspelen {#play-event}
 
 De gebeurtenis Play wordt verzonden wanneer de mediaspeler de afspeelstatus wijzigt in een andere status, zoals &quot;buffering&quot;, &quot;gepauzeerd&quot; of &quot;fout&quot;. Als u een verzoek voor een Play-gebeurtenis wilt uitvoeren, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
 
@@ -243,7 +242,7 @@ De geslaagde reactie geeft de status 200 aan en bevat geen inhoud.
 
 Voor meer informatie over het eindpuntparameters en de voorbeelden van het Spel, zie [Media Edge Swagger](swagger.md) bestand.
 
-## Gebeurtenisaanvraag voor sessie voltooid
+## Gebeurtenisaanvraag voor sessie voltooid {#session-complete}
 
 De gebeurtenis Session Complete wordt verzonden wanneer het einde van de hoofdinhoud is bereikt. Als u een aanvraag voor een volledige sessie wilt indienen, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
 
@@ -289,6 +288,9 @@ In de volgende tabel worden de mogelijke responscodes weergegeven die het gevolg
 | 400-niveau | Ongeldig verzoek |
 | 500-niveau | Serverfout |
 
-Zie voor meer informatie over de verwerking van fouten en responscodes die niet zijn gelukt de [Handleiding voor probleemoplossing voor Media Edge](troubleshooting.md).
+## Meer hulp bij deze functie
+
+* [Handleiding voor probleemoplossing voor Media Edge](troubleshooting.md)
+* [Overzicht van de Media Edge API](overview.md)
 
 

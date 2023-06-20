@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Handleiding voor probleemoplossing voor mediarand-API's
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -22,10 +21,10 @@ Om het oplossen van problemen te helpen onsuccesvolle reacties problemen oplosse
 
 ## Het valideren van de sessie start
 
-De meeste problemen bij het bouwen van de verzoeken van het Begin van de Zitting resulteren in een 207 multi-Status reactie.
+De meeste problemen met de verzoeken van het Begin van de Zitting resulteren in een 207 multi-statusreactie.
 De payload is vergelijkbaar met de niet-fatale fouten van de Edge Network Server-API. Alle fouten in Media Analytics hebben het volgende type:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. De getallen in het antwoord komen overeen met de foutstatus.
 
-Het volgende voorbeeld toont een antwoordlichaam voor een verzoek van het Begin van de Zitting dat allebei een verplicht gebied mist, en ongeldige heeft.
+Het volgende voorbeeld toont een antwoordlichaam voor een verzoek van het Begin van de Zitting dat allebei een verplicht gebied mist en ongeldige heeft.
 
 ```
 {

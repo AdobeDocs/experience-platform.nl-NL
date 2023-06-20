@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;mediarand;populaire onderwerpen;datumbereik
 solution: Experience Platform
 title: Media Edge-API's
-description: Overzicht van de mediarand-API's.
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+description: Overzicht van mediarand-API's
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '393'
 ht-degree: 2%
 
 ---
@@ -13,13 +12,13 @@ ht-degree: 2%
 
 # Overzicht van de Media Edge API
 
-Media Edge-API&#39;s zijn gebaseerd op de Adobe Experience Platform (AEP) en leveren gegevens voor het bijhouden van mediagebeurtenissen in het kader van [XDM-schema&#39;s](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). Voor klanten van Media Analytics, maakt dit de volgende eigenschappen beschikbaar:
+Media Edge-API&#39;s zijn gebaseerd op de Adobe Experience Platform en bieden in het kader van [XDM-schema&#39;s](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). Voor klanten van Media Analytics, maakt dit de volgende eigenschappen beschikbaar:
 
-* Met [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=en), kunnen klanten bijna real-time, korrelige details van duur krijgen, beginnen, en einden om voor media metriek te evalueren en te combineren. Klanten die vanuit Adobe Analytics migreren, beschikken over alle rapporteringsgegevens in CJA.
+* Met [Adobe Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=en), kunnen klanten bijna real-time, korrelige details van duur krijgen, beginnen, en einden om voor media metriek te evalueren en te combineren. Klanten die vanuit Adobe Analytics migreren, beschikken over alle statistische gegevens voor rapportage in Adobe Customer Journey Analytics.
 
-* Met [Adobe Real-time Customer Data Platform (RTCDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl)klanten kunnen hun realtime profielen verrijken met gegevens over mediaverbruik.
+* Met [Adobe Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl)klanten kunnen hun realtime profielen verrijken met gegevens over mediaverbruik.
 
-* Met [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), kunnen klanten omnichannel campagnes optimaliseren en reizen automatiseren met signalen van mediaconsumptie.
+* Met [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), kunnen klanten omnichannel campagnes optimaliseren en reizen automatiseren met signalen van mediaconsumptie.
 
 
 ## Gegevensstromen voor het bijhouden van media optimaliseren
@@ -35,10 +34,10 @@ Beide [Media Collection-API&#39;s](https://experienceleague.adobe.com/docs/media
 In de volgende tabel ziet u een mogelijke Adobe API-service voor verschillende gevallen van mediaverlichting:
 
 | Gebruiksscenario | API-service |
-| -------- | ------ |
-| AEP-oplossing (CJA, RTDCP, AJO, enz.) | Mediarand |
-| CDP + CJA | Mediarand |
-| Adobe Analytics + AEP-oplossing | Mediarand |
+| -------- | ----------- |
+| Adobe Experience Platform-oplossing | Mediarand |
+| CDP + Customer Journey Analytics in realtime | Mediarand |
+| Adobe Analytics + Adobe Experience Platform oplossing | Mediarand |
 | Alleen Adobe Analytics (al gevolgd) | Media-verzameling |
 
 >[!NOTE]
@@ -47,13 +46,13 @@ In de volgende tabel ziet u een mogelijke Adobe API-service voor verschillende g
 
 In de volgende afbeelding ziet u de gegevensstromen voor de twee API-services:
 
-
 ![Gegevensstromen van mediaveralyse](../assets/edge-api-dataflow.png)
 
+## Volgende stappen
 
-Raadpleeg voor meer informatie over het gebruik van Media Edge API&#39;s de [Aan de slag - documentatie](getting-started.md).
+* Raadpleeg voor meer informatie over het gebruik van Media Edge API&#39;s de [Aan de slag - documentatie](getting-started.md).
 
-Voor meer informatie over het werken met de Rand van het Platform, zie [Media Analytics installeren met Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
+* Voor meer informatie over het werken met de Rand van het Platform, zie [Media Analytics installeren met Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 
 
 
