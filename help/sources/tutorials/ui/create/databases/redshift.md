@@ -1,26 +1,28 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Amazon Redshift;amazon redshift;Opnieuw verschuiven;Opnieuw verschuiven
-solution: Experience Platform
 title: Een Amazon Redshift Source Connection maken in de gebruikersinterface
-type: Tutorial
 description: Leer hoe u een Amazon Redshift-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Amazon Redshift] bronverbinding in de gebruikersinterface
+# Verbind uw [!DNL Amazon Redshift] account met gebruik van de werkruimte Bronnen
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Amazon Redshift] (hierna &quot;[!DNL Redshift]&quot;) bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
+>[!IMPORTANT]
+>
+>De [!DNL Amazon Redshift] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+
+Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding met uw [!DNL Amazon Redshift] (hierna &quot;[!DNL Redshift]&quot;) naar Adobe Experience Platform via de gebruikersinterface.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -29,24 +31,25 @@ Als u al een geldige [!DNL Redshift] verbinding hebt, kunt u de rest van dit doc
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL Redshift] account op [!DNL Platform]moet u de volgende waarden opgeven:
+Om toegang te krijgen tot uw [!DNL Redshift] account op Experience Platform, moet u de volgende waarden opgeven:
 
 | **Credentials** | **Beschrijving** |
 | -------------- | --------------- |
-| `server` | De server die aan uw [!DNL Redshift] account. |
-| `username` | De gebruikersnaam die aan uw [!DNL Redshift] account. |
-| `password` | Het wachtwoord dat aan uw [!DNL Redshift] account. |
-| `database` | De [!DNL Redshift] database die u opent. |
+| Server | De server die aan uw [!DNL Redshift] account. |
+| Poort | De haven van TCP die [!DNL Redshift] server gebruikt om naar clientverbindingen te luisteren. |
+| Gebruikersnaam | De gebruikersnaam die aan uw [!DNL Redshift] account. |
+| Wachtwoord | Het wachtwoord dat aan uw [!DNL Redshift] account. |
+| Database | De [!DNL Redshift] database die u opent. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [dit [!DNL Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Redshift] aan Experience Platform.
 
 ## Verbind uw [!DNL Redshift] account
 
 >[!NOTE]
 >
 >De standaard coderingsstandaard voor [!DNL Redshift] is Unicode. Dit kan niet worden gewijzigd.
-
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Redshift] account aan [!DNL Platform].
 
 Aanmelden bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de **[!UICONTROL Sources]** werkruimte. De **[!UICONTROL Catalog]** in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -72,4 +75,4 @@ Als u een bestaande account wilt verbinden, selecteert u de optie [!DNL Redshift
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Redshift] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar [!DNL Platform]](../../dataflow/databases.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Redshift] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens naar het Experience Platform te brengen](../../dataflow/databases.md).

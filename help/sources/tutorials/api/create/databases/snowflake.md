@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Snowflake;snowflake
-solution: Experience Platform
 title: Een Snowflake Base-verbinding maken met de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Snowflake.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Snowflake] basisverbinding met de [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>De [!DNL Snowflake] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 

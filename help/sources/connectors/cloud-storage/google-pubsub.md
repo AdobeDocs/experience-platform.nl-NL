@@ -1,15 +1,20 @@
 ---
 title: Overzicht van Google PubSub-bron
 description: Leer hoe u Google PubSub met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google PubSub]
+# [!DNL Google PubSub] bron
+
+>[!IMPORTANT]
+>
+>De [!DNL Google PubSub] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals [!DNL AWS], [!DNL Google Cloud Platform], en [!DNL Azure], zodat u gegevens van deze systemen in Platform kunt brengen voor gebruik in downstreamdiensten en -bestemmingen.
 

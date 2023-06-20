@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;bigquery;Google;google;Google BigQuery
-solution: Experience Platform
 title: Een Google BigQuery Base-verbinding maken met de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Google BigQuery met behulp van de Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Google BigQuery] basisverbinding met de [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>De [!DNL Google BigQuery] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 

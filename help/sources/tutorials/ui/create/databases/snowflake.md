@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Snowflake
 title: Een Snowflake-bronverbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '443'
 ht-degree: 2%
 
 ---
 
 # Een [!DNL Snowflake] bronverbinding in de gebruikersinterface
+
+>[!IMPORTANT]
+>
+>De [!DNL Snowflake] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Snowflake] bronaansluiting die gebruikmaakt van de Adobe Experience Platform-gebruikersinterface.
 

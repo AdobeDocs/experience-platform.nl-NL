@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
-solution: Experience Platform
 title: Een Amazon Kinesis Source Connection maken in de gebruikersinterface
-type: Tutorial
 description: Leer hoe u een Amazon Kinesis-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Amazon Kinesis] bronverbinding in de gebruikersinterface
+
+>[!IMPORTANT]
+>
+>De [!DNL Amazon Kinesis] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een [!DNL Amazon Kinesis] (hierna [!DNL "Kinesis"]) bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
 

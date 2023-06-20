@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Amazon Opnieuw verschuiven;Amazon opnieuw verschuiven;opnieuw verschuiven;Opnieuw verschuiven
-solution: Experience Platform
 title: Overzicht van Amazon Redshift Source Connector
 description: Leer hoe u Amazon Redshift kunt verbinden met Adobe Experience Platform met behulp van API's of de gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# [!DNL Amazon Redshift] connector
+# [!DNL Amazon Redshift] bron
+
+>[!IMPORTANT]
+>
+>De [!DNL Amazon Redshift] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 

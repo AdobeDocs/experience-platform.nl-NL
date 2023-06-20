@@ -1,15 +1,20 @@
 ---
 title: Een Google PubSub-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van het Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Google PubSub] bronverbinding in de gebruikersinterface
+
+>[!IMPORTANT]
+>
+>De [!DNL Google PubSub] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot;) gebruiken van de gebruikersinterface van het Platform.
 

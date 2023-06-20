@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Google Big Query;google big query;GBQ;gbq
-solution: Experience Platform
 title: Een Google Big Query Source Connection maken in de gebruikersinterface
-type: Tutorial
 description: Leer hoe u een Google Big Query-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Google Big Query] bronverbinding in de gebruikersinterface
+
+>[!IMPORTANT]
+>
+>De [!DNL Google BigQuery] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Google Big Query] bronverbinding via de gebruikersinterface van het Platform.
 

@@ -1,15 +1,20 @@
 ---
 title: Een Google PubSub-bronverbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 371947cff518c16816692210054680367fd6504c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Google PubSub] Bronverbinding met de Flow Service API
+
+>[!IMPORTANT]
+>
+>De [!DNL Google PubSub] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Dit leerprogramma begeleidt u door de stappen om te verbinden [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot;) naar Experience Platform, met de [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 

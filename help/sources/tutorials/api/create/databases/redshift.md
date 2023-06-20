@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;redshift;Opnieuw verschuiven;Amazon Opnieuw verschuiven;amazon opnieuw verschuiven
-solution: Experience Platform
 title: Een Amazon Redshift Base-verbinding maken met de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Amazon Redshift met behulp van de Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '508'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Amazon Redshift] basisverbinding met de [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>De [!DNL Amazon Redshift] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
@@ -34,6 +36,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Amazon Redshift]moet u de volge
 | **Credentials** | **Beschrijving** |
 | -------------- | --------------- |
 | `server` | De server die aan uw [!DNL Amazon Redshift] account. |
+| `port` | De haven van TCP die [!DNL Amazon Redshift] server gebruikt om naar clientverbindingen te luisteren. |
 | `username` | De gebruikersnaam die aan uw [!DNL Amazon Redshift] account. |
 | `password` | Het wachtwoord dat aan uw [!DNL Amazon Redshift] account. |
 | `database` | De [!DNL Amazon Redshift] database die u opent. |
@@ -67,34 +70,36 @@ Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Amazon Red
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "amazon-redshift base connection",
-        "description": "base connection for amazon-redshift,
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "server": "{SERVER}",
-                "database": "{DATABASE}",
-                "password": "{PASSWORD}",
-                "username": "{USERNAME}"
-            }
-        },
-        "connectionSpec": {
-            "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "amazon-redshift base connection",
+      "description": "base connection for amazon-redshift,
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT},
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "database": "{DATABASE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
 | ------------- | --------------- |
 | `auth.params.server` | Uw [!DNL Amazon Redshift] server. |
+| `auth.params.port` | De TCP-poort die de [!DNL Amazon Redshift] server gebruikt om naar clientverbindingen te luisteren. |
 | `auth.params.database` | De database die aan uw [!DNL Amazon Redshift] account. |
 | `auth.params.password` | Het wachtwoord dat aan uw [!DNL Amazon Redshift] account. |
 | `auth.params.username` | De gebruikersnaam die aan uw [!DNL Amazon Redshift] account. |

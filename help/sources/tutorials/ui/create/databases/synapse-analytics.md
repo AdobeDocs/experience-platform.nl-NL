@@ -1,20 +1,22 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Azure synapse Analytics;Synapse;synapse;azure synapse Analytics
-solution: Experience Platform
 title: Creeer een Verbinding van de Bron van de Analyse van de Azure synapse in UI
-type: Tutorial
 description: Leer hoe u een Azure synapse Analytics-bronverbinding (hierna "Synapse" genoemd) maakt met behulp van de Adobe Experience Platform-gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '430'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Azure Synapse Analytics] bronverbinding in de gebruikersinterface
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Azure Synapse Analytics] (hierna &quot;[!DNL Synapse]&quot;) bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
+>[!IMPORTANT]
+>
+>De [!DNL Azure Synapse Analytics] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Azure Synapse Analytics] (hierna &quot;[!DNL Synapse]&quot;) bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 

@@ -4,9 +4,9 @@ description: Leer hoe u een bronverbinding en gegevensstroom kunt maken om strea
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '686'
 ht-degree: 1%
 
 ---
@@ -16,8 +16,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* De [!DNL Snowflake] streamingbron is in bèta. Lees de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
->* De [!DNL Snowflake] De streamingbron is beschikbaar in de API voor klanten die Real-Time CDP Ultimate hebben aangeschaft.
-
+>* De [!DNL Snowflake] De streamingbron is in de API beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
