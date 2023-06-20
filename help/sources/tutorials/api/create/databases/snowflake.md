@@ -3,9 +3,9 @@ title: Een Snowflake Base-verbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Snowflake.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '589'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Snowflake] met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Snowflake] met de [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
@@ -44,10 +44,15 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Snowflake]moet u de volgende ei
 | `database` | De [!DNL Snowflake] de database bevat de gegevens die u het Platform wilt brengen. |
 | `username` | De gebruikersnaam voor de [!DNL Snowflake] account. |
 | `password` | Het wachtwoord voor de [!DNL Snowflake] gebruikersaccount. |
+| `role` | De standaardtoegangsbeheerrol die in de [!DNL Snowflake] sessie. De rol zou een bestaande moeten zijn die reeds aan de gespecificeerde gebruiker is toegewezen. De standaardrol is `PUBLIC`. |
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>U moet de `PREVENT_UNLOAD_TO_INLINE_URL` markeren naar `FALSE` om gegevens uit uw [!DNL Snowflake] database naar Experience Platform.
 
 ## Een basisverbinding maken
 

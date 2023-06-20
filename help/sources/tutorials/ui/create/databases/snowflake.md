@@ -4,9 +4,9 @@ type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '490'
 ht-degree: 2%
 
 ---
@@ -37,9 +37,14 @@ Om toegang te krijgen tot uw Snowflake-account op [!DNL Platform]moet u de volge
 | Database | De [!DNL Snowflake] de database bevat de gegevens die u het Platform wilt brengen. |
 | Gebruikersnaam | De gebruikersnaam voor de [!DNL Snowflake] account. |
 | Wachtwoord | Het wachtwoord voor de [!DNL Snowflake] gebruikersaccount. |
+| Rol | De standaardtoegangsbeheerrol die in de [!DNL Snowflake] sessie. De rol zou een bestaande moeten zijn die reeds aan de gespecificeerde gebruiker is toegewezen. De standaardrol is `PUBLIC`. |
 | Verbindingstekenreeks | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Zie voor meer informatie over deze waarden [dit Snowflake-document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>U moet de `PREVENT_UNLOAD_TO_INLINE_URL` markeren naar `FALSE` om gegevens uit uw [!DNL Snowflake] database naar Experience Platform.
 
 ## Uw Snowflake-account verbinden
 

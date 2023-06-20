@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;de stroomdienst;De Dien
 title: Gegevens op rijniveau voor een bron filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 >De steun voor het filtreren van rij-vlakke gegevens is momenteel slechts beschikbaar aan de volgende bronnen:
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 Deze zelfstudie bevat stappen voor het filteren van gegevens op rijniveau voor een bron met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
