@@ -1,12 +1,12 @@
 ---
 title: Versleutelde gegevensinsluiting
-description: Met Adobe Experience Platform kunt u gecodeerde bestanden opnemen via batchbronnen voor cloudopslag.
+description: Leer hoe u gecodeerde bestanden via batchbronnen voor cloudopslag kunt opnemen met de API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,29 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
 ### Platform-API&#39;s gebruiken
 
 Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+
+### Ondersteunde bestandsextensies voor gecodeerde bestanden
+
+De lijst met ondersteunde bestandsextensies voor gecodeerde bestanden ziet er als volgt uit:
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>De gecodeerde bestandsinvoer in Adobe Experience Platform Sources ondersteunt openPGP en geen specifieke merkgebonden versie van PGP.
 
 ## Versleutelingssleutelpaar maken {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ Nadat u een basisverbinding hebt gemaakt, moet u de in de zelfstudie beschreven 
 >[!NOTE]
 >
 >U moet over het volgende beschikken om een gegevensstroom voor gecodeerde gegevensinvoer te kunnen maken:
+>
 >* [Openbare sleutel-id](#create-encryption-key-pair)
 >* [Bronverbinding-id](../api/collect/cloud-storage.md#source)
 >* [Doelverbinding-id](../api/collect/cloud-storage.md#target)
 >* [Toewijzing-id](../api/collect/cloud-storage.md#mapping)
-
 
 Om een gegevensstroom tot stand te brengen, doe een verzoek van de POST aan `/flows` van het [!DNL Flow Service] API. Als u gecodeerde gegevens wilt invoeren, moet u een `encryption` aan de `transformations` en neemt de `publicKeyId` die in een eerdere stap is gemaakt.
 
