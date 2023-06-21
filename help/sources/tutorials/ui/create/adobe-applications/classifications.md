@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Een Adobe Analytics-bronverbinding maken voor classificatiegegevens in de gebruikersinterface
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 0%
+source-wordcount: '599'
+ht-degree: 1%
 
 ---
 
@@ -72,12 +72,7 @@ Selecteer **[!UICONTROL Target dataset]** u wenst toegang te hebben.
 
 De **[!UICONTROL Dataset activity]** De pagina toont informatie over de doeldataset u selecteerde, met inbegrip van details over zijn partijstatus, dataset identiteitskaart, en schema.
 
->[!IMPORTANT]
->
->Terwijl het schrappen van datasets voor andere bronschakelaars mogelijk is, wordt het momenteel niet gesteund voor de schakelaar van Gegevens van de Classificaties van Analytics. Neem contact op met de klantenservice van Adobe als u per ongeluk een gegevensset verwijdert.
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## Volgende stappen
 
