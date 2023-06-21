@@ -5,7 +5,7 @@ description: Het publiek eindpunt in de API van de Dienst van de Segmentatie van
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Het volgende verzoek/reactiepaar wordt gebruikt wanneer `withMetrics` queryparam
 Het volgende verzoek wint de laatste vijf publiek terug dat in uw organisatie wordt gecreeerd.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | De id van het publiek. Dit wordt gebruikt door externe doelgroepen |
 | `name` | De naam van het publiek. |
-| `namespace` |  |
+| `namespace` | |
 | `description` | Een beschrijving van het publiek. |
 | `type` | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het Platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalAudience`. A `SegmentDefinition` verwijst naar een publiek dat in Platform is gegenereerd, terwijl een `ExternalAudience` verwijst naar een publiek dat niet in Platform is gegenereerd. |
 | `lifecycle` | De status van het publiek. Mogelijke waarden zijn `draft`, `published`, `inactive`, en `archived`. `draft` vertegenwoordigt wanneer het publiek wordt gecreëerd; `published` wanneer het publiek wordt gepubliceerd; `inactive` wanneer het publiek niet langer actief is, en `archived` als het publiek wordt verwijderd. |
