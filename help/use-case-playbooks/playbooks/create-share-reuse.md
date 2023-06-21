@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Afspeelboekinstanties maken, delen en opnieuw gebruiken
 description: Leer hoe u playbook-instanties kunt maken, delen en opnieuw gebruiken om uw marketinggebruikskwestie te voltooien.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 0%
@@ -64,11 +64,11 @@ Het hierboven beschreven gedrag geldt voor alle elementen die worden gemaakt, be
 >
 >Wanneer objecten zijn gegenereerd, kunt u in de ontwikkelingssandboxen blijven testen door gegevens toe te voegen. U kunt de elementen zo lang testen als u wilt in de ontwikkelingssandbox en u kunt de elementlogica (segmentdefinities, reizen, schema&#39;s, enzovoort) in de productiesandbox herhalen wanneer u klaar bent.
 
-### Afspeelboeken opnieuw gebruiken {#reuse-playbooks}
+## Afspeelboeken opnieuw gebruiken {#reuse-playbooks}
 
 Door veelvoudige instanties van zelfde playbook te creëren, kunt u het zelfde gebruiksgeval later uitvoeren, zonder de details van uw vorige implementatie van het gebruiksgeval te wijzigen.
 
-### De playbook en de geproduceerde activa met andere teamleden delen {#share-playbook}
+## De playbook en de geproduceerde activa met andere teamleden delen {#share-playbook}
 
 U kunt de gegenereerde instantie en elementen delen met andere teamleden. Hiervoor kopieert u de URL-koppeling van de browser en deelt u deze met uw team om een overzicht van de gegenereerde elementen te krijgen.
 

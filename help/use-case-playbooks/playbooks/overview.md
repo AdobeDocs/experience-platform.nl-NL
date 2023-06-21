@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Overzicht van afspeelboeken met hoofdletters en kleine letters gebruiken
 description: Leer hoe u de functie Hoofdletters gebruiken in Experience Platform kunt gebruiken om aan de slag te gaan met verschillende gebruikssituaties voor marketingdoeleinden
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 0%
+source-wordcount: '391'
+ht-degree: 1%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 0%
 Wat u in deze documentatiehandleiding zult vinden:
 
 * **[Overzicht van afspeelboeken met gebruiksscenario&#39;s](#overview)**
+* [Aan de slag](/help/use-case-playbooks/playbooks/get-started.md)
 * [De juiste afspeelboek ontdekken](/help/use-case-playbooks/playbooks/discover.md)
 * [Afspeelboekinstanties maken, delen en opnieuw gebruiken](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Problemen oplossen en bekende beperkingen](troubleshooting.md)
