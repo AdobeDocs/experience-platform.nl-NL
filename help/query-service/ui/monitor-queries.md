@@ -2,16 +2,16 @@
 title: Geplande query's controleren
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 87b530c0ee509d9f24fc7af63507ff0567779d26
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1705'
 ht-degree: 0%
 
 ---
 
 # Geplande query&#39;s controleren
 
-Adobe Experience Platform biedt een verbeterde zichtbaarheid voor de status van alle querytaken via de gebruikersinterface. Van [!UICONTROL Scheduled Queries] kunt u belangrijke informatie over uw vraaglooppas nu vinden die de status, planningsdetails, en foutenmeldingen/codes omvat indien zij ontbreken. U kunt aan alarm voor vragen ook intekenen die op hun status door UI voor om het even welk van deze vragen worden gebaseerd door [!UICONTROL Scheduled Queries] tab.
+Adobe Experience Platform biedt een verbeterde zichtbaarheid voor de status van alle querytaken via de gebruikersinterface. Van de [!UICONTROL Scheduled Queries] tabblad, kunt u nu belangrijke informatie over uw query-uitvoering vinden die de status, planningsdetails en foutberichten/codes bevat als deze mislukken. U kunt aan alarm voor vragen ook intekenen die op hun status door UI voor om het even welk van deze vragen worden gebaseerd door [!UICONTROL Scheduled Queries] tab.
 
 ## [!UICONTROL Scheduled Queries]
 
@@ -29,24 +29,29 @@ In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
 | Kolom | Beschrijving |
 |---|---|
-| **[!UICONTROL Name]** | Het naamveld is de sjabloonnaam of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, wordt de naam ervan een fragment van de eerste SQL die wordt gebruikt om de query te maken. Selecteer een item in het menu [!UICONTROL Name] kolom om een lijst van alle looppas te zien verbonden aan de vraag. Zie voor meer informatie de [de loopdienstdetails van de vraaglooppas](#query-runs) sectie. |
+| **[!UICONTROL Name]** | Het naamveld is de sjabloonnaam of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, wordt de naam ervan een fragment van de eerste SQL die wordt gebruikt om de query te maken. Als u een lijst wilt zien met alle regels die aan de query zijn gekoppeld, selecteert u een item in het menu [!UICONTROL Name] kolom. Zie voor meer informatie de [de loopdienstdetails van de vraaglooppas](#query-runs) sectie. |
 | **[!UICONTROL Template]** | De sjabloonnaam van de query. Selecteer een sjabloonnaam om naar de Query-editor te navigeren. Het vraagmalplaatje wordt getoond in de Redacteur van de Vraag voor gemak. Als er geen malplaatjenaam is, wordt de rij duidelijk met een koppelteken en er is geen capaciteit om aan de Redacteur van de Vraag om de vraag te bekijken opnieuw te richten. |
 | **[!UICONTROL SQL]** | Een fragment van de SQL-query. |
-| **[!UICONTROL Run frequency]** | Dit is de kadentie waarbij uw vraag wordt geplaatst om te lopen. De beschikbare waarden zijn `Run once` en `Scheduled`. U kunt query&#39;s filteren op basis van hun uitvoeringsfrequentie. |
+| **[!UICONTROL Run frequency]** | De frequentie waarmee de query is ingesteld op uitvoeren. De beschikbare waarden zijn `Run once` en `Scheduled`. U kunt query&#39;s filteren op basis van hun uitvoeringsfrequentie. |
 | **[!UICONTROL Created by]** | De naam van de gebruiker die de query heeft gemaakt. |
 | **[!UICONTROL Created]** | De tijdstempel in UTC-indeling waarin de query is gemaakt. |
 | **[!UICONTROL Last run timestamp]** | De meest recente tijdstempel toen de query werd uitgevoerd. Deze kolom benadrukt of een vraag volgens zijn huidig programma is uitgevoerd. |
 | **[!UICONTROL Last run status]** | De status van de meest recente queryuitvoering. De statuswaarden zijn: `Success`, `Failed`, `In progress`, en `No runs`. |
+| **[!UICONTROL Schedule Status]** | De huidige status van de geplande query. Er zijn vijf potentiële waarden. [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted]en een afbreekstreepje. <ul><li>Het koppelteken geeft aan dat de geplande query een eenmalige, niet-terugkerende query is.</li><li>De [!UICONTROL Registering] de status wijst erop dat het systeem nog de verwezenlijking van het nieuwe programma voor de vraag verwerkt. Opmerking: u kunt een geplande query tijdens de registratie niet uitschakelen of verwijderen.</li><li>De [!UICONTROL Active] status geeft aan dat de geplande query **nog niet geslaagd** de datum en het tijdstip van voltooiing.</li><li>De [!UICONTROL Inactive] status geeft aan dat de geplande query **passeren** de datum en het tijdstip van voltooiing.</li><li>De [!UICONTROL Deleted] de status wijst erop dat het vraagprogramma is geschrapt.</li></ul> |
 
 >[!TIP]
 >
 >Als u naar de Query-editor navigeert, kunt u **[!UICONTROL Queries]** om terug te keren naar de [!UICONTROL Templates] tab.
 
-### Tabelinstellingen aanpassen voor geplande query&#39;s
+## Tabelinstellingen aanpassen voor geplande query&#39;s {#customize-table}
 
-U kunt de kolommen op de [!UICONTROL Scheduled Queries] op uw behoeften. Selecteer het instellingenpictogram (![Een instellingenpictogram.](../images/ui/monitor-queries/settings-icon.png)) om de [!UICONTROL Customize table] het dialoogvenster Instellingen en bewerk beschikbare kolommen.
+U kunt de kolommen op de [!UICONTROL Scheduled Queries] op uw behoeften. Als u het dialoogvenster [!UICONTROL Customize table] het instellingenvenster en de beschikbare kolommen bewerken, selecteert u het instellingenpictogram (![Een instellingenpictogram.](../images/ui/monitor-queries/settings-icon.png)) van de rechterbovenhoek van het scherm.
 
-![Het pictogram Tabelinstellingen aanpassen.](../images/ui/monitor-queries/customze-table-settings-icon.png)
+>[!NOTE]
+>
+>De [!UICONTROL Created] kolom die verwijst naar de datum waarop het schema is gemaakt, is standaard verborgen.
+
+![Het tabblad Geplande query&#39;s met het pictogram Tabelinstellingen aanpassen gemarkeerd.](../images/ui/monitor-queries/customze-table-settings-icon.png)
 
 Schakel de desbetreffende selectievakjes in of uit om een tabelkolom te verwijderen of toe te voegen. Selecteer vervolgens **[!UICONTROL Apply]** om je keuzes te bevestigen.
 
@@ -56,21 +61,51 @@ Schakel de desbetreffende selectievakjes in of uit om een tabelkolom te verwijde
 
 ![Het dialoogvenster Tabelinstellingen aanpassen.](../images/ui/monitor-queries/customize-table-dialog.png)
 
+## Geplande query&#39;s beheren met inlinehandelingen {#inline-actions}
+
+De [!UICONTROL Scheduled Queries] de mening biedt diverse gealigneerde acties aan om al uw geplande vragen van één plaats te beheren. Inline-handelingen worden aangegeven in elke rij met ovaal. Selecteer de ellips van een geplande vraag die u wilt leiden om de beschikbare opties in een pop-up menu te zien. De beschikbare opties omvatten [[!UICONTROL Disable schedule]](#disable) of [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), en [[!UICONTROL Subscribe]](#alert-subscription) om waarschuwingen te vragen.
+
+![Het tabblad Geplande query&#39;s met de ellips van de inline-handeling en het pop-upmenu gemarkeerd.](../images/ui/monitor-queries/disable-inline.png)
+
+### Een geplande query in- of uitschakelen {#disable}
+
+Om een geplande vraag onbruikbaar te maken, selecteer de ellips van een geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Disable schedule]** van de opties in het pop-upmenu. Er wordt een dialoogvenster weergegeven waarin uw handeling wordt bevestigd. Selecteren **[!UICONTROL Disable]** om uw instelling te bevestigen.
+
+Zodra een geplande vraag gehandicapt is, kunt u het programma door het zelfde proces toelaten. Selecteer de ellips en selecteer vervolgens **[!UICONTROL Enable schedule]** uit de beschikbare opties.
+
+### Een geplande query verwijderen {#delete}
+
+Om een geplande vraag te schrappen, selecteer de ellips van een geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Delete schedule]** van de opties in het pop-upmenu. Er wordt een dialoogvenster weergegeven waarin uw handeling wordt bevestigd. Selecteren **[!UICONTROL Delete]** om uw instelling te bevestigen.
+
+Zodra een geplande vraag wordt geschrapt, is het **niet** verwijderd uit de lijst met geplande query&#39;s. De inline-acties die door de ovalen worden geboden, worden verwijderd en vervangen door het pictogram voor het toevoegen van waarschuwingen met grijstinten. U kunt zich niet abonneren op waarschuwingen voor het verwijderde schema. De rij blijft in UI om informatie over looppas te verstrekken die als deel van de geplande vraag wordt geleid.
+
+![Het Geplande lusje van Vragen met een geschrapte geplande vraag en grayed uit benadrukt waarschuwingspictogram.](../images/ui/monitor-queries/post-delete.png)
+
+Als u looppas voor dat vraagmalplaatje wilt plannen, selecteer de malplaatjenaam van de aangewezen rij om aan de Redacteur van de Vraag te navigeren, dan volg [instructies om een programma aan een vraag toe te voegen](./query-schedules.md#create-schedule) zoals beschreven in de documentatie.
+
 ### Abonneren op waarschuwingen {#alert-subscription}
 
-U kunt zich abonneren op waarschuwingen van de [!UICONTROL Scheduled Queries] tab. Selecteer het waarschuwingspictogram (![Een waarschuwingspictogram.](../images/ui/monitor-queries/alerts-icon.png)) naast de naam van een query om het dialoogvenster [!UICONTROL Alerts] . De [!UICONTROL Alerts] Hiermee meldt u zich aan zowel UI-berichten als e-mailwaarschuwingen. Waarschuwingen zijn gebaseerd op de status van de query. Er zijn drie opties beschikbaar: `start`, `success`, en `failure`. Vak of vakken invullen en **[!UICONTROL Save]** om in te schrijven.
+Om aan alarm voor geplande vraaglooppas in te tekenen, selecteer de ellips van een geplande vraag u wilt leiden, dan selecteren **[!UICONTROL Subscribe]** van de opties in het pop-upmenu.
+
+De [!UICONTROL Alerts] wordt geopend. De [!UICONTROL Alerts] Hiermee meldt u zich aan zowel UI-meldingen als e-mailwaarschuwingen. Waarschuwingen zijn gebaseerd op de status van de query. Er zijn drie opties beschikbaar: `start`, `success`, en `failure`. Vak of vakken invullen en **[!UICONTROL Save]** om in te schrijven. Je kunt je abonneren op berichten zolang ze geen [!UICONTROL Last Run Timestamp] waarde.
 
 ![Het dialoogvenster voor abonnementen.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
 Zie de [API-documentatie voor abonnementen](../api/alert-subscriptions.md) voor meer informatie .
 
-### Filterquery&#39;s {#filter}
+### De querygegevens weergeven {#query-details}
+
+Selecteer het informatiepictogram (![Een informatiepictogram.](../images/ui/monitor-queries/information-icon.png)) om het deelvenster Details voor de query weer te geven. Het detailspaneel bevat alle relevante informatie over de vraag voorbij de feiten inbegrepen in de geplande vraaglijst. De extra informatie omvat vraagidentiteitskaart, de laatste gewijzigde datum, SQL van de vraag, planningsidentiteitskaart, en het huidige vastgestelde programma.
+
+![Het tabblad Geplande query&#39;s met het informatiepictogram en het deelvenster Details gemarkeerd.](../images/ui/monitor-queries/details-panel.png)
+
+## Filterquery&#39;s {#filter}
 
 U kunt vragen filteren op runtime frequentie. Van de [!UICONTROL Scheduled Queries] tab, selecteer het filterpictogram (![Een filterpictogram](../images/ui/monitor-queries/filter-icon.png)) om de filterzijbalk te openen.
 
 ![Het tabblad Geplande query&#39;s met het filterpictogram gemarkeerd.](../images/ui/monitor-queries/filter-queries.png)
 
-Selecteer een van de **[!UICONTROL Scheduled]** of **[!UICONTROL Run once]** Voer de controledozen van de frequentiefilter in werking om de lijst van vragen te filtreren.
+Als u de lijst met query&#39;s wilt filteren op basis van de runtimefrequentie, selecteert u de optie **[!UICONTROL Scheduled]** of **[!UICONTROL Run once]** filterselectievakjes.
 
 >[!NOTE]
 >
@@ -82,7 +117,7 @@ Als u de filtercriteria hebt ingeschakeld, selecteert u **[!UICONTROL Hide Filte
 
 ## De loopplandetails van de vraag {#query-runs}
 
-Selecteer een querynaam om naar de pagina met planningsdetails te navigeren. Deze mening verstrekt een lijst van alle looppas die als deel van die geplande vraag wordt uitgevoerd. De verstrekte informatie omvat de begin en eindtijd, status, en gebruikte dataset.
+Als u de pagina met planningsdetails wilt openen, selecteert u een querynaam in het menu [!UICONTROL Scheduled Queries] tab. Deze mening verstrekt een lijst van alle looppas die als deel van die geplande vraag wordt uitgevoerd. De verstrekte informatie omvat de begin en eindtijd, status, en gebruikte dataset.
 
 ![De pagina met planningsdetails.](../images/ui/monitor-queries/schedule-details.png)
 
@@ -91,8 +126,8 @@ Deze informatie wordt verstrekt in een vijf-kolomlijst. Elke rij geeft een query
 | Kolomnaam | Beschrijving |
 |---|---|
 | **[!UICONTROL Query run ID]** | ID van de vraaglooppas voor de dagelijkse uitvoering. Selecteer **[!UICONTROL Query run ID]** om naar de [!UICONTROL Query run overview]. |
-| **[!UICONTROL Query run start]** | De tijdstempel wanneer de query werd uitgevoerd. Dit heeft de UTC-indeling. |
-| **[!UICONTROL Query run complete]** | De tijdstempel wanneer de query is voltooid. Dit heeft de UTC-indeling. |
+| **[!UICONTROL Query run start]** | De tijdstempel wanneer de query werd uitgevoerd. De tijdstempel heeft de UTC-indeling. |
+| **[!UICONTROL Query run complete]** | De tijdstempel wanneer de query is voltooid. De tijdstempel heeft de UTC-indeling. |
 | **[!UICONTROL Status]** | De status van de meest recente queryuitvoering. De drie statuswaarden zijn: `successful` `failed` of `in progress`. |
 | **[!UICONTROL Dataset]** | De dataset betrokken bij de uitvoering. |
 
@@ -114,19 +149,19 @@ De sectie met de querystatus bevat de foutcode en het foutbericht als de query i
 
 ![Het scherm met de foutensectie is gemarkeerd.](../images/ui/monitor-queries/failed-query.png)
 
-U kunt de SQL-query van deze weergave naar het klembord kopiëren. Selecteer het kopieerpictogram rechtsboven in het SQL-fragment om de query te kopiëren. Een pop-upbericht bevestigt dat de code is gekopieerd.
+U kunt de SQL-query van deze weergave naar het klembord kopiëren. Als u de query wilt kopiëren, selecteert u het kopieerpictogram rechtsboven in het SQL-fragment. Een pop-upbericht bevestigt dat de code is gekopieerd.
 
 ![Het scherm met details van de uitvoering waarin het SQL-kopieerpictogram is gemarkeerd.](../images/ui/monitor-queries/copy-sql.png)
 
 ### Details uitvoeren voor query&#39;s met anoniem blok {#anonymous-block-queries}
 
-Vragen die anonieme blokken gebruiken om uit hun SQL-instructies te bestaan, worden gescheiden in hun individuele subquery&#39;s. Dit staat u toe om de looppasdetails voor elk vraagblok individueel te inspecteren.
+Vragen die anonieme blokken gebruiken om uit hun SQL-instructies te bestaan, worden gescheiden in hun individuele subquery&#39;s. De scheiding in subquery staat u toe om de looppasdetails voor elk vraagblok individueel te inspecteren.
 
 >[!NOTE]
 >
 >De loopingdetails van een anoniem blok dat het bevel DROP gebruikt zullen **niet** worden gerapporteerd als een aparte subquery. De afzonderlijke looppasdetails zijn beschikbaar voor vragen CTAS, vragen ITAS, en verklaringen van de KOPIE die als anonieme die bloksubquery&#39;s worden gebruikt. Details uitvoeren voor de opdracht DROP wordt momenteel niet ondersteund.
 
-Anonieme blokken worden aangeduid door het gebruik van een `$$` voor de query. Zie de [anoniem blokdocument](../essential-concepts/anonymous-block.md) om meer over anonieme blokken in de vraagdienst te weten te komen.
+Anonieme blokken worden aangeduid door het gebruik van een `$$` voor de query. Om meer over anonieme blokken in de vraagdienst te weten te komen, zie [anoniem blokdocument](../essential-concepts/anonymous-block.md).
 
 Anonieme subquery&#39;s voor blokken hebben tabs links van de status van de run. Selecteer een tabblad om de details van de uitvoering weer te geven.
 

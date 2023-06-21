@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
+source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1626'
 ht-degree: 0%
 
 ---
@@ -113,11 +113,7 @@ In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste
 
 De vragen die als malplaatje zijn bewaard kunnen van de Redacteur van de Vraag worden gepland. Dit staat u toe om vraaglooppas te automatiseren die op een douanecadence wordt uitgevoerd. U kunt vragen plannen die op frequentie, datum, en tijd worden gebaseerd, en ook een outputdataset voor uw resultaten kiezen indien vereist. De programma&#39;s van de vraag kunnen ook door UI worden onbruikbaar gemaakt of worden geschrapt.
 
-Planningen worden ingesteld in de Query-editor. Hier volgt een lijst met beperkingen voor geplande query&#39;s wanneer u de Query Editor gebruikt. Zij zijn niet van toepassing op de [!DNL Query Service] API:
-
-- U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd.
-- U **kan** voeg een programma aan een parameterized vraag toe.
-- Geplande query&#39;s **kan** bevat een anoniem blok.
+Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Redacteur van de Vraag, kunt u een programma aan een vraag slechts toevoegen die reeds is gecreeerd, opgeslagen, en looppas. Dit geldt niet voor de [!DNL Query Service] API:
 
 Zie de documentatie van vraagprogramma&#39;s om te leren hoe te [vraagprogramma&#39;s in UI creëren](./query-schedules.md). Als u ook wilt leren hoe u planningen kunt toevoegen met de API, leest u de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
 

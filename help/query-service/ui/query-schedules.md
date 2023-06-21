@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ U kunt vraaglooppas automatiseren door vraagprogramma&#39;s te creëren. Gepland
 
 >[!IMPORTANT]
 >
->Hier volgt een lijst met beperkingen voor geplande query&#39;s wanneer u de Query Editor gebruikt. Zij zijn niet van toepassing op de [!DNL Query Service] API:<br/>U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd.<br/>U **kan** voeg een programma aan een parameterized vraag toe.<br/>Geplande query&#39;s **kan** bevat een anoniem blok.
+>U kunt alleen een schema toevoegen aan een query die al is gemaakt, opgeslagen en uitgevoerd.
 
 Alle geplande query&#39;s worden toegevoegd aan de lijst in de [!UICONTROL Scheduled queries] tab. Van die werkruimte kunt u het statuut van alle geplande vraagbanen door UI controleren. Op de [!UICONTROL Scheduled queries] kunt u belangrijke informatie over uw vraaglooppas vinden en aan alarm intekenen. De beschikbare informatie omvat de status, de planningsdetails, en foutenmeldingen/codes als een looppas ontbreekt. Zie de [Geplande query&#39;s controleren](./monitor-queries.md) voor meer informatie .
 
@@ -69,7 +69,9 @@ Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om ee
 
 ## Een schema verwijderen of uitschakelen {#delete-schedule}
 
-U kunt een programma uit de werkruimte van programma&#39;s schrappen of onbruikbaar maken. U moet een vraagmalplaatje van één van beide selecteren [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] om naar de Redacteur van de Vraag te navigeren en te selecteren **[!UICONTROL Schedule]** voor toegang tot de werkruimte voor schema&#39;s.
+U kunt een programma van de plannenwerkruimte van een bepaalde vraag of van schrappen [!UICONTROL Scheduled Queries] werkruimte die van alle geplande vragen een lijst maakt.
+
+Om toegang te krijgen tot [!UICONTROL Schedules] tabblad van de gekozen query, moet u de naam van een querysjabloon selecteren in het menu [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] tab. Dit navigeert aan de Redacteur van de Vraag voor die vraag. Vorm de Redacteur van de Vraag, selecteer **[!UICONTROL Schedules]** voor toegang tot de werkruimte voor schema&#39;s.
 
 Selecteer een schema in de rijen met beschikbare schema&#39;s. U kunt de knevel gebruiken om de geplande vraag onbruikbaar te maken of toe te laten.
 
@@ -80,3 +82,5 @@ Selecteer een schema in de rijen met beschikbare schema&#39;s. U kunt de knevel 
 Selecteren **[!UICONTROL Delete a schedule]** om het uitgeschakelde schema te verwijderen.
 
 ![De planningswerkruimte met Uitschakelen programma en Schrapping benadrukt programma.](../images/ui/query-schedules/delete-schedule.png)
+
+Als alternatief kan de [!UICONTROL Scheduled Queries] het lusje biedt een inzameling van gealigneerde acties voor elke geplande vraag aan. Tot de beschikbare inline-acties behoren: [!UICONTROL Disable schedule] of [!UICONTROL Enable schedule], [!UICONTROL Delete schedule], en [!UICONTROL Subscribe] aan alarm voor de geplande vraag. Voor volledige instructies op hoe te om een geplande vraag door het geplande lusje van Vragen te schrappen of onbruikbaar te maken, te zien gelieve [geplande query-hulplijn controleren](./monitor-queries.md#inline-actions).
