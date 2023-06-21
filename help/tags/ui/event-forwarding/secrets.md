@@ -2,9 +2,9 @@
 title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in UI te vormen voor authentiek te verklaren aan eindpunten die in gebeurtenis worden gebruikt door:sturen eigenschappen.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '2037'
 ht-degree: 0%
 
 ---
@@ -13,14 +13,15 @@ ht-degree: 0%
 
 In gebeurtenis door:sturen, is een geheim een middel dat een authentificatiereferentie voor een ander systeem vertegenwoordigt, dat voor de veilige uitwisseling van gegevens toestaat. De geheimen kunnen slechts binnen gebeurtenis worden gecreeerd die eigenschappen door:sturen.
 
-Er zijn momenteel drie ondersteunde geheime typen:
+De volgende geheime types worden momenteel gesteund:
 
 | Geheim type | Beschrijving |
 | --- | --- |
-| [!UICONTROL Token] | Een enkele tekenreeks met tekens die een verificatietoken-waarde vertegenwoordigt die door beide systemen bekend en begrepen is. |
+| [!UICONTROL Google OAuth 2] | Bevat diverse kenmerken die de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie voor gebruik in de [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) en [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 | [!UICONTROL HTTP] | Bevat respectievelijk twee tekenreekskenmerken voor een gebruikersnaam en wachtwoord. |
 | [!UICONTROL OAuth 2] | Bevat diverse kenmerken die de [type clientverificatietype](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) voor de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
-| [!UICONTROL Google OAuth 2] | Bevat diverse kenmerken die de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie voor gebruik in de [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) en [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
+| [!UICONTROL OAuth 2 JWT] | Bevat diverse kenmerken die JSON Web Token (JWT)-profiel ondersteunen voor [OAuth 2.0 Autorisatie](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) subsidies. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
+| [!UICONTROL Token] | Een enkele tekenreeks met tekens die een verificatietoken-waarde vertegenwoordigt die door beide systemen bekend en begrepen is. |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ Van hier, verschillen de stappen om het geheim tot stand te brengen afhankelijk 
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -116,6 +118,40 @@ Als de verschuiving Vernieuwen bijvoorbeeld is ingesteld op de standaardwaarde v
 Als u klaar bent, selecteert u **[!UICONTROL Create Secret]** om het geheim te bewaren.
 
 ![OAuth 2-verschuiving opslaan](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+Selecteer **[!UICONTROL OAuth 2 JWT]** van de **[!UICONTROL Type]** vervolgkeuzelijst.
+
+![De [!UICONTROL Create Secret] tabblad met het geheim van OAuth 2 JWT gemarkeerd in het dialoogvenster [!UICONTROL Type] vervolgkeuzelijst.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>De enige [!UICONTROL Algorithm] die momenteel voor het ondertekenen van JWT wordt gesteund is RS256.
+
+Geef in de onderstaande velden uw [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL]Selecteer vervolgens de [!UICONTROL Algorithm] in de vervolgkeuzelijst. Voer vervolgens de [!UICONTROL Private Key Id]en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] veld is geen verplicht veld. Wanneer een waarde wordt opgegeven, wordt de JWT uitgewisseld met een toegangstoken. Het geheim wordt vernieuwd volgens de `expires_in` kenmerk van het antwoord en de [!UICONTROL Refresh Offset] waarde. Als er geen waarde wordt opgegeven, wordt de JWT gebruikt als geheim dat naar de rand wordt geduwd. De JWT wordt vernieuwd volgens de [!UICONTROL TTL] en [!UICONTROL Refresh Offset] waarden.
+
+![De [!UICONTROL Create Secret] met een selectie van invoervelden gemarkeerd.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+Onder **[!UICONTROL Credential Options]**, kunt u andere referentie-opties opgeven, zoals `jwt_param` in de vorm van sleutelwaardeparen. Als u meer sleutelwaardeparen wilt toevoegen, selecteert u **[!UICONTROL Add another]**.
+
+![De [!UICONTROL Create Secret] tabblad markeren [!UICONTROL Credential Options] velden.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+Tot slot kunt u vormen **[!UICONTROL Refresh Offset]** waarde voor het geheim. Dit vertegenwoordigt het aantal seconden vóór de symbolische vervaldatum dat het systeem automatisch zal uitvoeren verfrist zich. De equivalente tijd in uren en minuten wordt rechts van het veld weergegeven en wordt automatisch bijgewerkt terwijl u typt.
+
+![De [!UICONTROL Create Secret] tabblad markeren [!UICONTROL Refresh Offset] veld.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+Als de verschuiving Vernieuwen bijvoorbeeld is ingesteld op de standaardwaarde van `1800` (30 minuten) en het toegangstoken heeft een `expires_in` waarde van `3600` (één uur), vernieuwt het systeem automatisch het geheim over een uur.
+
+>[!IMPORTANT]
+>
+>Een OAuth 2 JWT geheim vereist minstens 30 minuten tussen verfrissingen en moet ook voor een minimum van één uur geldig zijn. Deze beperking geeft u een minimum van 30 minuten om in te grijpen als de problemen met het geproduceerde teken zich voordoen.
+>
+>Als de verschuiving bijvoorbeeld is ingesteld op `1800` (30 minuten) en het toegangstoken heeft een `expires_in` van `2700` (45 minuten), zou de ruil mislukken omdat het resulterende verschil minder dan 30 minuten bedraagt.
+
+Als u klaar bent, selecteert u **[!UICONTROL Create Secret]** om het geheim te bewaren.
+
+![De [!UICONTROL Create Secret] tabmarkering [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
