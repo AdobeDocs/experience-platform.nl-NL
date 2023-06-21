@@ -2,9 +2,7 @@
 title: Sluit uw RainFocus-account aan op het Experience Platform via de gebruikersinterface
 description: Leer hoe u uw RainFocus-account met Experience Platform kunt verbinden via de gebruikersinterface.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: e90f05c44943f55630bd02d3b8bf04b01d07f320
+source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%

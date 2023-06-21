@@ -3,9 +3,9 @@ title: Een Azure Event Hubs Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,10 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Een bronverbinding maken
 
+>[!TIP]
+>
+>An [!DNL Event Hubs] de consumentengroep kan slechts voor één enkele stroom op een bepaald ogenblik worden gebruikt.
+
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en een identiteitskaart van de bronverbinding nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie.
 
 Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` van het [!DNL Flow Service] API.
@@ -154,7 +158,7 @@ curl -X POST \
 | `params.eventHubName` | De naam voor uw [!DNL Event Hubs] bron. |
 | `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm`. |
 | `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruiken `latest` beginnen met lezen van de meest recente gegevens en gebruiken `earliest` om te beginnen met lezen van de eerste beschikbare gegevens in de stream. Deze parameter is optioneel en wordt standaard ingesteld op `earliest` indien niet verstrekt. |
-| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat moet worden gebruikt voor [!DNL Event Hubs]. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` indien niet verstrekt. Zie dit [[!DNL Event Hubs] gids over evenementen voor consumenten](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie . |
+| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat moet worden gebruikt voor [!DNL Event Hubs]. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` indien niet verstrekt. Zie dit [[!DNL Event Hubs] gids over evenementen voor consumenten](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie . **Opmerking**: An [!DNL Event Hubs] de consumentengroep kan slechts voor één enkele stroom op een bepaald ogenblik worden gebruikt. |
 
 ## Volgende stappen
 
