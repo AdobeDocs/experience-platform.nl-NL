@@ -2,9 +2,9 @@
 title: Verwijzing naar extensies doorsturen van gebeurtenissen
 description: Documentatie zoeken voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,7 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [Kern](./core/overview.md)
 * [Epsilon-gebeurtenis-API](https://exchange.adobe.com/apps/ec/109127)*
 * [Verbeterde Google-conversies toevoegen](./google-ads-enhanced-conversions/overview.md)
+* [Google Cloud Platform](./google-cloud-platform/overview.md)
 * [[!DNL Mailchimp] Rand](./mailchimp/overview.md)
 * [[!DNL Meta] Conversies-API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -43,6 +44,7 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [PegPeg-klantbeslissingshub](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Conversie-API magnetisch](https://exchange.adobe.com/apps/ec/108550)*
+* [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] API voor gebeurtenissen](./zendesk/overview.md)
