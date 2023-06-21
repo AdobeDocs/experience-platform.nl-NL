@@ -1,23 +1,17 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-solution: Experience Platform
 title: Een dataflow maken voor Zendesk met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Zendesk met behulp van de Flow Service API.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1966'
 ht-degree: 0%
 
 ---
 
-# (bèta) Een gegevensstroom maken voor [!DNL Zendesk] met de [!DNL Flow Service] API
+# Een gegevensstroom maken voor [!DNL Zendesk] met de [!DNL Flow Service] API
 
->[!NOTE]
->
->De [!DNL Zendesk] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
-
-Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen [!DNL Zendesk] gegevens naar Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en een dataflow tot stand te brengen [!DNL Zendesk] gegevens naar Platform met de [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 

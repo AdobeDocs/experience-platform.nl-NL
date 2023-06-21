@@ -1,20 +1,15 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: (Bèta) creeer een Verbinding van de Bron van het Mixpaneel in UI
+title: Een bronverbinding in het deelvenster Mixer maken in de gebruikersinterface
 description: Leer hoe u een Mixpanel-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
 
-# (Beta) Maak een [!DNL Mixpanel] bronverbinding in de gebruikersinterface
-
->[!NOTE]
->
->De [!DNL Mixpanel] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# Een [!DNL Mixpanel] bronverbinding in de gebruikersinterface
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Mixpanel] bronverbinding via de gebruikersinterface van Adobe Experience Platform Platform.
 
