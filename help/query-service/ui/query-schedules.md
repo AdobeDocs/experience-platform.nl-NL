@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,18 @@ Voor de outputdataset, hebt u de optie om of een bestaande dataset te gebruiken 
 >[!IMPORTANT]
 >
 > Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, doet u **niet** de noodzaak om `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag, aangezien de datasets reeds worden geplaatst. Met inbegrip van `INSERT INTO` of `CREATE TABLE AS SELECT` als onderdeel van uw geplande query&#39;s resulteert in een fout.
+
+Als u geen toegang tot geparameterized vragen hebt, ga op [een schema verwijderen of uitschakelen](#delete-schedule) sectie.
+
+### Parameters instellen voor een geplande geparametereerde query {#set-parameters}
+
+>[!IMPORTANT]
+>
+>De parameterized eigenschap van vraag UI is momenteel beschikbaar in een **alleen beperkte release** en is niet beschikbaar voor alle klanten.
+
+Als u een geplande vraag voor een parameterized vraag creeert, moet u de parameterwaarden voor deze vraaglooppas nu plaatsen.
+
+![De sectie van de Details van het Programma van de werkstroom van de programmaverwezenlijking met de benadrukte sectie van de Parameters van de Vraag.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
 Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om een schema te maken. U bent teruggekeerd aan de planningswerkruimte die details van het onlangs gecreeerde programma, met inbegrip van planningsidentiteitskaart, het programma zelf, en de de outputdataset van het programma toont. U kunt programmaidentiteitskaart gebruiken om meer informatie over de looppas van de geplande vraag zelf te zoeken. Lees voor meer informatie de [Geplande de eindpuntgids van vraaglooppas](../api/runs-scheduled-queries.md).
 
