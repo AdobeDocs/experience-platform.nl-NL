@@ -3,7 +3,7 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Als u een gebruiker uit een rol wilt verwijderen, selecteert u de **X** naast de
 
 ![gebruikers van flac-remove](../../images/flac-ui/flac-remove-users.png)
 
-## API-referenties voor rol beheren
+## API-referenties voor rol beheren {#manage-api-credentials-for-role}
 
 Selecteer **[!UICONTROL API credentials]** tabblad om de pagina met rollen-API-referenties te openen en selecteer vervolgens **[!UICONTROL Add API credentials]** om API-referenties aan de rol toe te wijzen.
 
