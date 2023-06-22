@@ -1,9 +1,9 @@
 ---
 title: Inline sjablonen
 description: Leer hoe te om veelvoudige voorwaarden in talrijke vragen met gealigneerde malplaatjes opnieuw te gebruiken.
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ U kunt sjablonen gebruiken om een of meerdere voorwaarden op te slaan. Ze hoeven
 
 >
 >
->In de gebruikersinterface van Adobe Experience Platform worden inlinesjablonen in de vorm van geparameteriiseerde query&#39;s alleen op het hoofdniveau ondersteund. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. Het kindmalplaatje moet een statisch malplaatje zijn en kan geen dynamische parameters hebben.
+>In de gebruikersinterface van Adobe Experience Platform worden inlinesjablonen in de vorm van geparameteriiseerde query&#39;s alleen op het hoofdniveau ondersteund. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. Het kindmalplaatje moet een statisch malplaatje zijn en kan geen dynamische parameters hebben. Zie de [parameterized vragen documentatie](../ui/parameterized-queries.md) voor meer informatie.
 
 ## Volgende stappen
 

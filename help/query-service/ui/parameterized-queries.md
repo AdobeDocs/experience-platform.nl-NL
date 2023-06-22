@@ -1,9 +1,9 @@
 ---
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ De Dienst van de vraag steunt het gebruik van parameterized vragen in de Redacte
 
 Lees voordat u doorgaat met deze handleiding de [Handleiding voor de Query Editor](./user-guide.md). De gids van de Redacteur van de Vraag verstrekt gedetailleerde informatie over hoe te schrijven, te bevestigen, en vragen voor klantenervaringsgegevens binnen het gebruikersinterface van de Experience Platform in werking te stellen.
 
+>[!NOTE]
 >
->
->Gemarkeerde vragen worden niet gesteund binnen gealigneerde malplaatjes voorbij hun direct ouderniveau. Gemarkeerde vragen werken slechts wanneer gebruikt in het originele malplaatje of binnen een direct kind gealigneerd malplaatje.
+>Binnen Adobe Experience Platform UI, wordt de parameter bepaalde vragen slechts gesteund op het ouderniveau van gealigneerde malplaatjes. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. De malplaatjes van het kind moeten een statisch malplaatje zijn en kunnen geen dynamische parameters hebben. Zie de [documentatie inline templates](../essential-concepts/inline-templates.md) voor meer informatie.
 
 ## Parameterized vraagsyntaxis {#syntax}
 
