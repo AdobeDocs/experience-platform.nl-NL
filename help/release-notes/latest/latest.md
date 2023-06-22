@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van juni 2023 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
+source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1514'
 ht-degree: 2%
 
 ---
@@ -18,6 +18,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Verificatie van Experience Platform-API&#39;s](#authentication-platform-apis)
 - [Gegevensverzameling](#data-collection)
 - [Doelen](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Bronnen](#sources)
 
@@ -75,6 +76,45 @@ Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevens
 -->
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Extensie (perspectiefprofiel) | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile Union Extension]](https://github.com/adobe/xdm/pull/1735/files) | De vereiste velden voor het samenvoegingsschema voor het prospectprofiel zijn toegevoegd. |
+| Extensie | [[!UICONTROL Decisioning Asset]](https://github.com/adobe/xdm/pull/1732/files) | Voeg een gegevenstype toe om elementen te vertegenwoordigen die in besluitvorming worden gebruikt. [!UICONTROL Decisioning Asset] biedt een verwijzing naar de elementen die worden gebruikt om de `decisionItems`. |
+| Gegevenstype | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce] slaat de administratie op van de koop- en verkoopactiviteiten. |
+| Veldgroep | [[!UICONTROL Profile Partner Enrichment(Sample)]](https://github.com/adobe/xdm/pull/1747/files) | Een steekproefschema werd toegevoegd voor de verrijking van de profielpartner. |
+| Veldgroep | [[!UICONTROL Partner Prospect Details(Sample)]](https://github.com/adobe/xdm/pull/1747/files) | Een steekproefschema werd toegevoegd voor de het profieluitbreidingen van de gegevensverkoper. |
+| Gegevenstype | [[!UICONTROL Commerce Scope]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce Scope] geeft aan waar een gebeurtenis heeft plaatsgevonden. Bijvoorbeeld in de winkelweergave, de winkel of website, enzovoort. |
+| Gegevenstype | [[!UICONTROL Billing]](https://github.com/adobe/xdm/pull/1734/files) | Factureringsgegevens voor een of meer betalingen zijn toegevoegd aan de [!UICONTROL Commerce] schema. |
+
+{style="table-layout:auto"}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving bijwerken |
+| --- | --- | --- |
+| Veldgroep | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1736/files) | Gewijzigd `bitrateAverageBucket` van 100 in &quot;800-899&quot;. |
+| Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/pull/1736/files) | Gewijzigd `bitrateAverageBucket` gegevenstype naar tekenreeks. |
+| Veldgroep | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/pull/1735/files) | Toegevoegd aan de klasse Prospect Profile. |
+| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1735/files) | Identiteitskaart toegevoegd aan [!UICONTROL Computed Attributes System Schema]. |
+| Datatype | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | Veld toegevoegd aan [!UICONTROL Session details information] om het gebruikte netwerk van de inhoudslevering te beschrijven. |
+| Extensie | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1731/files) | Identiteitskaart toegevoegd aan [!UICONTROL Adobe Unified Profile Service Account Union Extension]. |
+| Gegevenstype | [[!UICONTROL Order]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` is toegevoegd aan [!UICONTROL Order]. Dit geeft het verschil weer tussen de normale orderprijs en de speciale prijs. Het wordt toegepast op de gehele bestelling in plaats van op afzonderlijke producten. |
+| Schema | [[!UICONTROL AEP Hygiene Operation Request]](https://github.com/adobe/xdm/pull/1728/files) | De `targetServices` er is een veld toegevoegd met de namen van de diensten die de gegevenshygiënebewerkingen verwerken . |
+| Gegevenstype | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` is toegevoegd aan de verzendgegevens voor een of meer producten. Het is een alfabetische ISO 4217-valutacode die wordt gebruikt voor de prijsstelling van het product. |
+| Gegevenstype | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) | De `language` is toegevoegd om de toepassing de taalkundige, geografische of culturele voorkeuren van de gebruiker te geven. |
+| Extensie | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL AJO Timestamp Entity] is toegevoegd om de tijd aan te geven waarop het bericht voor het laatst is gewijzigd. |
+| Gegevenstype | (Meerdere) | [Verschillende mediagegevens zijn verwijderd](https://github.com/adobe/xdm/pull/1739/files) voor diverse gegevenstypen, voor consistentie. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md)
 
 ## Query-service {#query-service}
 
