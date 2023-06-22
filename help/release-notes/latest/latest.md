@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van juni 2023 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
+source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -58,17 +58,13 @@ Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevens
 
 {style="table-layout:auto"}
 
-<!-- 
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+| Werkruimte-ondersteuning voor [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) bestemmingen. | U kunt nu de Adobe Target-werkruimte selecteren waarnaar u het publiek wilt delen wanneer u een nieuwe Adobe Target-doelverbinding configureert. Zie de [verbindingsparameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) voor meer informatie. Raadpleeg de zelfstudie over [werkruimten configureren](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target voor meer informatie over werkruimten. |
 
 {style="table-layout:auto"}
-
--->
 
 <!--
 
