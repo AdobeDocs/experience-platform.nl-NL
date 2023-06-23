@@ -1,9 +1,9 @@
 ---
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ Gebruik de `'$'` Plaats om een vraagparameter in uw vraag in de tekstredacteur i
 
 Als u een parameter verwijdert en de query opnieuw probeert uit te voeren nadat deze al is uitgevoerd, wordt een foutbericht weergegeven in het dialoogvenster [!UICONTROL Query parameters] gedeelte om u te waarschuwen.
 
+>[!NOTE]
+>
+>Als uw vraag geen parameters neemt, kunt u onnodige parameters binnen de Redacteur van de Vraag nog ingaan. De redacteur van de Vraag negeert alle onnodige sleutel-waarde paren en zij hebben geen effect op de uitvoering of de resultaten van de vraag.
+
 ![De redacteur van de Vraag met een leeg waardegebied en de fout van vraagparameters benadrukt.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Gegevens over querylogbestanden gebruiken om parameterwaarden te controleren {#check-parameter-values}
@@ -77,4 +81,4 @@ Parameterwaarden worden opgeslagen wanneer u een geparametriseerde query plant. 
 
 Door dit document te lezen, hebt u geleerd hoe te om vragen in Adobe Experience Platform UI parameters te bepalen en hen in geplande vraaglooppas te gebruiken. Het document benadrukte ook hoe te om de logboeken voor de parameterwaarden te controleren die in vraaguitvoeringen worden gebruikt.
 
-Als u dit nog niet hebt gedaan, kunt u de handleiding het beste lezen op [bewaking van geplande query&#39;s](./monitor-queries.md) om een beter inzicht in de status van alle vraagbanen door het Platform UI te verkrijgen.
+Vervolgens kunt u de handleiding het beste lezen op [bewaking van geplande query&#39;s](./monitor-queries.md) om een beter inzicht in de status van alle vraagbanen door het Platform UI te verkrijgen.
