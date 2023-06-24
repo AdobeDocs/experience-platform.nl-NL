@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van juni 2023 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
+source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
 workflow-type: tm+mt
 source-wordcount: '1514'
 ht-degree: 2%
@@ -118,12 +118,18 @@ Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm
 
 ## Query-service {#query-service}
 
-De Dienst van de vraag staat u toe om standaardSQL te gebruiken om gegevens in het gegevenspeer van Adobe Experience Platform te vragen. U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time. &#x200B;
+De Dienst van de vraag staat u toe om standaardSQL te gebruiken om gegevens in het gegevenspeer van Adobe Experience Platform te vragen. U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time.
+
 **Bijgewerkte functies**
-&#x200B; | Functie | Beschrijving | | — | — | | Inline-sjablonen &#x200B; | De Dienst van de vraag steunt nu het gebruik van malplaatjes die andere malplaatjes binnen uw SQL van verwijzingen voorzien. Verminder uw werkbelasting en vermijd fouten door inlinesjablonen in uw query&#39;s te gebruiken. U kunt instructies of voorwaarden opnieuw gebruiken en verwijzen naar geneste sjablonen voor meer flexibiliteit in uw SQL. Er is geen grens in de grootte van vragen die als malplaatjes kunnen worden opgeslagen, of het aantal malplaatjes die van uw originele vraag kunnen worden van verwijzingen voorzien. Lees voor meer informatie de [inline sjabloonhandleiding](../../query-service/essential-concepts/inline-templates.md). | | Geplande UI-updates voor query | U kunt alle geplande query&#39;s vanaf één locatie in de gebruikersinterface beheren met de [[!UICONTROL Scheduled Queries tab]](../../query-service/ui/monitor-queries.md#inline-actions). De [!UICONTROL Scheduled Queries] UI is verbeterd met de toevoeging van gealigneerde vraagacties en de nieuwe kolom van de vraagstatus. De recente toevoegingen omvatten de capaciteit om, een programma toe te laten onbruikbaar te maken en te schrappen, of aan alarm voor komende vraaglooppas direct van te abonneren [!UICONTROL Scheduled Queries] weergeven. <p>![Inline-handelingen gemarkeerd in het dialoogvenster [!UICONTROL Scheduled Queries] weergeven.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-handelingen gemarkeerd in het dialoogvenster [!UICONTROL Scheduled Queries] weergeven."){width="100" zoomable="yes"}</p> |
+
+| Functie | Beschrijving |
+| --- | --- |
+| Inline-sjablonen | De Dienst van de vraag steunt nu het gebruik van malplaatjes die andere malplaatjes binnen uw SQL van verwijzingen voorzien. Verminder uw werkbelasting en vermijd fouten door inlinesjablonen in uw query&#39;s te gebruiken. U kunt instructies of voorwaarden opnieuw gebruiken en verwijzen naar geneste sjablonen voor meer flexibiliteit in uw SQL. Er is geen grens in de grootte van vragen die als malplaatjes kunnen worden opgeslagen, of het aantal malplaatjes die van uw originele vraag kunnen worden van verwijzingen voorzien. Lees voor meer informatie de [inline sjabloonhandleiding](../../query-service/essential-concepts/inline-templates.md). |
+| Geplande query-UI-updates | Beheer al uw geplande vragen van één plaats in UI met [[!UICONTROL Scheduled Queries tab]](../../query-service/ui/monitor-queries.md#inline-actions). De [!UICONTROL Scheduled Queries] UI is verbeterd met de toevoeging van gealigneerde vraagacties en de nieuwe kolom van de vraagstatus. De recente toevoegingen omvatten de capaciteit om, een programma toe te laten onbruikbaar te maken en te schrappen, of aan alarm voor komende vraaglooppas direct van te abonneren [!UICONTROL Scheduled Queries] weergeven. <p>![Inline-handelingen gemarkeerd in het dialoogvenster [!UICONTROL Scheduled Queries] weergeven.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-handelingen gemarkeerd in het dialoogvenster [!UICONTROL Scheduled Queries] weergeven."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
-&#x200B; Voor meer informatie over de Dienst van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
+
+Voor meer informatie over de Dienst van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
 
 ## Bronnen {#sources}
 
