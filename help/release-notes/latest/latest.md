@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van juni 2023 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
+source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1446'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,6 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Extensie | [!DNL Google Cloud Platform] extensie voor doorsturen van gebeurtenissen | De [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) Met de extensie voor het doorsturen van gebeurtenissen kunt u gebeurtenisgegevens doorsturen naar Google voor activering via [!DNL Google Pub/Sub]. |
 | Extensie | [!DNL Cloud connector for Google Analytics 4 (ga4)] extension | De [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) gebeurtenis die uitbreiding door:sturen staat u toe om analyses via nieuwe te volgen [!DNL Google Analytics 4 (ga4)] standaard. |
 | Geheim | OAuth 2 JWT Secret | De [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) staat u toe om Adobe te gebruiken en [!DNL Google] De tokens van de dienst om server-server interactie in gebeurtenis te steunen die door:sturen. |
-| Tags en doorsturen van gebeurtenissen | Toewijzing gebruiker | De attributie van de gebruiker levert zeer belangrijke activiteitsgegevens over over [Tags](../../tags/home.md) en [Gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) UI.<br><br>De gegevens bevatten wie welke wijzigingen heeft aangebracht en op welk tijdstip. Deze gegevens zijn in de volgende schermen zichtbaar in de gebruikersinterface Tags en Event Forwarding:<br><ul><li> Overzicht van eigenschappen</li><li> Geïnstalleerde extensies</li><li>Regels vergelijken en herzien</li><li>Gegevenselementen vergelijken overzicht</li><li>Extensies vergelijken revisie</li><li>Wijzigingen in bibliotheekbron</li><li>Bibliotheek laatst samenstellen en gepubliceerd</li></ul> |
 
 {style="table-layout:auto"}
 
