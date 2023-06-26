@@ -2,9 +2,9 @@
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
+source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '950'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -148,6 +149,10 @@ alloy("sendEvent", {
 });
 ```
 
+| Parameter | Beschrijving |
+|---|---|
+| `edgeConfigOverrides.datastreamId` | Met deze parameter kan één aanvraag naar een andere gegevensstroom gaan dan de gegevensstroom die door de `configure` gebruiken. |
+
 ### Configuratieoverschrijvingen verzenden via de `configure` command {#send-configure}
 
 In het onderstaande voorbeeld ziet u hoe een configuratieoverschrijving eruit kan zien op een `configure` gebruiken.
@@ -157,7 +162,7 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
