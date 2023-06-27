@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1003'
 ht-degree: 14%
 
 ---
@@ -279,7 +279,7 @@ ht-degree: 14%
    * [Achterwaartse compatibiliteitsnorm](./extension-dev/backwards-compatibility.md)
 * Reactor-API {#api}
    * [Overzicht](./api/overview.md)
-   * [Aan de slag](./api/getting-started.md)
+   * [De Reactor-API verifiëren en openen](./api/getting-started.md)
    * Eindpunten {#endpoints}
       * [Bedrijven](./api/endpoints/companies.md)
       * [Properties](./api/endpoints/properties.md)
