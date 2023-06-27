@@ -3,9 +3,9 @@ title: (bèta) Datasets exporteren naar Cloud Storage-doelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 0%
 >* De functionaliteit om datasets uit te voeren is momenteel in Bèta en niet beschikbaar aan alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 >* Deze bètafunctionaliteit ondersteunt de export van gegevens van de eerste generatie, zoals gedefinieerd in de Real-time Customer Data Platform [productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
-
 
 In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage] door het Experience Platform UI te gebruiken.
 
@@ -90,7 +89,7 @@ Gebruik de controlevakjes links van de datasetnamen om de datasets te selecteren
 >title="Exportopties voor bestanden voor gegevenssets"
 >abstract="Selecteren **Incrementele bestanden exporteren** om alleen de gegevens te exporteren die sinds de laatste export aan de gegevensset zijn toegevoegd. <br> De eerste incrementele bestandsuitvoer bevat alle gegevens in de gegevensset, die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de gegevens die sinds de eerste export aan de gegevensset zijn toegevoegd."
 
-In de **[!UICONTROL Scheduling]** stap, kunt u een begindatum evenals een uitvoerkadentie voor uw datasetuitvoer plaatsen.
+In de **[!UICONTROL Scheduling]** stap, kunt u een begindatum en een uitvoerkadentie voor uw datasetuitvoer plaatsen.
 
 De **[!UICONTROL Export incremental files]** automatisch geselecteerd. Dit leidt tot de uitvoer waar het eerste dossier een volledige momentopname van de dataset is en de verdere dossiers zijn stijgende toevoegingen aan de dataset sinds de vorige uitvoer.
 
@@ -135,11 +134,22 @@ De standaardbestandsnaam wordt willekeurig gegenereerd en zorgt ervoor dat geëx
 
 De aanwezigheid van deze bestanden op uw opslaglocatie is een bevestiging van een geslaagde export. Als u wilt weten hoe de geëxporteerde bestanden zijn gestructureerd, kunt u een voorbeeld downloaden [.parquet-bestand](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) of [.json-bestand](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
+#### Gecomprimeerde gegevensbestanden {#compressed-dataset-files}
+
+In de [verbinding maken met doelworkflow](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), kunt u de geëxporteerde gegevenssetbestanden selecteren die u wilt comprimeren, zoals hieronder wordt weergegeven:
+
+![Het type van dossier en compressieselectie wanneer het verbinden met een bestemming om datasets uit te voeren.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen bij het comprimeren:
+
+* Bij het exporteren van gecomprimeerde JSON-bestanden is de geëxporteerde bestandsindeling `json.gz`
+* Bij het exporteren van gecomprimeerde parketbestanden is de geëxporteerde bestandsindeling `gz.parquet`
+
 ## Gegevensset verwijderen van bestemming {#remove-dataset}
 
 Om een dataset uit een bestaande gegevensstroom te verwijderen, volg de stappen hieronder:
 
-1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
+1. Aanmelden bij de [UI Experience Platform](https://experience.adobe.com/platform/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
 
    ![De bestemming bladert mening met een getoonde bestemmingsverbinding en de rest vaag uit.](../assets/ui/export-datasets/browse-dataset-connections.png)
 

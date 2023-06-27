@@ -4,9 +4,9 @@ title: (Bèta) de datasets van de uitvoer door de Dienst API van de Stroom te ge
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
 workflow-type: tm+mt
-source-wordcount: '3333'
+source-wordcount: '3510'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 0%
 >* De functionaliteit om datasets uit te voeren is momenteel in Bèta en niet beschikbaar aan alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 >* Deze bètafunctionaliteit ondersteunt de export van gegevens van de eerste generatie, zoals gedefinieerd in de Real-time Customer Data Platform [productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Premier of Ultimate-pakket hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
-
 
 In dit artikel wordt uitgelegd welke workflow is vereist voor het gebruik van de [!DNL Flow Service API] om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage].
 
@@ -2315,6 +2314,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 U vindt informatie over de [de diverse parameters die door de Dataflow-runtime-API worden geretourneerd](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in de API-naslagdocumentatie.
+
+## Controleren of gegevensset is geëxporteerd {#verify}
+
+Bij het exporteren van gegevenssets maakt Experience Platform een `.json` of `.parquet` in de opslaglocatie die u hebt opgegeven. Een nieuw bestand dat op uw opslaglocatie moet worden geplaatst, wordt verwacht volgens het exportschema dat u hebt opgegeven toen [een gegevensstroom maken](#create-dataflow).
+
+Experience Platform leidt tot een omslagstructuur in de opslagplaats u specificeerde, waar het de uitgevoerde datasetdossiers bewaart. Voor elke exporttijd wordt een nieuwe map gemaakt volgens het onderstaande patroon:
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+De standaardbestandsnaam wordt willekeurig gegenereerd en zorgt ervoor dat geëxporteerde bestandsnamen uniek zijn.
+
+### Voorbeeldgegevenssetbestanden {#sample-files}
+
+De aanwezigheid van deze bestanden op uw opslaglocatie is een bevestiging van een geslaagde export. Als u wilt weten hoe de geëxporteerde bestanden zijn gestructureerd, kunt u een voorbeeld downloaden [.parquet-bestand](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) of [.json-bestand](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+
+#### Gecomprimeerde gegevensbestanden {#compressed-dataset-files}
+
+In de stap naar [een doelverbinding maken](#create-target-connection), kunt u de geëxporteerde gegevenssetbestanden selecteren die moeten worden gecomprimeerd.
+
+Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen bij het comprimeren:
+
+* Bij het exporteren van gecomprimeerde JSON-bestanden is de geëxporteerde bestandsindeling `json.gz`
+* Bij het exporteren van gecomprimeerde parketbestanden is de geëxporteerde bestandsindeling `gz.parquet`
 
 ## API-foutafhandeling {#api-error-handling}
 
