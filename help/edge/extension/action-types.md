@@ -3,9 +3,9 @@ title: Handelingstypen in de Adobe Experience Platform Web SDK-extensie
 description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ In deze handeling krijgt u ook een optioneel veld met een identiteitskaarten, zo
 
 Als u de samenvoegingsidentiteitskaart van de gebeurtenis op uw pagina wilt terugstellen, kunt u dit met deze actie doen. Als u de id opnieuw wilt instellen, selecteert u de samenvoegings-id die u opnieuw wilt instellen en voert u de actie naar wens uit.
 
-## (bèta) Variabele bijwerken {#update-variable}
+## Variabele bijwerken {#update-variable}
 
 >[!IMPORTANT]
 >
