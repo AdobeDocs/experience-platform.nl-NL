@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van beleidsregels voor gegevensgebruik
 description: Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens in Adobe Experience Platform of waarvan u een beperking hebt ingesteld.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,7 @@ In de onderstaande tabel worden de belangrijkste marketingacties beschreven die 
 | Combineren met rechtstreeks identificeerbare gegevens | Een handeling waarbij alle PII&#39;s (Personal Identified Information) worden gecombineerd met anonieme gegevens. Contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en derde gegevensleveranciers bevatten vaak specifieke contractuele verbodsbepalingen inzake het gebruik van dergelijke gegevens met rechtstreeks identificeerbare gegevens. |
 | Secundaire doelen voor meerdere sites | Een handeling die gegevens gebruikt voor verwijzing naar andere sites. De combinatie van gegevens van verschillende sites, waaronder een combinatie van gegevens ter plaatse en gegevens buiten de locatie of een combinatie van gegevens van verschillende bronnen buiten de locatie, wordt ook wel gegevens over andere locaties genoemd. Gegevens over andere sites worden doorgaans verzameld en verwerkt om conclusies te trekken over de belangen van gebruikers. |
 | Gegevenswetenschap | Een handeling die gegevens gebruikt voor workflows voor gegevenswetenschap. Sommige contracten bevatten expliciete verbodsbepalingen voor het gebruik van gegevens voor gegevenswetenschap. Soms worden deze termen gedefinieerd in termen die het gebruik van gegevens voor kunstmatige intelligentie (AI), machinaal leren (ML) of modellering verbieden. |
+| Gegevens exporteren | Een actie die gegevens naar om het even welke plaats of bestemming buiten de producten en de diensten van Adobe uitvoert. Bijvoorbeeld, het downloaden van gegevens aan uw lokale machine, het kopiëren van gegevens van het scherm, het plannen van levering van gegevens aan een plaats buiten Adobe, Customer Journey Analytics geplande Projecten, de Rapporten van de Download, het Melden API, etc. |
 | E-maildoelen | Een handeling die gegevens gebruikt in campagnes voor het aanwijzen van e-mail. |
 | Exporteren naar derde partij | Een handeling die gegevens exporteert naar processors en entiteiten die geen directe relatie hebben met klanten. Veel gegevensleveranciers hebben bedingen in de contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. |
 | Onsite reclame | Een handeling die gegevens gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. |
