@@ -4,9 +4,9 @@ title: Een gegevensset voor profielupdates inschakelen met behulp van API's
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform API's kunt gebruiken om een gegevensset met "upsert"-mogelijkheden in te schakelen om updates uit te voeren naar gegevens in het realtime profiel van klanten.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Deze zelfstudie behandelt het proces waarbij een dataset met &quot;upsert&quot;m
 
 >[!NOTE]
 >
->De upsert-workflow werkt alleen voor batchopname. Streaming opname is **niet** ondersteund.
+>De workflow die in deze zelfstudie wordt beschreven, werkt alleen voor batchopname. Raadpleeg de handleiding voor gestreamde opname-upserts op [gedeeltelijke rijupdates verzenden naar Real-Time Klantprofiel met Data Prep](../../data-prep/upserts.md).
 
 ## Aan de slag
 
