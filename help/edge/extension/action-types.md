@@ -3,9 +3,9 @@ title: Handelingstypen in de Adobe Experience Platform Web SDK-extensie
 description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,6 @@ Nadat u toestemming van uw gebruiker hebt ontvangen, moet deze toestemming aan h
 In deze handeling krijgt u ook een optioneel veld met een identiteitskaarten, zodat identiteiten kunnen worden gesynchroniseerd zodra de toestemming is ontvangen. Het synchroniseren is nuttig wanneer de toestemming als &quot;In behandeling&quot;of &quot;uit&quot;wordt gevormd omdat de toestemmingsvraag waarschijnlijk de eerste vraag aan brand is.
 
 ## Variabele bijwerken {#update-variable}
-
->[!IMPORTANT]
->
->Dit is momenteel een bètafunctionaliteit en kan worden gewijzigd. Toekomstige versies kunnen doorbrekende wijzigingen bevatten.
 
 Gebruik deze handeling om een XDM-object als resultaat van een gebeurtenis te wijzigen. Deze handeling is bedoeld om een object op te bouwen waarnaar later kan worden verwezen vanuit een **[!UICONTROL Send event]** handeling, om het XDM-gebeurtenisobject op te nemen.
 

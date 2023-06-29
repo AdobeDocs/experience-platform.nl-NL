@@ -2,9 +2,9 @@
 title: Typen gegevenselementen in de Adobe Experience Platform Web SDK-extensie
 description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,6 @@ Wanneer u bepaalde velden van uw schema opent, zoals `web.webPageDetails.URL`, w
 >Vul alleen de gegevens in die u wilt verzamelen. Alles wat niet is ingevuld, wordt weggelaten wanneer de gegevens naar de oplossingen worden verzonden.
 
 ## Variabele {#variable}
-
->[!IMPORTANT]
->
->Dit is momenteel een bètafunctionaliteit en kan worden gewijzigd. Toekomstige versies kunnen doorbrekende wijzigingen bevatten.
 
 Een andere manier om XDM-objecten te maken, is het gebruik van de **[!UICONTROL Variable]** gegevenselement. Terwijl het XDM-objectelement wordt gemaakt wanneer ernaar wordt verwezen, bijvoorbeeld binnen een `sendEvent` de **[!UICONTROL Variable]** gegevenselement kan worden bijgewerkt via [!UICONTROL Update variable] handelingen. Als u het gegevenselement wilt gebruiken, selecteert u de juiste Adobe Experience Platform-sandbox en -schema.
 
