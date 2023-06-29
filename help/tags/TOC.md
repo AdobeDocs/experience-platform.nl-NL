@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 14%
+source-wordcount: '1025'
+ht-degree: 13%
 
 ---
 
@@ -96,8 +96,16 @@ ht-degree: 14%
          * [Aanvullende informatie](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform Demo {#platform-demo}
          * [Overzicht](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform Web SDK {#sdk}
-         * [Overzicht](./extensions/client/sdk/overview.md)
+      * Adobe Experience Platform Web SDK {#web-sdk}
+         * [Overzicht](./extensions/client/web-sdk/overview.md)
+         * [De webSDK-tagextensie configureren](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Gebeurtenistypen](./extensions/client/web-sdk/event-types.md)
+         * [Typen handelingen](./extensions/client/web-sdk/action-types.md)
+         * [Gegevenstelelementtypen](./extensions/client/web-sdk/data-element-types.md)
+         * [Toegang tot de ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Web SDK-plug-ins](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Opmerkingen bij de release Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Opmerkingen bij de release van Web SDK-plug-ins](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Overzicht](./extensions/client/asset-insights/overview.md)
          * [Aanvullende informatie](./extensions/client/asset-insights/release-notes.md)
@@ -138,9 +146,6 @@ ht-degree: 14%
       * Gebruikelijke plug-ins voor Analytics {#plugins}
          * [Overzicht](./extensions/client/plugins/overview.md)
          * [Aanvullende informatie](./extensions/client/plugins/release-notes.md)
-      * Algemene insteekmodules voor Web SDK {#web-sdk-plugins}
-         * [Overzicht](./extensions/client/web-sdk-plugins/overview.md)
-         * [Aanvullende informatie](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Cookie-beheer voor toestemming door gebruikers CMP v2](https://exchange.adobe.com/apps/ec/107037)

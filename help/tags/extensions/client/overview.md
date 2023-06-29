@@ -2,7 +2,7 @@
 title: Verwijzing naar extensies voor tags
 description: Documentatie voor extensies voor tags zoeken in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 2%
@@ -39,7 +39,7 @@ Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijd
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID Service](./id-service/overview.md)
 * [Adobe Experience Platform Demo](./platform-demo/overview.md)
-* [Adobe Experience Platform Web SDK](./sdk/overview.md)
+* [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobe Media Analytics voor audio en video](./media-analytics/overview.md)
@@ -65,7 +65,7 @@ Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijd
 * [Cheetah Ervaringen](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Gebruikelijke plug-ins voor Analytics](./plugins/overview.md)
-* [Algemene insteekmodules voor Web SDK](./web-sdk-plugins/overview.md)
+* [Algemene insteekmodules voor Web SDK](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Cookie-beheer voor toestemming door gebruikers CMP v2](https://exchange.adobe.com/apps/ec/*107037)

@@ -2,7 +2,7 @@
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
 1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [databaseconfiguratiepagina](configure.md).
-2. Dan, moet u de met voeten treedt naar het Netwerk van de Rand of via het bevel van SDK van het Web of door SDK van het Web te gebruiken verzenden [tagextensie](../extension/web-sdk-extension-configuration.md).
+2. Dan, moet u de met voeten treedt naar het Netwerk van de Rand of via het bevel van SDK van het Web of door SDK van het Web te gebruiken verzenden [tagextensie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Dit artikel verklaart het proces van de de configuratieopheffing van begin tot eind van de gegevensstroom voor elk type van gesteunde opheffing.
 
@@ -91,7 +91,7 @@ U moet nu de containeroverschrijvingen voor id-synchronisatie hebben geconfigure
 
 >[!NOTE]
 >
->Als alternatief voor het verzenden van de configuratieoverschrijvingen via de bevelen van SDK van het Web, kunt u de configuratieoverschrijvingen aan SDK van het Web toevoegen [tagextensie](../extension/web-sdk-extension-configuration.md).
+>Als alternatief voor het verzenden van de configuratieoverschrijvingen via de bevelen van SDK van het Web, kunt u de configuratieoverschrijvingen aan SDK van het Web toevoegen [tagextensie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Na [configureren van gegevensstroomoverschrijvingen](#configure-overrides) in de UI van de Inzameling van Gegevens, kunt u de met voeten getreden naar het Netwerk van de Rand, via het Web SDK nu verzenden.
 

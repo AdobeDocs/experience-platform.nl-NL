@@ -3,7 +3,7 @@ title: Adobe Journey Optimizer gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe road optimizer;renderDecisions;surfaces;decisions;proposities;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande st
    })
    ```
 
-3. Geef desgewenst extra oppervlakken op in uw gebeurtenissen. Door gebrek, zal SDK van het Web automatisch de Weboppervlakte voor de huidige Web-pagina produceren en zal het in het verzoek aan het Netwerk van de Rand omvatten. Indien nodig kunnen aanvullende oppervlakken in het verzoek worden opgenomen door deze op te geven in het dialoogvenster `personalization.surfaces` de `sendEvent` of in het corresponderende **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../extension/action-types.md#send-event) configuratie van de extensie van Web SDK.
+3. Geef desgewenst extra oppervlakken op in uw gebeurtenissen. Door gebrek, zal SDK van het Web automatisch de Weboppervlakte voor de huidige Web-pagina produceren en zal het in het verzoek aan het Netwerk van de Rand omvatten. Indien nodig kunnen aanvullende oppervlakken in het verzoek worden opgenomen door deze op te geven in het dialoogvenster `personalization.surfaces` de `sendEvent` of in het corresponderende **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuratie van de extensie van Web SDK.
 
    ```javascript
    alloy("sendEvent", {

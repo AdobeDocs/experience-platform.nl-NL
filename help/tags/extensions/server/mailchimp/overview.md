@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1287'
 ht-degree: 2%
@@ -103,7 +103,7 @@ De extensie is nu geïnstalleerd en geconfigureerd voor gebruik in uw eigenschap
 
 ## Gegevensverzameling
 
-Wanneer u deze extensie in een [regel](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u vormen [Adobe Experience Platform Web SDK-extensie](../../client/sdk/overview.md) om die gegevens naar [!DNL Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis die bezit door:sturen.
+Wanneer u deze extensie in een [regel](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u vormen [Adobe Experience Platform Web SDK-extensie](../../client/web-sdk/overview.md) om die gegevens naar [!DNL Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis die bezit door:sturen.
 
 De gegevens die door deze uitbreiding worden vereist kunnen van Web SDK als of gegevens worden verzonden XDM of niet-XDM. Raadpleeg de documentatie voor meer informatie over [XDM-gegevens verzenden](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 

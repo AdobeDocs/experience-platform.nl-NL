@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van streaming inscriptie
 description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -57,4 +57,4 @@ In de onderstaande tabel vindt u een overzicht van de aanvraag per seconden voor
 
 ## Adobe Experience Platform-extensie
 
-Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De [!DNL Experience Platform] extensie biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor real-time invoer naar [!DNL Experience Platform]. Ga naar [Extensie Experience Platform](../../tags/extensions/client/sdk/overview.md) documentatie voor meer informatie.
+Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De [!DNL Experience Platform] extensie biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor real-time invoer naar [!DNL Experience Platform]. Ga naar [Extensie Experience Platform](../../tags/extensions/client/web-sdk/overview.md) documentatie voor meer informatie.

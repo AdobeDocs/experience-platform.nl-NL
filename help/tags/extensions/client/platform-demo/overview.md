@@ -2,7 +2,7 @@
 title: Overzicht van Adobe Experience Platform Demo-extensie
 description: Meer informatie over de extensie Adobe Experience Platform Demo in Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Deze verlenging is vervangen door [Adobe Experience Platform Web SDK](../sdk/overview.md).
+>Deze verlenging is vervangen door [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
 
 De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier volgt een snelle vergelijking van de huidige functies.
 
@@ -26,11 +26,11 @@ De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier
 | Ondersteuning voor aangepaste klant-id&#39;s | Ondersteuning voor aangepaste gebruikers-id&#39;s |
 | Interface voor clienttoewijzing voor XDM | Ingebouwde ECID (geen bezoeker.js nodig) |
 | Mogelijkheid om een streamingverbinding te maken | Ondersteuning voor aanmelding |
-|  | XDM-ondersteuning als gegevenselement |
-|  | Domeinondersteuning van eerste partij |
-|  | Ingebouwde foutopsporingsgereedschappen |
-|  | Automatisch verzamelt browsercontext |
-|  | Volledige open bron |
+| | XDM-ondersteuning als gegevenselement |
+| | Domeinondersteuning van eerste partij |
+| | Ingebouwde foutopsporingsgereedschappen |
+| | Automatisch verzamelt browsercontext |
+| | Volledige open bron |
 
 
 ## De Adobe Experience Platform-extensie configureren
