@@ -4,7 +4,7 @@ title: API-migratiegids voor cloudopslagdoelen
 description: Meer informatie over de wijzigingen in de workflow om cloudopslagbestemmingen te activeren als onderdeel van de migratie naar de nieuwe doelkaarten voor cloudopslag met extra functionaliteit.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -16,7 +16,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >* De functionaliteit die op deze pagina wordt beschreven, is beschikbaar voor klanten die de Real-Time CDP Premiere en Ultimate-pakketten hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
-
 
 ## Migratiecontext {#migration-context}
 
@@ -783,7 +782,7 @@ In het onderstaande configuratievoorbeeld ziet u hoe `profileSelectors` velden z
 
 ## Tijdlijn en actiepunten voor migratie {#timeline-and-action-items}
 
-De migratie van erfenisgegevens stroomt naar de nieuwe doelkaarten voor [!DNL Amazon S3], [!DNL Azure Blob]en SFTP-doelen worden uitgevoerd zodra uw organisatie gereed is om te migreren en niet later dan **30 juni 2023**.
+De migratie van erfenisgegevens stroomt naar de nieuwe doelkaarten voor [!DNL Amazon S3], [!DNL Azure Blob]en SFTP-doelen worden uitgevoerd zodra uw organisatie gereed is om te migreren en niet later dan **26 juli 2023**.
 
 U ontvangt herinneringse-mails van Adobe wanneer de migratiedatum nadert. Lees ter voorbereiding de sectie Actie-items hieronder om u voor te bereiden op de migratie.
 
@@ -791,11 +790,11 @@ U ontvangt herinneringse-mails van Adobe wanneer de migratiedatum nadert. Lees t
 
 Ter voorbereiding van de migratie van [!DNL Amazon S3], [!DNL Azure Blob]en SFTP-cloudopslagdoelen naar de nieuwe kaarten. Bereid u voor om uw scripts en geautomatiseerde API-aanroepen bij te werken, zoals hieronder wordt voorgesteld.
 
-1. Werk om het even welke manuscripten of geautomatiseerde API vraag voor om het even welk bestaand bij [!DNL Amazon S3], [!DNL Azure Blob], of SFTP-cloudopslagdoelen uiterlijk op 30 juni 2023. Alle geautomatiseerde API-aanroepen of scripts die gebruikmaken van de verouderde verbindingsspecificaties of flowspecificaties, moeten worden bijgewerkt naar de nieuwe verbindingsspecificaties of stroomspecificaties.
-2. Neem contact op met uw Adobe-accountvertegenwoordiger wanneer uw scripts vóór 30 juni zijn bijgewerkt.
+1. Werk om het even welke manuscripten of geautomatiseerde API vraag voor om het even welk bestaand bij [!DNL Amazon S3], [!DNL Azure Blob], of SFTP-cloudopslagdoelen uiterlijk 26 juli 2023. Alle geautomatiseerde API-aanroepen of scripts die gebruikmaken van de verouderde verbindingsspecificaties of flowspecificaties, moeten worden bijgewerkt naar de nieuwe verbindingsspecificaties of stroomspecificaties.
+2. Neem contact op met uw Adobe-accountvertegenwoordiger wanneer uw scripts vóór 26 juli zijn bijgewerkt.
 3. De `targetConnectionSpecId` kan als vlag worden gebruikt om te bepalen als dataflow aan de nieuwe bestemmingskaart is gemigreerd. U kunt uw scripts bijwerken met een `if` voorwaarde om de erfenis en bijgewerkte specificaties van de doelverbinding in te zien `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` en bepalen of uw gegevensstroom is gemigreerd. U kunt de verouderde en nieuwe verbindingsspecificaties-id&#39;s zien in de specifieke secties op deze pagina voor elke bestemming.
 4. Uw Adobe-accountteam zal u meer informatie geven over wanneer uw gegevensstromen worden gemigreerd.
-5. Na 30 juni worden alle gegevensstromen gemigreerd. Al uw bestaande gegevensstromen zullen nu nieuwe stroomentiteiten (verbindingsspecificaties, stroom specs, basisverbindingen, en doelverbindingen) hebben. Om het even welke manuscripten of API vraag aan uw kant die de erfenisstroomentiteiten gebruiken zal ophouden werkend.
+5. Na 26 juli worden alle gegevensstromen gemigreerd. Al uw bestaande gegevensstromen zullen nu nieuwe stroomentiteiten (verbindingsspecificaties, stroom specs, basisverbindingen, en doelverbindingen) hebben. Om het even welke manuscripten of API vraag aan uw kant die de erfenisstroomentiteiten gebruiken zal ophouden werkend.
 
 ## Andere migratieoverwegingen {#other-considerations}
 
