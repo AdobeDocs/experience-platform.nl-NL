@@ -2,9 +2,9 @@
 title: Bestemming landingszone gegevens
 description: Leer hoe te met Gegevens het Landing Zone te verbinden om segmenten te activeren en datasets uit te voeren.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 0%
 >
 >* Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Data Landing Zone] verbinding, neem contact op met uw Adobe-vertegenwoordiger en geef uw [!DNL Organization ID].
 >* Deze documentatiepagina verwijst naar de [!DNL Data Landing Zone] *doel*. Er is ook een [!DNL Data Landing Zone] *bron* in de broncatalogus. Lees voor meer informatie de [[!DNL Data Landing Zone] bron](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentatie.
-
 
 
 ## Overzicht {#overview}
@@ -72,6 +71,12 @@ U moet de Platform APIs gebruiken om uw terug te winnen [!DNL Data Landing Zone]
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| Parameters query | Beschrijving |
+| --- | --- |
+| `dlz_destination` | De `dlz_destination` type staat API toe om een container van de landingszonebestemming van de andere types van containers te onderscheiden die voor u beschikbaar zijn. |
+
+{style="table-layout:auto"}
+
 **Verzoek**
 
 In het volgende aanvraagvoorbeeld worden de gegevens voor een bestaande landingszone opgehaald.
@@ -104,6 +109,52 @@ De volgende reactie retourneert de referentie-informatie voor uw landingszone, i
 | `containerName` | De naam van uw landingszone. |
 | `SASToken` | Het token voor gedeelde toegangshandtekeningen voor uw landingszone. Deze tekenreeks bevat alle informatie die nodig is om een aanvraag te autoriseren. |
 | `SASUri` | De URI van de gedeelde toegangshandtekening voor uw landingszone. Deze tekenreeks is een combinatie van de URI naar de landingszone waarvoor u geauthenticeerd wordt en de bijbehorende SAS-token, |
+
+{style="table-layout:auto"}
+
+## Bijwerken [!DNL Data Landing Zone] geloofsbrieven
+
+U kunt uw gegevens desgewenst ook vernieuwen. U kunt uw `SASToken` door een POST aan de `/credentials` van het [!DNL Connectors] API.
+
+**API-indeling**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| Parameters query | Beschrijving |
+| --- | --- |
+| `dlz_destination` | De `dlz_destination` type staat API toe om een container van de landingszonebestemming van de andere types van containers te onderscheiden die voor u beschikbaar zijn. |
+| `refresh` | De `refresh` actie staat u toe om uw landingszonegeloofsbrieven terug te stellen en automatisch een nieuwe te produceren `SASToken`. |
+
+{style="table-layout:auto"}
+
+**Verzoek**
+
+Met het volgende verzoek worden de gegevens van uw landingszone bijgewerkt.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Antwoord**
+
+In het volgende antwoord worden bijgewerkte waarden voor uw `SASToken` en `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
