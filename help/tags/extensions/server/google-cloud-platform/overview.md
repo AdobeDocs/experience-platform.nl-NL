@@ -2,9 +2,9 @@
 title: Google Cloud Platform Event Forwarding Extension
 description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ De [!DNL Google Cloud Platform] [gebeurtenis doorsturen](../../../ui/event-forwa
 
 ## Vereisten
 
-Als u deze extensie wilt gebruiken, moet u beschikken over een [!DNL Google Cloud Platform] met een bestaande [!DNL Cloud Pub/Sub] onderwerp. Als u geen reeds bestaande gegevensstroom hebt, zie [!DNL AWS] documentatie over [een nieuwe gegevensstroom maken met de [!DNL AWS] Beheerconsole](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Als u deze extensie wilt gebruiken, moet u beschikken over een [!DNL Google Cloud Platform] met een bestaande [!DNL Cloud Pub/Sub] onderwerp. Als u geen reeds bestaand onderwerp hebt, zie [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentatie over het creëren van en het beheer van onderwerpen.
 
 ### Een geheim en een gegevenselement maken
 
