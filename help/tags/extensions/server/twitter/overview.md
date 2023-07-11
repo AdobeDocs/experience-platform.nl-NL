@@ -3,16 +3,16 @@ keywords: event forward extension;twitter;twitter event forward extension
 title: Twitter-gebeurtenis door:sturen, extensie
 description: Deze Adobe Experience Platform-gebeurtenis die extensie doorstuurt, stelt u in staat om gebeurtenissen in te voeren in Twitter voor uw zakelijke vereisten.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
 
 # [!DNL Twitter] extensie voor doorsturen van gebeurtenissen
 
-[[!DNL Twitter]](https://www.twitter.com) is een online sociale media en sociale netwerkdienst, waarop gebruikers post en met 280 karakter-lange berichten die als tweets worden bekend in wisselwerking staan. Gebruikers kunnen met Twitter communiceren via een browser, mobiele frontend software of via programmacode [API&#39;s](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) is een online sociale media en sociale netwerkdienst, waarop gebruikers post en met 280 karakter-lange berichten die als tweets worden bekend in wisselwerking staan. Gebruikers kunnen met Twitter communiceren via een browser, mobiele frontend software of via programmacode [API&#39;s](https://developer.twitter.com/en/docs/twitter-api)
 
 De [!DNL Twitter] Web Conversions API [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network gebruiken en verzenden naar [!DNL Twitter]. Dit document behandelt de gebruiksgevallen van de extensie, de manier waarop de extensie moet worden geïnstalleerd en de manier waarop de mogelijkheden van de extensie moeten worden geïntegreerd in het doorsturen van de gebeurtenis [regels](../../../ui/managing-resources/rules.md).
 
@@ -32,7 +32,7 @@ Voor meer informatie over gebruiksgevallen die specifiek zijn voor [!DNL Twitter
 
 U moet een geldige [!DNL Twitter] om deze extensie te gebruiken. Ga naar de [[!DNL Twitter] registratiepagina](https://help.twitter.com/en/using-twitter/create-twitter-account) als u nog geen account hebt, kunt u zich registreren en een account maken.
 
-U moet uw account instellen als een [!DNL Twitter] ontwikkelaarsaccount. Als u wilt weten hoe u zich aanmeldt als ontwikkelaar, raadpleegt u de [[!DNL Twitter] ontwikkelaarsaccount](https://developer.twitter.com/en/support/twitter-api/developer-account).
+U moet uw account instellen als een [!DNL Twitter] ontwikkelaarsaccount. Als u wilt weten hoe u zich aanmeldt als ontwikkelaar, raadpleegt u de [[!DNL Twitter] ontwikkelaarsaccount](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### API-handleidingen {#guardrails}
 
@@ -44,7 +44,7 @@ Als u het Experience Platform wilt verbinden met [!DNL Twitter]zijn de volgende 
 
 | Type toets | Beschrijving |
 | --- | --- |
-| Consumentencode | De API-sleutel van de app &#x200B; voor toegang tot de [!DNL Twitter] API. Zie de [!DNL Twitter] documentatie over [api-sleutels en geheimen](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) ter begeleiding. |  |
+| Consumentencode | De API-sleutel van de app &#x200B; voor toegang tot de [!DNL Twitter] API. Zie de [!DNL Twitter] documentatie over [api-sleutels en geheimen](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) ter begeleiding. | |
 | Consumentengeheim | Met het API-geheim heeft uw toepassing toegang tot [!DNL Twitter] API. Zie de [!DNL Twitter] documentatie over [api-sleutels en geheimen](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) ter begeleiding. |
 | Token Secret | Het niet-vervalsende token-geheim van uw app, dat wordt gebruikt voor verificatie bij de [!DNL Twitter] API via OAuth. Zie de [!DNL Twitter] documentatie over [gebruikstoegangstokens verkrijgen](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) ter begeleiding. |
 | Toegangstoken | Het niet-verouderde toegangstoken van uw app, dat wordt gebruikt voor verificatie bij de [!DNL Twitter] API via OAuth. Zie de [!DNL Twitter] documentatie over [gebruikstoegangstokens verkrijgen](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) ter begeleiding. |

@@ -4,7 +4,7 @@ title: Braze Event Forwarding Extension
 description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Als u het Edge-netwerk wilt verbinden met [!DNL Braze]zijn de volgende gegevens 
 
 | Type toets | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| [!DNL Braze] Instantie | Het REST-eindpunt is gekoppeld aan het [!DNL Braze] account. Zie de [!DNL Braze] documentatie over [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) ter begeleiding. | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] Instantie | Het REST-eindpunt is gekoppeld aan het [!DNL Braze] account. Zie de [!DNL Braze] documentatie over [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) ter begeleiding. | `https://rest.iad-03.braze.com` |
 | API-sleutel | De [!DNL Braze] API-sleutel gekoppeld aan de [!DNL Braze] account. <br/>Zie de [!DNL Braze] documentatie over de [REST API-sleutel](https://www.braze.com/docs/api/basics/#rest-api-key) ter begeleiding. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### Een geheim maken
@@ -108,8 +108,8 @@ Na het installeren van de uitbreiding, creeer een nieuwe gebeurtenis door:sturen
 | Invoer | Beschrijving | Vereist |
 | --- | --- | --- |
 | [!UICONTROL Event Name &#x200B;] | Naam van de gebeurtenis. | Ja |
-| [!UICONTROL Event Time ] | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. | Ja |
-| [!UICONTROL App Identifier] | De toepassings-id of <strong>app_id</strong> is een parameter die activiteit associeert met een specifieke app in uw toepassingsgroep. Hiermee wordt aangegeven met welke app in de toepassingsgroep u werkt. Meer informatie over de [Typen API-id](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Event Time] | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. | Ja |
+| [!UICONTROL App Identifier] | De toepassings-id of <strong>app_id</strong> is een parameter die activiteit associeert met een specifieke app in uw toepassingsgroep. Hiermee wordt aangegeven met welke app in de toepassingsgroep u werkt. Meer informatie over de [Typen API-id](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Event Properties &#x200B;] | Een JSON-object dat aangepaste eigenschappen van de gebeurtenis bevat. |  |
 
 {style="table-layout:auto"}
@@ -124,12 +124,12 @@ Gebruikerskenmerken kunnen een JSON-object zijn dat velden bevat waarmee een ken
 
 | Gebruikerskenmerk | Beschrijving |
 | --- | --- |
-| [!UICONTROL First Name] |  |
-| [!UICONTROL Last Name] |  |
-| [!UICONTROL Phone] |  |
-| [!UICONTROL Email] |  |
+| [!UICONTROL First Name] | |
+| [!UICONTROL Last Name] | |
+| [!UICONTROL Phone] | |
+| [!UICONTROL Email] | |
 | [!UICONTROL Gender] | Een van de volgende tekenreeksen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (overige), &quot;N&quot; (niet van toepassing), &quot;P&quot; (niet van toepassing). |
-| [!UICONTROL City] |  |
+| [!UICONTROL City] | |
 | [!UICONTROL Country] | Land als tekenreeks in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) gebruiken. |
 | [!UICONTROL Language] | Taal als tekenreeks in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) gebruiken. |
 | [!UICONTROL Date of Birth] | Tekenreeks in de notatie &quot;YYYY-MM-DD&quot; (bijvoorbeeld 1980-12-21). |
@@ -164,11 +164,11 @@ Na het installeren van de uitbreiding, creeer een nieuwe gebeurtenis door:sturen
 | Invoer | Beschrijving | Vereist |
 | --- | --- | --- |
 | [!UICONTROL Product ID &#x200B;] | Identificatiecode voor de aankoop. (bijvoorbeeld productnaam of productcategorie) | Ja |
-| [!UICONTROL Purchase Time ] | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. | Ja |
+| [!UICONTROL Purchase Time] | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. | Ja |
 | [!UICONTROL Currency &#x200B;] | Valuta als tekenreeks in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) Alfabetische notatie valutacode. | Ja |
 | [!UICONTROL Price &#x200B;] | Prijs. | Ja |
-| [!UICONTROL Quantity &#x200B;] | Indien niet opgegeven, is de standaardwaarde 1. De maximumwaarde moet lager zijn dan 100. |  |
-| [!UICONTROL App Identifier] | De toepassings-id of <strong>app_id</strong> is een parameter die activiteit associeert met een specifieke app in uw toepassingsgroep. Hiermee wordt aangegeven met welke app in de toepassingsgroep u werkt. Meer informatie over de [Typen API-id](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Quantity &#x200B;] | Indien niet opgegeven, is de standaardwaarde 1. De maximumwaarde moet lager zijn dan 100. | |
+| [!UICONTROL App Identifier] | De toepassings-id of <strong>app_id</strong> is een parameter die activiteit associeert met een specifieke app in uw toepassingsgroep. Hiermee wordt aangegeven met welke app in de toepassingsgroep u werkt. Meer informatie over de [Typen API-id](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Purchase Properties &#x200B;] | Een JSON-object dat aangepaste eigenschappen van de aankoop bevat. |  |
 
 {style="table-layout:auto"}
@@ -183,12 +183,12 @@ Gebruikerskenmerken kunnen een JSON-object zijn dat velden bevat waarmee een ken
 
 | Gebruikerskenmerk | Beschrijving |
 | --- | --- |
-| [!UICONTROL First Name] |  |
-| [!UICONTROL Last Name] |  |
-| [!UICONTROL Phone] |  |
-| [!UICONTROL Email] |  |
+| [!UICONTROL First Name] | |
+| [!UICONTROL Last Name] | |
+| [!UICONTROL Phone] | |
+| [!UICONTROL Email] | |
 | [!UICONTROL Gender] | Een van de volgende tekenreeksen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (overige), &quot;N&quot; (niet van toepassing), &quot;P&quot; (niet van toepassing). |
-| [!UICONTROL City] |  |
+| [!UICONTROL City] | |
 | [!UICONTROL Country] | Land als tekenreeks in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) gebruiken. |
 | [!UICONTROL Language] | Taal als tekenreeks in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) gebruiken. |
 | [!UICONTROL Date of Birth] | Tekenreeks in de notatie &quot;YYYY-MM-DD&quot; (bijvoorbeeld 1980-12-21). |

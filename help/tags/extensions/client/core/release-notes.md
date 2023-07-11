@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1644'
 ht-degree: 2%
 
 ---
@@ -123,7 +123,7 @@ v2.0.4
 
 v1.9.0
 
-* **Nieuwe actie &quot;Rechtstreekse aanroep activeren&quot;** - De extensie Core bevat nu een nieuw handelingstype met de naam `Trigger Direct Call`.  Dit kan worden gebruikt wanneer u een directe vraagregel via een actie van een verschillende regel wilt teweegbrengen. Deze wordt rechtstreeks toegewezen aan de `_satellite.track()` methode. Hartelijk dank [Jan Exner](https://twitter.com/jexner) voor deze bijdrage.
+* **Nieuwe actie &quot;Rechtstreekse aanroep activeren&quot;** - De extensie Core bevat nu een nieuw handelingstype met de naam `Trigger Direct Call`.  Dit kan worden gebruikt wanneer u een directe vraagregel via een actie van een verschillende regel wilt teweegbrengen. Deze wordt rechtstreeks toegewezen aan de `_satellite.track()` methode. Hartelijk dank aan Jan Exner voor deze bijdrage.
 
 ## 8 december 2020
 
@@ -169,19 +169,19 @@ v1.7.3
 
 v1.7.0
 
-* **Toegang tot `event` Variabele binnen aangepast code-gegevenselement** - U kunt nu naar de gebeurtenis verwijzen vanuit een aangepast code-gegevenselement wanneer deze binnen de context van een regel wordt uitgevoerd. Het object bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. Hartelijk dank [Stewart Schilling](https://twitter.com/sdi_stewart) voor deze bijdrage.
+* **Toegang tot `event` Variabele binnen aangepast code-gegevenselement** - U kunt nu naar de gebeurtenis verwijzen vanuit een aangepast code-gegevenselement wanneer deze binnen de context van een regel wordt uitgevoerd. Het object bevat nuttige informatie over de gebeurtenis die de regel heeft geactiveerd. Ik dank Stewart Schilling voor deze bijdrage.
 
 ## 7 oktober 2019
 
 v1.6.2
 
-* **Nieuw gegevenstype &quot;Constant&quot;** - De extensie Core bevat nu een nieuw gegevenstype voor gegevenselementen, genaamd `Constant`.  Dit kan worden gebruikt wanneer u een constante waarde wilt opslaan waarnaar in diverse voorwaarden, handelingen of aangepaste code wordt verwezen. Hartelijk dank [Jan Exner](https://twitter.com/jexner) voor deze bijdrage.
+* **Nieuw gegevenstype &quot;Constant&quot;** - De extensie Core bevat nu een nieuw gegevenstype voor gegevenselementen, genaamd `Constant`.  Dit kan worden gebruikt wanneer u een constante waarde wilt opslaan waarnaar in diverse voorwaarden, handelingen of aangepaste code wordt verwezen. Hartelijk dank aan Jan Exner voor deze bijdrage.
 
 ## 11 september 2019
 
 v1.6.1
 
-* **Ondersteuning voor CSP Nonce** - De extensie Core heeft nu een optionele configuratieparameter. U kunt een gegevenselement toevoegen dat naar één keer verwijst. Als dit is geconfigureerd, gebruiken alle inlinescripts die door een tag aan de pagina worden toegevoegd de nonce die u hebt geconfigureerd. Deze wijziging ondersteunt het gebruik van een Content Security Policy met een nonce, zodat tagscripts nog steeds in een CSP-omgeving kunnen worden geladen. U kunt meer lezen over het gebruik van labels met een CSP [hier](../../../ui/client-side/content-security-policy.md).
+* **Ondersteuning voor CSP Nonce** - De extensie Core heeft nu een optionele configuratieparameter. U kunt een gegevenselement toevoegen dat naar één keer verwijst. Indien gevormd, gebruiken alle gealigneerde manuscripten die een markering aan de pagina toevoegt nonce die u hebt gevormd. Deze wijziging ondersteunt het gebruik van een Content Security Policy met een nonce, zodat tagscripts nog steeds in een CSP-omgeving kunnen worden geladen. U kunt meer lezen over het gebruik van labels met een CSP [hier](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juni 2019
 
@@ -195,7 +195,7 @@ v1.4.3
 
 * **Invoervelden** - Invoervelden zijn nu veel langer!
 * **Aangepaste gebeurtenis** - Aangepast gebeurtenistype kan nu worden gebruikt bij gebeurtenissen die buiten het venster worden verzonden.
-* **Bug Fix** - Een probleem verholpen waarbij de voorwaarde voor waardevergelijking geen waarde 0 zou bevatten.
+* **Bug Fix** - Oplossing van een bug waarbij de voorwaarde van de Vergelijking van de Waarde geen 0 waarde zou bevatten.
 * **Bug Fix** - Het veld Exchange\_url is bijgewerkt, zodat u nu de lijst Core Extension in Adobe Exchange kunt bekijken.
 
 ## 8 januari 2019

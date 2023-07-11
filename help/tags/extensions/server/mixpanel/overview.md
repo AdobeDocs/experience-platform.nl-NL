@@ -4,9 +4,9 @@ title: Mixpanel Track Events API Event Forwarding Extension
 description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '926'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ De analyseteams kunnen vervolgens gebruikmaken van [!DNL Mixpanel's] mogelijkhed
 
 Voor meer informatie over gebruiksgevallen die specifiek zijn voor [!DNL Mixpanel]Raadpleeg de volgende documentatie:
 
-* [Nieuw bij [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [Nieuw bij [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [Wat is [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
 * [12 moet-try [!DNL Mixpanel] functies](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Onder **[!
 | --- | --- | --- |
 | [!UICONTROL Project Token] | Dit gebied zou aan het projectteken verbonden aan uw moeten in kaart worden gebracht [!DNL Mixpanel] account. | Ja |
 | [!UICONTROL Event Type] | De naam van de gebeurtenis. | Ja |
-| [!UICONTROL Event Time] | De tijd van de gebeurtenis. |  |
-| [!UICONTROL Mixpanel Distinct ID] | De unieke id van de gebruiker die de gebeurtenis heeft uitgevoerd. |  |
-| [!UICONTROL Insert ID] | Een unieke id voor de gebeurtenis, die wordt gebruikt voor deduplicatie. |  |
-| [!UICONTROL Event Properties] | Een JSON-object dat aangepaste eigenschappen van de gebeurtenis bevat. Maak een keuze uit het opgeven van onbewerkte JSON of uit het gebruik van een vereenvoudigde set toetsinvoer. |  |
+| [!UICONTROL Event Time] | De tijd van de gebeurtenis. | |
+| [!UICONTROL Mixpanel Distinct ID] | De unieke id van de gebruiker die de gebeurtenis heeft uitgevoerd. | |
+| [!UICONTROL Insert ID] | Een unieke id voor de gebeurtenis, die wordt gebruikt voor deduplicatie. | |
+| [!UICONTROL Event Properties] | Een JSON-object dat aangepaste eigenschappen van de gebeurtenis bevat. Maak een keuze uit het opgeven van onbewerkte JSON of uit het gebruik van een vereenvoudigde set toetsinvoer. | |
 
 >[!NOTE]
 >
