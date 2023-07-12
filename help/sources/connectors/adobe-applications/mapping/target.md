@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;doeltoewijzing;doeltoewijzing
 solution: Experience Platform
 title: Adobe Target-gebeurtenisgegevens toewijzen aan XDM
 description: Leer hoe u Adobe Target-gebeurtenisvelden kunt toewijzen aan een XDM-schema (Experience Data Model) voor gebruik in Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
 # Toewijzingen doelveld
 
-Met Adobe Experience Platform kunt u Adobe Target-gegevens invoeren via de doelbronconnector. Wanneer u de aansluiting gebruikt, moeten alle gegevens uit doelvelden worden toegewezen aan de [Experience Data Model (XDM)](../../../../xdm/home.md) velden die zijn gekoppeld aan de klasse XDM ExperienceEvent.
-
-In de volgende tabel worden de velden van een Experience Event-schema (*XDM ExperienceEvent-veld*) en de bijbehorende doelvelden waaraan ze moeten worden toegewezen (*Veld voor doelaanvraag*). Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
+In de volgende tabel worden de velden van een XDM-ervaringsgebeurtenisschema (Experience Data Model) en de corresponderende velden uit Adobe Target weergegeven waaraan ze moeten worden toegewezen. Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ In de volgende tabel worden de velden van een Experience Event-schema (*XDM Expe
 | XDM ExperienceEvent-veld | Veld voor doelaanvraag | Notities |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Een unieke aanvraag-id |
-| **`dataSource`** |  | Gevormd aan &quot;1&quot;voor alle cliënten. |
+| **`dataSource`** | | Gevormd aan &quot;1&quot;voor alle cliënten. |
 | `dataSource._id` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | De unieke id van deze gegevensbron. Dit zou worden verstrekt door het individu of het systeem dat de gegevensbron creeerde. |
 | `dataSource.code` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Een sneltoets naar de volledige @id. U kunt ten minste een van de code of @id gebruiken. Soms wordt deze code de integratiecode van de gegevensbron genoemd. |
 | `dataSource.tags` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | De markeringen worden gebruikt om erop te wijzen hoe de aliassen die door een bepaalde gegevensbron worden vertegenwoordigd door toepassingen zouden moeten worden geïnterpreteerd die die aliassen gebruiken.<br><br>Voorbeelden:<br><ul><li>`isAVID`: Gegevensbronnen die de bezoeker-id&#39;s van Analytics vertegenwoordigen.</li><li>`isCRSKey`: Gegevensbronnen die aliassen vertegenwoordigen die als sleutels in CRS zouden moeten worden gebruikt.</li></ul>De markeringen worden geplaatst wanneer de gegevensbron wordt gecreeerd maar zij zijn ook inbegrepen in pijpleidingsberichten wanneer het van verwijzingen voorzien van een bepaalde gegevensbron. |
@@ -76,7 +73,7 @@ In de volgende tabel worden de velden van een Experience Event-schema (*XDM Expe
 | `placeContext.geo.postalCode` | Postcode is opgelost op basis van het IP-adres van het verzoek. |
 | `placeContext.geo.stateProvince` | Staat of provincie opgelost op basis van het IP-adres van het verzoek. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Stel dit alleen in als de aanvraag ordergegevens bevat. |
+| **`commerce`** | | Stel dit alleen in als de aanvraag ordergegevens bevat. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
