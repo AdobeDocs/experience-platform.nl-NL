@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services-verbinding
 description: Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
+source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
@@ -33,18 +33,24 @@ Campagne gebruiken om:
 >* Gegevensbewaring in Azure Blob Storage Data Landing Zone (DLZ): 7 dag,
 >* De activeringsfrequentie bedraagt minimaal 3 uur.
 
-
 ## Gebruiksscenario’s {#use-cases}
 
 Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Dienst van de Beheer van Adobe Campaign zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
 
-Adobe Experience Platform maakt een klantprofiel dat informatie bevat zoals de identiteitsgrafiek, gedragsgegevens van analyses, het samenvoegen van offline- en onlinegegevens, enzovoort. Dankzij deze integratie kunt u de segmentatiemogelijkheden die al in Adobe Campaign bestaan, uitbreiden met die door Adobe Experience Platform aangedreven doelgroepen. U kunt die gegevens dus activeren in Campaign.
+* Adobe Experience Platform maakt een klantprofiel dat informatie bevat zoals de identiteitsgrafiek, gedragsgegevens van analyses, het samenvoegen van offline- en onlinegegevens, enzovoort. Dankzij deze integratie kunt u de segmentatiemogelijkheden die al in Adobe Campaign bestaan, uitbreiden met die door Adobe Experience Platform aangedreven doelgroepen. U kunt die gegevens dus activeren in Campaign.
 
-Een sportattierbedrijf wil bijvoorbeeld de door Adobe Experience Platform aangedreven slimme segmenten benutten en deze activeren door Adobe Campaign te gebruiken om naar de klantenbasis te reiken via de verschillende kanalen die door Adobe Campaign worden ondersteund.
+  Een sportattierbedrijf wil bijvoorbeeld de door Adobe Experience Platform aangedreven slimme segmenten benutten en deze activeren door Adobe Campaign te gebruiken om naar de klantenbasis te reiken via de verschillende kanalen die door Adobe Campaign worden ondersteund. Zodra de berichten zijn verzonden, willen ze het klantprofiel in het Adobe Experience-platform verbeteren met ervaringsgegevens van Adobe Campaign, zoals verzenden, openen en klikken.
 
-Zodra de berichten zijn verzonden, willen ze het klantprofiel in het Adobe Experience-platform verbeteren met ervaringsgegevens van Adobe Campaign, zoals verzenden, openen en klikken.
+  Het resultaat is kanaalcampagnes die consistenter zijn in het gehele ecosysteem van de cloud van Adobe Experience en een uitgebreid klantprofiel dat zich snel aanpast en leert.
 
-Het resultaat is kanaalcampagnes die consistenter zijn in het gehele ecosysteem van de cloud van Adobe Experience en een uitgebreid klantprofiel dat zich snel aanpast en leert.
+
+* Naast segmentactivering in Campagne kunt u de Adobe Campaign Managed Services-bestemming gebruiken om extra profielkenmerken in te voeren die zijn gekoppeld aan een profiel in Adobe Experience Platform en een synchronisatieproces hebben zodat deze worden bijgewerkt in de Adobe Campaign-database.
+
+  Stel bijvoorbeeld dat u waarden voor opt-in en opt-out vastlegt in Adobe Experience Platform. Met deze verbinding kunt u deze waarden overbrengen naar Adobe Campaign en een synchronisatieproces uitvoeren zodat ze regelmatig worden bijgewerkt.
+
+  >[!NOTE]
+  >
+  >Synchronisatie van profielkenmerken is beschikbaar voor profielen die al aanwezig zijn in de Adobe Campaign-database.
 
 [Meer informatie over Adobe Campaign-integratie met Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
@@ -92,6 +98,10 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Select instance]**: Uw **[!DNL Campaign]** marketingexemplaar.
 * **[!UICONTROL Target mapping]**: Selecteer de doeltoewijzing waarin u **[!DNL Adobe Campaign]** om leveringen te verzenden. [Meer informatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Select sync type]**:
+
+   * **[!UICONTROL Audience sync]**: Gebruik deze optie om Adobe Experience Platform-publiek naar Adobe Campaign te sturen.
+   * **[!UICONTROL Profile sync (Update only)]**: Gebruik deze optie om Adobe Experience Platform-profielkenmerken over te brengen naar Adobe Campaign en een synchronisatieproces te laten uitvoeren zodat ze regelmatig kunnen worden bijgewerkt.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -122,6 +132,7 @@ Selecteer XDM-velden om met de profielen te exporteren en deze toe te wijzen aan
    * Selecteer een **id** (Bijvoorbeeld: (het e-mailveld) als bronidentiteit die een profiel in Adobe Experience Platform en Adobe Campaign uniek identificeert.
 
    * Alle andere selecteren **Kenmerken van XDM-bronprofiel** die naar Adobe Campaign moeten worden geëxporteerd.
+
    >[!NOTE]
    >
    >Het &quot;segmentMembershipStatus&quot;gebied is een vereiste afbeelding om segmentMembership status te weerspiegelen. Dit veld wordt standaard toegevoegd en kan niet worden gewijzigd of verwijderd.
@@ -133,9 +144,10 @@ Selecteer XDM-velden om met de profielen te exporteren en deze toe te wijzen aan
    * [Verplichte kenmerken](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) zorgt ervoor dat alle profielrecords de geselecteerde kenmerken bevatten. Bijvoorbeeld: alle geëxporteerde profielen bevatten een e-mailadres. De aanbeveling moet zowel het identiteitsveld als het als deduplicatietoets gebruikte veld verplicht stellen.
    * [Een deduplicatiesleutel](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) is een primaire sleutel die de identiteit bepaalt waarmee gebruikers hun profielen willen worden gededupliceerd.
 
-      >[!IMPORTANT]
-      >
-      >Zorg ervoor dat de naam van het deduplicatietoetskenmerk overeenkomt met de kolomnaam van de geselecteerde doeltoewijzing.
+     >[!IMPORTANT]
+     >
+     >Zorg ervoor dat de naam van het deduplicatietoetskenmerk overeenkomt met de kolomnaam van de geselecteerde doeltoewijzing.
+
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. Zodra de afbeelding is uitgevoerd, kunt u de bestemmingsconfiguratie herzien en voltooien beginnen gegevens te verzenden naar **[!DNL Campaign]**.
@@ -153,9 +165,11 @@ Ga naar de **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONT
 
 ### Geëxporteerde gegevens openen {#data}
 
-Ga naar de **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu voor toegang tot publiek dat is gemaakt nadat een doel is geactiveerd.
+Voor **[!UICONTROL Audience sync]** kunt u het geëxporteerde publiek controleren door naar het deelvenster **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** -menu.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+
+Voor **[!UICONTROL Profile sync (Update only)]**, worden de gegevens automatisch bijgewerkt in het gegevensbestand van de Campagne voor elk profiel dat door het segment wordt gericht dat in de bestemming wordt geactiveerd.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
