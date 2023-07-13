@@ -2,7 +2,7 @@
 title: Door gebruiker gedefinieerde dashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 0%
@@ -170,7 +170,7 @@ Er wordt een dubbele widget weergegeven in het door de gebruiker gedefinieerde d
 
 Door dit document te lezen, hebt u een beter inzicht in hoe u een aangepast dashboard kunt maken en hoe u aangepaste widgets voor dat dashboard kunt maken, bewerken en bijwerken.
 
-Om de beschikbare pre-gevormde metriek en visualisaties voor te ontdekken [profielen](./guides/profiles.md#standard-widgets), [segmenten](./guides/segments.md#standard-widgets), en [bestemmingen](./guides/destinations.md#standard-widgets) dashboards, zie de lijst van standaardwidgets in hun respectieve documentatie.
+Om de beschikbare pre-gevormde metriek en visualisaties voor te ontdekken [profielen](./guides/profiles.md#standard-widgets), [segmenten](./guides/audiences.md#standard-widgets), en [bestemmingen](./guides/destinations.md#standard-widgets) dashboards, zie de lijst van standaardwidgets in hun respectieve documentatie.
 
 Bekijk de volgende video om uw inzicht in door de gebruiker gedefinieerde dashboards in Experience Platform te versterken:
 

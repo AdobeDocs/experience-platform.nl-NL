@@ -2,7 +2,7 @@
 title: Gegevenstype rekeninggegevens
 description: Dit document biedt een overzicht van het gegevenstype Data Model (XDM) van het rekeningdetailervaringsgegevensmodel.
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 4%
@@ -29,7 +29,7 @@ ht-degree: 4%
 | `jigsaw` | Tekenreeks | De sleutel Data.com voor de organisatie. |
 | `linkedinPageUrl` | Tekenreeks | Een websitekoppeling naar de LinkedIn-account van de organisatie. |
 | `logoUrl` | Tekenreeks | Een pad dat moet worden gecombineerd met de URL van een instantie Salesforce (bijvoorbeeld `https://yourInstance.salesforce.com/`) om een URL te genereren voor het aanvragen van de afbeelding van het sociale netwerkprofiel die aan de organisatie is gekoppeld. De gegenereerde URL retourneert een HTTP-omleiding (code 302) naar de afbeelding van het sociale netwerkprofiel voor de organisatie. |
-| `marketSegment` | Tekenreeks | Het marktsegment waaraan de organisatie deelneemt. Dit is een vrije-vormgebied, en het is raadzaam om een gestructureerde waarde voor vragen te gebruiken of het `xdm:identifier` eigenschap. |
+| `marketSegment` | Tekenreeks | Het benoemde marktpubliek waaraan de organisatie deelneemt. Dit is een vrije-vormgebied, en het is raadzaam om een gestructureerde waarde voor vragen te gebruiken of het `xdm:identifier` eigenschap. |
 | `numberOfEmployees` | Geheel | Het aantal werknemers in de organisatie. |
 | `organizationType` | Tekenreeks | Een label dat het type organisatie beschrijft. |
 | `primaryEmailDomain` | Tekenreeks | Het primaire e-maildomein dat de organisatie voor haar personeel gebruikt. |

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veelgestelde vragen
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4291'
 ht-degree: 1%
@@ -231,7 +231,7 @@ AS SELECT '1' as _id,
 
 ### Waarom is er een verschil tussen de aantallen die in Profiel UI worden getoond en de aantallen die van de dataset van de profieluitvoer worden berekend?
 
-+++Antwoord De getallen die worden weergegeven in het profieldashboard zijn nauwkeurig vanaf de laatste opname. De getallen die in de profielexporttabel worden gegenereerd, zijn volledig afhankelijk van de exportquery. Daarom is het vragen van het aantal profielen dat in aanmerking komt voor een bepaald segment een algemene oorzaak van deze discrepantie.
++++Antwoord De getallen die worden weergegeven in het profieldashboard zijn nauwkeurig vanaf de laatste opname. De getallen die in de profielexporttabel worden gegenereerd, zijn volledig afhankelijk van de exportquery. Daarom is het vragen van het aantal profielen dat in aanmerking komt voor een bepaald publiek een algemene oorzaak van deze discrepantie.
 
 >[!NOTE]
 >

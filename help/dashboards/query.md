@@ -2,18 +2,18 @@
 solution: Experience Platform
 title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Query-service
 type: Documentation
-description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, segment, en bestemmingsdashboards in Experience Platform aandrijven.
+description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, publiek, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
 
 # Ontdek, verifieer en proces dashboarddatasets gebruikend [!DNL Query Service]
 
-Adobe Experience Platform verstrekt belangrijke informatie over het profiel van uw organisatie, segment, en bestemmingsgegevens door dashboards beschikbaar binnen de UI van het Experience Platform. U kunt dan Adobe Experience Platform gebruiken [!DNL Query Service] om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die deze dashboards in het gegevensmeer aandrijven.
+Adobe Experience Platform verstrekt belangrijke informatie over het profiel van uw organisatie, publiek, en bestemmingsgegevens door dashboards beschikbaar binnen de UI van het Experience Platform. U kunt dan Adobe Experience Platform gebruiken [!DNL Query Service] om, de ruwe datasets te onderzoeken te verifiëren en te verwerken die deze dashboards in het gegevensmeer aandrijven.
 
 ## Aan de slag met [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Meer informatie over [!DNL Query Service] en zijn rol binnen het Experience Plat
 
 ## Toegang tot beschikbare gegevenssets
 
-U kunt [!DNL Query Service] om ruwe datasets voor profiel, segment, en bestemmingsdashboards te vragen. Om uw beschikbare datasets, in het Experience Platform UI te bekijken, selecteer **Gegevenssets** in de linkernavigatie om het dashboard van Datasets te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
+U kunt [!DNL Query Service] om ruwe datasets voor profiel, publiek, en bestemmingsdashboards te vragen. Om uw beschikbare datasets, in het Experience Platform UI te bekijken, selecteer **Gegevenssets** in de linkernavigatie om het dashboard van Datasets te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
 
 ![De Dataset doorbladert dashboard met het lusje van Datasets die in de linkernavigatie wordt benadrukt.](./images/query/browse-datasets.png)
 
@@ -64,15 +64,13 @@ De `adwh_dim_merge_policies` dataset bevat de volgende velden:
 
 Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Als u meer wilt weten over het gebruik van de Query Editor, raadpleegt u de [Handleiding voor de Query Editor](../query-service/ui/user-guide.md).
 
-### Gegevensset voor segmentmetagegevens
+### Gegevensset met metagegevens van publiek
 
-Er is een dataset van segmentmeta-gegevens beschikbaar in het gegevensmeer die meta-gegevens voor elk van de segmenten van uw organisatie bevatten.
+Er is een dataset van publieksmeta-gegevens beschikbaar in het gegevensmeer die meta-gegevens voor elk van uw publiek van organisatie bevatten.
 
 De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-export** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
-
-![Een voorvertoning van de dataset Segmentdefinition-Snapshot-Export.](images/query/segment-metadata.png)
 
 ### Gegevensset met doelmetagegevens
 
@@ -92,7 +90,7 @@ Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorp
 
 De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten stelt SQL bloot die de inzichten voor diverse profiel, bestemming en segmentatiewidgets drijft. U kunt deze SQl vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en KPI gebruiksgevallen tot stand te brengen.
 
-CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met segmenten en bestemmingen. Zie de CDP documentatie van het Gegevensmodel van Inzichten voor gedetailleerde informatie over hoe te [Pas de CDP Modellen van Gegevens van Inzichten op uw specifieke KPI gebruiksgevallen toe](./cdp-insights-data-model.md).
+CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met publiek en bestemmingen. Zie de CDP documentatie van het Gegevensmodel van Inzichten voor gedetailleerde informatie over hoe te [Pas de CDP Modellen van Gegevens van Inzichten op uw specifieke KPI gebruiksgevallen toe](./cdp-insights-data-model.md).
 
 ## Voorbeeldquery
 
@@ -123,13 +121,13 @@ Select
         namespace;
 ```
 
-### Aantal profielen per segment
+### Aantal profielen per publiek
 
-Dit publieksinzicht verstrekt het totale aantal samengevoegde profielen binnen elk segment in de dataset. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
+Dit publieksinzicht verstrekt het totale aantal samengevoegde profielen binnen elk publiek in de dataset. Dit aantal is het resultaat van het toepassen van het beleid van de publiekssamenvoeging op uw gegevens van het Profiel om profielfragmenten samen te voegen om één enkel profiel voor elk individu in het publiek te vormen.
 
 ```sql
 Select          
-        concat_ws('-', key, source_namespace) segment_id,
+        concat_ws('-', key, source_namespace) audience_id,
         count(1) count_of_profiles
       from
         (
@@ -139,17 +137,17 @@ Select
             from
               (
                   Select
-                    explode(Segmentmembership)
+                    explode(Audiencemembership)
                   from
                     Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
-      segment_id
+      audience_id
 ```
 
 ## Volgende stappen
 
-Door deze handleiding te lezen, kunt u nu [!DNL Query Service] om verscheidene vragen uit te voeren om de ruwe datasets te onderzoeken en te verwerken die uw profiel, segment, en bestemmingsdashboards aandrijven.
+Door deze handleiding te lezen, kunt u nu [!DNL Query Service] om verscheidene vragen uit te voeren om de ruwe datasets te onderzoeken en te verwerken die uw profiel, publiek, en bestemmingsdashboards aandrijven.
 
 Als u meer wilt weten over elk dashboard en de bijbehorende metriek, selecteert u een dashboard in de lijst met beschikbare dashboards in de documentatienavigatie.

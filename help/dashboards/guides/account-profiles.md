@@ -2,7 +2,7 @@
 title: Dashboardgids voor accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Van de [!UICONTROL Account Profiles] dashboard: [door de accountprofielen blader
 
 ## Accountprofielen zoeken {#browse-account-profiles}
 
-De [!UICONTROL Browse] kunt u de alleen-lezen accountprofielen die in uw organisatie worden ingevoerd, doorzoeken en bekijken met een account-id van een verbonden onderneming of door de brongegevens rechtstreeks in te voeren. Hier ziet u belangrijke informatie die bij het accountprofiel hoort, zoals de naam, industrie, inkomsten en segmenten.
+De [!UICONTROL Browse] kunt u de alleen-lezen accountprofielen die in uw organisatie worden ingevoerd, doorzoeken en bekijken met een account-id van een verbonden onderneming of door de brongegevens rechtstreeks in te voeren. Hier ziet u belangrijke informatie die bij het accountprofiel hoort, zoals naam, industrie, inkomsten en het publiek.
 
 Selecteer [!UICONTROL Profile ID] uit de resultaten die op de [!UICONTROL Browse] om de [!UICONTROL Details] voor het accountprofiel.
 

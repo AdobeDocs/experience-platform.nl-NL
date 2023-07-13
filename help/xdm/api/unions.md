@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unions API-eindpunt
 description: Het /union eindpunt in de Registratie API van het Schema staat u toe om XDM vakingsschema's in uw ervaringstoepassing programmatically te beheren.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekk
 
 ### Segmentlidmaatschapstoewijzing
 
-De `segmentMembership` map slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken correct worden uitgevoerd met de opdracht [Segmentatie-API](https://www.adobe.io/experience-platform-apis/references/segmentation/), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan. Zie de zelfstudie aan [segmenten maken met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie .
+De `segmentMembership` map slaat de resultaten van het evalueren van een segmentdefinitie op. Wanneer segmenttaken correct worden uitgevoerd met de opdracht [Segmentatie-API](https://www.adobe.io/experience-platform-apis/references/segmentation/), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welk vooraf geëvalueerd publiek op dat in Platform wordt opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan. Zie de zelfstudie aan [publiek maken met API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie .
 
 ## Een lijst met vakbonden ophalen {#list}
 

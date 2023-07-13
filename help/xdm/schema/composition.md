@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 0%
@@ -285,12 +285,12 @@ Meer informatie over het werken met [!DNL Profile], zie de [Overzicht van het re
 
 Alle gegevensbestanden waarin [!DNL Experience Platform] moet in overeenstemming zijn met de structuur van een XDM-schema. Zie het document over het opmaken van gegevensbestanden om te voldoen aan XDM-hiërarchieën (inclusief voorbeeldbestanden) voor meer informatie over het opmaken van gegevensbestanden [ETL-testtransformaties](../../etl/transformations.md). Voor algemene informatie over het opnemen van gegevensbestanden in [!DNL Experience Platform], zie de [overzicht van batch-opname](../../ingestion/batch-ingestion/overview.md).
 
-## Schema&#39;s voor externe segmenten
+## Schema&#39;s voor extern publiek
 
-Als u segmenten van externe systemen in Platform brengt, moet u de volgende componenten gebruiken om hen in uw schema&#39;s te vangen:
+Als u publiek van externe systemen in Platform brengt, moet u de volgende componenten gebruiken om hen in uw schema&#39;s te vangen:
 
 * [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Gebruik deze standaardklasse om zeer belangrijke attributen van een externe segmentdefinitie te vangen.
-* [[!UICONTROL Segment Membership Details] veldgroep](../field-groups/profile/segmentation.md): Deze veldgroep toevoegen aan uw [!UICONTROL XDM Individual Profile] schema om klantenprofielen aan specifieke segmenten te associëren.
+* [[!UICONTROL Segment Membership Details] veldgroep](../field-groups/profile/segmentation.md): Deze veldgroep toevoegen aan uw [!UICONTROL XDM Individual Profile] schema om klantprofielen aan specifieke doelgroepen te koppelen.
 
 ## Volgende stappen
 

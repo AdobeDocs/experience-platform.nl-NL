@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, april 2022
 description: In de release van april 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2781'
 ht-degree: 4%
@@ -28,7 +28,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 Platform biedt meerdere dashboards waardoor u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
-De dashboards verstrekken pre-gevormde rapporteringsopties voor de gegevens van uw organisatie en zijn direct ingebouwd in het markeringswerkschema binnen Platform. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken.
+De dashboards verstrekken pre-gevormde rapporteringsopties voor de gegevens van uw organisatie en zijn direct ingebouwd in de markeringswerkschema binnen Platform. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken.
 
 De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve dashboards. Zie de documentatie voor meer informatie over [widgets toevoegen via de Widget-bibliotheek](../../dashboards/customize/widget-library.md).
 
@@ -57,7 +57,7 @@ De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve
 
 {style="table-layout:auto"}
 
-Zie de documentatie voor meer informatie over [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), en [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
+Zie de documentatie voor meer informatie over [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), en [[!DNL Segments]](../../dashboards/guides/audiences.md) dashboards.
 
 ## Gegevensstromen {#dataflows}
 

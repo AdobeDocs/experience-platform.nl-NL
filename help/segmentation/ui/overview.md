@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3430'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UIC
 
 De **[!UICONTROL Audiences]** het dashboard schetst belangrijke metriek met betrekking tot de publieksgegevens van uw organisatie.
 
-Ga voor meer informatie naar de [gebruikershandleiding in dashboard](../../dashboards/guides/segments.md).
+Ga voor meer informatie naar de [gebruikershandleiding in dashboard](../../dashboards/guides/audiences.md).
 
 ![Het doeldashboard wordt weergegeven. Er worden verschillende widgets weergegeven, zoals de omvang van het publiek, profielen op basis van identiteit, identiteitsoverlapping en de trend om de omvang van het publiek te wijzigen.](../../dashboards/images/segments/dashboard-overview.png)
 

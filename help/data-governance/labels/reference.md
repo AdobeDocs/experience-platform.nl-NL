@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Woordenlijst met gegevensgebruikslabels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2109'
 ht-degree: 1%
 
 ---
@@ -134,11 +134,11 @@ Sommige contracten bevatten expliciete verbodsbepalingen voor het gebruik van ge
 
 #### C10 {#c10}
 
-Sommige beleidsregels voor gegevensbeheer beperken het gebruik van verankerde identiteitsgegevens voor personalisatie. Het label C10 wordt automatisch toegepast op segmenten als in het samenvoegbeleid de optie &quot;particuliere grafiek&quot; wordt gebruikt.
+Sommige beleidsregels voor gegevensbeheer beperken het gebruik van verankerde identiteitsgegevens voor personalisatie. Het label C10 wordt automatisch toegepast op het publiek als in het samenvoegbeleid de optie &#39;particuliere grafiek&#39; wordt gebruikt.
 
 #### C11 {#c11}
 
-Met Adobe Experience Platform Segment Match kunt u eersteklas segmenten afstemmen op privacy- en toestemmingsvoorkeuren, waardoor beter ontwikkelde profielen en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
+Met Adobe Experience Platform Segment Match kunt u Platform dat wordt gegenereerd, afstemmen op privacy- en toestemmingsvoorkeuren, waardoor verrijkte profilering en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
 
 #### C12 {#c12}
 

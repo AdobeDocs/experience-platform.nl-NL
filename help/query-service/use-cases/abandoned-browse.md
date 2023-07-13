@@ -3,9 +3,9 @@ keywords: Experience Platform;query-service;Query-service;query
 title: Voorbeeld van gebruik van hoofdletters/kleine letters voor Adobe Experience Platform Query Service
 description: Een end-to-end voorbeeld om de veelzijdigheid en de voordelen van de Dienst van de Vraag van Adobe Experience Platform aan te tonen.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Dit document en de bijbehorende videopresentatie bieden een end-to-end workflow 
 * Manieren om de vraag te bouwen die op uw bestaande gegevensarchitectuur wordt gebaseerd.
 * Zorg voor gegevenskwaliteit die aan uw behoeften voldoet, en methoden om eventuele tekortkomingen te beperken.
 * Het proces om een vraag te plannen om bij een vastgestelde frequentie voor gebruik stroomafwaarts in segmentatie en bestemmingen voor verpersoonlijking te lopen.
-* Het gemak voor marketers om afgeleide kenmerken in hun segmenten op te nemen door de kracht van [!DNL Query Service].
+* Het gemak voor marketers om afgeleide kenmerken in hun publiek op te nemen door de kracht van [!DNL Query Service].
 
 ## Doelstellingen {#objectives}
 
@@ -63,9 +63,9 @@ De onderstaande videopresentatie biedt een holistische, realistische gebruiksmog
 
 ## Voordelen van [!DNL Query Service] {#benefits}
 
-De functies van [!DNL Query Service] voor veel doeleinden. U kunt het gebruiken om complexe logica voor segmentatie aan te passen, voor het berekenen van diverse gepersonaliseerde attributen voor gebruik stroomafwaarts, of om zeer te vereenvoudigen hoe u uw segmenten bouwt.
+De functies van [!DNL Query Service] voor veel doeleinden. U kunt het gebruiken om complexe logica voor segmentatie, voor het berekenen van diverse gepersonaliseerde attributen voor gebruik stroomafwaarts aan te passen, of zeer te vereenvoudigen hoe u uw publiek bouwt.
 
-[!DNL Query Service] laat u toe om beperkingen in uw vragen te omvatten om uw segment het bouwen proces te vereenvoudigen. Dit verbetert de gegevenskwaliteit door ervoor te zorgen de juiste gegevens voor uw segmenten kwalificeren en leidt tot nauwkeuriger publiek. Het handhaven van de kwaliteit van uw vraag resulteert in een nauwkeurig publiek en helpt met gegevensbetrouwbaarheid. U kunt uw publiek ook opslaan door schema&#39;s en douanetabellen te creëren die op attributen worden gebaseerd die uit uw vraag worden afgeleid. Een douanetabel kan voor Profiel worden toegelaten en u kunt deze gegevenspunten voor segmentatie en verpersoonlijking gebruiken. Deze functie helpt marketers die een duidelijk publiek van mensen willen creëren.
+[!DNL Query Service] laat u toe om beperkingen in uw vragen op te nemen om uw publiek het opbouwen proces te vereenvoudigen. Dit verbetert de gegevenskwaliteit door ervoor te zorgen dat de juiste gegevens geschikt zijn voor uw publiek. Het handhaven van de kwaliteit van uw vraag resulteert in een nauwkeurig publiek en helpt met gegevensbetrouwbaarheid. U kunt uw publiek ook opslaan door schema&#39;s en douanetabellen te creëren die op attributen worden gebaseerd die uit uw vraag worden afgeleid. Een douanetabel kan voor Profiel worden toegelaten en u kunt deze gegevenspunten voor segmentatie en verpersoonlijking gebruiken. Deze functie helpt marketers die een duidelijk publiek van mensen willen creëren.
 
 Ook, door logica in uw vraag te omvatten die om het even welke terugkomende of statische voorwaarden tevredenstelt, [!DNL Query Service] extraheert de last van uitgebreide segmentatie.
 

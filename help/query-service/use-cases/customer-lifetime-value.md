@@ -2,9 +2,9 @@
 title: Gegevenssignalen bijhouden om de levenswaarde van uw klant te genereren
 description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ De volgende infografische weergave toont de cyclus van gegevensverzameling, mani
 
 ![De round-trip-infografische gegevens van observatie tot analyse tot actie.](../images/use-cases/infographic-use-case-cycle.png)
 
-Dit gebruiksgeval van begin tot eind toont aan hoe de gegevenssignalen kunnen worden gevangen en worden gewijzigd om de waarde afgeleide van de klantenlevensduur te berekenen. Deze afgeleide attributen kunnen dan op uw het profielgegevens van Real-Time CDP worden toegepast en zijn beschikbaar voor gebruik met user-defined dashboards om een dashboard voor inzicht analyse te bouwen. Via Data Distiller kunt u het Real-Time CDP-gegevensmodel voor inzichten uitbreiden en het op CLV gebaseerde kenmerk en dashboardinzichten gebruiken om een nieuw segment te maken en het te activeren op een gewenst doel. Deze segmenten kunnen dan worden gebruikt om krachtige soorten publiek te creëren om uw volgende marketing campagne te drijven.
+Dit gebruiksgeval van begin tot eind toont aan hoe de gegevenssignalen kunnen worden gevangen en worden gewijzigd om de waarde afgeleide van de klantenlevensduur te berekenen. Deze afgeleide attributen kunnen dan op uw het profielgegevens van Real-Time CDP worden toegepast en zijn beschikbaar voor gebruik met user-defined dashboards om een dashboard voor inzicht analyse te bouwen. Via Data Distiller kunt u het Real-Time CDP-gegevensmodel voor inzichten uitbreiden en het op CLV gebaseerde kenmerk en dashboardinzichten gebruiken om een nieuw publiek te maken en het naar een gewenst doel te activeren. Deze krachtige doelgroepen kunnen dan worden gebruikt om uw volgende marketingcampagne te ondersteunen.
 
 Deze gids wordt ontworpen om u te helpen uw klantenervaring beter begrijpen door gegevenssignalen over zeer belangrijke aanraakpunten te meten die CLV drijven en een gelijkaardig gebruiksgeval in uw milieu uitvoeren. Het volledige proces wordt samengevat in de onderstaande afbeelding.
 
@@ -28,7 +28,7 @@ Deze gids wordt ontworpen om u te helpen uw klantenervaring beter begrijpen door
 Voor deze handleiding is een goed begrip vereist van de volgende onderdelen van Adobe Experience Platform:
 
 * [Query-service](../home.md): Verstrekt een gebruikersinterface en een RESTful API waar u SQL vragen kunt gebruiken om uw gegevens te analyseren en te verrijken.
-* [Segmenteringsservice](../../segmentation/home.md): Staat u toe om segmenten te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren.
+* [Segmenteringsservice](../../segmentation/home.md): Staat u toe om publiek van uw gegevens van het Profiel van de Klant in real time te produceren.
 
 ## Vereisten
 
@@ -71,23 +71,23 @@ Voorbeelden van aangepaste CLV-widgets die gebruik maken van decile-emmers, zijn
 
 ![Een verzameling aangepaste, op decile gebaseerde CLTV-widgets.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## Maak en activeer segmenten om een krachtig publiek te maken {#create-and-activate-segments}
+## Krachtig publiek maken en activeren {#create-and-activate-audiences}
 
-De volgende stap is segmenten te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de handleiding van de Bouwer van het Segment UI om te leren hoe te [segmenten in Platform maken en activeren](../../segmentation/ui/segment-builder.md). De gids verstrekt secties over hoe te:
+De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de handleiding van de Bouwer van het Segment UI om te leren hoe te [publiek maken en activeren in Platform](../../segmentation/ui/segment-builder.md). De gids verstrekt secties over hoe te:
 
 * Maak segmentdefinities met een combinatie van kenmerken, gebeurtenissen en bestaand publiek als bouwstenen.
-* Gebruik het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmentregels worden uitgevoerd.
+* Gebruik het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmenteringsregels worden uitgevoerd.
 * De schattingen van de mening van uw potentiële publiek, toestaand u om uw segmentdefinities zonodig aan te passen.
 * Schakel alle segmentdefinities in voor geplande segmentatie.
 * Hiermee kunt u opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
-Er is ook een [videozelfstudie voor het samenstellen van segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) voor meer informatie.
+Er is ook een [videozelfstudie voor het samenstellen van segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) voor meer informatie.
 
-## Uw segment activeren voor een e-mailcampagne {#activate-segment-for-campaign}
+## Uw publiek activeren voor een e-mailcampagne {#activate-audience-for-campaign}
 
-Nadat u het segment hebt gemaakt, kunt u het activeren op een bestemming. Platform biedt ondersteuning voor diverse ESP&#39;s (Email Service Providers) waarmee u uw marketingactiviteiten voor e-mail kunt beheren, zoals het verzenden van promotionele e-mailcampagnes.
+Nadat u het publiek hebt samengesteld, kunt u het activeren op een bestemming. Platform biedt ondersteuning voor diverse ESP&#39;s (Email Service Providers) waarmee u uw marketingactiviteiten voor e-mail kunt beheren, zoals het verzenden van promotionele e-mailcampagnes.
 
-Controleer de [Overzicht van e-mailmarketingdoelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) voor een lijst van de gesteunde bestemmingen die u gegevens naar wilt uitvoeren (bijvoorbeeld [Oracle Eloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) pagina).
+Controleer de [Overzicht van e-mailmarketingdoelen](../../destinations/catalog/email-marketing/overview.md#connect-destination) voor een lijst van de gesteunde bestemmingen die u gegevens naar wilt uitvoeren (bijvoorbeeld [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) pagina).
 
 ## Bekijk de geretourneerde analysegegevens van uw campagne {#post-campaign-data-analysis}
 
@@ -95,7 +95,7 @@ De gegevens uit bronnen kunnen nu [incrementeel verwerkt](../essential-concepts/
 
 Zodra uw gegevensmodel wordt bijgewerkt, verstrekken uw douane dashboardwidgets zinvolle signalen die u toestaan om de waarde van het klantenleven te meten en te visualiseren.
 
-![Een aangepaste widget voor het aantal e-mailberichten dat wordt geopend op basis van hun segment- en e-mailcampagne.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![Een aangepaste widget waarin het aantal e-mailberichten wordt weergegeven dat is geopend op basis van het aantal gebruikers en hun e-mailcampagne.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 Er zijn verschillende visualisatieopties beschikbaar voor uw aangepaste analyse.
 

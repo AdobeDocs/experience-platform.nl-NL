@@ -2,7 +2,7 @@
 title: Vraag versnelde handleiding voor het rapporteren van inzichten in winkels
 description: Leer hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 0%
@@ -15,7 +15,7 @@ De vraag versnelde opslag staat u toe om de tijd en de verwerkingscapaciteit te 
 
 Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of een bestaand Adobe Real-time Customer Data Platform-gegevensmodel uitbreiden. Vervolgens kunt u naar keuze uw rapportinzichten gebruiken of insluiten in een rapportage-/visualisatieframework van uw keuze. Raadpleeg de documentatie bij het Real-time Customer Data Platform Insights-gegevensmodel voor meer informatie over [Pas uw SQL vraagmalplaatjes aan om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke gebruiksgevallen van de prestatiesindicator (KPI) te creëren](../../../dashboards/cdp-insights-data-model.md).
 
-Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in profielen, segmenten en doelen en maakt het mogelijk om dashboards met inzicht in Real-Time CDP te gebruiken. Dit document begeleidt u door het proces van het creëren van uw het gegevensmodel van het Rapport van Inzichten en ook hoe te om de gegevensmodellen van Real-Time CDP uit te breiden zoals nodig.
+Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in profielen, soorten publiek en bestemmingen en biedt de Real-Time CDP-dashboards inzicht. Dit document begeleidt u door het proces van het creëren van uw het gegevensmodel van het Rapport van Inzichten en ook hoe te om de gegevensmodellen van Real-Time CDP uit te breiden zoals nodig.
 
 ## Vereisten
 
@@ -37,7 +37,7 @@ Aan het begin hebt u een eerste gegevensmodel uit uw bronnen (mogelijk via de AP
 
 ![Een entiteitrelationeel diagram (ERD) van het gebruikersmodel voor inzicht van het publiek.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-In dit voorbeeld wordt `externalaudiencereach` table/dataset is gebaseerd op identiteitskaart en volgt de lagere en hogere grenzen voor gelijke telling. De `externalaudiencemapping` De afmetinglijst/dataset brengt externe identiteitskaart aan een bestemming en een segment op Platform in kaart.
+In dit voorbeeld wordt `externalaudiencereach` table/dataset is gebaseerd op identiteitskaart en volgt de lagere en hogere grenzen voor gelijke telling. De `externalaudiencemapping` De afmetingstabel/dataset brengt externe identiteitskaart aan een bestemming en een publiek op Platform in kaart.
 
 ## Een model maken voor het rapporteren van inzichten met Data Distiller
 
@@ -74,7 +74,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -133,7 +133,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Vergroot uw gegevensmodel met het Real-Time CDP-gegevensmodel voor inzichten
 
-U kunt het publieksmodel uitbreiden met extra details om een rijkere dimensietabel te maken. U kunt bijvoorbeeld de segmentnaam en de doelnaam toewijzen aan de externe publieksidentificatie. Om dit te doen, gebruik de Dienst van de Vraag om een nieuwe dataset tot stand te brengen of te verfrissen en het toe te voegen aan het publieksmodel dat segmenten en bestemmingen met een externe identiteit combineert. In het onderstaande diagram wordt het concept van deze extensie van het gegevensmodel geïllustreerd.
+U kunt het publieksmodel uitbreiden met extra details om een rijkere dimensietabel te maken. U kunt bijvoorbeeld de publieksnaam en de doelnaam toewijzen aan de externe publieksidentificatie. Om dit te doen, gebruik de Dienst van de Vraag om een nieuwe dataset tot stand te brengen of te verfrissen en het toe te voegen aan het publieksmodel dat publiek en bestemmingen met een externe identiteit combineert. In het onderstaande diagram wordt het concept van deze extensie van het gegevensmodel geïllustreerd.
 
 ![Een ERD diagram dat het Real-Time CDP inzicht gegevensmodel en het Vraag versnelde opslagmodel verbindt.](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -145,13 +145,13 @@ De Dienst van de Vraag van het gebruik om zeer belangrijke beschrijvende attribu
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -170,15 +170,15 @@ Gebruik de `SHOW datagroups;` bevel om de verwezenlijking van de extra `external
 
 ## Vraag uw uitgebreide versnelde opslagrapportering van inzichten gegevensmodel
 
-Nu `audienceinsight` het gegevensmodel is uitgebreid en is klaar om te worden opgevraagd . In het volgende SQL ziet u de lijst met toegewezen doelen en segmenten.
+Nu `audienceinsight` het gegevensmodel is uitgebreid en is klaar om te worden opgevraagd . In de volgende SQL-code ziet u de lijst met toegewezen doelen en doelgroepen.
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -189,7 +189,7 @@ LIMIT  25;
 De vraag keert alle datasets op de vraag versnelde opslag terug:
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -211,25 +211,25 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 Nu u uw model van douanegegevens hebt gecreeerd, bent u bereid om uw gegevens met douanevragen en user-defined dashboards te visualiseren.
 
-De volgende SQL verstrekt een uitsplitsing van de gelijke telling door publiek in een bestemming en een uitsplitsing van elke bestemming van publiek door segment.
+De volgende SQL verstrekt een uitsplitsing van de gelijke telling door publiek in een bestemming en een uitsplitsing van elke bestemming van publiek door publiek.
 
 ```sql
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 De afbeelding hieronder geeft een voorbeeld van de mogelijke aangepaste visualisaties aan de hand van het gegevensmodel voor het rapporteren van inzichten.
 
-![Een gelijke telling door bestemming en segmentwidget die van het nieuwe rapporteringsinzichten gegevensmodel wordt gecreeerd.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![Een gelijke telling door bestemming en publiek widget die van het nieuwe rapporteringsinzichten gegevensmodel wordt gecreeerd.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 Het aangepaste gegevensmodel vindt u in de lijst met beschikbare gegevensmodellen in de door de gebruiker gedefinieerde dashboardwerkruimte. Zie de [door de gebruiker gedefinieerde dashboardhulplijn](../../../dashboards/user-defined-dashboards.md) voor begeleiding op hoe te om uw model van douanegegevens te gebruiken.

@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2022
 description: Opmerkingen bij de release van januari 2022 voor Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '1341'
 ht-degree: 2%
@@ -43,7 +43,7 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 | Functie | Beschrijving |
 | --- | --- |
-| Intelligente bijschriften | Een machine het leren algoritme verstrekt automatisch inzichten op uw profiel en publieksgegevens, en illustreert patronen en tendensen over een 30-90 dag, of periode van 12 maanden. De bijschriften bevatten informatie over <ul><li>Algemene vorm en statistieken</li><li>Trends en abrupte wijzigingen</li><li>Seizoenspatronen</li><li>Onverwachte anomalieën</li></ul> Meer informatie is te vinden op de [profielen, dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) en [segmentdashboards](../../dashboards/guides/segments.md#audience-size-trend) documentatie. |
+| Intelligente bijschriften | Een machine het leren algoritme verstrekt automatisch inzichten op uw profiel en publieksgegevens, en illustreert patronen en tendensen over een 30-90 dag, of periode van 12 maanden. De bijschriften bevatten informatie over <ul><li>Algemene vorm en statistieken</li><li>Trends en abrupte wijzigingen</li><li>Seizoenspatronen</li><li>Onverwachte anomalieën</li></ul> Meer informatie is te vinden op de [profielen, dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) en [segmentdashboards](../../dashboards/guides/audiences.md#audience-size-trend) documentatie. |
 | Overzicht van dashboards | Open de vooraf geconfigureerde rapporten van profiel-, segmenten- en doeldashboards, inclusief geïnstalleerde integraties zoals PowerBI, op een gecentraliseerde locatie. Zie voor meer informatie de [[!DNL Dashboards] inventarisdocumentatie](../../dashboards/inventory.md). |
 | PowerBI-rapportsjablonen | Met nieuwe PowerBI-diagrammen kunt u metriek van het profiel, de segmenten en de doelrapportgegevensmodellen maken, aanpassen of uitbreiden. Met de geautomatiseerde installatieworkflow kunt u uw marketinginzichten binnen uw organisatie delen vanuit de PowerBI-omgeving. Zie voor meer informatie de [PowerBI-rapportsjabloondocumentatie](../../dashboards/integrations/power-bi.md). |
 

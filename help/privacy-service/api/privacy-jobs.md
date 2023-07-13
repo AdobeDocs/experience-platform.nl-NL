@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API-eindpunt voor privacytaken
 description: Leer hoe u privacytaken voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 890294f087b4aae58ec9519ab3fcfff0cc4cc12d
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
@@ -165,7 +165,7 @@ curl -X POST \
 | `expandIDs` | Een optionele eigenschap die, wanneer ingesteld op `true`, is een optimalisatie voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door [!DNL Analytics]). Indien weggelaten, wordt deze waarde standaard ingesteld op `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing request. Accepteerde waarden zijn `normal` en `low`. Indien `priority` wordt weggelaten, is het standaardgedrag `normal`. |
 | `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar door de opgegeven verzameling gebruikers-id&#39;s wordt verwezen, worden anoniem gemaakt. Indien `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
-| `mergePolicyId` | Bij het indienen van privacyverzoeken voor realtime-klantprofiel (`profileService`), kunt u naar keuze identiteitskaart van specifiek verstrekken [samenvoegingsbeleid](../../profile/merge-policies/overview.md) die u wilt gebruiken voor het stikken van id&#39;s. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken segmentinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
+| `mergePolicyId` | Bij het indienen van privacyverzoeken voor realtime-klantprofiel (`profileService`), kunt u naar keuze identiteitskaart van specifiek verstrekken [samenvoegingsbeleid](../../profile/merge-policies/overview.md) die u wilt gebruiken voor het stikken van id&#39;s. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken publieksinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
 | `regulation` **(Vereist)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
 
 {style="table-layout:auto"}

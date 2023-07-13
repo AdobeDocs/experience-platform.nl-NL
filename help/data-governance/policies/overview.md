@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van beleidsregels voor gegevensgebruik
 description: Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens in Adobe Experience Platform of waarvan u een beperking hebt ingesteld.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
+source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Zie de bijlage bij dit document voor een lijst met [beschikbare door Adobe gedef
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
+Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
@@ -99,5 +99,5 @@ In de onderstaande tabel worden de belangrijkste marketingacties beschreven die 
 | Exporteren naar derde partij | Een handeling die gegevens exporteert naar processors en entiteiten die geen directe relatie hebben met klanten. Veel gegevensleveranciers hebben bedingen in de contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. |
 | Onsite reclame | Een handeling die gegevens gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. |
 | Onsite personalisatie | Een actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend. |
-| Segmentovereenkomst | Een actie die gegevens voor de Gelijke van het Segment van Adobe Experience Platform gebruikt, die voor twee of meer gebruikers van het Platform toestaat om segmentgegevens uit te wisselen. Door beleid in te schakelen dat naar deze handeling verwijst, kunt u beperken welke gegevens worden gebruikt voor Segment Match. Als het kernbeleid &#39;Gegevens delen beperken&#39; bijvoorbeeld is ingeschakeld, worden alle gegevens met een [C11-label](../labels/reference.md#c11) kan niet worden gebruikt voor Segment Match. |
+| Segmentovereenkomst | Een actie die gegevens voor de Gelijke van het Segment van Adobe Experience Platform gebruikt, die voor twee of meer gebruikers van het Platform toestaat om publieksgegevens uit te wisselen. Door beleid in te schakelen dat naar deze handeling verwijst, kunt u beperken welke gegevens worden gebruikt voor Segment Match. Als het kernbeleid &#39;Gegevens delen beperken&#39; bijvoorbeeld is ingeschakeld, worden alle gegevens met een [C11-label](../labels/reference.md#c11) kan niet worden gebruikt voor Segment Match. |
 | Eén identiteit aanpassen | Een handeling die vereist dat één identiteit wordt gebruikt voor verpersoonlijkingsdoeleinden in plaats van dat identiteiten uit meerdere bronnen worden gekoppeld. |

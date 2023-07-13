@@ -2,7 +2,7 @@
 title: Overzicht van gegevenshygiëne
 description: Met Adobe Experience Platform Data Hygiene kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Het volgende gebeurt wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expir
 | Verzoek is ingediend | 0 uur | Een gegevensbeheerder of privacyanalist dient een verzoek in om een dataset op een bepaald tijdstip te laten verlopen. De aanvraag is zichtbaar in het dialoogvenster [!UICONTROL Data Hygiene UI] nadat de aanvraag is ingediend en in behandeling blijft tot de geplande vervaldatum, waarna de aanvraag zal worden uitgevoerd. |
 | Gegevensset wordt verwijderd | 1 uur | De dataset wordt geschrapt van [inventarisatiepagina van gegevensset](../catalog/datasets/user-guide.md) in de gebruikersinterface. De gegevens in het datumpeer worden slechts zachte geschrapt, en zullen zo tot het eind van het proces blijven, waarna het hard zal worden geschrapt. |
 | Aantal profielen bijgewerkt | 30 uur | Afhankelijk van de inhoud van de dataset die wordt geschrapt, kunnen sommige profielen uit het systeem worden verwijderd als alle hun componentenattributen aan die dataset worden gebonden. 30 uur nadat de dataset wordt geschrapt, worden om het even welke resulterende veranderingen in algemene profieltellingen weerspiegeld in [dashboardwidgets](../dashboards/guides/profiles.md#profile-count-trend) en andere verslagen. |
-| Segmenten bijgewerkt | 48 uur | Wanneer alle betrokken profielen zijn bijgewerkt, worden alle gerelateerde [segmenten](../segmentation/home.md) worden aangepast aan de nieuwe grootte. Afhankelijk van de dataset die werd verwijderd en de attributen die u op segmenteert, zou de grootte van elk segment als gevolg van de schrapping kunnen stijgen of verminderen. |
+| Soorten publiek bijgewerkt | 48 uur | Wanneer alle betrokken profielen zijn bijgewerkt, worden alle gerelateerde [publiek](../segmentation/home.md) worden aangepast aan de nieuwe grootte. Afhankelijk van de gegevensset die is verwijderd en de kenmerken waarop u segmenteert, kan de grootte van elk publiek toenemen of afnemen als gevolg van de verwijdering. |
 | Reizen en bestemmingen bijgewerkt | 50 uur | [Reizen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), en [bestemmingen](../destinations/home.md) worden bijgewerkt op basis van wijzigingen in gerelateerde segmenten. |
 | Harde verwijdering voltooid | 14 dagen | Alle gegevens met betrekking tot de gegevensset zijn hard verwijderd uit het datumpeer. De [status van het hygiënisch werk](./ui/browse.md#view-details) die de gegevensset heeft verwijderd, wordt bijgewerkt om deze gegevens weer te geven. |
 

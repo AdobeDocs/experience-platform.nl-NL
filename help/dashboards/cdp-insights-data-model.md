@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform Insights-gegevensmodel
 description: Leer hoe u SQL-query's kunt gebruiken met de Real-time Customer Data Platform Insights Data Models om uw eigen Real-Time CDP-rapporten aan te passen voor uw marketing- en KPI-gebruiksproblemen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights-gegevensmodel
 
-De functie Real-time Customer Data Platform Insights Data Model stelt de gegevensmodellen en SQL beschikbaar die de inzichten voor verschillende profiel-, doel- en segmentatiewidgets kracht geven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documenten rapporteert om te leren [hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+De functie Real-time Customer Data Platform Insights Data Model stelt de gegevensmodellen en SQL beschikbaar die de inzichten voor verschillende profiel-, doel- en segmentatiewidgets kracht geven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw user-defined dashboards worden gebruikt. Zie de vraag versnelde opslag die inzichten documentatie rapporteert om te leren [hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Vereisten
 
@@ -19,7 +19,7 @@ Deze handleiding vereist een goed begrip van de [door de gebruiker gedefinieerde
 
 ## Real-Time CDP inzichtsrapporten en gebruiksgevallen
 
-Rapportering door Real-Time CDP biedt inzicht in uw profielgegevens en de relatie ervan met segmenten en bestemmingen. Er zijn verschillende sterschemamodellen ontwikkeld om een aantal veelvoorkomende gevallen van marketinggebruik te beantwoorden en elk gegevensmodel kan meerdere gebruiksgevallen ondersteunen.
+Rapportering door Real-Time CDP biedt inzicht in uw profielgegevens en de relatie ervan met publiek en bestemmingen. Er zijn verschillende sterschemamodellen ontwikkeld om een aantal veelvoorkomende gevallen van marketinggebruik te beantwoorden en elk gegevensmodel kan meerdere gebruiksgevallen ondersteunen.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### Segmentmodel {#segment-model}
+### Publiek model {#audience-model}
 
-Het segmentmodel bestaat uit de volgende datasets:
+Het publieksmodel bestaat uit de volgende datasets:
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ Het segmentmodel bestaat uit de volgende datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het segmentmodel.](./images/cdp-insights/segment-model.png)
+![Een ERD van het publieksmodel.](./images/cdp-insights/audience-model.png)
 
 #### Gebruiksscenario voor grootte publiek
 
-De logica die wordt gebruikt voor de [!UICONTROL Audience size] widget retourneert het totale aantal samengevoegde profielen binnen het geselecteerde segment op het moment van de meest recente momentopname. Zie de [[!UICONTROL Audience size] widget-documentatie](./guides/segments.md#audience-size) voor meer informatie .
+De logica die wordt gebruikt voor de [!UICONTROL Audience size] widget retourneert het totale aantal samengevoegde profielen in het geselecteerde publiek op het moment van de meest recente opname. Zie de [[!UICONTROL Audience size] widget-documentatie](./guides/audiences.md#audience-size) voor meer informatie .
 
 De SQL die de [!UICONTROL Audience size] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### Omvang van het publiek omwenteling trend gebruikscase
 
-De logica die wordt gebruikt voor de [!UICONTROL Audience size change trend] widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. Zie de [[!UICONTROL Audience size change trend] widget-documentatie](./guides/segments.md#audience-size-change-trend) voor meer informatie .
+De logica die wordt gebruikt voor de [!UICONTROL Audience size change trend] widget geeft een lijngrafiekillustratie van het verschil tussen de meest recente dagelijkse momentopnamen in het totale aantal profielen dat voor een bepaald publiek is gekwalificeerd . Zie de [[!UICONTROL Audience size change trend] widget-documentatie](./guides/audiences.md#audience-size-change-trend) voor meer informatie .
 
 De SQL die de [!UICONTROL Audience size change trend] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### De meeste gebruikte bestemmingen gebruiken case
 
-De logica die wordt gebruikt in de [!UICONTROL Most used destinations] widget geeft een overzicht van de meest gebruikte doelen van uw organisatie op basis van het aantal segmenten dat aan hen is toegewezen. Deze rangschikking biedt inzicht in welke bestemmingen worden gebruikt en toont mogelijk ook de bestemmingen die mogelijk onderbenut zijn. Zie de documentatie op de [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) voor meer informatie .
+De logica die wordt gebruikt in de [!UICONTROL Most used destinations] widget geeft een overzicht van de meest gebruikte doelen van uw organisatie op basis van het aantal soorten publiek dat aan hen is toegewezen. Deze rangschikking biedt inzicht in welke bestemmingen worden gebruikt en toont mogelijk ook de bestemmingen die mogelijk onderbenut zijn. Zie de documentatie op de [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) voor meer informatie .
 
 De SQL die de [!UICONTROL Most used destinations] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### Pas geactiveerde segmenten gebruiken hoofdletters/kleine letters
+#### Onlangs geactiveerd publiek gebruik
 
-De logica voor de [!UICONTROL Recently activated segments] widget bevat een lijst met de segmenten die het laatst zijn toegewezen aan een doel. Deze lijst verstrekt een momentopname van de segmenten en de bestemmingen die actief in gebruik in het systeem zijn en in het oplossen van problemen kunnen helpen om het even welke onjuiste afbeeldingen. Zie de [[!UICONTROL Recently activated segments] widget-documentatie](./guides/destinations.md#recently-activated-segments) voor meer informatie .
+De logica voor de [!UICONTROL Recently activated audiences] widget bevat een lijst met de soorten publiek die het laatst aan een doel zijn toegewezen. Deze lijst verstrekt een momentopname van het publiek en de bestemmingen die actief in gebruik in het systeem zijn en in het oplossen van problemen kunnen helpen om het even welke onjuiste afbeeldingen. Zie de [[!UICONTROL Recently activated audiences] widget-documentatie](./guides/destinations.md#recently-activated-audiences) voor meer informatie .
 
-De SQL die de [!UICONTROL Recently activated segments] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
+De SQL die de [!UICONTROL Recently activated audiences] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
 +++SQL-query
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Model van naamruimte-segment
+### Naamruimte-publieksmodel
 
-Het namespace-segment model wordt samengesteld uit de volgende datasets:
+Het namespace-publiek model wordt samengesteld uit de volgende datasets:
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ Het namespace-segment model wordt samengesteld uit de volgende datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van het namespace-segmentmodel.](./images/cdp-insights/namespace-segment-model.png)
+![Een ERD van het naamruimte-publieksmodel.](./images/cdp-insights/namespace-audience-model.png)
 
-#### Profielen op identiteit voor een geval van segmentgebruik
+#### Profielen op identiteit voor gebruik van hoofdletters voor een publiek
 
-De logica die wordt gebruikt in de [!UICONTROL Profiles by identity] widget geeft een overzicht van de identiteiten in alle samengevoegde profielen in uw profielenarchief voor een bepaald segment. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](./guides/segments.md#profiles-by-identity) voor meer informatie .
+De logica die wordt gebruikt in de [!UICONTROL Profiles by identity] widget geeft een overzicht van de identiteiten in alle samengevoegde profielen in uw profielenarchief voor een bepaald publiek. Zie de [[!UICONTROL Profiles by identity] widget-documentatie](./guides/audiences.md#profiles-by-identity) voor meer informatie .
 
 De SQL die de [!UICONTROL Profiles by identity] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### Namespace door segmentmodel overlappen
+### Naamruimte door publieksmodel overlappen
 
-De overlappende naamruimte per segmentmodel bestaat uit de volgende datasets:
+De overlappende naamruimte door het publieksmodel bestaat uit de volgende datasets:
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ De overlappende naamruimte per segmentmodel bestaat uit de volgende datasets:
 
 De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
-![Een ERD van de overlappende naamruimte per segmentmodel.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Een ERD van de overlappende naamruimte per publieksmodel.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### Identiteitsoverlap (segmenten) gebruiken hoofdletters/kleine letters
+#### Identiteitsoverlapping (publiek) gebruikt hoofdletters/kleine letters
 
-De logica die wordt gebruikt in de [!UICONTROL Segments] dashboard [!UICONTROL Identity overlap] widget illustreert de overlapping van profielen die de twee geselecteerde identiteiten voor een bepaald segment bevatten. Zie voor meer informatie de [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Segmentation] dashboarddocumentatie](./guides/segments.md#identity-overlap).
+De logica die wordt gebruikt in de [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustreert de overlapping van profielen die de twee geselecteerde identiteiten voor een bepaald publiek bevatten. Zie voor meer informatie de [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Audiences] dashboarddocumentatie](./guides/audiences.md#identity-overlap).
 
 De SQL die de [!UICONTROL Identity overlap] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 

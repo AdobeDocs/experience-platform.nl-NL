@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Query Service
 description: Dit document verstrekt een overzicht van de rol van de Dienst van de Vraag binnen Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machin
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] kunnen gebruikers hun klanten verdelen in kleinere groepen die gelijkaardige eigenschappen delen. Deze segmenten kunnen vervolgens worden geëvalueerd voor een betere analyse van uw [!DNL Real-Time Customer Profile] gegevens. [!DNL Query Service] kan worden gebruikt om deze analyse te verstrekken door vragen over dit segmentgegevens binnen te lopen [!DNL Data Lake]. Lees de [!DNL Segmentation Service] overzicht voor meer informatie over segmentatie, en [!DNL Profile Query Language] (PQL) voor meer informatie over het analyseren van segmenten.
+Adobe Experience Platform [!DNL Segmentation Service] kunnen gebruikers hun klanten verdelen in kleinere groepen die gelijkaardige eigenschappen delen. Deze doelgroepen kunnen vervolgens worden geëvalueerd om een betere analyse van uw [!DNL Real-Time Customer Profile] gegevens. [!DNL Query Service] kan worden gebruikt om deze analyse te verstrekken door vragen over dit publieksgegevens binnen in werking te stellen [!DNL Data Lake]. Lees de [!DNL Segmentation Service] overzicht voor meer informatie over segmentatie, en [!DNL Profile Query Language] (PQL) voor meer informatie over het analyseren van soorten publiek.
 
 ## Gebruiksscenario’s
 
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Segmentation Service] kunnen gebruikers hun klan
 
 ### Adobe Analytics browse-dissident
 
-Dit [browservoorbeeld centreert bij gebruik van Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) gegevens om een bepaald actief publiek te creëren. [!DNL Query Service] past complexe logica voor segmentatie aan om diverse gepersonaliseerde attributen voor gebruik stroomafwaarts te berekenen, of zeer te vereenvoudigen hoe u uw segmenten bouwt.
+Dit [browservoorbeeld centreert bij gebruik van Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) gegevens om een bepaald actief publiek te creëren. [!DNL Query Service] past complexe logica voor segmentatie aan om diverse gepersonaliseerde attributen voor gebruik stroomafwaarts te berekenen, of zeer te vereenvoudigen hoe u uw publiek bouwt.
 
 ### Laagere BI-dashboards
 

@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2705'
 ht-degree: 1%
 
 ---
 
 # Aanbevolen procedures voor gegevensmodellering
 
-[!DNL Experience Data Model] (XDM) is het kernkader dat de gegevens van de klantenervaring door gemeenschappelijke structuren en definities voor gebruik in de stroomafwaartse diensten van Adobe Experience Platform te verstrekken gestandaardiseerd. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die u toestaat om waardevolle inzichten van klantenacties te bereiken, klantenpubliek door segmenten te bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uit te drukken.
+[!DNL Experience Data Model] (XDM) is het kernkader dat de gegevens van de klantenervaring door gemeenschappelijke structuren en definities voor gebruik in de stroomafwaartse diensten van Adobe Experience Platform te verstrekken gestandaardiseerd. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die u toestaat om waardevolle inzichten van klantenacties te bereiken, klantenpubliek te bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uit te drukken.
 
 Aangezien XDM uiterst veelzijdig en aanpasbaar door ontwerp is, is het daarom belangrijk om beste praktijken voor gegevensmodellering te volgen wanneer het ontwerpen van uw schema&#39;s. Dit document behandelt de belangrijkste besluiten en overwegingen u moet maken wanneer het in kaart brengen van uw gegevens van de klantenervaring aan XDM.
 
@@ -92,24 +92,24 @@ Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der 
 
 #### Gebruiksgevallen voor segmentatie
 
-Wanneer het categoriseren van uw entiteiten, is het belangrijk om over de publiekssegmenten te denken u kunt willen bouwen om uw bepaalde zaken van het bedrijfsgebruik te richten.
+Wanneer het categoriseren van uw entiteiten, is het belangrijk om over het publiek te denken u kunt willen bouwen om uw bijzondere zaken van het bedrijfsgebruik te richten.
 
-Een bedrijf wil bijvoorbeeld alle &quot;Gold&quot; of &quot;Platinum&quot; leden van zijn loyaliteitsprogramma kennen die het afgelopen jaar meer dan vijf aankopen hebben gedaan. Op basis van deze segmentlogica kunnen de volgende conclusies worden getrokken met betrekking tot de wijze waarop relevante entiteiten moeten worden vertegenwoordigd:
+Een bedrijf wil bijvoorbeeld alle &quot;Gold&quot; of &quot;Platinum&quot; leden van zijn loyaliteitsprogramma kennen die het afgelopen jaar meer dan vijf aankopen hebben gedaan. Op basis van deze segmentatielogica kunnen de volgende conclusies worden getrokken met betrekking tot de wijze waarop relevante entiteiten moeten worden vertegenwoordigd:
 
-* &quot;Goud&quot; en &quot;Platinum&quot; staan voor de status van loyaliteit die van toepassing is op een individuele klant. Aangezien de segmentlogica slechts met de huidige loyaliteitsstatus van klanten bezig is, kunnen deze gegevens als deel van een profielschema worden gemodelleerd. Als u veranderingen in loyaliteitsstatus in tijd wilt volgen, kon u een extra gebeurtenisschema voor de veranderingen van de loyaliteitsstatus ook tot stand brengen.
-* Aankopen zijn gebeurtenissen die zich op een bepaald tijdstip voordoen en de segmentlogica heeft betrekking op aankoopgebeurtenissen binnen een opgegeven tijdvenster. Deze gegevens moeten daarom als een gebeurtenisschema worden gemodelleerd.
+* &quot;Goud&quot; en &quot;Platinum&quot; staan voor de status van loyaliteit die van toepassing is op een individuele klant. Aangezien de segmentatielogica slechts met de huidige loyaliteitsstatus van klanten betrekking heeft, kunnen deze gegevens als deel van een profielschema worden gemodelleerd. Als u veranderingen in loyaliteitsstatus in tijd wilt volgen, kon u een extra gebeurtenisschema voor de veranderingen van de loyaliteitsstatus ook tot stand brengen.
+* Aankopen zijn gebeurtenissen die zich op een bepaald moment voordoen en de segmentatielogica heeft betrekking op aankoopgebeurtenissen binnen een opgegeven tijdvenster. Deze gegevens moeten daarom als een gebeurtenisschema worden gemodelleerd.
 
 #### Gebruiksgevallen activeren
 
-Naast overwegingen met betrekking tot gevallen waarin segmentatie wordt gebruikt, moet u ook de activeringsgebruiksgevallen voor die segmenten bekijken om aanvullende relevante kenmerken te identificeren.
+Naast overwegingen met betrekking tot gevallen van segmentatiegebruik, moet u ook de activeringsgebruiksgevallen voor die soorten publiek herzien om extra relevante kenmerken te identificeren.
 
-Bijvoorbeeld, heeft een bedrijf een publiekssegment gebouwd dat op de regel wordt gebaseerd dat `country = US`. Vervolgens wil het bedrijf bij het activeren van dat segment naar bepaalde downstreamdoelen alle geëxporteerde profielen filteren op basis van de status van het land van herkomst. Daarom `state` moet ook worden vastgelegd in de toepasselijke profielentiteit.
+Bijvoorbeeld, heeft een bedrijf een publiek gebouwd dat op de regel wordt gebaseerd dat `country = US`. Wanneer het bedrijf dat publiek vervolgens activeert naar bepaalde downstreamdoelen, wil het alle geëxporteerde profielen filteren op basis van de thuisstaat. Daarom `state` moet ook worden vastgelegd in de toepasselijke profielentiteit.
 
 #### Geaggregeerde waarden
 
 Op basis van het gebruiksgeval en de granulariteit van uw gegevens moet u bepalen of bepaalde waarden vooraf moeten worden geaggregeerd voordat ze in een profiel of gebeurtenisentiteit worden opgenomen.
 
-Een bedrijf wil bijvoorbeeld een segment bouwen op basis van het aantal winkels. U kunt ervoor kiezen deze gegevens op te nemen met de laagste granulariteit door elke aanschafgebeurtenis met een tijdstempel op te nemen als een eigen entiteit. Hierdoor kan het aantal opgenomen gebeurtenissen echter soms exponentieel toenemen. Als u het aantal opgenomen gebeurtenissen wilt verminderen, kunt u desgewenst een samengevoegde waarde maken `numberOfPurchases` gedurende een week- of maandperiode. Andere statistische functies zoals MIN en MAX kunnen ook op deze situaties van toepassing zijn.
+Een bedrijf wil bijvoorbeeld een publiek maken op basis van het aantal winkels. U kunt ervoor kiezen deze gegevens op te nemen met de laagste granulariteit door elke aanschafgebeurtenis met een tijdstempel op te nemen als een eigen entiteit. Hierdoor kan het aantal opgenomen gebeurtenissen echter soms exponentieel toenemen. Als u het aantal opgenomen gebeurtenissen wilt verminderen, kunt u desgewenst een samengevoegde waarde maken `numberOfPurchases` gedurende een week- of maandperiode. Andere statistische functies zoals MIN en MAX kunnen ook op deze situaties van toepassing zijn.
 
 >[!CAUTION]
 >
@@ -173,7 +173,7 @@ De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om abonnemente
 
 **Cons**
 
-* De segmentatie wordt complexer voor het originele voorgenomen gebruiksgeval (identificerend de status van de recentste abonnementen van klanten). Het segment heeft nu extra logica nodig om de laatste abonnementsgebeurtenis voor een klant te markeren om zijn status te controleren.
+* De segmentatie wordt complexer voor het originele voorgenomen gebruiksgeval (identificerend de status van de recentste abonnementen van klanten). Het publiek heeft nu extra logica nodig om de laatste abonnementsgebeurtenis voor een klant te markeren om zijn status te controleren.
 * Gebeurtenissen hebben een hoger risico om automatisch te vervallen en uit de profielopslag te worden verwijderd. Zie de handleiding op [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) voor meer informatie .
 
 ## Schema&#39;s maken op basis van uw gecategoriseerde entiteiten
