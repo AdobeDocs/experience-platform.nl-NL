@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de Dienst van de segmentatie;segmentatie;segmenteringsdienst;gebruikersgids;ui gids;segmentation ui gids;segmentbouwer;de bouwer van het segment;
 solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
+source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
-source-wordcount: '3187'
+source-wordcount: '3237'
 ht-degree: 0%
 
 ---
@@ -15,14 +14,14 @@ ht-degree: 0%
 
 [!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 
-![De UI van de segmentbouwer wordt getoond.](../images/ui/segment-builder/segment-builder.png)
+![De gebruikersinterface van Segment Builder wordt weergegeven.](../images/ui/segment-builder/segment-builder.png)
 
 ## Bouwstenen voor segmentdefinitie {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Velden"
->abstract="De drie veldtypen waaruit een segment bestaat, zijn kenmerken, gebeurtenissen en doelgroepen. Met kenmerken kunt u Profielkenmerken gebruiken die horen bij de klasse Individueel profiel XDM, gebeurtenissen kunt u een publiek maken op basis van handelingen of gebeurtenissen die plaatsvinden met XDM ExperienceEvent-gegevenselementen en publiek kunt geïmporteerde soorten publiek uit externe bronnen gebruiken."
+>abstract="De drie veldtypen waaruit een segmentdefinitie bestaat, zijn kenmerken, gebeurtenissen en doelgroepen. Met kenmerken kunt u Profielkenmerken gebruiken die horen bij de klasse Individueel profiel XDM, gebeurtenissen kunt u een publiek maken op basis van handelingen of gebeurtenissen die plaatsvinden met XDM ExperienceEvent-gegevenselementen en publiek kunt geïmporteerde soorten publiek uit externe bronnen gebruiken."
 
 De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daarnaast kunnen de kenmerken en gebeurtenissen in bestaande doelgroepen worden gebruikt als componenten voor nieuwe definities.
 
@@ -38,7 +37,7 @@ De **[!UICONTROL Attributes]** kunt u bladeren [!DNL Profile] kenmerken van de [
 
 ### Gebeurtenissen
 
-De **[!UICONTROL Events]** kunt u een publiek maken op basis van gebeurtenissen of acties die hebben plaatsgevonden via [!DNL XDM ExperienceEvent] gegevenselementen. U kunt gebeurtenistypen ook vinden op het tabblad **[!UICONTROL Events]** tab, een verzameling veelgebruikte gebeurtenissen waarmee u sneller uw segmenten kunt maken.
+De **[!UICONTROL Events]** kunt u een publiek maken op basis van gebeurtenissen of acties die hebben plaatsgevonden via [!DNL XDM ExperienceEvent] gegevenselementen. U kunt gebeurtenistypen ook vinden op het tabblad **[!UICONTROL Events]** tab, die een verzameling veelgebruikte gebeurtenissen zijn om u in staat te stellen sneller uw segmentdefinities te maken.
 
 Niet alleen kunnen bladeren naar [!DNL ExperienceEvent] U kunt ook naar gebeurtenistypen zoeken. Gebeurtenistypen gebruiken dezelfde coderingslogica als [!DNL ExperienceEvents], zonder dat u door de [!DNL XDM ExperienceEvent] klasse die de juiste gebeurtenis zoekt. Als u bijvoorbeeld op de zoekbalk zoekt naar &quot;winkelwagentje&quot;, worden de gebeurtenistypen &quot;[!UICONTROL AddCart]&quot; en &quot;[!UICONTROL RemoveCart]&quot;, die twee zeer vaak gebruikte acties van het karretje zijn wanneer het bouwen van segmentdefinities.
 
@@ -116,7 +115,7 @@ Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tege
 
 >[!IMPORTANT]
 >
->De meest recente wijzigingen in Adobe Experience Platform hebben het gebruik van de `OR` en `AND` logische operatoren tussen gebeurtenissen. Deze updates zijn niet van invloed op bestaande segmenten. Deze wijzigingen zijn echter van invloed op alle volgende updates van bestaande segmenten en nieuwe segmentcreaties. Lees de [tijdconstanten bijwerken](./segment-refactoring.md) voor meer informatie .
+>De meest recente wijzigingen in Adobe Experience Platform hebben het gebruik van de `OR` en `AND` logische operatoren tussen gebeurtenissen. Deze updates zijn niet van invloed op bestaande segmentdefinities. Nochtans, zullen alle verdere updates aan bestaande segmentdefinities en pas gecreëerde segmentdefinities door deze veranderingen worden beïnvloed. Lees de [tijdconstanten bijwerken](./segment-refactoring.md) voor meer informatie .
 
 Wanneer u een waarde voor het kenmerk selecteert, wordt een lijst met opsommingswaarden weergegeven die het kenmerk kan bevatten.
 
@@ -144,7 +143,7 @@ Er zijn maximaal 250 waarden toegestaan. Als u deze hoeveelheid overschrijdt, mo
 
 ### Soorten publiek toevoegen
 
-U kunt een publiek slepen en neerzetten vanuit het deelvenster **[!UICONTROL Audience]** tab op het canvas van de regelbouwer om te verwijzen naar het lidmaatschap van het publiek in de nieuwe segmentdefinitie. Dit staat u toe om publiekslidmaatschap als attribuut in de nieuwe segmentregel te omvatten of uit te sluiten.
+U kunt een publiek slepen en neerzetten vanuit het deelvenster **[!UICONTROL Audience]** tab op het canvas van de regelbouwer om te verwijzen naar het lidmaatschap van het publiek in de nieuwe segmentdefinitie. Dit staat u toe om publiekslidmaatschap als attribuut in de nieuwe regels van de segmentdefinitie te omvatten of uit te sluiten.
 
 Voor [!DNL Platform] publiek gemaakt met [!DNL Segment Builder], krijgt u de optie om het publiek in de reeks regels om te zetten die in de segmentdefinitie voor dat publiek werden gebruikt. Deze omzetting maakt een exemplaar van de regellogica, die dan kan worden gewijzigd zonder de originele segmentdefinitie te beïnvloeden. Zorg ervoor dat u recente wijzigingen in de segmentdefinitie hebt opgeslagen voordat u deze omzet in regellogica.
 
@@ -158,11 +157,11 @@ Als er conflicten optreden wanneer een publiek wordt omgezet in regels, [!DNL Se
 
 ### Codeweergave
 
-U kunt ook een op code gebaseerde versie weergeven van een regel die is gemaakt in het dialoogvenster [!DNL Segment Builder]. Zodra u uw regel binnen het canvas van de regelbouwer hebt gecreeerd, kunt u selecteren **[!UICONTROL Code view]** om uw segment als PQL te zien.
+U kunt ook een op code gebaseerde versie weergeven van een regel die is gemaakt in het dialoogvenster [!DNL Segment Builder]. Zodra u uw regel binnen het canvas van de regelbouwer hebt gecreeerd, kunt u selecteren **[!UICONTROL Code view]** om uw segmentdefinitie als PQL te zien.
 
-![De knop voor de codeweergave is gemarkeerd, zodat u het segment kunt zien als PQL.](../images/ui/segment-builder/code-view.png)
+![De knop voor de codeweergave is gemarkeerd, zodat u de segmentdefinitie kunt zien als PQL.](../images/ui/segment-builder/code-view.png)
 
-De mening van de code verstrekt een knoop die u toestaat om de waarde van het segment in API vraag te kopiëren. Om de recentste versie van het segment te krijgen, zorg ervoor u uw recentste veranderingen in het segment hebt bewaard.
+De mening van de code verstrekt een knoop die u toestaat om de waarde van de segmentdefinitie aan gebruik in API vraag te kopiëren. Om de recentste versie van de segmentdefinitie te krijgen, zorg ervoor u uw recentste veranderingen in de segmentdefinitie hebt bewaard.
 
 ![De knop Copy code is gemarkeerd, zodat u ](../images/ui/segment-builder/copy-code.png)
 
@@ -178,7 +177,7 @@ Nadat u de gebeurtenis in de container Gebeurtenissen hebt geplaatst, selecteert
 
 ![De geaggregeerde tekst wordt gemarkeerd. Als u dit selecteert, kunt u aggregatiefuncties selecteren.](../images/ui/segment-builder/add-aggregation.png)
 
-De samenvoeging wordt nu toegevoegd. U kunt nu de aggregatiefunctie selecteren, kiezen welk kenmerk wordt geaggregeerd, de gelijkheidsfunctie en de waarde. In het onderstaande voorbeeld zou dit segment elk profiel kwalificeren dat een som aangekochte waarden heeft die groter is dan $100, zelfs als elke afzonderlijke aankoop minder dan $100 is.
+De samenvoeging wordt nu toegevoegd. U kunt nu de aggregatiefunctie selecteren, kiezen welk kenmerk wordt geaggregeerd, de gelijkheidsfunctie en de waarde. In het onderstaande voorbeeld zou deze segmentdefinitie elk profiel kwalificeren dat een som aangekochte waarden heeft die groter is dan $100, zelfs als elke afzonderlijke aankoop minder dan $100 is.
 
 ![De gebeurtenisregels, die een samenvoegingsfunctie weergeven.](../images/ui/segment-builder/filled-aggregation.png)
 
@@ -222,6 +221,11 @@ Zodra u **[!UICONTROL Unwrap container]** de onderliggende container wordt verwi
 
 ## Beleid samenvoegen
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
+>title="Beleid samenvoegen"
+>abstract="Met een samenvoegbeleid kunt u verschillende gegevenssets samenvoegen tot uw profiel. Platform heeft een standaardbeleid voor samenvoegen verschaft of u kunt een nieuw standaardbeleid voor samenvoegen maken in profielen. Kies een samenvoegbeleid dat overeenkomt met uw marketingdoel voor dit publiek."
+
 [!DNL Experience Platform] laat u toe om gegevens uit veelvoudige bronnen te brengen en het te combineren om een volledige mening van elk van uw individuele klanten te zien. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe gegevens voorrang krijgen en welke gegevens worden gecombineerd om een profiel te maken.
 
 U kunt een samenvoegbeleid selecteren dat overeenkomt met uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Platform]. U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor stapsgewijze instructies voor het maken van een samenvoegbeleid voor uw organisatie, begint u met het lezen van de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
@@ -230,40 +234,40 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 
 ![De kiezer voor het samenvoegbeleid wordt gemarkeerd. Hiermee kunt u kiezen welk samenvoegbeleid moet worden geselecteerd voor uw segmentdefinitie.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segmenteigenschappen {#segment-properties}
+## Eigenschappen voor segmentdefinitie {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Segmenteigenschappen"
->abstract="In de sectie met segmenteigenschappen wordt een schatting weergegeven van de grootte van het resulterende segment, waarbij het aantal gekwalificeerde profielen wordt weergegeven in vergelijking met het totale aantal profielen. Dit staat u toe om uw segmentdefinitie zonodig aan te passen alvorens het publiek zelf te bouwen."
+>title="Eigenschappen voor segmentdefinitie"
+>abstract="In de sectie Eigenschappen van segmentdefinitie wordt een schatting weergegeven van de grootte van de resulterende segmentdefinitie, waarbij het aantal gekwalificeerde profielen wordt weergegeven in vergelijking met het totale aantal profielen. Dit staat u toe om uw segmentdefinitie zonodig aan te passen alvorens het publiek zelf te bouwen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Ramingen vernieuwen"
->abstract="U kunt de ramingen van uw segment vernieuwen om onmiddellijk een voorvertoning te zien van hoeveel profielen voor het voorgestelde segment in aanmerking zouden komen. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
+>abstract="U kunt de ramingen van uw segmentdefinitie verfrissen om onmiddellijk een voorproef van te zien hoeveel profielen voor de voorgestelde segmentdefinitie zouden kwalificeren. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
-Bij het samenstellen van een segmentdefinitie worden de **[!UICONTROL Segment Properties]** aan de rechterkant van de werkruimte wordt een schatting van de grootte van het resulterende segment weergegeven, zodat u de segmentdefinitie naar wens kunt aanpassen voordat u het publiek zelf gaat maken.
+Bij het samenstellen van een segmentdefinitie worden de **[!UICONTROL Segment Properties]** aan de rechterkant van de werkruimte wordt een schatting weergegeven van de grootte van de resulterende segmentdefinitie, zodat u de segmentdefinitie naar wens kunt aanpassen voordat u het publiek zelf gaat maken.
 
-De **[!UICONTROL Segment Properties]** de sectie is ook waar u belangrijke informatie over uw segmentdefinitie, met inbegrip van zijn naam, beschrijving, en evaluatietype kunt specificeren. De definitienamen van het segment worden gebruikt om uw segment onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
+De **[!UICONTROL Segment Properties]** de sectie is ook waar u belangrijke informatie over uw segmentdefinitie, met inbegrip van zijn naam, beschrijving, en evaluatietype kunt specificeren. De definitienamen van het segment worden gebruikt om uw segmentdefinitie onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
 
 Terwijl u de segmentdefinitie blijft maken, kunt u een gepagineerde voorvertoning van het publiek weergeven door **[!UICONTROL View Profiles]**.
 
-![De sectie met segmentdefinitie-eigenschappen wordt gemarkeerd. De segmenteigenschappen omvatten, maar zijn niet beperkt tot, de segmentnaam, beschrijving, en evaluatiemethode.](../images/ui/segment-builder/segment-properties.png)
+![De sectie met segmentdefinitie-eigenschappen wordt gemarkeerd. De eigenschappen van de segmentdefinitie omvatten, maar zijn niet beperkt tot, de naam, beschrijving, en evaluatiemethode van de segmentdefinitie.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het genereren van segmentramingen vindt u in het gedeelte [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmenten.
+>De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het genereren van schattingen voor segmentdefinities vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmentdefinities.
 
-U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten voor welke evaluatietypen dit segment in aanmerking komt, kunt u het bladerpictogram selecteren ![mappictogram met een vergrootglas](../images/ui/segment-builder/segment-evaluation-select-icon.png) om een lijst van de beschikbare methodes van de segmentbeoordeling te zien.
+U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram selecteren ![mappictogram met een vergrootglas](../images/ui/segment-builder/segment-evaluation-select-icon.png) om een lijst van de beschikbare evaluatiemethodes van de segmentdefinitie te zien.
 
 De [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, gelieve te lezen [streamingsegmentatie](./streaming-segmentation.md#query-types) of de [randsegmentatie](./edge-segmentation.md#query-types) overzichten.
 
-![Het pop-upvenster Selectie voor de evaluatiemethode verschijnt. Dit toont aan welke methodes van segmentbeoordeling in aanmerking komen en voor het segment niet in aanmerking komen.](../images/ui/segment-builder/select-evaluation-method.png)
+![Het pop-upvenster Selectie voor de evaluatiemethode verschijnt. Hieruit blijkt welke evaluatiemethoden in aanmerking komen en niet in aanmerking komen voor de segmentdefinitie.](../images/ui/segment-builder/select-evaluation-method.png)
 
 Als u een ongeldige evaluatiemethode selecteert, zult u worden ertoe aangezet om of uw regels van de segmentdefinitie te veranderen of de evaluatiemethode te veranderen.
 
-![De evaluatiemethode pop - op. Als een niet in aanmerking komende methode van de segmentbeoordeling wordt geselecteerd, verklaart pop - op waarom het niet in aanmerking komt.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![De evaluatiemethode pop - op. Als u een niet-subsidiabele evaluatiemethode selecteert, wordt in het pop-upvenster uitgelegd waarom deze niet in aanmerking komt.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
 Meer informatie over de verschillende evaluatiemethodes van de segmentdefinitie kan in worden gevonden [segmentatieoverzicht](../home.md#evaluate-segments).
 
