@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '3166'
+source-wordcount: '3174'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren
 
 ![Het dashboardoverzicht Profielen met de toegevoegde widget gemarkeerd.](../images/profiles/profiles-overview-add-widget.png)
 
-In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste segmenuwidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets. [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -67,7 +67,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Bladeren door profielen {#browse-profiles}
 
-De [!UICONTROL Browse] kunt u de alleen-lezen profielen die in uw organisatie worden opgenomen, doorzoeken en bekijken. Van hieruit kunt u belangrijke informatie zien die tot het profiel behoort met betrekking tot hun voorkeuren, gebeurtenissen uit het verleden, interacties en segmenten
+De [!UICONTROL Browse] kunt u de alleen-lezen profielen die in uw organisatie worden opgenomen, doorzoeken en bekijken. Van hieruit kunt u belangrijke informatie zien die tot het profiel behoort met betrekking tot hun voorkeuren, gebeurtenissen uit het verleden, interacties en doelgroepen.
 
 Zie de documentatie over voor meer informatie over de mogelijkheden voor profielweergave die worden geboden in de interface van het Platform [browserprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -256,9 +256,9 @@ Houd de muisaanwijzer boven afzonderlijke balken om een dialoogvenster weer te g
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Niet-gesegmenteerde profielen"
->abstract="Deze widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld en biedt de mogelijkheid om profielen in uw hele organisatie te activeren."
+>abstract="Deze widget geeft het totale aantal profielen weer dat niet aan een publiek is gekoppeld en biedt de mogelijkheid om profielen in uw hele organisatie te activeren."
 
-De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Het wijst ook op de kans om profielen uit te sluiten die geen adequate ROI verstrekken.
+De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen weer dat niet aan een publiek is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Het wijst ook op de kans om profielen uit te sluiten die geen adequate ROI verstrekken.
 
 ![De widget Niet-gesegmenteerde profielen.](../images/profiles/unsegmented-profiles.png)
 
@@ -267,9 +267,9 @@ De [!UICONTROL Unsegmented Profiles] widget geeft het totale aantal profielen we
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Trend voor niet-gesegmenteerde profielen"
->abstract="Deze widget verschaft een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een segment is gekoppeld. De trend van profielen die niet aan om het even welk segment verbonden zijn kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd."
+>abstract="Deze widget bevat een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een publiek is gekoppeld. De trend van profielen die niet aan een publiek zijn gekoppeld, kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden."
 
-De [!UICONTROL Unsegmented profiles change trend] widget gebruikt een lijngrafiek om het aantal profielen te illustreren dat sinds de laatste dagelijkse momentopname wordt toegevoegd die niet aan om het even welk segment in bijlage zijn. De verandering-trend van profielen niet verbonden aan om het even welk segment kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld op de y-as en de tijd op de x-as.
+De [!UICONTROL Unsegmented profiles change trend] widget gebruikt een lijngrafiek om het aantal profielen te illustreren dat sinds de laatste dagmomentopname wordt toegevoegd die niet aan om het even welk publiek in bijlage zijn. De veranderende trend van profielen die niet aan om het even welk publiek worden verbonden kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. De tijdsperiode wordt gekozen in een vervolgkeuzemenu in de widget. Het aantal profielen wordt weerspiegeld op de y-as en de tijd op de x-as.
 
 ![De trendwidget voor niet-gesegmenteerde profielen verandert.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -292,7 +292,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ### [!UICONTROL Audiences] {#audiences}
 
-Deze widget geeft het totale aantal segmenten weer dat gereed is om te worden geactiveerd, op basis van het gekozen samenvoegbeleid dat op de profielgegevens wordt toegepast.
+Deze widget geeft het totale aantal soorten publiek weer dat gereed is om te worden geactiveerd, afhankelijk van het gekozen samenvoegbeleid dat op de profielgegevens wordt toegepast.
 
 Selecteren **[!UICONTROL Audiences]** om naar de [!UICONTROL Segments] dashboard [!UICONTROL Browse] tab. Van daar kunt u een lijst van alle segmentdefinities voor uw organisatie zien.
 
@@ -311,9 +311,9 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-Deze widget stelt de gegevens over publieksoverlap van alle beschikbare segmenten die door samenvoegbeleid worden gefilterd in tabelvorm samen. Een lijst van vijf publiek dat van hoogste tot laagste overlappende percentages wordt gerangschikt wordt verstrekt voor het fusiebeleid dat van het dropdown menu bij de bovenkant van het scherm wordt gekozen. De twee geanalyseerde segmenten worden vermeld in de [!UICONTROL SEGMENT A NAME] en [!UICONTROL SEGMENT B NAME] kolommen. De procentuele overlapping wordt vermeld in de derde kolom, tot op twaalf decimalen nauwkeurig.
+Deze widget maakt een tabularisatie van de gegevensoverlapping van alle beschikbare soorten publiek die door samenvoegbeleid worden gefilterd. Een lijst van vijf publiek dat van hoogste tot laagste overlappende percentages wordt gerangschikt wordt verstrekt voor het fusiebeleid dat van het dropdown menu bij de bovenkant van het scherm wordt gekozen. De twee geanalyseerde doelgroepen worden vermeld in de [!UICONTROL AUDIENCE A NAME] en [!UICONTROL AUDIENCE B NAME] kolommen. De procentuele overlapping wordt vermeld in de derde kolom, tot op twaalf decimalen nauwkeurig.
 
-Het publiek overlapt rapport helpt u om nieuwe, krachtige segmenten te bouwen. Wanneer u een hoog percentage van de overlappingen observeert, kunt u het publiek onderdrukken en voorkomen dat hetzelfde publiek naar andere bestemmingen wordt gestuurd. Ze helpen u ook verborgen inzichten te identificeren die kunnen helpen met betere segmentatie. Met een laag percentage overlappingen kunt u unieke profielen zoeken.
+Het publiek overlapt rapport helpt u om nieuwe, krachtige soorten publiek te bouwen. Wanneer u een hoog percentage van de overlappingen observeert, kunt u het publiek onderdrukken en voorkomen dat hetzelfde publiek naar andere bestemmingen wordt gestuurd. Ze helpen u ook verborgen inzichten te identificeren die kunnen helpen met betere segmentatie. Met een laag percentage overlappingen kunt u unieke profielen zoeken.
 
 Selecteren **[!UICONTROL View more]** om een dialoogvenster op volledig scherm te openen dat meer publiek overlappende gegevens bevat.
 
@@ -347,23 +347,23 @@ Individuele tellingen voor of in kaart gebracht of unmapped publiek worden getoo
 
 ### [!UICONTROL Audiences size] {#audiences-size}
 
-De [!UICONTROL Audiences size] widget biedt een tabel met twee kolommen met maximaal 20 segmenten en het totale aantal soorten publiek in elk segment. De lijst wordt geordend van hoog tot laag op basis van het totale aantal doelgroepen. Het totale aantal publieksgrootten is afhankelijk van het toegepaste samenvoegingsbeleid.
+De [!UICONTROL Audiences size] widget biedt een tabel met twee kolommen met de namen van maximaal 20 soorten publiek en het totale aantal profielen in elk publiek. De lijst wordt geordend van hoog tot laag op basis van het totale aantal profielen in het publiek. De totale telling van de doelgrootte is afhankelijk van het toegepaste samenvoegingsbeleid.
 
 ![De widget voor soorten publiek.](../images/profiles/audiences-size.png)
 
-Om uitvoerige informatie over een segment te zien, selecteer een segmentnaam van de lijst wordt verstrekt om aan te navigeren [!UICONTROL Segments] [!UICONTROL Detail] pagina. Ook door **[!UICONTROL View all segments]** vanaf het einde van de widget kunt u naar het [!UICONTROL Segments] [!UICONTROL Browse] om een bestaand segment te zoeken.
+Als u uitgebreide informatie over een publiek wilt weergeven, selecteert u een publieksnaam in de lijst die wordt weergegeven om naar de [!UICONTROL Audiences] [!UICONTROL Detail] pagina. Ook door **[!UICONTROL View all audiences]** vanaf het einde van de widget kunt u naar het [!UICONTROL Audiences] [!UICONTROL Browse] om een bestaand publiek te zoeken.
 
-![De widget Doelgrootte met een segmentnaam en de gemarkeerde segmenttekst weergeven.](../images/profiles/audiences-size-view-all-segments.png)
+![De widget voor soorten publiek met een publieksnaam en de tekst voor alle soorten publiek weergeven zijn gemarkeerd.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Zie de documentatie voor meer informatie over de [[!UICONTROL Segments] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Zie de documentatie voor meer informatie over de [[!UICONTROL Audiences] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
-Deze widget gebruikt een Venn-diagram om de overlapping van twee geselecteerde segmenten weer te geven. Het samenvoegbeleid wordt gekozen uit de overzichtsvervolgkeuzelijst boven aan de pagina en de segmenten voor analyse worden geselecteerd uit twee vervolgkeuzemenu&#39;s binnen de widget. Het totale aantal profielen binnen de relevante segmentdefinitie kan worden gezien door de cursor over een cirkel of de doorsnede te bewegen.
+Deze widget gebruikt een Venn-diagram om de overlapping van twee geselecteerde doelgroepen weer te geven. Het samenvoegbeleid wordt gekozen uit de overzichtsvervolgkeuzelijst boven aan de pagina en het publiek voor analyse wordt geselecteerd uit twee vervolgkeuzemenu&#39;s in de widget. Het totale aantal profielen binnen de relevante segmentdefinitie kan worden gezien door de cursor over een cirkel of de doorsnede te bewegen.
 
 Aangezien widget de visuele oversteekplaats van segmentdefinities toont, kunt u uw segmenteringsstrategie optimaliseren door gelijkenissen tussen uw segmentdefinities te bestuderen.
 
-![Het dashboard Profielen UI van het Platform met de dropdown van het fusiebeleid en widgetsegmentdalingen benadrukt.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Het dashboard Profielen van UI van het Platform met de dropdown van het fusiebeleid en widgetpublieksdropdowns benadrukt.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
