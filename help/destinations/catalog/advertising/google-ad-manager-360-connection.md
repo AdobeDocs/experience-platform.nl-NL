@@ -2,9 +2,9 @@
 title: (bèta) [!DNL Google Ad Manager 360] verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,20 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager 360] 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | Selecteer deze doelidentiteit om het publiek naar te sturen [!DNL Google Ad Manager 360] |
+
+{style="table-layout:auto"}
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
 
 {style="table-layout:auto"}
 
@@ -85,8 +99,8 @@ Voor meer informatie over deze waarden raadpleegt u de [HMAC-sleutels voor Googl
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Segment-id toevoegen aan segmentnaam"
->abstract="Selecteer deze optie als u de segmentnaam in Google Ad Manager 360 de segment-id van het Experience Platform wilt opnemen, zoals in dit voorbeeld: `Segment Name (Segment ID)`"
+>title="Id van publiek toevoegen aan publieksnaam"
+>abstract="Selecteer deze optie als u de publieksnaam in Google Ad Manager 360 de gebruikers-id uit het Experience Platform wilt laten opnemen, zoals in dit voorbeeld: `Audience Name (Audience ID)`"
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
@@ -98,7 +112,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw [!DNL Google] account:
    * Gebruiken `AdX buyer` for [!DNL Google AdX]
    * Gebruiken `DFP by Google` for [!DNL DoubleClick] voor uitgevers
-* **[!UICONTROL Append segment ID to segment name]**: Selecteer deze optie als u de segmentnaam in Google Ad Manager 360 de segment-id van het Experience Platform wilt opnemen, zoals in dit voorbeeld: `Segment Name (Segment ID)`.
+* **[!UICONTROL Append audience ID to audience name]**: Selecteer deze optie als u de publieksnaam in Google Ad Manager 360 de gebruikers-id uit het Experience Platform wilt laten opnemen, zoals in dit voorbeeld: `Audience Name (Audience ID)`.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -106,20 +120,20 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 In de stap voor identiteitstoewijzing kunt u de volgende vooraf ingevulde toewijzingen zien:
 
 | Vooraf ingevulde toewijzing | Beschrijving |
 |---------|----------|
 | `ECID` -> `ppid` | Dit is de enige door de gebruiker bewerkbare vooraf ingevulde toewijzing. U kunt al uw kenmerken of naamruimten selecteren in het Platform en deze toewijzen aan `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Hiermee kunt u segmentnamen van Experience Platforms toewijzen aan segment-id&#39;s in het Google-platform. |
+| `metadata.segment.alias` -> `list_id` | Hiermee wijst u publieksnamen van Experience Platforms toe aan gebruikers-id&#39;s in het Google-platform. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Vertelt het Google-platform wanneer gediskwalificeerde gebruikers uit segmenten moeten worden verwijderd. |
 
 Deze toewijzingen zijn vereist door [!DNL Google Ad Manager 360] en worden automatisch door Adobe Experience Platform voor iedereen gemaakt [!DNL Google Ad Manager 360] verbindingen.

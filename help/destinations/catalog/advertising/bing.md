@@ -3,9 +3,9 @@ keywords: reclame; borden;
 title: Microsoft Bing-verbinding
 description: Met de Microsoft Bing-verbindingsbestemming kunt u gerichte digitale campagnes heroriënteren en publieksgericht voeren in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Profielgegevens verzenden naar [!DNL Microsoft Bing], moet u eerst verbinding ma
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als telleraar, wil ik segmenten kunnen gebruiken die van worden gebouwd [!DNL Microsoft Advertising IDs] om gebruikers aan te spreken via reclame over [!DNL Microsoft Advertising] kanalen.
+Als markator wil ik het publiek kunnen gebruiken dat is opgebouwd uit [!DNL Microsoft Advertising IDs] om gebruikers aan te spreken via reclame over [!DNL Microsoft Advertising] kanalen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -32,16 +32,30 @@ Als telleraar, wil ik segmenten kunnen gebruiken die van worden gebouwd [!DNL Mi
 
 {style="table-layout:auto"}
 
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
-**[!DNL Segment Export]** - u exporteert alle leden van een segment (publiek) naar de [!DNL Microsoft Bing] bestemming.
+**[!DNL Audience Export]** - u exporteert alle leden van een publiek naar de [!DNL Microsoft Bing] bestemming.
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) naar de [!DNL Microsoft Bing] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek naar de [!DNL Microsoft Bing] bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,22 +91,22 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Toewijzing-id"
->abstract="Voer de numerieke id van het lijnsegment in waaraan u het geselecteerde segment wilt toewijzen. Indien [!UICONTROL Mapping ID] beantwoordt niet aan een segmentidentiteitskaart in de bestemming van de Bing, zult u niet de verwachte publieksgegevens in uw rekening van de Bing zien."
+>abstract="Voer de numerieke publiek-id voor de ring in waaraan u het geselecteerde segment wilt toewijzen. Indien [!UICONTROL Mapping ID] komt niet overeen met een publiek-id in de bestemming Bing, worden de verwachte publieksgegevens in uw Bing-account niet weergegeven."
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
-In de [Segmentatieschema](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de segmentnaam in manueel in kaart brengen [!UICONTROL Mapping ID] veld. Dit zorgt ervoor dat segmentmetagegevens correct worden doorgegeven aan [!DNL Bing].
+In de [Publiek schema](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de publieksnaam handmatig toewijzen in het dialoogvenster [!UICONTROL Mapping ID] veld. Zo zorgt u ervoor dat de metagegevens van het publiek correct worden doorgegeven aan [!DNL Bing].
 
-![De beeld die van UI het scherm van het segmentprogramma met een voorbeeld van toont hoe te om de segmentnaam aan identiteitskaart van de Toewijzing van de Bing in kaart te brengen.](../../assets/catalog/advertising/bing/mapping-id.png)
+![UI-afbeelding die het scherm van het publieksprogramma weergeeft met een voorbeeld van hoe u de publieksnaam kunt toewijzen aan de Bing Mapping-id.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Geëxporteerde gegevens {#exported-data}
 

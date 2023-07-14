@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1868'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Profielen activeren voor uw [!DNL Facebook] campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
-U kunt deze bestemming voor publiek gebruiken die zich over richt [!DNL Facebook’s] apps die worden ondersteund door [!DNL Custom Audiences], met inbegrip van [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], en [!DNL Messenger]. De selectie van de app waarin u de campagne wilt voeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager].
+U kunt deze bestemming voor publiek gebruiken die zich over richt [!DNL Facebook's] apps die worden ondersteund door [!DNL Custom Audiences], met inbegrip van [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], en [!DNL Messenger]. De selectie van de app waarin u de campagne wilt voeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager].
 
 ![Facebook-bestemming in de gebruikersinterface van Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
@@ -26,7 +26,7 @@ Om u te helpen beter begrijpen hoe en wanneer gebruiken [!DNL Facebook] doel, hi
 
 ### Hoofdletters gebruiken #1
 
-Een online detailhandelaar wil bestaande klanten door sociale platforms bereiken en hen gepersonaliseerde aanbiedingen tonen die op hun vorige orden worden gebaseerd. De online detailhandelaar kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen off-line gegevens bouwen, en deze segmenten verzenden naar [!DNL Facebook] sociaal platform, optimalisering van hun reclame-uitgaven.
+Een online detailhandelaar wil bestaande klanten door sociale platforms bereiken en hen gepersonaliseerde aanbiedingen tonen die op hun vorige orden worden gebaseerd. De online detailhandelaar kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, publiek van hun eigen off-line gegevens bouwen, en deze publiek naar het verzenden [!DNL Facebook] sociaal platform, optimalisering van hun reclame-uitgaven.
 
 ### Hoofdletters gebruiken #2
 
@@ -34,7 +34,7 @@ Een luchtvaartmaatschappij heeft verschillende klantniveaus (Bronze, Silver en G
 
 Om hen over sociale media te richten, kunnen zij de klantengegevens van hun CRM aan boord nemen in Adobe Experience Platform, gebruikend de e-mailadressen als herkenningstekens.
 
-Daarna, kunnen zij hun off-line gegevens met inbegrip van bijbehorende lidmaatschap IDs en klantenrijen gebruiken om nieuwe publiekssegmenten te bouwen die zij door kunnen richten [!DNL Facebook] bestemming.
+Vervolgens kunnen ze hun offline gegevens gebruiken, inclusief de bijbehorende id&#39;s van het lidmaatschap en klantniveaus, om nieuwe doelgroepen te maken die ze via de [!DNL Facebook] bestemming.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -48,30 +48,44 @@ Daarna, kunnen zij hun off-line gegevens met inbegrip van bijbehorende lidmaatsc
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [Vereisten voor id-afstemming](#id-matching-requirements-id-matching-requirements) gebruiken en de juiste naamruimten gebruiken voor normale tekst en gehashte e-mailadressen. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen. |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in de Facebook-bestemming worden gebruikt. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de Facebook-bestemming worden gebruikt. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Voorwaarden voor facebook-accounts {#facebook-account-prerequisites}
 
-Voordat u publiekssegmenten kunt verzenden naar [!DNL Facebook]voldoet aan de volgende vereisten:
+Voordat u uw publiek naar kunt sturen [!DNL Facebook]voldoet aan de volgende vereisten:
 
 * Uw [!DNL Facebook] gebruikersaccount moet de **[!DNL Manage campaigns]** Toestemming ingeschakeld voor de advertentie-account die u wilt gebruiken.
 * De **Adobe Experience Cloud** bedrijfsaccount moet worden toegevoegd als advertentiepartner in uw [!DNL Facebook Ad Account]. Gebruik `business ID=206617933627973`. Zie [Partners toevoegen aan uw Business Manager](https://www.facebook.com/business/help/1717412048538897) in de documentatie van Facebook voor meer informatie.
-   >[!IMPORTANT]
-   >
-   > Wanneer u de machtigingen voor Adobe Experience Cloud configureert, moet u de optie **Campagnes beheren** toestemming. De toestemming wordt vereist voor [!DNL Adobe Experience Platform] integratie.
+  >[!IMPORTANT]
+  >
+  > Wanneer u de machtigingen voor Adobe Experience Cloud configureert, moet u de optie **Campagnes beheren** toestemming. De toestemming wordt vereist voor [!DNL Adobe Experience Platform] integratie.
 * Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, waarbij `accountID` is uw [!DNL Facebook Ad Account ID].
-   >[!IMPORTANT]
-   >
-   >Bij het ondertekenen van de [!DNL Facebook Custom Audiences] Servicevoorwaarden, gebruik dezelfde gebruikersaccount als voor verificatie in de Facebook API.
+  >[!IMPORTANT]
+  >
+  >Bij het ondertekenen van de [!DNL Facebook Custom Audiences] Servicevoorwaarden, gebruik dezelfde gebruikersaccount als voor verificatie in de Facebook API.
 
 ## Vereisten voor id-afstemming {#id-matching-requirements}
 
@@ -125,7 +139,7 @@ Voordat u de `Extern_ID` naamruimte waarnaar gegevens moeten worden verzonden [!
 
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook] doel en activeer segmenten.
+In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook] doel en activeer het publiek.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -159,12 +173,12 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Oorsprong van het publiek"
->abstract="Kies hoe de klantgegevens in het segment oorspronkelijk zijn verzameld. De gegevens worden in Facebook weergegeven wanneer een gebruiker voor het segment is ingesteld"
+>abstract="Kies hoe de klantgegevens in het publiek oorspronkelijk zijn verzameld. De gegevens worden in Facebook weergegeven wanneer een gebruiker voor het segment is ingesteld"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -185,9 +199,9 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
-In de **[!UICONTROL Segment schedule]** stap, moet u de [!UICONTROL Origin of audience] wanneer u segmenten verzendt naar [!DNL Facebook Custom Audiences].
+In de **[!UICONTROL Segment schedule]** stap, moet u de [!UICONTROL Origin of audience] bij het verzenden van publiek naar [!DNL Facebook Custom Audiences].
 
 ![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -222,11 +236,11 @@ Doelvelden selecteren:
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Facebook], een geslaagde activering betekent dat een [!DNL Facebook] aangepaste doelgroep wordt programmatisch gemaakt in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
+Voor [!DNL Facebook], een geslaagde activering betekent dat een [!DNL Facebook] aangepaste doelgroep wordt programmatisch gemaakt in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van het publiek wordt toegevoegd en verwijderd omdat gebruikers gekwalificeerd zijn voor of gediskwalificeerd zijn voor het actieve publiek.
 
 >[!TIP]
 >
->De integratie tussen Adobe Experience Platform en [!DNL Facebook] ondersteunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL Facebook] wanneer u de segmenten naar het doel activeert.
+>De integratie tussen Adobe Experience Platform en [!DNL Facebook] ondersteunt historische publieksbackfills. Alle historische publiekskwalificaties worden verzonden naar [!DNL Facebook] wanneer u het publiek naar het doel activeert.
 
 ## Problemen oplossen {#troubleshooting}
 
