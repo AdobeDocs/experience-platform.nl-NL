@@ -4,9 +4,9 @@ title: Microsoft Dynamics 365-verbinding
 description: Met de bestemming Microsoft Dynamics 365 kunt u uw accountgegevens exporteren en activeren in Microsoft Dynamics 365 voor uw zakelijke behoeften.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 416f4ff28ae5ca7ee3235f020ce012352d6002c7
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1859'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,10 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Dynamics 36
 | `Client ID` | De [!DNL Dynamics 365] Client-id voor uw [!DNL Azure Active Directory] toepassing. Zie de [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) ter begeleiding. | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | De [!DNL Dynamics 365] Clientgeheim voor uw [!DNL Azure Active Directory] toepassing. U gebruikt optie nr. 2 binnen [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options). | `abcde~abcdefghijklmnopqrstuvwxyz12345678` ter begeleiding. |
 | `Tenant ID` | De [!DNL Dynamics 365] Tenant ID voor uw [!DNL Azure Active Directory] toepassing. Zie de [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) ter begeleiding. | `1234567-aaaa-12ab-ba21-1234567890` |
+| `Region` | Het Microsoft-gebied dat is gekoppeld aan de URL van de omgeving.<br> Zie de [[!DNL Dynamics 365] documentatie](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) ter begeleiding. | Als uw domein is zoals hieronder, moet u de benadrukte waarde voor het gebied van CRM in de dropdown selecteur verstrekken wanneer voor authentiek verklaard aan [doel](#authenticate).<br> *org57771b33.`crm`.dynamics.com*<br>  Als voorbeeld: Als uw bedrijf wordt voorzien in het gebied van Noord-Amerika (NAM), zou uw URL zijn `crm.dynamics.com` en u moet `crm`. Als uw bedrijf is ingericht in het Canada-gebied (CAN), is uw URL `crm3.dynamics.com` en u moet `crm3`. |
 | `Environment URL` | Zie de [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) ter begeleiding. | Als uw [!DNL Dynamics 365] -domein is zoals hieronder aangegeven, hebt u de gemarkeerde waarde nodig.<br> *`org57771b33`.crm.dynamics.com* |
+
+{style="table-layout:auto"}
 
 ## Guardrails {#guardrails}
 
@@ -80,6 +83,8 @@ De [Beperkingen en toewijzingen van verzoeken](https://docs.microsoft.com/en-us/
 | Doelidentiteit | Voorbeeld | Beschrijving | Overwegingen |
 |---|---|---|---|
 | `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unieke id voor een contactpersoon. | **Verplicht**. Zie de [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) voor nadere bijzonderheden. |
+
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -111,6 +116,7 @@ Vul de vereiste velden hieronder in. Zie de [Inloggegevens van Gather Dynamics 3
 * **[!UICONTROL Client ID]**: De [!DNL Dynamics 365] Client-id voor uw [!DNL Azure Active Directory] toepassing.
 * **[!UICONTROL Tenant ID]**: De [!DNL Dynamics 365] Tenant ID voor uw [!DNL Azure Active Directory] toepassing.
 * **[!UICONTROL Client Secret]**: De [!DNL Dynamics 365] Clientgeheim voor uw [!DNL Azure Active Directory] toepassing.
+* **[!UICONTROL Region]**: Uw [[!DNL Dynamics 365]](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) Regio. Als voorbeeld: Als uw bedrijf wordt voorzien in het gebied van Noord-Amerika (NAM), zou uw URL zijn `crm.dynamics.com` en u moet `crm`. Als uw bedrijf is ingericht in het Canada-gebied (CAN), is uw URL `crm3.dynamics.com` en u moet `crm3`.
 * **[!UICONTROL Environment URL]**: Uw [!DNL Dynamics 365] Omgeving-URL.
 
 Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Connected]** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.

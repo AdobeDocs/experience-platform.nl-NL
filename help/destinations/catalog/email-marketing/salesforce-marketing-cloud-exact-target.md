@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;api salesforce mark
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: d1bfd85bf7a318692fb6ae87e163dca105d531c6
 workflow-type: tm+mt
-source-wordcount: '2817'
+source-wordcount: '2831'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Wanneer het publiek wordt geactiveerd naar de [!DNL (API) Salesforce Marketing C
 
 [!DNL Salesforce] vereist deze waarde om het publiek dat vanuit het Experience Platform binnenkomt, correct te lezen en te interpreteren en zijn publieksstatus binnen bij te werken [!DNL Salesforce Marketing Cloud]. Raadpleeg de documentatie bij het Experience Platform voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
 
-Voor elk publiek dat u activeert van Platform tot [!DNL Salesforce Marketing Cloud]moet u een kenmerk van het type maken `Text` binnen [!DNL Salesforce]. Gebruik de [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] om kenmerken te maken. De namen van kenmerkvelden worden gebruikt voor de [!DNL (API) Salesforce Marketing Cloud] doelveld en moet worden gemaakt onder het `[!DNL Email Demographics system attribute-set]`. U kunt het veldteken definiëren met maximaal 4000 tekens, afhankelijk van uw zakelijke vereisten. Zie de [!DNL Salesforce Marketing Cloud] [Gegevenstypen gegevensextensies](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) Documentatiepagina voor aanvullende informatie over kenmerktypen.
+Voor elk publiek dat u activeert van Platform tot [!DNL Salesforce Marketing Cloud]moet u een kenmerk van het type maken `Text` binnen [!DNL Salesforce]. Gebruik de [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] om kenmerken te maken. De namen van kenmerkvelden worden gebruikt voor de [!DNL (API) Salesforce Marketing Cloud] doelveld tijdens het **[!UICONTROL Mapping]** stap. U kunt het veldteken definiëren met maximaal 4000 tekens, afhankelijk van uw zakelijke vereisten. Zie de [!DNL Salesforce Marketing Cloud] [Gegevenstypen gegevensextensies](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) Documentatiepagina voor aanvullende informatie over kenmerktypen.
 
 Zie de [!DNL Salesforce Marketing Cloud] documentatie aan [kenmerken maken](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) als u richtlijnen nodig hebt voor het maken van kenmerken.
 
@@ -68,7 +68,7 @@ Een weergave van de [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] 
 
 De [!DNL (API) Salesforce Marketing Cloud] doel gebruikt [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) om de attributen en hun Attribuut-Reeksen dynamisch terug te winnen die binnen worden bepaald [!DNL Salesforce Marketing Cloud].
 
-Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** selectievenster wanneer u de [toewijzing](#mapping-considerations-example) in de workflow naar [publiek naar doel activeren](#activate). Let op: alleen toewijzingen voor de kenmerken die zijn gedefinieerd in het dialoogvenster [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute-set worden ondersteund.
+Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** selectievenster wanneer u de [toewijzing](#mapping-considerations-example) in de workflow naar [publiek naar doel activeren](#activate).
 
 >[!IMPORTANT]
 >
@@ -90,7 +90,8 @@ Als [!DNL Salesforce Marketing Cloud] steunt douanerollen afhankelijk van uw geb
 
 Afhankelijk van welke rollen uw [!DNL Salesforce Marketing Cloud] gebruiker is toegewezen, zou u ook toestemmingen aan moeten toewijzen [!DNL Salesforce Marketing Cloud] kenmerksets die de velden bevatten die u wilt bijwerken.
 
-Aangezien deze bestemming toegang tot vereist `[!DNL Email Demographics system attribute-set]`, moet u toestaan `Email` zoals hieronder weergegeven:
+Aangezien deze bestemming toegang tot vereist `[!DNL attribute-set]`, moet u ze toestaan. Bijvoorbeeld voor de `Email` [!DNL attribute-set] u moet toestaan zoals hieronder getoond:
+
 ![De gebruikersinterface van de Salesforce-Marketing Cloud geeft de kenmerkset van e-mail weer met toegestane machtigingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 Om het niveau van toegang te beperken, kunt u individuele toegang ook met voeten treden door korrelvoorrechten te gebruiken.
@@ -196,16 +197,22 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL (API) Salesforce Marketi
 
 >[!IMPORTANT]
 >
->Hoewel de namen van uw kenmerken overeenkomen [!DNL Salesforce Marketing Cloud] account, de toewijzingen voor beide `contactKey` en `personalEmail.address` zijn verplicht. Bij het toewijzen van kenmerken, alleen kenmerken van het Experience Platform `Email Demographics` attribute-set moet binnen de doelvelden worden gebruikt.
+>* Hoewel de namen van uw kenmerken overeenkomen [!DNL Salesforce Marketing Cloud] account, de toewijzingen voor beide `contactKey` en `personalEmail.address` zijn verplicht.
+>
+>* De integratie met de [!DNL Salesforce Marketing Cloud] API is onderworpen aan een pagineringsgrens van hoeveel attributen Experience Platform van Salesforce kan terugwinnen. Dit betekent tijdens de **[!UICONTROL Mapping]** stap, kan het schema van het doelgebied een maximum van 2000 attributen van uw rekening Salesforce tonen.
 
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
    ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform voor Nieuwe toewijzing toevoegen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en selecteer een kenmerk in het menu `Email Demographics` worden weergegeven. De [!DNL (API) Salesforce Marketing Cloud] doel gebruikt [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) om de attributen en hun kenmerkreeksen dynamisch terug te winnen die binnen worden bepaald [!DNL Salesforce Marketing Cloud]. Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** popup wanneer u opstelling [toewijzing](#mapping-considerations-example) in de [publiek activeren, workflow](#activate). Opmerking: alleen toewijzingen voor de kenmerken die zijn gedefinieerd in het dialoogvenster [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` kenmerkenset wordt ondersteund.
+1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select attributes]** en selecteer een kenmerk uit de kenmerksets die zo nodig worden weergegeven. De [!DNL (API) Salesforce Marketing Cloud] doel gebruikt [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) om de attributen en hun kenmerkreeksen dynamisch terug te winnen die binnen worden bepaald [!DNL Salesforce Marketing Cloud]. Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** popup wanneer u opstelling [toewijzing](#mapping-considerations-example) in de [publiek activeren, workflow](#activate).
 
-   * Herhaal deze stappen om de volgende toewijzingen tussen uw XDM-profielschema en [!DNL (API) Salesforce Marketing Cloud]: |Bronveld|Doelveld| Verplicht| |—|—|—| |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |\
-     |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
-|`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
+   * Herhaal deze stappen om de volgende toewijzingen tussen uw XDM-profielschema en [!DNL (API) Salesforce Marketing Cloud]:
+
+     | Bronveld | Doelveld | Verplicht |
+     |---|---|---|
+     | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
+     | `xdm: person.name.firstName` | `Attribute: First Name` uit de gewenste kenmerkset. | - |
+     | `xdm: personalEmail.address` | `Attribute: Email Address` uit de gewenste kenmerkset. | - |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
      ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform met doeltoewijzingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
