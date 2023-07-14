@@ -1,12 +1,12 @@
 ---
 keywords: mobiel;mobiele betrokkenheidsdoelen;LINE;LINE mobiele betrokkenheidsbestemming
 title: LINE-verbinding
-description: De bestemming van de LIJN staat u toe om profielen aan uw segment van het Platform toe te voegen en gepersonaliseerde ervaringen aan verbonden gebruikers te leveren.
+description: De bestemming van de LIJN staat u toe om profielen aan uw publiek van het Platform toe te voegen en gepersonaliseerde ervaringen aan verbonden gebruikers te leveren.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 [[!DNL LINE]](https://line.me/en/) is een populair communicatieplatform dat mensen, services en informatie met elkaar verbindt en is uitgegroeid van een chat-app tot een hub voor entertainment, sociale en dagelijkse activiteiten.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL LINE] Berichten-API](https://developers.line.biz/en/reference/messaging-api/). U kunt profielen vanuit uw Experience Platform-segmenten activeren als verbindingen binnen [!DNL LINE] voor uw bedrijfsbehoeften.
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL LINE] Berichten-API](https://developers.line.biz/en/reference/messaging-api/). U kunt profielen van uw publiek van het Experience Platform als verbindingen binnen activeren [!DNL LINE] voor uw bedrijfsbehoeften.
 
 [!DNL LINE] gebruikt Draaiende Tokens als authentificatiemechanisme om met het [!DNL LINE] Berichten-API. Instructies voor verificatie aan uw [!DNL LINE] instantie bevindt zich verderop, binnen [Verifiëren voor bestemming](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als een markeerteken kunt u zich richten op gebruikers in een mobiele betrokkenheidsbestemming, met ingebouwde segmenten [!DNL Adobe Experience Platform]. Bovendien kunt u hun persoonlijke ervaringen bieden op basis van hun kenmerken [!DNL Adobe Experience Platform] profielen, zodra segmenten en profielen in [!DNL Adobe Experience Platform].
+Als markeerteken kunt u gebruikers in een mobiele betrokkenheidsbestemming als doel instellen, met een ingebouwd publiek [!DNL Adobe Experience Platform]. Bovendien kunt u hun persoonlijke ervaringen bieden op basis van hun kenmerken [!DNL Adobe Experience Platform] profielen, zodra het publiek en de profielen in [!DNL Adobe Experience Platform].
 
 ## Vereisten {#prerequisites}
 
@@ -67,8 +67,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster [!DNL LINE] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster [!DNL LINE] bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -107,13 +107,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -129,13 +129,13 @@ Als uw doelidentiteit *Id voor adverteerders (IFA&#39;s)* U hebt het volgende no
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Als gegevens uit Experience Platform zijn geëxporteerd, wordt de [!DNL LINE] doel maakt een nieuw publiek binnen [!DNL LINE] met de geselecteerde segmentnaam.
+Als gegevens uit Experience Platform zijn geëxporteerd, wordt de [!DNL LINE] doel maakt een nieuw publiek binnen [!DNL LINE] met de geselecteerde publieksnaam.
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. In [!DNL LINE], meldt u zich aan bij de [Manager-console](https://manager.line.biz/).
 
-1. Ga vervolgens naar **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** en controleer de naam die overeenkomt met het geselecteerde segment in het dialoogvenster **[!UICONTROL Audience name]** kolom.
+1. Ga vervolgens naar **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** en controleer de naam die overeenkomt met het geselecteerde publiek in het deelvenster **[!UICONTROL Audience name]** kolom.
 
 1. Het bijgewerkte volume komt overeen met de telling binnen het segment.
 

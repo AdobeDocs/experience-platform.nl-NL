@@ -3,9 +3,9 @@ title: Pega Profile Connector
 description: Gebruik de Pega Profile Connector voor Amazon S3 in Adobe Experience Platform om profielgegevens volledig of incrementeel of beide te exporteren naar de Amazon S3-cloudopslag. In de Hub van het Beslissingsbesluit van de Klant van Pega, kunnen de gegevensbanen in de Ontwerper van het Profiel van de Klant worden gepland om profielgegevens van de opslag van Amazon S3 periodiek in te voeren.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Om details voor de bestemming te vormen, vul de vereiste gebieden in en selectee
 
 >[!TIP]
 >
->In de Connect-doelworkflow kunt u per geëxporteerd segmentbestand een aangepaste map in uw Amazon S3-opslagruimte maken. Lezen [Macro&#39;s gebruiken om een map te maken op uw opslaglocatie](/help/destinations/catalog/cloud-storage/overview.md#use-macros) voor instructies.
+>In de Connect-doelworkflow kunt u per geëxporteerd publieksbestand een aangepaste map in uw Amazon S3-opslag maken. Lezen [Macro&#39;s gebruiken om een map te maken op uw opslaglocatie](/help/destinations/catalog/cloud-storage/overview.md#use-macros) voor instructies.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -102,13 +102,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -116,7 +116,7 @@ In de **[!UICONTROL Mapping]** U kunt kiezen welke kenmerken en identiteitsvelde
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Voor [!DNL Pega Profile Connector] bestemmingen, [!DNL Platform] maakt een `.csv` bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor segmentactivering.
+Voor [!DNL Pega Profile Connector] bestemmingen, [!DNL Platform] maakt een `.csv` bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
 
 Wanneer de import van profielgegevens uit S3 is gelukt, worden gegevens ingevoegd in de [!DNL Pega Customer] profieldatastore. De geïmporteerde klantprofielgegevens kunnen worden gevalideerd in [!DNL Pega Customer Profile Designer] , zoals weergegeven in de volgende afbeelding.
 ![Afbeelding van het UI-scherm waar u gegevens van het Adobe-profiel kunt valideren in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)

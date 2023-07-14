@@ -1,10 +1,10 @@
 ---
 title: Adobe Advertising Cloud DSP-verbinding
-description: Adobe Advertising Cloud DSP is een geïntegreerde bestemming voor Adobe Real-time Customer Data Platform, waardoor u geverifieerde first-party segmenten kunt delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne.
+description: Adobe Advertising Cloud DSP is een geïntegreerde bestemming voor Adobe Real-time Customer Data Platform, zodat u geautoriseerde voorstanders kunt delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) de bestemming staat u toe om voor authentiek verklaarde eerste-partijsegmenten met goedgekeurde adverteerders en gebruikers voor campagneactivering met DSP te delen. Ga voor meer informatie over de integratie van Real-Time CDP met DSP naar [Ongeveer het Activeren van Authenticated Segmenten van de Bronnen van het Publiek](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+De Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) de bestemming staat u toe om voor authentiek verklaarde eerste-partijpubliek met erkende adverteerders en gebruikers voor campagneactivering met DSP te delen. Ga voor meer informatie over de integratie van Real-Time CDP met DSP naar [Ongeveer het Activeren van Voor authentiek verklaard publiek van de Bronnen van het Publiek](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -25,17 +25,17 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van Advertising Cl
 
 ### Gebruiksscenario voor reclame
 
-Een online detailhandelaar wil zijn klanten met hoge waarde door een vertoningscampagne opnieuw richten zonder koekjes voor het richten te gebruiken. De detailhandelaar deelt een segment dat bestaat uit de gehashte e-mailadressen van zijn klanten met een hoge waarde van zijn Adobe Real-time Customer Data Platform (Real-Time CDP)-account naar zijn DSP. DSP zet vervolgens de gehashte e-mailadressen om in geverifieerde [!DNL RampIDs] via een partnerschap tussen DSP en LiveRamp. Het resultaat [!DNL RampIDs] kan in een vertoningscampagne worden gebruikt om het publiek te richten.
+Een online detailhandelaar wil zijn klanten met hoge waarde door een vertoningscampagne opnieuw richten zonder koekjes voor het richten te gebruiken. De detailhandelaar deelt een publiek dat bestaat uit de gehashte e-mailadressen van zijn klanten met een hoge waarde van zijn Adobe Real-time Customer Data Platform (Real-Time CDP)-account tot zijn DSP. DSP zet vervolgens de gehashte e-mailadressen om in geverifieerde [!DNL RampIDs] via een partnerschap tussen DSP en LiveRamp. Het resultaat [!DNL RampIDs] kan in een vertoningscampagne worden gebruikt om het publiek te richten.
 
 ### Gebruiksscenario van het Agentschap
 
-Een mediabedrijf met een DSP account voert een herrichtingscampagne namens zijn klant, een topmerk in de gastindustrie. Het merk wil al zijn gasten in het afgelopen jaar opnieuw aanspreken met een nieuw promotieaanbod. Het merk bewaart alle gastinformatie in [!DNL Real-Time CDP]. Het merk kan een segment delen dat bestaat uit de gehashte e-mailadressen van de gasten van het merk [!DNL Real-Time CDP] account aan de DSP van het mediaagentschap om de gasten via een mediacampagne te richten.
+Een mediabedrijf met een DSP account voert een herrichtingscampagne namens zijn klant, een topmerk in de gastindustrie. Het merk wil al zijn gasten in het afgelopen jaar opnieuw aanspreken met een nieuw promotieaanbod. Het merk bewaart alle gastinformatie in [!DNL Real-Time CDP]. Het merk kan een publiek delen dat bestaat uit de gehakte e-mailadressen van de gasten van het merk [!DNL Real-Time CDP] account aan de DSP van het mediaagentschap om de gasten via een mediacampagne te richten.
 
 ## Vereisten {#prerequisites}
 
-* DSP instellingen op accountniveau en op campagnereniveau om delen met segmenten mogelijk te maken [!DNL LiveRamp RampID], waarin klantgegevens worden omgezet in [!DNL RampIDs] om doelsegmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren. [!DNL RampID] via een partnerschap tussen DSP en [!DNL LiveRamp]en je hebt je eigen [!DNL LiveRamp] lidmaatschap om het te gebruiken.
+* DSP instellingen op accountniveau en op campagnereniveau om het delen van het publiek met [!DNL LiveRamp RampID], waarin klantgegevens worden omgezet in [!DNL RampIDs] om doelsegmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren. [!DNL RampID] via een partnerschap tussen DSP en [!DNL LiveRamp]en je hebt je eigen [!DNL LiveRamp] lidmaatschap om het te gebruiken.
 * De Experience Cloud organisatie-id voor de account van het Experience Platform. Je kunt je id vinden op je [!DNL Real-Time CDP] pagina met gebruikersprofielen.
-* A [[!DNL Real-Time CDP] bron in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) om segmenten te ontvangen voor activering van de campagne. Uw DSP accountteam zal de bron maken met uw Experience Cloud-organisatie-id.
+* A [[!DNL Real-Time CDP] bron in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) het publiek te ontvangen voor activering van de campagne. Uw DSP accountteam zal de bron maken met uw Experience Cloud-organisatie-id.
 * De bronsleutel voor de DSP account of adverteerder, die wordt gegenereerd wanneer een [[!DNL Real-Time CDP] bron wordt gemaakt in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Uw DSP accountteam zal deze sleutel met u delen. U gaat het binnen het Experience Platform gebruiken om een doelverbinding met de Advertising Cloud DSP-bestemming te maken, zoals [hieronder beschreven](#authenticate).
 * Klantgegevens die bestaan uit e-mails of gehashte e-mails.
 
@@ -55,8 +55,8 @@ Raadpleeg de volgende tabel voor informatie over het exporttype en de exportfreq
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail of gehashte e-mail) die in de Advertising Cloud DSP-bestemming worden gebruikt. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail of gehashte e-mail) die in de Advertising Cloud DSP-bestemming worden gebruikt. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -91,23 +91,23 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Controleer het volgende om te controleren of het gegevenssegment met Advertising Cloud is gedeeld:
+Controleer het volgende om te controleren of het gegevenspubliek met Advertising Cloud is gedeeld:
 
 * De gegevensstroom in uw [!DNL Real-Time CDP] doel is gelukt.
 
-* In DSP is het segment beschikbaar wanneer u een publiek maakt of bewerkt vanuit [!UICONTROL Audiences] > [!UICONTROL All Audiences] of vanuit de [!UICONTROL Audience Targeting] sectie met plaatsingsinstellingen. Het segment moet zichtbaar zijn in het dialoogvenster [!UICONTROL Adobe Segments] onder de [!UICONTROL Real-Time CDP] map.
+* In DSP is het publiek beschikbaar wanneer u een publiek maakt of bewerkt vanuit [!UICONTROL Audiences] > [!UICONTROL All Audiences] of vanuit de [!UICONTROL Audience Targeting] sectie met plaatsingsinstellingen. Het publiek moet zichtbaar zijn in het deelvenster [!UICONTROL Adobe Segments] onder de [!UICONTROL Real-Time CDP] map.
 
-![Real-Time CDP-segmenten in DSP publieksinstellingen](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Real-Time CDP-publiek in DSP publieksinstellingen](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

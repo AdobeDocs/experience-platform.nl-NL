@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle eloqua;oracle
 title: (Bestanden) Oracle Eloqua-verbinding
 description: Oracle Eloqua is een softwareplatform als service (SaaS) voor marketingautomatisering dat door Oracle wordt aangeboden en dat bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkooplood te beheren.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,21 @@ ht-degree: 0%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) is software als serviceplatform voor marketingautomatisering die wordt aangeboden door [!DNL Oracle] die bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en productie van verkooplood te beheren.
 
-Segmentgegevens verzenden naar [!DNL Oracle Eloqua]moet u eerst [verbinden de bestemming](#connect-destination) in Adobe Experience Platform, en vervolgens [een gegevensimport instellen](#import-data-into-eloqua) vanaf uw opslaglocatie naar [!DNL Oracle Eloqua].
+Om publieksgegevens te verzenden naar [!DNL Oracle Eloqua]moet u eerst [verbinden de bestemming](#connect-destination) in Adobe Experience Platform, en vervolgens [een gegevensimport instellen](#import-data-into-eloqua) vanaf uw opslaglocatie naar [!DNL Oracle Eloqua].
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -81,21 +95,21 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Doelkenmerken {#destination-attributes}
 
-Bij het activeren van segmenten op dit doel raadt Adobe u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Raadpleeg voor meer informatie [best practices bij het activeren van doelgroepen naar marketingdoelen per e-mail](overview.md#best-practices).
+Wanneer u een publiek activeert naar dit doel, raadt Adobe u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Raadpleeg voor meer informatie [best practices bij het activeren van doelgroepen naar marketingdoelen per e-mail](overview.md#best-practices).
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Oracle Eloqua] doelen, Platform maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [segmentactivering controleren](../../ui/activate-batch-profile-destinations.md#verify) in de zelfstudie voor segmentactivering.
+Voor [!DNL Oracle Eloqua] doelen, Platform maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [doelactivering controleren](../../ui/activate-batch-profile-destinations.md#verify) in de zelfstudie voor publieksactivering.
 
 ## Gegevensimport instellen in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 

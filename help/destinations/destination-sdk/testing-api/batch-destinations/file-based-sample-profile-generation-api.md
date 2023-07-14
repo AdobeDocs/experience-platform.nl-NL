@@ -2,7 +2,7 @@
 description: Deze pagina verklaart hoe te om het /sample-profiles API eindpunt van Destination SDK te gebruiken om steekproefprofielen te produceren die op een bronschema worden gebaseerd. U kunt deze voorbeeldprofielen gebruiken om de op een bestand gebaseerde doelconfiguratie te testen.
 title: Voorbeeldprofielen genereren op basis van een bronschema
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Voordat u de `/sample-profiles` aan, zorg ervoor u aan de volgende voorwaarden v
 * U hebt minstens één activeringsstroom voor uw bestemming in de gebruikersinterface van het Experience Platform gemaakt. De `/sample-profiles` het eindpunt leidt tot de profielen die op het bronschema worden gebaseerd dat u in uw activeringsstroom bepaalde. Zie de [activeringszelfstudie](../../../ui/activate-batch-profile-destinations.md) voor informatie over het maken van een activeringsstroom.
 * Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Platform UI.
 
-   ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Voorbeeldprofielen genereren voor doeltesten {#generate-sample-profiles}
 
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal steekproefprofielen, met segmentlidmaatschap, identiteiten, en profielattributen terug die aan het bronXDM schema beantwoorden.
+Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal steekproefprofielen, met publiekslidmaatschap, identiteiten, en profielattributen terug die aan het bronXDM schema beantwoorden.
 
 >[!NOTE]
 >
-> De reactie keert slechts segmentlidmaatschap, identiteiten, en profielattributen terug die in de bestemmingsinstantie worden gebruikt. Zelfs als uw bronschema andere gebieden heeft, worden deze genegeerd.
+> De reactie retourneert alleen het publiekslidmaatschap, de identiteiten en de profielkenmerken die in de doelinstantie worden gebruikt. Zelfs als uw bronschema andere gebieden heeft, worden deze genegeerd.
 
 ```json
 [
@@ -105,9 +105,9 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentMembership` | A map object that describes the individu&#39;s segment membership. Voor meer informatie over `segmentMembership`, lezen [Details segmentlidmaatschap](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | A map object that describes the person&#39;s publiek membership. Voor meer informatie over `segmentMembership`, lezen [Details publiek lidmaatschap](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
-| `status` | Een koordgebied dat erop wijst of het segmentlidmaatschap als deel van het huidige verzoek is gerealiseerd. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel is onderdeel van het segment.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
+| `status` | Een tekenreeksveld dat aangeeft of het publieklidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel is onderdeel van het segment.</li><li>`exited`: Het profiel sluit het publiek af als onderdeel van de huidige aanvraag.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, zie [basis van schemacompositie](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}

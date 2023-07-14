@@ -4,7 +4,7 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 0%
@@ -18,10 +18,9 @@ ht-degree: 0%
 >* Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 >* Om met een bestemming te verbinden die de uitvoer van datasets steunt, hebt u nodig **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-
 ## Overzicht {#overview}
 
-Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbinding naar het doelplatform instellen. In dit artikel wordt uitgelegd hoe u een nieuwe doelverbinding instelt, waarnaar u segmenten kunt activeren of gegevenssets kunt exporteren met de gebruikersinterface van Adobe Experience Platform.
+Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbinding naar het doelplatform instellen. In dit artikel wordt uitgelegd hoe u een nieuwe doelverbinding instelt, waarop u vervolgens een publiek kunt activeren of gegevenssets kunt exporteren met de gebruikersinterface van Adobe Experience Platform.
 
 ## Het gewenste doel in de catalogus zoeken {#setup}
 
@@ -29,23 +28,23 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
    ![Screenshot van de interface van het Experience Platform, met daarin de pagina met de doelcatalogus.](../assets/ui/connect-destinations/catalog.png)
 
-2. De kaarten van de bestemming in de catalogus zouden verschillende actiecontroles kunnen hebben, afhankelijk van of u een bestaande verbinding aan de bestemming hebt en of de bestemmingen het activeren segmenten, het uitvoeren van datasets, of allebei steunen. U zou om het even welke volgende controles voor bestemmingskaarten kunnen zien:
+2. De kaarten van de bestemming in de catalogus zouden verschillende actiecontroles kunnen hebben, afhankelijk van of u een bestaande verbinding aan de bestemming hebt en of de bestemmingen het activeren van publiek, het uitvoeren van datasets, of allebei steunen. U zou om het even welke volgende controles voor bestemmingskaarten kunnen zien:
 
-   * **[!UICONTROL Set up]**. Een verbinding moet eerst opstelling aan deze bestemming zijn alvorens u segmenten kunt activeren of datasets uitvoeren.
-   * **[!UICONTROL Activate]**. Er is al een verbinding ingesteld met dit doel. Deze bestemming steunt segmentactivering en de uitvoer van datasets.
-   * **[!UICONTROL Activate segments]**. Er is al een verbinding ingesteld met dit doel. Deze bestemming steunt slechts segmentactivering.
+   * **[!UICONTROL Set up]**. Een verbinding moet eerst opstelling aan deze bestemming zijn alvorens u publiek kunt activeren of datasets uitvoeren.
+   * **[!UICONTROL Activate]**. Er is al een verbinding ingesteld met dit doel. Deze bestemming steunt publieksactivering en de uitvoer van datasets.
+   * **[!UICONTROL Activate audiences]**. Er is al een verbinding ingesteld met dit doel. Deze bestemming ondersteunt alleen activering van het publiek.
 
    Voor meer informatie over het verschil tussen deze controles, kunt u ook naar verwijzen [Catalogus](../ui/destinations-workspace.md#catalog) in de documentatie van de doelwerkruimte.
 
-   Selecteer **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, of **[!UICONTROL Activate segments]**, afhankelijk van welk besturingselement beschikbaar is.
+   Selecteer **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, of **[!UICONTROL Activate audiences]**, afhankelijk van welk besturingselement beschikbaar is.
 
    ![Screenshot van het Experience Platform UI, die de pagina van de bestemmingscatalogus met de benadrukte controle van de Opstelling toont.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Screenshot van het Experience Platform UI, die de pagina van de bestemmingscatalogus met de Activate segmenten benadrukte controle toont.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Schermafbeelding van de interface van het Experience Platform. De pagina met de doelcatalogus wordt weergegeven met het besturingselement Soorten publiek activeren gemarkeerd.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Als u **[!UICONTROL Set up]**, gaat u verder met de volgende stap, naar [authenticate](#authenticate) naar de bestemming.
 
-   Als u **[!UICONTROL Activate]**, **[!UICONTROL Activate segments]**, of **[!UICONTROL Export datasets]** kunt u nu een lijst met bestaande doelverbindingen zien.
+   Als u **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]**, of **[!UICONTROL Export datasets]** kunt u nu een lijst met bestaande doelverbindingen zien.
 
    Selecteren **[!UICONTROL Configure new destination]** om een nieuwe verbinding aan de bestemming te vestigen.
 
@@ -85,11 +84,11 @@ Voor op bestanden gebaseerde doelen kunt u verschillende instellingen configurer
 
 ![Afbeelding waarin de selectie van het bestandstype en de verschillende opties voor CSV-bestanden worden weergegeven.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### De bestemmingsverbinding van de opstelling voor segmentactivering of datasetuitvoer {#segment-activation-or-dataset-exports}
+### De bestemmingsverbinding van de opstelling voor publieksactivering of dataset uitvoeren {#segment-activation-or-dataset-exports}
 
-Sommige op dossier-gebaseerde bestemmingen steunen segmentactivering evenals datasetuitvoer. Voor die bestemmingen, kunt u verkiezen of om een verbinding tot stand te brengen die u toelaat om segmenten te activeren of datasets uit te voeren.
+Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering evenals datasetuitvoer. Voor die bestemmingen, kunt u verkiezen of om een verbinding tot stand te brengen die u toelaat om publiek te activeren of datasets uit te voeren.
 
-![Afbeelding die het besturingselement voor het selecteren van gegevenstypen weergeeft. Hiermee kunnen gebruikers kiezen tussen segmentactivering en het exporteren van gegevenssets.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Afbeelding die het besturingselement voor de selectie van gegevenstypen weergeeft. Hiermee kunnen gebruikers kiezen tussen activering van het publiek en het exporteren van gegevenssets.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Doelwaarschuwingen inschakelen {#enable-alerts}
 
@@ -113,4 +112,4 @@ Sommige op dossier-gebaseerde bestemmingen steunen segmentactivering evenals dat
 
 Door dit document te lezen, hebt u geleerd hoe te om Experience Platform UI te gebruiken om een verbinding aan een bestemming te vestigen. Ter herinnering, variëren de beschikbare en vereiste verbindingsparameters van bestemming tot bestemming. U moet ook de pagina met doeldocumentatie raadplegen in het dialoogvenster [doelcatalogus](/help/destinations/catalog/overview.md) voor specifieke informatie over de vereiste inputs en beschikbare opties per bestemmingstype.
 
-Vervolgens kunt u doorgaan naar [activeren, segmenten](/help/destinations/ui/activation-overview.md) of [gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md) naar uw bestemming.
+Vervolgens kunt u doorgaan naar [activering van het publiek](/help/destinations/ui/activation-overview.md) of [gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md) naar uw bestemming.

@@ -1,7 +1,7 @@
 ---
 description: Leer hoe te om de montages van de dossieruitvoer voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Batchconfiguratie
-source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '1046'
 ht-degree: 3%
@@ -15,7 +15,7 @@ Gebruik de opties voor batchconfiguratie in Destination SDK om gebruikers toe te
 
 Wanneer u op dossier-gebaseerde bestemmingen door Destination SDK creeert, kunt u standaarddossier het noemen en de uitvoerprogramma&#39;s vormen, of u kunt gebruikers de optie geven om deze montages van het Platform UI te vormen. U kunt bijvoorbeeld gedragingen configureren, zoals:
 
-* Specifieke informatie in de bestandsnaam opnemen, zoals segment-id&#39;s, doel-id&#39;s of aangepaste informatie.
+* Specifieke informatie in de bestandsnaam opnemen, zoals gebruikers-id&#39;s, doel-id&#39;s of aangepaste informatie.
 * Gebruikers toestaan de bestandsnaam aan te passen vanuit de gebruikersinterface van het Platform.
 * Configureer het exporteren van bestanden zodat deze bij ingestelde tijdintervallen kunnen optreden.
 * Definieer welke opties voor het aanpassen van bestandsnamen en exportschema&#39;s gebruikers kunnen zien in de gebruikersinterface van het Platform.
@@ -46,7 +46,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Ondersteunde parameters {#supported-parameters}
 
-De waarden die u hier instelt, worden weergegeven in de [Segmentexport plannen](../../../ui/activate-batch-profile-destinations.md#scheduling) stap van de workflow voor activering van bestandsdoelen.
+De waarden die u hier instelt, worden weergegeven in de [Het exporteren van publiek plannen](../../../ui/activate-batch-profile-destinations.md#scheduling) stap van de workflow voor activering van bestandsdoelen.
 
 ```json
 "batchConfig":{
@@ -95,7 +95,7 @@ De waarden die u hier instelt, worden weergegeven in de [Segmentexport plannen](
 | `allowedScheduleFrequency` | Lijst | Hiermee definieert u de exportfrequentie voor bestanden die beschikbaar is voor klanten. Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> De standaardwaarde is `DAILY`. |
 | `defaultStartTime` | Tekenreeks | Hiermee definieert u de standaardbegintijd voor het exporteren van het bestand. Gebruikt een bestandsindeling van 24 uur. De standaardwaarde is &quot;00:00&quot;. |
-| `filenameConfig.allowedFilenameAppendOptions` | Tekenreeks | *Vereist*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Hiermee bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (onder andere segment-id, naam van de organisatie, datum en tijd van export). Wanneer instellen `defaultFilename`, moet u dubbele macro&#39;s voorkomen. <br><br>Ondersteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de orde waarin u de macro&#39;s bepaalt, zal Experience Platform UI altijd hen in de hier voorgestelde orde tonen. <br><br> Indien `defaultFilename` is leeg, de `allowedFilenameAppendOptions` lijst moet ten minste één macro bevatten. |
+| `filenameConfig.allowedFilenameAppendOptions` | Tekenreeks | *Vereist*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Op deze manier bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (gebruikers-id, naam van de organisatie, datum en tijd van export, enzovoort). Wanneer instellen `defaultFilename`, moet u dubbele macro&#39;s voorkomen. <br><br>Ondersteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de orde waarin u de macro&#39;s bepaalt, zal Experience Platform UI altijd hen in de hier voorgestelde orde tonen. <br><br> Indien `defaultFilename` is leeg, de `allowedFilenameAppendOptions` lijst moet ten minste één macro bevatten. |
 | `filenameConfig.defaultFilenameAppendOptions` | Tekenreeks | *Vereist*. Vooraf geselecteerde standaardbestandsnaammacro&#39;s die gebruikers kunnen uitschakelen.<br><br> De macro&#39;s in deze lijst zijn een subset van de macro&#39;s die zijn gedefinieerd in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Tekenreeks | *Optioneel*. Hiermee definieert u de standaardbestandsnamen van macro&#39;s voor de geëxporteerde bestanden. Deze kunnen niet worden overschreven door gebruikers. <br><br>Elke macro gedefinieerd door `allowedFilenameAppendOptions` wordt toegevoegd na de `defaultFilename` macro&#39;s. <br><br>Indien `defaultFilename` is leeg, moet u ten minste één macro definiëren in `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | Boolean | Hiermee bepaalt u of het geactiveerde publiek moet worden geëxporteerd in één bestand of in meerdere bestanden, op basis van het publiek [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md). Ondersteunde waarden: <ul><li>`true`: exporteert één bestand per samenvoegbeleid.</li><li>`false`: Hiermee exporteert u één bestand per publiek, ongeacht het samenvoegbeleid. Dit is het standaardgedrag. U kunt hetzelfde resultaat bereiken door deze parameter volledig in te zetten.</li></ul> |
@@ -113,8 +113,8 @@ Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geë
 | Macro | UI-label | Beschrijving | Voorbeeld |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destination] | Doelnaam in de gebruikersinterface. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door Platform gegenereerde segment-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Door gebruiker gedefinieerde segmentnaam | VIP abonnee |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door Platforms gegenereerde gebruikers-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Door gebruiker gedefinieerde publieksnaam | VIP abonnee |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Unieke, door Platform gegenereerde id van de doelinstantie | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Door gebruiker gedefinieerde naam van de doelinstantie. | Mijn advertentiebestemming 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Naam van de klantenorganisatie in Adobe Experience Platform. | Naam van mijn organisatie |
@@ -122,8 +122,8 @@ Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geë
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` en `TIMESTAMP` beide definiëren wanneer het bestand is gegenereerd, maar in verschillende indelingen. <br><br><ul><li>`DATETIME` gebruikt de volgende indeling: YYYMMDD_HMMSS.</li><li>`TIMESTAMP` gebruikt de Unix-indeling van 10 cijfers. </li></ul> `DATETIME` en `TIMESTAMP` elkaar uitsluiten en niet gelijktijdig kunnen worden gebruikt. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | Door de gebruiker gedefinieerde aangepaste tekst die in de bestandsnaam moet worden opgenomen. Kan niet gebruiken in `defaultFilename`. | My_custom_text |
 | `TIMESTAMP` | [!UICONTROL Date and time] | Tijdstempel van 10 cijfers van het tijdstip waarop het bestand is gegenereerd, in Unix-indeling. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | De id van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde segmenten in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | De naam van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde segmenten in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | Mijn aangepaste samenvoegingsbeleid |
+| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | De id van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | De naam van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | Mijn aangepaste samenvoegingsbeleid |
 
 {style="table-layout:auto"}
 

@@ -1,10 +1,10 @@
 ---
 title: (bèta) Google Cloud Storage-verbinding
-description: Leer hoe u verbinding maakt met Google Cloud Storage en segmenten activeert of gegevenssets exporteert.
+description: Leer hoe u verbinding maakt met Google Cloud Storage en een publiek activeert of gegevenssets exporteert.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,22 @@ Een live uitgaande verbinding maken met [!DNL Google Cloud Storage] om gegevensb
 
 ## Verbinding maken met uw [!DNL Google Cloud Storage] opslag via API of UI {#connect-api-or-ui}
 
-* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
-* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslagplaats programmatically, lees de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
+* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Soorten publiek naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslagplaats programmatically, lees de [Activeer publiek aan op dossier-gebaseerde bestemmingen door de Zelfstudie van de Dienst van de Stroom te gebruiken API](../../api/activate-segments-file-based-destinations.md).
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -67,7 +81,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 * **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met als basiscode 64-codering die wordt gebruikt voor de verificatie van uw [!DNL Google Cloud Storage] aan Platform. Voor informatie over het verkrijgen van deze waarde leest u de [voorwaarden](#prerequisites) hierboven.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 Voor meer informatie over deze waarden leest u de [HMAC-sleutels voor Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) hulplijn. Raadpleeg voor meer informatie over het genereren van uw eigen toegangstoets-id en geheime toegangstoets de [[!DNL Google Cloud Storage] bronoverzicht](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
@@ -89,13 +103,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Planning
 

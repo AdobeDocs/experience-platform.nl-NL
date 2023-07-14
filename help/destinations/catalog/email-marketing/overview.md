@@ -4,7 +4,7 @@ title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes. Leer welke ESPs als bestemmingen van het Experience Platform worden gesteund.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Adobe Experience Platform integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
+Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Adobe Experience Platform integreert met ESP&#39;s door het publiek te activeren naar marketingbestemmingen via e-mail.
 
 ## Ondersteunde e-mailmarketingdoelen {#supported-destinations}
 
@@ -34,7 +34,7 @@ Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 
 ## Verbinding maken met een nieuwe marketingbestemming voor e-mail {#connect-destination}
 
-Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Om publiek naar e-mailmarketing bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
 
 ## Tips en trucs bij het activeren van het publiek naar marketingbestemmingen via e-mail {#best-practices}
 
@@ -67,13 +67,13 @@ Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt
 
 {style="table-layout:auto"}
 
-## Segmenten activeren voor e-mailmarketingdoelen {#activate}
+## Soorten publiek naar marketingdoelen e-mailen {#activate}
 
 Sommige e-mailmarketingdoelen in de catalogus exporteren profielen op streamingwijze, via API-integratie met de bestemming.
 
 Andere doelen exporteren bestanden naar een locatie voor cloudopslag. Nadat het exporteren is voltooid, moet u gegevens importeren van de locatie voor cloudopslag naar uw marketingbestemming voor e-mail.
 
-Volg de koppelingen in het dialoogvenster [ondersteunde e-mailmarketingdoelen](#supported-destinations) sectie leren hoe te om segmenten aan elke e-mailmarketing bestemming te activeren.
+Volg de koppelingen in het dialoogvenster [ondersteunde e-mailmarketingdoelen](#supported-destinations) sectie leren hoe u het publiek activeert voor elke e-mailmarketingbestemming.
 
 ## Aanvullende bronnen {#additional-resources}
 

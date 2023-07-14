@@ -3,7 +3,7 @@ title: (bèta) Datasets exporteren naar Cloud Storage-doelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 0%
@@ -35,14 +35,14 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Wanneer moet u segmenten activeren of gegevenssets exporteren {#when-to-activate-segments-or-activate-datasets}
+## Wanneer activeert u het publiek of exporteert u gegevenssets {#when-to-activate-audiences-or-activate-datasets}
 
-Sommige op dossier-gebaseerde bestemmingen in de catalogus van het Experience Platform steunen zowel segmentactivering als datasetuitvoer.
+Sommige op dossier-gebaseerde bestemmingen in de catalogus van het Experience Platform steunen zowel publieksactivering als dataset de uitvoer.
 
-* U kunt segmenten activeren als u uw gegevens wilt indelen in profielen die zijn gegroepeerd op belangen of kwalificaties van het publiek.
+* U kunt doelgroepen activeren als u uw gegevens wilt indelen in profielen die zijn gegroepeerd op belangen of kwalificaties van het publiek.
 * U kunt ook gegevenssets exporteren overwegen wanneer u onbewerkte gegevenssets wilt exporteren. Deze zijn niet gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. U kunt deze gegevens gebruiken voor rapportage, workflows voor gegevenswetenschap, om te voldoen aan de compatibiliteitseisen en vele andere gebruiksgevallen.
 
-Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. Als u segmenten wilt activeren voor cloudopslag of e-mailmarketingdoelen, leest u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md).
+Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. Als u het publiek wilt activeren naar cloudopslag of marketingdoelen via e-mail, leest u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Vereisten {#prerequisites}
 

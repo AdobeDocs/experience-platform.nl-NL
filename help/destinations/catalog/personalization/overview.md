@@ -1,11 +1,11 @@
 ---
 keywords: personalisatie;Personalisatie
 title: Overzicht van personalisatiedoelen
-description: Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
+description: Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van een publiek met vergelijkbare gewoonten.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
+Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van een publiek met vergelijkbare gewoonten.
 
 ## Ondersteunde verpersoonlijkingsbestemmingen {#supported-destinations}
 

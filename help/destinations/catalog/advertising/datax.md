@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX-verbinding
 description: DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '756'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Meer informatie over [Metagegevens over taxonomie](https://developer.verizonmedi
 
 >[!IMPORTANT]
 >
->Bij het activeren van meer dan 100 segmenten naar [!DNL Verizon Media/Yahoo DataX], zou u tarief beperkende fouten van de bestemming kunnen ontvangen. Wanneer het activeren van segmenten aan deze bestemming, probeer om minder dan 100 segmenten in één activeringsdataflow te activeren. Als u meer segmenten moet activeren, maakt u een nieuw doel op hetzelfde account.
+>Bij activering van meer dan 100 soorten publiek naar [!DNL Verizon Media/Yahoo DataX], zou u tarief beperkende fouten van de bestemming kunnen ontvangen. Wanneer u het publiek activeert op deze bestemming, probeert u minder dan 100 soorten publiek te activeren in één activeringsgegevensstroom. Als u meer segmenten moet activeren, maakt u een nieuw doel op hetzelfde account.
 
 [!DNL DataX] is tariefbeperkt binnen de limieten voor taxonomie en publieksposten die in de [DataX-documentatie](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
@@ -83,14 +83,14 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (E-mail, GAID, IDFA) die worden gebruikt in de bestemming Verizon Media. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (E-mail, GAID, IDFA) die worden gebruikt in de bestemming Verizon Media. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Gevallen gebruiken {#use-cases}
 
-[!DNL DataX] API&#39;s zijn beschikbaar voor adverteerders die zich willen richten op een specifieke doelgroep die e-mailadressen heeft verwijderd in [!DNL Verizon Media] (VMG) kan snel een nieuw segment maken en de gewenste doelgroep duwen met VMG&#39;s bijna-real-time API.
+[!DNL DataX] API&#39;s zijn beschikbaar voor adverteerders die zich willen richten op een specifieke doelgroep die e-mailadressen heeft verwijderd in [!DNL Verizon Media] (VMG) kan snel een nieuw publiek tot stand brengen en de gewenste publieksgroep duwen gebruikend de bijna-real-time API van VMG.
 
 ## Verbinden met doel {#connect}
 
@@ -116,13 +116,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten naar een doel activeren](../../ui/activate-segment-streaming-destinations.md) voor instructies over het activeren van publiekssegmenten aan bestemmingen.
+Lezen [Profielen en doelgroepen activeren](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar bestemmingen.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

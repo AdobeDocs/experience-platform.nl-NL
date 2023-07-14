@@ -2,9 +2,9 @@
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om regelmatig CSV-gegevensbestanden uit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 0%
 >Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL Azure Blob] kaarten in de lijst met bestemmingen.
 >* Als u al bestanden exporteert naar de **[!UICONTROL Azure Blob]** bestemming: Maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL Azure Blob beta]** bestemming.
 >* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Azure Blob]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Azure Blob beta]** kaart om bestanden te exporteren naar **[!UICONTROL Azure Blob]**.
-
 
 ![Afbeelding van de twee Azure Blob-doelkaarten in een weergave Naast elkaar.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
@@ -35,8 +34,8 @@ Verbeteringen in de nieuwe [!DNL Azure Blob] bestemmingskaart omvat:
 
 ## Verbinding maken met uw [!UICONTROL Azure Blob] opslag via API of UI {#connect-api-or-ui}
 
-* Als u verbinding wilt maken met uw [!UICONTROL Azure Blob] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
-* Als u verbinding wilt maken met uw [!UICONTROL Azure Blob] opslagplaats programmatically, lees de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
+* Als u verbinding wilt maken met uw [!UICONTROL Azure Blob] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Soorten publiek naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!UICONTROL Azure Blob] opslagplaats programmatically, lees de [Activeer publiek aan op dossier-gebaseerde bestemmingen door de Zelfstudie van de Dienst van de Stroom te gebruiken API](../../api/activate-segments-file-based-destinations.md).
 
 ## Aan de slag
 
@@ -47,7 +46,21 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
    * [Zelfstudie Schema Editor](../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u al een geldige [!DNL Blob] doel, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [segmenten activeren op uw doel](../../ui/activate-batch-profile-destinations.md).
+Als u al een geldige [!DNL Blob] doel, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [publiek activeren op uw bestemming](../../ui/activate-batch-profile-destinations.md).
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -87,7 +100,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
    * Voor meer informatie over het configureren van uw [!DNL Blob] verbindingstekenreeks, zie [Een verbindingstekenreeks configureren voor een Azure-opslagaccount](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in de documentatie van Microsoft.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -107,13 +120,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
 
@@ -124,4 +137,4 @@ Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de 
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Azure Blob Storage] bestemmingen, [!DNL Platform] maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor segmentactivering.
+Voor [!DNL Azure Blob Storage] bestemmingen, [!DNL Platform] maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.

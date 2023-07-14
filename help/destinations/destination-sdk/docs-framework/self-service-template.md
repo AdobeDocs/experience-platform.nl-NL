@@ -2,9 +2,9 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1494'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 0%
 >
 >* Vul alle secties in deze sjabloon in in de volgorde waarin ze in de sjabloon worden beschreven.
 >* Deze sjabloon wordt niet regelmatig bijgewerkt, op basis van feedback van partners. Voordat u begint met het ontwerpen van documentatie voor uw bestemming, moet u controleren of u het gereedschap [laatste versie van de sjabloon](../assets/docs-framework/yourdestination-template.zip).
-
 
 ## Overzicht {#overview}
 
@@ -43,7 +42,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het *YourDestination* doel, hier
 
 *Voor sociale netwerkplatforms:*
 
-*Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk kleding kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen offlinegegevens bouwen, en deze segmenten naar YourDestination verzenden, om advertenties in de sociale media van hun klanten te tonen.*
+*Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk kleding kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, publiek van hun eigen offline gegevens bouwen, en deze soorten publiek naar YourDestination sturen, om advertenties in de sociale media van hun klanten te tonen.*
 
 ## Vereisten {#prerequisites}
 
@@ -81,10 +80,10 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *YourDestination* bestemming. |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *YourDestination* bestemming. |
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporttype | **[!UICONTROL Dataset export]** | U exporteert onbewerkte gegevenssets, die niet zijn gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 | Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -125,7 +124,7 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
@@ -133,9 +132,9 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 *Doorhalen wat niet van toepassing is - Als u een nieuwe streamingbestemming documenteert, blijft de eerste alinea onder. Als u een nieuw op een bestand gebaseerd doel documenteert, houd de tweede paragraaf. Als u een bestemming documenteert die datasets uitvoert, houd de derde paragraaf.*
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
-Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 Lezen [(bètaversie) Gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md) voor uitgebreide instructies over het uitvoeren van datasets naar deze bestemming.
 
@@ -148,7 +147,7 @@ Lezen [(bètaversie) Gegevensbestanden exporteren](/help/destinations/ui/export-
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-*Voeg een alinea toe over de manier waarop gegevens naar uw doel worden geëxporteerd. Dit zou de klant helpen ervoor zorgen dat zij correct met uw bestemming geïntegreerd hebben. U kunt bijvoorbeeld een voorbeeld-JSON opgeven, zoals hieronder. Of, kon u screenshots en informatie van de interface van uw bestemming verstrekken die tonen hoe de klanten segmenten zouden moeten verwachten om in het bestemmingsplatform te bevolken.*
+*Voeg een alinea toe over de manier waarop gegevens naar uw doel worden geëxporteerd. Dit zou de klant helpen ervoor zorgen dat zij correct met uw bestemming geïntegreerd hebben. U kunt bijvoorbeeld een voorbeeld-JSON opgeven, zoals hieronder. Of, kon u screenshots en informatie van de interface van uw bestemming verstrekken die tonen hoe de klanten zouden moeten verwachten dat het publiek in het bestemmingsplatform bevolkt is.*
 
 ```
 {

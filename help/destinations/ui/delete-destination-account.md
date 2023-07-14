@@ -4,7 +4,7 @@ title: Doelaccounts verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen die moeten worden gezet om bestemmingsaccounts te verwijderen in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Voer de onderstaande stappen uit om bestaande doelaccounts te verwijderen.
 
    ![Filterdoelen](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. De ovalen selecteren (`...`) naast de naam van de account die u wilt verwijderen. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate segments]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer ![Knop Verwijderen](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Delete]** om het gewenste account te verwijderen.
+3. De ovalen selecteren (`...`) naast de naam van de account die u wilt verwijderen. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer ![Knop Verwijderen](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Delete]** om het gewenste account te verwijderen.
 
    ![Doelaccount verwijderen](../assets/ui/delete-accounts/delete-accounts.png)
 

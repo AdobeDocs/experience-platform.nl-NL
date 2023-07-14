@@ -2,7 +2,7 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Stap 3: Sjabloon voor berichttransformatie maken - gebruik sjabloontaal om de indeling voor berichtuitvoer op te geven {#create-transformation-template}
 
-Gebaseerd op de ladingen die uw bestemming steunt, moet u een malplaatje creëren dat het formaat van de uitgevoerde gegevens van Adobe XDM formaat in een formaat omzet dat door uw bestemming wordt gesteund. Zie sjabloonvoorbeelden in de sectie [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en segmentlidmaatschap](../functionality/destination-server/message-format.md#using-templating) en gebruiken de [sjabloonontwerpgereedschap](../testing-api/streaming-destinations/create-template.md) verstrekt door Adobe.
+Gebaseerd op de ladingen die uw bestemming steunt, moet u een malplaatje creëren dat het formaat van de uitgevoerde gegevens van Adobe XDM formaat in een formaat omzet dat door uw bestemming wordt gesteund. Zie sjabloonvoorbeelden in de sectie [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en publieksleiding](../functionality/destination-server/message-format.md#using-templating) en gebruiken de [sjabloonontwerpgereedschap](../testing-api/streaming-destinations/create-template.md) verstrekt door Adobe.
 
 Zodra u een malplaatje van de berichttransformatie hebt gecreeerd dat voor u werkt, voeg het aan de server en malplaatjeconfiguratie toe u in stap 1 creeerde.
 
@@ -273,10 +273,10 @@ Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"`moet u een [aanmeldingsco
 
 Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de vorige stappen, kunt u de opdracht [doeltestgereedschap](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
 
-Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Verwijs naar de twee hieronder middelen voor instructies hoe te om segmenten in Experience Platform tot stand te brengen:
+Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van publiek in Experience Platform:
 
-* [Een pagina met segmentdocumentatie maken](/help/segmentation/ui/overview.md#create-segment)
-* [Een doorlopende segmentvideo maken](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Een pagina met publieksdocumentatie maken](/help/segmentation/ui/overview.md#create-segment)
+* [Een doorlichting van een publieksvideo maken](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Stap 7: Uw doel publiceren {#publish-destination}
 

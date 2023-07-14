@@ -4,7 +4,7 @@ title: Doelaccounts bijwerken
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen voor het bijwerken van bestemmingsaccounts in de gebruikersinterface van Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar besta
 
    ![Bestemmingsaccounts filteren](../assets/ui/update-accounts/filter-accounts.png)
 
-3. De ovalen selecteren (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate segments]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer ![Knop Details bewerken](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** om de accountgegevens te bewerken.
+3. De ovalen selecteren (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer ![Knop Details bewerken](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** om de accountgegevens te bewerken.
 
    ![Account bewerken](../assets/ui/update-accounts/accounts-edit.png)
 

@@ -3,9 +3,9 @@ title: (Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen g
 type: Tutorial
 description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met behulp van de interface van het Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 0%
 
 Dit artikel verklaart hoe te om Experience Platform UI te gebruiken om dossiers op bestelling naar partijbestemmingen zoals uit te voeren [cloudopslag](/help/destinations/catalog/cloud-storage/overview.md) en [e-mailmarketing](/help/destinations/catalog/email-marketing/overview.md) bestemmingen.
 
-De **[!UICONTROL Export file now]** Met besturingselementen kunt u een volledig bestand exporteren zonder het huidige exportschema van een eerder gepland segment te onderbreken. Deze export komt bovenop de eerder geplande export en verandert de exportfrequentie van het segment niet. De bestandsuitvoer wordt onmiddellijk geactiveerd en de meest recente resultaten worden opgehaald uit de gesegmenteerde Experience Platforms.
+De **[!UICONTROL Export file now]** Met besturingselementen kunt u een volledig bestand exporteren zonder het huidige exportschema van een eerder gepland publiek te onderbreken. Deze exportbewerking wordt uitgevoerd naast de eerder geplande exportbewerkingen en heeft geen invloed op de exportfrequentie van het publiek. De bestandsuitvoer wordt onmiddellijk geactiveerd en de meest recente resultaten worden opgehaald uit de gesegmenteerde Experience Platforms.
 
-U kunt hiervoor ook de Experience Platform-API&#39;s gebruiken. Lees hoe te [publiekssegmenten op aanvraag activeren voor batchbestemmingen via de API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md).
+U kunt hiervoor ook de Experience Platform-API&#39;s gebruiken. Lees hoe te [publiek op aanvraag activeren naar batchbestemmingen via de API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Vereisten {#prerequisites}
 
@@ -48,11 +48,11 @@ Als u bestanden op aanvraag wilt exporteren naar batchbestemmingen, moet u [verb
 
    ![Afbeelding die een gefilterde gegevensstroom markeert.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Selecteer **[!UICONTROL Activation data]** en selecteert u het segment waarvoor u een bestand op aanvraag wilt exporteren en selecteert u het **[!UICONTROL Export file now]** besturingselement om een eenmalige export te activeren die een bestand naar uw batchbestemming levert.
+3. Selecteer **[!UICONTROL Activation data]** en selecteert u het publiek waarvoor u een bestand op aanvraag wilt exporteren en selecteert u het **[!UICONTROL Export file now]** besturingselement om een eenmalige export te activeren die een bestand naar uw batchbestemming levert.
 
    >[!IMPORTANT]
    >
-   >Het selecteren van meerdere segmenten voor het bulksgewijs exporteren van bestanden wordt momenteel niet ondersteund in de gebruikersinterface. Gebruik de [API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md) daartoe.
+   >Het selecteren van meerdere soorten publiek voor het bulksgewijs exporteren van bestanden wordt momenteel niet ondersteund in de gebruikersinterface. Gebruik de [API voor ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md) daartoe.
 
    ![Afbeelding die het exportbestand markeert, nu knop.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
@@ -70,9 +70,9 @@ Als u bestanden op aanvraag wilt exporteren naar batchbestemmingen, moet u [verb
 
 Houd rekening met het volgende wanneer u de **[!UICONTROL Export file now]** besturingselement:
 
-* **[!UICONTROL Export file now]** werkt alleen voor segmenten waarvan het schema in de batchactiveringsgegevens de huidige datum overlapt. Dit omvat segmenten met programma&#39;s die geen einddatum hebben (uitvoerfrequentie van **[!UICONTROL Once]**) of wanneer de einddatum nog niet is verstreken.
-* Wanneer het toevoegen van een segment aan een bestaande dataflow, wacht minstens 15 minuten tot het gebruiken van **[!UICONTROL Export file now]** controle.
-* Als u het de fusiebeleid van een segment verandert, of als u een segment creeert dat een nieuw fusiebeleid gebruikt, wacht 24 uur tot het gebruiken van **[!UICONTROL Export file now]** controle.
+* **[!UICONTROL Export file now]** werkt alleen voor publiek waarvan het schema in de batchactiveringsgegevens de huidige datum overlapt. Dit omvat publiek met programma&#39;s die geen einddatum hebben (uitvoerfrequentie van **[!UICONTROL Once]**) of wanneer de einddatum nog niet is verstreken.
+* Wanneer het toevoegen van een publiek aan een bestaande gegevensstroom, wacht minstens 15 minuten tot het gebruiken van **[!UICONTROL Export file now]** controle.
+* Als u het samenvoegbeleid van een publiek verandert, of als u een publiek creeert dat een nieuw samenvoegbeleid gebruikt, wacht 24 uur tot het gebruiken van **[!UICONTROL Export file now]** controle.
 
 ## UI-foutberichten {#ui-error-messages}
 
@@ -80,10 +80,10 @@ Wanneer u de **[!UICONTROL Export file now]** Als u de besturing hebt, kunnen de
 
 | Foutbericht | Resolutie |
 |---------|----------|
-| Reeds lopend voor segment `segment ID` voor bestelling `dataflow ID` met run-id `flow run ID` | Dit foutbericht geeft aan dat momenteel een ad-hocactiveringsstroom wordt uitgevoerd voor een segment. Wacht tot de taak is voltooid voordat u de activeringstaak opnieuw start. |
-| Segmenten `<segment name>` maakt geen deel uit van deze gegevensstroom of van het planningsbereik! | Dit foutbericht geeft aan dat de segmenten die u hebt geselecteerd om te activeren, niet zijn toegewezen aan de gegevensstroom of dat het activeringsschema voor de segmenten is verlopen of nog niet is gestart. Controleer of het segment inderdaad is toegewezen aan de dataflow en controleer of het schema voor segmentactivering overlapt met de huidige datum. |
+| Uitvoeren is al gestart voor publiek `segment ID` voor bestelling `dataflow ID` met run-id `flow run ID` | Dit foutbericht geeft aan dat er momenteel een ad-hocactiveringsstroom actief is voor een publiek. Wacht tot de taak is voltooid voordat u de activeringstaak opnieuw start. |
+| Soorten publiek `<segment name>` maakt geen deel uit van deze gegevensstroom of van het planningsbereik! | Dit foutbericht geeft aan dat het publiek dat u hebt geselecteerd om te activeren, niet is toegewezen aan de gegevensstroom of dat het activeringsschema dat voor het publiek is ingesteld, is verlopen of nog niet is gestart. Controleer of het publiek inderdaad is toegewezen aan de dataflow en controleer of het activeringsschema voor het publiek de huidige datum overlapt. |
 
 ## Verwante informatie {#related-information}
 
-* [Activeer publiekssegmenten aan partijbestemmingen op bestelling gebruikend het Experience Platform APIs](/help/destinations/api/ad-hoc-activation-api.md)
+* [Het publiek op aanvraag naar batchbestemmingen activeren met de Experience Platform-API&#39;s](/help/destinations/api/ad-hoc-activation-api.md)
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md)

@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1167'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
    * [API-migratiegids voor cloudopslagdoelen](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbinding maken met locaties voor opslag en marketing in batches en gegevens activeren met de Flow Service API](./api/connect-activate-batch-destinations.md)
-   * [(bèta) Activeer publiekssegmenten naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
+   * [(Bèta) Activeer publiek naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
    * [Doel bewerken](./api/edit-destination.md)
    * [Doelgegevens bijwerken](./api/update-destination-dataflows.md)
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
@@ -37,10 +37,10 @@ ht-degree: 2%
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
    * De publieksgegevens van Activa aan bestemmingen{#activate}
       * [Overzicht van activering](./ui/activation-overview.md)
-      * [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](./ui/activate-segment-streaming-destinations.md)
-      * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md)
-      * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](./ui/activate-batch-profile-destinations.md)
-      * [Activeer publieksgegevens aan de bestemmingen van de randverpersoonlijking](./ui/activate-edge-personalization-destinations.md)
+      * [Het publiek activeren voor streaming doelpubliek voor exportdoelen](./ui/activate-segment-streaming-destinations.md)
+      * [Stimulansen voor het streamen van exportdoelen voor profielen activeren](./ui/activate-streaming-profile-destinations.md)
+      * [Soorten publiek activeren voor exportdoelen voor batchprofielen](./ui/activate-batch-profile-destinations.md)
+      * [Het publiek activeren voor verpersoonlijkingsdoelen van randen](./ui/activate-edge-personalization-destinations.md)
       * [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
       * [(Bèta) de datasets van de uitvoer gebruikend Experience Platform UI](./ui/export-datasets.md)
       * [(bèta) Gebruik de laatste kwalificatietijd XDM attribuut in de nieuwe bètawolkenopslagbestemmingen](./ui/activate-last-qualification-time.md)
@@ -59,7 +59,7 @@ ht-degree: 2%
       * [(Bèta) Experience Cloud-publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Delen van Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platform publiek delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Reclamebestemmingen{#advertising}
       * [Overzicht van advertentiebestemmingen](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-verbinding](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -258,7 +258,7 @@ ht-degree: 2%
       * API voor streaming doeltest {#streaming-destinations}
          * [Overzicht van de API voor streaming-bestemming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
-         * [Een transformatiesjabloon voor een voorbeeldbericht genereren ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [Een transformatiesjabloon voor een voorbeeldbericht genereren](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
          * [Geëxporteerde profielstructuur valideren](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
          * [Streaming doel testen met voorbeeldprofielen](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/testing-api/streaming-destinations/create-template.md)

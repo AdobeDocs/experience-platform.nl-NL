@@ -3,7 +3,7 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 0%
@@ -41,13 +41,13 @@ De [!DNL Platform] De gebruikersinterface verstrekt verscheidene onderzoek en fi
 
 ![De catalogus van bestemmingen die een paar reclame en wolkenopslagbestemmingen toont.](../assets/ui/workspace/catalog.png)
 
-De bestemmingskaarten bevatten primaire en secundaire controleopties. De primaire besturingselementen omvatten: [!UICONTROL Set up], [!UICONTROL Activate], [!UICONTROL Activate segments], of [!UICONTROL Export datasets]. Met de secundaire besturingselementen kunt u opties weergeven. Deze besturingselementen worden hieronder beschreven:
+De bestemmingskaarten bevatten primaire en secundaire controleopties. De primaire besturingselementen omvatten: [!UICONTROL Set up], [!UICONTROL Activate], [!UICONTROL Activate audiences], of [!UICONTROL Export datasets]. Met de secundaire besturingselementen kunt u opties weergeven. Deze besturingselementen worden hieronder beschreven:
 
 | Control | Beschrijving |
 |---------|----------|
 | [!UICONTROL Set up] | Hiermee kunt u verbinding maken met het doel. |
-| [!UICONTROL Activate] | Zodra u een verbinding aan de bestemming hebt gevestigd, kunt u segmenten activeren of datasets uitvoeren aan deze bestemming. |
-| [!UICONTROL Activate segments] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten naar deze bestemming activeren. |
+| [!UICONTROL Activate] | Zodra u een verbinding aan de bestemming hebt gevestigd, kunt u publiek activeren of datasets uitvoeren naar deze bestemming. |
+| [!UICONTROL Activate audiences] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u het publiek naar deze bestemming activeren. |
 | [!UICONTROL Export datasets] | Zodra u een verbinding aan de bestemming hebt gevestigd, kunt u datasets naar deze bestemming uitvoeren. |
 | [!UICONTROL View account] | Bekijk de accounts waarmee u verbinding hebt gemaakt voor een bestemming. |
 | [!UICONTROL View dataflows] | Bekijk de gegevensactiveringsstromen die voor een bestemming bestaan. |
@@ -69,10 +69,9 @@ De **[!UICONTROL Accounts]** bevat details over de verbindingen die u hebt gemaa
 
 >[!TIP]
 >
-> * De ovaal selecteren (`...`) in de [!UICONTROL Platform] en gebruikt u de ![Besturingselement activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate segments]**/**[!UICONTROL Export datasets]**controle om segmenten of datasets naar die bestemming uit te voeren.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Platform] en gebruikt u de ![Besturingselement activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**controle om het publiek of de datasets naar die bestemming uit te voeren.
 > * De ovaal selecteren (`...`) in de [!UICONTROL Platform] en gebruikt u de ![Detailbesturingselement bewerken ](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]**controle op [update](update-accounts.md) de details van een bestaande bestemmingsrekening.
 > * De ovaal selecteren (`...`) in de [!UICONTROL Platform] en gebruikt u de ![Besturingselement verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**controle op [delete](delete-destination-account.md) een bestaande bestemmingsrekening.
-
 
 ![Het tabblad Accounts](../assets/ui/workspace/destination-account-options.png)
 
@@ -88,27 +87,26 @@ De **[!UICONTROL Accounts]** bevat details over de verbindingen die u hebt gemaa
 
 ## [!UICONTROL Browse] {#browse}
 
-De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen met de **[!UICONTROL Enabled/Disabled]** Schakel het inschakelen in om de bestemming in te stellen op respectievelijk actief of inactief. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door te selecteren stromen **[!UICONTROL Segments]** > **[!UICONTROL Browse]** en selecteert u een segment dat u wilt inspecteren. Zie de tabel hieronder voor alle informatie die voor elke bestemming wordt verstrekt in het dialoogvenster [!UICONTROL Browse] tab:
+De **[!UICONTROL Browse]** toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen met de **[!UICONTROL Enabled/Disabled]** Schakel het inschakelen in om de bestemming in te stellen op respectievelijk actief of inactief. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door te selecteren stromen **[!UICONTROL Audiences]** > **[!UICONTROL Browse]** en selecteert u een publiek dat u wilt inspecteren. Zie de tabel hieronder voor alle informatie die voor elke bestemming wordt verstrekt in het dialoogvenster [!UICONTROL Browse] tab:
 
 >[!TIP]
 >
-> * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Segmentbesturingselement activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**controle om segmenten of datasets naar die bestemming uit te voeren.
+> * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Besturingselement voor publiek activeren ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**controle om het publiek of de datasets naar die bestemming uit te voeren.
 > * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Besturingselement verwijderen ](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]**controle op [remove](delete-destinations.md) een bestaande verbinding met een doel.
 > * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Weergeven in controle ](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]**besturingselement voor weergave van activeringsinformatie voor deze bestemming in het dialoogvenster [controledashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * De ovaal selecteren (`...`) in de [!UICONTROL Name] en gebruikt u de ![Abonneren op waarschuwingen ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]**controle om aan bestemmingsgegevensstroomalarm in te schrijven. U kunt zich op alarm intekenen om berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen. Zie [Abonneren op in-context-bestemmingswaarschuwingen](alerts.md) voor gedetailleerde informatie over waarschuwingen over bestemmingsgegevensstroom.
-
 
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschrijving |
 |---------|----------|
-| Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. Dezelfde kolom bevat twee besturingselementen: [!UICONTROL Activate ] en [!UICONTROL Delete destination]. |
+| Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. Dezelfde kolom bevat twee besturingselementen: [!UICONTROL Activate] en [!UICONTROL Delete destination]. |
 | [!UICONTROL Last Flow Run Status] | De status van de laatste gegevensstroom die wordt uitgevoerd. Zie [Doelgegevens weergeven](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Last Flow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [Doelgegevens weergeven](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Destination] | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
 | [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan zijn S3, FTP of [!DNL Azure Blob].</li><li>Voor realtime advertentiebestemmingen: Server-naar-server.</li><li>Voor streamingdoelen: Kan [!DNL Azure Event Hubs] of [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Username] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
-| [!UICONTROL Activation Data] | Geeft het aantal segmenten aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement voor meer informatie over de geactiveerde segmenten. Zie [Activeringsgegevens](/help/destinations/ui/destination-details-page.md#activation-data) in de pagina met doeldetails voor meer informatie over de geactiveerde segmenten. |
+| [!UICONTROL Activation Data] | Geeft het aantal soorten publiek aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement om meer te weten te komen over het geactiveerde publiek. Zie [Activeringsgegevens](/help/destinations/ui/destination-details-page.md#activation-data) in de pagina met doeldetails voor meer informatie over het geactiveerde publiek. |
 | [!UICONTROL Created] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. Selecteer het pijl-omhoog/pijl-omlaag om de activeringsstromen eerst op de nieuwste of eerst op de oudste te sorteren. |
 | [!UICONTROL Status] | `Enabled` of `Disabled`. Geeft aan of gegevens op dit doel worden geactiveerd. |
 
@@ -116,7 +114,7 @@ Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaa
 
 ![Doelrij klikken](../assets/ui/workspace/click-destination-row.png)
 
-Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klikken **[!UICONTROL Edit activation]** om te wijzigen of aan de segmenten toe te voegen die naar deze bestemming worden verzonden.
+Selecteer de doelnaam om informatie over het publiek te zien dat aan deze bestemming wordt geactiveerd. Klikken **[!UICONTROL Edit activation]** om het publiek te wijzigen of toe te voegen dat naar deze bestemming wordt verzonden.
 
 ## [!UICONTROL System View] {#system-view}
 

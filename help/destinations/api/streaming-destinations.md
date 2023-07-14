@@ -5,7 +5,7 @@ title: Verbinding maken met streaming doelen en gegevens activeren met de Flow S
 description: In dit document wordt beschreven hoe u streaming doelen kunt maken met de Adobe Experience Platform API
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2231'
 ht-degree: 0%
@@ -26,9 +26,9 @@ Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te ma
 
 Deze zelfstudie gebruikt de [!DNL Amazon Kinesis] doel in alle voorbeelden, maar de stappen zijn identiek voor [!DNL Azure Event Hubs].
 
-![Overzicht - de stappen om een het stromen bestemming tot stand te brengen en segmenten te activeren](../assets/api/streaming-destination/overview.png)
+![Overzicht - de stappen om een het stromen bestemming tot stand te brengen en publiek te activeren](../assets/api/streaming-destination/overview.png)
 
-Als u liever de gebruikersinterface in Platform gebruikt om verbinding te maken met een doel en gegevens te activeren, raadpleegt u de [Een doel verbinden](../ui/connect-destination.md) en [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../ui/activate-segment-streaming-destinations.md) zelfstudies.
+Als u liever de gebruikersinterface in Platform gebruikt om verbinding te maken met een doel en gegevens te activeren, raadpleegt u de [Een doel verbinden](../ui/connect-destination.md) en [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../ui/activate-segment-streaming-destinations.md) zelfstudies.
 
 ## Aan de slag
 
@@ -42,7 +42,7 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om gege
 
 ### Vereiste referenties verzamelen
 
-Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieven klaar moeten hebben, afhankelijk van het type van bestemmingen dat u verbindt en segmenten aan activeert.
+Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieven klaar moeten hebben, afhankelijk van het type van bestemmingen dat u verbindend en activerend publiek aan.
 
 * Voor [!DNL Amazon Kinesis] verbindingen: `accessKeyId`, `secretKey`, `region` of `connectionUrl`
 * Voor [!DNL Azure Event Hubs] verbindingen: `sasKeyName`, `sasKey`, `namespace`
@@ -79,7 +79,7 @@ In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor a
 
 ![Overzicht doelstappen 1](../assets/api/streaming-destination/step1.png)
 
-Als eerste stap moet u bepalen naar welke streamingbestemming de gegevens moeten worden geactiveerd. Om met te beginnen, voer een vraag uit om een lijst van beschikbare bestemmingen te verzoeken die u segmenten kunt verbinden en activeren aan. Voer het volgende verzoek van de GET uit aan `connectionSpecs` eindpunt om een lijst van beschikbare bestemmingen terug te keren:
+Als eerste stap moet u bepalen naar welke streamingbestemming de gegevens moeten worden geactiveerd. Om met te beginnen, voer een vraag uit om een lijst van beschikbare bestemmingen te verzoeken die u kunt verbinden en publiek activeren aan. Voer het volgende verzoek van de GET uit aan `connectionSpecs` eindpunt om een lijst van beschikbare bestemmingen terug te keren:
 
 **API-indeling**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwoord**
 
-Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unieke id&#39;s (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Bijvoorbeeld, als u segmenten wilt verbinden en leveren aan [!DNL Amazon Kinesis] of [!DNL Azure Event Hubs]zoekt u het volgende fragment in het antwoord:
+Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unieke id&#39;s (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Als u bijvoorbeeld een verbinding wilt maken en een publiek wilt leveren [!DNL Amazon Kinesis] of [!DNL Azure Event Hubs]zoekt u het volgende fragment in het antwoord:
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en een `etag`. Noteer beide waarden. om segmenten te activeren, zoals u dat in de volgende stap doet.
+Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en een `etag`. Noteer beide waarden. zoals u dat in de volgende stap doet , om het publiek te activeren .
 
 ```json
 {
@@ -423,9 +423,9 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en e
 
 ![Overzicht doelstappen 5](../assets/api/streaming-destination/step5.png)
 
-Nadat u alle verbindingen en de gegevensstroom hebt gemaakt, kunt u nu uw profielgegevens activeren op het streamingplatform. In deze stap selecteert u welke segmenten en welke profielkenmerken u naar de bestemming verzendt en kunt u gegevens plannen en naar de bestemming verzenden.
+Nadat u alle verbindingen en de gegevensstroom hebt gemaakt, kunt u nu uw profielgegevens activeren op het streamingplatform. In deze stap selecteert u welk publiek en welke profielkenmerken u naar de bestemming verzendt en kunt u gegevens plannen en naar de bestemming verzenden.
 
-Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Voor meer informatie over JSON PATCH raadpleegt u de [RFC-specificatie](https://tools.ietf.org/html/rfc6902).
+Als u een publiek naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige publiek en profielattributen in één vraag activeren. Voor meer informatie over JSON PATCH raadpleegt u de [RFC-specificatie](https://tools.ietf.org/html/rfc6902).
 
 **API-indeling**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Gebruik in de URL de id van de gegevensstroom die u in de vorige stap hebt gemaakt. |
 | `{ETAG}` | Krijg de `{ETAG}` uit het antwoord in de vorige stap, [Een gegevensstroom maken](#create-dataflow). De antwoordindeling in de vorige stap heeft escape-aanhalingstekens. U moet de niet-beschermde waarden in de kopbal van het verzoek gebruiken. Zie het onderstaande voorbeeld: <br> <ul><li>Voorbeeld van reactie: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Waarde die u in uw verzoek wilt gebruiken: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom. |
-| `{SEGMENT_ID}` | Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, raadpleegt u [een segmentdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
+| `{SEGMENT_ID}` | Geef de gebruikers-id op die u naar dit doel wilt exporteren. Ga naar [een publieksdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
 | `{PROFILE_ATTRIBUTE}` | Bijvoorbeeld: `"person.lastName"` |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een segment wilt toevoegen aan een gegevensstroom, gebruikt u de opdracht `add` bewerking. |
-| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een segment toevoegt aan een gegevensstroom, gebruikt u het pad dat in het voorbeeld is opgegeven. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` bewerking. |
+| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een publiek aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
-| `id` | Geef de id op van het segment dat u toevoegt aan de doelgegevensstroom. |
-| `name` | *Optioneel*. Geef de naam op van het segment dat u toevoegt aan de doelgegevensstroom. Merk op dat dit gebied niet verplicht is en u kunt met succes een segment aan de bestemmingsdataflow toevoegen zonder zijn naam te verstrekken. |
+| `id` | Geef de id op van het publiek dat u aan de doelgegevensstroom toevoegt. |
+| `name` | *Optioneel*. Geef de naam op van het publiek dat u aan de doelgegevensstroom toevoegt. Dit veld is niet verplicht en u kunt een publiek toevoegen aan de doelgegevensstroom zonder de naam ervan op te geven. |
 
 **Antwoord**
 
@@ -490,7 +490,7 @@ Kijk naar een 202 OK-antwoord. Er wordt geen responsorgaan geretourneerd. Om te 
 
 ![Overzicht doelstappen 6](../assets/api/streaming-destination/step6.png)
 
-Als laatste stap in de zelfstudie moet u controleren of de segmenten en profielkenmerken correct zijn toegewezen aan de gegevensstroom.
+Als laatste stap in de zelfstudie moet u controleren of het publiek en de profielkenmerken correct zijn toegewezen aan de gegevensstroom.
 
 Om dit te bevestigen, voer het volgende verzoek van de GET uit:
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Antwoord**
 
-De geretourneerde reactie moet worden opgenomen in de `transformations` parameter de segmenten en profielkenmerken die u in de vorige stap hebt verzonden. Een monster `transformations` de parameter in het antwoord kan er als volgt uitzien :
+De geretourneerde reactie moet worden opgenomen in de `transformations` geeft een parameter op voor het publiek en de profielkenmerken die u in de vorige stap hebt verzonden. Een monster `transformations` de parameter in het antwoord kan er als volgt uitzien :
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ De geretourneerde reactie moet worden opgenomen in de `transformations` paramete
 
 >[!IMPORTANT]
 >
-> Naast de profielkenmerken en de segmenten in de stap [Gegevens activeren naar uw nieuwe bestemming](#activate-data), de geëxporteerde gegevens in [!DNL AWS Kinesis] en [!DNL Azure Event Hubs] zal ook informatie over de identiteitskaart bevatten. Dit vertegenwoordigt de identiteiten van de uitgevoerde profielen (bijvoorbeeld [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobiele id, Google-id, e-mailadres, enz.). Zie een voorbeeld hieronder.
+> Naast de profielkenmerken en het publiek in de stap [Gegevens activeren naar uw nieuwe bestemming](#activate-data), de geëxporteerde gegevens in [!DNL AWS Kinesis] en [!DNL Azure Event Hubs] zal ook informatie over de identiteitskaart bevatten. Dit vertegenwoordigt de identiteiten van de uitgevoerde profielen (bijvoorbeeld [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobiele id, Google-id, e-mailadres, enz.). Zie een voorbeeld hieronder.
 
 ```json
 {

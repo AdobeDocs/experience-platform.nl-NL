@@ -2,7 +2,7 @@
 description: Leer hoe te om bestemmings het testen API te gebruiken om te testen als uw het stromen bestemming correct wordt gevormd en de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 title: Streaming doel testen met voorbeeldprofielen
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
@@ -26,10 +26,9 @@ U kunt de [Voorbeeld van genereren van profiel-API](sample-profile-generation-ap
 
 >[!IMPORTANT]
 >
->* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) en [profielen en segmenten activeren naar een doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor meer informatie .
+>* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) en [profielen en doelgroepen activeren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor meer informatie .
 > * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [bladeren door een verbinding met uw bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![UI-afbeelding voor het ophalen van bestemmings-ID](../../assets/testing-api/get-destination-instance-id.png)
-
+>![UI-afbeelding voor het ophalen van bestemmings-ID](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Aan de slag met API-bewerkingen voor doeltesten {#get-started}
 

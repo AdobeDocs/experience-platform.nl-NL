@@ -3,9 +3,9 @@ keywords: Google klant match;Google klant match;Google Customer Match
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Om u te helpen beter begrijpen hoe en wanneer gebruiken [!DNL Google Customer Ma
 
 ### Hoofdletters gebruiken #1
 
-Een atletisch merkteken wil bestaande klanten bereiken via [!DNL Google Search] en [!DNL Google Shopping] om aanbiedingen en objecten aan te passen op basis van eerdere aankopen en browsergeschiedenis. Het merk apparel kan e-mailadressen van hun eigen CRM aan Experience Platform opnemen, en segmenten van hun eigen off-line gegevens bouwen. Vervolgens kunnen ze deze segmenten naar [!DNL Google Customer Match] te gebruiken voor [!DNL Search] en [!DNL Shopping]en hun reclame-uitgaven optimaliseren.
+Een atletisch merkteken wil bestaande klanten bereiken via [!DNL Google Search] en [!DNL Google Shopping] om aanbiedingen en objecten aan te passen op basis van eerdere aankopen en browsergeschiedenis. Het merk apparel kan e-mailadressen van hun eigen CRM aan Experience Platform opnemen, en publiek van hun eigen off-line gegevens bouwen. Vervolgens kunnen ze deze doelgroepen naar sturen [!DNL Google Customer Match] te gebruiken voor [!DNL Search] en [!DNL Shopping]en hun reclame-uitgaven optimaliseren.
 
 ### Hoofdletters gebruiken #2
 
 Een vooraanstaande technologiebedrijf lanceerde een nieuwe telefoon. Om dit nieuwe telefoonmodel te bevorderen, kijken zij om bewustzijn van de nieuwe eigenschappen en de functionaliteit van de telefoon aan klanten te drijven die vorige modellen van hun telefoons bezitten.
 
-Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand van CRM in Experience Platform, gebruikend de e-mailadressen als herkenningstekens. De segmenten worden gecreeerd gebaseerd op klanten die oudere telefoonmodellen bezitten. Vervolgens worden segmenten verzonden naar [!DNL Google Customer Match], zodat kan het bedrijf huidige klanten, klanten richten die oudere telefoonmodellen bezitten en gelijkaardige klanten op [!DNL YouTube].
+Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand van CRM in Experience Platform, gebruikend de e-mailadressen als herkenningstekens. Het publiek wordt gecreeerd gebaseerd op klanten die oudere telefoonmodellen bezitten. Vervolgens wordt het publiek verzonden naar [!DNL Google Customer Match], zodat kan het bedrijf huidige klanten, klanten richten die oudere telefoonmodellen bezitten en gelijkaardige klanten op [!DNL YouTube].
 
 ## Gegevensbeheer voor [!DNL Google Customer Match] bestemmingen {#data-governance}
 
@@ -50,14 +50,28 @@ Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichti
 
 {style="table-layout:auto"}
 
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer en andere) die worden gebruikt in het dialoogvenster [!DNL Google Customer Match] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer en andere) die worden gebruikt in het dialoogvenster [!DNL Google Customer Match] bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 >
 > * De **[!UICONTROL Combine with PII]** marketingactie is standaard geselecteerd voor de [!DNL Google Customer Match] doel en kan niet worden verwijderd.
 
-
 ### Waarschuwingen inschakelen {#enable-alerts}
 
 U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
-In de **[!UICONTROL Segment schedule]** stap, moet u de [!UICONTROL App ID] wanneer verzenden [!DNL IDFA] of [!DNL GAID] segmenten naar [!DNL Google Customer Match].
+In de **[!UICONTROL Segment schedule]** stap, moet u de [!UICONTROL App ID] wanneer verzenden [!DNL IDFA] of [!DNL GAID] publiek naar [!DNL Google Customer Match].
 
 ![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashke
 
 ![Transformatie identiteitstoewijzing](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## Controleren of segmentactivering is gelukt {#verify-activation}
+## Controleren of publieksactivering is gelukt {#verify-activation}
 
-Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]** account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen worden gevuld als er meer dan 100 actieve gebruikers zijn die u kunt bedienen.
+Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]** account. Het geactiveerde publiek wordt in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw publiek, alleen worden gevuld als er meer dan 100 actieve gebruikers zijn.
 
-Wanneer u een segment toewijst aan beide [!DNL IDFA] en [!DNL GAID] mobiele id&#39;s, [!DNL Google Customer Match] Hiermee maakt u een apart segment voor elke id-toewijzing. Uw [!DNL Google Ads] account toont twee verschillende segmenten, één voor de [!DNL IDFA]en een voor de [!DNL GAID] toewijzing.
+Wanneer u een publiek toewijst aan beide [!DNL IDFA] en [!DNL GAID] mobiele id&#39;s, [!DNL Google Customer Match] maakt een apart publiek voor elke id-toewijzing. Uw [!DNL Google Ads] account toont twee verschillende segmenten, één voor de [!DNL IDFA]en een voor de [!DNL GAID] toewijzing.
 
 ## Problemen oplossen {#troubleshooting}
 

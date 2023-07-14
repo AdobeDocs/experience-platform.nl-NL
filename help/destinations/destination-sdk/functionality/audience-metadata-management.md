@@ -1,9 +1,9 @@
 ---
 description: Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u het malplaatje bepaalt, test en voorlegt, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 title: Metagegevensbeheer voor het publiek
-source-git-commit: e69bd819fb8ef6c2384a2b843542d1ddcea0661f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -23,23 +23,23 @@ Afhankelijk van uw API configuratie, kunt u of niet het beheerseindpunt van publ
 
 ## Gebruik gevallen die worden ondersteund door het metagegevensbeheer van het publiek {#use-cases}
 
-Met steun van publieksmeta-gegevens in Destination SDK, wanneer u uw bestemming van het Experience Platform vormt, kunt u de gebruikers van het Platform één van verscheidene opties geven wanneer zij segmenten aan uw bestemming in kaart brengen en activeren. U kunt de opties bepalen die beschikbaar zijn voor de gebruiker via de parameters in het dialoogvenster [Configuratie van metagegevens voor publiek](../functionality/destination-configuration/audience-metadata-configuration.md) sectie van de bestemmingsconfiguratie.
+Met de steun van publieksmeta-gegevens in Destination SDK, wanneer u uw bestemming van het Experience Platform vormt, kunt u de gebruikers van het Platform één van verscheidene opties geven wanneer zij in kaart brengen en publiek activeren aan uw bestemming. U kunt de opties bepalen die beschikbaar zijn voor de gebruiker via de parameters in het dialoogvenster [Configuratie van metagegevens voor publiek](../functionality/destination-configuration/audience-metadata-configuration.md) sectie van de bestemmingsconfiguratie.
 
 ### Hoofdlettergebruik 1 - U hebt een API van derden en gebruikers hoeven geen toewijzings-id&#39;s in te voeren
 
-Als u een API eindpunt hebt om segmenten of publiek tot stand te brengen/bij te werken/te schrappen, kunt u de malplaatjes van publieksmeta-gegevens gebruiken om Destination SDK te vormen om de specificaties van uw segment te passen creeer/update/schrapt eindpunt. Experience Platform kan programmatically segmenten creëren/bijwerken/schrappen en meta-gegevens terug naar Experience Platform synchroniseren.
+Als u een API eindpunt hebt om publiek of publiek tot stand te brengen/bij te werken/te schrappen, kunt u de malplaatjes van publieksmeta-gegevens gebruiken om Destination SDK te vormen om de specificaties van uw publiek te passen creeer/update/schrapt eindpunt. Experience Platform kan publiek programmatically creëren/bijwerken/schrappen en meta-gegevens terug naar Experience Platform synchroniseren.
 
-Wanneer het activeren van segmenten aan uw bestemming in het gebruikersinterface van het Experience Platform (UI), te hoeven de gebruikers niet om een gebied van de segmentafbeelding identiteitskaart in het activeringswerkschema manueel in te vullen.
+Wanneer het activeren van publiek aan uw bestemming in het gebruikersinterface van het Experience Platform (UI), te hoeven de gebruikers niet om een gebied van identiteitskaart van de publiekstoewijzing in het activeringswerkschema manueel in te vullen.
 
-### Hoofdlettergebruik 2 - Gebruikers moeten eerst een segment in uw bestemming maken en moeten handmatig een toewijzings-id invoeren
+### Hoofdlettergebruik 2 - Gebruikers moeten eerst een publiek in uw bestemming maken en moeten handmatig een toewijzings-id invoeren
 
-Als de segmenten en andere meta-gegevens door partners of gebruikers manueel in uw bestemming moeten worden gecreeerd, dan moeten de gebruikers manueel het gebied van identiteitskaart van de segmentafbeelding in het activeringswerkschema invullen om de segmentmeta-gegevens tussen uw bestemming en Experience Platform te synchroniseren.
+Als het publiek en andere meta-gegevens door partners of gebruikers manueel in uw bestemming moeten worden gecreeerd, dan moeten de gebruikers het gebied van identiteitskaart van de publiekstoewijzing in het activeringswerkschema manueel invullen om de publiekMeta-gegevens tussen uw bestemming en Experience Platform te synchroniseren.
 
 ![Invoer-toewijzing-id](../assets/functionality/input-mapping-id.png)
 
-### Hoofdlettergebruik 3 - Uw doel accepteert de Experience Platform-segment-id, gebruikers hoeven de toewijzings-id niet handmatig in te voeren
+### Hoofdlettergebruik 3 - Uw doel accepteert de gebruikers-id van het Experience Platform, gebruikers hoeven de toewijzing-id niet handmatig in te voeren
 
-Als uw bestemmingssysteem identiteitskaart van het Experience Platform segment goedkeurt, kunt u dit in uw malplaatje van publieksmeta-gegevens vormen. Gebruikers hoeven een segment-toewijzings-id niet te vullen wanneer ze een segment activeren.
+Als uw bestemmingssysteem de identiteitskaart van het publiek van het Experience Platform goedkeurt, kunt u dit in uw malplaatje van publieksmeta-gegevens vormen. Gebruikers hoeven geen gebruikers-id voor publiekstoewijzing te vullen wanneer zij een segment activeren.
 
 ## Algemene en uitbreidbare publiekssjabloon {#generic-and-extensible}
 
@@ -525,13 +525,13 @@ Beschrijvingen van alle parameters in de sjabloon zoeken in het dialoogvenster [
 
 ## Macro&#39;s die in publieksmeta-gegevensmalplaatjes worden gebruikt
 
-Om informatie zoals segment IDs, toegangstokens, foutenmeldingen, en meer tussen Experience Platform en uw API over te gaan, omvatten de publiekssjablonen macro&#39;s die u kunt gebruiken. Hieronder vindt u een beschrijving van de macro&#39;s die worden gebruikt in de drie configuratievoorbeelden op deze pagina:
+Om informatie zoals publiek IDs, toegangstoken, foutenmeldingen, en meer tussen Experience Platform en uw API over te gaan, omvatten de publiekssjablonen macro&#39;s die u kunt gebruiken. Hieronder vindt u een beschrijving van de macro&#39;s die worden gebruikt in de drie configuratievoorbeelden op deze pagina:
 
 | Macro | Beschrijving |
 |--- |--- |
-| `{{segment.alias}}` | Staat u toe om tot het segment alias in Experience Platform toegang te hebben. |
-| `{{segment.name}}` | Staat u toe om tot de segmentnaam in Experience Platform toegang te hebben. |
-| `{{segment.id}}` | Staat u toe om tot segmentidentiteitskaart in Experience Platform toegang te hebben. |
+| `{{segment.alias}}` | Hiermee krijgt u toegang tot de publiekalias in het Experience Platform. |
+| `{{segment.name}}` | Hiermee krijgt u toegang tot de publieksnaam in het Experience Platform. |
+| `{{segment.id}}` | Hiermee hebt u toegang tot de gebruikers-id in het Experience Platform. |
 | `{{customerData.accountId}}` | Staat u toe om tot het gebied van accountIdentiteitskaart toegang te hebben dat u opstelling in de bestemmingsconfiguratie. |
 | `{{oauth2ServiceAccessToken}}` | Staat u toe om een toegangstoken dynamisch te produceren die op uw configuratie OAuth 2 wordt gebaseerd. |
 | `{{authData.accessToken}}` | Staat u toe om het toegangstoken tot uw API eindpunt over te gaan. Gebruiken `{{authData.accessToken}}` als het Experience Platform niet-vervallende tokens zou moeten gebruiken om met uw bestemming te verbinden, anders gebruik `{{oauth2ServiceAccessToken}}` om een toegangstoken te produceren. |

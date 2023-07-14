@@ -1,7 +1,7 @@
 ---
 description: Leer hoe te opstelling een samenvoegingsbeleid om te bepalen hoe de verzoeken van HTTP aan uw bestemming zouden moeten worden gegroepeerd en worden gegroepeerd.
 title: Samenvoegingsbeleid
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 1%
@@ -112,8 +112,8 @@ De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfig
 | `configurableAggregation.maxBatchAgeInSecs` | Geheel | Gebruikt in combinatie met `maxNumEventsInBatch`, bepaalt deze parameter hoe lang Experience Platform zou moeten wachten tot het verzenden van een API vraag naar uw eindpunt. <ul><li>Minimumwaarde (seconden): 1800</li><li>Maximumwaarde (seconden): 3600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
 | `configurableAggregation.maxNumEventsInBatch` | Geheel | Wordt gebruikt in combinatie met `maxBatchAgeInSecs`, bepaalt deze parameter hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1000</li><li>Maximumwaarde: 10000</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
 | `configurableAggregation.aggregationKey` | - | Hiermee kunt u de geëxporteerde profielen samenvoegen die aan de bestemming zijn toegewezen op basis van de hieronder beschreven parameters. |
-| `configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Deze parameter instellen op `true` als u profielen wilt groeperen die naar uw bestemming door segmentID worden uitgevoerd. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Deze parameter en `includeSegmentId` tot `true`, als u profielen wilt groeperen die naar uw bestemming door segmentID en segmentstatus worden uitgevoerd. |
+| `configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Deze parameter instellen op `true` als u profielen wilt groeperen die naar uw bestemming door publiek-id worden uitgevoerd. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Deze parameter en `includeSegmentId` tot `true`, als u profielen wilt groeperen die naar uw bestemming door publiek-identiteitskaart en publieksstatus worden uitgevoerd. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Boolean | Deze parameter instellen op `true` als u profielen wilt groeperen die naar uw bestemming door identiteitsnamespace worden uitgevoerd. |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Deze parameter instellen op `true` als u wilt dat de geëxporteerde profielen worden samengevoegd tot groepen op basis van één identiteit (GAID, IDFA, telefoonnummers, e-mail, enz.). |
 | `configurableAggregation.aggregationKey.groups` | Array | Maak lijsten met identiteitsgroepen als u profielen wilt groeperen die naar uw doel zijn geëxporteerd door groepen naamruimten. U kunt bijvoorbeeld profielen die de mobiele id&#39;s IDFA en GAID bevatten, combineren in één aanroep naar uw bestemming en e-mails in een andere via de configuratie die in het bovenstaande voorbeeld wordt getoond. |

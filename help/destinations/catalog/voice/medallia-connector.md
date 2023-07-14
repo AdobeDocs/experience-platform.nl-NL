@@ -2,9 +2,9 @@
 title: verbinding met Medallia
 description: Activeer profielen voor gerichte Media enquêtes en koppel inzameling terug om klantenbehoeften en verwachtingen beter te begrijpen.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1063'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle zojuist gekwalificeerde leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL API Gateway URL]**: Haal het op van je Media-leveringsteam. De notatie https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Import API Name]**: Haal het op van je Media-leveringsteam. Naam van de Media Import API (ook wel Web Feed genoemd) die in deze verbinding moet worden gebruikt. U kunt verschillende segmenten activeren voor verschillende import-API&#39;s om verschillende enquêteprogramma&#39;s te activeren.
+* **[!UICONTROL Import API Name]**: Haal het op van je Media-leveringsteam. Naam van de Media Import API (ook wel Web Feed genoemd) die in deze verbinding moet worden gebruikt. U kunt verschillende soorten publiek activeren voor verschillende API&#39;s voor importeren om verschillende enquêteprogramma&#39;s te activeren.
 
 ![Afbeelding die het scherm met doeldetails voor deze bestemming weergeeft.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -99,13 +99,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 

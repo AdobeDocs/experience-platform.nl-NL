@@ -2,7 +2,7 @@
 description: Leer hoe u opties voor bestandsindeling kunt configureren wanneer u gegevens activeert naar bestandsbestemmingen
 title: (Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Als u de opties voor de bestandsindeling wilt weergeven, start u de [verbinding 
 > 
 >De nieuwe bestemmingen voor cloudopslag - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Bèta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(bèta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(bèta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel worden alleen de zes onderstaande CSV-opties ondersteund.
 
-![Afbeelding met enkele beschikbare opties voor bestandsindeling.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![Afbeelding met enkele beschikbare opties voor bestandsindeling.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### Scheidingsteken {#delimiter}
 

@@ -3,7 +3,7 @@ keywords: sociale;sociale bestemmingen;Livefyre;facebook;Facebook
 title: Overzicht van sociale bestemmingen
 description: Met sociale doelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Adobe Experience Platform biedt momenteel ondersteuning voor de volgende sociale
 
 ## Verbinding maken met een nieuwe sociale bestemming {#connect-destination}
 
-Om segmenten naar sociale bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Om publiek naar sociale bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.

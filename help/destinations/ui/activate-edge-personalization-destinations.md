@@ -3,9 +3,9 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1757'
 ht-degree: 0%
 
 ---
@@ -130,6 +130,14 @@ Nadat u de eerste vereisten hebt voltooid, kunt u nu de verpersoonlijkingsbestem
 ## Uw publiek selecteren {#select-audiences}
 
 Gebruik de selectievakjes links van de publieksnamen om het publiek te selecteren dat u wilt activeren naar het doel en selecteer vervolgens **[!UICONTROL Next]**.
+
+Als u het publiek dat u wilt activeren naar het doel wilt selecteren, schakelt u het selectievakje links van de publieksnamen in en selecteert u **[!UICONTROL Next]**.
+
+U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
+
+* **[!UICONTROL Segmentation Service]**: Soorten publiek dat binnen Experience Platform door de Segmenteringsdienst wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
+* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform wordt gegenereerd en als CSV-bestanden in het Platform wordt geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
+* Andere soorten soorten publiek, afkomstig van andere Adobe oplossingen, zoals [!DNL Audience Manager].
 
 ![Soorten publiek selecteren](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

@@ -3,7 +3,7 @@ keywords: doelen;ervaring met cloudoplossingen; doel;doelbestemming; en cloud; r
 title: Overzicht van Adobe-doelen
 description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -45,8 +45,8 @@ Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u
 * [Marketo Munchkin-extensie](../email/marketo-munchkin.md)
 * [Marketo Web Personalization-extensie](../personalization/marketo-web-personalization.md)
 
-## Delen van Experience Platform
+## Experience Platform publiek delen
 
-Gebruik het segment dat van het Experience Platform vermogen deelt om uw segmenten van het Experience Platform aan extra Adobe bestemmingen te delen. Lees de pagina hieronder voor meer informatie (opent in het de documentatieportaal van de Audience Manager):
+Gebruik het publiek dat van het Experience Platform vermogen deelt om uw publiek van het Experience Platform aan extra bestemmingen te delen Adobe. Lees de pagina hieronder voor meer informatie (opent in het de documentatieportaal van de Audience Manager):
 
-* [Delen van Experience Platforms met Adobe Audience Manager, Adobe Advertising Cloud en Adobe Target via de Core Services-integratie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Experience Platforms delen met Adobe Audience Manager, Adobe Advertising Cloud en Adobe Target via de Core Services-integratie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

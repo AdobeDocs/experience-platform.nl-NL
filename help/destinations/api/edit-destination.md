@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Doelverbindingen bewerken met de Flow Service API
 type: Tutorial
 description: Leer hoe u verschillende componenten van een doelverbinding kunt bewerken met de Flow Service API.
-source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -245,7 +245,7 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag
 
 **Verzoek**
 
-Met het volgende verzoek worden de parameters van een [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) of [[!DNL Google Ad Manager 360] doel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding om de nieuwe [**[!UICONTROL Append segment ID to segment name]**](/help/release-notes/2023/april-2023.md#destinations) veld.
+Met het volgende verzoek worden de parameters van een [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) of [[!DNL Google Ad Manager 360] doel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding om de nieuwe [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) veld.
 
 ```shell
 curl -X PATCH \

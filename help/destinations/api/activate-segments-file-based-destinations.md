@@ -1,22 +1,21 @@
 ---
 solution: Experience Platform
-title: Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
+title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '4436'
 ht-degree: 0%
 
 ---
 
-# Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
+# Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
 
 >[!IMPORTANT]
 >
 >* Deze bètafunctionaliteit is beschikbaar voor klanten die het Real-Time CDP Premier en Ultimate-pakket hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
-
 
 Gebruik de verbeterde mogelijkheden voor het exporteren van bestanden (momenteel in bèta) voor toegang tot de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit het Experience Platform:
 
@@ -46,12 +45,12 @@ Als u de Flow Service API al hebt gebruikt om profielen te exporteren naar de op
 
 ## Aan de slag {#get-started}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] staat u toe om segmenten te bouwen en publiek te produceren in [!DNL Adobe Experience Platform] van uw [!DNL Real-Time Customer Profile] gegevens.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] kunt u een publiek maken en een publiek genereren in [!DNL Adobe Experience Platform] van uw [!DNL Real-Time Customer Profile] gegevens.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u moet weten om gegevens aan op dossier-gebaseerde bestemmingen in Platform te activeren.
@@ -92,11 +91,11 @@ In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bew
 
 Voor beschrijvingen van de termen die u in deze API-zelfstudie zult tegenkomen, leest u de [verklarende woordenlijst](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API-naslagdocumentatie.
 
-## Doel selecteren waar segmenten moeten worden geëxporteerd {#select-destination}
+## Doel selecteren waar publiek moet worden geëxporteerd {#select-destination}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step1.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step1.png)
 
-Voordat u de workflow voor het exporteren van profielen start, moet u de verbindingsspecificaties en de stroomspecificaties identificeren van de bestemming waarnaar u segmenten wilt exporteren. Gebruik de onderstaande tabel ter referentie.
+Voordat u de workflow voor het exporteren van profielen start, moet u de specificaties van de verbinding en de stroom identificeren van het doel waarnaar u het publiek wilt exporteren. Gebruik de onderstaande tabel ter referentie.
 
 | Bestemming | Verbindingsspecificatie | Stroomspecificatie |
 ---------|----------|---------|
@@ -319,13 +318,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Voer de onderstaande stappen uit om een gesegmenteerde exportgegevensstroom naar een opslaglocatie in de cloud in te stellen. Voor sommige stappen verschillen de verzoeken en antwoorden tussen de verschillende cloudopslagbestemmingen. In die gevallen, gebruik de lusjes op de pagina om de verzoeken en de reacties terug te winnen specifiek voor de bestemming die u wilt verbinden en segmenten uitvoeren naar. Zorg ervoor dat u de juiste `connection spec` en `flow spec` voor de bestemming u vormt.
+Voer de onderstaande stappen uit om een doelpubliek voor het exporteren van gegevens naar een opslaglocatie in de cloud in te stellen. Voor sommige stappen verschillen de verzoeken en antwoorden tussen de verschillende cloudopslagbestemmingen. In die gevallen gebruikt u de tabbladen op de pagina om de aanvragen en antwoorden op te halen die specifiek zijn voor het doel waarmee u verbinding wilt maken en waarnaar u het publiek wilt exporteren. Zorg ervoor dat u de juiste `connection spec` en `flow spec` voor de bestemming u vormt.
 
 ## Een bronverbinding maken {#create-source-connection}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step2.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Nadat u hebt bepaald naar welk doel u segmenten exporteert, moet u een bronverbinding maken. De [bronverbinding](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding met het interne [Experience Platform Profile Store](/help/profile/home.md#profile-data-store).
+Nadat u hebt bepaald naar welk doel u het publiek exporteert, moet u een bronverbinding maken. De [bronverbinding](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding met het interne [Experience Platform Profile Store](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -373,9 +372,9 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe bronverbinding en e
 
 ## Een basisverbinding maken {#create-base-connection}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step3.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-A [basisverbinding](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaat veilig de geloofsbrieven aan uw bestemming op. Afhankelijk van het bestemmingstype, kunnen de geloofsbrieven nodig om tegen die bestemming voor authentiek te verklaren variëren. Om deze authentificatieparameters te vinden, wint eerst terug `connection spec` voor het gewenste doel zoals beschreven in de sectie [Doel selecteren waar segmenten moeten worden geëxporteerd](#select-destination) en bekijk dan de `authSpec` van de respons. Verwijs naar de tabbladen hieronder voor de `authSpec` eigenschappen van alle ondersteunde doelen.
+A [basisverbinding](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaat veilig de geloofsbrieven aan uw bestemming op. Afhankelijk van het bestemmingstype, kunnen de geloofsbrieven nodig om tegen die bestemming voor authentiek te verklaren variëren. Om deze authentificatieparameters te vinden, wint eerst terug `connection spec` voor het gewenste doel zoals beschreven in de sectie [Doel selecteren waar publiek moet worden geëxporteerd](#select-destination) en bekijk dan de `authSpec` van de respons. Verwijs naar de tabbladen hieronder voor de `authSpec` eigenschappen van alle ondersteunde doelen.
 
 >[!BEGINTABS]
 
@@ -1144,9 +1143,9 @@ Noteer de verbinding-id in het antwoord. Deze id is vereist in de volgende stap 
 
 ## Een doelverbinding maken {#create-target-connection}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step4.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
-Vervolgens moet u een doelverbinding maken. [Doelverbindingen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sla de exportparameters voor de geëxporteerde segmenten op. Exportparameters zijn onder andere exportlocatie, bestandsindeling, compressie en andere details. Voor CSV-bestanden kunt u bijvoorbeeld verschillende exportopties selecteren. Meer informatie over alle ondersteunde CSV-exportopties vindt u in het dialoogvenster [pagina met configuraties voor bestandsindelingen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+Vervolgens moet u een doelverbinding maken. [Doelverbindingen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaat de exportparameters voor het geëxporteerde publiek op. Exportparameters zijn onder andere exportlocatie, bestandsindeling, compressie en andere details. Voor CSV-bestanden kunt u bijvoorbeeld verschillende exportopties selecteren. Meer informatie over alle ondersteunde CSV-exportopties vindt u in het dialoogvenster [pagina met configuraties voor bestandsindelingen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Zie de `targetSpec` eigenschappen die in de `connection spec` om de ondersteunde eigenschappen voor elk doeltype te begrijpen. Verwijs naar de tabbladen hieronder voor de `targetSpec` eigenschappen van alle ondersteunde doelen.
 
@@ -1156,7 +1155,7 @@ Zie de `targetSpec` eigenschappen die in de `connection spec` om de ondersteunde
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] doelverbindingsparameters weergeven
 
-Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op segmentexportbestemmingen.
+Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op doeluitvoerbestemmingen.
 
 ```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
@@ -1214,7 +1213,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1367,7 +1366,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] doelverbindingsparameters weergeven
 
-Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op segmentexportbestemmingen.
+Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op doeluitvoerbestemmingen.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1413,7 +1412,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1567,7 +1566,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] doelverbindingsparameters weergeven
 
-Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op segmentexportbestemmingen.
+Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op doeluitvoerbestemmingen.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1606,7 +1605,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1758,7 +1757,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] doelverbindingsparameters weergeven
 
-Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op segmentexportbestemmingen.
+Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op doeluitvoerbestemmingen.
 
 ```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
@@ -1796,7 +1795,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1948,7 +1947,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] doelverbindingsparameters weergeven
 
-Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op segmentexportbestemmingen.
+Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op doeluitvoerbestemmingen.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1994,7 +1993,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2147,7 +2146,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
 
 +++SFTP - [!DNL Connection spec] doelverbindingsparameters weergeven
 
-Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op segmentexportbestemmingen.
+Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL connection spec] voorbeeld hieronder, die extra informatie verstrekken over waar te om te vinden [!DNL target spec] parameters in de verbindingsspecificatie. U kunt ook in het voorbeeld zien waaronder doelparameters *niet* van toepassing op doeluitvoerbestemmingen.
 
 ```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
@@ -2186,7 +2185,7 @@ Let op de gemarkeerde regels met inline opmerkingen in het dialoogvenster [!DNL 
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2891,15 +2890,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-Noteer de `target connection ID` uit het antwoord. Deze id is vereist in de volgende stap bij het maken van de gegevensstroom voor het exporteren van segmenten.
+Noteer de `target connection ID` uit het antwoord. Deze id is vereist in de volgende stap bij het maken van de gegevensstroom voor het exporteren van soorten publiek.
 
 Een geslaagde reactie retourneert de id (`id`) van de nieuwe doelbronverbinding en een `etag`. Noteer de doel-verbindings-id zoals u deze later nodig hebt bij het maken van de gegevensstroom.
 
 ## Een gegevensstroom maken {#create-dataflow}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step5.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
-De volgende stap in de bestemmingsconfiguratie moet een dataflow tot stand brengen. A [dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) verbindt eerder gecreeerd entiteiten samen en verstrekt ook opties om het programma van de segmentuitvoer te vormen. Als u de gegevensstroom wilt maken, gebruikt u de onderstaande ladingen, afhankelijk van uw gewenste bestemming voor de cloudopslag, en vervangt u de id&#39;s van de flowentiteit uit vorige stappen. Merk op dat in deze stap, u geen informatie met betrekking tot attribuut of identiteitstoewijzing aan dataflow toevoegt. Dat zal in de volgende stap gebeuren.
+De volgende stap in de bestemmingsconfiguratie moet een dataflow tot stand brengen. A [dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) verbindt eerder gecreeerd entiteiten samen en verstrekt ook opties om het programma van de publieksuitvoer te vormen. Als u de gegevensstroom wilt maken, gebruikt u de onderstaande ladingen, afhankelijk van uw gewenste bestemming voor de cloudopslag, en vervangt u de id&#39;s van de flowentiteit uit vorige stappen. Merk op dat in deze stap, u geen informatie met betrekking tot attribuut of identiteitstoewijzing aan dataflow toevoegt. Dat zal in de volgende stap gebeuren.
 
 >[!BEGINTABS]
 
@@ -2907,7 +2906,7 @@ De volgende stap in de bestemmingsconfiguratie moet een dataflow tot stand breng
 
 **Verzoek**
 
-+++Segmentexportgegevensstroom maken naar [!DNL Amazon S3] doel - verzoek
++++Gegevens voor publiek exporteren naar [!DNL Amazon S3] doel - verzoek
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2920,8 +2919,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Amazon S3 cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Amazon S3 cloud storage destination",
+    "name": "Activate audiences to an Amazon S3 cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Amazon S3 cloud storage destination",
     "flowSpec": {
         "id": "1a0514a6-33d4-4c7f-aff8-594799c47549", // Amazon S3 flow spec ID
         "version": "1.0"
@@ -2955,7 +2954,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Segmentexportgegevensstroom maken naar [!DNL Azure Blob Storage] doel - verzoek
++++Gegevens voor publiek exporteren naar [!DNL Azure Blob Storage] doel - verzoek
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2968,8 +2967,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Blob Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Blob Storage cloud storage destination",
+    "name": "Activate audiences to an Azure Blob Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Blob Storage cloud storage destination",
     "flowSpec": {
         "id": "752d422f-b16f-4f0d-b1c6-26e448e3b388", // Azure Blob Storage flow spec ID
         "version": "1.0"
@@ -3015,7 +3014,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Segmentexportgegevensstroom maken naar [!DNL Azure Data Lake Gen 2(ADLS Gen2)] doel - verzoek
++++Gegevens voor publiek exporteren naar [!DNL Azure Data Lake Gen 2(ADLS Gen2)] doel - verzoek
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3028,8 +3027,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "name": "Activate audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
     "flowSpec": {
         "id": "17be2013-2549-41ce-96e7-a70363bec293", // Azure Data Lake Gen 2(ADLS Gen2) flow spec ID
         "version": "1.0"
@@ -3063,7 +3062,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Segmentexportgegevensstroom maken naar [!DNL Data Landing Zone] doel - verzoek
++++Gegevens voor publiek exporteren naar [!DNL Data Landing Zone] doel - verzoek
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3076,8 +3075,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Data Landing Zone cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Data Landing Zone cloud storage destination",
+    "name": "Activate audiences to a Data Landing Zone cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Data Landing Zone cloud storage destination",
     "flowSpec": {
         "id": "cd2fc47e-e838-4f38-a581-8fff2f99b63a", // Data Landing Zone flow spec ID
         "version": "1.0"
@@ -3111,7 +3110,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Segmentexportgegevensstroom maken naar [!DNL Google Cloud Storage] doel - verzoek
++++Gegevens voor publiek exporteren naar [!DNL Google Cloud Storage] doel - verzoek
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3124,8 +3123,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Google Cloud Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Google Cloud Storage destination",
+    "name": "Activate audiences to a Google Cloud Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Google Cloud Storage destination",
     "flowSpec": {
         "id": "585c15c4-6cbf-4126-8f87-e26bff78b657", // Google Cloud Storage flow spec ID
         "version": "1.0"
@@ -3159,7 +3158,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Gegevens voor segmentexport maken naar SFTP-doel - Aanvragen
++++Gegevens voor publiek exporteren naar SFTP-doel maken - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3172,8 +3171,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an SFTP cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an SFTP cloud storage destination",
+    "name": "Activate audiences to an SFTP cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an SFTP cloud storage destination",
     "flowSpec": {
         "id": "fd36aaa4-bf2b-43fb-9387-43785eeeb799", // SFTP flow spec ID
         "version": "1.0"
@@ -3207,14 +3206,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Noteer de Dataflow-id uit het antwoord. Deze id is vereist in latere stappen.
 
-### Segmenten toevoegen aan het exporteren
+### Soorten publiek toevoegen aan de exportbewerking
 
-In deze stap kunt u ook selecteren welke segmenten u naar het doel wilt exporteren. Voor uitgebreide informatie over deze stap en het verzoekformaat om een segment aan dataflow toe te voegen, bekijk de voorbeelden in [Doelgegevens bijwerken](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) van de API-naslagdocumentatie.
+In deze stap kunt u ook selecteren welk publiek u naar het doel wilt exporteren. Voor uitgebreide informatie over deze stap en het verzoekformaat om een publiek aan dataflow toe te voegen, bekijk de voorbeelden in [Doelgegevens bijwerken](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) van de API-naslagdocumentatie.
 
 
 ## Kenmerk en identiteitstoewijzing instellen {#attribute-and-identity-mapping}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step6.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
 Nadat u de gegevensstroom hebt gemaakt, moet u toewijzingen instellen voor de kenmerken en identiteiten die u wilt exporteren. Dit bestaat uit drie stappen, die hieronder worden vermeld:
 
@@ -3346,7 +3345,7 @@ De onderstaande reactie is verkort vanwege de beknoptheid.
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "First name",
-                            "description": "The first segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The first audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "fullName": {
                             "type": "string",
@@ -3358,7 +3357,7 @@ De onderstaande reactie is verkort vanwege de beknoptheid.
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "Last name",
-                            "description": "The last segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The last audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "middleName": {
                             "type": "string",
@@ -3783,7 +3782,7 @@ Inspect de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijg
                         "exited":"Entity is exiting the segment.",
                         "realized":"Entity is entering the segment."
                      },
-                     "description":"Is the segment participation realized as part of the current request.",
+                     "description":"Is the audience participation realized as part of the current request.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:status"
                   },
@@ -3844,14 +3843,14 @@ Inspect de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijg
                            "exclusiveMinimum":0
                         }
                      },
-                     "description":"Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                     "description":"Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:payload"
                   },
                   "version":{
                      "type":"string",
                      "title":"Version",
-                     "description":"The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                     "description":"The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:version"
                   },
@@ -3863,7 +3862,7 @@ Inspect de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijg
                            "type":"string",
                            "title":"Identifier",
                            "format":"uri-reference",
-                           "description":"Identity of the segment in the related namespace.",
+                           "description":"Identity of the audience in the related namespace.",
                            "meta:xdmType":"string",
                            "meta:xdmField":"@id"
                         },
@@ -3895,7 +3894,7 @@ Inspect de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijg
                            "meta:referencedFrom":"https://ns.adobe.com/xdm/context/namespace"
                         }
                      },
-                     "description":"The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                     "description":"The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                      "meta:status":"deprecated",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:segmentID",
@@ -3905,7 +3904,7 @@ Inspect de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijg
                      "type":"string",
                      "title":"Valid until",
                      "format":"date-time",
-                     "description":"The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                     "description":"The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:validUntil"
                   },
@@ -3956,7 +3955,7 @@ Inspect de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijg
                      "type":"string",
                      "title":"Last qualification time",
                      "format":"date-time",
-                     "description":"The timestamp when the assertion of segment membership was made.",
+                     "description":"The timestamp when the assertion of audience membership was made.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:lastQualificationTime"
                   }
@@ -4070,14 +4069,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                             "version": {
                                 "meta:xdmField": "xdm:version",
                                 "meta:xdmType": "string",
-                                "description": "The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                                "description": "The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                                 "type": "string",
                                 "title": "Version"
                             },
                             "validUntil": {
                                 "meta:xdmField": "xdm:validUntil",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                                "description": "The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Valid until"
@@ -4094,7 +4093,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "exited"
                                 ],
                                 "default": "realized",
-                                "description": "Is the segment participation realized as part of the current request.",
+                                "description": "Is the audience participation realized as part of the current request.",
                                 "type": "string",
                                 "title": "Status"
                             },
@@ -4132,7 +4131,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "_id": {
                                         "meta:xdmField": "@id",
                                         "meta:xdmType": "string",
-                                        "description": "Identity of the segment in the related namespace.",
+                                        "description": "Identity of the audience in the related namespace.",
                                         "format": "uri-reference",
                                         "type": "string",
                                         "title": "Identifier"
@@ -4140,7 +4139,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 },
                                 "meta:xdmType": "object",
                                 "type": "object",
-                                "description": "The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                                "description": "The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                                 "meta:status": "deprecated",
                                 "title": "Segment ID"
                             },
@@ -4245,13 +4244,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     }
                                 },
                                 "type": "object",
-                                "description": "Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                                "description": "Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                                 "title": "Payload"
                             },
                             "lastQualificationTime": {
                                 "meta:xdmField": "xdm:lastQualificationTime",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp when the assertion of segment membership was made.",
+                                "description": "The timestamp when the assertion of audience membership was made.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Last qualification time"
@@ -4323,7 +4322,6 @@ Gebruik vervolgens de [API voor gegevenprep](https://developer.adobe.com/experie
 >* In het onderstaande toewijzingsobject worden de `destination` parameter accepteert geen punten `"."`. Bijvoorbeeld, zou u PersonalEmail_address of segmentMembership_status zoals benadrukt in het configuratievoorbeeld moeten gebruiken.
 >* Er is één specifiek geval wanneer het bronattribuut een identiteitsattribuut is en een punt bevat. In dit geval moet met het kenmerk worden gevrijwaard `//`, zoals hieronder gemarkeerd.
 >* Merk ook op dat alhoewel de voorbeeldconfiguratie hieronder omvat `Email` en `Phone_E.164`, kunt u slechts één identiteitskenmerk per gegevensstroom exporteren.
-
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
@@ -4449,7 +4447,7 @@ De reactie van de Dienst API van de Stroom keert identiteitskaart van bijgewerkt
 
 ## Andere updates voor gegevensstroom uitvoeren {#other-dataflow-updates}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step7.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
 Als u updates wilt uitvoeren naar uw gegevensstroom, gebruikt u de opdracht `PATCH` operation.U kunt bijvoorbeeld uw gegevensstromen bijwerken om velden als verplichte toetsen of deduplicatietoetsen te selecteren.
 
@@ -4599,7 +4597,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## Gegevensstroom valideren (de dataflow-runtime ophalen) {#get-dataflow-runs}
 
-![Stappen om segmenten te activeren die de huidige stap markeren die de gebruiker heeft ingeschakeld](/help/destinations/assets/api/file-based-segment-export/step8.png)
+![Stappen om het publiek te activeren en de huidige stap die de gebruiker heeft ingeschakeld, te markeren](/help/destinations/assets/api/file-based-segment-export/step8.png)
 
 Om de uitvoering van een gegevensstroom te controleren, gebruik Dataflow loops API:
 
@@ -4679,7 +4677,7 @@ De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-f
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes Platform met één van uw aangewezen bestemmingen van de wolkenopslag verbonden en opstelling een gegevensstroom aan de respectieve bestemming om segmenten uit te voeren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
+Door deze zelfstudie te volgen, hebt u het Platform verbonden met een van uw voorkeursbestemmingen voor cloudopslag en een gegevensstroom ingesteld naar de respectievelijke bestemming om het publiek te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)

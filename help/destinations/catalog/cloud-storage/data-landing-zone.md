@@ -1,10 +1,10 @@
 ---
 title: Bestemming landingszone gegevens
-description: Leer hoe te met Gegevens het Landing Zone te verbinden om segmenten te activeren en datasets uit te voeren.
+description: Leer hoe u verbinding maakt met Data Landing Zone om het publiek te activeren en gegevenssets te exporteren.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,22 @@ Platform dwingt strenge tijd-aan-levende (TTL) zeven dagen op alle dossiers af d
 
 ## Verbinding maken met uw [!UICONTROL Data Landing Zone] opslag via API of UI {#connect-api-or-ui}
 
-* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Segmenten naar dit doel activeren](#activate) hieronder.
-* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslagplaats programmatically, lees de [Activeer segmenten aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken leerprogramma](../../api/activate-segments-file-based-destinations.md).
+* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Soorten publiek naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!UICONTROL Data Landing Zone] opslagplaats programmatically, lees de [Activeer publiek aan op dossier-gebaseerde bestemmingen door de Zelfstudie van de Dienst van de Stroom te gebruiken API](../../api/activate-segments-file-based-destinations.md).
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -201,13 +215,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Planning
 

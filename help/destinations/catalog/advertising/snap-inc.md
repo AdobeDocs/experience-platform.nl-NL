@@ -1,10 +1,10 @@
 ---
 title: Magnetische Inc-verbinding
-description: Leer hoe u verbinding maakt met het Platform Snapchat Ads en uw publiekssegmenten exporteert vanuit Experience Platform.
+description: Leer hoe u verbinding maakt met het Platform Snapchat Ads en uw publiek exporteert vanuit Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '965'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## Gebruiksscenario’s {#use-cases}
 
-Met deze bestemming kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in Snapchat-advertenties en deze gebruiken om hun advertenties te activeren.
+Met deze bestemming kunnen marketers gebruikerssoorten die in Experience Platform zijn gemaakt, importeren in Snapchat Advertenties en deze gebruiken om hun advertenties te activeren.
 
 ## Vereisten {#prerequisites}
 
@@ -33,7 +33,7 @@ Als u deze bestemming wilt gebruiken, moet u een account voor Snapchat Ads hebbe
 
 * Snap Inc ondersteunt geen meervoudige identiteiten voor een bepaald publiekssegment. Wijs slechts één identiteit toe wanneer u een segment activeert.
 * Snap Inc biedt geen ondersteuning voor het wijzigen van de naam van segmenten. Als u de naam van een segment wilt wijzigen, moet u het deactiveren, de naam ervan wijzigen en vervolgens het segment activeren.
-* Het is niet mogelijk om een bewaarperiode voor de leden van een publiekssegment te bepalen. Alle leden hebben levenbehoud en zullen in het segment zijn tot zij worden verwijderd.
+* Het is niet mogelijk om een bewaarperiode voor de leden van een publiekssegment te bepalen. Alle leden hebben levensbehoud en zullen in het publiek zijn tot zij worden verwijderd.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -65,8 +65,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *UW BESTEMMING* bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster *UW BESTEMMING* bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,11 +98,11 @@ Om details voor de bestemming te vormen, vul de vereiste gebieden in en selectee
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: De account-id voor Advertentie die is gekoppeld aan de advertentierekening waarnaar u de segmenten wilt importeren. Voor meer informatie over hoe u dit kunt vinden, raadpleegt u [deze documentatie op het Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Account ID]**: De account-id voor advertenties die is gekoppeld aan het advertentieaccount waarnaar u uw publiek wilt importeren. Voor meer informatie over hoe u dit kunt vinden, raadpleegt u [deze documentatie op het Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->Door het invoeren van een onjuiste of ongeldige account-id voor Snapchat wordt het activeren van segmenten mislukt. Controleer nogmaals of je de juiste gebruikersnaam voor je advertentieaccount hebt ingevoerd.
+>Als u een onjuiste of ongeldige account-id voor Snapchat-advertentie invoert, mislukt de activering van het publiek. Controleer nogmaals of je de juiste gebruikersnaam voor je advertentieaccount hebt ingevoerd.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -110,24 +110,24 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Na het activeren van segmenten op de *Magnetische Inc.* doel, kunt u de segmenten weergeven in de functie voor magnetische advertenties van Manager [**Soorten publiek** sectie](https://businesshelp.snapchat.com/s/article/audience-sharing). Ga als volgt te werk om naar deze sectie te navigeren:
+Na activering van het publiek naar de *Magnetische Inc.* doel, kunt u het publiek weergeven in het venster Beheer magnetische advertenties [**Soorten publiek** sectie](https://businesshelp.snapchat.com/s/article/audience-sharing). Ga als volgt te werk om naar deze sectie te navigeren:
 
 1. Aanmelden bij [Advertentiebeheer magnetisch](https://ads.snapchat.com/)
-2. Selecteren **Soorten publiek** in het keuzemenu in de linkerbovenhoek van het scherm. De segmenten die u in Adobe Experience Platform hebt geactiveerd, worden weergegeven in de Audience Library:
+2. Selecteren **Soorten publiek** in het keuzemenu in de linkerbovenhoek van het scherm. In de Audience Library ziet u het publiek dat u in Adobe Experience Platform hebt geactiveerd:
 
 ![Doelgroepen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Houd er rekening mee dat wanneer een Adobe-segment voor het eerst wordt geactiveerd op Snap Inc., u dit eerst ziet als een leeg publiek. Dit komt doordat Adobe Experience Platform de lidgegevens niet naar Snap Inc exporteert totdat het segment wordt geëvalueerd. Voor meer informatie over hoe de segmenten in Experience Platform worden geëvalueerd, gelieve te verwijzen naar [Overzicht van segmentatieservice](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Houd er rekening mee dat wanneer een Adobe-publiek voor het eerst wordt geactiveerd op Snap Inc., dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over de manier waarop het publiek in Experience Platform wordt beoordeeld, raadpleegt u de [Overzicht van segmentatieservice](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

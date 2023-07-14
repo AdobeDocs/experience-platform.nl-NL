@@ -1,7 +1,7 @@
 ---
 description: De Destination SDK van het Experience Platform gebruikt de malplaatjes van de Kiezelaar, toestaand u om de gegevens die van Experience Platform worden uitgevoerd in het formaat om te zetten dat door uw bestemming wordt vereist.
 title: Ondersteunde transformatiefuncties in Destination SDK
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 1%
@@ -29,7 +29,7 @@ De sjabloon voor berichttransformatie wordt gebruikt in het dialoogvenster [doel
 
 Als u de concepten en functies in deze referentiepagina wilt begrijpen, leest u de [berichtindeling](message-format.md) document eerst. U moet de [structuur van een profiel](message-format.md#profile-structure) in Experience Platform voordat u kunt gebruiken [!DNL Pebble] sjablonen voor transformatie en de geëxporteerde gegevens.
 
-Lees de sjabloonvoorbeelden in de sectie voordat u doorgaat naar de functies die hieronder worden beschreven [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en segmentlidmaatschap](message-format.md#using-templating). De voorbeelden in dat verband beginnen zeer eenvoudig en nemen toe in complexiteit.
+Lees de sjabloonvoorbeelden in de sectie voordat u doorgaat naar de functies die hieronder worden beschreven [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en publieksleiding](message-format.md#using-templating). De voorbeelden in dat verband beginnen zeer eenvoudig en nemen toe in complexiteit.
 
 ## Ondersteund [!DNL Pebble] functies {#supported-functions}
 
@@ -46,7 +46,6 @@ Van de [!DNL Pebble] tagsectie, alleen Destination SDK ondersteunt:
 >
 > * Denk bij een voorbeeld van een arrayelement aan de identiteiten in een [identityMap](message-format.md#identities) naamruimte, waar u elementen zoals `identityMap.gaid`, `identityMap.email`, of een soortgelijke situatie.
 > * Denk aan een voorbeeld van een structuurelement over [segmentLidmaatschap](message-format.md#segment-membership).
-
 
 Van de [!DNL Pebble] filtersectie, Destination SDK ondersteunt alle functies. In het onderstaande voorbeeld wordt getoond hoe de `date` functie kan binnen Destination SDK worden gebruikt.
 
@@ -92,7 +91,7 @@ Naast de functies die buiten de box worden geleverd door [!DNL Pebble], zie onde
 
 #### Gebruiksscenario
 
-Deze functies kunnen worden gebruikt om een lijst met segmenten te verkrijgen die aan een profiel zijn toegevoegd of uit een profiel zijn verwijderd.
+Deze functies kunnen worden gebruikt om een lijst met soorten publiek te verkrijgen die aan een profiel zijn toegevoegd of uit een profiel zijn verwijderd.
 
 #### Voorbeeld
 
@@ -143,7 +142,7 @@ added: <111111><333333>; removed: <222222>
 
 <!--
 
-### Added and removed segments filters {#added-and-removed-segmnts-filters}
+### Added and removed audiences filters {#added-and-removed-segmnts-filters}
 
 #### Use case {#use-case}
 

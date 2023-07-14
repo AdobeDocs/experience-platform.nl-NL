@@ -1,9 +1,9 @@
 ---
 keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
-description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
+description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -50,8 +50,8 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 
 | Rechterspoor | Beschrijving |
 | --- | --- |
-| [!UICONTROL Activate segments] | Selecteer deze controle om uit te geven welke segmenten aan de bestemming worden in kaart gebracht, de uitvoerprogramma&#39;s bij te werken, of toegewezen attributen en identiteiten toe te voegen en te verwijderen. Zie de hulplijnen op [het activeren van publieksgegevens aan segment het stromen bestemmingen](./activate-segment-streaming-destinations.md), [het activeren van publieksgegevens aan batch op profiel-gebaseerde bestemmingen](./activate-batch-profile-destinations.md), en [het activeren van publieksgegevens aan het stromen op profiel-gebaseerde bestemmingen](./activate-streaming-profile-destinations.md) voor meer informatie . |
-| [!UICONTROL Delete] | Staat u toe om deze gegevensstroom te schrappen en unmaps de segmenten die eerder werden geactiveerd, als om het even welk bestaan. |
+| [!UICONTROL Activate audiences] | Selecteer dit besturingselement om te bewerken welk publiek wordt toegewezen aan het doel, om exportschema&#39;s bij te werken of om toegewezen kenmerken en identiteiten toe te voegen en te verwijderen. Zie de hulplijnen op [het activeren van publieksgegevens aan publiek die bestemmingen stromen](./activate-segment-streaming-destinations.md), [het activeren van publieksgegevens aan batch op profiel-gebaseerde bestemmingen](./activate-batch-profile-destinations.md), en [het activeren van publieksgegevens aan het stromen op profiel-gebaseerde bestemmingen](./activate-streaming-profile-destinations.md) voor meer informatie . |
+| [!UICONTROL Delete] | Hiermee kunt u deze gegevensstroom verwijderen en de toewijzing ongedaan maken van het publiek dat eerder is geactiveerd, indien aanwezig. |
 | [!UICONTROL Destination name] | Dit veld kan worden bewerkt om de naam van het doel bij te werken. |
 | [!UICONTROL Description] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel toe te voegen. |
 | [!UICONTROL Destination] | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie de [doelcatalogus](../catalog/overview.md) voor meer informatie . |
@@ -81,7 +81,6 @@ De [!UICONTROL Dataflow runs] tab bevat metrische gegevens over uw gegevensstroo
 >* Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) en [Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingen.
 >* Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) doelen, de metriek met betrekking tot uitgesloten, mislukte en geactiveerde identiteiten worden geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
 
-
 ![Dataflow-runweergave](../assets/ui/details-page/dataflow-runs.png)
 
 ### Runtimeduur gegevensstroom {#dataflow-runs-duration}
@@ -98,7 +97,7 @@ Lees voor meer informatie over [dataflow wordt uitgevoerd naar streamingdoelen](
 
 ### Bestandsgebaseerde doelen {#file-based}
 
-Voor dataflow wordt uitgevoerd naar op een bestand gebaseerde doelen, wordt de **[!UICONTROL Processing duration]** is afhankelijk van de grootte van de gegevens die worden geëxporteerd en het laden van het systeem. Bericht ook dat de dataflow looppas aan op dossier-gebaseerde bestemmingen uitgesplitst per segment is.
+Voor dataflow wordt uitgevoerd naar op een bestand gebaseerde doelen, wordt de **[!UICONTROL Processing duration]** is afhankelijk van de grootte van de gegevens die worden geëxporteerd en het laden van het systeem. Bericht ook dat de dataflow looppas aan op dossier-gebaseerde bestemmingen uitgesplitst per publiek is.
 
 ![Afbeelding van de DataFlow voert de pagina uit met de kolom Verwerkingstijd gemarkeerd voor een op een bestand gebaseerd doel.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -106,11 +105,11 @@ Lees voor meer informatie over [dataflow wordt uitgevoerd naar batchbestemmingen
 
 ## [!UICONTROL Activation data] {#activation-data}
 
-De [!UICONTROL Activation data] wordt een lijst weergegeven met segmenten die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing) en andere relevante informatie voor de gegevensexport, zoals het exporttype, de planning en de frequentie. Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
+De [!UICONTROL Activation data] wordt een lijst weergegeven van soorten publiek dat aan de bestemming is toegewezen, met inbegrip van hun begindatum en einddatum (indien van toepassing), en andere relevante informatie voor de gegevensexport, zoals het exporttype, de planning en de frequentie. Als u de details over een bepaald publiek wilt weergeven, selecteert u de naam in de lijst.
 
 >[!TIP]
 >
->Selecteer **[!UICONTROL Activate segments]** in de [rechterspoor](#right-rail).
+>Selecteer **[!UICONTROL Activate audiences]** in de [rechterspoor](#right-rail).
 
 ![Batchbestemming voor weergave van activeringsgegevens](../assets/ui/details-page/activation-data-batch.png)
 
@@ -118,4 +117,4 @@ De [!UICONTROL Activation data] wordt een lijst weergegeven met segmenten die aa
 
 >[!NOTE]
 >
->Voor meer informatie over het verkennen van de detailpagina van een segment raadpleegt u de [Overzicht van de segmenteringsinterface](../../segmentation/ui/overview.md#segment-details).
+>Raadpleeg voor meer informatie over het verkennen van de detailpagina van een publiek de [Overzicht van de segmenteringsinterface](../../segmentation/ui/overview.md#segment-details).

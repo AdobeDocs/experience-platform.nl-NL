@@ -3,10 +3,10 @@ keywords: mobiel; schil; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 0%
+source-wordcount: '991'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ Profielgegevens verzenden naar [!DNL Braze], moet u eerst verbinding maken met h
 
 Let op de volgende details die specifiek zijn voor de [!DNL Braze] bestemming:
 
-* [!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk.
+* [!DNL Adobe Experience Platform] publiek wordt geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Let op de volgende details die specifiek zijn voor de [!DNL Braze] bestemming:
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten, met ingebouwde segmenten [!DNL Adobe Experience Platform]. Daarnaast wil ik hen persoonlijke ervaringen bieden op basis van hun kenmerken [!DNL Adobe Experience Platform] profielen, zodra segmenten en profielen in [!DNL Adobe Experience Platform].
+Als markator wil ik gebruikers in een mobiele betrokkenheidsbestemming als doel instellen, met een ingebouwd publiek [!DNL Adobe Experience Platform]. Daarnaast wil ik hen persoonlijke ervaringen bieden op basis van hun kenmerken [!DNL Adobe Experience Platform] profielen, zodra het publiek en de profielen in [!DNL Adobe Experience Platform].
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -44,14 +44,26 @@ Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten,
 
 {style="table-layout:auto"}
 
+## Ondersteuning voor extern publiek {#external-audiences-support}
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het externe publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type extern publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing.[!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing.[!DNL Adobe Experience Platform] publiek wordt geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -83,13 +95,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 
@@ -142,8 +154,8 @@ Laat ons uw XDM profielschema en uw [!DNL Braze] -instantie bevat de volgende ke
 
 |  | XDM-profielschema | [!DNL Braze] Instantie |
 |---|---|---|
-| Attributen | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>FirstName</code></li><li>LastName</code></li><li>PhoneNumber</code></li></ul> |
-| Identiteiten | <ul><li>E-mail</code></li><li>Google-advertentie-ID (GAID)</code></li><li>Apple-id voor adverteerders (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| Attributen | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>PhoneNumber</code></li></ul> |
+| Identiteiten | <ul><li><code>E-mail</code></li><li><code>Google-advertentie-ID (GAID)</code></li><li><code>Apple-id voor adverteerders (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 De juiste toewijzing zou er als volgt uitzien:
 
@@ -151,7 +163,7 @@ De juiste toewijzing zou er als volgt uitzien:
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleren of gegevens zijn geëxporteerd naar de [!DNL Braze] doel, controleer uw [!DNL Braze] account. [!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk.
+Controleren of gegevens zijn geëxporteerd naar de [!DNL Braze] doel, controleer uw [!DNL Braze] account. [!DNL Adobe Experience Platform] publiek wordt geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

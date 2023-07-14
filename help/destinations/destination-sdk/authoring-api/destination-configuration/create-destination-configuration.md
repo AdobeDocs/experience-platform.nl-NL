@@ -1,7 +1,7 @@
 ---
 description: Leer hoe te om een API vraag te structureren om een bestemmingsconfiguratie door Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een doelconfiguratie maken
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 1%
@@ -213,10 +213,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Geeft aan welke [standaardnaamruimten](/help/identity-service/namespaces.md#standard) (bijvoorbeeld, IDFA) klanten kunnen aan de identiteit in kaart brengen die u vormt. <br> Wanneer u `acceptedGlobalNamespaces`kunt u `"requiredTransformation":"sha256(lower($))"` om e-mailadressen of telefoonnummers in kleine letters en te hashen. |
 | `destinationDelivery.authenticationRule` | Tekenreeks | Geeft aan hoe [!DNL Platform] klanten verbinden met uw bestemming. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Gebruiken `CUSTOMER_AUTHENTICATION` als de klanten van het Platform zich in uw systeem via een gebruikersbenaming en een wachtwoord, een dragerteken, of een andere methode van authentificatie aanmelden. U kunt deze optie bijvoorbeeld selecteren als u `authType: OAUTH2` of `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Gebruiken `PLATFORM_AUTHENTICATION` als er een globaal authentificatiesysteem tussen Adobe en uw bestemming en is [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een object credentials maken met de opdracht [aanmeldAPI](../../credentials-api/create-credential-configuration.md) configuratie. </li><li>Gebruiken `NONE` als geen authentificatie wordt vereist om gegevens naar uw bestemmingsplatform te verzenden. </li></ul> |
 | `destinationDelivery.destinationServerId` | Tekenreeks | De `instanceId` van de [doelserversjabloon](../destination-server/create-destination-server.md) gebruikt voor deze bestemming. |
-| `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer segmenten worden geactiveerd naar de bestemming. Altijd instellen op `true`. |
-| `segmentMappingConfig.mapUserInput` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is input by user. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is the Experience Platform segment ID. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is the Experience Platform segment name. |
+| `backfillHistoricalProfileData` | Boolean | Bepaalt of historische profielgegevens worden geëxporteerd wanneer het publiek wordt geactiveerd naar het doel. Altijd instellen op `true`. |
+| `segmentMappingConfig.mapUserInput` | Boolean | Controls whether the publiek mapping ID in the destination activation workflow is input by user. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolean | Bepaalt of de publiekstoewijzings-id in de workflow voor doelactivering de Experience Platform-gebruikers-id is. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Bepaalt of de publiekstoewijzings-id in de workflow voor doelactivering de publieksnaam van het Experience Platform is. |
 | `segmentMappingConfig.audienceTemplateId` | Boolean | De `instanceId` van de [sjabloon voor doelmetagegevens](../../metadata-api/create-audience-template.md) gebruikt voor deze bestemming. |
 | `schemaConfig.profileFields` | Array | Wanneer u vooraf gedefinieerde `profileFields` zoals aangetoond in de configuratie hierboven, zullen de gebruikers de optie hebben om de attributen van het Experience Platform aan de vooraf bepaalde attributen op de kant van uw bestemming in kaart te brengen. |
 | `schemaConfig.profileRequired` | Boolean | Gebruiken `true` als de gebruikers profielattributen van Experience Platform aan douanekenmerken op de kant van uw bestemming zouden moeten kunnen in kaart brengen, zoals aangetoond in de voorbeeldconfiguratie hierboven. |

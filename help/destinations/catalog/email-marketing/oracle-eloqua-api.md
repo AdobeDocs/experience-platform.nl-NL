@@ -3,9 +3,9 @@ title: (API) Oracle Eloqua-verbinding
 description: Met de Eloqua-bestemming (API) van het Oracle kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw bedrijfsbehoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2052'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) laat marketers toe om campagnes te plannen en uit te voeren terwijl het leveren van een gepersonaliseerde klantenervaring voor hun vooruitzichten. Dankzij geïntegreerd beheer van leads en het eenvoudig maken van campagnes, kunnen marketers op het juiste moment het juiste publiek betrekken bij de reis van hun koper en schalen ze elegant om het publiek te bereiken via verschillende kanalen, zoals e-mail, display, search, video en mobile. Verkoopteams kunnen meer deals sluiten in een sneller tempo, waardoor het marketingrendement toeneemt dankzij realtime inzicht.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [Een contactpersoon bijwerken](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) van de [!DNL Oracle Eloqua] REST API, waarmee u **identiteiten bijwerken** binnen een segment naar [!DNL Oracle Eloqua].
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [Een contactpersoon bijwerken](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) van de [!DNL Oracle Eloqua] REST API, waarmee u **identiteiten bijwerken** binnen een publiek in [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] gebruik [Basisverificatie](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) om te communiceren met de [!DNL Oracle Eloqua] REST API. Instructies voor verificatie aan uw [!DNL Oracle Eloqua] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-De marketingafdeling van een onlineplatform wil een marketingcampagne op basis van e-mail uitzenden naar een publiek met nieuwsberichten. Het marketingteam van het platform kan bestaande informatie over leads bijwerken via Adobe Experience Platform, segmenten van hun eigen offlinegegevens maken en deze segmenten verzenden naar [!DNL Oracle Eloqua], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
+De marketingafdeling van een onlineplatform wil een marketingcampagne op basis van e-mail uitzenden naar een publiek met nieuwsberichten. Het marketingteam van het platform kan bestaande informatie over leads bijwerken via Adobe Experience Platform, een publiek opbouwen op basis van hun eigen offline gegevens en deze doelgroep naar sturen [!DNL Oracle Eloqua], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
 
 ## Vereisten {#prerequisites}
 
@@ -29,7 +29,7 @@ De marketingafdeling van een onlineplatform wil een marketingcampagne op basis v
 
 Voordat u gegevens activeert naar de [!DNL Oracle Eloqua] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), en [segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) gemaakt in [!DNL Experience Platform].
 
-Raadpleeg de documentatie bij het Experience Platform voor [Segment Membership Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op segmentstatussen nodig hebt.
+Raadpleeg de documentatie bij het Experience Platform voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
 
 ### [!DNL Oracle Eloqua] voorwaarden {#prerequisites-destination}
 
@@ -54,11 +54,10 @@ Zie de [Aanmelden bij [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saa
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] aangepaste contactvelden worden automatisch gemaakt met de namen van de segmenten die tijdens de **[!UICONTROL Select segments]** stap.
-
+>* [!DNL Oracle Eloqua] aangepaste contactvelden worden automatisch gemaakt met de namen van de doelgroepen die tijdens het **[!UICONTROL Select segments]** stap.
 
 * [!DNL Oracle Eloqua] heeft een maximale limiet van 250 aangepaste contactvelden.
-* Voordat u nieuwe segmenten exporteert, moet u ervoor zorgen dat het aantal segmenten van het Platform en het aantal bestaande segmenten binnen [!DNL Oracle Eloqua] deze limiet niet overschrijden.
+* Voordat u een nieuw publiek exporteert, moet u ervoor zorgen dat het aantal Platforms en het aantal bestaande doelgroepen binnen [!DNL Oracle Eloqua] deze limiet niet overschrijden.
 * Als deze limiet wordt overschreden, treedt er een fout op in het Experience Platform. Dit komt omdat de [!DNL Oracle Eloqua] API kan de aanvraag niet valideren en reageert met een - *400: Er is een validatiefout opgetreden* - foutbericht met een beschrijving van het probleem.
 * Als u de hierboven opgegeven limiet hebt bereikt, moet u bestaande toewijzingen verwijderen uit uw bestemming en de bijbehorende aangepaste contactvelden in uw [!DNL Oracle Eloqua] voordat u meer segmenten kunt exporteren.
 
@@ -78,8 +77,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd segment in Platform, het overeenkomstige [!DNL Oracle Eloqua] de segmentstatus wordt bijgewerkt met zijn segmentstatus van Platform.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in het Platform, het overeenkomstige [!DNL Oracle Eloqua] de segmentstatus wordt bijgewerkt met de publieksstatus van het Platform.</li></ul> |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -130,13 +129,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -150,7 +149,7 @@ Uw XDM-velden toewijzen aan de [!DNL Oracle Eloqua] doelvelden, voer de volgende
    * Herhaal deze stappen om de vereiste en gewenste kenmerktoewijzingen toe te voegen tussen uw XDM-profielschema en [!DNL Oracle Eloqua]: | Bronveld | Doelveld | Verplicht | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| Ja | |`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
-      ![Voorbeeld van schermopname met gebruikersinterface van Platform met kenmerktoewijzingen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![Voorbeeld van schermopname met gebruikersinterface van Platform met kenmerktoewijzingen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -178,22 +177,22 @@ Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding,
 
 >[!NOTE]
 >
->De bestemming plaatst automatisch een unieke herkenningsteken aan de geselecteerde segmentnamen op elke uitvoering wanneer het verzenden van de informatie van het contactgebied aan [!DNL Oracle Eloqua]. Dit zorgt ervoor dat de namen van de contactgebieden die overeenkomen met uw segmentnamen elkaar niet overlappen. Zie de [Gegevens exporteren valideren](#exported-data) voorbeeld van een sectiescherm van een [!DNL Oracle Eloqua] De pagina van Details van het contact met het gebied van het douanecontact dat gebruikend de segmentnamen wordt gecreeerd.
+>Het doel plaatst automatisch een unieke id achter aan de geselecteerde publieksnamen bij elke uitvoering wanneer het verzenden van de informatie van het contactgebied naar [!DNL Oracle Eloqua]. Dit zorgt ervoor dat de namen van de contactgebieden die overeenkomen met uw publieksnamen elkaar niet overlappen. Zie de [Gegevens exporteren valideren](#exported-data) voorbeeld van een sectiescherm van een [!DNL Oracle Eloqua] De pagina van Details van het contact met het gebied van de douanecontcontact dat gebruikend de publieksnamen wordt gecreeerd.
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteren **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en navigeer naar de lijst met bestemmingen.
-1. Selecteer vervolgens de bestemming en schakel over naar de **[!UICONTROL Activation data]** selecteert u vervolgens een segmentnaam.
+1. Selecteer vervolgens de bestemming en schakel over naar de **[!UICONTROL Activation data]** en selecteert u vervolgens een publieksnaam.
    ![Het het schermschot van het Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
-1. Controleer de samenvatting van het segment en zorg ervoor dat de telling van profielen aan de telling binnen het segment beantwoordt.
+1. Controleer het publieksoverzicht en zorg ervoor dat de telling van profielen aan de telling binnen het segment beantwoordt.
    ![Platform UI-screenshot voorbeeld met segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Aanmelden bij de [!DNL Oracle Eloqua] website, navigeer vervolgens naar de **[!UICONTROL Contacts Overview]** pagina om te controleren of de profielen van het segment zijn toegevoegd. Om de segmentstatus te zien, boor neer in een **[!UICONTROL Contact Detail]** pagina en controleer of het contactveld met de naam van het geselecteerde segment als voorvoegsel is gemaakt.
+1. Aanmelden bij de [!DNL Oracle Eloqua] website, navigeer vervolgens naar de **[!UICONTROL Contacts Overview]** pagina om te controleren of de profielen van het publiek zijn toegevoegd. Als u de status van het publiek wilt zien, gaat u naar een **[!UICONTROL Contact Detail]** pagina en controleer of het contactveld met het geselecteerde publiek als voorvoegsel is gemaakt.
 
-![Schermopname Eloqua UI van het oracle die de pagina van Details van het Contact met het gebied van het douanecontact toont dat met de segmentnaam wordt gecreeerd.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Schermopname Eloqua UI van het oracle die de pagina van de Details van het Contact met het gebied van het douanecontact toont dat met de publieksnaam wordt gecreeerd.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

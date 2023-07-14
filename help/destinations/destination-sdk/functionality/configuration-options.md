@@ -1,9 +1,9 @@
 ---
 description: De bestemmingsdienst in Adobe Experience Platform gebruikt configuratieeindpunten voor verscheidene componenten die omhoog de bestemmingsfunctionaliteit bouwen. Leer hoe deze componenten gecombineerd Experience Platform toestaan om met bestemmingspartners te verbinden, douaneberichten te verzenden, en profielgegevens over het digitale ecosysteem te activeren.
 title: Configuratieopties in Destination SDK
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -40,19 +40,19 @@ Zie de documentatie hieronder voor details over elk van de componenten van de be
 
 * [Configuratie van klantverificatie](destination-configuration/customer-authentication.md): Selecteer het authentificatiemechanisme dat het Experience Platform zou moeten gebruiken om met uw bestemming te verbinden. Deze configuratie genereert de [Nieuwe bestemming configureren](../../ui/connect-destination.md) pagina in het gebruikersinterface van het Experience Platform, waar de gebruikers Experience Platform met de rekeningen verbinden zij met uw bestemming hebben.
 * [OAuth2-verificatie](destination-configuration/oauth2-authentication.md): Meer informatie over alle [!DNL OAuth2] verificatiestromen die worden ondersteund door Destination SDK en instructies krijgen voor het instellen [!DNL OAuth2] verificatie voor uw bestemming...
-* [Gegevensvelden van de klant](destination-configuration/customer-data-fields.md): Leer hoe u invoervelden maakt in de gebruikersinterface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
+* [Gegevensvelden van de klant](destination-configuration/customer-data-fields.md): Leer hoe u invoervelden maakt in de interface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 * [UI-kenmerken](destination-configuration/ui-attributes.md): Leer hoe te om de attributen UI, zoals de documentatiekoppeling, de categorie van de bestemmingskaart, en het type en de frequentie van de bestemmingsverbinding, voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 * [Schema-configuratie](destination-configuration/schema-configuration.md): Leer hoe u het doelschema van uw bestemming definieert waaraan gebruikers profielkenmerken en identiteiten kunnen toewijzen.
 * [Configuratie naamruimte identiteit](destination-configuration/identity-namespace-configuration.md): Leer hoe te om de identiteiten te vormen die door uw bestemming worden gesteund. Deze configuratie vult de doelidentiteiten in [toewijzingsstap](../../ui/activate-segment-streaming-destinations.md#mapping) van de gebruikersinterface van het Experience Platform, waar de gebruikers identiteiten en attributen van hun schema&#39;s XDM aan het schema in uw bestemming in kaart brengen.
 * [Levering bestemming](destination-configuration/destination-delivery.md): Leer hoe te om te vormen waar precies de uitgevoerde gegevens gaan en welke authentificatieregel in de plaats wordt gebruikt waar de gegevens zullen landen.
-* [Configuratie van metagegevens voor publiek](destination-configuration/audience-metadata-configuration.md): Leer hoe segmentmeta-gegevens zoals segmentnamen of IDs tussen Experience Platform en uw bestemming zouden moeten worden gedeeld.
+* [Configuratie van metagegevens voor publiek](destination-configuration/audience-metadata-configuration.md): Leer hoe publieksmetagegevens zoals publieksnamen of id&#39;s moeten worden gedeeld tussen Experience Platform en uw doel.
 * [Samenvoegingsbeleid](destination-configuration/aggregation-policy.md): Leer hoe te opstelling een samenvoegingsbeleid om te bepalen hoe de verzoeken van HTTP aan uw bestemming zouden moeten worden gegroepeerd en worden gegroepeerd.
 * [Batchconfiguratie](destination-configuration/batch-configuration.md): Stel verschillende instellingen voor bestandsnaam en exportplanning in die beschikbaar zijn voor gebruikers wanneer zij verbinding maken met uw doel in de gebruikersinterface van het Experience Platform.
 * [Historische profielkwalificaties](destination-configuration/historical-profile-qualifications.md): Leer over de historische profielkwalificaties die door bestemmingen worden gesteund die met Destination SDK worden gebouwd.
 
 ## Configuratie van metagegevens voor publiek {#audience-metadata-configuration}
 
-Deze component staat u toe om te vormen hoe het publiek/de segmenten programmatically worden gecreeerd, bijgewerkt, of in uw bestemming geschrapt. Voor op dossier-gebaseerde bestemmingen, staat het u toe om een bericht op te zetten wanneer de dossiers met succes aan uw bestemming worden geleverd. U kunt deze functionaliteit configureren via de [publiek-sjablonen, eindpunt](../metadata-api/create-audience-template.md).
+Deze component staat u toe om te vormen hoe het publiek programmatically wordt gecreeerd, bijgewerkt, of geschrapt in uw bestemming. Voor op dossier-gebaseerde bestemmingen, staat het u toe om een bericht op te zetten wanneer de dossiers met succes aan uw bestemming worden geleverd. U kunt deze functionaliteit configureren via de [publiek-sjablonen, eindpunt](../metadata-api/create-audience-template.md).
 
 ## Volgende stappen {#next-steps}
 

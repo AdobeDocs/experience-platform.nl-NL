@@ -2,7 +2,7 @@
 description: Leer hoe u de API voor bestemmingstests gebruikt om de transformatiesjabloon voor het streaming doelbericht te testen voordat u de bestemming publiceert.
 title: Een sjabloon voor berichttransformatie maken en testen
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Hieronder wordt geïllustreerd hoe het creëren van en het testen van een malpla
 
 ## Waarom u een malplaatje van de berichttransformatie moet creëren en testen {#why-create-message-transformation-template}
 
-Een van de eerste stappen bij het maken van uw bestemming in Destination SDK is na te denken over de manier waarop de gegevensindeling voor segmentlidmaatschap, identiteiten en profielkenmerken wordt getransformeerd wanneer deze worden geëxporteerd van Adobe Experience Platform naar uw bestemming. Vind informatie over de transformatie tussen Adobe XDM schema en uw bestemmingsschema in [berichtenformaat](../../functionality/destination-server/message-format.md#using-templating).
+Een van de eerste stappen bij het maken van uw bestemming in Destination SDK is na te denken over de manier waarop de gegevensindeling voor publiekslidmaatschap, identiteiten en profielkenmerken wordt getransformeerd wanneer deze worden geëxporteerd van Adobe Experience Platform naar uw bestemming. Vind informatie over de transformatie tussen Adobe XDM schema en uw bestemmingsschema in [berichtenformaat](../../functionality/destination-server/message-format.md#using-templating).
 
 De transformatie is alleen succesvol als u een transformatiesjabloon opgeeft, vergelijkbaar met dit voorbeeld: [Een sjabloon maken die segmenten, identiteiten en profielkenmerken verstuurt](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -38,8 +38,8 @@ Adobe verstrekt een malplaatjehulpmiddel dat u toestaat om het berichtmalplaatje
 Voordat u de sjabloon kunt maken, moet u de onderstaande stappen uitvoeren:
 
 1. [Een doelserverconfiguratie maken](../../authoring-api/destination-server/create-destination-server.md). De sjabloon die u genereert, verschilt op basis van de waarde die u opgeeft voor de `maxUsersPerRequest` parameter.
-   * Gebruiken `maxUsersPerRequest=1` als u wilt dat een API-aanroep naar uw bestemming één profiel bevat, samen met de segmentkwalificaties, -identiteiten en -profielkenmerken.
-   * Gebruiken `maxUsersPerRequest` met een waarde groter dan één als u een API-aanroep naar uw bestemming meerdere profielen wilt opnemen, samen met hun segmentkwalificaties, identiteiten en profielkenmerken.
+   * Gebruiken `maxUsersPerRequest=1` als u wilt dat een API-aanroep naar uw bestemming één profiel bevat, samen met de publiekskwalificaties, -identiteiten en -profielkenmerken.
+   * Gebruiken `maxUsersPerRequest` met een waarde groter dan één als u een API-aanroep naar uw bestemming meerdere profielen wilt opnemen, samen met hun publiekskwalificaties, -identiteiten en -profielkenmerken.
 2. [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md) en voeg identiteitskaart van de configuratie van de bestemmingsserver in toe `destinationDelivery.destinationServerId`.
 3. [Krijg identiteitskaart van de bestemmingsconfiguratie](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) die u net hebt gemaakt, zodat u deze kunt gebruiken in het gereedschap voor het maken van sjablonen.
 4. Begrijpen [welke functies en filters u kunt gebruiken](../../functionality/destination-server/supported-functions.md) in de sjabloon voor berichttransformatie.
@@ -100,7 +100,7 @@ Als de bestemmingsidentiteitskaart u verstrekt beantwoordt aan een bestemmingsco
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -136,7 +136,7 @@ Als de bestemmingsidentiteitskaart u verstrekt beantwoordt aan een malplaatje va
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

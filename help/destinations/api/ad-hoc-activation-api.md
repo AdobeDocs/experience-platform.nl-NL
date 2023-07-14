@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;doel-API;ad-hocactivering;segmenten ad-hoc activeren
+keywords: Experience Platform;doel-API;ad-hocactivering;publiek ad-hoc activeren
 solution: Experience Platform
-title: Doelsegmenten activeren naar batchbestemmingen via de API voor ad-hocactivering
-description: Dit artikel illustreert de end-to-end workflow voor het activeren van publiekssegmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die vóór activering plaatsvinden.
+title: Het publiek activeren naar batchbestemmingen via de API voor ad-hocactivering
+description: Dit artikel illustreert de end-to-end workflow voor het activeren van het publiek via de API voor ad-hocactivering, inclusief de segmentatietaken die plaatsvinden vóór activering.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1544'
 ht-degree: 0%
 
 ---
 
-# Activeer publiekssegmenten op aanvraag naar batchbestemmingen via de API voor ad-hocactivering
+# Het publiek op aanvraag activeren naar batchbestemmingen via de API voor ad-hocactivering
 
 >[!IMPORTANT]
 >
->Na voltooiing van de bètafase [!DNL ad-hoc activation API] is nu algemeen beschikbaar voor alle klanten in de Experience Platform. In de GA-versie is de API bijgewerkt naar versie 2. Stap 4 ([Vraag de meest recente segment-exporttaak-id aan](#segment-export-id)) is niet meer vereist, omdat de API de export-id niet meer vereist.
+>Na voltooiing van de bètafase [!DNL ad-hoc activation API] is nu algemeen beschikbaar voor alle klanten in de Experience Platform. In de GA-versie is de API bijgewerkt naar versie 2. Stap 4 ([De meest recente gebruikers-id voor exporttaken ophalen](#segment-export-id)) is niet meer vereist, omdat de API de export-id niet meer vereist.
 >
 >Zie [De ad-hocactiveringstaak uitvoeren](#activation-job) in deze zelfstudie vindt u meer informatie .
 
 ## Overzicht {#overview}
 
-Met de API voor ad-hocactivering kunnen marketers publiekssegmenten programmatisch op een snelle en efficiënte manier naar doelen activeren voor situaties waarin onmiddellijke activering vereist is.
+Met de API voor ad-hocactivering kunnen marketers het publiek programmatisch naar bestemmingen activeren, op een snelle en efficiënte manier, in situaties waarin onmiddellijke activering vereist is.
 
 Gebruik de API voor ad-hocactivering om volledige bestanden te exporteren naar het gewenste systeem voor het ontvangen van bestanden. Activering van ad-hocgroepen wordt alleen ondersteund door [batchbestandsgebaseerde doelen](../destination-types.md#file-based).
 
-In het onderstaande diagram ziet u de end-to-end workflow voor het activeren van segmenten via de API voor ad-hocactivering, inclusief de segmentatietaken die elke 24 uur in Platform plaatsvinden.
+In het onderstaande diagram ziet u de end-to-end workflow voor het activeren van het publiek via de API voor ad-hocactivering, inclusief de segmentatietaken die elke 24 uur in Platform plaatsvinden.
 
 ![ad-hocactivering](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
@@ -36,23 +36,23 @@ In het onderstaande diagram ziet u de end-to-end workflow voor het activeren van
 
 ### Flash verkopen of promoties
 
-Een online detailhandelaar bereidt een beperkte flitsverkoop voor en wil klanten op korte termijn op de hoogte brengen. Via de API voor ad-hocactivering van Experience Platforms kan het marketingteam segmenten op aanvraag exporteren en snel promotiemails sturen naar de klantenbasis.
+Een online detailhandelaar bereidt een beperkte flitsverkoop voor en wil klanten op korte termijn op de hoogte brengen. Via de API voor ad-hocactivering van Experience Platforms kan het marketingteam op aanvraag soorten publiek exporteren en snel e-mails met speciale acties naar de klantenbasis sturen.
 
 ### Actuele gebeurtenissen of het doorbreken van nieuws
 
-Een hotel verwacht het hoogteweer in de komende dagen en het team wil de aankomende gasten snel informeren, zodat ze dienovereenkomstig kunnen plannen. Het marketingteam kan de API voor ad-hocactivering van Experience Platforms gebruiken om segmenten op aanvraag te exporteren en de gasten op de hoogte te stellen.
+Een hotel verwacht het hoogteweer in de komende dagen en het team wil de aankomende gasten snel informeren, zodat ze dienovereenkomstig kunnen plannen. Het marketingteam kan de API voor ad-hocactivering van het Experience Platform gebruiken om het publiek op aanvraag te exporteren en de gasten op de hoogte te stellen.
 
 ### Integratie testen
 
-IT-beheerders kunnen de API voor ad-hocactivering van Experience Platforms gebruiken om segmenten op aanvraag te exporteren, zodat ze hun aangepaste integratie met Adobe Experience Platform kunnen testen en kunnen controleren of alles correct werkt.
+IT-beheerders kunnen de API voor ad-hocactivering van Experience Platforms gebruiken om doelgroepen op aanvraag te exporteren, zodat ze hun aangepaste integratie met Adobe Experience Platform kunnen testen en kunnen controleren of alles correct werkt.
 
 ## Guardrails {#guardrails}
 
 Houd rekening met de volgende instructies wanneer u de API voor ad-hocactivering gebruikt.
 
-* Momenteel kan elke ad-hocactiveringstaak maximaal 80 segmenten activeren. Als u probeert meer dan 80 segmenten per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd.
-* Ad-hocactiveringstaken kunnen niet gelijktijdig met de geplande [segmentexporttaken](../../segmentation/api/export-jobs.md). Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande segmentexporttaak is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd.
-* Voer niet meer dan één gelijktijdige ad-hocactiveringstaak per segment uit.
+* Op dit moment kan elke ad-hocactiveringstaak maximaal 80 soorten publiek activeren. Als u probeert meer dan 80 soorten publiek per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd.
+* Ad-hocactiveringstaken kunnen niet gelijktijdig met de geplande [doelgroepen exporttaken](../../segmentation/api/export-jobs.md). Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande doelexporttaak is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd.
+* Voer niet meer dan één gelijktijdige ad-hocactiveringstaak per publiek uit.
 
 ## Segmenteringsoverwegingen {#segmentation-considerations}
 
@@ -88,24 +88,24 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Stap 3: Activeringsstroom maken in de gebruikersinterface van het Platform {#activation-flow}
 
-Voordat u segmenten kunt activeren via de API voor ad-hocactivering, moet u eerst een activeringsstroom hebben geconfigureerd in de gebruikersinterface van het Platform voor het gekozen doel.
+Voordat u het publiek kunt activeren via de API voor ad-hocactivering, moet u eerst een activeringsstroom hebben geconfigureerd in de gebruikersinterface van het Platform voor het gekozen doel.
 
-Dit omvat het ingaan van in het activeringswerkschema, het selecteren van uw segmenten, het vormen van een programma, en het activeren van hen. U kunt de UI of API gebruiken om een activeringsstroom tot stand te brengen:
+Dit omvat het ingaan van in het activeringswerkschema, het selecteren van uw publiek, het vormen van een programma, en het activeren van hen. U kunt de UI of API gebruiken om een activeringsstroom tot stand te brengen:
 
 * [Gebruik de interface van het Platform om een activeringsstroom te creëren aan de uitvoerbestemmingen van het partijprofiel](../ui/activate-batch-profile-destinations.md)
 * [Gebruik de Flow Service API om verbinding te maken met exportdoelen voor batchprofielen en gegevens te activeren](../api/connect-activate-batch-destinations.md)
 
-## Stap 4: Vraag de meest recente segment-exporttaak-id aan (niet vereist in v2) {#segment-export-id}
+## Stap 4: Vraag de meest recente gebruikers-exporttaak-id aan (niet vereist in v2) {#segment-export-id}
 
 >[!IMPORTANT]
 >
->In versie 2 van de API voor ad-hocactivering hoeft u de meest recente segment-exporttaak-id niet te verkrijgen. U kunt deze stap overslaan en naar de volgende stap gaan.
+>In versie 2 van de API voor ad-hocactivering hoeft u de meest recente uitvoertaak-id voor het publiek niet te verkrijgen. U kunt deze stap overslaan en naar de volgende stap gaan.
 
 Nadat u een activeringsstroom voor uw partijbestemming vormt, beginnen de geplande segmentatietaken automatisch om de 24 uur lopend.
 
-Voordat u de ad-hocactiveringstaak kunt uitvoeren, moet u de id van de laatste segmentexporttaak opvragen. U moet deze id doorgeven in de aanvraag voor een ad-hocactiveringstaak.
+Voordat u de ad-hocactiveringstaak kunt uitvoeren, moet u de id van de laatste doelexporttaak opvragen. U moet deze id doorgeven in de aanvraag voor een ad-hocactiveringstaak.
 
-Volg de beschreven instructies [hier](../../segmentation/api/export-jobs.md#retrieve-list) om een lijst van alle banen van de segmentuitvoer terug te winnen.
+Volg de beschreven instructies [hier](../../segmentation/api/export-jobs.md#retrieve-list) om een lijst op te halen van alle doelexporttaken.
 
 In de reactie, zoek het eerste verslag dat het schemabezit hieronder omvat.
 
@@ -115,9 +115,9 @@ In de reactie, zoek het eerste verslag dat het schemabezit hieronder omvat.
 }
 ```
 
-De id van de segmentexporttaak bevindt zich in `id` eigenschap, zoals hieronder weergegeven.
+De id van de doelexporttaak bevindt zich in de `id` eigenschap, zoals hieronder weergegeven.
 
-![uitvoertaak-id segment](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+![doelgroep, taak-id exporteren](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
 ## Stap 5: De ad-hocactiveringstaak uitvoeren {#activation-job}
@@ -126,15 +126,15 @@ Adobe Experience Platform voert elke 24 uur een geplande segmentatietaak uit. De
 
 >[!IMPORTANT]
 >
->Let op de volgende eenmalige beperking: Voordat u een ad-hocactiveringstaak uitvoert, moet u ervoor zorgen dat ten minste 20 minuten zijn verstreken vanaf het moment dat het segment voor het eerst werd geactiveerd volgens het schema dat u instelt in [Stap 3 - de activeringsstroom van de Platform UI creëren](#activation-flow).
+>Let op de volgende eenmalige beperking: Voordat u een ad-hocactiveringstaak uitvoert, moet u ervoor zorgen dat ten minste 20 minuten zijn verstreken vanaf het moment dat het publiek voor het eerst werd geactiveerd volgens het schema dat u instelt in [Stap 3 - de activeringsstroom van de Platform UI creëren](#activation-flow).
 
-Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande segmentexporttaak voor uw segmenten is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd om een volledig bestand te exporteren.
+Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande doeluitvoertaak voor uw publiek is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd om een volledig bestand te exporteren.
 
-Nadat de segmentexporttaak is voltooid, kunt u de activering activeren.
+Nadat de doelexporttaak is voltooid, kunt u de activering activeren.
 
 >[!NOTE]
 >
->Momenteel kan elke ad-hocactiveringstaak maximaal 80 segmenten activeren. Als u probeert meer dan 80 segmenten per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd.
+>Op dit moment kan elke ad-hocactiveringstaak maximaal 80 soorten publiek activeren. Als u probeert meer dan 80 soorten publiek per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd.
 
 ### Verzoek {#request}
 
@@ -166,8 +166,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u segmenten wilt activeren. U kunt deze id&#39;s ophalen vanuit de gebruikersinterface van het Platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van de segmenten die u wilt activeren voor het geselecteerde doel. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u het publiek wilt activeren. U kunt deze id&#39;s ophalen vanuit de gebruikersinterface van het Platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van het publiek dat u wilt activeren naar het geselecteerde doel. |
 
 {style="table-layout:auto"}
 
@@ -175,7 +175,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 >[!IMPORTANT]
 >
->**Vervangen aanvraagtype**. Dit voorbeeldtype beschrijft het aanvraagtype voor API versie 1. In versie 2 van de API voor ad-hocactivering hoeft u de meest recente id voor de exporttaak van segmenten niet op te nemen.
+>**Vervangen aanvraagtype**. Dit voorbeeldtype beschrijft het aanvraagtype voor API versie 1. In versie 2 van de API voor ad-hocactivering hoeft u niet de meest recente uitvoertaak-id voor het publiek op te nemen.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
@@ -203,9 +203,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u segmenten wilt activeren. U kunt deze id&#39;s ophalen vanuit de gebruikersinterface van het Platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van de segmenten die u wilt activeren voor het geselecteerde doel. |
-| <ul><li>`exportId1`</li></ul> | De id die wordt geretourneerd in het antwoord van de [segmentexport](../../segmentation/api/export-jobs.md#retrieve-list) taak. Zie [Stap 4: Vraag de meest recente segment-exporttaak-id aan](#segment-export-id) voor instructies over hoe u deze id kunt vinden. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u het publiek wilt activeren. U kunt deze id&#39;s ophalen vanuit de gebruikersinterface van het Platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van het publiek dat u wilt activeren naar het geselecteerde doel. |
+| <ul><li>`exportId1`</li></ul> | De id die wordt geretourneerd in het antwoord van de [doelgroep exporteren](../../segmentation/api/export-jobs.md#retrieve-list) taak. Zie [Stap 4: De meest recente gebruikers-id voor exporttaken ophalen](#segment-export-id) voor instructies over hoe u deze id kunt vinden. |
 
 {style="table-layout:auto"}
 
@@ -227,8 +227,8 @@ Een geslaagde reactie retourneert HTTP-status 200.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segment` | De id van het geactiveerde segment. |
-| `order` | De id van het doel waarop het segment is geactiveerd. |
+| `segment` | De id van het geactiveerde publiek. |
+| `order` | De id van het doel waarop het publiek is geactiveerd. |
 | `statusURL` | De status-URL van de activeringsstroom. U kunt de voortgang van de flow volgen met de [Flow Service-API](../../sources/tutorials/api/monitor.md). |
 
 {style="table-layout:auto"}
@@ -243,8 +243,8 @@ Wanneer u de API voor ad-hocactivering gebruikt, kunt u foutberichten tegenkomen
 
 | Foutbericht | Resolutie |
 |---------|----------|
-| Reeds lopend voor segment `segment ID` voor bestelling `dataflow ID` met run-id `flow run ID` | Dit foutbericht geeft aan dat momenteel een ad-hocactiveringsstroom wordt uitgevoerd voor een segment. Wacht tot de taak is voltooid voordat u de activeringstaak opnieuw start. |
-| Segmenten `<segment name>` maakt geen deel uit van deze gegevensstroom of van het planningsbereik! | Dit foutbericht geeft aan dat de segmenten die u hebt geselecteerd om te activeren, niet zijn toegewezen aan de gegevensstroom of dat het activeringsschema voor de segmenten is verlopen of nog niet is gestart. Controleer of het segment inderdaad is toegewezen aan de dataflow en controleer of het schema voor segmentactivering overlapt met de huidige datum. |
+| Uitvoeren is al gestart voor publiek `segment ID` voor bestelling `dataflow ID` met run-id `flow run ID` | Dit foutbericht geeft aan dat er momenteel een ad-hocactiveringsstroom actief is voor een publiek. Wacht tot de taak is voltooid voordat u de activeringstaak opnieuw start. |
+| Segmenten `<segment name>` maakt geen deel uit van deze gegevensstroom of van het planningsbereik! | Dit foutbericht geeft aan dat het publiek dat u hebt geselecteerd om te activeren, niet is toegewezen aan de gegevensstroom of dat het activeringsschema dat voor het publiek is ingesteld, is verlopen of nog niet is gestart. Controleer of het publiek inderdaad is toegewezen aan de dataflow en controleer of het activeringsschema voor het publiek de huidige datum overlapt. |
 
 ## Verwante informatie {#related-information}
 

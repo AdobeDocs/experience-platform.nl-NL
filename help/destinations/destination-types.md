@@ -3,7 +3,7 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Tot slot kunnen de verbindingen ook tussen openbare bestemmingen beschikbaar ove
 
 ## Verbindingen {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, en **[!DNL Edge Personalization]** doelen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om de [Klantprofiel in realtime](../profile/home.md)segmentatie toepassen en segmenten en gekwalificeerde profielen exporteren naar bestemmingen.
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, en **[!DNL Edge Personalization]** doelen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om de [Klantprofiel in realtime](../profile/home.md), segmentatie toe te passen, en publiek en gekwalificeerde profielen naar bestemmingen uit te voeren.
 
 ## Profielexportdoelen {#profile-export}
 
@@ -41,7 +41,7 @@ Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als prim
 
 Gebruik gegevensconnectors voor bedrijfsdoelgegevens om Adobe Real-time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
 
-Deze doelen ontvangen segment- en profielgegevens als gegevensstromen van Experience Platforms.
+Deze doelen ontvangen publiek- en profielgegevens als gegevensstromen van Experience Platforms.
 
 De bestemmingen van de onderneming omvatten:
 
@@ -53,9 +53,9 @@ De bestemmingen van de onderneming omvatten:
 
 Bestandsgebaseerde doelen ontvangen `.csv` bestanden met profielen en/of kenmerken. [Amazon S3](catalog/cloud-storage/amazon-s3.md) Dit is een voorbeeld van een bestemming waar u bestanden kunt exporteren die profielen bevatten.
 
-## Streaming segment exportdoelen {#streaming-destinations}
+## Streaming doelpubliek exporteren {#streaming-destinations}
 
-De de uitvoerbestemmingen van het segment ontvangen Experience Platform segmentgegevens. Deze bestemmingen gebruiken segment IDs of gebruiker IDs. Reclame en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [Facebook](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen .
+De de uitvoerbestemmingen van het publiek van het publiek ontvangen de gegevens van het Experience Platform. Deze doelen gebruiken gebruikers-id&#39;s of gebruikers-id&#39;s. Reclame en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [Facebook](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen .
 
 ## Edge-verpersoonlijkingsdoelen {#edge-personalization-destinations}
 
@@ -63,7 +63,7 @@ De het verpersoonlijkingsbestemmingen van de rand in Experience Platform omvatte
 
 Meer informatie over hoe [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## Exporteren van profielen en segmentexportdoelen - video-overzicht {#video}
+## Exporteren van profielen en doelgroepen - video-overzicht {#video}
 
 In de onderstaande video worden de bijzonderheden van de twee soorten doelen uitgelegd:
 
@@ -91,7 +91,7 @@ Met uitbreidingen worden onbewerkte gebeurtenisgegevens doorgestuurd naar versch
 
 Als een markeerteken kunt u een combinatie van verbindingen en extensies gebruiken om uw gebruiksproblemen aan te pakken.
 
-Verbindingen zijn handig wanneer u een volledig gecentraliseerd klantprofiel of een klantensegment voor activering wilt gebruiken. Gebruik bijvoorbeeld verbindingen als u gedragsgegevens van een analysesysteem met geüploade CRM-gegevens samenvoegt om een gebruiker voor een bepaald segment te kwalificeren voordat u een gepersonaliseerd bericht aan die gebruiker afgeeft.
+Verbindingen zijn nuttig wanneer het noodzakelijk is om een volledig gecentraliseerd klantprofiel of een klantenpubliek voor activering te gebruiken. Gebruik bijvoorbeeld verbindingen als u gedragsgegevens van een analysesysteem met geüploade CRM-gegevens samenvoegt om een gebruiker voor een bepaald publiek te kwalificeren voordat u een gepersonaliseerd bericht aan die gebruiker afgeeft.
 
 Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeling te activeren of om segmentatie uit te voeren in een externe omgeving. Bijvoorbeeld, als de gedragsgegevens aan een extern systeem moeten worden door:sturen zonder aan andere gegevensbronnen op dossier voor een bepaalde gebruiker worden aangesloten.
 

@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;api salesforce mark
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 877bf4886e563e8a571f067c06107776a0c81d5d
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '2819'
+source-wordcount: '2817'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het [!DNL (API) Salesforce Marke
 
 ### E-mails verzenden naar contactpersonen voor marketingcampagnes {#use-case-send-emails}
 
-De verkoopafdeling van een platform van de huishuur wil een marketing e-mail aan een gericht klantenpubliek uitzenden. Het marketing team van het platform kan nieuwe contacten toevoegen/bestaande contacten bijwerken *(en hun e-mailadres)* door Adobe Experience Platform, bouwt segmenten van hun eigen off-line gegevens, en verzendt deze segmenten naar [!DNL Salesforce Marketing Cloud], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
+De verkoopafdeling van een platform van de huishuur wil een marketing e-mail aan een gericht klantenpubliek uitzenden. Het marketing team van het platform kan nieuwe contacten toevoegen/bestaande contacten bijwerken *(en hun e-mailadres)* door Adobe Experience Platform, bouwt publiek van hun eigen off-line gegevens en verzendt deze publiek naar [!DNL Salesforce Marketing Cloud], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
 
 ## Vereisten {#prerequisites}
 
@@ -52,11 +52,11 @@ Uitstrekken tot [[!DNL Salesforce] Ondersteuning](https://www.salesforce.com/com
 
 #### Kenmerken maken binnen [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
-Bij het activeren van segmenten op de [!DNL (API) Salesforce Marketing Cloud] doel, moet u een waarde in invoeren **[!UICONTROL Mapping ID]** veld voor elk geactiveerd segment, in het **[Segmentatieschema](#schedule-segment-export-example)** stap.
+Wanneer het publiek wordt geactiveerd naar de [!DNL (API) Salesforce Marketing Cloud] doel, moet u een waarde in invoeren **[!UICONTROL Mapping ID]** veld voor elk geactiveerd publiek, in de **[Publiek schema](#schedule-segment-export-example)** stap.
 
-[!DNL Salesforce] vereist deze waarde om segmenten die vanuit het Experience Platform binnenkomen correct te lezen en te interpreteren en hun segmentstatus binnen bij te werken [!DNL Salesforce Marketing Cloud]. Raadpleeg de documentatie bij het Experience Platform voor [Segment Membership Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op segmentstatussen nodig hebt.
+[!DNL Salesforce] vereist deze waarde om het publiek dat vanuit het Experience Platform binnenkomt, correct te lezen en te interpreteren en zijn publieksstatus binnen bij te werken [!DNL Salesforce Marketing Cloud]. Raadpleeg de documentatie bij het Experience Platform voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
 
-Voor elk segment dat u activeert van Platform tot [!DNL Salesforce Marketing Cloud]moet u een kenmerk van het type maken `Text` binnen [!DNL Salesforce]. Gebruik de [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] om kenmerken te maken. De namen van kenmerkvelden worden gebruikt voor de [!DNL (API) Salesforce Marketing Cloud] doelveld en moet worden gemaakt onder het `[!DNL Email Demographics system attribute-set]`. U kunt het veldteken definiëren met maximaal 4000 tekens, afhankelijk van uw zakelijke vereisten. Zie de [!DNL Salesforce Marketing Cloud] [Gegevenstypen gegevensextensies](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) Documentatiepagina voor aanvullende informatie over kenmerktypen.
+Voor elk publiek dat u activeert van Platform tot [!DNL Salesforce Marketing Cloud]moet u een kenmerk van het type maken `Text` binnen [!DNL Salesforce]. Gebruik de [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] om kenmerken te maken. De namen van kenmerkvelden worden gebruikt voor de [!DNL (API) Salesforce Marketing Cloud] doelveld en moet worden gemaakt onder het `[!DNL Email Demographics system attribute-set]`. U kunt het veldteken definiëren met maximaal 4000 tekens, afhankelijk van uw zakelijke vereisten. Zie de [!DNL Salesforce Marketing Cloud] [Gegevenstypen gegevensextensies](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) Documentatiepagina voor aanvullende informatie over kenmerktypen.
 
 Zie de [!DNL Salesforce Marketing Cloud] documentatie aan [kenmerken maken](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) als u richtlijnen nodig hebt voor het maken van kenmerken.
 
@@ -68,11 +68,11 @@ Een weergave van de [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] 
 
 De [!DNL (API) Salesforce Marketing Cloud] doel gebruikt [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) om de attributen en hun Attribuut-Reeksen dynamisch terug te winnen die binnen worden bepaald [!DNL Salesforce Marketing Cloud].
 
-Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** selectievenster wanneer u de [toewijzing](#mapping-considerations-example) in de workflow naar [segmenten activeren naar het doel](#activate). Let op: alleen toewijzingen voor de kenmerken die zijn gedefinieerd in het dialoogvenster [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute-set worden ondersteund.
+Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** selectievenster wanneer u de [toewijzing](#mapping-considerations-example) in de workflow naar [publiek naar doel activeren](#activate). Let op: alleen toewijzingen voor de kenmerken die zijn gedefinieerd in het dialoogvenster [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute-set worden ondersteund.
 
 >[!IMPORTANT]
 >
->Within [!DNL Salesforce Marketing Cloud]moet u kenmerken maken met een **[!UICONTROL FIELD NAME]** die exact overeenkomt met de waarde die is opgegeven binnen **[!UICONTROL Mapping ID]** voor elk geactiveerd Platform. In de onderstaande schermafbeelding ziet u bijvoorbeeld een kenmerk met de naam `salesforce_mc_segment_1`. Wanneer het activeren van een segment aan deze bestemming, voeg toe `salesforce_mc_segment_1` als **[!UICONTROL Mapping ID]** om segmentpubliek van Experience Platform in deze eigenschap te bevolken.
+>Within [!DNL Salesforce Marketing Cloud]moet u kenmerken maken met een **[!UICONTROL FIELD NAME]** die exact overeenkomt met de waarde die is opgegeven binnen **[!UICONTROL Mapping ID]** voor elk geactiveerd Platform. In de onderstaande schermafbeelding ziet u bijvoorbeeld een kenmerk met de naam `salesforce_mc_segment_1`. Wanneer u een publiek activeert naar deze bestemming, voegt u `salesforce_mc_segment_1` als **[!UICONTROL Mapping ID]** om het publiek te vullen van Experience Platform in dit kenmerk.
 
 Een voorbeeld van het maken van kenmerken in [!DNL Salesforce Marketing Cloud], wordt hieronder weergegeven:
 ![Schermafbeelding van de Salesforce-Marketing Cloud met een kenmerk.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
@@ -80,9 +80,8 @@ Een voorbeeld van het maken van kenmerken in [!DNL Salesforce Marketing Cloud], 
 >[!TIP]
 >
 >* Neem bij het maken van het kenmerk geen spatietekens op in de veldnaam. Gebruik in plaats daarvan het onderstrepingsteken `(_)` als scheidingsteken.
->* Een onderscheid maken tussen kenmerken die worden gebruikt voor Platform-segmenten en andere kenmerken binnen [!DNL Salesforce Marketing Cloud]kunt u een herkenbaar voor- of achtervoegsel opnemen voor de kenmerken die worden gebruikt voor Adobe-segmenten. In plaats van `test_segment`, gebruik `Adobe_test_segment` of `test_segment_Adobe`.
->* Als u al andere kenmerken hebt gemaakt in [!DNL Salesforce Marketing Cloud], kunt u de zelfde naam gebruiken zoals het segment van het Platform, om het segment in gemakkelijk te identificeren [!DNL Salesforce Marketing Cloud].
-
+>* Een onderscheid maken tussen kenmerken die worden gebruikt voor het publiek in het Platform en andere kenmerken binnen [!DNL Salesforce Marketing Cloud]kunt u een herkenbaar voor- of achtervoegsel opnemen voor de kenmerken die worden gebruikt voor Adobe-segmenten. In plaats van `test_segment`, gebruik `Adobe_test_segment` of `test_segment_Adobe`.
+>* Als u al andere kenmerken hebt gemaakt in [!DNL Salesforce Marketing Cloud], kunt u de zelfde naam gebruiken zoals het segment van het Platform, om het publiek binnen gemakkelijk te identificeren [!DNL Salesforce Marketing Cloud].
 
 #### Gebruikersrollen en machtigingen toewijzen binnen [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
 
@@ -122,7 +121,7 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL (API) Sales
    * Zie de [!DNL Salesforce] [documentatie](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&amp;type=5) voor aanvullende richtsnoeren.
    * Als u de limiet hebt bereikt voor *aangepaste velden toegestaan per object* binnen [!DNL Salesforce Marketing Cloud] u zult moeten
       * Oudere kenmerken verwijderen voordat u nieuwe kenmerken toevoegt in [!DNL Salesforce Marketing Cloud].
-      * Werk of verwijder om het even welke geactiveerde segmenten in de bestemmingen van het Platform die deze oudere attributennamen als waarde gebruiken voor **[!UICONTROL Mapping ID]** tijdens de [segment plannen](#schedule-segment-export-example) stap.
+      * Werk of verwijder om het even welk geactiveerd publiek in de bestemmingen van het Platform bij die deze oudere attributennamen als waarde gebruiken voor **[!UICONTROL Mapping ID]** tijdens de [publieksplanning](#schedule-segment-export-example) stap.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -138,8 +137,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Salesforce Marketing Cloud] wordt bijgewerkt met de corresponderende segmentstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [segment plannen](#schedule-segment-export-example) stap.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Salesforce Marketing Cloud] wordt bijgewerkt met de corresponderende publieksstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.</li></ul> |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -181,13 +180,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -202,37 +201,37 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL (API) Salesforce Marketi
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
    ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform voor Nieuwe toewijzing toevoegen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en selecteer een kenmerk in het menu `Email Demographics` worden weergegeven. De [!DNL (API) Salesforce Marketing Cloud] doel gebruikt [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) om de attributen en hun kenmerkreeksen dynamisch terug te winnen die binnen worden bepaald [!DNL Salesforce Marketing Cloud]. Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** popup wanneer u opstelling [toewijzing](#mapping-considerations-example) in de [segmenten activeren naar workflow](#activate). Opmerking: alleen toewijzingen voor de kenmerken die zijn gedefinieerd in het dialoogvenster [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` kenmerkenset wordt ondersteund.
+1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** en selecteer een kenmerk in het menu `Email Demographics` worden weergegeven. De [!DNL (API) Salesforce Marketing Cloud] doel gebruikt [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) om de attributen en hun kenmerkreeksen dynamisch terug te winnen die binnen worden bepaald [!DNL Salesforce Marketing Cloud]. Deze worden weergegeven in het dialoogvenster **[!UICONTROL Target field]** popup wanneer u opstelling [toewijzing](#mapping-considerations-example) in de [publiek activeren, workflow](#activate). Opmerking: alleen toewijzingen voor de kenmerken die zijn gedefinieerd in het dialoogvenster [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` kenmerkenset wordt ondersteund.
 
    * Herhaal deze stappen om de volgende toewijzingen tussen uw XDM-profielschema en [!DNL (API) Salesforce Marketing Cloud]: |Bronveld|Doelveld| Verplicht| |—|—|—| |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |\
-      |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
+     |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
 |`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
-      ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform met doeltoewijzingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
+     ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform met doeltoewijzingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-### De segmentuitvoer van het programma en voorbeeld {#schedule-segment-export-example}
+### Het publiek van het programma uitvoeren en voorbeeld {#schedule-segment-export-example}
 
-Bij het uitvoeren van de [Segmentexport plannen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de segmenten van het Platform aan de [attributes](#prerequisites-attribute) in [!DNL Salesforce Marketing Cloud].
+Bij het uitvoeren van de [Het exporteren van publiek plannen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u het publiek van het Platform manueel in kaart brengen aan [attributes](#prerequisites-attribute) in [!DNL Salesforce Marketing Cloud].
 
 Om dit te doen, selecteer elk segment, dan ga naam van de attributen van in [!DNL Salesforce Marketing Cloud] in de [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** veld. Zie de [Kenmerk maken binnen [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) voor begeleiding en beste praktijken bij het maken van kenmerken in [!DNL Salesforce Marketing Cloud].
 
-Als uw [!DNL Salesforce Marketing Cloud] kenmerk is `salesforce_mc_segment_1`geeft u deze waarde op in het dialoogvenster [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** om segmentpubliek van Experience Platform in deze eigenschap te bevolken.
+Als uw [!DNL Salesforce Marketing Cloud] kenmerk is `salesforce_mc_segment_1`geeft u deze waarde op in het dialoogvenster [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** om het publiek te vullen van Experience Platform in dit kenmerk.
 
 Een voorbeeldkenmerk van [!DNL Salesforce Marketing Cloud] wordt hieronder weergegeven:
 ![Het schermschot van de Marketing Cloud van Salesforce  UI die een attribuut toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 Een voorbeeld dat de plaats van wijst [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** wordt hieronder weergegeven:
-![Het het schermschot van het Platform UI die de segmentuitvoer van het Programma toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
+![Voorbeeld van een schermafbeelding van de gebruikersinterface van het Platform met het exporteren van het planningspubliek.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 Zoals getoond de [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** moet exact overeenkomen met de waarde die is opgegeven binnen [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]**.
 
 Herhaal deze sectie voor elk geactiveerd segment van het Platform.
 
-Afhankelijk van uw gebruikscase kunnen alle geactiveerde segmenten worden toegewezen aan hetzelfde [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** of naar een andere **[!UICONTROL FIELD NAME]** in [!DNL (API) Salesforce Marketing Cloud]. Een typisch voorbeeld op basis van de hierboven getoonde afbeelding zou kunnen zijn.
-| [!DNL (API) Salesforce Marketing Cloud] segmentnaam | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** | | — | — | — | | Salesforce mc segment 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` | | Salesforce mc Segment 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+Afhankelijk van uw gebruikscase kunnen alle geactiveerde doelgroepen aan hetzelfde worden toegewezen [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** of naar een andere **[!UICONTROL FIELD NAME]** in [!DNL (API) Salesforce Marketing Cloud]. Een typisch voorbeeld op basis van de hierboven getoonde afbeelding zou kunnen zijn.
+| [!DNL (API) Salesforce Marketing Cloud] segmentnaam | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** | | — | — | — | | Salesforce mc-publiek 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` | | Salesforce mc-publiek 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 
 ## Gegevens exporteren valideren {#exported-data}
 
@@ -244,17 +243,17 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 1. Selecteer het doel en controleer of de status **[!UICONTROL enabled]**.
    ![Platform UI screenshot die de Looppas van Doelen Dataflow toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
-1. Naar de **[!DNL Activation data]** selecteert u vervolgens een segmentnaam.
+1. Naar de **[!DNL Activation data]** en selecteert u vervolgens een publieksnaam.
    ![Het het schermschot van het Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
 
-1. Controleer de samenvatting van het segment en zorg ervoor dat de telling van profielen aan de telling beantwoordt die binnen het segment wordt gecreeerd.
+1. Controleer het publieksoverzicht en zorg ervoor dat de telling van profielen aan de telling beantwoordt die binnen het segment wordt gecreeerd.
    ![Platform UI-screenshot voorbeeld met segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
-1. Aanmelden bij de [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Navigeer vervolgens naar de **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** en controleer of de profielen van het segment zijn toegevoegd.
+1. Aanmelden bij de [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Navigeer vervolgens naar de **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** en controleer of de profielen van het publiek zijn toegevoegd.
    ![De het schermschot van de Marketing Cloud van Salesforce UI die de pagina van Contacten met profielen toont in het segment worden gebruikt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
-1. Als u wilt controleren of profielen zijn bijgewerkt, navigeert u naar de **[!UICONTROL Email]** en controleert u of de kenmerkwaarden voor het profiel van het segment zijn bijgewerkt. Indien succesvol, kunt u zien dat elk segmentstatus in [!DNL Salesforce Marketing Cloud] werd bijgewerkt met de overeenkomstige segmentstatus van Platform, gebaseerd op **[!UICONTROL Mapping ID]** de waarde die in de [segment plannen](#schedule-segment-export-example) stap.
-   ![De het schermschot van de Marketing Cloud van Salesforce UI die de geselecteerde pagina van E-mail van Contacten met bijgewerkte segmentstatussen toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
+1. Als u wilt controleren of profielen zijn bijgewerkt, navigeert u naar de **[!UICONTROL Email]** en controleert u of de kenmerkwaarden voor het profiel van de doelgroep zijn bijgewerkt. Als dit gelukt is, kunt u zien dat elke publieksstatus in [!DNL Salesforce Marketing Cloud] is bijgewerkt met de corresponderende publieksstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** de waarde die in de [publieksplanning](#schedule-segment-export-example) stap.
+   ![De het schermschot van de Marketing Cloud van Salesforce UI die de geselecteerde Pagina van Contacten e-mail met bijgewerkte publieksstatus toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -265,8 +264,7 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 ### Onbekende fouten aangetroffen tijdens het verplaatsen van gebeurtenissen naar de Salesforce-Marketing Cloud {#unknown-errors}
 
 * Bij het controleren van een gegevensstroomuitvoering kan het volgende foutbericht optreden: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-
-   ![Fout in schermopname van Platform-interface.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
+  ![Fout in schermopname van Platform-interface.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
    * Om deze fout te bevestigen, verifieer dat **[!UICONTROL Mapping ID]** die u in de activeringsworkflow aan de [!DNL (API) Salesforce Marketing Cloud] doel komt exact overeen met de naam van het kenmerk dat u hebt gemaakt in [!DNL Salesforce Marketing Cloud]. Zie de [Kenmerk maken binnen [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) voor richtsnoeren.
 
@@ -289,7 +287,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 | April 2023 | Documentatie bijwerken | <ul><li>We hebben een verklaring en een verwijzing in de [Vereisten in (API) Salesforce-Marketing Cloud](#prerequisites-destination) deel uit te roepen dat [!DNL Salesforce Marketing Cloud Engagement] is een verplicht abonnement om deze bestemming te gebruiken. In de eerder genoemde sectie wordt ten onrechte aangegeven dat gebruikers een abonnement op de Marketing Cloud nodig hebben **Account** Betrokkenheid om door te gaan.</li> <li>We hebben een sectie toegevoegd onder [voorwaarden](#prerequisites) for [rollen en machtigingen](#prerequisites-roles-permissions) aan de [!DNL Salesforce] gebruiker voor deze bestemming aan het werk. (PLATIR-26299)</li></ul> |
 | Februari 2023 | Documentatie bijwerken | We hebben de [Vereisten in (API) Salesforce-Marketing Cloud](#prerequisites-destination) om een verwijzingskoppeling op te nemen die [!DNL Salesforce Marketing Cloud Engagement] is een verplicht abonnement om deze bestemming te gebruiken. |
 | Februari 2023 | Functionaliteitsupdate | We hebben een probleem opgelost waarbij een onjuiste configuratie in de bestemming ertoe leidde dat een verkeerd gevormde JSON naar Salesforce werd gestuurd. Dit heeft ertoe geleid dat sommige gebruikers hoge aantallen identiteiten ontbrak bij activering zagen. (PLATIR-26299) |
-| Januari 2023 | Documentatie bijwerken | <ul><li>We hebben de [Vereisten in [!DNL Salesforce]](#prerequisites-destination) sectie om uit te roepen dat de attributen op moeten worden gecreeerd [!DNL Salesforce] zijde. Deze sectie bevat nu gedetailleerde instructies over hoe u dat kunt doen en aanbevolen procedures voor het benoemen van de kenmerken in [!DNL Salesforce]. (PLATIR-25602)</li><li>We hebben duidelijke instructies toegevoegd over het gebruik van de toewijzingsid voor elk geactiveerd segment in het dialoogvenster [segment plannen](#schedule-segment-export-example) stap. (PLATIR-25602)</li></ul> |
+| Januari 2023 | Documentatie bijwerken | <ul><li>We hebben de [Vereisten in [!DNL Salesforce]](#prerequisites-destination) sectie om uit te roepen dat de attributen op moeten worden gecreeerd [!DNL Salesforce] zijde. Deze sectie bevat nu gedetailleerde instructies over hoe u dat kunt doen en aanbevolen procedures voor het benoemen van de kenmerken in [!DNL Salesforce]. (PLATIR-25602)</li><li>We hebben duidelijke instructies toegevoegd over het gebruik van de toewijzings-id voor elk geactiveerd publiek in het dialoogvenster [publieksplanning](#schedule-segment-export-example) stap. (PLATIR-25602)</li></ul> |
 | Oktober 2022 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
 
 {style="table-layout:auto"}

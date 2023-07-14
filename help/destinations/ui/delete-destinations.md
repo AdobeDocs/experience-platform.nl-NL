@@ -4,7 +4,7 @@ title: Doelen verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen waarmee een bestaand doel in de gebruikersinterface van Adobe Experience Platform kan worden verwijderd
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 In de Adobe Experience Platform-gebruikersinterface kunt u bestaande verbindingen met doelen verwijderen.
 
-Als u een bestemming verwijdert, worden bestaande gegevensstromen naar die bestemming verwijderd. Alle segmenten die aan de bestemmingen worden geactiveerd die u schrapt worden unmapped alvorens dataflow wordt geschrapt.
+Als u een bestemming verwijdert, worden bestaande gegevensstromen naar die bestemming verwijderd. Alle publiek dat aan de bestemmingen wordt geactiveerd die u schrapt wordt unmapped alvorens dataflow wordt geschrapt.
 
 Er zijn twee manieren u bestemmingen van kunt schrappen [!DNL Platform] [!DNL UI]. U kunt:
 
@@ -61,11 +61,11 @@ Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina 
 
    * Als de bestemming bestaande gegevensstromen heeft, wordt u genomen aan [!UICONTROL Dataflow runs] tab.
 
-      ![Tabblad DataFlow-uitvoering](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Tabblad DataFlow-uitvoering](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Als het doel geen bestaande gegevensstromen heeft, wordt u genomen aan een lege pagina waar u het publiek kunt beginnen te activeren.
 
-      ![Doelgegevens](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![Doelgegevens](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Selecteren **[!UICONTROL Delete]** in het rechterspoor.
 

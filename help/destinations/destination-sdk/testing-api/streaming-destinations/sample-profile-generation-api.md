@@ -2,7 +2,7 @@
 description: Leer hoe u de API voor bestemmingstests kunt gebruiken om voorbeeldprofielen voor uw streamingdoel te genereren. U kunt deze gebruiken voor doeltests.
 title: Voorbeeldprofielen genereren op basis van een bronschema
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 0%
@@ -26,7 +26,6 @@ Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u k
 >* profielen genereren die moeten worden gebruikt wanneer [Een sjabloon voor berichttransformatie maken en testen](create-template.md) - door *doel-id* als een queryparameter.
 >* produceren profielen aan gebruik wanneer het maken van vraag aan [test als uw bestemming correct wordt gevormd](streaming-destination-testing-overview.md) - door *doel-instantie-id* als een queryparameter.
 
-
 U kunt steekproefprofielen produceren die op of het Adobe XDM bronschema (aan gebruik wanneer het testen van uw bestemming) worden gebaseerd, of het doelschema dat door uw bestemming (aan gebruik wanneer het ontwerpen van uw malplaatje) wordt gesteund. Om het verschil tussen Adobe XDM bronschema en doelschema te begrijpen, lees de overzichtssectie van het [Berichtindeling](../../functionality/destination-server/message-format.md) artikel.
 
 De doeleinden waarvoor de voorbeeldprofielen kunnen worden gebruikt, zijn niet onderling verwisselbaar. Profielen die zijn gegenereerd op basis van de *doel-id* kan alleen worden gebruikt om sjablonen en profielen voor berichttransformatie te maken die zijn gegenereerd op basis van de *doel-instantie-id* kan alleen worden gebruikt om het eindpunt van uw bestemming te testen.
@@ -47,10 +46,9 @@ Om identiteitskaart van een bestemmingsinstantie te krijgen, moet u een verbindi
 
 >[!IMPORTANT]
 >
->* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) en [profielen en segmenten activeren naar een doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor meer informatie .
+>* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) en [profielen en doelgroepen activeren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor meer informatie .
 > * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [bladeren door een verbinding met uw bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![UI-afbeelding voor het ophalen van bestemmings-ID](../../assets/testing-api/get-destination-instance-id.png)
-
+>![UI-afbeelding voor het ophalen van bestemmings-ID](../../assets/testing-api/get-destination-instance-id.png)
 
 **API-indeling**
 
@@ -82,11 +80,11 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal steekproefprofielen, met segmentlidmaatschap, identiteiten, en profielattributen terug die aan het bronXDM schema beantwoorden.
+Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal steekproefprofielen, met publiekslidmaatschap, identiteiten, en profielattributen terug die aan het bronXDM schema beantwoorden.
 
 >[!TIP]
 >
-> De reactie keert slechts segmentlidmaatschap, identiteiten, en profielattributen terug die in de bestemmingsinstantie worden gebruikt. Zelfs als uw bronschema andere gebieden heeft, worden deze genegeerd.
+> De reactie retourneert alleen het publiekslidmaatschap, de identiteiten en de profielkenmerken die in de doelinstantie worden gebruikt. Zelfs als uw bronschema andere gebieden heeft, worden deze genegeerd.
 
 ```json
 [
@@ -182,9 +180,9 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentMembership` | A map object that describes the individu&#39;s segment membership. Voor meer informatie over `segmentMembership`, lezen [Details segmentlidmaatschap](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | A map object that describes the person&#39;s publiek membership. Voor meer informatie over `segmentMembership`, lezen [Details publiek lidmaatschap](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
-| `xdm:status` | Een koordgebied dat erop wijst of het segmentlidmaatschap als deel van het huidige verzoek is gerealiseerd. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel is onderdeel van het segment.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
+| `xdm:status` | Een tekenreeksveld dat aangeeft of het publieklidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel is onderdeel van het segment.</li><li>`exited`: Het profiel sluit het publiek af als onderdeel van de huidige aanvraag.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, lezen [Basis van schemacompositie](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style="table-layout:auto"}
@@ -200,7 +198,6 @@ U kunt voorbeeldprofielen genereren op basis van het doelschema. U kunt dan een 
 >[!TIP]
 >
 >* De doel-id die u hier moet gebruiken, is de `instanceId` die met een bestemmingsconfiguratie beantwoordt, die wordt gecreeerd gebruikend `/destinations` eindpunt. Zie [een doelconfiguratie ophalen](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) voor meer informatie .
-
 
 **API-indeling**
 
@@ -232,7 +229,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal steekproefprofielen, met segmentlidmaatschap, identiteiten, en profielattributen terug die aan het doelXDM schema beantwoorden.
+Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal steekproefprofielen, met publiekslidmaatschap, identiteiten, en profielattributen terug die aan het doelXDM schema beantwoorden.
 
 ```json
 [

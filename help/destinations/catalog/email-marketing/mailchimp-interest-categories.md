@@ -2,9 +2,9 @@
 title: Mailchimp-rentecategorieën
 description: Mailchimp (ook wel Intuit Mailchimp genoemd) is een populair marketingplatform voor automatisering en marketing via e-mail dat door bedrijven wordt gebruikt om contactpersonen (klanten, klanten of andere belanghebbenden) te beheren en met hen te spreken via mailinglijsten en marketingcampagnes via e-mail. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
+source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2267'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 [[!DNL Mailchimp]](https://mailchimp.com) is een populair platform voor marketingautomatisering en e-mailmarketingservice dat door bedrijven wordt gebruikt om contacten te beheren en te onderhouden *(klanten, klanten of andere belanghebbenden)* het gebruiken van mailing lijsten en e-mailmarketing campagnes. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd.
 
-[!DNL Mailchimp Interest Categories] gebruik [publiek](https://mailchimp.com/help/getting-started-audience/), [groepen](https://mailchimp.com/help/getting-started-with-groups/), en rentecategorieën *(ook bekend als groepsnamen of groepstitels)*. Elk [!DNL Mailchimp] groep is een lijst van belangencategorieën. Contactpersonen zijn gekoppeld aan een belangencategorie wanneer zij zich abonneren op een of meer belangencategorieën via een aanmeldingsformulier op uw website. Binnen een publiek, kunt u de contacten in groepen ook organiseren en hen associëren met rentecategorieën, en deze kunnen dan worden gebruikt om segmenten tot stand te brengen. U kunt deze segmenten gebruiken om gerichte campagne-e-mails naar de ingetekende contacten uit te zenden.
+[!DNL Mailchimp Interest Categories] gebruik [publiek](https://mailchimp.com/help/getting-started-audience/), [groepen](https://mailchimp.com/help/getting-started-with-groups/), en rentecategorieën *(ook bekend als groepsnamen of groepstitels)*. Elk [!DNL Mailchimp] groep is een lijst van belangencategorieën. Contactpersonen zijn gekoppeld aan een belangencategorie wanneer zij zich abonneren op een of meer belangencategorieën via een aanmeldingsformulier op uw website. Binnen een publiek, kunt u de contacten in groepen ook organiseren en hen associëren met rentecategorieën, en deze kunnen dan worden gebruikt om segmenten tot stand te brengen. U kunt dit publiek gebruiken om gerichte campagnee-mails naar de geabonneerde contacten uit te zenden.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API om te maken [rentecategorieën](https://mailchimp.com/developer/marketing/api/interest-categories/) en voegt dan contacten van elk van de geselecteerde segmenten van het Platform in een overeenkomstige rentecategorie toe. U kunt **nieuwe contactpersonen toevoegen** of **de informatie over bestaande [!DNL Mailchimp] contactpersonen** vervolgens **ze toevoegen aan of verwijderen uit de gewenste groepen** binnen een bestaande [!DNL Mailchimp] het publiek na het activeren van de deelnemers in een nieuw segment. [!DNL Mailchimp Interest Groups] gebruikt de geselecteerde segmentnamen van Platform als rentecategorieën binnen [!DNL Mailchimp].
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API om te maken [rentecategorieën](https://mailchimp.com/developer/marketing/api/interest-categories/) en voegt vervolgens contacten van elk geselecteerd publiek in de Platform toe aan een corresponderende belangencategorie. U kunt **nieuwe contactpersonen toevoegen** of **de informatie over bestaande [!DNL Mailchimp] contactpersonen** vervolgens **ze toevoegen aan of verwijderen uit de gewenste groepen** binnen een bestaande [!DNL Mailchimp] het publiek na het activeren van de deelnemers in een nieuw segment. [!DNL Mailchimp Interest Groups] gebruikt de geselecteerde publieksnamen van het Platform als belangencategorieën binnen [!DNL Mailchimp].
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -27,7 +27,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Mailchimp Interest Cat
 
 ### E-mails verzenden naar contactpersonen voor marketingcampagnes {#use-case-send-emails}
 
-De verkoopafdeling van een website over sportartikelen wil een marketingcampagne per e-mail uitzenden naar een lijst met contactpersonen die zichzelf hebben geïdentificeerd als geïnteresseerd in voetbal. De lijsten van contacten worden gescheiden als partijen in de gegevensuitvoer die van het ontwikkelingsteam van de website wordt ontvangen en moeten daarom worden gevolgd. Het team identificeert een bestaand [!DNL Mailchimp] publiek en begint de segmenten van het Experience Platform te bouwen waarin de contacten van elke lijst worden toegevoegd. Na het verzenden van deze segmenten naar [!DNL Mailchimp Interest Categories], als er geen contactpersonen aanwezig zijn in de geselecteerde [!DNL Mailchimp] publiek worden zij toegevoegd aan een groep met de segmentnaam die het contact tot behoort. Als om het even welke contacten reeds in [!DNL Mailchimp] publiek of groep, dan wordt hun informatie bijgewerkt. Zodra de gegevens zijn verzonden naar [!DNL Mailchimp Interest Categories], kan het verkoopteam de marketingcampagne e-mail naar de belangengroep van de voetbal binnen [!DNL Mailchimp] publiek.
+De verkoopafdeling van een website over sportartikelen wil een marketingcampagne per e-mail uitzenden naar een lijst met contactpersonen die zichzelf hebben geïdentificeerd als geïnteresseerd in voetbal. De lijsten van contacten worden gescheiden als partijen in de gegevensuitvoer die van het ontwikkelingsteam van de website wordt ontvangen en moeten daarom worden gevolgd. Het team identificeert een bestaand [!DNL Mailchimp] publiek en begint het publiek van het Experience Platform te bouwen waarin de contacten van elke lijst worden toegevoegd. Na verzending van deze soorten publiek naar [!DNL Mailchimp Interest Categories], als er geen contactpersonen aanwezig zijn in de geselecteerde [!DNL Mailchimp] publiek wordt zij toegevoegd aan een groep met de publieksnaam die de contact tot behoort. Als om het even welke contacten reeds in [!DNL Mailchimp] publiek of groep, dan wordt hun informatie bijgewerkt. Zodra de gegevens zijn verzonden naar [!DNL Mailchimp Interest Categories], kan het verkoopteam de marketingcampagne e-mail naar de belangengroep van de voetbal binnen [!DNL Mailchimp] publiek.
 
 ## Vereisten {#prerequisites}
 
@@ -91,8 +91,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd segment in Platform, het overeenkomstige [!DNL Mailchimp Interest Categories] de segmentstatus wordt bijgewerkt met zijn segmentstatus van Platform.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in het Platform, het overeenkomstige [!DNL Mailchimp Interest Categories] de segmentstatus wordt bijgewerkt met de publieksstatus van het Platform.</li></ul> |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -147,13 +147,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -195,8 +195,8 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 
 ![Brievenchimp UI het schermschot die de de groepspagina van het Publiek toont.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* Selecteer de Groep en controleer als de geselecteerde segmenten als categorieën met de segmentnaam van Platform worden gecreeerd, die door een automatisch geproduceerd achtervoegsel kan worden gevolgd.
-   * Dit doel gebruikt de namen van de geselecteerde segmenten om de rentecategorie tot stand te brengen door [[!DNL Mailchimp] Interessencategorie-API toevoegen](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Als u een nieuw doel maakt en dezelfde segmenten weer activeert, [!DNL Mailchimp] Hiermee voegt u een achtervoegsel toe om onderscheid te maken tussen de bestaande en de nieuwe segmenten.
+* Selecteer de groep en controleer of het geselecteerde publiek is gemaakt als categorieën met de publieksnaam van het Platform, die kunnen worden gevolgd door een automatisch gegenereerd achtervoegsel.
+   * Dit doel gebruikt de namen van de geselecteerde segmenten om de rentecategorie tot stand te brengen door [[!DNL Mailchimp] Interessencategorie-API toevoegen](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Als u een nieuwe bestemming maakt en hetzelfde publiek weer activeert, [!DNL Mailchimp] Hiermee voegt u een achtervoegsel toe om onderscheid te maken tussen de bestaande en de nieuwe segmenten.
 * Contacten waarvan de e-mails niet in de groep bestonden, worden toegevoegd aan de nieuwe categorie.
 * Voor contacten die reeds binnen de groep bestaan, worden de gegevens van het attributengebied bijgewerkt, en het contact toegevoegd aan de pas gecreëerde categorie.
 

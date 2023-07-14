@@ -3,7 +3,7 @@ keywords: tagextensies;tagextensie;lanceerdoelen; platformlabelextensies;platfor
 title: Tagextensies in Adobe Experience Platform
 description: Adobe Experience Platform biedt de volgende generatie mogelijkheden voor tagbeheer van Adobe. Platform biedt u een eenvoudige manier om alle analyses, marketing en reclametags te implementeren en te beheren die nodig zijn om de ervaring van klanten te verbeteren.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Zie de volgende bronnen voor een inleiding op tags:
 
 ## Hoe te om markeringsuitbreidingen in de interface van het Platform te vinden {#how-to-find-extensions-in-interface}
 
-Blader naar de extensies in de interface Platform om de extensies te zoeken **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** en selecteert u **[!UICONTROL Extensions]** in de **[!UICONTROL Types]** filter.
+Blader naar de extensies in de interface Platform om deze te zoeken **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** en selecteert u **[!UICONTROL Extensions]** in de **[!UICONTROL Types]** filter.
 
 ![Extensies, filter in de interface](../../assets/catalog/launch-extensions/filter.png)
 
@@ -37,7 +37,7 @@ Het is belangrijk om tussen markering en gebeurtenis te onderscheiden die uitbre
 
 Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
 
-**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export audiences and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
 
 ![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 De mogelijkheden voor tags van Platform zijn gratis voor bestaande Experience Cloud-klanten. Het systeem vereenvoudigt de implementatie van tags op uw website via eenvoudig te gebruiken extensies die u kunt installeren, configureren, bijwerken en verwijderen. Met labels blijft er een kleine voetafdruk op uw website staan, zodat uw pagina&#39;s snel kunnen worden geladen.
 
-Hoewel u segmenten niet kunt activeren om extensies te labelen, kunt u regels instellen om alleen gebeurtenisgegevens in bepaalde situaties door te sturen. Met deze krachtige functionaliteit kunt u gebeurtenisgegevens alleen in bepaalde situaties doorsturen, in tegenstelling tot het verzenden van gebeurtenisgegevens voor elke interactie. Lees voor meer informatie over de regels in het dialoogvenster [codedocumentatie](../../../tags/ui/managing-resources/rules.md).
+Hoewel u het publiek niet kunt activeren om extensies te labelen, kunt u regels instellen om alleen gebeurtenisgegevens in bepaalde situaties door te sturen. Met deze krachtige functionaliteit kunt u gebeurtenisgegevens alleen in bepaalde situaties doorsturen, in tegenstelling tot het verzenden van gebeurtenisgegevens voor elke interactie. Lees voor meer informatie over de regels in het dialoogvenster [codedocumentatie](../../../tags/ui/managing-resources/rules.md).
 
 ## Voorbeeld van gebruik voor extensies {#extensions-use-cases}
 

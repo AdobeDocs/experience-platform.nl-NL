@@ -3,9 +3,9 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Airship] is het toonaangevende Platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichanale berichten aan uw gebruikers kunt leveren.
 
-Deze integratie geeft Adobe Experience Platform-segmentgegevens door in [!DNL Airship] als [Tags](https://docs.airship.com/guides/audience/tags/) voor aanwijzen of activeren.
+Deze integratie geeft Adobe Experience Platform-publieksgegevens door [!DNL Airship] als [Tags](https://docs.airship.com/guides/audience/tags/) voor aanwijzen of activeren.
 
 Meer informatie over [!DNL Airship], zie de [Airship Docs](https://docs.airship.com).
 
@@ -27,7 +27,7 @@ Meer informatie over [!DNL Airship], zie de [Airship Docs](https://docs.airship.
 
 ## Vereisten
 
-Voordat u uw Adobe Experience Platform-segmenten kunt verzenden naar [!DNL Airship]moet u:
+Voordat je een Adobe Experience Platform-publiek kunt sturen naar [!DNL Airship]moet u:
 
 * Een taggroep maken in uw [!DNL Airship] project.
 * Een token voor toonder genereren voor verificatie.
@@ -36,20 +36,32 @@ Voordat u uw Adobe Experience Platform-segmenten kunt verzenden naar [!DNL Airsh
 > 
 >Een [!DNL Airship] account via [deze link](https://go.airship.eu/accounts/register/plan/starter/) als u dat nog niet hebt gedaan.
 
+## Ondersteuning voor extern publiek {#external-audiences-support}
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het externe publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type extern publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s die worden gebruikt in de bestemming Airship Tags. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s die worden gebruikt in de bestemming Airship Tags. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Taggroepen
 
-Het concept van segmenten in het Adobe Experience Platform lijkt op [Tags](https://docs.airship.com/guides/audience/tags/) in het luchtschip, met lichte verschillen in uitvoering. Deze integratie brengt de status van de gebruiker in kaart [lidmaatschap in een segment van de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) de aanwezigheid of het ontbreken van een [!DNL Airship] tag. Bijvoorbeeld in een segment van het Platform waar `xdm:status` wijzigingen in `realized`, wordt de tag toegevoegd aan de [!DNL Airship] kanaal of benoemde gebruiker wordt dit profiel toegewezen aan. Als de `xdm:status` wijzigingen in `exited`, wordt de tag verwijderd.
+Het concept publiek in het Adobe Experience Platform is vergelijkbaar met [Tags](https://docs.airship.com/guides/audience/tags/) in het luchtschip, met lichte verschillen in uitvoering. Deze integratie brengt de status van de gebruiker in kaart [lidmaatschap in een segment van de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) de aanwezigheid of het ontbreken van een [!DNL Airship] tag. Bijvoorbeeld in een publiek van het Platform waar `xdm:status` wijzigingen in `realized`, wordt de tag toegevoegd aan de [!DNL Airship] kanaal of benoemde gebruiker wordt dit profiel toegewezen aan. Als de `xdm:status` wijzigingen in `exited`, wordt de tag verwijderd.
 
 Als u deze integratie wilt inschakelen, maakt u een *taggroep* in [!DNL Airship] benoemd `adobe-segments`.
 
@@ -75,13 +87,13 @@ Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Airship Tags] doel, hi
 
 ### Hoofdletters gebruiken #1
 
-De detailhandelaars of de entertainmentplatforms kunnen gebruikersprofielen op hun loyaliteitklanten tot stand brengen en die segmenten overgaan in [!DNL Airship] voor berichten die gericht zijn op mobiele campagnes.
+De detailhandelaars of vermaak platforms kunnen gebruikersprofielen op hun loyaliteitklanten tot stand brengen en dat publiek overgaan in [!DNL Airship] voor berichten die gericht zijn op mobiele campagnes.
 
 ### Hoofdletters gebruiken #2
 
-U kunt een-op-een berichten in real-time activeren wanneer gebruikers binnen of buiten specifieke segmenten in Adobe Experience Platform vallen.
+U kunt een-op-een berichten in real-time activeren wanneer gebruikers binnen of buiten een bepaald publiek in Adobe Experience Platform vallen.
 
-Een detailhandelaar stelt bijvoorbeeld een merkspecifiek segment voor jeans in Platform in. Deze detailhandelaar kan nu een mobiel bericht activeren zodra iemand zijn jeans-voorkeur op een bepaald merk instelt.
+Een detailhandelaar stelt bijvoorbeeld een specifiek publiek voor jeans in Platform in. Deze detailhandelaar kan nu een mobiel bericht activeren zodra iemand zijn jeans-voorkeur op een bepaald merk instelt.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -111,13 +123,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 

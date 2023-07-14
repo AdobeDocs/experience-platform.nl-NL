@@ -2,7 +2,7 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een geproduceerde bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -22,7 +22,6 @@ ht-degree: 0%
 >* Als het team van de Adobe u vraagt om het even welke updates aan uw configuraties na uw aanvankelijke voorlegging aan te brengen, moet u een ander bestemmingspublicatieverzoek voorleggen nadat u de updates aanbrengt.
 >
 >* Zelfs nadat uw bestemming in de catalogus van het Experience Platform levend is, als u om het even welke updates aan uw configuraties moet maken, moet u een nieuw doel voorleggen publicatieverzoek voor de updates die in de configuraties moeten worden weerspiegeld.
-
 
 Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Platform doelen](/help/destinations/catalog/overview.md), moet u Adobe bepaalde informatie geven over de bestemming en de uitgevoerde tests om ervoor te zorgen dat gebruikers de best mogelijke ervaring hebben met het activeren van gegevens op uw platform.
 
@@ -46,7 +45,7 @@ In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
 Verstrek een beschrijving van de gebruiksgevallen die uw bestemming voor klanten van het Experience Platform oplost. Uw beschrijvingen kunnen gelijkaardig zijn aan gebruiksgevallen van bestaande partners:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen kiezen met e-mailadressen die in VMG (Verizon Media) zijn uitgeschakeld, zodat ze snel een nieuw segment kunnen maken en de gewenste doelgroep kunnen duwen met de bijna-real-time API van VMG.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen aanwijzen met e-mailadressen die zijn uitgeschakeld in VMG (Verizon Media), zodat ze snel een nieuw publiek kunnen maken en de gewenste doelgroep kunnen duwen met de bijna-real-time API van VMG.
 
 ## Reden voor update {#reason-for-update}
 

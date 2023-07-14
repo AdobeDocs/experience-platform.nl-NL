@@ -2,7 +2,7 @@
 description: Deze pagina verklaart hoe te om het /testing/destinationInstance API eindpunt te gebruiken om de volledige details van uw testende resultaten te bekijken. Dit API eindpunt keert het zelfde resultaat terug zoals u zou verkrijgen wanneer het gebruiken van de Dienst API van de Stroom om dataflows te controleren.
 title: Gedetailleerde activeringsresultaten weergeven
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 1%
@@ -35,12 +35,12 @@ Voordat u de `/testing/destinationInstance` aan, zorg ervoor u aan de volgende v
 * U hebt minstens één activeringsstroom voor uw bestemming in de gebruikersinterface van het Experience Platform gemaakt.
 * Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Platform UI.
 
-   ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
 * U hebt eerder [testte uw bestemmingsconfiguratie](file-based-destination-testing-api.md)en heeft een geldige API-reactie ontvangen, die een `results` eigenschap. U gebruikt dit `results` waarde om uw bestemming verder te testen.
 
 ## Gedetailleerde resultaten voor doeltests weergeven {#test-activation-results}
 
-Zodra u [gevalideerde doelconfiguratie](file-based-destination-testing-api.md), kunt u gedetailleerde activeringsresultaten bekijken door een GET-verzoek in te dienen bij de `authoring/testing/destinationInstance/` eindpunt en verstrekkend bestemmingsidentiteitskaart van de bestemmingsinstantie van de bestemming die u test, en de stroom in werking stelt IDs van de geactiveerde segmenten.
+Zodra u [gevalideerde doelconfiguratie](file-based-destination-testing-api.md), kunt u gedetailleerde activeringsresultaten bekijken door een GET-verzoek in te dienen bij de `authoring/testing/destinationInstance/` eindpunt en het verstrekken van bestemmingsidentiteitskaart van de bestemmingsinstantie van de bestemming die u test, en stroom in werking stelt IDs van het geactiveerde publiek.
 
 U kunt de volledige API-URL vinden die u moet gebruiken in het dialoogvenster `results` eigenschap geretourneerd in de [reactie van de bestemmings testende vraag](file-based-destination-testing-api.md).
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Parameters van queryreeks | Beschrijving |
 | -------- | ----------- |
-| `flowRunIds` | De flow-id&#39;s die overeenkomen met de geactiveerde segmenten. U kunt de doorloop-id&#39;s vinden in het dialoogvenster `results` eigenschap geretourneerd in de [reactie van de bestemmings testende vraag](file-based-destination-testing-api.md). |
+| `flowRunIds` | De flow-id&#39;s die overeenkomen met het geactiveerde publiek. U kunt de doorloop-id&#39;s vinden in het dialoogvenster `results` eigenschap geretourneerd in de [reactie van de bestemmings testende vraag](file-based-destination-testing-api.md). |
 
 **Verzoek**
 

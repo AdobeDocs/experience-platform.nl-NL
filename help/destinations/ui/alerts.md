@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen; waarschuwingen;doelen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-bestemmingswaarschuwingen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 0%
@@ -51,10 +51,10 @@ De waarschuwingen die beschikbaar zijn voor bestemmingsgegevensstromen worden be
 
 | Waarschuwingen | Beschrijving |
 | --- | --- |
-| Uitvoervertraging bestemming | Deze waarschuwing brengt u op de hoogte wanneer een looppas van de bestemmingsstroom langer dan 150 minuten duurt om een segment te activeren. |
-| Uitvoerfout bestemming | Deze waarschuwing brengt u op de hoogte wanneer een fout voorkomt terwijl het activeren van een segment aan een bestemming. |
-| Uitvoersucces bestemming | Deze waarschuwing brengt u op de hoogte wanneer een segment met succes aan een bestemming wordt geactiveerd. |
-| Start stroom bestemming | Deze waarschuwing brengt u op de hoogte wanneer een looppas van de bestemmingsstroom begint een segment te activeren. |
+| Uitvoervertraging bestemming | Deze waarschuwing geeft een melding wanneer een doelstroom langer dan 150 minuten duurt om een publiek te activeren. |
+| Uitvoerfout bestemming | Deze waarschuwing brengt u op de hoogte wanneer een fout voorkomt terwijl het activeren van een publiek aan een bestemming. |
+| Uitvoersucces bestemming | Deze waarschuwing brengt u op de hoogte wanneer een publiek met succes aan een bestemming wordt geactiveerd. |
+| Start stroom bestemming | Deze waarschuwing brengt u op de hoogte wanneer een looppas van de bestemmingsstroom begint een publiek te activeren. |
 | Overgeslagen activeringssnelheid overschreden | Deze waarschuwing geeft een melding wanneer de activeringsfrequentie hoger is dan 1% van de totale activeringen. De identiteiten worden overgeslagen tijdens activering wanneer ze ontbrekende kenmerken of een schending van de toestemming hebben. |
 
 ## Ontvangen van waarschuwingen {#receiving-alerts}

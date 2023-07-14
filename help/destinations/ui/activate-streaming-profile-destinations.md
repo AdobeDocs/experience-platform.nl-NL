@@ -1,17 +1,18 @@
 ---
 keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; e-mailmarketingbestemmingen activeren; cloudopslagdoelen activeren
-title: De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen
+title: Stimulansen voor het streamen van exportdoelen voor profielen activeren
 type: Tutorial
-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door segmenten naar streaming op profiel gebaseerde doelen te verzenden.
+description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door een publiek naar streaming op profiel gebaseerde doelen te sturen.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
 
-# De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen
+
+# Stimulansen voor het streamen van exportdoelen voor profielen activeren
 
 >[!IMPORTANT]
 > 
@@ -34,35 +35,31 @@ Als u gegevens naar doelen wilt activeren, moet u [verbonden met een bestemming]
 
    ![Afbeelding die het tabblad van de doelcatalogus weergeeft.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Selecteren **[!UICONTROL Activate segments]** op de kaart die overeenkomt met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
+1. Selecteren **[!UICONTROL Activate audiences]** op de kaart die overeenkomt met de bestemming waar u uw publiek wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-   ![Afbeelding die de activesegmentcontrole markeert op het tabblad Doelcatalogus.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![Afbeelding die het besturingselement voor doelgroepen activeren markeert op het tabblad Doelcatalogus.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. Selecteer de doelverbinding die u wilt gebruiken om uw segmenten te activeren en selecteer vervolgens **[!UICONTROL Next]**.
+1. Selecteer de doelverbinding die u wilt gebruiken om uw publiek te activeren en selecteer vervolgens **[!UICONTROL Next]**.
 
    ![Afbeelding met een selectie van twee doelen waarmee u verbinding kunt maken.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. Naar de volgende sectie gaan [uw segmenten selecteren](#select-segments).
+1. Naar de volgende sectie gaan [uw publiek selecteren](#select-audiences).
 
-## Uw segmenten selecteren {#select-segments}
+## Uw publiek selecteren {#select-audiences}
 
-Gebruik de selectievakjes links van de segmentnamen om de segmenten te selecteren die u wilt activeren naar het doel en selecteer vervolgens **[!UICONTROL Next]**.
+Als u het publiek dat u wilt activeren naar het doel wilt selecteren, schakelt u het selectievakje links van de publieksnamen in en selecteert u **[!UICONTROL Next]**.
 
-![Afbeelding die de selectie van selectievakjes markeert in de stap Segmenten selecteren van de activeringsworkflow.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
+
+* **[!UICONTROL Segmentation Service]**: Soorten publiek dat binnen Experience Platform door de Segmenteringsdienst wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
+* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform wordt gegenereerd en als CSV-bestanden in het Platform wordt geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
+* Andere soorten soorten publiek, afkomstig van andere Adobe oplossingen, zoals [!DNL Audience Manager].
+
+![Afbeelding die de selectie van selectievakjes markeert in de stap Soorten publiek selecteren van de activeringsworkflow.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## Profielkenmerken selecteren {#select-attributes}
 
 In de **[!UICONTROL Mapping]** Selecteer de profielkenmerken die u naar de doelbestemming wilt verzenden.
-
->[!NOTE]
->
-> Adobe Experience Platform vult uw selectie voor met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
-
-Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmentMembership.status` is geselecteerd:
-* Als de `segmentMembership.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
-* Als de `segmentMembership.status` veld is niet geselecteerd, geëxporteerde bestanden bevatten alleen **[!UICONTROL Active]** leden in de eerste volledige momentopname en in de daaropvolgende incrementele uitvoer.
-
-![Afbeelding met de vooraf ingevulde, aanbevolen kenmerken in de toewijzingsstap.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. In de **[!UICONTROL Select attributes]** pagina, selecteert u **[!UICONTROL Add new field]**.
 
@@ -76,14 +73,13 @@ Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmen
 
    ![Afbeelding met een selectie XDM-velden die u kunt selecteren als bronvelden.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-
-1. Als u meer toewijzingen wilt toevoegen, herhaalt u stap 1 tot en met 3 en selecteert u **[!UICONTROL Next]**.
+1. Als u meer velden wilt toevoegen, herhaalt u stap 1 tot en met 3 en selecteert u vervolgens **[!UICONTROL Next]**.
 
 ## Controleren {#review}
 
 Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selecteren **[!UICONTROL Cancel]** om de stroom op te delen, **[!UICONTROL Back]** om uw instellingen te wijzigen, of **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
-![Selectieoverzicht in de revisiestap.](/help/destinations/assets/ui/activate-streaming-profile-destinations/review.png)
+![Selectieoverzicht in de revisiestap.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
@@ -91,21 +87,21 @@ Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy
 
 ### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
 
-In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
+In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
 
 ![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
 
-### Segmenten filteren {#filter-segments}
+### Filter publiek {#filter-audiences}
 
-In deze stap kunt u ook de beschikbare filters op de pagina gebruiken om alleen de segmenten weer te geven waarvan het schema of de toewijzing is bijgewerkt als onderdeel van deze workflow.
+In deze stap kunt u ook de beschikbare filters op de pagina gebruiken om alleen de doelgroepen weer te geven waarvan het schema of de toewijzing is bijgewerkt als onderdeel van deze workflow.
 
-![De opname van het scherm die de beschikbare segmentfilters in de overzichtsstap toont.](/help/destinations/assets/ui/activate-streaming-profile-destinations/filter-segments-review-step.gif)
+![De opname van het scherm die de beschikbare publieksfilters in de overzichtsstap toont.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
 Als u tevreden bent met de selectie en er zijn geen beleidsovertredingen vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
-## Segmentactivering verifiëren {#verify}
+## Activering van publiek controleren {#verify}
 
-Uw geëxporteerde [!DNL Experience Platform] gegevens in uw doelbestemming in JSON-indeling worden geland. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
+Uw geëxporteerde [!DNL Experience Platform] gegevens in uw doelbestemming in JSON-indeling worden geland. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadres van een profiel dat voor een bepaald publiek is gekwalificeerd en dat een ander publiek heeft verlaten. De identiteit van dit vooruitzicht is `ECID` en `email_lc_sha256`.
 
 ```json
 {

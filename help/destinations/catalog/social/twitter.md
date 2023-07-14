@@ -2,9 +2,9 @@
 title: Twitter Aangepast publiek, verbinding
 description: Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -33,14 +33,28 @@ Voordat u uw [!DNL Twitter Custom Audiences] -bestemming, controleert u of u de 
 
 {style="table-layout:auto"}
 
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek van Twitter. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek van Twitter. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -86,13 +100,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -100,9 +114,9 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 
 ## Aanvullende bronnen {#additional-resources}
 
-Wanneer het in kaart brengen van publiekssegmenten aan Twitter, zorg ervoor om aan de volgende segment noemende vereisten te voldoen:
+Wanneer u een publiek toewijst aan Twitter, moet u aan de volgende naamgevingsvereisten voor het publiek voldoen:
 
-1. Verstrek de mens-leesbare namen van de segmentafbeelding. Wij adviseren gebruikend de zelfde naam die u voor de segmenten van het Experience Platform gebruikte.
-2. Gebruik geen speciale tekens (+ &amp; , % : ; @ / = ? $) in segment en segmenttoewijzingsnamen. Als de segmentnaam van het Experience Platform deze tekens bevat, verwijdert u deze voordat u het segment toewijst aan een Twitter-bestemming.
+1. Geef voor het publiek leesbare toewijzingsnamen. Wij adviseren gebruikend de zelfde naam die u voor de segmenten van het Experience Platform gebruikte.
+2. Gebruik geen speciale tekens (+ &amp; , % : ; @ / = ? $) in toewijzingsnamen voor het publiek en het publiek. Als de publieksnaam van het Experience Platform deze tekens bevat, verwijdert u deze voordat u het publiek toewijst aan een Twitter-bestemming.
 
 Meer informatie over [!DNL List Custom Audiences] in Twitter vindt u in het [Twitter-documentatie](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

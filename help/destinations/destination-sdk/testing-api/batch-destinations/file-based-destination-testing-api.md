@@ -2,7 +2,7 @@
 description: Deze pagina verklaart hoe te om het /testing/destinationInstance API eindpunt te gebruiken om te testen als uw op dossier-gebaseerde bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 title: Bestandsgebaseerde bestemming testen met voorbeeldprofielen
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Voordat u de `/testing/destinationInstance` aan, zorg ervoor u aan de volgende v
 * U hebt minstens één activeringsstroom voor uw bestemming in de gebruikersinterface van het Experience Platform gemaakt.
 * Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Platform UI.
 
-   ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI-afbeelding die laat zien hoe u de id van de doelinstantie opgehaald kunt krijgen via de URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Optioneel*: Als u uw bestemmingsconfiguratie met een steekproefprofiel wilt testen dat aan de API vraag wordt toegevoegd, gebruik [/sample-profiles](file-based-sample-profile-generation-api.md) eindpunt om een steekproefprofiel te produceren dat op uw bestaand bronschema wordt gebaseerd. Als u geen voorbeeldprofiel opgeeft, genereert de API er een en retourneert deze in de reactie.
 
 ## Test uw bestemmingsconfiguratie zonder profielen aan de vraag toe te voegen {#test-without-adding-profiles}
@@ -111,7 +111,7 @@ Een succesvolle reactie keert HTTP status 200 samen met de antwoordlading terug.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `activations` | Retourneert de segment-id en de flow-run-id voor elk geactiveerd segment. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal segmenten dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: Als u twee segmenten aan de bestemmingsinstantie in kaart bracht, `activations` array bevat twee items. Elk geactiveerd segment komt overeen met één geëxporteerd bestand. |
+| `activations` | Retourneert de gebruikers-id en de flow-run-id voor elk geactiveerd publiek. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal soorten publiek dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: Als u twee soorten publiek hebt toegewezen aan de doelinstantie, wordt `activations` array bevat twee items. Elk geactiveerd publiek komt overeen met één geëxporteerd bestand. |
 | `results` | Retourneert de ID van de doelinstantie en de ID&#39;s van de flowuitvoering die u kunt gebruiken om de [resultatenAPI](file-based-destination-results-api.md)om de integratie verder te testen. |
 | `inputProfiles` | Retourneert de voorbeeldprofielen die automatisch door de API worden gegenereerd. |
 
@@ -232,7 +232,7 @@ Een succesvolle reactie keert HTTP status 200 samen met de antwoordlading terug.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `activations` | Retourneert de segment-id en de flow-run-id voor elk geactiveerd segment. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal segmenten dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: Als u twee segmenten aan de bestemmingsinstantie in kaart bracht, `activations` array bevat twee items. Elk geactiveerd segment komt overeen met één geëxporteerd bestand. |
+| `activations` | Retourneert de gebruikers-id en de flow-run-id voor elk geactiveerd publiek. Het aantal activeringsitems (en de bijbehorende gegenereerde bestanden) is gelijk aan het aantal soorten publiek dat is toegewezen aan de doelinstantie. <br><br> Voorbeeld: Als u twee soorten publiek hebt toegewezen aan de doelinstantie, wordt `activations` array bevat twee items. Elk geactiveerd publiek komt overeen met één geëxporteerd bestand. |
 | `results` | Retourneert de ID van de doelinstantie en de ID&#39;s van de flowuitvoering die u kunt gebruiken om de [resultatenAPI](file-based-destination-results-api.md)om de integratie verder te testen. |
 | `inputProfiles` | Retourneert de aangepaste voorbeeldprofielen die u hebt doorgegeven in de API-aanvraag. |
 

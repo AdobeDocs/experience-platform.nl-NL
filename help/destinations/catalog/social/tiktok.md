@@ -1,11 +1,11 @@
 ---
 title: TikTok-verbinding
-description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste segment van Adobe Experience Platform naar TikTok verplaatsen met behulp van Adobe real-time integratie met TikTok Ads Manager.
+description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok sturen met behulp van Adobe real-time integratie met TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '954'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste segment van Adobe Experience Platform naar TikTok verplaatsen met behulp van Adobe real-time integratie met TikTok Ads Manager. Bezoek [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences?lang=en) voor meer informatie .
+Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok sturen met behulp van Adobe real-time integratie met TikTok Ads Manager. Bezoek [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences?lang=en) voor meer informatie .
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van TikTok zou moe
 
 ### Gebruiksscenario {#use-case-1}
 
-Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk kleding kan e-mailadressen van hun eigen CRM aan Adobe Experience Platform opnemen, segmenten van hun eigen offlinegegevens maken en deze segmenten naar TikTok sturen om advertenties weer te geven in de sociale media van hun klanten.
+Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun sociale-mediakanalen. Het merk apparel kan e-mailadressen van zijn eigen CRM aan Adobe Experience Platform opnemen, publiek maken van zijn eigen offline gegevens en deze soorten publiek naar TikTok sturen om advertenties weer te geven in de sociale media van hun klanten.
 
 ## Vereisten {#prerequisites}
 
@@ -51,8 +51,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die in de TikTok-bestemming worden gebruikt. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de TikTok-bestemming worden gebruikt. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,17 +88,17 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Identiteiten toewijzen {#map}
 
-Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het exporteren van segmenten naar TikTok Ads Manager.
+Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het exporteren van soorten publiek naar TikTok Ads Manager.
 
 Bronvelden selecteren:
 
@@ -112,7 +112,7 @@ Doelvelden selecteren:
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleer uw [!DNL TikTok Ads Manager] rekening (onder **Middelen > Soorten publiek**) om te controleren of het Experience Platform is geëxporteerd. Het publiek wordt gevuld met een type publiek: `Partner Audience`.
+Controleer uw [!DNL TikTok Ads Manager] rekening (onder **Middelen > Soorten publiek**) om te controleren of het publiek van uw Experience Platform is geëxporteerd. Het publiek wordt gevuld met een type publiek: `Partner Audience`.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 1%
@@ -22,7 +22,6 @@ Deze pagina bevat standaardgebruiks- en tarieflimieten voor activeringsgedrag. B
 >* De meeste klanten overschrijden deze standaardgrenzen niet. Neem contact op met uw medewerker van de klantenservice als u meer wilt weten over aangepaste limieten.
 >* De limieten die in dit document worden uiteengezet, worden voortdurend verbeterd. Kom regelmatig terug voor updates.
 >* Afhankelijk van individuele downstreambeperkingen, kunnen sommige doelen strengere instructies hebben dan de doelen die op deze pagina worden beschreven. Controleer ook of [catalogus](/help/destinations/catalog/overview.md) pagina van het doel waarmee u verbinding maakt en gegevens activeert.
-
 
 ## Limiettypen {#limit-types}
 
@@ -42,7 +41,7 @@ De onderstaande instructies zijn over het algemeen van toepassing op activering 
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximum aantal segmenten aan één enkele bestemming | 250 | Zacht | De aanbeveling moet een maximum van 250 segmenten aan één enkele bestemming in een dataflow in kaart brengen. <br><br> Als u meer dan 250 segmenten aan een bestemming moet activeren, kunt u of: <ul><li> Ontkaart segmenten die u niet meer wilt activeren, of</li><li>Creeer een nieuwe dataflow aan de gewenste bestemming en kaartsegmenten aan deze nieuwe dataflow.</li></ul> <br> Merk op dat in het geval van sommige bestemmingen, u tot minder dan 250 segmenten kan worden beperkt die aan de bestemming worden in kaart gebracht. Deze bestemmingen worden hieronder op de pagina in hun respectieve secties vermeld. |
+| Maximumaantal doelgroepen | 250 | Zacht | De aanbeveling moet een maximum van 250 publiek aan één enkele bestemming in een dataflow in kaart brengen. <br><br> Als u meer dan 250 publiek aan een bestemming moet activeren, kunt u of: <ul><li> Ontkaart publiek dat u niet meer wilt activeren, of</li><li>Creeer een nieuwe dataflow aan de gewenste bestemming en kaartpubliek aan deze nieuwe dataflow.</li></ul> <br> Houd er rekening mee dat in het geval van sommige bestemmingen u beperkt kunt zijn tot minder dan 250 soorten publiek die aan de bestemming zijn toegewezen. Deze bestemmingen worden hieronder op de pagina in hun respectieve secties vermeld. |
 | Maximum aantal bestemmingen | 100 | Zacht | De aanbeveling moet een maximum van 100 bestemmingen tot stand brengen die u gegevens kunt verbinden en activeren om *per sandbox*. [Aanpasbare Edge-doelen (Aangepaste verpersoonlijking)](#edge-destinations-activation) maximaal 10 van de 100 aanbevolen bestemmingen. |
 | Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Zacht | In het geval van verschillende doelen en doeltypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties, zou een maximum van 50 attributen in een dataflow aan een bestemming moeten worden in kaart gebracht. |
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Hard | Momenteel is het alleen mogelijk om te exporteren *profielrecordkenmerken* naar bestemmingen. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
@@ -67,7 +66,7 @@ De onderstaande instructies zijn van toepassing op activering via [batchbestemmi
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Activeringsfrequentie | Eén dagelijkse volledige export of frequentere incrementele export om de 3, 6, 8 of 12 uur. | Hard | Lees de [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) Documentatiegedeelten voor meer informatie over de frequentieverhogingen voor batchexport. |
-| Maximumaantal segmenten dat in een bepaald uur kan worden geëxporteerd | 100 | Zacht | De aanbeveling moet een maximum van 100 segmenten aan partijbestemmingsdataflows toevoegen. |
+| Maximumaantal soorten publiek dat in een bepaald uur kan worden geëxporteerd | 100 | Zacht | De aanbeveling moet een maximum van 100 publiek aan partijbestemmingsdataflows toevoegen. |
 | Maximumaantal rijen (records) per bestand dat moet worden geactiveerd | 5 miljoen | Hard | Adobe Experience Platform splitst de geëxporteerde bestanden automatisch op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel. Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Lees voor meer informatie de [sectie plannen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) van de activerende batchdoelzelfstudie. |
 
 {style="table-layout:auto"}
@@ -78,8 +77,8 @@ De onderstaande instructies zijn van toepassing op de [ad-hocactivering](/help/d
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Segmenten geactiveerd per ad-hocactiveringstaak | 80 | Hard | Momenteel kan elke ad-hocactiveringstaak maximaal 80 segmenten activeren. Als u probeert meer dan 80 segmenten per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd. |
-| Gelijktijdige ad-hocactiveringstaken per segment | 1 | Hard | Voer niet meer dan één gelijktijdige ad-hocactiveringstaak per segment uit. |
+| Publiek geactiveerd per ad-hocactiveringstaak | 80 | Hard | Op dit moment kan elke ad-hocactiveringstaak maximaal 80 soorten publiek activeren. Als u probeert meer dan 80 soorten publiek per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd. |
+| Gelijktijdige ad-hocactiveringstaken per publiek | 1 | Hard | Voer niet meer dan één gelijktijdige ad-hocactiveringstaak per publiek uit. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +90,7 @@ De onderstaande instructies zijn van toepassing op activering via [Edge-verperso
 | --- | --- | --- | --- |
 | Maximum aantal [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen | 10 | Zacht | U kunt gegevensstromen aan 10 Aangepaste verpersoonlijkingsbestemmingen per zandbak plaatsen. |
 | Maximumaantal kenmerken dat per sandbox aan een verpersoonlijkingsdoel is toegewezen | 30 | Hard | Een maximum van 30 attributen kan in een dataflow aan een verpersoonlijkingsbestemming, per zandbak worden in kaart gebracht. |
-| Maximumaantal segmenten toegewezen aan één [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) doel | 50 | Zacht | U kunt maximaal 50 segmenten in een activeringsstroom activeren naar één Adobe Target-bestemming. |
+| Maximum aantal soorten publiek toegewezen aan één [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) doel | 50 | Zacht | U kunt maximaal 50 soorten publiek activeren in een activeringsstroom naar één Adobe Target-bestemming. |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Profielen activeren voor uw [!DNL LinkedIn] campagnes voor doelgroepen, personal
 
 Om u te helpen beter begrijpen hoe en wanneer gebruiken [!DNL LinkedIn Matched Audiences] doel, hier is een gebruiksgeval dat Adobe Experience Platform klanten kunnen oplossen door deze eigenschap te gebruiken.
 
-Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van zijn eigen server invoeren [!DNL CRM] naar Adobe Experience Platform. Dan, kunnen zij segmenten van hun eigen off-line gegevens bouwen, en deze segmenten verzenden naar [!DNL LinkedIn] sociaal platform, optimalisering van hun reclame-uitgaven.
+Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van zijn eigen server invoeren [!DNL CRM] naar Adobe Experience Platform. Vervolgens kunnen ze publiek maken van hun eigen offline gegevens en deze soorten publiek naar de [!DNL LinkedIn] sociaal platform, optimalisering van hun reclame-uitgaven.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -36,14 +36,28 @@ Een softwarebedrijf organiseert een conferentie en wil contact houden met deelne
 
 {style="table-layout:auto"}
 
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer en andere) die worden gebruikt in het dialoogvenster [!DNL LinkedIn Matched Audiences] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer en andere) die worden gebruikt in het dialoogvenster [!DNL LinkedIn Matched Audiences] bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +107,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
-In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL LinkedIn Matched Audiences] doel en activeer segmenten.
+In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL LinkedIn Matched Audiences] doel en activeer het publiek.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -127,18 +141,18 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Een geslaagde activering betekent dat een [!DNL LinkedIn] aangepaste doelgroep wordt programmatisch gemaakt in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
+Een geslaagde activering betekent dat een [!DNL LinkedIn] aangepaste doelgroep wordt programmatisch gemaakt in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Het lidmaatschap van het publiek wordt toegevoegd en verwijderd omdat gebruikers gekwalificeerd zijn voor of gediskwalificeerd zijn voor het actieve publiek.
 
 >[!TIP]
 >
->De integratie tussen Adobe Experience Platform en [!DNL LinkedIn Matched Audiences] ondersteunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL LinkedIn] wanneer u de segmenten naar het doel activeert.
+>De integratie tussen Adobe Experience Platform en [!DNL LinkedIn Matched Audiences] ondersteunt historische publieksbackfills. Alle historische publiekskwalificaties worden verzonden naar [!DNL LinkedIn] wanneer u het publiek naar het doel activeert.

@@ -2,9 +2,9 @@
 title: Zendesk-verbinding
 description: Met de Zendesk-bestemming kunt u uw accountgegevens exporteren en activeren in Zendesk voor uw zakelijke behoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 55f1eafa68124b044d20f8f909f6238766076a7a
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1404'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 [[!DNL Zendesk]](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Zendesk] Contactpersonen-API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), naar **identiteiten maken en bijwerken** binnen een segment als contacten binnen [!DNL Zendesk].
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Zendesk] Contactpersonen-API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), naar **identiteiten maken en bijwerken** binnen een publiek als contacten binnen [!DNL Zendesk].
 
 [!DNL Zendesk] gebruikt dragertokens als authentificatiemechanisme om met het [!DNL Zendesk] Contactpersonen-API. Instructies voor verificatie aan uw [!DNL Zendesk] de instantie is verder onderaan, in de [Verifiëren voor bestemming](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-De klantendienst van een multichannel B2C platform wil een naadloze gepersonaliseerde ervaring voor zijn klanten verzekeren. De afdeling kan segmenten van hun eigen off-line gegevens bouwen om nieuwe gebruikersprofielen tot stand te brengen of bestaande profielinformatie van verschillende interactie bij te werken (bijvoorbeeld aankopen, terugkeren enz.) en stuur deze segmenten vanuit Adobe Experience Platform naar [!DNL Zendesk]. De bijgewerkte informatie wordt [!DNL Zendesk] zorgt ervoor dat de agent van de klantendienst de recente informatie van de klant onmiddellijk beschikbaar heeft, toelatend snellere reacties en resolutie.
+De klantendienst van een multichannel B2C platform wil een naadloze gepersonaliseerde ervaring voor zijn klanten verzekeren. De afdeling kan een publiek maken op basis van hun eigen offline gegevens om nieuwe gebruikersprofielen te maken of bestaande profielgegevens bij te werken op basis van verschillende interacties (bijvoorbeeld aankopen, retourneren, enz.) en stuur deze soorten publiek van Adobe Experience Platform naar [!DNL Zendesk]. De bijgewerkte informatie wordt [!DNL Zendesk] zorgt ervoor dat de agent van de klantendienst de recente informatie van de klant onmiddellijk beschikbaar heeft, toelatend snellere reacties en resolutie.
 
 ## Vereisten {#prerequisites}
 
@@ -27,7 +27,7 @@ De klantendienst van een multichannel B2C platform wil een naadloze gepersonalis
 
 Voordat u gegevens activeert naar de [!DNL Zendesk] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), en [segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) gemaakt in [!DNL Experience Platform].
 
-Raadpleeg de documentatie bij het Experience Platform voor [Segment Membership Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op segmentstatussen nodig hebt.
+Raadpleeg de documentatie bij het Experience Platform voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
 
 ### [!DNL Zendesk] voorwaarden {#prerequisites-destination}
 
@@ -59,8 +59,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Zendesk] wordt bijgewerkt met de corresponderende segmentstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [segment plannen](#schedule-segment-export-example) stap.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Zendesk] wordt bijgewerkt met de corresponderende publieksstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.</li></ul> |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -98,13 +98,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -122,7 +122,7 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Zendesk] doelvelden, voe
    * Herhaal deze stappen om de volgende verplichte toewijzingen toe te voegen, kunt u ook andere kenmerken toevoegen die u tussen uw XDM-profielschema en uw [!DNL Zendesk] instantie: |Bronveld|Doelveld| Verplicht| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
-      ![Voorbeeld van schermopname met gebruikersinterface van Platform met kenmerktoewijzingen.](../../assets/catalog/crm/zendesk/mappings.png)
+     ![Voorbeeld van schermopname met gebruikersinterface van Platform met kenmerktoewijzingen.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -130,31 +130,31 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Zendesk] doelvelden, voe
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-### De segmentuitvoer van het programma en voorbeeld {#schedule-segment-export-example}
+### Het publiek van het programma uitvoeren en voorbeeld {#schedule-segment-export-example}
 
-In de [[!UICONTROL Schedule segment export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) stap van de activeringsworkflow, moet u de segmenten van het Platform handmatig toewijzen aan het aangepaste veldkenmerk in [!DNL Zendesk].
+In de [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) Als u een stap wilt zetten in de activeringsworkflow, moet u het publiek van het Platform handmatig toewijzen aan het aangepaste veldkenmerk in [!DNL Zendesk].
 
 Om dit te doen, selecteer elk segment, dan ga het overeenkomstige attribuut van het douaneveld van in [!DNL Zendesk] in de **[!UICONTROL Mapping ID]** veld.
 
 Hieronder ziet u een voorbeeld:
-![Het het schermschot van het Platform UI die de segmentuitvoer van het Programma toont.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![Voorbeeld van een schermafbeelding van de gebruikersinterface van het Platform met het exporteren van het planningspubliek.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteren **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en navigeer naar de lijst met bestemmingen.
-1. Selecteer vervolgens de bestemming en schakel over naar de **[!UICONTROL Activation data]** selecteert u vervolgens een segmentnaam.
+1. Selecteer vervolgens de bestemming en schakel over naar de **[!UICONTROL Activation data]** en selecteert u vervolgens een publieksnaam.
    ![Het het schermschot van het Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
-1. Controleer de samenvatting van het segment en zorg ervoor dat de telling van profielen aan de telling binnen het segment beantwoordt.
+1. Controleer het publieksoverzicht en zorg ervoor dat de telling van profielen aan de telling binnen het segment beantwoordt.
    ![Platform UI-screenshot voorbeeld met segment.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Aanmelden bij de [!DNL Zendesk] website, navigeer vervolgens naar de **[!UICONTROL Contacts]** pagina om te controleren of de profielen van het segment zijn toegevoegd. Deze lijst kan worden gevormd om kolommen voor de extra gebieden te tonen die met het segment worden gecreeerd **[!UICONTROL Mapping ID]** en segmentstatussen.
-   ![Het schermschot van Zendesk UI die de pagina van Contacten met de extra gebieden toont die met de segmentnaam worden gecreeerd.](../../assets/catalog/crm/zendesk/contacts.png)
+1. Aanmelden bij de [!DNL Zendesk] website, navigeer vervolgens naar de **[!UICONTROL Contacts]** pagina om te controleren of de profielen van het publiek zijn toegevoegd. Deze lijst kan worden gevormd om kolommen voor de extra gebieden te tonen die met het publiek worden gecreeerd**[!UICONTROL Mapping ID]** en de status van het publiek.
+   ![Het schermschot van Zendesk die de pagina van Contacten met de extra gebieden toont die met de publieksnaam worden gecreeerd.](../../assets/catalog/crm/zendesk/contacts.png)
 
-1. U kunt ook naar beneden boren in een individu **[!UICONTROL Person]** pagina en controleer de **[!UICONTROL Additional fields]** sectie waarin de segmentnaam en de segmentstatus worden weergegeven.
-   ![Het schermschot van Zendesk UI die de Person pagina met de extra gebiedssectie toont die de segmentnaam en segmentstatus toont.](../../assets/catalog/crm/zendesk/contact.png)
+1. U kunt ook naar beneden boren in een individu **[!UICONTROL Person]** pagina en controleer de **[!UICONTROL Additional fields]** de publieksnaam en de publieksstatus.
+   ![Schermopname van Zendesk waarin de pagina Person wordt weergegeven met de sectie Aanvullende velden waarin de publieksnaam en de publieksstatus worden weergegeven.](../../assets/catalog/crm/zendesk/contact.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

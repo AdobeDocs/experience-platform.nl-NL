@@ -1,7 +1,7 @@
 ---
 description: Leer hoe te om de montages van publiekmeta-gegevens voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie van metagegevens voor publiek
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 1%
@@ -11,13 +11,13 @@ ht-degree: 1%
 
 # Configuratie van metagegevens voor publiek
 
-Wanneer het uitvoeren van gegevens van Experience Platform aan uw bestemming, zou u specifieke publieksmeta-gegevens, zoals segmentnamen of segment IDs, kunnen nodig hebben die tussen Experience Platform en uw bestemming worden gedeeld.
+Wanneer het uitvoeren van gegevens van Experience Platform aan uw bestemming, zou u specifieke publieksmeta-gegevens, zoals publieksnamen of publiek IDs, kunnen nodig hebben om tussen Experience Platform en uw bestemming worden gedeeld.
 
 Destination SDK biedt hulpmiddelen aan die u kunt gebruiken om publiek in uw bestemmingsplatform programmatically tot stand te brengen bij te werken of te schrappen.
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of bekijk de gids over hoe te [gebruik Destination SDK om een het stromen bestemming te vormen](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-U kunt de sjabloon voor publiekmetagegevens configureren via de `/authoring/audience-templates` eindpunt. Nadat u de configuratie van de metagegevens van uw publiek hebt gemaakt, kunt u de opdracht `/authoring/destinations` eindpunt om te vormen `audienceMetadataConfig` sectie. Deze sectie vertelt uw bestemming welke segmentmeta-gegevens het aan uw publiekssjabloon zou moeten in kaart brengen.
+U kunt de sjabloon voor publiekmetagegevens configureren via de `/authoring/audience-templates` eindpunt. Nadat u de configuratie van de metagegevens van uw publiek hebt gemaakt, kunt u de opdracht `/authoring/destinations` eindpunt om te vormen `audienceMetadataConfig` sectie. Deze sectie vertelt uw bestemming welke publieksmeta-gegevens het aan uw publiekssjabloon zou moeten in kaart brengen.
 
 Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -41,7 +41,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Ondersteunde parameters {#supported-parameters}
 
-Wanneer het creëren van uw configuratie van publieksmeta-gegevens, kunt u de parameters gebruiken die in de lijst hieronder worden beschreven om de montages van de segmentafbeelding te vormen.
+Wanneer het creëren van uw configuratie van publieksmeta-gegevens, kunt u de parameters gebruiken die in de lijst hieronder worden beschreven om de montages van de publiekstoewijzing te vormen.
 
 ```json
   "audienceMetadataConfig":{
@@ -54,8 +54,8 @@ Wanneer het creëren van uw configuratie van publieksmeta-gegevens, kunt u de pa
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) De waarde in de workflow voor doelactivering moet de segmentnaam van het Experience Platform zijn. |
-| `mapExperiencePlatformSegmentId` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) De waarde in het werkschema van de bestemmingsactivering zou identiteitskaart van het Experience Platform moeten zijn. |
+| `mapExperiencePlatformSegmentName` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) De waarde in de workflow voor doelactivering moet de publieksnaam van het Experience Platform zijn. |
+| `mapExperiencePlatformSegmentId` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) De waarde in de workflow voor doelactivering moet de gebruikers-id van het Experience Platform zijn. |
 | `mapUserInput` | Boolean | Hiermee wordt gebruikersinvoer voor de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) waarde in de workflow voor doelactivering. Indien ingesteld op `true`, `audienceTemplateId` kan niet aanwezig zijn. |
 | `audienceTemplateId` | Boolean | De `instanceId` van de [sjabloon voor doelmetagegevens](../../metadata-api/create-audience-template.md) gebruikt voor uw doel. |
 

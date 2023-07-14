@@ -2,11 +2,11 @@
 keywords: doelen activeren;gegevens activeren
 title: Overzicht van activering
 type: Tutorial
-description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert voor verschillende soorten doelen.
+description: Leer hoe u het publiek in Adobe Experience Platform activeert voor verschillende soorten doelen.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ Adobe Experience Platform ondersteunt een groot aantal bestemmingen. De workflow
 
 ## Activeringsmethoden {#activation-methods}
 
-Na u [vorm uw bestemming](connect-destination.md)kunt u publiekssegmenten op meerdere manieren activeren:
+Na u [vorm uw bestemming](connect-destination.md), kunt u het publiek op meerdere manieren activeren:
 
 ### Soorten publiek vanuit de catalogus met doelen activeren
 
 Zie de volgende gidsen voor gedetailleerde informatie over het activeren van publiek aan uw bestemming van de catalogus van bestemmingen:
 
-* [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](activate-segment-streaming-destinations.md)
+* [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](activate-segment-streaming-destinations.md)
 * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](activate-streaming-profile-destinations.md)
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](activate-batch-profile-destinations.md)
 
@@ -39,22 +39,22 @@ Voer de onderstaande stappen uit om gegevens vanuit de **[!UICONTROL Browse]** p
 
    ![Tabblad Bladeren](../assets/ui/activation-overview/browse-tab.png)
 
-1. Zoek de doelverbinding die u wilt gebruiken om uw segmenten te activeren, selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] kolom, selecteer dan **[!UICONTROL Activate segments]**.
+1. Zoek de doelverbinding die u wilt gebruiken om uw segmenten te activeren, selecteer de drie stippen in het dialoogvenster [!UICONTROL Name] kolom, selecteer dan **[!UICONTROL Activate audiences]**.
 
-   ![Knop Segmenten activeren](../assets/ui/activation-overview/activate-segments.png)
+   ![Knop Soorten publiek activeren](../assets/ui/activation-overview/activate-segments.png)
 
 1. Voer afhankelijk van de geselecteerde bestemming de stappen uit die in de onderstaande artikelen worden beschreven, te beginnen met de **[!UICONTROL Select segments]** stap, om de activeringsworkflow te voltooien:
 
-   * [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](activate-segment-streaming-destinations.md)
+   * [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](activate-segment-streaming-destinations.md)
    * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](activate-streaming-profile-destinations.md)
    * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](activate-batch-profile-destinations.md)
 
-### Het publiek activeren vanaf de pagina met segmentdetails {#activate-segment-details}
+### Soorten publiek activeren vanaf de pagina Soorten publiek {#activate-segment-details}
 
-U kunt segmenten naar doelen activeren vanaf de pagina met segmentdetails. Zie [Segmentdetails](../../segmentation/ui/overview.md#segment-details) voor meer informatie .
+U kunt het publiek activeren naar doelen op de pagina Soorten publiek. Zie [Segmentdetails](../../segmentation/ui/overview.md#segment-details) voor meer informatie .
 
 Voer afhankelijk van de geselecteerde bestemming de stappen uit die in de onderstaande artikelen worden beschreven om de activeringsworkflow te voltooien:
 
-* [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](activate-segment-streaming-destinations.md)
+* [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](activate-segment-streaming-destinations.md)
 * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](activate-streaming-profile-destinations.md)
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](activate-batch-profile-destinations.md)

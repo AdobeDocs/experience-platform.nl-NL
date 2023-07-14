@@ -4,9 +4,9 @@ description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,6 @@ De LiveRamp-verbinding gebruiken voor het on-board publiek van Adobe Real-time C
 >
 ><p>Deze doelverbinding bevindt zich momenteel in alfafase en is alleen beschikbaar voor een beperkte selectie van klanten. De functionaliteit en documentatie kunnen worden gewijzigd.</p>
 &gt;<p>De definitieve versie van deze bestemmingsverbinding kan klantenmigratie vereisen.</p>
-
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -45,8 +44,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster [!DNL LiveRamp SFTP] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Daily batch]** | Aangezien de profielen in Experience Platform op segmentevaluatie worden bijgewerkt, worden de profielen (identiteiten) bijgewerkt eens per dag stroomafwaarts aan het bestemmingsplatform. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster [!DNL LiveRamp SFTP] bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Daily batch]** | Aangezien de profielen in Experience Platform op publieksevaluatie worden bijgewerkt, worden de profielen (identiteiten) bijgewerkt eens per dag stroomafwaarts aan het bestemmingsplatform. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 * **[!UICONTROL Password]**: Het wachtwoord voor uw [!DNL LiveRamp SFTP] opslaglocatie.
 * **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding. Als u een coderingssleutel opgeeft, moet u ook een **[!UICONTROL Encryption subkey ID]** in de [bestemmingsdetails](#destination-details) sectie.
 
-   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SFTP met SSH-sleutelverificatie** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 * **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Als u een coderingssleutel opgeeft, moet u ook een **[!UICONTROL Encryption subkey ID]** in de [bestemmingsdetails](#destination-details) sectie. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -110,28 +109,28 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Planning {#scheduling}
 
-In de [!UICONTROL Scheduling] creeer een uitvoerprogramma voor elk segment, met de hieronder getoonde montages.
+In de [!UICONTROL Scheduling] Maak een exportschema voor elk publiek met de onderstaande instellingen.
 
 >[!IMPORTANT]
 >
->Alle segmenten die aan deze bestemming worden geactiveerd moeten met het nauwkeurige zelfde programma, zoals hieronder getoond worden gevormd.
+>Alle publiek dat aan deze bestemming wordt geactiveerd moet met het nauwkeurige zelfde programma, zoals hieronder getoond worden gevormd.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incrementele bestandsuitvoer](../../ui/activate-batch-profile-destinations.md#export-incremental-files) worden momenteel niet ondersteund voor de [!DNL LiveRamp] bestemming.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
-* De exporttijd instellen op **[!UICONTROL After segment evaluation]**. Uitvoer van geplande segmenten en [bestanden op aanvraag exporteren](../../ui/export-file-now.md) worden momenteel niet ondersteund voor de [!DNL LiveRamp] bestemming.
+* De exporttijd instellen op **[!UICONTROL After segment evaluation]**. Gepland publiek exporteert en [bestanden op aanvraag exporteren](../../ui/export-file-now.md) worden momenteel niet ondersteund voor de [!DNL LiveRamp] bestemming.
 * **[!UICONTROL Date]**: Selecteer de begin- en eindtijd van het exporteren naar wens.
 
-![Het schermschot van het Platform UI die de segment het plannen stap toont.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![Het schermschot van het Platform UI die de publiek dat stap plant toont.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 De geëxporteerde bestandsnaam kan momenteel niet door de gebruiker worden geconfigureerd. Alle bestanden die naar de [!DNL LiveRamp SFTP] de bestemming wordt automatisch genoemd gebaseerd op het volgende malplaatje:
 
@@ -179,28 +178,28 @@ Uw gegevens worden geëxporteerd naar de [!DNL LiveRamp SFTP] opslaglocatie die 
 
 Wanneer u bestanden exporteert naar de [!DNL LiveRamp SFTP] doel, Platform genereert één CSV-bestand voor elke [beleids-id samenvoegen](../../../profile/merge-policies/overview.md).
 
-Neem bijvoorbeeld de volgende segmenten:
+Neem bijvoorbeeld het volgende publiek:
 
-* Segment A (Samenvoegingsbeleid 1)
-* Segment B (Samenvoegingsbeleid 2)
-* Segment C (Samenvoegingsbeleid 1)
-* Segment D (Samenvoegingsbeleid 1)
+* Publiek A (Samenvoegingsbeleid 1)
+* Publiek B (Samenvoegingsbeleid 2)
+* Publiek C (Samenvoegingsbeleid 1)
+* Publiek D (Samenvoegingsbeleid 1)
 
 Platform exporteert twee CSV-bestanden naar [!DNL LiveRamp SFTP]:
 
-* één CSV-bestand met segmenten A, C en D;
-* Eén CSV-bestand met segment B.
+* één CSV-bestand met soorten publiek A, C en D;
+* Eén CSV-bestand met publiek B.
 
-Geëxporteerde CSV-bestanden bevatten profielen met de geselecteerde kenmerken en de corresponderende segmentstatus, in afzonderlijke kolommen, met de kenmerknaam en segment-id&#39;s als kolomkoppen.
+Geëxporteerde CSV-bestanden bevatten profielen met de geselecteerde kenmerken en de bijbehorende publieksstatus, in afzonderlijke kolommen, met de kenmerknaam en de gebruikers-id&#39;s als kolomkoppen.
 
-De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de volgende segmentkwalificatiestatus:
+De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de volgende kwalificatiestatus van het publiek:
 
-* `Active`: Het profiel is momenteel gekwalificeerd voor het segment.
-* `Expired`: Het profiel is niet meer gekwalificeerd voor het segment, maar is in het verleden wel gekwalificeerd.
-* `""`(lege tekenreeks): Het profiel is nooit gekwalificeerd voor het segment.
+* `Active`: Het profiel is momenteel gekwalificeerd voor het publiek.
+* `Expired`: Het profiel is niet langer gekwalificeerd voor het publiek, maar is in het verleden wel gekwalificeerd.
+* `""`(lege tekenreeks): Het profiel is nooit gekwalificeerd voor het publiek.
 
 
-Bijvoorbeeld een geëxporteerd CSV-bestand met één `email` attributen en 3 segmenten zouden als dit kunnen kijken:
+Bijvoorbeeld een geëxporteerd CSV-bestand met één `email` attributen en 3 publiek zouden als dit kunnen kijken:
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 Aangezien Platform één CSV-bestand voor elk bestand genereert [beleids-id samenvoegen](../../../profile/merge-policies/overview.md), produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
 
-Dit betekent dat de **[!UICONTROL Identities activated]** en **[!UICONTROL Profiles received]** maatstaven in de [dataflow-run](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) De pagina wordt samengevoegd voor elke groep segmenten die het zelfde fusiebeleid gebruiken, in plaats van wordt getoond voor elk segment.
+Dit betekent dat de **[!UICONTROL Identities activated]** en **[!UICONTROL Profiles received]** maatstaven in de [dataflow-run](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) De pagina wordt samengevoegd voor elke groep publiek die het zelfde fusiebeleid gebruiken, in plaats van wordt getoond voor elk publiek.
 
-Als gevolg van dataflow looppas die voor een groep segmenten worden geproduceerd die het zelfde fusiebeleid gebruiken, worden de segmentnamen niet getoond in [controledashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+Als gevolg van dataflow-run die wordt gegenereerd voor een groep soorten publiek die hetzelfde samenvoegbeleid gebruiken, worden de publieksnamen niet weergegeven in het dialoogvenster [controledashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![UI-screeshot van Experience Platform met de metrische id die is geactiveerd.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

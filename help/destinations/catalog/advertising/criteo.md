@@ -3,9 +3,9 @@ keywords: reclame; criterium;
 title: Criteverbinding
 description: Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '992'
 ht-degree: 1%
 
 ---
@@ -48,8 +48,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 | --- | --- | --- |
-| Exporttype | Segment exporteren | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster [!DNL Criteo] bestemming. |
-| Uitvoerfrequentie | Streaming | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](../../destination-types.md#streaming-destinations). |
+| Exporttype | Publiek exporteren | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in het dialoogvenster [!DNL Criteo] bestemming. |
+| Uitvoerfrequentie | Streaming | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](../../destination-types.md#streaming-destinations). |
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -61,7 +61,7 @@ Laat uw bedrijf zien met relevante productaanbiedingen en flexibele creatieve pr
 
 ### Hoofdlettergebruik 2: Meer websiteconversies
 
-Wanneer bezoekers uw website verlaten, herinner hen wat zij met het herrichten van advertenties missen die omzettingen door speciale overeenkomsten en hyper-relevante aanbiedingen te tonen verhogen, waar zij ook gaan. Verbind uw Adobe CDP segment om bestaande klanten opnieuw in dienst te nemen of consumenten te richten gelijkend op uw meest loyale kopers.
+Wanneer bezoekers uw website verlaten, herinner hen wat zij met het herrichten van advertenties missen die omzettingen door speciale overeenkomsten en hyper-relevante aanbiedingen te tonen verhogen, waar zij ook gaan. Verbind uw Adobe CDP publiek om bestaande klanten opnieuw in dienst te nemen of consumenten te richten gelijkend op uw meest loyale kopers.
 
 ## Verbinding maken met website {#connect}
 
@@ -107,17 +107,17 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate-segments}
+## Soorten publiek naar dit doel activeren {#activate-segments}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-U kunt de geëxporteerde segmenten zien in het dialoogvenster [Centro](https://marketing.criteo.com/audience-manager/dashboard).
+U kunt het geëxporteerde publiek bekijken in het dialoogvenster [Centro](https://marketing.criteo.com/audience-manager/dashboard).
 
 De aanvraaginstantie voor het toevoegen van een gebruikersprofiel dat door de [!DNL Criteo] De verbinding ziet er ongeveer als volgt uit:
 

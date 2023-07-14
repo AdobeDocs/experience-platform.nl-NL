@@ -1,7 +1,7 @@
 ---
 description: Leer over de historische profielkwalificaties die door bestemmingen worden gesteund die met Destination SDK worden gebouwd.
 title: Historische profielkwalificaties
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Historische profielkwalificaties
 
-Alle bestemmingen die door Destination SDK worden gecreeerd steunen historische profielkwalificaties door gebrek. Dit betekent dat wanneer de gebruikers eerst opstelling een activeringsgegevensstroom aan uw bestemmingen, de eerste uitvoer alle leden van het segment bevat die ooit voor dat segment hebben gekwalificeerd.
+Alle bestemmingen die door Destination SDK worden gecreeerd steunen historische profielkwalificaties door gebrek. Dit betekent dat wanneer de gebruikers eerst opstelling een activeringsgegevensstroom aan uw bestemmingen, de eerste uitvoer alle leden van het publiek bevat die ooit voor dat segment hebben gekwalificeerd.
 
 Dit gedrag wordt gedefinieerd door de `"backfillHistoricalProfileData":true` parameter in de bestemmingsconfiguratie.
 
@@ -33,14 +33,14 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit artikel, zou u moeten weten dat het Experience Platform automatisch een historische bevolking van alle profielen uitvoert die ooit voor een geactiveerd segment hebben gekwalificeerd wanneer het segment eerst naar de bestemming wordt uitgevoerd. Deze optie is niet configureerbaar in Destination SDK of in Experience Platform UI.
+Na het lezen van dit artikel, zou u moeten weten dat het Experience Platform automatisch een historische populatie van alle profielen uitvoert die ooit voor een geactiveerd publiek hebben gekwalificeerd wanneer het publiek eerst naar de bestemming wordt uitgevoerd. Deze optie is niet configureerbaar in Destination SDK of in Experience Platform UI.
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 

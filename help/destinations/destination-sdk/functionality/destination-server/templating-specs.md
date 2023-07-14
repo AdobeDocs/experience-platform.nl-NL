@@ -1,7 +1,7 @@
 ---
 description: Leer hoe te om de HTTP- verzoeken te formatteren die naar uw eindpunt worden verzonden. Gebruik het /authoring/bestemmings-servers eindpunt om bestemmings server te vormen die specs in Adobe Experience Platform Destination SDK templating.
 title: Sjabloonspecificaties voor doelen die met Destination SDK zijn gemaakt
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 3%
@@ -46,7 +46,7 @@ Adobe gebruikt een sjabloontaal die lijkt op [Jinja](https://jinja.palletsprojec
 Ga voor meer informatie over de transformatie naar de onderstaande koppelingen:
 
 * [Berichtindeling](message-format.md)
-* [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en segmentlidmaatschap ](message-format.md#using-templating)
+* [Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en publieksleiding](message-format.md#using-templating)
 
 >[!TIP]
 >

@@ -3,16 +3,16 @@ title: Salesforce-accountbetrokkenheid Marketing Cloud
 description: Leer hoe u de Salesforce Marketing Cloud Account Engagement (voorheen Pardot genoemd)-bestemming kunt gebruiken om uw accountgegevens te exporteren en deze te activeren in Salesforce Marketing Cloud Account Engagement voor uw zakelijke behoeften.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1535'
 ht-degree: 1%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud Account Engagement] verbinding
 
-Gebruik de [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(voorheen bekend als [!DNL Pardot])* bestemming voor het vastleggen, bijhouden, scoren en beoordelen van leads. U kunt lood sporen voor alle stadia van de pijpleiding voor gerichte marktsegmenten en klantengroepen door e-maildruppelcampagnes en loodbeheer met het koesteren, het scoren en campagnesegmentatie ook ontwerpen.
+Gebruik de [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(voorheen bekend als [!DNL Pardot])* bestemming voor het vastleggen, bijhouden, scoren en beoordelen van leads. U kunt ook loodsporen voor alle stadia van de pijpleiding voor gericht marktpubliek en klantengroepen door e-maildruppelcampagnes en loodbeheer met het bevorderen, het scoren en campagnesegmentatie ontwerpen.
 
 Vergeleken met [!DNL Salesforce Marketing Cloud Engagement] dat meer gericht is op **B2C** afzet, [!DNL Marketing Cloud Account Engagement] is ideaal voor **B2B** gebruik van zaken waarbij meerdere afdelingen en besluitvormers betrokken zijn en die langere verkoop- en besluitvormingscycli vereisen. Bovendien houdt u ook nauwere nabijheid en integratie met uw CRM aan om aangewezen verkoop en marketing besluiten te nemen. *Opmerking: Experience Platform heeft ook verbindingen voor [!DNL Salesforce Marketing Cloud Engagement], kunt u deze controleren op de [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) en [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pagina&#39;s.*
 
@@ -26,7 +26,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Marketing Cloud Accoun
 
 ### E-mails verzenden naar contactpersonen voor marketingcampagnes {#use-case-send-emails}
 
-De marketingafdeling van een onlineplatform wil een e-mailcampagne uitzenden naar een nieuwsberichten van B2B-leads. Het marketingteam van het platform kan nieuwe leads toevoegen of bestaande lead-informatie bijwerken via Adobe Experience Platform, segmenten van hun eigen offline-gegevens maken en deze segmenten verzenden naar [!DNL Marketing Cloud Account Engagement], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
+De marketingafdeling van een onlineplatform wil een e-mailcampagne uitzenden naar een nieuwsberichten van B2B-leads. Het marketingteam van het platform kan nieuwe leads toevoegen of bestaande lead-informatie bijwerken via Adobe Experience Platform, publiek maken op basis van hun eigen offline-gegevens en deze soorten publiek naar [!DNL Marketing Cloud Account Engagement], die vervolgens kan worden gebruikt om de marketingcampagne per e-mail te verzenden.
 
 ## Vereisten {#prerequisites}
 
@@ -86,8 +86,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd segment in Platform, het overeenkomstige [!DNL Salesforce Marketing Cloud Account Engagement] de segmentstatus wordt bijgewerkt met zijn segmentstatus van Platform.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in het Platform, het overeenkomstige [!DNL Salesforce Marketing Cloud Account Engagement] de segmentstatus wordt bijgewerkt met de publieksstatus van het Platform.</li></ul> |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -133,13 +133,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -154,7 +154,7 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Marketing Cloud Account 
    * Herhaal deze stappen om toewijzingen toe te voegen tussen uw XDM-profielschema en [!DNL Marketing Cloud Account Engagement]: | Bronveld | Doelveld | Verplicht | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Ja | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
-      ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform met doeltoewijzingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform met doeltoewijzingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -162,14 +162,14 @@ Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding,
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
-1. Navigeer naar een van de segmenten die u hebt geselecteerd. Selecteer het tabblad **[!DNL Activation data]**. De **[!UICONTROL Mapping ID]** de kolom toont de naam van het douaneveld dat binnen wordt geproduceerd [!DNL Marketing Cloud Account Engagement Prospects] pagina.
+1. Navigeer naar een geselecteerd publiek. Selecteer het tabblad **[!DNL Activation data]**. De **[!UICONTROL Mapping ID]** de kolom toont de naam van het douaneveld dat binnen wordt geproduceerd [!DNL Marketing Cloud Account Engagement Prospects] pagina.
    ![Het het schermschot van het Platform UI die identiteitskaart van de Toewijzing voor een geselecteerd segment toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. Aanmelden bij de [[!DNL Salesforce]](https://login.salesforce.com/) website. Navigeer vervolgens naar de **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** pagina en controleer of de perspectieven van het segment zijn toegevoegd/bijgewerkt. U kunt ook toegang krijgen tot [[!DNL Salesforce Pardot]](https://pi.pardot.com/) en toegang tot **[!DNL Prospects]** pagina.
+1. Aanmelden bij de [[!DNL Salesforce]](https://login.salesforce.com/) website. Navigeer vervolgens naar de **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** pagina en controleer of de perspectieven van het publiek zijn toegevoegd / bijgewerkt. U kunt ook toegang krijgen tot [[!DNL Salesforce Pardot]](https://pi.pardot.com/) en toegang tot **[!DNL Prospects]** pagina.
    ![Schermopname van de Salesforce-gebruikersinterface met de pagina Prospects.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
-1. Om te controleren of de vooruitzichten zijn bijgewerkt, selecteer een vooruitzicht en verifieer of is het gebied van het douanevooruitzicht bijgewerkt met de status van het Experience Platform segment.
-   ![De het schermschot van Salesforce UI die de geselecteerde pagina van het Vooruitzicht toont, wordt het gebied van het douanevooruitzicht bijgewerkt met de segmentstatus.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
+1. Om te controleren of de vooruitzichten zijn bijgewerkt, selecteer een vooruitzicht en verifieer of is het gebied van het douanevooruitzicht bijgewerkt met de status van het Experience Platform publiek.
+   ![De het schermschot van Salesforce UI die de geselecteerde pagina van het Vooruitzicht toont, wordt het gebied van het douaneconvooruitzicht bijgewerkt met de publieksstatus.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

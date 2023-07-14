@@ -1,10 +1,10 @@
 ---
 title: Verbinding met PEGA-client
-description: Gebruik de bestemming van de Hub van het Besluit van de Klant van Pega in Adobe Experience Platform om profielattributen en segmentlidmaatschapsgegevens naar de Hub van het Besluit van de Klant van Pega voor volgende-best-actie beslissing te verzenden.
+description: Gebruik de bestemming van de Hub van het Beslissingshub van de Klant van Pega in Adobe Experience Platform om profielattributen en gegevens van het publiekslidmaatschap naar de Hub van het Besluit van de Klant van Pega voor volgende-best-actie beslissing te verzenden.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Gebruik de [!DNL Pega Customer Decision Hub] doel in Adobe Experience Platform om profielkenmerken en segmentlidmaatschapsgegevens naar te sturen [!DNL Pega Customer Decision Hub] voor de volgende beste-actiebeslissing.
+Gebruik de [!DNL Pega Customer Decision Hub] doel in Adobe Experience Platform om profielkenmerken en lidmaatschapsgegevens voor het publiek naar te sturen [!DNL Pega Customer Decision Hub] voor de volgende beste-actiebeslissing.
 
-Profielsegmentlidmaatschap van Adobe Experience Platform, indien geladen in [!DNL Pega Customer Decision Hub], kan worden gebruikt als voorspeller in adaptieve modellen en helpt de juiste contextuele en gedragsgegevens te leveren voor de volgende-best-actie beslissingsdoeleinden.
+Profiellidmaatschap voor publiek van Adobe Experience Platform, indien geladen in [!DNL Pega Customer Decision Hub], kan worden gebruikt als voorspeller in adaptieve modellen en helpt de juiste contextuele en gedragsgegevens te leveren voor de volgende-best-actie beslissingsdoeleinden.
 
 >[!IMPORTANT]
 >
@@ -31,15 +31,15 @@ Een markator wil inzichten van de op het model gebaseerde best action van de geg
 
 ### Financiële diensten
 
-Een markator wil de aanbiedingen optimaliseren voor klanten die zich hebben geabonneerd op of zich niet hebben geabonneerd op nieuwsbrieven van het pensioenplan of het pensioenplan. De bedrijven van de financiële diensten kunnen veelvoudige identiteitskaart van de Klant van hun eigen CRMs in Adobe Experience Platform opnemen, segmenten van hun eigen off-line gegevens bouwen, en profielen verzenden die de segmenten ingaan en verlaten aan [!DNL Pega Customer Decision Hub] voor volgende-best-actie (NBA) besluit in uitgaande kanalen.
+Een markator wil de aanbiedingen optimaliseren voor klanten die zich hebben geabonneerd op of zich niet hebben geabonneerd op nieuwsbrieven van het pensioenplan of het pensioenplan. Bedrijven met financiële services kunnen meerdere Customer ID&#39;s van hun eigen CRM&#39;s opnemen in Adobe Experience Platform, een publiek opbouwen op basis van hun eigen offline gegevens en profielen verzenden die het publiek binnenkomen en verlaten [!DNL Pega Customer Decision Hub] voor volgende-best-actie (NBA) besluit in uitgaande kanalen.
 
 ## Vereisten {#prerequisites}
 
 Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platform te exporteren, moet u de volgende voorwaarden uitvoeren in [!DNL Pega Customer Decision Hub]:
 
-* Configureer de [Adobe Experience Platform Profile and Segment Membership Integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in uw [!DNL Pega Customer Decision Hub] -instantie.
+* Configureer de [Adobe Experience Platform Profile and Publiek Membership Integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in uw [!DNL Pega Customer Decision Hub] -instantie.
 * OAuth 2.0 configureren [Clientregistratie met clientreferenties](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) subsidietype in uw [!DNL Pega Customer Decision Hub] -instantie.
-* Configureren [realtime gegevensstroom](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) voor de gegevensstroom van het Lidmaatschap van het Adobe Segment in uw [!DNL Pega Customer Decision Hub] -instantie.
+* Configureren [realtime gegevensstroom](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) voor de gegevensstroom van het Lidmaatschap van het Adobe-publiek in uw [!DNL Pega Customer Decision Hub] -instantie.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -57,8 +57,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | Alle leden van een segment met id exporteren (*CustomerID*), kenmerken (achternaam, voornaam, locatie, enz.) en Segmentlidmaatschapsgegevens. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn altijd op API gebaseerde verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt, dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Zie voor meer informatie [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | Alle leden van een publiek met id exporteren (*CustomerID*), kenmerken (achternaam, voornaam, locatie, enz.) en gegevens van het publiek over het lidmaatschap. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn altijd op API gebaseerde verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt, dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Zie voor meer informatie [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -90,13 +90,13 @@ Om details voor de bestemming te vormen, vul de vereiste gebieden in en selectee
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Host Name]**: De de gastheernaam van de Hub van de de Beslissingen van de Hub van de Klant waaraan het profiel als json- gegevens wordt uitgevoerd.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](../../ui/activate-streaming-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](../../ui/activate-streaming-profile-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Doelkenmerken {#attributes}
 
@@ -120,14 +120,14 @@ Doelvelden selecteren:
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-Een succesvolle update van het segmentlidmaatschap voor een profiel zou segmentherkenningsteken, naam en status in de PEGA marketing segmentlidmaatschapsdatastore opnemen. De lidmaatschapsgegevens zijn gekoppeld aan een klant die gebruikmaakt van Customer Profile Designer in [!DNL Pega Customer Decision Hub], zoals hieronder weergegeven.
-![Afbeelding van het UI-scherm waarin u Adobe Segment Membership-gegevens aan de klant kunt koppelen met Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+Een geslaagde update voor een profiel voor publiekslidmaatschap zou de publieksidentificatie, de naam en de status in de PEGA-datastore invoegen voor het publicatiepubliek. De lidmaatschapsgegevens zijn gekoppeld aan een klant die gebruikmaakt van Customer Profile Designer in [!DNL Pega Customer Decision Hub], zoals hieronder weergegeven.
+![Afbeelding van het UI-scherm waarin u de gegevens van het Adobe Audience Membership aan de klant kunt koppelen met Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-De gegevens van het segmentlidmaatschap worden gebruikt in het volgende-Beste beleid van de Betrokkenheid van de Ontwerper van Pega voor volgende-best-actie besluit, zoals hieronder getoond.
-![Afbeelding van het UI-scherm waar u segmentlidmaatschapsvelden kunt toevoegen als voorwaarden in het Betrokkenheidsbeleid van Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+De gegevens van het publiekslidmaatschap worden gebruikt in het volgende-Beste beleid van de Aanwezigheid van de Ontwerper van Pega voor volgende-best-actie besluit, zoals hieronder getoond.
+![Afbeelding van het UI-scherm waar u de lidmaatschapsvelden van het publiek kunt toevoegen als voorwaarden in het Betrokkenheidsbeleid van Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-De gegevensvelden voor klantsegmentlidmaatschap worden toegevoegd als voorspellers in adaptieve modellen, zoals hieronder wordt weergegeven.
-![Beeld van het scherm UI waar u de gebieden van het lidmaatschap van het Segment als voorspellers in Adaptieve modellen kunt toevoegen, gebruikend de Studio van de Voorspelling](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+De gegevensvelden voor het gebruikerslidmaatschap van de klant worden toegevoegd als voorspellers in Adaptieve modellen, zoals hieronder wordt weergegeven.
+![Beeld van het scherm UI waar u de gebieden van het lidmaatschap van de Publiek als voorspellers in Adaptieve modellen kunt toevoegen, gebruikend de Studio van de Voorspelling](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Aanvullende bronnen {#additional-resources}
 

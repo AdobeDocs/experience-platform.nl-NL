@@ -5,9 +5,9 @@ title: Verbinden met batchbestemmingen en gegevens activeren met de Flow Service
 description: Stapsgewijze instructies voor het gebruik van de Flow Service API voor het maken van een batch-cloudopslag of e-mailmarketingbestemming in het Experience Platform en het activeren van gegevens
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '3392'
+source-wordcount: '3389'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Deze zelfstudie laat zien hoe u de Flow Service API kunt gebruiken om een batch 
 
 Deze zelfstudie gebruikt de [!DNL Adobe Campaign] doel in alle voorbeelden, maar de stappen zijn identiek voor alle opslag van de batchcloud en e-mailmarketingbestemmingen.
 
-![Overzicht - de stappen om een bestemming tot stand te brengen en segmenten te activeren](../assets/api/email-marketing/overview.png)
+![Overzicht - de stappen om een bestemming tot stand te brengen en publiek te activeren](../assets/api/email-marketing/overview.png)
 
 Als u liever de gebruikersinterface van het Platform gebruikt om verbinding te maken met een doel en gegevens te activeren, raadpleegt u de [Een doel verbinden](../ui/connect-destination.md) en [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../ui/activate-batch-profile-destinations.md) zelfstudies.
 
@@ -35,14 +35,14 @@ Als u liever de gebruikersinterface van het Platform gebruikt om verbinding te m
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] staat u toe om segmenten te bouwen en publiek te produceren in [!DNL Adobe Experience Platform] van uw [!DNL Real-Time Customer Profile] gegevens.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] biedt u de mogelijkheid om publiek te maken in [!DNL Adobe Experience Platform] van uw [!DNL Real-Time Customer Profile] gegevens.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u moet weten om gegevens aan partijbestemmingen in Platform te activeren.
 
 ### Vereiste referenties verzamelen {#gather-required-credentials}
 
-Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieven klaar moeten hebben, afhankelijk van het type van bestemming dat u verbindt en segmenten aan activeert.
+Om de stappen in deze zelfstudie te voltooien, zou u de volgende geloofsbrieven klaar moeten hebben, afhankelijk van het type van bestemming dat u verbindt en publiek activeert aan.
 
 * Voor [!DNL Amazon S3] verbindingen: `accessId`, `secretKey`
 * Voor [!DNL Amazon S3] verbindingen met [!DNL Adobe Campaign]: `accessId`, `secretKey`
@@ -85,7 +85,7 @@ In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bew
 
 ![Overzicht doelstappen 1](../assets/api/batch-destination/step1.png)
 
-Als eerste stap moet u bepalen naar welk doel de gegevens moeten worden geactiveerd. Om met te beginnen, voer een vraag uit om een lijst van beschikbare bestemmingen te verzoeken die u segmenten kunt verbinden en activeren aan. Voer het volgende verzoek van de GET uit aan `connectionSpecs` eindpunt om een lijst van beschikbare bestemmingen terug te keren:
+Als eerste stap moet u bepalen naar welk doel de gegevens moeten worden geactiveerd. Om met te beginnen, voer een vraag uit om een lijst van beschikbare bestemmingen te verzoeken die u kunt verbinden en publiek activeren aan. Voer het volgende verzoek van de GET uit aan `connectionSpecs` eindpunt om een lijst van beschikbare bestemmingen terug te keren:
 
 **API-indeling**
 
@@ -107,7 +107,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwoord**
 
-Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unieke id&#39;s (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Bijvoorbeeld, als u segmenten wilt verbinden en leveren aan [!DNL Adobe Campaign]zoekt u het volgende fragment in het antwoord:
+Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unieke id&#39;s (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Als u bijvoorbeeld een verbinding wilt maken en een publiek wilt leveren [!DNL Adobe Campaign]zoekt u het volgende fragment in het antwoord:
 
 ```json
 {
@@ -886,8 +886,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Activate segments to Adobe Campaign",
-        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "name": "activate audiences to Adobe Campaign",
+        "description": "This operation creates a dataflow which we will later use to activate audiences to Adobe Campaign",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
@@ -921,7 +921,7 @@ curl -X POST \
 | `flowSpec.Id` | Gebruik de flow-specificatie-id voor de batchbestemming waarmee u verbinding wilt maken. Voer een GET-bewerking uit op de knop `flowspecs` eindpunt, zoals getoond in het [stroomspecificaties API-naslagdocumentatie](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In de reactie zoekt u naar `upsTo` en kopieer de bijbehorende id van de batchbestemming waarmee u verbinding wilt maken. Voor Adobe Campaign kunt u bijvoorbeeld zoeken naar `upsToCampaign` en kopieert u de `id` parameter. |
 | `sourceConnectionIds` | Gebruik de bronverbindings-id die u in de stap hebt opgehaald [Verbinden met uw Experience Platform gegevens](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | Gebruik de doel-verbindings-id die u in de stap hebt verkregen [Verbinden met batchbestemming](#connect-to-batch-destination). |
-| `transformations` | In de volgende stap vult u deze sectie met de segmenten en profielkenmerken die moeten worden geactiveerd. |
+| `transformations` | In de volgende stap vult u deze sectie met het publiek en de profielkenmerken die moeten worden geactiveerd. |
 
 Voor uw verwijzing, bevat de lijst hieronder de stroom specifieke IDs voor algemeen gebruikte partijbestemmingen:
 
@@ -933,7 +933,7 @@ Voor uw verwijzing, bevat de lijst hieronder de stroom specifieke IDs voor algem
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en een `etag`. Noteer beide waarden op dezelfde manier als u ze in de volgende stap nodig hebt om segmenten te activeren en gegevensbestanden te exporteren.
+Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en een `etag`. Noteer beide waarden op dezelfde manier als u ze in de volgende stap nodig hebt om het publiek te activeren en gegevensbestanden te exporteren.
 
 ```json
 {
@@ -947,11 +947,11 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en e
 
 ![Overzicht doelstappen 5](../assets/api/batch-destination/step5.png)
 
-Nadat u alle verbindingen en de gegevensstroom hebt gemaakt, kunt u nu uw profielgegevens activeren op het doelplatform. In deze stap selecteert u welke segmenten en welke profielkenmerken u naar het doel wilt exporteren.
+Nadat u alle verbindingen en de gegevensstroom hebt gemaakt, kunt u nu uw profielgegevens activeren op het doelplatform. In deze stap selecteert u welk publiek en welke profielkenmerken u naar het doel wilt exporteren.
 
 U kunt ook de naamgevingsindeling van de geëxporteerde bestanden bepalen en bepalen welke kenmerken moeten worden gebruikt als [deduplicatietoetsen](../ui/activate-batch-profile-destinations.md#mandatory-keys) of [verplichte kenmerken](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In deze stap, kunt u het programma ook bepalen om gegevens naar de bestemming te verzenden.
 
-Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Voor meer informatie over JSON PATCH raadpleegt u de [RFC-specificatie](https://tools.ietf.org/html/rfc6902).
+Als u een publiek naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige publiek en profielattributen in één vraag activeren. Voor meer informatie over JSON PATCH raadpleegt u de [RFC-specificatie](https://tools.ietf.org/html/rfc6902).
 
 **API-indeling**
 
@@ -976,8 +976,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -995,8 +995,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -1026,26 +1026,26 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Gebruik in de URL de id van de gegevensstroom die u in de vorige stap hebt gemaakt. |
 | `{ETAG}` | Krijg de `{ETAG}` uit het antwoord in de vorige stap, [Een gegevensstroom maken](#create-dataflow). De antwoordindeling in de vorige stap heeft escape-aanhalingstekens. U moet de niet-beschermde waarden in de kopbal van het verzoek gebruiken. Zie het onderstaande voorbeeld: <br> <ul><li>Voorbeeld van reactie: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Waarde die u in uw verzoek wilt gebruiken: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom. |
-| `{SEGMENT_ID}` | Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, raadpleegt u [een segmentdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
+| `{SEGMENT_ID}` | Geef de gebruikers-id op die u naar dit doel wilt exporteren. Ga naar [een publieksdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
 | `{PROFILE_ATTRIBUTE}` | Bijvoorbeeld: `"person.lastName"` |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een segment wilt toevoegen aan een gegevensstroom, gebruikt u de opdracht `add` bewerking. |
-| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een segment toevoegt aan een gegevensstroom, gebruikt u het pad dat in het voorbeeld is opgegeven. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` bewerking. |
+| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een publiek aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
-| `id` | Geef de id op van het segment dat u toevoegt aan de doelgegevensstroom. |
-| `name` | *Optioneel*. Geef de naam op van het segment dat u toevoegt aan de doelgegevensstroom. Merk op dat dit gebied niet verplicht is en u kunt met succes een segment aan de bestemmingsdataflow toevoegen zonder zijn naam te verstrekken. |
-| `filenameTemplate` | Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: Verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: Verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde segment.</li><li>`%SEGMENT_NAME%`: Optioneel. De geëxporteerde bestanden bevatten de naam van het geëxporteerde segment.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: Optioneel. Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: Optioneel. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> Raadpleeg voor meer informatie over het configureren van bestandsnamen de [bestandsnamen configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) in de activeringszelfstudie voor batchbestemmingen. |
+| `id` | Geef de id op van het publiek dat u aan de doelgegevensstroom toevoegt. |
+| `name` | *Optioneel*. Geef de naam op van het publiek dat u aan de doelgegevensstroom toevoegt. Dit veld is niet verplicht en u kunt een publiek toevoegen aan de doelgegevensstroom zonder de naam ervan op te geven. |
+| `filenameTemplate` | Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: Verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: Verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde publiek.</li><li>`%SEGMENT_NAME%`: Optioneel. De geëxporteerde bestanden bevatten de naam van het geëxporteerde publiek.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: Optioneel. Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: Optioneel. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> Raadpleeg voor meer informatie over het configureren van bestandsnamen de [bestandsnamen configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) in de activeringszelfstudie voor batchbestemmingen. |
 | `exportMode` | Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Voor meer informatie over de twee opties raadpleegt u [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
-| `startDate` | Selecteer de datum waarop het segment moet beginnen met het exporteren van profielen naar uw bestemming. |
+| `startDate` | Selecteer de datum waarop het publiek moet beginnen met het exporteren van profielen naar uw bestemming. |
 | `frequency` | Verplicht. <br> <ul><li>Voor de `"DAILY_FULL_EXPORT"` u kunt de exportmodus `ONCE` of `DAILY`.</li><li>Voor de `"FIRST_FULL_THEN_INCREMENTAL"` u kunt de exportmodus `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist als u de optie `"DAILY_FULL_EXPORT"` in de `frequency` kiezer. <br> Verplicht. <br> <ul><li>Selecteren `"AFTER_SEGMENT_EVAL"` om de activeringstaak onmiddellijk uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Dit zorgt ervoor dat wanneer de activeringstaak wordt uitgevoerd, de meest recente profielen naar uw bestemming worden uitgevoerd.</li><li>Selecteren `"SCHEDULED"` om de activeringstaak op een vast tijdstip uit te voeren. Dit zorgt ervoor dat de gegevens van het Experience Platform profielgegevens tezelfdertijd elke dag worden uitgevoerd, maar de profielen u uitvoert kunnen niet de meest bijgewerkte zijn, afhankelijk van of de batch-segmentatietaak heeft voltooid alvorens de activeringstaak begint. Als u deze optie selecteert, moet u ook een `startTime` aangeven op welk tijdstip in UTC de dagelijkse uitvoer moet plaatsvinden.</li></ul> |
-| `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop segmentleden stoppen met exporteren naar de bestemming. |
-| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het segment moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
+| `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop publieksleden stoppen met exporteren naar de bestemming. |
+| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> Zie [De componenten van een segment van de update in een dataflow](/help/destinations/api/update-destination-dataflows.md#update-segment) om te leren hoe u diverse componenten (bestandsnaamsjabloon, exporttijd, enzovoort) van geëxporteerde segmenten kunt bijwerken.
+> Zie [Componenten van een publiek in een gegevensstroom bijwerken](/help/destinations/api/update-destination-dataflows.md#update-segment) om te leren hoe u verschillende componenten (bestandsnaamsjabloon, exporttijd, enzovoort) van geëxporteerde doelgroepen kunt bijwerken.
 
 **Antwoord**
 
@@ -1055,7 +1055,7 @@ Zoek naar een 202 Geaccepteerde reactie. Er wordt geen responsorgaan geretournee
 
 ![Overzicht doelstappen 6](../assets/api/batch-destination/step6.png)
 
-Als laatste stap in de zelfstudie moet u controleren of de segmenten en profielkenmerken correct zijn toegewezen aan de gegevensstroom.
+Als laatste stap in de zelfstudie moet u controleren of het publiek en de profielkenmerken correct zijn toegewezen aan de gegevensstroom.
 
 Om dit te bevestigen, voer het volgende verzoek van de GET uit:
 
@@ -1082,7 +1082,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Antwoord**
 
-De geretourneerde reactie moet worden opgenomen in de `transformations` parameter de segmenten en profielkenmerken die u in de vorige stap hebt verzonden. Een monster `transformations` de parameter in het antwoord kan er als volgt uitzien :
+De geretourneerde reactie moet worden opgenomen in de `transformations` geeft een parameter op voor het publiek en de profielkenmerken die u in de vorige stap hebt verzonden. Een monster `transformations` de parameter in het antwoord kan er als volgt uitzien :
 
 ```json
 "transformations":[

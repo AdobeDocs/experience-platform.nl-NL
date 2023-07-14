@@ -3,9 +3,9 @@ keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van luchtschip
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Meer informatie over [!DNL Airship], zie de [Airship Docs](https://docs.airship.
 
 ## Vereisten {#prerequisites}
 
-Voordat u publiekssegmenten kunt verzenden naar [!DNL Airship]moet u:
+Voordat u uw publiek naar kunt sturen [!DNL Airship]moet u:
 
 * Kenmerken inschakelen in uw [!DNL Airship] project.
 * Een token voor toonder genereren voor verificatie.
@@ -35,6 +35,18 @@ Voordat u publiekssegmenten kunt verzenden naar [!DNL Airship]moet u:
 >
 >Een [!DNL Airship] account via [deze link](https://go.airship.eu/accounts/register/plan/starter/) als u dat nog niet hebt gedaan.
 
+## Ondersteuning voor extern publiek {#external-audiences-support}
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het externe publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type extern publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
@@ -42,7 +54,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -72,7 +84,7 @@ Gebruik profielgegevens die in Adobe Experience Platform zijn verzameld voor per
 
 ### Hoofdletters gebruiken #2
 
-Kenmerken van Adobe Experience Platform benutten om verder te verrijken [!DNL Airship] profielen en deze combineren met SDK of [!DNL Airship] voorspellende gegevens. Een detailhandelaar kan bijvoorbeeld een segment met loyaliteitsstatus en locatiegegevens (kenmerken van Platform) maken en [!DNL Airship] voorspeld om gegevens te sturen om hoogst gerichte berichten naar gebruikers in de gouden loyaliteitsstatus te verzenden die in Las Vegas, NV wonen, en een hoge waarschijnlijkheid van het kurken hebben.
+Kenmerken van Adobe Experience Platform benutten om verder te verrijken [!DNL Airship] profielen en deze combineren met SDK of [!DNL Airship] voorspellende gegevens. Een detailhandelaar kan bijvoorbeeld een publiek met loyaliteitsstatus en locatiegegevens (kenmerken van Platform) maken en [!DNL Airship] voorspeld om gegevens te sturen om hoogst gerichte berichten naar gebruikers in de gouden loyaliteitsstatus te verzenden die in Las Vegas, NV wonen, en een hoge waarschijnlijkheid van het kurken hebben.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -102,13 +114,13 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Zie [De publieksgegevens van de activering aan het stromen segment de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 

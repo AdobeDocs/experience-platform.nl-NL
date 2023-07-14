@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;de stroomdienst;update 
 solution: Experience Platform
 title: Doelgegevens bijwerken met de Flow Service API
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe u de gegevensstroom in- of uitschakelt, de basisinformatie bijwerkt of segmenten en kenmerken toevoegt en verwijdert met behulp van de Flow Service API.
+description: Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe u de gegevensstroom in- of uitschakelt, de basisinformatie bijwerkt of soorten publiek en kenmerken toevoegt en verwijdert met behulp van de Flow Service API.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Doelgegevens bijwerken met de Flow Service API
 
-Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe te om de gegevensstroom toe te laten of onbruikbaar te maken, zijn basisinformatie bij te werken of segmenten en attributen toe te voegen en te verwijderen gebruikend [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Voor informatie over het bewerken van doelgegevensstromen met behulp van de interface van het Experience Platform, leest u [Activeringsstromen bewerken](/help/destinations/ui/edit-activation.md).
+Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe u de gegevensstroom in- of uitschakelt, de basisgegevens bijwerkt of soorten publiek en kenmerken toevoegt en verwijdert met de opdracht [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Voor informatie over het bewerken van doelgegevensstromen met behulp van de interface van het Experience Platform, leest u [Activeringsstromen bewerken](/help/destinations/ui/edit-activation.md).
 
 ## Aan de slag {#get-started}
 
@@ -447,9 +447,9 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 }
 ```
 
-## Een segment toevoegen aan een gegevensstroom {#add-segment}
+## Een publiek toevoegen aan een gegevensstroom {#add-segment}
 
-Om een segment aan de bestemmingsdataflow toe te voegen, voer een verzoek van PATCH aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het segment u wilt toevoegen.
+Om een publiek aan de bestemmingsdataflow toe te voegen, voer een verzoek van PATCH aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het publiek u wilt toevoegen.
 
 **API-indeling**
 
@@ -459,7 +459,7 @@ PATCH /flows/{FLOW_ID}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuw segment toegevoegd aan een bestaande doelgegevensstroom.
+Met het volgende verzoek voegt u een nieuw publiek toe aan een bestaande doelgegevensstroom.
 
 ```shell
 curl -X PATCH \
@@ -494,18 +494,18 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een segment wilt toevoegen aan een gegevensstroom, gebruikt u de opdracht `add` bewerking. |
-| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een segment toevoegt aan een gegevensstroom, gebruikt u het pad dat in het voorbeeld is opgegeven. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` bewerking. |
+| `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een publiek aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
-| `id` | Geef de id op van het segment dat u toevoegt aan de doelgegevensstroom. |
-| `name` | **(Optioneel)**. Geef de naam op van het segment dat u toevoegt aan de doelgegevensstroom. Merk op dat dit gebied niet verplicht is en u kunt met succes een segment aan de bestemmingsdataflow toevoegen zonder zijn naam te verstrekken. |
-| `filenameTemplate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: Verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: Verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde segment.</li><li>`%SEGMENT_NAME%`: **(Optioneel)**. De geëxporteerde bestanden bevatten de naam van het geëxporteerde segment.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: **(Optioneel)**. Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: **(Optioneel)**. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> Raadpleeg voor meer informatie over het configureren van bestandsnamen de [bestandsnamen configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) in de activeringszelfstudie voor batchbestemmingen. |
-| `exportMode` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Voor meer informatie over de twee opties raadpleegt u [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
-| `startDate` | Selecteer de datum waarop het segment moet beginnen met het exporteren van profielen naar uw bestemming. |
-| `frequency` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. <br> <ul><li>Voor de `"DAILY_FULL_EXPORT"` u kunt de exportmodus `ONCE` of `DAILY`.</li><li>Voor de `"FIRST_FULL_THEN_INCREMENTAL"` u kunt de exportmodus `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `id` | Geef de id op van het publiek dat u aan de doelgegevensstroom toevoegt. |
+| `name` | **(Optioneel)**. Geef de naam op van het publiek dat u aan de doelgegevensstroom toevoegt. Dit veld is niet verplicht en u kunt een publiek toevoegen aan de doelgegevensstroom zonder de naam ervan op te geven. |
+| `filenameTemplate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: Verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: Verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde publiek.</li><li>`%SEGMENT_NAME%`: **(Optioneel)**. De geëxporteerde bestanden bevatten de naam van het geëxporteerde publiek.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: **(Optioneel)**. Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: **(Optioneel)**. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> Raadpleeg voor meer informatie over het configureren van bestandsnamen de [bestandsnamen configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) in de activeringszelfstudie voor batchbestemmingen. |
+| `exportMode` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Voor meer informatie over de twee opties raadpleegt u [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
+| `startDate` | Selecteer de datum waarop het publiek moet beginnen met het exporteren van profielen naar uw bestemming. |
+| `frequency` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. <br> <ul><li>Voor de `"DAILY_FULL_EXPORT"` u kunt de exportmodus `ONCE` of `DAILY`.</li><li>Voor de `"FIRST_FULL_THEN_INCREMENTAL"` u kunt de exportmodus `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist als u de optie `"DAILY_FULL_EXPORT"` in de `frequency` kiezer. <br> Verplicht. <br> <ul><li>Selecteren `"AFTER_SEGMENT_EVAL"` om de activeringstaak onmiddellijk uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Dit zorgt ervoor dat wanneer de activeringstaak wordt uitgevoerd, de meest recente profielen naar uw bestemming worden uitgevoerd.</li><li>Selecteren `"SCHEDULED"` om de activeringstaak op een vast tijdstip uit te voeren. Dit zorgt ervoor dat de gegevens van het Experience Platform profielgegevens tezelfdertijd elke dag worden uitgevoerd, maar de profielen u uitvoert kunnen niet de meest bijgewerkte zijn, afhankelijk van of de batch-segmentatietaak heeft voltooid alvorens de activeringstaak begint. Als u deze optie selecteert, moet u ook een `startTime` aangeven op welk tijdstip in UTC de dagelijkse uitvoer moet plaatsvinden.</li></ul> |
-| `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop segmentleden stoppen met exporteren naar de bestemming. |
-| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een segment toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het segment moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
+| `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop publieksleden stoppen met exporteren naar de bestemming. |
+| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
 
 **Antwoord**
 
@@ -518,9 +518,9 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 }
 ```
 
-## Een segment verwijderen uit een gegevensstroom {#remove-segment}
+## Een publiek verwijderen uit een gegevensstroom {#remove-segment}
 
-Om een segment uit een bestaande bestemmingsdataflow te verwijderen, voer een verzoek van PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de indexselecteur van het segment u wilt verwijderen. Indexering begint bij `0`. Bijvoorbeeld, verwijdert het steekproefverzoek verder hieronder de eerste en tweede segmenten uit dataflow.
+Om een publiek uit een bestaande bestemmingsdataflow te verwijderen, voer een verzoek van PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de indexselecteur van het publiek u wilt verwijderen. Indexering begint bij `0`. Het voorbeeldverzoek hieronder verwijdert bijvoorbeeld het eerste en het tweede publiek uit de dataflow.
 
 **API-indeling**
 
@@ -530,7 +530,7 @@ PATCH /flows/{FLOW_ID}
 
 **Verzoek**
 
-Het volgende verzoek verwijdert twee segmenten uit een bestaande bestemmingsdataflow.
+Het volgende verzoek verwijdert twee publiek uit een bestaande bestemmingsdataflow.
 
 ```shell
 curl -X PATCH \
@@ -564,8 +564,8 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een segment uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` bewerking. |
-| `path` | Geeft aan welk bestaand segment moet worden verwijderd uit de doelgegevensstroom op basis van de index van de segmentkiezer. Om de orde van segmenten in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.segmentSelectors` eigenschap. Om het eerste segment in dataflow te schrappen, gebruik `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` bewerking. |
+| `path` | Geeft aan welk bestaand publiek uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van publiek in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.segmentSelectors` eigenschap. Om het eerste publiek in dataflow te schrappen, gebruik `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Antwoord**
@@ -579,9 +579,9 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 }
 ```
 
-## De componenten van een segment van de update in een dataflow {#update-segment}
+## Componenten van een publiek in een gegevensstroom bijwerken {#update-segment}
 
-U kunt componenten van een segment in een bestaande bestemmingsgegevensstroom bijwerken. U kunt bijvoorbeeld de exportfrequentie wijzigen of de sjabloon voor de bestandsnaam bewerken. Om dit te doen, doe een verzoek van de PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de indexselecteur van het segment u wilt bijwerken. Indexering begint bij `0`. Bijvoorbeeld, werkt het verzoek hieronder het negende segment in een dataflow bij.
+U kunt componenten van een publiek in een bestaande bestemmingsgegevensstroom bijwerken. U kunt bijvoorbeeld de exportfrequentie wijzigen of de sjabloon voor de bestandsnaam bewerken. Om dit te doen, doe een verzoek van de PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en de indexselecteur van het publiek u wilt bijwerken. Indexering begint bij `0`. Met de onderstaande aanvraag wordt bijvoorbeeld het negende publiek in een dataflow bijgewerkt.
 
 **API-indeling**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **Verzoek**
 
-Wanneer het bijwerken van een segment in een bestaande bestemmingsdataflow, zou u eerst een GET verrichting moeten uitvoeren om de details van het segment terug te winnen u wilt bijwerken. Geef vervolgens alle segmentgegevens op in de payload, niet alleen de velden die u wilt bijwerken. In het onderstaande voorbeeld wordt aangepaste tekst toegevoegd aan het einde van de bestandsnaamsjabloon en wordt de frequentie van het exportschema bijgewerkt van 6 uur tot 12 uur.
+Wanneer het bijwerken van een publiek in een bestaande bestemmingsdataflow, zou u eerst een GET verrichting moeten uitvoeren om de details van het publiek terug te winnen u wilt bijwerken. Geef vervolgens alle publieksinformatie op in de payload en niet alleen de velden die u wilt bijwerken. In het onderstaande voorbeeld wordt aangepaste tekst toegevoegd aan het einde van de bestandsnaamsjabloon en wordt de frequentie van het exportschema bijgewerkt van 6 uur tot 12 uur.
 
 ```shell
 curl -X PATCH \
@@ -626,7 +626,7 @@ curl -X PATCH \
 ]'
 ```
 
-Raadpleeg de sectie voor beschrijvingen van de eigenschappen in de payload [Een segment toevoegen aan een gegevensstroom](#add-segment).
+Raadpleeg de sectie voor beschrijvingen van de eigenschappen in de payload [Een publiek toevoegen aan een gegevensstroom](#add-segment).
 
 
 **Antwoord**
@@ -640,13 +640,13 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 }
 ```
 
-Zie de voorbeelden hieronder voor meer voorbeelden van segmentcomponenten die u in een dataflow kunt bijwerken.
+Zie de voorbeelden hieronder voor meer voorbeelden van publiekscomponenten die u in een gegevensstroom kunt bijwerken.
 
-## Werk de de uitvoerwijze van een segment van gepland aan na segmentevaluatie bij {#update-export-mode}
+## Werk de de uitvoerwijze van een publiek van gepland aan na publieksevaluatie bij {#update-export-mode}
 
-+++ Klik om een voorbeeld te zien waar een segmentuitvoer van wordt bijgewerkt van geactiveerd elke dag op een bepaald tijdstip aan wordt geactiveerd elke dag nadat de de partijsegmentatietaak van het Platform voltooit.
++++ Klik om een voorbeeld te zien waar een publiek wordt de uitvoer bijgewerkt van wordt geactiveerd elke dag op een bepaald tijdstip aan wordt geactiveerd elke dag nadat de de partijsegmentatietaak van het Platform voltooit.
 
-Het segment wordt elke dag geëxporteerd om 16:00 UTC.
+Het publiek wordt elke dag om 16:00 UTC geëxporteerd.
 
 ```json
 {
@@ -669,7 +669,7 @@ Het segment wordt elke dag geëxporteerd om 16:00 UTC.
 }
 ```
 
-Het segment wordt uitgevoerd elke dag nadat de dagelijkse batch-segmentatietaak is voltooid.
+Het publiek wordt elke dag uitgevoerd nadat de dagelijkse batchsegmentatietaak is voltooid.
 
 ```json
 {
@@ -697,7 +697,7 @@ Het segment wordt uitgevoerd elke dag nadat de dagelijkse batch-segmentatietaak 
 
 +++ Klik hier om een voorbeeld te zien waarin de bestandsnaamsjabloon wordt bijgewerkt en extra velden in de bestandsnaam worden opgenomen
 
-De geëxporteerde bestanden bevatten de doelnaam en de Experience Platform-segment-id
+De geëxporteerde bestanden bevatten de doelnaam en de gebruikers-id van het Experience Platform
 
 ```json
 {
@@ -720,7 +720,7 @@ De geëxporteerde bestanden bevatten de doelnaam en de Experience Platform-segme
 }
 ```
 
-De geëxporteerde bestanden bevatten de doelnaam, de segment-id van het Experience Platform, de datum en tijd waarop het bestand door het Experience Platform is gegenereerd en aangepaste tekst die aan het einde van de bestanden is toegevoegd.
+De geëxporteerde bestanden bevatten de doelnaam, de gebruikers-id van het Experience Platform, de datum en tijd waarop het bestand door het Experience Platform is gegenereerd en aangepaste tekst die aan het einde van de bestanden is toegevoegd.
 
 
 ```json
@@ -838,8 +838,8 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een segment uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` bewerking. |
-| `path` | Geeft aan welk bestaand profielkenmerk uit de doelgegevensstroom moet worden verwijderd, op basis van de index van de segmentkiezer. Om de orde van profielattributen in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.profileSelectors` eigenschap. Om het eerste segment in dataflow te schrappen, gebruik `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` bewerking. |
+| `path` | Geeft aan welk bestaand profielkenmerk uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van profielattributen in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.profileSelectors` eigenschap. Om het eerste publiek in dataflow te schrappen, gebruik `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Antwoord**
@@ -859,4 +859,4 @@ De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-f
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen hebt u geleerd hoe u verschillende componenten van een doelgegevensstroom kunt bijwerken, zoals het toevoegen of verwijderen van segmenten of profielkenmerken met gebruik van [!DNL Flow Service] API. Voor meer informatie over bestemmingen, zie [Overzicht van doelen](../home.md).
+Door deze zelfstudie te volgen hebt u geleerd hoe u verschillende componenten van een doelgegevensstroom kunt bijwerken, zoals het toevoegen of verwijderen van soorten publiek of profielkenmerken met gebruik van [!DNL Flow Service] API. Voor meer informatie over bestemmingen, zie [Overzicht van doelen](../home.md).

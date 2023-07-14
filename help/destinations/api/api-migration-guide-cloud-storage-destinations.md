@@ -4,7 +4,7 @@ title: API-migratiegids voor cloudopslagdoelen
 description: Meer informatie over de wijzigingen in de workflow om cloudopslagbestemmingen te activeren als onderdeel van de migratie naar de nieuwe doelkaarten voor cloudopslag met extra functionaliteit.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -67,7 +67,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 -->
-* [API-zelfstudie voor het exporteren van segmenten naar cloudopslagdoelen](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [API-zelfstudie voor het exporteren van soorten publiek naar cloudopslagdoelen](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Referentiedocumentatie voor de doelservice-API](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Samenvatting van achterwaarts incompatibele wijzigingen {#summary-backwards-incompatible-changes}
@@ -684,7 +684,7 @@ Volledige informatie over het instellen van de `profileMapping` object in het [A
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -752,7 +752,7 @@ In het onderstaande configuratievoorbeeld ziet u hoe `profileSelectors` velden z
 
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "mandatoryFields": [
     "CORE",

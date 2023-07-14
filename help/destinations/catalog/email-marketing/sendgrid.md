@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;sendGrid;sendGrid bestemming
 title: SendGrid-verbinding
 description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij exporteren en deze activeren in SendGrid voor uw bedrijfsbehoeften.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1511'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [SendGrid](https://www.sendgrid.com) is een populair platform voor klantcommunicatie voor transactie en marketing e-mails.
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), zodat u uw e-mailprofielen van de eerste partij kunt exporteren en deze binnen een nieuw SendGrid-segment kunt activeren voor uw bedrijfsbehoeften.
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), zodat u uw e-mailprofielen van de eerste partij kunt exporteren en deze kunt activeren in een nieuw SendGrid-publiek voor uw bedrijfsbehoeften.
 
 SendGrid gebruikt API dragertokens als authentificatiemechanisme om met SendGrid API te communiceren.
 
@@ -40,8 +40,7 @@ Voordat u gegevens naar de SendGrid-bestemming kunt activeren, moet u een [schem
 >
 >* Voor de SendGrid-API die wordt gebruikt voor het maken van de mailinglijst vanuit e-mailprofielen, moeten binnen elk profiel unieke e-mailadressen worden opgegeven. Dit ongeacht of het wordt gebruikt als waarde voor *email* of *alternatieve e-mail*. Omdat de SendGrid-verbinding toewijzingen ondersteunt voor e-mailwaarden en alternatieve e-mailwaarden, moet u ervoor zorgen dat alle gebruikte e-mailadressen uniek zijn in elk profiel van het *Gegevensset*. Als de e-mailprofielen naar SendGrid worden verzonden, resulteert dit in een fout en is dat e-mailprofiel niet aanwezig in de gegevensexport.
 >
->* Er is momenteel geen functionaliteit beschikbaar om profielen uit SendGrid te verwijderen wanneer ze uit segmenten in het Experience Platform worden verwijderd.
-
+>* Er is momenteel geen functionaliteit beschikbaar om profielen uit SendGrid te verwijderen wanneer ze uit het publiek in het Experience Platform worden verwijderd.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -60,7 +59,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -112,29 +111,27 @@ U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
-## Segmenten naar dit doel activeren {#activate}
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en segmenten activeren voor streaming segmentexportdoelen](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 Raadpleeg de onderstaande afbeeldingen voor meer informatie over deze bestemming.
 
-1. Selecteer één of meerdere segmenten om naar SendGrid uit te voeren.
+1. Selecteer een of meer soorten publiek dat u wilt exporteren naar SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. In de **[!UICONTROL Mapping]** stap, na het selecteren **[!UICONTROL Add new mapping]**, wordt u getoond de toewijzingspagina om de bronXDM gebieden aan de SendGrid API doelgebieden in kaart te brengen. In de onderstaande afbeeldingen ziet u hoe u naamruimten kunt toewijzen tussen Experience Platform en SendGrid. Zorg ervoor dat **[!UICONTROL Source field]** *E-mail* moet worden toegewezen aan de **[!UICONTROL Target field]** *external_id* zoals hieronder weergegeven.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. Wijs op dezelfde manier de gewenste afbeelding toe [!DNL Adobe Experience Platform] attributen die u naar de bestemming wilt uitvoeren SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
 1. Selecteer **[!UICONTROL Next]** naar het revisiescherm gaan.
@@ -155,7 +152,7 @@ De uitgebreide lijst met ondersteunde kenmerktoewijzingen die kan worden ingeste
 | identityMap:<br/> E-mail | Identiteit:<br/> external_id | Tekenreeks | Het primaire e-mailadres van de contactpersoon. Dit is een geldige e-mail. | Max. lengte:<br/> 254 tekens |
 | xdm:<br/> person.name.firstName | xdm:<br/> first_name | Tekenreeks | De naam van de contactpersoon | Max. lengte:<br/> 50 tekens |
 | xdm:<br/> person.name.lastName | xdm:<br/> last_name | Tekenreeks | De familienaam van de contactpersoon | Max. lengte:<br/> 50 tekens |
-| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | Tekenreeks | De postcode of andere postcode van de contactpersoon. |  |
+| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | Tekenreeks | De postcode of andere postcode van de contactpersoon. | |
 | xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_Province_region | Tekenreeks | De staat, provincie of regio van de contactpersoon. | Max. lengte:<br/> 50 tekens |
 
 ## De gegevensexport valideren in SendGrid {#validate}
@@ -168,22 +165,20 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 1. Selecteer het doel en controleer of de status **[!UICONTROL enabled]**.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Naar de **[!DNL Activation data]** selecteert u vervolgens een segmentnaam.
+1. Naar de **[!DNL Activation data]** en selecteert u vervolgens een publieksnaam.
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
-1. Controleer de segmentsamenvatting en controleer de telling van profielen aan de telling beantwoordt die binnen de dataset wordt gecreeerd.
+1. Controleer de publiekssamenvatting en controleer de telling van profielen aan de telling beantwoordt die binnen de dataset wordt gecreeerd.
    ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. De [SendGrid-marketinglijsten > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) wordt gebruikt om unieke contactlijsten binnen SendGrid tot stand te brengen door de waarde van samen te voegen *list_name* en het tijdstempel van de gegevensexport. Navigeer naar de SendGrid-site en controleer of de nieuwe lijst met contactpersonen die overeenkomen met het naampatroon is gemaakt.
    ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. Selecteer de zojuist gemaakte lijst met contactpersonen en controleer of de nieuwe e-mailrecord in de gegevensset die u hebt gemaakt, wordt ingevuld in de nieuwe lijst met contactpersonen.
 
 1. Controleer bovendien een aantal e-mailberichten om te controleren of de veldtoewijzing juist is.
    ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}

@@ -2,9 +2,9 @@
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 0%
 >* Als u gegevens al activeert voor de **[!UICONTROL Marketo V1]** bestemming: Maak nieuwe gegevensstromen naar de **[!UICONTROL Marketo V2]** doel en verwijder bestaande gegevensstromen naar **[!UICONTROL Marketo V1]** uiterlijk in februari 2023. Met ingang van die datum **[!UICONTROL Marketo V1]** de doelkaart wordt verwijderd.
 >* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Marketo V1]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Marketo V2]** om verbinding te maken met en gegevens te exporteren naar Marketo.
 
-
 ![Afbeelding van de twee Marketo-doelkaarten in een weergave Naast elkaar.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Tot de verbeteringen in de Marketo V2-bestemming behoren:
@@ -31,7 +30,7 @@ Tot de verbeteringen in de Marketo V2-bestemming behoren:
 
 [!DNL Marketo Engage] is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 
-De bestemming laat marketers toe om segmenten te duwen die in Adobe Experience Platform aan Marketo worden gecreeerd waar zij als statische lijsten zullen verschijnen.
+De bestemming laat marketers toe om publiek te duwen dat in Adobe Experience Platform wordt gecreeerd aan Marketo waar zij als statische lijsten zullen verschijnen.
 
 ## Ondersteunde identiteiten en kenmerken {#supported-identities-attributes}
 
@@ -52,28 +51,39 @@ De bestemming laat marketers toe om segmenten te duwen die in Adobe Experience P
 
 U kunt kenmerken van het Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie toegang heeft in Marketo. In Marketo kunt u de opdracht [Beschrijf API-aanvraag](https://developers.marketo.com/rest-api/lead-database/leads/#describe) om de kenmerkvelden op te halen waartoe uw organisatie toegang heeft.
 
+## Ondersteuning voor extern publiek {#external-audiences-support}
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het externe publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type extern publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (e-mail, ECID) die worden gebruikt in het dialoogvenster [!DNL Marketo Engage] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail, ECID) die worden gebruikt in het dialoogvenster [!DNL Marketo Engage] bestemming. |
+| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Doel instellen en segmenten activeren {#set-up}
+## Doel instellen en publiek activeren {#set-up}
 
 >[!IMPORTANT]
 > 
 >* Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions).
 >* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
+Voor gedetailleerde instructies over hoe te opstelling de bestemming en activeert publiek [Een Adobe Experience Platform-publiek naar een statische Marketo-lijst duwen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in de documentatie van Marketo.
 
-Voor gedetailleerde instructies over hoe te opstelling de bestemming en activeert segmenten, lees [Een Adobe Experience Platform-segment naar een statische Marketo-lijst verplaatsen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in de documentatie van Marketo.
-
-In de onderstaande video ziet u ook de stappen voor het configureren van een Marketo-bestemming en het activeren van segmenten.
+In de onderstaande video ziet u ook de stappen voor het configureren van een Marketo-bestemming en het activeren van het publiek.
 
 >[!IMPORTANT]
 >
@@ -81,9 +91,8 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een Mar
 > 
 >* De doelkaart die u in UI van het Experience Platform zou moeten gebruiken is **[!UICONTROL Marketo V2]**.
 >* De nieuwe video wordt niet weergegeven **[!UICONTROL Person creation]** in het veld Verbinding maken met doel.
->* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu vele andere gebieden van profielattributen naast de informatie van het segmentlidmaatschap in kaart brengen die op het ogenblik werd gesteund de video werd geregistreerd. U kunt ook segmentleden exporteren naar Marketo die nog niet voorkomen in uw statische Marketo-lijsten. Deze leden worden toegevoegd aan de lijsten.
->* In de **[!UICONTROL Schedule segment step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.
-
+>* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu veel andere profielkenmerkvelden toewijzen naast de lidmaatschapsgegevens voor het publiek die werden ondersteund op het moment dat de video werd opgenomen. U kunt ook publieksleden exporteren naar Marketo die nog niet in uw statische Marketo-lijsten voorkomen. Deze personen worden toegevoegd aan de lijsten.
+>* In de **[!UICONTROL Schedule audience step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -101,8 +110,8 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 
 <!--
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 -->

@@ -3,7 +3,7 @@ keywords: Advertising Cloud;reclame-wolkuitbreiding; advertentiewolkenbestemming
 title: Adobe Advertising Cloud-extensie
 description: De extensie Adobe Advertising Cloud is een reclamebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Dit is het [!DNL Advertising Cloud] uitbreiding voor de uitvoering [!DNL Advertising Cloud] conversie- en segmenttags voor zowel de DSP als de zoekfunctie (DCO wordt momenteel niet ondersteund).
+Dit is het [!DNL Advertising Cloud] uitbreiding voor de uitvoering [!DNL Advertising Cloud] conversie- en publiekstags voor zowel de DSP als de zoekfunctie (DCO wordt momenteel niet ondersteund).
 
 Adobe Advertising Cloud is een advertentieverlenging in Adobe Experience Platform.
 

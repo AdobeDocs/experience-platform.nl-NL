@@ -3,7 +3,7 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht van advertentiebestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
@@ -59,4 +59,4 @@ Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Om segmenten naar advertentiebestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Als u een publiek naar advertentiebestemmingen voor uw campagnes wilt sturen, moet het Platform eerst verbinding maken met het doel. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.

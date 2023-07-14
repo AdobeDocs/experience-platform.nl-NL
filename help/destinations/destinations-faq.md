@@ -3,9 +3,9 @@ keywords: bestemmingen; vragen; veelgestelde vragen; faq; bestemmingen - vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1393'
+source-wordcount: '1392'
 ht-degree: 2%
 
 ---
@@ -22,9 +22,9 @@ Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platf
 
 +++Antwoord Dit is een normaal gedrag toe te schrijven aan de manier waarop het Experience Platform segmentatie uitvoert.
 
-De het stromen segmentatie werkt het profielaantal voor het stromen segmenten door de dag bij, terwijl de partijsegmentatie de profieltelling voor partijsegmenten eens om de 24 uur bijwerkt.
+Streaming segmentatie werkt het aantal profielen voor streaming publiek gedurende de dag bij, terwijl batchsegmentatie het aantal profielen voor batchgebruikers elke 24 uur bijwerkt.
 
-Wanneer het segment uitvoerschema van het segmenteringsprogramma verschilt, telt het profiel tussen UI en geëxporteerde [!DNL CSV] Het bestand is anders, vooral wanneer het gaat om streaming segmenten.
+Wanneer het programma voor publieksexport afwijkt van het segmentatieschema, telt het profiel tussen de gebruikersinterface en het geëxporteerde bestand [!DNL CSV] Het bestand is anders, vooral wanneer het gaat om streaming publiek.
 
 Zie de [Documentatie voor segmentatieservice](../segmentation/home.md) voor meer informatie .
 +++
@@ -33,7 +33,7 @@ Zie de [Documentatie voor segmentatieservice](../segmentation/home.md) voor meer
 
 ### Wat moet ik doen voordat ik publiek kan activeren [!DNL Facebook Custom Audiences]?
 
-+++Antwoord alvorens u uw publiekssegmenten kunt verzenden naar [!DNL Facebook]voldoet aan de volgende vereisten:
++++Antwoord Voordat u uw publiek naar kunt sturen [!DNL Facebook]voldoet aan de volgende vereisten:
 
 * Uw [!DNL Facebook] gebruikersaccount moet de **[!DNL Manage campaigns]** Toestemming ingeschakeld voor de advertentie-account die u wilt gebruiken.
 * De **Adobe Experience Cloud** bedrijfsaccount moet worden toegevoegd als advertentiepartner in uw [!DNL Facebook Ad Account]. Gebruik `business ID=206617933627973`. Zie [Partners toevoegen aan uw Business Manager](https://www.facebook.com/business/help/1717412048538897) in de documentatie van Facebook voor meer informatie.
@@ -91,9 +91,9 @@ Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vere
 
 ## Google Customer Match {#google-customer-match}
 
-### Wanneer het uitvoeren van segmenten aan de Gelijke van de Klant van Google, waarom zie ik extra aantallen aan het eind van de segmentnamen in de interface van Google worden toegevoegd?
+### Waarom zie ik extra nummers toevoegen aan het einde van de publieksnamen in de Google-interface wanneer ik publiek exporteer naar Google Customer Match?
 
-+++Antwoord Google vereist dat segmentnamen uniek zijn. De getallen die u ziet [UNIX-tijdstempels](https://www.unixtimestamp.com/) en ze worden toegevoegd om de segmentnamen uniek te houden, als u hetzelfde segment toewees aan meerdere Google-doelen.
++++Antwoord Google vereist dat publieksnamen uniek zijn. De getallen die u ziet [UNIX-tijdstempels](https://www.unixtimestamp.com/) en worden toegevoegd om de publieksnamen uniek te houden, als u het zelfde publiek aan veelvoudige bestemmingen van Google in kaart bracht.
 +++
 
 ## linkedIn-doelgroepen {#linkedin}
@@ -174,7 +174,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ++ Antwoord ja, de Server API van het Netwerk van Edge werkt met de bestemming van de Aangepaste Personalisatie. Aangezien profielattributen gevoelige gegevens kunnen bevatten, vereist de bestemming van de Aangepaste Aanpassing u om de Server API van het Netwerk van de Rand voor gegevensinzameling te gebruiken. Bovendien moeten alle API-aanroepen worden uitgevoerd in een [geverifieerde context](../server-api/authentication.md).
 +++
 
-### Ik kan slechts één samenvoegbeleid hebben dat actief-op-rand is. Kan ik publiek bouwen dat een verschillend fusiebeleid gebruikt en hen nog naar Adobe Target als het stromen segmenten verzendt?
+### Ik kan slechts één samenvoegbeleid hebben dat actief-op-rand is. Kan ik een publiek opbouwen dat een ander samenvoegbeleid gebruikt en ze nog steeds naar Adobe Target sturen als streaming publiek?
 
 +++Antwoord nr. Alle soorten publiek die u naar Adobe Target wilt activeren, moeten een &#39;active-on-edge&#39; gebruiken [samenvoegingsbeleid](../profile/merge-policies/ui-guide.md).
 +++
