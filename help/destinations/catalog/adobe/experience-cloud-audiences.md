@@ -3,7 +3,7 @@ title: (Bèta) Experience Cloud-publiek
 description: Leer hoe u publiek kunt delen van Experience Platform naar verschillende oplossingen voor Experience Platforms.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
 workflow-type: tm+mt
 source-wordcount: '1598'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### Voor klanten die de oplossing voor het delen van het verouderde publiek gebruiken
 
-Als u al publiek deelt van Experience Platform aan Audience Manager en andere oplossingen van Experience Cloud via [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice of uw Adobe-accountteam om de verouderde integratie uit te schakelen. De de rekeningsteams van de Zorg van de klant en van de Adobe- rekening moeten een kaartje van Jira (zie malplaatjekaartje AAM-52354) indienen om de integratie onbruikbaar te maken.
+Als u al publiek deelt van Experience Platform aan Audience Manager en andere oplossingen van Experience Cloud via [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice of uw Adobe-accountteam om de verouderde integratie uit te schakelen. De de rekeningsteams van de Zorg van de klant en van de Adobe- rekening moeten een kaartje van Jira (zie malplaatjekaartje PLAT-160986) indienen om de integratie onbruikbaar te maken.
 
 De doorlooptijd voor het oplossen van het deprovisioning-ticket voor bètaklanten is zes werkdagen of minder. Nadat de bestaande oudere integratie is uitgeschakeld, kunt u doorgaan naar [verbinding maken](#connect) via de zelfbedieningsdoelkaart.
 
