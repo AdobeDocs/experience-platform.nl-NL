@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om het partnerschema voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie partnerschema
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1880'
 ht-degree: 1%
 
 ---
@@ -91,7 +91,10 @@ Als u een statisch schema met profielkenmerken wilt maken, definieert u de doelk
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Als u een statisch schema met profielkenmerken wilt maken, definieert u de doelk
 | `profileRequired` | Boolean | Optioneel | Gebruiken `true` als gebruikers de profielkenmerken van het Experience Platform aan douanekenmerken op uw bestemmingsplatform zouden moeten kunnen in kaart brengen. |
 | `segmentRequired` | Boolean | Vereist | Deze parameter wordt vereist door Destination SDK en moet altijd worden ingesteld op `true`. |
 | `identityRequired` | Boolean | Vereist | Instellen op `true` als gebruikers in staat moeten zijn om een kaart te maken [identiteitstypen](identity-namespace-configuration.md) van Experience Platform naar de kenmerken die u in het dialoogvenster `profileFields` array. |
+| `segmentNamespaceAllowList` | Array | Optioneel | Hiermee definieert u specifieke publieksnaamruimten waaruit gebruikers doelgroepen kunnen toewijzen. Gebruik deze parameter om gebruikers van het Platform te beperken om publiek uit slechts de publieksnamespaces uit te voeren die u in de serie bepaalt. Deze parameter kan niet samen met `segmentNamespaceDenyList`.<br> <br> Voorbeeld: `"segmentNamespaceAllowList": ["AudienceManager"]` Hiermee kunnen gebruikers alleen publiek toewijzen vanuit de `AudienceManager` naamruimte naar dit doel. <br> <br> Om gebruikers toe te staan om het even welk publiek naar uw bestemming uit te voeren, kunt u deze parameter negeren. <br> <br> Als beide `segmentNamespaceAllowList` en `segmentNamespaceDenyList` ontbreken in uw configuratie, kunnen de gebruikers slechts publiek uitvoeren dat uit van [Segmenteringsservice](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | Array | Optioneel | Beperkt gebruikers van het in kaart brengen van publiek aan de bestemming, van de publieksnamespaces die in de serie worden bepaald. Kan niet samen met `segmentNamespaceAllowed`. <br> <br> Voorbeeld: `"segmentNamespaceDenyList": ["AudienceManager"]` blokkeert gebruikers om het publiek van de `AudienceManager` naamruimte naar dit doel. <br> <br> Om gebruikers toe te staan om het even welk publiek naar uw bestemming uit te voeren, kunt u deze parameter negeren. <br> <br> Als beide `segmentNamespaceAllowed` en `segmentNamespaceDenyList` ontbreken in uw configuratie, kunnen de gebruikers slechts publiek uitvoeren dat uit van [Segmenteringsservice](../../../../segmentation/home.md). <br> <br> Om de uitvoer van alle soorten publiek mogelijk te maken, ongeacht de oorsprong, stelt u `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 
