@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creeer een Dataflow Gebruikend een Bron Analytics in UI
 description: Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een analysebron met behulp van de gebruikersinterface van het Platform.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Zie de lijst hieronder voor meer informatie over het plannen van configuraties.
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15. |
 | Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd. |
 | Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
-| Incrementele gegevens laden met | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
+| Incrementele gegevens laden met | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Het veld waarvoor u selecteert **[!UICONTROL Load incremental data by]** moet de datum-tijdwaarden in UTC-tijdzone hebben om de incrementele gegevens correct te laden. Alle op lijst-gebaseerde partijbronnen kiezen stijgende gegevens door een waarde van de de tijdstempelwaarde van de deltakolom met de overeenkomstige tijd van het venster UTC van de stroomlooppas te vergelijken, en dan het kopiëren van de gegevens van de bron, als om het even welke nieuwe gegevens binnen het tijdvenster UTC wordt gevonden. |
 
 ![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
 
