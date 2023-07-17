@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het `/bestemming-servers' eindpunt worden gebouwd.
 title: Configuratie bestandsindeling
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1001'
 ht-degree: 2%
 
 ---
@@ -159,7 +159,8 @@ In het onderstaande configuratievoorbeeld zijn geen van de CSV-opties vooraf ged
             "templatingStrategy":"PEBBLE_V1",
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
-      }
+      },
+      "maxFileRowCount":5000000
    }
 }
 ```
@@ -190,6 +191,7 @@ Hieronder ziet u een volledige verwijzing naar alle beschikbare opmaakopties voo
 | `csvOptions.timestampFormat.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt de tekenreeks in die een tijdstempelindeling aangeeft. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt één teken in dat wordt gebruikt voor escape voor het aanhalingsteken. | `\` wanneer de escape- en aanhalingstekens verschillend zijn. `\0` wanneer de escape- en aanhalingsteken hetzelfde zijn. | - | - |
 | `csvOptions.emptyValue.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt de tekenreeksrepresentatie in van een lege waarde. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
+| `maxFileRowCount` | Optioneel | Hiermee geeft u het maximale aantal rijen per geëxporteerd bestand op tussen 1.000.000 en 10.000.000 rijen. | 5,000,000 |
 
 {style="table-layout:auto"}
 
