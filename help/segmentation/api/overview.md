@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;API;api;
 title: API-handleiding voor segmentatieservice
 description: Met de segmentatieservice-API kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 3%
+source-wordcount: '560'
+ht-degree: 2%
 
 ---
 
 # Handleiding voor Segmenteringsservice-API
 
-[!DNL Adobe Experience Platform Segmentation Service] staat u toe om segmenten te bouwen en publiek te produceren in [!DNL Adobe Experience Platform] van uw [!DNL Real-Time Customer Profile] gegevens.
+Adobe Experience Platform [!DNL Segmentation Service] kunt u vanuit uw [!DNL Real-Time Customer Profile] gegevens.
 
 De [!DNL Segmentation Service] API verstrekt veelvoudige eindpunten die u toestaan om uw segmenteringsverrichtingen programmatically te beheren in [!DNL Experience Platform]. Dit overzichtsdocument verstrekt inleiding op hoog niveau aan elk van deze eindpunten, en verbindingen aan hun bijbehorende eindpuntgidsen voor details. Voor het lezen van de individuele eindpuntgidsen, gelieve te verwijzen naar [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
 
 Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt u de [Verwijzing naar API voor segmentatieservice](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-<!-- ## Audiences
+## Doelgroepen
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+Soorten publiek is een verzameling mensen met een vergelijkbaar gedrag en/of vergelijkbare kenmerken. Deze kunnen worden geproduceerd of door Platform of uit externe bronnen te gebruiken. U kunt de `/audiences` eindpunt om alle publiek terug te winnen, een nieuw publiek te creëren, details van een specifiek publiek terug te winnen, een specifiek publiek bij te werken, of een specifiek publiek te schrappen.
 
-For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
+Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [eindgebruikershandleiding](./audiences.md).
 
 ## Exporttaken
 
@@ -46,13 +45,13 @@ Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [planni
 
 ## Segmentdefinities
 
-Segmentdefinities definiëren welke profielen deel uitmaken van welke doelsegmenten. U kunt de `/segment/definitions` eindpunt om segmentdefinities te beheren.
+Segmentdefinities definiëren welke profielen deel uitmaken van welk publiek. U kunt de `/segment/definitions` eindpunt om segmentdefinities te beheren.
 
 Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [segmentdefinities, eindhulplijn](./segment-definitions.md).
 
 ## Segmenttaken
 
-De banen van het segment verwerken eerder vastgestelde segmentdefinities om een publiekssegment te produceren. U kunt de `/segment/jobs` eindpunt om segmentbanen te beheren.
+Segmenttaken verwerken eerder gedefinieerde segmentdefinities om een publiek te genereren. U kunt de `/segment/jobs` eindpunt om segmentbanen te beheren.
 
 Voor meer informatie over het gebruik van dit eindpunt, gelieve te lezen [eindgids voor segmenttaken](./segment-jobs.md).
 

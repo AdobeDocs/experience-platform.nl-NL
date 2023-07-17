@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;randsegmentatie;Edge-segmentatie;streamingrand;
 solution: Experience Platform
 title: Edge Segmentation met de API
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -17,9 +16,9 @@ ht-degree: 0%
 >
 >In het volgende document wordt beschreven hoe u randsegmentatie kunt uitvoeren met behulp van de API. Voor informatie die randsegmentatie uitvoert die UI gebruikt, gelieve te lezen [UI-hulplijn voor randsegmentatie](../ui/edge-segmentation.md).
 >
->De segmentatie van de rand is nu over het algemeen beschikbaar aan alle gebruikers van het Platform. Als u Edge-segmenten hebt gemaakt tijdens de bètaversie, blijven deze segmenten operationeel.
+>De segmentatie van de rand is nu over het algemeen beschikbaar aan alle gebruikers van het Platform. Als u de definities van het randsegment tijdens de bèta creeerde, zullen deze segmentdefinities operationeel blijven.
 
-De segmentatie van de rand is de capaciteit om segmenten in Adobe Experience Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte.
+De segmentatie van de rand is de capaciteit om segmentdefinities in Adobe Experience Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte.
 
 >[!IMPORTANT]
 >
@@ -32,7 +31,7 @@ De segmentatie van de rand is de capaciteit om segmenten in Adobe Experience Pla
 Deze ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten in verband met randsegmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Segmentation]](../home.md): Biedt de mogelijkheid om segmenten en publiek te maken van uw [!DNL Real-Time Customer Profile] gegevens.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
 Als u aanroepen naar de eindpunten van de Experience Platform-API wilt uitvoeren, leest u de handleiding op [aan de slag met Platform-API&#39;s](../../landing/api-guide.md) om over vereiste kopballen en te leren hoe te om steekproefAPI vraag te lezen.

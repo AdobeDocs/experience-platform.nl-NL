@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;segmentbeoordeling;Segmenteringsdienst;segmentatie;segmentatie;evalueer een segment;toegangssegmentresultaten;evalueer en toegangssegment;
 solution: Experience Platform
 title: Evalueer en de Resultaten van het Segment van de Toegang
 type: Tutorial
-description: Volg deze zelfstudie om te leren hoe u segmenten en toegangssegmentresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
+description: Volg deze zelfstudie om te leren hoe u segmentatiedefinities en toegangssegmenteringsresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
 
-# Evalueer en open segmentresultaten
+# Evalueer en open de resultaten van de segmentdefinitie
 
-Dit document biedt een zelfstudie voor het evalueren van segmenten en het benaderen van segmentresultaten met behulp van [[!DNL Segmentation API]](../api/getting-started.md).
+Dit document bevat een zelfstudie voor het evalueren van segmentdefinities en het gebruik van deze resultaten [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] de diensten betrokken bij het creëren van publiekssegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten die betrokken zijn bij het creëren van een publiek. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u publiekssegmenten maken op basis van [!DNL Real-Time Customer Profile] gegevens.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -45,13 +44,13 @@ Alle POST, PUT, en PATCH verzoeken vereisen een extra kopbal:
 
 - Inhoudstype: application/json
 
-## Een segment evalueren {#evaluate-a-segment}
+## Een segmentdefinitie evalueren {#evaluate-a-segment}
 
-Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
+Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u de segmentdefinitie door of geplande evaluatie of op bestelling evaluatie dan evalueren.
 
 [Geplande evaluatie](#scheduled-evaluation) (ook wel &#39;geplande segmentatie&#39; genoemd) kunt u een terugkerend schema maken voor het uitvoeren van een exporttaak op een bepaald moment, terwijl [evaluatie op aanvraag](#on-demand-evaluation) betekent dat u een segmenttaak maakt om het publiek direct op te bouwen. De stappen voor elk worden hieronder geschetst.
 
-Als u nog niet de [een segment maken met de segmentatie-API](./create-a-segment.md) zelfstudie of definitie van segment maken met [Segment Builder](../ui/overview.md), doe dit voordat u verdergaat met deze zelfstudie.
+Als u nog niet de [een segmentdefinitie maken met de segmentatie-API](./create-a-segment.md) zelfstudie of definitie van segment maken met [Segment Builder](../ui/overview.md), doe dit voordat u verdergaat met deze zelfstudie.
 
 ## Geplande evaluatie {#scheduled-evaluation}
 
@@ -81,11 +80,11 @@ Meer gedetailleerde informatie over het gebruik van dit eindpunt vindt u in de [
 
 ## Evaluatie op aanvraag
 
-De evaluatie op bestelling staat u toe om een segmentbaan tot stand te brengen om een publiekssegment te produceren wanneer u het vereist. In tegenstelling tot geplande evaluatie, zal dit slechts gebeuren wanneer gevraagd en niet terugkerend.
+De evaluatie op bestelling staat u toe om een segmentbaan tot stand te brengen om een publiek te produceren wanneer u het vereist. In tegenstelling tot geplande evaluatie, zal dit slechts gebeuren wanneer gevraagd en niet terugkerend.
 
 ### Een segmenttaak maken
 
-Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een segmentdefinitie evenals om het even welk samenvoegbeleid dat controleert hoe [!DNL Real-Time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen. Een segmentbaan moet in werking worden gesteld telkens als u het publiek wilt verfrissen dat momenteel voor de segmentdefinitie kwalificeert.
+Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een segmentdefinitie evenals om het even welk samenvoegbeleid dat controleert hoe [!DNL Real-Time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over de segmentdefinitie, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen. Een segmentbaan moet in werking worden gesteld telkens als u het publiek wilt verfrissen dat de segmentdefinitie momenteel kwalificeert.
 
 U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan `/segment/jobs` in de [!DNL Real-Time Customer Profile] API.
 
@@ -97,9 +96,9 @@ U kunt de `id` voor een specifieke segmentbaan om een raadplegingsverzoek (GET) 
 
 Meer gedetailleerde informatie over het gebruik van dit eindpunt vindt u in de [eindgids voor segmenttaken](../api/segment-jobs.md#get)
 
-## Segmentresultaten interpreteren
+## Resultaten van segmenttaken interpreteren
 
-Wanneer segmenttaken correct worden uitgevoerd, wordt `segmentMembership` De kaart wordt bijgewerkt voor elk profiel inbegrepen binnen het segment. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in worden opgenomen [!DNL Platform], waardoor integratie met andere oplossingen zoals [!DNL Adobe Audience Manager].
+Wanneer segmenttaken correct worden uitgevoerd, wordt `segmentMembership` De kaart wordt bijgewerkt voor elk profiel inbegrepen binnen de segmentdefinitie. `segmentMembership` slaat ook om het even welk vooraf geëvalueerd publiek op dat in wordt opgenomen [!DNL Platform], waardoor integratie met andere oplossingen zoals [!DNL Adobe Audience Manager].
 
 In het volgende voorbeeld wordt getoond wat de `segmentMembership` Het kenmerk ziet er zo uit voor elke afzonderlijke profielrecord:
 
@@ -128,14 +127,14 @@ In het volgende voorbeeld wordt getoond wat de `segmentMembership` Het kenmerk z
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `lastQualificationTime` | De tijdstempel op het moment dat de bevestiging van het segmentlidmaatschap werd uitgevoerd en het profiel het segment inging of verlaat. |
-| `status` | De status van segmentdeelname als onderdeel van het huidige verzoek. Moet gelijk zijn aan een van de volgende bekende waarden: <ul><li>`realized`: Entiteit komt in aanmerking voor het segment.</li><li>`exited`: Entiteit verlaat het segment.</li></ul> |
+| `lastQualificationTime` | Het tijdstempel waarin de bevestiging van segmentlidmaatschap werd gemaakt en het profiel de segmentdefinitie inging of verwierp. |
+| `status` | De deelnamestatus van de segmentdefinitie als onderdeel van de huidige aanvraag. Moet gelijk zijn aan een van de volgende bekende waarden: <ul><li>`realized`: Entiteit komt in aanmerking voor de segmentdefinitie.</li><li>`exited`: Entiteit sluit de segmentdefinitie af.</li></ul> |
 
 >[!NOTE]
 >
 >Om het even welk segmentlidmaatschap dat in is `exited` gedurende meer dan 30 dagen, op basis van de `lastQualificationTime`, worden geschrapt.
 
-## Resultaten van toegangssegmenten
+## Resultaten van segmenttaken openen
 
 De resultaten van een segmentbaan kunnen op één van twee manieren worden betreden: u kunt tot individuele profielen toegang hebben of een volledig publiek naar een dataset uitvoeren.
 
@@ -160,7 +159,7 @@ De volgende stappen zijn vereist om uw publiek te exporteren:
 
 Wanneer het uitvoeren van een publiek, moet een doeldataset eerst worden gecreeerd. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
 
-Één van de belangrijkste overwegingen is het schema waarop de dataset wordt gebaseerd (`schemaRef.id` in de API voorbeeldaanvraag hieronder). Voor het exporteren van een segment moet de gegevensset gebaseerd zijn op de [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de uniview, gelieve te zien [Realtime sectie van het Profiel van de Klant van de Klant van het Registratie van het Schema ontwikkelaarsgids](../../xdm/api/getting-started.md).
+Één van de belangrijkste overwegingen is het schema waarop de dataset wordt gebaseerd (`schemaRef.id` in de API voorbeeldaanvraag hieronder). Om een segmentdefinitie uit te voeren, moet de dataset gebaseerd zijn op [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de uniview, gelieve te zien [Realtime sectie van het Profiel van de Klant van de Klant van het Registratie van het Schema ontwikkelaarsgids](../../xdm/api/getting-started.md).
 
 Er zijn twee manieren om de noodzakelijke dataset tot stand te brengen:
 
@@ -213,7 +212,7 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 
 ### Profielen genereren voor publieksleden {#generate-profiles}
 
-Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de publieksleden aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` in de [!DNL Real-Time Customer Profile] API en het verstrekken van dataset identiteitskaart en de segmentinformatie voor de segmenten die u wenst om uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de publieksleden aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` in de [!DNL Real-Time Customer Profile] API en het verstrekken van dataset identiteitskaart en de informatie van de segmentdefinitie voor de segmentdefinities die u wenst uit te voeren.
 
 Meer gedetailleerde informatie over het gebruik van dit eindpunt vindt u in de [eindgebruikershandleiding exporttaken](../api/export-jobs.md#create)
 
@@ -225,10 +224,10 @@ Meer gedetailleerde informatie over het gebruik van dit eindpunt vindt u in de [
 
 ## Volgende stappen
 
-Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het dialoogvenster [!DNL Data Lake] in [!DNL Experience Platform]. U kunt dan de [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) om toegang te krijgen tot de gegevens met de `batchId` die aan de export zijn gekoppeld. Afhankelijk van de grootte van het segment, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
+Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het dialoogvenster [!DNL Data Lake] in [!DNL Experience Platform]. U kunt dan de [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) om toegang te krijgen tot de gegevens met de `batchId` die aan de export zijn gekoppeld. Afhankelijk van de grootte van de segmentdefinitie, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
 
 Voor stapsgewijze instructies over het gebruik van de [!DNL Data Access] API voor toegang tot en download batchbestanden [Zelfstudie over gegevenstoegang](../../data-access/tutorials/dataset-data.md).
 
-U hebt ook toegang tot geëxporteerde segmentgegevens met [!DNL Adobe Experience Platform Query Service]. Gebruikend UI of RESTful API, [!DNL Query Service] staat u toe om, vragen over gegevens te schrijven te bevestigen en in werking te stellen binnen [!DNL Data Lake].
+U hebt ook toegang tot geëxporteerde segmentdefinitiegegevens met [!DNL Adobe Experience Platform Query Service]. Gebruikend UI of RESTful API, [!DNL Query Service] staat u toe om, vragen over gegevens te schrijven te bevestigen en in werking te stellen binnen [!DNL Data Lake].
 
 Voor meer informatie over het vragen van publieksgegevens raadpleegt u de documentatie over [[!DNL Query Service]](../../query-service/home.md).

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;randsegmentatie;Segmentatie;Segmenteringsservice;segmenteringsservice;ui-hulplijn;streamingrand;
 solution: Experience Platform
 title: gebruikersgids voor Edge Segmentation
-description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
+description: Leer hoe u Edge-segmentatie gebruikt om segmentdefinities direct aan de rand van het Platform te evalueren, zodat dezelfde pagina en de volgende pagina kunnen worden gebruikt voor het aanpassen van de pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De segmentatie van de rand is nu over het algemeen beschikbaar aan alle gebruikers van het Platform. Als u Edge-segmenten hebt gemaakt tijdens de bètaversie, blijven deze segmenten operationeel.
+>De segmentatie van de rand is nu over het algemeen beschikbaar aan alle gebruikers van het Platform. Als u de definities van het randsegment tijdens de bèta creeerde, zullen deze segmentdefinities operationeel blijven.
 
 Randsegmentatie is de mogelijkheid om segmenten in Adobe Experience Platform ogenblikkelijk te evalueren [op de rand](../../edge/home.md)en de volgende pagina aanpassen.
 
@@ -52,19 +51,19 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 | Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. | Mensen die in de VS wonen en in het segment &quot;bestaand&quot; zitten. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Query die verwijst naar een kaart | Elke segmentdefinitie die verwijst naar een kaart met eigenschappen. | Personen die aan hun winkelwagentje hebben toegevoegd op basis van externe segmentgegevens. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Een segmentdefinitie zal **niet** voor randsegmentatie in de volgende scenario&#39;s worden toegelaten:
+Een segmentdefinitie zal **niet** voor randsegmentatie in het volgende scenario worden toegelaten:
 
 - De segmentdefinitie omvat een combinatie van één gebeurtenis en een `inSegment` gebeurtenis.
-   - Als het segment echter in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** worden ingeschakeld voor randsegmentatie.
+   - Als de segmentdefinitie in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** worden ingeschakeld voor randsegmentatie.
 
 ## Volgende stappen
 
-In deze handleiding wordt uitgelegd hoe u segmenten met randsegmentatie op Adobe Experience Platform kunt evalueren. Voor meer informatie over het gebruik van de gebruikersinterface van het Experience Platform leest u de [Gebruikershandleiding voor segmentatie](./overview.md). Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmenten met Experience Platform-API&#39;s naar de [hulplijn voor Edge-segmentatie-API](../api/edge-segmentation.md).
+In deze handleiding wordt uitgelegd hoe u segmentatiedefinities met randsegmentatie op Adobe Experience Platform kunt evalueren. Voor meer informatie over het gebruik van de gebruikersinterface van het Experience Platform leest u de [Gebruikershandleiding voor segmentatie](./overview.md). Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmentdefinities met Experience Platform-API&#39;s naar de [hulplijn voor Edge-segmentatie-API](../api/edge-segmentation.md).
 
 ## Aanhangsel
 
 In de volgende sectie worden veelgestelde vragen over de segmentatie van randen weergegeven:
 
-### Hoe lang duurt het voor een segment beschikbaar is op het Edge-netwerk?
+### Hoe lang duurt het voor een segmentdefinitie beschikbaar is op het Netwerk van de Rand?
 
-Het duurt tot één uur voor een segment beschikbaar is in het Edge-netwerk.
+Het duurt tot één uur voor een segmentdefinitie beschikbaar is in het Edge-netwerk.

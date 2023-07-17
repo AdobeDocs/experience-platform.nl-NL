@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;segmenttaken;segmenttaak;API;api;
 solution: Experience Platform
 title: API-eindpunt segmenttaken
 description: Het eindpunt van segmentbanen in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om segmentbanen voor uw organisatie programmatically te beheren.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 1%
+source-wordcount: '1505'
+ht-degree: 0%
 
 ---
 
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentbanen voor de gespecificeerde organisatie als JSON terug. De reactie verschilt echter, afhankelijk van het aantal segmenten binnen de segmenttaak.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentbanen voor de gespecificeerde organisatie als JSON terug. Nochtans, zal de reactie, afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
 
-**Minder dan of gelijk aan 1500 segmenten in uw segmentbaan**
+**Minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
 
-Als u minder dan 1500 segmenten hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmenten binnen worden getoond `children.segments` kenmerk.
+Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, zal een volledige lijst van alle segmentdefinities binnen worden getoond `children.segments` kenmerk.
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ Als u minder dan 1500 segmenten hebt die in uw segmentbaan in werking worden ges
 }
 ```
 
-**Meer dan 1500 segmenten**
+**Meer dan 1500 segmentdefinities**
 
-Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, wat aangeeft dat alle segmenten worden geëvalueerd.
+Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, die erop wijzen dat alle segmentdefinities worden geëvalueerd.
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking geste
 | `metrics.totalTime` | Een object dat informatie bevat over de tijd waarop de segmentatietaak is gestart en beëindigd en over de totale tijd die is gevergd. |
 | `metrics.profileSegmentationTime` | Een object dat informatie bevat over de tijd waarop de segmentatieevaluatie is gestart en beëindigd, en over de totale tijd die is verstreken. |
 | `metrics.segmentProfileCounter` | Het aantal profielen dat per segment wordt gekwalificeerd. |
-| `metrics.segmentedProfileByNamespaceCounter` | Het aantal profielen dat voor elke identiteitsnaamruimte op een per-segmentbasis wordt gekwalificeerd. |
-| `metrics.segmentProfileByStatusCounter` | Het aantal profielen voor elke status. De volgende drie statussen worden ondersteund: <ul><li>&quot;gerealiseerd&quot; - Het aantal profielen dat voor het segment in aanmerking komt.</li><li>&quot;exited&quot; - Het aantal profielsegmenten dat niet meer in het segment bestaat.</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | Het aantal profielen dat voor elke identiteitsnaamruimte op een basis van de segmentdefinitie wordt gekwalificeerd. |
+| `metrics.segmentProfileByStatusCounter` | Het aantal profielen voor elke status. De volgende drie statussen worden ondersteund: <ul><li>&quot;gerealiseerd&quot; - Het aantal profielen dat in aanmerking komt voor de segmentdefinitie.</li><li>&quot;exited&quot; - Het aantal profielen dat niet meer bestaat in de segmentdefinitie.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Het totale aantal samengevoegde profielen op een per de beleidsbasis van de fusie. |
 
 ## Een nieuwe segmenttaak maken {#create}
@@ -286,9 +285,9 @@ U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan
 POST /segment/jobs
 ```
 
-Wanneer het creëren van een nieuwe segmentbaan, zullen het verzoek en de reactie afhankelijk van het aantal segmenten binnen de segmentbaan verschillen.
+Wanneer het creëren van een nieuwe segmentbaan, zullen het verzoek en de reactie afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
 
-**Minder dan of gelijk aan 1500 segmenten in uw segmentbaan**
+**Minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
 
 **Verzoek**
 
@@ -411,13 +410,13 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
 | `segments.segment.id` | De id van de segmentdefinitie die u hebt opgegeven. |
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |
 
-**Meer dan 1500 segmenten**
+**Meer dan 1500 segmentdefinities**
 
 **Verzoek**
 
 >[!NOTE]
 >
->Terwijl u een segmentbaan met meer dan 1500 segmenten kunt tot stand brengen, is dit **sterk niet aanbevolen**.
+>Terwijl u een segmentbaan met meer dan 1500 segmentdefinities kunt tot stand brengen, is dit **sterk niet aanbevolen**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `schema.name` | De naam van het schema voor de segmenten. |
+| `schema.name` | De naam van het schema voor de segmentdefinities. |
 | `segments.segmentId` | Wanneer het runnen van een segmentbaan met meer dan 1500 segmenten, zult u moeten overgaan `*` als segment-id om aan te geven dat u een segmentatietaak met alle segmenten wilt uitvoeren. |
 
 **Antwoord**
@@ -528,7 +527,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de nieuwe segmenttaak. |
 | `status` | De huidige status voor de segmenttaak. Aangezien de segmentbaan nieuw wordt gecreeerd, zal de status altijd zijn `NEW`. |
 | `segments` | Een object dat informatie bevat over de segmentdefinities waarop deze segmenttaak wordt uitgevoerd. |
-| `segments.segment.id` | De `*` betekent dat deze segmentbaan voor alle segmenten binnen uw organisatie loopt. |
+| `segments.segment.id` | De `*` betekent dat deze segmentbaan voor alle segmentdefinities binnen uw organisatie loopt. |
 
 ## Een specifieke segmenttaak ophalen {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentbaan terug.  De reactie verschilt echter afhankelijk van het aantal segmenten binnen de segmenttaak.
+Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentbaan terug.  Nochtans, zal de reactie afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
 
-**Minder dan of gelijk aan 1500 segmenten in uw segmentbaan**
+**Minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan**
 
-Als u minder dan 1500 segmenten hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmenten binnen worden getoond `children.segments` kenmerk.
+Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, zal een volledige lijst van alle segmentdefinities binnen worden getoond `children.segments` kenmerk.
 
 ```json
 {
@@ -622,9 +621,9 @@ Als u minder dan 1500 segmenten hebt die in uw segmentbaan in werking worden ges
 }
 ```
 
-**Meer dan 1500 segmenten**
+**Meer dan 1500 segmentdefinities**
 
-Als u meer dan 1500 segmenten hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, wat aangeeft dat alle segmenten worden geëvalueerd.
+Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werking gesteld, `children.segments` kenmerk wordt weergegeven `*`, die erop wijzen dat alle segmentdefinities worden geëvalueerd.
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Antwoord**
 
-Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van de `children.segments` Het kenmerk verschilt afhankelijk van de vraag of de segmenttaak voor meer dan 1500 segmenten wordt uitgevoerd.
+Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van de `children.segments` attribuut verschilt afhankelijk als de segmentbaan voor meer dan 1500 segmentdefinities loopt.
 
 >[!NOTE]
 >

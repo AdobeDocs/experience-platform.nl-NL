@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentering;segmentbuilder;Segment builder
 solution: Experience Platform
 title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refactorgesegmentatie
 description: De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---

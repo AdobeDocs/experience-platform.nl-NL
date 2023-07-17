@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;samenvoegingsfuncties;samenvoeging;
 solution: Experience Platform
 title: PQL-aggregatiefuncties
 description: Samenvoegfuncties worden gebruikt om meerdere waarden binnen PQL-arrays (Profile Query Language) te groeperen en één samenvattingswaarde te maken.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '227'
 ht-degree: 3%
 
 ---

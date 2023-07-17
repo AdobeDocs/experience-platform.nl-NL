@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;boolean-functies;boolean;
 solution: Experience Platform
 title: Booleaanse functies PQL
 description: Booleaanse functies worden gebruikt voor het uitvoeren van Booleaanse logica op verschillende elementen in PQL (Profile Query Language).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '237'
 ht-degree: 2%
 
 ---

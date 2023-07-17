@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;opt-out;Segmentatie;Segmenteringsservice;segmenteringsservice;eeroptie-outs;opt-out;opt-out;opt-outs;agreement;share;collection;
 solution: Experience Platform
 title: Constante waarderen in segmenten
 description: Leer hoe u de voorkeursinstellingen voor toestemming van klanten voor het verzamelen van persoonlijke gegevens en het delen van gegevens in gesegmenteerde bewerkingen naleeft.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
 
 # Naleving van toestemming in segmenten
+
+>[!NOTE]
+>
+>In deze handleiding wordt uitgelegd hoe u de inhoud van de inhoud kunt respecteren **segmentdefinities**.
 
 Wettelijke privacyvoorschriften zoals [!DNL California Consumer Privacy Act] (CCPA) de consument het recht te geven zich te onthouden van het verzamelen of delen van persoonsgegevens met derden. Adobe Experience Platform biedt standaard XDM-componenten (Experience Data Model) die bedoeld zijn om deze voorkeuren voor toestemming van klanten vast te leggen in realtime gegevens van het klantprofiel.
 
@@ -23,7 +26,7 @@ Het naleven van de waarden voor instemming van klanten vereist inzicht in de ver
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u publiekssegmenten maken op basis van [!DNL Real-Time Customer Profile] gegevens.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
 
 ## Goedgekeurde schemavelden
 
@@ -35,7 +38,7 @@ Nadat de veldgroep is toegevoegd aan een [Schema met profiel](../xdm/ui/resource
 
 ## Verwerking van toestemming in segmentatie
 
-Om ervoor te zorgen dat opted-out-profielen niet in segmenten worden opgenomen, moeten speciale velden worden toegevoegd aan bestaande segmenten en worden opgenomen bij het maken van nieuwe segmenten.
+Om ervoor te zorgen dat opted-out-profielen niet in segmentdefinities worden opgenomen, moeten speciale velden worden toegevoegd aan bestaande segmentdefinities en worden opgenomen wanneer nieuwe segmentdefinities worden gemaakt.
 
 In de onderstaande stappen wordt getoond hoe u de juiste velden kunt toevoegen voor twee soorten optievlaggen:
 
@@ -44,13 +47,13 @@ In de onderstaande stappen wordt getoond hoe u de juiste velden kunt toevoegen v
 
 >[!NOTE]
 >
->Terwijl deze gids zich op de twee hierboven opt-out vlaggen concentreert, kunt u uw segmenten vormen om extra toestemmingssignalen eveneens op te nemen. De [handleiding voor toestemmingen en voorkeuren](../xdm/field-groups/profile/consents.md) geeft meer informatie over elk van deze opties en het beoogde gebruik ervan.
+>Terwijl deze gids zich op de twee hierboven opt-out vlaggen concentreert, kunt u uw segmentdefinities vormen om extra toestemmingssignalen eveneens op te nemen. De [handleiding voor toestemmingen en voorkeuren](../xdm/field-groups/profile/consents.md) geeft meer informatie over elk van deze opties en het beoogde gebruik ervan.
 
-Wanneer het bouwen van een segment in UI, onder **[!UICONTROL Attributes]**, navigeer naar **[!UICONTROL XDM Individual Profile]** selecteert u vervolgens **[!UICONTROL Consents and Preferences]**. Hier ziet u de opties voor **[!UICONTROL Data Collection]** en **[!UICONTROL Share Data]**.
+Wanneer het bouwen van een segmentdefinitie in UI, onder **[!UICONTROL Attributes]**, navigeer naar **[!UICONTROL XDM Individual Profile]** selecteert u vervolgens **[!UICONTROL Consents and Preferences]**. Hier ziet u de opties voor **[!UICONTROL Data Collection]** en **[!UICONTROL Share Data]**.
 
 ![](./images/opt-outs/consents.png)
 
-Begin door te selecteren **[!UICONTROL Data Collection]** categorie, en sleep vervolgens **[!UICONTROL Choice Value]** in de segmentbouwer. Wanneer u het kenmerk aan het segment toevoegt, kunt u de optie [toestemmingswaarden](../xdm/field-groups/profile/consents.md#choice-values) die moeten worden opgenomen of uitgesloten.
+Begin door te selecteren **[!UICONTROL Data Collection]** categorie, en sleep vervolgens **[!UICONTROL Choice Value]** in de segmentbouwer. Wanneer u het kenmerk aan de segmentdefinitie toevoegt, kunt u de optie [toestemmingswaarden](../xdm/field-groups/profile/consents.md#choice-values) die moeten worden opgenomen of uitgesloten.
 
 ![](./images/opt-outs/consent-values.png)
 
@@ -66,11 +69,11 @@ Onder **[!UICONTROL Attributes]** navigeer in het linkerspoor naar de **[!UICONT
 
 ![](./images/opt-outs/share.png)
 
-Met beide **[!UICONTROL Data Collection]** en **[!UICONTROL Share Data]** aan het segment toegevoegde waarde van de toestemming ; klanten die ervoor gekozen hebben hun gegevens niet te gebruiken , zullen van het resulterende publiek worden uitgesloten . Van hier, kunt u de segmentdefinitie blijven aanpassen alvorens te selecteren **[!UICONTROL Save]** om het proces te voltooien.
+Met beide **[!UICONTROL Data Collection]** en **[!UICONTROL Share Data]** aan de segmentdefinitie toegevoegde toestemmingswaarden, klanten die ervoor gekozen hebben hun gegevens niet te gebruiken, zullen van het resulterende publiek worden uitgesloten. Van hier, kunt u de segmentdefinitie blijven aanpassen alvorens te selecteren **[!UICONTROL Save]** om het proces te voltooien.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, zou u nu een beter inzicht in moeten hebben hoe te om klantentoestemmingen en voorkeur te respecteren wanneer het bouwen van segmenten in Experience Platform.
+Door deze zelfstudie te volgen, zou u een beter inzicht in moeten hebben hoe te om klantentoestemmingen en voorkeur te respecteren wanneer het bouwen van segmentdefinities in Experience Platform.
 
 Raadpleeg de volgende documentatie voor meer informatie over het beheer van de toestemming in Platform:
 

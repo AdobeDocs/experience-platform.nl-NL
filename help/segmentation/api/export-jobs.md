@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;exporttaken;api;
 solution: Experience Platform
 title: API-eindpunt voor segmentexporttaken
 description: De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het /export/job eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform gebruiken, die u toestaat om, uitvoerbanen programmatically terug te winnen tot stand te brengen en te annuleren.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1629'
+source-wordcount: '1617'
 ht-degree: 1%
 
 ---

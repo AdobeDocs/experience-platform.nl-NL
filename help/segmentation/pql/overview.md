@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;PQL;pql;taal voor profielquery
 solution: Experience Platform
 title: Overzicht van de profielquery Language (PQL)
 description: Deze handleiding biedt een algemeen overzicht van PQL, met opmaakrichtlijnen en voorbeelden van PQL-expressies.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '706'
 ht-degree: 1%
 
 ---
@@ -67,7 +66,6 @@ PQL biedt ondersteuning voor de volgende letterlijke typen:
 | Array | Een gegevenstype dat is samengesteld als een groep andere letterlijke waarden. Er worden vierkante haakjes gebruikt om te groeperen en komma&#39;s om te scheiden tussen verschillende waarden. <br> **Opmerking:** U hebt niet rechtstreeks toegang tot eigenschappen van items binnen een array. Als u dus toegang moet krijgen tot een eigenschap binnen een array, wordt de ondersteunde methode `select X from array where X.item = ...`. <br> PQL behoudt het woord `xEvent` om te verwijzen naar een array van ervaringsgebeurtenissen die aan een profiel zijn gekoppeld. | `[1, 4, 7]`, `["US", "CA"]` |
 | Relatieve tijdverwijzingen | Gereserveerde woorden die kunnen worden gebruikt om tijdstempel en tijdinterval verwijzingen te vormen. <ul><li>nu, vandaag, gisteren, morgen</li><li>dit, laatste, volgende</li><li>voor, na, van</li><li>millisecond(en), seconde(n), minuut(n), uur, dag(en), week(en), maand(en), jaar(en), decennium(en), eeuw/eeuwen, millennium/millennium</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
-
 ## PQL-functies
 
 In de volgende tabel worden de verschillende categorieën ondersteunde PQL-functies beschreven, waaronder koppelingen naar verdere documentatie voor meer informatie.
@@ -89,4 +87,4 @@ In de volgende tabel worden de verschillende categorieën ondersteunde PQL-funct
 
 ## Volgende stappen
 
-Nu hebt u geleerd hoe te te gebruiken [!DNL Profile Query Language]kunt u PQL gebruiken bij het maken en wijzigen van segmenten. Voor meer informatie over segmentatie, gelieve te lezen [segmentatieoverzicht](../home.md).
+Nu hebt u geleerd hoe te te gebruiken [!DNL Profile Query Language]kunt u PQL gebruiken bij het maken en wijzigen van segmentdefinities. Voor meer informatie over segmentatie, gelieve te lezen [segmentatieoverzicht](../home.md).

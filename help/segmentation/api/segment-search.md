@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;segmentatie;segmenteringsservice;problemen;API;seg;segment;Segment;zoek;segmentzoekopdracht; segmentzoekopdracht;
 title: Eindpunt van API voor segmentzoekopdracht
 description: In de API van de Dienst van de Segmentatie van Adobe Experience Platform, wordt het Onderzoek van het Segment gebruikt om gebieden te zoeken die zich over diverse gegevensbronnen bevinden en hen in bijna real time terug te keren. Deze gids verstrekt informatie om u te helpen het Onderzoek van het Segment beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 0%
+source-wordcount: '1196'
+ht-degree: 1%
 
 ---
 
@@ -37,8 +36,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Vereist)** Waar {SCHEMA} de schemaklasse vertegenwoordigt verbonden aan de onderzoeksvoorwerpen. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
-| `s={SEARCH_TERM}` | *(Optioneel)* Waar {SEARCH_TERM} een query vertegenwoordigt die voldoet aan de Microsoft-implementatie van [Zoeksyntaxis van Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Als er geen zoekterm is opgegeven, worden alle records gekoppeld aan `schema.name` wordt geretourneerd. Een meer gedetailleerde uitleg vindt u in het gedeelte [aanhangsel](#appendix) van dit document. |
+| `schema.name={SCHEMA}` | **(Vereist)** Wanneer {SCHEMA} vertegenwoordigt de waarde van de schemaklasse verbonden aan de onderzoeksvoorwerpen. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
+| `s={SEARCH_TERM}` | *(Optioneel)* Wanneer {SEARCH_TERM} vertegenwoordigt een vraag die aan de implementatie van Microsoft in overeenstemming is [Zoeksyntaxis van Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Als er geen zoekterm is opgegeven, worden alle records gekoppeld aan `schema.name` wordt geretourneerd. Een meer gedetailleerde uitleg vindt u in het gedeelte [aanhangsel](#appendix) van dit document. |
 
 **Verzoek**
 
@@ -97,12 +96,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Vereist)** Waar {SCHEMA} de schemaklasse bevat verbonden aan de onderzoeksvoorwerpen. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
-| `namespace={NAMESPACE}` | **(Vereist)** Waar {NAMESPACE} de naamruimte bevat waarin u wilt zoeken. |
-| `s={SEARCH_TERM}` | *(Optioneel)* Waar {SEARCH_TERM} een query bevat die voldoet aan de Microsoft-implementatie van [Zoeksyntaxis van Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Als er geen zoekterm is opgegeven, worden alle records gekoppeld aan `schema.name` wordt geretourneerd. Een meer gedetailleerde uitleg vindt u in het gedeelte [aanhangsel](#appendix) van dit document. |
+| `schema.name={SCHEMA}` | **(Vereist)** Wanneer {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
+| `namespace={NAMESPACE}` | **(Vereist)** Wanneer {NAMESPACE} bevat de naamruimte die u wilt doorzoeken. |
+| `s={SEARCH_TERM}` | *(Optioneel)* Wanneer {SEARCH_TERM} bevat een query die voldoet aan de Microsoft-implementatie van [Zoeksyntaxis van Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Als er geen zoekterm is opgegeven, worden alle records gekoppeld aan `schema.name` wordt geretourneerd. Een meer gedetailleerde uitleg vindt u in het gedeelte [aanhangsel](#appendix) van dit document. |
 | `entityId={ENTITY_ID}` | *(Optioneel)* Beperkt uw zoekopdracht tot in de toegewezen map, opgegeven met {ENTITY_ID}. |
-| `limit={LIMIT}` | *(Optioneel)* Waar {LIMIT} het aantal zoekresultaten vertegenwoordigt dat moet worden geretourneerd. De standaardwaarde is 50. |
-| `page={PAGE}` | *(Optioneel)* Waar {PAGE} het paginanummer vertegenwoordigt dat wordt gebruikt voor paginering van resultaten van de doorzochte query. Het paginanummer begint bij **0**. |
+| `limit={LIMIT}` | *(Optioneel)* Wanneer {LIMIT} geeft het aantal zoekresultaten aan dat moet worden geretourneerd. De standaardwaarde is 50. |
+| `page={PAGE}` | *(Optioneel)* Wanneer {PAGE} staat voor het paginanummer dat wordt gebruikt voor pagineringsresultaten van de doorzochte query. Het paginanummer begint bij **0**. |
 
 
 **Verzoek**
@@ -168,9 +167,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Vereist)** Waar {SCHEMA} de schemaklasse bevat verbonden aan de onderzoeksvoorwerpen. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
-| `namespace={NAMESPACE}` | **(Vereist)** Waar {NAMESPACE} de naamruimte bevat waarin u wilt zoeken. |
-| `entityId={ENTITY_ID}` | **(Vereist)** De id van het zoekobject waarover u structuurinformatie wilt ophalen, opgegeven met {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Vereist)** Wanneer {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Alleen `_xdm.context.segmentdefinition` wordt ondersteund. |
+| `namespace={NAMESPACE}` | **(Vereist)** Wanneer {NAMESPACE} bevat de naamruimte die u wilt doorzoeken. |
+| `entityId={ENTITY_ID}` | **(Vereist)** De id van het zoekobject waarover u de structuurgegevens wilt ophalen, opgegeven met {ENTITY_ID}. |
 
 **Verzoek**
 
@@ -223,9 +222,9 @@ Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe Segment Sea
 
 ## Aanhangsel {#appendix}
 
-In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}`. Als u bijvoorbeeld wilt zoeken naar een segment met de naam AAM of [!DNL Platform]gebruikt u de volgende zoekquery: `s=segmentName:AAM%20OR%20Platform`.
+In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}`. Als u bijvoorbeeld wilt zoeken naar een segmentdefinitie met de naam AAM of [!DNL Platform]gebruikt u de volgende zoekquery: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Voor beste praktijken, zou de onderzoeksuitdrukking HTML gecodeerd moeten zijn, zoals het hierboven getoonde voorbeeld.
+>  Voor beste praktijken, zou de onderzoeksuitdrukking HTML gecodeerd moeten zijn, zoals het hierboven getoonde voorbeeld.
 
 ### Zoeken in velden {#search-fields}
 
@@ -235,16 +234,16 @@ De volgende tabel bevat een lijst met velden die kunnen worden doorzocht binnen 
 | ---------- | ----------- |
 | folderId | De map of mappen met de map-id van de opgegeven zoekopdracht. |
 | folderLocation | De locatie of locaties met de maplocatie van de opgegeven zoekopdracht. |
-| parentFolderId | Het segment of de map met de bovenliggende map-id van de opgegeven zoekopdracht. |
-| segmentId | Het segment past segmentidentiteitskaart van uw gespecificeerde onderzoek aan. |
-| segmentName | Het segment komt overeen met de segmentnaam van de opgegeven zoekopdracht. |
-| segmentDescription | Het segment komt overeen met de segmentbeschrijving van de opgegeven zoekopdracht. |
+| parentFolderId | De segmentdefinitie of map met de bovenliggende map-id van de opgegeven zoekopdracht. |
+| segmentId | De segmentdefinitie die overeenkomt met de segment-id van de opgegeven zoekopdracht. |
+| segmentName | De segmentdefinitie die overeenkomt met de segmentnaam van de opgegeven zoekopdracht. |
+| segmentDescription | De segmentdefinitie die overeenkomt met de segmentbeschrijving van de opgegeven zoekopdracht. |
 
 ### Zoekopdracht {#search-expression}
 
 De volgende lijst maakt een lijst een lijst van specifieke van hoe de onderzoeksvragen werken wanneer het gebruiken van het Onderzoek API van het Segment.
 
->!![NOTE] De volgende voorbeelden worden voor meer duidelijkheid weergegeven in een indeling zonder HTML-codering. Voor beste praktijken, codeer HTML uw onderzoeksuitdrukking.
+>  De volgende voorbeelden worden voor meer duidelijkheid weergegeven in een indeling zonder HTML-codering. Voor beste praktijken, codeer HTML uw onderzoeksuitdrukking.
 
 | Voorbeeld van zoekopdracht | Beschrijving |
 | ------------------------- | ----------- |

@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;segmentdefinitie;segmentdefinities;api;API;
 solution: Experience Platform
 title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1209'
 ht-degree: 1%
 
 ---
 
 # Definitieeindpunt van segment
 
-Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor het segment die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens worden gebaseerd u verstrekt aan [!DNL Real-Time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
+Met Adobe Experience Platform kunt u segmentdefinities maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Segmentdefinities worden toegepast op profielen om een publiek te maken. Dit object (segmentdefinitie) wordt ook wel een PQL-voorspelling genoemd. PQL bepaalt de regels voor de segmentdefinitie die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens wordt gebaseerd u verstrekt aan [!DNL Real-Time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
 
 Deze gids verstrekt informatie om u te helpen segmentdefinities beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 
@@ -199,15 +198,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `name` | **Vereist.** Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `description` | Een beschrijving van de segmentdefinitie die u maakt. |
-| `evaluationInfo` | Het type segment dat u maakt. Als u een batchsegment wilt maken, stelt u `evaluationInfo.batch.enabled` om waar te zijn. Als u een streaming segment wilt maken, stelt u `evaluationInfo.continuous.enabled` om waar te zijn. Als u een randsegment wilt maken, stelt u `evaluationInfo.synchronous.enabled` om waar te zijn. Als het segment leeg blijft, wordt het als een **partij** segment. |
-| `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
-| `expression` | **Vereist.** Een entiteit die veldinformatie over de segmentdefinitie bevat. |
+| `name` | Een unieke naam waarmee naar de segmentdefinitie moet worden verwezen. |
+| `description` | (Optioneel.) Een beschrijving van de segmentdefinitie die u maakt. |
+| `evaluationInfo` | (Optioneel.) Het type segmentdefinitie dat u maakt. Als u een batchsegment wilt maken, stelt u `evaluationInfo.batch.enabled` om waar te zijn. Als u een streaming segment wilt maken, stelt u `evaluationInfo.continuous.enabled` om waar te zijn. Als u een randsegment wilt maken, stelt u `evaluationInfo.synchronous.enabled` om waar te zijn. Als deze optie leeg blijft, wordt de segmentdefinitie gemaakt als een **partij** segment. |
+| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
+| `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
-| `description` | Een door de mens leesbare beschrijving van de definitie. |
 
 <!-- >[!NOTE]
 >
@@ -339,7 +337,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id van de segmentdefinitie. |
-| `name` | Een unieke naam waarmee naar het segment moet worden verwezen. |
+| `name` | Een unieke naam waarmee naar de segmentdefinitie moet worden verwezen. |
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
@@ -472,7 +470,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id van de segmentdefinitie. |
-| `name` | Een unieke naam waarmee naar het segment moet worden verwezen. |
+| `name` | Een unieke naam waarmee naar de segmentdefinitie moet worden verwezen. |
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
@@ -487,7 +485,7 @@ U kunt verzoeken om een specifieke segmentdefinitie te schrappen door een verzoe
 
 >[!NOTE]
 >
-> U zult **niet** kan een segment schrappen dat in een bestemmingsactivering wordt gebruikt.
+> Een segmentdefinitie die wordt gebruikt in een doelactivering **kan** worden geschrapt.
 
 **API-indeling**
 

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;logische kwantoren;logische kwantor;
 solution: Experience Platform
 title: Logische kwantoren van PQL
 description: Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in Profile Query Language (PQL) te bepalen.
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '201'
 ht-degree: 2%
 
 ---

@@ -1,10 +1,9 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;het stromen segmentatie;Segmentatie;de Dienst van de segmentatie;de segmenteringsdienst;ui gids;
 solution: Experience Platform
 title: UI-gids voor streamingsegmentatie
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 >
 >Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ingeslikt. Gegevens die worden ingevoerd met behulp van een op batch gebaseerde bron worden elke avond geëvalueerd, zelfs als deze in aanmerking komen voor streamingsegmentatie.
 >
->Bovendien, kunnen de segmenten die met het stromen segmentatie worden geëvalueerd tussen ideaal en echt lidmaatschap vergaan als het segment van een ander segment wordt gebaseerd dat gebruikend partijsegmentatie wordt geëvalueerd. Bijvoorbeeld, als Segment A van Segment B wordt gebaseerd, en Segment B wordt geëvalueerd gebruikend partijsegmentatie, aangezien Segment B slechts om de 24 uur bijwerkt, zal Segment A zich verder van de daadwerkelijke gegevens bewegen tot het met de update van Segment B hersynchroniseert.
+>Bovendien, kunnen de segmenten die met het stromen segmentatie worden geëvalueerd tussen ideaal en daadwerkelijke lidmaatschap vervagen als de segmentdefinitie van een andere segmentdefinitie wordt gebaseerd die gebruikend partijsegmentatie wordt geëvalueerd. Bijvoorbeeld, als Segment A van Segment B wordt gebaseerd, en Segment B wordt geëvalueerd gebruikend partijsegmentatie, aangezien Segment B slechts om de 24 uur bijwerkt, zal Segment A zich verder van de daadwerkelijke gegevens bewegen tot het met de update van Segment B hersynchroniseert.
 
 ## Streaming segmenteringsquerytypen {#query-types}
 
@@ -38,7 +37,7 @@ Een query wordt automatisch geëvalueerd met streaming segmentatie als deze aan 
 | Eén gebeurtenis | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. | ![Er wordt een voorbeeld van één gebeurtenis weergegeven.](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Eén gebeurtenis binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis. | ![Er wordt een voorbeeld van één gebeurtenis in een relatief tijdvenster weergegeven.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Eén gebeurtenis met een tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis met een tijdvenster. | ![Er wordt een voorbeeld van één gebeurtenis met een tijdvenster weergegeven.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |  |
+| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | |
 | Eén gebeurtenis met een profielkenmerk | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. **Opmerking:** De query wordt onmiddellijk geëvalueerd wanneer de gebeurtenis plaatsvindt. In het geval van een profielgebeurtenis moet de opname echter 24 uur wachten. | ![Er wordt een voorbeeld weergegeven van één gebeurtenis met een profielkenmerk.](../images/ui/streaming-segmentation/profile-hit.png) |
 | Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken. | ![Er wordt een voorbeeld weergegeven van één gebeurtenis met een profielkenmerk binnen een relatief tijdvenster.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Opmerking:** Als een segment van segmenten wordt gebruikt, zal de profielontzetting gebeuren **om de 24 uur**. | ![Een voorbeeld van een segment van segmenten wordt getoond.](../images/ui/streaming-segmentation/two-batches.png) |
@@ -49,7 +48,7 @@ Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende sc
 - De segmentdefinitie omvat Adobe Audience Manager (AAM)-segmenten of -kenmerken.
 - De segmentdefinitie omvat meerdere entiteiten (vragen van meerdere entiteiten).
 - De segmentdefinitie omvat een combinatie van één gebeurtenis en een `inSegment` gebeurtenis.
-   - Als het segment echter in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** is ingeschakeld voor streamingsegmentatie.
+   - Als de segmentdefinitie in de `inSegment` gebeurtenis is alleen profiel, de segmentdefinitie **zal** is ingeschakeld voor streamingsegmentatie.
 
 Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmentatie:
 
@@ -62,11 +61,11 @@ Als een segmentdefinitie wordt gewijzigd zodat deze niet meer voldoet aan de cri
 
 Bovendien, segmentonkwalificatie, zo gelijkaardig aan segmentkwalificatie, gebeurt in real time. Als een publiek niet langer in aanmerking komt voor een segment, is het dus onmiddellijk niet gekwalificeerd. Bijvoorbeeld, als de segmentdefinitie &quot;Alle gebruikers vraagt die rode schoenen in de laatste drie uren&quot;kochten, na drie uren, zullen alle profielen die aanvankelijk voor de segmentdefinitie kwalificeerden ongekwalificeerd zijn.
 
-## Segmentdetails streaming
+## Definiedetails van segmentatiesegment streamen
 
 Nadat u een voor streaming geschikt segment hebt gemaakt, kunt u details van dat segment weergeven.
 
-![De pagina met segmentdetails wordt weergegeven.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![De pagina met segmentdefinitiedetails wordt weergegeven.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 In het bijzonder de **[!UICONTROL Total qualified]** De metrische waarde wordt weergegeven. Hiermee wordt het totale aantal gekwalificeerde doelgroepen weergegeven op basis van batch- en streaming-evaluaties voor dit segment.
 
@@ -74,7 +73,7 @@ Onderliggende lijn is een lijngrafiek die het aantal nieuwe doelgroepen toont di
 
 >[!NOTE]
 >
->Een segment wordt als gekwalificeerd beschouwd als het van het hebben van geen status naar gerealiseerde gaat of als het van verlaten naar gerealiseerde gaat. Een segment wordt als niet-gekwalificeerd beschouwd als het van gerealiseerde naar verlaten gaat.
+>Een segmentdefinitie wordt als gekwalificeerd beschouwd wanneer deze van een status zonder status naar gerealiseerd gaat of wanneer deze van een verlaten naar een gerealiseerde definitie gaat. Een segmentdefinitie wordt als niet-gekwalificeerd beschouwd als deze van gerealiseerde naar verlaten gaat.
 >
 >Meer informatie over deze statussen vindt u in de statustabel in het dialoogvenster [segmentatieoverzicht](./overview.md#browse).
 
@@ -106,11 +105,11 @@ Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ing
 
 ### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
 
-Een segment wordt gedefinieerd als batch- of streaming segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmenten die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
+Een segmentdefinitie wordt gedefinieerd als batch, streaming of randsegmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst van welke segmenten als het stromen segmentdefinitie zal worden geëvalueerd kan in worden gevonden [sectie met querytypen voor streamingsegmentering](#query-types).
 
-Houd er rekening mee dat als een segment **beide** een `inSegment` en een directe &#39;single-event&#39;-keten, kan deze niet in aanmerking komen voor streamingsegmentatie. Als u dit segment voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketting zijn eigen segment moeten maken.
+Houd er rekening mee dat als een segmentdefinitie een segment bevat **beide** een `inSegment` en een directe &#39;single-event&#39;-keten, kan deze niet in aanmerking komen voor streamingsegmentatie. Als u deze segmentdefinitie voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketen zijn eigen segment moeten maken.
 
-### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot; segmenten toe terwijl het aantal onder &quot;Laatste X dagen&quot; nul blijft binnen de sectie met segmentdetails?
+### Waarom blijft het aantal &quot;totaal gekwalificeerde&quot;segmenten stijgen terwijl het aantal onder &quot;Laatste X dagen&quot;nul binnen de sectie van de segmentdefinitiedetails blijft?
 
 Het aantal in totaal gekwalificeerde segmenten wordt ontleend aan de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als het stromen segmenten kwalificeert. Deze waarde wordt weergegeven voor zowel batch- als streaming segmenten.
 
@@ -118,6 +117,6 @@ Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat publiek dat in h
 
 Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor dat segment in aanmerking zouden komen.
 
-### Hoe lang duurt het voordat een segment beschikbaar is?
+### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is?
 
-Het duurt tot één uur voordat een segment beschikbaar is.
+Het duurt tot één uur voordat een segmentdefinitie beschikbaar is.

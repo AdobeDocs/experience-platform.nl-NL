@@ -1,45 +1,50 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Extern publiek importeren en gebruiken
 description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
+hide: true
+hidefromtoc: true
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
 
 # Extern publiek importeren en gebruiken
 
-Adobe Experience Platform ondersteunt de mogelijkheid om extern publiek te importeren. Dit kan vervolgens worden gebruikt als componenten voor een nieuwe segmentdefinitie. Dit document bevat een zelfstudie voor het instellen van een Experience Platform voor het importeren en gebruiken van externe doelgroepen.
+>[!IMPORTANT]
+>
+>Deze documentatie bevat informatie uit een vorige versie van de documentatie van het publiek en is daarom verouderd.
+
+Adobe Experience Platform ondersteunt de mogelijkheid om extern publiek te importeren. Dit kan vervolgens worden gebruikt als componenten voor een nieuw publiek. Dit document bevat een zelfstudie voor het instellen van een Experience Platform voor het importeren en gebruiken van externe doelgroepen.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] de diensten betrokken bij het creëren van publiekssegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten die betrokken zijn bij het creëren van een publiek. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [Segmenteringsservice](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
+- [Segmenteringsservice](../home.md): Staat u toe om publiek van gegevens van het Profiel van de Klant in real time te bouwen.
 - [Klantprofiel in realtime](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 - [Gegevenssets](../../catalog/datasets/overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in Experience Platform.
 - [Streaming opname](../../ingestion/streaming-ingestion/overview.md): Hoe Experience Platform gegevens van client- en server-side apparaten in real-time opneemt en opslaat.
 
-### Segmentgegevens vs segmentmetagegevens
+### Publiek versus segmentdefinities
 
-Voordat u begint met het importeren en gebruiken van externe doelgroepen, is het belangrijk dat u het verschil begrijpt tussen segmentgegevens en segmentmetagegevens.
+Voordat u begint met het importeren en gebruiken van externe doelgroepen, is het belangrijk dat u het verschil begrijpt tussen publiek- en segmentdefinities.
 
-Segmentgegevens verwijzen naar de profielen die voldoen aan de kwalificatiecriteria van het segment en daarom deel uitmaken van het publiek.
+Het publiek verwijst naar de groep profielen waarnaar u probeert te filteren. Wanneer het gebruiken van segmentdefinities, kunt u een publiek tot stand brengen door een segmentdefinitie te creëren die uw profielen aan de ondergroep filtert die aan de criteria van de segmentkwalificatie voldoet.
 
-De meta-gegevens van het segment zijn informatie over het segment zelf, die de naam, de beschrijving, de uitdrukking (indien van toepassing), de aanmaakdatum, de laatste gewijzigde datum, en identiteitskaart omvat. De id koppelt de segmentmetagegevens aan de afzonderlijke profielen die voldoen aan de segmentkwalificatie en die deel uitmaken van het resulterende publiek.
+Segmentdefinities bevatten informatie zoals de naam, beschrijving, expressie (indien van toepassing), de aanmaakdatum, de laatst gewijzigde datum en een id. De id koppelt de segmentmetagegevens aan de afzonderlijke profielen die voldoen aan de segmentkwalificatie en die deel uitmaken van het resulterende publiek.
 
-| Segmentgegevens | Metagegevens segment |
-| ------------ | ---------------- |
-| Profielen die voldoen aan de segmentkwalificatie | Informatie over het segment zelf |
+| Doelgroepen | Segmentdefinitie |
+| --------- | ---------------- |
+| De groep profielen die u zoekt. Wanneer het gebruiken van segmentdefinities, betekent dit dat het de groep profielen zal zijn die segmentkwalificatie ontmoeten. | De groep regels gebruikte om het publiek te segmenteren u zoekt. |
 
 ## Een naamruimte voor identiteit maken voor het externe publiek
 
-De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Identiteitsnaamruimten maken het Platform mogelijk te koppelen van waaruit een segment afkomstig is.
+De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Identiteitsnaamruimten maken het Platform mogelijk te koppelen van waaruit een publiek afkomstig is.
 
 Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](../../identity-service/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteit maakt, voegt u de brongegevens toe aan de naamruimte voor identiteit en markeert u de naamruimte [!UICONTROL Type] als **[!UICONTROL Non-people identifier]**.
 

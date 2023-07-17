@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Aan de slag met de segmentatieservice-API
 description: De volgende documentatie verstrekt extra informatie die u moet weten om met de Segmentatie API met succes te werken.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
 
 # Aan de slag met de segmentatieservice-API {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] kunt u segmenten samenstellen en publiek in Adobe Experience Platform genereren op basis van uw [!DNL Real-Time Customer Profile] gegevens.
+Adobe Experience Platform [!DNL Segmentation Service] kunt u vanuit uw [!DNL Real-Time Customer Profile] gegevens.
 
 De ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Experience Platform] diensten in verband met het gebruik van [!DNL Segmentation Service].
 
-- [[!DNL Segmentation]](../home.md): Hiermee kunt u publiekssegmenten maken op basis van [!DNL Real-Time Customer Profile] gegevens.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.

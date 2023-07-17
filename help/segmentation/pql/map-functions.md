@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;kaartfuncties;kaart;
 solution: Experience Platform
 title: PQL-mapfuncties
 description: De Taal van de Vraag van het profiel (PQL) biedt functies om interactie met kaarten gemakkelijker te maken.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 2%
+source-wordcount: '156'
+ht-degree: 3%
 
 ---
 

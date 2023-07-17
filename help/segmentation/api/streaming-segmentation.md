@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;streamingsegmentatie;Streaming segmentatie;Continue evaluatie;
 solution: Experience Platform
 title: Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1992'
 ht-degree: 0%
 
 ---
@@ -25,14 +24,14 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 >
 >Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ingeslikt. Segmenten die worden ingevoerd met behulp van een op batch gebaseerde bron, worden elke avond geëvalueerd, zelfs als deze in aanmerking komt voor streaming segmentatie.
 >
->Bovendien, kunnen de segmenten die met het stromen segmentatie worden geëvalueerd tussen ideaal en echt lidmaatschap vergaan als het segment van een ander segment wordt gebaseerd dat gebruikend partijsegmentatie wordt geëvalueerd. Bijvoorbeeld, als Segment A van Segment B wordt gebaseerd, en Segment B wordt geëvalueerd gebruikend partijsegmentatie, aangezien Segment B slechts om de 24 uur bijwerkt, zal Segment A zich verder van de daadwerkelijke gegevens bewegen tot het met de update van Segment B hersynchroniseert.
+>Bovendien, kunnen de segmentdefinities die met het stromen segmentatie worden geëvalueerd tussen ideaal en daadwerkelijke lidmaatschap drijven als de segmentdefinitie van een andere segmentdefinitie wordt gebaseerd die gebruikend partijsegmentatie wordt geëvalueerd. Bijvoorbeeld, als Segment A van Segment B wordt gebaseerd, en Segment B wordt geëvalueerd gebruikend partijsegmentatie, aangezien Segment B slechts om de 24 uur bijwerkt, zal Segment A zich verder van de daadwerkelijke gegevens bewegen tot het met de update van Segment B hersynchroniseert.
 
 ## Aan de slag
 
 Deze ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten betrokken bij het stromen segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in echt - tijd, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Segmentation]](../home.md): Biedt de mogelijkheid om segmenten en publiek te maken van uw [!DNL Real-Time Customer Profile] gegevens.
+- [[!DNL Segmentation]](../home.md): Verstrekt de capaciteit om publiek tot stand te brengen gebruikend segmentdefinities en andere externe bronnen van uw [!DNL Real-Time Customer Profile] gegevens.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan te maken [!DNL Platform] API&#39;s.
@@ -69,7 +68,7 @@ Voor het invullen van specifieke aanvragen kunnen extra kopteksten nodig zijn. I
 >
 >U zult geplande segmentatie voor de organisatie moeten toelaten opdat het stromen segmentatie werkt. Informatie over het inschakelen van geplande segmentatie vindt u in het gedeelte [geplande segmenteringssectie inschakelen](#enable-scheduled-segmentation)
 
-Opdat een segment wordt geëvalueerd gebruikend het stromen segmentatie, moet de vraag aan de volgende richtlijnen in overeenstemming zijn.
+Opdat een segmentdefinitie wordt geëvalueerd die het stromen segmentatie gebruikt, moet de vraag aan de volgende richtlijnen in overeenstemming zijn.
 
 | Type query | Details |
 | ---------- | ------- |
@@ -98,15 +97,15 @@ Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmen
 
 Als een segmentdefinitie wordt gewijzigd zodat deze niet meer voldoet aan de criteria voor het streamen van segmentatie, schakelt de segmentdefinitie automatisch over van &quot;Streaming&quot; naar &quot;Batch&quot;.
 
-Bovendien, segmentonkwalificatie, zo gelijkaardig aan segmentkwalificatie, gebeurt in real time. Als een publiek niet langer in aanmerking komt voor een segment, is het dus onmiddellijk niet gekwalificeerd. Bijvoorbeeld, als de segmentdefinitie &quot;Alle gebruikers vraagt die rode schoenen in de laatste drie uren&quot;kochten, na drie uren, zullen alle profielen die aanvankelijk voor de segmentdefinitie kwalificeerden ongekwalificeerd zijn.
+Bovendien, segmentonkwalificatie, zo gelijkaardig aan segmentkwalificatie, gebeurt in real time. Als een profiel niet langer in aanmerking komt voor een segmentdefinitie, wordt het dus onmiddellijk niet gekwalificeerd. Bijvoorbeeld, als de segmentdefinitie &quot;Alle gebruikers vraagt die rode schoenen in de laatste drie uren&quot;kochten, na drie uren, zullen alle profielen die aanvankelijk voor de segmentdefinitie kwalificeerden ongekwalificeerd zijn.
 
-## Hiermee worden alle segmenten opgehaald die zijn ingeschakeld voor streaming segmentatie
+## Hiermee worden alle segmentdefinities opgehaald die zijn ingeschakeld voor streaming segmentatie
 
-U kunt een lijst van al uw segmenten terugwinnen die voor het stromen segmentatie binnen uw organisatie door een verzoek van de GET aan te dienen worden toegelaten `/segment/definitions` eindpunt.
+U kunt een lijst van al uw segmentdefinities terugwinnen die voor het stromen segmentatie binnen uw organisatie door een verzoek van de GET aan te dienen worden toegelaten `/segment/definitions` eindpunt.
 
 **API-indeling**
 
-Als u streaming-ingeschakelde segmenten wilt ophalen, moet u de queryparameter opnemen `evaluationInfo.continuous.enabled=true` in het aanvraagpad.
+Om streaming-toegelaten segmentdefinities terug te winnen, moet u de vraagparameter omvatten `evaluationInfo.continuous.enabled=true` in het aanvraagpad.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -126,7 +125,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie van segmenten in uw organisatie terug die voor het stromen segmentatie worden toegelaten.
+Een succesvolle reactie keert een serie van segmentdefinities in uw organisatie terug die voor het stromen segmentatie worden toegelaten.
 
 ```json
 {
@@ -213,9 +212,9 @@ Een succesvolle reactie keert een serie van segmenten in uw organisatie terug di
 }
 ```
 
-## Een segment met streaming mogelijkheden maken
+## Een segmentdefinitie maken die geschikt is voor streaming
 
-Als een segment overeenkomt met een van de [hierboven vermelde typen streamingsegmentatie](#query-types).
+Als een segmentdefinitie overeenkomt met een van de [hierboven vermelde typen streamingsegmentatie](#query-types).
 
 **API-indeling**
 
@@ -261,7 +260,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Dit is een standaard &quot;creeer een segment&quot;verzoek. Lees de zelfstudie voor meer informatie over het maken van een segmentdefinitie [een segment maken](../tutorials/create-a-segment.md).
+>Dit is een standaard &quot;creeer een verzoek van de segmentdefinitie&quot;. Lees de zelfstudie voor meer informatie over het maken van een segmentdefinitie [segmentdefinitie maken](../tutorials/create-a-segment.md).
 
 **Antwoord**
 
@@ -307,7 +306,7 @@ Een succesvolle reactie keert de details van de nieuw gecreeerd streaming-toegel
 
 ## Geplande evaluatie inschakelen {#enable-scheduled-segmentation}
 
-Zodra de het stromen evaluatie is toegelaten, moet een basislijn worden gecreeerd (waarna zal het segment altijd bijgewerkt zijn). De geplande evaluatie (die ook als geplande segmentatie wordt bekend) moet eerst worden toegelaten opdat het systeem baselining automatisch uitvoert. Met geplande segmentatie, kan uw organisatie aan een terugkomende planning houden om de uitvoerbanen automatisch in werking te stellen om segmenten te evalueren.
+Nadat de streamingevaluatie is ingeschakeld, moet een basislijn worden gemaakt (waarna de segmentdefinitie altijd up-to-date is). De geplande evaluatie (die ook als geplande segmentatie wordt bekend) moet eerst worden toegelaten opdat het systeem baselining automatisch uitvoert. Met geplande segmentatie, kan uw organisatie aan een terugkomende planning houden om de uitvoerbanen automatisch in werking te stellen om segmentdefinities te evalueren.
 
 >[!NOTE]
 >
@@ -351,7 +350,7 @@ curl -X POST \
 | `name` | **(Vereist)** De naam van het schema. Moet een tekenreeks zijn. |
 | `type` | **(Vereist)** Het taaktype in tekenreeksindeling. De ondersteunde typen zijn `batch_segmentation` en `export`. |
 | `properties` | **(Vereist)** Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
-| `properties.segments` | **(Vereist als `type` equals `batch_segmentation`)** Gebruiken `["*"]` zorgt ervoor dat alle segmenten worden opgenomen. |
+| `properties.segments` | **(Vereist als `type` equals `batch_segmentation`)** Gebruiken `["*"]` zorgt ervoor dat alle segmentdefinities worden opgenomen. |
 | `schedule` | **(Vereist)** Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Het getoonde voorbeeld (`0 0 1 * * ?`) betekent dat de baan elke dag om 1 wordt geactiveerd:00:00 UTC. Voor meer informatie raadpleegt u de bijlage bij de [expressie-indeling voor uitsnijden](./schedules.md#appendix) binnen de documentatie over de programma&#39;s binnen de segmentatie. |
 | `state` | *(Optioneel)* Tekenreeks die de planningsstatus bevat. Beschikbare waarden: `active` en `inactive`. De standaardwaarde is `inactive`. Een organisatie kan slechts één programma maken. De stappen voor het bijwerken van het programma zijn beschikbaar later in dit leerprogramma. |
 
@@ -422,9 +421,9 @@ Dezelfde bewerking kan worden gebruikt om een schema uit te schakelen door de wa
 
 ## Volgende stappen
 
-Nu u zowel nieuwe als bestaande segmenten voor het stromen segmentatie hebt toegelaten, en geplande segmentatie toegelaten om een basislijn te ontwikkelen en terugkomende evaluaties uit te voeren, kunt u beginnen streaming-toegelaten segmenten voor uw organisatie tot stand te brengen.
+Nu u zowel nieuwe als bestaande segmentdefinities voor het stromen segmentatie hebt toegelaten, en geplande segmentatie toegelaten om een basislijn te ontwikkelen en terugkomende evaluaties uit te voeren, kunt u beginnen streaming-Toegelaten segmentdefinities voor uw organisatie tot stand te brengen.
 
-Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmenten via de Adobe Experience Platform-gebruikersinterface naar de [Gebruikershandleiding voor Segment Builder](../ui/segment-builder.md).
+Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmentdefinities in de Adobe Experience Platform-gebruikersinterface naar de [Gebruikershandleiding voor Segment Builder](../ui/segment-builder.md).
 
 ## Aanhangsel
 
@@ -432,26 +431,26 @@ In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weerg
 
 ### Vindt streaming segmentatie ook &#39;onkwalificatie&#39; plaats in real-time?
 
-Doorgaans gebeurt een onkwalificatie van streamingsegmentatie in real-time. Bij streaming segmenten die segmenten van segmenten gebruiken, gebeurt dit echter wel **niet** in real time niet in aanmerking komen, in plaats daarvan na 24 uur niet in aanmerking.
+Doorgaans gebeurt een onkwalificatie van streamingsegmentatie in real-time. Bij streamingsegmentdefinities die gebruikmaken van segmenten, is dit echter wel het geval **niet** in real time niet in aanmerking komen, in plaats daarvan na 24 uur niet in aanmerking.
 
 ### Aan welke gegevens werkt streaming segmentatie?
 
 Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ingeslikt. Segmenten die worden ingevoerd met behulp van een op batch gebaseerde bron, worden elke avond geëvalueerd, zelfs als deze in aanmerking komt voor streaming segmentatie. Gebeurtenissen die naar het systeem worden gestreamd met een tijdstempel die ouder is dan 24 uur, worden verwerkt in de volgende batchtaak.
 
-### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
+### Hoe worden segmentdefinities gedefinieerd als batch- of streaming-segmentatie?
 
-Een segment wordt gedefinieerd als batch- of streaming segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmenten die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
+Een segmentdefinitie wordt gedefinieerd als batch- of streaming-segmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst met segmentdefinities die als streaming segment worden geëvalueerd, kunt u vinden in het dialoogvenster [sectie met querytypen voor streamingsegmentering](#query-types).
 
-Houd er rekening mee dat als een segment **beide** een `inSegment` en een directe &#39;single-event&#39;-keten, kan deze niet in aanmerking komen voor streamingsegmentatie. Als u dit segment voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketting zijn eigen segment moeten maken.
+Houd er rekening mee dat als een segment **beide** een `inSegment` en een directe &#39;single-event&#39;-keten, kan deze niet in aanmerking komen voor streamingsegmentatie. Als u deze segmentdefinitie voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketting zijn eigen segmentdefinitie moeten maken.
 
-### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot; segmenten toe terwijl het aantal onder &quot;Laatste X dagen&quot; nul blijft binnen de sectie met segmentdetails?
+### Waarom neemt het aantal &quot;totaal gekwalificeerde&quot;segmentdefinities toe terwijl het aantal onder &quot;Laatste X dagen&quot;bij nul blijft binnen de sectie van de segmentdefinitiedetails?
 
-Het aantal in totaal gekwalificeerde segmenten wordt ontleend aan de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als het stromen segmenten kwalificeert. Deze waarde wordt weergegeven voor zowel batch- als streaming segmenten.
+Het aantal totaal gekwalificeerde segmentdefinities wordt getrokken uit de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als streaming segmentdefinities kwalificeert. Deze waarde wordt weergegeven voor definities van zowel batch- als streaming segmenten.
 
-Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat publiek dat in het stromen segmentatie gekwalificeerd is, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streaming segmenten. Dientengevolge, deze waarde **kan** weergeven als 0 voor batchsegmenten.
+Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat publiek dat in het stromen segmentatie gekwalificeerd is, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streamingsegmentdefinities. Dientengevolge, deze waarde **kan** weergeven als 0 voor definities van batchsegmenten.
 
-Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor dat segment in aanmerking zouden komen.
+Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor die segmentdefinitie in aanmerking zouden komen.
 
-### Hoe lang duurt het voordat een segment beschikbaar is?
+### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is?
 
-Het duurt tot één uur voordat een segment beschikbaar is.
+Het duurt tot één uur voordat een segmentdefinitie beschikbaar is.

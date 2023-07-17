@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentatie;segmentservice;segment;Segment;Segmenten;segmenten
 solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1629'
 ht-degree: 0%
 
 ---
 
 # [!DNL Segmentation Service]-overzicht
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw te produceren [!DNL Real-Time Customer Profile] gegevens. Deze segmenten worden centraal geconfigureerd en onderhouden op [!DNL Platform]en gemakkelijk toegankelijk zijn door elke Adobe-oplossing.
+Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om publiek door segmentdefinities of andere bronnen van uw tot stand te brengen [!DNL Real-Time Customer Profile] gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform]en gemakkelijk toegankelijk zijn door elke Adobe-oplossing.
 
 Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het speelt in Adobe Experience Platform.
 
 ## Aan de slag met [!DNL Segmentation Service]
 
-Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
+U moet de volgende belangrijke termen begrijpen die in dit document worden gebruikt:
 
 - **Segmentering**: Het verdelen van een grote groep individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
-- **Segmentdefinitie**: De regelreeks die wordt gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven. Zodra geconceptualiseerd, worden de regels die in een segmentdefinitie worden geschetst gebruikt om kwalificerende publieksleden voor een segment te bepalen.
-- **Publiek**: De resulterende set profielen die voldoen aan de criteria van een segmentdefinitie.
+- **Publiek**: Een verzameling personen die vergelijkbare gedragingen en/of kenmerken delen. Deze verzameling personen kan worden gegenereerd door Adobe Experience Platform met behulp van segmentdefinities (publiek dat door Platforms wordt gegenereerd) of op basis van externe bronnen (publiek dat extern wordt gegenereerd).
+- **Segmentdefinitie**: De regelreeks Adobe Experience Platform gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven.
 
 ## Hoe segmentatie werkt
 

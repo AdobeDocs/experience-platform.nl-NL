@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;segment;Segment;creeer segment;segmentatie;creeer een segment;Segmenteringsdienst;
 solution: Experience Platform
-title: Een segment maken met de segmentatieservice-API
+title: Een segmentdefinitie maken met de segmentatieservice-API
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u een segmentdefinitie kunt ontwikkelen, testen, voorvertonen en opslaan met de Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
 
-# Creeer een segment gebruikend de Dienst API van de Segmentatie
+# Creeer een segmentdefinitie gebruikend de Dienst API van de Segmentatie
 
 Dit document bevat een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met behulp van de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Voor informatie over hoe te om segmenten te bouwen gebruikend het gebruikersinterface, gelieve te zien [Handleiding Segment Builder](../ui/overview.md).
+Voor informatie over hoe te om segmentdefinities te bouwen gebruikend het gebruikersinterface, gelieve te zien [Handleiding Segment Builder](../ui/overview.md).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] de diensten betrokken bij het creëren van publiekssegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten betrokken bij het creëren van segmentdefinities. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Staat u toe om publiek te bouwen gebruikend segmentdefinities of andere externe bronnen van de gegevens van het Profiel van de Klant in real time.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan te maken [!DNL Platform] API&#39;s.
@@ -54,11 +53,11 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Een segmentdefinitie ontwikkelen
 
-De eerste stap in segmentatie is een segment te bepalen, dat in een constructie wordt vertegenwoordigd genoemd een segmentdefinitie. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL bepaalt de regels voor het segment die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens worden gebaseerd u verstrekt aan [!DNL Real-Time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
+De eerste stap in segmentatie is een segmentdefinitie te bepalen. Een segmentdefinitie is een object waarin een query is opgenomen [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. PQL bepaalt de regels voor de segmentdefinitie die op voorwaarden met betrekking tot om het even welke verslag of tijdreeksgegevens wordt gebaseerd u verstrekt aan [!DNL Real-Time Customer Profile]. Zie de [PQL-hulplijn](../pql/overview.md) voor meer informatie over het schrijven van vragen PQL.
 
-U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` in de [!DNL Segmentation] API. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segment met succes wordt bepaald.
+U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` in de [!DNL Segmentation] API. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segmentdefinitie met succes wordt bepaald.
 
-Voor een gedetailleerde uitleg van de definitie van een segment leest u de [segmentdefinitiehandleiding](../api/segment-definitions.md#create).
+Voor een gedetailleerde uitleg van het definiëren van een segmentdefinitie leest u de [segmentdefinitiehandleiding](../api/segment-definitions.md#create).
 
 ## Een publiek schatten en voorvertonen {#estimate-and-preview-an-audience}
 
@@ -66,14 +65,14 @@ Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertonings
 
 Door uw publiek te schatten en te previewing, kunt u uw predikaten testen en optimaliseren PQL tot zij een wenselijk resultaat veroorzaken, waar zij dan in een bijgewerkte segmentdefinitie kunnen worden gebruikt.
 
-Er zijn twee vereiste stappen om een voorvertoning van uw segment te bekijken of een schatting van uw segment te krijgen:
+Er zijn twee vereiste stappen om een voorvertoning van uw segmentdefinitie weer te geven of een schatting van uw segmentdefinitie te krijgen:
 
 1. [Een voorbeeldtaak maken](#create-a-preview-job)
 2. [Schatting of voorvertoning weergeven](#view-an-estimate-or-preview) gebruiken van identiteitskaart van de voorproefbaan
 
 ### Hoe schattingen worden gegenereerd
 
-Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Bijgevolg zullen nieuwe toegevoegde velden of verzamelde aanvullende gegevens de volgende dag in schattingen worden weergegeven.
+Gegevenssteekproeven worden gebruikt om segmentdefinities te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Bijgevolg zullen nieuwe toegevoegde velden of verzamelde aanvullende gegevens de volgende dag in schattingen worden weergegeven.
 
 De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in het profielarchief. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 

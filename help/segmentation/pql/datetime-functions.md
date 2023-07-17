@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;pql;PQL;De Taal van de Vraag van het profiel;datum en tijdfuncties;datetime functies;datetime;date;time;
 solution: Experience Platform
 title: PQL Datum- en tijdfuncties
 description: Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden in de taal van de profielquery (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '485'
 ht-degree: 2%
 
 ---

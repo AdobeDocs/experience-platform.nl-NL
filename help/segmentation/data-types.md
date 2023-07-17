@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;Gegevenstypen voor segmentatie;Segmentatie;Segmentatie;Segmenteringsdienst;Segmenteringsservicetypen;
 solution: Experience Platform
 title: Ondersteunde gegevenstypen in Segmentatieservice
 description: Alle gegevenstypes van het Model van de Gegevens van de Ervaring (XDM) worden gesteund binnen de Dienst van de Segmentatie van Adobe. De regels die een segmentdefinitie vormen worden contextualiseerd door de volgende gegevenstypes.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
@@ -17,7 +16,7 @@ Alle gegevenstypen van het Experience Data Model (XDM) worden ondersteund in Ado
 
 ## Tekenreeksgegevens
 
-Segmentdefinities gebruiken tekenreeksgegevens om niet-numerieke beperkingen voor segmentpubliek te definiëren, zoals &quot;landnaam&quot; of &quot;niveau van loyaliteitsprogramma&quot;.
+Segmentdefinities gebruiken tekenreeksgegevens om niet-numerieke beperkingen voor het publiek te definiëren, zoals &quot;naam van het land&quot; of &quot;niveau van het loyaliteitsprogramma&quot;.
 
 Tekenreeksgegevens worden opgenomen in segmentdefinities met behulp van logische, uitsluitende en uitsluitende instructies. Zodra een koordattribuut aan uw segmentdefinitie wordt toegevoegd, kunt u koord-relevante verklaringen gebruiken om het tegen andere koordgebieden te evalueren.
 
@@ -33,7 +32,7 @@ Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefi
 
 | Voorbeeldveld | Datum-relevante verklaringen | Tijdlijn |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant aan de dag het segment werd gebouwd. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant aan de dag werd de segmentdefinitie gebouwd. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevant binnen een bepaalde week/maand. |
 
 ## Experience Events
@@ -45,19 +44,19 @@ Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergeg
 | Trefwoord | Gebruik |
 | ------- | --- |
 | Opnemen/uitsluiten | Beschrijft het gedrag van de gebeurtenis door het opnemen of weglaten van gegevens. |
-| Alle | Helpt het aantal in aanmerking komende segmenten te bepalen. |
+| Alle | Helpt het aantal kwalificerende segmentdefinities te bepalen. |
 | Knop Tijdregel toepassen | Bevat datumgegevens. |
 | Gelijk aan, niet gelijk aan, begint met, niet met, eindigt niet met, eindigt niet met, bevat, bevat, niet bevat, bestaat, niet bestaat | Bevat tekenreeksgegevens. |
 
 ### Doelgroepen delen
 
-Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan het nieuwe segment.
+Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan de nieuwe segmentdefinities.
 
 Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruik van Adobe Audience Manager-soorten met Platform vindt u in de [Handleiding voor het delen van publiek in de Adobe Audience Manager-documentatie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
-### Segment delen
+### Delen van segmentdefinitie
 
-Segmenten die in Platform zijn gemaakt, kunnen binnen andere segmenten worden gebruikt [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
+Segmentdefinities die in Platform zijn gemaakt, kunnen binnen andere definities worden gebruikt [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
 
 ## Andere gegevenstypen
 

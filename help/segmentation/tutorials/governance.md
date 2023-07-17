@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de naleving van het gegevensgebruik;afdwingen;afdwingen de naleving van het gegevensgebruik;de Dienst van de segmentatie;segmentatie;Segmentatie;
 solution: Experience Platform
 title: Naleving van gegevensgebruik afdwingen voor een publiekssegment met behulp van API's
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het afdwingen van naleving van gegevensgebruik voor de publiekssegmenten van het Profiel van de Klant in real time die APIs gebruiken.
+description: In deze zelfstudie worden de stappen beschreven voor het afdwingen van definities van compatibiliteitssegmenten voor gegevensgebruik met behulp van API's.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1355'
 ht-degree: 0%
 
 ---
 
-# Compatibiliteit met gegevensgebruik afdwingen voor een publiekssegment met behulp van API&#39;s
+# Compatibiliteit met gegevensgebruik afdwingen voor een segmentdefinitie met API&#39;s
 
-In deze zelfstudie worden de stappen beschreven voor het afdwingen van compatibiliteit met gegevensgebruik voor [!DNL Real-Time Customer Profile] publiekssegmenten die API&#39;s gebruiken.
+Deze zelfstudie behandelt de stappen voor het afdwingen van de naleving van gegevensgebruik voor segmentdefinities die API&#39;s gebruiken.
 
 ## Aan de slag
 
@@ -57,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Een samenvoegingsbeleid voor een segmentdefinitie opzoeken {#merge-policy}
 
-Dit werkschema begint door tot een bekend publiekssegment toegang te hebben. Segmenten die zijn ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] bevatten een identiteitskaart van het fusiebeleid binnen hun segmentdefinitie. Dit samenvoegbeleid bevat informatie over welke datasets in het segment moeten worden omvat, die beurtelings om het even welke toepasselijke etiketten van het gegevensgebruik bevatten.
+Dit werkschema begint door tot een bekende segmentdefinitie toegang te hebben. Segmentdefinities die zijn ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] bevatten een identiteitskaart van het fusiebeleid binnen hun segmentdefinitie. Dit samenvoegbeleid bevat informatie over welke datasets in de segmentdefinitie moeten worden omvat, die beurtelings om het even welke toepasselijke etiketten van het gegevensgebruik bevatten.
 
 Met de [!DNL Segmentation] API, kunt u omhoog een segmentdefinitie door zijn identiteitskaart kijken om zijn bijbehorend fusiebeleid te vinden.
 
@@ -367,20 +366,20 @@ Met de gegevens die in de API-reactie worden geretourneerd, kunt u protocollen i
 
 ## Gegevensvelden filteren
 
-Als uw publiekssegment geen evaluatie overgaat, kunt u de gegevens aanpassen inbegrepen in het segment door één van de twee hieronder geschetste methodes.
+Als uw segmentdefinitie geen evaluatie overgaat, kunt u de gegevens aanpassen inbegrepen in de segmentdefinitie door één van de twee hieronder geschetste methodes.
 
 ### Het samenvoegbeleid van de segmentdefinitie bijwerken
 
 Het bijwerken van het samenvoegbeleid van een segmentdefinitie zal de datasets en de gebieden aanpassen die zullen worden omvat wanneer de segmentbaan in werking wordt gesteld. Zie de sectie over [bijwerken van een bestaand samenvoegingsbeleid](../../profile/api/merge-policies.md#update) in de zelfstudie over het samenvoegbeleid van de API voor meer informatie.
 
-### Specifieke gegevensvelden beperken bij het exporteren van het segment
+### Specifieke gegevensvelden beperken bij het exporteren van de segmentdefinitie
 
-Wanneer het uitvoeren van een segment naar een dataset gebruikend [!DNL Segmentation] API, kunt u de gegevens filtreren die in de uitvoer door te gebruiken `fields` parameter. Alle gegevensvelden die aan deze parameter worden toegevoegd, worden in de exportbewerking opgenomen, terwijl alle andere gegevensvelden worden uitgesloten.
+Wanneer het uitvoeren van een segmentdefinitie aan een dataset die gebruikt [!DNL Segmentation] API, kunt u de gegevens filtreren die in de uitvoer door te gebruiken `fields` parameter. Alle gegevensvelden die aan deze parameter worden toegevoegd, worden in de exportbewerking opgenomen, terwijl alle andere gegevensvelden worden uitgesloten.
 
-Neem bijvoorbeeld een segment met gegevensvelden met de naam &quot;A&quot;, &quot;B&quot; en &quot;C&quot;. Als u alleen veld &quot;C&quot; wilt exporteren, `fields` parameter zou veld &quot;C&quot; alleen bevatten. Op deze manier worden de velden A en B bij het exporteren van het segment uitgesloten.
+Overweeg een segmentdefinitie die gegevensvelden met de naam &quot;A&quot;, &quot;B&quot; en &quot;C&quot; heeft. Als u alleen veld &quot;C&quot; wilt exporteren, `fields` parameter zou veld &quot;C&quot; alleen bevatten. Op deze manier worden de velden A en B uitgesloten bij het exporteren van de segmentdefinitie.
 
-Zie de sectie over [een segment exporteren](./evaluate-a-segment.md#export) in de segmentatiezelfstudie voor meer informatie.
+Zie de sectie over [segmentdefinitie exporteren](./evaluate-a-segment.md#export) in de segmentatiezelfstudie voor meer informatie.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de labels van het gegevensgebruik verbonden aan een publiekssegment opgezocht en hen getest voor beleidsschendingen tegen specifieke marketing acties. Voor meer informatie over gegevensbeheer in [!DNL Experience Platform], lees het overzicht voor [Gegevensbeheer](../../data-governance/home.md).
+Door deze zelfstudie te volgen, hebt u de etiketten van het gegevensgebruik verbonden aan een segmentdefinitie opgezocht en hen getest op beleidsschendingen tegen specifieke marketing acties. Voor meer informatie over gegevensbeheer in [!DNL Experience Platform], lees het overzicht voor [Gegevensbeheer](../../data-governance/home.md).
