@@ -4,9 +4,9 @@ title: Aan de slag met de Real-Time Customer Profile API
 type: Documentation
 description: De gids van het begin van het Profiel API schetst de belangrijkste concepten en de basisfunctionaliteit die u moet kennen om eindpunten van API van het Profiel van de Klant in real time te gebruiken om basisbewerkingen van CRUD tegen de gegevens van het Profiel uit te voeren.
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse d
 
 * [[!DNL Real-Time Customer Profile]](../home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Verbeter een beter beeld van uw klant en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
+* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Staat u toe om publiek van gegevens van het Profiel van de Klant in real time te bouwen.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 

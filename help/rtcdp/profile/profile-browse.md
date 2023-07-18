@@ -3,7 +3,7 @@ keywords: weergaveprofielen rtcdp;rtcdp, profielweergave;rtcdp-profielen
 title: Bladeren door profielen in Real-time Customer Data Platform
 description: Met Adobe Real-time Customer Data Platform kunt u in real-time door de gegevens van het klantprofiel bladeren via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Aangezien de individuele profielen op gegevens worden samengevoegd die in het systeem van diverse bronnen worden gebracht, wordt elk profiel een actionable, timestamped rekening van elke interactie uw klant met uw merk heeft.
 
-In de gebruikersinterface van Adobe Experience Platform kunt u deze alleen-lezen profielen weergeven en belangrijke informatie over elk van uw individuele klanten bekijken, zoals hun voorkeuren, gebeurtenissen uit het verleden, interacties en de segmenten waartoe het individu behoort.
+In de gebruikersinterface van Adobe Experience Platform kunt u deze alleen-lezen profielen bekijken en belangrijke informatie over elk van uw individuele klanten bekijken, zoals hun voorkeuren, gebeurtenissen uit het verleden, interacties en het publiek waartoe het individu behoort.
 
 Adobe Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en kan daardoor gebruikmaken van de mogelijkheden voor profielweergave in de gebruikersinterface van het Experience Platform. Voor een gedetailleerde gids over het bekijken van klantenprofielen binnen het gebruikersinterface van het Platform, verwijs naar [Gebruikershandleiding voor het profiel van de klant in realtime](../../profile/ui/user-guide.md).
 
 ## Profielverbeteringen voor Real-Time CDP, B2B Edition
 
-Naast de bladermogelijkheden van het profiel die door Adobe Experience Platform worden ondersteund, kunnen gebruikers van Real-Time CDP, B2B Edition toegang krijgen tot B2B-kenmerken en -gebeurtenissen binnen het klantprofiel op het tabblad [!UICONTROL Attributes] en [!UICONTROL Events] tabs, respectievelijk. B2B-gegevens kunnen ook worden gebruikt om segmentatie uit te voeren, waarbij die segmenten onder de [!UICONTROL Segment membership] naast niet-B2B-segmenten.
+Naast de bladermogelijkheden van het profiel die door Adobe Experience Platform worden ondersteund, kunnen gebruikers van Real-Time CDP, B2B Edition toegang krijgen tot B2B-kenmerken en -gebeurtenissen binnen het klantprofiel op het tabblad [!UICONTROL Attributes] en [!UICONTROL Events] tabs, respectievelijk. B2B-gegevens kunnen ook worden gebruikt om segmentatie uit te voeren, waarbij het publiek onder de [!UICONTROL Audience membership] naast niet-B2B-publiek.
 
 Met Real-Time CDP, B2B Edition kunt u ook bladeren [!UICONTROL Accounts], [!UICONTROL Opportunities], en [!UICONTROL Source records] van over uw ondernemingsbronnen die met een individuele klant worden geassocieerd.
 

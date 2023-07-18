@@ -4,7 +4,7 @@ title: Handleiding voor het oplossen van problemen in realtime-klantprofiel
 type: Documentation
 description: Dit document bevat antwoorden op veelgestelde vragen over Real-Time klantprofiel en een gids voor probleemoplossing voor algemene fouten bij het werken met profielgegevens met Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -47,13 +47,13 @@ Er zijn meerdere methoden om profielgegevens weer te geven, afhankelijk van het 
 
 Als u de id&#39;s kent van de profielentiteiten waartoe u toegang wilt hebben, kunt u de opdracht `/entities` (Toegang tot profiel) in de profiel-API om die entiteiten op te zoeken. Zie de sectie over [entiteiten](./api/entities.md) in de ontwikkelaarsgids voor meer informatie.
 
-U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om tot de individuele profielen van klanten toegang te hebben die voor een segmentlidmaatschap gekwalificeerd zijn. Zie de [Overzicht van segmentatieservice](../segmentation/home.md) voor meer informatie .
+U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om toegang te krijgen tot de individuele profielen van klanten die voor een publiekslidmaatschap in aanmerking zijn gekomen. Zie de [Overzicht van segmentatieservice](../segmentation/home.md) voor meer informatie .
 
 #### De gebruikersinterface gebruiken
 
 In de interface van het Experience Platform **[!UICONTROL Browse]** in de **[!UICONTROL Profiles]** in de werkruimte kunt u het totale aantal profielen weergeven en naar afzonderlijke profielen zoeken op basis van hun identiteitswaarde. Zie de [Gebruikershandleiding voor profielen](./ui/user-guide.md) voor meer informatie .
 
-U kunt ook een lijst met uw segmenten onder de **[!UICONTROL Browse]** in de **[!UICONTROL Segments]** werkruimte. Nadat u een segment hebt geselecteerd, wordt een voorbeeld met profielen weergegeven die voor dat segment zijn gekwalificeerd. Vervolgens kunt u een van deze profielen selecteren om de details weer te geven. Zie de [Overzicht van de segmenteringsinterface](../segmentation/ui/overview.md) voor meer informatie .
+U kunt ook een lijst met uw doelgroepen weergeven onder de **[!UICONTROL Browse]** in de **[!UICONTROL Audiences]** werkruimte. Nadat u een publiek hebt geselecteerd, wordt een voorbeeld weergegeven van profielen die voor dat publiek zijn gekwalificeerd. Vervolgens kunt u een van deze profielen selecteren om de details weer te geven. Zie de [Overzicht van de segmenteringsinterface](../segmentation/ui/overview.md) voor meer informatie .
 
 ## Foutcodes
 

@@ -4,16 +4,16 @@ title: API-eindpunt voor exporteren van profielen
 type: Documentation
 description: In real-time klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt voor exporteren van profielen
 
-[!DNL Real-Time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. Bijvoorbeeld, publiekssegmenten van [!DNL Profile] gegevens kunnen worden geëxporteerd voor activering en profielkenmerken kunnen worden geëxporteerd voor rapportage.
+[!DNL Real-Time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. Bijvoorbeeld: [!DNL Profile] gegevens kunnen voor activering worden geëxporteerd door een publiek te maken en profielkenmerken kunnen voor rapportage worden geëxporteerd.
 
 Dit document bevat stapsgewijze instructies voor het maken en beheren van exporttaken met de opdracht [Profiel-API](https://www.adobe.com/go/profile-apis-en).
 
@@ -37,7 +37,7 @@ Bij exporteren [!DNL Profile] gegevens, moet een doeldataset eerst worden gecree
 
 Één van de belangrijkste overwegingen is het schema waarop de dataset wordt gebaseerd (`schemaRef.id` in de API voorbeeldaanvraag hieronder). Voor het exporteren van profielgegevens moet de gegevensset gebaseerd zijn op de [!DNL XDM Individual Profile] Unieregeling (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen. In dit geval is dat [!DNL XDM Individual Profile] klasse. Voor meer informatie over de schema&#39;s van de uniview, gelieve te zien [union sectie in de grondbeginselen van de schemacompositie gids](../../xdm/schema/composition.md#union).
 
-De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen [!DNL XDM Individual Profile] Unieschema dat gebruikmaakt van de [!DNL Catalog] API. U kunt ook de opdracht [!DNL Platform] gebruikersinterface om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [deze UI-zelfstudie voor het exporteren van segmenten](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn ook hier van toepassing . Nadat u de instructies hebt voltooid, kunt u terugkeren naar deze zelfstudie om door te gaan met de stappen voor [een nieuwe exporttaak starten](#initiate).
+De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen [!DNL XDM Individual Profile] Unieschema dat gebruikmaakt van de [!DNL Catalog] API. U kunt ook de opdracht [!DNL Platform] gebruikersinterface om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [deze UI-zelfstudie voor het exporteren van soorten publiek](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn ook hier van toepassing . Nadat u de instructies hebt voltooid, kunt u terugkeren naar deze zelfstudie om door te gaan met de stappen voor [een nieuwe exporttaak starten](#initiate).
 
 Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u aan de stap rechtstreeks te werk gaan voor [een nieuwe exporttaak starten](#initiate).
 
@@ -132,11 +132,11 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `fields` | *(Optioneel)* Hiermee beperkt u de gegevensvelden die in de export moeten worden opgenomen tot de velden die in deze parameter zijn opgegeven. Als u deze waarde weglaat, worden alle velden opgenomen in de geëxporteerde gegevens. |
-| `mergePolicy` | *(Optioneel)* Hier geeft u het samenvoegbeleid op dat van toepassing is op de geëxporteerde gegevens. Neem deze parameter op wanneer er meerdere segmenten worden geëxporteerd. |
+| `mergePolicy` | *(Optioneel)* Hier geeft u het samenvoegbeleid op dat van toepassing is op de geëxporteerde gegevens. Neem deze parameter op wanneer er meerdere soorten publiek worden geëxporteerd. |
 | `mergePolicy.id` | De id van het samenvoegbeleid. |
 | `mergePolicy.version` | De specifieke versie van het samenvoegbeleid dat moet worden gebruikt. Als u deze waarde weglaat, wordt standaard de meest recente versie gebruikt. |
 | `additionalFields.eventList` | *(Optioneel)* Bepaalt de tijdlijngebeurtenisvelden die worden geëxporteerd voor onderliggende of gekoppelde objecten door een of meer van de volgende instellingen op te geven:<ul><li>`eventList.fields`: Besturing van de velden die u wilt exporteren.</li><li>`eventList.filter`: Hiermee worden criteria opgegeven waarmee de resultaten van gekoppelde objecten worden beperkt. Hiermee wordt een minimumwaarde verwacht die vereist is voor het exporteren, meestal een datum.</li><li>`eventList.filter.fromIngestTimestamp`: Hiermee filtert u tijdreeksgebeurtenissen naar gebeurtenissen die na de opgegeven tijdstempel zijn ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li></ul> |
-| `destination` | **(Vereist)** Doelgegevens voor de geëxporteerde gegevens:<ul><li>`destination.datasetId`: **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`destination.segmentPerBatch`: *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `false` Hiermee exporteert u alle segment-id&#39;s naar één batch-id. Een waarde van `true` Hiermee exporteert u één segment-id naar één batch-id. Merk op dat het plaatsen van de waarde om `true` kan de exportprestaties van batches beïnvloeden.</li></ul> |
+| `destination` | **(Vereist)** Doelgegevens voor de geëxporteerde gegevens:<ul><li>`destination.datasetId`: **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`destination.segmentPerBatch`: *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `false` Hiermee exporteert u alle segmentdefinitie-id&#39;s naar één batch-id. Een waarde van `true` Hiermee exporteert u één segmentdefinitie-id naar één batch-id. Merk op dat het plaatsen van de waarde om `true` kan de exportprestaties van batches beïnvloeden.</li></ul> |
 | `schema.name` | **(Vereist)** De naam van het schema verbonden aan de dataset waar het gegeven moet worden uitgevoerd. |
 
 >[!NOTE]
@@ -494,6 +494,6 @@ Als u een exporttaak wilt maken die alleen gebeurtenisgegevens bevat (geen profi
   }
 ```
 
-### Segmenten exporteren
+### Soorten publiek exporteren
 
-U kunt ook het eindpunt van exporttaken gebruiken om doelsegmenten te exporteren in plaats van [!DNL Profile] gegevens. Zie de handleiding op [taken exporteren in de segmentatie-API](../../segmentation/api/export-jobs.md) voor meer informatie .
+U kunt ook het eindpunt voor exporttaken gebruiken om het publiek te exporteren in plaats van [!DNL Profile] gegevens. Zie de handleiding op [taken exporteren in de segmentatie-API](../../segmentation/api/export-jobs.md) voor meer informatie .

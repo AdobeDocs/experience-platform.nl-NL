@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Voorbeeld van voorbeeldstatus (Profile Preview) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2863'
 ht-degree: 0%
 
 ---
@@ -592,5 +592,5 @@ Dit rapport bevat de volgende informatie:
 
 ## Volgende stappen
 
-Nu u weet hoe te om steekproefgegevens in de Opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproef eindpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt om ervoor te zorgen u het verwachte publiek in uw segment isoleert. Ga voor meer informatie over het werken met segmentvoorvertoningen en -schattingen met de segmentatie-API naar de [eindpuntgids voor voorvertoningen en schattingen](../../segmentation/api/previews-and-estimates.md).
+Nu u weet hoe te om steekproefgegevens in de Opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproef eindpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt ervoor te zorgen dat u uw verwachte publiek isoleert. Ga voor meer informatie over het werken met voorvertoningen en schattingen met de segmentatie-API naar de [eindpuntgids voor voorvertoningen en schattingen](../../segmentation/api/previews-and-estimates.md).
 

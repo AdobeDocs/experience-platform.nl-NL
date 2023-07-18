@@ -4,9 +4,9 @@ title: API-eindpunt voor beleid samenvoegen
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: '2467'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklass
 >
 >Wanneer u een nieuw fusiebeleid als gebrek plaatst, zal om het even welk bestaand fusiebeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
 
-Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Als u wilt dat een segment aan de rand wordt geactiveerd (gemarkeerd als een randsegment), moet het segment zijn gekoppeld aan een samenvoegingsbeleid dat is gemarkeerd als actief aan de rand. Als een segment **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het segment niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming segment.
+Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Een publiek kan alleen aan de rand worden geactiveerd (gemarkeerd als een randpubliek) als het is gekoppeld aan een samenvoegbeleid dat als actief aan de rand is gemarkeerd. Als een publiek **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het publiek niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming publiek.
 
 Bovendien kan elke organisatie alleen **één** samenvoegbeleid dat op rand actief is. Als een samenvoegbeleid op rand actief is, kan het voor andere systemen op rand, zoals het Profiel van de Rand, de Segmentatie van de Rand, en Doelen op Rand worden gebruikt.
 
@@ -761,6 +761,6 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiekssegmenten van uw te creëren [!DNL Real-Time Customer Profile] gegevens.
+Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiek van uw te creëren [!DNL Real-Time Customer Profile] gegevens.
 
-Zie de [Adobe Experience Platform Segmentation Service-documentatie](../../segmentation/home.md) om te beginnen met het definiëren en werken met segmenten.
+Zie de [Adobe Experience Platform Segmentation Service-documentatie](../../segmentation/home.md) beginnen met het definiëren en werken met het publiek.

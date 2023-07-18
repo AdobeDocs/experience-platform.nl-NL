@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,64 @@ Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype d
 
 ![Er wordt een lijst met kenmerken weergegeven.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL Enrich] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>Op dit moment kunnen verrijkingskenmerken **alleen** worden gebruikt in downstreamscenario&#39;s van Adobe Journey Optimizer.
+
+De **[!UICONTROL Enrich]** het bloktype staat u toe om uw publiek met extra attributen van een dataset te verrijken. U kunt deze kenmerken gebruiken in gevallen van verpersoonlijkingsgebruik.
+
+Om een **[!UICONTROL Enrich]** blok, selecteer **+** pictogram, gevolgd door **[!UICONTROL Enrich]**.
+
+![De [!UICONTROL Enrich] is geselecteerd.](../images/ui/audience-composition/add-enrich-block.png)
+
+De **[!UICONTROL Enrich]** wordt toegevoegd. Wanneer dit blok wordt geselecteerd, verschijnen de details over de verrijking in het juiste spoor. Dit omvat het etiket van het blok en de verrijkingsdataset.
+
+Als u de gegevensset wilt selecteren waarmee u het publiek wilt verrijken, selecteert u de ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+
+![De filterknop wordt gemarkeerd. Als u dit selecteert, gaat u naar de [!UICONTROL Select dataset] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
+
+De **[!UICONTROL Select dataset]** wordt weergegeven. Selecteer de dataset die u voor verrijking wilt toevoegen, die door wordt gevolgd **[!UICONTROL Select]** toevoegen van de gegevensset voor verrijking.
+
+![De gekozen dataset wordt geselecteerd.](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>De geselecteerde dataset **moet** voldoen aan de volgende criteria:
+>
+>- De dataset **moet** van recordtype zijn.
+>   - De dataset **kan** van het gebeurtenistype zijn, door het systeem worden gegenereerd of zijn gemarkeerd voor Profiel.
+>- De dataset **moet** 1 GB of kleiner zijn.
+
+De **[!UICONTROL Enrichment criteria]** nu wordt dit gedeelte op de rechterspoorlijn weergegeven . In deze sectie kunt u de optie **[!UICONTROL Source join key]** en de **[!UICONTROL Enrichment dataset join key]**, waarmee u de verrijkingsdataset kunt koppelen aan het publiek dat u probeert te maken.
+
+![De [!UICONTROL Enrichment criteria] gemarkeerd.](../images/ui/audience-composition/enrichment-criteria.png)
+
+Als u de optie **[!UICONTROL Source join key]**, selecteert u de ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+
+![Het filterpictogram voor de [!UICONTROL Source join key] wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+De **[!UICONTROL Select a profile attribute]** wordt weergegeven. Selecteer het profielattribuut u als bron verbindt sleutel wilt gebruiken, die door wordt gevolgd **[!UICONTROL Select]** om dat attribuut als uw bron te kiezen sluit zich bij sleutel aan.
+
+![Het kenmerk dat u wilt gebruiken als de verbindingssleutel van de bron, wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+Als u de optie **[!UICONTROL Enrichment dataset join key]**, selecteert u de ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
+
+![Het filterpictogram voor de [!UICONTROL Enrichment dataset join key] wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+De **[!UICONTROL Enrichment attributes]** wordt weergegeven. Selecteer de attributen u als de de verbindingssleutel van de verrijkingsdataset wilt gebruiken, die door wordt gevolgd **[!UICONTROL Select]** om dat attribuut te kiezen aangezien uw verrijkingsdataset zich bij sleutel aansluit.
+
+![Het attribuut u wilt gebruiken aangezien de de verbindingssleutel van de verrijkingsdataset wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+Nu u beide verbindingssleutels hebt toegevoegd, **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt nu het kenmerk toevoegen waarmee u het publiek wilt verfraaien. Selecteer **[!UICONTROL Add attribute]**.
+
+![De [!UICONTROL Add attribute] wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+De **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt de attributen van de dataset selecteren om uw publiek te verrijken met, gevolgd door **[!UICONTROL Select]** om de kenmerken aan uw publiek toe te voegen.
+
+![De verrijkingskenmerken die u wilt toevoegen, worden gemarkeerd.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ De **[!UICONTROL Split]** met bloktype kunt u het nieuwe publiek opsplitsen in v
 Als u een **[!UICONTROL Split]** blok, selecteer **+** pictogram, gevolgd door **[!UICONTROL Split]**.
 
 ![De optie Splitsen is geselecteerd.](../images/ui/audience-composition/add-split-block.png)
+
+Wanneer u het publiek splitst, kunt u splitsen op percentage of splitsen op kenmerk.
 
 ### Splitsen op percentage {#split-percentage}
 

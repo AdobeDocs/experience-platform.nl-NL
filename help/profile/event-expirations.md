@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verlopen van gebeurtenissen ervaren
 description: Dit document biedt algemene richtlijnen voor het configureren van vervaltijden voor afzonderlijke Experience Events in een Adobe Experience Platform-gegevensset.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Als u bijvoorbeeld op 15 mei een vervalwaarde van 30 dagen hebt toegepast, worde
 
 ## Effecten op segmentatie
 
-U moet ervoor zorgen dat de raadplegingsvensters voor uw segmenten binnen de vervalgrenzen van hun afhankelijke datasets zijn om resultaten nauwkeurig te houden. Als u bijvoorbeeld een vervalwaarde van 30 dagen toepast en een segment hebt dat probeert gegevens van maximaal 45 dagen geleden weer te geven, is het resulterende publiek waarschijnlijk onjuist.
+U moet ervoor zorgen dat de raadplegingsvensters voor uw publiek binnen de vervalgrenzen van hun afhankelijke datasets zijn om resultaten nauwkeurig te houden. Als u bijvoorbeeld een vervalwaarde van 30 dagen toepast en een publiek hebt dat probeert gegevens van maximaal 45 dagen geleden te bekijken, is het resulterende publiek waarschijnlijk onjuist.
 
 Daarom zou u de zelfde waarde van de Vervaltijd van de Gebeurtenis van de Ervaring voor alle datasets, indien mogelijk, moeten houden om het effect van verschillende vervalwaarden over verschillende datasets in uw segmenteringslogica te vermijden.
 

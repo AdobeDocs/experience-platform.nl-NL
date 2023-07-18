@@ -4,9 +4,9 @@ title: UI-gids voor samenvoegingsbeleid
 type: Documentation
 description: Wanneer het brengen van gegevens uit veelvoudige bronnen samen in Experience Platform, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen. Deze handleiding bevat stapsgewijze instructies voor het werken met samenvoegbeleidsregels via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2195'
+source-wordcount: '2194'
 ht-degree: 0%
 
 ---
@@ -58,8 +58,8 @@ De eerste stap in het werkschema staat u toe om uw samenvoegbeleid te vormen doo
    * **[!UICONTROL None]**: Geen identiteitsstitching uitvoeren.
    * **[!UICONTROL Private Graph]**: Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
 * **[!UICONTROL Default merge policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet de standaardinstelling voor uw organisatie is. Als de kiezer is ingeschakeld, wordt een waarschuwing weergegeven met de vraag of u het standaardsamenvoegbeleid van uw organisatie wilt wijzigen. Zie de [overzicht van samenvoegbeleid](overview.md) voor meer informatie over standaardbeleid voor samenvoegen.
-   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Active-On-Edge Merge Policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid aan de rand actief is. Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Als u wilt dat een segment aan de rand wordt geactiveerd (gemarkeerd als een randsegment), moet het segment zijn gekoppeld aan een samenvoegingsbeleid dat is gemarkeerd als actief aan de rand. Als een segment **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het segment niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming segment. Bovendien kan elke sandbox in een organisatie alleen **één** samenvoegbeleid dat op rand actief is.
+  ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Active-On-Edge Merge Policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid aan de rand actief is. Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Een publiek kan alleen aan de rand worden geactiveerd (gemarkeerd als een randpubliek) als het is gekoppeld aan een samenvoegbeleid dat als actief aan de rand is gemarkeerd. Als een publiek **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het publiek niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming publiek. Bovendien kan elke sandbox in een organisatie alleen **één** samenvoegbeleid dat op rand actief is.
 
 Nadat de vereiste velden zijn voltooid, kunt u **[!UICONTROL Next]** om door te gaan met de workflow.
 
@@ -193,7 +193,7 @@ Nadat u de benodigde wijzigingen hebt aangebracht, controleert u het samenvoegbe
 
 ## Schendingen van het beleid inzake gegevensbeheer
 
-Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform Data Governance en is een regel die het soort marketingacties beschrijft dat u mag uitvoeren of waarvan u een beperking hebt opgelegd voor specifieke acties [!DNL Platform] gegevens. Bijvoorbeeld, als een samenvoegbeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een **[!UICONTROL Data governance policy violation detected]** melding wanneer wordt geprobeerd uw samenvoegbeleid op te slaan.
+Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform Data Governance en is een regel die het soort marketingacties beschrijft dat u mag uitvoeren of waarvan u een beperking hebt opgelegd voor specifieke acties [!DNL Platform] gegevens. Bijvoorbeeld, als een samenvoegbeleid werd gebruikt om een publiek tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een **[!UICONTROL Data governance policy violation detected]** melding wanneer wordt geprobeerd uw samenvoegbeleid op te slaan.
 
 Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Bij het selecteren van een overtreden beleid, **[!UICONTROL Data lineage]** bevat de reden voor de schending en de betrokken activering, die elk meer details verstrekken over hoe het beleid van het gegevensgebruik is overtreden.
 
@@ -203,4 +203,4 @@ Als u meer wilt weten over de manier waarop gegevensbeheer in Adobe Experience P
 
 ## Volgende stappen
 
-Nu u en gevormd samenvoegbeleid voor uw organisatie hebt gecreeerd, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiekssegmenten van uw gegevens van het Profiel tot stand te brengen. Zie de [segmentatieoverzicht](../../segmentation/home.md) voor meer informatie over het maken van segmenten en het werken met segmenten gebruikt u de opdracht [!DNL Experience Platform] UI en API&#39;s.
+Nu u samenvoegt beleid voor uw organisatie hebt gecreeerd en gevormd, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiek van uw gegevens van het Profiel tot stand te brengen. Zie de [segmentatieoverzicht](../../segmentation/home.md) voor meer informatie over het maken van en werken met het publiek met de [!DNL Experience Platform] UI en API&#39;s.

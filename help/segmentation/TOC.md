@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Bouw publiek van uw gegevens van het Profiel van de Klant in real time gebruikend Adobe Experience Platform geproduceerde segmentdefinities of externe bronnen.
 feature: Segments
-source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 14%
@@ -30,8 +30,8 @@ ht-degree: 14%
    - [Streaming segmentering](api/streaming-segmentation.md)
 - Segmenteringsinterface {#ui}
    - [Overzicht](ui/overview.md)
+   - [Publiek-dashboard](ui/audience-dashboard.md)
    - [Samenstelling publiek](ui/audience-composition.md)
-   - [Segmentdashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Randsegmentatie](ui/edge-segmentation.md)
    - [Streaming segmentering](ui/streaming-segmentation.md)

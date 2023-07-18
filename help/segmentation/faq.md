@@ -1,9 +1,9 @@
 ---
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over het publiek.
-source-git-commit: 562af647e21e8f9b9af495849f085e10f258952a
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ De compositiecomponent die als volgt plaatst volgt een stijve structuur:
 
 1. U **altijd** beginnen met de [!UICONTROL Audience] blokkeren om uw startactiviteit te selecteren. U kunt maximaal **één** [!UICONTROL Audience] blokkeren.
 2. U kunt desgewenst een [!UICONTROL Exclude] blok dat volgt op het [!UICONTROL Audience] blokkeren.
-3. U kunt desgewenst een [!UICONTROL Rank] of [!UICONTROL Split] blokkeren. U kunt **alleen** hebben één van deze blokken per samenstelling.
-4. U **altijd** eindigen met een [!UICONTROL Save] blokkeren om uw publiek op te slaan.
+3. U kunt desgewenst een [!UICONTROL Enrich] blok dat volgt op het [!UICONTROL Exclude] blokkeren.
+4. U kunt desgewenst een [!UICONTROL Rank] of [!UICONTROL Split] blokkeren. U kunt **alleen** hebben één van deze blokken per samenstelling.
+5. U **altijd** eindigen met een [!UICONTROL Save] blokkeren om uw publiek op te slaan.
 
 Lees voor meer informatie over het gebruik van Audience Composition de [Handleiding voor compositie van publiek](./ui/audience-composition.md).
 
@@ -91,7 +92,7 @@ Lees voor meer informatie over het blok Splitsen de [Handleiding voor compositie
 
 ## Kan ik alle segmentatietypen in het werkschema van de Samenstelling van het Publiek gebruiken?
 
-Ja, alle segmentatietypen (batchsegmentatie, streamingsegmentatie en randsegmentatie) worden ondersteund in de workflow Audience Composition. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
+Ja, alle segmentatietypen ([batchsegmentatie, streamingsegmentatie en randsegmentatie](./home.md#evaluate-segments)) worden ondersteund in de workflow Audience Composition. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
 
 ## Hoe kan ik het lidmaatschap van een profiel in een publiek bevestigen?
 

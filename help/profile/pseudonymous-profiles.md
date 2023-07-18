@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de v
 - De identiteitsnaamruimten van het verbonden profiel komen overeen met de naamruimte die de klant heeft opgegeven als een pseudoniem of onbekend naamgebied.
    - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID`, of `AAID`. Het opgeslagen profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld wordt een vast profiel wel **niet** beschikken over een e-mail- of CRM-identiteit.
 - Er heeft zich geen activiteit voorgedaan in een door de gebruiker gedefinieerde hoeveelheid tijd. De activiteit wordt bepaald of door om het even welke Gebeurtenissen van de Ervaring die of klant-in werking gestelde updates aan de profielattributen worden opgenomen.
-   - Bijvoorbeeld, wordt een nieuwe gebeurtenis van de paginamening of de update van het paginakenmerk beschouwd als een activiteit. Nochtans, is een niet gebruiker-in werking gestelde update van het segmentlidmaatschap **niet** beschouwd als een activiteit. Op dit moment is het bijhouden van gegevens op profielniveau gebaseerd op de tijd van de gebeurtenis voor Experience Events en de tijd van inname voor profielkenmerken om de gegevensvervaldatum te berekenen.
+   - Bijvoorbeeld, wordt een nieuwe gebeurtenis van de paginamening of de update van het paginakenmerk beschouwd als een activiteit. Er wordt echter een niet-door de gebruiker geïnitieerde update voor het lidmaatschap van het publiek uitgevoerd **niet** beschouwd als een activiteit. Op dit moment is het bijhouden van gegevens op profielniveau gebaseerd op de tijd van de gebeurtenis voor Experience Events en de tijd van inname voor profielkenmerken om de gegevensvervaldatum te berekenen.
 
 ## Toegang {#access}
 

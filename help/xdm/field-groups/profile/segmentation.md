@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;segment;segmentLidmaatschap;segmentlidmaatschap;Schemaontwerp;kaart;Kaart;
 solution: Experience Platform
 title: Segment Membership Details Schema Field Group
 description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van het Lidmaatschap van het Segment.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---

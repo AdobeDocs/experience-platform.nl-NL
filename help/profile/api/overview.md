@@ -3,10 +3,10 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-Time API-handleiding voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '961'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ Voor een gids voor het werken met [!DNL Real-Time Customer Profile] gegevens in 
 
 Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 
-Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde in een profielkenmerk opslaat. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Deze berekende kenmerkwaarden kunnen dan in een profiel worden bekeken, worden gebruikt om een segment tot stand te brengen, of door een aantal verschillende toegangspatronen worden betreden.
+Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde in een profielkenmerk opslaat. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Deze berekende kenmerkwaarden kunnen dan in een profiel worden bekeken, worden gebruikt om een publiek tot stand te brengen, of door een aantal verschillende toegangspatronen worden betreden.
 
 U kunt berekende kenmerken maken, weergeven, bewerken en verwijderen met de opdracht `ca/attributes/` eindpunt. Als u wilt weten hoe u berekende kenmerken gebruikt, raadpleegt u de [overzicht van berekende kenmerken](../computed-attributes/overview.md). Ga voor API-bewerkingen naar de [API-eindpuntgids voor berekende kenmerken](../computed-attributes/api.md).
 
@@ -42,7 +42,7 @@ Via Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profil
 
 ## Exporttaken ([!DNL Profile] export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] de gegevens kunnen naar een dataset voor verdere verwerking, zoals het uitvoeren van publiekssegmenten voor activering of profielattributen voor rapportering worden uitgevoerd. Exporttaken voor publiekssegmenten maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API, lees de [eindgids voor segmentatie van exporttaken](../../profile/api/export-jobs.md) voor meer informatie. Voor stapsgewijze instructies over het maken en beheren van exporttaken voor profielkenmerken gaat u naar de [eindgebruikershandleiding exporttaken](export-jobs.md).
+[!DNL Real-Time Customer Profile] gegevens kunnen naar een gegevensset worden geëxporteerd voor verdere verwerking, zoals het exporteren van soorten publiek voor activering of profielkenmerken voor rapportage. Exporttaken voor het publiek maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API, lees de [eindgids voor segmentatie van exporttaken](../../profile/api/export-jobs.md) voor meer informatie. Voor stapsgewijze instructies over het maken en beheren van exporttaken voor profielkenmerken gaat u naar de [eindgebruikershandleiding exporttaken](export-jobs.md).
 
 ## Beleid samenvoegen {#merge-policies}
 

@@ -4,7 +4,7 @@ title: Overzicht van beleid samenvoegen
 type: Documentation
 description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1250'
 ht-degree: 0%
@@ -60,14 +60,14 @@ Aangezien profielverslagen in Experience Platform worden opgenomen, wordt een sy
 
 Identiteitsstitatie ([!UICONTROL ID stitching]) is het proces van het identificeren van gegevensfragmenten en het combineren van deze fragmenten om een volledige profielrecord te vormen. Om het verschillende stitching gedrag te illustreren, overweeg één enkele klant die met een merk gebruikend twee verschillende e-mailadressen interactie aangaat.
 
-* **[!UICONTROL None]:** Als deze optie is geselecteerd, worden id&#39;s niet aan elkaar gekoppeld. Wanneer segmentatie voorkomt, zullen de identiteiten die tot de zelfde persoon kunnen behoren niet samen worden vastgemaakt en de segmentatie zal slechts de attributen in aanmerking nemen verbonden aan elke individuele identiteitskaart wanneer het bepalen als een klant voor segmentlidmaatschap in aanmerking komt. Dit kan ertoe leiden dat één enkele klant veelvoudige profielen heeft en elk profiel voor verschillende segmenten zou kunnen kwalificeren, resulterend in veelvoudige marketing berichten die naar de zelfde klant worden verzonden.
-* **[!UICONTROL Private graph]:** Als de privégrafiek is geselecteerd, worden meerdere identiteiten met betrekking tot dezelfde persoon samengevoegd. Dit resulteert in de klant die één enkel profiel heeft en staat segmentatie toe om veelvoudige attributen van veelvoudige verwante identiteiten te overwegen wanneer het bepalen van segmentkwalificatie. In dit scenario zal de klant waarschijnlijk één profiel hebben, in aanmerking komen voor één segment op basis van de combinatie van kenmerken tussen identiteiten en slechts één marketingbericht ontvangen.
+* **[!UICONTROL None]:** Als deze optie is geselecteerd, worden id&#39;s niet aan elkaar gekoppeld. Wanneer segmentatie voorkomt, zullen de identiteiten die tot de zelfde persoon kunnen behoren niet samen worden vastgemaakt en de segmentatie zal slechts de attributen in overweging nemen verbonden aan elke individuele identiteitskaart wanneer het bepalen als een klant voor publiekslidmaatschap in aanmerking komt. Dit kan ertoe leiden dat één enkele klant veelvoudige profielen heeft en elk profiel voor verschillende soorten publiek in aanmerking zou kunnen komen, resulterend in veelvoudige marketing berichten die naar de zelfde klant worden verzonden.
+* **[!UICONTROL Private graph]:** Als de privégrafiek is geselecteerd, worden meerdere identiteiten met betrekking tot dezelfde persoon samengevoegd. Dit resulteert in de klant die één enkel profiel heeft en staat segmentatie toe om veelvoudige attributen van veelvoudige verwante identiteiten te overwegen wanneer het bepalen van segmentkwalificatie. In dit scenario zal de klant waarschijnlijk één profiel hebben, in aanmerking komen voor één publiek op basis van de combinatie van kenmerken tussen identiteiten en slechts één marketingbericht ontvangen.
 
-Om meer over identiteiten en hun rol in het produceren van profielen en segmenten te leren, gelieve te beginnen door te lezen [Overzicht van identiteitsservice](../../identity-service/home.md).
+Als u meer wilt weten over identiteiten en hun rol bij het genereren van profielen en publiek, leest u eerst de [Overzicht van identiteitsservice](../../identity-service/home.md).
 
 ## Standaardsamenvoegbeleid {#default-merge-policy}
 
-Een organisatie kan een standaardsamenvoegbeleid maken dat door haar organisatie kan worden gebruikt bij het samenvoegen van profielfragmenten. Op deze manier kunnen gebruikers het standaardbeleid eenvoudig selecteren wanneer ze handelingen uitvoeren in een Experience Platform, zoals het weergeven van klantprofielen of het maken van segmenten. In de meeste gevallen, tenzij een ander fusiebeleid wordt gespecificeerd, zal het standaardfusiebeleid worden gebruikt.
+Een organisatie kan een standaardsamenvoegbeleid maken dat door haar organisatie kan worden gebruikt bij het samenvoegen van profielfragmenten. Op deze manier kunnen gebruikers het standaardbeleid eenvoudig selecteren wanneer ze handelingen in het Experience Platform uitvoeren, zoals het weergeven van klantprofielen of het maken van soorten publiek. In de meeste gevallen, tenzij een ander fusiebeleid wordt gespecificeerd, zal het standaardfusiebeleid worden gebruikt.
 
 Elke organisatie kan veelvoudige fusiebeleid met betrekking tot één enkele XDM schemaklasse tot stand brengen, nochtans kunnen zij slechts één standaardsamenvoegbeleid hebben dat voor elke klasse wordt gedeclareerd. Uw organisatie kan bijvoorbeeld een standaardsamenvoegbeleid hebben dat betrekking heeft op de [!DNL XDM Individual Profile] en een ander standaardsamenvoegbeleid voor een aangepaste, samengestelde klasse Product Inventory.
 
@@ -75,7 +75,7 @@ Als u een nieuw samenvoegbeleid creeert en het plaatst als gebrek, zal het vorig
 
 >[!WARNING]
 >
->De tellingen en de segmenten van het profiel met een bestaand bijbehorend standaardsamenvoegbeleid kunnen worden beïnvloed. Om het even welk segment dat een toegepast standaardsamenvoegingsbeleid heeft zal worden bijgewerkt aan het nieuwe standaardsamenvoegbeleid.
+>De tellingen en het publiek van het profiel met een bestaand bijbehorend standaard samenvoegbeleid kunnen worden beïnvloed. Om het even welk publiek dat een standaard toegepaste samenvoegbeleid heeft zal aan het nieuwe standaardfusiebeleid worden bijgewerkt.
 
 ## Volgende stappen
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-Time overzicht van klantprofiel
 description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ De verhouding tussen het Profiel van de Klant in real time en andere diensten bi
 
 ### Samenstelling van profielentiteit
 
-Een Real-Time Klantprofiel bestaat uit een hoofdentiteit, de **primaire entiteit** en diverse ondersteunende entiteiten. In de context van Experience Platform is de primaire entiteit doorgaans een **profielentiteit**, die bestaat uit eigenschappen, gedrag, en segmentlidmaatschap van een individuele persoon. Andere entiteiten staan de segmenteringsmotor toe om gegevens buiten de primaire entiteit van het profiel te gebruiken, en omvatten het volgende:
+Een Real-Time Klantprofiel bestaat uit een hoofdentiteit, de **primaire entiteit** en diverse ondersteunende entiteiten. In de context van Experience Platform is de primaire entiteit doorgaans een **profielentiteit**, die bestaat uit eigenschappen, gedrag en publieksleden van een individuele persoon. Andere entiteiten staan de segmenteringsmotor toe om gegevens buiten de primaire entiteit van het profiel te gebruiken, en omvatten het volgende:
 
 - **Maateenheid**: De entiteit die wordt gebruikt om het proces voor gegevensmodellering voor informatie te vereenvoudigen die over gebeurtenissen of profielverslagen wordt gedeeld. Dit wordt ook wel de opgezochte entiteit of classificatieentiteit genoemd.
 - **B2B-entiteit**: Entiteiten die de verhouding van het profiel met zaken-aan-zaken rekeningen en kansen beschrijven.
@@ -98,13 +98,13 @@ Ga voor meer informatie over vakbondsschema&#39;s, waaronder hoe u vakbondsschem
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Profielen en segmenten
+## Profielen en doelgroepen
 
-Adobe Experience Platform [!DNL Segmentation Service] produceert het publiek nodig om ervaringen voor uw individuele klanten van energie te voorzien. Wanneer een publiekssegment wordt gecreeerd, wordt identiteitskaart van dat segment toegevoegd aan de lijst van segmentlidmaatschap voor alle kwalificerende profielen. Segmentregels worden gemaakt en toegepast op [!DNL Real-Time Customer Profile] gegevens die RESTful APIs en het gebruikersinterface van de Bouwer van het Segment gebruiken. Om meer over segmentatie te leren, gelieve te beginnen door te lezen [Overzicht van segmentatieservice](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] produceert het publiek nodig om ervaringen voor uw individuele klanten van energie te voorzien. Wanneer een publiek wordt gecreeerd, wordt identiteitskaart van dat publiek toegevoegd aan de lijst van publiekslidmaatschappen voor alle kwalificerende profielen. Segmentregels worden gemaakt en toegepast op [!DNL Real-Time Customer Profile] gegevens die RESTful APIs en het gebruikersinterface van de Bouwer van het Segment gebruiken. Om meer over segmentatie te leren, gelieve te beginnen door te lezen [Overzicht van segmentatieservice](../segmentation/home.md).
 
 ### Streaming opname en streamingsegmentatie
 
-Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wordt genoemd. Wanneer gegevens uit profiel- en tijdreeksen worden opgenomen, [!DNL Real-Time Customer Profile] besluit automatisch om die gegevens van segmenten op te nemen of uit te sluiten door een lopend proces genoemd het stromen segmentatie, alvorens het met bestaande gegevens samen te voegen en de verenigingsmening bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan. Terwijl het worden opgenomen, ondergaat de gegevens ook bevestiging om ervoor te zorgen het behoorlijk wordt opgenomen en conform het schema is waarop de dataset gebaseerd is. Voor meer informatie over welke validatie tijdens inname wordt uitgevoerd, leest u eerst de [kwaliteitsoverzicht van gegevensinvoer](../ingestion/quality/overview.md).
+Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wordt genoemd. Wanneer gegevens uit profiel- en tijdreeksen worden opgenomen, [!DNL Real-Time Customer Profile] besluit automatisch om die gegevens van het publiek op te nemen of uit te sluiten door middel van een doorlopend proces dat streaming segmentatie wordt genoemd, alvorens het met bestaande gegevens samen te voegen en de mening van de unie bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan. Terwijl het worden opgenomen, ondergaat de gegevens ook bevestiging om ervoor te zorgen het behoorlijk wordt opgenomen en conform het schema is waarop de dataset gebaseerd is. Voor meer informatie over welke validatie tijdens inname wordt uitgevoerd, leest u eerst de [kwaliteitsoverzicht van gegevensinvoer](../ingestion/quality/overview.md).
 
 ## Edge-prognoses
 

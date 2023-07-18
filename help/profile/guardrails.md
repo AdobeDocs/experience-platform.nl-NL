@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document bevat standaard gebruiks- en snelheidslimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 4%
@@ -30,7 +30,7 @@ De volgende services van het Experience Platform zijn betrokken bij het modeller
 * [[!DNL Real-Time Customer Profile]](home.md): Uniforme consumentenprofielen maken met gegevens uit meerdere bronnen.
 * [Identiteiten](../identity-service/home.md): De identiteiten van de brug van ongelijksoortige gegevensbronnen aangezien zij in Platform worden opgenomen.
 * [Schemas](../xdm/home.md): De schema&#39;s van het Model van de Gegevens van de ervaring (XDM) zijn het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-* [Segmenten](../segmentation/home.md): De segmenteringsmotor binnen Platform wordt gebruikt om segmenten van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
+* [Soorten publiek](../segmentation/home.md): De segmenteringsmotor binnen Platform wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
 
 ## Limiettypen
 
@@ -108,14 +108,14 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 ## Segmenteringsgeleiding
 
-De instructies in deze sectie verwijzen naar het aantal en de aard van de segmenten die een organisatie binnen het Experience Platform kan maken, en naar het toewijzen en activeren van segmenten aan bestemmingen.
+De instructies in deze sectie hebben betrekking op het aantal en de aard van de soorten publiek die een organisatie binnen Experience Platform kan maken, alsmede op het in kaart brengen en activeren van het publiek naar bestemmingen.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Segmenten per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 segmenten hebben, zolang er minder dan 4000 segmenten in elke afzonderlijke sandbox zijn. Het maken van extra segmenten kan van invloed zijn op de systeemprestaties. |
-| Randsegmenten per sandbox | 150 | Zacht | Een organisatie kan in totaal meer dan 150 randsegmenten hebben, zolang er zich in elke sandbox minder dan 150 randsegmenten bevinden. Het maken van extra randsegmenten kan van invloed zijn op de systeemprestaties. |
-| Streaming segmenten per sandbox | 500 | Zacht | Een organisatie kan in totaal meer dan 500 streaming segmenten hebben, zolang er zich in elke sandbox minder dan 500 streaming segmenten bevinden. Het maken van extra streaming segmenten kan van invloed zijn op de systeemprestaties. |
-| Batchsegmenten per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 batchsegmenten hebben, zolang er zich in elke sandbox minder dan 4000 batchsegmenten bevinden. Het maken van extra batchsegmenten kan van invloed zijn op de systeemprestaties. |
+| Soorten publiek per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 soorten publiek hebben, zolang er in elke sandbox minder dan 4000 soorten publiek aanwezig zijn. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. |
+| Publiek randen per sandbox | 150 | Zacht | Een organisatie kan in totaal meer dan 150 randgroepen hebben, zolang er in elke sandbox minder dan 150 randgroepen aanwezig zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. |
+| Streaming publiek per sandbox | 500 | Zacht | Een organisatie kan in totaal meer dan 500 streamingdeelnemers hebben, zolang er in elke sandbox minder dan 500 streamingdeelnemers zijn. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. |
+| Batchpubliek per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 batchdoelgroepen hebben, zolang er in elke sandbox minder dan 4000 doelgroepen aanwezig zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ Tijdonafhankelijke kenmerken, ook bekend als &quot;recordgegevens&quot;, worden 
 
 #### Dimension-entiteit
 
-Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om segmenten op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie wordt bekend als [segmentatie van meerdere entiteiten](../segmentation/multi-entity-segmentation.md).
+Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie wordt bekend als [segmentatie van meerdere entiteiten](../segmentation/multi-entity-segmentation.md).
 
 Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze[!DNL XDM Individual Profile] schema&#39;s worden &quot;dimensie-entiteiten&quot;genoemd (ook genoemd geworden &quot;raadplegingsentiteiten&quot;) en bevatten geen tijd-reeksgegevens. Schema&#39;s die dimensie-entiteiten vertegenwoordigen, zijn via het gebruik van [schema-relaties](../xdm/tutorials/relationship-ui.md).
 

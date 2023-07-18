@@ -3,7 +3,7 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Customer Profile in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1929'
 ht-degree: 0%
@@ -134,7 +134,7 @@ De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewij
 
 ![Het tabblad Details is gemarkeerd. De profieldetails worden getoond.](../images/user-guide/profile-detail.png)
 
-U kunt aanvullende informatie met betrekking tot het individuele klantenprofiel bekijken door een andere beschikbare lusjes te selecteren. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het segmentlidmaatschap dat de segmenten toont waarvoor het profiel momenteel gekwalificeerd is.
+U kunt aanvullende informatie met betrekking tot het individuele klantenprofiel bekijken door een andere beschikbare lusjes te selecteren. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het publiekslidmaatschap dat het publiek toont waarvoor het profiel momenteel gekwalificeerd is.
 
 ### Tabblad Kenmerken
 
@@ -152,13 +152,13 @@ Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door **[!UICONT
 
 ![Het tabblad Gebeurtenissen is gemarkeerd. De profielgebeurtenissen worden weergegeven.](../images/user-guide/events.png)
 
-### Tabblad Segmentlidmaatschap
+### Tabblad Poortlidmaatschap
 
-De **[!UICONTROL Segment membership]** wordt een lijst weergegeven met de naam en beschrijving van de segmenten waartoe het individuele klantprofiel momenteel behoort. Deze lijst wordt automatisch bijgewerkt wanneer het profiel in aanmerking komt of vervalt vanuit segmenten. Het totale aantal segmenten waarvoor het profiel momenteel is gekwalificeerd, wordt aan de rechterkant van het tabblad weergegeven.
+De **[!UICONTROL Audience membership]** wordt een lijst weergegeven met de naam en beschrijving van het publiek waartoe het individuele klantprofiel momenteel behoort. Deze lijst wordt automatisch bijgewerkt wanneer het profiel in aanmerking komt of vervalt bij het publiek. Het totale aantal soorten publiek waarvoor het profiel momenteel is gekwalificeerd, wordt aan de rechterkant van het tabblad weergegeven.
 
 Raadpleeg voor meer informatie over segmentering in Experience Platform de [Documentatie Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![Het tabblad Segmentlidmaatschap is gemarkeerd. De details van het profielsegmentlidmaatschap worden getoond.](../images/user-guide/segment-membership.png)
+![Het tabblad Poortlidmaatschap is gemarkeerd. De lidmaatschapsdetails voor het publiek van het profiel worden weergegeven.](../images/user-guide/segment-membership.png)
 
 ## Beleid samenvoegen
 
