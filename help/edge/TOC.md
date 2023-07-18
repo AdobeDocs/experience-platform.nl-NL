@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 23%
+source-wordcount: '194'
+ht-degree: 22%
 
 ---
 
@@ -72,6 +72,7 @@ ht-degree: 23%
       * [Overzicht](consent/iab-tcf/overview.md)
       * [Integreren met tags](consent/iab-tcf/with-launch.md)
       * [Integreren zonder tags](consent/iab-tcf/without-launch.md)
+* [Web SDK-tagextensie](web-sdk-tag-extension-overview.md)
 * [Aanvullende informatie](release-notes.md)
 * [Veelgestelde vragen](web-sdk-faq.md)
 * [Bronnen](resources.md)
