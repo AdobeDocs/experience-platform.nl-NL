@@ -4,9 +4,9 @@ title: Overzicht van activering
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert voor verschillende soorten doelen.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,9 @@ Voer de onderstaande stappen uit om gegevens vanuit de **[!UICONTROL Browse]** p
    * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](activate-streaming-profile-destinations.md)
    * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](activate-batch-profile-destinations.md)
 
-### Soorten publiek activeren vanaf de pagina Soorten publiek {#activate-segment-details}
+### Soorten publiek activeren op de pagina met publieksdetails {#activate-audience-details}
 
-U kunt het publiek activeren naar doelen op de pagina Soorten publiek. Zie [Segmentdetails](../../segmentation/ui/overview.md#segment-details) voor meer informatie .
+U kunt het publiek naar bestemmingen vanuit de pagina met publieksdetails activeren. Zie [Details publiek](../../segmentation/ui/overview.md#audience-details) voor meer informatie .
 
 Voer afhankelijk van de geselecteerde bestemming de stappen uit die in de onderstaande artikelen worden beschreven om de activeringsworkflow te voltooien:
 
