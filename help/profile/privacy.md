@@ -5,7 +5,7 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-Time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
+source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
 workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 0%
@@ -189,7 +189,7 @@ Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL P
 
 >[!IMPORTANT]
 >
->De verzoeken om privacy te schrappen zijn niet onmiddellijk en kunnen variëren afhankelijk van de betrokken diensten en andere beïnvloedende factoren zoals geografische plaats. De termijn voor het voltooien van privacytaken kan variëren van 15 tot 45 dagen, maar is niet gegarandeerd.
+>De verzoeken om privacy te schrappen zijn niet onmiddellijk en kunnen variëren afhankelijk van de betrokken diensten en andere beïnvloedende factoren zoals geografische plaats. De termijn voor het voltooien van privacytaken kan variëren van 15 tot 45 dagen, maar wordt niet gegarandeerd.
 
 Afhankelijk van of u ook Identiteitsservice hebt opgenomen (`identity`) en het datumpeer (`aepDataLake`) als producten in uw privacyaanvraag voor profiel (`ProfileService`), worden verschillende gegevenssets met betrekking tot het profiel op mogelijk verschillende tijdstippen uit het systeem verwijderd:
 
@@ -213,7 +213,8 @@ Om het profiel en alle identiteitskoppelingen voor een bepaalde klant te verwijd
 ### Beleidsbeperkingen samenvoegen {#merge-policy-limitations}
 
 Privacy Service kan alleen verwerken [!DNL Profile] gegevens die een samenvoegbeleid gebruiken dat geen identiteitsstitching uitvoert. Als u de UI gebruikt om te bevestigen of uw privacyverzoeken worden verwerkt, zorg ervoor dat u een beleid gebruikt met **[!DNL None]** als [!UICONTROL ID stitching] type. Met andere woorden, u kunt geen samenvoegbeleid gebruiken waarbij [!UICONTROL ID stitching] is ingesteld op [!UICONTROL Private graph].
->![De ID-instelling van het samenvoegbeleid is ingesteld op Geen](./images/privacy/no-id-stitch.png)
+>>
+![De ID-instelling van het samenvoegbeleid is ingesteld op Geen](./images/privacy/no-id-stitch.png)
 >
 ## Volgende stappen
 
