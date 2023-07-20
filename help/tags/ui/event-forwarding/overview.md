@@ -3,14 +3,18 @@ title: Overzicht van doorzending van gebeurtenissen
 description: Meer informatie over het doorsturen van gebeurtenissen in Adobe Experience Platform, waarmee u het Platform Edge Network kunt gebruiken om taken uit te voeren zonder uw tag-implementatie te wijzigen.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1061'
 ht-degree: 2%
 
 ---
 
 # Overzicht van het doorsturen van gebeurtenissen
+
+>[!NOTE]
+>
+>Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het de Verbindingen van Adobe Real-time Customer Data Platform, eerste, of Ultimate dienstenaanbod inbegrepen is.
 
 >[!NOTE]
 >

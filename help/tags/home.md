@@ -2,18 +2,14 @@
 title: Overzicht van tags
 description: Tags in Adobe Experience Platform zijn de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met labels kunnen klanten eenvoudig alle analytische, marketing- en advertentietags implementeren en beheren die nodig zijn om relevante klantervaringen te stimuleren.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '562'
 ht-degree: 1%
 
 ---
 
 # Overzicht van codes
-
->[!NOTE]
->
->Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het de Verbindingen van Adobe Real-time Customer Data Platform, eerste, of Ultimate dienstenaanbod inbegrepen is.
 
 >[!NOTE]
 >
