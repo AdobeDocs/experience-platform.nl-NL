@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klantenai inzichten
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Inzichten met Customer AI ontdekken
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 1%
@@ -77,7 +77,7 @@ De tweede manier om extra details voor een de dienstinstantie te bekijken wordt 
 
 ### Voorvertoningsvenster van AI-gegevensset
 
-Als de AI van de Klant meer dan één dataset gebruikt, een hyperlink geëtiketteerd **[!UICONTROL Multiple ]** gevolgd door het aantal gegevenssets tussen haakjes `()` wordt opgegeven.
+Als de AI van de Klant meer dan één dataset gebruikt, een hyperlink geëtiketteerd **[!UICONTROL Multiple]** gevolgd door het aantal gegevenssets tussen haakjes `()` wordt opgegeven.
 
 ![meerdere gegevenssets](../images/insights/insights-multi-datasets.png)
 

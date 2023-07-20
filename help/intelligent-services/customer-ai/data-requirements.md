@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;aan de slag gaan;klantenhulp;populaire onderwerpen;input van klantensteun;klantenoutput; gegevensvereisten
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Gegevensvereisten in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2471'
 ht-degree: 0%
