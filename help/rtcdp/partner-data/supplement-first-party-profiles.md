@@ -4,9 +4,9 @@ description: Leer hoe te om eerste-partijprofielen met attributen van vertrouwde
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Voeg eerst-partijprofielen met attributen van vertrouwde op gegevenspartners toe om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
 
-![Verrijken profielen met door partners opgegeven kenmerken gebruiken een visueel overzicht op hoog niveau.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Verrijken profielen met door partners opgegeven kenmerken gebruiken een visueel overzicht op hoog niveau.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Vereisten en planning {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 
 ## Hoe wordt het gebruiksgeval bereikt: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
-![Verrijken profielen met door partners opgegeven kenmerken gebruiken een visueel overzicht op hoog niveau.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Verrijken profielen met door partners opgegeven kenmerken gebruiken een visueel overzicht op hoog niveau.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. Als **klant**, geeft u licenties voor kenmerken van de **gegevenspartner**.
 2. Als **klant**, breidt u uw profielgegevens en governancemodel uit om **partner**-provided attributes.
