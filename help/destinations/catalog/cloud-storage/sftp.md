@@ -2,9 +2,9 @@
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Persoonlijke SSH-sleutel"
->abstract="De persoonlijke sleutel van SSH moet als Base64-Gecodeerde koord worden geformatteerd en moet niet wachtwoord-beschermd zijn."
+>abstract="De persoonlijke sleutel van SSH moet een RSA-Geformatteerd, Base64-Gecodeerde koord zijn, en moet niet wachtwoord-beschermd zijn."
 
 Als u **[!UICONTROL SFTP with password]** verificatietype voor verbinding met uw SFTP-locatie:
 
@@ -108,7 +108,7 @@ Als u **[!UICONTROL SFTP with SSH key]** verificatietype voor verbinding met uw 
 * **[!UICONTROL Domain]**: Vul het IP-adres of de domeinnaam van uw SFTP-account in
 * **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
 * **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
-* **[!UICONTROL SSH Key]**: De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet zijn opgemaakt als een Base64-gecodeerde tekenreeks en mag niet met een wachtwoord zijn beveiligd.
+* **[!UICONTROL SSH Key]**: De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet een RSA-Geformatteerd, Base64-Gecodeerde koord zijn, en moet niet wachtwoord-beschermd zijn.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
