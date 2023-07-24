@@ -1,7 +1,7 @@
 ---
 description: Deze pagina is gericht op de berichtindeling en de profieltransformatie in gegevens die van Adobe Experience Platform naar bestemmingen worden geëxporteerd.
 title: Berichtindeling
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Om het berichtformaat en het proces van de profielconfiguratie en transformatie 
 * **Experience Data Model (XDM)**. [XDM-overzicht](../../../../xdm/home.md) en  [Een XDM-schema maken in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Klasse**. [Klassen maken en bewerken in de gebruikersinterface](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. Het identiteitsoverzicht is een kaart van alle eindgebruikersidentiteiten in Adobe Experience Platform. Zie `xdm:identityMap` in de [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md).
-* **SegmentLidmaatschap**. De [segmentLidmaatschap](../../../../xdm/schema/field-dictionary.md) XDM attribuut deelt welke segmenten een profiel een lid van is. Voor de drie verschillende waarden in de `status` veld, lees de documentatie op [Segment Membership Details schema groep](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentLidmaatschap**. De [segmentLidmaatschap](../../../../xdm/schema/field-dictionary.md) XDM-kenmerk geeft aan welk publiek een profiel lid is van. Voor de drie verschillende waarden in de `status` veld, lees de documentatie op [Publiek Lidmaatschap Details schema groep](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ Om de voorbeelden verder hieronder op de pagina te begrijpen, is het belangrijk 
 Profielen hebben drie secties:
 
 * `segmentMembership` (altijd aanwezig in een profiel)
-   * deze sectie bevat alle segmenten die in het profiel aanwezig zijn. De segmenten kunnen een van twee statussen hebben: `realized` of `exited`.
+   * deze sectie bevat alle soorten publiek die in het profiel aanwezig zijn. Het publiek kan een van twee statussen hebben: `realized` of `exited`.
 * `identityMap` (altijd aanwezig in een profiel)
    * deze sectie bevat alle identiteiten die in het profiel aanwezig zijn (e-mail, Google GAID, Apple IDFA, enzovoort) en die de gebruiker in kaart heeft gebracht voor exporteren in de activeringsworkflow.
 * attributen (afhankelijk van de bestemmingsconfiguratie, zouden deze op het profiel aanwezig kunnen zijn). Er is ook een klein verschil tussen vooraf gedefinieerde kenmerken en vrije-vormkenmerken:
@@ -170,15 +170,15 @@ Zie twee voorbeelden van profielen in Experience Platform:
 }
 ```
 
-## Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en segmentlidmaatschap {#using-templating}
+## Een sjabloontaal gebruiken voor de transformaties voor identiteit, kenmerken en publieksleiding {#using-templating}
 
 Adobe gebruikt [Teersjablonen](https://pebbletemplates.io/), een sjabloontaal die lijkt op [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), om de gebieden van het Experience Platform XDM schema in een formaat om te zetten dat door uw bestemming wordt gesteund.
 
 Deze sectie verstrekt verscheidene voorbeelden van hoe deze transformaties worden gemaakt - van het inputXDM schema, door het malplaatje, en output in ladingsformaten die door uw bestemming worden goedgekeurd. De onderstaande voorbeelden worden als volgt weergegeven door de toenemende complexiteit:
 
-1. Eenvoudige transformatievoorbeelden. Leer hoe sjablonen werken met eenvoudige transformaties voor [Profielkenmerken](#attributes), [Segmentlidmaatschap](#segment-membership), en [Identiteit](#identities) velden.
-2. Eenvoudigere voorbeelden van sjablonen waarin bovenstaande velden worden gecombineerd: [Een sjabloon maken die segmenten en identiteiten verstuurt](./message-format.md#segments-and-identities) en [Een sjabloon maken die segmenten, identiteiten en profielkenmerken verstuurt](#segments-identities-attributes).
-3. Sjablonen die de aggregatietoets bevatten. Wanneer u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie, groepeert het Experience Platform de profielen die naar uw bestemming worden uitgevoerd op criteria zoals segment ID, segmentstatus, of identiteitsnamespaces worden gebaseerd.
+1. Eenvoudige transformatievoorbeelden. Leer hoe sjablonen werken met eenvoudige transformaties voor [Profielkenmerken](#attributes), [Publiek lidmaatschap](#segment-membership), en [Identiteit](#identities) velden.
+2. Eenvoudigere voorbeelden van sjablonen waarin bovenstaande velden worden gecombineerd: [Een sjabloon maken die het publiek en de identiteiten verstuurt](./message-format.md#segments-and-identities) en [Een sjabloon maken die segmenten, identiteiten en profielkenmerken verstuurt](#segments-identities-attributes).
+3. Sjablonen die de aggregatietoets bevatten. Wanneer u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie, groepeert het Experience Platform de profielen die naar uw bestemming worden uitgevoerd die op criteria zoals publiek-identiteitskaart, publieksstatus, of identiteitsnamespaces worden gebaseerd.
 
 ### Profielkenmerken {#attributes}
 
@@ -263,10 +263,10 @@ Profiel 2:
 }
 ```
 
-### Segmentlidmaatschap {#segment-membership}
+### Publiek lidmaatschap {#audience-membership}
 
-De [segmentLidmaatschap](../../../../xdm/schema/field-dictionary.md) XDM attribuut deelt welke segmenten een profiel een lid van is.
-Voor de drie verschillende waarden in de `status` veld, lees de documentatie op [Segment Membership Details schema groep](../../../../xdm/field-groups/profile/segmentation.md).
+De [segmentLidmaatschap](../../../../xdm/schema/field-dictionary.md) XDM-kenmerk geeft aan welk publiek een profiel lid is van.
+Voor de drie verschillende waarden in de `status` veld, lees de documentatie op [Publiek Lidmaatschap Details schema groep](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Invoer**
 
@@ -335,7 +335,7 @@ Profiel 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                 "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -490,10 +490,10 @@ Profiel 2:
 }
 ```
 
-### Een sjabloon maken die segmenten en identiteiten verstuurt {#segments-and-identities}
+### Een sjabloon maken die het publiek en de identiteiten verstuurt {#segments-and-identities}
 
 Deze sectie verstrekt een voorbeeld van een algemeen gebruikte transformatie tussen het schema van Adobe XDM en het schema van de partnerbestemming.
-In het onderstaande voorbeeld ziet u hoe u de indeling voor segmentlidmaatschap en identiteiten transformeert en uitvoert naar uw bestemming.
+In het onderstaande voorbeeld ziet u hoe u de indeling voor het publiekslidmaatschap en de identiteiten transformeert en uitvoert naar uw bestemming.
 
 **Invoer**
 
@@ -595,7 +595,7 @@ Profiel 2:
                     {% endfor %}
                 ],
                 "remove": [
-                    {# Alternative syntax for filtering segments by status: #}
+                    {# Alternative syntax for filtering audiences by status: #}
                     {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                     {% endfor %}
@@ -661,7 +661,7 @@ De `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Plat
 
 Deze sectie verstrekt een voorbeeld van een algemeen gebruikte transformatie tussen het schema van Adobe XDM en het schema van de partnerbestemming.
 
-Een ander veelvoorkomend gebruiksgeval is het uitvoeren van gegevens die segmentlidmaatschap, identiteiten (bijvoorbeeld: e-mailadres, telefoonnummer, advertentie-ID) en profielkenmerken. Als u gegevens op deze manier wilt exporteren, raadpleegt u het onderstaande voorbeeld:
+Een ander veelvoorkomend geval van gebruik is het uitvoeren van gegevens die publieksleden, identiteiten (bijvoorbeeld: e-mailadres, telefoonnummer, advertentie-ID) en profielkenmerken. Als u gegevens op deze manier wilt exporteren, raadpleegt u het onderstaande voorbeeld:
 
 **Invoer**
 
@@ -788,7 +788,7 @@ Profiel 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -859,21 +859,21 @@ De `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Plat
 
 ### De samenvoegingssleutel in de sjabloon opnemen voor toegang tot geëxporteerde profielen die op verschillende criteria zijn gegroepeerd {#template-aggregation-key}
 
-Wanneer u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie, kunt u de profielen groeperen die naar uw bestemming worden uitgevoerd op criteria zoals segmentidentiteitskaart, segmentalias, segmentlidmaatschap, of identiteitsnamespaces worden gebaseerd.
+Wanneer u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in de bestemmingsconfiguratie, kunt u de profielen groeperen die naar uw bestemming worden uitgevoerd op criteria zoals publieksidentiteitskaart, publieksalias, publiekslidmaatschap, of identiteitsnamespaces worden gebaseerd.
 
 In het malplaatje van de berichttransformatie, kunt u tot de bovengenoemde samenvoegingssleutels toegang hebben, zoals aangetoond in de voorbeelden in de volgende secties. Gebruik aggregatietoetsen om het uit Experience Platform geëxporteerde HTTP-bericht te structureren, zodat dit overeenkomt met de notatie- en tarieflimieten die door de bestemming worden verwacht.
 
-#### Segment-id-aggregatietoets gebruiken in de sjabloon {#aggregation-key-segment-id}
+#### Code voor publiek-id in de sjabloon gebruiken {#aggregation-key-segment-id}
 
-Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` aan waar, worden de profielen in de HTTP- berichten die naar uw bestemming worden uitgevoerd gegroepeerd door segmentID. Zie hieronder hoe u tot segmentidentiteitskaart in het malplaatje kunt toegang hebben.
+Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` naar true, worden de profielen in de HTTP-berichten die naar uw bestemming worden geëxporteerd, gegroepeerd op gebruikers-id. Hieronder ziet u hoe u toegang krijgt tot de gebruikers-id in de sjabloon.
 
 **Invoer**
 
 Bekijk de vier onderstaande profielen, waarbij:
 
-* de eerste twee maken deel uit van het segment met segment-id `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* Het derde profiel maakt deel uit van het segment met segment-id `8f812592-3f06-416b-bd50-e7831848a31a`
-* het vierde profiel maakt deel uit van beide segmenten hierboven .
+* de eerste twee maken deel uit van het publiek met de publiek-id `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* het derde profiel maakt deel uit van het publiek met de gebruikers-id `8f812592-3f06-416b-bd50-e7831848a31a`
+* het vierde profiel maakt deel uit van beide bovengenoemde doelgroepen .
 
 Profiel 1:
 
@@ -965,7 +965,7 @@ Profiel 4:
 >
 >Voor alle sjablonen die u gebruikt, moet u de ongeldige tekens zoals dubbele aanhalingstekens verwijderen `""` voordat u het [template](../../functionality/destination-server/templating-specs.md) in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Voor meer informatie over het ontsnappen van dubbele aanhalingstekens, zie Hoofdstuk 9 in [JSON-standaard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Hieronder ziet u hoe `audienceId` wordt gebruikt in het malplaatje om tot segment IDs toegang te hebben. In dit voorbeeld wordt ervan uitgegaan dat u `audienceId` voor segmentlidmaatschap in uw bestemmingtaxonomie. U kunt in plaats daarvan elke andere veldnaam gebruiken, afhankelijk van uw eigen taxonomie.
+Hieronder ziet u hoe `audienceId` wordt gebruikt in het malplaatje om tot publiek IDs toegang te hebben. In dit voorbeeld wordt ervan uitgegaan dat u `audienceId` voor het lidmaatschap van het publiek in uw bestemmingtaxonomie. U kunt in plaats daarvan elke andere veldnaam gebruiken, afhankelijk van uw eigen taxonomie.
 
 ```python
 {
@@ -982,7 +982,7 @@ Hieronder ziet u hoe `audienceId` wordt gebruikt in het malplaatje om tot segmen
 
 **Resultaat**
 
-Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groepen gesplitst op basis van hun segment-id.
+Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groepen gesplitst op basis van hun gebruikers-id.
 
 ```json
 {
@@ -1015,19 +1015,19 @@ Als de profielen naar uw bestemming worden geëxporteerd, worden ze in twee groe
 }
 ```
 
-#### Segmentaliasaggregatietoets gebruiken in de sjabloon {#aggregation-key-segment-alias}
+#### Aliasaggregatietoets voor het publiek gebruiken in de sjabloon {#aggregation-key-segment-alias}
 
-Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` aan waar, kunt u tot segment alias in het malplaatje ook toegang hebben.
+Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` naar waar (true), hebt u ook toegang tot publiekalias in de sjabloon.
 
-Voeg de onderstaande regel toe aan de sjabloon voor toegang tot de geëxporteerde profielen die zijn gegroepeerd op segmentalias.
+Voeg de onderstaande regel toe aan de sjabloon voor toegang tot de geëxporteerde profielen die zijn gegroepeerd op publieksalias.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### De aggregatietoets voor de segmentstatus in de sjabloon gebruiken {#aggregation-key-segment-status}
+#### De aggregatietoets voor de status van het publiek gebruiken in de sjabloon {#aggregation-key-segment-status}
 
-Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` en `includeSegmentStatus` aan waar, kunt u tot de segmentstatus in het malplaatje toegang hebben. Op deze manier kunt u profielen groeperen in de HTTP-berichten die naar uw bestemming worden geëxporteerd, op basis van het feit of de profielen moeten worden toegevoegd of verwijderd uit segmenten.
+Als u [configureerbare samenvoeging](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en instellen `includeSegmentId` en `includeSegmentStatus` naar waar (true), hebt u toegang tot de publieksstatus in de sjabloon. Op deze manier kunt u profielen groeperen in de HTTP-berichten die naar uw bestemming worden geëxporteerd, op basis van het feit of de profielen moeten worden toegevoegd of verwijderd uit segmenten.
 
 Mogelijke waarden zijn:
 
@@ -1206,10 +1206,10 @@ De onderstaande tabel bevat een beschrijving van de functies in de bovenstaande 
 | -functie | Beschrijving |
 |---------|----------|
 | `input.profile` | Het profiel, weergegeven als een [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Volgt het partnerXDM schema dat hierboven verder op deze pagina wordt vermeld. |
-| `destination.segmentAliases` | Kaart van segment IDs in Adobe Experience Platform namespace aan segmentaliassen in het systeem van de partner. |
-| `destination.segmentNames` | Wijs van segmentnamen in Adobe Experience Platform namespace aan segmentnamen in het systeem van de partner toe. |
-| `addedSegments(listOfSegments)` | Retourneert alleen de segmenten met status `realized`. |
-| `removedSegments(listOfSegments)` | Retourneert alleen de segmenten met status `exited`. |
+| `destination.segmentAliases` | Wijs van publiek IDs in Adobe Experience Platform namespace aan publiekalias in het systeem van de partner toe. |
+| `destination.segmentNames` | Wijs van publieksnamen in Adobe Experience Platform namespace aan publieksnamen in het systeem van de partner toe. |
+| `addedSegments(listOfSegments)` | Retourneert alleen het publiek dat de status heeft `realized`. |
+| `removedSegments(listOfSegments)` | Retourneert alleen het publiek dat de status heeft `exited`. |
 
 {style="table-layout:auto"}
 
