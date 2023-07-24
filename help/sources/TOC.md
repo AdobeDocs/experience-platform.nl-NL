@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
+source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '990'
 ht-degree: 7%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 7%
       - [OneTrust-integratie](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
-      - [SAP Hybris-aansluiting](connectors/crm/sap-hybris.md)
       - [Salesforce-aansluiting](connectors/crm/salesforce.md)
       - [SugarCRM-connector](connectors/crm/sugarcrm.md)
       - [Veeva CRM-connector](connectors/crm/veeva.md)
@@ -94,6 +93,7 @@ ht-degree: 7%
       - [Snowflake-aansluiting](connectors/databases/snowflake.md)
       - [Teradata Vantage-connector](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
+      - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
@@ -140,7 +140,6 @@ ht-degree: 7%
          - [OneTrust-integratie](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM-rekeningen en -contactpersonen](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM-gebeurtenissen](tutorials/api/create/crm/sugarcrm-events.md)
@@ -173,6 +172,7 @@ ht-degree: 7%
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
+         - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Marketing automatiseren {#marketing-automation}
@@ -261,7 +261,6 @@ ht-degree: 7%
          - [OneTrust-integratie](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM-rekeningen en -contactpersonen](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM-gebeurtenissen](tutorials/ui/create/crm/sugarcrm-events.md)
@@ -293,6 +292,7 @@ ht-degree: 7%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
+         - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
