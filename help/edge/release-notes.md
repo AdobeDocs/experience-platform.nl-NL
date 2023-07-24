@@ -3,7 +3,7 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versieopmerkingen voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Nieuwe functies**
 
-* Extra ondersteuning voor [gegevensstroomconfiguratie overschrijft](datastreams/overrides.md).
+* Extra ondersteuning voor [gegevensstroomconfiguratie overschrijft](../datastreams/overrides.md).
 
 ## Versie 2.15.0 - 30 maart 2023
 

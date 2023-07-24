@@ -2,7 +2,7 @@
 title: Adobe Commerce-bestemmingsconnector
 description: Leer hoe verkopers van Adobe Commerce en Real-Time CDP de winkelervaring kunnen aanpassen door zeer relevante site-inhoud en -promoties te leveren, aangepast aan klanten die in Real-Time CDP zijn gebouwd en beheerd.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 1%
@@ -29,7 +29,7 @@ In Experience Platform, creeer het volgende:
 
 - [Schema](../../../xdm/schema/composition.md). Het schema dat u maakt, vertegenwoordigt de gegevens die u vanuit Adobe Commerce wilt invoeren. [Meer informatie](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) over hoe te om een schema tot stand te brengen dat handel-specifieke gebiedsgroepen bevat.
 - [Gegevensset](../../../catalog/datasets/user-guide.md#create). Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens. U creeert deze dataset van het schema dat u hierboven creeerde.
-- [DataStream](../../../edge/datastreams/overview.md#create). ID die gegevens om van Adobe Experience Platform aan andere Adobe DX producten toestaat te stromen. Deze id moet zijn gekoppeld aan een specifieke website in uw specifieke Adobe Commerce-exemplaar. Wanneer u deze gegevensstroom creeert, specificeer het XDM schema u hierboven creeerde.
+- [DataStream](../../../datastreams/overview.md#create). ID die gegevens om van Adobe Experience Platform aan andere Adobe DX producten toestaat te stromen. Deze id moet zijn gekoppeld aan een specifieke website in uw specifieke Adobe Commerce-exemplaar. Wanneer u deze gegevensstroom creeert, specificeer het XDM schema u hierboven creeerde.
 
 Nadat u de eerste vereisten hebt voltooid, maakt u verbinding met de [!DNL Commerce] bestemming.
 
@@ -53,7 +53,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 - **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 - **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
 - **[!UICONTROL Integration alias]**: Deze waarde wordt verzonden naar het Web SDK van het Experience Platform als JSON objecten naam.
-- **[!UICONTROL Datastream ID]**: Dit bepaalt welke gegevensstroom van de Inzameling van Gegevens het publiek bevat dat in de reactie op de pagina inbegrepen is. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [Een gegevensstroom configureren](../../../edge/datastreams/overview.md) voor meer informatie .
+- **[!UICONTROL Datastream ID]**: Dit bepaalt welke gegevensstroom van de Inzameling van Gegevens het publiek bevat dat in de reactie op de pagina inbegrepen is. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [Een gegevensstroom configureren](../../../datastreams/overview.md) voor meer informatie .
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 

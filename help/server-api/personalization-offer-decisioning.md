@@ -2,7 +2,7 @@
 title: Personalisatie via Offer decisioning
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen via Offer decisioning te leveren en weer te geven.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Personalisatie via [!DNL Offer Decisioning] vereist dat u toegang hebt tot [Adob
 
 Voordat u de server-API in combinatie met Offer decisioning kunt gebruiken, moet u de Adobe Experience Platform-personalisatie in uw datastreamconfiguratie inschakelen en de **[!UICONTROL Offer Decisioning]** optie.
 
-Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../edge/datastreams/overview.md#adobe-experience-platform-settings), voor gedetailleerde informatie over hoe Offer decisioning kan worden ingeschakeld.
+Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../datastreams/overview.md#adobe-experience-platform-settings), voor gedetailleerde informatie over hoe Offer decisioning kan worden ingeschakeld.
 
 ![UI-afbeelding die het configuratiescherm van de datastream-service weergeeft, met Offer decisioning geselecteerd](assets/aep-od-datastream.png)
 

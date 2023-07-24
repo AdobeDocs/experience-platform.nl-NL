@@ -2,7 +2,7 @@
 title: Gegevens met toestemming van de klant verwerken met de Adobe Experience Platform Web SDK
 description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten te verwerken in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 0%
@@ -24,7 +24,7 @@ In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens ov
 
 Deze handleiding volgt de workflow voor het instellen van de SDK met de tagextensie in de gebruikersinterface. Raadpleeg de volgende documenten in plaats van deze handleiding als u de extensie niet wilt gebruiken en de zelfstandige versie van de SDK rechtstreeks op uw site wilt insluiten:
 
-* [Een gegevensstroom configureren](../../../edge/datastreams/overview.md)
+* [Een gegevensstroom configureren](../../../datastreams/overview.md)
 * [De SDK installeren](../../../edge/fundamentals/installing-the-sdk.md)
 * [De SDK configureren voor toestemmingsopdrachten](../../../edge/consent/supporting-consent.md)
 

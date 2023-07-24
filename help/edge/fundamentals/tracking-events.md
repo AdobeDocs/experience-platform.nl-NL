@@ -3,7 +3,7 @@ title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 0%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->De `datasetId` door de `sendEvent` is vervangen. Om een dataset ID met voeten te treden, gebruik [configuratieoverschrijvingen](../datastreams/overrides.md) in plaats daarvan.
+>De `datasetId` door de `sendEvent` is vervangen. Om een dataset ID met voeten te treden, gebruik [configuratieoverschrijvingen](../../datastreams/overrides.md) in plaats daarvan.
 
 In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de `datasetId` de optie `sendEvent` opdracht:
 
@@ -254,20 +254,20 @@ Enkele opmerkingen over de `onBeforeEventSend` callback:
 
 * Gebeurtenis XDM kan tijdens callback worden gewijzigd. Nadat de callback is geretourneerd, worden eventuele gewijzigde velden en waarden van de content.xdm- en content.data-objecten verzonden met de gebeurtenis.
 
-   ```javascript
-   onBeforeEventSend: function(content){
-     //sets a query parameter in XDM
-     const queryString = window.location.search;
-     const urlParams = new URLSearchParams(queryString);
-     content.xdm.marketing.trackingCode = urlParams.get('cid')
-   }
-   ```
+  ```javascript
+  onBeforeEventSend: function(content){
+    //sets a query parameter in XDM
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
+  }
+  ```
 
 * Als callback een uitzondering genereert, wordt de verwerking voor de gebeurtenis stopgezet en wordt de gebeurtenis niet verzonden.
 * Als de callback de booleaanse waarde van `false`, wordt de verwerking van gebeurtenissen beëindigd zonder een fout en wordt de gebeurtenis niet verzonden. Met dit mechanisme kunnen bepaalde gebeurtenissen eenvoudig worden genegeerd door de gebeurtenisgegevens te bekijken en te retourneren `false` als de gebeurtenis niet moet worden verzonden.
 
-   >[!NOTE]
-   >Let erop dat u niet de fout retourneert bij de eerste gebeurtenis op een pagina. Als u false retourneert op de eerste gebeurtenis, kan dit een negatieve invloed hebben op de personalisatie.
+  >[!NOTE]
+  >Let erop dat u niet de fout retourneert bij de eerste gebeurtenis op een pagina. Als u false retourneert op de eerste gebeurtenis, kan dit een negatieve invloed hebben op de personalisatie.
 
 ```javascript
    onBeforeEventSend: function(content) {

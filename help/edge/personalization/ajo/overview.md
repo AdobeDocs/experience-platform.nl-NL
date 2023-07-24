@@ -3,7 +3,7 @@ title: Adobe Journey Optimizer gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe road optimizer;renderDecisions;surfaces;decisions;proposities;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande st
 
 1. Ga door de [voorwaarden](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) van de [!DNL Adobe Journey Optimizer] [Web Experience Guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), met name:
    * Instellen [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * Inschakelen [!DNL Adobe Journey Optimizer] in uw [datastream](../../datastreams/overview.md).
+   * Inschakelen [!DNL Adobe Journey Optimizer] in uw [datastream](../../../datastreams/overview.md).
    * De optie [!UICONTROL Active-On-Edge Merge Policy] optie.
 
 2. Voeg de `renderDecisions` aan uw gebeurtenissen. Set `renderDecisions` tot `true` voor automatische weergave van geleverde Journey Optimizer-inhoudsprofielen op de oppervlakken van uw webpagina.

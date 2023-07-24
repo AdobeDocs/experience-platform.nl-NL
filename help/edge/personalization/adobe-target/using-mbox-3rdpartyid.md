@@ -3,10 +3,10 @@ title: Real-time profielsynchronisatie voor mbox3rdPartyId
 description: Leer hoe u mbox3rdPartyId gebruikt met de Adobe Experience Platform Web SDK.
 keywords: personalisatie;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
 exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -21,8 +21,8 @@ Wanneer een bezoeker zich aanmeldt bij de site van een bedrijf, maakt het bedrij
 
 ### Stap 1: Configureer de `Target Third Party ID Namespace`
 
-Configureer de `Target Third Party ID Namespace` in uw [DataStream](../../datastreams/overview.md), met de id-naamruimte die u als een box-id van een andere fabrikant wilt gebruiken.
-[Meer informatie over naamruimten in id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
+Configureer de `Target Third Party ID Namespace` in uw [DataStream](../../../datastreams/overview.md), met de id-naamruimte die u als een box-id van een andere fabrikant wilt gebruiken.
+[Meer informatie over naamruimten in id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl)
 
 ![](assets/mbox3rdpartyid.png)
 

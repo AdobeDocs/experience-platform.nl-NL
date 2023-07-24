@@ -2,7 +2,7 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 2%
@@ -36,7 +36,7 @@ De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensst
 | Gegevensmodellering | Schema&#39;s weergeven | Hiermee verleent u alleen-lezen toegang tot schema&#39;s. |
 | Identity Management | Identiteitsnaamruimten beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [naamruimten](../identity-service/namespaces.md). |
 | Identity Management | Identiteitsnaamruimten weergeven | Hiermee wordt alleen-lezen toegang verleend tot naamruimten. |
-| Gegevensverzameling | Gegevensstromen beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [gegevensstromen](../edge/datastreams/overview.md). |
+| Gegevensverzameling | Gegevensstromen beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [gegevensstromen](../datastreams/overview.md). |
 | Gegevensverzameling | Gegevensstromen weergeven | Biedt alleen-lezen toegang tot gegevensstreams. |
 
 {style="table-layout:auto"}

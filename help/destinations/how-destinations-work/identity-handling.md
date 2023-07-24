@@ -2,7 +2,7 @@
 title: Identiteitsverwerking in de workflow voor doelactivering
 description: Leer hoe identiteitsexport wordt verwerkt in de activeringsworkflow, afhankelijk van het doeltype
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1157'
 ht-degree: 0%
@@ -82,7 +82,7 @@ Reclamebestemmingen die afhankelijk zijn van cookies van derden (bijvoorbeeld: [
 
 Voor deze doelen is een id-sync vereist via een van de [!UICONTROL Experience Cloud ID service] of via [!UICONTROL Experience Platform Web SDK].
 
-Als u [!UICONTROL Experience Platform Web SDK] en de erfenis [!UICONTROL Experience Cloud ID service] niet op de pagina wordt geïmplementeerd, dan moet u ervoor zorgen dat de gegevensstroom voor de website in kwestie is ingeschakeld zodat ID-synchronisatie van derden mogelijk is, zoals beschreven in het [configureren, gegevensstroomdocumentatie](/help/edge/datastreams/configure.md#create).
+Als u [!UICONTROL Experience Platform Web SDK] en de erfenis [!UICONTROL Experience Cloud ID service] niet op de pagina wordt geïmplementeerd, dan moet u ervoor zorgen dat de gegevensstroom voor de website in kwestie is ingeschakeld zodat ID-synchronisatie van derden mogelijk is, zoals beschreven in het [configureren, gegevensstroomdocumentatie](/help/datastreams/configure.md#create).
 
 Wanneer u een gegevensstroom configureert zoals wordt beschreven in de bovenstaande documentatie, moet u ervoor zorgen dat de **[!UICONTROL Third Party ID Sync]** is ingeschakeld. De meeste klanten zouden de `container_id` veld leeg (standaard ingesteld op 0). U hoeft deze waarde alleen te wijzigen als uw implementatie van een oudere Audience Manager een specifieke container-id gebruikt (dit zou echter de grote minderheid van klanten zijn).
 

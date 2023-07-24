@@ -2,7 +2,7 @@
 title: Einde-tot-eindoverzicht gegevensverzameling
 description: Een overzicht op hoog niveau van hoe u gebeurtenisgegevens naar Adobe Experience Cloud-oplossingen kunt verzenden met behulp van Adobe Experience Platform-mogelijkheden voor gegevensverzameling.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2539'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Selecteren **[!UICONTROL Datastreams]** in de linkernavigatie. Van hier kunt u e
 
 ![Gegevensstromen](./images/e2e/datastreams.png)
 
-De configuratievereisten voor een gegevensstroom hangen af van welke producten en mogelijkheden u gegevens naar verzendt. Voor gedetailleerde informatie over de configuratieopties voor elk product raadpleegt u de [datastreams, overzicht](../edge/datastreams/overview.md).
+De configuratievereisten voor een gegevensstroom hangen af van welke producten en mogelijkheden u gegevens naar verzendt. Voor gedetailleerde informatie over de configuratieopties voor elk product raadpleegt u de [datastreams, overzicht](../datastreams/overview.md).
 
 ## De SDK van het Web installeren en configureren {#install}
 
@@ -250,7 +250,7 @@ Zie de handleiding voor meer informatie over het maken van een bibliotheek, het 
 
 Nadat u de bibliotheek hebt gemaakt en de build ervan aan een omgeving is toegewezen, kunt u die omgeving op de client van uw website installeren. Zie de sectie over [installeren, omgevingen](../tags/ui/publishing/environments.md#installation) voor meer informatie .
 
-Nadat u de omgeving op uw website hebt geïnstalleerd, kunt u [uw implementatie testen](../tags/ui/publishing/embed-code-testing.md) Adobe Experience Platform Debugger gebruiken.
+Nadat u de omgeving op uw website hebt geïnstalleerd, kunt u [uw implementatie testen](../tags/ui/publishing/embed-code-testing.md) met Adobe Experience Platform Debugger.
 
 ## Gebeurtenis door:sturen configureren (optioneel) {#event-forwarding}
 

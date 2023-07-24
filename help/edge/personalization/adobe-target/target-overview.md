@@ -3,7 +3,7 @@ title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Het volgende diagram helpt u het werkschema van begrijpen [!DNL Target] en [!DNL
 
 Inschakelen [!DNL Target]Ga als volgt te werk:
 
-1. Inschakelen [!DNL Target] in uw [datastream](../../datastreams/overview.md) met de juiste clientcode.
+1. Inschakelen [!DNL Target] in uw [datastream](../../../datastreams/overview.md) met de juiste clientcode.
 1. Voeg de `renderDecisions` aan uw gebeurtenissen.
 
 Vervolgens kunt u desgewenst ook de volgende opties toevoegen:

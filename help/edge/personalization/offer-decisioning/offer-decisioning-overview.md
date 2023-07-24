@@ -3,7 +3,7 @@ title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 1%
@@ -32,28 +32,28 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
 * **Beslissingsgebieden:** Voor Offer decisioning, zijn het besluitvormingswerkingsgebied Base64 gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
 
-   *Reikwijdte van de beschikking JSON:*
+  *Reikwijdte van de beschikking JSON:*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *Base64-gecodeerde tekenreeks met beslissingsbereik:*
+  *Base64-gecodeerde tekenreeks met beslissingsbereik:*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >U kunt de waarde van het beslissingsbereik kopiëren uit de **Overzicht van activiteiten** in de gebruikersinterface.
+  >[!TIP]
+  >
+  >U kunt de waarde van het beslissingsbereik kopiëren uit de **Overzicht van activiteiten** in de gebruikersinterface.
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **Gegevensstromen:** Lees voor meer informatie de [gegevensstromen](../../datastreams/overview.md) documentatie.
+* **Gegevensstromen:** Lees voor meer informatie de [gegevensstromen](../../../datastreams/overview.md) documentatie.
 
 * **Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe [Platform Web SDK gebruikt Identity Service](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
 
 Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
-1. Adobe Experience Platform ingeschakeld in uw [datastream](../../datastreams/overview.md) en schakel het selectievakje &quot;Offer decisioning&quot; in
+1. Adobe Experience Platform ingeschakeld in uw [datastream](../../../datastreams/overview.md) en schakel het selectievakje &quot;Offer decisioning&quot; in
 
    ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,6 +81,7 @@ Voer de volgende stappen uit om Offer decisioning in te schakelen:
              ]
           })
          ```
+
    * De SDK installeren via tags
 
       1. [Een tag-eigenschap maken](../../../tags/ui/administration/companies-and-properties.md)
@@ -101,10 +102,9 @@ Voer de volgende stappen uit om Offer decisioning in te schakelen:
 
          * Voeg een Platform Web SDK toe verzend de actie van de Gebeurtenis en voeg relevant toe `decisionScopes` aan de configuratie van die actie
 
-            ![send-event-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [Bibliotheek maken en publiceren](../../../tags/ui/publishing/libraries.md) met alle relevante regels, gegevenselementen en extensies die u hebt geconfigureerd
-
-
 
 ## Voorbeeldverzoeken en reacties
 

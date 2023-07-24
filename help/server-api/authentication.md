@@ -2,7 +2,7 @@
 title: Verificatie
 description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Network Server-API configureert.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 1%
@@ -17,7 +17,7 @@ De [!DNL Edge Network Server API] behandelt zowel voor authentiek verklaarde als
 
 Voor elk verzoek [!DNL Server API] verifieert de datastream [!DNL access type] instellen. Met deze instelling kunnen klanten een gegevensstroom configureren voor het accepteren van geverifieerde gegevens of van geverifieerde en niet-geverifieerde gegevens. Standaard worden beide typen gegevens geaccepteerd.
 
-Voor details bij het vormen van het gegevenstroomtoegangstype, zie de documentatie over hoe te [een gegevensstroom maken en configureren](../edge/datastreams/overview.md#create).
+Voor details bij het vormen van het gegevenstroomtoegangstype, zie de documentatie over hoe te [een gegevensstroom maken en configureren](../datastreams/overview.md#create).
 
 Hieronder volgt een overzicht van het gedrag, gebaseerd op de datastream [!DNL Access Type] configuratie en het eindpunt waarop het verzoek wordt ontvangen.
 

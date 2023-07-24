@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Aan de slag met Media Edge-API's
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '959'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Om de media zitting op de server te beginnen, gebruik het eindpunt van het Begin
 
 Voordat u de aanvraag voor het starten van de sessie indient, hebt u het volgende nodig:
 
-* De `datastreamId`—een vereiste parameter voor het verzoek van het Begin van de Zitting van de POST. Om een `datastreamId`, zie [Een gegevensstroom configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
+* De `datastreamId`—een vereiste parameter voor het verzoek van het Begin van de Zitting van de POST. Om een `datastreamId`, zie [Een gegevensstroom configureren](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en).
 
 * Een JSON-object voor de payload van de aanvraag dat de minimaal vereiste gegevens bevat (zoals in de onderstaande voorbeeldaanvraag wordt getoond).
 

@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: doel;a4t;registreren;web sdk;ervaring;platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Logboekregistratie aan de clientzijde betekent dat [!DNL Target] gegevens worden
 
 >[!NOTE]
 >
->Een methode om dit uit te voeren met [AppMeturement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) is momenteel in ontwikkeling en zal in de nabije toekomst beschikbaar zijn.
+>Een methode om dit uit te voeren met [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) is momenteel in ontwikkeling en zal in de nabije toekomst beschikbaar zijn.
 
 Dit document behandelt de stappen voor vestiging cliënt-kant het registreren A4T voor het Web SDK en verstrekt sommige implementatievoorbeelden voor gemeenschappelijke gebruiksgevallen.
 
@@ -40,7 +40,7 @@ De volgende subsecties schetsen hoe te om cliënt-zijregistreren van Analytics v
 
 ### Logboekregistratie op de client voor Analytics inschakelen {#enable-analytics-client-side-logging}
 
-Als u wilt overwegen Analytics-logboekregistratie op de client voor uw implementatie is ingeschakeld, moet u de Adobe Analytics-configuratie in uw [datastream](../../../datastreams/overview.md).
+Als u wilt overwegen Analytics-logboekregistratie op de client voor uw implementatie is ingeschakeld, moet u de Adobe Analytics-configuratie in uw [datastream](../../../../datastreams/overview.md).
 
 ![Configuratie van analysegegevensstroom uitgeschakeld](../assets/disable-analytics-datastream.png)
 
@@ -212,8 +212,7 @@ Alle waarden van `scopeDetails.characteristics.analyticsToken`, alsmede `scopeDe
 >
 >In de implementatievoorbeelden in de volgende sectie worden meerdere analytische tokens intern verzameld. Als u een array van analytische tokens wilt aaneenschakelen, gebruikt u een soortgelijke functie:
 >
->
-```javascript
+>```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
 >   if (analyticsPayloads.size > 1) {
 >       return [].concat(analyticsPayloads).join(',');

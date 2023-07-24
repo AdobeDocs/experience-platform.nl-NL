@@ -3,7 +3,7 @@ title: Hybride verpersoonlijking die Web SDK en de Server API van het Netwerk va
 description: Dit artikel toont aan hoe u SDK van het Web samen met de Server API kunt gebruiken om hybride verpersoonlijking op uw Webeigenschappen op te stellen.
 keywords: personalisatie; hybride; server-API; serverzijde; hybride uitvoering;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Server-API-aanvragen zijn vereist om proposities op te halen en een weergavemeld
 
 Bij het implementeren van hybride personalisatie moet u speciale aandacht besteden aan het tellen van pagina&#39;s in Analytics.
 
-Wanneer u [configureren, gegevensstroom](../datastreams/overview.md) voor Analytics worden gebeurtenissen automatisch doorgestuurd, zodat de paginareeksen worden vastgelegd.
+Wanneer u [configureren, gegevensstroom](../../datastreams/overview.md) voor Analytics worden gebeurtenissen automatisch doorgestuurd, zodat de paginareeksen worden vastgelegd.
 
 Het voorbeeld van deze implementatie gebruikt twee verschillende gegevensstromen:
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | Identiteitskaart van de gegevensstroom die u gebruikt om de interactie tot het Netwerk van de Rand over te gaan. Zie de [datastreams, overzicht](../datastreams/overview.md) om te leren hoe te om een gegevensstroom te vormen. |
+| `dataStreamId` | `String` | Ja. | Identiteitskaart van de gegevensstroom die u gebruikt om de interactie tot het Netwerk van de Rand over te gaan. Zie de [datastreams, overzicht](../../datastreams/overview.md) om te leren hoe te om een gegevensstroom te vormen. |
 | `requestId` | `String` | Nee | Een willekeurige id voor correlerende interne serveraanvragen. Als niets wordt verstrekt, zal het Netwerk van de Rand één produceren en zal het in de reactie terugkeren. |
 
 ### Reactie op de server {#server-response}

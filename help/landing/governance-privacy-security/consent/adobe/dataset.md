@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een gegevensset configureren voor het vastleggen van toestemmings- en voorkeursgegevens
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
@@ -26,7 +26,6 @@ Dit document verstrekt stappen om een dataset te vormen om toestemmingsgegevens 
 >* De standaardveldgroep voor toestemming
 >* Een veldgroep voor aangepaste toestemming die door uw organisatie is gemaakt
 >* Een combinatie van de standaardveldgroep voor toestemming en aanvullende velden die worden verstrekt door een veldgroep voor aangepaste toestemming
-
 
 ## Vereisten
 
@@ -160,7 +159,7 @@ Tot slot selecteert u **[!UICONTROL Enable]** in de bevestigingspop-up om het sc
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-De dataset wordt nu opgeslagen en ingeschakeld voor gebruik in [!DNL Profile]. Als u van plan bent gebruikend SDK van het Web van het Platform om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] wanneer u uw [datastream](../../../../edge/datastreams/overview.md).
+De dataset wordt nu opgeslagen en ingeschakeld voor gebruik in [!DNL Profile]. Als u van plan bent gebruikend SDK van het Web van het Platform om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] wanneer u uw [datastream](../../../../datastreams/overview.md).
 
 ## Volgende stappen
 

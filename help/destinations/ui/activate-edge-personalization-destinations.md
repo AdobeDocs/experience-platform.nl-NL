@@ -3,7 +3,7 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1757'
 ht-degree: 0%
@@ -80,7 +80,7 @@ Bij het configureren van de gegevensstroom, onder **[!UICONTROL Adobe Experience
 
 ![Configuratie DataStream](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Voor meer informatie over hoe u een gegevensstroom instelt, volgt u de instructies in het dialoogvenster [Platform Web SDK-documentatie](../../edge/datastreams/configure.md#aep).
+Voor meer informatie over hoe u een gegevensstroom instelt, volgt u de instructies in het dialoogvenster [Platform Web SDK-documentatie](../../datastreams/configure.md#aep).
 
 ### Een [!DNL Active-On-Edge] samenvoegingsbeleid {#create-merge-policy}
 

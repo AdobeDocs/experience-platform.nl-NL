@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, september 2022
 description: In de release van september 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 2%
@@ -112,7 +112,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | [[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) voor gebeurtenis doorsturen | U kunt nu gegevens verzenden naar de [!DNL Snapchat Conversions API] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Voor meer informatie over het verifiëren en gebruiken van API, verwijs naar [[!DNL Snapchat Marketing API] documentatie](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | De SDK van het Web ondersteunt nu [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met clienttips hebben websiteeigenaars toegang tot veel van de informatie die in het dialoogvenster [!DNL User-Agent] -tekenreeks, maar op een meer privacyvriendelijke manier. |
 | [Web SDK pagina-voor-pagina migratie](../../edge/home.md#migrating-to-web-sdk) | U kunt nu bestaande wegeigenschappen migreren uit andere Experience Cloud-bibliotheken, zoals [!DNL at.js], naar Web SDK, één pagina tegelijk. Dit laat een gefaseerde benadering van de migratie van SDK van het Web toe, zonder de behoefte om al uw pagina&#39;s in één keer te migreren. |
-| [[!DNL Adobe Journey Optimizer] ondersteuning voor gegevensstromen](../../edge/datastreams/overview.md#aep) | De Adobe Experience Platform-service voor gegevensstromen ondersteunt nu [!DNL Adobe Journey Optimizer]. Met deze optie kunt u inkomende kanalen via het web en op apps gebaseerde kanalen gebruiken in [!DNL Adobe Journey Optimizer]. |
+| [[!DNL Adobe Journey Optimizer] ondersteuning voor gegevensstromen](../../datastreams/overview.md#aep) | De Adobe Experience Platform-service voor gegevensstromen ondersteunt nu [!DNL Adobe Journey Optimizer]. Met deze optie kunt u inkomende kanalen via het web en op apps gebaseerde kanalen gebruiken in [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 

@@ -2,7 +2,7 @@
 title: Personalisatie via Adobe Target
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen die in Adobe Target zijn gemaakt, te leveren en te renderen.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%
@@ -23,7 +23,7 @@ De Edge Network Server-API kan gepersonaliseerde ervaringen die in Adobe Target 
 
 Voordat u de server-API in combinatie met Adobe Target kunt gebruiken, moet u Adobe Target-personalisatie in uw configuratie van de gegevensstroom inschakelen.
 
-Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../edge/datastreams/overview.md#adobe-target-settings), voor gedetailleerde informatie over hoe Adobe Target kan worden ingeschakeld.
+Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../datastreams/overview.md#adobe-target-settings), voor gedetailleerde informatie over hoe Adobe Target kan worden ingeschakeld.
 
 Bij het configureren van de gegevensstroom kunt u (optioneel) waarden opgeven voor [!DNL Property Token], [!DNL Target Environment ID], en [!DNL Target Third Party ID Namespace].
 
