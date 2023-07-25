@@ -4,7 +4,7 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
 source-wordcount: '3174'
 ht-degree: 0%
@@ -29,7 +29,7 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het dashboard Profielen verkennen
 
-Als u naar het dashboard Profielen in de gebruikersinterface van het Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in het linkerspoor, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het dashboard Profielen in de gebruikersinterface van het Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Zie de documentatie over voor meer informatie over de mogelijkheden voor profiel
 
 ## Beleid samenvoegen {#merge-policies}
 
-De metriek die in het dashboard van Profielen wordt getoond is gebaseerd op samenvoegbeleid dat op uw gegevens van het Profiel van de Klant in real time wordt toegepast. Wanneer gegevens uit meerdere bronnen worden samengevoegd om het klantprofiel te maken, kunnen de gegevens conflicterende waarden bevatten. Bijvoorbeeld, kan één dataset een klant als &quot;enig&quot;vermelden terwijl een andere dataset de klant als &quot;gehuwd&quot;kan vermelden. Het is de taak van het fusiebeleid om te bepalen welke gegevens aan prioriteren en vertoning als deel van het profiel moeten.
+De metriek die in het dashboard van Profielen wordt getoond is gebaseerd op samenvoegbeleid dat op uw gegevens van het Profiel van de Klant in real time wordt toegepast. Wanneer gegevens uit meerdere bronnen worden samengevoegd om het klantprofiel te maken, kunnen de gegevens conflicterende waarden bevatten. Bijvoorbeeld, kan één dataset een klant als &quot;enig&quot;vermelden terwijl een andere dataset de klant als &quot;gehuwd&quot;kan vermelden. Het is de taak van het fusiebeleid om te bepalen welke gegevens aan prioriteit en vertoning als deel van het profiel moeten.
 
 Voor meer informatie over fusiebeleid, met inbegrip van hoe te om, een standaard fusiebeleid voor uw organisatie tot stand te brengen uit te geven uit te voeren, verwijs naar [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
 
@@ -87,7 +87,7 @@ Het dashboard selecteert automatisch een samenvoegbeleid dat moet worden gebruik
 
 ## Unieregelingen
 
-De [!UICONTROL Union Schema] Het dashboard geeft het samenvoegingsschema voor een specifieke XDM-klasse weer. Als u **[!UICONTROL Class]** kunt u de samenvoegingsschema&#39;s voor verschillende XDM-klassen weergeven.
+De [!UICONTROL Union Schema] Het dashboard geeft het samenvoegingsschema voor een specifieke XDM-klasse weer. Als u **[!UICONTROL Class]** in het vervolgkeuzemenu kunt u de samenvoegingsschema&#39;s voor verschillende XDM-klassen weergeven.
 
 De schema&#39;s van de unie zijn samengesteld uit veelvoudige schema&#39;s die de zelfde klasse delen en voor Profiel toegelaten. Ze stellen u in staat om in één weergave een samenvoeging te zien van elk veld in elk schema dat dezelfde klasse deelt.
 
@@ -97,7 +97,7 @@ Zie de gids UI van het unieschema om meer over te leren [verenigingsschema&#39;s
 
 Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over uw profielgegevens verschaft.
 
-De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast de vervolgkeuzelijst Samenvoegingsbeleid. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. Het tijdstempel van de momentopname wordt in UTC weergegeven; het bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+De datum en tijd van de meest recente opname worden boven aan het dialoogvenster [!UICONTROL Overview] naast de vervolgkeuzelijst Samenvoegingsbeleid. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
 ![Het tabblad Overzicht van het dashboard Profielen met de meest recente tijdstempel voor momentopnamen gemarkeerd.](../images/profiles/snapshot-timestamp.png)
 
@@ -132,7 +132,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >title="Aantal profielen"
 >abstract="Deze widget geeft het totale aantal samengevoegde profielen weer in de profielopslag op het moment dat de momentopname werd gemaakt. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
 
-De **[!UICONTROL Profile count]** In de widget wordt het totale aantal samengevoegde profielen weergegeven in de profielopslag op het moment dat de momentopname is gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+De **[!UICONTROL Profile count]** In de widget wordt het totale aantal samengevoegde profielen weergegeven in de profielenwinkel op het moment dat de momentopname is gemaakt. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
 Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voor meer informatie.
 
@@ -178,7 +178,7 @@ Zie de [sectie over samenvoegbeleid eerder in dit document](#merge-policies) voo
 
 De **[!UICONTROL Profiles count change trend]** widget geeft een &#39;bijschriftknop&#39; in de rechterbovenhoek van de widget weer. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![Het tabblad Profieloverzicht waarin de trendwidget voor het wijzigen van het aantal profielen wordt weergegeven met de knop Bijschriften gemarkeerd.](../images/profiles/profiles-count-change-trend-captions.png)
+![Het tabblad Profieloverzicht waarin de trendwijzigingswidget voor het aantal profielen wordt weergegeven met de knop Bijschriften gemarkeerd.](../images/profiles/profiles-count-change-trend-captions.png)
 
 Een machine het leren model produceert automatisch titels voor het beschrijven van de belangrijkste tendensen en belangrijke gebeurtenissen door de grafiek en de gegevens te analyseren. Annotaties worden op basis van de bijschriften toegevoegd aan het diagram. Selecteer een bijschrift waarop u de bijbehorende annotatie wilt toepassen.
 
@@ -325,7 +325,7 @@ De [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster ka
 
 >[!NOTE]
 >
->Selecteer **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
+>Selecteer de **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
 
 Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]**.
 
@@ -339,7 +339,7 @@ Selecteren **[!UICONTROL Close]** om terug te keren naar de [!UICONTROL Profiles
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 
-De [!UICONTROL Audiences mapped to destination status] widget geeft het totale aantal in kaart gebrachte en niet in kaart gebrachte doelgroepen in één meting weer en gebruikt een donutdiagram om het proportionele verschil tussen hun totalen aan te geven. De berekende aantallen zijn afhankelijk van het gekozen samenvoegbeleid.
+De [!UICONTROL Audiences mapped to destination status] widget geeft het totale aantal in kaart gebrachte en niet in kaart gebrachte doelgroepen in één meting weer en gebruikt een donutgrafiek om het proportionele verschil tussen hun totalen aan te geven. De berekende aantallen zijn afhankelijk van het gekozen samenvoegbeleid.
 
 Individuele tellingen voor of in kaart gebracht of unmapped publiek worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
@@ -351,7 +351,7 @@ De [!UICONTROL Audiences size] widget biedt een tabel met twee kolommen met de n
 
 ![De widget voor soorten publiek.](../images/profiles/audiences-size.png)
 
-Als u uitgebreide informatie over een publiek wilt weergeven, selecteert u een publieksnaam in de lijst die wordt weergegeven om naar de [!UICONTROL Audiences] [!UICONTROL Detail] pagina. Ook door **[!UICONTROL View all audiences]** vanaf het einde van de widget kunt u naar het [!UICONTROL Audiences] [!UICONTROL Browse] om een bestaand publiek te zoeken.
+Als u uitgebreide informatie over een publiek wilt weergeven, selecteert u een publieksnaam in de lijst die wordt weergegeven om naar het deelvenster [!UICONTROL Audiences] [!UICONTROL Detail] pagina. Ook door **[!UICONTROL View all audiences]** vanaf het einde van de widget kunt u naar het [!UICONTROL Audiences] [!UICONTROL Browse] om een bestaand publiek te zoeken.
 
 ![De widget voor soorten publiek met een publieksnaam en de tekst voor alle soorten publiek weergeven zijn gemarkeerd.](../images/profiles/audiences-size-view-all-audiences.png)
 
@@ -436,4 +436,4 @@ The three levels of completeness are:
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard voor profielen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer informatie over werken met [!DNL Profile] gegevens in de gebruikersinterface van het Experience Platform, gelieve te verwijzen naar [Gebruikershandleiding voor realtime gebruikersprofiel van klanten](../../profile/ui/user-guide.md).
+Als u dit document volgt, kunt u nu het dashboard voor profielen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer informatie over werken met [!DNL Profile] gegevens in de gebruikersinterface van het Experience Platform, raadpleeg [Gebruikershandleiding voor realtime gebruikersprofiel van klanten](../../profile/ui/user-guide.md).
