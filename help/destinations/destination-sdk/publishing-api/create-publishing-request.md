@@ -1,7 +1,7 @@
 ---
 description: Leer hoe te om een API vraag te formatteren om een bestemmings het publiceren verzoek door Adobe Experience Platform Destination SDK voor te leggen.
 title: Een doelpublicatieverzoek maken
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -69,9 +69,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
 +++Response
 
 Een succesvolle reactie keert status 201 van HTTP met details van uw bestemmings terug publicatieverzoek.
+
++++
 
 ## API-foutafhandeling
 
