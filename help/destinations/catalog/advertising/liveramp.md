@@ -4,9 +4,9 @@ description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 8c9d736c8d2c45909a2915f0f1d845a7ba4d876d
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1743'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,20 @@ Voordat u gegevens van het Experience Platform kunt verzenden naar [!DNL LiveRam
 LiveRamp SFTP ondersteunt de activering van identiteiten zoals op PII gebaseerde id&#39;s, bekende id&#39;s en aangepaste id&#39;s, zoals beschreven in de officiële [LiveRamp-documentatie](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
 In de [toewijzingsstap](#map) van de activeringsworkflow moet u de doeltoewijzingen definiëren als aangepaste kenmerken.
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+
+Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+
+| Type publiek | Beschrijving |
+---------|----------|
+| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#importing-an-audience) in Experience Platform van CSV-bestanden. |
+
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -190,7 +204,9 @@ Platform exporteert twee CSV-bestanden naar [!DNL LiveRamp SFTP]:
 * één CSV-bestand met soorten publiek A, C en D;
 * Eén CSV-bestand met publiek B.
 
-Geëxporteerde CSV-bestanden bevatten profielen met de geselecteerde kenmerken en de bijbehorende publieksstatus, in afzonderlijke kolommen, met de kenmerknaam en de gebruikers-id&#39;s als kolomkoppen.
+Geëxporteerde CSV-bestanden bevatten profielen met de geselecteerde kenmerken en de corresponderende publieksstatus, in afzonderlijke kolommen en met de kenmerknaam, en `audience_namespace:audience_ID` paren als kolomkoppen, zoals in het onderstaande voorbeeld wordt getoond:
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de volgende kwalificatiestatus van het publiek:
 
@@ -198,11 +214,10 @@ De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de v
 * `Expired`: Het profiel is niet langer gekwalificeerd voor het publiek, maar is in het verleden wel gekwalificeerd.
 * `""`(lege tekenreeks): Het profiel is nooit gekwalificeerd voor het publiek.
 
-
-Bijvoorbeeld een geëxporteerd CSV-bestand met één `email` attributen en 3 publiek zouden als dit kunnen kijken:
+Bijvoorbeeld een geëxporteerd CSV-bestand met één `email` kenmerk, twee soorten publiek afkomstig uit de Experience Platform [Segmenteringsservice](../../../segmentation/home.md)en één [geïmporteerd](../../../segmentation/ui/overview.md#importing-an-audience) extern publiek, zou als volgt kunnen kijken:
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -210,6 +225,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+In het bovenstaande voorbeeld wordt `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` de secties beschrijven publiek afkomstig van de Dienst van de Segmentatie, terwijl `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` beschrijft een publiek dat in Platform is geïmporteerd als een [aangepaste upload](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Aangezien Platform één CSV-bestand voor elk bestand genereert [beleids-id samenvoegen](../../../profile/merge-policies/overview.md), produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
 

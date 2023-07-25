@@ -1,9 +1,9 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestemmingsserver tot stand te brengen door Adobe Experience Platform Destination SDK.
 title: Een doelserverconfiguratie maken
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1696'
 ht-degree: 6%
 
 ---
@@ -44,7 +44,11 @@ U kunt een nieuwe configuratie van de bestemmingsserver tot stand brengen door t
 POST /authoring/destination-servers
 ```
 
-Afhankelijk van het bestemmingstype dat u creeert, moet u een lichtjes verschillend type van bestemmingsserver vormen. Zie in de lusjes hieronder voorbeelden van bestemmingsservers voor elk bestemmingstype dat in Destination SDK wordt gesteund.
+Afhankelijk van het bestemmingstype dat u creeert, moet u een lichtjes verschillend type van bestemmingsserver vormen.
+
+### Statische schema-doelservers maken {#static-destination-servers}
+
+Zie in de lusjes hieronder voorbeelden van bestemmingsservers voor bestemmingen die gebruiken [statische schema&#39;s](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 De onderstaande voorbeeldladingen bevatten alle parameters die door elk type doelserver worden ondersteund. U hoeft niet alle parameters in uw verzoek op te nemen. De lading is klantgericht op uw behoeften.
 
@@ -770,6 +774,18 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
+>[!ENDTABS]
+
+### Dynamische schema-doelservers maken {#dynamic-schema-servers}
+
+Met dynamische schema&#39;s kunt u dynamisch de ondersteunde doelkenmerken ophalen en schema&#39;s genereren op basis van uw eigen API. U moet een bestemmingsserver voor dynamische schema&#39;s vormen alvorens u het schema kunt vormen.
+
+Zie in het lusje onder een voorbeeld van een bestemmingsserver voor bestemmingen die gebruiken [dynamische schema&#39;s](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+
+De nuttige voorbeeldlading hieronder omvat alle parameters die voor een dynamische schemaserver worden vereist.
+
+>[!BEGINTABS]
+
 >[!TAB Dynamische schemaserver]
 
 **Een dynamische schemaserver maken**
@@ -827,6 +843,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde configuratie van de bestemmingsserver terug.
 
 +++
+
 
 >[!ENDTABS]
 

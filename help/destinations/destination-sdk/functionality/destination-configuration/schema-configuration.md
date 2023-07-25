@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om het partnerschema voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie partnerschema
-source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '1886'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 Destination SDK ondersteunt meerdere schemaconfiguraties:
 
 * Statische schema&#39;s worden gedefinieerd door de `profileFields` in de `schemaConfig` sectie. In een statisch schema, bepaalt u elk doelattribuut dat in het Experience Platform UI in zou moeten worden getoond `profileFields` array. Als u uw schema moet bijwerken, moet u [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Dynamische schema&#39;s gebruiken een extra type van bestemmingsserver, genoemd een [dynamische schema-server](../../authoring-api/destination-server/create-destination-server.md), om schema&#39;s dynamisch te genereren op basis van uw eigen API. Dynamische schema&#39;s gebruiken niet de `profileFields` array. Als u uw schema moet bijwerken, is het niet nodig om [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md). In plaats daarvan haalt de dynamische schemaserver het bijgewerkte schema van uw API terug.
+* Dynamische schema&#39;s gebruiken een extra type van bestemmingsserver, genoemd een [dynamische schema-server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), om de ondersteunde doelkenmerken dynamisch op te halen en schema&#39;s te genereren op basis van uw eigen API. Dynamische schema&#39;s gebruiken niet de `profileFields` array. Als u uw schema moet bijwerken, is het niet nodig om [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md). In plaats daarvan haalt de dynamische schemaserver het bijgewerkte schema van uw API terug.
 * Binnen de schemaconfiguratie, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn afbeeldingen die gebruikers kunnen weergeven in de gebruikersinterface van het Platform, maar ze kunnen deze niet wijzigen wanneer ze een verbinding met uw doel instellen. U kunt bijvoorbeeld afdwingen dat het veld E-mailadres altijd naar de bestemming wordt verzonden.
 
 De `schemaConfig` de sectie gebruikt veelvoudige configuratieparameters, afhankelijk van het type van schema dat u, zoals aangetoond in de hieronder secties nodig hebt.
@@ -126,7 +126,7 @@ Destination SDK steunt de verwezenlijking van dynamische partnerschema&#39;s. In
 
 >[!IMPORTANT]
 >
->Voordat u een dynamisch schema maakt, moet u [een dynamische schemaserver maken](../../authoring-api/destination-server/create-destination-server.md).
+>Voordat u een dynamisch schema maakt, moet u [een dynamische schemaserver maken](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 In een dynamische schemeconfiguratie, `profileFields` array wordt vervangen door de `dynamicSchemaConfig` zoals hieronder weergegeven.
 
