@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Gids Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
-source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
+source-git-commit: b5214301f48418a0d00575143caa2937b8beed62
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 25%
+source-wordcount: '119'
+ht-degree: 23%
 
 ---
 
@@ -17,7 +17,8 @@ ht-degree: 25%
 - [Overzicht van identiteitsservice](home.md)
 - [Overzicht naamruimte identiteit](namespaces.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)
-- Identiteitsservice-API {#api}
+- [Grails voor identiteitsgegevens met verwijderingslogica](guardrails-beta.md)
+- Identity Service API {#api}
    - [Aan de slag](api/getting-started.md)
    - [Een veld als identiteit labelen](api/label-identities.md)
    - [Clusteridentiteiten weergeven](api/list-cluster-identites.md)
@@ -27,7 +28,7 @@ ht-degree: 25%
    - [Een aangepaste naamruimte maken](api/create-custom-namespace.md)
    - [Native id weergeven voor een identiteit](api/list-native-id.md)
 - Interface voor identiteitsservice {#ui}
-   - [Identiteitsgrafiekviewer](ui/identity-graph-viewer.md)
+   - [Naamgrafiekviewer](ui/identity-graph-viewer.md)
    - [Gedeelde apparaatdetectie](ui/shared-device-detection.md)
    - [Identiteitsvelden definiëren in de gebruikersinterface](ui/label-identities.md)
 - [ECID-overzicht](ecid.md)
