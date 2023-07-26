@@ -1,14 +1,14 @@
 ---
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
+source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
 
-# Parameterized vragen
+# Parameterized vragen (beperkte versie)
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ SELECT
 
 Navigeer naar de Query-editor om de geparametereerde query in de UI te maken. Zie de sectie over [De Query-editor openen](./user-guide.md#accessing-query-editor) voor meer instructies.
 
-Gebruik de `'$'` Plaats om een vraagparameter in uw vraag in de tekstredacteur in te gaan. Voeg vervolgens de ontbrekende waarde voor de toets in het dialoogvenster [!UICONTROL Query parameters] onder de editor. De query kan niet worden uitgevoerd als u geen waarde toevoegt aan een van de vereiste toetsen. Een waarschuwingspictogram (![Een waarschuwingspictogram.](../images/ui/parameterized-queries/alert-icon.png)) wordt weergegeven in de sectie Query Parameters naast lege [!UICONTROL Value] invoervelden.
+Gebruik de `'$'` Plaats om een vraagparameter in uw vraag in de tekstredacteur in te gaan. Voeg vervolgens de ontbrekende waarde voor de toets in het dialoogvenster [!UICONTROL Query parameters] onder de editor. De query kan niet worden uitgevoerd als u geen waarde toevoegt aan een van de vereiste toetsen. Een waarschuwingspictogram (![Een waarschuwingspictogram](../images/ui/parameterized-queries/alert-icon.png)) wordt weergegeven in de sectie Query Parameters naast lege [!UICONTROL Value] invoervelden.
 
 ![De redacteur van de Vraag met een parameterized vraag en de benadrukte sectie van de Parameters van de Vraag.](../images/ui/parameterized-queries/parameterized-query.png)
 
@@ -71,7 +71,7 @@ U kunt geen parameters opslaan binnen sjablonen omdat de gebruikte waarden niet 
 
 ## Plan een geparameterialiseerde vraag {#schedule}
 
-Parameterwaarden worden opgeslagen wanneer u een geparametriseerde query plant. Om een parameterized vraag te plannen, volg het typische proces om een geplande vraag tot stand te brengen zoals die in de gids wordt beschreven aan [een queryschema maken](./query-schedules.md#create-schedule)Voer vervolgens de parameterwaarden in die in de query moeten worden gebruikt. Deze UI-sectie wordt alleen weergegeven voor geparametriseerde query&#39;s. Zie de sectie over [parameters instellen voor een geplande parameterized query](./query-schedules.md#set-parameters) voor specifieke instructies.
+Parameterwaarden worden opgeslagen wanneer u een geparametriseerde query plant. Om een parameterized vraag te plannen, volg het typische proces om een geplande vraag tot stand te brengen zoals die in de gids wordt beschreven aan [een queryschema maken](./query-schedules.md#create-schedule)Voer vervolgens de parameterwaarden in die in de query moeten worden gebruikt. Deze UI-sectie wordt alleen weergegeven voor query&#39;s met parameters. Zie de sectie over [parameters instellen voor een geplande parameterized query](./query-schedules.md#set-parameters) voor specifieke instructies.
 
 >[!TIP]
 >

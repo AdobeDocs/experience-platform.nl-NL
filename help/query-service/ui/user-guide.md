@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
+source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1853'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Query Editor] is een interactief hulpmiddel dat door Adobe Experience Platform wordt verstrekt [!DNL Query Service], die u toestaat schrijven, bevestigen, en vragen voor de gegevens van de klantenervaring binnen [!DNL Experience Platform] gebruikersinterface. [!DNL Query Editor] steunt het ontwikkelen van vragen voor analyse en gegevensonderzoek, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in te vullen [!DNL Experience Platform].
 
-Voor meer informatie over de concepten en kenmerken van [!DNL Query Service], zie de [Overzicht van Query Service](../home.md). Om meer over te leren hoe te om het gebruikersinterface van de Dienst van de Vraag te navigeren [!DNL Platform], zie de [Overzicht van Query Service](./overview.md).
+Voor meer informatie over de concepten en kenmerken van [!DNL Query Service], zie de [Overzicht van Query Service](../home.md). Meer over leren hoe te om het gebruikersinterface van de Dienst van de Vraag te navigeren [!DNL Platform], zie de [Overzicht van Query Service](./overview.md).
 
 ## Aan de slag {#getting-started}
 
@@ -29,7 +29,7 @@ Voor meer informatie over de concepten en kenmerken van [!DNL Query Service], zi
 
 ### Hoe de vragen van in werking worden gesteld [!DNL Query Editor] {#run-a-query}
 
-Zoekopdrachten uitgevoerd vanuit [!DNL Query Editor] interactief uitvoeren. Dit betekent dat als u de browser sluit of wegnavigeert, de query wordt geannuleerd. Dit is ook waar voor vragen die worden gemaakt om datasets van vraagoutput te produceren.
+Zoekopdrachten uitgevoerd vanuit [!DNL Query Editor] Voer interactief uit, wat betekent dat als u de browser sluit of wegnavigeert, de query wordt geannuleerd. Het zelfde is waar voor vragen die worden gemaakt om datasets van vraagoutput te produceren.
 
 ## Query schrijven met [!DNL Query Editor] {#query-authoring}
 
@@ -37,9 +37,30 @@ Gebruiken [!DNL Query Editor], kunt u schrijven, uitvoeren, en sparen vragen voo
 
 ### Toegang tot het [!DNL Query Editor] {#accessing-query-editor}
 
-In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Queries]** in het navigatiemenu links om het dialoogvenster [!DNL Query Service] werkruimte. Selecteer vervolgens **[!UICONTROL Create Query]** rechtsboven in het scherm om query&#39;s te schrijven. Deze koppeling is beschikbaar op alle pagina&#39;s in het dialoogvenster [!DNL Query Service] werkruimte.
+In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Queries]** in het navigatiemenu links om het dialoogvenster [!DNL Query Service] werkruimte. Selecteer vervolgens **[!UICONTROL Create Query]** rechtsboven in het scherm. Deze koppeling is beschikbaar op alle pagina&#39;s in het dialoogvenster [!DNL Query Service] werkruimte.
 
 ![Het tabblad Overzicht van de werkruimte Vragen met de markering Query maken.](../images/ui/query-editor/create-query.png)
+
+### Uitgebreide functie voor Query-editor {#enhanced-editor-toggle}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_enhancedEditorToggle"
+>title="Schakelen tussen editors"
+>abstract="Wissel tussen de verouderde en verbeterde versie van de Query-editor. De oudere versie is standaard ingeschakeld, maar de verbeterde versie biedt betere toegankelijkheid en ondersteuning voor meerdere thema&#39;s. Raadpleeg de documentatie voor meer informatie over deze wijzigingen."
+
+Met een UI-schakeloptie kunt u schakelen tussen de verouderde en verbeterde versie van de Query Editor. De oudere versie is standaard ingeschakeld, maar de verbeterde versie biedt betere toegankelijkheid en ondersteuning voor meerdere thema&#39;s. Schakel de verbeterde versie in om toegang te krijgen tot de instellingen van de Query Editor.
+
+![De redacteur van de Vraag met de verbeterde knevel van de Redacteur van de Vraag benadrukt.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
+
+Als u de schakeloptie activeert, schakelt u de editor over naar lichtthema en wordt de leesbaarheid van de syntaxis verbeterd. Er verschijnt ook een instellingenpictogram boven het invoerveld van de Query Editor waarin de schakeloptie voor automatisch aanvullen is opgenomen. Via het instellingenpictogram kunt u donker thema inschakelen of automatisch aanvullen uitschakelen/inschakelen.
+
+>[!TIP]
+>
+>Met de verbeterde Redacteur van de Vraag, kunt u [!UICONTROL Disable syntax auto complete] terwijl het ontwerpen van een vraag zonder uw vooruitgang te verliezen. Als u de functie voor automatisch aanvullen tijdens het bewerken uitschakelt, gaan alle wijzigingen in de query verloren.
+
+Selecteer het instellingspictogram (![Een instellingenpictogram.](../images/ui/query-editor/settings-icon.png)) gevolgd door de optie in het vervolgkeuzemenu dat wordt weergegeven.
+
+![De Query Editor met het instellingenpictogram en de menuoptie Donkere thema&#39;s inschakelen gemarkeerd.](../images/ui/query-editor/query-editor-settings.png)
 
 ### Bezig met schrijven van query&#39;s {#writing-queries}
 
@@ -59,7 +80,7 @@ Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met gren
 
 ![Een paar tekens van SQL met het automatische volledige vervolgkeuzemenu dat opties van de Redacteur van de Vraag verstrekt.](../images/ui/query-editor/syntax-auto.png)
 
-- **Tabel en veld automatisch aanvullen:** Typ de tabelnaam die u wilt gebruiken `SELECT` van, dan gebruik de pijlsleutels om aan de lijst te navigeren u zoekt, en drukt **Enter**. Als een tabel eenmaal is geselecteerd, worden de velden in die tabel automatisch herkend.
+- **Tabel en veld automatisch aanvullen:** Typ de tabelnaam die u wilt gebruiken `SELECT` van, dan gebruik de pijlsleutels om aan de lijst te navigeren u zoekt, en drukt **Enter**. Als een tabel is geselecteerd, worden de velden in die tabel automatisch herkend.
 
 ![De invoer van de Redacteur van de Vraag die drop-down lijstnaamsuggesties toont.](../images/ui/query-editor/tables-auto.png)
 
@@ -73,7 +94,7 @@ De auto-volledige configuratie het plaatsen is per gebruiker en voor de opeenvol
 
 Als u deze functie uitschakelt, worden meerdere metagegevensopdrachten niet verwerkt en worden aanbevelingen gedaan die de snelheid van de auteur bij het bewerken van query&#39;s ten goede komen.
 
-Wanneer u de schakeloptie gebruikt om de functie voor automatisch aanvullen in te schakelen, worden aanbevolen suggesties voor tabel- en kolomnamen en SQL-trefwoorden na een korte pauze beschikbaar. Een succesbericht in de console onder de Redacteur van de Vraag wijst op de eigenschap actief is.
+Wanneer u de schakeloptie gebruikt om de functie voor automatisch aanvullen in te schakelen, worden aanbevolen suggesties voor tabel- en kolomnamen en SQL-trefwoorden na een korte pauze beschikbaar. Een succesbericht in de console onder de Redacteur van de Vraag wijst erop dat de eigenschap actief is.
 
 Als u de functie voor automatisch aanvullen uitschakelt, wordt de functie pas van kracht nadat u een pagina hebt vernieuwd. Er wordt een bevestigingsvenster weergegeven met drie opties wanneer u het dialoogvenster [!UICONTROL Syntax auto-complete] schakelen:
 
@@ -83,11 +104,11 @@ Als u de functie voor automatisch aanvullen uitschakelt, wordt de functie pas va
 
 >[!IMPORTANT]
 >
->Als u een query schrijft of bewerkt wanneer u deze functie uitschakelt, moet u eventuele wijzigingen in de query opslaan voordat u de pagina vernieuwt, anders gaat alle voortgang verloren.
+>Als u schrijft of een vraag uitgeeft wanneer het onbruikbaar maken van deze eigenschap, moet u om het even welke veranderingen in uw vraag opslaan alvorens de pagina te verfrissen of al uw vooruitgang zal verloren gaan.
 
 ![Het bevestigingsvenster om de functie voor automatisch aanvullen uit te schakelen.](../images/ui/query-editor/confirmation-dialog.png)
 
-Selecteer de gewenste optie om de functie voor automatisch aanvullen uit te schakelen.
+Als u de functie voor automatisch aanvullen wilt uitschakelen, selecteert u de juiste bevestigingsoptie.
 
 ### Foutdetectie {#error-detection}
 
@@ -101,27 +122,27 @@ Wanneer fouten worden ontdekt, kunt u de specifieke foutenmeldingen bekijken doo
 
 ### Query-details {#query-details}
 
-Selecteer een opgeslagen sjabloon in het menu [!UICONTROL Templates] om het in de Redacteur van de Vraag te bekijken. Het deelvenster met querydetails bevat meer informatie en gereedschappen voor het beheer van de geselecteerde query.
+Als u een query wilt weergeven in de Query-editor, selecteert u een opgeslagen sjabloon in het menu [!UICONTROL Templates] tab. Het deelvenster met querydetails bevat meer informatie en gereedschappen voor het beheer van de geselecteerde query.
 
 ![De Query-editor met het deelvenster met querydetails gemarkeerd.](../images/ui/query-editor/query-details.png)
 
 Dit paneel staat u toe om een outputdataset direct van UI te produceren, de getoonde vraag te schrappen of te noemen, en een programma aan de vraag toe te voegen.
 
-In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste keer dat de query werd gewijzigd en de eventuele wijziging. Als u een gegevensset wilt genereren, selecteert u **[!UICONTROL Output Dataset]**. De **[!UICONTROL Output Dataset]** wordt weergegeven. Voer een naam en beschrijving in en selecteer **[!UICONTROL Run Query]**. De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** op het tabblad [!DNL Query Service] gebruikersinterface op [!DNL Platform].
+In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste keer dat de query werd gewijzigd en de laatste keer dat deze werd gewijzigd, indien van toepassing. Als u een gegevensset wilt genereren, selecteert u **[!UICONTROL Output Dataset]**. De **[!UICONTROL Output Dataset]** wordt weergegeven. Voer een naam en beschrijving in en selecteer **[!UICONTROL Run Query]**. De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** op het tabblad [!DNL Query Service] gebruikersinterface op [!DNL Platform].
 
 ### Geplande query&#39;s {#scheduled-queries}
 
-De vragen die als malplaatje zijn bewaard kunnen van de Redacteur van de Vraag worden gepland. Dit staat u toe om vraaglooppas te automatiseren die op een douanecadence wordt uitgevoerd. U kunt vragen plannen die op frequentie, datum, en tijd worden gebaseerd, en ook een outputdataset voor uw resultaten kiezen indien vereist. De programma&#39;s van de vraag kunnen ook door UI worden onbruikbaar gemaakt of worden geschrapt.
+De vragen die als malplaatje zijn bewaard kunnen van de Redacteur van de Vraag worden gepland. Het plannen van vragen staat u toe om vraaglooppas op een douanecadence te automatiseren. U kunt vragen plannen die op frequentie, datum, en tijd worden gebaseerd, en ook een outputdataset voor uw resultaten kiezen indien nodig. De programma&#39;s van de vraag kunnen ook door UI worden onbruikbaar gemaakt of worden geschrapt.
 
-Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Redacteur van de Vraag, kunt u een programma aan een vraag slechts toevoegen die reeds is gecreeerd, opgeslagen, en looppas. Dit geldt niet voor de [!DNL Query Service] API:
+Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Redacteur van de Vraag, kunt u een programma aan een vraag slechts toevoegen die reeds is gecreeerd, opgeslagen, en looppas. Dezelfde beperking geldt niet voor [!DNL Query Service] API:
 
-Zie de documentatie van vraagprogramma&#39;s om te leren hoe te [vraagprogramma&#39;s in UI creëren](./query-schedules.md). Als u ook wilt leren hoe u planningen kunt toevoegen met de API, leest u de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
+Zie de documentatie van vraagprogramma&#39;s leren hoe te [vraagprogramma&#39;s in UI creëren](./query-schedules.md). U kunt ook leren hoe u schema&#39;s kunt toevoegen met de API, door de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
 
-Alle geplande query&#39;s worden toegevoegd aan de lijst in de [!UICONTROL Scheduled queries] tab. Van die werkruimte kunt u het statuut van alle geplande vraagbanen door UI controleren. Op de [!UICONTROL Scheduled queries] kunt u belangrijke informatie over uw vraaglooppas vinden en aan alarm intekenen. De beschikbare informatie omvat de status, de planningsdetails, en foutenmeldingen/codes als een looppas ontbreekt. Zie de [Geplande query&#39;s controleren](./monitor-queries.md) voor meer informatie .
+Alle geplande query&#39;s worden toegevoegd aan de lijst in de [!UICONTROL Scheduled queries] tab. Van die werkruimte kunt u het statuut van alle geplande vraagbanen door UI controleren. Op de [!UICONTROL Scheduled queries] kunt u belangrijke informatie over uw vraaglooppas vinden en aan alarm intekenen. De beschikbare informatie bevat de status, de planningsdetails en foutberichten/codes als een uitvoering is mislukt. Zie de [Geplande query&#39;s controleren](./monitor-queries.md) voor meer informatie .
 
-### Bezig met opslaan van query&#39;s {#saving-queries}
+### Vragen opslaan {#saving-queries}
 
-De [!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Selecteer **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
+De [!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Als u een query wilt opslaan, selecteert u **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
 
 >[!NOTE]
 >
@@ -135,7 +156,7 @@ Als een vraag gepland was, toen [!UICONTROL Scheduled Queries] biedt een verbete
 
 >[!NOTE]
 >
->Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De query is beschikbaar in [!DNL Query Service], moet het worden uitgevoerd of opgeslagen in [!DNL Query Editor].
+>Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De query is alleen beschikbaar in [!DNL Query Service], moet het worden uitgevoerd of opgeslagen in [!DNL Query Editor].
 
 ## Vragen uitvoeren met de Query Editor {#executing-queries}
 
@@ -149,7 +170,7 @@ De console biedt informatie over de status en werking van [!DNL Query Service]. 
 
 >[!NOTE]
 >
->De console toont slechts fouten die uit het uitvoeren van een vraag voortkwamen. Er worden geen fouten met de queryvalidatie weergegeven voordat een query wordt uitgevoerd.
+>De console toont slechts fouten die uit de uitvoering van een vraag resulteerden. De code geeft niet de fouten van de queryvalidatie weer die optreden voordat een query wordt uitgevoerd.
 
 ### Zoekresultaten {#query-results}
 
@@ -157,9 +178,9 @@ Nadat een vraag is voltooid, worden de resultaten getoond in **[!UICONTROL Resul
 
 ![Het lusje van Resultaten van de console van de Redacteur van de Vraag die de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
 
-## Zoekopdrachten uitvoeren met [!DNL Query Service] zelfstudievideo {#query-tutorial-video}
+## Query uitvoeren met [!DNL Query Service] zelfstudievideo {#query-tutorial-video}
 
-In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien wordt het gebruik van individuele eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en het gebruik van CREATE TABLE AS SELECT (CTAS) aangetoond.
+In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. De video demonstreert ook het gebruik van individuele eigenschappen in een XDM-object, door Adobe gedefinieerde functies en hoe u CREATE TABLE AS SELECT (CTAS)-query&#39;s gebruikt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
