@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de stroomdienst;
 title: Start gegevensstroom opnieuw mislukt
-description: Deze zelfstudie behandelt stappen voor het opnieuw proberen van mislukte dataflow-uitvoering met behulp van de Flow Service API
+description: Leer hoe u mislukte dataflow-uitvoering opnieuw kunt proberen met de Flow Service API.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -22,8 +21,8 @@ In deze zelfstudie worden de stappen beschreven voor het opnieuw proberen van mi
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
+* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
@@ -31,7 +30,7 @@ Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s 
 
 ## Een mislukte gegevensstroomuitvoering opnieuw proberen
 
-Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, vraagt u een POST aan de `/runs` eindpunt terwijl het verstrekken van runtime identiteitskaart van uw gegevensstroom en `re-trigger` verrichting als deel van uw vraagparameters.
+Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, vraagt u een POST aan de `/runs` eindpunt terwijl het verstrekken van runtime identiteitskaart van uw gegevensstroom en `re-trigger` bewerking als onderdeel van uw queryparameters.
 
 **API-indeling**
 
@@ -46,7 +45,11 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 
 **Verzoek**
 
-De volgende aanvraag probeert de dataflow-run voor de runtime-id opnieuw uit te voeren `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
+>[!NOTE]
+>
+>U kunt de `re-trigger` De verrichting om succesvolle dataflow opnieuw te proberen loopt eveneens, gegeven dat de succesvolle dataflow looppas nul ingebed verslagen heeft.
+
+De volgende aanvraag probeert de dataflow-run opnieuw voor de runtime-id `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
 
 ```shell
 curl -X POST \
