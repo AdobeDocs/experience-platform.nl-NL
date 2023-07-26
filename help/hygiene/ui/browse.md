@@ -47,17 +47,17 @@ De volgende filters zijn van toepassing op recordverwijderingsverzoeken:
 
 | Filter | Beschrijving |
 | --- | --- |
-| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Failed]**: Er is een fout opgetreden in de taak en deze kan niet worden voltooid.</li><li>**[!UICONTROL Processing]**: Het verzoek is gestart en wordt momenteel verwerkt.</li></ul> |
+| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Failed]**: De taak heeft een fout aangetroffen en kan niet worden voltooid.</li><li>**[!UICONTROL Processing]**: Het verzoek is gestart en wordt momenteel verwerkt.</li></ul> |
 | [!UICONTROL Date created] | Filter op basis van de datum waarop de werkorder is gemaakt. |
 | [!UICONTROL Date updated] | Filter op basis van de datum waarop de werkorder voor het laatst is bijgewerkt. Creaties worden geteld als updates. |
 
-### Filters voor gegevenssetvervaldatums
+### Filters voor gegevenssetverlopen
 
 De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 
 | Filter | Beschrijving |
 | --- | --- |
-| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Pending]**: De taak is gemaakt, maar is nog niet uitgevoerd. A [Vervalaanvraag gegevensset](./dataset-expiration.md) neemt deze status aan vóór de geplande verwijderingsdatum. Zodra de verwijderingsdatum is bereikt, wordt de status bijgewerkt naar [!UICONTROL Executing] tenzij de taak vooraf wordt geannuleerd.</li><li>**[!UICONTROL Executing]**: Het verzoek van de datasetvervaldatum is begonnen en verwerkt momenteel.</li><li>**[!UICONTROL Cancelled]**: De taak is geannuleerd als onderdeel van een handmatig gebruikersverzoek.</li></ul> |
+| [!UICONTROL Status] | Filter op basis van de huidige status van de werkorder:<ul><li>**[!UICONTROL Completed]**: De taak is voltooid.</li><li>**[!UICONTROL Pending]**: De taak is gemaakt, maar is nog niet uitgevoerd. A [Vervalaanvraag gegevensset](./dataset-expiration.md) neemt deze status aan vóór de geplande verwijderingsdatum. Zodra de verwijderingsdatum is bereikt, wordt de status bijgewerkt naar [!UICONTROL Executing] tenzij de taak vooraf wordt geannuleerd.</li><li>**[!UICONTROL Executing]**: Het verzoek om de gegevensset te vervalsen is gestart en wordt momenteel verwerkt.</li><li>**[!UICONTROL Cancelled]**: De taak is geannuleerd als onderdeel van een handmatig gebruikersverzoek.</li></ul> |
 | [!UICONTROL Date created] | Filter op basis van de datum waarop de werkorder is gemaakt. |
 | [!UICONTROL Expiration date] | Verzoeken voor de vervaldatum van de gegevensset voor filters op basis van de geplande verwijderingsdatum voor de gegevensset in kwestie. |
 | [!UICONTROL Date updated] | Filter op basis van de datum waarop de werkorder voor het laatst is bijgewerkt. Ontwerpen en vervaldatums worden als updates geteld. |
@@ -79,7 +79,7 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Reactie record verwijderen"
->abstract="Wanneer een proces van de verslagschrapping een reactie van het systeem ontvangt, worden deze berichten getoond onder **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="Wanneer een record-verwijderingsproces een reactie van het systeem ontvangt, worden deze berichten onder het **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
 
 Selecteer de id van een vermelde werkorder om de details ervan weer te geven.
 
@@ -95,7 +95,7 @@ De details van een verzoek om een record te schrappen omvatten zijn huidige stat
 
 ### Gegevens betreffende de vervaldatum van de gegevensset {#dataset-expiration}
 
-De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basisattributen, met inbegrip van de geplande vervaldatum op de dagen die resteren alvorens de schrapping voorkomt. In het rechterspoor kunt u besturingselementen gebruiken om de vervaldatum te bewerken of te annuleren.
+De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basisattributen, met inbegrip van de geplande vervaldatum op de dagen die resteren alvorens de schrapping voorkomt. In het rechterspoor, kunt u controles gebruiken om de vervaldatum uit te geven of te annuleren.
 
 ![Afbeelding die de detailpagina voor een werkorder voor het verlopen van een gegevensset weergeeft](../images/ui/browse/ttl-details.png)
 

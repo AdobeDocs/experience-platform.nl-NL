@@ -20,7 +20,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform worden gegevens uit een groot aantal verschillende bronnen opgenomen, binnen het Experience Platform geanalyseerd en geactiveerd voor een groot aantal verschillende bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
 
-Het controledashboard voorziet u van een visuele vertegenwoordiging van de reis van een gegevensstroom. U kunt een samengevoegde controlemening gebruiken en verticaal van het bronniveau, aan een dataflow, en aan een dataflow looppas navigeren, toestaand u om de overeenkomstige metriek te bekijken die tot het succes of de mislukking van een dataflow bijdragen. U kunt ook de cross-service controlecapaciteit van het dashboard voor controle gebruiken om de reis van een gegevensstroom van een bron te controleren, aan [!DNL Identity Service]en [!DNL Profile].
+Het controledashboard voorziet u van een visuele vertegenwoordiging van de reis van een gegevensstroom. U kunt een samengevoegde controlemening gebruiken en verticaal van het bronniveau, aan een dataflow, en aan een dataflow looppas navigeren, toestaand u om de overeenkomstige metriek te bekijken die tot het succes of de mislukking van een dataflow bijdragen. U kunt ook de cross-service controlecapaciteit van het dashboard voor controle gebruiken om de reis van een gegevensstroom van een bron te controleren, aan [!DNL Identity Service], en [!DNL Profile].
 
 Deze zelfstudie biedt stappen om uw gegevensstroom te controleren met behulp van zowel de geaggregeerde controleweergave als de cross-service bewaking.
 
@@ -28,11 +28,11 @@ Deze zelfstudie biedt stappen om uw gegevensstroom te controleren met behulp van
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Gegevensstromen](../home.md): Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile]en [!DNL Destinations].
+* [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
    * [Dataflow-uitvoering](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
 * [Bronnen](../../sources/home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Identiteitsservice](../../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [Klantprofiel in realtime](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## Geaggregeerde monitoringweergave {#aggregated-monitoring-view}
@@ -45,11 +45,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
->title="Gegevens gegevensstroom"
+>title="Gegevens gegevensstroom uitvoeren"
 >abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
-In de [UI Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** van de linkernavigatie om tot [!UICONTROL Monitoring] dashboard. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over alle brongegevens, met inbegrip van inzicht in de gezondheid van gegevensverkeer van een bron aan [!DNL Identity Service]en [!DNL Profile].
+In de [UI PLATFORM](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** van de linkernavigatie om tot [!UICONTROL Monitoring] dashboard. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over alle brongegevens, met inbegrip van inzicht in de gezondheid van gegevensverkeer van een bron aan [!DNL Identity Service], en [!DNL Profile].
 
 In het midden van het dashboard bevindt zich de [!UICONTROL Source ingestion] paneel, dat metriek en grafieken bevat die gegevens tonen over opgenomen verslagen en ontbroken verslagen.
 
@@ -63,21 +63,21 @@ Er wordt een kalenderpop-upvenster weergegeven met opties voor alternatieve ings
 
 ![aanpassen-tijdframe](../assets/ui/monitor-sources/adjust-timeframe.png)
 
-De grafieken zijn standaard ingeschakeld en u kunt ze uitschakelen om de lijst met bronnen hieronder uit te vouwen. Selecteer **[!UICONTROL Metrics and graphs]** schakelen om de grafieken uit te schakelen.
+De grafieken zijn standaard ingeschakeld en u kunt ze uitschakelen om de lijst met bronnen hieronder uit te vouwen. Selecteer de **[!UICONTROL Metrics and graphs]** schakelen om de grafieken uit te schakelen.
 
-![metriek en grafieken](../assets/ui/monitor-sources/metrics-graphs.png)
+![metriek-en-grafieken](../assets/ui/monitor-sources/metrics-graphs.png)
 
 | Bron invoegen | Beschrijving |
 | ---------------- | ----------- |
-| [!UICONTROL Records ingested ] | Het totale aantal records dat wordt ingevoerd. |
-| [!UICONTROL Records failed] | Het totale aantal records dat niet is opgenomen als gevolg van fouten in de gegevens. |
+| [!UICONTROL Records ingested] | Het totale aantal records dat wordt ingevoerd. |
+| [!UICONTROL Records failed] | Het totale aantal records dat niet is opgenomen vanwege fouten in de gegevens. |
 | [!UICONTROL Total failed dataflows] | Het totale aantal gegevensstromen met a `failed` status. |
 
 In de lijst met brongegevens worden alle bronnen weergegeven die ten minste één bestaande account bevatten. De lijst bevat ook informatie over de opnamesnelheid van elke bron, het aantal mislukte records en het totale aantal mislukte gegevensstromen op basis van het tijdkader dat u hebt toegepast.
 
 ![bron-opname](../assets/ui/monitor-sources/source-ingestion.png)
 
-Selecteer **[!UICONTROL My sources]** en selecteer vervolgens de gewenste categorie in het vervolgkeuzemenu. Als u zich bijvoorbeeld wilt concentreren op cloudopslagsystemen, selecteert u  **[!UICONTROL Cloud storage]**
+Als u door de lijst met bronnen wilt sorteren, selecteert u **[!UICONTROL My sources]** en selecteer vervolgens de gewenste categorie in het vervolgkeuzemenu. Als u zich bijvoorbeeld wilt concentreren op cloudopslagsystemen, selecteert u  **[!UICONTROL Cloud storage]**
 
 ![per categorie](../assets/ui/monitor-sources/sort-by-category.png)
 
@@ -89,7 +89,7 @@ U kunt ook een bron invoeren in de zoekbalk om één bron te isoleren. Wanneer d
 
 ![zoeken](../assets/ui/monitor-sources/search.png)
 
-Er wordt een lijst met gegevensstromen weergegeven. Selecteer **[!UICONTROL Show failures only]**.
+Er wordt een lijst met gegevensstromen weergegeven. Als u de lijst wilt beperken en de focus op gegevensstromen met fouten wilt beperken, selecteert u **[!UICONTROL Show failures only]**.
 
 ![show-failure-only](../assets/ui/monitor-sources/show-failures-only.png)
 

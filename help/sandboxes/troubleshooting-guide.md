@@ -19,19 +19,19 @@ Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virt
 
 ## Wat is een sandbox?
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van Platform middelen (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
 
 ## Welke typen sandboxen zijn beschikbaar en wat zijn de verschillen tussen deze typen? {#sandbox-types}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtypes"
 >title="Sandbox-type"
->abstract="Het type sandbox geeft aan of dit een productie- of ontwikkelingssandbox is. Productiesandboxen omvatten actieve gegevens- en ontwikkelingssandboxen die worden gebruikt voor testen en ontwikkelen."
+>abstract="Het type sandbox geeft aan of dit een productie- of ontwikkelingssandbox is. Productiesandboxen bevatten live data- en ontwikkelingssandboxen die worden gebruikt voor testen en ontwikkelen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Een sandbox maken in de gebruikersinterface"
 
 Het Experience Platform bevat twee sandboxtypen:
 
-* **Productiesandbox**: Een productiesandbox is bedoeld voor gebruik met profielen in uw productieomgeving. Met Platform kunt u meerdere productie-sandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw licentie [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde productiesandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten over al uw geoorloofde productie sandboxen).
+* **Productiesandbox**: Een productiesandbox moet worden gebruikt met profielen in uw productieomgeving. Met Platform kunt u meerdere productie-sandboxen maken om de juiste functionaliteit voor gegevens te bieden terwijl de operationele isolatie behouden blijft. Met deze functie kunt u specifieke productiesandboxen toewijzen aan verschillende bedrijfsonderdelen, merken, projecten of regio&#39;s. Productiesandboxen ondersteunen een volume productieprofielen tot aan uw licentie [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde productiesandboxen). U hebt het recht om een gemiddeld profiel met licentie te gebruiken per geautoriseerde [!DNL Profile] (cumulatief gemeten over al uw geoorloofde productie sandboxen).
 * **Ontwikkelingssandbox**: Een ontwikkelingssandbox is een sandbox die uitsluitend kan worden gebruikt voor ontwikkeling en testen met niet-productieprofielen. De zandbakken van de ontwikkeling steunen een hoeveelheid non-production profielen tot 10% van uw vergunning [!DNL Profile] verbintenis (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen). U hebt recht op maximaal:
    * een gemiddelde rijkheid van het non-production profiel van 75 kilobytes per geautoriseerd niet-productieprofiel (cumulatief gemeten over al uw geautoriseerde ontwikkelingssandboxen);
    * één batchsegmentatietaak per dag, per ontwikkelingssandbox;
@@ -41,7 +41,7 @@ Zie het [sandboxoverzicht](./home.md) voor meer informatie.
 
 ## Kan ik toegang krijgen tot een bron van meerdere sandboxen?
 
-Sandboxen zijn geïsoleerde partities van één Platform-instantie, waarbij elke sandbox zijn eigen onafhankelijke bibliotheek met bronnen behoudt. Een bron die in een sandbox bestaat, kan niet worden benaderd vanuit een andere sandbox, ongeacht het type sandbox (productie of niet-productie).
+Sandboxen zijn geïsoleerde partities van één Platform-instantie, waarbij elke sandbox zijn eigen onafhankelijke bibliotheek met bronnen behoudt. Een bron die in een sandbox bestaat, is niet toegankelijk vanuit een andere sandbox, ongeacht het type sandbox (productie of niet-productie).
 
 ## Wat is de standaardproductiesandbox?
 
@@ -49,7 +49,7 @@ De standaardproductiesandbox is de eerste productiesandbox die wordt gecreeerd w
 
 ## Hoeveel productiesandboxen kan ik hebben?
 
-Een instantie van het Experience Platform steunt veelvoudige productie en ontwikkelingszandbakken, met elke zandbak die zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, en profielen) handhaaft.
+Een instantie van het Experience Platform steunt veelvoudige productie en ontwikkelingszandbakken, met elke zandbak die zijn eigen onafhankelijke bibliotheek van Platform middelen (met inbegrip van schema&#39;s, datasets, en profielen) handhaaft.
 
 Een standaardlicentie voor Experience Platforms kent u in totaal vijf sandboxen toe, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal.
 

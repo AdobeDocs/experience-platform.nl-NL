@@ -17,9 +17,9 @@ Identiteitsnaamruimten zijn een component van [[!DNL Identity Service]](./home.m
 
 Als u met naamruimten werkt, moet u de verschillende betrokken Adobe Experience Platform-services begrijpen. Voordat u begint te werken met naamruimten, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in echt - tijd die op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Identity Service]](./home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Identiteitsnaamruimten worden gebruikt in nalevingsverzoeken voor wettelijke privacyverordeningen zoals de algemene gegevensbeschermingsverordening (GDPR). Elk privacyverzoek wordt ingediend met betrekking tot een naamruimte om te bepalen welke gegevens van de consument moeten worden beïnvloed.
+- [[!DNL Privacy Service]](../privacy-service/home.md): Identiteitsnaamruimten worden gebruikt in nalevingsverzoeken voor wettelijke privacyregels zoals de algemene gegevensbeschermingsverordening (GDPR). Elk privacyverzoek wordt ingediend met betrekking tot een naamruimte om te bepalen welke gegevens van de consument moeten worden beïnvloed.
 
 ## Naamruimten voor identiteiten
 
@@ -33,11 +33,11 @@ Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevat
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
->title="Type identiteit opgeven"
+>title="Identificatietype opgeven"
 >abstract="Het identiteitstype bepaalt of gegevens worden opgeslagen in de identiteitsgrafiek. De herkenningstekens van niet-mensen zullen niet worden opgeslagen, en alle andere identiteitstypes zullen."
 >text="Learn more in documentation"
 
-Gegevens kunnen worden geïdentificeerd door verschillende typen identiteiten. Het identiteitstype wordt gespecificeerd op het tijdstip dat identiteitskaart namespace wordt gecreeerd en controleert al dan niet het gegeven aan de identiteitsgrafiek en om het even welke speciale instructies voor hoe die gegevens zouden moeten worden behandeld wordt voortgeduurd. Alle identiteitstypen behalve **Id van niet-personen** volgt hetzelfde gedrag bij het aansluiten van een naamruimte en de bijbehorende ID-waarde op een identiteitsgrafiekcluster. Gegevens worden niet samengevoegd bij gebruik **Id van niet-personen**.
+Gegevens kunnen worden geïdentificeerd door verschillende typen identiteiten. Het identiteitstype wordt gespecificeerd op het tijdstip dat identiteitskaart namespace wordt gecreeerd en controleert al dan niet het gegeven aan de identiteitsgrafiek en om het even welke speciale instructies voor hoe die gegevens zouden moeten worden behandeld wordt voortgeduurd. Alle identiteitstypen behalve **Id van niet-personen** volgt hetzelfde gedrag bij het aansluiten van een naamruimte en de bijbehorende ID-waarde op een identiteitsgrafiek. Gegevens worden niet samengevoegd bij gebruik **Id van niet-personen**.
 
 De volgende identiteitstypen zijn beschikbaar binnen [!DNL Platform]:
 
@@ -66,15 +66,15 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Platform worde
 | Apple IDFA (ID voor adverteerders) | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [op rente gebaseerde advertenties](https://support.apple.com/en-us/HT202074) voor meer informatie . |
 | Apple Push Notification-service | Een naamruimte die identiteiten vertegenwoordigt die zijn verzameld met de Apple Push Notification-service. Zie het volgende document op [Apple Push Notification-service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) voor meer informatie . |
 | CORE | Een naamruimte die Adobe Audience Manager vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen met de oudere naam: &quot;Adobe AudienceManager&quot;. Zie het volgende document op [Audience Manager-id&#39;s](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) voor meer informatie . |
-| ECID | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](./ecid.md) voor meer informatie . |
+| ECID | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](./ecid.md) voor meer informatie . |
 | Email | Een naamruimte die een e-mailadres vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
 | E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Zie het volgende document op [SHA256-hashingondersteuning](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) voor meer informatie . |
 | Firebase Cloud Messaging | Een naamruimte die identiteiten vertegenwoordigt die zijn verzameld met Google Firebase Cloud Messaging voor pushberichten. Zie het volgende document op [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) voor meer informatie . |
 | Google-advertentie-ID (GAID) | A namespace that represents a Google Advertising ID. Zie het volgende document op [Google-advertentie-id](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) voor meer informatie . |
-| Google Click ID | Een naamruimte die een Google Click-id vertegenwoordigt. Zie het volgende document op [Klik op Tekstspatiëring in Google-advertenties](https://developers.google.com/adwords/api/docs/guides/click-tracking) voor meer informatie . |
+| Google Click ID | Een naamruimte die een Google Click-id vertegenwoordigt. Zie het volgende document op [Klik op bijhouden in Google-advertenties](https://developers.google.com/adwords/api/docs/guides/click-tracking) voor meer informatie . |
 | Telefoon | Een naamruimte die een telefoonnummer vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
 | Telefoon (E.164) | A namespace that represents raw phone numbers that need to be hashed in E.164 format. De indeling E.164 bevat een plusteken (`+`), een internationaal land dat code, een lokale gebiedscode, en een telefoonaantal oproept. Bijvoorbeeld: `(+)(country code)(area code)(phone number)`. |
-| Telefoon (SHA256) | Een naamruimte die telefoonnummers vertegenwoordigt die moeten worden gehasht met behulp van SHA256. U moet symbolen, letters en voorloopnullen verwijderen. U moet ook het land toevoegen dat code aanroept als voorvoegsel. |
+| Telefoon (SHA256) | Een naamruimte die telefoonnummers vertegenwoordigt die moeten worden gehasht met behulp van SHA256. U moet symbolen, letters en voorloopnullen verwijderen. U moet ook het land toevoegen dat code als prefix roept. |
 | Telefoon (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | TNTID | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [Doel](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) voor meer informatie. |
 | Windows-ID | A namespace that represents a Windows Advertising ID. Zie het volgende document op [Windows-advertentie-id](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) voor meer informatie . |
@@ -86,7 +86,7 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Platform worde
 >title="Integratie-id&#39;s weergeven"
 >abstract="Integratie-id&#39;s zijn naamruimten die worden gebruikt om verbinding te maken met andere systemen en die niet worden gebruikt in identiteitsresolutie of om identiteiten aan te sluiten. <br> Deze identiteiten zijn standaard verborgen. Met de schakeloptie kunt u integratienaamruimten weergeven."
 
-Selecteer **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]**.
+Als u naamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]**.
 
 ![doorbladeren](./images/browse.png)
 
@@ -94,7 +94,7 @@ Er wordt een lijst met naamruimten voor identiteiten weergegeven in de hoofdinte
 
 ![identiteiten](./images/identities.png)
 
-Platform biedt ook naamruimten voor integratiedoeleinden. Deze naamruimten zijn standaard verborgen omdat ze worden gebruikt om verbinding te maken met andere systemen en niet om identiteiten aan te sluiten. Selecteer **[!UICONTROL View integration identities]**.
+Platform biedt ook naamruimten voor integratiedoeleinden. Deze naamruimten zijn standaard verborgen omdat ze worden gebruikt om verbinding te maken met andere systemen en niet om identiteiten aan te sluiten. Als u integratie-naamruimten wilt weergeven, selecteert u **[!UICONTROL View integration identities]**.
 
 ![view-integration-identities](./images/view-integration-identities.png)
 
@@ -112,7 +112,7 @@ Als u een aangepaste naamruimte wilt maken met de gebruikersinterface, navigeert
 
 De **[!UICONTROL Create identity namespace]** wordt weergegeven. Een unieke **[!UICONTROL Display name]** en **[!UICONTROL Identity symbol]** en selecteer vervolgens het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen om meer informatie over de naamruimte toe te voegen. Alle identiteitstypen behalve **Id van niet-personen** volgt hetzelfde gedrag van stitching. Als u **Id van niet-personen** als type identiteit wanneer u een naamruimte maakt, vindt stitching niet plaats. Voor specifieke informatie over elk identiteitstype, verwijs naar de lijst over [identiteitstypen](#identity-types).
 
-Als u klaar bent, selecteert u **[!UICONTROL Create]**.
+Selecteer **[!UICONTROL Create]**.
 
 >[!IMPORTANT]
 >

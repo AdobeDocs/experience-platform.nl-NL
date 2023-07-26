@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen; waarschuwingen;doelen
+keywords: Experience Platform;thuis;populaire onderwerpen; alarm;bestemmingen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-bestemmingswaarschuwingen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Abonneren op in-context-bestemmingswaarschuwingen
 
-Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../../observability/api/overview.md) om na te gaan of een baan heeft voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
+Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../../observability/api/overview.md) om na te gaan of een baan is voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
 
 U kunt zich op alarm abonneren wanneer het creëren van een gegevensstroom om waakzame berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen.
 
@@ -22,7 +22,7 @@ In dit document worden de stappen beschreven voor de manier waarop u zich abonne
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [Doelen](../home.md): Vooraf gebouwde integratie met doelplatforms die een naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+* [Doelen](../home.md): Vooraf gebouwde integratie met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 * [Waarneming](../../observability/home.md): [!DNL Observability Insights] kunt u de activiteiten van Platforms volgen door statistische gegevens en gebeurtenismeldingen te gebruiken.
    * [Waarschuwingen](../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend.
 
@@ -31,14 +31,14 @@ Voor dit document is een goed begrip van de volgende Adobe Experience Platform-c
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
 >title="Abonneren op bestemmingswaarschuwingen"
->abstract="Met waarschuwingen kunt u meldingen ontvangen op basis van de status van uw doelgegevens. U kunt waarschuwingsmeldingen instellen om updates op te halen als uw gegevensstroom is gestart, is gelukt, is mislukt of geen gegevens naar uw bestemming heeft verzonden."
+>abstract="Met waarschuwingen kunt u meldingen ontvangen op basis van de status van uw doelgegevens. U kunt waarschuwingsberichten instellen om updates op te halen als uw gegevensstroom is gestart, is gelukt, is mislukt of geen gegevens naar uw bestemming heeft verzonden."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]
 >
 >U moet directe meldingen van e-mails voor uw Platform-account inschakelen om e-mailmeldingen voor uw gegevensstromen te ontvangen.
 
-U kunt waarschuwingen inschakelen voor uw gegevensstromen tijdens de [!UICONTROL Configure new destination] de [doelverbinding](connect-destination.md) workflow.
+U kunt waarschuwingen inschakelen voor uw gegevensstromen tijdens de [!UICONTROL Configure new destination] van de [doelverbinding](connect-destination.md) workflow.
 
 ![UI-afbeelding die het gedeelte met doelwaarschuwingen weergeeft.](../assets/ui/alerts/destination-alerts.png)
 
@@ -46,7 +46,7 @@ Selecteer de waarschuwingen waarop u zich wilt abonneren en selecteer **[!UICONT
 
 De waarschuwingen die beschikbaar zijn voor bestemmingsgegevensstromen worden beschreven in de onderstaande tabel.
 
-* Voor streamingdoelen worden alleen de [!DNL Activation Skipped Rate Exceeded] Er is een waarschuwing beschikbaar.
+* Voor streamingdoelen worden alleen de [!DNL Activation Skipped Rate Exceeded] waarschuwing is beschikbaar.
 * Voor op een bestand gebaseerde doelen zijn alle waarschuwingen beschikbaar.
 
 | Waarschuwingen | Beschrijving |
@@ -81,7 +81,7 @@ Selecteer het waakzame bericht om specifieke informatie op uw gegevensstroom te 
 
 De [!UICONTROL Dataflow run details] wordt weergegeven. In de bovenste helft van het scherm wordt een overzicht van uw gegevensstroom weergegeven, inclusief informatie over de kenmerken, de bijbehorende id voor de uitvoering van de gegevensstroom en het overzicht van de fouten op hoog niveau.
 
-![UI-afbeelding die de detailpagina voor het uitvoeren van de gegevensstroom weergeeft.](../assets/ui/alerts/dataflow-overview.png)
+![UI-afbeelding die de detailpagina voor gegevensstroom weergeeft.](../assets/ui/alerts/dataflow-overview.png)
 
 In de onderste helft van de pagina worden alle [!UICONTROL Dataflow run errors] die zijn uitgevoerd tijdens het werkgebied voor gegevensstroom. Hier kunt u een voorvertoning van de foutdiagnostiek bekijken of de [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) om foutdiagnostiek te downloaden of het bestandmanifest die overeenkomt met uw gegevensstroom.
 
@@ -103,16 +103,16 @@ Net als de gebruikersinterface-waarschuwing worden de [!UICONTROL Dataflow run o
 
 U kunt zich abonneren op meer waarschuwingen of uw abonnement op bestaande waarschuwingen opzeggen voor een bestaande doelgegevensstroom op de doelen [!UICONTROL Browse] pagina.
 
-![UI-afbeelding die de pagina Doelen bladeren weergeeft](../assets/ui/alerts/destination-list.png)
+![UI-afbeelding met de pagina Doelen bladeren](../assets/ui/alerts/destination-list.png)
 
-Zoek de doelverbinding waarvoor u waarschuwingen wilt ontvangen en selecteer de ovalen (`...`) om een vervolgkeuzemenu met opties weer te geven. Selecteer vervolgens **[!UICONTROL Subscribe to alerts]** om de waakzame montages van uw bestemmingsgegeven te wijzigen.
+Zoek de doelverbinding waarvoor u waarschuwingen wilt ontvangen en selecteer de ovalen (`...`) om een vervolgkeuzelijst met opties weer te geven. Selecteer vervolgens **[!UICONTROL Subscribe to alerts]** om de waakzame montages van uw bestemmingsgegeven te wijzigen.
 
 ![UI-afbeelding die de bestemmingsopties weergeeft](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-Er wordt een pop-upvenster weergegeven met een lijst met doelwaarschuwingen. Selecteer de waarschuwingen waarvan u zich wilt abonneren of hef de selectie van waarschuwingen op. Als u klaar bent, selecteert u **[!UICONTROL Save]**.
+Er wordt een pop-upvenster weergegeven met een lijst met doelwaarschuwingen. Selecteer de waarschuwingen waarvan u zich wilt abonneren of hef de selectie van waarschuwingen op. Selecteer **[!UICONTROL Save]**.
 
 ![UI-afbeelding die de pagina voor doelwaarschuwingen weergeeft](../assets/ui/alerts/destination-alerts-list.png)
 
 ## Volgende stappen {#next-steps}
 
-Dit document verstrekte een geleidelijke gids over hoe te om aan in-context alarm voor uw bestemmingsdataflows in te tekenen. Zie voor meer informatie de [UI-hulplijn voor waarschuwingen](../../observability/alerts/ui.md).
+Dit document verstrekte een geleidelijke gids over hoe te om aan in-context alarm voor uw bestemmingsdataflows in te tekenen. Zie de klasse [UI-gids voor waarschuwingen](../../observability/alerts/ui.md).

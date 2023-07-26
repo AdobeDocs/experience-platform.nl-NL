@@ -38,7 +38,7 @@ Voordat u in de details van [!DNL Identity Service]Hier volgt een korte samenvat
 
 ## Wat is [!DNL Identity Service]?
 
-Elke dag, interactie van klanten met uw zaken en vestigen een onophoudelijk groeiende verhouding met uw merk. Een typische klant kan in om het even welk aantal systemen binnen de gegevensinfrastructuur van uw organisatie, zoals uw e-commerce, loyaliteit, en helpdesksystemen actief zijn. Die zelfde klant kan ook anoniem op om het even welk aantal apparaten in dienst nemen. [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid.
+Elke dag, interactie van klanten met uw zaken en vestigen een onophoudelijk groeiende verhouding met uw merk. Een typische klant kan in om het even welk aantal systemen binnen de gegevensinfrastructuur van uw organisatie, zoals uw e-commerce, loyaliteit, en helpdesksystemen actief zijn. Die zelfde klant kan ook anoniem op om het even welk aantal apparaten aanspreken. [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid.
 
 Bekijk een dagelijks voorbeeld van de relatie van een consument met je merk:
 
@@ -46,12 +46,12 @@ Bekijk een dagelijks voorbeeld van de relatie van een consument met je merk:
 - Op dit punt wordt de activiteit van Mary weergegeven als twee aparte profielen:
    - Haar aanmelding voor e-commerce
    - Haar tabletapparaat, mogelijk geïdentificeerd door apparaat-id
-- Mary hervat later haar tabletsessie en stuurt haar e-mailadres wanneer ze zich abonneert op uw nieuwsbrief. Als u dit doet, wordt door streaming opname een nieuwe identiteit toegevoegd als recordgegevens in haar profiel. Dientengevolge [!DNL Identity Service] relateert nu Mary&#39;s tabletapparaatactiviteit met haar e-commerce rekeninggeschiedenis.
+- Mary hervat later haar tabletsessie en stuurt haar e-mailadres wanneer ze zich abonneert op uw nieuwsbrief. Als u dit doet, wordt door streaming opname een nieuwe identiteit toegevoegd als recordgegevens in haar profiel. Dientengevolge, [!DNL Identity Service] relateert nu Mary&#39;s tabletapparaatactiviteit met haar e-commerce rekeninggeschiedenis.
 - Met de volgende klik op haar tablet zou uw doelinhoud het volledige profiel en de geschiedenis van Mary kunnen weerspiegelen, in plaats van slechts een tablet die door een onbekende winkelier wordt gebruikt.
 
 ![Identiteitskoppeling op Platform](./images/identity-service-stitching.png)
 
-Hoofdzakelijk [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid. De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt u met behulp van Real-Time Customer Profile een volledig beeld van een klant en zijn interactie met uw merk. Zie voor meer informatie de [Overzicht van het realtime klantprofiel](../profile/home.md).
+Hoofdzakelijk [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid. De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt u met behulp van Real-Time Customer Profile een volledig beeld van een klant en zijn interactie met uw merk. Zie de klasse [Overzicht van het realtime klantprofiel](../profile/home.md).
 
 ### Gebruiksscenario’s
 
@@ -72,7 +72,7 @@ Voorbeelden van [!DNL Identity Service] de implementatie omvat :
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
->title="Identiteitswaarden"
+>title="Identiteitsinstellingen"
 >abstract="Een identiteitswaarde is een herkenningsteken die een uniek individu, een organisatie, of een middel vertegenwoordigt. De context of het type van identiteit die de waarde vertegenwoordigt wordt bepaald door een overeenkomstige identiteitsnaamruimte. Wanneer recordgegevens in profielfragmenten overeenkomen, moeten de naamruimte en de identiteitswaarde overeenkomen. Wanneer de recordgegevens in profielfragmenten overeenkomen, moeten de naamruimte en de identiteitswaarde overeenkomen."
 >text="Learn more in documentation"
 
@@ -114,7 +114,7 @@ Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u moge
 
 Als het gestandaardiseerde kader waardoor [!DNL Platform] klantgegevens ordent; [!DNL Experience Data Model] (XDM) staat gegevens toe om over Experience Platform en andere diensten worden gedeeld en worden begrepen die met interactie [!DNL Platform]. Zie voor meer informatie de [XDM System, overzicht](../xdm/home.md).
 
-Zowel de verslagen als de tijdreeksregelingen verstrekken de middelen om identiteitsgegevens te omvatten. Terwijl gegevens worden opgenomen, maakt de identiteitsgrafiek nieuwe relaties tussen gegevensfragmenten van verschillende naamruimten als deze gemeenschappelijke identiteitsgegevens delen.
+Zowel de verslagen als de tijdreeksschema&#39;s verstrekken de middelen om identiteitsgegevens te omvatten. Terwijl gegevens worden opgenomen, maakt de identiteitsgrafiek nieuwe relaties tussen gegevensfragmenten van verschillende naamruimten als deze gemeenschappelijke identiteitsgegevens delen.
 
 ### XDM-velden als identiteit markeren
 
@@ -133,17 +133,17 @@ Door bijvoorbeeld velden met telefoonnummers als identiteitsvelden te labelen, [
 
 ### Een gegevensset configureren voor [!DNL Identity Service]
 
-Tijdens het streamingingproces [!DNL Identity Service ]haalt automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Voordat gegevens kunnen worden ingevoerd, moet deze echter zijn ingeschakeld voor [!DNL Identity Service]. Zie de zelfstudie aan  [het vormen van een Dataset voor het Profiel van de Klant in real time en de Dienst van de Identiteit gebruikend APIs](../profile/tutorials/dataset-configuration.md) voor meer informatie .
+Tijdens het streamingingproces [!DNL Identity Service]haalt automatisch identiteitsgegevens uit record- en tijdreeksgegevens. Maar voordat gegevens kunnen worden ingevoerd, moet deze functie zijn ingeschakeld voor [!DNL Identity Service]. Zie de zelfstudie aan  [het vormen van een Dataset voor het Profiel van de Klant in real time en de Dienst van de Identiteit gebruikend APIs](../profile/tutorials/dataset-configuration.md) voor meer informatie .
 
 ### Gegevens samenvoegen tot [!DNL Identity Service]
 
-[!DNL Identity Service] verbruikt XDM volgzame gegevens die naar Experience Platform worden verzonden of door [batch-opname](../ingestion/batch-ingestion/overview.md) of [streaming opname](../ingestion/streaming-ingestion/overview.md).
+[!DNL Identity Service] verbruikt XDM-compatibele gegevens die door [batch-inname](../ingestion/batch-ingestion/overview.md) of [streaming opname](../ingestion/streaming-ingestion/overview.md).
 
 De volgende video is bedoeld om uw begrip van de Dienst van de Identiteit te steunen. In deze video ziet u hoe u gegevensvelden kunt labelen als identiteiten, identiteitsgegevens kunt invoeren en vervolgens kunt controleren of de gegevens zijn omgezet in de persoonlijke grafiek van de Adobe Experience Platform Identity Service.
 
 >[!WARNING]
 >
->De [!DNL Platform] De interface die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+>De [!DNL Platform] De gebruikersinterface die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 

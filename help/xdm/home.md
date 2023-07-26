@@ -53,13 +53,13 @@ Raadpleeg de volgende documentatie voor meer informatie over het beheren van en 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Gedrag van gegevens"
->abstract="Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen: record, tijdreeksen en ad hoc. De schema&#39;s van het verslag verstrekken informatie over de attributen van een onderwerp, terwijl de tijdreeksregelingen een momentopname van het systeem vangen op het tijdstip een actie werd genomen. Ad hoc schema&#39;s vangen gebieden die namespaces voor gebruik slechts door één enkele dataset zijn. Zie de documentatie voor meer informatie over gegevensgedrag in Platform."
+>abstract="Gegevens die zijn bedoeld voor gebruik in Experience Platform, worden gegroepeerd in drie gedragstypen: record, tijdreeks en ad hoc. De schema&#39;s van het verslag verstrekken informatie over de attributen van een onderwerp, terwijl de tijdreeksregelingen een momentopname van het systeem vangen op het tijdstip een actie werd genomen. Ad hoc schema&#39;s vangen gebieden die namespaces voor gebruik slechts door één enkele dataset zijn. Zie de documentatie voor meer informatie over gegevensgedrag in Platform."
 
 Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen:
 
 * **Opnemen**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
 * **Tijdreeksen**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
-* **Ad hoc**: Vangt gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor Experience Platform, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
+* **Ad hoc**: Hiermee legt u velden vast die een naam hebben gekregen die alleen door één gegevensset kan worden gebruikt. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor Experience Platform, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
 
 Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen.
 
@@ -67,7 +67,7 @@ Hoewel u uw eigen klassen kunt definiëren in het dialoogvenster [!DNL Schema Re
 
 >[!NOTE]
 >
->Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hocschema&#39;s worden automatisch geproduceerd door de processen van het Platform die hen gebruiken, maar zij kunnen ook worden [manueel gecreeerd gebruikend de Registratie API van het Schema](./tutorials/ad-hoc.md).
+>Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hocschema&#39;s worden automatisch geproduceerd door de processen van het Platform die hen gebruiken, maar zij kunnen ook worden [handmatig gemaakt met de API voor het schemaregister](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -133,7 +133,7 @@ Adobe Experience Platform Data Science Workspace maakt gebruik van machinaal ler
 
 Met de Werkruimte van de Wetenschap van Gegevens, kunnen de gegevenswetenschappers intelligente dienst gemakkelijk creëren APIs aangedreven door machine het leren. Deze services werken samen met andere Adobe-oplossingen, zoals Adobe Target en Adobe Analytics Cloud, om u te helpen persoonlijke, doelgerichte digitale ervaringen te automatiseren.
 
-Zie voor meer informatie over het gebruik van Experience Platform-gegevens voor energieinzichten de [Overzicht van de Data Science Workspace](../data-science-workspace/home.md).
+Zie voor meer informatie over het gebruik van Experience Platform-gegevens voor energieinzichten de [Overzicht van de Data Science-werkruimte](../data-science-workspace/home.md).
 
 ## Volgende stappen en extra bronnen
 

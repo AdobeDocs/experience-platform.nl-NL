@@ -14,12 +14,12 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Bovenste handelingen"
->abstract="Deze widget geeft de belangrijkste soorten acties weer die binnen de geselecteerde tijdlijn in het Experience Platform zijn uitgevoerd. Selecteer **Audits** in de linkernavigatie."
+>abstract="Deze widget geeft de belangrijkste soorten acties weer die binnen de geselecteerde tijdlijn in het Experience Platform zijn uitgevoerd. Als u de volledige lijst met opgenomen handelingen in het Platform wilt weergeven, selecteert u **Audits** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
->title="Bovenste gebruikers"
->abstract="Deze widget geeft de gebruikers weer die de meeste handelingen in het Experience Platform binnen de geselecteerde tijdlijn hebben uitgevoerd. Selecteer **Audits** in de linkernavigatie."
+>title="Belangrijkste gebruikers"
+>abstract="Deze widget geeft de gebruikers weer die de meeste handelingen in het Experience Platform binnen de geselecteerde tijdlijn hebben uitgevoerd. Als u de volledige lijst met opgenomen handelingen in het Platform wilt weergeven, selecteert u **Audits** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
@@ -36,7 +36,7 @@ Dit document behandelt controlelogboeken in Platform, met inbegrip van hoe te om
 
 In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlogboeken worden vastgelegd:
 
-| Resource | Acties |
+| Bron | Acties |
 | --- | --- |
 | [Toegangsbeheerbeleid (op kenmerken gebaseerd toegangsbeheer)](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
@@ -75,7 +75,7 @@ Als u controlelogboeken wilt weergeven en exporteren, moet u beschikken over **[
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Instructies"
->abstract="<ul><li>Selecteren <b>Audits</b> in de linkernavigatie. De werkruimte Audits toont een lijst van geregistreerde logboeken, door gebrek dat van meest recente aan minst recente wordt gesorteerd.</li>   <li> OPMERKING: Auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u terug op gegevens moet kijken ouder dan 365 dagen, zou u logboeken bij een regelmatige kring moeten uitvoeren om aan uw interne beleidsvereisten te voldoen. </li><li>Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven. </li><li>Selecteer het trechter-pictogram om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de geselecteerde filters. </li><li>Selecteer **Logbestand downloaden**.</li><li>Voor meer hulp met deze functie raadpleegt u de <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html">overzicht van auditlogboeken</a> op Experience League.</li></ul>"
+>abstract="<ul><li>Selecteren <b>Audits</b> in de linkernavigatie. De werkruimte Audits toont een lijst van geregistreerde logboeken, door gebrek dat van meest recente aan minst recente wordt gesorteerd.</li>   <li> OPMERKING: auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u terug op gegevens moet kijken ouder dan 365 dagen, zou u logboeken bij een regelmatige kring moeten uitvoeren om aan uw interne beleidsvereisten te voldoen. </li><li>Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven. </li><li>Selecteer het trechter-pictogram om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de geselecteerde filters. </li><li>Selecteer **Logbestand downloaden**.</li><li>Voor meer hulp met deze functie raadpleegt u de <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html">overzicht van auditlogboeken</a> op Experience League.</li></ul>"
 
 U kunt controlelogboeken voor verschillende eigenschappen van het Experience Platform binnen bekijken **[!UICONTROL Audits]** in de gebruikersinterface van het Platform. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
 
@@ -108,7 +108,7 @@ De volgende filters zijn beschikbaar voor controlegebeurtenissen in UI:
 | [!UICONTROL Status] | Filteren op de vraag of de handeling is toegestaan (voltooid) of geweigerd vanwege een gebrek aan [toegangsbeheer](../../../access-control/home.md) machtigingen. |
 | [!UICONTROL Date] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. De gegevens kunnen met een raadplegingsperiode van 90 dagen worden uitgevoerd (bijvoorbeeld, 2021-12-15 aan 2022-03-15). Dit kan per gebeurtenistype verschillen. |
 
-Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** om alle filters te verwijderen.
+Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** alle filters verwijderen.
 
 ![Het dashboard Audits met duidelijk benadrukt filter.](../../images/audit-logs/clear-filters.png)
 
@@ -144,7 +144,7 @@ Raadpleeg het volgende voor meer informatie over het beheren van auditlogs voor 
 
 ## Volgende stappen en extra bronnen
 
-Deze gids besprak hoe te om controlelogboeken in Experience Platform te beheren. Raadpleeg de documentatie over voor meer informatie over hoe u de activiteiten van Platforms kunt controleren. [Waarnembaarheidsinzichten](../../../observability/home.md) en [controle gegevensinvoer](../../../ingestion/quality/monitor-data-ingestion.md).
+Deze gids besprak hoe te om controlelogboeken in Experience Platform te beheren. Raadpleeg de documentatie over voor meer informatie over hoe u de activiteiten van Platforms kunt controleren. [Waarnembaarheidsinzichten](../../../observability/home.md) en [controle van gegevensinvoer](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Bekijk de volgende video om uw inzicht in auditlogs in Experience Platform te versterken:
 

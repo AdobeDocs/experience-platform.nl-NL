@@ -18,7 +18,7 @@ In deze zelfstudie worden de stappen beschreven voor het controleren van gegeven
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Gegevensstromen](../../../dataflows/home.md): Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile]en [!DNL Destinations].
+* [Gegevensstromen](../../../dataflows/home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
    * [Dataflow-uitvoering](../../notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
 * [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -27,7 +27,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
-Selecteer **[!UICONTROL Dataflows]** in de bovenste koptekst.
+Als u bestaande gegevensstromen voor streamingbronnen wilt weergeven, selecteert u **[!UICONTROL Dataflows]** in de bovenste koptekst.
 
 ![catalogus](../../images/tutorials/monitor-streaming/catalog.png)
 
@@ -53,13 +53,13 @@ De [!UICONTROL Dataflow Activity] Deze pagina bevat specifieke informatie over u
 
 Standaard bevatten de weergegeven gegevens de innamesnelheden van de laatste zeven dagen. Selecteren **[!UICONTROL Last 7 days]** om het tijdkader van getoonde verslagen aan te passen.
 
-Er wordt een kalenderpop-upvenster weergegeven met opties voor alternatieve ingstijd. U kunt het dataflow runtime kader vormen om stroomlooplooppas van de vorige zeven dagen of de laatste 30 dagen te bekijken. U kunt ook de interactieve kalender configureren om een aangepast tijdframe van uw keuze in te stellen. Als u klaar bent, selecteert u **[!UICONTROL Apply]**.
+Er wordt een kalenderpop-upvenster weergegeven met opties voor alternatieve ingstijd. U kunt het dataflow runtime kader vormen om stroomlooplooppas van de vorige zeven dagen of de laatste 30 dagen te bekijken. U kunt ook de interactieve kalender configureren om een aangepast tijdframe van uw keuze in te stellen. Selecteer **[!UICONTROL Apply]**.
 
 ![kalender](../../images/tutorials/monitor-streaming/calendar.png)
 
 In de onderste helft van de pagina wordt informatie weergegeven over het aantal records dat per flowuitvoering is ontvangen, opgenomen en mislukt. Elke stroomrun wordt opgenomen binnen een uurvenster.
 
-![dataflow-run](../../images/tutorials/monitor-streaming/dataflow-run.png)
+![gegevensstroom](../../images/tutorials/monitor-streaming/dataflow-run.png)
 
 ### Metrische gegevens voor gegevensstroomuitvoering {#dataflow-run-metrics}
 
@@ -84,25 +84,25 @@ In de onderste helft van de pagina wordt informatie weergegeven over het aantal 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
 >title="Records met waarschuwingen"
->abstract="De Verslagen met Waarschuwingen wijst op het totale aantal verslagen die met mapperomzettingswaarschuwingen worden opgenomen. Alle maptransformatiefouten worden gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingesloten, worden als geslaagd beschouwd met een waarschuwing"
+>abstract="De Verslagen met Waarschuwingen wijst op het totale aantal verslagen die met mapperomzettingswaarschuwingen worden opgenomen. Alle maptransformatiefouten worden gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingeslikt, worden als geslaagd beschouwd met een waarschuwing"
 >text="Learn more in documentation"
 
 Elke individuele dataflow run toont de volgende details:
 
-* **[!UICONTROL Dataflow run start]**: De tijd dat dataflow begon bij.
+* **[!UICONTROL Dataflow run start]**: De tijd waarop de dataflow is gestart.
 * **[!UICONTROL Processing time]**: De hoeveelheid tijd die het voor dataflow aan proces nam.
 * **[!UICONTROL Records Received]**: Het totale aantal verslagen die in dataflow van een bronschakelaar worden ontvangen.
 * **[!UICONTROL Records Ingested]**: Het totale aantal records dat wordt ingevoerd in [!DNL Data Lake].
 * **[!UICONTROL Records with Warnings]**: Het totale aantal records met waarschuwingen die zijn opgenomen. Alle maptransformatiefouten worden gerapporteerd als waarschuwingen en rijen die gedeeltelijk worden ingepakt, worden als `success` met een waarschuwing. **Opmerking**: Ondersteuning voor het opnemen van records met waarschuwingen is alleen beschikbaar voor streamingbronnen.
-* **[!UICONTROL Records Failed]**: Het aantal records waarin geen records zijn opgenomen [!DNL Data Lake] als gevolg van fouten in de gegevens.
-* **[!UICONTROL Ingestion Rate]**: Het succespercentage records die worden opgenomen in [!DNL Data Lake]. Deze maatstaf is van toepassing wanneer [!UICONTROL Partial Ingestion] is ingeschakeld.
-* **[!UICONTROL Status]**: Vertegenwoordigt de staat de dataflow is in: ofwel [!UICONTROL Completed] of [!UICONTROL Processing]. [!UICONTROL Completed] betekent dat alle verslagen voor de overeenkomstige dataflow looppas binnen de periode van één uur werden verwerkt. [!UICONTROL Processing] betekent dat de dataflow run nog niet is voltooid.
+* **[!UICONTROL Records Failed]**: Het aantal records waarin geen gegevens zijn opgenomen [!DNL Data Lake] vanwege fouten in de gegevens.
+* **[!UICONTROL Ingestion Rate]**: Het succespercentage records waarin [!DNL Data Lake]. Deze maatstaf is van toepassing wanneer [!UICONTROL Partial Ingestion] is ingeschakeld.
+* **[!UICONTROL Status]**: Geeft de status aan waarin de dataflow zich bevindt: een van de volgende [!UICONTROL Completed] of [!UICONTROL Processing]. [!UICONTROL Completed] betekent dat alle verslagen voor de overeenkomstige dataflow looppas binnen de periode van één uur werden verwerkt. [!UICONTROL Processing] betekent dat de dataflow run nog niet is voltooid.
 
 De [!UICONTROL Dataflow run overview] De pagina bevat extra informatie over uw dataflow, zoals zijn overeenkomstige dataflow looppas identiteitskaart, doeldataset, en organisatieidentiteitskaart
 
 Een stroom die met fouten wordt uitgevoerd bevat ook [!UICONTROL Dataflow run errors] , waarin de specifieke fout wordt weergegeven die tot de fout van de uitvoering heeft geleid, en het totale aantal records dat is mislukt.
 
-![data-run-overview](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
+![dataFlow-run-overview](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
 
 ### Records met waarschuwingen weergeven {#warnings}
 

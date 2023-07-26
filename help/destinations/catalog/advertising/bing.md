@@ -1,5 +1,5 @@
 ---
-keywords: reclame; borden;
+keywords: reclame; banden;
 title: Microsoft Bing-verbinding
 description: Met de Microsoft Bing-verbindingsbestemming kunt u gerichte digitale campagnes heroriënteren en publieksgericht voeren in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
@@ -55,7 +55,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek naar de [!DNL Microsoft Bing] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
-* [!UICONTROL Account ID]: dit is uw [!DNL Bing Ads CID], in geheel-getalnotatie.
+* [!UICONTROL Account ID]: dit is jouw [!DNL Bing Ads CID], in gehele notatie.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -75,19 +75,19 @@ Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
-* **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Account ID]**: Uw [!DNL Bing Ads Customer ID] (CID). Uw CID is een geheel getal, dat u kunt vinden in de URL wanneer u zich aanmeldt [!DNL Microsoft Advertising].
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -96,7 +96,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Toewijzing-id"
->abstract="Voer de numerieke publiek-id voor de ring in waaraan u het geselecteerde segment wilt toewijzen. Indien [!UICONTROL Mapping ID] komt niet overeen met een publiek-id in de bestemming Bing, worden de verwachte publieksgegevens in uw Bing-account niet weergegeven."
+>abstract="Voer de numerieke publiek-id voor de ring in waaraan u het geselecteerde segment wilt toewijzen. Indien [!UICONTROL Mapping ID] komt niet overeen met een publieks-id in de Bing-bestemming, worden de verwachte publieksgegevens in uw Bing-account niet weergegeven."
 
 >[!IMPORTANT]
 > 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;gebruikershandleiding voor gegevensgebruiksbeleid
 solution: Experience Platform
 title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
-description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
+description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleidsregels voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
@@ -41,7 +41,7 @@ In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Policies]** om de *
 
 ![](../images/policies/browse-policies.png)
 
-Als u toegang hebt tot beleid voor toestemming, selecteert u de optie **[!UICONTROL Consent policies]** schakelen om ze weer te geven in het dialoogvenster [!UICONTROL Browse] tab.
+Als u toegang hebt tot beleid voor toestemming, selecteert u de optie **[!UICONTROL Consent policies]** schakelen om ze weer te geven in de [!UICONTROL Browse] tab.
 
 ![](../images/policies/consent-policy-toggle.png)
 
@@ -51,14 +51,14 @@ Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een a
 
 ## Een aangepast beleid maken {#create-policy}
 
-Selecteer **[!UICONTROL Create policy]** in de rechterbovenhoek van het dialoogvenster **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** werkruimte.
+Selecteer **[!UICONTROL Create policy]** in de rechterbovenhoek van het **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** werkruimte.
 
 ![](../images/policies/create-policy-button.png)
 
 Afhankelijk van of u deel uitmaakt van de bètaversie voor het toestemmingsbeleid, komt een van de volgende situaties voor:
 
 * Als u geen deel uitmaakt van de bètaversie, wordt u onmiddellijk naar de werkstroom gebracht voor [invoering van een beleid voor gegevensbeheer](#create-governance-policy).
-* Als u deel uitmaakt van de bètaversie, biedt een dialoogvenster een extra optie voor [een beleid voor instemming ontwikkelen](#consent-policy).
+* Als u deel uitmaakt van de bètaversie, biedt een dialoogvenster een extra optie voor [een beleid voor instemming tot stand brengen](#consent-policy).
   ![](../images/policies/choose-policy-type.png)
 
 ### Beleid voor gegevensbeheer en instemming samen gebruiken {#combine-policies}
@@ -119,7 +119,7 @@ Als u het beleid voor toestemming wilt gebruiken, moet u toestemmingskenmerken i
 Het beleid van de goedkeuring bestaat uit twee logische componenten:
 
 * **[!UICONTROL If]**: De voorwaarde die de beleidscontrole zal teweegbrengen. Dit kan gebaseerd zijn op een bepaalde marketingactie die wordt uitgevoerd, de aanwezigheid van bepaalde labels voor gegevensgebruik of een combinatie van beide.
-* **[!UICONTROL Then]**: De toestemmingskenmerken die aanwezig moeten zijn opdat een profiel wordt opgenomen in de actie die het beleid heeft geïnitieerd.
+* **[!UICONTROL Then]**: De toestemmingskenmerken die aanwezig moeten zijn om een profiel op te nemen in de actie die het beleid heeft geïnitieerd.
 
 #### Voorwaarden configureren {#consent-conditions}
 
@@ -143,9 +143,9 @@ Als u meer dan één voorwaarde selecteert, kunt u het pictogram gebruiken dat t
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Dan voorwaarde"
->abstract="Zodra uw &quot;als&quot;voorwaarde is bepaald, gebruik de sectie &quot;toen&quot;om minstens één toestemmingsattribuut van het unieschema te selecteren. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is."
+>abstract="Zodra uw &quot;als&quot;voorwaarde is bepaald, gebruik de sectie &quot;toen&quot;om minstens één toestemmingsattribuut van het unieschema te selecteren. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid betrekking heeft."
 
-Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid van toepassing is. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
+Onder de **[!UICONTROL Then]** selecteert u ten minste één toestemmingskenmerk in het schema union. Dit is het kenmerk dat aanwezig moet zijn om profielen op te nemen in de actie waarop dit beleid betrekking heeft. U kunt een van de beschikbare opties in de lijst kiezen of **[!UICONTROL View all]** om de attributen van het unieschema direct te kiezen.
 
 Wanneer het selecteren van de toestemmingsattributen, kies de waarden voor de attributen die u dit beleid wilt controleren.
 
@@ -175,7 +175,7 @@ Nadat u een toestemmingsbeleid hebt gecreeerd en toegelaten, kunt u voorproef ho
 
 Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Voor een individueel beleid dat voor handhaving moet worden overwogen, moet u dat beleid manueel toelaten door API of UI.
 
-U kunt het beleid in- of uitschakelen in het dialoogvenster **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** werkruimte. Selecteer een aangepast beleid in de lijst om de details aan de rechterkant weer te geven. Onder **[!UICONTROL Status]**, selecteert u de schakelknop om het beleid in of uit te schakelen.
+U kunt het beleid in- of uitschakelen in het dialoogvenster **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** werkruimte. Selecteer een aangepast beleid in de lijst om de details ervan rechts weer te geven. Onder **[!UICONTROL Status]**, selecteert u de schakelknop om het beleid in of uit te schakelen.
 
 ![](../images/policies/enable-policy.png)
 
@@ -187,7 +187,7 @@ In de **[!UICONTROL Policies]** werkruimte, selecteert u de **[!UICONTROL Market
 
 ## Een marketingactie maken {#create-marketing-action}
 
-Als u een nieuwe aangepaste marketingactie wilt maken, selecteert u **[!UICONTROL Create marketing action]** in de rechterbovenhoek van het dialoogvenster **[!UICONTROL Marketing actions]** in de **[!UICONTROL Policies]** werkruimte.
+Als u een nieuwe aangepaste marketingactie wilt maken, selecteert u **[!UICONTROL Create marketing action]** in de rechterbovenhoek van het **[!UICONTROL Marketing actions]** in de **[!UICONTROL Policies]** werkruimte.
 
 ![](../images/policies/create-marketing-action.png)
 

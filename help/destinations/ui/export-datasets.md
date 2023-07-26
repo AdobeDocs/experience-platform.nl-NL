@@ -35,7 +35,7 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Wanneer activeert u het publiek of exporteert u gegevenssets {#when-to-activate-audiences-or-activate-datasets}
+## Wanneer moet u het publiek activeren of gegevenssets exporteren {#when-to-activate-audiences-or-activate-datasets}
 
 Sommige op dossier-gebaseerde bestemmingen in de catalogus van het Experience Platform steunen zowel publieksactivering als dataset de uitvoer.
 
@@ -52,7 +52,7 @@ Om datasets naar de bestemmingen van de cloudopslag uit te voeren, moet u met su
 
 Om datasets uit te voeren, hebt u nodig **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om datasets uit te voeren en dat de bestemming het uitvoeren van datasets steunt, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** of **[!UICONTROL Export datasets]** controle, dan hebt u de aangewezen toestemmingen.
+Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om datasets uit te voeren en dat de bestemming het uitvoeren van datasets steunt, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** of een **[!UICONTROL Export datasets]** controle, dan hebt u de aangewezen toestemmingen.
 
 ## Kies uw bestemming {#select-destination}
 
@@ -87,11 +87,11 @@ Gebruik de controlevakjes links van de datasetnamen om de datasets te selecteren
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Exportopties voor bestanden voor gegevenssets"
->abstract="Selecteren **Incrementele bestanden exporteren** om alleen de gegevens te exporteren die sinds de laatste export aan de gegevensset zijn toegevoegd. <br> De eerste incrementele bestandsuitvoer bevat alle gegevens in de gegevensset, die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de gegevens die sinds de eerste export aan de gegevensset zijn toegevoegd."
+>abstract="Selecteren **Incrementele bestanden exporteren** alleen de gegevens exporteren die sinds de laatste export aan de gegevensset zijn toegevoegd. <br> De eerste incrementele bestandsuitvoer bevat alle gegevens in de gegevensset, die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de gegevens die sinds de eerste export aan de gegevensset zijn toegevoegd."
 
 In de **[!UICONTROL Scheduling]** stap, kunt u een begindatum en een uitvoerkadentie voor uw datasetuitvoer plaatsen.
 
-De **[!UICONTROL Export incremental files]** automatisch geselecteerd. Dit leidt tot de uitvoer waar het eerste dossier een volledige momentopname van de dataset is en de verdere dossiers zijn stijgende toevoegingen aan de dataset sinds de vorige uitvoer.
+De **[!UICONTROL Export incremental files]** wordt automatisch geselecteerd. Dit leidt tot de uitvoer waar het eerste dossier een volledige momentopname van de dataset is en de verdere dossiers zijn stijgende toevoegingen aan de dataset sinds de vorige uitvoer.
 
 >[!IMPORTANT]
 >
@@ -101,14 +101,14 @@ De **[!UICONTROL Export incremental files]** automatisch geselecteerd. Dit leidt
 
 1. Gebruik de **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
-   * **[!UICONTROL Daily]**: Plan de incrementele bestandsexport eenmaal per dag, elke dag, op het door u opgegeven tijdstip.
+   * **[!UICONTROL Daily]**: Plan het incrementele bestand eenmaal per dag, elke dag, op het opgegeven tijdstip.
    * **[!UICONTROL Hourly]**: Plan het incrementele bestand om de 3, 6, 8 of 12 uur.
 
 2. Gebruik de **[!UICONTROL Time]** om de tijd van de dag te kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
 
 3. Gebruik de **[!UICONTROL Date]** om het interval te kiezen waarin het exporteren moet plaatsvinden. In de bètaversie van de functie is het niet mogelijk een einddatum voor de exportbewerking in te stellen. Voor meer informatie bekijkt u de [bekende beperkingen](#known-limitations) sectie.
 
-4. Selecteren **[!UICONTROL Next]** om het programma op te slaan en door te gaan naar **[!UICONTROL Review]** stap.
+4. Selecteren **[!UICONTROL Next]** om het programma op te slaan en door te gaan naar de **[!UICONTROL Review]** stap.
 
 >[!NOTE]
 > 
@@ -122,7 +122,7 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 
 ## Controleren of gegevensset is geëxporteerd {#verify}
 
-Bij het exporteren van gegevenssets maakt Experience Platform een `.json` of `.parquet` in de opslaglocatie die u hebt opgegeven. Verwacht dat een nieuw bestand op uw opslaglocatie wordt geplaatst volgens het exportschema dat u hebt opgegeven.
+Bij het exporteren van gegevenssets maakt Experience Platform een `.json` of `.parquet` in de opslaglocatie die u hebt opgegeven. Verwacht dat een nieuw bestand op uw opslaglocatie wordt gedeponeerd volgens het exportschema dat u hebt opgegeven.
 
 Experience Platform leidt tot een omslagstructuur in de opslagplaats u specificeerde, waar het de uitgevoerde datasetdossiers bewaart. Voor elke exporttijd wordt een nieuwe map gemaakt volgens het onderstaande patroon:
 
@@ -149,7 +149,7 @@ Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen 
 
 Om een dataset uit een bestaande gegevensstroom te verwijderen, volg de stappen hieronder:
 
-1. Aanmelden bij de [UI Experience Platform](https://experience.adobe.com/platform/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
+1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://experience.adobe.com/platform/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
 
    ![De bestemming bladert mening met een getoonde bestemmingsverbinding en de rest vaag uit.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -159,7 +159,7 @@ Om een dataset uit een bestaande gegevensstroom te verwijderen, volg de stappen 
 
 1. Van de **[!UICONTROL Activation data]** kolom, selecteer de datasetcontrole om alle datasets te bekijken die aan dit de uitvoerdataflow in kaart worden gebracht.
 
-   ![De beschikbare gegevenssetnavigatieoptie die in de kolom Gegevens van de Activering wordt benadrukt.](../assets/ui/export-datasets/go-to-datasets-data.png)
+   ![De beschikbare gegevenssetnavigatieoptie die in de kolom van de Gegevens van de Activering wordt benadrukt.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
 1. De **[!UICONTROL Activation data]** wordt de pagina voor het doel weergegeven. Selecteren **[!UICONTROL Remove dataset]** in het rechterspoor om het dialoogvenster voor het bevestigen van gegevenssets te openen.
 
@@ -171,7 +171,7 @@ Om een dataset uit een bestaande gegevensstroom te verwijderen, volg de stappen 
 
 ## Bekende beperkingen {#known-limitations}
 
-Houd rekening met de volgende beperkingen voor de bètaversie van het exporteren van datasets:
+Houd rekening met de volgende beperkingen voor de bètaversie van het exporteren van gegevenssets:
 
 * Er is momenteel één machtiging (**[!UICONTROL Manage and Activate Dataset Destinations]**) die het beheren en activeren van toestemmingen op datasetbestemmingen omvat. Deze controles zullen in de toekomst in meer korrelige toestemmingen worden verdeeld. Controleer de [vereiste machtigingen](#permissions) sectie voor een volledige lijst van toestemmingen die u datasets moet uitvoeren.
 * Momenteel, kunt u stijgende dossiers slechts uitvoeren en een einddatum kan niet voor uw datasetuitvoer worden geselecteerd.

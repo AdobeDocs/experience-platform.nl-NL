@@ -19,7 +19,7 @@ Op het dashboard voor bewaking ziet u een visuele weergave van de activiteit van
 
 ## Aan de slag {#getting-started}
 
-- [Gegevensstromen](../home.md): Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile]en [!DNL Destinations].
+- [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
    - [Dataflow-uitvoering](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
 - [Identiteitsservice](../../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -34,10 +34,10 @@ Op het dashboard voor bewaking ziet u een visuele weergave van de activiteit van
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
->title="Gegevens gegevensstroom"
+>title="Gegevens gegevensstroom uitvoeren"
 >abstract="De Dataflow looppas detailpagina toont meer informatie over uw Dataslow van de Identiteit, met inbegrip van zijn organisatie ID en dataflow looppas identiteitskaart"
 
-Om toegang te krijgen tot **[!UICONTROL Identities]** dashboard, selecteren **[!UICONTROL Monitoring]** in de linkernavigatie. Eén keer op de knop **[!UICONTROL Monitoring]** pagina, selecteert u de **[!UICONTROL Identities]** kaart.
+Als u toegang wilt krijgen tot **[!UICONTROL Identities]** dashboard, selecteren **[!UICONTROL Monitoring]** in de linkernavigatie. Eén keer op de knop **[!UICONTROL Monitoring]** pagina, selecteert u de **[!UICONTROL Identities]** kaart.
 
 ![De identiteitskaart van Identiteiten. Informatie over het aantal ontvangen verslagen, het aantal opgenomen verslagen, en het succestarief wordt getoond.](../assets/ui/monitor-identities/focus-card.png)
 

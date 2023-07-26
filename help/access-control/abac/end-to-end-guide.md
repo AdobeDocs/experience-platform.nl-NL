@@ -24,9 +24,9 @@ Deze functionaliteit staat u toe om schemagebieden, segmenten, etc. met etikette
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+   * [Zelfstudie Schema-editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): De segmenteringsengine binnen [!DNL Platform] gebruikt om publiekssegmenten van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
 
 ### Hoofdlettergebruik
@@ -45,7 +45,7 @@ U zult:
 * [Label de rollen voor uw gebruikers](#label-roles): Gebruik het voorbeeld van een zorgleverancier (ACME Business Group) wiens marketinggroep samenwerkt met externe bureaus.
 * [Etiketteer uw middelen (schemagebieden en segmenten)](#label-resources): Wijs het **[!UICONTROL PHI/ Regulated Health Data]** label aan schemamiddelen en segmenten.
 * 
-   * [Activeer het beleid dat hen verbindt: ](#policy): Laat het standaardbeleid toe om toegang tot schemagebieden en segmenten te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
+   * [Activeer het beleid dat hen verbindt:](#policy): Laat het standaardbeleid toe om toegang tot schemagebieden en segmenten te verhinderen door de etiketten op uw middelen aan de etiketten in uw rol te verbinden. Gebruikers met overeenkomende labels krijgen dan toegang tot het schemaveld en segmenten in alle sandboxen.
 
 ## Toestemmingen
 
@@ -53,9 +53,9 @@ U zult:
 
 Doorheen [!UICONTROL Permissions], kunt u rollen tot stand brengen en beheren en de gewenste middeltoestemmingen voor deze rollen toewijzen. [!UICONTROL Permissions] kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld.
 
-Neem contact op met de systeembeheerder om toegang te krijgen als u geen beheerdersrechten hebt.
+Neem contact op met de systeembeheerder als u geen beheerdersrechten hebt.
 
-Als u beheerdersrechten hebt, gaat u naar [Adobe Experience Cloud](https://experience.adobe.com/) en meld u aan met uw Adobe-referenties. Zodra het programma geopend, **[!UICONTROL Overview]** wordt weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Deze pagina toont de producten uw organisatie aan, samen met andere controles wordt geabonneerd om gebruikers en beheerders aan de organisatie toe te voegen. Selecteren **[!UICONTROL Permissions]** om de werkruimte voor de integratie van uw Platform te openen.
+Als u beheerdersrechten hebt, gaat u naar [Adobe Experience Cloud](https://experience.adobe.com/) en meld u aan met uw Adobe-referenties. Zodra het programma geopend, **[!UICONTROL Overview]** wordt weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Deze pagina toont de producten uw organisatie aan, samen met andere controles wordt geabonneerd om gebruikers en beheerders aan de organisatie toe te voegen. Selecteren **[!UICONTROL Permissions]** om de werkruimte voor uw Platform integratie te openen.
 
 ![Afbeelding van het machtigingsproduct dat wordt geselecteerd in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -118,9 +118,9 @@ Selecteren **[!UICONTROL Schemas]** van de linkernavigatie en selecteer dan **[!
 
 ![Afbeelding met het ACME-schema voor gezondheidszorg dat wordt geselecteerd op het tabblad Schema&#39;s](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Selecteer vervolgens **[!UICONTROL Labels]** om een lijst te zien die de gebieden verbonden aan uw schema toont. Hier kunt u labels toewijzen aan een of meerdere velden tegelijk. Selecteer **[!UICONTROL BloodGlucose]** en **[!UICONTROL InsulinLevel]** velden, en selecteer vervolgens **[!UICONTROL Apply access and data governance labels]**.
+Selecteer vervolgens **[!UICONTROL Labels]** om een lijst te zien die de gebieden verbonden aan uw schema toont. Hier kunt u labels toewijzen aan een of meerdere velden tegelijk. Selecteer de **[!UICONTROL BloodGlucose]** en **[!UICONTROL InsulinLevel]** en selecteer vervolgens **[!UICONTROL Apply access and data governance labels]**.
 
-![Afbeelding waarop de geselecteerde BloodGlucose en InsulinLevel wordt weergegeven en waarop de geselecteerde labels voor toegang en gegevensbeheer worden toegepast](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Afbeelding waarop de geselecteerde labels BloodGlucose en InsulinLevel worden weergegeven en waarop de geselecteerde labels voor toegang en gegevensbeheer worden toegepast](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
 De **[!UICONTROL Edit labels]** wordt weergegeven, zodat u de labels kunt kiezen die u op de schemavelden wilt toepassen. Selecteer voor dit gebruik de optie **[!UICONTROL PHI/ Regulated Health Data]** label, selecteert u vervolgens **[!UICONTROL Save]**.
 
@@ -157,7 +157,7 @@ Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]**.
 
 Het standaardtoegangsbeheerbeleid zal hefboometiketten gebruiken om te bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. In dit voorbeeld wordt toegang tot schemavelden en -segmenten in alle sandboxen geweigerd voor gebruikers die zich niet in een rol bevinden die de bijbehorende labels in het schemaveld heeft.
 
-Selecteer [!UICONTROL Permissions] van de linkernavigatie en selecteer dan **[!UICONTROL Policies]**.
+Als u het toegangsbeheerbeleid wilt activeren, selecteert u [!UICONTROL Permissions] van de linkernavigatie en selecteer dan **[!UICONTROL Policies]**.
 
 ![Lijst met weergegeven beleidsregels](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 

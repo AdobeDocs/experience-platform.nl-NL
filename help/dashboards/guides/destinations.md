@@ -27,9 +27,9 @@ Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organ
 
 ## Ontdek de [!UICONTROL Destinations] dashboard {#explore}
 
-Als u naar het dashboard voor doelen wilt navigeren binnen de interface van het Platform, selecteert u **[!UICONTROL Destinations]** in het linkerspoor, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Om aan het bestemmingdashboard binnen UI van het Platform te navigeren, selecteert **[!UICONTROL Destinations]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
-De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast het vervolgkeuzemenu van het doel. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. Het tijdstempel van de momentopname wordt in UTC weergegeven; het bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+De datum en tijd van de meest recente opname worden boven aan het dialoogvenster [!UICONTROL Overview] naast het vervolgkeuzemenu van het doel. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
 >[!NOTE]
 >
@@ -37,9 +37,9 @@ De datum en tijd van de meest recente momentopname worden getoond bij de bovenka
 
 ![Het overzicht van de Doelen UI van het Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
 
-### De [!UICONTROL Destinations] dashboard {#modify}
+### Wijzig de [!UICONTROL Destinations] dashboard {#modify}
 
-Selecteren **[!UICONTROL Modify dashboard]** om de verschijning van het dashboard van bestemmingen te veranderen. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot de widgetbibliotheek. In de widgetbibliotheek kunt u de beschikbare widgets verkennen en aangepaste widgets maken voor uw organisatie.
+Selecteren **[!UICONTROL Modify dashboard]** om de verschijning van het dashboard van bestemmingen te veranderen. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en de widgetbibliotheek openen. In de widgetbibliotheek kunt u de beschikbare widgets verkennen en aangepaste widgets maken voor uw organisatie.
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
 
@@ -63,7 +63,7 @@ Voordat u doorgaat met de beschrijvingen van standaardwidgets, moet u de definit
 * **Publiek**: Een reeks personen, accounts, huishoudens of andere entiteiten die gemeenschappelijke kenmerken en gedragingen delen.
 * **Toegewezen/toewijzen**: Gegevenstoewijzing is het proces waarbij brongegevensvelden worden toegewezen aan verwante doelvelden in een doel.
 * **Identiteit**: Een identiteit is een id die uniek een individuele klant vertegenwoordigt, zoals een cookie-id, apparaat-id of e-mailadres.
-* **Activeren**: Activeren is de actie die door een gebruiker wordt ondernomen om een publiek of profielen aan een bestemming zoals Oracle Eloqua, Google, of Marketing Cloud Salesforce in kaart te brengen.
+* **Activeren**: Activate is de actie die door een gebruiker wordt uitgevoerd om een publiek of profielen toe te wijzen aan een bestemming zoals Oracle Eloqua, Google, of Marketing Cloud Salesforce.
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
@@ -143,7 +143,7 @@ Raadpleeg voor meer informatie over het werken met Experience Platforms [Overzic
 
 De **[!UICONTROL Recently activated audiences by destination]** widget geeft de vijf meest recente geactiveerde doelgroepen in aflopende volgorde weer, afhankelijk van het doel dat u hebt gekozen in de overzichtsvervolgkeuzelijst. Het lijkt op het [!UICONTROL Recently activated audiences] widget, maar de gegevens worden weergegeven **alleen** wordt toegepast op het geselecteerde doel.
 
-Deze widget bevat twee metriek: de naam van het publiek en de datum waarop het publiek voor het laatst naar de bestemming is gebracht. De weergegeven gegevens zijn correct vanaf de laatste dagelijkse momentopname.
+Deze widget bevat twee metriek: de naam van het publiek en de datum waarop het publiek voor het laatst naar de bestemming is geactiveerd. De weergegeven gegevens zijn correct vanaf de laatste dagelijkse momentopname.
 
 U kunt de details van een publiek bekijken door de naam van het publiek van de getoonde lijst te selecteren.
 
@@ -166,7 +166,7 @@ Het tweede vervolgkeuzemenu bevat alle beschikbare doelgroepen die naar de doela
 
 ![De widget voor de doelgrootte.](../images/destinations/audience-size-trend.png)
 
-De **[!UICONTROL Audience size trend]** widget biedt een [!UICONTROL Captions] in de rechterbovenhoek van de widget. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen. Een machine het leren model produceert automatisch titels om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven door de grafiek en de publieksgegevens te analyseren.
+De **[!UICONTROL Audience size trend]** widget biedt een [!UICONTROL Captions] rechtsboven in de widget. Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen. Een machine het leren model produceert automatisch titels om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven door de grafiek en de publieksgegevens te analyseren.
 
 ![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor de doelgrootte.](../images/destinations/audience-size-trend-captions.png)
 
@@ -183,7 +183,7 @@ Met het vervolgkeuzemenu voor de doel-id filtert u het beschikbare publiek. De f
 
 In de kolom met identiteiten wordt het aantal bron-id&#39;s in het publiek geteld dat kan worden toegewezen aan de id die is gekozen in het vervolgkeuzemenu voor de widget-id.
 
-![Het niet-toegewezen publiek op identiteitswidget.](../images/destinations/unmapped-audiences-by-identity.png)
+![Het niet-toegewezen publiek op de identiteitswidget.](../images/destinations/unmapped-audiences-by-identity.png)
 
 Zie de sectie met voorwaarden voor de [definities van gebruikte termen](#prerequisites) in deze beschrijving.
 
@@ -205,7 +205,7 @@ De **[!UICONTROL Mapped audiences by identity]** in één oogopslag wordt de nad
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Algemeen publiek"
->abstract="Deze widget bevat een lijst met de bovenste vijf soorten publiek die worden geactiveerd via de doelaccount die boven aan de pagina is gekozen, en het doel dat is geselecteerd in het vervolgkeuzemenu van de widget. De lijst met soorten publiek wordt geordend op basis van de mate waarin ze zijn geactiveerd. Het laatst geactiveerde publiek wordt bovenaan weergegeven."
+>abstract="Deze widget bevat een lijst met de bovenste vijf soorten publiek die worden geactiveerd via de doelaccount die boven aan de pagina is gekozen, en het doel dat is geselecteerd in de widgetvervolgkeuzelijst. De lijst met soorten publiek wordt geordend op basis van de mate waarin ze zijn geactiveerd. Het laatst geactiveerde publiek wordt bovenaan weergegeven."
 
 De **[!UICONTROL Common audiences]** widget geeft een lijst weer met de bovenste vijf soorten publiek die worden geactiveerd via de doelaccount die boven aan de pagina is gekozen, en het doel dat is geselecteerd in de widgetvervolgkeuzelijst. De lijst met soorten publiek wordt geordend op basis van de mate waarin ze zijn geactiveerd. Het laatst geactiveerde publiek wordt bovenaan weergegeven.
 
@@ -217,15 +217,15 @@ De [!UICONTROL AUDIENCE SIZE] bevat het totale aantal profielen van elk vermeld 
 
 De [!UICONTROL Mapped audiences] widget geeft het totale aantal toegewezen doelgroepen weer dat kan worden geactiveerd voor het doel dat boven aan de pagina is geselecteerd.
 
-Selecteren **[!UICONTROL Audiences]** om naar het dashboard Soorten publiek te navigeren [!UICONTROL Browse] tab. Deze werkruimte toont een lijst van alle segmentdefinities voor uw organisatie.
+Selecteren **[!UICONTROL Audiences]** naar het dashboard Soorten publiek navigeren [!UICONTROL Browse] tab. Deze werkruimte toont een lijst van alle segmentdefinities voor uw organisatie.
 
 ![De widget voor toegewezen doelgroepen.](../images/destinations/mapped-audiences.png)
 
-### Gewijzigde gezondheid van het publiek {#mapped-audience-health}
+### Gewijzigde volksgezondheid {#mapped-audience-health}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
->title="Gewijzigde gezondheid van het publiek"
+>title="Gewijzigde volksgezondheid"
 >abstract="Deze widget biedt een lijst met maximaal 20 toegewezen doelgroepen waarvan het totale aantal profielen met een factor van ten minste één standaardafwijking afwijkt van de gemiddelde 30 dagen-doelgrootte. Het verstrekt een berekende metrisch voor de spreiding van publieksgrootte van het gemiddelde over de laatste 30 dagen. De grootten van de doelgroep worden gesorteerd van hoog naar laag."
 
 De widget biedt een lijst met maximaal 20 toegewezen doelgroepen waarvan het totale aantal profielen, vanaf de laatste dagelijkse momentopname, met een factor van minstens één standaardafwijking afwijkt van de gemiddelde publieksgrootte van 30 dagen die aan die bestemming is toegewezen.
@@ -269,7 +269,7 @@ Individuele tellingen voor of toegelaten of gehandicapte bestemmingen worden get
 
 Widget verstrekt een twee kolomlijst om een lijst van actieve bestemmingsplatforms en het totale aantal actieve bestemmingen voor elk bestemmingsplatform te tonen. De lijst met doelplatforms is van hoog naar laag geordend.
 
-![De actieve bestemmingen door bestemmingsplatformwidget.](../images/destinations/active-destinations-by-destination-platform.png)
+![De actieve bestemmingen door bestemmingsplatform widget.](../images/destinations/active-destinations-by-destination-platform.png)
 
 ### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
 
