@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
+source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
 workflow-type: tm+mt
-source-wordcount: '2400'
+source-wordcount: '2581'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkome
 Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Gegevenssets](overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Schema-editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe u uw eigen aangepaste XDM-schema&#39;s maakt met de [!DNL Schema Editor] binnen de [!DNL Platform] gebruikersinterface.
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ervoor zorgen dat de regels, beperkingen en beleidsregels betreffende het gebruik van klantgegevens worden nageleefd.
+   * [Schema-editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe u uw eigen aangepaste XDM-schema&#39;s kunt maken met de [!DNL Schema Editor] binnen de [!DNL Platform] gebruikersinterface.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Zorg ervoor dat de regels, beperkingen en beleidsregels met betrekking tot het gebruik van klantgegevens worden nageleefd.
 
 ## Gegevensbestanden weergeven {#view-datasets}
 
@@ -43,18 +43,18 @@ In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Datasets]** in de l
 
 ![Een afbeelding waarmee het item Gegevenssets binnen de linkernavigatiebalk wordt gemarkeerd.](../images/datasets/user-guide/browse-datasets.png)
 
-Selecteer de naam van een gegevensset in het menu [!UICONTROL Browse] tabblad om toegang te krijgen tot **[!UICONTROL Dataset activity]** scherm en zie details van de dataset u selecteerde. Het activiteitenlusje omvat een grafiek die het tarief visualiseert van berichten die worden verbruikt evenals een lijst van succesvolle en ontbroken partijen.
+Selecteer de naam van een gegevensset in het menu [!UICONTROL Browse] tabblad voor toegang tot **[!UICONTROL Dataset activity]** scherm en zie details van de dataset u selecteerde. Het activiteitenlusje omvat een grafiek die het tarief visualiseert van berichten die worden verbruikt evenals een lijst van succesvolle en ontbroken partijen.
 
 ![De details van uw geselecteerde dataset worden benadrukt.](../images/datasets/user-guide/dataset-activity-1.png)
 ![De partijen van de steekproef die tot uw geselecteerde dataset behoren worden benadrukt.](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## Handelingen voor inline-gegevenssets {#inline-actions}
 
-De datasets UI biedt nu een inzamelingen van gealigneerde acties voor elke beschikbare dataset aan. Selecteer de ellips van een dataset die u wilt leiden om de beschikbare opties in een pop-up menu te zien. De beschikbare acties omvatten: [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), en [[!UICONTROL Delete]](#delete). Meer informatie over deze beschikbare acties vindt u in de desbetreffende secties.
+De datasets UI biedt nu een inzamelingen van gealigneerde acties voor elke beschikbare dataset aan. Selecteer de ellips (...) van een dataset die u wilt leiden om de beschikbare opties in een pop-up menu te zien. De beschikbare acties omvatten: [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), [[!UICONTROL Move to folders]](#move-to-folders), en [[!UICONTROL Delete]](#delete). Meer informatie over deze beschikbare acties vindt u in de desbetreffende secties.
 
 ### Gegevenssetcodes toevoegen {#add-tags}
 
-Voeg aangepaste gemaakte tags toe om gegevenssets te ordenen en zoek-, filter- en sorteermogelijkheden te verbeteren. Van de [!UICONTROL Browse] tabblad van het dialoogvenster [!UICONTROL Datasets] werkruimte, selecteer de ellips van een dataset die u wilt leiden gevolgd door **[!UICONTROL Manage tags]** in het vervolgkeuzemenu.
+Voeg aangepaste gemaakte tags toe om gegevenssets te ordenen en zoek-, filter- en sorteermogelijkheden te verbeteren. Van de [!UICONTROL Browse] tabblad van het [!UICONTROL Datasets] werkruimte, selecteer de ellips van een dataset die u wilt leiden gevolgd door **[!UICONTROL Manage tags]** in het vervolgkeuzemenu.
 
 ![Het Browse lusje van de werkruimte van Datasets met de ellips en de Manage markeringsoptie die voor de gekozen dataset wordt benadrukt.](../images/datasets/user-guide/manage-tags.png)
 
@@ -66,7 +66,7 @@ De [!UICONTROL Manage tags] kan de dialoog ook bestaande markeringen uit een dat
 
 Zodra een markering aan een dataset is toegevoegd, kunnen de datasets worden gefiltreerd gebaseerd op de overeenkomstige markering. Zie de sectie over hoe te [filteren, gegevenssets op tags](#enable-profile) voor meer informatie .
 
-Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids over [beheren van metagegevenstaxonomieën](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt beschreven hoe een gebruiker met de juiste machtigingen vooraf gedefinieerde tags kan maken, categorieën aan tags kan toewijzen en alle gerelateerde CRUD-bewerkingen kan uitvoeren op tags en tagcategorieën in de gebruikersinterface van het Platform.
+Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids over [beheren, taxonomieën van metagegevens](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt beschreven hoe een gebruiker met de juiste machtigingen vooraf gedefinieerde tags kan maken, categorieën aan tags kan toewijzen en alle gerelateerde CRUD-bewerkingen kan uitvoeren op tags en tagcategorieën in de gebruikersinterface van het Platform.
 
 ## Gegevensbestanden zoeken en filteren {#search-and-filter}
 
@@ -110,13 +110,13 @@ U kunt datasets filtreren die op het schema worden gebaseerd dat hun structuur b
 
 ## Gegevenssets sorteren op gemaakte datum {#sort}
 
-Gegevensbestanden in het dialoogvenster [!UICONTROL Browse] kan worden gesorteerd op oplopende of aflopende datums. Selecteer [!UICONTROL Created] of [!UICONTROL Last updated] kolomkoppen die u wilt afwisselen tussen oplopend en aflopend. Als deze optie is geselecteerd, geeft de kolom dit aan met een pijl-omhoog of een pijl-omlaag naar de zijkant van de kolomkop.
+Gegevensbestanden in het dialoogvenster [!UICONTROL Browse] kan worden gesorteerd op oplopende of aflopende datums. Selecteer de [!UICONTROL Created] of [!UICONTROL Last updated] kolomkoppen die u wilt afwisselen tussen oplopend en aflopend. Als deze optie is geselecteerd, geeft de kolom dit aan met een pijl-omhoog of een pijl-omlaag naar de zijkant van de kolomkop.
 
 ![Het tabblad Bladeren van de werkruimte Datasets met de kolommen Gemaakt en Laatst bijgewerkt gemarkeerd.](../images/datasets/user-guide/ascending-descending-columns.png)
 
 ## Een voorbeeld van een gegevensset bekijken {#preview}
 
-U kunt voorbeeldgegevens van gegevenssets voorvertonen met de inline-opties van het dialoogvenster [!UICONTROL Browse] en ook de [!UICONTROL Dataset activity] weergeven. Van de [!UICONTROL Browse] selecteert u de ovalen naast de naam van de gegevensset waarvan u een voorvertoning wilt weergeven. Er wordt een menulijst met opties weergegeven. Selecteer vervolgens **[!UICONTROL Preview dataset]** in de lijst met beschikbare opties. Als de dataset leeg is, zal de voorproefverbinding worden gedeactiveerd en in plaats daarvan zal zeggen dat de voorproef niet beschikbaar is.
+U kunt voorbeeldgegevens van gegevenssets voorvertonen met de inline-opties van het dialoogvenster [!UICONTROL Browse] en ook de [!UICONTROL Dataset activity] weergeven. Van de [!UICONTROL Browse] selecteert u de ovalen (...) naast de naam van de gegevensset waarvan u een voorvertoning wilt weergeven. Er wordt een menulijst met opties weergegeven. Selecteer vervolgens **[!UICONTROL Preview dataset]** in de lijst met beschikbare opties. Als de dataset leeg is, zal de voorproefverbinding worden gedeactiveerd en in plaats daarvan zal zeggen dat de voorproef niet beschikbaar is.
 
 ![Het Browse lusje van de werkruimte van Datasets met de ellips en de optie van de dataset van de Voorproef die voor de gekozen dataset wordt benadrukt.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -128,14 +128,14 @@ Alternatief, van **[!UICONTROL Dataset activity]** scherm, selecteren **[!UICONT
 
 ![De knoop van de dataset van de Voorproef wordt benadrukt.](../images/datasets/user-guide/select-preview.png)
 
-Voor robuustere methoden om toegang te krijgen tot uw gegevens, [!DNL Experience Platform] levert downstreamdiensten zoals [!DNL Query Service] en [!DNL JupyterLab] gegevens te verkennen en te analyseren. Raadpleeg de volgende documenten voor meer informatie:
+Voor robuustere methoden voor toegang tot uw gegevens, [!DNL Experience Platform] levert downstreamdiensten, zoals [!DNL Query Service] en [!DNL JupyterLab] gegevens te verkennen en te analyseren. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van Query Service](../../query-service/home.md)
 * [Gebruikershandleiding voor JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Een gegevensset maken {#create}
 
-Om een nieuwe dataset tot stand te brengen, begin door te selecteren **[!UICONTROL Create dataset]** in de **[!UICONTROL Datasets]** dashboard.
+Als u een nieuwe gegevensset wilt maken, selecteert u **[!UICONTROL Create dataset]** in de **[!UICONTROL Datasets]** dashboard.
 
 ![De knop Gegevensset maken is gemarkeerd.](../images/datasets/user-guide/select-create.png)
 
@@ -146,7 +146,7 @@ In het volgende scherm, wordt u voorgesteld met de volgende twee opties om een n
 
 ### Creeer een dataset met een bestaand schema {#schema}
 
-In de **[!UICONTROL Create dataset]** scherm, selecteren **[!UICONTROL Create dataset from schema]** om een nieuwe lege dataset tot stand te brengen.
+In de **[!UICONTROL Create dataset]** scherm, selecteren **[!UICONTROL Create dataset from schema]** om een nieuwe lege dataset te creëren.
 
 ![De Create dataset van schemaknoop wordt benadrukt.](../images/datasets/user-guide/create-dataset-schema.png)
 
@@ -154,7 +154,7 @@ De **[!UICONTROL Select schema]** wordt weergegeven. Blader door de schemalijst 
 
 ![Er wordt een lijst met schema&#39;s weergegeven. Het schema dat zal worden gebruikt om de dataset tot stand te brengen wordt benadrukt.](../images/datasets/user-guide/select-schema.png)
 
-De **[!UICONTROL Configure dataset]** wordt weergegeven. Geef de gegevensset een naam en een optionele beschrijving en selecteer **[!UICONTROL Finish]** om de dataset tot stand te brengen.
+De **[!UICONTROL Configure dataset]** wordt weergegeven. Geef de gegevensset een naam en een optionele beschrijving en selecteer **[!UICONTROL Finish]** om de dataset te creëren.
 
 ![De details van de configuratie van de dataset worden opgenomen. Dit omvat details zoals de naam en beschrijving van de dataset.](../images/datasets/user-guide/configure-dataset-schema.png)
 
@@ -170,7 +170,7 @@ De **[!UICONTROL Configure]** wordt weergegeven. Geef de gegevensset een naam en
 
 ![De details van de configuratie van de dataset worden opgenomen. Dit omvat details zoals de naam en beschrijving van de dataset.](../images/datasets/user-guide/configure-dataset-csv.png)
 
-De **[!UICONTROL Add data]** wordt weergegeven. Upload het CSV-bestand door het naar het midden van het scherm te slepen of selecteer **[!UICONTROL Browse]** om uw bestandsmap te verkennen. Het bestand kan maximaal tien gigabyte groot zijn. Selecteer **[!UICONTROL Save]** om de dataset tot stand te brengen.
+De **[!UICONTROL Add data]** wordt weergegeven. Upload het CSV-bestand door het naar het midden van het scherm te slepen of selecteer **[!UICONTROL Browse]** om uw bestandsmap te verkennen. Het bestand kan maximaal tien gigabyte groot zijn. Selecteer **[!UICONTROL Save]** om de dataset te creëren.
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ Elke dataset heeft de capaciteit om klantenprofielen met zijn ingebedde gegevens
 
 Voor meer informatie over het inschakelen van een schema voor [!DNL Profile], zie de [Gebruikershandleiding voor Schema-editor](../../xdm/tutorials/create-schema-ui.md).
 
-U kunt een dataset voor Profiel van zowel de gealigneerde opties van toelaten [!UICONTROL Browse] en ook de [!UICONTROL Dataset activity] weergeven. Van de [!UICONTROL Browse] tabblad van het dialoogvenster [!UICONTROL Datasets] de werkruimte, selecteer de ellips van een dataset die u voor Profiel wilt toelaten. Er wordt een menulijst met opties weergegeven. Selecteer vervolgens **[!UICONTROL Enable unified profile]** in de lijst met beschikbare opties.
+U kunt een dataset voor Profiel van zowel de gealigneerde opties van toelaten [!UICONTROL Browse] en ook de [!UICONTROL Dataset activity] weergeven. Van de [!UICONTROL Browse] tabblad van het [!UICONTROL Datasets] de werkruimte, selecteer de ellips van een dataset die u voor Profiel wilt toelaten. Er wordt een menulijst met opties weergegeven. Selecteer vervolgens **[!UICONTROL Enable unified profile]** in de lijst met beschikbare opties.
 
 ![Het tabblad Bladeren van de werkruimte Datasets met de ovalen en het verenigde profiel inschakelen gemarkeerd.](../images/datasets/user-guide/enable-for-profile.png)
 
@@ -203,17 +203,37 @@ Datasets die voor Profiel zijn ingeschakeld, kunnen ook op deze criteria worden 
 
 ## Beheer van gegevens beheren en afdwingen op een gegevensset {#manage-and-enforce-data-governance}
 
-U kunt de labels voor gegevensbeheer voor een dataset beheren door de inlineopties van het dialoogvenster [!UICONTROL Browse] tab. Selecteer de ovalen naast de naam van de gegevensset die u wilt beheren, gevolgd door **[!UICONTROL Manage data and access labels]** in het vervolgkeuzemenu.
+U kunt de labels voor gegevensbeheer voor een dataset beheren door de inlineopties van het dialoogvenster [!UICONTROL Browse] tab. Selecteer de ovalen (...) naast de naam van de gegevensset die u wilt beheren, gevolgd door **[!UICONTROL Manage data and access labels]** in het vervolgkeuzemenu.
 
 Met labels voor gegevensgebruik, toegepast op schemaniveau, kunt u gegevenssets en velden categoriseren volgens het gebruiksbeleid dat van toepassing is op die gegevens. Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie over labels, of raadpleegt u de [gebruikershandleiding voor gegevensgebruikslabels](../../data-governance/labels/overview.md) voor instructies op hoe te om etiketten op schema&#39;s voor propagatie op datasets toe te passen.
 
+### Verplaatsen naar mappen {#move-to-folders}
+
+U kunt datasets binnen omslagen voor beter gegevenssetbeheer plaatsen. Om een dataset in een omslag te bewegen, selecteer de ellipsen (...) naast de datasetnaam u wenst te leiden, die door wordt gevolgd **[!UICONTROL Move to folder]** in het vervolgkeuzemenu.
+
+![De [!UICONTROL Datasets] dashboard met de ellipsen en [!UICONTROL Move to folder] gemarkeerd.](../images/datasets/user-guide/move-to-folder.png)
+
+De [!UICONTROL Move] dataset aan omslagdialoog verschijnt. Selecteer de map waarnaar u het publiek wilt verplaatsen en selecteer **[!UICONTROL Move]**. Een popup bericht deelt u mee dat de datasetbeweging succesvol is geweest.
+
+![De [!UICONTROL Move] dialoogvenster Gegevensset met [!UICONTROL Move] gemarkeerd.](../images/datasets/user-guide/move-dialog.png)
+
+>
+>
+>U kunt mappen ook rechtstreeks maken vanuit het dialoogvenster Gegevensset verplaatsen. Als u een map wilt maken, selecteert u het pictogram Map maken (![Het pictogram Map maken.](../images/datasets/user-guide/create-folder-icon.png)) in de rechterbovenhoek van het dialoogvenster.
+>
+>![De [!UICONTROL Move] de dialoog van de dataset met creeer omslagpictogram benadrukte.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Zodra de dataset in een omslag is, kunt u verkiezen om datasets slechts te tonen die tot een specifieke omslag behoren. Als u de mappenstructuur wilt openen, selecteert u het pictogram voor het weergeven van mappen (![Het pictogram voor de weergavemappen](../images/datasets/user-guide/show-folders-icon.png)). Vervolgens selecteert u de gekozen map om alle bijbehorende gegevenssets weer te geven.
+
+![De [!UICONTROL Datasets] dashboards met de getoonde de de omslagstructuur van datasets, het pictogram van showomslagen, en een geselecteerde benadrukte omslag.](../images/datasets/user-guide/folder-structure.png)
+
 ## Een gegevensset verwijderen {#delete}
 
-U kunt een dataset van of de dataset gealigneerde acties in de dataset schrappen [!UICONTROL Browse] of de rechterbovenhoek van de [!UICONTROL Dataset activity] weergeven. Van de [!UICONTROL Browse] Selecteer de ovalen naast de naam van de gegevensset die u wilt verwijderen. Er wordt een menulijst met opties weergegeven. Selecteer vervolgens **[!UICONTROL Delete]** in het vervolgkeuzemenu.
+U kunt een dataset van of de dataset gealigneerde acties in schrappen [!UICONTROL Browse] of de rechterbovenhoek van de [!UICONTROL Dataset activity] weergeven. Van de [!UICONTROL Browse] Selecteer de ovalen (...) naast de naam van de gegevensset die u wilt verwijderen. Er wordt een menulijst met opties weergegeven. Selecteer vervolgens **[!UICONTROL Delete]** in het vervolgkeuzemenu.
 
 ![Het Browse lusje van de werkruimte van Datasets met de ellips en de optie van de Schrapping die voor de gekozen dataset wordt benadrukt.](../images/datasets/user-guide/inline-delete-dataset.png)
 
-Er verschijnt een bevestigingsvenster. Selecteren **[!UICONTROL Delete]** ter bevestiging.
+Er wordt een bevestigingsvenster weergegeven. Selecteren **[!UICONTROL Delete]** ter bevestiging.
 
 U kunt ook **[!UICONTROL Delete dataset]** van de **[!UICONTROL Dataset activity]** scherm.
 
@@ -231,7 +251,7 @@ Er verschijnt een bevestigingsvak. Selecteren **[!UICONTROL Delete]** om de schr
 
 Als een dataset voor Profiel wordt toegelaten, zal het schrappen van die dataset door UI het van gegevens meer, de Dienst van de Identiteit, en de opslag van het Profiel binnen Platform schrappen.
 
-U kunt een dataset van [!DNL Profile] Alleen opslaan (waarbij de gegevens in het Data Lake blijven) met behulp van de Real-Time Customer Profile API. Zie voor meer informatie de [API-eindgids voor profielsysteemtaken](../../profile/api/profile-system-jobs.md).
+U kunt een dataset van [!DNL Profile] Alleen opslaan (waarbij de gegevens in het Data Lake blijven) met behulp van de Real-Time Customer Profile API. Zie de klasse [API-eindgids voor profielsysteemtaken](../../profile/api/profile-system-jobs.md).
 
 ## Gegevens bijhouden
 
@@ -243,7 +263,7 @@ U kunt op een individu selecteren **[!UICONTROL Batch ID]** toegang tot **[!UICO
 
 ![Details van de geselecteerde batch worden weergegeven. Dit omvat het aantal verslagen die worden opgenomen, het aantal verslagen ontbrak, de partijstatus, de dossiergrootte, de ingangsbegin en eindtijden, de dataset en partij IDs, organisatie identiteitskaart, de datasetnaam, en de toegangsinformatie.](../images/datasets/user-guide/batch-overview.png)
 
-Als u de batch wilt verwijderen, selecteert u **[!UICONTROL Delete batch]** in de buurt van de rechterbovenhoek van het dashboard. Als u een batch verwijdert, verwijdert u ook de records uit de gegevensset waarin de batch oorspronkelijk was opgenomen.
+Als u de batch wilt verwijderen, selecteert u **[!UICONTROL Delete batch]** rechts boven in het dashboard. Als u een batch verwijdert, verwijdert u ook de records uit de gegevensset waarin de batch oorspronkelijk was opgenomen.
 
 ![De de partijknoop van de Schrapping wordt benadrukt op de datasetdetails pagina.](../images/datasets/user-guide/delete-batch.png)
 
