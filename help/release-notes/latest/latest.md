@@ -1,24 +1,34 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
-description: De release van juli 2023 bevat opmerkingen voor Adobe Experience Platform.
+description: In de release van juni 2023 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 134c18822350a0032bb9957e6e0d1ab888c6b289
+source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 5%
+source-wordcount: '1446'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 26 juli 2023**
+**Releasedatum: 21 juni 2023**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Verificatie van Experience Platform-API&#39;s](#authentication-platform-apis)
 - [Gegevensverzameling](#data-collection)
-- [Gegevensvoorbereiding](#data-prep)
-- [Segmenteringsservice](#segmentation)
+- [Doelen](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Query-service](#query-service)
 - [Bronnen](#sources)
+
+## Verificatie van Experience Platform-API&#39;s {#authentication-platform-apis}
+
+Voor Experience Platform API-gebruikers is de methode voor het verkrijgen van de vereiste toegangstokens voor het verifiëren en aanroepen van API-eindpunten nu vereenvoudigd. De methode JWT om toegangstokens te verkrijgen wordt afgekeurd en door een eenvoudigere server-aan-server authentificatiemethode OAuth vervangen.<p>![Nieuwe OAuth authentificatiemethode om benadrukte toegangstokens te krijgen.](/help/landing/images/api-authentication/oauth-authentication-method.png "Nieuwe OAuth authentificatiemethode om benadrukte toegangstokens te krijgen."){width="100" zoomable="yes"}</p>
+
+Terwijl de bestaande API integratie gebruikend de de authentificatiemethode JWT tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Lees de handleiding op [migreren van de credentie van de Rekening van de Dienst (JWT) aan OAuth server-aan-Server referentie](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+De bijgewerkte versie lezen [Zelfstudie over verificatie van Experience Platforms](/help/landing/api-authentication.md) voor meer informatie .
 
 ## Gegevensverzameling {#data-collection}
 
@@ -28,52 +38,115 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Tags en doorsturen van gebeurtenissen | Controleregboeken voor gegevensverzameling | U kunt nu zien wanneer een actie is uitgevoerd en wie deze actie heeft uitgevoerd op Tags en Gebeurtenis doorsturen. Dit vergemakkelijkt het oplossen van problemen met producten, behoorlijk bestuur, en interne controleactiviteiten. Deze controlegegevens worden weergegeven via in-context schuifmenu&#39;s die ook snelle acties en updates van de middelstatus bevatten. Deze gegevens zijn in de volgende schermen zichtbaar in de gebruikersinterface Tags en Event Forwarding:<br><ul><li>[Overzicht van eigenschappen](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[Regels](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[Gegevenselementen](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[Extensies](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[Bibliotheekrevisie](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[Bibliotheek laatst samenstellen en gepubliceerd](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
-| Gegevensstromen | [Geo Lookup](../../datastreams/configure.md#advanced-options) | U kunt geolocatie en netwerkzoekopdracht voor gegevensstreams nu configureren om informatie zoals: <ul><li>Land</li><li>Postcode</li><li>Staat/provincie</li><li>DMA</li><li>Plaats</li><li>Breedtegraad </li><li>Lengtegraad</li><li>Vervoerder</li><li>Domein</li><li>ISP</li></ul> U bent ervoor verantwoordelijk dat u alle benodigde machtigingen, toestemmingen, toestemmingen, toestemmingen en toestemming hebt verkregen die vereist zijn krachtens de toepasselijke wet- en regelgeving voor het verzamelen, verwerken en verzenden van persoonlijke gegevens, inclusief nauwkeurige geolocatiegegevens. <br> Uw IP selectie van de adresverwarring beïnvloedt niet het niveau van geolocatieinformatie die van het IP adres zal worden afgeleid en naar uw gevormde oplossingen van Adobe verzonden. Geolocation lookups moeten worden beperkt of afzonderlijk worden uitgeschakeld. <br> Zie de [datastreams documentatie](../../datastreams/configure.md#advanced-options) voor meer informatie . |
+| Extensie | [!DNL Google Cloud Platform] extensie voor doorsturen van gebeurtenissen | De [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) Met de extensie voor het doorsturen van gebeurtenissen kunt u gebeurtenisgegevens doorsturen naar Google voor activering via [!DNL Google Pub/Sub]. |
+| Extensie | [!DNL Cloud connector for Google Analytics 4 (ga4)] extension | De [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) gebeurtenis die uitbreiding door:sturen staat u toe om analyses via nieuwe te volgen [!DNL Google Analytics 4 (ga4)] standaard. |
+| Geheim | OAuth 2 JWT Secret | De [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) staat u toe om Adobe te gebruiken en [!DNL Google] De tokens van de dienst om server-server interactie in gebeurtenis te steunen die door:sturen. |
 
 {style="table-layout:auto"}
 
-Lees voor meer informatie over gegevensverzameling de [overzicht van gegevensverzamelingen](../../tags/home.md).
+Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevensverzameling](../../tags/home.md).
 
-## Gegevensvoorbereiding {#data-prep}
+## Doelen {#destinations}
 
-Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
-**Nieuwe of bijgewerkte functies**
+**Nieuwe of bijgewerkte doelen** {#new-updated-destinations}
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!BADGE Bèta]{type=Informative} [!DNL Amazon Ads] verbinding](../../destinations/catalog/advertising/amazon-ads.md) | De [!DNL Amazon Ads] de integratie met Adobe Experience Platform ondersteunt nu het regionale vervoer naar de verschillende [!DNL Amazon Ads] markten. Lees meer in de [bestemmingswijziging](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+| Functionaliteit | Beschrijving |
+| ----------- | ----------- |
+| Werkruimte-ondersteuning voor [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) bestemmingen. | U kunt nu de Adobe Target-werkruimte selecteren waarnaar u het publiek wilt delen wanneer u een nieuwe Adobe Target-doelverbinding configureert. Zie de [verbindingsparameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) voor meer informatie. Raadpleeg de zelfstudie over [werkruimten configureren](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target voor meer informatie over werkruimten. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Extensie (perspectiefprofiel) | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile Union Extension]](https://github.com/adobe/xdm/pull/1735/files) | De vereiste velden voor het samenvoegingsschema voor het prospectprofiel zijn toegevoegd. |
+| Extensie | [[!UICONTROL Decisioning Asset]](https://github.com/adobe/xdm/pull/1732/files) | Voeg een gegevenstype toe om elementen te vertegenwoordigen die in besluitvorming worden gebruikt. [!UICONTROL Decisioning Asset] biedt een verwijzing naar de elementen die worden gebruikt om de `decisionItems`. |
+| Gegevenstype | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce] slaat de administratie op van de koop- en verkoopactiviteiten. |
+| Veldgroep | [[!UICONTROL Profile Partner Enrichment(Sample)]](https://github.com/adobe/xdm/pull/1747/files) | Een steekproefschema werd toegevoegd voor de verrijking van de profielpartner. |
+| Veldgroep | [[!UICONTROL Partner Prospect Details(Sample)]](https://github.com/adobe/xdm/pull/1747/files) | Een steekproefschema werd toegevoegd voor de het profieluitbreidingen van de gegevensverkoper. |
+| Gegevenstype | [[!UICONTROL Commerce Scope]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce Scope] geeft aan waar een gebeurtenis heeft plaatsgevonden. Bijvoorbeeld in de winkelweergave, de winkel of website, enzovoort. |
+| Gegevenstype | [[!UICONTROL Billing]](https://github.com/adobe/xdm/pull/1734/files) | Factureringsgegevens voor een of meer betalingen zijn toegevoegd aan de [!UICONTROL Commerce] schema. |
+
+{style="table-layout:auto"}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving bijwerken |
+| --- | --- | --- |
+| Veldgroep | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1736/files) | Gewijzigd `bitrateAverageBucket` van 100 in &quot;800-899&quot;. |
+| Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/pull/1736/files) | Gewijzigd `bitrateAverageBucket` gegevenstype naar tekenreeks. |
+| Veldgroep | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/pull/1735/files) | Toegevoegd aan de klasse Prospect Profile. |
+| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1735/files) | Identiteitskaart toegevoegd aan [!UICONTROL Computed Attributes System Schema]. |
+| Datatype | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | Veld toegevoegd aan [!UICONTROL Session details information] om het gebruikte netwerk van de inhoudslevering te beschrijven. |
+| Extensie | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1731/files) | Identiteitskaart toegevoegd aan [!UICONTROL Adobe Unified Profile Service Account Union Extension]. |
+| Gegevenstype | [[!UICONTROL Order]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` is toegevoegd aan [!UICONTROL Order]. Dit geeft het verschil weer tussen de normale orderprijs en de speciale prijs. Het wordt toegepast op de gehele bestelling in plaats van op afzonderlijke producten. |
+| Schema | [[!UICONTROL AEP Hygiene Operation Request]](https://github.com/adobe/xdm/pull/1728/files) | De `targetServices` er is een veld toegevoegd met de namen van de diensten die de gegevenshygiënebewerkingen verwerken . |
+| Gegevenstype | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` is toegevoegd aan de verzendgegevens voor een of meer producten. Het is een alfabetische ISO 4217-valutacode die wordt gebruikt voor de prijsstelling van het product. |
+| Gegevenstype | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) | De `language` is toegevoegd om de toepassing de taalkundige, geografische of culturele voorkeuren van de gebruiker te geven. |
+| Extensie | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL AJO Timestamp Entity] is toegevoegd om de tijd aan te geven waarop het bericht voor het laatst is gewijzigd. |
+| Gegevenstype | (Meerdere) | [Verschillende mediagegevens zijn verwijderd](https://github.com/adobe/xdm/pull/1739/files) voor diverse gegevenstypen, voor consistentie. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md)
+
+## Query-service {#query-service}
+
+De Dienst van de vraag staat u toe om standaardSQL te gebruiken om gegevens in het gegevenspeer van Adobe Experience Platform te vragen. U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time.
+
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe mapfuncties | U kunt nu de volgende functies gebruiken bij het toewijzen van objecten in Data Prep: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> Lees voor meer informatie over deze functies de [Handleiding voor functies Data Prep](../../data-prep/functions.md#hierarchies---objects). |
+| Inline-sjablonen | De Dienst van de vraag steunt nu het gebruik van malplaatjes die andere malplaatjes binnen uw SQL van verwijzingen voorzien. Verminder uw werkbelasting en vermijd fouten door inlinesjablonen in uw query&#39;s te gebruiken. U kunt instructies of voorwaarden opnieuw gebruiken en verwijzen naar geneste sjablonen voor meer flexibiliteit in uw SQL. Er is geen grens in de grootte van vragen die als malplaatjes kunnen worden opgeslagen, of het aantal malplaatjes die van uw originele vraag kunnen worden van verwijzingen voorzien. Lees voor meer informatie de [inline sjabloonhulplijn](../../query-service/essential-concepts/inline-templates.md). |
+| Geplande query-UI-updates | Beheer al uw geplande vragen van één plaats in UI met [[!UICONTROL Scheduled Queries tab]](../../query-service/ui/monitor-queries.md#inline-actions). De [!UICONTROL Scheduled Queries] UI is verbeterd met de toevoeging van gealigneerde vraagacties en de nieuwe kolom van de vraagstatus. De recente toevoegingen omvatten de capaciteit om, een programma toe te laten onbruikbaar te maken en te schrappen, of aan alarm voor komende vraaglooppas direct van te abonneren [!UICONTROL Scheduled Queries] weergeven. <p>![Inline-handelingen gemarkeerd in het dialoogvenster [!UICONTROL Scheduled Queries] weergeven.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-handelingen gemarkeerd in het dialoogvenster [!UICONTROL Scheduled Queries] weergeven."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
-Lees voor meer informatie over Data Prep de [Overzicht van Data Prep](../../data-prep/home.md).
-
-## Segmenteringsservice {#segmentation}
-
-[!DNL Segmentation Service] staat u toe om gegevens te segmenteren die in worden opgeslagen [!DNL Experience Platform] die betrekking heeft op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) die het publiek bereiken. U kunt publiek door segmentdefinities of andere bronnen van uw tot stand brengen [!DNL Real-Time Customer Profile] gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform]en gemakkelijk toegankelijk zijn door elke Adobe-oplossing.
-
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Poort publiek | De portal Publiek biedt een nieuwe browserervaring voor toegang tot, het maken en beheren van soorten publiek in Adobe Experience Platform. Binnen het Portaal van het Publiek, kunt u Platform-geproduceerd en uiterlijk geproduceerd publiek bekijken; uw het werkefficiency verbeteren door het filtreren, omslagen, en markeringen, creeer Platform-geproduceerd publiek; en de invoer extern geproduceerd publiek door Csv- dossiers. Voor meer informatie over de Poort van het Publiek, gelieve te lezen [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md). |
-| Samenstelling publiek | De Samenstelling van het publiek verstrekt een makkelijk te gebruiken werkruimte om publiek te bouwen en uit te geven, gebruikend blokken die worden gebruikt om verschillende acties te vertegenwoordigen. Lees voor meer informatie over Audience Composition de [Handleiding voor compositie van publiek](../../segmentation/ui/audience-composition.md). |
-
-Voor meer informatie over [!DNL Segmentation Service], lees de [Overzicht van segmentatie](../../segmentation/home.md).
+Raadpleeg voor meer informatie over Query Service de [Overzicht van Query Service](../../query-service/home.md).
 
 ## Bronnen {#sources}
 
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren en maakt het mogelijk die gegevens te structureren, te labelen en te verbeteren met behulp van services voor Platforms. U kunt gegevens uit verschillende bronnen invoeren, zoals Adobe-toepassingen, cloudgebaseerde opslag, software van derden en uw CRM-systeem.
+
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
-**Nieuwe of bijgewerkte functies**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}[!DNL SAP Commerce] | U kunt nu de opdracht [[!DNL SAP Commerce] bron](../../sources/connectors/ecommerce/sap-commerce.md) om factureringsgegevens voor abonnementen van uw [!DNL SAP Commerce] aan Experience Platform. |
-| Ondersteuning voor [!DNL Phoenix] | U kunt nu de opdracht [[!DNL Phoenix] bron](../../sources/connectors/databases/phoenix.md) om gegevens van uw [!DNL Phoenix] database naar Experience Platform. |
-| Verificatieupdates voor [!DNL Salesforce] en [!DNL Salesforce Service Cloud] | U kunt nu de API-versie van uw [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) en [[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md) bron wanneer het voor authentiek verklaren van een nieuwe rekening met het Experience Platform UI of [!DNL Flow Service] API. |
+| Adobe Analytics-indelingsbron met gegevensstroom voor verwijderen | U kunt nu brongegevens verwijderen die gebruikmaken van Adobe Analytics-classificaties als bron. Onder **[!UICONTROL Sources]** > **[!UICONTROL Dataflows]**, selecteert u de gewenste gegevensstroom en selecteert u Verwijderen. Lees voor meer informatie de handleiding op [een bronverbinding maken voor Adobe Analytics-classificatiegegevens](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
+| Ondersteuning voor filteren van [!DNL Microsoft Dynamics] API gebruiken | Gebruik logische operatoren en vergelijkingsoperatoren om gegevens op rijniveau voor de [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) bron. Lees voor meer informatie de handleiding op [gegevens filteren voor een bron met behulp van de API](../../sources/tutorials/api/filter.md). |
+| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | U kunt nu de opdracht [!DNL RainFocus] bronnen integratie om gebeurtenisbeheer en analysegegevens van uw [!DNL RainFocus] aan Experience Platform. Lees voor meer informatie de [[!DNL RainFocus] bronoverzicht](../../sources/connectors/analytics/rainfocus.md). |
+| Ondersteuning voor Adobe Commerce | U kunt nu de integratie met Adobe Commerce-bronnen gebruiken om gegevens van uw Adobe Commerce-account naar Experience Platform te brengen. Lees voor meer informatie de [Adobe Commerce-bronoverzicht](../../sources/connectors/adobe-applications/commerce.md). |
+| Ondersteuning voor [!DNL Mixpanel] | U kunt nu de opdracht [!DNL Mixpanel] bronnen integratie om analysegegevens van uw [!DNL Mixpanel] aan Experience Platform die APIs of de gebruikersinterface gebruikt. Lees voor meer informatie de [[!DNL Mixpanel] bronoverzicht](../../sources/connectors/analytics/mixpanel.md). |
+| Ondersteuning voor [!DNL Zendesk] | U kunt nu de opdracht [!DNL Zendesk] bronnen-integratie om gegevens van uw klanten over succes te leveren [!DNL Zendesk] aan Experience Platform die APIs of de gebruikersinterface gebruikt. Lees voor meer informatie de [[!DNL Zendesk] bronoverzicht](../../sources/connectors/customer-success/zendesk.md). |
 
 {style="table-layout:auto"}
 
-Lees voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
+Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).
