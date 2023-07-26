@@ -1,36 +1,36 @@
 ---
 title: Gegevensset Statistieken berekenen
 description: Dit document beschrijft hoe te om kolom-vlakke statistieken over de datasets van de Opslag van de Verkeer van Gegevens van de Azure (ADLS) met SQL bevelen gegevens te verwerken.
-source-git-commit: c7bc395038906e27449c82c518bd33ede05c5691
+source-git-commit: 66354932ee42137ca98e7033d942556f13c64de1
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
 
 # Berekening van gegevenssetstatistieken
 
-U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` en `SHOW STATISTICS` SQL-opdrachten. De SQL bevelen die datasetstatistieken gegevens verwerken zijn een uitbreiding van `ANALYZE TABLE` gebruiken. Volledige informatie over de `ANALYZE TABLE` kunt u vinden in het dialoogvenster [SQL-naslagdocumentatie](../sql/syntax.md#analyze-table).
+U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` en `SHOW STATISTICS` SQL-opdrachten. De SQL bevelen die datasetstatistieken gegevens verwerken zijn een uitbreiding van `ANALYZE TABLE` gebruiken. Volledige informatie over de `ANALYZE TABLE` kan worden gevonden in [SQL-naslagdocumentatie](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
->De gegenereerde statistieken zijn momenteel alleen geldig voor die sessie en zijn niet blijvend tussen sessies. Deze bestanden zijn niet toegankelijk voor verschillende PSQL-sessies.
+>De gegevens verwerkte statistieken worden opgeslagen in tijdelijke lijsten die zitting-vlakke persistentie hebben. U kunt de resultaten van de berekeningen op elk gewenst moment tijdens die sessie bekijken. Deze bestanden zijn niet toegankelijk voor verschillende PSQL-sessies.
 
-Met de `SHOW STATISTICS FOR <alias_name>` bevel, kunt u de statistieken zien die met werden gegevens verwerkt `ANALYZE TABLE COMPUTE STATISTICS` gebruiken. Door de combinatie van deze bevelen, kunt u kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen nu gegevens verwerken.
+Om de statistieken te zien die met werden berekend `ANALYZE TABLE COMPUTE STATISTICS` , kunt u een SELECT-query gebruiken voor de naam van de alias of de ID Statistieken. U kunt het werkingsgebied van de statistische analyse tot of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen ook beperken.
 
 >[!IMPORTANT]
 >
->De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` bevelen worden niet gesteund op de lijsten van het gegevenspakhuis. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen. Zie voor meer informatie de [TABELsectie ANALYSEREN](../sql/syntax.md#analyze-table) van de SQL-syntaxishandleiding.
+>De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` bevelen worden niet gesteund op de lijsten van het gegevenspakhuis. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen. Zie de klasse [TABELsectie ANALYSEREN](../sql/syntax.md#analyze-table) van de SQL-syntaxishandleiding.
 
 Deze gids helpt u uw vragen structureren zodat u de kolomstatistieken van een dataset van ADLS kunt gegevens verwerken. Gebruikend deze bevelen, kunt u de statistieken zien in uw zitting door een cliënt PSQL gebruikend een SQL vraag worden geproduceerd.
 
 ## Statistieken berekenen {#compute-statistics}
 
-Er zijn aanvullende constructies toegevoegd aan de `ANALYZE TABLE` opdracht waarmee u **gegevens verwerken statistieken voor een ondergroep van een dataset en voor bepaalde kolommen**. Om dit te doen, moet u gebruiken `ANALYZE TABLE <tableName> COMPUTE STATISTICS` gebruiken.
+Er zijn aanvullende constructies toegevoegd aan de `ANALYZE TABLE` bevel dat u toestaat **gegevens verwerken statistieken voor een ondergroep van een dataset en voor bepaalde kolommen**. Om gegevenssetstatistieken te berekenen, moet u gebruiken `ANALYZE TABLE <tableName> COMPUTE STATISTICS` gebruiken.
 
 >[!IMPORTANT]
 >
->Het standaardgedrag berekent statistieken voor het **volledige gegevensset** en voor **alle kolommen**. Om statistieken over alle kolommen gegevens te verwerken, zou u het vraagformaat gebruiken `ANALYZE TABLE COMPUTE STATISTICS`. U bent **niet** geadviseerd om dit op een dataset ADLS te gebruiken, aangezien de grootte van de dataset zeer groot (potentieel petabytes van gegevens) kan zijn. In plaats daarvan moet u altijd overwegen de opdracht Analyseren uit te voeren met `FILTERCONTEXT` en een opgegeven lijst met kolommen. Zie de secties op [het beperken van geanalyseerde kolommen](#limit-included-columns) en [toevoegen, filtervoorwaarde](#filter-condition) voor meer informatie .
+>Het standaardgedrag berekent statistieken voor het **volledige gegevensset** en voor **alle kolommen**. Om statistieken over alle kolommen gegevens te verwerken, zou u het vraagformaat gebruiken `ANALYZE TABLE COMPUTE STATISTICS`. U bent **niet** aanbevolen om de `COMPUTE STATISTICS` bevel zonder filters op een dataset ADLS, aangezien de grootte van de dataset zeer groot (potentieel petabytes van gegevens) kan zijn. In plaats daarvan moet u altijd overwegen de opdracht Analyseren uit te voeren met `FILTERCONTEXT` en een opgegeven lijst met kolommen. Zie de secties op [het beperken van geanalyseerde kolommen](#limit-included-columns) en [toevoegen, filtervoorwaarde](#filter-condition) voor meer informatie .
 
 In het onderstaande voorbeeld worden statistieken voor de `adc_geometric` gegevensset en voor **alles** kolommen in de dataset.
 
@@ -40,16 +40,25 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 
 >[!NOTE]
 >
->`COMPUTE STATISTICS` biedt geen ondersteuning voor de gegevenstypen array of map. U kunt een `skip_stats_for_complex_datatypes` markering die moet worden gewaarschuwd of die moet worden weergegeven als het invoerdataframe kolommen met arrays en kaartgegevenstypen bevat. De markering is standaard ingesteld op true. Gebruik de volgende opdracht om meldingen of fouten in te schakelen: `SET skip_stats_for_complex_datatypes = false`.
+>De `COMPUTE STATISTICS` geen ondersteuning voor de gegevenstypen array of map. U kunt een `skip_stats_for_complex_datatypes` markering die moet worden gewaarschuwd of die moet worden uitgevuld als het invoergegevensframe kolommen met arrays en gegevenstypen met hyperlinks bevat. De markering is standaard ingesteld op true. Gebruik de volgende opdracht om meldingen of fouten in te schakelen: `SET skip_stats_for_complex_datatypes = false`.
 
-<!-- Commented out until the <alias_name> feature is released.
-This second example, is a more real-world example as it uses an alias name. See the [alias name section](#alias-name) for more details on this feature.
+## Een alias maken {#alias-name}
+
+Aangezien de resultaten van berekeningen een grote hoeveelheid gegevens kunnen zijn, is het onredelijk om de gegevens die zijn berekend direct in de consoleoutput terug te keren. Hoewel namen van aliassen optioneel zijn, wordt u aangeraden deze als beste praktijken te gebruiken wanneer u statistieken berekent. Geef een naam voor een alias op in de instructie om een beschrijvende verwijzing naar de resultaten in uw SQL-query&#39;s op te nemen. Als alternatief, automatisch geproduceerd `Statistics ID` wordt gegenereerd en gebruikt om de berekende informatie op te slaan.
+
+In het onderstaande voorbeeld worden de berekende uitvoerstatistieken opgeslagen in de `alias_name` voor latere referentie. De in de query gebruikte aliasnaam is beschikbaar ter referentie zodra de `ANALYZE TABLE` is uitgevoerd.
 
 ```sql
-ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
-``` -->
+ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
+```
 
-De consoleoutput toont niet de statistieken in antwoord op de analyze lijst gegevens statistische bevel gegevens. In plaats daarvan, zal de console één enkele rijkolom van tonen `Statistics ID` met een universeel unieke identificatiecode die naar de resultaten verwijst. U kunt ook **rechtstreeks in de`Statistics ID`**. Wanneer een `COMPUTE STATISTICS` vragen, worden de resultaten getoond als volgt:
+De uitvoer voor het bovenstaande voorbeeld is `SUCCESSFULLY COMPLETED, alias_name`. De consoleoutput toont niet de statistieken in de reactie op de analyze lijst gegevens statistische bevel gegevens. Om de gedetailleerde resultaten te zien, moet u een UITGEZOCHTE vraag op de aliasnaam of identiteitskaart van Statistieken gebruiken.
+
+## De uitvoer van berekende statistieken weergeven {#view-output-of-computed-statistics}
+
+Als u vooraf geen alias naam verstrekt, produceert de Dienst van de Vraag automatisch een naam voor `Statistics ID` die de vorm volgt van `<tableName_stats_{incremental_number}>`. Als een alias-naam is opgegeven, wordt deze weergegeven in het dialoogvenster `Statistics ID` kolom.
+
+Een voorbeelduitvoer van een `COMPUTE STATISTICS` De query ziet er als volgt uit:
 
 ```console
 | Statistics ID    | 
@@ -58,95 +67,16 @@ De consoleoutput toont niet de statistieken in antwoord op de analyze lijst gege
 (1 row)
 ```
 
-U kunt de statistische output direct vragen door van verwijzingen te voorzien `Statistics ID` zoals hieronder weergegeven:
+U kunt vervolgens **vraag direct de gegevens verwerkte statistieken** door te verwijzen naar de `Statistics ID`. Met de onderstaande voorbeeldinstructie kunt u de uitvoer in zijn geheel weergeven wanneer deze wordt gebruikt met de opdracht `Statistics ID` of de naam van de alias.
 
 ```sql
 SELECT * FROM adc_geometric_stats_1; 
 ```
 
-Deze verklaring staat u toe om de output op een gelijkaardige manier aan het SHOW STATISTICS bevel te bekijken wanneer gebruikt met `Statistics ID`.
-
-U kunt een lijst van alle gegevens verwerkte statistieken binnen de zitting bekijken door het SHOW STATISTICS bevel uit te voeren. Een voorbeeldoutput van het SHOW STATISTICS bevel wordt hieronder gezien.
+De berekende statistische uitvoer kan er ongeveer zo uitzien als in het onderstaande voorbeeld.
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
------------+---------------+-----------+---------------------------------------+---------------
-adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-```
-
-<!-- Commented out until the <alias_name> feature is released.
-
-To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
-
--->
-
-## De opgenomen kolommen beperken {#limit-included-columns}
-
-U kunt statistieken voor bepaalde datasetkolommen gegevens verwerken door hen door naam van verwijzingen te voorzien. Gebruik de `FOR COLUMNS (<col1>, <col2>)` syntaxis om specifieke kolommen als doel in te stellen. In het onderstaande voorbeeld worden statistieken voor de kolommen berekend  `commerce`, `id`, en `timestamp` voor de gegevensset `tableName`.
-
-```sql
-ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
-```
-
-U kunt de statistieken voor om het even welk wortelniveau of genestelde kolom berekenen. In het volgende voorbeeld worden deze verwijzingen getoond.
-
-```sql
-ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.purchases.value, commerce.productListAdds.value);
-```
-
-## Een filtervoorwaarde voor een tijdstempel toevoegen {#filter-condition}
-
-U kunt een filtervoorwaarde toevoegen om de analyse van uw kolommen te concentreren. Dit kan worden gebruikt om historische gegevens uit te filteren of uw gegevensanalyse op een specifieke periode te concentreren. De `FILTERCONTEXT` het bevel berekent statistieken over een ondergroep van de dataset die op de filtervoorwaarde wordt gebaseerd u verstrekt.
-
-In het onderstaande voorbeeld worden statistieken berekend over alle kolommen voor de gegevensset `tableName`, waarbij de kolomtijdstempel waarden bevat tussen het opgegeven bereik van `2023-04-01 00:00:00` en `2023-04-05 00:00:00`.
-
-```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR ALL COLUMNS;
-```
-
-U kunt de kolomgrens en de filter combineren om hoogst specifieke computervragen voor uw datasetkolommen tot stand te brengen. De volgende query berekent bijvoorbeeld statistieken over de kolommen `commerce`, `id`, en `timestamp` voor de gegevensset `tableName`, waarbij de kolomtijdstempel waarden bevat tussen het opgegeven bereik van `2023-04-01 00:00:00` en `2023-04-05 00:00:00`.
-
-```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
-```
-
-<!-- Commented out until the <alias_name> feature is released.
-## Create an alias name {#alias-name}
-
-Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
-
->[!NOTE]
->
->Although alias names are optional, you are recommended to use them as best practice.
-
-The example below stores the output computed statistics in the `alias_name` for later reference.
-
-```sql
-ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
-```
-
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
--->
-
-<!-- Commented out until the <alias_name> feature is released.
-
-## Show the statistics {#show-statistics}
-
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
-
-Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
-
-The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
-
-```sql
-SHOW STATISTICS FOR <STATISTICS_ID>;
-```
-
-An output might look similar to the example below. 
-
-```console
-                         columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
+ columnName                                                 |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
@@ -163,7 +93,61 @@ An output might look similar to the example below.
 (12 rows)
 ```
 
--->
+## De metagegevens van de statistische analyse weergeven {#show-statistics}
+
+U kunt de `SHOW STATISTICS` bevel om de meta-gegevens voor alle tijdelijke statistieklijsten te tonen die in de zitting worden geproduceerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
+
+Een voorbeeld van uitvoer van `SHOW STATISTICS` is hieronder weergegeven.
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+--------+-----------+-----------+---------------+---------------
+adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
+
+Hieronder vindt u een beschrijving van de kolomnamen voor metagegevens.
+
+| Kolomnaam | Beschrijving |
+|---|---|
+| `statsId` | Deze ID verwijst naar de tabel met tijdelijke statistieken die door de `COMPUTE STATISTICS` gebruiken. |
+| `tableName` | De oorspronkelijke tabel die voor analyse is gebruikt. |
+| `columnSet` | Een lijst van kolommen die specifiek voor analyse zijn gekozen. Een lege waarde geeft aan dat alle kolommen zijn geanalyseerd. Zie de sectie over [limiterende kolommen](#limit-included-columns) voor meer informatie . |
+| `filterContext` | Een lijst met filters die op de analyse zijn toegepast. |
+| `timestamp` | Eventuele chronologische filters die op de gegevensanalyse worden toegepast om zich op een bepaalde periode te concentreren. Zie de [sectie met tijdstempelfiltervoorwaarde](#filter-condition) voor meer informatie . |
+
+U kunt de statistiek-id of aliasnaam gebruiken om de berekende statistieken op elk gewenst moment binnen die sessie op te zoeken met een SELECT-instructie. De statistieken-id en de gegenereerde statistieken zijn alleen geldig voor deze specifieke sessie en kunnen niet worden geopend voor verschillende PSQL-sessies. De berekende statistieken zijn momenteel niet blijvend. Zie de sectie over hoe te [bekijk de output van uw gegevens verwerkte statistieken](#view-output-of-computed-statistics) voor meer informatie .
+
+## De opgenomen kolommen beperken {#limit-included-columns}
+
+Om uw analyse te concentreren, kunt u statistieken voor bepaalde datasetkolommen berekenen door hen door naam van verwijzingen te voorzien. Gebruik de `FOR COLUMNS (<col1>, <col2>)` syntaxis om specifieke kolommen als doel in te stellen. In het onderstaande voorbeeld worden statistieken voor de kolommen berekend  `commerce`, `id`, en `timestamp` voor de gegevensset `tableName`.
+
+```sql
+ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
+```
+
+U kunt de statistieken voor om het even welk wortelniveau of genestelde kolom berekenen. In het volgende voorbeeld worden deze verwijzingen getoond.
+
+```sql
+ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.purchases.value, commerce.productListAdds.value);
+```
+
+## Een filtervoorwaarde voor een tijdstempel toevoegen {#filter-condition}
+
+Als u de analyse van uw kolommen wilt concentreren op chronologie, kunt u een filtervoorwaarde voor een tijdstempel toevoegen. Deze voorwaarde kan worden gebruikt om historische gegevens uit te filteren of uw gegevensanalyse op een specifieke periode te concentreren. De `FILTERCONTEXT` het bevel berekent statistieken over een ondergroep van de dataset die op de filtervoorwaarde wordt gebaseerd die u verstrekt.
+
+In het onderstaande voorbeeld worden statistieken berekend over alle kolommen voor de gegevensset `tableName`, waarbij de kolomtijdstempel waarden bevat tussen het opgegeven bereik van `2023-04-01 00:00:00` en `2023-04-05 00:00:00`.
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR ALL COLUMNS;
+```
+
+U kunt de kolomgrens en de filter combineren om hoogst specifieke computervragen voor uw datasetkolommen tot stand te brengen. De volgende query berekent bijvoorbeeld statistieken over de kolommen `commerce`, `id`, en `timestamp` voor de gegevensset `tableName`, waarbij de kolomtijdstempel waarden bevat tussen het opgegeven bereik van `2023-04-01 00:00:00` en `2023-04-05 00:00:00`.
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
+```
 
 ## Volgende stappen {#next-steps}
 
