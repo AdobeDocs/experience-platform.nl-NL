@@ -4,7 +4,7 @@ title: (Bèta) de datasets van de uitvoer door de Dienst API van de Stroom te ge
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
 source-wordcount: '3510'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >* Deze bètafunctionaliteit ondersteunt de export van gegevens van de eerste generatie, zoals gedefinieerd in de Real-time Customer Data Platform [productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Premier of Ultimate-pakket hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
-In dit artikel wordt uitgelegd welke workflow is vereist voor het gebruik van de [!DNL Flow Service API] om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage].
+In dit artikel wordt uitgelegd welke workflow nodig is om de [!DNL Flow Service API] om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -44,16 +44,16 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Alle gegevens die met succes in Adobe Experience Platform zijn ingevoerd, blijven behouden in het dialoogvenster [!DNL Data Lake] als datasets. Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Datasets bevatten ook metagegevens die verschillende aspecten van de gegevens beschrijven die ze opslaan.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Alle gegevens die met succes in Adobe Experience Platform worden ingevoerd, blijven binnen de [!DNL Data Lake] als datasets. Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Datasets bevatten ook metagegevens die verschillende aspecten van de gegevens beschrijven die ze opslaan.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u moet weten om datasets naar de bestemmingen van de wolkenopslag in Platform uit te voeren.
 
 ### Vereiste machtigingen {#permissions}
 
-Om datasets uit te voeren, hebt u nodig **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+Om datasets uit te voeren, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om datasets uit te voeren en dat de bestemming het uitvoeren van datasets steunt, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** of **[!UICONTROL Export datasets]** controle, dan hebt u de aangewezen toestemmingen.
+Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om datasets uit te voeren en dat de bestemming het uitvoeren van datasets steunt, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** of een **[!UICONTROL Export datasets]** controle, dan hebt u de aangewezen toestemmingen.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
@@ -63,7 +63,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [Zelfstudie over verificatie van Experience Platforms](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
@@ -85,7 +85,7 @@ In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bew
 
 ### Woordenlijst {#glossary}
 
-Voor beschrijvingen van de termen die u in deze API-zelfstudie zult tegenkomen, leest u de [verklarende woordenlijst](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API-naslagdocumentatie.
+Lees voor beschrijvingen van de termen die u in deze API-zelfstudie zult tegenkomen de [verklarende woordenlijst](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API-naslagdocumentatie.
 
 ### Verbindingsspecificaties en stroomspecificaties voor uw gewenste doel verzamelen {#gather-connection-spec-flow-spec}
 
@@ -336,7 +336,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection spec] Id die wordt gebruikt in de aanvraag-URL, moet de specificatie-id van de gegevensmeerbronverbinding zijn. `23598e46-f560-407b-88d5-ea6207e49db0`en de twee queryparameters `outputField=datasets` en `outputType=activationDatasets` moet worden gespecificeerd. Alle andere vraagparameters zijn standaarddegenen die door [Catalogusservice-API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection spec] De id die in de aanvraag-URL wordt gebruikt, moet de specificatie-id van de gegevensmeerbronverbinding zijn. `23598e46-f560-407b-88d5-ea6207e49db0`en de twee queryparameters `outputField=datasets` en `outputType=activationDatasets` moet worden gespecificeerd. Alle andere vraagparameters zijn standaarddegenen die door worden gesteund [Catalogusservice-API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 +++
 
@@ -968,7 +968,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Raadpleeg voor meer informatie de [authenticeren naar doel](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Gebied van Gegevens Landing.
+>Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Raadpleeg voor meer informatie de [authenticeren naar doel](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Gebied van Gegevens.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1893,7 +1893,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwoord**
 
-+++Verbinding van het Doel - Reactie
++++Doelverbinding - Reactie
 
 ```json
 {
@@ -2331,7 +2331,7 @@ De aanwezigheid van deze bestanden op uw opslaglocatie is een bevestiging van ee
 
 #### Gecomprimeerde gegevensbestanden {#compressed-dataset-files}
 
-In de stap naar [een doelverbinding maken](#create-target-connection), kunt u de geëxporteerde gegevenssetbestanden selecteren die moeten worden gecomprimeerd.
+In de stap naar [een doelverbinding maken](#create-target-connection), kunt u de geëxporteerde gegevenssetbestanden selecteren die u wilt comprimeren.
 
 Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen bij het comprimeren:
 
