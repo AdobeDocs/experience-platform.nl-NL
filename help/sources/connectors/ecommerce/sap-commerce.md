@@ -2,10 +2,8 @@
 title: SAP - Overzicht van de Bron van de Handel
 description: Leer hoe u SAP Commerce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2023-07-26T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 1%
@@ -37,7 +35,7 @@ Voordat u uw [!DNL SAP Commerce] gegevens aan Experience Platform, moet u eerst 
 
 * A [!DNL SAP Subscription Billing] account. Neem contact op met uw [!DNL SAP] accountmanager. Zie de [[!DNL SAP] Configuratie van Platform](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) voor meer informatie.
 
-* [!DNL SAP] servicesleutel. De [!DNL SAP] de de dienstsleutel staat u toe om tot [!DNL SAP Subscription Billing] API via Experience Platform. [!DNL SAP Commerce] vereist het volgende:
+* [!DNL SAP] servicetoets. De [!DNL SAP] de de dienstsleutel staat u toe om tot [!DNL SAP Subscription Billing] API via Experience Platform. [!DNL SAP Commerce] vereist het volgende:
    * Client-id
    * Clientgeheim
    * URL. Het URL-patroon is als volgt: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Deze waarde wordt later gebruikt om waarden te verkrijgen voor `region` en `tokenEndpoint` wanneer u [Basisverbinding maken](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) met de API of wanneer u [Verbind uw [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) via de gebruikersinterface van het Platform.
@@ -72,8 +70,8 @@ Voordat u uw [!DNL SAP Commerce] gegevens aan Experience Platform, moet u eerst 
 
 ## Volgende stappen
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL SAP Commerce] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL SAP Commerce] Platforms met API&#39;s of de gebruikersinterface:
 
-* [Een bronverbinding en gegevensstroom maken om te zorgen [!DNL SAP Commerce] gegevens naar Platform met API&#39;s](../../tutorials/api/create/ecommerce/sap-commerce.md).
+* [Een bronverbinding en gegevensstroom maken voor [!DNL SAP Commerce] gegevens naar Platform met API&#39;s](../../tutorials/api/create/ecommerce/sap-commerce.md).
 * [Verbind uw [!DNL SAP Commerce] account aan Experience Platform met behulp van de gebruikersinterface](../../tutorials/ui/create/ecommerce/sap-commerce.md).
 * [Een gegevensstroom maken voor een bron met behulp van de gebruikersinterface](../../tutorials/ui/dataflow/ecommerce.md)

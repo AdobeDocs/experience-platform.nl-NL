@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronn
 
 ## Typen bronnen
 
-Bronnen in Experience Platform worden ingedeeld in de volgende categorieën:
+Bronnen in Experience Platform worden gegroepeerd in de volgende categorieën:
 
 ### Adobe-toepassingen {#adobe-applications}
 
@@ -55,7 +55,7 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Ado
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [Google-advertenties](connectors/advertising/ads.md)
+- [Google Adds](connectors/advertising/ads.md)
 
 ### Analytics {#analytics}
 
@@ -67,7 +67,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een ex
 
 ### Cloud Storage {#cloud-storage}
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
+Opslagbronnen in de cloud kunnen uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
@@ -137,6 +137,7 @@ Experience Platform verleent steun voor het opnemen van gegevens van een derdege
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een eCommerce-systeem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md)
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 - [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 
@@ -182,19 +183,19 @@ Experience Platform verleent steun voor het opnemen van gegevens van een systeem
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via de **[!UICONTROL Permissions]** in een bepaald productprofiel. Van de **[!UICONTROL Edit Permissions]** kunt u toegang krijgen tot de machtigingen voor bronnen via het dialoogvenster **[!UICONTROL data ingestion]** menu-item. De **[!UICONTROL View Sources]** toestemming verleent read-only toegang tot beschikbare bronnen in **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** terwijl de **[!UICONTROL Manage Sources]** met deze machtiging hebt u volledige toegang tot het lezen, maken, bewerken en uitschakelen van bronnen.
+Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via de **[!UICONTROL Permissions]** in een bepaald productprofiel. Van de **[!UICONTROL Edit Permissions]** kunt u de machtigingen voor bronnen openen via het dialoogvenster **[!UICONTROL data ingestion]** menu-item. De **[!UICONTROL View Sources]** toestemming verleent read-only toegang tot beschikbare bronnen in **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** terwijl de **[!UICONTROL Manage Sources]** met deze machtiging hebt u volledige toegang tot het lezen, maken, bewerken en uitschakelen van bronnen.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
 | Machtigingsniveau | Beschrijving |
 | ---- | ----|
 | **[!UICONTROL View Sources]** Aan | De read-only toegang van de subsidie tot bronnen in elk bron-type op het lusje van de Catalogus, evenals doorbladeren, Rekeningen, en lusjes Dataflow. |
-| **[!UICONTROL Manage Sources]** Aan | Naast de in **[!UICONTROL View Sources]** verleent toegang tot **[!UICONTROL Connect Source]** optie in **[!UICONTROL Catalog]** en **[!UICONTROL Select Data]** optie in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** staat u ook toe om in of onbruikbaar te maken **[!UICONTROL DataFlows]** en bewerk hun schema&#39;s. |
+| **[!UICONTROL Manage Sources]** Aan | Naast de in **[!UICONTROL View Sources]** verleent toegang tot **[!UICONTROL Connect Source]** optie in **[!UICONTROL Catalog]** en **[!UICONTROL Select Data]** optie in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** staat u ook toe om in of onbruikbaar te maken **[!UICONTROL DataFlows]** en bewerk de planning. |
 | **[!UICONTROL View Sources]** Uit en **[!UICONTROL Manage Sources]** Uit | Alle toegang tot bronnen intrekken. |
 
 Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van de Adobe worden verleend, lees [toegangsbeheeroverzicht](../access-control/home.md).
 
-### Op kenmerken gebaseerd toegangsbeheer
+### Toegangsbeheer op basis van kenmerken
 
 Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen beheerders de toegang tot specifieke objecten en/of mogelijkheden beheren op basis van kenmerken.
 
@@ -207,7 +208,7 @@ Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op g
 >Toegangsbeheer op basis van kenmerken werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan. **Labels** worden toegepast op **rollen** de toegang tot die bepaalde rol aan te wijzen. **Labels** worden ook toegepast op bronnen zoals schemavelden en segmenten. Als u wilt dat een gebruiker toegang heeft tot bepaalde schemavelden en segmenten, moet u deze toevoegen aan *een rol met het zelfde etiket dat aan het gevraagde middel wordt toegewezen*. Lees voor meer informatie de [attribuut-based toegangsbeheergids van begin tot eind](../access-control/abac/end-to-end-guide.md).
 
 - Pas etiketten op schemagebieden toe om toegang tot specifieke schemagebieden in uw organisatie te bepalen. Zodra de toegang tot specifieke schemagebieden wordt gevestigd, zullen de gebruikers slechts afbeeldingen voor de gebieden kunnen tot stand brengen die zij toegang hebben tot.
-- De gebruikers zonder de aangewezen rollen zullen geen dataflows met afbeeldingen kunnen tot stand brengen of bijwerken die ontoegankelijke schemagebieden impliceren. Bovendien kunnen onbevoegde gebruikers bestaande gegevensstromen met ontoegankelijke schemavelden niet bijwerken, verwijderen, inschakelen of uitschakelen.
+- Gebruikers zonder de juiste rollen kunnen geen dataflows met toewijzingen maken of bijwerken die ontoegankelijke schemavelden bevatten. Bovendien kunnen onbevoegde gebruikers bestaande gegevensstromen met ontoegankelijke schemavelden niet bijwerken, verwijderen, inschakelen of uitschakelen.
 - Bovendien, moet een dataflow precies zelfde schema identiteitskaart en versie in zijn afbeelding, doeldataset, en doelverbinding hebben.
 
 Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees [op attributen-gebaseerd toegangsbeheeroverzicht](../access-control/abac/overview.md).

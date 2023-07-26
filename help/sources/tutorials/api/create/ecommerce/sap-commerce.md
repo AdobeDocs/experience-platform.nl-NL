@@ -1,10 +1,8 @@
 ---
 title: Creeer een bronverbinding en dataflow voor de Handel van SAP gebruikend de Dienst API van de Stroom
 description: Leer hoe te om een bronverbinding en gegevensstroom tot stand te brengen om de gegevens van de Handel van SAP aan Experience Platform te brengen gebruikend de Dienst API van de Stroom.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 0%
@@ -21,7 +19,7 @@ De volgende zelfstudie begeleidt u door de stappen om een [!DNL SAP Commerce] br
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -34,10 +32,10 @@ Om verbinding te maken [!DNL SAP Commerce] als u een Experience Platform wilt ma
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `clientId` | De waarde van `clientId` van de de dienstsleutel. |
-| `clientSecret` | De waarde van `clientSecret` van de de dienstsleutel. |
+| `clientId` | De waarde van `clientId` uit de servicesleutel. |
+| `clientSecret` | De waarde van `clientSecret` uit de servicesleutel. |
 | `tokenEndpoint` | De waarde van `url` van de de dienstsleutel, zal het gelijkaardig zijn aan `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| `region` | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde die vergelijkbaar is met `eu10` of `us10`. Als de `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, dan hebt u `eu10`. |
+| `region` | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10`. Als de `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, dan hebt u `eu10`. |
 
 Voor meer informatie over deze referenties raadpleegt u de [[!DNL SAP Commerce] documentatie](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
@@ -49,7 +47,7 @@ Hieronder worden de stappen beschreven die u moet uitvoeren om uw [!DNL SAP Comm
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL SAP Commerce] verificatiereferenties als onderdeel van de aanvraaginstantie.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL SAP Commerce] verificatiegegevens als onderdeel van de aanvraaginstantie.
 
 **API-indeling**
 
@@ -94,9 +92,9 @@ curl -X POST \
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
 | `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
-| `auth.params.region` | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde die vergelijkbaar is met `eu10` of `us10`. Als de `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` u hebt `eu10`. |
-| `auth.params.clientId` | De waarde van `clientId` van de de dienstsleutel. |
-| `auth.params.clientSecret` | De waarde van `clientSecret` van de de dienstsleutel. |
+| `auth.params.region` | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10`. Als de `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` u hebt `eu10`. |
+| `auth.params.clientId` | De waarde van `clientId` uit de servicesleutel. |
+| `auth.params.clientSecret` | De waarde van `clientSecret` uit de servicesleutel. |
 | `auth.params.tokenEndpoint` | De waarde van `url` van de de dienstsleutel, zal het gelijkaardig zijn aan `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 
 **Antwoord**
@@ -135,7 +133,7 @@ De [!DNL SAP Commerce] bron ondersteunt meerdere API&#39;s. Afhankelijk van het 
 
 >[!NOTE]
 >
->Sommige reactierecords zijn afgebroken om een betere presentatie mogelijk te maken.
+>Sommige reactierecords zijn afgebroken voor een betere presentatie.
 
 >[!BEGINTABS]
 
@@ -557,7 +555,7 @@ Een geslaagde reactie retourneert een JSON-structuur als volgt:
 
 ### Een bronverbinding maken {#source-connection}
 
-U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan `/sourceConnections` van het [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
+U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan `/sourceConnections` het eindpunt van de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
 
 **API-indeling**
 
@@ -614,7 +612,7 @@ curl -X POST \
 
 +++Response
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -670,7 +668,7 @@ curl -X POST \
 
 +++Response
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -695,7 +693,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../../../catalog/api/create-dataset.md).
 
 ### Een doelverbinding maken {#target-connection}
 
@@ -862,8 +860,8 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `outputSchema.schemaRef.id` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
-| `mappings.sourceType` | Het type bronkenmerk dat wordt toegewezen. |
-| `mappings.source` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
+| `mappings.sourceType` | Het bronkenmerktype dat wordt toegewezen. |
+| `mappings.source` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.destination` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
 
 +++
@@ -960,8 +958,8 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `outputSchema.schemaRef.id` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
-| `mappings.sourceType` | Het type bronkenmerk dat wordt toegewezen. |
-| `mappings.source` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
+| `mappings.sourceType` | Het bronkenmerktype dat wordt toegewezen. |
+| `mappings.source` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.destination` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
 
 +++
@@ -987,10 +985,10 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL SAP Commerce] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzamelen van gegevens van [!DNL SAP Commerce] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
-* [Doelverbinding-id](#target-connection)
+* [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
@@ -1044,7 +1042,7 @@ curl -X POST \
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
 | `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | De corresponderende versie van de flow specification-id. Deze waarde wordt standaard ingesteld op `1.0`. |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde wordt standaard ingesteld op `1.0`. |
 | `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
@@ -1066,7 +1064,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 }
 ```
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 

@@ -1,68 +1,72 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Salesforce;salesforce
-solution: Experience Platform
-title: Een Salesforce-bronverbinding maken in de gebruikersinterface
-type: Tutorial
-description: Leer hoe u een Salesforce-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+title: Uw Salesforce-account aansluiten via de gebruikersinterface van het Experience Platform
+description: Leer hoe u uw Salesforce-account koppelt en uw CRM-gegevens via de gebruikersinterface naar het Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 1%
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Salesforce] bronverbinding in de gebruikersinterface
+# Verbind uw [!DNL Salesforce] account aan Experience Platform met behulp van de gebruikersinterface
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens van CRM op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Salesforce] bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
+Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding met uw [!DNL Salesforce] en breng uw gegevens van CRM naar Adobe Experience Platform gebruikend het gebruikersinterface van het Experience Platform.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u al een geldige [!DNL Salesforce] account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/crm.md).
+Als u al een geverifieerde [!DNL Salesforce] account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [het vormen van een gegevensstroom voor de gegevens van CRM](../../dataflow/crm.md).
 
-### Vereiste referenties verzamelen
+### Vereiste referenties verzamelen {#gather-required-credentials}
+
+Om uw [!DNL Salesforce] account voor Experience Platform, moet u waarden opgeven die overeenkomen met het volgende [!DNL Salesforce] referenties:
 
 | Credentials | Beschrijving |
-| ---------- | ----------- |
+| --- | --- |
 | `environmentUrl` | De URL van de [!DNL Salesforce] broninstantie. |
 | `username` | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
 | `password` | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
 | `securityToken` | De beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
+| `apiVersion` | (Optioneel) De REST API-versie van de [!DNL Salesforce] -instantie die u gebruikt. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
 
-Raadpleeg voor meer informatie over aan de slag gaan [dit Salesforce-document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+Raadpleeg voor meer informatie over verificatie de [dit [!DNL Salesforce] verificatiehandleiding](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om verbinding te maken met uw [!DNL Salesforce] aan Experience Platform.
 
 ## Verbind uw [!DNL Salesforce] account
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Salesforce] account aan [!DNL Platform].
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar in de catalogus van bronnen van het Experience Platform.
 
-Aanmelden bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de **[!UICONTROL Sources]** werkruimte. De **[!UICONTROL Catalog]** in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook een specifieke bron zoeken met de zoekoptie.
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteren **[!UICONTROL CRM]** in de lijst met categorieën bronnen en selecteer vervolgens **[!UICONTROL Add data]** van de [!DNL Salesforce] kaart.
 
-Onder de **[!UICONTROL Databases]** categorie, selecteert u **[!UICONTROL Salesforce]**. Als dit de eerste keer is met deze connector, selecteert u **[!UICONTROL Configure]**. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe Salesforce-connector te maken.
-
-![catalogus](../../../../images/tutorials/create/salesforce/catalog.png)
+![De broncatalogus op het Experience Platform UI met de Salesforce-bronkaart geselecteerd.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 De **[!UICONTROL Connect to Salesforce]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
-### Nieuwe account
+>[!BEGINTABS]
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Salesforce] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+>[!TAB Bestaande Salesforce-account gebruiken]
 
-![verbinden](../../../../images/tutorials/create/salesforce/new.png)
+Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en selecteer vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven. Selecteer **[!UICONTROL Next]** om verder te gaan.
 
-### Bestaande account
+![Een lijst met geverifieerde Salesforce-accounts die al in uw organisatie bestaan.](../../../../images/tutorials/create/salesforce/existing.png)
 
-Als u een bestaande account wilt verbinden, selecteert u de optie [!DNL Salesforce] account waarmee u verbinding wilt maken, selecteert u **[!UICONTROL Next]** in de rechterbovenhoek om verder te gaan.
+>[!TAB Een nieuw Salesforce-account maken]
 
-![bestaand](../../../../images/tutorials/create/salesforce/existing.png)
+Als u een nieuwe account wilt gebruiken, selecteert u **[!UICONTROL New account]** en geef een naam, beschrijving en uw [!DNL Salesforce] verificatiegegevens. Selecteer **[!UICONTROL Connect to source]** en wacht een paar seconden tot de nieuwe verbinding tot stand is gebracht.
+
+![De interface waarin u een nieuwe rekening kunt tot stand brengen Salesforce door de aangewezen authentificatiegeloofsbrieven te verstrekken.](../../../../images/tutorials/create/salesforce/new.png)
+
+>[!ENDTABS]
 
 ## Volgende stappen
 

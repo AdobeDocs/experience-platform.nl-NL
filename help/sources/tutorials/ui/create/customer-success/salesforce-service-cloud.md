@@ -1,70 +1,73 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Salesforce Service Cloud;salesforce-serviccloud
-solution: Experience Platform
-title: Creëer een verbinding van de Bron van de Dienst van Salesforce Cloud in UI
-type: Tutorial
-description: Leer hoe u een Salesforce Service Cloud-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+title: Uw Salesforce Service Cloud-account aansluiten via de gebruikersinterface van het Experience Platform
+description: Leer hoe u uw Salesforce Service Cloud-account kunt aansluiten en uw gegevens over klantresultaten naar het Experience Platform kunt brengen via de gebruikersinterface.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 1%
+source-wordcount: '521'
+ht-degree: 0%
 
 ---
 
-# Een [!DNL Salesforce Service Cloud] bronverbinding in de gebruikersinterface
+# Verbind uw [!DNL Salesforce Service Cloud] account aan Experience Platform met behulp van de gebruikersinterface
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Salesforce Service Cloud] (hierna &quot;SSC&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
+Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding met uw [!DNL Salesforce Service Cloud] en breng uw gegevens over klantsucces naar Adobe Experience Platform via de gebruikersinterface van het Experience Platform.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u al een geldige SSC-verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/customer-success.md)
+Als u al een geldige [!DNL Salesforce Service Cloud] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [het vormen van een gegevensstroom voor een klantensucces](../../dataflow/customer-success.md)
 
 ### Vereiste referenties verzamelen
 
-Voor toegang tot uw SSC-account op [!DNL Platform]moet u de volgende waarden opgeven:
+Voor toegang tot uw [!DNL Salesforce Service Cloud] account op Experience Platform, moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
-| ---------- | ----------- |
-| `username` | De gebruikersnaam voor de gebruikersaccount. |
-| `password` | Het wachtwoord voor de gebruikersaccount. |
-| `securityToken` | Het beveiligingstoken voor de gebruikersaccount. |
+| --- | --- |
+| `environmentUrl` | De URL van de [!DNL Salesforce Service Cloud] broninstantie. |
+| `username` | De gebruikersnaam voor de [!DNL Salesforce Service Cloud] gebruikersaccount. |
+| `password` | Het wachtwoord voor de [!DNL Salesforce Service Cloud] gebruikersaccount. |
+| `securityToken` | De beveiligingstoken voor de [!DNL Salesforce Service Cloud] gebruikersaccount. |
+| `apiVersion` | (Optioneel) De REST API-versie van de [!DNL Salesforce Service Cloud] -instantie die u gebruikt. Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
 
-Raadpleeg voor meer informatie over aan de slag gaan [dit [!DNL Salesforce Service Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
+Raadpleeg voor meer informatie over verificatie de [dit [!DNL Salesforce] verificatiehandleiding](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
 ## Verbind uw [!DNL Salesforce Service Cloud] account
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw SSC-account te koppelen aan [!DNL Platform].
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Salesforce] aan Experience Platform.
 
-Aanmelden bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de **[!UICONTROL Sources]** werkruimte. De **[!UICONTROL Catalog]** in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar op de Experience Platform broncatalogus.
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook een specifieke bron zoeken met de zoekoptie.
 
-Onder de **[!UICONTROL Customer Success]** categorie, selecteert u **[!UICONTROL Salesforce Service Cloud]**. Als dit de eerste keer is met deze connector, selecteert u **[!UICONTROL Configure]**. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe schakelaar te creëren SSC.
+Selecteren **[!UICONTROL Customer success]** in de lijst met categorieën bronnen en selecteer vervolgens **[!UICONTROL Add data]** van de [!DNL Salesforce Service Cloud] kaart.
 
-![catalogus](../../../../images/tutorials/create/ssc/catalog.png)
+![De broncatalogus op de gebruikersinterface van het Experience Platform met de bronkaart van de Salesforce-service Cloud geselecteerd.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
 De **[!UICONTROL Connect to Salesforce Service Cloud]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
-### Nieuwe account
+>[!BEGINTABS]
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw SSC-referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+>[!TAB Bestaande Salesforce Service Cloud-account gebruiken]
 
-![verbinden](../../../../images/tutorials/create/ssc/connect.png)
+Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en selecteer vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven. Selecteer **[!UICONTROL Next]** om verder te gaan.
 
-### Bestaande account
+![Een lijst met geverifieerde Salesforce-accounts die al in uw organisatie bestaan.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
-Als u een bestaande account wilt verbinden, selecteert u de SSC-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om verder te gaan.
+>[!TAB Een nieuw Salesforce Service Cloud-account maken]
 
-![bestaand](../../../../images/tutorials/create/ssc/existing.png)
+Als u een nieuwe account wilt gebruiken, selecteert u **[!UICONTROL New account]** en geef een naam, beschrijving en uw [!DNL Salesforce Service Cloud] verificatiegegevens. Selecteer **[!UICONTROL Connect to source]** en wacht een paar seconden tot de nieuwe verbinding tot stand is gebracht.
+
+![De interface waarin u een nieuwe rekening kunt tot stand brengen Salesforce door de aangewezen authentificatiegeloofsbrieven te verstrekken.](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
+
+>[!ENDTABS]
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding met uw SSC-account tot stand gebracht. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens van Klantsucces in te voeren [!DNL Platform]](../../dataflow/customer-success.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Salesforce Service Cloud] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens van Klantsucces in Experience Platform te brengen](../../dataflow/customer-success.md).
