@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van juli 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85240b7d8f187e3d95762b9afbd8b8507869dabc
+source-git-commit: 134c18822350a0032bb9957e6e0d1ab888c6b289
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '659'
 ht-degree: 5%
 
 ---
@@ -29,6 +29,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
 | Tags en doorsturen van gebeurtenissen | Controleregboeken voor gegevensverzameling | U kunt nu zien wanneer een actie is uitgevoerd en wie deze actie heeft uitgevoerd op Tags en Gebeurtenis doorsturen. Dit vergemakkelijkt het oplossen van problemen met producten, behoorlijk bestuur, en interne controleactiviteiten. Deze controlegegevens worden weergegeven via in-context schuifmenu&#39;s die ook snelle acties en updates van de middelstatus bevatten. Deze gegevens zijn in de volgende schermen zichtbaar in de gebruikersinterface Tags en Event Forwarding:<br><ul><li>[Overzicht van eigenschappen](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[Regels](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[Gegevenselementen](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[Extensies](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[Bibliotheekrevisie](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[Bibliotheek laatst samenstellen en gepubliceerd](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
+| Gegevensstromen | [Geo Lookup](../../datastreams/configure.md#advanced-options) | U kunt geolocatie en netwerkzoekopdracht voor gegevensstreams nu configureren om informatie zoals: <ul><li>Land</li><li>Postcode</li><li>Staat/provincie</li><li>DMA</li><li>Plaats</li><li>Breedtegraad </li><li>Lengtegraad</li><li>Vervoerder</li><li>Domein</li><li>ISP</li></ul> U bent ervoor verantwoordelijk dat u alle benodigde machtigingen, toestemmingen, toestemmingen, toestemmingen en toestemming hebt verkregen die vereist zijn krachtens de toepasselijke wet- en regelgeving voor het verzamelen, verwerken en verzenden van persoonlijke gegevens, inclusief nauwkeurige geolocatiegegevens. <br> Uw IP selectie van de adresverwarring beïnvloedt niet het niveau van geolocatieinformatie die van het IP adres zal worden afgeleid en naar uw gevormde oplossingen van Adobe verzonden. Geolocation lookups moeten worden beperkt of afzonderlijk worden uitgeschakeld. <br> Zie de [datastreams documentatie](../../datastreams/configure.md#advanced-options) voor meer informatie . |
 
 {style="table-layout:auto"}
 
