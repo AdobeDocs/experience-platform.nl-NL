@@ -2,9 +2,9 @@
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,9 @@ ht-degree: 0%
 
 ## Doelwijziging {#changelog}
 
->[!IMPORTANT]
->
->Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL SFTP] kaarten in de lijst met bestemmingen.
->* Als u al bestanden exporteert naar de **[!UICONTROL SFTP]** bestemming: Maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL SFTP beta]** bestemming.
->* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL SFTP]** doel, gebruik de nieuwe **[!UICONTROL SFTP beta]** kaart om bestanden te exporteren naar **[!UICONTROL SFTP]**.
+Met de versie van het Experience Platform van juli 2023, verstrekt de bestemming SFTP nieuwe functionaliteit, zoals hieronder vermeld:
 
-![Afbeelding van de twee SFTP-doelkaarten in een weergave Naast elkaar.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-Verbeteringen in de nieuwe [!DNL SFTP] bestemmingskaart omvat:
-
-* [Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
 * Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -61,8 +53,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -74,7 +66,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verificatiegegevens {#authentication-information}
 
@@ -93,7 +85,7 @@ Als u **[!UICONTROL SFTP with password]** verificatietype voor verbinding met uw
 ![Basisverificatie van SFTP-bestemming](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Domain]**: Het adres van uw opslagplaats SFTP;
-* **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
+* **[!UICONTROL Username]**: De gebruikersnaam die u wilt aanmelden bij uw SFTP-opslaglocatie;
 * **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
 * **[!UICONTROL Password]**: Het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
@@ -107,7 +99,7 @@ Als u **[!UICONTROL SFTP with SSH key]** verificatietype voor verbinding met uw 
 
 * **[!UICONTROL Domain]**: Vul het IP-adres of de domeinnaam van uw SFTP-account in
 * **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
-* **[!UICONTROL Username]**: De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie;
+* **[!UICONTROL Username]**: De gebruikersnaam die u wilt aanmelden bij uw SFTP-opslaglocatie;
 * **[!UICONTROL SSH Key]**: De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet een RSA-Geformatteerd, Base64-Gecodeerde koord zijn, en moet niet wachtwoord-beschermd zijn.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
@@ -119,12 +111,12 @@ Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de
 
 ![Beschikbare bestemmingsdetails voor bestemming SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Name]**: Voer een naam in waarmee u deze bestemming kunt identificeren in de gebruikersinterface van het Experience Platform.
-* **[!UICONTROL Description]**: een beschrijving voor deze bestemming invoeren;
-* **[!UICONTROL Folder path]**: Voer het pad in naar de map op de SFTP-locatie waar de bestanden worden geëxporteerd.
-* **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming.
-* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Deze optie is alleen beschikbaar voor de **[!UICONTROL SFTP beta]** bestemming.
+* **[!UICONTROL Name]**: voer een naam in waarmee u deze bestemming kunt identificeren in de gebruikersinterface van het Experience Platform.
+* **[!UICONTROL Description]**: voer een beschrijving in voor deze bestemming;
+* **[!UICONTROL Folder path]**: voer het pad naar de map in op de SFTP-locatie waar de bestanden worden geëxporteerd.
+* **[!UICONTROL File type]**: selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer u de [!UICONTROL CSV] kunt u [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
+* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
@@ -143,7 +135,7 @@ Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de 
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL SFTP] doelen, Platform maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
+Voor [!DNL SFTP] doelen, Platform maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
 
 ## IP adres lijst van gewenste personen {#ip-address-allow-list}
 

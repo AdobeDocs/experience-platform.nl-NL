@@ -2,9 +2,9 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -13,24 +13,12 @@ ht-degree: 0%
 
 ## Doelwijziging {#changelog}
 
->[!IMPORTANT]
->
->Met de bètaversie van de functionaliteit van de uitvoerdatasets en de verbeterde functionaliteit van de dossieruitvoer, kunt u twee nu zien [!DNL Amazon S3] kaarten in de lijst met bestemmingen.
->* Als u al bestanden exporteert naar de **[!UICONTROL Amazon S3]** doel, maak nieuwe gegevensstromen naar de nieuwe **[!UICONTROL Amazon S3 beta]** bestemming.
->* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Amazon S3]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Amazon S3 beta]** kaart om bestanden te exporteren naar **[!UICONTROL Amazon S3]**.
+Met de release van het Experience Platform van juli 2023 [!DNL Amazon S3] doel biedt nieuwe functionaliteit, zoals hieronder wordt weergegeven:
 
-![Afbeelding van de twee Amazon S3-doelkaarten in een weergave Naast elkaar.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
-
-Verbeteringen in de nieuwe [!DNL Amazon S3] bestemmingskaart omvat:
-
-* [Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
 * Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
-
-## Overzicht {#overview}
-
-Een live uitgaande verbinding maken met uw [!DNL Amazon S3] opslag om periodiek gegevensbestanden van Adobe Experience Platform naar uw eigen S3 emmers uit te voeren.
 
 ## Verbinding maken met uw [!DNL Amazon S3] opslag via API of UI {#connect-api-or-ui}
 
@@ -57,8 +45,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +58,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -101,13 +89,13 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Voer een naam in die u helpt deze bestemming te identificeren.
-* **[!UICONTROL Description]**: Voer een beschrijving van deze bestemming in.
-* **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt.
-* **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL File type]**: Selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Amazon S3 beta]** bestemming. Wanneer u de [!UICONTROL CSV] kunt u ook [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Deze optie is alleen beschikbaar voor de **[!UICONTROL Amazon S3 beta]** bestemming.
-* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Deze optie is alleen beschikbaar voor de **[!UICONTROL Amazon S3 beta]** bestemming.
+* **[!UICONTROL Name]**: voer een naam in die u zal helpen deze bestemming te identificeren.
+* **[!UICONTROL Description]**: voer een beschrijving van deze bestemming in.
+* **[!UICONTROL Bucket name]**: voer de naam in van de [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt.
+* **[!UICONTROL Folder path]**: voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+* **[!UICONTROL File type]**: selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer u de [!UICONTROL CSV] kunt u [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
+* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer.
 
 >[!TIP]
 >
@@ -115,13 +103,13 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
 ### Vereist [!DNL Amazon S3] machtigingen {#required-s3-permission}
 
-Om gegevens met succes te verbinden en uit te voeren aan uw [!DNL Amazon S3] opslaglocatie, een gebruiker voor Identiteit en Toegangsbeheer (IAM) maken voor [!DNL Platform] in [!DNL Amazon S3] en wijs toestemmingen voor de volgende acties toe:
+Om gegevens met succes te verbinden en uit te voeren aan uw [!DNL Amazon S3] opslaglocatie, een gebruiker voor Identiteit en Toegangsbeheer (IAM) maken [!DNL Platform] in [!DNL Amazon S3] en wijs toestemmingen voor de volgende acties toe:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -157,4 +145,4 @@ Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de 
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Amazon S3] bestemmingen, [!DNL Platform] maakt een gegevensbestand op de opslaglocatie die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
+Voor [!DNL Amazon S3] bestemmingen, [!DNL Platform] maakt een gegevensbestand op de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
