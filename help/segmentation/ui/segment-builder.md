@@ -3,14 +3,18 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3237'
+source-wordcount: '3267'
 ht-degree: 0%
 
 ---
 
 # [!DNL Segment Builder] UI-hulplijn
+
+>[!NOTE]
+>
+>In deze handleiding wordt uitgelegd hoe u een publiek kunt maken **segmentdefinities** met de Segment Builder. Als u wilt leren hoe u publiek kunt maken met Audience Composition, leest u de [Handleiding voor compositie van publiek](./audience-composition.md).
 
 [!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 
@@ -25,7 +29,7 @@ ht-degree: 0%
 
 De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daarnaast kunnen de kenmerken en gebeurtenissen in bestaande doelgroepen worden gebruikt als componenten voor nieuwe definities.
 
-U kunt deze bouwstenen zien in de **[!UICONTROL Fields]** aan de linkerkant van het dialoogvenster [!DNL Segment Builder] werkruimte. **[!UICONTROL Fields]** bevat een tab voor elk van de belangrijkste bouwstenen: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot;, en &quot;[!UICONTROL Audiences]&quot;.
+U kunt deze bouwstenen zien in de **[!UICONTROL Fields]** aan de linkerkant van het dialoogvenster [!DNL Segment Builder] werkruimte. **[!UICONTROL Fields]** bevat een tab voor elk van de belangrijkste bouwstenen : &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot;, en &quot;[!UICONTROL Audiences]&quot;.
 
 ![De sectie met velden van de Segment Builder wordt gemarkeerd.](../images/ui/segment-builder/segment-fields.png)
 
@@ -51,7 +55,7 @@ Vervolgens kunt u eenvoudig slepen en neerzetten [!DNL ExperienceEvents] en &quo
 
 ![De gebeurtenissensectie van de gebruikersinterface van Segment Builder wordt gemarkeerd.](../images/ui/segment-builder/events.png)
 
-Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. Dit omvat &quot;[!UICONTROL Event Types]&quot;. Als &quot;[!UICONTROL Event Types]De lijst is niet zichtbaar of u kunt alleen &quot;[!UICONTROL Any]&quot; als een &quot;[!UICONTROL Event Type]&quot;, selecteert u de **tandwielpictogram** naast **[!UICONTROL Fields]** selecteert u vervolgens **[!UICONTROL Show full XDM schema]** krachtens **[!UICONTROL Available Fields]**. Selecteer **tandwielpictogram** nogmaals om terug te keren naar de **[!UICONTROL Fields]** en u moet nu meerdere &quot;[!UICONTROL Event Types]&quot; en schema-velden, ongeacht of deze gegevens bevatten of niet.
+Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. Dit omvat &quot;[!UICONTROL Event Types]&quot;. Als &quot;[!UICONTROL Event Types]De lijst is niet zichtbaar of u kunt alleen &quot;[!UICONTROL Any]&quot; als een &quot;[!UICONTROL Event Type]&quot;, selecteert u de **tandwielpictogram** naast **[!UICONTROL Fields]** selecteert u vervolgens **[!UICONTROL Show full XDM schema]** krachtens **[!UICONTROL Available Fields]**. Selecteer de **tandwielpictogram** nogmaals om terug te keren naar de **[!UICONTROL Fields]** en u moet nu meerdere bestanden kunnen bekijken &quot;[!UICONTROL Event Types]&quot; en schema-velden, ongeacht of deze gegevens bevatten of niet.
 
 ![Keuzerondjes waarmee u alleen velden met gegevens of alle XDM-velden kunt weergeven, worden gemarkeerd.](../images/ui/segment-builder/show-populated.png)
 
@@ -61,9 +65,9 @@ U kunt gegevens uit één of meerdere Adobe Analytics-rapportreeksen gebruiken a
 
 Wanneer het gebruiken van gegevens van één enkele het rapportreeks van Analytics, zal het Platform automatisch beschrijvers en vriendschappelijke namen aan Vars toevoegen, die het gemakkelijker maken om die gebieden binnen te vinden [!DNL Segment Builder].
 
-![Een afbeelding die aangeeft hoe algemene variabelen (eVars) worden toegewezen met een gebruikersvriendelijke naam.](../images/ui/segment-builder/single-report-suite.png)
+![Een afbeelding die aangeeft hoe generieke variabelen (eVars) worden toegewezen met een gebruikersvriendelijke naam.](../images/ui/segment-builder/single-report-suite.png)
 
-Bij gebruik van gegevens uit meerdere Analytics-rapportreeksen, Platform **kan** Voeg automatisch beschrijvingen of vriendelijke namen toe aan Vars. Dientengevolge, alvorens de gegevens van Analytics rapportreeksen te gebruiken, moet u aan XDM gebieden in kaart brengen. Meer informatie over het toewijzen van variabelen van de Analytics aan XDM kan in XDM worden gevonden [Adobe Analytics-bronverbindingsgids](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+Bij gebruik van gegevens uit meerdere Analytics-rapportreeksen, Platform **kan** Voeg automatisch beschrijvingen of vriendelijke namen toe aan Vars. Dientengevolge, alvorens de gegevens van Analytics rapportreeksen te gebruiken, moet u aan XDM gebieden in kaart brengen. Meer informatie over het toewijzen van variabelen van de Analytics aan XDM kan in worden gevonden [Adobe Analytics-bronverbindingsgids](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 Neem bijvoorbeeld een situatie waarin u twee rapportsuites met de volgende variabelen had:
 
@@ -88,7 +92,7 @@ In dit geval, kon u de twee rapportreeksen met het volgende schema in kaart bren
 
 Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebrachte gebieden binnen uw op profiel-betrekking hebbende werkschema&#39;s en segmentatie gebruiken.
 
-| Scenario | Unieschema-ervaring | Segmenteringsvariabele | Aan segment toegewezen variabele |
+| Scenario | Unieschema-ervaring | Segmentatie generieke variabele | Aan segment toegewezen variabele |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | Single-rapportenpakket | Beschrijvende naam wordt opgenomen in algemene variabelen. <br><br>**Voorbeeld:** Paginanaam (eVar2) | <ul><li>Beschrijvende naam opgenomen met algemene variabelen</li><li>De vraag gebruikt gegevens van de specifieke dataset, aangezien het de enige is</li></ul> | Query&#39;s kunnen gebruikmaken van Adobe Analytics-gegevens en mogelijk andere bronnen. |
 | Meerdere rapportsuites | Bij generieke variabelen worden geen beschrijvingen van vriendelijke namen opgenomen. <br><br>**Voorbeeld:** eVar2 | <ul><li>Elk veld met meerdere beschrijvingen wordt algemeen weergegeven. Dit betekent dat er geen vriendelijke namen worden weergegeven in de gebruikersinterface.</li><li>De vragen kunnen gegevens van om het even welke datasets gebruiken die de eVar bevatten, die in gemengde of onjuiste resultaten kunnen resulteren.</li></ul> | De vraag gebruikt correct gecombineerde resultaten van veelvoudige datasets. |
@@ -125,7 +129,7 @@ Als u een waarde in deze lijst met nummers selecteert, krijgt de waarde een effe
 
 ![Een waarschuwing die wordt weergegeven als u een waarde invoegt die geen deel uitmaakt van de opsommingslijst.](../images/ui/segment-builder/enum-warning.png)
 
-Als u meerdere waarden maakt, kunt u deze allemaal tegelijk toevoegen met de bulkupload. Selecteer ![pluspictogram](../images/ui/segment-builder/plus-icon.png) om de **[!UICONTROL Add values in bulk]** popover.
+Als u meerdere waarden maakt, kunt u deze allemaal tegelijk toevoegen door de bulkupload te gebruiken. Selecteer de ![pluspictogram](../images/ui/segment-builder/plus-icon.png) om de **[!UICONTROL Add values in bulk]** popover.
 
 ![Het pluspictogram wordt gemarkeerd en geeft de knop weer die u kunt selecteren voor toegang tot de bulkupload.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -171,11 +175,11 @@ Een aggregatie in [!DNL Segment Builder] is een berekening voor een groep XDM-ke
 
 Als u een aggregatiefunctie wilt maken, selecteert u een gebeurtenis in de linkertrack en voegt u deze in de [!UICONTROL Events] container.
 
-![De gebeurtenissensectie wordt gemarkeerd.](../images/ui/segment-builder/events.png)
+![De sectie Gebeurtenissen wordt gemarkeerd.](../images/ui/segment-builder/events.png)
 
 Nadat u de gebeurtenis in de container Gebeurtenissen hebt geplaatst, selecteert u het pictogram Ovalen (...), gevolgd door **[!UICONTROL Aggregate]**.
 
-![De geaggregeerde tekst wordt gemarkeerd. Als u dit selecteert, kunt u aggregatiefuncties selecteren.](../images/ui/segment-builder/add-aggregation.png)
+![De totale tekst wordt gemarkeerd. Als u dit selecteert, kunt u aggregatiefuncties selecteren.](../images/ui/segment-builder/add-aggregation.png)
 
 De samenvoeging wordt nu toegevoegd. U kunt nu de aggregatiefunctie selecteren, kiezen welk kenmerk wordt geaggregeerd, de gelijkheidsfunctie en de waarde. In het onderstaande voorbeeld zou deze segmentdefinitie elk profiel kwalificeren dat een som aangekochte waarden heeft die groter is dan $100, zelfs als elke afzonderlijke aankoop minder dan $100 is.
 
@@ -193,7 +197,7 @@ Nadat u de gebeurtenis in de gebeurtenissencontainer hebt geplaatst, selecteert 
 
 ![De optie Minstens wordt gemarkeerd en geeft het gebied weer dat moet worden geselecteerd om een volledige lijst met telfuncties weer te geven.](../images/ui/segment-builder/add-count.png)
 
-De telfunctie wordt nu toegevoegd. U kunt nu de telfunctie en de waarde van de functie selecteren. In het onderstaande voorbeeld wordt elke gebeurtenis met ten minste één klik opgenomen.
+De telfunctie wordt nu toegevoegd. U kunt nu de telfunctie en de waarde van de functie selecteren. In het onderstaande voorbeeld ziet u hoe u elke gebeurtenis met ten minste één klik opneemt.
 
 ![Er wordt een lijst met telfuncties weergegeven en gemarkeerd.](../images/ui/segment-builder/select-count.png)
 
@@ -228,7 +232,7 @@ Zodra u **[!UICONTROL Unwrap container]** de onderliggende container wordt verwi
 
 [!DNL Experience Platform] laat u toe om gegevens uit veelvoudige bronnen te brengen en het te combineren om een volledige mening van elk van uw individuele klanten te zien. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe gegevens voorrang krijgen en welke gegevens worden gecombineerd om een profiel te maken.
 
-U kunt een samenvoegbeleid selecteren dat overeenkomt met uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Platform]. U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor stapsgewijze instructies voor het maken van een samenvoegbeleid voor uw organisatie, begint u met het lezen van de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
+U kunt een samenvoegbeleid selecteren dat overeenkomt met uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Platform]. U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor stapsgewijze instructies voor het maken van een samenvoegbeleid voor uw organisatie, moet u eerst de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md).
 
 Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u het tandwielpictogram in het dialoogvenster **[!UICONTROL Fields]** gebruikt u vervolgens de **[!UICONTROL Merge Policy]** vervolgkeuzelijst om het samenvoegbeleid te selecteren dat u wilt gebruiken.
 
@@ -257,13 +261,13 @@ Terwijl u de segmentdefinitie blijft maken, kunt u een gepagineerde voorvertonin
 
 >[!NOTE]
 >
->De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het genereren van schattingen voor segmentdefinities vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmentdefinities.
+>De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het genereren van schattingen voor segmentdefinities vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmentdefinities.
 
 U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram selecteren ![mappictogram met een vergrootglas](../images/ui/segment-builder/segment-evaluation-select-icon.png) om een lijst van de beschikbare evaluatiemethodes van de segmentdefinitie te zien.
 
 De [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, gelieve te lezen [streamingsegmentatie](./streaming-segmentation.md#query-types) of de [randsegmentatie](./edge-segmentation.md#query-types) overzichten.
 
-![Het pop-upvenster Selectie voor de evaluatiemethode verschijnt. Hieruit blijkt welke evaluatiemethoden in aanmerking komen en niet in aanmerking komen voor de segmentdefinitie.](../images/ui/segment-builder/select-evaluation-method.png)
+![Het pop-upvenster Selectie voor de evaluatiemethode wordt weergegeven. Hieruit blijkt welke evaluatiemethoden in aanmerking komen en niet in aanmerking komen voor de segmentdefinitie.](../images/ui/segment-builder/select-evaluation-method.png)
 
 Als u een ongeldige evaluatiemethode selecteert, zult u worden ertoe aangezet om of uw regels van de segmentdefinitie te veranderen of de evaluatiemethode te veranderen.
 
@@ -281,4 +285,4 @@ De Bouwer van het segment verstrekt een rijk werkschema toelatend u om verhandel
 - Schakel alle segmentdefinities in voor geplande segmentatie.
 - Hiermee kunt u opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
-Meer informatie over [!DNL Segmentation Service], kunt u de documentatie blijven lezen en uw kennis aanvullen door de verwante video&#39;s te bekijken. Meer informatie over de andere delen van het dialoogvenster [!DNL Segmentation Service] UI, gelieve te lezen gelieve [[!DNL Segmentation Service] gebruikershandleiding](./overview.md)
+Meer informatie over [!DNL Segmentation Service], kunt u de documentatie blijven lezen en uw kennis aanvullen door de verwante video&#39;s te bekijken. Meer informatie over de andere delen van het dialoogvenster [!DNL Segmentation Service] UI, gelieve te lezen [[!DNL Segmentation Service] gebruikershandleiding](./overview.md)

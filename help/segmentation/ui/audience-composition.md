@@ -3,14 +3,18 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1655'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor compositie van publiek
+
+>[!NOTE]
+>
+>Deze gids verklaart hoe te om publiek tot stand te brengen gebruikend de Samenstelling van het Publiek. Als u wilt leren hoe u publiek kunt maken met segmentdefinities met de Segment Builder, leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md).
 
 De Samenstelling van het publiek verstrekt een werkruimte om publiek te bouwen en uit te geven, gebruikend blokken die worden gebruikt om verschillende acties te vertegenwoordigen.
 
@@ -18,7 +22,7 @@ De Samenstelling van het publiek verstrekt een werkruimte om publiek te bouwen e
 
 Als u de details van de compositie wilt wijzigen, inclusief de titel en beschrijving, selecteert u de optie ![schuifregelaars](../images/ui/audience-composition/sliders.png) knop.
 
-De **[!UICONTROL Composition properties]** wordt weergegeven. U kunt hier details van uw samenstelling, met inbegrip van de titel en beschrijving opnemen.
+De **[!UICONTROL Composition properties]** wordt weergegeven. U kunt hier details van uw samenstelling, met inbegrip van de titel en de beschrijving opnemen.
 
 ![De keuzelijst Compositie-eigenschappen wordt weergegeven.](../images/ui/audience-composition/composition-properties.png)
 
@@ -58,7 +62,7 @@ Uw geselecteerde publiek verschijnt nu binnen de juiste spoorlijn wanneer **[!UI
 
 | Type samenvoegen | Beschrijving |
 | ---------- | ----------- |
-| [!UICONTROL Union] | Het publiek wordt in één publiek samengevoegd. Dit zou het equivalent van een OF verrichting zijn. |
+| [!UICONTROL Union] | De doelgroepen worden in één publiek samengevoegd. Dit zou het equivalent van een OF verrichting zijn. |
 | [!UICONTROL Intersection] | Het publiek wordt gecombineerd, met alleen het publiek dat wordt gedeeld in **alles** van de toegevoegde waarden. Dit zou het equivalent van een EN verrichting zijn. |
 | [!UICONTROL Exclude overlap] | Het publiek wordt gecombineerd, met alleen het publiek dat wordt gedeeld in **één, maar niet alle** van de toegevoegde waarden. Dit is het equivalent van een XOR-bewerking. |
 
@@ -100,7 +104,7 @@ Er wordt een lijst met doelgroepen weergegeven. Selecteren **[!UICONTROL Add]** 
 
 ### Uitsluiten op kenmerk {#exclude-attribute}
 
-Als u per kenmerk uitschakelt, kunt u selecteren welke kenmerken u wilt uitsluiten door de optie ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram in de **[!UICONTROL Exclusion rule]** sectie.
+Als u per kenmerk uitschakelt, kunt u selecteren welke kenmerken u wilt uitsluiten door de optie ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram in het deelvenster **[!UICONTROL Exclusion rule]** sectie.
 
 ![De kenmerkensectie wordt gemarkeerd en u ziet waar u wilt selecteren om het kenmerk te kiezen dat u wilt uitsluiten.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -158,7 +162,7 @@ De **[!UICONTROL Enrichment attributes]** wordt weergegeven. Selecteer de attrib
 
 ![Het attribuut u wilt gebruiken aangezien de de verbindingssleutel van de verrijkingsdataset wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
 
-Nu u beide verbindingssleutels hebt toegevoegd, **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt nu het kenmerk toevoegen waarmee u het publiek wilt verfraaien. Selecteer **[!UICONTROL Add attribute]**.
+Nu u beide verbindingssleutels hebt toegevoegd, de **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt nu het kenmerk toevoegen waarmee u het publiek wilt verfraaien. Als u deze kenmerken wilt toevoegen, selecteert u **[!UICONTROL Add attribute]**.
 
 ![De [!UICONTROL Add attribute] wordt gemarkeerd.](../images/ui/audience-composition/enrich-select-add-attribute.png)
 
@@ -200,7 +204,7 @@ Wanneer u het blok selecteert, worden de details over het rangschikken getoond i
 
 Als u wilt selecteren op welk kenmerk het publiek moet worden geplaatst, selecteert u de optie ![filter](../images/ui/audience-composition/filter-attribute.png) pictogram.
 
-![Het filterpictogram wordt gemarkeerd en geeft aan wat u moet selecteren om het selectiescherm voor profielkenmerken te openen.](../images/ui/audience-composition/select-rank-attribute.png)
+![Het filterpictogram wordt gemarkeerd, zodat u kunt zien wat u moet selecteren om het selectiescherm voor profielkenmerken te openen.](../images/ui/audience-composition/select-rank-attribute.png)
 
 Er wordt een lijst met profielkenmerken weergegeven. Op deze popover, kunt u het attributentype selecteren u uw publiek door wilt rangschikken. Selecteren **[!UICONTROL Select]** om het aan uw rangschikkingsblok toe te voegen. Let op: het geselecteerde kenmerk kan **alleen** zijn getallen.
 
@@ -208,7 +212,7 @@ Er wordt een lijst met profielkenmerken weergegeven. Op deze popover, kunt u het
 
 Na het selecteren van de attributen, kunt u de orde selecteren om het door te rangschikken. Dit gebeurt in oplopende (van laagste naar hoogste) of aflopende (van hoogste naar laagste) volgorde.
 
-Bovendien, kunt u het aantal teruggekeerde publiek beperken door toe te laten **[!UICONTROL Add profile limit]** schakelen. Wanneer deze schakeloptie is ingeschakeld, kunt u het maximale aantal keren instellen dat binnen het **[!UICONTROL Included profiles]** veld.
+Bovendien, kunt u het aantal teruggekeerde publiek beperken door toe te laten **[!UICONTROL Add profile limit]** schakelen. Wanneer deze schakeloptie is ingeschakeld, kunt u het maximale aantal keren instellen dat wordt geretourneerd in het dialoogvenster **[!UICONTROL Included profiles]** veld.
 
 ![De schakeloptie voor het toevoegen van profiellimieten wordt gemarkeerd. Hiermee kunt u het aantal geretourneerde soorten publiek beperken.](../images/ui/audience-composition/add-profile-limit.png)
 

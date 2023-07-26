@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
+source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
 workflow-type: tm+mt
-source-wordcount: '3430'
+source-wordcount: '3431'
 ht-degree: 0%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 0%
 Om met het publiek en de segmentdefinities te kunnen werken, is een goed begrip van de verschillende [!DNL Experience Platform] diensten in verband met segmentatie. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] staat u toe om gegevens te segmenteren die in worden opgeslagen [!DNL Experience Platform] dat betrekking heeft op individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) in kleinere groepen.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Laat de verwezenlijking van klantenprofielen toe door identiteiten van verschillende gegevensbronnen te overbruggen die in worden opgenomen [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Schakelt het maken van klantprofielen in door identiteiten te overbruggen van verschillende gegevensbronnen waarin deze worden opgenomen [!DNL Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 
 U zou twee zeer belangrijke termijnen ook moeten begrijpen die door dit document worden gebruikt en het verschil tussen hen begrijpen:
 
 - **Publiek**: Een set personen met vergelijkbare gedragingen en/of kenmerken. Deze verzameling personen kan door Adobe Experience Platform worden gegenereerd met behulp van segmentdefinities of publiekscompositie (publiek dat door Platforms wordt gegenereerd) of met behulp van externe bronnen, zoals aangepaste uploads (extern gegenereerd publiek).
-- **Segmentdefinitie**: De regels die Adobe Experience Platform gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven.
+- **Segmentdefinitie**: De regels die Adobe Experience Platform gebruikt om sleutelkenmerken of gedrag van een doelpubliek te beschrijven.
 - **Segment**: Het scheiden van profielen in publiek.
 
 ## Overzicht
@@ -62,7 +62,7 @@ Ga voor meer informatie naar de [gebruikershandleiding in dashboard](../../dashb
 >title="Alle soorten publiek aan planning toevoegen"
 >abstract="Schakel deze optie in om alle beoordeelde soorten publiek op te nemen met behulp van batchsegmentatie in de geplande dagelijkse update. Uitschakelen om alle soorten publiek uit de geplande update te verwijderen."
 
-Selecteer **[!UICONTROL Browse]** tabblad om een lijst weer te geven met alle soorten publiek voor uw organisatie.
+Selecteer de **[!UICONTROL Browse]** tabblad om een lijst weer te geven met alle soorten publiek voor uw organisatie.
 
 ![Het bladerscherm wordt weergegeven. Er wordt een lijst weergegeven van alle publiek dat tot de organisatie behoort.](../images/ui/overview/audience-browse.png)
 
@@ -77,7 +77,7 @@ U kunt extra velden aan deze weergave toevoegen door ![het pictogram van het fil
 | [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Mogelijke waarden zijn Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
 | [!UICONTROL Created] | De datum en tijd, in UTC, dat het publiek werd gecreeerd. |
 | [!UICONTROL Last updated] | De datum en tijd, in UTC, waarop het publiek voor het laatst is bijgewerkt. |
-| [!UICONTROL Tags] | De door de gebruiker gedefinieerde labels die bij het publiek horen. Meer informatie over deze tags vindt u in de [sectie over tags](#tags). |
+| [!UICONTROL Tags] | De door de gebruiker gedefinieerde labels die bij het publiek horen. Meer informatie over deze tags vindt u in het gedeelte [sectie over tags](#tags). |
 | [!UICONTROL Breakdown] | De indeling van de profielstatus voor het publiek. Hieronder vindt u een gedetailleerdere beschrijving van deze uitsplitsing naar profielstatus. |
 | [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Published`, en `Archived`. |
 | [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn `On Demand`, `Scheduled`, en `Continuous`. |
@@ -101,23 +101,23 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | Actie | Oorsprong | Beschrijving |
 | ------ | ------- | ----------- |
 | Bewerken | Segmenteringsservice | Hiermee kunt u Segment Builder openen om uw publiek te bewerken. Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md). |
-| Open compositie | Samenstelling publiek | Hiermee kunt u de compositie van het publiek openen om uw publiek te zien. Voor meer informatie over de samenstelling van het publiek, gelieve te lezen [gebruikerscompositie-gebruikersgids](./audience-composition.md). |
+| Open compositie | Samenstelling publiek | Hiermee kunt u de compositie van het publiek openen om uw publiek te zien. Lees voor meer informatie over de samenstelling van het publiek de [gebruikerscompositie-gebruikersgids](./audience-composition.md). |
 | Activeren naar doel | Segmenteringsservice | Hiermee activeert u het publiek naar een bestemming. Voor meer gedetailleerde informatie over het activeren van een publiek naar een bestemming, gelieve te lezen [activeringsoverzicht](../../destinations/ui/activation-overview.md). |
-| Delen met partners | Auditie-compositie, Aangepaste upload, Segmentatieservice | Hiermee kunt u uw publiek delen met andere gebruikers van het Platform. Lees voor meer informatie over deze functie de [Overzicht van afstemming van segment](./segment-match/overview.md). |
-| Tags beheren | Auditie-compositie, Aangepaste upload, Segmentatieservice | Hiermee kunt u de door de gebruiker gedefinieerde tags beheren die bij het publiek horen. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
-| Verplaatsen naar map | Auditie-compositie, Aangepaste upload, Segmentatieservice | Hiermee kunt u bepalen tot welke map het publiek behoort. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
-| Kopiëren | Auditie-compositie, Aangepaste upload, Segmentatieservice | Hiermee dupliceert u het geselecteerde publiek. |
-| Toegangslabels toepassen | Auditie-compositie, Aangepaste upload, Segmentatieservice | Hiermee kunt u de toegangslabels beheren die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
+| Delen met partners | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u uw publiek delen met andere gebruikers van het Platform. Lees voor meer informatie over deze functie de [Overzicht van afstemming van segment](./segment-match/overview.md). |
+| Tags beheren | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u de door de gebruiker gedefinieerde tags beheren die bij het publiek horen. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
+| Verplaatsen naar map | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u bepalen tot welke map het publiek behoort. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
+| Kopiëren | Auditie, Aangepaste upload, Segmentatieservice | Hiermee dupliceert u het geselecteerde publiek. |
+| Toegangslabels toepassen | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u de toegangslabels beheren die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
 | Archivering | Aangepaste upload | Hiermee archiveert u het geselecteerde publiek. |
-| Verwijderen | Auditie-compositie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. |
+| Verwijderen | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. |
 
 Boven aan de pagina vindt u opties voor het toevoegen van alle soorten publiek aan een programma, het importeren van een publiek en het maken van een nieuw publiek.
 
-Toggling **[!UICONTROL Schedule all audiences]** zal geplande segmentatie toelaten. Meer informatie over geplande segmentatie vindt u in de [Gepland segmenteringsgedeelte van deze gebruikershandleiding](#scheduled-segmentation).
+Toggling **[!UICONTROL Schedule all audiences]** zal geplande segmentatie toelaten. Meer informatie over geplande segmentatie vindt u in de [geplande segmentatiesectie van deze gebruikershandleiding](#scheduled-segmentation).
 
 Selecteren **[!UICONTROL Import audience]** Hiermee kunt u een publiek importeren dat extern wordt gegenereerd. Lees de sectie over voor meer informatie over het importeren van soorten publiek [een publiek importeren in de gebruikershandleiding](#import-audience).
 
-Selecteren **[!UICONTROL Create audience]** Hiermee kunt u een publiek maken. Meer informatie over het maken van soorten publiek vindt u in de sectie over [een publiek maken in de gebruikershandleiding](#create-audience).
+Selecteren **[!UICONTROL Create audience]** Hiermee kunt u een publiek maken. Meer informatie over het maken van soorten publiek vindt u in de sectie [een publiek maken in de gebruikershandleiding](#create-audience).
 
 ![De bovenste navigatiebalk op de pagina waarin het publiek bladert, wordt gemarkeerd. Deze balk bevat een knop waarmee u een publiek kunt maken en een knop waarmee u een publiek kunt importeren.](../images/ui/overview/browse-audiences-top.png)
 
@@ -125,7 +125,7 @@ Selecteren **[!UICONTROL Create audience]** Hiermee kunt u een publiek maken. Me
 >
 > U zult **niet** een publiek kunnen schrappen dat in een bestemmingsactivering wordt gebruikt.
 
-### Filteren en labelen {#manage-audiences}
+### Filteren, mappen en coderen {#manage-audiences}
 
 Om uw werkefficiëntie te verbeteren, kunt u zoeken naar bestaand publiek, door de gebruiker gedefinieerde labels toevoegen aan het publiek, het publiek in mappen plaatsen en het weergegeven publiek filteren.
 
@@ -137,7 +137,7 @@ Te gebruiken [!DNL Unified Search]voegt u de term die u wilt zoeken toe aan de g
 
 ![De zoekbalk wordt gemarkeerd.](../images/ui/overview/browse-audience-search.png)
 
-Meer informatie over [!DNL Unified Search], inclusief ondersteunde functies, kunt u de [Unified Search-documentatie](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
+Voor meer informatie over [!DNL Unified Search], inclusief ondersteunde functies, kunt u de [Unified Search-documentatie](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 **Tags** {#tags}
 
@@ -152,7 +152,7 @@ De **[!UICONTROL Manage tags]** wordt weergegeven. In deze pop-up kunt u een gec
 | Type code | Beschrijving |
 | -------- | ----------- |
 | Gecategoriseerd | Een tag die wordt gemaakt en beheerd door de beheerders van uw organisatie. |
-| Niet gecategoriseerd | Een tag die is gemaakt in het dialoogvenster [!UICONTROL Manage tags] popover. Iedereen kan deze typen tags maken of beheren. |
+| Niet gecategoriseerd | Een tag die binnen het [!UICONTROL Manage tags] popover. Iedereen kan deze typen tags maken of beheren. |
 
 ![De [!UICONTROL Manage tags] popover wordt weergegeven. De opties voor het kiezen van een gecategoriseerde of niet-gecategoriseerde indeling worden gemarkeerd.](../images/ui/overview/create-tag.png)
 
@@ -182,7 +182,7 @@ Als het publiek zich in een map bevindt, kunt u ervoor kiezen alleen het publiek
 
 U kunt uw publiek ook filteren op basis van verschillende instellingen.
 
-Als u het beschikbare publiek wilt filteren, selecteert u de optie ![filterpictogram](../images/ui/overview/filter-icon.png).
+Als u het beschikbare publiek wilt filteren, selecteert u de ![filterpictogram](../images/ui/overview/filter-icon.png).
 
 ![De pagina Bladeren publiek wordt weergegeven met het filterpictogram gemarkeerd.](../images/ui/overview/browse-select-filter.png)
 
@@ -228,7 +228,7 @@ Selecteren **[!UICONTROL Apply access labels]** Hiermee kunt u de toegangslabels
 
 ![De pagina met publieksdetails wordt weergegeven met de [!UICONTROL Open composition] gemarkeerd.](../images/ui/overview/audience-details-open-composition.png)
 
-Selecteren **[!UICONTROL Open composition]** Hiermee kunt u uw publiek weergeven in Audience Composition. Voor meer informatie over Audience Composition, gelieve te lezen [Handleiding voor compositie van publiek](./audience-composition.md).
+Selecteren **[!UICONTROL Open composition]** Hiermee kunt u uw publiek weergeven in Audience Composition. Lees voor meer informatie over Audience Composition de [Handleiding voor compositie van publiek](./audience-composition.md).
 
 >[!TAB Aangepaste upload]
 
@@ -252,7 +252,7 @@ Selecteren **[!UICONTROL Edit properties]** Hiermee kunt u de basisgegevens van 
 
 De **[!UICONTROL Audience total]** wordt het totale aantal profielen weergegeven dat voor het publiek in aanmerking komt.
 
-Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de voorbeeldgegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het genereren van schattingen vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie over het maken van een publiek.
+Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het genereren van schattingen vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie over het maken van een publiek.
 
 **Geactiveerde doelen** {#activated-destinations}
 
@@ -266,7 +266,7 @@ De **[!UICONTROL Activated destinations]** toont de bestemmingen waarvoor dit pu
 
 Hieronder ziet u een voorbeeld van profielen die in aanmerking komen voor het segment, met gedetailleerde informatie zoals de [!DNL Profile] ID, voornaam, achternaam en persoonlijke e-mail.
 
-De manier waarop gegevensbemonstering wordt geactiveerd, hangt af van de wijze van inname.
+De manier waarop gegevensbemonstering wordt geactiveerd, is afhankelijk van de innamemethode.
 
 Voor batch-opname wordt de profielopslag automatisch elke 15 minuten gescand om te zien of een nieuwe batch is opgenomen sinds de laatste samplingtaak is uitgevoerd. Als dat het geval is, wordt de profielopslag gescand om te zien of is er minstens een 5% verandering in het aantal verslagen. Als aan deze voorwaarden wordt voldaan, wordt een nieuwe steekproefbaan teweeggebracht.
 
@@ -308,7 +308,7 @@ Selecteren **[!UICONTROL Build rule]** gaat u naar de Segment Builder. Deze werk
 
 ### Een publiek importeren {#import-audience}
 
-U kunt **[!UICONTROL Import audience]** om een extern gegenereerd publiek te importeren.
+U kunt **[!UICONTROL Import audience]** een extern gegenereerd publiek importeren.
 
 ![Op de pagina van het publiek van het Publiek doorbladert, wordt de de publieksknoop van de Invoer benadrukt.](../images/ui/overview/browse-import-audience.png)
 
@@ -352,13 +352,13 @@ Het toelaten van uw publiek voor geplande evaluatie kan worden gedaan gebruikend
 >
 >De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor worden toegelaten [!DNL XDM Individual Profile]. Als uw organisatie meer dan vijf samenvoegbeleidsregels heeft voor [!DNL XDM Individual Profile] binnen één sandboxomgeving kunt u geen geplande evaluatie gebruiken.
 
-Planningen kunnen momenteel alleen worden gemaakt met behulp van de API. Voor gedetailleerde stappen bij het maken, bewerken en werken met planningen met behulp van de API, volgt u de zelfstudie voor het evalueren van en het openen van segmentatieresultaten, met name de sectie over [geplande evaluatie met behulp van de API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
+Planningen kunnen momenteel alleen worden gemaakt met de API. Voor gedetailleerde stappen bij het maken, bewerken en werken met planningen met behulp van de API, volgt u de zelfstudie voor het evalueren van en het openen van segmentatieresultaten, met name de sectie over [geplande evaluatie met behulp van de API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![De knevel aan Plan alle publiek wordt benadrukt op de Publiek doorbladert pagina.](../images/ui/overview/browse-audiences-scheduled.png)
+![De knevel om alle publiek te plannen wordt benadrukt op de Publiek doorbladert pagina.](../images/ui/overview/browse-audiences-scheduled.png)
 
 ## Composities {#compositions}
 
-Selecteer **[!UICONTROL Compositions]** om een lijst van alle publiek te zien dat door de Samenstelling van het Publiek voor uw organisatie wordt geproduceerd.
+Selecteer de **[!UICONTROL Compositions]** om een lijst van alle publiek te zien dat door de Samenstelling van het Publiek voor uw organisatie wordt geproduceerd.
 
 ![Een lijst van publiek dat in de Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/compositions.png)
 
@@ -383,7 +383,7 @@ Er wordt een pop-up weergegeven met alle velden die in de tabel kunnen worden we
 
 Als u wilt zien hoe het publiek wordt samengesteld, selecteert u de naam van een publiek in het dialoogvenster [!UICONTROL Audiences] tab.
 
-De pagina van de Samenstelling van het Publiek verschijnt met de bouwstenen die uw publiek samenstellen. Voor meer informatie over het gebruik van Audience Composition raadpleegt u de [Handleiding voor compositie van publiek](./audience-composition.md).
+De pagina van de Samenstelling van het Publiek verschijnt met de bouwstenen die uw publiek vormen. Voor meer informatie over het gebruik van Audience Composition raadpleegt u de [Handleiding voor compositie van publiek](./audience-composition.md).
 
 ## Streaming segmentering {#streaming-segmentation}
 
@@ -393,13 +393,13 @@ Meer informatie over streamingsegmentatie vindt u in het gedeelte [gebruikershan
 
 >[!NOTE]
 >
->Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Voor meer informatie over het inschakelen van geplande segmentatie raadpleegt u [het gedeelte voor streamingsegmentatie in deze gebruikershandleiding](#scheduled-segmentation).
+>Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Raadpleeg voor meer informatie over het inschakelen van geplande segmentatie [het gedeelte voor streamingsegmentatie in deze gebruikershandleiding](#scheduled-segmentation).
 
 ## Randsegmentatie {#edge-segmentation}
 
 Edge-segmentatie is de mogelijkheid om het publiek in het Platform ogenblikkelijk aan de rand te evalueren, zodat dezelfde pagina en de volgende pagina kunnen worden gebruikt voor de personalisatie.
 
-Meer informatie over de segmentatie van de randen vindt u in de [UI-hulplijn voor randsegmentatie](./edge-segmentation.md)
+Meer informatie over de segmentatie van de randen vindt u in de [gebruikersgids voor randsegmentatie](./edge-segmentation.md)
 
 ## Beleidsovertredingen
 
