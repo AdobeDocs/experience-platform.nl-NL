@@ -4,9 +4,9 @@ user-guide-title: Hulp bij Experience Data Model (XDM) System
 breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Gebruik de klassen en schemaveldgroepen van Experience Data Model (XDM) om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '518'
 ht-degree: 10%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 10%
    * [Plan](./classes/plan.md)
    * [Beleid](./classes/policy.md)
    * [Product](./classes/product.md)
+   * [Perspectief](./classes/prospect.md)
    * [Provider](./classes/provider.md)
    * [Segmentdefinitie](./classes/segment-definition.md)
    * B2B-klassen {#b2b}
@@ -61,7 +62,7 @@ ht-degree: 10%
       * [Telecom-abonnement](./field-groups/profile/telecom-subscription.md)
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
       * [XDM Business Person-componenten](./field-groups/profile/business-person-components.md)
-      * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
+      * [XDM Business Person - Gegevens](./field-groups/profile/business-person-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
       * [Reclamegegevens](./field-groups/event/advertising-details.md)
@@ -186,7 +187,7 @@ ht-degree: 10%
    * [Controlelogboek](api/audit-log.md)
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Mixinen (afgekeurd)](api/mixins.md)
-   * [Aanhangsel](api/appendix.md)
+   * [Bijlage](api/appendix.md)
 * Lesbestanden {#tutorials}
    * [Een schema maken in de gebruikersinterface](tutorials/create-schema-ui.md)
    * [Een schema maken in de API](tutorials/create-schema-api.md)
@@ -195,7 +196,7 @@ ht-degree: 10%
    * [Voorgestelde waarden toevoegen aan een veld (API)](tutorials/suggested-values.md)
    * [Een XDM-veld in de gebruikersinterface verwijderen](tutorials/field-deprecation-ui.md)
    * [Een XDM-veld in de API verwijderen](tutorials/field-deprecation-api.md)
-   * [Een schemarelatie definiëren in de UI](tutorials/relationship-ui.md)
+   * [Een schemarelatie definiëren in de gebruikersinterface](tutorials/relationship-ui.md)
    * [Een schemarelatie definiëren in de API](tutorials/relationship-api.md)
    * [Een schemarelatie definiëren in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [De labels voor gegevensgebruik voor een schema beheren](tutorials/labels.md)
