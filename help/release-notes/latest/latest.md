@@ -2,10 +2,10 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van juli 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
+source-git-commit: 261729515ba25f20cd9606d378a3ec39471ee2cb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 5%
+source-wordcount: '1061'
+ht-degree: 3%
 
 ---
 
@@ -17,6 +17,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Gegevensverzameling](#data-collection)
 - [Gegevensvoorbereiding](#data-prep)
+- [Doelen](#data-prep)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
@@ -48,6 +49,49 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 {style="table-layout:auto"}
 
 Lees voor meer informatie over Data Prep de [Overzicht van Data Prep](../../data-prep/home.md).
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte doelen** {#new-updated-destinations}
+
+<!--
+
+LiveRamp commented out until it is officially released tomorrow
+
+| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
+
+-->
+
+| Bestemming | Nieuw of Bijgewerkt | Beschrijving |
+| ----------- |----------------|----------- |
+| [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Nieuw | Een live uitgaande verbinding maken met [!DNL Azure Data Lake Storage Gen2] om periodiek gegevensbestanden van Adobe Experience Platform naar uw eigen opslaglocatie te exporteren. Deze nieuwe bestemming biedt verbeterde functies voor het exporteren van bestanden en ondersteunt [!BADGE Beta]{type=Informative} |
+| [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Nieuw | [!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden uit het Platform te exporteren. Deze nieuwe bestemming biedt verbeterde functies voor het exporteren van bestanden en ondersteunt [!BADGE Beta]{type=Informative} |
+| [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Nieuw | Een live uitgaande verbinding maken met [!DNL Google Cloud Storage] om gegevensbestanden van Adobe Experience Platform regelmatig naar uw eigen emmers te exporteren. Deze nieuwe bestemming biedt verbeterde functies voor het exporteren van bestanden en ondersteunt [!BADGE Beta]{type=Informative} |
+| [[!DNL Amazon S3] update](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | Bijgewerkt | Met deze update biedt de bestemming uitgebreide functies voor het exporteren van bestanden en biedt deze functie ondersteuning voor [!BADGE Beta]{type=Informative} |
+| [[!DNL Azure Blob] update](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Bijgewerkt | Met deze update biedt de bestemming uitgebreide functies voor het exporteren van bestanden en biedt deze functie ondersteuning voor [!BADGE Beta]{type=Informative} |
+| [[!DNL SFTP] update](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Bijgewerkt | Met deze update biedt de bestemming uitgebreide functies voor het exporteren van bestanden en biedt deze functie ondersteuning voor [!BADGE Beta]{type=Informative} |
+| [[!DNL Adobe Campaign Managed Services] verbinding](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Bijgewerkt | De [!DNL Adobe Campaign Managed Services] integratie met Adobe Experience Platform ondersteunt nu verschillende soorten publiekssynchronisatie. Gebruik het besturingselement Synchronisatietype selecteren om te bepalen of u soorten publiek wilt exporteren naar Adobe Campaign of naar soorten publiek en hun profielkenmerken. <br> ![Nieuwe selector voor synchronisatietype selecteren is gemarkeerd.](/help/release-notes/2023/assets/acms-destination-export-type.png "Nieuwe selector voor synchronisatietype selecteren is gemarkeerd."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+De update en de algemene beschikbaarheidsversie van de zes hierboven vermelde bestemmingen van de wolkenopslag verstrekken de volgende functionaliteit:
+
+- Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+- Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+- De mogelijkheid om de [opmaak van geëxporteerde CSV-gegevensbestanden](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+- [!BADGE Beta]{type=Informative}[Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
+
+
+**Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
+
+- We hebben een probleem opgelost met de Salesforce-bestemming (API) van de Salesforce-Marketing Cloud, waarbij in de toewijzingsstap niet alle beschikbare doelkenmerken werden geretourneerd van Salesforce. Er is nu een [bovengrens van 2000 doelkenmerken](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) vanuit Salesforce die kan worden weergegeven.
+- We hebben een probleem opgelost met de bestemming Microsoft Dynamics 365. De bestemming steunt nu regionaal verpletteren van gegevens via [Gebiedselector](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), zodat kunt u uw gegevensexport leiden afhankelijk van welk gebied uw bedrijf binnen het ecosysteem van Microsoft provisioned is. ![Selector nieuw gebied gemarkeerd.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Selector nieuw gebied gemarkeerd."){width="100" zoomable="yes"}
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Segmenteringsservice {#segmentation}
 
