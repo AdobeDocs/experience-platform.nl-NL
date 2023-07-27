@@ -4,9 +4,9 @@ description: Leer hoe u gecodeerde bestanden via batchbronnen voor cloudopslag k
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Dit document bevat stappen voor het genereren van een sleutelpaar voor versleute
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-   * [Opslagbronnen voor cloud](../api/collect/cloud-storage.md): Maak een gegevensstroom om batchgegevens van uw cloudopslagbron naar het Experience Platform over te brengen.
+   * [Opslagbronnen voor cloud](../api/collect/cloud-storage.md): Maak een gegevensstroom om batchgegevens van uw cloudopslagbron naar het Experience Platform te brengen.
 * [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
@@ -66,7 +66,7 @@ De lijst met ondersteunde bestandsextensies voor gecodeerde bestanden ziet er al
 
 ## Versleutelingssleutelpaar maken {#create-encryption-key-pair}
 
-De eerste stap bij het opnemen van gecodeerde gegevens in het Experience Platform is het maken van uw sleutelpaar door een verzoek van de POST aan het `/encryption/keys` van het [!DNL Connectors] API.
+De eerste stap bij het opnemen van gecodeerde gegevens in het Experience Platform is het maken van uw sleutelpaar door een verzoek van de POST aan het `/encryption/keys` het eindpunt van de [!DNL Connectors] API.
 
 **API-indeling**
 
@@ -111,6 +111,65 @@ Een succesvolle reactie keert uw Base64-Gecodeerde openbare sleutel, openbare ze
 }
 ```
 
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `publicKey` | De openbare sleutel wordt gebruikt om de gegevens in uw cloudopslag te coderen. Deze sleutel komt overeen met de persoonlijke sleutel die ook tijdens deze stap is gemaakt. De persoonlijke sleutel gaat echter onmiddellijk naar Experience Platform. |
+| `publicKeyId` | De openbare sleutel-id wordt gebruikt om een gegevensstroom te maken en uw gecodeerde gegevens voor cloudopslag in te voeren in het Experience Platform. |
+| `expiryTime` | De vervaltijd bepaalt de vervaldatum van uw encryptie zeer belangrijke paar. Deze datum wordt automatisch ingesteld op 180 dagen na de datum waarop de sleutel is gegenereerd en wordt weergegeven in een unieke tijdstempelindeling. |
+
++++ (Optioneel) Een paar verificatietoetsen voor ondertekening maken voor ondertekende gegevens
+
+### Door klant beheerd sleutelpaar maken
+
+U kunt desgewenst een sleutelpaar voor handtekeningverificatie maken om uw gecodeerde gegevens te ondertekenen en in te voeren.
+
+Tijdens dit stadium, moet u uw eigen privé sleutel en openbare zeer belangrijke combinatie produceren en dan uw privé sleutel gebruiken om uw gecodeerde gegevens te ondertekenen. Daarna, moet u uw openbare sleutel in Base64 coderen en dan het delen aan Experience Platform opdat het Platform uw handtekening verifieert.
+
+### Uw openbare sleutel delen op Experience Platform
+
+Om uw openbare sleutel te delen, doe een verzoek van de POST aan `/customer-keys` eindpunt terwijl het verstrekken van uw encryptiealgoritme en uw Base64-Gecodeerde openbare sleutel.
+
+**API-indeling**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `encryptionAlgorithm` | Het type van encryptiealgoritme dat u gebruikt. De ondersteunde coderingstypen zijn `PGP` en `GPG`. |
+| `publicKey` | De openbare sleutel die aan uw klant beheerde sleutels beantwoordt die voor het ondertekenen van uw gecodeerd worden gebruikt. Deze sleutel moet Base64-Gecodeerd zijn. |
+
+**Antwoord**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `publicKeyId` | Deze openbare zeer belangrijke identiteitskaart is teruggekeerd in antwoord op het delen van uw klant beheerde sleutel met Experience Platform. U kunt deze openbare sleutel-id opgeven als de sleutel-id voor ondertekeningsverificatie wanneer u een gegevensstroom maakt voor ondertekende en gecodeerde gegevens. |
+
++++
+
 ## Sluit de bron voor cloudopslag aan op het Experience Platform met de [!DNL Flow Service] API
 
 Nadat u de coderingssleutel hebt opgehaald, kunt u nu doorgaan en een bronverbinding voor de bron van de cloudopslag maken en de gecodeerde gegevens naar het Platform brengen.
@@ -138,10 +197,10 @@ Nadat u een basisverbinding hebt gemaakt, moet u de in de zelfstudie beschreven 
 >
 >* [Openbare sleutel-id](#create-encryption-key-pair)
 >* [Bronverbinding-id](../api/collect/cloud-storage.md#source)
->* [Doelverbinding-id](../api/collect/cloud-storage.md#target)
+>* [Doel-verbindings-id](../api/collect/cloud-storage.md#target)
 >* [Toewijzing-id](../api/collect/cloud-storage.md#mapping)
 
-Om een gegevensstroom tot stand te brengen, doe een verzoek van de POST aan `/flows` van het [!DNL Flow Service] API. Als u gecodeerde gegevens wilt invoeren, moet u een `encryption` aan de `transformations` en neemt de `publicKeyId` die in een eerdere stap is gemaakt.
+Om een gegevensstroom tot stand te brengen, doe een verzoek van de POST aan `/flows` het eindpunt van de [!DNL Flow Service] API. Als u gecodeerde gegevens wilt invoeren, moet u een `encryption` aan de `transformations` en neemt de `publicKeyId` die in een eerdere stap is gemaakt.
 
 **API-indeling**
 
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **Verzoek**
+
+>[!BEGINTABS]
+
+>[!TAB Een gegevensstroom maken voor gecodeerde gegevensinvoer]
 
 Met de volgende aanvraag wordt een gegevensstroom gemaakt voor het invoeren van gecodeerde gegevens voor een bron voor cloudopslag.
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en moet groter zijn dan of gelijk zijn aan `15` voor andere frequentiewaarden. |
+
+
+>[!TAB Een gegevensstroom maken om gecodeerde en ondertekende gegevens in te voeren]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `params.signVerificationKeyId` | De sleutel-id voor tekenverificatie is hetzelfde als de openbare-sleutelid die is opgehaald na het delen van de openbare sleutel met Base64-codering met Experience Platform. |
+
+>[!ENDTABS]
 
 **Antwoord**
 
