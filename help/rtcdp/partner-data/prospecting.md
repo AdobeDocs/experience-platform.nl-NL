@@ -1,21 +1,21 @@
 ---
-title: (Beta) Nieuwe klanten betrekken en verwerven door middel van prospectieve gebruiksgevallen
+title: (Beta) Nieuwe klanten betrekken en verwerven door gebruik te onderzoeken
 description: Leer hoe te om nieuwe klanten door het prospecteren van gebruiksgevallen in dienst te nemen en te verwerven, die door de steun van partnergegevens in Real-Time CDP wordt toegelaten.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
 workflow-type: tm+mt
 source-wordcount: '1906'
 ht-degree: 0%
 
 ---
 
-# Nieuwe klanten aantrekken en aanschaffen door gebruiksscenario&#39;s te verkennen
+# Nieuwe klanten aantrekken en aanschaffen door gebruiksscenario&#39;s te bekijken
 
 >[!AVAILABILITY]
 >
->* Deze bètafunctionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in het dialoogvenster [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>* Deze bètafunctionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit te breiden met perspectiefprofielen van gegevenspartners en met hen in gesprek te gaan om nieuwe klanten te verkrijgen of te bereiken.
 
@@ -31,7 +31,7 @@ Aangezien u het bereiken aan en het verwerven van nieuwe klanten door de steun v
 * Is het partnergegeven dat u gebonden bent aan een wijd geaccepteerde duurzame herkenningsteken, zoals Persoonlijke Identificeerbare Informatie (PII), gehakt PII, of een partnerherkenningsteken?
 * Welk beleid van het gegevensgebruik moet u van het partnerperspectief en van uw eigen wettelijk, privacy, of nalevingsteam bewust zijn?
 
-## Hoe wordt het gebruiksgeval bereikt: overzicht op hoog niveau {#achieve-the-use-case-high-level}
+## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
 Voordat u Real-Time CDP uitbreidt om nieuwe klanten aan te trekken, moet u ervoor zorgen dat u Real-Time CDP gebruikt om een robuuste basis voor uw eerste gegevens te bouwen. De workflows om dit gebruiksgeval te bereiken zijn gelijkaardig aan werkschema&#39;s om met uw bekende klanten in dienst te nemen.
 
@@ -44,11 +44,11 @@ Voordat u Real-Time CDP uitbreidt om nieuwe klanten aan te trekken, moet u ervoo
 5. Als **klant**, activeert u het potentiële publiek aan bestemmingen die van de identiteiten beschikbaar in uw perspectieflijst goedkeuren.
 6. Werk zo nodig met de **gegevenspartner** voor de activering van het publiek naar de gewenste betaalmedia-bestemmingen in de laatste mijl.
 
-## Hoe wordt het gebruiksgeval bereikt: Stapsgewijze instructies {#step-by-step-instructions}
+## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
 
 Lees de onderstaande secties door, die koppelingen naar verdere documentatie bevatten, om alle stappen in het bovenstaande overzicht op hoog niveau te voltooien.
 
-### UI-functionaliteit en -elementen die u gaat gebruiken {#ui-functionality-and-elements}
+### UI-functionaliteit en elementen die u gebruikt {#ui-functionality-and-elements}
 
 Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, maakt u gebruik van de volgende Real-Time CDP-functionaliteit en UI-elementen (vermeld in de volgorde waarin u deze wilt gebruiken). Zorg ervoor dat u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen voor al deze gebieden hebt of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
@@ -71,7 +71,7 @@ Als u perspectiefprofielen wilt ontvangen van uw gegevenspartner, moet u uw gege
 
 De volgende componenten worden gebruikt voor identiteit, gegevensbeheer en beheer:
 
-* Een nieuwe **[!UICONTROL Partner ID]** identiteitstype voor de partnerprofielen
+* Een nieuwe **[!UICONTROL Partner ID]** het identiteitstype voor de partner verstrekte profielen
 * Een nieuwe **[!UICONTROL XDM Individual Prospect Profile]** XDM-klasse
 * **(Documentatie binnenkort beschikbaar)** Veldgroepen die zijn aangepast aan ondersteuning van partnergegevens
 * **(Documentatie binnenkort beschikbaar)** De etiketten van de derde die u op de attributen zult toevoegen die uit partners komen
@@ -115,10 +115,10 @@ Overweeg labels voor gegevensbeheer van derden toe te voegen aan alle velden die
 
 Volg de onderstaande stappen om dit te doen:
 
-1. Navigeer naar het schema dat u hebt gemaakt en selecteer het **[!UICONTROL Labels]** tab.
+1. Ga naar het schema dat u hebt gemaakt en selecteer het **[!UICONTROL Labels]** tab.
 2. Selecteer alle gebieden in dit schema gebruikend checkbox knoop bij zeer bovenkant en klik dan het potloodpictogram op het recht om de etiketten van het gegevensbeheer op dit schema toe te passen.
-3. Selecteer **[!UICONTROL Partner Ecosystem]** Label van de categorieën aan de linkerkant.
-4. Kies het geroepen etiket **[!UICONTROL Third Party]** en selecteert u **[!UICONTROL Save]**.
+3. Selecteer de **[!UICONTROL Partner Ecosystem]** Label van de categorieën aan de linkerkant.
+4. Kies het label dat wordt aangeroepen **[!UICONTROL Third Party]** en selecteert u **[!UICONTROL Save]**.
 5. U ziet dat alle velden in het schema nu het label hebben dat u in de vorige stap hebt geselecteerd.
 
 >[!SUCCESS]
@@ -151,7 +151,7 @@ Merk op dat gelijkend op de stap om een schema tot stand te brengen, u de datase
 
 ![Gegevensset inschakelen voor profiel.](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
 
-Om een dossier te laden dat u van de partner in de dataset hebt ontvangen, selecteer de dataset, scroll neer in het juiste spoor, en selecteer **[!UICONTROL Add data]**. U kunt neerzetten of **[!UICONTROL Choose files]** om naar de bestandslocatie te navigeren en deze te selecteren.
+Om een dossier te laden dat u van de partner in de dataset hebt ontvangen, selecteer de dataset, scroll neer in het juiste spoor, en selecteer **[!UICONTROL Add data]**. U kunt neerzetten slepen of **[!UICONTROL Choose files]** om naar de bestandslocatie te navigeren en deze te selecteren.
 
 ![Bestand toevoegen aan gegevensset.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
@@ -178,7 +178,7 @@ Het kan maximaal twee uur duren voordat de perspectiefprofielen die u net in Rea
 >
 >De aanwezigheid van de **[!UICONTROL Identity Namespace]** kolom. Als u met veelvoudige gegevensverkopers werkt, gebruik deze kolom om de oorsprong van perspectiefprofielen af te leiden.
 
-![Weergave van de perspectiefprofielen die in Real-Time CDP zijn geladen.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
+![Bekijk de perspectiefprofielen die in Real-Time CDP zijn geladen.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
 U kunt ook elk perspectiefprofiel selecteren voor verdere inspectie, zoals hieronder wordt weergegeven.
 
@@ -204,7 +204,7 @@ Merk op dat de ervaring van de publieksopbouw voor perspectiefprofielen van de e
 
 ### Activeren perspectiefprofielen aan bestemmingen {#activate-to-destinations}
 
-Maak gebruik van het potentiële publiek door hen naar bestemmingen uit te voeren. Momenteel gelden alleen bepaalde bestemmingen, zoals [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) of de [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp.md) activeren van perspectiefprofielen voor doelondersteuning.
+Maak gebruik van het potentiële publiek door hen naar bestemmingen uit te voeren. Momenteel gelden alleen bepaalde bestemmingen, zoals [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) of de [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) activeren van perspectiefprofielen voor doelondersteuning.
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 
