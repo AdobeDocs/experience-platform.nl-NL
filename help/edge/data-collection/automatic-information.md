@@ -3,7 +3,7 @@ title: Automatisch verzamelde informatie in de Adobe Experience Platform Web SDK
 description: Een overzicht van alle informatie die de Adobe Experience Platform SDK automatisch verzamelt.
 keywords: verzamel informatie;context;configure;device;screenHeight;screenHeight;screenOrientation;screenOrientation;screenWidth;screenWidth;milieu;viewportHeight;viewportHeight;viewportWidth;viewport Breedte;crowserDetails;browser details;implementatieDetails;naam;versionContext;localTime;localTimezoneOffset;local zone Offset;timestamp;web;url;webPageDetails;webPage Details;webReferrer;webReferrer;landscape;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 5%
@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # Automatisch verzamelde gegevens
 
-De SDK van het Web van Adobe Experience Platform verzamelt automatisch een aantal stukken informatie zonder enige speciale configuratie. Deze informatie kan echter, indien nodig, worden uitgeschakeld met de `context` in de `configure` gebruiken. [Zie De SDK configureren](../fundamentals/configuring-the-sdk.md). Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
+De SDK van het Web van Adobe Experience Platform verzamelt automatisch een aantal stukken informatie zonder enige speciale configuratie. Deze informatie kan echter, indien nodig, worden uitgeschakeld met de opdracht `context` in de `configure` gebruiken. [Zie De SDK configureren](../fundamentals/configuring-the-sdk.md). Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
 
 ## Apparaat (`device`)
 
@@ -40,7 +40,7 @@ De oriëntatie van het scherm.
 | --------------------------------- | ------------ |
 | `events[].xdm.device.screenWidth` | `1440` |
 
-De breedte van het scherm (in pixels).
+De breedte van het scherm (in pixels)
 
 ## Omgeving (`environment`)
 
@@ -54,7 +54,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Het type omgeving waardoor de ervaring is ontstaan. Adobe Experience Platform Web SDK stelt dit altijd in op `browser`.
+Het type omgeving waardoor de ervaring optrad. Adobe Experience Platform Web SDK stelt dit altijd in op `browser`.
 
 ### Viewporthoogte
 
@@ -92,7 +92,7 @@ De id van de Software Development Kit (SDK).  In dit veld wordt een URI gebruikt
 
 Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde eenvoudig de bibliotheekversie. Wanneer de bibliotheek als deel van de markeringsuitbreiding wordt gebruikt, is dit de bibliotheekversie en de versie van de marktextensie ging met &quot;+&quot; samen. Als de bibliotheekversie bijvoorbeeld 2.1.0 is en de extensieversie 2.1.3 is, is de waarde `2.1.0+2.1.3`.
 
-### Omgeving
+### Omgeving {#environment}
 
 | **Pad in Payload:** | **Voorbeeld:** |
 | ------------------------------------------------ | ------------ |
@@ -100,7 +100,7 @@ Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde eenvoudig de bi
 
 De omgeving waarin de gegevens zijn verzameld. Dit is altijd ingesteld op `browser`.
 
-## Context plaatsen (`placeContext`)
+## Context plaatsen (`placeContext`) {#place-context}
 
 Informatie over de locatie van de eindgebruiker.
 
