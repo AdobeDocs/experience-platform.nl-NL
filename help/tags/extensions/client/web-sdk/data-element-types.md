@@ -1,10 +1,10 @@
 ---
-title: Typen gegevenselementen in de Adobe Experience Platform Web SDK-extensie
+title: Typen gegevenselementen in de Adobe Experience Platform Web SDK Extension
 description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -16,19 +16,25 @@ Nadat u de [actietypen](action-types.md) in de [Adobe Experience Platform Web SD
 
 ## Identiteitskaart {#identity-map}
 
-Met een identiteitsoverzicht kunt u identiteiten instellen voor de bezoeker van uw webpagina. Een identiteitsoverzicht bestaat uit naamruimten, zoals _telefoon_ of _email_, met elke naamruimte die een of meer id&#39;s bevat. Als de persoon op uw website bijvoorbeeld twee telefoonnummers heeft opgegeven, moet uw naamruimte voor de telefoon twee id&#39;s bevatten.
+Met een identiteitsoverzicht kunt u identiteiten instellen voor de bezoeker van uw webpagina. Een identiteitsoverzicht bestaat uit naamruimten, zoals `CRMID`, `Phone` of `Email`, met elke naamruimte die een of meer id&#39;s bevat. Als de persoon op uw website bijvoorbeeld twee telefoonnummers heeft opgegeven, moet uw naamruimte voor de telefoon twee id&#39;s bevatten.
 
 In de [!UICONTROL Identity map] data element, zult u de volgende stukken informatie voor elke herkenningsteken verstrekken:
 
-* **[!UICONTROL ID]**: De waarde die de bezoeker identificeert. Als de id bijvoorbeeld tot de _telefoon_ naamruimte, de [!UICONTROL ID] kan _555-555-5555_. Deze waarde wordt doorgaans afgeleid van een JavaScript-variabele of een ander stukje gegevens op de pagina. Het is daarom verstandig een gegevenselement te maken dat verwijst naar de paginagegevens en vervolgens verwijst naar het gegevenselement in de [!UICONTROL ID] in het veld [!UICONTROL Identity map] gegevenselement. Als de id op de pagina wordt uitgevoerd en de id-waarde alleen een gevulde tekenreeks is, wordt de id automatisch verwijderd uit het identiteitsoverzicht.
+* **[!UICONTROL ID]**: De waarde die de bezoeker identificeert. Als de id bijvoorbeeld tot de _telefoon_ naamruimte, [!UICONTROL ID] kan _555-555-5555_. Deze waarde wordt doorgaans afgeleid van een JavaScript-variabele of een ander stukje gegevens op de pagina. Het is daarom verstandig een gegevenselement te maken dat verwijst naar de paginagegevens en vervolgens verwijst naar het gegevenselement in het dialoogvenster [!UICONTROL ID] in het veld [!UICONTROL Identity map] gegevenselement. Als de id op de pagina wordt uitgevoerd en de id-waarde alleen een gevulde tekenreeks is, wordt de id automatisch verwijderd uit het identiteitsoverzicht.
 * **[!UICONTROL Authenticated state]**: Een selectie die aangeeft of de bezoeker is geverifieerd.
 * **[!UICONTROL Primary]**: Een selectie die aangeeft of de id moet worden gebruikt als primaire id voor de persoon. Als er geen id als primair wordt gemarkeerd, wordt de ECID gebruikt als primaire id.
 
 ![UI-afbeelding die het scherm Gegevenselement bewerken weergeeft.](assets/identity-map-data-element.png)
 
+>[!TIP]
+>
+>Adobe raadt aan identiteiten te verzenden die een persoon vertegenwoordigen, zoals `Luma CRM Id` als primaire identiteit.
+>
+>Als het identiteitsbewijs de personsidentificatie bevat (bijvoorbeeld `Luma CRM Id`), wordt de persoon-id de primaire id. Anders, `ECID` wordt de primaire identiteit.
+
 U moet geen [!DNL ECID] wanneer u een identiteitsoverzicht maakt. Wanneer u de SDK gebruikt, wordt een [!DNL ECID] wordt automatisch gegenereerd op de server en opgenomen in het identiteitsoverzicht.
 
-Het gegevenselement van de identiteitskaarten wordt vaak gebruikt in combinatie met [[!UICONTROL XDM object] type gegevenselement](#xdm-object) en de [[!UICONTROL Set consent] actietype](action-types.md#set-consent).
+Het gegevenselement van de identiteitskaarten wordt vaak gebruikt in combinatie met [[!UICONTROL XDM object] gegevenstype van gegevenselement](#xdm-object) en de [[!UICONTROL Set consent] actietype](action-types.md#set-consent).
 
 Meer informatie over [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 
