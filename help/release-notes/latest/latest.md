@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van juli 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cc7d43f6424ff91bd237235b278bf13a0add45d
+source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1297'
 ht-degree: 3%
 
 ---
@@ -15,10 +15,24 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [Catalogusservice](#catalog-service)
 - [Gegevensverzameling](#data-collection)
 - [Doelen](#data-prep)
+- [Query-service](#query-service)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+## Catalogusservice {#catalog-service}
+
+Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de gegevensverbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+
+| Functie | Beschrijving |
+| --- | --- |
+| Beheer gegevenssets | De datasets UI biedt nu een inzamelingen van gealigneerde acties aan om uw datasets beter te beheren. Het geavanceerde gegevenssetbeheer verbetert uw werkefficiency door de verwezenlijking en het toewijzen van omslagen en markeringen aan uw datasets die voor het filtreren en betere ontdekkingsbaarheid toestaat. Zie de documentatie voor meer informatie over [inline-handelingen](../../catalog/datasets/user-guide.md#inline-actions), hoe [zoek- en filtergegevenssets](../../catalog/datasets/user-guide.md#search-and-filter), en [gegevenssets verplaatsen naar mappen](../../catalog/datasets/user-guide.md#move-to-folders). |
+
+{style="table-layout:auto"}
+
+Raadpleeg voor meer informatie over Catalog Service de [Overzicht van Catalog Service](../../catalog/home.md).
 
 ## Gegevensverzameling {#data-collection}
 
@@ -84,6 +98,21 @@ De update en de algemene beschikbaarheidsversie van de zes hierboven vermelde be
 - We hebben een probleem opgelost met de bestemming Microsoft Dynamics 365. De bestemming steunt nu regionaal verpletteren van gegevens via [Gebiedselector](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), zodat kunt u uw gegevensexport leiden afhankelijk van welk gebied uw bedrijf binnen het ecosysteem van Microsoft provisioned is. ![Selector nieuw gebied gemarkeerd.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Selector nieuw gebied gemarkeerd."){width="100" zoomable="yes"}
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
+
+## Query-service {#query-service}
+
+De Dienst van de vraag staat u toe om standaardSQL te gebruiken om gegevens in het gegevenspeer van Adobe Experience Platform te vragen. U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Uitgebreide functie voor Query-editor | De verbeterde knevel van de Redacteur van de Vraag verstrekt betere toegankelijkheid en multi-theming steun. Met de verbeterde editor-instellingen kunt u donkere of lichte thema&#39;s inschakelen. Zie de [documentatie](../../query-service/ui/user-guide.md#enhanced-editor-toggle) voor meer informatie . |
+| Aliasnaam voor berekende statistieken | U kunt nu een aliasnaam opgeven om de resultaten van uw gegevens in uw berekende statistieken in SQL-query&#39;s beschrijvend te gebruiken. Zie de documentatie voor informatie over dit en andere updates aan het bevel van de STATISTIEKEN van de COMPUTE. Zie de [documentatie](../../query-service/essential-concepts/dataset-statistics.md#alias-name) voor meer informatie . |
+
+{style="table-layout:auto"}
+
+Raadpleeg voor meer informatie over Query Service de [Overzicht van Query Service](../../query-service/home.md).
 
 ## Segmenteringsservice {#segmentation}
 
