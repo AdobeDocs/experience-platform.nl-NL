@@ -5,9 +5,9 @@ title: Een gegevensstroom maken voor Cloud Storage-bronnen met behulp van de Flo
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1765'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een bron 
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform.
+   - [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Bevat belangrijke informatie die u moet weten om met succes vraag aan de Registratie API van het Schema uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn in het Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
 - [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -96,15 +96,15 @@ curl -X POST \
 | `data.format` | De indeling van de gegevens die u naar het Platform wilt verzenden. Ondersteunde waarden zijn: `delimited`, `JSON`, en `parquet`. |
 | `data.properties` | (Optioneel) Een set eigenschappen die u op uw gegevens kunt toepassen wanneer u een bronverbinding maakt. |
 | `data.properties.columnDelimiter` | (Optioneel) Een scheidingsteken voor één tekenkolom dat u kunt opgeven bij het verzamelen van vlakke bestanden. Elke waarde van één teken is een toegestaan kolomscheidingsteken. Indien niet opgegeven, wordt een komma (`,`) wordt gebruikt als standaardwaarde. **Opmerking**: De `columnDelimiter` Deze eigenschap kan alleen worden gebruikt bij het opnemen van bestanden met scheidingstekens. |
-| `data.properties.encoding` | (Optioneel) Een eigenschap die het coderingstype definieert dat moet worden gebruikt bij het invoeren van gegevens naar het Platform. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
-| `data.properties.compressionType` | (Optioneel) Een eigenschap die het gecomprimeerde bestandstype voor inname definieert. De ondersteunde gecomprimeerde bestandstypen zijn: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, en `tar`. **Opmerking**: De `compressionType` Deze eigenschap kan alleen worden gebruikt bij het opnemen van afgebakende of JSON-bestanden. |
+| `data.properties.encoding` | (Optioneel) Een eigenschap die het coderingstype definieert dat moet worden gebruikt bij het invoeren van gegevens naar het Platform. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` Deze parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
+| `data.properties.compressionType` | (Optioneel) Een eigenschap die het gecomprimeerde bestandstype voor inname definieert. De volgende bestandstypen worden ondersteund: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, en `tar`. **Opmerking**: De `compressionType` Deze eigenschap kan alleen worden gebruikt bij het opnemen van afgebakende of JSON-bestanden. |
 | `params.path` | Het pad van het bronbestand dat u opent. Deze parameter verwijst naar een afzonderlijk bestand of naar een volledige map.  **Opmerking**: U kunt een sterretje gebruiken in plaats van de bestandsnaam om de opname van een volledige map op te geven. Bijvoorbeeld: `/acme/summerCampaign/*.csv` wordt de gehele `/acme/summerCampaign/` map. |
 | `params.type` | Het bestandstype van het brongegevensbestand dat u opgeeft. Tekst gebruiken `file` om een afzonderlijk bestand in te voeren en type te gebruiken `folder` om een volledige map in te voeren. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke bron voor cloudopslag. Zie de [aanhangsel](#appendix) voor een lijst van verbindingsspecificaties-id&#39;s. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -206,7 +206,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target-connection}
 
@@ -253,8 +253,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | De `$id` van het doel-XDM-schema. |
 | `data.schema.version` | De versie van het schema. Deze waarde moet worden ingesteld `application/vnd.adobe.xed-full+json;version=1`, die de laatste secundaire versie van het schema retourneert. |
-| `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | The fixed connection spec ID to the Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | Identiteitskaart van de doeldataset die in de vorige stap wordt geproduceerd. **Opmerking**: U moet een geldige dataset-id opgeven wanneer u een doelverbinding maakt. Een ongeldige dataset ID zal in een fout resulteren. |
+| `connectionSpec.id` | De verbinding-specificatie-id die wordt gebruikt om verbinding te maken met het datumpeer. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
@@ -271,7 +271,7 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` van het [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
+Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` het eindpunt van de [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
 
 >[!TIP]
 >
@@ -374,7 +374,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de dataflow specificatie verantwoordelijk voor het brengen van gegevens van uw bron in Platform terug. De reactie bevat de unieke stroomspecificatie `id` vereist om een nieuwe gegevensstroom tot stand te brengen.
+Een succesvolle reactie keert de details van de dataflow specificatie verantwoordelijk voor het brengen van gegevens van uw bron in Platform terug. De reactie bevat de unieke stroomspecificatie `id` vereist om een nieuwe gegevensstroom te creëren.
 
 ```json
 {
@@ -592,7 +592,7 @@ Een succesvolle reactie keert de details van de dataflow specificatie verantwoor
 De laatste stap op weg naar het verzamelen van gegevens voor cloudopslag is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 - [Bronverbinding-id](#source)
-- [Doelverbinding-id](#target)
+- [Doel-verbindings-id](#target)
 - [Toewijzing-id](#mapping)
 - [Dataflow-specificatie-id](#specs)
 
@@ -676,16 +676,16 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [gegevens controleren in de API](../monitor.md)
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [gegevensstromen in de API controleren](../monitor.md)
 
 ## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u een bronaansluiting gemaakt om gegevens van uw cloudopslag op een geplande basis te verzamelen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
-- [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
+- [Overzicht van de Data Science-werkruimte](../../../../data-science-workspace/home.md)
 
-## Aanhangsel {#appendix}
+## Bijlage {#appendix}
 
 In de volgende sectie worden de verschillende connectors voor bronnen voor cloudopslag en de bijbehorende verbindingsspecificaties weergegeven.
 

@@ -5,9 +5,9 @@ title: Een gegevensstroom voor streaming maken voor Raw-gegevens met de Flow Ser
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ Deze zelfstudie behandelt de stappen voor het ophalen van onbewerkte gegevens va
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming opname voor Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
+   - [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Bevat belangrijke informatie die u moet weten om met succes vraag aan de Registratie API van het Schema uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn in het Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming opname voor Platform biedt gebruikers een methode om gegevens van client- en server-side apparaten in real-time naar het Experience Platform te verzenden.
 - [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
@@ -43,7 +43,7 @@ Deze zelfstudie vereist ook dat u een geldige bron-verbindings-id hebt voor een 
 
 Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook het XDM-schema uit [!DNL Individual Profile] klasse.
 
-Om een doelXDM schema tot stand te brengen, doe een verzoek van de POST aan `/schemas` van het [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Om een doelXDM schema tot stand te brengen, doe een verzoek van de POST aan `/schemas` het eindpunt van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API-indeling**
 
@@ -151,7 +151,7 @@ Een succesvolle reactie keert details van het onlangs gecreëerde schema met inb
 
 ## Een doelgegevensset maken
 
-Met een doel-XDM-schema gemaakt en uniek `$id` u kunt een doeldataset nu tot stand brengen om uw brongegevens te bevatten. Om een doeldataset tot stand te brengen, doe een verzoek van de POST aan `dataSets` van het [Catalogusservice-API](https://www.adobe.io/experience-platform-apis/references/catalog/), terwijl het verstrekken van identiteitskaart van het doelschema binnen de lading.
+Met een doel-XDM-schema gemaakt en uniek `$id` u kunt een doeldataset nu tot stand brengen om uw brongegevens te bevatten. Om een doeldataset te creëren, doe een verzoek van de POST aan `dataSets` het eindpunt van de [Catalogusservice-API](https://www.adobe.io/experience-platform-apis/references/catalog/), terwijl het verstrekken van identiteitskaart van het doelschema binnen de lading.
 
 **API-indeling**
 
@@ -206,7 +206,7 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 
 De verbindingen van het doel leiden tot en leiden een bestemmingsverbinding aan Platform of om het even welke plaats waar de overgebrachte gegevens zullen landen. De verbindingen van het doel bevatten informatie betreffende gegevensbestemming, gegevensformaat, en identiteitskaart van de doelverbinding die wordt vereist om een gegevensstroom tot stand te brengen. De de verbindingsinstanties van het doel zijn specifiek voor een huurder en organisatie.
 
-Om een doelverbinding tot stand te brengen, doe een verzoek van de POST aan `/targetConnections` van het [!DNL Flow Service] API. Als onderdeel van de aanvraag moet u de volgende gegevens opgeven: `dataSetId` opgehaald in de vorige stap, en vaste identiteitskaart van de verbindingsspecificatie verbonden aan [!DNL Data Lake]. Deze id is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Om een doelverbinding tot stand te brengen, doe een verzoek van de POST aan `/targetConnections` het eindpunt van de [!DNL Flow Service] API. Als onderdeel van de aanvraag moet u de volgende gegevens opgeven: `dataSetId` opgehaald in de vorige stap, en vaste identiteitskaart van de verbindingsspecificatie verbonden aan [!DNL Data Lake]. Deze id is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API-indeling**
 
@@ -246,9 +246,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `connectionSpec.id` | De verbindingsspecificatie-id die wordt gebruikt om verbinding te maken met de [!DNL Data Lake]. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | De opgegeven indeling van de gegevens waarnaar u verzendt [!DNL Data Lake]. |
-| `params.dataSetId` | Identiteitskaart van de doeldataset die in de vorige stap wordt teruggewonnen. |
+| `data.format` | De opgegeven indeling van de gegevens die u aan het datumpigment toevoegt. |
+| `params.dataSetId` | Identiteitskaart van de doeldataset die in de vorige stap wordt geproduceerd. **Opmerking**: U moet een geldige dataset-id opgeven wanneer u een doelverbinding maakt. Een ongeldige dataset ID zal in een fout resulteren. |
+| `connectionSpec.id` | De verbinding-specificatie-id die wordt gebruikt om verbinding te maken met het datumpeer. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
@@ -265,7 +265,7 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` van het [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
+Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` het eindpunt van de [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
 
 **API-indeling**
 
@@ -310,7 +310,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -418,7 +418,7 @@ Een succesvolle reactie keert een lijst van dataflow specificaties terug. De geg
 De laatste stap op weg naar het verzamelen van streaminggegevens is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 - [Bronverbinding-id](#source)
-- [Doelverbinding-id](#target)
+- [Doel-verbindings-id](#target)
 - [Toewijzing-id](#mapping)
 - [Dataflow-specificatie-id](#specs)
 
@@ -487,4 +487,4 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt voor het verzamelen van streaminggegevens via de streamingconnector. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
-- [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
+- [Overzicht van de Data Science-werkruimte](../../../../data-science-workspace/home.md)

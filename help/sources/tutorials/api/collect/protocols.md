@@ -5,9 +5,9 @@ title: Creeer een Dataflow voor de Bronnen van Protocollen Gebruikend de Dienst 
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een proto
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform.
+   * [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Bevat belangrijke informatie die u moet weten om met succes vraag aan de Registratie API van het Schema uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn in het Experience Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
 * [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -149,7 +149,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target-connection}
 
@@ -196,8 +196,8 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `data.schema.id` | De `$id` van het doel-XDM-schema. |
-| `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die wordt gebruikt om verbinding te maken met het Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | Identiteitskaart van de doeldataset die in de vorige stap wordt geproduceerd. **Opmerking**: U moet een geldige dataset-id opgeven wanneer u een doelverbinding maakt. Een ongeldige dataset ID zal in een fout resulteren. |
+| `connectionSpec.id` | De verbinding-specificatie-id die wordt gebruikt om verbinding te maken met het datumpeer. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
@@ -214,7 +214,7 @@ Een geslaagde reactie retourneert de unieke id van de nieuwe doelverbinding (`id
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` van het [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
+Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` het eindpunt van de [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
 
 **API-indeling**
 
@@ -280,7 +280,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -293,7 +293,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 }
 ```
 
-## Specificaties voor gegevensstroom opzoeken {#specs}
+## Gegevensstroomspecificaties opzoeken {#specs}
 
 Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Om een dataflow tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen die voor het verzamelen van gegevens van uw protocoltoepassing verantwoordelijk zijn.
 
@@ -315,7 +315,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de dataflow specificatie verantwoordelijk voor het brengen van gegevens van uw bron in Platform terug. De reactie bevat de unieke stroomspecificatie `id` vereist om een nieuwe gegevensstroom tot stand te brengen.
+Een succesvolle reactie keert de details van de dataflow specificatie verantwoordelijk voor het brengen van gegevens van uw bron in Platform terug. De reactie bevat de unieke stroomspecificatie `id` vereist om een nieuwe gegevensstroom te creëren.
 
 >[!NOTE]
 >
@@ -611,7 +611,7 @@ Een succesvolle reactie keert de details van de dataflow specificatie verantwoor
 De laatste stap in de richting van het verzamelen van gegevens is het maken van een gegevensstroom. Op dit punt moeten de volgende vereiste waarden worden voorbereid:
 
 * [Bronverbinding-id](#source)
-* [Doelverbinding-id](#target)
+* [Doel-verbindings-id](#target)
 * [Toewijzing-id](#mapping)
 * [Dataflow-specificatie-id](#specs)
 
@@ -699,11 +699,11 @@ Een geslaagde reactie retourneert de id `id` van de nieuwe gegevensstroom.
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [gegevens controleren in de API ](../monitor.md)
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [gegevensstromen in de API controleren](../monitor.md)
 
 ## Volgende stappen
 
 Door dit leerprogramma te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een protocoltoepassing op een geplande basis te verzamelen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
-* [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
+* [Overzicht van de Data Science-werkruimte](../../../../data-science-workspace/home.md)
