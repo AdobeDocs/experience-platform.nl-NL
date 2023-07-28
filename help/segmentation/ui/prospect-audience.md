@@ -4,9 +4,9 @@ description: Leer hoe te om perspectiefpubliek tot stand te brengen en te gebrui
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 6a24e2fc29c8e020c7fe4ac1c1c5f9640cefb971
+source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -64,4 +64,4 @@ Lees de volgende documentatie over het gebruiksgeval voor meer informatie over h
 
 ## Volgende stappen
 
-<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
+Nadat u deze handleiding hebt gelezen, weet u hoe u uw perspectiefpubliek in Adobe Experience Platform kunt maken en beheren. Lees de handleiding voor meer informatie over het activeren van een publiek in het vooruitzicht voor andere downstreamservices [activeren, publiek](../../destinations/ui/activate-prospect-audiences.md).
