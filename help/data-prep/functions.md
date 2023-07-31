@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 33f1265820b4bf60fbdec81283a975fbb1ddd175
+source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
 workflow-type: tm+mt
-source-wordcount: '4916'
+source-wordcount: '5221'
 ht-degree: 2%
 
 ---
@@ -148,9 +148,9 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | opheffen | Hiermee wordt de waarde van het kenmerk ingesteld op `null`. Dit zou moeten worden gebruikt wanneer u niet het gebied aan het doelschema wilt kopiëren. | | nullify() | nullify() | `null` |
 | get_keys | Parseert de sleutel/waardeparen en retourneert alle sleutels. | <ul><li>OBJECT: **Vereist** Het object waaruit de sleutels worden geëxtraheerd.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prerechterlijke&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Parseert de sleutel/waardeparen en retourneert de waarde van de tekenreeks op basis van de opgegeven sleutel. | <ul><li>STRING: **Vereist** De tekenreeks die u wilt parseren.</li><li>TOETS: **Vereist** De sleutel waarvoor de waarde moet worden geëxtraheerd.</li><li>VALUE_DELIMITER: **Vereist** Het scheidingsteken tussen het veld en de waarde. Indien `null` Als er een lege tekenreeks wordt opgegeven, is deze waarde `:`.</li><li>FIELD_DELIMITER: *Optioneel* Het scheidingsteken tussen veld- en waardeparen. Indien `null` Als er een lege tekenreeks wordt opgegeven, is deze waarde `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena, phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
-<!-- | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
-| map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
-| add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | | -->
+| map_get_values | Neemt een kaart en een zeer belangrijke input. Als de invoer één toets is, retourneert de functie de waarde die aan die toets is gekoppeld. Als de invoer een tekenreeksarray is, retourneert de functie alle waarden die overeenkomen met de opgegeven sleutels. Als de inkomende kaart dubbele sleutels heeft, moet de terugkeerwaarde de sleutels dedupliceren en unieke waarden terugkeren. | <ul><li>KAART: **Vereist** De invoerkaartgegevens.</li><li>TOETS:  **Vereist** De sleutel kan een enkele tekenreeks of een tekenreeks-array zijn. Als een ander primitief type (data/number) wordt opgegeven, wordt het behandeld als een tekenreeks.</li></ul> | get_values(MAP, KEY) | Zie de [aanhangsel](#map_get_values) voor een codevoorbeeld. | |
+| map_has_keys | Als een of meer invoersleutels worden opgegeven, retourneert de functie true. Als een tekenreeks-array wordt opgegeven als invoer, retourneert de functie waar op de eerste key die wordt gevonden. | <ul><li>KAART:  **Vereist** De gegevens van de invoerkaart</li><li>TOETS:  **Vereist** De sleutel kan een enkele tekenreeks of een tekenreeks-array zijn. Als een ander primitief type (data/number) wordt opgegeven, wordt het behandeld als een tekenreeks.</li></ul> | map_has_keys(MAP, KEY) | Zie de [aanhangsel](#map_has_keys) voor een codevoorbeeld. | |
+| add_to_map | Accepteert minstens twee invoeren. Om het even welk aantal kaarten kan als input worden verstrekt. De Prep van gegevens keert één enkele kaart terug die alle zeer belangrijk-waardeparen van alle input heeft. Als één of meerdere sleutels (in de zelfde kaart of over kaarten) worden herhaald, dedupliceert Prep van Gegevens de sleutels zodat het eerste zeer belangrijk-waardepaar in de orde voortduurt dat zij in de input werden overgegaan. | KAART: **Vereist** De invoerkaartgegevens. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Zie de [aanhangsel](#add_to_map) voor een codevoorbeeld. | |
 
 {style="table-layout:auto"}
 
@@ -381,12 +381,12 @@ In de onderstaande tabel wordt een lijst met apparaatveldwaarden en de bijbehore
 | Hacker | Deze apparaatwaarde wordt gebruikt als scripts worden gedetecteerd in het dialoogvenster `useragent` tekenreeks. |
 
 {style="table-layout:auto"}
-<!-- 
-### Code samples {#code-samples}
+
+### Codevoorbeelden {#code-samples}
 
 #### map_get_values {#map-get-values}
 
-+++Select to view example
++++Selecteren om voorbeeld weer te geven
 
 ```json
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
@@ -404,7 +404,7 @@ In de onderstaande tabel wordt een lijst met apparaatveldwaarden en de bijbehore
 
 #### map_has_keys {#map_has_keys}
 
-+++Select to view example
++++Selecteren om voorbeeld weer te geven
 
 ```json
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
@@ -422,7 +422,7 @@ In de onderstaande tabel wordt een lijst met apparaatveldwaarden en de bijbehore
 
 #### add_to_map {#add_to_map}
 
-+++Select to view example
++++Selecteren om voorbeeld weer te geven
 
 ```json
 example = "add_to_map(book_details, book_details2) where input is {\n" +
@@ -454,4 +454,4 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
       returns = "A new map with all elements from map and addends"
 ```
 
-+++ -->
++++

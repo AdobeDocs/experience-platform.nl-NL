@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van juli 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1365'
 ht-degree: 3%
 
 ---
@@ -17,6 +17,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Catalogusservice](#catalog-service)
 - [Gegevensverzameling](#data-collection)
+- [Gegevensvoorbereiding](#data-prep)
 - [Doelen](#destinations)
 - [Query-service](#query-service)
 - [Segmenteringsservice](#segmentation)
@@ -48,20 +49,20 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 {style="table-layout:auto"}
 
 Lees voor meer informatie over gegevensverzameling de [overzicht van gegevensverzamelingen](../../tags/home.md).
-<!-- 
-## Data Prep {#data-prep}
 
-Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+## Gegevensvoorbereiding {#data-prep}
 
-**New or updated features**
+Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
 
-| Feature | Description |
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
 | --- | --- |
-| New mapper functions | You can now use the following functions when mapping objects in Data Prep: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md#hierarchies---objects). |
+| Nieuwe mapfuncties | U kunt nu de volgende functies gebruiken bij het toewijzen van objecten in Data Prep: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> Lees voor meer informatie over deze functies de [Handleiding voor functies Data Prep](../../data-prep/functions.md#hierarchies---objects). |
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md). -->
+Lees voor meer informatie over Data Prep de [Overzicht van Data Prep](../../data-prep/home.md).
 
 ## Doelen {#destinations}
 
