@@ -3,7 +3,7 @@ title: Soorten publiek-AI-widgets van dashboard
 description: Leer hoe de AI van de Klant belangrijke inzichten met betrekking tot kurn of neiging over het Echte publiek van het Profiel van de Klant van uw organisatie verstrekt.
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 2%
@@ -23,7 +23,7 @@ THe links when required
 ## [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="Verdeling van scores"
 >abstract="Deze widget visualiseert de verdeling van het totale aantal profielen aan de hand van hun eigenschapscores in stappen van 5 procent. De verdeling van het profielaantal wordt bepaald door het AI-model en het geselecteerde samenvoegbeleid. U kunt het AI-model wijzigen in het vervolgkeuzemenu onder de titel van de widget."
 
@@ -52,9 +52,9 @@ Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding v
 ## [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="Overzicht van scores"
->abstract="Deze widget geeft het totale aantal scoreprofielen weer en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid. Het donutdiagram illustreert de proportionele samenstelling van totale profielen in hoge, gemiddelde en lage dichtheid."
+>abstract="Deze widget geeft het totale aantal scoreprofielen weer en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid. Het donutdiagram illustreert de proportionele samenstelling van de totale profielen in hoge, gemiddelde en lage dichtheid."
 
 Deze widget geeft het totale aantal profielen met een score weer en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid, respectievelijk groen, geel en rood. Een donutdiagram wordt gebruikt om de proportionele samenstelling van totale profielen tussen hoge, gemiddelde en lage eigenschappen als groen, geel en rood te illustreren. Een profiel komt in aanmerking voor een hoge dichtheid van meer dan 75, een gemiddelde dichtheid tussen 25 en 74 en een lage dichtheid onder 24. Een legenda geeft de kleurcode en drempelwaarden van eigenschappen aan. De tellingen van het profiel voor de hoge, middelgrote, en lage eigenschappen worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
