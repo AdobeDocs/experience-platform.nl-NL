@@ -4,18 +4,14 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '4436'
+source-wordcount: '4409'
 ht-degree: 0%
 
 ---
 
 # Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
-
->[!IMPORTANT]
->
->* Deze bètafunctionaliteit is beschikbaar voor klanten die het Real-Time CDP Premier en Ultimate-pakket hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 Gebruik de verbeterde mogelijkheden voor het exporteren van bestanden (momenteel in bèta) voor toegang tot de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit het Experience Platform:
 
@@ -24,16 +20,16 @@ Gebruik de verbeterde mogelijkheden voor het exporteren van bestanden (momenteel
 * Mogelijkheid om de [bestandstype](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) van het geëxporteerde bestand.
 * [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-Deze functionaliteit wordt ondersteund door de volgende zes nieuwe bètacloud-opslagkaarten:
+Deze functionaliteit wordt ondersteund door de zes hieronder vermelde cloudopslagkaarten:
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-In dit artikel wordt uitgelegd welke workflow is vereist voor het gebruik van de [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) om gekwalificeerde profielen van Adobe Experience Platform te exporteren naar een van de hierboven gekoppelde opslaglocaties in de cloud.
+In dit artikel wordt uitgelegd welke workflow nodig is om de [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) om gekwalificeerde profielen van Adobe Experience Platform te exporteren naar een van de hierboven gekoppelde opslaglocaties in de cloud.
 
 >[!TIP]
 >
@@ -49,7 +45,7 @@ Als u de Flow Service API al hebt gebruikt om profielen te exporteren naar de op
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] kunt u een publiek maken en een publiek genereren in [!DNL Adobe Experience Platform] van uw [!DNL Real-Time Customer Profile] gegevens.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -67,7 +63,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [Zelfstudie over verificatie van Experience Platforms](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
@@ -89,7 +85,7 @@ In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bew
 
 ### Woordenlijst {#glossary}
 
-Voor beschrijvingen van de termen die u in deze API-zelfstudie zult tegenkomen, leest u de [verklarende woordenlijst](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API-naslagdocumentatie.
+Lees voor beschrijvingen van de termen die u in deze API-zelfstudie zult tegenkomen de [verklarende woordenlijst](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API-naslagdocumentatie.
 
 ## Doel selecteren waar publiek moet worden geëxporteerd {#select-destination}
 
@@ -318,7 +314,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Voer de onderstaande stappen uit om een doelpubliek voor het exporteren van gegevens naar een opslaglocatie in de cloud in te stellen. Voor sommige stappen verschillen de verzoeken en antwoorden tussen de verschillende cloudopslagbestemmingen. In die gevallen gebruikt u de tabbladen op de pagina om de aanvragen en antwoorden op te halen die specifiek zijn voor het doel waarmee u verbinding wilt maken en waarnaar u het publiek wilt exporteren. Zorg ervoor dat u de juiste `connection spec` en `flow spec` voor de bestemming u vormt.
+Voer de onderstaande stappen uit om een doelpubliek voor het exporteren van gegevens naar een opslaglocatie in de cloud in te stellen. Voor sommige stappen verschillen de verzoeken en antwoorden tussen de verschillende cloudopslagbestemmingen. In die gevallen, gebruik de lusjes op de pagina om de verzoeken en de reacties terug te winnen specifiek voor de bestemming die u wilt verbinden en publiek uitvoeren naar. Zorg ervoor dat u de juiste `connection spec` en `flow spec` voor de bestemming u vormt.
 
 ## Een bronverbinding maken {#create-source-connection}
 
@@ -847,7 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Raadpleeg voor meer informatie de [authenticeren naar doel](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Gebied van Gegevens Landing.
+>Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Raadpleeg voor meer informatie de [authenticeren naar doel](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Gebied van Gegevens.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -970,7 +966,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `specName` | Gebruik `SFTP with Password`. |
 | `domain` | Het IP-adres of de domeinnaam van uw SFTP-opslaglocatie. |
-| `username` | De gebruikersnaam die u wilt aanmelden bij uw SFTP-opslaglocatie. |
+| `username` | De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie. |
 | `password` | Het wachtwoord voor aanmelding bij uw SFTP-opslaglocatie. |
 | `port` | De poort die wordt gebruikt door uw SFTP-opslaglocatie. |
 
@@ -1016,7 +1012,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `specName` | Gebruik `SFTP with Password`. |
 | `domain` | Het IP-adres of de domeinnaam van uw SFTP-opslaglocatie. |
-| `username` | De gebruikersnaam die u wilt aanmelden bij uw SFTP-opslaglocatie. |
+| `username` | De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie. |
 | `sshKey` | De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet zijn opgemaakt als een Base64-gecodeerde tekenreeks en mag niet met een wachtwoord zijn beveiligd. |
 | `port` | De poort die wordt gebruikt door uw SFTP-opslaglocatie. |
 
@@ -1041,7 +1037,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### Codering toevoegen aan geëxporteerde bestanden
 
-U kunt desgewenst versleuteling toevoegen aan uw geëxporteerde bestanden. Hiervoor moet u items toevoegen uit het dialoogvenster `encryptionSpecs`. Zie het onderstaande aanvraagvoorbeeld met de verplichte parameters gemarkeerd:
+U kunt desgewenst versleuteling toevoegen aan uw geëxporteerde bestanden. Hiervoor moet u items toevoegen uit het dialoogvenster `encryptionSpecs`. Zie het onderstaande voorbeeld met de verplichte parameters:
 
 
 >[!BEGINSHADEBOX]
@@ -1147,7 +1143,7 @@ Noteer de verbinding-id in het antwoord. Deze id is vereist in de volgende stap 
 
 Vervolgens moet u een doelverbinding maken. [Doelverbindingen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaat de exportparameters voor het geëxporteerde publiek op. Exportparameters zijn onder andere exportlocatie, bestandsindeling, compressie en andere details. Voor CSV-bestanden kunt u bijvoorbeeld verschillende exportopties selecteren. Meer informatie over alle ondersteunde CSV-exportopties vindt u in het dialoogvenster [pagina met configuraties voor bestandsindelingen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-Zie de `targetSpec` eigenschappen die in de `connection spec` om de ondersteunde eigenschappen voor elk doeltype te begrijpen. Verwijs naar de tabbladen hieronder voor de `targetSpec` eigenschappen van alle ondersteunde doelen.
+Zie de `targetSpec` eigenschappen die worden verstrekt in de `connection spec` om de ondersteunde eigenschappen voor elk doeltype te begrijpen. Verwijs naar de tabbladen hieronder voor de `targetSpec` eigenschappen van alle ondersteunde doelen.
 
 >[!BEGINTABS]
 
@@ -4320,7 +4316,7 @@ Gebruik vervolgens de [API voor gegevenprep](https://developer.adobe.com/experie
 >[!IMPORTANT]
 >
 >* In het onderstaande toewijzingsobject worden de `destination` parameter accepteert geen punten `"."`. Bijvoorbeeld, zou u PersonalEmail_address of segmentMembership_status zoals benadrukt in het configuratievoorbeeld moeten gebruiken.
->* Er is één specifiek geval wanneer het bronattribuut een identiteitsattribuut is en een punt bevat. In dit geval moet met het kenmerk worden gevrijwaard `//`, zoals hieronder gemarkeerd.
+>* Er is één specifiek geval wanneer het bronattribuut een identiteitsattribuut is en een punt bevat. In dit geval moet het kenmerk worden beschermd `//`, zoals hieronder gemarkeerd.
 >* Merk ook op dat alhoewel de voorbeeldconfiguratie hieronder omvat `Email` en `Phone_E.164`, kunt u slechts één identiteitskenmerk per gegevensstroom exporteren.
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
@@ -4522,7 +4518,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### Een deduplicatietoets toevoegen {#add-deduplication-key}
 
-Als u een [deduplicatiesleutel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)Zie de onderstaande voorbeelden van verzoeken en antwoorden
+Als u een [deduplicatie-sleutel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)Zie de onderstaande voorbeelden van verzoeken en antwoorden
 
 >[!BEGINSHADEBOX]
 
@@ -4677,7 +4673,7 @@ De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-f
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u het Platform verbonden met een van uw voorkeursbestemmingen voor cloudopslag en een gegevensstroom ingesteld naar de respectievelijke bestemming om het publiek te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
+Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met een van uw voorkeursbestemmingen voor cloudopslag en een dataflow ingesteld op de respectievelijke bestemming om het publiek te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)

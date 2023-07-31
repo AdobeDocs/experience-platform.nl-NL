@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van juli 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Catalogusservice](#catalog-service)
 - [Gegevensverzameling](#data-collection)
-- [Doelen](#data-prep)
+- [Doelen](#destinations)
 - [Query-service](#query-service)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
@@ -95,7 +95,7 @@ De update en de algemene beschikbaarheidsversie van de zes hierboven vermelde be
 **Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
 
 - We hebben een probleem opgelost met de Salesforce-bestemming (API) van de Salesforce-Marketing Cloud, waarbij in de toewijzingsstap niet alle beschikbare doelkenmerken werden geretourneerd van Salesforce. Er is nu een [bovengrens van 2000 doelkenmerken](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) vanuit Salesforce die kan worden weergegeven.
-- We hebben een probleem opgelost met de bestemming Microsoft Dynamics 365. De bestemming steunt nu regionaal verpletteren van gegevens via [Gebiedselector](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), zodat kunt u uw gegevensexport leiden afhankelijk van welk gebied uw bedrijf binnen het ecosysteem van Microsoft provisioned is. ![Selector nieuw gebied gemarkeerd.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Selector nieuw gebied gemarkeerd."){width="100" zoomable="yes"}
+- We hebben een probleem opgelost met de bestemming Microsoft Dynamics 365. De bestemming steunt nu regionaal verpletteren van gegevens via [Gebiedselector](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), zodat kunt u uw gegevensexport leiden afhankelijk van welk gebied uw bedrijf binnen het ecosysteem van Microsoft provisioned is. <br> ![Selector nieuw gebied gemarkeerd.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Selector nieuw gebied gemarkeerd."){width="100" zoomable="yes"}
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 

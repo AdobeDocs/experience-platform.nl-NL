@@ -2,9 +2,9 @@
 description: Leer hoe u opties voor bestandsindeling kunt configureren wanneer u gegevens activeert naar bestandsbestemmingen
 title: (Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -12,9 +12,6 @@ ht-degree: 0%
 # (Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen
 
 >[!IMPORTANT]
->
->De **[!UICONTROL File formatting options]** in Adobe Experience Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
->Neem contact op met uw Adobe-vertegenwoordiger voor toegang tot deze functie.
 > 
 >De opmaakopties voor bestanden die in dit document worden beschreven, zijn momenteel alleen beschikbaar voor CSV-bestanden.
 
@@ -35,7 +32,7 @@ Als u de opties voor de bestandsindeling wilt weergeven, start u de [verbinding 
 >
 >Mogelijk zijn niet al deze opties beschikbaar voor de bestemming waarmee u verbinding maakt. Het is aan de bestemmingsontwikkelaar om te bepalen welke dossier het formatteren opties zij in hun bestemming willen steunen. De bestemmingsontwikkelaar kan bepalen welke opties beschikbaar zijn wanneer het verbinden met de bestemming. De vereiste opties zijn duidelijk met een asterisk in de UI van het Experience Platform.
 > 
->De nieuwe bestemmingen voor cloudopslag - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Bèta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(bèta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(bèta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel worden alleen de zes onderstaande CSV-opties ondersteund.
+>De door Adobe gebouwde cloudopslagbestemmingen - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Gegevenslandingszone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel worden alleen de zes onderstaande CSV-opties ondersteund.
 
 ![Afbeelding met enkele beschikbare opties voor bestandsindeling.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -56,7 +53,7 @@ Met dit besturingselement kunt u een scheidingsteken instellen voor elk veld en 
 
 #### Voorbeelden
 
-Bekijk de voorbeelden hieronder van de inhoud in de geëxporteerde CSV-bestanden met elk van de selecties in de gebruikersinterface.
+Bekijk de voorbeelden hieronder van de inhoud in de geëxporteerde CSV-bestanden met elke selectie in de gebruikersinterface.
 
 * Voorbeeld van uitvoer met **[!UICONTROL Colon `(:)`]** geselecteerd: `male:John:Doe`
 * Voorbeeld van uitvoer met **[!UICONTROL Comma `(,)`]** geselecteerd: `male,John,Doe`
