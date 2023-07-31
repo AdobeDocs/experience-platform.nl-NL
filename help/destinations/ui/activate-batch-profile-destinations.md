@@ -4,15 +4,19 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3601'
+source-wordcount: '3515'
 ht-degree: 0%
 
 ---
 
 
 # Soorten publiek activeren om exportdoelen voor batchprofielen te gebruiken
+
+>[!IMPORTANT]
+> 
+> De op de pagina beschreven functionaliteit is nog niet algemeen beschikbaar voor klanten. Deze pagina is momenteel bedoeld voor Adobe-interne teams als een voorgelezen informatie over de komende functionaliteit. Deel niet buiten de Adobe totdat deze notitie is verwijderd.
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ Gebruik de **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip
 
    ![Afbeelding die de optie Scheduled markeert in de activeringsstroom voor batchbestemmingen en die de tijdkiezer weergeeft.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten. <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Deze beperking zal in toekomstige versies worden aangepakt.
-
 1. Gebruik de **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden. Voor dagelijkse exportbewerkingen kunt u het beste uw begin- en einddatum instellen zodat deze aansluiten op de duur van uw campagnes op de downstreamplatforms.
 
    >[!IMPORTANT]
@@ -150,10 +150,6 @@ Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te a
    * **[!UICONTROL Hourly]**: schema incrementele het dossieruitvoer om de 3, 6, 8, of 12 uur.
 
 1. Gebruik de **[!UICONTROL Time]** om de tijd van de dag te kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
-
-   >[!IMPORTANT]
-   >
-   >Wegens de manier de interne processen van het Experience Platform worden gevormd, kan de eerste stijgende of volledige dossieruitvoer niet alle backfill gegevens bevatten. <br> <br> Om ervoor te zorgen dat er volledige en meest recente back-upgegevens worden geëxporteerd voor zowel volledige als incrementele bestanden, raadt Adobe aan de eerste exporttijd voor bestanden in te stellen na 12.00 uur GMT van de volgende dag. Deze beperking zal in toekomstige versies worden aangepakt.
 
 1. Gebruik de **[!UICONTROL Date]** om het interval te kiezen waarin het exporteren moet plaatsvinden. De beste manier is om uw begin- en einddatum in te stellen op de duur van uw campagnes op uw downstreamplatforms.
 
