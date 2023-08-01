@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van bronconnectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,12 @@ Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronn
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## Adobe-gebouwde en partner-gebouwde bronnen {#adobe-and-partner-built-sources}
+
+Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door het gebruiken van [Bronnen-SDK](/help/sources/sources-sdk/overview.md). Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld de [Amazon S3-connector](/help/sources/connectors/cloud-storage/s3.md) wordt gemaakt door Adobe, terwijl de [RainFocus-connector](/help/sources/connectors/analytics/rainfocus.md) wordt gecreeerd en door het team RainFocus gehandhaafd.
+
+Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe geschreven en onderhouden connectors contact op met uw Adobe of de klantenservice.
 
 ## Typen bronnen
 

@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Zelfservicesjabloon voor documentatie
+title: Zelfbedieningssjabloon voor documentatie
 description: Leer hoe u Adobe Experience Platform verbindt met uw BRON met behulp van de Flow Service API.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 74e9774009d086a04351c8ff04cde29348c90c09
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2139'
 ht-degree: 0%
 
 ---
 
-# Een *UURSOURCE* verbinding met de [!DNL Flow Service] API
+# Een *UURBRON* verbinding met de [!DNL Flow Service] API
 
 *Terwijl u deze sjabloon doorloopt, vervangt of verwijdert u alle cursief gedrukte alinea&#39;s (te beginnen met deze alinea).*
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door de *UURSOURCE* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *Koppeling of e-mailadres invoegen waar u voor updates kunt komen*.
+>Deze bronschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door *YourSource* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *Koppeling of e-mailadres invoegen waar u voor updates kunt komen*.
 
 ## Vereisten
 
@@ -31,29 +31,29 @@ ht-degree: 0%
 * *moet aan een lijst van gewenste personen worden toegevoegd*
 * *vereisten voor e-mailhashing*
 * *accountdetails aan je kant*
-* *hoe u een API-sleutel kunt verkrijgen voor verbinding met uw platform*
+* *hoe u een API-sleutel kunt verkrijgen om verbinding te maken met uw platform*
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken *UURSOURCE* als u een Experience Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om verbinding te maken *UURBRON* als u een Experience Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| *referentie één* | *Voeg hier een korte beschrijving toe aan de verificatiereferentie van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
-| *referentie twee* | *Voeg hier een korte beschrijving toe aan de verificatiereferentie van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
-| *referentie drie* | *Voeg hier een korte beschrijving toe aan de verificatiereferentie van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
+| *referentie één* | *Voeg hier een korte beschrijving toe aan de verificatiegegevens van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
+| *referentie twee* | *Voeg hier een korte beschrijving toe aan de verificatiegegevens van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
+| *referentie drie* | *Voeg hier een korte beschrijving toe aan de verificatiegegevens van uw bron* | *Voeg hier een voorbeeld van de verificatiereferentie van uw bron toe* |
 
-Voor meer informatie over deze geloofsbrieven, zie *UURSOURCE* verificatiedocumentatie. *Voeg hier een koppeling naar de verificatiedocumentatie van uw platform toe*.
+Voor meer informatie over deze geloofsbrieven, zie *UURBRON* verificatiedocumentatie. *Voeg hier een koppeling naar de verificatiedocumentatie van uw platform toe*.
 
-## Verbinden *UURSOURCE* naar Platform met de [!DNL Flow Service] API
+## Verbinden *UURBRON* naar Platform met de [!DNL Flow Service] API
 
-De volgende zelfstudie begeleidt u door de stappen om een *UURSOURCE* bronverbinding en een gegevensstroom maken om *UURSOURCE* gegevens naar Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+De volgende zelfstudie begeleidt u door de stappen om een *UURBRON* bronverbinding en een gegevensstroom maken om *UURBRON* gegevens naar Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Een basisverbinding maken {#base-connection}
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw *UURSOURCE* verificatiereferenties als onderdeel van de aanvraaginstantie.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw *UURBRON* verificatiegegevens als onderdeel van de aanvraaginstantie.
 
 **API-indeling**
 
@@ -63,7 +63,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor *UURSOURCE*:
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor *UURBRON*:
 
 ```shell
 curl -X POST \
@@ -246,7 +246,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bronverbinding gemaakt voor *UURSOURCE*:
+Met de volgende aanvraag wordt een bronverbinding gemaakt voor *UURBRON*:
 
 ```shell
 curl -X POST \
@@ -278,13 +278,13 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de bronverbinding. Zorg ervoor dat de naam van uw bronverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw bronverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de bronverbinding. |
-| `baseConnectionId` | De basis verbindings-id van *UURSOURCE*. Deze id is gegenereerd in een eerdere stap. |
+| `baseConnectionId` | De basis verbindings-id van *UURBRON*. Deze id is gegenereerd in een eerdere stap. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met uw bron. |
-| `data.format` | Het formaat van de *UURSOURCE* gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
+| `data.format` | Het formaat van de *UURBRON* gegevens die u wilt invoeren. Momenteel is de enige ondersteunde gegevensindeling `json`. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -305,7 +305,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
 
 ### Een doelverbinding maken {#target-connection}
 
@@ -321,7 +321,7 @@ POST /targetConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een doelverbinding gemaakt voor *UURSOURCE*:
+Met de volgende aanvraag wordt een doelverbinding gemaakt voor *UURBRON*:
 
 ```shell
 curl -X POST \
@@ -352,7 +352,7 @@ curl -X POST \
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Lake]. Deze vaste ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Het formaat van de *UURSOURCE* gegevens die u naar het Platform wilt brengen. |
+| `data.format` | Het formaat van de *UURBRON* gegevens die u naar het Platform wilt brengen. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 
@@ -425,7 +425,7 @@ curl -X POST \
 | --- | --- |
 | `xdmSchema` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
 | `mappings.destinationXdmPath` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
-| `mappings.sourceAttribute` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
+| `mappings.sourceAttribute` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.identity` | Een booleaanse waarde die aangeeft of de toewijzingsset wordt gemarkeerd voor [!DNL Identity Service]. |
 
 **Antwoord**
@@ -445,10 +445,10 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de *UURSOURCE* aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzamelen van gegevens van *UURBRON* aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
-* [Doelverbinding-id](#target-connection)
+* [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
@@ -506,7 +506,7 @@ curl -X POST \
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
 | `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | De corresponderende versie van de flow specification-id. Deze waarde wordt standaard ingesteld op `1.0`. |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde wordt standaard ingesteld op `1.0`. |
 | `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
@@ -528,7 +528,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 }
 ```
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 

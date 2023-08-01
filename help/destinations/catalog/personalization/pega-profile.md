@@ -3,9 +3,9 @@ title: Pega Profile Connector
 description: Gebruik de Pega Profile Connector voor Amazon S3 in Adobe Experience Platform om profielgegevens volledig of incrementeel of beide te exporteren naar de Amazon S3-cloudopslag. In de Hub van het Beslissingsbesluit van de Klant van Pega, kunnen de gegevensbanen in de Ontwerper van het Profiel van de Klant worden gepland om profielgegevens van de opslag van Amazon S3 periodiek in te voeren.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Deze aansluiting helpt bij het instellen van de eerste export van profielgegeven
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door Pegasystems. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen met Pega [hier](mailto:support@pega.com).
+>Deze bestemmings schakelaar en documentatiepagina worden gecreeerd en door Pegasystems gehandhaafd. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen met Pega [hier](mailto:support@pega.com).
 
 ## Gebruiksscenario’s
 
@@ -28,7 +28,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Pega Profile Connector
 
 ### Hoofdlettergebruik 1
 
-Een markeerteken wil aanvankelijk instellen [!DNL Pega Customer Decision Hub] met profielgegevens die vanuit Adobe Experience Platform zijn geladen. Dit is een eerste volledige lading, gevolgd door deltabelastingen op geplande basis.
+Een markeerteken wil aanvankelijk instellen [!DNL Pega Customer Decision Hub] met profielgegevens geladen uit Adobe Experience Platform. Dit is een eerste volledige lading, gevolgd door deltabelastingen op geplande basis.
 
 ### Hoofdlettergebruik 2
 
@@ -36,11 +36,11 @@ Een markering wil bijgewerkte profielgegevens van Adobe Experience Platform besc
 
 ## Vereisten {#prerequisites}
 
-Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platform te exporteren en profielen te importeren naar [!DNL Pega Customer Decision Hub], zorg ervoor u de volgende eerste vereisten voltooit:
+Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platform te exporteren en profielen te importeren naar [!DNL Pega Customer Decision Hub]dient u de volgende voorwaarden te vervullen:
 
 * Configureren [!DNL Amazon S3] emmertje en het omslagpad dat moet worden gebruikt voor het exporteren en importeren van gegevensbestanden.
-* Configureer de [!DNL Amazon S3] toegangssleutel en [!DNL Amazon S3] geheime sleutel: In [!DNL Amazon S3], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon S3] account.
-* Om gegevens met succes te verbinden en uit te voeren aan uw [!DNL Amazon S3] opslaglocatie, een gebruiker voor Identiteit en Toegangsbeheer (IAM) maken voor [!DNL Platform] in [!DNL Amazon S3] en wijs toestemmingen zoals toe `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
+* Vorm [!DNL Amazon S3] toegangssleutel en [!DNL Amazon S3] geheime sleutel: In [!DNL Amazon S3], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon S3] account.
+* Om gegevens met succes te verbinden en uit te voeren aan uw [!DNL Amazon S3] opslaglocatie, een gebruiker voor Identiteit en Toegangsbeheer (IAM) maken [!DNL Platform] in [!DNL Amazon S3] en wijs toestemmingen zoals toe `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
 * Zorg ervoor dat u [!DNL Pega Customer Decision Hub] -instantie wordt bijgewerkt naar versie 8.8 of hoger.
 
 ## Ondersteunde identiteiten {#supported-identities}
@@ -59,8 +59,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 |---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Uitvoerfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Meer informatie over [batchbestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -86,10 +86,10 @@ Na het vestigen van de authentificatieverbinding aan [!DNL Amazon S3], verstrekt
 
 Om details voor de bestemming te vormen, vul de vereiste gebieden in en selecteer **[!UICONTROL Next]**. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Voer een naam in die u helpt deze bestemming te identificeren.
-* **[!UICONTROL Description]**: Voer een beschrijving van deze bestemming in.
-* **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt.
-* **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
+* **[!UICONTROL Name]**: voer een naam in die u zal helpen deze bestemming te identificeren.
+* **[!UICONTROL Description]**: voer een beschrijving van deze bestemming in.
+* **[!UICONTROL Bucket name]**: voer de naam in van de [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt.
+* **[!UICONTROL Folder path]**: voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
 * **[!UICONTROL Compression Type]**: Selecteer het compressietype GZIP of NONE.
 
 >[!TIP]
@@ -98,7 +98,7 @@ Om details voor de bestemming te vormen, vul de vereiste gebieden in en selectee
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -116,7 +116,7 @@ In de **[!UICONTROL Mapping]** U kunt kiezen welke kenmerken en identiteitsvelde
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Voor [!DNL Pega Profile Connector] bestemmingen, [!DNL Platform] maakt een `.csv` bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Voor meer informatie over de bestanden raadpleegt u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
+Voor [!DNL Pega Profile Connector] bestemmingen, [!DNL Platform] maakt een `.csv` bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Zie voor meer informatie over de bestanden [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](../../ui/activate-batch-profile-destinations.md) in de zelfstudie voor publieksactivering.
 
 Wanneer de import van profielgegevens uit S3 is gelukt, worden gegevens ingevoegd in de [!DNL Pega Customer] profieldatastore. De geïmporteerde klantprofielgegevens kunnen worden gevalideerd in [!DNL Pega Customer Profile Designer] , zoals weergegeven in de volgende afbeelding.
 ![Afbeelding van het UI-scherm waar u gegevens van het Adobe-profiel kunt valideren in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)

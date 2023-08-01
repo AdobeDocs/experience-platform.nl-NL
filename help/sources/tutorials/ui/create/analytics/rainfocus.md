@@ -2,9 +2,9 @@
 title: Sluit uw RainFocus-account aan op het Experience Platform via de gebruikersinterface
 description: Leer hoe u uw RainFocus-account met Experience Platform kunt verbinden via de gebruikersinterface.
 badge: Beta
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -19,16 +19,16 @@ Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding met 
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door de [!DNL RainFocus] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen met de klant<span>@rainfocus.com of ga naar de [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
+>Deze bronschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door [!DNL RainFocus] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen met de klant<span>@rainfocus.com of ga naar de [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereisten
 
@@ -57,7 +57,7 @@ De stap Gegevens selecteren wordt weergegeven en biedt een interface waarmee u d
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
 
-Selecteren **[!UICONTROL Upload files]** om een JSON-bestand vanaf uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden, slepen en neerzetten in het deelvenster Bestanden slepen en neerzetten.
+Selecteren **[!UICONTROL Upload files]** om een JSON-bestand vanaf uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden, slepen naar het deelvenster Bestanden slepen en neerzetten.
 
 Upload de Sample JSON Payload die u hebt gedownload van **RainFocus**.
 
@@ -65,7 +65,7 @@ Upload de Sample JSON Payload die u hebt gedownload van **RainFocus**.
 
 Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het het gebiedsnut van het Onderzoek ook gebruiken om tot specifieke punten van binnen uw schema toegang te hebben.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]**.
 
 ![De stap voor gegevensvoorvertoning van de workflow voor bronnen.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-preview.png)
 
@@ -73,7 +73,7 @@ Als u klaar bent, selecteert u **[!UICONTROL Next]**.
 
 De **Gegevens** de stap verschijnt, die u van opties voorzien om een bestaande dataset te gebruiken of een nieuwe dataset voor uw gegevensstroom te vestigen, evenals een kans om een naam en een beschrijving voor uw gegevensstroom te verstrekken. Tijdens deze stap kunt u ook instellingen configureren voor het opnemen van profielen, foutdiagnose, gedeeltelijke inname en waarschuwingen.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]**.
 
 ![De stap met details van de gegevensstroom van de bronworkflow.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
 
@@ -83,7 +83,7 @@ De stap van de Afbeelding verschijnt, die u van een interface voorziet om de bro
 
 Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
-Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 ![De toewijzingsstap van de workflow voor bronnen.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
 
@@ -91,8 +91,8 @@ Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 De **Controleren** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **Verbinding**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-* **Gegevensset- en kaartvelden toewijzen**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **Verbinding**: Hiermee geeft u het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
+* **Gegevensset- en kaartvelden toewijzen**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **Voltooien** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
@@ -104,7 +104,7 @@ Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingein
 
 Ga naar het tabblad *[!UICONTROL Dataflow activity]* pagina van de gegevensstroom die u enkel creeerde en het eindpunt van de bodem kopieert *[!UICONTROL Properties]* deelvenster.
 
-![De pagina met gegevensstroomactiviteiten in de werkruimte Bronnen, met de URL van het streamingeindpunt gemarkeerd.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
+![De pagina met gegevensstroomactiviteit in de bronwerkruimte, met het stromen eindpunt URL benadrukt.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
 
 ## Uw integratieprofiel activeren in RainFocus
 

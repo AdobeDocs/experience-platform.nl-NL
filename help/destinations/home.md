@@ -3,9 +3,9 @@ keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;acti
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,12 @@ De besturingselementen in de [werkruimte doelen](./ui/destinations-workspace.md)
 ## Doeltypen en -categorieën {#types-and-categories}
 
 Met Experience Platform, kunt u gegevens aan diverse soorten bestemmingen activeren, om aan uw activeringsgebruiksgevallen te voldoen. De bestemmingen variëren van op API-Gebaseerde integratie, tot integratie met dossierontvangstsystemen, de bestemmingen van de profielraadpleging, en meer. Voor gedetailleerde informatie over alle beschikbare bestemmingen, zie [doeltypen en -categorieën, overzicht](./destination-types.md).
+
+## Adobe-gebouwde en partner-gebouwde bestemmingen {#adobe-and-partner-built-destinations}
+
+Sommige schakelaars in de catalogus van de bestemmingen van het Experience Platform worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd gebruikend [Destination SDK](/help/destinations/destination-sdk/overview.md). Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bestemming door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld de [Amazon S3-connector](/help/destinations/catalog/cloud-storage/amazon-s3.md) wordt gemaakt door Adobe, terwijl de [TikTok-connector](/help/destinations/catalog/social/tiktok.md) wordt gemaakt en onderhouden door het TikTok-team.
+
+Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe geschreven en onderhouden connectors contact op met uw Adobe of de klantenservice.
 
 ## Doelen en toegangscontroles {#access-controls}
 

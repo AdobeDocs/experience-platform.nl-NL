@@ -3,9 +3,9 @@ title: (Bèta) De handelsbank - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 >* Als u gegevens in de EU verzamelt, moet u de **[!DNL The Trade Desk - CRM (EU)]** bestemming.
 >* Als u gegevens in de APAC- of NAMER-gebieden bront, gebruikt u de **[!DNL The Trade Desk - CRM (NAMER & APAC)]** bestemming.
 >
->Beide bestemmingen in Experience Platform zijn momenteel in bèta. Deze documentatiepagina is gemaakt door de *[!DNL Trade Desk]* team. Neem contact op met uw [!DNL Trade Desk] de documentatie en de functionaliteit kunnen worden gewijzigd.
+>Beide bestemmingen in Experience Platform zijn momenteel in bèta. Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door *[!DNL Trade Desk]* team. Neem contact op met uw [!DNL Trade Desk] de documentatie en de functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
@@ -53,7 +53,7 @@ Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA25
 
 {style="table-layout:auto"}
 
-## Vereisten voor e-mailhashing {#hashing-requirements}
+## E-mailhashingvereisten {#hashing-requirements}
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen of onbewerkte e-mailadressen gebruiken.
 
@@ -74,7 +74,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail of gehashte e-mail) die worden gebruikt in de bestemming Handelsbureau. |
-| Uitvoerfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, wordt het profiel (identiteiten) één keer per dag bijgewerkt stroomafwaarts aan het bestemmingsplatform. Meer informatie over [batchexport](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, wordt het profiel (identiteiten) één keer per dag bijgewerkt stroomafwaarts aan het bestemmingsplatform. Meer informatie over [batchexport](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -82,14 +82,14 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Verifiëren voor doel {#authenticate}
 
-[!DNL The Trade Desk] De Bestemming van CRM is een dagelijkse lading van het partijdossier en vereist geen authentificatie door de gebruiker.
+[!DNL The Trade Desk] CRM-bestemming is een dagelijkse bestandsupload waarvoor geen verificatie door de gebruiker is vereist.
 
 ### Bestemmingsdetails invullen {#fill-in-details}
 
 Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) voor deze bestemming moet u de volgende informatie opgeven:
 
-* **[!UICONTROL Account Type]**: Kies **[!UICONTROL Existing Account]** optie.
-* **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Account Type]**: Kies de optie **[!UICONTROL Existing Account]** -optie.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Advertiser ID]**: uw [!DNL Trade Desk Advertiser ID], die door uw [!DNL Trade Desk] Accountmanager of gevonden onder [!DNL Advertiser Preferences] in de [!DNL Trade Desk] UI.
 
@@ -123,8 +123,8 @@ Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het active
 
 Bronvelden selecteren:
 
-* Selecteer `Email` naamruimte of attribuut als bronidentiteit als het onbewerkte e-mailadres wordt gebruikt bij het invoeren van gegevens.
-* Selecteer `Email_LC_SHA256` naamruimte of attribuut als bronidentiteit als u de e-mailadressen van de klant bij het invoeren van gegevens in het Platform hebt onderbroken.
+* Selecteer de `Email` naamruimte of attribuut als bronidentiteit als het onbewerkte e-mailadres wordt gebruikt bij het invoeren van gegevens.
+* Selecteer de `Email_LC_SHA256` naamruimte of attribuut als bronidentiteit als u de e-mailadressen van de klant bij het invoeren van gegevens in het Platform hebt onderbroken.
 
 Doelvelden selecteren:
 
@@ -136,7 +136,7 @@ Doelvelden selecteren:
 Om te controleren dat de gegevens correct uit Experience Platform en naar worden uitgevoerd [!DNL The Trade Desk], gelieve het publiek onder de datatielabel Adobe 1PD te vinden binnen [!DNL The Trade Desk] Platform voor gegevensbeheer (DMP). Hier volgen de stappen om de bijbehorende id te vinden in het dialoogvenster [!DNL Trade Desk] UI:
 
 1. Klik eerst op de knop **[!UICONTROL Data]** Tab en revisie **[!UICONTROL First-Party]**.
-2. Omlaag schuiven op de pagina, onder **[!UICONTROL Imported Data]**, vindt u de **[!UICONTROL Adobe 1PD Tile]**.
+2. Omlaag schuiven, onder **[!UICONTROL Imported Data]**, vindt u de **[!UICONTROL Adobe 1PD Tile]**.
 3. Klik op de **[!UICONTROL Adobe 1PD]** tegel, waarin alle soorten publiek worden vermeld die zijn geactiveerd voor de [!DNL Trade Desk] bestemming voor uw adverteerder. U kunt ook de zoekfunctie gebruiken.
 4. Segment-id # van Experience Platform wordt weergegeven als Segmentnaam in het dialoogvenster [!DNL Trade Desk] UI.
 

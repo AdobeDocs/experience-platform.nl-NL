@@ -3,9 +3,9 @@ title: Overzicht van RainFocus-bron
 description: Leer hoe u gebeurtenisbeheer- en analysegegevens van uw RainFocus-account naar Experience Platform kunt brengen
 last-substantial-update: 2023-06-21T00:00:00Z
 badge: Beta
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '998'
 ht-degree: 4%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 4%
 
 [!DNL RainFocus] is een platform dat u kunt gebruiken om uw gebeurtenissen te promoten en uw publiek op te bouwen. U kunt [!DNL RainFocus] om mooie promotiepagina&#39;s te maken, de campagneprestaties bij te houden en de omzettingen van de registratie te optimaliseren.
 
-Gebruik de [!DNL RainFocus] bron in Adobe Experience Platform en Real-time Customer Data Platform om uw gegevensprofielen van klanten automatisch te verrijken met gebeurtenissen voor deelnemers in real-time. Zodra toegelaten, worden de ervaringsgebeurtenissen automatisch gestroomd in Real-Time CDP, die voor krachtige publiekssegmentatie, gegevensanalyse, en activering van de deelnemersreis met stroomafwaartse bestemmingen en toepassingen zoals Customer Journey Analytics en Adobe Journey Optimizer toestaan.
+Gebruik de [!DNL RainFocus] bron in Adobe Experience Platform en Real-time Customer Data Platform om uw gegevensprofielen voor klanten automatisch te verrijken met gebeurtenissen voor deelnemers in real-time. Zodra toegelaten, worden de ervaringsgebeurtenissen automatisch gestroomd in Real-Time CDP, die voor krachtige publiekssegmentatie, gegevensanalyse, en activering van de deelnemersreis met stroomafwaartse bestemmingen en toepassingen zoals Customer Journey Analytics en Adobe Journey Optimizer toestaan.
 
 >[!IMPORTANT]
 >
->Deze documentatiepagina is gemaakt door de [!DNL RainFocus] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen met de klant<span>@rainfocus.com of ga naar de [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
+>Deze bronschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door [!DNL RainFocus] team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen met de klant<span>@rainfocus.com of ga naar de [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
 
 ## Vereisten
 
@@ -97,7 +97,7 @@ Uw schema maken voor [!DNL RainFocus] Lees de volgende documentatie voor stappen
 >[!IMPORTANT]
 >
 >* Het schema moet de **XDM ExperienceEvent-klasse.**
->* U moet ervoor zorgen dat het schema een **primaire identiteit** en is **ingeschakeld voor profiel**. Lees voor meer informatie de handleiding op [identiteitsvelden definiëren in de gebruikersinterface](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* U moet ervoor zorgen dat het schema een **primaire identiteit**, en is **ingeschakeld voor profiel**. Lees voor meer informatie de handleiding op [identiteitsvelden definiëren in de gebruikersinterface](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
 >* U kunt de voorbeeldidentiteit (e-mail) vervangen voor een andere relevante id, zoals een sha256-e-mail of ECID.
 
 ### Een integratieprofiel maken in RainFocus {#create-an-integration-profile-in-rainfocus}
@@ -108,7 +108,7 @@ Aanmelden bij [[!DNL RainFocus] platform](https://app.rainfocus.com). Selecteer 
 
 ![De interface RainFocus met bibliotheken en integratieprofielen geselecteerd.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile.png)
 
-Als u een nieuw profiel wilt maken, selecteert u de optie **(`+`)** pictogram. Selecteer vervolgens **Adobe Real-time Customer Data Platform** en selecteer vervolgens **OK**.
+Als u een nieuw profiel wilt maken, selecteert u de **(`+`)** pictogram. Selecteer vervolgens **Adobe Real-time Customer Data Platform** en selecteer vervolgens **OK**.
 
 ![Het venster voor het maken van een integratieprofiel in de RainFocus-gebruikersinterface.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-select.png)
 
@@ -121,18 +121,18 @@ Geef vervolgens de gegevens op die u hebt opgehaald in het Adobe Developer Porta
 
 Als de referenties eenmaal zijn opgegeven, selecteert u **[!DNL Save]** U moet nu de nieuwe [!DNL Integration Profile] in de lijst [!DNL RainFocus] dashboard.
 
-Selecteer [!DNL Integration Profile] die u net hebt gemaakt om een lijst met vooraf gedefinieerde **push-typen** al geconfigureerd. Dit zijn de [Experience Events](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html) die naar het Experience Platform worden verzonden wanneer zij zich voordoen.
+Selecteer de [!DNL Integration Profile] die u net hebt gemaakt om een lijst met vooraf gedefinieerde **push-typen** al geconfigureerd. Dit zijn de [Experience Events](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html) die naar het Experience Platform worden verzonden wanneer zij zich voordoen.
 
 ![Een lijst met vooraf gedefinieerde pushtypen in het RainFocus-dashboard.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
-Als u een kopie van de JSON-voorbeeldlading wilt ophalen, selecteert u **[!DNL Sample JSON Payload]**. Markeer en kopieer vervolgens de JSON-voorbeeldlading en **opslaan in een nieuw bestand met de extensie .json**. Dit wordt later in Experience Platform gebruikt voor [toewijzingsconfiguraties](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
+Selecteer **[!DNL Sample JSON Payload]**. Markeer en kopieer vervolgens de JSON-voorbeeldlading en **opslaan in een nieuw bestand met de extensie .json**. Dit wordt later in het Experience Platform gebruikt voor [toewijzingsconfiguraties](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
 
 ![Een voorbeeld van JSON-lading in het RainFocus-dashboard.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
 
 >[!TIP]
 >
->**Setup is nog niet voltooid**: Wanneer uw gegevensstroom is gemaakt, moet u terugkeren naar de [!DNL RainFocus] dashboard om uw [!DNL Integration Profile] door uw **URL streamingeindpunt** en **dataflow-id**.
+>**Setup is nog niet voltooid**: Nadat u de gegevensstroom hebt gemaakt, moet u terugkeren naar de map [!DNL RainFocus] dashboard om uw [!DNL Integration Profile] door uw **URL streamingeindpunt** en **dataflow-id**.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens te kunnen streamen vanaf uw [!DNL RainFocus] aan Experience Platform. U kunt nu doorgaan naar de handleiding op [verbinden [!DNL RainFocus] naar Experience Platform met behulp van de gebruikersinterface](../../tutorials/ui/create/analytics/rainfocus.md).
+Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens te kunnen streamen vanaf uw [!DNL RainFocus] aan Experience Platform. U kunt nu doorgaan naar de handleiding op [verbinden [!DNL RainFocus] naar Experience Platform via de gebruikersinterface](../../tutorials/ui/create/analytics/rainfocus.md).
