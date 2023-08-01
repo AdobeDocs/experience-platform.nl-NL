@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,17 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release van Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.20.0 - 31 juli 2023
+
+**Nieuwe functies**
+
+* Extra ondersteuning voor [per-opdracht overschrijvingen van de gegevensstroom-id](../../../../datastreams/overrides.md).
+
+**Oplossingen en verbeteringen**
+
+* Vervangen `edgeConfigId` ten gunste van `datastreamId` in de SDK-configuratie.
+* De veelvoudige verbeteringen van de gebruikerservaring voor de configuratie van de gegevensstroom treden gebruikersinterface met voeten.
 
 ## Versie 2.19.0 - 21 juni 2023
 
@@ -84,7 +95,7 @@ Bevat versie 2.12.0 van de SDK-bibliotheek van Adobe Experience Platform Web.
 ## Versie 2.12.0 - 13 juni 2022
 
 * De `identityMap` data element to populate the namespace options based on the sandboxes defined by the extension settings.
-* Toegevoegd **[!UICONTROL Redirect with identity]** actie voor het delen van domeinidentiteit.
+* Toegevoegd **[!UICONTROL Redirect with identity]** actie voor het delen van identiteiten tussen domeinen.
 * Documentatiekoppelingen toegevoegd aan de `sendEvent` handeling.
 * Bijgewerkte gebruikersinterfacebibliotheek React Spectrum.
 * Verbeteringen in de gebruikersinterface.
@@ -154,7 +165,7 @@ Bevat versie 2.6.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 * In de mening van de uitbreidingsconfiguratie, werd de steun toegevoegd voor de behandeling van grote aantallen gegevensstromen en gegevensstroommilieu&#39;s.
 * In de het gegevenselementenmening van Objecten XDM, werd de steun toegevoegd voor de behandeling van grote aantallen schema&#39;s.
 * Er is een gebeurtenistype Send Event Complete toegevoegd, dat kan worden gebruikt om een regel uit te voeren nadat een gebeurtenis naar de server is verzonden en een reactie is ontvangen. Meer documentatie is binnenkort beschikbaar.
-* Het gebeurtenistype Besluiten ontvangen is afgekeurd. Gebruik in plaats hiervan het gebeurtenistype Send Event Complete.
+* Het gebeurtenistype Besluiten ontvangen is vervangen. Gebruik in plaats hiervan het gebeurtenistype Send Event Complete.
 * De gebruikersinterface en foutafhandeling zijn over het algemeen verbeterd.
 
 ## Versie 2.5.0 - 1 juni 2021
@@ -172,7 +183,7 @@ Bevat versie 2.4.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 * Toegevoegd [&quot;document wordt verwijderd&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) Schakel het selectievakje Send Event action UI in.
 * Extra ondersteuning voor een `out` optie wanneer [standaardgoedkeuring configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) die alle gebeurtenissen stopzet totdat toestemming is ontvangen (de bestaande `pending` de optie vormt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
 * Knopinfo is toegevoegd aan het veld Standaardtoestemming.
-* Extra ondersteuning voor [Adobe 2](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Extra ondersteuning voor [ADOBE 2](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
 * Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
@@ -187,7 +198,7 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 ## Versie 2.2.0 - 1 oktober 2020
 
 * Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. API die Platform roept is zich nu bewust van milieu&#39;s zodat worden de gebruikers slechts voorgesteld van die schema&#39;s die zij toegang hebben om uit te geven.
-* Wanneer u de `identityMap` data element, de namespaces is nu vooraf bevolkt in een dropdown zodat moet u dit niet manueel invullen.
+* Wanneer u de opdracht `identityMap` data element, de namespaces is nu vooraf bevolkt in een dropdown zodat moet u dit niet manueel invullen.
 * De interface voor de `xdmObject` gegevenselement. In de nieuwe UI, kunt u zien welke gebieden zijn bevolkt zonder het moeten elk punt in het voorwerp ingaan.
 
 ## Versie 2.1.1 - 26 augustus 2020
@@ -196,9 +207,9 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 ## Versie 2.1.0 - 5 augustus 2020
 
-* Wijziging van regeleinde: Verwijder de `syncIdentity` actie en ondersteuning voor het doorgeven van die id&#39;s in de `sendEvent` in plaats daarvan. Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
+* Wijziging doorbreken: de `syncIdentity` actie en ondersteuning voor het doorgeven van die id&#39;s in de `sendEvent` in plaats daarvan. Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
 * Bijwerken naar versie 2.1.0 ([Opmerkingen bij de release](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
-* Ondersteuning voor IAB 2.0 Conceptstandaard in het dialoogvenster `setConsent` handeling.
+* Ondersteuning voor IAB 2.0 Conform in het dialoogvenster `setConsent` handeling.
 * Ondersteuning voor het overschrijven van de id van de gegevensset in het dialoogvenster `sendEvent` handeling.
 * Een nieuw gegevenselement van het type toevoegen `IdentityMap` die kunnen worden gebruikt om de `identityMap` -item in het XDM Object Data Element dat nu is ingeschakeld, en in het dialoogvenster `setConsent` handeling.
 * Ondersteuning voor het doorgeven van een identiteitsoverzicht in het dialoogvenster `setConsent` handeling.
@@ -223,7 +234,7 @@ Deze besluiten komen terug van de `sendEvent` alleen gebruiken als `renderDecisi
 * De naam van de `setCustomerIds` actie naar `syncIdentity`.
 * Toegevoegde `getIdentity` gebruiken. Dit kan alleen voorlopig worden verbruikt via aangepaste code.
 * Foutopsporing inschakelen met `_satellite` schakelt nu foutopsporing in de SDK van Adobe Experience Platform Web in.
-* Toegevoegde ondersteuning voor getypte waarden in het XDM-object: Booleaanse cijfers, getallen en decimalen.
+* Toegevoegde ondersteuning voor getypte waarden in het XDM-object: Booleaanse waarden, getallen en decimalen.
 
 ## Versie 0.0.10 - 16 maart 2020
 
@@ -233,15 +244,15 @@ Deze besluiten komen terug van de `sendEvent` alleen gebruiken als `renderDecisi
 ## Versie 0.0.7 - 18 februari 2020
 
 * Verwijderd idSyncContainerId, datasetId, schemaId, urlDestinationEnabled en cookieDesturesEnabled opties
-* Toegevoegde ondersteuning voor afbreekstreepjes in de waarde van de optie edgeDomain
+* Toegevoegde ondersteuning voor afbreekstreepjes in waarde van optie edgeDomain
 * Verzoek die tijdens de migratie van identiteitskaart wordt gemaakt wordt verzonden naar demdex eindpunt om dwars-domeinidentificatie te verbeteren wanneer de demdex koekje niet wordt geplaatst
 * Aanvraag die tijdens de migratie van id&#39;s is gemaakt, verwacht altijd een reactie om ervoor te zorgen dat het identiteitscookie wordt ingesteld
 * Wanneer het uitvoeren van een ongeldig bevel, zal een lijst van geldige bevelnamen in de console worden geregistreerd
-* Selectievakje toegevoegd om cookie-ondersteuning van derden in- en uit te schakelen voor de tagextensie. Dit maakt vraag aan demdex.net onbruikbaar
+* Selectievakje toegevoegd om cookie-ondersteuning van derden in- en uit te schakelen voor de tagextensie. Hiermee worden oproepen naar demdex.net uitgeschakeld
 
 ## Versie 0.0.5 - 20 december 2019
 
-* Activiteitenbeheer toevoegen vormt een tag-extensie
+* Activiteitenbeheer toevoegen aan tagextensie
 * EventType en EventMergeId beschikbaar maken voor de opdracht event
 * OnBeforeEventSend config toevoegen aan tagextensie
 * EdgeBasePath-config toevoegen aan tagextensie

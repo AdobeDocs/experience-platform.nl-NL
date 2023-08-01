@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versieopmerkingen voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,18 @@ ht-degree: 1%
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Versie 2.16.0 - 17 mei 2023
+## Versie 2.18.0 - 31 juli 2023
+
+**Nieuwe functies**
+
+* Extra ondersteuning voor [per-opdracht overschrijvingen van de gegevensstroom-id](../datastreams/overrides.md).
+
+**Oplossingen en verbeteringen**
+
+* Afsluitkoppelingen kwamen niet in aanmerking omdat het domein deel uitmaakte van een query. Dit probleem is nu opgelost.
+* Vervangen `edgeConfigId` ten gunste van `datastreamId` in de configuratie van Web SDK.
+
+## Versie 2.17.0 - 17 mei 2023
 
 **Oplossingen en verbeteringen**
 
@@ -75,7 +86,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.12.0 - 29 juni 2022
 
-* Verander de verzoeken aan het Netwerk van de Rand om te gebruiken `cluster` de locatie van de cookie als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
+* Verander de verzoeken aan het Netwerk van de Rand om het `cluster` de locatie van de cookie als onderdeel van de URL. Dit zorgt ervoor dat gebruikers die hun locatie wijzigen (bijvoorbeeld via een VPN of rijden met mobiele apparaten, enz.), halverwege de sessie dezelfde kant op gaan en hetzelfde personalisatieprofiel hebben.
 * Hiermee worden de geconfigureerde functies in de opdrachtreactie van getLibraryInfo gerenderd.
 
 ## Versie 2.11.0 - 13 juni 2022
@@ -88,8 +99,8 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Oplossingen en verbeteringen**
 
-* Bijgewerkte cookie-instellingen die moeten worden gebruikt `sameSite="none"` en `secure` markering op [!DNL HTTPS] pagina&#39;s.
-* Correctie van een probleem waarbij gepersonaliseerde inhoud niet correct werd toegepast tijdens het gebruik van het dialoogvenster `eq` pseudo-kiezer.
+* Te gebruiken bijgewerkte cookie-instellingen `sameSite="none"` en `secure` markering op [!DNL HTTPS] pagina&#39;s.
+* Correctie van een probleem waarbij gepersonaliseerde inhoud niet correct werd toegepast tijdens het gebruik van de `eq` pseudo-kiezer.
 * Probleem verholpen waarbij `localTimezoneOffset` kan de validatie van het Experience Platform niet voltooien.
 
 ## Versie 2.10.1 - 3 mei 2022
@@ -99,7 +110,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 ## Versie 2.10.0 - 22 april 2022
 
 * Gebruik een blijvend iframe voor alle ID syncs en segmentbestemmingen.
-* Oplossing voor een probleem waarbij samengevoegde metrische profielen werden gedupliceerd in het dialoogvenster `sendEvent` resultaat.
+* Oplossing voor een probleem waarbij samengevoegde metrische profielen werden gedupliceerd in de `sendEvent` resultaat.
 
 ## Versie 2.9.0 - 10 maart 2022
 
@@ -119,7 +130,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.7.0 - 26 oktober 2021
 
-* Maak aanvullende informatie van Experience Edge beschikbaar in de geretourneerde waarde van `sendEvent`, met inbegrip van `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen. Zie voor meer informatie [Gebeurtenissen bijhouden.](fundamentals/tracking-events.md)
+* Maak aanvullende informatie van Experience Edge beschikbaar in de geretourneerde waarde van `sendEvent`, inclusief `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen. Zie voor meer informatie [Gebeurtenissen bijhouden.](fundamentals/tracking-events.md)
 
 ## Versie 2.6.4 - 7 september 2021
 
@@ -131,11 +142,11 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.6.2 - 4 augustus 2021
 
-* Probleem verholpen waarbij een waarschuwing over de afgekeurde versie van `result.decisions` (verstrekt door de `sendEvent` bevel) zou aan de console worden geregistreerd zelfs wanneer `result.decisions` eigenschap werd niet benaderd. Er wordt geen waarschuwing geregistreerd wanneer u het dialoogvenster opent `result.decisions` eigenschap, maar de eigenschap is nog steeds afgekeurd.
+* Probleem verholpen waarbij een waarschuwing over de afgekeurde versie van `result.decisions` (verstrekt door de `sendEvent` bevel) zou aan de console worden geregistreerd zelfs wanneer `result.decisions` eigenschap werd niet benaderd. Er wordt geen waarschuwing geregistreerd wanneer u het dialoogvenster opent `result.decisions` eigenschap, maar de eigenschap is nog steeds vervangen.
 
 ## Versie 2.6.1 - 29 juli 2021
 
-* Probleem verholpen waarbij het renderen van de personalisatie voor een app-weergave van één pagina zonder personalisatie-inhoud een fout zou veroorzaken en de belofte zou doen terugkomen van de app. Dit probleem is nu opgelost. `sendEvent` te verwerpen opdracht.
+* Probleem verholpen waarbij het renderen van de personalisatie voor een app-weergave van één pagina zonder personalisatie-inhoud een fout zou veroorzaken en de belofte zou doen terugkomen van de `sendEvent` te verwerpen opdracht.
 
 ## Versie 2.6.0 - 27 juli 2021
 
@@ -156,11 +167,11 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 * Gebruikt nu een XDM-schemaveldgroep in plaats van `meta.personalization` wanneer het verzenden van gebeurtenissen over gepersonaliseerde inhoud die wordt teruggegeven of geklikt.
 * De [getIdentity, opdracht](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) retourneert nu de id van het randgebied naast de identiteit.
 * Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
-* Extra ondersteuning voor [Adobe 2](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Extra ondersteuning voor [ADOBE 2](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en het Netwerk van de Rand van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om te roepen `setConsent` op elke pagina die wordt geladen.
 * Twee [toezicht op haken](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
-* Opgeloste problemen: Gebeurtenissen voor persoonlijke interactiemeldingen bevatten dubbele informatie over dezelfde activiteit wanneer een gebruiker naar een nieuwe app-weergave van één pagina navigeert, teruggaat naar de oorspronkelijke weergave en op een element klikt dat in aanmerking komt voor conversie.
-* Opgeloste problemen: Als de eerste gebeurtenis die door de SDK is verzonden `documentUnloading` instellen op `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) wordt gebruikt om de gebeurtenis te verzenden, wat resulteert in een fout betreffende een identiteit die niet wordt vastgesteld.
+* Bug Fix: de gebeurtenissen van het de interactiebericht van de Personalisatie zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
+* Bug Fix: als de eerste gebeurtenis die door de SDK is verzonden `documentUnloading` instellen op `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) wordt gebruikt om de gebeurtenis te verzenden, wat resulteert in een fout betreffende een identiteit die niet wordt vastgesteld.
 
 ## Versie 2.3.0 - november 2020
 
@@ -168,14 +179,14 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 * Extra ondersteuning voor personalisatie voor toepassingen van één pagina.
 * Verbeterde compatibiliteit met andere JavaScript-code op de pagina die mogelijk wordt overschreven `window.console` API&#39;s.
 * Opgeloste problemen: `sendBeacon` niet werd gebruikt toen `documentUnloading` is ingesteld op `true` of wanneer de koppeling kliks automatisch is bijgehouden.
-* Opgeloste problemen: Een koppeling wordt niet automatisch bijgehouden als het ankerelement HTML-inhoud bevat.
-* Opgeloste problemen: Bepaalde browserfouten die alleen-lezen bevatten `message` eigenschap is niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
-* Opgeloste problemen: Als de SDK in een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe zich in een ander subdomein bevindt dan de HTML-pagina van het bovenliggende venster.
+* Bug Fix: Een koppeling wordt niet automatisch bijgehouden als het ankerelement HTML-inhoud bevat.
+* Bug Fix: Certain browser errors containing a read-only `message` eigenschap is niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
+* Bug Fix: Als de SDK binnen een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe afkomstig is uit een ander subdomein dan de HTML van het bovenliggende venster.
 
 ## Versie 2.2.0 - oktober 2020
 
-* Opgeloste problemen: Het object Opt-in blokkeerde het openen van aanroepen wanneer `idMigrationEnabled` is `true`.
-* Opgeloste problemen: Alloy bewust maken van verzoeken die de aanbiedingen van de verpersoonlijking zouden moeten terugkeren om een flikkerende kwestie te verhinderen.
+* Bug Fix: Het Opt-in-object blokkeerde Alloy tijdens het oproepen van `idMigrationEnabled` is `true`.
+* Bug Fix: Alloy bewust maken van verzoeken die verpersoonlijkingsaanbiedingen zouden moeten terugkeren om een flikkerende kwestie te verhinderen.
 
 ## Versie 2.1.0 - augustus 2020
 
