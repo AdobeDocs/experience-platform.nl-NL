@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
-source-wordcount: '1629'
+source-wordcount: '1633'
 ht-degree: 0%
 
 ---
@@ -28,40 +28,48 @@ U moet de volgende belangrijke termen begrijpen die in dit document worden gebru
 
 De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan.
 
-Zodra een segment conceptueel is gedefinieerd, wordt het ingebouwd [!DNL Experience Platform]. Doorgaans worden segmenten samengesteld door de marketeter of publieksspecialist, maar sommige organisaties geven de voorkeur aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het bekijken van de gegevens die worden verzonden naar [!DNL Platform]De gegevensanalist stelt de segmentdefinitie samen door te selecteren welke velden en waarden worden gebruikt om de regels of voorwaarden van het segment op te bouwen. Dit wordt gedaan gebruikend of UI of API.
+Zodra een publiek conceptueel is gedefinieerd, wordt het ingebouwd [!DNL Experience Platform]. Doorgaans worden soorten publiek opgebouwd door de marketeter of publieksspecialist, hoewel sommige organisaties de voorkeur geven aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het bekijken van de gegevens die worden verzonden naar [!DNL Platform], kan de gegevensanalist het publiek op twee manieren tot stand brengen - of door een segmentdefinitie te creëren door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of de voorwaarden van het publiek te bouwen, of door een publiek samen te stellen gebruikend de Samenstelling van de Publiek.
 
-## Segmenten maken
+## Soorten publiek maken
 
-Of ze zijn gemaakt met de API of met de [!DNL Segment Builder], segmenten worden uiteindelijk gedefinieerd met [!DNL Profile Query Language] (PQL). Dit is waar de conceptuele segmentdefinitie in de gebouwde taal wordt beschreven om profielen terug te winnen die aan de criteria voldoen. Zie de klasse [PQL-overzicht](./pql/overview.md).
+Soorten publiek kan op twee verschillende manieren op Adobe Experience Platform worden gecreëerd: rechtstreeks samengesteld als publiek of door middel van op Platform gebaseerde segmentdefinities.
+
+### Samenstelling publiek
+
+Wanneer u een publiek rechtstreeks samenstelt op een Platform, kunt u de Samenstelling van het publiek gebruiken. Als u wilt leren hoe u Audience Composition kunt gebruiken om een publiek te maken, leest u de [Hulplijn Audience Composition](./ui/audience-composition.md) voor meer informatie .
+
+### Segmentdefinities
+
+Of ze zijn gemaakt met de API of met de [!DNL Segment Builder]segmentdefinities worden uiteindelijk gedefinieerd met [!DNL Profile Query Language] (PQL). Dit is waar de conceptuele segmentdefinitie in de gebouwde taal wordt beschreven om profielen terug te winnen die aan de criteria voldoen. Zie de klasse [PQL-overzicht](./pql/overview.md).
 
 Leren hoe u segmenten kunt maken en gebruiken in het dialoogvenster [!DNL Segment Builder] (de UI-implementatie van [!DNL Segmentation Service]), zie de [Handleiding Segment Builder](./ui/overview.md).
 
-Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinities met behulp van de API [publiekssegmenten maken met de API](./tutorials/create-a-segment.md).
+Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinities met behulp van de API [segmentdefinities maken met de API](./tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
 >Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie over aanpassen [!DNL Experience Data Model] (XDM), ga naar [Zelfstudie Schema-editor](../xdm/tutorials/create-schema-ui.md).
 >
->Bovendien, als een waarde van de Vervaldatum van de Gebeurtenis van de Ervaring op de dataset wordt toegelaten, zou dit het lidmaatschap van het gecreeerde segment kunnen beïnvloeden. Lees de handleiding op [Verlopen van gebeurtenissen beleven](../profile/event-expirations.md) voor meer informatie over hoe deze eigenschap segmentatie kan beïnvloeden.
+>Bovendien, als een de vervalwaarde van de Gebeurtenis van de Ervaring op de dataset wordt toegelaten, zou dit het lidmaatschap van de gecreeerde segmentdefinitie kunnen beïnvloeden. Lees de handleiding op [Verlopen van gebeurtenissen beleven](../profile/event-expirations.md) voor meer informatie over hoe deze eigenschap segmentatie kan beïnvloeden.
 
-## Segmenten evalueren {#evaluate-segments}
+## Soorten publiek evalueren {#evaluate-segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Evaluatiemethoden"
->abstract="Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streaming segmentatie, batchsegmentatie en randsegmentatie."
+>abstract="Platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Streaming evaluatie"
->abstract="Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit."
+>abstract="Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw publiek bijwerkt als reactie op gebruikersactiviteit."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evalueer gebeurtenissen in bijna real time met het stromen segmentatie"
 
-Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streaming segmentatie, batchsegmentatie en randsegmentatie.
+Platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie.
 
 ### Streaming segmentering {#streaming}
 
-Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-Time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
+Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw publiek bijwerkt als reactie op gebruikersactiviteit. Zodra een publiek is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-Time Customer Profile]. Toevoegingen en verwijderingen voor het publiek worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
 Voor meer informatie over streamingsegmentatie leest u de [documentatie over streamingsegmentatie](./api/streaming-segmentation.md).
 
@@ -70,11 +78,11 @@ Voor meer informatie over streamingsegmentatie leest u de [documentatie over str
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Batchevaluatie"
->abstract="Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Nadat u het segment hebt gemaakt, wordt het opgeslagen en opgeslagen zodat u het voor gebruik kunt exporteren."
+>abstract="Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Nadat u het publiek hebt gemaakt, wordt het opgeslagen en opgeslagen zodat u het voor gebruik kunt exporteren."
 
-Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Zodra gecreeerd, wordt dit segment bewaard en opgeslagen zodat u het voor gebruik kunt uitvoeren.
+Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Nadat het publiek is gemaakt, wordt het opgeslagen en opgeslagen zodat u het voor gebruik kunt exporteren.
 
-De segmenten van de partij worden automatisch geëvalueerd om de 24 uur. Als u een partijsegment op bestelling wilt evalueren, kunt u een segmentbaan gebruiken. Lees voor meer informatie over segmenttaken de [segmenttaakdocumentatie](./api/segment-jobs.md).
+Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpubliek op bestelling wilt evalueren, kunt u een segmentbaan gebruiken. Lees voor meer informatie over segmenttaken de [segmenttaakdocumentatie](./api/segment-jobs.md).
 
 ### Randsegmentatie {#edge}
 
@@ -90,25 +98,26 @@ Voor meer informatie over randsegmentatie leest u de optie [API-documentatie](./
 
 ## Toegang tot segmenteringsresultaten
 
-Als u wilt leren hoe u toegang kunt krijgen tot een geëxporteerd segment, raadpleegt u de [zelfstudie segmentbeoordeling](./tutorials/evaluate-a-segment.md).
+Als u wilt leren hoe u toegang krijgt tot een geëxporteerd publiek, raadpleegt u de [zelfstudie segmentdefinitiebeoordeling](./tutorials/evaluate-a-segment.md).
 
-## Metagegevens segment
+## Metagegevens voor segmentdefinitie
 
-Metagegevens van segmenten maken het indexeren mogelijk als een van uw segmenten opnieuw moet worden gebruikt en/of moet worden gecombineerd.
+Metagegevens voor segmentdefinitie vergemakkelijken indexering als een van uw doelgroepen opnieuw moet worden gebruikt en/of moet worden gecombineerd.
 
-De segmenten samenstellen (via de API of [!DNL Segment Builder]) vereist dat u een segmentnaam definieert en beleid voor samenvoegen.
+Een segmentdefinitie samenstellen (via de API of [!DNL Segment Builder]) vereist dat u een naam definieert en beleid voor samenvoegen.
 
-### Segmentnamen
+### Segmentdefinitienamen
 
-Wanneer u een nieuw segment maakt, moet u een segmentnaam opgeven. De segmentnaam wordt gebruikt om een bepaald segment onder de inzameling te identificeren die door wordt gebouwd [!DNL Segmentation Service]. Segmentnamen moeten daarom beschrijvend, beknopt en uniek zijn.
+Wanneer u een nieuwe segmentdefinitie maakt, moet u een naam opgeven. De segmentdefinitienaam wordt gebruikt om een bepaalde segmentdefinitie onder de inzameling te identificeren die door wordt gebouwd [!DNL Segmentation Service]. Segmentdefinitienamen moeten daarom beschrijvend, beknopt en uniek zijn.
 
 >[!NOTE]
 >
->Wanneer het plannen van een segment, herinner dat de segmenten van, en gecombineerd met, een ander segment kunnen worden van verwijzingen voorzien. Houd er bij het selecteren van een naam rekening mee dat uw segment herbruikbare gedeelten kan bevatten.
+>Wanneer het plannen van een segmentdefinitie, herinner dat de segmentdefinities van, en gecombineerd met, een andere segmentdefinitie kunnen worden van verwijzingen voorzien. Wanneer het selecteren van een naam, overweeg de mogelijkheid dat uw segmentdefinitie herbruikbare gedeelten kan bevatten.
 
 ### Beleid samenvoegen
 
 Beleid voor samenvoegen is regels die worden gebruikt door [!DNL Profile] om te bepalen hoe de gegevens in een verenigde mening onder bepaalde voorwaarden voorrang zullen krijgen en worden gecombineerd.
+
 Als er geen samenvoegingsbeleid is gedefinieerd, wordt de standaardwaarde [!DNL Platform] samenvoegbeleid wordt gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
 
 Meer informatie over het samenvoegbeleid vindt u in het gedeelte [handleiding voor samenvoegbeleid](../profile/api/merge-policies.md).
@@ -117,46 +126,40 @@ Meer informatie over het samenvoegbeleid vindt u in het gedeelte [handleiding vo
 >
 >De schatting van de omvang van het publiek is gebaseerd op het standaardbeleid voor het samenvoegen van profielen van de organisatie.
 
-### Andere segmentmetagegevens
+### Metagegevens andere segmentdefinitie
 
-Naast segmentnaam en samenvoegbeleid, [!DNL Segment Builder] biedt u een extra de meta-gegevensgebied van de &quot;segmentbeschrijving&quot;waar u het doel van uw segmentdefinitie kunt samenvatten.
+Naast naam- en samenvoegbeleid, [!DNL Segment Builder] biedt u een extra gebied van beschrijvingsmeta-gegevens aan waar u het doel van uw segmentdefinitie kunt samenvatten.
 
 ## Geavanceerde segmentatiefuncties
 
-De segmenten kunnen worden gevormd om voortdurend een publiek te produceren door te combineren [streaming data-invoer](../ingestion/streaming-ingestion/overview.md) met een van de volgende geavanceerde segmentatiefuncties:
+Segmentdefinities kunnen worden geconfigureerd om voortdurend een publiek te genereren door [streaming data-invoer](../ingestion/streaming-ingestion/overview.md) met een van de volgende geavanceerde segmentatiefuncties:
 - [Opeenvolgende segmentatie](#sequential)
 - [Dynamische segmentatie](#dynamic)
 - [Segmentatie van meerdere entiteiten](#multi-entity)
 
 Deze geavanceerde functies worden in de volgende secties nader besproken.
 
-## Opeenvolgende segmentatie {#sequential}
+### Opeenvolgende segmentatie {#sequential}
 
-Een standaardreis van de gebruiker is sequentieel van aard. Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen. Daarom kunt u sequenties van gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in de gewenste volgorde rangschikken met de tijdlijn van de visuele gebeurtenis in het dialoogvenster [!DNL Segment Builder].
+Een standaardreis van de gebruiker is sequentieel van aard. Met Adobe Experience Platform kunt u een geordende reeks doelgroepen definiëren die deze reis weerspiegelen. Daarom kunt u sequenties van gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in de gewenste volgorde rangschikken met de tijdlijn van de visuele gebeurtenis in het dialoogvenster [!DNL Segment Builder].
 
 Een voorbeeld van een klantenreis die opeenvolgende segmentatie zou vereisen zou productmening > product toevoegen > controle > Geen aankoop zijn.
 
-## Dynamische segmentatie {#dynamic}
+### Dynamische segmentatie {#dynamic}
 
-De dynamische segmentatie lost de scalability problemen op markten traditioneel wanneer het bouwen van segmenten voor marketing campagnes worden geconfronteerd.
+Dynamische segmentatie lost de scalability problemen op die markten traditioneel worden geconfronteerd wanneer het opbouwen van publiek voor marketing campagnes.
 
 In tegenstelling tot statische segmentatie die u vereist om elk mogelijk gebruiksgeval uitdrukkelijk en herhaaldelijk te vangen, gebruikt de dynamische segmentatie variabelen om de regellogica te bouwen en dynamisch verhoudingen uit te drukken.
 
-### Gebruiksscenario: klanten zoeken die aankopen doen buiten hun thuisland
-
 Om de waarde van deze geavanceerde segmenteringseigenschap te illustreren, overweeg een gegevensarchitect die met een telleraar samenwerkt om klanten te identificeren die aankopen buiten hun huisstaat maakten.
 
-**Het probleem**
+De statische segmentatie vereist u om individuele segmenten met een uniek attribuut van de huisstaat te bepalen, alvorens voor aankoopgebeurtenissen te filtreren die niet de huisstaat evenaren. Een expliciete segmentdefinitie van dit type zou &quot;Ik zoek mensen van Utah waar de staat van hun aankoop niet Utah is&quot;lezen. Als u een publiek wilt maken met deze methode, moet u één segmentdefinitie definiëren voor elke staat in de VS, voor in totaal 50 segmenten.
 
-De statische segmentatie vereist u om individuele segmenten met een uniek attribuut van de huisstaat te bepalen, alvorens voor aankoopgebeurtenissen te filtreren die niet de huisstaat evenaren. Een expliciet segment van dit type zou &quot;Ik zoek mensen uit Utah waar de staat van hun aankoop niet Utah is&quot; lezen. Als u een publiek wilt maken met deze methode, moet u één segment definiëren voor elke staat in de VS, voor in totaal 50 segmenten.
+Als resultaat van de verschillende combinaties van de segmentdefinitie die onvermijdelijk voorkomen aangezien u schrapt, wordt het handproces dat voor statische segmentatie wordt vereist meer tijdrovend, verminderend uw algemene efficiency.
 
-Als gevolg van de verschillende segmentcombinaties die onvermijdelijk optreden wanneer u schaalt, neemt het handmatige proces dat nodig is voor statische segmentatie meer tijd in beslag, waardoor de algehele efficiëntie afneemt.
+Door een variabele toe te wijzen aan het attribuut van de koopstaat, vereenvoudigt uw dynamische segmentdefinitie om &quot;me een aankoop te vinden waar de staat van die aankoop niet gelijk aan de huisstaat van de klant is&quot;. Zo kunt u vervolgens 50 statische segmenten verenigen in één dynamische segmentdefinitie.
 
-**De oplossing**
-
-Door een variabele toe te wijzen aan het attribuut van de koopstaat, vereenvoudigt uw dynamisch segment om &quot;me een aankoop te vinden waar de staat van die aankoop niet gelijk aan de huisstaat van de klant is&quot;. Zo kunt u vervolgens 50 statische segmenten verenigen in één dynamisch segment.
-
-## Segmentatie van meerdere entiteiten {#multi-entity}
+### Segmentatie van meerdere entiteiten {#multi-entity}
 
 Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u [!DNL Real-Time Customer Profile] gegevens met aanvullende gegevens op basis van producten, opslagruimten of andere niet-natuurlijke personen, ook wel &quot;dimensie-entiteiten&quot; genoemd. Dientengevolge, [!DNL Segmentation Service] heeft tijdens de segmentdefinitie toegang tot aanvullende velden alsof deze native zijn voor de [!DNL Profile] gegevensopslag. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het identificeren van publiek dat op gegevens wordt gebaseerd relevant voor uw unieke bedrijfsbehoeften. Raadpleeg de klasse [segmentatiegids voor meerdere entiteiten](multi-entity-segmentation.md).
 
@@ -166,11 +169,8 @@ Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u [!DN
 
 ## Volgende stappen
 
-[!DNL Segmentation Service] biedt een geconsolideerde workflow voor het samenstellen van segmenten van [!DNL Real-Time Customer Profile] gegevens. Samenvattend:
+[!DNL Segmentation Service] biedt een geconsolideerde workflow om publiek te maken van [!DNL Real-Time Customer Profile] gegevens.
 
-- [!DNL Segmentation] Dit is het proces waarbij u een subset van profielen definieert vanuit het profielarchief, zodat u gedrag of kenmerken van een gewenste verhandelbare groep kunt karakteriseren. [!DNL Segmentation Service] maakt dit proces mogelijk.
-- Wanneer het plannen van een segment, houd in mening dat een segment van, en gecombineerd met, een ander segment kan worden van verwijzingen voorzien.
-- Een segment kan van regels worden gebouwd die op profielgegevens, verwante tijdreeksgegevens, of allebei worden gebaseerd.
-- Segmenten kunnen op aanvraag of continu worden geëvalueerd. Wanneer geëvalueerd op bestelling, worden alle profielgegevens overgegaan door de segmentdefinities in één keer. Bij continue evaluatie worden de gegevens door segmentdefinities gestreamd terwijl deze worden ingevoerd [!DNL Platform].
+Voor meer informatie bij het gebruiken van de Dienst UI van de Segmentatie, gelieve te lezen [Overzicht van de gebruikersinterface van Segmentatieservice](./ui/overview.md).
 
-Zie voor meer informatie over het definiëren van segmenten in de gebruikersinterface [Handleiding Segment Builder](./ui/overview.md). Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinities met behulp van de API [segmenten maken met de API](./tutorials/create-a-segment.md).
+Als u wilt leren hoe u een publiek kunt samenstellen in de gebruikersinterface, leest u de [Hulplijn Audience Composition](./ui/audience-composition.md). Leer hoe te om segmentdefinities in UI te bepalen, zie [Handleiding Segment Builder](./ui/overview.md). Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinities met behulp van de API [segmentdefinities maken met de API](./tutorials/create-a-segment.md).

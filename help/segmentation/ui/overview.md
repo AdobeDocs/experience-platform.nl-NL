@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3434'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ U kunt extra velden aan deze weergave toevoegen door ![het pictogram van het fil
 | [!UICONTROL Tags] | De door de gebruiker gedefinieerde labels die bij het publiek horen. Meer informatie over deze tags vindt u in het gedeelte [sectie over tags](#tags). |
 | [!UICONTROL Breakdown] | De indeling van de profielstatus voor het publiek. Hieronder vindt u een gedetailleerdere beschrijving van deze uitsplitsing naar profielstatus. |
 | [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft`, `Published`, en `Archived`. |
-| [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn `On Demand`, `Scheduled`, en `Continuous`. |
+| [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn `On Demand` (Batch), `Scheduled` (Streaming), en `Continuous` (Rand). |
 | [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
 | [!UICONTROL Description] | De beschrijving van het publiek. |
 | [!UICONTROL Created by] | De naam van de persoon die het publiek heeft gemaakt. |
