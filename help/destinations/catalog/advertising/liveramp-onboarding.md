@@ -3,9 +3,9 @@ title: LiveRamp - Verbinding aan boord
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,9 @@ In de [toewijzingsstap](#map) In de activeringsworkflow moet u de doeltoewijzing
 
 In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
 
-Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+Deze bestemming steunt de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
 
-Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+Bovendien ondersteunt deze bestemming ook de activering van de extra soorten publiek die in de onderstaande tabel worden beschreven.
 
 | Type publiek | Beschrijving |
 ---------|----------|
@@ -129,13 +129,8 @@ Lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken
 
 In de [!UICONTROL Scheduling] Maak een exportschema voor elk publiek met de onderstaande instellingen.
 
->[!IMPORTANT]
->
->Alle publiek dat aan deze bestemming wordt geactiveerd moet met het nauwkeurige zelfde programma, zoals hieronder getoond worden gevormd.
-
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incrementele bestandsuitvoer](../../ui/activate-batch-profile-destinations.md#export-incremental-files) worden momenteel niet ondersteund voor de [!DNL LiveRamp] bestemming.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
-* De exporttijd instellen op **[!UICONTROL After segment evaluation]**. Geplande publieksexport en [bestanden op aanvraag exporteren](../../ui/export-file-now.md) worden momenteel niet ondersteund voor de [!DNL LiveRamp] bestemming.
 * **[!UICONTROL Date]**: Selecteer de begin- en eindtijd van het exporteren naar wens.
 
 ![Het schermschot van het Platform UI die de publiek dat stap plant toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
