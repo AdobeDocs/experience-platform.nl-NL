@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '987'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,6 @@ ht-degree: 7%
       - [Adobe Commerce-bron](connectors/adobe-applications/commerce.md)
       - [Kenmerkbron van klant](connectors/adobe-applications/customer-attributes.md)
       - [Bron gegevensverzameling](connectors/adobe-applications/data-collection.md)
-      - [Workfront-bron](connectors/adobe-applications/workfront.md)
       - Veldtoewijzingen {#mapping}
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -38,7 +37,7 @@ ht-degree: 7%
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
-      - [Pinterest-advertenties](connectors/advertising/pinterest-ads.md)
+      - [Pinterest Adds](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -76,7 +75,7 @@ ht-degree: 7%
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
-      - [azure synapse Analytics-connector](connectors/databases/synapse-analytics.md)
+      - [Azure synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
       - [Koppelaansluiting](connectors/databases/couchbase.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
@@ -117,8 +116,8 @@ ht-degree: 7%
 - API-zelfstudies {#api-tutorials}
    - Een basisverbinding maken {#create}
       - Advertising {#advertising}
-         - [Google-advertenties](tutorials/api/create/advertising/ads.md)
-         - [Pinterest-advertenties](tutorials/api/create/advertising/pinterest-ads.md)
+         - [Google Adds](tutorials/api/create/advertising/ads.md)
+         - [Pinterest Adds](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -155,7 +154,7 @@ ht-degree: 7%
          - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -218,7 +217,7 @@ ht-degree: 7%
    - [Gegevens filteren op bronniveau](tutorials/api/filter.md)
    - [Dataflows bewaken](tutorials/api/monitor.md)
    - [Accounts bijwerken](tutorials/api/update.md)
-   - [Gegevensstromen bijwerken](tutorials/api/update-dataflows.md)
+   - [Dataflows bijwerken](tutorials/api/update-dataflows.md)
    - [Opnieuw mislukte gegevensstroomuitvoering](tutorials/api/retry-flows.md)
    - [Accounts verwijderen](tutorials/api/delete.md)
    - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
@@ -234,10 +233,9 @@ ht-degree: 7%
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Aangepaste Marketo-activiteiten](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
-         - [Google-advertenties](tutorials/ui/create/advertising/ads.md)
-         - [Pinterest-advertenties](tutorials/ui/create/advertising/pinterest-ads.md)
+         - [Google Adds](tutorials/ui/create/advertising/ads.md)
+         - [Pinterest Adds](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
@@ -276,7 +274,7 @@ ht-degree: 7%
          - [Apache Hive op Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -316,21 +314,21 @@ ht-degree: 7%
    - Een gegevensstroom configureren {#dataflow}
       - [Gegevensstroom advertentieverbinding](tutorials/ui/dataflow/advertising.md)
       - [Gegevensstroom analytische verbinding](tutorials/ui/dataflow/analytics.md)
-      - [Batch-gegevens voor cloudopslagverbinding](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Batchopslagverbinding voor cloud](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Gegevens over streaming cloudopslagverbinding](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Verbindingsgegevens voor goedkeuring en voorkeuren](tutorials/ui/dataflow/consent-and-preferences.md)
       - [Gegevens CRM-verbinding](tutorials/ui/dataflow/crm.md)
       - [Gegevensstroom voor succesverbinding van klant](tutorials/ui/dataflow/customer-success.md)
       - [Gegevensstroom databaseverbinding](tutorials/ui/dataflow/databases.md)
-      - [Gegevensstroom ecommerce-verbinding](tutorials/ui/dataflow/ecommerce.md)
+      - [Gegevensstroom van ecommerce-verbinding](tutorials/ui/dataflow/ecommerce.md)
       - [Verbinding voor marketingautomatisering](tutorials/ui/dataflow/marketing-automation.md)
       - [Gegevensstroom betalingsverbinding](tutorials/ui/dataflow/payments.md)
       - [Dataflow van protocolverbinding](tutorials/ui/dataflow/protocols.md)
-   - [Een gegevensstroom voor bronnen maken met behulp van sjablonen in de gebruikersinterface](tutorials/ui/templates.md)
+   - [Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface](tutorials/ui/templates.md)
    - [Batchgegevens controleren](tutorials/ui/monitor.md)
    - [Streaming gegevens bijhouden](tutorials/ui/monitor-streaming.md)
    - [Accounts bijwerken](tutorials/ui/update.md)
-   - [Gegevensstromen bijwerken](tutorials/ui/update-dataflows.md)
+   - [Dataflows bijwerken](tutorials/ui/update-dataflows.md)
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
    - [Abonneren op waarschuwingen voor bronnen](tutorials/ui/alerts.md)
@@ -341,9 +339,9 @@ ht-degree: 7%
       - [Configuratieopties](sources-sdk/config/config.md)
       - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
       - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
-      - [Uitgebreide specificatie configureren](sources-sdk/config/explorespec.md)
+      - [Specificatie voor nader onderzoek configureren](sources-sdk/config/explorespec.md)
    - Zelfbedieningsbronnen (Batch SDK) API-handleiding {#self-serve-api}
-      - [API-overzicht van Self-Serve Sources (Batch SDK)](sources-sdk/api/api-overview.md)
+      - [API-overzicht Zelfbediening (Batch SDK)](sources-sdk/api/api-overview.md)
       - [Aan de slag](sources-sdk/api/getting-started.md)
       - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
       - [Een verbindingsspecificatie bijwerken](sources-sdk/api/update-connection-specs.md)
@@ -351,8 +349,8 @@ ht-degree: 7%
       - [Uw bron verzenden](sources-sdk/api/submit.md)
    - Documentatiegids {#documentation}
       - [Uw bron documenteren in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-      - [Gebruik de het Webinterface van GitHub om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
-      - [Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken](sources-sdk/documentation/text-editor.md)
+      - [Gebruik de GitHub Webinterface om een pagina van de brondocumentatie tot stand te brengen](sources-sdk/documentation/github.md)
+      - [Een teksteditor in uw lokale omgeving gebruiken om een pagina met brondocumentatie te maken](sources-sdk/documentation/text-editor.md)
       - [Zelfbediening API-sjabloon voor documentatie](sources-sdk/documentation/template.md)
       - [Zelfbediening UI-sjabloon voor documentatie](sources-sdk/documentation/ui-template.md)
    - Streaming SDK {#streaming-sdk}

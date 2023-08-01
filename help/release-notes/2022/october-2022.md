@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2022
 description: In de releaseopmerkingen van oktober 2022 voor Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1146'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 1%
 - [Doelen](#destinations)
 - [Experience Data Model](#xdm)
 - [Query-service](#query-service)
-- [Bronnen](#sources-sources)
 
 ## Door de klant beheerde sleutels {#cmk}
 
@@ -48,7 +47,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Functie | Beschrijving |
 | --- | --- |
-| (bèta) Gegevensset exporteren | De [Dataset exporteert bètafunctionaliteit](/help/destinations/ui/export-datasets.md) kunt u gegevens van de eerste generatie exporteren (zoals gedefinieerd in het dialoogvenster [Real-time Customer Data Platform-productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) van Adobe Experience Platform naar uw eigen systemen voor externe klanten, via de gebruikersinterface voor bestemmingen. Hierdoor kunt u gegevens uit het Experience Platform halen met een workflow zonder code/lage code naar zes cloudopslagbestemmingen (vermeld in de onderstaande tabel) voor analytische en compatibiliteitsgevallen. |
+| (bèta) Gegevensset exporteren | De [Dataset exporteert bètafunctionaliteit](/help/destinations/ui/export-datasets.md) kunt u gegevens van de eerste generatie exporteren (zoals gedefinieerd in het dialoogvenster [Real-time Customer Data Platform-productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) van Adobe Experience Platform naar uw eigen externe klantensystemen, via de gebruikersinterface van bestemmingen. Hierdoor kunt u gegevens uit het Experience Platform halen met een workflow zonder code/lage code naar zes cloudopslagbestemmingen (vermeld in de onderstaande tabel) voor analytische en compatibiliteitsgevallen. |
 | (bèta) Verbeterde mogelijkheden voor het exporteren van bestanden | U kunt nu profiteren van de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit het Experience Platform: <br><ul><li>Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Deze functionaliteit wordt ondersteund door de zes nieuwe bètacloud-opslagkaarten die in de onderstaande tabel worden vermeld. |
 
 {style="table-layout:auto"}
@@ -59,7 +58,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | De lijn is een populair communicatie platform dat mensen, de diensten en de informatie verbindt en van een praatjeapp tot een hub voor vermaak, sociale, en dagelijkse activiteiten is gegroeid. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 is een op cloud gebaseerd bedrijfstoepassingsplatform dat de Planning van het Middel van de Onderneming (ERP) en het Beheer van de Verhouding van de Klant (CRM) samen met productiviteitstoepassingen en AI hulpmiddelen combineert, om van begin tot eind vlottere en meer gecontroleerde verrichtingen, beter groeipotentieel en lagere kosten te brengen. |
-| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | De [!DNL (Beta) Adobe Commerce] met de doelconnector kunt u een of meer Real-Time CDP-segmenten selecteren die u voor uw [!DNL Adobe Commerce] -account voor een dynamische, op maat gesneden ervaring voor kopers. Within [!DNL Adobe Commerce], kunt u die Real-Time CDP-segmenten selecteren om unieke aanbiedingen in de winkelwagen aan te passen, zoals &#39;Koop 2 krijg 1 gratis&#39;. U kunt ook hoofdbanners weergeven en de productprijzen wijzigen via promotieaanbiedingen, die allemaal zijn aangepast aan Adobe Real-Time CDP-segmenten. |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | De [!DNL (Beta) Adobe Commerce] met de doelconnector kunt u een of meer Real-Time CDP-segmenten selecteren die u wilt activeren voor uw [!DNL Adobe Commerce] -account voor een dynamische, op maat gesneden ervaring voor kopers. Within [!DNL Adobe Commerce], kunt u die Real-Time CDP-segmenten selecteren om unieke aanbiedingen in de winkelwagentje aan te passen, zoals &#39;Koop 2 krijg 1 gratis&#39;. U kunt ook hoofdbanners weergeven en de productprijzen wijzigen via promotieaanbiedingen, die allemaal zijn aangepast aan Adobe Real-Time CDP-segmenten. |
 | [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Een live uitgaande verbinding maken met [!DNL Azure Data Lake Storage Gen2] om periodiek gegevensbestanden van Adobe Experience Platform naar uw eigen opslaglocatie te exporteren. Deze nieuwe bètabestemming biedt verbeterde functionaliteit voor het exporteren van bestanden en ondersteunt het exporteren van gegevenssets. |
 | [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden uit het Platform te exporteren. Deze nieuwe bètabestemming biedt verbeterde functionaliteit voor het exporteren van bestanden en ondersteunt het exporteren van gegevenssets. |
 | [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Een live uitgaande verbinding maken met [!DNL Google Cloud Storage] om gegevensbestanden van Adobe Experience Platform regelmatig naar uw eigen emmers te exporteren. Deze nieuwe bètabestemming biedt verbeterde functionaliteit voor het exporteren van bestanden en ondersteunt het exporteren van gegevenssets. |
@@ -95,7 +94,7 @@ Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm
 
 ## Query-service {#query-service}
 
-De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Experience Platform te gebruiken [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
+Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience Platform op te vragen [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
 
 **Bijgewerkte functies**
 
@@ -106,19 +105,6 @@ De Dienst van de vraag staat u toe om standaardSQL aan vraaggegevens in Adobe Ex
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Diensten van de Vraag, verwijs naar [Overzicht van Query Service](../../query-service/home.md).
+Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md).
 Nieuwe functies in Adobe Experience Platform:
 
-## Bronnen {#sources}
-
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
-
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- | 
-| Beta-beschikbaarheid van Adobe Workfront-bron | Gebruik de [Adobe Workfront-bron](../../sources/connectors/adobe-applications/workfront.md) om uw gegevens van Workfront aan Experience Platform te brengen en gebruiksgevallen uit te voeren zoals het combineren van uw werkverslagen met derdengegevens, het toepassen van historische en tijdreeksanalyses op het werkverslagen, en het vragen van het werkgegevens gebruikend standaardSQL. Lees voor meer informatie de handleiding op [een Workfront-bronverbinding maken in de gebruikersinterface](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).
