@@ -1,14 +1,14 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Help bij Adobe Experience Platform DataStreams
-breadcrumb-title: Handleiding gegevensstromen
-user-guide-description: Leer hoe u gegevensstreams configureert in Adobe Experience Platform.
+user-guide-title: Hulp bij gegevensstromen van Adobe Experience Platform
+breadcrumb-title: Handleiding voor gegevensstromen
+user-guide-description: Leer hoe u gegevensstromen configureert in Adobe Experience Platform.
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 0%
+ht-degree: 35%
 
 ---
 

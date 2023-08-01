@@ -1,6 +1,6 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
-description: De recentste versieopmerkingen voor de Adobe Experience Platform Web SDK.
+description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
