@@ -3,7 +3,7 @@ keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;acti
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%
@@ -49,15 +49,15 @@ Met Experience Platform, kunt u gegevens aan diverse soorten bestemmingen active
 
 ## Doelen en toegangscontroles {#access-controls}
 
-De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuift omlaag naar de onderkant van de pagina.
+De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie voor informatie over de individuele machtigingen [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuift omlaag naar de onderkant van de pagina.
 
 De volgende lijst schetst de toestemmingen en toestemmingscombinaties die worden vereist om bepaalde acties op bestemmingen uit te voeren:
 
 | Machtigingsniveau | Beschrijving |
-| ---- | ----|
+| ---- | ---- |
 | **[!UICONTROL Manage Destinations]** | Om met bestemmingen te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en toelaat [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en te verbergen [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en te verbergen [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platfo
 * [E-mailmarketingdoelen](./catalog/email-marketing/overview.md)
 * [Sociale bestemmingen](./catalog/social/overview.md)
 
-Zie voor meer informatie over schendingen van gegevensbeleid in de workflow voor publiekactivering de **[!UICONTROL Review]** stap in de volgende hulplijnen:
+Zie voor meer informatie over schendingen van gegevensbeleid in de workflow voor activering van het publiek de **[!UICONTROL Review]** stap in de volgende hulplijnen:
 
 * [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](./ui/activate-segment-streaming-destinations.md#review)
 * [De publieksgegevens van de activering aan het stromen profiel de uitvoerbestemmingen](./ui/activate-streaming-profile-destinations.md#review)
