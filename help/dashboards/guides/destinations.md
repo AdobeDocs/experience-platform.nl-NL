@@ -4,9 +4,9 @@ title: Doeldashboardgids
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '2846'
+source-wordcount: '2974'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ De datum en tijd van de meest recente opname worden boven aan het dialoogvenster
 
 ### Wijzig de [!UICONTROL Destinations] dashboard {#modify}
 
-Selecteren **[!UICONTROL Modify dashboard]** om de verschijning van het dashboard van bestemmingen te veranderen. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en de widgetbibliotheek openen. In de widgetbibliotheek kunt u de beschikbare widgets verkennen en aangepaste widgets maken voor uw organisatie.
+Selecteren **[!UICONTROL Modify dashboard]** om de verschijning van het dashboard van bestemmingen te veranderen. Wijzigingen in het dashboard zijn per gebruiker en niet voor de hele organisatie. U kunt widgets verplaatsen, toevoegen, vergroten, verkleinen en verwijderen van het dashboard en tot de widgetbibliotheek toegang hebben om uw dashboard aan te passen. In de widgetbibliotheek kunt u de beschikbare widgets verkennen en aangepaste widgets maken voor uw organisatie.
 
 Raadpleeg de [wijzigen, dashboards](../customize/modify.md) en [Overzicht van widgetbibliotheek](../customize/widget-library.md) documentatie voor meer informatie.
 
@@ -50,6 +50,19 @@ Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren
 ![Het dashboardoverzicht Doelen met de markering Widget toevoegen.](../images/destinations/destinations-overview-add-widget.png)
 
 In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+
+## Standaardwidgets {#default-widgets}
+
+Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetbelasting opgegeven die de meest recente inzichten van uw gegevens belicht. De volgende widgets zijn vooraf geconfigureerd in uw segmentweergave van meet af aan. Hieronder vindt u volledige informatie over het doel en de functie van de widgets.
+
+* [[!UICONTROL Most used destinations]](#most-used-destinations)
+* [[!UICONTROL Recently created destinations]](#recently-created-destinations)
+* [[!UICONTROL Recently activated segments]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden.
+>Raadpleeg de documentatie in het dialoogvenster [Profielen](./profiles.md#default-widgets) en [Soorten publiek](./audiences.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken. U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
 ## Standaardwidgets {#standard-widgets}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Standaarddashboardwidgets
 description: Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets aan uw Adobe Experience Platform-dashboards.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,12 @@ ht-degree: 0%
 
 In Adobe Experience Platform kunt u de gegevens van uw organisatie bekijken en ermee communiceren met behulp van meerdere dashboards. U kunt bepaalde dashboards ook bijwerken door nieuwe widgets aan uw dashboardmening toe te voegen. Adobe biedt een selectie van standaardwidgets die u kunt toevoegen aan uw dashboards.
 
-Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de [!UICONTROL Profiles], [!UICONTROL Segments], en [!UICONTROL Destinations] dashboards in Platform UI.
+De [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] dashboards hebben elk een standaard widget lading-uit wanneer een nieuwe instantie van het Platform wordt gecreeerd. Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] dashboards in Platform UI.
+
+>[!NOTE]
+>
+>Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden.
+>Raadpleeg de documentatie in het dialoogvenster [Profielen](../guides/profiles.md#default-widgets), [Soorten publiek](../guides/audiences.md#default-widgets), en [Doelen](../guides/destinations.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken.
 
 Raadpleeg de handleiding voor meer informatie over aangepaste widgets [aangepaste widgets maken](custom-widgets.md).
 

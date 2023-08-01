@@ -4,9 +4,9 @@ title: Handleiding voor publiek dashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het publiek dat uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '2089'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Ontdek de [!UICONTROL Audiences] dashboard {#explore}
 
-Ga naar de [!UICONTROL Audiences] dashboard in de interface van het Platform, selecteert u **[!UICONTROL Audiences]** in het linkerspoor, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Ga naar de [!UICONTROL Audiences] dashboard in de interface van het Platform, selecteert u **[!UICONTROL Audiences]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Ga naar de [!UICONTROL Audiences] dashboard in de interface van het Platform, se
 
 ![De [!UICONTROL Audiences] dashboard [!UICONTROL Overview] tab met [!UICONTROL Audiences] en [!UICONTROL Overview] gemarkeerd.](../images/audiences/dashboard-overview.png)
 
-### De [!UICONTROL Audiences] dashboard {#modify}
+### Wijzig de [!UICONTROL Audiences] dashboard {#modify}
 
 U kunt de weergave van het dialoogvenster [!UICONTROL Audiences] dashboard door **[!UICONTROL Modify dashboard]**. Hierdoor kunt u widgets verplaatsen, toevoegen en verwijderen van het dashboard en toegang krijgen tot de **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
@@ -69,9 +69,23 @@ Als u een ander publiek wilt kiezen, selecteert u het vervolgkeuzemenu naast de 
 
 De [!UICONTROL Audiences] Het dashboard bestaat uit widgets. Dit zijn alleen-lezen metriek die belangrijke informatie over het geselecteerde publiek verschaft.
 
-De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast de publieksvervolgkeuzelijst. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. Het tijdstempel van de momentopname wordt in UTC weergegeven; het bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
+De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast de publieksvervolgkeuzelijst. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
 ![Het tabblad Overzicht van soorten publiek met een widgettijdstempel gemarkeerd.](../images/audiences/widget-timestamp.png)
+
+## Standaardwidgets {#default-widgets}
+
+Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetbelasting opgegeven die de meest recente inzichten van uw gegevens belicht. De volgende widgets zijn vooraf geconfigureerd in uw segmentweergave van meet af aan. Alle details over het doel en de functie van widgets vindt u in de desbetreffende secties.
+
+* [[!UICONTROL Audience size]](#audience-size)
+* [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden.
+>Raadpleeg de documentatie in het dialoogvenster [Profielen](./profiles.md#default-widgets) en [Doelen](./destinations.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken. U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
 ## Standaardwidgets {#standard-widgets}
 
@@ -120,7 +134,7 @@ Het dialoogvenster voor automatische bijschriften wordt geopend en verschaft inz
 
 ![Het dialoogvenster voor automatische bijschriften voor de trendwidget voor de doelgrootte.](../images/audiences/audience-size-trend-automatic-captions-dialog.png)
 
-Voor meer informatie over de evaluatie van het publiek en over de vraag hoe profielen in aanmerking komen en van het publiek worden afgesloten, raadpleegt u de [Documentatie voor segmentatieservice](../../segmentation/home.md).
+Raadpleeg voor meer informatie over de evaluatie van het publiek en over de manier waarop profielen in aanmerking komen en het publiek verlaten de [Documentatie voor segmentatieservice](../../segmentation/home.md).
 
 ### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
 
@@ -164,7 +178,7 @@ De [!UICONTROL Audience overlap report] wordt weergegeven. Dit dialoogvenster ka
 
 >[!NOTE]
 >
->Selecteer **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
+>Selecteer de **[!UICONTROL Overlapping]** kolomkop om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
 
 Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]**.
 
@@ -204,7 +218,7 @@ De **[!UICONTROL Profiles by identity]** widget geeft de indeling van de identit
 
 Selecteren **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen.
 
-![De [!UICONTROL Audiences] Overzicht van het dashboard waarbij de optie Profielen op identiteitswidget en Bijschriften is gemarkeerd.](../images/audiences/profiles-by-identity.png)
+![De [!UICONTROL Audiences] dashboardoverzicht met de optie Profielen op identiteitswidget en Bijschriften gemarkeerd.](../images/audiences/profiles-by-identity.png)
 
 Een machine-leermodel produceert automatisch gegevensinzichten door de algemene distributie en belangrijkste dimensies van de gegevens te analyseren.
 
