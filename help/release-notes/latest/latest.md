@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van juli 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: d639b0830b88307b249e7da232b3f48b142ad37b
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1738'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Query-service](#query-service)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+- [Experience Data Model (XDM)](#xdm)
 
 ## Catalogusservice {#catalog-service}
 
@@ -143,3 +144,42 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 {style="table-layout:auto"}
 
 Lees voor meer informatie over bronnen de [overzicht van bronnen](../../sources/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Gebruik deze klasse om perspectiefprofielen in te brengen die van de top-of-the-funnel van gegevensverkopers van het gebruiksgeval van de klantenverwerving worden afkomstig. |
+| Veldgroep | [[!UICONTROL Enriched Event Segment Details]](https://github.com/adobe/xdm/pull/1754/files) | Een lijst met soorten publiek waarvoor het profiel in aanmerking komt op het moment van de gebeurtenisverzameling. |
+
+{style="table-layout:auto"}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving bijwerken |
+| --- | --- | --- |
+| Veldgroep | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` werd bijgewerkt van experimenteel naar `stable`. |
+| Veldgroep | [[!UICONTROL Media Interaction Details]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `stable` tot `deprecated`. |
+| Gegevenstype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Player state data information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental`tot `stable`. |
+| Gegevenstype | [[!UICONTROL Media event information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `stable` tot `deprecated`. |
+| Gegevenstype | [[!UICONTROL Custom metadata details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Chapter details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Advertising Pod details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Gegevenstype | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/pull/1756/files) | De `meta:status` is bijgewerkt vanaf `experimental` tot `stable`. |
+| Extensie (Beheer van reizen van klanten) | [[!UICONTROL Domain]](https://github.com/adobe/xdm/pull/1756/files) | `Domain` veld toegevoegd aan [!UICONTROL Adobe CJM ExperienceEvent - Message Profile Details] om het domein van het e-mailadres van de ontvanger op te nemen. |
+| Extensie (Beheer van reizen van klanten) | [[!UICONTROL Channel's variant Name]](https://github.com/adobe/xdm/pull/1753/files) | Dit veld is toegevoegd aan [!UICONTROL AJO Entity Fields] om de naam van de kanaalvariant te vertegenwoordigen. |
+| Extensie (Adobe Analytics) | [[!UICONTROL Context value]](https://github.com/adobe/xdm/pull/1761/files) | `Context value` is toegevoegd aan [!UICONTROL `Adobe Analytics ExperienceEvent Full Extension`]. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md)
+
