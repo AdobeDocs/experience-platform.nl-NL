@@ -2,9 +2,9 @@
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Met de release van de [Uitgebreide Marketo V2-doelconnector](/help/release-notes/2022/july-2022.md#destinations)En nu ziet u twee Marketo-kaarten in de lijst met doelen.
->* Als u gegevens al activeert voor de **[!UICONTROL Marketo V1]** bestemming: Maak nieuwe gegevensstromen naar de **[!UICONTROL Marketo V2]** doel en verwijder bestaande gegevensstromen naar **[!UICONTROL Marketo V1]** uiterlijk in februari 2023. Met ingang van die datum **[!UICONTROL Marketo V1]** de doelkaart wordt verwijderd.
+>* Als u gegevens al activeert voor de **[!UICONTROL Marketo V1]** doel: Maak nieuwe gegevensstromen naar de **[!UICONTROL Marketo V2]** doel en verwijder bestaande gegevensstromen naar de **[!UICONTROL Marketo V1]** uiterlijk in februari 2023. Met ingang van die datum **[!UICONTROL Marketo V1]** de doelkaart wordt verwijderd.
 >* Als u nog geen gegevens hebt gemaakt voor de **[!UICONTROL Marketo V1]** bestemming, gelieve te gebruiken nieuwe **[!UICONTROL Marketo V2]** om verbinding te maken met en gegevens te exporteren naar Marketo.
 
 ![Afbeelding van de twee Marketo-doelkaarten in een weergave Naast elkaar.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
@@ -36,13 +36,13 @@ De bestemming laat marketers toe om publiek te duwen dat in Adobe Experience Pla
 
 >[!NOTE]
 >
->In de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de doelworkflow activeren: *verplicht* om identiteiten toe te wijzen en *optioneel* om kenmerken toe te wijzen. Het toewijzen van e-mail- en/of ECID via het tabblad Identiteitsnaamruimte is het belangrijkste wat u moet doen om ervoor te zorgen dat de persoon gelijk is aan de persoon in Marketo. Toewijzing via e-mail zorgt voor de hoogste match-rate.
+>In de [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van de workflow voor het activeren van het doel is *verplicht* om identiteiten toe te wijzen en *optioneel* aan kaartkenmerken. Het toewijzen van e-mail- en/of ECID via het tabblad Identiteitsnaamruimte is het belangrijkste wat u moet doen om ervoor te zorgen dat de persoon gelijk is aan de persoon in Marketo. Toewijzing via e-mail zorgt voor de hoogste match-rate.
 
 ### Ondersteunde identiteiten {#supported-identities}
 
 | Doelidentiteit | Beschrijving |
 |---|---|
-| ECID | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
+| ECID | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
 | Email | Een naamruimte die een e-mailadres vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
 
 {style="table-layout:auto"}
@@ -51,15 +51,15 @@ De bestemming laat marketers toe om publiek te duwen dat in Adobe Experience Pla
 
 U kunt kenmerken van het Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie toegang heeft in Marketo. In Marketo kunt u de opdracht [Beschrijf API-aanvraag](https://developers.marketo.com/rest-api/lead-database/leads/#describe) om de kenmerkvelden op te halen waartoe uw organisatie toegang heeft.
 
-## Ondersteuning voor extern publiek {#external-audiences-support}
+## Ondersteunde doelgroepen {#supported-audiences}
 
-Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
 
-Bovendien ondersteunt deze bestemming ook de activering van het externe publiek dat in de onderstaande tabel wordt beschreven.
+Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
 
 | Type extern publiek | Beschrijving |
 ---------|----------|
-| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail, ECID) die worden gebruikt in het dialoogvenster [!DNL Marketo Engage] bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een Mar
 >* De doelkaart die u in UI van het Experience Platform zou moeten gebruiken is **[!UICONTROL Marketo V2]**.
 >* De nieuwe video wordt niet weergegeven **[!UICONTROL Person creation]** in het veld Verbinding maken met doel.
 >* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu veel andere profielkenmerkvelden toewijzen naast de lidmaatschapsgegevens voor het publiek die werden ondersteund op het moment dat de video werd opgenomen. U kunt ook publieksleden exporteren naar Marketo die nog niet in uw statische Marketo-lijsten voorkomen. Deze personen worden toegevoegd aan de lijsten.
->* In de **[!UICONTROL Schedule audience step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.
+>* In de **[!UICONTROL Schedule audience step]** In Marketo V1 moest u handmatig een **[!UICONTROL Mapping ID]** om gegevens naar Marketo te exporteren. Deze handmatige stap is niet meer vereist in Marketo V2.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 

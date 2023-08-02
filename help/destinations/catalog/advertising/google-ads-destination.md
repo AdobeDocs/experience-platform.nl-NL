@@ -3,9 +3,9 @@ keywords: Google-advertenties;Google-advertenties;google-adwords;Google AdWords;
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een online advertentieservice waarmee bedrijven per klik reclame kunnen betalen voor zoekopdrachten, grafische weergaven, YouTube-video's en mobiele displays in de app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '975'
 ht-degree: 1%
 
 ---
@@ -47,13 +47,13 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ads] bestemminge
 
 In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
 
-Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
 
-Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
 
 | Type publiek | Beschrijving |
 ---------|----------|
-| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek naar de Google-bestemming. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
-> [!DNL Google] heeft nieuwe [!DNL Google Ads] cookie-integratie met externe leveranciers. Voor het uitvoeren van de stappen van de lijst van gewenste personen in de volgende sectie moet u een bestaande integratie hebben met [!DNL Google Ads]. De aanbevolen aanpak voor het gebruik van [!DNL Google Ads] een [!DNL Google Customer Match] integratie. Meer informatie over het maken van een [!DNL Google Customer Match] de zelfstudie over het maken van een [[!DNL Google Customer Match]](./google-customer-match.md) verbinding.
+> [!DNL Google] heeft nieuwe [!DNL Google Ads] cookie-integratie met externe leveranciers. Voor het uitvoeren van de stappen van de lijst van gewenste personen in de volgende sectie moet u een bestaande integratie hebben met [!DNL Google Ads]. De aanbevolen aanpak voor het gebruik van [!DNL Google Ads] een [!DNL Google Customer Match] integratie. Voor meer informatie over het maken van een [!DNL Google Customer Match] de zelfstudie over het maken van een [[!DNL Google Customer Match]](./google-customer-match.md) verbinding.
 
 ### Aanbieding toestaan {#allow-listing}
 
@@ -85,7 +85,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Voordat u het dialoogvenster [!DNL Google Ads] bestemming in Platform, moet u contact opnemen [!DNL Google] voor Adobe die op de lijst met toegestane gegevensproviders moet worden geplaatst, en dat uw account aan de lijst van gewenste personen wordt toegevoegd. Contact [!DNL Google] en verstrekt de volgende informatie:
 
-* **Account-id**: Adobe-id met Google. Account-id: 87933855.
+* **Account-id**: Adobe-id met Google. Account-ID: 87933855.
 * **Klant-id**: Adobe-id met Google. Klant-id: 89690775.
 * Je accounttype: **AdWords**
 * **Google AdWords-id**: Dit is je id met [!DNL Google]. De id-indeling heeft doorgaans de notatie 123-456-7890.
@@ -96,7 +96,7 @@ Voordat u het dialoogvenster [!DNL Google Ads] bestemming in Platform, moet u co
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 ### Verbindingsparameters {#parameters}
 
@@ -104,12 +104,12 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **[!UICONTROL Account Type]**: De enige beschikbare optie is AdvertentieWoorden.
-* **[!UICONTROL Account ID]**: Vul je account-id in met [!DNL Google Ads]. De id-indeling heeft doorgaans de notatie 123-456-7890.
+* **[!UICONTROL Account Type]**: AdWords is de enige beschikbare optie.
+* **[!UICONTROL Account ID]**: Vul uw account-id in met [!DNL Google Ads]. De id-indeling heeft doorgaans de notatie 123-456-7890.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 

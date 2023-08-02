@@ -1,11 +1,11 @@
 ---
-keywords: mobiel; schil; berichten;
+keywords: mobiel; bruin; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '990'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Let op de volgende details die specifiek zijn voor de [!DNL Braze] bestemming:
 
 >[!NOTE]
 >
->Houd er rekening mee dat extra aangepaste kenmerken worden verzonden naar [!DNL Braze] kan een toename van uw [!DNL Braze] verbruik van gegevenspunten. Neem contact op met uw [!DNL Braze] accountmanager voordat aanvullende aangepaste kenmerken worden verzonden.
+>Houd er rekening mee dat extra aangepaste kenmerken worden verzonden naar [!DNL Braze] kan leiden tot een toename van uw [!DNL Braze] verbruik van gegevenspunten. Raadpleeg uw [!DNL Braze] accountmanager voordat aanvullende aangepaste kenmerken worden verzonden.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -40,19 +40,19 @@ Als markator wil ik gebruikers in een mobiele betrokkenheidsbestemming als doel 
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| external_id | Aangepast [!DNL Braze] id die het toewijzen van om het even welke identiteit steunt. | U kunt elke [identiteit](../../../identity-service/namespaces.md) aan de [!DNL Braze] doel, zolang u deze toewijst aan de [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Aangepast [!DNL Braze] id die het toewijzen van om het even welke identiteit steunt. | U kunt elke [identiteit](../../../identity-service/namespaces.md) aan de [!DNL Braze] doel, zolang u het aan de [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 
-## Ondersteuning voor extern publiek {#external-audiences-support}
+## Ondersteunde doelgroepen {#supported-audiences}
 
-Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
 
-Bovendien ondersteunt deze bestemming ook de activering van het externe publiek dat in de onderstaande tabel wordt beschreven.
+*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
 
 | Type extern publiek | Beschrijving |
 ---------|----------|
-| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -62,8 +62,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing.[!DNL Adobe Experience Platform] publiek wordt geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten volgens uw veldtoewijzing.[!DNL Adobe Experience Platform] publiek wordt geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk. |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -85,13 +85,13 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-* **[!UICONTROL Name]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
-* **[!UICONTROL Description]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
-* **[!UICONTROL Endpoint Instance]**: vragen [!DNL Braze] representatief welke eindpuntinstantie u zou moeten gebruiken.
+* **[!UICONTROL Name]**: voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
+* **[!UICONTROL Description]**: voer een beschrijving in die u zal helpen deze bestemming in de toekomst te identificeren.
+* **[!UICONTROL Endpoint Instance]**: vraag uw [!DNL Braze] representatief welke eindpuntinstantie u zou moeten gebruiken.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -130,13 +130,13 @@ In de [!UICONTROL Select source field] kunt u kiezen uit twee categorieën XDM-v
 
 Kies uw bronveld en klik op **[!UICONTROL Select]**.
 
-In de [!UICONTROL Target Field] klikt u op het koppelingspictogram rechts van het veld.
+In de [!UICONTROL Target Field] klikt u op het pictogram voor toewijzing rechts van het veld.
 
 ![Doel-toewijzing op lichtsterkte](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 In de [!UICONTROL Select target field] kunt u kiezen uit twee categorieën doelvelden:
-* [!UICONTROL Select identity namespace]: Deze optie gebruiken om toe te wijzen [!DNL Platform] naamruimten naar [!DNL Braze] naamruimten.
-* [!UICONTROL Select custom attributes]: Met deze optie kunt u XDM-kenmerken toewijzen aan aangepaste kenmerken [!DNL Braze] kenmerken die u in uw [!DNL Braze] account. <br> U kunt deze optie ook gebruiken om bestaande XDM-kenmerken te hernoemen in [!DNL Braze]. Bijvoorbeeld het toewijzen van een `lastName` XDM-kenmerk aan een aangepast element `Last_Name` kenmerk in [!DNL Braze], worden de `Last_Name` kenmerk in [!DNL Braze], als het nog niet bestaat, en kaart de `lastName` XDM-kenmerk eraan gekoppeld.
+* [!UICONTROL Select identity namespace]: Gebruik deze optie om toe te wijzen [!DNL Platform] naamruimten naar [!DNL Braze] naamruimten.
+* [!UICONTROL Select custom attributes]: Gebruik deze optie om XDM-kenmerken toe te wijzen aan aangepaste kenmerken [!DNL Braze] kenmerken die u in uw [!DNL Braze] account. <br> U kunt deze optie ook gebruiken om bestaande XDM-kenmerken te hernoemen in [!DNL Braze]. Bijvoorbeeld het toewijzen van een `lastName` XDM-kenmerk aan een aangepast element `Last_Name` kenmerk in [!DNL Braze], worden de `Last_Name` kenmerk in [!DNL Braze], als het nog niet bestaat, en kaart de `lastName` XDM-kenmerk eraan gekoppeld.
 
 ![Doeltoewijzingsvelden van doel dempen](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 

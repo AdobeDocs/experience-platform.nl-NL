@@ -3,9 +3,9 @@ title: (Bèta) Experience Cloud-publiek
 description: Leer hoe u publiek kunt delen van Experience Platform naar verschillende oplossingen voor Experience Platforms.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Met deze bestemming kunt u soorten publiek van Experience Platform naar verschil
 
 >[!IMPORTANT]
 >
->* Deze bestemming vervangt [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) van Experience Platform naar diverse Experience Cloud oplossingen.
+>* Dit doel vervangt het [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) van Experience Platform naar diverse Experience Cloud oplossingen.
 >* Deze bestemming is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 ## Gebruik gevallen en voordelen {#use-cases}
@@ -96,8 +96,8 @@ De profielen die worden geëxporteerd naar de [!UICONTROL Experience Cloud Audie
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
-| GAID | Google-advertentie-id | Profielen die in Experience Platform worden opgenomen met een primaire Google-advertentie-id (GAID) kunnen naar deze bestemming worden geëxporteerd. |
+| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ECID](/help/identity-service/ecid.md) voor meer informatie . |
+| GAID | Google-advertentie-id | Profielen die in Experience Platform worden opgenomen met een primaire identiteit van de advertentie-id van Google (GAID) kunnen naar deze bestemming worden geëxporteerd. |
 | IDFA | Apple-id voor adverteerders | Profielen die in Experience Platform worden opgenomen met een primaire Apple-id voor adverteerders (IDFA), kunnen naar deze bestemming worden geëxporteerd. |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Profielen die in Experience Platform worden opgenomen met een primair e-mailadres voor hashes, kunnen naar dit doel worden geëxporteerd. |
 
@@ -107,13 +107,13 @@ De profielen die worden geëxporteerd naar de [!UICONTROL Experience Cloud Audie
 
 In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
 
-Alle bestemmingen ondersteunen de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
 
-Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
+*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
 
 | Type publiek | Beschrijving |
 ---------|----------|
-| Aangepaste uploads | Soorten publiek dat via CSV-bestanden in het Experience Platform wordt opgenomen. |
+| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -124,7 +124,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek die zijn afgesneden van de identiteiten die in de bovenstaande sectie worden vermeld. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -134,7 +134,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 >[!IMPORTANT]
 > 
@@ -142,7 +142,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Om voor authentiek te verklaren aan de bestemming, selecteer **[!UICONTROL Set up]** in de weergave van de doelkaart in de catalogus en selecteer **[!UICONTROL Connect to destination]**.
+Om voor authentiek te verklaren aan de bestemming, uitgezocht **[!UICONTROL Set up]** in de weergave van de doelkaart in de catalogus en selecteer **[!UICONTROL Connect to destination]**.
 
 ![Weergave van de optie Verbinding maken met doel voor het doel Soorten publiek van Experience Cloud.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
 
@@ -152,7 +152,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ![Vorm nieuw bestemmingsscherm dat de vereiste en facultatieve montages toont om met de bestemming van het Soorten publiek van de Experience Cloud te verbinden.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
 
-* **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
 <!--
@@ -173,7 +173,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming. Let op: [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is vereist en [planstap](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is beschikbaar voor deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming. Let op: [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is vereist en [planstap](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is beschikbaar voor deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
