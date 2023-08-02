@@ -3,9 +3,9 @@ title: LiveRamp - Verbinding aan boord
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
+source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,9 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 * **[!UICONTROL Username]**: De gebruikersnaam voor uw [!DNL LiveRamp - Onboarding] opslaglocatie.
 * **[!UICONTROL Password]**: Het wachtwoord voor uw [!DNL LiveRamp - Onboarding] opslaglocatie.
-* **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding. Als u een coderingssleutel opgeeft, moet u ook een **[!UICONTROL Encryption subkey ID]** in de [bestemmingsdetails](#destination-details) sectie.
-
+* **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey ID]**:Als u een coderingssleutel opgeeft, moet u ook een codering opgeven **[!UICONTROL Subkey ID]**. Zie de [!DNL LiveRamp] [versleutelingsdocumentatie](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) om te leren hoe te om subkey identiteitskaart te verkrijgen
 
 **SFTP met SSH-sleutelverificatie** {#sftp-ssh}
 
@@ -88,9 +88,9 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
    * Als u verbinding wilt maken met uw [!DNL SSH] sleutel tot de [!DNL LiveRamp - Onboarding] server, moet u een kaartje door indienen [!DNL LiveRamp]Het portal voor technische ondersteuning en uw openbare sleutel. Meer informatie vindt u in het dialoogvenster [LiveRamp-documentatie](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Als u een coderingssleutel opgeeft, moet u ook een **[!UICONTROL Encryption subkey ID]** in de [bestemmingsdetails](#destination-details) sectie. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
-
+* **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey ID]**:Als u een coderingssleutel opgeeft, moet u ook een codering opgeven **[!UICONTROL Subkey ID]**. Zie de [!DNL LiveRamp] [versleutelingsdocumentatie](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) om te leren hoe te om subkey identiteitskaart te verkrijgen
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -109,7 +109,6 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Folder path]**: Het pad naar de [!DNL LiveRamp] `uploads` submap die de geëxporteerde bestanden host. De `uploads` wordt automatisch toegevoegd aan het mappad. [!DNL LiveRamp] Het verdient aanbeveling een speciale submap voor leveringen van Adobe Real-Time CDP te maken om de bestanden gescheiden te houden van andere bestaande feeds en om ervoor te zorgen dat alle automatisering probleemloos wordt uitgevoerd.
    * Als u bijvoorbeeld uw bestanden wilt exporteren naar `uploads/my_export_folder`, typt u `my_export_folder` in de **[!UICONTROL Folder path]** veld.
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden. Beschikbare opties zijn **[!UICONTROL GZIP]** of **[!UICONTROL None]**.
-* **[!UICONTROL Encryption subkey ID]**: De subsleutel die wordt gebruikt voor versleuteling, op basis van de [!DNL LiveRamp] openbare coderingssleutel. Dit veld is vereist als u een coderingssleutel hebt opgegeven in het veld [verificatie](#authenticate) stap. Zie de [!DNL LiveRamp] [versleutelingsdocumentatie](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) om te leren hoe te om subkey identiteitskaart te verkrijgen
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
