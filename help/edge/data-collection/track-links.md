@@ -3,7 +3,7 @@ title: Koppelingen bijhouden met de Adobe Experience Platform Web SDK
 description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page views;link tracking;links;track links;clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -12,9 +12,8 @@ ht-degree: 0%
 
 # Koppelingen bijhouden
 
-Koppelingen kunnen handmatig worden ingesteld of bijgehouden [automatisch](#automaticLinkTracking). Handmatig bijhouden wordt uitgevoerd door de gegevens onder de `web.webInteraction` deel van het schema. Er zijn drie vereiste variabelen:
+Koppelingen kunnen handmatig worden ingesteld of bijgehouden [automatisch](#automaticLinkTracking). Handmatig bijhouden wordt uitgevoerd door de gegevens onder de `web.webInteraction` deel van het schema. Er zijn twee vereiste variabelen:
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
@@ -111,4 +110,4 @@ Wanneer het filtreren van de verbinding het volgen gebeurtenissen gebruikend `on
 
 >[!NOTE]
 >
->** Wanneer beide `onBeforeEventSend` en `onBeforeLinkClickSend` callback functies worden geplaatst, de looppas van SDK van het Web `onBeforeLinkClickSend` callback-functie om de gebeurtenis link click te filteren en aan te vullen, gevolgd door de `onBeforeEventSend` callback-functie.
+>** Wanneer beide `onBeforeEventSend` en `onBeforeLinkClickSend` callback-functies worden ingesteld, de Web SDK voert de `onBeforeLinkClickSend` callback-functie om de gebeurtenis link click te filteren en aan te vullen, gevolgd door de `onBeforeEventSend` callback-functie.
