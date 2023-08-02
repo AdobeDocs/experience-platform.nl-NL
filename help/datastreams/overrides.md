@@ -2,9 +2,9 @@
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,26 @@ Dit artikel verklaart het proces van de de configuratieopheffing van begin tot e
 >[!IMPORTANT]
 >
 >Gegevensstroomoverschrijvingen worden alleen ondersteund voor [Web SDK](../edge/home.md) integratie. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) en [Server-API](../server-api/overview.md) Integraties bieden momenteel geen ondersteuning voor gegevensstroomoverschrijvingen.
+><br><br>
+>De overrides van DataStream zouden moeten worden gebruikt wanneer u verschillende gegevens nodig hebt die naar verschillende gegevensstromen worden verzonden. U moet geen gegevensstroomoverschrijvingen gebruiken voor gevallen waarin u persoonlijke gegevens wilt gebruiken of voor toestemmingsgegevens.
+
+## Gebruiksscenario’s {#use-cases}
+
+Om u beter te helpen begrijpen hoe en wanneer om datastream met voeten te treden, zijn hier sommige gebruiksgevallen die de klanten van Adobe Experience Platform kunnen oplossen door deze eigenschap te gebruiken.
+
+**Gegevensverzameling over meerdere regio&#39;s**
+
+Een bedrijf heeft verschillende websites of subdomeinen voor verschillende landen waarin het actief is. Ze hebben [geconfigureerd](configure.md) afzonderlijke gegevensstromen met overeenkomstige analytische-specifieke rapportreeksen, land-specifieke eigenschappen van Adobe Target tokens, landspecifieke schema&#39;s, datasets, configuraties van Journey Optimizer, etc. De onderneming heeft ook een algemene reeks configuraties waarbij alle landspecifieke gegevens worden samengevoegd.
+
+Door gegevensstroomoverschrijvingen te gebruiken, kan het bedrijf dynamisch de stroom van gegevens aan verschillende gegevensstromen, in plaats van het standaardgedrag schakelen om gegevens naar één gegevensstroom te verzenden.
+
+Een veel voorkomend geval kan zijn dat gegevens naar een landspecifieke gegevensstroom worden verzonden en dat gegevens ook naar een algemene gegevensstroom worden verzonden waar klanten een belangrijke actie uitvoeren, zoals het plaatsen van een bestelling of het bijwerken van hun gebruikersprofiel.
+
+**Verschillende profielen en identiteiten voor verschillende bedrijfseenheden**
+
+Een bedrijf met veelvoudige bedrijfseenheden wil veelvoudige zandbakken van het Experience Platform gebruiken om gegevens op te slaan specifiek voor elke bedrijfseenheid.
+
+In plaats van gegevens naar een standaardgegevensstroom te verzenden, kan het bedrijf gegevensstroomoverschrijvingen gebruiken om ervoor te zorgen dat elke bedrijfseenheid zijn eigen gegevensstroom heeft om gegevens door te ontvangen.
 
 ## Gegevensstroomoverschrijvingen configureren in de interface voor gegevensstromen {#configure-overrides}
 
