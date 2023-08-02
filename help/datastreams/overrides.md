@@ -2,9 +2,9 @@
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,14 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
-1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [databaseconfiguratiepagina](configure.md).
+1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](configure.md).
 2. Dan, moet u de met voeten treedt naar het Netwerk van de Rand of via het bevel van SDK van het Web of door SDK van het Web te gebruiken verzenden [tagextensie](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Dit artikel verklaart het proces van de de configuratieopheffing van begin tot eind van de gegevensstroom voor elk type van gesteunde opheffing.
+
+>[!IMPORTANT]
+>
+>Gegevensstroomoverschrijvingen worden alleen ondersteund voor [Web SDK](../edge/home.md) integratie. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) en [Server-API](../server-api/overview.md) Integraties bieden momenteel geen ondersteuning voor gegevensstroomoverschrijvingen.
 
 ## Gegevensstroomoverschrijvingen configureren in de interface voor gegevensstromen {#configure-overrides}
 
@@ -29,11 +33,11 @@ De configuratieoverschrijvingen van DataStream staan u toe om de volgende config
 * Gegevenssets voor gebeurtenissen Experience Platform
 * Adobe Target-eigenschapstokens
 * Audience Manager-id-synchronisatiecontainers
-* Adobe Analytics-rapportensuites
+* Adobe Analytics rapport suites
 
 ### DataStream-overschrijvingen voor Adobe Target {#target-overrides}
 
-Als u gegevensstroomoverschrijvingen voor een Adobe Target-gegevensstroom wilt configureren, moet u eerst een Adobe Target-gegevensstroom hebben gemaakt. Volg de instructies op [configureren, gegevensstroom](configure.md) met de [Adobe Target](configure.md#target) service.
+Als u gegevensstroomoverschrijvingen voor een Adobe Target-gegevensstroom wilt configureren, moet u eerst een Adobe Target-gegevensstroom hebben gemaakt. Volg de instructies op [configureren, een gegevensstroom](configure.md) met de [Adobe Target](configure.md#target) service.
 
 Als u de gegevensstroom hebt gemaakt, bewerkt u de [Adobe Target](configure.md#target) service die u hebt toegevoegd en gebruikt **[!UICONTROL Property Token Overrides]** om de gewenste gegevensstroomoverschrijvingen toe te voegen, zoals in de onderstaande afbeelding wordt getoond. Voeg één eigenschapstoken per regel toe.
 
@@ -45,7 +49,7 @@ De Adobe Target-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu
 
 ### DataStream-overschrijvingen voor Adobe Analytics {#analytics-overrides}
 
-Als u gegevensstroomoverschrijvingen voor een Adobe Analytics-gegevensstroom wilt configureren, moet u eerst een [Adobe Analytics](configure.md#analytics) datastream gemaakt. Volg de instructies op [configureren, gegevensstroom](configure.md) met de [Adobe Analytics](configure.md#analytics) service.
+Als u gegevensstroomoverschrijvingen voor een Adobe Analytics-gegevensstroom wilt configureren, moet u eerst een [Adobe Analytics](configure.md#analytics) datastream gemaakt. Volg de instructies op [configureren, een gegevensstroom](configure.md) met de [Adobe Analytics](configure.md#analytics) service.
 
 Als u de gegevensstroom hebt gemaakt, bewerkt u de [Adobe Analytics](configure.md#target) service die u hebt toegevoegd en gebruikt **[!UICONTROL Report Suite Overrides]** om de gewenste gegevensstroomoverschrijvingen toe te voegen, zoals in de onderstaande afbeelding wordt getoond.
 
@@ -59,7 +63,7 @@ De Adobe Analytics-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd.
 
 ### DataStream-overschrijvingen voor gegevenssets met gebeurtenissen Experience Platform {#event-dataset-overrides}
 
-Om gegevensstroomoverschrijvingen voor de gebeurtenisdatasets van het Experience Platform te vormen, moet u eerst hebben [Adobe Experience Platform](configure.md#aep) datastream gemaakt. Volg de instructies op [configureren, gegevensstroom](configure.md) met de [Adobe Experience Platform](configure.md#aep) service.
+Om gegevensstroomoverschrijvingen voor de gebeurtenisdatasets van het Experience Platform te vormen, moet u eerst hebben [Adobe Experience Platform](configure.md#aep) datastream gemaakt. Volg de instructies op [configureren, een gegevensstroom](configure.md) met de [Adobe Experience Platform](configure.md#aep) service.
 
 Als u de gegevensstroom hebt gemaakt, bewerkt u de [Adobe Experience Platform](configure.md#aep) service die u hebt toegevoegd en selecteer de **[!UICONTROL Add Event Dataset]** optie om één of meerdere met voeten te treden gebeurtenis datasets, zoals aangetoond in het hieronder beeld toe te voegen.
 
@@ -71,9 +75,9 @@ De Adobe Experience Platform-gegevensstroomoverschrijvingen moeten nu zijn gecon
 
 ### DataStream overschrijft de synchronisatie-containers van externe id&#39;s {#container-overrides}
 
-Als u gegevensstroomoverschrijvingen voor synchronisatie-containers van derden wilt configureren, moet u eerst een gegevensstroom hebben gemaakt. Volg de instructies op [configureren, gegevensstroom](configure.md) om er een te maken.
+Als u gegevensstroomoverschrijvingen voor synchronisatie-containers van derden wilt configureren, moet u eerst een gegevensstroom hebben gemaakt. Volg de instructies op [configureren, een gegevensstroom](configure.md) om er een te maken.
 
-Wanneer u de gegevensstroom hebt gemaakt, gaat u naar **[!UICONTROL Advanced Options]** en de **[!UICONTROL Third Party ID Sync]** optie.
+Wanneer u de gegevensstroom hebt gemaakt, gaat u naar **[!UICONTROL Advanced Options]** en de **[!UICONTROL Third Party ID Sync]** -optie.
 
 Gebruik vervolgens de **[!UICONTROL Container ID Overrides]** om de container-id&#39;s toe te voegen die u wilt overschrijven met de standaardinstelling, zoals in de onderstaande afbeelding wordt getoond.
 
