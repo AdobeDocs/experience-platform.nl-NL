@@ -1,11 +1,11 @@
 ---
-keywords: bestemmingen; vragen; veelgestelde vragen; faq; bestemmingen - vk
+keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1528'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform-doelen. Voor vragen en problemen met betrekking tot andere problemen [!DNL Platform] services, inclusief de services die in alle [!DNL Platform] API&#39;s, raadpleeg de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
+In dit document worden antwoorden gegeven op veelgestelde vragen over Adobe Experience Platform-doelen. Voor vragen en problemen met betrekking tot andere [!DNL Platform] services, inclusief de services die in alle [!DNL Platform] API&#39;s, raadpleeg de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
 ## Algemene vragen over bestemmingen {#general}
 
@@ -22,12 +22,33 @@ Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platf
 
 +++Antwoord Dit is een normaal gedrag toe te schrijven aan de manier waarop het Experience Platform segmentatie uitvoert.
 
-Streaming segmentatie werkt het aantal profielen voor streaming publiek gedurende de dag bij, terwijl batchsegmentatie het aantal profielen voor batchgebruikers elke 24 uur bijwerkt.
+Streaming segmentatie werkt het aantal profielen voor streaming publiek gedurende de dag bij, terwijl batchsegmentatie het aantal profielen voor batchgebruikers eenmaal om de 24 uur bijwerkt.
 
-Wanneer het programma voor publieksexport afwijkt van het segmentatieschema, telt het profiel tussen de gebruikersinterface en het geëxporteerde bestand [!DNL CSV] Het bestand is anders, vooral wanneer het gaat om streaming publiek.
+Wanneer het programma voor publieksexport afwijkt van het segmentatieschema, telt het profiel tussen de gebruikersinterface en het geëxporteerde bestand [!DNL CSV] Het bestand zal anders zijn, vooral wanneer het gaat om streaming publiek.
 
 Zie de [Documentatie voor segmentatieservice](../segmentation/home.md) voor meer informatie .
 +++
+
+### Waarom zie ik lage gelijke tarieven na het deactiveren en het opnieuw activeren van een bijgewerkt publiek aan de zelfde bestemming?
+
++++Antwoord
+
+De deactivering en van een publiek van een het stromen bestemming teweegbrengen geen backfill op publieksheractivering aan de zelfde het stromen bestemming teweeg.
+
+**Voorbeeld**
+
+U activeerde een publiek dat uit 10 profielen bestaat aan een het stromen bestemming.
+
+Nadat u het publiek hebt geactiveerd, realiseert u zich dat u de publieksconfiguratie wilt wijzigen, zodat u het publiek deactiveert en de bevolkingscriteria wijzigt, wat leidt tot een populatie van 100 profielen.
+
+U activeert het bijgewerkte publiek opnieuw naar dezelfde bestemming, maar aangezien er geen backfill geactiveerd is, ontvangt uw bestemming niet de aanvullende 90 profielen.
+
+**Oplossing**
+
+Om ervoor te zorgen dat alle profielen naar uw bestemming worden verzonden, moet u een nieuw publiek met de nieuwe configuratie tot stand brengen, en dan het activeren aan uw bestemming.
+
++++
+
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -55,14 +76,14 @@ Zie de [Documentatie voor segmentatieservice](../segmentation/home.md) voor meer
 
 ### Kan ik gebruiken [!DNL Facebook Custom Audiences] voor doelgroepen in andere [!DNL Facebook] apps, zoals [!DNL Instagram]?
 
-+++Minder stroom U kunt de opdracht [!DNL Facebook Custom Audiences] doel voor doelgroepen in Facebook-apps die worden ondersteund door [!DNL Facebook Custom Audiences], met inbegrip van [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], en [!DNL Messenger]. De selectie van de app waarop adverteerders campagnes willen uitvoeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager].
++++Minder stroom U kunt de opdracht [!DNL Facebook Custom Audiences] doel voor doelgroepen in Facebook-apps die worden ondersteund door [!DNL Facebook Custom Audiences], inclusief [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], en [!DNL Messenger]. De selectie van de app waarop adverteerders campagnes willen uitvoeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager].
 +++
 
 ### Wat is het verschil tussen [!DNL Facebook Custom Audiences] verbinding en [!DNL Facebook Pixel] uitbreiding?
 
 ++ beantwoord [!DNL Facebook Custom Audiences] verbinding gebruikt [!DNL Platform] identiteiten bij het versturen van publiek naar [!DNL Facebook], terwijl de [[!DNL Facebook Pixel] verbinding](../destinations/catalog/advertising/facebook-pixel.md) gebruikt de [!DNL Facebook] pixel geïntegreerd in een website.
 
-Deze twee integraties zijn complementair; u kunt beide gebruiken om te zorgen voor een betere doelgroepdekking. U kunt bijvoorbeeld de opdracht [!DNL Facebook Pixel] uitbreiding voor potentiële websitebezoekers die geen account hebben gemaakt, terwijl [!DNL Facebook Custom Audiences] kan u helpen bestaande klanten richten, die op [!DNL Platform] identiteiten.
+Deze twee integraties zijn complementair; u kunt beide gebruiken om te zorgen voor een betere doelgroepdekking. U kunt bijvoorbeeld de opdracht [!DNL Facebook Pixel] uitbreiding voor potentiële websitebezoekers die geen account hebben gemaakt, terwijl [!DNL Facebook Custom Audiences] kan u helpen bestaande klanten richten, gebaseerd op [!DNL Platform] identiteiten.
 +++
 
 ### Wordt Adobe Experience Platform geïntegreerd met [!DNL Facebook Custom Audiences] gebruikers die niet langer in aanmerking komen voor de kwalificatie van een publiek ondersteunen?**
@@ -75,7 +96,7 @@ Deze twee integraties zijn complementair; u kunt beide gebruiken om te zorgen vo
 +++Antwoord
 [!DNL Facebook] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom wordt het publiek geactiveerd tot [!DNL Facebook] kan worden uitgeschakeld *hashed* id&#39;s, zoals e-mailadressen of telefoonnummers.
 
-Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vereisten voor id-afstemming](catalog/social/facebook.md#id-matching-requirements).
+Zie voor gedetailleerde uitleg over de vereisten voor ID-matching [Vereisten voor id-afstemming](catalog/social/facebook.md#id-matching-requirements).
 +++
 
 ### Welk type identiteiten kan ik activeren? [!DNL Facebook Custom Audiences]?
@@ -96,7 +117,7 @@ Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vere
 +++Antwoord Google vereist dat publieksnamen uniek zijn. De getallen die u ziet [UNIX-tijdstempels](https://www.unixtimestamp.com/) en worden toegevoegd om de publieksnamen uniek te houden, als u het zelfde publiek aan veelvoudige bestemmingen van Google in kaart bracht.
 +++
 
-## linkedIn-doelgroepen {#linkedin}
+## LinkedIn-publiek met overeenkomst {#linkedin}
 
 ### Moet ik apps of pixels toevoegen aan mijn [!DNL LinkedIn] adverteerderaccount?
 
@@ -107,7 +128,7 @@ Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vere
 
 +++Antwoord Voordat u de [!UICONTROL LinkedIn Matched Audience] doel, zorg ervoor uw [!DNL LinkedIn Campaign Manager] account bevat [!DNL Creative Manager] machtigingsniveau of hoger.
 
-Meer informatie over het bewerken van uw [!DNL LinkedIn Campaign Manager] gebruikersmachtigingen, zie [Gebruikersmachtigingen toevoegen, bewerken en verwijderen voor advertentieaccounts](https://www.linkedin.com/help/lms/answer/5753) in de documentatie van LinkedIn.
+Leren hoe u uw [!DNL LinkedIn Campaign Manager] gebruikersmachtigingen, zie [Gebruikersmachtigingen toevoegen, bewerken en verwijderen voor advertentieaccounts](https://www.linkedin.com/help/lms/answer/5753) in de documentatie van LinkedIn.
 +++
 
 ### Hoe moet ik de publieksgegevens hashen voordat ik ze naar [!DNL LinkedIn]?
@@ -115,13 +136,13 @@ Meer informatie over het bewerken van uw [!DNL LinkedIn Campaign Manager] gebrui
 +++Antwoord
 [!DNL LinkedIn] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom wordt het publiek geactiveerd tot [!DNL LinkedIn] kan worden uitgeschakeld *hashed* id&#39;s, zoals e-mailadressen of telefoonnummers.
 
-Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vereisten voor id-afstemming](catalog/social/linkedin.md#id-matching-requirements).
+Zie voor gedetailleerde uitleg over de vereisten voor ID-matching [Vereisten voor id-afstemming](catalog/social/linkedin.md#id-matching-requirements).
 +++
 
 ### Welk type identiteiten kan ik activeren? [!DNL LinkedIn]?
 
 +++Antwoord
-[!DNL LinkedIn Matched Audiences] ondersteunt de activering van de volgende identiteiten: gehashte e-mails, [!DNL GAID], en [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] ondersteunt de activering van de volgende identiteiten: gehashte e-mails; [!DNL GAID], en [!DNL IDFA].
 +++
 
 ## Zelfde pagina en volgende-paginagrootte door de bestemmingen van de Aanpassing van Adobe Target en van de Aanpassing {#same-next-page-personalization}
@@ -130,9 +151,9 @@ Voor gedetailleerde uitleg over de vereisten voor ID-matching raadpleegt u [Vere
 
 ++ + antwoordnr., [Web SDK](../edge/home.md) is niet vereist om het publiek te activeren op [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Als [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) wordt gebruikt in plaats van Web SDK, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
+Als echter [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) wordt gebruikt in plaats van Web SDK, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
-Voor [personalisatie op dezelfde pagina en op de volgende pagina](ui/activate-edge-personalization-destinations.md) gebruik gevallen, moet u of [Web SDK](../edge/home.md) of de [Edge Network Server-API](../server-api/overview.md). Zie de documentatie op [activeren van publiek naar randbestemmingen](ui/activate-edge-personalization-destinations.md) voor meer details over de implementatie.
+Voor [personalisatie op dezelfde pagina en op de volgende pagina](ui/activate-edge-personalization-destinations.md) gebruik gevallen, moet u of gebruiken [Web SDK](../edge/home.md) of de [Edge Network Server-API](../server-api/overview.md). Zie de documentatie op [activeren van publiek naar randbestemmingen](ui/activate-edge-personalization-destinations.md) voor meer details over de implementatie.
 +++
 
 ### Is er een limiet voor het aantal kenmerken dat ik kan verzenden van Real-time Customer Data Platform naar Adobe Target of een aangepaste persoonlijke bestemming?
@@ -156,7 +177,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Waar zie ik de geactiveerde kenmerken in Adobe Target?
 
-+++Antwoordkenmerken zijn beschikbaar voor gebruik in Doel in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=en) voorstellen.
++++Antwoordkenmerken zijn beschikbaar voor gebruik in Doel [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=en) voorstellen.
 +++
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen?
