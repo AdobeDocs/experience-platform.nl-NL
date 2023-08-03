@@ -7,7 +7,7 @@ landing-page-description: Vind antwoorden op veelgestelde vragen en een gids voo
 short-description: Vind antwoorden op veelgestelde vragen en een gids voor het oplossen van veelvoorkomende problemen in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
+source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 4%
@@ -90,7 +90,7 @@ De volgende statuscodes kunnen worden gevonden op [!DNL Experience Platform] API
 |--- | --- | ---|
 | 400 | Ongeldig verzoek | Het verzoek is onjuist samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
 | 401 | Verificatie mislukt | De aanvraag heeft geen verificatiecontrole doorstaan. Uw toegangstoken ontbreekt of is ongeldig. Zie de [OAuth-tokenfouten](#oauth-token-is-missing) zie hieronder voor meer informatie . |
-| 403 | Verboden | <p>De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken.</p><p> Een mogelijke oorzaak van deze fout is dat u mogelijk niet de vereiste [toegangsbeheermachtigingen](/help/access-control/home.md) om de bron te openen of te bewerken. Lees hoe te [krijgen de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen](/help/landing/api-authentication.md#get-abac-permissions) om Platform APIs te gebruiken. </p> |
+| 403 | Verboden | De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken. <br> Een mogelijke oorzaak van deze fout is dat u mogelijk niet de vereiste [toegangsbeheermachtigingen](/help/access-control/home.md) om de bron te openen of te bewerken. Lees hoe te [krijgen de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen](/help/landing/api-authentication.md#get-abac-permissions) om Platform APIs te gebruiken. </p> |
 | 404 | Niet gevonden | De gevraagde bron is niet gevonden op de server. De bron is mogelijk verwijderd of het gevraagde pad is onjuist ingevoerd. |
 | 500 | Interne serverfout | Dit is een serverfout. Als u vele gelijktijdige vraag maakt, kunt u de API grens bereiken en moet uw resultaten filtreren. (Zie de [!DNL Catalog Service] Subhandleiding voor API-ontwikkelaars ingeschakeld [filteren, gegevens](../catalog/api/filter-data.md) voor meer informatie.) Wacht even voordat u uw verzoek opnieuw probeert en neem contact op met de beheerder als het probleem zich blijft voordoen. |
 
