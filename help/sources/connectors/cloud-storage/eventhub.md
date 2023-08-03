@@ -1,11 +1,11 @@
 ---
 title: Azure Event Hubs Source Connector - Overzicht
-description: Leer hoe u Azure Event Hubs met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
-badgeUltimate: label="Ultimate" type="Positive"
+description: Leer hoe u Azure Event Hubs met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure]. U kunt uw gegevens van deze systemen in Platform brengen.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van [!DNL Event Hubs] in real time.
+Opslagbronnen in de cloud kunnen uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van [!DNL Event Hubs] in real time.
 
 ## Schalen met [!DNL Event Hubs]
 
@@ -40,8 +40,8 @@ U kunt een virtueel netwerk instellen om verbinding te maken [!DNL Event Hubs] a
 
 * Selecteren **Probeer het** vanuit het REST API-deelvenster;
 * Verifieer uw [!DNL Azure] account met uw referenties in dezelfde browser;
-* Selecteer [!DNL Event Hubs] namespace, middelgroep, en abonnement dat u aan Platform wilt brengen en dan selecteren **RUN**;
-* In het lichaam JSON dat verschijnt, voeg volgende subnet van het Platform onder toe `virtualNetworkRules` binnenkant `properties`:
+* Selecteer de [!DNL Event Hubs] namespace, middelgroep, en abonnement dat u aan Platform wilt brengen en dan selecteren **RUN**;
+* In het lichaam JSON dat verschijnt, voeg volgende subnet van het Platform onder `virtualNetworkRules` binnenkant `properties`:
 
 
 >[!IMPORTANT]
@@ -88,7 +88,7 @@ Zie de lijst hieronder voor verschillende gebieden van Platform subnets:
     "virtualNetworkRules": [
       {
         "subnet": {
-            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2-vnet/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
         }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
@@ -121,14 +121,14 @@ Zie het volgende [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/r
 
 ## Verbinden [!DNL Event Hubs] naar Platform
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Event Hubs] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Event Hubs] Platforms met API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
 * [Creeer een de bronverbinding van de Hubs van de Gebeurtenis gebruikend de Dienst API van de Stroom](../../tutorials/api/create/cloud-storage/eventhub.md)
 * [Streaming gegevens verzamelen met de Flow Service API](../../tutorials/api/collect/streaming.md)
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
 * [Creeer een de bronverbinding van de Hubs van de Gebeurtenis in UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
 * [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
