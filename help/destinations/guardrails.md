@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 1%
@@ -94,7 +94,7 @@ De onderstaande instructies zijn van toepassing op activering via [Edge-verperso
 
 {style="table-layout:auto"}
 
-## [!BADGE Beta]{type=Informative} Gegevensset exporteren {#dataset-exports}
+### [!BADGE Beta]{type=Informative} Gegevensset exporteren {#dataset-exports}
 
 De uitvoer van gegevenssets wordt momenteel ondersteund in een **[!UICONTROL First Full and then Incremental]** [patroon](/help/destinations/ui/export-datasets.md#scheduling). De instructies die in deze sectie worden beschreven, zijn van toepassing op de eerste volledige export die plaatsvindt nadat een gegevensset-exportworkflow is ingesteld.
 
