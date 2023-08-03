@@ -7,10 +7,10 @@ landing-page-description: Vind antwoorden op veelgestelde vragen en een gids voo
 short-description: Vind antwoorden op veelgestelde vragen en een gids voor het oplossen van veelvoorkomende problemen in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
 workflow-type: tm+mt
-source-wordcount: '1868'
-ht-degree: 5%
+source-wordcount: '1905'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 De aanvraagindelingen variëren afhankelijk van [!DNL Platform] API die wordt gebruikt. De beste manier om te leren hoe te om uw API vraag te structureren is door samen met de voorbeelden te volgen die in de documentatie voor specifiek worden verstrekt [!DNL Platform] service die u gebruikt.
 
-Voor meer informatie over het opmaken van API-aanvragen raadpleegt u de gids Platform API aan de slag [voorbeeld-API-aanroepen lezen](./api-guide.md#sample-api) sectie.
+Voor meer informatie over het opmaken van API-aanvragen raadpleegt u de gids Platform API aan de slag [lees voorbeeld API vraag](./api-guide.md#sample-api) sectie.
 
 ## Wat is mijn organisatie? {#what-is-my-ims-organization}
 
@@ -38,15 +38,15 @@ Een organisatie is een Adobe-representatie van een klant. Om het even welke verg
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 
-Een API-sleutel is vereist als een header in alle API-aanvragen. Het kan via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Binnen de console, op de **Integraties** tabblad, navigeert u naar de **Overzicht** voor een specifieke integratie, vindt u de sleutel onder **Client Credentials**. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren om [!DNL Platform], zie de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
+Een API-sleutel is vereist als een header in alle API-aanvragen. Het kan worden gevonden door [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Binnen de console, op de **Integraties** tabblad, navigeert u naar de **Overzicht** voor een specifieke integratie, vindt u de sleutel onder **Client Credentials**. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren om [!DNL Platform], zie de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Hoe krijg ik een toegangstoken? {#how-do-i-get-an-access-token}
 
-Toegangstempens zijn vereist in de machtigingheader van alle API-aanroepen. Ze kunnen worden gegenereerd met een CURL-opdracht, op voorwaarde dat u toegang hebt tot een integratie voor een organisatie. Toegangstokens zijn slechts geldig gedurende 24 uur, waarna een nieuw teken moet worden geproduceerd om verder te gebruiken API. Voor details bij het produceren van toegangstokens, zie [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
+Toegangstempens zijn vereist in de machtigingheader van alle API-aanroepen. Ze kunnen worden gegenereerd met behulp van een CURL-opdracht, op voorwaarde dat u toegang hebt tot een integratie voor een organisatie. Toegangstokens zijn slechts geldig gedurende 24 uur, waarna een nieuw teken moet worden geproduceerd om verder te gebruiken API. Voor details bij het produceren van toegangstokens, zie [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Hoe gebruik ik queryparameters? {#how-do-i-user-query-parameters}
 
-Sommige [!DNL Platform] API-eindpunten accepteren queryparameters om specifieke informatie te zoeken en de resultaten in de reactie te filteren. De parameters van de vraag worden toegevoegd aan verzoekwegen met een vraagteken (`?`), gevolgd door een of meer queryparameters met de indeling `paramName=paramValue`. Wanneer het combineren van veelvoudige parameters in één enkele vraag, moet u ampersand (`&`) om afzonderlijke parameters te scheiden. Het volgende voorbeeld toont aan hoe een verzoek dat veelvoudige vraagparameters gebruikt in de documentatie wordt vertegenwoordigd.
+Sommige [!DNL Platform] API-eindpunten accepteren queryparameters om specifieke informatie te zoeken en de resultaten in de reactie te filteren. De parameters van de vraag worden toegevoegd aan verzoekwegen met een vraagteken (`?`), gevolgd door een of meer queryparameters met de indeling `paramName=paramValue`. Wanneer het combineren van veelvoudige parameters in één enkele vraag, moet u ampersand (`&`) aan afzonderlijke parameters. Het volgende voorbeeld toont aan hoe een verzoek dat veelvoudige vraagparameters gebruikt in de documentatie wordt vertegenwoordigd.
 
 Voorbeelden van veelgebruikte queryparameters zijn:
 
@@ -84,19 +84,19 @@ Hieronder volgt een lijst met fouten die u kunt tegenkomen bij het gebruik van [
 
 ## API-statuscodes {#api-status-codes}
 
-De volgende statuscodes kunnen worden gevonden op elk [!DNL Experience Platform] API. Elk artikel heeft verschillende oorzaken en daarom zijn de toelichtingen in deze paragraaf algemeen van aard. Voor meer informatie over specifieke fouten in afzonderlijke [!DNL Platform] de diensten, gelieve te zien [servicemap voor probleemoplossing](#service-troubleshooting-directory) hieronder.
+De volgende statuscodes kunnen worden gevonden op [!DNL Experience Platform] API. Elk artikel heeft verschillende oorzaken en daarom zijn de toelichtingen in deze paragraaf algemeen van aard. Voor meer informatie over specifieke fouten in individuele gevallen [!DNL Platform] de diensten, gelieve te zien [servicemap voor probleemoplossing](#service-troubleshooting-directory) hieronder.
 
 | Statuscode | Beschrijving | Mogelijke oorzaken |
 |--- | --- | ---|
 | 400 | Ongeldig verzoek | Het verzoek is onjuist samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
-| 401 | Verificatie mislukt | De aanvraag heeft geen verificatiecontrole doorstaan. Uw toegangstoken ontbreekt of is ongeldig. Zie de [OAuth-tokenfouten](#oauth-token-is-missing) voor meer informatie hieronder. |
-| 403 | Verboden | De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken. |
+| 401 | Verificatie mislukt | De aanvraag heeft geen verificatiecontrole doorstaan. Uw toegangstoken ontbreekt of is ongeldig. Zie de [OAuth-tokenfouten](#oauth-token-is-missing) zie hieronder voor meer informatie . |
+| 403 | Verboden | <p>De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken.</p><p> Een mogelijke oorzaak van deze fout is dat u mogelijk niet de vereiste [toegangsbeheermachtigingen](/help/access-control/home.md) om de bron te openen of te bewerken. Lees hoe te [krijgen de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen](/help/landing/api-authentication.md#get-abac-permissions) om Platform APIs te gebruiken. </p> |
 | 404 | Niet gevonden | De gevraagde bron is niet gevonden op de server. De bron is mogelijk verwijderd of het gevraagde pad is onjuist ingevoerd. |
 | 500 | Interne serverfout | Dit is een serverfout. Als u vele gelijktijdige vraag maakt, kunt u de API grens bereiken en moet uw resultaten filtreren. (Zie de [!DNL Catalog Service] Subhandleiding voor API-ontwikkelaars ingeschakeld [filteren, gegevens](../catalog/api/filter-data.md) voor meer informatie.) Wacht even voordat u uw verzoek opnieuw probeert en neem contact op met de beheerder als het probleem zich blijft voordoen. |
 
 ## Koptekstfouten aanvragen {#request-header-errors}
 
-Alle API-aanroepen in [!DNL Platform] specifieke aanvraagheaders vereisen. Om te zien welke kopballen voor de individuele diensten worden vereist, gelieve te zien [API-naslagdocumentatie](https://www.adobe.com/go/platform-api-reference-en). Als u de waarden voor de vereiste verificatieheaders wilt vinden, raadpleegt u de [Zelfstudie verificatie](https://www.adobe.com/go/platform-api-authentication-en). Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
+Alle API-aanroepen in [!DNL Platform] specifieke aanvraagheaders vereisen. Om te zien welke kopballen voor de individuele diensten worden vereist, gelieve te zien [API-naslagdocumentatie](https://www.adobe.com/go/platform-api-reference-en). Als u de waarden voor de vereiste verificatieheaders wilt vinden, raadpleegt u de [Verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
 
 ### OAuth-token ontbreekt {#oauth-token-is-missing}
 
@@ -162,7 +162,7 @@ Dit foutbericht wordt weergegeven wanneer een organisatiekoptekst (`x-gw-ims-org
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de gebruiker of de Adobe I/O-integratie (geïdentificeerd door de [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` header) heeft geen recht om te bellen naar [!DNL Experience Platform] API&#39;s voor de organisatie die in het `x-gw-ims-org-id` header. Zorg ervoor dat u de juiste id voor uw organisatie hebt opgegeven in de koptekst voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, kunt u deze vinden in de [Adobe I/O-console](https://console.adobe.io): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een specifieke integratie om de id onder te zoeken **Client Credentials**.
+Dit foutbericht wordt weergegeven wanneer de gebruiker of de Adobe I/O-integratie (geïdentificeerd door de [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` header) heeft geen recht om te bellen naar [!DNL Experience Platform] API&#39;s voor de organisatie die worden geleverd in de `x-gw-ims-org-id` header. Zorg ervoor dat u de juiste id voor uw organisatie hebt opgegeven in de koptekst voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, kunt u deze vinden in de [Adobe I/O-console](https://console.adobe.io): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een specifieke integratie om de id onder te zoeken **Client Credentials**.
 
 ### Fout bij vernieuwen van tag {#refresh-etag-error}
 
@@ -202,7 +202,7 @@ Dit foutbericht wordt weergegeven in een van de twee onderstaande gevallen:
 - Wanneer een onjuiste of onjuist gevormde organisatie-id-header (`x-gw-ims-org-id`) wordt doorgegeven in een API-aanvraag. Zorg ervoor dat de juiste id van uw organisatie is opgenomen voordat u het opnieuw probeert.
 - Wanneer uw account (weergegeven door de opgegeven verificatiereferenties) niet is gekoppeld aan een productprofiel voor Experience Platform. Voer de volgende stappen uit [toegangsreferenties genereren](./api-authentication.md#authentication-for-each-session) in de Platform API-verificatiezelfstudie om Platform toe te voegen aan uw account en uw verificatiegegevens dienovereenkomstig bij te werken.
 
-## Servicemap voor probleemoplossing {#service-troubleshooting-directory}
+## Servicemap voor problemen {#service-troubleshooting-directory}
 
 Hieronder volgt een lijst met probleemoplossingsgidsen en API-naslagdocumentatie voor [!DNL Experience Platform] API&#39;s. Elke het oplossen van problemengids verstrekt antwoorden op vaak gestelde vragen en oplossingen aan problemen die specifiek zijn voor individueel [!DNL Platform] diensten. De API verwijzingsdocumenten verstrekken een uitvoerige gids aan alle beschikbare eindpunten voor elke dienst, en tonen de instanties van de steekproefaanvraag, reacties, en foutencodes die u kunt ontvangen.
 
