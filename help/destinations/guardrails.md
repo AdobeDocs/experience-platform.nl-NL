@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f360df6273986be35340432c72d8f8620f339b67
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1267'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ De onderstaande instructies zijn over het algemeen van toepassing op activering 
 | --- | --- | --- | --- |
 | Maximumaantal doelgroepen | 250 | Zacht | De aanbeveling moet een maximum van 250 publiek aan één enkele bestemming in een dataflow in kaart brengen. <br><br> Als u meer dan 250 publiek aan een bestemming moet activeren, kunt u of: <ul><li> Ontkaart publiek dat u niet meer wilt activeren, of</li><li>Creeer een nieuwe dataflow aan de gewenste bestemming en kaartpubliek aan deze nieuwe dataflow.</li></ul> <br> Houd er rekening mee dat in het geval van sommige bestemmingen u beperkt kunt zijn tot minder dan 250 soorten publiek die aan de bestemming zijn toegewezen. Deze bestemmingen worden hieronder op de pagina in hun respectieve secties vermeld. |
 | Maximum aantal bestemmingen | 100 | Zacht | De aanbeveling moet een maximum van 100 bestemmingen tot stand brengen die u gegevens kunt verbinden en activeren om *per sandbox*. [Aanpasbare Edge-doelen (Aangepaste verpersoonlijking)](#edge-destinations-activation) maximaal 10 van de 100 aanbevolen bestemmingen. |
-| Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Zacht | In het geval van verschillende doelen en doeltypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties, zou een maximum van 50 attributen in een dataflow aan een bestemming moeten worden in kaart gebracht. |
+| Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Zacht | In het geval van verschillende bestemmingen en bestemmingstypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties, zou een maximum van 50 attributen in een dataflow aan een bestemming moeten worden in kaart gebracht. |
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Hard | Momenteel is het alleen mogelijk om te exporteren *profielrecordkenmerken* naar bestemmingen. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
 | Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Niet beschikbaar | Hard | Op dit moment is het **niet** kunnen worden geëxporteerd *array- of toewijzingskenmerken* naar bestemmingen. De uitzondering op deze regel is de [identiteitsbewijs](/help/xdm/field-groups/profile/identitymap.md), die wordt geëxporteerd in zowel streaming als bestandgebaseerde activering. |
 
@@ -67,13 +67,13 @@ De onderstaande instructies zijn van toepassing op activering via [batchbestemmi
 | --- | --- | --- | --- |
 | Activeringsfrequentie | Eén dagelijkse volledige export of frequentere incrementele export om de 3, 6, 8 of 12 uur. | Hard | Lees de [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) Documentatiegedeelten voor meer informatie over de frequentieverhogingen voor batchexport. |
 | Maximumaantal soorten publiek dat in een bepaald uur kan worden geëxporteerd | 100 | Zacht | De aanbeveling moet een maximum van 100 publiek aan partijbestemmingsdataflows toevoegen. |
-| Maximumaantal rijen (records) per bestand dat moet worden geactiveerd | 5 miljoen | Hard | Adobe Experience Platform splitst de geëxporteerde bestanden automatisch op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel. Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Lees voor meer informatie de [sectie plannen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) van de activerende batchdoelzelfstudie. |
+| Maximumaantal rijen (records) per bestand dat moet worden geactiveerd | 5 miljoen | Hard | Adobe Experience Platform splitst de geëxporteerde bestanden automatisch op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel. Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Lees voor meer informatie de [sectie plannen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) van de activerende zelfstudie voor batchbestemmingen. |
 
 {style="table-layout:auto"}
 
 ### Ad-hocactivering {#ad-hoc-activation}
 
-De onderstaande instructies zijn van toepassing op de [ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md) methode.
+De onderstaande instructies gelden voor de [ad-hocactivering](/help/destinations/api/ad-hoc-activation-api.md) methode.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
@@ -94,6 +94,101 @@ De onderstaande instructies zijn van toepassing op activering via [Edge-verperso
 
 {style="table-layout:auto"}
 
+## [!BADGE Beta]{type=Informative} Gegevensset exporteren {#dataset-exports}
+
+De uitvoer van gegevenssets wordt momenteel ondersteund in een **[!UICONTROL First Full and then Incremental]** [patroon](/help/destinations/ui/export-datasets.md#scheduling). De instructies die in deze sectie worden beschreven, zijn van toepassing op de eerste volledige export die plaatsvindt nadat een gegevensset-exportworkflow is ingesteld.
+
+| Guardrail | Limiet | Limiettype | Beschrijving |
+| --- | --- | --- | --- |
+| Grootte van geëxporteerde gegevenssets | 5 miljard records | Zacht | De hier beschreven limiet voor de uitvoer van gegevenssets is een *zachte guardrail*. Bijvoorbeeld, terwijl de gebruikersinterface u niet zal blokkeren van het uitvoeren van datasets groter dan 5 miljard verslagen, is het gedrag onvoorspelbaar en de uitvoer zou of kunnen ontbreken of zeer lange uitvoerlatentie hebben. |
+
+{style="table-layout:auto"}
+
+<!--
+
+### Dataset Types {#dataset-types}
+
+Datasets exported from Experience Platform can be of two types, as described below:
+
+**Timeseries**
+Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
+The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+
+**Record** 
+Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
+The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
+
+The guardrails below are grouped by the format of the exported file, and then further by dataset type.
+
+**Parquet output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+
+{style="table-layout:auto"}
+
+**JSON output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+<table>
+<thead>
+  <tr>
+    <th>Output format</th>
+    <th>Dataset type</th>
+    <th>Compression</th>
+    <th>Guardrail</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Parquet</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td>Record</td>
+    <td>-</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">JSON</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Record</td>
+    <td>Yes</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td>No</td>
+    <td>One million records per file</td>
+    <td>The record count of the dataset must be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+</tbody>
+</table>
+
+-->
+
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
 [Destination SDK](/help/destinations/destination-sdk/overview.md) is een reeks van configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De onderstaande instructies zijn van toepassing op de doelen die u configureert met behulp van Destination SDK.
@@ -101,7 +196,7 @@ De onderstaande instructies zijn van toepassing op activering via [Edge-verperso
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Maximum aantal [persoonlijke aangepaste bestemmingen](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Zacht | U kunt maximaal vijf aangepaste streaming privédoelen of batchdoelen maken met behulp van Destination SDK. Neem contact op met een aangepaste zorgvertegenwoordiger als u meer dan vijf van dergelijke doelen moet maken. |
-| Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 1 800 en maximaal 3 600)</li><li>`maxNumEventsInBatch` (minimaal 1 000, maximaal 10 000)</li></ul> | Hard | Wanneer u de [configureerbare samenvoeging](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) Houd rekening met de minimum- en maximumwaarden die bepalen hoe vaak HTTP-berichten naar de op API gebaseerde bestemming worden verzonden en hoeveel profielen de berichten moeten bevatten. |
+| Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 1 800 en maximaal 3 600)</li><li>`maxNumEventsInBatch` (minimaal 1 000, maximaal 10 000)</li></ul> | Hard | Wanneer u de opdracht [configureerbare samenvoeging](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) Houd rekening met de minimum- en maximumwaarden die bepalen hoe vaak HTTP-berichten naar de op API gebaseerde bestemming worden verzonden en hoeveel profielen de berichten moeten bevatten. |
 
 {style="table-layout:auto"}
 
