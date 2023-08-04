@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
-source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
+source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 25%
+source-wordcount: '242'
+ht-degree: 24%
 
 ---
 
@@ -66,7 +66,8 @@ ht-degree: 25%
    * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)
 * Gebruiksscenario’s {#use-cases}
    * Kwesties van gegevensgebruik door partners {#partner-data}
-      * [Eerst-partijprofielen aanvullen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
       * [Nieuwe klanten aantrekken en aanschaffen via support voor prospectie](/help/rtcdp/partner-data/prospecting.md)
+      * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Erkenning door bezoekers met hulp van partners gebruiken om ervaringen op locatie aan te passen](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Woordenlijst voor Experience Platform](https://www.adobe.com/go/platform-glossary-en)

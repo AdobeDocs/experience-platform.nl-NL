@@ -4,7 +4,7 @@ description: Leer hoe te om nieuwe klanten door het prospecteren van gebruiksgev
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
 workflow-type: tm+mt
 source-wordcount: '1906'
 ht-degree: 0%
@@ -76,7 +76,7 @@ De volgende componenten worden gebruikt voor identiteit, gegevensbeheer en behee
 * **(Documentatie binnenkort beschikbaar)** Veldgroepen die zijn aangepast aan ondersteuning van partnergegevens
 * **(Documentatie binnenkort beschikbaar)** De etiketten van de derde die u op de attributen zult toevoegen die uit partners komen
 
-#### Creeer een identiteitskaart van de Partner identiteitskaart namespace
+#### Creeer een identiteitskaart van de Partner identiteitskaart namespace {#create-partner-id-namespace}
 
 Begin door een nieuw identiteitstype voor de profielen te creëren die u van de partner zult ontvangen. Hiervoor moet u in het gedeelte Identiteit een nieuwe naamruimte maken van het type **[!UICONTROL Partner ID]**.
 
