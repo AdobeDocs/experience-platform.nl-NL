@@ -2,9 +2,9 @@
 title: Gegevensbeheer in Query-service
 description: Dit overzicht behandelt de belangrijkste elementen van gegevensbeheer in de Dienst van de Vraag van het Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2832'
+source-wordcount: '3121'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ De volgende categorieën zijn nuttig in het naleven van gegevensnalevingsverorde
 1. Audit
 1. Gegevensgebruik
 1. Privacy
-<!-- 1. Data hygiene -->
+1. Gegevenshygiëne
 
 Dit document onderzoekt elk van de verschillende gebieden van bestuur en toont aan hoe te om gegevensnaleving te vergemakkelijken wanneer het gebruiken van de Dienst van de Vraag. Zie de [beheer, privacy en beveiligingsoverzicht](../../landing/governance-privacy-security/overview.md) voor uitgebreidere informatie over hoe u met Experience Platform klantgegevens kunt beheren en naleving kunt garanderen.
 
-## Beveiliging
+## Beveiliging {#security}
 
 De veiligheid van gegevens is het proces om gegevens tegen onbevoegde toegang te beschermen en veilige toegang door zijn levenscyclus te verzekeren. De veilige toegang wordt gehandhaafd in Experience Platform door de toepassing van rollen en toestemmingen door mogelijkheden zoals op rol-gebaseerd toegangsbeheer en op attribuut-gebaseerde toegangsbeheer. De geloofsbrieven, SSL, en de gegevensencryptie worden ook gebruikt om gegevensbescherming over Platform te verzekeren.
 
@@ -35,8 +35,7 @@ De veiligheid met betrekking tot de Dienst van de Vraag is verdeeld in de volgen
 
 * [Toegangsbeheer](#access-control): De toegang wordt gecontroleerd door rollen en toestemmingen met inbegrip van dataset en kolom-vlakke toestemmingen.
 * Gegevens beveiligen via [connectiviteit](#connectivity): De gegevens worden beveiligd door Platform en externe cliënten door een beperkte verbinding met het verlopen van geloofsbrieven, of niet-vervallende geloofsbrieven te bereiken.
-* Gegevens beveiligen via [codering en systeemsleutels](#encryption): Gegevensbeveiliging wordt gewaarborgd door versleuteling wanneer de gegevens in rust zijn.
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* Gegevens beveiligen via [codering en door de klant beheerde sleutels (CMK)](#encryption-and-customer-managed-keys): Toegang die wordt beheerd door versleuteling wanneer gegevens in rust zijn.
 
 ### Toegangsbeheer {#access-control}
 
@@ -132,17 +131,14 @@ Voor verhoogde veiligheid, verleent de Dienst van de Vraag inheemse steun voor S
 
 Zie de handleiding op beschikbaar [SSL-opties voor clientverbindingen van derden met Query Service](../clients/ssl-modes.md) voor meer informatie, zoals hoe u verbinding kunt maken met de `verify-full` SSL-parameterwaarde.
 
-### Codering {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### Codering en door de klant beheerde sleutels (CMK) {#encryption-and-customer-managed-keys}
 
 Codering is het gebruik van een algoritmisch proces om gegevens om te zetten in gecodeerde en onleesbare tekst om ervoor te zorgen dat de informatie zonder een decoderingssleutel wordt beschermd en ontoegankelijk is.
 
 De de gegevensnaleving van de Dienst van de vraag zorgt ervoor dat het gegeven altijd wordt gecodeerd. Data-in-transit is altijd HTTPS-compatibel en data-at-rest wordt gecodeerd in een Azure Data Lake Store met systeemtoetsen. Zie de documentatie op [hoe gegevens in Adobe Experience Platform worden gecodeerd](../../landing/governance-privacy-security/encryption.md) voor meer informatie . Zie voor meer informatie over hoe gegevens in rust in Azure Data Lake Storage gecodeerd zijn [officiële Azure-documentatie](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+De gegevens-in-doorreis is altijd volgzaam HTTPS en zo ook wanneer de gegevens in rust in het gegevensmeer zijn, wordt de encryptie gedaan met Sleutel van het Beheer van de Klant (CMK), die reeds door het Beheer van het meer van Gegevens wordt gesteund. De momenteel ondersteunde versie is TLS1.2. Zie de [documentatie over door de klant beheerde sleutels (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) om te leren hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
+
 
 ## Audit {#audit}
 
@@ -206,14 +202,14 @@ De eigenschappen van de Dienst van de vraag voor gegevensbeheer vereenvoudigen e
 
 De de gegevensgebieden van het schema kunnen als identiteitsgebied door het Platform UI en de Dienst van de Vraag ook worden geplaatst staat u toe om [markeer de primaire identiteiten door het SQL bevel &quot;ALTER TABLE&quot;te gebruiken](../sql/syntax.md#alter-table). Een identiteit instellen met de opdracht `ALTER TABLE` bevel is vooral nuttig wanneer datasets gebruikend SQL eerder dan direct van een schema door het Platform UI worden gecreeerd. Zie de documentatie voor instructies over hoe u kunt [identiteitsvelden definiëren in de gebruikersinterface](../../xdm/ui/fields/identity.md) bij het gebruik van standaardschema&#39;s.
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## Gegevenshygiëne {#data-hygiene}
 
-## Data hygiene 
+Met &quot;gegevenshygiëne&quot; wordt bedoeld het repareren of verwijderen van gegevens die verouderd, onjuist, onjuist opgemaakt, gedupliceerd of onvolledig kunnen zijn. Deze processen zorgen ervoor dat de datasets over alle systemen nauwkeurig en verenigbaar zijn. Het is van belang te zorgen voor adequate gegevenshygiëne tijdens elke stap van de reis van de gegevens en zelfs vanaf de eerste plaats van gegevensopslag. In de Dienst van de Vraag van het Experience Platform, is dit of het gegevens meer of de versnelde opslag.
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+U kunt een identiteit aan een afgeleide dataset toewijzen om hun gegevensbeheer na de gecentraliseerde diensten van de Platform van de gegevenshygiëne toe te staan.
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+Omgekeerd, wanneer u een samengevoegde dataset op de versnelde opslag creeert, kunnen de samengevoegde gegevens niet worden gebruikt om de originele gegevens af te leiden. Als gevolg van deze gegevensaggregatie wordt de noodzaak om verzoeken om gegevenshygiëne te verzamelen, weggenomen.
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+Een uitzondering op dit scenario is het geval van schrapping. Als een gegevenshygiëneschrapping op een dataset wordt gevraagd en alvorens de schrapping wordt voltooid, wordt een andere afgeleide datasetvraag uitgevoerd, dan zal de afgeleide dataset informatie van de originele dataset vangen. In dit geval, moet u erop letten dat als een verzoek om een dataset te schrappen is verzonden, u geen onlangs afgeleide datasetvragen moet uitvoeren gebruikend de zelfde datasetbron.
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+Zie de [overzicht van de gegevenshygiëne](../../hygiene/home.md) voor meer informatie over gegevenshygiëne in Adobe Experience Platform.
