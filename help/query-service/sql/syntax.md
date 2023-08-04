@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 1%
 
 ---
@@ -597,9 +597,9 @@ Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na 
 
 #### STATISTIEKEN COMPUTEREN op het datumpeer {#compute-statistics-data-lake}
 
-U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` en `SHOW STATISTICS` SQL-opdrachten. Bereid kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen samen.
+U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` SQL-opdracht. Bereid kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen samen.
 
-`COMPUTE STATISTICS` breidt de `ANALYZE TABLE` gebruiken. De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` opdrachten worden niet ondersteund in versnelde opslagtabellen. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen.
+`COMPUTE STATISTICS` breidt de `ANALYZE TABLE` gebruiken. De `COMPUTE STATISTICS`, `FILTERCONTEXT`, en `FOR COLUMNS` opdrachten worden niet ondersteund in versnelde opslagtabellen. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen.
 
 **Voorbeeld**
 
@@ -611,7 +611,7 @@ De `FILTER CONTEXT` bevel berekent statistieken over een ondergroep van de datas
 
 >[!NOTE]
 >
->De `Statistics ID` en de geproduceerde statistieken zijn slechts geldig voor elke zitting en kunnen niet over verschillende zittingen worden betreden PSQL.<br><br>Beperkingen:<ul><li>Het genereren van statistieken wordt niet ondersteund voor array- of kaartgegevenstypen</li><li>Berekende statistieken zijn niet blijvend</li></ul><br><br>Opties:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De markering is standaard ingesteld op true. Als daarom statistieken worden aangevraagd voor een gegevenstype dat niet wordt ondersteund, wordt er geen foutmelding weergegeven, maar mislukt deze fout stilzwijgend.<br>Om meldingen over fouten in te schakelen wanneer statistieken worden aangevraagd over niet-ondersteund gegevenstype, gebruikt u: `SET skip_stats_for_complex_datatypes = false`.
+>De `Statistics ID` en de geproduceerde statistieken zijn slechts geldig voor elke zitting en kunnen niet over verschillende zittingen worden betreden PSQL.<br><br>Beperkingen:<ul><li>Het genereren van statistieken wordt niet ondersteund voor array- of kaartgegevenstypen</li><li>Berekende statistieken zijn **niet** Doorgestreept in sessies.</li></ul><br><br>Opties:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De markering is standaard ingesteld op true. Als daarom statistieken worden aangevraagd voor een gegevenstype dat niet wordt ondersteund, wordt er geen foutmelding weergegeven, maar worden velden zonder toezicht overgeslagen met de niet-ondersteunde datatypen.<br>Om meldingen over fouten in te schakelen wanneer statistieken worden aangevraagd over niet-ondersteund gegevenstype, gebruikt u: `SET skip_stats_for_complex_datatypes = false`.
 
 De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 
@@ -629,7 +629,7 @@ U kunt de gegevens verwerkte statistieken dan direct vragen door van verwijzinge
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Gebruik de `SHOW STATISTICS` bevel om de meta-gegevens voor alle tijdelijke statistieklijsten te tonen die in de zitting worden geproduceerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
+Gebruik de `SHOW STATISTICS` gebruiken om de metagegevens weer te geven voor alle tijdelijke statistieken die in de sessie worden gegenereerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
 
 ```sql
 SHOW STATISTICS;
