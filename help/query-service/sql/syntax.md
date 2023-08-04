@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3860'
 ht-degree: 1%
 
 ---
@@ -113,9 +113,9 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Houd er rekening mee dat een `SNAPSHOT` clausule werkt met een lijst of lijstalias maar niet bovenop een sub-vraag of een mening. A `SNAPSHOT` clausule zal overal werken `SELECT` de vraag op een lijst kan worden toegepast.
+Let op: a `SNAPSHOT` clausule werkt met een lijst of lijstalias maar niet bovenop een sub-vraag of een mening. A `SNAPSHOT` clausule zal overal werken `SELECT` de vraag op een lijst kan worden toegepast.
 
-Bovendien kunt u `HEAD` en `TAIL` als speciale verschuivingswaarden voor momentopnameclausules. Gebruiken `HEAD` verwijst naar een verschuiving vóór de eerste opname, terwijl `TAIL` verwijst naar een verschuiving na de laatste opname.
+Bovendien kunt u `HEAD` en `TAIL` als speciale verschuivingswaarden voor opnameclausules. Gebruiken `HEAD` verwijst naar een verschuiving vóór de eerste opname, terwijl `TAIL` verwijst naar een verschuiving na de laatste opname.
 
 >[!NOTE]
 >
@@ -124,7 +124,6 @@ Bovendien kunt u `HEAD` en `TAIL` als speciale verschuivingswaarden voor momento
 >- Als de facultatieve fallback gedragsvlag wordt geplaatst, zal de Dienst van de Vraag de vroegste beschikbare momentopname kiezen, zal het als beginmomentopname plaatsen, en de gegevens tussen de vroegste beschikbare momentopname en de gespecificeerde eindmomentopname terugkeren. Deze gegevens zijn **inclusief** van de vroegste beschikbare momentopname.
 >
 >- Als de optionele fallback-gedragmarkering niet is ingesteld, wordt een fout geretourneerd.
-
 
 ### WHERE-component
 
@@ -184,7 +183,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt opgegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
+| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`. |
 | `label` | Wanneer u een dataset met een vraag CTAS creeert, gebruik dit etiket met de waarde van `profile` om uw dataset zoals toegelaten voor profiel te etiketteren. Dit betekent dat uw dataset automatisch voor profiel duidelijk wordt aangezien het wordt gecreeerd. Zie het afgeleide document van de attributenuitbreiding voor meer informatie over het gebruik van `label`. |
 | `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
 
@@ -338,7 +337,7 @@ DROP VIEW IF EXISTS v1
 
 ## Anoniem blok
 
-Een anoniem blok bestaat uit twee secties: secties voor uitvoerbaar en uitzonderingsbeheer. In een anoniem blok, is de uitvoerbare sectie verplicht. De sectie voor de afhandeling van uitzonderingen is echter optioneel.
+Een anoniem blok bestaat uit twee secties: uitvoerbaar en uitzondering-behandelend secties. In een anoniem blok, is de uitvoerbare sectie verplicht. De sectie voor de afhandeling van uitzonderingen is echter optioneel.
 
 In het volgende voorbeeld ziet u hoe u een blok maakt met een of meer instructies die samen moeten worden uitgevoerd:
 
@@ -383,7 +382,7 @@ De functiemarkering instellen `auto_to_json` op true voordat u de SELECT-query m
 set auto_to_json=true; 
 ```
 
-#### Voordat u de `auto_to_json` markeren
+#### Voordat u het dialoogvenster `auto_to_json` markeren
 
 De volgende tabel bevat een voorbeeld van een queryresultaat vóór de `auto_to_json` wordt ingesteld. In beide scenario&#39;s werd dezelfde SELECT-query (zoals hieronder wordt weergegeven) gebruikt die een tabel met complexe velden als doel had.
 
@@ -528,7 +527,7 @@ In het voorbeeld wordt het volgende geretourneerd:
 
 In dit tweede voorbeeld worden het concept en de toepassing van het `inline` functie. Het gegevensmodel voor het voorbeeld wordt in de onderstaande afbeelding weergegeven.
 
-![Een schemadiagram voor productListItems.](../images/sql/productListItems.png)
+![Een schema voor productListItems.](../images/sql/productListItems.png)
 
 **Voorbeeld**
 
@@ -536,13 +535,13 @@ In dit tweede voorbeeld worden het concept en de toepassing van het `inline` fun
 select inline(productListItems) from source_dataset limit 10;
 ```
 
-De uit de `source_dataset` worden gebruikt om de doeltabel te vullen.
+De waarden die uit de `source_dataset` worden gebruikt om de doeltabel te vullen.
 
 | SKU | _experience | hoeveelheid | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pas,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 |
-| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;) |  |  |
-| product-id-2 | (&quot;(&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;) |          |              |
+| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL-opdrachten
@@ -588,7 +587,7 @@ Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na 
 |---|---|
 | `field` | De naam van de kolom in een tabel. |
 | `data-type` | Het acceptabele type gegevens voor elke kolom. |
-| `count` | Het aantal rijen dat een waarde bevat die niet gelijk is aan null voor dit veld. |
+| `count` | Het aantal rijen dat een andere waarde dan null bevat voor dit veld. |
 | `distinct-count` | Het aantal unieke of verschillende waarden voor dit veld. |
 | `missing` | Het aantal rijen met een null-waarde voor dit veld. |
 | `max` | De maximumwaarde uit de geanalyseerde tabel. |
@@ -600,7 +599,7 @@ Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na 
 
 U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Storage] (ADLS) datasets met de `COMPUTE STATISTICS` en `SHOW STATISTICS` SQL-opdrachten. Bereid kolomstatistieken over of de volledige dataset, een ondergroep van een dataset, alle kolommen, of een ondergroep van kolommen samen.
 
-`COMPUTE STATISTICS` breidt de `ANALYZE TABLE` gebruiken. De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` bevelen worden niet gesteund op de lijsten van het gegevenspakhuis. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen.
+`COMPUTE STATISTICS` breidt de `ANALYZE TABLE` gebruiken. De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` opdrachten worden niet ondersteund in versnelde opslagtabellen. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen.
 
 **Voorbeeld**
 
@@ -608,28 +607,43 @@ U kunt nu statistieken op kolomniveau berekenen over [!DNL Azure Data Lake Stora
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
+De `FILTER CONTEXT` bevel berekent statistieken over een ondergroep van de dataset die op de verstrekte filtervoorwaarde wordt gebaseerd. De `FOR COLUMNS` richt specifieke kolommen voor analyse.
+
 >[!NOTE]
 >
->`FILTER CONTEXT` berekent statistieken over een subset van de dataset op basis van de verstrekte filtervoorwaarde, en `FOR COLUMNS` specifieke kolommen voor analyse.
+>De `Statistics ID` en de geproduceerde statistieken zijn slechts geldig voor elke zitting en kunnen niet over verschillende zittingen worden betreden PSQL.<br><br>Beperkingen:<ul><li>Het genereren van statistieken wordt niet ondersteund voor array- of kaartgegevenstypen</li><li>Berekende statistieken zijn niet blijvend</li></ul><br><br>Opties:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De markering is standaard ingesteld op true. Als daarom statistieken worden aangevraagd voor een gegevenstype dat niet wordt ondersteund, wordt er geen foutmelding weergegeven, maar mislukt deze fout stilzwijgend.<br>Om meldingen over fouten in te schakelen wanneer statistieken worden aangevraagd over niet-ondersteund gegevenstype, gebruikt u: `SET skip_stats_for_complex_datatypes = false`.
 
 De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 
 ```console
-  Statistics ID 
-------------------
- ULKQiqgUlGbTJWhO
+|     Statistics ID      | 
+| ---------------------- |
+| adc_geometric_stats_1  |
 (1 row)
 ```
 
-U kunt teruggekeerde statistiekidentiteitskaart dan gebruiken om omhoog de gegevens verwerkte statistieken met te zoeken `SHOW STATISTICS` gebruiken.
+U kunt de gegevens verwerkte statistieken dan direct vragen door van verwijzingen te voorzien `Statistics ID`. Met de onderstaande voorbeeldinstructie kunt u de uitvoer in zijn geheel weergeven wanneer deze wordt gebruikt met de opdracht `Statistics ID` of de naam van de alias. Voor meer informatie over deze functie gaat u naar [documentatie over aliasnamen](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
-SHOW STATISTICS FOR <statistics_ID>
+-- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
+SELECT * FROM adc_geometric_stats_1;
 ```
 
->[!NOTE]
->
->`COMPUTE STATISTICS` biedt geen ondersteuning voor de gegevenstypen array of map. U kunt een `skip_stats_for_complex_datatypes` markering die moet worden gewaarschuwd of die moet worden weergegeven als het invoerdataframe kolommen met arrays en kaartgegevenstypen bevat. De markering is standaard ingesteld op true. Gebruik de volgende opdracht om meldingen of fouten in te schakelen: `SET skip_stats_for_complex_datatypes = false`.
+Gebruik de `SHOW STATISTICS` bevel om de meta-gegevens voor alle tijdelijke statistieklijsten te tonen die in de zitting worden geproduceerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
+
+```sql
+SHOW STATISTICS;
+```
+
+Hieronder ziet u een voorbeelduitvoer van SHOW STATISTICS.
+
+```console
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
 
 Zie de [Gegevenssetstatistiek](../essential-concepts/dataset-statistics.md) voor meer informatie .
 
@@ -638,7 +652,7 @@ Zie de [Gegevenssetstatistiek](../essential-concepts/dataset-statistics.md) voor
 De Dienst van de Vraag van Adobe Experience Platform verstrekt steekproefdatasets als deel van zijn benaderende mogelijkheden van de vraagverwerking.
 Gegevenssetvoorbeelden kunnen het best worden gebruikt wanneer u geen exact antwoord nodig hebt voor een geaggregeerde bewerking via een gegevensset. Deze eigenschap staat u toe om efficiëntere verkennende vragen over grote datasets te leiden door een benaderende vraag uit te geven om een benaderend antwoord terug te keren.
 
-Voorbeeldgegevenssets worden gemaakt met uniforme willekeurige steekproeven op basis van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets, die slechts een percentage van verslagen van origineel gebruiken. De eigenschap van de datasetsteekproef breidt uit `ANALYZE TABLE` gebruiken met de `TABLESAMPLE` en `SAMPLERATE` SQL-opdrachten.
+Voorbeeldgegevenssets worden gemaakt met uniforme willekeurige steekproeven op basis van bestaande [!DNL Azure Data Lake Storage] (ADLS) datasets, die slechts een percentage van verslagen van origineel gebruiken. De de steekproefeigenschap van de dataset breidt uit `ANALYZE TABLE` gebruiken met de `TABLESAMPLE` en `SAMPLERATE` SQL-opdrachten.
 
 In de onderstaande voorbeelden laat regel 1 zien hoe u een 5%-monster van de tabel berekent. Regel twee toont aan hoe te om een 5% steekproef van een gefilterde mening van de gegevens binnen de lijst te berekenen.
 
@@ -713,7 +727,7 @@ EXECUTE name [ ( parameter ) ]
 
 ### VERKLAREN
 
-De `EXPLAIN` toont het bevel het uitvoeringsplan voor de geleverde verklaring. In het uitvoeringsplan ziet u hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand.  Als er naar meerdere tabellen wordt verwezen, wordt aangegeven welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
+De `EXPLAIN` toont het bevel het uitvoeringsplan voor de geleverde verklaring. Het uitvoeringsplan toont hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand.  Als er naar meerdere tabellen wordt verwezen, wordt aangegeven welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
 
 ```sql
 EXPLAIN statement
@@ -764,7 +778,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARE {#prepare}
 
-De `PREPARE` kunt u een voorbereide instructie maken. Een voorbereide instructie is een serverobject dat kan worden gebruikt om vergelijkbare SQL-instructies te sjablonen.
+De `PREPARE` kunt u een voorbereide instructie maken. Een voorbereide instructie is een object aan de serverzijde dat kan worden gebruikt om vergelijkbare SQL-instructies te sjablonen.
 
 Bereide instructies kunnen parameters hebben. Dit zijn waarden die in de instructie worden vervangen wanneer deze wordt uitgevoerd. Parameters worden naar positie verwezen, waarbij $1, $2, enz. wordt gebruikt bij het gebruik van voorbereide instructies.
 
@@ -837,7 +851,7 @@ SHOW ALL
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `name` | De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter zijn de volgende waarden:<br>`SERVER_VERSION`: Deze parameter toont het versienummer van de server.<br>`SERVER_ENCODING`: Deze parameter toont de codering van de tekenset aan de serverzijde.<br>`LC_COLLATE`: Deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).<br>`LC_CTYPE`: Deze parameter toont de landinstelling van de database voor tekenclassificatie.<br>`IS_SUPERUSER`: Deze parameter toont of heeft de huidige rol supergebruikersvoorrechten. |
+| `name` | De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter zijn de volgende waarden:<br>`SERVER_VERSION`: Deze parameter toont het versienummer van de server.<br>`SERVER_ENCODING`: Deze parameter toont de codering van de tekenset aan de serverzijde.<br>`LC_COLLATE`: Deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).<br>`LC_CTYPE`: Deze parameter toont de landinstelling van de database voor tekenclassificatie.<br>`IS_SUPERUSER`: Deze parameter laat zien of de huidige rol supergebruikersrechten heeft. |
 | `ALL` | Toon de waarden van alle configuratieparameters met beschrijvingen. |
 
 **Voorbeeld**
@@ -855,7 +869,7 @@ SHOW DateStyle;
 (1 row)
 ```
 
-### KOPIËREN
+### KOPIE
 
 De `COPY` bevel dupliceert de output van om het even welk `SELECT` zoeken naar een opgegeven locatie. Deze opdracht is alleen succesvol als de gebruiker toegang heeft tot deze locatie.
 
@@ -945,7 +959,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ##### Ondersteunde gegevenstypen
 
-De volgende lijst maakt een lijst van de toegelaten gegevenstypes voor het toevoegen van kolommen aan een lijst met [!DNL Postgres SQL], XDM en de [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
+De volgende tabel bevat de geaccepteerde gegevenstypen voor het toevoegen van kolommen aan een tabel met [!DNL Postgres SQL], XDM en de [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
 
 | — | PSQL-client | XDM | ADR | Beschrijving |
 |---|---|---|---|---|
@@ -957,7 +971,7 @@ De volgende lijst maakt een lijst van de toegelaten gegevenstypes voor het toevo
 | 6 | `double` | `float8` | `double precision` | `FLOAT8` en `FLOAT` zijn geldige synoniemen voor `DOUBLE PRECISION`. `double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
 | 7 | `double precision` | `float8` | `double precision` | `FLOAT8` is een geldige synoniem voor `double precision`.`double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
 | 8 | `date` | `date` | `date` | De `date` Het gegevenstype is 4-byte opgeslagen kalenderdatumwaarden zonder tijdstempelinformatie. De geldige datumnotatie loopt van 01-01-0001 tot en met 12-31-9999. |
-| 9 | `datetime` | `datetime` | `datetime` | Een gegevenstype dat wordt gebruikt om een instant in de tijd op te slaan, uitgedrukt als een kalenderdatum en tijd van dag. `datetime` omvat de kwalificatoren van: jaar, maand, dag, uur, seconde, en fractie. A `datetime` de verklaring kan om het even welke ondergroep van deze tijdeenheden omvatten die in die opeenvolging worden aangesloten, of zelfs slechts één enkele tijdeenheid omvatten. |
+| 9 | `datetime` | `datetime` | `datetime` | Een gegevenstype dat wordt gebruikt om een instant in de tijd op te slaan, uitgedrukt als een kalenderdatum en tijd van dag. `datetime` Bevat de volgende parameters: jaar, maand, dag, uur, seconde en fractie. A `datetime` de verklaring kan om het even welke ondergroep van deze tijdeenheden omvatten die in die opeenvolging worden aangesloten, of zelfs slechts één enkele tijdeenheid omvatten. |
 | 10 | `char(len)` | `string` | `char(len)` | De `char(len)` trefwoord wordt gebruikt om aan te geven dat het item een teken met een vaste lengte is. |
 
 #### SCHEMA TOEVOEGEN
@@ -992,7 +1006,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 | ------ | ------ |
 | `table_name` | De naam van de tabel die u bewerkt. |
 | `column_name` | De naam van de kolom die u wilt toevoegen. |
-| `data_type` | Het gegevenstype van de kolom die u wilt toevoegen. Tot de ondersteunde gegevenstypen behoren: bigint, char, string, date, datetime, double, double precision, integer, small int, tinyint, varchar. |
+| `data_type` | Het gegevenstype van de kolom die u wilt toevoegen. Ondersteunde gegevenstypen zijn onder andere: bigint, char, string, date, datetime, double, double precision, integer, small int, tinyint, varchar. |
 
 ### PRIMAIRE TOETSEN TONEN
 

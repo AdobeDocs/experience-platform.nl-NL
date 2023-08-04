@@ -1,9 +1,9 @@
 ---
 title: Gegevensset Statistieken berekenen
 description: Dit document beschrijft hoe te om kolom-vlakke statistieken over de datasets van de Opslag van de Verkeer van Gegevens van de Azure (ADLS) met SQL bevelen gegevens te verwerken.
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Om de statistieken te zien die met werden berekend `ANALYZE TABLE COMPUTE STATIS
 
 >[!IMPORTANT]
 >
->De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` bevelen worden niet gesteund op de lijsten van het gegevenspakhuis. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen. Zie de klasse [TABELsectie ANALYSEREN](../sql/syntax.md#analyze-table) van de SQL-syntaxishandleiding.
+>De `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, en `SHOW STATISTICS` opdrachten worden niet ondersteund in versnelde opslagtabellen. Deze uitbreidingen voor de `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen. Zie de klasse [TABELsectie ANALYSEREN](../sql/syntax.md#analyze-table) van de SQL-syntaxishandleiding.
 
 Deze gids helpt u uw vragen structureren zodat u de kolomstatistieken van een dataset van ADLS kunt gegevens verwerken. Gebruikend deze bevelen, kunt u de statistieken zien in uw zitting door een cliënt PSQL gebruikend een SQL vraag worden geproduceerd.
 
@@ -95,7 +95,7 @@ De berekende statistische uitvoer kan er ongeveer zo uitzien als in het ondersta
 
 ## De metagegevens van de statistische analyse weergeven {#show-statistics}
 
-U kunt de `SHOW STATISTICS` bevel om de meta-gegevens voor alle tijdelijke statistieklijsten te tonen die in de zitting worden geproduceerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
+U kunt de `SHOW STATISTICS` gebruiken om de metagegevens weer te geven voor alle tijdelijke statistieken die in de sessie worden gegenereerd. Met deze opdracht kunt u het bereik van uw statistische analyse verfijnen.
 
 Een voorbeeld van uitvoer van `SHOW STATISTICS` is hieronder weergegeven.
 

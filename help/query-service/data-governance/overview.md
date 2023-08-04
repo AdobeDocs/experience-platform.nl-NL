@@ -2,7 +2,7 @@
 title: Gegevensbeheer in Query-service
 description: Dit overzicht behandelt de belangrijkste elementen van gegevensbeheer in de Dienst van de Vraag van het Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
 source-wordcount: '2832'
 ht-degree: 0%
@@ -36,7 +36,6 @@ De veiligheid met betrekking tot de Dienst van de Vraag is verdeeld in de volgen
 * [Toegangsbeheer](#access-control): De toegang wordt gecontroleerd door rollen en toestemmingen met inbegrip van dataset en kolom-vlakke toestemmingen.
 * Gegevens beveiligen via [connectiviteit](#connectivity): De gegevens worden beveiligd door Platform en externe cliënten door een beperkte verbinding met het verlopen van geloofsbrieven, of niet-vervallende geloofsbrieven te bereiken.
 * Gegevens beveiligen via [codering en systeemsleutels](#encryption): Gegevensbeveiliging wordt gewaarborgd door versleuteling wanneer de gegevens in rust zijn.
-
 <!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
 ### Toegangsbeheer {#access-control}
@@ -82,8 +81,8 @@ Zodra het aangewezen niveau van toegang gebruikend etiketten en rollen is toegep
 
 1. Als een gebruiker toegang tot één van de kolommen binnen een schema is ontzegd, wordt de gebruiker ook toestemming ontzegd om op de beperkte kolom te lezen of te schrijven. Dit geldt voor de volgende algemene scenario&#39;s:
 
-   * **Zaak 1**: Wanneer een gebruiker probeert om een vraag uit te voeren die slechts een beperkte kolom beïnvloedt, werpt het systeem een fout dat de kolom niet bestaat.
-   * **Zaak 2**: Wanneer een gebruiker probeert om een vraag met veelvoudige kolommen met inbegrip van een beperkte kolom uit te voeren, keert het systeem output voor alle niet-beperkte slechts kolommen terug.
+   * **Geval 1**: Wanneer een gebruiker een query probeert uit te voeren die alleen van invloed is op een beperkte kolom, genereert het systeem een fout die de kolom niet bestaat.
+   * **Zaak 2**: Wanneer een gebruiker een query probeert uit te voeren met meerdere kolommen inclusief een beperkte kolom, retourneert het systeem alleen uitvoer voor alle niet-beperkte kolommen.
 
 1. Als een gebruiker probeert om tot een berekend gebied toegang te hebben, wordt de gebruiker vereist om toegang tot alle gebieden te hebben die in de samenstelling worden gebruikt of het systeem ontkent ook toegang tot het berekende gebied.
 
@@ -155,13 +154,13 @@ Om het even welke logboekcategorieën kunnen worden gevraagd zoals gewenst door 
 
 De UI van vraaglogboeken staat u toe om uitvoeringsdetails voor alle vragen te controleren en te herzien die of via de Redacteur van de Vraag of de Dienst API van de Vraag in werking zijn gesteld. Dit brengt transparantie aan de activiteiten van de Dienst van de Vraag, toestaand u de meta-gegevens voor controleren **alles** de vragen die over de Dienst van de Vraag zijn uitgevoerd. Het omvat alle types van vragen of het een verkennende, partij, of geplande vraag is.
 
-U hebt toegang tot de logboeken van de query via de gebruikersinterface van het Platform in het dialoogvenster [!UICONTROL Logs] tabblad van het dialoogvenster [!UICONTROL Queries] werkruimte.
+U hebt toegang tot de logboeken van de query via de gebruikersinterface van het Platform in het dialoogvenster [!UICONTROL Logs] tabblad van het [!UICONTROL Queries] werkruimte.
 
 ![Het tabblad Vragenlijsten met het deelvenster Details gemarkeerd.](../images/data-governance/overview/queries-log.png)
 
 ### Controlelogboeken {#audit-logs}
 
-De logboeken van de controle bevatten meer gedetailleerde informatie dan vraaglogboeken en laten u toe om logboeken te filtreren die op attributen zoals gebruiker, datum, type van vraag, etc. worden gebaseerd. Buiten de details beschikbaar in vraaglogboek UI, slaat de Logboeken van de Controle details op individuele gebruikers samen met hun zittingsgegevens of connectiviteit aan een derdecliënt op.
+De logboeken van de controle bevatten meer gedetailleerde informatie dan vraaglogboeken en laten u toe om logboeken te filtreren die op attributen zoals gebruiker, datum, type van vraag, etc. worden gebaseerd. Buiten de details beschikbaar in vraaglogboek UI, slaat de Logboeken van de Controle details op individuele gebruikers samen met hun zittingsgegevens of connectiviteit aan een derde cliënt op.
 
 Door een nauwkeurige staat van dienst van gebruikersacties te verstrekken, kan een controletraject helpen bij het oplossen van problemenkwesties en uw zaken effectief helpen aan het beleid van het collectieve gegevensbeheer en regelgevende vereisten voldoen. De logboeken van de controle verstrekken een verslag van alle activiteiten van de Platform. Gebruikend controlelogboeken kunt u gebruikersacties met betrekking tot vraaguitvoering, malplaatjes, en geplande vragen controleren om de transparantie en de zichtbaarheid van acties te verhogen die door gebruikers in de Dienst van de Vraag worden uitgevoerd.
 
@@ -177,7 +176,7 @@ Hieronder ziet u een lijst met drie logboeken voor uitgebreide servers die meer 
 
 1. **Meta-querylogs**: Wanneer een vraag wordt uitgevoerd, worden diverse bijbehorende achterste sub-query&#39;s (zoals het ontleden) uitgevoerd. Deze soorten vragen zijn genoemd geworden &quot;meta-gegevens&quot;vragen. De relevante gegevens zijn te vinden in de auditlogboeken.
 1. **Sessielogboeken**: Het systeem leidt tot een logboek van de zittingsingang voor een gebruiker wanneer zij login de Dienst van de Vraag ongeacht of zij een vraag uitvoeren.
-1. **Logbestanden van clientverbindingen van derden**: Een logboek van de connectiviteitscontrole wordt geproduceerd wanneer een gebruiker de Dienst van de Vraag met succes met een derdecliënt verbindt.
+1. **Logbestanden van clientverbindingen van derden**: Een logboek van de connectiviteitscontrole wordt geproduceerd wanneer een gebruiker met succes de Dienst van de Vraag met een derdecliënt verbindt.
 
 Zie de [overzicht van auditlogboeken](../../landing/governance-privacy-security/audit-logs/overview.md) voor meer informatie over hoe de controlelogboeken uw organisatie kunnen helpen gegevensnaleving benaderen.
 
@@ -193,7 +192,7 @@ Het is de beste praktijk om in elke fase van de gegevensreis te werken aan de na
 
 Aangezien de ad hoc regelingen door een individuele gebruiker voor een specifiek doel worden gecreeerd, worden de XDM schemagebieden namespaced voor die bepaalde dataset en niet bedoeld voor gebruik over verschillende datasets. Het resultaat is dat ad-hocschema&#39;s standaard niet zichtbaar zijn in de gebruikersinterface van het Experience Platform. Hoewel er geen verschil in de toepassing van de etiketten van het gegevensgebruik tussen zowel standaard als ad hoc regelingen is, moeten de ad hoc regelingen die door de Dienst van de Vraag voor het etiketteren worden gecreeerd eerst in de UI van het Platform zichtbaar worden gemaakt. Zie de handleiding op [ontdekken van ad-hocschema&#39;s binnen de interface van het Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) voor meer informatie .
 
-Nadat u het schema hebt geopend, kunt u [labels toepassen op afzonderlijke velden](../../xdm/tutorials/labels.md). Zodra een schema is geëtiketteerd, erven alle datasets die uit dat schema voortkomen die etiketten. Van hier, kunt u beleid van het opstellingsgegevensgebruik dat gegevens met bepaalde etiketten kan beperken van worden geactiveerd aan bepaalde bestemmingen. Zie voor meer informatie het overzicht over [beleid voor gegevensgebruik](../../data-governance/policies/overview.md).
+Nadat u het schema hebt geopend, kunt u [labels toepassen op afzonderlijke velden](../../xdm/tutorials/labels.md). Zodra een schema is geëtiketteerd, erven alle datasets die uit dat schema voortkomen die etiketten. Van hier, kunt u beleid van het opstellingsgegevensgebruik dat gegevens met bepaalde etiketten kan beperken van worden geactiveerd aan bepaalde bestemmingen. Zie het overzicht over [beleid voor gegevensgebruik](../../data-governance/policies/overview.md).
 
 ## Privacy {#privacy}
 
@@ -211,7 +210,7 @@ De de gegevensgebieden van het schema kunnen als identiteitsgebied door het Plat
 
 ## Data hygiene 
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Query Service, this is either the data lake or the data warehouse.
+"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
 
 It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
 
