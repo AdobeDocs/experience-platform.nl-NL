@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
+source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
 workflow-type: tm+mt
-source-wordcount: '3863'
+source-wordcount: '3923'
 ht-degree: 1%
 
 ---
@@ -892,23 +892,44 @@ COPY query
 
 De `ALTER TABLE` Met deze opdracht kunt u primaire of buitenlandse toetsbeperkingen toevoegen of neerzetten en kolommen aan de tabel toevoegen.
 
-
 #### BEPERKING TOEVOEGEN OF VERWIJDEREN
 
-De volgende SQL-query&#39;s geven voorbeelden van het toevoegen of neerzetten van beperkingen aan een tabel.
+De volgende SQL-query&#39;s geven voorbeelden van het toevoegen of neerzetten van beperkingen aan een tabel. De primaire sleutel en de buitenlandse zeer belangrijke beperkingen kunnen aan veelvoudige kolommen met komma gescheiden waarden worden toegevoegd. U kunt samengestelde sleutels tot stand brengen door twee of meer kolomnaamwaarden over te gaan zoals die in de voorbeelden hieronder worden gezien.
+
+**Primaire of samengestelde toetsen definiëren**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name1, column_name2 ) NAMESPACE namespace
+```
+
+**Een relatie definiëren tussen tabellen op basis van een of meer toetsen**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name1, column_name2 ) REFERENCES referenced_table_name ( primary_column_name1, primary_column_name2 )
+```
+
+**Een identiteitskolom definiëren**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
 ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
+```
 
+**Een beperking/relatie/identiteit neerzetten**
+
+```sql
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
 
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name1, column_name2 )
+
 ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name1, column_name2 )
 
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
 
