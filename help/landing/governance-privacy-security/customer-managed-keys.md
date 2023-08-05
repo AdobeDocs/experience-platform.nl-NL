@@ -2,9 +2,9 @@
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1772'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecode
 
 >[!NOTE]
 >
->Gegevens in Adobe Experience Platform Data Lake en Profile Store (CosmosDB) worden gecodeerd met CMK.
+>Gegevens in het Adobe Experience Platform-gegevenspeer en -profielarchief worden gecodeerd met CMK. Deze worden beschouwd als uw primaire gegevensopslag.
 
 Dit document behandelt het proces voor het toelaten van de klant-geleide sleuteleigenschap (CMK) in Platform.
 
@@ -42,7 +42,7 @@ Het proces is als volgt:
 1. API-aanroepen gebruiken voor [Verstuur uw encryptiesleutel-id naar Adobe](#send-to-adobe) en start het schakelingsproces voor de functie.
 1. [Controleer de status van de configuratie](#check-status) om te controleren of CMK is ingeschakeld.
 
-Wanneer het installatieproces is voltooid, worden alle gegevens die in het Platform van alle sandboxen zijn ingevoerd, gecodeerd met uw [!DNL Azure] toetsinstelling. Als u CMK wilt gebruiken, gebruikt u [!DNL Microsoft Azure] functionaliteit die deel kan uitmaken van [openbaar voorvertoningsprogramma](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Wanneer het installatieproces is voltooid, worden alle gegevens die in het Platform van alle sandboxen zijn ingevoerd, gecodeerd met uw [!DNL Azure] toetsinstelling. Als u CMK wilt gebruiken, gebruikt u [!DNL Microsoft Azure] functionaliteit die deel kan uitmaken van hun [openbaar voorvertoningsprogramma](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Een [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -60,7 +60,7 @@ Aanmelden bij de [!DNL Azure] openen en de zoekbalk gebruiken om te zoeken naar 
 
 ![Sleutelvariabelen zoeken en selecteren](../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
 
-De **[!DNL Key vaults]** wordt weergegeven nadat u de service hebt geselecteerd. Selecteer **[!DNL Create]**.
+De **[!DNL Key vaults]** wordt weergegeven nadat u de service hebt geselecteerd. Van hier, selecteer **[!DNL Create]**.
 
 ![Sleutelvault maken](../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
 
@@ -74,7 +74,7 @@ Vul met behulp van het opgegeven formulier de basisgegevens voor de sleutelvault
 
 Van hier, ga door het belangrijkste werkschema van de de creatie van de kluis en vorm de verschillende opties volgens het beleid van uw organisatie.
 
-Zodra u bij **[!DNL Review + create]** U kunt de details van de sleutelvault bekijken terwijl deze wordt gevalideerd. Selecteer **[!DNL Create]** om het proces te voltooien.
+Zodra u bij **[!DNL Review + create]** U kunt de details van de sleutelvault bekijken terwijl de validatie wordt doorlopen. Selecteer **[!DNL Create]** om het proces te voltooien.
 
 ![Basisconfiguratie voor de sleutelkluis](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
@@ -98,7 +98,7 @@ Gebruik het meegeleverde formulier om een naam voor de sleutel op te geven en se
 >
 >Onthoud de naam die u voor de sleutel opgeeft, aangezien deze in een latere stap wordt gebruikt wanneer [verzenden van de toets naar Adobe](#send-to-adobe).
 
-Gebruik de resterende besturingselementen om de sleutel te configureren die u naar wens wilt genereren of importeren. Als u klaar bent, selecteert u **[!DNL Create]**.
+Gebruik de resterende besturingselementen om de sleutel te configureren die u naar wens wilt genereren of importeren. Selecteer **[!DNL Create]**.
 
 ![Sleutel configureren](../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
@@ -114,9 +114,9 @@ Wanneer u de sleutelkluis hebt geconfigureerd, moet u zich registreren voor de C
 
 Wanneer u de CMK-toepassing registreert, moet u oproepen naar Platform-API&#39;s uitvoeren. Voor details op hoe te om de vereiste authentificatiekopballen te verzamelen om deze vraag te maken, zie [Handleiding voor Platform-API-verificatie](../../landing/api-authentication.md).
 
-Terwijl de authentificatiegids instructies op hoe te om uw eigen unieke waarde voor vereiste te produceren verstrekt `x-api-key` aanvraagkoptekst, alle API-bewerkingen in deze handleiding gebruiken de statische waarde `acp_provisioning` in plaats daarvan. U moet nog steeds uw eigen waarden opgeven voor `{ACCESS_TOKEN}` en `{ORG_ID}`echter.
+Terwijl de authentificatiegids instructies op hoe te om uw eigen unieke waarde voor vereiste te produceren verstrekt `x-api-key` request header, alle API bewerkingen in deze handleiding gebruiken de statische waarde `acp_provisioning` in plaats daarvan. U moet nog steeds uw eigen waarden opgeven voor `{ACCESS_TOKEN}` en `{ORG_ID}`, echter.
 
-In alle API-aanroepen die in deze handleiding worden getoond, `platform.adobe.io` wordt gebruikt als wortelweg, die aan het gebied VA7 in gebreke blijft. Als uw organisatie een ander gebied gebruikt, `platform` moet worden gevolgd door een streepje en de regiocode die aan uw organisatie is toegewezen: `nld2` voor NLD2 of `aus5` voor AUS5 (bijvoorbeeld: `platform-aus5.adobe.io`). Als u het gebied van uw organisatie niet kent, gelieve uw systeembeheerder te contacteren.
+In alle API-aanroepen in deze handleiding `platform.adobe.io` wordt gebruikt als wortelweg, die aan het gebied VA7 in gebreke blijft. Als uw organisatie een ander gebied gebruikt, `platform` moet worden gevolgd door een streepje en de regiocode die aan uw organisatie is toegewezen: `nld2` voor NLD2 of `aus5` voor AUS5 (bijvoorbeeld: `platform-aus5.adobe.io`). Als u het gebied van uw organisatie niet kent, gelieve uw systeembeheerder te contacteren.
 
 ### URL voor verificatie ophalen
 
@@ -146,13 +146,13 @@ Een geslaagde reactie retourneert een `applicationRedirectUrl` eigenschap, die d
 }
 ```
 
-Kopieer en plak de `applicationRedirectUrl` adres in browser om een authentificatiedialoog te openen. Selecteren **[!DNL Accept]** om de CMK-toepassingsserviceprincipal aan uw [!DNL Azure] huurder.
+Kopieer en plak de `applicationRedirectUrl` adres in browser om een authentificatiedialoog te openen. Selecteren **[!DNL Accept]** om de CMK-toepassingsserviceprincipal toe te voegen aan uw [!DNL Azure] huurder.
 
 ![Aanvraag voor machtiging accepteren](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### De CMK-toepassing toewijzen aan een rol {#assign-to-role}
 
-Navigeer na het voltooien van het verificatieproces terug naar uw [!DNL Azure] Key Vault en selecteer **[!DNL Access control]** in de linkernavigatie. Selecteer **[!DNL Add]** gevolgd door **[!DNL Add role assignment]**.
+Navigeer na het voltooien van het verificatieproces terug naar uw [!DNL Azure] Key Vault en selecteer **[!DNL Access control]** in de linkernavigatie. Van hier, selecteer **[!DNL Add]** gevolgd door **[!DNL Add role assignment]**.
 
 ![Roltoewijzing toevoegen](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
@@ -160,7 +160,7 @@ In het volgende scherm wordt u gevraagd een rol voor deze toewijzing te kiezen. 
 
 ![Rol selecteren](../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
-Kies in het volgende scherm de optie **[!DNL Select members]** een dialoog op gang te brengen in het rechterspoor . Gebruik de zoekbalk om de serviceprincipal voor de CMK-toepassing te zoeken en selecteer deze in de lijst. Als u klaar bent, selecteert u **[!DNL Save]**.
+Kies in het volgende scherm **[!DNL Select members]** een dialoog op gang te brengen in het rechterspoor . Gebruik de zoekbalk om de serviceprincipal voor de CMK-toepassing te zoeken en selecteer deze in de lijst. Selecteer **[!DNL Save]**.
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ Kies in het volgende scherm de optie **[!DNL Select members]** een dialoog op ga
 
 ## De configuratie van de coderingssleutel op het Experience Platform inschakelen {#send-to-adobe}
 
-Nadat u de CMK-toepassing hebt geïnstalleerd op [!DNL Azure]kunt u de id van de coderingssleutel naar Adobe sturen. Selecteren **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
+Nadat u de CMK-toepassing hebt geïnstalleerd op [!DNL Azure], kunt u de id van de coderingssleutel naar Adobe sturen. Selecteren **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
 
 ![Sleutel selecteren](../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -277,17 +277,26 @@ Een geslaagde reactie retourneert de status van de taak.
 
 De `status` attribuut kan één van vier waarden met de volgende betekenis hebben:
 
-1. `RUNNING`: Valideert of het Platform toegang heeft tot de sleutel- en sleutelvault.
+1. `RUNNING`: Hiermee wordt gevalideerd dat het Platform toegang heeft tot de sleutelwaarde en de sleutelvault.
 1. `UPDATE_EXISTING_RESOURCES`: Het systeem voegt de sleutelvault en sleutelnaam aan de datastores over alle zandbakken in uw organisatie toe.
 1. `COMPLETED`: De sleutelvault en sleutelnaam zijn toegevoegd aan de datastores.
-1. `FAILED`: Er heeft zich een probleem voorgedaan dat voornamelijk te maken heeft met de toepassingsinstellingen van de toepassing key, key vault of multi-huurder.
+1. `FAILED`: Er is een probleem opgetreden, dat voornamelijk te maken heeft met de toepassingsinstellingen van de toepassing key, key vault of multi-huurder.
 
-## Volgende stappen
+## Toegang intrekken {#revoke-access}
 
-Door de bovenstaande stappen te voltooien, hebt u CMK voor uw organisatie ingeschakeld. Gegevens die in Platform worden ingevoerd, worden nu gecodeerd en gedecodeerd met de sleutel(s) in uw [!DNL Azure] Key Vault. Als u de toegang van het Platform tot uw gegevens wilt intrekken, kunt u de gebruikersrol die aan de toepassing is gekoppeld, verwijderen uit de sleutelkluis [!DNL Azure].
-
-Nadat u de toegang tot de toepassing hebt uitgeschakeld, kan het een paar minuten tot 24 uur duren voordat de gegevens in het Platform niet meer toegankelijk zijn. Dezelfde tijdvertraging geldt voor gegevens die weer beschikbaar komen wanneer de toegang tot de toepassing opnieuw wordt ingeschakeld.
+Als u de toegang van het Platform tot uw gegevens wilt intrekken, kunt u de gebruikersrol die aan de toepassing is gekoppeld, verwijderen uit de sleutelkluis [!DNL Azure].
 
 >[!WARNING]
 >
->Als de Key Vault-, Key- of CMK-toepassing eenmaal is uitgeschakeld en gegevens in Platform niet meer toegankelijk zijn, zijn downstreambewerkingen met betrekking tot die gegevens niet meer mogelijk. Zorg ervoor dat u de downstreameffecten begrijpt van het intrekken van de toegang van het Platform tot uw gegevens voordat u wijzigingen aanbrengt in uw configuratie.
+>Als u de sleutelvault-, toets- of CMK-toepassing uitschakelt, kan dit resulteren in een regeleindewijziging. Wanneer de sleutelvault-, sleutel- of CMK-toepassing is uitgeschakeld en de gegevens in het Platform niet meer toegankelijk zijn, zijn downstreambewerkingen met betrekking tot die gegevens niet meer mogelijk. Zorg ervoor dat u de stroomafwaartse gevolgen begrijpt van het intrekken van de toegang van het Platform tot uw sleutel alvorens u om het even welke veranderingen in uw configuratie aanbrengt.
+
+Nadat u de toegang tot de sleutel hebt verwijderd of de sleutel uit uw [!DNL Azure] zeer belangrijke vault, kan het van een paar minuten, tot 24 uren voor deze configuratie overal vergen om aan primaire gegevensopslag te verspreiden. Workflows voor Platforms zijn ook opgenomen in de cache en in transiënte gegevensopslagruimten die vereist zijn voor prestaties en kernfuncties van toepassingen. Het doorgeven van CMK-intrekking via dergelijke opgeslagen en tijdelijke opslagplaatsen kan maximaal zeven dagen in beslag nemen, zoals wordt bepaald door de gegevensverwerkingsworkflows. Dit betekent bijvoorbeeld dat het dashboard Profiel gegevens uit de opslag van cachegegevens bewaart en weergeeft en dat het zeven dagen duurt voordat de gegevens in de opslagruimten voor cachegegevens verlopen als onderdeel van de vernieuwingscyclus. Dezelfde tijdvertraging geldt voor gegevens die weer beschikbaar komen wanneer de toegang tot de toepassing opnieuw wordt ingeschakeld.
+
+>[!NOTE]
+>
+>Er zijn twee gebruik-geval-specifieke uitzonderingen op de zeven dagen datasetvervaldatum op niet primaire (caching/transient) gegevens. Raadpleeg de documentatie bij deze pagina voor meer informatie over deze functies.<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge-projecties](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## Volgende stappen
+
+Door de bovenstaande stappen te voltooien, hebt u CMK voor uw organisatie ingeschakeld. Gegevens die in de primaire gegevensopslag worden ingevoerd, worden nu gecodeerd en gedecodeerd met de sleutel(s) in de [!DNL Azure] Key Vault.
+
