@@ -3,9 +3,9 @@ keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
+source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -143,6 +143,7 @@ Zie voor gedetailleerde uitleg over de vereisten voor ID-matching [Vereisten voo
 
 +++Antwoord
 [!DNL LinkedIn Matched Audiences] ondersteunt de activering van de volgende identiteiten: gehashte e-mails; [!DNL GAID], en [!DNL IDFA].
+
 +++
 
 ## Zelfde pagina en volgende-paginagrootte door de bestemmingen van de Aanpassing van Adobe Target en van de Aanpassing {#same-next-page-personalization}
@@ -204,3 +205,20 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ++ + Antwoord Ja. De [Beleid inzake gegevensbeheer en instemming](../data-governance/home.md) die zijn gemaakt en gekoppeld aan de geselecteerde marketingacties, worden toegepast op de activering van de geselecteerde kenmerken.
 +++
+
+### zijn [!DNL Adobe Target] en [!DNL Custom Personalization] bestemmingen [!DNL HIPAA]-compatibel?
+
++++Antwoord
+[!DNL Adobe Target] is niet [!DNL HIPPA]-compatibel met [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Klanten moeten met hun eigen juristen controleren of [!DNL HIPPA]-gereedheid voor aangepaste optimalisatiekanalen voordat randvervorming wordt gebruikt via [!DNL Adobe Target] of de [!DNL Custom Personalization] bestemmingen.
+
+Voor gebruiksgevallen waarbij het beheer van het toestemmingsbeleid op schaal moet worden toegepast, moeten klanten [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] worden verkocht als een geavanceerde suite van mogelijkheden en worden mogelijk niet afzonderlijk aangeschaft.
+
+Deze dienst omvat klant-beheerde sleutels en verhoogde drempels om de levenscyclus van klantengegevens te beheren.
+
+De [!DNL Adobe Target] en [!DNL Custom Personalization] de bestemmingen zijn geïntegreerd met de [Labels voor gegevensgebruik van Experience Platforms](../data-governance/labels/overview.md) en de [Toegestane beleidshandhavingsdienst](../data-governance/enforcement/overview.md). Deze functies zijn beschikbaar voor alle klanten.
+
+
+
+
++++
+
