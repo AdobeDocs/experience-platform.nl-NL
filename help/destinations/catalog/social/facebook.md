@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 37e8d36d89bf984673345743b371c31b4bb1f94d
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1888'
 ht-degree: 1%
 
 ---
@@ -77,6 +77,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Voordat u uw publiek naar kunt sturen [!DNL Facebook]voldoet aan de volgende vereisten:
 
+* Uw [!DNL Facebook] gebruikersaccount moet volledige toegang hebben tot [!DNL Facebook Business Account] die eigenaar is van de advertentierekening die u gebruikt.
 * Uw [!DNL Facebook] gebruikersaccount moet de **[!DNL Manage campaigns]** Toestemming ingeschakeld voor de advertentie-account die u wilt gebruiken.
 * De **Adobe Experience Cloud** bedrijfsaccount moet worden toegevoegd als advertentiepartner in uw [!DNL Facebook Ad Account]. Gebruik `business ID=206617933627973`. Zie [Partners toevoegen aan uw Business Manager](https://www.facebook.com/business/help/1717412048538897) in de documentatie van Facebook voor meer informatie.
   >[!IMPORTANT]

@@ -3,9 +3,9 @@ title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3440'
+source-wordcount: '3426'
 ht-degree: 2%
 
 ---
@@ -110,9 +110,7 @@ Voer de volgende stappen uit om een schema te maken:
 
 Lees voor meer informatie over het maken van schema&#39;s de [Schema-zelfstudie maken.](/help/xdm/tutorials/create-schema-ui.md)
 
-Er zijn vier schemaontwerpen die voor de heraannemingsreis worden gebruikt.
-
-Voor elk schema moeten specifieke velden worden ingesteld, evenals enkele velden die sterk worden aanbevolen.
+Er zijn vier schemaontwerpen die voor de heraannemingsreis worden gebruikt. Voor elk schema moeten specifieke velden worden ingesteld, evenals enkele velden die sterk worden aanbevolen.
 
 #### Veldgroepvereisten voor het schema voor klantkenmerken
 
@@ -315,8 +313,6 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 
 Het schema van de Adobe-webconnector is een [!UICONTROL XDM ExperienceEvent] schema, dat de volgende veldgroepen bevat:
 
-De veldgroepen die vereist zijn voor Experience Event-schema voor Adobe Analytics Data Feed zijn:
-
 +++Adobe Analytics ExperienceEvent-sjabloon (veldgroep)
 
 | Velden | Vereiste | Beschrijving |
@@ -382,8 +378,6 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 +++
 
 ![Het schema van de Webschakelaar van de Adobe die de lijst van gebiedsgroepen benadrukken.](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### Een dataset maken op basis van een schema
 
