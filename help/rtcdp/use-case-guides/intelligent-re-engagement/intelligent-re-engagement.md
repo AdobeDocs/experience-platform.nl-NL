@@ -3,118 +3,115 @@ title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
 hide: true
 hidefromtoc: true
-source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
+source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
 workflow-type: tm+mt
-source-wordcount: '3426'
+source-wordcount: '3240'
 ht-degree: 2%
 
 ---
 
 # Inzet uw klanten op intelligente wijze opnieuw aan om terug te keren
 
-Dankzij intelligente re-engagement kunt u een op maat gemaakte, cross-channel druppelcampagne opzetten om klanten ervan te overtuigen een bepaalde actie uit te voeren. De campagne is bedoeld om gedurende een beperkte periode te werken, waaronder het verzenden van klanten die intent e-mails, sms&#39;en en betaalde advertenties hebben getoond. Zodra de klant de juiste actie heeft ondernomen, wordt de verschuivingscampagne onmiddellijk beëindigd.
+Dankzij intelligente re-engagement kunt u een op maat gemaakte, cross-channel druppelcampagne opzetten om klanten ervan te overtuigen een bepaalde actie uit te voeren. De campagne is bedoeld om gedurende een beperkte periode te werken, waaronder het verzenden van klanten die intent e-mails, SMS en het bedienen van betaalde advertenties hebben getoond. Zodra de klant de juiste actie heeft ondernomen, wordt de verschuivingscampagne onmiddellijk beëindigd.
 
 ![Stap voor stap, intelligent overzicht op hoog niveau van de hernieuwde betrokkenheid.](../intelligent-re-engagement/images/step-by-step.png)
 
 ## Vereisten en planning {#prerequisites-and-planning}
 
-Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, maakt u gebruik van de volgende Real-Time CDP-functionaliteit en UI-elementen (vermeld in de volgorde waarin u deze wilt gebruiken). Zorg ervoor dat u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen voor al deze gebieden hebt of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
+Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, maakt u gebruik van de volgende Real-Time CDP-functionaliteit en UI-elementen (vermeld in de volgorde waarin u deze wilt gebruiken). Zorg ervoor dat u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
-* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Gegevens worden samengevoegd over verschillende gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die in de e-mail en de webpromo-tegels worden gebruikt (bijvoorbeeld naam of aan account gerelateerde informatie). CDP wordt ook gebruikt om het publiek over e-mail en het Web (via Adobe Target) te activeren.
+* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Gegevens worden samengevoegd over verschillende gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die worden gebruikt in de e-mail en de webpromo-elementen (bijvoorbeeld naam of aan account gerelateerde informatie). CDP wordt ook gebruikt om publiek over e-mail en het Web (via Adobe Target) te activeren.
    * [Schema&#39;s](/help/xdm/home.md)
    * [Profielen](/help/profile/home.md)
+   * [Gegevenssets](/help/catalog/datasets/overview.md)
    * [Doelgroepen](/help/segmentation/home.md)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Doelen](/help/destinations/home.md)
    * [Trigger voor gebeurtenis of publiek](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Soorten publiek/Gebeurtenissen](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Reishandelingen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ### Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
-Er zijn drie reizen gemaakt om opnieuw aan de slag te gaan.
+Er zijn momenteel drie verschillende herplaatsingsritten ontwikkeld.
 
 >[!BEGINTABS]
 
 >[!TAB Reis voor herbetrokkenheid]
 
-De reis van de re-engagement richt verlaten productdoorbladeren op zowel de website als app. Deze reis wordt geactiveerd wanneer een product is bekeken zonder dat het is aangeschaft of aan de wagen is toegevoegd. De merkbetrokkenheid wordt geactiveerd na drie dagen als er geen lijst is toegevoegd binnen de laatste 24 uur.
+De reis om opnieuw contact op te nemen is gericht op het verlaten van het productbrowsen op zowel de website als de app. Deze reis wordt geactiveerd wanneer een product is bekeken maar niet is aangeschaft of aan de wagen is toegevoegd. De merkbetrokkenheid wordt geactiveerd na drie dagen als er geen toevoegingen aan de lijst zijn binnen de laatste 24 uur.
 
 ![Intelligente reactiereis op hoog niveau van visueel overzicht van de klant.](../intelligent-re-engagement/images/re-engagement-journey.png)
 
-1. Gegevens worden geaggregeerd in Web SDK/Mobile SDK/Edge Network API-opname via Edge Network (voorkeursmethode).
+1. Gegevens worden geaggregeerd in Web SDK, Mobile SDK of Edge Network API-opname via Edge Network (de voorkeursmethode).
 2. Als **klant** maakt u gegevenssets waarvoor [!UICONTROL Profile].
 3. Als **klant**, laadt u profielen in Real-Time CDP en bouwt u beleidsregels voor verantwoord gebruik.
 4. Als **klant**, maakt u doelgroepen in de lijst met profielen om te controleren of een **user** heeft in de afgelopen drie dagen een merkbetrokkenheid gemaakt.
 5. Als **klant**, maakt u een terugvlucht in Adobe Journey Optimizer.
-6. Werk zo nodig met de **gegevenspartner** voor activering van het publiek naar de gewenste betaalmedia-bestemmingen.
+6. Werk zo nodig met de **gegevenspartner** voor de activering van het publiek naar de gewenste betaalmedia-bestemmingen.
 7. Adobe Journey Optimizer controleert op toestemming en stuurt de verschillende geconfigureerde acties door.
 
 >[!TAB Afgekloonde Kart-reis]
 
-Deze verlaten reis van het karretje richt producten die in het karretje zijn geplaatst maar niet op zowel de website als de app gekocht. Gebruikt voor het starten en stoppen van campagnes voor betaalde media
+De verlaten wagenreis richt zich op producten die in de kar zijn geplaatst maar nog niet op zowel de website als de app zijn gekocht. Bovendien worden campagnes voor betaalde media gestart en gestopt met deze methode.
 
 ![De klant verliet de reis van het karretje op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/abandoned-cart-journey.png)
 
-1. Gegevens worden geaggregeerd in Web SDK/Mobile SDK/Edge Network API-opname via Edge Network (voorkeursmethode).
+1. Gegevens worden geaggregeerd in Web SDK, Mobile SDK of Edge Network API-opname via Edge Network (de voorkeursmethode).
 2. Als **klant** maakt u gegevenssets waarvoor [!UICONTROL Profile].
 3. Als **klant**, laadt u profielen in Real-Time CDP en bouwt u beleidsregels voor verantwoord gebruik.
 4. Als **klant**, maakt u doelgroepen in de lijst met profielen om te controleren of een **user** heeft een artikel in hun winkelwagentje geplaatst, maar heeft de aankoop niet voltooid. De **[!UICONTROL Add to cart]** de gebeurtenis tikt van een tijdopnemer die 30 minuten wacht, dan controleert aankoop. Als er geen aankoop is gedaan, wordt de **user** wordt toegevoegd aan de **[!UICONTROL Abandon Cart]** publiek.
 5. Als **klant**, maakt u een verlaten wagentje in Adobe Journey Optimizer
-6. Werk zo nodig met de **gegevenspartner** voor activering van het publiek naar de gewenste betaalmedia-bestemmingen.
+6. Werk zo nodig met de **gegevenspartner** voor de activering van het publiek naar de gewenste betaalmedia-bestemmingen.
 7. Adobe Journey Optimizer controleert op toestemming en stuurt de verschillende geconfigureerde acties door.
 
 >[!TAB Reis voor orderbevestiging]
 
-Deze bestelbevestiging is bedoeld voor productaankopen op zowel de website als de app.
+De reis voor het bevestigen van bestellingen is vooral gericht op productaankopen via de website en de mobiele app.
 
 ![Bevestiging van de reis van de bestelbevestiging van de klant op hoog niveau visueel overzicht.](../intelligent-re-engagement/images/order-confirmation-journey.png)
 
-1. Gegevens worden geaggregeerd in Web SDK/Mobile SDK/Edge Network API-opname via Edge Network (voorkeursmethode).
+1. Gegevens worden geaggregeerd in Web SDK, Mobile SDK of Edge Network API-opname via Edge Network (de voorkeursmethode).
 2. Als **klant** maakt u gegevenssets waarvoor [!UICONTROL Profile].
 3. Als **klant**, laadt u profielen in Real-Time CDP en bouwt u beleidsregels voor verantwoord gebruik.
 4. Als **klant**, maakt u doelgroepen in de lijst met profielen om te controleren of een **user** heeft een aankoop gedaan.
-5. Als **klant**, maakt u een bevestigingsreis in Adobe Journey Optimizer.
+5. Als **klant**, je maakt een bevestigingstraject in Adobe Journey Optimizer.
 6. Adobe Journey Optimizer stuurt via het voorkeurskanaal een bericht ter bevestiging van de bestelling.
 
 >[!ENDTABS]
 
 ## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
 
-Lees de onderstaande secties door, die koppelingen naar verdere documentatie bevatten, om alle stappen in de bovenstaande overzichten op hoog niveau te voltooien.
+Lees de onderstaande secties door om alle stappen in de bovenstaande overzichten op hoog niveau te voltooien. Deze bevatten koppelingen naar meer informatie en meer gedetailleerde instructies.
 
 ### UI-functionaliteit en elementen die u gebruikt {#ui-functionality-and-elements}
 
-Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, maakt u gebruik van de volgende Real-Time CDP-functionaliteit en UI-elementen (vermeld in de volgorde waarin u deze wilt gebruiken). Zorg ervoor dat u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen voor al deze gebieden hebt of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
-
-* [Schema&#39;s](/help/xdm/home.md)
-* [Profielen](/help/profile/home.md)
-* [Gegevenssets](/help/catalog/datasets/overview.md)
-* [Doelgroepen](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-* [Doelen](/help/destinations/home.md)
+Wanneer u de stappen voor het implementeren van het hoofdlettergebruik uitvoert, maakt u gebruik van de Real-Time CDP-functionaliteit en UI-elementen die aan het begin van dit document worden vermeld. Zorg ervoor dat u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
 ### Een schemaontwerp maken en veldgroepen opgeven
 
-De middelen van het Gegevensmodel van de ervaring (XDM) worden beheerd in [!UICONTROL Schemas] in Adobe Experience Platform. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
+De middelen van het Gegevensmodel van de ervaring (XDM) worden beheerd in [!UICONTROL Schemas] in Adobe Experience Platform. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
 
-Voer de volgende stappen uit om een schema te maken:
+<!--
+To create a schema, complete the steps below:
 
-1. Navigeren naar **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** en selecteert u **[!UICONTROL Create schema]**.
-2. Selecteer **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
-3. Navigeren naar **[!UICONTROL Field groups]** en selecteert u **[!UICONTROL Add]**.
-4. Gebruik het zoekvak om de veldgroep te zoeken en te selecteren en selecteer vervolgens **[!UICONTROL Add field groups]**.
-5. Geef uw schema een naam en naar keuze een beschrijving.
-6. Selecteer **[!UICONTROL Save]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Een opname van de stappen om een schema te maken.](../intelligent-re-engagement/images/create-a-schema.gif)
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
+-->
 
 Lees voor meer informatie over het maken van schema&#39;s de [Schema-zelfstudie maken.](/help/xdm/tutorials/create-schema-ui.md)
 
-Er zijn vier schemaontwerpen die voor de heraannemingsreis worden gebruikt. Voor elk schema moeten specifieke velden worden ingesteld, evenals enkele velden die sterk worden aanbevolen.
+Er zijn vier schemaontwerpen die voor de reis van het re-engagement worden gebruikt. Voor elk schema moeten specifieke velden worden ingesteld, evenals enkele velden die sterk worden aanbevolen.
 
-#### Veldgroepvereisten voor het schema voor klantkenmerken
+#### Klantkenmerkenschema
 
-Het schema voor klantkenmerken is een [!UICONTROL XDM Individual Profile] schema, dat de volgende veldgroepen bevat:
+Het schema met klantkenmerken wordt weergegeven als een [!UICONTROL XDM Individual Profile] klasse, die de volgende veldgroepen bevat:
 
 +++Persoonlijke Contactgegevens (Veldgroep)
 
@@ -165,11 +162,13 @@ Deze veldgroep wordt gebruikt voor beste praktijken.
 
 +++
 
-![Schema met klantkenmerken waarin de lijst met veldgroepen wordt gemarkeerd.](../intelligent-re-engagement/images/customer-attributes.png)
+<!--
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
+-->
 
-#### Veldgroepvereisten voor het schema voor digitale transacties van de klant
+#### Schema voor digitale transacties van klanten
 
-Het schema voor digitale transacties van de klant is een [!UICONTROL XDM ExperienceEvent] schema, dat de volgende veldgroepen bevat:
+Het schema voor digitale transacties van de klant wordt vertegenwoordigd door een [!UICONTROL XDM ExperienceEvent] klasse, die de volgende veldgroepen bevat:
 
 +++Adobe Experience Platform Web SDK ExperienceEvent (veldgroep)
 
@@ -260,11 +259,13 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 
 +++
 
-![Schema voor digitale transacties van de klant waarin de lijst met veldgroepen wordt gemarkeerd.](../intelligent-re-engagement/images/customer-digital-transactions.png)
+<!--
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
+-->
 
-#### Veldgroepvereisten voor het schema voor offlinetransacties van de klant
+#### Offline transactieschema van de klant
 
-Het schema voor offline transacties van de klant is een [!UICONTROL XDM ExperienceEvent] schema, dat de volgende veldgroepen bevat:
+Het schema voor offline transacties van de klant wordt vertegenwoordigd door een [!UICONTROL XDM ExperienceEvent] klasse, die de volgende veldgroepen bevat:
 
 +++Details van de Handel (de Groep van het Gebied)
 
@@ -307,11 +308,13 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 
 +++
 
-![Offline transactieschema van de klant waarin de lijst met veldgroepen wordt gemarkeerd.](../intelligent-re-engagement/images/customer-offline-transactions.png)
+<!--
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
+-->
 
-#### Veldgroepvereisten voor het schema voor de Adobe-webconnector
+#### Adobe-verbindingsschema
 
-Het schema van de Adobe-webconnector is een [!UICONTROL XDM ExperienceEvent] schema, dat de volgende veldgroepen bevat:
+Het schema van de de Webschakelaar van de Adobe wordt vertegenwoordigd door [!UICONTROL XDM ExperienceEvent] klasse, die de volgende veldgroepen bevat:
 
 +++Adobe Analytics ExperienceEvent-sjabloon (veldgroep)
 
@@ -377,25 +380,34 @@ De externe Attributen van de Controle van het Systeem van de Bron is een standaa
 
 +++
 
-![Het schema van de Webschakelaar van de Adobe die de lijst van gebiedsgroepen benadrukken.](../intelligent-re-engagement/images/adobe-web-connector.png)
+<!--
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+-->
 
 ### Een dataset maken op basis van een schema
 
-Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Voor intelligente reizen van de re-engagement, zal elk schema één dataset hebben.
+Een dataset is een opslag en beheersstructuur voor een groep gegevens, vaak een lijst met gebieden (rijen) en een schema (kolommen). Elk schema voor intelligente reizen voor opnieuw engagement zal één enkele dataset hebben.
 
-Om een dataset van een schema tot stand te brengen, voltooi de hieronder stappen:
+Voor meer informatie over hoe te om een dataset van een schema tot stand te brengen, lees [UI-gids voor gegevensbestanden](/help/catalog/datasets/user-guide.md).
+<!-- 
+To create a dataset from a schema, complete the steps below:
 
-1. Navigeren naar **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** en selecteert u **[!UICONTROL Create dataset]**.
-2. Selecteer **[!UICONTROL Create dataset from schema]**.
-3. Selecteer het relevante vernieuwingsschema dat u hebt gemaakt.
-4. Geef uw dataset een naam en naar keuze een beschrijving.
-5. Selecteer **[!UICONTROL Finish]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
-![Een opname van de stappen om een dataset van een schema tot stand te brengen.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+-->
 
-Merk op dat gelijkend op de stap om een schema tot stand te brengen, u de dataset moet toelaten om in het Profiel van de Klant in real time worden omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant In real time, lees [Schema-zelfstudie maken.](/help/xdm/tutorials/create-schema-ui.md#profile)
+>Opmerking
+>
+>Gelijkaardig aan de stap om een schema tot stand te brengen, moet u toelaten dat de dataset in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant In real time, lees [Schema-zelfstudie maken.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-![Gegevensset inschakelen voor profiel.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+<!-- 
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+-->
 
 ### Privacy, toestemming en gegevensbeheer
 
@@ -405,7 +417,7 @@ Merk op dat gelijkend op de stap om een schema tot stand te brengen, u de datase
 >
 >Het bieden van klanten de mogelijkheid om zich af te melden van het ontvangen van communicatie van een merk is een wettelijke vereiste, en het verzekeren van deze keuze wordt gerespecteerd. Meer informatie over de toepasselijke wetgeving vindt u in het [Documentatie Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Het volgende beleid van instemming moet in aanmerking worden genomen en worden gebruikt bij het opzetten van een reis met een nieuwe overeenkomst:
+Bij het maken van een pad voor een nieuwe afspraak moet rekening worden gehouden met het volgende beleid voor toestemming en moet dit worden gebruikt:
 
 * Als toestemmingen.marketing.email.val = &quot;Y&quot; dan kan e-mailen
 * Als consents.marketing.sms.val = &quot;Y&quot;dan kan SMS
@@ -415,15 +427,14 @@ Het volgende beleid van instemming moet in aanmerking worden genomen en worden g
 
 #### DULE label en handhaving
 
-Het persoonlijke e-mailadres wordt gebruikt als rechtstreeks identificeerbare gegevens die kunnen worden gebruikt om een specifieke persoon, in plaats van een apparaat, te identificeren of te contacteren.
+Persoonlijke e-mailadressen worden gebruikt als direct identificeerbare gegevens die worden gebruikt om een specifieke persoon te identificeren of contact met hem te krijgen in plaats van met een apparaat.
 
 * PersonalEmail.address = I1
 
 #### Marketingsbeleid
 
-Er is geen aanvullend marketingbeleid voor de herplaatsingsreizen, maar het volgende moet als gewenst worden beschouwd:
+Er is geen aanvullend marketingbeleid vereist voor de herplaatsingsreizen, maar het volgende moet als gewenst worden beschouwd:
 
-* Overweeg naar wens
 * Gevoelige gegevens beperken
 * Onsite reclame beperken
 * E-maildoelen beperken
@@ -432,22 +443,26 @@ Er is geen aanvullend marketingbeleid voor de herplaatsingsreizen, maar het volg
 
 ### Een doelgroep maken
 
-Voer de onderstaande stappen uit om een publiek te maken:
+<!--
+To create an audience, complete the steps below:
 
-1. Navigeren naar **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** en selecteert u **[!UICONTROL Create audience]**.
-2. Selecteren **[!UICONTROL Build rule]** en selecteert u **[!UICONTROL Create]**.
-3. Navigeren naar **[!UICONTROL Field]** en selecteert u **[!UICONTROL Events]** tab.
-4. Navigeer of gebruik het zoekvak om het gebeurtenistype te zoeken en sleep dit vervolgens naar de builder. Voeg ten slotte gebeurtenisregels toe door gebeurtenistypen te slepen.
-5. Geef uw schema een naam en naar keuze een beschrijving.
-6. Selecteer **[!UICONTROL Save]**.
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Een opname van de stappen om een publiek te creëren.](../intelligent-re-engagement/images/create-an-audience.gif)
-
-Voor meer informatie over hoe u een publiek kunt maken, leest u de [Handleiding voor de gebruikersinterface van Audience Builder](/help/segmentation/ui/segment-builder.md).
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+-->
 
 #### Audience creation for brand re-engagement trip
 
-Het publiek voor elke reis in het kader van een nieuwe overeenkomst moet worden opgericht met specifieke evenementen voor segmentkwalificatie. Deze details zijn te vinden op de bijbehorende tabbladen voor elke reis.
+Bij de reactiereizen worden doelgroepen gebruikt om specifieke kenmerken of gedragingen te definiëren die door een subset van profielen uit uw profielarchief worden gedeeld, zodat een verhandelbare groep personen kan worden onderscheiden van uw klantenbasis. Soorten publiek kan op twee verschillende manieren op Adobe Experience Platform worden gecreëerd: rechtstreeks samengesteld als publiek of door middel van op Platform gebaseerde segmentdefinities.
+
+Lees voor meer informatie over hoe u het publiek rechtstreeks kunt samenstellen de [Handleiding voor compositie van publiek](/help/segmentation/ui/audience-composition.md).
+
+Voor meer informatie over hoe te om publiek door Platform-afgeleide segmentdefinities te bouwen, lees [Handleiding voor de gebruikersinterface van Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -457,20 +472,22 @@ De volgende gebeurtenissen worden gebruikt voor de reis van de herbetrokkenheid 
 
 Neem een publiek op met ten minste 1 gebeurtenis EventType = ProductViews en ten minste 1 gebeurtenis (EventType is niet gelijk aan commerce.productListAdds) die zich in de afgelopen 24 uur of uren voordoet en na 3 dagen geen gebeurtenis heeft waarbij (EventType = application.launch of web.webpagedetails.pageViews of commerce.purchase) en in de laatste 2 dagen optreedt.
 
-![Een schermafbeelding van het publiek van de hernieuwde betrokkenheid waarin de set regels wordt getoond.](../intelligent-re-engagement/images/re-engagement-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+-->
 
 >[!TAB Afgekloonde Kart-reis]
 
 De volgende gebeurtenissen worden gebruikt voor profielen die een product aan hun winkelwagentje hebben toegevoegd, maar de aanschaf van het product niet hebben voltooid of het karretje in de afgelopen 24 uur niet hebben gewist.
 
-include EventType = commerce.productListAdds tussen 30 min en 1440 minuten vóór nu.
+Include EventType = commerce.productListAdds tussen 30 min en 1440 minuten vóór nu.
 exclude EventType = commerce.aankopen 30 minuten vóór nu OF EventType = commerce.productListRemovals EN identiteitskaart van de Kar staat de Lijst van het Product toe Adds1 Kart ID (de inclusiegebeurtenis).
 
-![Een schermafbeelding van het publiek van de hernieuwde betrokkenheid waarin de set regels wordt getoond.](../intelligent-re-engagement/images/abandoned-cart-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+-->
 
 >[!ENDTABS]
-
-Voor meer informatie over het opbouwen van publiek, lees [Handleiding voor de gebruikersinterface van Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 ### Reisinstallatie in Adobe Journey Optimizer
 
@@ -478,13 +495,15 @@ Voor meer informatie over het opbouwen van publiek, lees [Handleiding voor de ge
 >
 >Adobe Journey Optimizer omvat niet alles die in de diagrammen bij de bovenkant van deze pagina wordt getoond. Alle betaalde mediaconsters worden gemaakt in [!UICONTROL Destinations].
 
-Specifieke informatie is vereist voor de meervoudige ritten die elk geval van gebruik kan hebben. De specifieke gegevens die voor elke tak van de Reis worden vereist kunnen hieronder op de overeenkomstige lusjes worden gevonden.
+Met Adobe Journey Optimizer kunt u verbonden, contextafhankelijke en persoonlijke ervaringen aan uw klanten aanbieden. De reis van de klant is het volledige proces van interactie van een klant met het merk. Elk gebruiksgeval kan verschillende reizen hebben, elk waarvoor specifieke informatie nodig is. Hieronder worden de precieze gegevens vermeld die voor elke tak van de Reis nodig zijn.
 
 >[!BEGINTABS]
 
 >[!TAB Reis voor herbetrokkenheid]
 
-![Overzicht van de door de klant opnieuw uitgevoerde reis in Adobe Journey Optimizer](../intelligent-re-engagement/images/re-engagement-ajo.png)
+<!--
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
+-->
 
 +++Gebeurtenissen
 
@@ -612,7 +631,9 @@ Specifieke informatie is vereist voor de meervoudige ritten die elk geval van ge
 
 >[!TAB Afgekloonde Kart-reis]
 
-![Door klant verlaten carterreis in Adobe Journey Optimizer overzicht](../intelligent-re-engagement/images/abandoned-cart-ajo.png)
+<!--
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
+-->
 
 +++Gebeurtenissen
 
@@ -741,7 +762,9 @@ Specifieke informatie is vereist voor de meervoudige ritten die elk geval van ge
 
 >[!TAB Reis voor orderbevestiging]
 
-![Bevestigingstraject voor bestelling van klant in Adobe Journey Optimizer-overzicht](../intelligent-re-engagement/images/order-confirmation-ajo.png)
+<!--
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+-->
 
 +++Gebeurtenissen
 
