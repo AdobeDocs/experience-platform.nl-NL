@@ -1,26 +1,22 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;verenigde markeringen;markeringen;
-title: Overzicht van Unified Tags (bèta)
+title: Overzicht van Unified Tags
 description: Dit document bevat informatie over uniforme tags in Adobe Experience Platform
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
 
-# Overzicht van Unified-tags (bèta)
-
->[!IMPORTANT]
->
->De verenigde markeringen zijn in bèta. Als u feedback wilt geven, selecteert u de knop boven aan de pagina Tags-beheer.
+# Overzicht van verenigde codes
 
 Tags zijn een mogelijkheid van Adobe Experience Platform waarmee beheerders metagegevenstaxonomieën kunnen beheren om bedrijfsobjecten te classificeren voor een eenvoudigere detectie en categorisering. Tags zijn metagegevens die kunnen worden beschouwd als trefwoorden die kunnen worden gekoppeld aan een segment, gegevensset, reis of andere objecten, zodat zoekopdrachten naar dat object en verwante objecten kunnen worden uitgevoerd. Tags worden in twee typen geclassificeerd: gecategoriseerd en niet gecategoriseerd.
 
 Categorieën organiseren tags in handige sets om meer context te bieden en het doel van een tag te definiëren. Een beheerder bepaalt welke gecategoriseerde markeringen voor gebruikers aan voorwerpen beschikbaar zijn toe te voegen. Nieuwe tags zonder categorieën kunnen ook online worden gemaakt in workflows waarin labels worden toegepast. Deze tags worden weergegeven in het gedeelte zonder categorie van de taginventaris. Tags kunnen door beheerders en gebruikers worden toegepast, ongeacht wie ze heeft gemaakt. Alle typen tags kunnen worden geselecteerd wanneer u deze toewijst aan een object, zoekt of filtert.
 
-## Tags
+## Tagterminologie
 
 Bij labelen worden de volgende onderdelen gebruikt:
 
@@ -30,7 +26,7 @@ Bij labelen worden de volgende onderdelen gebruikt:
 | Object | Een Experience Cloud-item waarop een tag kan worden toegepast.  Voorbeelden: Segment, Reis, Dataset. |
 | Tag | Tags zijn metagegevens en kunnen worden beschouwd als trefwoorden die kunnen worden gekoppeld aan een segment, gegevensset, reis of andere objecten, zodat zoekopdrachten naar dat object en verwante objecten kunnen worden uitgevoerd. |
 | Tagcategorie | Tags voor categorieën groeperen in betekenisvolle sets voor een betere context of een beschrijving van het doel van de tag.  Beheerders beheren tagcategorieën en -tags binnen categorieën. |
-| Niet-gecategoriseerde tag | Een nieuwe tag die wordt gemaakt in de regel waar tags worden toegepast. Deze tags kunnen door elke gebruiker worden gemaakt en toegepast, maar zijn niet aan een categorie gebonden.  Beheerders kunnen deze tags naar een categorie verplaatsen om deze uit te lijnen met vergelijkbare tags. |
+| Niet-gecategoriseerde tag | Een nieuwe tag die wordt gemaakt in de regel waar tags worden toegepast. Deze tags kunnen door elke gebruiker worden gemaakt en toegepast, maar zijn niet aan een categorie gebonden.  Beheerders kunnen deze tags naar een categorie verplaatsen om deze uit te lijnen met andere, vergelijkbare tags. |
 
 ## Tags inventariseren
 
