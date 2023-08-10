@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen over privacyregels
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteunde wettelijke privacyregels en de toepassing ervan in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteun
 
 >[!NOTE]
 >
->Definities voor de verschillende termen die in dit document worden gebruikt, zijn te vinden in de [terminologie van privacyregelgeving](terminology.md) hulplijn.
+>Definities voor de verschillende termen die in dit document worden gebruikt, zijn te vinden in de [terminologie van de privacyverordening](terminology.md) hulplijn.
 
 ## Algemene vragen
 
@@ -57,9 +57,9 @@ A **gegevenscontroller** de persoon of organisatie is die de bevoegdheid en 
 
 ### Wat is het verschil tussen expliciete en ondubbelzinnige toestemming van de betrokkene?
 
-**Expliciete toestemming** verwijst naar een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige aanduiding van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
+**Expliciete toestemming** verwijst naar een toestemmingsnorm die een specifieke, geïnformeerde en ondubbelzinnige aanduiding van de wensen van de betrokkene in mondelinge of schriftelijke vorm inhoudt. Eenvoudig gezegd, de betrokkene moet letterlijk en expliciet &quot;Ik geef toestemming&quot; of &quot;Ik ga ermee akkoord&quot; zeggen om de toestemming als expliciet te beschouwen. Bovendien moet het zo gemakkelijk zijn om de toestemming in te trekken als om ze te geven.
 
-**ondubbelzinnige (impliciete) toestemming** verwijst naar toestemming die niet expliciet door de betrokkene is gegeven, maar niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een bedrijfswebsite wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als ondubbelzinnige toestemming te worden beschouwd.
+**ondubbelzinnige (impliciete) toestemming** verwijst naar toestemming die niet expliciet door de betrokkene is gegeven, maar niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een website van een bedrijf wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als ondubbelzinnige toestemming te worden beschouwd.
 
 Voor veel verordeningen zoals de GDPR is uitdrukkelijke toestemming vereist voor de verwerking van gevoelige persoonsgegevens, waarbij niets anders dan &quot;opt in&quot; voldoende is. Voor niet-gevoelige gegevens is echter ondubbelzinnige (impliciete) toestemming aanvaardbaar.
 
@@ -70,7 +70,7 @@ In veel privacyverordeningen is bepaald dat een betrokkene die jonger is dan een
 | Verordening | Leeftijd van de toestemming | Notities |
 | --- | --- | --- |
 | CCPA (Californië) | 16 | <ul><li>Ouderlijke toestemming kan alleen worden gegeven aan personen van 13 jaar of ouder.</li><li>Het verzamelen van persoonsgegevens van personen onder de 13 jaar is strikt verboden.</li></ul> |
-| GDPR (Europese Unie) | 16 | <ul><li>Sommige lidstaten van de EU kunnen hiervoor een lagere leeftijd, maar niet minder dan 13 jaar, invoeren.</li><li>Voor alle betrokkenen onder de leeftijdsgrens moet toestemming van de ouders worden verleend.</li></ul> |
+| GDPR (EU) | 16 | <ul><li>Sommige lidstaten van de EU kunnen hiervoor een lagere leeftijd, maar niet minder dan 13 jaar, invoeren.</li><li>Voor alle betrokkenen onder de leeftijdsgrens moet toestemming van de ouders worden verleend.</li></ul> |
 | LGPD (Brazilië) | 13 | <ul><li>Voor alle betrokkenen onder de leeftijdsgrens moet toestemming van de ouders worden verleend.</li><li>Een natuurlijke persoon van 13 tot 18 jaar kan hiermee instemmen, mits de verwerking van zijn persoonsgegevens in zijn belang wordt verricht.</li></ul> |
 | PDPA (Thailand) | 10 | <ul><li>Voor alle betrokkenen onder de leeftijdsgrens moet toestemming van de ouders worden verleend.</li></ul> |
 
@@ -86,10 +86,10 @@ Ervan uitgaande dat het bedrijf persoonlijke informatie heeft verzameld en dat h
 
 | Verordening | Te reageren tijdsbestek | Notities |
 | --- | --- | --- |
-| CCPA (Californië) | 45 dagen |  |
-| GDPR (Europese Unie) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
-| LGPD (Brazilië) | 15 dagen |  |
-| PDPA (Thailand) | 30 dagen | Als een onderneming niet binnen het nalevingsvenster op het verzoek van een betrokkene kan reageren, krijgt de onderneming een extra termijn van 30 dagen vanaf de datum waarop zij het verzoek om schriftelijk aan de betrokkene te antwoorden niet kon inwilligen. |
+| CCPA (Californië) | 45 dagen | |
+| GDPR (EU) | dertig dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
+| LGPD (Brazilië) | 15 | |
+| PDPA (Thailand) | dertig dagen | Als een onderneming niet binnen het nalevingsvenster op het verzoek van een betrokkene kan reageren, krijgt de onderneming een extra termijn van 30 dagen vanaf de datum waarop zij het verzoek om schriftelijk aan de betrokkene te antwoorden niet kon inwilligen. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
@@ -122,7 +122,7 @@ De volgende vragen hebben specifiek betrekking op de CCPA.
 Zoals bepaald door CCPA, zijn de volgende rollen op Adobe en zijn klanten van toepassing:
 
 * De klanten van Adobe (de partij die om de inzameling en het gebruik van persoonlijke informatie van de ingezetenen van Californië verzoekt) zouden als a worden beschouwd **Zakelijk**.
-* Adobe zou in zijn hoedanigheid van dienstverlener worden beschouwd als een **Serviceprovider**.
+* Adobe zou in zijn rol van dienstverlening als een **Serviceprovider**.
 
 Als dienstverlener, verzamelt en verwerkt Adobe persoonlijke informatie namens de Zaken en is contractueel gebonden om die informatie slechts voor de specifieke doeleinden te gebruiken die in de overeenkomst worden vermeld.
 
@@ -156,4 +156,4 @@ De volgende vragen hebben specifiek betrekking op de PDPA.
 
 ### Wat zijn gevoelige persoonsgegevens?
 
-De PDPA bevat strenge eisen voor het verzamelen en opslaan van gevoelige persoonsgegevens, waaronder persoonsgegevens die betrekking hebben op: ras of etnische afstamming, politieke opvattingen, godsdienstige of levensbeschouwelijke overtuigingen, strafregisters, vakverenigingen, genetische gegevens, biometrische gegevens, gezondheidsgegevens en seksuele geaardheid of voorkeuren.
+De PDPA stelt strenge eisen aan de verzameling en opslag van gevoelige persoonsgegevens, waaronder persoonsgegevens die betrekking hebben op ras of etnische afstamming, politieke opvattingen, godsdienstige of levensbeschouwelijke overtuigingen, strafregisters, vakverenigingen, genetische gegevens, biometrische gegevens, gezondheidsgegevens en seksuele geaardheid of voorkeuren.

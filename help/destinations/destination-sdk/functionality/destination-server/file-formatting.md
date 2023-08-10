@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het `/bestemming-servers' eindpunt worden gebouwd.
 title: Configuratie bestandsindeling
-source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '999'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Destination SDK ondersteunt een flexibele reeks functies die u kunt configureren op basis van uw integratiebehoeften. De ondersteuning voor [!DNL CSV] bestandsindeling.
 
-Wanneer u op een bestand gebaseerde doelen maakt via Destination SDK, kunt u definiëren hoe de geëxporteerde CSV-bestanden moeten worden opgemaakt. U kunt een groot aantal opmaakopties aanpassen, zoals:
+Wanneer u op een bestand gebaseerde doelen maakt via Destination SDK, kunt u definiëren hoe de geëxporteerde CSV-bestanden moeten worden opgemaakt. U kunt vele opmaakopties aanpassen, zoals, maar niet beperkt tot:
 
 * Of het CSV-bestand een header moet bevatten;
 * Welk karakter voor het citeren van waarden te gebruiken;
@@ -24,7 +24,7 @@ Afhankelijk van uw bestemmingsconfiguratie, zullen de gebruikers bepaalde opties
 
 De het formatteren van het dossier montages maken deel uit van de configuratie van de bestemmingsserver voor op dossier-gebaseerde bestemmingen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of bekijk de gids over hoe te [gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of raadpleeg de gids over hoe te [gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 U kunt de opties voor de bestandsindeling configureren via het dialoogvenster `/authoring/destination-servers` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -57,7 +57,7 @@ U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan
 
 ## CSV-opties waarbij gebruikers geen configuratieopties kunnen selecteren {#file-configuration-templating-none}
 
-In het onderstaande configuratievoorbeeld zijn alle CSV-opties vooraf gedefinieerd. De exportinstellingen die zijn gedefinieerd in elk van de `csvOptions` parameters zijn definitief en gebruikers kunnen deze niet wijzigen.
+In het onderstaande configuratievoorbeeld zijn alle CSV-opties vooraf gedefinieerd. De exportinstellingen die zijn gedefinieerd in de `csvOptions` parameters zijn definitief en gebruikers kunnen deze niet wijzigen.
 
 ```json
 "fileConfigurations": {
@@ -175,8 +175,8 @@ Hieronder ziet u een volledige verwijzing naar alle beschikbare opmaakopties voo
 
 | Veld | Vereist/optioneel | Beschrijving | Standaardwaarde | Voorbeeld van uitvoer 1 | Voorbeeld van uitvoer 2 |
 |---|---|---|---|---|---|
-| `templatingStrategy` | Vereist | Voor elke optie voor bestandsindeling die u configureert, moet u de parameter toevoegen `templatingStrategy`, die twee waarden kunnen hebben: <br><ul><li>`NONE`: Gebruik deze waarde als u niet van plan bent gebruikers toe te staan om tussen verschillende waarden voor een configuratie te selecteren. Zie [deze configuratie](#file-configuration-templating-none) voor een voorbeeld waarin de opties voor bestandsindeling zijn gecorrigeerd.</li><li>`PEBBLE_V1`: Gebruik deze waarde als u gebruikers wilt toestaan om tussen verschillende waarden voor een configuratie te selecteren. In dit geval moet u ook een corresponderend gegevensveld voor de klant instellen in het dialoogvenster `/destination` eindpuntconfiguratie, aan oppervlakte de diverse opties aan gebruikers in UI. Zie [deze configuratie](#file-configuration-templating-pebble) voor een voorbeeld waarin gebruikers verschillende waarden voor opties voor bestandsindeling kunnen selecteren.</li></ul> | - | - | - |
-| `compression.value` | Optioneel | Compressiecodec voor het opslaan van gegevens naar een bestand. Ondersteunde waarden: `none`, `bzip2`, `gzip`, `lz4`, en `snappy`. | `none` | - | - |
+| `templatingStrategy` | Vereist | Voor elke optie voor bestandsindeling die u configureert, moet u de parameter toevoegen `templatingStrategy`, die twee waarden kunnen hebben: <br><ul><li>`NONE`: gebruik deze waarde als u niet van plan bent om gebruikers toe te staan tussen verschillende waarden voor een configuratie te selecteren. Zie [deze configuratie](#file-configuration-templating-none) voor een voorbeeld waarin de opties voor bestandsindeling zijn gecorrigeerd.</li><li>`PEBBLE_V1`: gebruik deze waarde als u wilt toestaan dat gebruikers een keuze kunnen maken tussen verschillende waarden voor een configuratie. In dit geval moet u ook een corresponderend gegevensveld voor de klant instellen in het dialoogvenster `/destination` eindpuntconfiguratie, aan oppervlakte de diverse opties aan gebruikers in UI. Zie [deze configuratie](#file-configuration-templating-pebble) voor een voorbeeld waarin gebruikers verschillende waarden voor opties voor bestandsindeling kunnen selecteren.</li></ul> | - | - | - |
+| `compression.value` | Optioneel | Compressiecodec die moet worden gebruikt bij het opslaan van gegevens naar een bestand. Ondersteunde waarden: `none`, `bzip2`, `gzip`, `lz4`, en `snappy`. | `none` | - | - |
 | `fileType.value` | Optioneel | Hiermee geeft u de indeling voor het uitvoerbestand op. Ondersteunde waarden: `csv`, `parquet`, en `json`. | `csv` | - | - |
 | `csvOptions.quote.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken van geciteerde waarden, waarbij het scheidingsteken deel kan uitmaken van de waarde. | `null` | - | - |
 | `csvOptions.quoteAll.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Geeft aan of alle waarden altijd tussen aanhalingstekens moeten worden geplaatst. Standaard worden alleen escape-waarden gebruikt die een aanhalingsteken bevatten. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |

@@ -1,10 +1,10 @@
 ---
 title: Overzicht van Adobe Privacy Extension
-description: Meer informatie over de extensie Adobe Privacy in Adobe Experience Platform.
+description: Meer informatie over de extensie van de Adobe Privacy-tag in Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Wanneer u de extensie Adobe Privacy gebruikt, moet u de vereiste callback-functi
 
 ### Een gegevenselement definiëren om identiteiten af te handelen
 
-Start het proces voor het maken van een nieuw gegevenselement door op **[!UICONTROL Data Elements]** in de linkernavigatie, gevolgd door **[!UICONTROL Add Data Element]**. Zodra u op het configuratiescherm bent, uitgezocht **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Custom Code]** voor het gegevenstype data. Selecteer **[!UICONTROL Open Editor]** in het rechterdeelvenster.
+Start het maken van een nieuw gegevenselement door **[!UICONTROL Data Elements]** in de linkernavigatie, gevolgd door **[!UICONTROL Add Data Element]**. Als u zich op het configuratiescherm bevindt, selecteert u **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Custom Code]** voor het elementtype data. Van hier, selecteer **[!UICONTROL Open Editor]** in het rechterdeelvenster.
 
 ![Type gegevenselement selecteren](../../../images/extensions/client/privacy/data-element-type.png)
 
@@ -81,9 +81,9 @@ Definieer in het dialoogvenster dat wordt weergegeven een JavaScript-functie die
 >
 >Voor meer informatie over de structuur van de `ids` object dat de callback-functie naar verwachting zal verwerken, raadpleegt u het [codevoorbeelden](../../../../privacy-service/js-library.md#samples) in het overzicht voor de Privacy JavaScript-bibliotheek.
 
-Als u klaar bent, selecteert u **[!UICONTROL Save]**.
+Selecteer **[!UICONTROL Save]**.
 
-![Callbackfunctie definiëren](../../../images/extensions/client/privacy/define-custom-code.png)
+![Callback-functie definiëren](../../../images/extensions/client/privacy/define-custom-code.png)
 
 U kunt andere douane-code gegevenselementen blijven creëren als u verschillende callbacks voor verschillende gebeurtenissen vereist.
 
@@ -103,9 +103,9 @@ Van hier, kunt u de regel blijven vormen zodat de actie van de Privacy van de Ad
 
 ![De regel opslaan](../../../images/extensions/client/privacy/save-rule.png)
 
-U kunt nu de regel toevoegen aan een bibliotheek om te implementeren als build op uw website voor testdoeleinden. Zie het overzicht op de [publicatiestroom voor tags](../../../ui/publishing/overview.md) voor meer informatie .
+U kunt nu de regel toevoegen aan een bibliotheek om te implementeren als build op uw website voor testdoeleinden. Zie het overzicht op de [labels publiceren, stroom](../../../ui/publishing/overview.md) voor meer informatie .
 
-## De extensie uitschakelen of verwijderen
+## De extensie uit- of verwijderen
 
 Nadat u de extensie hebt geïnstalleerd, kunt u deze uitschakelen of verwijderen. Selecteren **[!UICONTROL Configure]** op de Adobe Privacy-kaart in uw geïnstalleerde extensies en selecteer vervolgens **[!UICONTROL Disable]** of **[!UICONTROL Uninstall]**.
 

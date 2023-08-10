@@ -2,16 +2,16 @@
 title: Het eindpunt van componenten van de regel
 description: Leer hoe te om vraag aan het /rule_components eindpunt in Reactor API te maken.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1150'
 ht-degree: 1%
 
 ---
 
 # Het eindpunt van componenten van de regel
 
-Tags voor gegevensverzameling [regels](./rules.md) controleert het gedrag van de middelen in opgesteld [bibliotheek](./libraries.md). **Regelcomponenten** Dit zijn de afzonderlijke onderdelen die een regel vormen. Als een regel een recept is, is een regelcomponent een van de ingrediënten. De `/rule_components` eindpunt in Reactor API staat u toe om regelcomponenten programmatically te beheren.
+Tags voor gegevensverzameling [regels](./rules.md) controleert het gedrag van de middelen in opgesteld [bibliotheek](./libraries.md). **Regelcomponenten** Dit zijn de afzonderlijke onderdelen die een regel vormen. Als een regel een recept is, dan is een regelcomponent een van de ingrediënten. De `/rule_components` eindpunt in Reactor API staat u toe om regelcomponenten programmatically te beheren.
 
 >[!NOTE]
 >
@@ -359,7 +359,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Vereist)** De typen regelcomponenten die u kunt definiëren, worden geleverd door [extensiepakketten](./extension-packages.md). Wanneer u een nieuwe regelcomponent creeert, moet u een identiteitskaart van de afgevaardigde van de beschrijver verstrekken om op te wijzen op welk uitbreidingspakket deze regelcomponent gebaseerd is, het type van de component (gebeurtenis, voorwaarde, of actie), en de naam van de specifieke component zoals die door de uitbreiding (zoals de gebeurtenis &quot;Klik&quot;in de uitbreiding van de Kern wordt bepaald).<br><br>Zie de handleiding op [id&#39;s gedelegeerde descriptor](../guides/delegate-descriptor-ids.md) voor meer informatie . |
+| `attributes.delegate_descriptor_id` | **(Vereist)** De typen regelcomponenten die u kunt definiëren, worden geleverd door [extensiepakket](./extension-packages.md). Wanneer u een nieuwe regelcomponent creeert, moet u een identiteitskaart van de afgevaardigde van de beschrijver verstrekken om op te wijzen op welk uitbreidingspakket deze regelcomponent gebaseerd is, het type van de component (gebeurtenis, voorwaarde, of actie), en de naam van de specifieke component zoals die door de uitbreiding (zoals de gebeurtenis &quot;Klik&quot;in de uitbreiding van de Kern wordt bepaald).<br><br>Zie de handleiding op [id&#39;s gedelegeerde descriptor](../guides/delegate-descriptor-ids.md) voor meer informatie . |
 | `attributes.name` | **(Vereist)** Een voor mensen leesbare naam voor de regelcomponent. |
 | `attributes.delay_next` | Een Booleaanse waarde die aangeeft of latere handelingen moeten worden vertraagd. |
 | `attributes.order` | Een geheel getal dat de volgorde aangeeft waarin de component op type moet worden geladen. |
@@ -367,7 +367,7 @@ curl -X POST \
 | `attributes.settings` | A settings JSON object represented as a string. |
 | `attributes.timeout` | Een geheel getal dat de time-out aangeeft van de actie die achtereenvolgens wordt uitgevoerd. |
 | `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de `delegate_descriptor_id`.</li><li>`rules`: De regel waaronder deze component wordt gedefinieerd.</li></ol>Voor meer algemene informatie over relaties raadpleegt u de [relatiehulplijn](../guides/relationships.md). |
-| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde zijn `rule_components`. |
+| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde `rule_components`. |
 
 {style="table-layout:auto"}
 
@@ -514,7 +514,7 @@ curl -X PATCH \
 | --- | --- |
 | `attributes` | Een object waarvan de regelcomponenten de kenmerken vertegenwoordigen die voor de regelcomponent moeten worden bijgewerkt. De volgende attributen kunnen voor een regelcomponent worden bijgewerkt: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
 | `id` | De `id` van de regelcomponent die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_COMPONENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `rule_components`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `rule_components`. |
 
 {style="table-layout:auto"}
 

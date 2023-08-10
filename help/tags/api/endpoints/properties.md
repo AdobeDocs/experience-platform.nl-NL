@@ -2,9 +2,9 @@
 title: Het eindpunt Eigenschappen
 description: Leer hoe te om vraag aan het /properties eindpunt in Reactor API te maken.
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
@@ -431,11 +431,11 @@ curl -X POST \
 | `attributes.platform` | **(Vereist)** Het platform voor de eigenschap. Kan `web` voor wegeigenschappen, of `mobile` of `edge` voor mobiele eigenschappen. |
 | `attributes.domains` | **(Vereist voor westeigenschappen)** Een array van URL-domeinen voor de eigenschap. |
 | `attributes.development` | Een Booleaanse waarde die aangeeft of dit een ontwikkeleigenschap is. |
-| `attributes.privacy` | Een tekenreeks die kan worden gebruikt om te verwijzen naar overwegingen met betrekking tot privacy voor de eigenschap. |
+| `attributes.privacy` | Een tekenreeks die kan worden gebruikt om te verwijzen naar privacygerelateerde overwegingen voor de eigenschap. |
 | `attributes.rule_component_sequencing_enabled` | Een Booleaanse waarde voor of regelcomponentsequencing moet worden ingeschakeld voor deze eigenschap. |
 | `attributes.ssl_enabled` | Een Booleaanse waarde die aangeeft of SSL (Secure Sockets Layer) moet worden ingeschakeld voor deze eigenschap. |
 | `attributes.undefined_vars_return_empty` | Een Booleaanse waarde die aangeeft of ongedefinieerde variabelen als leeg moeten worden geretourneerd voor deze eigenschap. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `properties`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `properties`. |
 
 {style="table-layout:auto"}
 
@@ -579,7 +579,7 @@ curl -X PATCH \
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de eigenschap moeten worden bijgewerkt. De volgende kenmerken kunnen worden bijgewerkt voor een eigenschap: <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
 | `id` | De `id` van de eigenschap die u wilt bijwerken. Dit moet overeenkomen met de `{PROPERTY_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `properties`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `properties`. |
 
 {style="table-layout:auto"}
 

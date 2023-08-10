@@ -2,9 +2,9 @@
 title: Overzicht van id-naamruimte
 description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1743'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Als u met naamruimten werkt, moet u de verschillende betrokken Adobe Experience 
 
 Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] Hiermee worden profielgegevens samengevoegd. Zowel de identiteitswaarde als de naamruimte moeten overeenkomen.
 
-Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar hebben dezelfde waarde voor de naamruimte &quot;E-mail&quot;. Daarom [!DNL Platform] kan zien dat deze fragmenten in feite hetzelfde individu zijn en de gegevens samenvoegt in de identiteitsgrafiek voor het individu.
+Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar hebben dezelfde waarde voor de naamruimte &quot;E-mail&quot;. Daarom [!DNL Platform] kan zien dat deze fragmenten in feite hetzelfde individu zijn en de gegevens samenbrengt in de identiteitsgrafiek voor het individu.
 
 ![](images/identity-service-stitching.png)
 

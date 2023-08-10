@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om de montages van de dossieruitvoer voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Batchconfiguratie
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1045'
 ht-degree: 3%
 
 ---
@@ -46,7 +46,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Ondersteunde parameters {#supported-parameters}
 
-De waarden die u hier instelt, worden weergegeven in de [Het exporteren van publiek plannen](../../../ui/activate-batch-profile-destinations.md#scheduling) stap van de workflow voor activering van bestandsdoelen.
+De waarden die u hier instelt, worden weergegeven in het dialoogvenster [Het exporteren van publiek plannen](../../../ui/activate-batch-profile-destinations.md#scheduling) stap van de workflow voor activering van bestandsdoelen.
 
 ```json
 "batchConfig":{
@@ -90,7 +90,7 @@ De waarden die u hier instelt, worden weergegeven in de [Het exporteren van publ
 |---------|----------|------|
 | `allowMandatoryFieldSelection` | Boolean | Instellen op `true` zodat klanten kunnen opgeven welke profielkenmerken verplicht zijn. De standaardwaarde is `false`. Zie [Verplichte kenmerken](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes) voor meer informatie . |
 | `allowDedupeKeyFieldSelection` | Boolean | Instellen op `true` om klanten toe te staan deduplicatietoetsen te specificeren. De standaardwaarde is `false`.  Zie [Deduplicatietoetsen](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) voor meer informatie . |
-| `defaultExportMode` | Enum | Hiermee definieert u de standaardexportmodus voor bestanden. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> De standaardwaarde is `DAILY_FULL_EXPORT`. Zie de [documentatie voor batchactivering](../../../ui/activate-batch-profile-destinations.md#scheduling) voor meer informatie over het plannen van het exporteren van bestanden. |
+| `defaultExportMode` | Enum | Definieert de standaardmodus voor het exporteren van bestanden. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> De standaardwaarde is `DAILY_FULL_EXPORT`. Zie de [documentatie voor batchactivering](../../../ui/activate-batch-profile-destinations.md#scheduling) voor meer informatie over het plannen van het exporteren van bestanden. |
 | `allowedExportModes` | Lijst | Hiermee definieert u de exportmodi voor bestanden die beschikbaar zijn voor klanten. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Lijst | Hiermee definieert u de exportfrequentie voor bestanden die beschikbaar is voor klanten. Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> De standaardwaarde is `DAILY`. |
@@ -98,7 +98,7 @@ De waarden die u hier instelt, worden weergegeven in de [Het exporteren van publ
 | `filenameConfig.allowedFilenameAppendOptions` | Tekenreeks | *Vereist*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Op deze manier bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (gebruikers-id, naam van de organisatie, datum en tijd van export, enzovoort). Wanneer instellen `defaultFilename`, moet u dubbele macro&#39;s voorkomen. <br><br>Ondersteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de orde waarin u de macro&#39;s bepaalt, zal Experience Platform UI altijd hen in de hier voorgestelde orde tonen. <br><br> Indien `defaultFilename` is leeg, de `allowedFilenameAppendOptions` lijst moet ten minste één macro bevatten. |
 | `filenameConfig.defaultFilenameAppendOptions` | Tekenreeks | *Vereist*. Vooraf geselecteerde standaardbestandsnaammacro&#39;s die gebruikers kunnen uitschakelen.<br><br> De macro&#39;s in deze lijst zijn een subset van de macro&#39;s die zijn gedefinieerd in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Tekenreeks | *Optioneel*. Hiermee definieert u de standaardbestandsnamen van macro&#39;s voor de geëxporteerde bestanden. Deze kunnen niet worden overschreven door gebruikers. <br><br>Elke macro gedefinieerd door `allowedFilenameAppendOptions` wordt toegevoegd na de `defaultFilename` macro&#39;s. <br><br>Indien `defaultFilename` is leeg, moet u ten minste één macro definiëren in `allowedFilenameAppendOptions`. |
-| `segmentGroupingEnabled` | Boolean | Hiermee bepaalt u of het geactiveerde publiek moet worden geëxporteerd in één bestand of in meerdere bestanden, op basis van het publiek [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md). Ondersteunde waarden: <ul><li>`true`: exporteert één bestand per samenvoegbeleid.</li><li>`false`: Hiermee exporteert u één bestand per publiek, ongeacht het samenvoegbeleid. Dit is het standaardgedrag. U kunt hetzelfde resultaat bereiken door deze parameter volledig in te zetten.</li></ul> |
+| `segmentGroupingEnabled` | Boolean | Hiermee bepaalt u of het geactiveerde publiek moet worden geëxporteerd in één bestand of in meerdere bestanden, op basis van het publiek [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md). Ondersteunde waarden: <ul><li>`true`: exporteert één bestand per samenvoegbeleid.</li><li>`false`: exporteert één bestand per publiek, ongeacht het samenvoegbeleid. Dit is het standaardgedrag. U kunt hetzelfde resultaat bereiken door deze parameter volledig in te zetten.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -116,14 +116,14 @@ Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geë
 | `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door Platforms gegenereerde gebruikers-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL Segment Name] | Door gebruiker gedefinieerde publieksnaam | VIP abonnee |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Unieke, door Platform gegenereerde id van de doelinstantie | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
-| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Door gebruiker gedefinieerde naam van de doelinstantie. | Mijn advertentiebestemming 2022 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Door gebruiker gedefinieerde naam van de doelinstantie. | Mijn advertentiebestemming van 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Naam van de klantenorganisatie in Adobe Experience Platform. | Naam van mijn organisatie |
-| `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Naam van de sandbox die door de klant wordt gebruikt. | prod |
+| `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Naam van de sandbox die de klant gebruikt. | prod |
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` en `TIMESTAMP` beide definiëren wanneer het bestand is gegenereerd, maar in verschillende indelingen. <br><br><ul><li>`DATETIME` gebruikt de volgende indeling: YYYMMDD_HMMSS.</li><li>`TIMESTAMP` gebruikt de Unix-indeling van 10 cijfers. </li></ul> `DATETIME` en `TIMESTAMP` elkaar uitsluiten en niet gelijktijdig kunnen worden gebruikt. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
-| `CUSTOM_TEXT` | [!UICONTROL Custom text] | Door de gebruiker gedefinieerde aangepaste tekst die in de bestandsnaam moet worden opgenomen. Kan niet gebruiken in `defaultFilename`. | My_custom_text |
+| `CUSTOM_TEXT` | [!UICONTROL Custom text] | Door de gebruiker gedefinieerde aangepaste tekst die in de bestandsnaam moet worden opgenomen. Kan niet gebruiken in `defaultFilename`. | Mijn_Aangepaste_tekst |
 | `TIMESTAMP` | [!UICONTROL Date and time] | Tijdstempel van 10 cijfers van het tijdstip waarop het bestand is gegenereerd, in Unix-indeling. | 1652131584 |
 | `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | De id van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | De naam van de [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | Mijn aangepaste samenvoegingsbeleid |
+| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | De naam van [samenvoegingsbeleid](../../../../profile/merge-policies/overview.md) gebruikt om het geëxporteerde publiek te genereren. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Deze macro samen gebruiken met `segmentGroupingEnabled:true`. | Mijn aangepaste samenvoegingsbeleid |
 
 {style="table-layout:auto"}
 
@@ -159,7 +159,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Ondersteunde toewijzingsconfiguraties](supported-mapping-configurations.md)
 * [Levering bestemming](destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](audience-metadata-configuration.md)

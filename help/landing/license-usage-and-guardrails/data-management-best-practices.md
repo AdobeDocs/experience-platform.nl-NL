@@ -1,10 +1,10 @@
 ---
-title: Aanbevolen werkwijzen voor gegevensbeheer
+title: Aanbevolen werkwijzen voor gegevensbeheerlicenties
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2202'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 ## Het gebruiksdashboard voor licenties
 
-De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u een momentopname van de licentiegegevens van uw organisatie voor Platform kunt bekijken. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de opname is gemaakt. De momentopname is geen benadering of een steekproef van gegevens, en het dashboard werkt niet in real time bij.
+De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u een momentopname van de licentiegegevens van uw organisatie voor Platform kunt bekijken. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. De momentopname is geen benadering of een steekproef van gegevens, en het dashboard werkt niet in real time bij.
 
 Zie de handleiding voor meer informatie over [het gebruiken van het dashboard van het vergunningsgebruik op Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
@@ -61,15 +61,15 @@ Zie de handleiding voor meer informatie over [het gebruiken van het dashboard va
 
 In de volgende secties worden aanbevolen procedures beschreven voor een beter gegevensbeheer.
 
-### Gegevens begrijpen
+### Uw gegevens begrijpen
 
-Niet alle gegevens zijn hetzelfde in Adobe Experience Platform. Sommige gegevens kunnen dicht, maar laag in waarde zijn, terwijl andere gering, maar hoog in waarde kunnen zijn. Sommige gegevens kunnen waarde verliezen zodra ze zijn gegenereerd, terwijl andere maanden of jaren waardevol kunnen zijn.
+Niet alle gegevens zijn hetzelfde in Adobe Experience Platform. Sommige gegevens kunnen dicht, maar laag in waarde zijn, terwijl andere gering, maar hoog in waarde kunnen zijn. Sommige gegevens kunnen hun waarde verliezen zodra ze zijn gegenereerd, terwijl andere voor maanden, zo niet voor jaren, waardevol kunnen zijn.
 
 U moet rekening houden met drie dimensies om de waarde van uw gegevens te begrijpen:
 
 | Dimension | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Volume | Geeft de hoeveelheid en het totaal van opgenomen gegevens aan. | Web klikt - hoog in volume en gematigd in trouw. De waarde kan snel afnemen. |
+| Volume | Geeft de hoeveelheid en het totaal van de opgenomen gegevens aan. | Web klikt - hoog in volume en gematigd in trouw. De waarde kan snel afnemen. |
 | Timespan | Vertegenwoordigt de tijdsduur dat ingesloten gegevens waardevol blijven. | Offlineaankopen - gematigd in volume en getrouwheid, maar kunnen gedurende lange perioden waardevol zijn. |
 | Getrouwheid | Vertegenwoordigt hoe rijk de gegevens met informatie zijn. | Klantenaccounts: laag volume, maar hoog getrouw. Kan waardevol zijn na het leven van een klant. |
 
@@ -103,7 +103,7 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 | Adobe Audience Manager-bronfiltering | Wanneer u een Adobe Audience Manager-bronverbinding maakt, kunt u kiezen welke segmenten en kenmerken u in de [!DNL data lake] en Real-Time Klantprofiel, in plaats van de gegevens van de Audience Manager in zijn geheel in te voeren. Zie de handleiding op [een Audience Manager-bronverbinding maken](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie . |
 | Adobe Analytics Data Prep | U kunt [!DNL Data Prep] functionaliteit wanneer het creëren van een bron van de Analyse verbinding om uit gegevens uit te filtreren die niet voor uw gebruiksgevallen wordt vereist. Doorheen [!DNL Data Prep], kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om het Platform te laten weten of gegevens naar verwachting worden gepubliceerd in het profiel of alleen in het dialoogvenster [!DNL data lake]. Zie de handleiding op [een verbinding met een bron voor Analytics maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
 | Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u [!DNL Addressable Audience] en [!DNL Profile Richness] toeslagrechten. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de handleiding op [het toelaten van en het onbruikbaar maken van datasets voor Profiel](../../catalog/datasets/enable-for-profile.md) voor meer informatie . |
-| Web SDK en Mobile SDK-gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch worden verzameld en gegevens die expliciet door de ontwikkelaar worden verzameld. Om de naleving van de licentie beter te beheren, kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. Zie de handleiding op [basisbeginselen van SDK configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) voor meer informatie . |
+| Web SDK en Mobile SDK-gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch en gegevens worden verzameld die uitdrukkelijk door uw ontwikkelaar worden verzameld. Om de naleving van de licentie beter te beheren, kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. Zie de handleiding op [basisbeginselen van SDK configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) voor meer informatie . |
 | Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie op [gebeurtenissen en omstandigheden](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) voor meer informatie . |
 | Gegevens filteren op bronniveau | U kunt logische en vergelijkingsexploitanten gebruiken om rij-vlakke gegevens van uw bronnen te filtreren alvorens een verbinding tot stand te brengen en gegevens aan Experience Platform op te nemen. Lees voor meer informatie de handleiding op [het filtreren van rij-vlakke gegevens voor een bron gebruikend [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
@@ -111,7 +111,7 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 
 ### Profielenarchief {#profile-service}
 
-Het archief Profiel bestaat uit de volgende componenten:
+De opslag van het Profiel is samengesteld uit de volgende componenten:
 
 | Profielopslagcomponent | Beschrijving |
 | --- | --- |
@@ -126,8 +126,8 @@ Het archief Profiel bestaat uit de volgende componenten:
 
 Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de opslag van het Profiel begrijpen. Met deze rapporten kunt u geïnformeerde beslissingen nemen over hoe en waar u de vervaldatum van de Experience Event moet instellen om uw licentiegebruik beter te optimaliseren:
 
-* **API voor gegevensset-overlap**: Toont de datasets die het meest aan uw Adresseerbare Publiek bijdragen. U kunt dit rapport gebruiken om te bepalen welke [!DNL ExperienceEvent] datasets om een vervaldatum in te stellen voor. Zie de zelfstudie aan [het produceren van de dataset overlappend rapport](../../profile/tutorials/dataset-overlap-report.md) voor meer informatie .
-* **API voor overlappen van identiteiten**: Toont de identiteit namespaces die het meest aan uw Adresseerbare Publiek bijdragen. Zie de zelfstudie aan [het genereren van het overlappingsrapport voor de identiteit](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) voor meer informatie .
+* **API voor gegevensset-overlap**: Toont de datasets bloot die het meest aan uw Adresseerbare Publiek bijdragen. U kunt dit rapport gebruiken om te bepalen welke [!DNL ExperienceEvent] datasets om een vervaldatum in te stellen voor. Zie de zelfstudie aan [het produceren van de dataset overlappend rapport](../../profile/tutorials/dataset-overlap-report.md) voor meer informatie .
+* **API voor overlappen van identiteiten**: Hiermee wordt de naamruimte van de identiteit weergegeven die het meest bijdraagt aan het adresseerbare publiek. Zie de zelfstudie aan [het genereren van het overlappingsrapport voor de identiteit](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) voor meer informatie .
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
@@ -147,11 +147,11 @@ Hieronder volgt een lijst met aanbevolen tips die u kunt volgen om ervoor te zor
 * Configureren [innamefilters](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
 * Zorg ervoor dat u alleen [ingeschakelde gegevenssets voor profiel](#ingestion-filters) die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
 * Configureren [Verlopen van gebeurtenissen beleven](#event-expirations) en [Verlopen van gegevens van pseudoniem profiel](#pseudonymous-profile-expirations) voor hoogfrequente gegevens zoals webgegevens.
-* Controleer de [Profielsamenstellingsrapporten](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
+* Controleer regelmatig de [Profielsamenstellingsrapporten](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
 
 ## Overzicht en beschikbaarheid van functies {#feature-summary}
 
-De beste praktijken en hulpmiddelen die in dit document worden geschetst zullen u helpen uw gebruik van de vergunning van het machtigingsgebruik binnen Adobe Experience Platform beter beheren. Dit document wordt bijgewerkt wanneer extra functies worden vrijgegeven om alle klanten van het Experience Platform zichtbaar en bestuurbaar te maken.
+De beste praktijken en hulpmiddelen die in dit document worden geschetst zullen u helpen uw gebruik van de vergunningsbevoegdheid binnen Adobe Experience Platform beter beheren. Dit document wordt bijgewerkt wanneer extra functies worden vrijgegeven om alle klanten van het Experience Platform zichtbaar en bestuurbaar te maken.
 
 In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegeven, zodat u uw gebruiksrechten voor licenties beter kunt beheren.
 
@@ -165,6 +165,6 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 | [Gegevensfilters voor doorsturen van gebeurtenissen](../../tags/ui/event-forwarding/overview.md) | Server-kant toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname.  Zie de documentatie op [tagregels](../../tags/ui/managing-resources/rules.md) voor aanvullende informatie. |
 | [Gebruikersinterface van dashboard voor licentiegebruik](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Bekijk een momentopname van de licentiegerelateerde gegevens van uw organisatie voor Experience Platform |
 | [API voor gegevensset-overlap](../../profile/tutorials/dataset-overlap-report.md) | Output de datasets die het meest aan uw Adresseerbare Publiek bijdraagt |
-| [API voor overlappen van identiteiten](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Output de identiteitsnaamruimten die het meest aan uw Adresseerbare Publiek bijdragen |
+| [API voor overlappen van identiteiten](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Hiermee worden de naamruimten uitgevoerd die het meest bijdragen aan uw adresseerbare publiek |
 
 {style="table-layout:auto"}

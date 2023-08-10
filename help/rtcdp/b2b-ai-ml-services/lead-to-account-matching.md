@@ -3,9 +3,9 @@ title: Lood-aan-rekening matching in Real-Time CDP B2B
 type: Documentation
 description: Een overzicht en meer informatie over de lead to account matching feature in Experience Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '611'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ De lead to account matching service run when a new person profile snapshot which
 
 Nadat de baan in werking wordt gesteld, worden de resultaten bewaard in een nieuwe dataset van de bestaande relatie XDM van de rekeningspersoon.
 
-Selecteer **[!UICONTROL Preview dataset]** in de rechterbovenhoek.
+Selecteer **[!UICONTROL Preview dataset]** rechtsboven.
 
 ![Nieuwe gegevensset](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 

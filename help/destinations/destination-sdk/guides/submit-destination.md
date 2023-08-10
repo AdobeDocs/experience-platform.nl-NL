@@ -2,9 +2,9 @@
 description: Deze pagina verstrekt alle informatie u voor overzicht een geproduceerde bestemming moet voorleggen die gebruikend Destination SDK wordt authored.
 title: Ter controle een productiebestemming verzenden die is geschreven in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >* Zelfs nadat uw bestemming in de catalogus van het Experience Platform levend is, als u om het even welke updates aan uw configuraties moet maken, moet u een nieuw doel voorleggen publicatieverzoek voor de updates die in de configuraties moeten worden weerspiegeld.
 
-Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Platform doelen](/help/destinations/catalog/overview.md), moet u Adobe bepaalde informatie geven over de bestemming en de uitgevoerde tests om ervoor te zorgen dat gebruikers de best mogelijke ervaring hebben met het activeren van gegevens op uw platform.
+Voordat uw bestemming kan worden gepubliceerd naar de [Catalogus Experience Platform-doelen](/help/destinations/catalog/overview.md), moet u Adobe bepaalde informatie geven over de bestemming en de uitgevoerde tests om ervoor te zorgen dat gebruikers de best mogelijke ervaring hebben met het activeren van gegevens op uw platform.
 
 Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming verzendt of bijwerkt die u met Adobe Experience Platform Destination SDK hebt gemaakt. Als u een bestemming in Adobe Experience Platform wilt verzenden, stuurt u een e-mail naar <aepdestsdk@adobe.com> waaronder:
 
@@ -35,7 +35,7 @@ Deze pagina bevat alle informatie die u moet opgeven wanneer u een bestemming ve
    * Koppel een voorbeeldbestand dat door uw bestemming is gegenereerd en dat naar uw opslaglocatie is geëxporteerd.
    * Verzend een of andere vorm van bewijs dat u het geëxporteerde bestand van de opslaglocatie naar uw systeem hebt ingevoerd.
 * Het bewijs dat u een bestemmings het publiceren verzoek voor uw bestemming gebruikend hebt voorgelegd [doel-publicatie-API](../publishing-api/create-publishing-request.md).
-* Een documentatie PR (trekkingsverzoek), volgens de instructies die in de [zelfbedieningsdocumentatie](../docs-framework/documentation-instructions.md).
+* Een documentatie PR (trekkingsverzoek), volgens de instructies die worden beschreven in de [zelfbedieningsdocumentatie](../docs-framework/documentation-instructions.md).
 * Een afbeeldingsbestand dat wordt weergegeven als een logo voor uw doelkaart in de catalogus met bestemmingen voor het Experience Platform.
 
 In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
@@ -45,7 +45,7 @@ In de onderstaande secties vindt u gedetailleerde informatie over elk onderdeel:
 Verstrek een beschrijving van de gebruiksgevallen die uw bestemming voor klanten van het Experience Platform oplost. Uw beschrijvingen kunnen gelijkaardig zijn aan gebruiksgevallen van bestaande partners:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen aanwijzen met e-mailadressen die zijn uitgeschakeld in VMG (Verizon Media), zodat ze snel een nieuw publiek kunnen maken en de gewenste doelgroep kunnen duwen met de bijna-real-time API van VMG.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-API&#39;s zijn beschikbaar voor adverteerders die een specifieke doelgroep willen kiezen met e-mailadressen die in VMG (Verizon Media) zijn uitgeschakeld, zodat ze snel een nieuw publiek kunnen maken en de gewenste doelgroep kunnen duwen met de vrijwel realtime API van VMG.
 
 ## Reden voor update {#reason-for-update}
 
@@ -62,7 +62,7 @@ Geef testresultaten op nadat u de [doel-API testen](../testing-api/streaming-des
 * De volledige API-aanvraag (headers en body) die met de API voor testen is ingediend bij het eindpunt van de bestemming.
 * De API reactie die van uw bestemmingshindpunt wordt ontvangen.
 
-Uw verzoek en antwoord kunnen bijvoorbeeld lijken op de onderstaande voorbeelden:
+Uw verzoek en antwoord zien er bijvoorbeeld ongeveer hetzelfde uit als de onderstaande voorbeelden:
 
 **Verzoek**
 
@@ -247,7 +247,7 @@ Tot slot moet u een of andere vorm van bewijs verstrekken dat de gegevens met su
 
 ## Bewijs dat u een bestemmings het publiceren verzoek hebt ingediend {#destination-publishing-request-proof}
 
-Nadat u de bestemming hebt getest, moet u de opdracht [doel-publicatie-API](../publishing-api/create-publishing-request.md) om de bestemming voor overzicht en publicatie naar Adobe te verzenden.
+Nadat u de bestemming hebt getest, moet u [doel-publicatie-API](../publishing-api/create-publishing-request.md) om de bestemming voor overzicht en publicatie naar Adobe te verzenden.
 
 Geef de id van de publicatieaanvraag voor uw doel op. Voor informatie over het ophalen van de id van de publicatieaanvraag leest u hoe u [doel-publicatieverzoeken ophalen](../publishing-api/retrieve-publishing-request.md).
 
@@ -263,6 +263,6 @@ De afbeeldingsvereisten zijn:
 * **Indeling**: `SVG`
 * **Grootte**: minder dan 2 MB
 
-## Voorbeeldmail downloaden {#download-sample-email}
+## Voorbeelde-mail downloaden {#download-sample-email}
 
 [Downloaden](../assets/guides/sample-email-submit-destination.rtf) een voorbeeld-e-mail met alle informatie die u aan Adobe moet verstrekken.

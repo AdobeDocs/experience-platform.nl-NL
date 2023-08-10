@@ -3,9 +3,9 @@ title: Een verbinding met een endo-bron maken in de gebruikersinterface
 description: Leer hoe u een Pendo-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Pendo] bronverbinding
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Vereisten {#prerequisites}
 
@@ -33,7 +33,7 @@ De volgende sectie bevat informatie over voorwaarden die moeten worden voltooid 
 
 ### Voorbeeld-JSON om het bronschema te definiëren voor [!DNL Pendo] {#prerequisites-json-schema}
 
-Voordat u een [!DNL Pendo] bronverbinding. U moet een bronschema opgeven. U kunt de JSON hieronder gebruiken.
+Voordat u een [!DNL Pendo] bronverbinding, zult u een bronschema vereisen om worden verstrekt. U kunt de JSON hieronder gebruiken.
 
 ```
 {
@@ -53,7 +53,7 @@ Lees voor meer informatie de [[!DNL Pendo] gids over webhaken](https://support.p
 
 ### Een Platform maken voor [!DNL Pendo] {#create-platform-schema}
 
-U moet er ook voor zorgen dat u eerst een Platform-schema voor uw bron maakt. Zie de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitgebreide stappen over hoe te om een schema tot stand te brengen.
+U moet er ook voor zorgen dat u eerst een Platform-schema voor uw bron maakt. Zie de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 ![UI die van het Platform een voorbeeldschema voor Pendo toont.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
@@ -80,15 +80,15 @@ Selecteren **[!UICONTROL Upload files]** om een JSON-bestand vanaf uw lokale sys
 
 Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt ook de opdracht [!UICONTROL Search field] nut om tot specifieke punten van binnen uw schema toegang te hebben.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]**.
 
-![De voorvertoningsstap van de workflow voor bronnen.](../../../../images/tutorials/create/analytics-pendo-webhook/preview.png)
+![De voorbeeldstap van de bronworkflow.](../../../../images/tutorials/create/analytics-pendo-webhook/preview.png)
 
 ## Gegevens {#dataflow-detail}
 
 De **Gegevens** de stap verschijnt, die u van opties voorzien om een bestaande dataset te gebruiken of een nieuwe dataset voor uw gegevensstroom te vestigen, evenals een kans om een naam en een beschrijving voor uw gegevensstroom te verstrekken. Tijdens deze stap kunt u ook instellingen configureren voor het opnemen van profielen, foutdiagnose, gedeeltelijke inname en waarschuwingen.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]**.
 
 ![De gegevensstroom-detailstap van het bronwerkschema.](../../../../images/tutorials/create/analytics-pendo-webhook/dataflow-detail.png)
 
@@ -98,13 +98,13 @@ De [!UICONTROL Mapping] de stap verschijnt, die u van een interface voorziet om 
 
 Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
-De onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u verdergaat met de [!UICONTROL Review] in.
+De onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u verdergaat met de [!UICONTROL Review] in het werkgebied.
 
 | Doelveld | Beschrijving |
 | --- | --- |
 | `uniqueId` | De [!DNL Pendo] id voor de gebeurtenis. |
 
-Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 ![De toewijzingsstap van de workflow voor bronnen.](../../../../images/tutorials/create/analytics-pendo-webhook/mapping.png)
 
@@ -112,8 +112,8 @@ Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **[!UICONTROL Connection]**: Hiermee geeft u het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
@@ -140,11 +140,11 @@ Meld u vervolgens aan bij uw account op [[!DNL Pendo]](https://pendo.io/) en maa
 
 Wanneer uw webhaak is gemaakt, navigeert u naar de instellingenpagina van uw [!DNL Pendo] Webhaak en voer uw URL van de webhaak in in [!DNL URL] veld.
 
-![De het schermschot van de Buigmachine van de Buigmachine die het WebHaak eindpuntgebied toont](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
+![De het schermschot van de Buigmachine van de Buigmachine die het Web-haakeindpuntgebied toont](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
 
 >[!TIP]
 >
->U kunt zich abonneren op verschillende gebeurtenissencategorieën om te bepalen welk soort gebeurtenissen u van uw wilt verzenden [!DNL Pendo] -instantie naar Platform. Voor meer informatie over de verschillende gebeurtenissen raadpleegt u de [[!DNL Pendo] documentatie](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>U kunt zich abonneren op verschillende gebeurtenissencategorieën om te bepalen welk soort gebeurtenissen u van uw wilt verzenden [!DNL Pendo] aan Platform. Voor meer informatie over de verschillende gebeurtenissen raadpleegt u de [[!DNL Pendo] documentatie](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## Volgende stappen {#next-steps}
 
@@ -158,11 +158,11 @@ In de volgende secties vindt u aanvullende bronnen die u kunt raadplegen wanneer
 
 Om te controleren of u de bron correct hebt ingesteld en [!DNL Pendo] de berichten worden opgenomen, volg de stappen hieronder:
 
-* U kunt de [!DNL Pendo] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** pagina om de gebeurtenissen te identificeren die worden vastgelegd door [!DNL Pendo].
+* U kunt de [!DNL Pendo] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** pagina om de gebeurtenissen te identificeren waarop [!DNL Pendo].
 
 ![Schermafbeelding van de gebruikersinterface van Pendo met chatgeschiedenis](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Pendo] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhaken werden opgenomen die u binnen hebt gevormd [!DNL Pendo].
+* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Pendo] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhooks werden opgenomen die u binnen hebt gevormd [!DNL Pendo].
 
 ![Schermopname van gebruikersinterface van Platform met ingesloten gebeurtenissen](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 

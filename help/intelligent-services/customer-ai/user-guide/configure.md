@@ -5,15 +5,15 @@ feature: Customer AI
 title: Een AI-instantie van een klant configureren
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2740'
 ht-degree: 0%
 
 ---
 
 
-# Een Customer AI-instantie configureren
+# Een AI-instantie van een klant configureren
 
 AI van de klant, als deel van AI/de Diensten van ML laat u toe om de scores van de douanedichtheid te produceren zonder het moeten zich over machine het leren ongerust maken.
 
@@ -27,7 +27,7 @@ Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Serv
 
 De **Customer AI** De gebruikersinterface wordt weergegeven en alle servicematerialen worden weergegeven.
 
-- U kunt de **[!UICONTROL Total profiles scored]** metrisch die in de bodem-juiste kant van wordt gevestigd **[!UICONTROL Create instance]** container. Deze metrische waarde houdt het totale aantal profielen bij dat door de AI van de Klant voor het lopende kalenderjaar wordt genoteerd, met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties.
+- U kunt de **[!UICONTROL Total profiles scored]** metrisch gevestigd in de bodem-juiste kant van **[!UICONTROL Create instance]** container. Deze metrische waarde houdt het totale aantal profielen bij dat door de AI van de Klant voor het lopende kalenderjaar wordt genoteerd, met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties.
 
 ![](../images/user-guide/total-profiles.png)
 
@@ -37,8 +37,8 @@ De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden
 - **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** Kopieert momenteel geselecteerde de opstelling van de de dienstinstantie. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
 - **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal uit Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
 - **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die door dit exemplaar wordt gebruikt. Als de veelvoudige datasets worden gebruikt, opent het selecteren van de hyperlinktekst de datasetvoorproefpopover.
-- **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
-- **[!UICONTROL Score definition]**: Een snel overzicht van het doel u voor deze instantie vormde.
+- **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een uitvoering mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
+- **[!UICONTROL Score definition]**: Een snel overzicht van het doel dat u voor deze instantie hebt geconfigureerd.
 
 ![](../images/user-guide/service-instance-panel.png)
 
@@ -48,7 +48,7 @@ Als u een nieuwe instantie wilt maken, selecteert u **[!UICONTROL Create instanc
 
 ## Instellen
 
-De workflow voor het maken van instanties wordt weergegeven, te beginnen bij het **[!UICONTROL Set up]** stap.
+De workflow voor het maken van instanties wordt weergegeven, te beginnen bij de **[!UICONTROL Set up]** stap.
 
 Hieronder vindt u belangrijke informatie over waarden die u aan het exemplaar moet doorgeven:
 
@@ -56,7 +56,7 @@ Hieronder vindt u belangrijke informatie over waarden die u aan het exemplaar mo
 
 - **[!UICONTROL Description]:** Een beschrijving die aangeeft wat u probeert te voorspellen.
 
-- **[!UICONTROL Propensity type]:** Het type van aandrijving bepaalt de intentie van de score en metrische polariteit. U kunt **[!UICONTROL Churn]** of **[!UICONTROL Conversion]**. Zie de opmerking onder [overzicht van scores](./discover-insights.md#scoring-summary) in het ontdekkende document van Inzichten voor meer informatie over hoe het type van Bevoegdheid uw geval beïnvloedt.
+- **[!UICONTROL Propensity type]:** Het type van aandrijving bepaalt de intentie van de score en metrische polariteit. U kunt kiezen **[!UICONTROL Churn]** of **[!UICONTROL Conversion]**. Zie de opmerking onder [overzicht van scores](./discover-insights.md#scoring-summary) in het ontdekkende document van Inzichten voor meer informatie over hoe het type van Bevoegdheid uw geval beïnvloedt.
 
 ![Scherm instellen](../images/user-guide/create-instance.png)
 
@@ -64,7 +64,7 @@ Geef de vereiste waarden op en selecteer vervolgens **[!UICONTROL Next]** om doo
 
 ## Gegevens selecteren {#select-data}
 
-Door het ontwerp gebruikt de AI van de Klant Adobe Analytics, Adobe Audience Manager, Experience Events in het algemeen, en Consumer Experience Event-gegevens om de eigenschapscores te berekenen. Bij het selecteren van een gegevensset worden alleen gegevenssets weergegeven die compatibel zijn met Customer AI. Als u een gegevensset wilt selecteren, selecteert u de **+**) naast de naam van de gegevensset of schakelt u het selectievakje in om meerdere gegevenssets tegelijk toe te voegen. Gebruik de onderzoeksoptie om de datasets snel te vinden u in geinteresseerd bent.
+Door het ontwerp gebruikt de AI van de Klant Adobe Analytics, Adobe Audience Manager, Experience Events in het algemeen, en Consumer Experience Event-gegevens om de eigenschapscores te berekenen. Bij het selecteren van een gegevensset worden alleen gegevenssets weergegeven die compatibel zijn met Customer AI. Als u een gegevensset wilt selecteren, selecteert u de **+**) naast de naam van de gegevensset of selecteert u het selectievakje om meerdere gegevenssets tegelijk toe te voegen. Gebruik de onderzoeksoptie om de datasets snel te vinden u in geinteresseerd bent.
 
 ![Gegevensset selecteren en zoeken](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
@@ -72,7 +72,7 @@ Nadat u de gegevenssets hebt geselecteerd die u wilt gebruiken, selecteert u de 
 
 ![Gegevenssets selecteren](../images/user-guide/select-datasets.png)
 
-Het infopictogram selecteren ![infopictogram](../images/user-guide/info-icon.png) naast de dataset opent de dataset voorproefpopover.
+Het infopictogram selecteren ![info icon](../images/user-guide/info-icon.png) naast de dataset opent de dataset voorproefpopover.
 
 ![Gegevensset selecteren en zoeken](../images/user-guide/dataset-info.png)
 
@@ -84,7 +84,7 @@ Selecteren **[!UICONTROL Save]** om uw concepten op te slaan terwijl u de workfl
 
 ### Volledige gegevensset {#dataset-completeness}
 
-De voorvertoning van de gegevensset bevat een percentage voor volledigheid van de gegevensset. Deze waarde verstrekt een snelle momentopname van hoeveel kolommen in uw dataset leeg/ongeldig zijn. Als een dataset veel ontbrekende waarden bevat en deze waarden elders worden vastgelegd, wordt u ten zeerste aangeraden de dataset met de ontbrekende waarden op te nemen. In dit voorbeeld is de persoon-id leeg, maar de persoon-id wordt vastgelegd in een aparte gegevensset die kan worden opgenomen.
+De voorvertoning van de gegevensset bevat een percentage voor het volledigheidspercentage van de gegevensset. Deze waarde verstrekt een snelle momentopname van hoeveel kolommen in uw dataset leeg/ongeldig zijn. Als een dataset veel ontbrekende waarden bevat en deze waarden elders worden vastgelegd, wordt u ten zeerste aangeraden de dataset met de ontbrekende waarden op te nemen. In dit voorbeeld is de persoon-id leeg, maar de persoon-id wordt vastgelegd in een aparte gegevensset die kan worden opgenomen.
 
 >[!NOTE]
 >
@@ -137,7 +137,7 @@ Als u bijvoorbeeld een app wilt instellen om te voorspellen of een klant een aan
 
 Er kunnen zich echter gevallen voordoen waarin u wilt voorspellen of een gebeurtenis zich niet binnen een bepaald tijdsbestek zal voordoen. Om een doel met deze optie te vormen, selecteer **[!UICONTROL Will not occur]** in het bovenste vervolgkeuzemenu.
 
-Als u bijvoorbeeld wilt voorspellen welke klanten zich minder engageren en de aanmeldingspagina van uw account de volgende maand niet meer bezoeken. Selecteren **[!UICONTROL Will not occur]** gevolgd door **[!UICONTROL All of]** en vervolgens voert u **web.webInteraction.URL** (of een soortgelijk veld) en **[!UICONTROL equals]** als de exploitant met **accountaanmelding** als de waarde.
+Als u bijvoorbeeld wilt voorspellen welke klanten zich minder engageren en de aanmeldingspagina van uw account de volgende maand niet meer bezoeken. Selecteren **[!UICONTROL Will not occur]** gevolgd door **[!UICONTROL All of]** en vervolgens voert u **web.webInteraction.URL** (of een soortgelijk veld) en **[!UICONTROL equals]** als de exploitant met **account-login** als de waarde.
 
 ![zal niet plaatsvinden](../images/user-guide/not-occur.png)
 
@@ -149,7 +149,7 @@ U kunt bijvoorbeeld voorspellen of een klant een bepaald product koopt. Dit voor
 
 ![Alle voorbeelden](../images/user-guide/all-of.png)
 
-Om te voorspellen of een klant om het even welke gebeurtenis van een bepaalde reeks zal hebben, kunt u gebruiken **[!UICONTROL Any of]** optie.
+Om te voorspellen of een klant om het even welke gebeurtenis van een bepaalde reeks zal hebben, kunt u gebruiken **[!UICONTROL Any of]** -optie.
 
 U kunt bijvoorbeeld voorspellen of een klant een bepaalde URL of een webpagina met een bepaalde naam bezoekt. Dit voorspellingsdoel wordt bepaald door twee voorwaarden: `web.webPageDetails.URL` **begint met** een bepaalde waarde en `web.webPageDetails.name` **begint met** een bepaalde waarde.
 
@@ -159,7 +159,7 @@ U kunt bijvoorbeeld voorspellen of een klant een bepaalde URL of een webpagina m
 
 Standaard worden voor alle profielen densiteitsscores gegenereerd, tenzij een in aanmerking komende populatie is opgegeven. U kunt een in aanmerking komende populatie opgeven door voorwaarden te definiëren voor het opnemen of uitsluiten van profielen op basis van gebeurtenissen.
 
-![subsidiabele bevolking](../images/user-guide/eligible-population.png)
+![in aanmerking komende bevolking](../images/user-guide/eligible-population.png)
 
 ### Aangepaste gebeurtenissen (*optioneel*) {#custom-events}
 
@@ -171,11 +171,11 @@ Als u aanvullende informatie hebt naast de [standaardgebeurtenisvelden](../data-
 
 ![gebeurtenisfunctie](../images/user-guide/event-feature.png)
 
-Als u een aangepaste gebeurtenis wilt toevoegen, selecteert u **[!UICONTROL Add custom event]**. Voer vervolgens een aangepaste naam voor de gebeurtenis in en wijs deze toe aan het gebeurtenisveld in uw schema. Aangepaste gebeurtenisnamen worden weergegeven in plaats van de veldwaarde wanneer wordt gekeken naar invloedrijke factoren en andere inzichten. Dit betekent dat de naam van de aangepaste gebeurtenis wordt gebruikt in plaats van de id/waarde van de gebeurtenis. Voor meer informatie over hoe de gebeurtenissen van de douane worden getoond, zie [voorbeeldsectie voor aangepaste gebeurtenissen](#custom-event). Deze extra aangepaste gebeurtenissen worden door de AI van de Klant gebruikt om de kwaliteit van uw model te verbeteren en nauwkeurigere resultaten te bieden.
+Selecteer **[!UICONTROL Add custom event]**. Voer vervolgens een aangepaste naam voor de gebeurtenis in en wijs deze toe aan het gebeurtenisveld in uw schema. Aangepaste gebeurtenisnamen worden weergegeven in plaats van de veldwaarde wanneer wordt gekeken naar invloedrijke factoren en andere inzichten. Dit betekent dat de naam van de aangepaste gebeurtenis wordt gebruikt in plaats van de id/waarde van de gebeurtenis. Voor meer informatie over hoe de gebeurtenissen van de douane worden getoond, zie [voorbeeldsectie voor aangepaste gebeurtenissen](#custom-event). Deze extra aangepaste gebeurtenissen worden door de AI van de Klant gebruikt om de kwaliteit van uw model te verbeteren en nauwkeurigere resultaten te bieden.
 
 ![Veld Aangepaste gebeurtenis](../images/user-guide/custom-event.png)
 
-Selecteer vervolgens de operator die u wilt gebruiken in de vervolgkeuzelijst met beschikbare operatoren. Alleen operatoren die compatibel zijn met de gebeurtenis worden weergegeven.
+Selecteer vervolgens de gewenste operator in de vervolgkeuzelijst met beschikbare operatoren. Alleen operatoren die compatibel zijn met de gebeurtenis worden weergegeven.
 
 ![Aangepaste gebeurtenis, operator](../images/user-guide/custom-operator.png)
 
@@ -187,7 +187,7 @@ Selecteer **[!UICONTROL Next]** rechtsboven om door te gaan.
 
 ### Aangepaste profielkenmerken (*optioneel*)
 
-U kunt belangrijke gegevenssetvelden voor profielen definiëren (met tijdstempels) in uw gegevens naast de gegevens [standaardgebeurtenisvelden](../data-requirements.md#standard-events) door de AI van de Klant worden gebruikt om eigenschapscores te genereren. Met deze optie kunt u aanvullende profielkenmerken toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model worden verbeterd en kunnen de resultaten nauwkeuriger worden weergegeven. Bovendien kunnen door het toevoegen van kenmerken voor aangepaste profielen AI van de Klant beter laten zien hoe bepaalde profielen in een eigenschapssemmer zijn terechtgekomen.
+U kunt belangrijke gegevenssetvelden voor profielen definiëren (met tijdstempels) in uw gegevens naast de gegevens [standaardgebeurtenisvelden](../data-requirements.md#standard-events) door de AI van de Klant worden gebruikt voor het genereren van eigenschapscores. Met deze optie kunt u aanvullende profielkenmerken toevoegen die u van belang acht. Hierdoor kan de kwaliteit van het model worden verbeterd en kunnen de resultaten nauwkeuriger worden weergegeven. Bovendien kunnen door het toevoegen van kenmerken voor aangepaste profielen AI van de Klant beter laten zien hoe bepaalde profielen in een eigenschapssemmer zijn terechtgekomen.
 
 >[!NOTE]
 >
@@ -235,7 +235,7 @@ Selecteer **[!UICONTROL Add exclusion]** en definieert u de gebeurtenis. Als u e
 
 ### Schakelen tussen profielen
 
-Met de schakeloptie Profiel kan de Klant-AI de resultaten van de scoring exporteren naar het realtime profiel van de Klant. Als u deze schakeloptie uitschakelt, worden de resultaten van de modelscoring niet toegevoegd aan Profiel. De resultaten van AI-scoring van de klant zijn nog steeds beschikbaar met deze functie uitgeschakeld.
+Met de schakeloptie Profiel kan de Klant-AI de resultaten van de scoring exporteren naar het realtime-klantprofiel. Als u deze schakeloptie uitschakelt, worden de resultaten van de modelscoring niet toegevoegd aan Profiel. De resultaten van AI-scoring van de klant zijn nog steeds beschikbaar met deze functie uitgeschakeld.
 
 Wanneer u voor het eerst een AI van de Klant gebruikt, kunt u deze functie uitschakelen totdat u tevreden bent met de resultaten van de modeluitvoer. Dit verhindert u veelvoudige het scoren datasets aan uw Profielen van de Klant te uploaden terwijl het verfijnen van uw model. Als u klaar bent met het kalibreren van het model, kunt u het model klonen met de opdracht [kloonoptie](#set-up-your-instance) van de **Service-instanties** pagina. Op deze manier kunt u een kopie van uw model maken en het profiel in- en uitschakelen.
 

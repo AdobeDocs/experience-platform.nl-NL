@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Objectvelden definiëren in de gebruikersinterface
 description: Leer hoe u een objecttype-veld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Als u een subveld wilt toevoegen, selecteert u de optie **plus (+)** pictogram n
 
 Nadat u het subveld hebt geconfigureerd en geselecteerd **[!UICONTROL Apply]** kunt u doorgaan met het toevoegen van velden aan het object met hetzelfde proces. U kunt ook subvelden toevoegen die zelf objecten zijn, zodat u velden zo diep kunt nesten als u wilt.
 
-Wanneer u klaar bent met het samenstellen van het object, zult u merken dat u de structuur ervan opnieuw wilt gebruiken in verschillende klassen en veldgroepen. In dat geval kunt u het object omzetten in een gegevenstype. Zie de sectie over [objecten omzetten in gegevenstypen](../resources/data-types.md#convert) in de UI-gids voor gegevenstypen voor meer informatie.
+Wanneer u klaar bent met het samenstellen van het object, zult u merken dat u de structuur ervan opnieuw wilt gebruiken in verschillende klassen en veldgroepen. In dit geval kunt u ervoor kiezen het object om te zetten in een gegevenstype. Zie de sectie over [objecten omzetten in gegevenstypen](../resources/data-types.md#convert) in de UI-gids voor gegevenstypen voor meer informatie.
 
 ## Volgende stappen
 

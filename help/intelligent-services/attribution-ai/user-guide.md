@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;gebruikershandleiding;attributie ai;populaire onderwerpen;regio
 feature: Attribution AI
-title: Handleiding voor Attribution AI-gebruikersinterface
+title: Handleiding voor Attribution AI UI
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2384'
 ht-degree: 0%
 
 ---
 
-# Handleiding Attribution AI UI
+# Handleiding voor Attribution AI UI
 
 Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, algoritmische attributiedienst die de invloed en de stijgende invloed van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketeers marketing- en advertentieuitgaven meten en optimaliseren door inzicht te krijgen in de impact van elke individuele interactie van de klant in elke fase van de reizen van de klant.
 
@@ -19,28 +19,28 @@ Dit document fungeert als richtlijn voor interactie met Attribution AI in de geb
 
 ## Een model maken
 
-In de [!DNL Adobe Experience Platform] UI, selecteer **[!UICONTROL Services]** in de linkernavigatie. De **[!UICONTROL Services]** browser verschijnt en toont beschikbare Adobe intelligente diensten. Selecteer in de container voor Attribution AI de optie **[!UICONTROL Open]**.
+In de [!DNL Adobe Experience Platform] UI, selecteer **[!UICONTROL Services]** in de linkernavigatie. De **[!UICONTROL Services]** browser verschijnt en toont beschikbare Adobe intelligente diensten. Selecteer in de container voor Attribution AI **[!UICONTROL Open]**.
 
 ![Uw model openen](./images/user-guide/open_Attribution_ai.png)
 
 De de dienstpagina van de Attribution AI verschijnt. Deze pagina maakt een lijst van de dienstmodellen van Attribution AI en toont informatie over hen, met inbegrip van de naam van het model, omzettingsgebeurtenissen, hoe vaak het model in werking wordt gesteld, en de status van de laatste update.
 
-U kunt de **[!UICONTROL Total conversion events scored]** metrisch die in de bodem-juiste kant van wordt gevestigd **[!UICONTROL Create model]** container. Deze metrische waarde houdt het totale aantal omzettingsgebeurtenissen bij die door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstmodellen worden genoteerd.
+U kunt de **[!UICONTROL Total conversion events scored]** metrisch gevestigd in de bodem-juiste kant van **[!UICONTROL Create model]** container. Deze metrische waarde houdt het totale aantal omzettingsgebeurtenissen bij die door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstmodellen worden genoteerd.
 
 ![totale omzettingen](./images/user-guide/total_conversions.png)
 
 De modellen van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Als u deze besturingselementen wilt weergeven, selecteert u een model in uw bestaande **[!UICONTROL Service models]**. De besturingselementen bevatten de volgende informatie:
 
 - **[!UICONTROL Edit]**: Selecteren **[!UICONTROL Edit]** staat u toe om een bestaand de dienstmodel te wijzigen. U kunt de naam, de beschrijving, de status, het scoren frequentie van het model, en de extra kolommen van de scoredataset uitgeven.
-- **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** Hiermee kopieert u het geselecteerde servicemodel. Vervolgens kunt u de workflow wijzigen om kleine wijzigingen aan te brengen en de naam ervan wijzigen in een nieuw model.
+- **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** kopieert het geselecteerde servicemodel. Vervolgens kunt u de workflow wijzigen om kleine wijzigingen aan te brengen en de naam ervan wijzigen in een nieuw model.
 - **[!UICONTROL Delete]**: U kunt een de dienstmodel met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal uit Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
-- **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die wordt gebruikt. Als meer dan één dataset door Attribution AI wordt gebruikt, &quot;Veelvoud&quot;die door het aantal datasets wordt gevolgd wordt getoond. Als u de hyperlink selecteert, wordt de voorvertoning van de datasets weergegeven.
-- **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
+- **[!UICONTROL Data source]**: Een koppeling naar de gebruikte gegevensset. Als meer dan één dataset door Attribution AI wordt gebruikt, &quot;Veelvoud&quot;die door het aantal datasets wordt gevolgd wordt getoond. Als u de hyperlink selecteert, wordt de voorvertoning van de datasets weergegeven.
+- **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een uitvoering mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 
 ![Zijpaneel](./images/user-guide/multiple-datasets-pane.png)
 
 - **[!UICONTROL Conversion events]**: Een kort overzicht van de conversiegebeurtenissen die voor dit model zijn geconfigureerd.
-- **[!UICONTROL Lookback window]**: Het tijdframe dat u hebt gedefinieerd, geeft aan hoeveel dagen voor de conversiegebeurtenis de aanraakpunten worden opgenomen.
+- **[!UICONTROL Lookback window]**: Het tijdkader dat u hebt gedefinieerd, geeft aan hoeveel dagen vóór de aanraakpunten voor conversiegebeurtenissen worden opgenomen.
 - **[!UICONTROL Touchpoints]**: Een lijst met alle aanraakpunten die u tijdens het maken van dit model hebt gedefinieerd.
 
 ![](./images/user-guide/side_panel_2.png)
@@ -57,13 +57,13 @@ Vervolgens wordt de instellingspagina voor Attribution AI weergegeven waar u een
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-Door ontwerp, kan Attribution AI Adobe Analytics, de gebeurtenis van de Ervaring, en de gegevens van de Gebeurtenis van de Consumentenervaring gebruiken om attributiescore te berekenen. Wanneer het selecteren van een dataset slechts degenen die met Attribution AI compatibel zijn worden vermeld. Als u een gegevensset wilt selecteren, selecteert u de **+**) naast de naam van de gegevensset of schakelt u het selectievakje in om meerdere gegevenssets tegelijk toe te voegen. U kunt de onderzoeksoptie ook gebruiken om de datasets snel te vinden u in geinteresseerd bent.
+Door ontwerp, kan Attribution AI Adobe Analytics, de gebeurtenis van de Ervaring, en de gegevens van de Gebeurtenis van de Consumentenervaring gebruiken om attributiescore te berekenen. Wanneer het selecteren van een dataset slechts degenen die met Attribution AI compatibel zijn worden vermeld. Als u een gegevensset wilt selecteren, selecteert u de **+**) naast de naam van de gegevensset of selecteert u het selectievakje om meerdere gegevenssets tegelijk toe te voegen. U kunt de onderzoeksoptie ook gebruiken om de datasets snel te vinden u in geinteresseerd bent.
 
 Nadat u de gegevenssets hebt geselecteerd die u wilt gebruiken, selecteert u de **[!UICONTROL Add]** knoop om de datasets aan de ruit van de datasetvoorproef toe te voegen.
 
 ![Gegevenssets selecteren](./images/user-guide/select-datasets.png)
 
-Het infopictogram selecteren ![infopictogram](./images/user-guide/info-icon.png) naast een dataset opent de dataset voorproefpopover.
+Het infopictogram selecteren ![info icon](./images/user-guide/info-icon.png) naast een dataset opent de dataset voorproefpopover.
 
 ![Gegevensset selecteren en zoeken](./images/user-guide/dataset-preview.png)
 
@@ -105,7 +105,7 @@ Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteer
 >
 > Als er geen geldig identiteitstype (naamruimte) bestaat voor een gegevensset, moet u een primaire identiteit instellen en deze toewijzen aan een naamruimte voor identiteit met behulp van de [schema-editor](../../xdm/schema/composition.md#identity). Ga voor meer informatie over naamruimten en identiteiten naar de [Naamruimten identiteitsservice](../../identity-service/namespaces.md) documentatie.
 
-## Media kanaal en campagnevelden toewijzen {#aai-mapping}
+## Media-kanaal en campagnevelden toewijzen {#aai-mapping}
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
@@ -125,7 +125,7 @@ Er zijn drie verschillende typen invoergegevens die worden gebruikt voor het def
 
 ### Conversiegebeurtenissen definiëren {#define-conversion-events}
 
-Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door de gegevensset en het veld in het menu **Een gegevensset en veld selecteren** vervolgkeuzemenu.
+Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door de gegevensset en het veld in het menu **Een gegevensset en veld selecteren** vervolgkeuzelijst.
 
 ![ja-dropdown](./images/user-guide/define-conversion-events.png)
 
@@ -137,19 +137,19 @@ Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zij
 
 ![geen vervolgkeuzelijst](./images/user-guide/conversion_event_1.png)
 
-Daarna, kunt u een gecombineerde dataset selecteren die door alle inputdatasets in de vorige stap te combineren wordt geproduceerd. Alternatief, kunt u een kolom selecteren die op individuele datasets van wordt gebaseerd **Een gegevensset en veld selecteren** vervolgkeuzemenu.
+Daarna, kunt u een gecombineerde dataset selecteren die door alle inputdatasets in de vorige stap te combineren wordt geproduceerd. Alternatief, kunt u een kolom selecteren die op individuele datasets van wordt gebaseerd **Een gegevensset en veld selecteren** vervolgkeuzelijst.
 
 De **[!UICONTROL Add event]** en **[!UICONTROL Add Group]** de knoppen worden gebruikt om uw conversie verder te definiëren. Afhankelijk van de conversie die u definieert, moet u mogelijk de opdracht **[!UICONTROL Add event]** en **[!UICONTROL Add group]** knoppen voor verdere context.
 
 ![add, gebeurtenis](./images/user-guide/add_event.png)
 
-Selecteren **[!UICONTROL Add event]** maakt aanvullende velden die met dezelfde methode als hierboven beschreven kunnen worden ingevuld. Hiermee voegt u een AND-instructie toe aan de tekenreeksdefinitie onder de conversienaam. Selecteer **x** om een toegevoegde gebeurtenis te verwijderen.
+Selecteren **[!UICONTROL Add event]** maakt aanvullende velden die met dezelfde methode als hierboven beschreven kunnen worden ingevuld. Hiermee voegt u een AND-instructie toe aan de tekenreeksdefinitie onder de conversienaam. Selecteer de **x** om een toegevoegde gebeurtenis te verwijderen.
 
 ![Gebeurtenismenu toevoegen](./images/user-guide/add_event_result.png)
 
 Selecteren **[!UICONTROL Add Group]** Hiermee kunt u extra velden maken die los staan van het origineel. Met toevoeging van groepen, blauw *en* wordt weergegeven. Selecteren **en** geeft een optie om de parameter te veranderen om &quot;Of&quot;te bevatten. &quot;Of&quot; wordt gebruikt om meerdere succesvolle conversiepaden te definiëren. &quot;En&quot; breidt het conversiepad uit om aanvullende voorwaarden op te nemen.
 
-![gebruik en](./images/user-guide/and_or.png)
+![het gebruiken en](./images/user-guide/and_or.png)
 
 Als u meerdere conversies nodig hebt, selecteert u **Conversie toevoegen** om een nieuwe conversiekaart te maken. U kunt het bovenstaande proces herhalen om meerdere conversies te definiëren.
 
@@ -163,7 +163,7 @@ Nadat u de conversie hebt gedefinieerd, moet u het terugzoekvenster bevestigen. 
 
 ### Aanraakpunten definiëren
 
-Het definiëren van aanraakpunten volgt een workflow die vergelijkbaar is met [conversies definiëren](#define-conversion-events). Aanvankelijk moet u uw touchpoint noemen en een touchpoint waarde van selecteren *Veldnaam invoeren* vervolgkeuzemenu. Als deze optie is geselecteerd, wordt het vervolgkeuzemenu met de standaardwaarde &quot;exists&quot; weergegeven. Selecteer het vervolgkeuzemenu om een lijst met operatoren weer te geven.
+Het definiëren van aanraakpunten volgt een vergelijkbare workflow als [conversies definiëren](#define-conversion-events). Aanvankelijk moet u uw touchpoint noemen en een touchpoint waarde van selecteren *Veldnaam invoeren* vervolgkeuzelijst. Als deze optie is geselecteerd, wordt het vervolgkeuzemenu met de standaardwaarde &quot;exists&quot; weergegeven. Selecteer de vervolgkeuzelijst om een lijst met operatoren weer te geven.
 
 ![operatoren](./images/user-guide/operators.png)
 
@@ -171,7 +171,7 @@ Voor dit aanraakpunt selecteert u **equals**.
 
 ![stap 1](./images/user-guide/touchpoint_step1.png)
 
-Nadat een operator voor een aanraakpunt is geselecteerd, *Veldwaarde invoeren* beschikbaar gesteld. De vervolgkeuzemenu&#39;s voor *Veldwaarde invoeren* vullen op basis van de eerder geselecteerde operator en aanraakpuntwaarde. Als een waarde niet in de vervolgkeuzelijst wordt gevuld, kunt u die waarde handmatig invoeren. Selecteer het vervolgkeuzemenu en selecteer **KLIKKEN**.
+Nadat een operator voor een aanraakpunt is geselecteerd, *Veldwaarde invoeren* beschikbaar gesteld. De vervolgkeuzelijsten voor *Veldwaarde invoeren* vullen op basis van de eerder geselecteerde operator en aanraakpuntwaarde. Als een waarde niet in de vervolgkeuzelijst wordt gevuld, kunt u die waarde handmatig invoeren. Selecteer het vervolgkeuzemenu en selecteer **KLIKKEN**.
 
 >[!NOTE]
 >
@@ -241,7 +241,7 @@ Als u een nieuw gebied wilt definiëren, selecteert u eerst **[!UICONTROL Add re
 
 Selecteer vervolgens een operator.
 
-![regionale operator](./images/user-guide/region_operators.png)
+![operator voor regio](./images/user-guide/region_operators.png)
 
 Typ ten slotte de landcode in het dialoogvenster **[!UICONTROL Enter Field Value]** vervolgkeuzelijst.
 
@@ -253,7 +253,7 @@ Typ ten slotte de landcode in het dialoogvenster **[!UICONTROL Enter Field Value
 
 ### Trainingsvenster {#training-window}
 
-Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het belangrijk om uw model te trainen met historische gegevens die uw zaken vertegenwoordigen. Standaard wordt het model getraind met twee kwartalen (zes maanden) conversiegebeurtenisgegevens. Selecteer het vervolgkeuzemenu om de standaardinstelling te wijzigen. U kunt kiezen om met één tot vier kwart van gegevens (3-12 maanden) te trainen.
+Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het belangrijk om uw model te trainen met historische gegevens die uw zaken vertegenwoordigen. Standaard wordt het model getraind met twee kwartalen (zes maanden) aan conversiegebeurtenisgegevens. Selecteer het vervolgkeuzemenu om de standaardinstelling te wijzigen. U kunt kiezen om met één tot vier kwart van gegevens (3-12 maanden) te trainen.
 
 >[!NOTE]
 >
@@ -261,7 +261,7 @@ Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het be
 
 ![trainingsvenster](./images/user-guide/training_window.png)
 
-Als u uw trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finish]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Selecteren **[!UICONTROL Ok]** om naar de **[!UICONTROL Service instances]** pagina waar u uw de dienstinstantie kunt zien.
+Als u uw trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finish]** in de rechterbovenhoek. Zorg ervoor dat de gegevens enige tijd duren. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Selecteren **[!UICONTROL Ok]** om te worden omgeleid naar **[!UICONTROL Service instances]** pagina waar u uw de dienstinstantie kunt zien.
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
 

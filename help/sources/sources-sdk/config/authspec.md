@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bro
 title: Verificatiespecificaties configureren voor Self-Serve Sources (Batch SDK)
 description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 De verificatiespecificaties bepalen hoe Adobe Experience Platform-gebruikers verbinding kunnen maken met uw bron.
 
-De `authSpec` array bevat informatie over de verificatieparameters die zijn vereist om een bron te verbinden met een Platform. Om het even welke bepaalde bron kan veelvoudige verschillende soorten authentificatie steunen.
+De `authSpec` array bevat informatie over de verificatieparameters die zijn vereist om een bron te verbinden met een Platform. Om het even welke bepaalde bron kan veelvoudige verschillende types van authentificatie steunen.
 
 ## Verificatiespecificaties
 
@@ -173,7 +173,7 @@ Basisverificatie is een verificatietype waarmee u toegang krijgt tot uw toepassi
 | `authSpec.spec.type` | Definieert het gegevenstype van het schema. | `object` |
 | `authSpec.spec.description` | Geeft meer informatie weer specifiek voor uw verificatietype. |
 | `authSpec.spec.properties` | Bevat informatie over de geloofsbrieven die voor de authentificatie worden gebruikt. |
-| `authSpec.spec.properties.username` | De accountgebruikersnaam die aan uw toepassing is gekoppeld. |
+| `authSpec.spec.properties.username` | De gebruikersnaam van de account die aan uw toepassing is gekoppeld. |
 | `authSpec.spec.properties.password` | Het accountwachtwoord dat aan uw toepassing is gekoppeld. |
 | `authSpec.spec.required` | Hiermee geeft u de velden op die verplicht moeten worden ingevuld in het Platform. | `username` |
 
@@ -237,4 +237,4 @@ Hier volgt een voorbeeld van een voltooide verificatiespecificatie met behulp va
 
 ## Volgende stappen
 
-Met uw bevolkte authentificatiespecificaties, kunt u te werk gaan om de bronspecificaties voor de bron te vormen die u aan Platform wilt integreren. Het document weergeven op [bronspecificaties configureren](./sourcespec.md) voor meer informatie .
+Met uw bevolkte authentificatiespecificaties, kunt u te werk gaan om de bronspecificaties voor de bron te vormen die u aan Platform wilt integreren. Document weergeven op [bronspecificaties configureren](./sourcespec.md) voor meer informatie .

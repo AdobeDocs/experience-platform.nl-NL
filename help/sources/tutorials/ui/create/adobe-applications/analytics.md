@@ -2,9 +2,9 @@
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2174'
 ht-degree: 0%
 
 ---

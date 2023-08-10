@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Enum Fields en voorgestelde waarden in UI bepalen
 description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -28,19 +28,19 @@ Wanneer [een nieuw veld definiëren](./overview.md#define) in de Adobe Experienc
 
 ![Afbeelding met de optie Enum &amp; Suggested Values ingeschakeld voor een tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/enum-options-selected.png)
 
-In dit document wordt beschreven hoe u opsommingen en voorgestelde waarden definieert in het dialoogvenster [!UICONTROL Schemas] UI-werkruimte. Bekijk de volgende video voor een snel overzicht van opsommingen en voorgestelde waarden, inclusief hoe u deze kunt configureren in de gebruikersinterface en de bijbehorende downstreameffecten:
+In dit document wordt beschreven hoe u opsommingen en voorgestelde waarden in het dialoogvenster [!UICONTROL Schemas] UI-werkruimte. Bekijk de volgende video voor een snel overzicht van opsommingen en voorgestelde waarden, inclusief hoe u deze kunt configureren in de gebruikersinterface en de bijbehorende downstreameffecten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Een opsomming definiëren {#enum}
 
-Selecteren **[!UICONTROL Enums and Suggested Values]** selecteert u vervolgens **[!UICONTROL Enums]**. Er worden extra besturingselementen weergegeven, zodat u de waardebeperkingen voor de opsomming kunt opgeven. Als u een restrictie wilt toevoegen, selecteert u **[!UICONTROL Add row]**.
+Selecteren **[!UICONTROL Enums and Suggested Values]** selecteert u vervolgens **[!UICONTROL Enums]**. Er worden extra besturingselementen weergegeven, zodat u de waardebeperkingen voor de opsomming kunt opgeven. Als u een beperking wilt toevoegen, selecteert u **[!UICONTROL Add row]**.
 
-![Afbeelding die de optie Enummeren weergeeft die is geselecteerd in de gebruikersinterface](../../images/ui/fields/enum/enum-add-row.png)
+![Afbeelding met de optie Enummeren die is geselecteerd in de gebruikersinterface](../../images/ui/fields/enum/enum-add-row.png)
 
 Onder de **[!UICONTROL Value]** moet u de exacte waarde opgeven waarmee u het veld wilt beperken. U kunt desgewenst een mensvriendelijk **[!UICONTROL Display Name]** ook voor de beperking, die beïnvloedt hoe de waarde in segmentatie zal worden vertegenwoordigd.
 
-Doorgaan met gebruik **[!UICONTROL Add row]** om de gewenste beperkingen en facultatieve etiketten aan enum toe te voegen of het schrappingspictogram te selecteren (![Afbeelding van het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png)) naast een eerder toegevoegde rij om deze te verwijderen. Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
+Doorgaan met gebruik **[!UICONTROL Add row]** om de gewenste beperkingen en facultatieve etiketten aan enum toe te voegen of het schrappingspictogram te selecteren (![Afbeelding van het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png)) naast een eerder toegevoegde rij om deze te verwijderen. Selecteer **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
 ![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -48,13 +48,13 @@ Het canvas wordt bijgewerkt met de wijzigingen. Wanneer u dit schema in de toeko
 
 ## Voorgestelde waarden definiëren {#suggested-values}
 
-Selecteren **[!UICONTROL Enums and Suggested Values]** selecteert u vervolgens **[!UICONTROL Suggested Values]** om extra besturingselementen weer te geven. Selecteer **[!UICONTROL Add row]** om voorgestelde waarden toe te voegen.
+Selecteren **[!UICONTROL Enums and Suggested Values]** selecteert u vervolgens **[!UICONTROL Suggested Values]** om extra besturingselementen weer te geven. Van hier, selecteer **[!UICONTROL Add row]** om voorgestelde waarden toe te voegen.
 
 ![Afbeelding met de optie Suggesties voor waarden die is geselecteerd in de gebruikersinterface](../../images/ui/fields/enum/suggested-add-row.png)
 
 Onder de **[!UICONTROL Display Name]** kolom, verstrek een mensvriendelijke naam voor de waarde aangezien u het in de Segmentatie UI wilt verschijnen. Als u meer voorgestelde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** en herhaal dit proces zo nodig. Als u een eerder toegevoegde rij wilt verwijderen, selecteert u ![het verwijderpictogram](../../images/ui/fields/enum/remove-icon.png) naast de rij in kwestie.
 
-Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
+Selecteer **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
 ![Afbeelding met de opsommingswaarden en weergavenamen die zijn ingevuld voor het tekenreeksveld in de gebruikersinterface](../../images/ui/fields/enum/suggested-confirm.png)
 
@@ -111,13 +111,13 @@ Bij verwijzing naar hetzelfde standaardveld:
 Als in verschillende veldgroepen wordt verwezen naar hetzelfde aangepaste veldpad:
 
 * Eventuele extra voorgestelde waarden zijn **AANGEVOEGD** in de unie .
-* Als dezelfde extra voorgestelde waarde in meer dan één schema is gedefinieerd, zijn deze waarden **SAMENGEVOEGD** in de unie . Met andere woorden, dezelfde voorgestelde waarde wordt niet twee keer na het samenvoegen weergegeven.
+* Als dezelfde extra voorgestelde waarde in meer dan één schema is gedefinieerd, zijn deze waarden: **SAMENGEVOEGD** in de unie . Met andere woorden, dezelfde voorgestelde waarde wordt niet twee keer na het samenvoegen weergegeven.
 
 ## Beperkingen voor validatie
 
 Vanwege de huidige systeembeperkingen zijn er twee gevallen waarin een enum niet door het systeem wordt gevalideerd tijdens inname:
 
-1. De opsomming wordt gedefinieerd op een [arrayveld](./array.md).
+1. De opsomming wordt gedefinieerd op een [matrixveld](./array.md).
 1. De opsomming wordt meer dan één niveau diep gedefinieerd in de schemahiërarchie.
 
 ## Volgende stappen

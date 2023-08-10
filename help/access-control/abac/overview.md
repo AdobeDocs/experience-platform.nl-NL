@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Op attributen-gebaseerde toegangsbeheer impliceert de volgende componenten:
 | Toestemmingen | De toestemmingen omvatten de capaciteit om de eigenschappen van het Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets. |
 | Machtigingssets | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | Beleid | Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Het beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. |
-| Resource | Een bron is het element dat of het object dat een onderwerp kan of kan benaderen. Bronnen kunnen segmenten of schemavelden zijn. |
+| Bron | Een bron is het element dat of het object dat een onderwerp kan of kan benaderen. Bronnen kunnen segmenten of schemavelden zijn. |
 | Rollen | Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan en bouwstenen van toegangsbeheerbeleid zijn. In een op rol-gebaseerd milieu van het toegangsbeheer, is de levering van de gebruikerstoegang groepering door gemeenschappelijke verantwoordelijkheden en behoeften. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben. |
 | Onderwerp | Een onderwerp is de gebruiker die toegang tot een bron aanvraagt om een handeling uit te voeren. |
 | Gebruikersgroepen | Gebruikersgroepen zijn meerdere gebruikers die zijn gegroepeerd en die toegang hebben om dezelfde functies uit te voeren. |
@@ -46,13 +46,13 @@ Op attributen-gebaseerde toegangsbeheer impliceert de volgende componenten:
 
 De toestemmingen zijn het gebied van Experience Cloud waar de beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
 
-Door Toestemmingen, kunt u rollen tot stand brengen en beheren, evenals de gewenste middeltoestemmingen voor deze rollen toewijzen. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld. Zie voor meer informatie de [Handleiding voor machtigingen](ui/browse.md).
+Door Toestemmingen, kunt u rollen tot stand brengen en beheren, evenals de gewenste middeltoestemmingen voor deze rollen toewijzen. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld. Zie de klasse [Handleiding voor machtigingen](ui/browse.md).
 
 ## API voor toegangsbeheer op basis van kenmerken
 
 De op attribuut-gebaseerde toegangsbeheer API staat u toe om rollen, beleid, en producten binnen Platform programmatically te beheren gebruikend APIs. Zie voor meer informatie de handleiding op [het gebruiken van API om op attributen-gebaseerde configuraties van de toegangscontrole te beheren](api/overview.md).
 
-## Op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
+## Toegangsbeheer op basis van kenmerken in Adobe Experience Platform
 
 De volgende secties verstrekken informatie over hoe op attribuut-gebaseerde toegangsbeheer aan andere componenten van Platform wordt geïntegreerd:
 
@@ -62,9 +62,9 @@ Platform gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) productp
 
 Er is beperkte beschikbaarheid voor op attribuut-gebaseerde toegangsbeheer voor klanten die Gezondheidszorg en/of de Schilden van de Privacy kopen. De functies van deze functionaliteit zijn onder andere:
 
-* Machtigingsinterface: Verstrekt een interface voor u om gebruikersrollen, toestemmingen en beleid voor op attributen-gebaseerd toegangsbeheer te bepalen.
+* De interface van toestemmingen: Verstrekt een interface voor u om gebruikersrollen, toestemmingen en beleid voor op attribuut-gebaseerde toegangsbeheer te bepalen.
 
-* Etikettering: Voeg, geef, verwijder etiketten aan gebruikersrollen, schemagebieden, segmenten, en andere gesteunde voorwerpen toe, om het beleid van de toegangscontrole te hefboomwerking.
+* Etikettering: Voeg toe, geef, verwijder etiketten aan gebruikersrollen, schemagebieden, segmenten, en andere gesteunde voorwerpen uit om het beleid van de toegangscontrole te hefboomwerking.
 
 De beleidswerkschema&#39;s voor alle Experience Platform-aangedreven toepassingen van Admin Console aan de nieuwe interface van Toestemmingen worden geschakeld.
 
@@ -93,7 +93,6 @@ Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebr
 >* In de [toewijzingsstap van de activeringsworkflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), kunt u alleen de velden weergeven en selecteren voor activering waarvoor u toegangsrechten hebt.
 >* Wanneer u extra segmenten wilt activeren naar een bestaand doel waar u geen toegang hebt tot alle velden die zijn toegewezen voor export, wordt de activeringsworkflow voor u geblokkeerd.
 
-
 Voor meer informatie over [!DNL Destinations], verwijst u naar de [[!DNL Destinations] overzicht](../../destinations/home.md).
 
 ### Identiteitsservice
@@ -119,7 +118,7 @@ Raadpleeg voor meer informatie over Profiel de [Profieloverzicht](../../profile/
 
 ### Segmenteringsservice
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
 Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebruiken aan:
 
@@ -134,7 +133,7 @@ Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wo
 
 Met op attribuut-gebaseerde toegangscontrole, kunt u:
 
-* [Labels voor gegevensgebruik toepassen op veldgroepen en -klassen](../../xdm/tutorials/labels.md). Hierdoor kunnen in meerdere schema&#39;s met dezelfde veldgroepen of klassen velden worden gelabeld met dezelfde kenmerken, afhankelijk van de configuraties op veldniveau of veldniveau.
+* [Gegevensgebruikslabels toepassen op veldgroepen en -klassen](../../xdm/tutorials/labels.md). Hierdoor kunnen in meerdere schema&#39;s met dezelfde veldgroepen of klassen velden worden gelabeld met dezelfde kenmerken, afhankelijk van de configuraties op veldniveau of veldniveau.
 * Vorm gebruikerstoegang tot specifieke XDM schemagebieden afhankelijk van de toestemmingsreeksen die op rollen worden toegepast die aan gebruikers worden toegewezen.
 
-Voor meer informatie over XDM, verwijs naar [XDM-overzicht](../../xdm/home.md).
+Raadpleeg voor meer informatie over XDM de [XDM-overzicht](../../xdm/home.md).

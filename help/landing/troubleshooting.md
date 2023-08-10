@@ -7,9 +7,9 @@ landing-page-description: Vind antwoorden op veelgestelde vragen en een gids voo
 short-description: Vind antwoorden op veelgestelde vragen en een gids voor het oplossen van veelvoorkomende problemen in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1904'
 ht-degree: 4%
 
 ---

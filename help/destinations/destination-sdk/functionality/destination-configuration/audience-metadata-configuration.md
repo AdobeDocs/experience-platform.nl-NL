@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om de montages van publiekmeta-gegevens voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie van metagegevens voor publiek
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -72,7 +72,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Ondersteunde toewijzingsconfiguraties](supported-mapping-configurations.md)
 * [Levering bestemming](destination-delivery.md)
 * [Samenvoegingsbeleid](aggregation-policy.md)

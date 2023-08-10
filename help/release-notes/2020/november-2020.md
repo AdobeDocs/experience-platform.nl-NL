@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2159'
+source-wordcount: '2158'
 ht-degree: 3%
 
 ---
@@ -59,8 +59,8 @@ Zie voor meer informatie de [toegangsbeheeroverzicht](../../access-control/home.
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Centrale aanbiedingenbibliotheek | De interface waar u creeert en de verschillende elementen beheert die uw aanbiedingen vormen, en hun regels en beperkingen bepalen. |
-| Beslissingsengine voorstellen | De hefboomwerkingen van de de Beslissingsmotor van de Aanbieding [!DNL Platform] gegevens en [!DNL Real-Time Customer Profiles], samen met de bibliotheek met aanbiedingen, om de juiste tijd, klanten en kanalen te selecteren waaraan aanbiedingen worden geleverd. |
+| Gecentraliseerde aanbiedingsbibliotheek | De interface waar u creeert en de verschillende elementen beheert die uw aanbiedingen vormen, en hun regels en beperkingen bepalen. |
+| Beslissingsengine voorstellen | De hefboomwerkingen van de Aanbiedingsbeslissingsmotor [!DNL Platform] gegevens en [!DNL Real-Time Customer Profiles], samen met de bibliotheek met aanbiedingen, om de juiste tijd, klanten en kanalen te selecteren waaraan aanbiedingen worden geleverd. |
 
 Zie voor meer informatie de [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentatie.
 
@@ -155,7 +155,7 @@ Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, al
 | Door kolommen bladeren | U kunt nu extra kolommen configureren die worden toegevoegd aan de onbewerkte uitvoerscore-bestanden om extra dimensies toe te voegen aan de BI-gereedschapsweergaven. |
 | Instantie activeren en deactiveren | U kunt nu de geplande modeltraining en de scoring van uw Attribution AI-exemplaren activeren en deactiveren. |
 | Reeksspatiëring | U kunt de totale hoeveelheid Attribution-inzichten vinden die door uw account wordt verbruikt in de container create instance. |
-| Uitsplitsing naar aanraakpunt per positie | Een nieuwe inzichten grafiek die een analyse van aanraakpunten door de posities van de omschakelingspad verstrekt. |
+| Uitsplitsing naar aanraakpunt per positie | Een nieuwe inzichtsgrafiek die een analyse van aanraakpunten door de posities van de omschakelingspad verstrekt. |
 | Bovenste omzetpaden | Een nieuwe die inzichten grafiek in het lusje van de Analyse van de Weg wordt gevestigd. De grafiek bevat een lijst met de bovenste vijf conversiepaden die de reeks aanraakpunten met marketingkanalen weergeven die tot de meeste conversies heeft geleid. |
 | Efficiëntie van aanraakpunten | Verstrekt diepgaande inzichten van de drie belangrijkste variabelen die uw model touchpoint doeltreffendheid door meet. De variabelen zijn de verhouding tussen positieve en negatieve paden die zijn aangeraakt, de efficiëntie van aanraakpunten en het aanraakpuntvolume. |
 
@@ -175,7 +175,7 @@ De AI van de klant, als deel van de Intelligente Diensten verstrekt marketers de
 | instantie Klonen | Kopieert de momenteel geselecteerde opstelling van de de dienstinstantie en staat voor wijzigingen toe. |
 | Reeksspatiëring | U kunt het totale aantal profielen dat door de AI van de Klant voor uw rekening wordt gescoord in de aanmaakinstantiecontainer vinden. |
 | Voorspeldoel | De flexibiliteit bij het creëren van een vooruitgangsdoel is verhoogd met nieuwe opties om te voorspellen of &quot;zal voorkomen&quot;of &quot;niet zal voorkomen&quot;. Bovendien zijn de opties toegevoegd waarmee u kunt voorspellen of &quot;alle gebeurtenissen&quot; plaatsvinden of dat &quot;alle gebeurtenissen&quot; plaatsvinden wanneer meerdere gebeurtenissen worden gebruikt. |
-| Influentiefactor drilldown | Propensiteit bovenaan invloedrijke factoremmers bevatten nu boor downs. Boor downs is een dieper niveauoverzicht van waarden voor elk van de hoogste invloedrijke factoren binnen een aandrijvingsemmer. |
+| Influentiefactor-drilldown | Propensiteit bovenaan invloedrijke factoremmers bevatten nu boor downs. Boor downs is een dieper niveauoverzicht van waarden voor elk van de hoogste invloedrijke factoren binnen een aandrijvingsemmer. |
 
 Lees voor meer informatie de [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md).
 
@@ -190,7 +190,7 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 | Workflow voor bijgewerkte samenvoegbeleidsregels | Platform heeft de configuratie van het fusiebeleid aan een nieuwe stapsgewijze werkschema bevorderd. Dit werkschema laat gebruikers toe om gegevensfragmenten van veelvoudige datasets van het Profiel samen te brengen en prioriteit te plaatsen voor hoe het gegeven over die datasets wordt samengevoegd om een uitvoerige mening van elk individu tot stand te brengen. De gebruikers kunnen geselecteerde datasets van het Profiel van XDM Individuele samenvoegen door de aangewezen samenvoegmethode (de Chronologie bevolen of de voorkeur van Dataset) te selecteren en datasets van ExperienceEvent aan de datasets van het Profiel toe te voegen. |
 | Weergave Unieschema | In het Experience Platform UI, kunnen de gebruikers informatie over alle schema&#39;s en datasets gemakkelijker vinden die tot het unieschema bijdragen, evenals oppervlakte zeer belangrijke attributen zoals identiteit en relatievelden. Deze updates verbeteren de capaciteit om problemen op te lossen en te bevestigen dat de profielen correct worden gevormd, worden de identiteiten correct vastgemaakt, en de gegevens zijn met succes opgenomen. |
 
-Voor meer informatie over het profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, lees de [Overzicht van het realtime klantprofiel](../../profile/home.md).
+Voor meer informatie over het profiel van de Klant in real time, met inbegrip van zelfstudies en beste praktijken voor het werken met [!DNL Profile] gegevens, lees de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -202,14 +202,14 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!DNL Shopify] | U kunt nu verbinding maken [!DNL Shopify] tot [!DNL Experience Platform] met de [!DNL Flow Service] API of UI. Zie de [Overzicht van de Shopify-connector](../../sources/connectors/ecommerce/shopify.md) voor meer informatie . |
+| [!DNL Shopify] | U kunt nu verbinding maken [!DNL Shopify] tot [!DNL Experience Platform] met de [!DNL Flow Service] API of de interface. Zie de [Overzicht van de Shopify-connector](../../sources/connectors/ecommerce/shopify.md) voor meer informatie . |
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Verbindingsgegevens bijwerken | U kunt de namen, beschrijvingen en referenties van bestaande batchverbindingen nu bijwerken met de opdracht [!DNL Flow Service] API en UI. Raadpleeg de zelfstudie voor meer informatie [bijwerken, verbindingen met de Flow Service API](../../sources/tutorials/api/update.md) en [accountgegevens bewerken met de gebruikersinterface](../../sources/tutorials/ui/monitor.md). |
-| Verbindingen verwijderen | Batchverbindingen die fouten bevatten of die overbodig zijn geworden, kunnen nu worden verwijderd met de opdracht [!DNL Flow Service] API en UI. Raadpleeg de zelfstudie voor meer informatie [verbindingen verwijderen met de Flow Service API](../../sources/tutorials/api/delete.md) en [accounts verwijderen met de gebruikersinterface](../../sources/tutorials/ui/delete-accounts.md). |
+| Verbindingsgegevens bijwerken | U kunt de namen, beschrijvingen en referenties van bestaande batchverbindingen nu bijwerken met de opdracht [!DNL Flow Service] API en de UI. Raadpleeg de zelfstudie voor meer informatie [bijwerken, verbindingen met de Flow Service API](../../sources/tutorials/api/update.md) en [accountgegevens bewerken met de gebruikersinterface](../../sources/tutorials/ui/monitor.md). |
+| Verbindingen verwijderen | Batchverbindingen die fouten bevatten of die overbodig zijn geworden, kunnen nu worden verwijderd met de opdracht [!DNL Flow Service] API en de UI. Raadpleeg de zelfstudie voor meer informatie [verbindingen verwijderen met de Flow Service API](../../sources/tutorials/api/delete.md) en [accounts verwijderen met de gebruikersinterface](../../sources/tutorials/ui/delete-accounts.md). |
 | Hiërarchische toewijzing | U kunt een hiërarchisch bronbestand, zoals JSON of Parquet, voorvertonen tijdens het invoeren van gegevens. Zie de zelfstudie aan [een gegevensstroom configureren voor cloudopslagconnectors in de gebruikersinterface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie . |
 | API-ondersteuning voor toewijzing in streamingbronnen | U kunt nu API&#39;s gebruiken om toewijzingsfuncties uit te voeren met streamingbronnen. |
 | API-ondersteuning voor aangepaste scheidingstekens voor bronnen voor cloudopslag | U kunt bestanden die niet door CSV zijn gescheiden nu verzamelen met bronnen voor cloudopslag. U kunt elk scheidingsteken voor één kolom gebruiken, zoals een tab, komma, pipe, puntkomma of hash, om platte bestanden in elke gewenste indeling te verzamelen. |

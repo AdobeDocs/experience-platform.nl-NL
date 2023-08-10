@@ -2,9 +2,9 @@
 title: Gegevenselementen, eindpunt
 description: Leer hoe te om vraag aan het /data_elements eindpunt in Reactor API te maken.
 exl-id: ea346682-441b-415b-af06-094158eb7c71
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1368'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | De `id` van de eigenschap die eigenaar is van de gegevenselementen. |
+| `PROPERTY_ID` | De `id` van de eigenschap die de gegevenselementen bezit. |
 
 {style="table-layout:auto"}
 
@@ -174,7 +174,7 @@ U kunt een gegevenselement opzoeken door zijn identiteitskaart in de weg van een
 
 >[!NOTE]
 >
->Wanneer gegevenselementen worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapt gegevenselement op te zoeken. Verwijderde gegevenselementen kunnen worden geïdentificeerd door de aanwezigheid van een `data.meta.deleted_at` kenmerk.
+>Wanneer gegevenselementen worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapt gegevenselement op te zoeken. Verwijderde gegevenselementen kunnen worden geïdentificeerd door een `data.meta.deleted_at` kenmerk.
 
 **API-indeling**
 
@@ -362,7 +362,7 @@ curl -X POST \
 | `attributes.enabled` | Een booleaanse waarde die aangeeft of het gegevenselement is ingeschakeld. |
 | `attributes.force_lower_case` | Een booleaanse waarde die aangeeft of de waarde van het gegevenselement moet worden omgezet in kleine letters voordat deze wordt opgeslagen. |
 | `attributes.clean_text` | Een booleaanse waarde die aangeeft of voorafgaande en navolgende witruimte uit de waarde van het gegevenselement moet worden verwijderd voordat deze wordt opgeslagen. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `data_elements`. |
 
 {style="table-layout:auto"}
 
@@ -470,7 +470,7 @@ Een geslaagde reactie retourneert de details van het nieuwe gegevenselement.
 
 ## Een gegevenselement bijwerken {#update}
 
-U kunt een gegevenselement bijwerken door zijn identiteitskaart in de weg van een PATCH verzoek te omvatten.
+U kunt een gegevenselement bijwerken door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten.
 
 **API-indeling**
 
@@ -510,7 +510,7 @@ curl -X PATCH \
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [een gegevenselement maken](#create) voor een lijst van kenmerken en het gebruik ervan. |
 | `id` | De `id` van het gegevenselement dat u wilt bijwerken. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `data_elements`. |
 
 {style="table-layout:auto"}
 
@@ -618,7 +618,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte gegevenselement
 
 ## Een gegevenselement herzien {#revise}
 
-Wanneer u een gegevenselement bijwerkt, wordt een nieuwe revisie van het gegevenselement gecreeerd met de huidige (hoofd) revisie. Elke revisie van een gegevenselement zal zijn eigen identiteitskaart hebben. Het oorspronkelijke gegevenselement kan worden ontdekt door een oorsprongskoppeling.
+Wanneer u een gegevenselement bijwerkt, wordt een nieuwe revisie van het gegevenselement gecreeerd met de huidige (hoofd) revisie. Elke revisie van een gegevenselement heeft zijn eigen identiteitskaart Het oorspronkelijke gegevenselement kan worden ontdekt door een oorsprongskoppeling.
 
 U kunt een gegevenselement wijzigen door een `meta.action` eigenschap met een waarde van `revise` in de tekst van een verzoek van PATCH.
 
@@ -662,7 +662,7 @@ curl -X PATCH \
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [een gegevenselement maken](#create) voor een lijst van kenmerken en het gebruik ervan. |
 | `meta.action` | Indien opgenomen met een waarde van `revise`, geeft deze eigenschap aan dat een nieuwe revisie voor het gegevenselement moet worden gemaakt. |
 | `id` | De `id` van het gegevenselement dat u wilt herzien. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type bron dat wordt herzien. Voor dit eindpunt, moet de waarde zijn `data_elements`. |
+| `type` | Het type bron dat wordt herzien. Voor dit eindpunt, moet de waarde `data_elements`. |
 
 {style="table-layout:auto"}
 
@@ -1166,7 +1166,7 @@ Een succesvol antwoord retourneert een lijst met revisies voor het opgegeven geg
 
 ### De verwante extensie voor een gegevenselement opzoeken {#extension}
 
-U kunt de extensie die een gegevenselement gebruikt, opzoeken door deze toe te voegen `/extension` naar het pad van een GET-aanvraag.
+U kunt de extensie die een gegevenselement gebruikt, opzoeken door het toevoegen `/extension` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 

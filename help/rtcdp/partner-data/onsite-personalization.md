@@ -3,9 +3,9 @@ title: Erkenning door Partner-Aided Visitor gebruiken om onsite ervaringen aan t
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers een persoonlijke onsite ervaring te bieden.
 hide: true
 hidefromtoc: true
-source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2386'
 ht-degree: 0%
 
 ---

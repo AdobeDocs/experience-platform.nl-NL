@@ -4,9 +4,9 @@ title: Datasets van het dashboard verkennen, verifiëren en verwerken met de Que
 type: Documentation
 description: Leer hoe te om de Dienst van de Vraag te gebruiken om ruwe datasets te onderzoeken en te verwerken die profiel, publiek, en bestemmingsdashboards in Experience Platform aandrijven.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Er verschijnt een zijbalk met twee schakelingen. [!UICONTROL Included in Profile
 
 De dashboardinzichten van het profiel zijn gebonden aan fusiebeleid dat door uw organisatie is bepaald. Voor elk actief fusiebeleid, is er een dataset van profielattributen beschikbaar in het gegevenspeer.
 
-De naamgevingsconventie van deze gegevenssets is **Profile-Snapshot-export** gevolgd door een door het systeem gegenereerde, willekeurige alfanumerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+De naamgevingsconventie van deze gegevenssets is **Profile-Snapshot-export** gevolgd door een door het systeem gegenereerde, willekeurige alpha-numerieke waarde. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
 Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
@@ -68,7 +68,7 @@ Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Ex
 
 Er is een dataset van publieksmeta-gegevens beschikbaar in het gegevensmeer die meta-gegevens voor elk van uw publiek van organisatie bevatten.
 
-De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-export** gevolgd door een alfanumerieke waarde. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+De naamgevingsconventie van deze gegevensset is **Segmentdefinition-Snapshot-export** gevolgd door een alpha-numerieke waarde. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets onderzoeken [het gebruiken van de datasetkijker](../catalog/datasets/user-guide.md) in de gebruikersinterface van het Experience Platform.
 
@@ -82,11 +82,7 @@ Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorp
 
 ![Een voorvertoning van de gegevensset DIM_Destination.](images/query/destinations-metadata.png)
 
-## (Beta) CDP-rapporten (Customer Data Platform)
-
->[!IMPORTANT]
->
->De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten is in bèta. De kenmerken en documentatie van het programma kunnen worden gewijzigd.
+## Inzichtsrapporten van CDP (Customer Data Platform)
 
 De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten stelt SQL bloot die de inzichten voor diverse profiel, bestemming en segmentatiewidgets drijft. U kunt deze SQl vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en KPI gebruiksgevallen tot stand te brengen.
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bro
 title: Bronspecificaties configureren voor Self-Serve Sources (Batch SDK)
 description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -231,18 +231,18 @@ Zie de [aanhangsel](#source-spec) voor een voorbeeld van een volledig-bevolkte b
 | --- | --- | --- |
 | `sourceSpec.attributes` | Bevat informatie over de bron specifiek voor UI of API. |
 | `sourceSpec.attributes.uiAttributes` | Geeft informatie weer over de specifieke bron voor de gebruikersinterface. |
-| `sourceSpec.attributes.uiAttributes.isBeta` | Een booleaanse eigenschap die erop wijst of de bron meer terugkoppelt van klanten vereist om aan zijn functionaliteit toe te voegen. | <ul><li>`true`</li><li>`false`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.isBeta` | Een Booleaans kenmerk dat aangeeft of de bron meer feedback van klanten vereist om aan de functionaliteit toe te voegen. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definieert de categorie van de bron. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Definieert het pictogram dat wordt gebruikt voor het renderen van de bron in de interface van het Platform. | `mailchimp-icon.svg` |
-| `sourceSpec.attributes.uiAttributes.description` | Hiermee geeft u een korte beschrijving van de bron weer. |
+| `sourceSpec.attributes.uiAttributes.description` | Geeft een korte beschrijving van de bron weer. |
 | `sourceSpec.attributes.uiAttributes.label` | Toont het etiket dat voor het teruggeven van de bron in Platform UI moet worden gebruikt. |
 | `sourceSpec.attributes.spec.properties.urlParams` | Bevat informatie over de het middelweg URL, methode, en gesteunde vraagparameters. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Bepaalt de middelweg van waar te om de gegevens van te halen. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Bepaalt de methode van HTTP die moet worden gebruikt om het verzoek aan het middel te doen om gegevens te halen. | `GET`, `POST` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definieert de ondersteunde queryparameters die kunnen worden gebruikt om de bron-URL toe te voegen bij het indienen van een aanvraag om gegevens op te halen. **Opmerking**: Door de gebruiker opgegeven parameterwaarden moeten als plaatsaanduiding worden opgemaakt. Bijvoorbeeld: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` wordt toegevoegd aan de bron-URL als: `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definieert de ondersteunde queryparameters die kunnen worden gebruikt om de bron-URL toe te voegen bij het indienen van een aanvraag om gegevens op te halen. **Opmerking**: Elke door de gebruiker opgegeven parameterwaarde moet als tijdelijke aanduiding worden opgemaakt. Bijvoorbeeld: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` wordt toegevoegd aan de bron-URL als: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Bepaalt kopballen die in het HTTP- verzoek aan bron URL moeten worden verstrekt terwijl het halen van gegevens. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Dit attribuut kan worden gevormd om het lichaam van HTTP door een verzoek van de POST te verzenden. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Bepaalt de knoop die de lijst van punten bevat die aan Platform moeten worden opgenomen. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | De weergave van [sectie aanvullende bronnen](#content-path) voor een voorbeeld van de bron in een inhoudspad. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Bepaalt de knoop die de lijst van punten bevat die aan Platform moeten worden opgenomen. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | De weergave [sectie aanvullende bronnen](#content-path) voor een voorbeeld van de bron in een inhoudspad. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die aan het Platform moeten worden toegevoegd. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Met deze eigenschap kunt u specifieke items identificeren uit de bron die is geïdentificeerd in het inhoudspad en die moeten worden uitgesloten van het opnemen van inhoud. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
@@ -253,7 +253,7 @@ Zie de [aanhangsel](#source-spec) voor een voorbeeld van een volledig-bevolkte b
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Met deze eigenschap kunt u de waarde van de kenmerknaam overschrijven die u hebt opgegeven in `explodeEntityPath`. | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | Definieert de parameters of velden die moeten worden opgegeven voor het ophalen van een koppeling naar de volgende pagina vanuit het huidige paginaantwoord van de gebruiker, of tijdens het maken van een URL voor de volgende pagina. |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | Hiermee geeft u het type van het ondersteunde paginatietype voor uw bron weer. | <ul><li>`OFFSET`: Met dit paginatype kunt u de resultaten parseren door een index op te geven vanaf waar de resulterende array moet worden gestart en een limiet op het aantal resultaten.</li><li>`POINTER`: Met dit paginatype kunt u een `pointer` variabele om naar een bepaald punt te richten dat met een verzoek moet worden verzonden. Voor het pagineren van het type aanwijzer is een pad vereist voor de nuttige lading van dat punt naar de volgende pagina.</li><li>`CONTINUATION_TOKEN`: Dit pagineringstype staat u toe om uw vraag of kopbalparameters met een voortzetteken toe te voegen om resterende terugkeergegevens van uw bron terug te winnen, die aanvankelijk niet wegens een vooraf bepaald maximum werd teruggekeerd.</li><li>`PAGE`: Met dit pagineringstype kunt u de queryparameter toevoegen met een pagineringsparameter om gegevens per pagina te doorlopen, te beginnen bij pagina nul.</li><li>`NONE`: Dit pagineringstype kan voor bronnen worden gebruikt die geen van de beschikbare pagineringstypen ondersteunen. Paginatype `NONE` retourneert de volledige reactiegegevens na een aanvraag.</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Hiermee geeft u het type van het ondersteunde paginatietype voor uw bron weer. | <ul><li>`OFFSET`: Met dit paginatype kunt u de resultaten parseren door een index op te geven vanaf waar de resulterende array moet worden gestart en een limiet op het aantal resultaten.</li><li>`POINTER`: Met dit paginatype kunt u een `pointer` variabele om naar een bepaald punt te richten dat met een verzoek moet worden verzonden. Voor het pagineren van het type aanwijzer is een pad vereist voor de nuttige lading van dat punt naar de volgende pagina.</li><li>`CONTINUATION_TOKEN`: Met dit paginatype kunt u query- of headerparameters toevoegen met een continuatietoken om resterende retourgegevens van uw bron op te halen. Deze gegevens zijn niet oorspronkelijk geretourneerd vanwege een vooraf bepaald maximum.</li><li>`PAGE`: Met dit paginatietype kunt u de queryparameter toevoegen met een pagineringsparameter om gegevens per pagina te doorlopen, te beginnen bij pagina nul.</li><li>`NONE`: Dit pagineringstype kan worden gebruikt voor bronnen die geen van de beschikbare pagineringstypen ondersteunen. Paginatype `NONE` retourneert de volledige reactiegegevens na een aanvraag.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | De naam voor de limiet waarmee de API het aantal records kan opgeven dat op een pagina moet worden opgehaald. | `limit` of `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Het aantal records dat op een pagina moet worden opgehaald. | `limit=10` of `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | De naam van het verschuivingskenmerk. Dit is vereist als pagineringstype is ingesteld op `offset`. | `offset` |
@@ -399,7 +399,7 @@ Een bron die het type van voortzetteken van paginering steunt kan een paginering
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `type` | Het type paginering dat wordt gebruikt om gegevens te retourneren. |
+| `type` | Het type paginering waarmee gegevens worden geretourneerd. |
 | `continuationTokenPath` | De waarde die aan de vraagparams moet worden toegevoegd om naar de volgende pagina van de teruggekeerde resultaten te bewegen. |
 | `parameterType` | De `parameterType` eigenschap bepaalt waar de `parameterName` moet worden toegevoegd. De `QUERYPARAM` het type staat u toe om uw vraag met toe te voegen `parameterName`. De `HEADERPARAM` staat u toe om uw `parameterName` naar uw headerverzoek. |
 | `parameterName` | De naam van de parameter die wordt gebruikt om het voortzetteken op te nemen. De indeling is als volgt: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
@@ -450,11 +450,11 @@ De `PAGE` Door het type paginering kunt u terugkerende gegevens doorlopen op het
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `type` | Het type paginering dat wordt gebruikt om gegevens te retourneren. |
+| `type` | Het type paginering waarmee gegevens worden geretourneerd. |
 | `limitName` | De naam voor de limiet waarmee de API het aantal records kan opgeven dat op een pagina moet worden opgehaald. |
 | `limitValue` | Het aantal records dat op een pagina moet worden opgehaald. |
 | `initialPageIndex` | (Optioneel) De eerste pagina-index definieert het paginanummer van waaruit de paginering begint. Dit veld kan worden gebruikt voor bronnen waarvan de paginering niet begint bij 0. Als deze optie niet is opgegeven, wordt de index van de eerste pagina standaard ingesteld op 0. Dit veld verwacht een geheel getal. |
-| `endPageIndex` | (Optioneel) Met de index van de eindpagina kunt u een eindvoorwaarde instellen en de paginering stoppen. Dit veld kan worden gebruikt als de standaardeindvoorwaarden voor het stoppen van paginering niet beschikbaar zijn. Dit veld kan ook worden gebruikt als het aantal pagina&#39;s dat moet worden ingevoerd of het laatste paginanummer via de antwoordkoptekst wordt opgegeven. Dit is gebruikelijk bij het gebruik van `PAGE` tekstpaginering. De waarde voor de index van de eindpagina kan het laatste paginanummer zijn of een expressiewaarde van het type tekenreeks in de reactiekop. U kunt bijvoorbeeld `headers.x-pagecount` om index aan het einde van de pagina toe te wijzen aan `x-pagecount` waarde uit de reactiekoppen. **Opmerking**: `x-pagecount` is een verplichte antwoordheader voor sommige bronnen en bevat het waardeaantal pagina&#39;s dat moet worden ingevoerd. |
+| `endPageIndex` | (Optioneel) Met de index van de eindpagina kunt u een eindvoorwaarde instellen en de paginering stoppen. Dit veld kan worden gebruikt als de standaardeindvoorwaarden voor het stoppen van paginering niet beschikbaar zijn. Dit veld kan ook worden gebruikt als het aantal pagina&#39;s dat moet worden ingevoerd of het laatste paginanummer via de antwoordkop wordt opgegeven. Dit is veel voor het gebruik van `PAGE` tekstpaginering. De waarde voor de index van de eindpagina kan het laatste paginanummer zijn of een expressiewaarde van het type tekenreeks in de reactiekop. U kunt bijvoorbeeld `headers.x-pagecount` om index aan het einde van de pagina toe te wijzen aan `x-pagecount` waarde uit de reactiekoppen. **Opmerking**: `x-pagecount` is een verplichte antwoordheader voor sommige bronnen en bevat het waardeaantal pagina&#39;s dat moet worden ingevoerd. |
 | `pageParamName` | De naam van de parameter die u aan vraagparameters moet toevoegen om door verschillende pagina&#39;s van de terugkeergegevens te oversteken. Bijvoorbeeld: `https://abc.com?pageIndex=1` retourneert de tweede pagina van de retourlading van een API. |
 | `maximumRequest` | Het maximumaantal verzoeken een bron voor een bepaalde stijgende looppas kan maken. De huidige standaardlimiet is 10000. |
 
@@ -471,11 +471,11 @@ De `NONE` pagineringstype kan voor bronnen worden gebruikt die geen van de besch
 }
 ```
 
-### Geavanceerde planning voor Self-Serve Bronnen (Batch SDK)
+### Geavanceerde planning voor Self-Serve Sources (Batch SDK)
 
 Vorm incrementele en backfill planning van uw bron gebruikend geavanceerde het plannen. De `incremental` bezit staat u toe om een programma te vormen waarin uw bron slechts nieuwe of gewijzigde verslagen zal opnemen, terwijl het `backfill` Met deze eigenschap kunt u een schema voor het invoeren van historische gegevens maken.
 
-Met geavanceerde het plannen, kunt u uitdrukkingen en functies gebruiken specifiek voor uw bron om stijgende en backfill programma&#39;s te vormen. In het onderstaande voorbeeld wordt [!DNL Zendesk] bron vereist dat het incrementele schema wordt opgemaakt als `type:user updated > {START_TIME} updated < {END_TIME}` en herstellen als `type:user updated < {END_TIME}`.
+Met geavanceerde het plannen, kunt u uitdrukkingen en functies gebruiken specifiek voor uw bron om stijgende en backfill programma&#39;s te vormen. In het onderstaande voorbeeld wordt [!DNL Zendesk] bron vereist dat het incrementele schema wordt opgemaakt als `type:user updated > {START_TIME} updated < {END_TIME}` en backfill as `type:user updated < {END_TIME}`.
 
 ```json
 "scheduleParams": {
@@ -493,7 +493,7 @@ Met geavanceerde het plannen, kunt u uitdrukkingen en functies gebruiken specifi
 | `scheduleParams.incremental` | De incrementele query van uw bron. Incrementeel verwijst naar een innamemethode waarbij alleen nieuwe of gewijzigde gegevens worden opgenomen. |
 | `scheduleParams.backfill` | De backfill-query van uw bron. Backfill verwijst naar een innamemethode waarbij historische gegevens worden ingesloten. |
 
-Zodra u uw geavanceerde planning vormt, moet u dan naar uw verwijzen `scheduleParams` in de sectie URL, tekst of koptekstparams, afhankelijk van wat uw specifieke bron ondersteunt. In het onderstaande voorbeeld: `{SCHEDULE_QUERY}` is een placeholder die wordt gebruikt om te specificeren waar de stijgende en backfill het plannen uitdrukkingen zullen worden gebruikt. In het geval van een [!DNL Zendesk] bron, `query` wordt gebruikt in de `queryParams` om geavanceerde planning op te geven.
+Zodra u uw geavanceerd het plannen vormt, moet u dan naar uw verwijzen `scheduleParams` in de sectie URL, tekst of koptekstparams, afhankelijk van wat uw specifieke bron ondersteunt. In het onderstaande voorbeeld: `{SCHEDULE_QUERY}` is een placeholder die wordt gebruikt om te specificeren waar de stijgende en backfill het plannen uitdrukkingen zullen worden gebruikt. In het geval van een [!DNL Zendesk] bron, `query` wordt gebruikt in de `queryParams` om geavanceerde planning op te geven.
 
 ```json
 "urlParams": {
@@ -508,7 +508,7 @@ Zodra u uw geavanceerde planning vormt, moet u dan naar uw verwijzen `schedulePa
 
 ### Een aangepast schema toevoegen om de dynamische kenmerken van uw bron te definiëren
 
-U kunt een aangepast schema aan uw `sourceSpec` om alle kenmerken te definiëren die nodig zijn voor de bron, inclusief alle dynamische kenmerken die u nodig hebt. U kunt de overeenkomstige verbindingsspecificatie van uw bron bijwerken door een PUT aan te vragen bij de `/connectionSpecs` van het [!DNL Flow Service] API, terwijl het verstrekken van uw douaneschema in `sourceSpec` van uw verbindingsspecificatie.
+U kunt een aangepast schema aan uw `sourceSpec` om alle kenmerken te definiëren die nodig zijn voor de bron, inclusief alle dynamische kenmerken die u nodig hebt. U kunt de overeenkomstige verbindingsspecificatie van uw bron bijwerken door een PUT aan te vragen bij de `/connectionSpecs` het eindpunt van de [!DNL Flow Service] API, terwijl het verstrekken van uw douaneschema in `sourceSpec` van uw verbindingsspecificatie.
 
 Hieronder ziet u een voorbeeld van een aangepast schema dat u kunt toevoegen aan de verbindingsspecificatie van uw bron:
 
@@ -611,4 +611,4 @@ Hieronder ziet u een voorbeeld van een aangepast schema dat u kunt toevoegen aan
 
 ## Volgende stappen
 
-Met uw bevolkte bronspecificaties, kunt u te werk gaan om te vormen onderzoeken specificaties voor de bron die u aan Platform wilt integreren. Het document weergeven op [configureren, verkenningsspecificaties](./explorespec.md) voor meer informatie .
+Met uw bevolkte bronspecificaties, kunt u te werk gaan om te vormen onderzoeken specificaties voor de bron die u aan Platform wilt integreren. Document weergeven op [configureren, verkenningsspecificaties](./explorespec.md) voor meer informatie .

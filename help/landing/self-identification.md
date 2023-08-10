@@ -1,11 +1,11 @@
 ---
 title: Gebruik de zelfidentificatie-enquête om uw persoonlijke profiel voor Experience Platforms samen te stellen
-description: Leer hoe u de gebruikersinterface voor zelfidentificatie gebruikt om relevante inhoud te ontvangen op basis van uw taakfuncties en verwante doelstellingen.
+description: Leer hoe u de gebruikersinterface van de enquête voor zelfidentificatie gebruikt om relevante inhoud te ontvangen op basis van uw taakfuncties en verwante doelstellingen.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Lees voor meer informatie over Adobe Experience Platform de [Overzicht van Exper
 
 De herinnering van het zelfidentificatienonderzoek verschijnt in het bodemrecht van de homepage van het Platform UI bij het ondertekenen binnen.
 
-Selecteer **[!UICONTROL Start]**.
+Als u wilt beginnen met de enquête, selecteert u **[!UICONTROL Start]**.
 
 ![De homepage van UI van het Platform met het pop-upbericht die u ertoe aanzetten om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
 
@@ -44,7 +44,7 @@ De beschikbare opties zijn:
 >
 >U kunt meerdere functies selecteren in de lijst met opties. Als u [!UICONTROL Other], wordt u gevraagd om details over uw doel op te geven.
 
-Als u wilt doorgaan, selecteert u de functie(s) die het beste uw huidige werk beschrijft en selecteert u **[!UICONTROL Next]**.
+Selecteer de functie(s) die het beste uw huidige werk beschrijft en selecteer **[!UICONTROL Next]**.
 
 ![De zelfidentificatiecode van de enquête waarbij twee functies zijn geselecteerd.](./images/survey/select-functions.png)
 
@@ -65,7 +65,7 @@ De lijst met beschikbare doelstellingen omvat:
 * Stel dashboards in om de zakelijke impact te analyseren
 * Gegevens naar doelen activeren voor downstreamgerichte toepassingen
 
-Als u klaar bent, selecteert u **[!UICONTROL Submit]**.
+Selecteer **[!UICONTROL Submit]**.
 
 ![De zelfidentificatiecode die een lijst met doelstellingen weergeeft die u kunt selecteren.](./images/survey/select-objectives.png)
 
@@ -89,7 +89,7 @@ Volgende, in [!UICONTROL General] in het menu met uw profielvoorkeuren selecteer
 
 De zelfidentificatiecode wordt weergegeven, zodat u de reacties opnieuw kunt configureren en uw profiel kunt bijwerken.
 
-![De pagina met voorkeuren voor gebruikersinterfaceprofielen van het Platform waarop de zelfidentificatiecode-enquête wordt weergegeven, zodat een gebruiker zijn persoonlijke profiel kan bijwerken.](./images/survey/new-survey.png)
+![De pagina met voorkeuren voor gebruikersinterfaceprofielen van het Platform waarop de zelfidentificatiecode-enquête wordt weergegeven, zodat een gebruiker zijn of haar persoonlijke profiel kan bijwerken.](./images/survey/new-survey.png)
 
 ## Volgende stappen
 

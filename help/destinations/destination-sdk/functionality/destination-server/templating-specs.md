@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om de HTTP- verzoeken te formatteren die naar uw eindpunt worden verzonden. Gebruik het /authoring/bestemmings-servers eindpunt om bestemmings server te vormen die specs in Adobe Experience Platform Destination SDK templating.
 title: Sjabloonspecificaties voor doelen die met Destination SDK zijn gemaakt
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 3%
 
 ---
@@ -71,7 +71,7 @@ Zie onder een voorbeeld van een HTTP-aanvraagsjabloon, samen met beschrijvingen 
 |---|---|---|
 | `httpMethod` | Tekenreeks | *Vereist.* De methode die Adobe in vraag aan uw server zal gebruiken. Ondersteunde methoden: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `value` | Tekenreeks | *Vereist.* Dit koord is de karakter-beschermde versie van het malplaatje dat de HTTP- verzoeken door Platform in het formaat formatteert dat door uw bestemming wordt verwacht. <br> Voor informatie over het schrijven van de sjabloon leest u de sectie over [gebruiken van sjablonen](message-format.md#using-templating). <br> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [profielkenmerken](message-format.md#attributes) transformatie. |
+| `value` | Tekenreeks | *Vereist.* Dit koord is de karakter-beschermde versie van het malplaatje dat de HTTP- verzoeken door Platform in het formaat formatteert dat door uw bestemming wordt verwacht. <br> Voor informatie over het schrijven van de sjabloon leest u de sectie over [gebruik maken van sjablonen](message-format.md#using-templating). <br> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [profielkenmerken](message-format.md#attributes) transformatie. |
 | `contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Afhankelijk van het type uitvoer dat uw transformatiesjabloon produceert, kan dit een van de ondersteunde uitvoerbestanden zijn [Inhoud van HTTP-toepassingen](https://www.iana.org/assignments/media-types/media-types.xhtml#application). In de meeste gevallen moet deze waarde worden ingesteld op `application/json`. |
 
 {style="table-layout:auto"}

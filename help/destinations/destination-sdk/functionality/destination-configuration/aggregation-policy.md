@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te opstelling een samenvoegingsbeleid om te bepalen hoe de verzoeken van HTTP aan uw bestemming zouden moeten worden gegroepeerd en worden gegroepeerd.
 title: Samenvoegingsbeleid
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '995'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ U kunt de montages van het samenvoegingsbeleid via vormen `/authoring/destinatio
 
 In dit artikel worden alle ondersteunde instellingen voor samenvoegingsbeleid beschreven die u voor uw bestemming kunt gebruiken.
 
-Nadat u dit document hebt gelezen, raadpleegt u de documentatie op [gebruiken van sjablonen](../../functionality/destination-server/message-format.md#using-templating) en de [samenvoegingssleutelvoorbeelden](../../functionality/destination-server/message-format.md#template-aggregation-key) om te begrijpen hoe te om het samenvoegingsbeleid in uw malplaatje van de berichttransformatie te omvatten dat op uw geselecteerd samenvoegingsbeleid wordt gebaseerd.
+Nadat u dit document hebt gelezen, raadpleegt u de documentatie op [gebruik maken van sjablonen](../../functionality/destination-server/message-format.md#using-templating) en de [samenvoegingssleutelvoorbeelden](../../functionality/destination-server/message-format.md#template-aggregation-key) om te begrijpen hoe te om het samenvoegingsbeleid in uw malplaatje van de berichttransformatie te omvatten dat op uw geselecteerd samenvoegingsbeleid wordt gebaseerd.
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfig
 |---------|----------|------|
 | `aggregationType` | Tekenreeks | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Deze markering instellen op `true` als uw server slechts één identiteit per vraag goedkeurt, voor een bepaalde identiteitsnaamruimte. |
-| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Gebruikt in combinatie met `maxNumEventsInBatch`, bepaalt deze parameter hoe lang Experience Platform zou moeten wachten tot het verzenden van een API vraag naar uw eindpunt. <ul><li>Minimumwaarde (seconden): 1800</li><li>Maximumwaarde (seconden): 3600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
+| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Gebruikt in combinatie met `maxNumEventsInBatch`, bepaalt deze parameter hoe lang Experience Platform zou moeten wachten tot het verzenden van een API vraag naar uw eindpunt. <ul><li>Minimumwaarde (in seconden): 1800</li><li>Maximumwaarde (in seconden): 3600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
 | `configurableAggregation.maxNumEventsInBatch` | Geheel | Wordt gebruikt in combinatie met `maxBatchAgeInSecs`, bepaalt deze parameter hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1000</li><li>Maximumwaarde: 10000</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
 | `configurableAggregation.aggregationKey` | - | Hiermee kunt u de geëxporteerde profielen samenvoegen die aan de bestemming zijn toegewezen op basis van de hieronder beschreven parameters. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Deze parameter instellen op `true` als u profielen wilt groeperen die naar uw bestemming door publiek-id worden uitgevoerd. |
@@ -131,7 +131,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Ondersteunde toewijzingsconfiguraties](supported-mapping-configurations.md)
 * [Levering bestemming](destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](audience-metadata-configuration.md)

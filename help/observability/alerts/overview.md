@@ -4,9 +4,9 @@ title: Overzicht van waarschuwingen
 description: Meer informatie over waarschuwingen in Adobe Experience Platform, inclusief de structuur van hoe waarschuwingsregels worden gedefinieerd.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt.
 
-Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../api/overview.md) om na te gaan of een baan heeft voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
+Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../api/overview.md) om na te gaan of een baan is voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
 
 Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend. Deze berichten kunnen over een vooraf bepaald tijdinterval herhalen tot het alarm is opgelost.
 
@@ -54,13 +54,13 @@ Een alarm kan in de volgende componenten worden verdeeld:
 U kunt waarschuwingen ontvangen en beheren via twee kanalen:
 
 * [Adobe I/O Events](#events)
-* [UI Platform](#ui)
+* [UI PLATFORM](#ui)
 
 ### I/O-gebeurtenissen {#events}
 
 U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor berichten over Platforms in Adobe Developer Console. Zie de handleiding op [abonneren op Adobe I/O Event-berichten](./subscribe.md) voor specifieke stappen.
 
-### UI Platform {#ui}
+### UI PLATFORM {#ui}
 
 Met de interface van het Platform kunt u ontvangen waarschuwingen weergeven en waarschuwingsregels beheren. De volgende video biedt een inleiding tot deze mogelijkheden.
 
@@ -77,13 +77,13 @@ Als u met waarschuwingen wilt werken in de gebruikersinterface van het Platform,
 
 {style="table-layout:auto"}
 
-**Om toegang te krijgen tot [!UICONTROL Alerts] , moet u ook de toestemming van het Alarm van de Mening in combinatie met één van de andere toestemmingen worden verleend.*
+**Voor toegang tot [!UICONTROL Alerts] , moet u ook de toestemming van het Alarm van de Mening in combinatie met één van de andere toestemmingen worden verleend.*
 
 >[!NOTE]
 >
 >Voor meer informatie over hoe te om toestemmingen in Platform te beheren, verwijs naar [toegangsbeheerdocumentatie](../../access-control/ui/overview.md).
 
-Met de machtiging Waarschuwingen weergeven kunt u ontvangen waarschuwingen weergeven door het belpictogram te selecteren (![Bell Icon](../images/alerts/overview/icon.png)) in de rechterbovenhoek.
+Met de machtiging Waarschuwingen weergeven kunt u ontvangen waarschuwingen weergeven door het belpictogram te selecteren (![Bell Icon](../images/alerts/overview/icon.png)) rechtsboven.
 
 ![](../images/alerts/overview/ui.png)
 

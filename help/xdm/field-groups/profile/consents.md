@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Inhoud en Voorkeuren voor schemaveldgroep
 description: Dit document bevat een overzicht van de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -95,10 +95,9 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 >* [Voorbeeldgegevens genereren in de gebruikersinterface](../../ui/sample.md)
 >* [Voorbeeldgegevens genereren in de API](../../api/sample-data.md)
 
-
 ### `idSpecific`
 
-`idSpecific` kan worden gebruikt wanneer een bepaalde toestemming of voorkeur niet universeel op een klant van toepassing is, maar tot één enkel apparaat of identiteitskaart beperkt is. Zo kan een klant ervoor kiezen geen e-mails naar het ene adres te ontvangen, terwijl e-mails naar een ander adres mogelijk worden toegestaan.
+`idSpecific` kan worden gebruikt wanneer een bepaalde toestemming of voorkeur niet algemeen op een klant van toepassing is, maar tot één enkel apparaat of identiteitskaart beperkt is. Zo kan een klant ervoor kiezen geen e-mails naar het ene adres te ontvangen, terwijl e-mails naar een ander adres mogelijk worden toegestaan.
 
 >[!IMPORTANT]
 >
@@ -106,7 +105,6 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 >
 >* Als de klant de optie op kanaalniveau heeft uitgeschakeld, worden gelijkwaardige toestemmingen of voorkeuren in `idSpecific` worden genegeerd.
 >* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld, of de klant heeft ervoor gekozen, worden de equivalente toestemmingen of voorkeuren in `idSpecific` zijn vereerd.
-
 
 Elke toets in het dialoogvenster `idSpecific` -object staat voor een specifieke naamruimte die door Adobe Experience Platform Identity Service wordt herkend. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-Time Klantprofiel te reduceren. Voor meer informatie over naamruimten raadpleegt u de [Overzicht van naamruimte in identiteit](../../../identity-service/namespaces.md) in de documentatie van de identiteitsdienst.
 
@@ -185,7 +183,7 @@ Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/
 >
 >Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [beleid samenvoegen](../../../rtcdp/profile/merge-policies.md) voor meer informatie .
 
-## Verwerking van toestemmings- en voorkeurswijzigingen
+## Verwerking van toestemmings- en preferenties
 
 Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten deze wijzigingen worden verzameld en onmiddellijk worden doorgevoerd met de [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
 

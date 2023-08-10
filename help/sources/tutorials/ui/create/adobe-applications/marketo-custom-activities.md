@@ -2,31 +2,31 @@
 title: Een Marketo Engage-bronverbinding en gegevensstroom maken voor aangepaste activiteitgegevens in de gebruikersinterface
 description: Deze zelfstudie bevat stappen voor het maken van een Marketo Engage-bronverbinding en gegevensstroom in de gebruikersinterface om gegevens van aangepaste activiteiten over te brengen naar Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Marketo Engage] bronverbinding en gegevensstroom voor gegevens van de douaneactiviteit in UI
+# Een [!DNL Marketo Engage] bronverbinding en gegevensstroom voor gegevens met aangepaste activiteit in de gebruikersinterface
 
 >[!NOTE]
 >
->Deze zelfstudie bevat specifieke stappen voor het instellen en leveren van **aangepaste activiteit** gegevens van [!DNL Marketo] naar Experience Platform. Voor stappen over hoe te brengen **standaardactiviteit** gegevens, lees de [[!DNL Marketo] UI-hulplijn](./marketo.md).
+>Deze zelfstudie bevat specifieke stappen voor het instellen en leveren van **aangepaste activiteit** gegevens van [!DNL Marketo] naar Experience Platform. Voor stappen over hoe te brengen **standaardactiviteit** gegevens lezen [[!DNL Marketo] UI-hulplijn](./marketo.md).
 
-Naast [standaardactiviteiten](../../../../connectors/adobe-applications/mapping/marketo.md#activities)kunt u ook de [!DNL Marketo] bron voor het doorgeven van gegevens over aangepaste activiteiten aan Adobe Experience Platform. In dit document worden de volgende stappen beschreven voor het maken van een bronverbinding en gegevensstroom voor aangepaste activiteitengegevens met de opdracht [!DNL Marketo] bron in de UI.
+Naast [standaardactiviteiten](../../../../connectors/adobe-applications/mapping/marketo.md#activities)kunt u ook de opdracht [!DNL Marketo] bron om gegevens over aangepaste activiteiten naar Adobe Experience Platform te verzenden. In dit document worden de volgende stappen beschreven voor het maken van een bronverbinding en gegevensstroom voor aangepaste activiteitengegevens met de opdracht [!DNL Marketo] bron in de UI.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [B2B-naamruimten en hulpprogramma voor automatisch genereren van schema&#39;s](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Met het hulpprogramma voor automatische generatie van B2B-naamruimten en schema kunt u [!DNL Postman] om automatisch waarden te genereren voor uw B2B-naamruimten en -schema&#39;s. U moet eerst uw B2B-naamruimten en -schema&#39;s voltooien voordat u een [!DNL Marketo] bronverbinding en gegevensstroom.
+* [B2B-naamruimten en hulpprogramma voor automatisch genereren van schema&#39;s](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Het B2B-hulpprogramma voor naamruimten en automatisch genereren van schema maakt het mogelijk om [!DNL Postman] om automatisch waarden te genereren voor uw B2B-naamruimten en -schema&#39;s. U moet eerst uw B2B-naamruimten en -schema&#39;s voltooien voordat u een [!DNL Marketo] bronverbinding en gegevensstroom.
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Experience Data Model (XDM)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [Experience Data Model (XDM)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Schema&#39;s maken en bewerken in de gebruikersinterface](../../../../../xdm/ui/resources/schemas.md): Leer om schema&#39;s in UI tot stand te brengen en uit te geven.
 * [Identiteitsnaamruimten](../../../../../identity-service/namespaces.md): Identiteitsnaamruimten zijn een component van [!DNL Identity Service] die dienen als indicatoren van de context waarop een identiteit betrekking heeft. Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace.
-* [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## Je aangepaste activiteitengegevens ophalen
@@ -61,7 +61,7 @@ Als u een nieuwe veldgroep wilt toevoegen, selecteert u **[!UICONTROL + Add]** n
 
 ![De schemastructuur.](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
 
-De *[!UICONTROL Add field groups]* wordt weergegeven. Selecteren **[!UICONTROL Create new field group]** en geef vervolgens dezelfde weergavenaam voor de aangepaste activiteit op die u in een eerdere stap hebt opgehaald. Geef een optionele beschrijving voor de nieuwe veldgroep op. Als u klaar bent, selecteert u **[!UICONTROL Add field groups]**.
+De *[!UICONTROL Add field groups]* wordt weergegeven. Selecteren **[!UICONTROL Create new field group]** en geef vervolgens dezelfde weergavenaam voor de aangepaste activiteit op die u in een eerdere stap hebt opgehaald. Geef een optionele beschrijving voor de nieuwe veldgroep op. Selecteer **[!UICONTROL Add field groups]**.
 
 ![Het venster voor labeling en het maken van een nieuwe veldgroep.](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
@@ -73,7 +73,7 @@ Als u een nieuwe veldgroep voor aangepaste activiteit hebt gemaakt, wordt deze w
 
 Voeg vervolgens een nieuw veld toe aan uw schema. Dit nieuwe veld moet worden ingesteld op `type: object` en bevat de afzonderlijke velden van de aangepaste activiteit.
 
-Als u een nieuw veld wilt toevoegen, selecteert u het plusteken (`+`) naast de naam van het schema. Een vermelding voor *[!UICONTROL Untitled Field | Type]* wordt weergegeven. Configureer vervolgens eigenschappen van uw veld met de *[!UICONTROL Field properties]* deelvenster. Stel de veldnaam in op de API-naam van uw aangepaste activiteit en stel de weergavenaam in op de weergavenaam van uw aangepaste activiteit. Stel vervolgens de tekst in als `object` en wijs de veldgroep toe aan de veldgroep met aangepaste activiteiten die u in de vorige stap hebt gemaakt. Als u klaar bent, selecteert u **[!UICONTROL Apply]**.
+Als u een nieuw veld wilt toevoegen, selecteert u het plusteken (`+`) naast de naam van het schema. Een vermelding voor *[!UICONTROL Untitled Field | Type]* wordt weergegeven. Configureer vervolgens eigenschappen van uw veld met de *[!UICONTROL Field properties]* deelvenster. Stel de veldnaam in op de API-naam van uw aangepaste activiteit en stel de weergavenaam in op de weergavenaam van uw aangepaste activiteit. Stel vervolgens de tekst in als `object` en wijs de veldgroep toe aan de veldgroep met aangepaste activiteiten die u in de vorige stap hebt gemaakt. Selecteer **[!UICONTROL Apply]**.
 
 ![De schemastructuur met plus (`+`) geselecteerd zodat een nieuw veld kan worden toegevoegd.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
@@ -119,19 +119,19 @@ Selecteer **[!UICONTROL New field type]** en selecteer vervolgens **[!UICONTROL 
 
 ![De toewijzingsstap met het vervolgkeuzemenu om een nieuw veld toe te voegen.](../../../../images/tutorials/create/marketo-custom-activities/add-new-mapping-field.png)
 
-Navigeer door de brongegevensstructuur en zoek het veld voor aangepaste activiteit dat u wilt innemen. Als u klaar bent, selecteert u **[!UICONTROL Select]**.
+Navigeer door de brongegevensstructuur en zoek het veld voor aangepaste activiteit dat u wilt innemen. Selecteer **[!UICONTROL Select]**.
 
 >[!TIP]
 >
 >Om verwarring te voorkomen en dubbele veldnamen af te handelen, worden aangepaste activiteitsvelden voorafgegaan door de API-naam.
 
-![De gegevensstructuur van de bron.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
+![De brongegevensstructuur.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-Als u een doelveld wilt toevoegen, selecteert u het schemapictogram ![schemapictogram](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) en selecteer vervolgens de velden met aangepaste activiteit in het doelschema.
+Selecteer het schemapictogram om een doelveld toe te voegen ![schema-pictogram](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) en selecteer vervolgens de velden met aangepaste activiteit in het doelschema.
 
 ![De doelschemastructuur.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 
-Herhaal de stappen om de rest van uw gebieden van de afbeelding van de douaneactiviteit toe te voegen. Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Herhaal de stappen om de rest van uw gebieden van de afbeelding van de douaneactiviteit toe te voegen. Selecteer **[!UICONTROL Next]**.
 
 ![Alle toewijzingen voor bron- en doelgegevens.](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
@@ -139,8 +139,8 @@ Herhaal de stappen om de rest van uw gebieden van de afbeelding van de douaneact
 
 De *[!UICONTROL Review]* wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van de gekozen bronentiteit, en de hoeveelheid kolommen binnen die bronentiteit.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **[!UICONTROL Connection]**: Hiermee geeft u het brontype, het relevante pad van de gekozen bronentiteit en de hoeveelheid kolommen in die bronentiteit weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Save & ingest]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
@@ -150,7 +150,7 @@ Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Save & 
 
 Om de gegevens van de douaneactiviteit aan een bestaande gegevensstroom toe te voegen, wijzig de afbeeldingen van een bestaande activiteitendataflow met de gegevens van de douaneactiviteit die u wilt opnemen. Dit staat u toe om douaneactiviteit in de zelfde bestaande activiteitendataset in te voeren. Lees voor meer informatie over het bijwerken van de toewijzingen van een bestaande gegevensstroom de handleiding op [bijwerken, gegevensstromen in UI](../../update-dataflows.md).
 
-### Gebruiken [!DNL Query Service] aan filteractiviteiten voor douaneactiviteiten {#query-service-filter}
+### Gebruiken [!DNL Query Service] om activiteiten voor douaneactiviteiten te filtreren {#query-service-filter}
 
 Zodra uw gegevensstroom volledig is, kunt u gebruiken [Query-service](../../../../../query-service/home.md) om activiteiten voor uw gegevens van de douaneactiviteit te filtreren.
 

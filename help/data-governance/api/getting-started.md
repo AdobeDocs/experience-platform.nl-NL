@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met de API voor beleidsservice
 description: Met de API voor beleidsservice kunt u verschillende bronnen maken en beheren die te maken hebben met Adobe Experience Platform Data Governance. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Dienst API van het Beleid te maken.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ De [!DNL Policy Service] Met API kunt u verschillende bronnen maken en beheren d
 
 ## Vereisten
 
-Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip van de verschillende [!DNL Experience Platform] diensten die betrokken zijn bij het werken met mogelijkheden voor gegevensbeheer. Voordat u begint te werken met de [!DNL Policy Service API]Raadpleeg de documentatie bij de volgende services:
+Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip van de verschillende [!DNL Experience Platform] diensten die betrokken zijn bij het werken met mogelijkheden voor gegevensbeheer. Voordat u met de [!DNL Policy Service API], raadpleeg de documentatie voor de volgende services:
 
 * [Gegevensbeheer](../home.md): Het kader waarbinnen [!DNL Experience Platform] dwingt gegevensgebruiksnaleving af.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## API-voorbeeldaanroepen lezen

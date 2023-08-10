@@ -1,15 +1,15 @@
 ---
-title: Het eindpunt van hosts
+title: Het eindpunt van de gastheren
 description: Leer hoe te om vraag aan het /hosts eindpunt in Reactor API te maken.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '796'
 ht-degree: 1%
 
 ---
 
-# Het eindpunt van hosts
+# Het eindpunt van de gastheren
 
 >[!NOTE]
 >
@@ -225,12 +225,12 @@ curl -X POST \
 | `attributes.name` | **(Vereist)** Een leesbare naam voor de host. |
 | `attributes.type_of` | **(Vereist)** Het type host. U kunt uit twee opties kiezen: <ul><li>`akamai` for [Door Adobe beheerde hosts](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` for [SFTP-hosts](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Een optionele persoonlijke sleutel die moet worden gebruikt voor hostverificatie. |
-| `attributes.path` | Het pad dat moet worden toegevoegd aan de `server` URL. |
+| `attributes.path` | Het pad dat aan de `server` URL. |
 | `attributes.port` | Een geheel getal dat de specifieke serverpoort aangeeft die moet worden gebruikt. |
 | `attributes.server` | De host-URL voor de server. |
 | `attributes.skip_symlinks`<br><br>(Alleen voor SFTP-hosts) | Standaard gebruiken alle SFTP-hosts symbolische koppelingen (symbolische koppelingen) om te verwijzen naar bibliotheekbuilds die op de server zijn opgeslagen. Niet alle servers ondersteunen echter het gebruik van symlinks. Wanneer dit kenmerk wordt opgenomen en ingesteld op `true`, gebruikt de gastheer een exemplaarverrichting om de bouwstijlactiva direct bij te werken in plaats van symlinks te gebruiken. |
 | `attributes.username` | Een optionele gebruikersnaam voor verificatie. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `hosts`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `hosts`. |
 
 {style="table-layout:auto"}
 
@@ -319,8 +319,8 @@ curl -X PATCH \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de host moeten worden bijgewerkt. De volgende kenmerken kunnen voor een host worden bijgewerkt: <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | De `id` van de host die u wilt bijwerken. Dit moet overeenkomen met de `{HOST_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `hosts`. |
+| `id` | De `id` van de gastheer wilt bijwerken. Dit moet overeenkomen met de `{HOST_ID}` waarde opgegeven in het aanvraagpad. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `hosts`. |
 
 {style="table-layout:auto"}
 

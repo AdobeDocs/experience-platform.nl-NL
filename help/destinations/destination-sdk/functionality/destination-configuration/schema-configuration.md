@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om het partnerschema voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie partnerschema
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1885'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 Destination SDK ondersteunt meerdere schemaconfiguraties:
 
 * Statische schema&#39;s worden gedefinieerd door de `profileFields` in de `schemaConfig` sectie. In een statisch schema, bepaalt u elk doelattribuut dat in het Experience Platform UI in zou moeten worden getoond `profileFields` array. Als u uw schema moet bijwerken, moet u [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Dynamische schema&#39;s gebruiken een extra type van bestemmingsserver, genoemd een [dynamische schema-server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), om de ondersteunde doelkenmerken dynamisch op te halen en schema&#39;s te genereren op basis van uw eigen API. Dynamische schema&#39;s gebruiken niet de `profileFields` array. Als u uw schema moet bijwerken, is het niet nodig om [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md). In plaats daarvan haalt de dynamische schemaserver het bijgewerkte schema van uw API terug.
+* Dynamische schema&#39;s gebruiken een extra type van bestemmingsserver, genoemd een [dynamische schema-server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), om de ondersteunde doelkenmerken dynamisch op te halen en schema&#39;s te genereren op basis van uw eigen API. Dynamische schema&#39;s maken geen gebruik van de `profileFields` array. Als u uw schema moet bijwerken, is het niet nodig om [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md). In plaats daarvan haalt de dynamische schemaserver het bijgewerkte schema van uw API terug.
 * Binnen de schemaconfiguratie, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn afbeeldingen die gebruikers kunnen weergeven in de gebruikersinterface van het Platform, maar ze kunnen deze niet wijzigen wanneer ze een verbinding met uw doel instellen. U kunt bijvoorbeeld afdwingen dat het veld E-mailadres altijd naar de bestemming wordt verzonden.
 
 De `schemaConfig` de sectie gebruikt veelvoudige configuratieparameters, afhankelijk van het type van schema dat u, zoals aangetoond in de hieronder secties nodig hebt.
@@ -112,7 +112,7 @@ Als u een statisch schema met profielkenmerken wilt maken, definieert u de doelk
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeeldingen.
 
-Wanneer gebruikers de doeltoewijzing selecteren, kunnen ze de velden zien die zijn gedefinieerd in het dialoogvenster `profileFields` array.
+Wanneer gebruikers de doeltoewijzing selecteren, kunnen zij de gebieden zien die in `profileFields` array.
 
 ![UI-afbeelding die het scherm met doelkenmerken weergeeft.](../../assets/functionality/destination-configuration/select-attributes.png)
 
@@ -122,7 +122,7 @@ Na het selecteren van de attributen, kunnen zij hen in de kolom van het doelgebi
 
 ## Een dynamisch schema maken {#dynamic-schema-configuration}
 
-Destination SDK steunt de verwezenlijking van dynamische partnerschema&#39;s. In tegenstelling tot een statisch schema, gebruikt een dynamisch schema geen `profileFields` array. In plaats daarvan gebruiken dynamische schema&#39;s een dynamische schemaserver die met uw eigen API verbindt van waar het de schemaconfiguratie terugwint.
+Destination SDK steunt de verwezenlijking van dynamische partnerschema&#39;s. In tegenstelling tot een statisch schema gebruikt een dynamisch schema geen `profileFields` array. In plaats daarvan gebruiken dynamische schema&#39;s een dynamische schemaserver die met uw eigen API verbindt van waar het de schemaconfiguratie terugwint.
 
 >[!IMPORTANT]
 >
@@ -197,15 +197,15 @@ In het onderstaande voorbeeld ziet u zowel de vereiste bron- als doeltoewijzinge
 | Parameter | Type | Vereist/optioneel | Beschrijving |
 |---|---|---|---|
 | `requiredMappingsOnly` | Boolean | Optioneel | Wanneer deze waarde is ingesteld op true, kunnen gebruikers geen andere kenmerken en identiteiten in de activeringsflow toewijzen, behalve de vereiste toewijzingen die u in het dialoogvenster `requiredMappings` array. |
-| `requiredMappings.sourceType` | Tekenreeks | Vereist | Geeft het type van de `source` veld. Ondersteunde waarden: <ul><li>`text/x.schema-path`: Gebruik deze waarde als de `source` field is een profielkenmerk van een XDM-schema.</li><li>`text/x.aep-xl`: Gebruik deze waarde als uw `source` Veld wordt gedefinieerd door een reguliere expressie. Voorbeeld: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`</li><li>`text/plain`: Gebruik deze waarde als uw `source` veld wordt gedefinieerd door een macrosjabloon. Momenteel is de enige ondersteunde macrosjabloon `metadata.segment.alias`.</li></ul> |
-| `requiredMappings.source` | Tekenreeks | Vereist | Hiermee wordt de waarde van het bronveld aangegeven. Ondersteunde waardetypen: <ul><li>XDM-profielkenmerken. Voorbeeld: `personalEmail.address`. Wanneer uw bronattribuut een XDM profielattribuut is, plaats `sourceType` parameter to `text/x.schema-path`.</li><li>Reguliere expressies. Voorbeeld: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. Wanneer uw bronattribuut een regelmatige uitdrukking is, plaats `sourceType` parameter to `text/x.aep-xl`.</li><li>Macrosjablonen. Voorbeeld:`metadata.segment.alias`. Wanneer uw bronattribuut een macromalplaatje is, plaats `sourceType` parameter to `text/plain`. Momenteel is de enige ondersteunde macrosjabloon `metadata.segment.alias`.</li></ul> |
+| `requiredMappings.sourceType` | Tekenreeks | Vereist | Geeft het type van de `source` veld. Ondersteunde waarden: <ul><li>`text/x.schema-path`: Gebruik deze waarde wanneer de `source` field is een profielkenmerk van een XDM-schema.</li><li>`text/x.aep-xl`: Gebruik deze waarde wanneer uw `source` Veld wordt gedefinieerd door een reguliere expressie. Voorbeeld: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`</li><li>`text/plain`: Gebruik deze waarde wanneer uw `source` veld wordt gedefinieerd door een macrosjabloon. Momenteel is de enige ondersteunde macrosjabloon `metadata.segment.alias`.</li></ul> |
+| `requiredMappings.source` | Tekenreeks | Vereist | Hiermee wordt de waarde van het bronveld aangegeven. Ondersteunde waardetypen <ul><li>XDM-profielkenmerken. Voorbeeld: `personalEmail.address`. Wanneer uw bronattribuut een XDM profielattribuut is, plaats `sourceType` parameter to `text/x.schema-path`.</li><li>Reguliere expressies. Voorbeeld: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. Wanneer uw bronattribuut een regelmatige uitdrukking is, plaats `sourceType` parameter to `text/x.aep-xl`.</li><li>Macrosjablonen. Voorbeeld:`metadata.segment.alias`. Wanneer uw bronattribuut een macromalplaatje is, plaats `sourceType` parameter to `text/plain`. Momenteel is de enige ondersteunde macrosjabloon `metadata.segment.alias`.</li></ul> |
 | `requiredMappings.destination` | Tekenreeks | Vereist | Hiermee wordt de waarde van het doelveld aangegeven. Wanneer zowel bron- als doelvelden als vereiste toewijzingen zijn opgegeven, kunnen gebruikers geen van de twee velden selecteren of bewerken en alleen de selectie weergeven. |
 
 {style="table-layout:auto"}
 
 Als gevolg hiervan **[!UICONTROL Source field]** en **[!UICONTROL Target field]** secties in de gebruikersinterface van het Platform worden grijs weergegeven.
 
-![Afbeelding van de vereiste toewijzingen in de activeringsstroom van de gebruikersinterface.](../../assets/functionality/destination-configuration/required-mappings-2.png)
+![Afbeelding van de vereiste toewijzingen in de UI-activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
 >[!TAB Vereiste bestemmingstoewijzing]
 
@@ -229,13 +229,13 @@ In het onderstaande voorbeeld ziet u een vereiste doeltoewijzing. Als alleen het
 | `requiredMappingsOnly` | Boolean | Optioneel | Wanneer deze waarde is ingesteld op true, kunnen gebruikers geen andere kenmerken en identiteiten in de activeringsflow toewijzen, behalve de vereiste toewijzingen die u in het dialoogvenster `requiredMappings` array. |
 | `requiredMappings.destination` | Tekenreeks | Vereist | Hiermee wordt de waarde van het doelveld aangegeven. Wanneer alleen het doelveld wordt opgegeven, kunnen gebruikers een bronveld selecteren om toe te wijzen aan het doel. |
 | `mandatoryRequired` | Boolean | Optioneel | Geeft aan of de toewijzing moet worden gemarkeerd als een [mandatory, kenmerk](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-| `primaryKeyRequired` | Boolean | Optioneel | Geeft aan of de toewijzing moet worden gemarkeerd als een [deduplicatiesleutel](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `primaryKeyRequired` | Boolean | Optioneel | Geeft aan of de toewijzing moet worden gemarkeerd als een [deduplicatie-sleutel](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
 
 {style="table-layout:auto"}
 
-Als gevolg hiervan **[!UICONTROL Target field]** in de gebruikersinterface van het Platform wordt grijs weergegeven, terwijl de **[!UICONTROL Source field]** is actief en kunnen gebruikers ermee werken. De **[!UICONTROL Mandatory key]** en **[!UICONTROL Deduplication key]** zijn actief en gebruikers kunnen deze niet wijzigen.
+Dientengevolge, **[!UICONTROL Target field]** in de gebruikersinterface van het Platform wordt grijs weergegeven, terwijl de **[!UICONTROL Source field]** is actief en kunnen gebruikers ermee werken. De **[!UICONTROL Mandatory key]** en **[!UICONTROL Deduplication key]** zijn actief en gebruikers kunnen deze niet wijzigen.
 
-![Afbeelding van de vereiste toewijzingen in de activeringsstroom van de gebruikersinterface.](../../assets/functionality/destination-configuration/required-mappings-1.png)
+![Afbeelding van de vereiste toewijzingen in de UI-activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
 
@@ -249,7 +249,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [OAuth2-verificatie](oauth2-authentication.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Ondersteunde toewijzingsconfiguraties](supported-mapping-configurations.md)
 * [Levering bestemming](destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](audience-metadata-configuration.md)

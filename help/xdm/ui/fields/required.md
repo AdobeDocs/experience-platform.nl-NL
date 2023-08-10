@@ -3,16 +3,16 @@ keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systee
 title: Vereiste velden definiëren in de gebruikersinterface
 description: Leer hoe u een vereist XDM-veld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
 
 # Vereiste velden definiëren in de gebruikersinterface
 
-In het Model van de Gegevens van de Ervaring (XDM), wijst een vereist gebied erop dat het een geldige waarde moet worden verstrekt opdat een bepaalde verslag of een tijd-reeksgebeurtenis tijdens gegevensopname wordt goedgekeurd. Veelvoorkomende gevallen van gebruik voor vereiste velden zijn identiteitsgegevens van gebruikers en tijdstempels.
+In het Model van de Gegevens van de Ervaring (XDM), wijst een vereist gebied erop dat het een geldige waarde moet worden verstrekt opdat een bepaalde verslag of een tijd-reeksgebeurtenis tijdens gegevensopname wordt goedgekeurd. Veelvoorkomende gebruiksgevallen voor vereiste velden zijn gebruikersidentiteitsgegevens en tijdstempels.
 
 >[!IMPORTANT]
 >

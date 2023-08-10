@@ -4,9 +4,9 @@ title: Handleiding voor publiek dashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het publiek dat uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2089'
+source-wordcount: '2088'
 ht-degree: 0%
 
 ---
@@ -156,7 +156,7 @@ De [!UICONTROL Audience activation order] widget verstrekt een drie-kolom lijst 
 
 ### [!UICONTROL Audience overlap] {#audience-overlap}
 
-Deze widget gebruikt een Venn-diagram om het aantal mensen te visualiseren dat voldoet aan de criteria voor beide soorten publiek. Het publiek dat voor de vergelijking wordt gebruikt, wordt geselecteerd in de widgetdropdown menu&#39;s. Het totale aantal profielen in de desbetreffende segmentdefinitie kan worden gezien door de muis boven een cirkel of het snijpunt van het Venn-diagram te houden.
+Deze widget gebruikt een Venn-diagram om het aantal mensen te visualiseren dat voldoet aan de criteria voor beide soorten publiek. Het publiek dat voor de vergelijking wordt gebruikt, wordt geselecteerd in de widgetdropdown menu&#39;s. Het totale aantal profielen binnen de relevante segmentdefinitie kan worden gezien door de muis boven een cirkel of het snijpunt van het Venn-diagram te houden.
 
 Met deze widget kunt u uw segmentatiestrategie optimaliseren door de gelijkenissen in de resultaten van uw segmentdefinities te visualiseren.
 

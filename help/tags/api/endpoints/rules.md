@@ -2,9 +2,9 @@
 title: Het eindpunt van regels
 description: Leer hoe te om vraag aan het /rules eindpunt in Reactor API te maken.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van regels voor het gespecificeerde bezit terug.
+Een geslaagde reactie retourneert een lijst met regels voor de opgegeven eigenschap.
 
 ```json
 {
@@ -146,7 +146,7 @@ U kunt een regel opzoeken door zijn identiteitskaart in de weg van een verzoek v
 
 >[!NOTE]
 >
->Wanneer regels worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapte regel terug te winnen. Verwijderde regels kunnen worden geïdentificeerd door de aanwezigheid van een `meta.deleted_at` eigenschap.
+>Wanneer regels worden verwijderd, worden ze gemarkeerd als verwijderd, maar worden ze niet daadwerkelijk uit het systeem verwijderd. Daarom is het mogelijk om een geschrapte regel terug te winnen. Verwijderde regels kunnen worden geïdentificeerd door een `meta.deleted_at` eigenschap.
 
 **API-indeling**
 
@@ -284,9 +284,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.name` | **(Vereist)** Een door mensen leesbare naam voor de regel. |
+| `attributes.name` | **(Vereist)** Een voor mensen leesbare naam voor de regel. |
 | `attributes.enabled` | Een booleaanse waarde die aangeeft of de regel is ingeschakeld. |
-| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde zijn `rules`. |
+| `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt, moet de waarde `rules`. |
 
 {style="table-layout:auto"}
 
@@ -410,7 +410,7 @@ curl -X PATCH \
 | --- | --- |
 | `attributes` | Een object waarvan de regels de kenmerken vertegenwoordigen die voor de regel moeten worden bijgewerkt. De volgende kenmerken kunnen voor een regel worden bijgewerkt: <ul><li>`name`</li><li>`enabled`</li></ul> |
 | `id` | De `id` van de regel die u wilt bijwerken. Dit moet overeenkomen met de `{RULE_ID}` waarde opgegeven in het aanvraagpad. |
-| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde zijn `rules`. |
+| `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt, moet de waarde `rules`. |
 
 {style="table-layout:auto"}
 

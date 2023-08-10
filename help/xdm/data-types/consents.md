@@ -3,16 +3,16 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;toest
 title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Consents and Preferences] gegevenstype
 
-De [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype (hierna &quot;de[!UICONTROL Consents and Preferences] gegevenstype&quot;) is een [!DNL Experience Data Model] (XDM) gegevenstype dat is bedoeld om de inzameling van klantentoestemmingen en voorkeur te steunen die door de Platforms van het Beheer van de Toestemming (CMPs) en andere bronnen van uw gegevensverrichtingen worden geproduceerd.
+De [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] het gegevenstype (hierna &quot;de[!UICONTROL Consents and Preferences] gegevenstype&quot;) is [!DNL Experience Data Model] (XDM) gegevenstype dat is bedoeld om de inzameling van klantentoestemmingen en voorkeur te steunen die door de Platforms van het Beheer van de Toestemming (CMPs) en andere bronnen van uw gegevensverrichtingen worden geproduceerd.
 
 In dit document worden de structuur en het beoogde gebruik van de door de [!UICONTROL Consents and Preferences] gegevenstype.
 
@@ -35,8 +35,8 @@ Een toestemming is een optie die een klant toestaat om te specificeren hoe hun g
 
 Een voorkeur is een optie die de klant toestaat om te specificeren hoe de verschillende aspecten van hun ervaring met een merk zouden moeten worden behandeld. Deze vallen binnen twee categorieën:
 
-* **Voorkeuren voor aanpassen**: Voorkeuren met betrekking tot de manier waarop het merk de ervaringen die aan een klant worden geleverd, moet aanpassen.
-* **Marketingsvoorkeuren**: Voorkeuren met betrekking tot de vraag of een merk via verschillende kanalen contact mag opnemen met een klant.
+* **Voorkeuren voor aanpassen**: Voorkeuren betreffende de manier waarop het merk de ervaringen die aan een klant worden geleverd, moet aanpassen.
+* **Marketingsvoorkeuren**: Voorkeuren betreffende de vraag of een merk via verschillende kanalen contact mag opnemen met een klant.
 
 De volgende schermafbeelding laat zien hoe de structuur van het gegevenstype wordt weergegeven in de gebruikersinterface van het Platform:
 
@@ -90,7 +90,6 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 >
 >* [Voorbeeldgegevens genereren in de gebruikersinterface](../ui/sample.md)
 >* [Voorbeeldgegevens genereren in de API](../api/sample-data.md)
-
 
 ## `consents` {#choices}
 
@@ -228,7 +227,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `preferred` | Wijst op het aangewezen kanaal van de klant voor het ontvangen van mededelingen. Zie de [aanhangsel](#preferred-values) voor geaccepteerde waarden. |
-| `any` | Vertegenwoordigt de voorkeur van de klant voor directe marketing als geheel. De voorkeur voor toestemming die in dit veld wordt gegeven, wordt beschouwd als de &quot;standaardvoorkeur&quot; voor elk marketingkanaal, tenzij deze voorkeur wordt overschreven door aanvullende subvelden in het kader van `marketing`. Als u meer opties voor korreligheid wilt gebruiken, wordt u aangeraden dit veld uit te sluiten.<br><br>Als de waarde is ingesteld op `n`Vervolgens moeten alle specifiekere personalisatie-instellingen worden genegeerd. Als de waarde is ingesteld op `y`en moeten alle fijnere personalisatieopties ook als `y`, tenzij expliciet ingesteld op `n`. Als de waarde unset is, dan zouden de waarden voor elke verpersoonlijkingsoptie moeten worden gehonoreerd zoals gespecificeerd. |
+| `any` | Vertegenwoordigt de voorkeur van de klant voor directe marketing als geheel. De voorkeur voor toestemming die in dit veld wordt gegeven, wordt beschouwd als de &quot;standaardvoorkeur&quot; voor elk marketingkanaal, tenzij deze voorkeur wordt overschreven door aanvullende subvelden die onder `marketing`. Als u meer opties voor korreligheid wilt gebruiken, wordt u aangeraden dit veld uit te sluiten.<br><br>Als de waarde is ingesteld op `n`Vervolgens moeten alle specifiekere personalisatie-instellingen worden genegeerd. Als de waarde is ingesteld op `y`en moeten alle fijnere personalisatieopties ook als `y`, tenzij expliciet ingesteld op `n`. Als de waarde unset is, dan zouden de waarden voor elke verpersoonlijkingsoptie moeten worden gehonoreerd zoals gespecificeerd. |
 | `email` | Geeft aan of de klant ermee instemt e-mailberichten te ontvangen. |
 | `push` | Geeft aan of de klant het ontvangen van pushberichten toestaat. |
 | `sms` | Geeft aan of de klant ermee instemt tekstberichten te ontvangen. |
@@ -250,15 +249,15 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `time` | Een ISO 8601-tijdstempel voor de laatste keer dat de toestemming en voorkeuren van de klant zijn bijgewerkt. Dit veld kan worden gebruikt in plaats van tijdstempels toe te passen op individuele voorkeuren om het laden en de complexiteit te verminderen. Een `time` waarde onder een individuele voorkeur heeft voorrang op de `metadata` tijdstempel voor die voorkeur. |
+| `time` | Een ISO 8601-tijdstempel voor de laatste keer dat de toestemming en voorkeuren van de klant zijn bijgewerkt. Dit veld kan worden gebruikt in plaats van tijdstempels toe te passen op individuele voorkeuren om het laden en de complexiteit te verminderen. Een `time` waarde onder een individuele voorkeur heeft voorrang op de `metadata` tijdstempel voor die bepaalde voorkeur. |
 
 {style="table-layout:auto"}
 
-## Gegevens invoegen met behulp van het gegevenstype {#ingest}
+## Gegevens invoegen met het gegevenstype {#ingest}
 
 Voor het gebruik van de [!UICONTROL Consents and Preferences] het gegevenstype om toestemmingsgegevens van uw klanten in te voeren, moet u een dataset tot stand brengen die op een schema wordt gebaseerd dat dat gegevenstype bevat.
 
-Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen over hoe te om gegevenstypes aan gebieden toe te wijzen. Nadat u een schema hebt gemaakt dat een veld bevat met de opdracht [!UICONTROL Consents and Preferences] gegevenstype, raadpleeg de sectie over [een gegevensset maken](../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
+Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen over hoe te om gegevenstypes aan gebieden toe te wijzen. Nadat u een schema hebt gemaakt dat een veld bevat met de opdracht [!UICONTROL Consents and Preferences] gegevenstype, verwijs naar de sectie over [een gegevensset maken](../../catalog/datasets/user-guide.md#create) in de datasetgebruikersgids, die de stappen volgt om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
 >
@@ -266,11 +265,11 @@ Zie de zelfstudie aan [het creëren van een schema in UI](https://www.adobe.com/
 >
 >Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [beleid samenvoegen](../../rtcdp/profile/merge-policies.md) voor meer informatie .
 
-## Verwerking van toestemmings- en voorkeurswijzigingen
+## Verwerking van toestemmings- en preferenties
 
 Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten deze wijzigingen worden verzameld en onmiddellijk worden doorgevoerd met de [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
 
-## Aanhangsel {#appendix}
+## Bijlage {#appendix}
 
 In de volgende secties vindt u aanvullende informatie over de [!UICONTROL Consents and Preferences] gegevenstype.
 
@@ -282,7 +281,7 @@ In de volgende tabel worden de toegestane waarden voor `val`:
 | --- | --- | --- |
 | `y` | Ja (opt-in) | De klant heeft ervoor gekozen de toestemming of voorkeur te geven. Met andere woorden: **do** toestemming voor het gebruik van hun gegevens zoals aangegeven in de betrokken toestemming of voorkeur. |
 | `n` | Nee (opt-out) | De klant heeft ervoor gekozen geen toestemming of voorkeur te geven. Met andere woorden: **niet** toestemming voor het gebruik van hun gegevens zoals aangegeven in de betrokken toestemming of voorkeur. |
-| `p` | Verificatie in behandeling | Het systeem heeft nog geen definitieve toestemming of voorkeurswaarde ontvangen. Dit wordt het vaakst gebruikt als deel van een toestemming die uit twee stappen controle vereist. Als een klant bijvoorbeeld ervoor kiest e-mailberichten te ontvangen, wordt deze toestemming ingesteld op `p` totdat zij een koppeling in een e-mail selecteren om te controleren of zij het juiste e-mailadres hebben opgegeven, waarna de toestemming wordt bijgewerkt naar `y`.<br><br>Als deze toestemming of voorkeur geen tweesets verificatieproces gebruikt, wordt `p` in plaats daarvan kan de keuze worden gebruikt om aan te geven dat de klant nog niet heeft gereageerd op de bevestigingsprompt. U kunt de waarde bijvoorbeeld automatisch instellen op `p` op de eerste pagina van een website, voordat de klant heeft gereageerd op de vraag naar toestemming. In rechtsgebieden waarvoor geen uitdrukkelijke toestemming vereist is, kunt u deze ook gebruiken om aan te geven dat de klant niet expliciet heeft aangegeven dat de toestemming is geweigerd (met andere woorden, er wordt aangenomen dat de toestemming is verleend). |
+| `p` | Verificatie in behandeling | Het systeem heeft nog geen definitieve toestemming of voorkeurswaarde ontvangen. Dit wordt het vaakst gebruikt als deel van een toestemming die uit twee stappen controle vereist. Als een klant bijvoorbeeld ervoor kiest e-mailberichten te ontvangen, wordt deze toestemming ingesteld op `p` totdat zij een koppeling in een e-mail selecteren om te controleren of zij het juiste e-mailadres hebben opgegeven, waarna de toestemming wordt bijgewerkt naar `y`.<br><br>Als deze toestemming of voorkeur geen tweesets verificatieproces gebruikt, wordt `p` in plaats daarvan kan de keuze worden gebruikt om aan te geven dat de klant nog niet heeft gereageerd op de vraag naar toestemming. U kunt de waarde bijvoorbeeld automatisch instellen op `p` op de eerste pagina van een website, voordat de klant heeft gereageerd op de vraag naar toestemming. In rechtsgebieden waarvoor geen uitdrukkelijke toestemming vereist is, kunt u deze ook gebruiken om aan te geven dat de klant niet expliciet heeft aangegeven dat de toestemming is geweigerd (met andere woorden, er wordt aangenomen dat de toestemming is verleend). |
 | `u` | Onbekend | De instemming- of voorkeursgegevens van de klant zijn onbekend. |
 | `dy` | Standaard van Ja (opt-in) | De klant heeft zelf geen waarde voor de toestemming opgegeven en wordt standaard als een opt-in (&quot;Yes&quot;) behandeld. Met andere woorden, instemming wordt verondersteld tot de klant anders aangeeft.<br><br>Merk op dat als wetten of veranderingen in het privacybeleid van uw bedrijf in veranderingen in de gebreken van sommige of alle gebruikers resulteren, u alle profielen manueel moet bijwerken die standaardwaarden bevatten. |
 | `dn` | Standaard van Geen (opt-out) | De klant heeft zelf geen waarde voor de toestemming opgegeven en wordt standaard als een &quot;nee&quot; behandeld. Met andere woorden, de klant wordt verondersteld toestemming te hebben geweigerd tot zij anders aangeven.<br><br>Merk op dat als wetten of veranderingen in het privacybeleid van uw bedrijf in veranderingen in de gebreken van sommige of alle gebruikers resulteren, u alle profielen manueel moet bijwerken die standaardwaarden bevatten. |

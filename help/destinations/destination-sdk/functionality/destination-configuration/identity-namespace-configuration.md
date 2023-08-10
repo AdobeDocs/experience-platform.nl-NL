@@ -1,15 +1,15 @@
 ---
 description: Leer hoe te om de gesteunde doelidentiteiten voor bestemmingen te vormen die met Destination SDK worden gebouwd.
-title: Configuratie naamruimte identiteit
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+title: Configuratie naamruimte voor identiteit
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '836'
 ht-degree: 1%
 
 ---
 
 
-# Configuratie naamruimte identiteit
+# Configuratie naamruimte voor identiteit
 
 Experience Platform gebruikt naamruimten om het type van specifieke identiteiten te beschrijven. Bijvoorbeeld, een identiteitsnaamruimte genoemd `Email` geeft een vergelijkbare waarde aan `name@email.com` als e-mailadres.
 
@@ -88,7 +88,7 @@ Meer informatie over identiteiten in het dialoogvenster [Overzicht van naamruimt
 
 ## Toewijzingsoverwegingen
 
-Als klanten een naamruimte voor de bronidentiteit selecteren en geen doeltoewijzing selecteren, wordt de doeltoewijzing automatisch door het Platform gevuld met een kenmerk met dezelfde naam.
+Als klanten een naamruimte voor de bronidentiteit selecteren en geen doeltoewijzing selecteren, vult het Platform automatisch de doeltoewijzing met een attribuut met dezelfde naam in.
 
 ## Optionele hashing voor bronvelden configureren
 
@@ -114,7 +114,7 @@ De onderstaande configuratie maakt de optionele [Transformatie toepassen](../../
 
 Schakel deze optie in als u niet-gehashte bronvelden gebruikt, zodat Adobe Experience Platform deze automatisch verbergt bij activering.
 
-Wanneer u ongehashte bronkenmerken toewijst aan doelkenmerken die de bestemming verwacht te worden gehasht (bijvoorbeeld: `email_lc_sha256` of `phone_sha256`), controleert u de **Transformatie toepassen** als u wilt dat Adobe Experience Platform de bronkenmerken bij activering automatisch hasht.
+Wanneer u ongehashte bronkenmerken toewijst aan doelkenmerken die de bestemming verwacht te worden gehasht (bijvoorbeeld: `email_lc_sha256` of `phone_sha256`), controleert u **Transformatie toepassen** als u wilt dat Adobe Experience Platform de bronkenmerken bij activering automatisch hasht.
 
 ## Verplichte hash voor bronvelden configureren
 
@@ -149,7 +149,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Ondersteunde toewijzingsconfiguraties](supported-mapping-configurations.md)
 * [Levering bestemming](destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](audience-metadata-configuration.md)

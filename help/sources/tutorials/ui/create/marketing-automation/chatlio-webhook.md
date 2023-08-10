@@ -3,9 +3,9 @@ title: Een Chatlio Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Chatlio-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1120'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Chatlio] bronverbindi
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Vereisten {#prerequisites}
 
@@ -33,7 +33,7 @@ De volgende sectie bevat informatie over voorwaarden die moeten worden voltooid 
 
 ### Voorbeeld-JSON om het bronschema te definiëren voor [!DNL Chatlio] {#prerequisites-json-schema}
 
-Voordat u een [!DNL Chatlio] bronverbinding. U moet een bronschema opgeven. U kunt de JSON hieronder gebruiken.
+Voordat u een [!DNL Chatlio] bronverbinding, zult u een bronschema vereisen om worden verstrekt. U kunt de JSON hieronder gebruiken.
 
 ```
 {
@@ -50,7 +50,7 @@ Voordat u een [!DNL Chatlio] bronverbinding. U moet een bronschema opgeven. U ku
 
 ### Een Platform maken voor [!DNL Chatlio] {#create-platform-schema}
 
-U moet ook ervoor zorgen dat u een schema van het Platform creeert voor uw bron te gebruiken. Lees de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitgebreide stappen over hoe te om een schema tot stand te brengen.
+U moet ook ervoor zorgen dat u een schema van het Platform creeert voor uw bron te gebruiken. Lees de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 ![De interface van het Platform die een voorbeeldschema voor Chatlio toont](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
@@ -77,15 +77,15 @@ Selecteren **[!UICONTROL Upload files]** om een JSON-bestand vanaf uw lokale sys
 
 Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt ook de opdracht [!UICONTROL Search field] nut om tot specifieke punten van binnen uw schema toegang te hebben.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]**.
 
-![De voorvertoningsstap van de workflow voor bronnen.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/preview.png)
+![De voorbeeldstap van de bronworkflow.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/preview.png)
 
 ## Gegevens {#dataflow-detail}
 
 De **Gegevens** de stap verschijnt, die u van opties voorzien om een bestaande dataset te gebruiken of een nieuwe dataset voor uw gegevensstroom te vestigen, evenals een kans om een naam en een beschrijving voor uw gegevensstroom te verstrekken. Tijdens deze stap kunt u ook instellingen configureren voor het opnemen van profielen, foutdiagnose, gedeeltelijke inname en waarschuwingen.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Next]**.
 
 ![De gegevensstroom-detailstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/dataflow-detail.png)
 
@@ -95,13 +95,13 @@ De [!UICONTROL Mapping] de stap verschijnt, die u van een interface voorziet om 
 
 Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie [UI-hulplijn voor gegevensvoorinstelling](../../../../../data-prep/ui/mapping.md).
 
-De onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u verdergaat met de [!UICONTROL Review] in.
+De onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u verdergaat met de [!UICONTROL Review] in het werkgebied.
 
 | Doelveld | Beschrijving |
 | --- | --- |
 | `UUID` | De [!DNL Chatlio] id voor de gebeurtenis. |
 
-Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 ![De toewijzingsstap van de workflow voor bronnen.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/mapping.png)
 
@@ -109,8 +109,8 @@ Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **[!UICONTROL Connection]**: Hiermee geeft u het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
@@ -161,11 +161,11 @@ In de volgende secties vindt u aanvullende bronnen die u kunt raadplegen wanneer
 
 Om te controleren of u de bron correct hebt ingesteld en [!DNL Chatlio] de berichten worden opgenomen, volg de stappen hieronder:
 
-* U kunt de [!DNL Chatlio] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** pagina om de gebeurtenissen te identificeren die worden vastgelegd door [!DNL Chatlio].
+* U kunt de [!DNL Chatlio] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** pagina om de gebeurtenissen te identificeren waarop [!DNL Chatlio].
 
 ![Chatlio UI-screenshot met chatgeschiedenis](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Chatlio] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhaken werden opgenomen die u binnen hebt gevormd [!DNL Chatlio].
+* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Chatlio] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhooks werden opgenomen die u binnen hebt gevormd [!DNL Chatlio].
 
 ![Schermopname van gebruikersinterface van Platform met ingesloten gebeurtenissen](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 

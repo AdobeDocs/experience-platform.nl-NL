@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van afstemming van segment
 description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '1917'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Met [!DNL Segment Match] u kunt:
 
 [!DNL Segment Match] gebruikt een proces van identiteitsoverlapping om ervoor te zorgen dat het delen van segmenten op een veilige en privacy-gerichte manier wordt gedaan. An **overlappende identiteit** is een identiteit die een gelijke in zowel uw segment als het segment van uw geselecteerde partner heeft. Voordat een segment wordt gedeeld tussen een afzender en een ontvanger, wordt tijdens het proces voor identiteitsoverlap gecontroleerd of er sprake is van overlapping in naamruimten en toestemmingscontroles tussen de verzender en de ontvanger(s). Beide overlappende controles moeten overgaan opdat een segment wordt gedeeld.
 
-In de volgende secties vindt u meer informatie over [!DNL Segment Match], inclusief informatie over de installatie en de end-to-end workflow.
+De volgende secties bevatten meer informatie over [!DNL Segment Match], inclusief informatie over de installatie en de end-to-end workflow.
 
 ## Instellen
 
@@ -32,7 +32,7 @@ De volgende secties schetsen hoe te opstelling en te vormen [!DNL Segment Match]
 
 ### Identiteitsgegevens en naamruimten instellen {#namespaces}
 
-De eerste stap om aan de slag te gaan met [!DNL Segment Match] moet ervoor zorgen u gegevens tegen gesteunde identiteitsnamespaces inneemt.
+De eerste stap om te beginnen met [!DNL Segment Match] moet ervoor zorgen u gegevens tegen gesteunde identiteitsnamespaces inneemt.
 
 Identiteitsnaamruimten zijn een component van [Adobe Experience Platform Identity Service](../../../identity-service/home.md). Elke identiteit van de klant bevat een bijbehorende naamruimte die de context van de identiteit aangeeft. Een naamruimte kan bijvoorbeeld een waarde onderscheiden van &quot;name&quot;<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id.
 
@@ -46,13 +46,13 @@ De lijst met ondersteunde naamruimten ziet er als volgt uit:
 | --------- | ----------- |
 | E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Platform biedt twee methoden om hashing bij gegevensverzameling te ondersteunen, via [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) en via [voorvoegsel gegevens](../../../data-prep/functions.md#hashing). |
 | Telefoon (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
-| ECID | Een naamruimte die een ECID-waarde (Experience Cloud ID) vertegenwoordigt. Naar deze naamruimte kan ook worden verwezen door de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie de [ECID-overzicht](../../../identity-service/ecid.md) voor meer informatie . |
+| ECID | Een naamruimte die een ECID-waarde (Experience Cloud ID) vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie de [ECID-overzicht](../../../identity-service/ecid.md) voor meer informatie . |
 | Apple IDFA (ID voor adverteerders) | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [op rente gebaseerde advertenties](https://support.apple.com/en-us/HT202074) voor meer informatie . |
-| Google-advertentie-ID | A namespace that represents a Google Advertising ID. Zie het volgende document op [Google-advertentie-id](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) voor meer informatie . |
+| Google-ID | A namespace that represents a Google Advertising ID. Zie het volgende document op [Google-advertentie-id](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) voor meer informatie . |
 
 ### Configuratie van toestemming instellen
 
-U moet een toestemmingsconfiguratie verstrekken en zijn standaardwaarde plaatsen aan of `opt-in` of `opt-out` voor een toestemmingscontrole.
+U moet een toestemmingsconfiguratie verstrekken en zijn standaardwaarde plaatsen aan of `opt-in` of `opt-out` voor een controle van de toestemming.
 
 De controle van de opt-in en opt-out toestemming bepaalt of u met de toestemming kunt werken om gebruikersgegevens door gebrek te delen. Als het gebrek van de toestemmingsconfiguratie aan wordt geplaatst `opt-out`, kunnen gebruikersgegevens worden gedeeld, tenzij een gebruiker expliciet weigert. Als de standaardwaarde is ingesteld op `opt-in`, kunnen gebruikersgegevens niet worden gedeeld, tenzij een gebruiker expliciet binnen kiest.
 
@@ -66,7 +66,7 @@ De laatste voorwaarde u moet vestigen is een nieuw etiket van het gegevensgebrui
 
 Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het in Experience Platform wordt opgenomen, of zodra de gegevens voor gebruik in Platform beschikbaar worden.
 
-[!DNL Segment Match] gebruikt het C11-label, een specifiek contractlabel voor [!DNL Segment Match] dat u handmatig aan alle datasets of kenmerken kunt toevoegen om ervoor te zorgen dat deze worden uitgesloten van de [!DNL Segment Match] procedure voor het delen van partners. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van wilt uitsluiten [!DNL Segment Match] en voegt het label C11 dienovereenkomstig toe, wordt het label automatisch afgedwongen door de [!DNL Segment Match] workflow. [!DNL Segment Match] schakelt automatisch de [!UICONTROL Restrict data sharing] kernbeleid. Voor specifieke instructies over hoe te om de etiketten van het gegevensgebruik op datasets toe te passen, zie de zelfstudie op [gegevensgebruikslabels beheren in de gebruikersinterface](../../../data-governance/labels/user-guide.md).
+[!DNL Segment Match] gebruikt het C11-label, een specifiek contractlabel voor [!DNL Segment Match] dat u handmatig aan alle datasets of kenmerken kunt toevoegen om ervoor te zorgen dat deze worden uitgesloten van de [!DNL Segment Match] partnerdelingsproces. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van wilt uitsluiten [!DNL Segment Match] en voegt het label C11 dienovereenkomstig toe, wordt het label automatisch afgedwongen door de [!DNL Segment Match] workflow. [!DNL Segment Match] schakelt automatisch de [!UICONTROL Restrict data sharing] kernbeleid. Voor specifieke instructies over hoe te om de etiketten van het gegevensgebruik op datasets toe te passen, zie de zelfstudie op [gegevensgebruikslabels beheren in de gebruikersinterface](../../../data-governance/labels/user-guide.md).
 
 Voor een lijst met gegevensgebruikslabels en de bijbehorende definities raadpleegt u de [woordenlijst met gegevensgebruikslabels](../../../data-governance/labels/reference.md). Voor informatie over het beleid van het gegevensgebruik, zie [overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md).
 
@@ -77,7 +77,7 @@ Er zijn twee machtigingen gekoppeld aan [!DNL Segment Match]:
 | Machtiging | Beschrijving |
 | --- | --- |
 | Verbindingen voor delen van publiek beheren | Deze toestemming staat u toe om het proces van de partnerhanddruk te voltooien, dat twee organisaties verbindt om toe te laten [!DNL Segment Match] stromen. |
-| Aandelen van publiek beheren | Met deze machtiging kunt u feeds maken, bewerken en publiceren (het pakket gegevens dat wordt gebruikt voor [!DNL Segment Match]) met actieve partners (partners die door de admin gebruiker met zijn verbonden **[!UICONTROL Audience Share Connections]** toegang). |
+| Aandelen van publiek beheren | Met deze machtiging kunt u feeds maken, bewerken en publiceren (het pakket gegevens dat wordt gebruikt voor [!DNL Segment Match]) met actieve partners (partners die door de admin gebruiker met **[!UICONTROL Audience Share Connections]** toegang). |
 
 Zie de [toegangsbeheeroverzicht](../../../access-control/home.md) voor meer informatie over toegangsbeheer en toestemmingen.
 
@@ -101,7 +101,7 @@ Een verbinding tussen twee partners is een &quot;bidirectionele handdruk&quot;di
 >
 >De &quot;bidirectionele handdruk&quot;tussen u en uw partner is strikt een verbinding. Tijdens dit proces worden geen gegevens uitgewisseld.
 
-U kunt een lijst van verbindingen met bestaande partners in de belangrijkste interface van bekijken [!UICONTROL Manage partners] scherm. Op de rechterspoorlijn is de [!UICONTROL Share setting] , die u de mogelijkheid biedt om een nieuwe [!UICONTROL connect ID] en een invoervak waarin u de [!UICONTROL connect ID].
+U kunt een lijst van verbindingen met bestaande partners in de belangrijkste interface van bekijken [!UICONTROL Manage partners] scherm. Op de rechterspoorlijn is de [!UICONTROL Share setting] , die u de mogelijkheid biedt om een nieuwe [!UICONTROL connect ID] en een invoervak waarin u de gegevens van een partner kunt invoeren [!UICONTROL connect ID].
 
 ![determine-connection.png](./images/establish-connection.png)
 
@@ -127,7 +127,7 @@ Als u een nieuwe feed wilt maken, selecteert u **[!UICONTROL Create feed]** van 
 
 ![create-feed.png](./images/create-feed.png)
 
-De basisopstelling van een voer omvat een naam, een beschrijving, en configuraties betreffende marketing gebruiksgevallen en identiteitsmontages. Geef een naam en een beschrijving voor uw feed op en pas vervolgens de gevallen van marketinggebruik toe waarvan u wilt dat uw gegevens worden uitgesloten. U kunt meerdere keren hoofdlettergebruik selecteren in een lijst met:
+De basisopstelling van een voer omvat een naam, een beschrijving, en configuraties betreffende marketing gebruiksgevallen en identiteitsmontages. Geef een naam en een beschrijving voor uw feed op en pas vervolgens de gevallen van marketinggebruik toe waarvan u wilt dat uw gegevens worden uitgesloten. U kunt meerdere keren hoofdlettergebruik selecteren in een lijst die het volgende bevat:
 
 * [!UICONTROL Analytics]
 * [!UICONTROL Combine with PII]
@@ -177,7 +177,7 @@ Selecteren **[!UICONTROL Finish]** om verder te gaan.
 
 ### Feed bijwerken
 
-Als u segmenten wilt toevoegen of verwijderen, selecteert u **[!UICONTROL Create feed]** van de [!UICONTROL Feeds] pagina en selecteer vervolgens **[!UICONTROL Existing feed]**. Selecteer in de lijst met bestaande feed die wordt weergegeven de feed die u wilt bijwerken en selecteer vervolgens **[!UICONTROL Next]**.
+Selecteer **[!UICONTROL Create feed]** van de [!UICONTROL Feeds] pagina en selecteer vervolgens **[!UICONTROL Existing feed]**. Selecteer in de lijst met bestaande feed die wordt weergegeven de feed die u wilt bijwerken en selecteer vervolgens **[!UICONTROL Next]**.
 
 ![voederlijst](./images/feed-list.png)
 
@@ -191,7 +191,7 @@ De lijst met segmenten wordt weergegeven. Van hieruit kunt u nieuwe segmenten aa
 
 ### Een inkomende feed accepteren
 
-Als u een binnenkomende feed wilt weergeven, selecteert u **[!UICONTROL Received]** van de koptekst van de [!UICONTROL Feeds] en selecteer vervolgens de feed die u wilt weergeven in de lijst. Als u de feed wilt accepteren, selecteert u **[!UICONTROL Enable for profile]** en kan de status enkele ogenblikken worden bijgewerkt vanaf [!UICONTROL Pending] tot [!UICONTROL Enabled].
+Als u een inkomende feed wilt weergeven, selecteert u **[!UICONTROL Received]** van de koptekst van de [!UICONTROL Feeds] en selecteer vervolgens de feed die u wilt weergeven in de lijst. Als u de feed wilt accepteren, selecteert u **[!UICONTROL Enable for profile]** en kan de status enkele ogenblikken worden bijgewerkt vanaf [!UICONTROL Pending] tot [!UICONTROL Enabled].
 
 ![receive.png](./images/received.png)
 

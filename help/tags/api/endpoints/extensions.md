@@ -2,9 +2,9 @@
 title: Extensies, eindpunt
 description: Leer hoe te om vraag aan het /extensions eindpunt in Reactor API te maken.
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -160,7 +160,7 @@ U kunt een extensie opzoeken door de id op te geven in het pad van een GET-aanvr
 
 >[!NOTE]
 >
->Wanneer extensies worden verwijderd, worden ze gemarkeerd als verwijderd in het systeem, maar worden ze niet daadwerkelijk verwijderd. Het is daarom mogelijk een verwijderde extensie op te halen. Verwijderde extensies kunnen worden geïdentificeerd door de aanwezigheid van een `deleted_at` eigenschap in de `meta` van de geretourneerde extensiegegevens.
+>Wanneer extensies worden verwijderd, worden ze gemarkeerd als verwijderd in het systeem, maar worden ze niet daadwerkelijk verwijderd. Het is daarom mogelijk een verwijderde extensie op te halen. Verwijderde extensies kunnen worden geïdentificeerd door een `deleted_at` eigenschap in de `meta` van de geretourneerde extensiegegevens.
 
 **API-indeling**
 
@@ -280,7 +280,7 @@ Een geslaagde reactie retourneert de details van de extensie.
 
 ## Een extensie maken of bijwerken {#create}
 
-Extensies worden gemaakt door te verwijzen naar een [extensiepakket](./extension-packages.md) en het toevoegen van de geïnstalleerde extensie aan een eigenschap. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
+Extensies worden gemaakt door te verwijzen naar een [extensiepakket](./extension-packages.md) en de geïnstalleerde extensie toevoegen aan een eigenschap. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
 
 **API-indeling**
 
@@ -592,7 +592,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responstekst om aan te geven dat de extensie is verwijderd.
+Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder hoofdtekst van de reactie om aan te geven dat de extensie is verwijderd.
 
 ## Notities voor een extensie beheren {#notes}
 
@@ -1297,7 +1297,7 @@ Een geslaagde reactie retourneert de details van de oorsprong van de opgegeven e
 
 ### De verwante eigenschap voor een extensie opzoeken {#property}
 
-U kunt de eigenschap die eigenaar is van een extensie opzoeken door deze toe te voegen `/property` naar het pad van een GET-aanvraag.
+U kunt de eigenschap die eigenaar is van een extensie opzoeken door het toevoegen `/property` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 

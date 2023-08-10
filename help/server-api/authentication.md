@@ -2,9 +2,9 @@
 title: Verificatie
 description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Network Server-API configureert.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -30,17 +30,17 @@ API-aanroepen die afkomstig zijn van een privéserver op `server.adobedc.net` mo
 
 ## Vereisten {#prerequisites}
 
-Alvorens u vraag kunt maken aan [!DNL Server API]moet u aan de volgende voorwaarden voldoen:
+Alvorens u vraag kunt maken aan [!DNL Server API]voldoet aan de volgende voorwaarden:
 
 * U hebt een organisatie-account met toegang tot Adobe Experience Platform.
-* Je Experience Platform account heeft de `developer` en `user` rollen die zijn ingeschakeld voor het Adobe Experience Platform API-productprofiel. Neem contact op met uw [Admin Console](../access-control/home.md) beheerder om deze rollen voor uw rekening toe te laten.
+* Je Experience Platform account heeft de `developer` en `user` rollen ingeschakeld voor het Adobe Experience Platform API-productprofiel. Neem contact op met uw [Admin Console](../access-control/home.md) beheerder om deze rollen voor uw rekening toe te laten.
 * Je hebt een Adobe ID. Als je geen Adobe ID hebt, ga dan naar de [Adobe Developer Console](https://developer.adobe.com/console) en maak een nieuwe account.
 
 ## Referenties verzamelen {#credentials}
 
 Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](../landing/api-authentication.md). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
@@ -50,7 +50,7 @@ De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken wor
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in Experience Platform raadpleegt u de [overzichtsdocumentatie van sandbox](../sandboxes/home.md).
+>Zie voor meer informatie over sandboxen in Experience Platform de [overzichtsdocumentatie van sandbox](../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 

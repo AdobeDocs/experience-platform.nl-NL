@@ -2,9 +2,9 @@
 title: Sects, eindpunt
 description: Leer hoe te om vraag aan het /secrets eindpunt in Reactor API te maken.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1246'
 ht-degree: 1%
 
 ---
@@ -352,7 +352,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | Een unieke, beschrijvende naam voor het geheim. |
-| `type_of` | Het type van authentificatiereferentie het geheim vertegenwoordigt. Bevat drie toegestane waarden:<ul><li>`token`: Een tokenreeks.</li><li>`simple-http`: Een gebruikersnaam en wachtwoord.</li><li>`oauth2`: Referenties die voldoen aan de OAuth-norm.</li></ul> |
+| `type_of` | Het type van authentificatiereferentie het geheim vertegenwoordigt. Bevat drie toegestane waarden:<ul><li>`token`: Een tokenreeks.</li><li>`simple-http`: Een gebruikersnaam en wachtwoord.</li><li>`oauth2`: Referenties conform de OAuth-norm.</li></ul> |
 | `credentials` | Een object dat de referentie-waarden voor het geheim bevat. Afhankelijk van de `type_of` -kenmerk, moeten verschillende eigenschappen worden opgegeven. Zie de sectie over [geloofsbrieven](../guides/secrets.md#credentials) in de geheimengids voor meer informatie over de eisen voor elk type. |
 | `relationships.environment` | Elk geheim moet met een milieu worden geassocieerd wanneer het eerst wordt gecreeerd. De `data` object binnen deze eigenschap moet het `id` van het milieu, het geheim dat wordt toegekend, samen met een `type` waarde van `environments`. |
 | `type` | Het type resource dat wordt gemaakt. Voor deze aanroep moet de waarde `secrets`. |
@@ -361,7 +361,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvol antwoord geeft de details van het geheim terug. Let erop dat sommige eigenschappen, afhankelijk van het type geheim, onder `credentials` kan verborgen zijn.
+Een succesvol antwoord geeft de details van het geheim terug. Afhankelijk van het type geheim worden sommige eigenschappen onder `credentials` kan verborgen zijn.
 
 ```json
 {
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-In een succesvol antwoord worden de details van het geheim geretourneerd, waarbij het antwoord van de vergunningverlenende dienst is opgenomen onder `meta.test_exchange`.
+Een succesvol antwoord geeft de details van het geheim terug, waarbij het antwoord van de vergunningverlenende dienst in het volgende `meta.test_exchange`.
 
 ```json
 { 
@@ -644,11 +644,11 @@ Een succesvolle reactie retourneert de details van het geheim, waarbij de status
 }
 ```
 
-## Een `oauth2-google` geheim {#reauthorize}
+## Autoriseer een `oauth2-google` geheim {#reauthorize}
 
 Elk `oauth2-google` geheim bevat een `meta.authorization_url_expires_at` eigenschap die aangeeft wanneer de autorisatie-URL vervalt. Na deze tijd, moet het geheim opnieuw worden gemachtigd om het authentificatieproces te vernieuwen.
 
-Een `oauth2-google` in het geheim een verzoek van de PATCH tot het betrokken geheim indienen.
+Om een `oauth2-google` in het geheim een verzoek van de PATCH tot het betrokken geheim indienen.
 
 **API-indeling**
 
@@ -658,7 +658,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SECRET_ID}` | De `id` van het geheim dat u opnieuw wilt autoriseren. |
+| `{SECRET_ID}` | De `id` van het geheim dat u opnieuw wilt goedkeuren. |
 
 **Verzoek**
 
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een succesvol antwoord geeft de details van het bijgewerkte geheim terug. Van hier, moet u kopiëren en kleven `meta.authorization_url` in een browser om het autorisatieproces te voltooien.
+Een succesvol antwoord geeft de details van het bijgewerkte geheim terug. Vanaf hier moet u de `meta.authorization_url` in een browser om het autorisatieproces te voltooien.
 
 ```json
 {
@@ -807,7 +807,7 @@ GET /secrets/{SECRET_ID}/notes
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SECRET_ID}` | De id van het geheim waarvan u de notities wilt weergeven. |
+| `{SECRET_ID}` | De id van het geheim waarvan u notities wilt weergeven. |
 
 {style="table-layout:auto"}
 
@@ -985,7 +985,7 @@ Een succesvolle reactie retourneert de details van de omgeving.
 
 ### De verwante eigenschap opzoeken voor een geheim {#property}
 
-U kunt de eigenschap die eigenaar is van een geheim opzoeken door deze toe te voegen `/property` naar het pad van een GET-aanvraag.
+U kunt de eigenschap die eigenaar is van een geheim opzoeken door het toevoegen `/property` naar het pad van een GET-aanvraag.
 
 **API-indeling**
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype identiteit
 description: Dit document biedt een overzicht van het XDM-gegevenstype Identity.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `namespace` | Object | Een object dat één tekenreeksveld bevat (`code`), die de naamruimte aangeeft die is gekoppeld aan de opgegeven `id` kenmerk. |
-| `authenticatedState` | Tekenreeks | De voor authentiek verklaarde staat voor deze identiteit op het tijdstip van de waargenomen Gebeurtenis van de Ervaring. Zie de [aanhangsel](#authenticatedState) voor aanvaarde waarden en definities. |
+| `authenticatedState` | Tekenreeks | De geverifieerde status voor deze identiteit op het moment van de waargenomen Experience Event. Zie de [aanhangsel](#authenticatedState) voor aanvaarde waarden en definities. |
 | `id` | Tekenreeks | De identiteit van de consument in de verwante naamruimte. |
 | `primary` | Boolean | Geeft aan of dit de primaire identiteit voor het individu is. Elke persoon kan slechts één primaire identiteit hebben. |
 | `xid` | Tekenreeks | Wanneer deze waarde aanwezig is, vertegenwoordigt deze een naamruimte-id die uniek is voor alle naamruimte-bereikid&#39;s in alle naamruimten. |
@@ -32,7 +32,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstyp
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [Volledig schema](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
 
-## Aanhangsel
+## Bijlage
 
 De volgende sectie bevat aanvullende informatie over de [!UICONTROL Identity] gegevenstype.
 
