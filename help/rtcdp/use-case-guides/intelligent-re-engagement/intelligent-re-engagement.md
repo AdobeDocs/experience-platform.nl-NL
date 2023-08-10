@@ -3,9 +3,9 @@ title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
 hide: true
 hidefromtoc: true
-source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
+source-git-commit: 8b38114e600986979728e1c4e36245ff0aa3be65
 workflow-type: tm+mt
-source-wordcount: '3240'
+source-wordcount: '3239'
 ht-degree: 2%
 
 ---
@@ -401,7 +401,7 @@ To create a dataset from a schema, complete the steps below:
 ![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
 -->
 
->Opmerking
+>[!NOTE]
 >
 >Gelijkaardig aan de stap om een schema tot stand te brengen, moet u toelaten dat de dataset in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant In real time, lees [Schema-zelfstudie maken.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
