@@ -5,9 +5,9 @@ description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Plat
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1902'
+source-wordcount: '2088'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ In Adobe Experience Platform gebruikt het model &#39;look-alike&#39; drie versch
 
 Al deze gegevenspunten worden omgezet in zeer belangrijke waardeparen die in het blik-gelijkaardige model worden gevoerd. Alleen de sleutelwaardeparen met een significant percentage overeenkomende profielen blijven behouden.
 
-Het model van look-alike wordt regelmatig uitgevoerd, waardoor de invloedrijke factoren en gelijksoortige grafieken voor het basispubliek worden gemaakt en opnieuw gecreëerd. Het scoren voor het kijkt-Alike publiek wordt ook vaak in werking gesteld.
+Op dit moment wordt het model van look-alike elke 24 uur uitgevoerd en worden de invloedrijke factoren en gelijksoortige grafieken voor het basispubliek gemaakt en opnieuw gemaakt. Het scoren voor het kijkt-Alike publiek wordt ook vaak in werking gesteld.
 
 ## Rechten {#entitlements}
 
@@ -52,11 +52,26 @@ De volgende rechten gelden voor het gebruik van look-Alike-soorten publiek:
 - Real-Time CDP Ultimate-klanten hebben recht op **20** actief soort publiek in productiesandboxen
 - Ontwikkelingssandboxen zijn beperkt tot **5** Soortgelijke soorten publiek voor alle Real-Time CDP-klanten
 
-Er zijn invoegpakketten beschikbaar die de rechten voor de productie van sandboxen verhogen met 20 soorten publiek met een visuele handicap per verpakking.
+Pakketten met invoegtoepassingen, die later beschikbaar zullen zijn, verhogen de rechten voor de productie van sandboxen met 20 soorten publiek met een look-Alike per pack.
 
 Neem contact op met uw Adobe als u wilt controleren of u toegang hebt tot Soortgelijke soorten publiek.
 
 ## Zichtbare inzichten weergeven {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Niet in aanmerking komend"
+>abstract="Dit publiek komt momenteel niet in aanmerking voor look-alike inzichten aangezien het minder dan het minimumaantal profielen kan hebben dat voor opleiding wordt vereist of de profieluitvoer nog niet in werking is gesteld."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Verwerking"
+>abstract="Dit publiek wordt momenteel verwerkt. Het kan tot 24 uur duren voordat de verwerking is voltooid. Probeer het later opnieuw."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Fout"
+>abstract="Er is een fout opgetreden bij het verwerken van dit model. Verwijder dit model en maak het opnieuw op of probeer het later opnieuw."
 
 Zichtbare inzichten zijn ingebouwd met de pagina met publieksdetails. Als u de look-alike inzichten voor een publiek wilt bekijken, selecteert u **[!UICONTROL Audiences]** in de linkernavigatiebalk, gevolgd door **[!UICONTROL Browse]** en het publiek waarvoor u de inzichten wilt bekijken.
 
@@ -68,10 +83,10 @@ De pagina met publieksdetails wordt weergegeven. Selecteren **[!UICONTROL Look-a
 
 ### Gelijksoortigheid en bereik {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="Gelijksoortigheid en bereik"
+>abstract="Door de gelijkenis en het bereik van de grafiek wordt het verwachte bereik van een soort publiek dat eruit bestaat profielen boven een bepaalde score voor gelijkenis. U kunt de muisaanwijzer boven een specifiek punt in de grafiek plaatsen om het percentage voor gelijkenis en het verwachte aantal profielen voor het momenteel gemarkeerde punt weer te geven."
 
 De gelijkenis en bereiksectie toont een grafiek die het verwachte bereik van een soort publiek dat kijkt-weg uit profielen boven een bepaalde gelijkheidsscore bestaat. De overeenkomstenscore vertegenwoordigt de **afstand** van overeenkomst tussen het profiel van het basispubliek en het profiel van het kijkgelijke inzicht.
 
@@ -93,11 +108,11 @@ In de sectie Soortgelijke soorten publiek wordt een lijst weergegeven met alle s
 
 ### Influentiële factoren {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="Influentiële factoren"
+>abstract="Influentiële factoren zijn kenmerken, gebeurtenissen en publiekslidmaatschappen die belangrijk zijn voor het verklaren van gelijkenis van een profiel aan leden van het basispubliek. De etiketten en het beleid van het gegevensgebruik kunnen worden gebruikt om bepaalde gegevens uit te sluiten om als invloedrijke factoren in blik-gelijkaardige modellen worden beschouwd."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Gegevens uitsluiten"
 
 In de sectie met invloedrijke factoren worden de 100 belangrijkste factoren weergegeven die van invloed zijn op het model dat er op lijkt voor het geselecteerde basispubliek. Deze invloedrijke factoren zijn de profielattributen, de ervaringsgebeurtenissen, en de publiekslidmaatschappen die het belangrijkst in het verklaren van gelijkenissen in het basispubliek zijn. Met een goed begrip van de belangrijkste invloedrijke factoren kunt u uw marketinginhoud voor dit publiek en alle soorten publiek die u eruit maakt, beter personaliseren. Niet alle invloedrijke factoren die van invloed zijn op het model dat er op lijkt, worden weergegeven.
 
