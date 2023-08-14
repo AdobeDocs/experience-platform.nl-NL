@@ -4,16 +4,21 @@ solution: Experience Platform
 title: Overzicht van de Data Science Workspace
 description: Deze handleiding biedt een overzicht van de belangrijkste concepten met betrekking tot de Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fa52aa668d21f71c0da6b35c933713f068e36b28
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2448'
 ht-degree: 0%
 
 ---
 
-# Overzicht van de Data Science Workspace
+# Overzicht van de Data Science-werkruimte
 
-Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te onthullen. geïntegreerd in Adobe Experience Platform, [!DNL Data Science Workspace] helpt u om voorspellingen te maken gebruikend uw inhoud en gegevensactiva over Adobe oplossingen.
+>[!NOTE]
+>
+>Houd er rekening mee dat de beschikbaarheid van documentatie over een functie op het Experience League niet gegarandeerd is voor elke klant. Deze functie is alleen beschikbaar voor bestaande klanten die een Adobe Experience Platform- of Adobe Experience Platform Intelligence-licentie hebben aangeschaft. Raadpleeg de officiële productbeschrijving voor meer informatie over functies en andere details van aangeschafte SKU&#39;s/producten.
+
+
+Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te onthullen. geïntegreerd in Adobe Experience Platform, [!DNL Data Science Workspace] helpt u om voorspellingen te maken die uw inhoud en gegevensactiva over oplossingen van de Adobe gebruiken.
 
 Gegevenswetenschappers van alle vaardigheidsniveaus zullen geavanceerde, makkelijk te gebruiken hulpmiddelen vinden die snelle ontwikkeling, opleiding, en het stemmen van machine het leren recepten steunen - alle voordelen van AI technologie, zonder de ingewikkeldheid.
 
@@ -43,13 +48,13 @@ Voordat u in de details van [!DNL Data Science Workspace]Hier volgt een korte sa
 
 | Term | Definitie |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] binnen [!DNL Experience Platform] stelt klanten in staat modellen voor het leren van machines te maken met behulp van gegevens over [!DNL Experience Platform] en Adobe Oplossingen om intelligente inzichten en voorspellingen te produceren om prachtige digitale ervaringen van eindgebruikers te wekken. |
+| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] binnen [!DNL Experience Platform] stelt klanten in staat modellen voor het leren van machines te maken met behulp van gegevens over [!DNL Experience Platform] en Adobe Oplossingen om intelligente inzichten en voorspellingen te genereren om prachtige digitale ervaringen voor eindgebruikers te wekken. |
 | Kunstmatige intelligentie | Kunstmatige intelligentie is een theorie en ontwikkeling van computersystemen die taken kunnen uitvoeren die normaal menselijke intelligentie vereisen, zoals visuele waarneming, spraakherkenning, besluitvorming en vertaling tussen talen. |
 | Machine leren | Het leren van de machine is het gebied van studie dat computers de capaciteit toelaat om te leren zonder uitdrukkelijk geprogrammeerd te zijn. |
 | [!DNL Sensei] ML Framework | [!DNL Sensei] Het Kader van ML is een verenigd machine het leren kader over Adobe dat hefboomwerkingen gegevens over [!DNL Experience Platform] gegevenswetenschappers in staat te stellen sneller, schaalbaar en herbruikbaar gebruik te maken van computerleergestuurde inlichtingendiensten. |
-| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) is de normalisatieinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals te bepalen [!DNL Profile] en [!DNL ExperienceEvent], voor Customer Experience Management. |
+| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) is de normalisatie-inspanning die door Adobe wordt geleid om standaardschema&#39;s zoals te bepalen [!DNL Profile] en [!DNL ExperienceEvent], voor Customer Experience Management. |
 | [!DNL JupyterLab] | [!DNL JupyterLab] is een open-bron web-based interface voor Project Jupyter en is strak geïntegreerd in [!DNL Experience Platform]. |
-| Ontvangers | Een recept is Adobe term voor een modelspecificatie en is een top-level container die een specifiek machine het leren, AI algoritme of een samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren en vandaar helpen specifieke bedrijfsproblemen oplossen. |
+| Ontvangers | Een recept is de term van de Adobe voor een modelspecificatie en is een top-level container die een specifiek machine het leren, AI algoritme of een samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren en daardoor helpen specifieke bedrijfsproblemen oplossen. |
 | Model | Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen. |
 | Training | Training is het proces van leerpatronen en inzichten van gelabelde gegevens. |
 | Gevolgd model | Een getraind model vertegenwoordigt de uitvoerbare output van een model opleidingsproces, waarin een reeks opleidingsgegevens werd toegepast op de modelinstantie. Een getraind model zal een verwijzing naar om het even welke intelligente Webdienst handhaven die van het wordt gecreeerd. Het getrainde model is geschikt voor het scoren en maken van een intelligente webservice. Wijzigingen in een getraind model kunnen als een nieuwe versie worden bijgehouden. |
@@ -62,7 +67,7 @@ De volgende grafiek schetst de hiërarchische verhouding tussen Ontvangers, Mode
 
 ## [!DNL Data Science Workspace] begrijpen
 
-Met [!DNL Data Science Workspace]Uw gegevenswetenschappers kunnen het lastige proces stroomlijnen om inzichten in grote datasets te ontdekken. Gebaseerd op een gemeenschappelijk computerleerkader en runtime, [!DNL Data Science Workspace] biedt geavanceerd workflowbeheer, modelbeheer en schaalbaarheid. De intelligente diensten steunen hergebruik van machine het leren recepten om een verscheidenheid van toepassingen tot stand te brengen die gebruikend Adobe producten en oplossingen worden gecreeerd.
+Met [!DNL Data Science Workspace]Uw gegevenswetenschappers kunnen het omslachtige proces stroomlijnen waarbij inzichten in grote gegevensbestanden worden opgespoord. Gebaseerd op een gemeenschappelijk computerleerkader en runtime, [!DNL Data Science Workspace] biedt geavanceerd workflowbeheer, modelbeheer en schaalbaarheid. De intelligente diensten steunen hergebruik van machine het leren recepten om een verscheidenheid van toepassingen tot stand te brengen die gebruikend de producten en de oplossingen van de Adobe worden gecreeerd.
 
 ### Toegang tot gegevens met één stop
 
@@ -110,7 +115,7 @@ Als je tevreden bent met je recept, is het slechts een paar klikken om een intel
 
 <!--You can also publish your intelligent service to the Service Gallery, where it's available to specific people, specific organizations, or everyone who develops data solutions on Adobe Experience Platform. You can even share it with your external partners, and they can share their intelligent service with you. And the next time you're starting a new recipe, you can check the Service Gallery to see if there's a similar intelligent service you can use to get started. -->
 
-### Continue verbetering
+### Voortdurende verbetering
 
 [!DNL Data Science Workspace] sporen waar de intelligente diensten worden aangehaald en hoe zij presteren. Terwijl de gegevens worden doorgegeven, kunt u de nauwkeurigheid van de intelligente service beoordelen om de lus te sluiten en de recepten zo nodig opnieuw trainen om de prestaties te verbeteren. Het resultaat is een voortdurende verfijning van de nauwkeurigheid van klantpersonalisatie.
 
@@ -120,14 +125,14 @@ Gegevenswetenschappers kunnen profiteren van nieuwe technologieën en datasets z
 
 ### Veiligheid en gemoedsrust
 
-Het beveiligen van uw gegevens is een topprioriteit voor Adobe. Adobe beschermt uw gegevens met beveiligingsprocessen en -besturingselementen die zijn ontwikkeld om te helpen voldoen aan door de branche aanvaarde standaarden, regels en certificeringen.
+Het beveiligen van uw gegevens is een topprioriteit voor Adobe. De Adobe beschermt uw gegevens met veiligheidsprocessen en controles die worden ontwikkeld helpen aan industrie-erkende normen, verordeningen, en certificatie voldoen.
 
-De veiligheid wordt ingebouwd in software en de diensten als deel van de Levenscyclus van het Product van de Adobe Veilige.
-Ga naar de beveiligingspagina op https://www.adobe.com/security.html voor meer informatie over de beveiliging van Adobe-gegevens en -software, compatibiliteit en meer.
+De veiligheid wordt ingebouwd in software en de diensten als deel van de Veilige Levenscyclus van het Product van de Adobe.
+Ga naar de beveiligingspagina op https://www.adobe.com/security.html voor meer informatie over Adobe- en softwarebeveiliging, compatibiliteit en meer.
 
 ## [!DNL Data Science Workspace] in actie
 
-De voorspellingen en de inzichten verstrekken de informatie u nodig hebt om een hoogst gepersonaliseerde ervaring aan elke klant te leveren die uw website bezoekt, uw callcenter contacteert, of aan andere digitale ervaringen aangaat. Zo ziet u hoe uw dagelijkse werk er uitziet [!DNL Data Science Workspace].
+De voorspellingen en de inzichten verstrekken de informatie u nodig hebt om een hoogst gepersonaliseerde ervaring aan elke klant te leveren die uw website bezoekt, uw callcenter contacteert, of aan andere digitale ervaringen aangaat. Zo ziet u hoe uw dagelijkse werk verloopt [!DNL Data Science Workspace].
 
 ### Het probleem definiëren
 
@@ -183,11 +188,11 @@ Een gepubliceerde intelligente dienst is configureerbaar om zich van tijd tot ti
 
 [!DNL Data Science Workspace] helpt de workflow voor gegevenswetenschap te stroomlijnen en te vereenvoudigen, van gegevensverzameling tot algoritmen tot intelligente services voor gegevenswetenschappers van alle vaardigheidsniveaus. Met de geavanceerde gereedschappen [!DNL Data Science Workspace] biedt, kunt u de tijd aanzienlijk verkorten van gegevens naar inzichten.
 
-Belangrijker nog, [!DNL Data Science Workspace] zet de mogelijkheden voor gegevenswetenschappen en algoritmische optimalisatie van het toonaangevende marketingplatform in de handen van wetenschappers op het gebied van bedrijfsgegevens. Voor de eerste keer kunnen bedrijven bedrijfseigen algoritmen aan het platform aanbieden, waarbij ze profiteren van krachtige machinemogelijkheden en AI-mogelijkheden om zeer gepersonaliseerde klantervaringen op grote schaal te bieden.
+Belangrijker nog, [!DNL Data Science Workspace] plaatst de mogelijkheden voor gegevenswetenschap en algoritmische optimalisatie van het toonaangevende marketingplatform van Adobe in de handen van wetenschappers op het gebied van bedrijfsgegevens. Voor het eerst kunnen bedrijven bedrijfseigen algoritmen aan het platform aanbieden, waarbij ze profiteren van de krachtige computervaardigheden van Adobe en AI-mogelijkheden om op grote schaal zeer persoonlijke klantervaringen te bieden.
 
-Met het huwelijk van merkenkennis en Adobe-machinedragers en AI-processen hebben bedrijven de macht om meer bedrijfswaarde en merkloyaliteit te drijven door klanten te geven wat ze willen, voordat ze hierom vragen.
+Met het huwelijk van merkenkennis en het machineonderwijs van Adobe en AI-processen hebben bedrijven de macht om meer bedrijfswaarde en merktrouw te drijven door klanten te geven wat ze willen, voordat ze erom vragen.
 
-Voor aanvullende informatie, zoals een volledige dagelijkse workflow, begint u met het lezen van de [Doorloop van de Data Science Workspace](./walkthrough.md) documentatie.
+Voor meer informatie, zoals een volledige dagelijkse workflow, moet u eerst de [Doorloop van de Data Science Workspace](./walkthrough.md) documentatie.
 
 ## Aanvullende bronnen
 
