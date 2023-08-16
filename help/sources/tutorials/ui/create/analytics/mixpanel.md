@@ -17,14 +17,14 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Mixpanel] bronverbind
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken [!DNL Mixpanel] als u een Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om verbinding te maken [!DNL Mixpanel] aan Platform, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Voor meer informatie over het verifiëren van uw [!DNL Mixpanel] bron, zie [[!DN
 
 ## Verbind uw [!DNL Mixpanel] account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -55,7 +55,7 @@ Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL Mixpanel
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw referenties op. Selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![new](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
@@ -64,20 +64,20 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
 >title="Tijdzone instellen voor opnemen in Mixpanel"
->abstract="De tijdzone moet hetzelfde zijn als de tijdzone-instelling van uw Mixpanel-profiel, omdat Platform de toegewezen projecttijdzone gebruikt om relevante gegevens van Mixpanel in te voeren. Mixpanel zal zijn timezone aanpassen om met uw projecttimezone te coördineren alvorens de gebeurtenis aan een Mixpanel gegevensopslag te registreren."
+>abstract="De tijdzone moet hetzelfde zijn als de tijdzone die u instelt voor uw Mixpanel-profiel, omdat Platform de toegewezen projecttijdzone gebruikt om relevante gegevens in te voeren vanuit Mixpanel. Mixpanel zal zijn timezone aanpassen om met uw projecttimezone te coördineren alvorens de gebeurtenis aan een Mixpanel gegevensopslag te registreren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Meer informatie in documentatie"
 
 Zodra uw bron voor authentiek wordt verklaard, verstrek uw project identiteitskaart en timezone en selecteer dan **[!UICONTROL Select]**.
 
-De tijdzone die u aanwijst voorafgaand aan het opnemen van uw [!DNL Mixpanel] de gegevens aan Platform moeten het zelfde zijn als uw [!DNL Mixpanel] tijdzone-instelling profiel. Om het even welke veranderingen in de tijdzone van uw gegevens zullen slechts op nieuwe gebeurtenissen worden toegepast en de oude gebeurtenissen zullen in timezone blijven die u eerder specificeerde. [!DNL Mixpanel] past zomertijd aan en past uw tijdstempel voor inname op de juiste wijze aan. Voor meer informatie over hoe tijdzones uw gegevens beïnvloeden, raadpleegt u de [!DNL Mixpanel] hulplijn aan [beheer van tijdzones voor projecten](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
+De tijdzone die u aanwijst voorafgaand aan het opnemen van uw [!DNL Mixpanel] gegevens aan platform moeten gelijk zijn aan uw [!DNL Mixpanel] tijdzone-instelling profiel. Om het even welke veranderingen in de tijdzone van uw gegevens zullen slechts op nieuwe gebeurtenissen worden toegepast en de oude gebeurtenissen zullen in timezone blijven die u eerder specificeerde. [!DNL Mixpanel] past zomertijd aan en past uw tijdstempel voor inname op de juiste wijze aan. Voor meer informatie over hoe tijdzones uw gegevens beïnvloeden, zie [!DNL Mixpanel] hulplijn aan [beheer van tijdzones voor projecten](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
-Na enkele ogenblikken wordt de juiste interface bijgewerkt naar een voorvertoningsvenster, zodat u uw schema kunt inspecteren voordat u een gegevensstroom maakt. Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Na enkele ogenblikken wordt de juiste interface bijgewerkt naar een voorvertoningsvenster, zodat u uw schema kunt inspecteren voordat u een gegevensstroom maakt. Selecteer **[!UICONTROL Next]**.
 
 ![configuratie](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Mixpanel] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om analysegegevens in Platform te brengen](../../dataflow/analytics.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Mixpanel] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om analysegegevens over te brengen naar het platform](../../dataflow/analytics.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -85,9 +85,9 @@ In de volgende secties vindt u aanvullende bronnen waarnaar u kunt verwijzen wan
 
 ### Validatie {#validation}
 
-De volgende contourstappen die u kunt uitvoeren om te controleren of de verbinding met uw [!DNL Mixpanel] bron en [!DNL Mixpanel] gebeurtenissen worden aan het Platform toegevoegd.
+De volgende contourstappen die u kunt uitvoeren om te controleren of de verbinding met uw [!DNL Mixpanel] bron en [!DNL Mixpanel] De gebeurtenissen worden opgenomen aan Platform.
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Datasets]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Datasets] werkruimte. De [!UICONTROL Dataset Activity] worden de details van uitvoeringen weergegeven.
+Selecteer in de interface Platform de optie **[!UICONTROL Datasets]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Datasets] werkruimte. De [!UICONTROL Dataset Activity] worden de details van uitvoeringen weergegeven.
 
 ![datasetactiviteit](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 

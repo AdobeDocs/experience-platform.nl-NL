@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL Segmentation Service]-overzicht
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om publiek door segmentdefinities of andere bronnen van uw te creëren [!DNL Real-Time Customer Profile] gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform]en gemakkelijk toegankelijk zijn door elke Adobe-oplossing.
+Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om publiek door segmentdefinities of andere bronnen van uw te creëren [!DNL Real-Time Customer Profile] gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform]en gemakkelijk toegankelijk zijn via een Adobe-oplossing.
 
 Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het speelt in Adobe Experience Platform.
 
@@ -21,7 +21,7 @@ Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die h
 U moet de volgende belangrijke termen begrijpen die in dit document worden gebruikt:
 
 - **Segmentering**: Het verdelen van een grote groep individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
-- **Publiek**: Een verzameling personen die vergelijkbare gedragingen en/of kenmerken delen. Deze verzameling personen kan worden gegenereerd door Adobe Experience Platform met behulp van segmentdefinities (publiek dat door Platforms wordt gegenereerd) of door externe bronnen (publiek dat extern wordt gegenereerd).
+- **Publiek**: Een verzameling personen die vergelijkbare gedragingen en/of kenmerken delen. Deze verzameling personen kan worden gegenereerd door Adobe Experience Platform met behulp van segmentdefinities (publiek dat door het platform wordt gegenereerd) of op basis van externe bronnen (publiek dat extern wordt gegenereerd).
 - **Segmentdefinitie**: De regelreeks Adobe Experience Platform gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven.
 
 ## Hoe segmentatie werkt
@@ -32,11 +32,11 @@ Zodra een publiek conceptueel is gedefinieerd, wordt het ingebouwd [!DNL Experie
 
 ## Soorten publiek maken
 
-Soorten publiek kan op twee verschillende manieren op Adobe Experience Platform worden gecreëerd: rechtstreeks samengesteld als publiek of door middel van op Platform gebaseerde segmentdefinities.
+Op Adobe Experience Platform kunnen soorten publiek op twee verschillende manieren tot stand worden gebracht: rechtstreeks samengesteld als publiek of door middel van op platform gebaseerde segmentdefinities.
 
 ### Samenstelling publiek
 
-Wanneer u een publiek rechtstreeks samenstelt op een Platform, kunt u de Samenstelling van het publiek gebruiken. Als u wilt leren hoe u Audience Composition kunt gebruiken om een publiek te maken, leest u de [Hulplijn Audience Composition](./ui/audience-composition.md) voor meer informatie .
+Wanneer u een publiek rechtstreeks samenstelt op Platform, kunt u de Samenstelling van het publiek gebruiken. Als u wilt leren hoe u Audience Composition kunt gebruiken om een publiek te maken, leest u de [Hulplijn Audience Composition](./ui/audience-composition.md) voor meer informatie .
 
 ### Segmentdefinities
 
@@ -57,7 +57,7 @@ Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinit
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Evaluatiemethoden"
->abstract="Platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie."
+>abstract="Het platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ Raadpleeg de zelfstudie voor informatie over het samenstellen van segmentdefinit
 >abstract="Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw publiek bijwerkt als reactie op gebruikersactiviteit."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evalueer gebeurtenissen in bijna real time met het stromen segmentatie"
 
-Platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie.
+Het platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie.
 
 ### Streaming segmentering {#streaming}
 

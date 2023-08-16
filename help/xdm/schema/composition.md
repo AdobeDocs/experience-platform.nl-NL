@@ -31,7 +31,7 @@ Standaardisering is een sleutelbegrip achter [!DNL Experience Platform]. XDM, di
 
 De infrastructuur waarop [!DNL Experience Platform] is gebouwd, bekend als [!DNL XDM System], vergemakkelijkt workflows op basis van schema&#39;s en omvat de [!DNL Schema Registry], [!DNL Schema Editor], schema-metagegevens en servicepatronen. Zie de [XDM System, overzicht](../home.md) voor meer informatie .
 
-Er zijn verschillende belangrijke voordelen verbonden aan het gebruik van schema&#39;s in [!DNL Experience Platform]. In de eerste plaats zorgen schema&#39;s voor een beter gegevensbeheer en gegevensminimalisering, wat vooral belangrijk is bij privacyregels. Ten tweede, staat het bouwen van schema&#39;s met standaard componenten Adobe voor uit-van-de-doos inzichten en gebruik van de diensten AI/ML met minimale aanpassingen toe. Ten slotte bieden schema&#39;s infrastructuren voor het uitwisselen van inzichten in gegevens en een efficiënte orchestratie.
+Er zijn verschillende belangrijke voordelen verbonden aan het gebruik van schema&#39;s in [!DNL Experience Platform]. In de eerste plaats zorgen schema&#39;s voor een beter gegevensbeheer en gegevensminimalisering, wat vooral belangrijk is bij privacyregels. Ten tweede, staan de bouwschema&#39;s met de standaardcomponenten van de Adobe voor uit-van-de-doosinzichten en gebruik van de diensten van AI/ML met minimale aanpassingen toe. Ten slotte bieden schema&#39;s infrastructuren voor het uitwisselen van inzichten in gegevens en een efficiënte orchestratie.
 
 ## Uw schema plannen
 
@@ -59,7 +59,7 @@ Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience P
 
 Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in &quot;[!UICONTROL Identity Graph]&quot; voor die persoon. De grafiekgegevens zijn vervolgens toegankelijk via [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] de diensten om een geneutraliseerde mening van elke individuele klant te verstrekken.
 
-Velden die doorgaans zijn gemarkeerd als &quot;[!UICONTROL Identity]&quot; omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij kunnen goed zijn &quot;[!UICONTROL Identity]&quot; ook velden.
+Velden die doorgaans zijn gemarkeerd als &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij kunnen goed zijn &quot;[!UICONTROL Identity]&quot; ook velden.
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen dat de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht op [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen digitale ervaringen aan uw klanten te leveren.
 
@@ -161,7 +161,7 @@ Om gegevens in te voeren in [!DNL Experience Platform]moet eerst een gegevensset
 
 De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
-**Klasse + &amp;Schemaveldgroep; = XDM-schema**
+**Klasse + Schema&amp;veldgroep; = XDM-schema**
 
 &amp;ast;Een schema bestaat uit een klasse en nul of meer groepen schemavelden. Dit betekent dat u een datasetschema kon samenstellen zonder gebiedsgroepen bij allen te gebruiken.
 
@@ -174,22 +174,22 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
 Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
 
-De klasse van een schema bepaalt welke gebiedsgroepen voor gebruik in dat schema in aanmerking zullen komen. Dit wordt nader besproken in het [volgende sectie](#field-group).
+De klasse van een schema bepaalt welke gebiedsgroepen voor gebruik in dat schema in aanmerking zullen komen. Dit wordt meer in detail besproken in de [volgende sectie](#field-group).
 
-Adobe biedt verschillende standaard XDM-klassen (&quot;core&quot;). Twee van deze klassen, [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent], zijn vereist voor bijna alle processen in het stroomafwaartse Platform. Naast deze kernklassen kunt u ook uw eigen aangepaste klassen maken om specifieke gebruiksgevallen voor uw organisatie te beschrijven. Aangepaste klassen worden gedefinieerd door een organisatie wanneer er geen door Adobe gedefinieerde kernklassen beschikbaar zijn om een uniek gebruiksgeval te beschrijven.
+Adobe biedt verschillende standaard XDM-klassen (core). Twee van deze klassen, [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent], zijn vereist voor bijna alle downstreamprocessen van het Platform. Naast deze kernklassen kunt u ook uw eigen aangepaste klassen maken om specifieke gebruiksgevallen voor uw organisatie te beschrijven. Aangepaste klassen worden gedefinieerd door een organisatie wanneer er geen Adobe-gedefinieerde kernklassen beschikbaar zijn om een uniek gebruiksgeval te beschrijven.
 
-De volgende schermafbeelding toont hoe klassen worden weergegeven in de gebruikersinterface van het Platform. Aangezien het getoonde voorbeeldschema geen gebiedsgroepen bevat, worden alle getoonde gebieden verstrekt door de klasse van het schema ([!UICONTROL XDM Individual Profile]).
+De volgende schermafbeelding toont hoe klassen worden vertegenwoordigd in de gebruikersinterface van het platform. Aangezien het getoonde voorbeeldschema geen gebiedsgroepen bevat, worden alle getoonde gebieden verstrekt door de klasse van het schema ([!UICONTROL XDM Individual Profile]).
 
 ![](../images/schema-composition/class.png)
 
-Voor de meest recente lijst van beschikbare standaardXDM klassen, verwijs naar [officiële XDM-opslagplaats](https://github.com/adobe/xdm/tree/master/components/classes). U kunt ook naar de handleiding verwijzen op [XDM-componenten verkennen](../ui/explore.md) als u liever bronnen in de gebruikersinterface weergeeft.
+Raadpleeg voor de meest recente lijst met beschikbare standaard XDM-klassen de [officiële XDM-opslagplaats](https://github.com/adobe/xdm/tree/master/components/classes). U kunt ook naar de handleiding verwijzen op [XDM-componenten verkennen](../ui/explore.md) als u liever bronnen in de gebruikersinterface weergeeft.
 
 ### Veldgroep {#field-group}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Veldgroep"
->abstract="Veldgroepen zijn herbruikbare componenten waarmee u schema&#39;s met extra kenmerken kunt uitbreiden. De meeste veldgroepen zijn alleen compatibel met bepaalde klassen. U kunt standaardveldgroepen gebruiken die door Adobe worden gedefinieerd of u kunt handmatig uw eigen aangepaste veldgroepen definiëren. Zie de documentatie om meer over te leren hoe de gebiedsgroepen in schemacompositie betrokken zijn."
+>abstract="Veldgroepen zijn herbruikbare componenten waarmee u schema&#39;s met extra kenmerken kunt uitbreiden. De meeste veldgroepen zijn alleen compatibel met bepaalde klassen. U kunt standaardveldgroepen gebruiken die worden gedefinieerd door de Adobe, of u kunt handmatig uw eigen aangepaste veldgroepen definiëren. Zie de documentatie om meer over te leren hoe de gebiedsgroepen in schemacompositie betrokken zijn."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
@@ -200,7 +200,7 @@ Een veldgroep is een herbruikbare component die een of meer velden definieert di
 
 Veldgroepen definiëren met welke klasse(n) ze compatibel zijn op basis van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Dit betekent dat niet alle veldgroepen beschikbaar zijn voor gebruik met alle klassen.
 
-[!DNL Experience Platform] omvat vele standaard Adobe gebiedsgroepen terwijl ook het toestaan van verkopers om gebiedsgroepen voor hun gebruikers te bepalen, en individuele gebruikers om gebiedsgroepen voor hun eigen specifieke concepten te bepalen.
+[!DNL Experience Platform] omvat vele standaardgroepen van het gebied van de Adobe terwijl ook het toestaan van verkopers om gebiedsgroepen voor hun gebruikers te bepalen, en individuele gebruikers om gebiedsgroepen voor hun eigen specifieke concepten te bepalen.
 
 Als u bijvoorbeeld details wilt vastleggen, zoals &quot;[!UICONTROL First Name]&quot; en &quot;[!UICONTROL Home Address]&quot; voor je &quot;[!UICONTROL Loyalty Members]&quot; schema, zou u standaardgebiedsgroepen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Nochtans, concepten die specifieker voor uw organisatie (zoals de details van het douaneloyaliteitsprogramma of productattributen) zijn die niet door standaardgebiedsgroepen kunnen worden behandeld. In dit geval moet u uw eigen veldgroep definiëren om deze gegevens vast te leggen.
 
@@ -212,11 +212,11 @@ Als u bijvoorbeeld details wilt vastleggen, zoals &quot;[!UICONTROL First Name]&
 
 Herinner dat de schema&#39;s uit &quot;nul of meer&quot;gebiedsgroepen worden samengesteld, zodat betekent dit dat u een geldig schema kon samenstellen zonder enige gebiedsgroepen bij allen te gebruiken.
 
-De volgende schermafbeelding laat zien hoe veldgroepen worden weergegeven in de gebruikersinterface van het Platform. Eén veldgroep ([!UICONTROL Demographic Details]) wordt in dit voorbeeld toegevoegd aan een schema, dat een groepering van gebieden aan de structuur van het schema verstrekt.
+De volgende schermafbeelding laat zien hoe veldgroepen worden vertegenwoordigd in de gebruikersinterface van het platform. Eén veldgroep ([!UICONTROL Demographic Details]) wordt in dit voorbeeld toegevoegd aan een schema, dat een groepering van gebieden aan de structuur van het schema verstrekt.
 
 ![](../images/schema-composition/field-group.png)
 
-Voor de meest recente lijst van beschikbare standaard XDM gebiedsgroepen, verwijs naar [officiële XDM-opslagplaats](https://github.com/adobe/xdm/tree/master/components/fieldgroups). U kunt ook naar de handleiding verwijzen op [XDM-componenten verkennen](../ui/explore.md) als u liever bronnen in de gebruikersinterface weergeeft.
+Raadpleeg voor de meest recente lijst met beschikbare standaard XDM-veldgroepen de [officiële XDM-opslagplaats](https://github.com/adobe/xdm/tree/master/components/fieldgroups). U kunt ook naar de handleiding verwijzen op [XDM-componenten verkennen](../ui/explore.md) als u liever bronnen in de gebruikersinterface weergeeft.
 
 ### Gegevenstype {#data-type}
 
@@ -224,7 +224,7 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 [!DNL Experience Platform] verstrekt een aantal gemeenschappelijke gegevenstypes als deel van [!DNL Schema Registry] ondersteuning van het gebruik van standaardpatronen voor het beschrijven van gemeenschappelijke gegevensstructuren. Dit wordt nader toegelicht in de [!DNL Schema Registry] zelfstudies, waarbij het duidelijker wordt wanneer u de stappen doorloopt om gegevenstypen te definiëren.
 
-De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de gebruikersinterface van het Platform. Een van de velden die door de [!UICONTROL Demographic Details] veldgroep gebruikt &quot;[!UICONTROL Object]&quot; gegevenstype, zoals aangegeven door de tekst na het verticale streepje (`|`) naast de naam van het veld. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
+De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de interface van het platform. Een van de velden die door de [!UICONTROL Demographic Details] veldgroep gebruikt &quot;[!UICONTROL Object]&quot; gegevenstype, zoals aangegeven door de tekst na het verticale streepje (`|`) naast de veldnaam. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
 
 ![](../images/schema-composition/data-type.png)
 
@@ -261,13 +261,13 @@ De geldige waaiers van deze scalaire types kunnen verder tot bepaalde patronen, 
 
 ## Compositievoorbeeld
 
-Schema&#39;s vertegenwoordigen de indeling en structuur van gegevens waarin gegevens worden opgenomen [!DNL Platform]en worden samengesteld met behulp van een compositiemodel. Zoals eerder vermeld, zijn deze schema&#39;s samengesteld uit een klasse en nul of meer gebiedsgroepen die met die klasse compatibel zijn.
+Schema&#39;s geven de indeling en structuur aan van gegevens waarin gegevens worden opgenomen [!DNL Platform]en worden samengesteld met behulp van een compositiemodel. Zoals eerder vermeld, zijn deze schema&#39;s samengesteld uit een klasse en nul of meer gebiedsgroepen die met die klasse compatibel zijn.
 
 Bijvoorbeeld, zou een schema beschrijvend aankopen die bij een detailhandel worden gemaakt kunnen worden genoemd &quot;[!UICONTROL Store Transactions]&quot;. Het schema implementeert het [!DNL XDM ExperienceEvent] klasse gecombineerd met de norm [!UICONTROL Commerce] veldgroep en een door de gebruiker gedefinieerde [!UICONTROL Product Info] veldgroep.
 
 Een ander schema dat websiteverkeer volgt zou &quot; kunnen worden genoemd[!UICONTROL Web Visits]&quot;. Het implementeert ook de [!DNL XDM ExperienceEvent] , maar deze keer wordt de standaard [!UICONTROL Web] veldgroep.
 
-In het onderstaande diagram worden deze schema&#39;s en de velden weergegeven die door elke veldgroep worden bijgedragen. Het bevat ook twee schema&#39;s die op [!DNL XDM Individual Profile] klasse, inclusief de klasse &quot;[!UICONTROL Loyalty Members]&quot; schema genoemd eerder in deze gids.
+In het onderstaande diagram worden deze schema&#39;s en de velden weergegeven die door elke veldgroep worden bijgedragen. Het bevat ook twee schema&#39;s die op [!DNL XDM Individual Profile] klasse, inclusief &quot;[!UICONTROL Loyalty Members]&quot; schema genoemd eerder in deze gids.
 
 ![](../images/schema-composition/composition.png)
 
@@ -277,20 +277,20 @@ while [!DNL Experience Platform] staat u toe om schema&#39;s voor bepaalde gebru
 
 ![](../images/schema-composition/union.png)
 
-Door een schema in te schakelen voor gebruik met [!DNL Real-Time Customer Profile], wordt het opgenomen in de union voor dat klassetype. [!DNL Profile] levert robuuste, gecentraliseerde profielen van klantenattributen evenals een timestamped rekening van elke gebeurtenis die de klant over om het even welk systeem heeft gehad dat met wordt geïntegreerd [!DNL Platform]. [!DNL Profile] gebruikt de verenigingsmening om deze gegevens te vertegenwoordigen en een holistische mening van elke individuele klant te verstrekken.
+Door een schema in te schakelen voor gebruik met [!DNL Real-Time Customer Profile], wordt het opgenomen in de union voor dat klassetype. [!DNL Profile] levert robuuste, gecentraliseerde profielen van klantenattributen evenals een timestamped rekening van elke gebeurtenis die de klant over om het even welk systeem heeft gehad dat met [!DNL Platform]. [!DNL Profile] gebruikt de verenigingsmening om deze gegevens te vertegenwoordigen en een holistische mening van elke individuele klant te verstrekken.
 
 Meer informatie over het werken met [!DNL Profile], zie de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
 ## Gegevensbestanden toewijzen aan XDM-schema&#39;s
 
-Alle gegevensbestanden waarin [!DNL Experience Platform] moet in overeenstemming zijn met de structuur van een XDM-schema. Zie het document over het opmaken van gegevensbestanden om te voldoen aan XDM-hiërarchieën (inclusief voorbeeldbestanden) voor meer informatie over het opmaken van gegevensbestanden [ETL-testtransformaties](../../etl/transformations.md). Voor algemene informatie over het opnemen van gegevensbestanden in [!DNL Experience Platform], zie de [overzicht van batch-opname](../../ingestion/batch-ingestion/overview.md).
+Alle gegevensbestanden waarin [!DNL Experience Platform] moet voldoen aan de structuur van een XDM-schema. Zie het document over het opmaken van gegevensbestanden om te voldoen aan XDM-hiërarchieën (inclusief voorbeeldbestanden) voor meer informatie over het opmaken van gegevensbestanden [ETL-testtransformaties](../../etl/transformations.md). Voor algemene informatie over het opnemen van gegevensbestanden in [!DNL Experience Platform], zie de [overzicht van batch-opname](../../ingestion/batch-ingestion/overview.md).
 
 ## Schema&#39;s voor extern publiek
 
 Als u publiek van externe systemen in Platform brengt, moet u de volgende componenten gebruiken om hen in uw schema&#39;s te vangen:
 
-* [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Gebruik deze standaardklasse om zeer belangrijke attributen van een externe segmentdefinitie te vangen.
-* [[!UICONTROL Segment Membership Details] veldgroep](../field-groups/profile/segmentation.md): Deze veldgroep toevoegen aan uw [!UICONTROL XDM Individual Profile] schema om klantprofielen aan specifieke doelgroepen te koppelen.
+* [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Gebruik deze standaardklasse om sleutelkenmerken van een externe segmentdefinitie vast te leggen.
+* [[!UICONTROL Segment Membership Details] veldgroep](../field-groups/profile/segmentation.md): Voeg deze veldgroep toe aan uw [!UICONTROL XDM Individual Profile] schema om klantprofielen aan specifieke doelgroepen te koppelen.
 
 ## Volgende stappen
 
@@ -301,13 +301,13 @@ Raadpleeg de volgende documentatie voor informatie over de structuur van de twee
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-De [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot [!DNL Schema Library] in Adobe Experience Platform en biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen. De [!DNL Schema Library] Bevat bronnen van de Industrie die door Adobe worden bepaald, de middelen van de Leverancier door [!DNL Experience Platform] partners, en klassen, gebiedsgroepen, gegevenstypes, en schema&#39;s die door leden van uw organisatie zijn samengesteld.
+De [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot [!DNL Schema Library] in Adobe Experience Platform en biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen. De [!DNL Schema Library] Bevat bronnen van de Industrie die door Adobe, de middelen van de Leverancier worden bepaald door [!DNL Experience Platform] partners, en klassen, gebiedsgroepen, gegevenstypes, en schema&#39;s die door leden van uw organisatie zijn samengesteld.
 
-Als u wilt beginnen met het samenstellen van het schema met de gebruikersinterface, volgt u de [Zelfstudie Schema Editor](../tutorials/create-schema-ui.md) om het schema voor &quot;Loyalty-leden&quot; op te bouwen dat in dit document wordt vermeld.
+Als u wilt beginnen met het samenstellen van het schema met de gebruikersinterface, volgt u de [Zelfstudie Schema-editor](../tutorials/create-schema-ui.md) om het schema voor &quot;Loyalty-leden&quot; op te bouwen dat in dit document wordt vermeld.
 
-Als u het gereedschap [!DNL Schema Registry] API, begin door te lezen [Handleiding voor ontwikkelaars van de API voor schemaregister](../api/getting-started.md). Nadat u de handleiding voor ontwikkelaars hebt gelezen, volgt u de stappen die in de zelfstudie worden beschreven op [het creëren van een schema gebruikend de Registratie API van het Schema](../tutorials/create-schema-api.md).
+Als u wilt beginnen met het [!DNL Schema Registry] API, begin door te lezen [Handleiding voor ontwikkelaars van de API voor schemaregister](../api/getting-started.md). Nadat u de handleiding voor ontwikkelaars hebt gelezen, volgt u de stappen die in de zelfstudie worden beschreven op [een schema maken met de API voor het schemaregister](../tutorials/create-schema-api.md).
 
-## Aanhangsel
+## Bijlage
 
 De volgende secties bevatten extra informatie betreffende de beginselen van schemacompositie.
 
@@ -336,7 +336,7 @@ Bij het ontwerpen van uw schema&#39;s moet u rekening houden met een aantal bela
 
 #### Objecten
 
-Hieronder ziet u de voor- en nadelen van het gebruik van objecten op vrije velden.
+Hieronder ziet u de voor- en nadelen van het gebruik van objecten op vrije-formuliervelden.
 
 **Pros**:
 
@@ -355,7 +355,7 @@ De voor- en nadelen van het gebruik van vrije-formuliervelden op objecten worden
 
 **Pros**:
 
-* Velden met vrije vorm worden direct onder het hoofdobject van het schema gemaakt (`_tenantId`), de zichtbaarheid vergroten.
+* Velden met vrije vorm worden direct onder het basisobject van het schema gemaakt (`_tenantId`), de zichtbaarheid vergroten.
 * De koorden van de verwijzing voor vrije-vormgebieden zijn gewoonlijk korter wanneer het gebruiken van de Dienst van de Vraag.
 
 **Cons**:

@@ -63,7 +63,7 @@ Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. 
 
 U kunt gegevens uit één of meerdere Adobe Analytics-rapportreeksen gebruiken als gebeurtenissen binnen de segmentatie.
 
-Wanneer het gebruiken van gegevens van één enkele het rapportreeks van Analytics, zal het Platform automatisch beschrijvers en vriendschappelijke namen aan Vars toevoegen, die het gemakkelijker maken om die gebieden binnen te vinden [!DNL Segment Builder].
+Wanneer het gebruiken van gegevens van één enkele het rapportreeks van Analytics, zal Platform automatisch beschrijvers en vriendschappelijke namen aan Vars toevoegen, die het gemakkelijker maken om die gebieden binnen te vinden [!DNL Segment Builder].
 
 ![Een afbeelding die aangeeft hoe generieke variabelen (eVars) worden toegewezen met een gebruikersvriendelijke naam.](../images/ui/segment-builder/single-report-suite.png)
 
@@ -228,7 +228,7 @@ Zodra u **[!UICONTROL Unwrap container]** de onderliggende container wordt verwi
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Beleid samenvoegen"
->abstract="Met een samenvoegbeleid kunt u verschillende gegevenssets samenvoegen tot uw profiel. Platform heeft een standaardbeleid voor samenvoegen verschaft of u kunt een nieuw standaardbeleid voor samenvoegen maken in profielen. Kies een samenvoegbeleid dat overeenkomt met uw marketingdoel voor dit publiek."
+>abstract="Met een samenvoegbeleid kunt u verschillende gegevenssets samenvoegen tot uw profiel. Platform heeft een standaardbeleid voor samenvoeging verschaft of u kunt een nieuw standaardbeleid voor samenvoegen maken in profielen. Kies een samenvoegbeleid dat overeenkomt met uw marketingdoel voor dit publiek."
 
 [!DNL Experience Platform] laat u toe om gegevens uit veelvoudige bronnen te brengen en het te combineren om een volledige mening van elk van uw individuele klanten te zien. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe gegevens voorrang krijgen en welke gegevens worden gecombineerd om een profiel te maken.
 

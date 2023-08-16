@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
-> De op de pagina beschreven functionaliteit is nog niet algemeen beschikbaar voor klanten. Deze pagina is momenteel bedoeld voor Adobe-interne teams als een voorgelezen informatie over de komende functionaliteit. Deel niet buiten de Adobe totdat deze notitie is verwijderd.
+> De op de pagina beschreven functionaliteit is nog niet algemeen beschikbaar voor klanten. Deze pagina is momenteel bedoeld voor Adobe-interne teams als voorgelezen over de komende functionaliteit. Delen buiten de Adobe totdat deze notitie is verwijderd.
 
 >[!IMPORTANT]
 > 
@@ -56,8 +56,8 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, schakelt u
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
 * **[!UICONTROL Segmentation Service]**: publiek dat binnen Experience Platform door de Dienst van de Segmentatie wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
-* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform wordt gegenereerd en in het Platform wordt geüpload als CSV-bestanden. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
-* Andere soorten soorten publiek, afkomstig van andere Adobe oplossingen, zoals [!DNL Audience Manager].
+* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform is gegenereerd en als CSV-bestanden naar Platform is geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
+* Andere soorten soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager].
 
 ![Afbeelding markeren hoe een of meer soorten publiek moeten worden geselecteerd om te activeren](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -117,7 +117,7 @@ Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand 
    >
    >De **[!UICONTROL After segment evaluation]** hieronder beschreven optie is alleen beschikbaar voor het selecteren van bèta-klanten.
 
-   Gebruik de **[!UICONTROL After segment evaluation]** als u wilt dat de activeringstaak onmiddellijk wordt uitgevoerd nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Met deze optie zorgt u ervoor dat de meest actuele profielen naar uw bestemming worden geëxporteerd wanneer de activeringstaak wordt uitgevoerd.
+   Gebruik de **[!UICONTROL After segment evaluation]** optie om de activeringstaak onmiddellijk uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Met deze optie zorgt u ervoor dat de meest actuele profielen naar uw bestemming worden geëxporteerd wanneer de activeringstaak wordt uitgevoerd.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -390,7 +390,7 @@ Veronderstellend deduplicatie door de samengestelde sleutel `personalEmail + las
 | johndoe@example.com | D | John |
 | johndoe@example.com | Doe | John |
 
-Adobe raadt u aan een naamruimte voor identiteiten te selecteren, zoals een [!DNL CRM ID] of e-mailadres als deduplicatietoets, om ervoor te zorgen dat alle profielrecords uniek worden geïdentificeerd.
+Adobe raadt u aan een naamruimte voor identiteiten te selecteren, zoals een naamruimte [!DNL CRM ID] of e-mailadres als deduplicatietoets, om ervoor te zorgen dat alle profielrecords uniek worden geïdentificeerd.
 
 >[!NOTE]
 > 
@@ -509,9 +509,9 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_viewApplicableConsentPolicies"
 >title="Toepasselijk toestemmingsbeleid weergeven"
->abstract="Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
+>abstract="Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
 
-Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
+Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 
 ### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
 

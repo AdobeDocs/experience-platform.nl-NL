@@ -27,7 +27,7 @@ Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organ
 
 ## Ontdek de [!UICONTROL Destinations] dashboard {#explore}
 
-Om aan het bestemmingdashboard binnen UI van het Platform te navigeren, selecteert **[!UICONTROL Destinations]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het doeldashboard in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Destinations]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 De datum en tijd van de meest recente opname worden boven aan het dialoogvenster [!UICONTROL Overview] naast het vervolgkeuzemenu van het doel. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
@@ -35,7 +35,7 @@ De datum en tijd van de meest recente opname worden boven aan het dialoogvenster
 >
 >Als uw organisatie nieuw aan Experience Platform is en nog geen actieve bestemmingen heeft, dashboard van Doelen en [!UICONTROL Overview] zijn niet zichtbaar. In plaats daarvan selecteert u [!UICONTROL Destinations] van de linkernavigatie toont de [!UICONTROL Catalog] tab. Meer informatie over de [!UICONTROL Catalog] tabblad, verwijst naar de [[!UICONTROL Destinations] werkruimtegids](../../destinations/ui/destinations-workspace.md).
 
-![Het overzicht van de Doelen UI van het Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
+![Het overzicht van de Doelen van UI van het Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
 
 ### Wijzig de [!UICONTROL Destinations] dashboard {#modify}
 
@@ -66,7 +66,7 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 
 ## Standaardwidgets {#standard-widgets}
 
-Adobe verstrekt veelvoudige standaardwidgets die u kunt gebruiken om verschillende metriek met betrekking tot uw bestemmingen te visualiseren en de volledigheid van de publiek te beoordelen beschikbaar voor uw gegevensanalyse. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
+De Adobe verstrekt veelvoudige standaardwidgets die u kunt gebruiken om verschillende metriek met betrekking tot uw bestemmingen te visualiseren en de volledigheid van het publiek te beoordelen beschikbaar voor uw gegevensanalyse. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
 
 ### Vereisten {#prerequisites}
 
@@ -152,7 +152,7 @@ Raadpleeg voor meer informatie over het werken met Experience Platforms [Overzic
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
 >title="Onlangs geactiveerd publiek naar bestemming"
->abstract="Deze widget geeft de vijf meest recente geactiveerde doelgroepen in aflopende volgorde weer, afhankelijk van het doel dat u hebt gekozen in de overzichtsvervolgkeuzelijst."
+>abstract="Deze widget geeft de vijf meest recente geactiveerde doelgroepen in aflopende volgorde weer, afhankelijk van het doel dat u hebt gekozen in het overzichtsvervolgkeuzemenu."
 
 De **[!UICONTROL Recently activated audiences by destination]** widget geeft de vijf meest recente geactiveerde doelgroepen in aflopende volgorde weer, afhankelijk van het doel dat u hebt gekozen in de overzichtsvervolgkeuzelijst. Het lijkt op het [!UICONTROL Recently activated audiences] widget, maar de gegevens worden weergegeven **alleen** wordt toegepast op het geselecteerde doel.
 

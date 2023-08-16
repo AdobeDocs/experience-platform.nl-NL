@@ -1,5 +1,5 @@
 ---
-title: Twitter Aangepast publiek, verbinding
+title: Verbinding Aangepast publiek twitters
 description: Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
@@ -17,10 +17,10 @@ Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketin
 
 ## Vereisten {#prerequisites}
 
-Voordat u uw [!DNL Twitter Custom Audiences] -bestemming, controleert u of u de volgende Twitter-voorwaarden hebt waaraan u moet voldoen.
+Voordat u uw [!DNL Twitter Custom Audiences] doel, zorg ervoor om de volgende Twitter eerste vereisten te herzien die u moet ontmoeten.
 
 1. Uw [!DNL Twitter Ads] account moet in aanmerking komen voor reclame. Nieuw [!DNL Twitter Ads] de rekeningen komen niet in aanmerking voor reclame in de eerste twee weken nadat zij zijn gemaakt.
-2. Je Twitter-gebruikersaccount waarvoor je toegang hebt geautoriseerd in [!DNL Twitter Audience Manager] moet de *[!DNL Partner Audience Manager]* machtiging ingeschakeld.
+2. Uw gebruikersaccount voor Twitter waarvoor u toegang hebt geautoriseerd [!DNL Twitter Audience Manager] moet de *[!DNL Partner Audience Manager]* machtiging ingeschakeld.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -53,7 +53,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek van Twitter. |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek voor Twitter. |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -79,14 +79,14 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 1. Zoek de [!DNL Twitter Custom Audiences] doel in de doelcatalogus en selecteer **[!UICONTROL Set Up]**.
 2. Selecteer **[!UICONTROL Connect to destination]**.
    ![Verifiëren voor LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. Voer uw Twitter-gebruikersgegevens in en selecteer **Aanmelden**.
+3. Voer uw aanmeldingsgegevens voor de Twitter in en selecteer **Aanmelden**.
 
 ### Doelgegevens invullen {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"
 >title="Account-id"
->abstract="Je account-id voor Twitter Adds. Dit vindt u in de Twitter Ads-instellingen."
+>abstract="Je account-id voor Twitter Adds. Dit vindt u in de instellingen voor advertenties voor Twitters."
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
@@ -114,9 +114,9 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 
 ## Aanvullende bronnen {#additional-resources}
 
-Wanneer u een publiek toewijst aan Twitter, moet u aan de volgende naamgevingsvereisten voor het publiek voldoen:
+Wanneer het toewijzen van publiek aan Twitter, zorg ervoor om aan de volgende vereisten van de publieksnaamgeving te voldoen:
 
 1. Geef voor het publiek leesbare toewijzingsnamen. Wij adviseren gebruikend de zelfde naam die u voor de segmenten van het Experience Platform gebruikte.
-2. Gebruik geen speciale tekens (+ &amp; , % : ; @ / = ? $) in toewijzingsnamen voor het publiek en het publiek. Als de publieksnaam van het Experience Platform deze tekens bevat, verwijdert u deze voordat u het publiek toewijst aan een Twitter-bestemming.
+2. Gebruik geen speciale tekens (+ &amp; , % : ; @ / = ? $) in toewijzingsnamen voor het publiek en het publiek. Als de publieksnaam van het Experience Platform deze tekens bevat, verwijdert u deze voordat u het publiek toewijst aan een Twitter.
 
-Meer informatie over [!DNL List Custom Audiences] in Twitter vindt u in het [Twitter-documentatie](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Meer informatie over [!DNL List Custom Audiences] in Twitter vindt u in het gedeelte [Documentatie twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
