@@ -3,9 +3,7 @@ solution: Experience Platform
 title: Soortgelijke soorten publiek
 description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Platform kunt kiezen met behulp van look-Alike publiek.
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type=Caution
-hide: true
-hidefromtoc: true
-source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
+source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2088'
 ht-degree: 0%
