@@ -1,11 +1,11 @@
 ---
 title: TikTok-verbinding
-description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok sturen met behulp van Adobe real-time integratie met TikTok Ads Manager.
+description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met behulp van de realtime integratie van Adobe met TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '986'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok sturen met behulp van Adobe real-time integratie met TikTok Ads Manager. Bezoek [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences?lang=en) voor meer informatie .
+Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met behulp van de realtime integratie van Adobe met TikTok Ads Manager. Bezoek [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences?lang=en) voor meer informatie .
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,9 @@ Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun socia
 
 ## Vereisten {#prerequisites}
 
-Voordat u gegevens naar uw [!DNL TikTok Ads Manager] -account, moet je Adobe Experience Platform toestemming geven om je advertentieaccount te openen voor `Audience Management`. U kunt deze machtiging opgeven door uw adverteerder-id in te voeren in het Experience Platform en de machtiging opnieuw te sturen om de machtiging te verlenen. Meer instructies vindt u in het gedeelte [TikTok API-documentatie](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+U moet [!DNL Admin] of [!DNL Operator] toegang tot de TikTok Ads Manager-account waarnaar u het publiek wilt sturen. Meer instructies vindt u op de [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+Voordat u gegevens naar uw TikTok Ads Manager-account kunt verzenden, moet u Adobe Experience Platform toestemming geven om toegang te krijgen tot uw advertentieaccount voor `Audience Management`. Deze toestemming kan worden verleend door [je Ads Manager-id invoeren](#authenticate) in de gebruikersinterface van het Experience Platform en na omleiding naar uw TikTok Ads Manager-account.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -66,7 +68,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Om voor authentiek te verklaren aan de bestemming, zult u aan login aan uw worden opnieuw gericht [!DNL TikTok Ads Manager] account en geef Adobe toestemming om namens u het publiek te beheren.
+Om voor authentiek te verklaren aan de bestemming, zult u aan login aan uw worden opnieuw gericht [!DNL TikTok Ads Manager] account en autoriseer Adobe om het publiek namens u te beheren.
 
 ![Selectie TikTok-machtiging](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Afbeelding van TikTok-gebruikersinterface voor het selecteren van machtigingen")
 
@@ -74,7 +76,7 @@ Om voor authentiek te verklaren aan de bestemming, zult u aan login aan uw worde
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Gegevens doelverbinding](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Afbeelding van de interface van het Platform, met gegevens over de doelverbinding die moeten worden ingevuld")
+![Gegevens doelverbinding](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Afbeelding van de platforminterface, met gegevens over de doelverbinding die moeten worden ingevuld")
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -108,7 +110,7 @@ Doelvelden selecteren:
 
 * Selecteer de naamruimte E-mail als doel-id.
 
-![Identiteitskaart](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Afbeelding van de interface van het Platform, toewijzen van identiteiten")
+![Identiteitskaart](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Afbeelding van de platforminterface, toewijzen van identiteiten")
 
 ## Geëxporteerde gegevens {#exported-data}
 
