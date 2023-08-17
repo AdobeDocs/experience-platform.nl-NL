@@ -5,7 +5,7 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 13%
@@ -18,7 +18,7 @@ ht-degree: 13%
 * [Overzicht van codes](./home.md)
 * Aan de slag {#get-started}
    * [Snelstartgids](./quick-start/quick-start.md)
-   * [Implementatiehandleidingen](./quick-start/implementation-guides.md)
+   * [Implementatiehulplijnen](./quick-start/implementation-guides.md)
 * UI-hulplijnen {#ui}
    * [Overzicht](./ui/managing-resources/overview.md)
    * Extensies {#extensions}
@@ -45,8 +45,8 @@ ht-degree: 13%
    * [Bibliotheken](./ui/publishing/libraries.md)
    * [Bibliotheken die zichzelf hosten](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Bibliotheek opnieuw publiceren](./ui/publishing/republish.md)
-   * [Premium CDN-ondersteuning (bèta)](./ui/publishing/premium-cdn.md)
-* Informatie aan de clientzijde {#client-side}
+   * [Experience Platform-tags (China)](./ui/publishing/premium-cdn.md)
+* Clientinformatie {#client-side}
    * [Overzicht](./ui/client-side/overview.md)
    * [Asynchrone implementatie](./ui/client-side/asynchronous-deployment.md)
    * [Verwijzing naar satellietobject](./ui/client-side/satellite-object.md)
@@ -85,7 +85,7 @@ ht-degree: 13%
       * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Overzicht](./extensions/client/audience-manager/overview.md)
-      * Gegevenslaag Adobe-client {#client-data-layer}
+      * Gegevenslaag client-Adobe {#client-data-layer}
          * [Overzicht](./extensions/client/client-data-layer/overview.md)
          * [Aanvullende informatie](./extensions/client/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
@@ -116,9 +116,9 @@ ht-degree: 13%
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Overzicht](./extensions/client/media-analytics-3x/overview.md)
          * [Aanvullende informatie](./extensions/client/media-analytics-3x/release-notes.md)
-      * Adobe Privacy {#privacy}
+      * Privacy Adoben {#privacy}
          * [Overzicht](./extensions/client/privacy/overview.md)
-      * [Adobe Report Suite-kiezer](https://exchange.adobe.com/apps/ec/100640)
+      * [Adobe Report Suite Selector](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Overzicht](./extensions/client/target/overview.md)
          * [Aanvullende informatie](./extensions/client/target/release-notes.md)
@@ -177,7 +177,7 @@ ht-degree: 13%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Overzicht](./extensions/client/marketo/overview.md)
          * [Aanvullende informatie](./extensions/client/marketo/release-notes.md)
-      * [Master eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)
+      * [Hoofd-eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)
       * [!DNL Meta Pixel] {#meta}
          * [Overzicht](./extensions/client/meta/overview.md)
       * [Monitor](https://exchange.adobe.com/apps/ec/106544)
@@ -199,7 +199,7 @@ ht-degree: 13%
       * [TAGS van Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
       * [Verrijking van gegevens in Tealium](https://exchange.adobe.com/apps/ec/104217)
-      * [TMMData Foundation-Platform](https://exchange.adobe.com/apps/ec/100148)
+      * [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)
       * [TrustArc Cookie-toegangsbeheer](https://exchange.adobe.com/apps/ec/107037)
       * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)
       * [Webvariaties](https://exchange.adobe.com/apps/ec/106769)
@@ -219,12 +219,12 @@ ht-degree: 13%
          * [Overzicht](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [Overzicht](./extensions/server/braze/overview.md)
-      * [Cloud Connector voor Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * [Cloud Connector voor Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
+      * [Cloud Connector voor Googles Analytics](https://exchange.adobe.com/apps/ec/106542)
+      * [Cloud Connector voor Googles Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
       * [Epsilon-gebeurtenis-API](https://exchange.adobe.com/apps/ec/109127)
-      * Verbeterde Google-conversies toevoegen {#google-ads-enhanced-conversions}
+      * Verbeterde Google-conversies voor advertenties {#google-ads-enhanced-conversions}
          * [Overzicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Overzicht](./extensions/server/google-cloud-platform/overview.md)
@@ -264,7 +264,7 @@ ht-degree: 13%
    * [Extensie manifest](./extension-dev/manifest.md)
    * Webextensies {#web}
       * [Extensiestroom](./extension-dev/web/flow.md)
-      * [De module Bibliotheek, indeling](./extension-dev/web/format.md)
+      * [Indeling van de module Bibliotheek](./extension-dev/web/format.md)
       * [Weergaven](./extension-dev/web/views.md)
       * [Gebeurtenistypen](./extension-dev/web/event-types.md)
       * [Type voorwaarde](./extension-dev/web/condition-types.md)
@@ -274,7 +274,7 @@ ht-degree: 13%
       * [Gedeelde modules](./extension-dev/web/shared.md)
    * Edge-extensies {#edge}
       * [Extensiestroom](./extension-dev/edge/flow.md)
-      * [De module Bibliotheek, indeling](./extension-dev/edge/format.md)
+      * [Indeling van de module Bibliotheek](./extension-dev/edge/format.md)
       * [Type voorwaarde](./extension-dev/edge/condition-types.md)
       * [Typen handelingen](./extension-dev/edge/action-types.md)
       * [Gegevenstelelementtypen](./extension-dev/edge/data-element-types.md)
@@ -298,7 +298,7 @@ ht-degree: 13%
       * [Omgevingen](./api/endpoints/environments.md)
       * [Gastheren](./api/endpoints/hosts.md)
       * [App-configuraties](./api/endpoints/app-configurations.md)
-      * [Gebeurtenissen van Audit](./api/endpoints/audit-events.md)
+      * [Controlegebeurtenissen](./api/endpoints/audit-events.md)
       * [Callbacks](./api/endpoints/callbacks.md)
       * [Notities](./api/endpoints/notes.md)
       * [Profiel](./api/endpoints/profile.md)
@@ -309,7 +309,7 @@ ht-degree: 13%
       * [Waarden versleutelen](./api/guides/encrypting-values.md)
       * [Foutafhandeling](./api/guides/error-handling.md)
       * [Reacties filteren](./api/guides/filtering.md)
-      * [Reacties pagineren](./api/guides/pagination.md)
+      * [Antwoorden pagineren](./api/guides/pagination.md)
       * [Reacties sorteren](./api/guides/sorting.md)
       * [Relaties](./api/guides/relationships.md)
       * [Bronnen zoeken](./api/guides/search.md)
