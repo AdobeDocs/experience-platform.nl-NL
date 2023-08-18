@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1992'
+source-wordcount: '1956'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->In het volgende document wordt aangegeven hoe u streamingsegmentatie kunt gebruiken met de API. Voor informatie over het gebruik van streaming segmentatie via de gebruikersinterface leest u de [UI-gids voor streamingsegmentatie](../ui/streaming-segmentation.md).
+>In het volgende document wordt aangegeven hoe u streamingsegmentatie kunt gebruiken met de API. Voor informatie over het gebruik van streaming segmentatie via de gebruikersinterface, leest u de [UI-gids voor streamingsegmentatie](../ui/streaming-segmentation.md).
 
 Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om segmentatie in bijna real time te doen terwijl het concentreren op gegevensrijkdom. Met streaming segmentering gebeurt segmentkwalificatie nu als streaming gegevens binnenkomen [!DNL Platform], om de noodzaak om segmentatietaken te plannen en uit te voeren te verlichten. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien het gegeven wordt overgegaan in [!DNL Platform]Dit betekent dat segmentlidmaatschap up-to-date blijft zonder geplande segmentatietaken uit te voeren.
 
@@ -30,9 +30,9 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 
 Deze ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten betrokken bij het stromen segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in echt - tijd, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een eenvormig consumentenprofiel in real-time, gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 - [[!DNL Segmentation]](../home.md): Verstrekt de capaciteit om publiek tot stand te brengen gebruikend segmentdefinities en andere externe bronnen van uw [!DNL Real-Time Customer Profile] gegevens.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan te maken [!DNL Platform] API&#39;s.
 
@@ -44,7 +44,7 @@ Deze ontwikkelaarsgids verstrekt voorbeeld API vraag om aan te tonen hoe te om u
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
+- Toestemming: houder `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -76,8 +76,7 @@ Opdat een segmentdefinitie wordt geëvalueerd die het stromen segmentatie gebrui
 | Eén gebeurtenis binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis. |
 | Eén gebeurtenis met een tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis met een tijdvenster. |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |
-| Eén gebeurtenis met een profielkenmerk | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. **Opmerking:** De query wordt onmiddellijk geëvalueerd wanneer de gebeurtenis plaatsvindt. In het geval van een profielgebeurtenis moet de opname echter 24 uur wachten. |
-| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken. |
+| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. |
 | Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Opmerking:** Als een segment van segmenten wordt gebruikt, zal de profielontzetting gebeuren **om de 24 uur**. |
 | Meerdere gebeurtenissen met een profielkenmerk | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de laatste 24 uur** en (optioneel) heeft een of meer profielkenmerken. |
 
@@ -92,7 +91,7 @@ Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmen
 
 | Type query | Richtsnoer |
 | ---------- | -------- |
-| Query voor één gebeurtenis | Er gelden geen limieten voor het terugzoekvenster. |
+| Single-event-query | Er gelden geen limieten voor het terugzoekvenster. |
 | Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugzoekvenster is beperkt tot **één dag**.</li><li>Een strikte voorwaarde voor de tijdvolgorde **moet** tussen de gebeurtenissen bestaan.</li><li>Query&#39;s met ten minste één genegeerde gebeurtenis worden ondersteund. De gehele gebeurtenis **kan** een negatie zijn.</li></ul> |
 
 Als een segmentdefinitie wordt gewijzigd zodat deze niet meer voldoet aan de criteria voor het streamen van segmentatie, schakelt de segmentdefinitie automatisch over van &quot;Streaming&quot; naar &quot;Batch&quot;.
@@ -425,7 +424,7 @@ Nu u zowel nieuwe als bestaande segmentdefinities voor het stromen segmentatie h
 
 Ga voor meer informatie over het uitvoeren van vergelijkbare acties en het werken met segmentdefinities in de Adobe Experience Platform-gebruikersinterface naar de [Gebruikershandleiding voor Segment Builder](../ui/segment-builder.md).
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weergegeven:
 
@@ -447,7 +446,7 @@ Houd er rekening mee dat als een segment **beide** een `inSegment` en een direct
 
 Het aantal totaal gekwalificeerde segmentdefinities wordt getrokken uit de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als streaming segmentdefinities kwalificeert. Deze waarde wordt weergegeven voor definities van zowel batch- als streaming segmenten.
 
-Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat publiek dat in het stromen segmentatie gekwalificeerd is, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streamingsegmentdefinities. Dientengevolge, deze waarde **kan** weergeven als 0 voor definities van batchsegmenten.
+Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat doelgroepen die zijn gekwalificeerd in streamingsegmentatie, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streamingsegmentdefinities. Dientengevolge, deze waarde **kan** weergeven als 0 voor definities van batchsegmenten.
 
 Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor die segmentdefinitie in aanmerking zouden komen.
 

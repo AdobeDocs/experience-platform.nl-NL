@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor streamingsegmentatie
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1435'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Segmentering streamen op [!DNL Adobe Experience Platform] staat klanten toe om s
 
 >[!NOTE]
 >
->Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Voor meer informatie over het inschakelen van geplande segmentatie raadpleegt u [de het stromen segmenteringssectie in de de gebruikersgids van de Segmentatie](./overview.md#scheduled-segmentation).
+>Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Raadpleeg voor meer informatie over het inschakelen van geplande segmentatie [de het stromen segmenteringssectie in de de gebruikersgids van de Segmentatie](./overview.md#scheduled-segmentation).
 
 Een query wordt automatisch geëvalueerd met streaming segmentatie als deze aan een van de volgende criteria voldoet:
 
@@ -38,8 +38,7 @@ Een query wordt automatisch geëvalueerd met streaming segmentatie als deze aan 
 | Eén gebeurtenis binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis. | ![Er wordt een voorbeeld van één gebeurtenis in een relatief tijdvenster weergegeven.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Eén gebeurtenis met een tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis met een tijdvenster. | ![Er wordt een voorbeeld van één gebeurtenis met een tijdvenster weergegeven.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | |
-| Eén gebeurtenis met een profielkenmerk | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. **Opmerking:** De query wordt onmiddellijk geëvalueerd wanneer de gebeurtenis plaatsvindt. In het geval van een profielgebeurtenis moet de opname echter 24 uur wachten. | ![Er wordt een voorbeeld weergegeven van één gebeurtenis met een profielkenmerk.](../images/ui/streaming-segmentation/profile-hit.png) |
-| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken. | ![Er wordt een voorbeeld weergegeven van één gebeurtenis met een profielkenmerk binnen een relatief tijdvenster.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. | ![Er wordt een voorbeeld weergegeven van één gebeurtenis met een profielkenmerk binnen een relatief tijdvenster.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Opmerking:** Als een segment van segmenten wordt gebruikt, zal de profielontzetting gebeuren **om de 24 uur**. | ![Een voorbeeld van een segment van segmenten wordt getoond.](../images/ui/streaming-segmentation/two-batches.png) |
 | Meerdere gebeurtenissen met een profielkenmerk | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de laatste 24 uur** en (optioneel) heeft een of meer profielkenmerken. | ![Er wordt een voorbeeld weergegeven van meerdere gebeurtenissen met een profielkenmerk.](../images/ui/streaming-segmentation/event-history-success.png) |
 
@@ -54,7 +53,7 @@ Houd rekening met de volgende richtlijnen bij het uitvoeren van streaming segmen
 
 | Type query | Richtsnoer |
 | ---------- | -------- |
-| Query voor één gebeurtenis | Er gelden geen limieten voor het terugzoekvenster. |
+| Single-event-query | Er gelden geen limieten voor het terugzoekvenster. |
 | Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugzoekvenster is beperkt tot **één dag**.</li><li>Een strikte voorwaarde voor de tijdvolgorde **moet** tussen de gebeurtenissen bestaan.</li><li>Query&#39;s met ten minste één genegeerde gebeurtenis worden ondersteund. De gehele gebeurtenis **kan** een negatie zijn.</li></ul> |
 
 Als een segmentdefinitie wordt gewijzigd zodat deze niet meer voldoet aan de criteria voor het streamen van segmentatie, schakelt de segmentdefinitie automatisch over van &quot;Streaming&quot; naar &quot;Batch&quot;.
@@ -63,7 +62,7 @@ Bovendien, segmentonkwalificatie, zo gelijkaardig aan segmentkwalificatie, gebeu
 
 ## Definiedetails van segmentatiesegment streamen
 
-Nadat u een voor streaming geschikt segment hebt gemaakt, kunt u details van dat segment weergeven.
+Nadat u een segment hebt gemaakt dat geschikt is voor streaming, kunt u details van dat segment weergeven.
 
 ![De pagina met segmentdefinitiedetails wordt weergegeven.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
@@ -91,7 +90,7 @@ In deze gebruikershandleiding wordt uitgelegd hoe definities van streaming-inges
 
 Voor meer informatie over het gebruik van de Adobe Experience Platform-gebruikersinterface leest u de [Gebruikershandleiding voor segmentatie](./overview.md).
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie worden veelgestelde vragen over streamingsegmentatie weergegeven:
 
@@ -113,7 +112,7 @@ Houd er rekening mee dat als een segmentdefinitie een segment bevat **beide** ee
 
 Het aantal in totaal gekwalificeerde segmenten wordt ontleend aan de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als het stromen segmenten kwalificeert. Deze waarde wordt weergegeven voor zowel batch- als streaming segmenten.
 
-Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat publiek dat in het stromen segmentatie gekwalificeerd is, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streaming segmenten. Dientengevolge, deze waarde **kan** weergeven als 0 voor batchsegmenten.
+Het getal onder de &quot;Laatste X dagen&quot; **alleen** omvat doelgroepen die zijn gekwalificeerd in streamingsegmentatie, en **alleen** neemt toe als u gegevens in het systeem hebt gestreamd en het telt naar die het stromen definitie. Deze waarde is **alleen** weergegeven voor streaming segmenten. Dientengevolge, deze waarde **kan** weergeven als 0 voor batchsegmenten.
 
 Als u dus ziet dat het getal onder &quot;Laatste X dagen&quot; nul is en dat de lijngrafiek ook nul rapporteert, hebt u **niet** profielen naar het systeem gestreamd die voor dat segment in aanmerking zouden komen.
 
