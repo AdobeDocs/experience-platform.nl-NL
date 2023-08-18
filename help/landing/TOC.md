@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform uw klanten in real time gepersonaliseerde ervaringen kan bieden.
-source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
+source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '260'
 ht-degree: 18%
 
 ---
@@ -13,50 +13,51 @@ ht-degree: 18%
 
 # Adobe Experience Platform-overzicht {#landing}
 
-* [Overzicht van Platform](home.md)
-* [Overzicht van Platforms (video)](video/platform-overview.md)
-* [Zelfstudies voor Platforms](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
-* [Een klantervaring met Platform (video)](video/customer-experience.md)
-* [Achter de schermen van een klantervaring met Platform (video)](video/customer-experience-bts.md)
+* [Overzicht van platform](home.md)
+* [Overzicht van platform (video)](video/platform-overview.md)
+* [Platformzelfstudies](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Een klantervaring aangedreven door Platform (video)](video/customer-experience.md)
+* [Achter de schermen van een klantervaring met behulp van Platform (video)](video/customer-experience-bts.md)
 * Aan de slag {#getting-started}
    * [Voorbeeld van begin tot eind](end-to-end-tutorial.md)
    * [Belangrijkste mogelijkheden (video)](video/key-capabilities.md)
    * [Hoofdgebruik (video)](video/platform-use-cases.md)
-   * [Architectuur van Platforms (video)](video/platform-architecture.md)
+   * [Platformarchitectuur (video)](video/platform-architecture.md)
    * [Rollen en projectfasen (video)](video/roles-project-phases.md)
-* UI Experience Platform {#platform-ui}
-   * [UI-hulplijn Platform](ui-guide.md)
-   * [Rondleiding gebruikersinterface Platform (video)](video/platform-ui.md)
+* UI EXPERIENCE PLATFORM {#platform-ui}
+   * [Handleiding voor platforminterface](ui-guide.md)
+   * [Platform UI tour (video)](video/platform-ui.md)
    * [Handleiding Workflows-gebruikersinterface](workflows.md)
    * [Browserondersteuning en taalondersteuning](browser-language-support.md)
    * [Zelfidentificatie-enquête](self-identification.md)
+   * [AI-assistent](ai-assistant.md)
 * Experience Platform-API&#39;s {#platform-apis}
-   * [Aan de slag met Platform-API&#39;s](api-guide.md)
+   * [Aan de slag met platform-API&#39;s](api-guide.md)
    * [ Platform-API&#39;s verifiëren en openen](api-authentication.md)
    * [API-basisbeginselen](api-fundamentals.md)
-   * [Postman gebruiken met Platform-API&#39;s](postman.md)
+   * [Postman gebruiken met platform-API&#39;s](postman.md)
    * [API-naslagdocumenten](https://www.adobe.com/go/platform-api-reference-en)
-* Documentatie Platform {#documentation}
+* Platformdocumentatie {#documentation}
    * [Overzicht](documentation/overview.md)
    * [Taalondersteuning](documentation/language-support.md)
-* Toepassingsservices op basis van Platform {#ecosystem}
+* Toepassingsservices die zijn gebaseerd op platform {#ecosystem}
    * [Overzicht](application-services.md)
-   * [Adobe Real-time Customer Data Platform (alle edities)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Adobe Real-time Customer Data Platform (alle versies)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-   * [Integraties van Platforms met Experience Cloud (video)](video/experience-cloud-integrations.md)
+   * [Platformintegratie met Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Bestuur, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)
    * Toestemmingsbeheer {#consent}
-      * Adobe standaard {#adobe}
+      * Adobe {#adobe}
          * [Overzicht](./governance-privacy-security/consent/adobe/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
          * [Overzicht](./governance-privacy-security/consent/iab/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
-      * [De SDK van het Web Platform integreren om toestemmings- en voorkeursgegevens te verwerken](./governance-privacy-security/consent/sdk.md)
+      * [De Platform Web SDK integreren om toestemming en voorkeursgegevens te verwerken](./governance-privacy-security/consent/sdk.md)
    * Controlelogboeken {#audit-logs}
       * [Overzicht](./governance-privacy-security/audit-logs/overview.md)
       * Audit Query API {#audit-api}
@@ -70,6 +71,6 @@ ht-degree: 18%
    * [Aanbevolen best practices voor licentierechten voor gegevensbeheer](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
-* [Gen2 gegevensmeermigratie](adls2-gen2-migration.md)
+* [Gen2-gegevensmeermigratie](adls2-gen2-migration.md)
 * [Woordenlijst](glossary.md)
 * [Aanvullende informatie](https://www.adobe.com/go/platform-release-notes-en)
