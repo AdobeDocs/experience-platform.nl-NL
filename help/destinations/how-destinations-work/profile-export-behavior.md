@@ -2,9 +2,9 @@
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2924'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,20 @@ Er zijn verscheidene bestemmingstypes in Experience Platform, zoals aangetoond i
 
 ![Soorten bestemmingsdiagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Beleid voor microbatchverwerking en aggregatie
+## Berichtaggregatie in streamingdoelen
 
-Alvorens in specifieke informatie per bestemmingstype te duiken, is het belangrijk om de concepten microbatching en samenvoegingsbeleid voor te begrijpen *streaming doelen*.
+Alvorens in specifieke informatie per bestemmingstype te duiken, is het belangrijk om het concept berichtsamenvoeging te begrijpen voor *streaming doelen*.
 
 De bestemmingen van het Experience Platform voeren gegevens naar op API-Gebaseerde integratie als vraag HTTPS uit. Zodra de bestemmingsdienst door andere stroomopwaartse diensten op de hoogte wordt gebracht dat de profielen als resultaat van partijopname, het stromen ingestie, partijsegmentatie, het stromen segmentatie of de veranderingen van de identiteitsgrafiek zijn bijgewerkt, worden de gegevens uitgevoerd en verzonden naar het stromen bestemmingen.
 
-Het proces waarmee profielen worden samengevoegd tot HTTPS-berichten voordat ze worden verzonden naar eindpunten van de bestemmings-API wordt aangeroepen *microbatchverwerking*.
+Profielen worden samengevoegd tot HTTPS-berichten voordat ze naar doel-API-eindpunten worden verzonden.
 
 Neem de [Facebook-bestemming](/help/destinations/catalog/social/facebook.md) met een *[configureerbare samenvoeging](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* beleid als voorbeeld - de gegevens worden verzonden op een samengevoegde manier, waar de bestemmingsdienst alle inkomende gegevens van de profieldienst upstream neemt en het door één van het volgende samenvoegt, alvorens het naar Facebook te verzenden:
 
 * Aantal records (maximaal 10.000) of
-* Tijdvensterinterval (30 minuten)
+* Tijdlijninterval (300 seconden)
 
-Welke van de bovengenoemde drempels het eerst wordt gehaald, leidt tot een export naar Facebook. Dus in de [!DNL Facebook Custom Audiences] op het dashboard zien we publiek dat in stappen van 10.000 records vanuit het Experience Platform binnenkomt. Mogelijk ziet u 10.000 records elke 10-15 minuten, omdat de gegevens sneller worden verwerkt en samengevoegd dan het exportinterval van 30 minuten, en sneller worden verzonden, dus ongeveer om de 10-15 minuten totdat alle records zijn verwerkt. Als er onvoldoende records zijn om een batch van 10.000 samen te stellen, wordt het huidige aantal records verzonden, net als wanneer de drempel voor het tijdvenster is bereikt, zodat u ook kleinere batches naar Facebook kunt zien.
+Welke van de bovengenoemde drempels het eerst wordt gehaald, leidt tot een export naar Facebook. Dus, in de [!DNL Facebook Custom Audiences] op het dashboard zien we publiek dat in stappen van 10.000 records vanuit het Experience Platform binnenkomt. U ziet misschien 10.000 records elke 2-3 minuten omdat de gegevens sneller worden verwerkt en geaggregeerd dan het exportinterval van 300 seconden en sneller worden verzonden, dus ongeveer om de 2-3 minuten totdat alle records zijn verwerkt. Als er onvoldoende records zijn om een batch van 10.000 samen te stellen, wordt het huidige aantal records verzonden, net als wanneer de drempel voor het tijdvenster is bereikt, zodat u ook kleinere batches naar Facebook kunt zien.
 
 Als een ander voorbeeld: [HTTP API-bestemming](/help/destinations/catalog/streaming/http-destination.md), die een *[beste inspanningsaggregatie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* beleid, met `maxUsersPerRequest: 10`. Dit betekent dat een maximum van tien profielen zal worden bijeengevoegd alvorens een vraag van HTTP aan deze bestemming in brand wordt gestoken, maar het Experience Platform probeert om profielen naar de bestemming te verzenden zodra de bestemmingsdienst bijgewerkte herbeoordelingsinformatie van een stroomopwaartse dienst ontvangt.
 
@@ -62,7 +62,7 @@ Met betrekking tot de gegevens die voor een bepaald profiel worden geëxporteerd
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen publiek de status wijzigt (van `null` tot `realized` of van `realized` tot `exiting`) of toegewezen kenmerken worden bijgewerkt, wordt een doelexport uitgeschakeld.</li><li>Aangezien identiteiten momenteel niet aan ondernemingsbestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>De `segmentMembership` Dit object bevat het publiek dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een afsluitgebeurtenis voor een kwalificatie of het publiek. Andere niet-toegewezen soorten publiek waarvoor het profiel waarvoor is gekwalificeerd, deel kan uitmaken van de doelexport, als deze soorten publiek tot hetzelfde behoren [samenvoegingsbeleid](/help/profile/merge-policies/overview.md) als het publiek is toegewezen in de activeringsgegevensstroom. </li><li>Alle identiteiten in de `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de doellocatie van de onderneming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen publiek de status wijzigt (van `null` tot `realized` of van `realized` tot `exiting`) of toegewezen kenmerken worden bijgewerkt, wordt een doelexport uitgeschakeld.</li><li>Aangezien identiteiten momenteel niet aan ondernemingsbestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>De `segmentMembership` bevat het publiek dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een afsluitgebeurtenis voor kwalificatie of het publiek. Andere niet-toegewezen soorten publiek waarvoor het profiel waarvoor is gekwalificeerd, deel kan uitmaken van de doelexport, als deze soorten publiek tot hetzelfde behoren [samenvoegingsbeleid](/help/profile/merge-policies/overview.md) als het publiek is toegewezen in de activeringsgegevensstroom. </li><li>Alle identiteiten in de `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de doelmap van de onderneming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -76,7 +76,7 @@ Bijvoorbeeld, overweeg dit dataflow aan een bestemming van HTTP waar drie publie
 
 ![doelgegevens onderneming](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de *drie toegewezen segmenten*. Bij de gegevensexport moet u `segmentMembership` , kunnen andere niet-toegewezen doelgroepen worden weergegeven, als dat specifieke profiel lid van deze groepen is en als deze hetzelfde samenvoegingsbeleid delen als het publiek dat de exportactie heeft geactiveerd. Als een profiel in aanmerking komt voor de opdracht **Klant met DeLorean Auto&#39;s** publiek maar ook lid van **Film &quot;Terug naar de toekomst&quot; bekeken** en **Favorieten voor science fiction** segmenten, dan zullen deze andere twee soorten publiek ook aanwezig zijn in de `segmentMembership` -object van de gegevensexport, ook al worden deze niet toegewezen in de gegevensstroom, als deze hetzelfde samenvoegbeleid delen met de **Klant met DeLorean Auto&#39;s** segment.
+Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de *drie toegewezen segmenten*. Bij de gegevensexport moet u echter in de `segmentMembership` , kunnen andere niet-toegewezen doelgroepen worden weergegeven als dat specifieke profiel lid van deze groepen is en als deze hetzelfde samenvoegingsbeleid delen als het publiek dat de exportactie heeft geactiveerd. Als een profiel voor het **Klant met DeLorean Auto&#39;s** publiek maar ook lid van **Film &quot;Terug naar de toekomst&quot; bekeken** en **Favorieten voor science fiction** segmenten, dan zullen deze andere twee soorten publiek ook in de `segmentMembership` -object van de gegevensexport, ook al worden deze niet toegewezen in de gegevensstroom, als deze hetzelfde samenvoegbeleid delen met de **Klant met DeLorean Auto&#39;s** segment.
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
 
@@ -133,8 +133,8 @@ Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de drie bovenstaa
 
 Profielen exporteren naar [bestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based) in Experience Platform zijn er drie typen schema&#39;s (hieronder vermeld) en twee exportopties voor bestanden (volledige of incrementele bestanden) die u kunt gebruiken. Al deze montages worden geplaatst op een publieksniveau, zelfs wanneer het veelvoudige publiek aan één enkele bestemmingsdataflow in kaart wordt gebracht.
 
-* Geplande uitvoer: Vorm een bestemming, voeg één of meerdere segmenten toe, selecteer als u volledige of stijgende dossiers wilt uitvoeren en selecteer een vastgestelde tijd elke dag of verscheidene tijden per dag wanneer de dossiers zouden moeten worden uitgevoerd. Een exporttijd van 5 PM betekent bijvoorbeeld dat de profielen die voor het publiek in aanmerking komen, om 17.00 uur worden geëxporteerd.
-* Na segmentevaluatie: De export wordt geactiveerd direct nadat de dagelijkse evaluatietaak voor het publiek is uitgevoerd. Dit betekent dat de geëxporteerde profielnummers in het bestand zo dicht mogelijk bij de meest recente geëvalueerde populatie van het segment liggen.
+* Gepland exporteren: configureer een bestemming, voeg een of meer segmenten toe, selecteer of u volledige of incrementele bestanden wilt exporteren en selecteer elke dag of meerdere keren per dag een ingestelde tijd waarop bestanden moeten worden geëxporteerd. Een exporttijd van 5 PM betekent bijvoorbeeld dat de profielen die voor het publiek in aanmerking komen, om 17.00 uur worden geëxporteerd.
+* Na segmentevaluatie: de export wordt direct geactiveerd nadat de dagelijkse evaluatietaak voor het publiek is uitgevoerd. Dit betekent dat de geëxporteerde profielnummers in het bestand zo dicht mogelijk bij de meest recente geëvalueerde populatie van het segment liggen.
 * Op vraag uitgevoerde goederen ([bestand nu exporteren](/help/destinations/ui/export-file-now.md)): Op basis van de meest recente evaluatietaak voor het publiek wordt een volledig bestand één keer geëxporteerd, bovenop de regelmatig geplande exportbewerkingen.
 
 In alle bovenstaande exportsituaties bevatten de geëxporteerde bestanden de profielen die voor het exporteren zijn gekwalificeerd, naast de kolommen die u hebt geselecteerd als XDM-kenmerken voor het exporteren.
@@ -160,7 +160,7 @@ Als een publiek bijvoorbeeld incrementele bestandsupdates exporteert in de hiero
 * Een profiel wordt opgenomen in een incrementele bestandsuitvoer wanneer het voor het segment in aanmerking komt of niet.
 * Een profiel is *niet* opgenomen in een incrementele bestandsuitvoer wanneer een nieuw telefoonnummer wordt toegevoegd aan de identiteitsgrafiek.
 * Een profiel is *niet* opgenomen in een incrementele bestandsuitvoer wanneer de waarde van een toegewezen XDM-veld, zoals `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` wordt bijgewerkt in een profiel.
-* Wanneer `segmentMembership.status` XDM-veld wordt toegewezen in de workflow voor doelactivering, profielen die het publiek verlaten, worden ook opgenomen in geëxporteerde incrementele bestanden, met een `exited` status.
+* Wanneer de `segmentMembership.status` XDM-veld wordt toegewezen in de workflow voor doelactivering, profielen die het publiek verlaten, worden ook opgenomen in geëxporteerde incrementele bestanden, met een `exited` status.
 
 >[!ENDSHADEBOX]
 
