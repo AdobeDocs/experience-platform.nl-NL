@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
+source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '989'
 ht-degree: 7%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 - [Overzicht van bronnen](home.md)
 - Beschikbare bronconnectors {#connectors}
-   - Adobe-toepassingen {#adobe-applications}
+   - Adoben {#adobe-applications}
       - [Bron voor analytische classificaties](connectors/adobe-applications/classifications.md)
       - [Analysebron](connectors/adobe-applications/analytics.md)
       - [Bron Audience Manager](connectors/adobe-applications/audience-manager.md)
@@ -28,12 +28,12 @@ ht-degree: 7%
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
          - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Toewijzingen doelveld](connectors/adobe-applications/mapping/target.md)
-         - [Marketo Engage-veldtoewijzingen](connectors/adobe-applications/mapping/marketo.md)
+         - [Veldtoewijzingen Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics-veldtoewijzingen](connectors/adobe-applications/mapping/dynamics.md)
          - [Toewijzingen in Salesforce-veld](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
-         - [Marketo Engage-verificatiegids](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Handleiding voor verificatie van Marketo&#39;s Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
@@ -166,7 +166,7 @@ ht-degree: 7%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
-         - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
+         - [Snowflake streaming](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -225,7 +225,7 @@ ht-degree: 7%
    - [Een gegevensstroom opslaan als concept](tutorials/api/draft.md)
 - UI-zelfstudies {#ui-tutorials}
    - Een bronverbinding maken {#create}
-      - Adobe-toepassingen {#adobe-applications}
+      - Adoben {#adobe-applications}
          - [Adobe Analytics (rapportsuite-gegevens)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (classificatiegegevens)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -325,6 +325,7 @@ ht-degree: 7%
       - [Gegevensstroom betalingsverbinding](tutorials/ui/dataflow/payments.md)
       - [Dataflow van protocolverbinding](tutorials/ui/dataflow/protocols.md)
    - [Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface](tutorials/ui/templates.md)
+   - [Op aanvraag inslikken](tutorials/ui/on-demand-ingestion.md)
    - [Batchgegevens controleren](tutorials/ui/monitor.md)
    - [Streaming gegevens bijhouden](tutorials/ui/monitor-streaming.md)
    - [Accounts bijwerken](tutorials/ui/update.md)
@@ -369,4 +370,4 @@ ht-degree: 7%
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
