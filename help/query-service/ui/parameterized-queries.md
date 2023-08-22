@@ -1,14 +1,19 @@
 ---
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
+source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '744'
 ht-degree: 0%
 
 ---
 
-# Parameterized vragen (beperkte versie)
+# Parameterized vragen (beperkte versie) {#parameterized-queries}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_parameterizedQueries"
+>title="Parameterized vragen"
+>abstract="Gebruik geparametereerde query&#39;s om parameterwaarden toe te voegen op het moment van uitvoering. Op deze manier kunt u met dynamische gegevens werken en query&#39;s hergebruiken voor verschillende gebruiksgevallen. Gebruik de `'$'` Plaats om een vraagparameter in uw vraag in de tekstredacteur in te gaan. Voeg vervolgens een waarde voor de sleutel toe in de sectie met zoekparameters onder de editor."
 
 >[!IMPORTANT]
 >
@@ -81,4 +86,4 @@ Parameterwaarden worden opgeslagen wanneer u een geparametriseerde query plant. 
 
 Door dit document te lezen, hebt u geleerd hoe te om vragen in Adobe Experience Platform UI parameters te bepalen en hen in geplande vraaglooppas te gebruiken. Het document benadrukte ook hoe te om de logboeken voor de parameterwaarden te controleren die in vraaguitvoeringen worden gebruikt.
 
-Vervolgens kunt u de handleiding het beste lezen op [bewaking van geplande query&#39;s](./monitor-queries.md) om een beter inzicht in de status van alle vraagbanen door het Platform UI te verkrijgen.
+Vervolgens kunt u de handleiding het beste lezen op [bewaking van geplande query&#39;s](./monitor-queries.md) om een beter inzicht in de status van alle vraagbanen door de UI van het Platform te verkrijgen.
