@@ -4,9 +4,9 @@ description: Leer hoe u de AI Assistant gebruikt om door Experience Platform- en
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
 workflow-type: tm+mt
-source-wordcount: '2635'
+source-wordcount: '2620'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Van hier, kunt u uw vraag in het tekstvakje invoeren en AI Medewerker voor conce
 
 Overweeg een gebruiksgeval waarin u een **Apparaathandel in gebeurtenisschema**. Tijdens het aanmaakproces van het ExperienceEvent-schema komt u tegen `eventType` veld. U kunt nu de workflow verlaten en de documentatie in het dialoogvenster [grondbeginselen van een schemacompositie](../xdm/schema/composition.md)U kunt ook de AI Assistant gebruiken om directe antwoorden op uw vragen op te halen.
 
-Om te beginnen voert u uw vraag in het tekstvak in. In het onderstaande voorbeeld wordt aan de AI Assistant de volgende vraag gesteld: &quot;Wat is het veld eventType in een Experience Event-schema?&quot;
+Om te beginnen voert u uw vraag in het tekstvak in. In het onderstaande voorbeeld wordt aan de AI Assistant de volgende vraag gesteld: &quot;**Wat is het eventType-veld in een Experience Event-schema?**&quot;
 
 ![De AI-assistent voor Experience Platform met de volgende vraag voorbereid voor query: &quot;Wat is het veld eventType in een ExperienceEvent-schema?](./images/ai-assistant/question.png)
 
@@ -82,7 +82,7 @@ De AI Medewerker zoekt dan zijn kennisbasis en berekent een antwoord. Na enkele 
 
 U kunt meer over een bepaald onderwerp leren door een vervolgvraag te stellen. In het volgende voorbeeld wordt aan de AI-assistent gevraagd hoe het eventType in segmentatie kan worden gebruikt.
 
-![Een vervolgvraag en antwoord die worden weergegeven in de AI Assistant voor Experience Platform.](./images/ai-assistant/follow-up-question.png)
+![Een vervolgvraag en antwoord die worden weergegeven in de AI Assistant voor Experience Platform.](./images/ai-assistant/follow-up-answer.png)
 
 U kunt ook vragen stellen aan de AI Assistant over uw gegevensgebruik. Wanneer u informatie invraagt over gegevensgebruik, moet u in een actieve zandbak zijn opdat de AI Medewerker uw vraag beantwoordt.
 
@@ -100,15 +100,13 @@ Als u feedback wilt geven, selecteert u duimen omhoog of duimen omlaag na ontvan
 
 >[!ENDSHADEBOX]
 
-![De AI-assistent voor Experience Platform met opties die u kunt kiezen na een query.](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB Show source]
 
 Selecteren **[!UICONTROL Show source]** voor een lijst met koppelingen naar de documentatie waarnaar de AI-assistent verwijst om zijn reactie te berekenen.
 
-![De koppelingen naar de citaten in de AI Assistant.](./images/ai-assistant/citations.png)
+![De koppelingen naar de bron in de AI-assistent.](./images/ai-assistant/show-sources.png)
 
 >[!TAB Stompelen omhoog]
 
@@ -134,7 +132,7 @@ Selecteer het vlagpictogram om verdere rapporten over uw ervaring te verstrekken
 
 U kunt ook de vooraf ingestelde aanwijzingen gebruiken die de AI Assistant biedt om aan de slag te gaan.
 
-![De verstrekte herinneringen in het AI Hulp paneel.](./images/ai-assistant/ideas-to-get-started.png)
+![De verstrekte herinneringen in het AI Hulp paneel.](./images/ai-assistant/ideas.png)
 
 ## Aanvullende informatie
 
