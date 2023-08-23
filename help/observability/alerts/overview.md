@@ -4,9 +4,9 @@ title: Overzicht van waarschuwingen
 description: Meer informatie over waarschuwingen in Adobe Experience Platform, inclusief de structuur van hoe waarschuwingsregels worden gedefinieerd.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt.
+>Waarschuwingen worden niet ondersteund in niet-productiesandboxen. Als u zich wilt abonneren op waarschuwingen, moet u ervoor zorgen dat u een productiesandbox gebruikt. Alle waarschuwingen voor abonnementen worden opnieuw ingesteld wanneer de sandbox opnieuw wordt ingesteld. Alle abonnementswaarschuwingen worden eveneens gewist wanneer een sandbox wordt verwijderd.
 
 Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Waarschuwingen verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../api/overview.md) om na te gaan of een baan is voltooid, of een bepaalde mijlpaal in een werkstroom is bereikt of of er fouten zijn opgetreden.
 
@@ -25,7 +25,7 @@ Dit document biedt een overzicht van waarschuwingen in Adobe Experience Platform
 
 ## Eenmalige waarschuwingen versus herhaalde waarschuwingen
 
-Platform waarschuwingen kunnen één keer worden verzonden, of ze kunnen met een vooraf gedefinieerd interval worden herhaald totdat ze zijn opgelost. De gebruiksgevallen van elk van deze opties zijn bedoeld om op de volgende manieren te verschillen:
+Platformwaarschuwingen kunnen één keer worden verzonden of worden herhaald gedurende een vooraf gedefinieerd interval totdat ze zijn opgelost. De gebruiksgevallen van elk van deze opties zijn bedoeld om op de volgende manieren te verschillen:
 
 | Eenmalige waarschuwing | Herhalingswaarschuwing |
 | --- | --- |
@@ -54,19 +54,19 @@ Een alarm kan in de volgende componenten worden verdeeld:
 U kunt waarschuwingen ontvangen en beheren via twee kanalen:
 
 * [Adobe I/O Events](#events)
-* [UI PLATFORM](#ui)
+* [Platforminterface](#ui)
 
 ### I/O-gebeurtenissen {#events}
 
-U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor berichten over Platforms in Adobe Developer Console. Zie de handleiding op [abonneren op Adobe I/O Event-berichten](./subscribe.md) voor specifieke stappen.
+U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor platformwaarschuwingen in Adobe Developer Console. Zie de handleiding op [abonneren op Adobe I/O Event-berichten](./subscribe.md) voor specifieke stappen.
 
-### UI PLATFORM {#ui}
+### Platforminterface {#ui}
 
-Met de interface van het Platform kunt u ontvangen waarschuwingen weergeven en waarschuwingsregels beheren. De volgende video biedt een inleiding tot deze mogelijkheden.
+De interface van het Platform staat u toe om ontvangen alarm te bekijken en waakzame regels te beheren. De volgende video biedt een inleiding tot deze mogelijkheden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Als u met waarschuwingen wilt werken in de gebruikersinterface van het Platform, moet u de volgende toegangsbeheermachtigingen hebben ingeschakeld via Adobe Admin Console:
+Als u met waarschuwingen wilt werken in de interface van het platform, moet u de volgende toegangsbeheermachtigingen hebben ingeschakeld via Adobe Admin Console:
 
 | Machtiging | Beschrijving |
 | --- | --- |
@@ -95,4 +95,4 @@ Bovendien [!UICONTROL Alerts] in UI staat individuele gebruikers toe om aan spec
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u toegevoegd aan waarschuwingen van het Platform en hun rol in het ecosysteem van het Platform. Raadpleeg de procesdocumentatie waarnaar in dit overzicht wordt verwezen voor meer informatie over het ontvangen en beheren van waarschuwingen.
+Door dit document te lezen, bent u geïntroduceerd in Platformwaarschuwingen en hun rol in het ecosysteem van het Platform. Raadpleeg de procesdocumentatie waarnaar in dit overzicht wordt verwezen voor meer informatie over het ontvangen en beheren van waarschuwingen.
