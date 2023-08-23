@@ -1,22 +1,17 @@
 ---
 title: Overzicht van PNO-bron
 description: Leer hoe u verbinding maakt tussen Pendo en Adobe Experience Platform met behulp van API's of de gebruikersinterface met behulp van webhaken
-badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
 # [!DNL Pendo]
 
->[!NOTE]
->
->De [!DNL Pendo] De bron is in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
-
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een analyseprogramma van derden. Tot de ondersteuning van analyseproviders behoren: [!DNL Pendo].
 
@@ -38,16 +33,16 @@ A [!DNL Pendo] account. Als u er nog geen hebt, raadpleegt u de [[!DNL Pendo] re
 
 ### Instellen [!DNL Pendo] Webhaak {#set-up-webhook}
 
-Nadat u de gegevensstroom hebt gemaakt, moet u een webhaak instellen om het Platform te informeren over [!DNL Pendo] gebeurtenissen. [!DNL Pendo] Webhooks kunnen realtime meldingen naar andere services verzenden wanneer bepaalde gebeurtenissen plaatsvinden en deze gegevens naar uw [!DNL Pendo] bron. Lees voor meer informatie de zelfstudies op [ophalen van URL van het streamingeindpunt](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) en [een [!DNL Pendo] Webhaak](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Zodra u met succes uw gegevensstroom hebt gecreeerd, moet u opstelling een webhaak om Platform over te informeren [!DNL Pendo] gebeurtenissen. [!DNL Pendo] Webhooks kunnen realtime meldingen naar andere services verzenden wanneer bepaalde gebeurtenissen plaatsvinden en deze gegevens naar uw [!DNL Pendo] bron. Lees voor meer informatie de zelfstudies op [ophalen van URL van het streamingeindpunt](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) en [een [!DNL Pendo] Webhaak](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
 
-## Verbinding maken [!DNL Pendo] naar Platform {#connect-to-platform}
+## Verbinding maken [!DNL Pendo] naar platform {#connect-to-platform}
 
-In de onderstaande documentatie vindt u informatie over het maken van een [!DNL Pendo] streamingconnector voor verbinding met [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+De onderstaande documentatie bevat informatie over het maken van een [!DNL Pendo] streamingconnector voor verbinding met [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
 
 ### Verbinden [!DNL Pendo] naar Platform met API&#39;s {#connect-to-platform-using-api}
 
-* [Een bronverbinding maken voor [!DNL Pendo] gegevens naar Platform met behulp van API&#39;s.](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [Een bronverbinding maken voor [!DNL Pendo] gegevens naar Platform met API&#39;s.](../../tutorials/api/create/analytics/pendo-webhook.md)
 
-### Verbinden [!DNL Pendo] naar Platform met behulp van de gebruikersinterface {#connect-to-platform-using-ui}
+### Verbinden [!DNL Pendo] naar Platform met behulp van UI {#connect-to-platform-using-ui}
 
-* [Een bronverbinding maken voor [!DNL Pendo] gegevens naar Platform met behulp van de gebruikersinterface](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [Een bronverbinding maken voor [!DNL Pendo] gegevens aan Platform gebruikend het gebruikersinterface](../../tutorials/ui/create/analytics/pendo-webhook.md)

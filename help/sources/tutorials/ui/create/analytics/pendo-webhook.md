@@ -1,20 +1,15 @@
 ---
 title: Een verbinding met een endo-bron maken in de gebruikersinterface
 description: Leer hoe u een Pendo-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Pendo] bronverbindingsgegevens en in de gebruikersinterface
-
->[!NOTE]
->
->De [!DNL Pendo] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Pendo] bronverbinding en gegevensstroom via de Adobe Experience Platform-gebruikersinterface.
 
@@ -51,25 +46,25 @@ Voordat u een [!DNL Pendo] bronverbinding, zult u een bronschema vereisen om wor
 
 Lees voor meer informatie de [[!DNL Pendo] gids over webhaken](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks).
 
-### Een Platform maken voor [!DNL Pendo] {#create-platform-schema}
+### Een platformschema maken voor [!DNL Pendo] {#create-platform-schema}
 
-U moet er ook voor zorgen dat u eerst een Platform-schema voor uw bron maakt. Zie de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+U moet er ook voor zorgen dat u eerst een platformschema maakt dat u voor uw bron kunt gebruiken. Zie de zelfstudie aan [een platformschema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-![UI die van het Platform een voorbeeldschema voor Pendo toont.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![Platform UI die een voorbeeldschema voor Pendo toont.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
 ## Verbind uw [!DNL Pendo] account {#connect-account}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
 
 Gebruik de *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
 Ga naar de [!UICONTROL Analytics] categorie om de [!DNL Pendo] bronkaart. Selecteer **[!UICONTROL Add data]**.
 
-![De broncatalogus van het Platform UI met de kaart van de Buigmachine.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![De broncatalogus van het Platform UI met de Pendo-kaart.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## Gegevens selecteren {#select-data}
 
-De **[!UICONTROL Select data]** wordt weergegeven, zodat u de gegevens kunt selecteren die u naar het Platform wilt brengen.
+De **[!UICONTROL Select data]** wordt weergegeven, zodat u een interface hebt waarmee u de gegevens kunt selecteren die u naar het platform wilt verzenden.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -144,11 +139,11 @@ Wanneer uw webhaak is gemaakt, navigeert u naar de instellingenpagina van uw [!D
 
 >[!TIP]
 >
->U kunt zich abonneren op verschillende gebeurtenissencategorieën om te bepalen welk soort gebeurtenissen u van uw wilt verzenden [!DNL Pendo] aan Platform. Voor meer informatie over de verschillende gebeurtenissen raadpleegt u de [[!DNL Pendo] documentatie](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>U kunt zich abonneren op verschillende gebeurtenissencategorieën om te bepalen welk soort gebeurtenissen u van uw wilt verzenden [!DNL Pendo] -instantie naar Platform. Voor meer informatie over de verschillende gebeurtenissen raadpleegt u de [[!DNL Pendo] documentatie](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Pendo] gegevens naar Experience Platform. Als u de gegevens wilt controleren die worden ingevoerd, raadpleegt u de handleiding op [streaming gegevens controleren met de gebruikersinterface van het Platform](../../monitor-streaming.md).
+Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Pendo] gegevens naar Experience Platform. Als u de gegevens wilt controleren die worden ingevoerd, raadpleegt u de handleiding op [streaming gegevens controleren met behulp van platforminterface](../../monitor-streaming.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -162,15 +157,15 @@ Om te controleren of u de bron correct hebt ingesteld en [!DNL Pendo] de bericht
 
 ![Schermafbeelding van de gebruikersinterface van Pendo met chatgeschiedenis](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Pendo] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhooks werden opgenomen die u binnen hebt gevormd [!DNL Pendo].
+* Selecteer in de interface Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Pendo] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhaken werden opgenomen die u binnen hebt gevormd [!DNL Pendo].
 
-![Schermopname van gebruikersinterface van Platform met ingesloten gebeurtenissen](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
+![Platform UI-screenshot met ingesloten gebeurtenissen](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 
 ### Fouten en problemen oplossen {#errors-and-troubleshooting}
 
 Bij het controleren van een gegevensstroomuitvoering kan het volgende foutbericht optreden: `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-![Fout in schermopname van Platform-interface.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
+![Fout in schermopname van platforminterface.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
 Om deze fout te bevestigen, moet u verifiëren dat *uniqueID* toewijzing is ingesteld. Zie voor aanvullende informatie de [Mapping](#mapping) sectie.
 

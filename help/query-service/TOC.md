@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
+source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '280'
 ht-degree: 15%
 
 ---
@@ -33,12 +33,13 @@ ht-degree: 15%
    - [Verlaten browsers](use-cases/abandoned-browse.md)
    - [Attributieanalyse](use-cases/attribution-analysis.md)
    - [Bot filteren](use-cases/bot-filtering.md)
-   - [Een vernieuwd rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
+   - [Een trended-rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
+   - [Conceptanalyse](use-cases/consent-analysis.md)
    - [Levensduurwaarde van klant](use-cases/customer-lifetime-value.md)
    - [Afgeleide kenmerken op basis van een bestand](use-cases/deciles-use-case.md)
    - [Fuzzy match](use-cases/fuzzy-match.md)
    - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
-   - [Bezoekers weergeven op basis van hun paginaweergaven](use-cases/visitors-by-number-of-page-views.md)
+   - [Bezoekers weergeven op hun paginaweergaven](use-cases/visitors-by-number-of-page-views.md)
    - [Propensiteitsscore](use-cases/propensity-score.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Commerciële variabelen uit analysegegevens retourneren en gebruiken](use-cases/merchandising-variables.md)
@@ -50,7 +51,7 @@ ht-degree: 15%
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
    - [Jupyter-laptop](clients//jupyter-notebook.md)
-   - [Looker](clients/looker.md)
+   - [Liniaal](clients/looker.md)
    - [Postico](clients/postico.md)
    - [Power BI](clients/power-bi.md)
    - [PSQL](clients/psql.md)
@@ -101,4 +102,4 @@ ht-degree: 15%
    - [Vooraf voorbereide instructies](sql/prepared-statements.md)
 - [Veelgestelde vragen](troubleshooting-guide.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

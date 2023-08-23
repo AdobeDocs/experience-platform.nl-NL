@@ -1,34 +1,30 @@
 ---
 title: Een bronverbinding en gegevensstroom maken voor SugarCRM-accounts en -contactpersonen met de Flow Service API
-description: Leer hoe u Adobe Experience Platform kunt verbinden met SugarCRM-accounts en -contactpersonen met behulp van de Flow Service API.
+description: Leer hoe u Adobe Experience Platform verbindt met SugarCRM-accounts en -contactpersonen met behulp van de Flow Service API.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2164'
 ht-degree: 0%
 
 ---
 
-# (bèta) Een bronverbinding en gegevensstroom maken voor [!DNL SugarCRM Accounts & Contacts] de Flow Service API gebruiken
-
->[!NOTE]
->
->De [!DNL SugarCRM Accounts & Contacts] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# Een bronverbinding en gegevensstroom maken voor [!DNL SugarCRM Accounts & Contacts] de Flow Service API gebruiken
 
 De volgende zelfstudie begeleidt u door de stappen om een [!DNL SugarCRM Accounts & Contacts] bronverbinding en een gegevensstroom maken om [[!DNL SugarCRM]](https://www.sugarcrm.com/) accounts en contactpersonen aan Adobe Experience Platform met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL SugarCRM] met de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken [!DNL SugarCRM Accounts & Contacts] als u een Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om verbinding te maken [!DNL SugarCRM Accounts & Contacts] aan Platform, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -44,7 +40,7 @@ Hieronder worden de stappen beschreven die u moet uitvoeren om uw [!DNL SugarCRM
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL SugarCRM Accounts & Contacts] verificatiereferenties als onderdeel van de aanvraaginstantie.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL SugarCRM Accounts & Contacts] verificatiegegevens als onderdeel van de aanvraaginstantie.
 
 **API-indeling**
 
@@ -87,7 +83,7 @@ curl -X POST \
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
-| `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
+| `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
 | `auth.params.host` | De SugarCRM API-host: *developer.salesfusion.com* |
 | `auth.params.username` | Uw gebruikersnaam voor de SugarCRM-ontwikkelaarsaccount. |
 | `auth.params.password` | Wachtwoord voor uw SugarCRM-ontwikkelaarsaccount. |
@@ -122,7 +118,7 @@ Wanneer het uitvoeren van GET verzoeken om de het dossierstructuur en inhoud van
 | `{BASE_CONNECTION_ID}` | De id van de basisverbinding die in de vorige stap is gegenereerd. |
 | `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest`. |
 | `{OBJECT}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. Voor deze bron zou de waarde `json`. |
-| `fileType=json` | Het bestandstype van het bestand dat u naar het Platform wilt brengen. Momenteel `json` is het enige ondersteunde bestandstype. |
+| `fileType=json` | Het bestandstype van het bestand dat u naar Platform wilt verzenden. Momenteel `json` is het enige ondersteunde bestandstype. |
 | `{PREVIEW}` | Een booleaanse waarde die definieert of de inhoud van de verbinding voorvertoning ondersteunt. |
 | `{SOURCE_PARAMS}` | Bepaalt parameters voor het brondossier u aan Platform wilt brengen. Het geaccepteerde indelingstype ophalen voor `{SOURCE_PARAMS}`, moet u het volledige koord in base64 coderen. <br> [!DNL SugarCRM Accounts & Contacts] ondersteunt meerdere API&#39;s. Afhankelijk van het objecttype dat u gebruikt, geeft u een van de volgende waarden door: <ul><li>`accounts` : Bedrijven met wie uw organisatie een relatie heeft.</li><li>`contacts` : Individuele personen met wie uw organisatie een vaste relatie heeft.</li></ul> |
 
@@ -172,7 +168,7 @@ En afhankelijk van welk objecttype u de ontvangen reactie leveraging is de volge
 
 >[!TAB Accounts]
 
-Een succesvolle reactie retourneert een structuur zoals hieronder.
+Een geslaagde reactie retourneert een structuur zoals hieronder.
 
 ```json
 {
@@ -660,7 +656,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -671,9 +667,9 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ### Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
 
@@ -681,7 +677,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
 
 ### Een doelverbinding maken {#target-connection}
 
@@ -866,8 +862,8 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `outputSchema.schemaRef.id` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
-| `mappings.sourceType` | Het type bronkenmerk dat wordt toegewezen. |
-| `mappings.source` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
+| `mappings.sourceType` | Het bronkenmerktype dat wordt toegewezen. |
+| `mappings.source` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.destination` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
 
 **Antwoord**
@@ -887,10 +883,10 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL SugarCRM Accounts & Contacts] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzamelen van gegevens van [!DNL SugarCRM Accounts & Contacts] aan Platform moet een gegevensstroom creëren. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
-* [Doelverbinding-id](#target-connection)
+* [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
@@ -947,7 +943,7 @@ curl -X POST \
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
 | `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | De corresponderende versie van de flow specification-id. Deze waarde wordt standaard ingesteld op `1.0`. |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde wordt standaard ingesteld op `1.0`. |
 | `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
@@ -969,7 +965,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 }
 ```
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 

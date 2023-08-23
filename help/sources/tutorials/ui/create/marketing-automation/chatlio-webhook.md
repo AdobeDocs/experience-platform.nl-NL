@@ -1,20 +1,15 @@
 ---
 title: Een Chatlio Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Chatlio-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Chatlio] bronverbinding in de gebruikersinterface
-
->[!NOTE]
->
->De [!DNL Chatlio] De bron is in bèta. Lees de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Chatlio] bronverbinding via de Adobe Experience Platform-gebruikersinterface.
 
@@ -48,15 +43,15 @@ Voordat u een [!DNL Chatlio] bronverbinding, zult u een bronschema vereisen om w
 }
 ```
 
-### Een Platform maken voor [!DNL Chatlio] {#create-platform-schema}
+### Een platformschema maken voor [!DNL Chatlio] {#create-platform-schema}
 
-U moet ook ervoor zorgen dat u een schema van het Platform creeert voor uw bron te gebruiken. Lees de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+U moet ook ervoor zorgen dat u een schema van het Platform voor uw bron creeert te gebruiken. Lees de zelfstudie aan [een platformschema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 ![De interface van het Platform die een voorbeeldschema voor Chatlio toont](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Verbind uw [!DNL Chatlio] account {#connect-account}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
 
 Gebruik de *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
@@ -66,7 +61,7 @@ Ga naar de [!UICONTROL Marketing automation] categorie om de [!DNL Chatlio] bron
 
 ## Gegevens selecteren {#select-data}
 
-De **[!UICONTROL Select data]** wordt weergegeven, zodat u de gegevens kunt selecteren die u naar het Platform wilt brengen.
+De **[!UICONTROL Select data]** wordt weergegeven, zodat u een interface hebt waarmee u de gegevens kunt selecteren die u naar het platform wilt verzenden.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -151,7 +146,7 @@ Selecteer vervolgens de **[!DNL Behavior]** en voeg uw webhaak-URL toe aan de *[
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Chatlio] gegevens naar Experience Platform. Als u de gegevens wilt controleren die worden ingevoerd, raadpleegt u de handleiding op [streaming gegevens controleren met de gebruikersinterface van het Platform](../../monitor-streaming.md).
+Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Chatlio] gegevens naar Experience Platform. Als u de gegevens wilt controleren die worden ingevoerd, raadpleegt u de handleiding op [streaming gegevens controleren met behulp van platforminterface](../../monitor-streaming.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -165,8 +160,8 @@ Om te controleren of u de bron correct hebt ingesteld en [!DNL Chatlio] de beric
 
 ![Chatlio UI-screenshot met chatgeschiedenis](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Chatlio] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhooks werden opgenomen die u binnen hebt gevormd [!DNL Chatlio].
+* Selecteer in de interface Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Chatlio] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de webhaken werden opgenomen die u binnen hebt gevormd [!DNL Chatlio].
 
-![Schermopname van gebruikersinterface van Platform met ingesloten gebeurtenissen](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
+![Platform UI-screenshot met ingesloten gebeurtenissen](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
 Voor aanvullende informatie over [!DNL Chatlio], bezoek de [[!DNL Chatlio] documentatie](https://chatlio.com/docs/) en [Veelgestelde vragen](https://chatlio.com/pricing/#FAQ).

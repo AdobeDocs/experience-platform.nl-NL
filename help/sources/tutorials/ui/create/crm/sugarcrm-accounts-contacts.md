@@ -2,18 +2,14 @@
 title: Een SugarCRM-bronverbinding voor accounts en contactpersonen maken in de gebruikersinterface
 description: Leer hoe u een SugarCRM-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '739'
 ht-degree: 1%
 
 ---
 
-# (Beta) Maak een [!DNL SugarCRM Accounts & Contacts] bronverbinding in de gebruikersinterface
-
->[!NOTE]
->
->De [!DNL SugarCRM Accounts & Contacts] De bron is in bèta. Zie de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
+# Een [!DNL SugarCRM Accounts & Contacts] bronverbinding in de gebruikersinterface
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL SugarCRM Accounts & Contacts] bronverbinding via de Adobe Experience Platform-gebruikersinterface.
 
@@ -21,16 +17,16 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL SugarCRM Accounts & C
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 Als u al een geldige [!DNL SugarCRM] account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/crm.md).
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken [!DNL SugarCRM Accounts & Contacts] als u een Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om verbinding te maken [!DNL SugarCRM Accounts & Contacts] aan Platform, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -38,9 +34,9 @@ Om verbinding te maken [!DNL SugarCRM Accounts & Contacts] als u een Platform wi
 | `Username` | Uw gebruikersnaam voor de SugarCRM-ontwikkelaarsaccount. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Wachtwoord voor uw SugarCRM-ontwikkelaarsaccount. | `123456789` |
 
-### Een Platform-schema maken
+### Een platformschema maken
 
-Voordat u een [!DNL SugarCRM] bronverbinding, moet u ook ervoor zorgen dat u eerst een schema van het Platform aan gebruik voor uw bron creeert. Zie de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitgebreide stappen over hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL SugarCRM] bronverbinding, moet u ook ervoor zorgen dat u eerst een schema van het Platform aan gebruik voor uw bron creeert. Zie de zelfstudie aan [een platformschema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 De [!DNL SugarCRM Accounts & Contacts] ondersteunt meerdere API&#39;s. Dit betekent dat u een afzonderlijk schema moet maken, afhankelijk van het objecttype dat u gebruikt. Zie de voorbeelden hieronder voor zowel rekeningen als contactschema&#39;s:
 
@@ -52,19 +48,19 @@ De [!DNL SugarCRM Accounts & Contacts] ondersteunt meerdere API&#39;s. Dit betek
 
 >[!TAB Contactpersonen]
 
-![Het schermschot van het Platform UI die een voorbeeldschema voor Contacten toont](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
+![Platform UI het schermschot die een voorbeeldschema voor Contacten toont](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
 
 >[!ENDTABS]
 
 ## Verbind uw [!DNL SugarCRM Accounts & Contacts] account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de *CRM* categorie, selecteert u **[!UICONTROL SugarCRM Accounts & Contacts]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
-![Platform-UI-screenshot voor catalogus met SugarCRM-accounts en -contactkaarten](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![Platform UI-screenshot voor catalogus met SugarCRM-accounts en -contactkaarten](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 De **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -72,17 +68,17 @@ De **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** wordt weergegev
 
 Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL SugarCRM Accounts & Contacts] account waarmee u een nieuwe gegevensstroom wilt maken, selecteert u **[!UICONTROL Next]** om verder te gaan.
 
-![Screenshot van de gebruikersinterface van Platform voor Connect SugarCRM-accounts en -contactpersonen met een bestaande account](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![Platform UI-screenshot voor Connect SugarCRM-accounts en -contactpersoonaccount met een bestaande account](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam, een optionele beschrijving en uw referenties op. Selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
-![Screenshot van de gebruikersinterface van Platform voor Connect SugarCRM-accounts en -contactpersonen met een nieuwe account](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![Platform UI-schermafbeelding voor Connect SugarCRM-accounts en -contactpersoonaccount met een nieuwe account](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### Gegevens selecteren
 
-Tot slot moet u het objecttype selecteren dat u aan Platform wilt toevoegen.
+Tot slot moet u het objecttype selecteren dat u wilt opnemen in Platform.
 
 | Objecttype | Beschrijving |
 | --- | --- |
@@ -93,17 +89,17 @@ Tot slot moet u het objecttype selecteren dat u aan Platform wilt toevoegen.
 
 >[!TAB Accounts]
 
-![Platform UI screenshot voor SugarCRM Accounts &amp; Contacten die configuratie tonen met de geselecteerde optie van de Rekening](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
+![Platform UI-screenshot voor SugarCRM-accounts en -contactpersonen die configuratie met geselecteerde accountoptie tonen](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
 >[!TAB Contactpersonen]
 
-![Platform UI screenshot voor SugarCRM Accounts &amp; Contacten die configuratie met geselecteerde optie van Contacten tonen](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![Platform UI-schermafbeelding voor SugarCRM-accounts en -contactpersonen die configuratie met de geselecteerde optie Contactpersonen tonen](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SugarCRM Accounts & Contacts] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens naar het Platform te brengen](../../dataflow/crm.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SugarCRM Accounts & Contacts] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](../../dataflow/crm.md).
 
 ## Aanvullende bronnen
 
@@ -117,7 +113,7 @@ De [!DNL SugarCRM] De snelheid van de API is 90 vraag per minuut of 2000 vraag p
 
 Om te controleren of u de bron correct hebt ingesteld en [!DNL SugarCRM Accounts & Contacts] Voer de volgende stappen uit om gegevens in te voeren:
 
-* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL SugarCRM Accounts & Contacts] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die werden opgenomen.
+* Selecteer in de interface Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL SugarCRM Accounts & Contacts] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die werden opgenomen.
 
 * Afhankelijk van het objecttype waarmee u werkt, kunt u de samengevoegde gegevens controleren op basis van de tellingen die op het tabblad [!DNL SugarMarket] Pagina&#39;s met accounts of contactpersonen hieronder:
 

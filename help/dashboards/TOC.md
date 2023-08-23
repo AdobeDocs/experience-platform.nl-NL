@@ -4,10 +4,10 @@ user-guide-title: Hulp bij Adobe Experience Platform-dashboards
 breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
-source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
+source-git-commit: 43a98526d5713ffd5917bd3986067ba483001171
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 26%
+source-wordcount: '93'
+ht-degree: 24%
 
 ---
 
@@ -34,8 +34,10 @@ ht-degree: 26%
    * [Standaardwidgets](customize/standard-widgets.md)
    * [Aangepaste widgets](customize/custom-widgets.md)
    * [Schema bewerken](customize/edit-schema.md)
+* Gebruiksgevallen voor inzichten {#insights-use-cases}
+   * [Conceptanalyse](insights-use-cases/consent-analysis.md)
 * Toepassingsintegratie {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Gegevensbestanden van het query-dashboard](query.md)
 * [Real-time Customer Data Platform Insights-gegevensmodel](cdp-insights-data-model.md)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
