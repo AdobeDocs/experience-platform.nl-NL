@@ -4,7 +4,7 @@ title: Handleiding voor het gebruiksdashboard voor licenties
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 6ff198d1b4b567667eb3c74a2c6393ee3dc9ee7d
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
-Voor een algemeen overzicht van de gebruikersinterface van het Platform gaat u naar de [UI-hulplijn Experience Platform](../../landing/ui-guide.md).
+Voor een algemeen overzicht van de platforminterface gaat u naar de [UI-hulplijn Experience Platform](../../landing/ui-guide.md).
 
 ## Gegevens op het gebruiksdashboard voor licenties
 
-Op het dashboard voor licentiegebruik wordt een momentopname weergegeven van de licentiegegevens van uw organisatie voor Experience Platform. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de opname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard wordt niet in real-time bijgewerkt.
+Op het dashboard voor licentiegebruik wordt een momentopname weergegeven van de licentiegegevens van uw organisatie voor Experience Platform. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard wordt niet in real-time bijgewerkt.
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Op het dashboard voor licentiegebruik wordt een momentopname weergegeven van de 
 
 ## Het dashboard voor licentiegebruik verkennen
 
-Als u naar het dashboard voor licentiegebruik in de gebruikersinterface van het Platform wilt navigeren, selecteert u **[!UICONTROL License usage]** in het linkerspoor. Hierdoor wordt het **[!UICONTROL Overview]** tabblad met het dashboard.
+Als u naar het dashboard voor licentiegebruik in de interface van het platform wilt navigeren, selecteert u **[!UICONTROL License usage]** in het linkerspoor. Hierdoor wordt het **[!UICONTROL Overview]** tabblad met het dashboard.
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Als u een sandbox wilt kiezen die u in het dashboard wilt weergeven, selecteert 
 
 Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: selecteren [!UICONTROL Production] of [!UICONTROL Development] verstrekt verbruiksrapporten voor alle productie of ontwikkelingszandbakken, respectievelijk.
 
-![Het tabblad Overzicht van het dashboard voor licentiegebruik met de sandboxkiezer gemarkeerd.](../images/license-usage/select-sandbox.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de sandboxkiezer gemarkeerd.](../images/license-usage/select-sandbox-old.png)
 
 >[!WARNING]
 >
@@ -51,16 +51,15 @@ Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetze
 >2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
 >3. Voeg onder de categorie Machtiging voor dashboard van gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
 
-
 ### Een datumbereik selecteren
 
 Nadat u een sandbox hebt geselecteerd, kunt u de vervolgkeuzelijst voor het datumbereik gebruiken om de periode te selecteren die moet worden weergegeven in het dashboard. Er zijn meerdere opties beschikbaar, waaronder de standaardwaarde van de laatste 30 dagen.
 
-![Het tabblad Overzicht van het dashboard voor licentiegebruik met de vervolgkeuzelijst voor datumbereik gemarkeerd.](../images/license-usage/select-date-range.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de vervolgkeuzelijst voor datumbereik gemarkeerd.](../images/license-usage/select-date-range-old.png)
 
 U kunt ook **[!UICONTROL Custom date]** om de periode te kiezen die wordt getoond.
 
-![Het tabblad Overzicht van het dashboard voor licentiegebruik met de opties voor het aangepaste datumbereik gemarkeerd.](../images/license-usage/select-custom-date.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de aangepaste datumbereikopties gemarkeerd.](../images/license-usage/select-custom-date-old.png)
 
 ## Widgets
 
@@ -68,7 +67,7 @@ Het licentiegebruikdashboard bestaat uit widgets, die alleen-lezen cijfers weerg
 
 Elke widget geeft een lijngrafiek weer waarin de werkelijke nummers voor uw organisatie worden vergeleken met het totale beschikbare aantal voor licenties van uw organisatie en een percentage van het totale gebruik.
 
-![Het tabblad Overzicht van het dashboard voor licentiegebruik met de lijngrafiek van de metrische widget voor licentiegebruik van Sample gemarkeerd.](../images/license-usage/widgets.png)
+![Het tabblad Overzicht van het dashboard voor licentiegebruik met de lijngrafiek van de metrische widget voor licentiegebruik van Sample gemarkeerd.](../images/license-usage/widgets-old.png)
 
 ## Beschikbare cijfers
 
@@ -83,12 +82,12 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 | Licentie | Productbeschrijving |
 |---|---|
-| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, toepassingsservices en intelligente services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT KLANTGEGEVENS, PLATFORM:OD</li><li>RT KLANTGEGEVENS PLATFORM:OD PRFL NAAR 10M</li><li>RT KLANTGEGEVENS PLATFORM:OD PRFL NAAR 50 M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, toepassingsservices en intelligente services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT-KLANTENGEGEVENSPLATFORM:OD</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 10M</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL NAAR 10M</li><li>AEP:OD ACTIVATION PRFL TOT 50M</li></ul> | [Adobe Experience Platform-activering](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
@@ -98,4 +97,4 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 Nadat u dit document hebt gelezen, kunt u het dashboard voor licentiegebruik vinden en een sandbox selecteren die u wilt weergeven. U kunt ook meer informatie vinden over beschikbare metriek voor uw organisatie, gebaseerd op de vergunning uw organisatie heeft gekocht.
 
-Voor meer informatie over andere functies die beschikbaar zijn in de gebruikersinterface van het Experience Platform, raadpleegt u de [UI-hulplijn Platform](../../landing/ui-guide.md).
+Voor meer informatie over andere functies die beschikbaar zijn in de gebruikersinterface van het Experience Platform raadpleegt u de [Handleiding voor platforminterface](../../landing/ui-guide.md).
