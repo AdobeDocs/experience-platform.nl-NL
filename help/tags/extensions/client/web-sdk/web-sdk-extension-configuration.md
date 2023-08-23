@@ -2,9 +2,9 @@
 title: De extensie Adobe Experience Platform Web SDK configureren
 description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in UI te vormen.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # De extensie van de Adobe Experience Platform Web SDK-tag configureren
 
-Met de tagextensie Adobe Experience Platform Web SDK worden gegevens vanuit wegeigenschappen via het Adobe Experience Platform Edge Network verzonden naar Adobe Experience Cloud. Met de extensie kunt u gegevens streamen naar een Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
+Met de tagextensie Adobe Experience Platform Web SDK worden gegevens vanuit wegeigenschappen via het Adobe Experience Platform Edge Network verzonden naar Adobe Experience Cloud. Met de extensie kunt u gegevens streamen naar Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
 
 Dit document behandelt hoe te om de uitbreiding in UI te vormen.
 
 ## Aan de slag
 
-Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in UI en selecteer **[!UICONTROL Extensions]** tab. Onder het Web SDK van het Platform, selecteer **[!UICONTROL Configure]**.
+Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in UI en selecteer **[!UICONTROL Extensions]** tab. Selecteer onder de SDK van het Web Platform **[!UICONTROL Configure]**.
 
 ![](assets/configure.png)
 
@@ -42,17 +42,17 @@ De naam van de extensie wordt standaard ingesteld op &quot;[!DNL alloy]&quot;. U
 
 ### **[!UICONTROL IMS Organization ID]**
 
-De [!UICONTROL IMS Organization ID] Dit is de organisatie waarnaar u de gegevens wilt verzenden bij Adobe. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
+De [!UICONTROL IMS Organization ID] Dit is de organisatie waarnaar u de gegevens wilt verzenden bij de Adobe. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
 
 ### **[!UICONTROL Edge Domain]**
 
-De [!UICONTROL Edge Domain] is het domein waarvan de extensie Adobe Experience Platform gegevens verzendt en ontvangt. Adobe raadt u aan een 1st-party-domein (CNAME) te gebruiken voor deze extensie. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+De [!UICONTROL Edge Domain] is het domein waarvan de extensie Adobe Experience Platform gegevens verzendt en ontvangt. De Adobe adviseert gebruikend een 1st-partijdomein (CNAME) voor deze uitbreiding. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
 ## [!UICONTROL Datastreams]
 
 Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een gegevensstroom-id gebruikt om naar de serverconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
-Zie de handleiding op [gegevensstromen](../../../../datastreams/overview.md) voor meer informatie .
+Zie de handleiding op [datastreams](../../../../datastreams/overview.md) voor meer informatie .
 
 
 ## [!UICONTROL Privacy]
@@ -86,7 +86,7 @@ Met deze optie kan de SDK proberen een gebruikers-id op te slaan in een cookie v
 
 ![](assets/personalization.png)
 
-Als u bepaalde onderdelen wilt verbergen als uw site wordt geladen terwijl er gepersonaliseerde inhoud is geladen, kunt u de elementen opgeven die u wilt verbergen in de voorverborgen stijleditor. Vervolgens kunt u het standaard voorverborgen fragment dat u ontvangt, kopiëren en in het dialoogvenster `<head>`-element van uw HTML-site.
+Als u bepaalde onderdelen wilt verbergen als uw site wordt geladen terwijl er gepersonaliseerde inhoud is geladen, kunt u de elementen opgeven die u wilt verbergen in de voorverborgen stijleditor. Vervolgens kunt u het standaard voorverborgen fragment dat u wordt aangeboden, kopiëren en in het deelvenster `<head>`-element van uw HTML-site.
 
 ## [!UICONTROL Data Collection]
 
@@ -98,7 +98,7 @@ De callback-functie die in de extensie wordt opgegeven, wordt ook [`onBeforeEven
 
 ### [!UICONTROL Click data collection]
 
-De SDK kan automatisch koppelingsklikgegevens voor u verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als ze een van de downloadexpressies bevatten die in het dialoogvenster [!UICONTROL Download Link Qualifier] textbox. Adobe biedt u enkele standaardkwalificatietoetsen voor downloadkoppelingen, maar deze kunnen op elk gewenst moment worden bewerkt.
+De SDK kan automatisch koppelingsklikgegevens voor u verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als ze een van de downloadexpressies bevatten die in het dialoogvenster [!UICONTROL Download Link Qualifier] textbox. Adobe biedt u enkele standaardkwalificatietekens voor downloadkoppelingen, maar deze kunnen op elk gewenst moment worden bewerkt.
 
 ### [!UICONTROL Automatically collected context data]
 
@@ -112,12 +112,16 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
-1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [databaseconfiguratiepagina](../../../../datastreams/configure.md).
+1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](../../../../datastreams/configure.md).
 2. Dan, moet u de met voeten treden naar het Netwerk van de Rand of via een bevel van SDK van het Web, of door de de markeringsuitbreiding van SDK van het Web te gebruiken.
 
 Zie de gegevensstroom [documentatie bij overschrijvingen van configuratie](../../../../datastreams/overrides.md) voor gedetailleerde instructies op hoe te om configuraties met betrekking tot gegevensstroom met voeten te treden.
 
 Als alternatief voor het overgaan van de met voeten treedt door een bevel van SDK van het Web, kunt u de met voeten treden in het scherm van de markeringsuitbreiding vormen hieronder wordt getoond die.
+
+>[!IMPORTANT]
+>
+> DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwikkelings-, staging- en productieomgevingen hebben allemaal verschillende overschrijvingen. U kunt de instellingen tussen de instellingen kopiëren met behulp van de speciale opties die in het onderstaande scherm worden weergegeven.
 
 ![Afbeelding die de configuratie van de gegevensstroom overschrijft in de webSDK-tagextensiepagina.](assets/datastream-overrides.png)
 
@@ -127,4 +131,4 @@ Als alternatief voor het overgaan van de met voeten treedt door een bevel van SD
 
 ### [!UICONTROL Edge base path]
 
-Gebruik dit veld als u het basispad moet wijzigen dat wordt gebruikt voor interactie met Adobe Edge Network. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou Adobe u kunnen vragen om dit gebied te veranderen.
+Gebruik dit veld als u het basispad moet wijzigen dat wordt gebruikt voor interactie met Adobe Edge Network. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou de Adobe u kunnen vragen om dit gebied te veranderen.
