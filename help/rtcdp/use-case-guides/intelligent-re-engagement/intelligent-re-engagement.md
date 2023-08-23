@@ -3,9 +3,9 @@ title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
 hide: true
 hidefromtoc: true
-source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
+source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
 workflow-type: tm+mt
-source-wordcount: '3374'
+source-wordcount: '3403'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ De reis voor het bevestigen van bestellingen is vooral gericht op productaankope
 
 >[!ENDTABS]
 
-## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
+## Hoe het gebruiksgeval te bereiken {#achieve-use-case-instruction}
 
 Lees de onderstaande secties door om alle stappen in de bovenstaande overzichten op hoog niveau te voltooien. Deze bevatten koppelingen naar meer informatie en meer gedetailleerde instructies.
 
@@ -91,7 +91,7 @@ Lees de onderstaande secties door om alle stappen in de bovenstaande overzichten
 
 Wanneer u de stappen voor het implementeren van het hoofdlettergebruik uitvoert, maakt u gebruik van de Real-Time CDP-functionaliteit en UI-elementen die aan het begin van dit document worden vermeld. Zorg ervoor dat u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
-### Een schemaontwerp maken en veldgroepen opgeven
+### Een schemaontwerp maken en veldgroepen opgeven {#schema-design}
 
 De middelen van het Gegevensmodel van de ervaring (XDM) worden beheerd in [!UICONTROL Schemas] werkruimte in [!DNL Adobe Experience Platform]. U kunt de belangrijkste bronnen bekijken en verkennen die door [!DNL Adobe] (bijvoorbeeld [!UICONTROL Field Groups]) en maak aangepaste bronnen en schema&#39;s voor uw organisatie.
 
@@ -337,22 +337,13 @@ De [!DNL Adobe] webconnectorschema wordt voorgesteld door een [!UICONTROL XDM Ex
 
 +++
 
-+++Klasse-waarde (veldgroep)
-
-| Velden | Vereiste |
-| --- | --- |
-| `eventType` | Vereist |
-| `timestamp` | Vereist |
-
-+++
-
 +++Externe gegevens van de Controle van het Bronsysteem (de Groep van het Gebied)
 
 De externe Attributen van de Controle van het Systeem van de Bron is een standaardgegevenstype van de Gegevens van de Ervaring (XDM) dat controledetails over een extern bronsysteem vangt.
 
 +++
 
-### Een dataset maken op basis van een schema
+### Een dataset maken op basis van een schema {#dataset-from-schema}
 
 Een dataset is een opslag en beheersstructuur voor een groep gegevens. Elk schema voor intelligente reizen voor opnieuw engagement heeft één dataset.
 
@@ -362,31 +353,31 @@ Voor meer informatie over het maken van een [gegevensset](/help/catalog/datasets
 >
 >Gelijkaardig aan de stap om een schema tot stand te brengen, moet u toelaten dat de dataset in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant In real time, lees [Schema-zelfstudie maken.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Privacy, toestemming en gegevensbeheer
+### Privacy, toestemming en gegevensbeheer {#privacy-consent}
 
 #### Toestemmingsbeleid
 
 >[!IMPORTANT]
 >
->Het bieden van klanten de mogelijkheid om zich af te melden van het ontvangen van communicatie van een merk is een wettelijke vereiste, en het verzekeren van deze keuze wordt gerespecteerd. Meer informatie over de toepasselijke wetgeving vindt u in het [Documentatie Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Het bieden van klanten de mogelijkheid om zich af te melden van het ontvangen van communicatie van een merk is een wettelijke vereiste, en het verzekeren van deze keuze wordt gerespecteerd. Meer informatie over de toepasselijke wetgeving vindt u in het [Overzicht van privacyregels](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Bij het maken van een pad voor hernieuwde betrokkenheid moet rekening worden gehouden met het volgende toestemmingsbeleid:
+Bij het maken van een pad voor opnieuw toewijzen, geldt het volgende [toestemmingsbeleid](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) dient te worden overwogen:
 
 * Indien `consents.marketing.email.val = "Y"` vervolgens kunt u e-mailen
 * Indien `consents.marketing.sms.val = "Y"` Dan kan SMS
 * Indien `consents.marketing.push.val = "Y"` vervolgens kan duwen
 * Indien `consents.share.val = "Y"` kan vervolgens adverteren
 
-#### DULE label en handhaving
+#### Label voor gegevensbeheer en handhaving
 
-Bij het maken van een pad voor een nieuwe afspraak moet rekening worden gehouden met de volgende DULE-labels:
+Bij het maken van een pad voor opnieuw toewijzen, geldt het volgende [Labels voor gegevensbeheer](/help/data-governance/labels/overview.md) dient te worden overwogen:
 
 * Persoonlijke e-mailadressen worden gebruikt als direct identificeerbare gegevens die worden gebruikt om een specifieke persoon te identificeren of contact met hem te krijgen in plaats van met een apparaat.
    * `personalEmail.address = I1`
 
 #### Marketingsbeleid
 
-Er is geen marketingbeleid vereist voor de herplaatsingsreizen, maar het volgende moet als gewenst worden beschouwd:
+Er zijn geen [marketingbeleid](/help/data-governance/policies/overview.md) die nodig zijn voor het opnieuw in dienst nemen van een dienstverband, moeten echter de volgende punten als gewenst worden beschouwd:
 
 * Gevoelige gegevens beperken
 * Onsite reclame beperken
@@ -394,11 +385,13 @@ Er is geen marketingbeleid vereist voor de herplaatsingsreizen, maar het volgend
 * Doelstelling voor meerdere sites beperken
 * Het combineren van rechtstreeks identificeerbare gegevens met anonieme gegevens beperken
 
-### Een doelgroep maken
+### Een doelgroep maken {#create-audience}
 
 #### Audience creation for brand re-engagement trip
 
 Bij de reactiereizen worden doelgroepen gebruikt om specifieke kenmerken of gedragingen te definiëren die door een subset van profielen uit uw profielarchief worden gedeeld, zodat een verhandelbare groep personen kan worden onderscheiden van uw klantenbasis. Soorten publiek kan op meerdere manieren worden gemaakt [!DNL Adobe Experience Platform].
+
+Voor meer informatie over het maken van een publiek leest u de [UI-gids voor de service Publiek](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Voor meer informatie over hoe u direct samenstelt [Soorten publiek](/help/segmentation/home.md), lees de [Handleiding voor compositie van publiek](/help/segmentation/ui/audience-composition.md).
 
@@ -444,13 +437,17 @@ De beschrijving van de verlaten wagenreis ziet er als volgt uit:
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB Reis voor orderbevestiging]
+
+Voor deze reis is geen publiek nodig.
+
 >[!ENDTABS]
 
-### Reisinstallatie in Adobe Journey Optimizer
+### Reisinstallatie in Adobe Journey Optimizer {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] omvat niet alles die in de diagrammen wordt getoond. Alle betaalde mediaconsters worden gemaakt in [!UICONTROL Destinations].
+>[!DNL Adobe Journey Optimizer] omvat niet alles die in de diagrammen wordt getoond. Alles [betaalde mediasleutels](/help/destinations/catalog/social/overview.md) worden gemaakt in [!UICONTROL Destinations].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helpt u verbonden, contextafhankelijke en persoonlijke ervaringen aan uw klanten te leveren. De reis van de klant is het volledige proces van interactie van een klant met het merk. Voor elke gebruiksreis is specifieke informatie vereist. Hieronder worden de precieze gegevens vermeld die voor elke tak van de Reis nodig zijn.
 
@@ -768,7 +765,7 @@ De reis voor het bevestigen van bestellingen is vooral gericht op productaankope
 
 Meer informatie over het maken van reizen in [!DNL Adobe Journey Optimizer], lees de [Aan de slag met reishandleiding](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Betaalde mediadeskundigen instellen in bestemmingen
+### Betaalde mediadeskundigen instellen in bestemmingen {#paid-media-ads}
 
 Het bestemmingskader wordt gebruikt voor betaalde media advertenties. Zodra de toestemming is gecontroleerd verzendt het naar de diverse gevormde bestemmingen. Voor meer informatie over bestemmingen, lees [Overzicht van doelen](/help/destinations/home.md) document.
 
@@ -787,6 +784,3 @@ Het segment Abandon Cart streamt en kan daarom door het kader van de Bestemming 
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming doel](/help/destinations/catalog/streaming/http-destination.md)
    * [Aangepaste Destination SDK](/help/destinations/destination-sdk/overview.md)
-
-* Bestand/gepland om de drie uur
-   * [E-mailmarketing](/help/destinations/catalog/email-marketing/overview.md)
