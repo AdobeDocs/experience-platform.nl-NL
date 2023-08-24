@@ -4,9 +4,9 @@ title: Handleiding voor publiek dashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het publiek dat uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2873'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw publiek kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. In deze handleiding wordt beschreven hoe u de [!UICONTROL Audiences] dashboard in UI en verstrekt meer informatie over de visualisaties die in het dashboard worden getoond.
 
-Voor een overzicht van alle functies van de Adobe Experience Platform Segmentation Service in de gebruikersinterface van het Platform gaat u naar de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md).
+Voor een overzicht van alle Adobe Experience Platform Segmentation Service-functies in de gebruikersinterface van het Platform gaat u naar de [Handleiding voor segmentatieservice](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Audiences] dashboardgegevens
 
@@ -29,11 +29,11 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Ontdek de [!UICONTROL Audiences] dashboard {#explore}
 
-Ga naar de [!UICONTROL Audiences] dashboard in de interface van het Platform, selecteert u **[!UICONTROL Audiences]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Ga naar de [!UICONTROL Audiences] het dashboard binnen UI van het Platform, uitgezocht **[!UICONTROL Audiences]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Platform is en nog niet de actieve datasets van het Profiel of gecreeerd verenigingsbeleid heeft, [!UICONTROL Audiences] het dashboard is niet zichtbaar. In plaats daarvan [!UICONTROL Overview] het lusje toont verbindingen en documentatie om u te helpen met segmentatie beginnen.
+>Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, [!UICONTROL Audiences] het dashboard is niet zichtbaar. In plaats daarvan [!UICONTROL Overview] het lusje toont verbindingen en documentatie om u te helpen met segmentatie beginnen.
 
 ![De [!UICONTROL Audiences] dashboard [!UICONTROL Overview] tab met [!UICONTROL Audiences] en [!UICONTROL Overview] gemarkeerd.](../images/audiences/dashboard-overview.png)
 
@@ -86,6 +86,65 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 >
 >Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden.
 >Raadpleeg de documentatie in het dialoogvenster [Profielen](./profiles.md#default-widgets) en [Doelen](./destinations.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken. U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
+
+## AI-widgets van klant {#customer-ai-audiences-widgets}
+
+Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. De AI van de klant doet dit door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om te voorspellen **scores voor churn- of conversiedichtheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [verdeling van scores](#customer-ai-distribution-of-scores) en [overzicht van scores](#customer-ai-scoring-summary) inzichten tonen de verdeeldheid in uw publiek aan . Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
+
+* [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
+
+### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_distributionOfScores"
+>title="Verdeling van scores"
+>abstract="Deze widget visualiseert de verdeling van het totale aantal profielen aan de hand van hun eigenschapscores in stappen van 5 procent. De verdeling van het profielaantal wordt bepaald door het AI-model en het geselecteerde samenvoegbeleid. U kunt het AI-model wijzigen in het vervolgkeuzemenu onder de titel van de widget."
+
+De [!UICONTROL Customer AI distribution of scores] widget categoriseert het totale aantal profielen op basis van hun populatiescore . De verdeling van het profielaantal wordt bepaald door het AI model en het geselecteerde fusiebeleid, dan visualiseerd in vijf percententoename die op hun neiging wijzen. Het aantal profielen wordt opgegeven langs de Y-as en de dichtheidsscores langs de X-as.
+
+>[!NOTE]
+>
+>Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
+
+Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de vervolgkeuzelijst onder de titel van de widget. Het vervolgkeuzemenu bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie voor instructies op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md).
+
+>[!NOTE]
+>
+>Selecteer de vervolgkeuzelijst direct onder het tabblad Overzicht om het samenvoegbeleid te wijzigen dat bepaalt welke profielen in de analyse worden opgenomen. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+
+Als u naar de pagina Gedetailleerde inzichten voor het geselecteerde AI-model van de Klant wilt navigeren, selecteert u **[!UICONTROL View model details]**.
+
+![Het Experience Platform Soorten publiek dashboard met het [!UICONTROL Customer AI distribution of scores] widget en [!UICONTROL View model details] gemarkeerd.](../images/segments/customer-ai-distribution-of-scores.png)
+
+De gedetailleerde pagina met modelinzichten wordt weergegeven.
+
+![De pagina met inzichten voor de AI van de Klant.](../images/profiles/customer-ai-insights-page.png)
+
+Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
+### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_scoringSummary"
+>title="Overzicht van scores"
+>abstract="Deze widget geeft het totale aantal scoreprofielen weer en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid. Het donutdiagram illustreert de proportionele samenstelling van totale profielen in hoge, gemiddelde en lage dichtheid."
+
+Deze widget geeft het totale aantal profielen met een score weer en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid, respectievelijk groen, geel en rood. Een donutdiagram wordt gebruikt om de proportionele samenstelling van totale profielen tussen hoge, gemiddelde en lage eigenschappen als groen, geel en rood te illustreren. Een profiel komt in aanmerking voor een hoge dichtheid van meer dan 75, een gemiddelde dichtheid tussen 25 en 74 en een lage dichtheid onder 24. Een legenda geeft de kleurcode en drempelwaarden van eigenschappen aan. De tellingen van het profiel voor de hoge, middelgrote, en lage eigenschappen worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+
+>[!NOTE]
+>
+>Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
+
+Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md) voor gedetailleerde instructies.
+
+>[!NOTE]
+>
+>Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+
+![Het dashboard Soorten publiek van het Experience Platform met de overzichtswidget voor scores van de Klant AI gemarkeerd.](../images/segments/customer-ai-scoring-summary.png)
+
+Selecteren **[!UICONTROL View model details]** om naar de gedetailleerde pagina met inzichten voor het geselecteerde AI-model van de Klant te navigeren. Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Standaardwidgets {#standard-widgets}
 

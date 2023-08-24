@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
-source-wordcount: '3283'
+source-wordcount: '4058'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het dashboard Profielen verkennen
 
-Als u naar het dashboard Profielen in de gebruikersinterface van het Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het dashboard Profielen in de interface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 De [!UICONTROL Browse] kunt u de alleen-lezen profielen die in uw organisatie worden opgenomen, doorzoeken en bekijken. Van hieruit kunt u belangrijke informatie zien die tot het profiel behoort met betrekking tot hun voorkeuren, gebeurtenissen uit het verleden, interacties en doelgroepen.
 
-Raadpleeg voor meer informatie over de mogelijkheden voor profielweergave in de gebruikersinterface van het Platform de documentatie over [browserprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+Raadpleeg de documentatie over [browserprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Beleid samenvoegen {#merge-policies}
 
@@ -91,7 +91,7 @@ De [!UICONTROL Union Schema] Het dashboard geeft het samenvoegingsschema voor ee
 
 De schema&#39;s van de unie zijn samengesteld uit veelvoudige schema&#39;s die de zelfde klasse delen en voor Profiel toegelaten. Ze stellen u in staat om in één weergave een samenvoeging te zien van elk veld in elk schema dat dezelfde klasse deelt.
 
-Meer informatie over [verenigingsschema&#39;s weergeven in de gebruikersinterface van het Platform](../../profile/ui/union-schema.md#view-union-schemas), raadpleegt u de UI-handleiding voor het samenvoegingsschema.
+Meer informatie over [Unieschema&#39;s weergeven in de interface van het platform](../../profile/ui/union-schema.md#view-union-schemas), raadpleegt u de UI-handleiding voor het samenvoegingsschema.
 
 ## Widgets en metriek
 
@@ -115,9 +115,68 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 >
 >Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden. Raadpleeg de documentatie in het dialoogvenster [Doelen](./destinations.md#default-widgets) en [Soorten publiek](./audiences.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken. U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
+## AI-widgets van klant {#customer-ai-profiles-widgets}
+
+Klant-AI wordt gebruikt om aangepaste eigenschapscores zoals churn en conversie voor individuele profielen op schaal te genereren. De AI van de klant doet dit door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om te voorspellen **scores voor churn- of conversiedichtheid**. Deze zeer nauwkeurige modellen van de klantenneiging staan voor nauwkeurigere segmentatie en het richten toe. De [verdeling van scores](#customer-ai-distribution-of-scores) en [overzicht van scores](#customer-ai-scoring-summary) inzichten tonen de verdeeldheid in uw publiek aan . Ze benadrukken welke profielen de hoge/lage/gemiddelde dichtheid zijn en hoe deze over het aantal profielen worden verdeeld.
+
+* [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
+
+### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_distributionOfScores"
+>title="Verdeling van scores"
+>abstract="Deze widget visualiseert de verdeling van het totale aantal profielen aan de hand van hun eigenschapscores in stappen van 5 procent. De verdeling van het profielaantal wordt bepaald door het AI-model en het geselecteerde samenvoegbeleid. U kunt het AI-model wijzigen in het vervolgkeuzemenu onder de titel van de widget."
+
+De [!UICONTROL Customer AI distribution of scores] widget categoriseert het totale aantal profielen op basis van hun populatiescore . De verdeling van het profielaantal wordt bepaald door het AI model en het geselecteerde fusiebeleid, dan visualiseerd in vijf percententoename die op hun neiging wijzen. Het aantal profielen wordt opgegeven langs de Y-as en de dichtheidsscores langs de X-as.
+
+>[!NOTE]
+>
+>Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
+
+Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de vervolgkeuzelijst onder de titel van de widget. Het vervolgkeuzemenu bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie voor instructies op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md).
+
+>[!NOTE]
+>
+>Selecteer de vervolgkeuzelijst direct onder het tabblad Overzicht om het samenvoegbeleid te wijzigen dat bepaalt welke profielen in de analyse worden opgenomen. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+
+Als u naar de pagina Gedetailleerde inzichten voor het geselecteerde AI-model van de Klant wilt navigeren, selecteert u **[!UICONTROL View model details]**.
+
+![Het Experience Platform Soorten publiek dashboard met het [!UICONTROL Customer AI distribution of scores] widget en [!UICONTROL View model details] gemarkeerd.](../images/segments/customer-ai-distribution-of-scores.png)
+
+De gedetailleerde pagina met modelinzichten wordt weergegeven.
+
+![De pagina met inzichten voor de AI van de Klant.](../images/profiles/customer-ai-insights-page.png)
+
+Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
+### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_scoringSummary"
+>title="Overzicht van scores"
+>abstract="Deze widget geeft het totale aantal scoreprofielen weer en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid. Het donutdiagram illustreert de proportionele samenstelling van totale profielen in hoge, gemiddelde en lage dichtheid."
+
+Deze widget geeft het totale aantal profielen met een score weer en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid, respectievelijk groen, geel en rood. Een donutdiagram illustreert de proportionele samenstelling van profielen tussen hoge, gemiddelde en lage eigenschappen. Een profiel komt in aanmerking voor een hoge dichtheid van meer dan 75, een gemiddelde dichtheid tussen 25 en 74 en een lage dichtheid onder 24. Een legenda geeft de kleurcode en drempelwaarden van eigenschappen aan. De tellingen van het profiel voor de hoge, middelgrote, en lage eigenschappen worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
+
+>[!NOTE]
+>
+>Als de visualisatie een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
+
+Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureerde AI-modellen van de Klant. Selecteer het juiste AI-model voor uw analyse in de lijst met beschikbare modellen. Als er geen AI-model van de Klant beschikbaar is, geeft een bericht in de widget u de opdracht ten minste één AI-model van de Klant te configureren en wordt een hyperlink naar de configuratiepagina van het AI-model van de Klant weergegeven. Zie de documentatie op [hoe te om een instantie van de KlantAI te vormen](../../intelligent-services/customer-ai/user-guide/configure.md) voor gedetailleerde instructies.
+
+>[!NOTE]
+>
+>Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [beleid samenvoegen](#merge-policies) voor een korte beschrijving, of [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie .
+
+![Het dashboard Soorten publiek van het Experience Platform met de overzichtswidget voor scores van de Klant AI gemarkeerd.](../images/segments/customer-ai-scoring-summary.png)
+
+Als u naar de pagina Gedetailleerde inzichten voor het geselecteerde AI-model van de Klant wilt navigeren, selecteert u **[!UICONTROL View model details]**. Meer informatie over de AI van de Klant vindt u op de [Dreamweaver-handleiding voor inzichten](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
 ## Standaardwidgets {#standard-widgets}
 
-Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw profielgegevens. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op de profielgegevens. U kunt ook aangepaste widgets maken die u met uw organisatie kunt delen met de [!UICONTROL Widget library]. Als u meer wilt weten over het maken van aangepaste widgets, leest u eerst de [Overzicht van widgetbibliotheek](../customize/widget-library.md).
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
@@ -177,7 +236,7 @@ De **[!UICONTROL Profile count change]** wordt het aantal samengevoegde profiele
 >
 >De [!UICONTROL Profile count change] widget geeft het aantal toegevoegde profielen aan **na** de eerste profielopname en de instelling van de Profile Store. Met andere woorden, als uw organisatie de Profile Store heeft ingesteld en op dag 1 4.000.000 heeft ingeslikt, is het dashboard binnen 24 uur beschikbaar, maar de [!UICONTROL Profile count change] widget wordt ingesteld op 0. Deze telmethode wordt gebruikt om een piek te voorkomen die verband houdt met de eerste opname van profielen in het systeem. In de komende 30 dagen, neemt uw organisatie een extra 1.000.000 profielen in de Opslag van het Profiel op. Nadat de volgende opname wordt genomen, [!UICONTROL Profile count change] widget zou in totaal 1.000.000 toegevoegde profielen weergeven, terwijl de widget [!UICONTROL Profile count] widget zou in totaal 5.000.000 profielen weergeven.
 
-![Het dashboard Profielen van UI van het Platform met de benadrukte de verandering van het Aantal van het Profiel widget.](../images/profiles/profile-count-change.png)
+![Het UI-profieldashboard van het platform met de widget voor het wijzigen van het aantal profielen gemarkeerd.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Profiles count change trend] {#profiles-count-change-trend}
 
@@ -377,7 +436,7 @@ Deze widget gebruikt een Venn-diagram om de overlapping van twee geselecteerde d
 
 Aangezien widget de visuele oversteekplaats van segmentdefinities toont, kunt u uw segmenteringsstrategie optimaliseren door gelijkenissen tussen uw segmentdefinities te bestuderen.
 
-![Het dashboard Profielen van UI van het Platform met de dropdown van het fusiebeleid en widgetpublieksdropdowns benadrukt.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Het dashboard Profielen van het Platform UI met de dropdown van het fusiebeleid en widgetpublieksdropdowns benadrukt.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
