@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Beleid voor toegangsbeheer beheren
 description: Dit document biedt informatie over het beheer van het beleid voor toegangsbeheer via de interface voor machtigingen in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
+source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,74 @@ The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
 ![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
+
+## Beleid voor een sandbox configureren
+
+>[!IMPORTANT]
+>
+>Standaard worden de [!UICONTROL Auto-include] Deze functie is ingeschakeld voor alle klanten, wat betekent dat alle sandboxen aan het beleid worden toegevoegd.
+
+>[!NOTE]
+>
+>De **[!UICONTROL Default-Label-Based-Access-Control-Policy]** beleid is momenteel de enige beschikbare voor configuratie.
+
+Als u sandboxen wilt weergeven die aan een beleid zijn gekoppeld, selecteert u het beleid in het menu **[!UICONTROL Policies]** tab.
+
+![De pagina met beleidsregels met een lijst met bestaande beleidsregels die beschikbaar zijn.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Selecteer vervolgens het beleid en selecteer **[!UICONTROL Sandboxes]** tab. Er wordt een lijst weergegeven met sandboxen die aan het beleid zijn gekoppeld.
+
+![De pagina met beleidsregels met een lijst met bestaande beleidsregels die beschikbaar zijn.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### Beleid toevoegen aan alle sandboxen
+
+Gebruik de **[!UICONTROL Auto-include]** schakelen op de **[!UICONTROL Sandboxes]** om het beleid voor alle sandboxen te activeren.
+
+![De [!UICONTROL Sandboxes] tabblad met het tabblad [!UICONTROL Auto-include] schakelen.](../../images/flac-ui/abac-policies-auto-include.png)
+
+De **[!UICONTROL Enable Auto-include]** wordt weergegeven waarin u wordt gevraagd uw selectie te bevestigen. Selecteren **[!UICONTROL Enable]** om de configuratie-instelling te voltooien.
+
+![De [!UICONTROL Enable Auto-include] dialoogvenstermarkering [!UICONTROL Enable].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>Het beleid wordt geactiveerd voor alle bestaande sandboxen en wordt automatisch toegevoegd aan nieuwe sandboxen wanneer deze beschikbaar komen.
+
+### Beleid toevoegen aan geselecteerde sandboxen
+
+>[!IMPORTANT]
+>
+>Als de [!UICONTROL Auto-include] schakelt uit. U moet sandboxen handmatig beheren en toevoegen aan het beleid.
+
+Gebruik de **[!UICONTROL Auto-include]** schakelen op de **[!UICONTROL Sandboxes]** om het beleid voor alle sandboxen uit te schakelen.
+
+![De [!UICONTROL Sandboxes] tabblad met het tabblad [!UICONTROL Auto-include] schakelen.](../../images/flac-ui/abac-policies-auto-include.png)
+
+Van de **[!UICONTROL Sandboxes]** tab, selecteert u **[!UICONTROL Add Sandboxes]** om sandboxen te selecteren waarop dit beleid van toepassing is.
+
+![De [!UICONTROL Sandboxes] tabblad met een lijst met sandboxen die aan het beleid zijn toegevoegd.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+Er wordt een lijst met sandboxen weergegeven. Selecteer in de lijst de sandbox die u wilt toevoegen. U kunt ook de zoekbalk gebruiken om te zoeken naar de sandbox. Selecteer **[!UICONTROL Save]**.
+
+![De [!UICONTROL Add Sandboxes] pagina met een lijst met bestaande sandboxen die aan het beleid kunnen worden toegevoegd.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>De geselecteerde sandboxen zijn aan het beleid toegevoegd.
+
+### Sandboxen verwijderen uit een beleid
+
+Als u een sandbox wilt verwijderen, selecteert u de **X** naast de naam van de sandbox.
+
+![De [!UICONTROL Sandboxes] tabblad met een lijst met sandboxen, markeren [!UICONTROL X] om te verwijderen.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+De **[!UICONTROL Remove]** wordt weergegeven waarin u wordt gevraagd uw selectie te bevestigen. Selecteren **[!UICONTROL Confirm]** om de verwijdering te voltooien.
+
+![De [!UICONTROL Remove] dialoogvenstermarkering [!UICONTROL Confirm].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>De geselecteerde sandbox is uit het beleid verwijderd.
 
 ## Een beleid activeren
 
