@@ -1,7 +1,7 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van augustus 2023 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: a699f66fd48f463cc69ea0f214f487cce360615e
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 3%
@@ -63,10 +63,14 @@ Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie [op attrib
 Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
 **Nieuwe of bijgewerkte functies**
-&#x200B; | Functie | Beschrijving | | — | — | |Gebruikszaak voor analyse en volgen van toestemming | Leer hoe u met de [document voor de analyse en het bijhouden van de toestemming](../../dashboards/insights-use-cases/consent-analysis.md). Het bepaalt hoe te om een publiek met de aangewezen attributen voor uw bedrijfsbehoeften te creëren, en dan de inzichten te verbruiken door het gebruik van pre-gevormde widgets in Adobe Experience Platform UI. Het biedt ook instructies voor het bouwen van uw eigen aangepaste widget met de door de gebruiker gedefinieerde dashboardfunctie. Het document heeft betrekking op gevallen waarin toestemming wordt verleend en gevallen waarin toestemming wordt gegeven, overlappen. |
+
+| Functie | Beschrijving |
+| --- | --- |
+| Gebruiksscenario voor analyse en bijhouden van toestemming | Leer hoe u met de [document voor de analyse en het bijhouden van de toestemming](../../dashboards/insights-use-cases/consent-analysis.md). Het bepaalt hoe te om een publiek met de aangewezen attributen voor uw bedrijfsbehoeften te creëren, en dan de inzichten te verbruiken door het gebruik van pre-gevormde widgets in Adobe Experience Platform UI. Het biedt ook instructies voor het bouwen van uw eigen aangepaste widget met de door de gebruiker gedefinieerde dashboardfunctie. Het document heeft betrekking op gevallen waarin toestemming wordt verleend en gevallen waarin toestemming wordt gegeven, overlappen. |
 
 {style="table-layout:auto"}
-&#x200B; Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
+
+Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
 
 ## Gegevensverzameling {#data-collection}
 
