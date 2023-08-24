@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 24%
@@ -33,7 +33,7 @@ ht-degree: 24%
    - [Publiek-dashboard](ui/audience-dashboard.md)
    - [Samenstelling publiek](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
-   - [Soortgelijke soorten publiek](ui/lookalike-audiences.md)
+   - [Soortgelijk publiek](ui/lookalike-audiences.md)
    - [Doelgroepen](ui/prospect-audience.md)
    - [Randsegmentatie](ui/edge-segmentation.md)
    - [Streaming segmentering](ui/streaming-segmentation.md)
@@ -69,4 +69,4 @@ ht-degree: 24%
    - [Compatibiliteit met gegevensgebruik voor segmenten afdwingen](tutorials/governance.md)
 - [Veelgestelde vragen](./faq.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
