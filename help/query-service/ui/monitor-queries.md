@@ -2,9 +2,9 @@
 title: Geplande query's controleren
 description: Leer hoe te om vragen door de Dienst UI van de Vraag te controleren.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
+source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De [!UICONTROL Scheduled Queries] verstrekt een overzicht van al uw geplande vra
 
 Ga naar de [!UICONTROL Scheduled Queries] tab, selecteert u **[!UICONTROL Queries]** van de linkernavigatiebalk, gevolgd door **[!UICONTROL Scheduled Queries]**
 
-![Het Geplande lusje van Vragen in de werkruimte van Vragen.](../images/ui/monitor-queries/scheduled-queries.png)
+![Het Geplande lusje van Vragen in de werkruimte van Vragen met Gepland benadrukte Vragen en Vragen.](../images/ui/monitor-queries/scheduled-queries.png)
 
 In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
@@ -29,7 +29,7 @@ In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
 | Kolom | Beschrijving |
 |---|---|
-| **[!UICONTROL Name]** | Het naamveld is de sjabloonnaam of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, wordt de naam ervan een fragment van de eerste SQL die wordt gebruikt om de query te maken. Als u een lijst wilt zien met alle regels die aan de query zijn gekoppeld, selecteert u een item in het menu [!UICONTROL Name] kolom. Zie voor meer informatie de [de loopdienstdetails van de vraaglooppas](#query-runs) sectie. |
+| **[!UICONTROL Name]** | Het naamveld is de sjabloonnaam of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, wordt de naam ervan een fragment van de eerste SQL die wordt gebruikt om de query te maken. Als u een lijst wilt zien met alle regels die aan de query zijn gekoppeld, selecteert u een item in het menu [!UICONTROL Name] kolom. Zie de klasse [de loopdienstdetails van de vraaglooppas](#query-runs) sectie. |
 | **[!UICONTROL Template]** | De sjabloonnaam van de query. Selecteer een sjabloonnaam om naar de Query-editor te navigeren. Het vraagmalplaatje wordt getoond in de Redacteur van de Vraag voor gemak. Als er geen malplaatjenaam is, wordt de rij duidelijk met een koppelteken en er is geen capaciteit om aan de Redacteur van de Vraag om de vraag te bekijken opnieuw te richten. |
 | **[!UICONTROL SQL]** | Een fragment van de SQL-query. |
 | **[!UICONTROL Run frequency]** | De frequentie waarmee de query is ingesteld op uitvoeren. De beschikbare waarden zijn `Run once` en `Scheduled`. U kunt query&#39;s filteren op basis van hun uitvoeringsfrequentie. |
@@ -63,7 +63,7 @@ Schakel de desbetreffende selectievakjes in of uit om een tabelkolom te verwijde
 
 ## Geplande query&#39;s beheren met inlinehandelingen {#inline-actions}
 
-De [!UICONTROL Scheduled Queries] de mening biedt diverse gealigneerde acties aan om al uw geplande vragen van één plaats te beheren. Inline-handelingen worden aangegeven in elke rij met ovaal. Selecteer de ellips van een geplande vraag die u wilt leiden om de beschikbare opties in een pop-up menu te zien. De beschikbare opties omvatten [[!UICONTROL Disable schedule]](#disable) of [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), en [[!UICONTROL Subscribe]](#alert-subscription) om waarschuwingen te vragen.
+De [!UICONTROL Scheduled Queries] de mening biedt diverse gealigneerde acties aan om al uw geplande vragen van één plaats te beheren. Inline-handelingen worden aangegeven in elke rij met ovaal. Selecteer de ellips van een geplande vraag die u wilt leiden om de beschikbare opties in een pop-up menu te zien. Tot de beschikbare opties behoren [[!UICONTROL Disable schedule]](#disable) of [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), en [[!UICONTROL Subscribe]](#alert-subscription) om waarschuwingen te vragen.
 
 ![Het tabblad Geplande query&#39;s met de ellips van de inline-handeling en het pop-upmenu gemarkeerd.](../images/ui/monitor-queries/disable-inline.png)
 
@@ -93,7 +93,7 @@ De [!UICONTROL Alerts] wordt geopend. De [!UICONTROL Alerts] Hiermee meldt u zic
 
 Zie de [API-documentatie voor abonnementen](../api/alert-subscriptions.md) voor meer informatie .
 
-### De querygegevens weergeven {#query-details}
+### De query-details weergeven {#query-details}
 
 Selecteer het informatiepictogram (![Een informatiepictogram.](../images/ui/monitor-queries/information-icon.png)) om het deelvenster Details voor de query weer te geven. Het detailspaneel bevat alle relevante informatie over de vraag voorbij de feiten inbegrepen in de geplande vraaglijst. De extra informatie omvat vraagidentiteitskaart, de laatste gewijzigde datum, SQL van de vraag, planningsidentiteitskaart, en het huidige vastgestelde programma.
 
@@ -125,7 +125,7 @@ Deze informatie wordt verstrekt in een vijf-kolomlijst. Elke rij geeft een query
 
 | Kolomnaam | Beschrijving |
 |---|---|
-| **[!UICONTROL Query run ID]** | ID van de vraaglooppas voor de dagelijkse uitvoering. Selecteer **[!UICONTROL Query run ID]** om naar de [!UICONTROL Query run overview]. |
+| **[!UICONTROL Query run ID]** | ID van de vraaglooppas voor de dagelijkse uitvoering. Selecteer de **[!UICONTROL Query run ID]** om naar de [!UICONTROL Query run overview]. |
 | **[!UICONTROL Query run start]** | De tijdstempel wanneer de query werd uitgevoerd. De tijdstempel heeft de UTC-indeling. |
 | **[!UICONTROL Query run complete]** | De tijdstempel wanneer de query is voltooid. De tijdstempel heeft de UTC-indeling. |
 | **[!UICONTROL Status]** | De status van de meest recente queryuitvoering. De drie statuswaarden zijn: `successful` `failed` of `in progress`. |
@@ -163,7 +163,7 @@ Vragen die anonieme blokken gebruiken om uit hun SQL-instructies te bestaan, wor
 
 Anonieme blokken worden aangeduid door het gebruik van een `$$` voor de query. Om meer over anonieme blokken in de vraagdienst te weten te komen, zie [anoniem blokdocument](../essential-concepts/anonymous-block.md).
 
-Anonieme subquery&#39;s voor blokken hebben tabs links van de status van de run. Selecteer een tabblad om de details van de uitvoering weer te geven.
+Anonieme subquery&#39;s voor blokken hebben tabs links van de status van de run. Selecteer een tabblad om de uitvoergegevens weer te geven.
 
 ![Het overzicht van de looppas van de Vraag die een anonieme blokvraag toont. De veelvoudige vraaglusjes worden benadrukt.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
