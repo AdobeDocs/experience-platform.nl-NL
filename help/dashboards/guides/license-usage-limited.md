@@ -3,7 +3,9 @@ keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiks
 title: Handleiding voor het gebruiksdashboard voor licenties
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
-source-git-commit: 7d4e293ed739e9cbc22d8cb15d2b373ebef48cce
+hide: true
+hidefromtoc: true
+source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 0%
