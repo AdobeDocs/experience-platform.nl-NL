@@ -1,12 +1,10 @@
 ---
 title: Activeren het potentiële publiek aan bestemmingen
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: Leer hoe te om perspectiefpubliek aan bestemmingen te activeren
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -16,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
 
 In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [publiek perspectief](/help/segmentation/ui/prospect-audience.md) van Adobe Experience Platform naar uw voorkeursbestemming.
 
@@ -82,3 +80,11 @@ Voor de rest van het activeringswerkschema om perspectiefpubliek uit te voeren, 
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
+
+Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
+
+* [Eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aanvullen](/help/rtcdp/partner-data/supplement-first-party-profiles.md) om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te krijgen en betere publieksoptimalisering te bereiken.
+* Gebruik gegevensondersteuning van derden in Real-Time CDP voor [breid uw profielbasis met perspectiefprofielen van gegevenspartners uit en verbind met hen om nieuwe klanten te verwerven of te bereiken](/help/rtcdp/partner-data/prospecting.md).
+* [De partner van hefboomwerking steunde erkenning voor het personaliseren van onsite ervaringen](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder dat de gebruiker dit heeft geverifieerd of dat hij of zij een eerdere geschiedenis heeft met uw merk.

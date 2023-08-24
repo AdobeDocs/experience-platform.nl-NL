@@ -1,18 +1,20 @@
 ---
 title: Erkenning door Partner-Aided Visitor gebruiken om onsite ervaringen aan te passen
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers een persoonlijke onsite ervaring te bieden.
-hide: true
-hidefromtoc: true
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2424'
 ht-degree: 0%
 
 ---
 
 # Erkenning door bezoekers met hulp van partners gebruiken om ervaringen op locatie aan te passen
 
-Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden aan bezoekers van webeigenschappen. Gebruik deze zelfstudie om inzicht te krijgen in de implementatiereeks van verschillende elementen in Experience Platform en andere Experience Cloud-oplossingen om een gepersonaliseerde ervaring weer te geven voor geverifieerde en niet-geverifieerde bezoekers.
+>[!AVAILABILITY]
+>
+>Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
+
+Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden aan bezoekers van webeigenschappen. Gebruik deze zelfstudie om inzicht te krijgen in de implementatiereeks van verschillende elementen in Experience Platform en andere oplossingen voor Experiencen Cloud en om een gepersonaliseerde ervaring weer te geven voor geverifieerde en niet-geverifieerde bezoekers.
 
 ![Een infografisch die beschrijft hoe te om partner-verstrekte attributen te gebruiken om gepersonaliseerde ervaringen aan uw bezoekers te leveren.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
@@ -30,9 +32,9 @@ Wanneer het van plan zijn om partner-verstrekte attributen te gebruiken om geper
 * In hoeverre bent u comfortabel om personalisatie op verschillende kanalen en voor verschillende gebruiksgevallen te leveren die op voorwaardelijk afgeleide attributen, tegenover deterministisch bevestigde attributen worden gebaseerd?
 * Hoe moet de ervaring van een vooraf geverifieerde maar herkende bezoeker veranderen wanneer ze worden geverifieerd?
 
-### UI-functionaliteit, Platform-componenten en Experience Cloud-producten die u wilt gebruiken {#ui-functionality-and-elements}
+### UI-functionaliteit, platformcomponenten en Experiencen Cloud die u wilt gebruiken {#ui-functionality-and-elements}
 
-Als u dit geval met succes wilt implementeren, moet u meerdere gebieden van Real-time Customer Data Platform en andere Experience Cloud-oplossingen gebruiken. Zorg ervoor dat u de benodigde [attribuut-gebaseerde toegangsbeheertoestemmingen](/help/access-control/abac/overview.md) voor al deze gebieden, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
+Als u dit geval met succes wilt implementeren, moet u meerdere gebieden van Real-time Customer Data Platform en andere oplossingen voor Experiencen Cloud gebruiken. Zorg ervoor dat u de benodigde [attribuut-gebaseerde toegangsbeheertoestemmingen](/help/access-control/abac/overview.md) voor al deze gebieden, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
 * Gegevensverzameling
    * [Adobe Experience Platform Web SDK](/help/edge/home.md)
@@ -97,7 +99,7 @@ Gelijkaardig aan de stap wanneer het creëren van een schema, moet u toelaten da
 
 ### Verzameling van gebeurtenisgegevens implementeren in uw webeigenschap {#implement-data-collection}
 
-Nadat u de configuratie van uw gegevensbeheer hebt ingesteld, moet u nu realtime-gebeurtenis implementeren [gegevensverzameling](/help/collection/home.md) op uw webeigenschap. U moet uw bezit met de bibliotheek van de gegevensinzameling van de Adobe instrumenten - [!UICONTROL Web SDK] - real-time oproepen van gebeurtenissen verzamelen en terugsturen naar Real-Time CDP. Dit item bestaat uit een paar afzonderlijke taken voor een paar componenten van gegevensverzameling.
+Nadat u de configuratie van uw gegevensbeheer hebt ingesteld, moet u nu realtime-gebeurtenis implementeren [gegevensverzameling](/help/collection/home.md) op uw webeigenschap. U moet uw bezit met de bibliotheek van de de gegevensinzameling van de Adobe instrumenten - [!UICONTROL Web SDK] - real-time oproepen van gebeurtenissen verzamelen en terugsturen naar Real-Time CDP. Dit item bestaat uit een paar afzonderlijke taken voor een paar componenten van gegevensverzameling.
 
 >[!IMPORTANT]
 >
@@ -113,11 +115,11 @@ Gebruik eerst de toepassingsschakelaar in de rechterbovenhoek van het scherm om 
 
 De **[!UICONTROL Data Collection]** lijkt op de onderstaande afbeelding.
 
-![Sectie voor gegevensverzameling van de gebruikersinterface van het Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Sectie voor gegevensverzameling van de gebruikersinterface van het platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Gegevensstroom maken
 
-Als eerste stap in het gedeelte Gegevensverzameling [een nieuwe gegevensstroom maken](/help/datastreams/configure.md). De gegevensstroom is de basis van hoe gegevens worden verzameld en correct naar de juiste Adobe-app worden gerouteerd, in dit geval Experience Platform.
+Als eerste stap in het gedeelte Gegevensverzameling [een nieuwe gegevensstroom maken](/help/datastreams/configure.md). De gegevensstroom is de basis van hoe gegevens worden verzameld en correct worden gerouteerd naar de juiste Adobe-app, in dit geval Experience Platform.
 
 Terwijl u de gegevensstroom maakt, kunt u in het dialoogvenster **[!UICONTROL Event schema]** selecteert u het schema dat u eerder hebt gemaakt.
 
@@ -161,7 +163,7 @@ Volledige informatie ophalen over [hoe te om SDK van het Web te installeren](htt
 
 #### ID-serviceversie installeren
 
-Gebruik de [Experience Cloud ID Service-extensie](/help/tags/extensions/client/id-service/overview.md) om een unieke op apparaat-gebaseerde eerste-partijidentiteit voor bezoekers over alle oplossingen van de Experience Cloud te creëren. Zoeken naar **[!UICONTROL ID Service]** in de extensiecatalogus en installeer deze. Houd alle standaardinstellingen wanneer u de extensie installeert.
+Gebruik de [Experience Cloud ID Service-extensie](/help/tags/extensions/client/id-service/overview.md) om een unieke, op apparaten gebaseerde identiteit van de eerste partij te maken voor bezoekers in alle oplossingen van het Experience Cloud. Zoeken naar **[!UICONTROL ID Service]** in de extensiecatalogus en installeer deze. Houd alle standaardinstellingen wanneer u de extensie installeert.
 
 ![Bekijk de extensie Id-service in de catalogus Extensies.](/help/rtcdp/assets/partner-data/onsite-personalization/id-service-extension.png)
 
@@ -197,7 +199,7 @@ Van het schema, selecteer de derdeattributen die aan de waarden beantwoorden die
 
 #### Regels instellen
 
-In de **[!UICONTROL Rules]** kunt u uw website configureren om een verzoek tot aanpassing naar Adobe te sturen met de kenmerken die zijn geladen in de gegevenselementen die u net hebt gemaakt. Meer informatie over [regels maken](/help/tags/ui/managing-resources/rules.md).
+In de **[!UICONTROL Rules]** kunt u uw website configureren om een verzoek tot aanpassing te verzenden naar een Adobe met de kenmerken die zijn geladen in de gegevenselementen die u net hebt gemaakt. Meer informatie over [regels maken](/help/tags/ui/managing-resources/rules.md).
 
 Selecteer **[!UICONTROL Create new Rule]**. Geef deze regel een naam **[!UICONTROL Personalize]** en selecteer + teken naast **[!UICONTROL Events]**. Selecteren **[!UICONTROL Page Bottom]** als de gebeurtenis en save.
 
@@ -265,4 +267,4 @@ Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Ti
 
 * [Eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aanvullen](/help/rtcdp/partner-data/supplement-first-party-profiles.md) om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te krijgen en betere publieksoptimalisering te bereiken.
 * Gebruik gegevensondersteuning van derden in Real-Time CDP voor [breid uw profielbasis met perspectiefprofielen van gegevenspartners uit en verbind met hen om nieuwe klanten te verwerven of te bereiken](/help/rtcdp/partner-data/prospecting.md).
-* (**Binnenkort beschikbaar**) [!BADGE Beta]{type=Informative}**Uitgebreide activering** het gebruiken van Partner IDs aan het publiceren van ecosystemen die geen PII of gehakt PII goedkeuren.
+* [Uitgebreide activering van perspectiefprofielen en perspectiefpubliek](/help/destinations/ui/activate-prospect-audiences.md) om doelen te selecteren.

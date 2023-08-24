@@ -1,12 +1,9 @@
 ---
-title: (Bèta) Voeg Eerste-partijProfielen met partner-Geleverde Attributen toe
+title: Voeg Eerste-partijProfielen met partner-Geleverde Attributen toe
 description: Leer hoe te om eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aan te vullen om uw gegevensstichting te verbeteren, nieuwe inzichten in uw klantenbasis, en betere publieksoptimalisering te verkrijgen.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* Deze bètafunctionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in het dialoogvenster [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
 
 Voeg eerst-partijprofielen met attributen van vertrouwde op gegevenspartners toe om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
 
@@ -34,7 +31,7 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 >
 >De extra door partners opgegeven kenmerken die in Real-Time CDP worden ingevoerd, zijn van invloed op uw *gemiddelde profielrijkheid*. Lees de [Real-time Customer Data Platform-productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over profielrijkdom.
 
-## Hoe wordt het gebruiksgeval bereikt: overzicht op hoog niveau {#achieve-the-use-case-high-level}
+## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
 ![Verrijken profielen met door partners opgegeven kenmerken gebruiken een visueel overzicht op hoog niveau.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
@@ -44,19 +41,19 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 4. De **partner** voegt gelicentieerde kenmerken toe voor de profielen waarmee ze kunnen overeenkomen. Optioneel: [Partner-id](/help/identity-service/namespaces.md) kan in partner worden omvat en worden opgenomen scoped identiteitskaart namespace.
 5. Als **klant**, laadt u kenmerken van de gegevenspartner in klantprofielen in Real-Time CDP.
 
-## Hoe wordt het gebruiksgeval bereikt: Stapsgewijze instructies {#step-by-step-instructions}
+## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
 
 Lees de onderstaande secties door, die koppelingen naar verdere documentatie bevatten, om alle stappen in het bovenstaande overzicht op hoog niveau te voltooien.
 
 ### De attributen van de vergunning van de partner {#license-attributes-from-partner}
 
-Deze stap wordt behandeld in [voorwaarden](#prerequisites-and-planning) en Adobe gaat ervan uit dat u de juiste contractuele overeenkomsten hebt met vertrouwde gegevensleveranciers om uw first-party profielen te verhogen.
+Deze stap wordt behandeld in [voorwaarden](#prerequisites-and-planning) en de Adobe gaat ervan uit dat u de juiste contractuele overeenkomsten hebt met vertrouwde gegevensleveranciers om uw first-party profielen te verhogen.
 
 ### Breid uw profielgegevens en governancemodel uit om partner-verstrekte attributen aan te passen. {#extend-governance-model}
 
 Op dit punt, breidt u uw gegevensbeheerkader in Real-Time CDP uit om partner-verstrekte attributen aan te passen.
 
-U kunt nu een nieuw schema maken van de **[!UICONTROL XDM Individual Profile]** klasse, of breid een bestaand schema van het zelfde type uit om partner-verstrekte attributen te omvatten. Adobe adviseert sterk om een nieuw schema met een nieuwe reeks gebiedsgroepen te creëren die de extra attributen van de gegevensverkoper het best vertegenwoordigen. Dit zorgt ervoor dat uw gegevensschema&#39;s schoon zijn en onafhankelijk van elkaar kunnen evolueren.
+U kunt nu een nieuw schema maken van de **[!UICONTROL XDM Individual Profile]** klasse, of breid een bestaand schema van het zelfde type uit om partner-verstrekte attributen te omvatten. De Adobe adviseert sterk om een nieuw schema met een nieuwe reeks gebiedsgroepen tot stand te brengen die de extra attributen van de gegevensverkoper het best vertegenwoordigen. Dit zorgt ervoor dat uw gegevensschema&#39;s schoon zijn en onafhankelijk van elkaar kunnen evolueren.
 
 Om partner-verstrekte attributen in een schema te omvatten, kunt u of een nieuwe gebiedsgroep met de attributen tot stand brengen die u verwacht, of u kunt één van de preconfigured gebiedsgroepen gebruiken die door Adobe worden verstrekt.
 
@@ -121,5 +118,6 @@ Houd rekening met de volgende beperkingen wanneer u het op deze pagina beschreve
 
 Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
 
-* (**Binnenkort beschikbaar**) [!BADGE Beta]{type=Informative}**Leverancier met hulp van erkenning** voor het aanpassen van de ervaringen ter plaatse tijdens het bezoek en voor het opnieuw toewijzen van doelen na het bezoek, zonder dat de gebruiker dit heeft geverifieerd of een eerdere geschiedenis met uw merk heeft.
-* (**Binnenkort beschikbaar**) [!BADGE Beta]{type=Informative}**Uitgebreide activering** het gebruiken van Partner IDs aan het publiceren van ecosystemen die geen PII of gehakt PII goedkeuren.
+* Gebruik gegevensondersteuning van derden in Real-Time CDP voor [breid uw profielbasis met perspectiefprofielen van gegevenspartners uit en verbind met hen om nieuwe klanten te verwerven of te bereiken](/help/rtcdp/partner-data/prospecting.md).
+* [De partner van hefboomwerking steunde erkenning voor het personaliseren van onsite ervaringen](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder dat de gebruiker dit heeft geverifieerd of dat hij of zij een eerdere geschiedenis heeft met uw merk.
+* [Uitgebreide activering van perspectiefprofielen en perspectiefpubliek](/help/destinations/ui/activate-prospect-audiences.md) om doelen te selecteren.

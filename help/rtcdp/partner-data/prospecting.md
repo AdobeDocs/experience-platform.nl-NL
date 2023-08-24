@@ -1,12 +1,9 @@
 ---
-title: (Beta) Nieuwe klanten betrekken en verwerven door gebruik te onderzoeken
+title: Nieuwe klanten aantrekken en aanschaffen door gebruiksscenario's te bekijken
 description: Leer hoe te om nieuwe klanten door het prospecteren van gebruiksgevallen in dienst te nemen en te verwerven, die door de steun van partnergegevens in Real-Time CDP wordt toegelaten.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* Deze bètafunctionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
 
 Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit te breiden met perspectiefprofielen van gegevenspartners en met hen in gesprek te gaan om nieuwe klanten te verkrijgen of te bereiken.
 
@@ -57,13 +54,13 @@ Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, m
 * [Labels voor gegevensgebruik](/help/data-governance/labels/overview.md)
 * [Gegevenssets](/help/catalog/datasets/overview.md)
 * [Bronnen](/help/sources/home.md)
-* Profielen (koppeling naar perspectiefprofielen)
-* Soorten publiek (link naar publiek in perspectief)
+* [Prospectieprofielen](/help/profile/ui/prospect-profile.md)
+* [Doelgroepen](/help/segmentation/ui/prospect-audience.md)
 * [Doelen](/help/destinations/home.md)
 
 ### De details van het het profielprofiel van de vergunning derde van de partner {#license-profiles-from-partner}
 
-Deze stap wordt behandeld in [voorwaarden](#prerequisites-and-planning) en Adobe veronderstelt dat u de juiste contractuele overeenkomsten met vertrouwde gegevensverkopers hebt om perspectiefprofielen in te voeren die door de gegevenspartner worden verstrekt.
+Deze stap wordt behandeld in [voorwaarden](#prerequisites-and-planning) en de Adobe veronderstelt dat u de juiste contractuele overeenkomsten met vertrouwde op gegevensverkopers hebt om perspectiefprofielen in te voeren die door de gegevenspartner worden verstrekt.
 
 ### Breid uw profielgegevens en governancemodel uit om partner-verstrekte perspectiefprofielen aan te passen {#extend-governance-model}
 
@@ -184,7 +181,7 @@ U kunt ook elk perspectiefprofiel selecteren voor verdere inspectie, zoals hiero
 
 ![Weergave van hoe u perspectiefprofielen kunt inspecteren.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**Binnenkort beschikbaar**) Meer informatie over perspectiefprofielen.
+Meer informatie over [perspectiefprofielen](/help/profile/ui/prospect-profile.md).
 
 ### Perspectiefpubliek maken {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ Merk op dat de ervaring van de publieksopbouw voor perspectiefprofielen van de e
 * Alleen batchprofielevaluatie.
 * Steunt niet het bouwen van publiek dat op tijd-reeksgebeurtenissen wordt gebaseerd.
 
-(**Binnenkort beschikbaar**) Meer informatie over mogelijke doelgroepen.
+Meer informatie over [publiek perspectief](/help/segmentation/ui/prospect-audience.md).
 
 ### Activeren perspectiefprofielen aan bestemmingen {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Maak gebruik van het potentiële publiek door hen naar bestemmingen uit te voere
 
 Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
 
-* [!BADGE Beta]{type=Informative}[Eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aanvullen](/help/rtcdp/partner-data/supplement-first-party-profiles.md) om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te krijgen en betere publieksoptimalisering te bereiken.
-* (**Binnenkort beschikbaar**) [!BADGE Beta]{type=Informative}**Leverancier met hulp van erkenning** voor het aanpassen van de ervaringen ter plaatse tijdens het bezoek en voor het opnieuw toewijzen van doelen na het bezoek, zonder dat de gebruiker dit heeft geverifieerd of een eerdere geschiedenis met uw merk heeft.
+* [Eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aanvullen](/help/rtcdp/partner-data/supplement-first-party-profiles.md) om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te krijgen en betere publieksoptimalisering te bereiken.
+* [De partner van hefboomwerking steunde erkenning voor het personaliseren van onsite ervaringen](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder dat de gebruiker dit heeft geverifieerd of dat hij of zij een eerdere geschiedenis heeft met uw merk.
+* [Uitgebreide activering van perspectiefprofielen en perspectiefpubliek](/help/destinations/ui/activate-prospect-audiences.md) om doelen te selecteren.
