@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van augustus 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8a313587a339ea775adc5422519841b1e679be7a
+source-git-commit: b7812acf7c250621d40b152b391142050ac70e18
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1627'
 ht-degree: 3%
 
 ---
@@ -123,6 +123,17 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
 | Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Gebruik deze klasse om perspectiefprofielen in te brengen die van de top-of-the-funnel van gegevensverkopers van het gebruiksgeval van de klantenverwerving worden afkomstig. |
+
+{style="table-layout:auto"}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving bijwerken |
+| --- | --- | --- |
+| Extensie ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Context Data]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Context Data] toewijzingsobject toegevoegd aan [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] om contextgegevens voor Adobe Analytics te verstrekken. |
+| Veldgroep | Meerdere | Meerdere velden toegevoegd aan [[!UICONTROL Enriched Event Segment Details]](https://github.com/adobe/xdm/pull/1760/files). |
+
+{style="table-layout:auto"}
 
 Lees voor meer informatie de [XDM System, overzicht](../../xdm/home.md).
 

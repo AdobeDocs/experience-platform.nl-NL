@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2581'
 ht-degree: 0%
@@ -66,7 +66,7 @@ De [!UICONTROL Manage tags] kan de dialoog ook bestaande markeringen uit een dat
 
 Zodra een markering aan een dataset is toegevoegd, kunnen de datasets worden gefiltreerd gebaseerd op de overeenkomstige markering. Zie de sectie over hoe te [filteren, gegevenssets op tags](#enable-profile) voor meer informatie .
 
-Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids over [beheren, taxonomieën van metagegevens](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt beschreven hoe een gebruiker met de juiste machtigingen vooraf gedefinieerde tags kan maken, categorieën aan tags kan toewijzen en alle gerelateerde CRUD-bewerkingen kan uitvoeren op tags en tagcategorieën in de gebruikersinterface van het Platform.
+Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids over [beheren, taxonomieën van metagegevens](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt beschreven hoe een gebruiker met de juiste machtigingen vooraf gedefinieerde tags kan maken, categorieën aan tags kan toewijzen en alle gerelateerde CRUD-bewerkingen kan uitvoeren op tags en tagcategorieën in de gebruikersinterface van het platform.
 
 ## Gegevensbestanden zoeken en filteren {#search-and-filter}
 
@@ -207,7 +207,7 @@ U kunt de labels voor gegevensbeheer voor een dataset beheren door de inlineopti
 
 Met labels voor gegevensgebruik, toegepast op schemaniveau, kunt u gegevenssets en velden categoriseren volgens het gebruiksbeleid dat van toepassing is op die gegevens. Zie de [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie over labels, of raadpleegt u de [gebruikershandleiding voor gegevensgebruikslabels](../../data-governance/labels/overview.md) voor instructies op hoe te om etiketten op schema&#39;s voor propagatie op datasets toe te passen.
 
-### Verplaatsen naar mappen {#move-to-folders}
+## Verplaatsen naar mappen {#move-to-folders}
 
 U kunt datasets binnen omslagen voor beter gegevenssetbeheer plaatsen. Om een dataset in een omslag te bewegen, selecteer de ellipsen (...) naast de datasetnaam u wenst te leiden, die door wordt gevolgd **[!UICONTROL Move to folder]** in het vervolgkeuzemenu.
 
@@ -217,7 +217,7 @@ De [!UICONTROL Move] dataset aan omslagdialoog verschijnt. Selecteer de map waar
 
 ![De [!UICONTROL Move] dialoogvenster Gegevensset met [!UICONTROL Move] gemarkeerd.](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >U kunt mappen ook rechtstreeks maken vanuit het dialoogvenster Gegevensset verplaatsen. Als u een map wilt maken, selecteert u het pictogram Map maken (![Het pictogram Map maken.](../images/datasets/user-guide/create-folder-icon.png)) in de rechterbovenhoek van het dialoogvenster.
 >

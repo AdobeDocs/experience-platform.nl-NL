@@ -5,7 +5,7 @@ description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 0%
@@ -68,7 +68,7 @@ De lijst wijst op primaire metrisch voor elk product, aangezien elk product talr
 
 Alle beschikbare metriek worden weergegeven op het tabblad [!UICONTROL Summary] tab. De beschikbare maatstaven zijn afhankelijk van het product met licentie. Deze weergave biedt **een geconsolideerde weergave van alle metriek in alle productie- of ontwikkelingssandboxen**. Hetzelfde analyseniveau geldt voor zowel productie- als ontwikkelingssandboxen.
 
-![De summiere mening van een Product van het Platform dat alle beschikbare metriek voor dat product toont.]()
+![De summiere mening van een Product van het Platform dat alle beschikbare metriek voor dat product toont.](../images/license-usage/summary-tab.png)
 
 Op het tabblad Overzicht bevat de tabel de [!UICONTROL Metric] kolom. Deze beschrijvingen die leesbaar zijn voor mensen, geven alle metriek aan die voor dat type sandbox wordt gebruikt.
 
@@ -78,7 +78,7 @@ Als u de weergave wilt wijzigen tussen de typen productie- en ontwikkelingssandb
 
 Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: selecteren [!UICONTROL Production] of [!UICONTROL Development] verstrekt verbruiksrapporten voor alle productie of ontwikkelingszandbakken, respectievelijk.
 
-![De summiere mening van een Product van het Platform met de zanddozen van de Productie en van de Ontwikkeling benadrukte.](../images/license-usage/summary-tab.png)
+![De summiere mening van een Product van het Platform met de zanddozen van de Productie en van de Ontwikkeling benadrukte.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
