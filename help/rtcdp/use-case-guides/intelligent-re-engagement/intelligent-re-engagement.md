@@ -1,9 +1,7 @@
 ---
 title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
-hide: true
-hidefromtoc: true
-source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
+source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3403'
 ht-degree: 2%
@@ -12,7 +10,7 @@ ht-degree: 2%
 
 # Inzet uw klanten op intelligente wijze opnieuw aan om terug te keren
 
-Neem cliënten opnieuw in dienst die een omzetting hebben verlaten alvorens het op een intelligente en verantwoordelijke manier te voltooien. Verloren klanten door ervaringen eerder dan herinneringen aantrekken om conversie te verbeteren en de groei van de waarde van de cliëntlevensduur te drijven.
+Neem klanten opnieuw in dienst die een omzetting hebben verlaten alvorens het op een intelligente en verantwoordelijke manier te voltooien. Verloren klanten door ervaringen eerder dan herinneringen aantrekken om conversie te verbeteren en de groei van de waarde van de cliëntlevensduur te drijven.
 
 U kunt real-time overwegingen gebruiken, rekening houden met alle kwaliteiten en gedragingen van de consument en snelle herkwalificatie bieden op basis van zowel online als offline gebeurtenissen.
 
