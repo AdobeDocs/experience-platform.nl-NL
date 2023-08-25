@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1394'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,20 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 >[!NOTE]
 >
->De extensie van de tag Analytics indien vaak bijgewerkt als reactie op updates van de [JavaScript-bibliotheek voor meting van app](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Zie de [Opmerkingen bij de release AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) voor meer informatie over de hieronder vermelde specifieke versies.
+>De extensie van de tag Analytics indien vaak bijgewerkt als reactie op updates van de [JavaScript-bibliotheek AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Zie de [Opmerkingen bij de release AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) voor meer informatie over de hieronder vermelde specifieke versies.
+
+## 19 juli 2023
+
+**Adobe Analytics Extension 1.9.2**
+
+**Functies**:
+
+* Bijgewerkt naar AppMeasurement v2.24.0.
+* Een optionele configuratie toegevoegd (`decodeLinkParameters` default `false`) die URL&#39;s met dubbele byte gecodeerde tekens decodeert.
+
+**Bugfixes**:
+* Extra foutafhandeling toegevoegd voor browsers met een onjuiste hoge entropie [Gebruiker-agent cliëntwenken](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API&#39;s.
+* Gewijzigd [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Koptekst van inhoudstype die moet worden gebruikt `x-www-form-urlencoded` standaard.
 
 ## 23 september 2022
 
@@ -24,7 +37,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 **Functies**:
 
 * Bijgewerkt naar AppMeasurement v2.23.0.
-* De extensie kan nu hoge entropie verzamelen [gebruiker-agent cliëntwenken](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) zoals ondersteund door de nieuwste versie van AppMeasurement.
+* De extensie kan nu hoge entropie verzamelen [gebruiker-agent cliëntwenken](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) zoals ondersteund door de meest recente versie van AppMeasurement.
 
 ## 28 februari 2022
 
@@ -32,7 +45,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Bugfixes**:
 
-* Enkele foutopsporingsinstructies zijn verwijderd uit AppMeturement.
+* Enkele foutopsporingsinstructies in het AppMeasurement zijn verwijderd.
 
 ## 29 november 2021
 
@@ -40,7 +53,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Bugfixes**:
 
-* Bijgewerkte AppMeasurement naar v2.22.3.
+* Bijgewerkt AppMeasurement naar v2.2.3.
 
 ## 16 september 2021
 
@@ -48,8 +61,8 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Bugfixes**:
 
-* Bijgewerkte AppMeasurement naar v2.2.2.2.
-* Verwijderd afgekeurd buildInfo.environment
+* Bijgewerkt AppMeasurement naar v2.2.2.2.
+* Vervangen buildInfo.environment is verwijderd
 
 ## 24 augustus 2021
 
@@ -70,7 +83,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Functies**:
 
-* Bijgewerkt [AppMeasurement tot 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* Bijgewerkt [AppMeasurement naar 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * De kleine verandering UI zodat het extra plaatsen nu samengevouwen in een accordeon in plaats van checkbox verschijnt.
 
 ## 2 juni 2020
@@ -79,7 +92,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Bugfixes**:
 
-* Probleem verholpen waarbij de winkelwagengebeurtenissen (prodView, scAdd, scView, enz.) niet werden weergegeven tijdens de vervolgkeuzelijst met gebeurtenissen. Al deze moeten nu selecteerbaar zijn in het vervolgkeuzemenu.
+* Probleem verholpen waarbij de winkelwagengebeurtenissen (prodView, scAdd, scView, enz.) niet werden weergegeven tijdens de vervolgkeuzelijst met gebeurtenissen. Al deze moeten nu selecteerbaar zijn in de vervolgkeuzelijst.
 
 **Functies**:
 
@@ -98,7 +111,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Functies**:
 
-* Bijgewerkt [AppMeasurement tot 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* Bijgewerkt [AppMeasurement naar 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 
 ## 2 maart 2020
 
@@ -154,7 +167,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Functies**:
 
-* Bijgewerkte AppMeasurement aan 2.17
+* Bijgewerkt AppMeasurement naar 2.17
 * Bijgewerkte module van het Beheer van het Publiek om DIL 9.3 te steunen
 * Bijgewerkte veldbreedten voor meer ruimte
 
@@ -172,7 +185,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 * De Adobe Analytics-extensie is bijgewerkt om DIL 9.2 voor Audience Manager te ondersteunen
 
 * Bijgewerkte extensie voor ondersteuning [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
-* Het volgende selectievakje is verwijderd omdat het niet meer wordt ondersteund: &quot;Koppel de IFRAME voor het publiceren van de bestemming niet aan de DOM- of branddoelen&quot;
+* Het volgende selectievakje is verwijderd, omdat het niet meer wordt ondersteund: &quot;Koppel het doel-publicatie-IFRAME niet aan de DOM- of branddoelen&quot;
 
 ## 4 juni 2019
 
@@ -181,7 +194,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 **Functies**:
 
 * De Adobe Analytics-extensie is bijgewerkt naar [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0) dat een oplossing bevat voor een bekende clearVars-kwestie
-* Een Exchange-koppeling toegevoegd aan de extensie. De Exchange-lijst kan worden bereikt door het vervolgkeuzemenu te selecteren en &#39;&#39;extensie info&#39;&#39; te kiezen
+* Een Exchange-koppeling toegevoegd aan de extensie. De Exchange-lijst kan worden bereikt door het vervolgkeuzemenu te selecteren en &quot;extensie info&quot; te kiezen
 
 **Bugfixes**:
 
@@ -194,7 +207,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Bugfixes**:
 
-* Gerolde extensie terug nadat een bug is gevonden in appMeasurement 2.13.0. appMeasurement 2.13.0 veroorzaakte een probleem dat de ECID niet verstuurde. Als u 1.7.3 installeerde, raden we u aan een upgrade naar 1.7.4 uit te voeren om dit probleem te voorkomen. De clearVars wordt uitgevoerd totdat een bijgewerkte versie van appMeasurement wordt uitgebracht.
+* De uitgerolde extensie is hersteld nadat een fout is gevonden in appMeasurement 2.13.0. appMeasurement 2.13.0 veroorzaakte een probleem dat de ECID niet verstuurde. Als u 1.7.3 hebt geïnstalleerd, raden we u aan te upgraden naar 1.7.4 om dit probleem te voorkomen. De clearVars wordt uitgevoerd totdat een bijgewerkte versie van appMeasurement wordt uitgebracht.
 
 ## 12 april 2019
 
@@ -252,7 +265,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * De Adobe Analytics-extensie is bijgewerkt om DIL 8.0 in Audience Manager te ondersteunen
 * Scheidte het veld &quot;Serialize from value&quot; in twee velden, &quot;Event ID&quot; en &quot;Event Value&quot;. Hiermee wordt het probleem verholpen dat een waarde toewijst in plaats van een gebeurtenis met serienummering te coderen
-   * Opmerking: als u het huidige veld gebruikt om een id toe te voegen met een tekenreeks (bijvoorbeeld Event7=3:abc123) u zult uw input moeten bijwerken om identiteitskaart op het gebied van de &quot;identiteitskaart van de Gebeurtenis&quot;te weerspiegelen
+   * Opmerking: als u het huidige veld gebruikt om een id toe te voegen met een tekenreeks (bijvoorbeeld Event7=3:abc123) u zult uw input moeten bijwerken om identiteitskaart op het gebied van &quot;Gebeurtenis identiteitskaart&quot;te weerspiegelen
 
 **Bugfixes**:
 
@@ -264,7 +277,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Functies**:
 
-* De naam van het volgende cookie is gemigreerd naar de extensieconfiguratie.
+* De naam van het volgende cookie is overgebracht naar de extensieconfiguratie.
 
 **Bugfixes**:
 
@@ -276,7 +289,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Functies**:
 
-* Bijgewerkte Adobe Analytics-extensie voor ondersteuning van AppMeasurement 2.9.
+* Bijgewerkte Adobe Analytics-extensie ter ondersteuning van AppMeasurement 2.9.
 * De functie &#39;Tracker globaal toegankelijk maken&#39; in de Adobe Analytics-extensie is toegevoegd, waardoor de tracker wereldwijd onder het bereik van `windows.s`.
 
 **Bugfixes**:
@@ -291,7 +304,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Functies**:
 
-* Werkt AppMeasurement.js tot 2.8.0 bij
+* Updates AppMeasurement.js tot 2.8.0
 * Voegt steun voor server-kant door:sturen toe
 
 ## 8 februari 2018
@@ -305,4 +318,4 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Bugfixes**:
 
-* Correctie van een fout in de Adobe Analytics-extensie die ervoor zorgde dat &quot;Fout, ontbrekende ID van rapportsuite in initialisatie van AppMeasurement&quot; werd weergegeven in de browserconsole.
+* Correctie van een fout in de extensie Adobe Analytics die ervoor zorgde dat &quot;Fout, ontbrekende ID van rapportsuite in initialisatie van AppMeasurement&quot; werd weergegeven in de browserconsole.
