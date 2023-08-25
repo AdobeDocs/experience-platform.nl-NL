@@ -1,7 +1,7 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van augustus 2023 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
+source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
 workflow-type: tm+mt
 source-wordcount: '1628'
 ht-degree: 3%
@@ -107,7 +107,6 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning voor het filteren van secundaire identiteiten | U kunt de Prep van Gegevens nu gebruiken om uit identiteiten uit Adobe Analytics, zoals STEUN en AACUSTOMID te filteren. Als deze identiteiten worden uitgefilterd, worden ze niet opgenomen in het Real-Time Klantprofiel. Ongefilterde gegevens blijven in het datumpeer worden opgenomen. |
-| Ondersteuning voor nieuwe `correlationID` veld voor Adobe Analytics | De `_experience.decisioning.propositions.scopeDetails.correlationID` Het veld is nu beschikbaar in het Adobe Analytics-bronverbindingsschema. Dit veld wordt gebruikt ter ondersteuning van A4T-classificaties en wordt vanaf september 2023 ingevuld. |
 
 {style="table-layout:auto"}
 
@@ -172,6 +171,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 | --- | --- |
 | Algemene beschikbaarheid van [!DNL SugarCRM] | [!DNL SugarCRM] bronnen zijn nu beschikbaar . Gebruik de [!DNL SugarCRM Accounts & Contacts] en de [!DNL SugarCRM Events] bronnen om gegevens van uw [!DNL SugarCRM] aan Experience Platform. Lees voor meer informatie de [[!DNL SugarCRM] overzicht](../../sources/connectors/crm/sugarcrm.md). |
 | Ondersteuning voor inname op aanvraag voor gegevensstromen van bronnen in de gebruikersinterface | U kunt stroomlooppas nu op bestelling voor een bestaande brondataflow in UI tot stand brengen. Lees voor meer informatie de handleiding op [het creëren van een stroomlooppas op bestelling voor bronnen die UI gebruiken](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| Ondersteuning voor nieuwe `correlationID` veld voor Adobe Analytics | De `_experience.decisioning.propositions.scopeDetails.correlationID` Het veld is nu beschikbaar in het Adobe Analytics-bronverbindingsschema. Dit veld wordt gebruikt ter ondersteuning van A4T-classificaties en wordt vanaf september 2023 ingevuld. |
 
 {style="table-layout:auto"}
 
