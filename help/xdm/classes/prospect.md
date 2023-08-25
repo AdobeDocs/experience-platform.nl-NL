@@ -1,21 +1,14 @@
 ---
 title: Afzonderlijke XDM-perspectiefprofielklasse
 description: Dit document biedt een overzicht van de klasse XDM Individual Prospect Profile in Experience Data Model (XDM).
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 83f01c58e21bc42a53e2e7a08bd7a60ef90b41e6
+source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL XDM Individual Prospect Profile] class
-
->[!IMPORTANT]
->
->De [!UICONTROL XDM Individual Prospect Profile] De klasse is in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 In Experience Data Model (XDM), [!UICONTROL XDM Individual Prospect Profile] de klasse vangt perspectiefprofielen typisch die van gegevenspartners voor top-of-de-kanaalklant gebruiksgevallen worden gedownload.
 

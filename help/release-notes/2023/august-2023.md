@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van augustus 2023 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
+source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1638'
 ht-degree: 3%
 
 ---
@@ -120,7 +120,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Gebruik deze klasse om perspectiefprofielen in te brengen die van de top-of-the-funnel van gegevensverkopers van het gebruiksgeval van de klantenverwerving worden afkomstig. |
+| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Gebruik deze klasse om perspectiefprofielen in te brengen die van de top-of-the-funnel van gegevensverkopers van het gebruiksgeval van de klantenverwerving worden afkomstig. Zie de [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) documentatie om voorbeelden te bekijken en meer te leren. |
 
 {style="table-layout:auto"}
 

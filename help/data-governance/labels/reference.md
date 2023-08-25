@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Woordenlijst met gegevensverbruikslabels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2185'
 ht-degree: 1%
 
 ---
@@ -61,14 +61,10 @@ Eén type gegevens dat u mogelijk als gevoelig beschouwt, kan verschillende type
 | --- | --- |
 | **S1** | Gegevens die breedte- en lengtegraad aangeven die kunnen worden gebruikt om de precieze locatie van een apparaat te bepalen. |
 | **S2** | Gegevens die kunnen worden gebruikt om een breed gedefinieerd geofence-gebied te bepalen. |
-| **PSPD** | De toegelaten Gevoelige Persoonlijke Gegevens (PSPD) verwijst naar gegevens die u door Adobe contractueel wordt toegelaten om te uploaden die &quot;gevoelig&quot;wordt geacht, &quot;speciale categorie van gegevens&quot;, of een gelijkaardige term die door toepasselijke wetten wordt gebruikt. Dit sluit specifiek beschermde gezondheidsinformatie (PHI) en andere gereglementeerde gezondheidsgegevens uit. |
-| **RHD** | Gegevens die verwijzen naar beschermde gezondheidsinformatie (PHI) of informatie over een patiënt die door Adobe contractueel geüpload mag worden. |
+| **PSPD** | De toegelaten Gevoelige Persoonsgegevens (PSPD) verwijst naar gegevens die u door Adobe contractueel wordt toegelaten om te uploaden die &quot;gevoelig&quot;, &quot;speciale categorie van gegevens&quot;worden geacht, of een gelijkaardige term die door toepasselijke wetten wordt gebruikt. Dit sluit specifiek beschermde gezondheidsinformatie (PHI) en andere gereglementeerde gezondheidsgegevens uit. |
+| **RHD** | Gegevens die verwijzen naar beschermde gezondheidsinformatie (PHI) of informatie over een patiënt die u contractueel door de Adobe mag uploaden. |
 
-## (Bèta) de etiketten van het Ecosysteem van de Partner {#partner}
-
->[!IMPORTANT]
->
->Het gegevenslabel van een andere fabrikant is in bèta. Deze is niet beschikbaar voor alle gebruikers en de documentatie kan worden gewijzigd.
+## Partnerecosysteemlabels {#partner}
 
 De etiketten van het Ecosysteem van de partner worden gebruikt om gegevens te categoriseren die uit bronnen buiten uw organisatie worden verkregen.
 
@@ -76,7 +72,7 @@ Dit etiket wordt gebruikt om het gebruik van perspectiefgegevens te regelen.
 
 | Label | Definitie |
 | --- | --- |
-| **Derden** | Gegevens van derden zijn gegevens die u ontvangt van een externe leverancier van gegevens. Een externe leverancier van gegevens is een entiteit die een overeenkomst met uw organisatie is aangegaan die u machtigt om de gegevens van derden samen met het Platform te openen, te gebruiken, weer te geven en te verzenden. |
+| **Derden** | Gegevens van derden zijn gegevens die u ontvangt van een externe leverancier van gegevens. Een externe leverancier van gegevens is een entiteit die een overeenkomst met uw organisatie is aangegaan die u machtigt om de gegevens van derden in combinatie met Platform te openen, te gebruiken, weer te geven en te verzenden. |
 
 ## Bijlage
 
@@ -110,7 +106,7 @@ De combinatie van gegevens van verschillende sites, waaronder een combinatie van
 
 Het gebruik van gegevens buiten de locatie alleen voor doelgerichte doeleinden zou waarschijnlijk ook als op rente gebaseerde doelgerichtheid worden aangemerkt, aangezien gegevens buiten de locatie doorgaans worden verzameld en verwerkt om conclusies te trekken over de belangen van de gebruikers.
 
-Het toewijzen van inhoud of advertenties die alleen gegevens ter plaatse gebruiken, zou echter doorgaans niet worden aangemerkt als doelgerichte actie op basis van interesse. Het on-site richten dat anders niet als op rente-gebaseerd richten kwalificeert wordt behandeld als twee verschillende etiketten. Specifiek, richt het Etiket C6 de on-site en richt zich en het melden en spreekt specifiek aan de selectie, levering, en het melden van, en Etiket C7 adressen on-site inhoudselectie, levering, en het melden (de inhoud het richten op).
+Het toewijzen van inhoud of advertenties die alleen gegevens ter plaatse gebruiken, zou echter doorgaans niet worden aangemerkt als doelgerichte actie op basis van interesse. Het on-site richten die anders niet als op rente-gebaseerd richten kwalificeert wordt behandeld als twee verschillende etiketten. Specifiek, richt het Etiket C6 de onsite en richt zich en het melden en spreekt specifiek aan de selectie, levering, en het melden van, en Etiket C7 adressen on-site inhoudselectie, levering, en het melden (de inhoud die van de plaats richt zich).
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
 
@@ -152,8 +148,8 @@ Sommige beleidsregels voor gegevensbeheer beperken het gebruik van verankerde id
 
 #### C11 {#c11}
 
-Met Adobe Experience Platform Segment Match kunt u Platform dat wordt gegenereerd, afstemmen op privacy- en toestemmingsvoorkeuren, waardoor verrijkte profilering en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
+Met Adobe Experience Platform Segment Match kunt u door Platform gegenereerde doelgroepen afstemmen op privacy- en toestemmingsvoorkeuren, waardoor verrijkte profilering en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
 
 #### C12 {#c12}
 
-Gegevens met dit label kunnen op geen enkele manier uit het Platform worden geëxporteerd. Velden met het label C12 zijn uitgesloten van CSV-downloads, API-verbruik en activeringsworkflows.
+Gegevens met dit label kunnen op geen enkele manier worden geëxporteerd van Platform. Velden met het label C12 zijn uitgesloten van CSV-downloads, API-verbruik en activeringsworkflows.
