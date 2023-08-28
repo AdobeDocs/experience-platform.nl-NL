@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van augustus 2023 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1723'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Gegevensverzameling](#data-collection)
 - [Gegevensopname](#data-ingestion)
 - [Gegevensvoorbereiding](#data-prep)
+- [Doelen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Segmenteringsservice](#segmentation)
@@ -111,6 +112,17 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 {style="table-layout:auto"}
 
 Lees voor meer informatie de [Overzicht van Data Prep](../../data-prep/home.md).
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+- U kunt nu [publiek perspectief activeren](../../destinations/ui/activate-prospect-audiences.md) naar op een bestand gebaseerde doelen.
+- De algemene [activeringsinstructie](../../destinations/guardrails.md#general-activation-guardrails) van maximaal 100 doelen per sandbox is bijgewerkt tot een _harde limiet_.
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
