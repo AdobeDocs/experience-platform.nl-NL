@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
+source-git-commit: 0835021523a7eb1642a6dbcb24334eac535aaa6d
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1265'
 ht-degree: 1%
 
 ---
@@ -42,8 +42,8 @@ De onderstaande instructies zijn over het algemeen van toepassing op activering 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Maximumaantal doelgroepen | 250 | Zacht | De aanbeveling moet een maximum van 250 publiek aan één enkele bestemming in een dataflow in kaart brengen. <br><br> Als u meer dan 250 publiek aan een bestemming moet activeren, kunt u of: <ul><li> Ontkaart publiek dat u niet meer wilt activeren, of</li><li>Creeer een nieuwe dataflow aan de gewenste bestemming en kaartpubliek aan deze nieuwe dataflow.</li></ul> <br> Houd er rekening mee dat in het geval van sommige bestemmingen u beperkt kunt zijn tot minder dan 250 soorten publiek die aan de bestemming zijn toegewezen. Deze bestemmingen worden hieronder op de pagina in hun respectieve secties vermeld. |
-| Maximum aantal bestemmingen | 100 | Zacht | De aanbeveling moet een maximum van 100 bestemmingen tot stand brengen die u gegevens kunt verbinden en activeren om *per sandbox*. [Aanpasbare Edge-doelen (Aangepaste verpersoonlijking)](#edge-destinations-activation) maximaal 10 van de 100 aanbevolen bestemmingen. |
 | Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Zacht | In het geval van verschillende bestemmingen en bestemmingstypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties, zou een maximum van 50 attributen in een dataflow aan een bestemming moeten worden in kaart gebracht. |
+| Maximum aantal bestemmingen | 100 | Hard | U kunt maximaal 100 bestemmingen tot stand brengen die u gegevens kunt verbinden en activeren aan, *per sandbox*. [Aanpasbare Edge-doelen (Aangepaste verpersoonlijking)](#edge-destinations-activation) maximaal 10 van de 100 aanbevolen bestemmingen. |
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Hard | Momenteel is het alleen mogelijk om te exporteren *profielrecordkenmerken* naar bestemmingen. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
 | Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Niet beschikbaar | Hard | Op dit moment is het **niet** kunnen worden geëxporteerd *array- of toewijzingskenmerken* naar bestemmingen. De uitzondering op deze regel is de [identiteitsbewijs](/help/xdm/field-groups/profile/identitymap.md), die wordt geëxporteerd in zowel streaming als bestandgebaseerde activering. |
 
