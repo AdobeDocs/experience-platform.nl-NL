@@ -3,9 +3,9 @@ keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Dit document biedt richtlijnen voor het opnemen van gegevens in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ De begeleiding is drempels die begeleiding voor gegevens en systeemgebruik, pres
 
 Dit document bevat richtlijnen voor het opnemen van gegevens in Adobe Experience Platform.
 
-## Guardrails voor batchopname
+## Guardrails voor batchgewijs innemen
 
 In de volgende tabel worden de hulplijnen weergegeven die u moet gebruiken bij het gebruik van de [batch-invoer-API](./batch-ingestion/overview.md) of bronnen:
 
@@ -29,12 +29,15 @@ In de volgende tabel worden de hulplijnen weergegeven die u moet gebruiken bij h
 
 ## Guardrails voor streaming opname
 
-In de volgende tabel worden de hulplijnen weergegeven die u moet gebruiken bij het gebruik van de [streaming opname-API](./streaming-ingestion/overview.md) of streamingbronnen:
+Lees de [overzicht van het opnemen van streaming](./streaming-ingestion/overview.md) voor meer informatie over trails voor streaming opname.
+
+## Guardrails voor streamingbronnen
+
+In de volgende tabel worden de instructies beschreven waarmee u rekening moet houden bij het gebruik van de streamingbronnen:
 
 | Type opname | Richtsnoeren | Notities |
 | --- | --- | --- |
-| Streaming opname | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>U kunt tot 2500 verzoeken per seconde aan Profiel verwerken.</li><li>U kunt tot 20000 verzoeken per seconde aan gegevens verwerken meer binnen 15 minuten.</li></ul> | Gebruik de batch-opname-API als u een hogere gegevensdoorvoer nodig hebt. |
-| Streaming bronnen | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>Streaming bronnen ondersteunen tussen 4000 en 5000 aanvragen per seconde wanneer een nieuwe bronverbinding wordt gemaakt. **Opmerking**: Het kan tot 30 minuten duren voor het stromen gegevens volledig worden verwerkt tot gegevens meer.</li><li>U kunt tussen 4000 en 5000 verzoeken per seconde aan gegevens verwerken meer. **Opmerking**: Het kan tot 30 minuten duren voor het stromen gegevens volledig worden verwerkt tot gegevens meer.</li></ul> | Streaming bronnen zoals [!DNL Kafka], [!DNL Azure Event Hubs], en [!DNL Amazon Kinesis] niet de [!DNL Data Collection Core Service] (DCCS) route en kan verschillende productiegrenzen hebben. Zie de [overzicht van bronnen](../sources/home.md) voor een catalogus met bronnen die u kunt gebruiken voor gegevensinvoer. |
+| Streaming bronnen | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>Streaming bronnen ondersteunen tussen 4000 en 5000 aanvragen per seconde wanneer een nieuwe bronverbinding wordt gemaakt. **Opmerking**: Het kan tot 30 minuten duren voor streaming gegevens volledig zijn verwerkt tot data Lake.</li><li>U kunt tussen 4000 en 5000 verzoeken per seconde aan gegevens verwerken meer. **Opmerking**: Het kan tot 30 minuten duren voor streaming gegevens volledig zijn verwerkt tot data Lake.</li></ul> | Streaming bronnen zoals [!DNL Kafka], [!DNL Azure Event Hubs], en [!DNL Amazon Kinesis] niet de [!DNL Data Collection Core Service] (DCCS) route en kan verschillende productiegrenzen hebben. Zie de [overzicht van bronnen](../sources/home.md) voor een catalogus met bronnen die u kunt gebruiken voor gegevensinvoer. |
 
 ## Volgende stappen
 
