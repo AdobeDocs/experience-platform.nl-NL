@@ -3,7 +3,7 @@ title: LiveRamp - Verbinding aan boord
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Voordat u gegevens van het Experience Platform kunt verzenden naar [!DNL LiveRam
 
 [!DNL LiveRamp - Onboarding] ondersteunt de activering van identiteiten zoals op PII gebaseerde id&#39;s, bekende id&#39;s en aangepaste id&#39;s, zoals beschreven in de officiële [LiveRamp-documentatie](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
-In de [toewijzingsstap](#map) In de activeringsworkflow moet u de doeltoewijzingen definiëren als aangepaste kenmerken.
+In de [toewijzingsstap](#map) van de activeringsworkflow moet u de doeltoewijzingen definiëren als aangepaste kenmerken.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -102,7 +102,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Het schermschot van UI van het Platform dat hoe te om details voor uw bestemming te vullen toont](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![Schermopname van de UI van het platform die tonen hoe te om details voor uw bestemming in te vullen](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -132,13 +132,13 @@ In de [!UICONTROL Scheduling] Maak een exportschema voor elk publiek met de onde
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
 * **[!UICONTROL Date]**: Selecteer de begin- en eindtijd van het exporteren naar wens.
 
-![Het schermschot van het Platform UI die de publiek dat stap plant toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Schermopname van de gebruikersinterface van het platform die de publiek plannende stap toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 De geëxporteerde bestandsnaam kan momenteel niet door de gebruiker worden geconfigureerd. Alle bestanden die naar de [!DNL LiveRamp - Onboarding] de bestemming wordt automatisch genoemd gebaseerd op het volgende malplaatje:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Screenshot van de gebruikersinterface van het Platform met de geëxporteerde bestandsnaamsjabloon.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Platform UI-screenshot met de geëxporteerde bestandsnaamsjabloon.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 De naam van een geëxporteerd bestand voor een organisatie met de naam [!DNL Luma] kan er ongeveer als volgt uitzien :
 
@@ -182,7 +182,7 @@ Als u al uw gewenste toewijzingen hebt toegevoegd, selecteert u **[!UICONTROL Ne
 
 Uw gegevens worden naar de [!DNL LiveRamp - Onboarding] opslaglocatie die u hebt geconfigureerd, als CSV-bestanden.
 
-Wanneer u bestanden exporteert naar de [!DNL LiveRamp - Onboarding] doel, Platform genereert één CSV-bestand voor elke [beleids-id samenvoegen](../../../profile/merge-policies/overview.md).
+Wanneer u bestanden exporteert naar de [!DNL LiveRamp - Onboarding] doel, Platform genereert één CSV-bestand voor elk [beleids-id samenvoegen](../../../profile/merge-policies/overview.md).
 
 Neem bijvoorbeeld het volgende publiek:
 
@@ -209,7 +209,7 @@ De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de v
 Bijvoorbeeld een geëxporteerd CSV-bestand met één `email` kenmerk, twee soorten publiek afkomstig uit de Experience Platform [Segmenteringsservice](../../../segmentation/home.md), en één [geïmporteerd](../../../segmentation/ui/overview.md#importing-an-audience) extern publiek, zou als volgt kunnen kijken:
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,9 +218,9 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-In het bovenstaande voorbeeld wordt `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` de secties beschrijven publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` beschrijft een publiek dat in Platform is geïmporteerd als een [aangepaste upload](../../../segmentation/ui/overview.md#importing-an-audience).
+In het bovenstaande voorbeeld wordt `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` de secties beschrijven publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` beschrijft een publiek dat in Platform is geïmporteerd als een [aangepaste upload](../../../segmentation/ui/overview.md#importing-an-audience).
 
-Aangezien Platform één CSV-bestand voor elk bestand genereert [beleids-id samenvoegen](../../../profile/merge-policies/overview.md), produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
+Aangezien Platform één CSV-bestand genereert voor elk bestand [beleids-id samenvoegen](../../../profile/merge-policies/overview.md), produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
 
 Dit betekent dat de **[!UICONTROL Identities activated]** en **[!UICONTROL Profiles received]** maatstaven in de [dataflow-run](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) De pagina wordt samengevoegd voor elke groep publiek die het zelfde fusiebeleid gebruiken, in plaats van wordt getoond voor elk publiek.
 
