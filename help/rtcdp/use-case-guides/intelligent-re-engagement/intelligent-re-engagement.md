@@ -1,6 +1,6 @@
 ---
 title: Intelligente re-engagement
-description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste omzettingsmomenten om intelligent onregelmatige klanten opnieuw aan te sluiten.
+description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
 source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3403'
