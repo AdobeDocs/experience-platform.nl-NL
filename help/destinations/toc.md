@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: d16a4cf7db12c92ab6ead498846f17d76f6ac641
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 * API-zelfstudies {#api}
    * [API-migratiegids voor cloudopslagdoelen](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
-   * [Verbinding maken met locaties voor opslag en marketing in batches en gegevens activeren met de Flow Service API](./api/connect-activate-batch-destinations.md)
+   * [Verbinding maken met batch-cloudopslag- en e-mailmarketingdoelen en gegevens activeren met de Flow Service API](./api/connect-activate-batch-destinations.md)
    * [(Bèta) Activeer publiek naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
    * [Doel bewerken](./api/edit-destination.md)
    * [Doelgegevens bijwerken](./api/update-destination-dataflows.md)
@@ -51,14 +51,14 @@ ht-degree: 2%
    * [Activeringsgegevens bewerken](./ui/edit-activation.md)
    * [Doelen verwijderen](./ui/delete-destinations.md)
    * [Dataflows bewaken](./ui/monitor-dataflows.md)
-   * [(Bèta) Vorm dossier het formatteren opties voor op dossier-gebaseerde bestemmingen](./ui/batch-destinations-file-formatting-options.md)
+   * [Opties voor bestandsindeling configureren voor op bestanden gebaseerde doelen](./ui/batch-destinations-file-formatting-options.md)
    * [Abonneren op in-context-bestemmingswaarschuwingen](ui/alerts.md)
 * Doelcatalogus {#catalog}
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
-   * Adobe-bestemmingen{#adobe}
-      * [Overzicht van Adobe-doelen](./catalog/adobe/overview.md)
-      * [(Bèta) Experience Cloud-publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-      * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
+   * Adobe bestemmingen{#adobe}
+      * [Overzicht van Adobe doelen](./catalog/adobe/overview.md)
+      * [(Bèta) Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Verbinding met Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform publiek delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Reclamebestemmingen{#advertising}
@@ -89,7 +89,7 @@ ht-degree: 2%
       * [Verbinding Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [(bèta) De verbinding van de handelsbank CRM](./catalog/advertising/tradedesk-emails.md)
-      * [Twitter Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
+      * [Twitter van Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-verbinding](./catalog/advertising/datax.md)
    * Analysedoelen {#analytics}
       * [Overzicht van analysedoelen](./catalog/analytics/overview.md)
@@ -128,7 +128,7 @@ ht-degree: 2%
       * [Microsoft Dynamics 365-verbinding](./catalog/crm/microsoft-dynamics-365.md)
       * [Verbinding buiten bereik](catalog/crm/outreach.md)
       * [Zendesk-verbinding](catalog/crm/zendesk.md)
-   * Platforms voor gegevensbeheer {#data-management}
+   * Gebieden van het Platform voor gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
    * E-maildoelen {#email}
@@ -140,7 +140,7 @@ ht-degree: 2%
       * [Overzicht van e-mailmarketingdoelen](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-verbinding](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services-verbinding](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Mailchimp-belangencategorieën](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp-rentecategorieën](./catalog/email-marketing/mailchimp-interest-categories.md)
       * [(API) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Bestanden) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
       * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
@@ -279,4 +279,4 @@ ht-degree: 2%
       * [Zelfbedieningssjabloon voor documentatie](./destination-sdk/docs-framework/self-service-template.md)
       * [Aanbevolen werkwijzen ontwerpen](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Veelgestelde vragen](./destinations-faq.md)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
