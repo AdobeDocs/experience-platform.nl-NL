@@ -1,16 +1,20 @@
 ---
 title: Chatlio Source Overview
 description: Leer hoe u Chatlio met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface door gebruik te maken van webhaken
-last-substantial-update: 2023-08-23T00:00:00Z
+badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
 # [!DNL Chatlio]
+
+>[!NOTE]
+>
+>De [!DNL Chatlio] De bron is in bèta. Lees de [overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 

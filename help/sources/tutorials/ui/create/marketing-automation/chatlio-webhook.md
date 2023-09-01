@@ -1,15 +1,20 @@
 ---
 title: Een Chatlio Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Chatlio-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1120'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Chatlio] bronverbinding in de gebruikersinterface
+
+>[!NOTE]
+>
+>De [!DNL Chatlio] De bron is in bèta. Lees de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Chatlio] bronverbinding via de Adobe Experience Platform-gebruikersinterface.
 
