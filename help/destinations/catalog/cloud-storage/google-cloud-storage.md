@@ -3,9 +3,9 @@ title: Google Cloud Storage-verbinding
 description: Leer hoe u verbinding maakt met Google Cloud Storage en een publiek activeert of gegevenssets exporteert.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 950370683f648771d91689e84c3d782824fb01f4
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
@@ -18,20 +18,17 @@ Een live uitgaande verbinding maken met [!DNL Google Cloud Storage] om gegevensb
 
 ## Verbinding maken met uw [!DNL Google Cloud Storage] opslag via API of UI {#connect-api-or-ui}
 
-* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslaglocatie via de gebruikersinterface van het Platform, lees de secties [Verbinden met de bestemming](#connect) en [Soorten publiek naar dit doel activeren](#activate) hieronder.
+* Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslaglocatie via de gebruikersinterface van het platform, lees de secties [Verbinden met de bestemming](#connect) en [Soorten publiek naar dit doel activeren](#activate) hieronder.
 * Als u verbinding wilt maken met uw [!DNL Google Cloud Storage] opslagplaats programmatically, lees de [Activeer publiek aan op dossier-gebaseerde bestemmingen door de Zelfstudie van de Dienst van de Stroom te gebruiken API](../../api/activate-segments-file-based-destinations.md).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -48,19 +45,19 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Vereiste instellingen voor verbinding met uw [!DNL Google Cloud Storage] account {#prerequisites}
 
-Als u Platform wilt verbinden met [!DNL Google Cloud Storage], moet u eerst interoperabiliteit voor uw [!DNL Google Cloud Storage] account. Voor toegang tot de interoperabiliteitsinstelling opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Settings]** van de **[!UICONTROL Cloud Storage]** in het navigatievenster.
+Als u een verbinding wilt maken met Platform [!DNL Google Cloud Storage], moet u eerst interoperabiliteit voor uw [!DNL Google Cloud Storage] account. Voor toegang tot de interoperabiliteitsinstelling opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Settings]** van de **[!UICONTROL Cloud Storage]** in het navigatievenster.
 
 ![Google Cloud Platform-dashboard met Cloud Storage en Settings gemarkeerd.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 De **[!UICONTROL Settings]** wordt weergegeven. Hier kunt u informatie over uw [!DNL Google] project-id en details over uw [!DNL Google Cloud Storage] account. Om tot interoperabiliteitsmontages toegang te hebben, selecteer **[!UICONTROL Interoperability]** in de bovenste koptekst.
 
-![Het tabblad Interoperabiliteit wordt gemarkeerd op het dashboard voor het Google Cloud-Platform.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![Het tabblad Interoperabiliteit wordt gemarkeerd op het dashboard voor het Google Cloud-platform.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 De **[!UICONTROL Interoperability]** De pagina bevat informatie over authentificatie, toegangstoetsen, en het standaardproject verbonden aan uw de dienstrekening. Als u een nieuwe toegangstoets-id en een geheime toegangssleutel voor uw serviceaccount wilt genereren, selecteert u **[!UICONTROL Create a Key for a Service Account]**.
 
-![De sleutel voor een serviceaccountbesturingselement maken die is gemarkeerd op het dashboard voor Google Cloud-Platforms.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![De sleutel voor een serviceaccountbesturingselement maken die is gemarkeerd in het dashboard voor het Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-U kunt uw onlangs gegenereerde toegangstoets-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] aan Platform.
+U kunt uw onlangs gegenereerde toegangstoets-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] account aan Platform.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -74,8 +71,8 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] aan Platform. Voor informatie over het verkrijgen van deze waarde leest u de [voorwaarden](#prerequisites) hierboven.
-* **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met de basiscode 64 die wordt gebruikt voor verificatie van uw [!DNL Google Cloud Storage] aan Platform. Voor informatie over het verkrijgen van deze waarde leest u de [voorwaarden](#prerequisites) hierboven.
+* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] account aan Platform. Voor informatie over het verkrijgen van deze waarde leest u de [voorwaarden](#prerequisites) hierboven.
+* **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met de basiscode 64 die wordt gebruikt voor verificatie van uw [!DNL Google Cloud Storage] account aan Platform. Voor informatie over het verkrijgen van deze waarde leest u de [voorwaarden](#prerequisites) hierboven.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -90,9 +87,14 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Bucket name]**: Voer de naam in van de [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt.
 * **[!UICONTROL Folder path]**: Voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL File type]**: selecteer de indeling die het Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer u de [!UICONTROL CSV] kunt u [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Compression format]**: selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
-* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer.
+* **[!UICONTROL File type]**: Selecteer het Experience Platform voor de indeling die u voor de geëxporteerde bestanden wilt gebruiken. Wanneer u de [!UICONTROL CSV] kunt u [configureren, opties voor bestandsindeling](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
+* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Een [voorbeeldmanifestbestand](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
+   * `flowRunId`: De [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) waarmee het geëxporteerde bestand is gegenereerd.
+   * `scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd.
+   * `exportResults.sinkPath`: Het pad in de opslaglocatie waar het geëxporteerde bestand is opgeslagen.
+   * `exportResults.name`: De naam van het geëxporteerde bestand.
+   * `size`: De grootte van het geëxporteerde bestand, in bytes.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -118,9 +120,9 @@ In de **[!UICONTROL Mapping]** U kunt kiezen welke kenmerken en identiteitsvelde
 
 ## (bètaversie) Gegevensbestanden exporteren {#export-datasets}
 
-Deze bestemming steunt datasetuitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
+Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
 
-* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van de Platform](/help/destinations/ui/export-datasets.md).
+* Procedure [de uitvoer datasets gebruikend het gebruikersinterface van het Platform](/help/destinations/ui/export-datasets.md).
 * Procedure [de uitvoer datasets programmatically gebruikend de Dienst API van de Stroom](/help/destinations/api/export-datasets.md).
 
 ## Geëxporteerde gegevens valideren {#exported-data}
