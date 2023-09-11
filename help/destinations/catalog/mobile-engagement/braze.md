@@ -3,9 +3,9 @@ keywords: mobiel; bruin; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '981'
 ht-degree: 1%
 
 ---
@@ -46,13 +46,12 @@ Als markator wil ik gebruikers in een mobiele betrokkenheidsbestemming als doel 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type extern publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ keywords: streaming; HTTP-bestemming
 title: HTTP API-verbinding
 description: Gebruik de HTTP API bestemming in Adobe Experience Platform om profielgegevens naar derdeeindpunt van HTTP te verzenden om uw eigen analyses in werking te stellen of andere verrichtingen uit te voeren u op profielgegevens kunt nodig hebben die uit Experience Platform worden uitgevoerd.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2386'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,12 @@ De eindpunten van HTTP kunnen of de systemen van klanten of derdeoplossingen zij
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -207,7 +204,7 @@ Zie [De publieksgegevens van de activering aan het stromen profiel de uitvoerbes
 
 ### Doelkenmerken {#attributes}
 
-In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, raadt Adobe u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
+In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, raadt de Adobe u aan een unieke id te selecteren in uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
 ## Exportgedrag profiel {#profile-export-behavior}
 

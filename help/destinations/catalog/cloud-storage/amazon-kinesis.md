@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '1948'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ U kunt een uitgaande verbinding in real time aan uw creëren [!DNL Amazon Kinesi
 
 * Voor meer informatie over [!DNL Amazon Kinesis], zie de [Amazon-documentatie](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Verbinding maken met [!DNL Amazon Kinesis] programmatically, zie [Zelfstudie voor Streaming doelen-API](../../api/streaming-destinations.md).
-* Verbinding maken met [!DNL Amazon Kinesis] in de gebruikersinterface van het Platform raadpleegt u de onderstaande secties.
+* Verbinding maken met [!DNL Amazon Kinesis] in de gebruikersinterface van Platform raadpleegt u de onderstaande secties.
 
 ![Amazon Kinesis in de gebruikersinterface](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -36,15 +36,12 @@ Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -71,7 +68,7 @@ Om gegevens met succes te verbinden en uit te voeren aan uw [!DNL Amazon Kinesis
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-Deze machtigingen worden via de [!DNL Kinesis] -console en worden gecontroleerd door Platform als u de Kinesis-bestemming hebt geconfigureerd in de gebruikersinterface van het Platform.
+Deze machtigingen worden via de [!DNL Kinesis] -console en worden gecontroleerd door Platform nadat u uw Kinesis-bestemming hebt geconfigureerd in de gebruikersinterface van Platform.
 
 In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die vereist zijn om gegevens naar een [!DNL Kinesis] bestemming.
 
@@ -139,7 +136,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 * **[!UICONTROL Name]**: Geef een naam op voor uw verbinding met [!DNL Amazon Kinesis]
 * **[!UICONTROL Description]**: Geef een beschrijving op voor uw verbinding met [!DNL Amazon Kinesis].
-* **[!UICONTROL Stream]**: Geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Platform exporteert gegevens naar deze stream.
+* **[!UICONTROL Stream]**: Geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Platform zal gegevens naar deze stroom uitvoeren.
 * **[!UICONTROL Include Segment Names]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de namen worden opgenomen van het publiek dat u exporteert. Voor een voorbeeld van een gegevensexport waarbij deze optie is geselecteerd, raadpleegt u de [Geëxporteerde gegevens](#exported-data) hieronder.
 * **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de UNIX-tijdstempel wordt gebruikt wanneer het publiek is gemaakt en bijgewerkt, en ook de UNIX-tijdstempel wanneer het publiek voor activering aan de bestemming is toegewezen. Voor een voorbeeld van een gegevensexport waarbij deze optie is geselecteerd, raadpleegt u de [Geëxporteerde gegevens](#exported-data) hieronder.
 

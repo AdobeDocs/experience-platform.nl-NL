@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
 
-# Klassen maken en bewerken in de gebruikersinterface
+# Klassen maken en bewerken in de gebruikersinterface {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_filter"
+>title="Standaardfilter of aangepast klassenfilter"
+>abstract="De lijst met beschikbare klassen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties Standaard en Aangepast. De optie Standaard toont entiteiten die zijn gemaakt door Adobe en bevat zowel de klassen Afzonderlijk XDM profiel als Gebeurtenis voor XDM-ervaring. De optie Aangepast geeft entiteiten weer die binnen uw organisatie zijn gemaakt. Raadpleeg de documentatie voor meer informatie over het maken en bewerken van klassen."
 
 In Adobe Experience Platform definieert de klasse van een schema de gedragsaspecten van de gegevens die het schema zal bevatten (record of tijdreeks). Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
 
@@ -23,7 +28,7 @@ Dit document biedt een overzicht van het maken, bewerken en beheren van aangepas
 
 Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](../../home.md) voor een inleiding op de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van de schemacompositie](../../schema/composition.md) om te leren hoe de klassen tot schema&#39;s XDM bijdragen.
 
-Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie ook op te volgen [samenstellen van een schema in UI](../../tutorials/create-schema-ui.md) om de verschillende mogelijkheden van de [!DNL Schema Editor].
+Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie ook op te volgen [samenstellen van een schema in UI](../../tutorials/create-schema-ui.md) om vertrouwd te maken met de verschillende mogelijkheden van de [!DNL Schema Editor].
 
 ## Een nieuwe klasse maken {#create}
 
@@ -33,7 +38,7 @@ In de **[!UICONTROL Schemas]** werkruimte, selecteert u **[!UICONTROL Create sch
 
 Er wordt een dialoogvenster weergegeven waarin u een keuze kunt maken uit een lijst met beschikbare klassen. Selecteer boven aan het dialoogvenster de optie **[!UICONTROL Create new class]**. U kunt uw nieuwe klasse dan een vertoningsnaam (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een beschrijving, en een gedrag voor de gegevens geven die het schema zal bepalen (**[!UICONTROL Record]** of **[!UICONTROL Time-series]**).
 
-Als u klaar bent, selecteert u **[!UICONTROL Assign class]**.
+Selecteer **[!UICONTROL Assign class]**.
 
 ![](../../images/ui/resources/classes/class-details.png)
 
@@ -43,7 +48,7 @@ De [!DNL Schema Editor] wordt weergegeven en ziet u een nieuw schema in het canv
 
 >[!IMPORTANT]
 >
->Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de groepen van het schemagebied voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele veldgroepen weergegeven in het dialoogvenster **[!UICONTROL Add field group]** . In plaats daarvan moet u [nieuwe veldgroepen maken](./field-groups.md#create) voor gebruik met die klasse. De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, worden de gedefinieerde veldgroepen weergegeven en beschikbaar voor gebruik.
+>Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de groepen van het schemagebied voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele veldgroepen weergegeven in het dialoogvenster **[!UICONTROL Add field group]** in. In plaats daarvan moet u [nieuwe veldgroepen maken](./field-groups.md#create) voor gebruik met die klasse. De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, worden de gedefinieerde veldgroepen weergegeven en beschikbaar voor gebruik.
 
 U kunt nu beginnen [toevoegen van velden aan de klasse](#add-fields), die door alle schema&#39;s worden gedeeld die de klasse in dienst nemen.
 
@@ -53,7 +58,7 @@ U kunt nu beginnen [toevoegen van velden aan de klasse](#add-fields), die door a
 >
 >Alleen aangepaste klassen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor kernklassen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor hun velden worden bewerkt binnen de context van afzonderlijke schema&#39;s. Zie de sectie over [weergavenamen voor schemavelden bewerken](./schemas.md#display-names) voor meer informatie.
 >
->Als een aangepaste klasse eenmaal is opgeslagen en in gegevensinvoer is gebruikt, kunnen er daarna alleen aanvullende wijzigingen in worden aangebracht. Zie de [regels voor schemaontwikkeling](../../schema/composition.md#evolution) voor meer informatie .
+>Als een aangepaste klasse eenmaal is opgeslagen en in gegevensinvoer is gebruikt, kunnen er daarna alleen additieve wijzigingen in worden aangebracht. Zie de [regels voor schemaontwikkeling](../../schema/composition.md#evolution) voor meer informatie .
 
 Als u een bestaande klasse wilt bewerken, selecteert u de optie **[!UICONTROL Browse]** en selecteert u vervolgens de naam van een schema dat gebruikmaakt van de klasse die u wilt bewerken.
 
@@ -69,7 +74,7 @@ De [!DNL Schema Editor] verschijnt, terwijl de structuur van het schema op het c
 
 ## Velden aan een klasse toevoegen {#add-fields}
 
-Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend in het dialoogvenster [!UICONTROL Schema Editor], kunt u beginnen gebieden aan de klasse toe te voegen. Als u een nieuw veld wilt toevoegen, selecteert u de optie **plus (+)** naast de naam van het schema.
+Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend in het dialoogvenster [!UICONTROL Schema Editor], kunt u beginnen gebieden aan de klasse toe te voegen. Als u een nieuw veld wilt toevoegen, selecteert u de **plus (+)** naast de naam van het schema.
 
 ![](../../images/ui/resources/classes/add-field.png)
 
@@ -83,7 +88,7 @@ An **[!UICONTROL Untitled Field]** wordt de tijdelijke aanduiding weergegeven in
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 
-Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen. Ga door met het toevoegen van zoveel velden als nodig zijn voor de klasse. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
+Zie de handleiding op [velden definiëren in de gebruikersinterface](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen. Ga door met het toevoegen van zoveel velden als nodig zijn voor de klasse. Selecteer **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
 
 ![](../../images/ui/resources/classes/save.png)
 
@@ -95,6 +100,6 @@ U kunt de klasse van het schema op elk gewenst moment tijdens het eerste ontwerp
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u klassen kunt maken en bewerken met de gebruikersinterface van het Platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
+In dit document wordt beschreven hoe u klassen kunt maken en bewerken met de gebruikersinterface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie de [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
 
 Leren hoe u klassen kunt beheren met de opdracht [!DNL Schema Registry] API, zie [hulplijn voor klassen eindpunt](../../api/classes.md).

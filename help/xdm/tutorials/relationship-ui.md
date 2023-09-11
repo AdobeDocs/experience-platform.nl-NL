@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaar gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schema redacteur;Schema;Schema;schema's;Schema's;creëren;verhouding;Verhouding;verwijzing;Verwijzing;
 solution: Experience Platform
-title: Bepaal een verhouding tussen Twee Schema's gebruikend de Redacteur van het Schema
+title: Een relatie tussen twee schema's definiëren met de Schema-editor
 description: Dit document verstrekt een zelfstudie voor het bepalen van een verband tussen twee schema's gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,11 @@ ht-degree: 0%
 
 De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Deze relaties definiëren binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staan u toe om complexe inzichten in uw klantengegevens te bereiken.
 
-Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het union-schema en [!DNL Real-Time Customer Profile]Dit geldt alleen voor schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van het andere verwante schema verwijzingen.
+Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het union-schema en [!DNL Real-Time Customer Profile], is dit alleen van toepassing op schema&#39;s die dezelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek relatiegebied aan een bronschema worden toegevoegd, dat de identiteit van het andere verwante schema verwijzingen.
+
+>[!NOTE]
+>
+>Als zowel de bron als bestemmingsschema&#39;s tot de zelfde klasse behoren, zou een specifiek relatieveld moeten **niet** worden gebruikt. In dit geval, gebruik het unieschema UI om de verhouding te zien. Instructies over hoe u dit kunt doen vindt u in de [relaties bekijken](../../profile/ui/union-schema.md#view-relationships) sectie van de UI-gids voor het unieschema.
 
 Dit document bevat een zelfstudie voor het definiëren van een relatie tussen twee schema&#39;s met behulp van de Schema-editor in het dialoogvenster [!DNL Experience Platform] gebruikersinterface. Raadpleeg de zelfstudie voor meer informatie over het definiëren van schema-relaties met de API [een relatie definiëren met de API voor het schemaregister](relationship-api.md).
 
@@ -43,9 +47,9 @@ Dit document bevat een zelfstudie voor het definiëren van een relatie tussen tw
 
 Deze zelfstudie vereist een goed begrip van [!DNL XDM System] en de Schema-editor in de [!DNL Experience Platform] UI. Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
+* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en de implementatie ervan in [!DNL Experience Platform].
 * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
-* [Een schema maken met de opdracht [!DNL Schema Editor]](create-schema-ui.md): Een zelfstudie waarin de basisbeginselen van het werken met de [!DNL Schema Editor].
+* [Een schema maken met de opdracht [!DNL Schema Editor]](create-schema-ui.md): Een zelfstudie over de basisbeginselen van het werken met de [!DNL Schema Editor].
 
 ## Een bron- en referentieschema definiëren
 
@@ -53,7 +57,7 @@ Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhoud
 
 >[!IMPORTANT]
 >
->Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en geschikt zijn gemaakt voor [!DNL Real-Time Customer Profile]. Zie de sectie over [een schema inschakelen voor gebruik in profiel](./create-schema-ui.md#profile) in de zelfstudie van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
+>Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en toegelaten worden [!DNL Real-Time Customer Profile]. Zie de sectie over [een schema inschakelen voor gebruik in profiel](./create-schema-ui.md#profile) in de zelfstudie van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
 Schemarelaties worden vertegenwoordigd door een specifiek veld binnen een **bronschema** dat naar een ander veld binnen een **referentieschema**. In de volgende stappen: &quot;[!DNL Loyalty Members]&quot; wordt het bronschema, terwijl &quot;[!DNL Hotels]&quot; fungeert als het referentieschema.
 
@@ -83,7 +87,7 @@ Het referentieschema &quot;[!DNL Hotels]&quot; is gebaseerd op een aangepaste &q
 
 Om een verhouding tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat op de primaire identiteit van het verwijzingsschema zal wijzen. U kunt dit gebied aan het bronschema toevoegen door een nieuwe groep van het schemagebied te creëren of bestaande uit te breiden.
 
-In het geval van de [!DNL Loyalty Members] schema, een nieuw `preferredHotel` het veld zal worden toegevoegd om het voorkeurhotel van het loyaliteitslid voor bedrijfsbezoeken aan te geven . Begin door het plusteken te selecteren (**+**) naast de naam van het bronschema.
+Voor de [!DNL Loyalty Members] schema, een nieuw `preferredHotel` het veld zal worden toegevoegd om het voorkeurhotel van het loyaliteitslid voor bedrijfsbezoeken aan te geven . Begin door het plusteken te selecteren (**+**) naast de naam van het bronschema.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -91,7 +95,7 @@ Er wordt een nieuwe plaatsaanduiding voor velden weergegeven op het canvas. Onde
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Als u klaar bent, selecteert u **[!UICONTROL Apply]**.
+Selecteer **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
@@ -105,9 +109,9 @@ Zodra uw bronschema een specifiek die verwijzingsgebied heeft wordt bepaald, kun
 
 >[!NOTE]
 >
->In de onderstaande stappen wordt beschreven hoe u een relatieveld definieert met behulp van de besturingselementen voor rechterspoor op het canvas. Als u toegang hebt tot de Real-Time CDP B2B Edition, kunt u ook een een-op-een relatie definiëren met behulp van de [zelfde dialoogvenster](./relationship-b2b.md#relationship-field) zoals wanneer het creëren van vele-aan-één verhoudingen.
+>In de onderstaande stappen wordt beschreven hoe u een relatieveld definieert met behulp van de besturingselementen voor rechterspoor op het canvas. Als u toegang hebt tot de Real-Time CDP B2B Edition, kunt u ook een een-op-een relatie definiëren met de [zelfde dialoogvenster](./relationship-b2b.md#relationship-field) zoals wanneer het creëren van vele-aan-één verhoudingen.
 
-Selecteer `preferredHotel` veld op het canvas, schuiven vervolgens omlaag onder **[!UICONTROL Field properties]** tot de **[!UICONTROL Relationship]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
+Selecteer de `preferredHotel` veld op het canvas, schuiven vervolgens omlaag onder **[!UICONTROL Field properties]** tot de **[!UICONTROL Relationship]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 

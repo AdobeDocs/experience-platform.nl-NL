@@ -2,9 +2,9 @@
 title: (bèta) [!DNL Google Ad Manager 360] verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '960'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Voor meer informatie over hoe de uitgever verstrekte herkenningstekens in Google
 
 >[!IMPORTANT]
 >
->Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Google Ad Manager 360] verbinding, neem contact op met uw Adobe-vertegenwoordiger en geef uw [!DNL organization ID].
+>Deze bestemming is momenteel in Bèta en is slechts beschikbaar aan een beperkt aantal klanten. Om toegang tot [!DNL Google Ad Manager 360] , neemt u contact op met uw Adobe en verstrekt u uw [!DNL organization ID].
 
 De [!DNL Google Ad Manager 360] doelexport [!DNL CSV] bestanden naar uw [!DNL Google Cloud Storage] emmertje. Als u de [!DNL CSV] bestanden, moet u deze importeren in uw [!DNL Google Ad Manager 360] account.
 
@@ -41,15 +41,12 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager 360] 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -68,13 +65,13 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Aanbieding toestaan {#allow-listing}
 
-Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager 360] bestemming in Platform. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
+Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager 360] doel in Platform. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
 >[!NOTE]
 >
 >De uitzondering op deze regel geldt voor bestaande [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
-1. Voer de stappen uit die in het dialoogvenster [Google Ad Manager-documentatie](https://support.google.com/admanager/answer/3289669?hl=en) om Adobe toe te voegen als een gekoppeld Platform voor gegevensbeheer (DMP).
+1. Voer de stappen uit die in het dialoogvenster [Google Ad Manager-documentatie](https://support.google.com/admanager/answer/3289669?hl=en) Adobe toevoegen als een gekoppeld gegevensbeheerplatform (DMP).
 2. In de [!DNL Google Ad Manager] interface, ga naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en de **[!UICONTROL API Access]** schuifregelaar
 
 
@@ -90,8 +87,8 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] aan Platform.
-* **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met de basiscode 64 die wordt gebruikt voor verificatie van uw [!DNL Google Cloud Storage] aan Platform.
+* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] account aan Platform.
+* **[!UICONTROL Secret access key]**: Een tekenreeks van 40 tekens met de basiscode 64 die wordt gebruikt voor verificatie van uw [!DNL Google Cloud Storage] account aan Platform.
 
 Voor meer informatie over deze waarden raadpleegt u de [HMAC-sleutels voor Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) hulplijn. Raadpleeg voor meer informatie over het genereren van uw eigen toegangstoets-id en geheime toegangstoets de [[!DNL Google Cloud Storage] bronoverzicht](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
@@ -132,7 +129,7 @@ In de stap voor identiteitstoewijzing kunt u de volgende vooraf ingevulde toewij
 
 | Vooraf ingevulde toewijzing | Beschrijving |
 |---------|----------|
-| `ECID` -> `ppid` | Dit is de enige door de gebruiker bewerkbare vooraf ingevulde toewijzing. U kunt al uw kenmerken of naamruimten selecteren in het Platform en deze toewijzen aan `ppid`. |
+| `ECID` -> `ppid` | Dit is de enige door de gebruiker bewerkbare vooraf ingevulde toewijzing. U kunt al uw kenmerken of naamruimten selecteren in Platform en deze toewijzen aan `ppid`. |
 | `metadata.segment.alias` -> `list_id` | Hiermee wijst u publieksnamen van Experience Platforms toe aan gebruikers-id&#39;s in het Google-platform. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Vertelt het Google-platform wanneer gediskwalificeerde gebruikers uit segmenten moeten worden verwijderd. |
 
@@ -146,9 +143,9 @@ Controleer uw [!DNL Google Cloud Storage] emmertje en zorg ervoor de uitgevoerde
 
 ## Problemen oplossen {#troubleshooting}
 
-Voor het geval u om het even welke fouten terwijl het gebruiken van deze bestemming tegenkomt en uit aan of Adobe of Google moet reiken, houd de volgende IDs bij.
+Voor het geval u om het even welke fouten terwijl het gebruiken van deze bestemming tegenkomt en moet uit naar of Adobe of Google reiken, houd de volgende IDs bij.
 
-Dit zijn Adobe Google-account-id&#39;s:
+Dit zijn Google-account-id&#39;s van Adobe:
 
 * **[!UICONTROL Account ID]**: 87933855
 * **[!UICONTROL Customer ID]**: 89690775

@@ -3,9 +3,9 @@ title: Het vergelijken bij.js met het Web SDK van het Experience Platform
 description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Dit artikel biedt een overzicht van de verschillen tussen de `at.js` bibliotheek
 
 ### Installeer at.js
 
-Onze klanten kunnen de bibliotheek rechtstreeks downloaden via het tabblad Implementatie van Adobe Experience Cloud. De bibliotheek at.js wordt aangepast met montages die de klant als heeft: clientCode, imsOrgId, enz.
+Wij staan onze klanten toe om de bibliotheek van Adobe Experience Cloud, het lusje van de Implementatie direct te downloaden. De bibliotheek at.js wordt aangepast met instellingen die de klant als volgt heeft: clientCode, imsOrgId, enz.
 
 ### De SDK van het Web installeren
 
@@ -104,13 +104,13 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 
 ### At.js gebruiken
 
-Bij .js 2.x gebruiken als u de instelling `pageLoadEnabled`, zal de bibliotheek een vraag aan de Rand van het Doel met teweegbrengen `execute -> pageLoad`. Als alle instellingen op de standaardwaarden zijn ingesteld, is geen aangepaste codering nodig. Nadat at.js aan de pagina is toegevoegd en door de browser is geladen, wordt een doelEdge-aanroep uitgevoerd.
+Bij .js 2.x gebruiken als u de instelling `pageLoadEnabled`, zal de bibliotheek een vraag aan de Rand van het Doel met activeren `execute -> pageLoad`. Als alle instellingen op de standaardwaarden zijn ingesteld, is geen aangepaste codering nodig. Als at.js eenmaal aan de pagina is toegevoegd en door de browser wordt geladen, wordt een doelEdge-aanroep uitgevoerd.
 
 ### Web SDK gebruiken
 
-Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) kan automatisch worden opgehaald en gerenderd door de SDK.
+Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) kan automatisch door SDK worden opgehaald en teruggegeven.
 
-Om de aanbiedingen van het Doel te verzoeken en automatisch terug te geven, gebruik `sendEvent` en stelt de `renderDecisions` optie voor `true`. Hierdoor wordt de SDK gedwongen om alle gepersonaliseerde inhoud die in aanmerking komt voor automatische rendering, automatisch te renderen.
+Om de aanbiedingen van het Doel te verzoeken en automatisch terug te geven, gebruik `sendEvent` en stelt de `renderDecisions` optie voor `true`. Hierdoor wordt de SDK gedwongen om automatisch gepersonaliseerde inhoud te renderen die in aanmerking komt voor automatische rendering.
 
 Voorbeeld:
 
@@ -244,7 +244,7 @@ adobe.target.getOffers({
 
 ### Web SDK gebruiken
 
-Een `sendEvent` bevel met een bijzonder toepassingsgebied onder `decisionScopes`: `__view__`. Wij gebruiken dit werkingsgebied als signaal om alle pagina-lading activiteiten van Doel te halen en alle meningen vooraf in te stellen. SDK van het Web zal ook proberen om alle VEC mening gebaseerde activiteiten te evalueren. Het uitschakelen van weergave-prefetching wordt momenteel niet ondersteund in de Web SDK.
+Een `sendEvent` bevel met een bijzonder toepassingsgebied onder `decisionScopes`: `__view__`. Wij gebruiken dit werkingsgebied als signaal om alle pagina-lading activiteiten van Doel te halen en alle meningen vooraf in te stellen. De SDK van het Web zal ook proberen om alle VEC mening gebaseerde activiteiten te evalueren. Het uitschakelen van weergave-prefetching wordt momenteel niet ondersteund in de Web SDK.
 
 Om tot om het even welke verpersoonlijkingsinhoud toegang te hebben, kunt u een callback functie verstrekken, die zal worden geroepen nadat SDK een succesvolle reactie van de server ontvangt. Uw callback wordt verstrekt een resultaatvoorwerp, dat voorzetbezit kan bevatten die om het even welke teruggekeerde verpersoonlijkingsinhoud bevatten.
 
@@ -330,7 +330,7 @@ adobe.target.getOffers({
 
 ### Web SDK gebruiken
 
-U kunt op formulier gebaseerde Composer-activiteiten ophalen met de opdracht `sendEvent` en geeft u de mbox-namen door onder het dialoogvenster `decisionScopes` optie. De `sendEvent` command retourneert een promise die wordt opgelost met een object dat de gevraagde activiteiten / voorstellen bevat: Zo ziet het `propositions` array ziet er als volgt uit:
+U kunt op formulier gebaseerde Composer-activiteiten ophalen met de opdracht `sendEvent` en geeft u de mbox-namen door onder het dialoogvenster `decisionScopes` -optie. De `sendEvent` command retourneert een belofte die wordt opgelost met een object dat de gevraagde activiteiten/voorstellen bevat: Dit is de `propositions` array ziet er als volgt uit:
 
 ```javascript
 [
@@ -518,10 +518,10 @@ adobe.target.sendNotifications({
 
 ### Web SDK gebruiken
 
-U kunt gebeurtenissen en gebruikersacties volgen door `sendEvent` opdracht, vullen `_experience.decisioning.propositions` XDM-veldgroep en het instellen van de `eventType` tot een van de twee waarden:
+U kunt gebeurtenissen en gebruikersacties volgen door `sendEvent` opdracht, vullen `_experience.decisioning.propositions` XDM-veldgroep en instellen `eventType` tot een van de twee waarden:
 
 * `decisioning.propositionDisplay`: Geeft aan dat de doelactiviteit wordt gerenderd.
-* `decisioning.propositionInteract`: Geeft een gebruikersinteractie met de activiteit aan, zoals een muisklik.
+* `decisioning.propositionInteract`: Signaleert een gebruikersinteractie met de activiteit, zoals een muisklik.
 
 De `_experience.decisioning.propositions` XDM fieldGroup is een array met objecten. De eigenschappen van elk object worden afgeleid van de `result.propositions` die wordt geretourneerd in het dialoogvenster `sendEvent` opdracht: `{ id, scope, scopeDetails }`
 
@@ -650,7 +650,7 @@ adobe.target.triggerView("homeView")
 
 ### Web SDK gebruiken
 
-Als u een weergavewijziging van één pagina wilt activeren of signaleren, stelt u de optie `web.webPageDetails.viewName` eigendom onder de `xdm` de `sendEvent` gebruiken. De SDK van het Web zal het meningsgeheime voorgeheugen controleren, als er aanbiedingen voor zijn `viewName` gespecificeerd in `sendEvent` deze wordt uitgevoerd en er wordt een weergavemeldingsgebeurtenis verzonden.
+Als u een weergavewijziging van één pagina wilt activeren of signaleren, stelt u de optie `web.webPageDetails.viewName` eigendom onder `xdm` van de `sendEvent` gebruiken. De SDK van het Web zal het meningsgeheime voorgeheugen controleren, als er aanbiedingen voor zijn `viewName` gespecificeerd in `sendEvent` deze wordt uitgevoerd en er wordt een weergavemeldingsgebeurtenis verzonden.
 
 **Voorbeeld**
 
@@ -671,7 +671,7 @@ alloy("sendEvent", {
 
 ## Respontokens gebruiken
 
-Tot de personalisatie-inhoud die door Adobe Target wordt geretourneerd, behoren [reactietokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
+Persoonlijke inhoud die door Adobe Target wordt geretourneerd, omvat [reactietokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
 
 ### At.js gebruiken
 
@@ -692,9 +692,9 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 >[!IMPORTANT]
 >
->Zorg ervoor dat u versie 2.6.0 van SDK van het Web van Platforms of later gebruikt.
+>Zorg ervoor dat u versie 2.6.0 of later van SDK van het Web van het Platform gebruikt.
 
-De reactietokens worden geretourneerd als onderdeel van de `propositions` die worden blootgesteld in het resultaat van de `sendEvent` gebruiken. Elk voorstel bevat een array van `items`en elk item bevat een `meta` -object gevuld met antwoordtokens als deze zijn ingeschakeld in de interface van Target-beheerder. [Meer informatie](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+De reactietokens worden geretourneerd als onderdeel van de `propositions` die in het resultaat van de `sendEvent` gebruiken. Elk voorstel bevat een array van `items`en elk item bevat een `meta` -object gevuld met antwoordtokens als deze zijn ingeschakeld in de interface van Target-beheerder. [Meer informatie](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
 
 **Voorbeeld**
 
@@ -737,7 +737,7 @@ alloy("sendEvent", {
 
 ### At.js gebruiken
 
-Met at.js kunt u flikkering beheren door de instelling `bodyHidingEnabled: true` zodat at.js de container die de gepersonaliseerde containers voorverbergt alvorens het ophaalt en de DOM-wijzigingen toepast, is.
+Met at.js kunt u flikkering beheren door de instelling `bodyHidingEnabled: true` zodat at.js de container die de gepersonaliseerde containers zou voorbehouden alvorens het ophaalt en de DOM veranderingen toepast.
 De paginagedeelten die gepersonaliseerde inhoud bevatten, kunnen vooraf worden verborgen door at.js te overschrijven `bodyHiddenStyle`.
 Standaard `bodyHiddenStyle` verbergt de gehele HTML `body`.
 U kunt beide instellingen overschrijven met `window.targetGlobalSettings`. `window.targetGlobalSettings` moet worden geplaatst voordat het bestand te.js wordt geladen.
@@ -798,7 +798,7 @@ Als deze optie is ingesteld, ziet de indeling van de geretourneerde lading er al
 
 De payload kan vervolgens naar Analytics worden doorgestuurd via de API voor het invoegen van gegevens.
 
-Voorbeeld 2: Het vormen in elke `getOffers` functie:
+Voorbeeld 2: Het vormen het in elk `getOffers` functie:
 
 ```javascript
 adobe.target.getOffers({
@@ -850,7 +850,7 @@ Zo ziet de antwoordlading eruit:
 }
 ```
 
-De lading Analytics (`tnta` token) moet worden opgenomen in de hit Analytics [API voor gegevensinvoer](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+De payload van Analytics (`tnta` token) moet worden opgenomen in de hit Analytics [API voor gegevensinvoer](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 #### Logboekregistratie op de server voor Analytics
 
@@ -1104,7 +1104,7 @@ adobe.target.getOffers({
 Of er is een manier om de `mbox3rdPartyId` ofwel in `targetPageParams` of `targetPageParamsAll`.
 Wanneer u deze instelt `targetPageParams`, wordt het in de verzoeken om `target-global-mbox` ook bekend als `pag-lLoad`.
 De aanbeveling moet worden vastgesteld met behulp van `targetPageParamsAll` aangezien het in elk doelverzoek zal worden verzonden.
-Het voordeel van het gebruik `targetPageParamsAll` is dat u de `mbox3rdPartyId` eenmaal op de pagina staan, zodat alle doelaanvragen het juiste kunnen worden ingediend `mbox3rdPartyId`.
+Het voordeel van `targetPageParamsAll` is dat u de `mbox3rdPartyId` eenmaal op de pagina staan, zodat alle doelaanvragen het juiste kunnen worden ingediend `mbox3rdPartyId`.
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1156,7 +1156,7 @@ alloy("sendEvent", {
 
 ### At.js gebruiken
 
-Gebruikend at.js zijn er twee manieren om opstelling de bezitstokens, of het gebruiken `targetPageParams` of `targetPageParamsAll`. Gebruiken `targetPageParams` voegt de eigenschap token toe aan de `target-global-mbox` vraag, maar het gebruiken `targetPageParamsAll` voegt het teken aan alle doelvraag toe:
+Gebruikend at.js zijn er twee manieren om opstelling de bezitstokens, of het gebruiken van `targetPageParams` of `targetPageParamsAll`. Gebruiken `targetPageParams` voegt de eigenschap token toe aan de `target-global-mbox` vraag, maar het gebruiken `targetPageParamsAll` voegt het teken aan alle doelvraag toe:
 
 **Voorbeeld 1**
 
@@ -1188,7 +1188,7 @@ Dit betekent elke vraag van het Doel voor die specifieke configuratie van de Str
 
 ### At.js gebruiken
 
-Deze functionaliteit is alleen beschikbaar in at.js 2.x. at.js 2.x heeft een nieuwe functie genoemd `getOffers`. `getOffers` klanten toestaan inhoud vooraf in te stellen voor een of meer vakken. Hier volgt een voorbeeld:
+Deze functionaliteit is alleen beschikbaar in at.js 2.x. at.js 2.x. `getOffers`. `getOffers` klanten toestaan inhoud vooraf in te stellen voor een of meer vakken. Hier volgt een voorbeeld:
 
 ```javascript
 adobe.target.getOffers({
@@ -1211,7 +1211,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-OPMERKING: Het wordt ten zeerste aanbevolen ervoor te zorgen dat `mbox` in de `mboxes` array heeft een eigen index. Meestal heeft de eerste box `index=0`, de volgende `index=1`, enz.
+NOTA: Het wordt hoogst geadviseerd om ervoor te zorgen dat elk `mbox` in de `mboxes` array heeft een eigen index. Meestal heeft de eerste box `index=0`, de volgende `index=1`, enz.
 
 ### Web SDK gebruiken
 
@@ -1227,13 +1227,13 @@ At.js stelt deze het zuiveren eigenschappen bloot:
 * Mbox Debug - at.js registreert elke actie
 * Doelovertrek - met een mbox trace-token dat in Bullseye is gegenereerd, is een trace-object met details die aan het besluitvormingsproces hebben deelgenomen, beschikbaar onder `window.___target_trace` object
 
-Opmerking: Al deze foutopsporingsfuncties zijn beschikbaar met verbeterde functies in [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+Opmerking: al deze foutopsporingsfuncties zijn beschikbaar met verbeterde mogelijkheden in [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ### Web SDK gebruiken
 
 U hebt veelvoudige het zuiveren mogelijkheden wanneer het gebruiken van Web SDK:
 
-* Gebruiken [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Gebruiken [Betrouwbaarheid](../../../assurance/home.md)
 * [Web SDK debugenabled](../../../edge/fundamentals/debugging.md)
 * Gebruiken [Controle van webSDK-haken](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Gebruiken [Adobe Experience Platform Debugger](../../../debugger/home.md)

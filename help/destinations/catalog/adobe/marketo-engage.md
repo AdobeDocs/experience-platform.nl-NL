@@ -1,15 +1,15 @@
 ---
-title: Marketo Engage-bestemming
+title: Bestemming Marketo Engage
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
 
-# Marketo Engage-bestemming {#beta-marketo-engage-destination}
+# Marketo Engage bestemming {#beta-marketo-engage-destination}
 
 ## Doelwijziging {#changelog}
 
@@ -53,13 +53,12 @@ U kunt kenmerken van het Experience Platform toewijzen aan alle kenmerken waarto
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Bovendien ondersteunt deze bestemming ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
-
-| Type extern publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

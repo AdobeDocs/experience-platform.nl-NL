@@ -3,20 +3,20 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar realtime klantprofiel verzenden met Data Prep
 description: Leer hoe u updates van gedeeltelijke rijen naar Real-Time klantprofiel verzendt met Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 15aa27e19f287a39242860b91eedae87aace3d27
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 0%
+source-wordcount: '1176'
+ht-degree: 1%
 
 ---
 
 # Gedeeltelijke rijupdates verzenden naar [!DNL Real-Time Customer Profile] gebruiken [!DNL Data Prep]
 
-Streaming updates in [!DNL Data Prep] staat u toe om gedeeltelijke rijupdates te verzenden naar [!DNL Real-Time Customer Profile] gegevens te maken en nieuwe identiteitskoppelingen te maken met één API-aanvraag.
+Streaming upserts in [!DNL Data Prep] staat u toe om gedeeltelijke rijupdates te verzenden naar [!DNL Real-Time Customer Profile] gegevens te maken en nieuwe identiteitskoppelingen te maken met één API-aanvraag.
 
 Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] PATCH vraagt tijdens inname. Gebaseerd op de input u verstrekt, [!DNL Data Prep] kunt u één API-lading verzenden en de gegevens omzetten naar beide [!DNL Real-Time Customer Profile] PATCH en [!DNL Identity Service] CREEER verzoeken.
 
-Dit document bevat informatie over hoe upserts kunnen worden gestreamd in [!DNL Data Prep].
+Dit document bevat informatie over het streamen van upserts in [!DNL Data Prep].
 
 ## Aan de slag
 
@@ -25,7 +25,7 @@ Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 * [Klantprofiel in realtime](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Bronnen](../sources/home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+* [Bronnen](../sources/home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
 
 ## Streaming updates gebruiken in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
@@ -35,7 +35,7 @@ Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-
 
 ### Streaming zorgt voor een workflow op hoog niveau
 
-Streaming updates in [!DNL Data Prep] werkt als volgt:
+Streaming upserts in [!DNL Data Prep] werkt als volgt:
 
 * U moet eerst een dataset creëren en toelaten voor [!DNL Profile] verbruik. Zie de handleiding op [het toelaten van een dataset voor [!DNL Profile]](../catalog/datasets/enable-for-profile.md) voor meer informatie .
 * Als nieuwe identiteiten moeten worden verbonden, dan moet u ook een extra dataset creëren **met hetzelfde schema** als uw [!DNL Profile] dataset.
@@ -48,7 +48,7 @@ Streaming updates in [!DNL Data Prep] werkt als volgt:
 
 Als nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset in de inkomende lading creëren en overgaan. Wanneer het creëren van een identiteitsdataset, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan:
 
-* De identiteitsdataset moet zijn bijbehorend schema als hebben [!DNL Profile] dataset. Een afwijking van schema&#39;s kan tot inconsistent systeemgedrag leiden.
+* De identiteitsdataset moet zijn bijbehorend schema als [!DNL Profile] dataset. Een afwijking van schema&#39;s kan tot inconsistent systeemgedrag leiden.
 * Nochtans, moet u ervoor zorgen dat de identiteitsdataset van verschillend is [!DNL Profile] dataset. Als de datasets het zelfde zijn, dan zullen de gegevens in plaats van bijgewerkt worden beschreven.
 * Terwijl de aanvankelijke dataset moet worden toegelaten voor [!DNL Profile], de identiteitsgegevens **mag niet worden ingeschakeld** for [!DNL Profile]. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, de identiteitsdataset **moet worden ingeschakeld** for [!DNL Identity Service].
 
@@ -82,7 +82,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 >
 >U te hoeven om geen extra configuratie te doen als het schema verbonden aan de identiteitsdataset geen vereiste gebieden heeft.
 
-## Binnenkomende payload-structuur
+## Binnenkomende laadstructuur
 
 In het volgende voorbeeld ziet u een voorbeeld van een inkomende ladingsstructuur die nieuwe identiteitskoppelingen tot stand brengt.
 
@@ -106,7 +106,7 @@ In het volgende voorbeeld ziet u een voorbeeld van een inkomende ladingsstructuu
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `flowId` | Een unieke id om een gegevensstroom te identificeren. Deze gegevensstroom-id moet overeenkomen met de bronverbinding die is gemaakt met [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], of [!DNL HTTP API]. Deze gegevensstroom moet ook een [!DNL Profile]- toegelaten dataset als doel dataset. **Opmerking**: De id van de [!DNL Profile]-enabled doeldataset wordt ook gebruikt als uw `datasetId` parameter. |
+| `flowId` | Een unieke id om een gegevensstroom te identificeren. Deze gegevensstroom-id moet overeenkomen met de bronverbinding die met [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], of [!DNL HTTP API]. Deze gegevensstroom moet ook een [!DNL Profile]- toegelaten dataset als doel dataset. **Opmerking**: De id van de [!DNL Profile]-enabled doeldataset wordt ook gebruikt als uw `datasetId` parameter. |
 | `imsOrgId` | De id die overeenkomt met uw organisatie. |
 | `datasetId` | De id van de [!DNL Profile]- toegelaten doeldataset van uw dataflow. **Opmerking**: Dit is dezelfde id als de [!DNL Profile]- toegelaten identiteitskaart van de doeldataset die in uw gegevensstroom wordt gevonden. |
 | `operations` | Deze parameter beschrijft de acties die [!DNL Data Prep] wordt gebaseerd op de binnenkomende aanvraag. |
@@ -128,7 +128,7 @@ De volgende bewerkingen worden ondersteund door [!DNL Identity Service]:
 
 | Bewerkingen | Beschrijvingen |
 | --- | --- |
-| `create` | De enige toegestane bewerking voor deze parameter. Indien `create` wordt doorgegeven als waarde voor `operations.identity`vervolgens [!DNL Data Prep] genereert een XDM-entiteit die een aanvraag maakt voor [!DNL Identity Service]. Als de identiteit al bestaat, wordt de identiteit genegeerd. **Opmerking:** Indien `operations.identity` is ingesteld op `create`en de `identityDatasetId` moet ook worden gespecificeerd. De XDM-entiteit maakt een bericht dat intern wordt gegenereerd door [!DNL Data Prep] wordt voor deze id van de gegevensset gegenereerd. |
+| `create` | De enige toegestane bewerking voor deze parameter. Indien `create` wordt doorgegeven als waarde voor `operations.identity`vervolgens [!DNL Data Prep] genereert een XDM-entiteit die een aanvraag maakt voor [!DNL Identity Service]. Als de identiteit al bestaat, wordt de identiteit genegeerd. **Opmerking:** Indien `operations.identity` is ingesteld op `create`en vervolgens de `identityDatasetId` moet ook worden gespecificeerd. De XDM-entiteit maakt een bericht dat intern wordt gegenereerd door [!DNL Data Prep] wordt voor deze id van de gegevensset gegenereerd. |
 
 ### Payload zonder identiteitsconfiguratie
 
@@ -157,7 +157,7 @@ Voor XDM-updates moet het schema zijn ingeschakeld voor [!DNL Profile] en bevatt
 
 ### Een statisch veld aanwijzen als primair identiteitsveld in het XDM-schema
 
-In het onderstaande voorbeeld: `state`, `homePhone.number` en andere eigenschappen worden met de respectieve gegeven waarden in de [!DNL Profile] met de primaire identiteit van `sampleEmail@gmail.com`. Vervolgens wordt een updatebericht voor een XDM-entiteit gegenereerd door streaming [!DNL Data Prep] component. [!DNL Real-Time Customer Profile] bevestigt dan dat XDM updatebericht om het profielverslag op te nemen.
+In het onderstaande voorbeeld: `state`, `homePhone.number` en andere eigenschappen worden met de respectieve gegeven waarden opgenomen in de [!DNL Profile] met de primaire identiteit van `sampleEmail@gmail.com`. Vervolgens wordt een updatebericht voor een XDM-entiteit gegenereerd door streaming [!DNL Data Prep] component. [!DNL Real-Time Customer Profile] bevestigt dan dat XDM updatebericht om het profielverslag op te nemen.
 
 >[!NOTE]
 >
@@ -256,8 +256,8 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 In het volgende voorbeeld wordt een lijst met bekende beperkingen beschreven die in acht moeten worden genomen bij het streamen van updates met [!DNL Data Prep]:
 
 * De streaming upserts methode zou slechts moeten worden gebruikt wanneer het verzenden van gedeeltelijke rijupdates naar [!DNL Real-Time Customer Profile]. Gedeeltelijke rij-updates zijn **niet** verbruikt door data Lake.
-* De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Er worden nieuwe identiteiten gemaakt als deze niet bestaan. Daarom `identity` bewerking moet altijd zijn ingesteld op maken. Als er al een identiteit bestaat, is de bewerking een no-op.
-* De streaming upserts-methode ondersteunt momenteel niet [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) en [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+* De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Er worden nieuwe identiteiten gemaakt als deze niet bestaan. Vandaar dat `identity` bewerking moet altijd zijn ingesteld op maken. Als er al een identiteit bestaat, is de bewerking een no-op.
+* De streaming upserts-methode ondersteunt momenteel niet [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) en [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Volgende stappen
 

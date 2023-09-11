@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '4103'
+source-wordcount: '4104'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Het belangrijkste nadeel van het gebruik `identityMap` is dat identiteiten in de
 >
 >Een schema dat `identityMap` kan als bronschema in een verhouding worden gebruikt, maar kan niet als verwijzingsschema worden gebruikt. Dit komt omdat alle verwijzingsschema&#39;s een zichtbare identiteit moeten hebben die op een verwijzingsgebied binnen het bronschema kan worden in kaart gebracht. Raadpleeg de UI-handleiding op [relaties](../tutorials/relationship-ui.md) voor meer informatie over de eisen van bron- en referentieschema&#39;s.
 
-Identiteitskaarten kunnen echter vooral handig zijn als u gegevens opneemt uit bronnen die identiteiten samen opslaan (zoals [!DNL Airship] of Adobe Audience Manager), of wanneer er een variabel aantal identiteiten voor een schema is. Daarnaast zijn identiteitskaarten vereist als u de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+Identiteitskaarten kunnen echter vooral handig zijn als u gegevens opneemt uit bronnen die identiteiten samen opslaan (zoals [!DNL Airship] of Adobe Audience Manager), of wanneer er een variabel aantal identiteiten voor een schema is. Daarnaast zijn identiteitskaarten vereist als u de [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 Een voorbeeld van een eenvoudige identiteitskaart zou als het volgende kijken:
 

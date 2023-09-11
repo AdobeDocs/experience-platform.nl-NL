@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het `/bestemming-servers' eindpunt worden gebouwd.
 title: Configuratie bestandsindeling
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1004'
 ht-degree: 2%
 
 ---
@@ -178,7 +178,7 @@ Hieronder ziet u een volledige verwijzing naar alle beschikbare opmaakopties voo
 | `templatingStrategy` | Vereist | Voor elke optie voor bestandsindeling die u configureert, moet u de parameter toevoegen `templatingStrategy`, die twee waarden kunnen hebben: <br><ul><li>`NONE`: gebruik deze waarde als u niet van plan bent om gebruikers toe te staan tussen verschillende waarden voor een configuratie te selecteren. Zie [deze configuratie](#file-configuration-templating-none) voor een voorbeeld waarin de opties voor bestandsindeling zijn gecorrigeerd.</li><li>`PEBBLE_V1`: gebruik deze waarde als u wilt toestaan dat gebruikers een keuze kunnen maken tussen verschillende waarden voor een configuratie. In dit geval moet u ook een corresponderend gegevensveld voor de klant instellen in het dialoogvenster `/destination` eindpuntconfiguratie, aan oppervlakte de diverse opties aan gebruikers in UI. Zie [deze configuratie](#file-configuration-templating-pebble) voor een voorbeeld waarin gebruikers verschillende waarden voor opties voor bestandsindeling kunnen selecteren.</li></ul> | - | - | - |
 | `compression.value` | Optioneel | Compressiecodec die moet worden gebruikt bij het opslaan van gegevens naar een bestand. Ondersteunde waarden: `none`, `bzip2`, `gzip`, `lz4`, en `snappy`. | `none` | - | - |
 | `fileType.value` | Optioneel | Hiermee geeft u de indeling voor het uitvoerbestand op. Ondersteunde waarden: `csv`, `parquet`, en `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken van geciteerde waarden, waarbij het scheidingsteken deel kan uitmaken van de waarde. | `null` | - | - |
+| `csvOptions.quote.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken van geciteerde waarden, waarbij het scheidingsteken deel kan uitmaken van de waarde. | `null` | Voorbeeld van standaardwaarde: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Aangepast voorbeeld: `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Geeft aan of alle waarden altijd tussen aanhalingstekens moeten worden geplaatst. Standaard worden alleen escape-waarden gebruikt die een aanhalingsteken bevatten. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Hiermee stelt u een scheidingsteken in voor elk veld en elke waarde. Dit scheidingsteken kan een of meer tekens bevatten. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken voor aanhalingstekens binnen een reeds geciteerde waarde. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |

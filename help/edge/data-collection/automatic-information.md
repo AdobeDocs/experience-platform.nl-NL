@@ -1,151 +1,34 @@
 ---
-title: Automatisch verzamelde informatie in de Adobe Experience Platform Web SDK
-description: Een overzicht van alle informatie die de Adobe Experience Platform SDK automatisch verzamelt.
-keywords: verzamel informatie;context;configure;device;screenHeight;screenHeight;screenOrientation;screenOrientation;screenWidth;screenWidth;milieu;viewportHeight;viewportHeight;viewportWidth;viewport Breedte;crowserDetails;browser details;implementatieDetails;naam;versionContext;localTime;localTimezoneOffset;local zone Offset;timestamp;web;url;webPageDetails;webPage Details;webReferrer;webReferrer;landscape;portrait;
-exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
+title: Automatisch verzamelde gegevens
+description: Een overzicht van de gegevens die SDK van het Web van Adobe Experience Platform automatisch verzamelt.
+source-git-commit: 89b981104e3cbe597d1556484f4365866bf2a11d
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 5%
+source-wordcount: '331'
+ht-degree: 1%
 
 ---
 
 # Automatisch verzamelde gegevens
 
-De SDK van het Web van Adobe Experience Platform verzamelt automatisch een aantal stukken informatie zonder enige speciale configuratie. Deze informatie kan echter, indien nodig, worden uitgeschakeld met de opdracht `context` in de `configure` gebruiken. [Zie De SDK configureren](../fundamentals/configuring-the-sdk.md). Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
+Adobe Experience Platform Web SDK verzamelt automatisch bepaalde gegevens uit het vak. Als uw organisatie deze gegevens niet automatisch wil verzamelen, kunt u de opdracht `context` in de [`configure` command](../fundamentals/configuring-the-sdk.md).
 
-## Apparaat (`device`)
+Trefwoorden die zijn uitgesloten van het dialoogvenster `context` array worden niet opgenomen in gegevensverzameling. Als de `context` array bestaat niet in de `configure` alle gegevens in de onderstaande tabel automatisch worden verzameld.
 
-Informatie over het apparaat. Dit omvat geen gegevens die op server-kant van het koord van de gebruikersagent kunnen worden gezocht.
+| Naam | Beschrijving | `context` arraytrefwoord | XDM-pad | Voorbeeldwaarde |
+| --- | --- | --- | --- | --- |
+| Schermhoogte | De hoogte van het scherm in pixels. | `device` | `events[].xdm.device.screenHeight` | `900` |
+| Schermbreedte | De breedte van het scherm in pixels. | `device` | `events[].xdm.device.screenWidth` | `1440` |
+| Schermoriëntatie | De oriëntatie van het scherm. | `device` | `events[].xdm.device.screenOrientation` | `landscape` of `portrait` |
+| Type omgeving | Het type omgeving waardoor de ervaring optrad. Adobe Experience Platform Web SDK stelt dit veld altijd in op `browser`. | `environment` | `events[].xdm.environment.type` | `browser` |
+| Viewporthoogte | De hoogte van het inhoudsgebied van de browser in pixels. | `environment` | `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
+| Viewportbreedte | De breedte van het inhoudsgebied van de browser in pixels. | `environment` | `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
+| SDK-naam | De SDK-id. In dit veld wordt een URI gebruikt om de unieke id&#39;s van verschillende softwarebibliotheken te verbeteren. Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy`. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde `https://ns.adobe.com/experience/alloy+reactor`. | | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
+| SDK-versie | Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde de bibliotheekversie. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, bestaat de waarde uit een samenvoeging van de versie van de bibliotheek en de versie van de tagextensie. | | `events[].xdm.implementationDetails.version` | `2.1.0+2.1.3` |
+| Omgeving | De omgeving waarin de gegevens zijn verzameld. Adobe Experience Platform Web SDK stelt dit veld altijd in op `browser`. | | `events[].xdm.implementationDetails.environment` | `browser` |
+| Lokale tijd | Lokale tijdstempel voor de eindgebruiker in de vereenvoudigde uitgebreide ISO-indeling [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `placeContext` | `events[].xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Verschuiving lokale tijdzone | Aantal minuten dat de gebruiker wordt verschoven ten opzichte van GMT. | `placeContext` | `events[].xdm.placeContext.localTimezoneOffset` | `360` |
+| Tijdstempel | De UTC-tijdstempel voor de eindgebruiker in de vereenvoudigde uitgebreide ISO-indeling [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | Altijd inbegrepen | `events[].xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
+| Huidige pagina-URL | De URL van de huidige pagina. | `web` | `events[].xdm.web.webPageDetails.URL` | `https://example.com/index.html` |
+| Referrer-URL | De URL van de vorige bezochte pagina. | `web` | `events[].xdm.web.webReferrer.URL` | `http://example.org/linkedpage.html` |
 
-### Schermhoogte
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ---------------------------------- | ------------ |
-| `events[].xdm.device.screenHeight` | `900` |
-
-De hoogte van het scherm (in pixels).
-
-### Schermoriëntatie
-
-| **Pad in Payload:** | **Mogelijke waarden:** |
-| --------------------------------------- | ------------------------- |
-| `events[].xdm.device.screenOrientation` | `landscape` of `portrait` |
-
-De oriëntatie van het scherm.
-
-### Schermbreedte
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| --------------------------------- | ------------ |
-| `events[].xdm.device.screenWidth` | `1440` |
-
-De breedte van het scherm (in pixels)
-
-## Omgeving (`environment`)
-
-Details over de browseromgeving.
-
-### Type omgeving
-
-Browser
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ------------------------------- | ------------ |
-| `events[].xdm.environment.type` | `browser` |
-
-Het type omgeving waardoor de ervaring optrad. Adobe Experience Platform Web SDK stelt dit altijd in op `browser`.
-
-### Viewporthoogte
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| -------------------------------------------------------- | ------------ |
-| `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
-
-De hoogte van het inhoudsgebied van de browser (in pixels).
-
-### Viewportbreedte
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ------------------------------------------------------- | ------------ |
-| `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
-
-De breedte van het inhoudsgebied van de browser (in pixels).
-
-## Implementatiedetails
-
-Informatie over de SDK die wordt gebruikt om de gebeurtenis te verzamelen.
-
-### Naam
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ----------------------------------------- | --------------------------------------- |
-| `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
-
-De id van de Software Development Kit (SDK).  In dit veld wordt een URI gebruikt om de unieke id&#39;s van verschillende softwarebibliotheken te verbeteren. Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde `https://ns.adobe.com/experience/alloy`. Wanneer de bibliotheek wordt gebruikt als onderdeel van de tagextensie, is de waarde `https://ns.adobe.com/experience/alloy+reactor`.
-
-### Versie
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| -------------------------------------------- | ------------ |
-| `events[].xdm.implementationDetails.version` | `0.11.0` |
-
-Wanneer de zelfstandige bibliotheek wordt gebruikt, is de waarde eenvoudig de bibliotheekversie. Wanneer de bibliotheek als deel van de markeringsuitbreiding wordt gebruikt, is dit de bibliotheekversie en de versie van de marktextensie ging met &quot;+&quot; samen. Als de bibliotheekversie bijvoorbeeld 2.1.0 is en de extensieversie 2.1.3 is, is de waarde `2.1.0+2.1.3`.
-
-### Omgeving {#environment}
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ------------------------------------------------ | ------------ |
-| `events[].xdm.implementationDetails.environment` | `browser` |
-
-De omgeving waarin de gegevens zijn verzameld. Dit is altijd ingesteld op `browser`.
-
-## Context plaatsen (`placeContext`) {#place-context}
-
-Informatie over de locatie van de eindgebruiker.
-
-### Lokale tijd
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ------------------------------------- | ------------------------------- |
-| `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
-
-Lokale tijdstempel voor de eindgebruiker in de vereenvoudigde uitgebreide ISO-indeling [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
-
-### Verschuiving lokale tijdzone
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ----------------------------------------------- | ------------ |
-| `events[].xdm.placeContext.localTimezoneOffset` | `360` |
-
-Aantal minuten dat de gebruiker wordt verschoven ten opzichte van GMT.
-
-## Tijdstempel
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ------------------------ | -------------------------- |
-| `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
-
-Het tijdstempel van de gebeurtenis.  Dit gedeelte van context kan niet worden verwijderd.
-
-UTC-tijdstempel voor de eindgebruiker in de vereenvoudigde uitgebreide ISO-indeling [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
-
-## Webgegevens (`web`)
-
-Details over de pagina waarop de gebruiker staat.
-
-### Huidige pagina-URL
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ------------------------------------- | ------------------------------------ |
-| `events[].xdm.web.webPageDetails.URL` | `https://somesite.com/somepage.html` |
-
-De URL van de huidige pagina.
-
-### Referrer-URL
-
-| **Pad in Payload:** | **Voorbeeld:** |
-| ---------------------------------- | ----------------------------------------- |
-| `events[].xdm.web.webReferrer.URL` | `http://somereferrer.com/linkedpage.html` |
-
-De URL van de vorige bezochte pagina.
+{style="table-layout:auto"}

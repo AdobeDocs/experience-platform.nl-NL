@@ -3,9 +3,9 @@ keywords: reclame; banden;
 title: Microsoft Bing-verbinding
 description: Met de Microsoft Bing-verbindingsbestemming kunt u gerichte digitale campagnes heroriënteren en publieksgericht voeren in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '626'
 ht-degree: 1%
 
 ---
@@ -34,15 +34,12 @@ Als markator wil ik het publiek kunnen gebruiken dat is opgebouwd uit [!DNL Micr
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +60,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming wilt maken met [!DNL Microsoft Bing] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of Customer Care om ID-syncs in te schakelen. Als u al eerder was ingesteld [!DNL Microsoft Bing] Als u integreert in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+>Als u uw eerste bestemming wilt maken met [!DNL Microsoft Bing] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of Customer Care om ID syncs in te schakelen. Als u al eerder was ingesteld [!DNL Microsoft Bing] Als u integreert in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 

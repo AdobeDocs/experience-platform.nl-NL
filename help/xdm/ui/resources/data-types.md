@@ -5,30 +5,35 @@ title: Gegevenstypen maken en bewerken met de gebruikersinterface
 type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
 
-# Gegevenstypen maken en bewerken met de gebruikersinterface
+# Gegevenstypen maken en bewerken met de gebruikersinterface {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_datatype_filter"
+>title="Standaardfilter of aangepast gegevenstype"
+>abstract="De lijst met beschikbare gegevenstypen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties Standaard en Aangepast. De optie Standaard toont entiteiten die zijn gemaakt door Adobe en de optie Aangepast geeft entiteiten weer die binnen uw organisatie zijn gemaakt. Raadpleeg de documentatie voor meer informatie over het maken en bewerken van gegevenstypen."
 
 In het Model van Gegevens van de Ervaring (XDM), zijn de gegevenstypes herbruikbare gebieden die veelvoudige subfields bevatten. Terwijl gelijkaardig aan de groepen van het schemagebied in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd.
 
 Adobe Experience Platform biedt vele standaardgegevenstypen die kunnen worden gebruikt voor een groot aantal gangbare praktijkbeheertoepassingen. U kunt echter ook uw eigen aangepaste gegevenstypen definiëren om aan uw unieke bedrijfsbehoeften te voldoen.
 
-Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste gegevenstypen in de gebruikersinterface van het Platform.
+Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste gegevenstypen in de gebruikersinterface van Platform.
 
 ## Vereisten
 
 Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](../../home.md) voor een inleiding op de rol van XDM binnen het ecosysteem van het Experience Platform, en [grondbeginselen van de schemacompositie](../../schema/composition.md) voor hoe de gegevenstypes tot schema XDM bijdragen.
 
-Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie ook op te volgen [samenstellen van een schema in UI](../../tutorials/create-schema-ui.md) om de verschillende mogelijkheden van de [!DNL Schema Editor].
+Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie ook op te volgen [samenstellen van een schema in UI](../../tutorials/create-schema-ui.md) om vertrouwd te maken met de verschillende mogelijkheden van de [!DNL Schema Editor].
 
-## Open de [!DNL Schema Editor] voor een gegevenstype
+## Open de [!DNL Schema Editor] voor een gegevenstype {#data-type}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] en selecteert u vervolgens de **[!UICONTROL Data types]** tab. Een lijst van beschikbare gegevenstypes wordt getoond, met inbegrip van die door Adobe en die door uw organisatie worden bepaald.
+Selecteer in de interface Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] werkruimte selecteert u vervolgens de **[!UICONTROL Data types]** tab. Een lijst van beschikbare gegevenstypes wordt getoond, met inbegrip van die door Adobe en die worden bepaald door uw organisatie.
 
 ![](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -51,7 +56,7 @@ Deze zelfstudie maakt een gegevenstype dat een restauratie-eigenschap beschrijft
 
 Vanaf hier kunt u naar de [volgende sectie](#add-fields) om velden toe te voegen aan het nieuwe gegevenstype.
 
-### Een bestaand gegevenstype bewerken
+### Een bestaand gegevenstype bewerken {#edit}
 
 >[!NOTE]
 >
@@ -79,11 +84,11 @@ Voeg desgewenst meer velden aan het gegevenstype toe. Het gegevenstype Restauran
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
-Naast de basisvelden kunt u ook andere gegevenstypen nesten binnen het aangepaste gegevenstype. Het gegevenstype Restaurant vereist bijvoorbeeld een veld dat het fysieke adres van de eigenschap vertegenwoordigt. In dit scenario kunt u een nieuw &quot;adres&quot;gebied toevoegen dat het standaardgegevenstype &quot;[!UICONTROL Postal address]&quot;.
+Naast basisvelden kunt u ook andere gegevenstypen nesten binnen het aangepaste gegevenstype. Het gegevenstype Restaurant vereist bijvoorbeeld een veld dat het fysieke adres van de eigenschap vertegenwoordigt. In dit scenario kunt u een nieuw &quot;adres&quot;gebied toevoegen dat het standaardgegevenstype &quot;[!UICONTROL Postal address]&quot;.
 
 ![](../../images/ui/resources/data-types/address-field.png)
 
-Dit toont aan hoe de flexibele gegevenstypes in termen van het beschrijven van uw gegevens kunnen zijn: gegevenstypen kunnen velden gebruiken die ook gegevenstypen zijn, die zelf verdere gegevenstypen kunnen bevatten, enzovoort. Dit staat u toe om gemeenschappelijke gegevenspatronen door uw schema&#39;s te abstract en opnieuw te gebruiken XDM, die het gemakkelijker maken om complexe gegevensstructuren te vertegenwoordigen.
+Dit toont aan hoe de flexibele gegevenstypes in termen van het beschrijven van uw gegevens kunnen zijn: de gegevenstypes kunnen gebieden gebruiken die ook gegevenstypes zijn, die zelf verdere gegevenstypes kunnen bevatten, etc. Dit staat u toe om gemeenschappelijke gegevenspatronen door uw schema&#39;s te abstract en opnieuw te gebruiken XDM, die het gemakkelijker maken om complexe gegevensstructuren te vertegenwoordigen.
 
 Nadat u alle velden aan het gegevenstype hebt toegevoegd, selecteert u **[!UICONTROL Save]** om uw wijzigingen op te slaan en het gegevenstype aan de [!DNL Schema Library].
 
@@ -95,7 +100,7 @@ Begin door de stappen te volgen betrokken bij [een veld toevoegen aan een klasse
 
 ## Een object met meerdere velden omzetten in een gegevenstype {#convert}
 
-Wanneer u een objecttype veld maakt met meerdere subvelden in het dialoogvenster [!DNL Schema Editor]kunt u dat veld omzetten in een gegevenstype, zodat u dezelfde veldstructuur kunt gebruiken in een andere klasse of veldgroep.
+Wanneer u een objecttypeveld maakt met meerdere subvelden in het dialoogvenster [!DNL Schema Editor]kunt u dat veld omzetten in een gegevenstype, zodat u dezelfde veldstructuur kunt gebruiken in een andere klasse of veldgroep.
 
 Als u een objecttypeveld wilt omzetten in een gegevenstype, selecteert u het veld op het canvas. Voordat u het veld converteert, moet u ervoor zorgen dat **[!UICONTROL Display name]** bevat een beschrijving van de gegevens die het object bevat, aangezien dit de naam van het gegevenstype wordt. Als u klaar bent om het veld om te zetten, selecteert u **[!UICONTROL Convert to new data type]** in het rechterspoor.
 
@@ -107,6 +112,6 @@ Het canvas werkt het gegevenstype van het veld bij van &quot;[!UICONTROL Object]
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u gegevenstypen kunt maken en bewerken met de gebruikersinterface van het Platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
+In deze handleiding wordt beschreven hoe u gegevenstypen kunt maken en bewerken met behulp van de interface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie de [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
 
-Leren hoe u gegevenstypen kunt beheren met de opdracht [!DNL Schema Registry] API, zie [eindhulplijn gegevenstypen](../../api/data-types.md).
+Leren hoe u gegevenstypen beheert met de opdracht [!DNL Schema Registry] API, zie [eindhulplijn gegevenstypen](../../api/data-types.md).

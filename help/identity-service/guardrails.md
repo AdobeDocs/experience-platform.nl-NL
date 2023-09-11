@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
+source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,8 @@ Het volgende gedeelte bevat aanvullende informatie over instructies voor identit
 >
 > * Een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.
 > * Een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.
-
+>
+>Als deze functie eenmaal beschikbaar is, worden grafieken die de limiet van 50 identiteiten overschrijden, verkleind tot maximaal 50 identiteiten. Voor CDP B2C Edition in real time, kon dit in een minimale verhoging van het aantal profielen resulteren die voor een publiek in aanmerking komen, aangezien deze profielen eerder van Segmentatie en Activering werden genegeerd.
 
 Wanneer een volledige identiteitsgrafiek wordt bijgewerkt, schrapt de Dienst van de Identiteit de oudste identiteit in de grafiek alvorens de recentste identiteit toe te voegen. Dit is om de juistheid en relevantie van identiteitsgegevens te behouden. Dit proces van schrapping volgt twee primaire regels:
 
@@ -108,3 +109,8 @@ In dit voorbeeld verwijdert Identiteitsservice eerst de bestaande identiteit met
 * In het zeldzame geval dat er twee identiteiten met het zelfde timestamp en identiteitstype zijn, zal de Dienst van de Identiteit de identiteitskaart sorteren op [XID](./api/list-native-id.md) en het schrappen van regels uitvoeren.
 
 >[!ENDSHADEBOX]
+
+Verwijderen gebeurt alleen met gegevens in de Identiteitsservice en niet in realtime klantprofiel.
+
+* Hierdoor kunnen er meer profielen met één ECID worden gemaakt, omdat de ECID geen deel meer uitmaakt van de identiteitsgrafiek.
+* Om binnen uw adresseerbare aantallen van de publieksrechten te blijven, wordt het geadviseerd om toe te laten [vervaldatum van pseudoniem profielgegevens](../profile/pseudonymous-profiles.md) om uw oude profielen te verwijderen.

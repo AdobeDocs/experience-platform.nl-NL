@@ -2,9 +2,9 @@
 title: Activeren het potentiële publiek aan bestemmingen
 type: Tutorial
 description: Leer hoe te om perspectiefpubliek aan bestemmingen te activeren
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [publiek
 
 ## Ondersteunde doelen {#supported-destinations}
 
-Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab. Gebruik de **[!UICONTROL Data types]** filter en selecteer **[!UICONTROL Prospects]** de bestemmingen te zien die de activering van het beoogde publiek ondersteunen. Op dit moment is het exporteren van mogelijke doelgroepen alleen beschikbaar voor de [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) bestemming.
+Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab. Gebruik de **[!UICONTROL Data types]** filter en selecteer **[!UICONTROL Prospects]** de bestemmingen te zien die de activering van het beoogde publiek ondersteunen. Op dit moment is het exporteren van mogelijke doelgroepen alleen beschikbaar voor cloudopslagdoelen.
 
 ![Doelen die de uitvoer van gegevenssets ondersteunen](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 

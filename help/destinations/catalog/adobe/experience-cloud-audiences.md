@@ -1,33 +1,33 @@
 ---
-title: (Bèta) Experience Cloud-publiek
+title: (bèta) Experience Cloud publiek
 description: Leer hoe u publiek kunt delen van Experience Platform naar verschillende oplossingen voor Experience Platforms.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 0%
+source-wordcount: '1578'
+ht-degree: 1%
 
 ---
 
 # (bèta) [!UICONTROL Experience Cloud Audiences] verbinding
 
-Met deze bestemming kunt u soorten publiek van Experience Platform naar verschillende Experience Cloud-oplossingen delen, zoals Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target of Marketo.
+Met deze bestemming kunt u soorten publiek van Experience Platform naar verschillende oplossingen voor Experiencen Cloud delen, zoals Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target of Marketo.
 
-![De bestemming van het publiek van de Experience Cloud, die in de bestemmingscatalogus wordt benadrukt.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
+![De bestemming van het publiek van het Experience Cloud, die in de bestemmingscatalogus wordt benadrukt.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
 >[!IMPORTANT]
 >
->* Dit doel vervangt het [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) van Experience Platform naar diverse Experience Cloud oplossingen.
+>* Dit doel vervangt het [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) van Experience Platform naar diverse oplossingen voor Experiencen Cloud.
 >* Deze bestemming is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 ## Gebruik gevallen en voordelen {#use-cases}
 
 Om u te helpen beter begrijpen hoe en wanneer u het [!UICONTROL Experience Cloud Audiences] doel, hier zijn de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
-### Gebruiksgevallen van Platforms voor gegevensbeheer inschakelen {#dmp-use-cases}
+### Gebruiksgevallen van het platform voor gegevensbeheer inschakelen {#dmp-use-cases}
 
-In Audience Manager, kunt u het publiek van het Experience Platform voor de gebruiksgevallen van het Platform van het Beheer van Gegevens gebruiken, zoals:
+In Audience Manager, kunt u het publiek van het Experience Platform voor de gebruiksgevallen van het Platform van het Gegevensbeheer, zoals gebruiken:
 
 * Toevoegen [gegevens van derden](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data) naar uw segmenten;
 * [Algorithmming](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
@@ -35,13 +35,13 @@ In Audience Manager, kunt u het publiek van het Experience Platform voor de gebr
 
 ### Kortere controle van het geëxporteerde publiek {#segments-control}
 
-Gebruik de nieuwe zelfbedieningspersoneel die integratie via de bestemming van het Soorten publiek van de Experience Cloud deelt om te selecteren welk publiek naar Audience Manager en verder moet uitvoeren. Hierdoor kunt u bepalen welk publiek u met andere Experience Cloud-oplossingen wilt delen en welk publiek u uitsluitend in het Experience Platform wilt houden.
+Gebruik de nieuwe zelfbedieningspersoneel die integratie via de bestemming van het Soorten publiek van het Experience Cloud deelt om te selecteren welk publiek naar Audience Manager en verder moet uitvoeren. Op deze manier kunt u bepalen welk publiek u wilt delen met andere oplossingen voor Experiencen Cloud en welk publiek u uitsluitend in het Experience Platform wilt houden.
 
 Dankzij de integratie van het oude publiek voor het delen van het publiek kon er geen korrelige controle worden verkregen over het publiek dat naar de Audience Manager en daarbuiten zou moeten worden geëxporteerd.
 
-### Experience Platform-publiek delen met verdere Experience Cloud-oplossingen {#share-segments-with-other-solutions}
+### Experience Platform-publiek delen met verdere oplossingen voor Experience Cloud {#share-segments-with-other-solutions}
 
-Behalve het delen van publiek met Audience Manager, laat de de bestemmingskaart van het Soorten publiek van het Experience Platform u toe om publiek met om het even welke andere oplossing van Experience Cloud te delen waarvoor u, met inbegrip van wordt voorzien:
+Behalve het delen van publiek met Audience Manager, laat de de bestemmingskaart van het Soorten publiek van het Experience Platform u toe om publiek met een andere oplossing van het Experience Cloud te delen die u wordt voorzien, die omvat:
 
 * Adobe Campaign
 * Adobe Target
@@ -60,12 +60,12 @@ Note: briefly talk about when to share audiences to these destinations using the
 >[!IMPORTANT]
 >
 > * Deze bestemming is beschikbaar voor [Adobe Real-time Customer Data Platform Prime en Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
-> * U hebt een licentie voor Audience Managers nodig om de [Gebruiksgevallen van Platforms voor gegevensbeheer](#dmp-use-cases) genoemd.
-> * U *niet nodig* een licentie van de Audience Manager om het publiek in de Experience Platform te delen met Adobe Advertising Cloud, Adobe Target, Marketo en andere Experience Cloud oplossingen die in de [sectie hierboven](#share-segments-with-other-solutions).
+> * U hebt een licentie voor Audience Managers nodig om de [Gebruiksscenario&#39;s van het platform voor gegevensbeheer](#dmp-use-cases) genoemd.
+> * U *niet nodig* een licentie van de Audience Manager om het publiek in de Experience Platform te delen met Adobe Advertising Cloud, Adobe Target, Marketo en andere oplossingen van de Experience Cloud die in de [sectie hierboven](#share-segments-with-other-solutions).
 
 ### Voor klanten die de oplossing voor het delen van het verouderde publiek gebruiken
 
-Als u al publiek deelt van Experience Platform aan Audience Manager en andere oplossingen van Experience Cloud via [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice of uw Adobe-accountteam om de verouderde integratie uit te schakelen. De de rekeningsteams van de Zorg van de klant en van de Adobe- rekening moeten een kaartje van Jira (zie malplaatjekaartje PLAT-160986) indienen om de integratie onbruikbaar te maken.
+Als u al publiek deelt van Experience Platform aan Audience Manager en andere oplossingen van het Experience Cloud via [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice of met het accountteam van de Adobe om de integratie van de bestaande software uit te schakelen. De de rekeningsteams van de Zorg van de klant en van de Adobe moeten een kaartje van Jira (zie malplaatjekaartje PLAT-160986) indienen om de integratie onbruikbaar te maken.
 
 De doorlooptijd voor het oplossen van het deprovisioning-ticket voor bètaklanten is zes werkdagen of minder. Nadat de bestaande oudere integratie is uitgeschakeld, kunt u doorgaan naar [verbinding maken](#connect) via de zelfbedieningsdoelkaart.
 
@@ -75,20 +75,20 @@ De doorlooptijd voor het oplossen van het deprovisioning-ticket voor bètaklante
 
 ## Bekende beperkingen en bijschriften {#known-limitations}
 
-Neem nota van de volgende bekende beperkingen en belangrijke callouts in de bètaversie van de kaart van het publiek van de Experience Cloud:
+Neem nota van de volgende bekende beperkingen en belangrijke callouts in de bètaversie van de kaart van het publiek van het Experience Cloud:
 
 * [Controle van gegevensstromen](/help/dataflows/ui/monitor-destinations.md) wordt niet ondersteund.
 * Wanneer u verbinding maakt met het doel, kunt u een optie weergeven op [gegevensstroomwaarschuwingen inschakelen](#enable-alerts). Hoewel het zichtbaar is in de UI, **optie voor inschakelen van waarschuwingen wordt niet ondersteund** in de bètaversie.
-* **Back-ups worden niet ondersteund**. Bij de eerste export naar Audience Manager of andere Experience Cloud-oplossingen is geen sprake van een historische populatie van het publiek.
-* In de bètaversie kunt u **één enkele bestemmingsverbinding aan de bestemming van het publiek van de Experience Cloud**, in alle sandboxen die tot uw organisatie van het Experience Platform behoren.
+* **Back-ups worden niet ondersteund**. Bij de eerste uitvoer naar Audience Manager of andere oplossingen voor Experiencen Cloud is geen sprake van een historische populatie van het publiek.
+* In de bètaversie kunt u **één enkele bestemmingsverbinding aan de bestemming van het publiek van het Experience Cloud**, in alle sandboxen die tot uw organisatie van het Experience Platform behoren.
 
 ### Latentie bij activering van publiek {#audience-activation-latency}
 
-Er is een wachttijd van vier uur tussen de tijd dat het publiek voor het eerst in Experience Platform wordt geactiveerd en de tijd dat zij klaar zijn om te worden gebruikt in Audience Manager en andere Experience Cloud oplossingen voor bepaalde gebruiksgevallen.
+Er is een wachttijd van vier uur tussen de tijd dat het publiek voor het eerst in Experience Platform wordt geactiveerd en de tijd dat zij klaar zijn om in Audience Manager en andere oplossingen van het Experience Cloud voor bepaalde gebruiksgevallen te worden gebruikt.
 
-Het kan tot 24 uur duren voordat het publiek volledig beschikbaar is in de Audience Manager voor alle gebruiksgevallen en tot 48 uur voordat het publiek van het Experience Cloud publiek in de rapporten van de Audience Manager verschijnt.
+Het kan tot 24 uur duren voordat het publiek volledig beschikbaar is in de Audience Manager voor alle gebruiksgevallen en tot 48 uur voordat het publiek uit het Experience Cloud publiek in de rapporten over de Audience Manager verschijnt.
 
-Metagegevens, zoals publieksnamen, zijn beschikbaar in Audience Manager binnen minuten nadat u het exporteren hebt ingesteld op de bestemming Experience Cloud publiek.
+Metagegevens, zoals publieksnamen, zijn beschikbaar in Audience Manager binnen minuten na het instellen van de exportbewerking naar het doelpubliek van het Experience Cloud.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -105,15 +105,12 @@ De profielen die worden geëxporteerd naar de [!UICONTROL Experience Cloud Audie
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -138,19 +135,19 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 
 >[!IMPORTANT]
 > 
->In de bètaversie kunt u één doelverbinding maken met de bestemming Experience Cloud publiek, voor alle sandboxen die tot uw organisatie van het Experience Platform behoren.
+>In de bètaversie kunt u één doelverbinding maken met het doel Soorten publiek van het Experience Cloud, voor alle sandboxen die tot uw organisatie behoren.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Om voor authentiek te verklaren aan de bestemming, uitgezocht **[!UICONTROL Set up]** in de weergave van de doelkaart in de catalogus en selecteer **[!UICONTROL Connect to destination]**.
 
-![Weergave van de optie Verbinding maken met doel voor het doel Soorten publiek van Experience Cloud.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
+![Weergave van de optie Verbinden met doel voor het doel Soorten publiek van Experience Cloud.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Vorm nieuw bestemmingsscherm dat de vereiste en facultatieve montages toont om met de bestemming van het Soorten publiek van de Experience Cloud te verbinden.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
+![Vorm nieuw bestemmingsscherm dat de vereiste en facultatieve montages toont om met de bestemming van het Publiek van het Experience Cloud te verbinden.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -177,7 +174,7 @@ Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Om succesvolle gegevensuitvoer te bevestigen, kunt u controleren dat uw publiek het tot uw gewenste oplossing van de Experience Cloud met succes heeft gemaakt.
+Om succesvolle gegevensuitvoer te bevestigen, kunt u controleren dat uw publiek het tot uw gewenste oplossing van het Experience Cloud met succes heeft gemaakt.
 
 ### Gegevens valideren in Audience Manager
 

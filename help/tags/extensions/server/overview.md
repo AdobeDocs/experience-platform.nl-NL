@@ -2,9 +2,9 @@
 title: Verwijzing naar extensies doorsturen van gebeurtenissen
 description: Documentatie zoeken voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -26,16 +26,16 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 
 >[!NOTE]
 >
->Elke extensienaam gevolgd door een sterretje (*) verwijst naar de vermelding van de extensie op Adobe Exchange, die installatie- en gebruiksinstructies bevat. Alle andere koppelingen verwijzen naar de documentatie van de extensie op Adobe Experience League.
+>Om het even welke uitbreidingsnaam die door een asterisk (*) wordt gevolgd verbindt met de lijst van de uitbreiding op de Uitwisseling van de Adobe, die installatie en gebruiksinstructies bevat. Alle andere koppelingen verwijzen naar de documentatie van de extensie op Adobe Experience League.
 
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
-* [Cloud Connector voor Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Cloud Connector voor Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+* [Cloud Connector voor Googles Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Cloud Connector voor Googles Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [Kern](./core/overview.md)
 * [Epsilon-gebeurtenis-API](https://exchange.adobe.com/apps/ec/109127)*
-* [Verbeterde Google-conversies toevoegen](./google-ads-enhanced-conversions/overview.md)
+* [Verbeterde Google-conversies voor advertenties](./google-ads-enhanced-conversions/overview.md)
 * [Google Cloud Platform](./google-cloud-platform/overview.md)
 * [[!DNL Mailchimp] Rand](./mailchimp/overview.md)
 * [[!DNL Meta] Conversies-API](./meta/overview.md)
@@ -47,4 +47,5 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
+* [[!DNL Tiktok] Web Events API](https://exchange.adobe.com/apps/ec/109834)*
 * [[!DNL Zendesk] API voor gebeurtenissen](./zendesk/overview.md)

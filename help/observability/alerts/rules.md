@@ -4,30 +4,34 @@ title: Standaardwaarschuwingsregels
 description: In dit document worden de vooraf gedefinieerde waarschuwingsregels van het Experience Platform besproken.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
 
 # Standaardwaarschuwingsregels
 
-Adobe Experience Platform biedt verschillende vooraf gedefinieerde waarschuwingsregels die u voor uw organisatie kunt inschakelen. In dit document worden de bijzonderheden van deze door Adobe verstrekte waarschuwingsregels besproken. Voor meer algemene informatie over signaleringen in Experience Platform raadpleegt u de [waarschuwingsoverzicht](./overview.md).
+Adobe Experience Platform biedt verschillende vooraf gedefinieerde waarschuwingsregels die u voor uw organisatie kunt inschakelen. In dit document worden de bijzonderheden van deze door de Adobe ingevoerde waarschuwingsregels besproken. Voor meer algemene informatie over signaleringen in Experience Platform raadpleegt u de [waarschuwingsoverzicht](./overview.md).
 
-Wanneer [het bekijken alarmregels in UI van het Platform](./ui.md), kunt u zich op elke regel afzonderlijk abonneren. Wanneer u zich abonneert op waarschuwingen via [I/O-gebeurtenismeldingen](./subscribe.md)De waarschuwingsregels zijn echter ingedeeld in verschillende abonnementspakketten. In de onderstaande tabellen wordt elke regel weergegeven met de corresponderende naam van het I/O-gebeurtenisabonnement.
+Wanneer [het bekijken alarmregels in Platform UI](./ui.md), kunt u zich op elke regel afzonderlijk abonneren. Wanneer u zich abonneert op waarschuwingen via [I/O-gebeurtenismeldingen](./subscribe.md)De waarschuwingsregels zijn echter ingedeeld in verschillende abonnementspakketten. In de onderstaande tabellen wordt elke regel weergegeven met de corresponderende naam van het I/O-gebeurtenisabonnement.
 
 ## Gegevensopname
 
-De volgende waarschuwingsregels gelden specifiek voor [Gegevensinname](../../ingestion/home.md) en  [bronnen](../../sources/home.md):
+De volgende waarschuwingsregels gelden specifiek voor: [Gegevensinname](../../ingestion/home.md) en  [bronnen](../../sources/home.md):
+
+>[!NOTE]
+>
+>Streaming bronnen worden momenteel niet ondersteund door waarschuwingen. U kunt zich alleen abonneren op waarschuwingsmeldingen voor batchbronnen.
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
 | Bron: Run-info | Bronnen Start Stroom | Deze waarschuwing wordt geactiveerd wanneer een bronverbinding gegevens begint te verwerken. |
 | Bron: Run-info | Resources Flow Run Success | Deze waarschuwing wordt geactiveerd wanneer gegevens zijn ingevoerd via een bronverbinding. |
-| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Fout bij uitvoeren bronstroom | Deze waarschuwing treedt op wanneer een fout optreedt bij het opnemen van gegevens van een bronverbinding. |
+| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Fout bij uitvoeren van bronstroom | Deze waarschuwing treedt op wanneer een fout optreedt bij het opnemen van gegevens van een bronverbinding. |
 | Vertragingen, fouten en fouten bij uitvoering van bronstroom | Vertraging bij inname | Deze waarschuwing wordt geactiveerd wanneer een batch-opname-flow langer duurt dan 150 minuten om te verwerken. |
-| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Ingestief | Deze waarschuwing treedt op wanneer de verhouding van mislukte records ten opzichte van alle records een drempel van 0,5% overschrijdt. |
+| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Ingestiefout | Deze waarschuwing treedt op wanneer de verhouding van mislukte records ten opzichte van alle records een drempel van 0,5% overschrijdt. |
 
 {style="table-layout:auto"}
 
@@ -35,26 +39,26 @@ Als u zich eerder hebt geabonneerd op het volgende type waarschuwingen, ontvangt
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
-| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan het Platform worden gegeven. |
+| Vertragingen, fouten en fouten bij uitvoering van bronstroom | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan Platform worden doorgegeven. |
 
 {style="table-layout:auto"}
 
 ## Identiteitsservice
 
-De volgende waarschuwingsregels gelden specifiek voor [Identiteitsservice](../../identity-service/home.md):
+De volgende waarschuwingsregels gelden specifiek voor: [Identiteitsservice](../../identity-service/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
 | Identiteitsinformatie | Start Identiteitsservicestroom | Deze waarschuwing treedt op wanneer een stroom van de Dienst van de Identiteit begint gegevens te verwerken. Met andere woorden, worden ingesloten gegevens geladen van het Datameer in de Dienst van de Identiteit. |
 | Identiteitsinformatie | Workflow voor identiteitsservice | Deze waarschuwing wordt geactiveerd wanneer gegevens zijn geladen van het Data Lake naar Identity Service. |
 | Vertragingen, fouten en fouten bij identiteitsverdenking | Vertraging bij uitvoering identiteitsservicestroom | Deze waarschuwing treedt in werking wanneer een stroom van de Dienst van de Identiteit duurt langer dan 150 minuten om te verwerken. |
-| Vertragingen, fouten en fouten bij identiteitsverdenking | Fout bij uitvoeren van identiteitsservicestroom | Deze waarschuwing treedt op wanneer een fout optreedt bij het invoeren van gegevens in Identity Service. |
+| Vertragingen, fouten en fouten bij identiteitsverdenking | Fout bij uitvoeren van identiteitsservicestroom | Deze waarschuwing treedt in werking wanneer een fout optreedt bij het invoeren van gegevens in Identity Service. |
 
 {style="table-layout:auto"}
 
 ## Klantprofiel in realtime
 
-De volgende waarschuwingsregels gelden specifiek voor [Klantprofiel in realtime](../../profile/home.md):
+De volgende waarschuwingsregels gelden specifiek voor: [Klantprofiel in realtime](../../profile/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
@@ -67,26 +71,26 @@ De volgende waarschuwingsregels gelden specifiek voor [Klantprofiel in realtime]
 
 ## Segmentatie
 
-De volgende waarschuwingsregels gelden specifiek voor [Segmenteringsservice](../../segmentation/home.md):
+De volgende waarschuwingsregels gelden specifiek voor: [Segmenteringsservice](../../segmentation/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
-| Informatie segmentevaluatie | Start segmenttaak | Deze waarschuwing treedt in werking wanneer een baan van de segmentevaluatie begint gegevens te verwerken. |
-| Informatie segmentevaluatie | Segmenttaken voltooid | Deze waarschuwing treedt op wanneer een baan van de segmentevaluatie met succes voltooit. |
+| Informatie over segmentevaluatie | Start segmenttaak | Deze waarschuwing treedt in werking wanneer een baan van de segmentevaluatie begint gegevens te verwerken. |
+| Informatie over segmentevaluatie | Segmenttaken voltooid | Deze waarschuwing treedt op wanneer een baan van de segmentevaluatie met succes voltooit. |
 | Vertragingen, fouten en fouten bij de evaluatie van segmenten | Vertraging segmenttaak | Deze waarschuwing treedt in werking wanneer een segmentevaluatietaak langer duurt dan 150 minuten om te voltooien. <br> Een van de volgende statussen wordt weergegeven: <br>- FIRING: er is voldaan aan de voorwaarde voor mislukking of vertraging (zie deze in een actieve staat). <br>- INACTIEF - Aan de voorwaarde is niet voldaan of deze is niet opgelost (kan worden beschouwd als een OPGELOST frame). |
 | Vertragingen, fouten en fouten bij de evaluatie van segmenten | Fout in segmenttaak | Deze waarschuwing treedt in werking wanneer een baan van de segmentevaluatie in een fout resulteert. |
-| Vertragingen, fouten en fouten bij de evaluatie van segmenten | Segmentdefinitie uitgeschakeld | Deze waarschuwing wordt geactiveerd wanneer een segmentdefinitie is uitgeschakeld als gevolg van een interne fout. Dit leidt automatisch tot een oorlogsruimte voor een technische team van Adobe om de kwestie te onderzoeken. Deze waarschuwing is alleen bedoeld als informatief en vereist geen actie van u. |
+| Vertragingen, fouten en fouten bij de evaluatie van segmenten | Segmentdefinitie uitgeschakeld | Deze waarschuwing wordt geactiveerd wanneer een segmentdefinitie is uitgeschakeld vanwege een interne fout. Dit leidt automatisch tot een oorlogsruimte voor een team van de ingenieurskunst van de Adobe om de kwestie te onderzoeken. Deze waarschuwing is alleen bedoeld als informatief en vereist geen actie van u. |
 
 {style="table-layout:auto"}
 
 ## Doelen
 
-De volgende waarschuwingsregels gelden specifiek voor [bestemmingen](../../destinations/home.md):
+De volgende waarschuwingsregels gelden specifiek voor: [bestemmingen](../../destinations/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
-| Run-info doelstroom | Start stroom bestemming | Deze waarschuwing activeert wanneer een bestemmingstroom begint een segment te activeren. |
-| Run-info doelstroom | Uitvoersucces bestemming | Deze waarschuwing wordt geactiveerd wanneer een segment is geactiveerd naar een doel. |
+| Run-info over doelstroom | Start stroom bestemming | Deze waarschuwing activeert wanneer een bestemmingstroom begint een segment te activeren. |
+| Run-info over doelstroom | Uitvoersucces bestemming | Deze waarschuwing wordt geactiveerd wanneer een segment is geactiveerd naar een doel. |
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Uitvoervertraging bestemming | Deze waarschuwing wordt geactiveerd wanneer een doelstroom langer dan 150 minuten duurt om een segment te activeren. |
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Uitvoerfout bestemming | Deze waarschuwing wordt geactiveerd wanneer een fout optreedt tijdens het activeren van een segment op een doel. |
 | Vertragingen, fouten en fouten bij de uitvoering van de doelstroom | Het percentage kippingen overschrijdt de drempel | Deze waarschuwing wordt geactiveerd wanneer de verhouding van overgeslagen id&#39;s tot totale id&#39;s een drempel overschrijdt. |
@@ -95,13 +99,13 @@ De volgende waarschuwingsregels gelden specifiek voor [bestemmingen](../../desti
 
 ## Query-service
 
-De volgende waarschuwingsregels gelden specifiek voor [Query-service](../../query-service/home.md):
+De volgende waarschuwingsregels gelden specifiek voor: [Query-service](../../query-service/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
 | Query Service-informatie voor geplande query | Query Service gepland starten van query | Deze waarschuwing wordt geactiveerd wanneer een geplande query wordt uitgevoerd. |
 | Query Service-informatie voor geplande query | Zoekservice gepland succes met query | Deze waarschuwing wordt geactiveerd wanneer een geplande querytaak correct is voltooid. |
-| De Dienst van de vraag geplande vraagvertragingen, mislukkingen en fouten | query-service met geplande queryfout | Deze waarschuwing wordt geactiveerd wanneer een geplande querytaak mislukt. |
+| De Dienst van de vraag geplande vraagvertragingen, mislukkingen en fouten | query-service met geplande query-fout | Deze waarschuwing wordt geactiveerd wanneer een geplande querytaak mislukt. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |

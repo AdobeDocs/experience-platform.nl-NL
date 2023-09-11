@@ -3,9 +3,9 @@ title: LiveRamp - Verbinding aan boord
 description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1706'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,12 @@ In de [toewijzingsstap](#map) van de activeringsworkflow moet u de doeltoewijzin
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-Bovendien ondersteunt deze bestemming ook de activering van de extra soorten publiek die in de onderstaande tabel worden beschreven.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#importing-an-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

@@ -1,11 +1,11 @@
 ---
 keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van het luchtschip
-description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
+description: Geef naadloos de gegevens van het publiek van de Adobe door aan het luchtschip als kenmerken van het publiek voor doelwit binnen het luchtschip.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL Airship] is het toonaangevende Platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichanale berichten aan uw gebruikers kunt leveren.
+[!DNL Airship] is het toonaangevende platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichannel berichten aan uw gebruikers kunt leveren.
 
-Door deze integratie worden Adobe-profielgegevens doorgegeven aan [!DNL Airship] als [Attributen](https://docs.airship.com/guides/audience/attributes/) voor aanwijzen of activeren.
+Deze integratie geeft Adobe profielgegevens door aan [!DNL Airship] als [Attributen](https://docs.airship.com/guides/audience/attributes/) voor aanwijzen of activeren.
 
 Meer informatie over [!DNL Airship], zie de [Airship Docs](https://docs.airship.com).
 
@@ -37,13 +37,12 @@ Voordat u uw publiek naar kunt sturen [!DNL Airship], moet u:
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type extern publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -60,7 +59,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Kenmerken inschakelen {#enable-attributes}
 
-Adobe Experience Platform-profielkenmerken lijken op [!DNL Airship] -kenmerken en kunnen gemakkelijk aan elkaar worden toegewezen in Platform met behulp van het toewijzingsgereedschap dat hieronder verder op deze pagina wordt getoond.
+Adobe Experience Platform-profielkenmerken lijken op [!DNL Airship] -kenmerken en kunnen gemakkelijk aan elkaar worden toegewezen in Platform met behulp van het toewijzingsprogramma dat hieronder verder wordt weergegeven op deze pagina.
 
 [!DNL Airship] de projecten hebben verscheidene vooraf bepaalde en standaardattributen. Als u een aangepast kenmerk hebt, moet u dit definiëren in [!DNL Airship] eerst. Zie [Kenmerken instellen en beheren](https://docs.airship.com/tutorials/audience/attributes/) voor meer informatie.
 
@@ -70,7 +69,7 @@ Ga naar **[!UICONTROL Settings]** &quot; **[!UICONTROL APIs & Integrations]** in
 
 Klik op **[!UICONTROL Create Token]**.
 
-Geef een gebruikersvriendelijke naam voor uw token op, bijvoorbeeld &quot;Doel Adobe-kenmerken&quot;, en selecteer &quot;Alle toegang&quot; voor de rol.
+Geef uw token een gebruikersvriendelijke naam, bijvoorbeeld Doel van kenmerken van Adobe en selecteer Alle toegang voor de rol.
 
 Klikken **[!UICONTROL Create Token]** en bewaren de gegevens als vertrouwelijk.
 

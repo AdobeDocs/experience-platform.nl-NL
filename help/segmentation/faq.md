@@ -1,74 +1,152 @@
 ---
 title: Publiek Veelgestelde vragen
-description: Ontdek antwoorden op veelgestelde vragen over het publiek.
-source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
+description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
+source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 0%
+source-wordcount: '1923'
+ht-degree: 1%
 
 ---
 
 
 # Veelgestelde vragen
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om publiek door segmentdefinities of andere bronnen van uw tot stand te brengen [!DNL Real-Time Customer Profile] gegevens. Dit publiek wordt centraal gevormd en gehandhaafd op Platform, en gemakkelijk toegankelijk door om het even welke oplossing van Adobe. Hieronder volgt een lijst met veelgestelde vragen over publiek en segmentatie.
+Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om publiek door segmentdefinities of andere bronnen van uw te creëren [!DNL Real-Time Customer Profile] gegevens. Dit publiek wordt centraal gevormd en gehandhaafd op Platform, en gemakkelijk toegankelijk door om het even welke oplossing van de Adobe. Hieronder volgt een lijst met veelgestelde vragen over publiek en segmentatie.
 
-## Heb ik toegang tot het Portaal van het Publiek en de Samenstelling van het Publiek?
+## Poort publiek
+
+De volgende sectie maakt een lijst van vragen met betrekking tot de Portaal van de Publiek.
+
+### Heb ik toegang tot het Portaal van het Publiek en de Samenstelling van het Publiek?
 
 Poort van publiek en Audience Composition zijn beschikbaar voor alle klanten van Real-Time CDP Premier en Ultimate (B2C, B2B en B2P Editions) en Journey Optimizer Select, Prime, Ultimate Starter en Ultimate.
 
 Op dit moment worden alleen op profielen gebaseerde soorten publiek ondersteund. Ondersteuning voor publiek op basis van account wordt in een latere release toegevoegd.
 
-## Worden extern geproduceerd vooraf gebouwd publiek gesteund met het Portaal van het Publiek?
+### Worden extern geproduceerd vooraf gebouwd publiek gesteund met het Portaal van het Publiek?
 
 Ja, extern gegenereerde, vooraf gebouwde doelgroepen worden ondersteund met Poorten publiek. Op dit moment kunt u een extern gegenereerd publiek importeren via een CSV-bestand. In de toekomst kunt u een publiek toevoegen via batch- of streaminggebaseerde bronconnectors.
 
-## Kan ik extern gegenereerde publieksgegevens combineren met een bestaand profiel in Platform?
+### Kan ik extern gegenereerde publieksgegevens combineren met een bestaand profiel in Platform?
 
-Ja, het extern gegenereerde publiek wordt samengevoegd met het bestaande profiel in het Platform als de primaire id&#39;s overeenkomen. Het kan 24 uur duren voordat de gegevens met elkaar in overeenstemming zijn. Als profielgegevens nog niet bestaan, wordt een nieuw profiel gemaakt wanneer de gegevens worden ingevoerd.
+Ja, het extern gegenereerde publiek wordt samengevoegd met het bestaande profiel in Platform als de primaire id&#39;s overeenkomen. Het kan 24 uur duren voordat deze gegevens met elkaar in overeenstemming zijn. Als profielgegevens nog niet bestaan, wordt een nieuw profiel gemaakt wanneer de gegevens worden ingevoerd.
 
 ## Kan ik een extern gegenereerd publiek gebruiken om andere soorten publiek op te bouwen?
 
 Ja, elk extern gegenereerd publiek wordt weergegeven in de publieksinventaris en kan worden gebruikt bij het opbouwen van publiek binnen het [Segment Builder](./ui/segment-builder.md).
 
-## Kan ik extern geüploade kenmerken gebruiken als onderdeel van segmentatie?
+### Kan ik extern geüploade kenmerken gebruiken als onderdeel van segmentatie?
 
 Nee, dat kan niet. Profielkenmerken moeten langetermijnkenmerken zijn, terwijl extern gegenereerde publieksgegevens die worden geüpload alleen contextuele gegevens bevatten die aan dat extern gegenereerde publiek zijn gekoppeld.
 
-De extern gegenereerde contextafhankelijke gegevens van het publiek, of verrijkingskenmerken, zijn: **niet** duurzaam, omdat hun levenscyclus aan het geüploade publiek is gebonden. Als gevolg hiervan zijn deze verrijkingskenmerken vanwege hun voorbijgaande aard **niet** beschikbaar voor gebruik in segmentatie.
+De extern gegenereerde contextafhankelijke gegevens van het publiek, of verrijkingskenmerken, zijn **niet** duurzaam, omdat hun levenscyclus aan het geüploade publiek is gebonden. Als gevolg hiervan zijn deze verrijkingskenmerken vanwege hun voorbijgaande aard **niet** beschikbaar voor gebruik in segmentatie.
 
 Wanneer u uw publiek echter toewijst aan batchbestemmingen of op bestanden gebaseerde bestemmingen, kunt u deze extern gegenereerde verrijkingskenmerken gebruiken om uw publiek en verdere downstreamactiveringen te verhogen.
 
-Voor meer informatie over deze mogelijkheid leest u de handleiding op [publieksgegevens activeren om exportdoelen voor batchprofielen te maken](../destinations/ui/activate-batch-profile-destinations.md#mapping).
+Lees de handleiding voor meer informatie over deze mogelijkheid [publieksgegevens activeren om exportdoelen voor batchprofielen te maken](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
-## Kan ik extern gegenereerde publiek activeren naar Adobe Journey Optimizer?
+### Kan ik extern gegenereerde publiek activeren naar Adobe Journey Optimizer?
 
 Op dit moment, nee. Deze mogelijkheid zal echter in de nabije toekomst beschikbaar zijn.
 
-## Kan ik een extern gegenereerd publiek verwijderen?
+### Kan ik een extern gegenereerd publiek verwijderen?
 
 Op dit moment, nee. U kunt dit publiek deactiveren of archiveren. In deze status worden profielen **zal** actief blijven voor gebruik in downstreamtoepassingen. Ondersteuning voor het verwijderen van extern gegenereerde soorten publiek wordt toegevoegd aan een volgende release.
 
-## Hoe zal het Portaal van het Publiek en de Samenstelling van het Publiek met de versie van de Gegevens van de Partner van Real-Time CDP in wisselwerking staan?
+### Wat vertegenwoordigen de verschillende levenscyclusstaten?
+
+In het volgende diagram worden de verschillende levenscyclusstatussen beschreven, wat ze vertegenwoordigen, waar publiek met die status kan worden gebruikt, en het effect op segmentatiegeleidingen.
+
+| Staat | Definitie | Zichtbaar in Audience Portal? | Zichtbaar in Doelen? | Heeft invloed op segmentatielimieten? | Gevolgen voor het publiek | Gevolgen voor de publieksevaluatie | Kan worden gebruikt bij andere doelgroepen? |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Concept | Een publiek in de **Concept** de staat is een publiek dat nog in ontwikkeling is en nog niet klaar is om in andere diensten te worden gebruikt . | Ja, maar kan verborgen zijn. | Nee | Ja | Kan tijdens het verfproces worden geïmporteerd of bijgewerkt. | Kan worden geëvalueerd voor een nauwkeurige telling van het aantal uitgeverijen. | Ja, maar het wordt niet aanbevolen dit te gebruiken. |
+| Gepubliceerd | Een publiek in de **Gepubliceerd** staat is een publiek dat klaar voor gebruik over alle stroomafwaartse diensten is. | Ja | Ja | Ja | Kan worden geïmporteerd of bijgewerkt. | Evalueerd met batch-, streaming- of randsegmentatie. | Ja |
+| Inactief | Een publiek in de **Inactief** state is een publiek dat momenteel niet in gebruik is. Het bestaat nog steeds binnen Platform, maar het zal **niet** kan worden gebruikt totdat het als concept wordt gemarkeerd of gepubliceerd. | Nee, maar kan wel worden weergegeven. | Nee | Nee | Niet meer bijgewerkt. | Niet meer geëvalueerd of bijgewerkt door Platform. | Ja |
+| Verwijderd | Een publiek in de **Verwijderd** status is een publiek dat is verwijderd. Het kan enkele minuten duren voordat de gegevens daadwerkelijk zijn verwijderd. | Nee | Nee | Nee | Onderliggende gegevens worden verwijderd. | Er vindt geen gegevensevaluatie of -uitvoering plaats nadat de verwijdering is voltooid. | Nee |
+
+### Hoe zal het Portaal van het Publiek en de Samenstelling van het Publiek met de versie van de Gegevens van de Partner van Real-Time CDP in wisselwerking staan?
 
 Het Portaal van het publiek en de Samenstelling van het Publiek zullen met de Gegevens van de Partner op twee manieren in wisselwerking staan:
 
 1. Als u een partner-verstrekte lijst van het Vooruitzicht gebruikend de klasse en het werkschema van het Profiel van het Vooruitzicht ingaat, zullen de vooruitzichten worden bewaard **apart** vanuit profielen van klanten samenvoegen in de profielservice. Dit betekent dat er lijsten met perspectieven worden opgesteld **niet** verschijnt in of het Portaal van de Poorten van de Publiek of de Samenstelling van de Publiek voor gebruik.
 2. Als u partner-Geleverde attributen leveraging om te verrijken **bestaand** first-party profielen, die partner-gegeven-verrijkt publiek **zal** verschijnen in zowel Portaal van het Publiek als Samenstelling van het Publiek voor gebruik.
 
-## Kan ik extern gegenereerd publiek gebruiken in Audience Composition?
+### Hoe kan ik extra attributen met mijn publiek gebruiken?
+
+Bij het publiek zijn er **twee** verschillende typen extra kenmerken die u kunt toevoegen: (contextafhankelijke) payload-kenmerken en verrijkingskenmerken.
+
+Payload-kenmerken zijn kenmerken die worden opgenomen als onderdeel van de CSV-upload van een extern gegenereerd publiek. Deze kenmerken zijn **niet** In het Real-Time Profiel van de Klant opgenomen, maar kan als deel van een stroomafwaartse bestemming worden gebruikt.
+
+De attributen van de verrijking zijn attributen die uit een dataset komen en met een publiek in de Samenstelling van het Publiek worden verbonden. Deze kenmerken kunnen momenteel alleen worden gebruikt in Adobe Journey Optimizer-campagnes. De steun voor Adobe Journey Optimizer-reizen komt binnenkort, met steun voor downstreambestemmingen in afwachting van de toekomstige vrijlating.
+
+| Activeringskanaal | Soorten publiek van aangepaste CSV-upload | Soorten publiek uit publiekscompositie |
+| --- | --- | --- |
+| Real-Time CDP-doelen | U kunt zowel de payload-kenmerken als het publiek activeren. | Alleen het publiek kan worden geactiveerd. Verrijkingskenmerken **kan** worden geactiveerd. |
+| Adobe Journey Optimizer Campaigns | U kunt het publiek en de payload-kenmerken niet activeren. | U kunt zowel het publiek als de verrijkingskenmerken activeren. |
+
+## Overzicht van het publiek
+
+De volgende secties maken een lijst van vragen met betrekking tot publieksinventaris binnen het Portaal van de Publiek.
+
+### Heb ik extra toestemmingen nodig om de eigenschappen van de publieksinventaris te gebruiken?
+
+Nee, dat doe je niet. Als u over bewerkingsmachtigingen voor het publiek beschikt, kunt u uw mappen en tags maken, bijwerken en beheren in het Poortpubliek van het publiek. Voor meer informatie over het beheren van toestemmingen, gelieve te lezen [machtigingengids beheren](../access-control/ui/permissions.md).
+
+### Is er een limiet voor het aantal mappen dat ik kan maken?
+
+Nee, er is geen limiet voor het aantal mappen dat u kunt maken. Lees voor meer informatie over mappen de [overzichtssectie voor publiek](./ui/overview.md#folders) van het overzicht van de gebruikersinterface van de segmentatieservice.
+
+### Is er een limiet voor het aantal tags dat aan een publiek kan worden toegevoegd?
+
+Nee, er is geen limiet voor het aantal tags dat aan een publiek kan worden toegevoegd. Lees voor meer informatie over tags de [overzichtssectie voor publiek](./ui/overview.md#tags) van het overzicht van de gebruikersinterface van de segmentatieservice.
+
+### Is er een limiet aan het aantal tags dat ik kan maken?
+
+Nee, er is geen limiet aan het aantal tags dat u kunt maken. U kunt echter maximaal **100** categorieën die moeten worden toegepast voor de codes. Voor meer informatie over tagbeheer raadpleegt u de [Handleiding voor tags beheren](../administrative-tags/ui/managing-tags.md).
+
+### Wanneer ik naar een publiek door naam of markering in een ouderomslag zoek, kan ik door de verwante kindomslagen ook zoeken?
+
+Nee, dit gedrag wordt niet ondersteund. U kunt echter de overzichtsweergave van het publiek wijzigen om naar **Alle soorten publiek** en doorzoek vervolgens alle mappen. Lees voor meer informatie over het gebruik van zoekopdrachten in publieksoverzicht de [zoeksectie](./ui/overview.md#search) van het overzicht van de gebruikersinterface van de segmentatieservice.
+
+### Kan ik een publiek automatisch toewijzen aan een map op het moment van het maken?
+
+Op dit moment, nee. Deze mogelijkheid kan echter in de toekomst beschikbaar zijn.
+
+### Kan ik meerdere soorten publiek tegelijk naar een map verplaatsen?
+
+Op dit moment, nee. Deze mogelijkheid kan echter in de toekomst beschikbaar zijn.
+
+## Samenstelling publiek
+
+In de volgende sectie worden vragen over Audience Composition weergegeven.
+
+### Wanneer zou ik de Samenstelling van het Publiek in tegenstelling tot het gebruiken van de Bouwer van het Segment moeten gebruiken?
+
+Zowel de Samenstelling van het publiek als de Bouwer van het Segment hebben belangrijke rollen in de verwezenlijking van het gebouwpubliek in Platform.
+
+De Segment Builder is geschikter voor het publiek **creatie** (voor het opbouwen van een volledig publiek), terwijl Audience Composition geschikter is voor het publiek **kromming** (voor het maken van nieuwe doelgroepen op basis van een bestaand publiek).
+
+De volgende tabel illustreert het verschil tussen de twee services:
+
+| Segment Builder | Samenstelling publiek |
+| --------------- | -------------------- |
+| <ul><li>Eenmalige doelgroep</li><li>Creeert de basisblokken van publiek van profiel, tijdreeksen, en multi-entiteitsgegevens</li><li>Gebruikt om te maken **één** publiek</li></ul> | <ul><li>Multi-stage publiek genereren, met gebruik van op set gebaseerde bewerkingen</li><li>Gebruikt het publiek dat door de Bouwer van het Segment wordt gecreeerd en past opties van de gegevensverrijking zoals het rangschikken van profielattributen toe</li><li>Gebruikt om te maken **meerdere** publiek in één keer</li></ul> |
+
+Voor meer informatie over de Segment Builder leest u de [Handleiding Segment Builder](./ui/segment-builder.md). Voor meer informatie over Audience Composition leest u de [Hulplijn Audience Composition](./ui/audience-composition.md).
+
+### Kan ik extern gegenereerd publiek gebruiken in Audience Composition?
 
 Op dit moment, nee. Deze mogelijkheid moet echter in de nabije toekomst beschikbaar zijn.
 
-## Kan ik publiek van de Samenstelling van het Publiek naar alle stroomafwaartse bestemmingen en kanalen verzenden?
+### Kan ik publiek van de Samenstelling van het Publiek naar alle stroomafwaartse bestemmingen en kanalen verzenden?
 
 Op dit moment, nee. Momenteel, kunt u publiek van de Samenstelling van het Publiek in de Campagnes van Adobe Journey Optimizer en Echte - tijd CDP bestemmingen gebruiken. Adobe Journey Optimizer-reizen worden in een toekomstige release ondersteund.
 
-## Zijn er aanwijzingen voor het aantal composities?
+### Zijn er aanwijzingen voor het aantal composities?
 
 Op dit moment kunt u alleen **10** gepubliceerde samenstellingen per sandbox. Deze guardrail zal naar verwachting in een toekomstige release worden verhoogd.
 
-## Wat zijn de werkstroominstructies voor Audience Composition?
+### Wat zijn de werkstroominstructies voor Audience Composition?
 
 De compositiecomponent die als volgt plaatst volgt een stijve structuur:
 
@@ -76,21 +154,21 @@ De compositiecomponent die als volgt plaatst volgt een stijve structuur:
 2. U kunt desgewenst een [!UICONTROL Exclude] blok dat volgt op het [!UICONTROL Audience] blokkeren.
 3. U kunt desgewenst een [!UICONTROL Enrich] blok dat volgt op het [!UICONTROL Exclude] blokkeren.
 4. U kunt desgewenst een [!UICONTROL Rank] of [!UICONTROL Split] blokkeren. U kunt **alleen** hebben één van deze blokken per samenstelling.
-5. U **altijd** eindigen met een [!UICONTROL Save] blokkeren om uw publiek op te slaan.
+5. U **altijd** met een [!UICONTROL Save] blokkeren om uw publiek op te slaan.
 
 Lees voor meer informatie over het gebruik van Audience Composition de [Handleiding voor compositie van publiek](./ui/audience-composition.md).
 
-## Kan ik een Samenstelling van het Publiek in een andere samenstelling gebruiken?
+### Kan ik een Samenstelling van het Publiek in een andere samenstelling gebruiken?
 
 Nee, publiek gemaakt met Audience Composition **kan** worden gebruikt als input in een andere publiekssamenstelling.
 
-## Hoe werkt splitsen in Audience Composition?
+### Hoe werkt splitsen in Audience Composition?
 
 Door het publiek te splitsen kunt u het publiek verder onderbrengen in kleinere groepen. Deze splitsing dwingt de fracties tot wederzijdse exclusiviteit. Dit betekent dat als een record voldoet aan de criteria van meerdere gesplitste paden, de record de opdracht **first** pad van links en **niet** toegewezen aan een van de andere paden.
 
 Lees voor meer informatie over het blok Splitsen de [Handleiding voor compositie van publiek](./ui/audience-composition.md#split).
 
-## Kan ik alle segmentatietypen in het werkschema van de Samenstelling van het Publiek gebruiken?
+### Kan ik alle segmentatietypen in het werkschema van de Samenstelling van het Publiek gebruiken?
 
 Ja, alle segmentatietypen ([batchsegmentatie, streamingsegmentatie en randsegmentatie](./home.md#evaluate-segments)) worden ondersteund in de workflow Audience Composition. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
 

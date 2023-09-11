@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: De release van augustus 2023 bevat opmerkingen voor Adobe Experience Platform.
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1724'
 ht-degree: 3%
 
 ---
@@ -119,7 +119,7 @@ Lees voor meer informatie de [Overzicht van Data Prep](../../data-prep/home.md).
 
 **Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
-- U kunt nu [publiek perspectief activeren](../../destinations/ui/activate-prospect-audiences.md) naar op een bestand gebaseerde doelen.
+- U kunt nu [publiek perspectief activeren](../../destinations/ui/activate-prospect-audiences.md) naar cloudopslagbestemmingen.
 - De algemene [activeringsinstructie](../../destinations/guardrails.md#general-activation-guardrails) van maximaal 100 doelen per sandbox is bijgewerkt tot een _harde limiet_.
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).

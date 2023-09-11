@@ -1,11 +1,11 @@
 ---
-keywords: doelpersonalisatie; bestemming; doelbestemming ervaringsplatform;doelbestemming adobe;
+keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelbestemming adobe;
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -41,16 +41,27 @@ Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te ge
 
 >[!IMPORTANT]
 >
->Voordat u een [!DNL Adobe Target] verbinding, lees de gids over hoe te [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/activate-edge-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platforms. Voor personalisatie op dezelfde pagina en op de volgende pagina moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
+>Voordat u een [!DNL Adobe Target] verbinding, lees de gids over hoe te [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/activate-edge-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platform componenten. Voor personalisatie op dezelfde pagina en op de volgende pagina moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
 
 ### Vereisten in Adobe Target {#prerequisites-in-adobe-target}
 
-Controleer in Adobe Target of de gebruiker:
+In Adobe Target moet je ervoor zorgen dat de gebruiker:
 
 * Toegang tot de [standaardwerkruimte](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
 * De **Fiatteur** [rol](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
 
 Meer informatie over het verlenen van machtigingen voor [Doelpremie](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) en voor [Doelstandaard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | X | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+
+{style="table-layout:auto"}
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -59,7 +70,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!DNL Profile request]** | U vraagt om alle soorten publiek die in de Adobe Target-bestemming zijn toegewezen voor één profiel. |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,7 +86,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
 Adobe Experience Platform maakt automatisch verbinding met het Adobe Target-exemplaar van uw bedrijf. Er is geen verificatie vereist.
 
@@ -90,13 +101,13 @@ Adobe Experience Platform maakt automatisch verbinding met het Adobe Target-exem
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **Naam**: Vul de voorkeursnaam voor dit doel in.
-* **Beschrijving**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
-* **DataStream-id**: Dit bepaalt waarin de gegevensstroom van de Inzameling van Gegevens de doelgroepen zal worden omvat. In het keuzemenu worden alleen gegevensstromen weergegeven waarvoor de services Doel en Adobe Experience Platform zijn ingeschakeld. Zie [configureren van een gegevensstroom](../../../datastreams/configure.md#aep) voor meer informatie over het configureren van een gegevensstroom voor Adobe Experience Platform en Adobe Target.
-   * **[!UICONTROL None]**: Selecteer deze optie als u de personalisatie van Adobe Target moet configureren, maar u de optie [Experience Platform Web SDK](../../../edge/home.md). Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Zie de onderstaande tabel voor meer informatie.
+* **Beschrijving**: Voer een beschrijving in voor uw doel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
+* **DataStream-id**: Dit bepaalt in welke gegevensstroom gegevensverzameling het publiek wordt opgenomen. In het keuzemenu worden alleen gegevensstromen weergegeven waarvoor de services Doel en Adobe Experience Platform zijn ingeschakeld. Zie [configureren van een gegevensstroom](../../../datastreams/configure.md#aep) voor meer informatie over het configureren van een gegevensstroom voor Adobe Experience Platform en Adobe Target.
+   * **[!UICONTROL None]**: Selecteer deze optie als u de personalisatie van Adobe Target moet configureren, maar u kunt het dialoogvenster [Experience Platform Web SDK](../../../edge/home.md). Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Zie de onderstaande tabel voor meer informatie.
 
   | Adobe Target-implementatie (zonder Web SDK) | Web SDK-implementatie |
   |---|---|
-  | <ul><li>Een gegevensstroom is niet vereist. Adobe Target kan worden geïmplementeerd via [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en), [serverzijde](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation), of [hybride](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) uitvoeringsmethoden.</li><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt doelgroepen en profielkenmerken alleen delen met de Adobe Target-verbinding voor de *standaardproductiesandbox*.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden ondersteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> |
+  | <ul><li>Een gegevensstroom is niet vereist. Adobe Target kan worden geïmplementeerd via [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en), [server-kant](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation), of [hybride](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) uitvoeringsmethoden.</li><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt publiek- en profielkenmerken alleen delen met de Adobe Target-verbinding voor de *standaardproductiesandbox*.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden ondersteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> |
 
 * **Werkruimte**: Selecteer de Adobe Target [werkruimte](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) waaraan het publiek deelneemt. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Bij activering worden de doelgroepen naar de geselecteerde werkruimte geleid terwijl ze de toepasselijke [Labels voor gegevensgebruik van Experience Platforms](../../../data-governance/labels/overview.md).
 
@@ -108,7 +119,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 

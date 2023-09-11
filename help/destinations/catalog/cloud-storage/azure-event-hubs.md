@@ -3,9 +3,9 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: Azure Event Hubs-verbinding
 description: Creeer een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag naar streamgegevens van Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ U kunt een uitgaande verbinding in real time aan uw creëren [!DNL Azure Event H
 
 * Voor meer informatie over [!DNL Azure Event Hubs], zie de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Verbinding maken met [!DNL Azure Event Hubs] programmatically, zie [Zelfstudie voor Streaming doelen-API](../../api/streaming-destinations.md).
-* Verbinding maken met [!DNL Azure Event Hubs] in de gebruikersinterface van het Platform raadpleegt u de onderstaande secties.
+* Verbinding maken met [!DNL Azure Event Hubs] in de gebruikersinterface van Platform raadpleegt u de onderstaande secties.
 
 ![AWS Kinesis in de gebruikersinterface](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
-## Gevallen gebruiken {#use-cases}
+## Gebruiksscenario’s {#use-cases}
 
 Door streamingdoelen zoals [!DNL Azure Event Hubs]kunt u bovendien gemakkelijk hoogwaardige segmentatiegebeurtenissen en de bijbehorende profielkenmerken in uw eigen systemen importeren.
 
@@ -36,15 +36,12 @@ Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

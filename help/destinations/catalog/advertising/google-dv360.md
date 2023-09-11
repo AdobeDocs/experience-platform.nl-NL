@@ -3,9 +3,9 @@ keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave 
 title: Google Display & Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1002'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming wilt maken met Google Display &amp; Video 360 en de optie [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of Customer Care om ID-syncs in te schakelen. Als u eerder Google-integratie in Audience Manager had ingesteld, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+>Als u uw eerste bestemming wilt maken met Google Display &amp; Video 360 en de optie [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of Customer Care om ID syncs in te schakelen. Als u eerder Google-integratie in Audience Manager had ingesteld, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -43,15 +43,12 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -70,13 +67,13 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!NOTE]
 >
->Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Display & Video 360] bestemming in Platform. Controleer of het hieronder beschreven proces voor het aanbieden van een aanbieding is voltooid door [!DNL Google] voordat u een doel maakt.
+>Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Display & Video 360] doel in Platform. Controleer of het hieronder beschreven proces voor het aanbieden van een aanbieding is voltooid door [!DNL Google] voordat u een doel maakt.
 >De uitzondering op deze regel is [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
-Voordat u het dialoogvenster [!DNL Google Display & Video 360] Als u de bestemming in Platform hebt, moet u contact opnemen met Google om Adobe op de lijst met toegestane gegevensproviders te plaatsen en om uw account aan de lijst van gewenste personen toe te voegen. Neem contact op met Google en geef de volgende informatie op:
+Voordat u het dialoogvenster [!DNL Google Display & Video 360] Als u een account wilt maken in Platform, moet u contact opnemen met Google en vragen of Adobe moet worden opgenomen in de lijst met toegestane gegevensproviders en dat uw account aan de lijst van gewenste personen wordt toegevoegd. Neem contact op met Google en geef de volgende informatie op:
 
-* **Account-id**: Adobe-id met Google. Account-ID: 87933855.
-* **Klant-id**: Adobe-id met Google. Klant-id: 89690775.
+* **Account-id**: De account-id van de Adobe met Google. Account-ID: 87933855.
+* **Klant-id**: De klant-id van de Adobe met Google. Klant-id: 89690775.
 * **Je accounttype**: use **[!DNL Invite advertiser]** om het publiek alleen te laten delen naar een specifiek merk in uw Display &amp; Video 360-account of -gebruik **[!DNL Invite partner]** om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
 
 ## Verbinden met de bestemming {#connect}
@@ -100,7 +97,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Display & Video 360] bestemming, gelieve met uw te werken [!DNL Google Account Manager] of Adobe om te begrijpen welk accounttype u hebt.
+>Wanneer u een [!DNL Google Display & Video 360] bestemming, gelieve met uw te werken [!DNL Google Account Manager] of een Adobe die representatief is voor het accounttype dat u hebt.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 

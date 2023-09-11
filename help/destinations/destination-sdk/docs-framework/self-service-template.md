@@ -2,9 +2,9 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -74,19 +74,14 @@ Om u te helpen beter begrijpen hoe en wanneer u het *YourDestination* doel, hier
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-*Voeg in deze sectie informatie toe over het publiek dat door uw bestemming wordt gesteund. We hebben de tabel vooraf gevuld met enkele standaardwaarden. Verwijder de waarden die niet van toepassing zijn op de bestemming en alle waarden die niet zijn voorgevuld.*
+*Voeg in deze sectie informatie toe over het publiek dat door uw bestemming wordt gesteund. We hebben de tabel vooraf gevuld met enkele standaardwaarden. Gebruik de `✓` en `X` tekens die aangeven of het type publiek door dit doel wordt ondersteund.*
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Als de bestemming activering van een extern publiek niet ondersteunt, verwijdert u de onderstaande woordgroep samen met de tabel.*
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | X | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 

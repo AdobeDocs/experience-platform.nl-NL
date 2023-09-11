@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
-source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
+source-git-commit: 95d7b16efb638c37d8db3f56b0f3fbf6aa9d15df
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 24%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 24%
 * Gegevensverzameling {#data-collection}
    * [Automatisch verzamelde gegevens](data-collection/automatic-information.md)
    * [Koppelingen bijhouden](data-collection/track-links.md)
-   * [Gegevens over handel en producten verzamelen](data-collection/collect-commerce-data.md)
+   * [Verzamel handel, product, en ordegegevens](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Adobe Analytics gebruiken met Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
       * [Variabelen van Analyse toewijzen](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -54,7 +54,7 @@ ht-degree: 24%
          * [Overzicht](personalization/adobe-target/analytics-logging/overview.md)
          * [Logboekregistratie op de client](personalization/adobe-target/analytics-logging/client-side.md)
          * [Logboekregistratie op de server](personalization/adobe-target/analytics-logging/server-side.md)
-   * offer decisioning {#offer-decisioning}
+   * Offer decisioning {#offer-decisioning}
       * [Overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Overzicht](personalization/ajo/overview.md)

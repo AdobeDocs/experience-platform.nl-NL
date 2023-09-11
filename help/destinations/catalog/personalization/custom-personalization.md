@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaring met aangepaste bestemm
 title: Aangepaste verpersoonlijkingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats lopen een manier om publieksinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het gebruikersprofiellidmaatschap wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '879'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Deze bestemming verstrekt een manier om publieksinformatie van Adobe Experience 
 
 ## Vereisten {#prerequisites}
 
-Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](../../../edge/home.md) of de [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). U moet één van deze SDKs gebruiken om deze bestemming te gebruiken.
+Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](../../../edge/home.md) of de [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). U moet één van deze SDKs gebruiken om deze bestemming te gebruiken.
 
 >[!IMPORTANT]
 >
@@ -43,15 +43,12 @@ Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](..
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +56,7 @@ Deze bestemming steunt de activering van alle publiek dat door het Experience Pl
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!DNL Profile request]** | U vraagt om alle soorten publiek die voor één profiel zijn toegewezen in de aangepaste verpersoonlijkingsbestemming. Verschillende aangepaste verpersoonlijkingsdoelen kunnen worden ingesteld voor verschillende [Gegevensstromen voor gegevensverzameling Adobe](../../../datastreams/overview.md). |
+| Exporttype | **[!DNL Profile request]** | U vraagt om alle soorten publiek die voor één profiel zijn toegewezen in de aangepaste verpersoonlijkingsbestemming. Verschillende aangepaste verpersoonlijkingsdoelen kunnen worden ingesteld voor verschillende [Gegevensverzamelingsgegevensstromen Adoben](../../../datastreams/overview.md). |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Verbinden met de bestemming {#connect}

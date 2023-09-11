@@ -4,9 +4,9 @@ title: IP adres lijst van gewenste personen voor het stromen bestemmingen
 type: Documentation
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw het eindpunt van HTTP REST API, Amazon Kinesis, of de instantie van de Hubs van de Gebeurtenis veilig uit te voeren Azure.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
+source-git-commit: ca3c9ed87f2365cc1d9e4ef5e4a6145266a11bba
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,8 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> * Adobe raadt u aan een bladwijzer op deze pagina te maken en deze elke drie maanden opnieuw te bekijken om te controleren op de meest recente IP-adressen. Adobe verstrekt geen bericht van nieuwe IP waaiers.
+> * De Adobe adviseert dat u referentie deze pagina en het om de drie maanden om de recentste IP adressen controleert. Adobe verstrekt geen bericht van nieuwe IP waaiers.
 > * De lijst van hier gedocumenteerde IPs *niet* is van toepassing op om het even welke bestemmingen u gebruikend bouwt [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
-
 
 ## Overzicht {#overview}
 
@@ -33,7 +32,7 @@ Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt t
 
 U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen IP waaier te specificeren, kunt u verkeer voor de dienst van de gegevensoverdracht toestaan.
 
-Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste personen voorafgaand aan het werken met de hierboven vermelde bestemmingen op deze pagina toevoegt. Als u er niet in slaagt om uw regiospecifieke IP-bereik aan uw lijst van gewenste personen toe te voegen, kan dit leiden tot fouten of niet-prestaties bij het gebruik van deze streamingdoelen.
+De Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste personen voorafgaand aan het werken met de hierboven vermelde bestemmingen op deze pagina toevoegt. Als u er niet in slaagt om uw regiospecifieke IP-bereik aan uw lijst van gewenste personen toe te voegen, kan dit leiden tot fouten of niet-prestaties bij het gebruik van deze streamingdoelen.
 
 ## VA7: Amerikaanse en Amerikaanse klanten {#us-americas}
 
@@ -57,6 +56,7 @@ Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste personen
 `52.254.106.240/28`
 `52.254.107.0/28`
 `52.254.107.144/28`
+`20.22.83.112`
 
 ## NLD2: EMEA-klanten {#emea}
 
@@ -109,3 +109,33 @@ Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste personen
 `20.40.191.96/28`
 `20.43.104.32/28`
 `20.43.104.64/28`
+`20.53.206.128`
+`20.227.35.177`
+
+## CAN2: klanten uit Canada {#can}
+
+`20.104.46.128/28`
+`20.104.46.160/28`
+`20.104.46.64/28`
+`20.104.46.80/28`
+`20.116.145.94`
+`20.116.147.168`
+`20.200.70.192/28`
+`20.200.70.208/28`
+`20.200.70.224/28`
+`20.200.70.240/28`
+`20.200.71.0/28`
+`20.200.71.112/28`
+`20.200.71.128/28`
+`20.200.71.144/28`
+`20.200.71.16/28`
+`20.200.71.160/28`
+`20.200.71.176/28`
+`20.200.71.32/28`
+`20.200.71.48/28`
+`20.200.71.64/28`
+`20.200.71.80/28`
+`20.200.71.96/28`
+`20.200.93.180`
+`20.200.94.116`
+`20.200.94.83`

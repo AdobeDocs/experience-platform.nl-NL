@@ -5,9 +5,9 @@ description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt geb
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1683'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Adobe Experience Platform ondersteunt de mogelijkheid om extern publiek te impor
 
 Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten die betrokken zijn bij het creëren van een publiek. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [Segmenteringsservice](../home.md): Staat u toe om publiek van gegevens van het Profiel van de Klant in real time te bouwen.
-- [Klantprofiel in realtime](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
+- [Segmenteringsservice](../home.md): Hiermee kunt u een publiek maken op basis van realtime gegevens in het klantprofiel.
+- [Klantprofiel in realtime](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 - [Gegevenssets](../../catalog/datasets/overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in Experience Platform.
 - [Streaming opname](../../ingestion/streaming-ingestion/overview.md): Hoe Experience Platform gegevens van client- en server-side apparaten in real-time opneemt en opslaat.
 
@@ -44,7 +44,7 @@ Segmentdefinities bevatten informatie zoals de naam, beschrijving, expressie (in
 
 ## Een naamruimte voor identiteit maken voor het externe publiek
 
-De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Identiteitsnaamruimten maken het Platform mogelijk te koppelen van waaruit een publiek afkomstig is.
+De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Met naamruimten kan Platform aangeven waar een publiek vandaan komt.
 
 Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](../../identity-service/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteit maakt, voegt u de brongegevens toe aan de naamruimte voor identiteit en markeert u de naamruimte [!UICONTROL Type] als **[!UICONTROL Non-people identifier]**.
 
@@ -54,7 +54,7 @@ Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](.
 
 Nadat u een naamruimte voor identiteiten hebt gemaakt, moet u een nieuw schema maken voor het segment dat u wilt maken.
 
-Als u wilt beginnen met het samenstellen van een schema, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door de **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schemas. Selecteer **[!UICONTROL Browse]** om een volledige selectie van de beschikbare schematypen te zien.
+Als u een schema wilt samenstellen, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door de **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schemas. Van hier, selecteer **[!UICONTROL Browse]** om een volledige selectie van de beschikbare schematypen te zien.
 
 ![Zowel creeer schema als doorbladert worden benadrukt.](../images/tutorials/external-audiences/create-schema-browse.png)
 
@@ -66,7 +66,7 @@ Nu uw schema is gecreeerd, zult u moeten specificeren welk gebied segmentidentit
 
 ![De selectievakjes om het geselecteerde veld als de primaire identiteit te markeren, worden gemarkeerd in de Schema-editor.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Na het markeren van `_id` veld als primaire identiteit, selecteer de titel van het schema, gevolgd door de schakeloptie met het label **[!UICONTROL Profile]**. Selecteren **[!UICONTROL Enable]** om het schema in te schakelen voor [!DNL Real-Time Customer Profile].
+Nadat u het `_id` veld als primaire identiteit, selecteer de titel van het schema, gevolgd door de schakeloptie met het label **[!UICONTROL Profile]**. Selecteren **[!UICONTROL Enable]** om het schema voor [!DNL Real-Time Customer Profile].
 
 ![De knevel om het schema voor Profiel toe te laten wordt benadrukt in de Redacteur van het Schema.](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -102,7 +102,7 @@ Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke stre
 
 ## Structuur van metagegevens voor het publiek
 
-Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu aan het Platform toevoegen.
+Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu opnemen in Platform.
 
 Hieronder ziet u een voorbeeld van de metagegevens van de externe doelgroep:
 
@@ -153,7 +153,7 @@ Hieronder ziet u een voorbeeld van de metagegevens van de externe doelgroep:
 
 ## Segmenten samenstellen met behulp van geïmporteerde soorten publiek
 
-Zodra het geïmporteerde publiek is ingesteld, kunnen deze worden gebruikt als onderdeel van het segmenteringsproces. Ga naar de Segment Builder en selecteer **[!UICONTROL Audiences]** in de **[!UICONTROL Fields]** sectie.
+Zodra het geïmporteerde publiek is ingesteld, kunnen deze worden gebruikt als onderdeel van het segmenteringsproces. Ga naar Segment Builder en selecteer om een extern publiek te zoeken **[!UICONTROL Audiences]** in de **[!UICONTROL Fields]** sectie.
 
 ![De externe publiekskiezer in de Segment Builder wordt gemarkeerd.](../images/tutorials/external-audiences/external-audiences.png)
 
@@ -161,13 +161,13 @@ Zodra het geïmporteerde publiek is ingesteld, kunnen deze worden gebruikt als o
 
 Nu u externe doelgroepen in uw segmenten kunt gebruiken, kunt u de Bouwer van het Segment gebruiken om segmenten tot stand te brengen. Als u wilt leren hoe u segmenten maakt, leest u de [zelfstudie over het maken van segmenten](./create-a-segment.md).
 
-## Aanhangsel
+## Bijlage
 
 Naast het gebruiken van ingevoerde externe publieksmeta-gegevens en het gebruiken van hen voor het creëren van segmenten, kunt u externe segmentlidmaatschap aan Platform ook invoeren.
 
 ### Een extern bestemmingsschema voor een segmentlidmaatschap instellen
 
-Als u wilt beginnen met het samenstellen van een schema, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door de **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schemas. Selecteer **[!UICONTROL XDM Individual Profile]**.
+Als u een schema wilt samenstellen, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door de **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schemas. Van hier, selecteer **[!UICONTROL XDM Individual Profile]**.
 
 ![Het XDM-gebied Individueel profiel wordt gemarkeerd.](../images/tutorials/external-audiences/create-schema-profile.png)
 
@@ -181,7 +181,7 @@ Zorg er bovendien voor dat het schema is gemarkeerd voor **[!UICONTROL Profile]*
 
 ### De gegevensset instellen
 
-Na het creëren van uw schema, zult u een dataset moeten creëren.
+Na het creëren van uw schema, zult u een dataset moeten tot stand brengen.
 
 Om een dataset tot stand te brengen, volg de instructies in [gebruikershandleiding voor gegevenssets](../../catalog/datasets/user-guide.md#create). U moet de **[!UICONTROL Create dataset from schema]** met het eerder gemaakte schema.
 
@@ -209,7 +209,7 @@ Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke stre
 
 ## Segmentlidmaatschapsstructuur
 
-Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu aan het Platform toevoegen.
+Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu opnemen in Platform.
 
 Hieronder ziet u een voorbeeld van de downloadbelasting voor het externe publiek:
 
@@ -265,4 +265,4 @@ Hieronder ziet u een voorbeeld van de downloadbelasting voor het externe publiek
 
 >[!NOTE]
 >
->Door gebrek, worden de externe publiekslidmaatschappen slechts behouden voor 30 dagen. Als u deze langer dan 30 dagen wilt bewaren, gebruikt u de `validUntil` veld tijdens het opnemen van uw publieksgegevens. Lees voor meer informatie over dit veld de handleiding op [Segment Membership Details schema veldgroepen](../../xdm/field-groups/profile/segmentation.md).
+>Externe publieksleden worden standaard na 30 dagen verwijderd. Als u wilt voorkomen dat de gegevens worden verwijderd en deze langer dan 30 dagen wilt bewaren, gebruikt u de `validUntil` veld tijdens het opnemen van uw publieksgegevens. Lees voor meer informatie over dit veld de handleiding op [Segment Membership Details schema veldgroepen](../../xdm/field-groups/profile/segmentation.md).

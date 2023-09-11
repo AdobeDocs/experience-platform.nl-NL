@@ -1,47 +1,59 @@
 ---
-title: Handel en productinformatie verzamelen met de SDK van Adobe Experience Platform Web
+title: Verzamel handel, product, en ordeinformatie gebruikend SDK van het Web van Adobe Experience Platform
 description: Leer hoe u gegevens met betrekking tot producten of een winkelwagentje toevoegt met de Adobe Experience Platform Web SDK.
-keywords: producten;handel;maatregelen;maatregel;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListViews;productListViews;productViews;aankopen;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseNumber;
-exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 51a18ca3a9d0817eafeecea328900eb2f4d1d9a4
+source-git-commit: cb47f70fe75eb0dfe26fb3c3557658cf6cff5a17
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1109'
 ht-degree: 1%
 
 ---
 
-# Verzamelen van handel en productinformatie
 
-Als u producten op uw site hebt, is dit een standaardset van dingen die u wilt verzenden om de meeste mogelijkheden van Adobe in te schakelen. Hoewel dit een suggestie is, biedt het vanaf het begin een zeer sterke set gegevens.
+# Verzamel handel, product, en ordeinformatie
 
-In dit document worden de [ExperienceEvent Commerce — Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) schemaveldgroep. De `commerce` veldgroep bestaat uit twee delen: de `commerce` en `productListItems` array. De `commerce` Met dit object kunt u aangeven welke handelingen er met het `productListItems` array.
+Als uw organisatie producten of diensten verkoopt, kunt u deze pagina als gids voor gebruiken hoe te om die producten en de diensten te volgen.
 
->[!TIP]
->
->Als u bekend bent met Adobe Analytics, `commerce` is het nauwst verbonden met de `events` variabele. De `productListItems` is nauwer verbonden met de `products` variabele.
+Deze pagina gebruikt de XDM [Handelsschema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) veldgroep.
 
-## Acties in verband met producten
+Deze veldgroep bestaat uit twee hoofddelen:
 
-Hieronder vindt u een lijst met `measures` beschikbaar in `commerce` object.
+* De `commerce` object. Met dit object kunt u aangeven welke handelingen met het `productListItems` array.
+* De `productListItems` array.
 
 >[!TIP]
 >
->Een maatregel heeft twee velden: `id` en `value`. Meestal zult u de `value` alleen veld (bijvoorbeeld `'value':1`). De `id` kunt u een unieke id instellen die u kunt gebruiken om bij te houden wanneer de maatregel is verzonden. Zie de XDM-documentatie voor [Meetlat](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
+>Als u bekend bent met Adobe Analytics, `commerce` object bevat gegevens die vergelijkbaar zijn met handelsgebeurtenissen in het dialoogvenster `events` variabele. De `productListItems` objectarray bevat gegevens die vergelijkbaar zijn met `products` variabele.
 
-| **Meetlat** | **Aanbeveling** | **Beschrijving** |
+## De `commerce` object {#commerce-object}
+
+In deze sectie worden de velden beschreven die beschikbaar zijn in het dialoogvenster `commerce` object.
+
+>[!TIP]
+>
+>Een maatregel heeft twee velden: `id` en `value`. Meestal gebruikt u alleen de `value` veld (bijvoorbeeld `'value':1`). De `id` in het veld kunt u een unieke id voor het bijhouden van gegevens instellen wanneer de maatregel is verzonden. Zie de XDM-documentatie voor [Meetlat](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) voor meer informatie .
+
+| Meetlat | Aanbeveling | Beschrijving |
 |---|---|---|
-| [karAbandons](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmcartabandons) | Optioneel | Een winkelwagentje is niet meer toegankelijk of kan niet meer door de gebruiker worden gekocht. |
-| [kassa](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmcheckouts) | Zeer aanbevolen | Een gebruiker zoekt niet meer naar producten, maar koopt een product. |
-| [productListAdds](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistadds) | Zeer aanbevolen | Er wordt een product aan een lijst toegevoegd. Zorg ervoor dat u het product instelt in de `productListItems` tegelijkertijd. |
-| [productListOpens](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistopens) | Optioneel | Er wordt een nieuwe productlijst gemaakt. (Er wordt bijvoorbeeld een nieuw winkelwagentje gemaakt.) |
-| [productListRemovals](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistremovals) | Zeer aanbevolen | Een product wordt uit een productlijst verwijderd. |
-| [productListReopen](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistreopens) | Optioneel | Een productlijst wordt opnieuw geactiveerd door de gebruiker. Dit gebeurt vaak bij hermarketingcampagnes. |
-| [productListViews](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductlistviews) | Zeer aanbevolen | Er wordt een lijst met producten weergegeven. |
-| [productViews](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmproductviews) | Zeer aanbevolen | Een weergave van een product is opgetreden. Zorg ervoor dat u het weergegeven product instelt in het dialoogvenster `productListItems`. |
-| [aankopen](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmpurchases) | Zeer aanbevolen | Een bestelling wordt geaccepteerd. Moet een productlijst hebben. |
-| [saveForLaters](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/commerce.schema.md#xdmsaveforlaters) | Optioneel | Een product wordt opgeslagen voor toekomstig gebruik. |
+| [`cartAbandons`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcartabandons) | Optioneel | Een winkelwagentje is niet meer toegankelijk of kan niet meer door de gebruiker worden aangeschaft. |
+| [`checkouts`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcheckouts) | Zeer aanbevolen | Een gebruiker zoekt niet meer naar producten, maar is bezig een product te kopen. |
+| [`productListAdds`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistadds) | Zeer aanbevolen | Er wordt een product aan een lijst toegevoegd. Zorg ervoor dat u het product instelt in de `productListItems` tegelijkertijd. |
+| [`productListOpens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistopens) | Optioneel | Er wordt een nieuwe productlijst gemaakt. Er wordt bijvoorbeeld een nieuw winkelwagentje gemaakt. |
+| [`productListRemovals`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistremovals) | Zeer aanbevolen | Een product wordt uit een productlijst verwijderd. |
+| [`productListReopens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistreopens) | Optioneel | Een productlijst wordt opnieuw geactiveerd door de gebruiker. Dit gebeurt vaak bij hermarketingcampagnes. |
+| [`productListViews`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistviews) | Zeer aanbevolen | Er wordt een lijst met producten weergegeven. |
+| [`productViews`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductviews) | Zeer aanbevolen | Een beeld van een product gebeurde. Zorg ervoor dat u het weergegeven product instelt in het dialoogvenster `productListItems`. |
+| [`purchases`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmpurchases) | Zeer aanbevolen | Een bestelling wordt geaccepteerd. Moet een productlijst hebben. |
+| [`saveForLaters`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmsaveforlaters) | Optioneel | Een product wordt opgeslagen voor toekomstig gebruik. |
 
-Hier is een voorbeeld van hoe u deze zou plaatsen `Measures` in de SDK.
+{style="table-layout:auto"}
+
+### `Commerce` objectvoorbeelden
+
+Breid hieronder de sectie uit om een voorbeeld van een bevel van SDK van het Web te zien gebruikend een gebied van het `commerce` object.
+
++++`productViews`
+
+Een basis-web SDK `sendEvent` aanroep instellen `productViews` veld naar `1`:
 
 ```javascript
 alloy("sendEvent", {
@@ -55,21 +67,33 @@ alloy("sendEvent", {
 });
 ```
 
-Het handelsobject bevat ook een speciaal veld voor het verzamelen van ordergegevens. Dit wordt een speciaal veld genoemd `order`.
++++
 
-| **Volgorde** | **Optie** | **Aanbeveling** | **Beschrijving** |
+## De `order` object {#order-object}
+
+De `commerce` -object bevat een speciaal object voor het verzamelen van ordergegevens. Dit wordt de `order` object.
+
+In deze sectie worden alle velden beschreven die worden ondersteund door de `order` object.
+
+| Veld | Optie | Aanbeveling | Beschrijving |
 |---|---|---|---|
-| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) valuta voor het totaal van de bestelling. |
-| [betalingen[betalingspunten]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | De lijst met betalingen op een bestelling. A [paymentItem](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) bevat het volgende. |
-|  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | Optioneel | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) valuta voor deze betalingsmethode. |
-|  | [paymentAmount](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymentamount) | Zeer aanbevolen | De waarde van de betaling in de opgegeven valutacode. |
-|  | [paymentType](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype) | Zeer aanbevolen | Het type betaling (bijvoorbeeld `credit_card`, `gift_card`, `paypal`). Zie de lijst met [bekende waarden](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype-known-values) voor meer informatie. |
-|  | [transactionID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmtransactionid) | Optioneel | Een unieke id voor deze betalingstransactie. |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpricetotal) |  | Zeer aanbevolen | Het totaal voor deze bestelling nadat alle kortingen en belastingen zijn toegepast. |
-| [purchaseID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpurchaseid) |  | Zeer aanbevolen | De unieke id die door de verkoper is toegewezen voor deze aankoop. |
-| [purchaseOrderNumber](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpurchaseordernumber) |  | Optioneel | Een unieke id die door de koper voor deze aankoop is toegewezen. |
+| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmcurrencycode) |  |  | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) valuta voor het totaal van de bestelling. |
+| [`payments[]`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpayments) |  |  | De lijst met betalingen op een bestelling. A [paymentItem](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md) bevat het volgende. |
+|  | [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmcurrencycode) | Optioneel | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) valuta voor deze betalingsmethode. |
+|  | [`paymentAmount`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymentamount) | Zeer aanbevolen | De waarde van de betaling in de opgegeven valutacode. |
+|  | [`paymentType`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype) | Zeer aanbevolen | Het type betaling (bijvoorbeeld `credit_card`, `gift_card`, `paypal`). Zie de lijst met [bekende waarden](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype-known-values) voor meer informatie. |
+|  | [`transactionID`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmtransactionid) | Optioneel | Een unieke id voor deze betalingstransactie. |
+| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpricetotal) |  | Zeer aanbevolen | Het totaal voor deze bestelling nadat alle kortingen en belastingen zijn toegepast. |
+| [`purchaseID`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpurchaseid) |  | Zeer aanbevolen | De unieke id die door de verkoper is toegewezen voor deze aankoop. |
+| [`purchaseOrderNumber`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpurchaseordernumber) |  | Optioneel | Een unieke id die door de koper voor deze aankoop is toegewezen. |
 
-Hier is een voorbeeld van een typische aankoop in SDK.
+### Voorbeelden van Order-objecten
+
+Breid hieronder de sectie uit om een voorbeeld van een bevel van SDK van het Web te zien gebruikend `commerce` object.
+
++++`Order` objectvoorbeeld
+
+Een Web SDK `sendEvent` aanroep instellen `order` object dat van toepassing is op meerdere producten in het dialoogvenster `productListItems` array:
 
 ```javascript
 alloy("sendEvent",{
@@ -107,23 +131,29 @@ alloy("sendEvent",{
 });
 ```
 
-## Lijst van producten
++++
 
-De productlijst geeft aan welke producten gerelateerd zijn aan de corresponderende actie. Het is een lijst met [productListItems](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md). Elk product heeft een aantal facultatieve gebieden.
+## Het object productlijst {#product-list-object}
 
-| **Veld** | **Aanbeveling** | **Beschrijving** |
+De productlijst geeft aan welke producten gerelateerd zijn aan de corresponderende actie. Het is een lijst met [productListItems](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md). Elk product heeft verschillende optionele velden.
+
+| Veld | Aanbeveling | Beschrijving |
 |---|---|---|
-| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Optioneel | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) valuta voor het product. Dit is alleen handig wanneer u producten met verschillende valutacodes kunt gebruiken en wanneer deze van toepassing zijn. Bijvoorbeeld wanneer er een aankoop is of een winkelwagentje wordt toegevoegd. |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Zeer aanbevolen | Moet alleen worden vastgesteld wanneer dit van toepassing is. Het is bijvoorbeeld mogelijk dat u niet kunt instellen op `productView` gebeurtenis omdat verschillende variaties van het product verschillende prijzen kunnen hebben, maar op een `productListAdds` gebeurtenis. |
-| [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | Zeer aanbevolen | De XDM-id voor het product. |
-| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Zeer aanbevolen | De methode die door de bezoeker is gebruikt om een product-item aan de lijst toe te voegen. Instellen met `productListAdds` maatregelen en mogen alleen worden gebruikt wanneer een product aan de lijst wordt toegevoegd. Voorbeelden zijn `add to cart button`, `quick add`, en `upsell`. |
-| [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | Zeer aanbevolen | Deze wordt ingesteld op de weergavenaam of leesbare naam van het product. |
-| [hoeveelheid](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmquantity) | Zeer aanbevolen | Het aantal eenheden dat de klant heeft aangegeven te vragen voor het product. Moet worden ingesteld op `productListAdds`, `productListRemoves`, `purchases`, `saveForLaters`, enzovoort. |
-| [SKU](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md) | Zeer aanbevolen | Bewaar bewaareenheid. Het is de unieke id voor het product. |
+| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | Optioneel | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) valuta voor het product. Dit veld is doorgaans alleen van toepassing wanneer de productlijst meerdere producten bevat met verschillende valutacodes. |
+| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | Zeer aanbevolen | Stel dit veld alleen in, indien van toepassing. Het is bijvoorbeeld mogelijk dat u niet kunt instellen op `productView` gebeurtenis omdat verschillende variaties van het product verschillende prijzen kunnen hebben, maar op een `productListAdds` gebeurtenis. |
+| [`product`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproduct) | Zeer aanbevolen | De XDM-id voor het product. |
+| [`productAddMethod`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod) | Zeer aanbevolen | De methode die door de bezoeker is gebruikt om een product-item aan de lijst toe te voegen. Instellen met `productListAdds` en alleen worden gebruikt wanneer een product aan de lijst wordt toegevoegd. Voorbeelden zijn `add to cart button`, `quick add`, en `upsell`. |
+| [`productName`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmname) | Zeer aanbevolen | De weergavenaam of de leesbare naam van het product. |
+| [`quantity`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmquantity) | Zeer aanbevolen | Het aantal eenheden dat de klant heeft aangegeven van het product te verlangen. Moet worden ingesteld op `productListAdds`, `productListRemoves`, `purchases`, `saveForLaters`, enzovoort. |
+| [`SKU`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmsku) | Zeer aanbevolen | Bewaar de bewaareenheid. Het is de unieke id voor het product. |
 
-## Voorbeelden
+### Voorbeelden van productlijsten
 
-`productViews` event
+Breid de hieronder secties uit om voorbeelden van de bevelen van SDK van het Web te zien gebruikend `productListItems` object.
+
++++`productListItems` voorbeeld
+
+Een Web SDK `sendEvent` aanroep instellen `productViews` voor meerdere producten in de `productListItems` array:
 
 ```javascript
 alloy("sendEvent",{
@@ -147,7 +177,11 @@ alloy("sendEvent",{
 });
 ```
 
-`productListAdds` event
++++
+
++++`productListAdds` examen
+
+Een Web SDK `sendEvent` aanroep instellen `productListAdds` evenement voor meerdere producten in de `productListItems` array:
 
 ```javascript
 alloy("sendEvent",{
@@ -177,7 +211,11 @@ alloy("sendEvent",{
 });
 ```
 
-`checkouts` event
++++
+
++++`checkouts` voorbeeld
+
+Een Web SDK `sendEvent` aanroep instellen `checkouts` evenement voor meerdere producten in de `productListItems` array:
 
 ```javascript
 alloy("sendEvent",{
@@ -205,40 +243,4 @@ alloy("sendEvent",{
 });
 ```
 
-`order` event
-
-```javascript
-alloy("sendEvent",{
-  "xdm":{
-    "commerce":{
-      "order":{
-        "purchaseID":"123456789",
-        "currencyCode":"USD",
-        "priceTotal":39.98,
-        "payments":[
-          {
-            "transactionID":"amx12345",
-            "paymentAmount":39.98,
-            "paymentType":"credit_card",
-            "currencyCode":"USD"
-          }
-        ]
-      }
-    },
-    "productListItems":[
-      {
-        "SKU":"HT105",
-        "name":"The Big Floppy Hat",
-        "priceTotal":29.99,
-        "quantity":1
-      },
-      {
-        "SKU":"HT104",
-        "name":"The Small Floppy Hat",
-        "priceTotal":9.99,
-        "quantity":1
-      }
-    ]
-  }
-});
-```
++++

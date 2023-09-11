@@ -3,7 +3,7 @@ title: Id's delen via mobiel naar web en verschillende domeinen
 description: Leer hoe u id's van bezoekers van mobiele naar webeigenschappen en in verschillende domeinen kunt behouden
 keywords: Identiteit;mobiel;id;delen;domein;cross-domain;sdk;platform;
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
-source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -34,21 +34,21 @@ Een technologieverkoper wil zijn bezoekersactiviteit rapporteren met informatie 
 
 Als u de id&#39;s van mobiel naar web en tussen domeinen wilt delen, moet u [!DNL Web SDK] versie 2.11.0 of hoger.
 
-Voor mobiele Edge Network-implementaties wordt deze functie ondersteund in het dialoogvenster [Identiteit voor Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extensie die begint met versie 1.1.0 (iOS en Android).
+Voor mobiele Edge Network-implementaties wordt deze functie ondersteund in het dialoogvenster [Identiteit voor Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) extensie die begint met versie 1.1.0 (iOS en Android).
 
 Deze functie is ook compatibel met [!DNL VisitorAPI.js] versie 1.7.0 of hoger.
 
 ## Id&#39;s delen via mobiele apparaten {#mobile-to-web}
 
-Gebruik de `getUrlVariables` API van de [Identiteit voor Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network/api-reference#geturlvariables) extensie om de id&#39;s op te halen als queryparameters en deze aan uw URL te koppelen bij het openen van de URL [!DNL webViews].
+Gebruik de `getUrlVariables` API van de [Identiteit voor Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) extensie om de id&#39;s op te halen als queryparameters en deze aan uw URL te koppelen bij het openen van de URL [!DNL webViews].
 
 Geen extra configuratie wordt vereist voor Web SDK om goed te keuren `ECID` waarden in de queryreeks.
 
 De parameter van het vraagkoord omvat:
 
 * `MCID`: De Experience Cloud-id (`ECID`)
-* `MCORGID`: De Experience Cloud `orgID` dat moet overeenkomen met `orgID` geconfigureerd in het dialoogvenster [!DNL Web SDK].
-* `TS`: Een tijdstempelparameter die niet ouder kan zijn dan vijf minuten.
+* `MCORGID`: Het Experience Cloud `orgID` dat moet overeenkomen met `orgID` geconfigureerd in het dialoogvenster [!DNL Web SDK].
+* `TS`: Een tijdstempelparameter die niet ouder dan vijf minuten mag zijn.
 
 
 Bij het delen van een mobiele id naar een web wordt gebruikgemaakt van de `adobe_mc` parameter. Wanneer de `adobe_mc` parameter aanwezig en geldig is, `ECID` van het vraagkoord wordt automatisch toegevoegd aan de identiteitskaart in het eerste verzoek dat aan het Netwerk van de Rand wordt gemaakt. Alle volgende Edge Network-interacties gebruiken `ECID`.
@@ -102,7 +102,7 @@ Voer de beschreven stappen uit [hier](../../tags/ui/managing-resources/rules.md)
    * Selecteer **[!UICONTROL When the user clicks on > specific elements]**
    * Typ in het dialoogvenster **[!UICONTROL Selector]**: `a[href]`. Deze gebeurtenis wordt geactiveerd telkens wanneer op een ankertag op de pagina met een `href` eigenschap.
 
-      ![UI-afbeelding die de gebeurtenisconfiguratie weergeeft met de hierboven beschreven instellingen](assets/id-sharing-event-configuration.png)
+     ![UI-afbeelding die de gebeurtenisconfiguratie weergeeft met de hierboven beschreven instellingen](assets/id-sharing-event-configuration.png)
 
 * [!UICONTROL Condition Configuration]
    * **[!UICONTROL Logic Type]**: [!UICONTROL Regular]
@@ -112,14 +112,14 @@ Voer de beschreven stappen uit [hier](../../tags/ui/managing-resources/rules.md)
    * **[!UICONTROL Operator]**: [!UICONTROL Matches Regex]
    * **[!UICONTROL Right Operand]**: Typ een reguliere expressie die overeenkomt met de domeinen waarmee u identiteiten wilt delen. Zo kunt u bijvoorbeeld koppelingen afstemmen met hostnamen die eindigen met `adobe.com` of `behance.com`, gebruik deze reguliere expressie: `behance.com$|adobe.com$`. De gekoppelde pagina moet de [!DNL Web SDK] of [!DNL Visitor ID] geïnstalleerd om de identiteit te accepteren.
 
-      ![UI-afbeelding die de configuratie van de voorwaarde weergeeft met de hierboven beschreven instellingen](assets/id-sharing-condition-configuration.png)
+     ![UI-afbeelding die de configuratie van de voorwaarde weergeeft met de hierboven beschreven instellingen](assets/id-sharing-condition-configuration.png)
 
 * [!UICONTROL Action Configuration]
    * **[!UICONTROL Extension]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL Action Type]**: [!UICONTROL Redirect with identity]
-   * **[!UICONTROL Instance]**: Selecteer uw exemplaar. In de meeste gevallen, zult u slechts één gevormde instantie hebben. Als u meerdere exemplaren hebt, selecteert u de instantie met de identiteit die u wilt delen.
+   * **[!UICONTROL Instance]**: Selecteer uw instantie. In de meeste gevallen, zult u slechts één gevormde instantie hebben. Als u meerdere exemplaren hebt, selecteert u de instantie met de identiteit die u wilt delen.
 
-      ![UI-afbeelding die de actieconfiguratie weergeeft met de hierboven beschreven instellingen](assets/id-sharing-action-configuration.png)
+     ![UI-afbeelding die de actieconfiguratie weergeeft met de hierboven beschreven instellingen](assets/id-sharing-action-configuration.png)
 
 De **[!UICONTROL Redirect with identity]** Met deze handeling wordt de browser belet door de koppeling te navigeren. Vervolgens roept het de `appendIdentityToUrl` op de [!DNL Web SDK] -instantie.
 

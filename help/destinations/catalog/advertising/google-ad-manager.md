@@ -3,9 +3,9 @@ keywords: google en manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: Google Ad Manager, voorheen bekend als DoubleClick voor Publishers of DoubleClick AdX, is een advertentieplatform uit Google dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '934'
 ht-degree: 1%
 
 ---
@@ -43,15 +43,12 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] best
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
+In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
-Deze bestemming steunt de activering van alle publiek dat door het Experience Platform wordt geproduceerd [Segmenteringsservice](../../../segmentation/home.md).
-
-*Aanvullend* Deze bestemming ondersteunt ook de activering van het publiek zoals beschreven in de onderstaande tabel.
-
-| Type publiek | Beschrijving |
----------|----------|
-| Aangepaste uploads | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
+| Oorsprong publiek | Ondersteund | Beschrijving |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Door het Experience Platform gegenereerde soorten publiek [Segmenteringsservice](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Soorten publiek [geïmporteerd](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van CSV-bestanden. |
 
 {style="table-layout:auto"}
 
@@ -68,13 +65,13 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Vereisten {#prerequisites}
 
-Als u uw eerste bestemming wilt maken met [!DNL Google Ad Manager] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u al eerder was ingesteld [!DNL Google] Als u integreert in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+Als u uw eerste bestemming wilt maken met [!DNL Google Ad Manager] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Audience Manager of andere toepassingen), gelieve te richten aan de Raadpleging van de Adobe of de Zorg van de Klant om identiteitskaart syncs toe te laten. Als u al eerder was ingesteld [!DNL Google] Als u integreert in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 ### Aanbieding toestaan {#allow-listing}
 
-Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager] bestemming in Platform. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
+Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ad Manager] doel in Platform. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
-1. Voer de stappen uit die in het dialoogvenster [Google Ad Manager-documentatie](https://support.google.com/admanager/answer/3289669?hl=en) om Adobe toe te voegen als een gekoppeld Platform voor gegevensbeheer (DMP).
+1. Voer de stappen uit die in het dialoogvenster [Google Ad Manager-documentatie](https://support.google.com/admanager/answer/3289669?hl=en) Adobe toevoegen als een gekoppeld gegevensbeheerplatform (DMP).
 2. In de [!DNL Google Ad Manager] interface, ga naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en de **[!UICONTROL API Access]** schuifregelaar
 
 ## Verbinden met de bestemming {#connect}
@@ -104,7 +101,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Ad Manager] bestemming, gelieve met uw te werken [!DNL Google Account Manager] of Adobe om te begrijpen welk accounttype u hebt.
+>Wanneer u een [!DNL Google Ad Manager] bestemming, gelieve met uw te werken [!DNL Google Account Manager] of een Adobe die representatief is voor het accounttype dat u hebt.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -126,9 +123,9 @@ Controleren of gegevens zijn geëxporteerd naar de [!DNL Google Ad Manager] doel
 
 ## Problemen oplossen {#troubleshooting}
 
-Voor het geval u om het even welke fouten terwijl het gebruiken van deze bestemming tegenkomt en uit aan of Adobe of Google moet reiken, houd de volgende IDs bij.
+Voor het geval u om het even welke fouten terwijl het gebruiken van deze bestemming tegenkomt en moet uit naar of Adobe of Google reiken, houd de volgende IDs bij.
 
-Dit zijn Adobe Google-account-id&#39;s:
+Dit zijn Google-account-id&#39;s van Adobe:
 
 * **[!UICONTROL Account ID]**: 87933855
 * **[!UICONTROL Customer ID]**: 89690775

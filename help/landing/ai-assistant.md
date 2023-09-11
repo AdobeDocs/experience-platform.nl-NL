@@ -4,9 +4,9 @@ description: Leer hoe u de AI Assistant gebruikt om door Experience Platform- en
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
+source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
 workflow-type: tm+mt
-source-wordcount: '2622'
+source-wordcount: '2362'
 ht-degree: 0%
 
 ---
@@ -154,112 +154,55 @@ U kunt ook vragen stellen aan de AI Assistant over uw gegevensgebruik in de volg
 
 * Attributen
 * Gegevenssets
-* Doelen
-* Schema&#39;s
+* Doelen (Vragen over accounts en sommige vragen over gegevensstroom kunnen op dit moment niet worden beantwoord.)
+* Schema&#39;s (vragen over veldgroepen kunnen op dit moment niet worden beantwoord.)
 * Segmenten
-* Bronnen
+* Bronnen (Vragen over rekeningen kunnen op dit moment niet worden beantwoord.)
 
-Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat van UI wijzen. De gegevens die deze vragen ondersteunen, worden elke 12 tot 24 uur bijgewerkt. Mogelijk moet u de vragen opmaken als: &quot;Wanneer was het segment met de titel {TITLE} gemaakt?&quot; in plaats van &quot;Wanneer was het {TITLE} segment gemaakt?&quot;
+Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat van UI wijzen. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. Mogelijk moet u de vragen opmaken als: &quot;Wanneer was het segment met de titel {TITLE} gemaakt?&quot; in plaats van &quot;Wanneer was het {TITLE} segment gemaakt?&quot;
 
 U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke gegevens die betrekking hebben op objecten, zoals schema&#39;s, datasets, kenmerken, doelen en segmenten.
 
-+++Selecteren voor een lijst met ondersteunde vragen over gegevensgebruik
+### Ondersteunde vragen over gegevensgebruik
+
++++Selecteren om een lijst met ondersteunde vragen over gegevensgebruik weer te geven
 
 Hieronder volgt een lijst met vragen over het momenteel ondersteunde gegevensgebruik, gegroepeerd op domein.
 
->[!BEGINTABS]
-
->[!TAB Segmenten]
-
-* Zijn er dubbele segmenten?
-* Toon me alle het stromen segmenten.
-* Is genoemd segment {SEGMENT_ID} geëvalueerd in Batch OF Stream?
-* Welke segmenten zijn duplicaten?
+* De kenmerken weergeven die voor dit segment worden gebruikt?
 * Hoeveel segmenten zijn er in totaal?
-* Zijn er om het even welke segmenten met de zelfde namen maar verschillende IDs?
-* Wat is de verdeling van evaluatiemethoden (batch, edge, streaming) over de segmenten?
 * Een lijst weergeven met segmenten die de laatste maand zijn gewijzigd.
 * Welke segmenten zijn de afgelopen week gewijzigd?
-* Zijn er segmenten die de afgelopen zes maanden niet zijn gewijzigd?
-* De segmenten van de lijst die in het laatste jaar werden gecreeerd.
-* Toon me segmenten die voor vandaag het laatst werden gewijzigd.
-* Zijn er in het afgelopen jaar patronen of tendensen in de aanmaakdata van segmenten?
-* Kunt u segmenten identificeren die sinds hun verwezenlijking niet zijn gewijzigd?
-* Zijn er segmenten die sinds hun creatie niet zijn gewijzigd?
-* Wat is de trend van de segmentcreatie in de loop der tijd?
-* Wat is de verdeling van de data van de segmentverwezenlijking?
-* Wat is de verdeling van de data van de segmentwijziging?
-* Welke segmenten hebben de meeste gebruikersprofielen?
-* Welke segmenten hebben de minste gebruikersprofielen?
-* Alle batchsegmenten weergeven.
-* Alle randsegmenten weergeven.
-* Welke segmenten worden geactiveerd?
-* Welke segmenten worden doorgestuurd naar Facebook?
-* Is het segment genoemd &quot;APAC Klanten&quot;partij of het stromen?
-* Hoeveel profielen heeft het Actieve segment van het Werk?
-* Hebben om het even welke segmenten 0 profielen?
-* Welke datasets beïnvloeden het bronze loyaliteitssegment?
-* Welke segmentdefinities gebruiken XDM-velden met &quot;geslacht&quot;?
-* Welke gevulde XDM-velden worden weergegeven in Streaming segmenten?
-* Hoeveel XDM gebieden zijn er over alle Definities van het Segment?
-* Welke segmenten beïnvloeden de &quot;Professionele Gebruikers&quot;dataset?
-* Welke segmenten worden doorgestuurd naar HTTP API?
-* Van de segmenten die worden geactiveerd, die aan het meeste aantal types van Bestemming worden geactiveerd?
+* Wat is het aantal profielen voor {SEGMENT_NAME} segment?
+* Alle gedupliceerde segmenten weergeven.
+* Toon me segmenten die in afgelopen 7 dagen zijn gemaakt of bijgewerkt.
+* Wat is de verdeling van het aantal profielen over segmenten?
+* Hoeveel velden worden in segmentatie gebruikt?
 * Wat is het totale aantal geactiveerde segmenten?
-* Hoeveel segmenten zijn geactiveerd?
+* Welke segmenten worden geactiveerd?
 * Hoeveel dubbele segmenten zijn geactiveerd?
+* De segmenten van de lijst die in het laatste jaar werden gecreeerd.
+* Segmenten weergeven die het laatst zijn gewijzigd vóór {DATE}.
+* Hoeveel unieke segmentnamen zijn gekoppeld aan de {SCHEMA_NAME} schema?
+* Welke schema&#39;s het meest meestal over segmenten worden gebruikt?
+* Hoeveel schema&#39;s heb ik?
+* Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?
+* Alle schema&#39;s weergeven die in de laatste week zijn gewijzigd.
+* Hoeveel schema&#39;s worden profiel toegelaten?
+* Alle schema&#39;s voor de ervaringsgebeurtenisklasse weergeven?
+* Welke datasets in worden opgenomen {SCHEMA_NAME} schema?
+* Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?
+* Hoeveel datasets heb ik?
+* Welke datasets worden gebruikt in elk segment?
+* Welke segmenten gebruiken {ATTRIBUTE_NAME} kenmerk?
+* Welke schema&#39;s hebben {ATTRIBUTE_NAME} in de eigenschappen?
+* Hoeveel XDM schemakenmerken worden niet gebruikt in om het even welke segmenten?
+* Waarin gegevensset(s) {ATTRIBUTE_NAME} XDM-velden gevuld?
+* Welke datasets gegevens hebben voor {ATTRIBUTE_NAME} kenmerk?
 * Hoeveel segmenten worden geactiveerd voor elke bestemming?
-* Welke segmenten worden geactiveerd aan 0, 1 of veelvoudige bestemmingen? Toon de distributie.
-* Welke Segmenten worden geactiveerd aan het meeste aantal Doelen?
-* Welke dubbele segmenten worden geactiveerd?
-* Welke segmenten worden geactiveerd voor Adobe Target?
-* Over alle Segmenten, hoeveel keer wordt elk Beleid van de Fusie gebruikt?
-
->[!TAB Schema&#39;s]
-
-* Hoeveel XDM-schema&#39;s zijn gedefinieerd?
-* Wat zijn de laatst gemaakte schema&#39;s?
-* Hoeveel Schema&#39;s voor elke klasse XDM?
-* Welk schema gebruikt de dataset van de Ingestie van het Segment?
-* Welke schema&#39;s niet door enige datasets worden gebruikt?
-
->[!TAB Doelen]
-
-* Hoeveel Doelen zijn er?
-* Wat zijn de onlangs gecreeerde Doelen?
-* Welke bestemmingen worden geassocieerd met elk segment?
-
->[!TAB Bronnen]
-
-* Hoeveel bronnen zijn er gecreëerd?
-* Wat zijn de laatst gecreëerde Bronnen?
-* Hoeveel bronnen zijn beschikbaar, uitgesplitst naar categorie?
-* Kan ik een bronverbinding van S3 tot stand brengen?
-* Welke bronnen hebben bijgedragen aan de dataset Mutual365?
-
->[!TAB Gegevenssets]
-
-* Hoeveel datasets zijn er?
-* Wat zijn de onlangs gecreeerde datasets?
-* Welke datasets voor verenigd profiel worden toegelaten?
-* Is er TTL die voor de dataset van de Ingestie van het Segment wordt geplaatst?
-* Wat is TTL voor de Professionele gebruikersdataset?
-* Welke datasets gebruiken het Professionele schema van Gebruikers?
-
->[!TAB Attributen]
-
-* Welke XDM gebieden het meest algemeen bevolkt over alle Datasets zijn?
-* Welke gebieden XDM en Attributen het meest meestal over schema&#39;s worden gebruikt?
-* Welke gebieden XDM en Attributen worden gebruikt in het Professionele schema van Gebruikers?
-* Maak een lijst van de Attributen die voor dit segment met identiteitskaart worden gebruikt {SEGMENT_ID}.
-* Hoeveel XDM gebieden worden gebruikt in 2+ Segmenten?
-* Welke gebieden het meest meestal over segmenten worden gebruikt?
-* Zijn er gebieden die in slechts één segment worden gebruikt?
-* Welke Attributen worden gebruikt voor het Bronze loyaliteitssegment?
-* Welke Attributen worden niet gebruikt in om het even welk segment?
-* Welke Attributen worden het meest meestal gebruikt in segmenten?
-
->[!ENDTABS]
+* Welke segmenten worden geactiveerd aan het meeste aantal bestemmingen?
+* Hebben om het even welke segmenten 0 profielen?
+* Hoeveel gegevensstromen heb ik?
 
 +++
 
@@ -343,3 +286,5 @@ Lees de onderstaande tabel voor voorbeelden:
 | Wat is mijn grootste segment? | Wat is mijn grootste segment? Gegevens gebruiken. | Vertel de AI Assistant expliciet dat het antwoord moet zijn gebaseerd op gegevens. |
 | Wat is mijn grootste segment? | Maak een lijst van mijn grootste segment. | Er zijn gevallen waarin een &quot;wat...&quot;-vraag kan worden verward met een documentatiegebaseerde vraag. Het gebruik van een opdracht als &quot;list&quot; is een sterkere indicator die u een vraag stelt met gegevens in context. |
 | Hoeveel datasets heb ik? | Tel mijn datasets. | De oorspronkelijke vraag werkt voor segmenten, maar werkt mogelijk niet met gegevenssets. |
+
+

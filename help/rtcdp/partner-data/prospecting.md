@@ -1,14 +1,14 @@
 ---
-title: Nieuwe klanten aantrekken en aanschaffen door gebruiksscenario's te bekijken
-description: Leer hoe te om nieuwe klanten door het prospecteren van gebruiksgevallen in dienst te nemen en te verwerven, die door de steun van partnergegevens in Real-Time CDP wordt toegelaten.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+title: Nieuwe klanten interesseren en aantrekken door gebruiksscenario's te prospecteren
+description: Leer hoe u nieuwe klanten kunt interesseren en aantrekken door gebruiksscenario's te prospecteren, mogelijk gemaakt door de partnergegevensondersteuning in Real-Time CDP.
+source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
 workflow-type: tm+mt
-source-wordcount: '1894'
-ht-degree: 0%
+source-wordcount: '1888'
+ht-degree: 2%
 
 ---
 
-# Nieuwe klanten aantrekken en aanschaffen door gebruiksscenario&#39;s te bekijken
+# Nieuwe klanten interesseren en aantrekken door gebruiksscenario&#39;s te prospecteren
 
 >[!AVAILABILITY]
 >
@@ -108,7 +108,7 @@ Het schema is nog niet ingeschakeld voor het profiel. Schakel de profielknop in 
 
 #### Het label voor gegevensbeheer van derden toevoegen aan alle velden in het schema
 
-Overweeg labels voor gegevensbeheer van derden toe te voegen aan alle velden die het schema vormen. Dit is belangrijk om een verantwoord gebruik van gegevens van derden te waarborgen en het risico van gegevenslekkage tot een minimum te beperken. Meer informatie over labels voor gegevensbeheer van derden vindt u (link naar documenten door Jordanië toevoegen)
+Overweeg labels voor gegevensbeheer van derden toe te voegen aan alle velden die het schema vormen. Dit is belangrijk om een verantwoord gebruik van gegevens van derden te waarborgen en het risico van gegevenslekkage tot een minimum te beperken. Meer informatie over [labels voor gegevensbeheer van derden](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Volg de onderstaande stappen om dit te doen:
 
