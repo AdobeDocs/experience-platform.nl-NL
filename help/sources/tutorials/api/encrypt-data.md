@@ -4,9 +4,9 @@ description: Leer hoe u gecodeerde bestanden via batchbronnen voor cloudopslag k
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,13 @@ Dit document bevat stappen voor het genereren van een sleutelpaar voor versleute
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
    * [Opslagbronnen voor cloud](../api/collect/cloud-storage.md): Maak een gegevensstroom om batchgegevens van uw cloudopslagbron naar het Experience Platform te brengen.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
 
 ### Ondersteunde bestandsextensies voor gecodeerde bestanden
 
@@ -123,7 +123,7 @@ Een succesvolle reactie keert uw Base64-Gecodeerde openbare sleutel, openbare ze
 
 U kunt desgewenst een sleutelpaar voor handtekeningverificatie maken om uw gecodeerde gegevens te ondertekenen en in te voeren.
 
-Tijdens dit stadium, moet u uw eigen privé sleutel en openbare zeer belangrijke combinatie produceren en dan uw privé sleutel gebruiken om uw gecodeerde gegevens te ondertekenen. Daarna, moet u uw openbare sleutel in Base64 coderen en dan het delen aan Experience Platform opdat het Platform uw handtekening verifieert.
+Tijdens dit stadium, moet u uw eigen privé sleutel en openbare zeer belangrijke combinatie produceren en dan uw privé sleutel gebruiken om uw gecodeerde gegevens te ondertekenen. Daarna, moet u uw openbare sleutel in Base64 coderen en dan het delen aan Experience Platform opdat Platform uw handtekening verifieert.
 
 ### Uw openbare sleutel delen op Experience Platform
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 ## Sluit de bron voor cloudopslag aan op het Experience Platform met de [!DNL Flow Service] API
 
-Nadat u de coderingssleutel hebt opgehaald, kunt u nu doorgaan en een bronverbinding voor de bron van de cloudopslag maken en de gecodeerde gegevens naar het Platform brengen.
+Nadat u de coderingssleutel hebt opgehaald, kunt u nu doorgaan en een bronverbinding voor de bron van de cloudopslag maken en uw gecodeerde gegevens naar het platform overbrengen.
 
 Eerst, moet u een basisverbinding tot stand brengen om uw bron tegen Platform voor authentiek te verklaren. Als u een basisverbinding wilt maken en de bron wilt verifiëren, selecteert u de gewenste bron in de onderstaande lijst:
 
@@ -262,7 +262,7 @@ curl -X POST \
 | --- | --- |
 | `flowSpec.id` | De flow-specificatie-id die overeenkomt met bronnen voor cloudopslag. |
 | `sourceConnectionIds` | De bron-verbindings-id. Deze id vertegenwoordigt de overdracht van gegevens van bron naar Platform. |
-| `targetConnectionIds` | De doel-verbindings-id. Deze id geeft aan waar de gegevens terechtkomen nadat deze naar het Platform zijn overgebracht. |
+| `targetConnectionIds` | De doel-verbindings-id. Deze id geeft aan waar de gegevens terechtkomen nadat deze naar Platform zijn overgebracht. |
 | `transformations[x].params.mappingId` | De toewijzing-id. |
 | `transformations.name` | Wanneer u gecodeerde bestanden opgeeft, moet u `Encryption` als een aanvullende transformatieparameter voor uw gegevensstroom. |
 | `transformations[x].params.publicKeyId` | De openbare sleutel-id die u hebt gemaakt. Deze id is de helft van het sleutelpaar voor codering van uw gegevens voor cloudopslag. |
@@ -332,6 +332,40 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom voor
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**Beperkingen op terugkerende inname**
+
+Inname van gecodeerde gegevens ondersteunt geen inname van terugkerende of meervoudige mappen in bronnen. Alle gecodeerde bestanden moeten in één map staan. Jokertekens met meerdere mappen in één bronpad worden ook niet ondersteund.
+
+Hier volgt een voorbeeld van een ondersteunde mapstructuur, waarbij het bronpad `/ACME-customers/*.csv.gpg`.
+
+In dit scenario worden de vetgedrukte bestanden in het Experience Platform opgenomen.
+
+* ACME-klanten
+   * **File1.csv.gpg**
+   * File2.json.gpg
+   * **File3.csv.gpg**
+   * File4.json
+   * **File5.csv.gpg**
+
+Hieronder ziet u een voorbeeld van een niet-ondersteunde mapstructuur waarbij het bronpad `/ACME-customers/*`.
+
+In dit scenario, zal de stroomlooppas ontbreken en een foutenmelding terugkeren erop wijzend dat de gegevens niet uit de bron kunnen worden gekopieerd.
+
+* ACME-klanten
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* ACME-loyaliteit
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## Volgende stappen
 
