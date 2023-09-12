@@ -1,9 +1,9 @@
 ---
 description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het `/bestemming-servers' eindpunt worden gebouwd.
 title: Configuratie bestandsindeling
-source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
+source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1093'
 ht-degree: 2%
 
 ---
@@ -119,7 +119,11 @@ In het onderstaande configuratievoorbeeld zijn alle CSV-opties vooraf gedefiniee
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -160,7 +164,11 @@ In het onderstaande configuratievoorbeeld zijn geen van de CSV-opties vooraf ged
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -192,6 +200,7 @@ Hieronder ziet u een volledige verwijzing naar alle beschikbare opmaakopties voo
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt één teken in dat wordt gebruikt voor escape voor het aanhalingsteken. | `\` wanneer de escape- en aanhalingstekens verschillend zijn. `\0` wanneer de escape- en aanhalingsteken hetzelfde zijn. | - | - |
 | `csvOptions.emptyValue.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`*. Stelt de tekenreeksrepresentatie in van een lege waarde. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | Optioneel | Hiermee geeft u het maximale aantal rijen per geëxporteerd bestand op tussen 1.000.000 en 10.000.000 rijen. | 5,000,000 |
+| `includeFileManifest` | Optioneel | Hiermee schakelt u ondersteuning in voor het exporteren van een bestandmanifest samen met het exporteren van het bestand. Het manifest-JSON-bestand bevat informatie over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Een [voorbeeldmanifestbestand](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden: <ul><li>`flowRunId`: De [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) waarmee het geëxporteerde bestand is gegenereerd.</li><li>`scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd. </li><li>`exportResults.sinkPath`: Het pad in de opslaglocatie waar het geëxporteerde bestand is opgeslagen. </li><li>`exportResults.name`: De naam van het geëxporteerde bestand.</li><li>`size`: De grootte van het geëxporteerde bestand, in bytes.</li></ul> |
 
 {style="table-layout:auto"}
 
