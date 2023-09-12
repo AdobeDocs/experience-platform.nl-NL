@@ -1,11 +1,11 @@
 ---
 keywords: reclame; banden;
 title: Microsoft Bing-verbinding
-description: Met de Microsoft Bing-verbindingsbestemming kunt u gerichte digitale campagnes heroriënteren en publieksgericht voeren in Microsoft Display Advertising.
+description: Met de bestemming van de Microsoft Bing-verbinding kunt u gerichte digitale campagnes doorvoeren via het gehele Microsoft Advertising Network, inclusief DisplayAdvertence, Search en Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '666'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-De [!DNL Microsoft Bing] doel helpt u profielgegevens te verzenden naar [!DNL Microsoft Display Advertising].
+Gebruik de [!DNL Microsoft Bing] doel om profielgegevens naar het volledige [!DNL Microsoft Advertising Network], inclusief [!DNL Display Advertising], [!DNL Search], en [!DNL Native].
+
+De [!DNL Microsoft Bing] doel maken *[!DNL Custom Audiences]* in Microsoft. Deze zijn beschikbaar in het dialoogvenster [!DNL Microsoft Search Network] en [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) als vermeld in de [Microsoft Advertising-documentatie](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Profielgegevens verzenden naar [!DNL Microsoft Bing], moet u eerst verbinding maken met het doel.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als markator wil ik het publiek kunnen gebruiken dat is opgebouwd uit [!DNL Microsoft Advertising IDs] om gebruikers aan te spreken via reclame over [!DNL Microsoft Advertising] kanalen.
+Als markator wil ik het publiek kunnen gebruiken dat is opgebouwd uit [!DNL Microsoft Advertising IDs] om gebruikers te richten via weergave- of zoekadvertenties over [!DNL Microsoft Advertising] kanalen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -74,7 +76,7 @@ Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
 
-### Verbindingsparameters {#parameters}
+### Doelgegevens invullen {#parameters}
 
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
