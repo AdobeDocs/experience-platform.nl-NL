@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
-solution: Experience Platform
 title: Azure Data Lake Storage Gen2 Source Connector - Overzicht
 description: Leer hoe u Azure Data Lake Storage Gen2 kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f879f2a627e55db96a89796b9f3308744bf93f67
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure], zodat u uw gegevens van deze systemen kunt overbrengen.
 
-Opslagbronnen in de cloud kunnen uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat het downloaden, opmaken of uploaden nodig is. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] stelt u in staat gegevens over te brengen van [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) door partijen.
+Opslagbronnen in de cloud kunnen uw eigen gegevens in het Experience Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Experience Platform kunt u gegevens van [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) door partijen.
 
 ## IP adres lijst van gewenste personen
 
@@ -33,20 +31,24 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, punt 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, afdeling 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
-## Verbinden [!DNL Azure Data Lake Storage Gen2] tot [!DNL Platform]
+## Verbinden [!DNL Azure Data Lake Storage Gen2] naar Experience Platform
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Azure Data Lake Storage Gen2] tot [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+>[!NOTE]
+>
+>De dienst die in het creëren van wordt gebruikt [!DNL Azure Data Lake Storage Gen2] de rekening moet minstens **Storage Blob Data Reader** rol toegewezen uit toegangsbeheer (IAM)
+
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Azure Data Lake Storage Gen2] Experience Platforms met API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
-- [Een ADLS-Gen2-basisverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Een [!DNL Azure Data Lake Storage Gen2] basisverbinding met de Flow Service API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
 - [De gegevensstructuur en inhoud van een cloudopslagbron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
-- [Een ADLS-Gen2-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Een [!DNL Azure Data Lake Storage Gen2] bronverbinding in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
