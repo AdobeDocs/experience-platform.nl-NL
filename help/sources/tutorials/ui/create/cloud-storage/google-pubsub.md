@@ -1,11 +1,11 @@
 ---
 title: Een Google PubSub-bronverbinding maken in de gebruikersinterface
-description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van het Platform.
-badgeUltimate: label="Ultimate" type="Positive"
+description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van Platform.
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,8 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Google PubSub] (hiern
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Als u al een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/batch/cloud-storage.md).
 
@@ -34,8 +34,8 @@ Om verbinding te maken [!DNL PubSub] aan Platform, moet u een geldige waarde voo
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | Project-id | De project-id die is vereist voor verificatie [!DNL PubSub]. |
-| Credentials | De referentie- of persoonlijke sleutel-id die is vereist voor verificatie [!DNL PubSub]. |
-| Naam onderwerp | De naam van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. **Opmerking**: Eén [!DNL PubSub] abonnement kan slechts voor één dataflow worden gebruikt. Als u meerdere gegevensstromen wilt maken, hebt u meerdere abonnementen nodig. |
+| Credentials | De referentie die vereist is voor verificatie [!DNL PubSub]. U moet ervoor zorgen dat u het volledige JSON-bestand plaatst nadat u de witruimten uit uw referenties hebt verwijderd. |
+| Onderwerpnaam | De naam van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. **Opmerking**: Eén [!DNL PubSub] abonnement kan slechts voor één dataflow worden gebruikt. Als u meerdere gegevensstromen wilt maken, hebt u meerdere abonnementen nodig. |
 | Abonnementsnaam | De naam van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. |
 
 Raadpleeg de volgende secties voor meer informatie over deze waarden [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie het volgende [PubSub-hulplijn](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
@@ -44,11 +44,11 @@ Raadpleeg de volgende secties voor meer informatie over deze waarden [PubSub-ver
 >
 >Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zorg ervoor dat u voldoende gebruikerstoegang tot uw de dienstrekening hebt verleend en dat er geen extra witte ruimten in JSON zijn, wanneer het kopiëren en het kleven van uw geloofsbrieven.
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PubSub] aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PubSub] account aan Platform.
 
 ## Verbind uw [!DNL PubSub] account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden verschillende bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden verschillende bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -80,13 +80,13 @@ De [!DNL PubSub] bron staat u toe om het type van toegang te specificeren dat u 
 
 >[!TAB Op projecten gebaseerde verificatie]
 
-Een account maken met toegang tot de hoofdmap [!DNL PubSub] projectmap. Selecteren **[!UICONTROL Google PubSub authentication credentials]** als uw authentificatietype en verstrek uw project identiteitskaart en geloofsbrieven. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Een account maken met toegang tot de hoofdmap [!DNL PubSub] projectmap. Selecteren **[!UICONTROL Google PubSub authentication credentials]** als uw authentificatietype en verstrek uw project identiteitskaart en geloofsbrieven. Selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![De nieuwe accountinterface voor de Google PubSub-bron waarbij toegang tot de hoofdmap is geselecteerd.](../../../../images/tutorials/create/google-pubsub/root.png)
 
 >[!TAB Onderwerp en op abonnement gebaseerde authentificatie]
 
-Een account maken met alleen beperkte toegang tot een bepaalde [!DNL PubSub] onderwerp en abonnement, uitgezocht **[!UICONTROL Google PubSub Scoped authentication credentials]** en geef vervolgens uw referenties, onderwerpnaam en/of abonnementsnaam op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Een account maken met alleen beperkte toegang tot een bepaalde [!DNL PubSub] onderwerp en abonnement, uitgezocht **[!UICONTROL Google PubSub Scoped authentication credentials]** en geef vervolgens uw referenties, onderwerpnaam en/of abonnementsnaam op. Selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![De nieuwe accountinterface voor de Google PubSub-bron met geselecteerde bereiktoegang.](../../../../images/tutorials/create/google-pubsub/scoped.png)
 
@@ -122,4 +122,4 @@ Als u met een onderwerp en op abonnement-gebaseerde toegang voor authentiek hebt
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding gemaakt tussen uw [!DNL PubSub] account en Platform. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om streaminggegevens van uw cloudopslag naar Platform te brengen](../../dataflow/streaming/cloud-storage-streaming.md).
+Aan de hand van deze zelfstudie hebt u een verbinding gemaakt tussen uw [!DNL PubSub] account en platform. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om streaminggegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/streaming/cloud-storage-streaming.md).
