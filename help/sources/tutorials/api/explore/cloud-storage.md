@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;cloudopslag;Cloudopslag
 title: Een Cloud Storage-map verkennen met de Flow Service API
 description: Deze zelfstudie gebruikt de Flow Service API om een extern cloudopslagsysteem te verkennen.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 1%
@@ -27,17 +27,17 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../landing/api-guide.md).
 
 ## Ontdek uw mappen voor cloudopslag
 
-U kunt informatie over de structuur van uw mappen voor cloudopslag opvragen door een GET-aanvraag in te dienen bij de [!DNL Flow Service] API terwijl het verstrekken van de identiteitskaart van de basisverbinding van uw bron.
+U kunt informatie over de structuur van uw mappen voor cloudopslag opvragen door een GET-aanvraag in te dienen bij de [!DNL Flow Service] API terwijl het verstrekken van basis verbindings identiteitskaart van uw bron.
 
 Wanneer u GET-aanvragen uitvoert om uw cloudopslag te verkennen, moet u de queryparameters opnemen die in de onderstaande tabel worden vermeld:
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `objectType` | Het type object dat u wilt verkennen. Stel deze waarde in op: <ul><li>`folder`: Een specifieke map verkennen</li><li>`root`: Verken de hoofdmap.</li></ul> |
+| `objectType` | Het type object dat u wilt verkennen. Stel deze waarde in op: <ul><li>`folder`: Onderzoek een specifieke map</li><li>`root`: Verken de hoofdmap.</li></ul> |
 | `object` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. |
 
 
@@ -66,7 +66,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. De `path` eigenschap van het bestand dat u wilt uploaden, aangezien u dit in de volgende stap moet opgeven om de structuur te controleren.
+Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. Neem nota van het `path` eigenschap van het bestand dat u wilt uploaden, aangezien u dit in de volgende stap moet opgeven om de structuur te controleren.
 
 ```json
 [
@@ -106,14 +106,14 @@ U kunt de structuur van een gegevensbestand van uw bron van de wolkenopslag insp
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&fileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | De verbindings-id van de bronconnector van de cloudopslag. |
+| `{BASE_CONNECTION_ID}` | De verbindings-id van de bronaansluiting voor de cloud. |
 | `{FILE_PATH}` | Het pad naar het bestand dat u wilt inspecteren. |
-| `{FILE_TYPE}` | Het type bestand. Tot de ondersteunde bestandstypen behoren:<ul><li>AFGELEGD</code>: Waarde gescheiden door scheidingstekens. DSV-bestanden moeten door komma&#39;s van elkaar worden gescheiden.</li><li>JSON</code>: JavaScript-objectnotatie. JSON-bestanden moeten XDM-compatibel zijn</li><li>PARQUET</code>: Apache Parquet. Parketbestanden moeten XDM-compatibel zijn.</li></ul> |
+| `{FILE_TYPE}` | Het type bestand. Tot de ondersteunde bestandstypen behoren:<ul><li><code>AFGELEGD</code>: door scheidingstekens gescheiden waarde. DSV-bestanden moeten door komma&#39;s van elkaar worden gescheiden.</li><li><code>JSON</code>: JavaScript-objectnotatie. JSON-bestanden moeten XDM-compatibel zijn</li><li><code>PARQUET</code>: Apache Parquet. Parketbestanden moeten XDM-compatibel zijn.</li></ul> |
 | `{QUERY_PARAMS}` | Optionele queryparameters die kunnen worden gebruikt om resultaten te filteren. Zie de sectie over [queryparameters](#query) voor meer informatie . |
 
 **Verzoek**
@@ -163,9 +163,9 @@ De [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refer
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `columnDelimiter` | De waarde van één teken die u hebt opgegeven als kolomscheidingsteken voor het inspecteren van CSV- of TSV-bestanden. Als de parameter niet opgegeven is, wordt de waarde standaard ingesteld op een komma `(,)`. |
-| `compressionType` | Een vereiste queryparameter voor het voorvertonen van een gecomprimeerd, gescheiden of JSON-bestand. De ondersteunde gecomprimeerde bestanden zijn: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `encoding` | Definieert welk coderingstype moet worden gebruikt bij het renderen van de voorvertoning. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
+| `compressionType` | Een vereiste queryparameter voor het voorvertonen van een gecomprimeerd, gescheiden of JSON-bestand. De volgende bestanden worden ondersteund: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `encoding` | Definieert welk coderingstype moet worden gebruikt bij het renderen van de voorvertoning. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` Deze parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend en hebt u het pad gevonden van het bestand waarnaar u wilt overbrengen [!DNL Platform]en de structuur ervan bekijken. U kunt deze informatie in de volgende zelfstudie gebruiken om [gegevens verzamelen van uw cloudopslag en deze in Platform brengen](../collect/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend en hebt u het pad gevonden van het bestand waarnaar u wilt overbrengen [!DNL Platform]en bekijkt de structuur ervan. U kunt deze informatie in de volgende zelfstudie gebruiken om [gegevens verzamelen van uw cloudopslag en deze overbrengen naar Platform](../collect/cloud-storage.md).
