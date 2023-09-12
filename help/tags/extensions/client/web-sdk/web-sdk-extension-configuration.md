@@ -1,110 +1,107 @@
 ---
-title: De extensie Adobe Experience Platform Web SDK configureren
-description: Hoe te om de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform in UI te vormen.
-exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
+title: De web SDK-tagextensie configureren
+description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web van het Experience Platform in de UI van Markeringen te vormen.
+source-git-commit: ec0aa64c466a8228d49a776d27040253b5a1b196
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1400'
 ht-degree: 0%
 
 ---
 
 
-# De extensie van de Adobe Experience Platform Web SDK-tag configureren
+# De webSDK-tagextensie configureren
 
-Met de tagextensie Adobe Experience Platform Web SDK worden gegevens vanuit wegeigenschappen via het Adobe Experience Platform Edge Network verzonden naar Adobe Experience Cloud. Met de extensie kunt u gegevens streamen naar Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
+De [!DNL Web SDK] de markeringsuitbreiding verzendt gegevens naar Adobe Experience Cloud van Web-eigenschappen door het Netwerk van de Rand van het Experience Platform.
 
-Dit document behandelt hoe te om de uitbreiding in UI te vormen.
+Met de extensie kunt u gegevens streamen naar Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
 
-## Aan de slag
+In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruikersinterface voor tags.
 
-Als de uitbreiding van SDK van het Web van het Platform reeds voor een bezit is geïnstalleerd, open het bezit in UI en selecteer **[!UICONTROL Extensions]** tab. Selecteer onder de SDK van het Web Platform **[!UICONTROL Configure]**.
+## De extensie van de Web SDK-tag installeren {#install}
 
-![](assets/configure.png)
+De de markeringsuitbreiding van SDK van het Web moet een bezit worden geïnstalleerd. Als u dit nog niet hebt gedaan, raadpleegt u de documentatie op [een tag-eigenschap maken](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
-Als u de extensie nog niet hebt geïnstalleerd, selecteert u de **[!UICONTROL Catalog]** tab. Van de lijst van beschikbare uitbreidingen, vind de uitbreiding van SDK van het Web van het Platform en selecteer **[!UICONTROL Install]**.
+Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de **[!UICONTROL Extensions]** op de linkerzijbalk.
 
-![](assets/install.png)
+Selecteer het tabblad **[!UICONTROL Catalog]**. Zoek in de lijst met beschikbare extensies naar de [!DNL Web SDK] en selecteert u **[!UICONTROL Install]**.
 
-In beide gevallen, komt u bij de configuratiepagina voor het Web SDK van het Platform aan. In de volgende secties worden de configuratieopties van de extensie uitgelegd.
+![Afbeelding die de interface Tags weergeeft terwijl de Web SDK-extensie is geselecteerd](assets/web-sdk-install.png)
 
-![](assets/config-screen.png)
+Na het selecteren **[!UICONTROL Install]**, moet u de de markeringsuitbreiding van SDK van het Web vormen en de configuratie opslaan.
 
-## Algemene configuratieopties
+>[!NOTE]
+>
+>De tagextensie wordt alleen geïnstalleerd nadat de configuratie is opgeslagen. Zie de volgende secties om te leren hoe te om de markeringsuitbreiding te vormen.
+
+## Instantie-instellingen configureren {#general}
 
 De configuratieopties boven aan de pagina vertellen Adobe Experience Platform waar de gegevens moeten worden gerouteerd en welke configuraties op de server moeten worden gebruikt.
 
-### [!UICONTROL Name]
+![Afbeelding die de algemene instellingen van de extensie van de Web SDK-tag in de gebruikersinterface voor tags weergeeft](assets/web-sdk-ext-general.png)
 
-De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden.
+* **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy`. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
+* **[!UICONTROL IMS organization ID]**: De id van de organisatie waarnaar u de gegevens bij Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
+* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. De Adobe adviseert gebruikend een 1st-partijdomein (CNAME) voor deze uitbreiding. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
-De naam van de extensie wordt standaard ingesteld op &quot;[!DNL alloy]&quot;. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
+## Gegevensstroominstellingen configureren {#datastreams}
 
-### **[!UICONTROL IMS Organization ID]**
+Deze sectie staat u toe om de gegevensstromen te selecteren die voor elk van de drie beschikbare milieu&#39;s (productie, het opvoeren, en ontwikkeling) zouden moeten worden gebruikt.
 
-De [!UICONTROL IMS Organization ID] Dit is de organisatie waarnaar u de gegevens wilt verzenden bij de Adobe. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
+Wanneer een verzoek naar het Netwerk van de Rand wordt verzonden, wordt een gegevensstroom identiteitskaart gebruikt om de server-zijconfiguratie van verwijzingen te voorzien. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
-### **[!UICONTROL Edge Domain]**
+Zie de handleiding op [datastreams](../../../../datastreams/overview.md) leren hoe u een gegevensstroom kunt configureren.
 
-De [!UICONTROL Edge Domain] is het domein waarvan de extensie Adobe Experience Platform gegevens verzendt en ontvangt. De Adobe adviseert gebruikend een 1st-partijdomein (CNAME) voor deze uitbreiding. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. Instructies over hoe te opstelling een eerste-partij CNAME zijn vermeld [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+U kunt een gegevensstroom kiezen in de beschikbare vervolgkeuzemenu&#39;s of **[!UICONTROL Enter values]** en voer een aangepaste gegevensstroom-id in voor elke omgeving.
 
-## [!UICONTROL Datastreams]
+![Afbeelding die de gegevensstreaminstellingen van de Web SDK-tagextensie in de gebruikersinterface voor tags weergeeft](assets/web-sdk-ext-datastreams.png)
 
-Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een gegevensstroom-id gebruikt om naar de serverconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
+## Privacy-instellingen configureren {#privacy}
 
-Zie de handleiding op [datastreams](../../../../datastreams/overview.md) voor meer informatie .
+Deze sectie staat u toe om te vormen hoe de SDK van het Web de signalen van de gebruikerstoestemming van uw website behandelt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven.
 
+Het standaard toestemmingsniveau wordt niet bewaard aan het gebruikersprofiel.
 
-## [!UICONTROL Privacy]
+![Afbeelding die de privacy-instellingen van de Web SDK-tagextensie in de gebruikersinterface van Tags weergeeft](assets/web-sdk-ext-privacy.png)
 
-![](assets/privacy.png)
-
-De [!UICONTROL Privacy] kunt u configureren hoe de SDK de signalen van uw website voor gebruikerstoestemming verwerkt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven. Het standaard toestemmingsniveau wordt niet bewaard aan het profiel van de gebruiker. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
-
-| [!UICONTROL Default Consent Level] | Beschrijving |
+| [!UICONTROL Default consent level] | Beschrijving |
 | --- | --- |
 | [!UICONTROL In] | Verzamel gebeurtenissen die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. |
 | [!UICONTROL Out] | Gebeurtenissen negeren die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. |
 | [!UICONTROL Pending] | Wachtrij-gebeurtenissen die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. Als er voorkeuren voor toestemming zijn opgegeven, worden de gebeurtenissen verzameld of genegeerd, afhankelijk van de opgegeven voorkeuren. |
 | [!UICONTROL Provided by data element] | Het standaard toestemmingsniveau wordt bepaald door een afzonderlijk gegevenselement dat u bepaalt. Wanneer u deze optie gebruikt, moet u het gegevenselement opgeven met behulp van het opgegeven vervolgkeuzemenu. |
 
-Gebruik uit of in afwachting als u expliciete gebruikerstoestemming voor uw bedrijfsverrichtingen vereist.
+>[!TIP]
+>
+>Gebruiken **[!UICONTROL Out]** of **[!UICONTROL Pending]** als u expliciete gebruikerstoestemming voor uw bedrijfsverrichtingen vereist.
 
-## [!UICONTROL Identity]
+## Identiteitsinstellingen configureren {#identity}
 
-![](assets/identity.png)
+Deze sectie staat u toe om het gedrag van SDK van het Web te bepalen wanneer het over de behandeling van gebruikersidentificatie komt.
 
-### [!UICONTROL Migrate ECID from VisitorAPI]
+![Afbeelding met de identiteitsinstellingen van de extensie van de Web SDK-tag in de gebruikersinterface voor tags](assets/web-sdk-ext-identity.png)
 
-Deze optie is standaard ingeschakeld. Als deze functie is ingeschakeld, kan de SDK de cookies AMCV en s_ecid lezen en de door Visitor.js gebruikte AMCV-cookie instellen. Deze functie is belangrijk wanneer u naar SDK van Adobe Experience Platform Web migreert, omdat sommige pagina&#39;s wellicht nog steeds Visitor.js gebruiken. Hierdoor kan de SDK dezelfde ECID blijven gebruiken, zodat gebruikers niet als twee aparte gebruikers worden geïdentificeerd.
+* **[!UICONTROL Migrate ECID from VisitorAPI]**: Deze optie is standaard ingeschakeld. Wanneer deze functie is ingeschakeld, kan de SDK de `AMCV` en `s_ecid` cookies en stel de `AMCV` cookie gebruikt door [!DNL Visitor.js]. Deze eigenschap is belangrijk wanneer het migreren aan Web SDK, aangezien sommige pagina&#39;s nog kunnen gebruiken [!DNL Visitor.js]. Met deze optie kan de SDK hetzelfde blijven gebruiken [!DNL ECID] zodat gebruikers niet als twee afzonderlijke gebruikers worden geïdentificeerd.
+* **[!UICONTROL Use third-party cookies]**: Wanneer deze optie wordt toegelaten, probeert SDK van het Web om een gebruikersherkenningsteken in een derdekoekje op te slaan. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK alleen de id op in het domein van de eerste partij.
 
-### [!UICONTROL Use third-party cookies]
+## Aanpassingsinstellingen configureren {#personalization}
 
-Met deze optie kan de SDK proberen een gebruikers-id op te slaan in een cookie van een andere fabrikant. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK alleen de id op in het domein van de eerste partij.
+In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen.
 
-## [!UICONTROL Personalization]
+U kunt de elementen die u wilt verbergen, opgeven in de voorverborgen stijleditor. Vervolgens kunt u het standaard voorverborgen fragment dat u wordt aangeboden, kopiëren en in het deelvenster `<head>` element van de site [!DNL HTML] code.
 
-![](assets/personalization.png)
+![Afbeelding die de verpersoonlijkingsinstellingen van de Web SDK-tagextensie in de gebruikersinterface van Tags weergeeft](assets/web-sdk-ext-personalization.png)
 
-Als u bepaalde onderdelen wilt verbergen als uw site wordt geladen terwijl er gepersonaliseerde inhoud is geladen, kunt u de elementen opgeven die u wilt verbergen in de voorverborgen stijleditor. Vervolgens kunt u het standaard voorverborgen fragment dat u wordt aangeboden, kopiëren en in het deelvenster `<head>`-element van uw HTML-site.
+* **[!UICONTROL Migrate Target from at.js to the Web SDK]**: Gebruik deze optie om in te schakelen [!DNL Web SDK] lezen en schrijven van de nalatenschap `mbox` en `mboxEdgeCluster` cookies die worden gebruikt door at.js `1.x` of `2.x` bibliotheken. Dit helpt u het bezoekersprofiel te houden terwijl het bewegen van een pagina die SDK van het Web aan een pagina gebruikt die at.js gebruikt `1.x` of `2.x` en omgekeerd.
 
-## [!UICONTROL Data Collection]
+## Instellingen voor gegevensverzameling configureren {#data-collection}
 
-![](assets/data-collection.png)
+![Afbeelding met de instellingen voor gegevensverzameling voor de extensie van de Web SDK-tag in de gebruikersinterface Codes](assets/web-sdk-ext-collection.png)
 
-### [!UICONTROL Callback function]
+* **[!UICONTROL Callback function]**: De callback-functie die in de extensie wordt opgegeven, wordt ook wel de [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in de bibliotheek. Deze functie staat u toe om gebeurtenissen globaal te wijzigen alvorens zij naar het Netwerk van de Rand worden verzonden. Meer gedetailleerde informatie over het gebruik van deze functie vindt u [hier](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Enable click data collection]**: De SDK van het Web kan verbindingsklikinformatie voor u automatisch verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als ze een van de downloadexpressies bevatten die in het dialoogvenster [!UICONTROL Download Link Qualifier] textbox. Adobe voorziet u van sommige standaardbepalende eigenschappen van de downloadverbinding. U kunt deze naar wens bewerken.
+* **[!UICONTROL Automatically collected context data]**: Door gebrek, verzamelt het Web SDK bepaalde contextgegevens betreffende apparaat, Web, milieu, en plaatcontext. Als u een lijst van de informatie wilt zien Adobe verzamelt, kunt u het vinden [hier](../../../../edge/data-collection/automatic-information.md). Als u deze gegevens niet wilt verzamelen of alleen bepaalde categorieën gegevens wilt verzamelen, selecteert u **[!UICONTROL Specific context information]** en selecteer de gegevens die u wilt verzamelen.
 
-De callback-functie die in de extensie wordt opgegeven, wordt ook [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in de bibliotheek. Met deze functie kunt u gebeurtenissen globaal wijzigen voordat ze naar Adobe Edge Network worden verzonden. Meer gedetailleerde informatie over het gebruik van deze functie vindt u [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
-
-### [!UICONTROL Click data collection]
-
-De SDK kan automatisch koppelingsklikgegevens voor u verzamelen. Deze functie is standaard ingeschakeld, maar kan met deze optie worden uitgeschakeld. Koppelingen worden ook gemarkeerd als downloadkoppelingen als ze een van de downloadexpressies bevatten die in het dialoogvenster [!UICONTROL Download Link Qualifier] textbox. Adobe biedt u enkele standaardkwalificatietekens voor downloadkoppelingen, maar deze kunnen op elk gewenst moment worden bewerkt.
-
-### [!UICONTROL Automatically collected context data]
-
-Door gebrek, verzamelt SDK bepaalde contextgegevens betreffende apparaat, Web, milieu, en plaatcontext. Als u een lijst van de informatie wilt zien Adobe verzamelt, kunt u het vinden [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Als u deze gegevens niet wilt verzamelen of slechts bepaalde categorieën gegevens wilt verzamelen, kunt u deze opties veranderen.
-
-## [!UICONTROL Datastream Configuration Overrides]
+## Gegevensstroomoverschrijvingen configureren {#datastream-overrides}
 
 Met de gegevensstroom overschrijft kunt u aanvullende configuraties voor uw gegevensstromen definiëren. Deze configuraties worden via de SDK van het Web doorgegeven aan het Edge-netwerk.
 
@@ -125,10 +122,8 @@ Als alternatief voor het overgaan van de met voeten treedt door een bevel van SD
 
 ![Afbeelding die de configuratie van de gegevensstroom overschrijft in de webSDK-tagextensiepagina.](assets/datastream-overrides.png)
 
-## [!UICONTROL Advanced Settings]
+## Geavanceerde instellingen configureren
 
-![](assets/advanced-settings.png)
+Gebruik de **[!UICONTROL Edge base path]** veld als u het basispad moet wijzigen dat wordt gebruikt voor interactie met het Edge-netwerk. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou de Adobe u kunnen vragen om dit gebied te veranderen.
 
-### [!UICONTROL Edge base path]
-
-Gebruik dit veld als u het basispad moet wijzigen dat wordt gebruikt voor interactie met Adobe Edge Network. Dit zou niet het bijwerken moeten vereisen, maar in het geval dat u aan bèta of alpha deelneemt, zou de Adobe u kunnen vragen om dit gebied te veranderen.
+![Afbeelding die de geavanceerde instellingen in de webSDK-pagina voor tagextensies weergeeft.](assets/advanced-settings.png)
