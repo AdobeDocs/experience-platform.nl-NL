@@ -1,7 +1,7 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaande configuratie van de bestemmingsserver door Adobe Experience Platform Destination SDK bij te werken.
 title: Een doelserverconfiguratie bijwerken
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 8%
@@ -15,7 +15,7 @@ Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een be
 
 >[!TIP]
 >
->Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u gebruikt [publicatie-API](../../publishing-api/create-publishing-request.md) en dient de update in voor Adobe review.
+>Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u gebruikt [publicatie-API](../../publishing-api/create-publishing-request.md) en dient de update in voor toetsing door de Adobe.
 
 Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, lees de volgende artikelen:
 
@@ -40,7 +40,7 @@ U kunt een [bestaand](create-destination-server.md) doelserverconfiguratie door 
 >
 >**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, raadpleegt u het artikel over [ophalen, configuratie van doelserver](retrieve-destination-server.md).
+Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [ophalen, configuratie van doelserver](retrieve-destination-server.md).
 
 **API-indeling**
 
@@ -94,9 +94,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- | ----------- |
 | `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server`. |
 | `destinationServerType` | Tekenreeks | *Vereist.* Instellen op `URL_BASED` voor realtime (streaming) doelen. |
-| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als Adobe de URL moet transformeren in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruiken `NONE` als er aan de Adobe zijde geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als de Adobe de URL in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruiken `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform zou moeten verbinden met. |
-| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die Adobe in vraag aan uw server zal gebruiken. Opties zijn `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
+| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Opties zijn `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
 | `httpTemplate.requestBody.value` | Tekenreeks | *Vereist.* Dit koord is karakter-beschermde versie die de gegevens van de klanten van het Platform aan het formaat omzet uw dienst verwacht. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](../../functionality/destination-server/message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie raadpleegt u de [Profielkenmerken](../../functionality/destination-server/message-format.md#attributes) transformatie. </li></ul> |
 | `httpTemplate.contentType` | Tekenreeks | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json`. |
@@ -204,7 +204,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `name` | Tekenreeks | De naam van de doelverbinding. |
 | `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Amazon S3], stelt u deze in op `FILE_BASED_S3`. |
 | `fileBasedS3Destination.bucket.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedS3Destination.bucket.value` | Tekenreeks | De naam van de [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt. |
+| `fileBasedS3Destination.bucket.value` | Tekenreeks | De naam van [!DNL Amazon S3] emmer die door deze bestemming moet worden gebruikt. |
 | `fileBasedS3Destination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
 | `fileBasedS3Destination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
 | `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
@@ -234,7 +234,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -309,10 +309,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 |---|---|---|
 | `name` | Tekenreeks | De naam van de doelverbinding. |
 | `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL SFTP] doelen, stel deze in op `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | Tekenreeks | De hoofdmap van de doelopslag. |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | Tekenreeks | De hostnaam van de bestemmingsopslag. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.rootDirectory.value` | Tekenreeks | De hoofdmap van de doelopslag. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.value` | Tekenreeks | De hostnaam van de bestemmingsopslag. |
 | `port` | Geheel | De SFTP-serverpoort. |
 | `encryptionMode` | Tekenreeks | Geeft aan of bestandsversleuteling moet worden gebruikt. Ondersteunde waarden: <ul><li>PGP</li><li>Geen</li></ul> |
 | `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
@@ -524,7 +524,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `fileBasedAzureBlobDestination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.container.value` | Tekenreeks | De naam van de [!DNL Azure Blob Storage] container die door deze bestemming moet worden gebruikt. |
+| `fileBasedAzureBlobDestination.container.value` | Tekenreeks | De naam van [!DNL Azure Blob Storage] container die door deze bestemming moet worden gebruikt. |
 | `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
 
 {style="table-layout:auto"}
@@ -733,7 +733,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `name` | Tekenreeks | De naam van de doelverbinding. |
 | `destinationServerType` | Tekenreeks | Stel deze waarde in op basis van het doelplatform. Voor [!DNL Google Cloud Storage] doelen, stel deze in op `FILE_BASED_GOOGLE_CLOUD`. |
 | `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Tekenreeks | *Vereist.*  Gebruik `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.value` | Tekenreeks | De naam van de [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt. |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | Tekenreeks | De naam van [!DNL Google Cloud Storage] emmer die door deze bestemming moet worden gebruikt. |
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | Tekenreeks | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
 | `fileConfigurations` | N.v.t. | Zie [bestandsindelingconfiguratie](../../functionality/destination-server/file-formatting.md) voor gedetailleerde informatie over hoe te om deze montages te vormen. |
@@ -752,7 +752,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
