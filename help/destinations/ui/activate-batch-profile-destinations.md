@@ -4,19 +4,15 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3515'
+source-wordcount: '3475'
 ht-degree: 0%
 
 ---
 
 
 # Soorten publiek activeren om exportdoelen voor batchprofielen te gebruiken
-
->[!IMPORTANT]
-> 
-> De op de pagina beschreven functionaliteit is nog niet algemeen beschikbaar voor klanten. Deze pagina is momenteel bedoeld voor Adobe-interne teams als voorgelezen over de komende functionaliteit. Delen buiten de Adobe totdat deze notitie is verwijderd.
 
 >[!IMPORTANT]
 > 
