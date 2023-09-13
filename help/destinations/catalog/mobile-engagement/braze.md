@@ -3,9 +3,9 @@ keywords: mobiel; bruin; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '1046'
 ht-degree: 1%
 
 ---
@@ -163,6 +163,14 @@ De juiste toewijzing zou er als volgt uitzien:
 ## Geëxporteerde gegevens {#exported-data}
 
 Controleren of gegevens zijn geëxporteerd naar de [!DNL Braze] doel, controleer uw [!DNL Braze] account. [!DNL Adobe Experience Platform] publiek wordt geëxporteerd naar [!DNL Braze] onder de `AdobeExperiencePlatformSegments` kenmerk.
+
+## Problemen oplossen {#troubleshooting}
+
+**Ik heb een time-outfout ontvangen tijdens het activeren van mijn publiek naar deze bestemming. Wat moet ik doen?**
+
+Soms kan activering van het publiek naar deze bestemming leiden tot een time-outfout. Deze fout geeft niet altijd een activeringsprobleem aan.
+
+Als er een time-outfout optreedt, controleert u de publieksgrootte in het doelplatform. Als de publieksgrootte correct is, dan werkt de integratie zoals verwacht.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
