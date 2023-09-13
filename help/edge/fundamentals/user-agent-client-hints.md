@@ -1,11 +1,11 @@
 ---
 title: Client-tips voor gebruikersagent
-description: Leer hoe de gebruikers-Agent wenken van de Cliënt in Web SDK werken. Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de user-Agent-tekenreeks, maar op een meer privacyvriendelijke manier.
-keywords: user-agent;client hints; tekenreeks; user-agent string; lage entropie; hoge entropie
+description: Leer hoe de wenken van de gebruikersagentencliënt in Web SDK werken. Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
+keywords: user-agent;client hints; tekenreeks; user-agent tekenreeks; lage entropie; hoge entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 29679e85943f16bcb02064cc60a249a3de61e022
+source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1200'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-Telkens wanneer een webbrowser een aanvraag indient bij een webserver, bevat de header van de aanvraag informatie over de browser en de omgeving waarop de browser wordt uitgevoerd. Al deze gegevens worden geaggregeerd in een tekenreeks, de zogenaamde [!DNL User-Agent] tekenreeks.
+Telkens wanneer een webbrowser een aanvraag indient bij een webserver, bevat de header van de aanvraag informatie over de browser en de omgeving waarop de browser wordt uitgevoerd. Al deze gegevens worden samengevoegd in een koord, genoemd het koord van de gebruikersagent.
 
-Hier is een voorbeeld van wat een [!DNL User-Agent] een tekenreeks ziet eruit als op een aanvraag die afkomstig is van een Chrome-browser die op een [!DNL Mac OS] apparaat.
+Hier is een voorbeeld van hoe een koord van de gebruikersagent op een verzoek kijkt dat uit browser van Chrome komt die op browser loopt [!DNL Mac OS] apparaat.
 
 >[!NOTE]
 >
->De hoeveelheid browser- en apparaatinformatie die in de [!DNL User-Agent] tekenreeks is meerdere keren gegroeid en gewijzigd. In het onderstaande voorbeeld ziet u een selectie van de meest gangbare [!DNL User-Agent] informatie.
+>In de loop der jaren is de hoeveelheid browser- en apparaatinformatie die in de userAgent-tekenreeks is opgenomen, meerdere malen toegenomen en gewijzigd. In het onderstaande voorbeeld ziet u een selectie van de meest voorkomende gegevens van de gebruikersagent.
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36`
@@ -33,38 +33,38 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Volledige softwareversie | 105.0.0.0 |
 | Naam van lay-outengine | AppleWebKit |
 | Versie van lay-outengine | 537.36 |
-| Besturingssysteem | Mac OS X |
+| Besturingssysteem | MAC OS X |
 | Versie besturingssysteem | 10.15.7 |
 | Apparaat | Intel Mac OS X 10_15_7 |
 
 ## Gebruiksscenario’s {#use-cases}
 
-[!DNL User-Agent] tekenreeksen worden al lang gebruikt om marketing - en ontwikkelingsteams belangrijke inzichten te bieden in de manier waarop browsers , besturingssystemen en apparaten site-inhoud weergeven , en in de manier waarop gebruikers met websites communiceren .
+De agenten van de gebruiker koorden zijn lang gebruikt om marketing en ontwikkelingsteams van belangrijke inzichten van te voorzien hoe browsers, werkende systemen en apparaten plaatsinhoud tonen, evenals hoe de gebruikers met websites in wisselwerking staan.
 
-[!DNL User-Agent] tekenreeksen worden ook gebruikt om spam- en filterbots te blokkeren die door sites kruipen voor verschillende extra doeleinden.
+De agentenkoorden van de gebruiker worden ook gebruikt om spam en filterbots te blokkeren die plaatsen voor een verscheidenheid van extra doeleinden kruipen.
 
-## [!DNL User-Agent] tekenreeksen in Adobe Experience Cloud {#user-agent-in-adobe}
+## Tekenreeksen voor gebruikersagent in Adobe Experience Cloud {#user-agent-in-adobe}
 
-Adobe Experience Cloud-oplossingen gebruiken de [!DNL User-Agent] tekenreeksen op verschillende manieren.
+Adobe Experience Cloud-oplossingen gebruiken op verschillende manieren de strings van de gebruikersagent.
 
-* Adobe Analytics gebruikt de [!DNL User-Agent] een tekenreeks om aanvullende informatie over besturingssystemen, browsers en apparaten die worden gebruikt om een website te bezoeken, te vergroten en af te leiden.
-* Adobe Audience Manager en Adobe Target kwalificeren eindgebruikers voor segmentatie- en personalisatiecampagnes op basis van de informatie die door de [!DNL User-Agent] tekenreeks.
+* Adobe Analytics gebruikt de userAgent-tekenreeks om aanvullende informatie over besturingssystemen, browsers en apparaten die worden gebruikt om een website te bezoeken, te vergroten en af te leiden.
+* Adobe Audience Manager en Adobe Target kwalificeren eindgebruikers voor segmentatie- en personalisatiecampagnes, op basis van de informatie die wordt verstrekt door de userAgent-tekenreeks.
 
-## Introductie van gebruiker-Agent de wenken van de Cliënt {#ua-ch}
+## Introductie van client-tips voor gebruikersagent {#ua-ch}
 
-In de afgelopen jaren hebben eigenaren van sites en marketingverkopers [!DNL User-Agent] tekenreeksen samen met andere informatie die is opgenomen in aanvraagheaders om digitale vingerafdrukken te maken. Deze vingerafdrukken kunnen worden gebruikt om gebruikers zonder hun medeweten te identificeren.
+In de afgelopen jaren hebben eigenaars van sites en leveranciers van marketingservices gebruikgemaakt van tekenreeksen voor gebruikersagenten en andere informatie die is opgenomen in aanvraagheaders om digitale vingerafdrukken te maken. Deze vingerafdrukken kunnen worden gebruikt om gebruikers zonder hun medeweten te identificeren.
 
-Ondanks het belangrijke doel dat [!DNL User-Agent] tekenreeksen dienen voor site-eigenaars, browserontwikkelaars hebben besloten hoe [!DNL User-Agent] -tekenreeksen worden gebruikt om potentiële privacyproblemen voor eindgebruikers te beperken.
+Ondanks het belangrijke doel dat gebruikersagentenkoorden voor plaatseigenaars dienen, hebben de browser ontwikkelaars besloten om te veranderen hoe de koorden van de gebruikersagent werken, om potentiële privacykwesties voor eind te beperken - gebruikers.
 
-De oplossing die zij hebben ontwikkeld, wordt [Client-tips voor gebruikersagent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met behulp van clienttips kunnen websites nog steeds de benodigde informatie over de browser, het besturingssysteem en het apparaat verzamelen, terwijl ze tegelijkertijd een betere bescherming bieden tegen methoden voor geheime tracering, zoals vingerafdrukken.
+De oplossing die zij hebben ontwikkeld, wordt [clienttips van gebruikersagent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met behulp van clienttips kunnen websites nog steeds de benodigde informatie over de browser, het besturingssysteem en het apparaat verzamelen, terwijl ze tegelijkertijd een betere bescherming bieden tegen methoden voor geheime tracering, zoals vingerafdrukken.
 
-Met clienttips hebben websiteeigenaars toegang tot veel van de informatie die in het dialoogvenster [!DNL User-Agent] -tekenreeks, maar op een meer privacyvriendelijke manier.
+Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
 
-Wanneer moderne browsers een gebruiker naar een webserver sturen, wordt de volledige [!DNL User-Agent] tekenreeks wordt op elke aanvraag verzonden, ongeacht of deze vereist is. De wenken van de cliënt, anderzijds, dwingen een model af waar de server browser om de extra informatie moet vragen het over de cliënt wil weten. Op het ontvangen van dit verzoek, kan browser zijn eigen beleid of gebruikersconfiguratie toepassen om te bepalen welke gegevens zijn teruggekeerd. In plaats van de volledige [!DNL User-Agent] koord door gebrek op alle verzoeken, wordt de toegang nu geleid op een expliciete en controleerbare manier.
+Wanneer moderne browsers een gebruiker naar een webserver sturen, wordt de volledige userAgent-tekenreeks op elke aanvraag verzonden, ongeacht of deze vereist is. De wenken van de cliënt, anderzijds, dwingen een model af waar de server browser om de extra informatie moet vragen het over de cliënt wil weten. Op het ontvangen van dit verzoek, kan browser zijn eigen beleid of gebruikersconfiguratie toepassen om te bepalen welke gegevens zijn teruggekeerd. In plaats van het blootstellen van het volledige userAgent koord door gebrek op alle verzoeken, wordt de toegang nu geleid op een expliciete en controleerbare manier.
 
 ## Browserondersteuning {#browser-support}
 
-[Client-tips voor gebruikersagent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) zijn ingevoerd met [!DNL Google Chrome ]versie 89.
+[Client-tips voor gebruikersagent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) zijn ingevoerd met [!DNL Google Chrome]versie 89.
 
 Aanvullende op chroom gebaseerde browsers ondersteunen de client Hints-API, zoals:
 
@@ -77,7 +77,7 @@ Aanvullende op chroom gebaseerde browsers ondersteunen de client Hints-API, zoal
 
 ## Categorieën {#categories}
 
-Er zijn twee categorieën gebruiker-Agent de Tips van de Cliënt:
+Er zijn twee categorieën van de cliëntwenken van de gebruikersagent:
 
 * [Lage entropieclienthints](#low-entropy)
 * [Hoog entropieclienthints](#high-entropy)
@@ -106,9 +106,9 @@ Hoog entropy cliëntwenken zijn meer gedetailleerde informatie over het cliënta
 | `Sec-CH-UA-Bitness` | `Bitness` | Ja | Nee |
 | `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Ja | Nee |
 
-Hoog entropy cliëntwenken worden onbruikbaar gemaakt door gebrek in Web SDK. Om hen toe te laten moet u SDK van het Web manueel vormen om hoge entropy cliëntwenken te verzoeken.
+Hoog de wenken van de entropiecliënt worden onbruikbaar gemaakt door gebrek in Web SDK. Om hen toe te laten moet u SDK van het Web manueel vormen om hoge entropy cliëntwenken te verzoeken.
 
-## Hoog entropclient-tips beïnvloeden Experience Cloud-oplossingen {#impact-in-experience-cloud-solutions}
+## Hoog entropclient-tips beïnvloeden de oplossingen van Experiencen Cloud {#impact-in-experience-cloud-solutions}
 
 Sommige Adobe Experience Cloud-oplossingen vertrouwen bij het genereren van rapporten op informatie die is opgenomen in hoge entropietips.
 
@@ -120,11 +120,11 @@ De [Besturingssysteem](https://experienceleague.adobe.com/docs/analytics/compone
 
 ### Audience Manager-eigenschappen die afhankelijk zijn van hoge entropieclientiptips {#aam}
 
-[!DNL Google] heeft de [!DNL Chrome] browserfunctionaliteit om de informatie die via de `User-Agent` header. Dientengevolge, gebruiken de klanten van de Audience Manager [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) geen betrouwbare informatie meer ontvangen op basis van [toetsen op platformniveau](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=en).
+[!DNL Google] heeft de [!DNL Chrome] browserfunctionaliteit om de informatie die via de `User-Agent` header. Als gevolg hiervan gebruiken klanten van de Audience Manager [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) geen betrouwbare informatie meer ontvangen op basis van [toetsen op platformniveau](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=en).
 
 De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten schakelen naar [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) in plaats van [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)en [Tips voor High Entropy-clients](#enabling-high-entropy-client-hints) betrouwbare gegevens over de eigenschap te blijven ontvangen.
 
-## Hoog entropclient-tips inschakelen {#enabling-high-entropy-client-hints}
+## Hoog entropclient-hints inschakelen {#enabling-high-entropy-client-hints}
 
 Om hoge entropy cliëntwenken op uw plaatsing van SDK van het Web toe te laten, moet u extra omvatten `highEntropyUserAgentHints` contextoptie, zoals beschreven in [configuratiedocumentatie](configuring-the-sdk.md#context), naast uw bestaande configuratie.
 
@@ -134,7 +134,7 @@ Als u bijvoorbeeld hoge entropientroy-clienthints wilt ophalen van westeigenscha
 
 ## Voorbeeld {#example}
 
-De wenken van de cliënt in de kopballen van het eerste verzoek dat door browser aan een Webserver wordt gemaakt zullen het browser merk, de belangrijkste versie van browser, en een indicator bevatten van of de cliënt een mobiel apparaat is. Elk gegeven heeft zijn eigen koptekstwaarde in plaats van dat het in één stuk wordt gegroepeerd [!DNL User-Agent] tekenreeks, zoals hieronder wordt getoond:
+De wenken van de cliënt in de kopballen van het eerste verzoek dat door browser aan een Webserver wordt gemaakt zullen het browser merk, de belangrijkste versie van browser, en een indicator bevatten van of de cliënt een mobiel apparaat is. Elk gegeven zal zijn eigen kopbalwaarde eerder dan in één enkele userAgent koord, zoals hieronder getoond hebben:
 
 ```shell
 Sec-CH-UA: "Chromium";v="101", "Google Chrome";v="101", " Not;A Brand";v="99"
@@ -150,11 +150,11 @@ Het equivalent [!DNL User-Agent] header voor dezelfde browser zou er als volgt u
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
 ```
 
-Terwijl de informatie gelijkaardig is, bevat het eerste verzoek aan de server cliëntwenken. Deze omvatten slechts een ondergroep van wat in beschikbaar is in [!DNL User-Agent] tekenreeks. Het verzoek heeft geen betrekking op de architectuur van het besturingssysteem, de volledige versie van het besturingssysteem, de naam van de lay-outengine, de versie van de lay-outengine en de volledige browserversie.
+Terwijl de informatie gelijkaardig is, bevat het eerste verzoek aan de server cliëntwenken. Deze omvatten slechts een ondergroep van wat in het koord van de gebruikersagent beschikbaar is. Het verzoek heeft geen betrekking op de architectuur van het besturingssysteem, de volledige versie van het besturingssysteem, de naam van de lay-outengine, de versie van de lay-outengine en de volledige browserversie.
 
 Op latere verzoeken echter [!DNL Client Hints API] Hiermee kunnen webservers om aanvullende informatie over het apparaat vragen. Wanneer deze waarden worden gevraagd, afhankelijk van browserbeleid of gebruikersinstellingen, kan de browserreactie die informatie bevatten.
 
-Hieronder ziet u een voorbeeld van het JSON-object dat wordt geretourneerd door de [!DNL Client Hints API] wanneer hoge entropiewaarden worden gevraagd:
+Hieronder ziet u een voorbeeld van het JSON-object dat door de [!DNL Client Hints API] wanneer hoge entropiewaarden worden gevraagd:
 
 
 ```json
