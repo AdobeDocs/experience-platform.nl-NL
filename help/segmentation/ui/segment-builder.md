@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
 workflow-type: tm+mt
-source-wordcount: '3267'
+source-wordcount: '3283'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,10 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 | Meerdere rapportsuites | Bij generieke variabelen worden geen beschrijvingen van vriendelijke namen opgenomen. <br><br>**Voorbeeld:** eVar2 | <ul><li>Elk veld met meerdere beschrijvingen wordt algemeen weergegeven. Dit betekent dat er geen vriendelijke namen worden weergegeven in de gebruikersinterface.</li><li>De vragen kunnen gegevens van om het even welke datasets gebruiken die de eVar bevatten, die in gemengde of onjuiste resultaten kunnen resulteren.</li></ul> | De vraag gebruikt correct gecombineerde resultaten van veelvoudige datasets. |
 
 ### Doelgroepen
+
+>[!NOTE]
+>
+>Voor publiek dat is gemaakt in Platform, alleen publiek dat de **zelfde** het samenvoegbeleid wordt weergegeven.
 
 De **[!UICONTROL Audiences]** worden alle soorten publiek weergegeven die zijn geïmporteerd uit externe bronnen, zoals Adobe Audience Manager, en alle soorten publiek die zijn gemaakt in [!DNL Experience Platform].
 
