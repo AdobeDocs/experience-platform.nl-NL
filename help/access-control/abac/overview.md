@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,13 @@ Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen
 
 >[!IMPORTANT]
 >
->Op attributen-gebaseerde toegangsbeheer moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform wordt gebruikt eerder dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [gegevensbeheer - overzicht](../../data-governance/home.md) voor meer informatie .
+>Op attributen-gebaseerde toegangscontrole moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform eerder wordt gebruikt dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [gegevensbeheer - overzicht](../../data-governance/home.md) voor meer informatie .
 
 Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot gevoelige persoonlijke gegevens (SPD) controleren, persoonlijk identificeerbare informatie (PII) en aangepast type van gegevens over alle werkschema&#39;s en middelen van het Platform. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+
+De volgende video is bedoeld om uw begrip van op attribuut-gebaseerde toegangscontrole te steunen, en schetst hoe te om rollen, middelen, en beleid te vormen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Op kenmerken gebaseerde terminologie voor toegangsbeheer
 
@@ -50,7 +54,7 @@ Door Toestemmingen, kunt u rollen tot stand brengen en beheren, evenals de gewen
 
 ## API voor toegangsbeheer op basis van kenmerken
 
-De op attribuut-gebaseerde toegangsbeheer API staat u toe om rollen, beleid, en producten binnen Platform programmatically te beheren gebruikend APIs. Zie voor meer informatie de handleiding op [het gebruiken van API om op attributen-gebaseerde configuraties van de toegangscontrole te beheren](api/overview.md).
+Met de op kenmerken gebaseerde API voor toegangsbeheer kunt u rollen, beleid en producten binnen het platform programmatisch beheren met behulp van API&#39;s. Zie voor meer informatie de handleiding op [het gebruiken van API om op attributen-gebaseerde configuraties van de toegangscontrole te beheren](api/overview.md).
 
 ## Toegangsbeheer op basis van kenmerken in Adobe Experience Platform
 
@@ -58,7 +62,7 @@ De volgende secties verstrekken informatie over hoe op attribuut-gebaseerde toeg
 
 ### Toegangsbeheer
 
-Platform gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer. Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u toestemmingen op Adobe Experience Cloud, in plaats van de Profielen van het Product in Adobe Admin Console beginnen te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
+Platform hefboomwerkingen [Adobe Admin Console](https://adminconsole.adobe.com) productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. De toestemmingen controleren toegang tot een verscheidenheid van de mogelijkheden van het Platform, met inbegrip van gegevensmodellering, profielbeheer, en zandbakbeleid. Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u toestemmingen op Adobe Experience Cloud, in plaats van de Profielen van het Product in Adobe Admin Console beginnen te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
 
 Er is beperkte beschikbaarheid voor op attribuut-gebaseerde toegangsbeheer voor klanten die Gezondheidszorg en/of de Schilden van de Privacy kopen. De functies van deze functionaliteit zijn onder andere:
 
@@ -76,7 +80,7 @@ Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../home.
 
 ### Doelen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Platform naadloos in werking te stellen. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
 Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebruiken aan:
 
@@ -105,7 +109,7 @@ Voor meer informatie over [!DNL Identity Service], verwijst u naar de [[!DNL Ide
 
 ### Klantprofiel in realtime
 
-Met Platform kunt u uw klanten een gecoördineerde, consistente en relevante ervaring bieden, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+Met Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
 Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebruiken aan:
 
