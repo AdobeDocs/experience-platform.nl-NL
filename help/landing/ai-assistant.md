@@ -4,7 +4,7 @@ description: Leer hoe u de AI Assistant gebruikt om door Experience Platform- en
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
+source-git-commit: 704d47b0e37825508705402ab2401636f46ef23f
 workflow-type: tm+mt
 source-wordcount: '2362'
 ht-degree: 0%
@@ -286,5 +286,3 @@ Lees de onderstaande tabel voor voorbeelden:
 | Wat is mijn grootste segment? | Wat is mijn grootste segment? Gegevens gebruiken. | Vertel de AI Assistant expliciet dat het antwoord moet zijn gebaseerd op gegevens. |
 | Wat is mijn grootste segment? | Maak een lijst van mijn grootste segment. | Er zijn gevallen waarin een &quot;wat...&quot;-vraag kan worden verward met een documentatiegebaseerde vraag. Het gebruik van een opdracht als &quot;list&quot; is een sterkere indicator die u een vraag stelt met gegevens in context. |
 | Hoeveel datasets heb ik? | Tel mijn datasets. | De oorspronkelijke vraag werkt voor segmenten, maar werkt mogelijk niet met gegevenssets. |
-
-
