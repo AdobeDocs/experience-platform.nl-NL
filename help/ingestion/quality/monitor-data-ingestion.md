@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevensinname controleren
 description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Deze gebruikershandleiding bevat stappen voor het controleren van gegevens in de
 >title="Inktsnelheid"
 >abstract="Het aantal gebeurtenissen dat per seconde correct wordt verwerkt."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Dataflows controleren voor bronnen in de gebruikersinterface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Dataflows controleren voor bronnen in de gebruikersinterface"
 
 >[!TIP]
 >
 >Als u het totale aantal gebeurtenissen op een bepaalde datum wilt berekenen, gebruikt u de volgende expressie: `total events / day = ingestion rate * 60 * 60 * 24`.
 
-In de [UI Experience Platform](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** in het navigatiemenu links, gevolgd door **[!UICONTROL Streaming end-to-end]**.
+In de [UI EXPERIENCE PLATFORM](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** in het navigatiemenu links, gevolgd door **[!UICONTROL Streaming end-to-end]**.
 
 De **[!UICONTROL Streaming end-to-end]** controlepagina wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid van gestreamde gebeurtenissen weergeeft die zijn verwerkt door [[!DNL Real-Time Customer Profile]](../../profile/home.md), alsmede een gedetailleerde lijst van binnenkomende gegevens.
 
@@ -88,7 +88,7 @@ De details van een mislukte partij tonen de zelfde informatie zoals een succesvo
 
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
-Bovendien geven mislukte batches details over de fouten die zijn opgetreden tijdens de verwerking van de batch. In het onderstaande voorbeeld is er een fout opgetreden met de ingevoerde batch omdat deze het maximumaantal identiteiten voor de persoon heeft.
+Bovendien bevatten mislukte batches details over de fouten die zijn opgetreden tijdens de verwerking van de batch. In het onderstaande voorbeeld is er een fout opgetreden met de ingevoerde batch omdat deze het maximumaantal identiteiten voor de persoon heeft.
 
 >[!NOTE]
 >
