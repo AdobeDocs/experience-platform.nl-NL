@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;sendGrid;sendGrid bestemming
 title: SendGrid-verbinding
 description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij exporteren en deze activeren in SendGrid voor uw bedrijfsbehoeften.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1544'
 ht-degree: 1%
 
 ---
@@ -27,10 +27,10 @@ De volgende punten worden vereist alvorens u begint de bestemming te vormen.
 1. U moet een SendGrid-account hebben.
    * Naar SendGrid [inschrijving](https://signup.sendgrid.com/) pagina om een SendGrid-account te registreren en te maken, als u er nog geen hebt.
 1. Nadat u zich hebt aangemeld bij de portal SendGrid, moet u ook een API-token genereren.
-1. Ga naar de SendGrid-website en open de **[!DNL Settings]** > **[!DNL API Keys]** pagina. U kunt ook verwijzen naar de [SendGrid-documentatie](https://app.sendgrid.com/settings/api_keys) om de juiste sectie te openen in de SendGrid-app.
+1. Navigeer naar de SendGrid-website en open de **[!DNL Settings]** > **[!DNL API Keys]** pagina. U kunt ook verwijzen naar de [SendGrid-documentatie](https://app.sendgrid.com/settings/api_keys) om de juiste sectie te openen in de SendGrid-app.
 1. Tot slot selecteert u **[!DNL Create API Key]** knop.
    * Zie de [SendGrid-documentatie](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), als u hulp nodig hebt over welke handelingen moeten worden uitgevoerd.
-   * Als u de API-sleutel via programmacode wilt genereren, raadpleegt u de [SendGrid-documentatie](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
+   * Als u de API-sleutel programmatisch wilt genereren, raadpleegt u de [SendGrid-documentatie](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
@@ -58,8 +58,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm met de kenmerken van het geselecteerde profiel [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken voor het geselecteerde profiel van het dialoogvenster [doelactiveringsworkflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,19 +77,19 @@ Marketing teams die SendGrid gebruiken, kunnen een mailinglijst maken in SendGri
 > 
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 1. Binnen de [!DNL Adobe Experience Platform] console, navigeren naar **Doelen**.
 
-1. Selecteer **Catalogus** tabblad en zoeken naar *SendGrid*. Selecteer vervolgens **Instellen**. Nadat u een verbinding aan de bestemming hebt gevestigd, verandert het etiket UI in **Segmenten activeren**.
+1. Selecteer de **Catalogus** tabblad en zoeken naar *SendGrid*. Selecteer vervolgens **Instellen**. Nadat u een verbinding aan de bestemming hebt gevestigd, verandert het etiket UI in **Segmenten activeren**.
    ![](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
 1. U wordt getoond een tovenaar die u in het vormen van de bestemming SendGrid bijstaat. Maak het nieuwe doel door **Nieuwe bestemming configureren**.
    ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
-1. Selecteer **Nieuw account** en vult de **Dragertoken** waarde. Deze waarde is de SendGrid *API-sleutel* die eerder in het [sectie voorwaarden](#prerequisites).
+1. Selecteer de **Nieuw account** en vult de **Dragertoken** waarde. Deze waarde is de SendGrid *API-sleutel* die eerder in het [sectie voorwaarden](#prerequisites).
    ![](../../assets/catalog/email-marketing/sendgrid/04.jpg)
 
 1. Selecteren **Verbinden met doel**. Als de SendGrid *API-sleutel* u hebt opgegeven, is geldig. **Verbonden** als u een groen vinkje hebt, gaat u verder naar de volgende stap om extra informatievelden in te vullen.
@@ -100,14 +100,14 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden besc
 
 while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) voor deze bestemming moet u de volgende informatie opgeven:
 
-* **[!UICONTROL Name]**: De naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Name]**: De naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een optionele beschrijving waarmee u deze bestemming in de toekomst kunt identificeren.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -115,9 +115,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 Raadpleeg de onderstaande afbeeldingen voor meer informatie over deze bestemming.
 
@@ -134,7 +135,7 @@ Raadpleeg de onderstaande afbeeldingen voor meer informatie over deze bestemming
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. Selecteer **[!UICONTROL Next]** naar het revisiescherm gaan.
+1. Na het voltooien van de toewijzingen selecteert u **[!UICONTROL Next]** naar het revisiescherm gaan.
    ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
 1. Selecteren **[!UICONTROL Finish]** om de installatie te voltooien.
@@ -146,7 +147,7 @@ De uitgebreide lijst met ondersteunde kenmerktoewijzingen die kan worden ingeste
 |---|---|---|---|---|
 | xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | Tekenreeks | De eerste regel van het adres. | Max. lengte:<br/> 100 tekens |
 | xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | Tekenreeks | Een optionele tweede regel voor het adres. | Max. lengte:<br/> 100 tekens |
-| xdm:<br/> _extcondev.alternatieve_e-mails | xdm:<br/> alternatieve_e-mails | Array van tekenreeks | Extra e-mailberichten die aan de contactpersoon zijn gekoppeld. | <ul><li>Max.: 5 items</li><li>Min.: 0 items</li></ul> |
+| xdm:<br/> _extcondev.alternatieve_e-mails | xdm:<br/> alternatieve_e-mails | Array van tekenreeks | Extra e-mailberichten die aan de contactpersoon zijn gekoppeld. | <ul><li>Max. 5 items</li><li>Min.: 0 items</li></ul> |
 | xdm:<br/> homeAddress.city | xdm:<br/> stad | Tekenreeks | De stad van de contactpersoon. | Max. lengte:<br/> 60 tekens |
 | xdm:<br/> homeAddress.country | xdm:<br/> land | Tekenreeks | Het land van de contactpersoon. Kan een volledige naam of een afkorting zijn. | Max. lengte:<br/> 50 tekens |
 | identityMap:<br/> E-mail | Identiteit:<br/> external_id | Tekenreeks | Het primaire e-mailadres van de contactpersoon. Dit is een geldige e-mail. | Max. lengte:<br/> 254 tekens |
@@ -165,7 +166,7 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 1. Selecteer het doel en controleer of de status **[!UICONTROL enabled]**.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Naar de **[!DNL Activation data]** en selecteert u vervolgens een publieksnaam.
+1. Schakel over naar de **[!DNL Activation data]** en selecteert u vervolgens de naam van een publiek.
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. Controleer de publiekssamenvatting en controleer de telling van profielen aan de telling beantwoordt die binnen de dataset wordt gecreeerd.

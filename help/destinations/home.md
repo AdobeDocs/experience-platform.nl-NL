@@ -1,11 +1,10 @@
 ---
-keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;activate gegevens;activate;
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -25,11 +24,11 @@ ht-degree: 0%
 
 ## Doelen en bronnen {#destinations-and-sources}
 
-Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerste partij en het activeren ervan voor uw bedrijfsbehoeften. Gebruiken [bronnen](../sources/home.md) om gegevens in Platform en bestemmingen in te voeren om gegevens uit Platform uit te voeren.
+Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerste partij en het activeren van deze gegevens voor uw bedrijfsbehoeften. Gebruiken [bronnen](../sources/home.md) om gegevens in Platform en bestemmingen in te voeren om gegevens van Platform uit te voeren.
 
 ## Doelstappen {#steps}
 
-* Kiezen uit een [zelfbedieningscatalogus](./catalog/overview.md) van alle in Platform beschikbare bestemmingen.
+* Kiezen uit een [zelfbedieningscatalogus](./catalog/overview.md) van alle bestemmingen beschikbaar in Platform.
 * Gebruik bestemmingen om profielen of publiek naar marketing automatiseringsplatforms, digitale reclameplatforms, en meer te verzenden.
 * De gegevens van het programma voeren regelmatig naar uw aangewezen bestemmingen uit.
 
@@ -39,7 +38,7 @@ De besturingselementen in de [werkruimte doelen](./ui/destinations-workspace.md)
 
 * Blader door de catalogus met doelplatforms waar u uw gegevens kunt activeren;
 * Gegevensstromen naar de doelen in de catalogus maken, bewerken, activeren en uitschakelen;
-* Maak een account op een opslaglocatie of koppel een Platform naar de account op het doelplatform;
+* Maak een account op een opslaglocatie of koppel Platform aan de account op het doelplatform;
 * Selecteer welk publiek moet worden geactiveerd voor bestemmingen;
 * Selecteren [XDM-velden (Experience Data Model)](../xdm/home.md) om te exporteren wanneer een publiek wordt geactiveerd naar marketingbestemmingen via e-mail.
 
@@ -51,7 +50,7 @@ Met Experience Platform, kunt u gegevens aan diverse soorten bestemmingen active
 
 Sommige schakelaars in de catalogus van de bestemmingen van het Experience Platform worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd gebruikend [Destination SDK](/help/destinations/destination-sdk/overview.md). Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bestemming door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld de [Amazon S3-connector](/help/destinations/catalog/cloud-storage/amazon-s3.md) wordt gemaakt door Adobe, terwijl de [TikTok-connector](/help/destinations/catalog/social/tiktok.md) wordt gemaakt en onderhouden door het TikTok-team.
 
-Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe geschreven en onderhouden connectors contact op met uw Adobe of de klantenservice.
+Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door de Adobe ontworpen en onderhouden connectors contact op met uw Adobe of de klantenservice.
 
 ## Doelen en toegangscontroles {#access-controls}
 
@@ -64,6 +63,7 @@ De volgende lijst schetst de toestemmingen en toestemmingscombinaties die worden
 | **[!UICONTROL Manage Destinations]** | Om met bestemmingen te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en toelaat [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en te verbergen [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Identity Graph]** | Om te exporteren *identiteiten* aan bestemmingen, hebt u nodig **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -85,14 +85,14 @@ U kunt ook controleren of gegevens naar uw bestemming zijn gekomen. De meeste do
 
 ## Beperkingen op gegevensbeheer bij het activeren van gegevens naar bestemmingen {#data-governance}
 
-Het gegevensbeheer wordt afgedwongen voor bestemmingen in de Platform via:
+Het gegevensbeheer wordt afgedwongen voor platformbestemmingen via:
 
 * *Marketingacties* dat u in creeert bestemmingswerkschema kunt selecteren;
 * *Beleid voor gegevensgebruik* die de activering van gegevens met bepaalde gebruiksetiketten beperken tot bestemmingen met bepaalde marketingacties.
 
-Zie Gegevensbeheer in de documentatie van het Platform voor meer informatie over [marketingacties](../data-governance/policies/overview.md) en [gegevensbeleidsovertredingen oplossen](../data-governance/enforcement/auto-enforcement.md).
+Zie Data Governance in de documentatie van het Platform voor meer informatie over [marketingacties](../data-governance/policies/overview.md) en [gegevensbeleidsovertredingen oplossen](../data-governance/enforcement/auto-enforcement.md).
 
-Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platform voor meer informatie over het selecteren van marketingacties in de workflow Doel maken:
+Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in Platform voor meer informatie over het selecteren van marketingacties in de workflow voor het maken van doelen:
 
 * [Reclamebestemmingen - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Reclamebestemmingen - Google Ads](./catalog/advertising/google-ads-destination.md)

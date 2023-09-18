@@ -2,9 +2,9 @@
 title: Mailchimp-rentecategorieën
 description: Mailchimp (ook wel Intuit Mailchimp genoemd) is een populair marketingplatform voor automatisering en marketing via e-mail dat door bedrijven wordt gebruikt om contactpersonen (klanten, klanten of andere belanghebbenden) te beheren en met hen te spreken via mailinglijsten en marketingcampagnes via e-mail. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2300'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API om te maken [rentecategorieën](https://mailchimp.com/developer/marketing/api/interest-categories/) en voegt vervolgens contacten van elk geselecteerd publiek in de Platform toe aan een corresponderende belangencategorie. U kunt **nieuwe contactpersonen toevoegen** of **de informatie over bestaande [!DNL Mailchimp] contactpersonen** vervolgens **ze toevoegen aan of verwijderen uit de gewenste groepen** binnen een bestaande [!DNL Mailchimp] het publiek na het activeren van de deelnemers in een nieuw segment. [!DNL Mailchimp Interest Groups] gebruikt de geselecteerde publieksnamen van het Platform als belangencategorieën binnen [!DNL Mailchimp].
+Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt de [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API om te maken [belangencategorieën](https://mailchimp.com/developer/marketing/api/interest-categories/) en voegt vervolgens contacten van elk geselecteerd publiek van het Platform toe aan een overeenkomstige belangencategorie. U kunt **nieuwe contactpersonen toevoegen** of **de informatie over bestaande [!DNL Mailchimp] contactpersonen** vervolgens **ze toevoegen aan of verwijderen uit de gewenste groepen** binnen een bestaande [!DNL Mailchimp] het publiek na het activeren van de deelnemers in een nieuw segment. [!DNL Mailchimp Interest Groups] gebruikt de geselecteerde publieksnamen van Platform als rentecategorieën binnen [!DNL Mailchimp].
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -27,7 +27,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het [!DNL Mailchimp Interest Cat
 
 ### E-mails verzenden naar contactpersonen voor marketingcampagnes {#use-case-send-emails}
 
-De verkoopafdeling van een website over sportartikelen wil een marketingcampagne per e-mail uitzenden naar een lijst met contactpersonen die zichzelf hebben geïdentificeerd als geïnteresseerd in voetbal. De lijsten van contacten worden gescheiden als partijen in de gegevensuitvoer die van het ontwikkelingsteam van de website wordt ontvangen en moeten daarom worden gevolgd. Het team identificeert een bestaand [!DNL Mailchimp] publiek en begint het publiek van het Experience Platform te bouwen waarin de contacten van elke lijst worden toegevoegd. Na verzending van deze soorten publiek naar [!DNL Mailchimp Interest Categories], als er geen contactpersonen aanwezig zijn in de geselecteerde [!DNL Mailchimp] publiek wordt zij toegevoegd aan een groep met de publieksnaam die de contact tot behoort. Als om het even welke contacten reeds in [!DNL Mailchimp] publiek of groep, dan wordt hun informatie bijgewerkt. Zodra de gegevens zijn verzonden naar [!DNL Mailchimp Interest Categories], kan het verkoopteam de marketingcampagne e-mail naar de belangengroep van de voetbal binnen [!DNL Mailchimp] publiek.
+De verkoopafdeling van een website over sportartikelen wil een marketingcampagne per e-mail uitzenden naar een lijst met contactpersonen die zichzelf hebben geïdentificeerd als geïnteresseerd in voetbal. De lijsten van contacten worden gescheiden als partijen in de gegevensuitvoer die van het ontwikkelingsteam van de website wordt ontvangen en moeten daarom worden gevolgd. Het team identificeert een bestaand [!DNL Mailchimp] publiek en begint het publiek van het Experience Platform te bouwen waarin de contacten van elke lijst worden toegevoegd. Na verzending van deze soorten publiek naar [!DNL Mailchimp Interest Categories], als er geen contactpersonen aanwezig zijn in de geselecteerde [!DNL Mailchimp] publiek wordt zij toegevoegd aan een groep met de publieksnaam die de contact tot behoort. Als om het even welke contacten reeds in [!DNL Mailchimp] publiek of groep, dan wordt hun informatie bijgewerkt. Zodra de gegevens zijn verzonden naar [!DNL Mailchimp Interest Categories], kan het verkoopteam de marketingcampagne e-mail naar de belangengroep van de voetbal binnen de [!DNL Mailchimp] publiek.
 
 ## Vereisten {#prerequisites}
 
@@ -41,9 +41,9 @@ Voordat u gegevens activeert naar de [!DNL Mailchimp Interest Categories] doel, 
 
 Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL Mailchimp] account:
 
-#### U moet beschikken over een [!DNL Mailchimp] account {#prerequisites-account}
+#### U moet een [!DNL Mailchimp] account {#prerequisites-account}
 
-Voordat u een [!DNL Mailchimp Interest Categories] doel, moet u eerst ervoor zorgen dat u een [!DNL Mailchimp] account. Als u er nog geen hebt, gaat u naar [[!DNL Mailchimp] aanmeldingspagina](https://login.mailchimp.com/signup/) om uw account te registreren en te maken.
+Voordat u een [!DNL Mailchimp Interest Categories] doel, moet u eerst ervoor zorgen dat u een [!DNL Mailchimp] account. Als u er nog geen hebt, gaat u naar [[!DNL Mailchimp] aanmeldpagina](https://login.mailchimp.com/signup/) om uw account te registreren en te maken.
 
 #### Gather [!DNL Mailchimp] API-sleutel {#gather-credentials}
 
@@ -91,8 +91,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in het Platform, het overeenkomstige [!DNL Mailchimp Interest Categories] de segmentstatus wordt bijgewerkt met de publieksstatus van het Platform.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in Platform, het overeenkomstige [!DNL Mailchimp Interest Categories] de segmentstatus wordt bijgewerkt met de publieksstatus van Platform.</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, zoeken naar [!DNL Mailchimp Interest Categories]. U kunt de locatie ook onder het dialoogvenster **[!UICONTROL Email marketing]** categorie.
 
@@ -113,11 +113,11 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden hierond
 | Veld | Beschrijving |
 | --- | --- |
 | **[!UICONTROL Username]** | Uw [!DNL Mailchimp Interest Categories] gebruikersnaam. |
-| **[!UICONTROL Password]** | Uw [!DNL Mailchimp] **API-sleutel**, die u in het [Gather [!DNL Mailchimp] geloofsbrieven](#gather-credentials) sectie.<br> Uw API-sleutel bestaat uit `{KEY}-{DC}`, waarbij `{KEY}` gedeelte verwijst naar de waarde die in de [[!DNL Mailchimp] API-sleutel](#gather-credentials) en de `{DC}` portie verwijst naar de [[!DNL Mailchimp] datacenter](#identify-data-center). <br>U kunt de `{KEY}` of het hele formulier.<br> Als uw API-sleutel bijvoorbeeld <br>*`0123456789abcdef0123456789abcde-us14`*,<br> u kunt *`0123456789abcdef0123456789abcde`*of *`0123456789abcdef0123456789abcde-us14`*als de waarde. |
+| **[!UICONTROL Password]** | Uw [!DNL Mailchimp] **API-sleutel**, die u in het [Gather [!DNL Mailchimp] geloofsbrieven](#gather-credentials) sectie.<br> Uw API-sleutel bestaat uit `{KEY}-{DC}`, waarbij de `{KEY}` gedeelte verwijst naar de waarde die in de [[!DNL Mailchimp] API-sleutel](#gather-credentials) en de `{DC}` portie verwijst naar de [[!DNL Mailchimp] datacenter](#identify-data-center). <br>U kunt de `{KEY}` of het hele formulier.<br> Als uw API-sleutel bijvoorbeeld <br>*`0123456789abcdef0123456789abcde-us14`*,<br> u kunt *`0123456789abcdef0123456789abcde`*of *`0123456789abcdef0123456789abcde-us14`*als de waarde. |
 
 {style="table-layout:auto"}
 
-![Het schermschot van het Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
+![Schermopname van de gebruikersinterface van het platform waarin wordt getoond hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
 Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Connected]** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
@@ -125,15 +125,15 @@ Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Con
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Het schermschot van het Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
+![Platform UI het schermschot die de bestemmingsdetails tonen.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
 
 | Veld | Beschrijving |
 | --- | --- |
 | **[!UICONTROL Name]** | Een naam waarmee u deze bestemming in de toekomst zult erkennen. |
 | **[!UICONTROL Description]** | Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren. |
 | **[!UICONTROL Data center]** | Uw [!DNL Mailchimp] account `data center`. Zie de [Identificeren [!DNL Mailchimp] datacenter](#identify-data-center) voor eventuele richtsnoeren. |
-| **[!UICONTROL Audience Name (Please select Data center first)]** | Nadat u uw **[!UICONTROL Data center]**, wordt deze vervolgkeuzelijst automatisch gevuld met de publieksnamen van uw [!DNL Mailchimp] account. Selecteer het publiek dat u met gegevens van Platform wilt bijwerken. |
-| **[!UICONTROL Interest Category (Please select Data center and Audience Name first)]** | Nadat u uw **[!UICONTROL Audience Name]**, wordt deze vervolgkeuzelijst automatisch gevuld met de namen van de belangengroepcategorieën van uw [!DNL Mailchimp] account. Selecteer de categorienaam die u wilt bijwerken met gegevens uit het Platform. |
+| **[!UICONTROL Audience Name (Please select Data center first)]** | Nadat u uw **[!UICONTROL Data center]**, wordt deze vervolgkeuzelijst automatisch gevuld met de publieksnamen van uw [!DNL Mailchimp] account. Selecteer het publiek dat u wilt bijwerken met gegevens van Platform. |
+| **[!UICONTROL Interest Category (Please select Data center and Audience Name first)]** | Nadat u uw **[!UICONTROL Audience Name]**, wordt deze vervolgkeuzelijst automatisch gevuld met de namen van de belangengroepcategorieën van uw [!DNL Mailchimp] account. Selecteer de categorienaam die u wilt bijwerken met gegevens van Platform. |
 
 {style="table-layout:auto"}
 
@@ -143,17 +143,18 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
->
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+> 
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -163,9 +164,9 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Mailchimp Interest Categ
 
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. U ziet nu een nieuwe toewijzingsrij op het scherm.
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select attributes]** categorie en selecteer een kenmerk in de lijst met kenmerken die zijn ingevuld in het [!DNL Mailchimp] API. *Alle aangepaste kenmerken die u aan de geselecteerde [!DNL Mailchimp] Het publiek is ook beschikbaar voor selectie als doelvelden.*
+1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select attributes]** categorie en selecteer een kenmerk in de lijst met kenmerken die zijn ingevuld in het menu [!DNL Mailchimp] API. *Alle aangepaste kenmerken die u aan de geselecteerde [!DNL Mailchimp] Het publiek is ook beschikbaar voor selectie als doelvelden.*
 
-   De toewijzingen die beschikbaar zijn tussen uw XDM-profielschema en [!DNL Mailchimp Interest Categories] zijn als volgt: | Bronveld | Doelveld | Opmerkingen | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Verplicht: Ja | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+   De toewijzingen beschikbaar tussen uw XDM-profielschema en [!DNL Mailchimp Interest Categories] zijn als volgt: | Bronveld | Doelveld | Opmerkingen | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Verplicht: Ja | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
    Daarnaast `ADDRESS` is een speciaal doelveld dat bekend staat als a `merge field` binnen uw [!DNL Mailchimp] publiek. De [[!DNL Mailchimp] documentatie](https://mailchimp.com/developer/marketing/docs/merge-fields/) Hiermee definieert u de vereiste toetsen als `addr1`, `city`, `state`, en `zip`en de optionele toetsen `addr2` en `country`. De waarden voor deze velden moeten tekenreeksen zijn. Indien een van de `ADDRESS` veldtoewijzingen aanwezig zijn, de bestemming gaat de `ADDRESS` aan [!DNL Mailchimp] API voor bijwerken. Alle `ADDRESS` velden die niet zijn toegewezen, hebben standaard de waarde `NULL` behalve het land dat in gebreke blijft `US`.
 
@@ -183,7 +184,7 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Mailchimp Interest Categ
    U wilt bijvoorbeeld de waarde bijwerken voor `country` met het bestaande adresgebied van de contactpersoon `addr1`, `city`, `state`, en `zip` waarden als `132, My Street, Kingston`, `New York`, `New York` en `12401`. Als u het dialoogvenster `country` u moet de bestaande waarden doorgeven met de wijzigingen *(indien van toepassing)* en de nieuwe waarde voor het land. De waarden in uw gegevensset moeten dus `132, My Street, Kingston`, `New York`, `New York`, `12401`, en `US`. Om te herhalen, als u slechts overgaat `country` en biedt geen waarden voor `addr1`, `city`, `state`, en `zip` zij worden overschreven door `NULL`.
 
    Hieronder ziet u een voorbeeld met de voltooide toewijzingen:
-   ![Voorbeeld van schermafbeeldingen van gebruikersinterface van Platform met veldtoewijzingen.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
+   ![Voorbeeld van platformgebruikersinterface met schermafbeeldingen die veldtoewijzingen weergeven.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -191,11 +192,11 @@ Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding,
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
-* Meld u aan bij uw [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Navigeer vervolgens naar de **[!DNL Audience]** pagina. Vouw vervolgens de **[!DNL Manage Contacts]** en selecteert u **[!DNL Groups]**.
+* Aanmelden bij uw [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Navigeer vervolgens naar de **[!DNL Audience]** pagina. Vouw vervolgens de **[!DNL Manage Contacts]** en selecteert u **[!DNL Groups]**.
 
 ![Brievenchimp UI het schermschot die de de groepspagina van het Publiek toont.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* Selecteer de groep en controleer of het geselecteerde publiek is gemaakt als categorieën met de publieksnaam van het Platform, die kunnen worden gevolgd door een automatisch gegenereerd achtervoegsel.
+* Selecteer de groep en controleer of het geselecteerde publiek is gemaakt als categorieën met de publieksnaam van Platform, die kunnen worden gevolgd door een automatisch gegenereerd achtervoegsel.
    * Dit doel gebruikt de namen van de geselecteerde segmenten om de rentecategorie tot stand te brengen door [[!DNL Mailchimp] Interessencategorie-API toevoegen](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Als u een nieuwe bestemming maakt en hetzelfde publiek weer activeert, [!DNL Mailchimp] Hiermee voegt u een achtervoegsel toe om onderscheid te maken tussen de bestaande en de nieuwe segmenten.
 * Contacten waarvan de e-mails niet in de groep bestonden, worden toegevoegd aan de nieuwe categorie.
 * Voor contacten die reeds binnen de groep bestaan, worden de gegevens van het attributengebied bijgewerkt, en het contact toegevoegd aan de pas gecreëerde categorie.
@@ -212,7 +213,7 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 
 Als u de API-sleutel hebt opgegeven in het dialoogvenster **[!UICONTROL Password]** van de **[!UICONTROL Data center]** waarde is onjuist, de gebruikersinterface bevat een [!DNL Mailchimp] API-foutreactie: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* zoals hieronder weergegeven. In dit geval kunt u geen waarde selecteren in het menu **[!UICONTROL Audience Name (Please select Data center first)]** veld.
 
-![Het schermschot van het Platform UI die fout toont als uw sleutel van de Brievenchimp API of waarden van het gegevenscentrum onjuist zijn.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+![Schermopname van de gebruikersinterface van het platform die fout toont als uw sleutel of waarden van de gegevenscentrum van Mailchimp API onjuist zijn.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
 Als u deze fout wilt verhelpen en wilt doorgaan naar de volgende stap, moet u de juiste waarden opgeven. Zie de [Identificeren [!DNL Mailchimp] datacenter](#identify-data-center) en
 [Gather [!DNL Mailchimp] API-sleutel](#gather-credentials) secties als u hulp nodig hebt.
@@ -233,5 +234,5 @@ Aanvullende nuttige informatie uit de [!DNL Mailchimp] de documentatie is hieron
 * [Een publiek maken](https://mailchimp.com/help/create-audience/)
 * [Aan de slag met groepen](https://mailchimp.com/help/getting-started-with-groups/)
 * [Een nieuwe doelgroep maken](https://mailchimp.com/help/create-new-audience-group/)
-* [Rentecategorieën](https://mailchimp.com/developer/marketing/api/interest-categories/)
+* [Renterubrieken](https://mailchimp.com/developer/marketing/api/interest-categories/)
 * [Marketing-API](https://mailchimp.com/developer/marketing/api/)

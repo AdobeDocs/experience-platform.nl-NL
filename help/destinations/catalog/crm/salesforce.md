@@ -3,9 +3,9 @@ keywords: crm;CRM;crm bestemmingen;salesforce crm;salesforce crm bestemming
 title: Salesforce CRM-verbinding
 description: Met de Salesforce CRM-bestemming kunt u uw accountgegevens exporteren en deze activeren in Salesforce CRM voor uw zakelijke behoeften.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '2981'
+source-wordcount: '3014'
 ht-degree: 0%
 
 ---
@@ -47,9 +47,9 @@ Ga naar de [!DNL Salesforce] [proefversie](https://www.salesforce.com/in/form/si
 
 Eerst moet u een [[!DNL Salesforce] verbonden app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&amp;language=en_US&amp;r=https%3A%2F%2Fhelp.salesforce.com%2F&amp;type=5) binnen uw [!DNL Salesforce] account, als u er nog geen hebt. [!DNL Salesforce CRM] gebruikt de verbonden toepassing om verbinding te maken met [!DNL Salesforce].
 
-Volgende, inschakelen [!DNL OAuth Settings for API Integration] voor de [!DNL Salesforce connected app]. Zie de [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) documentatie voor richtsnoeren.
+Vervolgens inschakelen [!DNL OAuth Settings for API Integration] voor de [!DNL Salesforce connected app]. Zie de [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) documentatie voor richtsnoeren.
 
-Zorg er ook voor dat de [bereik](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) hieronder vermelde [!DNL Salesforce connected app].
+Zorg er ook voor dat de [bereik](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) hieronder vermeld worden geselecteerd voor [!DNL Salesforce connected app].
 
 * ``chatter_api``
 * ``lightning``
@@ -79,7 +79,7 @@ Voor elk publiek dat u activeert van Platform tot [!DNL Salesforce CRM]moet u ee
 >[!IMPORTANT]
 >
 >Plaats geen spatietekens in de veldnaam. Gebruik in plaats daarvan het onderstrepingsteken `(_)` als scheidingsteken.
->Within [!DNL Salesforce] u moet aangepaste velden maken met een **[!UICONTROL Field Name]** die exact overeenkomt met de waarde die is opgegeven binnen **[!UICONTROL Mapping ID]** voor elk geactiveerd Platform. In de onderstaande schermafbeelding ziet u bijvoorbeeld een aangepast veld met de naam `crm_2_seg`. Wanneer u een publiek activeert naar deze bestemming, voegt u `crm_2_seg` als **[!UICONTROL Mapping ID]** om het publiek te vullen van Experience Platform tot dit aangepaste veld.
+>Within [!DNL Salesforce] u moet aangepaste velden maken met een **[!UICONTROL Field Name]** die exact overeenkomt met de waarde die is opgegeven binnen **[!UICONTROL Mapping ID]** voor elk geactiveerd platformsegment. In de onderstaande schermafbeelding ziet u bijvoorbeeld een aangepast veld met de naam `crm_2_seg`. Wanneer u een publiek activeert naar deze bestemming, voegt u `crm_2_seg` als **[!UICONTROL Mapping ID]** om het publiek te vullen van Experience Platform tot dit aangepaste veld.
 
 Een voorbeeld van het maken van aangepaste velden in [!DNL Salesforce], *Stap 1 - selecteer het gegevenstype*, wordt hieronder weergegeven:
 ![De het schermschot van Salesforce UI die de verwezenlijking van het douanegebied toont, Stap 1 - selecteer het gegevenstype.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -89,8 +89,8 @@ Een voorbeeld van het maken van aangepaste velden in [!DNL Salesforce], *Stap 2 
 
 >[!TIP]
 >
->* Een onderscheid maken tussen aangepaste velden die worden gebruikt voor Platforms en andere aangepaste velden binnen [!DNL Salesforce] u kunt een herkenbaar voor- of achtervoegsel opnemen wanneer u het aangepaste veld maakt. In plaats van `test_segment`, gebruik `Adobe_test_segment` of `test_segment_Adobe`
->* Als u al andere aangepaste velden hebt gemaakt in [!DNL Salesforce], kunt u de zelfde naam gebruiken zoals het segment van het Platform, om het publiek binnen gemakkelijk te identificeren [!DNL Salesforce].
+>* Een onderscheid maken tussen aangepaste velden die worden gebruikt voor doelgroepen van het platform en andere aangepaste velden binnen [!DNL Salesforce] u kunt een herkenbaar voor- of achtervoegsel opnemen wanneer u het aangepaste veld maakt. In plaats van `test_segment`, gebruik `Adobe_test_segment` of `test_segment_Adobe`
+>* Als u al andere aangepaste velden hebt gemaakt in [!DNL Salesforce], kunt u de zelfde naam gebruiken zoals het segment van het Platform, om het publiek in gemakkelijk te identificeren [!DNL Salesforce].
 
 >[!NOTE]
 >
@@ -105,17 +105,17 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Salesforce 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | `Username` | Uw [!DNL Salesforce] gebruikersnaam account. | |
-| `Password` | Uw [!DNL Salesforce] accountwachtwoord. | |
-| `Security Token` | Uw [!DNL Salesforce] beveiligingstoken dat u later toevoegt aan het einde van uw [!DNL Salesforce] Wachtwoord om een samengevoegde tekenreeks te maken die als de **[!UICONTROL Password]** wanneer [authenticeren aan de bestemming](#authenticate).<br> Zie de [!DNL Salesforce] documentatie aan [beveiligingstoken opnieuw instellen](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) om te leren hoe u het kunt regenereren via de [!DNL Salesforce] interface als u niet het Symbolische van de Veiligheid hebt. |  |
-| `Custom Domain` | Uw [!DNL Salesforce] domeinvoorvoegsel. <br> Zie de [[!DNL Salesforce] documentatie](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) om te leren hoe u deze waarde kunt verkrijgen via de [!DNL Salesforce] interface. | Als uw [!DNL Salesforce] domain is<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> u hebt `d5i000000isb4eak-dev-ed` als de waarde. |
-| `Client ID` | Uw Salesforce `Consumer Key`. <br> Zie de [[!DNL Salesforce] documentatie](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) om te leren hoe u deze waarde kunt verkrijgen via de [!DNL Salesforce] interface. | |
-| `Client Secret` | Uw Salesforce `Consumer Secret`. <br> Zie de [[!DNL Salesforce] documentatie](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) om te leren hoe u deze waarde kunt verkrijgen via de [!DNL Salesforce] interface. | |
+| `Password` | Uw [!DNL Salesforce] wachtwoord account. | |
+| `Security Token` | Uw [!DNL Salesforce] beveiligingstoken dat u later toevoegt aan het einde van uw [!DNL Salesforce] Wachtwoord voor het maken van een samengevoegde tekenreeks die als de **[!UICONTROL Password]** wanneer [authenticeren aan de bestemming](#authenticate).<br> Zie de [!DNL Salesforce] documentatie aan [uw beveiligingstoken opnieuw instellen](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) om te leren hoe u het kunt regenereren via de [!DNL Salesforce] interface als u niet het Symbolische van de Veiligheid hebt. |  |
+| `Custom Domain` | Uw [!DNL Salesforce] domeinprefix. <br> Zie de [[!DNL Salesforce] documentatie](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce] interface. | Als uw [!DNL Salesforce] domain is<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> u hebt `d5i000000isb4eak-dev-ed` als de waarde. |
+| `Client ID` | Uw Salesforce `Consumer Key`. <br> Zie de [[!DNL Salesforce] documentatie](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce] interface. | |
+| `Client Secret` | Uw Salesforce `Consumer Secret`. <br> Zie de [[!DNL Salesforce] documentatie](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce] interface. | |
 
 ### Guardrails {#guardrails}
 
 [!DNL Salesforce] saldeert transactieladingen door verzoek, tarief en onderbrekingsgrenzen op te leggen. Zie de [Limieten en toewijzingen voor API-aanvragen](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) voor meer informatie.
 
-Als uw [!DNL Salesforce] de accountbeheerder heeft IP-beperkingen afgedwongen, u moet deze toevoegen [IP-adressen Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aan uw [!DNL Salesforce] de vertrouwde op IP van rekeningen waaiers. Zie de [!DNL Salesforce] [Toegang tot vertrouwde IP-bereiken beperken voor een verbonden app](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) documentatie als u extra begeleiding nodig hebt.
+Als uw [!DNL Salesforce] de accountbeheerder heeft IP-beperkingen afgedwongen, u moet deze toevoegen [IP-adressen van Experience Platforms](/help/destinations/catalog/streaming/ip-address-allow-list.md) aan uw [!DNL Salesforce] de vertrouwde op IP van rekeningen waaiers. Zie de [!DNL Salesforce] [Toegang tot vertrouwde IP-bereiken beperken voor een verbonden app](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) documentatie als u extra begeleiding nodig hebt.
 
 >[!IMPORTANT]
 >
@@ -135,8 +135,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke publieksstatus in [!DNL Salesforce CRM] wordt bijgewerkt met de corresponderende publieksstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke publieksstatus in [!DNL Salesforce CRM] wordt bijgewerkt met de corresponderende publieksstatus van Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -146,43 +146,44 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** zoeken naar [!DNL Salesforce CRM]. U kunt de locatie ook onder de **[!UICONTROL CRM]** categorie.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden hieronder in en selecteert u **[!UICONTROL Connect to destination]**. Zie de [Gather [!DNL Salesforce CRM] geloofsbrieven](#gather-credentials) voor eventuele richtsnoeren.
-| Credentials | Beschrijving | | — | — | | **[!UICONTROL Username]** | Uw [!DNL Salesforce] gebruikersnaam account. | | **[!UICONTROL Password]** | Een samengevoegde tekenreeks die bestaat uit uw [!DNL Salesforce] accountwachtwoord toegevoegd aan uw [!DNL Salesforce] Beveiligingstoken.<br>De samengevoegde waarde bestaat uit: `{PASSWORD}{TOKEN}`.<br> Let op: gebruik geen accolades of spaties.<br>Als u bijvoorbeeld [!DNL Salesforce] Wachtwoord is `MyPa$$w0rd123` en [!DNL Salesforce] Beveiligingstoken is `TOKEN12345....0000`, de samengevoegde waarde die u in het dialoogvenster **[!UICONTROL Password]** field is `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Custom Domain]** | Uw [!DNL Salesforce] domeinvoorvoegsel. <br>Als uw domein bijvoorbeeld *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, moet u `d5i000000isb4eak-dev-ed` als de waarde. | | **[!UICONTROL Client ID]** | Uw [!DNL Salesforce] verbonden app `Consumer Key`. | | **[!UICONTROL Client Secret]** | Uw [!DNL Salesforce] verbonden app `Consumer Secret`. |
+| Credentials | Beschrijving | | — | — | | **[!UICONTROL Username]** | Uw [!DNL Salesforce] gebruikersnaam account. | | **[!UICONTROL Password]** | Een samengevoegde tekenreeks die bestaat uit uw [!DNL Salesforce] accountwachtwoord toegevoegd aan uw [!DNL Salesforce] Beveiligingstoken.<br>De samengevoegde waarde bestaat uit: `{PASSWORD}{TOKEN}`.<br> Nota, gebruik geen steunen of ruimten.<br>Als u bijvoorbeeld [!DNL Salesforce] Wachtwoord is `MyPa$$w0rd123` en [!DNL Salesforce] Beveiligingstoken is `TOKEN12345....0000`, de samengevoegde waarde die u in het dialoogvenster **[!UICONTROL Password]** field is `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Custom Domain]** | Uw [!DNL Salesforce] domeinprefix. <br>Als uw domein bijvoorbeeld *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, moet u `d5i000000isb4eak-dev-ed` als de waarde. | | **[!UICONTROL Client ID]** | Uw [!DNL Salesforce] verbonden app `Consumer Key`. | | **[!UICONTROL Client Secret]** | Uw [!DNL Salesforce] verbonden app `Consumer Secret`. |
 
-![Het schermschot van het Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
+![Schermopname van de gebruikersinterface van het platform waarin wordt getoond hoe te voor authentiek te verklaren.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
 Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Connected]** Als u een groene markering hebt, kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-* **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Salesforce ID Type]**:
    * Selecteren **[!UICONTROL Contact]** als de identiteiten die u wilt exporteren of bijwerken van type zijn *Contact*.
    * Selecteren **[!UICONTROL Lead]** als de identiteiten die u wilt exporteren of bijwerken van type zijn *Lood*.
 
-![Het schermschot van het Platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/salesforce/destination-details.png)
+![Platform UI het schermschot die de bestemmingsdetails tonen.](../../assets/catalog/crm/salesforce/destination-details.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
->
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+> 
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -195,7 +196,7 @@ Kenmerken die zijn opgegeven in het dialoogvenster **[!UICONTROL Source field]**
 Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL (API) Salesforce CRM] doelvelden, voer de volgende stappen uit:
 
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**, ziet u een nieuwe toewijzingsrij op het scherm.
-   ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform voor Nieuwe toewijzing toevoegen.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+   ![Voorbeeld van screenshot van platforminterface voor nieuwe toewijzing toevoegen.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
 1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** categorie en selecteer een kenmerk of definieer een met de **[!UICONTROL Attribute name]** naar behoefte. Zie de [[!DNL Salesforce CRM] documentatie](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5) voor richtsnoeren over ondersteunde kenmerken.
    * Herhaal deze stappen om de volgende toewijzingen tussen uw XDM-profielschema en [!DNL (API) Salesforce CRM]:
@@ -208,7 +209,7 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL (API) Salesforce CRM] do
      |`xdm: person.name.firstName`|`Attribute: FirstName`| De voornaam van de contactpersoon mag maximaal 40 tekens bevatten. | |`xdm: personalEmail.address`|`Attribute: Email`| Het e-mailadres van de contactpersoon. |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
-     ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform met doeltoewijzingen.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
+     ![Voorbeeld van schermopname van platformgebruikersinterface met doeltoewijzingen.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Werken met leads**
 
@@ -218,7 +219,7 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL (API) Salesforce CRM] do
      |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. Het bedrijf van de leider. | |`xdm: personalEmail.address`|`Attribute: Email`| Het e-mailadres van de lead. |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
-     ![Voorbeeld van schermafbeelding van gebruikersinterface van Platform met doeltoewijzingen.](../../assets/catalog/crm/salesforce/mappings-leads.png)
+     ![Voorbeeld van schermopname van platformgebruikersinterface met doeltoewijzingen.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -230,34 +231,34 @@ Om dit te doen, selecteer elk segment, dan ga de naam van het douanegebied van i
 
 Als uw [!DNL Salesforce] aangepast veld is `crm_2_seg`geeft u deze waarde op in het dialoogvenster [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** om het publiek te vullen van Experience Platform tot dit aangepaste veld.
 
-Een voorbeeld van een aangepast veld van [!DNL Salesforce] wordt hieronder weergegeven:
+Een voorbeeldveld van [!DNL Salesforce] wordt hieronder weergegeven:
 ![[!DNL Salesforce] UI-schermafbeelding met aangepast veld.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
 Een voorbeeld dat de plaats van wijst [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** wordt hieronder weergegeven:
-![Voorbeeld van een schermafbeelding van de gebruikersinterface van het Platform met het exporteren van het planningspubliek.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+![Voorbeeld van platformgebruikersinterface met een schermafbeelding waarin het publiek voor het programma wordt geëxporteerd.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 Zoals hierboven getoond [!DNL Salesforce] **[!UICONTROL Field Name]** komt exact overeen met de waarde die is opgegeven binnen [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
 
-Afhankelijk van uw gebruiksscenario kunnen alle geactiveerde doelgroepen aan hetzelfde worden toegewezen [!DNL Salesforce] aangepast veld of naar ander **[!UICONTROL Field Name]** in [!DNL Salesforce CRM]. Een typisch voorbeeld op basis van de hierboven getoonde afbeelding zou kunnen zijn.
+Afhankelijk van uw gebruiksscenario kunnen alle geactiveerde doelgroepen aan hetzelfde worden toegewezen [!DNL Salesforce] aangepast veld of een ander veld **[!UICONTROL Field Name]** in [!DNL Salesforce CRM]. Een typisch voorbeeld op basis van de bovenstaande afbeelding zou kunnen zijn.
 | [!DNL Salesforce CRM] segmentnaam | [!DNL Salesforce] **[!UICONTROL Field Name]** | [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** | | — | — | — | | crm_1_seg | `crm_1_seg` | `crm_1_seg` | | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
-Herhaal deze sectie voor elk geactiveerd segment van het Platform.
+Herhaal deze sectie voor elk geactiveerd platformsegment.
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteren **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met bestemmingen te navigeren.
-   ![Het schermschot van het Platform UI die Browse Doelen toont.](../../assets/catalog/crm/salesforce/browse-destinations.png)
+   ![Platform UI het schermschot die Browse Doelen toont.](../../assets/catalog/crm/salesforce/browse-destinations.png)
 
 1. Selecteer het doel en controleer of de status **[!UICONTROL enabled]**.
    ![Platform UI screenshot die de Looppas van Doelen Dataflow toont.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
-1. Naar de **[!UICONTROL Activation data]** en selecteert u vervolgens een publieksnaam.
-   ![Het het schermschot van het Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
+1. Schakel over naar de **[!UICONTROL Activation data]** en selecteert u vervolgens de naam van een publiek.
+   ![Het het schermschot van het platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
 1. Controleer het publieksoverzicht en zorg ervoor dat de telling van profielen aan de telling beantwoordt die binnen het segment wordt gecreeerd.
-   ![Platform UI-screenshot voorbeeld met segment.](../../assets/catalog/crm/salesforce/segment.png)
+   ![Voorbeeld van schermopname van platform-UI met segment.](../../assets/catalog/crm/salesforce/segment.png)
 
 1. Tot slot meldt u zich aan bij de Salesforce-website en controleert u of de profielen van het publiek zijn toegevoegd of bijgewerkt.
 
@@ -266,7 +267,7 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
    * Als u *Contactpersonen* binnen uw segment van het Platform, navigeer aan **[!DNL Apps]** > **[!DNL Contacts]** pagina.
      ![De het schermschot van CRM van Salesforce die de pagina van Contacten met de profielen van het segment toont.](../../assets/catalog/crm/salesforce/contacts.png)
 
-   * Selecteer een *Contact* en controleer of de velden zijn bijgewerkt. U kunt zien dat elke publieksstatus in [!DNL Salesforce CRM] is bijgewerkt met de corresponderende publieksstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example).
+   * Selecteer een *Contact* en controleer of de velden zijn bijgewerkt. U kunt zien dat elke publieksstatus in [!DNL Salesforce CRM] werd bijgewerkt met de overeenkomstige publieksstatus van Platform, gebaseerd op **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example).
      ![Salesforce CRM-schermafbeelding met de pagina Contactgegevens en de bijgewerkte publieksstatus.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Werken met leads**
@@ -274,7 +275,7 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
    * Als u *Leads* binnen uw segment van het Platform, dan navigeer aan **[!DNL Apps]** > **[!DNL Leads]** pagina.
      ![Salesforce CRM-schermafbeelding met de pagina Leads en de profielen van het segment.](../../assets/catalog/crm/salesforce/leads.png)
 
-   * Selecteer een *Lood* en controleer of de velden zijn bijgewerkt. U kunt zien dat elke publieksstatus in [!DNL Salesforce CRM] is bijgewerkt met de corresponderende publieksstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example).
+   * Selecteer een *Lood* en controleer of de velden zijn bijgewerkt. U kunt zien dat elke publieksstatus in [!DNL Salesforce CRM] werd bijgewerkt met de overeenkomstige publieksstatus van Platform, gebaseerd op **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example).
      ![Salesforce CRM-schermafbeelding met de pagina Details van lead en bijgewerkte publieksstatus.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
@@ -286,12 +287,12 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 ### Onbekende fouten aangetroffen tijdens het naar de bestemming duwen van gebeurtenissen {#unknown-errors}
 
 * Bij het controleren van een gegevensstroomuitvoering kan het volgende foutbericht optreden: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-  ![Fout in schermopname van Platform-interface.](../../assets/catalog/crm/salesforce/error.png)
+  ![Fout in schermopname van platforminterface.](../../assets/catalog/crm/salesforce/error.png)
 
    * Om deze fout te bevestigen, verifieer dat **[!UICONTROL Mapping ID]** die u in de activeringsworkflow aan de [!DNL Salesforce CRM] doel komt exact overeen met de waarde van het aangepaste veldtype dat u hebt gemaakt in [!DNL Salesforce]. Zie de [Aangepaste velden maken binnen [!DNL Salesforce]](#prerequisites-custom-field) voor richtsnoeren.
 
 * Wanneer u een segment activeert, wordt mogelijk een foutbericht weergegeven: `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * Neem contact op met uw [!DNL Salesforce] accountbeheerder om toe te voegen [IP-adressen Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aan uw [!DNL Salesforce] de vertrouwde op IP van rekeningen waaiers. Zie de [!DNL Salesforce] [Toegang tot vertrouwde IP-bereiken beperken voor een verbonden app](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) documentatie als u extra begeleiding nodig hebt.
+   * Neem contact op met uw [!DNL Salesforce] accountbeheerder om toe te voegen [IP-adressen van Experience Platforms](/help/destinations/catalog/streaming/ip-address-allow-list.md) aan uw [!DNL Salesforce] de vertrouwde op IP van rekeningen waaiers. Zie de [!DNL Salesforce] [Toegang tot vertrouwde IP-bereiken beperken voor een verbonden app](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) documentatie als u extra begeleiding nodig hebt.
 
 ## Aanvullende bronnen {#additional-resources}
 

@@ -3,9 +3,9 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1790'
 ht-degree: 0%
 
 ---
@@ -27,10 +27,11 @@ Voorbeelden van randbestemmingen zijn de [Adobe Target](../../destinations/catal
 > 
 > * Om gegevens te activeren en de [toewijzingsstap](#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
 > * Gegevens activeren zonder de opdracht [toewijzingsstap](#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 > 
 > Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-In dit artikel wordt uitgelegd welke workflow is vereist om het publiek in Adobe Experience Platform Edge-doelen te activeren. Indien samen gebruikt met [randsegmentatie](../../segmentation/ui/edge-segmentation.md) en de facultatieve [profieltoewijzing](#mapping)Met deze doelen kunnen gebruikers van dezelfde pagina en van de volgende pagina gebruikmaken van hoofdlettergebruik op uw web- en mobiele eigenschappen.
+In dit artikel wordt uitgelegd welke workflow is vereist om het publiek in Adobe Experience Platform Edge-doelen te activeren. Indien samen gebruikt met [randsegmentatie](../../segmentation/ui/edge-segmentation.md) en de facultatieve [profielkenmerken toewijzen](#mapping)Met deze doelen kunnen gebruikers van dezelfde pagina en van de volgende pagina gebruikmaken van hoofdlettergebruik op uw web- en mobiele eigenschappen.
 
 Bekijk de onderstaande video voor een kort overzicht van het configureren van de Adobe Target-verbinding voor &#39;edge personalization&#39;.
 
@@ -46,15 +47,15 @@ Bekijk de onderstaande video voor een kort overzicht van hoe u doelgroepen en pr
 
 ## Gebruiksscenario’s {#use-cases}
 
-De de verpersoonlijkingsbestemmingen van de rand laten u toe om Adobe verpersoonlijkingsoplossingen, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner te gebruiken (bijvoorbeeld [!DNL Optimizely], [!DNL Pega]), en bedrijfseigen systemen (bijvoorbeeld in-house CMS) om een diepere klanterlokalisatie via de [Aangepaste aanpassing](../catalog/personalization/custom-personalization.md) bestemming. Dit alles terwijl het ook leveraging van de gegevensinzameling van het Netwerk van de Rand van het Experience Platform &amp; segmenteringsmogelijkheden.
+De de verpersoonlijkingsbestemmingen van de rand laten u toe om de oplossingen van de de verpersoonlijking van de Adobe, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner (bijvoorbeeld) te gebruiken [!DNL Optimizely], [!DNL Pega]), en bedrijfseigen systemen (bijvoorbeeld in-house CMS) om een diepere klanterlokalisatie via de [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) bestemming. Dit alles terwijl het ook leveraging van de gegevensinzameling van het Netwerk van de Rand van het Experience Platform &amp; segmenteringsmogelijkheden.
 
 De hieronder beschreven gebruiksgevallen omvatten zowel personalisatie van de site als gerichte on-site reclame.
 
-Om deze gebruiksgevallen mogelijk te maken, hebben klanten een snelle, gestroomlijnde manier nodig om zowel het publiek als de profielkenmerkinformatie van het Experience Platform op te halen, en deze informatie naar of [Adobe Target](../catalog/personalization/adobe-target-connection.md) of de [Aangepaste aanpassing](../catalog/personalization/custom-personalization.md) in de gebruikersinterface van het Experience Platform.
+Om deze gebruiksgevallen mogelijk te maken, hebben klanten een snelle, gestroomlijnde manier nodig om zowel het publiek als de profielkenmerkinformatie van het Experience Platform op te halen, en deze informatie naar of [Adobe Target](../catalog/personalization/adobe-target-connection.md) of de [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) in de gebruikersinterface van het Experience Platform.
 
 ### Zelfde paginagrootte {#same-page}
 
-Een gebruiker bezoekt een pagina van uw website. De klant kan de huidige informatie van het paginabezoek (bijvoorbeeld verwijzend URL, browser taal, ingebedde productinformatie) gebruiken om de volgende actie/besluit (bijvoorbeeld, verpersoonlijking) te selecteren, gebruikend [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) verbinding voor niet-Adobe-platforms (bijvoorbeeld [!DNL Pega], [!DNL Optimizely], enz.).
+Een gebruiker bezoekt een pagina van uw website. De klant kan de huidige informatie van het paginabezoek (bijvoorbeeld verwijzend URL, browser taal, ingebedde productinformatie) gebruiken om de volgende actie/besluit (bijvoorbeeld, verpersoonlijking) te selecteren, gebruikend [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) verbinding voor niet-Adobe platforms (bijvoorbeeld [!DNL Pega], [!DNL Optimizely], enz.).
 
 ### Aanpassing van volgende pagina {#next-page}
 
@@ -74,7 +75,7 @@ Een huisverhuurbedrijf en verkoopbedrijf willen hun homepage met een banner pers
 
 ### Een gegevensstroom configureren in de gebruikersinterface voor gegevensverzameling {#configure-datastream}
 
-De eerste stap in vestiging moet uw verpersoonlijkingsbestemming een gegevensstroom voor het Web SDK van het Experience Platform vormen. Dit wordt gedaan in de UI van de Inzameling van Gegevens.
+De eerste stap in vestiging moet uw verpersoonlijkingsbestemming een gegevensstroom voor het Web SDK van het Experience Platform vormen. Dit wordt gedaan in de Inzameling UI van Gegevens.
 
 Bij het configureren van de gegevensstroom, onder **[!UICONTROL Adobe Experience Platform]** ervoor zorgen dat beide **[!UICONTROL Edge Segmentation]** en **[!UICONTROL Personalization Destinations]** zijn geselecteerd.
 
@@ -92,9 +93,9 @@ Nadat u de doelverbinding hebt gemaakt, moet u een [!DNL Active-On-Edge] samenvo
 
 Volg de instructies op [samenvoegingsbeleid maken](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)en zorgt ervoor dat de **[!UICONTROL Active-On-Edge Merge Policy]** schakelen.
 
-### Nieuw publiek maken in Platform {#create-audience}
+### Nieuw publiek maken in platform {#create-audience}
 
-Nadat u het [!DNL Active-On-Edge] samenvoegbeleid, moet u een nieuw publiek in Platform creëren.
+Nadat u het [!DNL Active-On-Edge] Samenvoegbeleid, moet u een nieuw publiek in Platform tot stand brengen.
 
 Volg de [toeschouwers](../../segmentation/ui/segment-builder.md) gids om uw nieuw publiek te creëren, en zorg ervoor [toewijzen](../../segmentation/ui/segment-builder.md#merge-policies) de [!DNL Active-On-Edge] samenvoegbeleid dat u in stap 3 hebt gemaakt.
 
@@ -107,7 +108,7 @@ Volg de [zelfstudie over het maken van doelverbinding](../ui/connect-destination
 Afhankelijk van de bestemming u vormt, verwijs naar de volgende artikelen voor bestemmings-specifieke eerste vereisten en verwante informatie:
 
 * [Adobe Target-verbinding](../catalog/personalization/adobe-target-connection.md#parameters)
-* [Aangepaste aanpassingsverbinding](../catalog/personalization/custom-personalization.md##parameters)
+* [Aangepaste verpersoonlijkingsverbinding](../catalog/personalization/custom-personalization.md##parameters)
 
 ## Kies uw bestemming {#select-destination}
 
@@ -135,9 +136,9 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, schakelt u
 
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
-* **[!UICONTROL Segmentation Service]**: Soorten publiek dat binnen Experience Platform door de Segmenteringsdienst wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
-* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform wordt gegenereerd en als CSV-bestanden in het Platform wordt geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
-* Andere soorten soorten publiek, afkomstig van andere Adobe oplossingen, zoals [!DNL Audience Manager].
+* **[!UICONTROL Segmentation Service]**: publiek dat binnen Experience Platform door de Dienst van de Segmentatie wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
+* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform is gegenereerd en als CSV-bestanden naar Platform is geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
+* Andere soorten soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager].
 
 ![Soorten publiek selecteren](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -159,17 +160,17 @@ Het toevoegen van kenmerken is optioneel en u kunt doorgaan naar de volgende sta
 
 ### Bronkenmerken selecteren {#select-source-attributes}
 
-Als u bronkenmerken wilt toevoegen, selecteert u de optie **[!UICONTROL Add new field]** controle op de **[!UICONTROL Source field]** kolom en zoek of navigeer naar het gewenste XDM-kenmerkveld, zoals hieronder wordt weergegeven.
+Als u bronkenmerken wilt toevoegen, selecteert u de **[!UICONTROL Add new field]** controle op de **[!UICONTROL Source field]** kolom en zoek of navigeer naar het gewenste XDM-kenmerkveld, zoals hieronder wordt weergegeven.
 
 ![Schermopname die laat zien hoe u een doelkenmerk in de toewijzingsstap selecteert](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Doelkenmerken selecteren {#select-target-attributes}
 
-Als u doelkenmerken wilt toevoegen, selecteert u de optie **[!UICONTROL Add new field]** controle op de **[!UICONTROL Target field]** kolom en typ in de naam van het aangepaste kenmerk waaraan u het bronkenmerk wilt toewijzen.
+Als u doelkenmerken wilt toevoegen, selecteert u de **[!UICONTROL Add new field]** controle op de **[!UICONTROL Target field]** kolom en typ in de naam van het aangepaste kenmerk waaraan u het bronkenmerk wilt toewijzen.
 
 >[!NOTE]
 >
->De selectie van doelkenmerken is alleen van toepassing op de [Aangepaste aanpassing](../catalog/personalization/custom-personalization.md) activeringswerkstroom, voor ondersteuning van veldtoewijzing met vriendelijke namen op het doelplatform.
+>De selectie van doelkenmerken is alleen van toepassing op [Aangepaste personalisatie](../catalog/personalization/custom-personalization.md) activeringswerkstroom, voor ondersteuning van veldtoewijzing met vriendelijke namen op het doelplatform.
 
 ![Schermopname die laat zien hoe een XDM-kenmerk in de toewijzingsstap moet worden geselecteerd](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
@@ -195,11 +196,11 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
+Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 
 ### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
 
-In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
+In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, leest u informatie over [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
 
 ![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
 

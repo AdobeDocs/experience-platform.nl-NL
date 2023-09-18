@@ -2,9 +2,9 @@
 title: Zendesk-verbinding
 description: Met de Zendesk-bestemming kunt u uw accountgegevens exporteren en activeren in Zendesk voor uw zakelijke behoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Dit [!DNL Adobe Experience Platform] [doel](/help/destinations/home.md) gebruikt
 
 ## Gebruiksscenario’s {#use-cases}
 
-De klantendienst van een multichannel B2C platform wil een naadloze gepersonaliseerde ervaring voor zijn klanten verzekeren. De afdeling kan een publiek maken op basis van hun eigen offline gegevens om nieuwe gebruikersprofielen te maken of bestaande profielgegevens bij te werken op basis van verschillende interacties (bijvoorbeeld aankopen, retourneren, enz.) en stuur deze soorten publiek van Adobe Experience Platform naar [!DNL Zendesk]. De bijgewerkte informatie wordt [!DNL Zendesk] zorgt ervoor dat de agent van de klantendienst de recente informatie van de klant onmiddellijk beschikbaar heeft, toelatend snellere reacties en resolutie.
+De klantendienst van een multichannel B2C platform wil een naadloze gepersonaliseerde ervaring voor zijn klanten verzekeren. De afdeling kan een publiek maken op basis van hun eigen offline gegevens om nieuwe gebruikersprofielen te maken of bestaande profielgegevens bij te werken op basis van verschillende interacties (bijvoorbeeld aankopen, retourneren, enz.) en stuur deze soorten publiek van Adobe Experience Platform naar [!DNL Zendesk]. Als u de bijgewerkte informatie in [!DNL Zendesk] zorgt ervoor dat de agent van de klantendienst de recente informatie van de klant onmiddellijk beschikbaar heeft, toelatend snellere reacties en resolutie.
 
 ## Vereisten {#prerequisites}
 
@@ -31,7 +31,7 @@ Raadpleeg de documentatie bij het Experience Platform voor [Publiek Lidmaatschap
 
 ### [!DNL Zendesk] voorwaarden {#prerequisites-destination}
 
-Als u gegevens van Platform wilt exporteren naar uw [!DNL Zendesk] account die u nodig hebt [!DNL Zendesk] account.
+Als u gegevens van Platform naar uw wilt exporteren [!DNL Zendesk] account die u nodig hebt [!DNL Zendesk] account.
 
 #### Gather [!DNL Zendesk] geloofsbrieven {#gather-credentials}
 
@@ -43,7 +43,7 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL Zendesk] be
 
 ## Guardrails {#guardrails}
 
-De [Prijs- en snelheidsbeperkingen](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing) pagina bevat de details van [!DNL Zendesk] API-limieten die aan uw account zijn gekoppeld. U moet ervoor zorgen dat uw gegevens en lading binnen deze beperkingen zijn.
+De [Prijs- en snelheidslimieten](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing) pagina bevat de details van [!DNL Zendesk] API-limieten die aan uw account zijn gekoppeld. U moet ervoor zorgen dat uw gegevens en lading binnen deze beperkingen zijn.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -59,8 +59,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Zendesk] wordt bijgewerkt met de corresponderende publieksstatus van het Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.</li></ul> |
-| Uitvoerfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)*, op basis van uw veldtoewijzing.</li><li> Elke segmentstatus in [!DNL Zendesk] wordt bijgewerkt met de corresponderende publieksstatus van Platform, gebaseerd op de **[!UICONTROL Mapping ID]** waarde die tijdens de [publieksplanning](#schedule-segment-export-example) stap.</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >
 >Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Als u verbinding wilt maken met dit doel, voert u de stappen uit die worden beschreven in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** zoeken naar [!DNL Zendesk]. U kunt de locatie ook onder de **[!UICONTROL CRM]** categorie.
 
@@ -79,32 +79,33 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** zoeken naar [!DN
 Vul de vereiste velden hieronder in. Zie de [Gather [!DNL Zendesk] geloofsbrieven](#gather-credentials) voor eventuele richtsnoeren.
 * **[!UICONTROL Bearer Token]**: Het toegangstoken dat u in uw [!DNL Zendesk] account.
 
-Om voor authentiek te verklaren aan de bestemming, selecteer **[!UICONTROL Connect to destination]**.
-![Het schermschot van het Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+Om voor authentiek te verklaren aan de bestemming, uitgezocht **[!UICONTROL Connect to destination]**.
+![Schermopname van de gebruikersinterface van het platform waarin wordt getoond hoe te voor authentiek te verklaren.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 Als de verstrekte gegevens geldig zijn, geeft de interface een **[!UICONTROL Connected]** status met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-![Het schermschot van het Platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/zendesk/destination-details.png)
+![Platform UI het schermschot die de bestemmingsdetails tonen.](../../assets/catalog/crm/zendesk/destination-details.png)
 
-* **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
->
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+> 
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor exporteren](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
@@ -118,11 +119,11 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Zendesk] doelvelden, voe
 
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een doelidentiteit of kies de **[!UICONTROL Select attributes]** en selecteer een van de ondersteunde schemakenmerken.
-   * Herhaal deze stappen om de volgende verplichte toewijzingen toe te voegen, kunt u ook andere kenmerken toevoegen die u tussen uw XDM-profielschema en uw [!DNL Zendesk] instantie: |Bronveld|Doelveld| Verplicht| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja | |`xdm: person.name.firstName`|`xdm: first_name`| |
+1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een doelidentiteit of kies de categorie **[!UICONTROL Select attributes]** en selecteer een van de ondersteunde schemakenmerken.
+   * Herhaal deze stappen om de volgende verplichte toewijzingen toe te voegen, kunt u ook andere kenmerken toevoegen die u tussen uw XDM-profielschema en uw [!DNL Zendesk] -instantie: |Bronveld|Doelveld| Verplicht| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
-     ![Voorbeeld van schermopname met gebruikersinterface van Platform met kenmerktoewijzingen.](../../assets/catalog/crm/zendesk/mappings.png)
+     ![Voorbeeld van schermopname voor platformgebruikersinterface met kenmerktoewijzingen.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -132,23 +133,23 @@ Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding,
 
 ### Het publiek van het programma uitvoeren en voorbeeld {#schedule-segment-export-example}
 
-In de [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) Als u een stap wilt zetten in de activeringsworkflow, moet u het publiek van het Platform handmatig toewijzen aan het aangepaste veldkenmerk in [!DNL Zendesk].
+In de [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) Als u een stap wilt zetten in de activeringsworkflow, moet u het publiek van het platform handmatig toewijzen aan het aangepaste veldkenmerk in [!DNL Zendesk].
 
 Om dit te doen, selecteer elk segment, dan ga het overeenkomstige attribuut van het douaneveld van in [!DNL Zendesk] in de **[!UICONTROL Mapping ID]** veld.
 
 Hieronder ziet u een voorbeeld:
-![Voorbeeld van een schermafbeelding van de gebruikersinterface van het Platform met het exporteren van het planningspubliek.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![Voorbeeld van platformgebruikersinterface met een schermafbeelding waarin het publiek voor het programma wordt geëxporteerd.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteren **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en navigeer naar de lijst met bestemmingen.
-1. Selecteer vervolgens de bestemming en schakel over naar de **[!UICONTROL Activation data]** en selecteert u vervolgens een publieksnaam.
-   ![Het het schermschot van het Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+1. Selecteer vervolgens de bestemming en schakel over naar de **[!UICONTROL Activation data]** en selecteert u vervolgens de naam van een publiek.
+   ![Het het schermschot van het platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. Controleer het publieksoverzicht en zorg ervoor dat de telling van profielen aan de telling binnen het segment beantwoordt.
-   ![Platform UI-screenshot voorbeeld met segment.](../../assets/catalog/crm/zendesk/segment.png)
+   ![Voorbeeld van schermopname van platform-UI met segment.](../../assets/catalog/crm/zendesk/segment.png)
 
 1. Aanmelden bij de [!DNL Zendesk] website, navigeer vervolgens naar de **[!UICONTROL Contacts]** pagina om te controleren of de profielen van het publiek zijn toegevoegd. Deze lijst kan worden gevormd om kolommen voor de extra gebieden te tonen die met het publiek worden gecreeerd**[!UICONTROL Mapping ID]** en de status van het publiek.
    ![Het schermschot van Zendesk die de pagina van Contacten met de extra gebieden toont die met de publieksnaam worden gecreeerd.](../../assets/catalog/crm/zendesk/contacts.png)
@@ -174,7 +175,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| April 2023 | Documentatie bijwerken | <ul><li>We hebben de [gebruik](#use-cases) een duidelijker voorbeeld van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>We hebben de [toewijzing](#mapping-considerations-example) om de juiste vereiste toewijzingen te weerspiegelen. De `Attribute: last_name` en `Identity: email` doeltoewijzingen zijn verplicht voor deze bestemming. Als deze toewijzingen ontbreken, worden andere toewijzingen genegeerd en niet verzonden naar [!DNL Zendesk].</li> <li>We hebben de [toewijzing](#mapping-considerations-example) met duidelijke voorbeelden van zowel verplichte als optionele toewijzingen.</li></ul> |
+| April 2023 | Documentatie bijwerken | <ul><li>We hebben de [gebruikgevallen](#use-cases) een duidelijker voorbeeld van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>We hebben de [toewijzing](#mapping-considerations-example) om de juiste vereiste toewijzingen te weerspiegelen. De `Attribute: last_name` en `Identity: email` doeltoewijzingen zijn verplicht voor deze bestemming. Als deze toewijzingen ontbreken, worden andere toewijzingen genegeerd en niet verzonden naar [!DNL Zendesk].</li> <li>We hebben de [toewijzing](#mapping-considerations-example) met duidelijke voorbeelden van zowel verplichte als optionele toewijzingen.</li></ul> |
 | Maart 2023 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
 
 {style="table-layout:auto"}

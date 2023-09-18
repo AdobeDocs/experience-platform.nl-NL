@@ -3,9 +3,9 @@ keywords: reclame; criteria;
 title: Criteverbinding
 description: Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1030'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel w
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
-| `email_sha256` | E-mailadressen die met het algoritme SHA-256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA-256-gehashte e-mailadressen. Wanneer het bronveld hashkenmerken bevat, controleert u de [!UICONTROL Apply transformation] als u wilt dat het Platform de gegevens bij activering automatisch verbergt. |
+| `email_sha256` | E-mailadressen die met het algoritme SHA-256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA-256-gehashte e-mailadressen. Wanneer het bronveld hashkenmerken bevat, controleert u de [!UICONTROL Apply transformation] als u wilt dat Platform de gegevens bij activering automatisch verbergt. |
 | `gum_id` | Criteo [!DNL GUM] cookie-id | [!DNL GUM IDs] cliënten toestaan een correspondentie aan te houden tussen hun systeem voor gebruikersidentificatie en de gebruikersidentificatie van de Commissie ([!DNL UID]). Als het id-type `gum_id`, een aanvullende parameter, [!DNL GUM Caller ID], moet ook worden opgenomen. Neem contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of om meer informatie hierover te krijgen [!DNL GUM ID] synchroniseren, indien nodig. |
 
 ## Type en frequentie exporteren {#export-type-frequency}
@@ -57,7 +57,7 @@ Om u te helpen beter begrijpen hoe te gebruiken [!DNL Criteo] doel, hier zijn so
 
 ### Gebruik geval 1: Krijg verkeer
 
-Laat uw bedrijf zien met relevante productaanbiedingen en flexibele creatieve producten. Met intelligente productaanbevelingen zullen uw advertenties automatisch de producten bevatten die het meest waarschijnlijk bezoeken en betrokkenheid zullen veroorzaken. Het flexibele richten staat u toe om publiek van de handels van Criteo gegevensreeks of van uw eigen perspectieflijsten en Adobe CDP segmenten te bouwen.
+Laat uw bedrijf zien met relevante productaanbiedingen en flexibele creatieve producten. Met intelligente productaanbevelingen zullen uw advertenties automatisch de producten bevatten die het meest waarschijnlijk bezoeken en betrokkenheid zullen veroorzaken. Flexibele het richten staat u toe om publiek van de handelgegevens van Criteo of van uw eigen perspectieflijsten en Adobe CDP segmenten te bouwen.
 
 ### Hoofdlettergebruik 2: website-conversies verhogen
 
@@ -111,7 +111,8 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
 Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
 

@@ -3,9 +3,9 @@ title: (Bèta) De handelsbank - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk - CRM] doel in Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+>[!DNL The Trade Desk - CRM] Doel in Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 >
 >Met de release van EUID (European Unified ID) ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [doelcatalogus](/help/destinations/catalog/overview.md).
 >* Als u gegevens in de EU verzamelt, moet u de **[!DNL The Trade Desk - CRM (EU)]** bestemming.
@@ -93,11 +93,16 @@ Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Advertiser ID]**: uw [!DNL Trade Desk Advertiser ID], die door uw [!DNL Trade Desk] Accountmanager of gevonden onder [!DNL Advertiser Preferences] in de [!DNL Trade Desk] UI.
 
-![Het schermschot van het Platform UI die tonen hoe te om bestemmingsdetails in te vullen.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Platform UI het schermschot die tonen hoe te om bestemmingsdetails in te vullen.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
 Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Controleer het Experience Platform [gegevensbeheer - overzicht](/help/data-governance/policies/overview.md) voor meer informatie .
 
 ## Soorten publiek naar dit doel activeren {#activate}
+
+>[!IMPORTANT]
+> 
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
 Lezen [publieksgegevens activeren om exportdoelen voor batchprofielen te activeren](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies voor het activeren van het publiek naar een bestemming.
 
@@ -113,7 +118,7 @@ In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiername
 
 In de **[!UICONTROL Mapping]** pagina, moet u attributen of identiteitsnamespaces van de bronkolom en kaart aan de doelkolom selecteren.
 
-![Platform UI-screenshot om publieksactivering toe te wijzen.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Platform UI-screenshot om publieksactivering in kaart te brengen.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het activeren van het publiek naar [!DNL The Trade Desk] CRM-bestemming.
 
@@ -124,7 +129,7 @@ Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het active
 Bronvelden selecteren:
 
 * Selecteer de `Email` naamruimte of attribuut als bronidentiteit als het onbewerkte e-mailadres wordt gebruikt bij het invoeren van gegevens.
-* Selecteer de `Email_LC_SHA256` naamruimte of attribuut als bronidentiteit als u de e-mailadressen van de klant bij het invoeren van gegevens in het Platform hebt onderbroken.
+* Selecteer de `Email_LC_SHA256` naamruimte of attribuut als bronidentiteit als u de e-mailadressen van de klant bij het invoeren van gegevens in Platform hebt gewijzigd.
 
 Doelvelden selecteren:
 
@@ -133,7 +138,7 @@ Doelvelden selecteren:
 
 ## Gegevens exporteren valideren {#validate}
 
-Om te controleren dat de gegevens correct uit Experience Platform en naar worden uitgevoerd [!DNL The Trade Desk], gelieve het publiek onder de datatielabel Adobe 1PD te vinden binnen [!DNL The Trade Desk] Platform voor gegevensbeheer (DMP). Hier volgen de stappen om de bijbehorende id te vinden in het dialoogvenster [!DNL Trade Desk] UI:
+Om te controleren dat de gegevens correct uit Experience Platform en naar worden uitgevoerd [!DNL The Trade Desk], gelieve het publiek onder Adobe 1PD gegevensblok te vinden binnen [!DNL The Trade Desk] Data Management Platform (DMP). Hier volgen de stappen om de bijbehorende id te vinden in het dialoogvenster [!DNL Trade Desk] UI:
 
 1. Klik eerst op de knop **[!UICONTROL Data]** Tab en revisie **[!UICONTROL First-Party]**.
 2. Omlaag schuiven, onder **[!UICONTROL Imported Data]**, vindt u de **[!UICONTROL Adobe 1PD Tile]**.
