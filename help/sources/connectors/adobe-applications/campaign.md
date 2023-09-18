@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Adobe Campaign Managed Cloud Services;campagne;campagne beheerde services
 title: Adobe Campaign Managed Cloud Services
-description: Leer hoe te om Campagne Beheerde Cloud Services met Platform te verbinden gebruikend het gebruikersinterface
+description: Leer hoe te om Campagne Beheerde Cloud Servicen aan Platform te verbinden gebruikend het gebruikersinterface
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '757'
 ht-degree: 0%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Adobe Campaign Managed Cloud Services biedt een Managed Services-platform voor het ontwerpen van ervaringen met klanten over meerdere kanalen en biedt een omgeving voor visuele campagneorchestratie, realtime interactiebeheer en uitvoering via meerdere kanalen. Ga naar [Adobe Campaign v8-documentatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) voor meer informatie .
 
@@ -40,7 +40,7 @@ Selecteer vervolgens de **Gegevens** tab.
 
 ![De Adobe Campaign v8 clientconsole met het gegevenstabblad geselecteerd.](./images/campaign/data.png)
 
-Klik met de rechtermuisknop of toetsaanslag in het deelvenster Gegevens om het contextmenu te openen. Selecteer **Lijst configureren...**
+Klik met de rechtermuisknop of toetsaanslag in het deelvenster Gegevens om het contextmenu te openen. Van hier, selecteer **Lijst configureren...**
 
 ![De Adobe Campaign v8 clientconsole met het contextmenu geopend en de lijstoptie Configureren geselecteerd.](./images/campaign/configure.png)
 
@@ -70,8 +70,14 @@ Voor gedetailleerde instructies over hoe te om een schema tot stand te brengen, 
 
 Tot slot moet u een dataset voor uw schema&#39;s tot stand brengen. Voor gedetailleerde instructies op hoe te om een dataset tot stand te brengen, lees de gids op [het creëren van een dataset in UI](../../../catalog/datasets/user-guide.md).
 
-## Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de gebruikersinterface van het Platform
+## Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de interface van het platform
 
 Nu u uw gegevenslogboeken in de de cliëntconsole van de Campagne hebt betreden, creeerde een schema, en een dataset, kunt u nu te werk gaan om een bronverbinding tot stand te brengen om uw gegevens van Managed Services van de Campagne aan Platform te brengen.
 
 Lees de handleiding voor gedetailleerde instructies over hoe u uw AMP 8-leveringslogboeken en trackinglogbestanden naar Experience Platfrom kunt brengen [het creëren van een Gecentreerde Managed Services bronverbinding in UI](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>Er is een randgeval waarin de interactie van een onlangs verwijderde e-mailontvanger met een e-mail persoonlijke informatie in Experience Platform zou kunnen opnieuw opnemen. In sommige gevallen, zou dit marketing aan die gebruiker kunnen re-toelaten.
+>
+>* Dit scenario is slechts actief tussen de tijd een privacyverzoek in Experience Platform is uitgevoerd en de tijd het in Adobe Campaign Classic is uitgevoerd. Nadat het verzoek in Campagne wordt uitgevoerd, is er een controle om ervoor te zorgen het verslag niet wordt uitgevoerd naar Campagne. Voer na 72 uur na de uitvoering een GDPR-verzoek opnieuw uit om dit probleem op te lossen.
