@@ -1,33 +1,38 @@
 ---
 title: Overzicht van berekende kenmerken
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
-badge: "Bèta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1059'
+ht-degree: 1%
 
 ---
 
-# Overzicht van berekende kenmerken
 
->[!IMPORTANT]
->
->De berekende kenmerken staan momenteel in **bèta** en is **niet** beschikbaar voor alle gebruikers.
+# Overzicht van berekende kenmerken
 
 Personalisatie op basis van gebruikersgedrag is een belangrijke vereiste voor marketers om het effect van personalisatie te maximaliseren. U kunt bijvoorbeeld marketingberichten aanpassen met het meest recent bekeken product om de conversie te stimuleren, of de webpagina aanpassen op basis van de totale aankopen die gebruikers hebben gedaan om het retoucheren te stimuleren.
 
 Met behulp van berekende kenmerken kunnen gedragsgegevens van profielen snel worden omgezet in geaggregeerde waarden op profielniveau zonder afhankelijk te zijn van technische bronnen voor:
 
-- Het toelaten van gerichte verpersoonlijking met activering van gedragsaggregaten aan de bestemmingen van Real-time Customer Data Platform, gebruik in Adobe Journey Optimizer, of in segmentatie
+- Het toelaten van gerichte één-aan-één of partijverpersoonlijking met activering van gedragsaggregaten aan de bestemmingen van Real-time Customer Data Platform en gebruik in Adobe Journey Optimizer
+- Vereenvoudigde publiekssegmentatie met opslag van gedragsaggregaten als profielkenmerken
 - Standaardisering van geaggregeerde profielgedragsgegevens voor gebruik op verschillende platforms en toepassingen
 - Beter gegevensbeheer met consolidatie van gegevens van gebeurtenissen met een oud profiel in betekenisvolle gedragsinzichten
 
-Deze aggregaten worden berekend op basis van de gegevenssets voor gebeurtenissen met profiel die in Adobe Experience Platform worden ingevoerd. Elk gegevens verwerkt attribuut is een profielattribuut dat op uw schema van de profielunie wordt gecreeerd, en is gegroepeerd onder &quot;Berekend Attribuut&quot;gebiedsgroep in uw unieschema.
+Deze aggregaten worden berekend op basis van de gegevenssets voor gebeurtenissen met profiel die in Adobe Experience Platform worden ingevoerd. Elk gegevens verwerkt attribuut is een profielattribuut dat op uw schema van de profielunie wordt gecreeerd, en is gegroepeerd onder de &quot;SystemComputedAttribute&quot;gebiedsgroep in uw unieschema.
 
-Voorbeelden van gebruiksgevallen zijn het personaliseren van advertenties met de naam van het laatst weergegeven product voor mensen die de afgelopen 7 dagen geen aankopen hebben gedaan, het personaliseren van marketinge-mails met totale bonuspunten waarmee gebruikers worden gefeliciteerd met hun promotie naar een Premium-niveau, of het berekenen van de levensduurwaarde van elke klant om een betere doelgerichtheid te bereiken.
+Voorbeelden van gebruiksgevallen zijn:
 
-Deze handleiding helpt u om de rol van berekende kenmerken in het Platform beter te begrijpen, en om de grondbeginselen van berekende kenmerken uit te leggen.
+- E-mails met totale bonuspunten aanpassen om gebruikers te feliciteren met hun promotieniveau
+- Communicatie aan gebruikers aanpassen op basis van aankooptellingen en frequentie
+- E-mails met abonnementen aanpassen op basis van vervaldatums van abonnementen
+- Opnieuw gericht gebruikers die een product hebben bekeken maar niet gekocht met het laatst bekeken product
+- Gebeurtenisaggregaten activeren via berekende kenmerken op een downstreamsysteem met Real-Time CDP Destination
+- Meerdere, op gebeurtenissen gebaseerde doelgroepen samenvouwen tot een meer versmalde groep met berekende kenmerken
+- Niet-geverifieerde gebruikers offsite opnieuw toewijzen met behulp van recente partner-id&#39;s uit gebeurtenissen
+
+Deze gids zal u helpen om de rol van gegevens verwerkte attributen binnen Platform beter te begrijpen, naast het verklaren van de grondbeginselen van gegevens verwerkte attributen.
 
 ## Berekende kenmerken begrijpen
 
@@ -41,17 +46,17 @@ De berekende attributen omvatten het creëren van een uitdrukking, of &quot;rege
 
 Met berekende kenmerken kunt u gebeurtenisaggregaten zelf definiëren door vooraf gedefinieerde functies te gebruiken. De details over deze functies zijn hieronder te vinden:
 
-| -functie | Beschrijving | Ondersteunde gegevenstypen | Voorbeeld van gebruik |
+| -functie | Beschrijving | Ondersteunde gegevenstypen | Voorbeeldgebruik |
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | Een functie die **sommen** Hiermee wordt de opgegeven waarde voor gekwalificeerde gebeurtenissen opgehaald. | Gehele getallen, getallen en nummers | Totaal van alle aankopen in de afgelopen 7 dagen |
 | TELLEN | Een functie die **aantal** het aantal gebeurtenissen dat voor de bepaalde regel is opgetreden. | N.v.t. | Aantal aankopen in de laatste drie maanden |
 | MIN | Een functie die de **minimum** waarde voor de gekwalificeerde gebeurtenissen. | Gehele getallen, getallen, nummers, tijdstempels | Gegevens van eerste aankoop in de laatste 7 dagen<br/>Minimumorderbedrag in de afgelopen 4 weken |
 | MAX | Een functie die de **maximum** waarde voor de gekwalificeerde gebeurtenissen. | Gehele getallen, getallen, nummers, tijdstempels | Gegevens over laatste aankoop in de afgelopen 7 dagen<br/>Maximumbedrag van de bestelling in de afgelopen 4 weken |
-| MOST_RECENT | Een functie de vondst de gespecificeerde attributenwaarde van de recentste gekwalificeerde gebeurtenis. | Alle primitieve waarden, arrays met primitieve waarden | Laatste product bekeken in de afgelopen 7 dagen |
+| MOST_RECENT | Een functie die de opgegeven kenmerkwaarde van de meest recente gekwalificeerde gebeurtenis vindt. Deze functie geeft **beide** de waarde en het tijdstempel van het kenmerk. | Alle primitieve waarden, arrays met primitieve waarden | Laatste product bekeken in de afgelopen 7 dagen |
 
-### Termijnen
+### Termijnen voor opzoeken
 
-De berekende attributen worden berekend in partijen, die u uw aggregaten en het gebruiken van de recentste gebeurtenissen vers laten houden. Om deze bijna scenario&#39;s in real time te steunen, verfrist frequentie afhankelijk van de periode van de gebeurtenisterugzoeker varieert.
+De berekende attributen worden berekend in partijen, die u uw aggregaten en het gebruiken van de recentste gebeurtenissen vers laten houden. Om deze bijna scenario&#39;s in real time te steunen, verfrist frequentie zich afhankelijk van de periode van de gebeurtenisraadpleging.
 
 De terugkijkperiode verwijst naar de hoeveelheid tijd die wanneer het samenvoegen van de Gebeurtenissen van de Ervaring voor het gegevens verwerkte attribuut wordt herzien. Deze periode kan in uren, dagen, weken, of maanden worden bepaald.
 
@@ -68,21 +73,19 @@ Als uw berekende kenmerk bijvoorbeeld een terugzoekperiode van de laatste 7 dage
 
 >[!NOTE]
 >
->Zowel weken als maanden worden beschouwd als **kalenderweken** en **kalendermaanden** bij gebruik in gebeurtenislookbacks.
+>Zowel weken als maanden worden beschouwd als **kalenderweken** en **kalendermaanden** bij gebruik in gebeurtenislookbacks. De kalenderweek begint op de **zondag** en eindigt op de **zaterdag** van de week.
 
-**Snel vernieuwen**
+**Snel vernieuwen** {#fast-refresh}
 
->[!IMPORTANT]
->
->Maximaal **vijf** Voor kenmerken per sandbox kan snelle vernieuwing zijn ingeschakeld.
-
-Met Snel vernieuwen kunt u uw kenmerken up-to-date houden. Als u deze optie inschakelt, kunt u uw berekende kenmerken dagelijks vernieuwen, zelfs voor langere terugzoekperiodes. Dit staat u toe om in bijna real time aan gebruikersactiviteiten te reageren. Deze waarde is alleen van toepassing op berekende kenmerken met een terugzoekperiode die langer is dan een week.
+Met Snel vernieuwen kunt u uw kenmerken up-to-date houden. Als u deze optie inschakelt, kunt u uw berekende kenmerken dagelijks vernieuwen, zelfs voor langere terugzoekperiodes, zodat u snel kunt reageren op gebruikersactiviteiten.
 
 >[!NOTE]
 >
->Als u snel vernieuwt inschakelt, varieert de terugzoekduur van de gebeurtenis, aangezien de terugzoekperiode wekelijks of maandelijks wordt vernieuwd.
+>Als u snel vernieuwt inschakelt, varieert de terugzoekduur van de gebeurtenis, aangezien de terugzoekperiode wekelijks of maandelijks wordt teruggedraaid.
 >
->Bijvoorbeeld, als u een gegevens verwerkt attribuut met een twee week terugzoekperiode met snel creeert toegelaten verfrist, betekent dit dat de aanvankelijke raadplegingsperiode twee weken zal zijn. Nochtans, met elke dag verfrist zich, zal de raadplegingsperiode gebeurtenissen van de extra dag omvatten. Deze toevoeging van dagen gaat door tot de volgende kalenderweek begint, waarin het terugkijkvenster zal rollen en aan twee weken terugkeren.
+>Als u een gegevens verwerkt attribuut met een twee-week raadplegingsperiode met snel creeert toegelaten verfrist zich, betekent dit dat de aanvankelijke raadplegingsperiode twee weken zal zijn. Nochtans, met elke dag verfrist zich, zal de raadplegingsperiode gebeurtenissen van de extra dag omvatten. Deze toevoeging van dagen gaat door tot de volgende kalenderweek begint, waarin het terugkijkvenster zal rollen en aan twee weken terugkeren.
+>
+>Als er bijvoorbeeld een terugzoekperiode van twee weken was die op 15 maart (zondag) begon en de functie voor snel vernieuwen ingeschakeld is, en dagelijks vernieuwt, blijft de terugzoekperiode inclusief tot 22 maart, waar deze weer op twee weken wordt ingesteld. Kortom, het berekende kenmerk is **vernieuwd** dagelijks, met de raadplegingsperiode die van stijgt **twee** weken tot **drie** weken in de week, en vervolgens terugkeren naar **twee** weken.
 
 ## Volgende stappen
 

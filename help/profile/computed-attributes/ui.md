@@ -1,20 +1,15 @@
 ---
-title: Gebruikershandleiding voor berekende kenmerken
+title: Gebruikershandleiding berekende kenmerken
 description: Leer hoe u berekende kenmerken maakt, weergeeft en bijwerkt met de gebruikersinterface van Adobe Experience Platform.
-badge: "Bèta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 
 # Gebruikershandleiding voor berekende kenmerken
-
->[!IMPORTANT]
->
->De berekende kenmerken staan momenteel in **bèta** en is **niet** beschikbaar voor alle gebruikers.
 
 In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 
@@ -24,8 +19,8 @@ In dit document wordt uitgelegd hoe u berekende kenmerken kunt maken en bijwerke
 
 Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] diensten die betrokken zijn bij het beheer [!DNL Real-Time Customer Profiles]. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Real-Time Customer Profile]](../home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
 
 ## Berekende kenmerken weergeven {#view}
 
@@ -33,7 +28,7 @@ Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UIC
 
 ![De [!UICONTROL Profile] en de [!UICONTROL Computed attributes] tabbladen worden gemarkeerd en geven gebruikers weer hoe ze de pagina met berekende kenmerken kunnen openen.](./images/ui/browse.png)
 
-Als u wilt selecteren welke velden zichtbaar zijn, kunt u ![Het pictogram voor het configureren van kolommen](./images/ui/configure-icon.png) om toe te voegen of te verwijderen welke gebieden u wilt worden getoond.
+U kunt selecteren welke velden zichtbaar zijn ![Het pictogram voor het configureren van kolommen](./images/ui/configure-icon.png) om toe te voegen of te verwijderen welke gebieden u wilt worden getoond.
 
 | Veld | Beschrijving |
 | ----- | ----------- |
@@ -45,12 +40,22 @@ Als u wilt selecteren welke velden zichtbaar zijn, kunt u ![Het pictogram voor h
 | [!UICONTROL Refresh frequency] | Een indicatie hoe vaak het berekende attribuut naar verwachting zal worden vernieuwd. Mogelijke waarden zijn uurwaarden, dagwaarden, weekwaarden of maandwaarden. |
 | [!UICONTROL Fast refresh] | Een waarde die toont al dan niet snel verfrist voor dit compute attribuut wordt toegelaten. Als de snelle verfrissing wordt toegelaten, laat dit de gegevens verwerkte attributen op een dagelijkse basis, eerder dan op een wekelijkse, bi-wekelijkse, of maandbasis worden verfrist. Deze waarde is alleen van toepassing op berekende kenmerken met een terugzoekperiode die langer is dan een week. |
 | [!UICONTROL Lifecycle status] | De huidige status van het berekende kenmerk. Er zijn drie mogelijke statussen: <ul><li>**[!UICONTROL Draft]:** Het berekende kenmerk doet dit **niet** hebben nog een gebied dat op het schema wordt gecreeerd. In deze status kan het berekende kenmerk worden bewerkt. </li><li>**[!UICONTROL Published]:** Het berekende attribuut heeft een gebied dat op het schema wordt gecreeerd en is klaar om te worden gebruikt. In deze status wordt het berekende kenmerk **kan** worden bewerkt.</li><li>**[!UICONTROL Inactive]:** Het berekende kenmerk is uitgeschakeld. Lees voor meer informatie over de inactieve status de [Pagina met veelgestelde vragen](./faq.md#inactive-status). </li> |
+| [!UICONTROL Created] | Een tijdstempel met de datum en tijd waarop het berekende kenmerk is gemaakt. |
+| [!UICONTROL Last modified] | Een tijdstempel met de datum en tijd waarop het berekende kenmerk voor het laatst is gewijzigd. |
+
+U kunt de weergegeven berekende kenmerken ook filteren op basis van de levenscyclusstatus. Selecteer de ![trechter](./images/ui/filter-icon.png) pictogram.
+
+![Het filterpictogram wordt gemarkeerd.](./images/ui/select-filter.png)
+
+U kunt nu de berekende kenmerken filteren op status ([!UICONTROL Draft], [!UICONTROL Published], en [!UICONTROL Inactive]).
+
+![De opties waarmee u de berekende kenmerken kunt filteren, worden gemarkeerd. Deze opties omvatten [!UICONTROL Draft], [!UICONTROL Published], en [!UICONTROL Inactive].](./images/ui/view-filters.png)
 
 Bovendien kunt u een berekend attribuut selecteren om meer gedetailleerde informatie over het te zien. Lees voor meer informatie over de pagina met gegevens over berekende kenmerken de [de sectie met details van een berekend kenmerk weergeven](#view-details).
 
 ## Een berekend kenmerk maken {#create}
 
-Selecteer **[!UICONTROL Create computed attribute]** om de nieuwe berekende kenmerkworkflow in te voeren.
+Als u een nieuw berekende kenmerk wilt maken, selecteert u **[!UICONTROL Create computed attribute]** om de nieuwe berekende kenmerkworkflow in te voeren.
 
 ![De [!UICONTROL Create computed attributes] wordt gemarkeerd en geeft gebruikers weer hoe ze een berekende kenmerkpagina kunnen maken.](./images/ui/create.png)
 
@@ -92,9 +97,24 @@ Na het toepassen van de samenvoegingsfunctie, zult u de raadplegingsperiode van 
 
 ![De terugzoekduur wordt gemarkeerd.](./images/ui/select-lookback-duration.png)
 
+### Snel vernieuwen {#fast-refresh}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_computedAttributes_fastRefresh"
+>title="Snel vernieuwen"
+>abstract="Met Snel vernieuwen kunt u uw kenmerken up-to-date houden. Als u deze optie inschakelt, kunt u uw berekende kenmerken dagelijks vernieuwen, zelfs voor langere terugzoekperiodes, zodat u snel kunt reageren op gebruikersactiviteiten. Deze waarde is alleen van toepassing op berekende kenmerken met een terugzoekperiode die langer is dan een week."
+
+Tijdens het toepassen van de samenvoegingsfunctie, kunt u snel toelaten verfrist zich als de raadplegingsperiode groter is dan één week.
+
+![De [!UICONTROL Fast Refresh] selectievakje is gemarkeerd.](./images/ui/enable-fast-refresh.png)
+
+Met Snel vernieuwen kunt u uw kenmerken up-to-date houden. Als u deze optie inschakelt, kunt u uw berekende kenmerken dagelijks vernieuwen, zelfs voor langere terugzoekperiodes, zodat u snel kunt reageren op gebruikersactiviteiten.
+
+Lees voor meer informatie over snel vernieuwen de [sectie voor snel vernieuwen](./overview.md#fast-refresh) van het berekende kenmerkenoverzicht.
+
 Als deze stappen zijn voltooid, kunt u dit berekende kenmerk nu opslaan als concept of het meteen publiceren.
 
-![De [!UICONTROL Save as draft] en [!UICONTROL Publish] knoppen worden gemarkeerd.](./images/ui/draft-or-publish.png)
+![De [!UICONTROL Save as draft] en [!UICONTROL Publish] worden gemarkeerd.](./images/ui/draft-or-publish.png)
 
 ## De details van een berekend kenmerk weergeven {#view-details}
 
@@ -118,7 +138,7 @@ Deze pagina bevat een overzicht van de gegevens van het berekende kenmerk en een
 
 ### Concept, berekend kenmerk {#draft}
 
-Wanneer u een concept van een berekend kenmerk selecteert, wordt **[!UICONTROL Edit computed attributes]** wordt weergegeven. Deze pagina, vergelijkbaar met de [!UICONTROL Create computed attributes] , kunt u de basisgegevens en de definitie van het berekende kenmerk bewerken voordat u het concept kunt bijwerken of publiceren.
+Wanneer u een concept van een berekend kenmerk selecteert, wordt **[!UICONTROL Edit computed attributes]** wordt weergegeven. Deze pagina, net als de pagina [!UICONTROL Create computed attributes] , kunt u de basisgegevens en de definitie van het berekende kenmerk bewerken voordat u het concept kunt bijwerken of publiceren.
 
 ![De pagina [!UICONTROL Edit computed attributes] wordt weergegeven.](./images/ui/edit.png)
 

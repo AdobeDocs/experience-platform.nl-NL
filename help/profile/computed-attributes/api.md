@@ -1,21 +1,19 @@
 ---
 title: Computed Attributes API Endpoint
 description: Leer hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
-badge: "Bèta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
+
 
 # API-eindpunt van berekende kenmerken
 
 >[!IMPORTANT]
 >
->De functie voor berekende kenmerken bevindt zich momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
->
->Bovendien is de toegang tot de API beperkt. Neem contact op met de Adobe Support voor meer informatie over het verkrijgen van toegang tot de API voor berekende kenmerken.
+>De toegang tot de API is beperkt. Neem contact op met de Adobe Support voor meer informatie over het verkrijgen van toegang tot de API voor berekende kenmerken.
 
 Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding bevat voorbeeld-API-aanroepen voor het uitvoeren van standaard-CRUD-bewerkingen met behulp van de `/attributes` eindpunt.
 
@@ -29,7 +27,7 @@ Controleer voordat je doorgaat de [Aan de slag-handleiding voor profiel-API](../
 
 Raadpleeg ook de documentatie bij de volgende service:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    - [Gids Aan de slag met schema-register](../../xdm/api/getting-started.md#know-your-tenant_id): Informatie over uw `{TENANT_ID}`, die in de reacties in deze handleiding wordt weergegeven, wordt weergegeven.
 
 ## Een lijst met berekende kenmerken ophalen {#list}
@@ -52,7 +50,7 @@ De volgende queryparameters kunnen worden gebruikt bij het ophalen van een lijst
 | `limit` | Een parameter die het maximumaantal punten specificeert die als deel van de reactie worden teruggekeerd. De minimumwaarde van deze parameter is 1 en de maximumwaarde is 40. Als deze parameter niet is opgenomen, worden standaard 20 items geretourneerd. | `limit=20` |
 | `offset` | Een parameter die het aantal punten specificeert om over te slaan alvorens de punten terug te keren. | `offset=5` |
 | `sortBy` | Een parameter die de orde specificeert waarin de teruggekeerde punten worden gesorteerd. Beschikbare opties zijn `name`, `status`, `updateEpoch`, en `createEpoch`. U kunt ook kiezen of u in oplopende of aflopende volgorde wilt sorteren door geen of door een `-` vóór de sorteeroptie. Standaard worden de items gesorteerd op `updateEpoch` in aflopende volgorde. | `sortBy=name` |
-| `status` | Een parameter waarmee u kunt filteren op de status van het berekende kenmerk. Beschikbare opties zijn `draft`, `new`, `processing`, `processed`, `failed`, `disabled`, en `initializing`. Deze optie is niet hoofdlettergevoelig. | `status=draft` |
+| `property` | Een parameter waarmee u op verschillende berekende kenmerkvelden kunt filteren. Tot de ondersteunde eigenschappen behoren `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, en `status`. De ondersteunde bewerkingen zijn afhankelijk van de vermelde eigenschap. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (!=contains()</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Verzoek**
 
@@ -107,19 +105,24 @@ Een succesvolle reactie retourneert HTTP-status 200 met een lijst van de laatste
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": false,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -138,19 +141,24 @@ Een succesvolle reactie retourneert HTTP-status 200 met een lijst van de laatste
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": true,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
+                "value": "xEvent[eventType.equals(\"commerce.backofficeOrderPlaced\", false)].topN(timestamp, 1).map({\"timestamp\": timestamp, \"value\": producedBy}).head()"
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "MOST_RECENT"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -173,15 +181,19 @@ Een succesvolle reactie retourneert HTTP-status 200 met een lijst van de laatste
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
-            "status": "DRAFT",
+            "status": "PROCESSED",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "2023-08-27T00:14:55.028",
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -252,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.type` | Het type van de expressie. Momenteel wordt alleen PQL ondersteund. |
 | `expression.format` | De indeling van de expressie. Alleen `pql/text` wordt ondersteund. |
 | `expression.value` | De waarde van de expressie. |
-| `keepCurrent` | Een Booleaanse waarde die bepaalt of de waarde van het berekende kenmerk up-to-date wordt gehouden. Deze waarde moet momenteel worden ingesteld op `false`. |
+| `keepCurrent` | Een Booleaanse waarde die bepaalt of de waarde van het berekende kenmerk up-to-date wordt gehouden met de functie voor snel vernieuwen. Deze waarde moet momenteel worden ingesteld op `false`. |
 | `duration` | Een object dat de terugzoekperiode voor het berekende kenmerk vertegenwoordigt. De terugkijkperiode vertegenwoordigt hoe ver terug kan worden gezocht om de gegevens verwerkte attributen te berekenen. |
 | `duration.count` | Een getal dat de duur van de terugzoekperiode vertegenwoordigt. Welke waarden mogelijk zijn, is afhankelijk van de waarde van de `duration.unit` veld. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | Een tekenreeks die de tijdseenheid vertegenwoordigt die voor de terugzoekperiode wordt gebruikt. Mogelijke waarden zijn: `HOURS`, `DAYS`, `WEEKS`, en `MONTHS`. |
@@ -262,7 +274,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs gecreeerd gegevens verwerkt attribuut terug.
+Een geslaagde reactie retourneert HTTP status 200 met informatie over het nieuwe berekende kenmerk.
 
 +++ Een voorbeeldreactie bij het maken van een nieuw berekend kenmerk.
 
@@ -294,6 +306,7 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -368,6 +381,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -378,13 +392,18 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 | -------- | ----------- |
 | `id` | Een unieke, alleen-lezen, door het systeem gegenereerde id die kan worden gebruikt voor het verwijzen naar het berekende kenmerk tijdens andere API-bewerkingen. |
 | `type` | Een tekenreeks die aangeeft dat het geretourneerde object een berekend kenmerk is. |
+| `name` | The name for the computed attribute. |
+| `displayName` | De weergavenaam voor het berekende kenmerk. Dit is de naam die wordt weergegeven wanneer u uw berekende kenmerken weergeeft in de gebruikersinterface van Adobe Experience Platform. |
+| `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat dit anderen binnen uw organisatie helpt te bepalen welk kenmerk correct moet worden berekend. |
 | `imsOrgId` | De id van de organisatie waartoe het berekende kenmerk behoort. |
 | `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Zie voor meer informatie de [sandboxen, overzicht](../../sandboxes/home.md). |
 | `path` | De `path` naar het berekende kenmerk. |
+| `keepCurrent` | Een Booleaanse waarde die bepaalt of de waarde van het berekende kenmerk up-to-date wordt gehouden met de functie voor snel vernieuwen. |
 | `expression` | Een object dat de expressie van het berekende kenmerk bevat. |
-| `mergeFunction` | Een object dat de samenvoegfunctie voor het berekende kenmerk bevat. Deze waarde is gebaseerd op de overeenkomstige aggregatieparameter binnen de berekende expressie van het kenmerk. |
+| `mergeFunction` | Een object dat de samenvoegfunctie voor het berekende kenmerk bevat. Deze waarde is gebaseerd op de corresponderende aggregatieparameter binnen de berekende expressie van het kenmerk. Mogelijke waarden zijn `SUM`, `MIN`, `MAX`, en `MOST_RECENT`. |
 | `status` | De status van het berekende kenmerk. Dit kan een van de volgende waarden zijn: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, of `DISABLED`. |
 | `schema` | Een object dat informatie bevat over het schema waarin de expressie wordt geëvalueerd. Alleen `_xdm.context.profile` wordt ondersteund. |
+| `lastEvaluationTs` | Een tijdstempel die aangeeft wanneer het berekende kenmerk voor het laatst is geëvalueerd. |
 | `createEpoch` | De tijd waarop het berekende attribuut werd gecreeerd, in seconden. |
 | `updateEpoch` | Het tijdstip waarop het berekende kenmerk voor het laatst is bijgewerkt, in seconden. |
 | `createdBy` | De id van de gebruiker die het berekende kenmerk heeft gemaakt. |
@@ -457,6 +476,7 @@ Een geslaagde reactie retourneert HTTP status 202 met details van het verwijderd
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -548,6 +568,7 @@ Een geslaagde reactie retourneert HTTP status 200 met informatie over het zojuis
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"
