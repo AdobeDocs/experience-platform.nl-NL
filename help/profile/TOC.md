@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Handleiding voor Real-time klantprofiel
 user-guide-description: Voeg klantgegevens samen om een uniform beeld te krijgen van klantinteracties via verschillende kanalen.
 feature: Profiles
-source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
+source-git-commit: 776958abf5d5e71452ff7f315ea5579b4f4aac1c
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '143'
 ht-degree: 19%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 19%
 * [Profieloverzicht (video)](video/profile-overview.md)
 * [[!DNL Profile] en segmentatiegeleiding](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
+* [Randprofielen](edge-profiles.md)
 * [Verlopen van gebeurtenissen beleven](event-expirations.md)
 * [Verlopen van pseudoniem profiel](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
@@ -52,4 +53,4 @@ ht-degree: 19%
 * [Verwerking van privacyverzoeken](privacy.md)
 * [[!DNL Profile] gids voor problemen](troubleshooting.md)
 * [Referentie voor profiel-API](https://www.adobe.com/go/profile-apis-en)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

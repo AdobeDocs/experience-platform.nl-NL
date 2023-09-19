@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform;profiel;real-time klantprofiel;het oplossen van problemen;gidsen;richtlijnen;grens;entiteit;primaire entiteit;dimensie entiteit;
 title: Standaardhulplijnen voor realtime klantprofielgegevens
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document bevat standaard gebruiks- en snelheidslimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1965'
 ht-degree: 4%
 
 ---
 
-# Standaardgeleiding voor [!DNL Real-Time Customer Profile] data
+# Standaardhulplijnen voor [!DNL Real-Time Customer Profile] data
 
 Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden op basis van gedragsinzichten en klantkenmerken in de vorm van realtime klantprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
 
@@ -27,10 +26,10 @@ Dit document bevat standaard gebruiks- en snelheidslimieten om u te helpen uw pr
 
 De volgende services van het Experience Platform zijn betrokken bij het modelleren van realtime gegevens van het klantprofiel:
 
-* [[!DNL Real-Time Customer Profile]](home.md): Uniforme consumentenprofielen maken met gegevens uit meerdere bronnen.
-* [Identiteiten](../identity-service/home.md): De identiteiten van de brug van ongelijksoortige gegevensbronnen aangezien zij in Platform worden opgenomen.
-* [Schemas](../xdm/home.md): De schema&#39;s van het Model van de Gegevens van de ervaring (XDM) zijn het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-* [Soorten publiek](../segmentation/home.md): De segmenteringsmotor binnen Platform wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
+* [[!DNL Real-Time Customer Profile]](home.md): Maak geharmoniseerde consumentenprofielen met behulp van gegevens uit meerdere bronnen.
+* [Identiteiten](../identity-service/home.md): Bridge-id&#39;s van verschillende gegevensbronnen worden opgenomen in Platform.
+* [Schemas](../xdm/home.md): De schema&#39;s van het Model van Gegevens van de ervaring (XDM) zijn het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+* [Soorten publiek](../segmentation/home.md): De segmenteringsengine in Platform wordt gebruikt om een publiek te maken op basis van uw klantgedragingen en -kenmerken.
 
 ## Limiettypen
 
@@ -42,7 +41,7 @@ Dit document bevat twee typen standaardlimieten:
 
 >[!NOTE]
 >
->De limieten die in dit document worden uiteengezet, worden voortdurend verbeterd. Kom regelmatig terug voor updates. Neem contact op met uw vertegenwoordiger van de klantenservice als u meer wilt weten over aangepaste limieten.
+>De limieten die in dit document worden uiteengezet, worden voortdurend verbeterd. Kom regelmatig terug voor updates. Als u meer wilt weten over aangepaste limieten, neemt u contact op met uw medewerker van de klantenservice.
 
 ## Gegevensmodellimieten
 
@@ -65,12 +64,12 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 
 {style="table-layout:auto"}
 
-### Dimension-entiteitsgeleidingen
+### Garanties voor entiteiten van Dimension
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Geen gegevens uit tijdreeksen toegestaan voor niet-[!DNL XDM Individual Profile] entiteiten | 0 | Hard | **Gegevens uit tijdreeksen zijn niet toegestaan voor niet-tijdreeksen[!DNL XDM Individual Profile] entiteiten in de profielservice.** Als een reeks gegevensreeksen met een niet-reeks wordt geassocieerd[!DNL XDM Individual Profile] ID, de dataset zou niet moeten worden toegelaten voor [!DNL Profile]. |
-| Geen geneste relaties | 0 | Zacht | U moet geen relatie maken tussen twee niet-[!DNL XDM Individual Profile] schema&#39;s. De capaciteit om verhoudingen tot stand te brengen wordt niet geadviseerd voor om het even welke schema&#39;s die geen deel van zijn [!DNL Profile] samenvoegingsschema. |
+| Geen geneste relaties | 0 | Zacht | U moet geen relatie maken tussen twee niet-[!DNL XDM Individual Profile] schema&#39;s. De mogelijkheid om relaties te maken wordt niet aanbevolen voor schema&#39;s die geen deel uitmaken van de [!DNL Profile] samenvoegingsschema. |
 | JSON-diepte voor veld primaire id | 4 | Zacht | De aanbevolen maximale JSON-diepte voor het veld primaire id is 4. Dit betekent dat in een hoogst genest schema, u geen gebied als primaire identiteitskaart zou moeten selecteren als het meer dan 4 niveaus diep wordt genesteld. Een veld op het vierde geneste niveau kan als primaire id worden gebruikt. |
 
 {style="table-layout:auto"}
@@ -87,7 +86,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximale grootte ExperienceEvent | 10KB | Hard | **De maximale grootte van een gebeurtenis is 10 kB.** De inname gaat door, maar alle gebeurtenissen die groter zijn dan 10 kB gaan verloren. |
+| Maximale grootte van ExperienceEvent | 10KB | Hard | **De maximale grootte van een gebeurtenis is 10 kB.** De inname gaat door, maar alle gebeurtenissen die groter zijn dan 10 kB gaan verloren. |
 | Maximale recordgrootte profiel | 100KB | Hard | **De maximale grootte van een profielrecord is 100 kB.** De inname gaat door, maar profielrecords die groter zijn dan 100 kB worden verwijderd. |
 | Maximale framegrootte profiel | 50MB | Hard | **De maximale grootte van één profielfragment is 50 MB.** De segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welke ontbreken [profielfragment](#profile-fragments) dat groter is dan 50 MB. |
 | Maximale grootte voor profielopslag | 50MB | Zacht | **De maximale grootte van een opgeslagen profiel is 50 MB.** Nieuw toevoegen [profielfragmenten](#profile-fragments) in een profiel dat groter is dan 50 MB, de systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
@@ -96,13 +95,13 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 {style="table-layout:auto"}
 
-### Dimension-entiteitsgeleidingen
+### Garanties voor entiteiten van Dimension
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Totale grootte voor alle dimensionale entiteiten | 5GB | Zacht | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
 | Datasets per dimensionaal eenheidschema | 5 | Zacht | Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema. Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
-| Per dag ingenomen partijen van Dimension-entiteit | 4 per entiteit | Zacht | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
+| Per dag ingenomen partijen van een Dimension-entiteit | 4 per entiteit | Zacht | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
 
 {style="table-layout:auto"}
 
@@ -113,13 +112,13 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
 | Soorten publiek per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 soorten publiek hebben, zolang er in elke sandbox minder dan 4000 soorten publiek aanwezig zijn. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. |
-| Publiek randen per sandbox | 150 | Zacht | Een organisatie kan in totaal meer dan 150 randgroepen hebben, zolang er in elke sandbox minder dan 150 randgroepen aanwezig zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. |
+| Publiek randen per sandbox | 150 | Zacht | Een organisatie kan in totaal meer dan 150 randsoorten publiek hebben, zolang er in elke afzonderlijke sandbox minder dan 150 randsoorten publiek zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. |
 | Streaming publiek per sandbox | 500 | Zacht | Een organisatie kan in totaal meer dan 500 streamingdeelnemers hebben, zolang er in elke sandbox minder dan 500 streamingdeelnemers zijn. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. |
 | Batchpubliek per sandbox | 4000 | Zacht | Een organisatie kan in totaal meer dan 4000 batchdoelgroepen hebben, zolang er in elke sandbox minder dan 4000 doelgroepen aanwezig zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
 
 {style="table-layout:auto"}
 
-## Aanhangsel
+## Bijlage
 
 Deze sectie bevat aanvullende details voor de limieten in dit document.
 
@@ -141,7 +140,7 @@ Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relatione
 
 Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze[!DNL XDM Individual Profile] schema&#39;s worden &quot;dimensie-entiteiten&quot;genoemd (ook genoemd geworden &quot;raadplegingsentiteiten&quot;) en bevatten geen tijd-reeksgegevens. Schema&#39;s die dimensie-entiteiten vertegenwoordigen, zijn via het gebruik van [schema-relaties](../xdm/tutorials/relationship-ui.md).
 
-Dimension-entiteiten bieden opzoekgegevens die de segmentatieprogramma&#39;s van meerdere entiteiten ondersteunen en vereenvoudigen. Deze moeten zo klein zijn dat de gehele gegevensset door de segmenteringsengine in het geheugen kan worden geladen voor optimale verwerking (snelle puntzoekopdracht).
+De entiteiten van het Dimension verstrekken raadplegingsgegevens die helpen en multi-entiteitsegmentdefinities vereenvoudigen en moeten zo klein zijn dat de segmenteringsmotor de volledige gegevensreeks in geheugen voor optimale verwerking (snelle puntraadpleging) kan laden.
 
 ![An infographic that shows that a profile entity is eruit of dimensie entities.](images/guardrails/profile-and-dimension-entities.png)
 
@@ -155,4 +154,4 @@ Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebelei
 
 ### Gegevenssets van de Adobe Analytics-rapportsuite in Platform {#aa-datasets}
 
-De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle gegevensconflicten worden opgelost. U kunt de functie Gegevensvoorbeeld gebruiken om gegevensconflicten op te lossen over eVars, Lijsten, en Props. Voor meer informatie over het gebruik van de functie Data Prep, leest u de [UI-hulplijn Adobe Analytics-connector](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle gegevensconflicten worden opgelost. U kunt de functie Gegevensvoorbeeld gebruiken om gegevensconflicten op te lossen over eVars, Lijsten, en Props. Lees voor meer informatie over het gebruik van de functie Data Prep de [UI-hulplijn Adobe Analytics-connector](../sources/tutorials/ui/create/adobe-applications/analytics.md).

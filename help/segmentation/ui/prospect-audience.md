@@ -2,9 +2,7 @@
 title: Soorten publiek
 description: Leer hoe te om perspectiefpubliek tot stand te brengen en te gebruiken om onbekende klanten te richten gebruikend derdeinformatie.
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
+source-git-commit: cb70eca22633ee08b260903e38f4538a21f3a56c
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -58,7 +56,7 @@ Voor meer informatie over het gebruik van de Segment Builder leest u de [Handlei
 
 ## Aanbevolen gebruiksgevallen {#use-cases}
 
-Lees de volgende documentatie over het gebruiksgeval voor meer informatie over het gebruik van de functie voor mogelijke doelgroepen in Experience Platform in combinatie met andere functies voor Platforms:
+Lees de volgende documentatie over het gebruiksscenario voor meer informatie over het gebruik van de functie voor het potentiële publiek in Experience Platform in combinatie met andere platformfuncties:
 
 - [Nieuwe klanten aantrekken en aanschaffen via de prospectieve functionaliteit](../../rtcdp/partner-data/prospecting.md)
 
