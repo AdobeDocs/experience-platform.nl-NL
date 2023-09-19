@@ -3,9 +3,9 @@ title: LiveRamp - Distribution-verbinding
 description: Leer hoe u de LiveRamp - Distribution-connector kunt gebruiken om soorten publiek die eerder in LiveRamp zijn opgenomen, te activeren voor andere advertentiebestemmingen.
 hide: true
 hidefromtoc: true
-source-git-commit: c04c7ff4f1ab45d944f4ab516d7842df536fae40
+source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1425'
 ht-degree: 5%
 
 ---
@@ -140,7 +140,9 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Terreurovereenkomst voor gegevensbestemming van adverteerders"
 >abstract="Type in `I AGREE` om de bevestiging en instemming met de gegevensvoorwaarden van Disney-adverteerders te bevestigen."
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="De overeenkomst lezen"
+
+<!-- 
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
