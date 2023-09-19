@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -83,6 +83,8 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Toegang tot waarschuwingen lezen, bewerken en verwijderen. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Alleen-lezen toegang voor waarschuwingen. |
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Toegang tot het lezen, maken, bewerken en verwijderen van waarschuwingsgeschiedenis. |
+| [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Alleen-lezen toegang voor het tabblad, overzicht en details van berekende kenmerken. |
+| [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Toegang tot het lezen, maken, verwijderen van concepten en het deactiveren van berekende kenmerken. |
 | [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Alleen-lezen toegang voor gegevenshygiëne. |
 | [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Toegang tot het lezen, maken, bewerken en verwijderen van gegevenshygiëne. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Toegang tot het lezen, maken, bewerken en verwijderen van schema&#39;s en gerelateerde bronnen. |

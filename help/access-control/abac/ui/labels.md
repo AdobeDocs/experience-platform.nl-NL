@@ -3,14 +3,18 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerlabels beheren
 description: Dit document bevat informatie over het beheer van labels via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
+source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
 # Labels beheren
+
+>[!NOTE]
+>
+>Als u berekende kenmerken wilt maken of weergeven met velden die een bepaald label bevatten, moet u toegang hebben tot dat label.
 
 Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid en het toegangsbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het in Platform wordt opgenomen, of zodra de gegevens voor gebruik in Platform beschikbaar worden.
 
@@ -23,9 +27,9 @@ Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiks
 
 >[!NOTE]
 >
->Er is één enkele lijst van etiketten voor een volledige organisatie. Als u een aangepast label wilt maken, hebt u **[!UICONTROL Manage Usage Labels]** machtigingen voor de productiesandbox. Verwijderen van label wordt momenteel niet ondersteund.
+>Er is één enkele lijst van etiketten voor een volledige organisatie. U moet een aangepast label maken **[!UICONTROL Manage Usage Labels]** machtigingen voor de productiesandbox. Verwijderen van label wordt momenteel niet ondersteund.
 
-Als u een nieuw label wilt maken, selecteert u de optie **[!UICONTROL Labels]** op de zijbalk en selecteert u **[!UICONTROL Create Label]**.
+Als u een nieuw label wilt maken, selecteert u het **[!UICONTROL Labels]** op de zijbalk en selecteert u **[!UICONTROL Create Label]**.
 
 ![nieuwe label](../../images/flac-ui/create-label.png)
 
@@ -33,4 +37,4 @@ De **[!UICONTROL Create a new label]** wordt weergegeven en u wordt gevraagd een
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-Als u klaar bent, selecteert u **[!UICONTROL Confirm]**.
+Selecteer **[!UICONTROL Confirm]**.
