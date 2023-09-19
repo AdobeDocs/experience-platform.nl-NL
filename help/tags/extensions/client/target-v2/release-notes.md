@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
+source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## v0.19.3 (18 september 2023)
+
+- Bijgewerkt om ondersteuning te bieden op versie 2.10.3.
+- Probleem verholpen waarbij de aangepaste gebeurtenis &#39;at-content-rendering-Succesvol&#39; onjuist werd geactiveerd wanneer geen aanbiedingen worden weergegeven. De juiste gebeurtenis, at-content-rendering-no-aanbiedingen, wordt nu geactiveerd.
+- Gebeurtenistoken en responseTokens zijn toegevoegd aan het foutobject voor de aangepaste gebeurtenis at-content-rendering-failed.
 
 ## v0.19.2 (14 februari 2023)
 
@@ -66,7 +72,7 @@ ht-degree: 0%
 
 ## v0.14.2 (2 juni 2021)
 
-- Een probleem verhelpen waarbij de uiteindelijke bundel twee elementen bevat `at.js` versies, één met On-Device Decisioning en één zonder.
+- Een probleem verhelpen waarbij de uiteindelijke bundel twee elementen bevat `at.js` versies, één met Apparaatbeslissing en één zonder.
 
 ## v0.14.1 (19 mei 2021)
 
@@ -80,7 +86,7 @@ ht-degree: 0%
 
 ## v0.13.7 (25 maart 2021)
 
-- Probleem verholpen met `targetPageParams` worden opgenomen in mbox-aanvragen. `targetPageParams` alleen worden opgenomen in `pageLoad` verzoeken.
+- Probleem opgelost met `targetPageParams` worden opgenomen in mbox-aanvragen. `targetPageParams` alleen worden opgenomen in `pageLoad` verzoeken.
 - Probleem verholpen met globale document- en vensterobjecten in de tagextensie door algemene objectafhankelijkheden te vervangen door directe verwijzingen ernaar.
 - Bijgewerkt `at.js` tot en met 2.4.1.
 
@@ -100,7 +106,7 @@ ht-degree: 0%
 ## v0.13.3 (24 juli 2020)
 
 - Oplossing voor een probleem dat ervoor zorgde dat koppelingen in de QA-modus niet werkten voor inactieve activiteiten
-- Het probleem waarbij een extensie mislukte als een script of code wordt toegevoegd, is opgelost. `default` aan de `window` of `document`
+- Het probleem waarbij een extensie mislukte als een script of code wordt toegevoegd, is opgelost. `default` eigenschap aan de `window` of `document`
 
 ## v0.13.2 (15 juni 2020)
 
@@ -110,14 +116,14 @@ ht-degree: 0%
 
 ## v0.13.0 (25 maart 2020)
 
-- Bijgewerkt `at.js` tot en met v2.3.
+- Bijgewerkt `at.js` tot v2.3.
 - Toegevoegde ondersteuning voor algemene doelbox in adobe.target.getOffer-API
 - Probleem verholpen waarbij params en params voor het laden van pagina&#39;s niet correct werden verwerkt
 
 ## v0.12.0 (10 oktober 2019)
 
-- Bijgewerkt `at.js` tot en met v2.2.
-- Verbeterde prestaties voor integratie tussen Experience Cloud ID-bibliotheek (ECID) v4.4 en `at.js` 2.2
+- Bijgewerkt `at.js` tot v2.2.
+- Verbeterde prestaties voor integratie tussen Experience Cloud ID library (ECID) v4.4 en `at.js` 2.2
 - Eerder deed de ECID-bibliotheek twee blokkerende oproepen voordat `at.js` kan ervaringen opdoen. Dit is verminderd tot één enkele vraag, die beduidend prestaties verbetert.
 
 >[!NOTE]
