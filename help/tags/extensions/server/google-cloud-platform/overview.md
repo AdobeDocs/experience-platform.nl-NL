@@ -1,10 +1,10 @@
 ---
 title: Google Cloud Platform Event Forwarding Extension
-description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Google Cloud Platform.
+description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Edge Network-gebeurtenissen naar Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) is een platform voor cloud computing dat een groot aantal verschillende services biedt, zoals gedistribueerde computers, databaseopslag, levering van inhoud en SAA-integratieservices (software-as-a-service) voor relatiebeheer voor klanten (CRM) en planning van bedrijfsmiddelen (ERP).
 
-De [!DNL Google Cloud Platform] [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) extensiefuncties [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub) om gebeurtenissen vanaf Adobe Experience Platform Edge Network naar de [!DNL Google Cloud Platform] voor verdere verwerking. Deze gids behandelt hoe te om de uitbreiding te installeren en zijn mogelijkheden in een gebeurtenis aan te wenden die regel door:sturen.
+De [!DNL Google Cloud Platform] [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) extensiefuncties [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub) om gebeurtenissen van het Adobe Experience Platform Edge-netwerk naar de [!DNL Google Cloud Platform] voor verdere verwerking. Deze gids behandelt hoe te om de uitbreiding te installeren en zijn mogelijkheden in een gebeurtenis aan te wenden die regel door:sturen.
 
 ## Vereisten
 
-Als u deze extensie wilt gebruiken, moet u beschikken over een [!DNL Google Cloud Platform] met een bestaande [!DNL Cloud Pub/Sub] onderwerp. Als u geen reeds bestaand onderwerp hebt, zie [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentatie over het creëren van en het beheer van onderwerpen.
+Als u deze extensie wilt gebruiken, hebt u een [!DNL Google Cloud Platform] met een bestaande [!DNL Cloud Pub/Sub] onderwerp. Als u geen reeds bestaand onderwerp hebt, zie [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentatie over het creëren van en het beheer van onderwerpen.
 
 ### Een geheim en een gegevenselement maken
 
@@ -33,21 +33,21 @@ Selecteren **[!UICONTROL Extensions]** in de linkernavigatie. In de **[!UICONTRO
 
 ![De catalogus [!DNL Google Cloud Platform] installatie van markering voor extensie.](../../../images/extensions/server/google-cloud-platform/install-extension.png)
 
-Voor het configuratiescherm, ga het geheim van het gegevenselement in dat u vroeger in het **[!UICONTROL Access Token]** veld. Het gegevenselementgeheim bevat uw [!DNL Google Cloud Platform] OAuth 2 token. Selecteren **[!UICONTROL Save]** wanneer gereed.
+Voor het configuratiescherm, ga het geheim van het gegevenselement in dat u vroeger in het **[!UICONTROL Access Token]** veld. Het gegevenselement-geheim bevat uw [!DNL Google Cloud Platform] OAuth 2 token. Selecteren **[!UICONTROL Save]** wanneer gereed.
 
-![De [!DNL Google Cloud Platform] extensieconfiguratiepagina.](../../../images/extensions/server/google-cloud-platform/configure-extension.png)
+![De [!DNL Google Cloud Platform] extensieconfiguratiepagina](../../../images/extensions/server/google-cloud-platform/configure-extension.png)
 
 ## Een [!DNL Send Data to Cloud Pub/Sub] regel {#tracking-rule}
 
 Zodra de uitbreiding wordt geïnstalleerd, creeer een nieuwe gebeurtenis door:sturen [regel](../../../ui/managing-resources/rules.md) en configureer de voorwaarden naar wens. Wanneer het vormen van de acties voor de regel, selecteer **[!UICONTROL Google Cloud Platform]** extensie selecteert u vervolgens **[!UICONTROL Send Data to Cloud Pub/Sub]** voor het actietype.
 
-![De mening van de actieconfiguratie voor [!UICONTROL Google Cloud Platform], met de actie gemarkeerd en [!UICONTROL Send Data to Cloud Pub/Sub].](../../../images/extensions/server/google-cloud-platform/event-action.png)
+![De weergave actieconfiguratie voor [!UICONTROL Google Cloud Platform], met de actie gemarkeerd en [!UICONTROL Send Data to Cloud Pub/Sub].](../../../images/extensions/server/google-cloud-platform/event-action.png)
 
 | Invoer | Beschrijving |
 | --- | --- |
 | [!UICONTROL Topic] | Het onderwerp dat de gebeurtenissen van Gebeurtenis door:sturen zal ontvangen. De waarde moet de notatie hebben `projects/{projectName}/topics/{topicName}`. |
-| [!UICONTROL Data] | Dit veld bevat de gegevens die naar de [!DNL Cloud Pub/Sub] in JSON-indeling.<br><br>Onder de **[!UICONTROL Raw]** kunt u het JSON-object rechtstreeks in het opgegeven tekstveld plakken of het pictogram voor het gegevenselement selecteren (![Dataset-pictogram](../../../images/extensions/server/aws/data-element-icon.png)) om de gegevens te selecteren in een lijst met bestaande gegevenselementen.<br><br>U kunt ook de opdracht **[!UICONTROL JSON Key-Value Pairs Editor]** optie om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar er kan ook een gegevenselement worden geselecteerd. |
-| [!UICONTROL Attributes] | Dit veld bevat het JSON-object met extra kenmerken die samen met het bericht moeten worden verzonden.<br><br>Onder de **[!UICONTROL Raw]** kunt u het JSON-object rechtstreeks in het opgegeven tekstveld plakken of het pictogram voor het gegevenselement selecteren (![Dataset-pictogram](../../../images/extensions/server/aws/data-element-icon.png)) om de gegevens te selecteren in een lijst met bestaande gegevenselementen.<br><br>U kunt ook de opdracht **[!UICONTROL JSON Key-Value Pairs Editor]** optie om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar er kan ook een gegevenselement worden geselecteerd. |
+| [!UICONTROL Data] | Dit veld bevat de gegevens die naar de [!DNL Cloud Pub/Sub] in JSON-indeling.<br><br>Onder de **[!UICONTROL Raw]** kunt u het JSON-object rechtstreeks in het opgegeven tekstveld plakken of het pictogram voor het gegevenselement selecteren (![Dataset-pictogram](../../../images/extensions/server/aws/data-element-icon.png)) om de gegevens te selecteren in een lijst met bestaande gegevenselementen.<br><br>U kunt ook de opdracht **[!UICONTROL JSON Key-Value Pairs Editor]** optie om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
+| [!UICONTROL Attributes] | Dit veld bevat het JSON-object met extra kenmerken die samen met het bericht moeten worden verzonden.<br><br>Onder de **[!UICONTROL Raw]** kunt u het JSON-object rechtstreeks in het opgegeven tekstveld plakken of het pictogram voor het gegevenselement selecteren (![Dataset-pictogram](../../../images/extensions/server/aws/data-element-icon.png)) om de gegevens te selecteren in een lijst met bestaande gegevenselementen.<br><br>U kunt ook de opdracht **[!UICONTROL JSON Key-Value Pairs Editor]** optie om elk zeer belangrijk-waardepaar door een redacteur manueel toe te voegen UI. Elke waarde kan worden vertegenwoordigd door een onbewerkte invoer, maar in plaats daarvan kan ook een gegevenselement worden geselecteerd. |
 
 {style="table-layout:auto"}
 

@@ -1,11 +1,11 @@
 ---
-keywords: event forward extension;pinterest;pinterest event forward extension
+keywords: extensie voor doorsturen van gebeurtenis;pinterest;pinterest-gebeurtenis voor extensie doorsturen
 title: Pinterest-gebeurtenis door:sturen, extensie
 description: Deze Adobe Experience Platform-gebeurtenis die extensie doorstuurt, stelt u in staat om gebeurtenissen in te voeren in Pinterest voor uw zakelijke vereisten.
 last-substantial-update: 2023-04-27T00:00:00Z
-source-git-commit: 87c76ef4b95bc05a64d9d124d69c2a51b7b77c08
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1482'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ De tokens van de toegang van omzettingen zijn de authentificatiemethode die door
 
 ## Gebruiksscenario’s
 
-Deze extensie moet worden gebruikt als u gegevens van het Edge-netwerk wilt gebruiken in [!DNL Pinterest] om te profiteren van de mogelijkheden voor klantanalyse.
+Deze extensie moet worden gebruikt als u gegevens van het Edge-netwerk wilt gebruiken in [!DNL Pinterest] om gebruik te maken van de mogelijkheden voor klantanalyse.
 
 Neem bijvoorbeeld een marketingteam in een organisatie. Het team legt gebruikersinteractiegebeurtenisgegevens van zijn website vast en laadt deze in [!DNL Pinterest] gebruiken van deze gebeurtenis die uitbreiding door:sturen.
 
@@ -32,16 +32,16 @@ Voor meer informatie over gebruiksgevallen die specifiek zijn voor [!DNL Pintere
 
 U moet een geldige [!DNL Pinterest] [zakelijke account](https://help.pinterest.com/en/business/article/get-a-business-account) om deze extensie te gebruiken. Ga naar de [[!DNL Pinterest] registratiepagina](https://www.pinterest.com/business/create/) als u nog geen account hebt, kunt u zich registreren en een account maken.
 
-U hebt ook een [!DNL Pinterest] ontwikkelaarsaccount, dat moet worden gekoppeld aan uw [!DNL Pinterest] zakelijke account. Als u uw ontwikkelaarsaccount wilt koppelen aan uw zakelijke account, raadpleegt u de [[!DNL Pinterest ] ontwikkelaarsaccount](https://developers.pinterest.com/account-setup/).
+U hebt ook een [!DNL Pinterest] ontwikkelaarsaccount, dat moet worden gekoppeld aan uw [!DNL Pinterest] zakelijke account. Als u uw ontwikkelaarsaccount wilt koppelen aan uw zakelijke account, raadpleegt u de [[!DNL Pinterest ] ontwikkelingsaccount](https://developers.pinterest.com/account-setup/).
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
-Als u het Experience Platform wilt verbinden met [!DNL Pinterest]zijn de volgende gegevens vereist:
+Als u het Experience Platform wilt verbinden met [!DNL Pinterest], zijn de volgende invoeren vereist:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | Adds-account-id | Uw [!DNL Pinterest] Account-ID toevoegen. Zie de [[!DNL Pinterest] documentatie](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) ter begeleiding. | 123456789012 |
-| Token voor toegang tot conversie | Uw [!DNL Pinterest] Token voor conversietoegang. Zie de [[!DNL Pinterest] Conversies-API](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) document ter begeleiding. <br> **U hoeft dit slechts één keer te doen, aangezien deze token niet verloopt.** | {UW_PINTEREST_BEARER_TOKEN} |
+| Token voor toegang tot conversie | Uw [!DNL Pinterest] Token voor conversietoegang. Zie de [[!DNL Pinterest] Conversies-API](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) document ter begeleiding. <br> **U hoeft dit slechts één keer te doen, aangezien deze token niet verloopt.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## Installeer en configureer de [!DNL Pinterest] extension {#install}
 
@@ -49,9 +49,9 @@ Als u de extensie wilt installeren, [een eigenschap voor het doorsturen van gebe
 
 Selecteer in de linkernavigatie de optie **[!UICONTROL Extensions]**. Selecteren **[!UICONTROL Install]** op de kaart voor de [!DNL Pinterest] in de **[!UICONTROL Catalog]** tab.
 
-![Catalogus met de [!DNL Pinterest] extensie met [!UICONTROL Install] gemarkeerd.](../../../images/extensions/server/pinterest/install.png)
+![Catalogus met de [!DNL Pinterest] extensie [!UICONTROL Install] gemarkeerd.](../../../images/extensions/server/pinterest/install.png)
 
-### Configureer de [!DNL Pinterest] extension
+### Vorm [!DNL Pinterest] extension
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ Voer in het volgende scherm de [!UICONTROL Ads Account Id] en [!UICONTROL Conver
 
 Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis beginnen tot stand te brengen door:sturen regels die bepalen wanneer en hoe uw gebeurtenissen zullen worden verzonden naar [!DNL Pinterest].
 
-Een nieuwe [regel](../../../ui/managing-resources/rules.md) in uw gebeurtenis die bezit door:sturen. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL Pinterest]**. Adobe Experience Edge Network-gebeurtenissen naar [!DNL Pinterest]stelt u de **[!UICONTROL Action Type]** tot **[!UICONTROL Send Event].**
+Een nieuwe [regel](../../../ui/managing-resources/rules.md) in uw gebeurtenis die bezit door:sturen. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL Pinterest]**. Edge Network-gebeurtenissen verzenden naar [!DNL Pinterest], stelt u de **[!UICONTROL Action Type]** tot **[!UICONTROL Send Event].**
 
 ![De [!DNL Pinterest] [!UICONTROL Send Event] regel maken.](../../../images/extensions/server/pinterest/rule.png)
 
@@ -99,7 +99,7 @@ De volgende gebeurteniseigenschappen kunnen worden geconfigureerd:
 | Toepassingsversie | De versie van de toepassing. |
 | Merk apparaat | Merk apparaat dat door de gebruiker wordt gebruikt. |
 | Apparaatdrager | De mobiele provider van de gebruiker voor het apparaat. |
-| Apparaatmodel | Model van het apparaat van de gebruiker. |
+| Apparaatmodel | Model van het apparaat van de gebruiker |
 | Apparaattype | Type apparaat dat door de gebruiker wordt gebruikt. |
 | Versie besturingssysteem | Versie van het besturingssysteem van het apparaat. |
 | Taal van gebruiker | ISO-639-1-taalcode van twee tekens die de taal van de gebruiker aangeeft. |
@@ -110,8 +110,8 @@ De volgende gebruikersgegevens kunnen worden ingevoerd door zijn geen vereiste v
 
 | Veldnaam | Beschrijving | Voorbeeld |
 | --- | --- | --- | 
-| [!UICONTROL Email] | E-mailadres van gebruiker of een SHA256-hash van het e-mailadres van de gebruiker. | ebd543592...f2b7e1 |
-| [!UICONTROL Mobile Adverstising IDs] | Sha256 hashes of &quot;Google Advertising IDs&quot; (GAIDs) of &quot;Apple Identifier for Advertisers&quot; (IDFAs) van gebruikers | ebd543592...f2b7e1 |
+| [!UICONTROL Email] | E-mailadres van gebruiker of een SHA256-hash van het e-mailadres van de gebruiker. | ebd543592.f2b7e1 |
+| [!UICONTROL Mobile Adverstising IDs] | Sha256 hashes of &quot;Google Advertising IDs&quot; (GAIDs) of &quot;Apple Identifier for Advertisers&quot; (IDFAs) van gebruikers | ebd543592.f2b7e1 |
 | [!UICONTROL Client IP Address] | Het IP-adres van de gebruiker. Dit kan de IPv4- of IPv6-indeling hebben. Wordt gebruikt voor overeenkomsten. | 192.168.0.1 |
 | [!UICONTROL Client User Agent] | De userAgent-tekenreeks van de webbrowser van de gebruiker. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
 | [!UICONTROL Customer information data] | Een JSON-object dat andere klantgegevens bevat. Maak een keuze uit het opgeven van onbewerkte JSON of uit het gebruik van een vereenvoudigde set toetsinvoer. | { &quot;ph&quot;: &quot;122333445&quot; } |
@@ -132,11 +132,11 @@ De eigenschappen van de klanteninformatie die kunnen worden gevormd zijn:
 | Postcode | De postcode van de gebruiker, die hoofdzakelijk voor factureringsdoeleinden wordt gebruikt. |
 | Land | ISO-3166-landcode van twee tekens die het land van de gebruiker aangeeft. |
 | Externe id | Unieke id van de adverteerder die een gebruiker in zijn ruimte identificeert. Bijvoorbeeld gebruikers-id, loyaliteit-id enzovoort. |
-| Klik op ID | De unieke id die is opgeslagen in het _epik-cookie op uw domein of de &amp;epik=-queryparameter in de URL. |
+| Klik op ID | De unieke id die is opgeslagen in _epik cookie op uw domein of de query-parameter &amp;epik= in de URL. |
 
 >[!IMPORTANT]
 >
->Voordat u de gegevens naar de [!DNL Pinterest] API eindpunt, zal de uitbreiding de waarden van de volgende gebieden hakken en normaliseren: E-mail, telefoonnummer, voornaam, achternaam, geslacht, geboortedatum, plaats, staat, postcode, land en externe id. De extensie verbergt de waarde van deze velden niet als er al een SHA256-tekenreeks aanwezig is.
+>Voordat u de gegevens naar de [!DNL Pinterest] API eindpunt, zal de uitbreiding de waarden van de volgende gebieden hakken en normaliseren: E-mail, Telefoonaantal, Voornaam, Achternaam, Geslacht, Geboortedatum, Stad, Staat, Postcode, Land, en Externe identiteitskaart De extensie verbergt de waarde van deze velden niet als er al een SHA256-tekenreeks aanwezig is.
 
 ### [!UICONTROL Custom Data]
 
@@ -148,7 +148,7 @@ De volgende aangepaste gegevens kunnen voor de regel worden ingevoerd:
 | Waarde | Totale waarde van de gebeurtenis. Wordt geaccepteerd als een tekenreeks in de aanvraag. Dit wordt in een dubbel cijfer geparseerd. |
 | Zoektekenreeks | De zoektekenreeks die betrekking heeft op de conversiegebeurtenis van de gebruiker. |
 | Order-id | De bestellings-id. Verzenden `order_id` helpt [!DNL Pinterest] dedupliceer gebeurtenissen indien nodig. |
-| Aantal producten | Totaal aantal producten van de gebeurtenis. Bijvoorbeeld het totale aantal objecten dat is aangeschaft tijdens een uitcheckgebeurtenis. |
+| Aantal producten | Het totale aantal producten van de gebeurtenis. Bijvoorbeeld het totale aantal objecten dat is aangeschaft tijdens een uitcheckgebeurtenis. |
 | Inhoud-id&#39;s | Lijst (array) met product-id&#39;s. |
 | Inhoud | Een lijst (array) met objecten die informatie over producten bevatten, zoals prijs en hoeveelheid. |
 

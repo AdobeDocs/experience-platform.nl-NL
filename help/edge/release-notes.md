@@ -3,7 +3,7 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1589'
 ht-degree: 1%
@@ -118,7 +118,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 * De gebeurtenis view-change is geoptimaliseerd voor toepassingen op één pagina. Het weergavebericht wordt nu opgenomen in de gebeurtenis view-change wanneer persoonlijke ervaringen worden weergegeven.
 * Waarschuwing van console is verwijderd als dit niet het geval is `eventType` aanwezig is.
 * Het probleem waarbij de `propositions` eigenschap is alleen geretourneerd door een `sendEvent` gebruiken wanneer ervaringen zijn opgevraagd of opgehaald uit de cache. De `propositions` eigenschap wordt nu altijd gedefinieerd als een array.
-* Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd van Adobe Experience Edge.
+* Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd van het Edge-netwerk.
 * Probleem verholpen waarbij de interactieve gebeurtenissen niet in Adobe Target werden meegeteld. Dit probleem is opgelost door de weergavenaam toe te voegen aan de XDM op web.webPageDetails.viewName.
 * Los gebroken documentatiekoppelingen in consoleberichten op.
 
@@ -130,7 +130,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.7.0 - 26 oktober 2021
 
-* Maak aanvullende informatie van Experience Edge beschikbaar in de geretourneerde waarde van `sendEvent`, inclusief `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen. Zie voor meer informatie [Gebeurtenissen bijhouden.](fundamentals/tracking-events.md)
+* Maak extra informatie van het Netwerk van de Rand in de terugkeerwaarde van bloot `sendEvent`, inclusief `inferences` en `destinations`. Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Bèta rollen. Zie voor meer informatie [Gebeurtenissen bijhouden.](fundamentals/tracking-events.md)
 
 ## Versie 2.6.4 - 7 september 2021
 
@@ -167,7 +167,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 * Gebruikt nu een XDM-schemaveldgroep in plaats van `meta.personalization` wanneer het verzenden van gebeurtenissen over gepersonaliseerde inhoud die wordt teruggegeven of geklikt.
 * De [getIdentity, opdracht](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) retourneert nu de id van het randgebied naast de identiteit.
 * Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
-* Extra ondersteuning voor [ADOBE 2](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Extra ondersteuning voor [Adobe 2.0 standaard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en het Netwerk van de Rand van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om te roepen `setConsent` op elke pagina die wordt geladen.
 * Twee [toezicht op haken](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
 * Bug Fix: de gebeurtenissen van het de interactiebericht van de Personalisatie zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.

@@ -3,7 +3,7 @@ title: Het vergelijken bij.js met het Web SDK van het Experience Platform
 description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 2%
@@ -918,7 +918,7 @@ Logboekregistratie aan de serverkant van Analytics wordt ingeschakeld wanneer An
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-Wanneer de Logboekregistratie van de Analyse van de Server Zijdelings wordt toegelaten A4T nuttige lading die met Analytics moet worden gedeeld zodat de Analytics rapporteert correcte beelden tonen en de omzettingen op het niveau van de Rand van de Ervaring worden gedeeld, zodat de klant geen extra verwerking hoeft te doen.
+Wanneer het Registreren van de Logboekregistraties van de Analyse van de Server de nuttige lading A4T wordt toegelaten die met Analytics moet worden gedeeld zodat Analytics rapporteert correcte beelden tonen en de omzettingen op het niveau van het Netwerk van de Rand worden gedeeld, zodat de klant geen extra verwerking hoeft te doen.
 
 Hieronder wordt beschreven hoe gegevens in onze systemen stromen wanneer de Logboekregistratie van de Analytics van de Server wordt toegelaten:
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aan de slag met het leren van machines in real time
 description: In het volgende document worden de stappen beschreven die nodig zijn om een real-time model voor machinetolken in Adobe Experience Platform te maken.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,12 @@ De gidsen voor het Leren van de machine in real time vereisen een werkend begrip
 
 - **DSL:** Domeinspecifieke taal.
 - **Rand:** In real time de functie van de het het Leren van de machine van de machine kan op de clusters van Edge dichter aan uw activiteiten en toepassingen worden in werking gesteld.
-- **Hub:** De huidige alpha stelt de Echte het Leren van de machine het Leren van de Echte - tijd het scoren dienst op de Hub van Adobe Experience Platform in werking terwijl het Netwerk van de Rand van de Ervaring in ontwikkeling is.
+- **Hub:** De huidige alpha stelt de Echte het Leren van de machine het Leren van de Echte - tijd in werking de dienst op de Hub van Adobe Experience Platform terwijl het Netwerk van de Rand in ontwikkeling is.
 - **Knooppunt:** Een knooppunt is de basiseenheid waarvan grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
 
 ## Datasets in Adobe Experience Platform
 
-Om te beginnen het Leren van de Machine in real time te gebruiken, moet u toegang tot een dataset hebben. U hebt de optie om een externe dataset te gebruiken en het te uploaden aan uw [!DNL JupyterLab] milieu of creeer een nieuwe dataset binnen Platform als u dit niet reeds hebt gedaan.
+Om te beginnen het Leren van de Machine in real time te gebruiken, moet u toegang tot een dataset hebben. U hebt de optie om een externe dataset te gebruiken en het te uploaden aan uw [!DNL JupyterLab] milieu of creeer een nieuwe dataset binnen Platform als u dit nog niet hebt gedaan.
 
 >[!NOTE]
 >

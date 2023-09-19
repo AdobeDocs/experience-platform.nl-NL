@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Aan de slag met Media Edge-API's
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '958'
 ht-degree: 1%
 
 ---
@@ -171,7 +171,7 @@ Voor meer informatie over XDM media gegevensparameters, zie [Informatieschema vo
 
 ## Buffer Start-gebeurtenisaanvraag {#buffer-start}
 
-De gebeurtenissignalen van het Begin van de buffer wanneer het bufferen op de media speler begint. Buffer Resume is geen gebeurtenis in de API-service. in plaats daarvan, wordt het afgeleid wanneer een spelgebeurtenis wordt verzonden na het Begin van de Buffer. Als u een aanvraag voor een bufferstartgebeurtenis wilt indienen, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
+De gebeurtenissignalen van het Begin van de buffer wanneer het bufferen op de media speler begint. Het hervatten van de buffer is geen gebeurtenis in de API dienst; in plaats daarvan, wordt het afgeleid wanneer een spelgebeurtenis na het Begin van de Buffer wordt verzonden. Als u een aanvraag voor een bufferstartgebeurtenis wilt indienen, gebruikt u uw `sessionId` in de lading van een vraag aan het volgende eindpunt:
 
 **POST**  `https://edge.adobedc.net/ee-pre-prd/va/v1/bufferStart \`
 
@@ -284,9 +284,9 @@ In de volgende tabel worden de mogelijke responscodes weergegeven die het gevolg
 | Status | Beschrijving |
 | ---------- | --------- |
 | 200 | Sessie is gemaakt |
-| 207 | Probleem met één van de diensten die met het Netwerk van de Rand van de Ervaring verbinden (zie meer in [gids voor problemen](troubleshooting.md)) |
+| 207 | Probleem met één van de diensten die met het Netwerk van de Rand verbinden (zie meer in [gids voor problemen](troubleshooting.md)) |
 | 400-niveau | Ongeldig verzoek |
-| 500-niveau | Serverfout |
+| 500 | Serverfout |
 
 ## Meer hulp bij deze functie
 

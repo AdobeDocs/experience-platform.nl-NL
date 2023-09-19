@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -89,10 +89,10 @@ Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpub
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Edge-evaluatie"
->abstract="De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk op de Rand van de Ervaring te evalueren, toelatend de kwesties van het de verpersoonlijkingsgebruik van de zelfde pagina en van de volgende pagina."
+>abstract="De segmentatie van de rand is de capaciteit om segmenten in Platform op het Netwerk van de Rand onmiddellijk te evalueren, toelatend de kwesties van het de verpersoonlijkingsgebruik van zelfde-pagina en volgende-pagina."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI-hulplijn"
 
-De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk te evalueren [over Experience Edge](../edge/home.md)en maakt het gebruik van hoofdletters en kleine letters mogelijk voor het aanpassen van pagina&#39;s.
+De segmentatie van de rand is de capaciteit om segmenten in Platform onmiddellijk te evalueren [op het Edge-netwerk](../edge/home.md)en maakt het gebruik van hoofdletters en kleine letters mogelijk voor het aanpassen van pagina&#39;s.
 
 Voor meer informatie over randsegmentatie leest u de optie [API-documentatie](./api/edge-segmentation.md) of de [UI-documentatie](./ui/edge-segmentation.md).
 

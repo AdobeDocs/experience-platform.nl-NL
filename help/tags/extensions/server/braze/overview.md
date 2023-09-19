@@ -1,12 +1,12 @@
 ---
 keywords: gebeurtenis door:sturen uitbreiding;breze;breze gebeurtenis door:sturen uitbreiding
 title: Braze Event Forwarding Extension
-description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Braze.
+description: Deze Adobe Experience Platform-gebeurtenis die extensie doorstuurt, verzendt Edge Network-gebeurtenissen naar Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1733'
 ht-degree: 1%
 
 ---
@@ -34,11 +34,11 @@ Zodra de gegevens zijn verzonden, kunnen de analyseteams van de organisatie verv
 
 ## [!DNL Braze] voorwaarden en waarborgen {#prerequisites}
 
-U moet beschikken over een [!DNL Braze] rekening te houden met haar technologieën. Als u geen account hebt, navigeert u naar de [Aan de slag-pagina](https://www.braze.com/get-started/) op [!DNL Braze] om verbinding te maken met [!DNL Braze Sales] en start het accountaanmaakproces.
+U moet een [!DNL Braze] rekening te houden met haar technologieën. Als u geen account hebt, navigeert u naar de [Aan de slag-pagina](https://www.braze.com/get-started/) op [!DNL Braze] verbinding maken met [!DNL Braze Sales] en start het accountaanmaakproces.
 
 ### API-handleidingen
 
-De extensie gebruikt twee van [!DNL Braze]API&#39;s en de bijbehorende beperkingen worden hieronder beschreven:
+De extensie gebruikt twee van [!DNL Braze]API&#39;s en hun beperkingen worden hieronder beschreven:
 
 | API | Snelheidslimieten |
 | --- | --- |
@@ -55,7 +55,7 @@ Extra aangepaste kenmerken verzenden naar [!DNL Braze] kan uw [!DNL Braze] verbr
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
-Als u het Edge-netwerk wilt verbinden met [!DNL Braze]zijn de volgende gegevens vereist:
+Als u het Edge-netwerk wilt verbinden met [!DNL Braze], zijn de volgende invoeren vereist:
 
 | Type toets | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ Als u het Edge-netwerk wilt verbinden met [!DNL Braze]zijn de volgende gegevens 
 
 ### Een geheim maken
 
-Een nieuwe [gebeurtenis die geheim door:sturen](../../../ui/event-forwarding/secrets.md) en stel de waarde in op uw [[!DNL Braze] API-sleutel](#configuration-details). Hiermee wordt de verbinding met uw account geverifieerd, maar blijft de waarde veilig.
+Een nieuwe [gebeurtenis die geheim door:sturen](../../../ui/event-forwarding/secrets.md) en stel de waarde in op uw [[!DNL Braze] API-sleutel](#configuration-details). Dit wordt gebruikt om de verbinding met uw account te verifiëren en de waarde veilig te houden.
 
 ## Installeer en configureer de [!DNL Braze] extension {#install}
 
@@ -77,11 +77,11 @@ Selecteren **[!UICONTROL Extensions]** in de linkernavigatie. In de **[!UICONTRO
 Voer in het volgende scherm het volgende in [configuratiewaarden](#configuration-details) dat u eerder hebt verzameld van [!DNL Braze]:
 
 - **[!UICONTROL Braze Rest Endpoint URL]**: U kunt de waarde van uw [!DNL Braze] rest eindpunt URL als gewone tekst in de verstrekte input.
-- **[!UICONTROL API Key]**: Selecteer [element met geheime gegevens](#create-a-secret) die u eerder hebt gemaakt en die uw [!DNL Braze] API-sleutel.
+- **[!UICONTROL API Key]**: Selecteer de [element met geheime gegevens](#create-a-secret) die u eerder hebt gemaakt en die uw [!DNL Braze] API-sleutel.
 
 Selecteren **[!UICONTROL Save]** wanneer gereed.
 
-![De [!DNL Braze] extensieconfiguratiepagina.](../../../images/extensions/server/braze/configure-extension.png)
+![De [!DNL Braze] extensieconfiguratiepagina](../../../images/extensions/server/braze/configure-extension.png)
 
 ## Een [!DNL Send Event] regel {#tracking-rule}
 
@@ -93,9 +93,9 @@ Na het installeren van de uitbreiding, creeer een nieuwe gebeurtenis door:sturen
 
 | Invoer | Beschrijving |
 | --- | --- |
-| [!UICONTROL External User ID] | Lang, willekeurig en goed verdeeld UUID of GUID. Als u een andere methode kiest om uw gebruikers-id&#39;s een naam te geven, moeten deze ook lang, willekeurig en goed verdeeld zijn. Meer informatie over [voorgestelde naamgevingsconventie voor gebruikersnaam](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
+| [!UICONTROL External User ID] | Lang, willekeurig en goed verdeeld UUID of GUID. Als u een andere methode kiest om uw gebruikers-id&#39;s een naam te geven, moeten deze ook lang, willekeurig en goed gedistribueerd zijn. Meer informatie over [voorgestelde naamgevingsconventie voor gebruikersnaam](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL Braze User ID] | Gebruikersidentificatie &#39;Braze&#39;. |
-| [!UICONTROL User Alias] | Een alias fungeert als alternatieve unieke gebruikersnaam. Gebruik aliassen om gebruikers met verschillende afmetingen te identificeren dan de gebruikers-id die u als hoofdgebruiker gebruikt. <br><br> Het alias-object van de gebruiker bestaat uit twee delen: een alias_name voor het herkenningsteken zelf, en een alias_label die op het type van alias wijzen. Gebruikers kunnen meerdere aliassen met verschillende labels hebben, maar slechts één alias_naam per alias_label. |
+| [!UICONTROL User Alias] | Een alias fungeert als alternatieve unieke gebruikersnaam. Gebruik aliassen om gebruikers met verschillende afmetingen te identificeren dan de gebruikers-id die u als hoofdgebruiker gebruikt. <br><br> Het alias-object van de gebruiker bestaat uit twee delen: een alias_name voor de id zelf en een alias_label die het type alias aangeven. Gebruikers kunnen meerdere aliassen met verschillende labels hebben, maar slechts één alias_naam per alias_label. |
 
 {style="table-layout:auto"}
 
@@ -149,9 +149,9 @@ Na het installeren van de uitbreiding, creeer een nieuwe gebeurtenis door:sturen
 
 | Invoer | Beschrijving |
 | --- | --- |
-| [!UICONTROL External User ID] | Lang, willekeurig en goed verdeeld UUID of GUID. Als u een andere methode kiest om uw gebruikers-id&#39;s een naam te geven, moeten deze ook lang, willekeurig en goed verdeeld zijn. Meer informatie over [voorgestelde naamgevingsconventie voor gebruikersnaam](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
+| [!UICONTROL External User ID] | Lang, willekeurig en goed verdeeld UUID of GUID. Als u een andere methode kiest om uw gebruikers-id&#39;s een naam te geven, moeten deze ook lang, willekeurig en goed gedistribueerd zijn. Meer informatie over [voorgestelde naamgevingsconventie voor gebruikersnaam](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL Braze User ID] | Gebruikersidentificatie &#39;Braze&#39;. |
-| [!UICONTROL User Alias] | Een alias fungeert als alternatieve unieke gebruikersnaam. Gebruik aliassen om gebruikers met verschillende afmetingen te identificeren dan de gebruikers-id die u als hoofdgebruiker gebruikt. <br><br> Het alias-object van de gebruiker bestaat uit twee delen: een alias_name voor het herkenningsteken zelf, en een alias_label die op het type van alias wijzen. Gebruikers kunnen meerdere aliassen met verschillende labels hebben, maar slechts één alias_naam per alias_label. |
+| [!UICONTROL User Alias] | Een alias fungeert als alternatieve unieke gebruikersnaam. Gebruik aliassen om gebruikers met verschillende afmetingen te identificeren dan de gebruikers-id die u als hoofdgebruiker gebruikt. <br><br> Het alias-object van de gebruiker bestaat uit twee delen: een alias_name voor de id zelf en een alias_label die het type alias aangeven. Gebruikers kunnen meerdere aliassen met verschillende labels hebben, maar slechts één alias_naam per alias_label. |
 
 {style="table-layout:auto"}
 
@@ -163,7 +163,7 @@ Na het installeren van de uitbreiding, creeer een nieuwe gebeurtenis door:sturen
 
 | Invoer | Beschrijving | Vereist |
 | --- | --- | --- |
-| [!UICONTROL Product ID &#x200B;] | Identificatiecode voor de aankoop. (bijvoorbeeld productnaam of productcategorie) | Ja |
+| [!UICONTROL Product ID &#x200B;] | Identificatiecode voor de aankoop. (bv. productnaam of productcategorie) | Ja |
 | [!UICONTROL Purchase Time] | Datum/tijd als tekenreeks in ISO 8601 of in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` gebruiken. | Ja |
 | [!UICONTROL Currency &#x200B;] | Valuta als tekenreeks in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) Alfabetische notatie valutacode. | Ja |
 | [!UICONTROL Price &#x200B;] | Prijs. | Ja |
@@ -175,7 +175,7 @@ Na het installeren van de uitbreiding, creeer een nieuwe gebeurtenis door:sturen
 
 >[!NOTE]
 >
-> De **[!UICONTROL Braze Send Event]** actie vereist slechts **[!UICONTROL Event Name]** en **[!UICONTROL Event Time]** op te geven, maar u dient zoveel mogelijk informatie op te nemen in het veld met aangepaste eigenschappen. Voor meer informatie over de [!DNL Braze] gebeurtenisobject, verwijzen naar de [officiële documentatie](https://www.braze.com/docs/api/objects_filters/event_object/).
+> De **[!UICONTROL Braze Send Event]** actie vereist slechts **[!UICONTROL Event Name]** en **[!UICONTROL Event Time]** op te geven, maar u moet zoveel mogelijk informatie opnemen in het veld met aangepaste eigenschappen. Voor meer informatie over de [!DNL Braze] gebeurtenisobject, verwijzen naar de [officiële documentatie](https://www.braze.com/docs/api/objects_filters/event_object/).
 
 **[!UICONTROL User Attributes]**
 

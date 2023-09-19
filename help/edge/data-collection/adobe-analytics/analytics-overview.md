@@ -3,9 +3,9 @@ title: Adobe Analytics gebruiken met Platform Web SDK
 description: Leer hoe u gegevens naar Adobe Analytics verzendt met de Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -74,4 +74,4 @@ Hier volgt een voorbeeld van een verwerkingsregel waarin deze gegevens worden ge
 
 >[!NOTE]
 >
->Met de inzameling van de Rand van de Ervaring, worden alle gebeurtenissen verzonden naar Analytics evenals naar andere diensten u voor uw gegevensstroom hebt gevormd. Bijvoorbeeld, als u zowel Analytics als Doel als diensten hebt gevormd en u afzonderlijke vraag naar verpersoonlijking en voor Analytics maakt, zullen beide gebeurtenissen naar Analytics evenals Doel worden verzonden. Deze gebeurtenissen worden opgenomen in de analytische rapportage en kunnen van invloed zijn op metriek zoals de stuiteringsfrequentie.
+>Met de inzameling van het Netwerk van de Rand, worden alle gebeurtenissen verzonden naar Analytics evenals naar andere diensten u voor uw gegevensstroom hebt gevormd. Bijvoorbeeld, als u zowel Analytics als Doel als diensten hebt gevormd en u afzonderlijke vraag naar verpersoonlijking en voor Analytics maakt, zullen beide gebeurtenissen naar Analytics evenals Doel worden verzonden. Deze gebeurtenissen worden opgenomen in de analytische rapportage en kunnen van invloed zijn op metriek zoals de stuiteringsfrequentie.

@@ -1,14 +1,13 @@
 ---
 title: Adobe Experience Platform Web Software Development Kit (SDK) - Overzicht
 description: Leer hoe u de Adobe Experience Platform Web SDK gebruikt om de mogelijkheden van het platform in uw website te integreren.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 52dbde052322a00fc33cd9f9c86ab7f92671f36a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '776'
 ht-degree: 1%
 
 ---
+
 
 # Overzicht van Adobe Experience Platform Web SDK {#overview}
 
@@ -17,17 +16,15 @@ Adobe Experience Platform Web Software Development Kit (SDK) is een JavaScript-b
 * Handmatige implementatie met `alloy.js`. Deze gebruikershandleiding bevat documentatie voor deze implementatiemethode.
 * De [Web SDK-tagextensie](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Zie [Zelfstudie Adobe Experience Cloud implementeren met Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) voor meer informatie .
 
-## Adobe beleving rand
+## Experience Platform Edge Network
 
-De SDK van het Web van Adobe Experience Platform maakt deel uit van de inzameling die omhoog de Rand van de Ervaring van de Adobe maakt. Adobe Experience Edge bestaat uit de volgende technologieën:
+De SDK van het Web van de Experience Platform maakt deel uit van een inzameling van hulpmiddelen die omhoog het Netwerk van de Rand van Adobe Experience Platform maken. Het Edge-netwerk bestaat uit de volgende onderdelen:
 
-* **[Adobe Experience Platform Web SDK](#overview):** Een JavaScript SDK en tagextensie om de implementatie van Adobe-technologieën aanzienlijk te vereenvoudigen.
-* **[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** Een uitbreiding van de mobiele SDK van v5 zodat klanten de nieuwe implementatiemethode kunnen gebruiken
-* **[Adobe Experience Platform Edge Network](../server-api/overview.md):** Een globaal verdeeld netwerk van servers die een nieuwe methodologie om toelaten op te stellen [!DNL Adobe] producten
+* **[Experience Platform Web SDK](#overview):** Een JavaScript SDK en tagextensie om de implementatie van Adobe-technologieën aanzienlijk te vereenvoudigen.
+* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** Een uitbreiding van de mobiele SDK van v5 zodat klanten de nieuwe implementatiemethode kunnen gebruiken
+* **[Experience Platform Edge Network Server-API](../server-api/overview.md):** Een API die kan worden gebruikt voor diverse gevallen van gegevensverzameling, personalisatie, reclame en marketing. De server-API kan worden gebruikt op servers, IoT-apparaten, set-top boxes en diverse andere apparaten.
 
-De Adobe Experience Edge is een raamwerk voor gegevensverzameling met lage latentie, pluggable computergebruik en snelle gegevensactivering op alle adresseerbare kanalen.
-
-[!DNL Adobe Experience Edge] biedt één geconsolideerde SDK voor elk kanaal (JavaScript, Mobiel, Server-kant), dat gegevens verzendt naar een gemeenschappelijk Adobe-domein (`adobedc.net`) en ontvangt één enkele terugverdientijd voor gegevens en ervaringslevering.
+Het Edge-netwerk is een raamwerk voor gegevensverzameling met lage latentie, pluggable computergebruik en snelle gegevensactivering op alle adresseerbare kanalen. Het verstrekt één enkele geconsolideerde SDK voor elk kanaal (JavaScript, Mobiel, server-kant), dat gegevens naar een gemeenschappelijk domein van de Adobe verzendt (`adobedc.net`) en ontvangt één enkele terugverdientijd voor gegevens en ervaringslevering.
 
 Aan de serverzijde, maken een verenigde randgateway en een gemeenschappelijk kader van de platformdienst het gemakkelijk om nieuwe mogelijkheden in deze real-time gegevensverwerkingsomgeving op te stellen. Deze architectuur:
 

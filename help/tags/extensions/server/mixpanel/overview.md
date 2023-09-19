@@ -1,12 +1,12 @@
 ---
 keywords: gebeurtenis door:sturen uitbreiding;mixpanel;mixpanel gebeurtenis door:sturen uitbreiding
 title: Mixpanel Track Events API Event Forwarding Extension
-description: Deze Adobe Experience Platform-extensie voor het doorsturen van gebeurtenissen verzendt Adobe Experience Edge Network-gebeurtenissen naar Mixpanel.
+description: Deze Adobe Experience Platform-gebeurtenis die een extensie doorstuurt, verzendt Edge Network-gebeurtenissen naar het deelvenster Mixer.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '922'
 ht-degree: 1%
 
 ---
@@ -54,11 +54,11 @@ In [!DNL Mixpanel], bevat een identiteitscluster een verzameling van `distinct_i
 >
 >Zie de [!DNL Mixpanel] document op [identiteitsbeheer](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) voor meer informatie over deze methoden .
 >
->Bevestig dat u de [[!DNL Mixpanel] samenvoegfunctie](#prerequisites-mixpanel) ervoor te zorgen dat identiteitsclusters op passende wijze worden opgelost.
+>Bevestig dat u de [[!DNL Mixpanel] samenvoegfunctie voor identiteit](#prerequisites-mixpanel) ervoor te zorgen dat identiteitsclusters op passende wijze worden opgelost.
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
-Om Experience Platform met te verbinden [!DNL Mixpanel] u moet de volgende input hebben:
+Als u Experience Platform wilt verbinden met [!DNL Mixpanel] u moet de volgende input hebben:
 
 | Type toets | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -74,13 +74,13 @@ Selecteren **[!UICONTROL Extensions]** in de linkernavigatie. In de **[!UICONTRO
 
 ## Een [!DNL Send Event] regel
 
-Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL Mixpanel]**. Stel vervolgens het handelingstype in op **[!UICONTROL Track Event]** om Adobe Experience Edge Network-gebeurtenissen naar [!DNL Mixpanel].
+Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Onder **[!UICONTROL Actions]** voegt u een nieuwe handeling toe en stelt u de extensie in op **[!UICONTROL Mixpanel]**. Stel vervolgens het handelingstype in op **[!UICONTROL Track Event]** om Edge Network-gebeurtenissen naar [!DNL Mixpanel].
 
 | Invoer | Beschrijving | Vereist |
 | --- | --- | --- |
 | [!UICONTROL Project Token] | Dit gebied zou aan het projectteken verbonden aan uw moeten in kaart worden gebracht [!DNL Mixpanel] account. | Ja |
-| [!UICONTROL Event Type] | De naam van de gebeurtenis. | Ja |
-| [!UICONTROL Event Time] | De tijd van de gebeurtenis. | |
+| [!UICONTROL Event Type] | De gebeurtenisnaam. | Ja |
+| [!UICONTROL Event Time] | De gebeurtenistijd. | |
 | [!UICONTROL Mixpanel Distinct ID] | De unieke id van de gebruiker die de gebeurtenis heeft uitgevoerd. | |
 | [!UICONTROL Insert ID] | Een unieke id voor de gebeurtenis, die wordt gebruikt voor deduplicatie. | |
 | [!UICONTROL Event Properties] | Een JSON-object dat aangepaste eigenschappen van de gebeurtenis bevat. Maak een keuze uit het opgeven van onbewerkte JSON of uit het gebruik van een vereenvoudigde set toetsinvoer. | |

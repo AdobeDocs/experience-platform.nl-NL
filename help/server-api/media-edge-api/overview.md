@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Media Edge-API's
 description: Overzicht van mediarand-API's
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Media Edge-API&#39;s zijn gebaseerd op de Adobe Experience Platform en bieden in het kader van [XDM-schema&#39;s](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). Voor klanten van Media Analytics, maakt dit de volgende eigenschappen beschikbaar:
 
-* Met [Adobe Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=en), kunnen klanten bijna real-time, korrelige details van duur krijgen, beginnen, en einden om voor media metriek te evalueren en te combineren. Klanten die vanuit Adobe Analytics migreren, beschikken over alle statistische gegevens voor rapportage in Adobe Customer Journey Analytics.
+* Met [Adobe Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=en), kunnen klanten bijna real-time, korrelige details van duur krijgen, beginnen, en houdt op om voor media metriek te evalueren en te combineren. Klanten die vanuit Adobe Analytics migreren, beschikken over alle statistische gegevens voor rapportage in Adobe Customer Journey Analytics.
 
 * Met [Adobe Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=nl)klanten kunnen hun realtime profielen verrijken met gegevens over mediaverbruik.
 
@@ -27,22 +27,22 @@ Beide [Media Collection-API&#39;s](https://experienceleague.adobe.com/docs/media
 
 * Het is de eenvoudigste manier om XDM-schema&#39;s in uw gegevensstroom op te nemen.
 
-* De vraag van een media speler richt rechtstreeks aan [Ervaar Edge Platform Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
+* De vraag van een media speler richt rechtstreeks aan [Experience Platform Edge Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
 * Het volgt media gebeurtenissen efficiënt met een minimum van dwars-servervraag.
 
-In de volgende tabel ziet u een mogelijke Adobe API-service voor verschillende gevallen van mediaverlichting:
+In de volgende tabel ziet u een mogelijke API-service voor Adobe voor verschillende gevallen van mediaverlichting:
 
 | Gebruiksscenario | API-service |
 | -------- | ----------- |
 | Adobe Experience Platform-oplossing | Mediarand |
-| CDP + Customer Journey Analytics in realtime | Mediarand |
+| Real-time CDP + Customer Journey Analytics | Mediarand |
 | Adobe Analytics + Adobe Experience Platform oplossing | Mediarand |
 | Alleen Adobe Analytics (al gevolgd) | Media-verzameling |
 
 >[!NOTE]
 >
-> De dienst van API van de Inzameling van Media voor Analtyics ontvangt nog XDM gegevens, maar is niet geoptimaliseerd voor het in zoverre dat de dienst van de Rand van Media is. Afhankelijk van de gegevens die van de Speler van Media worden verzonden, kunnen sommige Analytics-slechts gegevens ook door de dienst van de Rand van Media worden verpletterd API.
+> De dienst van API van de Inzameling van Media voor Analtyics ontvangt nog XDM gegevens, maar is niet geoptimaliseerd voor het voor zover de dienst van de Rand van Media is. Afhankelijk van de gegevens die van de Speler van Media worden verzonden, kunnen sommige Analytics-slechts gegevens ook door de dienst van de Rand van Media worden verpletterd API.
 
 In de volgende afbeelding ziet u de gegevensstromen voor de twee API-services:
 
