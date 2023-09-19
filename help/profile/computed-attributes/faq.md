@@ -1,9 +1,9 @@
 ---
 title: Berekende kenmerken Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over het gebruik van berekende kenmerken.
-source-git-commit: fb5d3088b9fb330153bf64125df2f739eee80518
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Veelgestelde vragen
 
 In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Hieronder volgt een lijst met veelgestelde vragen over berekende kenmerken.
+
+## Hoe krijg ik toegang tot berekende kenmerken?
+
+Om toegang tot gegevens verwerkte attributen te krijgen, zult u de aangewezen toestemmingen moeten hebben (**Berekende kenmerken weergeven** en **Berekende kenmerken beheren**). Lees voor meer informatie over de vereiste machtigingen de [toegangsbeheerdocumentatie](../../access-control/home.md). Lees voor meer informatie over het toepassen van deze machtigingen de [machtigingengids beheren](../../access-control/ui/permissions.md).
 
 ## Welke datasets dragen bij tot berekende attributenberekeningen?
 
@@ -76,10 +80,6 @@ Net als andere profielkenmerken zijn berekende kenmerken beschikbaar en kunnen d
 ## Hoe worden labels voor gegevensgebruik toegepast op berekende kenmerken?
 
 De gegevens verwerkte attributen leiden automatisch de etiketten van het gegevensgebruik van de brongebieden en datasets af die werden gebruikt om de gegevens verwerkte attributen te bepalen. Dit zorgt ervoor dat uw gedragsgegevens correct worden gebruikt.
-
-## Hoe krijg ik toegang tot berekende kenmerken?
-
-Om toegang te krijgen tot gegevens verwerkte attributen, zult u de aangewezen toestemmingen moeten hebben. Lees voor meer informatie over de vereiste machtigingen de [toegangsbeheerdocumentatie](../../access-control/home.md).
 
 ## Hoe gebruik ik berekende kenmerken met Adobe Journey Optimizer?
 

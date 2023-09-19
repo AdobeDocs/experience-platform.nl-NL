@@ -1,15 +1,19 @@
 ---
 title: Gebruikershandleiding berekende kenmerken
 description: Leer hoe u berekende kenmerken maakt, weergeeft en bijwerkt met de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
 
 
 # Gebruikershandleiding voor berekende kenmerken
+
+>[!NOTE]
+>
+>Om toegang tot gegevens verwerkte attributen te krijgen, zult u de aangewezen toestemmingen moeten hebben (**Berekende kenmerken weergeven** en **Berekende kenmerken beheren**). Lees voor meer informatie over de vereiste machtigingen de [toegangsbeheerdocumentatie](../../access-control/home.md). Lees voor meer informatie over het toepassen van deze machtigingen de [machtigingengids beheren](../../access-control/ui/permissions.md).
 
 In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 
