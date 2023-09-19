@@ -4,16 +4,16 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '4409'
+source-wordcount: '4392'
 ht-degree: 0%
 
 ---
 
 # Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
 
-Gebruik de verbeterde mogelijkheden voor het exporteren van bestanden (momenteel in bèta) voor toegang tot de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit het Experience Platform:
+Gebruik de uitgebreide mogelijkheden voor het exporteren van bestanden om toegang te krijgen tot de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit het Experience Platform:
 
 * Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
@@ -35,9 +35,13 @@ In dit artikel wordt uitgelegd welke workflow nodig is om de [Flow Service-API](
 >
 >U kunt de gebruikersinterface van het Experience Platform ook gebruiken om profielen naar de bestemmingen van de wolkenopslag uit te voeren. Lees de [zelfstudie over op bestanden gebaseerde doelen activeren](/help/destinations/ui/activate-batch-profile-destinations.md) voor meer informatie .
 
-## Migratie van API-gebruikers {#api-migration}
+<!--
 
-Als u de Flow Service API al hebt gebruikt om profielen te exporteren naar de opslaglocaties van de Amazon S3-, Azure Blob- of SFTP-cloud, leest u de [API-migratiegids](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) voor noodzakelijke migratiestappen als Adobe overgangen gebruikers van de erfenisbestemmingen aan de nieuwe bestemmingen.
+## API users migration {#api-migration}
+
+If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, read the [API migration guide](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) for necessary migration steps as Adobe transitions users from the legacy destinations to the new destinations. 
+
+-->
 
 ## Aan de slag {#get-started}
 
@@ -54,6 +58,8 @@ De volgende secties verstrekken extra informatie die u moet weten om gegevens aa
 ### Vereiste machtigingen {#permissions}
 
 Als u profielen wilt exporteren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, en **[!UICONTROL Activate Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+
+Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
@@ -2356,7 +2362,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2389,7 +2395,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Amazon S3 Beta Target Connection",
+   "name":"Amazon S3 Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2448,7 +2454,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2481,7 +2487,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Azure Blob Storage Beta Target Connection",
+   "name":"Azure Blob Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2663,7 +2669,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Data Landing Zone Beta Target Connection",
+   "name":"Data Landing Zone Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2755,7 +2761,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Google Cloud Storage Beta Target Connection",
+   "name":"Google Cloud Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -4669,11 +4675,11 @@ U vindt informatie over de [de diverse parameters die door de Dataflow-runtime-A
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van de Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met een van uw voorkeursbestemmingen voor cloudopslag en een dataflow ingesteld op de respectievelijke bestemming om het publiek te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
+Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met een van uw voorkeursbestemmingen voor de cloudopslag en een dataflow ingesteld op de respectievelijke bestemming om het publiek te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)

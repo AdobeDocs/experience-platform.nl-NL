@@ -5,26 +5,32 @@ title: Verbinden met batchbestemmingen en gegevens activeren met de Flow Service
 description: Stapsgewijze instructies voor het gebruik van de Flow Service API voor het maken van een batch-cloudopslag of e-mailmarketingbestemming in het Experience Platform en het activeren van gegevens
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '3389'
+source-wordcount: '3433'
 ht-degree: 0%
 
 ---
 
-# Verbinden met batchbestemmingen en gegevens activeren met de Flow Service API
+# Verbind met op dossier-gebaseerde e-mailmarketing bestemmingen en activeer gegevens gebruikend de Dienst API van de Stroom
 
 >[!IMPORTANT]
 > 
->Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions).
+>* Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions).
 >
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
+>
+>* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 >
 >Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Deze zelfstudie laat zien hoe u de Flow Service API kunt gebruiken om een batch te maken [cloudopslag](../catalog/cloud-storage/overview.md) of [e-mailmarketingbestemming](../catalog/email-marketing/overview.md), maakt u een gegevensstroom naar het nieuwe doel en exporteert u gegevens naar het nieuwe doel via CSV-bestanden.
+Deze zelfstudie laat zien hoe u de Flow Service API kunt gebruiken om een bestandsgebaseerd bestand te maken [e-mailmarketingbestemming](../catalog/email-marketing/overview.md), maakt u een gegevensstroom naar het nieuwe doel en exporteert u gegevens naar het nieuwe doel via CSV-bestanden.
 
-Deze zelfstudie gebruikt de [!DNL Adobe Campaign] doel in alle voorbeelden, maar de stappen zijn identiek voor alle opslag van de batchcloud en e-mailmarketingbestemmingen.
+>[!TIP]
+> 
+>Als u wilt leren hoe u gegevens activeert naar cloudopslagdoelen met de Flow Service API, leest u de [speciale API-zelfstudie](/help/destinations/api/activate-segments-file-based-destinations.md).
+
+Deze zelfstudie gebruikt de [!DNL Adobe Campaign] doel in alle voorbeelden, maar de stappen zijn identiek voor op een bestand gebaseerde e-mailmarketingdoelen.
 
 ![Overzicht - de stappen om een bestemming tot stand te brengen en publiek te activeren](../assets/api/email-marketing/overview.png)
 
@@ -34,7 +40,7 @@ Als u liever de gebruikersinterface van het Platform gebruikt om verbinding te m
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] biedt u de mogelijkheid om publiek te maken in [!DNL Adobe Experience Platform] van uw [!DNL Real-Time Customer Profile] gegevens.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -51,7 +57,7 @@ Om de stappen in deze zelfstudie te voltooien, zou u de volgende geloofsbrieven 
 
 >[!NOTE]
 >
->De referenties `accessId`, `secretKey` for [!DNL Amazon S3] verbindingen en `accessId`, `secretKey` for [!DNL Amazon S3] verbindingen met [!DNL Adobe Campaign] identiek zijn.
+>De geloofsbrieven `accessId`, `secretKey` for [!DNL Amazon S3] verbindingen en `accessId`, `secretKey` for [!DNL Amazon S3] verbindingen met [!DNL Adobe Campaign] identiek zijn.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
@@ -61,7 +67,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
@@ -123,12 +129,9 @@ Voor uw verwijzing, bevat de lijst hieronder de verbindingsspecificaties - IDs v
 | Bestemming | Verbinding, specificatie-id |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
-| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
-| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
-| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style="table-layout:auto"}
 
@@ -258,7 +261,7 @@ POST /connections
 
 **Verzoek**
 
-In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Adobe Campaign] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]), de passende `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Adobe Campaign] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]), de passende `auth` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -371,7 +374,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Oracle Eloqua] bestemmingen
 
-In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Oracle Eloqua] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Oracle Eloqua] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -412,7 +415,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Oracle Responsys] bestemmingen
 
-In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Oracle Responsys] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Oracle Responsys] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -453,7 +456,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Voorbeeld van aanvraag om verbinding te maken met [!DNL Salesforce Marketing Cloud] bestemmingen
 
-In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Salesforce Marketing Cloud] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige verwijderen.
+In de onderstaande aanvraag wordt een basisverbinding tot stand gebracht met [!DNL Salesforce Marketing Cloud] bestemmingen. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `auth` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -528,8 +531,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | Geef een naam op voor de basisverbinding met de batchbestemming. |
 | `description` | U kunt desgewenst een beschrijving voor de basisverbinding opgeven. |
 | `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor het gewenste batchdoel. U hebt deze id in de stap verkregen [Krijg de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations). |
-| `auth.specname` | Wijst op het authentificatieformaat voor de bestemming. Om te weten te komen specName voor uw bestemming, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `authSpec.name` in de reactie. <br> Voor Adobe Campaign-doelen kunt u bijvoorbeeld elk van de volgende handelingen uitvoeren `S3`, `SFTP with Password`, of `SFTP with SSH Key`. |
-| `params` | Afhankelijk van het doel waarmee u verbinding maakt, moet u verschillende vereiste verificatieparameters opgeven. Voor Amazon S3-verbindingen moet u uw toegangs-id en geheime sleutel opgeven op de opslaglocatie van Amazon S3. <br> Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `authSpec.spec.required` in de reactie. |
+| `auth.specname` | Wijst op het authentificatieformaat voor de bestemming. Om te weten te komen specName voor uw bestemming, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. Zoeken naar de parameter `authSpec.name` in de reactie. <br> Voor Adobe Campaign-doelen kunt u bijvoorbeeld elk van de volgende handelingen uitvoeren `S3`, `SFTP with Password`, of `SFTP with SSH Key`. |
+| `params` | Afhankelijk van het doel waarmee u verbinding maakt, moet u verschillende vereiste verificatieparameters opgeven. Voor Amazon S3-verbindingen moet u uw toegangs-id en geheime sleutel opgeven op de opslaglocatie van Amazon S3. <br> Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. Zoeken naar de parameter `authSpec.spec.required` in de reactie. |
 
 {style="table-layout:auto"}
 
@@ -561,7 +564,7 @@ POST /targetConnections
 
 **Verzoek**
 
-Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Adobe Campaign] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Adobe Campaign] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -680,7 +683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Oracle Eloqua] bestemmingen
 
-Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Oracle Eloqua] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Oracle Eloqua] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -721,7 +724,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Oracle Responsys] bestemmingen
 
-Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Oracle Responsys] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Oracle Responsys] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -762,7 +765,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Voorbeeld van een verzoek om een opslaglocatie in te stellen voor [!DNL Salesforce Marketing Cloud] bestemmingen
 
-Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Salesforce Marketing Cloud] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige verwijderen.
+Met de onderstaande aanvraag wordt een doelverbinding tot stand gebracht met [!DNL Salesforce Marketing Cloud] doelen, om te bepalen waar de geëxporteerde bestanden op uw opslaglocatie worden aangeland. Afhankelijk van de opslaglocatie waarnaar u bestanden wilt exporteren, moet u de juiste instelling `params` en de overige gegevens verwijderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -842,8 +845,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | U kunt desgewenst een beschrijving voor de doelverbinding opgeven. |
 | `baseConnectionId` | Gebruik de id van de basisverbinding die u in de bovenstaande stap hebt gemaakt. |
 | `connectionSpec.id` | Gebruik de verbindingsspecificatie-id voor het gewenste batchdoel. U hebt deze id in de stap verkregen [Krijg de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations). |
-| `params` | Afhankelijk van het doel waarmee u verbinding maakt, moet u verschillende vereiste parameters opgeven voor de opslaglocatie. Voor Amazon S3-verbindingen moet u uw toegangs-id en geheime sleutel opgeven op de opslaglocatie van Amazon S3. <br> Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `targetSpec.spec.required` in de reactie. |
-| `params.mode` | Afhankelijk van de ondersteunde modus voor uw doel moet u hier een andere waarde opgeven. Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. De parameter zoeken `targetSpec.spec.properties.mode.enum` in het antwoord en selecteer de gewenste modus. |
+| `params` | Afhankelijk van het doel waarmee u verbinding maakt, moet u verschillende vereiste parameters opgeven voor de opslaglocatie. Voor Amazon S3-verbindingen moet u uw toegangs-id en geheime sleutel opgeven op de opslaglocatie van Amazon S3. <br> Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. Zoeken naar de parameter `targetSpec.spec.required` in de reactie. |
+| `params.mode` | Afhankelijk van de ondersteunde modus voor uw doel moet u hier een andere waarde opgeven. Om de vereiste parameters voor uw bestemming te weten te komen, voer a uit [De vraag van de GET aan de verbinding specs eindpunt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), op basis van de verbindingsspecificaties van het gewenste doel. Zoeken naar de parameter `targetSpec.spec.properties.mode.enum` in het antwoord en selecteer de gewenste modus. |
 | `params.bucketName` | Geef voor S3-verbindingen de naam op van het emmertje waar de bestanden worden geëxporteerd. |
 | `params.path` | Geef voor S3-verbindingen het bestandspad op in de opslaglocatie waar de bestanden worden geëxporteerd. |
 | `params.format` | `CSV` is momenteel het enige ondersteunde exporttype voor bestanden. |
@@ -918,7 +921,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Geef een naam op voor de gegevensstroom die u maakt. |
 | `description` | U kunt desgewenst een beschrijving voor de gegevensstroom opgeven. |
-| `flowSpec.Id` | Gebruik de flow-specificatie-id voor de batchbestemming waarmee u verbinding wilt maken. Voer een GET-bewerking uit op de knop `flowspecs` eindpunt, zoals getoond in het [stroomspecificaties API-naslagdocumentatie](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In de reactie zoekt u naar `upsTo` en kopieer de bijbehorende id van de batchbestemming waarmee u verbinding wilt maken. Voor Adobe Campaign kunt u bijvoorbeeld zoeken naar `upsToCampaign` en kopieert u de `id` parameter. |
+| `flowSpec.Id` | Gebruik de flow-specificatie-id voor de batchbestemming waarmee u verbinding wilt maken. Voer een GET-bewerking uit op de knop `flowspecs` eindpunt, zoals getoond in het [stroomspecificaties API-naslagdocumentatie](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In de reactie zoekt u naar `upsTo` en kopieer de bijbehorende id van de batchbestemming waarmee u verbinding wilt maken. Voor Adobe Campaign kunt u bijvoorbeeld `upsToCampaign` en kopieer de `id` parameter. |
 | `sourceConnectionIds` | Gebruik de bronverbindings-id die u in de stap hebt opgehaald [Verbinden met uw Experience Platform gegevens](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | Gebruik de doel-verbindings-id die u in de stap hebt verkregen [Verbinden met batchbestemming](#connect-to-batch-destination). |
 | `transformations` | In de volgende stap vult u deze sectie met het publiek en de profielkenmerken die moeten worden geactiveerd. |
@@ -1026,20 +1029,20 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Gebruik in de URL de id van de gegevensstroom die u in de vorige stap hebt gemaakt. |
 | `{ETAG}` | Krijg de `{ETAG}` uit het antwoord in de vorige stap, [Een gegevensstroom maken](#create-dataflow). De antwoordindeling in de vorige stap heeft escape-aanhalingstekens. U moet de niet-beschermde waarden in de kopbal van het verzoek gebruiken. Zie het onderstaande voorbeeld: <br> <ul><li>Voorbeeld van reactie: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Waarde die u in uw verzoek wilt gebruiken: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom. |
-| `{SEGMENT_ID}` | Geef de gebruikers-id op die u naar dit doel wilt exporteren. Ga naar [een publieksdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
+| `{SEGMENT_ID}` | Geef de gebruikers-id op die u naar dit doel wilt exporteren. Ga voor het ophalen van gebruikers-id&#39;s voor het publiek dat u wilt activeren naar [een publieksdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
 | `{PROFILE_ATTRIBUTE}` | Bijvoorbeeld: `"person.lastName"` |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` bewerking. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` -bewerking. |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een publiek aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 | `id` | Geef de id op van het publiek dat u aan de doelgegevensstroom toevoegt. |
 | `name` | *Optioneel*. Geef de naam op van het publiek dat u aan de doelgegevensstroom toevoegt. Dit veld is niet verplicht en u kunt een publiek toevoegen aan de doelgegevensstroom zonder de naam ervan op te geven. |
 | `filenameTemplate` | Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: Verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: Verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde publiek.</li><li>`%SEGMENT_NAME%`: Optioneel. De geëxporteerde bestanden bevatten de naam van het geëxporteerde publiek.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: Optioneel. Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: Optioneel. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> Raadpleeg voor meer informatie over het configureren van bestandsnamen de [bestandsnamen configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) in de activeringszelfstudie voor batchbestemmingen. |
-| `exportMode` | Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Voor meer informatie over de twee opties raadpleegt u [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
+| `exportMode` | Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Raadpleeg voor meer informatie over de twee opties [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
 | `startDate` | Selecteer de datum waarop het publiek moet beginnen met het exporteren van profielen naar uw bestemming. |
 | `frequency` | Verplicht. <br> <ul><li>Voor de `"DAILY_FULL_EXPORT"` u kunt de exportmodus `ONCE` of `DAILY`.</li><li>Voor de `"FIRST_FULL_THEN_INCREMENTAL"` u kunt de exportmodus `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist als u de optie `"DAILY_FULL_EXPORT"` in de `frequency` kiezer. <br> Verplicht. <br> <ul><li>Selecteren `"AFTER_SEGMENT_EVAL"` om de activeringstaak onmiddellijk uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Dit zorgt ervoor dat wanneer de activeringstaak wordt uitgevoerd, de meest recente profielen naar uw bestemming worden uitgevoerd.</li><li>Selecteren `"SCHEDULED"` om de activeringstaak op een vast tijdstip uit te voeren. Dit zorgt ervoor dat de gegevens van het Experience Platform profielgegevens tezelfdertijd elke dag worden uitgevoerd, maar de profielen u uitvoert kunnen niet de meest bijgewerkte zijn, afhankelijk van of de batch-segmentatietaak heeft voltooid alvorens de activeringstaak begint. Als u deze optie selecteert, moet u ook een `startTime` aangeven op welk tijdstip in UTC de dagelijkse uitvoer moet plaatsvinden.</li></ul> |
 | `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop publieksleden stoppen met exporteren naar de bestemming. |
-| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
+| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en geëxporteerd naar uw bestemming. |
 
 {style="table-layout:auto"}
 
@@ -1077,7 +1080,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'If-Match: "{ETAG}"' 
 ```
 
-* `{DATAFLOW_ID}`: Gebruik de gegevensstroom van de vorige stap.
+* `{DATAFLOW_ID}`: Gebruik de gegevensstroom uit de vorige stap.
 * `{ETAG}`: Gebruik het label van de vorige stap.
 
 **Antwoord**
@@ -1237,11 +1240,11 @@ De geretourneerde reactie moet worden opgenomen in de `transformations` geeft ee
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van de Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u een Platform verbonden met een van uw voorkeursbestemmingen voor opslag in de batchcloud of e-mailmarketing en een gegevensstroom ingesteld naar de desbetreffende bestemming voor het exporteren van gegevensbestanden. De uitgaande gegevens kunnen nu in de bestemming voor e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen worden gebruikt. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
+Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met één van uw aangewezen op dossier-gebaseerde e-mailmarketing bestemmingen en opstelling een gegevensstroom aan de respectieve bestemming om gegevensdossiers uit te voeren. De uitgaande gegevens kunnen nu in de bestemming voor e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen worden gebruikt. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)
