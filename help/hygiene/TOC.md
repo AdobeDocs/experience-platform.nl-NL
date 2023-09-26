@@ -4,10 +4,10 @@ user-guide-title: Data Hygiene Help
 breadcrumb-title: Gids Data Hygiene
 user-guide-description: Verwijder individuele verslagen en plan vervalmomenten van datasets in Experience Platform voor het opschonen van gegevens, het verwijderen van anonieme gegevens en gegevensminimalisering.
 feature: Data Hygiene
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 0deb861d016fc99cfc1a2b75a08800dac7d208f4
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 50%
+source-wordcount: '55'
+ht-degree: 49%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 50%
    * [Overzicht](./ui/overview.md)
    * [Door bestaande werkorders bladeren](./ui/browse.md)
    * [Verlopen gegevenssets beheren](./ui/dataset-expiration.md)
-   * [Records verwijderen](./ui/record-delete.md)
+   * [(bèta) Records verwijderen](./ui/record-delete.md)
 * API voor gegevenshygiëne {#api}
    * [Overzicht](./api/overview.md)
    * [Verlopen gegevensset](./api/dataset-expiration.md)
