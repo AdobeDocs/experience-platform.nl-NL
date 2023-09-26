@@ -1,12 +1,12 @@
 ---
-title: Overzicht van Snowflake-streamingbronconnector
+title: Overzicht van Snowflake Streaming Source Connector
 description: Leer hoe u een bronverbinding en gegevensstroom kunt maken om streaminggegevens van uw Snowflake-instantie naar Adobe Experience Platform in te voeren
 badgeBeta: label="Beta" type="Informative"
-badgeUltimate: label="Ultimate" type="Positive"
+badgeUltimate: label="Ultieme" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >* De [!DNL Snowflake] streamingbron is in bèta. Lees de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 >* De [!DNL Snowflake] De streamingbron is in de API beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het streamen van gegevens van een [!DNL Snowflake] database.
 
@@ -38,9 +38,9 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Snowflake]moet u de volgende ei
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `account` | De volledige accountnaam die aan uw [!DNL Snowflake] account. Een volledig gekwalificeerde [!DNL Snowflake] de naam van uw account bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld, `cj12345.east-us-2.azure`. Raadpleeg deze voor meer informatie over accountnamen [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | De [!DNL Snowflake] Het pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] magazijn is onafhankelijk van elkaar en moet individueel worden benaderd wanneer gegevens naar het Platform worden overgebracht. |
-| `database` | De [!DNL Snowflake] de database bevat de gegevens die u het Platform wilt brengen. |
+| `account` | De volledige accountnaam die aan uw [!DNL Snowflake] account. Volledig gekwalificeerd [!DNL Snowflake] de naam van uw account bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld, `cj12345.east-us-2.azure`. Raadpleeg deze voor meer informatie over accountnamen [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `warehouse` | De [!DNL Snowflake] Het pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] Het pakhuis is onafhankelijk van elkaar en moet individueel worden betreden wanneer het brengen van gegevens naar Platform. |
+| `database` | De [!DNL Snowflake] Het gegevensbestand bevat de gegevens u het Platform wilt brengen. |
 | `username` | De gebruikersnaam voor de [!DNL Snowflake] account. |
 | `password` | Het wachtwoord voor de [!DNL Snowflake] gebruikersaccount. |
 | `role` | (Optioneel) Een op maat gedefinieerde rol die voor een gebruiker, voor een bepaalde verbinding kan worden opgegeven. Indien niet opgegeven, wordt deze waarde standaard ingesteld op `public`. |
@@ -74,7 +74,8 @@ Voor meer informatie over rol en voorrechtbeheer raadpleegt u de [[!DNL Snowflak
    * U kunt een `backfill` Booleaanse markering voor uw [!DNL Snowflake] bron bij het maken van een bronverbinding.
       * Als backfill is ingesteld op true, wordt de waarde voor timestamp.initial ingesteld op 0. Dit betekent dat gegevens met een tijdstempelkolom die langer is dan 0 tijdperk worden opgehaald.
       * Als backfill is ingesteld op false, wordt de waarde voor timestamp.initial ingesteld op -1. Dit betekent dat gegevens met een tijdstempelkolom die langer is dan de huidige tijd (de tijd waarin de bron begint op te nemen), worden opgehaald.
-   * De tijdstempelkolom moet als type worden opgemaakt: `TIMESTAMP_LTZ` of `TIMESTAMP_NTZ`. Als de tijdstempelkolom is ingesteld op `TIMESTAMP_NTZ`, dan zouden de types in UTC tijd in het gegevensbestand moeten worden opgeslagen.
+   * De tijdstempelkolom moet als type worden opgemaakt: `TIMESTAMP_LTZ` of `TIMESTAMP_NTZ`. Als de tijdstempelkolom is ingesteld op `TIMESTAMP_NTZ`, dan moet de overeenkomstige tijdzone waarin de waarden worden opgeslagen via de `timezoneValue` parameter. Als deze waarde niet wordt opgegeven, wordt de standaardwaarde voor UTC gebruikt.
+      * `TIMESTAMP_TZ` kan niet worden gebruikt in een tijdstempelkolom of in een toewijzing.
 
 ## Volgende stappen
 

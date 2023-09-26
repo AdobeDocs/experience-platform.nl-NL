@@ -1,23 +1,23 @@
 ---
-title: Sluit uw Snowflake-streamingaccount aan op Adobe Experience Platform
-description: Leer hoe u Adobe Experience Platform kunt verbinden met Snowflake-streaming met behulp van de Flow Service API.
+title: Sluit uw Snowflake Streaming Account aan op Adobe Experience Platform
+description: Leer hoe u Adobe Experience Platform kunt verbinden met Snowflake Streaming met behulp van de Flow Service API.
 badgeBeta: label="Beta" type="Informative"
-badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+badgeUltimate: label="Ultieme" type="Positive"
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '867'
 ht-degree: 1%
 
 ---
 
-# Stream [!DNL Snowflake] gegevens naar Experience Platform met de [!DNL Flow Service] API
+# Streamen [!DNL Snowflake] gegevens naar Experience Platform met de [!DNL Flow Service] API
 
 >[!IMPORTANT]
 >
 >* De [!DNL Snowflake] streamingbron is in bèta. Lees de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 >* De [!DNL Snowflake] De streamingbron is in de API beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding en het streamen van gegevens vanuit uw [!DNL Snowflake] account aan Adobe Experience Platform met behulp van de [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding en het streamen van gegevens vanuit uw [!DNL Snowflake] account aan Adobe Experience Platform [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
@@ -30,13 +30,13 @@ Voor de opstelling van de voorwaarden en informatie over de [!DNL Snowflake] str
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken {#create-a-base-connection}
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Snowflake] verificatiereferenties als onderdeel van de aanvraaginstantie.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Snowflake] verificatiegegevens als onderdeel van de aanvraaginstantie.
 
 **API-indeling**
 
@@ -121,7 +121,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 **Verzoek**
 
-Het volgende verzoek wint de structuur en de inhoud van uw terug [!DNL Snowflake] streamingaccount.
+Met het volgende verzoek worden de structuur en inhoud van uw [!DNL Snowflake] streamingaccount.
 
 ```shell
 curl -X GET \
@@ -156,7 +156,7 @@ Een succesvolle reactie keert de structuur en de inhoud van de gegevens van uw b
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd.
 
-Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` van het [!DNL Flow Service] API.
+Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` het eindpunt van de [!DNL Flow Service] API.
 
 **API-indeling**
 
@@ -185,7 +185,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -194,13 +195,14 @@ curl -X POST \
 | --- | --- |
 | `baseConnectionId` | De geverifieerde basis-verbindings-id voor uw [!DNL Snowflake] streamingbron. Deze id is gegenereerd in een eerdere stap. |
 | `connectionSpec.id` | De verbindingsspecificatie-id voor de [!DNL Snowflake] streamingbron. |
-| `params.tableName` | De naam van de tabel in uw [!DNL Snowflake] database die u naar het Platform wilt brengen. |
+| `params.tableName` | De naam van de tabel in uw [!DNL Snowflake] database die u naar Platform wilt brengen. |
 | `params.timestampColumn` | De naam van de tijdstempelkolom die wordt gebruikt om incrementele waarden op te halen. |
 | `params.backfill` | Een booleaanse vlag die bepaalt of de gegevens van het begin (0 epoche tijd) of van de tijd worden gehaald de bron in werking wordt gesteld. Voor meer informatie over deze waarde leest u de [[!DNL Snowflake] overzicht van streamingbron](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | De tijdzonewaarde geeft aan welke tijd van de tijdzone moet worden opgehaald tijdens het opvragen van de [!DNL Snowflake] database. Deze parameter moet worden opgegeven als de tijdstempelkolom in de config is ingesteld op `TIMESTAMP_NTZ`. Indien niet verstrekt, `timezoneValue` is standaard ingesteld op UTC. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert uw bron-verbindings-id en de bijbehorende tag. De bron verbindings ID zal in een recentere stap worden gebruikt om een gegevensstroom tot stand te brengen.
+Een geslaagde reactie retourneert uw bron-verbindings-id en de bijbehorende tag. De id van de bronverbinding wordt later gebruikt om een gegevensstroom te maken.
 
 ```json
 {
@@ -211,14 +213,14 @@ Een geslaagde reactie retourneert uw bron-verbindings-id en de bijbehorende tag.
 
 ## Een gegevensstroom maken
 
-Een gegevensstroom maken om gegevens te streamen vanaf een rondleiding [!DNL Snowflake] aan Platform, moet u een verzoek van de POST aan `/flows` eindpunt terwijl het verstrekken van de volgende waarden:
+Een gegevensstroom maken om gegevens te streamen vanaf een rondleiding [!DNL Snowflake] account aan Platform, moet u een verzoek van de POST aan `/flows` eindpunt terwijl het verstrekken van de volgende waarden:
 
 >[!TIP]
 >
 >Volg de onderstaande koppelingen voor stapsgewijze handleidingen voor het ophalen van de volgende id&#39;s.
 
 * [Bronverbinding-id](#create-a-source-connection)
-* [Doelverbinding-id](../../collect/database-nosql.md#create-a-target-connection)
+* [Doel-verbindings-id](../../collect/database-nosql.md#create-a-target-connection)
 * [Stroom-specificatie-id](../../collect/database-nosql.md#retrieve-dataflow-specifications)
 * [Toewijzing-id](../../collect/database-nosql.md#create-a-mapping)
 
@@ -284,7 +286,7 @@ Een geslaagde reactie retourneert uw flow-id en de bijbehorende tag.
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een gegevensstroom voor streaming gemaakt [!DNL Snowflake] gegevens die [!DNL Flow Service] API. Raadpleeg de volgende documentatie voor aanvullende informatie over Adobe Experience Platform Sources:
+Aan de hand van deze zelfstudie hebt u een gegevensstroom voor streaming gemaakt [!DNL Snowflake] gegevens die de [!DNL Flow Service] API. Raadpleeg de volgende documentatie voor aanvullende informatie over Adobe Experience Platform Sources:
 
 * [Overzicht van bronnen](../../../../home.md)
 * [Uw gegevensstroom controleren met behulp van API&#39;s](../../monitor.md)
