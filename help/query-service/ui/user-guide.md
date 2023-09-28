@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '2226'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,23 @@ ht-degree: 0%
 
 Voor meer informatie over de concepten en kenmerken van [!DNL Query Service], zie de [Overzicht van Query Service](../home.md). Meer over leren hoe te om het gebruikersinterface van de Dienst van de Vraag te navigeren [!DNL Platform], zie de [Overzicht van Query Service](./overview.md).
 
+>[!NOTE]
+>
+>Bepaalde functionaliteit van de Dienst van de Vraag wordt niet verstrekt door de erfenisversie van de Redacteur van de Vraag. De schermafbeeldingen die in dit document worden gebruikt, worden gemaakt met behulp van de verbeterde versie van de Query Editor, tenzij anders aangegeven. Zie de sectie over de [Uitgebreide Query-editor](#enhanced-editor-toggle) voor meer informatie .
+
 ## Aan de slag {#getting-started}
 
 [!DNL Query Editor] verstrekt flexibele uitvoering van vragen door met te verbinden [!DNL Query Service]en query&#39;s worden alleen uitgevoerd als deze verbinding actief is.
 
+## Toegang tot het [!DNL Query Editor] {#accessing-query-editor}
+
+In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Queries]** in het navigatiemenu links om het dialoogvenster [!DNL Query Service] werkruimte. Selecteer vervolgens **[!UICONTROL Create Query]** rechtsboven in het scherm. Deze koppeling is beschikbaar op alle pagina&#39;s in het dialoogvenster [!DNL Query Service] werkruimte.
+
+![Het tabblad Overzicht van de werkruimte Vragen met de markering Query maken.](../images/ui/query-editor/create-query.png)
+
 ### Verbinding maken met [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] duurt een paar seconden om te initialiseren en verbinding te maken met [!DNL Query Service] wanneer het wordt geopend. De console vertelt u wanneer het wordt aangesloten, zoals hieronder getoond. Als u probeert om een vraag in werking te stellen alvorens de redacteur heeft verbonden, vertraagt het uitvoering tot de verbinding volledig is.
+De redacteur van de Vraag neemt een paar seconden om met de Dienst van de Vraag te initialiseren en te verbinden wanneer het wordt geopend. De console vertelt u wanneer het wordt aangesloten, zoals hieronder getoond. Als u probeert om een vraag in werking te stellen alvorens de redacteur heeft verbonden, vertraagt het uitvoering tot de verbinding volledig is.
 
 ![De consoleoutput van de Redacteur van de Vraag op aanvankelijke verbinding.](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ Voor meer informatie over de concepten en kenmerken van [!DNL Query Service], zi
 
 Zoekopdrachten uitgevoerd vanuit [!DNL Query Editor] Voer interactief uit, wat betekent dat als u de browser sluit of wegnavigeert, de query wordt geannuleerd. Het zelfde is waar voor vragen die worden gemaakt om datasets van vraagoutput te produceren.
 
+De verbeterde uitgave van de Redacteur van de Vraag staat u toe om meer dan één vraag in de Redacteur van de Vraag te schrijven en alle vragen opeenvolgend uit te voeren. Zie de sectie over [het uitvoeren van veelvoudige opeenvolgende vragen](#execute-multiple-sequential-queries) voor meer informatie .
+
 ## Query schrijven met [!DNL Query Editor] {#query-authoring}
 
 Gebruiken [!DNL Query Editor], kunt u schrijven, uitvoeren, en sparen vragen voor de gegevens van de klantenervaring. Alle query&#39;s uitgevoerd of opgeslagen in [!DNL Query Editor] zijn beschikbaar voor alle gebruikers in uw organisatie die toegang hebben tot [!DNL Query Service].
 
-### Toegang tot het [!DNL Query Editor] {#accessing-query-editor}
-
-In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Queries]** in het navigatiemenu links om het dialoogvenster [!DNL Query Service] werkruimte. Selecteer vervolgens **[!UICONTROL Create Query]** rechtsboven in het scherm. Deze koppeling is beschikbaar op alle pagina&#39;s in het dialoogvenster [!DNL Query Service] werkruimte.
-
-![Het tabblad Overzicht van de werkruimte Vragen met de markering Query maken.](../images/ui/query-editor/create-query.png)
-
-### Uitgebreide functie voor Query-editor {#enhanced-editor-toggle}
+## Uitgebreide functie voor Query-editor {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ Selecteer het instellingspictogram (![Een instellingenpictogram.](../images/ui/q
 
 ![De Query Editor met het instellingenpictogram en de menuoptie Donkere thema&#39;s inschakelen gemarkeerd.](../images/ui/query-editor/query-editor-settings.png)
 
-### Bezig met schrijven van query&#39;s {#writing-queries}
+### Meerdere opeenvolgende query&#39;s uitvoeren {#execute-multiple-sequential-queries}
+
+De verbeterde uitgave van de Redacteur van de Vraag staat u toe om meer dan één vraag in de Redacteur van de Vraag te schrijven en alle vragen op een opeenvolgende manier uit te voeren.
+
+De uitvoering van veelvoudige vragen in een opeenvolging elk produceert een logboekingang. Nochtans, slechts de resultaten van de eerste vraagvertoning in de console van de Redacteur van de Vraag. Controleer het vraaglogboek als u de vragen moet problemen oplossen of bevestigen die werden uitgevoerd. Zie de [documentatie met querylogbestanden](./query-logs.md) voor meer informatie .
+
+>[!NOTE]
+> 
+>Als een vraag CTAS na de eerste vraag in de Redacteur van de Vraag wordt uitgevoerd, wordt een lijst nog gecreeerd maar er is geen output op de console van de Redacteur van de Vraag.
+
+### Geselecteerde query uitvoeren {#execute-selected-query}
+
+Als u meerdere query&#39;s hebt geschreven maar slechts één query moet uitvoeren, kunt u de gekozen query markeren en de opdracht
+[!UICONTROL Run selected query] pictogram. Dit pictogram is standaard uitgeschakeld, tenzij u een query in de editor selecteert.
+
+![De Query-editor met de [!UICONTROL Run selected query] gemarkeerd.](../images/ui/query-editor/run-selected-query.png)
+
+### Resultaattelling {#result-count}
+
+De redacteur van de Vraag heeft een maximum 50.000 rijoutput. Nochtans, worden slechts 50 rijen getoond in één keer in de console van de Redacteur van de Vraag. Als u het aantal rijen wilt wijzigen dat in de console wordt weergegeven, selecteert u de optie **[!UICONTROL Result count]** en kies 50, 100, 150, 300 en 500 waarden.
+
+![De Redacteur van de Vraag met de drop-down van het Aantal van het Resultaat benadrukt.](../images/ui/query-editor/result-count.png)
+
+## Bezig met schrijven van query&#39;s {#writing-queries}
 
 [!UICONTROL Query Editor] is georganiseerd om het schrijven van vragen zo gemakkelijk mogelijk te maken. In de onderstaande schermafbeelding ziet u hoe de editor in de gebruikersinterface wordt weergegeven, met het veld voor SQL-invoer en **Afspelen** gemarkeerd.
 
@@ -70,7 +99,7 @@ Selecteer het instellingspictogram (![Een instellingenpictogram.](../images/ui/q
 
 Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met grenzen op de teruggekeerde rijen ontwikkelt. Bijvoorbeeld, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nadat u hebt gecontroleerd dat uw vraag de verwachte output veroorzaakt, verwijder de grenzen en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren.
 
-### Schrijfgereedschappen in [!DNL Query Editor] {#writing-tools}
+## Schrijfgereedschappen in [!DNL Query Editor] {#writing-tools}
 
 - **Automatische syntaxismarkering:** Maakt het lezen en ordenen van SQL gemakkelijker.
 
@@ -83,6 +112,18 @@ Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met gren
 - **Tabel en veld automatisch aanvullen:** Typ de tabelnaam die u wilt gebruiken `SELECT` van, dan gebruik de pijlsleutels om aan de lijst te navigeren u zoekt, en drukt **Enter**. Als een tabel is geselecteerd, worden de velden in die tabel automatisch herkend.
 
 ![De invoer van de Redacteur van de Vraag die drop-down lijstnaamsuggesties toont.](../images/ui/query-editor/tables-auto.png)
+
+### Tekst opmaken {#format-text}
+
+De [!UICONTROL Format text] maakt uw query leesbaarder door gestandaardiseerde syntaxisopmaak toe te voegen. Selecteren **[!UICONTROL Format text]** om alle tekst binnen de Redacteur van de Vraag te standaardiseren.
+
+![De Query-editor met [!UICONTROL Format text] en de SQL-instructies gemarkeerd.](../images/ui/query-editor/format-text.png)
+
+### SQL kopiëren {#copy-sql}
+
+Selecteer het kopieerpictogram om SQL van de Redacteur van de Vraag aan uw klembord te kopiëren. Deze kopieerfunctie is beschikbaar voor zowel querysjablonen als nieuwe query&#39;s in de Query Editor.
+
+![De werkruimte van Vragen met een malplaatje van de voorbeeldvraag met het benadrukte exemplaarpictogram.](../images/ui/query-editor/copy-sql.png)
 
 ### Configuratieschakeloptie voor UI automatisch aanvullen {#auto-complete}
 
@@ -180,7 +221,7 @@ Nadat een vraag is voltooid, worden de resultaten getoond in **[!UICONTROL Resul
 
 ## Query uitvoeren met [!DNL Query Service] zelfstudievideo {#query-tutorial-video}
 
-In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. De video demonstreert ook het gebruik van individuele eigenschappen in een XDM-object, door Adobe gedefinieerde functies en hoe u CREATE TABLE AS SELECT (CTAS)-query&#39;s gebruikt.
+In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. De video demonstreert ook het gebruik van individuele eigenschappen in een XDM-object, Adobe-gedefinieerde functies en hoe u CREATE TABLE AS SELECT (CTAS)-query&#39;s gebruikt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
