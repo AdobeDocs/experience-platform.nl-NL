@@ -4,9 +4,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
+source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
 workflow-type: tm+mt
-source-wordcount: '3546'
+source-wordcount: '3508'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,6 @@ ht-degree: 0%
 In dit artikel wordt uitgelegd welke workflow vereist is om het publiek te activeren in op Adobe Experience Platform-batchprofielen gebaseerde bestemmingen, zoals cloudopslag en marketingdoelen voor e-mail.
 
 ## Vereisten {#prerequisites}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_flat_files"
->title="(bèta) Ondersteuning voor exportarrays"
->abstract="(bèta) Exporteer arrays met primitieve waarden van Experience Platform naar de gewenste bestemming voor cloudopslag. Deze tekst wordt bijgewerkt met meer informatie. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">Meer informatie</a>. "
 
 Als u een publiek naar een bestemming wilt activeren, moet u [verbonden met een bestemming](./connect-destination.md). Als u dat nog niet hebt gedaan, gaat u naar de [doelcatalogus](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
 
