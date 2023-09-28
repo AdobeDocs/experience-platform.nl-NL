@@ -4,9 +4,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '3508'
+source-wordcount: '3549'
 ht-degree: 0%
 
 ---
@@ -397,6 +397,10 @@ Adobe raadt u aan een naamruimte voor identiteiten te selecteren, zoals een naam
 >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
 >
 > Als het veld `person.name.firstName` heeft bepaalde etiketten van het gegevensgebruik die met de het op de markt brengen van de bestemming in conflict zijn, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Zie voor meer informatie [Beheer van gegevens in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+
+### [!BADGE Beta]{type=Informative} Arrays exporteren via berekende velden {#export-arrays-calculated-fields}
+
+Selecteer bèta-klanten kunnen arrayobjecten van Experience Platform naar cloudopslagdoelen exporteren. Meer informatie over [exporteren, arrays en berekende velden](/help/destinations/ui/export-arrays-calculated-fields.md) en neem contact op met uw Adobe voor toegang tot de functionaliteit.
 
 ### Bekende beperkingen {#known-limitations}
 
