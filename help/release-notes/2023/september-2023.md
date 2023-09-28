@@ -1,13 +1,102 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 0a379072326f24a221cfd82cc4af3ea75f45fb0a
+source-git-commit: 1bfd5e05642e0ac8f80af5502878eaee0b33c704
 workflow-type: tm+mt
-source-wordcount: '21'
-ht-degree: 23%
+source-wordcount: '905'
+ht-degree: 3%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
 **Releasedatum: 28 september 2023**
+
+Nieuwe functies in Adobe Experience Platform:
+
+- [Berekende kenmerken](#computed-attributes)
+
+Updates voor bestaande functies in Experience Platform:
+
+- [Waarschuwingen](#alerts)
+- [Gegevensverzameling](#data-collection)
+- [Identiteitsservice](#identity-service)
+- [Segmenteringsservice](#segmentation)
+- [Bronnen](#sources)
+
+## Berekende kenmerken {#computed-attributes}
+
+Met behulp van berekende kenmerken kunt u gebeurtenisgegevens eenvoudig samenvatten in profielkenmerken via een intuïtieve gebruikersinterface voor verbeterde op gedrag gebaseerde segmentatie, personalisatie en activering. Met deze functie kunt u berekende kenmerken maken op een manier die zichzelf aanbiedt, deze beheren en ze in segmentatie, Real-Time CDP-doelen of Adobe Journey Optimizer gebruiken. Bovendien vereenvoudigen de berekende kenmerken de segmentatie en de workflows voor reizen, zodat u probleemloos relevante ervaringen kunt opdoen. Voor meer informatie over berekende kenmerken leest u de [overzicht van berekende kenmerken](../../profile/computed-attributes/overview.md).
+
+## Waarschuwingen {#alerts}
+
+Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailmeldingen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Tabblad Waarschuwingsgeschiedenis | De waarschuwingen [!UICONTROL History] tab bevat nu alle gebeurtenissen zoals vertragingen , het starten , het voltooien en mislukken . Lees de [UI-documentatie met waarschuwingen](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
+
+{style="table-layout:auto"}
+
+Lees voor meer informatie over waarschuwingen de [[!DNL Observability Insights] overzicht](../../observability/home.md).
+
+## Gegevensverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Type | Functie | Beschrijving |
+| --- | --- | --- |
+| Gegevensstromen | Ondersteuning voor opzoeken van apparaten | Wanneer het vormen van een gegevensstroom, kunt u het niveau van apparaat raadplegingsinformatie nu selecteren die moet worden verzameld. De opzoekinformatie van het apparaat omvat gegevens over het apparaat, de hardware, het besturingssysteem en de browser die worden gebruikt om met uw pagina te communiceren. <br>  Opzoekgegevens van het apparaat kunnen niet samen met de gebruikersagent en de clienthints worden verzameld. Als u ervoor kiest apparaatinformatie te verzamelen, wordt de verzameling van gebruikersagent- en clienthints uitgeschakeld en andersom. Alle gegevens van de apparatenraadpleging worden opgeslagen in `xdm:device` veldgroep. Meer informatie vindt u in de documentatie op [configureren, gegevensstromen](../../datastreams/configure.md#geolocation-device-lookup). |
+| Extensies | [!DNL TikTok] API-extensie voor webgebeurtenissen | De [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) kunt u gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network gebruiken en verzenden naar [!DNL TikTok] in de vorm van server-side-gebeurtenissen die de [!DNL TikTok] Web Events API. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevensverzameling](../../tags/home.md).
+
+## Identiteitsservice {#identity-service}
+
+De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Verbeteringen in de gebruikersinterface van Identity Service | Gebruik het verbeterde gereedschap voor het maken van aangepaste naamruimten in de gebruikersinterface van het Experience Platform om uw aangepaste naamruimten en de bijbehorende identiteitstypen beter te beheren. De verbeterde interface van de Identiteitsdienst voorziet u van: <ul><li>Contextuele Ervaring: Visuele aanwijzingen, helderheid, en context aan wat een identiteitsnamespace is en identiteitstypes zijn.</li><li>Nauwkeurigheid: betere foutafhandeling, zonder dubbele identiteitsnamen.</li><li>Detectie: toegang tot documentatie vanuit een productdialoogvenster.</li></ul> Lees voor meer informatie de handleiding op [aangepaste naamruimten maken](../../identity-service/namespaces.md#create-namespaces). |
+| Wijzigingen in limieten van identiteitsgrafieken | De limiet voor identiteitsgrafieken is gewijzigd van 150 identiteiten in 50 identiteiten. Wanneer een nieuwe identiteit wordt opgenomen in een volledige grafiek, wordt de oudste identiteit op basis van de tijdstempel en het identiteitstype van de inname verwijderd. Identiteitstypen van cookies krijgen prioriteit voor verwijdering. Neem contact op met het accountteam van de Adobe om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat: <ul><li>een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.</li><li>een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.</li></ul> Deze aanvragen worden handmatig verwerkt door Adobe-engineering. Lees voor meer informatie de [handleidingen voor identiteitsservicegegevens](../../identity-service/guardrails.md). |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md).
+
+## Segmenteringsservice {#segmentation}
+
+[!DNL Segmentation Service] staat u toe om gegevens te segmenteren die in worden opgeslagen [!DNL Experience Platform] die betrekking heeft op personen (zoals klanten, vooruitzichten, gebruikers of organisaties) die het publiek bereiken. U kunt publiek door segmentdefinities of andere bronnen van uw tot stand brengen [!DNL Real-Time Customer Profile] gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform]en gemakkelijk toegankelijk zijn via een Adobe-oplossing.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Aanpasbare kolommen | U kunt de lay-out van het Portaal van de Publiek met re-sizable kolommen nu aanpassen. Lees voor meer informatie over deze functie de [segmenteringsUI-hulplijn](../../segmentation/ui/overview.md#customize). |
+| Uitsplitsing naar frequentie bijwerken | U kunt nu een verdeling van de updatefrequenties van het publiek in uw organisatie bekijken. Lees voor meer informatie over deze functie de [segmenteringsUI-hulplijn](../../segmentation/ui/overview.md#browse). |
+
+Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).
+
+Voor meer informatie over Segmentatieservice leest u de [Overzicht van segmentatieservice](../../segmentation/home.md).
+
+## Bronnen {#sources}
+
+Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Nieuwe parameters voor `offset` paginering in Self-Serve Sources (Batch SDK) | U kunt nu een `endConditionName` en `endConditionValue` voor uw bron wanneer u `offset` paginering. Met deze parameters kunt u de voorwaarde aangeven die de pagineringslus in de volgende HTTP-aanvraag beëindigt. Lees voor meer informatie de [pagination guide for Self-Serve Sources (Batch SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).
