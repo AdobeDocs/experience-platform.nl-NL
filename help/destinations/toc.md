@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -125,6 +125,7 @@ ht-degree: 2%
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
       * [IP adres lijst van gewenste personen voor bestemmingen SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Klantrelaties (CRM)-bestemmingen {#crm}
+      * [Hubspot-verbinding](./catalog/crm/hubspot.md)
       * [Salesforce CRM-verbinding](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365-verbinding](./catalog/crm/microsoft-dynamics-365.md)
       * [Verbinding buiten bereik](catalog/crm/outreach.md)
