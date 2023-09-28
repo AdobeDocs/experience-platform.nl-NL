@@ -1,45 +1,59 @@
 ---
 title: Overzicht van id-naamruimte
-description: Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id.
+description: Meer informatie over naamruimten in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
+source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
 
 # Overzicht naamruimte identiteit
 
-Identiteitsnaamruimten zijn een component van [[!DNL Identity Service]](./home.md) die dienen als indicatoren van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde &#39;name&#39;<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id.
+Lees het volgende document voor meer informatie over wat u kunt doen met naamruimten in Adobe Experience Platform Identity Service.
 
 ## Aan de slag
 
-Als u met naamruimten werkt, moet u de verschillende betrokken Adobe Experience Platform-services begrijpen. Voordat u begint te werken met naamruimten, raadpleegt u de documentatie voor de volgende services:
+Naamruimten vereisen inzicht in verschillende Adobe Experience Platform-services. Voordat u begint te werken met naamruimten, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in echt - tijd die op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Identity Service]](./home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Identiteitsnaamruimten worden gebruikt in nalevingsverzoeken voor wettelijke privacyregels zoals de algemene gegevensbeschermingsverordening (GDPR). Elk privacyverzoek wordt ingediend met betrekking tot een naamruimte om te bepalen welke gegevens van de consument moeten worden beïnvloed.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in echt - tijd die op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Identity Service]](./home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Identiteitsnaamruimten worden gebruikt in nalevingsverzoeken voor wettelijke privacyregels zoals de algemene gegevensbeschermingsverordening (GDPR). Elk privacyverzoek wordt ingediend met betrekking tot een naamruimte om te bepalen welke gegevens van de consument moeten worden beïnvloed.
 
 ## Naamruimten voor identiteiten
 
-Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] Hiermee worden profielgegevens samengevoegd. Zowel de identiteitswaarde als de naamruimte moeten overeenkomen.
+Een volledig gekwalificeerde identiteit omvat twee componenten: en **identiteitswaarde** en **naamruimte identity**. Als de waarde van een identiteit bijvoorbeeld `scott@acme.com`, dan verstrekt een namespace context aan deze waarde door het als e-mailadres te onderscheiden. Een naamruimte kan ook een onderscheid maken `555-123-456` als telefoonnummer, en `3126ABC` als CRM-ID. Hoofdzakelijk **een naamruimte biedt context aan een bepaalde identiteit**. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] Hiermee worden profielgegevens samengevoegd. Zowel de identiteitswaarde als de naamruimte moeten overeenkomen.
 
-Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar hebben dezelfde waarde voor de naamruimte &quot;E-mail&quot;. Daarom [!DNL Platform] kan zien dat deze fragmenten in feite hetzelfde individu zijn en de gegevens samenbrengt in de identiteitsgrafiek voor het individu.
+Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar ze hebben dezelfde waarde voor de naamruimte E-mail, zodat Experience Platform kan zien dat deze fragmenten in feite dezelfde persoon zijn en de gegevens samenbrengt in de identiteitsgrafiek voor de persoon.
 
 ![](images/identity-service-stitching.png)
 
-### Identiteitstypen {#identity-types}
+### Componenten van een naamruimte
+
+Een naamruimte bestaat uit de volgende componenten:
+
+* **Weergavenaam**: De gebruikersvriendelijke naam voor een bepaalde naamruimte.
+* **Identiteitssymbool**: Een code die intern door de Dienst van de Identiteit wordt gebruikt om een namespace te vertegenwoordigen.
+* **Identiteitstype**: De classificatie van een bepaalde naamruimte.
+* **Beschrijving**: (Optioneel) Eventuele aanvullende informatie die u met betrekking tot een bepaalde naamruimte kunt opgeven.
+
+### Identiteitstype {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Identificatietype opgeven"
->abstract="Het identiteitstype bepaalt of gegevens worden opgeslagen in de identiteitsgrafiek. De herkenningstekens van niet-mensen zullen niet worden opgeslagen, en alle andere identiteitstypes zullen."
+>abstract="Het identiteitstype bepaalt of gegevens worden opgeslagen in de identiteitsgrafiek. Identiteitsgrafieken worden niet gegenereerd voor de volgende identiteitstypen: niet-persoonlijke id&#39;s en partner-id."
 >text="Learn more in documentation"
 
-Gegevens kunnen worden geïdentificeerd door verschillende typen identiteiten. Het identiteitstype wordt gespecificeerd op het tijdstip dat identiteitskaart namespace wordt gecreeerd en controleert al dan niet het gegeven aan de identiteitsgrafiek en om het even welke speciale instructies voor hoe die gegevens zouden moeten worden behandeld wordt voortgeduurd. Alle identiteitstypen behalve **Id van niet-personen** volgt hetzelfde gedrag bij het aansluiten van een naamruimte en de bijbehorende ID-waarde op een identiteitsgrafiek. Gegevens worden niet samengevoegd bij gebruik **Id van niet-personen**.
+Eén element van een naamruimte van een identiteit is de **identiteitstype**. Het identiteitstype bepaalt:
 
-De volgende identiteitstypen zijn beschikbaar binnen [!DNL Platform]:
+* Of een identiteitsgrafiek zal worden geproduceerd:
+   * Identiteitsgrafieken worden niet gegenereerd voor de volgende identiteitstypen: niet-persoonlijke id&#39;s en partner-id.
+   * Identiteitsgrafieken worden gegenereerd voor alle andere identiteitstypen.
+* Welke identiteiten worden verwijderd uit de identiteitsgrafiek wanneer de systeemgrenzen worden bereikt. Lees voor meer informatie de [handleidingen voor identiteitsgegevens](guardrails.md).
+
+De volgende identiteitstypen zijn beschikbaar in het Experience Platform:
 
 | Identiteitstype | Beschrijving |
 | --- | --- |
@@ -88,43 +102,33 @@ De volgende standaardnaamruimten zijn beschikbaar voor gebruik door alle organis
 
 Als u naamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]**.
 
-![doorbladeren](./images/browse.png)
+Er wordt een map met naamruimten in uw organisatie weergegeven met informatie over de namen, identiteitssymbolen, laatst bijgewerkte datums, overeenkomende identiteitstypen en beschrijving.
 
-Er wordt een lijst met naamruimten voor identiteiten weergegeven in de hoofdinterface van de pagina. Deze lijst bevat informatie over de namen, identiteitssymbolen, de datum die als laatste is bijgewerkt en of het een standaard- of een aangepaste naamruimte betreft. De rechterspoorlijn bevat informatie over [!UICONTROL Identity graph strength].
+![Een map met aangepaste naamruimten in uw organisatie.](./images/namespace/browse.png)
 
-![identiteiten](./images/identities.png)
-
-Platform biedt ook naamruimten voor integratiedoeleinden. Deze naamruimten zijn standaard verborgen omdat ze worden gebruikt om verbinding te maken met andere systemen en niet om identiteiten aan te sluiten. Als u integratie-naamruimten wilt weergeven, selecteert u **[!UICONTROL View integration identities]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-Selecteer een naamruimte voor identiteit in de lijst om informatie over een specifieke naamruimte weer te geven. Als u een naamruimte voor identiteiten selecteert, wordt de weergave op de rechtertrack bijgewerkt met metagegevens over de naamruimte die u hebt geselecteerd, inclusief het aantal ingevoerde identiteiten en het aantal mislukte en overgeslagen records.
-
-![select-namespace](./images/select-namespace.png)
-
-## Aangepaste naamruimten beheren {#manage-namespaces}
+## Aangepaste naamruimten maken {#create-namespaces}
 
 Afhankelijk van uw organisatorische gegevens en gebruiksgevallen hebt u mogelijk aangepaste naamruimten nodig. U kunt aangepaste naamruimten maken met de opdracht [[!DNL Identity Service]](./api/create-custom-namespace.md) API of via de interface.
 
-Als u een aangepaste naamruimte wilt maken met de gebruikersinterface, navigeert u naar de **[!UICONTROL Identities]** werkruimte, selecteert u **[!UICONTROL Browse]** en selecteer vervolgens **[!UICONTROL Create identity namespace]**.
+Als u een aangepaste naamruimte wilt maken, selecteert u **[!UICONTROL Create identity namespace]**.
 
-![select-create](./images/select-create.png)
+![De knop Naamruimte maken in de werkruimte Identiteiten.](./images/namespace/create-identity-namespace.png)
 
-De **[!UICONTROL Create identity namespace]** wordt weergegeven. Een unieke **[!UICONTROL Display name]** en **[!UICONTROL Identity symbol]** en selecteer vervolgens het type identiteit dat u wilt maken. U kunt ook een optionele beschrijving toevoegen om meer informatie over de naamruimte toe te voegen. Alle identiteitstypen behalve **Id van niet-personen** volgt hetzelfde gedrag van stitching. Als u **Id van niet-personen** als type identiteit wanneer u een naamruimte maakt, vindt stitching niet plaats. Voor specifieke informatie over elk identiteitstype, verwijs naar de lijst over [identiteitstypen](#identity-types).
+De [!UICONTROL Create identity namespace] wordt weergegeven. Eerst moet u een weergavenaam en een identiteitssymbool opgeven voor de aangepaste naamruimte die u wilt maken. U kunt desgewenst ook een beschrijving opgeven om meer context toe te voegen aan de aangepaste naamruimte die u maakt.
 
-Selecteer **[!UICONTROL Create]**.
+![Een pop-upvenster waarin u informatie kunt invoeren over de naamruimte van uw aangepaste identiteit.](./images/namespace/name-and-symbol.png)
+
+Selecteer vervolgens het identiteitstype dat u wilt toewijzen aan de aangepaste naamruimte. Selecteer **[!UICONTROL Create]**.
+
+![Een selectie van identiteitstypen die u kunt kiezen uit en toewijzen aan uw aangepaste naamruimte voor identiteiten.](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->De naamruimten die u definieert, zijn persoonlijk voor uw organisatie en vereisen een uniek identiteitssymbool om te kunnen worden gemaakt.
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-Net als standaardnaamruimten kunt u een aangepaste naamruimte selecteren in het menu **[!UICONTROL Browse]** om de details te bekijken. Met een aangepaste naamruimte kunt u echter ook de weergavenaam en de beschrijving van de naamruimte wijzigen vanuit het detailgebied.
-
->[!NOTE]
+>* De naamruimten die u definieert, zijn persoonlijk voor uw organisatie en vereisen een uniek identiteitssymbool om te kunnen worden gemaakt.
 >
->Nadat een naamruimte is gemaakt, kan deze niet worden verwijderd en kunnen het identiteitssymbool en het type van de naamruimte niet worden gewijzigd.
+>* Nadat een naamruimte is gemaakt, kan deze niet worden verwijderd en kunnen het identiteitssymbool en het type van de naamruimte niet worden gewijzigd.
+>
+>* Dubbele naamruimten worden niet ondersteund. U kunt een bestaande weergavenaam en identiteitssymbool niet gebruiken wanneer u een nieuwe naamruimte maakt.
 
 ## Naamruimten in identiteitsgegevens
 
