@@ -1,10 +1,10 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestemmingsserver tot stand te brengen door Adobe Experience Platform Destination SDK.
 title: Een doelserverconfiguratie maken
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 6%
+source-wordcount: '2039'
+ht-degree: 5%
 
 ---
 
@@ -844,6 +844,103 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
+
+>[!ENDTABS]
+
+
+### Dynamische vervolgkeuzelijstservers maken {#dynamic-dropdown-servers}
+
+Gebruiken [dynamische dropdowns](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) om dropdown de gegevensgebieden van de klantenklant dynamisch terug te winnen en te bevolken, gebaseerd op uw eigen API. U kunt bijvoorbeeld een lijst ophalen met bestaande gebruikersaccounts die u wilt gebruiken voor een doelverbinding.
+
+U moet een bestemmingsserver voor dynamische dropdowns vormen alvorens u het dynamische dropwdown gebied van de klantengegevens kunt vormen.
+
+Zie op het tabblad onder een voorbeeld van een doelserver die wordt gebruikt om dynamisch de waarden op te halen die in een vervolgkeuzelijst, via een API, moeten worden weergegeven.
+
+De nuttige voorbeeldlading hieronder omvat alle parameters die voor een dynamische schemaserver worden vereist.
+
+>[!BEGINTABS]
+
+>[!TAB Dynamische dropdown-server]
+
+**Een dynamische vervolgkeuzeserver maken**
+
+U moet een dynamische dropdown server tot stand brengen gelijkend op hieronder getoond wanneer u een bestemming vormt die de waarden voor een dropdown gebied van de klantengegevens van uw eigen API eindpunt terugwint.
+
++++verzoek
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| Parameter | Type | Beschrijving |
+| -------- | ----------- | ----------- |
+| `name` | Tekenreeks | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw dynamische dropdown server, zichtbaar slechts aan Adobe. |
+| `destinationServerType` | Tekenreeks | *Vereist.* Instellen op `URL_BASED` voor dynamische dropdown servers. |
+| `urlBasedDestination.url.templatingStrategy` | Tekenreeks | *Vereist.* <ul><li>Gebruiken `PEBBLE_V1` als de Adobe de URL in het dialoogvenster `value` veld hieronder. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Gebruiken `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Tekenreeks | *Vereist.* Vul het adres van het API eindpunt in dat Experience Platform met zou moeten verbinden en de dropwdown waarden terugwinnen. |
+| `httpTemplate.httpMethod` | Tekenreeks | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Voor dynamische dropdown servers, gebruik `GET`. |
+| `httpTemplate.headers` | Object | *Optiona.l* Neem alle vereiste headers op om verbinding te maken met de dynamische vervolgkeuzeserver. |
+| `responseFields.templatingStrategy` | Tekenreeks | *Vereist.* Gebruik `PEBBLE_V1`. |
+| `responseFields.value` | Tekenreeks | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken waarmee de reactie die u van uw API hebt ontvangen, wordt omgezet in de waarden die worden weergegeven in de interface van het platform. <br> <ul><li> Voor informatie over het schrijven van de sjabloon leest u de [Sjabloonsectie gebruiken](../../functionality/destination-server/message-format.md#using-templating). </li><li> Raadpleeg voor meer informatie over het escapen van tekens de [RFC JSON-standaard, sectie 7](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++Response
+
+Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde configuratie van de bestemmingsserver terug.
+
++++
 
 >[!ENDTABS]
 

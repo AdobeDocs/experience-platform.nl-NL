@@ -1,9 +1,9 @@
 ---
-description: Leer hoe u invoervelden maakt in de interface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
+description: Leer hoe u invoervelden maakt in de gebruikersinterface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 title: Gegevensvelden van de klant
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ U kunt gegevensvelden voor klanten configureren via de `/authoring/destinations`
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-In dit artikel worden alle ondersteunde configuratietypen voor klantgegevensvelden beschreven die u voor uw doel kunt gebruiken en wordt aangegeven welke klanten in de gebruikersinterface van het Experience Platform zullen zien.
+In dit artikel worden alle ondersteunde configuratietypen voor klantgegevensvelden beschreven die u voor uw doel kunt gebruiken, en wordt aangegeven welke klanten in de gebruikersinterface van het Experience Platform zullen zien.
 
 >[!IMPORTANT]
 >
@@ -53,21 +53,21 @@ Wanneer u uw eigen gegevensvelden voor klanten maakt, kunt u de parameters in de
 
 | Parameter | Type | Vereist/optioneel | Beschrijving |
 |---------|----------|------|---|
-| `name` | Tekenreeks | Vereist | Geef een naam op voor het aangepaste veld dat u introduceert. Deze naam is niet zichtbaar in de gebruikersinterface van het Platform, tenzij de `title` veld is leeg of ontbreekt. |
+| `name` | Tekenreeks | Vereist | Geef een naam op voor het aangepaste veld dat u introduceert. Deze naam is niet zichtbaar in de interface van het Platform, tenzij `title` veld is leeg of ontbreekt. |
 | `type` | Tekenreeks | Vereist | Hiermee geeft u het type van het aangepaste veld aan dat u wilt gebruiken. Geaccepteerde waarden: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | Tekenreeks | Optioneel | Hiermee wordt de naam van het veld aangegeven, zoals deze wordt weergegeven door klanten in de gebruikersinterface van het Platform. Als dit veld leeg is of ontbreekt, neemt de gebruikersinterface de veldnaam over van de `name` waarde. |
-| `description` | Tekenreeks | Optioneel | Geef een beschrijving op voor het aangepaste veld. Deze beschrijving is niet zichtbaar in de gebruikersinterface van het Platform. |
+| `title` | Tekenreeks | Optioneel | Hiermee wordt de naam van het veld aangegeven, zoals deze wordt weergegeven door klanten in de gebruikersinterface van het platform. Als dit veld leeg is of ontbreekt, neemt de gebruikersinterface de veldnaam over van de `name` waarde. |
+| `description` | Tekenreeks | Optioneel | Geef een beschrijving op voor het aangepaste veld. Deze beschrijving is niet zichtbaar in de interface van het Platform. |
 | `isRequired` | Boolean | Optioneel | Geeft aan of gebruikers een waarde voor dit veld moeten opgeven in de workflow voor de doelconfiguratie. |
 | `pattern` | Tekenreeks | Optioneel | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` op dit gebied. |
 | `enum` | Tekenreeks | Optioneel | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
-| `default` | Tekenreeks | Optioneel | Definieert de standaardwaarde op basis van een `enum` lijst. |
+| `default` | Tekenreeks | Optioneel | Hiermee wordt de standaardwaarde van een `enum` lijst. |
 | `hidden` | Boolean | Optioneel | Geeft aan of het gegevensveld van de klant al dan niet in de gebruikersinterface wordt weergegeven. |
-| `unique` | Boolean | Optioneel | Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. De **[!UICONTROL Integration alias]** in het [Aangepaste aanpassing](../../../catalog/personalization/custom-personalization.md) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
+| `unique` | Boolean | Optioneel | Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. Bijvoorbeeld de **[!UICONTROL Integration alias]** in het veld [Aangepaste personalisatie](../../../catalog/personalization/custom-personalization.md) doel moet uniek zijn, wat betekent dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
 | `readOnly` | Boolean | Optioneel | Geeft aan of de klant de waarde van het veld kan wijzigen of niet. |
 
 {style="table-layout:auto"}
 
-In het onderstaande voorbeeld wordt `customerDataFields` In deze sectie worden twee velden gedefinieerd die gebruikers moeten invoeren in de gebruikersinterface van het Platform wanneer ze verbinding maken met het doel:
+In het onderstaande voorbeeld wordt `customerDataFields` In deze sectie worden twee velden gedefinieerd die gebruikers moeten invoeren in de interface van het platform wanneer ze verbinding maken met het doel:
 
 * `Account ID`: Een gebruikersnaam voor het doelplatform.
 * `Endpoint region`: Het regionale eindpunt van de API waarmee ze verbinding maken. De `enum` maakt een vervolgkeuzemenu met de waarden die zijn gedefinieerd binnen de beschikbare waarden voor de gebruikers.
@@ -103,7 +103,7 @@ De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onde
 
 ## Namen en beschrijvingen van doelverbindingen {#names-description}
 
-Bij het maken van een nieuwe bestemming voegt Destination SDK automatisch toe **[!UICONTROL Name]** en **[!UICONTROL Description]** velden naar het scherm voor de doelverbinding in de gebruikersinterface van het Platform. Zoals u in het bovenstaande voorbeeld kunt zien, worden de **[!UICONTROL Name]** en **[!UICONTROL Description]** de gebieden worden teruggegeven in UI zonder inbegrepen in de configuratie van de gebieden van klantengegevens.
+Bij het maken van een nieuwe bestemming voegt Destination SDK automatisch toe **[!UICONTROL Name]** en **[!UICONTROL Description]** velden naar het scherm voor de doelverbinding in de gebruikersinterface van het platform. Zoals u in het bovenstaande voorbeeld kunt zien, worden de **[!UICONTROL Name]** en **[!UICONTROL Description]** de gebieden worden teruggegeven in UI zonder inbegrepen in de configuratie van de gebieden van klantengegevens.
 
 >[!IMPORTANT]
 >
@@ -111,9 +111,9 @@ Bij het maken van een nieuwe bestemming voegt Destination SDK automatisch toe **
 
 ## Gegevensvelden van klanten bestellen {#ordering}
 
-De orde waarin u de gebieden van klantengegevens in de bestemmingsconfiguratie toevoegt wordt weerspiegeld in het Platform UI.
+De orde waarin u de gebieden van klantengegevens in de bestemmingsconfiguratie toevoegt wordt weerspiegeld in Platform UI.
 
-De onderstaande configuratie wordt bijvoorbeeld weerspiegeld in de gebruikersinterface, waarbij de opties in de volgorde worden weergegeven **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
+De onderstaande configuratie wordt bijvoorbeeld dienovereenkomstig weerspiegeld in de gebruikersinterface, waarbij de opties in de volgorde worden weergegeven **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
 
 ```json
 "customerDataFields":[
@@ -252,6 +252,93 @@ Om dit te doen, gebruik `namedEnum` object als hieronder weergegeven en een `def
 ```
 
 ![Het registreren van het scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## Dynamische vervolgkeuzekiezers maken voor gegevensvelden van klanten {#dynamic-dropdown-selectors}
+
+In situaties waarin u een API dynamisch wilt aanroepen en de reactie wilt gebruiken om de opties in een vervolgkeuzemenu dynamisch te vullen, kunt u een dynamische vervolgkeuzekiezer gebruiken.
+
+De dynamische dropdown selecteurs kijken identiek aan [gewone vervolgkeuzekiezers](#dropdown-selectors) in de gebruikersinterface. Het enige verschil is dat de waarden dynamisch worden opgehaald van een API.
+
+Als u een dynamische vervolgkeuzekiezer wilt maken, moet u twee componenten configureren:
+
+**Stap 1.** [Een doelserver maken](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) met een `responseFields` sjabloon voor de dynamische API-aanroep, zoals hieronder wordt weergegeven.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Stap 2.** Gebruik de `dynamicEnum` object zoals hieronder weergegeven. In het onderstaande voorbeeld wordt `User` dropdown wordt teruggewonnen gebruikend de dynamische server.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Stel de `destinationServerId` parameter aan identiteitskaart van de bestemmingsserver die u bij stap 1 creeerde. U kunt de bestemmingsidentiteitskaart in de reactie van zien [een doelserverconfiguratie ophalen](../../authoring-api/destination-server/retrieve-destination-server.md) API-aanroep.
 
 ## Voorwaardelijke gegevensvelden voor klanten maken {#conditional-options}
 
@@ -422,11 +509,11 @@ Hieronder ziet u het resulterende UI-scherm op basis van de bovenstaande configu
 
 ## Toegang tot getemplatificeerde gegevensvelden van klanten {#accessing-templatized-fields}
 
-Wanneer uw bestemming gebruikersinvoer vereist, moet u een selectie van gebieden van klantengegevens aan uw gebruikers verstrekken, die zij door de interface van het Platform kunnen invullen. Dan, moet u uw bestemmingsserver vormen om de gebruikersinput van de gebieden van de klantengegevens correct te lezen. Dit wordt gedaan door templatized gebieden.
+Wanneer uw bestemming gebruikersinvoer vereist, moet u een selectie van gebieden van klantengegevens aan uw gebruikers verstrekken, die zij door de UI van het Platform kunnen invullen. Dan, moet u uw bestemmingsserver vormen om de gebruikersinput van de gebieden van de klantengegevens correct te lezen. Dit wordt gedaan door templatized gebieden.
 
 Sjabloonvelden gebruiken de indeling `{{customerData.fieldName}}`, waarbij `fieldName` is de naam van het gebied van klantengegevens dat u informatie van leest. Alle sjabloongegevensvelden van klanten worden voorafgegaan door `customerData.` en tussen dubbele accolades `{{ }}`.
 
-Bijvoorbeeld, denken wij aan de volgende Amazon S3 bestemmingsconfiguratie:
+Bijvoorbeeld, denken wij de volgende Amazon S3 bestemmingsconfiguratie:
 
 ```json
 "customerDataFields":[
@@ -472,7 +559,7 @@ Voor Experience Platform om correct te verbinden met [!DNL Amazon S3], moet uw b
 
 De getemplatificeerde waarden `{{customerData.bucketName}}` en `{{customerData.path}}` Lees de door de gebruiker opgegeven waarden zodat het Experience Platform verbinding kan maken met het doelplatform.
 
-Voor meer informatie over hoe te om uw bestemmingsserver te vormen om templatized gebieden te lezen, zie de documentatie op [hard-gecodeerde versus templatized gebieden](../destination-server/server-specs.md#templatized-fields).
+Voor meer informatie over hoe te om uw bestemmingsserver te vormen om getemplatificeerde gebieden te lezen, zie de documentatie op [hard-gecodeerde versus templatized gebieden](../destination-server/server-specs.md#templatized-fields).
 
 ## Volgende stappen {#next-steps}
 
@@ -484,7 +571,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [OAuth2-verificatie](oauth2-authentication.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Ondersteunde toewijzingsconfiguraties](supported-mapping-configurations.md)
 * [Levering bestemming](destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](audience-metadata-configuration.md)
