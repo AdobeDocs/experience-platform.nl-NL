@@ -2,9 +2,9 @@
 title: Een gegevensstroom configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 705b1645eb8ca69169350c57cd28d3a1061f4928
 workflow-type: tm+mt
-source-wordcount: '2142'
+source-wordcount: '2459'
 ht-degree: 1%
 
 ---
@@ -38,9 +38,42 @@ Als u deze gegevensstroom voor gebruik in Experience Platform vormt en SDK van h
 
 ![Basisconfiguratie voor een gegevensstroom](assets/configure/configure.png)
 
-Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om de gegevensstroom te vormen.
+### Geolocatie en netwerkopzoekhandeling configureren {#geolocation-network-lookup}
 
-![Geavanceerde configuratieopties](assets/configure/advanced-options.png) {#advanced-options}
+De montages van de geolocatie en van de netwerkraadpleging helpen u het niveau van granulariteit van de geografische en netwerk-vlakke gegevens bepalen die u wilt verzamelen.
+
+Breid uit **[!UICONTROL Geolocation and network lookup]** om de hieronder beschreven instellingen te configureren.
+
+![Schermopname van de gebruikersinterface van het platform waarin het configuratiescherm van de gegevensstroom wordt weergegeven met de instellingen voor geolocatie en netwerkopzoekopdracht gemarkeerd.](assets/configure/geolookup.png)
+
+| Instelling | Beschrijving |
+| --- | --- |
+| [!UICONTROL Geo Lookup] | Hiermee schakelt u geolocatiezoekopdrachten voor de geselecteerde opties in op basis van het IP-adres van de bezoeker. Voor het opzoeken van Geolocatie moet u de [`placeContext`](../edge/data-collection/automatic-information.md#place-context) gebiedsgroep in uw configuratie van SDK van het Web. <br> Beschikbare opties: <ul><li>Land</li><li>Postcode</li><li>Staat/provincie</li><li>DMA</li><li>Plaats</li><li>Breedtegraad </li><li>Lengtegraad</li></ul>Selecteren **[!UICONTROL City]**, **[!UICONTROL Latitude]**, of **[!UICONTROL Longitude]** biedt coördinaten tot twee decimale punten, ongeacht welke andere opties zijn geselecteerd. Dit wordt beschouwd als granulariteit op stadsniveau. <br> <br>Als u geen enkele optie selecteert, worden geolocatieopzoekingen uitgeschakeld. Geolocatie komt voor [!UICONTROL IP Obfuscation] en niet door de  [!UICONTROL IP Obfuscation] instellen. |
+| [!UICONTROL Network Lookup] | Laat netwerkraadplegingen voor de geselecteerde opties toe, die op het bezoekerIP adres worden gebaseerd. De raadpleging van het netwerk vereist u om te omvatten [`Environment`](../edge/data-collection/automatic-information.md#environment) gebiedsgroep in uw configuratie van SDK van het Web. <br> Beschikbare opties: <ul><li>Vervoerder</li><li>Domein</li><li>ISP</li></ul>Gebruik deze opties om meer informatie aan andere diensten over het specifieke netwerk te verstrekken waar de verzoeken voortvloeiden. |
+
+### Opzoeken van apparaat configureren {#geolocation-device-lookup}
+
+De **[!UICONTROL Device Lookup]** Met instellingen kunt u het granulariteitsniveau selecteren van de apparaatspecifieke informatie die u wilt verzamelen.
+
+Breid uit **[!UICONTROL Device Lookup]** om de hieronder beschreven instellingen te configureren.
+
+![Schermopname van de gebruikersinterface van het platform die het scherm van de gegevensstroomconfiguratie met de benadrukte montages van de apparatenraadpleging toont.](assets/configure/device-lookup.png)
+
+>[!IMPORTANT]
+>
+>De instellingen die in de onderstaande tabel worden beschreven, sluiten elkaar uit. U kunt niet zowel de informatie van de gebruikersagent als de gegevens van de apparatenraadpleging tezelfdertijd selecteren.
+
+| Instelling | Beschrijving |
+| --- | --- |
+| **[!UICONTROL Keep user agent and client hints headers]** | Selecteer deze optie als u alleen de gegevens wilt verzamelen die in de userAgent-tekenreeks zijn opgeslagen. Dit is de standaardinstelling. |
+| **[!UICONTROL Use device lookup to collect the following information]** | Selecteer deze optie als u een of meer van de volgende apparaatspecifieke informatie wilt verzamelen: <ul><li>**[!UICONTROL Device]** informatie:<ul><li>Apparaatfabrikant</li><li>Apparaatmodel</li><li>Marketingnaam</li></ul></li><li>**[!UICONTROL Hardware]** informatie: <ul><li>Apparaattype</li><li>Weergavehoogte</li><li>Weergavebreedte</li><li>Kleurdiepte weergeven</li></ul></li><li>**[!UICONTROL Browser]** informatie: <ul><li>Browserleverancier</li><li>Browsernaam</li><li>Browserversie</li></ul></li><li>**[!UICONTROL Operating system]** informatie: <ul><li>OS-leverancier</li><li>Naam besturingssysteem</li><li>Besturingssysteemversie</li></ul></li></ul> <br>  Opzoekgegevens van het apparaat kunnen niet samen met de gebruikersagent en de clienthints worden verzameld. Als u ervoor kiest apparaatinformatie te verzamelen, wordt de verzameling van gebruikersagent- en clienthints uitgeschakeld en andersom. Alle gegevens van de apparatenraadpleging worden opgeslagen in `xdm:device` veldgroep. |
+| **[!UICONTROL Do not collect any device information]** | Selecteer deze optie als u geen opzoekgegevens wilt verzamelen. Er worden geen apparaat-, hardware-, browser- of besturingssysteemgegevens verzameld, waaronder geen kopteksten voor gebruikersagent- of clienthints. |
+
+### Geavanceerde opties configureren {#@advanced-options}
+
+Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om de gegevensstroom, zoals IP verduistering, de koekjes van eerste identiteitskaart van de Partij, en meer te vormen.
+
+![Geavanceerde configuratieopties](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -50,14 +83,13 @@ Selecteren **[!UICONTROL Advanced Options]** om extra controles te openbaren om 
 
 | Instelling | Beschrijving |
 | --- | --- |
-| [!UICONTROL Geo Lookup] | Hiermee schakelt u geolocatiezoekopdrachten voor de geselecteerde opties in op basis van het IP-adres van de bezoeker. Voor het opzoeken van Geolocatie moet u de [`placeContext`](../edge/data-collection/automatic-information.md#place-context) gebiedsgroep in uw configuratie van SDK van het Web. <br> Beschikbare opties: <ul><li>Land</li><li>Postcode</li><li>Staat/provincie</li><li>DMA</li><li>Plaats</li><li>Breedtegraad </li><li>Lengtegraad</li></ul>Selecteren **[!UICONTROL City]**, **[!UICONTROL Latitude]**, of **[!UICONTROL Longitude]** biedt coördinaten tot twee decimale punten, ongeacht welke andere opties zijn geselecteerd. Dit wordt beschouwd als granulariteit op stadsniveau. <br> <br>Als u geen enkele optie selecteert, worden geolocatieopzoekingen uitgeschakeld. Geolocatie komt voor [!UICONTROL IP Obfuscation] en niet door de  [!UICONTROL IP Obfuscation] instellen. |
-| [!UICONTROL Network Lookup] | Laat netwerkraadplegingen voor de geselecteerde opties toe, die op het bezoekerIP adres worden gebaseerd. De raadpleging van het netwerk vereist u om te omvatten [`Environment`](../edge/data-collection/automatic-information.md#environment) gebiedsgroep in uw configuratie van SDK van het Web. <br> Beschikbare opties: <ul><li>Vervoerder</li><li>Domein</li><li>ISP</li></ul>Gebruik deze opties om meer informatie aan andere diensten over het specifieke netwerk te verstrekken waar de verzoeken voortvloeiden. |
 | [!UICONTROL IP Obfuscation] | Geeft het type IP-verduistering aan dat op de gegevensstroom moet worden toegepast. Om het even welke verwerking die op klantIP wordt gebaseerd zal door IP het obfuseren plaatsen worden beïnvloed. Dit omvat alle diensten van het Experience Cloud die gegevens van uw gegevensstroom ontvangen. <p>Beschikbare opties:</p> <ul><li>**[!UICONTROL None]**: Schakelt IP-verduistering uit. Het volledige IP-adres van de gebruiker wordt via de gegevensstroom verzonden.</li><li>**[!UICONTROL Partial]**: Voor IPv4 adressen, verduistert het laatste octet van het gebruikersIP adres. Voor IPv6 adressen, verduistert de laatste 80 beetjes van het adres. <p>Voorbeelden:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Full]**: Verduistert het volledige IP adres. <p>Voorbeelden:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> Het effect van IP-verduistering op andere Adobe producten: <ul><li>**Adobe Target**: Het gegevensstroomniveau [!UICONTROL IP obfuscation] het plaatsen neemt belangrijkheid over om het even welke IP die optieoptie in Adobe Target wordt geplaatst. Bijvoorbeeld wanneer het gegevensstroomniveau [!UICONTROL IP obfuscation] optie is ingesteld op **[!UICONTROL Full]** en de optie van de Verduistering van Adobe Target IP wordt geplaatst aan **[!UICONTROL Last octet obfuscation]** Adobe Target zal een volledig verduisterde IP ontvangen. Zie de Adobe Target documentatie op [IP obfuscatie](https://developer.adobe.com/target/before-implement/privacy/privacy/) en [geolocatie](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) voor meer informatie .</li><li>**Audience Manager**: De gegevensstroom-vlakke IP obfuscation die voorrang over om het even welke IP die optieoptie neemt in Audience Manager wordt geplaatst, en het wordt toegepast op alle IP adressen. Elke opzoekhandeling van de geolocatie door de Audience Manager wordt beïnvloed door het niveau van de gegevensstroom [!UICONTROL IP obfuscation] -optie. Een opzoekhandeling naar een geolocatie in de Audience Manager, gebaseerd op een volledig verduisterde IP, resulteert in een onbekend gebied en alle segmenten op basis van de resulterende geolocatiegegevens worden niet uitgevoerd. Zie de documentatie van de Audience Manager op [IP obfuscatie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) voor meer informatie .</li><li>**Adobe Analytics**: Adobe Analytics ontvangt momenteel de gedeeltelijk verduisterde IP adressen als om het even welke IP verduisteringsoptie, buiten NONE wordt geselecteerd. Voor Analytics om volledig verduisterde IP adressen te ontvangen, moet u IP verduistering afzonderlijk vormen, in Adobe Analytics. Dit gedrag wordt in toekomstige versies bijgewerkt. Zie de Adobe Analytics [documentatie](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) voor details op hoe te om IP verwarring in Analytics toe te laten.</li></ul> |
 | [!UICONTROL First Party ID Cookie] | Als deze instelling is ingeschakeld, geeft het Edge Network de opdracht naar een opgegeven cookie te verwijzen wanneer u een [apparaat-id van eerste partij](../edge/identity/first-party-device-ids.md)in plaats van deze waarde op te zoeken in het identiteitsoverzicht.<br><br>Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen. |
 | [!UICONTROL Third Party ID Sync] | De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Als deze instelling is ingeschakeld, kunt u opgeven welke container met id-syncs wordt uitgevoerd voor deze gegevensstroom. |
 | [!UICONTROL Third Party ID Sync Container ID] | De numerieke id van de container die wordt gebruikt voor synchronisatie van externe id&#39;s. |
 | [!UICONTROL Container ID Overrides] | In deze sectie kunt u aanvullende id&#39;s van de synchronisatiecontainer van derden definiëren waarmee u de standaard id&#39;s kunt overschrijven. |
 | [!UICONTROL Access Type] | Bepaalt het authentificatietype dat het Netwerk van de Rand voor de gegevensstroom goedkeurt. <ul><li>**[!UICONTROL Mixed Authentication]**: Als deze optie is geselecteerd, accepteert het Edge-netwerk zowel geverifieerde als niet-geverifieerde aanvragen. Selecteer deze optie als u de SDK van het Web wilt gebruiken of [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), samen met de [Server-API](../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: Als deze optie is geselecteerd, accepteert het Edge-netwerk alleen geverifieerde aanvragen. Selecteer deze optie als u alleen de server-API wilt gebruiken en niet-geverifieerde aanvragen niet door het Edge-netwerk moeten worden verwerkt.</li></ul> |
+| [!UICONTROL Media Analytics] | Selecteer deze optie als u streamingvolggegevens wilt verwerken voor Edge Network-integratie via Experience Platform-SDK&#39;s of Media Edge API. Meer informatie over Media Analytics van de [documentatie](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en). |
 
 Als u vanaf hier uw gegevensstroom configureert voor Experience Platform, volgt u de zelfstudie [Gegevensvoorvoegsel voor gegevensverzameling](./data-prep.md) om uw gegevens toe te wijzen aan een de gebeurtenisschema van het Platform alvorens aan deze gids terug te keren. Anders selecteert u **[!UICONTROL Save]** en ga verder met de volgende sectie.
 
