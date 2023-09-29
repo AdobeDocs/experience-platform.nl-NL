@@ -1,0 +1,75 @@
+---
+title: Een Azure Key Vault configureren
+description: Leer hoe u een nieuwe bedrijfsaccount maakt met Azure of een bestaande bedrijfsaccount gebruikt en de Key Vault maakt.
+source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 0%
+
+---
+
+# Een [!DNL Azure] Key Vault
+
+Door de klant beheerde toetsen (CMK) ondersteunen alleen toetsen van een [!DNL Microsoft Azure] Key Vault. Om aan de slag te gaan, moet u werken met [!DNL Azure] om een nieuwe bedrijfsaccount te maken, of gebruik een bestaande bedrijfsaccount en volg de onderstaande stappen om de Key Vault te maken.
+
+>[!IMPORTANT]
+>
+>Alleen de serviceniveaus Premium en Standaard voor [!DNL Azure] Key Vault wordt ondersteund. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] en [!DNL Azure Payments HSM] worden niet ondersteund. Zie de [[!DNL Azure] documentatie](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) voor meer informatie over de aangeboden services voor sleutelbeheer.
+
+>[!NOTE]
+>
+>In de onderstaande documentatie worden alleen de basisstappen beschreven voor het maken van de Key Vault. Buiten deze richtlijnen dient u de Key Vault te configureren volgens het beleid van uw organisatie.
+
+Aanmelden bij de [!DNL Azure] openen en de zoekbalk gebruiken om te zoeken naar **[!DNL Key vaults]** onder de lijst van diensten.
+
+![De zoekfunctie in [!DNL Microsoft Azure] with [!DNL Key vaults] gemarkeerd in de zoekresultaten.](../../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
+
+De **[!DNL Key vaults]** wordt weergegeven nadat u de service hebt geselecteerd. Van hier, selecteer **[!DNL Create]**.
+
+![De [!DNL Key vaults] dashboard in [!DNL Microsoft Azure] with [!DNL Create] gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
+
+Vul met het meegeleverde formulier de basisgegevens voor de Key Vault in, inclusief een naam en een toegewezen bronnengroep.
+
+>[!WARNING]
+>
+>Hoewel de meeste opties als standaardwaarden kunnen worden gelaten, **zorg ervoor dat u de opties voor het verwijderen en wissen van de software inschakelt**. Als u deze functies niet inschakelt, loopt u het risico dat de toegang tot uw gegevens verloren gaat als de Key Vault wordt verwijderd.
+>
+>![De [!DNL Microsoft Azure] [!DNL Create a Key Vault] workflow met soft delete en purge protection gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/basic-config.png)
+
+Hierna doorloopt u de workflow voor het maken van de Key Vault en configureert u de verschillende opties volgens het beleid van uw organisatie.
+
+Zodra u bij **[!DNL Review + create]** U kunt de details van de Key Vault controleren tijdens de validatie. Selecteer **[!DNL Create]** om het proces te voltooien.
+
+![Microsoft Azure Key vaults Review en creeer pagina met Create gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## Netwerkopties configureren {#configure-network-options}
+
+Als uw Key Vault is geconfigureerd om de toegang van het publiek tot bepaalde virtuele netwerken te beperken of om de toegang van het publiek volledig uit te schakelen, moet u [!DNL Microsoft] een firewalluitzondering.
+
+Selecteren **[!DNL Networking]** in de linkernavigatie. Onder **[!DNL Firewalls and virtual networks]**, selecteert u het selectievakje **[!DNL Allow trusted Microsoft services to bypass this firewall]** selecteert u vervolgens **[!DNL Apply]**.
+
+![De [!DNL Networking] tabblad van [!DNL Microsoft Azure] with [!DNL Networking] en [!DNL Allow trusted Microsoft surfaces to bypass this firewall] gemarkeerde uitzondering.](../../images/governance-privacy-security/customer-managed-keys/networking.png)
+
+### Een sleutel genereren {#generate-a-key}
+
+Nadat u een Key Vault hebt gemaakt, kunt u een nieuwe sleutel genereren. Ga naar de **[!DNL Keys]** en selecteert u **[!DNL Generate/Import]**.
+
+![De [!DNL Keys] tabblad van [!DNL Azure] with [!DNL Generate import] gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
+
+Gebruik het meegeleverde formulier om een naam voor de sleutel op te geven en selecteer **RSA** voor het toetstype. De **[!DNL RSA key size]** moet ten minste **3072** bits zoals vereist door [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is ook compatibel met RSA 3027.
+
+>[!NOTE]
+>
+>Onthoud de naam die u voor de sleutel opgeeft, omdat deze nodig is om de sleutel naar de Adobe te verzenden.
+
+Gebruik de resterende besturingselementen om de sleutel te configureren die u naar wens wilt genereren of importeren. Selecteer **[!DNL Create]**.
+
+![Maak een sleuteldashboard met [!DNL 3072] bits gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+
+De geconfigureerde sleutel wordt weergegeven in de lijst met toetsen voor de vault.
+
+![De [!DNL Keys] werkruimte met de sleutelnaam gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/key-added.png)
+
+## Volgende stappen
+
+Om het eenmalig proces voor vestiging de klant-geleide sleuteleigenschap voort te zetten, ga met of verder [API](./api-set-up.md) of [UI](./ui-set-up.md) door de klant beheerde handleidingen voor het instellen van sleutels.

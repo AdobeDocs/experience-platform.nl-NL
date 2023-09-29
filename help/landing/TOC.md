@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform uw klanten in real time gepersonaliseerde ervaringen kan bieden.
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 18%
+source-wordcount: '281'
+ht-degree: 17%
 
 ---
 
@@ -66,7 +66,11 @@ ht-degree: 18%
          * [Gebeurtenissen](./governance-privacy-security/audit-logs/api/events.md)
          * [Exporteren](./governance-privacy-security/audit-logs/api/export.md)
    * [Gegevenscodering](./governance-privacy-security/encryption.md)
-   * [Door de klant beheerde sleutels](./governance-privacy-security/customer-managed-keys.md)
+   * Door de klant beheerde sleutels {#customer-managed-keys}
+      * [Door de klant beheerde sleutels](./governance-privacy-security/customer-managed-keys/overview.md)
+      * [Een Azure Key Vault configureren](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
+      * [De API gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/api-set-up.md)
+      * [De gebruikersinterface gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Licentiegebruik en guardrails {#license}
    * [Aanbevolen best practices voor licentierechten voor gegevensbeheer](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)

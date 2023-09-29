@@ -1,9 +1,9 @@
 ---
-keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores; door klanten beheerde sleutels in AAI
+keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores; klant beheerde sleutels in AAI
 title: Door de klant beheerde toetsen
 description: Leer hoe u door de klant beheerde sleutels voor Attribution AI instelt.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Door de klant beheerde toetsen
 
-Attribution AI biedt de optie voor [Gezondheidsschild](https://www.adobe.com/trust/compliance/hipaa-ready.html) en Privacy &amp; Security Shield-klanten gebruiken Azure Customer Managed Keys (CMK) die op uw Attribution AI-gegevens moeten worden toegepast. Het installatieproces is hetzelfde als [Adobe Experience Platform CMK instellen](../../../landing/governance-privacy-security/customer-managed-keys.md) en u kunt de stappen volgen die daar worden geschetst.
+Attribution AI biedt de optie voor [Gezondheidsschild](https://www.adobe.com/trust/compliance/hipaa-ready.html) en Privacy &amp; Security Shield-klanten gebruiken Azure Customer Managed Keys (CMK) die op uw Attribution AI-gegevens moeten worden toegepast. Het installatieproces is hetzelfde als [Adobe Experience Platform CMK instellen](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) en u kunt de stappen volgen die daar worden geschetst.
 
 U kunt de documentatie lezen op [Door klanten beheerde toetsen in Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) en voert u de beschreven stappen uit om het installatieproces te doorlopen.
 

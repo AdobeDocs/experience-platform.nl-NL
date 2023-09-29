@@ -2,7 +2,7 @@
 title: Gegevensbeheer in Query-service
 description: Dit overzicht behandelt de belangrijkste elementen van gegevensbeheer in de Dienst van de Vraag van het Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3121'
 ht-degree: 0%
@@ -34,7 +34,7 @@ De veiligheid van gegevens is het proces om gegevens tegen onbevoegde toegang te
 De veiligheid met betrekking tot de Dienst van de Vraag is verdeeld in de volgende categorieën:
 
 * [Toegangsbeheer](#access-control): De toegang wordt gecontroleerd door rollen en toestemmingen met inbegrip van dataset en kolom-vlakke toestemmingen.
-* Gegevens beveiligen via [connectiviteit](#connectivity): De gegevens worden beveiligd door Platform en externe cliënten door een beperkte verbinding met het verlopen van geloofsbrieven, of niet-vervallende geloofsbrieven te bereiken.
+* Gegevens beveiligen via [connectiviteit](#connectivity): De gegevens worden beveiligd door Platform en externe cliënten door een beperkte verbinding met het verlopen van geloofsbrieven te bereiken, of niet-vervallende geloofsbrieven.
 * Gegevens beveiligen via [codering en door de klant beheerde sleutels (CMK)](#encryption-and-customer-managed-keys): Toegang die wordt beheerd door versleuteling wanneer gegevens in rust zijn.
 
 ### Toegangsbeheer {#access-control}
@@ -103,7 +103,7 @@ De toegang van de gebruiker tot individuele kolommen kan dan door de etiketten v
 
 ### Connectiviteit {#connectivity}
 
-De Dienst van de vraag is toegankelijk door het Platform UI of door een verbinding met externe compatibele cliënten te vormen. De toegang tot alle beschikbare fronten wordt gecontroleerd door een reeks geloofsbrieven.
+De Dienst van de vraag is toegankelijk door Platform UI of door een verbinding met externe compatibele cliënten te vormen. De toegang tot alle beschikbare fronten wordt gecontroleerd door een reeks geloofsbrieven.
 
 #### Connectiviteit via externe clients
 
@@ -127,7 +127,7 @@ Zodra de vereiste workflow is voltooid, kunnen geautoriseerde gebruikers nu [de 
 
 #### SSL-gegevenscodering
 
-Voor verhoogde veiligheid, verleent de Dienst van de Vraag inheemse steun voor SSL verbindingen om cliënt/servermededelingen te coderen. Platform biedt ondersteuning voor verschillende SSL-opties die aansluiten bij uw behoeften op het gebied van gegevensbeveiliging en die een evenwicht bieden tussen de verwerkingsoverhead van codering en sleuteluitwisseling.
+Voor verhoogde veiligheid, verleent de Dienst van de Vraag inheemse steun voor SSL verbindingen om cliënt/servermededelingen te coderen. Platform ondersteunt verschillende SSL-opties die aansluiten bij uw behoeften op het gebied van gegevensbeveiliging en die een evenwicht vormen tussen de verwerkingsoverhead van codering en sleuteluitwisseling.
 
 Zie de handleiding op beschikbaar [SSL-opties voor clientverbindingen van derden met Query Service](../clients/ssl-modes.md) voor meer informatie, zoals hoe u verbinding kunt maken met de `verify-full` SSL-parameterwaarde.
 
@@ -137,7 +137,7 @@ Codering is het gebruik van een algoritmisch proces om gegevens om te zetten in 
 
 De de gegevensnaleving van de Dienst van de vraag zorgt ervoor dat het gegeven altijd wordt gecodeerd. Data-in-transit is altijd HTTPS-compatibel en data-at-rest wordt gecodeerd in een Azure Data Lake Store met systeemtoetsen. Zie de documentatie op [hoe gegevens in Adobe Experience Platform worden gecodeerd](../../landing/governance-privacy-security/encryption.md) voor meer informatie . Zie voor meer informatie over hoe gegevens in rust in Azure Data Lake Storage gecodeerd zijn [officiële Azure-documentatie](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-De gegevens-in-doorreis is altijd volgzaam HTTPS en zo ook wanneer de gegevens in rust in het gegevensmeer zijn, wordt de encryptie gedaan met Sleutel van het Beheer van de Klant (CMK), die reeds door het Beheer van het meer van Gegevens wordt gesteund. De momenteel ondersteunde versie is TLS1.2. Zie de [documentatie over door de klant beheerde sleutels (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) om te leren hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
+De gegevens-in-doorreis is altijd volgzaam HTTPS en zo ook wanneer de gegevens in rust in het gegevensmeer zijn, wordt de encryptie gedaan met Sleutel van het Beheer van de Klant (CMK), die reeds door het Beheer van het meer van Gegevens wordt gesteund. De momenteel ondersteunde versie is TLS1.2. Zie de [documentatie over door de klant beheerde sleutels (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) om te leren hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
 
 
 ## Audit {#audit}
@@ -150,7 +150,7 @@ Om het even welke logboekcategorieën kunnen worden gevraagd zoals gewenst door 
 
 De UI van vraaglogboeken staat u toe om uitvoeringsdetails voor alle vragen te controleren en te herzien die of via de Redacteur van de Vraag of de Dienst API van de Vraag in werking zijn gesteld. Dit brengt transparantie aan de activiteiten van de Dienst van de Vraag, toestaand u de meta-gegevens voor controleren **alles** de vragen die over de Dienst van de Vraag zijn uitgevoerd. Het omvat alle types van vragen of het een verkennende, partij, of geplande vraag is.
 
-U hebt toegang tot de logboeken van de query via de gebruikersinterface van het Platform in het dialoogvenster [!UICONTROL Logs] tabblad van het [!UICONTROL Queries] werkruimte.
+U kunt de logboeken van de query openen via de interface van het platform in het dialoogvenster [!UICONTROL Logs] tabblad van het [!UICONTROL Queries] werkruimte.
 
 ![Het tabblad Vragenlijsten met het deelvenster Details gemarkeerd.](../images/data-governance/overview/queries-log.png)
 
@@ -158,7 +158,7 @@ U hebt toegang tot de logboeken van de query via de gebruikersinterface van het 
 
 De logboeken van de controle bevatten meer gedetailleerde informatie dan vraaglogboeken en laten u toe om logboeken te filtreren die op attributen zoals gebruiker, datum, type van vraag, etc. worden gebaseerd. Buiten de details beschikbaar in vraaglogboek UI, slaat de Logboeken van de Controle details op individuele gebruikers samen met hun zittingsgegevens of connectiviteit aan een derde cliënt op.
 
-Door een nauwkeurige staat van dienst van gebruikersacties te verstrekken, kan een controletraject helpen bij het oplossen van problemenkwesties en uw zaken effectief helpen aan het beleid van het collectieve gegevensbeheer en regelgevende vereisten voldoen. De logboeken van de controle verstrekken een verslag van alle activiteiten van de Platform. Gebruikend controlelogboeken kunt u gebruikersacties met betrekking tot vraaguitvoering, malplaatjes, en geplande vragen controleren om de transparantie en de zichtbaarheid van acties te verhogen die door gebruikers in de Dienst van de Vraag worden uitgevoerd.
+Door een nauwkeurige staat van dienst van gebruikersacties te verstrekken, kan een controletraject helpen bij het oplossen van problemenkwesties en uw zaken effectief helpen aan het beleid van het collectieve gegevensbeheer en regelgevende vereisten voldoen. De logboeken van de controle verstrekken een verslag van alle activiteiten van het Platform. Gebruikend controlelogboeken kunt u gebruikersacties met betrekking tot vraaguitvoering, malplaatjes, en geplande vragen controleren om de transparantie en de zichtbaarheid van acties te verhogen die door gebruikers in de Dienst van de Vraag worden uitgevoerd.
 
 De volgende lijst wijst op de vraagcategorieën die door controlelogboeken worden gevangen en de actietypes die zij registreren:
 
@@ -178,7 +178,7 @@ Zie de [overzicht van auditlogboeken](../../landing/governance-privacy-security/
 
 ## Gegevensgebruik {#data-usage}
 
-Het kader van het Beleid van Gegevens in Platform verstrekt een eenvormige manier om gegevens over alle oplossingen van de Adobe, de diensten, en platforms verantwoord te gebruiken. Het coördineert de systemische benadering om, meta-gegevens over het volledige Adobe Experience Cloud te vangen, mee te delen en te gebruiken. Hierdoor kunnen de verantwoordelijken voor de verwerking van gegevens gegevens etiketteren op basis van de marketingacties die nodig zijn en de beperkingen die aan die gegevens zijn gesteld door deze beoogde marketingacties. Zie het overzicht op [gegevensgebruikslabels](../../data-governance/labels/overview.md) voor meer informatie over hoe het Beleid van Gegevens u toestaat om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen.
+Het gegevensgovernancekader in Platform biedt een uniforme manier om gegevens op verantwoordelijke wijze te gebruiken voor alle oplossingen, services en platforms van de Adobe. Het coördineert de systemische benadering om, meta-gegevens over het volledige Adobe Experience Cloud te vangen, mee te delen en te gebruiken. Hierdoor kunnen de verantwoordelijken voor de verwerking van gegevens gegevens etiketteren op basis van de marketingacties die nodig zijn en de beperkingen die aan die gegevens zijn gesteld door deze beoogde marketingacties. Zie het overzicht op [gegevensgebruikslabels](../../data-governance/labels/overview.md) voor meer informatie over hoe het Beleid van Gegevens u toestaat om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen.
 
 Het is de beste praktijk om in elke fase van de gegevensreis te werken aan de naleving van de gegevensvereisten. Daartoe moeten afgeleide gegevensreeksen die ad-hocschema&#39;s gebruiken, op passende wijze worden geëtiketteerd als onderdeel van het kader voor gegevensbeheer. Er zijn twee soorten afgeleide datasets die door de Dienst van de Vraag worden gevormd: datasets die een standaardschema en datasets gebruiken die een ad hoc schema gebruiken.
 
@@ -186,7 +186,7 @@ Het is de beste praktijk om in elke fase van de gegevensreis te werken aan de na
 >
 >Datasets die gebruikend de Dienst van de Vraag worden gecreeerd worden bedoeld als &quot;afgeleide datasets&quot;.
 
-Aangezien de ad hoc regelingen door een individuele gebruiker voor een specifiek doel worden gecreeerd, worden de XDM schemagebieden namespaced voor die bepaalde dataset en niet bedoeld voor gebruik over verschillende datasets. Het resultaat is dat ad-hocschema&#39;s standaard niet zichtbaar zijn in de gebruikersinterface van het Experience Platform. Hoewel er geen verschil in de toepassing van de etiketten van het gegevensgebruik tussen zowel standaard als ad hoc regelingen is, moeten de ad hoc regelingen die door de Dienst van de Vraag voor het etiketteren worden gecreeerd eerst in de UI van het Platform zichtbaar worden gemaakt. Zie de handleiding op [ontdekken van ad-hocschema&#39;s binnen de interface van het Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) voor meer informatie .
+Aangezien de ad hoc regelingen door een individuele gebruiker voor een specifiek doel worden gecreeerd, worden de XDM schemagebieden namespaced voor die bepaalde dataset en niet bedoeld voor gebruik over verschillende datasets. Het resultaat is dat ad-hocschema&#39;s standaard niet zichtbaar zijn in de gebruikersinterface van het Experience Platform. Hoewel er geen verschil in de toepassing van de etiketten van het gegevensgebruik tussen zowel standaard als ad hoc regelingen is, moeten de ad hoc regelingen die door de Dienst van de Vraag voor het etiketteren worden gecreeerd eerst in Platform UI zichtbaar worden gemaakt. Zie de handleiding op [ontdekken van ad-hocschema&#39;s binnen de interface van het platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) voor meer informatie .
 
 Nadat u het schema hebt geopend, kunt u [labels toepassen op afzonderlijke velden](../../xdm/tutorials/labels.md). Zodra een schema is geëtiketteerd, erven alle datasets die uit dat schema voortkomen die etiketten. Van hier, kunt u beleid van het opstellingsgegevensgebruik dat gegevens met bepaalde etiketten kan beperken van worden geactiveerd aan bepaalde bestemmingen. Zie het overzicht over [beleid voor gegevensgebruik](../../data-governance/policies/overview.md).
 
@@ -200,13 +200,13 @@ Raadpleeg de documentatie bij de Privacy Service voor meer informatie over [iden
 
 De eigenschappen van de Dienst van de vraag voor gegevensbeheer vereenvoudigen en stroomlijnen het proces van gegevenscategorisering en naleving van de verordeningen van het gegevensgebruik. Zodra het gegeven is geïdentificeerd, laat de Dienst van de Vraag u toe om de primaire identiteit op alle outputdatasets toe te wijzen. U **moet** toevoegen van identiteiten aan de dataset om verzoeken om privacy van gegevens te vergemakkelijken en te werken aan de naleving van de gegevensvereisten.
 
-De de gegevensgebieden van het schema kunnen als identiteitsgebied door het Platform UI en de Dienst van de Vraag ook worden geplaatst staat u toe om [markeer de primaire identiteiten door het SQL bevel &quot;ALTER TABLE&quot;te gebruiken](../sql/syntax.md#alter-table). Een identiteit instellen met de opdracht `ALTER TABLE` bevel is vooral nuttig wanneer datasets gebruikend SQL eerder dan direct van een schema door het Platform UI worden gecreeerd. Zie de documentatie voor instructies over hoe u kunt [identiteitsvelden definiëren in de gebruikersinterface](../../xdm/ui/fields/identity.md) bij het gebruik van standaardschema&#39;s.
+De de gegevensgebieden van het schema kunnen als identiteitsgebied door Platform UI en de Dienst van de Vraag ook worden geplaatst staat u toe om [markeer de primaire identiteiten door het SQL bevel &quot;ALTER TABLE&quot;te gebruiken](../sql/syntax.md#alter-table). Een identiteit instellen met de opdracht `ALTER TABLE` bevel is vooral nuttig wanneer datasets gebruikend SQL eerder dan direct van een schema door Platform UI worden gecreeerd. Zie de documentatie voor instructies over hoe u kunt [identiteitsvelden definiëren in de gebruikersinterface](../../xdm/ui/fields/identity.md) bij het gebruik van standaardschema&#39;s.
 
 ## Gegevenshygiëne {#data-hygiene}
 
 Met &quot;gegevenshygiëne&quot; wordt bedoeld het repareren of verwijderen van gegevens die verouderd, onjuist, onjuist opgemaakt, gedupliceerd of onvolledig kunnen zijn. Deze processen zorgen ervoor dat de datasets over alle systemen nauwkeurig en verenigbaar zijn. Het is van belang te zorgen voor adequate gegevenshygiëne tijdens elke stap van de reis van de gegevens en zelfs vanaf de eerste plaats van gegevensopslag. In de Dienst van de Vraag van het Experience Platform, is dit of het gegevens meer of de versnelde opslag.
 
-U kunt een identiteit aan een afgeleide dataset toewijzen om hun gegevensbeheer na de gecentraliseerde diensten van de Platform van de gegevenshygiëne toe te staan.
+U kunt een identiteit aan een afgeleide dataset toewijzen om hun gegevensbeheer na de gecentraliseerde diensten van de Gegevenshygiëne van het Platform toe te staan.
 
 Omgekeerd, wanneer u een samengevoegde dataset op de versnelde opslag creeert, kunnen de samengevoegde gegevens niet worden gebruikt om de originele gegevens af te leiden. Als gevolg van deze gegevensaggregatie wordt de noodzaak om verzoeken om gegevenshygiëne te verzamelen, weggenomen.
 
