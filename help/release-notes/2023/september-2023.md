@@ -1,10 +1,10 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: 1bfd5e05642e0ac8f80af5502878eaee0b33c704
+source-git-commit: 05136ca1a44fa0ecbf2fd9941d047c3a0899f2d1
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 3%
+source-wordcount: '1228'
+ht-degree: 2%
 
 ---
 
@@ -20,6 +20,7 @@ Updates voor bestaande functies in Experience Platform:
 
 - [Waarschuwingen](#alerts)
 - [Gegevensverzameling](#data-collection)
+- [Doelen](#destinations)
 - [Identiteitsservice](#identity-service)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
@@ -56,6 +57,45 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 {style="table-layout:auto"}
 
 Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevensverzameling](../../tags/home.md).
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte doelen** {#new-updated-destinations}
+
+| Bestemming | Nieuw of Bijgewerkt | Beschrijving |
+| ----------- |----------------|----------- |
+| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nieuw | [[!DNL HubSpot]](https://www.hubspot.com) is een platform van CRM met alle software, integratie, en middelen u marketing, verkoop, inhoudsbeheer, en de klantendienst moet verbinden. Het staat u toe om uw gegevens, teams, en klanten op één platform van CRM te verbinden. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Bijgewerkt | Extra ondersteuning voor [!DNL Dynamics 365] aangepaste veldvoorvoegsels voor aangepaste velden die niet zijn gemaakt binnen de standaardoplossing in [!DNL Dynamics 365]. Een nieuw invoerveld, **[!UICONTROL Customization Prefix]**, is toegevoegd aan de [Doelgegevens invullen](#destination-details) stap. |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+
+Add these to release notes as they go out
+
+| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | New | Activate audiences previously onboarded to [!DNL LiveRamp] to premium publishers across mobile, web, display, and connected TV mediums. <br> After onboarding audiences to your [!DNL LiveRamp] account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, use the new [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) connection to activate the audiences to downstream destinations.  |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Updated | The Experience Cloud Audiences destination is now generally available. Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics. |
+
+-->
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+| Functionaliteit | Beschrijving |
+| ----------- | ----------- |
+| Uitvoer van gegevens in Real-Time CDP | De [gegevensset exporteren](../../destinations/ui/export-datasets.md) functionaliteit is nu algemeen beschikbaar. Zie [welke gegevenssets u kunt exporteren op basis van de app Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) u hebt aangeschaft en de [instructies voor de uitvoer van gegevenssets](/help/destinations/guardrails.md#dataset-exports). |
+| (bèta) Ondersteuning voor het exporteren van arraytype-objecten | Exporteer arrays met primitieve waarden (tekenreeks, int of booleaanse waarden) als platte schemabestanden naar de opslagdoelen van de cloud. Meer informatie over de functionaliteit in het dialoogvenster [documentatie](../../destinations/ui/export-arrays-calculated-fields.md). |
+| Dynamische dropdown-kiezers in Destination SDK | Wanneer u een doel maakt met Destination SDK, kunt u nu [dynamische vervolgkeuzekiezers](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) om de velden van een vervolgkeuzekiezer te vullen met waarden die zijn opgehaald uit een API. |
+
+**Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
+
+- Gebruik van [transparantie controleren](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) nu beschikbaar voor ondernemingsdoelen ([HTTP-API](../../destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) en [Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) op het niveau van de dataflow-run om de activeringscijfers en de status in de [gegevensstroomweergave](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page), met aanvullende informatie via foutcodes en berichten voor probleemoplossing.
+- Wanneer u de naam van het publiek bijwerkt die aan [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md), [Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md)en andere bestemmingen [update-sjablonen voor publiek](../../destinations/destination-sdk/metadata-api/update-audience-template.md)Deze naamwijzigingen worden nu verderop in de bestemming weergegeven.
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Identiteitsservice {#identity-service}
 
