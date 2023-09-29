@@ -5,32 +5,32 @@ title: De Middelen van het Schema in UI onderzoeken
 description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
 
 # Schema-bronnen in de gebruikersinterface verkennen
 
-In Adobe Experience Platform worden alle XDM-schemabronnen (Experience Data Model) opgeslagen in het [!DNL Schema Library], inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die zijn gedefinieerd door uw organisatie. In de interface van het Experience Platform kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, gebiedsgroep, of gegevenstype in bekijken [!DNL Schema Library]. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
+In Adobe Experience Platform worden alle XDM-schemabronnen (Experience Data Model) opgeslagen in het [!DNL Schema Library], met inbegrip van standaardmiddelen die door Adobe en douanemiddelen worden verstrekt die door uw organisatie worden bepaald. In Experience Platform UI, kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, gebiedsgroep, of gegevenstype in bekijken [!DNL Schema Library]. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
 
 Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39;s, klassen, gebiedsgroepen, en gegevenstypes in Experience Platform UI.
 
 ## Een schemabron opzoeken {#lookup}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. De [!UICONTROL Schemas] werkruimte biedt een **[!UICONTROL Browse]** tabblad om alle schema&#39;s in uw organisatie te verkennen, samen met extra speciale tabbladen voor het verkennen van **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, en **[!UICONTROL Data types]** respectievelijk.
+Selecteer in de interface Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. De [!UICONTROL Schemas] werkruimte biedt een **[!UICONTROL Browse]** tabblad om alle schema&#39;s in uw organisatie te verkennen, samen met extra speciale tabbladen voor het verkennen van **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, en **[!UICONTROL Data types]** respectievelijk.
 
 ![](../images/ui/explore/tabs.png)
 
 Het filterpictogram (![Pictogramafbeelding filteren](../images/ui/explore/icon.png)) onthult controles in de linkerspoorstaaf om de vermelde resultaten te beperken. De weergegeven besturingselementen verschillen afhankelijk van het type bron dat wordt vermeld.
 
-Als u bijvoorbeeld de lijst wilt filteren zodat alleen standaardgegevenstypen worden weergegeven die door Adobe worden geleverd, selecteert u **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder de **[!UICONTROL Type]** en **[!UICONTROL Owner]** secties.
+Als u bijvoorbeeld de lijst wilt filteren zodat alleen de standaardgegevenstypen worden weergegeven die door de Adobe worden opgegeven, selecteert u **[!UICONTROL Datatype]** en **[!UICONTROL Adobe]** onder de **[!UICONTROL Type]** en **[!UICONTROL Owner]** secties.
 
-De **[!UICONTROL Included in Profile]** knevel staat u toe om resultaten te filtreren om slechts middelen te tonen die in schema&#39;s worden gebruikt die voor gebruik binnen zijn toegelaten [Klantprofiel in realtime](../../profile/home.md).
+De **[!UICONTROL Included in Profile]** knevel staat u toe om resultaten te filtreren om slechts middelen te tonen die in schema&#39;s worden gebruikt die voor gebruik binnen zijn toegelaten [Klantprofiel in realtime](../../profile/home.md). De **[!UICONTROL Show adhoc schemas]** schakelt de filters de lijst van schema&#39;s van een knevel die met gebieden werden gecreeerd die namespaced voor gebruik slechts door één enkele dataset zijn.
 
-![](../images/ui/explore/filter.png)
+![De [!UICONTROL Schemas] werkruimte [!UICONTROL Browse] met de markering van het deelvenster Filters.](../images/ui/explore/filter.png)
 
 Wanneer u bronnen op de **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, of **[!UICONTROL Data types]** tabs, kunt u selecteren **[!UICONTROL Adobe]** alleen standaardbronnen tonen of **[!UICONTROL Customer]** om alleen bronnen weer te geven die door uw organisatie zijn gemaakt.
 
@@ -58,7 +58,7 @@ Alle objecten-type gebieden die sub-eigenschappen bevatten worden doen ineenstor
 
 Sommige veldnamen worden voorafgegaan door een onderstrepingsteken, zoals `_repo` en `_id`. Deze vertegenwoordigen placeholders voor gebieden die het systeem automatisch zal produceren en toewijzen aangezien de gegevens worden opgenomen.
 
-Daarom moeten de meeste van deze velden van de gegevensstructuur worden uitgesloten wanneer u gegevens in het Platform opneemt. De belangrijkste uitzondering op deze regel is de [`_{TENANT_ID}` field](../api/getting-started.md#know-your-tenant_id), waarin alle XDM-velden die onder uw organisatie worden gemaakt naamruimte moeten krijgen.
+Daarom moeten de meeste van deze velden worden uitgesloten van de structuur van uw gegevens wanneer u deze opneemt in Platform. De belangrijkste uitzondering op deze regel is de [`_{TENANT_ID}` field](../api/getting-started.md#know-your-tenant_id), waarin alle XDM-velden die onder uw organisatie worden gemaakt naamruimte moeten krijgen.
 
 ### Datatypen {#data-types}
 
@@ -66,7 +66,7 @@ Voor elk veld dat op het canvas wordt weergegeven, wordt het corresponderende ge
 
 ![](../images/ui/explore/data-types.png)
 
-Elk gegevenstype dat wordt toegevoegd met vierkante haakjes (`[]`) vertegenwoordigt een array van dat specifieke gegevenstype. Bijvoorbeeld een gegevenstype van **[!UICONTROL String]\[]** Hiermee wordt aangegeven dat het veld een array van tekenreekswaarden verwacht. Een gegevenstype van **[!UICONTROL Payment Item]\[]** Hiermee wordt een array van objecten aangegeven die voldoen aan de [!UICONTROL Payment Item] gegevenstype.
+Elk gegevenstype dat wordt toegevoegd met vierkante haakjes (`[]`) vertegenwoordigt een array van dat specifieke gegevenstype. Een gegevenstype van **[!UICONTROL String]\[]** Hiermee wordt aangegeven dat het veld een array van tekenreekswaarden verwacht. Een gegevenstype van **[!UICONTROL Payment Item]\[]** Hiermee wordt een array van objecten aangegeven die voldoen aan de [!UICONTROL Payment Item] gegevenstype.
 
 Als een arrayveld is gebaseerd op een objecttype, kunt u het pictogram ervan op het canvas selecteren om de verwachte kenmerken voor elk arrayitem weer te geven.
 
@@ -92,7 +92,7 @@ Identiteitsvelden worden op het canvas gemarkeerd met een vingerafdrukpictogram 
 
 >[!NOTE]
 >
->Zie de handleiding op [identiteitsvelden definiëren](./fields/identity.md) voor meer informatie over identiteitsgebieden en hun relatie met downstreamdiensten van Platforms.
+>Zie de handleiding op [identiteitsvelden definiëren](./fields/identity.md) voor meer informatie over identiteitsvelden en hun relatie met downstreamplatformdiensten.
 
 ### Relatievelden {#relationship}
 

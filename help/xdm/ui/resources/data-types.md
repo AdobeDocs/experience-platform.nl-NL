@@ -5,9 +5,9 @@ title: Gegevenstypen maken en bewerken met de gebruikersinterface
 type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1300'
 ht-degree: 0%
 
 ---
@@ -33,20 +33,21 @@ Hoewel dit niet nodig is voor deze handleiding, wordt u aangeraden de zelfstudie
 
 ## Open de [!DNL Schema Editor] voor een gegevenstype {#data-type}
 
-Selecteer in de interface Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] werkruimte selecteert u vervolgens de **[!UICONTROL Data types]** tab. Een lijst van beschikbare gegevenstypes wordt getoond, met inbegrip van die door Adobe en die worden bepaald door uw organisatie.
+Selecteer in de interface Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] werkruimte selecteert u vervolgens de **[!UICONTROL Data types]** tab. Er wordt een lijst met beschikbare gegevenstypen weergegeven. De lijst met gegevenstypen wordt automatisch gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de gegevenstypen weergegeven die door de Adobe worden gedefinieerd. U kunt de lijst ook filteren om de lijsten weer te geven die door uw organisatie zijn gemaakt.
 
-![](../../images/ui/resources/data-types/data-types-tab.png)
+![De [!UICONTROL Schemas] werkruimte met [!UICONTROL Schemas] in de linkernavigatie en [!UICONTROL Data types] gemarkeerd.](../../images/ui/resources/data-types/data-types-tab.png)
 
-Hier hebt u twee opties:
+Hier hebt u de volgende opties:
 
 - [Een nieuw gegevenstype maken](#create)
+- [Gegevenstypen filteren](#filter)
 - [Een bestaand gegevenstype selecteren om te bewerken](#edit)
 
 ### Een nieuw gegevenstype maken {#create}
 
 Selecteer op het tabblad **[!UICONTROL Data types]** de optie **[!UICONTROL Create data type]**.
 
-![](../../images/ui/resources/data-types/create.png)
+![De [!UICONTROL Schemas] werkruimte [!UICONTROL Data types] tab met [!UICONTROL Create data type] gemarkeerd.](../../images/ui/resources/data-types/create.png)
 
 De [!DNL Schema Editor] wordt weergegeven en geeft u de huidige structuur van het nieuwe gegevenstype op het canvas weer. Aan de rechterkant van de editor kunt u een weergavenaam en een optionele beschrijving voor het gegevenstype opgeven. Zorg ervoor dat u een unieke en beknopte naam voor uw gegevenstype opgeeft, omdat dit zo is dat het wordt geïdentificeerd wanneer u het aan een schema toevoegt.
 
@@ -56,17 +57,25 @@ Deze zelfstudie maakt een gegevenstype dat een restauratie-eigenschap beschrijft
 
 Vanaf hier kunt u naar de [volgende sectie](#add-fields) om velden toe te voegen aan het nieuwe gegevenstype.
 
+### Gegevenstypen filteren {#filter}
+
+De lijst met beschikbare gegevenstypen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de [!UICONTROL Standard] en [!UICONTROL Custom] opties. De [!UICONTROL Standard] toont entiteiten die zijn gemaakt door Adobe en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
+
+![De [!UICONTROL Data types] tabblad van het [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] gemarkeerd.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+
 ### Een bestaand gegevenstype bewerken {#edit}
 
 >[!NOTE]
 >
 >Zodra een bestaand gegevenstype in een schema wordt gebruikt dat voor gebruik in het Profiel van de Klant in real time is toegelaten, slechts kunnen niet-destructieve veranderingen daarna in dat gegevenstype worden aangebracht. Zie de [regels voor schemaontwikkeling](../../schema/composition.md#evolution) voor meer informatie .
 
-Alleen aangepaste gegevenstypen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Selecteer het filterpictogram (![Filterpictogram](../../images/ui/resources/data-types/filter.png)) om besturingselementen voor filteren op basis van [!UICONTROL Owner]. Selecteren **[!UICONTROL Customer]** om alleen aangepaste gegevenstypen weer te geven die eigendom zijn van uw organisatie.
+Alleen aangepaste gegevenstypen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Selecteren **[!UICONTROL Custom]** om alleen aangepaste gegevenstypen weer te geven die eigendom zijn van uw organisatie.
 
-Selecteer in de lijst het gegevenstype dat u wilt bewerken om de rechtertrack te openen, met daarin de details van het gegevenstype. Selecteer de naam van het gegevenstype in het rechterspoor om de structuur ervan te openen in het dialoogvenster [!DNL Schema Editor].
+Selecteer in de lijst het gegevenstype dat u wilt bewerken om de rechtertrack te openen, met daarin de details van het gegevenstype. Vanuit het deelvenster Details kunt u ook een voorbeeldbestand downloaden, de JSON-structuur kopiëren of het gegevenstype aan een pakket toevoegen.
 
-![](../../images/ui/resources/data-types/edit.png)
+Selecteer de naam van het gegevenstype in het rechterspoor om de structuur ervan te openen in het dialoogvenster [!DNL Schema Editor].
+
+![De [!UICONTROL Data types] tabblad van het [!UICONTROL Schemas] werkruimte, met een gegevenstype, [!UICONTROL Custom] en het gegevenstype [!UICONTROL Name] gemarkeerd.](../../images/ui/resources/data-types/edit.png)
 
 ## Velden toevoegen aan het gegevenstype {#add-fields}
 

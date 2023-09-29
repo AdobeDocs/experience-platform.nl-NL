@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Woordenlijst met gegevensverbruikslabels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2250'
 ht-degree: 1%
 
 ---
@@ -73,6 +73,8 @@ Dit etiket wordt gebruikt om het gebruik van perspectiefgegevens te regelen.
 | Label | Definitie |
 | --- | --- |
 | **Derden** | Gegevens van derden zijn gegevens die u ontvangt van een externe leverancier van gegevens. Een externe leverancier van gegevens is een entiteit die een overeenkomst met uw organisatie is aangegaan die u machtigt om de gegevens van derden in combinatie met Platform te openen, te gebruiken, weer te geven en te verzenden. |
+| **Verrijking door derden** | Gegevens verzameld door een externe organisatie die niet rechtstreeks met de betrokkene verband houdt. Het label moet worden toegepast op gegevens van derden die worden gebruikt voor het verrijken van profielen van derden. |
+| **Prospecting door derden** | Gegevens verzameld door een externe organisatie die niet rechtstreeks met de betrokkene verband houdt. Het etiket moet worden toegepast op gegevens van derden die worden gebruikt voor de uitbreiding van de trechter naar nieuwe klanten. |
 
 ## Bijlage
 

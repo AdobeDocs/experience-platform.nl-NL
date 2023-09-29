@@ -4,9 +4,9 @@ title: XDM-schema's exporteren in de gebruikersinterface
 description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of organisatie in de Adobe Experience Platform-gebruikersinterface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,13 @@ Om aan deze behoefte tegemoet te komen, [!UICONTROL Schemas] in de Adobe Experie
 
 ## Vereisten
 
-Terwijl de interface van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of organisaties in te voeren om het werkschema te voltooien. Zie voor handleiding [aan de slag gaan met de Schema Registry-API](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
+Terwijl de UI van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of organisaties in te voeren om het werkschema te voltooien. Zie voor handleiding [aan de slag gaan met de Schema Registry-API](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
 
-## Een exportlading genereren {#generate-export-payload}
+## Een payload voor exporteren genereren {#generate-export-payload}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie. Binnen de [!UICONTROL Schemas] in de werkruimte selecteert u de rij voor het schema dat u wilt exporteren naar de schemagegevens in de rechterzijbalk.
+U kunt in de gebruikersinterface van het platform ladlasten voor exporteren genereren via het deelvenster Details in het dialoogvenster [!UICONTROL Browse] of rechtstreeks vanaf het canvas van het schema in de Schema-editor.
+
+Selecteer **[!UICONTROL Schemas]** in de linkernavigatie. Binnen de [!UICONTROL Schemas] in de werkruimte selecteert u de rij voor het schema dat u wilt exporteren naar de schemagegevens in de rechterzijbalk.
 
 >[!TIP]
 >
@@ -200,6 +202,14 @@ Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de 
   }
 ]
 ```
+
+U kunt de Payload ook kopiëren door [!UICONTROL More] rechtsboven in de Schema-editor. Een vervolgkeuzemenu bevat twee opties. [!UICONTROL Copy JSON structure] en [!UICONTROL Delete schema].
+
+>[!NOTE]
+>
+>Een schema kan niet worden geschrapt wanneer het voor Profiel wordt toegelaten of bijbehorende datasets heeft.
+
+![De Schemas Editor met [!UICONTROL More] en [!UICONTROL Copy to JSON] gemarkeerd.](../images/ui/export/schema-editor-copy-json.png)
 
 De payload heeft de vorm van een array, waarbij elk arrayitem een object is dat een aangepaste XDM-bron vertegenwoordigt die geëxporteerd moet worden. In het bovenstaande voorbeeld wordt &quot;[!DNL Loyalty details]&quot; aangepaste veldgroep en &quot;[!DNL Loyalty Members]&quot; schema is opgenomen. Alle kernbronnen die door het schema worden gebruikt, worden niet opgenomen in de exportbewerking, aangezien deze bronnen beschikbaar zijn in alle sandboxen en organisaties.
 

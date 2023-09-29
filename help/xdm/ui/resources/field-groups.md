@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Groep met schemavelden maken en bewerken in de gebruikersinterface
 description: Leer hoe u groepen met schemavelden maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '950'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,12 @@ Selecteer in het dialoogvenster dat verschijnt **[!UICONTROL Create new field gr
 De [!DNL Schema Editor] komt opnieuw voor, met de nieuwe veldgroep die in de linkerspoorlijn wordt vermeld. Aangezien dit een gloednieuwe veldgroep is, biedt deze momenteel geen velden aan het schema en blijft het canvas daarom ongewijzigd. U kunt nu beginnen [velden toevoegen aan de veldgroep](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
+
+## Veldgroepen filteren {#filter}
+
+De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de veldgroepen weergegeven die door Adobe worden gedefinieerd. Nochtans, kunt u de lijst ook filtreren om die te tonen die door uw organisatie worden gecreeerd. Selecteer het keuzerondje dat u wilt kiezen tussen de [!UICONTROL Standard] en [!UICONTROL Custom] opties. De [!UICONTROL Standard] toont entiteiten die zijn gemaakt door Adobe en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
+
+![De [!UICONTROL Field groups] tabblad van het [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] gemarkeerd.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Een bestaande veldgroep bewerken {#edit}
 

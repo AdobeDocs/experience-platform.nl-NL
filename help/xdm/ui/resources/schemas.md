@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3424'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Deze handleiding biedt een overzicht van het maken, bewerken en beheren van XDM-
 >
 >De schema&#39;s XDM zijn uiterst aanpasbaar, en daarom kunnen de stappen betrokken bij het creëren van een schema variëren afhankelijk van welk soort gegevens u het schema wilt vangen. Dientengevolge, behandelt dit document slechts de basisinteractie u met schema&#39;s in UI kunt maken, en sluit verwante stappen uit zoals het aanpassen van klassen, groepen van het schemagebied, gegevenstypes, en gebieden.
 >
->Voor een volledige overzicht van het proces van het schemaontwerp, volg samen met [zelfstudie over het maken van schema&#39;s](../../tutorials/create-schema-ui.md) om een volledig voorbeeldschema tot stand te brengen en met de vele mogelijkheden vertrouwd te maken van [!DNL Schema Editor].
+>Voor een volledige overzicht van het proces van het schemaontwerp, volg samen met [zelfstudie Schema maken](../../tutorials/create-schema-ui.md) om een volledig voorbeeldschema tot stand te brengen en met de vele mogelijkheden vertrouwd te maken van [!DNL Schema Editor].
 
 ## Vereisten
 
@@ -29,17 +29,27 @@ Deze handleiding vereist een goed begrip van XDM System. Zie de [XDM-overzicht](
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u handmatig een nieuw schema maakt in de gebruikersinterface. Als u CSV-gegevens in het Platform opgeeft, kunt u ervoor kiezen [kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen wordt gecreeerd](../../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta) zonder het schema zelf manueel te moeten creëren.
+>In deze sectie wordt beschreven hoe u handmatig een nieuw schema maakt in de gebruikersinterface. Als u CSV-gegevens opneemt in Platform, kunt u ervoor kiezen [kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen wordt gecreeerd](../../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta) zonder het schema zelf manueel te moeten creëren.
 
-In de [!UICONTROL Schemas] werkruimte, selecteert u **[!UICONTROL Create schema]** in de rechterbovenhoek. In het vervolgkeuzemenu dat wordt weergegeven, kunt u kiezen tussen **[!UICONTROL XDM Individual Profile]** en **[!UICONTROL XDM ExperienceEvent]** als de basisklasse voor het schema. U kunt ook **[!UICONTROL Browse]** om een keuze te maken uit de volledige lijst van beschikbare klassen, of [een nieuwe aangepaste klasse maken](./classes.md#create) in plaats daarvan.
+In de [!UICONTROL Schemas] werkruimte, selecteert u **[!UICONTROL Create schema]** in de rechterbovenhoek.
 
-![](../../images/ui/resources/schemas/create-schema.png)
+![De werkruimte Schemas met [!UICONTROL Create Schema] gemarkeerd.](../../images/ui/resources/schemas/create-schema.png)
 
-Wanneer u een klasse selecteert, worden de [!DNL Schema Editor] wordt weergegeven en de basisstructuur van het schema (opgegeven door de klasse) wordt weergegeven op het canvas. Vanaf hier kunt u de juiste rail gebruiken om een **[!UICONTROL Display name]** en **[!UICONTROL Description]** voor het schema.
+De [!UICONTROL Create schema] wordt weergegeven. U kunt een basisklasse voor het schema kiezen door een van **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, of **[!UICONTROL Other]**, gevolgd door **[!UICONTROL Next]** om uw keuze te bevestigen. Zie de [Afzonderlijk XDM-profiel](../../classes/individual-profile.md) en [XDM ExperienceEvent](../../classes/experienceevent.md) documentatie voor meer informatie over deze klassen.
 
-![](../../images/ui/resources/schemas/schema-details.png)
+![De [!UICONTROL Create schema] workflow met de drie klasseopties en [!UICONTROL Next] gemarkeerd.](../../images/ui/resources/schemas/schema-class-options.png)
 
-U kunt nu beginnen de structuur van het schema te bouwen door [groepen met schemavelden toevoegen](#add-field-groups).
+Nadat u een klasse hebt geselecteerd, [!UICONTROL Name and review] wordt weergegeven. In deze sectie geeft u een naam en beschrijving op om uw schema te identificeren. &#x200B;De basisstructuur van het schema (verstrekt door de klasse) wordt getoond in het canvas voor u om uw geselecteerde klasse en schemastructuur te herzien en te verifiëren.
+
+Ga een mensvriendelijk [!UICONTROL Schema display name] in het tekstveld. Voer vervolgens een geschikte beschrijving in om uw schema te identificeren. Wanneer u de schemastructuur hebt herzien en met uw montages gelukkig bent **[!UICONTROL Finish]** om uw schema te maken.
+
+![De [!UICONTROL Name and review] van de [!UICONTROL Create schema] met de [!UICONTROL Schema display name], [!UICONTROL Description], en [!UICONTROL Finish] gemarkeerd.](../../images/ui/resources/schemas/name-and-review.png)
+
+De [!UICONTROL Schema] [!UICONTROL Browse] wordt weergegeven. Het onlangs gemaakte schema is nu beschikbaar in het dialoogvenster [!DNL Schema Editor] en wordt weergegeven in de lijst met beschikbare schema&#39;s.
+
+![De Redacteur van het Schema tonend uw onlangs gecreeerd schema.](../../images/ui/resources/schemas/schema-details.png)
+
+U kunt nu beginnen de structuur van het schema te bouwen door [groepen met schemavelden toevoegen](#add-field-groups) in de [!DNL Schema Editor].
 
 ## Een bestaand schema bewerken {#edit}
 
@@ -47,9 +57,9 @@ U kunt nu beginnen de structuur van het schema te bouwen door [groepen met schem
 >
 >Als een schema eenmaal is opgeslagen en gebruikt in gegevensinvoer, kunnen er alleen additieve wijzigingen in worden aangebracht. Zie de [regels voor schemaontwikkeling](../../schema/composition.md#evolution) voor meer informatie .
 
-Als u een bestaand schema wilt bewerken, selecteert u de optie **[!UICONTROL Browse]** en selecteert u vervolgens de naam van het schema dat u wilt bewerken.
+Als u een bestaand schema wilt bewerken, selecteert u de optie **[!UICONTROL Browse]** en selecteert u vervolgens de naam van het schema dat u wilt bewerken. U kunt de zoekbalk ook gebruiken om de lijst met beschikbare opties te verfijnen.
 
-![](../../images/ui/resources/schemas/edit-schema.png)
+![De werkruimte Schema met een gemarkeerd schema.](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
@@ -73,7 +83,7 @@ De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, 
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u bestaande veldgroepen aan een schema kunt toevoegen. Als u een nieuwe aangepaste veldgroep wilt maken, raadpleegt u de handleiding [maken en bewerken van veldgroepen](./field-groups.md#create) in plaats daarvan.
+>In deze sectie wordt beschreven hoe u bestaande veldgroepen aan een schema kunt toevoegen. Zie de handleiding voor een nieuwe aangepaste veldgroep [maken en bewerken van veldgroepen](./field-groups.md#create) in plaats daarvan.
 
 Als u een schema hebt geopend in het dialoogvenster [!DNL Schema Editor]U kunt velden toevoegen aan het schema door veldgroepen te gebruiken. Selecteer **[!UICONTROL Add]** naast **[!UICONTROL Field groups]** in het linkerspoor.
 
@@ -81,11 +91,11 @@ Als u een schema hebt geopend in het dialoogvenster [!DNL Schema Editor]U kunt v
 
 Er wordt een dialoogvenster weergegeven met een lijst met veldgroepen die u voor het schema kunt selecteren. Aangezien de gebiedsgroepen slechts met één klasse compatibel zijn, slechts die gebiedsgroepen die met de geselecteerde klasse van het schema worden geassocieerd zullen worden vermeld. Standaard worden vermelde veldgroepen gesorteerd op basis van hun populariteit in uw organisatie.
 
-![](../../images/ui/resources/schemas/field-group-popularity.png)
+![De [!UICONTROL Add field groups] wordt gemarkeerd met de [!UICONTROL Popularity] gemarkeerde kolom.](../../images/ui/resources/schemas/field-group-popularity.png)
 
 Als u de algemene activiteit of het bedrijfsgebied van de gebieden kent u wilt toevoegen, selecteer één of meerdere industrie-verticale categorieën in de linkerspoorstaaf om de getoonde lijst van gebiedsgroepen te filtreren.
 
-![](../../images/ui/resources/schemas/industry-filter.png)
+![De [!UICONTROL Add field groups] wordt gemarkeerd met de [!UICONTROL Industry] en de [!UICONTROL Industry] gemarkeerde kolom.](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -93,23 +103,23 @@ Als u de algemene activiteit of het bedrijfsgebied van de gebieden kent u wilt t
 
 U kunt de zoekbalk ook gebruiken om de gewenste veldgroep te zoeken. Veldgroepen waarvan de naam overeenkomt met de query, worden boven in de lijst weergegeven. Onder **[!UICONTROL Standard Fields]**, worden veldgroepen weergegeven die velden bevatten die de gewenste gegevenskenmerken beschrijven.
 
-![](../../images/ui/resources/schemas/field-group-search.png)
+![De [!UICONTROL Add field groups] met de [!UICONTROL Standard fields] zoekfunctie gemarkeerd.](../../images/ui/resources/schemas/field-group-search.png)
 
 Schakel het selectievakje in naast de naam van de veldgroep die u aan het schema wilt toevoegen. U kunt meerdere veldgroepen in de lijst selecteren, waarbij elke geselecteerde veldgroep in de rechtertrack verschijnt.
 
-![](../../images/ui/resources/schemas/add-field-group.png)
+![De [!UICONTROL Add field groups] met de selectiefunctie gemarkeerd.](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->Voor elke vermelde veldgroep kunt u de muisaanwijzer of focus op het informatiepictogram (![](../../images/ui/resources/schemas/info-icon.png)) om een korte beschrijving weer te geven van het type gegevens dat de veldgroep vastlegt. U kunt ook het voorvertoningspictogram selecteren (![](../../images/ui/resources/schemas/preview-icon.png)) om de structuur van de velden in de veldgroep weer te geven voordat u besluit deze aan het schema toe te voegen.
+>Voor elke vermelde veldgroep kunt u de muisaanwijzer of focus op het informatiepictogram (![](../../images/ui/resources/schemas/info-icon.png)) om een korte beschrijving weer te geven van het type gegevens dat de veldgroep vastlegt. U kunt ook het voorvertoningspictogram (![](../../images/ui/resources/schemas/preview-icon.png)) om de structuur van de velden in de veldgroep weer te geven voordat u besluit deze aan het schema toe te voegen.
 
 Nadat u de veldgroepen hebt gekozen, selecteert u **[!UICONTROL Add field groups]** om deze aan het schema toe te voegen.
 
-![](../../images/ui/resources/schemas/add-field-group-finish.png)
+![De [!UICONTROL Add field groups] dialoog met geselecteerde veldgroepen en [!UICONTROL Add field groups] gemarkeerd.](../../images/ui/resources/schemas/add-field-group-finish.png)
 
 De [!DNL Schema Editor] verschijnt weer terwijl de velden die door de veldgroep worden opgegeven, op het canvas worden weergegeven.
 
-![](../../images/ui/resources/schemas/field-groups-added.png)
+![De [!DNL Schema Editor] met een voorbeeldschema weergegeven.](../../images/ui/resources/schemas/field-groups-added.png)
 
 Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u optioneel [bestaande velden verwijderen](#remove-fields) of [Nieuwe aangepaste velden toevoegen](#add-fields) naar deze groepen, afhankelijk van uw behoeften.
 
@@ -123,15 +133,15 @@ Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u alle velden verwijd
 
 In het volgende voorbeeld wordt de standaardveldgroep **[!UICONTROL Demographic Details]** is toegevoegd aan een schema. Eén veld verwijderen, zoals `taxId`selecteert u het veld op het canvas en selecteert u vervolgens **[!UICONTROL Remove]** in het rechterspoor.
 
-![Eén veld verwijderen](../../images/ui/resources/schemas/remove-single-field.png)
+![De [!DNL Schema Editor] with [!UICONTROL Remove] gemarkeerd. Met deze handeling wordt één veld verwijderd.](../../images/ui/resources/schemas/remove-single-field.png)
 
 Als er meerdere velden zijn die u wilt verwijderen, kunt u de veldgroep als geheel beheren. Selecteer een veld dat tot de groep behoort op het canvas en selecteer vervolgens **[!UICONTROL Manage related fields]** in het rechterspoor.
 
-![Gerelateerde velden beheren](../../images/ui/resources/schemas/manage-related-fields.png)
+![De [!DNL Schema Editor] with [!UICONTROL Manage related fields] gemarkeerd.](../../images/ui/resources/schemas/manage-related-fields.png)
 
 Er verschijnt een dialoogvenster met de structuur van de veldgroep in kwestie. Hier kunt u de beschikbare selectievakjes gebruiken om de velden die u nodig hebt in of uit te schakelen. Als u tevreden bent, selecteert u **[!UICONTROL Confirm]**.
 
-![Velden selecteren uit veldgroep](../../images/ui/resources/schemas/select-fields.png)
+![De [!UICONTROL Manage related fields] met geselecteerde velden en [!UICONTROL Confirm] gemarkeerd.](../../images/ui/resources/schemas/select-fields.png)
 
 Het canvas verschijnt weer met alleen de geselecteerde velden in de schemastructuur.
 
@@ -161,7 +171,7 @@ U kunt velden van standaardveldgroepen rechtstreeks aan een schema toevoegen zon
 
 ![Tijdelijke aanduiding voor veld](../../images/ui/resources/schemas/root-custom-field.png)
 
-Onder **[!UICONTROL Field name]** typt u de naam van het veld dat u wilt toevoegen. Het systeem zoekt automatisch naar standaardvelden die overeenkomen met de query en geeft deze onder weer **[!UICONTROL Recommended Standard Fields]**, inclusief de veldgroepen waartoe ze behoren.
+Onder **[!UICONTROL Field name]** typt u de naam van het veld dat u wilt toevoegen. Het systeem zoekt automatisch naar standaardvelden die overeenkomen met de query en geeft deze onder weer **[!UICONTROL Recommended Standard Fields]**, met inbegrip van de veldgroepen waartoe zij behoren.
 
 ![Aanbevolen standaardvelden](../../images/ui/resources/schemas/standard-field-search.png)
 
@@ -171,7 +181,7 @@ Selecteer het voorvertoningspictogram (![Pictogram Voorvertoning](../../images/u
 
 ![Standaardveld toevoegen](../../images/ui/resources/schemas/add-standard-field.png)
 
-Het canvas wordt bijgewerkt om het standaardveld weer te geven dat aan het schema is toegevoegd, inclusief bovenliggende velden die het is genest onder de veldgroepsstructuur. De naam van de veldgroep wordt ook onder **[!UICONTROL Field groups]** in het linkerspoor. Als u meer velden uit dezelfde veldgroep wilt toevoegen, selecteert u **[!UICONTROL Manage related fields]** in het rechterspoor.
+Het canvas wordt bijgewerkt om het standaardveld weer te geven dat aan het schema is toegevoegd, inclusief bovenliggende velden die het is genest onder de structuur van de veldgroep. De naam van de veldgroep wordt ook onder **[!UICONTROL Field groups]** in het linkerspoor. Als u meer velden uit dezelfde veldgroep wilt toevoegen, selecteert u **[!UICONTROL Manage related fields]** in het rechterspoor.
 
 ![Standaardveld toegevoegd](../../images/ui/resources/schemas/standard-field-added.png)
 
@@ -179,7 +189,7 @@ Het canvas wordt bijgewerkt om het standaardveld weer te geven dat aan het schem
 
 Net als bij de workflow voor standaardvelden kunt u ook uw eigen aangepaste velden rechtstreeks aan een schema toevoegen.
 
-Als u velden wilt toevoegen aan het hoofdniveau van een schema, selecteert u de plusknop (**+**) naast de naam van het schema in het canvas. An **[!UICONTROL Untitled Field]** tijdelijke aanduiding wordt weergegeven in de schemastructuur en de juiste spoorwegupdates om besturingselementen voor de configuratie van het veld zichtbaar te maken.
+Als u velden wilt toevoegen aan het hoofdniveau van een schema, selecteert u de plus (**+**) naast de naam van het schema in het canvas. An **[!UICONTROL Untitled Field]** tijdelijke aanduiding wordt weergegeven in de schemastructuur en de juiste spoorwegupdates om besturingselementen voor de configuratie van het veld zichtbaar te maken.
 
 ![Aangepast basisveld](../../images/ui/resources/schemas/root-custom-field.png)
 
@@ -187,7 +197,7 @@ Typ de naam van het veld dat u wilt toevoegen en het systeem zoekt automatisch n
 
 ![Nieuw veld](../../images/ui/resources/schemas/custom-field-search.png)
 
-Na het verstrekken van een vertoningsnaam en gegevenstype voor het gebied, is de volgende stap het gebied aan een ouderXDM middel toe te wijzen. Als in uw schema een aangepaste klasse wordt gebruikt, kunt u [Voeg het veld toe aan de toegewezen klasse](#add-to-class) of [veldgroep](#add-to-field-group) in plaats daarvan. Als uw schema echter een standaardklasse gebruikt, kunt u het aangepaste veld alleen aan een veldgroep toewijzen.
+Na het verstrekken van een vertoningsnaam en gegevenstype voor het gebied, is de volgende stap het gebied aan een ouderXDM middel toe te wijzen. Als het schema een aangepaste klasse gebruikt, kunt u [Voeg het veld toe aan de toegewezen klasse](#add-to-class) of [veldgroep](#add-to-field-group) in plaats daarvan. Als uw schema echter een standaardklasse gebruikt, kunt u het aangepaste veld alleen aan een veldgroep toewijzen.
 
 #### Het veld toewijzen aan een aangepaste veldgroep {#add-to-field-group}
 
@@ -203,13 +213,13 @@ Vervolgens moet u een veldgroep selecteren waaraan het nieuwe veld moet worden g
 
 >[!WARNING]
 >
->Als u een bestaande aangepaste veldgroep selecteert, nemen alle andere schema&#39;s die die veldgroep gebruiken ook het nieuwe toegevoegde veld over nadat u de wijzigingen hebt opgeslagen. Om deze reden, slechts selecteer een bestaande gebiedsgroep als u dit type van propagatie wilt. Anders kunt u beter een nieuwe aangepaste veldgroep maken.
+>Als u een bestaande aangepaste veldgroep selecteert, nemen alle andere schema&#39;s die die veldgroep gebruiken ook het nieuwe toegevoegde veld over nadat u de wijzigingen hebt opgeslagen. Selecteer daarom alleen een bestaande veldgroep als u dit type propagatie wilt gebruiken. Anders kunt u beter een nieuwe aangepaste veldgroep maken.
 
-Nadat u de veldgroep in de lijst hebt geselecteerd, selecteert u **[!UICONTROL Apply]**.
+Selecteer de veldgroep in de lijst en selecteer **[!UICONTROL Apply]**.
 
 ![Veld toepassen](../../images/ui/resources/schemas/apply-field.png)
 
-Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder het canvas [huurder-id](../../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. De veldgroep waaraan u het nieuwe veld hebt gekoppeld, wordt ook weergegeven onder **[!UICONTROL Field groups]** in het linkerspoor.
+Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder uw [huurder-id](../../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. De veldgroep waaraan u het nieuwe veld hebt gekoppeld, wordt ook weergegeven onder **[!UICONTROL Field groups]** in het linkerspoor.
 
 ![Tenant-id](../../images/ui/resources/schemas/tenantId.png)
 
@@ -227,7 +237,7 @@ Ga door met het configureren van het veld naar wens en selecteer **[!UICONTROL A
 
 ![[!UICONTROL Apply] geselecteerd voor het nieuwe veld.](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
 
-Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder het canvas [huurder-id](../../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. Als u de klassenaam in de linkerrails selecteert, wordt het nieuwe veld weergegeven als onderdeel van de klassenstructuur.
+Het nieuwe veld wordt toegevoegd aan het canvas en krijgt een naamruimte onder uw [huurder-id](../../api/getting-started.md#know-your-tenant_id) om conflicten met standaard XDM gebieden te vermijden. Als u de klassenaam in de linkerrails selecteert, wordt het nieuwe veld weergegeven als onderdeel van de klassenstructuur.
 
 ![Het nieuwe veld dat wordt toegepast op de structuur van de aangepaste klasse, weergegeven op het canvas.](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
 
@@ -280,13 +290,13 @@ Er verschijnt een pop-upvenster met de waarschuwing dat een schema dat is ingesc
 
 ![](../../images/ui/resources/schemas/profile-confirm.png)
 
-Het canvas verschijnt weer met de [!UICONTROL Profile] schakelen ingeschakeld.
+Het canvas verschijnt weer met de [!UICONTROL Profile] schakeloptie ingeschakeld.
 
 >[!IMPORTANT]
 >
->Aangezien het schema nog niet wordt opgeslagen, is dit het punt van geen terugkeer als u uw mening over het laten van het schema aan het Profiel van de Klant in real time verandert: wanneer u een ingeschakeld schema hebt opgeslagen, kan het niet meer worden uitgeschakeld. Selecteer **[!UICONTROL Profile]** schakelt u het schema opnieuw uit.
+>Aangezien het schema nog niet wordt bewaard, is dit het punt van geen terugkeer als u uw mening verandert over het laten van het schema aan het Profiel van de Klant in real time: zodra u sparen een toegelaten schema, kan het niet meer worden onbruikbaar gemaakt. Selecteer de **[!UICONTROL Profile]** schakelt u het schema opnieuw uit.
 
-Selecteer **[!UICONTROL Save]** om het schema op te slaan.
+Selecteer **[!UICONTROL Save]** het schema opslaan.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
@@ -324,7 +334,7 @@ Als u een klasse opnieuw wilt toewijzen, selecteert u **[!UICONTROL Assign]** aa
 
 Er wordt een dialoogvenster weergegeven met een lijst met alle beschikbare klassen, inclusief alle klassen die door uw organisatie zijn gedefinieerd (de eigenaar is &quot;[!UICONTROL Customer]&quot;) en door Adobe gedefinieerde standaardklassen.
 
-Selecteer een klasse in de lijst om de beschrijving ervan aan de rechterkant van het dialoogvenster weer te geven. U kunt ook **[!UICONTROL Preview class structure]** om de velden en metagegevens weer te geven die aan de klasse zijn gekoppeld. Selecteren **[!UICONTROL Assign class]** om door te gaan.
+Selecteer een klasse in de lijst om de beschrijving ervan rechts in het dialoogvenster weer te geven. U kunt ook **[!UICONTROL Preview class structure]** om de velden en metagegevens weer te geven die aan de klasse zijn gekoppeld. Selecteren **[!UICONTROL Assign class]** om door te gaan.
 
 ![](../../images/ui/resources/schemas/assign-class.png)
 
@@ -336,8 +346,8 @@ Nadat de klassewijziging is bevestigd, wordt het canvas opnieuw ingesteld en gaa
 
 ## Volgende stappen
 
-In dit document worden de basisbeginselen van het maken en bewerken van schema&#39;s besproken in de gebruikersinterface van het Platform. U wordt ten zeerste aangeraden de [zelfstudie over het maken van schema&#39;s](../../tutorials/create-schema-ui.md) voor een uitvoerige werkschema voor het bouwen van een volledig schema in UI, met inbegrip van het creëren van de groepen van het douanegebied en gegevenstypes voor unieke gebruiksgevallen.
+In dit document worden de basisbeginselen besproken van het maken en bewerken van schema&#39;s in de gebruikersinterface van het platform. U wordt ten zeerste aangeraden de [zelfstudie Schema maken](../../tutorials/create-schema-ui.md) voor een uitvoerige werkschema voor het bouwen van een volledig schema in UI, met inbegrip van het creëren van de groepen van het douanegebied en gegevenstypes voor unieke gebruiksgevallen.
 
-Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
+Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie de [[!UICONTROL Schemas] werkruimte - overzicht](../overview.md).
 
 Leren hoe u schema&#39;s kunt beheren in het dialoogvenster [!DNL Schema Registry] API, zie [schema&#39;s eindpuntgids](../../api/schemas.md).
