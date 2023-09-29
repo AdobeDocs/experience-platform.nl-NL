@@ -1,9 +1,9 @@
 ---
 title: On-demand-insluiting voor gegevensstromen van bronnen in UI
 description: Leer hoe te om gegevensstromen op bestelling voor uw bronverbindingen tot stand te brengen gebruikend het gebruikersinterface van het Experience Platform.
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
@@ -44,9 +44,9 @@ Vorm het programma van uw opname op bestelling. Selecteer de **[!UICONTROL Inges
 
 | Configuratie plannen | Beschrijving |
 | --- | --- |
-| [!UICONTROL Ingestion start time] | De geplande begintijd in UTC van wanneer de gegevensstroom op bestelling zal beginnen. |
-| [!UICONTROL Date range start time] | De begindatum en -tijd vanaf wanneer gegevens worden opgehaald. |
-| [!UICONTROL Date range end time] | De einddatum en -tijd vanaf wanneer gegevens worden verzameld tot. |
+| [!UICONTROL Ingestion start time] | De geplande tijd van wanneer de de stroomlooppas op bestelling zal beginnen. |
+| [!UICONTROL Date range start time] | De vroegste datum en tijd waarop de gegevens worden opgehaald. |
+| [!UICONTROL Date range end time] | De datum en tijd waarop de gegevens worden opgehaald tot. |
 
 Selecteren **[!UICONTROL Schedule]** en laat u enkele ogenblikken voor het activeren van uw gegevensstroom op aanvraag.
 
