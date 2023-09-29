@@ -1,14 +1,14 @@
 ---
 title: Erkenning door Partner-Aided Visitor gebruiken om onsite ervaringen aan te passen
-description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers een persoonlijke onsite ervaring te bieden.
+description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
 source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
 source-wordcount: '2424'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Erkenning door bezoekers met hulp van partners gebruiken om ervaringen op locatie aan te passen
+# Door partners ondersteunde bezoekersherkenning gebruiken om ervaringen op de site te personaliseren
 
 >[!AVAILABILITY]
 >

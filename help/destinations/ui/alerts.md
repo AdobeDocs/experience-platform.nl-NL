@@ -23,7 +23,7 @@ In dit document worden de stappen beschreven voor de manier waarop u zich abonne
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
 * [Doelen](../home.md): Vooraf gebouwde integratie met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [Waarneming](../../observability/home.md): [!DNL Observability Insights] kunt u de activiteiten van Platforms volgen door statistische gegevens en gebeurtenismeldingen te gebruiken.
+* [Waarneming](../../observability/home.md): [!DNL Observability Insights] kunt u de activiteiten van het Platform controleren door het gebruik van statistische metriek en gebeurtenisberichten.
    * [Waarschuwingen](../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend.
 
 ## Abonneren op waarschuwingen in de gebruikersinterface {#subscribe-destination-alerts}
@@ -63,7 +63,7 @@ Zodra uw doelgegevensstroom loopt, kunt u alarm door UI of door e-mail ontvangen
 
 ### Waarschuwingen ontvangen in de gebruikersinterface {#receiving-alerts-in-ui}
 
-Waarschuwingen worden in de gebruikersinterface vertegenwoordigd door een meldingspictogram in de bovenste koptekst van de gebruikersinterface van het Platform. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
+Alarm wordt vertegenwoordigd in UI door een berichtpictogram in de hoogste kopbal van het Platform UI. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
 
 ![UI-afbeelding die het meldingspictogram in het Experience Platform weergeeft](../assets/ui/alerts/notification.png)
 

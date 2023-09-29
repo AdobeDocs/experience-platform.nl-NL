@@ -19,7 +19,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 
 * [XDM-systeem (Experience Data Model)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
 * [Klantprofiel in realtime](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Belangrijke terminologie
 
@@ -39,7 +39,7 @@ Het is belangrijk dat u de volgende belangrijke termen kent die in dit document 
 >* Een dataflow die een 13 maanden backfill van historische gegevens van de rapportreeks in gegevens meer doet. Deze gegevensstroom eindigt wanneer de backfill volledig is.
 >* Een dataflow-flow die live gegevens verzendt naar data Lake en naar [!DNL Real-Time Customer Profile]. Deze gegevensstroom wordt voortdurend uitgevoerd.
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt de zoekbalk ook gebruiken om de weergegeven bronnen te beperken.
 
@@ -115,7 +115,7 @@ De [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] bied
 
 ![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-Platform detecteert automatisch uw toewijzingssets voor eventuele conflicten met vriendschappelijke namen. Als er geen conflicten zijn met uw sets toewijzingen, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Het platform detecteert automatisch uw toewijzingensets voor eventuele conflicten met vriendschappelijke namen. Als er geen conflicten zijn met uw sets toewijzingen, selecteert u **[!UICONTROL Next]** om verder te gaan.
 
 ![toewijzing](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -294,7 +294,7 @@ Als u een gegevensstroom wilt verwijderen, gaat u naar de [!UICONTROL Dataflows]
 
 ## Volgende stappen en extra bronnen
 
-Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste inname is voltooid, [!DNL Analytics] gegevens en worden gebruikt door downstreamdiensten van Platforms, zoals [!DNL Real-Time Customer Profile] en Segmenteringsservice. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste inname is voltooid, [!DNL Analytics] gegevens en worden gebruikt door downstreamplatformdiensten, zoals [!DNL Real-Time Customer Profile] en Segmenteringsservice. Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)

@@ -8,7 +8,7 @@ ht-degree: 2%
 
 ---
 
-# Inzet uw klanten op intelligente wijze opnieuw aan om terug te keren
+# Intelligent opnieuw contact leggen met uw klanten, zodat ze terugkomen
 
 Neem klanten opnieuw in dienst die een omzetting hebben verlaten alvorens het op een intelligente en verantwoordelijke manier te voltooien. Verloren klanten door ervaringen eerder dan herinneringen aantrekken om conversie te verbeteren en de groei van de waarde van de cliëntlevensduur te drijven.
 

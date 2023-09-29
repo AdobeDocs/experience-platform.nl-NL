@@ -13,7 +13,7 @@ ht-degree: 37%
 
 # Waarnembaarheidsinzichten {#observability}
 
-* [Overzicht van waarnemingsinformatie](./home.md)
+* [Overzicht van observatiegegevens](./home.md)
 * Observability Insights-API {#api}
    * [Overzicht](./api/overview.md)
    * [Aan de slag](./api/getting-started.md)
@@ -24,4 +24,4 @@ ht-degree: 37%
    * [UI-hulplijn](./alerts/ui.md)
    * [Abonneren op I/O-gebeurtenismeldingen](./alerts/subscribe.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

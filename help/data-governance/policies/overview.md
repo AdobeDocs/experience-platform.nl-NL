@@ -23,7 +23,7 @@ Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid
 Er zijn twee soorten beleid beschikbaar:
 
 * **[!UICONTROL Data governance policy]**: Beperk de gegevensactivering op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de betrokken gegevens worden meegevoerd.
-* **[!UICONTROL Consent policy]**: De profielen filteren waarop kan worden geactiveerd [bestemmingen](../../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten
+* **[!UICONTROL Consent policy]**: Filter de profielen waarop u kunt activeren [bestemmingen](../../destinations/home.md) op basis van de toestemming of voorkeuren van uw klanten
 
 >[!NOTE]
 >
@@ -44,13 +44,13 @@ Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naa
 >
 >Handelingen voor het in de handel brengen zelf beperken het gegevensgebruik niet. Ze moeten worden opgenomen in beleid voor ingeschakeld gegevensgebruik om ervoor te zorgen dat deze acties worden geëvalueerd op beleidsovertredingen.
 
-Wanneer het gegevensgebruik in de dienst van uw organisatie gebeurt, zouden de relevante marketing acties moeten worden vermeld zodat om het even welke beleidsschendingen kunnen worden geïdentificeerd. U kunt dan de [Beleidsservice-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) om te controleren op beleidsovertredingen in uw integratie.
+Wanneer het gegevensgebruik in de dienst van uw organisatie gebeurt, zouden de relevante marketing acties moeten worden vermeld zodat om het even welke beleidsschendingen kunnen worden geïdentificeerd. U kunt dan de [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) om te controleren op beleidsovertredingen in uw integratie.
 
 >[!NOTE]
 >
->U kunt de gevallen van het plaatsingsgebruik op bestemmingen plaatsen om beleidshandhaving te automatiseren. Zie de [documentatie voor doelen](../../destinations/home.md) voor meer informatie over de configuratieopties voor uw bepaalde bestemming.
+>U kunt de gevallen van het gebruiksgebruik van de opstelling op bestemmingen om beleidshandhaving te automatiseren. Zie de [documentatie voor doelen](../../destinations/home.md) voor meer informatie over de configuratieopties voor uw bepaalde bestemming.
 
-Zie de bijlage bij dit document voor een lijst met [beschikbare door Adobe gedefinieerde marketingacties](#core-actions). U kunt ook uw eigen aangepaste marketingacties definiëren met de opdracht [!DNL Policy Service] API of de [!DNL Experience Platform] gebruikersinterface. In de volgende sectie vindt u meer informatie over het werken met marketingacties en -beleid.
+Zie de bijlage bij dit document voor een lijst met [beschikbare door de Adobe gedefinieerde marketingacties](#core-actions). U kunt ook uw eigen aangepaste marketingacties definiëren met de opdracht [!DNL Policy Service] API of de [!DNL Experience Platform] gebruikersinterface. In de volgende sectie vindt u meer informatie over het werken met marketingacties en -beleid.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -66,21 +66,21 @@ Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevens ee
 
 >[!IMPORTANT]
 >
->Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
+>Alle beleidsregels voor gegevensgebruik (inclusief kernbeleidsregels die door Adobe worden verschaft) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
 
 Zie de zelfstudie voor stapsgewijze instructies voor het werken met marketingacties en het beleid voor gegevensgebruik in de API [beleid voor gegevensgebruik maken en evalueren](create.md). Voor meer informatie over de belangrijkste bewerkingen die door de [!DNL Policy Service] API, zie [Handleiding voor ontwikkelaars van beleidsservices](../api/getting-started.md).
 
-Voor informatie over hoe u met marketingacties en -beleid kunt werken in de [!DNL Platform] UI, zie [gebruikershandleiding voor gegevensgebruiksbeleid](./user-guide.md).
+Voor informatie over hoe u met marketingacties en -beleid kunt werken in het dialoogvenster [!DNL Platform] UI, zie [gebruikershandleiding voor gegevensgebruiksbeleid](./user-guide.md).
 
 ## Volgende stappen
 
 Dit document bevatte een inleiding op het beleid inzake gegevensgebruik binnen het kader voor gegevensbeheer. U kunt nu de procesdocumentatie blijven lezen met betrekking tot deze gids voor meer informatie over hoe te met beleid in API en UI te werken.
 
-## Aanhangsel
+## Bijlage
 
-De volgende sectie verstrekt extra informatie over het beleid van het gegevensgebruik.
+In de volgende sectie vindt u aanvullende informatie over het beleid voor gegevensgebruik.
 
-### Door Adobe gedefinieerde marketingacties {#core-actions}
+### Door de Adobe gedefinieerde marketingacties {#core-actions}
 
 In de onderstaande tabel worden de belangrijkste marketingacties beschreven die door Adobe buiten de box worden geleverd.
 
@@ -94,10 +94,10 @@ In de onderstaande tabel worden de belangrijkste marketingacties beschreven die 
 | Combineren met rechtstreeks identificeerbare gegevens | Een handeling waarbij alle PII&#39;s (Personal Identified Information) worden gecombineerd met anonieme gegevens. Contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en derde gegevensleveranciers bevatten vaak specifieke contractuele verbodsbepalingen inzake het gebruik van dergelijke gegevens met rechtstreeks identificeerbare gegevens. |
 | Secundaire doelen voor meerdere sites | Een handeling die gegevens gebruikt voor verwijzing naar andere sites. De combinatie van gegevens van verschillende sites, waaronder een combinatie van gegevens ter plaatse en gegevens buiten de locatie of een combinatie van gegevens van verschillende bronnen buiten de locatie, wordt ook wel gegevens over andere locaties genoemd. Gegevens over andere sites worden doorgaans verzameld en verwerkt om conclusies te trekken over de belangen van gebruikers. |
 | Gegevenswetenschap | Een handeling die gegevens gebruikt voor workflows voor gegevenswetenschap. Sommige contracten bevatten expliciete verbodsbepalingen voor het gebruik van gegevens voor gegevenswetenschap. Soms worden deze termen gedefinieerd in termen die het gebruik van gegevens voor kunstmatige intelligentie (AI), machinaal leren (ML) of modellering verbieden. |
-| Gegevens exporteren | Een actie die gegevens naar om het even welke plaats of bestemming buiten de producten en de diensten van Adobe uitvoert. Bijvoorbeeld, het downloaden van gegevens aan uw lokale machine, het kopiëren van gegevens van het scherm, het plannen van levering van gegevens aan een plaats buiten Adobe, Customer Journey Analytics geplande Projecten, de Rapporten van de Download, het Melden API, etc. |
-| E-maildoelen | Een handeling die gegevens gebruikt in campagnes voor het aanwijzen van e-mail. |
+| Gegevens exporteren | Een actie die gegevens naar om het even welke plaats of bestemming buiten de producten en de diensten van de Adobe uitvoert. Bijvoorbeeld, het downloaden van gegevens aan uw lokale machine, het kopiëren van gegevens van het scherm, het plannen van levering van gegevens aan een plaats buiten Adobe, Customer Journey Analytics Geplande Projecten, de Rapporten van de Download, Rapporterende API, etc. |
+| E-maildoelen | Een handeling waarbij gegevens worden gebruikt in campagnes voor het aanwijzen van e-mail. |
 | Exporteren naar derde partij | Een handeling die gegevens exporteert naar processors en entiteiten die geen directe relatie hebben met klanten. Veel gegevensleveranciers hebben bedingen in de contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. |
 | Onsite reclame | Een handeling die gegevens gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. |
-| Onsite personalisatie | Een actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend. |
+| Onsite personalisatie | Een actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking op locatie is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend. |
 | Segmentovereenkomst | Een actie die gegevens voor de Gelijke van het Segment van Adobe Experience Platform gebruikt, die voor twee of meer gebruikers van het Platform toestaat om publieksgegevens uit te wisselen. Door beleid in te schakelen dat naar deze handeling verwijst, kunt u beperken welke gegevens worden gebruikt voor Segment Match. Als het kernbeleid &#39;Gegevens delen beperken&#39; bijvoorbeeld is ingeschakeld, worden alle gegevens met een [C11-label](../labels/reference.md#c11) kan niet worden gebruikt voor Segment Match. |
 | Eén identiteit aanpassen | Een handeling die vereist dat één identiteit wordt gebruikt voor verpersoonlijkingsdoeleinden in plaats van dat identiteiten uit meerdere bronnen worden gekoppeld. |

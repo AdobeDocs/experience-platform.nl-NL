@@ -26,4 +26,4 @@ ht-degree: 38%
 - [Toewijzingssets](mapping-set.md)
 - [Stroom upserts](upserts.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;bronnen;schakelaars;bronschakelaars;campagne;campagne beheerde diensten
-title: Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de gebruikersinterface van het Platform
-description: Leer hoe u Adobe Experience Platform met Adobe Campaign Managed Cloud Services kunt verbinden via de gebruikersinterface van het Platform.
+title: Een Adobe Campaign Managed Cloud Services-bronverbinding maken met behulp van platforminterface
+description: Leer hoe u verbinding maakt met Adobe Experience Platform via de gebruikersinterface van het platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,23 +10,23 @@ ht-degree: 0%
 
 ---
 
-# Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de gebruikersinterface van het Platform
+# Een Adobe Campaign Managed Cloud Services-bronverbinding maken met behulp van platforminterface
 
 Deze zelfstudie bevat stappen om een bronverbinding te maken waarmee uw Adobe Campaign Managed Cloud Services-gegevens naar Adobe Experience Platform worden overgebracht.
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [Bronnen](../../../../home.md): Platform staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [Sandboxen](../../../../../sandboxes/home.md): Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [Sandboxen](../../../../../sandboxes/home.md): Platform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-## Adobe Campaign Managed Cloud Services verbinden met Platform
+## Adobe Campaign Managed Cloud Services verbinden met platform
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt de zoekbalk ook gebruiken om de weergegeven bronnen te beperken.
 
@@ -64,7 +64,7 @@ De [!UICONTROL Select data] de stap verschijnt, die u van een interface voorzien
 
 ![Een interface waarin u uw Adobe Campaign-instantie, doeltoewijzing en schemanaam kunt configureren.](../../../../images/tutorials/create/campaign/select-data.png)
 
-Zodra u waarden voor uw instantie van de Campagne, doelafbeelding, en schemanaam hebt verstrekt, werkt het scherm bij om een voorproef van uw schema evenals een steekproefdataset te tonen. Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Zodra u waarden voor uw instantie van de Campagne, doelafbeelding, en schemanaam hebt verstrekt, werkt het scherm bij om een voorproef van uw schema evenals een steekproefdataset te tonen. Selecteer **[!UICONTROL Next]**.
 
 ![Een voorproef van uw schemahiërarchie evenals een steekproef van uw dataset](../../../../images/tutorials/create/campaign/preview.png)
 
@@ -80,13 +80,13 @@ Selecteer een gegevensset en geef een naam op voor de gegevensstroom en een opti
 
 ### Een nieuwe gegevensset gebruiken
 
-Als u een nieuwe gegevensset wilt gebruiken, selecteert u **[!UICONTROL New dataset]** en geef vervolgens een naam voor de uitvoergegevensset en een optionele beschrijving op. Selecteer vervolgens het schema waaraan u wilt toewijzen [!UICONTROL Advanced search] of door door de lijst van bestaande schema&#39;s in het dropdown menu te scrollen. Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Als u een nieuwe gegevensset wilt gebruiken, selecteert u **[!UICONTROL New dataset]** en geef vervolgens een naam voor de uitvoergegevensset en een optionele beschrijving op. Selecteer vervolgens het schema waaraan u wilt toewijzen [!UICONTROL Advanced search] of door door de lijst van bestaande schema&#39;s in het dropdown menu te scrollen. Selecteer **[!UICONTROL Next]**.
 
 ![Een interface die de nieuwe datasetoptie toont.](../../../../images/tutorials/create/campaign/new-dataset.png)
 
 ### Waarschuwingen inschakelen
 
-U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren en meldingen te ontvangen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [abonneren op berichten voor bronnen met behulp van de gebruikersinterface](../../alerts.md).
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren en meldingen te ontvangen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op berichten voor bronnen met behulp van de gebruikersinterface](../../alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw gegevensstroom, selecteert u **[!UICONTROL Next]**.
 
@@ -102,7 +102,7 @@ Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op 
 >
 >Wanneer u uw bronvelden toewijst aan doel-XDM-velden, moet u ervoor zorgen dat u het toegewezen primaire identiteitsveld toewijst aan het juiste doel-XDM-veld.
 
-Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
+Als de brongegevens zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 ![Een toewijzingsstructuur met vier brongegevensvelden die zijn toegewezen aan hun overeenkomstige XDM-schemavelden.](../../../../images/tutorials/create/campaign/mapping.png)
 
@@ -110,8 +110,8 @@ Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Next]**.
 
 De **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* **[!UICONTROL Connection]**: Hiermee geeft u het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
+* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt.
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** en laat enige tijd voor de gegevensstroom worden gecreeerd.
 
@@ -137,7 +137,7 @@ Deze pagina voorziet u ook van een interface om de meta-gegevensbeschrijving van
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om uw de leveringslogboeken van de Berichten van de Campagne v8 en het volgen logboekgegevens aan Platform te brengen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om uw de leveringslogboeken van de Berichten van de Campagne v8 en het volgen van logboekgegevens aan Platform te brengen. Inkomende gegevens kunnen nu worden gebruikt door downstreamplatformdiensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace]-overzicht](../../../../../data-science-workspace/home.md)

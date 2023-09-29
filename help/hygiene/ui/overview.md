@@ -23,11 +23,11 @@ ht-degree: 0%
 
 De **[!UICONTROL Data Hygiene]** De werkruimte in Adobe Experience Platform UI staat u toe om diverse taken van de gegevenshygiëne tot stand te brengen en te controleren, met inbegrip van het schrappen van verslagen en het plannen van datasetvervalsing.
 
-In deze handleiding wordt beschreven hoe u de taken voor gegevenshygiëne in de gebruikersinterface van het Platform kunt beheren. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie [Handleiding voor API voor gegevenshygiëne](../api/overview.md).
+In deze handleiding wordt beschreven hoe u taken voor gegevenshygiëne in de gebruikersinterface van het platform kunt beheren. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie [Handleiding voor API voor gegevenshygiëne](../api/overview.md).
 
 Als u de werkruimte wilt openen, selecteert u **[!UICONTROL Data Hygiene]** in de linkernavigatie.
 
-![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het Platform](../images/ui/overview/home.png)
+![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het platform](../images/ui/overview/home.png)
 
 Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verrichtingen van de gegevenshygiëne vormen. Raadpleeg de volgende secties van deze handleiding voor meer informatie:
 

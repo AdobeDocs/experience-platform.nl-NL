@@ -29,7 +29,7 @@ ht-degree: 16%
    - Een CSV-bestand toewijzen aan XDM {#map-csv}
       - [Overzicht](./tutorials/map-csv/overview.md)
       - [Een CSV-bestand toewijzen aan een bestaand schema](./tutorials/map-csv/existing-schema.md)
-      - [Een CSV-bestand toewijzen met behulp van door AI gegenereerde aanbevelingen](./tutorials/map-csv/recommendations.md)
+      - [Een CSV-bestand toewijzen aan de hand van door AI gegenereerde aanbevelingen](./tutorials/map-csv/recommendations.md)
    - [Batchgegevens invoeren met de gebruikersinterface](tutorials/ingest-batch-data.md)
    - [Een geverifieerde streamingverbinding maken](tutorials/create-authenticated-streaming-connection.md)
    - [Een streamingverbinding (API) maken](tutorials/create-streaming-connection.md)
@@ -48,4 +48,4 @@ ht-degree: 16%
 - [Bronaansluitingen](source-connectors.md)
 - [Referentie voor API voor batchverwerking](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Referentie voor API voor streaming](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

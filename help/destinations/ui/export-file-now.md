@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >De **[!UICONTROL Export file now]** in Adobe Experience Platform bevindt zich momenteel in bètaversie. De documentatie en functionaliteit kunnen worden gewijzigd.
->Neem contact op met uw Adobe-vertegenwoordiger voor toegang tot deze functie.
+>Neem contact op met uw Adobe voor toegang tot deze functie.
 
 >[!IMPORTANT]
 > 
@@ -48,7 +48,7 @@ Als u bestanden op aanvraag wilt exporteren naar batchbestemmingen, moet u [verb
 
    ![Afbeelding die een gefilterde gegevensstroom markeert.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Selecteer **[!UICONTROL Activation data]** en selecteert u het publiek waarvoor u een bestand op aanvraag wilt exporteren en selecteert u het **[!UICONTROL Export file now]** besturingselement om een eenmalige export te activeren die een bestand naar uw batchbestemming levert.
+3. Selecteer de **[!UICONTROL Activation data]** en selecteert u het publiek waarvoor u een bestand op aanvraag wilt exporteren en selecteert u het **[!UICONTROL Export file now]** besturingselement om een eenmalige export te activeren die een bestand naar uw batchbestemming zal leveren.
 
    >[!IMPORTANT]
    >
@@ -76,7 +76,7 @@ Houd rekening met het volgende wanneer u de **[!UICONTROL Export file now]** bes
 
 ## UI-foutberichten {#ui-error-messages}
 
-Wanneer u de **[!UICONTROL Export file now]** Als u de besturing hebt, kunnen de onderstaande foutberichten worden weergegeven. Bekijk de tabel om te begrijpen hoe u deze kunt aanpakken wanneer ze worden weergegeven.
+Wanneer u de opdracht **[!UICONTROL Export file now]** Als u de besturing hebt, kunnen er foutberichten optreden die hieronder worden vermeld. Bekijk de tabel om te begrijpen hoe u deze kunt aanpakken wanneer ze worden weergegeven.
 
 | Foutbericht | Resolutie |
 |---------|----------|

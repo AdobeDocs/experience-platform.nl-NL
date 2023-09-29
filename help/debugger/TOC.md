@@ -14,7 +14,7 @@ ht-degree: 43%
 
 # Adobe Experience Platform Debugger {#debugger}
 
-* [Overzicht van foutopsporing Platform](./home.md)
+* [Overzicht van Platform Foutopsporing](./home.md)
 * [De extensie installeren](./install-debugger.md)
 * [De extensie configureren](./configure-debugger.md)
 * [Tabblad Samenvatting](./summary.md)

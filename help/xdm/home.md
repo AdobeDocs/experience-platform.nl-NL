@@ -17,7 +17,7 @@ Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Ad
 
 XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities die om het even welke toepassing toestaan om met de diensten van het Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier kan leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uitdrukken.
 
-XDM is het grondkader dat Adobe Experience Cloud, aangedreven door Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op precies het juiste moment te leveren. De methodologie waarop Experience Platform wordt gebouwd, het Systeem van XDM, operationeel [!DNL Experience Data Model] schema&#39;s voor gebruik door Platforms.
+XDM is het grondkader dat Adobe Experience Cloud, aangedreven door Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op precies het juiste moment te leveren. De methodologie waarop Experience Platform wordt gebouwd, het Systeem van XDM, operationeel [!DNL Experience Data Model] schema&#39;s voor gebruik door de diensten van het Platform.
 
 Dit document biedt een overzicht van de rol van XDM System in Experience Platform.
 
@@ -25,7 +25,7 @@ Dit document biedt een overzicht van de rol van XDM System in Experience Platfor
 
 Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens.
 
-Voordat gegevens in Platform kunnen worden opgenomen, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. De schema&#39;s bestaan uit een basisklasse en nul of meer groepen van het schemagebied.
+Voordat gegevens in Platform kunnen worden opgenomen, moet een schema worden samengesteld om de gegevensstructuur te beschrijven en beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. De schema&#39;s bestaan uit een basisklasse en nul of meer groepen van het schemagebied.
 
 Voor meer informatie over het model van de schemacompositie, met inbegrip van ontwerpprincipes en beste praktijken, zie [grondbeginselen van de schemacompositie](schema/composition.md).
 
@@ -39,9 +39,9 @@ Wanneer het construeren van schema&#39;s in Experience Platform UI, worden de ve
 
 ### [!DNL Schema Library]
 
-Experience Platform verstrekt een gebruikersinterface en RESTful API waarvan u alle op schema betrekking hebbende middelen in het Experience Platform kunt bekijken en beheren **[!DNL Schema Library]**. De [!DNL Schema Library] bevat standaardXDM componenten die aan u door Adobe, evenals middelen van de partners en verkopers van het Experience Platform beschikbaar worden gemaakt van wie toepassingen u gebruikt.
+Experience Platform verstrekt een gebruikersinterface en RESTful API waarvan u alle op schema betrekking hebbende middelen in het Experience Platform kunt bekijken en beheren **[!DNL Schema Library]**. De [!DNL Schema Library] bevat standaardXDM componenten die aan u door Adobe ter beschikking worden gesteld, evenals middelen van de partners en verkopers van het Experience Platform van wie toepassingen u gebruikt.
 
-Met de [!DNL Schema Registry API] of de [!UICONTROL Schemas] in de gebruikersinterface van het Platform kunt u ook nieuwe schema&#39;s en bronnen maken en beheren die uniek zijn voor uw organisatie.
+Met de [!DNL Schema Registry API] of de [!UICONTROL Schemas] In de gebruikersinterface van het Platform kunt u ook nieuwe schema&#39;s en bronnen maken en beheren die uniek zijn voor uw organisatie.
 
 Raadpleeg de volgende documentatie voor meer informatie over het beheren van en werken met schema&#39;s in Platform:
 
@@ -67,11 +67,11 @@ Hoewel u uw eigen klassen kunt definiëren in het dialoogvenster [!DNL Schema Re
 
 >[!NOTE]
 >
->Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hocschema&#39;s worden automatisch geproduceerd door de processen van het Platform die hen gebruiken, maar zij kunnen ook worden [handmatig gemaakt met de API voor het schemaregister](./tutorials/ad-hoc.md).
+>Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hocschema&#39;s worden automatisch gegenereerd door de platformprocessen die deze gebruiken, maar ze kunnen ook [handmatig gemaakt met de API voor het schemaregister](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
-[!UICONTROL XDM Individual Profile] is een op records gebaseerde klasse die een unieke weergave vormt van de kenmerken van zowel geïdentificeerde als gedeeltelijk geïdentificeerde onderwerpen. De profielen die hoogst geïdentificeerd zijn kunnen voor persoonlijke mededelingen of gerichte overeenkomsten worden gebruikt, en kunnen gedetailleerde persoonlijke informatie zoals naam, geslacht, geboortedatum, plaats, en contactinformatie met inbegrip van telefoonaantallen en e-mailadressen bevatten.
+[!UICONTROL XDM Individual Profile] is een op records gebaseerde klasse die een unieke representatie vormt van de kenmerken van zowel geïdentificeerde als gedeeltelijk geïdentificeerde onderwerpen. De profielen die hoogst geïdentificeerd zijn kunnen voor persoonlijke mededelingen of gerichte overeenkomsten worden gebruikt, en kunnen gedetailleerde persoonlijke informatie zoals naam, geslacht, geboortedatum, plaats, en contactinformatie met inbegrip van telefoonaantallen en e-mailadressen bevatten.
 
 Minder geïdentificeerde profielen kunnen alleen uit anonieme gedragssignalen bestaan, zoals browsercookies. In dit geval worden de gegevens van het verspreide profiel gebruikt om een informatiebasis te bouwen waarin de belangen en voorkeuren van het anonieme profiel worden gesorteerd en opgeslagen. Deze id&#39;s kunnen in de loop der tijd gedetailleerder worden naarmate het onderwerp zich aanmeldt voor meldingen, abonnementen, aankopen, enzovoort. Deze toename van profielkenmerken kan uiteindelijk resulteren in een bepaald onderwerp en een hogere mate van gerichte betrokkenheid mogelijk maken.
 
@@ -93,7 +93,7 @@ Zie de [[!UICONTROL XDM ExperienceEvent] naslaggids](./classes/experienceevent.m
 
 ## XDM-schema&#39;s en Experience Platforms
 
-Experience Platform is schema-agnostisch, betekenend dat om het even welk schema dat aan de norm voldoet XDM ter beschikking wordt gesteld aan de diensten van het Platform. De manieren waarop de verschillende diensten van de Platform schema&#39;s gebruiken worden hieronder meer in detail beschreven.
+Experience Platform is schema-agnostisch, betekenend dat om het even welk schema dat aan de norm voldoet XDM ter beschikking wordt gesteld aan de diensten van het Platform. De manieren waarop de verschillende diensten van het Platform schema&#39;s gebruiken worden hieronder meer in detail beschreven.
 
 ### Catalogusservice, Gegevensinsluiting en Datameer
 
@@ -123,7 +123,7 @@ Het systeem onderhoudt een geval van elk klantenprofiel, die gegevens samenvoege
 
 Als [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent] gegevens worden opgenomen in het meer van Gegevens, het Real-Time Profiel van de Klant neemt om het even welke gegevens in die voor zijn gebruik zijn toegelaten. Hoe meer interacties en details worden opgenomen, hoe robuuster de afzonderlijke profielen worden.
 
-[!UICONTROL XDM Individual Profile] gegevens helpen acties te informeren en in staat te stellen via elk kanaal of Adobe-productintegratie. Als deze gegevens worden gecombineerd met een rijke geschiedenis van gedrags- en interactiegegevens, kunnen ze worden gebruikt om het leren van machines te stimuleren. De real-time API van het Profiel van de Klant kan ook worden gebruikt om de functionaliteit van derdeoplossingen, CRMs, en merkgebonden oplossingen te verrijken.
+[!UICONTROL XDM Individual Profile] gegevens helpen acties te informeren en in staat te stellen via elk kanaal of Adobe productintegratie. Als deze gegevens worden gecombineerd met een rijke geschiedenis van gedrags- en interactiegegevens, kunnen ze worden gebruikt om het leren van machines te stimuleren. De real-time API van het Profiel van de Klant kan ook worden gebruikt om de functionaliteit van derdeoplossingen, CRMs, en merkgebonden oplossingen te verrijken.
 
 Zie de [Overzicht van het realtime klantprofiel](../profile/home.md) voor meer informatie .
 

@@ -34,7 +34,7 @@ De **Profielenarchief** is waar klantprofielen worden gecreeerd en hoofdzakelijk
 
 >[!NOTE]
 >
->Uw toegang tot de [!DNL data lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem voor meer informatie over product-SKU&#39;s contact op met uw Adobe-vertegenwoordiger.
+>Uw toegang tot de [!DNL data lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem contact op met uw Adobe voor meer informatie over SKU&#39;s.
 
 ## Licentiegebruik {#license-usage}
 
@@ -47,13 +47,13 @@ Wanneer u Experience Platform vergunning geeft, wordt u voorzien van de toestemm
 De [!DNL Profile Richness] De metrische waarde is afhankelijk van de licentie die u hebt aangeschaft. Er zijn twee berekeningen voor [!DNL Profile Richness] beschikbaar:
 
 * De som van alle productiegegevens die op elk moment in Adobe Real-time Customer Data Platform zijn opgeslagen (d.w.z. het realtime profiel en de identiteitsservice van de klant), gedeeld door de [!DNL Addressable Audience];
-* De som van alle gegevens die in het Platform zijn opgeslagen (inclusief, maar niet beperkt tot [!DNL data lake], Real-Time Klantprofiel en Identiteitsservice) op elk gewenst moment en alle gegevens die u via het Platform (in plaats van binnen op te slaan) in de afgelopen 12 maanden hebt gestreamd, gedeeld door de [!DNL Addressable Audience].
+* De som van alle gegevens die in het platform zijn opgeslagen (met inbegrip van, maar niet beperkt tot, de [!DNL data lake], Real-Time Klantprofiel en Identiteitsservice) op elk gewenst moment en alle gegevens die u in de afgelopen 12 maanden via (in plaats van binnen op te slaan) Platform hebt gestreamd, gedeeld door de [!DNL Addressable Audience].
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft.
 
 ## Het gebruiksdashboard voor licenties
 
-De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u een momentopname van de licentiegegevens van uw organisatie voor Platform kunt bekijken. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. De momentopname is geen benadering of een steekproef van gegevens, en het dashboard werkt niet in real time bij.
+De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u een momentopname kunt bekijken van de licentiegegevens van uw organisatie voor Platform. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. De momentopname is geen benadering of een steekproef van gegevens, en het dashboard werkt niet in real time bij.
 
 Zie de handleiding voor meer informatie over [het gebruiken van het dashboard van het vergunningsgebruik op Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
@@ -79,15 +79,15 @@ Er zijn twee centrale scenario&#39;s om in overweging te nemen wanneer u ervoor 
 
 ### Welke gegevens moeten in Platform worden gebracht?
 
-Gegevens kunnen in een of meer systemen in Platform worden ingevoerd, namelijk de [!DNL data lake] en/of het archief met profielen. Dit betekent dat er in beide systemen verschillende gegevens kunnen bestaan voor verschillende gebruiksgevallen. U kunt bijvoorbeeld historische gegevens in het dialoogvenster [!DNL data lake], maar niet in de profielopslag. U kunt selecteren welke gegevens naar de opslag van het Profiel moeten verzenden door een dataset voor de opname van het Profiel toe te laten.
+Gegevens kunnen in één of meerdere systemen in Platform worden ingevoerd, namelijk de [!DNL data lake] en/of het archief met profielen. Dit betekent dat er in beide systemen verschillende gegevens kunnen bestaan voor verschillende gebruiksgevallen. U kunt bijvoorbeeld historische gegevens in het dialoogvenster [!DNL data lake], maar niet in de profielopslag. U kunt selecteren welke gegevens naar de opslag van het Profiel moeten verzenden door een dataset voor de opname van het Profiel toe te laten.
 
 >[!NOTE]
 >
->Uw toegang tot de [!DNL data lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem voor meer informatie over product-SKU&#39;s contact op met uw Adobe-vertegenwoordiger.
+>Uw toegang tot de [!DNL data lake] kan afhankelijk zijn van de SKU die u hebt aangeschaft. Neem contact op met uw Adobe voor meer informatie over SKU&#39;s.
 
 ### Welke gegevens moeten worden bewaard?
 
-U kunt zowel gegevensinnamefilters als vervalregels toepassen om gegevens te verwijderen die verouderd zijn geworden voor uw gebruiksgevallen. Gewoonlijk verbruikt gedragsgegevens (zoals analysegegevens) aanzienlijk meer opslag dan recordgegevens (zoals CRM-gegevens). Veel gebruikers in het Platform hebben bijvoorbeeld een toename tot 90% van de profielen die alleen worden gevuld met gedragsgegevens, in vergelijking met recordgegevens. Daarom is het beheren van uw gedragsgegevens essentieel om naleving binnen uw vergunningsrechten te verzekeren.
+U kunt zowel gegevensinnamefilters als vervalregels toepassen om gegevens te verwijderen die verouderd zijn geworden voor uw gebruiksgevallen. Gewoonlijk verbruikt gedragsgegevens (zoals analysegegevens) aanzienlijk meer opslag dan recordgegevens (zoals CRM-gegevens). Veel platformgebruikers hebben bijvoorbeeld een toename van maximaal 90% van de profielen die alleen worden gevuld met gedragsgegevens, in vergelijking met recordgegevens. Daarom is het beheren van uw gedragsgegevens essentieel om naleving binnen uw vergunningsrechten te verzekeren.
 
 U kunt een aantal tools gebruiken om binnen uw gebruiksrechten voor licenties te blijven:
 
@@ -101,7 +101,7 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 | Inslikken, filter | Beschrijving |
 | --- | --- |
 | Adobe Audience Manager-bronfiltering | Wanneer u een Adobe Audience Manager-bronverbinding maakt, kunt u kiezen welke segmenten en kenmerken u in de [!DNL data lake] en Real-Time Klantprofiel, in plaats van de gegevens van de Audience Manager in zijn geheel in te voeren. Zie de handleiding op [een Audience Manager-bronverbinding maken](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie . |
-| Adobe Analytics Data Prep | U kunt [!DNL Data Prep] functionaliteit wanneer het creëren van een bron van de Analyse verbinding om uit gegevens uit te filtreren die niet voor uw gebruiksgevallen wordt vereist. Doorheen [!DNL Data Prep], kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om het Platform te laten weten of gegevens naar verwachting worden gepubliceerd in het profiel of alleen in het dialoogvenster [!DNL data lake]. Zie de handleiding op [een verbinding met een bron voor Analytics maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
+| Adobe Analytics Data Prep | U kunt [!DNL Data Prep] functionaliteit wanneer het creëren van een bron van de Analyse verbinding om uit gegevens uit te filtreren die niet voor uw gebruiksgevallen wordt vereist. Doorheen [!DNL Data Prep], kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om Platform te laten weten of gegevens naar verwachting worden gepubliceerd in het profiel of alleen in het dialoogvenster [!DNL data lake]. Zie de handleiding op [een verbinding met een bron voor Analytics maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
 | Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u [!DNL Addressable Audience] en [!DNL Profile Richness] toeslagrechten. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de handleiding op [het toelaten van en het onbruikbaar maken van datasets voor Profiel](../../catalog/datasets/enable-for-profile.md) voor meer informatie . |
 | Web SDK en Mobile SDK-gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch en gegevens worden verzameld die uitdrukkelijk door uw ontwikkelaar worden verzameld. Om de naleving van de licentie beter te beheren, kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. Zie de handleiding op [basisbeginselen van SDK configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) voor meer informatie . |
 | Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie op [gebeurtenissen en omstandigheden](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) voor meer informatie . |
@@ -158,7 +158,7 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 | Functie | Beschrijving |
 | --- | --- |
 | [Datasets voor profiel in-/uitschakelen](../../catalog/datasets/user-guide.md) | Schakel gegevenssetinvoer in of uit in realtime-klantprofiel. |
-| [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe-accountteam of de klantenservice om deze functie in te schakelen. |
+| [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met het accountteam of de klantenservice van de Adobe om deze functie in te schakelen. |
 | [Adobe Analytics Data Prep-filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Toepassen [!DNL Kafka] filters om onnodige gegevens uit te sluiten van inname |
 | [Adobe Audience Manager-bronverbindingsfilters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Bronverbindingsfilters van Audience Manager toepassen om onnodige gegevens uit te sluiten van inname |
 | [SDK-gegevensfilters toestaan](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Alloy-filters toepassen om onnodige gegevens uit te sluiten van inname |

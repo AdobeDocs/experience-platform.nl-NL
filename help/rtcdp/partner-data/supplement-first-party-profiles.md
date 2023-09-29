@@ -1,14 +1,14 @@
 ---
-title: Voeg Eerste-partijProfielen met partner-Geleverde Attributen toe
-description: Leer hoe te om eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aan te vullen om uw gegevensstichting te verbeteren, nieuwe inzichten in uw klantenbasis, en betere publieksoptimalisering te verkrijgen.
+title: Eigen profielen aanvullen met door partners verstrekte attributen
+description: Leer hoe u eigen profielen kunt aanvullen met kenmerken van vertrouwde gegevenspartners om uw databasis te verbeteren, nieuwe inzichten in uw klantenbestand te verkrijgen en uw doelgroepen beter te optimaliseren.
 source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# Voeg Eerste-partijProfielen met partner-Geleverde Attributen toe
+# Eigen profielen aanvullen met door partners verstrekte attributen
 
 >[!AVAILABILITY]
 >

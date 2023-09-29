@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;sandbox-gebruikershandleiding;sandbox-hulplijn
+keywords: Experience Platform;home;populaire onderwerpen;sandboxgebruikersgids;sandboxhulplijn
 solution: Experience Platform
 title: Gebruiksaanwijzing voor sandbox
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
@@ -17,13 +17,13 @@ Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met 
 
 ## Sandboxen weergeven
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sandboxes]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]** om de [!UICONTROL Sandboxes] dashboard. In het dashboard worden alle beschikbare sandboxen voor uw organisatie vermeld, inclusief de respectievelijke typen (productie of ontwikkeling).
+Selecteer in de interface Platform de optie **[!UICONTROL Sandboxes]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Browse]** om de [!UICONTROL Sandboxes] dashboard. In het dashboard worden alle beschikbare sandboxen voor uw organisatie vermeld, inclusief de respectievelijke typen (productie of ontwikkeling).
 
 ![weergave-sandboxen](../images/ui/view-sandboxes.png)
 
 ## Schakelen tussen sandboxen
 
-De sandboxindicator bevindt zich in de bovenste koptekst van de gebruikersinterface van het Platform en geeft de titel van de sandbox weer waarin u zich momenteel bevindt, het gebied en het type van de sandbox.
+De sandboxindicator bevindt zich in de bovenste header van de platforminterface en geeft de titel van de sandbox weer waarin u zich momenteel bevindt, het gebied en het type van de sandbox.
 
 ![sandbox-indicator](../images/ui/sandbox-indicator.png)
 
@@ -55,17 +55,17 @@ Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen 
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Als u een nieuwe sandbox wilt maken, selecteert u **[!UICONTROL Create sandbox]** in de rechterbovenhoek van het scherm.
+Als u een nieuwe sandbox wilt maken, selecteert u **[!UICONTROL Create sandbox]** rechtsboven in het scherm.
 
 ![aanmaken-sandbox](../images/ui/create-sandbox.png)
 
-De **[!UICONTROL Create sandbox]** wordt weergegeven. Als u een ontwikkelingssandbox maakt, selecteert u **[!UICONTROL Development]** in het vervolgkeuzevenster. Selecteer **[!UICONTROL Production]**.
+De **[!UICONTROL Create sandbox]** wordt weergegeven. Als u een ontwikkelingssandbox maakt, selecteert u **[!UICONTROL Development]** in het vervolgkeuzevenster. Als u een nieuwe productiesandbox wilt maken, selecteert u **[!UICONTROL Production]**.
 
 ![sandbox-type](../images/ui/sandbox-type.png)
 
 Nadat u het type hebt geselecteerd, geeft u de sandbox een naam en een titel. De titel moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De naam van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn. De naam van de sandbox moet beginnen met een letter, maximaal 256 tekens bevatten en mag alleen bestaan uit alfanumerieke tekens en afbreekstreepjes (-).
 
-Als u klaar bent, selecteert u **[!UICONTROL Create]**.
+Selecteer **[!UICONTROL Create]**.
 
 ![sandbox-info](../images/ui/sandbox-info.png)
 
@@ -81,7 +81,7 @@ Als u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe san
 >* De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Analytics wordt gebruikt voor de [Cross-Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) gebruiken.
 >* De standaardproductiesandbox kan niet opnieuw worden ingesteld als de identiteitsgrafiek die in de sandbox wordt gehost, ook door Adobe Audience Manager wordt gebruikt voor de [Op mensen gebaseerde Doelen (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl).
 >* De standaardproductiefandbox kan niet worden opnieuw ingesteld als het gegevens voor zowel eigenschappen CDA als PBD bevat.
->* Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of de Dienst van de Kern van de Audience kan na een waarschuwingsbericht worden teruggesteld.
+>* Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of Audience Core Service kan na een waarschuwingsbericht worden hersteld.
 >* Voordat u een sandbox-reset start, moet u de composities handmatig verwijderen om ervoor te zorgen dat de bijbehorende publieksgegevens op de juiste wijze worden opgeschoond.
 
 ### Advertentiecomposities verwijderen
@@ -94,7 +94,7 @@ Selecteren **[!UICONTROL Audiences]** van de linkernavigatie en selecteer dan **
 
 Selecteer vervolgens de ellips (`...`) naast de eerste doelgroep en selecteer vervolgens **[!UICONTROL Delete]**.
 
-![Het publieksmenu markeert de [!UICONTROL Delete] optie.](../images/ui/delete-composition.png)
+![Het publieksmenu markeert de [!UICONTROL Delete] -optie.](../images/ui/delete-composition.png)
 
 Er wordt een bevestiging van een geslaagde verwijdering weergegeven en u wordt teruggestuurd naar de **[!UICONTROL Compositions]** tab.
 

@@ -15,7 +15,7 @@ ht-degree: 37%
 # Toegangsbeheer {#access-control}
 
 * [Overzicht van toegangsbeheer](home.md)
-* Op kenmerken gebaseerd toegangsbeheer {#abac}
+* Toegangsbeheer op basis van kenmerken {#abac}
    * [Overzicht](abac/overview.md)
    * [End-to-end hulplijn](abac/end-to-end-guide.md)
    * Toestemmingen {#permissions-ui}
@@ -45,4 +45,4 @@ ht-degree: 37%
    * [Effectief beleid weergeven](api/effective-policies.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

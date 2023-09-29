@@ -28,12 +28,12 @@ Deze zelfstudie biedt stappen om uw gegevensstroom te controleren met behulp van
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
+* [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens verplaatsen over het hele platform. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
    * [Dataflow-uitvoering](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-* [Bronnen](../../sources/home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+* [Bronnen](../../sources/home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
 * [Identiteitsservice](../../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 * [Klantprofiel in realtime](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## Geaggregeerde monitoringweergave {#aggregated-monitoring-view}
 
@@ -49,7 +49,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 >abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
-In de [UI PLATFORM](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** van de linkernavigatie om tot [!UICONTROL Monitoring] dashboard. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over alle brongegevens, met inbegrip van inzicht in de gezondheid van gegevensverkeer van een bron aan [!DNL Identity Service], en [!DNL Profile].
+In de [Platforminterface](https://platform.adobe.com), selecteert u **[!UICONTROL Monitoring]** van de linkernavigatie om tot [!UICONTROL Monitoring] dashboard. De [!UICONTROL Monitoring] het dashboard bevat metriek en informatie over alle brongegevens, met inbegrip van inzicht in de gezondheid van gegevensverkeer van een bron aan [!DNL Identity Service], en [!DNL Profile].
 
 In het midden van het dashboard bevindt zich de [!UICONTROL Source ingestion] paneel, dat metriek en grafieken bevat die gegevens tonen over opgenomen verslagen en ontbroken verslagen.
 
@@ -115,7 +115,7 @@ Selecteren **[!UICONTROL Files]** voor meer informatie .
 
 De [!UICONTROL Files] bevat informatie over de naam en het pad van het bestand.
 
-Selecteer **[!UICONTROL Preview error diagnostics]**.
+Voor een meer gedetailleerde weergave van de fout selecteert u **[!UICONTROL Preview error diagnostics]**.
 
 ![bestanden](../assets/ui/monitor-sources/files.png)
 

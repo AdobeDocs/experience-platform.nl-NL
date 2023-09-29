@@ -21,17 +21,17 @@ Een label dat wordt toegepast op een schemaveld, geeft het gebruiksbeleid aan da
 
 Labels kunnen worden toegepast op afzonderlijke schema&#39;s en op velden binnen die schema&#39;s. Wanneer de etiketten rechtstreeks op een schema worden toegepast, worden die etiketten verspreid aan alle bestaande en toekomstige datasets die op dat schema gebaseerd zijn.
 
-Bovendien verspreidt om het even welk gebiedsetiket dat u in één schema toevoegt aan alle andere schema&#39;s die het zelfde gebied van een gedeelde klasse of een gebiedsgroep in dienst nemen. Dit helpt ervoor te zorgen dat de gebruiksregels voor gelijkaardige gebieden over uw volledig gegevensmodel verenigbaar zijn.
+Bovendien verspreidt om het even welk gebiedsetiket dat u in één schema toevoegt aan alle andere schema&#39;s die het zelfde gebied van een gedeelde klasse of een gebiedsgroep in dienst nemen. Zo zorgt u ervoor dat de gebruiksregels voor vergelijkbare velden consistent zijn in het gehele gegevensmodel.
 
-Deze zelfstudie behandelt de stappen voor het toevoegen van labels aan een schema met behulp van de Schema-editor in de gebruikersinterface van het Platform.
+Deze zelfstudie behandelt de stappen voor het toevoegen van labels aan een schema met behulp van de Schema-editor in de interface van het platform.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
-   * [Schema-editor](../ui/overview.md): Leer om schema&#39;s en andere middelen in de UI van het Platform tot stand te brengen en te beheren.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Verstrekt de infrastructuur voor het afdwingen van de beperkingen van het gegevensgebruik op de verrichtingen van het Platform, gebruikend beleid dat bepaalt welke marketing acties (of niet) op geëtiketteerde gegevens kunnen worden uitgevoerd.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+   * [Schema-editor](../ui/overview.md): Leer om schema&#39;s en andere middelen in Platform UI tot stand te brengen en te beheren.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Biedt de infrastructuur voor het afdwingen van beperkingen voor gegevensgebruik op platformbewerkingen, met behulp van beleid dat definieert welke marketingacties op gelabelde gegevens kunnen (of kunnen) worden uitgevoerd.
 
 ## Selecteer een schema of veld waaraan u labels wilt toevoegen {#select-schema-field}
 
@@ -46,7 +46,7 @@ Als u de labels voor een afzonderlijk veld wilt bewerken, selecteert u het veld 
 
 ![Een veld selecteren in het canvas van de Schema-editor](../images/tutorials/labels/manage-access.png)
 
-U kunt ook de **[!UICONTROL Labels]** kiest u het gewenste veld in de lijst en selecteert u **[!UICONTROL Apply Access and Data Governance Labels]** in het rechterspoor.
+U kunt ook de optie **[!UICONTROL Labels]** kiest u het gewenste veld in de lijst en selecteert u **[!UICONTROL Apply Access and Data Governance Labels]** in het rechterspoor.
 
 ![Selecteer een veld in het menu [!UICONTROL Labels] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
 
@@ -58,7 +58,7 @@ Als u de labels voor het volledige schema wilt bewerken, gaat u in het dialoogve
 >
 >Een ontkenningsbericht verschijnt wanneer u eerst probeert om de etiketten voor een schema of een gebied uit te geven, verklarend hoe het etiketgebruik stroomafwaartse verrichtingen afhankelijk van het beleid van uw organisatie beïnvloedt. Selecteren **[!UICONTROL Proceed]** om verder te gaan met bewerken.
 >
->![Verklaring over labelgebruik](../images/tutorials/labels/disclaimer.png)
+>![Label-gebruiksdisclaimer](../images/tutorials/labels/disclaimer.png)
 
 ## De labels voor het schema of veld bewerken {#edit-labels}
 

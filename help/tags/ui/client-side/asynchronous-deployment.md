@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Prestaties en niet-blokkerende implementatie van de JavaScript-bibliotheken die vereist zijn voor onze producten, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) adviseren dat de gebruikers veranderen zij hoe zij de bibliotheken van de Adobe op hun plaats opstellen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
+Prestaties en niet-blokkerende implementatie van de JavaScript-bibliotheken die vereist zijn voor onze producten zijn steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) adviseren dat de gebruikers veranderen zij hoe zij de bibliotheken van de Adobe op hun plaats opstellen. In dit artikel wordt uitgelegd hoe u de JavaScript-bibliotheken voor Adoben asynchroon kunt gebruiken.
 
 ## Synchroon versus asynchroon
 
@@ -34,13 +34,13 @@ Bibliotheken worden vaak synchroon geladen in het dialoogvenster `<head>` -tag v
 
 Standaard parseert de browser het document en bereikt deze regel. Vervolgens haalt de browser het JavaScript-bestand op van de server. De browser wacht tot het bestand is geretourneerd, parseert het bestand en voert het uit. Tot slot wordt de rest van het HTML-document nog steeds geparseerd.
 
-Als de parser de `<script>` -tag voordat zichtbare inhoud wordt gerenderd, wordt de weergave van de inhoud vertraagd. Als het JavaScript-bestand dat wordt geladen niet absoluut noodzakelijk is om inhoud aan uw gebruikers weer te geven, hebt u uw bezoekers onnodig gevraagd om op inhoud te wachten. Hoe groter de bibliotheek, des te langer de vertraging.  Daarom zijn benchmarktools voor websiteprestaties zoals [!DNL Google PageSpeed] of [!DNL Lighthouse] worden geladen scripts vaak synchroon gemarkeerd.
+Als de parser de `<script>` -tag voordat zichtbare inhoud wordt gerenderd, wordt de weergave van de inhoud vertraagd. Als het JavaScript-bestand dat wordt geladen niet absoluut noodzakelijk is om inhoud aan uw gebruikers weer te geven, hebt u uw bezoekers onnodig gevraagd om op inhoud te wachten. Hoe groter de bibliotheek, des te langer de vertraging.  Daarom zijn benchmarktools voor webprestaties zoals [!DNL Google PageSpeed] of [!DNL Lighthouse] worden geladen scripts vaak synchroon gemarkeerd.
 
 Tagbeheerbibliotheken kunnen snel groter worden als u veel tags moet beheren.
 
 ### Asynchrone implementatie
 
-U kunt elke bibliotheek asynchroon laden door een `async` aan de `<script>` tag. Bijvoorbeeld:
+U kunt elke bibliotheek asynchroon laden door een `async` aan de `<script>` -tag. Bijvoorbeeld:
 
 ```markup
 <script src="example.js" async></script>
@@ -54,7 +54,7 @@ Zoals hierboven beschreven, pauzeert de browser bij synchrone implementaties het
 
 Ten eerste, omdat de tagbibliotheek kan zijn geladen voor- of nadat de onderkant van de pagina is geparseerd en uitgevoerd, moet u niet langer bellen `_satellite.pageBottom()` uit uw paginacode (`_satellite` zijn pas beschikbaar nadat de bibliotheek is geladen). Dit wordt uitgelegd in [De ingesloten code van tags asynchroon laden](#loading-the-tags-embed-code-asynchronously).
 
-Ten tweede kan de tagbibliotheek klaar zijn met laden voor of na de [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) Er is een browsergebeurtenis (DOM Ready) opgetreden.
+Ten tweede kan de tagbibliotheek klaar zijn met laden voor of na de [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) Er heeft zich een browsergebeurtenis (DOM Ready) voorgedaan.
 
 Vanwege deze twee punten is het de moeite waard om te laten zien hoe de [Bibliotheek geladen](../../extensions/client/core/overview.md#library-loaded-page-top), [Pagina onder](../../extensions/client/core/overview.md#page-bottom), [gereed voor DOM](../../extensions/client/core/overview.md#page-bottom), en [Venster geladen](../../extensions/client/core/overview.md#window-loaded) gebeurtenistypen van de functie Core bij het asynchroon laden van een tagbibliotheek.
 
@@ -62,17 +62,17 @@ Als de eigenschap tag de volgende vier regels bevat:
 
 * Regel A: gebruikt het bibliotheekgeladen gebeurtenistype
 * Regel B: gebruikt het gebeurtenistype Pagina onder
-* Regel C: gebruikt het DOM Ready-gebeurtenistype
+* Regel C: gebruikt het DOM Klaar gebeurtenistype
 * Regel D: gebruikt het gebeurtenistype Window Loaded
 
 Ongeacht wanneer het laden van de tagbibliotheek is voltooid, worden alle regels gegarandeerd uitgevoerd en worden ze in de volgende volgorde uitgevoerd:
 
-Regel A → Lijn B → Lijn C → Lijn D
+Regel A → Regel B → Regel C → Regel D
 
 Hoewel de volgorde altijd wordt gehandhaafd, kunnen sommige regels direct worden uitgevoerd wanneer de tagbibliotheek klaar is met laden, terwijl andere later wellicht worden uitgevoerd. Het volgende gebeurt wanneer de tagbibliotheek klaar is met laden:
 
 1. Regel A wordt onmiddellijk uitgevoerd.
-1. Als de `DOMContentLoaded` De browsergebeurtenis (DOM Ready) is al opgetreden, de regels B en C worden onmiddellijk uitgevoerd. Anders, worden de Lijn B en Lijn C uitgevoerd later wanneer [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) browsergebeurtenis.
+1. Als de `DOMContentLoaded` De browsergebeurtenis (DOM Ready) is al opgetreden, de regels B en C worden onmiddellijk uitgevoerd. Anders, worden de Regel B en Regel C uitgevoerd later wanneer [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) browsergebeurtenis.
 1. Als de [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) browsergebeurtenis (Venster geladen) heeft zich al voorgedaan, Regel D wordt onmiddellijk uitgevoerd. Anders wordt Regel D later uitgevoerd wanneer [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) browsergebeurtenis. Let erop dat als u de tagbibliotheek volgens de instructies hebt geïnstalleerd, de tagbibliotheek *altijd* wordt geladen voordat de [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) browsergebeurtenis.
 
 Houd rekening met het volgende wanneer u deze principes toepast op uw eigen website:

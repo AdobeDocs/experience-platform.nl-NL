@@ -21,7 +21,7 @@ Op het dashboard voor bewaking ziet u een visuele weergave van de activiteit van
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
+- [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens verplaatsen over het hele platform. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
    - [Dataflow-uitvoering](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
 - [Klantprofiel in realtime](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -90,7 +90,7 @@ Filterpictogram selecteren ![filter](../assets/ui/monitor-profiles/filter.png) n
 
 ![Het filterpictogram wordt gemarkeerd. Als u dit pictogram selecteert, kunt u details weergeven over de geselecteerde gegevensstroom.](../assets/ui/monitor-profiles/dataflows-filter.png)
 
-De [!UICONTROL Dataflow run details] pagina geeft meer informatie over uw [!DNL Profile] dataflow-run, inclusief de organisatie-id en de uitvoerings-id voor dataflow. Op deze pagina ziet u ook de bijbehorende foutcode en het foutbericht van [!DNL Profile], indien er fouten optreden in het innameproces.
+De [!UICONTROL Dataflow run details] pagina geeft meer informatie over uw [!DNL Profile] dataflow-run, inclusief de organisatie-id en de uitvoerings-id voor de dataflow. Op deze pagina ziet u ook de bijbehorende foutcode en het foutbericht van [!DNL Profile], indien er fouten optreden in het innameproces.
 
 ![Er wordt een dashboard weergegeven met gedetailleerde informatie over de geselecteerde gegevensstroom.](../assets/ui/monitor-profiles/dataflow-run-details.png)
 

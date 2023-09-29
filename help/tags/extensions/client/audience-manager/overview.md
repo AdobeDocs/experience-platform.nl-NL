@@ -45,9 +45,9 @@ Deze instelling kan niet worden gewijzigd.
 
 Als de URL overeenkomt met een van de uitgesloten paden, wordt de extensie niet geladen.
 
-Selecteren **[!UICONTROL Add Path]** om een uitgesloten URL op te geven.
+Selecteren **[!UICONTROL Add Path]** een uitgesloten URL opgeven.
 
-Schakel Regex in als de URL een reguliere expressie is.
+Laat Regex toe als URL een regelmatige uitdrukking is.
 
 #### DIL Site Catalyst-module gebruiken
 
@@ -57,9 +57,9 @@ Gebruik de Code-editor om het bestand siteCatalyst.init te configureren.
 
 U kunt ook een notitie maken met informatie over deze configuratie.
 
-#### DIL Google Analytics-module gebruiken
+#### Module DIL Googles Analytics gebruiken
 
-De optie [Google Analytics, module](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html).
+De optie [Googles Analytics, module](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html).
 
 #### DIL.Initialisatie-eigenschappen maken
 

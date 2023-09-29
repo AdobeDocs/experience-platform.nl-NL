@@ -2,7 +2,7 @@
 keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentatie;Segmentovereenkomst;segmentovereenkomst
 solution: Experience Platform
 title: Overzicht van afstemming van segment
-description: Segmentovereenkomst is een segmentdelende service in Adobe Experience Platform waarmee twee of meer gebruikers in het Platform segmentgegevens kunnen uitwisselen op een veilige, beheerde en privacyvriendelijke manier.
+description: Segment Match is een segment-delende dienst in Adobe Experience Platform die voor twee of meer gebruikers van het Platform toestaat om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
@@ -44,7 +44,7 @@ De lijst met ondersteunde naamruimten ziet er als volgt uit:
 
 | Naamruimte | Beschrijving |
 | --------- | ----------- |
-| E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Platform biedt twee methoden om hashing bij gegevensverzameling te ondersteunen, via [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) en via [voorvoegsel gegevens](../../../data-prep/functions.md#hashing). |
+| E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Het platform biedt twee methodes aan om het hakken bij gegevensinzameling te steunen, door [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) en via [voorvoegsel gegevens](../../../data-prep/functions.md#hashing). |
 | Telefoon (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | ECID | Een naamruimte die een ECID-waarde (Experience Cloud ID) vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie de [ECID-overzicht](../../../identity-service/ecid.md) voor meer informatie . |
 | Apple IDFA (ID voor adverteerders) | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [op rente gebaseerde advertenties](https://support.apple.com/en-us/HT202074) voor meer informatie . |
@@ -56,7 +56,7 @@ U moet een toestemmingsconfiguratie verstrekken en zijn standaardwaarde plaatsen
 
 De controle van de opt-in en opt-out toestemming bepaalt of u met de toestemming kunt werken om gebruikersgegevens door gebrek te delen. Als het gebrek van de toestemmingsconfiguratie aan wordt geplaatst `opt-out`, kunnen gebruikersgegevens worden gedeeld, tenzij een gebruiker expliciet weigert. Als de standaardwaarde is ingesteld op `opt-in`, kunnen gebruikersgegevens niet worden gedeeld, tenzij een gebruiker expliciet binnen kiest.
 
-De standaardtoestemmingsconfiguratie voor [!DNL Segment Match] is ingesteld op `opt-out`. Als u een aanmeldingsmodel voor uw gegevens wilt afdwingen, stuurt u een e-mailverzoek naar het team van uw Adobe-account.
+De standaardtoestemmingsconfiguratie voor [!DNL Segment Match] is ingesteld op `opt-out`. Als u een aanmeldingsmodel voor uw gegevens wilt afdwingen, stuurt u een e-mailverzoek naar het accountteam van uw Adobe.
 
 Voor meer informatie over de `share` kenmerk dat wordt gebruikt voor het instellen van de toestemmingswaarde voor gegevensdeling, zie de volgende documentatie over [privacy en toestemmingsgebiedsgroep](../../../xdm/field-groups/profile/consents.md). Voor informatie over de specifieke veldgroep die wordt gebruikt om de toestemming van de consument voor het verzamelen en gebruiken van gegevens met betrekking tot privacy, personalisatie en marketingvoorkeuren, zie het volgende [Toestemming voor het voorbeeld van GitHub van de Voorkeur van de Privacy, van de Personalisatie en van de Marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -87,7 +87,7 @@ Wanneer u uw identiteitsgegevens en naamruimten, toestemmingsconfiguratie, en he
 
 ### Partner beheren
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Segments]** van de linkernavigatie en selecteer dan **[!UICONTROL Feeds]** in de bovenste koptekst.
+Selecteer in de interface Platform de optie **[!UICONTROL Segments]** van de linkernavigatie en selecteer dan **[!UICONTROL Feeds]** in de bovenste koptekst.
 
 ![segments-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ De [!UICONTROL Feeds] Deze pagina bevat een lijst met feeds die zijn ontvangen v
 
 ![manage-partners.png](./images/manage-partners.png)
 
-Een verbinding tussen twee partners is een &quot;bidirectionele handdruk&quot;die als zelfbediening methode voor gebruikers dienst doet om hun organisaties van het Platform op een zandbakniveau samen te verbinden. De verbinding is vereist om het Platform te informeren dat een overeenkomst is gesloten en dat Platform de deelservices tussen u en uw partner(s) kan vergemakkelijken.
+Een verbinding tussen twee partners is een &quot;bidirectionele handdruk&quot;die als zelfbediening methode voor gebruikers dienst doet om hun organisaties van het Platform samen op een zandbakniveau te verbinden. De verbinding is vereist om Platform op de hoogte te stellen van het feit dat er een overeenkomst is gesloten en dat Platform de services voor delen tussen u en uw partner(s) kan vergemakkelijken.
 
 >[!NOTE]
 >
@@ -169,7 +169,7 @@ Als u uw partners hebt geselecteerd en uw rapport met overlappende schattingen h
 
 ![share.png](./images/share.png)
 
-De [!UICONTROL Review] wordt weergegeven, zodat u uw nieuwe feed kunt controleren voordat deze wordt gedeeld en gepubliceerd. Deze stap omvat details over de identiteitsinstelling die u toepaste, evenals informatie over de gevallen, segmenten en partners van het marketinggebruik die u hebt geselecteerd.
+De [!UICONTROL Review] wordt weergegeven, zodat u uw nieuwe feed kunt controleren voordat deze wordt gedeeld en gepubliceerd. Deze stap omvat details over de identiteitsinstelling die u toepaste, evenals informatie over de gevallen, de segmenten, en de partners van het marketing gebruik die u selecteerde.
 
 Selecteren **[!UICONTROL Finish]** om verder te gaan.
 
@@ -199,7 +199,7 @@ Nadat u een gedeelde feed hebt geaccepteerd, kunt u beginnen met het gebruik van
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u meer inzicht gekregen in [!DNL Segment Match], de mogelijkheden en de end-to-end workflow. Raadpleeg de volgende documenten voor meer informatie over andere services van Platforms:
+Door dit document te lezen, hebt u meer inzicht gekregen in [!DNL Segment Match], de mogelijkheden en de end-to-end workflow. Raadpleeg de volgende documenten voor meer informatie over andere platformservices:
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)

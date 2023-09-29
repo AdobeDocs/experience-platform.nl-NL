@@ -26,7 +26,7 @@ ht-degree: 18%
    * [Een gegevensset maken](api/create-dataset.md)
    * [Een batch maken](api/create-batch.md)
    * [Labels voor gegevensgebruik](api/labels.md)
-   * [Aanhangsel](api/appendix.md)
+   * [Bijlage](api/appendix.md)
 * Gegevenssets {#datasets}
    * [Overzicht van gegevenssets](datasets/overview.md)
    * [Gebruikershandleiding voor gegevensbestanden](datasets/user-guide.md)
@@ -35,4 +35,4 @@ ht-degree: 18%
    * [Een gegevensset inschakelen voor profielupdates (upsert)](datasets/enable-upsert.md)
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
 * [API-referentie](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die deze producten hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**.
+>De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die deze producten hebben aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**.
 
 Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Een werkorder vertegenwoordigt een specifiek proces van de gegevenshygiëne, zoals een geplande gegevenssetvervaldatum, die zijn huidige status en andere verwante details omvat.
 
@@ -29,7 +29,7 @@ In deze handleiding wordt uitgelegd hoe u bestaande werkorders in de gebruikersi
 
 Wanneer u voor het eerst toegang krijgt tot **[!UICONTROL Data Hygiene]** in de UI, wordt een lijst van bestaande het werkorden getoond samen met hun basisdetails.
 
-![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het Platform](../images/ui/browse/work-order-list.png)
+![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het platform](../images/ui/browse/work-order-list.png)
 
 In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeven. Selecteren **[!UICONTROL Consumer]** een lijst met taken voor het verwijderen van records weergeven, en **[!UICONTROL Dataset]** om een lijst van geplande datasettermijnen te bekijken.
 
@@ -101,7 +101,7 @@ De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basi
 
 ## Volgende stappen
 
-Deze handleiding besprak hoe u bestaande werkorders voor gegevenshygiëne in de gebruikersinterface van het Platform kunt weergeven en beheren. Raadpleeg de volgende documentatie voor informatie over het maken van uw eigen werkorders:
+Deze gids besprak hoe te om bestaande het werkorden van de gegevenshygiëne in de UI van het Platform te bekijken en te beheren. Raadpleeg de volgende documentatie voor informatie over het maken van uw eigen werkorders:
 
 * [Verlopen gegevenssets beheren](./dataset-expiration.md)
 <!-- * [Manage record deletes](./record-delete.md) -->

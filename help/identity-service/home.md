@@ -49,7 +49,7 @@ Bekijk een dagelijks voorbeeld van de relatie van een consument met je merk:
 - Mary hervat later haar tabletsessie en stuurt haar e-mailadres wanneer ze zich abonneert op uw nieuwsbrief. Als u dit doet, wordt door streaming opname een nieuwe identiteit toegevoegd als recordgegevens in haar profiel. Dientengevolge, [!DNL Identity Service] relateert nu Mary&#39;s tabletapparaatactiviteit met haar e-commerce rekeninggeschiedenis.
 - Met de volgende klik op haar tablet zou uw doelinhoud het volledige profiel en de geschiedenis van Mary kunnen weerspiegelen, in plaats van slechts een tablet die door een onbekende winkelier wordt gebruikt.
 
-![Identiteitskoppeling op Platform](./images/identity-service-stitching.png)
+![Identiteitskoppelen op platform](./images/identity-service-stitching.png)
 
 Hoofdzakelijk [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid. De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt u met behulp van Real-Time Customer Profile een volledig beeld van een klant en zijn interactie met uw merk. Zie de klasse [Overzicht van het realtime klantprofiel](../profile/home.md).
 
@@ -80,7 +80,7 @@ Als je iemand vraagt: &quot;Wat is je id?&quot; zonder verdere context zou het v
 
 Uw klanten kunnen met uw merk door een combinatie online en off-line kanalen in wisselwerking staan, resulterend in de uitdaging van hoe te om die gefragmenteerde interactie in één enkele klantenidentiteit te verzoenen.
 
-Begrijpen van uw klant op meerdere apparaten en kanalen begint door hen in elk kanaal te erkennen. Platform bereikt dit door naamruimten te gebruiken. Een naamruimte voor identiteit is een id, zoals E-mail of Telefoon, die wordt gebruikt om aanvullende context aan de identiteit van de klant te bieden. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken of te koppelen en context voor identiteitswaarden te verstrekken. Zie de [Overzicht van naamruimte in identiteit](./namespaces.md) voor meer informatie .
+Begrijpen van uw klant op meerdere apparaten en kanalen begint door hen in elk kanaal te erkennen. Platform bereikt dit door identiteitsnaamruimten te gebruiken. Een naamruimte voor identiteit is een id, zoals E-mail of Telefoon, die wordt gebruikt om aanvullende context aan de identiteit van de klant te bieden. Identiteitsnaamruimten worden gebruikt om individuele identiteiten op te zoeken of te koppelen en context voor identiteitswaarden te verstrekken. Zie de [Overzicht van naamruimte in identiteit](./namespaces.md) voor meer informatie .
 
 ## Identiteitsgrafieken
 

@@ -30,7 +30,7 @@ De etiketten van het gebruik van gegevens die op het datasetniveau worden toegep
 
 [!DNL Platform] biedt verschillende &#39;core&#39; labels voor gegevensgebruik buiten de box, die een groot aantal gemeenschappelijke beperkingen bestrijken die van toepassing zijn op gegevensbeheer. Zie de handleiding voor meer informatie over deze labels en het beleid voor governance dat ze vertegenwoordigen [basislabels voor gegevensgebruik](reference.md).
 
-Naast de labels die door Adobe worden verschaft, kunt u ook uw eigen aangepaste labels voor uw organisatie definiëren. Zie de sectie over [beheren, labels](#manage-labels) voor meer informatie .
+Naast de labels die door de Adobe worden verschaft, kunt u ook uw eigen aangepaste labels voor uw organisatie definiëren. Zie de sectie over [beheren, labels](#manage-labels) voor meer informatie .
 
 ## Labelovererving voor publiekssegmenten
 
@@ -38,11 +38,11 @@ Alle publiekssegmenten gemaakt door [Adobe Experience Platform Segmentation Serv
 
 Naast het erven van dataset-vlakke etiketten, erven de segmenten alle gebied-vlakke etiketten van hun bijbehorende datasets door gebrek. Daarom kunt u gemakkelijker identificeren welke attributen van uw segmenten zouden moeten worden uitgesloten en hen verhinderen etiketten van uitgesloten gebieden over te nemen.
 
-Zie voor meer informatie over de werking van automatische handhaving in Platform het overzicht over [automatische beleidshandhaving](../enforcement/auto-enforcement.md).
+Voor meer informatie over hoe de automatische handhaving in Platform werkt, zie het overzicht over [automatische beleidshandhaving](../enforcement/auto-enforcement.md).
 
 ### Overerving van Adobe Audience Manager Data Export Controls
 
-[!DNL Experience Platform] kan segmenten delen met Adobe Audience Manager. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door worden erkend [!DNL Experience Platform] Gegevensbeheer.
+[!DNL Experience Platform] kan segmenten delen met Adobe Audience Manager. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door worden erkend [!DNL Experience Platform] Data Governance.
 
 Voor een verwijzing naar hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in kaart brengen [!DNL Platform], gelieve de [Documentatie Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
@@ -55,17 +55,17 @@ Voor een verwijzing naar hoe de specifieke Controles van de Uitvoer van Gegevens
 
 U kunt gegevensgebruikslabels beheren met [!DNL Experience Platform] API&#39;s of de gebruikersinterface. Raadpleeg de onderstaande subsecties voor meer informatie over elke subsectie.
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
 De **[!UICONTROL Policies]** werkruimte in de [!DNL Experience Platform] UI staat u toe om kern en douanelabels voor uw organisatie te bekijken en te beheren. U kunt de **[!UICONTROL Schemas]** werkruimte naar [labels toepassen op uw XDM-schema&#39;s (Experience Data Model)](../../xdm/tutorials/labels.md), of leer hoe te [aangepaste labels maken en beheren in de **[!UICONTROL Policies] UI](./user-guide.md) door in plaats daarvan de gebruikershandleiding voor de labels voor gegevensgebruik te lezen.
 
 >[!IMPORTANT]
 >
->Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van het Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](../e2e.md#migrate-labels) voor instructies over hoe te om dit te doen.
+>Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de interface van het platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](../e2e.md#migrate-labels) voor instructies over hoe te om dit te doen.
 
 ### API&#39;s gebruiken
 
-De `/labels` in de [Beleidsservice-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) Hiermee kunt u gegevensgebruikslabels programmatisch beheren, inclusief het maken van aangepaste labels. Zie de [eindhulplijn voor labels](../api/labels.md) voor meer informatie .
+De `/labels` in de [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) Hiermee kunt u gegevensgebruikslabels programmatisch beheren, inclusief het maken van aangepaste labels. Zie de [eindhulplijn voor labels](../api/labels.md) voor meer informatie .
 
 De [Dataset-service-API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) wordt gebruikt om etiketten voor dataset en gebieden te beheren. Zie de handleiding op [gegevenssetlabels beheren](./dataset-api.md) voor meer informatie .
 

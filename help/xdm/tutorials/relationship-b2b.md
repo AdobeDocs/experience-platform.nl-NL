@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Real-time Customer Data Platform B2B Edition biedt verschillende XDM-klassen (Experience Data Model) die fundamentele B2B-gegevensentiteiten vastleggen, waaronder [rekeningen](../classes/b2b/business-account.md), [kansen](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md)en meer. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik binnen [Klantprofiel in realtime](../../profile/home.md), kunt u gegevens uit verschillende bronnen samenvoegen in een verenigde vertegenwoordiging genoemd een unieschema.
 
-Unieschema&#39;s kunnen echter alleen velden bevatten die zijn vastgelegd door schema&#39;s die dezelfde klasse delen. Hier komen schemarelaties binnen. Door relaties in uw B2B-schema&#39;s uit te voeren, kunt u beschrijven hoe deze bedrijfsentiteiten met elkaar verband houden en kunt u kenmerken van meerdere klassen in downstreamgevallen van segmentatiegebruik opnemen.
+Unieschema&#39;s kunnen echter alleen velden bevatten die zijn vastgelegd door schema&#39;s die dezelfde klasse delen. Dit is waar schemaverhoudingen binnen komen. Door relaties in uw B2B-schema&#39;s uit te voeren, kunt u beschrijven hoe deze bedrijfsentiteiten met elkaar verband houden en kunt u kenmerken van meerdere klassen in downstreamgevallen van segmentatiegebruik opnemen.
 
 Het volgende diagram verstrekt een voorbeeld van hoe de verschillende klassen B2B op elkaar in een basisimplementatie kunnen betrekking hebben:
 
@@ -30,13 +30,13 @@ Deze zelfstudie behandelt de stappen voor het definiëren van een vele-op-één 
 >
 >Als u Real-time Customer Data Platform B2B Edition niet gebruikt of een een-op-een relatie wilt maken, raadpleegt u de handleiding [een één-op-één relatie maken](./relationship-ui.md) in plaats daarvan.
 >
->Dit leerprogramma concentreert zich op hoe te om relaties tussen B2B- schema&#39;s in het Platform UI manueel te vestigen. Als u gegevens van een B2B bronverbinding brengt, kunt u een auto-generatienut gebruiken om de vereiste schema&#39;s, identiteiten, en verhoudingen in plaats daarvan tot stand te brengen. Raadpleeg de documentatie bij bronnen over B2B-naamruimten en -schema&#39;s voor meer informatie over [het gebruik van het hulpprogramma voor automatisch genereren](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+>Dit leerprogramma concentreert zich op hoe te om relaties tussen B2B- schema&#39;s in het Platform UI manueel te vestigen. Als u gegevens van een B2B bronverbinding brengt, kunt u een auto-generatienut gebruiken om de vereiste schema&#39;s, identiteiten, en verhoudingen in plaats daarvan tot stand te brengen. Zie de brondocumentatie over B2B namespaces en schema&#39;s voor meer informatie over [het gebruik van het hulpprogramma voor automatisch genereren](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van [!DNL XDM System] en de Schema-editor in de [!DNL Experience Platform] UI. Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
+* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en de implementatie ervan in [!DNL Experience Platform].
 * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
 * [Een schema maken met de opdracht [!DNL Schema Editor]](create-schema-ui.md): Een zelfstudie waarin de grondbeginselen van het maken en bewerken van schema&#39;s in de gebruikersinterface worden besproken.
 
@@ -61,7 +61,7 @@ Om hiermee rekening te houden, bevatten alle standaard B2B-klassen &quot;sleutel
 
 >[!NOTE]
 >
->Wanneer [een XDM-veld instellen als identiteit](../ui/fields/identity.md)moet u een naamruimte voor identiteit opgeven om de identiteit onder te definiëren. Dit kan een standaardnaamruimte zijn die door Adobe wordt geboden of een aangepaste naamruimte die door uw organisatie wordt gedefinieerd. In de praktijk is de naamruimte gewoon een contextafhankelijke tekenreeks en kan deze worden ingesteld op elke gewenste waarde, mits deze voor uw organisatie van belang is voor het categoriseren van het identiteitstype. Zie het overzicht op [naamruimten](../../identity-service/namespaces.md) voor meer informatie .
+>Wanneer [een XDM-veld instellen als identiteit](../ui/fields/identity.md)moet u een naamruimte voor identiteit opgeven om de identiteit onder te definiëren. Dit kan een standaardnaamruimte zijn die door de Adobe wordt geboden of een aangepaste naamruimte die door uw organisatie wordt gedefinieerd. In de praktijk is de naamruimte gewoon een contextafhankelijke tekenreeks en kan deze worden ingesteld op elke gewenste waarde, mits deze voor uw organisatie van belang is voor het categoriseren van het identiteitstype. Zie het overzicht op [naamruimten](../../identity-service/namespaces.md) voor meer informatie .
 
 Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk schema dat in dit leerprogramma wordt gebruikt alvorens een verhouding is bepaald. Let op waar de primaire identiteiten zijn gedefinieerd in de schemastructuur en de aangepaste naamruimten die ze gebruiken.
 
@@ -91,13 +91,13 @@ Het referentieschema &quot;[!DNL Accounts]&quot; is gebaseerd op de [!UICONTROL 
 >title="Relatienaam van referentieschema"
 >abstract="A label that describes the relationship from the reference schema to the current schema (example, &#39;Related Opportunity&#39;). Dit label wordt gebruikt in Profiel en Segmentatie om context te geven aan gegevens van verwante B2B-entiteiten. Zie de documentatie om meer over het bouwen van B2B schemaverhoudingen te leren."
 
-Om een verhouding tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat op de primaire identiteit van het verwijzingsschema wijst. De standaard B2B-klassen omvatten specifieke bronsleutelvelden voor algemeen verwante bedrijfsentiteiten. De [!UICONTROL XDM Business Opportunity] klasse bevat bronsleutelvelden voor een verwante account (`accountKey`) en een daarmee samenhangende campagne (`campaignKey`). U kunt echter ook andere [!UICONTROL B2B Source] velden naar het schema door aangepaste veldgroepen te gebruiken als u meer dan de standaardcomponenten nodig hebt.
+Om een verhouding tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat op de primaire identiteit van het verwijzingsschema wijst. De standaard B2B-klassen omvatten specifieke bronsleutelvelden voor algemeen verwante bedrijfsentiteiten. Bijvoorbeeld de [!UICONTROL XDM Business Opportunity] klasse bevat bronsleutelvelden voor een verwante account (`accountKey`) en een daarmee samenhangende campagne (`campaignKey`). U kunt echter ook andere [!UICONTROL B2B Source] velden naar het schema door aangepaste veldgroepen te gebruiken als u meer dan de standaardcomponenten nodig hebt.
 
 >[!NOTE]
 >
 >Momenteel, slechts kunnen vele-aan-één en één-aan-één verhoudingen van een bronschema aan een verwijzingsschema worden bepaald. Voor één-aan-vele verhoudingen, moet u het relatiegebied in het schema bepalen dat &quot;velen&quot;vertegenwoordigt.
 
-Als u een relatieveld wilt instellen, selecteert u het pijlpictogram (![Pictogram Pijl](../images/tutorials/relationship-b2b/arrow.png)) naast het desbetreffende veld op het canvas. In het geval van de [!DNL Opportunities] schema, dit is het `accountKey.sourceKey` omdat het doel is om een veel-op-één relatie met een account tot stand te brengen.
+Als u een relatieveld wilt instellen, selecteert u het pijlpictogram (![Pijlpictogram](../images/tutorials/relationship-b2b/arrow.png)) naast het desbetreffende veld op het canvas. Voor de [!DNL Opportunities] schema, dit is het `accountKey.sourceKey` omdat het doel is om een veel-op-een relatie met een account tot stand te brengen.
 
 ![Relatie-knop](../images/tutorials/relationship-b2b/relationship-button.png)
 
@@ -109,7 +109,7 @@ Onder **[!UICONTROL Reference Schema]** gebruikt u de zoekbalk om de naam van he
 
 ![Referentieschema](../images/tutorials/relationship-b2b/reference-schema.png)
 
-Onder **[!UICONTROL Relationship Name From Current Schema]** en **[!UICONTROL Relationship Name From Reference Schema]** een vriendschappelijke naam voor de relatie te geven in de context van respectievelijk de bron- en referentieschema. Als u klaar bent, selecteert u **[!UICONTROL Save]** om de wijzigingen toe te passen en het schema op te slaan.
+Onder **[!UICONTROL Relationship Name From Current Schema]** en **[!UICONTROL Relationship Name From Reference Schema]** een vriendschappelijke naam voor de relatie te geven in de context van respectievelijk de bron- en referentieschema. Selecteer **[!UICONTROL Save]** om de wijzigingen toe te passen en het schema op te slaan.
 
 ![Relatie naam](../images/tutorials/relationship-b2b/relationship-name.png)
 

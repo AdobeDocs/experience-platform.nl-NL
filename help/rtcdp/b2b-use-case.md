@@ -24,7 +24,7 @@ Bodea, een technologiebedrijf, heeft een nieuw product en wil tegelijkertijd kla
 
 Bodea heeft echter twee verschillende bedrijfsonderdelen. Bodea&#39;s eerste business line 1 creëert software voor de automobielindustrie. De tweede branche, &quot;Line 2&quot;, verkoopt 3D-printers die auto-onderdelen maken. Als gevolg van de twee bedrijfsonderdelen van Bodea zijn de inkomstengegevens die uit de klantenrekeningen van Bodea worden gegenereerd, niet in één enkele weergave verenigd.
 
-Elke branche heeft zijn eigen verkoopsysteem: &quot;CRM 1&quot; en &quot;CRM 2&quot;. Beide CRM-verkoopsystemen zijn verbonden met hun eigen marketingautomatiseringsplatform &quot;Marketo 1&quot; en &quot;Marketo 2&quot;. Gegevens van CRM 1 worden alleen gesynchroniseerd naar Marketo 1 en gegevens van CRM2 worden alleen gesynchroniseerd naar Marketo 2. Uiteindelijk worden hun gegevens bewaard in verschillende informatiesilo&#39;s van bedrijven.
+Elke branche heeft haar eigen verkoopsysteem: &quot;CRM 1&quot; en &quot;CRM 2&quot;. Beide CRM-verkoopsystemen zijn verbonden met hun eigen marketingautomatiseringsplatform &quot;Marketo 1&quot; en &quot;Marketo 2&quot;. Gegevens van CRM 1 worden alleen gesynchroniseerd naar Marketo 1 en gegevens van CRM2 worden alleen gesynchroniseerd naar Marketo 2. Uiteindelijk worden hun gegevens bewaard in verschillende informatiesilo&#39;s van bedrijven.
 
 ## Huidige gegevenssituatie
 
@@ -34,9 +34,9 @@ In Marketo 1 wordt Townsend opgenomen als Account 1. Het heeft twee verwante men
 
 In Marketo 2 wordt Townsend opgenomen als Account 2. Account 2 heeft ook twee verwante personen (p2@townsend.com en p3@townsend.com) en één &#39;closed-won&#39; kans van $900k (&#39;Opportunity 2&#39;) in CRM 2. Deze gegevens worden gesynchroniseerd van CRM 2 naar Marketo 2.
 
-Voor integratie en aanvullende bedrijfscontroledoeleinden beschikt Bodea ook over een Master gegevensbeheersysteem (MDM) waarbij het een record bijhoudt waarin wordt vermeld dat Account 1 in Marketo 1 (en CRM 1) en Account 2 in Marketo 2 (en CRM 2) dezelfde onderneming zijn.
+Voor integratie en aanvullende bedrijfscontroledoeleinden beschikt Bodea ook over een MDM-systeem (Master Data Management), waarbij een record wordt bijgehouden waarin wordt aangegeven dat Account 1 in Marketo 1 (en CRM 1) en Account 2 in Marketo 2 (en CRM 2) dezelfde onderneming zijn.
 
-In de laatste maand `p2@townsend.com` Marketo 1 bezocht de nieuwe productpagina en het webbezoek werd geregistreerd.
+In de laatste maand: `p2@townsend.com` Marketo 1 bezocht de nieuwe productpagina en het webbezoek werd geregistreerd.
 
 ![rekeninginformatiediagram](./assets/account-info.png)
 
@@ -56,9 +56,9 @@ Aangezien de uitgaven van Townsend over verschillende verkoopsystemen worden ver
 
 Met Real-Time CDP B2B Edition kan het marketingteam van Bodea:
 
-- Combineer de gegevens van alle verschillende bronnen (meerdere Marketo- en CRM-instanties en het Master gegevensbeheer) tot Real-Time CDP B2B Edition.
+- Combineer de gegevens van alle verschillende bronnen (meerdere Marketo- en CRM-instanties en het hoofdgegevensbeheer) tot Real-Time CDP B2B Edition.
 
-Met RT-CDP B2B Edition, kan Bodea de BronVerbinding van de Marketo Engage gebruiken om B2B gegevens van Marketo 1 en Marketo 2 in Experience Platform te brengen en deze gegevens huidig te houden gebruikend Platform verbonden toepassingen. Zie de [Marketo-bronaansluiting](../sources/connectors/adobe-applications/marketo/marketo.md) documentatie voor meer informatie.
+Met RT-CDP B2B Edition kan Bodea de Bron van het Marketo Engage Schakelaar gebruiken om B2B gegevens van Marketo 1 en Marketo 2 in Experience Platform te brengen en deze gegevens huidig te houden gebruikend Platform verbonden toepassingen. Zie de [Marketo-bronaansluiting](../sources/connectors/adobe-applications/marketo/marketo.md) documentatie voor meer informatie.
 
 B2B-gegevens (Mensen, Accounts, Opportunity, and activity ) van CRM1 worden gesynchroniseerd in Marketo 1. Evenzo worden alle B2B-gegevens van CRM 2 gesynchroniseerd in Marketo 2. Ze worden gesynchroniseerd in Adobe Experience Platform via de Marketo-bronconnector. Nochtans, als Bodea extra gegevens van CRM in Experience Platform wil brengen, kunnen zij bestaande Verbindingen van CRM gebruiken.
 
@@ -83,7 +83,7 @@ In het belang van de eenvoud en het doel van dit voorbeeld worden mensen geïden
 
 - Creëer een publiek dat de meest efficiënte ontvangers van de nieuwe marketingcampagne van Bodea is. In dit voorbeeld helpt RT-CDP, B2B Edition de markeerteken identificeren `p2@townsend.com` als het juiste doel voor deze marketingcampagne.
 
-Door de bestemmingen van Marketo Engage en van LinkedIn te gebruiken, heeft Bodea een oplossing van het het beheer van de klantenervaring van begin tot eind (CXM) voor zijn marketing team. Het in Experience Platform gemaakte publiek wordt naar de Marketo-bestemming geduwd, waar het als een statische lijst wordt weergegeven. Dit publiek wordt vervolgens automatisch toegevoegd aan een Marketo-marketingcampagne. Tegelijkertijd kan het publiek ook door de RT-CDP B2B Edition naar een LinkedIn-marketingcampagne worden gestuurd.
+Door het Marketo Engage en de bestemmingen van LinkedIn te gebruiken, heeft Bodea een oplossing van het het beheer van de klantenervaring van begin tot eind (CXM) voor zijn marketing team. Het in Experience Platform gemaakte publiek wordt naar de Marketo-bestemming geduwd, waar het als een statische lijst wordt weergegeven. Dit publiek wordt vervolgens automatisch toegevoegd aan een Marketo-marketingcampagne. Tegelijkertijd kan het publiek ook door de RT-CDP B2B Edition naar een LinkedIn-marketingcampagne worden gestuurd.
 
 ## Volgende stappen
 

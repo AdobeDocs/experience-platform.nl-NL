@@ -1,5 +1,5 @@
 ---
-title: Overzicht van extensieontwikkeling
+title: Overzicht van de ontwikkeling van extensies
 description: Meer informatie over de primaire componenten van verschillende typen tagextensies en het ontwikkelingsproces van extensies in Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
@@ -9,13 +9,13 @@ ht-degree: 2%
 
 ---
 
-# Overzicht van extensieontwikkeling
+# Overzicht van de ontwikkeling van extensies
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Een van de belangrijkste doelstellingen van tags in Adobe Experience Platform is het creëren van een open ecosysteem waar ingenieurs buiten Adobe extra functies op hun websites en mobiele toepassingen kunnen blootstellen. Dit wordt gedaan door markeringsuitbreidingen. Nadat een extensie op een eigenschap tag is geïnstalleerd, wordt de functionaliteit van die extensie beschikbaar voor gebruik door alle gebruikers van de eigenschap.
+Een van de belangrijkste doelstellingen van tags in Adobe Experience Platform is het creëren van een open ecosysteem waar ingenieurs buiten de Adobe extra functies op hun websites en mobiele toepassingen kunnen blootstellen. Dit wordt gedaan door markeringsuitbreidingen. Nadat een extensie op een eigenschap tag is geïnstalleerd, wordt de functionaliteit van die extensie beschikbaar voor gebruik door alle gebruikers van de eigenschap.
 
 In dit document worden de primaire componenten van een extensie beschreven en vindt u koppelingen naar verdere documentatie die u helpen bij het ontwikkelen van extensies.
 
@@ -37,17 +37,17 @@ U kunt bibliotheekmodulebestanden op elke gewenste locatie in de extensiemap pla
 
 ### Weergaven
 
-Een weergave is een HTML-bestand dat in een [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door het Platform UI en UI van de Inzameling van Gegevens. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
+Een weergave is een HTML-bestand dat in een [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door Platform UI en de UI van de Inzameling van Gegevens. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
 
 Het belangrijkste meningsdossier voor om het even welke uitbreiding is zijn configuratie. Zie de sectie over [extensieconfiguraties](#configuration) voor meer informatie .
 
 Er gelden geen beperkingen ten aanzien van de bibliotheken die in uw weergaven worden gebruikt. Met andere woorden, u kunt jQuery, Onderstreping, Reageren, Angular, Bootstrap of andere gebruiken. Het wordt echter nog steeds aangeraden om uw extensie er net zo uit te laten zien als de interface.
 
-U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) in één submap te plaatsen die is gescheiden van de bibliotheekmodulebestanden. In `extension.json`kunt u beschrijven waar deze submap voor de weergave zich bevindt. Platform zal deze subdirectory (en slechts deze subdirectory) van zijn Webservers dan dienen.
+U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) in één submap te plaatsen die is gescheiden van de bibliotheekmodulebestanden. In `extension.json`kunt u beschrijven waar deze submap voor de weergave zich bevindt. Het platform zal dan deze subdirectory (en slechts deze subdirectory) van zijn Webservers dienen.
 
 ## Bibliotheekcomponenten {#components}
 
-Elke extensie definieert een reeks functies. Deze functies worden geïmplementeerd door te worden opgenomen in een [bibliotheek](../ui/publishing/libraries.md) die wordt geïmplementeerd op uw website of app. Bibliotheken zijn een verzameling afzonderlijke componenten, waaronder voorwaarden, handelingen, gegevenselementen en meer. Elke bibliotheekcomponent is een stuk herbruikbare code (verstrekt door een uitbreiding) die binnen markeringstruntime wordt uitgegeven.
+Elke extensie definieert een reeks functies. Deze functies worden geïmplementeerd door in een [bibliotheek](../ui/publishing/libraries.md) die wordt geïmplementeerd op uw website of app. Bibliotheken zijn een verzameling afzonderlijke componenten, waaronder voorwaarden, handelingen, gegevenselementen en meer. Elke bibliotheekcomponent is een stuk herbruikbare code (verstrekt door een uitbreiding) die binnen markeringstruntime wordt uitgegeven.
 
 Afhankelijk van het feit of u een webextensie of een randextensie ontwikkelt, verschillen de beschikbare typen componenten en de gebruikte toepassingen. Raadpleeg de onderstaande subsecties voor een overzicht van de componenten die beschikbaar zijn voor elk extensietype.
 
@@ -55,7 +55,7 @@ Afhankelijk van het feit of u een webextensie of een randextensie ontwikkelt, ve
 
 In webextensies worden regels geactiveerd via gebeurtenissen, die vervolgens specifieke acties kunnen uitvoeren als aan een bepaalde set voorwaarden wordt voldaan. Zie het overzicht op [modulestroom in Webuitbreidingen](./web/flow.md) voor meer informatie .
 
-Naast de [kernmodules](./web/core.md) kunt u de volgende bibliotheekcomponenten definiëren in uw webextensies die worden geleverd door Adobe:
+Naast de [kernmodules](./web/core.md) die door Adobe worden verstrekt, kunt u de volgende bibliotheekcomponenten in uw Webuitbreidingen bepalen:
 
 * [Gebeurtenissen](./web/event-types.md)
 * [Voorwaarden](./web/condition-types.md)
@@ -93,4 +93,4 @@ Raadpleeg de handleiding voor meer informatie [extensieconfiguraties](./configur
 
 ## Extensies verzenden
 
-Nadat u de extensie hebt gemaakt, kunt u deze verzenden naar een lijst in de extensiecatalogus in het Platform. Zie de [overzicht van het verzendproces voor extensies](./submit/overview.md) voor meer informatie .
+Nadat u de extensie hebt gemaakt, kunt u deze verzenden voor een lijst in de extensiecatalogus in Platform. Zie de [overzicht van het verzendproces voor extensies](./submit/overview.md) voor meer informatie .

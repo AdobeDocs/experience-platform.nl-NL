@@ -24,8 +24,8 @@ ht-degree: 39%
    * [De Privacy Service-API verifiëren en openen](./api/getting-started.md)
    * [Privacytaken](./api/privacy-jobs.md)
    * [Toestemming](./api/consent.md)
-   * [Aanhangsel](./api/appendix.md)
-* UI Privacy Service {#ui}
+   * [Bijlage](./api/appendix.md)
+* UI PRIVACY SERVICE {#ui}
    * [Overzicht](./ui/overview.md)
    * [Privacy-taken beheren](./ui/user-guide.md)
 * [Abonneren op privacygebeurtenissen](./privacy-events.md)

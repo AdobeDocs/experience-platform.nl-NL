@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;exporteren;Exporteren
 solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
-description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
+description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
@@ -34,7 +34,7 @@ Het dashboard voor de [!DNL Privacy Service] De gebruikersinterface bevat twee w
 
 ### Type verordening
 
-[!DNL Privacy Service] ondersteunt taakaanvragen voor verschillende privacyregels. In de volgende tabel worden de ondersteunde verordeningen en het bijbehorende label weergegeven, zoals weergegeven in de gebruikersinterface:
+[!DNL Privacy Service] ondersteunt aanvragen voor een baan voor verschillende privacyregels. In de volgende tabel worden de ondersteunde verordeningen en het bijbehorende label weergegeven, zoals weergegeven in de gebruikersinterface:
 
 | UI-label | Verordening |
 | --- | --- |
@@ -82,7 +82,7 @@ Als u meer details over een bepaald gegevenspunt wilt weergeven, selecteert u he
 
 >[!NOTE]
 >
->Wanneer een filter is toegepast op de widget Taakverzoeken, kunt u het filter verwijderen door het **X** op de filterpil. De Verzoeken van de baan keren dan aan het gebrek volgende lijst terug.
+>Wanneer een filter is toegepast op de widget Taakverzoeken, kunt u het filter verwijderen door het **X** op de filterpil. De Verzoeken van de baan keren dan aan de standaard het volgen lijst terug.
 
 ### Taakverzoeken
 
@@ -98,7 +98,7 @@ U kunt de lijst filteren door trefwoorden in de zoekbalk onder de titel Taakverz
 
 Als u de details van een bepaalde taakaanvraag wilt bekijken, selecteert u de taak-id van de aanvraag in de lijst om de opdracht **[!UICONTROL Job Details]** pagina.
 
-![Taakgegevens GDPR-gebruikersinterface](../images/user-guide/job-details.png)
+![Taakgegevens GDPR-interface](../images/user-guide/job-details.png)
 
 Dit dialoogvenster bevat statusinformatie over elk [!DNL Experience Cloud] oplossing en de huidige toestand in verhouding tot de algemene taak. Aangezien elke privacybaan asynchroon is, toont de pagina de recentste communicatie datum en tijd (GMT) van elke oplossing, aangezien sommige meer tijd dan anderen vereisen om het verzoek te verwerken.
 
@@ -126,9 +126,9 @@ De stappen voor het gebruiken van elk van deze methodes worden verstrekt in de v
 
 ### De Request Builder gebruiken {#request-builder}
 
-Met de Request Builder kunt u handmatig een nieuw verzoek voor een privacytaak maken in de gebruikersinterface. De Bouwer van het Verzoek wordt best gebruikt voor eenvoudigere en kleinere reeksen verzoeken, omdat de de grensverzoeken van de Bouwer van het Verzoek om slechts identiteitskaart type per gebruiker te hebben. Voor meer gecompliceerde verzoeken kan het beter zijn om [een JSON-bestand uploaden](#json) in plaats daarvan.
+Met de Request Builder kunt u handmatig een nieuw verzoek voor een privacytaak maken in de gebruikersinterface. De Bouwer van het Verzoek wordt best gebruikt voor eenvoudigere en kleinere reeksen verzoeken, omdat de de grensverzoeken van de Bouwer van het Verzoek om slechts identiteitskaart type per gebruiker te hebben. Voor meer gecompliceerde verzoeken kan het beter zijn [een JSON-bestand uploaden](#json) in plaats daarvan.
 
-Selecteer **[!UICONTROL Create Request]** onder de widget Statusrapport aan de rechterkant van het scherm.
+Selecteer **[!UICONTROL Create Request]** onder de widget Statusrapport rechts op het scherm.
 
 ![Aanvraag maken selecteren](../images/user-guide/create-request.png)
 
@@ -136,7 +136,7 @@ De **[!UICONTROL Create Request]** wordt geopend, met daarin de beschikbare opti
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selecteer **[!UICONTROL Job Type]** van de aanvraag (&quot;Delete&quot; of &quot;Access&quot;) en een of meer beschikbare producten uit de lijst.
+Selecteer de **[!UICONTROL Job Type]** van de aanvraag (&quot;Delete&quot; of &quot;Access&quot;) en een of meer beschikbare producten uit de lijst.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -152,7 +152,7 @@ Wanneer u het aangepaste naamruimtetype gebruikt, moet u de naamruimte handmatig
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Als u klaar bent, selecteert u **[!UICONTROL Create]**.
+Selecteer **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -178,7 +178,7 @@ Als u geen JSON-bestand hebt om te uploaden, selecteert u **[!UICONTROL Download
 
 Zoek het JSON-bestand op uw computer en sleep het naar het dialoogvenster. Als het uploaden is voltooid, wordt de bestandsnaam weergegeven in het dialoogvenster. U kunt desgewenst meer JSON-bestanden toevoegen door deze naar het dialoogvenster te slepen.
 
-Als u klaar bent, selecteert u **[!UICONTROL Create]**. Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget Taakverzoeken.
+Selecteer **[!UICONTROL Create]**. Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget Taakverzoeken.
 
 ### Volgende stappen
 

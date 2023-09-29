@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Aan de slag met Real-time Customer Data Platform
 
-Deze gids Aan de slag leidt u door een steekproefimplementatie van Real-time Customer Data Platform (Real-Time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
+Deze gids Aan de slag leidt u door een steekproefimplementatie van Real-time Customer Data Platform (Real-Time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van de instellingen.
 
 In dit voorbeeld ziet u de kracht van Real-time Customer Data Platform, aangedreven door Adobe Experience Platform, om:
 
@@ -34,7 +34,7 @@ Op dit moment worden de gegevens van Luma verspreid over meerdere bronnen. Als g
 
 Het resultaat is dat Luma de volgende zakelijke doelstellingen heeft:
 
-* Creeer in real time één mening van hun consumenten van hun verschillende bronnen van gegevens.
+* Creeer in real time één enkel standpunt van hun consumenten van hun verschillende bronnen van gegevens.
 * Pas marketingcampagnes aan met relevante berichten op verschillende kanalen en apparaten.
 
 Om aan deze doelstellingen te voldoen, moet het marketing team klantengegevens op schaal kunnen beheren.
@@ -118,7 +118,7 @@ Deze persoonlijke inhoud helpt Sarah snel relevante items te vinden. Dit verhoog
 
 Sarah wordt afgeleid en verlaat de site en beëindigt haar sessie. Luma kan haar gegevens in Adobe Experience Platform gebruiken om haar terug te brengen naar de site.
 
-Real-time Customer Data Platform, aangedreven door Adobe Experience Platform, is gebouwd voor het beheer van klantervaring. Organisaties kunnen:
+Real-time Customer Data Platform, aangedreven door Adobe Experience Platform, is gebouwd voor het beheer van de klantervaring. Organisaties kunnen:
 
 * Gegevensintegratie en -activering vereenvoudigen
 * Bekend en onbekend gegevensgebruik beheren
@@ -141,7 +141,7 @@ Al deze gegevens uit verschillende bronnen worden samengevoegd in één enkel un
 
 ## Databron configureren
 
-Gebruiken [!DNL Real-Time Customer Data Platform] nieuwe gegevensbronnen in Platform te brengen. Real-Time CDP bevat een catalogus met gegevensbronnen die snel en eenvoudig aan het profiel kunnen worden toegevoegd.
+Gebruiken [!DNL Real-Time Customer Data Platform] om nieuwe gegevensbronnen in Platform te introduceren. Real-Time CDP bevat een catalogus met gegevensbronnen die snel en eenvoudig aan het profiel kunnen worden toegevoegd.
 
 ![afbeelding](assets/luma-source-cat.png)
 
@@ -157,7 +157,7 @@ Als u bijvoorbeeld de CRM-gegevens van Luma wilt invoeren, filtert u de catalogu
 
    Selecteer bijvoorbeeld **[!UICONTROL Contacts]**. Er wordt automatisch een voorvertoning van de contactgegevens geladen, zodat u zeker weet dat alles er naar behoren uitziet.
 
-   Het Adobe Experience-platform haalt veel handmatige werk uit dit proces door standaardvelden automatisch toe te wijzen aan de [!DNL Experience Data Model] (XDM)-profielschema.
+   Het platform van de Ervaring van de Adobe neemt veel handwerk uit dit proces door standaardgebieden aan auto toe te wijzen [!DNL Experience Data Model] (XDM)-profielschema.
 
 1. Controleer de veldtoewijzingen.
 
@@ -190,7 +190,7 @@ Alle profielinformatie Luma heeft over Sarah displays. Dit omvat haar persoonlij
 
 | Categorie | Beschrijving |
 |---|---|
-| Identiteiten | Hiermee geeft u de identiteiten weer die aan elkaar zijn gekoppeld in [!DNL Platform] van Sarah&#39;s interacties met Luma via kanalen en apparaten. Haar ECID van de website wordt weergegeven. Haar identiteit omvat ook de ECID van haar mobiele app, haar e-mailadres, een CRM-id van de onlangs toegevoegde [!DNL Microsoft Dynamics] dataset, en een loyaliteitsidentiteitskaart die in Adobe Experience Platform van het systeem van de loyaliteit Luma wordt overgegaan. |
+| Identiteiten | Hiermee geeft u de identiteiten weer die aan elkaar zijn gekoppeld in [!DNL Platform] van Sarah&#39;s interacties met Luma via kanalen en apparaten. Haar ECID van de website wordt weergegeven. Haar identiteit omvat ook de ECID van haar mobiele app, haar e-mailadres, een CRM-id van de onlangs toegevoegde [!DNL Microsoft Dynamics] dataset, en een loyaliteitsidentiteitskaart die in Adobe Experience Platform van het systeem van de loyaliteit van de Luma wordt overgegaan. |
 | Gebeurtenissen | Toont alle interactiegegevens van Sarah met het merk Luma. Dit omvat het item dat ze net bekeken heeft, alles wat ze in het verleden bekeken heeft, de e-mails die ze heeft ontvangen, haar interacties met het callcenter, en op welk kanaal en apparaat deze interacties plaatsvonden. |
 
 Het Real-Time CDP-profiel reduceert de workflow van het marketingteam van Luma van weken tot minuten en ontgrendelt mogelijkheden voor personalisatie op basis van deze 360-gradenweergave. In het profiel worden de gedragsgegevens samengevoegd vanaf het moment dat ze door de site bladert voordat ze zich aanmeldt, met haar bestaande klantprofiel, en wordt een uitgebreide weergave van Sarah gemaakt.
@@ -235,7 +235,7 @@ Als je het segment &quot;Gift Giving Cart Abandoner&quot; hebt toegevoegd, kun j
 Selecteer **[!UICONTROL Send to destinations]**.
 
 In Real-Time CDP kan Luma naadloos optreden op de doelsegmenten voor personalisatie.\
-Hier zien wij alle bestemmingen beschikbaar voor Luma om deze bestemming naar, zowel Adobe als niet-Adobe oplossingen te verzenden:
+Hier zien wij alle bestemmingen beschikbaar voor Luma om deze bestemming naar, zowel Adobe als niet Adobe oplossingen te verzenden:
 
 ![afbeelding](assets/luma-dest.png)
 
@@ -244,8 +244,7 @@ Hier zien wij alle bestemmingen beschikbaar voor Luma om deze bestemming naar, z
 In dit scenario, wil Luma dit publiek met verpersoonlijking over deze bestemmingen opnieuw richten:
 
 * Google, voor weergave
-
-   <!--* Facebook -->
+  <!--* Facebook -->
 * Adobe Campaign, voor e-mail
 
 <!-- ![image](assets/luma-sched-dest.png) -->
@@ -258,7 +257,7 @@ U kunt het segment ook plannen om op een bepaald tijdstip te beginnen of te eind
 >
 >Als u het datumveld selecteert, wordt dit automatisch 90 dagen gepland.
 
-Selecteren **[!UICONTROL Save]** om naar de volgende pagina te gaan.
+Selecteren **[!UICONTROL Save]** naar de volgende pagina gaan.
 
 Wanneer een klant in dit publiek een aankoop doet, wordt zijn lidmaatschap aan dit publiek onderdrukt in echt - tijd. Ze komen niet meer in aanmerking omdat hun status is gewijzigd.
 
@@ -270,7 +269,7 @@ Adobe Experience Platform omvat privacy en veiligheidscontroles om te bepalen of
 
 Als uw activiteit beleid schendt, verschijnt een waarschuwing. Deze waarschuwing bevat informatie over de gegevenslijn die u kan helpen identificeren waarom het beleid werd overtreden, en wat u kunt doen om de schending op te lossen.
 
-Met deze bedieningsorganen [!DNL Experience Platform] Luma helpt om zich aan regels en markt verantwoordelijk te houden. Deze controles zijn flexibel en kunnen worden gewijzigd om aan de vereisten van de veiligheids en governanceteams van de Luma te voldoen, die hen toestaan om regionale en organisatorische vereisten voor het beheren van bekende en onbekende klantengegevens op betrouwbare wijze te richten.
+Met deze bedieningsorganen [!DNL Experience Platform] Luma helpt om zich aan de regels en de markt verantwoordelijk te houden. Deze controles zijn flexibel en kunnen worden gewijzigd om aan de vereisten van de veiligheids en governanceteams van de Luma te voldoen, die hen toestaan om regionale en organisatorische vereisten voor het beheren van bekende en onbekende klantengegevens op betrouwbare wijze te richten.
 
 ### Gegevensflowcanvas
 

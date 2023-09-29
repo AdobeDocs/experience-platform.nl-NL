@@ -15,7 +15,7 @@ De Reactor-API bevat verschillende eindpunten waarmee u programmatisch alle bron
 
 Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over het verifiëren aan API.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Referentie voor Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/).
+Ga naar de [Referentie voor Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/).
 
 ## Bedrijven
 
@@ -27,7 +27,7 @@ Zie de [eindgids voor bedrijven](./endpoints/companies.md) voor meer informatie 
 
 Een eigenschap is een container die de meeste andere bronnen bevat die beschikbaar zijn in de Reactor-API. De enige middelen die niet in het bezit zijn van een bezit zijn controlegebeurtenissen, bedrijven, uitbreidingspakketten, en profielen. Een bezit behoort tot precies één bedrijf, en een bedrijf kan vele eigenschappen hebben.
 
-Zie de [leidraad voor eigenschappen eindpunt](./endpoints/properties.md) voor meer informatie over het beheren van eigenschappen in de API.
+Zie de [hulplijn voor eigenschappen eindpunt](./endpoints/properties.md) voor meer informatie over het beheren van eigenschappen in de API.
 
 ## Gegevenselementen
 
@@ -89,9 +89,9 @@ Zie de [eindgebruikershandleiding voor hosts](./endpoints/hosts.md) om te leren 
 
 ## App-configuraties
 
-Met toepassingsconfiguraties kunnen referenties worden opgeslagen en opgehaald voor later gebruik. Zie de [eindhulplijn voor app-configuraties](./endpoints/app-configurations.md) voor meer informatie over het beheren van toepassingsconfiguraties in de API.
+Toepassingsconfiguraties staan toe dat referenties worden opgeslagen en opgehaald voor later gebruik. Zie de [eindhulplijn voor app-configuraties](./endpoints/app-configurations.md) voor meer informatie over het beheren van toepassingsconfiguraties in de API.
 
-## Gebeurtenissen van Audit
+## Controlegebeurtenissen
 
 Een auditgebeurtenis is een record van een specifieke wijziging in een andere tagbron die wordt gegenereerd op het moment dat de wijziging wordt aangebracht. Dit zijn systeemgebeurtenissen waarop kan worden geabonneerd door het gebruik van een callback functie.
 
@@ -99,7 +99,7 @@ Zie de [eindhandleiding voor auditgebeurtenissen](./endpoints/audit-events.md) v
 
 ## Callbacks
 
-Een callback is een bericht dat het Platform naar een gastheer URL verzendt wanneer een nieuwe controlegebeurtenis wordt geproduceerd. Zie de [callbacks eindgebruikergids](./endpoints/callbacks.md) om te leren hoe te om callbacks in API te beheren.
+Een callback is een bericht dat Platform naar een gastheer URL verzendt wanneer een nieuwe controlegebeurtenis wordt geproduceerd. Zie de [callbacks eindgebruikergids](./endpoints/callbacks.md) om te leren hoe te om callbacks in API te beheren.
 
 ## Notities
 
@@ -107,7 +107,7 @@ Notities zijn tekstuele annotaties die u aan bepaalde tagbronnen kunt toevoegen,
 
 ## Profiel
 
-Een profiel bevat alle informatie over de aangemelde gebruiker, met inbegrip van alle Adobe Orgs waartot zij behoren, de productprofielen zij tot binnen elk Org behoren, en de rechten die zij van elk productprofiel hebben.
+Een profiel bevat alle informatie over de aangemelde gebruiker, met inbegrip van alle Adobe Orgs waartot zij behoren, de productprofielen zij tot binnen elk Org behoren, en de rechten zij van elk productprofiel hebben.
 
 Zie de [overzichtstekeneindhulplijn](./endpoints/profile.md) voor informatie over het weergeven van deze informatie in de API.
 

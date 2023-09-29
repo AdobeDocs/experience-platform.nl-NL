@@ -12,10 +12,10 @@ ht-degree: 23%
 ---
 
 
-# Adobe Intelligente services {#intelligent-services}
+# Adobe Intelligente Diensten {#intelligent-services}
 
 - [Overzicht van intelligente services](home.md)
-- [Gegevens voorbereiden voor gebruik in intelligente services](data-preparation.md)
+- [Gegevens voorbereiden voor gebruik in Intelligente services](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Overzicht](attribution-ai/overview.md)
    - [Aan de slag met Attribution AI](attribution-ai/getting-started.md)
@@ -54,4 +54,4 @@ ht-degree: 23%
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Gegevensbeheer](customer-ai/cai-data-governance/data-governance.md)
       - [Beleid inzake governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

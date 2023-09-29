@@ -22,4 +22,4 @@ Door accountgegevens uit verschillende bronnen te bundelen, kunt u een volledig 
 
 ## Accountprofielviewer
 
-Met Real-Time CDP, B2B Edition, kunt u de gebruikersinterface van het Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie over het weergeven van accountprofielen in de gebruikersinterface van het Platform raadpleegt u de [gebruikersgids voor accountprofiel](account-profile-ui-guide.md).
+Met Real-Time CDP, B2B Edition, kunt u de gebruikersinterface van het Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie over het weergeven van accountprofielen in de interface van het platform raadpleegt u de [gebruikersgids voor accountprofiel](account-profile-ui-guide.md).

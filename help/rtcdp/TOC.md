@@ -7,7 +7,7 @@ user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernem
 source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 24%
+ht-degree: 27%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 24%
    * [Overzicht van beheer](administration/admin-overview.md)
 * Gegevenssets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
-   * [Gegevenskwaliteit op Platform](datasets/data-quality.md)
+   * [Gegevenskwaliteit op platform](datasets/data-quality.md)
 * Doelen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
    * [Doelen in Real-Time CDP B2B Edition](destinations/b2b.md)
@@ -70,6 +70,6 @@ ht-degree: 24%
    * Kwesties van gegevensgebruik door partners {#partner-data}
       * [Nieuwe klanten aantrekken en aanschaffen via support voor prospectie](/help/rtcdp/partner-data/prospecting.md)
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Erkenning door bezoekers met hulp van partners gebruiken om ervaringen op locatie aan te passen](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Door partners ondersteunde bezoekersherkenning gebruiken om ervaringen op de site te personaliseren](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Woordenlijst voor Experience Platform](https://www.adobe.com/go/platform-glossary-en)

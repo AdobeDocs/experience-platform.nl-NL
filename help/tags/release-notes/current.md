@@ -1,5 +1,5 @@
 ---
-title: Opmerkingen bij de release voor tags en gebeurtenissen doorsturen
+title: Opmerkingen bij de release voor tags en doorsturen van gebeurtenissen
 description: De nieuwste aanvullende informatie voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
@@ -28,7 +28,7 @@ De volgende nieuwe extensie is vrijgegeven:
 **Quick Stark Workflows (bèta)**
 
 Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. De volgende workflows zijn nu beschikbaar voor klanten als openbare bètaversie.
-* **[Meta-conversie-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Klanten die gebeurtenissen doorsturen, kunnen gebeurtenisgegevens, server-side naar Meta voor advertenties snel verzamelen en doorsturen in een paar eenvoudige stappen.
+* **[API voor metaconversie](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Gebruikers die gebeurtenissen doorsturen kunnen snel gebeurtenisgegevens, servergegevens naar Meta voor advertentieconversies in een paar eenvoudige stappen verzamelen en doorsturen.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Klanten kunnen de Mobile SDK snel implementeren en mobiele basisgebeurtenissen in slechts een paar eenvoudige stappen valideren.
 
 Nieuwe extensies zijn vrijgegeven:
@@ -54,13 +54,13 @@ Nieuwe extensies zijn vrijgegeven:
 
 ## 26 oktober 2022
 
-* **Gevoelige gegevensverwerking voor gegevensstromen**: De gegevensstromen gebruiken nu verscheidene technologieën van de Platform om gevoelige gegevens zoals die door verordeningen zoals de Wet van de Portabiliteit en van de Verantwoording van de Ziekteverzekering (HIPAA) worden afgedwongen adequaat te behandelen. Zie de sectie over [verwerking van gevoelige gegevens in gegevensstreams](../../datastreams/overview.md#sensitive) voor meer informatie .
+* **Gevoelige gegevensverwerking voor gegevensstromen**: Data streams maken nu gebruik van verschillende platformtechnologieën om gevoelige gegevens op de juiste manier te verwerken, zoals wordt voorgeschreven door verordeningen zoals de Health Insurance Portability and Accountability Act (HIPAA). Zie de sectie over [verwerking van gevoelige gegevens in gegevensstreams](../../datastreams/overview.md#sensitive) voor meer informatie .
 * **[!DNL Splunk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Splunk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Splunk] extensieoverzicht](../extensions/server/splunk/overview.md) voor meer informatie .
 * **[!DNL Zendesk]extensie voor het doorsturen van gebeurtenissen**: U kunt nu gegevens verzenden naar [!DNL Zendesk] met een [gebeurtenis doorsturen](../ui/event-forwarding/overview.md) extensie. Zie de [[!DNL Zendesk] extensieoverzicht](../extensions/server/zendesk/overview.md) voor meer informatie .
 
 ## 28 september 2022
 
-* **Adobe Experience Platform-integratie linker-nav**: Alle mogelijkheden die eerder exclusief waren aan de UI van de Inzameling van Gegevens (met inbegrip van markeringen en gebeurtenis het door:sturen) zijn nu ook beschikbaar door de linkernavigatie in UI van het Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform.
+* **Adobe Experience Platform-integratie linker-nav**: Alle mogelijkheden die voorheen exclusief waren voor de gebruikersinterface voor gegevensverzameling (inclusief tags en het doorsturen van gebeurtenissen) zijn nu ook beschikbaar via de linkernavigatie in de gebruikersinterface van het Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Platform.
 * **Toewijzing door gebruiker in tags en gebeurtenis doorsturen**: Wanneer een lijst van beschikbare eigenschappen in markeringen en gebeurtenis het door:sturen, toont elk vermeld bezit nu wanneer het het laatst werd bijgewerkt en door wie.
 * **[[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) voor gebeurtenis doorsturen**: U kunt nu gegevens verzenden naar de [!DNL Snapchat Conversions API] met een [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) extensie. Voor meer informatie over het verifiëren en gebruiken van API, verwijs naar [[!DNL Snapchat Marketing API] documentatie](https://marketingapi.snapchat.com/docs/conversion.html).
 
@@ -75,4 +75,4 @@ Nieuwe extensies zijn vrijgegeven:
 
 * [Google Data Layer-tagextensie](../extensions/client/google-data-layer/overview.md): Hiermee kunt u een Google-gegevenslaag gebruiken in de implementatie van tags.
 * [Google Ads Enhanced Conversions-gebeurtenis door:sturen extensie](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Hiermee kunt u uw Google Ads-conversies in real-time verbeteren.
-* [Mailchimp-gebeurtenis door:sturen, extensie](../extensions/server/mailchimp/overview.md): Verstuurt gebeurtenissen naar de Mailchimp Marketing-API die e-mails kan activeren voor Mailchimp-marketingcampagnes, -reizen of -transacties.
+* [Mailchimp-gebeurtenis door:sturen, extensie](../extensions/server/mailchimp/overview.md): Verstuurt gebeurtenissen naar de Mailchimp Marketing API die e-mails kan activeren voor marketingcampagnes, reizen of transacties in Mailchimp.

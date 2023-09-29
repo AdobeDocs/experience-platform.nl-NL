@@ -95,7 +95,7 @@ Als u een HTTP-geheim wilt maken, selecteert u **[!UICONTROL Simple HTTP]** van 
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Als u een OAuth 2-geheim wilt maken, selecteert u **[!UICONTROL OAuth 2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Geef in de onderstaande velden uw [[!UICONTROL Client ID] en [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] in UI is een aaneenschakeling tussen de gastheer van de vergunningsserver en de symbolische weg.
+Als u een geheim OAuth 2 wilt maken, selecteert u **[!UICONTROL OAuth 2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Geef in de onderstaande velden uw [[!UICONTROL Client ID] en [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] in UI is een aaneenschakeling tussen de gastheer van de vergunningsserver en de symbolische weg.
 
 ![OAuth 2-geheim](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -115,13 +115,13 @@ Als de verschuiving Vernieuwen bijvoorbeeld is ingesteld op de standaardwaarde v
 >
 >Als de verschuiving bijvoorbeeld is ingesteld op `28800` (8 uur) en het toegangstoken heeft een `expires_in` van `36000` (10 uur), zou de ruil mislukken omdat het resulterende verschil minder dan vier uur bedraagt.
 
-Als u klaar bent, selecteert u **[!UICONTROL Create Secret]** om het geheim te bewaren.
+Selecteer **[!UICONTROL Create Secret]** om het geheim te bewaren.
 
 ![OAuth 2-verschuiving opslaan](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
 ### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-Selecteer **[!UICONTROL OAuth 2 JWT]** van de **[!UICONTROL Type]** vervolgkeuzelijst.
+Als u een OAuth 2 JWT-geheim wilt maken, selecteert u **[!UICONTROL OAuth 2 JWT]** van de **[!UICONTROL Type]** vervolgkeuzelijst.
 
 ![De [!UICONTROL Create Secret] tabblad met het geheim van OAuth 2 JWT gemarkeerd in het dialoogvenster [!UICONTROL Type] vervolgkeuzelijst.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
@@ -129,7 +129,7 @@ Selecteer **[!UICONTROL OAuth 2 JWT]** van de **[!UICONTROL Type]** vervolgkeuze
 >
 >De enige [!UICONTROL Algorithm] die momenteel voor het ondertekenen van JWT wordt gesteund is RS256.
 
-Geef in de onderstaande velden uw [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL]Selecteer vervolgens de [!UICONTROL Algorithm] in de vervolgkeuzelijst. Voer vervolgens de [!UICONTROL Private Key Id]en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] veld is geen verplicht veld. Wanneer een waarde wordt opgegeven, wordt de JWT uitgewisseld met een toegangstoken. Het geheim wordt vernieuwd volgens de `expires_in` kenmerk van het antwoord en de [!UICONTROL Refresh Offset] waarde. Als er geen waarde wordt opgegeven, wordt de JWT gebruikt als geheim dat naar de rand wordt geduwd. De JWT wordt vernieuwd volgens de [!UICONTROL TTL] en [!UICONTROL Refresh Offset] waarden.
+Geef in de onderstaande velden uw [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL]en selecteert u vervolgens de [!UICONTROL Algorithm] in de vervolgkeuzelijst. Voer vervolgens de [!UICONTROL Private Key Id]en uw [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) voor uw OAuth integratie. De [!UICONTROL Token URL] veld is geen verplicht veld. Wanneer een waarde wordt opgegeven, wordt de JWT uitgewisseld met een toegangstoken. Het geheim wordt vernieuwd volgens de `expires_in` kenmerk van het antwoord en de [!UICONTROL Refresh Offset] waarde. Als er geen waarde wordt opgegeven, wordt de JWT gebruikt als geheim dat naar de rand wordt geduwd. De JWT wordt vernieuwd volgens de [!UICONTROL TTL] en [!UICONTROL Refresh Offset] waarden.
 
 ![De [!UICONTROL Create Secret] met een selectie van invoervelden gemarkeerd.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
@@ -149,7 +149,7 @@ Als de verschuiving Vernieuwen bijvoorbeeld is ingesteld op de standaardwaarde v
 >
 >Als de verschuiving bijvoorbeeld is ingesteld op `1800` (30 minuten) en het toegangstoken heeft een `expires_in` van `2700` (45 minuten), zou de ruil mislukken omdat het resulterende verschil minder dan 30 minuten bedraagt.
 
-Als u klaar bent, selecteert u **[!UICONTROL Create Secret]** om het geheim te bewaren.
+Selecteer **[!UICONTROL Create Secret]** om het geheim te bewaren.
 
 ![De [!UICONTROL Create Secret] tabmarkering [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
@@ -160,7 +160,7 @@ Als u een Google OAuth 2-geheim wilt maken, selecteert u **[!UICONTROL Google OA
 * [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
 * [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
-Als u klaar bent, selecteert u **[!UICONTROL Create Secret]**.
+Selecteer **[!UICONTROL Create Secret]**.
 
 ![Google OAuth 2-geheim](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
@@ -184,7 +184,7 @@ Nadat u geheimen voor een eigenschap hebt gemaakt, vindt u deze in het menu **[!
 
 In het volgende scherm kunt u de naam en referenties voor het geheim wijzigen.
 
-![Bewerken, geheim](../../images/ui/event-forwarding/secrets/edit-secret-config.png)
+![Geheime bewerking bewerken](../../images/ui/event-forwarding/secrets/edit-secret-config.png)
 
 >[!NOTE]
 >
@@ -210,7 +210,7 @@ Om een bestaand geheim in te schrappen  **[!UICONTROL Secrets]** in de werkruimt
 
 Om gebruik te maken van een geheim in gebeurtenis die door:sturen, moet u eerst tot een [gegevenselement](../managing-resources/data-elements.md) dat verwijst naar het geheim zelf. Na het bewaren van het gegevenselement, kunt u het in gebeurtenis omvatten door:sturen [regels](../managing-resources/rules.md) en voegt deze regels toe aan een [bibliotheek](../publishing/libraries.md), die op hun beurt als een [build](../publishing/builds.md).
 
-Selecteer bij het maken van het gegevenselement de optie **[!UICONTROL Core]** extensie selecteert u vervolgens **[!UICONTROL Secret]** voor het gegevenstype data. Het juiste paneel werkt en verstrekt dropdown controles bij om tot drie geheimen aan het gegevenselement toe te wijzen: één voor [!UICONTROL Development], [!UICONTROL Staging], en [!UICONTROL Production] respectievelijk.
+Selecteer bij het maken van het gegevenselement de optie **[!UICONTROL Core]** extensie selecteert u vervolgens **[!UICONTROL Secret]** voor het elementtype data. Het rechterpaneel werkt bij en biedt vervolgkeuzemenu&#39;s om maximaal drie geheimen toe te wijzen aan het gegevenselement: één voor [!UICONTROL Development], [!UICONTROL Staging], en [!UICONTROL Production] respectievelijk.
 
 ![Gegevenselement](../../images/ui/event-forwarding/secrets/data-element.png)
 

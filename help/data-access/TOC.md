@@ -18,4 +18,4 @@ ht-degree: 57%
 - [API voor gegevenstoegang](api.md)
 - Lesbestanden {#tutorials}
    - [Gegevenssetgegevens weergeven](tutorials/dataset-data.md)
-- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

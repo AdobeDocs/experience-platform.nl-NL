@@ -21,7 +21,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Een aangepast dashboard maken
 
-Als u eerst een aangepast dashboard wilt maken, navigeert u naar het dashboardoverzicht. Selecteren **[!UICONTROL Dashboards]** van de linkernavigatie van het Platform UI gevolgd door **[!UICONTROL Create dashboard]**.
+Als u eerst een aangepast dashboard wilt maken, navigeert u naar het dashboardoverzicht. Selecteren **[!UICONTROL Dashboards]** van de linkernavigatie van Platform UI gevolgd door **[!UICONTROL Create dashboard]**.
 
 ![Het dashboardoverzicht met dashboards in de linkernavigatie en &quot;creëren dashboard&quot;benadrukte.](./images/user-defined-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ De [!UICONTROL Select data model] wordt weergegeven. Selecteer een gegevensmodel
 
 >[!TIP]
 >
->Selecteer het informatiepictogram (![Een informatiepictogram.](./images/user-defined-dashboards/info-icon.png)) om de volledige naam van het gegevensmodel te zien als het te lang is om in de dataroil te worden weergegeven.
+>Selecteer het informatiepictogram (![Een informatiepictogram.](./images/user-defined-dashboards/info-icon.png)) om de volledige naam van het gegevensmodel te zien als het te lang is om in de dataroil weer te geven.
 
 ![Het dialoogvenster Gegevens selecteren.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -90,7 +90,7 @@ Selecteer een tabel in de lijst in de linkertrack om gegevens voor de widget op 
 
 De widgetcomposer is nu gevuld met gegevens uit de door u gekozen tabel.
 
-Het gegevensmodel en de momenteel geselecteerde tabel worden boven aan de linkertrack weergegeven. De kenmerken die beschikbaar zijn om de widget te maken, worden in het dialoogvenster [!UICONTROL Attributes] kolom. U kunt de zoekbalk gebruiken om naar kenmerken te zoeken in plaats van door de lijst te schuiven, of u kunt het gekozen gegevensmodel wijzigen door het potloodpictogram te selecteren (![Potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) in het linkerspoor.
+Het gegevensmodel en de momenteel geselecteerde tabel worden boven aan de linkertrack weergegeven. De kenmerken die beschikbaar zijn om de widget te maken, worden in het dialoogvenster [!UICONTROL Attributes] kolom. U kunt de zoekbalk gebruiken om naar kenmerken te zoeken in plaats van door de lijst te schuiven, of u kunt het gekozen gegevensmodel wijzigen door het potloodpictogram te selecteren (![Potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) in de linkerspoorstaaf.
 
 ![Een widget die is gevuld met gegevens binnen de widgetcomposer.](./images/user-defined-dashboards/populated-widget-composer.png)
 
@@ -100,7 +100,7 @@ Selecteer het pictogram Toevoegen (![Een pictogram voor toevoegen.](./images/use
 
 >[!TIP]
 >
->Als u de rangschikking van de X- en Y-as wilt omdraaien, selecteert u het pictogram Pijl-omhoog en Pijl-omlaag (![Het pictogram Pijl-omhoog en Pijl-omlaag.](./images/user-defined-dashboards/switch-axis-icon.png)) om van regeling te veranderen.
+>Als u de rangschikking van de X- en Y-as wilt omdraaien, selecteert u het pictogram Pijl-omhoog en Pijl-omlaag (![Het pictogram pijl-omhoog en pijl-omlaag.](./images/user-defined-dashboards/switch-axis-icon.png)) om van regeling te veranderen.
 
 ![De widgetcomposer met het vervolgkeuzemenu voor het invoegpictogram gemarkeerd.](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -154,7 +154,7 @@ Om ervoor te zorgen dat elke vraag voor een Adobe Real-time Customer Data Platfo
 
 Nadat u een widget hebt gemaakt, kunt u de gehele widget dupliceren en de kenmerken ervan aanpassen om een unieke widget te maken zonder dat u helemaal opnieuw hoeft te beginnen. Als u een widget wilt dupliceren, navigeert u eerst naar het dashboardoverzicht. Selecteer vervolgens de naam van het dashboard in de inventarislijst. Het aangepaste dashboard wordt weergegeven.
 
-![De gebruikersinterface van het Platform met dashboards en een naam van het aangepaste dashboard benadrukt.](./images/user-defined-dashboards/dashbaord-inventory.png)
+![De interface van het platform met dashboards en een benadrukte naam van het douanedashboard.](./images/user-defined-dashboards/dashbaord-inventory.png)
 
 Selecteer het potloodpictogram (![Een potloodpictogram.](./images/user-defined-dashboards/edit-icon.png)) rechtsboven in het aangepaste dashboard om naar de bewerkingsmodus te gaan.
 

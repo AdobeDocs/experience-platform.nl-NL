@@ -19,7 +19,7 @@ Op het dashboard voor bewaking ziet u een visuele weergave van de activiteit van
 
 ## Aan de slag {#getting-started}
 
-- [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
+- [Gegevensstromen](../home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens verplaatsen over het hele platform. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
    - [Dataflow-uitvoering](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
 - [Identiteitsservice](../../identity-service/home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -54,7 +54,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | Identiteitswaarden | Beschrijving |
 | ---------------- | ----------- |
 | **[!UICONTROL Records received]** | Het aantal records dat wordt ontvangen van data Lake. |
-| **[!UICONTROL Records failed]** | Het aantal records dat niet in het Platform is opgenomen als gevolg van fouten in de gegevens. |
+| **[!UICONTROL Records failed]** | Het aantal verslagen die niet in Platform wegens fouten in de gegevens werden opgenomen. |
 | **[!UICONTROL Records skipped]** | Het aantal records dat is ingesloten, maar niet in [!DNL Identity Service] omdat de recordrij slechts één id bevat. |
 | **[!UICONTROL Records ingested]** | Het aantal records waarin [!DNL Identity Service]. |
 | **[!UICONTROL Identities added]** | Het aantal netto nieuwe id&#39;s dat wordt toegevoegd aan [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Dataset]** | De naam van de dataset die dataflow opneemt aan. |
 | **[!UICONTROL Source name]** | De naam van de bron waartoe de gegevensstroom behoort. |
 | **[!UICONTROL Records received]** | Het aantal records dat wordt ontvangen van data Lake. |
-| **[!UICONTROL Records failed]** | Het aantal records dat niet in het Platform is opgenomen als gevolg van fouten in de gegevens. |
+| **[!UICONTROL Records failed]** | Het aantal verslagen die niet in Platform wegens fouten in de gegevens werden opgenomen. |
 | **[!UICONTROL Records skipped]** | Het aantal records dat is ingesloten, maar niet in [!DNL Identity Service] omdat de recordrij slechts één id bevat. |
 | **[!UICONTROL Records ingested]** | Het aantal records waarin [!DNL Identity Service]. |
 | **[!UICONTROL Total records]** | Het totale aantal records, inclusief mislukte records, overgeslagen records, toegevoegde identiteiten en gedupliceerde records. |
@@ -91,7 +91,7 @@ Filterpictogram selecteren ![filter](../assets/ui/monitor-identities/filter.png)
 
 ![Het filterpictogram wordt gemarkeerd. Als u dit pictogram selecteert, kunt u details weergeven over de geselecteerde gegevensstroom.](../assets/ui/monitor-identities/dataflows-filter.png)
 
-De [!UICONTROL Dataflow run details] pagina geeft meer informatie over uw [!DNL Identity] dataflow-run, inclusief de organisatie-id en de uitvoerings-id voor dataflow. Op deze pagina ziet u ook de bijbehorende foutcode en het foutbericht van [!DNL Identity Service], indien er fouten optreden in het innameproces.
+De [!UICONTROL Dataflow run details] pagina geeft meer informatie over uw [!DNL Identity] dataflow-run, inclusief de organisatie-id en de uitvoerings-id voor de dataflow. Op deze pagina ziet u ook de bijbehorende foutcode en het foutbericht van [!DNL Identity Service], indien er fouten optreden in het innameproces.
 
 ![Er wordt een dashboard weergegeven met gedetailleerde informatie over de geselecteerde gegevensstroom.](../assets/ui/monitor-identities/dataflow-run-details.png)
 
@@ -100,7 +100,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | Metrisch | Beschrijving |
 | -------| ----------- |
 | **[!UICONTROL Records received]** | Het aantal records dat wordt ontvangen van data Lake. |
-| **[!UICONTROL Records failed]** | Het aantal records dat niet in het Platform is opgenomen als gevolg van fouten in de gegevens. |
+| **[!UICONTROL Records failed]** | Het aantal verslagen die niet in Platform wegens fouten in de gegevens werden opgenomen. |
 | **[!UICONTROL Records skipped]** | Het aantal records dat is ingesloten, maar niet in [!DNL Identity Service] omdat de recordrij slechts één id bevat. |
 | **[!UICONTROL Records ingested]** | Het aantal records waarin [!DNL Identity Service]. |
 | **[!UICONTROL Identities added]** | Het aantal netto nieuwe id&#39;s dat wordt toegevoegd aan [!DNL Identity Service]. |

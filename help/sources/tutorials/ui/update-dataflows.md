@@ -20,17 +20,17 @@ Deze zelfstudie biedt u stappen voor het bijwerken van een bestaande gegevensstr
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-## Gegevensstromen bijwerken {#update-dataflows}
+## Dataflows bijwerken {#update-dataflows}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="Vervaldatum gegevensset"
 >abstract="Deze kolom wijst op het aantal dagen dat de doeldataset heeft verlaten alvorens het automatisch verloopt.<br>Een dataflow zal ontbreken als de doeldataset is verlopen. Om dataflow te verhinderen te ontbreken, zorg ervoor dat een doeldataset wordt geplaatst om op de correcte datum te verlopen. Raadpleeg de documentatie voor informatie over het bijwerken van vervaldatums."
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. Selecteren **[!UICONTROL Dataflows]** in de bovenste koptekst om een lijst met bestaande gegevensstromen weer te geven.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. Selecteren **[!UICONTROL Dataflows]** in de bovenste koptekst om een lijst met bestaande gegevensstromen weer te geven.
 
 ![catalogus](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -42,13 +42,13 @@ Selecteer het filterpictogram om door de lijst te sorteren ![filter](../../image
 
 Het deelvenster Sorteren bevat een lijst met alle beschikbare bronnen. U kunt meer dan één bron in de lijst selecteren om tot een gefilterde selectie van gegevensstromen toegang te hebben die tot verschillende bronnen behoren.
 
-Selecteer de bron waarmee u wilt werken om een lijst met de bestaande gegevensstromen te zien. Nadat u de gegevensstroom hebt geïdentificeerd die u wilt bijwerken, selecteert u de ellipsen (`...`) naast de naam van de gegevensstroom.
+Selecteer de bron waarmee u wilt werken om een lijst met de bestaande gegevensstromen weer te geven. Nadat u de gegevensstroom hebt geïdentificeerd die u wilt bijwerken, selecteert u de ellipsen (`...`) naast de naam gegevensstroom.
 
-![bron bewerken](../../images/tutorials/update-dataflows/edit-source.png)
+![bewerkingsbron](../../images/tutorials/update-dataflows/edit-source.png)
 
 Er wordt een vervolgkeuzemenu weergegeven waarin u opties kunt opgeven om de gegevensstroom die u hebt geselecteerd bij te werken. Van hier, kunt u verkiezen om de de kaartreeksen van een dataflow en innameprogramma bij te werken. U kunt ook opties selecteren om de gegevensstroom te inspecteren in het controledashboard, u te abonneren op waarschuwingen en de gegevensstroom uit te schakelen of te verwijderen.
 
-Selecteer **[!UICONTROL Update dataflow]**.
+Als u de gegevens van uw gegevensstroom wilt bijwerken, selecteert u **[!UICONTROL Update dataflow]**.
 
 ![update-dataflow](../../images/tutorials/update-dataflows/update-dataflow.png)
 
@@ -96,7 +96,7 @@ Selecteer op de pagina met gegevensstromen de ovalen (`...`) naast de naam van d
 
 ![bewerken volgens schema](../../images/tutorials/update-dataflows/edit-schedule.png)
 
-De **[!UICONTROL Edit schedule]** bevat opties waarmee u de invoerfrequentie en de intervalsnelheid van uw gegevensstroom kunt bijwerken. Als u de bijgewerkte frequentie- en intervalwaarden hebt ingesteld, selecteert u **[!UICONTROL Save]**.
+De **[!UICONTROL Edit schedule]** bevat opties waarmee u de innamefrequentie en de intervalsnelheid van uw gegevensstroom kunt bijwerken. Als u de bijgewerkte frequentie- en intervalwaarden hebt ingesteld, selecteert u **[!UICONTROL Save]**.
 
 ![planning-pop-up](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 

@@ -30,11 +30,11 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 De aanvraagindelingen variëren afhankelijk van [!DNL Platform] API die wordt gebruikt. De beste manier om te leren hoe te om uw API vraag te structureren is door samen met de voorbeelden te volgen die in de documentatie voor specifiek worden verstrekt [!DNL Platform] service die u gebruikt.
 
-Voor meer informatie over het opmaken van API-aanvragen raadpleegt u de gids Platform API aan de slag [lees voorbeeld API vraag](./api-guide.md#sample-api) sectie.
+Voor meer informatie over het opmaken van API-aanvragen raadpleegt u de gids Aan de slag met de platform-API [lees voorbeeld API vraag](./api-guide.md#sample-api) sectie.
 
 ## Wat is mijn organisatie? {#what-is-my-ims-organization}
 
-Een organisatie is een Adobe-representatie van een klant. Om het even welke vergunning gegeven Adobe oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een organisatie recht heeft op [!DNL Experience Platform], kan het toegang toewijzen aan ontwikkelaars. De organisatie-id (`x-gw-ims-org-id`) staat voor de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als header in alle API-aanvragen. Deze id is te vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een bepaalde integratie om de id onder te zoeken **Client Credentials**. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
+Een organisatie is een Adobe vertegenwoordiging van een klant. Om het even welke vergunning gegeven oplossingen van de Adobe zijn geïntegreerd met deze klantenorganisatie. Wanneer een organisatie recht heeft op [!DNL Experience Platform], kan het toegang toewijzen aan ontwikkelaars. De organisatie-id (`x-gw-ims-org-id`) staat voor de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als header in alle API-aanvragen. Deze id is te vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in de **Integraties** tabblad, navigeert u naar de **Overzicht** sectie voor een bepaalde integratie om de id onder te zoeken **Client Credentials**. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 
@@ -64,7 +64,7 @@ Veel PATCH-bewerkingen in [!DNL Platform] APIs-gebruik [JSON-aanwijzer](https://
 
 ## Mag ik Postman gebruiken om vraag te maken aan [!DNL Platform] API&#39;s? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) is een nuttig hulpmiddel om vraag aan RESTful APIs te visualiseren. De [Aan de slag-handleiding voor Platform-API](api-guide.md) bevat een video en instructies voor het importeren van Postman-verzamelingen. Bovendien wordt een lijst van de inzamelingen van Postman voor elke dienst verstrekt.
+[Postman](https://www.postman.com/) is een nuttig hulpmiddel om vraag aan RESTful APIs te visualiseren. De [Aan de slag-handleiding voor platform-API](api-guide.md) bevat een video en instructies voor het importeren van Postman-verzamelingen. Bovendien wordt een lijst van de inzamelingen van Postman voor elke dienst verstrekt.
 
 ## Wat zijn de systeemvereisten voor [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
@@ -200,7 +200,7 @@ Dit foutbericht wordt weergegeven wanneer een POST-, PUT- of PATCH-aanvraag onge
 
 Dit foutbericht wordt weergegeven in een van de twee onderstaande gevallen:
 - Wanneer een onjuiste of onjuist gevormde organisatie-id-header (`x-gw-ims-org-id`) wordt doorgegeven in een API-aanvraag. Zorg ervoor dat de juiste id van uw organisatie is opgenomen voordat u het opnieuw probeert.
-- Wanneer uw account (weergegeven door de opgegeven verificatiereferenties) niet is gekoppeld aan een productprofiel voor Experience Platform. Voer de volgende stappen uit [toegangsreferenties genereren](./api-authentication.md#authentication-for-each-session) in de Platform API-verificatiezelfstudie om Platform toe te voegen aan uw account en uw verificatiegegevens dienovereenkomstig bij te werken.
+- Wanneer uw account (weergegeven door de opgegeven verificatiereferenties) niet is gekoppeld aan een productprofiel voor Experience Platform. Voer de volgende stappen uit [toegangsreferenties genereren](./api-authentication.md#authentication-for-each-session) in de API van het Platform authentificatiezelfstudie om Platform aan uw rekening toe te voegen en uw authentificatiegeloofsbrieven dienovereenkomstig bij te werken.
 
 ## Servicemap voor problemen {#service-troubleshooting-directory}
 

@@ -15,7 +15,7 @@ ht-degree: 14%
 
 # Data Science-werkruimte {#data-science-workspace}
 
-* [Overzicht van de Data Science Workspace](home.md)
+* [Overzicht van de Data Science-werkruimte](home.md)
 * [Toegang tot en functies van Data Science Workspace](access-features-dsw.md)
 * [Analyse van de Data Science Workspace](walkthrough.md)
 * JupyterLab-laptops {#jupyterlab}
@@ -34,7 +34,7 @@ ht-degree: 14%
    * [Modellen](api/models.md)
    * [MLServices](api/mlservices.md)
    * [Inzichten](api/insights.md)
-   * [Aanhangsel](api/appendix.md)
+   * [Bijlage](api/appendix.md)
 * Vooraf gebouwde recepten {#pre-built-recipes}
    * [Recept voor productaanbevelingen](pre-built-recipes/product-recommendations.md)
    * [Voorspelling van productaankoop](pre-built-recipes/product-purchase-prediction.md)
@@ -42,9 +42,9 @@ ht-degree: 14%
 * Model Authoring {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Een functiepijpleiding maken](authoring/feature-pipeline.md)
-   * [Model authoring met de SDK van het Platform (Python)](authoring/platform-sdk.md)
+   * [Model authoring met de Platform SDK (Python)](authoring/platform-sdk.md)
    * [Toegang tot Python-gegevens](authoring/python.md)
-   * [Toegang tot Vonk-gegevens](authoring/spark.md)
+   * [Toegang tot Vonk](authoring/spark.md)
 * Zelfstudies over modellen en recept {#models-recipes}
    * [Een model voor machinaal leren maken en publiceren](models-recipes/create-publish-model.md)
    * [De demo Luma-schema&#39;s en gegevenssets maken](models-recipes/create-luma-data.md)
@@ -64,4 +64,4 @@ ht-degree: 14%
    * [Geautomatiseerde training en scoring op een service (UI) plannen](models-recipes/schedule-models-ui.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

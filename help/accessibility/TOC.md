@@ -14,7 +14,7 @@ ht-degree: 50%
 
 * [Overzicht van toegankelijkheid](home.md)
 * [Toegankelijkheidsfuncties](features.md)
-* [Aangepaste toegankelijkheid voor Platform](custom.md)
-* [Documentatie Platform](https://experienceleague.adobe.com/docs/experience-platform.html)
-* [Overzicht van Platform](https://www.adobe.com/go/platform-overview-en)
-* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Aangepaste toegankelijkheid voor platform](custom.md)
+* [Platformdocumentatie](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [Overzicht van platform](https://www.adobe.com/go/platform-overview-en)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

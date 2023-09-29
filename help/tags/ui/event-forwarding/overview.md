@@ -20,7 +20,7 @@ ht-degree: 2%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Door:sturen van gebeurtenissen in Adobe Experience Platform staat u toe om verzamelde gebeurtenisgegevens naar een bestemming voor server-zijverwerking te verzenden. Het doorsturen van gebeurtenissen vermindert het gewicht van de webpagina en de toepassing doordat Adobe Experience Platform Edge Network wordt gebruikt om taken uit te voeren die normaal op de client worden uitgevoerd. Geïmplementeerd op een gelijkaardige manier aan markeringen, gebeurtenis die regels door:sturen kan gegevens omzetten en verzenden naar nieuwe bestemmingen, maar in plaats van het verzenden van dit gegeven van een cliënttoepassing zoals Webbrowser, wordt het verzonden van Adobe servers.
+Door:sturen van gebeurtenissen in Adobe Experience Platform staat u toe om verzamelde gebeurtenisgegevens naar een bestemming voor server-zijverwerking te verzenden. Het doorsturen van gebeurtenissen vermindert het gewicht van de webpagina en de toepassing doordat Adobe Experience Platform Edge Network wordt gebruikt om taken uit te voeren die normaal op de client worden uitgevoerd. Geïmplementeerd op een gelijkaardige manier aan markeringen, gebeurtenis die regels door:sturen kan gegevens omzetten en verzenden naar nieuwe bestemmingen, maar in plaats van het verzenden van dit gegeven van een cliënttoepassing zoals Webbrowser, wordt het verzonden van de servers van de Adobe.
 
 Dit document biedt een overzicht op hoog niveau van het doorsturen van gebeurtenissen in Platform.
 
@@ -49,15 +49,15 @@ In termen van configuratie, gebruikt het door:sturen van gebeurtenissen veel van
 * Tags **verzamelingen** gebeurtenisgegevens van een website of een systeemeigen mobiele toepassing en deze naar Platform Edge Network verzenden.
 * Gebeurtenis doorsturen **send** inkomende gebeurtenisgegevens van het Netwerk van de Rand van het Platform aan een eindpunt dat een definitieve bestemming of een eindpunt vertegenwoordigt dat gegevens verstrekt die u de originele nuttige lading wilt verrijken met.
 
-Terwijl de markeringen gebeurtenisgegevens direct van uw plaats of inheemse mobiele toepassing gebruikend het Web van het Platform en Mobiele SDKs verzamelt, vereist gebeurtenis het door:sturen gebeurtenisgegevens om reeds door het Netwerk van de Rand van het Platform worden verzonden om het naar bestemmingen door te sturen. Met andere woorden, moet u het Web van het Platform of Mobiele SDK op uw digitale bezit (of door markeringen of het gebruiken van ruwe code) uitvoeren om gebeurtenis te gebruiken door:sturen.
+Terwijl de markeringen gebeurtenisgegevens direct van uw plaats of inheemse mobiele toepassing gebruikend het Web van het Platform en Mobiele SDKs verzamelt, vereist gebeurtenis het door:sturen gebeurtenisgegevens om reeds door het Netwerk van de Rand van het Platform worden verzonden om het aan bestemmingen door te sturen. Met andere woorden, moet u het Web van het Platform of Mobiele SDK van het Platform op uw digitale bezit (of door markeringen of het gebruiken van ruwe code) uitvoeren om gebeurtenis te gebruiken door:sturen.
 
 ### Properties {#properties}
 
-Het door:sturen van de gebeurtenis handhaaft zijn eigen opslag eigenschappen los van markeringen, die u in de UI van het Experience Platform of UI van de Inzameling van Gegevens kunt bekijken door te selecteren **[!UICONTROL Event Forwarding]** in de linkernavigatie.
+Het door:sturen van de gebeurtenis handhaaft zijn eigen opslag van eigenschappen los van markeringen, die u in de UI van het Experience Platform of UI van de Inzameling van Gegevens kunt bekijken door te selecteren **[!UICONTROL Event Forwarding]** in de linkernavigatie.
 
 ![Eigenschappen voor het doorsturen van gebeurtenissen in de gebruikersinterface voor gegevensverzameling](../../images/ui/event-forwarding/overview/properties.png)
 
-Lijst met eigenschappen voor het doorsturen van gebeurtenissen **[!UICONTROL Edge]** als hun platform. Ze maken geen onderscheid tussen web en mobiele apparaten omdat ze alleen gegevens verwerken die zijn ontvangen van Platform Edge Network, dat zelf gebeurtenisgegevens kan ontvangen van zowel internet- als mobiele platforms.
+Lijst met eigenschappen voor het doorsturen van gebeurtenissen **[!UICONTROL Edge]** als hun platform. Ze maken geen onderscheid tussen web en mobiele apparaten, omdat ze alleen gegevens verwerken die zijn ontvangen van Platform Edge Network, dat zelf gebeurtenisgegevens kan ontvangen van zowel internet- als mobiele platforms.
 
 ### Extensies {#extensions}
 
@@ -71,9 +71,9 @@ De typen gegevenselementen die beschikbaar zijn in het doorsturen van gebeurteni
 
 Terwijl de gegevenselementen zelf worden gecreeerd en gevormd de zelfde manier in gebeurtenis door:sturen aangezien zij voor markeringen zijn, zijn er sommige belangrijke syntaxisverschillen wanneer het over komt hoe zij gegevens van het Netwerk van de Rand van het Platform van verwijzingen voorzien.
 
-#### Verwijzen naar gegevens van het Netwerk van de Rand van het Platform {#data-element-path}
+#### Verwijzen naar gegevens van Platform Edge Network {#data-element-path}
 
-Als u wilt verwijzen naar gegevens van Platform Edge Network, moet u een gegevenselement maken dat een geldig pad naar die gegevens biedt. Selecteer **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Path]** voor het type.
+Als u wilt verwijzen naar gegevens van Platform Edge Network, moet u een gegevenselement maken dat een geldig pad naar die gegevens biedt. Selecteer bij het maken van het gegevenselement in de interface **[!UICONTROL Core]** voor de verlenging en **[!UICONTROL Path]** voor het type.
 
 De **[!UICONTROL Path]** waarde voor het gegevenselement moet het patroon volgen `arc.event.{ELEMENT}` (bijvoorbeeld: `arc.event.xdm.web.webPageDetails.URL`). Dit pad moet correct zijn opgegeven om gegevens te kunnen verzenden.
 
