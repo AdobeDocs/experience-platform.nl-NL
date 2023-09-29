@@ -3,9 +3,9 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## (bèta) Dataset exportbestemmingen {#dataset-export-destinations}
+## Dataset-exportdoelen {#dataset-export-destinations}
 
 Sommige bestemmingen van de wolkenopslag in de catalogus van bestemmingen steunen dataset de uitvoer. Gebruik deze doelen om onbewerkte gegevenssets te exporteren naar opslaglocaties in de cloud.
 
@@ -81,19 +81,19 @@ Platform maakt gebruik van de kracht en flexibiliteit van tagbeheer, zodat u tag
 
 >[!TIP]
 >
->Raadpleeg voor meer informatie over extensies van tags, waaronder gebruiksgevallen en de manier waarop u deze kunt vinden in de interface de [overzicht van tagextensies](./catalog/launch-extensions/overview.md).
+>Raadpleeg voor meer informatie over extensies van tags, waaronder gebruik en het zoeken van deze extensies in de interface de [overzicht van tagextensies](./catalog/launch-extensions/overview.md).
 
-Met uitbreidingen worden onbewerkte gebeurtenisgegevens doorgestuurd naar verschillende typen doelen. Extensies beschouwen als een **Gebeurtenis doorsturen** type bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Verkrijg inzicht in verpersoonlijkingsuitbreiding](./catalog/personalization/gainsight.md) of de [Bevestiging Stem van de uitbreiding van de Klant](./catalog/voice/confirmit-digital-feedback.md).
+Met extensies kunt u onbewerkte gebeurtenisgegevens doorsturen naar verschillende typen doelen. Extensies beschouwen als een **Gebeurtenis doorsturen** type bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Verkrijg inzicht in verpersoonlijkingsuitbreiding](./catalog/personalization/gainsight.md) of de [Bevestiging Stem van de uitbreiding van de Klant](./catalog/voice/confirmit-digital-feedback.md).
 
 ![Extensies labelen in vergelijking met andere doelen](./assets/common/launch-and-other-destinations.png)
 
-## Wanneer gebruikt u verbindingen en extensies {#when-to-use}
+## Wanneer gebruiken verbindingen en uitbreidingen {#when-to-use}
 
 Als een markeerteken kunt u een combinatie van verbindingen en extensies gebruiken om uw gebruiksproblemen aan te pakken.
 
 Verbindingen zijn nuttig wanneer het noodzakelijk is om een volledig gecentraliseerd klantprofiel of een klantenpubliek voor activering te gebruiken. Gebruik bijvoorbeeld verbindingen als u gedragsgegevens van een analysesysteem met geüploade CRM-gegevens samenvoegt om een gebruiker voor een bepaald publiek te kwalificeren voordat u een gepersonaliseerd bericht aan die gebruiker afgeeft.
 
-Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeling te activeren of om segmentatie uit te voeren in een externe omgeving. Bijvoorbeeld, als de gedragsgegevens aan een extern systeem moeten worden door:sturen zonder aan andere gegevensbronnen op dossier voor een bepaalde gebruiker worden aangesloten.
+Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeling te activeren of om segmentatie uit te voeren in een externe omgeving. Bijvoorbeeld, als de gedragsgegevens aan een extern systeem moeten worden door:sturen zonder aan andere gegevensbronnen op dossier voor een bepaalde gebruiker te worden aangesloten.
 
 ## Doelcategorieën {#categories}
 

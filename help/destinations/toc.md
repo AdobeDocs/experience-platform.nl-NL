@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
+source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1165'
 ht-degree: 2%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 2%
    * [Doelgegevens bijwerken](./api/update-destination-dataflows.md)
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
-   * [(bètaversie) Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
+   * [Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
-   * De publieksgegevens van Activa aan bestemmingen{#activate}
+   * Gegevens naar doelen activeren{#activate}
       * [Overzicht van activering](./ui/activation-overview.md)
       * [Het publiek activeren voor streaming doelpubliek voor exportdoelen](./ui/activate-segment-streaming-destinations.md)
       * [Stimulansen voor het streamen van exportdoelen voor profielen activeren](./ui/activate-streaming-profile-destinations.md)
@@ -42,7 +42,7 @@ ht-degree: 2%
       * [Het publiek activeren voor verpersoonlijkingsdoelen van randen](./ui/activate-edge-personalization-destinations.md)
       * [Activeren het potentiële publiek aan bestemmingen](./ui/activate-prospect-audiences.md)
       * [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
-      * [(Bèta) de datasets van de uitvoer gebruikend Experience Platform UI](./ui/export-datasets.md)
+      * [Gegevenssets exporteren met de interface van het Experience Platform](./ui/export-datasets.md)
       * [(bèta) Gebruik de laatste kwalificatietijd XDM attribuut in de nieuwe bètawolkenopslagbestemmingen](./ui/activate-last-qualification-time.md)
       * [Arrayvelden exporteren naar cloudopslagdoelen](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)

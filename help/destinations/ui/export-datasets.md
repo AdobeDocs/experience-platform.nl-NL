@@ -1,26 +1,65 @@
 ---
-title: (bèta) Datasets exporteren naar Cloud Storage-doelen
+title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
 
-# (bèta) Gegevenssets exporteren naar cloudopslagbestemmingen
+# Gegevenssets exporteren naar cloudopslagbestemmingen
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* De functionaliteit om datasets uit te voeren is momenteel in Bèta en niet beschikbaar aan alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
->* Deze bètafunctionaliteit ondersteunt de export van gegevens van de eerste generatie, zoals gedefinieerd in de Real-time Customer Data Platform [productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Premiere of Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
 
 In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage] door het Experience Platform UI te gebruiken.
 
 U kunt de Experience Platform APIs ook gebruiken om datasets uit te voeren. Lees de [API-zelfstudie voor exporteren](/help/destinations/api/export-datasets.md) voor meer informatie .
+
+## Beschikbare gegevensbestanden voor exporteren {#datasets-to-export}
+
+De gegevenssets die u kunt exporteren, variëren op basis van de toepassing van het Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de laag (Premier of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
+
+Begrijp van de lijst hieronder welke datasettypes u afhankelijk van uw toepassing, productrij, en om het even welke gekochte toe:voegen-ons kunt uitvoeren:
+
+<table>
+<thead>
+  <tr>
+    <th>Toepassing/invoegtoepassing</th>
+    <th>Tier</th>
+    <th>Beschikbare gegevens voor exporteren</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Eerste</td>
+    <td>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
+  </tr>
+  <tr>
+    <td>Ultieme</td>
+    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</li><li> Door het systeem gegenereerde gegevenssets zoals de <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Gegevensset profielmomentopname</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Eerste</td>
+    <td>Zie de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentatie. (bijwerken naar een diepe koppeling naar de AJO-tabel of -sectie voor ondersteunde gegevenssets)</td>
+  </tr>
+  <tr>
+    <td>Ultieme</td>
+    <td>Zie de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentatie. (bijwerken naar een diepe koppeling naar de AJO-tabel of -sectie voor ondersteunde gegevenssets)</td>
+  </tr>
+  <tr>
+    <td>Data Distiller</td>
+    <td>Distiller-gegevens (invoegtoepassing)</td>
+    <td>Voortgekomen datasets die door de Dienst van de Vraag worden gecreeerd.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Ondersteunde doelen {#supported-destinations}
 
@@ -40,9 +79,9 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 Sommige op dossier-gebaseerde bestemmingen in de catalogus van het Experience Platform steunen zowel publieksactivering als dataset de uitvoer.
 
 * U kunt doelgroepen activeren als u uw gegevens wilt indelen in profielen die zijn gegroepeerd op belangen of kwalificaties van het publiek.
-* U kunt ook gegevenssets exporteren overwegen wanneer u onbewerkte gegevenssets wilt exporteren. Deze zijn niet gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. U kunt deze gegevens gebruiken voor rapportage, workflows voor gegevenswetenschap, om te voldoen aan de compatibiliteitseisen en vele andere gebruiksgevallen.
+* U kunt ook gegevenssets exporteren overwegen wanneer u onbewerkte gegevenssets wilt exporteren. Deze zijn niet gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. U kunt deze gegevens gebruiken voor rapportage, workflows voor gegevenswetenschap en vele andere gebruiksgevallen. Bijvoorbeeld, als beheerder, gegevensingenieur, of analist, kunt u gegevens van Experience Platform uitvoeren om met uw gegevenspakhuis te synchroniseren, gebruik in de analysehulpmiddelen van BI, externe wolkenhulpmiddelen van XML, of opslag in uw systeem voor de opslagbehoeften op lange termijn.
 
-Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. Als u het publiek wilt activeren naar cloudopslag of marketingdoelen via e-mail, leest u [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md).
+Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. Als u *publiek* naar cloudopslag- of e-mailmarketingbestemmingen, lezen [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Vereisten {#prerequisites}
 
@@ -50,7 +89,7 @@ Om datasets naar de bestemmingen van de cloudopslag uit te voeren, moet u met su
 
 ### Vereiste machtigingen {#permissions}
 
-Om datasets uit te voeren, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+Om datasets uit te voeren, hebt u nodig **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om datasets uit te voeren en dat de bestemming het uitvoeren van datasets steunt, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** of een **[!UICONTROL Export datasets]** controle, dan hebt u de aangewezen toestemmingen.
 
@@ -106,7 +145,7 @@ De **[!UICONTROL Export incremental files]** wordt automatisch geselecteerd. Dit
 
 2. Gebruik de **[!UICONTROL Time]** om de tijd van de dag te kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
 
-3. Gebruik de **[!UICONTROL Date]** om het interval te kiezen waarin het exporteren moet plaatsvinden. In de bètaversie van de functie is het niet mogelijk een einddatum voor de exportbewerking in te stellen. Voor meer informatie bekijkt u de [bekende beperkingen](#known-limitations) sectie.
+3. Gebruik de **[!UICONTROL Date]** om het interval te kiezen waarin het exporteren moet plaatsvinden. U kunt momenteel geen einddatum instellen voor het exporteren. Voor meer informatie bekijkt u de [bekende beperkingen](#known-limitations) sectie.
 
 4. Selecteren **[!UICONTROL Next]** om het programma op te slaan en door te gaan naar de **[!UICONTROL Review]** stap.
 
@@ -169,12 +208,23 @@ Om een dataset uit een bestaande gegevensstroom te verwijderen, volg de stappen 
 
    ![Dialoogvenster dat de bevestigingsoptie van de datasetverwijdering van dataflow toont.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
+
+## Uitvoerrechten gegevensset {#licensing-entitlement}
+
+Raadpleeg de productbeschrijvingsdocumenten om te begrijpen hoeveel gegevens u per jaar voor elke Experience Platform-toepassing mag exporteren. U kunt bijvoorbeeld de Real-Time CDP-productbeschrijving bekijken [hier](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+De gegevensuitvoerrechten voor verschillende aanvragen zijn niet additief. Dit betekent bijvoorbeeld dat als u Real-Time CDP Ultimate en Adobe Journey Optimizer Ultimate koopt, de uitvoerrechten voor profielen de hoogste van de twee rechten zijn, zoals beschreven in de productbeschrijvingen. Uw volumeregelingen worden berekend door het totale aantal gelicentieerde profielen te nemen en te vermenigvuldigen met 500 kB voor Real-Time CDP Premium of 700 kB voor Real-Time CDP Ultimate om te bepalen hoeveel gegevensvolume u hebt.
+
+Anderzijds, als u toe:voegen-ons zoals Gegevens Distiller koopt, vertegenwoordigt de grens van de gegevensuitvoer die u gerechtigd bent om de som van de productrij en de toe:voegen-op te stellen.
+
+U kunt uw profielexport bekijken en volgen op basis van uw contractuele limieten in het licentiedashboard.
+
 ## Bekende beperkingen {#known-limitations}
 
-Houd rekening met de volgende beperkingen voor de bètaversie van het exporteren van gegevenssets:
+Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie van de uitvoer van datasets:
 
-* Er is momenteel één machtiging (**[!UICONTROL Manage and Activate Dataset Destinations]**) die het beheren en activeren van toestemmingen op datasetbestemmingen omvat. Deze controles zullen in de toekomst in meer korrelige toestemmingen worden verdeeld. Controleer de [vereiste machtigingen](#permissions) sectie voor een volledige lijst van toestemmingen die u datasets moet uitvoeren.
 * Momenteel, kunt u stijgende dossiers slechts uitvoeren en een einddatum kan niet voor uw datasetuitvoer worden geselecteerd.
 * Geëxporteerde bestandsnamen kunnen momenteel niet worden aangepast.
+* Datasets die via API zijn gemaakt, zijn momenteel niet beschikbaar voor export.
 * UI blokkeert momenteel niet u van het schrappen van een dataset die naar een bestemming wordt uitgevoerd. Verwijder geen datasets die naar bestemmingen worden geëxporteerd. [De gegevensset verwijderen](#remove-dataset) van een doelgegevensstroom alvorens het te schrappen.
 * De metriek van de controle voor de uitvoer van datasets wordt momenteel gemengd met aantallen voor profieluitvoer zodat weerspiegelen zij niet de ware uitvoeraantallen.

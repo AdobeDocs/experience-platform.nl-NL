@@ -1,29 +1,33 @@
 ---
 solution: Experience Platform
-title: (Bèta) de datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
+title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
 workflow-type: tm+mt
-source-wordcount: '3510'
+source-wordcount: '3516'
 ht-degree: 0%
 
 ---
 
-# (Bèta) de datasets van de uitvoer door te gebruiken [!DNL Flow Service API]
+# Gegevenssets exporteren met de [!DNL Flow Service API]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* De functionaliteit om datasets uit te voeren is momenteel in Bèta en niet beschikbaar aan alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
->* Deze bètafunctionaliteit ondersteunt de export van gegevens van de eerste generatie, zoals gedefinieerd in de Real-time Customer Data Platform [productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Premier of Ultimate-pakket hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
 
 In dit artikel wordt uitgelegd welke workflow nodig is om de [!DNL Flow Service API] om te exporteren [gegevenssets](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw voorkeurslocatie voor cloudopslag, zoals [!DNL Amazon S3], SFTP-locaties, of [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
 >U kunt het gebruikersinterface van het Experience Platform ook gebruiken om datasets uit te voeren. Lees de [UI-zelfstudie voor het exporteren van gegevenssets](/help/destinations/ui/export-datasets.md) voor meer informatie .
+
+## Beschikbare gegevensbestanden voor exporteren {#datasets-to-export}
+
+De gegevenssets die u kunt exporteren, zijn afhankelijk van de toepassing Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de laag (Premier of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
+
+Zie de [tabel op de pagina met zelfstudies voor de gebruikersinterface](/help/destinations/ui/export-datasets.md#datasets-to-export) om te begrijpen welke datasets u kunt uitvoeren.
 
 ## Ondersteunde doelen {#supported-destinations}
 
@@ -336,7 +340,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection spec] De id die in de aanvraag-URL wordt gebruikt, moet de specificatie-id van de gegevensmeerbronverbinding zijn. `23598e46-f560-407b-88d5-ea6207e49db0`en de twee queryparameters `outputField=datasets` en `outputType=activationDatasets` moet worden gespecificeerd. Alle andere vraagparameters zijn standaarddegenen die door worden gesteund [Catalogusservice-API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection spec] Id die wordt gebruikt in de aanvraag-URL, moet de specificatie-id van de gegevensmeerbronverbinding zijn. `23598e46-f560-407b-88d5-ea6207e49db0`en de twee queryparameters `outputField=datasets` en `outputType=activationDatasets` moet worden gespecificeerd. Alle andere vraagparameters zijn standaarddegenen die door worden gesteund [Catalogusservice-API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 +++
 
@@ -1609,7 +1613,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -1663,7 +1667,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2340,11 +2344,11 @@ Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen 
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van de Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Door dit leerprogramma te volgen, hebt u met succes Platform met één van uw aangewezen bestemmingen van de de opslagopslag van de partijwolk verbonden en opstelling een dataflow aan de respectieve bestemming om datasets uit te voeren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
+Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met één van uw aangewezen bestemmingen van de de opslagopslag van de partijwolk en opstelling een dataflow aan de respectieve bestemming om datasets uit te voeren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)
