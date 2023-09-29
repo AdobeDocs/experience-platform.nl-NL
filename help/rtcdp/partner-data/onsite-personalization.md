@@ -1,9 +1,9 @@
 ---
 title: Erkenning door Partner-Aided Visitor gebruiken om onsite ervaringen aan te passen
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
-source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '2424'
+source-wordcount: '2442'
 ht-degree: 1%
 
 ---
@@ -49,6 +49,12 @@ Als u dit geval met succes wilt implementeren, moet u meerdere gebieden van Real
    * [Randsegmentatie](/help/segmentation/ui/edge-segmentation.md)
    * [Edge-aanpassingsdoelen](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (of een persoonlijk platform van uw keuze. In deze zelfstudie wordt Adobe Target gemarkeerd als een personalisatie-engine.
+
+## Video doorloopt {#video-walkthrough}
+
+Bekijk de videozelfstudie hieronder voor een analyse van hoe u onsite ervaringen kunt personaliseren voor onbekende bezoekers:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 

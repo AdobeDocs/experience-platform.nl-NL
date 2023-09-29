@@ -1,9 +1,9 @@
 ---
 title: Eigen profielen aanvullen met door partners verstrekte attributen
 description: Leer hoe u eigen profielen kunt aanvullen met kenmerken van vertrouwde gegevenspartners om uw databasis te verbeteren, nieuwe inzichten in uw klantenbestand te verkrijgen en uw doelgroepen beter te optimaliseren.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1102'
 ht-degree: 3%
 
 ---
@@ -30,6 +30,12 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 >[!WARNING]
 >
 >De extra door partners opgegeven kenmerken die in Real-Time CDP worden ingevoerd, zijn van invloed op uw *gemiddelde profielrijkheid*. Lees de [Real-time Customer Data Platform-productbeschrijving](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over profielrijkdom.
+
+## Video doorloopt {#video-walkthrough}
+
+Bekijk hieronder het videoleerprogramma voor een analyse van hoe te om het eerste partijpubliek met partner-verstrekte attributen aan te vullen:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 

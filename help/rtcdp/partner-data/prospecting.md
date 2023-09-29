@@ -1,9 +1,9 @@
 ---
 title: Nieuwe klanten interesseren en aantrekken door gebruiksscenario's te prospecteren
 description: Leer hoe u nieuwe klanten kunt interesseren en aantrekken door gebruiksscenario's te prospecteren, mogelijk gemaakt door de partnergegevensondersteuning in Real-Time CDP.
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1906'
 ht-degree: 2%
 
 ---
@@ -40,6 +40,12 @@ Voordat u Real-Time CDP uitbreidt om nieuwe klanten aan te trekken, moet u ervoo
 4. Als **klant**, maakt u doelgroepen op basis van de lijst met perspectiefprofielen.
 5. Als **klant**, activeert u het potentiële publiek aan bestemmingen die van de identiteiten beschikbaar in uw perspectieflijst goedkeuren.
 6. Werk zo nodig met de **gegevenspartner** voor de activering van het publiek naar de gewenste betaalmedia-bestemmingen in de laatste mijl.
+
+## Video doorloopt {#video-walkthrough}
+
+Bekijk hieronder de videozelfstudie voor een analyse van hoe te om perspectiefpubliek te bereiken en in dienst te nemen:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
 

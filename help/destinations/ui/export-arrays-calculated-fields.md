@@ -3,9 +3,9 @@ title: (bèta) Gebruik berekende velden om arrays te exporteren in platte schema
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays in platte schemabestanden van Real-Time CDP naar cloudopslagbestemmingen te exporteren.
 badge: "Bèta"
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -124,6 +124,19 @@ In dit geval ziet het uitvoerbestand er hieronder uit. Let op: de drie elementen
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` functie voor het exporteren van arrays {#iif-function-export-arrays}
+
+Gebruik de `iif` functie om elementen van een array onder bepaalde omstandigheden te exporteren. Bijvoorbeeld, verdergaand met `organzations` arrayobject van bovenaf, u kunt een eenvoudige voorwaardelijke functie schrijven, zoals `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![Screenshot toewijzen voor de eerste en laatste functies](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+In dit geval ziet het uitvoerbestand er hieronder uit. In dit geval, is het eerste element van de serie Marketing, zodat is de persoon lid van de marketing afdeling.
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` functie voor het exporteren van arrays {#coalesce-function-export-arrays}
 
 Gebruik de `coalesce` functie om het eerste element van een array met een andere waarde dan null te benaderen en te exporteren naar een tekenreeks.
@@ -188,14 +201,6 @@ In dit geval ziet het uitvoerbestand er als volgt uit:
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` en `sha256` hashingfuncties {#hashing-functions}
 
