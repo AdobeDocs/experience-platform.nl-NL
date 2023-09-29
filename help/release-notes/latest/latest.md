@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '2143'
 ht-degree: 2%
 
 ---
@@ -20,9 +20,14 @@ Nieuwe functies in Adobe Experience Platform:
 Updates voor bestaande functies in Experience Platform:
 
 - [Waarschuwingen](#alerts)
+- [Dashboards](#dashboards)
 - [Gegevensverzameling](#data-collection)
+- [Gegevensbeheer](#data-governance)
+- [Gegevenshygiëne](#hygiene)
 - [Doelen](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
+- [Query-service](#query-service)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
@@ -44,6 +49,18 @@ Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuw
 
 Lees voor meer informatie over waarschuwingen de [[!DNL Observability Insights] overzicht](../../observability/home.md).
 
+## Dashboards {#dashboards}
+
+Adobe Experience Platform biedt meerdere [!DNL dashboards] waardoor u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen wordt gevangen.
+
+| Functie | Beschrijving |
+| --- | --- |
+| [Verbetering van het gebruiksdashboard voor licenties](../../dashboards/guides/license-usage.md) | Houd controle over uw licentieovereenkomsten met verbeterde rapportering en belangrijke metrische visualisaties met betrekking tot het gebruik van uw licentie. Deze verbeteringen bieden een hoge mate van granulariteit ten opzichte van de maatstaven voor het licentiegebruik voor alle producten van het Experience Platform die u hebt aangeschaft. |
+
+{style="table-layout:auto"}
+
+Raadpleeg voor meer informatie over het dashboard voor licentiegebruik de [Overzicht van het licentiegebruiksdashboard](../../dashboards/guides/destinations.md).
+
 ## Gegevensverzameling {#data-collection}
 
 Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
@@ -58,6 +75,35 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 {style="table-layout:auto"}
 
 Voor meer informatie over gegevensverzameling leest u de [overzicht van gegevensverzameling](../../tags/home.md).
+
+## Gegevensbeheer {#data-governance}
+
+Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving van regelgeving, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik te waarborgen. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van de gegevenstoegang, en toegangscontrole over gegevens voor marketing acties.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| De nieuwe etiketten van het Ecosysteem van de Partner voor derdegegevens | Er zijn nieuwe labels voor gegevensgebruik beschikbaar voor verrijking en prospectie door derden. Zie de [documentatie over Partner Ecosystem-labels](../../data-governance/labels/reference.md#partner) voor meer informatie . |
+
+{style="table-layout:auto"}
+
+Lees voor meer informatie over gegevensbeheer de [gegevensbeheer - overzicht](../../data-governance/home.md).
+
+## Gegevenshygiëne {#hygiene}
+
+Experience Platform biedt een reeks mogelijkheden voor gegevenshygiëne waarmee u uw opgeslagen gegevens kunt beheren via programmatische verwijderingen van consumentengegevens en gegevenssets. Het gebruiken van één van beide [!UICONTROL Data Lifecycle] De werkruimte in UI of door vraag aan de Hygiene API van Gegevens, kunt u uw gegevensopslag effectief beheren. Gebruik deze mogelijkheden om ervoor te zorgen dat de informatie zoals verwacht wordt gebruikt, wordt bijgewerkt wanneer onjuiste gegevens het bevestigen vereisen, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} | Beheer uw levenscyclus van gegevens in alle gegevensopslagruimten om te voldoen aan de verplichtingen van de klant en licentieovereenkomsten met de geavanceerde functies voor levenscyclusbeheer van gegevens in Adobe Experience Platform: automatische gegevenssetvervaldatum en verwijdering van records.<br>Met geautomatiseerde datasetafloop, kunt u volledige datasets schrappen en een datum en een tijd voor de dataset plaatsen om worden geschrapt.<br>Met Record verwijderen kunt u afzonderlijke consumentenprofielen verwijderen door zich te richten op hun primaire identiteit. U kunt de primaire identiteiten individueel door UI of via CSV/JSON- dossierupload verstrekken. Zie de [Documentatie verwijderen opnemen](../../hygiene/ui/record-delete.md) voor meer informatie |
+| Verlopen gegevensset | Beperk uw gegevens tot een minimum en houd de controle over uw licentieovereenkomsten met de automatische gegevenssetvervaldatum. Verminder gegevensvolumes door volledige datasets te schrappen en plaats een datum en een tijd voor de dataset om worden geschrapt. Zie de [documentatie betreffende de vervaldatum van gegevenssets](../../hygiene/ui/dataset-expiration.md) voor meer informatie . |
+
+{style="table-layout:auto"}
+
+Raadpleeg voor meer informatie over de mogelijkheden van Platform op het gebied van gegevenshygiëne de [overzicht van de gegevenshygiëne](../../hygiene/home.md).
 
 ## Doelen {#destinations}
 
@@ -98,6 +144,23 @@ Add these to release notes as they go out
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
+## Experience Data Model (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Snelle acties toegevoegd aan de Schema-editor | Er zijn nieuwe snelle acties toegevoegd aan het canvas van de Schema-editor. U kunt nu de JSON-structuur kopiëren of het schema rechtstreeks uit de editor verwijderen.<br>![De snelle acties in de Redacteur van het Schema.](../2023/assets/schema-editor-copy-json.png "De Schemas Editor met Meer en Kopiëren naar JSON gemarkeerd."){width="100" zoomable="yes"} |
+| XDM-bronnen filteren op basis van aangepaste of standaardmaker | De lijsten met beschikbare schema&#39;s, veldgroepen, gegevenstypen en klassen worden nu vooraf gefilterd op basis van de methode waarmee ze zijn gemaakt. Op deze manier kunt u bronnen filteren op basis van het feit of ze op maat zijn gemaakt of door Adobe zijn gemaakt.<br>![De filters Standaard en Aangepast in de werkruimte Schema.](../2023/assets/standard-and-custom-classes.png "De werkruimte Schema&#39;s met de filters Standaard en Aangepast gemarkeerd."){width="100" zoomable="yes"} <br> Zie de [documentatie met bronnen maken en bewerken](../../xdm/ui/resources/classes.md#filter.md) voor meer informatie . |
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Bijgewerkte workflow voor het maken van schema&#39;s | Er is een nieuwe workflow voor het maken van schema&#39;s geïmplementeerd om het proces te stroomlijnen. <br> ![De nieuwe interface voor het maken van het schema.](../2023/assets/schema-class-options.png "Selector voor nieuwe schemadetails gemarkeerd."){width="100" zoomable="yes"} <br> Zie de [documentatie over het maken van schema](../../xdm/ui/resources/schemas.md#create) voor meer informatie . |
+
 ## Identiteitsservice {#identity-service}
 
 De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
@@ -112,6 +175,21 @@ De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht v
 {style="table-layout:auto"}
 
 Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md).
+
+## Query-service {#query-service}
+
+Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience Platform op te vragen [!DNL Data Lake]. U kunt zich bij om het even welke datasets van aansluiten [!DNL Data Lake] en leg de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time vast.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| UI-updates voor het filteren van logbestanden | Het betere filtreren van het vraaglogboek verbetert zicht voor user-generated logboeken voor controle, het beheer, en het oplossen van problemen. U kunt de lijst met querylogbestanden filteren op basis van verschillende instellingen. <br> ![De filterinstellingen van het querylogboek.](../2023/assets/log-filter-settings.png "De nieuwe filters van het vraaglogboek worden benadrukt."){width="100" zoomable="yes"}  <br> Zie de [documentatie met querylogbestanden](../../query-service/ui/query-logs.md#filter-logs) voor meer informatie . |
+| UI-updates van Multiple Query Editor | U kunt veelvoudige opeenvolgende vragen in de Redacteur van de Vraag nu uitvoeren of meer dan één vraag schrijven en alle vragen op een opeenvolgende manier uitvoeren. Om meer flexibiliteit aan uw vraaguitvoering toe te voegen, kunt u uw gekozen vraag benadrukken en die specifieke vraag selecteren om onafhankelijk van anderen te lopen. Zie de [Handleiding voor de Query Editor](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) voor meer informatie . |
+
+{style="table-layout:auto"}
+
+Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Service](../../query-service/home.md).
 
 ## Segmenteringsservice {#segmentation}
 
