@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 0835021523a7eb1642a6dbcb24334eac535aaa6d
+source-git-commit: d8e7b5daf72afab8e0a980e35b18a9986a19387d
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1527'
 ht-degree: 1%
 
 ---
@@ -94,9 +94,31 @@ De onderstaande instructies zijn van toepassing op activering via [Edge-verperso
 
 {style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Gegevensset exporteren {#dataset-exports}
+### Dataset exporteren {#dataset-exports}
 
-De uitvoer van gegevenssets wordt momenteel ondersteund in een **[!UICONTROL First Full and then Incremental]** [patroon](/help/destinations/ui/export-datasets.md#scheduling). De instructies die in deze sectie worden beschreven, zijn van toepassing op de eerste volledige export die plaatsvindt nadat een gegevensset-exportworkflow is ingesteld.
+De uitvoer van gegevenssets wordt momenteel ondersteund in een **[!UICONTROL First Full and then Incremental]** [patroon](/help/destinations/ui/export-datasets.md#scheduling). De in dit punt beschreven instructies *van toepassing zijn op de eerste volledige uitvoer* die zich voordoet nadat een gegevensset-exportworkflow is ingesteld.
+
+<!--
+
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+| Size of exported datasets | 5 billion records | Soft | The limit described here for dataset exports is a *soft guardrail*. For example, while the user interface will not block you from exporting datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency. |
+
+{style="table-layout:auto"}
+
+-->
+
+#### Dataset-typen {#dataset-types}
+
+De instructies voor de uitvoer van gegevenssets zijn van toepassing op twee soorten gegevenssets die uit Experience Platform worden geëxporteerd, zoals hieronder beschreven:
+
+**Datasets die op het schema van de Gebeurtenissen van de Ervaring XDM worden gebaseerd**
+In het geval van datasets die op het schema van de Gebeurtenissen van de Ervaring XDM worden gebaseerd, omvat het datasetschema een hoogste niveau *tijdstempel* kolom. Gegevens worden alleen toegevoegd.
+
+**Gegevenssets die zijn gebaseerd op het XDM Individuele Profielschema**
+In het geval van datasets die op het XDM Individuele schema van het Profiel worden gebaseerd, omvat het datasetschema geen hoogste niveau *tijdstempel* kolom. Gegevens worden opgenomen in een pop-upmenu.
+
+De onderstaande zachte handleiding is van toepassing op alle gegevenssets die uit Experience Platform worden geëxporteerd. Bekijk ook de harde instructies hieronder, specifiek voor verschillende dataset en compressietypen.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
@@ -104,90 +126,42 @@ De uitvoer van gegevenssets wordt momenteel ondersteund in een **[!UICONTROL Fir
 
 {style="table-layout:auto"}
 
-<!--
+#### Guardrails voor de uitvoer van geplande gegevenssets
 
-### Dataset Types {#dataset-types}
+Voor geplande, of terugkomende datasetuitvoer, zijn de hieronder grails voor de twee formaten van het uitgevoerde dossier (JSON of parquet) identiek, en gegroepeerd door datasettype.
 
-Datasets exported from Experience Platform can be of two types, as described below:
+>[!WARNING]
+>
+>Exporteren naar JSON-bestanden worden alleen in de gecomprimeerde modus ondersteund.
 
-**Timeseries**
-Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
-The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
-
-**Record** 
-Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
-The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
-
-The guardrails below are grouped by the format of the exported file, and then further by dataset type.
-
-**Parquet output**
-
-|Dataset type | Compression | Guardrail | Description |
-|---------|----------|---------|-----------|
-| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
-| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+| Het type DataSet | Guardrail | Het type Guardrail | Beschrijving |
+---------|----------|---------|-------|
+| Gegevensbestanden op basis van de **XDM Experience Events-schema** | Laatste 365 dagen met gegevens | Hard | De gegevens van het laatste kalenderjaar worden uitgevoerd. |
+| Gegevensbestanden op basis van de **Schema voor individueel XDM-profiel** | Tien miljard records in alle geëxporteerde bestanden in een gegevensstroom | Hard | Het recordaantal van de dataset moet minder dan tien miljard voor samengeperste JSON of parquet dossiers en één miljoen voor ongecomprimeerde parketdossiers zijn, anders ontbreekt de uitvoer. Verminder de grootte van de dataset die u probeert uit te voeren als het groter is dan de toegestane drempel. |
 
 {style="table-layout:auto"}
 
-**JSON output**
+<!--
 
-|Dataset type | Compression | Guardrail | Description |
-|---------|----------|---------|-----------|
-| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
-| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+#### Ad-hoc dataset exports
+
+Exporting datasets in an-hoc manner is currently supported via API only. For ad-hoc dataset exports, you must use the backfill parameter in the API to limit the timeframe of exported data. 
+
+The guardrails below are the same whether you are exporting parquet of JSON files ad-hoc. 
+
+**Parquet and JSON output**
+
+|Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
+|---------|---------|-----------|-----------|------------|
+| Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
+| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a dataflow | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
 -->
 
-<!--
+Meer informatie over [gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md).
 
-<table>
-<thead>
-  <tr>
-    <th>Output format</th>
-    <th>Dataset type</th>
-    <th>Compression</th>
-    <th>Guardrail</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="2">Parquet</td>
-    <td>Timeseries</td>
-    <td>-</td>
-    <td>Last seven days per file</td>
-    <td>Only the data from the last seven days is exported.</td>
-  </tr>
-  <tr>
-    <td>Record</td>
-    <td>-</td>
-    <td>Five billion records per file</td>
-    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
-  </tr>
-  <tr>
-    <td rowspan="3">JSON</td>
-    <td>Timeseries</td>
-    <td>-</td>
-    <td>Last seven days per file</td>
-    <td>Only the data from the last seven days is exported.</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Record</td>
-    <td>Yes</td>
-    <td>Five billion records per file</td>
-    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
-  </tr>
-  <tr>
-    <td>No</td>
-    <td>One million records per file</td>
-    <td>The record count of the dataset must be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
-  </tr>
-</tbody>
-</table>
-
--->
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
