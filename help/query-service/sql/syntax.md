@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
+source-wordcount: '4006'
 ht-degree: 1%
 
 ---
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## DATABASE MAKEN
 
-De `CREATE DATABASE` maakt een ADLS-database.
+De `CREATE DATABASE` maakt een ADLS-database (Azure Data Lake Storage).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## WEERGAVE MAKEN
 
-De volgende syntaxis definieert een `CREATE VIEW` query:
+De volgende syntaxis definieert een `CREATE VIEW` vraag voor een dataset. Deze dataset kan een ADLS of versnelde opslagdataset zijn.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+De volgende syntaxis definieert een `CREATE VIEW` query die een weergave maakt in de context van een database en schema.
+
+**Voorbeeld**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| Parameters | Beschrijving |
+| ------ | ------ |
+| `db_name` | De naam van de database. |
+| `schema_name` | De naam van het schema. |
+| `view_name` | De naam van de weergave die moet worden gemaakt. |
+| `select_query` | A `SELECT` instructie. De syntaxis van de `SELECT` query kan worden gevonden in de [Sectie Vragen SELECTEREN](#select-queries). |
+
+**Voorbeeld**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## WEERGAVEN TONEN
+
+De volgende vraag toont de lijst van meningen.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## DROP VIEW
@@ -890,7 +930,7 @@ COPY query
 
 ### ALTER TABLE {#alter-table}
 
-De `ALTER TABLE` Met deze opdracht kunt u primaire of buitenlandse toetsbeperkingen toevoegen of neerzetten en kolommen aan de tabel toevoegen.
+De `ALTER TABLE` Met deze opdracht kunt u primaire of externe toetsbeperkingen toevoegen of neerzetten en kolommen aan de tabel toevoegen.
 
 #### BEPERKING TOEVOEGEN OF VERWIJDEREN
 
