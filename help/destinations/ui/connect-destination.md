@@ -4,9 +4,9 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
    Voor meer informatie over het verschil tussen deze controles, kunt u ook naar verwijzen [Catalogus](../ui/destinations-workspace.md#catalog) in de documentatie van de doelwerkruimte.
 
-   Selecteer **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, of **[!UICONTROL Activate audiences]**, afhankelijk van welk besturingselement beschikbaar is.
+   Selecteer een van beide **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, of **[!UICONTROL Activate audiences]**, afhankelijk van welk besturingselement beschikbaar is.
 
    ![Screenshot van het Experience Platform UI, die de pagina van de bestemmingscatalogus met de benadrukte controle van de Opstelling toont.](../assets/ui/connect-destinations/set-up.png)
 
@@ -64,7 +64,7 @@ Afhankelijk van de bestemming waarmee u verbindt, zou u aan de pagina van de bes
 
 Als u al verificatie hebt ingesteld op de bestemming, kunt u doorgaan met het bestaande account of kunt u een nieuw account instellen.
 
-Afhankelijk van het doel waarmee u verbinding maakt, wordt u mogelijk gevraagd verschillende typen verbindingsparameters in te voeren. Wanneer u bijvoorbeeld verbinding maakt met een [!DNL Amazon S3] bestemming, wordt u gevraagd details over te verstrekken [!DNL Amazon S3] Naam emmertje en mappad waar bestanden worden gedeponeerd. Hieronder vindt u twee voorbeelden van vereiste invoer voor een [!DNL Amazon S3] bestemming en [!DNL Trade Desk] bestemming. Gedetailleerde instructies over de vereiste invoer worden gegeven op elke pagina van de doeldocumentatie.
+Afhankelijk van het doel waarmee u verbinding maakt, wordt u mogelijk gevraagd verschillende typen verbindingsparameters in te voeren. Wanneer u bijvoorbeeld verbinding maakt met een [!DNL Amazon S3] bestemming, wordt u gevraagd details over te verstrekken [!DNL Amazon S3] Naam emmertje en mappad waar bestanden worden gedeponeerd. Hieronder vindt u twee voorbeelden van vereiste invoer voor een [!DNL Amazon S3] bestemming en een [!DNL Trade Desk] bestemming. Gedetailleerde instructies over de vereiste invoer worden gegeven op elke pagina van de doeldocumentatie.
 
 >[!IMPORTANT]
 >
@@ -78,15 +78,19 @@ Afhankelijk van het doel waarmee u verbinding maakt, wordt u mogelijk gevraagd v
 
 ![Afbeelding die de vereiste en optionele invoerparameters weergeeft wanneer verbinding wordt gemaakt met een doel van een handelsbureau.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (bèta) Opties voor bestandsindeling instellen voor geëxporteerde bestanden {#file-formatting-and-compression-options}
+### Opties voor bestandsindeling instellen voor geëxporteerde bestanden {#file-formatting-and-compression-options}
 
 Voor op bestanden gebaseerde doelen kunt u verschillende instellingen configureren die betrekking hebben op de indeling en comprimeren van de geëxporteerde bestanden. Voor meer informatie over alle beschikbare opties voor opmaak en compressie leest u de [Zelfstudie over het configureren van opties voor bestandsindeling voor op bestanden gebaseerde doelen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Afbeelding waarin de selectie van het bestandstype en de verschillende opties voor CSV-bestanden worden weergegeven.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### De bestemmingsverbinding van de opstelling voor publieksactivering of dataset uitvoeren {#segment-activation-or-dataset-exports}
+### De bestemmingsverbinding van de opstelling voor publieksactivering, perspectiefactivering of datasetuitvoer {#segment-activation-or-dataset-exports}
 
-Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering evenals datasetuitvoer. Voor die bestemmingen, kunt u verkiezen of om een verbinding tot stand te brengen die u toelaat om publiek te activeren of datasets uit te voeren.
+Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering aan bekende klanten of vooruitzichten, evenals datasetuitvoer. Voor die doelen kunt u kiezen of u een verbinding maakt die u in staat stelt [publiek activeren](/help/destinations/ui/activate-batch-profile-destinations.md), [vooruitzichten](/help/destinations/ui/activate-prospect-audiences.md), of [exportgegevenssets](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>Wanneer u gegevenssets exporteert, ziet u dat het exporteren naar JSON-bestanden alleen in de gecomprimeerde modus wordt ondersteund. Exporteren naar [!DNL Parquet] bestanden worden ondersteund in een gecomprimeerde en niet-gecomprimeerde modus.
 
 ![Afbeelding die het besturingselement voor de selectie van gegevenstypen weergeeft. Hiermee kunnen gebruikers kiezen tussen activering van het publiek en het exporteren van gegevenssets.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
@@ -102,7 +106,7 @@ Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering evenals da
 
 ## marketingacties selecteren {#select-marketing-actions}
 
-1. Selecteer de marketingacties die van toepassing zijn op de gegevens die u naar de bestemming wilt exporteren. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie voor meer informatie over marketingacties de [overzicht van beleidsregels voor gegevensgebruik](../../data-governance/policies/overview.md) pagina.
+1. Selecteer de marketingacties die van toepassing zijn op de gegevens die u naar de bestemming wilt exporteren. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie voor meer informatie over marketingacties de [overzicht van beleidsregels voor gegevensgebruik](../../data-governance/policies/overview.md) pagina.
 
    ![Het Configure nieuwe bestemmingsdialoog met de beschikbare benadrukte marketing acties. De beschikbare besturingselementen voor het voltooien van de workflow Verbinding maken met bestemming worden ook gemarkeerd.](../assets/ui/connect-destinations/governance.png)
 

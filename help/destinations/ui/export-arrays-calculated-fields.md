@@ -1,11 +1,11 @@
 ---
-title: (bèta) Gebruik berekende velden om arrays te exporteren in platte bestanden
+title: (bèta) Gebruik berekende velden om arrays te exporteren in platte schemabestanden
 type: Tutorial
-description: Leer hoe u arrays en berekende velden exporteert van Real-Time CDP naar batchbestemmingen op basis van profielen.
+description: Leer hoe u berekende velden kunt gebruiken om arrays in platte schemabestanden van Real-Time CDP naar cloudopslagbestemmingen te exporteren.
 badge: "Bèta"
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1198'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 0%
 >id="platform_destinations_export_arrays_flat_files"
 >title="(bèta) Ondersteuning voor exportarrays"
 >abstract="Exporteer eenvoudige arrays met int-, string- of booleaanse waarden van Experience Platform naar de gewenste bestemming voor cloudopslag. Er gelden enkele beperkingen. Raadpleeg de documentatie voor uitgebreide voorbeelden en ondersteunde functies."
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Voorbeelden"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekende beperkingen"
 
 >[!AVAILABILITY]
 >

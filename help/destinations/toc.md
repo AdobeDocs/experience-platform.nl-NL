@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 2%
       * [(Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
       * [Gegevenssets exporteren met de interface van het Experience Platform](./ui/export-datasets.md)
       * [(bèta) Gebruik de laatste kwalificatietijd XDM attribuut in de nieuwe bètawolkenopslagbestemmingen](./ui/activate-last-qualification-time.md)
-      * [Arrayvelden exporteren naar cloudopslagdoelen](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(bèta) Gebruik berekende velden om arrays te exporteren in platte schemabestanden](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
    * [Doelaccounts bijwerken](./ui/update-accounts.md)
    * [Doelaccounts verwijderen](./ui/delete-destination-account.md)
@@ -57,7 +57,7 @@ ht-degree: 2%
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
    * Adobe bestemmingen{#adobe}
       * [Overzicht van Adobe doelen](./catalog/adobe/overview.md)
-      * [(Bèta) Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Verbinding met Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform publiek delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

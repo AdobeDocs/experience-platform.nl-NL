@@ -4,9 +4,9 @@ title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3516'
+source-wordcount: '3538'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ De volgende secties verstrekken extra informatie die u moet weten om datasets na
 
 ### Vereiste machtigingen {#permissions}
 
-Om datasets uit te voeren, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+Om datasets uit te voeren, hebt u nodig **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om datasets uit te voeren en dat de bestemming het uitvoeren van datasets steunt, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** of een **[!UICONTROL Export datasets]** controle, dan hebt u de aangewezen toestemmingen.
 
@@ -1149,6 +1149,10 @@ Noteer de verbinding-id in het antwoord. Deze id is vereist in de volgende stap 
 ![Diagram dat stap 4 in het werkschema van uitvoerdatasets toont](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Daarna, moet u een doelverbinding tot stand brengen die de uitvoerparameters voor uw datasets opslaat. Exportparameters zijn onder andere locatie, bestandsindeling, compressie en andere details. Zie de `targetSpec` eigenschappen verstrekt in de de verbindingsspecificatie van de bestemming om de gesteunde eigenschappen voor elk bestemmingstype te begrijpen. Verwijs naar de tabbladen hieronder voor de `targetSpec` eigenschappen van alle ondersteunde doelen.
+
+>[!WARNING]
+>
+>Exporteren naar JSON-bestanden worden alleen in de gecomprimeerde modus ondersteund. Exporteren naar [!DNL Parquet] bestanden worden ondersteund in een gecomprimeerde en niet-gecomprimeerde modus.
 
 >[!BEGINTABS]
 
