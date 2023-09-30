@@ -3,7 +3,7 @@ keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
+source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 2%
@@ -48,7 +48,32 @@ U activeert het bijgewerkte publiek opnieuw naar dezelfde bestemming, maar aange
 Om ervoor te zorgen dat alle profielen naar uw bestemming worden verzonden, moet u een nieuw publiek met de nieuwe configuratie tot stand brengen, en dan het activeren aan uw bestemming.
 
 +++
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
 
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -58,6 +83,7 @@ Om ervoor te zorgen dat alle profielen naar uw bestemming worden verzonden, moet
 
 * Uw [!DNL Facebook] gebruikersaccount moet de **[!DNL Manage campaigns]** Toestemming ingeschakeld voor de advertentie-account die u wilt gebruiken.
 * De **Adobe Experience Cloud** bedrijfsaccount moet worden toegevoegd als advertentiepartner in uw [!DNL Facebook Ad Account]. Gebruik `business ID=206617933627973`. Zie [Partners toevoegen aan uw Business Manager](https://www.facebook.com/business/help/1717412048538897) in de documentatie van Facebook voor meer informatie.
+
   >[!IMPORTANT]
   >
   > Wanneer u de machtigingen voor Adobe Experience Cloud configureert, moet u de optie **Campagnes beheren** toestemming. Dit is nodig voor de [!DNL Adobe Experience Platform]-integratie.
@@ -105,9 +131,9 @@ Zie voor gedetailleerde uitleg over de vereisten voor ID-matching [Vereisten voo
 [!DNL Facebook Custom Audiences] ondersteunt de activering van de volgende identiteiten: gehashte e-mails, gehashte telefoonnummers, [!DNL GAID], [!DNL IDFA]en aangepaste externe id&#39;s.
 +++
 
-### Kan ik veelvoudige bestemmingen van Facebook in Platform UI voor afzonderlijke rekeningen van Facebook tot stand brengen?
+### Kan ik meerdere Facebook-doelen maken in de interface van het platform voor afzonderlijke Facebook-accounts?
 
-++ + Antwoord Ja. Een Facebook-bestemming in Experience Platform is 1:1 voor een advertentieaccount in Facebook. U kunt een aparte Facebook-bestemming maken voor elke Facebook-advertentieaccount in uw bedrijf. Volg de [zelfstudie over doelverbinding](/help/destinations/ui/connect-destination.md) en maak verbinding met een aparte Facebook-account voor elke nieuwe Facebook-bestemming in de gebruikersinterface van het Platform. Er is geen limiet voor het aantal Facebook-advertentieaccounts waarmee u verbinding kunt maken.
+++ + Antwoord Ja. Een Facebook-bestemming in Experience Platform is 1:1 voor een advertentieaccount in Facebook. U kunt een aparte Facebook-bestemming maken voor elke Facebook-advertentieaccount in uw bedrijf. Volg de [zelfstudie over doelverbinding](/help/destinations/ui/connect-destination.md) en maak verbinding met een aparte Facebook-account voor elke nieuwe Facebook-bestemming in de interface van het platform. Er is geen limiet voor het aantal Facebook-advertentieaccounts waarmee u verbinding kunt maken.
 +++
 
 ## Google Customer Match {#google-customer-match}
@@ -183,7 +209,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen?
 
-+++Antwoord Dit wordt momenteel niet gesteund door de Doelen UI. Neem contact op met uw Adobe-vertegenwoordiger als u in dit geval hulp nodig hebt.
++++Antwoord Dit wordt momenteel niet gesteund door de Doelen UI. Neem contact op met uw Adobe als u in dit geval hulp nodig hebt.
 +++
 
 ### Wat gebeurt er als ik een Adobe Target-bestemming verwijder?
