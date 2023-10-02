@@ -3,9 +3,9 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw opslaglocaties in de cloud. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]en SFTP. Voor [!DNL Amazon Kinesis] en [!DNL Azure Event Hubs] doelen, gegevens worden gestreamd uit Experience Platform in [!DNL JSON] gebruiken.
 
-![Adobe-cloudopslagbestemmingen](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![Adobe cloudopslagbestemmingen](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Ondersteunde cloudopslagbestemmingen {#supported-destinations}
 
@@ -33,7 +33,7 @@ Adobe Experience Platform ondersteunt gegevensexport naar de volgende cloudopsla
 
 ## Verbinding maken met een nieuwe bestemming voor cloudopslag {#connect-destination}
 
-Om het publiek naar de bestemmingen van de wolkenopslag voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Als u een publiek naar de opslaglocatie van de cloud voor uw campagnes wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
 
 
 ## Macro&#39;s gebruiken om een map te maken op uw opslaglocatie {#use-macros}
@@ -67,7 +67,7 @@ Mappad op uw opslaglocatie: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-4
 
 De opslagbestemmingen van de wolk steunen de volgende uitvoertypes:
 * **Op profielen gebaseerde export**. Dit betekent dat u details exporteert over de personen in het publiek. Deze details zijn nodig voor verpersoonlijking en kunnen attributen, gebeurtenissen, publiekslidmaatschappen, en meer omvatten.
-* [!BADGE Beta]{type=Informative}**Dataset exporteren**. Deze functionaliteit staat u toe om volledige datasets naar de bestemmingen van de wolkenopslag uit te voeren. [Meer informatie](/help/destinations/ui/export-datasets.md) over de functionaliteit.
+* **Dataset exporteren**. Deze functionaliteit staat u toe om volledige datasets naar de bestemmingen van de wolkenopslag uit te voeren. [Meer informatie](/help/destinations/ui/export-datasets.md) over de functionaliteit.
 
 ## Volgende stappen {#next-steps}
 

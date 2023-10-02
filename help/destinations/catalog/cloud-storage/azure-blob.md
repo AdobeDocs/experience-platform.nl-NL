@@ -2,9 +2,9 @@
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om regelmatig CSV-gegevensbestanden uit Adobe Experience Platform te exporteren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Met de release van het Experience Platform van juli 2023 [!DNL Azure Blob] doel biedt nieuwe functionaliteit, zoals hieronder wordt weergegeven:
 
-* [!BADGE Beta]{type=Informative}[Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
+* [Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
 * Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).

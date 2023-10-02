@@ -2,21 +2,21 @@
 title: (bèta) Gebruik berekende velden om arrays te exporteren in platte schemabestanden
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays in platte schemabestanden van Real-Time CDP naar cloudopslagbestemmingen te exporteren.
-badge: "Bèta"
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+badge: Beta
+exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
-
 
 # (bèta) Gebruik berekende velden om arrays te exporteren in platte schemabestanden {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="(bèta) Ondersteuning voor exportarrays"
->abstract="Exporteer eenvoudige arrays met int-, string- of booleaanse waarden van Experience Platform naar de gewenste bestemming voor cloudopslag. Er gelden enkele beperkingen. Raadpleeg de documentatie voor uitgebreide voorbeelden en ondersteunde functies."
+>abstract="Gebruik de **Berekend veld toevoegen** besturingselement voor het exporteren van eenvoudige arrays met int-, string- of Booleaanse waarden van Experience Platform naar de gewenste locatie voor cloudopslag. Er gelden enkele beperkingen. Raadpleeg de documentatie voor uitgebreide voorbeelden en ondersteunde functies."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Voorbeelden"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekende beperkingen"
 
@@ -24,12 +24,12 @@ ht-degree: 0%
 >
 >* De functionaliteit om arrays via berekende velden te exporteren bevindt zich momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Leer hoe u arrays via berekende velden van Real-Time CDP in platte schemabestanden exporteert naar cloudopslagbestemmingen. Lees dit document om te begrijpen welke gebruiksgevallen door deze functie worden ingeschakeld.
+Leer hoe u arrays via berekende velden van Real-Time CDP in platte schemabestanden exporteert naar [cloudopslagbestemmingen](/help/destinations/catalog/cloud-storage/overview.md). Lees dit document om te begrijpen welke gebruiksgevallen door deze functie worden ingeschakeld.
 
 Krijg uitgebreide informatie over berekende gebieden - wat deze zijn en waarom zij belangrijk zijn. Lees de pagina&#39;s die hieronder zijn gekoppeld voor een inleiding tot berekende velden in Data Prep en meer informatie over alle beschikbare functies:
 
 * [UI-gids en -overzicht](/help/data-prep/ui/mapping.md#calculated-fields)
-* [Functies van voorvoegsel gegevens](/help/data-prep/functions.md)
+* [Functies Data Prep](/help/data-prep/functions.md)
 
 >[!IMPORTANT]
 >
@@ -50,13 +50,13 @@ Let op de volgende bekende beperkingen voor de bètaversie van deze functionalit
 
 ## Vereisten {#prerequisites}
 
-Voortgang door de [activeringsstappen voor cloudopslagdoelen](/help/destinations/ui/activate-batch-profile-destinations.md) en ga naar [toewijzing](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap.
+[Verbinden](/help/destinations/ui/connect-destination.md) naar een gewenste locatie voor cloudopslag, doorloopt u de [activeringsstappen voor cloudopslagdoelen](/help/destinations/ui/activate-batch-profile-destinations.md) en ga naar [toewijzing](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap.
 
 ## Berekende velden exporteren {#how-to-export-calculated-fields}
 
 Selecteer in de toewijzingsstap van de activeringsworkflow voor cloudopslagdoelen de optie **[!UICONTROL (Beta) Add calculated field]**.
 
-![Berekend veld toevoegen om te exporteren](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![Voeg een berekend veld toe dat is gemarkeerd in de toewijzingsstap van de workflow voor batchactivering.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 Hierdoor wordt een modaal venster geopend waarin u kenmerken kunt selecteren die u kunt gebruiken om kenmerken uit Experience Platform te exporteren.
 
@@ -64,25 +64,25 @@ Hierdoor wordt een modaal venster geopend waarin u kenmerken kunt selecteren die
 >
 >Slechts enkele velden van uw XDM-schema zijn beschikbaar in het dialoogvenster **[!UICONTROL Field]** weergeven. U kunt tekenreekswaarden en arrays met tekenreeks-, int- en booleaanse waarden zien. Bijvoorbeeld de `segmentMembership` array wordt niet weergegeven, omdat deze andere arraywaarden bevat.
 
-![Modal venster 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![Het modulaire venster van de berekende gebiedsfunctionaliteit zonder nog geselecteerde functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
 Gebruik bijvoorbeeld de opdracht `join` functie op de `loyaltyID` veld, zoals hieronder weergegeven, om een array van loyale id&#39;s te exporteren als een tekenreeks die is samengevoegd met een onderstrepingsteken in een CSV-bestand. Weergave [meer informatie hierover en andere onderstaande voorbeelden](#join-function-export-arrays).
 
-![Modal venster 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Modal venster van de berekende gebiedsfunctionaliteit met de verbindingsfunctie geselecteerd.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Selecteren **[!UICONTROL Save]** om het berekende veld te behouden en terug te keren naar de toewijzingsstap.
 
-![Modal window 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Het modulaire venster van de berekende gebiedsfunctionaliteit met de verbindingsfunctie geselecteerd en sparen controle benadrukt.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 Vul de stappen voor het toewijzen van de workflow in **[!UICONTROL Target field]** met een waarde van de kolomkop die u voor dit veld wilt gebruiken in de geëxporteerde bestanden.
 
-![Doelveld 1 selecteren](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![De stap van de toewijzing met het benadrukte doelgebied.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Doelveld 2 selecteren](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 Indien klaar, selecteert u **[!UICONTROL Next]** om door te gaan naar de volgende stap van de activeringsworkflow.
 
-![Selecteer Volgende om door te gaan](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![Toewijzingsstap met het doelveld gemarkeerd en een doelwaarde ingevuld.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## Ondersteunde functies {#supported-functions}
 
@@ -115,20 +115,20 @@ U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals wordt wee
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Screenshot toewijzen](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Voorbeeld van toewijzing inclusief de functie join.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. Let op: de drie elementen van de array worden samengevoegd tot één tekenreeks met behulp van de `_` teken.
 
 ```
-`First_Name,Last_Name,Organization
-John,Doe,"Marketing_Sales_Finance"
+`First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
 ```
 
 ### `iif` functie voor het exporteren van arrays {#iif-function-export-arrays}
 
-Gebruik de `iif` functie om elementen van een array onder bepaalde omstandigheden te exporteren. Bijvoorbeeld, verdergaand met `organzations` arrayobject van bovenaf, u kunt een eenvoudige voorwaardelijke functie schrijven, zoals `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+Gebruik de `iif` functie om elementen van een array onder bepaalde omstandigheden te exporteren. Bijvoorbeeld, verdergaand met `organizations` arrayobject van bovenaf, u kunt een eenvoudige voorwaardelijke functie schrijven, zoals `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![Screenshot toewijzen voor de eerste en laatste functies](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![Voorbeeld van toewijzing inclusief de IF-functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. In dit geval, is het eerste element van de serie Marketing, zodat is de persoon lid van de marketing afdeling.
 
@@ -137,18 +137,33 @@ In dit geval ziet het uitvoerbestand er hieronder uit. In dit geval, is het eers
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
+### `add_to_array` functie voor het exporteren van arrays {#add-to-array-function-export-arrays}
+
+Gebruik de `add_to_array` functie om elementen toe te voegen aan een geëxporteerde array. U kunt deze functie combineren met de functie `join` hierboven beschreven functie.
+
+Doorgaan met de `organizations` arrayobject van bovenaf, u kunt een functie schrijven zoals `source: join('_', add_to_array(organizations,"2023"))`, de organisaties waarvan een persoon lid is in het jaar 2023 terug te sturen.
+
+![Voorbeeld van toewijzing, inclusief de functie add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+
+In dit geval ziet het uitvoerbestand er hieronder uit. Let op: de drie elementen van de array worden samengevoegd tot één tekenreeks met behulp van de `_` en 2023 wordt ook toegevoegd aan het einde van de tekenreeks.
+
+```
+`First_Name,Last_Name,Personal_Email,Organization_Member_2023
+John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
+```
+
 ### `coalesce` functie voor het exporteren van arrays {#coalesce-function-export-arrays}
 
 Gebruik de `coalesce` functie om het eerste element van een array met een andere waarde dan null te benaderen en te exporteren naar een tekenreeks.
 
-U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals wordt weergegeven in de afbeelding van het kaartscherm, met behulp van een `coalesce(subscriptions.hasPromotion)` syntaxis om de eerste waarde true van false in de array te retourneren:
+U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals wordt weergegeven in de afbeelding van het kaartscherm, met behulp van een `coalesce(subscriptions.hasPromotion)` syntaxis om de eerste te retourneren `true` van `false` waarde in de array:
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` array
 * `person.name.firstName` string
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Screenshot toewijzen voor functie colesce](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![Voorbeeld van toewijzing inclusief de functie voor afspelen.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. De eerste niet-null `true` De waarde in de array wordt geëxporteerd naar het bestand.
 
@@ -156,7 +171,6 @@ In dit geval ziet het uitvoerbestand er hieronder uit. De eerste niet-null `true
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
-
 
 ### `size_of` functie voor het exporteren van arrays {#sizeof-function-export-arrays}
 
@@ -167,7 +181,7 @@ U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals in de sch
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array met vijf afzonderlijke aankooptijden voor de klant
 * `personalEmail.address` string
 
-![Screenshot voor size_of function toewijzen](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![Voorbeeld van toewijzing inclusief de size_of functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. De tweede kolom geeft het aantal elementen in de array aan, overeenkomend met het aantal afzonderlijke aankopen dat de klant heeft gedaan.
 
@@ -180,9 +194,9 @@ johndoe@acme.org,"5"
 
 U kunt toegang krijgen tot een index van een array om één item uit de array te exporteren. Bijvoorbeeld, gelijkend op het bovenstaande voorbeeld voor `size_of` als u slechts de eerste keer wilt openen en exporteren dat een klant een bepaald product heeft aangeschaft, kunt u `purchaseTime[0]` het eerste element van de tijdstempel exporteren; `purchaseTime[1]` het tweede element van de tijdstempel exporteren; `purchaseTime[2]` om het derde element van de tijdstempel te exporteren, enzovoort.
 
-![Screenshot toewijzen voor toegang tot index](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![Voorbeeld van toewijzing dat aangeeft hoe een element van een array kan worden benaderd.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-In dit geval ziet het uitvoerbestand er als volgt uit:
+In dit geval ziet het uitvoerbestand er als volgt uit: de eerste keer dat de klant een aankoop heeft gedaan, wordt geëxporteerd:
 
 ```
 `Personal_Email,First_Purchase
@@ -193,9 +207,9 @@ johndoe@acme.org,"1538097126"
 
 Gebruik de `first` en `last` functies om het eerste of laatste element in een array te exporteren. Bijvoorbeeld, verdergaand met `purchaseTime` arrayobject met meerdere tijdstempels uit de vorige voorbeelden, kunt u deze gebruiken om de eerste of laatste aanschaftijd die door een persoon is gemaakt, te exporteren.
 
-![Screenshot toewijzen voor de eerste en laatste functies](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![Voorbeeld van toewijzing inclusief de eerste en laatste functies.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-In dit geval ziet het uitvoerbestand er als volgt uit:
+In dit geval ziet uw uitvoerbestand er als volgt uit: u exporteert de eerste en laatste keer dat de klant een aankoop heeft gedaan:
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase
@@ -207,6 +221,3 @@ johndoe@acme.org,"1538097126","1664327526"
 Naast de functies die specifiek zijn voor het exporteren van arrays of elementen uit een array, kunt u hash-functies gebruiken voor hashingkenmerken. Als u bijvoorbeeld persoonlijke gegevens in kenmerken hebt, kunt u deze velden tijdens het exporteren hashen.
 
 U kunt tekenreekswaarden bijvoorbeeld rechtstreeks hashen `md5(personalEmail.address)`. U kunt desgewenst ook afzonderlijke elementen van arrayvelden zoals: `md5(purchaseTime[0])`
-
-
-
