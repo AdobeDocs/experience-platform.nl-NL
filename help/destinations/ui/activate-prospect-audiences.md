@@ -2,13 +2,13 @@
 title: Activeren het potentiële publiek aan bestemmingen
 type: Tutorial
 description: Leer hoe te om perspectiefpubliek aan bestemmingen te activeren
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
 
 ---
-
 
 # Perspectiefpubliek activeren
 
@@ -22,7 +22,7 @@ In dit artikel wordt uitgelegd welke workflow nodig is om te exporteren [publiek
 
 Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab. Gebruik de **[!UICONTROL Data types]** filter en selecteer **[!UICONTROL Prospects]** de bestemmingen te zien die de activering van het beoogde publiek ondersteunen. Op dit moment is het exporteren van mogelijke doelgroepen alleen beschikbaar voor cloudopslagdoelen.
 
-![Doelen die de uitvoer van gegevenssets ondersteunen](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Doelen die het potentiële publiek steunen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Vereisten {#prerequisites}
 

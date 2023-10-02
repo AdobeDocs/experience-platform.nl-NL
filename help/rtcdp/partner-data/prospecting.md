@@ -1,9 +1,10 @@
 ---
 title: Nieuwe klanten interesseren en aantrekken door gebruiksscenario's te prospecteren
 description: Leer hoe u nieuwe klanten kunt interesseren en aantrekken door gebruiksscenario's te prospecteren, mogelijk gemaakt door de partnergegevensondersteuning in Real-Time CDP.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1913'
 ht-degree: 2%
 
 ---
@@ -207,7 +208,11 @@ Meer informatie over [publiek perspectief](/help/segmentation/ui/prospect-audien
 
 ### Activeren perspectiefprofielen aan bestemmingen {#activate-to-destinations}
 
-Maak gebruik van het potentiële publiek door hen naar bestemmingen uit te voeren. Momenteel gelden alleen bepaalde bestemmingen, zoals [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) of de [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) activeren van perspectiefprofielen voor doelondersteuning.
+Maak gebruik van het potentiële publiek door hen naar bestemmingen uit te voeren. Momenteel ondersteunen alleen bepaalde cloudopslagdoelen activering van perspectiefprofielen.
+
+![Doelen die het potentiële publiek steunen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Meer informatie](/help/destinations/ui/activate-prospect-audiences.md) over het activeren van vooruitzichten voor cloudopslagbestemmingen.
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 
