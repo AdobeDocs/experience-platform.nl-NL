@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Media Edge-API's
 description: Overzicht van mediarand-API's
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 2%
 
 ---
-
 
 # Overzicht van de Media Edge API
 
@@ -36,7 +36,7 @@ In de volgende tabel ziet u een mogelijke API-service voor Adobe voor verschille
 | Gebruiksscenario | API-service |
 | -------- | ----------- |
 | Adobe Experience Platform-oplossing | Mediarand |
-| Real-time CDP + Customer Journey Analytics | Mediarand |
+| REAL-TIME CDP + CUSTOMER JOURNEY ANALYTICS | Mediarand |
 | Adobe Analytics + Adobe Experience Platform oplossing | Mediarand |
 | Alleen Adobe Analytics (al gevolgd) | Media-verzameling |
 
@@ -53,7 +53,3 @@ In de volgende afbeelding ziet u de gegevensstromen voor de twee API-services:
 * Raadpleeg voor meer informatie over het gebruik van Media Edge API&#39;s de [Aan de slag - documentatie](getting-started.md).
 
 * Voor meer informatie over het werken met de Rand van het Platform, zie [Media Analytics installeren met Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
-
-
-
-

@@ -1,13 +1,13 @@
 ---
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
-source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 1%
 
 ---
-
 
 # Veelgestelde vragen
 
@@ -140,7 +140,7 @@ Op dit moment, nee. Deze mogelijkheid moet echter in de nabije toekomst beschikb
 
 ### Kan ik publiek van de Samenstelling van het Publiek naar alle stroomafwaartse bestemmingen en kanalen verzenden?
 
-Op dit moment, nee. Momenteel, kunt u publiek van de Samenstelling van het Publiek in de Campagnes van Adobe Journey Optimizer en Echte - tijd CDP bestemmingen gebruiken. Adobe Journey Optimizer-reizen worden in een toekomstige release ondersteund.
+Op dit moment, nee. Momenteel kunt u soorten publiek van Audience Composition gebruiken in Adobe Journey Optimizer-campagnes en Real-Time CDP-bestemmingen. Adobe Journey Optimizer-reizen worden in een toekomstige release ondersteund.
 
 ### Zijn er aanwijzingen voor het aantal composities?
 

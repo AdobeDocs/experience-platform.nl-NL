@@ -2,7 +2,7 @@
 title: Adobe Commerce-bestemmingsconnector
 description: Leer hoe verkopers van Adobe Commerce en Real-Time CDP de winkelervaring kunnen aanpassen door zeer relevante site-inhoud en -promoties te leveren, aangepast aan klanten die in Real-Time CDP zijn gebouwd en beheerd.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Nadat u de eerste vereisten hebt voltooid, maakt u verbinding met de [!DNL Comme
 
 Als u verbinding wilt maken met de [!DNL Adobe Commerce] bestemming:
 
-1. In de [Interface Platform](https://experience.adobe.com/platform/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+1. In de [Platforminterface](https://experience.adobe.com/platform/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 1. Selecteer **[!UICONTROL Personalization]**.
 1. Selecteer de Adobe Commerce-bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Set up]**.
 1. Voer de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md).
@@ -51,13 +51,13 @@ Als u verbinding wilt maken met de [!DNL Adobe Commerce] bestemming:
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
 - **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
-- **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
-- **[!UICONTROL Integration alias]**: Deze waarde wordt verzonden naar het Web SDK van het Experience Platform als JSON objecten naam.
-- **[!UICONTROL Datastream ID]**: Dit bepaalt welke gegevensstroom van de Inzameling van Gegevens het publiek bevat dat in de reactie op de pagina inbegrepen is. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [Een gegevensstroom configureren](../../../datastreams/overview.md) voor meer informatie .
+- **[!UICONTROL Description]**: Voer een beschrijving in voor uw doel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
+- **[!UICONTROL Integration alias]**: Deze waarde wordt als een JSON-objectnaam verzonden naar de Web SDK van het Experience Platform.
+- **[!UICONTROL Datastream ID]**: Dit bepaalt welke gegevensstroom van de Inzameling van Gegevens de doelgroepen bevat die in de reactie op de pagina inbegrepen zijn. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [Een gegevensstroom configureren](../../../datastreams/overview.md) voor meer informatie .
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over waarschuwingen raadpleegt u de handleiding over [het abonneren aan bestemmingen alarm gebruikend UI](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Zie de handleiding voor meer informatie over waarschuwingen [abonneren op bestemmingen die het alarm gebruiken UI](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]**.
 
@@ -75,7 +75,7 @@ Nu u hebt gevormd [!DNL Commerce] doel binnen Experience Platform, moet u instal
 
 ## Activering van publiek valideren bij Handel {#exported-data}
 
-Nadat u Real-Time CDP-publiek hebt geactiveerd voor uw [!DNL Adobe Commerce] -account, worden de publiek beschikbare soorten publiek weergegeven wanneer u naar de _Beheer_ zijbalk, ga vervolgens naar **[!UICONTROL Customers]** > **[!UICONTROL Real-time CDP Audience]**.
+Nadat u Real-Time CDP-publiek hebt geactiveerd voor uw [!DNL Adobe Commerce] -account, worden de publiek beschikbare soorten publiek weergegeven wanneer u naar de _Beheerder_ zijbalk, ga vervolgens naar **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
 
 ![Real-Time CDP-dashboard Soorten publiek](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

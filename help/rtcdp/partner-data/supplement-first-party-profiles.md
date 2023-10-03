@@ -1,7 +1,8 @@
 ---
 title: Eigen profielen aanvullen met door partners verstrekte attributen
 description: Leer hoe u eigen profielen kunt aanvullen met kenmerken van vertrouwde gegevenspartners om uw databasis te verbeteren, nieuwe inzichten in uw klantenbestand te verkrijgen en uw doelgroepen beter te optimaliseren.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 3%
@@ -12,7 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
 
 Voeg eerst-partijprofielen met attributen van vertrouwde op gegevenspartners toe om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
 
@@ -24,7 +25,7 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 
 * Denk aan de locatie waar de publiekslijst uit Real-Time CDP wordt geëxporteerd, zodat deze met de leverancier van gegevens kan worden gedeeld. Deze locatie moet het exporteren van bestanden ondersteunen.
 * Wat zijn de herkenningstekens die door de gegevensverkoper worden verwacht zodat kunnen zij op extra attributen laag?
-* Hoe zal het dossier dat partner-verstrekte attributen bevat terug in real time CDP worden opgenomen? De bestanden kunnen bijvoorbeeld worden ingevoerd via cloudopslagbronconnectors, zoals [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) of [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
+* Hoe zal het dossier dat partner-verstrekte attributen bevat terug in Real-Time CDP worden opgenomen? De bestanden kunnen bijvoorbeeld worden ingevoerd via cloudopslagbronconnectors, zoals [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) of [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
 * Wat is het gemak waarmee u partner-verstrekte attributen om teruggebracht naar Real-Time CDP en verfrist verwacht te worden?
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien 
 
 ### Exporteer het publiek dat u wilt verrijken wanneer u PII (Personal Identified Information) of PII (hashed-PII) uitschakelt {#export-audiences}
 
-Exporteer het publiek dat de partner moet verrijken. Gebruik de bestemmingen van de wolkenopslag die door CDP in real time, zoals Amazon S3 of SFTP worden verstrekt. Lees de volgende documentatiepagina&#39;s om deze stap te voltooien:
+Exporteer het publiek dat de partner moet verrijken. Gebruik de cloudopslagbestemmingen van Real-Time CDP, zoals Amazon S3 of SFTP. Lees de volgende documentatiepagina&#39;s om deze stap te voltooien:
 
 * [Amazon S3-bestemming](/help/destinations/catalog/cloud-storage/amazon-s3.md) documentatiepagina
 * [SFTP-bestemming](/help/destinations/catalog/cloud-storage/sftp.md) documentatiepagina

@@ -3,15 +3,15 @@ solution: Experience Platform
 title: De juiste afspeelboek ontdekken
 description: Leer hoe u de juiste playbook kunt vinden voor uw gebruikscase en hoe u afspeelboeken kunt inschakelen.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
 
-
-# (bèta) Ontdek het juiste playbook
+# (bèta) Ontdek het juiste afspeelboek
 
 >[!AVAILABILITY]
 >
@@ -23,9 +23,9 @@ Als u een afspeelboek wilt gebruiken, navigeert u naar **[!UICONTROL Use Case Pl
 
 Gebruik het zoekvenster en de filters op de pagina om de juiste afspeellijst voor uw gebruik te vinden.
 
-U kunt bijvoorbeeld afspeelboeken filteren die u kunt gebruiken op basis van het werkgebied in de marketingtrechter waarop u zich wilt richten: conversie, betrokkenheid of retentie. U kunt de weergegeven afspeelboeken ook filteren op basis van de branche waarin u zich bevindt of op basis van de productrechten waartoe u toegang hebt: Adobe Journey Optimizer of Real-time CDP.
+U kunt bijvoorbeeld afspeelboeken filteren die u kunt gebruiken op basis van het werkgebied in de marketingtrechter waarop u zich wilt richten: conversie, betrokkenheid of retentie. U kunt de weergegeven afspeelboeken ook filteren op basis van de sector waarin u zich bevindt of op basis van de productrechten waartoe u toegang hebt: Adobe Journey Optimizer of Real-Time CDP.
 
-![Afspeelboeken filteren op basis van marketingtrechter, industrie of product](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+![Afspeelboeken filteren op marketingtrechter, industrie of product](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
 U kunt de zoekfunctionaliteit ook gebruiken om het juiste afspeelboek voor u te vinden. Hieronder ziet u een voorbeeld van hoe u een afspeelboek kunt vinden waarmee u zich kunt bezighouden met gebruikers die mogelijk hun winkelwagentje hebben verlaten.
 

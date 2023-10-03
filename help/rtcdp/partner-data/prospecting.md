@@ -2,7 +2,7 @@
 title: Nieuwe klanten interesseren en aantrekken door gebruiksscenario's te prospecteren
 description: Leer hoe u nieuwe klanten kunt interesseren en aantrekken door gebruiksscenario's te prospecteren, mogelijk gemaakt door de partnergegevensondersteuning in Real-Time CDP.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1913'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
 
 Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit te breiden met perspectiefprofielen van gegevenspartners en met hen in gesprek te gaan om nieuwe klanten te verkrijgen of te bereiken.
 

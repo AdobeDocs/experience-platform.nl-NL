@@ -1,7 +1,8 @@
 ---
 title: Erkenning door Partner-Aided Visitor gebruiken om onsite ervaringen aan te passen
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2442'
 ht-degree: 1%
@@ -12,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
+>Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Meer informatie over deze pakketten vindt u in de [productbeschrijvingen](https://helpx.adobe.com/legal/product-descriptions.html) en neem contact op met uw Adobe voor meer informatie.
 
 Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden aan bezoekers van webeigenschappen. Gebruik deze zelfstudie om inzicht te krijgen in de implementatiereeks van verschillende elementen in Experience Platform en andere oplossingen voor Experiencen Cloud en om een gepersonaliseerde ervaring weer te geven voor geverifieerde en niet-geverifieerde bezoekers.
 

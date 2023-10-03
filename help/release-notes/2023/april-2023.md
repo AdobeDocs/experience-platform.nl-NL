@@ -1,8 +1,8 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, april 2023
+title: Adobe Experience Platform Release Notes April 2023
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 2%
@@ -52,22 +52,22 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 | Functie | Beschrijving |
 | --- | --- |
 | Updates van de back-upperiode voor Adobe Analytics in niet-productiesandboxen | De periode voor het terugvullen van Adobe Analytics in niet voor de productie bestemde sandboxen is teruggebracht tot drie maanden. De back-up van productiesandboxen blijft na 13 maanden ongewijzigd. Deze wijziging geldt alleen voor nieuwe stromen en heeft geen invloed op bestaande stromen. Lees voor meer informatie de [Adobe Analytics-overzicht](../../sources/connectors/adobe-applications/analytics.md). |
-| Nieuwe mapfunctie om FPID-tekenreeksen om te zetten in ECID | Gebruik de `fpid_to_ecid` FPID-tekenreeksen converteren naar ECID voor gebruik in Experience Platform- en Experience Cloud-toepassingen. Lees voor meer informatie de [Handleiding voor functies Data Prep](../../data-prep/functions.md). |
+| Nieuwe mapfunctie om FPID-tekenreeksen om te zetten in ECID | Gebruik de `fpid_to_ecid` functie om FPID-tekenreeksen om te zetten in ECID voor gebruik in Experience Platform- en Experience Cloud-toepassingen. Lees voor meer informatie de [Handleiding voor functies Data Prep](../../data-prep/functions.md). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over Data Prep, gelieve te lezen [Overzicht van Data Prep](../../data-prep/home.md).
+Lees voor meer informatie over Data Prep de [Overzicht van Data Prep](../../data-prep/home.md).
 
 ## Gegevensverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
 
 **Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
 | IP adresverwarring voor gegevensstromen | U kunt gedeeltelijke of volledige datastream-vlakke IP verduisteringsopties in nu bepalen [interface voor gegevensstroomconfiguratie](../../datastreams/configure.md). <br><br>De gegevensstroom-vlakke IP het obfusceren plaatsen neemt belangrijkheid over om het even welke IP die obfuscatie in Adobe Target en Audience Manager wordt gevormd. <br><br>De gegevens die naar Adobe Analytics worden verzonden, worden niet beïnvloed door de gegevensstroom op niveau [!UICONTROL IP Obfuscation] instellen. Adobe Analytics ontvangt momenteel onopvallende IP-adressen. Voor Analytics om verduisterde IP adressen te ontvangen, moet u IP verduistering afzonderlijk vormen, in Adobe Analytics. Dit gedrag wordt in toekomstige versies bijgewerkt.<br><br> Voor meer details over IP verwarring en instructies op hoe te om het te vormen, zie [configuratiedocumentatie voor gegevensstroom](../../datastreams/configure.md#advanced-options). |
-| [DataStream-configuratieoverschrijvingen](../../datastreams/overrides.md) | U kunt extra configuratieopties voor gegevensstromen nu bepalen, die u kunt gebruiken om specifieke montages met voeten te treden, zoals gebeurtenisdatasets, de bezitstokens van het Doel, de containers van de synchronisatie van identiteitskaart, en de rapportreeksen van Analytics. <br><br>Het overschrijven van gegevensstroomconfiguraties is een proces in twee stappen: <ol><li>Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [databaseconfiguratiepagina](../../datastreams/configure.md).</li><li>Dan, moet u de met voeten treedt naar het Netwerk van de Rand of via het bevel van SDK van het Web of door SDK van het Web te gebruiken verzenden [tagextensie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
+| [DataStream-configuratieoverschrijvingen](../../datastreams/overrides.md) | U kunt extra configuratieopties voor gegevensstromen nu bepalen, die u kunt gebruiken om specifieke montages met voeten te treden, zoals gebeurtenisdatasets, de bezitstokens van het Doel, de containers van de synchronisatie van identiteitskaart, en de rapportreeksen van Analytics. <br><br>Het overschrijven van gegevensstroomconfiguraties is een proces in twee stappen: <ol><li>Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](../../datastreams/configure.md).</li><li>Dan, moet u de met voeten treedt naar het Netwerk van de Rand of via het bevel van SDK van het Web of door SDK van het Web te gebruiken verzenden [tagextensie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
 | OAuth JWT Secret | De [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) Hiermee kunnen klanten Adobe- en Google Service-tokens gebruiken ter ondersteuning van server-naar-server interacties bij het doorsturen van gebeurtenissen. |
 | [!DNL Pinterest Conversions API] extension | De [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) Met de extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in Adobe Experience Platform Edge Network, benutten en verzenden naar [!DNL Pinterest] in de vorm van server-side-gebeurtenissen die de [!DNL Pinterest Conversions API]. |
 
@@ -89,9 +89,9 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Dataflow-controle voor [!DNL Custom Personalization] en [!DNL Adobe Commerce] bestemmingen | <p> U ziet nu activeringsmaatstaven voor de [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Aangepaste aanpassing](../../destinations/catalog/personalization/custom-personalization.md) en de [Aangepaste aanpassing met kenmerken](../../destinations/catalog/personalization/custom-personalization.md) verbindingen. </p> <p>![Adobe Commerce-afbeelding](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce-meetgegevens"){width="100" zoomable="yes"}</p>  Zie [Gegevens controleren in de werkruimte Doelen](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) voor meer informatie . |
+| Dataflow-controle voor [!DNL Custom Personalization] en [!DNL Adobe Commerce] bestemmingen | <p> U ziet nu activeringsmaatstaven voor de [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Aangepaste personalisatie](../../destinations/catalog/personalization/custom-personalization.md) en de [Aangepaste aanpassing met kenmerken](../../destinations/catalog/personalization/custom-personalization.md) verbindingen. </p> <p>![Adobe Commerce-afbeelding](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce-meetgegevens"){width="100" zoomable="yes"}</p>  Zie [Gegevens controleren in de werkruimte Doelen](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) voor meer informatie . |
 | Nieuw **[!UICONTROL Append segment ID to segment name]** veld voor de [!DNL Google Ad Manager] en [!DNL Google Ad Manager 360] bestemmingen | <p>U kunt nu de segmentnaam hebben in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) en [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) omvat segmentidentiteitskaart van Experience Platform, als dit: `Segment Name (Segment ID)`.</p><p>![Segment-id-afbeelding toevoegen](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nieuw segment-id toevoegen aan segmentnaamveld "){width="100" zoomable="yes"}</p> |
-| Geplande terugvullingen voor publiek | <p>Voor de [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) doel, is de activering van publieksbackfills aan de bestemming gepland om 24 tot 48 uur voor te komen nadat een segment eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is in reactie op het beleid van Google om 24 uur te wachten tot het opnemen van gegevens en zal gelijke tarieven tussen Real-time CDP en verbeteren [!DNL Google Display & Video 360].</p> <p>Merk op dat dit een achtergrondconfiguratie is die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.</p> |
+| Geplande terugvullingen voor publiek | <p>Voor de [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) doel, is de activering van publieksbackfills aan de bestemming gepland om 24 tot 48 uur voor te komen nadat een segment eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is een reactie op het beleid van Google om 24 uur te wachten tot er gegevens zijn ingevoerd en verbetert de match-rate tussen Real-Time CDP en [!DNL Google Display & Video 360].</p> <p>Merk op dat dit een achtergrondconfiguratie is die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.</p> |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 | Functie | Beschrijving |
 | --- | --- |
-| Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen.<br>![De Schema-editor met de schakeloptie voor weergavenaam gemarkeerd.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Schakelen tussen weergavenamen van schema-editor"){width="100" zoomable="yes"}<br>Dankzij deze flexibiliteit is het mogelijk uw schema&#39;s beter te detecteren en te bewerken. De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. Lees de [documentatie over naamschakelen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) voor meer informatie. |
+| Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen.<br>![De Schema-editor met de schakeloptie voor weergavenaam gemarkeerd.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Schakelen tussen weergavenamen van schema-editor"){width="100" zoomable="yes"}<br>Dankzij deze flexibiliteit is het mogelijk uw schema&#39;s beter te detecteren en te bewerken. De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. Lees de [documentatie over weergavenamen in-/uitschakelen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -162,19 +162,19 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Vervaldatum van pseudoniem profielgegevens | De vervaldatum van pseudoniem profielgegevens is nu over het algemeen beschikbaar. Deze release verwijdert ononderbroken pseudoniem-profielen uit uw Experience Platform-exemplaar als deze zijn ingeschakeld. Lees voor meer informatie over deze functie en Pseudoniem-profielen de [Handleiding voor het verlopen van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md). |
+| Vervaldatum van pseudoniem profielgegevens | De vervaldatum van pseudoniem profielgegevens is nu over het algemeen beschikbaar. Deze release verwijdert ononderbroken pseudoniem-profielen uit uw Experience Platform-exemplaar als deze zijn ingeschakeld. Voor meer informatie over deze functie en Pseudoniem Profielen leest u de [Handleiding voor het verlopen van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
 
 ## Segmenteringsservice {#segmentation}
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
 **Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Segmentlidmaatschapstoewijzing | Als vervolg op de vorige aankondiging in februari, op 15 mei 2023, `Existing` status zal van de kaart van het segmentlidmaatschap worden verouderd om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen. Na deze wijziging worden profielen die in een segment zijn gekwalificeerd, weergegeven als `Realized` en de gediskwalificeerde profielen blijven worden weergegeven als `Exited`.<br/><br/> Deze wijziging kan van invloed zijn op [ondernemingsbestemmingen](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) en hebben mogelijk stroomafwaartse processen op hun plaats geautomatiseerd op basis van de `Existing` status. Als dit voor u het geval is, gelieve uw downstreamintegratie te herzien. Als u pas na een bepaalde tijd gekwalificeerde profielen wilt identificeren, kunt u een combinatie van de `Realized` en de `lastQualificationTime` in uw overzicht van het segmentlidmaatschap. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger. |
+| Segmentlidmaatschapstoewijzing | Als vervolg op de vorige aankondiging in februari, op 15 mei 2023, `Existing` status zal van de kaart van het segmentlidmaatschap worden verouderd om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen. Na deze wijziging worden profielen die in een segment zijn gekwalificeerd, weergegeven als `Realized` en de gediskwalificeerde profielen blijven worden weergegeven als `Exited`.<br/><br/> Deze wijziging kan van invloed zijn op [ondernemingsbestemmingen](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API), en zou stroomafwaartse processen op zijn plaats kunnen hebben gebaseerd die op `Existing` status. Als dit voor u het geval is, gelieve uw downstreamintegratie te herzien. Als u pas na een bepaalde tijd gekwalificeerde profielen wilt identificeren, kunt u een combinatie van de `Realized` en de `lastQualificationTime` in uw overzicht van het segmentlidmaatschap. Neem voor meer informatie contact op met uw Adobe. |
 
 {style="table-layout:auto"}
 
@@ -182,7 +182,7 @@ Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van seg
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren en maakt het mogelijk die gegevens te structureren, te labelen en te verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren en stelt u in staat die gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 

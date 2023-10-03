@@ -2,7 +2,7 @@
 title: Configureerbare en algemene exportinstellingen in doelen
 description: Leer welke de uitvoermontages in bestemmingen configureerbaar op een bestemmingsniveau zijn en die vast zijn en niet kunnen worden uitgegeven.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Wanneer het denken over het de uitvoergedrag aan de bestemmingen van het Experience Platform, moet u drie afzonderlijke niveaus overwegen waarop de configuraties handelen.
 
-* Op een eerste niveau, zijn sommige montages met betrekking tot het gedrag van de profieluitvoer en configuratiemontages gemeenschappelijk over alle bestemmingen die tot een bestemmingstype behoren. Deze montages verwijzen naar wat een bestemmingsuitvoer teweegbrengt en wat in de uitvoer inbegrepen is en niet door bestemmingsontwikkelaars of gebruikers in real time CDP kan worden uitgegeven.
+* Op een eerste niveau, zijn sommige montages met betrekking tot het gedrag van de profieluitvoer en configuratiemontages gemeenschappelijk over alle bestemmingen die tot een bestemmingstype behoren. Deze instellingen verwijzen naar wat een doelexport activeert en naar wat in een exportbewerking is opgenomen en niet kan worden bewerkt door bestemmingsontwikkelaars of Real-Time CDP-gebruikers.
 * Op een tweede niveau, kunnen sommige montages op een bestemmingsniveau door de bestemmingsontwikkelaar worden aangepast wanneer het ontwerpen van bestemmingen die Destination SDK gebruiken.
-* Op een derde niveau, zijn er configuratiemontages die de gebruikers in real time CDP in de activeringswerkschema&#39;s kunnen plaatsen.
+* Op een derde niveau zijn er configuratie-instellingen die Real-Time CDP-gebruikers kunnen instellen in de activeringsworkflows.
 
 ![Diagram die interplay tussen gemeenschappelijke en configureerbare uitvoermontages voor bestemmingen tonen](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -23,9 +23,9 @@ Deze pagina beschrijft of verbindt uit aan alle gemeenschappelijke en configuree
 
 ## Algemene exportinstellingen voor verschillende doeltypen {#common-settings-across-destination-types}
 
-Het uitvoergedrag van de bestemming is consistent voor alle bestemmingen die tot een type bestemming behoren met betrekking tot *wat een doelexport activeert* en *wat is inbegrepen bij de uitvoer van bestemming*. De uitvoer van de bestemming wordt teweeggebracht door berichten die de bestemmingsdienst van ontvangt [upstream klantenprofielservice in realtime](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Het uitvoergedrag van de bestemming is consistent voor alle bestemmingen die tot een type bestemming behoren met betrekking tot *wat een doelexport activeert* en *wat is inbegrepen bij de uitvoer van de bestemming*. De uitvoer van de bestemming wordt teweeggebracht door berichten die de bestemmingsdienst van ontvangt [upstream klantenprofielservice in realtime](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
-Wat in de bestemmingsuitvoer inbegrepen is varieert lichtjes tussen bestemmingstypes. Meer informatie over de [algemene exportgedragspatronen per doeltype](/help/destinations/how-destinations-work/profile-export-behavior.md). Deze montages kunnen niet door bestemmingsontwikkelaars of gebruikers in real time CDP worden uitgegeven.
+Wat in de bestemmingsuitvoer inbegrepen is varieert lichtjes tussen bestemmingstypes. Meer informatie over de [algemene exportgedragspatronen per doeltype](/help/destinations/how-destinations-work/profile-export-behavior.md). Deze instellingen kunnen niet worden bewerkt door bestemmingsontwikkelaars of Real-Time CDP-gebruikers.
 
 ## Aanpasbare exportinstellingen per doelontwikkelaar {#customizable-settings-by-destination-developers}
 
@@ -52,7 +52,7 @@ Evenzo geldt voor [bestandsgebaseerde doelen](/help/destinations/destination-typ
 
 ![De opname van het scherm van filename voegt optie in de het plannen stap van het activeringswerkschema toe. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
-Lees meer over de verschillende opties en stappen in de activeringsworkflow:
+Meer informatie over de verschillende opties en stappen in de activeringsworkflow vindt u:
 
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md)
 * [Activeer publieksgegevens aan ondernemingsbestemmingen](/help/destinations/ui/activate-streaming-profile-destinations.md)
@@ -66,4 +66,4 @@ Na het lezen van dit document, weet u nu welke de uitvoermontages voor bestemmin
 
 Vervolgens kunt u meer gedetailleerde informatie lezen over de [algemene exportgedragspatronen per doeltype](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
-Voor doelontwikkelaars kunt u [Aan de slag](/help/destinations/destination-sdk/getting-started.md) met Destination SDK. Voor gebruikers die gegevens willen activeren, kunt u alle beschikbare doelen uitchecken in het dialoogvenster [catalogus](/help/destinations/catalog/overview.md).
+Voor doelontwikkelaars kunt u [Aan de slag](/help/destinations/destination-sdk/getting-started.md) met Destination SDK. Voor gebruikers die gegevens willen activeren, kunt u alle beschikbare doelen uitchecken in de [catalogus](/help/destinations/catalog/overview.md).

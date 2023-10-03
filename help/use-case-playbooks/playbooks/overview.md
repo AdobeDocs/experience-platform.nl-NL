@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
-title: Overzicht van afspeelboeken met hoofdletters en kleine letters gebruiken
+title: Overzicht van afspeelboeken gebruiken
 description: Leer hoe u de functie Hoofdletters gebruiken in Experience Platform kunt gebruiken om aan de slag te gaan met verschillende gebruikssituaties voor marketingdoeleinden
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
-
 
 # (bèta) Overzicht van afspeelboeken gebruiken
 
@@ -41,11 +41,11 @@ Als u een Real-Time CDP-afspeelboek selecteert, kunt u het beste een publiek gen
 
 Als u een Adobe Journey Optimizer playbook selecteert, zou uw doel kunnen zijn een klantenreis binnen uw product te construeren, en relevante overseinen naar uw klanten te verzenden.
 
-Creeer een geval van playbook om specifieke activa zoals schema&#39;s, segmenten, of reizen te produceren die aan uw gebruiksgeval worden aangepast en in Experience Platform herbruikbaar zijn. Het doel van deze voorwerpen is u te helpen alle middelen begrijpen die worden vereist om uw specifiek gebruiksgeval uit te voeren. Ze bevatten geen gegevens en worden gemaakt in ontwikkelingssandboxen. Begin deze activa te gebruiken of geef aan hen uit alvorens hen te gebruiken en hen te delen met uw team in Echt - tijd CDP of Journey Optimizer.
+Creeer een geval van playbook om specifieke activa zoals schema&#39;s, segmenten, of reizen te produceren die aan uw gebruiksgeval worden aangepast en in Experience Platform herbruikbaar zijn. Het doel van deze voorwerpen is u te helpen alle middelen begrijpen die worden vereist om uw specifiek gebruiksgeval uit te voeren. Ze bevatten geen gegevens en worden gemaakt in ontwikkelingssandboxen. Begin deze middelen te gebruiken of geef hen uit alvorens hen te gebruiken en hen te delen met uw team in Real-Time CDP of Journey Optimizer.
 
 ## Beschikbaarheid
 
-Sommige [!UICONTROL Use Case Playbooks] zijn aangepast aan CDP-gebruiksgevallen in realtime, terwijl andere het meest geschikt zijn voor klanten die Journey Optimizer gebruiken. Blader in de catalogus naar de afspeelboeken die het meest geschikt zijn voor uw product en gebruik.
+Sommige [!UICONTROL Use Case Playbooks] zijn toegesneden op Real-Time CDP-gebruiksgevallen, terwijl andere het meest geschikt zijn voor klanten die Journey Optimizer gebruiken. Blader in de catalogus naar de afspeelboeken die het meest geschikt zijn voor uw product en gebruik.
 
 ## UI-hulplijnen
 

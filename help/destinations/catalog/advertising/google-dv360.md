@@ -3,7 +3,7 @@ keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave 
 title: Google Display & Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 360] bestemmingen:
 
 * Geactiveerd publiek wordt programmatically gecreeerd in het platform van Google.
-* De activering van publieksback-ups voor de [!DNL Google Display & Video 360] De bestemming zal 24-48 uur voorkomen nadat een publiek voor het eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is in reactie op het beleid van Google om 24 uur te wachten tot het opnemen van gegevens en is bedoeld om gelijke tarieven tussen Real-time CDP en te verbeteren [!DNL Google Display & Video 360]. Merk op dat dit een achtergrondconfiguratie is die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.
+* De activering van publieksback-ups voor de [!DNL Google Display & Video 360] De bestemming zal 24-48 uur voorkomen nadat een publiek voor het eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is een reactie op het beleid van Google om 24 uur te wachten tot er gegevens zijn ingevoerd en is bedoeld om de overeenkomst tussen Real-Time CDP en [!DNL Google Display & Video 360]. Merk op dat dit een achtergrondconfiguratie is die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.
 
 >[!IMPORTANT]
 >
