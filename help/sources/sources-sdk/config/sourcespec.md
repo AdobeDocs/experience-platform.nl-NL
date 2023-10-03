@@ -3,10 +3,10 @@ keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bro
 title: Bronspecificaties configureren voor Self-Serve Sources (Batch SDK)
 description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
-ht-degree: 0%
+source-wordcount: '2078'
+ht-degree: 1%
 
 ---
 
@@ -233,7 +233,7 @@ Zie de [aanhangsel](#source-spec) voor een voorbeeld van een volledig-bevolkte b
 | `sourceSpec.attributes.uiAttributes` | Geeft informatie weer over de specifieke bron voor de gebruikersinterface. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Een Booleaans kenmerk dat aangeeft of de bron meer feedback van klanten vereist om aan de functionaliteit toe te voegen. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definieert de categorie van de bron. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Definieert het pictogram dat wordt gebruikt voor het renderen van de bron in de interface van het Platform. | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Definieert het pictogram dat wordt gebruikt voor de rendering van de bron in de interface van het platform. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Geeft een korte beschrijving van de bron weer. |
 | `sourceSpec.attributes.uiAttributes.label` | Toont het etiket dat voor het teruggeven van de bron in Platform UI moet worden gebruikt. |
 | `sourceSpec.attributes.spec.properties.urlParams` | Bevat informatie over de het middelweg URL, methode, en gesteunde vraagparameters. |
@@ -243,11 +243,11 @@ Zie de [aanhangsel](#source-spec) voor een voorbeeld van een volledig-bevolkte b
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Bepaalt kopballen die in het HTTP- verzoek aan bron URL moeten worden verstrekt terwijl het halen van gegevens. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Dit attribuut kan worden gevormd om het lichaam van HTTP door een verzoek van de POST te verzenden. |
 | `sourceSpec.attributes.spec.properties.contentPath` | Bepaalt de knoop die de lijst van punten bevat die aan Platform moeten worden opgenomen. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | De weergave [sectie aanvullende bronnen](#content-path) voor een voorbeeld van de bron in een inhoudspad. |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die aan het Platform moeten worden toegevoegd. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die moeten worden ingesloten op Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Met deze eigenschap kunt u specifieke items identificeren uit de bron die is geïdentificeerd in het inhoudspad en die moeten worden uitgesloten van het opnemen van inhoud. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Met deze eigenschap kunt u de waarde van de kenmerknaam overschrijven die u hebt opgegeven in `contentPath`. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Met deze eigenschap kunt u twee arrays samenvoegen en de brongegevens transformeren naar een Platform-bron. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Met deze eigenschap kunt u twee arrays samenvoegen en de brongegevens transformeren naar de Platform-bron. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Het pad dat wijst naar de verzamelingsrecords die u wilt afvlakken. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Dit bezit staat u toe om specifieke punten van het middel te identificeren die in de entiteitweg worden geïdentificeerd die van worden uitgesloten. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
@@ -381,7 +381,53 @@ Het volgende is een voltooide bronspecificatie die [!DNL MailChimp Members]:
 
 Hieronder volgen voorbeelden van andere paginatietypen die worden ondersteund door Self-Serve Sources (Batch SDK):
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Verschuiven]
+
+Met dit paginatype kunt u de resultaten parseren door een index op te geven vanaf waar de resulterende array moet worden gestart en een limiet op het aantal resultaten. Bijvoorbeeld:
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `type` | Het type paginering waarmee gegevens worden geretourneerd. |
+| `limitName` | De naam voor de limiet waarmee de API het aantal records kan opgeven dat op een pagina moet worden opgehaald. |
+| `limitValue` | Het aantal records dat op een pagina moet worden opgehaald. |
+| `offSetName` | De naam van het verschuivingskenmerk. Dit is vereist als pagineringstype is ingesteld op `offset`. |
+| `endConditionName` | Een door de gebruiker gedefinieerde waarde die aangeeft aan welke voorwaarde de pagineringslus in de volgende HTTP-aanvraag wordt beëindigd. U moet de kenmerknaam opgeven waarop u de eindvoorwaarde wilt plaatsen. |
+| `endConditionValue` | De kenmerkwaarde waarop u de eindvoorwaarde wilt plaatsen. |
+
+>[!TAB Aanwijzer]
+
+Met dit paginatype kunt u een `pointer` variabele om naar een bepaald punt te richten dat met een verzoek moet worden verzonden. Voor het pagineren van het type aanwijzer is een pad vereist voor de nuttige lading van dat punt naar de volgende pagina. Bijvoorbeeld:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `type` | Het type paginering waarmee gegevens worden geretourneerd. |
+| `limitName` | De naam voor de limiet waarmee de API het aantal records kan opgeven dat op een pagina moet worden opgehaald. |
+| `limitValue` | Het aantal records dat op een pagina moet worden opgehaald. |
+| `pointerPath` | De naam van het attribuut pointer. Hiervoor is een pad nodig naar het kenmerk dat naar de volgende pagina verwijst. |
+
+>[!TAB Continatietoken]
 
 Een voortzetteken type van paginering keert een koordteken terug dat het bestaan van meer punten aangeeft die niet konden worden teruggekeerd, wegens een vooraf bepaald maximumaantal punten die in één enkele reactie kunnen worden teruggekeerd.
 
@@ -432,7 +478,7 @@ Hieronder ziet u een voorbeeld van een reactie die wordt geretourneerd met het t
 }
 ```
 
-#### `PAGE`
+>[!TAB Pagina]
 
 De `PAGE` Door het type paginering kunt u terugkerende gegevens doorlopen op het aantal pagina&#39;s, beginnend bij nul. Wanneer u `PAGE` Typ paginering, u moet het aantal records opgeven dat op één pagina wordt opgegeven.
 
@@ -461,7 +507,7 @@ De `PAGE` Door het type paginering kunt u terugkerende gegevens doorlopen op het
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB Geen]
 
 De `NONE` pagineringstype kan voor bronnen worden gebruikt die geen van de beschikbare pagineringstypen ondersteunen. Bronnen die het pagineringstype van `NONE` keer eenvoudig alle terugwinnbare verslagen terug wanneer een verzoek van de GET wordt gedaan.
 
@@ -471,7 +517,9 @@ De `NONE` pagineringstype kan voor bronnen worden gebruikt die geen van de besch
 }
 ```
 
-### Geavanceerde planning voor Self-Serve Sources (Batch SDK)
+>[!ENDTABS]
+
+### Geavanceerde planning voor Self-Serve Bronnen (Batch SDK)
 
 Vorm incrementele en backfill planning van uw bron gebruikend geavanceerde het plannen. De `incremental` bezit staat u toe om een programma te vormen waarin uw bron slechts nieuwe of gewijzigde verslagen zal opnemen, terwijl het `backfill` Met deze eigenschap kunt u een schema voor het invoeren van historische gegevens maken.
 
@@ -611,4 +659,4 @@ Hieronder ziet u een voorbeeld van een aangepast schema dat u kunt toevoegen aan
 
 ## Volgende stappen
 
-Met uw bevolkte bronspecificaties, kunt u te werk gaan om te vormen onderzoeken specificaties voor de bron die u aan Platform wilt integreren. Document weergeven op [configureren, verkenningsspecificaties](./explorespec.md) voor meer informatie .
+Met uw bevolkte bronspecificaties, kunt u te werk gaan om de verkennende specificaties voor de bron te vormen die u aan Platform wilt integreren. Document weergeven op [configureren, verkenningsspecificaties](./explorespec.md) voor meer informatie .

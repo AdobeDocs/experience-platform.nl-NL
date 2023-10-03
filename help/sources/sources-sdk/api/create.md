@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een nieuwe verbindingsspecificatie maken met de Flow Service API
 description: Het volgende document verstrekt stappen op hoe te om een verbindingsspecificatie tot stand te brengen gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen te integreren.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 
 ## Artefacten verzamelen
 
-Als u een nieuwe batchbron wilt maken met behulp van Self-Serve Sources, moet u eerst coördineren met Adobe, een persoonlijke Git-opslagplaats aanvragen en op de details met betrekking tot het label, de beschrijving, de categorie en het pictogram voor uw bron uitlijnen met Adobe.
+Als u een nieuwe batchbron wilt maken met behulp van Self-Serve Sources, moet u eerst coördineren met Adobe, een persoonlijke Git-opslagplaats aanvragen en uitlijnen met de Adobe voor de details betreffende het label, de beschrijving, de categorie en het pictogram van de bron.
 
 Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 
@@ -49,9 +49,9 @@ Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 
 >[!TIP]
 >
->Tijdens de testperiode van uw verbindingsspecificatie, in plaats van zeer belangrijke waarden, kunt u gebruiken `text` in het verbindingsdossier.
+>Tijdens de testperiode van uw verbindingsspecificatie kunt u in plaats van de belangrijkste waarden `text` in het verbindingsdossier.
 
-Nadat u de benodigde bestanden hebt toegevoegd aan uw persoonlijke Git-opslagplaats, moet u een pull-aanvraag (PR) maken die door Adobe kan worden gecontroleerd. Wanneer uw PR wordt goedgekeurd en samengevoegd, zult u van identiteitskaart worden voorzien die voor uw verbindingsspecificatie kan worden gebruikt om naar het etiket, de beschrijving, en het pictogram van uw bron te verwijzen.
+Nadat u de benodigde bestanden hebt toegevoegd aan uw persoonlijke Git-opslagplaats, moet u een pull-aanvraag (PR) maken die door de Adobe kan worden gecontroleerd. Wanneer uw PR wordt goedgekeurd en samengevoegd, zult u van identiteitskaart worden voorzien die voor uw verbindingsspecificatie kan worden gebruikt om naar het etiket, de beschrijving, en het pictogram van uw bron te verwijzen.
 
 Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron kunt toevoegen, zoals geavanceerd het plannen, douaneschema, of verschillende paginatypen, te herzien gelieve de gids op [bronspecificaties configureren](../config/sourcespec.md).
 
@@ -442,9 +442,9 @@ Nadat u de vereiste artefacten hebt verzameld, kopieert en plakt u de onderstaan
 
 ## Een verbindingsspecificatie maken {#create}
 
-Nadat u de sjabloon voor de verbindingsspecificatie hebt verkregen, kunt u nu een nieuwe verbindingsspecificatie ontwerpen door de juiste waarden in te vullen die overeenkomen met de bron.
+Zodra u het malplaatje van de verbindingsspecificatie hebt verworven, kunt u beginnen een nieuwe verbindingsspecificatie te ontwerpen door de aangewezen waarden in te vullen die aan uw bron beantwoorden.
 
-Een verbindingsspecificatie kan in drie verschillende delen worden verdeeld: de verificatiespecificaties, de bronspecificaties en de verkennende specificaties.
+Een verbindingsspecificatie kan in drie verschillende delen worden verdeeld: de authentificatiespecificaties, de bronspecificaties, en de onderzoeken specificaties.
 
 Zie de volgende documenten voor instructies over hoe u de waarden van elk deel van een verbindingsspecificatie kunt vullen:
 
@@ -452,7 +452,7 @@ Zie de volgende documenten voor instructies over hoe u de waarden van elk deel v
 * [Uw bronspecificatie configureren](../config/sourcespec.md)
 * [Uw verkenningsspecificatie configureren](../config/explorespec.md)
 
-Als de opgegeven gegevens zijn bijgewerkt, kunt u de nieuwe verbindingsspecificatie verzenden door een verzoek van de POST in te dienen bij de `/connectionSpecs` van het [!DNL Flow Service] API.
+Als de opgegeven gegevens zijn bijgewerkt, kunt u de nieuwe verbindingsspecificatie verzenden door een POST aan te vragen bij de `/connectionSpecs` het eindpunt van de [!DNL Flow Service] API.
 
 **API-indeling**
 
@@ -578,7 +578,9 @@ curl -X POST \
                   "type": "OFFSET",
                   "limitName": "count",
                   "limitValue": "100",
-                  "offSetName": "offset"
+                  "offSetName": "offset",
+                  "endConditionName": "$.hasMore",
+                  "endConditionValue": "Const:false"
               },
               "scheduleParams": {
                   "scheduleStartParamName": "since_last_changed",
@@ -767,7 +769,9 @@ Met een geslaagde reactie wordt de nieuwe verbindingsspecificatie geretourneerd,
                 "type": "OFFSET",
                 "limitName": "count",
                 "limitValue": "100",
-                "offSetName": "offset"
+                "offSetName": "offset",
+                "endConditionName": "$.hasMore",
+                "endConditionValue": "Const:false"
             },
             "scheduleParams": {
                 "scheduleStartParamName": "since_last_changed",
