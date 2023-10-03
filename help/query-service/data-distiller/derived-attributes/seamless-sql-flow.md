@@ -2,7 +2,7 @@
 title: Naadloze SQL-stroom voor afgeleide kenmerken
 description: SQL van de Dienst van de vraag is uitgebreid om naadloze steun voor afgeleide attributen te verlenen. Leer hoe te om deze SQL uitbreiding te gebruiken om een afgeleid attribuut tot stand te brengen dat voor profiel wordt toegelaten, en hoe te om de attributen voor het Profiel en de Dienst van de Segmentatie van de Klant in real time te gebruiken.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -13,29 +13,29 @@ ht-degree: 1%
 
 SQL van de Dienst van de vraag is uitgebreid om naadloze steun voor afgeleide attributen te verlenen. Dit verstrekt een efficiënte alternatieve methode om afgeleide attributen voor uw zaken gebruiksgevallen van het Profiel van de Klant in real time tot stand te brengen.
 
-Dit document schetst diverse geschikte SQL uitbreidingen die een afgeleid attribuut voor gebruik met het Profiel van de Klant in real time produceren. Het werkschema vereenvoudigt het proces dat u anders door diverse API vraag of Platform UI interactie zou moeten voltooien.
+Dit document schetst diverse geschikte SQL uitbreidingen die een afgeleid attribuut voor gebruik met het Profiel van de Klant in real time produceren. Het werkschema vereenvoudigt het proces dat u anders door diverse API vraag of de interactie van het Platform UI zou moeten voltooien.
 
 Typisch, zou het produceren van en het publiceren van een attribuut voor het Profiel van de Klant in real time de volgende stappen impliceren:
 
 * Maak een naamruimte voor identiteiten als deze nog niet bestaat.
-* Maak indien nodig het datatype om het afgeleide kenmerk op te slaan.
+* Maak indien nodig het gegevenstype om het afgeleide kenmerk op te slaan.
 * Maak een veldgroep met dat gegevenstype om de afgeleide kenmerkinformatie op te slaan.
 * Maak of wijs een primaire identiteitskolom toe met de naamruimte die u eerder hebt gemaakt.
 * Maak een schema met de veldgroep en het datatype dat u eerder hebt gemaakt.
 * Creeer een nieuwe dataset gebruikend uw schema en laat het voor profiel toe, indien nodig.
 * Markeer optioneel een dataset als profiel-toegelaten.
 
-Na de voltooiing van de hierboven vermelde stappen, bent u bereid om de dataset te bevolken. Als u de dataset voor profiel toeliet, kunt u segmenten ook tot stand brengen die naar de nieuwe attributen verwijzen en beginnen inzichten te produceren.
+Nadat u de hierboven vermelde stappen hebt uitgevoerd, kunt u de gegevensset vullen. Als u de dataset voor profiel toeliet, kunt u segmenten ook tot stand brengen die naar de nieuwe attributen verwijzen en beginnen inzichten te produceren.
 
 De Dienst van de vraag staat u toe om alle hierboven vermelde acties uit te voeren gebruikend SQL vragen. Dit omvat het aanbrengen van veranderingen in uw datasets en gebiedsgroepen indien nodig.
 
-## Een tabel maken met een optie om de tabel in te schakelen voor een profiel {#enable-dataset-for-profile}
+## Een tabel maken met een optie om deze in te schakelen voor profiel {#enable-dataset-for-profile}
 
 >[!NOTE]
 >
 >De hieronder opgegeven SQL-query gaat uit van het gebruik van een bestaande naamruimte.
 
-Gebruik een Create Lijst als Uitgezochte vraag (CTAS) om een dataset tot stand te brengen, datatypes toe te wijzen, een primaire identiteit te plaatsen, een schema tot stand te brengen, en het te merken als profiel-toegelaten. De voorbeeldSQL verklaring leidt hieronder tot attributen en stelt het voor het Profiel van de Gegevens van de Klant in real time (Real-Time CDP) beschikbaar. Uw SQL-query heeft de indeling die in het onderstaande voorbeeld wordt getoond:
+Gebruik een Create Lijst als Uitgezochte vraag (CTAS) om een dataset tot stand te brengen, datatypes toe te wijzen, een primaire identiteit te plaatsen, een schema tot stand te brengen, en het te merken als profiel-toegelaten. De voorbeeld-SQL-instructie hieronder maakt kenmerken en stelt deze beschikbaar voor Real-time Customer Data Platform (Real-Time CDP). Uw SQL-query heeft de indeling die in het onderstaande voorbeeld wordt getoond:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Alternatief, kunnen de datasets ook voor profiel door het Platform UI worden toegelaten. Voor meer informatie over het merken van een dataset zoals toegelaten voor profiel, zie [laat een dataset voor de documentatie van het Profiel van de Klant in real time toe](../../../catalog/datasets/user-guide.md#enable-profile).
+Alternatief, kunnen de datasets ook voor profiel door Platform UI worden toegelaten. Voor meer informatie over het merken van een dataset zoals toegelaten voor profiel, zie [laat een dataset voor de documentatie van het Profiel van de Klant in real time toe](../../../catalog/datasets/user-guide.md#enable-profile).
 
 In de onderstaande voorbeeldquery worden de `decile_table` dataset wordt gecreeerd met `id` als primaire identiteitskolom en heeft de naamruimte `IDFA`. Het heeft ook een veld met de naam `decile1Month` van het gegevenstype Map. De gemaakte tabel (`decile_table`) is ingeschakeld voor profiel.
 
@@ -111,7 +111,7 @@ In het gegeven voorbeeld: `id2` is een bestaande kolom in `test1_dataset`.
 
 ### Een gegevensset voor profiel uitschakelen {#disable-dataset-for-profile}
 
-Als u uw lijst voor profielgebruik wilt onbruikbaar maken, moet u het bevel DROP gebruiken. Een voorbeeld-SQL-instructie die GEBRUIKT `DROP` Zie hieronder.
+Als u uw lijst voor profielgebruik wilt onbruikbaar maken, moet u het bevel DROP gebruiken. Een voorbeeld-SQL-instructie die GEBRUIKT `DROP` is hieronder weergegeven.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Aanvullende tabelinformatie voor elke tabel tonen {#show-labels-for-tables}
 
-Aanvullende metagegevens worden bewaard voor gegevenssets waarvoor profielen zijn ingeschakeld. Gebruik de `SHOW TABLES` opdracht om een extra `labels` een kolom die informatie bevat over alle labels die aan tabellen zijn gekoppeld.
+Aanvullende metagegevens worden bewaard voor gegevenssets waarvoor profielen zijn ingeschakeld. Gebruik de `SHOW TABLES` opdracht om een extra `labels` kolom die informatie over om het even welke etiketten verstrekt verbonden aan lijsten.
 
 Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 
@@ -174,7 +174,7 @@ Een voorbeeld van de output van dit bevel kan hieronder worden gezien:
 (3 rows)
 ```
 
-Uit het voorbeeld kunt u zien dat `table_with_a_decile` is ingeschakeld voor profiel en toegepast met labels zoals [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&quot;PROFIEL&quot;](#enable-existing-dataset-for-profile) zoals eerder beschreven.
+Uit het voorbeeld blijkt dat `table_with_a_decile` is ingeschakeld voor profiel en toegepast met labels zoals [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&quot;PROFIEL&quot;](#enable-existing-dataset-for-profile) zoals eerder beschreven.
 
 ### Een veldgroep met SQL maken
 
