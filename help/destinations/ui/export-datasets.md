@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 08463e9f14b0952fe5db177ae8b4546cc3c6cac5
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -47,11 +47,11 @@ Begrijp van de lijst hieronder welke datasettypes u afhankelijk van uw toepassin
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Eerste</td>
-    <td>Zie de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentatie. (bijwerken naar een diepe koppeling naar de AJO-tabel of -sectie voor ondersteunde gegevenssets)</td>
+    <td>Zie de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentatie.</td>
   </tr>
   <tr>
     <td>Ultieme</td>
-    <td>Zie de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentatie. (bijwerken naar een diepe koppeling naar de AJO-tabel of -sectie voor ondersteunde gegevenssets)</td>
+    <td>Zie de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentatie.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
