@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '7923'
+source-wordcount: '7973'
 ht-degree: 0%
 
 ---
@@ -538,6 +538,8 @@ ht-degree: 0%
 **Token**: Een token is een type beveiliging met twee factoren voor verificatie die kan worden gebruikt om het gebruik van computerservices met [!DNL Query Service].
 
 ## U
+
+**UCPA**: De [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) biedt de consument het recht te weten welke persoonsgegevens een bedrijf verzamelt, hoe het bedrijf zijn persoonsgegevens gebruikt en of het bedrijf zijn persoonsgegevens verkoopt. Consumenten kunnen van het bedrijf verlangen dat het hun persoonsgegevens verwijdert of niet langer verkoopt.
 
 **Unieschema**: Een samenvoegingsschema is een consolidatie van schema&#39;s die dezelfde klasse delen en waarvoor [!DNL Real-Time Customer Profile]. De veelvoudige verenigingsschema&#39;s kunnen voor een organisatie bestaan, maar er kan slechts één verenigingsschema per klasse zijn.
 

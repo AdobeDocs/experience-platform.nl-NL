@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: API-eindpunt voor privacytaken
-description: Leer hoe u privacytaken voor Experience Cloud-toepassingen beheert met de Privacy Service-API.
+description: Leer hoe u privacytaken voor Experiencen Cloud-toepassingen beheert met de Privacy Service-API.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Het eindpunt van privacytaken
 
-In dit document wordt beschreven hoe u met privacytaken werkt met API-aanroepen. Het betreft met name het gebruik van de `/job` in de [!DNL Privacy Service] API. Raadpleeg voordat u deze handleiding leest de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+In dit document wordt beschreven hoe u met privacytaken werkt met API-aanroepen. Het gaat met name om het gebruik van de `/job` in de [!DNL Privacy Service] API. Raadpleeg voordat u deze handleiding leest de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om met succes vraag aan API te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ U kunt een lijst weergeven met alle beschikbare privacytaken binnen uw organisat
 
 **API-indeling**
 
-Deze aanvraagindeling gebruikt een `regulation` queryparameter voor de `/jobs` eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder weergegeven. De reactie wordt gepagineerd, toestaand u om andere vraagparameters te gebruiken (`page` en `size`) om de reactie te filteren. U kunt meerdere parameters scheiden met ampersands (`&`).
+Deze aanvraagindeling gebruikt een `regulation` queryparameter voor de `/jobs` eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder weergegeven. De reactie wordt gepagineerd, toestaand u andere vraagparameters (`page` en `size`) om de reactie te filteren. U kunt meerdere parameters scheiden met ampersands (`&`).
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -36,7 +36,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`pdpd_vnm`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol antwoord retourneert een lijst met taken, waarbij elke taak details bevat zoals de taak `jobId`. In dit voorbeeld bevat het antwoord een lijst met 50 taken, te beginnen op de derde pagina met resultaten.
+Een succesvol antwoord retourneert een lijst met taken, waarbij elke taak details bevat zoals de bijbehorende `jobId`. In dit voorbeeld bevat het antwoord een lijst met 50 taken, te beginnen op de derde pagina met resultaten.
 
 ### Volgende pagina&#39;s openen
 
@@ -78,7 +78,7 @@ Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verz
 
 De [!DNL Privacy Service] API ondersteunt twee soorten taakaanvragen voor persoonlijke gegevens:
 
-* [Toegang en/of verwijderen](#access-delete): Persoonsgegevens openen (lezen) of verwijderen.
+* [Toegang en/of verwijderen](#access-delete): Persoonlijke gegevens openen (lezen) of verwijderen.
 * [Uitschakelen](#opt-out): Persoonlijke gegevens markeren als niet te verkopen gegevens.
 
 >[!IMPORTANT]
@@ -159,12 +159,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `companyContexts` **(Vereist)** | Een array met verificatiegegevens voor uw organisatie. Elke weergegeven id bevat de volgende kenmerken: <ul><li>`namespace`: De naamruimte van een id.</li><li>`value`: De waarde van de id.</li></ul>Het is **vereist** dat een van de id&#39;s gebruikt `imsOrgId` als `namespace`, met `value` bevat de unieke id voor uw organisatie. <br/><br/>Aanvullende id&#39;s kunnen productspecifieke bedrijfsaanduidingen zijn (bijvoorbeeld `Campaign`), die een integratie met een toepassing van de Adobe van uw organisatie identificeren. Mogelijke waarden zijn accountnamen, clientcodes, gebruikers-id&#39;s of andere toepassings-id&#39;s. |
-| `users` **(Vereist)** | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt openen of verwijderen. U kunt maximaal 1000 gebruikers-id&#39;s in één aanvraag opgeven. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later gemakkelijk naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Afhankelijk van de handelingen die u wilt uitvoeren, moet deze array `access`, `delete`, of beide.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bestaat uit een `namespace`, `value`en een naamruimtekwalificatie (`type`). Zie de [aanhangsel](appendix.md) voor meer informatie over deze vereiste eigenschappen.</li></ul> Voor een meer gedetailleerde uitleg van `users` en `userIDs`, zie de [gids voor problemen](../troubleshooting-guide.md#user-ids). |
-| `include` **(Vereist)** | Een array met Adobe-producten die in de verwerking moeten worden opgenomen. Als deze waarde ontbreekt of anderszins leeg is, wordt het verzoek afgewezen. Omvat slechts producten die uw organisatie een integratie met heeft. Zie de sectie over [aanvaarde productwaarden](appendix.md) in het aanhangsel voor meer informatie. |
+| `companyContexts` **(Vereist)** | Een array met verificatiegegevens voor uw organisatie. Elke weergegeven id bevat de volgende kenmerken: <ul><li>`namespace`: De naamruimte van een id.</li><li>`value`: De waarde van de id.</li></ul>Het is **vereist** dat een van de id&#39;s gebruikt `imsOrgId` als `namespace`, met `value` bevat de unieke id voor uw organisatie. <br/><br/>Aanvullende id&#39;s kunnen productspecifieke bedrijfsaanduidingen zijn (bijvoorbeeld `Campaign`), die een integratie met een toepassing van de Adobe identificeren die tot uw organisatie behoort. Mogelijke waarden zijn accountnamen, clientcodes, gebruikers-id&#39;s of andere toepassings-id&#39;s. |
+| `users` **(Vereist)** | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt openen of verwijderen. U kunt maximaal 1000 gebruikers-id&#39;s in één aanvraag opgeven. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later gemakkelijk naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array die de gewenste handelingen bevat die moeten worden uitgevoerd op de gegevens van de gebruiker. Afhankelijk van de handelingen die u wilt uitvoeren, moet deze array `access`, `delete`, of beide.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bestaat uit een `namespace`, `value`en een naamruimtekwalificatie (`type`). Zie de [aanhangsel](appendix.md) voor meer informatie over deze vereiste eigenschappen.</li></ul> Voor een gedetailleerdere uitleg van `users` en `userIDs`, zie de [gids voor problemen](../troubleshooting-guide.md#user-ids). |
+| `include` **(Vereist)** | Een array met producten van de Adobe die in de verwerking moeten worden opgenomen. Als deze waarde ontbreekt of anderszins leeg is, wordt het verzoek afgewezen. Omvat slechts producten die uw organisatie een integratie met heeft. Zie de sectie over [aanvaarde productwaarden](appendix.md) in het aanhangsel voor meer informatie. |
 | `expandIDs` | Een optionele eigenschap die, wanneer ingesteld op `true`, is een optimalisatie voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door [!DNL Analytics]). Indien weggelaten, wordt deze waarde standaard ingesteld op `false`. |
-| `priority` | An optional property used by Adobe Analytics that sets the priority for processing request. Accepteerde waarden zijn `normal` en `low`. Indien `priority` wordt weggelaten, is het standaardgedrag `normal`. |
-| `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar door de opgegeven verzameling gebruikers-id&#39;s wordt verwezen, worden anoniem gemaakt. Indien `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
+| `priority` | Een optionele eigenschap die door Adobe Analytics wordt gebruikt en die de prioriteit voor het verwerken van aanvragen instelt. Accepteerde waarden zijn `normal` en `low`. Indien `priority` wordt weggelaten, is het standaardgedrag `normal`. |
+| `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar wordt verwezen door de opgegeven verzameling van gebruikers-id&#39;s, worden anoniem gemaakt. Indien `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
 | `mergePolicyId` | Bij het indienen van privacyverzoeken voor realtime-klantprofiel (`profileService`), kunt u naar keuze identiteitskaart van specifiek verstrekken [samenvoegingsbeleid](../../profile/merge-policies/overview.md) die u wilt gebruiken voor het stikken van id&#39;s. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken publieksinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
 | `regulation` **(Vereist)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Zie het overzicht op [ondersteunde verordeningen](../regulations/overview.md) voor meer informatie over de privacyregels die de bovenstaande waarden vertegenwoordigen . |
 
@@ -222,11 +222,11 @@ Een succesvol antwoord geeft de details van de nieuwe banen terug.
 
 {style="table-layout:auto"}
 
-Nadat de taakaanvraag is verzonden, kunt u verdergaan met de volgende stap van [de status van de taak controleren](#check-status).
+Nadat de taakaanvraag is verzonden, kunt u verdergaan met de volgende stap van [controleren van de status van de baan](#check-status).
 
 ## De status van een taak controleren {#check-status}
 
-U kunt informatie over een specifieke taak ophalen, zoals de huidige verwerkingsstatus, door de betreffende taak op te nemen `jobId` op het pad van een verzoek van de GET aan de `/jobs` eindpunt.
+U kunt informatie over een specifieke taak ophalen, zoals de huidige verwerkingsstatus, door de taak `jobId` op het pad van een verzoek van de GET aan de `/jobs` eindpunt.
 
 >[!IMPORTANT]
 >
@@ -346,7 +346,7 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
 
 In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en de bijbehorende betekenis weergegeven:
 
-| Statuscategorie | Betekenis |
+| Status categorie | Betekenis |
 | -------------- | -------- |
 | `complete` | De taak is voltooid en (indien vereist) worden bestanden vanuit elke toepassing geüpload. |
 | `processing` | Toepassingen hebben de taak erkend en worden momenteel verwerkt. |

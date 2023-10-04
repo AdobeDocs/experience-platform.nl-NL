@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -38,17 +38,18 @@ Het dashboard voor de [!DNL Privacy Service] De gebruikersinterface bevat twee w
 
 | UI-label | Verordening |
 | --- | --- |
+| [!UICONTROL APA_AUS] | De [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | De [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | De [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | De [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | De [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | De [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | Thailand [!DNL Personal Data Protection Act] |
+| [!UICONTROL HIPAA_AUS] | De [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brazilië [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Nieuw-Zeeland [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | Thailand [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA] | De [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | De [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | De [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | De [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL HIPAA_AUS] | De [!DNL Health Insurance Portability and Accountability Act] |
 
 {style="table-layout:auto"}
 
