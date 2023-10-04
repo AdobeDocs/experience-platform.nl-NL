@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Bijlage Privacy Service API-handleiding
 description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -37,13 +37,13 @@ In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identite
 
 >[!NOTE]
 >
->Elk identiteitstype heeft ook een `namespaceId` geheel getal, dat kan worden gebruikt in plaats van de waarde `namespace` tekenreeks bij het instellen van de identiteit `type` eigenschap aan &quot;namespaceId&quot;. Zie de sectie over [naamruimtetekens](#namespace-qualifiers) voor meer informatie .
+>Elk identiteitstype heeft ook een `namespaceId` geheel getal, dat kan worden gebruikt in plaats van de waarde `namespace` tekenreeks bij instellen van identiteit `type` eigenschap aan &quot;namespaceId&quot;. Zie de sectie over [naamruimtetekens](#namespace-qualifiers) voor meer informatie .
 
 U kunt een lijst met naamruimten ophalen die door uw organisatie worden gebruikt door een GET-aanvraag in te dienen bij de `idnamespace/identities` in de [!DNL Identity Service] API. Zie de [Handleiding voor ontwikkelaars van Identity Service](../../identity-service/api/getting-started.md) voor meer informatie .
 
 ## Naamruimtetekens
 
-Wanneer u een `namespace` in de [!DNL Privacy Service] API, a **naamruimtekwalificatie** moet in een overeenkomstige `type` parameter. In de volgende tabel worden de verschillende geaccepteerde naamruimtetekens weergegeven.
+Wanneer u een `namespace` waarde in de [!DNL Privacy Service] API, a **naamruimtekwalificatie** moet in een overeenkomstige `type` parameter. In de volgende tabel worden de verschillende geaccepteerde naamruimtetekens weergegeven.
 
 | Kwalificatie | Definitie |
 | --------- | ---------- |
@@ -69,7 +69,7 @@ In de volgende tabel worden de toegestane waarden voor het opgeven van een Adobe
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Experience Platform (Real-Time Klantprofiel) | `profileService` |
-| Adobe Primetime-verificatie | `primetimeAuthentication` |
+| Adobe Pass-verificatie | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Klantkenmerken (CRS) | `CRS` |
 | Identiteitsservice | `identity` |
