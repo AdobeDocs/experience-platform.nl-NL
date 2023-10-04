@@ -1,9 +1,10 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
-source-git-commit: c2563d43b9ee8b3191954275bd0102507a981071
+exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
+source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
 workflow-type: tm+mt
-source-wordcount: '2143'
+source-wordcount: '2259'
 ht-degree: 2%
 
 ---
@@ -159,6 +160,27 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Functie | Beschrijving |
 | --- | --- |
 | Bijgewerkte workflow voor het maken van schema&#39;s | Er is een nieuwe workflow voor het maken van schema&#39;s geïmplementeerd om het proces te stroomlijnen. <br> ![De nieuwe interface voor het maken van het schema.](../2023/assets/schema-class-options.png "Selector voor nieuwe schemadetails gemarkeerd."){width="100" zoomable="yes"} <br> Zie de [documentatie over het maken van schema](../../xdm/ui/resources/schemas.md#create) voor meer informatie . |
+
+**Nieuwe XDM-componenten**
+
+| Componenttype | Naam | Beschrijving |
+| --- | --- | --- |
+| Gegevenstype | [[!UICONTROL Return]](https://github.com/adobe/xdm/pull/1773/files) | De afgegeven RMA (Return Merchandise Authorization). |
+| Gegevenstype | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) | De teruggekeerde informatie van het punt binnen RMA (de Vergunning van de Goederen van de Terugkeer). |
+
+{style="table-layout:auto"}
+
+**Bijgewerkte XDM-componenten**
+
+| Componenttype | Naam | Beschrijving bijwerken |
+| --- | --- | --- |
+| Extensie | [!UICONTROL AJO Entity Fields] | De [[!UICONTROL flag for multi-variant]](https://github.com/adobe/xdm/pull/1774/files) is toegevoegd aan [!UICONTROL AJO Entity Fields] om na te gaan of de variant al dan niet een meervoudige variant is. |
+| Gegevenstype | [!UICONTROL Product list item] | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) is toegevoegd om de gegevens van de Autorisatie retourgoederen op te nemen. |
+| Gegevenstype | Volgorde | [[!UICONTROL Return Info]](https://github.com/adobe/xdm/pull/1773/files) is toegevoegd om de uitgegeven RMA (Return Merchandise Authorization) op te nemen. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over XDM in Platform, zie [XDM System, overzicht](../../xdm/home.md)
 
 ## Identiteitsservice {#identity-service}
 
