@@ -5,7 +5,7 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
+source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
 workflow-type: tm+mt
 source-wordcount: '4378'
 ht-degree: 0%
@@ -345,7 +345,7 @@ Selecteren **[!UICONTROL Profile]** en wordt een pop-up weergegeven met de vraag
 
 Selecteren **[!UICONTROL Enable]** om uw keuze te bevestigen. U kunt de **[!UICONTROL Profile]** schakelen opnieuw om het schema uit te schakelen als u dit wenst, maar als het schema is opgeslagen terwijl [!DNL Profile] is ingeschakeld, kan deze niet meer worden uitgeschakeld.
 
-## Meer handelingen
+## Meer handelingen {#more}
 
 Binnen de Redacteur van het Schema kunt u snelle acties ook voeren om de structuur JSON van het schema te kopiëren of het schema te schrappen als het niet voor het Profiel van de Klant in real time of bijbehorende datasets is toegelaten. Selecteren [!UICONTROL More] boven aan de weergave om een vervolgkeuzelijst met snelle acties weer te geven.
 

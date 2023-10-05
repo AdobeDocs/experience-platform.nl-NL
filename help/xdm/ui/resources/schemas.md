@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3424'
+source-wordcount: '3522'
 ht-degree: 0%
 
 ---
@@ -45,11 +45,9 @@ Ga een mensvriendelijk [!UICONTROL Schema display name] in het tekstveld. Voer v
 
 ![De [!UICONTROL Name and review] van de [!UICONTROL Create schema] met de [!UICONTROL Schema display name], [!UICONTROL Description], en [!UICONTROL Finish] gemarkeerd.](../../images/ui/resources/schemas/name-and-review.png)
 
-De [!UICONTROL Schema] [!UICONTROL Browse] wordt weergegeven. Het onlangs gemaakte schema is nu beschikbaar in het dialoogvenster [!DNL Schema Editor] en wordt weergegeven in de lijst met beschikbare schema&#39;s.
+De [!UICONTROL Schema] [!UICONTROL Browse] wordt weergegeven. Uw onlangs gemaakte schema wordt nu vermeld in de Schemabibliotheek en kan worden bewerkt in het dialoogvenster [!DNL Schema Editor].
 
-![De Redacteur van het Schema tonend uw onlangs gecreeerd schema.](../../images/ui/resources/schemas/schema-details.png)
-
-U kunt nu beginnen de structuur van het schema te bouwen door [groepen met schemavelden toevoegen](#add-field-groups) in de [!DNL Schema Editor].
+![Het tabblad Bladeren van de werkruimte Schema&#39;s geeft het onlangs gemaakte schema weer.](../../images/ui/resources/schemas/example-schema.png)
 
 ## Een bestaand schema bewerken {#edit}
 
@@ -66,6 +64,14 @@ Als u een bestaand schema wilt bewerken, selecteert u de optie **[!UICONTROL Bro
 >Met de zoek- en filtermogelijkheden van de werkruimte kunt u het schema gemakkelijker vinden. Zie de handleiding op [XDM-bronnen verkennen](../explore.md) voor meer informatie .
 
 Nadat u een schema hebt geselecteerd, [!DNL Schema Editor] wordt weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [veldgroepen toevoegen](#add-field-groups) naar het schema (of [afzonderlijke velden toevoegen](#add-individual-fields) van deze groepen), [weergavenamen van velden bewerken](#display-names), of [bestaande aangepaste veldgroepen bewerken](./field-groups.md#edit) als het schema om het even welk gebruikt.
+
+## Meer handelingen {#more}
+
+Binnen de Redacteur van het Schema kunt u snelle acties ook voeren om de structuur JSON van het schema te kopiëren of het schema te schrappen als het niet voor het Profiel van de Klant in real time of bijbehorende datasets is toegelaten. Selecteren [!UICONTROL More] boven aan de weergave om een vervolgkeuzelijst met snelle acties weer te geven.
+
+Met de functie voor JSON-structuur kopiëren kunt u zien hoe een voorbeeldlading eruit zou zien terwijl u nog steeds het schema en uw gegevenspipetten maakt. Dit is vooral handig voor situaties waarin het schema complexe structuren voor objecttoewijzingen bevat, zoals een identiteitskaart.
+
+![De Schema-editor met de knop Meer gemarkeerd en de vervolgkeuzemogelijkheden weergegeven.](../../images/tutorials/create-schema/more-actions.png)
 
 ## Schakelen tussen weergavenamen {#display-name-toggle}
 
