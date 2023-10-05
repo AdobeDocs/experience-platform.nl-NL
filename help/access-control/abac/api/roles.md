@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Rollen API-eindpunt
 description: Het /rollen eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om rollen in Adobe Experience Platform programmatically te beheren.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1666'
 ht-degree: 1%
 
 ---
@@ -107,7 +107,7 @@ Een succesvolle reactie keert een lijst van rollen in uw organisatie, met inbegr
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen dat zij toegang hebben tot. |
+| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Rol opzoeken {#lookup}
@@ -174,12 +174,12 @@ Een succesvolle reactie keert details voor gevraagde rol identiteitskaart, met i
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen dat zij toegang hebben tot. |
+| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Onderwerpen opzoeken op rol-id
 
-U kunt onderwerpen ook ophalen door een GET-verzoek in te dienen bij de `/roles` als u een {ROLE_ID} opgeeft.
+U kunt onderwerpen ook ophalen door een GET-verzoek in te dienen bij de `/roles` eindpunt terwijl het verstrekken van een {ROLE_ID}.
 
 **API-indeling**
 
@@ -322,7 +322,7 @@ Een succesvolle reactie keert uw onlangs gecreëerde rol, met zijn overeenkomsti
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen dat zij toegang hebben tot. |
+| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Een rol bijwerken {#patch}
@@ -402,12 +402,12 @@ Een geslaagde reactie retourneert de bijgewerkte rol, inclusief nieuwe waarden v
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen dat zij toegang hebben tot. |
+| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Rollen bijwerken op rol-id {#put}
 
-U kunt een rol bijwerken door een verzoek van de PUT aan `/roles` en het specificeren van de rol identiteitskaart die aan de rol beantwoordt u wilt bijwerken.
+U kunt een rol bijwerken door een verzoek van de PUT aan `/roles` eindpunt en het specificeren van de rol identiteitskaart die aan de rol beantwoordt u wilt bijwerken.
 
 **API-indeling**
 
@@ -476,7 +476,7 @@ Met succes wordt de bijgewerkte rol geretourneerd, inclusief nieuwe waarden voor
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor roltype zijn: `user-defined` en `system-defined`. |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen dat zij toegang hebben tot. |
+| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Onderwerp bijwerken op rol-id
@@ -495,23 +495,21 @@ PATCH /roles/{ROLE_ID}
 
 **Verzoek**
 
-De volgende aanvraag werkt de onderwerpen bij die in verband worden gebracht met `{ROLE_ID}`.
+De volgende aanvraag werkt de onderwerpen bij die aan `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | Bewerkingen | Beschrijving |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de bijgewerkte onderwerpen die aan de queried rol-id zijn gekoppeld.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `subjectId` | De id van een onderwerp. |
-| `subjectType` | Het type onderwerp. |
+Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
 ## Een rol verwijderen {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
 U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de rol te proberen. U ontvangt de HTTP-status 404 (Niet gevonden) omdat de rol uit het beheer is verwijderd.
+
+## API-referentie toevoegen {#apicredential}
+
+Als u API-referentie wilt toevoegen, vraagt u een PATCH aan `/roles` eindpunt terwijl het verstrekken van rolidentiteitskaart van de onderwerpen.
+
+**API-indeling**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| Bewerkingen | Beschrijving |
+| --- | --- |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om de rol bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. |
+| `path` | Het pad van de parameter die moet worden toegevoegd. |
+| `value` | De waarde waarmee u de parameter wilt toevoegen. |
+
+**Antwoord**
+
+Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
