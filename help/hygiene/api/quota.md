@@ -1,23 +1,19 @@
 ---
 title: Quota API-eindpunt
-description: Het /quota eindpunt in de Hygiene API van Gegevens staat u toe om uw gebruik van de gegevenshygiëne tegen de maandelijkse quotagrenzen van uw organisatie voor elk baantype te controleren.
+description: Het /quota eindpunt in de Hygiene API van Gegevens staat u toe om uw Geavanceerde het beheersgebruik van de gegevenslevenscyclus tegen de maandelijkse quotalimieten van uw organisatie voor elk baantype te controleren.
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '327'
 ht-degree: 1%
 
 ---
 
 # Quota-eindpunt
 
->[!IMPORTANT]
->
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die deze producten hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**.
+De `/quota` het eindpunt in de Hygiene API van Gegevens staat u toe om uw Geavanceerde het beheersgebruik van de gegevenslevenscyclus tegen de quotagrenzen van uw organisatie voor elk baantype te controleren.
 
-De `/quota` Het eindpunt in de Hygiene API van Gegevens staat u toe om uw gebruik van de gegevenshygiëne tegen de quotagrenzen van uw organisatie voor elk baantype te controleren.
-
-Voor elk taaktype voor gegevenshygiëne worden de quota op de volgende manieren gehandhaafd:
+Quoten worden op de volgende manieren afgedwongen voor elk taaktype van de gegevenslevenscyclus:
 
 * Verwijderen en bijwerken van records is beperkt tot een bepaald aantal aanvragen per maand.
 * Dataset-vervaldatums hebben een vaste limiet voor het aantal taken die tegelijkertijd actief zijn, ongeacht wanneer de vervaldatums worden uitgevoerd.
@@ -43,7 +39,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUOTA_TYPE}` | Een optionele queryparameter die het type quota opgeeft dat moet worden opgehaald. Indien niet `quotaType` opgegeven, worden alle quota-waarden geretourneerd in de API-reactie. Tot de toegestane tekstwaarden behoren:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Opnemen wordt verwijderd</li><li>`fieldUpdateWorkOrderDatasetQuota`: Updates opnemen</li></ul> |
+| `{QUOTA_TYPE}` | Een optionele queryparameter die het type quota opgeeft dat moet worden opgehaald. Indien niet `quotaType` opgegeven, worden alle quota-waarden geretourneerd in de API-reactie. Tot de toegestane tekstwaarden behoren:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record wordt verwijderd</li><li>`fieldUpdateWorkOrderDatasetQuota`: Record-updates</li></ul> |
 
 **Verzoek**
 
@@ -58,7 +54,7 @@ curl -X GET \
 
 **Antwoord**
 
-Als u met succes reageert, worden de details van uw quota voor gegevenshygiëne geretourneerd.
+Als u met succes reageert, worden de details van de levenscyclusquota van uw gegevens geretourneerd.
 
 ```json
 {
@@ -81,6 +77,6 @@ Als u met succes reageert, worden de details van uw quota voor gegevenshygiëne 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `quotas` | Hier worden de quota-gegevens voor elk taaktype voor gegevenshygiëne weergegeven. Elk quotaobject bevat de volgende eigenschappen:<ul><li>`name`: Het taaktype voor gegevenshygiëne:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Opnemen wordt verwijderd</li></ul></li><li>`description`: Een beschrijving van het taaktype voor gegevenshygiëne.</li><li>`consumed`: Het aantal banen van dit type loopt in de huidige maandelijkse periode.</li><li>`quota`: De quota voor dit taaktype. Voor het verwijderen en bijwerken van records geeft dit het aantal taken aan dat voor elke maandelijkse periode kan worden uitgevoerd. Voor gegevenssetvervaldatums, vertegenwoordigt dit het aantal banen die op om het even welk bepaald ogenblik gelijktijdig actief kunnen zijn.</li></ul> |
+| `quotas` | Hiermee geeft u de quotumgegevens weer voor elk taaktype van de levenscyclus van de gegevens. Elk quotaobject bevat de volgende eigenschappen:<ul><li>`name`: Het taaktype van de gegevenslevenscyclus:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record wordt verwijderd</li></ul></li><li>`description`: Een beschrijving van het taaktype van de gegevenslevenscyclus.</li><li>`consumed`: Het aantal banen van dit type loopt in de huidige maandelijkse periode.</li><li>`quota`: De limiet voor quota voor dit taaktype. Voor het verwijderen en bijwerken van records geeft dit het aantal taken aan dat voor elke maandelijkse periode kan worden uitgevoerd. Voor gegevenssetvervaldatums, vertegenwoordigt dit het aantal banen die op om het even welk bepaald ogenblik gelijktijdig actief kunnen zijn.</li></ul> |
 
 {style="table-layout:auto"}

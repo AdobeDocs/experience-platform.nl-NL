@@ -1,25 +1,25 @@
 ---
 audience: user
-user-guide-title: Data Hygiene Help
-breadcrumb-title: Gids Data Hygiene
+user-guide-title: Help voor geavanceerd beheer van de levenscyclus van gegevens
+breadcrumb-title: Geavanceerde handleiding voor levenscyclusbeheer van gegevens
 user-guide-description: Verwijder individuele verslagen en plan vervalmomenten van datasets in Experience Platform voor het opschonen van gegevens, het verwijderen van anonieme gegevens en gegevensminimalisering.
 feature: Data Hygiene
-source-git-commit: 0deb861d016fc99cfc1a2b75a08800dac7d208f4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 49%
+source-wordcount: '64'
+ht-degree: 32%
 
 ---
 
 
-# Gegevenshygiëne {#hygiene}
+# Geavanceerd levenscyclusbeheer van gegevens {#data-lifecycle}
 
-* [Overzicht van gegevenshygiëne](./home.md)
-* Interface gegevenshygiëne {#ui}
+* [Overzicht van geavanceerd gegevenslevenscyclusbeheer](./home.md)
+* UI van gegevenslevenscyclus {#ui}
    * [Overzicht](./ui/overview.md)
-   * [Door bestaande werkorders bladeren](./ui/browse.md)
-   * [Verlopen gegevenssets beheren](./ui/dataset-expiration.md)
+   * [Verlopen van geautomatiseerde gegevenssets](./ui/dataset-expiration.md)
    * [(bèta) Records verwijderen](./ui/record-delete.md)
+   * [Zoeken naar werkorders tijdens de gegevenslevenscyclus](./ui/browse.md)
 * API voor gegevenshygiëne {#api}
    * [Overzicht](./api/overview.md)
    * [Verlopen gegevensset](./api/dataset-expiration.md)

@@ -1,15 +1,15 @@
 ---
-title: Verlopen gegevensset beheren
+title: Geautomatiseerde gegevensset verlopen
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
 
-# Verlopen gegevenssets beheren {#dataset-expiration}
+# Verlopen van geautomatiseerde gegevenssets {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ De [[!UICONTROL Data Lifecycle] werkruimte](./overview.md) in Adobe Experience P
 >
 >Als een dataset wordt geplaatst om te verlopen, moet u om het even welke gegevensstromen manueel veranderen die gegevens in die dataset kunnen opnemen zodat uw stroomafwaartse werkschema&#39;s niet negatief worden beïnvloed.
 
-Dit document behandelt hoe te om datasettermijnen in het Platform UI te plannen en te beheren.
+In dit document wordt beschreven hoe u gegevenssetvervaldatums in de gebruikersinterface van het platform kunt plannen en automatiseren.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Als u een aanvraag wilt maken, selecteert u **[!UICONTROL Create request]** van 
 
 >[!IMPORTANT]
 >
-U kunt tot 20 tezelfdertijd geplande datasettermijnen hebben. Dit betekent dat u 20 datasets kunt hebben die om op elk ogenblik worden gepland worden geschrapt. Er zijn geen beperkingen aan de duur of het jaar waarvoor deze vervaldata worden vastgesteld. Bijvoorbeeld, als u 20 geplande datasettermijnen hebt en één dataset morgen zal worden geschrapt, kunt u geen meer vervalsingen plaatsen tot nadat die dataset is geschrapt.
+Real-Time CDP, Adobe Journey Optimizer, en de gebruikers van de Customer Journey Analytics hebben 20 in afwachting van geplande dataset het werkorden van de vervaldatum. Gebruikers van het gezondheidsschild en het privacyschild hebben 50 geplande werkorders voor het aflopen van gegevenssets in behandeling. Dit betekent dat u 20 of 50 datasets kunt hebben die om op elk ogenblik worden gepland worden geschrapt.<br>Bijvoorbeeld, als u 20 geplande datasettermijnen hebt en één dataset morgen zal worden geschrapt, kunt u geen meer vervalsingen plaatsen tot nadat die dataset is geschrapt.
 
 ![De [!UICONTROL Data Lifecycle] werkruimte met [!UICONTROL Create request] gemarkeerd.](../images/ui/ttl/create-request-button.png)
 

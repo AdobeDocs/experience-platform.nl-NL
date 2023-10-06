@@ -1,12 +1,12 @@
 ---
-title: Eindpunt van API voor werkorder
+title: Eindpunt van API voor werkvolgorde
 description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor identiteiten programmatically te beheren.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,13 @@ De `/workorder` Het eindpunt in de Hygiene API van Gegevens staat u toe om versl
 
 >[!IMPORTANT]
 >
->Aanvragen voor het verwijderen van records zijn alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Healthcare Shield**.
->
->
 >Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
 
 ## Aan de slag
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Controleer voordat je doorgaat de [overzicht](./overview.md) voor verbindingen aan verwante documentatie, een gids aan lezing de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
-## Een verzoek tot verwijdering van records maken {#create}
+## Een verzoek tot het verwijderen van records maken {#create}
 
 U kunt één of meerdere identiteiten van één enkele dataset of alle datasets schrappen door een verzoek van de POST aan het `/workorder` eindpunt.
 
@@ -132,7 +129,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{WORK_ORDER_ID}` | De `workorderId` van de record verwijderen die u opzoekt. |
+| `{WORK_ORDER_ID}` | De `workorderId` van de record te verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -209,7 +206,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{WORK_ORDER_ID}` | De `workorderId` van de record verwijderen die u opzoekt. |
+| `{WORK_ORDER_ID}` | De `workorderId` van de record te verwijderen. |
 
 {style="table-layout:auto"}
 

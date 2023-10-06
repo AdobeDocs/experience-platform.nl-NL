@@ -1,35 +1,31 @@
 ---
-title: Bladeren in werkorders voor gegevenshygiëne
-description: Leer hoe u bestaande werkorders voor gegevenshygiëne in de Adobe Experience Platform-gebruikersinterface kunt weergeven en beheren.
+title: Door werkorders voor de levenscyclus van gegevens bladeren
+description: Leer hoe u bestaande werkorders voor de levenscyclus van gegevens kunt weergeven en beheren in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
 
-# Bladeren door werkorders voor gegevenshygiëne {#browse-work-orders}
+# Zoeken naar werkorders tijdens de gegevenslevenscyclus {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="Werkorder-id&#39;s"
->abstract="Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Met andere woorden, een werkorder is een specifiek proces voor gegevenshygiëne, dat de huidige status en andere gerelateerde details omvat. Aan elke werkorder wordt automatisch een eigen unieke id toegewezen."
->text="See the data hygiene UI guide to learn more."
+>abstract="Wanneer een verzoek om de gegevenslevenscyclus naar het systeem wordt verzonden, wordt een werkorder gecreeerd om de gevraagde taak uit te voeren. Met andere woorden, een werkorder vertegenwoordigt een specifiek proces van de gegevenslevenscyclus, dat zijn huidige status en andere verwante details omvat. Aan elke werkorder wordt automatisch een eigen unieke id toegewezen."
+>text="See the data lifecycle UI guide to learn more."
 
->[!IMPORTANT]
->
->De mogelijkheden voor gegevenshygiëne in Adobe Experience Platform zijn momenteel alleen beschikbaar voor organisaties die deze producten hebben aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**.
-
-Wanneer een verzoek om gegevenshygiëne naar het systeem wordt verzonden, wordt een het werkorde gecreeerd om de gevraagde taak uit te voeren. Een werkorder vertegenwoordigt een specifiek proces van de gegevenshygiëne, zoals een geplande gegevenssetvervaldatum, die zijn huidige status en andere verwante details omvat.
+Wanneer een verzoek om de gegevenslevenscyclus naar het systeem wordt verzonden, wordt een werkorder gecreeerd om de gevraagde taak uit te voeren. Een werkorder vertegenwoordigt een specifiek proces van de gegevenslevenscyclus, zoals een geplande datasetvervaldatum, die zijn huidige status en andere verwante details omvat.
 
 In deze handleiding wordt uitgelegd hoe u bestaande werkorders in de gebruikersinterface van Adobe Experience Platform kunt weergeven en beheren.
 
 ## Bestaande werkorders weergeven en filteren
 
-Wanneer u voor het eerst toegang krijgt tot **[!UICONTROL Data Hygiene]** in de UI, wordt een lijst van bestaande het werkorden getoond samen met hun basisdetails.
+Wanneer u voor het eerst toegang krijgt tot **[!UICONTROL Data Lifecycle]** in de UI, wordt een lijst van bestaande het werkorden getoond samen met hun basisdetails.
 
-![Afbeelding die de [!UICONTROL Data Hygiene] werkruimte in de gebruikersinterface van het platform](../images/ui/browse/work-order-list.png)
+![Afbeelding die de [!UICONTROL Data Lifecycle] werkruimte in de gebruikersinterface van het platform](../images/ui/browse/work-order-list.png)
 
 In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeven. Selecteren **[!UICONTROL Consumer]** een lijst met taken voor het verwijderen van records weergeven, en **[!UICONTROL Dataset]** om een lijst van geplande datasettermijnen te bekijken.
 
@@ -69,17 +65,17 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status per service"
->abstract="Verzoeken om gegevenshygiëne worden onafhankelijk door meerdere diensten van de Experience Platform verwerkt. Deze sectie schetst de huidige verwerkingsstatus van het verzoek voor elke respectieve dienst. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="Aanvragen voor de levenscyclus van gegevens worden onafhankelijk verwerkt door meerdere services van Experience Platforms. Deze sectie schetst de huidige verwerkingsstatus van het verzoek voor elke respectieve dienst. Raadpleeg de gebruikershandleiding bij de levenscyclus van gegevens voor meer informatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Aantal identiteiten"
->abstract="Het aantal identiteiten waarvan de verslagen werden verzocht om als deel van deze het werkorde te worden bijgewerkt of te worden geschrapt. De in de telling opgenomen identiteiten hoeven niet noodzakelijkerwijs in de betrokken gegevensbestanden te bestaan. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="Het aantal identiteiten waarvan de verslagen werden verzocht om als deel van deze het werkorde te worden bijgewerkt of te worden geschrapt. De in de telling opgenomen identiteiten hoeven niet noodzakelijkerwijs in de betrokken gegevensbestanden te bestaan. Raadpleeg de gebruikershandleiding bij de levenscyclus van gegevens voor meer informatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Reactie record verwijderen"
->abstract="Wanneer een record-verwijderingsproces een reactie van het systeem ontvangt, worden deze berichten onder het **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding voor gegevenshygiëne voor meer informatie."
+>abstract="Wanneer een record-verwijderingsproces een reactie van het systeem ontvangt, worden deze berichten onder het **[!UICONTROL Result]** sectie. Als er een probleem optreedt terwijl een werkorder wordt verwerkt, worden in deze sectie foutberichten weergegeven die u helpen bij het oplossen van het probleem. Raadpleeg de gebruikershandleiding bij de gegevenslevenscyclus voor meer informatie."
 
 Selecteer de id van een vermelde werkorder om de details ervan weer te geven.
 
@@ -101,7 +97,7 @@ De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basi
 
 ## Volgende stappen
 
-Deze gids besprak hoe te om bestaande het werkorden van de gegevenshygiëne in de UI van het Platform te bekijken en te beheren. Raadpleeg de volgende documentatie voor informatie over het maken van uw eigen werkorders:
+Deze handleiding besprak hoe u bestaande werkorders voor de levenscyclus van gegevens kunt weergeven en beheren in de interface van het platform. Raadpleeg de volgende documentatie voor informatie over het maken van uw eigen werkorders:
 
 * [Verlopen gegevenssets beheren](./dataset-expiration.md)
-<!-- * [Manage record deletes](./record-delete.md) -->
+* [Record verwijderen beheren](./record-delete.md)
