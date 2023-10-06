@@ -2,18 +2,14 @@
 title: Overzicht van gegevenshygiëne
 description: Met Adobe Experience Platform Data Hygiene kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: ba23fb65fcc27a304e1075ec18b0bee3f240aa27
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
 
 # Gegevenshygiëne in Adobe Experience Platform
-
->[!IMPORTANT]
->
->Gegevenshygiëne is momenteel alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**. Deze mogelijkheden zullen in de nabije toekomst algemeen beschikbaar zijn. Neem contact op met uw Adobe-servicevertegenwoordiger voor meer informatie over de beschikbaarheid van Adobe. U kunt echter onmiddellijk [verwijder datasets door [!UICONTROL Datasets] UI](../catalog/datasets/user-guide.md#delete).
 
 Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
 
@@ -26,11 +22,11 @@ Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer va
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
-Deze activiteiten kunnen worden uitgevoerd met behulp van de [[!UICONTROL Data Hygiene] UI-werkruimte](#ui) of de [API voor gegevenshygiëne](#api). Wanneer een taak voor gegevenshygiëne wordt uitgevoerd, zorgt het systeem voor transparantie-updates bij elke stap van het proces. Zie de sectie over [tijdlijnen en transparantie](#timelines-and-transparency) voor meer informatie over hoe elk baantype in het systeem wordt vertegenwoordigd.
+Deze activiteiten kunnen worden uitgevoerd met behulp van [[!UICONTROL Data Hygiene] UI-werkruimte](#ui) of de [API voor gegevenshygiëne](#api). Wanneer een taak voor gegevenshygiëne wordt uitgevoerd, zorgt het systeem voor transparantie-updates bij elke stap van het proces. Zie de sectie over [tijdlijnen en transparantie](#timelines-and-transparency) voor meer informatie over hoe elk baantype in het systeem wordt vertegenwoordigd.
 
 ## [!UICONTROL Data Hygiene] UI-werkruimte {#ui}
 
-De [!UICONTROL Data Hygiene] De werkruimte in de interface van het Platform staat u toe om verrichtingen van de gegevenshygiëne te vormen en te plannen, die helpen ervoor te zorgen dat uw verslagen worden gehandhaafd zoals verwacht.
+De [!UICONTROL Data Hygiene] De werkruimte in de UI van het Platform staat u toe om verrichtingen van de gegevenshygiëne te vormen en te plannen, die helpen ervoor te zorgen dat uw verslagen worden gehandhaafd zoals verwacht.
 
 Voor gedetailleerde stappen bij het beheren van de taken van de gegevenshygiëne in UI, zie [Handleiding voor gegevenshygiëne](./ui/overview.md).
 
@@ -44,7 +40,7 @@ Verzoeken om gegevens te verwijderen en gegevenssets te laten vervallen hebben e
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
-Het volgende gebeurt wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expiration.md) wordt gemaakt:
+Het volgende vindt plaats wanneer een [Vervalaanvraag gegevensset](./ui/dataset-expiration.md) wordt gemaakt:
 
 | Stadium | Tijd na geplande vervaldatum | Beschrijving |
 | --- | --- | --- |
@@ -78,4 +74,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Volgende stappen
 
-Dit document gaf een overzicht van de mogelijkheden van het Platform op het gebied van gegevenshygiëne. Ga naar de [UI-hulplijn](./ui/overview.md). Als u wilt leren hoe u via programmacode taken voor gegevenshygiëne kunt maken, raadpleegt u de [Handleiding voor API voor gegevenshygiëne](./api/overview.md)
+In dit document wordt een overzicht gegeven van de mogelijkheden van Platform op het gebied van gegevenshygiëne. Ga naar de pagina [UI-hulplijn](./ui/overview.md). Als u wilt leren hoe u via programmacode taken voor gegevenshygiëne kunt maken, raadpleegt u de [Handleiding voor API voor gegevenshygiëne](./api/overview.md)
