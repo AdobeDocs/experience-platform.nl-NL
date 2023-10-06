@@ -2,7 +2,7 @@
 title: Geautomatiseerde gegevensset verlopen
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -26,7 +26,7 @@ In dit document wordt beschreven hoe u gegevenssetvervaldatums in de gebruikersi
 
 >[!NOTE]
 >
->Gegevens worden momenteel niet verwijderd uit het Adobe Experience Platform Edge Network vanwege de vervaldatum van de gegevensset. Nochtans, is er geen mogelijkheid dat de gegevens binnen het Netwerk van de Rand blijven nadat de dataset wordt geplaatst om te verlopen. Dit komt doordat de 14-daagse licentieovereenkomst voor Dataset Expiration samenvalt met de periode van 14 dagen waarin gegevens in het Edge Network aanwezig zijn voordat deze worden verwijderd.
+>Gegevens worden momenteel niet verwijderd uit het Adobe Experience Platform Edge Network vanwege de vervaldatum van de gegevensset. Nochtans, is er geen mogelijkheid dat de gegevens binnen het Netwerk van de Rand blijven nadat de dataset wordt geplaatst om te verlopen. Dit komt doordat de 15-daagse licentieovereenkomst voor Dataset Expiration overlapt met de periode van 14 dagen waarin gegevens in het Edge Network aanwezig zijn voordat deze worden verwijderd.
 
 ## Een gegevensset plannen die vervalt {#schedule-dataset-expiration}
 

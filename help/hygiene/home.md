@@ -2,7 +2,7 @@
 title: Overzicht van geavanceerd gegevenslevenscyclusbeheer
 description: Met geavanceerd beheer van de levenscyclus van gegevens kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Het volgende vindt plaats wanneer een [Vervalaanvraag gegevensset](./ui/dataset-
 | Aantal profielen bijgewerkt | 30 uur | Afhankelijk van de inhoud van de dataset die wordt geschrapt, kunnen sommige profielen uit het systeem worden verwijderd als alle hun componentenattributen aan die dataset worden gebonden. 30 uur nadat de dataset wordt geschrapt, worden om het even welke resulterende veranderingen in algemene profieltellingen weerspiegeld in [dashboardwidgets](../dashboards/guides/profiles.md#profile-count-trend) en andere verslagen. |
 | Soorten publiek bijgewerkt | 48 uur | Wanneer alle betrokken profielen zijn bijgewerkt, worden alle gerelateerde [publiek](../segmentation/home.md) worden aangepast aan de nieuwe grootte. Afhankelijk van de gegevensset die is verwijderd en de kenmerken waarop u segmenteert, kan de grootte van elk publiek toenemen of afnemen als gevolg van de verwijdering. |
 | Reizen en bestemmingen bijgewerkt | 50 uur | [Reizen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), en [bestemmingen](../destinations/home.md) worden bijgewerkt op basis van wijzigingen in gerelateerde segmenten. |
-| Harde verwijdering voltooid | 14 dagen | Alle gegevens met betrekking tot de gegevensset zijn hard verwijderd uit het datumpeer. De [status van de levenscyclus van de gegevens](./ui/browse.md#view-details) die de gegevensset heeft verwijderd, wordt bijgewerkt om deze gegevens weer te geven. |
+| Harde verwijdering voltooid | 15 | Alle gegevens met betrekking tot de gegevensset zijn hard verwijderd uit het datumpeer. De [status van de levenscyclus van de gegevens](./ui/browse.md#view-details) die de gegevensset heeft verwijderd, wordt bijgewerkt om deze gegevens weer te geven. |
 
 {style="table-layout:auto"}
 
