@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologie van de privacyregels
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 3%
@@ -108,6 +108,10 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 ## P
 
 **PDPA**: De [!DNL Personal Data Protection Act] van Thailand (PDPA) is ingevoerd om Thaise gegevensbezitters te beschermen tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **Persoonlijke gegevens**: Alle informatie met betrekking tot een natuurlijke persoon of &quot;betrokkene&quot; die kan worden gebruikt om de persoon direct of indirect te identificeren.
 

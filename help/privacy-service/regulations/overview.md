@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van privacy Regulations
 description: Dit document biedt een overzicht van de verschillende privacyregels die door Adobe Experience Cloud worden ondersteund.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 0%
@@ -33,6 +33,10 @@ Door het gebruik van [Adobe Experience Platform Privacy Service](../home.md), st
 | VCDPA | De [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) biedt nieuwe rechten op privacy van gegevens aan inwoners van Virginia (&quot;Consumers&quot;), waaronder het recht op toegang tot, verwijdering en correctie van persoonsgegevens. Consumenten hebben ook het recht om zich uit te sluiten van de verkoop van persoonsgegevens, om af te zien van profilering op basis van persoonsgegevens en om persoonlijke reclame te verwerken. |
 
 {style="table-layout:auto"}
+
+<!-- Not yet released:
+ | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
+ -->
 
 ## Volgende stappen
 

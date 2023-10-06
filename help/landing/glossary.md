@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '7973'
 ht-degree: 0%
@@ -380,6 +380,10 @@ ht-degree: 0%
 **Parketbestanden**: Een Parquet-bestand is een kolombestandsindeling met complexe geneste gegevensstructuren. De dossiers van de parket worden vereist voor het toevoegen van gegevens om een schemadataset te bevolken.
 
 **PDPA**: De [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) is ingevoerd om Thaise eigenaars van gegevens te beschermen tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
+
+<!-- Not yet released
+**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
+-->
 
 **Aangepaste aanbiedingen**: Een gepersonaliseerde aanbieding is een aanpasbaar marketingbericht dat is gebaseerd op toelatingsregels en -beperkingen.
 
