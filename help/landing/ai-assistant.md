@@ -1,37 +1,38 @@
 ---
-title: AI Assistant voor Adobe Experience Platform
-description: Leer hoe u de AI Assistant gebruikt om door Experience Platform- en Real-time Customer Data Platform-concepten te navigeren en deze te begrijpen, en om informatie over uw objecten te gebruiken.
+title: Assistent voor Adobe Experience Platform
+description: Leer hoe u met Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 704d47b0e37825508705402ab2401636f46ef23f
+exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
+source-git-commit: a2b5375cd78a5d154c2ba7205491d877606ff988
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2516'
 ht-degree: 0%
 
 ---
 
-# AI Assistant voor Adobe Experience Platform
+# Assistent voor Adobe Experience Platform
 
 >[!NOTE]
 >
->De AI-assistent voor Adobe Experience Platform bevindt zich momenteel in Alpha. De functie en documentatie kunnen worden gewijzigd.
+>Assistent voor Adobe Experience Platform is momenteel in Alpha. De functie en documentatie kunnen worden gewijzigd.
 
-De AI-assistent voor Adobe Experience Platform is een interface-functie waarmee u door de concepten Experience Platform en Real-time Customer Data Platform en gebruiksinformatie over uw objecten kunt navigeren en deze kunt begrijpen.
+De assistent voor Adobe Experience Platform is een UI-functie waarmee u door de concepten Experience Platform en Real-time Customer Data Platform en gebruiksinformatie over uw objecten kunt navigeren en deze kunt begrijpen.
 
-U kunt de AI-assistent vragen naar informatie zoals:
+U kunt de Medewerker vragen voor informatie zoals:
 
 * Richtlijnen voor het uitvoeren van taken die verband houden met gegevens en publiek.
 * Statussen en metriek van de bestaande gegevensobjecten in uw organisatie.
 * Gebruik voorbeelden en nuances van het geval om uw gegevensvoorwerpen, met inbegrip van attributen, datasets, bestemmingen, schema&#39;s, segmenten, en bronnen beter te begrijpen.
 
-Dit document bevat informatie over de manier waarop u de AI Assistant kunt gebruiken om vragen te stellen en antwoorden te ontvangen over concepten van Experience Platforms en Real-Time CDP.
+Dit document bevat informatie over de manier waarop u Assistant kunt gebruiken om vragen te stellen en antwoorden te ontvangen over concepten van Experience Platforms en Real-Time CDP.
 
 >[!BEGINSHADEBOX]
 
-**Hoe werkt de AI Assistant?**
+**Hoe werkt Assistent?**
 
-De AI Medewerker antwoordt op uw voorgelegde vragen door een gegevensbestand te vragen en dan gegevens van het gegevensbestand in een leesbaar antwoord te vertalen.
+De medewerker antwoordt aan uw voorgelegde vragen door een gegevensbestand te vragen en dan gegevens van het gegevensbestand in een leesbaar antwoord te vertalen.
 
 Deze interne vertegenwoordiging van onderliggende gegevens is ook genoemd geworden KennisGrafiek - een uitvoerig Web van concepten, gegevens, en meta-gegevens voor een bepaald antwoord.
 
@@ -41,7 +42,7 @@ De Kennisgrafiek bestaat uit subgrafieken waarnaar wordt verwezen wanneer query&
 * Gebruikersgegevens van de klant in verschillende meta-winkels.
 * Documentatie Experience League.
 
-Er zijn twee klassen vragen om te overwegen alvorens de Medewerker AI te vragen:
+Er zijn twee klassen vragen om te overwegen alvorens Medewerker te vragen:
 
 * **Conceptvragen**: Concept-vragen gaan over Adobe-concepten met betrekking tot gegevens of publiek. Voorbeelden van vragen over concepten zijn:
    * Wat is het verschil tussen partij en het stromen segmentatie?
@@ -54,161 +55,176 @@ Er zijn twee klassen vragen om te overwegen alvorens de Medewerker AI te vragen:
 
 >[!ENDSHADEBOX]
 
-## De AI-assistent voor Experience Platform openen in de gebruikersinterface
+## De Medewerker van de toegang voor Experience Platform in UI
 
-U kunt tot de Medewerker van AI van de kopbalnavigatie in de UI van het Experience Platform toegang hebben.
+U kunt tot Medewerker van de kopbalnavigatie in de UI van het Experience Platform toegang hebben.
 
-Selecteer de **[!UICONTROL AI Assistant icon]** in de koptekst om het deelvenster AI Assistant te starten.
+Selecteer de **[!UICONTROL Assistant icon]** van de koptekst naar het deelvenster Assistent starten.
 
-![De homepage van UI van het Experience Platform met het AI Hulp geselecteerde pictogram.](./images/ai-assistant/ai-assistant.png)
+![De homepage van UI van het Experience Platform met het Hulp geselecteerde pictogram.](./images/ai-assistant/ai-assistant.png)
 
-Van hier, kunt u uw vraag in het tekstvakje invoeren en AI Medewerker voor concepten betreffende gegevens of publiek vragen. U kunt ook vragen stellen over uw gegevensobjecten om beter te begrijpen hoe u deze kunt gebruiken voor uw respectievelijke gebruiksscenario.
++++Onderliggende modus gebruiken
 
-### Voorbeeld: gebruik de AI-assistent om het maken van het schema te versnellen
+Te gebruiken [!DNL Immersive mode] Selecteer het focuspictogram in de koptekstnavigatie van de assistent.
+
+![selectieve onderdompeling](./images/ai-assistant/select-immersive.png)
+
+In het midden van het scherm verschijnt een speciale pop-upinterface voor de assistent.
+
+![dompelmodus](./images/ai-assistant/immersive-mode.png)
+
++++
+
+Van hier, kunt u uw vraag in het tekstvakje en vraagMedewerker voor concepten betreffende gegevens of publiek invoeren. U kunt ook vragen stellen over uw gegevensobjecten om beter te begrijpen hoe u deze kunt gebruiken voor uw respectievelijke gebruiksscenario.
+
+### Voorbeeld: gebruik de assistent om het maken van het schema te versnellen
 
 >[!NOTE]
 >
->In de volgende voorbeeldworkflow wordt het proces voor het maken van het ExperienceEvent-schema gebruikt om te laten zien hoe u de AI Assistant kunt gebruiken wanneer u de gebruikersinterface van het Experience Platform gebruikt.
+>In de volgende voorbeeldworkflow wordt het proces voor het maken van het ExperienceEvent-schema gebruikt om te laten zien hoe u Assistant kunt gebruiken wanneer u de gebruikersinterface van het Experience Platform gebruikt.
 
-Overweeg een gebruiksgeval waarin u een **Apparaathandel in gebeurtenisschema**. Tijdens het aanmaakproces van het ExperienceEvent-schema komt u tegen `eventType` veld. U kunt nu de workflow verlaten en de documentatie in het dialoogvenster [grondbeginselen van een schemacompositie](../xdm/schema/composition.md)U kunt ook de AI Assistant gebruiken om directe antwoorden op uw vragen op te halen.
+Overweeg een gebruiksgeval waarin u een **Apparaathandel in gebeurtenisschema**. Tijdens het aanmaakproces van het ExperienceEvent-schema komt u tegen `eventType` veld. U kunt nu de workflow verlaten en de documentatie in het dialoogvenster [grondbeginselen van een schemacompositie](../xdm/schema/composition.md)U kunt Assistant ook gebruiken om directe antwoorden op uw vragen op te halen.
 
-Om te beginnen voert u uw vraag in het tekstvak in. In het onderstaande voorbeeld wordt aan de AI Assistant de volgende vraag gesteld: &quot;**Wat is het eventType-veld in een Experience Event-schema?**&quot;
+Om te beginnen voert u uw vraag in het tekstvak in. In het onderstaande voorbeeld wordt Assistent de vraag gesteld: &quot;**Wat is het eventType-veld in een ExperienceEvent-schema?**&quot;
 
-![De AI-assistent voor Experience Platform met de volgende vraag voorbereid voor query: &quot;Wat is het veld eventType in een ExperienceEvent-schema?](./images/ai-assistant/question.png)
+![De assistent voor Experience Platform met de volgende vraag voorbereid voor het vragen: &quot;Wat is het eventType-veld in een ExperienceEvent-schema?](./images/ai-assistant/question.png)
 
-De AI Medewerker zoekt dan zijn kennisbasis en berekent een antwoord. Na enkele ogenblikken retourneert de AI-assistent een antwoord en verwante suggesties die u kunt gebruiken als follow-upaanwijzingen.
+De medewerker vraagt dan zijn kennisbasis en berekent een antwoord. Na enkele ogenblikken retourneert de assistent een antwoord en verwante suggesties die u kunt gebruiken als follow-upaanwijzingen.
 
-![De AI Medewerker voor Experience Platform met een antwoord op de vorige vraag.](./images/ai-assistant/answer.png)
+Een bepaald antwoord biedt hyperlinks naar entiteiten waarnaar wordt verwezen. Selecteer in het onderstaande voorbeeld de optie **[!UICONTROL Schemas]** om een lijst van de referenced schema&#39;s te bekijken, of **[!UICONTROL Segments]** om een lijst van de referenced segmenten te bekijken.
 
-U kunt meer over een bepaald onderwerp leren door een vervolgvraag te stellen. In het volgende voorbeeld wordt aan de AI-assistent gevraagd hoe het eventType in segmentatie kan worden gebruikt.
+![Assistent voor Experience Platform met een antwoord op de vorige query.](./images/ai-assistant/answer.png)
 
-![Een vervolgvraag en antwoord die worden weergegeven in de AI Assistant voor Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+De Medewerker verstrekt u een manier om uw antwoord te bevestigen door zijn bron te bekijken. De verbindingen aan de documentatie worden verstrekt voor concept vragen, terwijl de vragen van het gegevensgebruik met een SQL vraag kunnen worden geverifieerd die aantoont hoe het antwoord werd gegevens verwerkt.
 
-U kunt ook vragen stellen aan de AI Assistant over uw gegevensgebruik. Wanneer u informatie invraagt over gegevensgebruik, moet u in een actieve zandbak zijn opdat de AI Medewerker uw vraag beantwoordt.
+![Opties die de assistent na het retourneren van een antwoord biedt.](./images/ai-assistant/options-post-answer.png)
+
+#### Verwante suggesties
+
+U kunt ook dieper in het onderwerp van uw vraag duiken door één van de verwante suggesties te selecteren die Medewerker verstrekt.
+
+![Verwante suggesties.](./images/ai-assistant/related-suggestions.png)
+
+#### Vervolgvraag
+
+U kunt meer over een bepaald onderwerp leren door een vervolgvraag te stellen. In het volgende voorbeeld, wordt de Medewerker gevraagd hoe eventType in segmentatie kan worden gebruikt.
+
+![Een vervolgvraag en antwoord die op de Medewerker voor Experience Platform worden getoond.](./images/ai-assistant/follow-up-answer.png)
+
+#### Vraag over gegevensgebruik
+
+U kunt ook vragen stellen aan de assistent over uw gegevensgebruik. Wanneer u informatie invraagt over het gebruik van gegevens, moet u zich in een actieve zandbak bevinden opdat de Medewerker uw vraag beantwoordt.
 
 ![Een vraag over gegevensgebruik, die vraagt hoeveel segmenten een gebruiker heeft.](./images/ai-assistant/data-usage-question.png)
 
-Met elk antwoord biedt de AI-assistent u een manier om uw antwoord te valideren door de bron ervan te bekijken. De verbindingen aan de documentatie worden verstrekt voor concept vragen, terwijl de vragen van het gegevensgebruik met een SQL vraag kunnen worden geverifieerd die aantoont hoe het antwoord werd gegevens verwerkt.
+## Bereik
 
->[!BEGINSHADEBOX]
+De assistent kan vragen beantwoorden over de concepten Real-Time CDP en Experience Platform, maar ook over het specifieke gegevensgebruik voor je gebruikersaccount. De medewerker kan context ook afleiden die op de UI-pagina wordt gebaseerd die u binnen bent. Het kan identificeren:
 
-**Je feedback is aangevraagd**
+* De gebruikersaccount die u gebruikt.
+* De organisatie waartoe u behoort.
+* De pagina die u op het scherm bekijkt.
+* De bron (inclusief type en id) die u op uw scherm bekijkt.
+* Aangezien u bezig bent met een bepaald Experience Platform of Real-Time CDP-workflow, kan Assistant uw intentie afleiden.
 
-Tijdens dit alfakanaal wordt u gevraagd feedback te geven over de reacties die u ontvangt van de AI Assistant. Alle reacties en ingediende feedback worden gecontroleerd om de AI Assistant-ervaring te blijven verbeteren.
+### Documentatie
 
-Als u feedback wilt geven, selecteert u duimen omhoog of duimen omlaag na ontvangst van een reactie van de AI Assistant en voert u uw feedback in het tekstvak in. Selecteer vervolgens **[!UICONTROL Submit feedback]** om te verzenden.
-
->[!ENDSHADEBOX]
-
->[!BEGINTABS]
-
->[!TAB Show source]
-
-Selecteren **[!UICONTROL Show source]** voor een lijst met koppelingen naar de documentatie waarnaar de AI-assistent verwijst om zijn reactie te berekenen.
-
-![De koppelingen naar de bron in de AI-assistent.](./images/ai-assistant/show-sources.png)
-
->[!TAB Stompelen omhoog]
-
-Selecteer het pictogram van duim op om feedback te geven over wat goed met uw ervaring met de AI Assistant is gegaan.
-
-![Het positieve feedbackvenster.](./images/ai-assistant/positive-feedback.png)
-
->[!TAB Miniatuur omlaag]
-
-Selecteer het pictogram met de miniaturen omlaag om feedback te geven over de verbeteringen die u kunt aanbrengen op basis van uw ervaring met de AI Assistant. Tijdens deze stap kunt u ook specifieke opmerkingen maken over uw ervaring. De feedback in de opmerkingen wordt dagelijks bekeken.
-
-![Het negatieve feedbackvenster.](./images/ai-assistant/negative-feedback.png)
-
->[!TAB Markering]
-
-Selecteer het vlagpictogram om verdere rapporten over uw ervaring te verstrekken gebruikend de Medewerker AI.
-
-![Het venster met rapportresultaten.](./images/ai-assistant/report-results.png)
-
->[!ENDTABS]
-
-### Aan de slag
-
-U kunt ook de vooraf ingestelde aanwijzingen gebruiken die de AI Assistant biedt om aan de slag te gaan.
-
-![De verstrekte herinneringen in het AI Hulp paneel.](./images/ai-assistant/ideas.png)
-
-## Aanvullende informatie
-
-Raadpleeg deze sectie voor meer informatie over de AI Assistant voor Experience Platform.
-
-### Bereik
-
-De AI-assistent kan vragen beantwoorden op basis van de documentatie en uw gegevensgebruik.
-
-#### Documentatie
-
-U kunt documentatievragen stellen op basis van Real-time Customer Data Platform en Soorten publiek. Momenteel geldt de documentatie-index voor Adobe Experience Platform (Real-Time CDP en Soorten publiek). De index wordt periodiek bijgewerkt.
+Momenteel geldt de documentatie-index voor Adobe Experience Platform (Real-Time CDP en Soorten publiek). De index wordt periodiek bijgewerkt.
 
 Het documentatiemodel wordt opgeleid op Experience Platform (Real-Time CDP en Soorten publiek). Vragen die buiten Adobe Experience Platform vallen, zoals vragen over andere producten van de Adobe, zoals Adobe Target en de Creative Cloud-suite, kunnen niet worden beantwoord.
 
-#### Gegevensgebruik
+### Gegevensgebruik
 
-U kunt ook vragen stellen aan de AI Assistant over uw gegevensgebruik in de volgende domeinen:
+U kunt Assistent-vragen stellen over uw gegevensgebruik in de volgende domeinen:
 
 * Attributen
 * Gegevenssets
-* Doelen (Vragen over accounts en sommige vragen over gegevensstroom kunnen op dit moment niet worden beantwoord.)
-* Schema&#39;s (vragen over veldgroepen kunnen op dit moment niet worden beantwoord.)
+* Doelen _(Vragen over accounts en sommige vragen over gegevensstroom kunnen op dit moment niet worden beantwoord.)_
+* Schemas _(Op dit moment kunnen vragen met betrekking tot veldgroepen niet worden beantwoord.)_
 * Segmenten
-* Bronnen (Vragen over rekeningen kunnen op dit moment niet worden beantwoord.)
+* Bronnen _(Op dit moment kunnen vragen over de rekeningen niet worden beantwoord.)_
 
 Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat van UI wijzen. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. Mogelijk moet u de vragen opmaken als: &quot;Wanneer was het segment met de titel {TITLE} gemaakt?&quot; in plaats van &quot;Wanneer was het {TITLE} segment gemaakt?&quot;
 
 U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke gegevens die betrekking hebben op objecten, zoals schema&#39;s, datasets, kenmerken, doelen en segmenten.
 
-### Ondersteunde vragen over gegevensgebruik
+### Voorbeeldvragen over gegevensgebruik
 
-+++Selecteren om een lijst met ondersteunde vragen over gegevensgebruik weer te geven
++++Selecteren om een lijst met voorbeelden van vragen over gegevensgebruik weer te geven
 
-Hieronder volgt een lijst met vragen over het momenteel ondersteunde gegevensgebruik, gegroepeerd op domein.
-
-* De kenmerken weergeven die voor dit segment worden gebruikt?
-* Hoeveel segmenten zijn er in totaal?
-* Een lijst weergeven met segmenten die de laatste maand zijn gewijzigd.
-* Welke segmenten zijn de afgelopen week gewijzigd?
-* Wat is het aantal profielen voor {SEGMENT_NAME} segment?
-* Alle gedupliceerde segmenten weergeven.
-* Toon me segmenten die in afgelopen 7 dagen zijn gemaakt of bijgewerkt.
-* Wat is de verdeling van het aantal profielen over segmenten?
-* Hoeveel velden worden in segmentatie gebruikt?
-* Wat is het totale aantal geactiveerde segmenten?
-* Welke segmenten worden geactiveerd?
-* Hoeveel dubbele segmenten zijn geactiveerd?
-* De segmenten van de lijst die in het laatste jaar werden gecreeerd.
-* Segmenten weergeven die het laatst zijn gewijzigd vóór {DATE}.
-* Hoeveel unieke segmentnamen zijn gekoppeld aan de {SCHEMA_NAME} schema?
-* Welke schema&#39;s het meest meestal over segmenten worden gebruikt?
-* Hoeveel schema&#39;s heb ik?
-* Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?
-* Alle schema&#39;s weergeven die in de laatste week zijn gewijzigd.
-* Hoeveel schema&#39;s worden profiel toegelaten?
-* Alle schema&#39;s voor de ervaringsgebeurtenisklasse weergeven?
-* Welke datasets in worden opgenomen {SCHEMA_NAME} schema?
-* Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?
-* Hoeveel datasets heb ik?
-* Welke datasets worden gebruikt in elk segment?
-* Welke segmenten gebruiken {ATTRIBUTE_NAME} kenmerk?
-* Welke schema&#39;s hebben {ATTRIBUTE_NAME} in de eigenschappen?
-* Hoeveel XDM schemakenmerken worden niet gebruikt in om het even welke segmenten?
-* Waarin gegevensset(s) {ATTRIBUTE_NAME} XDM-velden gevuld?
-* Welke datasets gegevens hebben voor {ATTRIBUTE_NAME} kenmerk?
-* Hoeveel segmenten worden geactiveerd voor elke bestemming?
-* Welke segmenten worden geactiveerd aan het meeste aantal bestemmingen?
-* Hebben om het even welke segmenten 0 profielen?
-* Hoeveel gegevensstromen heb ik?
+| Type vraag | Beschrijving | Voorbeelden |
+| --- | --- | --- | 
+| Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerde segmenten?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerde segmenten worden gebruikt.</li><li>Toon me de segmenten die worden geactiveerd om {DESTINATION_ACCOUNT_NAME} en hebben meer dan 1000 profielen.</li><li>Toon me de attributen die in de geactiveerde segmenten worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Maak een lijst van de schema&#39;s die met geactiveerde segmenten verwant zijn en in vorig 1 jaar gecreeerd.</li></ul> |
+| Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van geactiveerde segmenten?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welke segmenten worden geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaatsegmenten weergeven.</li><li>Toon me de segmenten die aan worden geactiveerd {DESTINATION_ACCOUNT_NAME} en rangschikken op profielgrootte.</li><li>Wat is het percentage van de segmenten die niet zijn geactiveerd maar meer dan 100 profielen hebben. Laat me hun namen zien.</li><li>Geef me de bovenste 5 kenmerken weer die in geactiveerde segmenten worden gebruikt op basis van hun voorval.</li></ul> |
+| Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor {SEGMENT_NAME}?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welke segmenten zijn de afgelopen week gewijzigd?</li><li>Maak een lijst van de segmenten die de zelfde segmentdefinities samen met hun verwezenlijking datum hebben.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel segmenten van elke dataset zijn gecreeerd.</li><li>De segmentdefinitie en wijzigingsdatum weergeven van {SEGMENT_NAME}.</li></ul> |
 
 +++
 
-### Gesprekkervaring
+## Het antwoord controleren
 
-Bij het opvragen van de AI Assistant moet u rekening houden met verschillende nuances ten aanzien van de beleving van gesprekken.
+U kunt de reactie verifiëren die de Medewerker gebruikend een aantal verschillende manieren terugkeert.
+
+### Bijschriften voor documentatie
+
+Met elke reactie geeft Assistant citaten waar je naar kunt verwijzen voor verificatie of meer informatie.
+
+Selecteren **[!UICONTROL Show source]** voor een lijst van verbindingen aan documentatie die de Hulpverwijzingen om zijn reactie te berekenen.
+
+![De verbindingen aan de bron die in de Medewerker wordt getoond.](./images/ai-assistant/sources.png)
+
+Voor reacties die informatie over gegevensgebruik bevatten, biedt Assistant koppelingen naar entiteiten in kwestie. Daarnaast geeft Assistant uitleg over de manier waarop het antwoord is berekend.
+
+![toelichting](./images/ai-assistant/explanation.png)
+
+## Feedback geven
+
+>[!BEGINSHADEBOX]
+
+**Je feedback is aangevraagd**
+
+Tijdens deze Alpha wordt u gevraagd feedback te geven over de reacties die u van de assistent ontvangt. Alle reacties en verzonden feedback worden gecontroleerd om de assistent-ervaring te blijven verbeteren.
+
+Als u feedback wilt geven, selecteert u duimen omhoog of duimen omlaag na ontvangst van een reactie van de assistent en voert u vervolgens uw feedback in het tekstvak in. Selecteer vervolgens **[!UICONTROL Submit feedback]** om te verzenden.
+
+>[!ENDSHADEBOX]
+
++++Feedback geven
+
+>[!BEGINTABS]
+
+>[!TAB Stompelen omhoog]
+
+Selecteer het pictogram van duim omhoog om feedback te geven over wat goed met uw ervaring met de Medewerker ging.
+
+![Het positieve feedbackvenster.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB Miniatuur omlaag]
+
+Selecteer de duim onderaan pictogram om feedback te geven over wat op basis van uw ervaring met de Medewerker zou kunnen worden verbeterd. Tijdens deze stap kunt u ook specifieke opmerkingen maken over uw ervaring. De feedback in de opmerkingen wordt dagelijks bekeken.
+
+![Het negatieve feedbackvenster.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB Markering]
+
+Selecteer het vlagpictogram om verdere rapporten over uw ervaring te verstrekken gebruikend de Medewerker.
+
+![Het venster met rapportresultaten.](./images/ai-assistant/report-results.png)
+
+>[!ENDTABS]
+
++++
+
+## Aanvullende informatie
+
+Raadpleeg deze sectie voor meer informatie over de assistent voor Experience Platform.
+
+### Voorzorgsmaatregelen en beperkingen
+
+De volgende sectie schetst huidige waarschuwingen en beperkingen om te overwegen wanneer het gebruiken van Medewerker.
+
+#### Gesprekkervaring
+
+U moet verscheidene nuances betreffende de gesprekservaring in overweging nemen wanneer het vragen van de Medewerker.
 
 >[!NOTE]
 >
@@ -218,34 +234,34 @@ Bij het opvragen van de AI Assistant moet u rekening houden met verschillende nu
 
 >[!TAB Kan context niet afleiden uit eerdere discussie]
 
-De AI-assistent kan op dit moment niet verwijzen naar eerdere besprekingen als context voor een bepaalde vraag. Zie de onderstaande tabel voor voorbeelden:
+De assistent kan momenteel geen eerdere besprekingen als context voor een bepaalde vraag noemen. Zie de onderstaande tabel voor voorbeelden:
 
 | Ambigueuze vraag | Vraag wissen | Opmerking |
 | --- | --- | --- |
-| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Zijn er verschillende soorten?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Zijn er verschillende soorten **segmenten**?&quot;</li></ul> | De AI-assistent kan niet concluderen wat &quot;zij&quot; betekent. |
-| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je meer toelichten?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Uitleggen wat een segment diepgaand is&quot;</li></ul> | De AI Assistant kan op intelligente wijze niet verwijzen naar documentatie die is gebaseerd op &quot;meer&quot;. |
-| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je me een voorbeeld geven?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je me een voorbeeld geven van een segment?&quot;</li></ul> | De AI-assistent kan niet bepalen van wat u een voorbeeld wilt. |
-| <ul><li>Eerste vraag: &quot;Wat is een batchsegment?&quot;</li><li>Vervolgvraag: &quot;Hoe vergelijk het met een streaming segment?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een batchsegment?&quot;</li><li>Vervolgvraag: &quot;Kan u een streaming segment vergelijken met een batch-segment?&quot;</li></ul> | De AI-assistent kan niet concluderen waarnaar &quot;het&quot; verwijst en kan het streamingsegment dus niet vergelijken. |
-| <ul><li>Eerste vraag: &quot;Hoeveel segmenten heb ik?&quot;</li><li>Vervolgvraag: &quot;Hoeveel van hen gebruiken Facebook als bestemming?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Hoeveel segmenten heb ik?&quot;</li><li>Vervolgvraag: &quot;Hoeveel segmenten die ik heb gebruiken Facebook als bestemming?&quot;</li></ul> | De AI-assistent kan niet concluderen waar &quot;zij&quot; naar verwijzen. |
+| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Zijn er verschillende soorten?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Zijn er verschillende soorten **segmenten**?&quot;</li></ul> | De assistent kan niet afleiden wat &quot;zij&quot; betekent. |
+| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je meer toelichten?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Uitleggen wat een segment diepgaand is&quot;</li></ul> | De assistent kan op intelligente wijze niet verwijzen naar documentatie die is gebaseerd op &quot;meer&quot;. |
+| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je me een voorbeeld geven?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je me een voorbeeld geven van een segment?&quot;</li></ul> | De assistent kan niet afleiden waar u een voorbeeld van wilt. |
+| <ul><li>Eerste vraag: &quot;Wat is een batchsegment?&quot;</li><li>Vervolgvraag: &quot;Hoe vergelijk het met een streaming segment?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een batchsegment?&quot;</li><li>Vervolgvraag: &quot;Kan u een streaming segment vergelijken met een batch-segment?&quot;</li></ul> | De assistent kan niet concluderen waar &quot;het&quot; naar verwijst en kan het streamingsegment dus niet vergelijken. |
+| <ul><li>Eerste vraag: &quot;Hoeveel segmenten heb ik?&quot;</li><li>Vervolgvraag: &quot;Hoeveel van hen gebruiken Facebook als bestemming?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Hoeveel segmenten heb ik?&quot;</li><li>Vervolgvraag: &quot;Hoeveel segmenten die ik heb gebruiken Facebook als bestemming?&quot;</li></ul> | De assistent kan niet concluderen waar &quot;zij&quot; naar verwijst. |
 
 {style="table-layout:auto"}
 
 >[!TAB Kan context niet afleiden van een pagina]
 
-Wanneer u de AI-assistent vraagt naar een bepaald element van de gebruikersinterface van het Experience Platform waarop u zich bevindt, moet u het specifieke element in uw vraag duidelijk definiëren.
+Wanneer het vragen van de Medewerker over een bepaald element van de Experience Platform UI pagina die u bent, moet u duidelijk het specifieke element binnen uw vraag bepalen.
 
 | Ambigueuze vraag | Vraag wissen | Opmerking |
 | --- | --- | --- |
-| Wat doet dit? | &quot;Wat doet {PAGE_NAME} doen? | De AI-assistent kan niet concluderen waar &quot;this&quot; naar verwijst. U moet het specifieke pagina-element opgeven waar u om vraagt. |
-| &quot;Waarom zal het niet redden?&quot; | &quot;Waarom kan ik geen nieuwe sandbox opslaan met de naam {NAME}?&quot; | De AI-assistent kan niet concluderen waarnaar &quot;het&quot; verwijst en kan niet weten dat u problemen hebt met een entiteit. |
+| Wat doet dit? | &quot;Wat doet {PAGE_NAME} doen? | De assistent kan niet concluderen waar &quot;dit&quot; naar verwijst. U moet het specifieke pagina-element opgeven waar u om vraagt. |
+| &quot;Waarom zal het niet redden?&quot; | &quot;Waarom kan ik geen nieuwe sandbox opslaan met de naam {NAME}?&quot; | De assistent kan niet concluderen waarnaar &quot;het&quot; verwijst en kan niet weten dat u problemen hebt met een entiteit. |
 
 {style="table-layout:auto"}
 
-Bovendien kan de AI-assistent alleen vragen met betrekking tot foutberichten beantwoorden, aangezien de fout in het Experience League is gedocumenteerd.
+Voorts kan de Medewerker vragen betreffende foutenmeldingen slechts beantwoorden, aangezien de fout in Experience League wordt gedocumenteerd.
 
 >[!TAB dubbelzinnigheid]
 
-U moet uw vragen duidelijk formuleren en deze in een product, toepassing of domein opnemen, aangezien de AI Assistant momenteel geen vragen kan doorgeven.
+U moet uw vragen duidelijk formuleren en deze in een product, toepassing of domein behandelen, aangezien de assistent momenteel geen vragen kan doorgeven.
 
 | Ambigueuze vraag | Vraag wissen | Opmerking |
 | --- | --- | --- |
@@ -256,25 +272,27 @@ U moet uw vragen duidelijk formuleren en deze in een product, toepassing of dome
 
 >[!ENDTABS]
 
-### Beperkte kleine praatjes
+#### Beperkte kleine praatjes
 
-U kunt kleine gesprekken voeren met de AI Assistant, maar deze mogelijkheid is momenteel beperkt.
+U kunt kleine gesprekken voeren met de assistent, maar deze mogelijkheid is momenteel beperkt.
 
-### Capaciteitsvragen
+#### Capaciteitsvragen
 
-De AI-assistent kan een onjuiste indruk geven van wat hij kan doen. De volgende typen vragen kunnen onjuist worden beantwoord:
+De assistent kan een onjuiste indruk geven van wat hij kan doen. De volgende typen vragen kunnen onjuist worden beantwoord:
 
 | Voorbeeldvraag | Opmerking |
 | --- | --- |
-| &quot;Kunt u vragen beantwoorden op {ENTITY}?&quot; | Zolang de AI-assistent in zijn index een enkele pagina kan vinden die naar een bepaalde entiteit verwijst, zal hij ja antwoorden. |
-| &quot;Weet je **x** taal?&quot; | De AI Assistant ondersteunt momenteel alleen Engels, maar kan &quot;ja&quot; antwoorden omdat het onderliggende model het ondersteunt. |
-| &quot;Kan je...?&quot; | De AI-assistent kan ja antwoorden, ook al is dat niet het geval. |
+| &quot;Kunt u vragen beantwoorden op {ENTITY}?&quot; | Zolang de Medewerker één enkele pagina kan vinden die naar een bepaalde entiteit in zijn index verwijst, dan zal het ja antwoorden. |
+| &quot;Weet je **x** taal?&quot; | De Medewerker steunt momenteel slechts Engels, maar kan &quot;ja&quot;antwoorden aangezien het onderliggende model het kan steunen. |
+| &quot;Kan je...?&quot; | De assistent kan ja antwoorden, hoewel dat niet het geval is. |
 
 ### Tips
 
+In de volgende sectie worden enkele tips en tijdelijke oplossingen beschreven die u in overweging kunt nemen bij het gebruik van de assistent.
+
 #### De vragen kunnen met de verkeerde informatiebron worden beantwoord
 
-Soms kan een vraag over uw gebruiksgegevens resulteren in een antwoord op basis van de documentatie. Dit komt omdat de AI-assistent uw vraag verkeerd kan doorsturen naar de verkeerde informatiebron. U kunt dit voorkomen door:
+Soms kan een vraag over uw gebruiksgegevens resulteren in een antwoord op basis van de documentatie. Dit komt omdat de assistent uw vraag verkeerd naar de verkeerde informatiebron kan leiden. U kunt dit voorkomen door:
 
 * Herhaal uw vraag om meer SQL-achtige taal te gebruiken
 * Expliciet het roepen van de informatiebron aan gebruik.
@@ -283,6 +301,6 @@ Lees de onderstaande tabel voor voorbeelden:
 
 | Onjuiste vraag | Goede vraag | Notities |
 | --- | --- | --- |
-| Wat is mijn grootste segment? | Wat is mijn grootste segment? Gegevens gebruiken. | Vertel de AI Assistant expliciet dat het antwoord moet zijn gebaseerd op gegevens. |
+| Wat is mijn grootste segment? | Wat is mijn grootste segment? Gegevens gebruiken. | Vertel de Medewerker uitdrukkelijk dat u het antwoord op gegevens wilt worden gebaseerd. |
 | Wat is mijn grootste segment? | Maak een lijst van mijn grootste segment. | Er zijn gevallen waarin een &quot;wat...&quot;-vraag kan worden verward met een documentatiegebaseerde vraag. Het gebruik van een opdracht als &quot;list&quot; is een sterkere indicator die u een vraag stelt met gegevens in context. |
 | Hoeveel datasets heb ik? | Tel mijn datasets. | De oorspronkelijke vraag werkt voor segmenten, maar werkt mogelijk niet met gegevenssets. |
