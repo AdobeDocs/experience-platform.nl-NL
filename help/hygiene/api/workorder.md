@@ -2,20 +2,20 @@
 title: Eindpunt van API voor werkvolgorde
 description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor identiteiten programmatically te beheren.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
 
-# Werkordereindpunt
+# [!BADGE Beta]{type=Informative} Het eindpunt van de werkorder {#work-order-endpoint}
 
 De `/workorder` Het eindpunt in de Hygiene API van Gegevens staat u toe om verslagen te beheren schrapt verzoeken in Adobe Experience Platform.
 
 >[!IMPORTANT]
+> 
+>De functie Record verwijderen bevindt zich momenteel in de bètaversie en is alleen beschikbaar in een **beperkte release**. Het is niet beschikbaar voor alle klanten. Registratie-verwijderingsverzoeken zijn alleen beschikbaar voor organisaties in de beperkte release.
 >
 >Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
 
