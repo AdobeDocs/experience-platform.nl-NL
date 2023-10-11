@@ -2,9 +2,9 @@
 title: Een gegevensstroom configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 1233d9dcfefa71685e457815cb5b9d7a768b7d6e
+source-git-commit: db75771d09caef00db58073333909f730a303975
 workflow-type: tm+mt
-source-wordcount: '2501'
+source-wordcount: '2597'
 ht-degree: 1%
 
 ---
@@ -48,12 +48,18 @@ Breid uit **[!UICONTROL Geolocation and network lookup]** om de hieronder beschr
 
 | Instelling | Beschrijving |
 | --- | --- |
-| [!UICONTROL Geo Lookup] | Hiermee schakelt u geolocatiezoekopdrachten voor de geselecteerde opties in op basis van het IP-adres van de bezoeker. Voor het opzoeken van Geolocatie moet u de [`placeContext`](../edge/data-collection/automatic-information.md#place-context) gebiedsgroep in uw configuratie van SDK van het Web. <br> Beschikbare opties: <ul><li>Land</li><li>Postcode</li><li>Staat/provincie</li><li>DMA</li><li>Plaats</li><li>Breedtegraad </li><li>Lengtegraad</li></ul>Selecteren **[!UICONTROL City]**, **[!UICONTROL Latitude]**, of **[!UICONTROL Longitude]** biedt coördinaten tot twee decimale punten, ongeacht welke andere opties zijn geselecteerd. Dit wordt beschouwd als granulariteit op stadsniveau. <br> <br>Als u geen enkele optie selecteert, worden geolocatieopzoekingen uitgeschakeld. Geolocatie komt voor [!UICONTROL IP Obfuscation] en niet door de  [!UICONTROL IP Obfuscation] instellen. |
-| [!UICONTROL Network Lookup] | Laat netwerkraadplegingen voor de geselecteerde opties toe, die op het bezoekerIP adres worden gebaseerd. De raadpleging van het netwerk vereist u om te omvatten [`Environment`](../edge/data-collection/automatic-information.md#environment) gebiedsgroep in uw configuratie van SDK van het Web. <br> Beschikbare opties: <ul><li>Vervoerder</li><li>Domein</li><li>ISP</li></ul>Gebruik deze opties om meer informatie aan andere diensten over het specifieke netwerk te verstrekken waar de verzoeken voortvloeiden. |
+| [!UICONTROL Geo Lookup] | Hiermee schakelt u geolocatiezoekopdrachten voor de geselecteerde opties in op basis van het IP-adres van de bezoeker. Beschikbare opties zijn: <ul><li>**Land**: Populaten `xdm.placeContext.geo.countryCode`</li><li>**Postcode**: Populaten `xdm.placeContext.geo.postalCode`</li><li>**Staat/provincie**: Populaten `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: Populaten `xdm.placeContext.geo.dmaID`</li><li>**Plaats**: Populaten `xdm.placeContext.geo.city`</li><li>**Breedte**: Populaten `xdm.placeContext.geo._schema.latitude`</li><li>**Lengtegraad**: Populaten `xdm.placeContext.geo._schema.longitude`</li></ul>Selecteren **[!UICONTROL City]**, **[!UICONTROL Latitude]**, of **[!UICONTROL Longitude]** biedt coördinaten tot twee decimale punten, ongeacht welke andere opties zijn geselecteerd. Dit wordt beschouwd als granulariteit op stadsniveau.<br> <br>Als u geen optie selecteert, worden geolocatieopzoekingen uitgeschakeld. Geolocatie gebeurt voor [!UICONTROL IP Obfuscation], hetgeen betekent dat de [!UICONTROL IP Obfuscation] instellen. |
+| [!UICONTROL Network Lookup] | Laat netwerkraadplegingen voor de geselecteerde opties toe die op het IP van de bezoeker adres worden gebaseerd. Beschikbare opties zijn: <ul><li>**Vervoerder**: Populaten `xdm.environment.carrier`</li><li>**Domein**: Populaten `xdm.environment.domain`</li><li>**ISP**: Populaten `xdm.environment.ISP`</li></ul> |
+
+Als u een van de bovenstaande velden inschakelt voor gegevensverzameling, moet u ervoor zorgen dat u de [`context`](../edge/data-collection/automatic-information.md) array, eigenschap wanneer [het vormen van de SDK van het Web](../edge/fundamentals/configuring-the-sdk.md).
+
+De opzoekvelden van Geolocatie gebruiken de `context` arraytekenreeks `"placeContext"`, terwijl de gebieden van de netwerkraadpleging gebruiken `context` arraytekenreeks `"environment"`.
+
+Bovendien, zorg ervoor dat elk gewenst XDM gebied in uw schema bestaat. Als dit niet het geval is, kunt u de meegeleverde Adobe toevoegen `Environment Details` veldgroep aan uw schema.
 
 ### Opzoeken van apparaat configureren {#geolocation-device-lookup}
 
-De **[!UICONTROL Device Lookup]** Met instellingen kunt u het granulariteitsniveau selecteren van de apparaatspecifieke informatie die u wilt verzamelen.
+De **[!UICONTROL Device Lookup]** Met instellingen kunt u apparaatspecifieke informatie selecteren die u wilt verzamelen.
 
 Breid uit **[!UICONTROL Device Lookup]** om de hieronder beschreven instellingen te configureren.
 
@@ -65,9 +71,15 @@ Breid uit **[!UICONTROL Device Lookup]** om de hieronder beschreven instellingen
 
 | Instelling | Beschrijving |
 | --- | --- |
-| **[!UICONTROL Keep user agent and client hints headers]** | Selecteer deze optie als u alleen de gegevens wilt verzamelen die in de userAgent-tekenreeks zijn opgeslagen. Dit is de standaardinstelling. |
-| **[!UICONTROL Use device lookup to collect the following information]** | Selecteer deze optie als u een of meer van de volgende apparaatspecifieke informatie wilt verzamelen: <ul><li>**[!UICONTROL Device]** informatie:<ul><li>Apparaatfabrikant</li><li>Apparaatmodel</li><li>Marketingnaam</li></ul></li><li>**[!UICONTROL Hardware]** informatie: <ul><li>Apparaattype</li><li>Weergavehoogte</li><li>Weergavebreedte</li><li>Kleurdiepte weergeven</li></ul></li><li>**[!UICONTROL Browser]** informatie: <ul><li>Browserleverancier</li><li>Browsernaam</li><li>Browserversie</li></ul></li><li>**[!UICONTROL Operating system]** informatie: <ul><li>OS-leverancier</li><li>Naam besturingssysteem</li><li>Besturingssysteemversie</li></ul></li></ul> <br>  Opzoekgegevens van het apparaat kunnen niet samen met de gebruikersagent en de clienthints worden verzameld. Als u ervoor kiest apparaatinformatie te verzamelen, wordt de verzameling van gebruikersagent- en clienthints uitgeschakeld en andersom. Alle gegevens van de apparatenraadpleging worden opgeslagen in `xdm:device` veldgroep. |
-| **[!UICONTROL Do not collect any device information]** | Selecteer deze optie als u geen opzoekgegevens wilt verzamelen. Er worden geen apparaat-, hardware-, browser- of besturingssysteemgegevens verzameld, waaronder geen kopteksten voor gebruikersagent- of clienthints. |
+| **[!UICONTROL Keep user agent and client hints headers]** | Selecteer deze optie als u alleen de gegevens wilt verzamelen die in de userAgent-tekenreeks zijn opgeslagen. Deze instelling is standaard geselecteerd. Populaten `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL Use device lookup to collect the following information]** | Selecteer deze optie als u een of meer van de volgende apparaatspecifieke informatie wilt verzamelen: <ul><li>**[!UICONTROL Device]** informatie:<ul><li>**Apparaatfabrikant**: Populaten `xdm.device.manufacturer`</li><li>**Apparaatmodel**: Populaten `xdm.device.modelNumber`</li><li>**Marketingnaam**: Populaten `xdm.device.model`</li></ul></li><li>**[!UICONTROL Hardware]** informatie: <ul><li>**Type hardware**: Populaten `xdm.device.type`</li><li>**Weergavehoogte**: Populaten `xdm.device.screenHeight`</li><li>**Weergavebreedte**: Populaten `xdm.device.screenWidth`</li><li>**Kleurdiepte weergeven**: Populaten `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Browser]** informatie: <ul><li>**Browserleverancier**: Populaten `xdm.environment.browserDetails.vendor`</li><li>**Browsernaam**: Populaten `xdm.environment.browserDetails.name`</li><li>**Browserversie**: Populaten `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Operating system]** informatie: <ul><li>**OS-leverancier**: Populaten `xdm.environment.operatingSystemVendor`</li><li>**Naam besturingssysteem**: Populaten `xdm.environment.operatingSystem`</li><li>**Versie besturingssysteem**: Populaten `xdm.environment.operatingSystemVersion`</li></ul></li></ul>Opzoekgegevens van het apparaat kunnen niet samen met de gebruikersagent en de clienthints worden verzameld. Als u ervoor kiest apparaatinformatie te verzamelen, wordt de verzameling van gebruikersagent- en clienthints uitgeschakeld en andersom. |
+| **[!UICONTROL Do not collect any device information]** | Selecteer deze optie als u geen informatie over het zoeken van apparaten wilt verzamelen. Er worden geen apparaat-, hardware-, browser-, besturingssysteem-, gebruikersagent- of clientgegevens verzameld. |
+
+Als u een van de bovenstaande velden inschakelt voor gegevensverzameling, moet u ervoor zorgen dat u de [`context`](../edge/data-collection/automatic-information.md) array, eigenschap wanneer [het vormen van de SDK van het Web](../edge/fundamentals/configuring-the-sdk.md).
+
+Apparaat- en hardwaregegevens gebruiken de `context` arraytekenreeks `"device"`, terwijl de browser en besturingssysteeminformatie de `context` arraytekenreeks `"environment"`.
+
+Bovendien, zorg ervoor dat elk gewenst XDM gebied in uw schema bestaat. Als dit niet het geval is, kunt u de meegeleverde Adobe toevoegen `Environment Details` veldgroep aan uw schema.
 
 ### Geavanceerde opties configureren {#@advanced-options}
 
