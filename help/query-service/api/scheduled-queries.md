@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Planningeindpunt
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ GET /schedules?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
 
-**Parameters query**
+**Query-parameters**
 
 Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van geplande query&#39;s. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle geplande vragen terugwinnen beschikbaar voor uw organisatie.
 
@@ -40,7 +40,7 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 | --------- | ----------- |
 | `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld: `start=2` Hiermee wordt een lijst geretourneerd die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als geen begindatum wordt gespecificeerd, zal de API vraag eerst de oudste gecreeerde geplande vraag terugkeren, dan zal blijven van recentere resultaten een lijst maken.<br> Met ISO-tijdstempels kunt u de datum en tijd korter maken. De basis ISO-tijdstempels hebben de notatie: `2020-09-07` om de datum 7 september 2020 uit te drukken. Een complexer voorbeeld zou worden geschreven zoals `2022-11-05T08:15:30-05:00` en komt overeen met 5 november 2022, 8:15:30 uur &#39;s ochtends, Amerikaanse Eastern Standard Time. Een tijdzone kan worden opgegeven met een UTC-verschuiving en wordt aangeduid met het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`). Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
 | `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `templateId`, en `userId`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), en `==` (gelijk aan). Bijvoorbeeld: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert alle geplande query&#39;s waarbij de gebruikersnaam is opgegeven. |
 
 **Verzoek**
@@ -160,7 +160,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | De naam van de database waarvoor u een geplande query maakt. |
 | `query.sql` | De SQL-query die u wilt maken. |
 | `query.name` | De naam van de geplande query. |
-| `schedule.schedule` | Het uitsnijdschema voor de query. Lees voor meer informatie over de cron-planningen de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br>U kunt ook de volgende steno-expressies gebruiken:<ul><li>`@once`: De query wordt maar één keer uitgevoerd.</li><li>`@hourly`: De vraag loopt elk uur aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *`.</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *`.</li><li>`@weekly`: De query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0`.</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *`.</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `1 0 0 1 1 *`. |
+| `schedule.schedule` | Het uitsnijdschema voor de query. Lees voor meer informatie over de cron-schema&#39;s de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br>U kunt ook de volgende steno-expressies gebruiken:<ul><li>`@once`: De query wordt slechts eenmaal uitgevoerd.</li><li>`@hourly`: De query wordt elk uur uitgevoerd aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *`.</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *`.</li><li>`@weekly`: De query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0`.</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *`.</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `1 0 0 1 1 *`. |
 | `schedule.startDate` | De begindatum voor uw geplande query, geschreven als een UTC-tijdstempel. |
 
 **Antwoord**
@@ -364,7 +364,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Geplande queryplanning bijwerken
 
-U kunt het bijsnijdschema van de geplande query bijwerken door het dialoogvenster `path` eigenschap aan `/schedule/schedule` in de verzoekende instantie. Lees voor meer informatie over de cron-planningen de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
+U kunt het bijsnijdschema van de geplande query bijwerken door het dialoogvenster `path` eigenschap aan `/schedule/schedule` in de verzoekende instantie. Lees voor meer informatie over de cron-schema&#39;s de [expressie-indeling voor uitsnijden](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
 
 **API-indeling**
 

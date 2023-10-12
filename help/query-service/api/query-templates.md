@@ -2,11 +2,11 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;vraagmalplaatjes;api gids;malplaatjes;de dienst van de Vraag;
 solution: Experience Platform
 title: API-eindpunt voor querysjablonen
-description: Deze gids specificeert de diverse vraag API van het vraagmalplaatje u kunt maken gebruikend de Dienst API van de Vraag.
+description: Deze gids specificeert de diverse vraag API van het vraagmalplaatje u het gebruiken van de Dienst API van de Vraag kunt maken.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Voorbeeld-API-aanroepen
 
-In de volgende secties worden de verschillende API-aanroepen beschreven die u kunt maken met de [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+De volgende secties beschrijven de diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 Zie de [UI-query sjabloondocumentatie](../ui/query-templates.md) voor informatie over het creëren van malplaatjes door de UI van het Experience Platform.
 
@@ -34,7 +34,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
 
-**Parameters query**
+**Query-parameters**
 
 Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van querysjablonen. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle vraagmalplaatjes beschikbaar voor uw organisatie terugwinnen.
 
@@ -42,7 +42,7 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 | --------- | ----------- |
 | `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld: `start=2` Hiermee wordt een lijst geretourneerd die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als er geen begindatum is opgegeven, retourneert de API-aanroep eerst de oudste gemaakte sjablonen en worden de meest recente resultaten weergegeven.<br> Met ISO-tijdstempels kunt u de datum en tijd korter maken. De basis ISO-tijdstempels hebben de notatie: `2020-09-07` om de datum 7 september 2020 uit te drukken. Een complexer voorbeeld zou worden geschreven zoals `2022-11-05T08:15:30-05:00` en komt overeen met 5 november 2022, 8:15:30 uur &#39;s ochtends, Amerikaanse Eastern Standard Time. Een tijdzone kan worden opgegeven met een UTC-verschuiving en wordt aangeduid met het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`). Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
 | `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `name` en `userId`. De enige ondersteunde operator is `==` (gelijk aan). Bijvoorbeeld: `name==my_template` retourneert alle querysjablonen met de naam `my_template`. |
 
 **Verzoek**

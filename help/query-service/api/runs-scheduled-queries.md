@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Het geplande Eindpunt van de Vraag loopt API
 description: De volgende secties lopen door de diverse API vraag u voor het runnen van geplande vragen met de Dienst API van de Vraag kunt maken.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 | `{SCHEDULE_ID}` | De `id` De waarde van de geplande query die u wilt ophalen. |
 | `{QUERY_PARAMETERS}` | (*Optioneel*) Parameters die aan het verzoekweg worden toegevoegd die de resultaten vormen die in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
 
-**Parameters query**
+**Query-parameters**
 
 Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van uitvoeringen voor een opgegeven geplande query. Al deze parameters zijn optioneel. Het maken van een vraag aan dit eindpunt zonder parameters zal alle looppas beschikbaar voor de gespecificeerde geplande vraag terugwinnen.
 
@@ -41,7 +41,7 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 | --------- | ----------- |
 | `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. Bijvoorbeeld: `orderby=created` sorteert de resultaten in oplopende volgorde. Een `-` vóór het maken (`orderby=-created`) sorteert objecten in aflopende volgorde. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld: `start=2` Hiermee wordt een lijst geretourneerd die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als er geen begindatum is opgegeven, retourneert de API-aanroep eerst de oudste uitvoering en worden de meest recente resultaten weergegeven<br> Met ISO-tijdstempels kunt u de datum en tijd korter maken. De basis ISO-tijdstempels hebben de notatie: `2020-09-07` om de datum 7 september 2020 uit te drukken. Een complexer voorbeeld zou worden geschreven zoals `2022-11-05T08:15:30-05:00` en komt overeen met 5 november 2022, 8:15:30 uur &#39;s ochtends, Amerikaanse Eastern Standard Time. Een tijdzone kan worden opgegeven met een UTC-verschuiving en wordt aangeduid met het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`). Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
 | `property` | Filterresultaten op basis van velden. De filters **moet** zijn aan HTML ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `state`, en `externalTrigger`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), en  `==` (gelijk aan), en `!=` (niet gelijk aan). Bijvoorbeeld: `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retourneert alle handmatig gemaakte, geslaagd en na 20 april 2019 gemaakte uitvoeringen. |
 
 **Verzoek**
