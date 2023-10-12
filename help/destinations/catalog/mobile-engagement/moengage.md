@@ -2,7 +2,7 @@
 title: Verbinding maken
 description: Moconnect is een platform voor klantbetrokkenheid dat klantgerichte interacties tussen consumenten en merken in real time mogelijk maakt.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 3d5a3ce18e7f1c0e06246faf8ec4403871e1a1a9
+source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Met Adobe is de integratie heel eenvoudig en intuïtief. Neem eenvoudig om het e
 
 >[!IMPORTANT]
 >
->Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door *Moskou* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
+>Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en gehandhaafd door *Moskou* team. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *`https://help.moengage.com/hc/en-us`.*
 
 ## Gebruiksscenario’s {#use-cases}
 
