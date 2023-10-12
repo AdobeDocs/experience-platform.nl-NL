@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3594'
+source-wordcount: '3635'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Boven aan de pagina vindt u opties voor het toevoegen van alle soorten publiek a
 
 Toggling **[!UICONTROL Schedule all audiences]** zal geplande segmentatie toelaten. Meer informatie over geplande segmentatie vindt u in de [geplande segmentatiesectie van deze gebruikershandleiding](#scheduled-segmentation).
 
-Selecteren **[!UICONTROL Import audience]** Hiermee kunt u een publiek importeren dat extern wordt gegenereerd. Lees de sectie over voor meer informatie over het importeren van soorten publiek [een publiek importeren in de gebruikershandleiding](#import-audience).
+Selecteren **[!UICONTROL Import audience]** Hiermee kunt u een extern gegenereerd publiek importeren. Meer informatie over het importeren van soorten publiek vindt u in de sectie over [een publiek importeren in de gebruikershandleiding](#import-audience).
 
 Selecteren **[!UICONTROL Create audience]** Hiermee kunt u een publiek maken. Meer informatie over het maken van soorten publiek vindt u in de sectie [een publiek maken in de gebruikershandleiding](#create-audience).
 
@@ -350,6 +350,10 @@ De pagina **[!UICONTROL Review]** wordt weergegeven. U kunt de details van uw on
 ![De [!UICONTROL Review] wordt weergegeven, met daarin details over het nieuwe, extern gegenereerde publiek.](../images/ui/overview/import-audience-review-details.png)
 
 Nadat u hebt bevestigd dat de details juist zijn, selecteert u **[!UICONTROL Finish]** om uw extern gegenereerde publiek te importeren in Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+>Als uw extern gegenereerde publiek gevoelige en/of zorggerelateerde informatie bevat, kunt u **moet** pas de noodzakelijke etiketten van het gegevensgebruik toe alvorens het op om het even welke bestemming te activeren. Voor meer informatie over het toepassen van labels voor gegevensgebruik leest u de documentatie op [beheren, labels](../../access-control/abac/ui/labels.md).
 
 ## Geplande segmentatie {#scheduled-segmentation}
 
