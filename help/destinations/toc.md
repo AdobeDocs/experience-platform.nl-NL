@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1170'
 ht-degree: 2%
 
 ---
@@ -158,6 +158,7 @@ ht-degree: 2%
       * [Koppeling met vliegtuigcodes](./catalog/mobile-engagement/airship-tags.md)
       * [Braze verbinding](./catalog/mobile-engagement/braze.md)
       * [Lijnverbinding](./catalog/mobile-engagement/line.md)
+      * [Verbinding maken](./catalog/mobile-engagement/moengage.md)
    * Aanpassingsdoelen {#personalization}
       * [Overzicht van personalisatiedoelen](./catalog/personalization/overview.md)
       * [Adobe Commerce-verbinding](./catalog/personalization/adobe-commerce.md)
