@@ -2,9 +2,9 @@
 title: Aanbevolen werkwijzen voor gegevensbeheerlicenties
 description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2287'
 ht-degree: 1%
 
 ---
@@ -94,6 +94,12 @@ U kunt een aantal tools gebruiken om binnen uw gebruiksrechten voor licenties te
 * [Inktfilters](#ingestion-filters)
 * [Profielenarchief](#profile-service)
 
+### Identiteitsservice en adresseerbaar publiek {#identity-service}
+
+Identiteitsgrafieken tellen niet voor uw totale adresseerbare publieksrecht omdat het adresseerbare publiek naar uw totale aantal klantenprofielen verwijst.
+
+Limieten voor identiteitsgrafieken kunnen echter gevolgen hebben voor het adresseerbare publiek als gevolg van het splitsen van identiteiten. Als bijvoorbeeld de oudste ECID uit de grafiek wordt verwijderd, blijft ECID bestaan in Real-Time klantprofiel als een pseudoniem profiel. U kunt instellen [Verlopen van Pseudoniem-profielgegevens](../../profile/pseudonymous-profiles.md) om dit gedrag te omzeilen. Lees voor meer informatie de [handleidingen voor identiteitsservicegegevens](../../identity-service/guardrails.md).
+
 ### Inktfilters {#ingestion-filters}
 
 Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw gebruik en kunt u alle gebeurtenissen die niet vereist zijn, filteren.
@@ -104,7 +110,7 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 | Adobe Analytics Data Prep | U kunt [!DNL Data Prep] functionaliteit wanneer het creëren van een bron van de Analyse verbinding om uit gegevens uit te filtreren die niet voor uw gebruiksgevallen wordt vereist. Doorheen [!DNL Data Prep], kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om Platform te laten weten of gegevens naar verwachting worden gepubliceerd in het profiel of alleen in het dialoogvenster [!DNL data lake]. Zie de handleiding op [een verbinding met een bron voor Analytics maken](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie . |
 | Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u [!DNL Addressable Audience] en [!DNL Profile Richness] toeslagrechten. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de handleiding op [het toelaten van en het onbruikbaar maken van datasets voor Profiel](../../catalog/datasets/enable-for-profile.md) voor meer informatie . |
 | Web SDK en Mobile SDK-gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch en gegevens worden verzameld die uitdrukkelijk door uw ontwikkelaar worden verzameld. Om de naleving van de licentie beter te beheren, kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. Zie de handleiding op [basisbeginselen van SDK configureren](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) voor meer informatie . |
-| Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie op [gebeurtenissen en omstandigheden](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) voor meer informatie . |
+| Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie op [gebeurtenissen en omstandigheden](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if) voor meer informatie. |
 | Gegevens filteren op bronniveau | U kunt logische en vergelijkingsexploitanten gebruiken om rij-vlakke gegevens van uw bronnen te filtreren alvorens een verbinding tot stand te brengen en gegevens aan Experience Platform op te nemen. Lees voor meer informatie de handleiding op [het filtreren van rij-vlakke gegevens voor een bron gebruikend [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}

@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1074'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ Neem contact op met het accountteam van uw Adobe om een wijziging in het type id
 
 Als deze functie eenmaal beschikbaar is, worden grafieken die de limiet van 50 identiteiten overschrijden, verkleind tot maximaal 50 identiteiten. Voor Real-Time CDP B2C Edition kan dit resulteren in een minimale toename van het aantal profielen dat in aanmerking komt voor een publiek, aangezien deze profielen voorheen werden genegeerd door Segmentering en Activering.
 
-#### Klantprofiel in realtime: instellen van een pseudoniem profiel
+#### Klantprofiel in realtime: impact op adresseerbare doelgroepen
 
 Verwijderen gebeurt alleen met gegevens in de Identiteitsservice en niet in realtime klantprofiel.
 

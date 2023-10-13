@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2268'
 ht-degree: 2%
 
 ---
@@ -191,7 +191,7 @@ De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht v
 | Functie | Beschrijving |
 | --- | --- |
 | Verbeteringen in de gebruikersinterface van Identity Service | Gebruik het verbeterde gereedschap voor het maken van aangepaste naamruimten in de gebruikersinterface van het Experience Platform om uw aangepaste naamruimten en de bijbehorende identiteitstypen beter te beheren. De verbeterde interface van de Identiteitsdienst voorziet u van: <ul><li>Contextuele Ervaring: Visuele aanwijzingen, helderheid, en context aan wat een identiteitsnamespace is en identiteitstypes zijn.</li><li>Nauwkeurigheid: betere foutafhandeling, zonder dubbele identiteitsnamen.</li><li>Detectie: toegang tot documentatie vanuit een productdialoogvenster.</li></ul> Lees voor meer informatie de handleiding op [aangepaste naamruimten maken](../../identity-service/namespaces.md#create-namespaces). |
-| Wijzigingen in limieten van identiteitsgrafieken | De limiet voor identiteitsgrafieken is gewijzigd van 150 identiteiten in 50 identiteiten. Wanneer een nieuwe identiteit wordt opgenomen in een volledige grafiek, wordt de oudste identiteit op basis van de tijdstempel en het identiteitstype van de inname verwijderd. Identiteitstypen van cookies krijgen prioriteit voor verwijdering. Neem contact op met het accountteam van de Adobe om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat: <ul><li>een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.</li><li>een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.</li></ul> Deze aanvragen worden handmatig verwerkt door Adobe-engineering. Lees voor meer informatie de [handleidingen voor identiteitsservicegegevens](../../identity-service/guardrails.md). |
+| Wijzigingen in limieten van identiteitsgrafieken | De limiet voor identiteitsgrafieken is gewijzigd van 150 identiteiten in 50 identiteiten. Wanneer een nieuwe identiteit wordt opgenomen in een volledige grafiek, wordt de oudste identiteit op basis van de tijdstempel en het identiteitstype van de inname verwijderd. Identiteitstypen van cookies krijgen prioriteit voor verwijdering. Neem contact op met het accountteam van de Adobe om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat: <ul><li>een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.</li><li>een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.</li></ul> Deze aanvragen worden handmatig verwerkt door Adobe-engineering. Lees voor meer informatie de [handleidingen voor identiteitsservicegegevens](../../identity-service/guardrails.md) en handleiding [best practices op het gebied van licentierechten voor gegevensbeheer](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: b6a79952d616a6f8e6ea4b2341c24d74c482c4b8
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ In Adobe Experience Platform kunt u vervaltijden voor Pseudoniem-profielen confi
 Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de volgende voorwaarden voldoet:
 
 - De identiteitsnaamruimten van het verbonden profiel komen overeen met de naamruimte die de klant heeft opgegeven als een pseudoniem of onbekend naamgebied.
-   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID`, of `AAID`. Het opgeslagen profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld wordt een vast profiel wel **niet** beschikken over een e-mail- of CRM-identiteit.
+   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID`, of `AAID`. Het gekoppelde profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld wordt een vast profiel wel **niet** beschikken over een e-mail- of CRM-identiteit.
 - Er heeft zich geen activiteit voorgedaan in een door de gebruiker gedefinieerde hoeveelheid tijd. De activiteit wordt bepaald of door om het even welke Gebeurtenissen van de Ervaring die of klant-in werking gestelde updates aan de profielattributen worden opgenomen.
    - Bijvoorbeeld, wordt een nieuwe gebeurtenis van de paginamening of de update van het paginakenmerk beschouwd als een activiteit. Er wordt echter een niet-door de gebruiker geïnitieerde update voor het lidmaatschap van het publiek uitgevoerd **niet** beschouwd als een activiteit. Op dit moment is het bijhouden van gegevens op profielniveau gebaseerd op de tijd van de gebeurtenis voor Experience Events en de tijd van inname voor profielkenmerken om de gegevensvervaldatum te berekenen.
 
 ## Toegang {#access}
 
-De vervaldatum van gegevens van het Pseudoniem Profiel kan niet door de Platform UI of APIs worden gevormd. In plaats daarvan moet u contact opnemen met ondersteuning om deze functie in te schakelen. Neem de volgende gegevens op wanneer u contact opneemt met de ondersteuningsafdeling:
+De vervaldatum van gegevens van het Pseudoniem Profiel kan niet door Platform UI of APIs worden gevormd. In plaats daarvan moet u contact opnemen met ondersteuning om deze functie in te schakelen. Neem de volgende gegevens op wanneer u contact opneemt met de ondersteuningsafdeling:
 
 - De naamruimten die in overweging moeten worden genomen voor het Pseudoniem-profiel, worden verwijderd.
    - Bijvoorbeeld: `ECID` alleen, `AAID` alleen, of een combinatie van `ECID` en `AAID`.
@@ -64,7 +64,7 @@ De vervaldatum van Pseudoniem Profielgegevens en Experience Event-gegevens kunne
 
 U moet **altijd** De gegevensvervaldatum van de de Ervaring van de opstelling Gebeurtenis in uw datasets, die op uw behoeften wordt gebaseerd om gegevens over uw bekende klanten te behouden. Als de geldigheids-gebeurtenisgegevensvervaldatum is ingesteld, kunt u de gegevensvervaldatum van het Pseudoniem-profiel gebruiken om automatisch Pseudoniem-profielen te verwijderen. Doorgaans is de vervalperiode van de gegevens voor Pseudoniem Profielen korter dan de vervalperiode van de gegevens voor Experience Events.
 
-Voor een typisch geval van gebruik, kunt u de gegevensvervaldatum van de Gebeurtenis van de Ervaring plaatsen gebaseerd op de waarden van uw bekende gebruikersgegevens en u kunt uw Pseudoniem gegevensvervaldatum van het Profiel aan een veel kortere duur plaatsen om de invloed van Pseudoniem profielen op uw Platform vergunningsnaleving te beperken.
+In een typisch geval kunt u de gegevensvervaldatum van de Experience-gebeurtenis instellen op basis van de waarden van uw bekende gebruikersgegevens en u kunt de gegevensvervaldatum van het Pseudoniem-profiel instellen op een veel kortere duur om de invloed van Pseudoniem-profielen op de naleving van de Platform-licentie te beperken.
 
 ### Welke gebruikers zouden de vervaldatum van Pseudoniem profielgegevens moeten gebruiken?
 
@@ -80,3 +80,8 @@ Voor een typisch geval van gebruik, kunt u de gegevensvervaldatum van de Gebeurt
 - Dit is **niet** een eenmalige opschoningstaak. De vervaldatum van Pseudoniem-profielgegevens wordt voortdurend één keer per dag uitgevoerd en er worden profielen verwijderd die overeenkomen met de invoer van de klant.
 - **Alles** De vervaldatum van de Pseudoniem-profielgegevens heeft invloed op profielen die zijn gedefinieerd als Pseudoniem. Het doet het **niet** Het maakt niet uit of het profiel alleen Experience Event is of alleen profielkenmerken bevat.
 - Deze opruiming zal **alleen** komt voor in Profiel. De identiteitsdienst kan de verwijderde identiteiten in de grafiek na de opruiming blijven weergeven in gevallen waarin het profiel twee of meer geassocieerde pseudoniem-identiteiten heeft (zoals `AAID` en `ECID`). Deze discrepantie zal in de nabije toekomst worden aangepakt.
+
+### Hoe wisselt de vervaldatum van Pseudoniem-profielgegevens met de instructies voor de identiteitsdienstgegevens?
+
+- De identiteitsdienst [&quot;first-in, first-out&quot;-verwijderingssysteem](../identity-service/guardrails.md) ECID&#39;s uit de identiteitsgrafiek kunnen verwijderen. Deze zijn opgeslagen in Identity Service.
+- Als dit verwijderingsgedrag ertoe leidt dat een ECID-profiel wordt opgeslagen in het Real-Time Klantprofiel (Profielarchief), verwijdert de vervaldatum van de Pseudoniem-profielgegevens dit profiel uit de profielopslag.
