@@ -1,9 +1,10 @@
 ---
 title: Een Azure Key Vault configureren
 description: Leer hoe u een nieuwe bedrijfsaccount maakt met Azure of een bestaande bedrijfsaccount gebruikt en de Key Vault maakt.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -41,6 +42,12 @@ Hierna doorloopt u de workflow voor het maken van de Key Vault en configureert u
 Zodra u bij **[!DNL Review + create]** U kunt de details van de Key Vault controleren tijdens de validatie. Selecteer **[!DNL Create]** om het proces te voltooien.
 
 ![Microsoft Azure Key vaults Review en creeer pagina met Create gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## Toegang configureren {#configure-access}
+
+Schakel vervolgens Azure op rol gebaseerd toegangsbeheer voor uw sleutelkluis in. Selecteren **[!DNL Access configuration]** in de [!DNL Settings] van de linkernavigatie en selecteer vervolgens **[!DNL Azure role-based access control]** om de instelling in te schakelen. Deze stap is van essentieel belang omdat de CMK-app later moet worden gekoppeld aan een Azure-rol. Het toewijzen van een rol wordt gedocumenteerd in zowel de [API](./api-set-up.md#assign-to-role) en [UI](./ui-set-up.md#assign-to-role) workflows.
+
+![De [!DNL Microsoft Azure] dashboard met [!DNL Access configuration] en [!DNL Azure role-based access control] gemarkeerd.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## Netwerkopties configureren {#configure-network-options}
 
