@@ -2,18 +2,14 @@
 title: Kenmerken voor externe bronsysteemcontrole Gegevenstype
 description: Dit document biedt een overzicht van het gegevenstype XDM (External Source System Audit Attributes Experience Data Model).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 1%
+source-wordcount: '179'
+ht-degree: 2%
 
 ---
 
 # [!UICONTROL External Source System Audit Attributes] gegevenstype
-
->[!NOTE]
->
->Dit gegevenstype is alleen beschikbaar voor organisaties die toegang hebben tot de B2B-editie van Adobe Real-time Customer Data Platform.
 
 [!UICONTROL External Source System Audit Attributes] is een standaardgegevenstype van de Gegevens van de Ervaring Model (XDM) dat controledetails over een extern bronsysteem vangt.
 

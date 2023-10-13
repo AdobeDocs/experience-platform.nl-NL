@@ -2,9 +2,9 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2475'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Als u het dialoogvenster [!DNL Meta Conversions API] de extensie, navigeert u na
 
 Als u de gewenste eigenschap hebt geselecteerd of gemaakt, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, dan selecteer **[!UICONTROL Catalog]** tab. Zoeken naar [!UICONTROL Meta Conversions API] kaart, dan selecteren **[!UICONTROL Install]**.
 
-![De [!UICONTROL Install] knop die wordt geselecteerd voor de [!UICONTROL Meta Conversions API] in de UI voor gegevensverzameling.](../../../images/extensions/server/meta/install.png)
+![De [!UICONTROL Install] optie die voor [!UICONTROL Meta Conversions API] in de UI voor gegevensverzameling.](../../../images/extensions/server/meta/install.png)
 
 In de configuratieweergave die wordt weergegeven, moet u de opdracht [!DNL Pixel] ID die u eerder hebt gekopieerd om de extensie te koppelen aan uw account. U kunt de id rechtstreeks in de invoer plakken, maar u kunt ook een gegevenselement gebruiken.
 
@@ -46,6 +46,30 @@ Selecteer **[!UICONTROL Save]**
 ![De [!DNL Pixel] ID verstrekt als gegevenselement in de mening van de uitbreidingsconfiguratie.](../../../images/extensions/server/meta/configure.png)
 
 De uitbreiding is geïnstalleerd en u kunt zijn mogelijkheden in uw gebeurtenis nu gebruiken die regels door:sturen.
+
+## Integratie met Meta Business Extension (MBE) {#mbe}
+
+Dankzij de integratie met MBE-uitbreiding (Meta Business Extensions) kunt u uw account snel verifiëren in uw zakelijke account van Meta. Dit vult dan automatisch uw [!UICONTROL Pixel ID] en de Meta Conversions API [!UICONTROL Access Token], waardoor de API voor metaconversies eenvoudiger kan worden geïnstalleerd en geconfigureerd.
+
+Er wordt een dialoogvenster weergegeven met de vraag of verificatie in MBE moet worden uitgevoerd wanneer u de installatie van de [!UICONTROL Meta Conversions API] extensie.
+
+![De [!UICONTROL Meta Conversions API Extension] markering installatiepagina [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+Een dialoogherinnering om in MBE voor authentiek te verklaren verschijnt ook in het snelle begin werkschema UI binnen gebeurtenis het door:sturen.
+
+![UI-markering voor snelstartworkflow [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integratie met Event Quality Match Score (EMQ) {#emq}
+
+Dankzij de integratie met de Event Quality Match Score (EMQ) kunt u de doeltreffendheid van uw implementatie eenvoudig bekijken door de EMQ-scores weer te geven. Deze integratie minimaliseert contextomschakeling en helpt u het succes van uw implementaties van Meta Conversions API verbeteren. Deze gebeurtenissencores worden weergegeven in het dialoogvenster [!UICONTROL Meta Conversions API extension] configuratiescherm.
+
+![De [!UICONTROL Meta Conversions API Extension] configuratiepagina markeren [!UICONTROL View EMQ Score].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integratie met LiveRamp (Alpha) {#alpha}
+
+De integratie met LiveRamp voegt nieuwe velden toe aan de regelconfiguratie van de Meta Conversions API, waardoor het voor klanten eenvoudiger wordt om met de Conversies-API van LiveRamp te integreren. Deze integratie elimineert de behoefte aan u om PII met uw partner of Meta direct te delen. Door de robuuste identiteitsgrafiek van LiveRamp wordt de opname van [!UICONTROL Partner ID (alpha)] kan de integratiekwaliteit verbeteren door de gebruikersovereenkomst te verhogen.
+
+![Meta zelfs door:sturen [!UICONTROL Rule] configuratiepagina markeren [!UICONTROL Partner Name (alpha)] en [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#rule}
 
