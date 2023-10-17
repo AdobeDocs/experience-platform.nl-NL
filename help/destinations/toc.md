@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1167'
 ht-degree: 2%
 
 ---
@@ -176,7 +176,6 @@ ht-degree: 2%
       * [Verbinding met Pega-profiel](./catalog/personalization/pega-profile.md)
    * Sociale bestemmingen{#social}
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
-      * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
       * [TikTok-verbinding](./catalog/social/tiktok.md)
