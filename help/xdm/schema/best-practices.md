@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '3035'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ De aanbevolen aanpak voor het ontwerpen van uw gegevensmodel voor gebruik in Exp
 
 1. Begrijp de zaken van het bedrijfsgebruik voor uw gegevens.
 1. Identificeer de primaire gegevensbronnen die in moeten worden gebracht [!DNL Platform] om die gebruiksgevallen aan te pakken.
-1. Identificeer om het even welke secundaire gegevensbronnen die ook van belang zouden kunnen zijn. Bijvoorbeeld, als momenteel slechts één bedrijfseenheid in uw organisatie in het uitvoeren van hun gegevens geinteresseerd is aan [!DNL Platform]Een vergelijkbare bedrijfseenheid zou ook geïnteresseerd kunnen zijn in het verstrekken van vergelijkbare gegevens in de toekomst. Het overwegen van deze secundaire bronnen helpt het gegevensmodel over uw volledige organisatie te standaardiseren.
+1. Identificeer om het even welke secundaire gegevensbronnen die ook van belang kunnen zijn. Bijvoorbeeld, als momenteel slechts één bedrijfseenheid in uw organisatie in het uitvoeren van hun gegevens geinteresseerd is [!DNL Platform]Een vergelijkbare bedrijfseenheid zou ook geïnteresseerd kunnen zijn in het verstrekken van vergelijkbare gegevens in de toekomst. Het overwegen van deze secundaire bronnen helpt het gegevensmodel over uw volledige organisatie te standaardiseren.
 1. Creeer een diagram van de entiteitverhouding op hoog niveau (ERD) voor de gegevensbronnen die zijn geïdentificeerd.
 1. Zet het ERD op hoog niveau om in een [!DNL Platform]-centric ERD (inclusief profielen, Experience Events en lookup entities).
 
@@ -57,7 +57,7 @@ Als u eenmaal een Europese beoordelingsruimte hebt gecreëerd om de essentiële 
 
 ### Overwegingen bij het sorteren van entiteiten
 
-In de volgende secties vindt u meer informatie over het sorteren van entiteiten in de bovenstaande categorieën.
+In de volgende secties vindt u meer informatie over het sorteren van uw entiteiten in de bovenstaande categorieën.
 
 #### Meerdere en onveranderlijke gegevens
 
@@ -77,7 +77,7 @@ Als een entiteit kenmerken bevat die betrekking hebben op een individuele klant,
 * Locatiegegevens zoals adressen en GPS-gegevens.
 * Contactgegevens zoals telefoonnummers en e-mailadressen.
 
-#### Gegevens bijhouden in de loop van de tijd
+#### Gegevens bijhouden over een bepaalde tijd
 
 Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der tijd veranderen, is het waarschijnlijk een gebeurtenisentiteit. Bijvoorbeeld, kan het toevoegen van productpunten aan een karretje als toe:voegen-aan-kartgebeurtenissen in worden gevolgd [!DNL Platform]:
 
@@ -103,7 +103,7 @@ Een bedrijf wil bijvoorbeeld alle &quot;Gold&quot; of &quot;Platinum&quot; leden
 
 Naast overwegingen met betrekking tot gevallen van segmentatiegebruik, moet u ook de activeringsgebruiksgevallen voor die soorten publiek herzien om extra relevante kenmerken te identificeren.
 
-Bijvoorbeeld, heeft een bedrijf een publiek gebouwd dat op de regel wordt gebaseerd dat `country = US`. Wanneer het bedrijf dat publiek vervolgens activeert naar bepaalde downstreamdoelen, wil het alle geëxporteerde profielen filteren op basis van de thuisstaat. Daarom `state` moet ook worden vastgelegd in de toepasselijke profielentiteit.
+Een bedrijf heeft bijvoorbeeld een publiek gemaakt op basis van de regel dat `country = US`. Wanneer het bedrijf dat publiek vervolgens activeert naar bepaalde downstreamdoelen, wil het alle geëxporteerde profielen filteren op basis van de thuisstaat. Daarom `state` moet ook worden vastgelegd in de toepasselijke profielentiteit.
 
 #### Geaggregeerde waarden
 
@@ -160,7 +160,7 @@ De eerste benadering zou zijn om een array van abonnementen als attributen binne
 * De volledige array moet worden aangepast telkens wanneer er wijzigingen optreden in een veld in de array.
 * Als verschillende gegevensbronnen of bedrijfseenheden gegevens in de array invoeren, wordt het lastig om de meest recente bijgewerkte array te synchroniseren via alle kanalen.
 
-#### Benadering 2: Gebeurtenisentiteiten gebruiken {#event-approach}
+#### Aanpak 2: Gebeurtenisentiteiten gebruiken {#event-approach}
 
 De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om abonnementen te vertegenwoordigen. Dit betekent dat u dezelfde abonnementsvelden als de eerste aanpak moet invoeren, plus een abonnement-id, een klant-id en een tijdstempel van wanneer de abonnementsgebeurtenis heeft plaatsgevonden.
 
@@ -174,7 +174,7 @@ De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om abonnemente
 **Cons**
 
 * De segmentatie wordt complexer voor het originele voorgenomen gebruiksgeval (identificerend de status van de recentste abonnementen van klanten). Het publiek heeft nu extra logica nodig om de laatste abonnementsgebeurtenis voor een klant te markeren om zijn status te controleren.
-* Gebeurtenissen hebben een hoger risico om automatisch te vervallen en uit de profielopslag te worden verwijderd. Zie de handleiding op [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) voor meer informatie .
+* Gebeurtenissen hebben een hoger risico om automatisch te vervallen en te worden gewist uit de profielopslag. Zie de handleiding op [Verlopen van gebeurtenissen beleven](../../profile/event-expirations.md) voor meer informatie .
 
 ## Schema&#39;s maken op basis van uw gecategoriseerde entiteiten
 
@@ -182,7 +182,7 @@ Nadat u de entiteiten hebt gesorteerd in profiel-, opzoekfunctie- en gebeurtenis
 
 <img src="../images/best-practices/erd-sorted.png" width="800"><br>
 
-De categorie waarop een entiteit is gesorteerd, moet de XDM-klasse bepalen waarop u het schema baseert. Herhalen:
+De categorie waarop een entiteit is gesorteerd, moet de XDM-klasse bepalen waarop u het schema baseert. Herhaal dit:
 
 * Profielentiteiten moeten de opdracht [!DNL XDM Individual Profile] klasse.
 * Gebeurtenisentiteiten moeten de [!DNL XDM ExperienceEvent] klasse.
@@ -204,30 +204,40 @@ Als u niet zeker bent of een bepaald gebied noodzakelijk is om in een schema te 
 
 ### Identiteitsvelden
 
-In Experience Platform, worden de gebieden XDM duidelijk als identiteiten gebruikt om informatie over individuele klanten te verbinden die uit veelvoudige gegevensbronnen komen. Hoewel een schema meerdere velden kan hebben die zijn gemarkeerd als identiteiten, moet één primaire identiteit worden gedefinieerd voordat het schema kan worden ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile]. Zie de sectie over [identiteitsvelden](./composition.md#identity) in de grondbeginselen van schemacompositie voor meer gedetailleerde informatie over het gebruiksgeval van deze gebieden.
+In Experience Platform, worden de gebieden XDM duidelijk als identiteiten gebruikt om informatie over individuele klanten te verbinden die uit veelvoudige gegevensbronnen komen. Hoewel een schema meerdere velden kan hebben die zijn gemarkeerd als identiteiten, moet één primaire identiteit worden gedefinieerd om het schema in te schakelen [!DNL Real-Time Customer Profile]. Zie de sectie over [identiteitsvelden](./composition.md#identity) in de grondbeginselen van schemacompositie voor meer gedetailleerde informatie over het gebruiksgeval van deze gebieden.
 
 Wanneer het ontwerpen van uw schema&#39;s, zullen om het even welke primaire sleutels in uw relationele gegevensbestandlijsten waarschijnlijk kandidaten voor primaire identiteiten zijn. Andere voorbeelden van toepasselijke identiteitsvelden zijn e-mailadressen van klanten, telefoonnummers, account-id&#39;s en [ECID](../../identity-service/ecid.md).
 
-### Adobe-toepassingsschemagroepen
+### Toepassingsschema-veldgroepen Adoben
 
-Experience Platform verstrekt verscheidene uit-van-de-doos groepen van het XDM- schemagebied voor het vangen van gegevens met betrekking tot de volgende toepassingen van Adobe:
+Experience Platform verstrekt verscheidene uit-van-de-doos groepen van het XDM- schemagebied voor het vangen van gegevens met betrekking tot de volgende toepassingen van de Adobe:
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-De [[!UICONTROL Adobe Analytics ExperienceEvent Template] veldgroep](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) staat u toe om in kaart te brengen [!DNL Analytics]-specific fields to your XDM schema&#39;s. Afhankelijk van de Adobe toepassingen u met werkt, zou u deze Adobe-Geleide gebiedsgroepen in uw schema&#39;s moeten gebruiken.
+Bijvoorbeeld de [[!UICONTROL Adobe Analytics ExperienceEvent Template] veldgroep](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) staat u toe om in kaart te brengen [!DNL Analytics]-specific fields to your XDM schema&#39;s. Afhankelijk van de toepassingen van de Adobe u met werkt, zou u deze Adobe-Geleide gebiedsgroepen in uw schema&#39;s moeten gebruiken.
 
 <img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
-Met behulp van de opties in het menu `identityMap` veld, dat een door het systeem gegenereerd, alleen-lezen object is dat standaardidentiteitswaarden voor een individuele klant toewijst.
+Toepassingsveldgroepen van de Adobe wijzen automatisch een primaire standaardidentiteit toe door het gebruik van `identityMap` veld, dat een door het systeem gegenereerd, alleen-lezen object is dat standaardidentiteitswaarden voor een individuele klant toewijst.
 
 Voor Adobe Analytics is ECID de primaire standaardidentiteit. Als een klant geen ECID-waarde opgeeft, wordt de primaire identiteit standaard ingesteld op AID.
 
 >[!IMPORTANT]
 >
->Wanneer u veldgroepen van Adobe-toepassingen gebruikt, mogen geen andere velden worden gemarkeerd als de primaire identiteit. Als er extra eigenschappen zijn die als identiteiten moeten worden gemerkt, moeten deze gebieden in plaats daarvan als secundaire identiteiten worden toegewezen.
+>Wanneer u veldgroepen van Adoben-toepassingen gebruikt, mogen geen andere velden worden gemarkeerd als de primaire identiteit. Als er extra eigenschappen zijn die als identiteiten moeten worden gemerkt, moeten deze gebieden in plaats daarvan als secundaire identiteiten worden toegewezen.
+
+## Velden voor gegevensvalidatie {#data-validation-fields}
+
+Als u wilt voorkomen dat overbodige gegevens in Platform worden opgenomen, kunt u het beste de criteria voor validatie op veldniveau definiëren wanneer u uw schema&#39;s maakt. Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in de Schema-editor om het dialoogvenster [!UICONTROL Field properties] zijbalk. Zie de documentatie op [type-specifieke veldeigenschappen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) voor een exacte beschrijving van de beschikbare velden.
+
+![De Schema-editor met de beperkingsvelden gemarkeerd in het dialoogvenster [!UICONTROL Field properties] zijbalk.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>Hieronder volgt een verzameling suggesties voor gegevensmodellering bij het maken van een schema:<br><ul><li>**Denk aan primaire identiteiten**: Voor Adobe-producten zoals web SDK, mobiele SDK, Adobe Analytics en Adobe Journey Optimizer wordt de opdracht `identityMap` Veld fungeert vaak als primaire identiteit. Wijs geen extra velden aan als primaire identiteiten voor dat schema.</li><li>**Vermijd gebruik `_id` als identiteit**: gebruik de `_id` veld in Experience Event schema&#39;s als een identiteit. Het is bedoeld voor een unieke registratie, niet voor gebruik als identiteit.</li><li>**Lengtebeperkingen instellen**: Het wordt aanbevolen minimale en maximale lengte in te stellen voor velden die zijn gemarkeerd als identiteiten. Deze beperkingen helpen consistentie en gegevenskwaliteit te behouden.</li><li>**Patronen toepassen op consistente waarden**: Als uw identiteitswaarden een specifiek patroon volgen, zou u moeten gebruiken [!UICONTROL Pattern] instellen om deze beperking af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.</li><li>**Limiet voor variabelen in analyseschema**: Een analyseschema moet normaal gesproken slechts één eVar hebben die als een identiteit is opgegeven. Als u meer dan één eVar als identiteit wilt gebruiken, moet u controleren of de gegevensstructuur kan worden geoptimaliseerd.</li><li>**De unieke kenmerken van een geselecteerd veld garanderen**: Het gekozen veld moet uniek zijn in vergelijking met de primaire identiteit in het schema. Als dit niet het geval is, merk het dan niet als een identiteit. Als bijvoorbeeld meerdere klanten hetzelfde e-mailadres kunnen opgeven, is die naamruimte geen geschikte identiteit. Dit beginsel is ook van toepassing op andere naamruimten zoals telefoonnummers.</li></ul>
 
 ## Volgende stappen
 

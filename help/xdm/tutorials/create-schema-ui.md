@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4378'
+source-wordcount: '4391'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ Voor elk veld is de volgende informatie vereist:
 * **[!UICONTROL Type]:** Het gegevenstype van het veld. Dit omvat fundamentele scalaire types en om het even welke gegevenstypes die in [!DNL Schema Registry]. Voorbeelden: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], enz.
 * **[!UICONTROL Description]:** Een optionele beschrijving van het veld moet maximaal 200 tekens bevatten.
 
-Het eerste veld voor de `loyaltyTier` object wordt een tekenreeks genoemd `id`, die de id van de huidige laag van het loyaliteitslid vertegenwoordigt. Identiteitskaart van de rij zal uniek voor elk loyaliteitlid zijn, aangezien dit bedrijf verschillende die puntdrempels van de loyaliteitsrij voor elke klant plaatst op verschillende factoren wordt gebaseerd. Het nieuwe veldtype instellen op &quot;[!UICONTROL String]&quot;, en de **[!UICONTROL Field properties]** wordt gevuld met verschillende opties voor het toepassen van beperkingen, zoals standaardwaarde, opmaak en maximumlengte.
+Het eerste veld voor de `loyaltyTier` object wordt een tekenreeks genoemd `id`, die de id van de huidige laag van het loyaliteitslid vertegenwoordigt. Identiteitskaart van de rij zal uniek voor elk loyaliteitlid zijn, aangezien dit bedrijf verschillende die puntdrempels van de loyaliteitsrij voor elke klant plaatst op verschillende factoren wordt gebaseerd. Het nieuwe veldtype instellen op &quot;[!UICONTROL String]&quot;, en de **[!UICONTROL Field properties]** wordt gevuld met verschillende opties voor het toepassen van beperkingen, zoals standaardwaarde, opmaak en maximumlengte. Zie de documentatie op [aanbevolen procedures voor velden voor gegevensvalidatie](../schema/best-practices.md#data-validation-fields) voor meer informatie.
 
 ![De Schema-editor met de waarden van de veldeigenschappen voor het nieuwe id-veld gemarkeerd.](../images/tutorials/create-schema/string-constraints.png)
 
