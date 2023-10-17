@@ -1,13 +1,13 @@
 ---
 title: Berekende kenmerken Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over het gebruik van berekende kenmerken.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
+source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
-
 
 # Veelgestelde vragen
 
@@ -25,9 +25,9 @@ Bij berekende kenmerken wordt rekening gehouden met de gegevenssets van Experien
 
 Alle XDM-velden in het schema Experience Event union kunnen worden gebruikt om berekende kenmerken te maken.
 
-## Wat vertegenwoordigt de &quot;laatste evaluatietijd&quot;?
+## Wat vertegenwoordigen &quot;laatste evaluatie&quot; en &quot;laatste evaluatiestatus&quot;?
 
-De laatste evaluatietijd betekent dat de gebeurtenissen **voorafgaand** naar die tijdstempel zijn doorgevoerd in de laatste geslaagde vernieuwing van het berekende kenmerk.
+Laatst geëvalueerd verwijst naar de tijdstempel tot welke gebeurtenissen worden beschouwd in de laatste succesvolle run. De laatste evaluatiestatus heeft betrekking op de vraag of de laatste evaluatieronde succesvol was.
 
 ## Kan ik de vernieuwingsfrequentie kiezen? Hoe wordt dit besloten?
 
@@ -65,9 +65,25 @@ Met berekende kenmerken wordt de profielverrijking bevorderd door de gebeurtenis
 
 ## Hoe vaak worden berekende kenmerken geëvalueerd? Heeft dit betrekking op het beoordelingsschema voor de doelgroep?
 
-De berekende attributen worden geëvalueerd in partijen onafhankelijk van het segmenteringsprogramma. Dit betekent dat, ongeacht het segmentatietype (batchsegmentatie of streamingsegmentatie), het berekende kenmerk volgens zijn eigen schema (per uur, per dag, per week of per maand) wordt geëvalueerd.
+Berekende kenmerken worden geëvalueerd in een **partij** frequentie die **onafhankelijk** aan het programma van uw publiek, bestemming, en reisevaluatie. Dit betekent dat, ongeacht het segmentatietype (batchsegmentatie of streamingsegmentatie), het berekende kenmerk volgens zijn eigen schema (per uur, per dag, per week of per maand) wordt geëvalueerd.
 
-Wanneer het publiek wordt geëvalueerd, gebruikt het de **nieuwste** waarde van het berekende beschikbare kenmerk.
+De eerste keer evaluatie van uw gegevens verwerkte attribuut gebeurt binnen 24 uren van zijn **creatie**. De daaropvolgende batchevaluaties vinden plaats op een uur-, dag-, week- of maandbasis, afhankelijk van de gedefinieerde terugzoekperiode.
+
+Als bijvoorbeeld een eerste evaluatie plaatsvindt op 9 oktober om 12.00 uur UTC, vinden de volgende evaluaties plaats op de volgende tijdstippen:
+
+- Volgende dag vernieuwen: 10 oktober om 12 uur UTC
+- Volgende week vernieuwen: 15 oktober om 12 uur UTC
+- Volgende maandelijkse vernieuwing: 12 uur UTC op 1 november
+
+>[!IMPORTANT]
+>
+>Dit is alleen het geval als de functie voor snel vernieuwen is ingeschakeld **niet** ingeschakeld. Als u wilt weten hoe de terugzoekperiode verandert wanneer fast refresh is ingeschakeld, leest u de [sectie voor snel vernieuwen](./overview.md#fast-refresh).
+
+Beide **wekelijks** en **maandelijks** de vernieuwingen vinden plaats aan het begin van de **kalenderweek** (de zondag van de nieuwe week) of het begin van de **kalendermaand** (de eerste van de nieuwe maand), in tegenstelling tot precies één week of één maand na de eerste evaluatiedatum.
+
+>[!NOTE]
+>
+>De berekende kenmerkwaarde is **niet** onmiddellijk vernieuwd in profiel na elke evaluatiereeks. Om ervoor te zorgen dat de bijgewerkte waarde zich in uw profielen bevindt, moet u rekening houden met een buffer van een paar uur tussen de evaluatietijd en het berekende kenmerkgebruik. Het berekende attribuut vernieuwt programma is **door het systeem bepaald** en **kan** worden gewijzigd. Neem voor meer informatie contact op met de klantenservice van de Adobe.
 
 ## Hoe beïnvloeden de gegevens verwerkte attributen met publiek geëvalueerd gebruikend het stromen segmentatie?
 

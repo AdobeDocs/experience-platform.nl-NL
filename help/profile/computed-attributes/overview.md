@@ -1,13 +1,13 @@
 ---
 title: Overzicht van berekende kenmerken
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 1%
+source-wordcount: '1140'
+ht-degree: 0%
 
 ---
-
 
 # Overzicht van berekende kenmerken
 
@@ -56,7 +56,7 @@ Met berekende kenmerken kunt u gebeurtenisaggregaten zelf definiëren door voora
 
 ### Termijnen voor opzoeken
 
-De berekende attributen worden berekend in partijen, die u uw aggregaten en het gebruiken van de recentste gebeurtenissen vers laten houden. Om deze bijna scenario&#39;s in real time te steunen, verfrist frequentie zich afhankelijk van de periode van de gebeurtenisraadpleging.
+De berekende attributen worden berekend in partijen, die u uw aggregaten en het gebruiken van de recentste gebeurtenissen vers laten houden. Om deze scenario&#39;s met minimale vertraging te steunen, verfrist frequentie afhankelijk van de periode van de gebeurtenisraadpleging varieert.
 
 De terugkijkperiode verwijst naar de hoeveelheid tijd die wanneer het samenvoegen van de Gebeurtenissen van de Ervaring voor het gegevens verwerkte attribuut wordt herzien. Deze periode kan in uren, dagen, weken, of maanden worden bepaald.
 
@@ -73,7 +73,9 @@ Als uw berekende kenmerk bijvoorbeeld een terugzoekperiode van de laatste 7 dage
 
 >[!NOTE]
 >
->Zowel weken als maanden worden beschouwd als **kalenderweken** en **kalendermaanden** bij gebruik in gebeurtenislookbacks. De kalenderweek begint op de **zondag** en eindigt op de **zaterdag** van de week.
+>Zowel weken als maanden worden beschouwd als **kalenderweken** en **kalendermaanden** bij gebruik in gebeurtenislookbacks. De kalenderweek begint op de **zondag** en eindigt op de **zaterdag** van de week. De kalendermaand begint op **first** van de maand en eindigt op de **laatste dag** van de maand.
+
+De terugzoekperiode voor berekende kenmerken is een **rollen** terugzoekperiode. Als bijvoorbeeld een eerste evaluatie plaatsvindt op 15 oktober om 12 uur &#39;s middags UTC, zou de terugzoekperiode van twee weken alle gebeurtenissen ophalen van 1 oktober tot 15 oktober, vernieuwen in één week op 22 oktober en vervolgens alle gebeurtenissen ophalen van 8 oktober tot 22 oktober.
 
 **Snel vernieuwen** {#fast-refresh}
 
