@@ -3,7 +3,7 @@ title: Identiteitsservice en realtime klantprofiel
 description: Meer informatie over de relatie tussen Identiteitsservice en Real-Time Klantprofiel
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -14,14 +14,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in Real-Time het Profiel van de Klant, lees de documentatie over [samenvoegbeleid en identiteitsstijgingen].
+>Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in Real-Time het Profiel van de Klant, lees de documentatie over [samenvoegbeleid en identiteitsstijgingen](../../profile/merge-policies/overview.md#identity-stitching).
 
 Hoewel u identiteitsservice en realtime klantprofiel tegelijk kunt gebruiken, zijn de twee functies van Adobe Experience Platform inherent niet hetzelfde.
 
 * U kunt de Dienst van de Identiteit gebruiken om de identiteitsgrafiek te produceren en te handhaven die de ongelijke identiteiten van een individuele klant samenbrengt.
 * U kunt het profiel Real-Time gebruiken om verschillende profielfragmenten samen te brengen en een samengevoegd profiel te maken. Dit proces vereist het gebruik van de identiteitsgrafiek.
 
-Dit document beschrijft de gelijkenissen, verschillen, en verhouding tussen de Dienst van de Identiteit en het Profiel van de Klant in real time.
+Dit document beschrijft de gelijkenissen, de verschillen, en de verhouding tussen de Dienst van de Identiteit en het Profiel van de Klant in real time.
 
 ## Identiteitsservice versus realtime klantprofiel
 
