@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beperkingen voor XDM-veldtypen
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 1%
@@ -27,7 +27,7 @@ XDM wordt gebouwd bovenop het Schema van JSON, en daarom erven de gebieden XDM e
 
 >[!NOTE]
 >
->Zie de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-schema) voor meer informatie over JSON Schema en andere onderliggende technologieën in Platform APIs.
+>Zie de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-schema) voor meer informatie over JSON-schema en andere onderliggende technologieën in platform-API&#39;s.
 
 In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in JSON-schema, samen met een voorbeeldwaarde die overeenkomt met het type:
 
@@ -49,7 +49,7 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Double]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -136,7 +136,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | XDM-type | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Aantekening: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Number] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Integer] | Type: `INT32`<br>Aantekening: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | Type: `INT32`<br>Aantekening: `INT_16` | `ShortType` | `java.lang.Short` |
@@ -153,7 +153,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | XDM-type | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
@@ -170,7 +170,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | XDM-type | MongoDB | Aerospike | Protocol 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL Integer] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |
