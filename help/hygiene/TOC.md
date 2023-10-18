@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Help voor geavanceerd beheer van de levenscyclus van gegevens
+user-guide-title: Hulp bij geavanceerd beheer van de levenscyclus van gegevens
 breadcrumb-title: Geavanceerde handleiding voor levenscyclusbeheer van gegevens
 user-guide-description: Verwijder individuele verslagen en plan vervalmomenten van datasets in Experience Platform voor het opschonen van gegevens, het verwijderen van anonieme gegevens en gegevensminimalisering.
 feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 32%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
