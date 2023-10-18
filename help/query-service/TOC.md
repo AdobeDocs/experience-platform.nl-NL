@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 15%
+source-wordcount: '311'
+ht-degree: 14%
 
 ---
 
@@ -29,6 +29,13 @@ ht-degree: 15%
       - [Overzicht](data-distiller/derived-attributes/overview.md)
       - [Naadloze SQL-stroom](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Op decile gebaseerde afgeleide kenmerken maken](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - Pijpleidingen met I/ML-functies {#ml-feature-pipelines}
+      - [Pijpleidingen met I/ML-functies](data-distiller/ml-feature-pipelines/overview.md)
+      - [Verbinding maken met Jupyter-laptops](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Verkennende gegevensanalyse](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [Engineer-functies voor ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Gegevens exporteren naar XML-omgevingen](data-distiller/ml-feature-pipelines/export-data.md)
+      - [Verrijking van end-to-end workflow voor de AI/ML-gegevenspijpleiding](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Gebruiksscenario’s {#use-cases}
    - [Verlaten browsers](use-cases/abandoned-browse.md)
    - [Attributieanalyse](use-cases/attribution-analysis.md)
