@@ -3,9 +3,10 @@ title: Identiteitsservice en realtime klantprofiel
 description: Meer informatie over de relatie tussen Identiteitsservice en Real-Time Klantprofiel
 hide: true
 hidefromtoc: true
-source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
+badge: Alfa
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in Real-Time het Profiel van de Klant, lees de documentatie over [samenvoegbeleid en identiteitsstijgingen](../../profile/merge-policies/overview.md#identity-stitching).
+>* Identiteitsgrafiekkoppelingsregels zijn momenteel in Alpha. De functie en documentatie kunnen worden gewijzigd.
+>
+>* Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in Real-Time het Profiel van de Klant, lees de documentatie over [samenvoegbeleid en identiteitsstijgingen](../../profile/merge-policies/overview.md#identity-stitching).
 
 Hoewel u identiteitsservice en realtime klantprofiel tegelijk kunt gebruiken, zijn de twee functies van Adobe Experience Platform inherent niet hetzelfde.
 

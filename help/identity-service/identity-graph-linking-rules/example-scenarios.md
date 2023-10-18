@@ -3,17 +3,21 @@ title: Voorbeeldscenario's voor het configureren van identiteitsinstellingen
 description: Leer over voorbeeldscenario's voor het vormen van de Montages van de Identiteit.
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: Alfa
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
 # Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels
 
-Dit document schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
+>[!IMPORTANT]
+>
+>Identiteitsgrafiekkoppelingsregels zijn momenteel in Alpha. De functie en documentatie kunnen worden gewijzigd.
 
+Dit document schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
 
 ## Gedeeld apparaat
 
