@@ -2,9 +2,9 @@
 title: Records verwijderen
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ De workflow voor het maken van aanvragen wordt weergegeven. Standaard worden de 
 
 >[!IMPORTANT]
 > 
->Als onderdeel van doorlopende wijzigingen om de efficiëntie te verbeteren en gegevenssetbewerkingen minder duur te maken, kunnen organisaties die naar de Delta-indeling zijn verplaatst, gegevens verwijderen uit de Identity Service, Real-Time Customer Profile en het data Lake. Dit type gebruiker wordt aangeduid als delta-migrated. De gebruikers van organisaties die delta-gemigreerd zijn geweest kunnen verkiezen om verslagen van of één of alle datasets te schrappen. Gebruikers van organisaties die niet zijn gemigreerd met delta, kunnen niet besluiten om records uit één gegevensset of uit alle gegevenssets te verwijderen, zoals in de onderstaande afbeelding wordt getoond. In dit geval gaat u verder met de [identiteiten opgeven](#provide-identities) van de handleiding.
+>Als onderdeel van doorlopende wijzigingen om de efficiëntie te verbeteren en gegevenssetbewerkingen minder duur te maken, kunnen organisaties die naar de Delta-indeling zijn verplaatst, gegevens verwijderen uit de Identity Service, Real-Time Customer Profile en het data Lake. Dit type gebruiker wordt aangeduid als delta-migrated. De gebruikers van organisaties die delta-gemigreerd zijn geweest kunnen verkiezen om verslagen van of één of alle datasets te schrappen. Gebruikers van organisaties die niet zijn gemigreerd met delta, kunnen niet besluiten om records uit één gegevensset of uit alle gegevenssets te verwijderen, zoals in de onderstaande afbeelding wordt getoond. Ga in dit geval door met de [identiteiten opgeven](#provide-identities) van de handleiding.
 
 ![De workflow voor het maken van aanvragen met de [!UICONTROL Delete record] geselecteerd en gemarkeerd.](../images/ui/record-delete/delete-record.png)
 
@@ -139,7 +139,7 @@ Als u klaar bent met het toevoegen van identiteiten aan het verzoek, onder **[!U
 
 >[!IMPORTANT]
 > 
->Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform en Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. Organisaties die een aankoop hebben gedaan **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe** kan maximaal 600.000 identiteitsverslagen indienen schrapt elke maand.<br>Met één aanvraag voor het verwijderen van records via de gebruikersinterface kunt u 10.000 id&#39;s tegelijk verzenden. De [API-methode voor het verwijderen van records](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) kan 100.000 ID&#39;s tegelijk worden ingediend.
+>Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform en Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. Organisaties die een aankoop hebben gedaan **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe** kan maximaal 600.000 identiteitsverslagen indienen schrapt elke maand.<br>Met één aanvraag voor het verwijderen van records via de gebruikersinterface kunt u 10.000 id&#39;s tegelijk verzenden. De [API-methode voor het verwijderen van records](../api/workorder.md#create) kan 100.000 ID&#39;s tegelijk worden ingediend.<br>Het is aan te raden zoveel mogelijk id&#39;s per aanvraag in te dienen, tot aan je ID-limiet. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
 
 ![De instelling voor aanvragen [!UICONTROL Name] en [!UICONTROL Description] velden met [!UICONTROL Submit] gemarkeerd.](../images/ui/record-delete/submit.png)
 

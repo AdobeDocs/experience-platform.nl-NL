@@ -2,9 +2,9 @@
 title: Eindpunt van API voor werkvolgorde
 description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor identiteiten programmatically te beheren.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1181'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data 
 ## Een verzoek tot het verwijderen van records maken {#create}
 
 U kunt één of meerdere identiteiten van één enkele dataset of alle datasets schrappen door een verzoek van de POST aan het `/workorder` eindpunt.
+
+>[!IMPORTANT]
+> 
+>Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform en Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. Organisaties die een aankoop hebben gedaan **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe** kan maximaal 600.000 identiteitsverslagen indienen schrapt elke maand.<br>Eén [verzoek tot verwijdering van records via de gebruikersinterface](../ui/record-delete.md) kunt u 10.000 id&#39;s tegelijk verzenden. Met de API-methode voor het verwijderen van records kunnen 100.000 id&#39;s tegelijk worden verzonden.<br>Het is aan te raden zoveel mogelijk id&#39;s per aanvraag in te dienen, tot aan je ID-limiet. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
 
 **API-indeling**
 
