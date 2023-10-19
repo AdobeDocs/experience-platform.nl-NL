@@ -2,9 +2,9 @@
 title: Erkenning door Partner-Aided Visitor gebruiken om onsite ervaringen aan te passen
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2472'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Wanneer het van plan zijn om partner-verstrekte attributen te gebruiken om geper
 
 Als u dit geval met succes wilt implementeren, moet u meerdere gebieden van Real-time Customer Data Platform en andere oplossingen voor Experiencen Cloud gebruiken. Zorg ervoor dat u de benodigde [attribuut-gebaseerde toegangsbeheertoestemmingen](/help/access-control/abac/overview.md) voor al deze gebieden, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
-* Gegevensverzameling
+* Dataverzameling
    * [Adobe Experience Platform Web SDK](/help/edge/home.md)
    * [Tags](/help/tags/home.md)
    * [Gegevensstromen](/help/datastreams/overview.md)
@@ -248,9 +248,13 @@ Invoer `interact` vernieuwt u de pagina in het zoekvak en bekijkt u de netwerkaa
 
 U bent nu klaar om publiek voor verpersoonlijking tot stand te brengen en te activeren.
 
-#### Segmentatie van rand instellen
+#### Het publiek maken en segmentatie van randen instellen
 
-Instellen [randsegmentatie](/help/segmentation/ui/edge-segmentation.md) Het publiekslidmaatschap van uw bezoekers wordt dus in real-time geëvalueerd wanneer ze uw webeigenschap bezoeken.
+In Platform UI, navigeer aan **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** en maak een publiek om uw websitebezoekers vast te leggen.
+
+![Weergave van hoe u naar het publiek kunt navigeren.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+U moet uw publiek instellen met [randsegmentatie](/help/segmentation/ui/edge-segmentation.md) Het publiekslidmaatschap van uw bezoekers wordt dus in real-time geëvalueerd wanneer ze uw webeigenschap bezoeken.
 
 Zorg ervoor dat u ook een [actief-op-rand samenvoegbeleid](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) voor het randpubliek.
 
