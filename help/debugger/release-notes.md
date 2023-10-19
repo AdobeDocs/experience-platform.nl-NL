@@ -4,14 +4,34 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;ervaring met de extensie Foutopsporing in platform;chroom;extensie;releaseopmerkingen
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '526'
 ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Debugger
+
+## Versie 1.5.0 - 19 oktober 2023
+
+### Nieuwe functies
+
+* Koppelingen naar eigenschappen, omgeving en regels weergeven in het overzicht en logbestand van tags.
+
+### Oplossingen en verbeteringen
+
+* Probleem verholpen waarbij geen gegevens van het overzicht van tags werden verzonden.
+* Betrouwbaarheidssessies zouden een CORS-fout veroorzaken. Dit probleem is nu opgelost.
+* Probleem verholpen waardoor Doelovertrekken niet kon worden weergegeven.
+* De knop Feedback verzenden is nu opgelost.
+* Probleem verholpen met de ontbrekende &quot;DataStream-id&quot; in de samenvatting van de SDK van het web voor versie ≥ 2.18.0.
+* Probleem verholpen waarbij Edge-logbestanden niet konden worden doorzocht.
+* Een opmerking toegevoegd over extra profielen voor bepaalde accounttypen.
+
+## Versie 1.4.1 - 1 november 2022
+
+* Verbeterde prestaties op pagina&#39;s met veel Adobe Experience Platform Assurance-gebeurtenissen.
 
 ## Versie 1.4.0 - 3 oktober 2022
 
