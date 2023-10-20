@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,10 @@ Om publiek aan het blok van het Publiek toe te voegen. selecteren **[!UICONTROL 
 
 ![De knop voor het publiek toevoegen is gemarkeerd.](../images/ui/audience-composition/add-audience.png)
 
+>[!IMPORTANT]
+>
+>Houd er rekening mee dat **alleen** publiek dat met het standaardsamenvoegbeleid is gedefinieerd, wordt weergegeven.
+
 Er wordt een lijst met doelgroepen weergegeven. Selecteer het publiek dat u wilt opnemen, gevolgd door **[!UICONTROL Add]** om ze toe te voegen aan uw publieksblok.
 
 ![Er wordt een lijst met doelgroepen weergegeven. In dit dialoogvenster kunt u selecteren welk publiek u wilt toevoegen.](../images/ui/audience-composition/select-audience.png)
@@ -82,7 +86,7 @@ Nadat u een aangepaste regel hebt toegevoegd, selecteert u **[!UICONTROL Save]**
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
-De **[!UICONTROL Exclude]** met bloktype kunt u opgegeven deelsoorten of kenmerken uitsluiten van uw nieuwe grotere publiek.
+De **[!UICONTROL Exclude]** met bloktype kunt u opgegeven deelsoorten of kenmerken uitsluiten van het nieuwe, grotere publiek.
 
 Om een **[!UICONTROL Exclude]** blok, selecteer **+** pictogram, gevolgd door **[!UICONTROL Exclude]**.
 
