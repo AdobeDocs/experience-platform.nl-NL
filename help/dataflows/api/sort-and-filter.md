@@ -2,9 +2,9 @@
 title: Reacties sorteren en filteren in de Flow Service API
 description: Deze zelfstudie behandelt de syntaxis voor sorteren en filteren met behulp van queryparameters in de Flow Service API, inclusief enkele geavanceerde gebruiksgevallen.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
+source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Bij het uitvoeren van aanbiedingen (GET) in het dialoogvenster [Flow Service-API
 
 ## Sorteren
 
-U kunt reacties sorteren met behulp van een `orderby` query-param. De volgende bronnen kunnen worden gesorteerd in de API:
+U kunt reacties sorteren met een `orderby` query-param. De volgende bronnen kunnen worden gesorteerd in de API:
 
 * [Verbindingen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
 * [Bronverbindingen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
@@ -98,7 +98,7 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-Elke filterquery kan worden toegevoegd met `count` queryparameter met een waarde van `true` om het aantal resultaten te retourneren. De API-reactie bevat een `count` eigenschap waarvan de waarde het aantal totaal gefilterde items vertegenwoordigt. De daadwerkelijke gefilterde punten zijn niet teruggekeerd in deze vraag.
+Elke filterquery kan worden toegevoegd `count` queryparameter met een waarde van `true` om het aantal resultaten te retourneren. De API-reactie bevat een `count` eigenschap waarvan de waarde het aantal totaal gefilterde items vertegenwoordigt. De daadwerkelijke gefilterde punten zijn niet teruggekeerd in deze vraag.
 
 **Retourneer het aantal ingeschakelde stromen in het systeem:**
 
@@ -194,6 +194,58 @@ Afhankelijk van de entiteit van de Dienst van de Stroom u terugwint, kunnen de v
 | `state` | `/runs?property=state==inProgress` |
 
 {style="table-layout:auto"}
+
+## Gebruiksscenario’s {#use-cases}
+
+Lees deze sectie voor sommige specifieke voorbeelden van hoe u het filtreren en het sorteren kunt gebruiken om informatie over bepaalde schakelaars terug te keren of u bij het zuiveren van kwesties te helpen. Als er nog meer gebruiksgevallen zijn die u door de Adobe wilt toevoegen, kunt u de **[!UICONTROL Detailed feedback options]** op de pagina om een aanvraag in te dienen.
+
+**Filter om verbindingen naar een bepaald doel te retourneren**
+
+U kunt filters gebruiken om verbindingen naar slechts bepaalde bestemmingen terug te keren. Eerst zoekt u de `connectionSpecs` eindpunt zoals hieronder:
+
+```http
+GET /connectionSpecs
+```
+
+Zoek vervolgens naar de gewenste `connectionSpec` door de `name` parameter. Zoek bijvoorbeeld naar Amazon Ads, of Pega, of SFTP, enzovoort in de `name` parameter. De overeenkomstige `id` is de `connectionSpec` die u kunt zoeken door in de volgende API vraag te zoeken.
+
+U kunt bijvoorbeeld uw doelen filteren om alleen bestaande verbindingen met Amazon S3-verbindingen te retourneren:
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filter om gegevensstromen te retourneren naar alleen doelen**
+
+Bij het opvragen van `/flows` eindpunt, in plaats van het terugkeren van alle bronnen en bestemmingsdataflows, kunt u een filter gebruiken om dataflows aan bestemmingen slechts terug te keren. Om dit te doen, gebruik `isDestinationFlow` als queryparameter, zoals:
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**Filter om gegevens alleen naar een bepaalde bron of bestemming te retourneren**
+
+U kunt dataflows filtreren om dataflows aan een bepaalde bestemming of van een bepaalde bron slechts terug te keren. U kunt bijvoorbeeld uw doelen filteren om alleen bestaande verbindingen met Amazon S3-verbindingen te retourneren:
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filter om alle runtime van een gegevensstroom voor een specifieke periode te krijgen**
+
+U kunt dataflow looppas van een dataflow filtreren om looppas in een bepaald tijdinterval slechts te bekijken, zoals hieronder:
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**Filter om alleen mislukte gegevensstromen te retourneren**
+
+Voor het zuiveren doeleinden, kunt u alle ontbroken dataflow looppas voor een bepaalde bron of bestemmingsdataflow, zoals hieronder filtreren en zien:
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
 
 ## Volgende stappen
 

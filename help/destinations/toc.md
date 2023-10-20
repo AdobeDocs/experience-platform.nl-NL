@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
+source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1182'
 ht-degree: 2%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 2%
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
    * [Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
+   * [API-reacties sorteren en filteren voor doelen](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
