@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
+source-git-commit: 67fce2a88b4e75cfb033c6aef40afbca824c9354
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4134'
 ht-degree: 1%
 
 ---
@@ -375,7 +375,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Anoniem blok
+## Anoniem blok {#anonymous-block}
 
 Een anoniem blok bestaat uit twee secties: uitvoerbaar en uitzondering-behandelend secties. In een anoniem blok, is de uitvoerbare sectie verplicht. De sectie voor de afhandeling van uitzonderingen is echter optioneel.
 
@@ -410,6 +410,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### Voorwaardelijke instructies in een anoniem blok {#conditional-anonymous-block-statements}
+
+De IF-THEN-ELSE controlestructuur laat de voorwaardelijke uitvoering van een lijst van verklaringen toe wanneer een voorwaarde als WAAR wordt geëvalueerd. Deze controlestructuur is alleen van toepassing binnen een anoniem blok. Als deze structuur als standalone bevel wordt gebruikt, resulteert het in een syntaxisfout (&quot;Ongeldig bevel buiten Anoniem Blok&quot;).
+
+Het codefragment hieronder toont het correcte formaat voor een IF-THEN-ELSE voorwaardelijke verklaringen in een anoniem blok aan.
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**Voorbeeld**
+
+Het onderstaande voorbeeld wordt uitgevoerd `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+Deze structuur kan in combinatie met `raise_error();` een aangepast foutbericht retourneren. Het codeblok dat hieronder wordt weergegeven, eindigt het anonieme blok met &#39;aangepast foutbericht&#39;.
+
+**Voorbeeld**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### Geneste IF-instructies
+
+Geneste IF-instructies worden ondersteund binnen anonieme blokken.
+
+**Voorbeeld**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### Uitzonderingsblokken
+
+Uitzonderingsblokken worden ondersteund binnen anonieme blokken.
+
+**Voorbeeld**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### Automatisch naar JSON {#auto-to-json}
