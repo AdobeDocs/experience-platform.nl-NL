@@ -5,9 +5,9 @@ title: Gegevenslandingszone verbinden met Adobe Experience Platform met behulp v
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Data Landing Zone met behulp van de Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1304'
 ht-degree: 1%
 
 ---
@@ -16,26 +16,26 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* -aansluiting in Experience Platform. Voor informatie over het verbinden met [!DNL Data Landing Zone] *doel* -aansluiting, verwijzen naar de [[!DNL Data Landing Zone] doeldocumentatiepagina](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* in Experience Platform. Voor informatie over het verbinden met [!DNL Data Landing Zone] *doel* -aansluiting, verwijzen naar de [[!DNL Data Landing Zone] doeldocumentatiepagina](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] is een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden die naar Adobe Experience Platform kunnen worden overgebracht. Gegevens worden automatisch verwijderd uit de [!DNL Data Landing Zone] na zeven dagen.
+[!DNL Data Landing Zone] is een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden die naar Adobe Experience Platform kunnen worden overgebracht. Gegevens worden automatisch verwijderd uit het dialoogvenster [!DNL Data Landing Zone] na zeven dagen.
 
 Deze zelfstudie begeleidt u door de stappen voor het maken van een [!DNL Data Landing Zone] bronverbinding met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Deze zelfstudie bevat ook instructies voor het ophalen van uw [!DNL Data Landing Zone], en uw referenties bekijken en vernieuwen.
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u nodig hebt om een [!DNL Data Landing Zone] bronverbinding met de [!DNL Flow Service] API.
 
-Voor deze zelfstudie moet u ook de handleiding lezen [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md) leren hoe te om aan Platform APIs voor authentiek te verklaren en de voorbeeldvraag te interpreteren die in de documentatie wordt verstrekt.
+Voor deze zelfstudie moet u ook de handleiding lezen op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md) leren hoe te aan Platform APIs voor authentiek te verklaren en de voorbeeldvraag te interpreteren die in de documentatie wordt verstrekt.
 
 ## Een bruikbare landingszone ophalen
 
-De eerste stap bij het gebruik van API&#39;s voor toegang [!DNL Data Landing Zone] moet een verzoek van de GET indienen bij de `/landingzone` van het [!DNL Connectors] API tijdens `type=user_drop_zone` als deel van uw verzoekkopbal.
+De eerste stap bij het gebruik van API&#39;s voor toegang [!DNL Data Landing Zone] moet een verzoek van de GET indienen bij de `/landingzone` het eindpunt van de [!DNL Connectors] API tijdens `type=user_drop_zone` als deel van uw verzoekkopbal.
 
 **API-indeling**
 
@@ -79,7 +79,7 @@ De volgende reactie geeft informatie over een landingszone, inclusief de bijbeho
 
 ## Ophalen [!DNL Data Landing Zone] geloofsbrieven
 
-Om geloofsbrieven voor een terug te winnen [!DNL Data Landing Zone]een verzoek tot GET aan de `/credentials` van het [!DNL Connectors] API.
+Om geloofsbrieven voor te winnen [!DNL Data Landing Zone]een verzoek tot GET aan de `/credentials` het eindpunt van de [!DNL Connectors] API.
 
 **API-indeling**
 
@@ -103,14 +103,15 @@ curl -X GET \
 
 **Antwoord**
 
-De volgende reactie retourneert de referentie-informatie voor uw landingszone, inclusief uw huidige `SASToken` en `SASUri`en de `storageAccountName` die overeenkomt met uw landingszonecontainer.
+De volgende reactie keert de referentie informatie voor uw gegevens landende streek, met inbegrip van uw huidige terug `SASToken`, `SASUri`, `storageAccountName`en vervaldatum.
 
 ```json
 {
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -119,11 +120,12 @@ De volgende reactie retourneert de referentie-informatie voor uw landingszone, i
 | `containerName` | De naam van uw landingszone. |
 | `SASToken` | Het token voor gedeelde toegangshandtekeningen voor uw landingszone. Deze tekenreeks bevat alle informatie die nodig is om een aanvraag te autoriseren. |
 | `SASUri` | De URI van de gedeelde toegangshandtekening voor uw landingszone. Deze tekenreeks is een combinatie van de URI naar de landingszone waarvoor u geauthenticeerd wordt en de bijbehorende SAS-token, |
+| `expiryDate` | De datum waarop uw SAS-token verloopt. U moet uw token vernieuwen vóór de vervaldatum om het te kunnen blijven gebruiken in uw toepassing voor het uploaden van gegevens naar de landingszone van gegevens. Als u niet manueel uw teken vóór de verklaarde vervaldatum vernieuwt, dan zal het automatisch verfrissen en een nieuw teken verstrekken wanneer de geloofsbrieven van de GET worden uitgevoerd. |
 
 
 ## Bijwerken [!DNL Data Landing Zone] geloofsbrieven
 
-U kunt uw `SASToken` door een POST aan de `/credentials` van het [!DNL Connectors] API.
+U kunt uw `SASToken` door een POST aan de `/credentials` het eindpunt van de [!DNL Connectors] API.
 
 **API-indeling**
 
@@ -159,13 +161,14 @@ In het volgende antwoord worden bijgewerkte waarden voor uw `SASToken` en `SASUr
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
 ## Bestandsstructuur en inhoud van landingszones verkennen
 
-U kunt de bestandsstructuur en inhoud van de landingszone verkennen door een GET-verzoek in te dienen bij de `connectionSpecs` van het [!DNL Flow Service] API.
+U kunt de bestandsstructuur en inhoud van de landingszone verkennen door een GET-verzoek in te dienen bij de `connectionSpecs` het eindpunt van de [!DNL Flow Service] API.
 
 **API-indeling**
 
@@ -190,7 +193,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. De `path` eigenschap van het bestand dat u wilt uploaden, omdat u dit in de volgende stap moet opgeven om de structuur te controleren.
+Een succesvol antwoord retourneert een array met bestanden en mappen die in de gevraagde map zijn gevonden. Neem nota van het `path` eigenschap van het bestand dat u wilt uploaden, omdat u dit in de volgende stap moet opgeven om de structuur te controleren.
 
 ```json
 [
@@ -234,7 +237,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 | `{OBJECT_TYPE}` | Het type object waartoe u toegang wilt hebben. | `file` |
 | `{OBJECT}` | Het pad en de naam van het object waartoe u toegang wilt hebben. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | Het type bestand. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
-| `{PREVIEW}` | Een Booleaanse waarde die aangeeft of de voorvertoning van het bestand wordt ondersteund. | </ul><li>`true`</li><li>`false`</li></ul> |
+| `{PREVIEW}` | Een Booleaanse waarde die definieert of de voorvertoning van het bestand wordt ondersteund. | </ul><li>`true`</li><li>`false`</li></ul> |
 
 **Verzoek**
 
@@ -454,7 +457,7 @@ Een succesvol antwoord retourneert de structuur van het bestand waarop de vraag 
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en bron identiteitskaart nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie.
 
-Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` van het [!DNL Flow Service] API.
+Om een bronverbinding tot stand te brengen, doe een verzoek van de POST aan `/sourceConnections` het eindpunt van de [!DNL Flow Service] API.
 
 
 **API-indeling**
@@ -491,8 +494,8 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De naam van uw [!DNL Data Landing Zone] bronverbinding. |
-| `data.format` | De indeling van de gegevens die u naar het Platform wilt verzenden. |
-| `params.path` | Het pad naar het bestand dat u naar het Platform wilt brengen. |
+| `data.format` | De indeling van de gegevens die u naar het platform wilt verzenden. |
+| `params.path` | Het pad naar het bestand dat u naar het platform wilt verzenden. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone]. Deze vaste ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Antwoord**
@@ -508,4 +511,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw [!DNL Data Landing Zone] referenties, verkende zijn dossierstructuur om het dossier te vinden u aan het Platform wenst over te brengen, en creeerde een bronverbinding beginnen uw gegevens aan Platform te brengen. U kunt nu verdergaan met de volgende zelfstudie, waarin u leert hoe u [een gegevensstroom maken om gegevens voor cloudopslag naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u uw [!DNL Data Landing Zone] geloofsbrieven, verkende zijn dossierstructuur om het dossier te vinden u aan Platform wilt brengen, en creeerde een bronverbinding beginnen uw gegevens aan Platform te brengen. U kunt nu verdergaan met de volgende zelfstudie, waarin u leert hoe u [een gegevensstroom maken om gegevens voor cloudopslag naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/cloud-storage.md).
