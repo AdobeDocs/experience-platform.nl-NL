@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1185'
 ht-degree: 2%
 
 ---
@@ -186,6 +186,7 @@ ht-degree: 2%
       * [IP adres lijst van gewenste personen voor het stromen bestemmingen](./catalog/streaming/ip-address-allow-list.md)
    * Onderzoeksbestemmingen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
+      * [Doel van Qualtrict Automations](./catalog/survey/qualtrics-automations.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
       * [InMoment-extensie](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback-extensie](./catalog/survey/qualtrics.md)
