@@ -4,9 +4,9 @@ type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays in platte schemabestanden van Real-Time CDP naar cloudopslagbestemmingen te exporteren.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1488'
 ht-degree: 0%
 
 ---
@@ -216,8 +216,21 @@ In dit geval ziet uw uitvoerbestand er als volgt uit: u exporteert de eerste en 
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` en `sha256` hashingfuncties {#hashing-functions}
+### Hashingfuncties {#hashing-functions}
 
-Naast de functies die specifiek zijn voor het exporteren van arrays of elementen uit een array, kunt u hash-functies gebruiken voor hashingkenmerken. Als u bijvoorbeeld persoonlijke gegevens in kenmerken hebt, kunt u deze velden tijdens het exporteren hashen.
+Naast de functies die specifiek zijn voor het exporteren van arrays of elementen uit een array, kunt u hash-functies gebruiken om kenmerken in de geëxporteerde bestanden te hashen. Als u bijvoorbeeld persoonlijke gegevens in kenmerken hebt, kunt u deze velden tijdens het exporteren hashen.
 
-U kunt tekenreekswaarden bijvoorbeeld rechtstreeks hashen `md5(personalEmail.address)`. U kunt desgewenst ook afzonderlijke elementen van arrayvelden zoals: `md5(purchaseTime[0])`
+U kunt tekenreekswaarden bijvoorbeeld rechtstreeks hashen `md5(personalEmail.address)`. U kunt desgewenst ook afzonderlijke elementen van arrayvelden hashen, ervan uitgaande dat elementen in de array tekenreeksen zijn, zoals in het volgende voorbeeld: `md5(purchaseTime[0])`
+
+De ondersteunde hashingfuncties zijn:
+
+| -functie | Voorbeeldexpressie |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` | `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}
