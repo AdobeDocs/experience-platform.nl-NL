@@ -2,7 +2,7 @@
 title: LinkIn Conversions API-gebeurtenis die extensie doorsturen
 description: Deze Adobe Experience Platform gebeurtenis die uitbreiding door:sturen staat u toe om de prestaties van uw LinkedIn marketing campagne te meten.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 0%
@@ -19,7 +19,7 @@ U moet een omzettingsregel maken in uw [!DNL LinkedIn] campagneadvertentieaccoun
 
 ### Een geheim en een gegevenselement maken
 
-Een nieuwe `LinkedIn` [gebeurtenis die geheim door:sturen](../../../ui/event-forwarding/secrets.md) en geef het een unieke naam die het verificerende lid aanduidt. Dit wordt gebruikt om de verbinding met uw account te verifiëren en de waarde veilig te houden.
+Een nieuwe [!DNL LinkedIn] [gebeurtenis die geheim door:sturen](../../../ui/event-forwarding/secrets.md) en geef het een unieke naam die het verificerende lid aanduidt. Dit wordt gebruikt om de verbinding met uw account te verifiëren en de waarde veilig te houden.
 
 Volgende, [een gegevenselement maken](../../../ui/managing-resources/data-elements.md#create-a-data-element) met de [!UICONTROL Core] en [!UICONTROL Secret] het elementtype van gegevens om naar `LinkedIn` geheim dat je zojuist hebt gemaakt.
 
