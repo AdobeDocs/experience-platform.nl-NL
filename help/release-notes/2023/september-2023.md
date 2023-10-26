@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de release van september 2023 staat Adobe Experience Platform vermeld.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 94651b8035677eb65f6ca9e93001b4149f8bdbd4
+source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2258'
 ht-degree: 2%
 
 ---
@@ -222,8 +222,6 @@ Raadpleeg voor meer informatie over Query Services de [Overzicht van Query Servi
 | ------- | ----------- |
 | Aanpasbare kolommen | U kunt de lay-out van het Portaal van de Publiek met re-sizable kolommen nu aanpassen. Lees voor meer informatie over deze functie de [segmenteringsUI-hulplijn](../../segmentation/ui/overview.md#customize). |
 | Uitsplitsing naar frequentie bijwerken | U kunt nu een verdeling van de updatefrequenties van het publiek in uw organisatie bekijken. Lees voor meer informatie over deze functie de [segmenteringsUI-hulplijn](../../segmentation/ui/overview.md#browse). |
-
-Voor meer informatie over bronnen leest u de [overzicht van bronnen](../../sources/home.md).
 
 Voor meer informatie over Segmentatieservice leest u de [Overzicht van segmentatieservice](../../segmentation/home.md).
 
