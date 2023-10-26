@@ -3,9 +3,9 @@ title: Een Google PubSub-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van Platform.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -31,12 +31,24 @@ Als u al een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit docum
 
 Om verbinding te maken [!DNL PubSub] aan Platform, moet u een geldige waarde voor de volgende geloofsbrieven verstrekken:
 
+>[!BEGINTABS]
+
+>[!TAB Op projecten gebaseerde verificatie]
+
 | Credentials | Beschrijving |
-| ---------- | ----------- |
+| --- | --- |
 | Project-id | De project-id die is vereist voor verificatie [!DNL PubSub]. |
+| Credentials | De referentie die vereist is voor verificatie [!DNL PubSub]. U moet ervoor zorgen dat u het volledige JSON-bestand plaatst nadat u de witruimten uit uw referenties hebt verwijderd. |
+
+>[!TAB Onderwerp en op abonnement gebaseerde authentificatie]
+
+| Credentials | Beschrijving |
+| --- | --- |
 | Credentials | De referentie die vereist is voor verificatie [!DNL PubSub]. U moet ervoor zorgen dat u het volledige JSON-bestand plaatst nadat u de witruimten uit uw referenties hebt verwijderd. |
 | Onderwerpnaam | De naam van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. **Opmerking**: Eén [!DNL PubSub] abonnement kan slechts voor één dataflow worden gebruikt. Als u meerdere gegevensstromen wilt maken, hebt u meerdere abonnementen nodig. |
 | Abonnementsnaam | De naam van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. |
+
+>[!ENDTABS]
 
 Raadpleeg de volgende secties voor meer informatie over deze waarden [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie het volgende [PubSub-hulplijn](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
 
@@ -68,7 +80,8 @@ Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL PubSub] 
 
 >[!TIP]
 >
->Wanneer u een account met beperkte toegang maakt, moet u ten minste een van uw onderwerpnaam of abonnementsnaam opgeven. Verificatie mislukt als beide waarden ontbreken.
+>* Wanneer u een account met beperkte toegang maakt, moet u ten minste een van uw onderwerpnaam of abonnementsnaam opgeven. Verificatie mislukt als beide waarden ontbreken.
+>* Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL Google PubSub] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam en een optionele beschrijving voor uw nieuwe [!DNL PubSub] account.
 

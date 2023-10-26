@@ -3,11 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;micr
 solution: Experience Platform
 title: Een Microsoft Dynamics Base Connection maken met de Flow Service API
 type: Tutorial
-description: Leer hoe u Platform met behulp van de Flow Service API kunt verbinden met een Microsoft Dynamics-account.
+description: Leer hoe u Platform kunt verbinden met een Microsoft Dynamics-account met behulp van de Flow Service API.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '738'
 ht-degree: 1%
 
 ---
@@ -16,45 +16,65 @@ ht-degree: 1%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Microsoft Dynamics] (hierna &quot;[!DNL Dynamics]&quot;) het gebruik van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Microsoft Dynamics] (hierna &quot;[!DNL Dynamics]&quot;) gebruiken [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om Platform met een rekening van de Dynamiek met succes te verbinden gebruikend [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om verbinding te maken met [!DNL Dynamics]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+Om [!DNL Flow Service] verbinding maken met [!DNL Dynamics]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+
+>[!BEGINTABS]
+
+>[!TAB Basisverificatie]
 
 | Credentials | Beschrijving |
-| ---------- | ----------- |
+| --- | --- |
 | `serviceUri` | De service-URL van uw [!DNL Dynamics] -instantie. |
 | `username` | De gebruikersnaam voor uw [!DNL Dynamics] gebruikersaccount. |
 | `password` | Het wachtwoord voor uw [!DNL Dynamics] account. |
+
+>[!TAB Service-principal en sleutelverificatie]
+
+| Credentials | Beschrijving |
+| --- | --- |
 | `servicePrincipalId` | De client-id van uw [!DNL Dynamics] account. Deze ID wordt vereist wanneer het gebruiken van de dienst hoofd en op sleutel-gebaseerde authentificatie. |
 | `servicePrincipalKey` | De geheime sleutel van de dienst belangrijkste geheim. Deze referentie wordt vereist wanneer het gebruiken van de dienst belangrijkste en op sleutel-gebaseerde authentificatie. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Dynamics] is: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
-Ga voor meer informatie over aan de slag gaan [dit [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+>[!ENDTABS]
+
+Raadpleeg voor meer informatie over aan de slag gaan [dit [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
+>[!TIP]
+>
+>Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL Dynamics] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
+
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Dynamics] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Dynamics] verificatiereferenties als onderdeel van de aanvraagparameters.
 
-### Een [!DNL Dynamics] basisverbinding met basisverificatie
+### Een [!DNL Dynamics] basisverbinding
 
-Als u een [!DNL Dynamics] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van waarden voor uw verbinding `serviceUri`, `username`, en `password`.
+>[!TIP]
+>
+>Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL Dynamics] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
+
+De eerste stap bij het maken van een bronverbinding is het verifiëren van uw [!DNL Dynamics] bron en genereer een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
+
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Dynamics] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -62,7 +82,13 @@ Als u een [!DNL Dynamics] basisverbinding die basisauthentificatie gebruikt, doe
 POST /connections
 ```
 
-**Verzoek**
+>[!BEGINTABS]
+
+>[!TAB Basisverificatie]
+
+Een [!DNL Dynamics] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van waarden voor uw verbinding `serviceUri`, `username`, en `password`.
+
++++verzoek
 
 ```shell
 curl -X POST \
@@ -97,7 +123,9 @@ curl -X POST \
 | `auth.params.password` | Het wachtwoord dat aan uw [!DNL Dynamics] account. |
 | `connectionSpec.id` | De [!DNL Dynamics] Verbindingsspecificatie-id: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
-**Antwoord**
++++
+
++++Response
 
 Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de unieke id (`id`). Deze id is vereist om uw CRM-systeem in de volgende stap te verkennen.
 
@@ -108,42 +136,38 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 }
 ```
 
-### Een [!DNL Dynamics] basisverbinding die de dienst belangrijkste op sleutel-gebaseerde authentificatie gebruikt
++++
 
-Als u een [!DNL Dynamics] basisverbinding die de dienst belangrijkste op sleutel-gebaseerde authentificatie gebruikt, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van waarden voor uw verbinding `serviceUri`, `servicePrincipalId`, en `servicePrincipalKey`.
+>[!TAB De belangrijkste op sleutel-gebaseerde authentificatie van de dienst]
 
-**API-indeling**
+Een [!DNL Dynamics] basisverbinding die de dienst belangrijkste op sleutel-gebaseerde authentificatie gebruikt, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van waarden voor uw verbinding `serviceUri`, `servicePrincipalId`, en `servicePrincipalKey`.
 
-```http
-POST /connections
-```
-
-**Verzoek**
++++verzoek
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Dynamics connection",
-        "description": "Dynamics connection using key-based authentication",
-        "auth": {
-            "specName": "Service Principal Key Based Authentication",
-            "params": {
-                "serviceUri": "{SERVICE_URI}",
-                "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
-                "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
-            }
-        },
-        "connectionSpec": {
-            "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics connection",
+      "description": "Dynamics connection using key-based authentication",
+      "auth": {
+          "specName": "Service Principal Key Based Authentication",
+          "params": {
+              "serviceUri": "{SERVICE_URI}",
+              "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+              "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
+          }
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
@@ -153,7 +177,9 @@ curl -X POST \
 | `auth.params.servicePrincipalKey` | De geheime sleutel van de dienst belangrijkste geheim. Deze referentie wordt vereist wanneer het gebruiken van de dienst belangrijkste en op sleutel-gebaseerde authentificatie. |
 | `connectionSpec.id` | De [!DNL Dynamics] Verbindingsspecificatie-id: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
-**Antwoord**
++++
+
++++Response
 
 Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de unieke id (`id`). Deze id is vereist om uw CRM-systeem in de volgende stap te verkennen.
 
@@ -164,9 +190,14 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 }
 ```
 
++++
+
+>[!ENDTABS]
+
+
 ## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u een [!DNL Microsoft Dynamics] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Creeer een dataflow om de gegevens van CRM aan Platform te brengen gebruikend [!DNL Flow Service] API](../../collect/crm.md)
+* [Maak een gegevensstroom om CRM-gegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/crm.md)

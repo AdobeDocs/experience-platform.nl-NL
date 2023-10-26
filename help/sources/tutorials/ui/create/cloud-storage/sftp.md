@@ -2,9 +2,9 @@
 title: Een SFTP-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL SFTP] bronverbinding 
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platform:
+Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 >[!IMPORTANT]
 >
@@ -40,14 +40,14 @@ Als u verbinding wilt maken met [!DNL SFTP]moet u waarden opgeven voor de volgen
 | `password` | Het wachtwoord voor uw [!DNL SFTP] server. |
 | `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
-| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Opmerking**: Als deze instelling is ingeschakeld voor een bestaande SFTP-account, heeft dit alleen invloed op toekomstige gegevensstromen en niet op bestaande gegevensstromen. |
+| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Opmerking**: Wanneer deze instelling is ingeschakeld voor een bestaande SFTP-account, heeft deze alleen invloed op toekomstige gegevensstromen en niet op bestaande gegevensstromen. |
 | Mappad | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] bron, kunt u het omslagweg verstrekken om gebruikerstoegang tot de subomslag van uw keus te specificeren. |
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om een nieuwe [!DNL SFTP] account om verbinding te maken met Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om een nieuwe [!DNL SFTP] account voor verbinding met Platform.
 
 ## Verbinding maken met uw [!DNL SFTP] server
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -65,9 +65,11 @@ Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account
 
 ### Nieuwe account
 
->[!IMPORTANT]
+>[!TIP]
 >
->SFTP steunt een RSA of DSA type OpenSSH sleutel. Zorg ervoor dat de inhoud van uw sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"`. Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
+>* Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL SFTP] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
+>
+>* SFTP steunt een RSA of DSA type OpenSSH sleutel. Zorg ervoor dat de inhoud van uw sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"`. Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam en een optionele beschrijving voor uw nieuwe [!DNL SFTP] account.
 
@@ -79,13 +81,13 @@ De [!DNL SFTP] de bron steunt zowel basisauthentificatie als authentificatie via
 
 >[!TAB Basisverificatie]
 
-Selecteer **[!UICONTROL Password]** en geef vervolgens de host- en poortwaarden op waarmee u verbinding wilt maken, naast uw gebruikersnaam en wachtwoord. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]**.
+Als u basisverificatie wilt gebruiken, selecteert u **[!UICONTROL Password]** en geef vervolgens de host- en poortwaarden op waarmee u verbinding wilt maken, naast uw gebruikersnaam en wachtwoord. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Selecteer **[!UICONTROL Connect to source]**.
 
 ![Het nieuwe accountscherm voor de SFTP-bron met behulp van basisverificatie](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH-verificatie met openbare sleutel]
 
-Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, selecteert u **[!UICONTROL SSH public key]**  en geef vervolgens uw host- en poortwaarden op, evenals de inhoud van de persoonlijke sleutel en de combinatie van passphrase. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]**.
+Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, selecteert u **[!UICONTROL SSH public key]**  en geef vervolgens uw host- en poortwaarden op, evenals de inhoud van de persoonlijke sleutel en de combinatie van passphrase. Tijdens deze stap kunt u ook het pad naar de submap aangeven waartoe u toegang wilt verlenen. Selecteer **[!UICONTROL Connect to source]**.
 
 ![Het nieuwe accountscherm voor de SFTP-bron met behulp van SSH public key.](../../../../images/tutorials/create/sftp/ssh.png)
 
@@ -93,4 +95,4 @@ Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, sele
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding met uw SFTP-account tot stand gebracht. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens van uw cloudopslag naar Platform te brengen](../../dataflow/batch/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een verbinding met uw SFTP-account tot stand gebracht. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens van uw cloudopslag naar het platform te brengen](../../dataflow/batch/cloud-storage.md).

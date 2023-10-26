@@ -3,9 +3,9 @@ title: Een Google PubSub-bronverbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1153'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,26 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 
 Om [!DNL Flow Service] verbinding maken met [!DNL PubSub]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
 
+>[!BEGINTABS]
+
+>[!TAB Op projecten gebaseerde verificatie]
+
 | Credentials | Beschrijving |
-| ---------- | ----------- |
+| --- | --- |
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
+| `credentials` | De referentie die vereist is voor verificatie [!DNL PubSub]. U moet ervoor zorgen dat u het volledige JSON-bestand plaatst nadat u de witruimten uit uw referenties hebt verwijderd. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en brondoelverbindingen terug. De [!DNL PubSub] Verbindingsspecificatie-id is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Onderwerp en op abonnement gebaseerde authentificatie]
+
+| Credentials | Beschrijving |
+| --- | --- |
 | `credentials` | De referentie die vereist is voor verificatie [!DNL PubSub]. U moet ervoor zorgen dat u het volledige JSON-bestand plaatst nadat u de witruimten uit uw referenties hebt verwijderd. |
 | `topicName` | De naam van de bron die een feed met berichten vertegenwoordigt. U moet een onderwerpnaam specificeren als u toegang tot een specifieke stroom van gegevens in uw wilt verlenen [!DNL PubSub] bron. De indeling van de onderwerpnaam is: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | De naam van uw [!DNL PubSub] abonnement. In [!DNL PubSub], staan de abonnementen u toe om berichten te ontvangen, door aan het onderwerp in te tekenen waarin de berichten zijn gepubliceerd aan. **Opmerking**: Eén [!DNL PubSub] abonnement kan slechts voor één dataflow worden gebruikt. Als u meerdere gegevensstromen wilt maken, hebt u meerdere abonnementen nodig. De notatie voor abonnementsnaam is: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en brondoelverbindingen terug. De [!DNL PubSub] Verbindingsspecificatie-id is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 Zie deze voor meer informatie over deze waarden [[!DNL PubSub] verificatie](https://cloud.google.com/pubsub/docs/authentication) document. Om de op rekening-gebaseerde authentificatie van de dienst te gebruiken, zie dit [[!DNL PubSub] handleiding voor het maken van serviceaccounts](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen over hoe te om uw geloofsbrieven te produceren.
 
@@ -50,6 +63,10 @@ Zie deze voor meer informatie over deze waarden [[!DNL PubSub] verificatie](http
 Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
+
+>[!TIP]
+>
+>Nadat u een verificatietype hebt gemaakt, kunt u dit type van een [!DNL Google PubSub] basisverbinding. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
 
 De eerste stap bij het maken van een bronverbinding is het verifiëren van uw [!DNL PubSub] bron en genereer een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
 
@@ -67,11 +84,13 @@ De [!DNL PubSub] bron staat u toe om het type van toegang te specificeren dat u 
 POST /connections
 ```
 
-**Verzoek**
-
 >[!BEGINTABS]
 
 >[!TAB Op projecten gebaseerde verificatie]
+
+Om basisverbinding met op project-gebaseerde authentificatie tot stand te brengen, doe een verzoek van de POST aan `/connections` en biedt u uw `projectId` en `credentials` in de verzoekende instantie.
+
++++verzoek
 
 ```shell
 curl -X POST \
@@ -104,7 +123,26 @@ curl -X POST \
 | `auth.params.credentials` | De referentie of sleutel die vereist is voor verificatie [!DNL PubSub]. |
 | `connectionSpec.id` | De [!DNL PubSub] verbinding, specificatie-id: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
+++++
+
++++Response
+
+Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze basis verbindings identiteitskaart wordt vereist in de volgende stap om een bronverbinding tot stand te brengen.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+++++
+
 >[!TAB Onderwerp en op abonnement gebaseerde authentificatie]
+
+Om basisverbinding met onderwerp en op abonnement-gebaseerde authentificatie tot stand te brengen, doe een verzoek van de POST aan `/connections` en biedt u uw `credentials`, `topicName`, en `subscriptionName` in de verzoekende instantie.
+
++++verzoek
 
 ```shell
 curl -X POST \
@@ -139,9 +177,9 @@ curl -X POST \
 | `auth.params.subscriptionName` | De project-id en het paar met abonnements-id voor de [!DNL PubSub] bron waartoe u toegang wilt verlenen. |
 | `connectionSpec.id` | De [!DNL PubSub] verbinding, specificatie-id: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!ENDTABS]
++++
 
-**Antwoord**
++++Response
 
 Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze basis verbindings identiteitskaart wordt vereist in de volgende stap om een bronverbinding tot stand te brengen.
 
@@ -151,6 +189,11 @@ Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, i
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
+++++
+
+>[!ENDTABS]
+
 
 ## Een bronverbinding maken {#source}
 
