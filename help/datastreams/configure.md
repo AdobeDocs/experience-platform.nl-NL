@@ -1,16 +1,16 @@
 ---
-title: Een gegevensstroom configureren
+title: Gegevensstromen maken en configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2597'
+source-wordcount: '2599'
 ht-degree: 1%
 
 ---
 
 
-# Een gegevensstroom configureren
+# Gegevensstromen maken en configureren
 
 In dit document worden de stappen beschreven voor het configureren van een [datastream](./overview.md) in de gebruikersinterface.
 

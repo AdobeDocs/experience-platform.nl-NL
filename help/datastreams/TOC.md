@@ -5,10 +5,10 @@ user-guide-title: Hulp bij gegevensstromen van Adobe Experience Platform
 breadcrumb-title: Handleiding voor gegevensstromen
 user-guide-description: Leer hoe u gegevensstromen configureert in Adobe Experience Platform.
 feature: Datastreams
-source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
+source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 35%
+source-wordcount: '50'
+ht-degree: 32%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 35%
 
 * [Overzicht gegevensstromen](overview.md)
 * [Een gegevensstroom configureren](configure.md)
+* [Beide detectie configureren voor gegevensstromen](bot-detection.md)
 * [Gegevensstroomoverschrijvingen configureren](overrides.md)
 * [Gegevensvoorvoegsel voor gegevensverzameling](data-prep.md)
 * Gegevensverrijking {#data-enrichment}
