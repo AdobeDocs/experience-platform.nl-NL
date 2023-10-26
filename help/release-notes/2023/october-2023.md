@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van oktober 2023 voor Adobe Experience Platform.
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '766'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 3%
 Updates voor bestaande functies in Experience Platform:
 
 - [Gegevensverzameling](#data-collection)
+- [Doelen](#destinations)
 - [Sandboxes](#sandboxes)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
@@ -30,6 +31,31 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | Extensie | [!DNL Meta] Verbetering conversie-API | Er zijn drie verbeteringen aangebracht in de [API voor metaconversie](/help/tags/extensions/server/meta/overview.md) extensie: <ul><li>Integratie met [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Creeert een naadloze login ervaring door u toe te staan om uw pixelID en toegangstoken voor de integratie van Conversions API met Adobe te delen.</li><li>Integratie met [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Hiermee kunt u reclame maken voor mensen die een gewenste actie waarschijnlijk uitvoeren en de actie terugkoppelen aan de geleverde advertenties.</li><li>Integratie met [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Hiermee kunt u de RampID van LiveRamp in het CIP-veld doorgeven, zodat PII niet rechtstreeks met partners of Meta hoeft te worden gedeeld. </li></ul> |
 
 Lees voor meer informatie over gegevensverzameling de [overzicht van gegevensverzamelingen](../../tags/home.md).
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe of bijgewerkte doelen** {#new-updated-destinations}
+
+| Bestemming | Nieuw of Bijgewerkt | Beschrijving |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nieuw | Gebruik de bestemming van de Moweer om uw gegevens van de Adobe (gebruikersattributen, segmenten en gebeurtenissen) aan MoEngage in real time te verbinden en in kaart te brengen. Klanten kunnen vervolgens op deze gegevens reageren en persoonlijke, doelgerichte ervaringen bieden. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nieuw | Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe Experience Platform als input in de Qualtrics Experience ID om uw klanten beter te begrijpen en gerichte outreach toe te laten om de kloof te dichten wanneer het aankomt op het begrijpen van intent, emotie en ervaringsstuurprogramma&#39;s. |
+
+{style="table-layout:auto"}
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+| Functionaliteit | Beschrijving |
+| ----------- | ----------- |
+| Ondersteuning voor hashfuncties in berekende velden | Naast de specifieke functies voor [exporteren, arrays](../../destinations/ui/export-arrays-calculated-fields.md) of elementen uit een array, kunt u nu extra [hashingfuncties](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) om kenmerken in de geëxporteerde bestanden te hashen. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**Oplossingen en verbeteringen** {#destinations-fixes-and-enhancements}
+
+Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
 ## Sandboxes {#sandboxes}
 
