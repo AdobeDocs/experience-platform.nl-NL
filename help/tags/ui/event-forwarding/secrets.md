@@ -2,9 +2,9 @@
 title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in UI te vormen voor authentiek te verklaren aan eindpunten die in gebeurtenis worden gebruikt door:sturen eigenschappen.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2037'
+source-wordcount: '2277'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,7 @@ De volgende geheime types worden momenteel gesteund:
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Bevat diverse kenmerken die de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie voor gebruik in de [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) en [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 | [!UICONTROL HTTP] | Bevat respectievelijk twee tekenreekskenmerken voor een gebruikersnaam en wachtwoord. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 | [!UICONTROL OAuth 2] | Bevat diverse kenmerken die de [type clientverificatietype](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) voor de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) verificatiespecificatie. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 | [!UICONTROL OAuth 2 JWT] | Bevat diverse kenmerken die JSON Web Token (JWT)-profiel ondersteunen voor [OAuth 2.0 Autorisatie](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) subsidies. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 | [!UICONTROL Token] | Een enkele tekenreeks met tekens die een verificatietoken-waarde vertegenwoordigt die door beide systemen bekend en begrepen is. |
@@ -76,6 +77,7 @@ Van hier, verschillen de stappen om het geheim tot stand te brengen afhankelijk 
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -175,6 +177,38 @@ Er wordt een dialoogvenster weergegeven waarin u de referenties voor uw Google-a
 >Als in uw organisatie een beleid voor herverificatie is ingesteld voor Google Cloud-toepassingen, worden de gemaakte geheimen niet vernieuwd nadat de verificatie is verlopen (tussen 1 en 24 uur, afhankelijk van de beleidsconfiguratie).
 >
 >Meld u aan bij de Google Admin-console en navigeer naar de **[!DNL App access control]** pagina zodat u de gebeurtenis kunt markeren door:sturen app (de Gebeurtenis die van Adobe Real-Time CDP door:sturen) als [!DNL Trusted]. Raadpleeg de documentatie van Google op [sessielengtes instellen voor Google Cloud-services](https://support.google.com/a/answer/9368756) voor meer informatie .
+
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
+
+Een [!DNL LinkedIn] OAuth 2, selecteer **[!UICONTROL [!DNL LinkedIn] OAuth 2]** van de **[!UICONTROL Type]** vervolgkeuzelijst. Selecteer vervolgens **[!UICONTROL Create Secret]**.
+
+![De [!UICONTROL Create Secret] met de [!UICONTROL Type] gemarkeerd.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+Er verschijnt een pop-up met de mededeling dat het geheim handmatig moet worden geautoriseerd via [!DNL LinkedIn]. Selecteren **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]** om door te gaan.
+
+![[!DNL LinkedIn] Toestemmingspopover markeren [!UICONTROL Create & Authorize secret with [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw [!DNL LinkedIn] referenties. Volg de herinneringen om gebeurtenis door:sturen toegang tot uw gegevens te verlenen.
+
+Wanneer het autorisatieproces is voltooid, wordt u teruggestuurd naar de **[!UICONTROL Secrets]** , waarin u het zojuist gemaakte geheim kunt zien. Hier zie je de status van het geheim en de vervaldatum.
+
+![De [!UICONTROL Secret] tabblad dat het nieuwe geheim markeert.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### Een [!UICONTROL [!DNL LinkedIn] OAuth 2] geheim
+
+>BELANGRIJK
+>
+>U moet opnieuw autoriseren met uw [!DNL LinkedIn] geloofsbrieven om de 365 dagen. Als u niet tijdig opnieuw autoriseert, wordt uw geheim niet vernieuwd en wordt het [!DNL LinkedIn] conversieverzoeken mislukken.
+
+Drie maanden vóór het geheim dat opnieuw toestemming vereist, zal popup beginnen te tonen wanneer u navigeert om het even welke pagina van het bezit. Selecteer **[!UICONTROL Click here to go to your secrets]**.
+
+![De [!UICONTROL Property Overview] tabblad waarin de geheime pop-up voor opnieuw autoriseren wordt gemarkeerd.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+U wordt omgeleid naar de [!UICONTROL Secrets] tab. De geheimen die op deze pagina worden vermeld worden gefiltreerd om slechts de geheimen te tonen die opnieuw moeten worden toegelaten. Selecteren **[!UICONTROL Auth Needed]** voor het geheim moet u opnieuw machtigen.
+
+![De [!UICONTROL Secret] tabmarkering [!UICONTROL Auth Needed]voor de [!DNL LinkedIn] geheim.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw [!DNL LinkedIn] referenties. Volg de aanwijzingen om uw geheim opnieuw toe te staan.
 
 ## Een geheim bewerken
 
