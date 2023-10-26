@@ -1,13 +1,13 @@
 ---
 title: Gebruikershandleiding berekende kenmerken
 description: Leer hoe u berekende kenmerken maakt, weergeeft en bijwerkt met de gebruikersinterface van Adobe Experience Platform.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1406'
 ht-degree: 0%
 
 ---
-
 
 # Gebruikershandleiding voor berekende kenmerken
 
