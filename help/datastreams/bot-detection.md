@@ -1,11 +1,11 @@
 ---
-title: Beide detectie configureren
-description: Leer hoe u beide detectie voor gegevensstreams configureert.
+title: Beide detectie configureren voor gegevensstromen
+description: Leer hoe te om botopsporing voor gegevensstromen te vormen, om menselijk en onmenselijk verkeer te onderscheiden.
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1325'
 ht-degree: 0%
 
 ---
