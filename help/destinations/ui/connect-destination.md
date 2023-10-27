@@ -4,9 +4,9 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -84,9 +84,9 @@ Voor op bestanden gebaseerde doelen kunt u verschillende instellingen configurer
 
 ![Afbeelding waarin de selectie van het bestandstype en de verschillende opties voor CSV-bestanden worden weergegeven.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### De bestemmingsverbinding van de opstelling voor publieksactivering, perspectiefactivering of datasetuitvoer {#segment-activation-or-dataset-exports}
+### De bestemmingsverbinding van de opstelling voor publieksactivering, rekeningsactivering, perspectiefactivering of datasetuitvoer {#segment-activation-or-dataset-exports}
 
-Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering aan bekende klanten of vooruitzichten, evenals datasetuitvoer. Voor die doelen kunt u kiezen of u een verbinding maakt die u in staat stelt [publiek activeren](/help/destinations/ui/activate-batch-profile-destinations.md), [vooruitzichten](/help/destinations/ui/activate-prospect-audiences.md), of [exportgegevenssets](/help/destinations/ui/export-datasets.md).
+Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering aan bekende klanten, rekeningsklanten, of vooruitzichten, evenals datasetuitvoer. Voor die doelen kunt u kiezen of u een verbinding maakt die u in staat stelt [publiek activeren](/help/destinations/ui/activate-batch-profile-destinations.md), [rekeningen](/help/destinations/ui/activate-account-audiences.md), [vooruitzichten](/help/destinations/ui/activate-prospect-audiences.md), of [exportgegevenssets](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >

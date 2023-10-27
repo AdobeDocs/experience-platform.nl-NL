@@ -2,10 +2,10 @@
 title: Accountsoorten
 description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofielen in downstreamdoelen te gebruiken.
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Caution"
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Accountpubliek
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Houd er rekening mee dat accountpubliek alleen beschikbaar is in de [B2B Edition van Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Bovendien is de functionaliteit voor het accountpubliek momenteel in **beperkte beschikbaarheid**.
+>Accountpubliek is alleen beschikbaar in het dialoogvenster [B2B Edition van Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Bovendien is de functionaliteit voor het accountpubliek momenteel in **beperkte beschikbaarheid**. Neem contact op met de klantenservice van de Adobe of uw Adobe om toegang tot deze functie te vragen.
 
 Met de segmentatie van uw account kunt u in Adobe Experience Platform de volledige versnelling en verfijning van de segmentatieervaring van marketingmedewerkers van op mensen gebaseerde doelgroepen naar op account gebaseerde doelgroepen brengen.
 
@@ -69,7 +69,7 @@ Selecteer het publiek dat u wilt activeren, gevolgd door **[!UICONTROL Activate 
 
 ![De [!UICONTROL Activate to destination] wordt gemarkeerd in het menu met snelle acties voor het geselecteerde publiek.](../images/ui/account-audiences/activate.png)
 
-De [!UICONTROL Activate destination] wordt weergegeven. Voor meer informatie over het activeringsproces, waaronder informatie over veldtoewijzingen, leest u de [activeringsoverzicht](../../destinations/ui/activation-overview.md).
+De [!UICONTROL Activate destination] wordt weergegeven. Voor meer informatie over het activeringsproces, waaronder ondersteunde bestemmingen en meer informatie over veldtoewijzingen, leest u de [accountpubliek activeren](/help/destinations/ui/activate-account-audiences.md) zelfstudie.
 
 ## Volgende stappen {#next-steps}
 
