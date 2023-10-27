@@ -1,9 +1,9 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van oktober 2023 voor Adobe Experience Platform.
-source-git-commit: 9009f56956f0719fb80d423a14b81a6dc7115d77
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '948'
 ht-degree: 3%
 
 ---
@@ -14,11 +14,26 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Gegevensverzameling](#data-collection)
 - [Doelen](#destinations)
 - [Sandboxes](#sandboxes)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Doelen voor doelgebruik | Er zijn nieuwe metergegevens toegevoegd aan het dashboard voor licentiegebruik. De **[!UICONTROL Audience Activation Size]** en **[!UICONTROL Data Export Size]** Met cijfers kunt u op een handige manier bijhouden hoeveel gegevens u van Platform hebt geëxporteerd in verhouding tot uw gebruiksrechten voor licenties. Zie de [beschikbare cijfers](../../dashboards/guides/license-usage.md#available-metrics) documentatie voor beschrijvingen van deze en andere gegevens van het vergunningsgebruik. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanewidgets tot stand te brengen, begin door te lezen [overzicht van dashboards](../../dashboards/home.md).
 
 ## Gegevensverzameling {#data-collection}
 
@@ -51,7 +66,8 @@ Lees voor meer informatie over gegevensverzameling de [overzicht van gegevensver
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Ondersteuning voor hashfuncties in berekende velden | Naast de specifieke functies voor [exporteren, arrays](../../destinations/ui/export-arrays-calculated-fields.md) of elementen uit een array, kunt u nu extra [hashingfuncties](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) om kenmerken in de geëxporteerde bestanden te hashen. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (bèta) Ondersteuning voor hashingfuncties in berekende velden | Naast de specifieke functies voor [exporteren, arrays](../../destinations/ui/export-arrays-calculated-fields.md) of elementen uit een array, kunt u nu extra [hashingfuncties](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) om kenmerken in de geëxporteerde bestanden te hashen. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beperkte GA) Accountpubliek naar bepaalde bestemmingen activeren | Real-Time CDP B2B-klanten kunnen nu activeren [accountpubliek](../../segmentation/ui/account-audiences.md) naar bepaalde bestemmingen. Lees voor meer informatie over deze functie de [zelfstudie accountpubliek activeren](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
