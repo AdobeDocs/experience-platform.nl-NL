@@ -1,20 +1,20 @@
 ---
 title: Analyse van verkennende gegevens
 description: Leer hoe u Data Distiller kunt gebruiken om gegevens van een Python-laptop te verkennen en te analyseren.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '809'
 ht-degree: 14%
 
 ---
 
 # Verkennende gegevensanalyse
 
-Dit document bevat enkele basisvoorbeelden en aanbevolen procedures voor het gebruik van Data Distiller voor het verkennen en analyseren van gegevens van een Python-laptop.
+Dit document bevat enkele basisvoorbeelden en aanbevolen procedures voor het gebruik van Data Distiller voor het verkennen en analyseren van gegevens van een [!DNL Python] -laptop.
 
 ## Aan de slag
 
-Voordat u verdergaat met deze handleiding, moet u controleren of u een verbinding met Data Distiller hebt gemaakt in uw Python-laptop. Zie de documentatie voor instructies over hoe u kunt [Een Python-laptop aansluiten op Data Distiller](./establish-connection.md).
+Voordat u verdergaat met deze handleiding, moet u controleren of u een verbinding met Data Distiller hebt gemaakt in uw [!DNL Python] -laptop. Zie de documentatie voor instructies over hoe u kunt [een verbinding maken [!DNL Python] notebook naar Data Distiller](./establish-connection.md).
 
 ## Verkrijgen van basisstatistieken {#basic-statistics}
 
@@ -90,7 +90,7 @@ sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sa
 count_query=f'''SELECT count(*) as cnt from {sample_table_name}'''
 
 df = qs_cursor.query(count_query, output="dataframe")
-# divide by the sampling rate to extrapolate to the full dataset
+# Divide by the sampling rate to extrapolate to the full dataset
 approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
@@ -137,7 +137,7 @@ funnel_df
 
 ### Zoekresultaten voor plotten {#plot-results}
 
-Vervolgens plaatst u de zoekresultaten met de Python `plotly` bibliotheek:
+Vervolgens plaatst u de queryresultaten met de [!DNL Python] `plotly` bibliotheek:
 
 ```python
 import plotly.express as px
@@ -261,4 +261,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Volgende stappen
 
-Door dit document te lezen hebt u geleerd hoe u Data Distiller kunt gebruiken om gegevens van een Python-laptop te verkennen en te analyseren. De volgende stap bij het maken van functiepijpleidingen van Experience Platform naar aangepaste modellen in uw computerleeromgeving is: [engineeringfuncties voor het leren van machines](./feature-engineering.md).
+Door dit document te lezen, hebt u geleerd hoe u Data Distiller kunt gebruiken om gegevens van een [!DNL Python] -laptop. De volgende stap bij het maken van functiepijpleidingen van Experience Platform naar aangepaste modellen in uw computerleeromgeving is: [engineeringfuncties voor het leren van machines](./feature-engineering.md).

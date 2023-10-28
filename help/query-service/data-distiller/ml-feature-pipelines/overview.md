@@ -1,22 +1,22 @@
 ---
 title: Pijpleidingen met I/ML-functies
-description: Leer hoe u Data Distiller kunt gebruiken om uw computer leerleidingen te verrijken met functies die zijn afgeleid van Adobe Experience Platform-gegevens. Transformeer onbewerkte gegevens in functies en lever de functiegegevens om een model op te leiden of te scoren dat uw marketinggebruik ondersteunt.
-source-git-commit: f8bba17df9673973cb2792658282c8db972d30d6
+description: Leer hoe u Data Distiller kunt gebruiken om uw computerleerleidingen te verrijken met functies die zijn afgeleid van Adobe Experience Platform-gegevens. Transformeer onbewerkte gegevens in functies en lever de functiegegevens om een model op te leiden of te scoren dat uw marketinggebruik ondersteunt.
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '453'
 ht-degree: 1%
 
 ---
 
 # Pijpleidingen met I/ML-functies
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
 <!--  -->
 
-Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpijpleidingen te verrijken met hoogwaardige gegevens over klantervaring die in Adobe Experience Platform zijn verzameld en gekromd. Vanuit een Python-laptop in elke omgeving kunt u op interactieve wijze klantgegevens in het Experience Platform verkennen, functies van de gegevens definiëren en berekenen en de computerfuncties in uw computerleeromgeving lezen voor modellering.
+Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpijpleidingen te verrijken met hoogwaardige gegevens over klantervaring die in Adobe Experience Platform zijn verzameld en gekromd. Van een [!DNL Python] -laptop in elke omgeving, kunt u op interactieve wijze klantgegevens in het Experience Platform verkennen, functies van de gegevens definiëren en berekenen en de computerfuncties in uw computerleeromgeving lezen voor modellering.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpi
 
 Deze workflow vereist een goed begrip van de verschillende aspecten van Adobe Experience Platform. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
 
-- Procedure [API&#39;s van Experience Platforms verifiëren en openen](../../../landing/api-authentication.md)
+- Procedure [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md).
 - Sandboxen: [Op kenmerken gebaseerde toegangsbeheermachtigingen](../../../access-control/abac/overview.md) en hoe te om rollen tot stand te brengen en te beheren, evenals de gewenste middeltoestemmingen voor deze rollen toe te wijzen.
 - Gegevensbeheer: Hoe kan ik [labels voor gegevensgebruik toepassen op gegevenssets en velden, waarbij elk veld wordt ingedeeld](../../../data-governance/labels/overview.md) volgens het beleid inzake gegevensbeheer en het beleid inzake toegangscontrole.
 
@@ -40,16 +40,16 @@ Deze workflow vereist een goed begrip van de verschillende aspecten van Adobe Ex
 
 Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten achter het gebruiken van uw aangewezen machine het leren hulpmiddelen om douanemodellen te bouwen die uw marketing gebruiksgevallen steunen.
 
-In de documenten die in deze reeks handleidingen zijn opgenomen, worden de basisstappen beschreven voor het maken van functiepijpleidingen van Experience Platform naar aangepaste modellen in de leeromgeving van uw computer. U kunt nu een verbinding tot stand brengen tussen Data Distiller en uw Jupyter-laptop.
+In de documenten die in deze reeks handleidingen zijn opgenomen, worden de basisstappen beschreven voor het maken van functiepijpleidingen van Experience Platform naar aangepaste modellen in de leeromgeving van uw computer. U kunt nu een verbinding tot stand brengen tussen Data Distiller en uw [!DNL Jupyter Notebook].
 
-- [Verbinding maken met Data Distiller vanaf een Python-laptop](./establish-connection.md)
+- [Verbinding maken met Data Distiller via een [!DNL Python] notebook](./establish-connection.md)
 - [Gegevenssets verkennen en analyseren](./exploratory-analysis.md)
 - [Engineer-functies voor machinaal leren](./feature-engineering.md)
 - [Gegevensbestanden met functies exporteren](./export-data.md)
 
 ## Aanvullende bronnen
 
-- [aepp](https://github.com/adobe/aepp): een door de Adobe beheerde open-source Python-bibliotheek voor het indienen van aanvragen bij Data Distiller en andere diensten van Experience Platforms vanuit Python-code.
+- [aepp](https://github.com/adobe/aepp): een door de Adobe beheerde open-source [!DNL Python] bibliotheek voor het indienen van aanvragen bij Data Distiller en andere services van Experience Platforms van [!DNL Python] code.
 
 <!-- Old content below -->
 

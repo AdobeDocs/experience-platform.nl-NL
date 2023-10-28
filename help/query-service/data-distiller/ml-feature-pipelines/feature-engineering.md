@@ -1,9 +1,9 @@
 ---
 title: Functies van engineer voor machinaal leren
 description: Leer hoe u gegevens in Adobe Experience Platform omzet in functies of variabelen die door een model voor machinaal leren kunnen worden gebruikt. Met Data Distiller kunt u op schaal XML-functies berekenen en deze functies delen met uw computerleeromgeving.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1161'
 ht-degree: 13%
 
 ---
@@ -67,7 +67,7 @@ Aantal klassen: 50000
 
 ### Samengevoegde gebeurtenissen om functies voor ML te definiëren {#define-features}
 
-De volgende vraag voegt de gebeurtenissen in de dataset in zinvolle, numerieke eigenschappen samen die kunnen worden gebruikt om een aandrijvingsmodel te trainen:
+Met een aangewezen vraag kunt u de gebeurtenissen in de dataset in zinvolle, numerieke eigenschappen verzamelen die kunnen worden gebruikt om een aandrijvingsmodel te trainen. Voorbeelden van gebeurtenissen worden hieronder weergegeven:
 
 - **Aantal e-mails** die voor marketingdoeleinden zijn verzonden en door de gebruiker zijn ontvangen.
 - Gedeelte van deze e-mails die **geopend**.
@@ -83,6 +83,8 @@ De volgende vraag voegt de gebeurtenissen in de dataset in zinvolle, numerieke e
 - Het aantal minuten tussen twee voorstellingen waarmee interactie is opgetreden.
 - Aantal minuten tussen twee voorstellen die zijn afgewezen.
 - Aantal minuten tussen twee geselecteerde koppelingen.
+
+De volgende query voegt deze gebeurtenissen samen:
 
 +++Selecteren om voorbeeldquery weer te geven
 
