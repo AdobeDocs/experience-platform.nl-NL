@@ -2,7 +2,7 @@
 title: Een SFTP-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Een [!DNL SFTP] bronverbinding in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL SFTP] bronverbinding met de gebruikersinterface van Adobe Experience Platform.
+Deze zelfstudie bevat stappen om een [!DNL SFTP] bronverbinding met de gebruikersinterface van Adobe Experience Platform.
 
 ## Aan de slag
 
