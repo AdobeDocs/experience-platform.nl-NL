@@ -2,13 +2,13 @@
 title: Verbinding maken
 description: Moconnect is een platform voor klantbetrokkenheid dat klantgerichte interacties tussen consumenten en merken in real time mogelijk maakt.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
+exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Moengage] verbinding
 
@@ -150,4 +150,3 @@ Controleren of gegevens zijn geëxporteerd naar de [!DNL Moengage] doel, ga naar
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
 Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
-

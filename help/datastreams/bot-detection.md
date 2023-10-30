@@ -3,13 +3,13 @@ title: Beide detectie configureren voor gegevensstromen
 description: Leer hoe te om botopsporing voor gegevensstromen te vormen, om menselijk en onmenselijk verkeer te onderscheiden.
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1325'
 ht-degree: 0%
 
 ---
-
 
 # Beide detectie configureren voor gegevensstromen
 
@@ -176,4 +176,3 @@ De regel in onderstaande afbeelding geeft een verzoek aan dat van oorsprong is a
 Het verzoek is afkomstig van een van de twee IP-adressen, de `referer` header begint met `www.adobe.com`en de `sec-ch-ua-mobile` header geeft aan dat het verzoek afkomstig is van een desktopbrowser.
 
 ![Beeld van beide detectieregel op basis van meerdere voorwaarden.](assets/bot-detection/bot-detection-multiple.png)
-

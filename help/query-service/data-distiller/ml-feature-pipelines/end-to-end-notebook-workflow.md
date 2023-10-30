@@ -3,7 +3,8 @@ title: Workflow van begin tot einde voor toevoeging van AI/ML-gegevenspipet
 description: Gebruik cloudgebaseerde laptops voor computerleren om een training te maken en een populiteitsmodel te scoren dat abonnementconversies van Adobe Experience Platform-gegevens voorspelt.
 hide: true
 hidefromtoc: true
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%

@@ -2,7 +2,8 @@
 title: LinkIn Conversions API-gebeurtenis die extensie doorsturen
 description: Deze Adobe Experience Platform gebeurtenis die uitbreiding door:sturen staat u toe om de prestaties van uw LinkedIn marketing campagne te meten.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
+exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 0%

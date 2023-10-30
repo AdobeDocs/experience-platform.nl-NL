@@ -3,13 +3,13 @@ keywords: streaming, Qualtrict-doel
 title: Kwalitatieve automatisering
 description: Synchroniseer ervaring en operationele klantgegevens om personalisatie op schaal te ontgrendelen. Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe Experience Platform als input in de iD van de Ervaring van Qualtrics om uw klanten beter te begrijpen en gerichte outreach toe te laten om de hiaat te sluiten wanneer het aankomt op inzicht in bedoeling, emotie en ervaringsbestuurders.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 1%
 
 ---
-
 
 # Kwalitatieve automatisering
 

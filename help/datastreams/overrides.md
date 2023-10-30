@@ -1,10 +1,10 @@
 ---
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
-exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
+source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -18,14 +18,17 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
 1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](configure.md).
-2. Dan, moet u de met voeten treedt naar het Netwerk van de Rand of via het bevel van SDK van het Web of door SDK van het Web te gebruiken verzenden [tagextensie](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+2. Dan, moet u de met voeten treedt naar het Netwerk van de Rand op één van de volgende manieren verzenden:
+   * Via de `sendEvent` of `configure` [Web SDK](#send-overrides-web-sdk) opdrachten.
+   * Via de web SDK [tagextensie](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * Via de mobiele SDK [sendEvent-API](#send-overrides-mobile-sdk) vraag.
 
 Dit artikel verklaart het proces van de de configuratieopheffing van begin tot eind van de gegevensstroom voor elk type van gesteunde opheffing.
 
 >[!IMPORTANT]
 >
->Gegevensstroomoverschrijvingen worden alleen ondersteund voor [Web SDK](../edge/home.md) integratie. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) en [Server-API](../server-api/overview.md) Integraties bieden momenteel geen ondersteuning voor gegevensstroomoverschrijvingen.
-><br><br>
+>Gegevensstroomoverschrijvingen worden alleen ondersteund voor [Web SDK](../edge/home.md) en [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) integratie. [Server-API](../server-api/overview.md) Integraties bieden momenteel geen ondersteuning voor gegevensstroomoverschrijvingen.
+><br>
 >De overrides van DataStream zouden moeten worden gebruikt wanneer u verschillende gegevens nodig hebt die naar verschillende gegevensstromen worden verzonden. U moet geen gegevensstroomoverschrijvingen gebruiken voor gevallen waarin u persoonlijke gegevens wilt gebruiken of voor toestemmingsgegevens.
 
 ## Gebruiksscenario’s {#use-cases}
@@ -111,7 +114,7 @@ Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroomi
 
 U moet nu de containeroverschrijvingen voor id-synchronisatie hebben geconfigureerd. Nu kunt u [verzend de met voeten treedt naar het Netwerk van de Rand via het Web SDK](#send-overrides).
 
-## Verzend de overschrijvingen naar het Netwerk van de Rand via het Web SDK {#send-overrides}
+## Verzend de overschrijvingen naar het Netwerk van de Rand via het Web SDK {#send-overrides-web-sdk}
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ U moet nu de containeroverschrijvingen voor id-synchronisatie hebben geconfigure
 
 Na [configureren van gegevensstroomoverschrijvingen](#configure-overrides) in de UI van de Inzameling van Gegevens, kunt u de met voeten getreden naar het Netwerk van de Rand, via het Web SDK nu verzenden.
 
-Het verzenden van de overschrijvingen naar het Edge-netwerk via de SDK van het web is de tweede en laatste stap van het activeren van de configuratieoverschrijvingen van de gegevensstroom.
+Als u Web SDK gebruikt, verzendt het verzenden van de overschrijvingen naar het Netwerk van de Rand via `edgeConfigOverrides` bevel is de tweede en definitieve stap van het activeren van de configuratieoverschrijvingen van de gegevensstroom.
 
 De gegevensstroomconfiguratieoverschrijvingen worden verzonden naar het Netwerk van de Rand door `edgeConfigOverrides` Web SDK, opdracht. Met deze opdracht maakt u gegevensstroomoverschrijvingen die worden doorgegeven aan de [!DNL Edge Network] op de volgende opdracht, of, in het geval van de `configure` voor elke aanvraag.
 
@@ -135,7 +138,7 @@ Wanneer een configuratieopheffing met wordt verzonden `configure` bevel, is het 
 
 De opties globaal worden gespecificeerd kunnen door de configuratieoptie op individuele bevelen worden met voeten getreden.
 
-### Configuratieoverschrijvingen verzenden via de `sendEvent` command {#send-event}
+### Het verzenden van configuratieoverschrijvingen via het Web SDK `sendEvent` command {#send-event}
 
 In het onderstaande voorbeeld ziet u hoe een configuratieoverschrijving eruit kan zien op een `sendEvent` gebruiken.
 
@@ -149,7 +152,7 @@ alloy("sendEvent", {
     com_adobe_experience_platform: {
       datasets: {
         event: {
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleEventDatasetIdOverride"
         },
         profile: {
           datasetId: "www"
@@ -193,7 +196,7 @@ alloy("configure", {
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleProfileDatasetIdOverride"
         },
         "profile": { 
           datasetId: "www"
@@ -218,9 +221,168 @@ alloy("configure", {
 };
 ```
 
-### Payload-voorbeeld {#payload-example}
+## De overschrijvingen naar het Edge-netwerk verzenden via de mobiele SDK {#send-overrides-mobile-sdk}
 
-De bovenstaande voorbeelden genereren een [!DNL Edge Network] lading die als dit kijkt:
+Na [configureren van gegevensstroomoverschrijvingen](#configure-overrides) in de UI van de Inzameling van Gegevens, kunt u de overschrijvingen naar het Netwerk van de Rand, via Mobiele SDK nu verzenden.
+
+Als u de SDK voor mobiele apparaten gebruikt, kunt u de overschrijvingen via de `sendEvent` API is de tweede en laatste stap van het activeren van gegevensstroomconfiguratieoverschrijvingen.
+
+Voor meer informatie over het Experience Platform Mobile SDK, zie [Mobiele SDK-documentatie](https://developer.adobe.com/client-sdks/edge/edge-network/).
+
+### DataStream ID-overschrijving via Mobile SDK {#id-override-mobile}
+
+In de onderstaande voorbeelden ziet u hoe een gegevensstroom-id-overschrijving eruit zou kunnen zien op een mobiele SDK-integratie. Selecteer de tabbladen hieronder om de [!DNL iOS] en [!DNL Android] voorbeelden.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+In dit voorbeeld wordt getoond hoe een gegevensstroom-id-overschrijving eruit ziet in een mobiele SDK [!DNL iOS] integratie.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+In dit voorbeeld wordt getoond hoe een gegevensstroom-id-overschrijving eruit ziet in een mobiele SDK [!DNL Android] integratie.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### De configuratieopheffing van gegevensstroom via Mobiele SDK {#config-override-mobile}
+
+De voorbeelden tonen hieronder hoe een de configuratieopheffing van gegevensstroom op een Mobiele integratie van SDK kon kijken. Selecteer de tabbladen hieronder om de [!DNL iOS] en [!DNL Android] voorbeelden.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+In dit voorbeeld wordt getoond hoe een configuratieoverschrijving voor gegevensstroom eruit ziet in een mobiele SDK [!DNL iOS] integratie.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
+      ],
+      "profile": [
+        "datasetId": "SampleProfileDatasetIdOverride"
+      ],
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],  
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+In dit voorbeeld wordt getoond hoe een configuratieoverschrijving voor gegevensstroom eruit ziet in een mobiele SDK [!DNL Android] integratie.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride"),
+            "profile"
+            to mapOf("datasetId"
+                to "SampleProfileDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+## Payload-voorbeeld {#payload-example}
+
+De bovenstaande voorbeelden genereren een [!DNL Edge Network] lading gelijkend op hieronder.
 
 ```json
 {
@@ -229,7 +391,7 @@ De bovenstaande voorbeelden genereren een [!DNL Edge Network] lading die als dit
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
-            "datasetId": "MyOverrideDataset"
+            "datasetId": "SampleProfileDatasetIdOverride"
           },
           "profile": {
             "datasetId": "www"
@@ -252,13 +414,6 @@ De bovenstaande voorbeelden genereren een [!DNL Edge Network] lading die als dit
     },
     "state": {  }
   },
-  "events": [  ],
-  "query": {
-    "identity": {
-      "fetch": [
-        "ECID"
-      ]
-    }
-  }
+  "events": [  ]
 }
 ```
