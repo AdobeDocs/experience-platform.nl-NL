@@ -2,9 +2,9 @@
 title: Door de klant beheerde toetsen in Adobe Experience Platform
 description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in Adobe Experience Platform zijn opgeslagen.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecode
 >Gegevens in het Adobe Experience Platform-gegevenspeer en -profielarchief worden gecodeerd met CMK. Deze worden beschouwd als uw primaire gegevensopslag.
 
 Dit document biedt een overzicht op hoog niveau van het proces voor het inschakelen van de CMK-functie (Customer-managed keys) in Platform, en de vereiste informatie die nodig is om deze stappen te voltooien.
+
+>[!NOTE]
+>
+>Voor klanten van de Customer Journey Analytics gelieve de instructies in te volgen [Documentatie Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## Vereisten
 
