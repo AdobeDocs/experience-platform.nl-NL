@@ -1,7 +1,8 @@
 ---
 title: Door de klant beheerde toetsen instellen en configureren met behulp van de interface van het platform
 description: Leer hoe u uw CMK-app instelt met uw Azure-medewerker en uw coderingssleutel-id verzendt naar Adobe Experience Platform.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 0%

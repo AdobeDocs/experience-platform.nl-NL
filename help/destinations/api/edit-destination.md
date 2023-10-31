@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Doelverbindingen bewerken met de Flow Service API
 type: Tutorial
 description: Leer hoe u verschillende componenten van een doelverbinding kunt bewerken met de Flow Service API.
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -29,7 +30,7 @@ Voor deze zelfstudie moet u een geldige gegevensstroom-id hebben. Als u geen gel
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [Doelen](../home.md): [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met succes bij te werken met de [!DNL Flow Service] API.
 
@@ -39,13 +40,13 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -81,7 +82,7 @@ GET /flows/{FLOW_ID}
 
 **Verzoek**
 
-Het volgende verzoek wint informatie betreffende uw stroom ID terug.
+Met het volgende verzoek wordt informatie over uw flow-id opgehaald.
 
 ```shell
 curl -X GET \
@@ -182,7 +183,7 @@ Als u componenten van een doelverbinding wilt bijwerken, voert u een PATCH-verzo
 >
 >De `If-Match` header is required when making a PATCH request. De waarde voor deze header is de unieke versie van de doelverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
 >
-> Om de recentste versie van de etiketwaarde te krijgen, doe een verzoek van de GET aan `/targetConnections/{TARGET_CONNECTION_ID}` eindpunt, waarbij `{TARGET_CONNECTION_ID}` Dit is de doel-verbindings-id die u wilt bijwerken.
+> Als u de meest recente versie van de etag-waarde wilt ophalen, moet u een verzoek van de GET indienen bij de `/targetConnections/{TARGET_CONNECTION_ID}` eindpunt, waarbij `{TARGET_CONNECTION_ID}` Dit is de doel-verbindings-id die u wilt bijwerken.
 
 Hieronder staan enkele voorbeelden van het bijwerken van parameters in de specificaties van de doelverbinding voor verschillende typen doelen. Maar de algemene regel om parameters voor om het even welke bestemming bij te werken is als volgt:
 
@@ -232,7 +233,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings identiteitskaart
+Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings ID.
 
 ```json
 {
@@ -272,7 +273,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings identiteitskaart
+Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings ID.
 
 ```json
 {
@@ -314,7 +315,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings identiteitskaart
+Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek van de GET aan [!DNL Flow Service] API, terwijl het verstrekken van uw doel verbindings ID.
 
 ```json
 {
@@ -446,7 +447,7 @@ Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt labe
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van de Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 

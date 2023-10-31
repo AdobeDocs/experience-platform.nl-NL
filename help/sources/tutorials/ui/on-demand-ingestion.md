@@ -1,7 +1,8 @@
 ---
 title: On-demand-insluiting voor gegevensstromen van bronnen in UI
 description: Leer hoe te om gegevensstromen op bestelling voor uw bronverbindingen tot stand te brengen gebruikend het gebruikersinterface van het Experience Platform.
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 1%

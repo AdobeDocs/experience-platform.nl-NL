@@ -2,7 +2,8 @@
 title: Creeer een bronverbinding en dataflow voor de Handel van SAP gebruikend de Dienst API van de Stroom
 description: Leer hoe te om een bronverbinding en gegevensstroom tot stand te brengen om de gegevens van de Handel van SAP aan Experience Platform te brengen gebruikend de Dienst API van de Stroom.
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 0%
@@ -21,8 +22,8 @@ De volgende zelfstudie begeleidt u door de stappen om een [!DNL SAP Commerce] br
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL SAP Commerce] met de [!DNL Flow Service] API.
 
@@ -91,7 +92,7 @@ curl -X POST \
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
-| `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
+| `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
 | `auth.params.region` | De locatie van uw datacenter. De regio is aanwezig in de `url` en heeft een waarde vergelijkbaar met `eu10` of `us10`. Als de `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` u hebt `eu10`. |
 | `auth.params.clientId` | De waarde van `clientId` uit de servicesleutel. |
 | `auth.params.clientSecret` | De waarde van `clientSecret` uit de servicesleutel. |
@@ -125,7 +126,7 @@ Wanneer het uitvoeren van GET verzoeken om de het dossierstructuur en inhoud van
 | `{BASE_CONNECTION_ID}` | De id van de basisverbinding die in de vorige stap is gegenereerd. |
 | `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest`. |
 | `{OBJECT}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. Voor deze bron zou de waarde `json`. |
-| `fileType=json` | Het bestandstype van het bestand dat u naar het Platform wilt brengen. Momenteel `json` is het enige ondersteunde bestandstype. |
+| `fileType=json` | Het bestandstype van het bestand dat u naar Platform wilt verzenden. Momenteel `json` is het enige ondersteunde bestandstype. |
 | `{PREVIEW}` | Een booleaanse waarde die definieert of de inhoud van de verbinding voorvertoning ondersteunt. |
 | `{SOURCE_PARAMS}` | Bepaalt parameters voor het brondossier u aan Platform wilt brengen. Het geaccepteerde indelingstype ophalen voor `{SOURCE_PARAMS}`, moet u het volledige koord in base64 coderen. <br> [!DNL SAP Commerce] ondersteunt meerdere API&#39;s. Afhankelijk van het objecttype dat u gebruikt, geeft u een van de volgende waarden door: <ul><li>`customers`</li><li>`contacts`</li></ul> |
 
@@ -133,7 +134,7 @@ De [!DNL SAP Commerce] bron ondersteunt meerdere API&#39;s. Afhankelijk van het 
 
 >[!NOTE]
 >
->Sommige reactierecords zijn afgebroken voor een betere presentatie.
+>Sommige reactierecords zijn afgebroken om een betere presentatie mogelijk te maken.
 
 >[!BEGINTABS]
 
@@ -683,9 +684,9 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ### Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md#create-a-schema).
 
@@ -985,7 +986,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar het verzamelen van gegevens van [!DNL SAP Commerce] aan Platform is een gegevensstroom tot stand te brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzamelen van gegevens van [!DNL SAP Commerce] aan Platform moet een gegevensstroom creëren. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
 * [Doel-verbindings-id](#target-connection)

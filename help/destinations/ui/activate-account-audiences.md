@@ -5,9 +5,9 @@ description: Leer hoe u het publiek van een account activeert voor doelen
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -90,11 +90,11 @@ Bij het activeren van accountpubliek naar de **[!UICONTROL (Companies) LinkedIn 
 | Bronveld | Doelveld |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (selecteer dit veld in het dialoogvenster **[!UICONTROL Select Identity namespace]** weergave) |
+| `accountKey.sourceKey` | `primaryId` (selecteer dit veld in het dialoogvenster **[!UICONTROL Select Identity namespace]** weergeven, wanneer u de **[!UICONTROL Target Field]**). <br> ![Selecteer naamruimte voor identiteit die is gemarkeerd in de workflow om het publiek van de account naar de bestemming te activeren.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selecteer naamruimte voor identiteit die is gemarkeerd in de workflow om het publiek van de account naar de bestemming te activeren."){width="100" zoomable="yes"} |
 
 ### Handhaving van gegevensbeheer {#data-governance-enforcement}
 
-[Goedkeuring van het beleid](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wordt momenteel niet ondersteund bij het activeren van accountpubliek naar doelen. In de revisiestap van de activeringsworkflow kunt u een gegraveerd besturingselement zien voor **[!UICONTROL View applicable consent policies]**.
+De toestemming wordt afgedwongen op het persoon- of profielniveau voor *klanten en potentiële doelgroepen*. Daarom  [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wordt momenteel niet ondersteund bij het activeren van accountpubliek naar doelen. In de revisiestap van de activeringsworkflow kunt u een gegraveerd besturingselement zien voor **[!UICONTROL View applicable consent policies]**.
 
 ![De stap van het overzicht van de workflow voor het activeren van accountpubliek met de controle voor het afdwingen van toestemming is uitgeschakeld.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

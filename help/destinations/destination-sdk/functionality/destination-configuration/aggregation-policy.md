@@ -1,13 +1,13 @@
 ---
 description: Leer hoe te opstelling een samenvoegingsbeleid om te bepalen hoe de verzoeken van HTTP aan uw bestemming zouden moeten worden gegroepeerd en worden gegroepeerd.
 title: Samenvoegingsbeleid
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 1%
 
 ---
-
 
 # Samenvoegingsbeleid
 
@@ -60,7 +60,7 @@ In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `aggregationType` | Tekenreeks | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-aanroep. <br><br>Deze waarde wijst op het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou het Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br><br> Als uw server niet meerdere gebruikers per aanvraag accepteert, stelt u deze waarde in op `1`. |
+| `bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-aanroep. <br><br>Deze waarde wijst op het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br><br> Als uw server niet meerdere gebruikers per aanvraag accepteert, stelt u deze waarde in op `1`. |
 | `bestEffortAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Deze markering instellen op `true` als uw server slechts één identiteit per vraag goedkeurt, voor een bepaalde identiteitsnaamruimte. |
 
 {style="table-layout:auto"}

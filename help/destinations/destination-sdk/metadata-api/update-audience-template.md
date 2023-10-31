@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een publiekssjabloon door Adobe Experience Platform Destination SDK bij te werken.
 title: Een publiekssjabloon bijwerken
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
 
 ---
-
 
 # Een publiekssjabloon bijwerken
 
@@ -31,7 +31,7 @@ Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor
 
 U kunt een [bestaand](create-audience-template.md) publiekssjabloon door een `PUT` verzoek aan de `/authoring/audience-templates` eindpunt met de bijgewerkte nuttige lading.
 
-Een bestaande publiekssjabloon en de bijbehorende sjabloon opvragen `{INSTANCE_ID}`, raadpleegt u het artikel over [ophalen van een publiekssjabloon](retrieve-audience-template.md).
+Een bestaande publiekssjabloon en de bijbehorende sjabloon opvragen `{INSTANCE_ID}`, zie het artikel over [ophalen van een publiekssjabloon](retrieve-audience-template.md).
 
 **API-indeling**
 
@@ -153,7 +153,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw bijgewerkte
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 

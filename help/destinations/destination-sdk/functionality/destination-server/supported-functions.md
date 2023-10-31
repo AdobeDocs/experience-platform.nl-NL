@@ -1,19 +1,19 @@
 ---
 description: De Destination SDK van het Experience Platform gebruikt de malplaatjes van de Kiezelaar, toestaand u om de gegevens die van Experience Platform worden uitgevoerd in het formaat om te zetten dat door uw bestemming wordt vereist.
 title: Ondersteunde transformatiefuncties in Destination SDK
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 1%
 
 ---
 
-
 # Ondersteunde transformatiefuncties in Destination SDK
 
 Experience Platform-Destination SDK gebruikt [[!DNL Pebble] sjablonen](https://pebbletemplates.io/), zodat u de uit Experience Platform geëxporteerde gegevens kunt omzetten in de indeling die voor uw bestemming vereist is.
 
-Het Experience Platform [!DNL Pebble] de implementatie is gewijzigd, in vergelijking met de versie van de box buiten de [!DNL Pebble]. Naast de functies die buiten de box worden geleverd door [!DNL Pebble], heeft Adobe enkele extra functies gemaakt die u kunt gebruiken met Destination SDK.
+Het Experience Platform [!DNL Pebble] de implementatie is gewijzigd, in vergelijking met de versie van de box buiten de verpakking die wordt geleverd door [!DNL Pebble]. Naast de functies die buiten de box worden geleverd door [!DNL Pebble], heeft de Adobe enkele extra functies gemaakt die u kunt gebruiken met Destination SDK.
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ Het Experience Platform [!DNL Pebble] de implementatie is gewijzigd, in vergelij
 
 ## Waar wordt het gebruikt? {#where-to-use}
 
-Gebruik de ondersteunde functies die verderop op op deze pagina staan wanneer [een sjabloon voor berichttransformatie maken](../../testing-api/streaming-destinations/create-template.md) voor de gegevens die uit Experience Platform naar uw bestemming worden geëxporteerd.
+Gebruik de ondersteunde functies die verderop op op deze pagina worden vermeld wanneer [een sjabloon voor berichttransformatie maken](../../testing-api/streaming-destinations/create-template.md) voor de gegevens die uit Experience Platform naar uw bestemming worden uitgevoerd.
 
 De sjabloon voor berichttransformatie wordt gebruikt in het dialoogvenster [doelserverconfiguratie](templating-specs.md) voor streamingdoelen.
 
@@ -45,11 +45,11 @@ Van de [!DNL Pebble] tagsectie, alleen Destination SDK ondersteunt:
 >Gebruiken `for` is anders wanneer u doorloopt *array* of *map* elementen in een sjabloon. Wanneer u een array doorloopt, kunt u het element rechtstreeks ophalen. Wanneer u door een kaart herhaalt, krijgt u elke kaartingang, die een zeer belangrijk-waardepaar heeft.
 >
 > * Denk bij een voorbeeld van een arrayelement aan de identiteiten in een [identityMap](message-format.md#identities) naamruimte, waar u elementen zoals `identityMap.gaid`, `identityMap.email`, of een soortgelijke situatie.
-> * Denk aan een voorbeeld van een structuurelement over [segmentLidmaatschap](message-format.md#segment-membership).
+> * Denk aan een voorbeeld van een structuurelement [segmentLidmaatschap](message-format.md#segment-membership).
 
 Van de [!DNL Pebble] filtersectie, Destination SDK ondersteunt alle functies. In het onderstaande voorbeeld wordt getoond hoe de `date` functie kan binnen Destination SDK worden gebruikt.
 
-Van de [!DNL Pebble] functies, sectie, Adobe doet *niet* de [bereik](https://pebbletemplates.io/wiki/function/range/) functie.
+Van de [!DNL Pebble] functies, sectie, Adobe doet dit *niet* de [bereik](https://pebbletemplates.io/wiki/function/range/) functie.
 
 ## Voorbeeld van hoe het `date` function wordt gebruikt {#date-function}
 

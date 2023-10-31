@@ -2,8 +2,8 @@
 title: Een streamingbronverbinding en gegevensstroom maken voor het uitwisselen van gegevens met behulp van de Flow Service API
 description: Leer hoe u een streamingbronverbinding en gegevensstroom maakt voor Shopify-gegevens met behulp van de Flow Service API.
 badge: Beta
-exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -16,22 +16,22 @@ ht-degree: 0%
 >
 >De [!DNL Shopify] streamingbron is in bèta. Lees de [overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
-De volgende zelfstudie biedt stappen voor het maken van een streamingbronverbinding en gegevensstroom naar streamgegevens van [[!DNL Shopify]](https://www.shopify.com/) naar Adobe Experience Platform met behulp van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+De volgende zelfstudie biedt stappen voor het maken van een streamingbronverbinding en gegevensstroom naar streamgegevens van [[!DNL Shopify]](https://www.shopify.com/) naar Adobe Experience Platform met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag {#getting-started}
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
-## Stream [!DNL Shopify] gegevens naar Platform met behulp van de Flow Service API
+## Streamen [!DNL Shopify] gegevens aan Platform die de Dienst API van de Stroom gebruiken
 
-Hieronder worden de stappen beschreven die u moet uitvoeren om een bronverbinding en een gegevensstroom te maken om uw [!DNL Shopify] gegevens naar Platform.
+Hieronder worden de stappen beschreven die u moet uitvoeren om een bronverbinding en een gegevensstroom te maken om uw [!DNL Shopify] gegevens naar platform.
 
 ### Een bronverbinding maken {#source-connection}
 
@@ -45,7 +45,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een bronverbinding gemaakt voor *UURSOURCE*:
+Met de volgende aanvraag wordt een bronverbinding gemaakt voor *UURBRON*:
 
 ```shell
 curl -X POST \
@@ -78,7 +78,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -89,9 +89,9 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ### Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md).
 
@@ -99,7 +99,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../../../catalog/api/create-dataset.md).
 
 ### Een doelverbinding maken {#target-connection}
 
@@ -152,7 +152,7 @@ curl -X POST \
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is, aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met het data-meer. Deze vaste ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Het formaat van de [!DNL Shopify] gegevens die u naar het Platform wilt brengen. |
+| `data.format` | Het formaat van de [!DNL Shopify] gegevens die u naar Platform wilt brengen. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 
@@ -212,7 +212,7 @@ curl -X POST \
 | --- | --- |
 | `xdmSchema` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
 | `mappings.destinationXdmPath` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
-| `mappings.sourceAttribute` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
+| `mappings.sourceAttribute` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.identity` | Een booleaanse waarde die aangeeft of de toewijzingsset wordt gemarkeerd voor [!DNL Identity Service]. |
 
 **Antwoord**
@@ -232,10 +232,10 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL Shopify] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzamelen van gegevens van [!DNL Shopify] aan Platform moet een gegevensstroom creëren. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
-* [Doelverbinding-id](#target-connection)
+* [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
@@ -285,7 +285,7 @@ curl -X POST \
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is, aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
 | `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `e77fde5a-22a8-11ed-861d-0242ac120002`. |
-| `flowSpec.version` | De corresponderende versie van de flow specification-id. Deze waarde wordt standaard ingesteld op `1.0`. |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde wordt standaard ingesteld op `1.0`. |
 | `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
@@ -649,7 +649,7 @@ Een succesvolle reactie keert informatie over uw gegevensstroom, met inbegrip va
 }
 ```
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 
@@ -659,7 +659,7 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ### Uw gegevensstroom bijwerken
 
-Werk de details van uw gegevensstroom, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij, door een verzoek van de PATCH aan de `/flows` van het [!DNL Flow Service] API, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke gegevens van uw gegevensstroom opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [bronnen bijwerken met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Werk de details van uw gegevensstroom, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij, door een verzoek van de PATCH aan de `/flows` het eindpunt van de [!DNL Flow Service] API, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke gegevens van uw gegevensstroom opgeven `etag` in de `If-Match` header. Lees de handleiding voor volledige API-voorbeelden op [bronnen bijwerken met behulp van de API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Uw account bijwerken
 

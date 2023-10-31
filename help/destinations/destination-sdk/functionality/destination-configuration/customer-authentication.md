@@ -1,13 +1,13 @@
 ---
 description: Leer hoe te opstelling een authentificatiemechanisme voor uw bestemming en krijgt inzicht in wat de gebruikers in UI afhankelijk van de authentificatiemethode zullen zien u selecteert.
 title: Configuratie van klantverificatie
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
 
 ---
-
 
 # Configuratie van klantverificatie
 
@@ -28,7 +28,7 @@ Wanneer [een doel maken](../../authoring-api/destination-configuration/create-de
 * Voor bestemmingen die [waarmerking](#bearer), moeten gebruikers een token aan toonder leveren.
 * Voor bestemmingen die [OAuth2-verificatie](#oauth2), worden de gebruikers opnieuw gericht aan de login van uw bestemming pagina waar zij login met hun geloofsbrieven kunnen.
 * Voor [Amazon S3](#s3) doelen, gebruikers moeten hun [!DNL Amazon S3] toegangssleutel en geheime sleutel.
-* Voor [Azure Blob](#blob) doelen, gebruikers moeten hun [!DNL Azure Blob] verbindingstekenreeks.
+* Voor [Azure Blob](#blob) doelen, gebruikers moeten hun [!DNL Azure Blob] verbindingsreeks.
 
 U kunt de details van de klantenauthentificatie via `/authoring/destinations` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -77,7 +77,7 @@ Wanneer u het basisidentificatietype vormt, moeten de gebruikers een gebruikersb
 
 ![UI-weergave met basisverificatie](../../assets/functionality/destination-configuration/basic-authentication-ui.png)
 
-Aan opstellings basisauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` de `/destinations` eindpunt zoals hieronder getoond:
+Aan opstellings basisauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -93,7 +93,7 @@ Wanneer u het dragerauthentificatietype vormt, worden de gebruikers vereist om h
 
 ![UI-weergave met dragerverificatie](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
 
-Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` de `/destinations` eindpunt zoals hieronder getoond:
+Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -105,11 +105,11 @@ Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuth
 
 ## OAuth 2-verificatie {#oauth2}
 
-Gebruikers selecteren **[!UICONTROL Connect to destination]** om de OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de bestemming van het publiek van de Douane van Twitter teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees specifiek [Destination SDK OAuth 2-verificatiepagina](oauth2-authentication.md).
+Gebruikers selecteren **[!UICONTROL Connect to destination]** om OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de bestemming van het publiek van de Twitter van de Douane teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees specifiek [Destination SDK OAuth 2-verificatiepagina](oauth2-authentication.md).
 
 ![UI-weergave met OAuth 2-verificatie](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
-Aan opstelling [!DNL OAuth2] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` de `/destinations` eindpunt zoals hieronder getoond:
+Aan opstelling [!DNL OAuth2] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -127,7 +127,7 @@ Wanneer u het Amazon S3 authentificatietype vormt, worden de gebruikers vereist 
 
 ![UI die met S3 authentificatie teruggeeft](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
 
-Aan opstelling [!DNL Amazon S3] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` de `/destinations` eindpunt zoals hieronder getoond:
+Aan opstelling [!DNL Amazon S3] de authentificatie voor uw bestemming, vormt `customerAuthenticationConfigurations` via de `/destinations` eindpunt zoals hieronder getoond:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -237,7 +237,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Ondersteunde toewijzingsconfiguraties](supported-mapping-configurations.md)
 * [Levering bestemming](destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](audience-metadata-configuration.md)

@@ -1,13 +1,13 @@
 ---
 description: Leer hoe te om de montages van de dossieruitvoer voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Batchconfiguratie
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 3%
 
 ---
-
 
 # Batchconfiguratie {#batch-configuration}
 
@@ -16,9 +16,9 @@ Gebruik de opties voor batchconfiguratie in Destination SDK om gebruikers toe te
 Wanneer u op dossier-gebaseerde bestemmingen door Destination SDK creeert, kunt u standaarddossier het noemen en de uitvoerprogramma&#39;s vormen, of u kunt gebruikers de optie geven om deze montages van het Platform UI te vormen. U kunt bijvoorbeeld gedragingen configureren, zoals:
 
 * Specifieke informatie in de bestandsnaam opnemen, zoals gebruikers-id&#39;s, doel-id&#39;s of aangepaste informatie.
-* Gebruikers toestaan de bestandsnaam aan te passen vanuit de gebruikersinterface van het Platform.
+* Gebruikers toestaan de bestandsnaamgeving aan te passen vanuit de gebruikersinterface van het platform.
 * Configureer het exporteren van bestanden zodat deze bij ingestelde tijdintervallen kunnen optreden.
-* Definieer welke opties voor het aanpassen van bestandsnamen en exportschema&#39;s gebruikers kunnen zien in de gebruikersinterface van het Platform.
+* Definieer welke opties voor het aanpassen van bestandsnamen en exportschema&#39;s gebruikers kunnen zien in de interface van het platform.
 
 De de configuratiemontages van de partij maken deel uit van de bestemmingsconfiguratie voor op dossier-gebaseerde bestemmingen.
 
@@ -113,9 +113,9 @@ Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geë
 | Macro | UI-label | Beschrijving | Voorbeeld |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destination] | Doelnaam in de gebruikersinterface. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door Platforms gegenereerde gebruikers-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door het platform gegenereerde gebruikers-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL Segment Name] | Door gebruiker gedefinieerde publieksnaam | VIP abonnee |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Unieke, door Platform gegenereerde id van de doelinstantie | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Unieke, door het platform gegenereerde id van de doelinstantie | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Door gebruiker gedefinieerde naam van de doelinstantie. | Mijn advertentiebestemming van 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Naam van de klantenorganisatie in Adobe Experience Platform. | Naam van mijn organisatie |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Naam van de sandbox die de klant gebruikt. | prod |

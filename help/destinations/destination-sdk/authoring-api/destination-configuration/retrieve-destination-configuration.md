@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestemmingsconfiguratie door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een doelconfiguratie ophalen
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
 
 ---
-
 
 # Een doelconfiguratie ophalen
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-Een succesvolle reactie keert status 200 van HTTP met een lijst van bestemmingsconfiguraties terug die u toegang tot hebt, die op wordt gebaseerd [!DNL IMS Org ID] en de naam van de sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één doelconfiguratie.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van bestemmingsconfiguraties terug die u toegang tot hebt, die op wordt gebaseerd [!DNL IMS Org ID] en naam van sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één doelconfiguratie.
 
 ```json
 {
@@ -306,7 +306,7 @@ Een succesvolle reactie keert HTTP status 200 met de details van de bestemmingsc
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 

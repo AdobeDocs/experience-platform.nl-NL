@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Afspeelboekinstanties maken, delen en opnieuw gebruiken
 description: Leer hoe u playbook-instanties kunt maken, delen en opnieuw gebruiken om uw marketinggebruikskwestie te voltooien.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
-
 
 # (bètaversie) Afspeelboekinstanties maken, delen en opnieuw gebruiken
 
@@ -29,11 +29,11 @@ Deze actie genereert verschillende elementen die u kunt gebruiken om het gebruik
 
 ![Weergave van gegenereerde elementen afspelen nadat deze is ingeschakeld.](/help/use-case-playbooks/assets/playbooks/ui-guide/play-view.png)
 
-### Gebruik de configuratiecontroles om instantienamen en beschrijvingen uit te geven {#edit-instance-metadata}
+### Gebruik de configuratiebesturingselementen om instantienamen en beschrijvingen te bewerken {#edit-instance-metadata}
 
 Nadat u een instantie hebt gemaakt op basis van een afspeelboek, kunt u deze personaliseren om deze te onderscheiden van andere instanties die zijn gemaakt op basis van hetzelfde afspeelboek. Selecteer de configuratiecontrole zoals hieronder getoond. Bewerk de naam, beschrijving en notities en selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![Naam en beschrijving van een instantie bewerken.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
+![Geef naam en beschrijving van een instantie uit.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
 ### De gegenereerde elementen begrijpen {#understand-assets}
 
@@ -72,10 +72,10 @@ Door veelvoudige instanties van zelfde playbook te creëren, kunt u het zelfde g
 
 U kunt de gegenereerde instantie en elementen delen met andere teamleden. Hiervoor kopieert u de URL-koppeling van de browser en deelt u deze met uw team om een overzicht van de gegenereerde elementen te krijgen.
 
-![URL die is gemarkeerd in een weergave voor afspeelboeken met gebruiksscenario&#39;s.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+![URL die is gemarkeerd in een weergave voor afspeelboeken met gebruikerscase.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
 
 ## Volgende stappen {#next-steps}
 
 Door deze handleiding te lezen en de handleiding over het ontdekken van het juiste afspeelboek voor u, weet u nu hoe u de verschillende gedeelten van een afspeelboek kunt interpreteren en hoe u de elementen kunt gebruiken die worden gegenereerd nadat u een instantie van een afspeelboek hebt gemaakt.
 
-Vervolgens kunt u door de catalogus met afspeelboeken bladeren om de juiste afspeellijst voor uw gebruik te vinden en de [gids voor problemen](/help/use-case-playbooks/playbooks/troubleshooting.md) als er problemen optreden.
+Vervolgens kunt u door de catalogus met afspeelboeken bladeren naar de juiste afspeellijst voor uw gebruik en de [gids voor problemen](/help/use-case-playbooks/playbooks/troubleshooting.md) als er problemen optreden.

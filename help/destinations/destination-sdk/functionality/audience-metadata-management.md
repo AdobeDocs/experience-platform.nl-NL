@@ -1,19 +1,19 @@
 ---
 description: Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u het malplaatje bepaalt, test en voorlegt, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 title: Metagegevensbeheer voor het publiek
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 0%
 
 ---
 
-
 # Metagegevensbeheer voor het publiek
 
 Gebruik publieksmetagegevenssjablonen om publiek in uw bestemming programmatisch te maken, bij te werken of te verwijderen. Adobe verstrekt een verlengbaar malplaatje van publieksmeta-gegevens, dat u kunt vormen gebaseerd op de specificaties van uw marketing API. Nadat u bepaalt, test, en voorlegt de configuratie, zal het door Adobe worden gebruikt om de API vraag aan uw bestemming te structureren.
 
-U kunt de in dit document beschreven functionaliteit configureren met de `/authoring/audience-templates` API-eindpunt. Lezen [een sjabloon voor metagegevens maken](../metadata-api/create-audience-template.md) voor een volledige lijst van verrichtingen kunt u op het eindpunt uitvoeren.
+U kunt de in dit document beschreven functionaliteit configureren met de opdracht `/authoring/audience-templates` API-eindpunt. Lezen [een sjabloon voor metagegevens maken](../metadata-api/create-audience-template.md) voor een volledige lijst van verrichtingen kunt u op het eindpunt uitvoeren.
 
 ## Wanneer om het het beheerseindpunt van publiekmeta-gegevens te gebruiken {#when-to-use}
 
@@ -43,26 +43,26 @@ Als uw bestemmingssysteem de identiteitskaart van het publiek van het Experience
 
 ## Algemene en uitbreidbare publiekssjabloon {#generic-and-extensible}
 
-Om de hierboven vermelde gebruiksgevallen te ondersteunen, biedt Adobe u een algemene sjabloon die kan worden aangepast aan uw API-specificaties.
+Ter ondersteuning van de hierboven vermelde gebruiksgevallen beschikt de Adobe over een algemene sjabloon die kan worden aangepast aan uw API-specificaties.
 
-U kunt de generieke sjabloon gebruiken [een nieuwe publiekssjabloon maken](../metadata-api/create-audience-template.md) als uw API ondersteuning biedt voor:
+U kunt de generieke sjabloon gebruiken om [een nieuwe publiekssjabloon maken](../metadata-api/create-audience-template.md) als uw API ondersteuning biedt voor:
 
 * De HTTP-methoden: POST, GET, PUT, DELETE, PATCH
-* De verificatietypen: OAuth 1, OAuth 2 met verfrist teken, OAuth 2 met dragertoken
-* De functies: een publiek maken, een publiek bijwerken, een publiek opvragen, een publiek verwijderen, referenties valideren
+* De authentificatietypen: OAuth 1, OAuth 2 met verfrist teken, OAuth 2 met dragertoken
+* De functies: een publiek maken, een publiek bijwerken, een publiek krijgen, een publiek verwijderen, referenties valideren
 
-Het technische team van Adobe kan met u werken om het generische malplaatje met douanevelden uit te breiden als uw gebruiksgevallen het vereist.
+Het technische team van de Adobe kan met u werken om het generische malplaatje met douanevelden uit te breiden als uw gebruiksgevallen het vereisen.
 
 ## Configuratievoorbeelden {#configuration-examples}
 
 Deze sectie omvat drie voorbeelden van generische configuraties van publieksmeta-gegevens, voor uw verwijzing, samen met beschrijvingen van de belangrijkste secties van de configuratie. U ziet dat de URL, kopteksten, verzoeken en antwoorden verschillen tussen de drie voorbeeldconfiguraties. Dit komt door de verschillende specificaties van de marketing-API van de drie voorbeeldplatforms.
 
-Merk op dat in sommige voorbeelden macrogebieden zoals `{{authData.accessToken}}` of `{{segment.name}}` worden gebruikt in de URL, en in andere voorbeelden worden deze gebruikt in de kopballen of het verzoeklichaam. Het hangt echt af van uw marketing API specificaties.
+Merk op dat in sommige voorbeelden macrogebieden zoals `{{authData.accessToken}}` of `{{segment.name}}` worden gebruikt in de URL, en in andere voorbeelden worden deze gebruikt in de kopballen of het verzoeklichaam. Dit hangt echt af van uw API-specificaties voor marketing.
 
 | Sjabloonsectie | Beschrijving |
 |--- |--- |
 | `create` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar uw API te maken, om programmatisch segmenten/publiek in uw platform te maken en de informatie weer te synchroniseren naar Adobe Experience Platform. |
-| `update` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar uw API uit te voeren, segmenten/publiek in uw platform programmatisch bij te werken en de informatie weer te synchroniseren naar Adobe Experience Platform. |
+| `update` | Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar uw API uit te voeren, om segmenten/publiek in uw platform programmatisch bij te werken en de informatie weer te synchroniseren naar Adobe Experience Platform. |
 | `delete` | Omvat alle vereiste componenten (URL, methode HTTP, kopballen, verzoek en reactielichaam) om een vraag van HTTP aan uw API te maken, segmenten/publiek in uw platform programmatically te schrappen. |
 | `validate` | Voert bevestigingen voor om het even welke gebieden in de malplaatjeconfiguratie in werking alvorens een vraag aan partner API te maken. U kunt bijvoorbeeld controleren of de account-id van de gebruiker correct is ingevoerd. |
 | `notify` | Is alleen van toepassing op doelen die op bestanden zijn gebaseerd. Bevat alle vereiste componenten (URL, HTTP-methode, headers, request en response body) om een HTTP-aanroep naar de API uit te voeren, zodat u op de hoogte wordt gebracht van het exporteren van bestanden. |

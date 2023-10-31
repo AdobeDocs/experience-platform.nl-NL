@@ -2,13 +2,13 @@
 title: Prospectieprofielen
 description: Leer hoe te om perspectiefprofielen tot stand te brengen en te gebruiken om informatie over onbekende klanten te verzamelen gebruikend derdeinformatie.
 type: Documentation
-source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
+exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 1%
 
 ---
-
 
 # Prospectieprofielen
 

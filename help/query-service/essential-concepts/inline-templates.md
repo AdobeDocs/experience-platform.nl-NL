@@ -1,7 +1,8 @@
 ---
 title: Inline sjablonen
 description: Leer hoe te om veelvoudige voorwaarden in talrijke vragen met gealigneerde malplaatjes opnieuw te gebruiken.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 1%
@@ -10,7 +11,7 @@ ht-degree: 1%
 
 # Inline-sjablonen
 
-Met inlinesjablonen kunt u meerdere voorwaarden hergebruiken in een groot aantal query&#39;s. U kunt criteria in een malplaatje opslaan en dan hen opnieuw gebruiken in veelvoudige vragen. De herbruikbare SQL malplaatjes verminderen ontwikkelingsinspanningen en ook het risico van fouten van het kopiëren van lange verklaringen tussen vragen. Met gealigneerde malplaatjes, kunt u veranderingen in één plaats aanbrengen en hebben die veranderingen in om het even welke vraag weerspiegelen die naar dit malplaatje verwijst.
+Met inlinesjablonen kunt u meerdere voorwaarden hergebruiken in meerdere query&#39;s. U kunt criteria in een malplaatje opslaan en dan hen opnieuw gebruiken in veelvoudige vragen. De herbruikbare SQL malplaatjes verminderen ontwikkelingsinspanningen en ook het risico van fouten van het kopiëren van lange verklaringen tussen vragen. Met gealigneerde malplaatjes, kunt u veranderingen in één plaats aanbrengen en hebben die veranderingen in om het even welke vraag weerspiegelen die naar dit malplaatje verwijst.
 
 Dit document behandelt het gebruik en de beperkingen van gealigneerde malplaatjes binnen de Redacteur van de Vraag.
 

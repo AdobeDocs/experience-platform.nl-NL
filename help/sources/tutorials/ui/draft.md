@@ -1,7 +1,8 @@
 ---
 title: Conceptgegevens in de gebruikersinterface
 description: Leer hoe u uw gegevens als concept opslaat en deze later publiceert wanneer u de werkruimte Bronnen gebruikt.
-source-git-commit: 5fc433f603c6e83c621df0f4a1d0aa27e18cd582
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
@@ -18,11 +19,11 @@ Dit document bevat stappen voor het opslaan van uw gegevensstromen wanneer u de 
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
 
 ## Een gegevensstroom opslaan als concept
 
-U kunt de voortgang van het maken van de gegevensstroom op elk gewenst moment pauzeren nadat u de gegevens hebt geselecteerd die u in het Platform wilt plaatsen.
+U kunt de voortgang van het maken van de gegevensstroom op elk gewenst moment pauzeren nadat u de gegevens hebt geselecteerd die u wilt overbrengen naar het platform.
 
 Als u bijvoorbeeld de voortgang wilt opslaan tijdens de stap met de details voor de gegevensstroom, selecteert u **[!UICONTROL Save as draft]**.
 
@@ -70,11 +71,11 @@ Als u de configuratie van de toewijzing hebt voltooid, selecteert u **[!UICONTRO
 
 ![De toewijzingsstap van de workflow voor bronnen.](../../images/tutorials/draft/mapping.png)
 
-Gebruik de [!UICONTROL Scheduling] stap om een innameprogramma voor uw gegevensstroom te vestigen. U kunt de innamefrequentie instellen op `once`, `minute`, `hour`, `day`, of `week`. Als u klaar bent, selecteert u **[!UICONTROL Next]** om verder te gaan.
+Gebruik de [!UICONTROL Scheduling] stap om een innameprogramma voor uw gegevensstroom te vestigen. U kunt de innamefrequentie instellen op `once`, `minute`, `hour`, `day`, of `week`. Selecteer **[!UICONTROL Next]** om verder te gaan.
 
 ![De planningsstap van de bronworkflow.](../../images/tutorials/draft/scheduling.png)
 
-Tot slot herzie de details van uw gegevensstroom en selecteer dan **[!UICONTROL Finish]** om uw concept te publiceren.
+Controleer ten slotte de details van uw gegevensstroom en selecteer **[!UICONTROL Finish]** uw concept publiceren.
 
 ![De revisiestap van de workflow voor bronnen.](../../images/tutorials/draft/review.png)
 

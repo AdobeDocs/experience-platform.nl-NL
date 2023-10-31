@@ -2,7 +2,8 @@
 title: Overzicht van Snowflake
 description: Meer informatie over Snowflake voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: fe28840fab46fadb82f1a37f972084057a00af44
+exl-id: abddf0c4-3d4c-4f66-a6e0-c10b54ea3430
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -17,11 +18,11 @@ ht-degree: 0%
 
 ![Een diagram dat de [!DNL Snowflake] gegevensarchitectuur.](../../../images/extensions/server/snowflake/snowflake.png)
 
-## Onze Snowflake-integratie
+## Onze integratie van Snowflaken
 
 Een Snowflake-account kan worden gehost op een van de volgende cloud-platforms:
 
-- [Amazon Web Services ([!DNL AWS])](https://aws.amazon.com/) - [!DNL AWS] is een platform voor cloud computing dat een groot aantal verschillende services biedt, zoals gedistribueerde computers, databaseopslag, levering van inhoud en SAA-integratieservices (software-as-a-service) voor relatiebeheer voor klanten (CRM) en planning van bedrijfsmiddelen (ERP).
+- [AMAZON WEB SERVICES ([!DNL AWS])](https://aws.amazon.com/) - [!DNL AWS] is een platform voor cloud computing dat een groot aantal verschillende services biedt, zoals gedistribueerde computers, databaseopslag, levering van inhoud en SAA-integratieservices (software-as-a-service) voor relatiebeheer voor klanten (CRM) en planning van bedrijfsmiddelen (ERP).
 
 Zie de [[!DNL AWS] overzicht](../aws/overview.md) voor meer informatie bij het installeren van de uitbreiding en het vormen gebeurtenis die regels door:sturen.
 

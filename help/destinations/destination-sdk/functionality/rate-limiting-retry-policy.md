@@ -1,7 +1,8 @@
 ---
 description: Leer hoe het Experience Platform verschillende soorten fouten behandelt die door het stromen bestemmingen zijn teruggekeerd en hoe het opnieuw probeert om gegevens naar het bestemmingsplatform te verzenden.
 title: Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen die met Destination SDK worden gebouwd
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -25,15 +26,15 @@ In het geval van bestemmingsplatforms opstelling met configureerbare samenvoegin
 * Fouten waarbij het Experience Platform de gegevens opnieuw naar het platform probeert te verzenden:
    * HTTP-responscodes 420 en 429
    * HTTP-responscodes groter dan 500
-* Fouten bij Experience Platform *niet* probeer de gegevens opnieuw naar uw platform te verzenden: alle andere die door uw platform worden teruggegeven
+* Fouten bij Experience Platform *niet* probeer de gegevens opnieuw naar uw platform te verzenden: alle andere gegevens die door uw platform worden geretourneerd
 
 ### beschreven procedure voor opnieuw proberen {#retry-approach}
 
 De benadering van het Experience Platform voor configureerbare samenvoeging wordt hieronder beschreven. In dit voorbeeld wordt ervan uitgegaan dat Experience Platform gegevens verzendt naar een doelplatform dat 429 foutcodes begint te retourneren als het meer dan 50 k verzoeken per minuut ontvangt:
 
-* Minuut 1: Experience Platform voegt 40.000 batches samen met profielen voor verzending naar uw doelplatform. Experience Platform maakt 40.000 HTTP-aanvragen en alle aanvragen zijn succesvol.
-* Minuut 2: Experience Platform voegt 70.000 batches samen met profielen voor verzending naar uw doelplatform. Experience Platform maakt 70.000 HTTP-aanvragen en 50.000 aanvragen zijn geslaagd. De andere 20k ontvangt een tarief beperkende fout van uw eindpunt en zal over 30 minuten worden opnieuw gebracht.
-* Minuut 3: Experience Platform voegt 30.000 batches samen met profielen voor verzending naar het doelplatform. Experience Platform maakt 30.000 HTTP-aanvragen en alle aanvragen zijn succesvol.
+* Minuut 1: Experience Platform aggregeert 40 k partijen met profielen om naar uw bestemmingsplatform te verzenden. Experience Platform maakt 40.000 HTTP-aanvragen en alle aanvragen zijn succesvol.
+* Minuut 2: Experience Platform aggregeert 70 k partijen met profielen om naar uw bestemmingsplatform te verzenden. Experience Platform maakt 70.000 HTTP-aanvragen en 50.000 aanvragen zijn geslaagd. De andere 20k ontvangt een tarief beperkende fout van uw eindpunt en zal over 30 minuten worden opnieuw gebracht.
+* Minuut 3: Experience Platform aggregeert 30 k partijen met profielen om naar uw bestemmingsplatform te verzenden. Experience Platform maakt 30.000 HTTP-aanvragen en alle aanvragen zijn succesvol.
 * ...
 * ...
 * Minuut 32: Experience Platform probeert de 20k partijen te verzenden die op minuut 2 hebben gefaald. Alle vraag is succesvol.

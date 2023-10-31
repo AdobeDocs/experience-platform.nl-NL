@@ -2,7 +2,8 @@
 title: Een SAP Commerce-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een SAP Commerce-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '989'
 ht-degree: 1%
@@ -41,9 +42,9 @@ Om verbinding te maken [!DNL SAP Commerce] als u een Experience Platform wilt ma
 
 Voor meer informatie raadpleegt u de [[!DNL SAP Commerce] documentatie](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-### Een Platform-schema maken {#create-platform-schema}
+### Een platformschema maken {#create-platform-schema}
 
-Voordat u een [!DNL SAP Commerce] bronverbinding, moet u ook ervoor zorgen dat u eerst een schema van het Experience Platform aan gebruik voor uw bron creeert. Zie de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL SAP Commerce] bronverbinding, moet u ook ervoor zorgen dat u eerst een schema van het Experience Platform aan gebruik voor uw bron creeert. Zie de zelfstudie aan [een platformschema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 Vouw de volgende sectie uit om een voorbeeldschema weer te geven.
 
@@ -142,7 +143,7 @@ Vouw de volgende sectie uit om een voorbeeldschema weer te geven.
 
 ## Verbind uw [!DNL SAP Commerce] account {#connect-account}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -166,7 +167,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 ### Gegevens selecteren {#select-data}
 
-Ten slotte moet u het objecttype selecteren dat u aan het Platform wilt toevoegen.
+Tot slot moet u het objecttype selecteren dat u wilt opnemen in Platform.
 
 | Objecttype | Beschrijving |
 | --- | --- |
@@ -179,19 +180,19 @@ Ten slotte moet u het objecttype selecteren dat u aan het Platform wilt toevoege
 
 Als u klantgegevens wilt invoeren, selecteert u **[!UICONTROL Customers]** als het objecttype en selecteer vervolgens **[!UICONTROL Next]**.
 
-![Het schermschot van UI van het Platform voor de Handel van SAP die configuratie met de geselecteerde optie van Klanten toont](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![Het schermschot van UI van het platform voor de Handel van SAP die configuratie met de geselecteerde optie van Klanten toont](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contactpersonen]
 
 Als u contactgegevens wilt invoeren, selecteert u **[!UICONTROL Contacts]** als het objecttype en selecteer vervolgens **[!UICONTROL Next]**.
 
-![Platform UI screenshot voor SAP Commerce die configuratie met geselecteerde optie van Contacten toont](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![Het schermschot van UI van het platform voor de Handel die van SAP configuratie met geselecteerde optie van Contacten toont](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SAP Commerce] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens naar het Platform te brengen](../../dataflow/ecommerce.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SAP Commerce] account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](../../dataflow/ecommerce.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -249,4 +250,3 @@ Hieronder ziet u een voorbeeld van het toewijzen van configuraties voor [!DNL SA
 ![De toewijzingsstap van de workflow voor bronnen.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
 
 >[!ENDTABS]
-

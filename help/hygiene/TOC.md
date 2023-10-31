@@ -6,8 +6,8 @@ user-guide-description: Verwijder individuele verslagen en plan vervalmomenten v
 feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 47%
 
 ---
 

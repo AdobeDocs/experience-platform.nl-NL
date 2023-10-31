@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een publiekssjabloon door Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een publiekssjabloon maken
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+exl-id: 98d30002-d462-4008-9337-7de0cd608194
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 3%
 
 ---
-
 
 # Een publiekssjabloon maken
 
@@ -194,7 +194,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | Tekenreeks | De methode die op uw eindpunt wordt gebruikt programmatically tot stand te brengen, bij te werken, te schrappen, of het publiek in uw bestemming te bevestigen. Bijvoorbeeld: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Tekenreeks | Geeft alle HTTP-headers op die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"Content-Type"` |
 | `headers.value` | Tekenreeks | Geeft de waarde aan van HTTP-headers die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"application/x-www-form-urlencoded"` |
-| `requestBody` | Tekenreeks | Hier geeft u de inhoud op van de berichttekst die naar de API moet worden verzonden. De parameters die aan de `requestBody` Het object is afhankelijk van de velden die de API accepteert. Raadpleeg voor een voorbeeld de [eerste sjabloonvoorbeeld](../functionality/audience-metadata-management.md#example-1) in het document met de metagegevensfunctionaliteit van het publiek. |
+| `requestBody` | Tekenreeks | Hier geeft u de inhoud op van de berichttekst die naar de API moet worden verzonden. De parameters die aan de `requestBody` afhankelijk van de velden die uw API accepteert. Raadpleeg voor een voorbeeld de [eerste sjabloonvoorbeeld](../functionality/audience-metadata-management.md#example-1) in het document met de metagegevensfunctionaliteit van het publiek. |
 | `responseFields.name` | Tekenreeks | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Raadpleeg voor een voorbeeld de [sjabloonvoorbeelden](../functionality/audience-metadata-management.md#examples) in het document met de metagegevensfunctionaliteit van het publiek. |
 | `responseFields.value` | Tekenreeks | Geef de waarde op van de reactievelden die de API retourneert wanneer deze wordt aangeroepen. |
 | `responseErrorFields.name` | Tekenreeks | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Raadpleeg voor een voorbeeld de [sjabloonvoorbeelden](../functionality/audience-metadata-management.md#examples) in het document met de metagegevensfunctionaliteit van het publiek. |
@@ -214,8 +214,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Na het lezen van dit document weet u nu wanneer u publiekssjablonen gebruikt en hoe u een publiekssjabloon kunt configureren met de `/authoring/audience-templates` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu wanneer u publiekssjablonen wilt gebruiken en hoe u een publiekssjabloon kunt configureren met de `/authoring/audience-templates` API-eindpunt. Lezen [hoe te om Destination SDK te gebruiken om uw bestemming te vormen](../guides/configure-destination-instructions.md) om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

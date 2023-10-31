@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om details over een bestemmings het publiceren verzoek door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een doelpublicatieverzoek ophalen
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 2%
 
 ---
-
 
 # Een doelpublicatieverzoek ophalen
 
@@ -120,7 +120,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van alle doelen di
 | `publishDetailsList.configId` | Tekenreeks | De unieke id van de bestemming publiceert het verzoek voor uw verzonden bestemming. |
 | `publishDetailsList.allowedOrgs` | Tekenreeks | Keert de organisaties van het Experience Platform terug waarvoor de bestemming beschikbaar is. <br> <ul><li> Voor `"destinationType": "PUBLIC"`, retourneert deze parameter `"*"`, hetgeen betekent dat de bestemming beschikbaar is voor alle organisaties van de Experience Platform.</li><li> Voor `"destinationType": "DEV"`, retourneert deze parameter de organisatie-id van de organisatie die u hebt gebruikt voor het schrijven en testen van het doel.</li></ul> |
 | `publishDetailsList.status` | Tekenreeks | De status van uw doelpublicatieverzoek. Mogelijke waarden zijn `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Doelen met de waarde `PUBLISHED` live zijn en door klanten in de Experience Platform kunnen worden gebruikt. |
-| `publishDetailsList.destinationType` | Tekenreeks | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC`. `DEV` komt overeen met het doel in uw organisatie Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waar de `DEV` versie staat voor uw lokale ontwerpvertakking en de `PUBLIC` versie staat voor de externe hoofdvertakking. |
+| `publishDetailsList.destinationType` | Tekenreeks | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC`. `DEV` komt overeen met het doel in uw organisatie Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waar de `DEV` versie vertegenwoordigt uw lokale auteurstak en `PUBLIC` versie staat voor de externe hoofdvertakking. |
 | `publishDetailsList.publishedDate` | Tekenreeks | De datum waarop de bestemming voor publicatie werd voorgelegd, in tijdperk. |
 
 {style="table-layout:auto"}
@@ -147,7 +147,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Response
 
-Als u een `DESTINATION_ID` in de API vraag, keert de reactie status 200 van HTTP met gedetailleerde informatie over de gespecificeerde bestemmingspublicatieverzoek terug.
+Als u een `DESTINATION_ID` in de API vraag, keert de reactie status 200 van HTTP met gedetailleerde informatie over de gespecificeerde bestemming terug publiceer verzoek.
 
 ```json
 {
@@ -172,7 +172,7 @@ Als u een `DESTINATION_ID` in de API vraag, keert de reactie status 200 van HTTP
 | `publishDetailsList.configId` | Tekenreeks | De unieke id van de bestemming publiceert het verzoek voor uw verzonden bestemming. |
 | `publishDetailsList.allowedOrgs` | Tekenreeks | Keert de organisaties van het Experience Platform terug waarvoor de bestemming beschikbaar is. <br> <ul><li> Voor `"destinationType": "PUBLIC"`, retourneert deze parameter `"*"`, hetgeen betekent dat de bestemming beschikbaar is voor alle organisaties van de Experience Platform.</li><li> Voor `"destinationType": "DEV"`, retourneert deze parameter de organisatie-id van de organisatie die u hebt gebruikt voor het schrijven en testen van het doel.</li></ul> |
 | `publishDetailsList.status` | Tekenreeks | De status van uw doelpublicatieverzoek. Mogelijke waarden zijn `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Doelen met de waarde `PUBLISHED` live zijn en door klanten in de Experience Platform kunnen worden gebruikt. |
-| `publishDetailsList.destinationType` | Tekenreeks | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC`. `DEV` komt overeen met het doel in uw organisatie Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waar de `DEV` versie staat voor uw lokale ontwerpvertakking en de `PUBLIC` versie staat voor de externe hoofdvertakking. |
+| `publishDetailsList.destinationType` | Tekenreeks | Het type bestemming. Waarden kunnen `DEV` en `PUBLIC`. `DEV` komt overeen met het doel in uw organisatie Experience Platform. `PUBLIC` komt overeen met het doel dat u hebt verzonden voor publicatie. Denk aan deze twee opties in Git-termen, waar de `DEV` versie vertegenwoordigt uw lokale auteurstak en `PUBLIC` versie staat voor de externe hoofdvertakking. |
 | `publishDetailsList.publishedDate` | Tekenreeks | De datum waarop de bestemming voor publicatie werd voorgelegd, in tijdperk. |
 
 {style="table-layout:auto"}
@@ -183,4 +183,4 @@ Als u een `DESTINATION_ID` in de API vraag, keert de reactie status 200 van HTTP
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.

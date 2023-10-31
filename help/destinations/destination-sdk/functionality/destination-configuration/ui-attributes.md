@@ -1,17 +1,17 @@
 ---
 description: Leer hoe te om de attributen UI, zoals de documentatiekoppeling, de categorie van de bestemmingskaart, en het type en de frequentie van de bestemmingsverbinding, voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: UI-kenmerken
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
-
 # UI-kenmerken
 
-De attributen UI bepalen de visuele elementen die Adobe voor uw bestemmingskaart in het gebruikersinterface van Adobe Experience Platform zou moeten tonen, zoals het embleem van het bestemmingsplatform, een verbinding aan de documentatiepagina, een bestemmingsbeschrijving en zijn categorie en type.
+De attributen UI bepalen de visuele elementen die de Adobe voor uw bestemmingskaart in het gebruikersinterface van Adobe Experience Platform zou moeten tonen, zoals het embleem van het bestemmingsplatform, een verbinding aan de documentatiepagina, een bestemmingsbeschrijving en zijn categorie en type.
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
@@ -22,18 +22,18 @@ Wanneer [een doel maken](../../authoring-api/destination-configuration/create-de
 
 * De URL van de pagina met doeldocumentatie in het dialoogvenster [doelcatalogus](../../../catalog/overview.md).
 * De URL waar u het pictogram hebt gehost dat in de cataloguskaart van de doelen moet worden weergegeven.
-* De categorie waaronder uw bestemming in de UI van het Platform zichtbaar zal zijn.
+* De categorie waaronder uw bestemming in Platform UI zichtbaar zal zijn.
 * De gegevensexportfrequentie voor uw bestemming.
 * Het verbindingstype van de bestemming, zoals Amazon S3, Azure Blob, enz.
 
-U kunt UI-kenmerken configureren via `/authoring/destinations` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
+U kunt UI-kenmerken configureren via de `/authoring/destinations` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
 Dit artikel beschrijft alle gesteunde attributen UI die u voor uw bestemming kunt gebruiken, en toont welke klanten in het Experience Platform UI zullen zien.
 
-![UI-schermafbeelding die de UI-kenmerken in de interface van het Experience Platform weergeeft](../../assets/functionality/destination-configuration/ui-attributes.png)
+![UI-schermafbeelding met de UI-kenmerken in de interface van het Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
 
 >[!IMPORTANT]
 >
@@ -72,7 +72,7 @@ De gebruikers kunnen uw documentatieverbinding van de pagina van de bestemmingsc
 
 >[!NOTE]
 >
->Deze verbinding werkt slechts nadat Adobe uw bestemming live plaatst en de documentatie wordt gepubliceerd.
+>Deze verbinding werkt slechts nadat de Adobe uw bestemming live plaatst en de documentatie wordt gepubliceerd.
 
 ### `category` {#category}
 
@@ -110,13 +110,13 @@ Gebruikers kunnen het frequentietype in het dialoogvenster **[!UICONTROL Dataflo
 
 Als de bestemming die u met Destination SDK creeert aan een beperkt aantal klanten beschikbaar zal zijn, zou u de bestemmingskaart van de bestemmingscatalogus als bèta kunnen willen merken.
 
-Om dit te doen, kunt u gebruiken `isBeta: "true"` parameter in de UI attributensectie van de bestemmingsconfiguratie om de bestemmingskaart geschikt te merken.
+Hiervoor kunt u de opdracht `isBeta: "true"` parameter in de UI attributensectie van de bestemmingsconfiguratie om de bestemmingskaart geschikt te merken.
 
 ![UI-afbeelding met een doelkaart gemarkeerd als bèta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben welke attributen UI u voor uw bestemming kunt vormen en waar de gebruikers hen in het Platform UI zullen zien.
+Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben welke attributen UI u voor uw bestemming kunt vormen en waar de gebruikers hen in Platform UI zullen zien.
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
@@ -124,7 +124,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponen
 * [OAuth2-verificatie](oauth2-authentication.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [Schema-configuratie](schema-configuration.md)
-* [Configuratie naamruimte identiteit](identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)
 * [Levering bestemming](destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](audience-metadata-configuration.md)
 * [Samenvoegingsbeleid](aggregation-policy.md)

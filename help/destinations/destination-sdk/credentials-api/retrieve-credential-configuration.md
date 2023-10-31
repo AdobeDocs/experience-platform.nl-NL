@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een credentiële configuratie door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een referentieconfiguratie ophalen
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
 
 ---
-
 
 # Een referentieconfiguratie ophalen
 
@@ -21,11 +21,11 @@ Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een cr
 
 >[!IMPORTANT]
 >
->In de meeste gevallen ***niet*** de `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt.
+>In de meeste gevallen ***niet*** de noodzaak `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt.
 > 
 >Lezen [Configuratie van klantverificatie](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de ondersteunde verificatietypen.
 
-Gebruik dit API eindpunt om een credentiële configuratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en het [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met de `/credentials` API-eindpunt.
+Gebruik dit API eindpunt om een credentiële configuratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met de `/credentials` API-eindpunt.
 
 Wanneer het gebruiken van een globaal authentificatiesysteem, moet u plaatsen `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [bestemmingslevering](../functionality/destination-configuration/destination-delivery.md) configuratie, wanneer [het creëren van een nieuwe bestemmingsconfiguratie](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -55,7 +55,7 @@ Gebruik de volgende API-indeling om een specifieke referentieconfiguratie op te 
 GET /authoring/credentials/{INSTANCE_ID}
 ```
 
-De volgende twee verzoeken winnen alle geloofsconfiguraties voor uw IMS Organisatie, of een specifieke credentiële configuratie terug, afhankelijk van of u de overgaan `INSTANCE_ID` in de aanvraag.
+De volgende twee verzoeken winnen alle geloofsconfiguraties voor uw IMS Organisatie, of een specifieke credentiële configuratie terug, afhankelijk van of u overgaan `INSTANCE_ID` in de aanvraag.
 
 Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
@@ -77,7 +77,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++Response
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst van referentieconfiguraties waartoe u toegang hebt, op basis van de [!DNL IMS Org ID] en de naam van de sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één referentie-configuratie.
+Een geslaagde reactie retourneert HTTP-status 200 met een lijst van referentieconfiguraties waartoe u toegang hebt, op basis van de [!DNL IMS Org ID] en naam van sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één referentie-configuratie.
 
 ```json
 {
@@ -149,7 +149,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met de details van de referent
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 

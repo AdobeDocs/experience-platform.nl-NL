@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaande bestemmingsconfiguratie door Adobe Experience Platform Destination SDK te schrappen.
 title: Een doelconfiguratie verwijderen
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 1%
 
 ---
-
 
 # Een doelconfiguratie verwijderen
 
@@ -29,7 +29,7 @@ U kunt een [bestaand](create-destination-configuration.md) doelserverconfigurati
 >
 >**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, raadpleegt u het artikel over [het terugwinnen van een bestemmingsconfiguratie](retrieve-destination-configuration.md).
+Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [het terugwinnen van een bestemmingsconfiguratie](retrieve-destination-configuration.md).
 
 **API-indeling**
 
@@ -58,7 +58,7 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
@@ -69,4 +69,3 @@ Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt
 * [Een doelconfiguratie maken](create-destination-configuration.md)
 * [Een doelconfiguratie ophalen](retrieve-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](update-destination-configuration.md)
-

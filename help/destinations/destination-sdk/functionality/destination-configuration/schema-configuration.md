@@ -1,13 +1,13 @@
 ---
 description: Leer hoe te om het partnerschema voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie partnerschema
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1885'
 ht-degree: 1%
 
 ---
-
 
 # Configuratie partnerschema
 
@@ -28,7 +28,7 @@ U kunt uw schema-instellingen configureren via de `/authoring/destinations` eind
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Dit artikel beschrijft alle gesteunde opties van de schemaconfiguratie die u voor uw bestemming kunt gebruiken, en toont welke klanten in de Platform UI zullen zien.
+Dit artikel beschrijft alle gesteunde opties van de schemaconfiguratie die u voor uw bestemming kunt gebruiken, en toont welke klanten in Platform UI zullen zien.
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ Destination SDK ondersteunt meerdere schemaconfiguraties:
 
 * Statische schema&#39;s worden gedefinieerd door de `profileFields` in de `schemaConfig` sectie. In een statisch schema, bepaalt u elk doelattribuut dat in het Experience Platform UI in zou moeten worden getoond `profileFields` array. Als u uw schema moet bijwerken, moet u [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md).
 * Dynamische schema&#39;s gebruiken een extra type van bestemmingsserver, genoemd een [dynamische schema-server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), om de ondersteunde doelkenmerken dynamisch op te halen en schema&#39;s te genereren op basis van uw eigen API. Dynamische schema&#39;s maken geen gebruik van de `profileFields` array. Als u uw schema moet bijwerken, is het niet nodig om [de doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md). In plaats daarvan haalt de dynamische schemaserver het bijgewerkte schema van uw API terug.
-* Binnen de schemaconfiguratie, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn afbeeldingen die gebruikers kunnen weergeven in de gebruikersinterface van het Platform, maar ze kunnen deze niet wijzigen wanneer ze een verbinding met uw doel instellen. U kunt bijvoorbeeld afdwingen dat het veld E-mailadres altijd naar de bestemming wordt verzonden.
+* Binnen de schemaconfiguratie, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn toewijzingen die de gebruikers in Platform UI kunnen bekijken, maar zij kunnen hen niet wijzigen wanneer vestiging een verbinding aan uw bestemming. U kunt bijvoorbeeld afdwingen dat het veld E-mailadres altijd naar de bestemming wordt verzonden.
 
 De `schemaConfig` de sectie gebruikt veelvoudige configuratieparameters, afhankelijk van het type van schema dat u, zoals aangetoond in de hieronder secties nodig hebt.
 
@@ -105,7 +105,7 @@ Als u een statisch schema met profielkenmerken wilt maken, definieert u de doelk
 | `profileRequired` | Boolean | Optioneel | Gebruiken `true` als gebruikers de profielkenmerken van het Experience Platform aan douanekenmerken op uw bestemmingsplatform zouden moeten kunnen in kaart brengen. |
 | `segmentRequired` | Boolean | Vereist | Deze parameter wordt vereist door Destination SDK en moet altijd worden ingesteld op `true`. |
 | `identityRequired` | Boolean | Vereist | Instellen op `true` als gebruikers in staat moeten zijn om een kaart te maken [identiteitstypen](identity-namespace-configuration.md) van Experience Platform naar de kenmerken die u in het dialoogvenster `profileFields` array. |
-| `segmentNamespaceAllowList` | Array | Optioneel | Hiermee definieert u specifieke publieksnaamruimten waaruit gebruikers doelgroepen kunnen toewijzen. Gebruik deze parameter om gebruikers van het Platform te beperken om publiek uit slechts de publieksnamespaces uit te voeren die u in de serie bepaalt. Deze parameter kan niet samen met `segmentNamespaceDenyList`.<br> <br> Voorbeeld: `"segmentNamespaceAllowList": ["AudienceManager"]` Hiermee kunnen gebruikers alleen publiek toewijzen vanuit de `AudienceManager` naamruimte naar dit doel. <br> <br> Om gebruikers toe te staan om het even welk publiek naar uw bestemming uit te voeren, kunt u deze parameter negeren. <br> <br> Als beide `segmentNamespaceAllowList` en `segmentNamespaceDenyList` ontbreken in uw configuratie, kunnen de gebruikers slechts publiek uitvoeren dat uit van [Segmenteringsservice](../../../../segmentation/home.md). |
+| `segmentNamespaceAllowList` | Array | Optioneel | Hiermee definieert u specifieke publieksnaamruimten waaruit gebruikers doelgroepen kunnen toewijzen. Gebruik deze parameter om gebruikers van het Platform te beperken om publiek van slechts de publieksnamespaces uit te voeren die u in de serie bepaalt. Deze parameter kan niet samen met `segmentNamespaceDenyList`.<br> <br> Voorbeeld: `"segmentNamespaceAllowList": ["AudienceManager"]` Hiermee kunnen gebruikers alleen publiek toewijzen vanuit de `AudienceManager` naamruimte naar dit doel. <br> <br> Om gebruikers toe te staan om het even welk publiek naar uw bestemming uit te voeren, kunt u deze parameter negeren. <br> <br> Als beide `segmentNamespaceAllowList` en `segmentNamespaceDenyList` ontbreken in uw configuratie, kunnen de gebruikers slechts publiek uitvoeren dat uit van [Segmenteringsservice](../../../../segmentation/home.md). |
 | `segmentNamespaceDenyList` | Array | Optioneel | Beperkt gebruikers van het in kaart brengen van publiek aan de bestemming, van de publieksnamespaces die in de serie worden bepaald. Kan niet samen met `segmentNamespaceAllowed`. <br> <br> Voorbeeld: `"segmentNamespaceDenyList": ["AudienceManager"]` blokkeert gebruikers om het publiek van de `AudienceManager` naamruimte naar dit doel. <br> <br> Om gebruikers toe te staan om het even welk publiek naar uw bestemming uit te voeren, kunt u deze parameter negeren. <br> <br> Als beide `segmentNamespaceAllowed` en `segmentNamespaceDenyList` ontbreken in uw configuratie, kunnen de gebruikers slechts publiek uitvoeren dat uit van [Segmenteringsservice](../../../../segmentation/home.md). <br> <br> Om de uitvoer van alle soorten publiek mogelijk te maken, ongeacht de oorsprong, stelt u `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
@@ -160,7 +160,7 @@ In een dynamische schemeconfiguratie, `profileFields` array wordt vervangen door
 
 ## Vereiste toewijzingen {#required-mappings}
 
-Binnen de schemaconfiguratie, naast uw statisch of dynamisch schema, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn afbeeldingen die gebruikers kunnen weergeven in de gebruikersinterface van het Platform, maar ze kunnen deze niet wijzigen wanneer ze een verbinding met uw doel instellen.
+Binnen de schemaconfiguratie, naast uw statisch of dynamisch schema, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn toewijzingen die de gebruikers in Platform UI kunnen bekijken, maar zij kunnen hen niet wijzigen wanneer vestiging een verbinding aan uw bestemming.
 
 U kunt bijvoorbeeld afdwingen dat het veld E-mailadres altijd naar de bestemming wordt verzonden.
 
@@ -203,7 +203,7 @@ In het onderstaande voorbeeld ziet u zowel de vereiste bron- als doeltoewijzinge
 
 {style="table-layout:auto"}
 
-Als gevolg hiervan **[!UICONTROL Source field]** en **[!UICONTROL Target field]** secties in de gebruikersinterface van het Platform worden grijs weergegeven.
+Als gevolg hiervan **[!UICONTROL Source field]** en **[!UICONTROL Target field]** secties in de gebruikersinterface van het platform grijs worden weergegeven.
 
 ![Afbeelding van de vereiste toewijzingen in de UI-activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +233,7 @@ In het onderstaande voorbeeld ziet u een vereiste doeltoewijzing. Als alleen het
 
 {style="table-layout:auto"}
 
-Dientengevolge, **[!UICONTROL Target field]** in de gebruikersinterface van het Platform wordt grijs weergegeven, terwijl de **[!UICONTROL Source field]** is actief en kunnen gebruikers ermee werken. De **[!UICONTROL Mandatory key]** en **[!UICONTROL Deduplication key]** zijn actief en gebruikers kunnen deze niet wijzigen.
+Dientengevolge, **[!UICONTROL Target field]** in de gebruikersinterface van het platform grijs wordt weergegeven, terwijl de **[!UICONTROL Source field]** is actief en kunnen gebruikers ermee werken. De **[!UICONTROL Mandatory key]** en **[!UICONTROL Deduplication key]** zijn actief en gebruikers kunnen deze niet wijzigen.
 
 ![Afbeelding van de vereiste toewijzingen in de UI-activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaande bestemmingsconfiguratie door Adobe Experience Platform Destination SDK bij te werken.
 title: Een doelconfiguratie bijwerken
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: d7f18689-9806-4f73-a63a-fa112569819c
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
 
 ---
-
 
 # Een doelconfiguratie bijwerken
 
@@ -15,7 +15,7 @@ Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een be
 
 >[!TIP]
 >
->Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u gebruikt [publicatie-API](../../publishing-api/create-publishing-request.md) en dient de update in voor Adobe review.
+>Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u gebruikt [publicatie-API](../../publishing-api/create-publishing-request.md) en dient de update in voor toetsing door de Adobe.
 
 Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkheden van een doelconfiguratie:
 
@@ -24,7 +24,7 @@ Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkh
 * [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI-kenmerken](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema-configuratie](../../functionality/destination-configuration/schema-configuration.md)
-* [Configuratie naamruimte identiteit](../../functionality/destination-configuration/identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](../../functionality/destination-configuration/identity-namespace-configuration.md)
 * [Levering bestemming](../../functionality/destination-configuration/destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Configuratie van metagegevens voor publiek](../../functionality/destination-configuration/audience-metadata-configuration.md)
@@ -48,7 +48,7 @@ U kunt een [bestaand](create-destination-configuration.md) doelconfiguratie door
 >
 >API-eindpunt: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, raadpleegt u het artikel over [het terugwinnen van een bestemmingsconfiguratie](retrieve-destination-configuration.md).
+Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [het terugwinnen van een bestemmingsconfiguratie](retrieve-destination-configuration.md).
 
 **API-indeling**
 
@@ -207,7 +207,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 

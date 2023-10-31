@@ -1,19 +1,19 @@
 ---
 description: Deze pagina is gericht op de berichtindeling en de profieltransformatie in gegevens die van Adobe Experience Platform naar bestemmingen worden geëxporteerd.
 title: Berichtindeling
-source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
+exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 0%
 
 ---
 
-
 # Berichtindeling
 
 ## Voorwaarden - Adobe Experience Platform-concepten {#prerequisites}
 
-Om het berichtformaat en het proces van de profielconfiguratie en transformatie aan de kant van de Adobe te begrijpen, gelieve zich met de volgende concepten van het Experience Platform vertrouwd te maken:
+Om het berichtformaat en profielconfiguratie en transformatieproces op de kant van de Adobe te begrijpen, gelieve zich met de volgende concepten van het Experience Platform vertrouwd te maken:
 
 * **Experience Data Model (XDM)**. [XDM-overzicht](../../../../xdm/home.md) en  [Een XDM-schema maken in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Klasse**. [Klassen maken en bewerken in de gebruikersinterface](../../../../xdm/ui/resources/classes.md).
@@ -41,7 +41,7 @@ Adobe Experience Platform exporteert gegevens naar een aanzienlijk aantal bestem
 
 Experience Platform kan de berichtindeling van geëxporteerde profielen aanpassen aan de verwachte indeling aan uw zijde. Om deze aanpassing te begrijpen, zijn de volgende concepten belangrijk:
 
-* Het XDM-bronschema (1) en het XDM-doelschema (2) in Adobe Experience Platform
+* Het XDM-bronschema (1) en doel (2) in Adobe Experience Platform
 * Het verwachte berichtformaat aan de partnerkant (3), en
 * De transformatielaag tussen XDM-schema en de verwachte berichtindeling, die u kunt definiëren door een [berichttransformatiesjabloon](#using-templating).
 
@@ -67,11 +67,11 @@ Gebaseerd op de hierboven beschreven schematransformaties, is hier hoe een profi
 
 ## Aan de slag - drie basiskenmerken transformeren {#getting-started}
 
-In het onderstaande voorbeeld worden drie veelvoorkomende profielkenmerken in Adobe Experience Platform gebruikt om het profieltransformatieproces te demonstreren: **voornaam**, **achternaam**, en **e-mailadres**.
+In het onderstaande voorbeeld worden drie veelvoorkomende profielkenmerken in Adobe Experience Platform gebruikt om het profieltransformatieproces te demonstreren: **voornaam**, **achternaam**, en **mailadres**.
 
 >[!NOTE]
 >
->De klant wijst de attributen van het bronXDM schema aan het partnerXDM schema in Adobe Experience Platform UI, in toe **Toewijzing** de [doelworkflow activeren](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>De klant wijst de attributen van het bronXDM schema aan het partnerXDM schema in Adobe Experience Platform UI, in toe **Toewijzing** van de [doelworkflow activeren](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Stel dat uw platform een berichtindeling kan ontvangen zoals:
 
@@ -92,7 +92,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Gezien het berichtformaat, zijn de overeenkomstige transformaties als volgt:
 
-| Attribuut in partnerXDM schema op de Adobe kant | Transformatie | Kenmerk in HTTP-bericht aan uw zijde |
+| Attribuut in partnerXDM schema op de kant van de Adobe | Transformatie | Kenmerk in HTTP-bericht aan uw zijde |
 |---------|----------|---------|
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
@@ -112,7 +112,7 @@ Profielen hebben drie secties:
    * deze sectie bevat alle identiteiten die in het profiel aanwezig zijn (e-mail, Google GAID, Apple IDFA, enzovoort) en die de gebruiker in kaart heeft gebracht voor exporteren in de activeringsworkflow.
 * attributen (afhankelijk van de bestemmingsconfiguratie, zouden deze op het profiel aanwezig kunnen zijn). Er is ook een klein verschil tussen vooraf gedefinieerde kenmerken en vrije-vormkenmerken:
    * for *vrijevormkenmerken* bevatten `.value` pad als het kenmerk aanwezig is in het profiel (zie `lastName` kenmerk uit voorbeeld 1). Als ze niet aanwezig zijn in het profiel, bevatten ze geen `.value` pad (zie `firstName` kenmerk uit voorbeeld 1).
-   * for *vooraf gedefinieerde kenmerken*, bevatten deze geen `.value` pad. Alle toegewezen kenmerken die aanwezig zijn in een profiel, worden weergegeven in de kenmerkenkaart. De niet-bestaande versies zullen niet aanwezig zijn (zie Voorbeeld 2 - de `firstName` (bestaat niet in het profiel).
+   * for *vooraf gedefinieerde kenmerken*, bevatten geen `.value` pad. Alle toegewezen kenmerken die aanwezig zijn in een profiel, worden weergegeven in de kenmerkenkaart. De niet-bestaande versies zullen niet aanwezig zijn (zie Voorbeeld 2 - de `firstName` (bestaat niet in het profiel).
 
 Zie twee voorbeelden van profielen in Experience Platform:
 
@@ -661,7 +661,7 @@ De `json` hieronder worden de gegevens weergegeven die uit Adobe Experience Plat
 
 Deze sectie verstrekt een voorbeeld van een algemeen gebruikte transformatie tussen het schema van Adobe XDM en het schema van de partnerbestemming.
 
-Een ander veelvoorkomend geval van gebruik is het uitvoeren van gegevens die publieksleden, identiteiten (bijvoorbeeld: e-mailadres, telefoonnummer, advertentie-ID) en profielkenmerken. Als u gegevens op deze manier wilt exporteren, raadpleegt u het onderstaande voorbeeld:
+Een ander veelvoorkomend geval van gebruik is het uitvoeren van gegevens die publieksleden, identiteiten (bijvoorbeeld: e-mailadres, telefoonaantal, reclame-id), en profielattributen bevatten. Als u gegevens op deze manier wilt exporteren, raadpleegt u het onderstaande voorbeeld:
 
 **Invoer**
 
@@ -869,7 +869,7 @@ Als u [configureerbare samenvoeging](../../functionality/destination-configurati
 
 **Invoer**
 
-Bekijk de vier onderstaande profielen, waarbij:
+Houd rekening met de vier onderstaande profielen, waarbij:
 
 * de eerste twee maken deel uit van het publiek met de publiek-id `788d8874-8007-4253-92b7-ee6b6c20c6f3`
 * het derde profiel maakt deel uit van het publiek met de gebruikers-id `8f812592-3f06-416b-bd50-e7831848a31a`
@@ -1199,9 +1199,9 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### Referentie: Context en functies die worden gebruikt in de transformatiesjablonen {#reference}
 
-De context die aan de sjabloon wordt gegeven, bevat `input`  (de profielen/gegevens die in deze aanroep worden geëxporteerd) en `destination` (gegevens over het doel waarnaar Adobe gegevens verzendt, geldig voor alle profielen).
+De context die aan de sjabloon wordt gegeven, bevat `input`  (de profielen/gegevens die in deze vraag worden uitgevoerd) en `destination` (gegevens over het doel waarnaar de Adobe gegevens verzendt, geldig voor alle profielen).
 
-De onderstaande tabel bevat een beschrijving van de functies in de bovenstaande voorbeelden.
+In de onderstaande tabel vindt u een beschrijving van de functies in de bovenstaande voorbeelden.
 
 | -functie | Beschrijving |
 |---------|----------|

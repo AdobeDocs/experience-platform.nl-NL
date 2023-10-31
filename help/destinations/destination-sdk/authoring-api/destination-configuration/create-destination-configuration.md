@@ -1,13 +1,13 @@
 ---
 description: Leer hoe te om een API vraag te structureren om een bestemmingsconfiguratie door Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een doelconfiguratie maken
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 1%
 
 ---
-
 
 # Een doelconfiguratie maken
 
@@ -20,7 +20,7 @@ Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpun
 * [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI-kenmerken](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema-configuratie](../../functionality/destination-configuration/schema-configuration.md)
-* [Configuratie naamruimte identiteit](../../functionality/destination-configuration/identity-namespace-configuration.md)
+* [Configuratie naamruimte voor identiteit](../../functionality/destination-configuration/identity-namespace-configuration.md)
 * [Levering bestemming](../../functionality/destination-configuration/destination-delivery.md)
 * [Configuratie van metagegevens voor publiek](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Configuratie van metagegevens voor publiek](../../functionality/destination-configuration/audience-metadata-configuration.md)
@@ -192,21 +192,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `name` | Tekenreeks | Geeft de titel van het doel in de catalogus met Experience Platforms aan. |
-| `description` | Tekenreeks | Geef een beschrijving op die Adobe in de Experience Platform-doelcatalogus voor uw doelkaart zal gebruiken. Doel voor niet meer dan 4-5 zinnen. ![UI-afbeelding van Platform met de doelbeschrijving.](../../assets/authoring-api/destination-configuration/destination-description.png "Doelbeschrijving"){width="100" zoomable="yes"} |
+| `description` | Tekenreeks | Geef een beschrijving op die de Adobe in de catalogus met Experience Platforms-doelen voor uw doelkaart zal gebruiken. Doel voor niet meer dan 4-5 zinnen. ![Platform UI-afbeelding die de doelbeschrijving weergeeft.](../../assets/authoring-api/destination-configuration/destination-description.png "Doelbeschrijving"){width="100" zoomable="yes"} |
 | `status` | Tekenreeks | Geeft de levenscyclusstatus van de doelkaart aan. Accepteerde waarden zijn `TEST`, `PUBLISHED`, en `DELETED`. Gebruiken `TEST` wanneer u eerst uw bestemming vormt. |
 | `customerAuthenticationConfigurations.authType` | Tekenreeks | Wijst op de configuratie die wordt gebruikt om de klanten van het Experience Platform aan uw bestemmingsserver voor authentiek te verklaren. Zie [klantverificatieconfiguratie](../../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de gesteunde authentificatietypen. |
-| `customerDataFields.name` | Tekenreeks | Geef een naam op voor het aangepaste veld dat u introduceert. <br/><br/> Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. ![UI-afbeelding van Platform met gegevensvelden van klanten.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Veld voor klantgegevens"){width="100" zoomable="yes"} |
+| `customerDataFields.name` | Tekenreeks | Geef een naam op voor het aangepaste veld dat u introduceert. <br/><br/> Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. ![Platform UI-afbeelding die gegevensvelden van klanten weergeeft.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Veld voor klantgegevens"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | Tekenreeks | Hiermee geeft u aan welk type aangepast veld u wilt gebruiken. Accepteerde waarden zijn `string`, `object`, `integer`. <br/><br/> Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. |
 | `customerDataFields.title` | Tekenreeks | Hiermee wordt de naam van het veld aangegeven, zoals deze wordt weergegeven door klanten in de gebruikersinterface van het Experience Platform. <br/><br/> Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. |
 | `customerDataFields.description` | Tekenreeks | Geef een beschrijving op voor het aangepaste veld. Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. |
 | `customerDataFields.isRequired` | Boolean | Geeft aan of dit veld vereist is in de workflow voor doelinstellingen. <br/><br/> Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. |
 | `customerDataFields.enum` | Tekenreeks | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. <br/><br/> Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. |
-| `customerDataFields.default` | Tekenreeks | Definieert de standaardwaarde op basis van een `enum` lijst. |
+| `customerDataFields.default` | Tekenreeks | Hiermee wordt de standaardwaarde van een `enum` lijst. |
 | `customerDataFields.pattern` | Tekenreeks | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` op dit gebied. <br/><br/> Zie [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md) voor gedetailleerde informatie over deze instellingen. |
-| `uiAttributes.documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Doelcatalogus](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruiken `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` is de naam van uw bestemming. Voor een bestemming genoemd Moviestar, zou u gebruiken `https://www.adobe.com/go/destinations-moviestar-en`. Merk op dat deze verbinding slechts werkt nadat Adobe uw bestemming live plaatst en de documentatie wordt gepubliceerd. <br/><br/> Zie [UI-kenmerken](../../functionality/destination-configuration/ui-attributes.md) voor gedetailleerde informatie over deze instellingen. ![Platform-UI-afbeelding met de documentatiekoppeling.](../../assets/authoring-api/destination-configuration/documentation-url.png "Documentatie-URL"){width="100" zoomable="yes"} |
+| `uiAttributes.documentationLink` | Tekenreeks | Verwijst naar de documentatiepagina in [Doelcatalogus](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) voor uw bestemming. Gebruiken `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, waarbij `YOURDESTINATION` is de naam van uw bestemming. Voor een bestemming genoemd Moviestar, zou u gebruiken `https://www.adobe.com/go/destinations-moviestar-en`. Merk op dat deze verbinding slechts werkt nadat de Adobe uw bestemming live plaatst en de documentatie wordt gepubliceerd. <br/><br/> Zie [UI-kenmerken](../../functionality/destination-configuration/ui-attributes.md) voor gedetailleerde informatie over deze instellingen. ![Platform UI-afbeelding die de documentatiekoppeling weergeeft.](../../assets/authoring-api/destination-configuration/documentation-url.png "Documentatie-URL"){width="100" zoomable="yes"} |
 | `uiAttributes.category` | Tekenreeks | Verwijst naar de rubriek die aan je bestemming in Adobe Experience Platform is toegewezen. Lees voor meer informatie [Doelcategorieën](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Zie [UI-kenmerken](../../functionality/destination-configuration/ui-attributes.md) voor gedetailleerde informatie over deze instellingen. |
 | `uiAttributes.connectionType` | Tekenreeks | Het type verbinding, afhankelijk van het doel. Ondersteunde waarden: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
-| `uiAttributes.frequency` | Tekenreeks | Verwijst naar het type gegevens dat door de bestemming wordt gesteund. Instellen op `Streaming` voor API-gebaseerde integratie, of `Batch` wanneer u bestanden exporteert naar uw doelen. |
+| `uiAttributes.frequency` | Tekenreeks | Verwijst naar het type gegevens die worden uitgevoerd door de bestemming wordt gesteund. Instellen op `Streaming` voor API-gebaseerde integratie, of `Batch` wanneer u bestanden exporteert naar uw doelen. |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolean | Geeft aan of klanten standaardprofielkenmerken kunnen toewijzen aan de identiteit die u configureert. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Geeft aan of klanten identiteiten kunnen toewijzen die horen bij [aangepaste naamruimten](/help/identity-service/namespaces.md#manage-namespaces) aan de identiteit die u vormt. |
 | `identityNamespaces.externalId.transformation` | Tekenreeks | _Niet weergegeven in voorbeeldconfiguratie_. Wordt bijvoorbeeld gebruikt als de [!DNL Platform] de klant heeft onbewerkte e-mailadressen als attribuut en uw platform accepteert alleen gehashte e-mailadressen. Hier geeft u de transformatie op die moet worden toegepast (zet de e-mail bijvoorbeeld om in kleine letters en vervolgens in de hash). |
@@ -235,7 +235,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 

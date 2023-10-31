@@ -2,9 +2,9 @@
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2360'
 ht-degree: 0%
 
 ---
@@ -264,33 +264,53 @@ De [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevens voor Analyt
 
 ![revisie](../../../../images/tutorials/create/analytics/review.png)
 
-### Uw gegevensstroom controleren
+## Uw gegevensstroom controleren {#monitor-your-dataflow}
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Van de [!UICONTROL Catalog] scherm, selecteren **[!UICONTROL Dataflows]** om een lijst weer te geven met vastgestelde stromen die zijn gekoppeld aan uw account Analytics.
+Wanneer de gegevensstroom is voltooid, selecteert u **[!UICONTROL Dataflows]** in de broncatalogus om de activiteit en de status van uw gegevens te controleren.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![De broncatalogus met het geselecteerde dataflows lusje.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-De **Gegevensstromen** wordt weergegeven. Op deze pagina is een paar gegevenssetstromen, met inbegrip van informatie over hun naam, brongegevens, aanmaaktijd, en status.
+Er wordt een lijst weergegeven met bestaande analytische gegevens in uw organisatie. Van hier, selecteer een doeldataset om zijn respectieve insluitingsactiviteit te bekijken.
 
-De schakelaar concretiseert twee datasetstromen. De ene flow vertegenwoordigt de backfill-gegevens en de andere stroom is bedoeld voor live-gegevens. De gegevens van de backfill worden niet gevormd voor Profiel maar wordt verzonden naar het gegevensmeer voor analytische en gegeven-wetenschapsgebruik-gevallen.
+![Een lijst met bestaande Adobe Analytics-gegevens wordt in uw organisatie weergegeven.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Zie voor meer informatie over back-up, live gegevens en de bijbehorende latentie de [Overzicht van de gegevensconnector Analytics](../../../../connectors/adobe-applications/analytics.md).
+De [!UICONTROL Dataset activity] Deze pagina bevat informatie over de voortgang van gegevens die van Analytics naar Experience Platform worden verzonden. De interface toont metriek zoals het aantal ingebedde verslagen, aantal ingegeten partijen, en aantal ontbroken partijen.
 
-Selecteer de datasetstroom u wenst om van de lijst te bekijken.
+De bron concretiseert twee datasetstromen. De ene flow vertegenwoordigt de backfill-gegevens en de andere stroom is bedoeld voor live-gegevens. De gegevens van de backfill worden niet gevormd voor opname in het Profiel van de Klant in real time maar wordt verzonden naar het gegevenshoek voor analytische en gegevenswetenschappelijk gebruik-gevallen.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+Voor meer informatie over terugvullen, levende gegevens, en hun respectieve latentie, lees [Overzicht van bron voor analyse](../../../../connectors/adobe-applications/analytics.md).
 
-De **[!UICONTROL Dataset activity]** wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt. Selecteren **[!UICONTROL Data governance]** in de bovenste koptekst om de etiketteringsvelden te openen.
+![De dataset activiteitenpagina voor een bepaalde doeldataset voor de gegevens van Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![datasetactiviteit](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++Afzonderlijke batches weergeven met de bestaande bewakingsinterface
 
-U kunt de geërfte etiketten van een datasetstroom van bekijken [!UICONTROL Data governance] scherm. Ga voor meer informatie over het labelen van gegevens afkomstig van Analytics naar de [handleiding met gegevensgebruikslabels](../../../../../data-governance/labels/user-guide.md).
+Op de pagina met gegevenssetactiviteiten wordt geen lijst met afzonderlijke batches weergegeven. Om een lijst van individuele partijen te bekijken, selecteer een grafiek in de interface van de datasetactiviteit.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![De pagina van de datasetactiviteit met een geselecteerde grafiek.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-Als u een gegevensstroom wilt verwijderen, gaat u naar de [!UICONTROL Dataflows] pagina en selecteer vervolgens de ovalen (`...`) naast de naam van de gegevensstroom en selecteer vervolgens [!UICONTROL Delete].
+U wordt meegenomen naar het dashboard van de Controle. Selecteer vervolgens **[!UICONTROL ONLY INGEST FAILURES: YES]** om het filter te wissen en een lijst met afzonderlijke batches weer te geven.
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![Het dashboard voor controle met het geselecteerde mislukkingsfilter.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+De interface werkt aan een lijst van individuele partijen bij, met inbegrip van informatie over hun respectieve metriek.
+
+![De verouderde controlepagina voor partijgegevens.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| Metrics | Beschrijving |
+| --- | --- |
+| Batch-id | De id van een bepaalde partij. Deze waarde wordt intern gegenereerd. |
+| Naam gegevensset | De naam van een bepaalde dataset die voor de gegevens van Analytics wordt gebruikt. |
+| Bron | De bron van de opgenomen gegevens. |
+| Bijgewerkt | De datum van de meest recente lusrun-iteratie. |
+| Records in gegevensset | The total count of records in the dataset. **Opmerking**: Deze parameter geeft af en toe de status van `in-progress`. Deze status geeft aan dat het proces voor het opnemen van records nog niet is voltooid. |
+| Nieuwe profielfragmenten | Het totale aantal nieuwe profielfragmenten die zijn opgenomen. |
+| Bestaande profielfragmenten | Het totale aantal bestaande profielfragmenten. |
+| Identiteitsrecords gekoppeld | Het totale aantal identiteitsgegevens dat na inname aan elkaar is gehecht. |
+| Records in profiel | Het totale aantal verslagen die aan het Profiel van de Klant in real time werden opgenomen. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Volgende stappen en extra bronnen
 

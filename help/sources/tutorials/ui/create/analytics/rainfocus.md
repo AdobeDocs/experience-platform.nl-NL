@@ -2,7 +2,8 @@
 title: Sluit uw RainFocus-account aan op het Experience Platform via de gebruikersinterface
 description: Leer hoe u uw RainFocus-account met Experience Platform kunt verbinden via de gebruikersinterface.
 badge: Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -42,7 +43,7 @@ Nadat u de vereiste instellingen hebt voltooid, kunt u de onderstaande stappen u
 
 ## Sluit uw RainFocus-account aan op Experience Platform
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte Bronnen te openen. De *[!UICONTROL Catalog]* in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte Bronnen te openen. De *[!UICONTROL Catalog]* in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 

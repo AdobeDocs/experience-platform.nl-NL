@@ -1,7 +1,8 @@
 ---
 title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
-source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
+exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '3403'
 ht-degree: 2%

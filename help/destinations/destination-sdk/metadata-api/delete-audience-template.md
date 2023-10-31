@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaand publiekssjabloon door Adobe Experience Platform Destination SDK te schrappen.
 title: Een publiekssjabloon verwijderen
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 1%
 
 ---
-
 
 # Een publiekssjabloon verwijderen
 
@@ -31,7 +31,7 @@ Controleer voordat je doorgaat de [gids Aan de slag](../getting-started.md) voor
 
 U kunt een [bestaand](create-audience-template.md) publiekssjabloon door een `DELETE` verzoek aan de `/authoring/audience-templates` met de `{INSTANCE_ID}`van de publiekssjabloon die u wilt verwijderen.
 
-Een bestaande publiekssjabloon en de bijbehorende sjabloon opvragen `{INSTANCE_ID}`, raadpleegt u het artikel over [ophalen van een publiekssjabloon](retrieve-audience-template.md).
+Een bestaande publiekssjabloon en de bijbehorende sjabloon opvragen `{INSTANCE_ID}`, zie het artikel over [ophalen van een publiekssjabloon](retrieve-audience-template.md).
 
 **API-indeling**
 
@@ -63,7 +63,7 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 

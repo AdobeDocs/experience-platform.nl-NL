@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Aan de slag
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 297dc9d6252d401f805fa5ebb5cf5111910286cf
+exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '300'
 ht-degree: 1%
 
 ---
-
 
 # (bèta) Aan de slag
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## Een ontwikkelingssandbox maken {#create-development-sandbox}
 
-Om aan de slag te gaan en toegang te krijgen tot de [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionaliteit, [een nieuwe ontwikkelingssandbox maken](/help/sandboxes/ui/user-guide.md#create) (zorg ervoor dat u geen productiesandbox selecteert) met de naam (niet de titel) die of `-ucp` of `-UCP` in het achtervoegsel, zoals hieronder getoond.
+Om aan de slag te gaan en toegang te krijgen tot [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionaliteit, [een nieuwe ontwikkelingssandbox maken](/help/sandboxes/ui/user-guide.md#create) (zorg ervoor dat u geen productiesandbox selecteert) met de naam (niet de titel) die of `-ucp` of `-UCP` in het achtervoegsel, zoals hieronder getoond.
 
 ![Een ontwikkelingssandbox maken voor gebruik van afspeelboeken met hoofdletters en kleine letters](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 

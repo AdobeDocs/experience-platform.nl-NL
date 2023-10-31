@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaande configuratie van de bestemmingsserver door Adobe Experience Platform Destination SDK te schrappen.
 title: Een doelserverconfiguratie verwijderen
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 1%
 
 ---
-
 
 # Een doelserverconfiguratie verwijderen
 
@@ -36,7 +36,7 @@ U kunt een [bestaand](create-destination-server.md) doelserverconfiguratie door 
 >
 >**API-eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, raadpleegt u het artikel over [ophalen, configuratie van doelserver](retrieve-destination-server.md).
+Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige te verkrijgen `{INSTANCE_ID}`, zie het artikel over [ophalen, configuratie van doelserver](retrieve-destination-server.md).
 
 **API-indeling**
 
@@ -64,7 +64,7 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 
@@ -75,4 +75,3 @@ Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt
 * [Een doelserverconfiguratie maken](create-destination-server.md)
 * [De configuratie van een doelserver ophalen](retrieve-destination-server.md)
 * [Een doelserverconfiguratie bijwerken](update-destination-server.md)
-

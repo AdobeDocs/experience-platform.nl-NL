@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een Adobe Experience Platform Destination SDK van de credentiële configuratie tot stand te brengen.
 title: Een referentieconfiguratie maken
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 4%
 
 ---
-
 
 # Een referentieconfiguratie maken
 
@@ -21,11 +21,11 @@ Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een cr
 
 >[!IMPORTANT]
 >
->In de meeste gevallen ***niet*** de `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt.
+>In de meeste gevallen ***niet*** de noodzaak `/credentials` API-eindpunt. In plaats daarvan, kunt u de authentificatieinformatie voor uw bestemming via vormen `customerAuthenticationConfigurations` parameters van de `/destinations` eindpunt.
 > 
 >Lezen [Configuratie van klantverificatie](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de ondersteunde verificatietypen.
 
-Gebruik dit API eindpunt om een credentiële configuratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en het [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met de `/credentials` API-eindpunt.
+Gebruik dit API eindpunt om een credentiële configuratie tot stand te brengen slechts als er een globaal authentificatiesysteem tussen Adobe en uw bestemmingsplatform is, en [!DNL Platform] de klant te hoeven om geen authentificatiegeloofsbrieven te verstrekken om met uw bestemming te verbinden. In dit geval moet u een referentieconfiguratie maken met de `/credentials` API-eindpunt.
 
 Wanneer het gebruiken van een globaal authentificatiesysteem, moet u plaatsen `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [bestemmingslevering](../functionality/destination-configuration/destination-delivery.md) configuratie, wanneer [het creëren van een nieuwe bestemmingsconfiguratie](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -78,8 +78,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `url` | Tekenreeks | URL van leverancier van autorisaties |
-| `username` | Tekenreeks | Gebruikersnaam aanmeldnaam voor configuratie van referenties |
+| `url` | Tekenreeks | URL van leverancier van machtigingen |
+| `username` | Tekenreeks | Gebruikersnaam aanmeldnaam voor configuratie van aanmeldingsgegevens |
 | `password` | Tekenreeks | Aanmeldingswachtwoord voor configuratie van referenties |
 
 {style="table-layout:auto"}
@@ -94,7 +94,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 >[!TAB Amazon S3]
 
-**Een [!DNL Amazon S3] crediteurconfiguratie**
+**Een [!DNL Amazon S3] crediteurenconfiguratie**
 
 +++**Verzoek**
 
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `username` | Tekenreeks | Gebruikersnaam aanmeldnaam voor configuratie van referenties |
+| `username` | Tekenreeks | Gebruikersnaam aanmeldnaam voor configuratie van aanmeldingsgegevens |
 | `sshKey` | Tekenreeks | SSH-sleutel voor SFTP met SSH-verificatie |
 
 {style="table-layout:auto"}
@@ -168,7 +168,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 >[!TAB Azure Data Lake Storage]
 
-**Een [!DNL Azure Data Lake Storage] crediteurconfiguratie**
+**Een [!DNL Azure Data Lake Storage] crediteurenconfiguratie**
 
 +++verzoek
 
@@ -192,7 +192,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `url` | Tekenreeks | URL van leverancier van autorisaties |
+| `url` | Tekenreeks | URL van leverancier van machtigingen |
 | `tenant` | Tekenreeks | Azure Data Lake Storage-huurder |
 | `servicePrincipalId` | Tekenreeks | Azure Service Principal ID for Azure Data Lake Storage |
 | `servicePrincipalKey` | Tekenreeks | Azure Service Principal Key for Azure Data Lake Storage |
@@ -209,7 +209,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 >[!TAB Azure Blob Storage]
 
-**Een [!DNL Azure Blob Storage] crediteurconfiguratie**
+**Een [!DNL Azure Blob Storage] crediteurenconfiguratie**
 
 +++verzoek
 
@@ -246,7 +246,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 

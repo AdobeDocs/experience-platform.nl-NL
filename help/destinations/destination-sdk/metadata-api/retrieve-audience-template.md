@@ -1,13 +1,13 @@
 ---
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een publiekssjabloon door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een publiekssjabloon ophalen
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
-
 
 # Een publiekssjabloon ophalen
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Response
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst van publiekssjablonen waartoe u toegang hebt, op basis van de [!DNL IMS Org ID] en de naam van de sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één publiekssjabloon.
+Een geslaagde reactie retourneert HTTP-status 200 met een lijst van publiekssjablonen waartoe u toegang hebt, op basis van de [!DNL IMS Org ID] en naam van sandbox die u hebt gebruikt. Eén `instanceId` komt overeen met één publiekssjabloon.
 
 ```json
 {
@@ -317,7 +317,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met de details van de publieks
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen {#next-steps}
 

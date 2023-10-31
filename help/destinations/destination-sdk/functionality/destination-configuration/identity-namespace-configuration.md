@@ -1,13 +1,13 @@
 ---
 description: Leer hoe te om de gesteunde doelidentiteiten voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie naamruimte voor identiteit
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 1%
 
 ---
-
 
 # Configuratie naamruimte voor identiteit
 
@@ -32,7 +32,7 @@ U kunt uw ondersteunde naamruimten configureren via het dialoogvenster `/authori
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-In dit artikel worden alle ondersteunde configuratieopties voor naamruimten beschreven die u voor uw doel kunt gebruiken, en wordt getoond welke klanten in de gebruikersinterface van het Platform zullen zien.
+In dit artikel worden alle ondersteunde configuratieopties voor naamruimten beschreven die u voor uw bestemming kunt gebruiken, en wordt getoond welke klanten in de interface van het platform zullen zien.
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ Wanneer het bepalen van de doelidentiteiten die uw bestemming steunt, kunt u de 
 | `acceptsAttributes` | Boolean | Optioneel | Geeft aan of klanten standaardprofielkenmerken kunnen toewijzen aan de identiteit die u configureert. |
 | `acceptsCustomNamespaces` | Boolean | Optioneel | Geeft aan of klanten aangepaste naamruimten kunnen toewijzen aan de naamruimte van de identiteit die u configureert. |
 | `acceptedGlobalNamespaces` | - | Optioneel | Geeft aan welke [standaardnaamruimten](../../../../identity-service/namespaces.md#standard) (bijvoorbeeld [!UICONTROL IDFA]) kunnen klanten toewijzen aan de identiteit die u configureert. |
-| `transformation` | Tekenreeks | Optioneel | Hiermee geeft u het dialoogvenster [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) Schakel het selectievakje in de interface van het Platform in wanneer het bronveld een XDM-kenmerk of een naamruimte voor aangepaste identiteit is. Gebruik deze optie om gebruikers de mogelijkheid te geven bronkenmerken bij het exporteren te hashen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))`. |
+| `transformation` | Tekenreeks | Optioneel | Hiermee geeft u het dialoogvenster [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) Schakel het selectievakje in in de interface van het platform wanneer het bronveld een XDM-kenmerk of een naamruimte voor een aangepaste identiteit is. Gebruik deze optie om gebruikers de mogelijkheid te geven bronkenmerken bij het exporteren te hashen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))`. |
 | `requiredTransformation` | Tekenreeks | Optioneel | Wanneer klanten deze naamruimte voor de bronidentiteit selecteren, [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) schakelt u deze optie automatisch in op de toewijzing en klanten kunnen deze niet uitschakelen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))`. |
 
 {style="table-layout:auto"}
@@ -88,13 +88,13 @@ Meer informatie over identiteiten in het dialoogvenster [Overzicht van naamruimt
 
 ## Toewijzingsoverwegingen
 
-Als klanten een naamruimte voor de bronidentiteit selecteren en geen doeltoewijzing selecteren, vult het Platform automatisch de doeltoewijzing met een attribuut met dezelfde naam in.
+Als klanten een naamruimte voor de bronidentiteit selecteren en geen doeltoewijzing selecteren, wordt de doeltoewijzing automatisch ingevuld met een kenmerk met dezelfde naam.
 
 ## Optionele hashing voor bronvelden configureren
 
-Klanten van Experience Platforms kunnen ervoor kiezen om gegevens in te voeren in een Platform met hashing of in onbewerkte tekst. Als uw bestemmingsplatform zowel gehakt als unhashed gegevens goedkeurt, kunt u klanten de optie geven om te kiezen of het Platform de waarden van brongebieden zou moeten hakken wanneer zij worden uitgevoerd naar uw bestemming.
+Klanten van Experience Platforms kunnen ervoor kiezen om gegevens in te voeren in Platform met hashing of in onbewerkte tekst. Als uw bestemmingsplatform zowel gehakt als unhashed gegevens goedkeurt, kunt u klanten de optie geven om te kiezen of Platform de waarden van brongebieden zou moeten hakken wanneer zij worden uitgevoerd naar uw bestemming.
 
-De onderstaande configuratie maakt de optionele [Transformatie toepassen](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) in de gebruikersinterface van het Platform, in de stap Toewijzing.
+De onderstaande configuratie maakt de optionele [Transformatie toepassen](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) in de UI van het Platform, in de stap van de Afbeelding.
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{

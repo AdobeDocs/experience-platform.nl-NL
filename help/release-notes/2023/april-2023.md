@@ -21,7 +21,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Dashboards](#dashboards)
 - [Gegevensvoorbereiding](#data-prep)
-- [Gegevensverzameling](#data-collection)
+- [Dataverzameling](#data-collection)
 - [Doelen](#destinations)
 - [Experience Data Model](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
@@ -58,7 +58,7 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 
 Lees voor meer informatie over Data Prep de [Overzicht van Data Prep](../../data-prep/home.md).
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
 Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden, waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
 
