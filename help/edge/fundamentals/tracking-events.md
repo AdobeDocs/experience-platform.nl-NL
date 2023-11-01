@@ -3,9 +3,9 @@ title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee catego
 
 XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u in Adobe Experience Platform hebt gemaakt. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
 
-Om het even welke gegevens XDM die u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou willen zijn zouden moeten worden verzonden gebruikend `xdm` optie.
+Om het even welke gegevens XDM die u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou willen zijn zouden moeten worden verzonden gebruikend `xdm` -optie.
 
 
 ```javascript
@@ -41,7 +41,7 @@ alloy("sendEvent", {
 });
 ```
 
-Er kan enige tijd verstrijken tussen de `sendEvent` wordt uitgevoerd en wanneer het gegeven wordt verzonden naar de server (bijvoorbeeld, als de bibliotheek van SDK van het Web niet volledig geladen of de toestemming nog niet is ontvangen). Als u van plan bent om het even welk deel van te wijzigen `xdm` object nadat het is uitgevoerd `sendEvent` wordt aangeraden de `xdm` object _voor_ het uitvoeren van `sendEvent` gebruiken. Bijvoorbeeld:
+Er kan enige tijd verstrijken tussen de `sendEvent` wordt uitgevoerd en wanneer het gegeven wordt verzonden naar de server (bijvoorbeeld, als de bibliotheek van SDK van het Web niet volledig geladen of de toestemming nog niet is ontvangen). Als u van plan bent om het even welk deel van te wijzigen `xdm` object nadat het is uitgevoerd `sendEvent` wordt aangeraden de opdracht `xdm` object _voor_ het uitvoeren van de `sendEvent` gebruiken. Bijvoorbeeld:
 
 ```javascript
 var clone = function(value) {
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardigen aan JSON, dan het deserializing van het. Vervolgens wordt het gekloonde resultaat doorgegeven aan het `sendEvent` gebruiken. Zo zorgt u ervoor dat de `sendEvent` bevel heeft een momentopname van de gegevenslaag zoals het bestond toen `sendEvent` werd bevel uitgevoerd zodat de recentere wijzigingen in het originele voorwerp van de gegevenslaag niet in de gegevens zullen worden weerspiegeld die naar de server worden verzonden. Als u een gebeurtenisgestuurde gegevenslaag gebruikt, wordt het klonen van uw gegevens waarschijnlijk al automatisch verwerkt. Als u bijvoorbeeld de opdracht [Gegevenslaag Adobe-client](https://github.com/adobe/adobe-client-data-layer/wiki)de `getState()` Deze methode biedt een berekende, gekloonde momentopname van alle eerdere wijzigingen. Dit wordt ook automatisch voor u afgehandeld als u de de marktextensie van SDK van het Web van Adobe Experience Platform gebruikt.
+In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardigen aan JSON, dan het deserializing van het. Vervolgens wordt het gekloonde resultaat doorgegeven aan het `sendEvent` gebruiken. Zo zorgt u ervoor dat de `sendEvent` bevel heeft een momentopname van de gegevenslaag zoals het bestond toen `sendEvent` werd bevel uitgevoerd zodat de recentere wijzigingen in het originele voorwerp van de gegevenslaag niet in de gegevens zullen worden weerspiegeld die naar de server worden verzonden. Als u een gebeurtenisgestuurde gegevenslaag gebruikt, wordt het klonen van uw gegevens waarschijnlijk al automatisch verwerkt. Als u bijvoorbeeld de opdracht [Gegevenslaag client-Adobe](https://github.com/adobe/adobe-client-data-layer/wiki)de `getState()` Deze methode biedt een berekende, gekloonde momentopname van alle eerdere wijzigingen. Dit wordt ook automatisch voor u afgehandeld als u de de marktextensie van SDK van het Web van Adobe Experience Platform gebruikt.
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardig
 
 ## Niet-XDM-gegevens verzenden
 
-Gegevens die niet overeenkomen met een XDM-schema moeten worden verzonden met de opdracht `data` de `sendEvent` gebruiken. Deze eigenschap wordt gesteund in versies 2.5.0 en hoger van het Web SDK.
+Gegevens die niet overeenkomen met een XDM-schema moeten worden verzonden met de opdracht `data` van de `sendEvent` gebruiken. Deze eigenschap wordt gesteund in versies 2.5.0 en hoger van het Web SDK.
 
 Dit is handig als u een Adobe Target-profiel moet bijwerken of kenmerken van Target Recommendations moet verzenden. [Meer informatie over deze doelfuncties.](../personalization/adobe-target/target-overview.md#single-profile-update)
 
@@ -105,7 +105,7 @@ alloy("sendEvent", {
 
 In XDM ExperienceEvent-schema&#39;s is er een optionele `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Raadpleeg de XDM-documentatie voor een [lijst met alle vooraf gedefinieerde gebeurtenistypen](../../xdm/classes/experienceevent.md#eventType).
 
-Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de tagextensie gebruikt of u kunt ze altijd zonder tags doorgeven. Ze kunnen worden doorgegeven als onderdeel van het `xdm` optie.
+Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de tagextensie gebruikt of u kunt ze altijd zonder tags doorgeven. Ze kunnen worden doorgegeven als onderdeel van het `xdm` -optie.
 
 
 ```javascript
@@ -124,7 +124,7 @@ alloy("sendEvent", {
 });
 ```
 
-Als alternatief kan de `eventType` kan worden doorgegeven aan de gebeurtenisopdracht met de opdracht `type` optie. Achter de scènes wordt dit toegevoegd aan de XDM-gegevens. De `type` als een optie u gemakkelijker kunt plaatsen `eventType` zonder dat u de XDM-lading hoeft te wijzigen.
+Als alternatief kan de `eventType` kan worden doorgegeven aan de gebeurtenisopdracht met de opdracht `type` -optie. Achter de scènes wordt dit toegevoegd aan de XDM-gegevens. De `type` als een optie u gemakkelijker kunt plaatsen `eventType` zonder dat u de XDM-lading hoeft te wijzigen.
 
 
 ```javascript
@@ -214,11 +214,11 @@ alloy("sendEvent", {
 
 De `sendEvent` bevel keert een belofte terug die met een wordt opgelost `result` object. De `result` object bevat de volgende eigenschappen:
 
-**voorstellen**: De personalisatie biedt aan dat de bezoeker voor heeft gekwalificeerd. [Meer weten over voorstellen?](../personalization/rendering-personalization-content.md#manually-rendering-content)
+**voorstellen**: De persoonlijke voorkeur van de bezoeker is ingesteld op Aanpassen. [Meer weten over voorstellen?](../personalization/rendering-personalization-content.md#manually-rendering-content)
 
 **besluiten**: Deze eigenschap is vervangen. Gebruik `propositions` in plaats daarvan.
 
-**bestemmingen**: Segmenten uit Adobe Experience Platform die kunnen worden gedeeld met externe personalisatieplatforms, contentbeheersystemen, servers en andere toepassingen die op websites van klanten worden uitgevoerd. [Meer informatie over doelen.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+**bestemmingen**: Segmenten uit Adobe Experience Platform die kunnen worden gedeeld met externe personalisatieplatforms, contentbeheersystemen, servers en andere toepassingen die op websites van klanten worden uitgevoerd. [Meer informatie over doelen.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
 
 >[!WARNING]
 >

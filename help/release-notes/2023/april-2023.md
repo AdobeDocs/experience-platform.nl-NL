@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Release Notes April 2023
 description: In de releaseopmerkingen van april 2023 voor Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2055'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 | --- | --- |
 | IP adresverwarring voor gegevensstromen | U kunt gedeeltelijke of volledige datastream-vlakke IP verduisteringsopties in nu bepalen [interface voor gegevensstroomconfiguratie](../../datastreams/configure.md). <br><br>De gegevensstroom-vlakke IP het obfusceren plaatsen neemt belangrijkheid over om het even welke IP die obfuscatie in Adobe Target en Audience Manager wordt gevormd. <br><br>De gegevens die naar Adobe Analytics worden verzonden, worden niet beïnvloed door de gegevensstroom op niveau [!UICONTROL IP Obfuscation] instellen. Adobe Analytics ontvangt momenteel onopvallende IP-adressen. Voor Analytics om verduisterde IP adressen te ontvangen, moet u IP verduistering afzonderlijk vormen, in Adobe Analytics. Dit gedrag wordt in toekomstige versies bijgewerkt.<br><br> Voor meer details over IP verwarring en instructies op hoe te om het te vormen, zie [configuratiedocumentatie voor gegevensstroom](../../datastreams/configure.md#advanced-options). |
 | [DataStream-configuratieoverschrijvingen](../../datastreams/overrides.md) | U kunt extra configuratieopties voor gegevensstromen nu bepalen, die u kunt gebruiken om specifieke montages met voeten te treden, zoals gebeurtenisdatasets, de bezitstokens van het Doel, de containers van de synchronisatie van identiteitskaart, en de rapportreeksen van Analytics. <br><br>Het overschrijven van gegevensstroomconfiguraties is een proces in twee stappen: <ol><li>Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](../../datastreams/configure.md).</li><li>Dan, moet u de met voeten treedt naar het Netwerk van de Rand of via het bevel van SDK van het Web of door SDK van het Web te gebruiken verzenden [tagextensie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
-| OAuth JWT Secret | De [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) Hiermee kunnen klanten Adobe- en Google Service-tokens gebruiken ter ondersteuning van server-naar-server interacties bij het doorsturen van gebeurtenissen. |
+| OAuth JWT Secret | De [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) Hiermee kunnen klanten Adobe- en Google Service-tokens gebruiken ter ondersteuning van server-naar-server interacties bij het doorsturen van gebeurtenissen. |
 | [!DNL Pinterest Conversions API] extension | De [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) Met de extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in Adobe Experience Platform Edge Network, benutten en verzenden naar [!DNL Pinterest] in de vorm van server-side-gebeurtenissen die de [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}

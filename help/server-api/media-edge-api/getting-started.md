@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Aan de slag met Media Edge-API's
 description: Aan de slag met Media Edge-API's
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,12 @@ In deze handleiding ziet u hoe de volgende gebeurtenissen worden bijgehouden na 
 
 ## De API implementeren {#implement-api}
 
-Naast kleine verschillen in het model en de aangeroepen paden, heeft de Media Edge API dezelfde implementatie als de [Media Collection-API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). De implementatiedetails van Media Collection blijven geldig voor Media Edge API, zoals die in de volgende documentatie wordt beschreven:
+Naast kleine verschillen in het model en de aangeroepen paden, heeft de Media Edge API dezelfde implementatie als de [Media Collection-API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html). De implementatiedetails van Media Collection blijven geldig voor Media Edge API, zoals die in de volgende documentatie wordt beschreven:
 
-* [Het HTTP-aanvraagtype in de speler instellen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [Pingsgebeurtenissen verzenden](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [Tijdslimiet](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
-* [De volgorde van gebeurtenissen bepalen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
+* [Het HTTP-aanvraagtype in de speler instellen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Pingsgebeurtenissen verzenden](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Tijdslimiet](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [De volgorde van gebeurtenissen bepalen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Toestemming {#authorization}
 
@@ -60,7 +60,7 @@ Om de media zitting op de server te beginnen, gebruik het eindpunt van het Begin
 
 Voordat u de aanvraag voor het starten van de sessie indient, hebt u het volgende nodig:
 
-* De `datastreamId`—een vereiste parameter voor het verzoek van het Begin van de Zitting van de POST. Om een `datastreamId`, zie [Een gegevensstroom configureren](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en).
+* De `datastreamId`—een vereiste parameter voor het verzoek van het Begin van de Zitting van de POST. Om een `datastreamId`, zie [Een gegevensstroom configureren](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html).
 
 * Een JSON-object voor de payload van de aanvraag dat de minimaal vereiste gegevens bevat (zoals in de onderstaande voorbeeldaanvraag wordt getoond).
 

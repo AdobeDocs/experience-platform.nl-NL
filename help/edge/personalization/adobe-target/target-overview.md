@@ -1,11 +1,11 @@
 ---
-title: Adobe Target gebruiken met de SDK van het Web van het Platform
+title: Adobe Target gebruiken met de Platform Web SDK
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1309'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Leer hoe te om uw implementatie van het Doel aan het Web SDK van het Platform met te migreren [Doel migreren van at.js 2.x aan het Web SDK van het Platform](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) zelfstudie.
+>Leer hoe te om uw implementatie van het Doel aan het Web SDK van het Platform met te migreren [Doel migreren van at.js 2.x naar Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) zelfstudie.
 >
 >Leer hoe te om Doel voor het eerst uit te voeren met [Adobe Experience Cloud implementeren met Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) zelfstudie. Voor informatie specifiek voor Doel, zie de sectie van de zelfstudie getiteld [Doel instellen met Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
@@ -42,10 +42,10 @@ Het volgende diagram helpt u het werkschema van begrijpen [!DNL Target] en [!DNL
 | --- | --- |
 | 1 | Het apparaat laadt de [!DNL Platform Web SDK]. De [!DNL Platform Web SDK] verzendt een verzoek naar het randnetwerk met XDM- gegevens, identiteitskaart van het Milieu van Datastreams, overgegaan parameters, en identiteitskaart van de Klant (facultatief). De pagina (of containers) is vooraf verborgen. |
 | 2 | Het Edge-netwerk verzendt de aanvraag naar de Edge-services om deze te verrijken met de informatie over de bezoeker-id, toestemming en andere bezoekerscontext, zoals geolocatie en apparaatvriendelijke namen. |
-| 3 | Het randnetwerk verzendt het verrijkte verpersoonlijkingsverzoek naar het [!DNL Target] rand met de parameters Visitor ID en passed-in. |
+| 3 | Het randnetwerk verzendt het verrijkte verpersoonlijkingsverzoek naar [!DNL Target] rand met de parameters Visitor ID en passed-in. |
 | 4 | Profielscripts worden uitgevoerd en vervolgens toegevoegd aan [!DNL Target] profielopslag. De opslag van het profiel haalt segmenten van uit [!UICONTROL Audience Library] (bijvoorbeeld segmenten die worden gedeeld vanuit [!DNL Adobe Analytics], [!DNL Adobe Audience Manager]de [!DNL Adobe Experience Platform]). |
-| 5 | Gebaseerd op parameters en profielgegevens van het URL-verzoek, [!DNL Target] Hiermee bepaalt u welke activiteiten en ervaringen worden weergegeven voor de bezoeker voor de huidige paginaweergave en voor toekomstige vooraf ingestelde weergaven. [!DNL Target] stuurt dit vervolgens terug naar het Edge-netwerk. |
-| 6 | a. Het randnetwerk verzendt de verpersoonlijkingsreactie terug naar de pagina, naar keuze met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in Één enkele Toepassing van de Pagina (SPA) worden getoond wordt in het voorgeheugen ondergebracht zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br>c. Het Edge-netwerk verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie enzovoort. |
+| 5 | Gebaseerd op parameters en profielgegevens van het URL-verzoek, [!DNL Target] bepaalt welke activiteiten en ervaringen voor de bezoeker voor de huidige paginamening en voor toekomstige vooraf ingestelde meningen moeten tonen. [!DNL Target] stuurt dit vervolgens terug naar het Edge-netwerk. |
+| 6 | a. Het Edge-netwerk stuurt de verpersoonlijkingsreactie terug naar de pagina, eventueel inclusief profielwaarden voor extra personalisatie. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br>b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in een Enige Toepassing van de Pagina (SPA) worden getoond wordt caching zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br>c. Het Edge-netwerk verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie enzovoort. |
 | 7 | Het Edge-netwerk voorwaarts [!UICONTROL Analytics for Target] (A4T) Gegevens (metagegevens over activiteit, ervaring en conversie) naar de [!DNL Analytics] rand. |
 
 ## Inschakelen [!DNL Adobe Target]
@@ -58,11 +58,11 @@ Inschakelen [!DNL Target]Ga als volgt te werk:
 Vervolgens kunt u desgewenst ook de volgende opties toevoegen:
 
 * **`decisionScopes`**: Haal specifieke activiteiten op (handig voor activiteiten die zijn gemaakt met de op formulieren gebaseerde composer) door deze optie aan uw gebeurtenissen toe te voegen.
-* **[Fragment vooraf verbergen](../manage-flicker.md)**: Alleen bepaalde delen van de pagina verbergen.
+* **[Fragment vooraf verbergen](../manage-flicker.md)**: Verberg alleen bepaalde delen van de pagina.
 
 ## Adobe Target VEC gebruiken
 
-Als u de VEC wilt gebruiken met een [!DNL Platform Web SDK] de implementatie, installatie en activeer [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [Chroom](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
+Als u de VEC met een [!DNL Platform Web SDK] de implementatie, installatie en activeer [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [Chroom](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 Zie voor meer informatie [Helpextensie Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in de *Adobe Target-gids*.
 
@@ -74,7 +74,7 @@ Zie [Renderen van personalisatie-inhoud](../rendering-personalization-content.md
 
 Wanneer u een publiek voor uw [!DNL Target] activiteiten die via de [!DNL Platform Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) moeten worden gedefinieerd en gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u tot een [!DNL Target] publieksregel gedefinieerd door XDM-gegevens voor doelversie. Within [!DNL Target], XDM-gegevens worden weergegeven in de [!UICONTROL Audience Builder] als een aangepaste parameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld) `web.webPageDetails.name`).
 
-Als u [!DNL Target] activiteiten met vooraf gedefinieerd publiek die aangepaste parameters of een gebruikersprofiel gebruiken, worden niet correct via de SDK geleverd. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box-publiek voor doelgebieden die worden ondersteund via de [!DNL Platform Web SDK] die geen XDM vereisen. Deze velden zijn beschikbaar in het dialoogvenster [!DNL Target] UI die geen XDM vereist:
+Als u [!DNL Target] activiteiten met vooraf gedefinieerde doelgroepen die aangepaste parameters of een gebruikersprofiel gebruiken, worden niet correct via de SDK geleverd. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box-publiek voor doelgebieden die worden ondersteund via de [!DNL Platform Web SDK] die geen XDM vereisen. Deze velden zijn beschikbaar in het dialoogvenster [!DNL Target] UI die geen XDM vereist:
 
 * Doelbibliotheek
 * Geo
@@ -85,7 +85,7 @@ Als u [!DNL Target] activiteiten met vooraf gedefinieerd publiek die aangepaste 
 * Verkeersbronnen
 * Tijdschema
 
-Zie voor meer informatie [Categorieën voor soorten publiek](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in de *Adobe Target-gids*.
+Zie voor meer informatie [Categorieën voor soorten publiek](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) in de *Adobe Target-gids*.
 
 ### Reactietokens
 
@@ -146,24 +146,24 @@ Wanneer automatische rendering is ingeschakeld, bevat de proposities-array:
 #### Bij laden van pagina:
 
 * Op formulier gebaseerde composer `propositions` with `renderAttempted` markering ingesteld op `false`
-* Op Visual Experience Composer gebaseerde voorstellen met `renderAttempted` markering ingesteld op `true`
-* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van één pagina-toepassing met `renderAttempted` markering ingesteld op `true`
+* Op Visual Experience Composer gebaseerde voorstellingen met `renderAttempted` markering ingesteld op `true`
+* Op Visual Experience Composer gebaseerde voorstellingen voor de weergave Eén pagina met `renderAttempted` markering ingesteld op `true`
 
 #### Bij weergave - wijzigen (voor weergaven in cache):
 
-* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van één pagina-toepassing met `renderAttempted` markering ingesteld op `true`
+* Op Visual Experience Composer gebaseerde voorstellingen voor de weergave Eén pagina met `renderAttempted` markering ingesteld op `true`
 
 Wanneer automatische rendering is uitgeschakeld, bevat de proposities-array:
 
 #### Bij laden van pagina:
 
 * Op formulier gebaseerde composer `propositions` with `renderAttempted` markering ingesteld op `false`
-* Op Visual Experience Composer gebaseerde voorstellen met `renderAttempted` markering ingesteld op `false`
-* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van één pagina-toepassing met `renderAttempted` markering ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen met `renderAttempted` markering ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen voor de weergave Eén pagina met `renderAttempted` markering ingesteld op `false`
 
 #### Bij weergave - wijzigen (voor weergaven in cache):
 
-* Op Visual Experience Composer gebaseerde voorstellingen voor een weergave van één pagina-toepassing met `renderAttempted` markering ingesteld op `false`
+* Op Visual Experience Composer gebaseerde voorstellingen voor de weergave Eén pagina met `renderAttempted` markering ingesteld op `false`
 
 ### Eén profiel bijwerken
 
@@ -173,7 +173,7 @@ Als u een [!DNL Target] , zorgt u ervoor dat de profielgegevens worden doorgegev
 
 * Onder `"data {"`
 * Onder `"__adobe.target"`
-* Voorvoegsel `"profile."` zoals hieronder
+* Voorvoegsel `"profile."` bijv. als hieronder
 
 | Sleutel | Type | Beschrijving |
 | --- | --- | --- |
@@ -231,7 +231,7 @@ De volgende tabellijsten [!DNL Recommendations] kenmerken en of elk kenmerk word
 | Recommendations - Gereserveerde parameters mbox/page | excludeIds | Ondersteund |
 |  | cartIds | Ondersteund |
 |  | productPurchasedId | Ondersteund |
-| Pagina- of itemcategorie voor categorie-affiniteit | user.categoryId | Ondersteund |
+| Pagina of itemcategorie voor categorie affiniteit | user.categoryId | Ondersteund |
 
 **Recommendations-kenmerken verzenden naar Adobe Target:**
 
@@ -251,7 +251,7 @@ alloy("sendEvent", {
 
 ## Foutopsporing
 
-mboxTrace en mboxDebug zijn afgekeurd. Gebruiken [[!DNL Platform Web SDK] foutopsporing](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
+mboxTrace en mboxDebug zijn vervangen. Gebruiken [[!DNL Platform Web SDK] foutopsporing](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminologie
 

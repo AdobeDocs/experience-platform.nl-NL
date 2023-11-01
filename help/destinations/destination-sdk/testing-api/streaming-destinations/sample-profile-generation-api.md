@@ -2,9 +2,9 @@
 description: Leer hoe u de API voor bestemmingstests kunt gebruiken om voorbeeldprofielen voor uw streamingdoel te genereren. U kunt deze gebruiken voor doeltests.
 title: Voorbeeldprofielen genereren op basis van een bronschema
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u k
 >* profielen genereren die moeten worden gebruikt wanneer [Een sjabloon voor berichttransformatie maken en testen](create-template.md) - door *doel-id* als een queryparameter.
 >* produceren profielen aan gebruik wanneer het maken van vraag aan [test als uw bestemming correct wordt gevormd](streaming-destination-testing-overview.md) - door *doel-instantie-id* als een queryparameter.
 
-U kunt steekproefprofielen produceren die op of het Adobe XDM bronschema (aan gebruik wanneer het testen van uw bestemming) worden gebaseerd, of het doelschema dat door uw bestemming (aan gebruik wanneer het ontwerpen van uw malplaatje) wordt gesteund. Om het verschil tussen Adobe XDM bronschema en doelschema te begrijpen, lees de overzichtssectie van het [Berichtindeling](../../functionality/destination-server/message-format.md) artikel.
+U kunt steekproefprofielen produceren die op of het Adobe XDM bronschema (om te gebruiken wanneer het testen van uw bestemming) worden gebaseerd, of het doelschema dat door uw bestemming wordt gesteund (om te gebruiken wanneer het ontwerpen van uw malplaatje). Om het verschil tussen Adobe XDM bronschema en doelschema te begrijpen, lees de overzichtssectie van het [Berichtindeling](../../functionality/destination-server/message-format.md) artikel.
 
 De doeleinden waarvoor de voorbeeldprofielen kunnen worden gebruikt, zijn niet onderling verwisselbaar. Profielen die zijn gegenereerd op basis van de *doel-id* kan alleen worden gebruikt om sjablonen en profielen voor berichttransformatie te maken die zijn gegenereerd op basis van de *doel-instantie-id* kan alleen worden gebruikt om het eindpunt van uw bestemming te testen.
 
@@ -38,16 +38,16 @@ Controleer voordat je doorgaat de [gids Aan de slag](../../getting-started.md) v
 
 >[!IMPORTANT]
 >
->Voeg de steekproefprofielen toe hier worden geproduceerd die aan de vraag van HTTP wanneer [doel testen](streaming-destination-testing-overview.md).
+>Voeg de steekproefprofielen toe hier worden geproduceerd die aan HTTP vraag wanneer [doel testen](streaming-destination-testing-overview.md).
 
 U kunt steekproefprofielen produceren die op het bronschema worden gebaseerd door een verzoek van de GET aan `authoring/sample-profiles/` eindpunt en het verstrekken van identiteitskaart van een bestemmingsinstantie die u gebaseerd op de bestemmingsconfiguratie creeerde die u wilt testen.
 
-Om identiteitskaart van een bestemmingsinstantie te krijgen, moet u een verbinding in het Experience Platform UI aan uw bestemming eerst tot stand brengen alvorens te proberen om uw bestemming te testen. Lees de [doelzelfstudie activeren](../../../ui/activation-overview.md) en zie de tip hieronder voor hoe u de id van de doelinstantie kunt ophalen voor gebruik voor deze API.
+Om identiteitskaart van een bestemmingsinstantie te krijgen, moet u een verbinding in het Experience Platform UI aan uw bestemming eerst tot stand brengen alvorens uw bestemming te proberen. Lees de [doelzelfstudie activeren](../../../ui/activation-overview.md) en zie de tip hieronder voor hoe u de id van de doelinstantie kunt ophalen voor gebruik voor deze API.
 
 >[!IMPORTANT]
 >
->* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) en [profielen en doelgroepen activeren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor meer informatie .
-> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [bladeren door een verbinding met uw bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) en [profielen en doelgroepen activeren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) voor meer informatie .
+> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [bladeren door een verbinding met uw bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >![UI-afbeelding voor het ophalen van bestemmings-ID](../../assets/testing-api/get-destination-instance-id.png)
 
 **API-indeling**
@@ -58,8 +58,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 
 | Query-parameter | Beschrijving |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | De id van de doelinstantie op basis waarvan u voorbeeldprofielen genereert. |
-| `{COUNT}` | *Optioneel*. Het aantal voorbeeldprofielen dat u genereert. De parameter kan waarden gebruiken tussen `1 - 1000`. <br> Als de telparameter niet wordt gespecificeerd, dan wordt het standaardaantal geproduceerde profielen bepaald door `maxUsersPerRequest` in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Als deze eigenschap niet is gedefinieerd, genereert Adobe één voorbeeldprofiel. |
+| `{DESTINATION_INSTANCE_ID}` | De id van de doelinstantie waarop u voorbeeldprofielen genereert. |
+| `{COUNT}` | *Optioneel*. Het aantal voorbeeldprofielen dat u genereert. De parameter kan waarden gebruiken tussen `1 - 1000`. <br> Als de telparameter niet wordt gespecificeerd, dan wordt het standaardaantal geproduceerde profielen bepaald door `maxUsersPerRequest` waarde in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Als deze eigenschap niet is gedefinieerd, genereert Adobe één voorbeeldprofiel. |
 
 {style="table-layout:auto"}
 
@@ -183,7 +183,7 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 | `segmentMembership` | A map object that describes the person&#39;s publiek membership. Voor meer informatie over `segmentMembership`, lezen [Details publiek lidmaatschap](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
 | `xdm:status` | Een tekenreeksveld dat aangeeft of het publieklidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel is onderdeel van het segment.</li><li>`exited`: Het profiel sluit het publiek af als onderdeel van de huidige aanvraag.</li></ul> |
-| `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, lezen [Basis van schemacompositie](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, lezen [Basis van schemacompositie](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -209,7 +209,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | Query-parameter | Beschrijving |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | De id van de doelconfiguratie waarop u voorbeeldprofielen genereert. |
-| `{COUNT}` | *Optioneel*. Het aantal voorbeeldprofielen dat u genereert. De parameter kan waarden gebruiken tussen `1 - 1000`. <br> Als de telparameter niet wordt gespecificeerd, dan wordt het standaardaantal geproduceerde profielen bepaald door `maxUsersPerRequest` in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Als deze eigenschap niet is gedefinieerd, genereert Adobe één voorbeeldprofiel. |
+| `{COUNT}` | *Optioneel*. Het aantal voorbeeldprofielen dat u genereert. De parameter kan waarden gebruiken tussen `1 - 1000`. <br> Als de telparameter niet wordt gespecificeerd, dan wordt het standaardaantal geproduceerde profielen bepaald door `maxUsersPerRequest` waarde in de [doelserverconfiguratie](../../authoring-api/destination-server/create-destination-server.md). Als deze eigenschap niet is gedefinieerd, genereert Adobe één voorbeeldprofiel. |
 
 {style="table-layout:auto"}
 
@@ -373,8 +373,8 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, kunt u nu voorbeeldprofielen genereren die u kunt gebruiken wanneer [het testen van een malplaatje van de berichttransformatie](create-template.md) of wanneer [testen of uw doel correct is geconfigureerd](streaming-destination-testing-overview.md).
+Nadat u dit document hebt gelezen, kunt u nu voorbeeldprofielen genereren die u kunt gebruiken wanneer [een sjabloon voor berichttransformatie testen](create-template.md) of wanneer [testen of uw doel correct is geconfigureerd](streaming-destination-testing-overview.md).

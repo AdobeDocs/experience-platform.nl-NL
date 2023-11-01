@@ -1,17 +1,17 @@
 ---
 title: Overzicht van personalisatie
-description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adobe.
+description: Leer hoe u de Adobe Experience Platform Edge Network Server-API gebruikt om persoonlijke inhoud op te halen uit de oplossingen voor het aanpassen van Adoben.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 7%
+source-wordcount: '739'
+ht-degree: 8%
 
 ---
 
 # Overzicht van personalisatie
 
-Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-oplossingen voor personalisatie, waaronder [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) en [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+Met de [!DNL Server API]kunt u persoonlijke inhoud ophalen van Adobe-personalisatieoplossingen, waaronder [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) en [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl).
 
 Daarnaast worden de [!DNL Server API] bevoegdheden personaliseringsmogelijkheden van zelfde pagina en van volgende pagina door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../destinations/ui/activate-edge-personalization-destinations.md).
 
@@ -19,13 +19,13 @@ Wanneer het gebruiken van de Server API, moet u de reactie integreren die door d
 
 ## Terminologie {#terminology}
 
-Alvorens met de oplossingen van de verpersoonlijking van Adobe te werken, zorg ervoor om de volgende concepten te begrijpen:
+Alvorens met de oplossingen van de verpersoonlijking van de Adobe te werken, zorg ervoor om de volgende concepten te begrijpen:
 
 * **Aanbieding**: een aanbieding is een marketingbericht waaraan regels gekoppeld kunnen zijn die bepalen wie in aanmerking komt om de aanbieding te zien.
 * **Besluit**: Een besluit (voorheen bekend als de aanbiedingsactiviteit) brengt de selectie van een aanbieding ter kennis.
-* **Schema**: In het schema van een besluit wordt aangegeven welk soort aanbieding is geretourneerd.
+* **Schema**: In het schema van een besluit wordt aangegeven welk soort aanbieding wordt geretourneerd.
 * **Toepassingsgebied**: De reikwijdte van het besluit.
-   * In Adobe Target is dit de [!DNL mbox]. De [!DNL global mbox] is de `__view__` bereik
+   * In Adobe Target [!DNL mbox]. De [!DNL global mbox] is de `__view__` bereik
    * Voor [!DNL Offer Decisioning], dit zijn de Base64-Gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
 
 ## De `query` object {#query-object}
@@ -55,7 +55,7 @@ Voor het ophalen van gepersonaliseerde inhoud is een expliciet aanvraagqueryobje
 
 | Kenmerk | Type | Vereist/optioneel | Beschrijving |
 | --- | --- | --- | ---|
-| `schemas` | `String[]` | Vereist voor aanpassing van doel. Optioneel voor Offer decisioning. | Lijst van schema&#39;s die in het besluit worden gebruikt, om het type teruggekeerde aanbiedingen te selecteren. |
+| `schemas` | `String[]` | Vereist voor aanpassing van doel. Optioneel voor Offer decisioning. | Lijst van schema&#39;s die in het besluit worden gebruikt, om het type van teruggekeerde aanbiedingen te selecteren. |
 | `scopes` | `String[]` | Optioneel | Lijst van beslissingsbereik. Maximaal 30 per aanvraag. |
 
 ## Het object handle {#handle}
@@ -186,7 +186,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | `configId` | Tekenreeks | Ja | De gegevensstroom-id. |
-| `requestId` | Tekenreeks | Nee | Geef een externe id voor het overtrekken van aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
+| `requestId` | Tekenreeks | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
 
 ### Antwoord {#response}
 
@@ -248,7 +248,7 @@ Retourneert een `200 OK` status en een of meer `Handle` objecten, afhankelijk va
 
 ## Meldingen {#notifications}
 
-Meldingen moeten worden geactiveerd wanneer een vooraf ingestelde inhoud of weergave is bezocht of gerenderd aan de eindgebruiker. Om meldingen voor het juiste bereik uit te schakelen, moet u de bijbehorende `id` voor elk toepassingsgebied.
+Meldingen moeten worden geactiveerd wanneer een vooraf ingestelde inhoud of weergave is bezocht of weergegeven aan de eindgebruiker. Om meldingen voor het juiste bereik uit te schakelen, moet u de bijbehorende `id` voor elk toepassingsgebied.
 
 Meldingen aan de rechterkant `id` voor de overeenkomstige werkingsgebieden moeten worden geactiveerd om de rapportage correct weer te geven.
 
@@ -318,7 +318,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 Een geslaagde reactie retourneert een van de volgende statussen en een `requestID` indien in het verzoek geen informatie is verstrekt.
 
 * `202 Accepted` wanneer het verzoek met succes is verwerkt;
-* `204 No Content` wanneer de aanvraag met succes is verwerkt en de `silent` parameter is ingesteld op `true`;
+* `204 No Content` wanneer de aanvraag met succes is verwerkt en `silent` parameter is ingesteld op `true`;
 * `400 Bad Request` wanneer het verzoek niet correct is geformuleerd (bv. de verplichte primaire identiteit is niet gevonden).
 
 ```json

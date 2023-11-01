@@ -1,9 +1,8 @@
 ---
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '508'
-ht-degree: 54%
+source-wordcount: '504'
+ht-degree: 57%
 
 ---
 # Inhoud bijdragen
@@ -16,15 +15,15 @@ Dit project heeft de [Adobe-gedragscode voor open source](code-of-conduct.md) of
 
 ## Manieren om bij te dragen aan Adobe-inhoud
 
-Zie de [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+Zie de [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=nl).
 
 Hoe u een bijdrage levert, hangt af van wie u bent en van het soort wijzigingen dat u wilt bijdragen:
 
 ### Kleine wijzigingen of verzoeken
 
-Om een verzoek voor te leggen, klik **Logboek een kwestie** verbinding in een artikel, dat een kwestie in GitHub opent. Geef een titel en een beschrijving op en klik op **Nieuwe uitgave verzenden**.
+Als u een aanvraag wilt verzenden, klikt u op de knop **Een probleem aanmelden** verbinding in een artikel, dat een kwestie in GitHub opent. Geef een titel en beschrijving op en klik vervolgens op **Nieuwe uitgave verzenden**.
 
-Om minder belangrijke updates te verzoeken, klik **geef deze pagina** verbinding in een artikel uit, dat het bronartikel in GitHub opent. Gebruik GitHub UI om uw updates te maken. Raadpleeg de algemene handleiding voor [Adobe Docs-contributors](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) voor meer informatie.
+Klik op de knop **Deze pagina bewerken** verbinding in een artikel, dat het bronartikel in GitHub opent. Gebruik GitHub UI om uw updates te maken. Raadpleeg de algemene handleiding voor [Adobe Docs-contributors](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=nl) voor meer informatie.
 
 Kleine correcties of verduidelijkingen die u verzendt voor documentatie en codevoorbeelden in deze repository, worden gedekt door de gebruiksvoorwaarden van Adobe.
 
@@ -36,15 +35,15 @@ Als u deel uitmaakt van de Adobe-community en een artikel wilt maken of belangri
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Belangrijke wijzigingen of nieuwe artikelen van Adobe-medewerkers
+### Belangrijke wijzigingen of nieuwe artikelen van Adobe werknemers
 
-Als u een technisch schrijver, programmamanager, of ontwikkelaar van het productteam voor een oplossing van Adobe Experience Cloud bent, en het uw baan is om aan of auteur technische artikelen bij te dragen, zou u de privé bewaarplaats bij `https://git.corp.adobe.com/AdobeDocs` moeten gebruiken. Zie [Interne Gids van de Samenwerking](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=nl) voor meer informatie.
+Als u een technisch schrijver, programmamanager, of ontwikkelaar van het productteam voor een oplossing van Adobe Experience Cloud bent, en het uw baan is om aan of auteur technische artikelen bij te dragen, zou u de privé bewaarplaats bij moeten gebruiken `https://git.corp.adobe.com/AdobeDocs`. Zie de [Handleiding voor interne samenwerking](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html) voor meer informatie .
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Verbinding maken met het documentatieteam voor Experience Platforms
 
-Zoals hierboven vermeld, kunnen leden van de Adobe-gemeenschap een kwestie indienen die aan de juiste schrijver zal worden toegewezen. Als u medewerker van de Adobe bent, kunt u een kwestie voorleggen of het team van de Documentatie van het Experience Platform direct contacteren. Om de lood schrijver voor een specifiek gebied van het Platform te vinden, zie [de Documentatie van Adobe Experience Platform wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Zoals hierboven vermeld, kunnen leden van de Adobe gemeenschap een kwestie voorleggen die aan de aangewezen schrijver zal worden toegewezen. Als u een medewerker van de Adobe bent, kunt u een kwestie voorleggen of het team van de Documentatie van het Experience Platform direct contacteren. Als u de hoofdschrijver voor een specifiek platformgebied wilt zoeken, raadpleegt u de [Adobe Experience Platform Documentation wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Tools en instellingen
 
@@ -52,7 +51,7 @@ Zoals hierboven vermeld, kunnen leden van de Adobe-gemeenschap een kwestie indie
 
 Community-contributors kunnen de GitHub-interface gebruiken voor eenvoudige bewerkingen of kunnen de repository als beginpunt gebruiken voor belangrijke bijdragen.
 
-Zie de handleiding [Adobe Docs Contributor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) voor meer informatie.
+Zie de handleiding [Adobe Docs Contributor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=nl) voor meer informatie.
 
 ### Markering
 

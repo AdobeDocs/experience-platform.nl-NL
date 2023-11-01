@@ -2,9 +2,9 @@
 title: Personalisatie via Adobe Target
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen die in Adobe Target zijn gemaakt, te leveren en te renderen.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De Edge Network Server-API kan gepersonaliseerde ervaringen die in Adobe Target zijn gemaakt, met behulp van de [Formuliergebaseerde Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+De Edge Network Server-API kan gepersonaliseerde ervaringen die in Adobe Target zijn gemaakt, met behulp van de [Formuliergebaseerde Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->Persoonlijke ervaringen die zijn gemaakt via de [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) niet volledig worden ondersteund door de server-API. De server-API kan **ophalen** activiteiten gemaakt door VEC, maar server API kan niet **renderen** door VEC gecreëerde activiteiten. Als u activiteiten wilt teruggeven die door VEC worden gecreeerd, gelieve uit te voeren [hybride personalisatie](../edge/personalization/hybrid-personalization.md) het gebruiken van SDK van het Web en de Server API van het Netwerk van Edge.
+>Persoonlijke ervaringen die zijn gemaakt via de [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) niet volledig worden ondersteund door de server-API. De server-API kan **ophalen** activiteiten gemaakt door VEC, maar server API kan niet **renderen** door VEC gecreëerde activiteiten. Als u activiteiten wilt teruggeven die door VEC worden gecreeerd, gelieve uit te voeren [hybride personalisatie](../edge/personalization/hybrid-personalization.md) het gebruiken van de SDK van het Web en de Server API van het Netwerk van Edge.
 
 ## Uw gegevensstroom configureren {#configure-your-datastream}
 
@@ -27,7 +27,7 @@ Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../datas
 
 Bij het configureren van de gegevensstroom kunt u (optioneel) waarden opgeven voor [!DNL Property Token], [!DNL Target Environment ID], en [!DNL Target Third Party ID Namespace].
 
-![UI-afbeelding die het configuratiescherm van de datastream-service weergeeft, met Adobe Target geselecteerd](assets/target-datastream.png)
+![UI-afbeelding die het configuratiescherm van de datastream-service weergeeft, waarbij Adobe Target is geselecteerd](assets/target-datastream.png)
 
 
 ## Aangepaste parameters {#custom-parameters}
@@ -57,7 +57,7 @@ Bij het maken van doelgroepen zijn de volgende waarden beschikbaar als aangepast
 
 ## Updates van doelprofiel {#profile-update}
 
-De [!DNL Server API] Hiermee kunt u updates uitvoeren naar het doelprofiel. Als u een doelprofiel wilt bijwerken, moet u ervoor zorgen dat de profielgegevens worden doorgegeven in het dialoogvenster `data` deel van het verzoek in het volgende formaat:
+De [!DNL Server API] Hiermee kunt u het doelprofiel bijwerken. Als u een doelprofiel wilt bijwerken, moet u ervoor zorgen dat de profielgegevens worden doorgegeven in het dialoogvenster `data` deel van het verzoek in het volgende formaat:
 
 ```json
 "data":  {
@@ -68,7 +68,7 @@ De [!DNL Server API] Hiermee kunt u updates uitvoeren naar het doelprofiel. Als 
 }
 ```
 
-## Quarting Target activities {#querying-target-activities}
+## Beoogde activiteiten opvragen {#querying-target-activities}
 
 ### Schema&#39;s {#schemas}
 
@@ -87,7 +87,7 @@ https://ns.adobe.com/personalization/dom-action
 
 ### Beslissingsbereik {#decision-scopes}
 
-Adobe Target [!DNL mbox] de namen moeten in de `decisionScopes` -array om de juiste inhoud te retourneren.
+Adobe Target [!DNL mbox] de namen moeten worden opgenomen in de `decisionScopes` -array om de juiste inhoud te retourneren.
 
 #### Voorbeeld {#decision-scopes-example}
 
@@ -109,7 +109,7 @@ In het onderstaande voorbeeld worden alle vier de aanbiedingstypen opgevraagd sa
 }
 ```
 
-## Voorbeeld van API-aanroep {#api-example}
+## API-aanroepvoorbeeld {#api-example}
 
 **API-indeling**
 

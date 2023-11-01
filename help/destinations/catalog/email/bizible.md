@@ -1,11 +1,11 @@
 ---
 keywords: bizible;bizible extension;bizible destination
-title: Bizible-extensie
-description: De Bizible-extensie is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+title: Bizible extension
+description: De Bizible-extensie is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van de Adobe.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 [!DNL Bizible] is de toonaangevende B2B-attributieoplossing die u een ongeëvenaarde zichtbaarheid in uw gegevens biedt, zodat u slimme beslissingen kunt nemen die de groei stimuleren.
 
-[!DNL Bizible] is een e-mailextensie in Adobe Experience Platform. Lees voor meer informatie over Bizible [Marketingkenmerk](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) in de Bizible-overzichtsbronnen.
+[!DNL Bizible] is een e-mailextensie in Adobe Experience Platform. Lees voor meer informatie over Bizible [Marketingkenmerk](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) in de Bizible-overzichtsbronnen.
 
-Dit doel is een tagextensie. Zie voor meer informatie over de werking van extensies voor tags in het Platform de [overzicht van tagextensies](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie [overzicht van tagextensies](../launch-extensions/overview.md).
 
-![Bizible-extensie](../../assets/catalog/email/bizible/catalog.png)
+![Bizible extension](../../assets/catalog/email/bizible/catalog.png)
 
 ## Vereisten {#prerequisites}
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 Als u het dialoogvenster [!DNL Bizible] extensie:
 
-In de [Interface Platform](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [Platforminterface](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -48,7 +48,7 @@ U kunt de extensie ook rechtstreeks installeren in het dialoogvenster [UI voor g
 
 Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen. In de UI van de Inzameling van Gegevens, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Voor meer informatie over het instellen van regels voor uw extensies raadpleegt u het overzicht over [regels](../../../tags/ui/managing-resources/rules.md) in de tagdocumentatie.
 
-## De extensie configureren, upgraden en verwijderen {#configure-upgrade-delete}
+## Uitbreiding configureren, bijwerken en verwijderen {#configure-upgrade-delete}
 
 U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface voor gegevensverzameling.
 

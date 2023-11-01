@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2098'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ Alloy is de codenaam voor het Web SDK van Adobe Experience Platform. Het wordt g
 
 Nee. Elke Adobe Digital Experience klant kan de Adobe Experience Platform Web SDK gratis gebruiken. Klanten die de [!DNL Web SDK] zal de juiste toestemmingen moeten vormen om schema&#39;s, datasets, identiteitsnamespaces, en gegevensstromen in de Inzameling UI van Gegevens of Experience Platform UI tot stand te brengen.
 
-Voor meer informatie over het configureren van deze machtigingen raadpleegt u onze documentatie over [beheer van gegevensverzamelingsmachtigingen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
+Voor meer informatie over het configureren van deze machtigingen raadpleegt u onze documentatie over [beheer van gegevensverzamelingsmachtigingen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Wie zou SDK van het Web moeten gebruiken?
 
@@ -119,7 +119,7 @@ Met andere woorden, als u besluit Adobe Experience Platform Web SDK voor niet-op
 
 ## Kan ik de ECID&#39;s migreren wanneer ik Alloy ga gebruiken, zodat mijn websitebezoekers niet beginnen op te dagen als nieuwe bezoekers?
 
-Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor ID-migratie in het dialoogvenster [Platform Web SDK-identiteitsdocumentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) voor meer informatie .
+Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor ID-migratie in het dialoogvenster [Platform Web SDK-identiteitsdocumentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#id-migration) voor meer informatie .
 
 ## Hoe is SDK van het Web verschillend dan markeringen?
 
@@ -161,7 +161,7 @@ Ja, gebruikt momenteel SDK van het Web overal tussen één tot zeven koekjes afh
 | **kndctr_orgid_cluster** | 1800 | 30 minuten | Dit koekje slaat het gebied van het Netwerk van de Rand op dat de verzoeken van de huidige gebruiker dient. Het gebied wordt gebruikt in de weg URL zodat het Netwerk van de Rand het verzoek aan het correcte gebied kan leiden. Dit koekje heeft een leven van 30 minuten, zodat als een gebruiker met een verschillend IP adres verbindt, het verzoek aan het dichtste gebied kan worden verpletterd. |
 | **mbox** | 63072000 | 2 jaar | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Hierdoor wordt het doel [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) in te stellen door de Web SDK. |
 | **mboxEdgeCluster** | 1800 | 30 minuten | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Met dit cookie kan de SDK van het Web de juiste Edge-cluster meedelen aan at.js, zodat de doelprofielen synchroon kunnen blijven terwijl gebruikers door een site navigeren. |
-| **AMCV_##@AdobeOrg** | 34128000 | 395 | Dit cookie wordt alleen weergegeven wanneer ID-migratie op de Adobe Experience Platform Web SDK is ingeschakeld. Dit koekje helpt wanneer het overgaan naar Web SDK terwijl sommige delen van de plaats nog bezoekor.js gebruiken. Zie de [idMigrationEnabled-documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) voor meer informatie over deze instelling. |
+| **AMCV_##@AdobeOrg** | 34128000 | 395 | Dit cookie wordt alleen weergegeven wanneer ID-migratie op de Adobe Experience Platform Web SDK is ingeschakeld. Dit koekje helpt wanneer het overgaan naar Web SDK terwijl sommige delen van de plaats nog bezoekor.js gebruiken. Zie de [idMigrationEnabled-documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#identity-options) voor meer informatie over deze instelling. |
 
 Wanneer het gebruiken van SDK van het Web, plaatst het Netwerk van de Rand één of meerdere hierboven koekjes. Het netwerk van de Rand plaatst alle koekjes met `secure` en `sameSite="none"` kenmerken.
 

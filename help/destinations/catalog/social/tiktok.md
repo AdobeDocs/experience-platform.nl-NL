@@ -3,9 +3,9 @@ title: TikTok-verbinding
 description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met behulp van de realtime integratie van Adobe met TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1013'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met behulp van de realtime integratie van Adobe met TikTok Ads Manager. Bezoek [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences?lang=en) voor meer informatie .
+Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met behulp van de realtime integratie van Adobe met TikTok Ads Manager. Bezoek [TikTok Business Help Center](https://ads.tiktok.com/help/article/audiences) voor meer informatie .
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun socia
 
 ## Vereisten {#prerequisites}
 
-U moet [!DNL Admin] of [!DNL Operator] toegang tot de TikTok Ads Manager-account waarnaar u het publiek wilt sturen. Meer instructies vindt u op de [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+U moet [!DNL Admin] of [!DNL Operator] toegang tot de TikTok Ads Manager-account waarnaar u het publiek wilt sturen. Meer instructies vindt u op de [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Voordat u gegevens naar uw TikTok Ads Manager-account kunt verzenden, moet u Adobe Experience Platform toestemming geven om toegang te krijgen tot uw advertentieaccount voor `Audience Management`. Deze toestemming kan worden verleend door [je Ads Manager-id invoeren](#authenticate) in de gebruikersinterface van het Experience Platform en na omleiding naar uw TikTok Ads Manager-account.
 
@@ -123,4 +123,4 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 
 ## Aanvullende bronnen {#additional-resources}
 
-Raadpleeg de [TikTok Help Center-pagina](https://ads.tiktok.com/help/article/audiences?lang=en) voor aanvullende informatie.
+Raadpleeg de [TikTok Help Center-pagina](https://ads.tiktok.com/help/article/audiences) voor aanvullende informatie.

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruik de Interface van het Web van GitHub om een Pagina van de Documentatie van Bronnen te creëren
 description: Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan auteursdocumentatie te gebruiken en een trekkingsverzoek (PR) voor te leggen.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan a
 
 >[!TIP]
 >
->De volgende documenten uit de Contribute-handleiding voor Adobe kunnen worden gebruikt ter ondersteuning van het documentatieproces: <ul><li>[Gereedschappen voor Git- en Markeringsontwerp installeren](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Git-opslagplaats lokaal instellen voor documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[GitHub-bijdrageworkflow voor grote wijzigingen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>De volgende documenten uit de bijdragende gids van de Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[Gereedschappen voor Git- en Markeringsontwerp installeren](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Git-opslagplaats lokaal instellen voor documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-bijdrageworkflow voor grote wijzigingen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Opstelling uw milieu GitHub
 
-De eerste stap in vestiging moet uw milieu GitHub aan het navigeren [Adobe Experience Platform GitHub-opslagplaats](https://github.com/AdobeDocs/experience-platform.en).
+De eerste stap in vestiging uw milieu GitHub moet aan het milieu navigeren [Adobe Experience Platform GitHub-opslagplaats](https://github.com/AdobeDocs/experience-platform.en).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -29,7 +29,7 @@ Selecteer vervolgens **Vork**.
 
 ![vork](../assets/fork.png)
 
-Als de vork is voltooid, selecteert u **master** en voert u een naam voor de nieuwe vertakking in in het vervolgkeuzemenu dat wordt weergegeven. Zorg ervoor dat u een beschrijvende naam voor de vertakking opgeeft, aangezien dit wordt gebruikt om uw werk te bevatten en selecteer vervolgens **vertakking maken**.
+Als de vork is voltooid, selecteert u **meester** en voert u een naam voor de nieuwe vertakking in het vervolgkeuzemenu in. Zorg ervoor dat u een beschrijvende naam voor de vertakking opgeeft, aangezien dit wordt gebruikt om uw werk te bevatten en selecteer vervolgens **vertakking maken**.
 
 ![vertakking maken](../assets/create-branch.png)
 
@@ -51,7 +51,7 @@ Geef het bronbestand een naam `YOURSOURCE.md` waarbij UURSOURCE de naam van uw b
 
 ## Auteur de documentatiepagina voor uw bron
 
-Als u de nieuwe bron wilt documenteren, plakt u de inhoud van het dialoogvenster [source documentation template](./template.md) in de GitHub-webeditor. U kunt de sjabloon ook downloaden [hier](../assets/api-template.zip).
+Plak de inhoud van het dialoogvenster [source documentation template](./template.md) in de GitHub-webeditor. U kunt de sjabloon ook downloaden [hier](../assets/api-template.zip).
 
 Met het malplaatje dat over aan de interface van de Webredacteur van GitHub wordt gekopieerd, volg de instructies die op het malplaatje worden geschetst en geef de waarden uit die relevante informatie voor uw bron bevatten.
 
@@ -63,19 +63,19 @@ Als u klaar bent, legt u het bestand in de vertakking vast.
 
 ## De documentatie ter controle verzenden
 
-Als het bestand is toegewezen, kunt u een pull-verzoek (PR) openen om uw werkvertakking samen te voegen in de master vertakking van de documentatieopslagplaats van Adobe. Controleer of de vertakking waaraan u hebt gewerkt, is geselecteerd en selecteer **Aanvraag vergelijken en intrekken**.
+Als het bestand eenmaal is toegewezen, kunt u een pull-verzoek (PR) openen om uw werkvertakking samen te voegen in de hoofdvertakking van de documentatieopslagplaats van de Adobe. Controleer of de vertakking waaraan u hebt gewerkt, is geselecteerd en selecteer **Aanvraag vergelijken en intrekken**.
 
 ![compare-pr](../assets/compare-pr.png)
 
-Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een notitie toe aan de PR, beschrijf de update en selecteer vervolgens **pull-verzoek maken**. Dit opent een PR om de werkende tak van uw werk in de master tak van de opslagplaats van de Adobe samen te voegen.
+Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een notitie toe aan de PR, beschrijf de update en selecteer vervolgens **pull-verzoek maken**. Dit opent een PR om de werkende tak van uw werk in de hoofdtak van de bewaarplaats van de Adobe samen te voegen.
 
 >[!TIP]
 >
->Laat de **Bewerkingen door onderhoudsleiders toestaan** Schakel het selectievakje in om ervoor te zorgen dat het documentatieteam Adobe de PR kan bewerken.
+>Laat de **Bewerkingen door onderhoudsleiders toestaan** Schakel het selectievakje in om ervoor te zorgen dat het documentatieteam van de Adobe de PR kan bewerken.
 
 ![create-pr](../assets/create-pr.png)
 
-Op dit punt, lijkt een bericht dat u ertoe aanzet om de Overeenkomst van de Vergunning van de Medewerker van de Adobe te ondertekenen (CLA). Dit is een verplichte stap. Nadat u CLA ondertekent, vernieuw de PR pagina en verzend het trekkingsverzoek.
+Op dit punt, lijkt een bericht dat u ertoe aanzet om de Overeenkomst van de Vergunning van de Medewerker van de Adobe (CLA) te ondertekenen. Dit is een verplichte stap. Nadat u CLA ondertekent, vernieuw de PR pagina en verzend het trekkingsverzoek.
 
 U kunt bevestigen dat het trekkingsverzoek is voorgelegd door het lusje van trekkingsverzoeken in https://github.com/AdobeDocs/experience-platform.en te inspecteren.
 

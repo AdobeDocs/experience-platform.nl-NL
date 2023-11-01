@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;sendGrid;sendGrid bestemming
 title: SendGrid-verbinding
 description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij exporteren en deze activeren in SendGrid voor uw bedrijfsbehoeften.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1538'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ De volgende punten worden vereist alvorens u begint de bestemming te vormen.
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Voordat u gegevens naar de SendGrid-bestemming kunt activeren, moet u een [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), en [segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) gemaakt in [!DNL Experience Platform]. Verwijs ook naar [limieten](#limits) verderop op op deze pagina.
+Voordat u gegevens naar de SendGrid-bestemming kunt activeren, moet u een [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) gemaakt in [!DNL Experience Platform]. Verwijs ook naar [limieten](#limits) verderop op op deze pagina.
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 
 ### Doelgegevens invullen {#destination-details}
 
-while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) voor deze bestemming moet u de volgende informatie opgeven:
+while [opzetten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) voor deze bestemming moet u de volgende informatie opgeven:
 
 * **[!UICONTROL Name]**: De naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een optionele beschrijving waarmee u deze bestemming in de toekomst kunt identificeren.

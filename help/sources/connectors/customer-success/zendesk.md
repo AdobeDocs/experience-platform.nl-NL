@@ -3,20 +3,20 @@ title: Overzicht van Zendesk Source Connector
 description: Leer hoe u Zendesk met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 0%
+source-wordcount: '365'
+ht-degree: 1%
 
 ---
 
 # [!DNL Zendesk]
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor klantsucces van derden. Tot de ondersteuning voor succesproviders van klanten behoren: [!DNL Zendesk].
 
-Deze Adobe Experience Platform [bronnen](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) gebruikt de [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) die gebruikersinformatie van Zendesk voor verdere verwerking in Experience Platform teruggeeft.
+Deze Adobe Experience Platform [bronnen](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=nl) gebruikt de [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) die gebruikersinformatie van Zendesk voor verdere verwerking in Experience Platform teruggeeft.
 
 ## IP adres lijst van gewenste personen
 
@@ -28,8 +28,8 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 In deze sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd om uw [!DNL Zendesk] account.
 
-* De eerste stap bij het verifiëren van uw [!DNL Zendesk] account is om ervoor te zorgen dat je [!DNL Zendesk] ondersteuningsaccount. Als u er nog geen hebt, raadpleegt u de [[!DNL Zendesk] registratiepagina](https://www.zendesk.com/register/) om uw Zendesk-account te registreren en te maken.
-* Als u zich hebt geregistreerd, navigeert u naar de [[!DNL Zendesk] website](https://www.zendesk.com/login/) en uw **subdomein**.
+* De eerste stap bij het verifiëren van uw [!DNL Zendesk] account is om ervoor te zorgen dat je [!DNL Zendesk] supportaccount. Als u er nog geen hebt, raadpleegt u de [[!DNL Zendesk] registerpagina](https://www.zendesk.com/register/) om uw Zendesk-account te registreren en te maken.
+* Als u zich hebt geregistreerd, navigeert u naar de [[!DNL Zendesk] website](https://www.zendesk.com/login/) en geef uw **subdomein**.
 * Selecteer vervolgens **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Ten slotte haalt u uw API-token op van de **[!DNL API token]** sectie.
 
@@ -37,13 +37,13 @@ In deze sectie worden de vereiste stappen beschreven die moeten worden uitgevoer
 
 Zie de [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) voor informatie over hoe te om uw subdomain terug te winnen. Voor informatie over het genereren van uw API-token raadpleegt u de [[!DNL Zendesk] handleiding voor het genereren van een nieuw API-token](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Zendesk] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Zendesk] naar Platform met API&#39;s of de gebruikersinterface:
 
 ## Verbinden [!DNL Zendesk] naar Platform met API&#39;s
 
 * [Een bronverbinding en een gegevensstroom maken voor [!DNL Zendesk] de Flow Service API gebruiken](../../tutorials/api/create/customer-success/zendesk.md)
 
-## Verbinden [!DNL Zendesk] naar Platform met behulp van de gebruikersinterface
+## Verbinden [!DNL Zendesk] naar Platform met behulp van UI
 
 * [Een [!DNL Zendesk ]bronverbinding in de gebruikersinterface](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Maak een gegevensstroom voor een bronverbinding van de klantensucces in UI](../../tutorials/ui/dataflow/customer-success.md)

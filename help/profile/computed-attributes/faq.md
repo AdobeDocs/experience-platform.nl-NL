@@ -2,9 +2,9 @@
 title: Berekende kenmerken Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over het gebruik van berekende kenmerken.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -99,4 +99,4 @@ De gegevens verwerkte attributen leiden automatisch de etiketten van het gegeven
 
 ## Hoe gebruik ik berekende kenmerken met Adobe Journey Optimizer?
 
-Als u berekende kenmerken wilt gebruiken tijdens reizen, moet u de opdracht `SystemComputedAttributes` veldgroep naar de gegevensbron van het Experience Platform. Voor meer informatie bij het vormen van de gegevensbron van het Experience Platform, gelieve te lezen [Adobe Experience Platform-gegevensbrongids](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+Als u berekende kenmerken wilt gebruiken tijdens reizen, moet u de opdracht `SystemComputedAttributes` veldgroep naar de gegevensbron van het Experience Platform. Voor meer informatie bij het vormen van de gegevensbron van het Experience Platform, gelieve te lezen [Adobe Experience Platform-gegevensbrongids](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

@@ -3,10 +3,10 @@ keywords: Experience Platform;thuis;populaire onderwerpen;Adobe Campaign Managed
 title: Adobe Campaign Managed Cloud Services
 description: Leer hoe te om Campagne Beheerde Cloud Servicen aan Platform te verbinden gebruikend het gebruikersinterface
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 0%
+source-wordcount: '753'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-Adobe Campaign Managed Cloud Services biedt een Managed Services-platform voor het ontwerpen van ervaringen met klanten over meerdere kanalen en biedt een omgeving voor visuele campagneorchestratie, realtime interactiebeheer en uitvoering via meerdere kanalen. Ga naar [Adobe Campaign v8-documentatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) voor meer informatie .
+Adobe Campaign Managed Cloud Services biedt een Managed Services-platform voor het ontwerpen van ervaringen met klanten over meerdere kanalen en biedt een omgeving voor visuele campagneorchestratie, realtime interactiebeheer en uitvoering via meerdere kanalen. Ga naar [Adobe Campaign v8-documentatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=nl) voor meer informatie .
 
 Met de Adobe Campaign Managed Cloud Services-bron kunt u Adobe Campaign v8-leveringslogboeken en -logboekgegevens naar Adobe Experience Platform overbrengen.
 
@@ -30,7 +30,7 @@ Voordat u een bronverbinding kunt maken om uw campagne v8 naar het Experience Pl
 
 >[!IMPORTANT]
 >
->U moet toegang hebben tot de Adobe Campaign v8 Client Console om uw logboekgegevens in Campagne te bekijken. Ga naar [Campagne v8-documentatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) voor informatie over het downloaden en installeren van de clientconsole.
+>U moet toegang hebben tot de Adobe Campaign v8 Client Console om uw logboekgegevens in Campagne te bekijken. Ga naar [Campagne v8-documentatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) voor informatie over het downloaden en installeren van de clientconsole.
 
 Meld u via de clientconsole aan bij uw Campagne v8-exemplaar. Onder de [!DNL Explorer] tab, selecteert u [!DNL Administration] en selecteer vervolgens [!DNL Configuration]. Selecteer vervolgens [!DNL Data schemas] en past vervolgens de `broadLog` filter voor naam of label. Selecteer in de lijst die wordt weergegeven het bronschema van de geadresseerde leveringslogs met de naam `broadLogRcp`.
 

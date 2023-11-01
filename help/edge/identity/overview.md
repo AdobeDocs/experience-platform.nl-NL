@@ -1,11 +1,11 @@
 ---
 title: Identiteitsgegevens in het Web SDK van het Platform
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
-keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;Primaire;Identiteitskaart Namespace;Naamruimte id;AuthenticationState;hashEnabled;
+keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;primaire;Identiteitskaart Namespace;Naamruimte ID;AuthenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 De Adobe Experience Platform Web SDK gebruikt [Adobe Experience Cloud-id&#39;s (ECID&#39;s)](../../identity-service/ecid.md) om het gedrag van de bezoeker bij te houden. Met behulp van ECID&#39;s kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan. Hierdoor worden alle treffers die tijdens en tussen websessies plaatsvinden, aan een specifiek apparaat gekoppeld.
 
-Dit document biedt een overzicht van hoe u ECID&#39;s kunt beheren met de SDK van het Web Platform.
+Dit document biedt een overzicht van hoe u ECID&#39;s kunt beheren met de Platform Web SDK.
 
 ## ECID&#39;s bijhouden met de SDK
 
-De SDK van het Web van de Platform wijst ECIDs door het gebruik van koekjes toe en volgt, met veelvoudige beschikbare methodes om te vormen hoe deze koekjes worden geproduceerd.
+De SDK van het Web van het Platform wijst ECIDs door het gebruik van koekjes toe en volgt, met veelvoudige beschikbare methodes om te vormen hoe deze koekjes worden geproduceerd.
 
 Wanneer een nieuwe gebruiker op uw website arriveert, probeert de Adobe Experience Cloud Identity Service een apparaatidentificatiecookie voor die gebruiker in te stellen. Voor nieuwe bezoekers wordt een ECID gegenereerd en geretourneerd in de eerste reactie van het Adobe Experience Platform Edge Network. Voor herhaalde bezoekers wordt de ECID opgehaald uit de `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` koekje en toegevoegd aan de lading door het Netwerk van de Rand.
 
@@ -37,7 +37,7 @@ De gegevensinzameling van de derde impliceert het verzenden van gegevens rechtst
 
 De afgelopen jaren zijn webbrowsers steeds restrictiever geworden bij het verwerken van door derden ingestelde cookies. Sommige browsers blokkeren cookies van derden standaard. Als u cookies van derden gebruikt om sitebezoekers te identificeren, is de levensduur van deze cookies vrijwel altijd korter dan wat anders beschikbaar zou zijn in plaats daarvan met cookies van de eerste fabrikant. In sommige gevallen verloopt een cookie van een andere fabrikant over maar liefst zeven dagen.
 
-Bovendien, wanneer de derdegegevensinzameling wordt gebruikt, beperken sommige en blokkeerders verkeer tot eindpunten van de Adobe- gegevensinzameling.
+Bovendien, wanneer de derdegegevensinzameling wordt gebruikt, beperken sommige en blokkeerders verkeer tot eindpunten van de gegevensinzameling van de Adobe.
 
 ### Gegevensverzameling van eerste partijen {#first-party}
 
@@ -47,7 +47,7 @@ Terwijl browsers lange behandelde koekjes hebben die door eindpunten van CNAME o
 
 ### Effecten van de levensduur van cookies op Adobe Experience Cloud-toepassingen {#lifespans}
 
-Ongeacht of u gegevensverzameling van de eerste of van derden kiest, heeft de tijdsduur dat een cookie kan aanhouden een directe invloed op het aantal bezoekers in Adobe Analytics en Customer Journey Analytics. Bovendien kunnen eindgebruikers inconsistente personalisatieervaringen ervaren wanneer Adobe Target of Offer decisioning op de site wordt gebruikt.
+Ongeacht of u gegevensverzameling van de eerste of van de derde partij kiest, heeft de tijdsduur dat een cookie kan aanhouden een directe invloed op het aantal bezoekers in Adobe Analytics en Customer Journey Analytics. Bovendien kunnen eindgebruikers inconsistente personalisatieervaringen ervaren wanneer Adobe Target of Offer decisioning op de site wordt gebruikt.
 
 Neem bijvoorbeeld een situatie waarin u een verpersoonlijkingservaring hebt gemaakt waarmee elk artikel naar de homepage wordt gepromoot als een gebruiker het de afgelopen zeven dagen drie keer heeft bekeken.
 
@@ -105,7 +105,7 @@ alloy("sendEvent", {
 >Adobe raadt aan naamruimten te verzenden die een persoon vertegenwoordigen, zoals `CRMID`, als primaire identiteit.
 
 
-Elke eigenschap binnen `identityMap` staat voor identiteiten die tot een bepaalde [naamruimte identity](../../identity-service/namespaces.md). De eigenschapsnaam moet het naamruimtesymbool voor de identiteit zijn. Dit symbool staat in de Adobe Experience Platform-gebruikersinterface onder &quot;[!UICONTROL Identities]&quot;. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
+Elke eigenschap binnen `identityMap` staat voor identiteiten die tot een bepaalde [naamruimte identity](../../identity-service/namespaces.md). De eigenschapsnaam moet het naamruimtesymbool voor de identiteit zijn. Dit symbool wordt weergegeven in de Adobe Experience Platform-gebruikersinterface onder &quot;[!UICONTROL Identities]&quot;. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
 
 >[!IMPORTANT]
 >
@@ -119,7 +119,7 @@ Elk identiteitsobject in de array identities bevat de volgende eigenschappen:
 | `authenticationState` | Tekenreeks | **(Vereist)** De verificatiestatus van de id. Mogelijke waarden zijn `ambiguous`, `authenticated`, en `loggedOut`. |
 | `primary` | Boolean | Hiermee wordt bepaald of deze identiteit moet worden gebruikt als primair fragment in het profiel. Standaard wordt de ECID ingesteld als de primaire id voor de gebruiker. Indien weggelaten, wordt deze waarde standaard ingesteld op `false`. |
 
-Met de `identityMap` -veld om apparaten of gebruikers te identificeren, leidt tot hetzelfde resultaat als het gebruik van het [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) van de [!DNL ID Service API]. Zie de [ID Service API-documentatie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) voor meer informatie .
+Met de `identityMap` -veld om apparaten of gebruikers te identificeren, leidt tot hetzelfde resultaat als het gebruik van het [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) van de [!DNL ID Service API]. Zie de [ID Service API-documentatie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) voor meer informatie .
 
 ## Migreren van Bezoeker-API naar ECID
 
@@ -127,7 +127,7 @@ Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies mig
 
 * Wanneer sommige pagina&#39;s van een domein de bezoeker-API gebruiken en andere pagina&#39;s deze SDK gebruiken. Ter ondersteuning van dit geval leest de SDK bestaande AMCV-cookies en schrijft hij een nieuw cookie met de bestaande ECID. Daarnaast schrijft de SDK AMCV-cookies zodat, als de ECID als eerste wordt verkregen op een pagina die van instrumenten is voorzien met de SDK, de volgende pagina&#39;s die van instrumenten zijn voorzien met de Bezoeker-API dezelfde ECID hebben.
 * Wanneer de SDK van het Web van Adobe Experience Platform opstelling op een pagina is die ook bezoeker API heeft. Ter ondersteuning van dit geval zoekt de SDK, als het AMCV-cookie niet is ingesteld, naar de Bezoeker-API op de pagina en roept deze aan om de ECID op te halen.
-* Wanneer de hele site gebruikmaakt van Adobe Experience Platform Web SDK en geen API voor bezoekers heeft, is het handig om de ECID&#39;s te migreren zodat de informatie van de retourbezoeker behouden blijft. Nadat SDK wordt opgesteld met `idMigrationEnabled` gedurende een bepaalde periode, zodat de meeste bezoekerscookies worden gemigreerd, kan de instelling worden uitgeschakeld.
+* Wanneer de hele site gebruikmaakt van Adobe Experience Platform Web SDK en geen API voor bezoekers heeft, is het handig om de ECID&#39;s te migreren zodat de informatie van de retourbezoeker behouden blijft. Nadat SDK wordt opgesteld met `idMigrationEnabled` gedurende een bepaalde periode, zodat de meeste cookies van de bezoeker worden gemigreerd, kan de instelling worden uitgeschakeld.
 
 ### Functies voor migratie bijwerken
 
@@ -135,4 +135,4 @@ Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten
 
 ## Gebruiken in gebeurtenis door:sturen
 
-Als u momenteel [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) ingeschakeld en gebruikt `appmeasurement.js` en `visitor.js`, kunt u gebeurtenis-door:sturen toegelaten eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt Adobe om het even welke AAM segmenten en voegt hen aan de vraag aan Analytics toe. Als de vraag aan Analytics die segmenten bevat, zal Analytics geen Audience Manager roepen om het even welke gegevens door:sturen, zodat is er geen dubbele gegevensinzameling. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van SDK van het Web omdat de zelfde segmentatie eindpunten in het achtereind worden geroepen.
+Als u momenteel [gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) ingeschakeld en gebruikt `appmeasurement.js` en `visitor.js`, kunt u gebeurtenis-door:sturen toegelaten eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt de Adobe om het even welke AAM segmenten en voegt hen aan de vraag aan Analytics toe. Als de vraag aan Analytics die segmenten bevat, zal Analytics geen Audience Manager roepen om het even welke gegevens door:sturen, zodat is er geen dubbele gegevensinzameling. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van SDK van het Web omdat de zelfde segmentatie eindpunten in het achtereind worden geroepen.

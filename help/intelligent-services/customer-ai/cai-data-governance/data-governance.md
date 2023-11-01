@@ -5,9 +5,9 @@ feature: Customer AI
 title: Gegevensbeheer in AI van Klant
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,15 @@ Eventuele instellingen met betrekking tot gegevensbeheer in Customer AI worden o
 
 ## Gegevensbeheer {#governance}
 
-Dankzij de integratie tussen Customer AI en Adobe Experience Platform Data Governance kunt u uw gegevens gedurende de hele reis door het Platform beheren en begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
+Dankzij de integratie tussen Customer AI en Adobe Experience Platform Data Governance kunt u uw gegevens tijdens de reis door het platform beheren en begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
 
 De etiketten en het beleid van het gegevensgebruik die op datasets werden gecreeerd die door Platform worden verbruikt kunnen in de configuratiewerkschema van AI van de Klant worden gevonden. Deze labels stoppen of waarschuwen gebruikers die gelabelde velden gebruiken.
 
-Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald. Lees de documentatie op [Labels en beleid](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) voor meer informatie.
+Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie op [Labels en beleid](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) voor meer informatie.
 
 ## Toestemmingsbeleid {#consent-policy}
 
-Klant-AI houdt zich aan uw voorkeuren voor toestemming. Eenmaal [opstelling en uw toestemmingsbeleid toegelaten](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=en#consent-policy), zal de Klant AI de toestemmingsgegevens naleven die van u worden verzameld. Alleen gegevens met toestemming worden gebruikt om het model te scoren in volgende uitvoeringen van het model. De nieuwe scores vervangen de oude scores en kunnen in segmentatie worden gebruikt. Deze functie is momenteel alleen beschikbaar voor klanten van het HealthCare Shield- en het Privacy- en beveiligingsschild.
+Klant-AI houdt zich aan uw voorkeuren voor toestemming. Eenmaal [opstelling en uw toestemmingsbeleid toegelaten](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy), zal de Klant AI de toestemmingsgegevens naleven die van u worden verzameld. Alleen gegevens met toestemming worden gebruikt om het model te scoren in volgende uitvoeringen van het model. De nieuwe scores vervangen de oude scores en kunnen in segmentatie worden gebruikt. Deze functie is momenteel alleen beschikbaar voor klanten van het HealthCare Shield- en het Privacy- en beveiligingsschild.
 
 Meer informatie over deze functie vindt u hier:
 

@@ -4,9 +4,9 @@ title: Microsoft Dynamics 365-verbinding
 description: Met de bestemming Microsoft Dynamics 365 kunt u uw accountgegevens exporteren en activeren in Microsoft Dynamics 365 voor uw zakelijke behoeften.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2077'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Als markeerteken kunt u uw gebruikers een persoonlijke ervaring bieden op basis 
 
 ### Voorwaarden voor Experience Platforms {#prerequisites-in-experience-platform}
 
-Voordat u gegevens activeert naar de [!DNL Dynamics 365] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), en [publiek](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=en) gemaakt in [!DNL Experience Platform].
+Voordat u gegevens activeert naar de [!DNL Dynamics 365] doel, u moet een [schema](/help/xdm/schema/composition.md), [gegevensset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [publiek](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) gemaakt in [!DNL Experience Platform].
 
 Raadpleeg de documentatie van de Adobe voor [Publiek Lidmaatschap Details schema groep](/help/xdm/field-groups/profile/segmentation.md) als u hulp over publieksstatus nodig hebt.
 

@@ -2,7 +2,7 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5472'
 ht-degree: 0%
@@ -88,7 +88,7 @@ De gebeurtenis wordt geactiveerd als het volume wordt verhoogd of verlaagd. Zie 
 
 #### Wijziging van richting
 
-De gebeurtenis wordt geactiveerd als de oriëntatie van het apparaat verandert. U moet de duur opgeven waarvoor de oriëntatie moet wijzigen om de gebeurtenis te activeren. Er zijn geen instellingen voor dit gebeurtenistype.
+De gebeurtenis wordt geactiveerd als de oriëntatie van het apparaat verandert. U moet de duur opgeven waarvoor de oriëntatie moet worden gewijzigd om de gebeurtenis te activeren. Er zijn geen instellingen voor dit gebeurtenistype.
 
 #### Zoomwijziging
 
@@ -106,7 +106,7 @@ Als het element een ankertag is (`<a>`) aan gekoppelde inhoud, kunt u ook opgeve
 >
 >Deze optie moet uiterst voorzichtig worden gebruikt vanwege de mogelijke negatieve gevolgen voor de gebruikerservaring indien deze onjuist wordt gebruikt.
 
-Wanneer u koppelingsvertraging gebruikt, voorkomt Platform eigenlijk dat de browser van de pagina af navigeert. Vervolgens wordt er een JavaScript-omleiding uitgevoerd naar de oorspronkelijke bestemming na de opgegeven time-out. Dit is vooral gevaarlijk wanneer de paginamarkering `<a>` -tags waarop de gebruiker niet werkelijk van de pagina af kan navigeren vanwege de bedoelde functionaliteit. Als u uw probleem niet op een andere manier kunt oplossen, zou u met uw selecteursdefinitie uiterst nauwkeurig moeten zijn zodat deze gebeurtenis precies teweegbrengt waar u het nodig hebt en nergens anders.
+Wanneer u koppelingsvertraging gebruikt, voorkomt Platform eigenlijk browser van de pagina te navigeren. Vervolgens wordt er een JavaScript-omleiding uitgevoerd naar de oorspronkelijke bestemming na de opgegeven time-out. Dit is vooral gevaarlijk wanneer de paginamarkering `<a>` -tags waarop de gebruiker niet werkelijk van de pagina af kan navigeren vanwege de bedoelde functionaliteit. Als u uw probleem niet op een andere manier kunt oplossen, zou u met uw selecteursdefinitie uiterst nauwkeurig moeten zijn zodat deze gebeurtenis precies teweegbrengt waar u het nodig hebt en nergens anders.
 
 De standaardwaarde voor de vertraging van de koppeling is 100 milliseconden. Tags wachten altijd op de opgegeven tijd en houden op geen enkele manier verband met de uitvoering van de handelingen van de regel. Het is mogelijk dat de vertraging de gebruiker zal dwingen langer te wachten dan noodzakelijk is, en ook dat de vertraging niet lang genoeg zal zijn voor alle acties van de regel met succes te voltooien. Langere vertragingen verstrekken meer tijd voor regeluitvoering maar ook verslechteren de gebruikerservaring.
 
@@ -122,7 +122,7 @@ De gebeurtenis wordt geactiveerd wanneer de gebruiker de muisaanwijzer op een op
 
 #### Aangepaste gebeurtenis
 
-De gebeurtenis wordt geactiveerd als een aangepast gebeurtenistype optreedt. Benoemde JavaScript-functies die elders in de codebase zijn gedefinieerd, kunnen worden gebruikt als een aangepast gebeurtenistype. U moet de naam van het type van douanegebeurtenis specificeren en om het even welke andere montages vormen zoals die in worden beschreven [Opties](#options) hieronder.
+De gebeurtenis wordt geactiveerd als een aangepast gebeurtenistype optreedt. Benoemde JavaScript-functies die elders in de codebase zijn gedefinieerd, kunnen worden gebruikt als een aangepast gebeurtenistype. U moet de naam van het type van douanegebeurtenis specificeren en andere montages vormen zoals die in worden beschreven [Opties](#options) hieronder.
 
 #### Gegevenselement gewijzigd
 
@@ -132,7 +132,7 @@ De gebeurtenis wordt geactiveerd wanneer een opgegeven gegevenselement verandert
 
 Een directe vraaggebeurtenis mijdt gebeurtenisopsporing en raadplegingssystemen. De directe vraagregels zijn ideaal voor situaties waar u het systeem precies wilt vertellen wat gebeurt. Bovendien zijn deze ideaal wanneer het systeem geen gebeurtenis in het DOM kan detecteren.
 
-Wanneer u een directe aanroepgebeurtenis definieert, moet u een tekenreeks opgeven die als id van deze gebeurtenis fungeert. Indien een [directe belactie activeren](#direct-call-action) die het zelfde herkenningsteken bevatten wordt in brand gestoken, dan zullen om het even welke directe regels die van de vraaggebeurtenis luisteren naar dat herkenningsteken lopen.
+Wanneer u een directe aanroepgebeurtenis definieert, moet u een tekenreeks opgeven die als id van deze gebeurtenis fungeert. Indien een [directe aanroepactie activeren](#direct-call-action) die het zelfde herkenningsteken bevatten wordt in brand gestoken, dan zullen om het even welke directe regels die van de vraaggebeurtenis luisteren naar dat herkenningsteken lopen.
 
 ![Screenshot van een Directe gebeurtenis van de Vraag in de Inzameling UI van Gegevens](../../../images/extensions/client/core/direct-call-event.png)
 
@@ -191,23 +191,23 @@ Als u deze optie selecteert, worden de volgende parameters beschikbaar:
 
 * `property=value`
 
-   Geef de waarde voor de eigenschap op
+  Geef de waarde voor de eigenschap op
 
 * Regex
 
-   Inschakelen als de `property=value` is een reguliere expressie.
+  Inschakelen als de optie `property=value` is een reguliere expressie.
 
 * Toevoegen
 
-   Nog een toevoegen `property=value` paar.
+  Nog een toevoegen `property=value` paar.
 
-#### Geavanceerde opties (Bubbling)
+#### Geavanceerde opties (bloggen)
 
 * Deze regel zelfs uitvoeren wanneer de gebeurtenis van een afstammend element afkomstig is
 * Laat deze regel lopen zelfs als de gebeurtenis reeds een regel teweegbracht die een afstammend element richt
 * Nadat de regel is uitgevoerd, voorkomt u dat de gebeurtenis regels activeert die gericht zijn op bovenliggende elementen
 
-## Type voorwaarde voor kernextensie
+## Voorkeurstypen van kernextensie
 
 In deze sectie worden de voorwaardetypen beschreven die beschikbaar zijn in de extensie Core. Deze voorwaardetypes kunnen met of het regelmatige of type van uitzonderingslogica worden gebruikt.
 
@@ -217,7 +217,7 @@ In deze sectie worden de voorwaardetypen beschreven die beschikbaar zijn in de e
 
 Geef de naam en waarde van het cookie op die moeten bestaan voordat een gebeurtenis een handeling activeert.
 
-1. Geef een naam voor de cookie op.
+1. Geef een cookienaam op.
 1. Voer de waarde in die in het cookie moet bestaan als de gebeurtenis een handeling moet activeren.
 1. (Optioneel) Schakel Regex in als dit een reguliere expressie is.
 
@@ -242,7 +242,7 @@ console.log(event);
 return true;
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de console van de browser. Zodra u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic beslissing binnen uw douanecode gebruiken.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Zodra u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic beslissing binnen uw douanecode gebruiken.
 
 *Voorwaardenvolgorde*
 
@@ -303,7 +303,7 @@ De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
 **Is groter dan:** De voorwaarde retourneert true als de eerste waarde groter is dan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
-**groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
+**is groter dan of gelijk aan:** De voorwaarde retourneert true als de eerste waarde groter dan of gelijk is aan de tweede waarde. Tekenreeksen die getallen vertegenwoordigen, worden omgezet in getallen. Een andere waarde dan een getal of een convertibele tekenreeks resulteert in de voorwaarde die false retourneert.
 
 **Is waar:** De voorwaarde retourneert true als de waarde een booleaanse waarde is met de waarde true. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
@@ -365,7 +365,7 @@ Configureer hoe lang de bezoeker op de site moet zijn voordat de handeling wordt
 1. Geef op of het aantal minuten dat de bezoeker op de site heeft, groter moet zijn dan, gelijk aan of kleiner dan de opgegeven waarde.
 1. Geef het aantal minuten op dat bepaalt of aan de voorwaarde wordt voldaan.
 
-#### Verkeersbron
+#### verkeersbron
 
 Trigger de actie als het aantal zittingen van de gebruiker aan de gespecificeerde criteria voldoet.
 
@@ -418,7 +418,7 @@ Selecteer een of meer van de volgende besturingssystemen:
 * Blackberry
 * iOS
 * Linux
-* macOS
+* MacOS
 * Maemo
 * Symbian OS
 * Unix
@@ -536,7 +536,7 @@ Voor de voorwaarde maximale frequentie 1 per sessie: deze twee `localStorage` ob
 
 `sessionCount` is een `visitorTracking` -item, zodat de bezoeker-API moet zijn ingeschakeld om de samplingvoorwaarde te laten werken.
 
-#### Monster
+#### Bemonstering
 
 Geef het percentage op van de tijd waarop de voorwaarde true retourneert.
 
@@ -566,7 +566,7 @@ Wanneer JavaScript als taal wordt geselecteerd, een variabele genoemd `event` wo
 console.log(event);
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de console van de browser. Nadat u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic besluit binnen uw douanecode gebruiken, een stuk van verzenden `event` -object naar een server enzovoort.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Nadat u begrijpt welke informatie beschikbaar is, kunt u het voor programmatic besluit binnen uw douanecode gebruiken, een stuk van verzenden `event` -object naar een server enzovoort.
 
 ### Verwerking van aangepaste code
 
@@ -584,7 +584,7 @@ Tijdens het gebruik van document.write nadat een pagina is geladen, zouden er do
 
 #### Aangepaste codevalidatie
 
-De validator die in de tagcode-editor wordt gebruikt, is ontworpen om problemen met door ontwikkelaars geschreven code te identificeren. De code die door een minificatieproces-zoals code AppMeasurement.js is gegaan die van de Manager van de Code wordt gedownload-zou verkeerd kunnen worden gemarkeerd als hebbend kwesties door validator, die gewoonlijk kan worden genegeerd.
+De validator die in de tagcode-editor wordt gebruikt, is ontworpen om problemen met door ontwikkelaars geschreven code te identificeren. De code die door een minificatieproces-zoals code AppMeasurement.js is gegaan die van de Manager van de Code wordt gedownload - zou verkeerd kunnen worden gemarkeerd zoals hebbend kwesties door validator, die gewoonlijk kan worden genegeerd.
 
 #### Handelingvolgorde
 
@@ -636,7 +636,7 @@ Deze handeling activeert alle regels die een specifieke [directe call, gebeurten
 
 ![Schermafbeelding van een actie van de Vraag van de Trekker Direct in de UI van de Inzameling van Gegevens](../../../images/extensions/client/core/direct-call-action.png)
 
-De handeling wordt rechtstreeks toegewezen aan de [`track` methode](../../../ui/client-side/satellite-object.md?lang=en#track) in de `satellite` -object, dat kan worden benaderd door code op de client.
+De handeling wordt rechtstreeks toegewezen aan de [`track` methode](../../../ui/client-side/satellite-object.md#track) in de `satellite` -object, dat kan worden benaderd door code op de client.
 
 ## Gegevenstelelementtypen van de kernextensie
 
@@ -666,7 +666,7 @@ Elke constante tekenreekswaarde waarnaar vervolgens in handelingen of voorwaarde
 >
 >ES6+ JavaScript wordt nu ondersteund in aangepaste code. Houd er rekening mee dat sommige oudere browsers ES6+ niet ondersteunen. Om inzicht te krijgen in de gevolgen van het gebruik van ES6+-functies, moet u testen op alle webbrowsers die worden ondersteund.
 
-U kunt aangepaste JavaScript invoeren in de gebruikersinterface door Editor openen te selecteren en code in te voegen in het editorvenster.
+U kunt aangepaste JavaScript invoeren in de gebruikersinterface door Editor openen te selecteren en code in het editorvenster in te voegen.
 
 Een terugkeerverklaring is noodzakelijk in het redacteursvenster om erop te wijzen welke waarde als waarde van het gegevenselement zou moeten worden gebruikt. Als een instructie return niet is opgenomen of als de waarde `null` of `undefined` wordt geretourneerd, wordt de standaardwaarde van het gegevenselement gebruikt als de waarde van het gegevenselement.
 
@@ -688,7 +688,7 @@ console.log(event);
 return true;
 ```
 
-Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de console van de browser. Zodra u begrijpt welke informatie onder de diverse regels beschikbaar is die uw gegevenselement kunnen gebruiken, kunt u het voor programmatic besluit binnen uw douanecode gebruiken of een stuk van het terugkeren `event` -object als waarde van het gegevenselement.
+Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobject in de browserconsole. Zodra u begrijpt welke informatie onder de diverse regels beschikbaar is die uw gegevenselement kunnen gebruiken, kunt u het voor programmatic besluit binnen uw douanecode gebruiken of een stuk van het terugkeren `event` -object als waarde van het gegevenselement.
 
 ### DOM-kenmerk
 
@@ -818,7 +818,7 @@ Alleen de naamsectie is nodig en speciale aanduidingen zoals &quot;?&quot; of &q
 Gebruik dit gegevenselement om een willekeurig getal te genereren. Deze wordt vaak gebruikt voor het nemen van monsters van gegevens of het maken van id&#39;s, zoals een Actief-id. Het willekeurige getal kan ook worden gebruikt om vertrouwelijke of salt-gevoelige gegevens te verkrijgen. Voorbeelden hiervan zijn:
 
 * Een hoogte-id genereren
-* Plaats het nummer in een gebruikerstoken of tijdstempel om ervoor te zorgen dat het uniek is
+* Plaats het nummer samen met een gebruikerstoken of tijdstempel om ervoor te zorgen dat het uniek is
 * Voer een unidirectionele knoeiboel op PII gegevens uit
 * Willekeurig beslissen wanneer een enquêteverzoek op de plaats moet tonen
 
@@ -838,12 +838,12 @@ Sessieopslag is vergelijkbaar met lokale opslag, behalve dat de gegevens worden 
 
 ### Bezoekergedrag
 
-Net als Pagina-info gebruikt dit gegevenselement gangbare gedragstypen om logica binnen regels en andere oplossingen voor Platforms te verrijken.
+Vergelijkbaar met Pagina Info, gebruikt dit gegevenselement gemeenschappelijke gedragstypes om logica binnen regels en andere oplossingen van het Platform te verrijken.
 
 Selecteer een van de volgende kenmerken voor bezoekersgedrag:
 
 * Landingspagina
-* Verkeersbron
+* verkeersbron
 * Minuten op site
 * Aantal sessies
 * Aantal sessiepagina&#39;s
@@ -859,7 +859,7 @@ Enkele gangbare gebruiksgevallen zijn:
 
 ### Voorwaardelijke waarde
 
-Een omslag voor de [Waardevergelijking](#value-comparison-value-comparison) voorwaarde. Op basis van het resultaat van de vergelijking wordt een van de twee beschikbare waarden in het formulier geretourneerd. Kan hiermee &quot;if... Dan... Anders...&quot; scenario&#39;s zonder extra regels.
+Een omslag voor de [Waardevergelijking](#value-comparison-value-comparison) voorwaarde. Op basis van het resultaat van de vergelijking wordt een van de twee beschikbare waarden in het formulier geretourneerd. Kan hiermee &quot;if... Dan... Anders...&quot; scenario&#39;s zonder de behoefte aan extra regels.
 
 ### Runtimeomgeving
 
@@ -882,7 +882,7 @@ Retourneert een van de volgende kenmerken van het bezoekersapparaat:
 * Grootte browservenster
 * Schermgrootte
 
-### JavaScript-gereedschappen
+### JavaScript-functies
 
 Dit is een omslag voor veelvoorkomende JavaScript-bewerkingen. Het ontvangt een gegevenselement als input. Het keert het resultaat van één van de volgende transformaties van de waarde van het gegevenselement terug:
 

@@ -2,9 +2,9 @@
 title: Personalisatie via Offer decisioning
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen via Offer decisioning te leveren en weer te geven.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De Edge Network Server-API kan persoonlijke ervaringen bieden die worden beheerd in [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) naar het webkanaal.
+De Edge Network Server-API kan persoonlijke ervaringen bieden die worden beheerd in [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html) naar het webkanaal.
 
 [!DNL Offer Decisioning] ondersteunt een niet-visuele interface voor het maken, activeren en leveren van uw activiteiten en personalisatieervaring.
 
 ## Vereisten {#prerequisites}
 
-Personalisatie via [!DNL Offer Decisioning] vereist dat u toegang hebt tot [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en) voordat u uw integratie configureert.
+Personalisatie via [!DNL Offer Decisioning] vereist dat u toegang hebt tot [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) voordat u uw integratie configureert.
 
 ## Uw gegevensstroom configureren {#configure-your-datastream}
 
-Voordat u de server-API in combinatie met Offer decisioning kunt gebruiken, moet u de Adobe Experience Platform-personalisatie in uw datastreamconfiguratie inschakelen en de **[!UICONTROL Offer Decisioning]** optie.
+Voordat u de server-API in combinatie met Offer decisioning kunt gebruiken, moet u de Adobe Experience Platform-personalisatie in uw datastreamconfiguratie inschakelen en de **[!UICONTROL Offer Decisioning]** -optie.
 
 Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../datastreams/overview.md#adobe-experience-platform-settings), voor gedetailleerde informatie over hoe Offer decisioning kan worden ingeschakeld.
 
@@ -41,7 +41,7 @@ Meer informatie over de [!DNL Offer Decisioning Engine], zie de toegewijde [docu
 
 Na [configureren, gegevensstroom](#configure-your-datastream), moet u het besluitvormingswerkingsgebied bepalen dat in uw verpersoonlijkingscampagne moet worden gebruikt.
 
-[Beslissingsbereik](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) Dit zijn de Base64-gecodeerde JSON-tekenreeksen die de activiteit- en plaatsings-id&#39;s bevatten die u wilt [!DNL Offer Decisioning Service] te gebruiken bij het voorstellen van voorstellen.
+[Beslissingsbereik](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) Dit zijn de Base64-gecodeerde JSON-tekenreeksen die de activiteit en plaatsing-id&#39;s bevatten die u wilt [!DNL Offer Decisioning Service] te gebruiken bij het voorstellen van voorstellen.
 
 **Beslissingsbereik JSON**
 
@@ -58,7 +58,7 @@ Na [configureren, gegevensstroom](#configure-your-datastream), moet u het beslui
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-Nadat u uw aanbiedingen en verzamelingen hebt gemaakt, moet u een [beslissingsbereik](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+Nadat u uw aanbiedingen en verzamelingen hebt gemaakt, moet u een [beslissingsbereik](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Kopieer het Base64-Gecodeerde besluitvormingswerkingsgebied. U gebruikt deze in het dialoogvenster `query` object van de Server API-aanvraag.
 
@@ -74,7 +74,7 @@ Kopieer het Base64-Gecodeerde besluitvormingswerkingsgebied. U gebruikt deze in 
 }
 ```
 
-## Voorbeeld van API-aanroep {#api-example}
+## API-aanroepvoorbeeld {#api-example}
 
 **API-indeling**
 
@@ -246,7 +246,7 @@ Het Edge-netwerk retourneert een vergelijkbare reactie als hieronder.
 
 Als de bezoeker in aanmerking komt voor een verpersoonlijkingsactiviteit op basis van gegevens die worden verzonden naar [!DNL Offer Decisioning], de relevante inhoud van de activiteit in de `handle` object, waarbij het type `personalization:decisions`.
 
-Andere inhoud wordt geretourneerd onder de `handle` ook. Andere inhoudstypen zijn niet relevant voor [!DNL Offer Decisioning] personalisatie. Als de bezoeker in aanmerking komt voor meerdere activiteiten, worden deze opgenomen in een array.
+Andere inhoud wordt geretourneerd onder de `handle` ook objecten. Andere inhoudstypen zijn niet relevant voor [!DNL Offer Decisioning] personalisatie. Als de bezoeker in aanmerking komt voor meerdere activiteiten, worden deze opgenomen in een array.
 
 In de onderstaande tabel worden de belangrijkste elementen van dat gedeelte van het antwoord uitgelegd.
 

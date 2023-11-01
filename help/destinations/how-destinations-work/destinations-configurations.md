@@ -2,9 +2,9 @@
 title: Configureerbare en algemene exportinstellingen in doelen
 description: Leer welke de uitvoermontages in bestemmingen configureerbaar op een bestemmingsniveau zijn en die vast zijn en niet kunnen worden uitgegeven.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Deze pagina beschrijft of verbindt uit aan alle gemeenschappelijke en configuree
 
 ## Algemene exportinstellingen voor verschillende doeltypen {#common-settings-across-destination-types}
 
-Het uitvoergedrag van de bestemming is consistent voor alle bestemmingen die tot een type bestemming behoren met betrekking tot *wat een doelexport activeert* en *wat is inbegrepen bij de uitvoer van de bestemming*. De uitvoer van de bestemming wordt teweeggebracht door berichten die de bestemmingsdienst van ontvangt [upstream klantenprofielservice in realtime](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Het uitvoergedrag van de bestemming is consistent voor alle bestemmingen die tot een type bestemming behoren met betrekking tot *wat een doelexport activeert* en *wat is inbegrepen bij de uitvoer van de bestemming*. De uitvoer van de bestemming wordt teweeggebracht door berichten die de bestemmingsdienst van ontvangt [upstream klantenprofielservice in realtime](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 Wat in de bestemmingsuitvoer inbegrepen is varieert lichtjes tussen bestemmingstypes. Meer informatie over de [algemene exportgedragspatronen per doeltype](/help/destinations/how-destinations-work/profile-export-behavior.md). Deze instellingen kunnen niet worden bewerkt door bestemmingsontwikkelaars of Real-Time CDP-gebruikers.
 

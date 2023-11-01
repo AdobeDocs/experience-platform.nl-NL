@@ -2,9 +2,9 @@
 title: Constante analyse en tracering
 description: Leer hoe u een dashboard voor de toestemmingsanalyse kunt maken om te controleren hoe de toestemming van de gebruiker in de loop der tijd is verlopen.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ De [!UICONTROL Subscriptions] wordt weergegeven. Selecteer en sleep de **[!UICON
 
 >[!NOTE]
 >
->Er geldt een zachte limiet voor het aantal soorten publiek dat u kunt maken. Meer informatie vindt u in de [documentatie over segmentatiegids](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>Er geldt een zachte limiet voor het aantal soorten publiek dat u kunt maken. Meer informatie vindt u in de [documentatie over segmentatiegids](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
 
 ![De [!UICONTROL Choice Value] kenmerk met de [!UICONTROL Yes (opt-in)] waarde die in de segmentbouwer wordt benadrukt. De naam en beschrijving van het publiek worden ook gemarkeerd.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

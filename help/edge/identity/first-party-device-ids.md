@@ -2,16 +2,16 @@
 title: Eerste partij apparaat IDs in het Web SDK van het Platform
 description: Leer hoe u FPID's (First-party device ID's) voor de Adobe Experience Platform Web SDK configureert.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1772'
 ht-degree: 0%
 
 ---
 
 # Eerste partij apparaat IDs in het Web SDK van het Platform
 
-De Adobe Experience Platform Web SDK wijst [Adobe Experience Cloud-id&#39;s (ECID&#39;s)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) aan websitebezoekers door middel van cookies, om het gedrag van de gebruiker te volgen. Als u browserbeperkingen voor de levensduur van cookies wilt compenseren, kunt u ervoor kiezen om uw eigen apparaat-id&#39;s in te stellen en te beheren. Deze worden ook wel FPID&#39;s (First-Party Device ID&#39;s) genoemd.
+De Adobe Experience Platform Web SDK wijst [Adobe Experience Cloud-id&#39;s (ECID&#39;s)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) aan websitebezoekers door middel van cookies, om het gedrag van de gebruiker te volgen. Als u browserbeperkingen voor de levensduur van cookies wilt compenseren, kunt u ervoor kiezen om uw eigen apparaat-id&#39;s in te stellen en te beheren. Deze worden ook wel FPID&#39;s (First-Party Device ID&#39;s) genoemd.
 
 >[!NOTE]
 >

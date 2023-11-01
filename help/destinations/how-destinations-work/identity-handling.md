@@ -2,9 +2,9 @@
 title: Identiteitsverwerking in de workflow voor doelactivering
 description: Leer hoe identiteitsexport wordt verwerkt in de activeringsworkflow, afhankelijk van het doeltype
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Elke bestemming in de [catalogus](/help/destinations/catalog/overview.md) is lic
 
 ## Bestandsgebaseerde doelen {#file-based}
 
-Voor [bestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based) (bijvoorbeeld [!DNL Amazon S3], SFTP, de meeste e-mailmarketing bestemmingen zoals [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), is de identiteitsopstelling in de meeste van deze bestemmingen open, betekenend dat u niet wordt vereist om het even welke identiteit in te selecteren [Kenmerken selecteren](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) stap van de batchactiveringsworkflow.
+Voor [bestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based) (bijvoorbeeld [!DNL Amazon S3], SFTP, de meeste e-mailmarketing bestemmingen zoals [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), is de identiteitsopstelling in de meeste van deze bestemmingen open, betekenend dat u om het even welke identiteit in niet moet selecteren [Kenmerken selecteren](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) stap van de batchactiveringsworkflow.
 
-Als u ervoor kiest id&#39;s toe te voegen aan uw geëxporteerde bestanden, moet u niet vergeten dat er slechts één identiteit uit het menu [naamruimte identity](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) kan worden geselecteerd in een exportbewerking. Wanneer u een identiteit selecteert om te exporteren, wordt deze automatisch geselecteerd als een [mandatory, kenmerk](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) en [deduplicatiesleutel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+Als u ervoor kiest id&#39;s toe te voegen aan uw geëxporteerde bestanden, moet u niet vergeten dat er slechts één identiteit uit het menu [naamruimte identity](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) kan worden geselecteerd in een exportbewerking. Wanneer u een identiteit selecteert om te exporteren, wordt deze automatisch geselecteerd als een [mandatory, kenmerk](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) en [deduplicatie-sleutel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![Een identiteit die is geselecteerd als verplicht kenmerk en een deduplicatietoets.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
@@ -60,13 +60,13 @@ Het exportgedrag is afhankelijk van de vraag of u `IdentityMap: Email` of `xdm: 
 
 Als een klant activeert `IdentityMap: Email`Er staan twee records in het geëxporteerde bestand: een voor e-mail1 en een voor e-mail2.
 
-Als een klant echter `xdm: personalEmail.address`, bevat de record alleen e-mail2, omdat het veld E-mailkenmerk alleen e-mail2 bevat. Deze situaties kunnen verschillende gebruiksgevallen verhelpen waarbij u mogelijk alle e-mailadressen wilt activeren die in het bestand staan voor een klant, of alleen het meest recente e-mailadres dat in het bestand staat voor de klant.
+Als een klant echter `xdm: personalEmail.address`, bevat de record alleen e-mail2, omdat het veld E-mailkenmerk alleen e-mail2 bevat. In deze situaties kunnen verschillende gebruiksgevallen worden opgelost waarbij u mogelijk alle e-mailadressen wilt activeren die in het bestand staan voor een klant, of alleen het meest recente e-mailadres dat in het bestand staat voor de klant.
 
 Het wegnemen is dat het aantal records dat u exporteert, afhankelijk is van het gekozen samenvoegbeleid en of u identiteiten of kenmerken selecteert in het exporteren.
 
 ## Op API gebaseerde streamingdoelen {#streaming-destinations}
 
-[Op API gebaseerde streamingdoelen](/help/destinations/destination-types.md#streaming-destination) gebouwd met [Destination SDK](/help/destinations/destination-sdk/overview.md) (bijvoorbeeld [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze]en andere) ondersteunen alleen specifieke id&#39;s voor exporteren. Voor gedetailleerde informatie over de specifieke identiteiten die naar elke bestemming kunnen worden uitgevoerd, lees *ondersteunde identiteiten* in elke pagina van de bestemmingsdocumentatie (bijvoorbeeld, zie [sectie ondersteunde identiteiten](/help/destinations/catalog/advertising/pinterest.md) in de [!DNL Pinterest] doelpagina).
+[Op API gebaseerde streamingdoelen](/help/destinations/destination-types.md#streaming-destination) gebouwd met [Destination SDK](/help/destinations/destination-sdk/overview.md) (bijvoorbeeld [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze]en andere) ondersteunen alleen specifieke id&#39;s voor exporteren. Voor gedetailleerde informatie over de specifieke identiteiten die naar elke bestemming kunnen worden uitgevoerd, lees *ondersteunde identiteiten* in elke pagina van de bestemmingsdocumentatie (bijvoorbeeld, zie [sectie met ondersteunde identiteiten](/help/destinations/catalog/advertising/pinterest.md) in de [!DNL Pinterest] doelpagina).
 
 Houd er echter rekening mee dat u over de flexibiliteit beschikt om gegevens uit een van beide [privégrafieken](/help/profile/merge-policies/overview.md#id-stitching) of van kenmerken als identiteiten. Dit betekent dat u attributen XDM aan het identiteitsgebied kunt in kaart brengen dat door de bestemming wordt vereist. Zie hieronder een voorbeeld voor de [!DNL Pinterest] doel, waarbij het XDM-kenmerk `personalEmail.address` is toegewezen aan de vereiste [!DNL Pinterest] identiteit `pinterest_audience`.
 
@@ -78,17 +78,17 @@ Houd er echter rekening mee dat u over de flexibiliteit beschikt om gegevens uit
 
 ### Reclamebestemmingen die afhankelijk zijn van cookie-integratie van derden {#third-party-cookie-destinations}
 
-Reclamebestemmingen die afhankelijk zijn van cookies van derden (bijvoorbeeld: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) vereist niet dat klanten id&#39;s selecteren in de activeringsworkflow. Voor deze bestemmingen, wanneer vestiging een activeringswerkschema, kijkt het Experience Platform automatisch omhoog de lijst van de identiteitsgelijke die door wordt geconstrueerd [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en) en exporteert u alle identiteiten die beschikbaar zijn voor een profiel en die door de bestemming worden ondersteund.
+Reclamebestemmingen die afhankelijk zijn van cookies van derden (bijvoorbeeld: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) vereist niet dat klanten id&#39;s selecteren in de activeringsworkflow. Voor deze bestemmingen, wanneer vestiging een activeringswerkschema, kijkt het Experience Platform automatisch omhoog de lijst van de identiteitsgelijke die door wordt geconstrueerd [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) en exporteert u alle identiteiten die beschikbaar zijn voor een profiel en die door de bestemming worden ondersteund.
 
 Voor deze doelen is een id-sync vereist via een van de [!UICONTROL Experience Cloud ID service] of via [!UICONTROL Experience Platform Web SDK].
 
 Als u [!UICONTROL Experience Platform Web SDK] en de erfenis [!UICONTROL Experience Cloud ID service] niet op de pagina wordt geïmplementeerd, dan moet u ervoor zorgen dat de gegevensstroom voor de website in kwestie is ingeschakeld zodat ID-synchronisatie van derden mogelijk is, zoals beschreven in het [configureren, gegevensstroomdocumentatie](/help/datastreams/configure.md#create).
 
-Wanneer u een gegevensstroom configureert zoals wordt beschreven in de bovenstaande documentatie, moet u ervoor zorgen dat de **[!UICONTROL Third Party ID Sync]** is ingeschakeld. De meeste klanten zouden de `container_id` veld leeg (standaard ingesteld op 0). U hoeft deze waarde alleen te wijzigen als uw implementatie van een oudere Audience Manager een specifieke container-id gebruikt (dit zou echter de grote minderheid van klanten zijn).
+Wanneer u een gegevensstroom configureert zoals wordt beschreven in de bovenstaande documentatie, moet u ervoor zorgen dat de **[!UICONTROL Third Party ID Sync]** is ingeschakeld. De meeste klanten zouden de `container_id` veld leeg (standaard 0). U hoeft deze waarde alleen te wijzigen als uw implementatie van een oudere Audience Manager een specifieke container-id gebruikt (dit zou echter de grote minderheid van klanten zijn).
 
 >[!NOTE]
 >
->De meeste van deze advertentiebestemmingen worden gesteund in Audience Manager (deze bestemmingstypes zijn gekend in Audience Manager als op apparaat-gebaseerde bestemmingen. Zie een [lijst van alle gesteunde op apparaat-gebaseerde bestemmingen in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=en)). Er worden slechts enkele in Experience Platform vermeld. Voor informatie over het delen van gegevens tussen Experience Platform en Audience Manager, lees de sectie over [gegevens delen van Experience Platform naar Audience Manager inschakelen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#enable-aep-to-aam-data). Momenteel is er geen plan om meer cookie-doelen van derden te ondersteunen.
+>De meeste van deze advertentiebestemmingen worden gesteund in Audience Manager (deze bestemmingstypes zijn gekend in Audience Manager als op apparaat-gebaseerde bestemmingen. Zie een [lijst van alle gesteunde op apparaat-gebaseerde bestemmingen in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Er worden slechts enkele in Experience Platform vermeld. Voor informatie over het delen van gegevens tussen Experience Platform en Audience Manager, lees de sectie over [gegevens delen van Experience Platform naar Audience Manager inschakelen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Momenteel is er geen plan om meer cookie-doelen van derden te ondersteunen.
 
 ## Enterprise-bestemmingen {#enterprise-destinations}
 
@@ -96,7 +96,7 @@ Wanneer u een gegevensstroom configureert zoals wordt beschreven in de bovenstaa
 
 ## Aanpassingsdoelen {#personalization-destinations}
 
-[Aanpassingsdoelen (of randdoelen)](/help/destinations/destination-types.md#edge-personalization-destinations) (bijvoorbeeld: Adobe Target [!DNL Custom Personalization]) hoeft u geen identiteit te selecteren in de activeringsworkflow, omdat de integratie een opgezocht profiel is. De client ([!DNL Target], [!DNL Web SDK], of anderen) vraagt de [[!UICONTROL Edge]](/help/collection/home.md#edge) en haalt de profielinformatie die het voor onsite verpersoonlijking nodig heeft.
+[Aanpassingsdoelen (of randdoelen)](/help/destinations/destination-types.md#edge-personalization-destinations) (bijvoorbeeld Adobe Target, [!DNL Custom Personalization]) hoeft u geen identiteit te selecteren in de activeringsworkflow, omdat de integratie een opgezocht profiel is. De client ([!DNL Target], [!DNL Web SDK], of anderen) vraagt de [[!UICONTROL Edge]](/help/collection/home.md#edge) en haalt de profielinformatie die het voor onsite verpersoonlijking nodig heeft.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)
@@ -109,4 +109,4 @@ Nadat u dit document hebt gelezen, weet u nu hoe u kunt achterhalen welke identi
 
 Vervolgens kunt u lezen over welke [exportinstellingen](/help/destinations/how-destinations-work/destinations-configurations.md) voor bestemmingen zijn gemeenschappelijk over bestemmingstypes, die op een individueel bestemmingsniveau door ontwikkelaars kunnen worden gevormd, en welke montages door gebruikers in het activeringswerkschema kunnen worden uitgegeven.
 
-U kunt ook alle beschikbare doelen uitchecken in het dialoogvenster [catalogus](/help/destinations/catalog/overview.md).
+U kunt ook alle beschikbare doelen uitchecken in de [catalogus](/help/destinations/catalog/overview.md).

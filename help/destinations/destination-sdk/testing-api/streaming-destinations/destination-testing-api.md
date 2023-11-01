@@ -2,9 +2,9 @@
 description: Leer hoe te om bestemmings het testen API te gebruiken om te testen als uw het stromen bestemming correct wordt gevormd en de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 title: Streaming doel testen met voorbeeldprofielen
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Deze pagina bevat een overzicht en beschrijving van alle API-bewerkingen die u kunt uitvoeren met de `/authoring/testing/destinationInstance/` API eindpunt, om te testen als uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [De doelconfiguratie testen](streaming-destination-testing-overview.md).
 
-U doet verzoeken aan het het testen eindpunt met of zonder profielen aan de vraag toe te voegen. Als u geen profielen op het verzoek verzendt, zal Adobe die intern voor u produceren en hen toevoegen aan het verzoek.
+U doet verzoeken aan het het testen eindpunt met of zonder profielen aan de vraag toe te voegen. Als u geen profielen op het verzoek verzendt, zal de Adobe die intern voor u produceren en hen toevoegen aan het verzoek.
 
 U kunt de [Voorbeeld van genereren van profiel-API](sample-profile-generation-api.md) om profielen te maken die moeten worden gebruikt in aanvragen voor de API voor het testen van doelen.
 
@@ -26,8 +26,8 @@ U kunt de [Voorbeeld van genereren van profiel-API](sample-profile-generation-ap
 
 >[!IMPORTANT]
 >
->* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) en [profielen en doelgroepen activeren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) voor meer informatie .
-> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [bladeren door een verbinding met uw bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lezen [verbinding maken met doel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) en [profielen en doelgroepen activeren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) voor meer informatie .
+> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [bladeren door een verbinding met uw bestemming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >![UI-afbeelding voor het ophalen van bestemmings-ID](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Aan de slag met API-bewerkingen voor doeltesten {#get-started}
@@ -157,7 +157,7 @@ Een succesvolle reactie keert status 200 van HTTP samen met de API reactie van h
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `aggregationKey` | Omvat informatie over het samenvoegingsbeleid dat voor de bestemming wordt gevormd. Lees voor meer informatie de [Samenvoegingsbeleid](../../functionality/destination-configuration/aggregation-policy.md) documentatie. |
-| `traceId` | Een unieke id voor de bewerking. Wanneer het ontmoeten van fouten, kunt u deze identiteitskaart met het team van Adobe voor het oplossen van problemendoeleinden delen. |
+| `traceId` | Een unieke id voor de bewerking. Wanneer het ontmoeten van fouten, kunt u deze identiteitskaart met het team van de Adobe voor het oplossen van problemendoeleinden delen. |
 | `results.httpCalls.request` | Omvat het verzoek dat door Adobe naar uw bestemming werd verzonden. |
 | `results.httpCalls.response` | Omvat de reactie die door Adobe van uw bestemming wordt ontvangen. |
 | `inputProfiles` | Omvat de profielen die op de vraag aan uw bestemming werden uitgevoerd. De profielen komen overeen met het bronschema. |
@@ -180,7 +180,7 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **Verzoek**
 
-Het volgende verzoek roept het REST API eindpunt van uw bestemming. Het verzoek wordt gevormd door de parameters die in de lading en worden verstrekt `{DESTINATION_INSTANCE_ID}` queryparameter.
+Het volgende verzoek roept het REST API eindpunt van uw bestemming. Het verzoek wordt gevormd door de parameters die in de nuttige lading en worden verstrekt `{DESTINATION_INSTANCE_ID}` queryparameter.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -322,7 +322,7 @@ Een succesvolle reactie keert status 200 van HTTP samen met de API reactie van h
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 

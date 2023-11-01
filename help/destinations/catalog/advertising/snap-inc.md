@@ -2,9 +2,9 @@
 title: Magnetische Inc-verbinding
 description: Leer hoe u verbinding maakt met het Snapchat Ads Platform en uw publiek exporteert vanuit Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1001'
 ht-degree: 1%
 
 ---
@@ -128,7 +128,7 @@ Na activering van het publiek naar de *Magnetische Inc.* doel, kunt u het publie
 
 ![Doelgroepen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Houd er rekening mee dat wanneer een publiek van een Adobe voor het eerst wordt geactiveerd op Snap Inc., dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over de manier waarop het publiek in Experience Platform wordt beoordeeld, raadpleegt u de [Overzicht van segmentatieservice](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Houd er rekening mee dat wanneer een publiek van een Adobe voor het eerst wordt geactiveerd op Snap Inc., dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over de manier waarop het publiek in Experience Platform wordt beoordeeld, raadpleegt u de [Overzicht van segmentatieservice](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

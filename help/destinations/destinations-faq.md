@@ -3,9 +3,9 @@ keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1631'
 ht-degree: 2%
 
 ---
@@ -178,7 +178,7 @@ Zie voor gedetailleerde uitleg over de vereisten voor ID-matching [Vereisten voo
 
 ++ + antwoordnr., [Web SDK](../edge/home.md) is niet vereist om het publiek te activeren op [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Als echter [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) wordt gebruikt in plaats van Web SDK, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
+Als echter [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) wordt gebruikt in plaats van Web SDK, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
 Voor [personalisatie op dezelfde pagina en op de volgende pagina](ui/activate-edge-personalization-destinations.md) gebruik gevallen, moet u of gebruiken [Web SDK](../edge/home.md) of de [Edge Network Server-API](../server-api/overview.md). Zie de documentatie op [activeren van publiek naar randbestemmingen](ui/activate-edge-personalization-destinations.md) voor meer details over de implementatie.
 +++
@@ -204,7 +204,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Waar zie ik de geactiveerde kenmerken in Adobe Target?
 
-+++Antwoordkenmerken zijn beschikbaar voor gebruik in Doel [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=en) voorstellen.
++++Antwoordkenmerken zijn beschikbaar voor gebruik in Doel [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) voorstellen.
 +++
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen?

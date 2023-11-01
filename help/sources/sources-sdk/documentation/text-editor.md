@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken
 description: Dit document bevat stappen voor het gebruik van uw lokale omgeving bij het schrijven van documentatie voor uw bron en het indienen van een pull-verzoek (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
-# Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken
+# Een teksteditor in uw lokale omgeving gebruiken om een pagina met brondocumentatie te maken
 
 Dit document bevat stappen voor het gebruik van uw lokale omgeving bij het schrijven van documentatie voor uw bron en het indienen van een pull-verzoek (PR).
 
 >[!TIP]
 >
->De volgende documenten uit de Contribute-handleiding voor Adobe kunnen worden gebruikt ter ondersteuning van het documentatieproces: <ul><li>[Gereedschappen voor Git- en Markeringsontwerp installeren](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Git-opslagplaats lokaal instellen voor documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[GitHub-bijdrageworkflow voor grote wijzigingen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>De volgende documenten uit de bijdragende gids van de Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[Gereedschappen voor Git- en Markeringsontwerp installeren](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Git-opslagplaats lokaal instellen voor documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-bijdrageworkflow voor grote wijzigingen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Vereisten
 
@@ -29,15 +29,15 @@ De eerste stap bij het instellen van uw lokale ontwerpomgeving is naar de [Adobe
 
 ![platform-repo](../assets/platform-repo.png)
 
-Voor de belangrijkste pagina van de bewaarplaats van GitHub van het Platform, selecteer **Vork**.
+Voor de belangrijkste pagina van de bewaarplaats van Platform GitHub, selecteer **Vork**.
 
 ![vork](../assets/fork.png)
 
-Selecteer **Code**. Selecteer in het vervolgkeuzemenu dat wordt weergegeven de optie **HTTPS** en selecteert u vervolgens **Openen met GitHub Desktop**.
+Als u de opslagplaats wilt klonen op uw lokale computer, selecteert u **Code**. Selecteer in het vervolgkeuzemenu dat wordt weergegeven **HTTPS** en selecteert u vervolgens **Openen met GitHub Desktop**.
 
 >[!TIP]
 >
->Raadpleeg de zelfstudie voor meer informatie [Git-opslagplaats lokaal instellen voor documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
+>Raadpleeg de zelfstudie voor meer informatie [Git-opslagplaats lokaal instellen voor documentatie](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-bureaublad](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ Selecteer vervolgens **Vertakking publiceren**.
 
 ## Auteur de documentatiepagina voor uw bron
 
-Als de opslagplaats aan uw lokale machine wordt gekloond en een nieuwe tak gecreeerd, kunt u nu beginnen de documentatiepagina voor uw nieuwe bron door [teksteditor van uw keuze](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+Als de opslagplaats aan uw lokale machine wordt gekloond en een nieuwe tak gecreeerd, kunt u nu beginnen de documentatiepagina voor uw nieuwe bron door [teksteditor van uw keuze](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
 Adobe raadt u aan [Visual Studio-code](https://code.visualstudio.com/) en dat u de extensie Adobe Markdown Authoring installeert. Om de uitbreiding te installeren, lanceer de Code van Visual Studio, en selecteer dan **Extensies** van de linkernavigatie.
 
@@ -89,11 +89,11 @@ Selecteer **Uitvouwen verzoek maken**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een notitie toe aan de PR, beschrijf de update en selecteer vervolgens **pull-verzoek maken**. Dit opent een PR om de werkende tak van uw werk in de master tak van de opslagplaats van de Adobe samen te voegen.
+Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een notitie toe aan de PR, beschrijf de update en selecteer vervolgens **pull-verzoek maken**. Dit opent een PR om de werkende tak van uw werk in de hoofdtak van de bewaarplaats van de Adobe samen te voegen.
 
 >[!TIP]
 >
->Laat de **Bewerkingen door onderhoudsleiders toestaan** Schakel het selectievakje in om ervoor te zorgen dat het documentatieteam Adobe de PR kan bewerken.
+>Laat de **Bewerkingen door onderhoudsleiders toestaan** Schakel het selectievakje in om ervoor te zorgen dat het documentatieteam van de Adobe de PR kan bewerken.
 
 ![create-pr](../assets/create-pr.png)
 

@@ -1,41 +1,41 @@
 ---
-title: Een Adobe Target-implementatie testen met Adobe Experience Platform Debugger
-description: Leer hoe u Adobe Experience Platform Debugger gebruikt om een website die met Adobe Target is ingeschakeld, te testen en er fouten in op te sporen.
+title: Adobe Target-implementatie met Adobe Experience Platform Debugger testen
+description: Leer hoe u Adobe Experience Platform Debugger kunt gebruiken om een website die met Adobe Target is ingeschakeld, te testen en er fouten in op te sporen.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
 
-# Een Adobe Target-implementatie testen met Adobe Experience Platform Debugger
+# Een Adobe Target-implementatie met Adobe Experience Platform Debugger testen
 
-Adobe Experience Platform Debugger beschikt over een reeks nuttige hulpmiddelen voor het testen van en het opsporen van fouten in een website die is uitgerust met een Adobe Target-implementatie. In deze handleiding vindt u een aantal algemene workflows en aanbevolen procedures voor het gebruik van foutopsporing voor Platforms op een website die geschikt is voor Doel.
+Adobe Experience Platform Debugger biedt een reeks nuttige hulpmiddelen voor het testen van en het opsporen van fouten in een website die is uitgerust met een Adobe Target-implementatie. In deze handleiding vindt u een aantal algemene workflows en aanbevolen procedures voor het gebruik van Platform Debugger op een website die geschikt is voor Doel.
 
 ## Vereisten
 
-Als u foutopsporing voor Platform wilt gebruiken voor doel, moet de website de opdracht [at.js-bibliotheek](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) versie 1.x of hoger. Vorige versies worden niet ondersteund.
+Als u Platform Debugger wilt gebruiken voor Doel, moet de website de functie [at.js-bibliotheek](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) versie 1.x of hoger. Vorige versies worden niet ondersteund.
 
-## Foutopsporing Platform initialiseren
+## Platformfoutopsporing initialiseren
 
-Open de website die u wilt testen in een browser en open vervolgens de extensie Foutopsporing Platform.
+Open de website die u wilt testen in een browser en open vervolgens de extensie Platform Debugger.
 
 Selecteren **[!DNL Target]** in de linkernavigatie. Als Foutopsporing van het Platform ontdekt dat een compatibele versie van at.js op de plaats loopt, worden de de implementatiedetails van Adobe Target getoond.
 
-![De doelweergave die is geselecteerd in Foutopsporing Platform geeft aan dat Adobe Target actief is op de momenteel weergegeven browserpagina](../images/solutions/target/target-initialized.png)
+![De doelweergave die is geselecteerd in Foutopsporing op platform, geeft aan dat Adobe Target actief is op de momenteel weergegeven browserpagina](../images/solutions/target/target-initialized.png)
 
 ## Algemene configuratiegegevens
 
-De informatie over de globale configuratie van de implementatie wordt getoond bij de bovenkant van de mening van het Doel in Foutopsporing van het Platform.
+De informatie over de globale configuratie van de implementatie wordt getoond bij de bovenkant van de mening van het Doel in Debugger van het Platform.
 
-![Algemene configuratiegegevens voor Doel gemarkeerd in Foutopsporing Platform](../images/solutions/target/global-config.png)
+![Algemene configuratiegegevens voor doel gemarkeerd in Foutopsporing van platform](../images/solutions/target/global-config.png)
 
 | Naam | Beschrijving |
 | --- | --- |
 | Clientcode | Een unieke id die uw organisatie identificeert. |
 | Versie | De versie van de Adobe Target-bibliotheek die momenteel op de website is geïnstalleerd. |
-| Algemene aanvraagnaam | De naam van de [global mbox](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/?) voor de doelimplementatie, waarbij de standaardnaam `target-global-mbox`. |
+| Algemene aanvraagnaam | De naam van [global mbox](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/?) voor de doelimplementatie, waarbij de standaardnaam `target-global-mbox`. |
 | Gebeurtenis bij laden van pagina | Een Booleaanse waarde die aangeeft of een [page load, gebeurtenis](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/how-atjs-works/#atjs-2x-diagrams) heeft plaatsgevonden. Gebeurtenissen voor het laden van pagina&#39;s worden alleen ondersteund voor at.js 2.x. Voor niet-compatibele versies wordt deze waarde standaard ingesteld op `None`. |
 
 {style="table-layout:auto"}
@@ -44,11 +44,11 @@ De informatie over de globale configuratie van de implementatie wordt getoond bi
 
 Selecteren **[!DNL Network Requests]** om summiere informatie over elk netwerkverzoek te bekijken dat op de pagina wordt gemaakt.
 
-![De [!DNL Network Requests] sectie voor Doel geselecteerd in Foutopsporing Platform](../images/solutions/target/network-requests.png)
+![De [!DNL Network Requests] sectie voor doel geselecteerd in Foutopsporing van platform](../images/solutions/target/network-requests.png)
 
 Terwijl u handelingen uitvoert op de pagina (inclusief het opnieuw laden van de pagina), worden automatisch nieuwe kolommen toegevoegd aan de tabel, zodat u de volgorde van handelingen kunt weergeven en kunt zien hoe waarden tussen elke aanvraag worden gewijzigd.
 
-![De [!DNL Network Requests] sectie voor Doel geselecteerd in Foutopsporing Platform](../images/solutions/target/new-request.png)
+![De [!DNL Network Requests] sectie voor doel geselecteerd in Foutopsporing van platform](../images/solutions/target/new-request.png)
 
 De volgende waarden worden vastgelegd:
 
@@ -69,15 +69,15 @@ De volgende waarden worden vastgelegd:
 | [!DNL clientCode] | De id voor de account van uw organisatie, zoals door Target wordt herkend. |
 | [!DNL requestType] | De API die is gebruikt voor de aanvraag. Als u at.js 1.x gebruikt, is de waarde `/json`. Als u at.js 2.x gebruikt, is de waarde `delivery`. |
 | [!DNL Audience Manager Blob] | Verstrekt informatie over gecodeerde die meta-gegevens van de Audience Manager als &quot;blob&quot;worden bedoeld. |
-| [!DNL Audience Location Hint] | The data collection region ID. Dit is een numerieke id voor de geografische locatie van een bepaald datacenter van de ID-service. Raadpleeg de documentatie bij de Audience Manager over [Id&#39;s, locaties en hostnamen van DCS-regio&#39;s](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) en de handleiding Identiteitsdienst Experience Cloud op [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=en#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | The data collection region ID. Dit is een numerieke id voor de geografische locatie van een bepaald datacenter van de ID-service. Raadpleeg de documentatie bij de Audience Manager over [Id&#39;s, locaties en hostnamen van DCS-regio&#39;s](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) en de handleiding voor identiteitsdienst van Experiencen Cloud op [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | De browserhoogte in pixels. |
 | [!DNL Browser Time Offset] | De tijdverschuiving van de browser die is gekoppeld aan de tijdzone. |
-| [!DNL Browser Width] | De breedte van de browser in pixels. |
+| [!DNL Browser Width] | De browserbreedte in pixels. |
 | [!DNL Color Depth] | De kleurdiepte van het scherm. |
 | [!DNL context] | Een object dat contextuele informatie bevat over de browser die is gebruikt om de aanvraag uit te voeren, inclusief schermafmetingen en clientplatform. |
 | [!DNL prefetch] | De parameters waarin wordt gebruikt tijdens `prefetch` verwerking. |
 | [!DNL execute] | De parameters die tijdens worden gebruikt `execute` verwerking. |
-| [!DNL Experience Cloud Visitor ID] | Als er een wordt gedetecteerd, geeft u informatie over de [Experience Cloud-ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) die is toegewezen aan de huidige sitebezoeker. |
+| [!DNL Experience Cloud Visitor ID] | Als er een wordt gedetecteerd, geeft u informatie over de [Experience Cloud-id (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) die is toegewezen aan de huidige sitebezoeker. |
 | [!DNL experienceCloud] | Bevat de Experience Cloud-id&#39;s voor deze specifieke gebruikerssessie: een A4T [aanvullende gegevens-id](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A)en [bezoeker-id (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html). |
 | [!DNL id] | De [Doel-id](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) voor de bezoeker. |
 | [!DNL Mbox Host] | De [host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) dat het verzoek van Target is ingediend. |
@@ -91,25 +91,25 @@ De volgende waarden worden vastgelegd:
 | [!DNL Screen Height] | De hoogte van het scherm in pixels. |
 | [!DNL Screen Width] | De breedte van het scherm in pixels. |
 | [!DNL Supplemental Data ID] | Een door het systeem gegenereerde id die wordt gebruikt om bezoekers te koppelen aan de overeenkomende Adobe Target- en Adobe Analytics-aanroepen. Zie de [A4T-gids voor probleemoplossing](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?#section_75002584FA63456D8D9086172925DD8D) voor meer informatie . |
-| [!DNL vst] | De [Experience Cloud Identity Service API-configuratie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
+| [!DNL vst] | De [API-configuratie van Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
 | [!DNL webGLRenderer] | Verstrekt informatie over renderer WebGL die op de pagina wordt gebruikt, als toepasselijk. |
 
 {style="table-layout:auto"}
 
 Selecteer de tabelcel in kwestie om de details van een parameter voor een bepaalde netwerkgebeurtenis weer te geven. Er verschijnt een popover met nadere informatie over de parameter, waaronder een beschrijving en de waarde ervan. Als de waarde een JSON-object is, bevat het dialoogvenster een volledig navigeerbare weergave van de structuur van het object.
 
-![De [!DNL Network Requests] sectie voor Doel geselecteerd in Foutopsporing Platform](../images/solutions/target/request-param-details.png)
+![De [!DNL Network Requests] sectie voor doel geselecteerd in Foutopsporing van platform](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
 Selecteren **[!DNL Configuration]** om een selectie van extra het zuiveren hulpmiddelen voor Doel toe te laten of onbruikbaar te maken.
 
-![De [!DNL Configuration Requests] sectie voor Doel geselecteerd in Foutopsporing Platform](../images/solutions/target/configuration.png)
+![De [!DNL Configuration Requests] sectie voor doel geselecteerd in Foutopsporing van platform](../images/solutions/target/configuration.png)
 
 | Het gereedschap Foutopsporing | Beschrijving |
 | --- | --- |
 | [!DNL Target Console Logging] | Wanneer toegelaten, staat u tot de logboeken van at.js in de browser consoletabblad toegang. Deze functie kan ook worden ingeschakeld door een `mboxDebug` vraag (met om het even welke waarde) aan browser URL. |
 | [!DNL Target Diable] | Als deze optie is ingeschakeld, worden alle functies van het doel op de pagina uitgeschakeld. Dit kan worden gebruikt om te bepalen als een specifiek aanbod van het Doel is wat de kwestie op de pagina veroorzaakt. |
-| [!DNL Target Trace] | **Opmerking**: U moet zijn aangemeld om deze functie in te schakelen.<br><br>Als deze optie is ingeschakeld, worden trackingtokens verzonden bij elke query en wordt in elke reactie een trace-object geretourneerd. `at.js` parseert de reactie `window.__targetTraces`. Elk trace-object bevat dezelfde informatie als [[!DNL Network Requests] tab], met de volgende toevoegingen:<ul><li>Een profielmomentopname, die u toestaat om attributen vóór en na verzoeken te zien.</li><li>Gelijkend en niet gematcht [activiteiten](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), waaruit blijkt waarom het huidige profiel al dan niet in aanmerking kwam voor specifieke activiteiten.<ul><li>Dit kan helpen identificeren voor welk publiek een profiel op een bepaald punt in aanmerking komt, en waarom.</li><li>Doeldocumenten bevatten meer informatie over verschillende activiteitstypen</li></ul></li></ul> |
+| [!DNL Target Trace] | **Opmerking**: U moet zijn aangemeld om deze functie in te schakelen.<br><br>Als deze optie is ingeschakeld, worden trackingtokens verzonden bij elke query en wordt in elke reactie een trace-object geretourneerd. `at.js` parseert de reactie `window.__targetTraces`. Elk trace-object bevat dezelfde informatie als [[!DNL Network Requests] tab], met de volgende toevoegingen:<ul><li>Een profielmomentopname, die u toestaat om attributen vóór en na verzoeken te zien.</li><li>Gelijktijdig en niet-gematcht [activiteiten](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), waaruit blijkt waarom het huidige profiel al dan niet in aanmerking kwam voor specifieke activiteiten.<ul><li>Dit kan helpen identificeren voor welk publiek een profiel op een bepaald punt in aanmerking komt, en waarom.</li><li>Doeldocumenten bevatten meer informatie over verschillende activiteitstypen</li></ul></li></ul> |
 
 {style="table-layout:auto"}

@@ -3,9 +3,9 @@ title: Client-tips voor gebruikersagent
 description: Leer hoe de wenken van de gebruikersagentencliënt in Web SDK werken. Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
 keywords: user-agent;client hints; tekenreeks; user-agent tekenreeks; lage entropie; hoge entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
@@ -120,9 +120,9 @@ De [Besturingssysteem](https://experienceleague.adobe.com/docs/analytics/compone
 
 ### Audience Manager-eigenschappen die afhankelijk zijn van hoge entropieclientiptips {#aam}
 
-[!DNL Google] heeft de [!DNL Chrome] browserfunctionaliteit om de informatie die via de `User-Agent` header. Als gevolg hiervan gebruiken klanten van de Audience Manager [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) geen betrouwbare informatie meer ontvangen op basis van [toetsen op platformniveau](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=en).
+[!DNL Google] heeft de [!DNL Chrome] browserfunctionaliteit om de informatie die via de `User-Agent` header. Als gevolg hiervan gebruiken klanten van de Audience Manager [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) geen betrouwbare informatie meer ontvangen op basis van [toetsen op platformniveau](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten schakelen naar [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) in plaats van [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)en [Tips voor High Entropy-clients](#enabling-high-entropy-client-hints) betrouwbare gegevens over de eigenschap te blijven ontvangen.
+De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten schakelen naar [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) in plaats van [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html)en [Tips voor High Entropy-clients](#enabling-high-entropy-client-hints) betrouwbare gegevens over de eigenschap te blijven ontvangen.
 
 ## Hoog entropclient-hints inschakelen {#enabling-high-entropy-client-hints}
 

@@ -1,11 +1,11 @@
 ---
 keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Personalization extension;marketo web personalization extension;marketo;marketo;Marketo
-title: Marketo Web Personalization-extensie
-description: De extensie Marketo Web Personalization is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+title: Marketo Web Personalization extension
+description: De extensie Marketo Web Personalization is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van de Adobe.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Deze extensie implementeert het script voor [!DNL Marketo’s] Web Personalization en ContentAI toepassingen. [!DNL Marketo] Webpersonalisatie identificeert en personaliseert inhoud op unieke wijze aan de kenmerken van webbezoekers, zoals zelfafbeeldingen voor anonieme bezoekers en een breed scala aan gedragskenmerken binnen de [!DNL Marketo] Platform voor betrokkenheid van bekende bezoekers. [!DNL Marketo] ContentAI bevat mogelijkheden voor door AI aangedreven aanbevelingen en personalisatie voor web- en e-mailcampagnes die uniek zijn voor B2B-klanten.
+Deze extensie implementeert het script voor [!DNL Marketo's] Web Personalization en ContentAI toepassingen. [!DNL Marketo] Webpersonalisatie identificeert en personaliseert inhoud op unieke wijze aan de kenmerken van webbezoekers, zoals zelfafbeeldingen voor anonieme bezoekers en een breed scala aan gedragskenmerken binnen de [!DNL Marketo] Aanpassingsplatform voor bekende bezoekers. [!DNL Marketo] ContentAI bevat mogelijkheden voor door AI aangedreven aanbevelingen en personalisatie voor web- en e-mailcampagnes die uniek zijn voor B2B-klanten.
 
-[!DNL Marketo Web Personalization] is een personalisatie-uitbreiding in Adobe Experience Platform. Lees voor meer informatie over webpersonalisatie en ContentAI in Marketo [Overzicht van webpersonalisatie](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
+[!DNL Marketo Web Personalization] is een personalisatie-uitbreiding in Adobe Experience Platform. Lees voor meer informatie over webpersonalisatie en ContentAI in Marketo [Overzicht van webpersonalisatie](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
 
-Dit doel is een tagextensie. Zie voor meer informatie over de manier waarop tagextensies werken in Platform de [overzicht van tagextensies](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Raadpleeg voor meer informatie over de werking van tagextensies in Platform de klasse [overzicht van tagextensies](../launch-extensions/overview.md).
 
 ![Marketo Web Personalization Extension](../../assets/catalog/personalization/marketo-web-personalization/catalog.png)
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 Als u het dialoogvenster [!DNL Marketo Web Personalization] extensie:
 
-In de [Interface Platform](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [Platforminterface](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -50,12 +50,12 @@ Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen.
 
 U kunt regels instellen voor geïnstalleerde extensies, zodat gebeurtenisgegevens alleen in bepaalde situaties naar de extensiebestemming worden verzonden. Voor meer informatie over het instellen van regels voor uw extensies raadpleegt u de [codedocumentatie](../../../tags/ui/managing-resources/rules.md).
 
-## De extensie configureren, upgraden en verwijderen {#configure-upgrade-delete}
+## Uitbreiding configureren, bijwerken en verwijderen {#configure-upgrade-delete}
 
 U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface voor gegevensverzameling.
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface van het Platform nog weergegeven **[!UICONTROL Install]** voor de extensie. Kies de installatieworkflow zoals beschreven in [Extensie installeren](#install-extension) om uw extensie te configureren of te verwijderen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface van het platform nog weergegeven **[!UICONTROL Install]** voor de extensie. Kies de installatieworkflow zoals beschreven in [Extensie installeren](#install-extension) om uw extensie te configureren of te verwijderen.
 
 Als u uw extensie wilt upgraden, raadpleegt u de handleiding op het tabblad [upgradeproces voor extensie](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

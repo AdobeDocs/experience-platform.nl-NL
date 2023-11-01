@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release voor tags en doorsturen van gebeurtenissen
 description: De nieuwste aanvullende informatie voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '833'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Het vooruit bewegen van de markeringen en de gebeurtenis door:sturen versienota&#39;s zullen niet meer op deze pagina worden verstrekt. Raadpleeg de meest recente [Opmerkingen bij de release van Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) voor gedetailleerde tags en updates voor het doorsturen van gebeurtenissen.
+>Het vooruit bewegen van de markeringen en de gebeurtenis door:sturen versienota&#39;s zullen niet meer op deze pagina worden verstrekt. Raadpleeg de meest recente [Opmerkingen bij de release van Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) voor gedetailleerde tags en updates voor het doorsturen van gebeurtenissen.
 
 ## 26 april 2023
 
-* **OAuth JWT Secret**: De [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) Hiermee kunnen klanten Adobe- en Google Service-tokens gebruiken ter ondersteuning van server-naar-server interacties bij het doorsturen van gebeurtenissen.
+* **OAuth JWT Secret**: De [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) Hiermee kunnen klanten Adobe- en Google Service-tokens gebruiken ter ondersteuning van server-naar-server interacties bij het doorsturen van gebeurtenissen.
 
 De volgende nieuwe extensie is vrijgegeven:
 
@@ -28,7 +28,7 @@ De volgende nieuwe extensie is vrijgegeven:
 **Quick Stark Workflows (bèta)**
 
 Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. De volgende workflows zijn nu beschikbaar voor klanten als openbare bètaversie.
-* **[API voor metaconversie](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Gebruikers die gebeurtenissen doorsturen kunnen snel gebeurtenisgegevens, servergegevens naar Meta voor advertentieconversies in een paar eenvoudige stappen verzamelen en doorsturen.
+* **[API voor metaconversie](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: Gebruikers die gebeurtenissen doorsturen kunnen snel gebeurtenisgegevens, servergegevens naar Meta voor advertentieconversies in een paar eenvoudige stappen verzamelen en doorsturen.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Klanten kunnen de Mobile SDK snel implementeren en mobiele basisgebeurtenissen in slechts een paar eenvoudige stappen valideren.
 
 Nieuwe extensies zijn vrijgegeven:
