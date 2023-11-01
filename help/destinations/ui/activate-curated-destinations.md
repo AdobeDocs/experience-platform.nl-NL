@@ -2,7 +2,7 @@
 title: Het publiek activeren op gekrulde doelen op basis van LiveRamp-id's
 type: Tutorial
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar verbonden tv- en audiodoelen en andere integraties met de LiveRamp RampID.
-source-git-commit: adc7e66fa17484ccb9527650f197acc29ef4d0f1
+source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
@@ -48,7 +48,7 @@ In dit artikel wordt uitgelegd welke workflow nodig is om het publiek vanuit Rea
 
 U activeert het publiek naar verbonden tv- en audiodoelen door een proces in twee stappen te doorlopen en door het [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) en de [LiveRamp - Distributie](../catalog/advertising/liveramp-distribution.md) doelen, zoals weergegeven in de onderstaande afbeelding.
 
-![Diagram waarin de workflow wordt weergegeven voor het activeren van het publiek van Real-Time CDP naar gekrulde doelen, via LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![Diagram waarin de workflow wordt weergegeven voor het activeren van het publiek van Real-Time CDP naar gekrulde doelen, via LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 Eerst exporteert u uw publiek van Real-Time CDP naar de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) doel, als CSV-bestanden.
 
