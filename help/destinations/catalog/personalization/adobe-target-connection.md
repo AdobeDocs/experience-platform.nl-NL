@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| Juni 2023 | Bijwerken van functionaliteit en documentatie | Vanaf juni 2023 kunt u bij het configureren van een nieuwe Adobe Target-doelverbinding de Adobe Target-werkruimte selecteren waarnaar u het publiek wilt delen. Zie de [verbindingsparameters](#parameters) voor meer informatie. Raadpleeg de zelfstudie over [werkruimten configureren](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target voor meer informatie over werkruimten. |
+| Juni 2023 | Bijwerken van functionaliteit en documentatie | Vanaf juni 2023 kunt u bij het configureren van een nieuwe Adobe Target-doelverbinding de Adobe Target-werkruimte selecteren waarnaar u het publiek wilt delen. Zie de [verbindingsparameters](#parameters) voor meer informatie. Raadpleeg de zelfstudie over [werkruimten configureren](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target voor meer informatie over werkruimten. |
 | Mei 2023 | Bijwerken van functionaliteit en documentatie | Vanaf mei 2023 **[!UICONTROL Adobe Target]** verbinding wordt ondersteund [kenmerkgebaseerde personalisatie](../../ui/activate-edge-personalization-destinations.md#map-attributes) en is algemeen beschikbaar voor alle klanten. |
 
 {style="table-layout:auto"}
@@ -47,10 +47,10 @@ Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te ge
 
 In Adobe Target moet je ervoor zorgen dat de gebruiker:
 
-* Toegang tot de [standaardwerkruimte](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
-* De **Fiatteur** [rol](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+* Toegang tot de [standaardwerkruimte](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
+* De **Fiatteur** [rol](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-Meer informatie over het verlenen van machtigingen voor [Doelpremie](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) en voor [Doelstandaard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
+Meer informatie over het verlenen van machtigingen voor [Doelpremie](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) en voor [Doelstandaard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -96,7 +96,7 @@ Adobe Experience Platform maakt automatisch verbinding met het Adobe Target-exem
 >id="platform_destinations_target_workspace"
 >title="Informatie over Adobe Target Workspaces"
 >abstract="Selecteer de Adobe Target-werkruimte waarin het publiek wordt gedeeld. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Bij activering worden doelgroepen naar de geselecteerde werkruimte gerouteerd terwijl ze de toepasselijke labels voor gegevensgebruik in het Experience Platform volgen."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Meer informatie over Adobe Target-werkruimten"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="Meer informatie over Adobe Target-werkruimten"
 
 while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de volgende informatie opgeven:
 
@@ -107,9 +107,9 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
   | Adobe Target-implementatie (zonder Web SDK) | Web SDK-implementatie |
   |---|---|
-  | <ul><li>Een gegevensstroom is niet vereist. Adobe Target kan worden geïmplementeerd via [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en), [server-kant](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation), of [hybride](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) uitvoeringsmethoden.</li><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt publiek- en profielkenmerken alleen delen met de Adobe Target-verbinding voor de *standaardproductiesandbox*.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden ondersteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> |
+  | <ul><li>Een gegevensstroom is niet vereist. Adobe Target kan worden geïmplementeerd via [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-kant](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), of [hybride](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) uitvoeringsmethoden.</li><li>[Randsegmentatie](../../../segmentation/ui/edge-segmentation.md) wordt niet ondersteund.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden niet ondersteund.</li><li>U kunt publiek- en profielkenmerken alleen delen met de Adobe Target-verbinding voor de *standaardproductiesandbox*.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>De segmentatie van de rand werkt zoals verwacht.</li><li>[Zelfde pagina en volgende pagina personalisatie](../../ui/activate-edge-personalization-destinations.md) worden ondersteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> |
 
-* **Werkruimte**: Selecteer de Adobe Target [werkruimte](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) waaraan het publiek deelneemt. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Bij activering worden de doelgroepen naar de geselecteerde werkruimte geleid terwijl ze de toepasselijke [Labels voor gegevensgebruik van Experience Platforms](../../../data-governance/labels/overview.md).
+* **Werkruimte**: Selecteer de Adobe Target [werkruimte](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) waaraan het publiek deelneemt. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Bij activering worden de doelgroepen naar de geselecteerde werkruimte geleid terwijl ze de toepasselijke [Labels voor gegevensgebruik van Experience Platforms](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >

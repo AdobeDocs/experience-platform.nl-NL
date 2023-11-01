@@ -2,9 +2,9 @@
 title: Een bronverbinding in het deelvenster Mixer maken in de gebruikersinterface
 description: Leer hoe u een Mixpanel-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '819'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 >id="platform_sources_mixpanel_timezone"
 >title="Tijdzone instellen voor opnemen in Mixpanel"
 >abstract="De tijdzone moet hetzelfde zijn als de tijdzone die u instelt voor uw Mixpanel-profiel, omdat Platform de toegewezen projecttijdzone gebruikt om relevante gegevens in te voeren vanuit Mixpanel. Mixpanel zal zijn timezone aanpassen om met uw projecttimezone te coördineren alvorens de gebeurtenis aan een Mixpanel gegevensopslag te registreren."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html#project-id-and-timezone" text="Meer informatie in documentatie"
 
 Zodra uw bron voor authentiek wordt verklaard, verstrek uw project identiteitskaart en timezone en selecteer dan **[!UICONTROL Select]**.
 

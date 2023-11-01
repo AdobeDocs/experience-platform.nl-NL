@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaring met aangepaste bestemm
 title: Aangepaste verpersoonlijkingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats lopen een manier om publieksinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het gebruikersprofiellidmaatschap wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '877'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informatie over gegevensstroom-id&#39;s"
 >abstract="Met deze optie bepaalt u in welke gegevensverzamelingsgegevensstroom het publiek wordt opgenomen in het antwoord op de pagina. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. U moet een gegevensstroom vormen alvorens u uw bestemming kunt vormen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en" text="Leer hoe u een gegevensstroom configureert"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Leer hoe u een gegevensstroom configureert"
 
 >[!IMPORTANT]
 > 

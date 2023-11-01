@@ -4,9 +4,9 @@ title: Soortgelijke soorten publiek
 description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Platform kunt kiezen met behulp van look-alike-soorten publiek.
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2086'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ De blik-gelijke sectie van publiek toont een lijst van alle blik-gelijke publiek
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Influentiële factoren"
 >abstract="Influentiële factoren zijn kenmerken, gebeurtenissen en publiekslidmaatschappen die belangrijk zijn voor het verklaren van gelijkenis van een profiel aan leden van het basispubliek. De etiketten en het beleid van het gegevensgebruik kunnen worden gebruikt om bepaalde gegevens uit te sluiten om als invloedrijke factoren in blik-gelijkaardige modellen worden beschouwd."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Gegevens uitsluiten"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html#exclude" text="Gegevens uitsluiten"
 
 In de sectie met invloedrijke factoren worden de 100 belangrijkste factoren weergegeven die van invloed zijn op het model dat er op lijkt voor het geselecteerde basispubliek. Deze invloedrijke factoren zijn de profielattributen, de ervaringsgebeurtenissen, en de publiekslidmaatschappen die het belangrijkst in het verklaren van gelijkenissen in het basispubliek zijn. Met een goed begrip van de belangrijkste invloedrijke factoren kunt u uw marketinginhoud beter aanpassen aan dit publiek en aan elk publiek dat u eruit maakt. Niet alle invloedrijke factoren die van invloed zijn op het model dat er op lijkt, worden weergegeven.
 
