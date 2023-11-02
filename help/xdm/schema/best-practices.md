@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3024'
 ht-degree: 1%
 
 ---
@@ -231,7 +231,7 @@ Voor Adobe Analytics is ECID de primaire standaardidentiteit. Als een klant geen
 
 ## Velden voor gegevensvalidatie {#data-validation-fields}
 
-Als u wilt voorkomen dat slechte gegevens worden opgenomen in Platform, kunt u het beste de criteria voor validatie op veldniveau definiëren wanneer u uw schema&#39;s maakt. Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in de Schema-editor om het dialoogvenster [!UICONTROL Field properties] zijbalk. Zie de documentatie op [type-specifieke veldeigenschappen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html#type-specific-properties) voor een exacte beschrijving van de beschikbare velden.
+Als u wilt voorkomen dat slechte gegevens worden opgenomen in Platform, kunt u het beste de criteria voor validatie op veldniveau definiëren wanneer u uw schema&#39;s maakt. Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in de Schema-editor om het dialoogvenster [!UICONTROL Field properties] zijbalk. Zie de documentatie op [type-specifieke veldeigenschappen](../ui/fields/overview.md#type-specific-properties) voor een exacte beschrijving van de beschikbare velden.
 
 ![De Schema-editor met de beperkingsvelden gemarkeerd in het dialoogvenster [!UICONTROL Field properties] zijbalk.](../images/best-practices/data-validation-fields.png)
 

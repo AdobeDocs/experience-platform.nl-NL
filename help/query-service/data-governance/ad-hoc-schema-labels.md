@@ -2,9 +2,9 @@
 title: Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema's
 description: Een handleiding voor het beperken van toegang tot gegevensvelden in ad-hocschema's die via Adobe Experience Platform Query Service worden gegenereerd.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Gegevens die naar Adobe Experience Platform worden overgebracht, worden ingekapseld door XDM-schema&#39;s (Experience Data Model) en kunnen onderworpen zijn aan gebruiksbeperkingen die door uw organisatie of wettelijke voorschriften zijn gedefinieerd.
 
-Door een vraag CTAS door de Dienst van de Vraag uit te voeren wanneer geen schema wordt gespecificeerd, wordt een ad hoc schema automatisch geproduceerd. Het is vaak noodzakelijk het gebruik van bepaalde velden, of gegevensreeksen, van ad-hocregelingen te beperken om de toegang tot zowel gevoelige persoonsgegevens als persoonlijk identificeerbare informatie te controleren. Adobe Experience Platform vergemakkelijkt dit toegangsbeheer door u toe te staan om schemagebieden door het Platform UI te etiketteren gebruikend het op attribuut-gebaseerde toegangsbeheervermogen.
+Door een vraag CTAS door de Dienst van de Vraag uit te voeren wanneer geen schema wordt gespecificeerd, wordt een ad hoc schema automatisch geproduceerd. Het is vaak noodzakelijk het gebruik van bepaalde velden, of gegevensreeksen, van ad-hocregelingen te beperken om de toegang tot zowel gevoelige persoonsgegevens als persoonlijk identificeerbare informatie te controleren. Adobe Experience Platform vergemakkelijkt dit toegangsbeheer door u toe te staan om schemagebieden door Platform UI te etiketteren gebruikend het op attribuut-gebaseerde toegangsbeheervermogen.
 
 Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. Hoewel, is het beste praktijken om gegevens te etiketteren zodra het in Platform wordt opgenomen, of zodra de gegevens voor gebruik in Platform beschikbaar worden.
 
@@ -25,16 +25,16 @@ Dit document biedt een zelfstudie om de toegang tot gevoelige gegevens te behere
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [XDM-systeem (Experience Data Model)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Leer om schema&#39;s en andere middelen in de UI van het Platform tot stand te brengen en te beheren.
+* [XDM-systeem (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Leer om schema&#39;s en andere middelen in Platform UI tot stand te brengen en te beheren.
 * [[!DNL Data Governance]](../../data-governance/home.md): Meer informatie [!DNL Data Governance] staat u toe om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik.
-* [Op kenmerken gebaseerd toegangsbeheer](../../access-control/abac/overview.md): Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform waarmee beheerders de toegang tot specifieke objecten en/of mogelijkheden kunnen beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een ad-hocveld of een regulier schemaveld wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
+* [Toegangsbeheer op basis van kenmerken](../../access-control/abac/overview.md): Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform waarmee beheerders de toegang tot specifieke objecten en/of mogelijkheden kunnen beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een ad-hocveld of een regulier schemaveld wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
 
 ## Een ad-hocschema maken
 
 Zodra uw vraag is uitgevoerd en de resultaten zijn geproduceerd, wordt een ad hoc schema automatisch geproduceerd en toegevoegd aan de schemainventaris.
 
-Als u een gegevenslabel wilt toevoegen, navigeert u naar [!UICONTROL Schemas] het dashboard bladert lusje door te selecteren [!UICONTROL Schemas] in de linkerspoorstaaf van de gebruikersinterface van het Platform. Het schema-overzicht wordt weergegeven.
+Als u een gegevenslabel wilt toevoegen, navigeert u naar [!UICONTROL Schemas] het dashboard bladert lusje door te selecteren [!UICONTROL Schemas] in de linkerspoorstaaf van de interface van het platform. Het schema-overzicht wordt weergegeven.
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ De [!UICONTROL Edit labels] wordt weergegeven. Vanuit deze weergave kunt u besta
 
 ![Het pop-upvenster met labels Bewerken.](../images/data-governance/edit-labels-popover.png)
 
-Zie de documentatie voor richtlijnen over hoe u [labels maken of bewerken voor het geselecteerde schema of veld](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+Zie de documentatie voor richtlijnen over hoe u [labels maken of bewerken voor het geselecteerde schema of veld](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Als een identiteit of primaire identiteit op ad hoc schema wordt geplaatst, neem
 Na het lezen van dit document hebt u een beter inzicht in hoe te om de etiketten van het gegevensgebruik aan ad hoc regelingen toe te voegen die door de vragen van de Dienst CTAS van de Vraag worden gecreeerd. Als u dit nog niet hebt gedaan, zijn de volgende documenten nuttig om uw inzicht in gegevensbeheer in de Dienst van de Vraag te verbeteren:
 
 * [Identiteiten ad-hocschema](./ad-hoc-schema-identities.md)
-* [Gegevensbeheer](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
+* [Gegevensbeheer](../../data-governance/home.md)

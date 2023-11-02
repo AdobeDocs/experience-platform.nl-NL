@@ -2,9 +2,9 @@
 title: Eindpunt van versnelde query's
 description: Leer hoe te om tot vraag versnelde opslag op een stateless manier toegang te hebben om resultaten snel terug te keren die op bijeengevoegde gegevens worden gebaseerd. Dit document verstrekt een verzoek en een antwoord van steekproefHTTP voor het versnelde-vragen van de Dienst van de Vraag eindpunt.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Voordat u verdergaat met deze handleiding, moet u controleren of u de [API-handl
 
 ## Aan de slag
 
-De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Zie de [verpakking](../packages.md) en [guardrails](../guardrails.md#query-accelerated-store) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens Distiller SKU hebt, kunt u voor meer informatie contact opnemen met een medewerker van de klantenservice van de Adobe.
+De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Zie de [verpakking](../packages.md) en [guardrails](../guardrails.md#query-accelerated-store) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
 
 <!-- Document is hidden temporarily
 Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
@@ -212,6 +212,6 @@ Een geslaagde reactie retourneert HTTP-status 200 met het ad-hocschema dat door 
 | `resultsMeta` | Dit object bevat de metagegevens voor elke kolom die in de resultaten wordt geretourneerd, zodat gebruikers de naam en het type van elke kolom weten. |
 | `resultsMeta._adhoc` | Een ad-hoc schema van de Gegevens van de Ervaring Model (XDM) met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. |
 | `resultsMeta._adhoc.type` | Het gegevenstype van het ad-hocschema. |
-| `resultsMeta._adhoc.meta:xdmType` | Dit is een door het systeem gegenereerde waarde voor het XDM-veldtype. Raadpleeg de documentatie over de beschikbare typen voor meer informatie over de beschikbare typen [beschikbare XDM-typen](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.meta:xdmType` | Dit is een systeemgegenereerde waarde voor het XDM-veldtype. Raadpleeg de documentatie over de beschikbare typen voor meer informatie over de beschikbare typen [beschikbare XDM-typen](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Dit zijn de kolomnamen van de gevraagde dataset. |
 | `resultsMeta._adhoc.results` | Dit zijn de rijnamen van de gevraagde dataset. Ze weerspiegelen elk van de geretourneerde kolommen. |

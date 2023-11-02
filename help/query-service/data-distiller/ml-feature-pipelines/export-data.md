@@ -2,16 +2,16 @@
 title: Gegevens exporteren naar externe XML-omgevingen
 description: Leer hoe u een voorbereide trainingsdataset, gemaakt met Data Distiller, deelt naar een locatie voor cloudopslag die uw XML-omgeving kan lezen voor training en het scoren van uw model.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '537'
 ht-degree: 1%
 
 ---
 
 # Gegevens exporteren naar externe XML-omgevingen
 
-In dit document wordt uitgelegd hoe u een voorbereide trainingsgegevensset die is gemaakt met Data Distiller, kunt delen met een locatie voor cloudopslag die uw XML-omgeving kan lezen voor training en het scoren van uw model. Het voorbeeld hier exporteert de trainingsdataset naar de [Data Landing Zone (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). U kunt de opslagbestemming naar wens wijzigen om te werken met de leeromgeving van uw computer.
+In dit document wordt uitgelegd hoe u een voorbereide trainingsgegevensset die is gemaakt met Data Distiller, kunt delen met een locatie voor cloudopslag die uw XML-omgeving kan lezen voor training en het scoren van uw model. Het voorbeeld hier exporteert de trainingsdataset naar de [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). U kunt de opslagbestemming naar wens wijzigen om te werken met de leeromgeving van uw computer.
 
 De [Flow Service voor doelen](https://developer.adobe.com/experience-platform-apis/references/destinations/) wordt gebruikt om de eigenschappijpleiding te voltooien door een dataset van gegevens verwerkte eigenschappen in een aangewezen plaats van de wolkenopslag te landen.
 
