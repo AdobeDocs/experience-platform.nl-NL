@@ -4,14 +4,22 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;ervaring met de extensie Foutopsporing in platform;chroom;extensie;releaseopmerkingen
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
+source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '564'
+ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Debugger
+
+## Versie 1.5.1 - 2 november 2023
+
+### Oplossingen en verbeteringen
+
+* Gebeurtenissen Analytics werden genegeerd of gedupliceerd. Dit probleem is nu opgelost.
+* Probleem verholpen waarbij de maximale opslaggrootte van de status werd overschreden.
+* Probleem verholpen waarbij het zoeken naar Edge Logs geen gebeurtenissen zou filteren.
 
 ## Versie 1.5.0 - 19 oktober 2023
 
