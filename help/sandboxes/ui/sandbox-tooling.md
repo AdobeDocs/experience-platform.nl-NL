@@ -2,9 +2,9 @@
 title: Sandboxen
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
+source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1721'
 ht-degree: 0%
 
 ---
@@ -237,6 +237,12 @@ De **[!UICONTROL Import details]** een gedetailleerde uitsplitsing van de invoer
 >[!NOTE]
 >
 >Wanneer het importeren is voltooid, ontvangt u meldingen in de gebruikersinterface van het platform. U kunt deze meldingen openen via het waarschuwingspictogram. U kunt hier naar probleemoplossing navigeren als een taak mislukt.
+
+## Videotutorial
+
+De volgende video is bedoeld ter ondersteuning van uw begrip van gereedschappen voor sandboxen en beschrijft hoe u een nieuw pakket kunt maken, een pakket kunt publiceren en importeren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Volgende stappen
 
