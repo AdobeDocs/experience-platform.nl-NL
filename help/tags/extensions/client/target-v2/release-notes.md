@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
+source-git-commit: f235d210682feba7617b720e514361c2862512f9
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,11 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
+
+## v0.20.1 (3 november 2023)
+
+- Bijgewerkt voor ondersteuning op 0.js 2.11.2.
+- Oplossing voor een bug die inconsistenties veroorzaakte in de reactietokens die op aangepaste gebeurtenissen werden verzonden.
 
 ## v0.20.0 (9 oktober 2023)
 
