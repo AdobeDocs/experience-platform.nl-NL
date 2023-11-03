@@ -3,9 +3,9 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '830'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegeve
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Server-naar-server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
+* [Server-naar-server-API](/help/server-api/overview.md)
 
 >[!NOTE]
 >De Platform Web SDK en Platform Mobile SDK vereisen geen plaatsing door markeringen in Adobe Experience Platform. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
@@ -31,7 +31,7 @@ Nadat u gegevens naar het Edge-netwerk hebt verzonden, kunt u Adobe-oplossingen 
 
 * Adobe Real-Time CDP Connections, Prime of Ultimate (neem contact op met het accountteam van uw Adobe voor prijsstelling)
 * Gebeurtenis doorsturen in Adobe Experience Platform
-* Adobe Experience Platform Web of Mobile SDK, die wordt geconfigureerd om gegevens naar Edge Network te verzenden
+* Adobe Experience Platform Web SDK, Mobile SDK of Edge Network Server API geconfigureerd voor het verzenden van gegevens naar Edge Network
 * Gegevens toewijzen aan XDM (Experience Data Model) (voor deze toewijzing kunt u codes gebruiken)
 
 ## Een XDM-schema maken
