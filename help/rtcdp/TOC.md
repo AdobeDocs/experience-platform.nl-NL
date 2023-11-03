@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 27%
+source-wordcount: '254'
+ht-degree: 23%
 
 ---
 
@@ -67,9 +67,10 @@ ht-degree: 27%
 * Gebruiksscenario’s {#use-cases}
    * Intelligente gevallen van herbetrokkenheid {#intelligent-re-engagement}
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-   * Kwesties van gegevensgebruik door partners {#partner-data}
-      * [Nieuwe klanten aantrekken en aanschaffen via support voor prospectie](/help/rtcdp/partner-data/prospecting.md)
+   * Klantenovername {#customer-acquisition}
+      * [Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden](/help/rtcdp/partner-data/prospecting.md)
+      * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
+   * Profielverrijking {#profile-enrichment}
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Door partners ondersteunde bezoekersherkenning gebruiken om ervaringen op de site te personaliseren](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Woordenlijst voor Experience Platform](https://www.adobe.com/go/platform-glossary-en)

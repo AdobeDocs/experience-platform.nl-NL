@@ -2,9 +2,9 @@
 title: Eigen profielen aanvullen met door partners verstrekte attributen
 description: Leer hoe u eigen profielen kunt aanvullen met kenmerken van vertrouwde gegevenspartners om uw databasis te verbeteren, nieuwe inzichten in uw klantenbestand te verkrijgen en uw doelgroepen beter te optimaliseren.
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1255'
 ht-degree: 3%
 
 ---
@@ -18,6 +18,16 @@ ht-degree: 3%
 Voeg eerst-partijprofielen met attributen van vertrouwde op gegevenspartners toe om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
 
 ![Verrijken profielen met door partners opgegeven kenmerken gebruiken een visueel overzicht op hoog niveau.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
+
+De meeste merken, zelfs die die met eerste partijgegevens rijk zijn, kunnen van het stroomlijnen van hun gegevens profiteren en het bereiken van een genuanceerder inzicht in klanten, hun gedrag, patronen, en voorkeur.
+
+Adobe Real-time Customer Data Platform kan merken helpen hun gegevens van de eerste partij op verantwoordelijke wijze aan te vullen met waardevolle inzichten, id&#39;s en kenmerken van een of meer vertrouwde partners.
+
+Adobe begrijpt dat er geen uniforme benadering is en maakt naadloze interoperabiliteit met gegevens en identiteitspartners mogelijk om geïndividualiseerde en doordachte betrokkenheid in alle fasen van de levenscyclus van de klant te bevorderen. Deze mogelijkheden worden geschraagd door een vertrouwd op gegeven governance kader, dat voor genuanceerde controle toestaat op waar en hoe de partnergegevens worden gebruikt. Bijvoorbeeld, kunt u partner verstrekte inzichten voor segmentatie maar niet voor verpersoonlijking willen gebruiken.
+
+Bijvoorbeeld, volg de stappen in dit gebruiksgeval worden beschreven wanneer u uw klantenverslagen met demografische en intentsignalen moet verrijken die.
 
 ## Vereisten en planning {#prerequisites-and-planning}
 
@@ -126,5 +136,5 @@ Houd rekening met de volgende beperkingen wanneer u het op deze pagina beschreve
 Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
 
 * Gebruik gegevensondersteuning van derden in Real-Time CDP voor [breid uw profielbasis met perspectiefprofielen van gegevenspartners uit en verbind met hen om nieuwe klanten te verwerven of te bereiken](/help/rtcdp/partner-data/prospecting.md).
-* [De partner van hefboomwerking steunde erkenning voor het personaliseren van onsite ervaringen](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder dat de gebruiker dit heeft geverifieerd of dat hij of zij een eerdere geschiedenis heeft met uw merk.
+* [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder dat de gebruiker dit heeft geverifieerd of dat hij of zij een eerdere geschiedenis heeft met uw merk.
 * [Uitgebreide activering van perspectiefprofielen en perspectiefpubliek](/help/destinations/ui/activate-prospect-audiences.md) om doelen te selecteren.

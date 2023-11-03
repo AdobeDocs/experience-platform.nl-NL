@@ -1,15 +1,15 @@
 ---
-title: Erkenning door Partner-Aided Visitor gebruiken om onsite ervaringen aan te passen
+title: Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: de8aeb553066405424711e75480204f6136b52ff
+source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2588'
 ht-degree: 1%
 
 ---
 
-# Door partners ondersteunde bezoekersherkenning gebruiken om ervaringen op de site te personaliseren
+# Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners
 
 >[!AVAILABILITY]
 >
@@ -17,7 +17,15 @@ ht-degree: 1%
 
 Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden aan bezoekers van webeigenschappen. Gebruik deze zelfstudie om inzicht te krijgen in de implementatiereeks van verschillende elementen in Experience Platform en andere oplossingen voor Experiencen Cloud en om een gepersonaliseerde ervaring weer te geven voor geverifieerde en niet-geverifieerde bezoekers.
 
-![Een infografisch die beschrijft hoe te om partner-verstrekte attributen te gebruiken om gepersonaliseerde ervaringen aan uw bezoekers te leveren.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![Een infografisch die beschrijft hoe te om partner-verstrekte attributen te gebruiken om gepersonaliseerde ervaringen aan uw bezoekers te leveren.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
+
+De versnippering van digitale ervaringen als consumenten op allerlei manieren met merken communiceren, is zeer reëel en wordt steeds moeilijker op te lossen. De beste strategieën van de klantenovereenkomst voor samenhangende ervaringen, gerichte aanbevelingen, en op maat-gemaakte interactie worden allen beperkt door gebruikerserkenning.
+
+Dit is waar partnergerichte erkenning in real time een zinvol verschil kan maken. Adobe staat identiteitspartners toe om in ons verfijnde cliënt-zijgegevensinzameling en de markt-leidende het optimaliseringsdienstenaanbod van de ervaring te stoppen, om de bar op ervaringslevering vanaf het eerste bezoek effectief te verhogen, zonder vroegere geschiedenis of authentificatie.
+
+Dit is vooral waardevol aan toppen die lage authentificatiecijfers, zoals de Verpakte Goederen van de Consumenten, online kleinhandel, en meer hebben.
 
 ## Voorbeeld van industrie {#industry-example}
 

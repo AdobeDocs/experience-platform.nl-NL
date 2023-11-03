@@ -1,15 +1,15 @@
 ---
-title: Nieuwe klanten interesseren en aantrekken door gebruiksscenario's te prospecteren
-description: Leer hoe u nieuwe klanten kunt interesseren en aantrekken door gebruiksscenario's te prospecteren, mogelijk gemaakt door de partnergegevensondersteuning in Real-Time CDP.
+title: Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden
+description: Leer hoe u nieuwe klanten kunt aantrekken en aanschaffen via het zoeken naar gebruiksgevallen, zonder te vertrouwen op cookies van derden.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1913'
-ht-degree: 2%
+source-wordcount: '2030'
+ht-degree: 0%
 
 ---
 
-# Nieuwe klanten interesseren en aantrekken door gebruiksscenario&#39;s te prospecteren
+# Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit
 
 ![Overzicht van het gebruik op hoog niveau door de klant bij prospectie.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
+
+Merken worden tegelijkertijd geconfronteerd met enorme uitdagingen van verantwoord het uitvoeren van top-of-the-funnel gebruiksgevallen van de klantenverwerving zonder afhankelijkheid van derdekoekjes, beperkte begrotingen, en hogere vraag naar transparantie en terugkeer op ad-uitgavenpost.
+
+Adobe Real-time Customer Data Platform kan merken helpen hun door DMP (Data Management Platform) ondersteunde gebruiksscenario&#39;s veilig om te zetten in alternatieven waarvoor geen cookie nodig is, en dit op een manier die de volledige verfijning en kracht van zelfserversegmentatie, publieksbeperking en activering in één systeem brengt. Dit alles zonder afbreuk te doen aan de onafgebroken aandacht van de Adobe voor een verantwoord gebruik van gegevens via een geoctrooieerd kader voor gegevensbeheer en instemming.
+
+Volg bijvoorbeeld de stappen die in dit gebruiksgeval worden beschreven wanneer u een campagne moet uitvoeren om vooruitzichten aan te trekken om gebruikers of bekende klanten te worden.
+
 ## Vereisten en planning {#prerequisites-and-planning}
 
-Aangezien u het bereiken aan en het verwerven van nieuwe klanten door de steun van partnergegevens in Real-Time CDP te gebruiken overweegt, de volgende eerste vereisten in uw planningsproces:
+Aangezien u het bereiken aan en het verwerven van nieuwe klanten overweegt, overweeg de volgende eerste vereisten in uw planningsproces:
 
 * Wat is het gemak waarmee u partner-verstrekte profielen om in Real-Time CDP wordt opgenomen en worden verfrist?
 * Welke identiteiten vereisen uw stroomafwaartse bestemmingen?
@@ -219,5 +227,5 @@ Maak gebruik van het potentiële publiek door hen naar bestemmingen uit te voere
 Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
 
 * [Eerste-partijprofielen met attributen van vertrouwde op gegevenspartners aanvullen](/help/rtcdp/partner-data/supplement-first-party-profiles.md) om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te krijgen en betere publieksoptimalisering te bereiken.
-* [De partner van hefboomwerking steunde erkenning voor het personaliseren van onsite ervaringen](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder dat de gebruiker dit heeft geverifieerd of dat hij of zij een eerdere geschiedenis heeft met uw merk.
+* [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder dat de gebruiker dit heeft geverifieerd of dat hij of zij een eerdere geschiedenis heeft met uw merk.
 * [Uitgebreide activering van perspectiefprofielen en perspectiefpubliek](/help/destinations/ui/activate-prospect-audiences.md) om doelen te selecteren.

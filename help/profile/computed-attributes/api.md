@@ -2,7 +2,7 @@
 title: Computed Attributes API Endpoint
 description: Leer hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 0%
@@ -50,7 +50,7 @@ De volgende queryparameters kunnen worden gebruikt bij het ophalen van een lijst
 | `limit` | Een parameter die het maximumaantal punten specificeert die als deel van de reactie worden teruggekeerd. De minimumwaarde van deze parameter is 1 en de maximumwaarde is 40. Als deze parameter niet is opgenomen, worden standaard 20 items geretourneerd. | `limit=20` |
 | `offset` | Een parameter die het aantal punten specificeert om over te slaan alvorens de punten terug te keren. | `offset=5` |
 | `sortBy` | Een parameter die de orde specificeert waarin de teruggekeerde punten worden gesorteerd. Beschikbare opties zijn `name`, `status`, `updateEpoch`, en `createEpoch`. U kunt ook kiezen of u in oplopende of aflopende volgorde wilt sorteren door geen of door een `-` vóór de sorteeroptie. Standaard worden de items gesorteerd op `updateEpoch` in aflopende volgorde. | `sortBy=name` |
-| `property` | Een parameter waarmee u op verschillende berekende kenmerkvelden kunt filteren. Tot de ondersteunde eigenschappen behoren `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, en `status`. De ondersteunde bewerkingen zijn afhankelijk van de vermelde eigenschap. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (!=contains()</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `property` | Een parameter waarmee u op verschillende berekende kenmerkvelden kunt filteren. Tot de ondersteunde eigenschappen behoren `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, en `status`. De ondersteunde bewerkingen zijn afhankelijk van de vermelde eigenschap. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Verzoek**
 

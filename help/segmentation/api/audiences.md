@@ -2,9 +2,9 @@
 title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met soorten publiek ophalen {#list}
 
-U kunt een lijst van alle soorten publiek voor uw organisatie terugwinnen door een verzoek van de GET aan te dienen `/audiences` eindpunt.
+U kunt een lijst van alle soorten publiek voor uw organisatie terugwinnen door een verzoek van de GET aan `/audiences` eindpunt.
 
 **API-indeling**
 
@@ -35,7 +35,7 @@ De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van e
 | Query-parameter | Beschrijving | Voorbeeld |
 | --------------- | ----------- | ------- |
 | `start` | Geeft de beginverschuiving voor het geretourneerde publiek aan. | `start=5` |
-| `limit` | Hiermee geeft u het maximale aantal bezoekers op dat per pagina wordt geretourneerd. | `limit=10` |
+| `limit` | Hiermee geeft u het maximale aantal bezoekers per pagina op. | `limit=10` |
 | `sort` | Hiermee geeft u de volgorde op waarin de resultaten moeten worden gesorteerd. Dit is geschreven in de indeling `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
 | `property` | Een filter waarmee u een publiek kunt opgeven dat **exact** komt overeen met de waarde van een kenmerk. Dit is geschreven in de indeling `property=` | `property=audienceId==test-audience-id` |
 | `name` | Een filter waarmee u een publiek kunt opgeven waarvan de namen **bevatten** de opgegeven waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
@@ -175,19 +175,19 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van soorten publ
 | Eigenschap | Type publiek | Beschrijving |
 | -------- | ------------- | ----------- | 
 | `id` | Beide | Een door het systeem gegenereerde alleen-lezen id voor het publiek. |
-| `audienceId` | Beide | Als het publiek een publiek is dat door een Platform wordt gegenereerd, is dit dezelfde waarde als de `id`. Als het publiek extern wordt gegenereerd, wordt deze waarde door de client opgegeven. |
+| `audienceId` | Beide | Als het publiek een door het platform gegenereerd publiek is, is dit dezelfde waarde als de `id`. Als het publiek extern wordt gegenereerd, wordt deze waarde door de client opgegeven. |
 | `schema` | Beide | Het schema van de Gegevens van de Ervaring Model (XDM) van het publiek. |
 | `imsOrgId` | Beide | De id van de organisatie waartoe het publiek behoort. |
 | `sandbox` | Beide | Informatie over de sandbox waartoe het publiek behoort. Meer informatie over sandboxen vindt u in de [sandboxen, overzicht](../../sandboxes/home.md). |
 | `name` | Beide | De naam van het publiek. |
 | `description` | Beide | Een beschrijving van het publiek. |
-| `expression` | Door Platform gegenereerd | De PQL-expressie (Profile Query Language) van het publiek. Meer informatie over PQL-expressies vindt u in het gedeelte [Hulplijn voor PQL-expressies](../pql/overview.md). |
-| `mergePolicyId` | Door Platform gegenereerd | De id van het samenvoegbeleid waaraan het publiek is gekoppeld. Meer informatie over het samenvoegbeleid vindt u in het gedeelte [handleiding voor samenvoegbeleid](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Door Platform gegenereerd | Toont hoe het publiek zal worden geëvalueerd. Mogelijke evaluatiemethoden zijn batch, synchronous (streaming) of continue (edge). Meer informatie over de evaluatiemethoden vindt u in de [segmentatieoverzicht](../home.md) |
+| `expression` | Door het platform gegenereerd | De PQL-expressie (Profile Query Language) van het publiek. Meer informatie over PQL-expressies vindt u in het gedeelte [Hulplijn voor PQL-expressies](../pql/overview.md). |
+| `mergePolicyId` | Door het platform gegenereerd | De id van het samenvoegbeleid waaraan het publiek is gekoppeld. Meer informatie over het samenvoegbeleid vindt u in het gedeelte [handleiding voor samenvoegbeleid](../../profile/api/merge-policies.md). |
+| `evaluationInfo` | Door het platform gegenereerd | Toont hoe het publiek zal worden geëvalueerd. Mogelijke evaluatiemethoden zijn batch, synchronous (streaming) of continue (edge). Meer informatie over de evaluatiemethoden vindt u in de [segmentatieoverzicht](../home.md) |
 | `dependents` | Beide | Een array met gebruikers-id&#39;s die afhankelijk zijn van het huidige publiek. Dit zou worden gebruikt als u een publiek creeert dat een segment van een segment is. |
 | `dependencies` | Beide | Een array met publiek-id&#39;s waarvan het publiek afhankelijk is. Dit zou worden gebruikt als u een publiek creeert dat een segment van een segment is. |
-| `type` | Beide | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het Platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat in Platform is gegenereerd, terwijl een `ExternalSegment` verwijst naar een publiek dat niet in Platform is gegenereerd. |
-| `originName` | Beide | Een veld dat verwijst naar de naam van de oorsprong van het publiek. Voor publiek dat door Platforms wordt gegenereerd, wordt deze waarde `REAL_TIME_CUSTOMER_PROFILE`. Voor soorten publiek die worden gegenereerd in Audience Orchestration, wordt deze waarde `AUDIENCE_ORCHESTRATION`. Voor in Adobe Audience Manager gegenereerde soorten publiek wordt deze waarde `AUDIENCE_MANAGER`. Voor andere extern gegenereerde soorten publiek wordt deze waarde `CUSTOM_UPLOAD`. |
+| `type` | Beide | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
+| `originName` | Beide | Een veld dat verwijst naar de naam van de oorsprong van het publiek. Voor publiek dat door het platform wordt gegenereerd, wordt deze waarde `REAL_TIME_CUSTOMER_PROFILE`. Voor soorten publiek die worden gegenereerd in Audience Orchestration, wordt deze waarde `AUDIENCE_ORCHESTRATION`. Voor in Adobe Audience Manager gegenereerde soorten publiek wordt deze waarde `AUDIENCE_MANAGER`. Voor andere extern gegenereerde soorten publiek wordt deze waarde `CUSTOM_UPLOAD`. |
 | `createdBy` | Beide | De id van de gebruiker die het publiek heeft gemaakt. |
 | `labels` | Beide | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
 | `namespace` | Beide | De naamruimte waartoe het publiek behoort. Mogelijke waarden zijn `AAM`, `AAMSegments`, `AAMTraits`, en `AEPSegments`. |
@@ -209,9 +209,9 @@ POST /audiences
 
 >[!BEGINTABS]
 
->[!TAB Door Platforms gegenereerd publiek]
+>[!TAB Door het platform gegenereerd publiek]
 
-+++ Een voorbeeldverzoek voor het creëren van een Platform-geproduceerd publiek
++++ Een voorbeeldverzoek om een door het platform gegenereerd publiek te maken
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/audiences
@@ -244,11 +244,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | -------- | ----------- | 
 | `name` | De naam van het publiek. |
 | `description` | Een beschrijving van het publiek. |
-| `type` | Een veld waarin wordt weergegeven of het publiek door Platforms wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat in Platform is gegenereerd, terwijl een `ExternalSegment` verwijst naar een publiek dat niet in Platform is gegenereerd. |
+| `type` | Een veld waarin wordt weergegeven of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
 | `expression` | De PQL-expressie (Profile Query Language) van het publiek. Meer informatie over PQL-expressies vindt u in het gedeelte [Hulplijn voor PQL-expressies](../pql/overview.md). |
 | `schema` | Het schema van de Gegevens van de Ervaring Model (XDM) van het publiek. |
 | `labels` | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
-| `ttlInDays` | Geeft de vervalwaarde van de gegevens voor het publiek aan, in dagen. |
+| `ttlInDays` | Geeft de waarde aan voor de gegevensvervaldatum voor het publiek, in dagen. |
 
 +++
 
@@ -287,13 +287,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | De naam van het publiek. |
 | `namespace` | De naamruimte voor het publiek. |
 | `description` | Een beschrijving van het publiek. |
-| `type` | Een veld waarin wordt weergegeven of het publiek door Platforms wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat in Platform is gegenereerd, terwijl een `ExternalSegment` verwijst naar een publiek dat niet in Platform is gegenereerd. |
+| `type` | Een veld waarin wordt weergegeven of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
 | `originName` | De naam van de oorsprong van het publiek. Voor extern gegenereerde soorten publiek is de standaardwaarde hiervan `CUSTOM_UPLOAD`. Andere ondersteunde waarden zijn `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`, en `AUDIENCE_MATCH`. |
 | `lifecycleState` | Een optioneel veld dat de begintoestand bepaalt van het publiek dat u wilt maken. Tot de ondersteunde waarden behoren `draft`, `published`, en `inactive`. |
 | `datasetId` | De id van de dataset waar de gegevens worden gevonden die het publiek omvatten. |
 | `labels` | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
 | `audienceMeta` | Metagegevens die bij het extern gegenereerde publiek horen. |
-| `linkedAudienceRef` | Een object dat id&#39;s bevat voor andere publieksgerelateerde systemen. Dit kan het volgende omvatten: <ul><li>`flowId`: Deze id wordt gebruikt om het publiek te verbinden met de dataflow die werd gebruikt om de publieksgegevens in te brengen. Meer informatie over de vereiste id&#39;s vindt u in de [een gegevensstroomhulplijn maken](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: Deze ID wordt gebruikt om het publiek met een verwante samenstelling van het Orchestration van het Publiek te verbinden.&lt;/li/> <li>`payloadFieldGroupRef`: Deze id wordt gebruikt om naar het schema van de Groep van het Gebied XDM te verwijzen dat de structuur van het publiek beschrijft. Meer informatie over de waarde van dit veld vindt u in het gedeelte [XDM-eindgebruikershandleiding voor veldgroep](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: Deze id wordt gebruikt om naar de map-id in Adobe Audience Manager voor het publiek te verwijzen. Meer informatie over deze API vindt u in de [Adobe Audience Manager API-handleiding](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
+| `linkedAudienceRef` | Een object dat id&#39;s bevat voor andere publieksgerelateerde systemen. Dit kan het volgende omvatten: <ul><li>`flowId`: Deze id wordt gebruikt om het publiek te verbinden met de dataflow die werd gebruikt om de publieksgegevens te brengen. Meer informatie over de vereiste id&#39;s vindt u in de [een gegevensstroomhulplijn maken](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: Deze id wordt gebruikt om het publiek te verbinden met een verwante Audience Orchestration-compositie.&lt;/li/> <li>`payloadFieldGroupRef`: Deze id wordt gebruikt om naar het schema van de Groep van het Gebied XDM te verwijzen dat de structuur van het publiek beschrijft. Meer informatie over de waarde van dit veld vindt u in het gedeelte [XDM-eindgebruikershandleiding voor veldgroep](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: Deze id wordt gebruikt om naar de map-id in Adobe Audience Manager voor het publiek te verwijzen. Meer informatie over deze API vindt u in de [Adobe Audience Manager API-handleiding](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
 
 +++
 
@@ -305,7 +305,7 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
 
 >[!BEGINTABS]
 
->[!TAB Door Platforms gegenereerd publiek]
+>[!TAB Door het platform gegenereerd publiek]
 
 +++Een voorbeeldreactie bij het creëren van een Platform-geproduceerd publiek.
 
@@ -450,7 +450,7 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over het gespec
 
 >[!BEGINTABS]
 
->[!TAB Door Platforms gegenereerd publiek]
+>[!TAB Door het platform gegenereerd publiek]
 
 +++A steekproefreactie wanneer het terugwinnen van een Platform-geproduceerd publiek.
 
@@ -599,7 +599,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `op` | Voor het bijwerken van soorten publiek is deze waarde altijd `add`. |
+| `op` | Voor het bijwerken van publiek is deze waarde altijd `add`. |
 | `path` | Het pad van het veld dat u wilt bijwerken. |
 | `value` | De waarde waaraan u het veld wilt bijwerken. |
 
@@ -721,7 +721,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | De naam van het publiek. |
 | `namespace` | De naamruimte voor het publiek. |
 | `description` | Een beschrijving van het publiek. |
-| `type` | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het Platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat in Platform is gegenereerd, terwijl een `ExternalSegment` verwijst naar een publiek dat niet in Platform is gegenereerd. |
+| `type` | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment`. A `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
 | `lifecycleState` | De status van het publiek. Mogelijke waarden zijn `draft`, `published`, en `inactive`. `draft` vertegenwoordigt wanneer het publiek wordt gecreëerd; `published` wanneer het publiek wordt gepubliceerd, en `inactive` wanneer het publiek niet meer actief is. |
 | `datasetId` | De id van de dataset die de publieksgegevens kunnen worden gevonden. |
 | `labels` | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
@@ -730,7 +730,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bijgewerkte publiek. Houd er rekening mee dat de details van uw publiek verschillen, afhankelijk van het publiek dat door een Platform wordt gegenereerd of een publiek dat extern wordt gegenereerd.
+Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bijgewerkte publiek. Houd er rekening mee dat de details van uw publiek verschillen, afhankelijk van het publiek dat door het platform wordt gegenereerd of een publiek dat extern wordt gegenereerd.
 
 +++A voorbeeldreactie wanneer het bijwerken van een volledig publiek.
 
@@ -792,7 +792,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4
 
 **Antwoord**
 
-Een succesvolle reactie retourneert HTTP status 204 zonder bericht.
+Een geslaagde reactie retourneert HTTP status 204 zonder bericht.
 
 ## Meerdere soorten publiek ophalen {#bulk-get}
 
@@ -933,147 +933,6 @@ Een succesvolle reactie retourneert HTTP-status 207 met informatie voor het gevr
 
 +++
 
-## Meerdere soorten publiek bijwerken {#bulk-patch}
-
-U kunt het profiel en het aantal records van meerdere soorten publiek bijwerken door een POST aan te vragen bij de `/audiences/bulk-patch-metric` en het verstrekken van identiteitskaarts van het publiek u wenst om bij te werken.
-
-**API-indeling**
-
-```http
-POST /audiences/bulk-patch-metric
-```
-
-**Verzoek**
-
-+++ Een voorbeeldverzoek om meerdere soorten publiek bij te werken.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d ' {
-    "jobId": "12345",
-    "jobType": "AO",
-    "resources": [
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 11037
-                    }
-                },
-            ]
-        },
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 523
-                    }
-                }
-            ]
-        }
-    ]
-    }
-```
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Beschrijving</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>jobId</code></td>
-<td>De id van de taak die de update uitvoert.</td>
-</tr>
-<tr>
-<td><code>jobType</code></td>
-<td>Het type taak waarmee de update wordt uitgevoerd. Deze waarde kan <code>export</code> of <code>AO</code>.</td>
-</tr>
-<tr>
-<td><code>audienceId</code></td>
-<td>De id van het publiek dat u wilt bijwerken. Dit is het <code>audienceId</code> waarde, en <strong>niet</strong> de <code>id</code> waarde van het publiek.</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>De naamruimte voor het publiek dat u wilt bijwerken.</td>
-</tr>
-<tr>
-<td><code>operations</code></td>
-<td>Een object met de informatie die wordt gebruikt om het publiek bij te werken.</td>
-</tr>
-<tr>
-<td><code>operations.op</code></td>
-<td>De bewerking die voor de patch wordt gebruikt. Wanneer u meerdere soorten publiek bijwerkt, is deze waarde <strong>altijd</strong> <code>add</code>.</td>
-</tr>
-<tr>
-<td><code>operations.path</code></td>
-<td>Het pad van het veld dat moet worden bijgewerkt. Momenteel worden slechts twee paden ondersteund: <code>/metrics/data</code> wanneer u de <strong>profiel</strong> tellen en <code>/recordMetrics/data</code> wanneer u de <strong>opnemen</strong> aantal.</td>
-</tr>
-<tr>
-<td><code>operations.value</code></td>
-<td>
-De waarde van het veld dat moet worden bijgewerkt. Wanneer u het aantal profielen bijwerkt, ziet deze waarde er als volgt uit: 
-<pre>
-{
-    "totalProfiles": 123456
-}
-</pre>
-Wanneer u de recordtelling bijwerkt, ziet deze waarde er als volgt uit: 
-<pre>
-{ "recordCount": } 123456 }
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
-
-+++
-
-**Antwoord**
-
-Een succesvolle reactie retourneert HTTP-status 207 met details over het bijgewerkte publiek.
-
-+++ Een voorbeeldreactie voor het bijwerken van meerdere soorten publiek.
-
-```json
-{
-   "resources":[
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      },
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      }
-   ]
-}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `status` | De status van het bijgewerkte publiek. Als de geretourneerde status 200 is, is het publiek bijgewerkt. Als het publiek niet kon worden bijgewerkt, zal een fout die verklaren waarom het publiek niet werd bijgewerkt terugkeren. |
-
-+++
 
 ## Volgende stappen
 

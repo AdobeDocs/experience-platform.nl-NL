@@ -2,9 +2,9 @@
 title: Gebruikershandleiding berekende kenmerken
 description: Leer hoe u berekende kenmerken maakt, weergeeft en bijwerkt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1488'
 ht-degree: 0%
 
 ---
@@ -147,6 +147,12 @@ Wanneer u een concept van een berekend kenmerk selecteert, wordt **[!UICONTROL E
 ![De pagina [!UICONTROL Edit computed attributes] wordt weergegeven.](./images/ui/edit.png)
 
 ## Berekende kenmerken gebruiken {#usage}
+
+>[!IMPORTANT]
+>
+>Als u een berekend kenmerk gebruikt met de opdracht **Meest recent** functie in een segmentdefinitie, u **moet** include **beide** de waarde en de tijdstempelwaarde in het berekende kenmerkobject.
+>
+>Bijvoorbeeld, als u een segmentdefinitie creeert die &quot;Alle profielen zoekt die een geldig e-mailadres&quot;hebben waar het e-mailadresgebied door een gegevens verwerkt attribuut met de meest recente functie wordt bevolkt, u **moet** bevat de waarde van beide e-mailadressen **en** de tijdstempel van het e-mailadres bestaat.
 
 Nadat u een berekend kenmerk hebt gemaakt, kunt u **gepubliceerd** berekende kenmerken in andere downstreamdiensten. Aangezien de gegevens verwerkte attributen profielkenmerkgebieden zijn die op uw profiel worden gecreeerd verenigen schema, kunt u gegevens verwerkte attributenwaarden voor een Real-Time Profiel van de Klant opzoeken, hen in een publiek gebruiken, hen activeren aan een bestemming, of hen gebruiken voor verpersoonlijking in reizen in Adobe Journey Optimizer.
 

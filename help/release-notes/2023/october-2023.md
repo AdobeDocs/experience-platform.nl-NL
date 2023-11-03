@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: In de releaseopmerkingen van oktober 2023 voor Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '1062'
 ht-degree: 3%
 
 ---
@@ -44,9 +44,11 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Extensie | [!DNL Meta] Verbetering conversie-API | Er zijn drie verbeteringen aangebracht in de [API voor metaconversie](/help/tags/extensions/server/meta/overview.md) extensie: <ul><li>Integratie met [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Creeert een naadloze login ervaring door u toe te staan om uw pixelID en toegangstoken voor de integratie van Conversions API met Adobe te delen.</li><li>Integratie met [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Hiermee kunt u reclame maken voor mensen die een gewenste actie waarschijnlijk uitvoeren en de actie terugkoppelen aan de geleverde advertenties.</li><li>Integratie met [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Hiermee kunt u de RampID van LiveRamp in het CIP-veld doorgeven, zodat PII niet rechtstreeks met partners of Meta hoeft te worden gedeeld. </li></ul> |
-| Extensie | [!DNL LinkedIn] Conversies-API | De [[!DNL LinkedIn] Conversies-API](../../tags/extensions/server/linkedin/overview.md) Met de extensie kunt u de doeltreffendheid van uw LinkedIn-marketingcampagnes evalueren door gebeurtenisgegevens van Experience Platforms naar LinkedIn door te sturen. |
+| Extensies | [!DNL Meta] Verbetering conversie-API | Er zijn drie verbeteringen aangebracht in de [API voor metaconversie](/help/tags/extensions/server/meta/overview.md) extensie: <ul><li>Integratie met [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Creeert een naadloze login ervaring door u toe te staan om uw pixelID en toegangstoken voor de integratie van Conversions API met Adobe te delen.</li><li>Integratie met [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Hiermee kunt u reclame maken voor mensen die een gewenste actie waarschijnlijk uitvoeren en de actie terugkoppelen aan de geleverde advertenties.</li><li>Integratie met [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Hiermee kunt u de RampID van LiveRamp in het CIP-veld doorgeven, zodat PII niet rechtstreeks met partners of Meta hoeft te worden gedeeld. </li></ul> |
+| Extensies | [!DNL LinkedIn] Conversies-API | De [[!DNL LinkedIn] Conversies-API](../../tags/extensions/server/linkedin/overview.md) Met de extensie kunt u de doeltreffendheid van uw LinkedIn-marketingcampagnes evalueren door gebeurtenisgegevens van Experience Platforms naar LinkedIn door te sturen. |
 | Geheim | [!DNL LinkedIn] OAuth 2 Secret | De [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) staat u toe om server-server interactie naar te verzenden [!DNL LinkedIn] in gebeurtenis door:sturen. |
+| Gebeurtenis doorsturen | Bijwerken naar tags en doorsturen van gebeurtenissen | Behouden [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=nl) en [Gebeurtenis doorsturen](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) in Platform blijven alleen de meest recente builds van Development en Stage behouden, zowel succesvol als mislukt. Alle builds die niet meer in gebruik zijn, worden verwijderd. Bovendien is het vertragen en het tarief beperken uitgevoerd om ervoor te zorgen dat een paar zwaar gebruik van API de prestaties van API voor anderen niet degraderen. |
+| Extensies | Elementen, regels en extensies | [Elementen, regels en extensies](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) worden nu gesorteerd in de bibliotheekuitvoer voor meer consistentie tussen meerdere builds en implementaties van dezelfde bibliotheek. |
 
 Lees voor meer informatie over gegevensverzameling de [overzicht van gegevensverzamelingen](../../tags/home.md).
 
