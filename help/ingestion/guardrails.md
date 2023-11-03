@@ -3,9 +3,9 @@ keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Dit document biedt richtlijnen voor het opnemen van gegevens in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,10 @@ In de volgende tabel worden de instructies beschreven waarmee u rekening moet ho
 
 ## Volgende stappen
 
-Raadpleeg de volgende documentatie voor meer informatie over gegevens en verwerkingsinstructies in Experience Platform:
+Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
-* [Gardrails voor gegevens in realtime klantprofiel](../profile/guardrails.md)
-* [Guardrails voor identiteitsservicegegevens](../identity-service/guardrails.md)
+* [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
+* [Diagrammen met latentie van begin tot eind](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor verschillende diensten van de Experience Platform.
+* [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Stroomspecificaties bijwerken met de Flow Service API
+title: Stroomspecificaties bijwerken met behulp van de Flow Service API
 description: Het volgende document bevat stappen voor het ophalen en bijwerken van stroomspecificaties met behulp van de Flow Service API voor Self-Serve Sources (Batch SDK).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 21bccacf3555881ae731d0e60ff7d7677f18732d
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Controleer voordat je doorgaat de [gids Aan de slag](./getting-started.md) voor 
 
 ## Een stroomspecificatie opzoeken {#lookup}
 
-Bronnen die zijn gemaakt met de `generic-rest-extension` de sjabloon gebruiken `RestStorageToAEP` stroomspecificatie. Deze stroomspecificatie kan worden teruggewonnen door een verzoek van de GET aan `/flowSpecs/` en de `flowSpec.id` van `6499120c-0b15-42dc-936e-847ea3c24d72`.
+Bronnen die zijn gemaakt met de `generic-rest-extension` de sjabloon gebruiken `RestStorageToAEP` stroomspecificatie. Deze stroomspecificatie kan worden teruggewonnen door een verzoek van de GET aan `/flowSpecs/` en het verstrekken van `flowSpec.id` van `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **API-indeling**
 
@@ -251,7 +251,7 @@ In het volgende verzoek wordt de stroomspecificatie van `6499120c-0b15-42dc-936e
 
 ```shell
 PUT -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \

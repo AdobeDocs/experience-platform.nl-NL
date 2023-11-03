@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
+source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1171'
 ht-degree: 1%
 
 ---
@@ -121,3 +121,11 @@ Zie de volgende documentatie voor meer informatie over [!DNL Identity Service]:
 
 * [[!DNL Identity Service]-overzicht](home.md)
 * [Naamgrafiekviewer](ui/identity-graph-viewer.md)
+
+Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
+
+* [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
+* [Diagrammen met latentie van begin tot eind](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor verschillende diensten van de Experience Platform.
+* [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

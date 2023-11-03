@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
-source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
+source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 23%
+source-wordcount: '318'
+ht-degree: 18%
 
 ---
 
@@ -37,6 +37,14 @@ ht-degree: 23%
 * Doelen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
    * [Doelen in Real-Time CDP B2B Edition](destinations/b2b.md)
+* Guardrails {#guardrails}
+   * [Overzicht van Real-Time CDP-instructies](/help/rtcdp/guardrails/overview.md){target="_blank"}
+   * [Guardrails voor gegevensinvoer](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Guardrails voor de [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Guardrails voor [!DNL Real-Time Customer Profile] gegevens en segmentatie](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
+   * [Guardrails voor [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Guardrails voor [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Guardrails voor gegevensactivering via bestemmingen](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identiteiten {#identity}
    * [Identiteiten en naamruimten](profile/identities-overview.md)
 * Beleid samenvoegen {#merge-policies}
