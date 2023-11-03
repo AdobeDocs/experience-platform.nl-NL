@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ## v0.20.1 (3 november 2023)
 
-- Bijgewerkt voor ondersteuning op 0.js 2.11.2.
+- Bijgewerkt voor ondersteuning `at.js` 2.11.2
 - Oplossing voor een bug die inconsistenties veroorzaakte in de reactietokens die op aangepaste gebeurtenissen werden verzonden.
 
 ## v0.20.0 (9 oktober 2023)
 
-- Bijgewerkt voor ondersteuning op 0.js 2.11.0.
+- Bijgewerkt voor ondersteuning `at.js` 2.11.0.
 - Toegevoegde ondersteuning voor het instellen van aangepaste Adobe Experience Platform-sandboxId en sandboxName in targetGlobalSettings, die wordt doorgegeven aan Delivery API voor aanroepen van getOffer/getOffers.
 - Shadow DOM fix for chaining :eq() in selector.
 
 ## v0.19.3 (18 september 2023)
 
-- Bijgewerkt om ondersteuning te bieden op versie 2.10.3.
+- Bijgewerkt voor ondersteuning `at.js` v2.10.3.
 - Probleem verholpen waarbij de aangepaste gebeurtenis &#39;at-content-rendering-Succesvol&#39; onjuist werd geactiveerd wanneer geen aanbiedingen worden weergegeven. De juiste gebeurtenis, at-content-rendering-no-aanbiedingen, wordt nu geactiveerd.
 - Gebeurtenistoken en responseTokens zijn toegevoegd aan het foutobject voor de aangepaste gebeurtenis at-content-rendering-failed.
 
@@ -66,6 +66,12 @@ ht-degree: 0%
 ## v0.16.0 (28 oktober 2021)
 
 - Bijgewerkt voor ondersteuning `at.js` v2.7.0, nu beschikbaar voor downloaden vanaf Adobe Target.
+
+## v0.15.2 (16 augustus 2021)
+
+- Bijgewerkt voor ondersteuning `at.js` 2.6.1
+- Initialiseer op apparaat beslissingen bij opstarten onafhankelijk van de gebeurtenis Pagina laden.
+- De beslissing op het apparaat kan nu worden gebruikt tijdens het eerste bezoek nadat het artefact is gedownload.
 
 ## v0.15.1 (20 juli 2021)
 
