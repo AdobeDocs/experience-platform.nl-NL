@@ -1,8 +1,8 @@
 ---
 title: Gegevenselementen
-description: De elementen van gegevens zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
+description: Gegevenselementen zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-De elementen van gegevens zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
+Gegevenselementen zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
 
 Eén gegevenselement is een variabele waarvan de waarde kan worden toegewezen aan querytekenreeksen, URL&#39;s, cookie-waarden, JavaScript-variabelen enzovoort. U kunt in Adobe Experience Platform naar deze waarde verwijzen met de variabelenaam. Deze verzameling gegevenselementen wordt het woordenboek met gedefinieerde gegevens dat u kunt gebruiken om uw regels (gebeurtenissen, voorwaarden en handelingen) samen te stellen. Dit gegevenswoordenboek wordt over tags gedeeld voor gebruik met extensies die u aan de eigenschap hebt toegevoegd.
 
@@ -29,7 +29,7 @@ Het concept van herbruikbare gegevenselementen is zeer krachtig en u zou hen als
 
 Bijvoorbeeld als er een bepaalde manier is dat u paginanamen of product IDs van verwijzingen voorziet of informatie van de parameters van het vraagkoord van een verwante marketing verbinding of van [!DNL AdWords]enzovoort, kunt u een gegevenswoordenboek (gegevenselementen) maken door informatie van de bron op te halen en deze gegevens vervolgens in verschillende labelregels te gebruiken.
 
-Gebruikend paginanaam als voorbeeld, veronderstel u een bepaald pagina-naam schema door een gegevenslaag van verwijzingen te voorzien, `document.title` -element of een titeltag binnen de website. Met tags in Adobe Experience Platform kunt u een gegevenselement maken als een enkel referentiepunt voor dat specifieke punt van gegevens. U kunt dit gegevenselement dan gebruiken in om het even welke regel die de paginanaam moet van verwijzingen voorzien. Als u om een of andere reden in de toekomst besluit om de manier te wijzigen waarop u naar de paginanaam verwijst (bijvoorbeeld `document.title` maar u wilt nu naar een bepaalde gegevenslaag verwijzen), te hoeven u niet vele verschillende regels uit te geven om die verwijzing te veranderen. U wijzigt eenvoudig de verwijzing eenmaal in het gegevenselement en alle regels die naar dat gegevenselement verwijzen, worden automatisch bijgewerkt.
+Gebruikend paginanaam als voorbeeld, veronderstel u een bepaald pagina-naam schema door een gegevenslaag van verwijzingen te voorzien, `document.title` -element of een titeltag binnen de website. Met tags in Adobe Experience Platform kunt u een gegevenselement maken als een enkel referentiepunt voor dat specifieke punt van gegevens. Vervolgens kunt u dit gegevenselement gebruiken in elke regel die naar de paginanaam moet verwijzen. Als u om een of andere reden in de toekomst besluit om de manier te wijzigen waarop u naar de paginanaam verwijst (bijvoorbeeld `document.title` maar u wilt nu naar een bepaalde gegevenslaag verwijzen), te hoeven u niet vele verschillende regels uit te geven om die verwijzing te veranderen. U wijzigt eenvoudig de verwijzing eenmaal in het gegevenselement en alle regels die naar dat gegevenselement verwijzen, worden automatisch bijgewerkt.
 
 >[!NOTE]
 >
@@ -78,7 +78,7 @@ De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen 
       * De waarde wordt vastgehouden in een JavaScript-variabele totdat de pagina wordt vernieuwd of een nieuwe pagina wordt geladen.
       * Kan in scripts worden gemaakt en ingesteld met `_satellite` objectsyntaxis:
 
-         `_satellite.setVar('data_element_name')`
+        `_satellite.setVar('data_element_name')`
    * Sessie
       * De waarden blijven aanwezig in de sessieopslag van de browser totdat het browsertabblad wordt gesloten.
       * Beschikbaar tijdens het hele bezoek ter plaatse.
@@ -87,7 +87,7 @@ De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen 
 
 1. Selecteer **[!UICONTROL Save]**.
 
-Wanneer u elementen maakt of bewerkt, kunt u deze opslaan en samenstellen op uw [actieve bibliotheek](../publishing/libraries.md#active-library). Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken op basis van de [!UICONTROL Active Library] vervolgkeuzelijst.
+Wanneer u elementen maakt of bewerkt, kunt u deze opslaan en samenstellen [actieve bibliotheek](../publishing/libraries.md#active-library). Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken op basis van de [!UICONTROL Active Library] vervolgkeuzelijst.
 
 ## Typen gegevenselementen {#types-of-data-elements}
 
@@ -120,7 +120,7 @@ if (window.location.pathname == '/') {
 }
 ```
 
-Aangepaste code kan het volgende accepteren `event` object van de aanroepende regel als een argument. Hierdoor kan de code daar waarde lezen.
+Aangepaste code kan de `event` object van de aanroepende regel als een argument. Hierdoor kan de code daar waarde lezen.
 
 **Voorbeeld:**
 
@@ -137,7 +137,7 @@ U kunt dit vervolgens gebruiken in aangepaste scripts met de opdracht `_satellit
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Als u percentage (`%`), hoeft u alleen de naam van het gegevenselement op te geven. U hoeft niet op te geven `event`.
+Als u percentage (`%`) moet u alleen de naam van het gegevenselement opgeven. U hoeft niet op te geven `event`.
 
 ```text
 %data element name%
@@ -190,7 +190,7 @@ Gebruik het opgegeven veld om de waarde op te geven die u voor een lokaal opslag
 
 ### Pagina-info
 
-Gebruik deze gegevenspunten om paginainfo voor gebruik in uw regellogica te vangen of informatie te verzenden naar [!DNL Analytics] of externe volgsystemen.
+Gebruik deze gegevenspunten om paginaconfo voor gebruik in uw regellogica te vangen of informatie te verzenden naar [!DNL Analytics] of externe volgsystemen.
 
 U kunt een van de volgende paginakenmerken selecteren voor gebruik in het gegevenselement:
 
@@ -216,7 +216,7 @@ Alleen de naamsectie is nodig en speciale aanduidingen zoals &quot;?&quot; of &q
 Gebruik dit gegevenselement om een willekeurig getal te genereren. Deze wordt vaak gebruikt voor het nemen van monsters van gegevens of het maken van id&#39;s, zoals een Actief-id. Het willekeurige getal kan ook worden gebruikt om vertrouwelijke of salt-gevoelige gegevens te verkrijgen. Voorbeelden hiervan zijn:
 
 * Een hoogte-id genereren
-* Plaats het nummer in een gebruikerstoken of tijdstempel om ervoor te zorgen dat het uniek is
+* Plaats het nummer samen met een gebruikerstoken of tijdstempel om ervoor te zorgen dat het uniek is
 * Voer een unidirectionele knoeiboel op PII gegevens uit
 * Willekeurig beslissen wanneer een enquêteverzoek op de plaats moet tonen
 
@@ -236,12 +236,12 @@ Sessieopslag is vergelijkbaar met lokale opslag, behalve dat de gegevens worden 
 
 ### Bezoekergedrag
 
-Net als Pagina-info gebruikt dit gegevenselement gangbare gedragstypen om logica binnen regels of andere oplossingen voor Platforms te verrijken.
+Net als Pagina-info gebruikt dit gegevenselement gangbare gedragstypen om logica binnen regels of andere platformoplossingen te verrijken.
 
 Selecteer een van de volgende kenmerken voor bezoekersgedrag:
 
 * Landingspagina
-* Verkeersbron
+* verkeersbron
 * Minuten op site
 * Aantal sessies
 * Aantal sessiepagina&#39;s
