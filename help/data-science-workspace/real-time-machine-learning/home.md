@@ -59,7 +59,7 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 
 >[!NOTE]
 >
-> Alfa-beperkingen:
+> Beperkingen van de Alpha:
 > - Momenteel worden alleen ONNX-modellen ondersteund.
 > - De functies die in knopen worden gebruikt kunnen niet in series worden vervaardigd. Bijvoorbeeld, een lambdafunctie die in een knoop van Pandas wordt gebruikt.
 > - Na 20 seconden slaap [!DNL Edge] de implementatie wordt handmatig uitgevoerd.
@@ -68,7 +68,7 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 
 ### Functies:
 
-| | Alfa (mei) |
+| | Alpha (mei) |
 | --- | --- |
 | **Functies** | - Het gebruiken van het de notitieboekjecalplaatje van RTML, auteur, test, en stelt een model van het douanemachine leren op. <br> - Ondersteuning voor het importeren van vooraf opgeleide modellen voor machinaal leren. <br> - Real-time Machine Learning SDK. <br> - Starterset van ontwerpknooppunten. <br> - Gedistribueerd naar Adobe Experience Platform Hub. |
 | **Beschikbaarheid** | Noord-Amerika |

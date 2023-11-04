@@ -432,9 +432,9 @@ Als tijdelijke oplossing kunt u:
 
 >[!IMPORTANT]
 > 
->Alle cloudopslagbestemmingen in de catalogus kunnen een verbeterde [[!UICONTROL Mapping] stap](#mapping) die de **[!UICONTROL Select attributes]** in deze sectie beschreven stap.
+Alle cloudopslagbestemmingen in de catalogus kunnen een verbeterde [[!UICONTROL Mapping] stap](#mapping) die de **[!UICONTROL Select attributes]** in deze sectie beschreven stap.
 >
->Dit **[!UICONTROL Select attributes]** De stap wordt nog getoond voor Adobe Campaign, Oracle Resys, Oracle Eloqua, en de Marketing Cloud van Salesforce e-mailmarketing bestemmingen.
+Dit **[!UICONTROL Select attributes]** De stap wordt nog getoond voor Adobe Campaign, Oracle Resys, Oracle Eloqua, en de Marketing Cloud van Salesforce e-mailmarketing bestemmingen.
 
 Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren die u naar de doelbestemming wilt verzenden.
 
@@ -454,15 +454,15 @@ Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren 
 
 >[!NOTE]
 >
-> Adobe Experience Platform vult uw selectie vooraf in met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform vult uw selectie vooraf in met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 ![Afbeelding met vooraf ingevulde aanbevolen kenmerken in de toewijzingsstap van de activeringsworkflow voor het publiek.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->Vanwege een bekende beperking kun je momenteel de **[!UICONTROL Select field]** toe te voegen venster `segmentMembership.status` naar uw bestand exporteren. In plaats daarvan moet u de waarde handmatig plakken `xdm: segmentMembership.status` in het schemagebied, zoals hieronder getoond.
+Vanwege een bekende beperking kun je momenteel de **[!UICONTROL Select field]** toe te voegen venster `segmentMembership.status` naar uw bestand exporteren. In plaats daarvan moet u de waarde handmatig plakken `xdm: segmentMembership.status` in het schemagebied, zoals hieronder getoond.
 >
->![De opname van het scherm die de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![De opname van het scherm die de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Het exporteren van bestanden kan op de volgende manieren verschillen, afhankelijk van of `segmentMembership.status` is geselecteerd:
 * Als de `segmentMembership.status` veld is geselecteerd, geëxporteerde bestanden bevatten **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in latere incrementele uitvoer.
@@ -470,15 +470,15 @@ Het exporteren van bestanden kan op de volgende manieren verschillen, afhankelij
 
 ## Verrijkingskenmerken selecteren {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="Verrijkingskenmerken uitsluiten"
->abstract="Schakel deze optie in om de profielen van het geselecteerde aangepaste geüploade publiek naar uw bestemming te exporteren, zonder alle kenmerken ervan uit te sluiten."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Meer informatie in documentatie"
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="Verrijkingskenmerken uitsluiten"
+abstract="Schakel deze optie in om de profielen van het geselecteerde aangepaste geüploade publiek naar uw bestemming te exporteren, zonder alle kenmerken ervan uit te sluiten."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Meer informatie in documentatie"
 
 >[!IMPORTANT]
 >
->Deze stap wordt alleen weergegeven als u **[!UICONTROL Custom upload]** publiek tijdens de [doelselectie](#select-audiences) stap.
+Deze stap wordt alleen weergegeven als u **[!UICONTROL Custom upload]** publiek tijdens de [doelselectie](#select-audiences) stap.
 
 Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in Experience Platform wordt opgenomen als **[!UICONTROL Custom uploads]**. In deze stap kunt u voor elk geselecteerd extern publiek selecteren welke kenmerken u wilt exporteren naar uw doel.
 
@@ -509,10 +509,10 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="Toepasselijk toestemmingsbeleid weergeven"
->abstract="Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="Toepasselijk toestemmingsbeleid weergeven"
+abstract="Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
 
 Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 

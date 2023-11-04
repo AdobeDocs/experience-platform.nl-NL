@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1794'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,20 @@ ht-degree: 0%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versie 2.21.0 - 1 november 2023
+
+**Nieuwe functies**
+
+* Toegevoegd `Request default personalization` optie om een gebeurtenisactie te verzenden.
+* Toegevoegde ondersteuning voor boven- en onderaan-pagina-gebeurtenissen in de verzendgebeurtenis.
+* Toegevoegd `Apply propositions` handeling.
+* Toegevoegd `Evaluate rulesets` actie en `Subscribe ruleset items` gebeurtenis voor in-app berichten.
+* Toegevoegd `Decision context` om een gebeurtenisactie te verzenden.
+
+**Oplossingen en verbeteringen**
+
+* Bevat versie 2.19.0 van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.20.3 - 8 augustus 2023
 

@@ -1,9 +1,9 @@
 ---
 title: Persoonlijke inhoud renderen met de SDK van het Adobe Experience Platform-web
-description: Leer hoe u persoonlijke inhoud kunt renderen met de SDK van Adobe Experience Platform Web.
+description: Leer hoe u gepersonaliseerde inhoud kunt renderen met de SDK van Adobe Experience Platform Web.
 keywords: personalisatie;renderDecisions;sendEvent;DecisionScopes;proposities;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 5f205792a03c3c7dd9074827ce4a989fae2e45d9
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 1%
@@ -12,15 +12,15 @@ ht-degree: 1%
 
 # Aangepaste inhoud renderen
 
-Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de oplossingen van de verpersoonlijking van Adobe, met inbegrip van [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl) en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl).
+Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de oplossingen van de Adobe personalization, met inbegrip van [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl) en [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl).
 
 Bovendien, de bevoegdheden van SDK van het Web zelfde-pagina en volgende-pagina verpersoonlijkingsmogelijkheden door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) en de [aangepaste verpersoonlijkingsverbinding](../../destinations/catalog/personalization/custom-personalization.md). Om te leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie [speciale gids](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en Adobe Journey Optimizer [Gebruikersinterface webcampagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kan automatisch worden opgehaald en gerenderd door de SDK. Inhoud die is gemaakt in Adobe Target [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) of Offer decisioning kan niet automatisch worden gerenderd door de SDK. In plaats daarvan moet u deze inhoud aanvragen met de SDK en de inhoud vervolgens zelf handmatig renderen.
+Inhoud die is gemaakt in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en Adobe Journey Optimizer [Gebruikersinterface webcampagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kan automatisch door SDK worden opgehaald en teruggegeven. Inhoud die is gemaakt in Adobe Target [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) of Offer decisioning kan niet automatisch door SDK worden teruggegeven. In plaats daarvan moet u deze inhoud aanvragen met de SDK en de inhoud vervolgens zelf handmatig renderen.
 
-## Inhoud automatisch renderen
+## Inhoud automatisch renderen {#automatic}
 
-Wanneer u gebeurtenissen naar de server verzendt, kunt u `renderDecisions` optie voor `true`. Hierdoor wordt de SDK gedwongen om alle gepersonaliseerde inhoud die in aanmerking komt voor automatische rendering, automatisch te renderen.
+Wanneer u gebeurtenissen naar de server verzendt, kunt u `renderDecisions` optie voor `true`. Hierdoor wordt de SDK gedwongen om automatisch gepersonaliseerde inhoud te renderen die in aanmerking komt voor automatische rendering.
 
 ```javascript
 alloy("sendEvent", {
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 Het renderen van gepersonaliseerde inhoud is asynchroon, dus u zou geen veronderstellingen moeten maken met betrekking tot wanneer een bepaald stuk van inhoud het teruggeven zal hebben voltooid.
 
-## Inhoud handmatig renderen
+## Inhoud handmatig renderen {#manual}
 
 Om tot om het even welke verpersoonlijkingsinhoud toegang te hebben, kunt u een callback functie verstrekken, die zal worden geroepen nadat SDK een succesvolle reactie van de server ontvangt. Uw callback wordt verstrekt a `result` object, dat een `propositions` eigenschap met geretourneerde personalisatie-inhoud. Hieronder ziet u hoe u een callback-functie kunt gebruiken bij het verzenden van een gebeurtenis.
 
@@ -56,7 +56,7 @@ alloy("sendEvent", {
 
 In dit voorbeeld: `result.propositions`, als deze bestaat, is een array met personalisatievoorstellen die betrekking hebben op de gebeurtenis. Standaard worden alleen voorstellingen opgenomen die in aanmerking komen voor automatische rendering.
 
-De `propositions` array kan er ongeveer als volgt uitzien:
+De `propositions` array kan er ongeveer zo uitzien als in dit voorbeeld:
 
 ```json
 [
@@ -291,7 +291,7 @@ alloy("sendEvent", {
 
 >[!TIP]
 >
->Als u Adobe Target gebruikt, komen bereiken overeen met de boxes op de server, behalve dat ze allemaal tegelijk worden aangevraagd in plaats van afzonderlijk. De globale box wordt altijd geretourneerd.
+>Als u Adobe Target gebruikt, komen bereiken overeen met de boxes op de server, behalve dat ze allemaal tegelijk worden aangevraagd in plaats van afzonderlijk. De algemene mbox wordt altijd geretourneerd.
 
 ### flikkering beheren
 
@@ -299,19 +299,19 @@ De SDK biedt faciliteiten aan [flikkering beheren](../personalization/manage-fli
 
 ## Profielen renderen in toepassingen van één pagina zonder metrische gegevens te verhogen {#applypropositions}
 
-De `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Hierdoor wordt de rapportnauwkeurigheid vergroot.
+De `applyPropositions` met de opdracht kunt u een array met voorstellingen renderen of uitvoeren vanuit [!DNL Target] in toepassingen van één pagina, zonder het verhogen van [!DNL Analytics] en [!DNL Target] metriek. Dit verhoogt de nauwkeurigheid van de rapportage.
 
 >[!IMPORTANT]
 >
->Indien voorstellen voor de `__view__` bereik (of een weboppervlak) weergegeven tijdens het laden van de pagina, hun `renderAttempted` markering wordt ingesteld op `true`. De `applyPropositions` de opdracht wordt niet opnieuw gerenderd `__view__` bereik- (of weboppervlak-)voorstellingen met de `renderAttempted: true` markering.
+>Indien voorstellen voor de `__view__` bereik (of een weboppervlak) weergegeven tijdens het laden van de pagina, hun `renderAttempted` markering wordt ingesteld op `true`. De `applyPropositions` de opdracht wordt niet opnieuw weergegeven `__view__` bereik- (of weboppervlak-)voorstellingen met de `renderAttempted: true` markering.
 
-### Hoofdlettergebruik 1: Weergavevoorstellingen van één pagina opnieuw renderen
+### Hoofdlettergebruik 1: toepassingenweergavevoorstellen van één pagina opnieuw renderen
 
 Het gebruiksgeval dat in het onderstaande voorbeeld wordt beschreven, rendert de eerder opgehaalde en weergegeven voorstellingen van de kartonweergave opnieuw zonder weergavemeldingen te verzenden.
 
 In het onderstaande voorbeeld wordt `sendEvent` wordt getriggerd op een wijziging in de weergave en wordt het resulterende object in een constante opgeslagen.
 
-Wanneer vervolgens de weergave of een component wordt bijgewerkt, wordt de `applyPropositions` wordt aangeroepen, met de voorstellen van het vorige `sendEvent` om de weergavevoorstellingen opnieuw te renderen.
+Wanneer vervolgens de weergave of een component wordt bijgewerkt, wordt de knop `applyPropositions` wordt aangeroepen, met de voorstellen van het vorige `sendEvent` om de weergavevoorstellingen opnieuw te renderen.
 
 ```js
 var cartPropositions = alloy("sendEvent", {
@@ -336,7 +336,7 @@ alloy("applyPropositions", {
 });
 ```
 
-### Hoofdlettergebruik 2: Proposities renderen die geen kiezer hebben
+### Hoofdlettergebruik 2: voorvertoningen renderen die geen kiezer hebben
 
 Dit gebruiksgeval is van toepassing op activiteitenaanbiedingen die zijn gemaakt met de [!DNL Target Form-based Experience Composer].
 

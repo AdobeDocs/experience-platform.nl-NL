@@ -4,7 +4,7 @@ description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe 
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ De `/workorder` Het eindpunt in de Hygiene API van Gegevens staat u toe om versl
 
 >[!IMPORTANT]
 > 
->De functie Record verwijderen bevindt zich momenteel in de bètaversie en is alleen beschikbaar in een **beperkte release**. Het is niet beschikbaar voor alle klanten. Registratie-verwijderingsverzoeken zijn alleen beschikbaar voor organisaties in de beperkte release.
+De functie Record verwijderen bevindt zich momenteel in de bètaversie en is alleen beschikbaar in een **beperkte release**. Het is niet beschikbaar voor alle klanten. Registratie-verwijderingsverzoeken zijn alleen beschikbaar voor organisaties in de beperkte release.
 >
->Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
+Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Ze zijn **niet** te gebruiken voor verzoeken om rechten van betrokkenen (naleving) met betrekking tot privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR). Gebruik voor alle gevallen waarin aan de eisen wordt voldaan [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) in plaats daarvan.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ U kunt één of meerdere identiteiten van één enkele dataset of alle datasets 
 
 >[!IMPORTANT]
 > 
->Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform en Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. Organisaties die een aankoop hebben gedaan **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe** kan maximaal 600.000 identiteitsverslagen indienen schrapt elke maand.<br>Eén [verzoek tot verwijdering van records via de gebruikersinterface](../ui/record-delete.md) kunt u 10.000 id&#39;s tegelijk verzenden. Met de API-methode voor het verwijderen van records kunnen 100.000 id&#39;s tegelijk worden verzonden.<br>Het is aan te raden zoveel mogelijk id&#39;s per aanvraag in te dienen, tot aan je ID-limiet. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
+Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform en Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. Organisaties die een aankoop hebben gedaan **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe** kan maximaal 600.000 identiteitsverslagen indienen schrapt elke maand.<br>Eén [verzoek tot verwijdering van records via de gebruikersinterface](../ui/record-delete.md) kunt u 10.000 id&#39;s tegelijk verzenden. Met de API-methode voor het verwijderen van records kunnen 100.000 id&#39;s tegelijk worden verzonden.<br>Het is aan te raden zoveel mogelijk id&#39;s per aanvraag in te dienen, tot aan je ID-limiet. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
 
 **API-indeling**
 
@@ -39,7 +39,7 @@ POST /workorder
 
 >[!NOTE]
 >
->De verzoeken van de Levenscyclus van gegevens kunnen datasets slechts wijzigen die op primaire identiteiten of een identiteitskaart worden gebaseerd. Een verzoek moet of de primaire identiteit specificeren, of een identiteitskaart verstrekken.
+De verzoeken van de Levenscyclus van gegevens kunnen datasets slechts wijzigen die op primaire identiteiten of een identiteitskaart worden gebaseerd. Een verzoek moet of de primaire identiteit specificeren, of een identiteitskaart verstrekken.
 
 **Verzoek**
 

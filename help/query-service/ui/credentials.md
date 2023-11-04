@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding Query Service Credentials
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1470'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 1%
 # Referentiegids
 
 Met Adobe Experience Platform Query Service kunt u verbinding maken met externe clients. U kunt met deze externe cliënten verbinden door of het verlopen van geloofsbrieven of niet-vervallende geloofsbrieven te gebruiken.
+
+>[!NOTE]
+>
+>Het venster Referenties is niet automatisch beschikbaar voor alle gebruikers. Neem contact op met het accountteam van uw Adobe om de [!UICONTROL Credentials] die in de werkruimte van de Dienst van de Vraag moet worden omvat als u het vereist. Indien gevraagd, is deze verandering organisatie wijd en door het technische team van Adobe geleid. Dit is geen instelling die door gebruikers wordt beheerd.
 
 ## Referenties vervallen {#expiring-credentials}
 

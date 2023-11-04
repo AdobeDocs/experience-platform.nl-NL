@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1660'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,20 @@ ht-degree: 1%
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versie 2.19.0 - 1 november 2023
+
+**Nieuwe functies**
+
+* Extra ondersteuning voor het renderen van berichten in de app van Adobe Journey Optimizer.
+* Extra ondersteuning voor boven- en onderaan-pagina-gebeurtenissen.
+* De optie defaultPersonalizationEnabled is toegevoegd aan de opdracht sendEvent om het bereik en de standaardoppervlakte voor de hele pagina aan te vragen.
+
+**Oplossingen en verbeteringen**
+
+* Gecombineerde verpersoonlijkingsvertoningsgebeurtenissen samen wanneer het teruggeven van veelvoudige types van verpersoonlijking.
+* Probleem verholpen waarbij de weergavenamen van toepassingen van één pagina hoofdlettergevoelig waren.
+* Probleem verholpen met gepersonaliseerde aanbod-kiezers voor schaduwDOM.
 
 ## Versie 2.18.0 - 31 juli 2023
 
