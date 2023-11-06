@@ -3,10 +3,10 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 1%
+source-wordcount: '832'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegeve
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Server-naar-server-API](/help/server-api/overview.md)
+* [Edge Network Server API](/help/server-api/overview.md)
 
 >[!NOTE]
 >De Platform Web SDK en Platform Mobile SDK vereisen geen plaatsing door markeringen in Adobe Experience Platform. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
