@@ -1,9 +1,9 @@
 ---
 title: Real-Time CDP Guardrails
 description: Meer informatie over de gegevensgidsen in de verschillende services en gebieden van Real-Time CDP.
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,8 @@ Raadpleeg ook de onderstaande koppelingen naar productbeschrijving voor licentie
 
 * [Alle productbeschrijvingen van de Adobe](https://helpx.adobe.com/legal/product-descriptions.html)
 * [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Volgende stappen
 
