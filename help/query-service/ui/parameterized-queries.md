@@ -2,23 +2,19 @@
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
 
-# Parameterized vragen (beperkte versie) {#parameterized-queries}
+# Parameterized vragen {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Parameterized vragen"
 >abstract="Gebruik geparametereerde query&#39;s om parameterwaarden toe te voegen op het moment van uitvoering. Op deze manier kunt u met dynamische gegevens werken en query&#39;s hergebruiken voor verschillende gebruiksgevallen. Gebruik de `'$'` Plaats om een vraagparameter in uw vraag in de tekstredacteur in te gaan. Voeg vervolgens een waarde voor de sleutel toe in de sectie met zoekparameters onder de editor."
-
->[!IMPORTANT]
->
->De parameterized eigenschap van vraag UI is beschikbaar in a **alleen beperkte release** en is niet beschikbaar voor alle klanten.
 
 De Dienst van de vraag steunt het gebruik van parameterized vragen in de Redacteur van de Vraag. Met parameterized vragen, kunt u placeholders voor parameters nu gebruiken en de parameterwaarden bij uitvoeringstijd toevoegen. Plaatsaanduidingen maken het mogelijk om met dynamische gegevens te werken als u niet weet wat de waarden zijn totdat de instructie wordt uitgevoerd. U kunt uw vragen ook vooraf voorbereiden en opnieuw gebruiken voor gelijkaardige doeleinden. Het hergebruiken van vragen bespaart aanzienlijke inspanning aangezien u vermijdt creërend duidelijke SQL vragen voor elk gebruiksgeval.
 
