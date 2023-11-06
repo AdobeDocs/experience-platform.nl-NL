@@ -2,9 +2,9 @@
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
+source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -153,9 +153,6 @@ alloy("sendEvent", {
       datasets: {
         event: {
           datasetId: "SampleEventDatasetIdOverride"
-        },
-        profile: {
-          datasetId: "www"
         }
       }
     },
@@ -180,7 +177,7 @@ alloy("sendEvent", {
 |---|---|
 | `edgeConfigOverrides.datastreamId` | Met deze parameter kan één aanvraag naar een andere gegevensstroom gaan dan de gegevensstroom die door de `configure` gebruiken. |
 
-### Configuratieoverschrijvingen verzenden via de `configure` command {#send-configure}
+### Het verzenden van configuratieoverschrijvingen via het Web SDK `configure` command {#send-configure}
 
 In het onderstaande voorbeeld ziet u hoe een configuratieoverschrijving eruit kan zien op een `configure` gebruiken.
 
@@ -195,11 +192,8 @@ alloy("configure", {
   edgeConfigOverrides: {
     "com_adobe_experience_platform": {
       "datasets": {
-        "event": { 
+        "event": {
           datasetId: "SampleProfileDatasetIdOverride"
-        },
-        "profile": { 
-          datasetId: "www"
         }
       }
     },
@@ -296,10 +290,7 @@ let configOverrides: [String: Any] = [
     "datasets": [
       "event": [
         "datasetId": "SampleEventDatasetIdOverride"
-      ],
-      "profile": [
-        "datasetId": "SampleProfileDatasetIdOverride"
-      ],
+      ]
     ]
   ],
   "com_adobe_analytics": [
@@ -308,7 +299,7 @@ let configOverrides: [String: Any] = [
           "MySecondOverrideReportSuite",
           "MyThirdOverrideReportSuite"
       ]
-  ],  
+  ],
   "com_adobe_identity": [
     "idSyncContainerId": "1234567"
   ],
@@ -341,10 +332,7 @@ val configOverrides = mapOf(
         to mapOf(
             "event"
             to mapOf("datasetId"
-                to "SampleEventDatasetIdOverride"),
-            "profile"
-            to mapOf("datasetId"
-                to "SampleProfileDatasetIdOverride")
+                to "SampleEventDatasetIdOverride")
         )
     ),
     "com_adobe_analytics"
@@ -392,9 +380,6 @@ De bovenstaande voorbeelden genereren een [!DNL Edge Network] lading gelijkend o
         "datasets": {
           "event": {
             "datasetId": "SampleProfileDatasetIdOverride"
-          },
-          "profile": {
-            "datasetId": "www"
           }
         }
       },
