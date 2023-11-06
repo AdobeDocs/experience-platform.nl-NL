@@ -2,9 +2,9 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2449'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Dankzij de integratie met de Event Quality Match Score (EMQ) kunt u de doeltreff
 
 ## Integratie met LiveRamp (Alpha) {#alpha}
 
-De integratie met LiveRamp voegt nieuwe velden toe aan de regelconfiguratie van de Meta Conversions API, waardoor het voor klanten eenvoudiger wordt om met de Conversies-API van LiveRamp te integreren. Deze integratie elimineert de behoefte aan u om PII met uw partner of Meta direct te delen. Door de robuuste identiteitsgrafiek van LiveRamp wordt de opname van [!UICONTROL Partner ID (alpha)] kan de integratiekwaliteit verbeteren door de gebruikersovereenkomst te verhogen.
+[!DNL LiveRamp] klanten die [!DNL LiveRamp]De voor authentiek verklaarde Oplossing van het Verkeer (ATS) die op hun plaatsen wordt opgesteld kan verkiezen om RampIDs als parameter van de klanteninformatie te delen. Werk met uw [!DNL Meta] accountteam om deel te nemen aan het Alpha-programma voor deze functie.
 
-![Meta zelfs door:sturen [!UICONTROL Rule] configuratiepagina markeren [!UICONTROL Partner Name (alpha)] en [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![Meta-gebeurtenis door:sturen [!UICONTROL Rule] configuratiepagina markeren [!UICONTROL Partner Name (alpha)] en [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#rule}
 
