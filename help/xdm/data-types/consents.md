@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;toestemming;Toestemming;Voorkeuren;privacyOptOuts;marketingVoorkeuren;optOutType;basisOfProcessing;toestemming;Toestemming
 title: Gegevenstype Inhoud en Voorkeuren
-description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
+description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door CMP's (Consent Management Platforms) en andere bronnen van uw gegevensbewerkingen.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '2251'
 ht-degree: 0%
 
 ---
@@ -38,13 +38,13 @@ Een voorkeur is een optie die de klant toestaat om te specificeren hoe de versch
 * **Voorkeuren voor aanpassen**: Voorkeuren betreffende de manier waarop het merk de ervaringen die aan een klant worden geleverd, moet aanpassen.
 * **Marketingsvoorkeuren**: Voorkeuren betreffende de vraag of een merk via verschillende kanalen contact mag opnemen met een klant.
 
-De volgende schermafbeelding laat zien hoe de structuur van het gegevenstype wordt weergegeven in de gebruikersinterface van het Platform:
+De volgende schermafbeelding laat zien hoe de structuur van het gegevenstype wordt weergegeven in de interface van het platform:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->Zie de handleiding op [XDM-bronnen verkennen](../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in het Platform UI te inspecteren.
+>Zie de handleiding op [XDM-bronnen verkennen](../ui/explore.md) aan voor stappen op hoe te om het even welk middel van XDM op te zoeken en zijn structuur in Platform UI te inspecteren.
 
 In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens dat [!UICONTROL Consents and Preferences] gegevenstype kan worden verwerkt. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
 
@@ -295,23 +295,23 @@ In de volgende tabel worden de toegestane waarden voor `val`:
 
 ### Geaccepteerde waarden voor `preferred` {#preferred-values}
 
-In de volgende tabel worden de toegestane waarden voor `preferred`:
+In de volgende tabel worden de toegestane waarden voor `preferred`. De `preferred` de waarden wijzen op het aangewezen kanaal van de klant voor het ontvangen van mededelingen die hen over gegevensinzameling, privacybeleid, en verpersoonlijkingsopties zouden informeren.
 
 | Waarde | Beschrijving |
 | --- | --- |
-| `email` | E-mailberichten. |
-| `push` | Pushmeldingen. |
-| `inApp` | In-app berichten. |
-| `sms` | Sms-berichten. |
-| `phone` | Telefoongesprekken. |
-| `phyMail` | Fysieke post. |
-| `inVehicle` | Berichten in het voertuig. |
-| `inHome` | Berichten thuis. |
-| `iot` | Internet of things (IoT) berichten. |
-| `social` | Inhoud van sociale media. |
-| `other` | Een kanaal dat niet in een standaardcategorie past. |
-| `none` | Geen voorkeurskanaal. |
-| `unknown` | Het voorkeurkanaal is onbekend. |
+| `email` | Deze voorkeur geeft aan dat de klant ermee instemt om berichten via e-mail te ontvangen. |
+| `push` | Deze voorkeur geeft aan dat de klant ermee instemt pushberichten te ontvangen. Dit zijn berichten of waarschuwingen die rechtstreeks naar hun apparaat worden verzonden, vaak een mobiele toepassing. |
+| `inApp` | Deze voorkeur geeft aan dat de klant toestemming heeft om in-app berichten te ontvangen. Deze berichten worden geleverd in een mobiele of webtoepassing en bieden informatie terwijl de gebruiker actief betrokken is bij de app. |
+| `sms` | Deze voorkeur geeft aan dat de klant ermee instemt om berichten via SMS (Short Message Service) te ontvangen. Dit zijn tekstberichten die naar hun mobiele telefoon worden verzonden. |
+| `phone` | Deze voorkeur wijst op de toestemming van de klant om mededelingen door telefoongespreksinteractie te ontvangen. |
+| `phyMail` | Deze voorkeur geeft de toestemming van de klant aan om materiaal via fysieke post te ontvangen. |
+| `inVehicle` | Deze voorkeur geeft aan dat de klant ermee instemt om meldingen te ontvangen terwijl hij of zij zich in het voertuig bevindt. Deze berichten kunnen via voertuiginfotainment of andere communicatiekanalen in het voertuig worden verzonden. |
+| `inHome` | Deze voorkeur geeft de toestemming van de klant aan om berichten te ontvangen terwijl thuis. Deze berichten kunnen door slimme huisapparaten of andere op huis-gebaseerde communicatiekanalen worden geleverd. |
+| `iot` | Deze voorkeur geeft de toestemming van de klant aan om berichten met betrekking tot het Internet van Dingen (IoT) te ontvangen. Deze berichten kunnen via aangesloten apparaten en systemen binnen hun omgeving worden geleverd. |
+| `social` | Deze voorkeur wijst op de toestemming van de klant om mededelingen door sociale media platforms te ontvangen. |
+| `other` | Deze voorkeur omvat kanalen die niet in standaardcategorieën passen. Het vertegenwoordigt alternatieve of gespecialiseerde communicatiekanalen die specifiek kunnen zijn voor een bepaald bedrijf of een bepaalde industrie. |
+| `none` | Deze voorkeur wijst erop dat de klant geen aangewezen communicatie kanaal heeft. |
+| `unknown` | Deze voorkeur betekent dat het aangewezen communicatiekanaal van de klant niet gekend of niet gespecificeerd is. Dit kan zich voordoen als de klant geen uitdrukkelijke toestemming of voorkeursinformatie heeft verstrekt. |
 
 {style="table-layout:auto"}
 
