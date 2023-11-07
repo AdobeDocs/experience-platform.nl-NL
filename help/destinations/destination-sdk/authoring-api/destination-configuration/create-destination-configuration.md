@@ -2,7 +2,7 @@
 description: Leer hoe te om een API vraag te structureren om een bestemmingsconfiguratie door Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een doelconfiguratie maken
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 1%
@@ -16,7 +16,7 @@ Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om uw eig
 Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, lees de volgende artikelen:
 
 * [Configuratie van klantverificatie](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2-verificatie](../../functionality/destination-configuration/oauth2-authorization.md)
+* [OAuth2-vergunning](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI-kenmerken](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema-configuratie](../../functionality/destination-configuration/schema-configuration.md)

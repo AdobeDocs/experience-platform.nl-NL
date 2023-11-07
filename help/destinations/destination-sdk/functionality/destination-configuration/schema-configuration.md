@@ -2,7 +2,7 @@
 description: Leer hoe te om het partnerschema voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie partnerschema
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1885'
 ht-degree: 1%
@@ -246,7 +246,7 @@ Na het lezen van dit artikel, zou u beter inzicht moeten hebben in welke schemat
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
 * [Verificatie door klant](customer-authentication.md)
-* [OAuth2-verificatie](oauth2-authorization.md)
+* [OAuth2-vergunning](oauth2-authorization.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)

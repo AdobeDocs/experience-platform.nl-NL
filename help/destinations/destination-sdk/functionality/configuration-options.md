@@ -2,7 +2,7 @@
 description: De bestemmingsdienst in Adobe Experience Platform gebruikt configuratieeindpunten voor verscheidene componenten die omhoog de bestemmingsfunctionaliteit bouwen. Leer hoe deze componenten gecombineerd Experience Platform toestaan om met bestemmingspartners te verbinden, douaneberichten te verzenden, en profielgegevens over het digitale ecosysteem te activeren.
 title: Configuratieopties in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Dit configuratieeindpunt bevat fundamentele en geavanceerde informatie over uw b
 Zie de documentatie hieronder voor details over elk van de componenten van de bestemmingsconfiguratie. U kunt de hieronder beschreven functies configureren via de [doelen, eindpunt](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 * [Configuratie van klantverificatie](destination-configuration/customer-authentication.md): Selecteer het authentificatiemechanisme dat het Experience Platform zou moeten gebruiken om met uw bestemming te verbinden. Deze configuratie genereert de [Nieuwe bestemming configureren](../../ui/connect-destination.md) pagina in het gebruikersinterface van het Experience Platform, waar de gebruikers Experience Platform met de rekeningen verbinden zij met uw bestemming hebben.
-* [OAuth2-verificatie](destination-configuration/oauth2-authorization.md): Meer informatie over alle [!DNL OAuth2] verificatiestromen die worden ondersteund door Destination SDK en instructies krijgen voor het instellen [!DNL OAuth2] verificatie voor uw bestemming...
+* [OAuth2-vergunning](destination-configuration/oauth2-authorization.md): Meer informatie over alle [!DNL OAuth2] verificatiestromen die worden ondersteund door Destination SDK en instructies krijgen voor het instellen [!DNL OAuth2] verificatie voor uw bestemming...
 * [Gegevensvelden van de klant](destination-configuration/customer-data-fields.md): Leer hoe u invoervelden maakt in de gebruikersinterface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 * [UI-kenmerken](destination-configuration/ui-attributes.md): Leer hoe te om de attributen UI, zoals de documentatiekoppeling, de categorie van de bestemmingskaart, en het type en de frequentie van de bestemmingsverbinding, voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 * [Schema-configuratie](destination-configuration/schema-configuration.md): Leer hoe u het doelschema van uw bestemming definieert waaraan gebruikers profielkenmerken en identiteiten kunnen toewijzen.

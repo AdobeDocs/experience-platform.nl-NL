@@ -2,7 +2,7 @@
 description: Leer hoe te om de montages van de bestemmingslevering voor bestemmingen te vormen die met Destination SDK worden gebouwd, om erop te wijzen waar de uitgevoerde gegevens gaan en welke authentificatieregel in de plaats wordt gebruikt waar de gegevens zullen landen.
 title: Levering bestemming
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 1%
@@ -108,7 +108,7 @@ Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben hoe u de 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
 * [Verificatie door klant](customer-authentication.md)
-* [OAuth2-verificatie](oauth2-authorization.md)
+* [OAuth2-vergunning](oauth2-authorization.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [Schema-configuratie](schema-configuration.md)

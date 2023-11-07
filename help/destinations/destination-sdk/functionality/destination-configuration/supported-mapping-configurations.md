@@ -2,7 +2,7 @@
 description: Leer hoe te om uw bestemming voor de gesteunde identiteit en attributenkaartconfiguraties te vormen.
 title: Ondersteunde toewijzingsconfiguraties
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Na het lezen van dit artikel, zou u beter inzicht moeten hebben in welke afbeeld
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
 * [Verificatie door klant](customer-authentication.md)
-* [OAuth2-verificatie](oauth2-authorization.md)
+* [OAuth2-vergunning](oauth2-authorization.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)

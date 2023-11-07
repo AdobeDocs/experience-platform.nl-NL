@@ -2,7 +2,7 @@
 description: Leer hoe u invoervelden maakt in de gebruikersinterface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 title: Gegevensvelden van de klant
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -568,7 +568,7 @@ Nadat u dit artikel hebt gelezen, hebt u beter inzicht in hoe u uw gebruikers ku
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
 * [Verificatie door klant](customer-authentication.md)
-* [OAuth2-verificatie](oauth2-authorization.md)
+* [OAuth2-vergunning](oauth2-authorization.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
 * [Configuratie naamruimte voor identiteit](identity-namespace-configuration.md)

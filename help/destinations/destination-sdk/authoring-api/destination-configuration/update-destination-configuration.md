@@ -2,7 +2,7 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaande bestemmingsconfiguratie door Adobe Experience Platform Destination SDK bij te werken.
 title: Een doelconfiguratie bijwerken
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om een be
 Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkheden van een doelconfiguratie:
 
 * [Configuratie van klantverificatie](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2-verificatie](../../functionality/destination-configuration/oauth2-authorization.md)
+* [OAuth2-vergunning](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Gegevensvelden van de klant](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI-kenmerken](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema-configuratie](../../functionality/destination-configuration/schema-configuration.md)

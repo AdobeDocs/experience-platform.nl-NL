@@ -2,7 +2,7 @@
 description: Leer hoe te opstelling een authentificatiemechanisme voor uw bestemming en krijgt inzicht in wat de gebruikers in UI afhankelijk van de authentificatiemethode zullen zien u selecteert.
 title: Configuratie van klantverificatie
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Wanneer [een doel maken](../../authoring-api/destination-configuration/create-de
 
 * Voor bestemmingen die [basisverificatie](#basic), moeten de gebruikers een gebruikersbenaming en een wachtwoord in de de authentificatiepagina van het Experience Platform UI direct verstrekken.
 * Voor bestemmingen die [waarmerking](#bearer), moeten gebruikers een token aan toonder leveren.
-* Voor bestemmingen die [OAuth2-verificatie](#oauth2), worden de gebruikers opnieuw gericht aan de login van uw bestemming pagina waar zij login met hun geloofsbrieven kunnen.
+* Voor bestemmingen die [OAuth2-vergunning](#oauth2), worden de gebruikers opnieuw gericht aan de login van uw bestemming pagina waar zij login met hun geloofsbrieven kunnen.
 * Voor [Amazon S3](#s3) doelen, gebruikers moeten hun [!DNL Amazon S3] toegangssleutel en geheime sleutel.
 * Voor [Azure Blob](#blob) doelen, gebruikers moeten hun [!DNL Azure Blob] verbindingsreeks.
 
@@ -233,7 +233,7 @@ Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben hoe u geb
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
-* [OAuth2-verificatie](oauth2-authorization.md)
+* [OAuth2-vergunning](oauth2-authorization.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
