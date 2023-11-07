@@ -2,7 +2,7 @@
 description: Leer hoe te opstelling een samenvoegingsbeleid om te bepalen hoe de verzoeken van HTTP aan uw bestemming zouden moeten worden gegroepeerd en worden gegroepeerd.
 title: Samenvoegingsbeleid
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 1%
@@ -127,7 +127,7 @@ Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben hoe u sam
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
 * [Configuratie van klantverificatie](customer-authentication.md)
-* [OAuth2-verificatie](oauth2-authentication.md)
+* [OAuth2-verificatie](oauth2-authorization.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)

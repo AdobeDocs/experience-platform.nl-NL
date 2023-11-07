@@ -2,7 +2,7 @@
 description: Leer hoe te opstelling een authentificatiemechanisme voor uw bestemming en krijgt inzicht in wat de gebruikers in UI afhankelijk van de authentificatiemethode zullen zien u selecteert.
 title: Configuratie van klantverificatie
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Aan opstellingstradientypeauthentificatie voor uw bestemming, vorm `customerAuth
 
 ## OAuth 2-verificatie {#oauth2}
 
-Gebruikers selecteren **[!UICONTROL Connect to destination]** om OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de bestemming van het publiek van de Twitter van de Douane teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees specifiek [Destination SDK OAuth 2-verificatiepagina](oauth2-authentication.md).
+Gebruikers selecteren **[!UICONTROL Connect to destination]** om OAuth 2 authentificatiestroom aan uw bestemming, zoals aangetoond in het voorbeeld hieronder voor de bestemming van het publiek van de Twitter van de Douane teweeg te brengen. Voor gedetailleerde informatie bij het vormen van OAuth 2 authentificatie aan uw bestemmingshindpunt, lees specifiek [Destination SDK OAuth 2-verificatiepagina](oauth2-authorization.md).
 
 ![UI-weergave met OAuth 2-verificatie](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -233,7 +233,7 @@ Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben hoe u geb
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
-* [OAuth2-verificatie](oauth2-authentication.md)
+* [OAuth2-verificatie](oauth2-authorization.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)

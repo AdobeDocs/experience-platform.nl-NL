@@ -4,7 +4,7 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 2%
@@ -214,7 +214,7 @@ ht-degree: 2%
          * [Configuratie bestandsindeling](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Componenten voor doelconfiguratie {#destination-configuration}
          * [Configuratie van klantverificatie](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-         * [OAuth2-verificatie](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [OAuth2-vergunning](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Gegevensvelden van de klant](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
          * [UI-kenmerken](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
          * [Configuratie partnerschema](./destination-sdk/functionality/destination-configuration/schema-configuration.md)

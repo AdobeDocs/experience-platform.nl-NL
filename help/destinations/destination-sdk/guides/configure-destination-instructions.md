@@ -2,7 +2,7 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een het stromen bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 0%
@@ -265,7 +265,7 @@ Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bes
 
 Afhankelijk van of u opgeeft `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"authenticationRule": "PLATFORM_AUTHENTICATION"` in de bestemmingsconfiguratie hierboven, kunt u opstellingsauthentificatie voor uw bestemming door `/destination` of de `/credentials` eindpunt.
 
-Als u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in de bestemmingsconfiguratie en uw bestemming steunt de OAuth 2 authentificatiemethode, gelezen [OAuth 2-verificatie](../functionality/destination-configuration/oauth2-authentication.md).
+Als u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in de bestemmingsconfiguratie en uw bestemming steunt de OAuth 2 authentificatiemethode, gelezen [OAuth 2-verificatie](../functionality/destination-configuration/oauth2-authorization.md).
 
 Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"`moet u een [aanmeldingsconfiguratie](../credentials-api/create-credential-configuration.md).
 

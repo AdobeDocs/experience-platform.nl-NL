@@ -2,7 +2,7 @@
 description: Leer hoe te om de gesteunde doelidentiteiten voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie naamruimte voor identiteit
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 1%
@@ -145,7 +145,7 @@ Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben hoe te om
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
 * [Verificatie door klant](customer-authentication.md)
-* [OAuth2-verificatie](oauth2-authentication.md)
+* [OAuth2-verificatie](oauth2-authorization.md)
 * [Gegevensvelden van de klant](customer-data-fields.md)
 * [UI-kenmerken](ui-attributes.md)
 * [Schema-configuratie](schema-configuration.md)
