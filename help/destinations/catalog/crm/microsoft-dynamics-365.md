@@ -4,9 +4,9 @@ title: Microsoft Dynamics 365-verbinding
 description: Met de bestemming Microsoft Dynamics 365 kunt u uw accountgegevens exporteren en activeren in Microsoft Dynamics 365 voor uw zakelijke behoeften.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ De [Beperkingen en toewijzingen van verzoeken](https://docs.microsoft.com/en-us/
 
 | Doelidentiteit | Voorbeeld | Beschrijving | Overwegingen |
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unieke id voor een contactpersoon. | **Verplicht**. Zie de [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) voor nadere bijzonderheden. |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unieke id voor een contactpersoon. | **Verplicht**. Zie de [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) voor nadere bijzonderheden. |
 
 {style="table-layout:auto"}
 
@@ -162,23 +162,24 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
 1. In de **[!UICONTROL Mapping]** stap, selecteren **[!UICONTROL Add new mapping]**. Er verschijnt een nieuwe toewijzingsrij op het scherm.
    ![Voorbeeld van screenshot van platforminterface voor nieuwe toewijzing toevoegen.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select identity namespace]** categorie en selecteer `contactId`.
+1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select identity namespace]** categorie en selecteer `contactid`.
    ![Voorbeeld van screenshot voor platform-UI voor brontoewijzing.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. In de **[!UICONTROL Select target field]** selecteert u het type doelveld waaraan u het bronveld wilt toewijzen.
    * **[!UICONTROL Select identity namespace]**: selecteer deze optie om het bronveld toe te wijzen aan een naamruimte in de lijst.
-     ![Het schermschot van het platform UI die van het Doel afbeelding voor contactId toont.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Platform UI-screenshot met doeltoewijzing voor inhoud.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * Voeg de volgende afbeelding toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie: |XDM-profielschema|[!DNL Dynamics 365] Instantie| Verplicht| |—|—|—| |`contactId`|`contactId`| Ja |
+   * Voeg de volgende afbeelding toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie: |XDM-profielschema|[!DNL Dynamics 365] Instantie| Verplicht| |—|—|—| |`contactid`|`contactid`| Ja |
 
    * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het dialoogvenster **[!UICONTROL Attribute name]** veld. Zie [[!DNL Dynamics 365] documentatie](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) voor een uitgebreide lijst met ondersteunde kenmerken.
-     ![Platform UI screenshot die Target mapping voor LastName toont.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![Platform UI-screenshot met doeltoewijzing voor e-mail.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     >Als u een datum- of tijdstempelbronveld hebt dat is toegewezen aan een [!DNL Dynamics 365] [datum of tijdstempel](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) doelveld, controleer of de toegewezen waarde niet leeg is. Als de opgegeven waarde leeg is, wordt een *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* foutbericht en de gegevens worden niet bijgewerkt. Dit is een [!DNL Dynamics 365] beperking.
+     > * Doelveldnamen moeten aanwezig zijn `lowercase`.
+     > * Als u een datum- of tijdstempelbronveld hebt dat is toegewezen aan een [!DNL Dynamics 365] [datum of tijdstempel](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) doelveld, controleer of de toegewezen waarde niet leeg is. Als de geëxporteerde veldwaarde leeg is, treedt er een *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* foutbericht en de gegevens worden niet bijgewerkt. Dit is een [!DNL Dynamics 365] beperking.
 
-   * Afhankelijk van de waarden die u wilt bijwerken, voegt u bijvoorbeeld de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie: |XDM-profielschema|[!DNL Dynamics 365] Instance| |—|—| |`person.name.firstName`|`FirstName`| |`person.name.lastName`|`LastName`| |`personalEmail.address`|`Email`|
+   * Afhankelijk van de waarden die u wilt bijwerken, voegt u bijvoorbeeld de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie: |XDM-profielschema|[!DNL Dynamics 365] Instance| |—|—| |`person.name.firstName`|`firstname`| |`person.name.lastName`|`lastname`| |`personalEmail.address`|`emailaddress1`|
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
      ![Voorbeeld van schermopname van platformgebruikersinterface met doeltoewijzingen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -243,6 +244,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
+| Oktober 2023 | Documentatie bijwerken | Bijgewerkte richtlijnen voor het aangeven van alle namen van doelkenmerken moeten in kleine letters worden weergegeven, in het gedeelte [Afbeeldingsoverwegingen en voorbeeld](#mapping-considerations-example) stap. |
 | Augustus 2023 | Bijwerken van functionaliteit en documentatie | Extra ondersteuning voor [!DNL Dynamics 365] aangepaste veldvoorvoegsels voor aangepaste velden die niet zijn gemaakt binnen de standaardoplossing in [!DNL Dynamics 365]. Een nieuw invoerveld, **[!UICONTROL Customization Prefix]**, is toegevoegd aan de [Doelgegevens invullen](#destination-details) stap. (PLATIR-31602). |
 | nov. 2022 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
 
