@@ -4,9 +4,9 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
-source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
+source-git-commit: 98171126ea09ec9e81daeeb9122da8a44ab8c16b
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '325'
 ht-degree: 18%
 
 ---
@@ -73,11 +73,12 @@ ht-degree: 18%
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)
 * Gebruiksscenario’s {#use-cases}
-   * Intelligente gevallen van herbetrokkenheid {#intelligent-re-engagement}
+   * Aanpassings-, inzichten- en betrokkenheidskwesties {#personalization-insights-engagement}
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Klantenovername {#customer-acquisition}
       * [Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden](/help/rtcdp/partner-data/prospecting.md)
       * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/offsite-retargeting.md)
    * Profielverrijking {#profile-enrichment}
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
