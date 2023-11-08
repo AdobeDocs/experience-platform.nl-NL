@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Sandboxes in Adobe Experience Platform Help
 breadcrumb-title: Gids voor Sandboxes
-user-guide-description: Partitioneer een Platform-instantie in virtuele omgevingen voor ontwikkelen, testen en implementeren van toepassingen.
+user-guide-description: Kom te weten hoe zandbakken werken en een instantie van het Platform in virtuele milieu's voor ontwikkeling, het testen, en toepassingsplaatsing verdelen.
 feature: Sandboxes
-source-git-commit: b5ba5afaa06d27230a211efff25f7f0222fcc23a
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 42%
+source-wordcount: '77'
+ht-degree: 22%
 
 ---
 

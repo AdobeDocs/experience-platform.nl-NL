@@ -3,10 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen;gegevenslocatie;Gegeven
 solution: Experience Platform
 title: Overzicht van gegevenssets
 description: Dit document biedt een overzicht op hoog niveau van gegevenssets in Experience Platform.
+user-guide-description: Krijg een overzicht op hoog niveau van datasets in Experience Platform met deze gids. Leer hoe te om hen tot stand te brengen, beperkingen op gegevens af te dwingen en gegevens in datasets hier in te voeren.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
