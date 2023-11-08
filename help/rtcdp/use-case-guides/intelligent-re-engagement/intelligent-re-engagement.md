@@ -2,7 +2,7 @@
 title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
+source-git-commit: df82431f87f725a12cbc5b8f88fff6d4cc065450
 workflow-type: tm+mt
 source-wordcount: '3569'
 ht-degree: 2%
@@ -150,6 +150,8 @@ Het schema voor digitale transacties van de klant wordt vertegenwoordigd door ee
 
 +++XDM ExperienceEvent (Class)
 
+De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
+
 | Velden | Vereiste | Beschrijving |
 | --- | --- | --- |
 | `_id` | Vereist | Identificeert uniek individuele gebeurtenissen die in worden opgenomen [!DNL Adobe Experience Platform]. |
@@ -157,8 +159,6 @@ Het schema voor digitale transacties van de klant wordt vertegenwoordigd door ee
 | `eventType` | Vereist | Een tekenreeks die het type categorie voor de gebeurtenis aangeeft. |
 
 +++
-
-De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
 
 +++Details eindgebruiker-id (veldgroep)
 
@@ -189,6 +189,8 @@ Het schema voor offline transacties van de klant wordt vertegenwoordigd door een
 
 +++XDM ExperienceEvent (Class)
 
+De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
+
 | Velden | Vereiste | Beschrijving |
 | --- | --- | --- |
 | `_id` | Vereist | Identificeert uniek individuele gebeurtenissen die in worden opgenomen [!DNL Adobe Experience Platform]. |
@@ -196,8 +198,6 @@ Het schema voor offline transacties van de klant wordt vertegenwoordigd door een
 | `eventType` | Vereist | Een tekenreeks die het type categorie voor de gebeurtenis aangeeft. |
 
 +++
-
-De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
 
 +++Details van de Handel (de Groep van het Gebied)
 
@@ -247,6 +247,8 @@ De [!DNL Adobe] het schema van de Webschakelaar wordt vertegenwoordigd door een 
 
 +++XDM ExperienceEvent (Class)
 
+De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
+
 | Velden | Vereiste | Beschrijving |
 | --- | --- | --- |
 | `_id` | Vereist | Identificeert uniek individuele gebeurtenissen die in worden opgenomen [!DNL Adobe Experience Platform]. |
@@ -254,8 +256,6 @@ De [!DNL Adobe] het schema van de Webschakelaar wordt vertegenwoordigd door een 
 | `eventType` | Vereist | Een tekenreeks die het type categorie voor de gebeurtenis aangeeft. |
 
 +++
-
-De [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) klasse bevat de volgende veldgroepen:
 
 +++Adobe Analytics ExperienceEvent-sjabloon (veldgroep)
 

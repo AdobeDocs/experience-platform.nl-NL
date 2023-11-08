@@ -4,9 +4,9 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
-source-git-commit: 98171126ea09ec9e81daeeb9122da8a44ab8c16b
+source-git-commit: c76a6267230599dfab905524e613f9721b928211
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '323'
 ht-degree: 18%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 18%
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)
 * Gebruiksscenario’s {#use-cases}
-   * Aanpassings-, inzichten- en betrokkenheidskwesties {#personalization-insights-engagement}
+   * Personalisatie, inzichten en betrokkenheid {#personalization-insights-engagement}
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Klantenovername {#customer-acquisition}
       * [Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden](/help/rtcdp/partner-data/prospecting.md)
