@@ -2,9 +2,9 @@
 title: Vraag versnelde handleiding voor het rapporteren van inzichten in winkels
 description: Leer hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -19,15 +19,11 @@ Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in p
 
 ## Vereisten
 
-In deze zelfstudie worden door de gebruiker gedefinieerde dashboards gebruikt om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het Platform te visualiseren. Zie de [door de gebruiker gedefinieerde dashboarddocumentatie](../../../dashboards/user-defined-dashboards.md) voor meer informatie over deze functie.
+Deze zelfstudie gebruikt door de gebruiker gedefinieerde dashboards om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het platform te visualiseren. Zie de [door de gebruiker gedefinieerde dashboarddocumentatie](../../../dashboards/user-defined-dashboards.md) voor meer informatie over deze functie.
 
 ## Aan de slag
 
-Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de de gegevensmodellen van Real-Time CDP uit te breiden die verrijkte Platform gegevens houden. Zie de [verpakking](../../packages.md) en [guardrails](../../guardrails.md#query-accelerated-store) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens Distiller SKU hebt, kunt u voor meer informatie contact opnemen met een medewerker van de klantenservice van de Adobe.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de de gegevensmodellen van Real-Time CDP uit te breiden die de verrijkte gegevens van het Platform houden. Zie de [verpakking](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store), en  [licenties](../../data-distiller/license-usage.md) documentatie die betrekking heeft op de gegevens Distiller SKU. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
 
 ## Een gegevensmodel voor het rapporteren van inzichten maken
 
@@ -37,11 +33,11 @@ Aan het begin hebt u een eerste gegevensmodel uit uw bronnen (mogelijk via de AP
 
 ![Een entiteitrelationeel diagram (ERD) van het gebruikersmodel voor inzicht van het publiek.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-In dit voorbeeld wordt `externalaudiencereach` table/dataset is gebaseerd op identiteitskaart en volgt de lagere en hogere grenzen voor gelijke telling. De `externalaudiencemapping` De afmetingstabel/dataset brengt externe identiteitskaart aan een bestemming en een publiek op Platform in kaart.
+In dit voorbeeld wordt `externalaudiencereach` table/dataset is gebaseerd op identiteitskaart en volgt de lagere en hogere grenzen voor gelijke telling. De `externalaudiencemapping` De metinglijst/dataset brengt externe identiteitskaart aan een bestemming en een publiek op Platform in kaart.
 
 ## Een model maken voor het rapporteren van inzichten met Data Distiller
 
-Maak vervolgens een rapportagemodel (`audienceinsight` in dit voorbeeld) en gebruik de SQL-opdracht `ACCOUNT=acp_query_batch and TYPE=QSACCEL` om ervoor te zorgen dat deze wordt gemaakt in de versnelde opslag. Dan gebruik de Dienst van de Vraag om een `audienceinsight.audiencemodel` schema voor het `audienceinsight` database.
+Maak vervolgens een rapportagemodel (`audienceinsight` in dit voorbeeld) en gebruik de SQL-opdracht `ACCOUNT=acp_query_batch and TYPE=QSACCEL` om ervoor te zorgen dat deze wordt gemaakt in de versnelde opslag. Dan gebruik de Dienst van de Vraag om tot een `audienceinsight.audiencemodel` schema voor het `audienceinsight` database.
 
 >[!NOTE]
 >
@@ -55,7 +51,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## Tabellen, relaties en gegevens vullen
 
-Nu hebt u uw `audienceinsight` rapportagemodel, het `externalaudiencereach` en `externalaudiencemapping` tabellen en leggen onderlinge relaties vast. Gebruik vervolgens de `ALTER TABLE` gebruiken om een beperking voor vreemde sleutels tussen de tabellen toe te voegen en een relatie te definiëren. In het volgende SQL-voorbeeld wordt getoond hoe u dit doet.
+Nu hebt u uw `audienceinsight` rapportagemodel, het `externalaudiencereach` en `externalaudiencemapping` tabellen en leggen onderlinge relaties tot stand. Gebruik vervolgens de `ALTER TABLE` gebruiken om een beperking voor vreemde sleutels tussen de tabellen toe te voegen en een relatie te definiëren. In het volgende SQL-voorbeeld wordt getoond hoe u dit doet.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -88,7 +84,7 @@ Wanneer de instructies zijn uitgevoerd, gebruikt u de opdracht `SHOW datagroups;
 
 >[!IMPORTANT]
 >
->Slechts zijn de gegevens in de versnelde opslag toegankelijk van het stateless API eindpunt van de Dienst van de Vraag `POST /data/foundation/query/accelerated-queries`.
+>Alleen gegevens in de versnelde opslag zijn toegankelijk vanuit het stateless API-eindpunt van de Query Service `POST /data/foundation/query/accelerated-queries`.
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
