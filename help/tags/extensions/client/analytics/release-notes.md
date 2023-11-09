@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1416'
 ht-degree: 5%
 
 ---
@@ -17,13 +17,22 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 >
 >De extensie van de tag Analytics indien vaak bijgewerkt als reactie op updates van de [JavaScript-bibliotheek AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Zie de [Opmerkingen bij de release AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) voor meer informatie over de hieronder vermelde specifieke versies.
 
+## 15 september 2023
+
+**Adobe Analytics Extension 1.9.3**
+
+**Functies**:
+
+* Bijgewerkt naar [AppMeasurement naar v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 19 juli 2023
 
 **Adobe Analytics Extension 1.9.2**
 
 **Functies**:
 
-* Bijgewerkt naar AppMeasurement v2.24.0.
+* Bijgewerkt naar [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Een optionele configuratie toegevoegd (`decodeLinkParameters` default `false`) die URL&#39;s met dubbele byte gecodeerde tekens decodeert.
 
 **Bugfixes**:
