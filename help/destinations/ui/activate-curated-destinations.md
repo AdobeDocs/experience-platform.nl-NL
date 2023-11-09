@@ -2,9 +2,9 @@
 title: Het publiek activeren op gekrulde doelen op basis van LiveRamp-id's
 type: Tutorial
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar verbonden tv- en audiodoelen en andere integraties met de LiveRamp RampID.
-source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
+source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,12 @@ Nadat u uw publiek hebt geëxporteerd, activeert u deze via het dialoogvenster [
 >[!TIP]
 >
 >Met dit proces kunt u uw publiek activeren naar doelen als [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)en meer, rechtstreeks vanuit de gebruikersinterface van Real-Time CDP, zonder dat u zich hoeft aan te melden bij [!DNL LiveRamp] account voor activering.
+
+### Videotutorial {#video}
+
+Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die in deze pagina wordt beschreven.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Stap 1: verzend uw publiek van Experience Platform naar LiveRamp, door [!DNL LiveRamp - Onboarding] doel {#onboarding}
 
