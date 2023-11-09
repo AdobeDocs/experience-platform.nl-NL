@@ -2,45 +2,32 @@
 title: Gebruik van batch-query's controleren
 description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van de Data Distiller-licentie van uw organisatie.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-hide: true
-hidefromtoc: true
 recommendations: noCatalog, display
-source-git-commit: fa573dcf03eb711e946afe40d107871f5166ff58
+source-git-commit: e55cada0975d771f225e829aeeeeeeb64b9acf4a
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
-# (Alpha) Gebruik van batch-querylicenties controleren {#monitor-license-usage}
+# Gebruik van batch-query&#39;s controleren {#monitor-license-usage}
 
->[!IMPORTANT]
+Het licentiegebruiksdashboard biedt gedetailleerde rapporten over het gebruik van de Query Service-licentie en gebruiksmaatstaven van uw organisatie voor elk aangeschaft product. Ga voor meer informatie over de beschikbare metriek in het dashboard naar de [Handleiding voor het gebruiksdashboard voor licenties](../../dashboards/guides/license-usage.md#available-metrics).
+
+Het dashboard biedt gebruiksmaatstaven voor elk aangeschaft product, het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruiksmaatstaven van een specifieke sandbox. De hier weergegeven informatie wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
+
+>[!NOTE]
 >
->De capaciteit om het gebruik van de partijvraagvergunning door UI te controleren is nog niet beschikbaar aan alle gebruikers. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
-
-De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het de vergunningsgebruik van de Dienst van de Vraag van uw organisatie kunt bekijken.
-
-Ga voor gedetailleerde instructies over het openen van het dashboard voor het licentiegebruik in de gebruikersinterface en voor meer informatie over de beschikbare metriek in het dashboard naar de [Handleiding voor het gebruiksdashboard voor licenties](../../dashboards/guides/license-usage.md).
-
-Lees de [overzicht van dashboards](../../dashboards/home.md) voor een overzicht van alle dashboardfuncties in Experience Platform.
-
-## Widgets {#widgets}
-
-Het licentiegebruikdashboard bestaat uit widgets, die alleen-lezen cijfers weergeven die belangrijke informatie geven over het gebruik van de licentie van uw organisatie. De zichtbare metriek hangt van de specifieke vergunning van uw organisatie af.
-
-Selecteer een keuzerondje om een sandbox voor analyse te kiezen en gebruik het vervolgkeuzemenu om een tijdsperiode voor de analyse te selecteren. De beschikbare opties zijn een periode van 30 dagen, 90 dagen, 12 maanden, het laatste jaar, de volledige contractperiode of een aangepaste datum.
+>Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers moeten de machtiging &#39;Dashboard voor licentiegebruik weergeven&#39; hebben om het dashboard te kunnen weergeven. Raadpleeg voor meer informatie over het verlenen van toegangsmachtigingen voor het weergeven van het dashboard voor het gebruik van licenties de [Handleiding voor dashboardmachtigingen](../../dashboards/permissions.md).
 
 ## Rekenuren {#compute-hours}
 
-De [!UICONTROL Compute hours] widget gebruikt een lijngrafiek om de tijd van de de partijvraag van uw organisatie elke dag visualiseren. De widget geeft drie metriek weer die door een getal linksboven in de widget wordt aangegeven. Deze zijn
+De [!UICONTROL Compute hours] Metrisch is slechts van toepassing op klanten met de vergunning van Gegevens Distiller voor partijvragen. [!UICONTROL Compute hours] zijn de maatregel van tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd.
 
-- [!UICONTROL Actual]: Het totale aantal computeruren voor de tijdsperiode die is gekozen in de overzichtsvervolgkeuzelijst. Deze metrische waarde wordt ook op de grafiek aangegeven door een dichte lijn.
-- [!UICONTROL Licensed]: Het totale aantal computeruren dat is toegestaan door de licentieovereenkomst van uw organisatie. Deze metrische waarde wordt ook op de grafiek aangegeven door een stippellijn.
-- [!UICONTROL Usage]: Dit is het percentage van uw gebruik in verhouding tot de maximale computeruren die door uw licentie zijn overeengekomen.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->De [!UICONTROL Compute hours] widget is alleen van toepassing op klanten met de Data Distiller-licentie voor batchquery&#39;s.
+>**De gegevens zijn beschikbaar met beperkingen**: De gegevens beginnen vanaf 1 oktober 2023 zonder trends.<br>De **backfill** van gegevens vanaf de begindatum van uw contract is een werk in uitvoering. Naar verwachting zal dit tegen het einde van het kalenderjaar beschikbaar zijn.
 
-![Het licentieverbruiksdashboard met de widget computeruren gemarkeerd.](../images/data-distiller/compute-hours.png)
+![Het dashboard voor licentiegebruik met de metrische aanduiding voor computeruren.](../images/data-distiller/compute-hours.png)
 
+Raadpleeg voor meer informatie over de gegevens die beschikbaar zijn voor uw organisatie op basis van de aangeschafte licentie van uw organisatie de [Handleiding voor het gebruiksdashboard voor licenties](../../dashboards/guides/license-usage.md).
