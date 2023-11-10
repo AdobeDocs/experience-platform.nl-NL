@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;productprofiel;machtigingen beheren
 solution: Experience Platform
 title: Rechten voor een productprofiel beheren
-description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor het beheren van machtigingen voor een productprofiel voor Platform.
+description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende platformmogelijkheden beheren met behulp van de Adobe Admin Console. Dit document dient als richtlijn voor het beheren van machtigingen voor een productprofiel voor Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Onmiddellijk na [een nieuw productprofiel maken](#create-a-new-product-profile),
 
 ![machtigingen](../images/permissions.png)
 
-Machtigingen worden verdeeld in categorieën en vermeld op deze pagina. De lijst bevat de categorienaam, het aantal machtigingen dat erin staat (en het aantal dat actief is) en de beschrijving ervan.
+Machtigingen worden verdeeld in categorieën en vermeld op deze pagina. De lijst bevat de categorienaam, het aantal machtigingen dat erin staat (en het aantal dat actief is) en de beschrijving ervan. Zie de tabel in [Bronmachtigingen](/help/access-control/home.md#permissions) voor een verdeling van de toestemmingen beschikbaar voor elke rol.
 
 Selecteer een categorie in de lijst om het dialoogvenster **[!UICONTROL Edit Permissions]** pagina.
 
@@ -39,7 +39,7 @@ Als u een machtiging wilt toevoegen, selecteert u de plusknop **(+)** naast de n
 
 Als u een machtiging wilt verwijderen, selecteert u de optie **X** pictogram naast de naam van de bevoegdheid, of selecteer **[!UICONTROL Remove all]** om alle machtigingen onder de huidige categorie te verwijderen. Verwijderde machtigingen worden opnieuw weergegeven onder **[!UICONTROL Available Permission Items]**.
 
-Doorgaan met de beschikbare categorieën en de gewenste machtigingen toevoegen. Als u klaar bent, selecteert u **[!UICONTROL Save]**.
+Doorgaan met de beschikbare categorieën en de gewenste machtigingen toevoegen. Selecteer **[!UICONTROL Save]**.
 
 ![remove-permisson](../images/remove-permission.png)
 
