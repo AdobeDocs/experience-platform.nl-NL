@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1699'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,12 @@ Begrijp van de lijst hieronder welke datasettypes u afhankelijk van uw toepassin
   </tr>
 </tbody>
 </table>
+
+## Videotutorial {#video-tutorial}
+
+Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die op deze pagina wordt beschreven, de voordelen van het gebruik van de functie voor het exporteren van gegevenssets en enkele gebruiksscenario&#39;s.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Ondersteunde doelen {#supported-destinations}
 
