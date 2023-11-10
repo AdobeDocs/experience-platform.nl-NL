@@ -3,9 +3,9 @@ title: Experience Cloud-doelgroepen
 description: Leer hoe u publiek kunt delen van Real-time Customer Data Platform naar verschillende Experience Cloud-apps.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1748'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,9 @@ ht-degree: 1%
 >
 > Deze bestemming is beschikbaar voor [Adobe Real-time Customer Data Platform Prime en Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
-Gebruik deze bestemming om publiek van Real-Time CDP aan Audience Manager en Adobe Analytics te activeren. U hebt een licentie voor Audience Managers nodig om een publiek naar Adobe Analytics te sturen.
+Gebruik deze bestemming om publiek van Real-Time CDP aan Audience Manager en Adobe Analytics te activeren.
+
+Als u een publiek naar Adobe Analytics wilt sturen, hebt u een licentie voor Audience Managers nodig. Zie voor meer informatie de [Overzicht van Audience Analytics](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 Als u het publiek naar andere oplossingen voor Adobe wilt sturen, gebruikt u de directe verbindingen van Real-Time CDP naar [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) en [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -43,56 +45,62 @@ In Audience Manager kunt u Real-Time CDP-publiek gebruiken voor het gebruik van 
 
 ### Kortere controle van het geëxporteerde publiek {#segments-control}
 
-Gebruik de nieuwe zelfbedieningspersoneel die integratie via de bestemming van het Soorten publiek van het Experience Cloud deelt om te selecteren welk publiek naar Audience Manager en verder moet uitvoeren. Op deze manier kunt u bepalen welk publiek u wilt delen met andere oplossingen voor Experiencen Cloud en welk publiek u uitsluitend in Real-Time CDP wilt houden.
+Om te selecteren welk publiek aan Audience Manager en verder te exporteren, gebruik de nieuwe zelfbedieningspersoneel delend integratie via de bestemming van het Publiek van de Experience Cloud.  Op deze manier kunt u bepalen welk publiek u wilt delen met andere oplossingen voor Experiencen Cloud en welk publiek u uitsluitend in Real-Time CDP wilt houden.
 
 Dankzij de integratie van het oude publiek voor het delen van het publiek kon er geen korrelige controle worden verkregen over het publiek dat naar de Audience Manager en daarbuiten zou moeten worden geëxporteerd.
 
-### Real-Time CDP-publiek delen met verdere oplossingen voor Experience Cloud {#share-segments-with-other-solutions}
+### Real-Time CDP-publiek delen met Adobe Analytics {#share-audiences-with-analytics}
 
-Naast het delen van publiek met Audience Manager, laat de de bestemmingskaart van het Soorten publiek van Real-Time CDP u toe om publiek met een andere oplossing van het Experience Cloud te delen die u wordt voorzien, met inbegrip van:
+De soorten publiek die u naar de bestemming van het publiek van de Experience Cloud verzendt verschijnen niet automatisch in Adobe Analytics.
 
-* Adobe Campaign
-* Adobe Target
-* Advertising Cloud
-* Analytics
-* Marketo
+Voordat je een publiek naar Adobe Analytics kunt sturen, moet je [de dienst van de Identiteit van het Experience Cloud voor Analytics en Audience Manager uitvoeren](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
 
-<!--
+>[!IMPORTANT]
+>
+>Als u het publiek van Real-Time CDP naar Adobe Analytics wilt sturen via de bestemming Experience Cloud publiek, moet u een licentie voor Audience Managers hebben.
 
-Note: briefly talk about when to share audiences to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
+### Real-Time CDP-publiek delen met andere oplossingen voor Experiencen Cloud {#share-segments-with-other-solutions}
 
--->
+U kunt de doelkaart van het publiek van Real-Time CDP gebruiken om publiek met andere oplossingen van het Experience Cloud te delen.
+
+Nochtans, adviseert de Adobe sterk het gebruiken van de volgende specifieke bestemmingskaarten als u publiek met deze oplossingen wilt delen:
+
+* [Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Adobe Target](../personalization/adobe-target-connection.md)
+* [Advertising Cloud](../advertising/adobe-advertising-cloud-connection.md)
+* [Marketo](../adobe/marketo-engage.md)
 
 ## Vereisten {#prerequisites}
 
 >[!IMPORTANT]
 >
 > * U hebt een licentie voor Audience Managers nodig om de [Gebruiksscenario&#39;s van het platform voor gegevensbeheer](#dmp-use-cases) genoemd.
+> * U *do* hebben een licentie voor Audience Managers nodig om Real-Time CDP-publiek met Adobe Analytics te delen.
 > * U *niet nodig* een Audience Manager-licentie om Real-Time CDP-publiek te delen met Adobe Advertising Cloud, Adobe Target, Marketo en andere oplossingen voor Experiencen Cloud die in het [sectie hierboven](#share-segments-with-other-solutions).
 
 ### Voor klanten die de oplossing voor het delen van het verouderde publiek gebruiken
 
 Als u al publiek deelt van Real-Time CDP naar Audience Manager en andere oplossingen voor Experiencen Cloud via de [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice om de oudere integratie uit te schakelen.
 
-De doorlooptijd om het uitstelticket op te lossen is zes werkdagen of minder. Nadat de bestaande oudere integratie is uitgeschakeld, kunt u doorgaan naar [verbinding maken](#connect) via de zelfbedieningsdoelkaart.
+De doorlooptijd om het uitstelticket op te lossen is zes werkdagen of minder. Nadat de bestaande oudere integratie is uitgeschakeld, kunt u doorgaan naar [een verbinding maken](#connect) via de zelfbedieningsdoelkaart.
 
 >[!IMPORTANT]
 >
->Het publiek dat van Real-Time CDP naar uw andere oplossingen wordt uitgevoerd zal worden tegengehouden in de tijd tussen de ticketresolutie en de tijd een nieuwe verbinding door de bestemmingskaart wordt gevestigd. U kunt deze onderbreking minimaliseren door de verbinding via de bestemmingskaart te creëren zodra het kaartje wordt gesloten.
+>Het publiek dat van Real-Time CDP naar uw andere oplossingen wordt uitgevoerd wordt tegengehouden in de tijd tussen de ticketresolutie en de tijd dat een nieuwe verbinding door de bestemmingskaart wordt gevestigd. U kunt deze onderbreking minimaliseren door de verbinding via de bestemmingskaart te creëren nadat het kaartje wordt gesloten.
 
 ## Bekende beperkingen en bijschriften {#known-limitations}
 
 Merk op de volgende bekende beperkingen en belangrijke callouts terwijl het gebruiken van de kaart van het publiek van het Experience Cloud:
 
-* Momenteel, wordt één enkele bestemming van het publiek van het Experience Cloud gesteund. Het proberen om een tweede bestemmingsverbinding te vormen zal in een fout resulteren.
+* Momenteel, wordt één enkele bestemming van het publiek van het Experience Cloud gesteund. Als u probeert een tweede doelverbinding te configureren, treedt er een fout op.
 * Wanneer u verbinding maakt met het doel, kunt u een optie weergeven op [gegevensstroomwaarschuwingen inschakelen](../../ui/alerts.md). Hoewel het zichtbaar is in de UI, **optie voor inschakelen van waarschuwingen wordt momenteel niet ondersteund**.
-* **Ondersteuning voor backfill voor het publiek**: De eerste export naar Audience Manager of andere oplossingen voor Experiencen Cloud omvat een historische bevolkingsgroep van het publiek. Gebruikers van de [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) die deze bestemming vormen zou een backfill verschil van ongeveer 6 uren moeten verwachten.
+* **Ondersteuning voor backfill voor het publiek**: De eerste export naar Audience Manager of andere oplossingen voor Experiencen Cloud omvat een historische bevolkingsgroep van het publiek. Gebruikers van de [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) die deze bestemming vormen zou een backfill verschil van ongeveer zes uur moeten verwachten.
 
 ### Latentie bij activering van publiek {#audience-activation-latency}
 
-Er is een vertraging van vier uur tussen de tijd dat het publiek voor het eerst in Real-Time CDP wordt geactiveerd en de tijd dat het publiek klaar is om te worden gebruikt in Audience Manager en andere oplossingen voor Experiencen Cloud voor bepaalde gebruiksgevallen.
+Er is een vertraging van vier uur tussen de tijd dat het publiek voor het eerst in Real-Time CDP wordt geactiveerd en de tijd dat het publiek klaar is om te worden gebruikt in Audience Manager en andere oplossingen voor Experiencen Cloud.
 
-Het kan tot 24 uur duren voordat het publiek volledig beschikbaar is in de Audience Manager voor alle gebruiksgevallen en tot 48 uur voordat het publiek uit het Experience Cloud publiek in de rapporten over de Audience Manager verschijnt.
+Het kan tot 24 uur duren voordat het publiek volledig beschikbaar is in de Audience Manager voor alle gebruiksgevallen. Het kan tot 48 uur duren voordat het publiek van het Experience Cloud publiek in de rapporten van de Audience Manager verschijnt.
 
 Metagegevens, zoals publieksnamen, zijn beschikbaar in Audience Manager binnen minuten na het instellen van de exportbewerking naar het doelpubliek van het Experience Cloud.
 
@@ -127,7 +135,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek die zijn afgesneden van de identiteiten die in de bovenstaande sectie worden vermeld. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Real-Time CDP wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Real-Time CDP wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Meer informatie over [streaming doelen](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -160,7 +168,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming. Let op: [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is vereist en [planstap](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is beschikbaar voor deze bestemming.
+Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming. Nee [toewijzingsstap](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is vereist en [planstap](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is beschikbaar voor deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
@@ -170,7 +178,7 @@ Om succesvolle gegevensuitvoer te bevestigen, kunt u controleren dat uw publiek 
 
 Uw Real-Time CDP-publiek wordt in de Audience Manager weergegeven als [signalen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [kenmerken](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), en [segmenten](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). U kunt in Audience Manager verifiëren of de gegevens zijn weergegeven zoals beschreven in de bovenstaande documentatiekoppelingen.
 
-Segmentnamen worden 15 minuten nadat het publiek vanuit Real-Time CDP is verstuurd, in Audience Manager ingevuld.
+Segmentnamen beginnen in Audience Manager te vullen 15 minuten nadat het publiek vanuit Real-Time CDP is verstuurd.
 
 De segmentpopulatie begint binnen 6 uur na verzending vanuit Real-Time CDP in de Audience Manager te stromen en wordt elke 24 uur in de Audience Manager bijgewerkt.
 
@@ -181,9 +189,9 @@ Na 72 uur is de volledige populatie zichtbaar in de Audience Manager en de popul
 Alles [!DNL Real-Time CDP] de bestemmingen zijn volgzaam met het beleid van het gegevensgebruik wanneer het behandelen van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] dwingt gegevensbeheer af, lees de [Overzicht van gegevensbeheer](/help/data-governance/home.md).
 
 Het gegevensbeheer in Real-Time CDP wordt door beide partijen afgedwongen [gegevensgebruikslabels](/help/data-governance/labels/reference.md) en marketingacties.
-Labels voor gegevensgebruik worden overgedragen naar toepassingen, maar marketingacties niet. Dit betekent dat wanneer ze in Audience Manager landen, het publiek uit Real-Time CDP naar alle beschikbare bestemmingen kan worden geëxporteerd. In Audience Manager kunt u [besturingselementen voor exporteren van gegevens](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) om te voorkomen dat het publiek naar bepaalde bestemmingen wordt geëxporteerd.
+Met labels voor gegevensgebruik worden toepassingen overgedragen, maar marketingacties niet. Dit betekent dat wanneer ze in Audience Manager landen, het publiek uit Real-Time CDP naar alle beschikbare bestemmingen kan worden geëxporteerd. In Audience Manager kunt u [besturingselementen voor exporteren van gegevens](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) om te voorkomen dat het publiek naar bepaalde bestemmingen wordt geëxporteerd.
 
-Met de [!DNL HIPAA] marketingactie wordt niet verzonden van Real-Time CDP naar Audience Manager.
+Met de [!DNL HIPAA] marketingactie wordt niet vanuit Real-Time CDP naar de Audience Manager verzonden.
 
 ### Machtigingenbeheer in Audience Manager
 
@@ -191,4 +199,4 @@ Soorten publiek en sporen in de Audience Manager zijn onderworpen aan [Op rollen
 
 Uit Real-Time CDP geëxporteerde soorten publiek worden toegewezen aan een specifieke gegevensbron in de Audience Manager **[!UICONTROL Experience Platform Segments]**.
 
-Om slechts bepaalde gebruikers toegang tot het publiek toe te staan, kunt u toegangscontroles op het publiek toepassen dat tot de gegevensbron behoort. U moet nieuwe toegangsbeheertoestemmingen in Audience Manager voor deze publiek en sporen plaatsen die van de segmenten van Real-Time CDP worden gecreeerd.
+Om slechts bepaalde gebruikers toegang tot het publiek toe te staan, kunt u toegangscontroles op het publiek toepassen dat tot de gegevensbron behoort. Plaats nieuwe toegangsbeheertoestemmingen in Audience Manager voor deze publiek en sporen die van de segmenten van Real-Time CDP worden gecreeerd.
