@@ -1,11 +1,11 @@
 ---
 title: Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van cookies van derden
-description: Leer hoe u nieuwe klanten kunt aantrekken en aanschaffen via het zoeken naar gebruiksgevallen, zonder te vertrouwen op cookies van derden.
+description: Leer hoe u nieuwe klanten kunt aantrekken en aanwerven via het zoeken naar gebruiksgevallen, zonder te vertrouwen op cookies van derden.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
 source-wordcount: '2030'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
