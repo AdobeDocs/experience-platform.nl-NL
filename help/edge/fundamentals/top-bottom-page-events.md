@@ -1,9 +1,9 @@
 ---
 title: Gebeurtenissen boven en onder aan de pagina gebruiken
 description: Dit artikel verklaart hoe te om bovenkant en bodem van paginagebeurtenissen in Web SDK te gebruiken.
-source-git-commit: 5cd77f78c9617a16f6ee59a7c029dfffac7740e9
+source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -219,3 +219,6 @@ alloy("sendEvent", {
 
 >[!ENDTABS]
 
+## GitHub-voorbeeld {#github-sample}
+
+Het voorbeeld is gevonden op [dit adres](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) toont aan hoe te om Experience Platform en Web SDK te gebruiken om verpersoonlijking bij de bovenkant van de pagina te verzoeken, en analysemetriek bij de bodem te verzenden. U kunt het voorbeeld downloaden en lokaal uitvoeren om te begrijpen hoe boven- en onderaan pagina-gebeurtenissen werken.
