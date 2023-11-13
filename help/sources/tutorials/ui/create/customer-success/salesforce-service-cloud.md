@@ -42,7 +42,7 @@ Raadpleeg voor meer informatie over verificatie de [dit [!DNL Salesforce] verifi
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Salesforce] aan Experience Platform.
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar op de Experience Platform broncatalogus.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar op de Experience Platform broncatalogus.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook een specifieke bron zoeken met de zoekoptie.
 

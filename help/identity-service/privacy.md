@@ -5,7 +5,7 @@ description: Adobe Experience Platform Privacy Service verwerkt verzoeken van kl
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -18,17 +18,17 @@ In dit document worden de belangrijkste concepten besproken die betrekking hebbe
 
 >[!NOTE]
 >
->In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen voor de opslag van identiteitsgegevens in Experience Platform kunt indienen. Als u ook privacyverzoeken wilt indienen voor het Platform Data Lake of [!DNL Real-Time Customer Profile], raadpleeg de handleiding op [verwerking van privacyverzoeken in het datumpigment](../catalog/privacy.md) en de gids [verwerking van privacyverzoeken voor profiel](../profile/privacy.md) in aanvulling op deze zelfstudie.
+>In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen voor de opslag van identiteitsgegevens in Experience Platform kunt indienen. Als u ook privacyverzoeken wilt indienen voor het gegevensmeer van het Platform of [!DNL Real-Time Customer Profile], raadpleegt u de handleiding op [verwerking van privacyverzoeken in het datumpigment](../catalog/privacy.md) en aan de gids [verwerking van privacyverzoeken voor profiel](../profile/privacy.md) in aanvulling op deze zelfstudie.
 >
->Raadpleeg voor meer informatie over het indienen van privacyverzoeken voor andere Adobe Experience Cloud-toepassingen de [Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Raadpleeg voor meer informatie over het indienen van privacyverzoeken voor andere Adobe Experience Cloud-toepassingen de [Documentatie Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Aan de slag
 
-U wordt aangeraden het volgende goed te begrijpen: [!DNL Experience Platform] services vóór het lezen van deze handleiding:
+U wordt aangeraden het volgende goed te begrijpen [!DNL Experience Platform] services vóór het lezen van deze handleiding:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [[!DNL Real-Time Customer Profile]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
@@ -40,7 +40,7 @@ Voor meer informatie over naamruimten in [!DNL Experience Platform], zie de [Ove
 
 ## Verzoeken indienen {#submit}
 
-In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voor [!DNL Identity Service] met de [!DNL Privacy Service] API of UI. Voordat u deze secties leest, wordt u ten zeerste aangeraden de [Privacy Service-API](../privacy-service/api/getting-started.md) of [UI Privacy Service](../privacy-service/ui/overview.md) documentatie voor volledige stappen over hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om gebruikersgegevens in verzoek te formatteren lading.
+In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voor [!DNL Identity Service] met de [!DNL Privacy Service] API of UI. Voordat u deze secties leest, wordt u ten zeerste aangeraden de [Privacy Service-API](../privacy-service/api/getting-started.md) of [UI PRIVACY SERVICE](../privacy-service/ui/overview.md) documentatie voor volledige stappen over hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om gebruikersgegevens in verzoek te formatteren lading.
 
 ### De API gebruiken
 
@@ -48,11 +48,11 @@ Bij het maken van taakaanvragen in de API, alle id&#39;s die binnen `userIDs` mo
 
 Bovendien `include` array van de aanvraag payload moet de productwaarden voor de verschillende gegevensopslagruimten bevatten waarnaar de aanvraag wordt verzonden. Bij het indienen van verzoeken aan [!DNL Identity], moet de array de waarde bevatten `Identity`.
 
-Met het volgende verzoek wordt een nieuwe privacytaak onder de GDPR gemaakt voor de gegevens van één klant in de [!DNL Identity] opslaan. Er zijn twee identiteitswaarden voor de klant in de `userIDs` array; één met de norm `Email` naamruimte identiteit en de andere naamruimte gebruiken `ECID` namespace, omvat ook de productwaarde voor [!DNL Identity] (`Identity`) in de `include` array:
+Met het volgende verzoek wordt een nieuwe privacytaak onder de GDPR gemaakt voor de gegevens van één klant in de [!DNL Identity] opslaan. Er zijn twee identiteitswaarden voor de klant in de `userIDs` array; één met de standaard `Email` naamruimte identiteit en de andere naamruimte gebruiken `ECID` namespace, omvat ook de productwaarde voor [!DNL Identity] (`Identity`) in de `include` array:
 
 >[!TIP]
 >
->Wanneer u een aangepaste naamruimte verwijdert met de API, moet u het identiteitssymbool opgeven als de naamruimte in plaats van de weergavenaam.
+>Wanneer u een aangepaste naamruimte verwijdert met behulp van de API, moet u het identiteitssymbool opgeven als de naamruimte in plaats van de weergavenaam.
 
 ```shell
 curl -X POST \
@@ -92,7 +92,7 @@ curl -X POST \
 }'
 ```
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
 >[!TIP]
 >
@@ -104,19 +104,19 @@ Zorg ervoor dat u bij het maken van taakaanvragen in de gebruikersinterface **[!
 
 ## Verzoek om verwerking verwijderen
 
-Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL Privacy Service], [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] dat het verzoek is ontvangen en de betrokken gegevens zijn gemarkeerd voor verwijdering. De verwijdering van de individuele identiteit is gebaseerd op de opgegeven naamruimte en/of ID-waarde. Bovendien wordt de verwijdering uitgevoerd voor alle sandboxen die bij een bepaalde organisatie horen.
+Wanneer [!DNL Experience Platform] ontvangt een verwijderingsverzoek van [!DNL Privacy Service], [!DNL Platform] stuurt bevestiging naar [!DNL Privacy Service] dat het verzoek is ontvangen en de betrokken gegevens zijn gemarkeerd voor verwijdering. De verwijdering van de individuele identiteit is gebaseerd op de opgegeven naamruimte en/of ID-waarde. Bovendien worden alle sandboxen die bij een bepaalde organisatie horen, verwijderd.
 
 Afhankelijk van of u ook Real-Time Klantprofiel (`ProfileService`) en het datumpeer (`aepDataLake`) als producten in uw privacyaanvraag voor identiteitsservice (`identity`), worden verschillende gegevenssets met betrekking tot de identiteit op mogelijk verschillende tijdstippen uit het systeem verwijderd:
 
 | Producten inbegrepen | Effecten |
 | --- | --- |
-| `identity` alleen | De opgegeven identiteit wordt verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd. De gegevens die aan het profiel zijn gekoppeld, blijven ook in het datumpeer staan. |
-| `identity` en `ProfileService` | De opgegeven identiteit wordt verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. De gegevens die aan het profiel zijn gekoppeld, blijven in het datumpeer. |
-| `identity` en `aepDataLake` | De opgegeven identiteit wordt verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
-| `identity`, `ProfileService`, en `aepDataLake` | De opgegeven identiteit wordt verwijderd zodra het Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
+| `identity` alleen | De opgegeven identiteit wordt verwijderd zodra Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd. De gegevens die aan het profiel zijn gekoppeld, blijven ook in het datumpeer staan. |
+| `identity` en `ProfileService` | De opgegeven identiteit wordt verwijderd zodra Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. De gegevens die aan het profiel zijn gekoppeld, blijven in het datumpeer. |
+| `identity` en `aepDataLake` | De opgegeven identiteit wordt verwijderd zodra Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
+| `identity`, `ProfileService`, en `aepDataLake` | De opgegeven identiteit wordt verwijderd zodra Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen.<br><br>Wanneer het gegevens meer product antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel zachte geschrapt en zijn daarom niet toegankelijk door om het even welk [!DNL Platform] service. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
 
 Zie de [[!DNL Privacy Service] documentatie](../privacy-service/home.md#monitor) voor meer informatie over het bijhouden van de taakstatus.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u kennis gemaakt met de belangrijke concepten voor het verwerken van privacyverzoeken in [!DNL Identity Service]. Voor informatie over het verwerken van privacyverzoeken voor andere [!DNL Experience Cloud] toepassingen, zie het document op [[!DNL Privacy Service] and [!DNL Experience Cloud] toepassingen](../privacy-service/experience-cloud-apps.md).
+Door dit document te lezen, hebt u kennis gemaakt met de belangrijke concepten die betrekking hebben op het verwerken van privacyverzoeken in [!DNL Identity Service]. Voor informatie over het verwerken van privacyverzoeken voor andere [!DNL Experience Cloud] toepassingen, zie het document op [[!DNL Privacy Service] en [!DNL Experience Cloud] toepassingen](../privacy-service/experience-cloud-apps.md).

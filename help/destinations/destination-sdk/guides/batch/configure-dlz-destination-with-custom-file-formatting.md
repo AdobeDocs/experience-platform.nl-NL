@@ -15,13 +15,13 @@ ht-degree: 0%
 
 In deze pagina wordt beschreven hoe u Destination SDK kunt gebruiken om een [!DNL Data Landing Zone] doel met aangepaste [opties voor bestandsindeling](configure-file-formatting-options.md) en een aangepaste [bestandsnaamconfiguratie](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
-Op deze pagina worden alle configuratieopties weergegeven die beschikbaar zijn voor [!DNL Data Landing Zone] bestemmingen. U kunt de configuraties bewerken die in de onderstaande stappen worden weergegeven, of u kunt desgewenst bepaalde onderdelen van de configuraties verwijderen.
+Op deze pagina worden alle beschikbare configuratieopties weergegeven voor [!DNL Data Landing Zone] bestemmingen. U kunt de configuraties bewerken die in de onderstaande stappen worden weergegeven, of u kunt desgewenst bepaalde onderdelen van de configuraties verwijderen.
 
 Zie voor gedetailleerde beschrijvingen van de hieronder gebruikte parameters: [configuratieopties in de SDK van Doelen](../../functionality/configuration-options.md).
 
 ## Vereisten {#prerequisites}
 
-Lees de [Aan de slag met Destination SDK](../../getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
+Lees voordat u verdergaat met de onderstaande stappen de [Aan de slag met Destination SDK](../../getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 ## Stap 1: Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
@@ -124,7 +124,7 @@ Een succesvolle reactie keert de nieuwe configuratie van de bestemmingsserver, m
 
 Nadat u in de vorige stap de configuratie voor de doelserver en bestandsindeling hebt gemaakt, kunt u nu de opdracht `/destinations` API eindpunt om een bestemmingsconfiguratie tot stand te brengen.
 
-Als u verbinding wilt maken met de serverconfiguratie in [stap 1](#create-server-file-configuration) aan deze bestemmingsconfiguratie, vervang `destinationServerId` waarde in de API-aanvraag hieronder met de waarde die is verkregen bij het maken van de doelserver in [stap 1](#create-server-file-configuration).
+Om de serverconfiguratie in te schakelen [stap 1](#create-server-file-configuration) aan deze bestemmingsconfiguratie, vervang `destinationServerId` waarde in de API-aanvraag hieronder met de waarde die is verkregen bij het maken van de doelserver in [stap 1](#create-server-file-configuration).
 
 **API-indeling**
 
@@ -411,7 +411,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 Een succesvolle reactie keert de nieuwe bestemmingsconfiguratie, met inbegrip van uniek herkenningsteken terug (`instanceId`) van de configuratie. Sla deze waarde op zoals nodig is als u meer HTTP-aanvragen moet indienen om de doelconfiguratie bij te werken.
 
-## Stap 3: De gebruikersinterface van het Experience Platform controleren {#verify-ui}
+## Stap 3: Verifieer de gebruikersinterface van het Experience Platform {#verify-ui}
 
 Op basis van de bovenstaande configuraties wordt in de catalogus met Experience Platforms nu een nieuwe persoonlijke doelkaart weergegeven die u kunt gebruiken.
 
@@ -428,7 +428,7 @@ Wanneer u details over de bestemming invult, ziet u hoe de velden omringd zijn d
 ![bestemmingsdetails invullen](../../assets/guides/batch/file-configuration-options.gif)
 
 Wanneer u exportintervallen instelt, ziet u hoe de velden die u ziet, de velden zijn die u instelt in het dialoogvenster `batchConfig` configuratie.
-![opties voor exportplanning](../../assets/guides/batch/file-export-scheduling.png)
+![exportopties voor planning](../../assets/guides/batch/file-export-scheduling.png)
 
 Als u de opties voor bestandsnaamconfiguratie weergeeft, ziet u hoe de velden worden weergegeven in de `filenameConfig` opties die u instelt in de configuratie.
 ![opties voor bestandsnaamconfiguratie](../../assets/guides/batch/file-naming-options.gif)
@@ -441,15 +441,15 @@ Als u een van de bovenstaande velden wilt aanpassen, herhaalt u [stap één](#cr
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Na het vormen van uw bestemming, gebruik [doel-publicatie-API](../../publishing-api/create-publishing-request.md) om uw configuratie ter controle naar Adobe te verzenden.
+Na het vormen van uw bestemming, gebruik [doel-publicatie-API](../../publishing-api/create-publishing-request.md) om uw configuratie ter controle naar de Adobe te verzenden.
 
-## Stap 5: (Optioneel) De bestemming documenteren {#document-destination}
+## Stap 5: (Optioneel) Documenteer uw bestemming {#document-destination}
 
 >[!NOTE]
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](../../overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](../../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in te stellen in [Catalogus Experience Platform doelen](../../../catalog/overview.md).
+Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creeert [productievere integratie](../../overview.md#productized-custom-integrations), gebruikt u de [zelfbedieningsdocumentatie](../../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in te stellen in [Catalogus Experience Platform-doelen](../../../catalog/overview.md).
 
 ## Volgende stappen {#next-steps}
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: Een IBM maken [!DNL IBM DB2] Basisverbinding met de Flow Service API
+title: Een IBM maken [!DNL IBM DB2] De Verbinding van de basis gebruikend de Dienst API van de Stroom
 type: Tutorial
 description: Leer hoe u verbinding maakt met IBM [!DNL IBM DB2] naar Adobe Experience Platform met behulp van de Flow Service API.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
@@ -27,14 +27,14 @@ Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand t
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele instantie van het Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL IBM DB2] met de [!DNL Flow Service] API.
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `server` | De naam van de [!DNL IBM DB2] server. U kunt het poortnummer opgeven na de servernaam die is gescheiden door een dubbele punt. Bijvoorbeeld: server:poort. |
-| `database` | De naam van de [!DNL IBM DB2] database. |
+| `server` | De naam van [!DNL IBM DB2] server. U kunt het poortnummer opgeven na de servernaam die is gescheiden door een dubbele punt. Bijvoorbeeld: server:poort. |
+| `database` | De naam van [!DNL IBM DB2] database. |
 | `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL IBM DB2] database. |
 | `password` | Het wachtwoord voor de gebruikersaccount die u voor de gebruikersnaam hebt opgegeven. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL IBM DB2] is `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
@@ -43,13 +43,13 @@ Zie voor meer informatie over het aan de slag gaan [dit [!DNL IBM DB2] document]
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL IBM DB2] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL IBM DB2] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -110,5 +110,5 @@ Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, i
 Aan de hand van deze zelfstudie hebt u een [!DNL IBM DB2] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om databasegegevens naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Maak een gegevensstroom om databasegegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/database-nosql.md)
 

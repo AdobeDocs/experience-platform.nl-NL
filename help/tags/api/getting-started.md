@@ -21,7 +21,7 @@ In deze handleiding wordt uitgelegd hoe u de Adobe Developer Console kunt gebrui
 
 ## Toegang voor ontwikkelaars tot Adobe Experience Platform {#gain-developer-access}
 
-Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u ontwikkelaarstoegang tot het Experience Platform hebben. Volg de eerste stappen in het dialoogvenster [Zelfstudie over verificatie van Experience Platforms](/help/landing/api-authentication.md). Als u de [Toegang van gebruikers verkrijgen](/help/landing/api-authentication.md#gain-user-access) en ga terug naar deze zelfstudie om de referenties te genereren die specifiek zijn voor de Reactor-API.
+Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u ontwikkelaarstoegang tot het Experience Platform hebben. Volg de eerste stappen in het dialoogvenster [Zelfstudie over verificatie van Experience Platforms](/help/landing/api-authentication.md). Als u de [Toegang van gebruikers verkrijgen](/help/landing/api-authentication.md#gain-user-access) stap terug naar deze zelfstudie om de referenties te genereren die specifiek zijn voor de Reactor-API.
 
 ## Toegangsreferenties genereren {#generate-access-credentials}
 
@@ -31,7 +31,7 @@ Met Adobe Developer Console moet u de volgende drie toegangsreferenties generere
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-De id van uw organisatie (`{ORG_ID}`) en API-sleutel (`{API_KEY}`) kan in toekomstige API-aanroepen opnieuw worden gebruikt nadat deze zijn gegenereerd. Nochtans, uw toegangstoken (`{ACCESS_TOKEN}`) is tijdelijk en moet om de 24 uur opnieuw worden gegenereerd.
+De id van uw organisatie (`{ORG_ID}`) en API-sleutel (`{API_KEY}`) kan in toekomstige API-aanroepen opnieuw worden gebruikt nadat deze zijn gegenereerd. Uw toegangstoken (`{ACCESS_TOKEN}`) is tijdelijk en moet om de 24 uur opnieuw worden gegenereerd.
 
 De stappen voor het genereren van deze waarden worden hieronder in detail besproken.
 
@@ -51,7 +51,7 @@ Selecteer vervolgens het verificatietype dat u wilt maken voor het genereren van
 
 >[!IMPORTANT]
 >
->Selecteer **[!UICONTROL OAuth Server-to-Server]** -methode, aangezien dit de enige methode is die wordt ondersteund om verder te gaan. De **[!UICONTROL Service Account (JWT)]** methode is afgekeurd. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](/help/landing/api-authentication.md#jwt) in de Platform API-verificatiezelfstudie.
+>Selecteer de **[!UICONTROL OAuth Server-to-Server]** -methode, aangezien dit de enige methode is die wordt ondersteund om verder te gaan. De **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](/help/landing/api-authentication.md#jwt) in de API van het Platform authentificatiezelfstudie.
 
 Selecteren **Volgende** om door te gaan.
 
@@ -78,7 +78,7 @@ Zodra API aan het project is toegevoegd, **[!UICONTROL Experience Platform API]*
 
 ### Een toegangstoken genereren {#generate-access-token}
 
-De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` referentie voor gebruik in Platform API vraag. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}`moet om de 24 uur een nieuw token worden gegenereerd om Platform API&#39;s te kunnen blijven gebruiken.
+De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` referentie voor gebruik in platform API vraag. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}`moet om de 24 uur een nieuw token worden gegenereerd om door te gaan met het gebruik van platform-API&#39;s.
 
 >[!TIP]
 >

@@ -1,11 +1,11 @@
 ---
-title: Een Snowflake Base-verbinding maken met de Flow Service API
-description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Snowflake.
-badgeUltimate: label="Ultimate" type="Positive"
+title: Creeer een Verbinding van de Basis van de Snowflake gebruikend de Dienst API van de Stroom
+description: Leer hoe u Adobe Experience Platform met Snowflake kunt verbinden met behulp van de Flow Service API.
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 De volgende sectie bevat aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Snowflake] met de [!DNL Flow Service] API.
 
@@ -39,26 +39,26 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Snowflake]moet u de volgende ei
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `account` | De volledige accountnaam die aan uw [!DNL Snowflake] account. Een volledig gekwalificeerde [!DNL Snowflake] de naam van uw account bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld, `cj12345.east-us-2.azure`. Raadpleeg deze voor meer informatie over accountnamen [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
-| `warehouse` | De [!DNL Snowflake] Het pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] magazijn is onafhankelijk van elkaar en moet individueel worden benaderd wanneer gegevens naar het Platform worden overgebracht. |
-| `database` | De [!DNL Snowflake] de database bevat de gegevens die u het Platform wilt brengen. |
+| `account` | De volledige accountnaam die aan uw [!DNL Snowflake] account. Volledig gekwalificeerd [!DNL Snowflake] de naam van uw account bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld, `cj12345.east-us-2.azure`. Raadpleeg deze voor meer informatie over accountnamen [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
+| `warehouse` | De [!DNL Snowflake] Het pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] Het pakhuis is onafhankelijk van elkaar en moet individueel worden betreden wanneer het brengen van gegevens naar Platform. |
+| `database` | De [!DNL Snowflake] Het gegevensbestand bevat de gegevens u het Platform wilt brengen. |
 | `username` | De gebruikersnaam voor de [!DNL Snowflake] account. |
 | `password` | Het wachtwoord voor de [!DNL Snowflake] gebruikersaccount. |
 | `role` | De standaardtoegangsbeheerrol die in de [!DNL Snowflake] sessie. De rol zou een bestaande moeten zijn die reeds aan de gespecificeerde gebruiker is toegewezen. De standaardrol is `PUBLIC`. |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
+| `connectionString` | De verbindingstekenreeks waarmee u verbinding maakt met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!NOTE]
 >
->U moet de `PREVENT_UNLOAD_TO_INLINE_URL` markeren naar `FALSE` om gegevens uit uw [!DNL Snowflake] database naar Experience Platform.
+>U moet de instelling `PREVENT_UNLOAD_TO_INLINE_URL` markeren naar `FALSE` om gegevens uit uw [!DNL Snowflake] database naar Experience Platform.
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Snowflake] verificatiereferenties als onderdeel van de aanvraaginstantie.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Snowflake] verificatiegegevens als onderdeel van de aanvraaginstantie.
 
 **API-indeling**
 
@@ -96,7 +96,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `auth.params.connectionString` | De verbindingstekenreeks waarmee u verbinding maakt met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
 | `connectionSpec.id` | De [!DNL Snowflake] Verbindingsspecificatie-id: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 **Antwoord**
@@ -113,4 +113,4 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 Aan de hand van deze zelfstudie hebt u een [!DNL Snowflake] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om databasegegevens naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Maak een gegevensstroom om databasegegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/database-nosql.md)

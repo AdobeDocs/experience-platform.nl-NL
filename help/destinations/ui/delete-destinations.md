@@ -28,7 +28,7 @@ Er zijn twee manieren u bestemmingen van kunt schrappen [!DNL Platform] [!DNL UI
 
 Voer de onderstaande stappen uit om een doel te verwijderen uit de [!UICONTROL Browse] tab.
 
-1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** in de bovenste koptekst.
+1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** in de bovenste koptekst.
 
    ![Bladeren door doelen](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -36,7 +36,7 @@ Voer de onderstaande stappen uit om een doel te verwijderen uit de [!UICONTROL B
 
    ![Filterdoelen](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecteer ![Meer, knop](../assets/ui/delete-destinations/more-icon.png) in de kolom Naam en selecteer vervolgens ![Knop Verwijderen](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** om een bestaande doelverbinding te verwijderen.
+3. Selecteer de ![Meer, knop](../assets/ui/delete-destinations/more-icon.png) in de kolom Naam en selecteer vervolgens ![Knop Verwijderen](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** om een bestaande doelverbinding te verwijderen.
    ![Doelen verwijderen](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Selecteren **[!UICONTROL Delete]** om de verwijdering van de bestemmingsverbinding te bevestigen.
@@ -47,7 +47,7 @@ Voer de onderstaande stappen uit om een doel te verwijderen uit de [!UICONTROL B
 
 Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina met doeldetails.
 
-1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** in de bovenste koptekst.
+1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Om uw bestaande bestemmingen te bekijken, selecteer **[!UICONTROL Browse]** in de bovenste koptekst.
 
    ![Bladeren door doelen](../assets/ui/delete-destinations/browse-destinations.png)
 

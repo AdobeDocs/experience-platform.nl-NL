@@ -15,7 +15,7 @@ ht-degree: 3%
 
 De [!UICONTROL Schemas] In de Adobe Experience Platform-gebruikersinterface kunt u bronnen van het Experience Data Model (XDM) beheren, zoals schema&#39;s, klassen, groepen van schemavelden en gegevenstypen. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
 
-Als u toegang wilt tot de werkruimte in de gebruikersinterface van het Platform, selecteert u **[!UICONTROL Schemas]** in het linkerspoor.
+Als u toegang wilt tot de werkruimte in de interface van het platform, selecteert u **[!UICONTROL Schemas]** in het linkerspoor.
 
 ![](../images/ui/overview/schemas-tab.png)
 
@@ -40,4 +40,4 @@ Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema.
 
 ## Volgende stappen
 
-In dit document werd een inleiding gegeven op de [!UICONTROL Schemas] in de gebruikersinterface van het Platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.
+In dit document werd een inleiding gegeven op de [!UICONTROL Schemas] in de gebruikersinterface van het platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.

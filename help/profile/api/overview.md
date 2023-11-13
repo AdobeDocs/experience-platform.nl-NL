@@ -16,15 +16,15 @@ ht-degree: 1%
 
 De [!DNL Real-Time Customer Profile] API bevat meerdere eindpunten, die hieronder worden beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Real-Time API-referentiewagen voor klantprofiel](https://www.adobe.com/go/profile-apis-en).
+Ga naar de [Real-Time API-referentiewagen voor klantprofiel](https://www.adobe.com/go/profile-apis-en).
 
-Voor een gids voor het werken met [!DNL Real-Time Customer Profile] gegevens in de [!DNL Experience Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor profielen](../ui/user-guide.md).
+Voor een hulplijn voor het werken met [!DNL Real-Time Customer Profile] gegevens in de [!DNL Experience Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor profielen](../ui/user-guide.md).
 
 ## [!BADGE Beta]{type=Informative} Berekende kenmerken {#computed-attributes}
 
 >[!IMPORTANT]
 >
->De functie Berekend kenmerk is in bèta beschikbaar voor niet alle gebruikers. Documentatie en functionaliteit kunnen worden gewijzigd.
+De functie Berekend kenmerk is in bèta beschikbaar voor niet alle gebruikers. Documentatie en functionaliteit kunnen worden gewijzigd.
 
 Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 
@@ -46,13 +46,13 @@ Via Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profil
 
 ## Beleid samenvoegen {#merge-policies}
 
-Wanneer u gegevens uit meerdere bronnen samenbrengt in [!DNL Experience Platform], samenvoegbeleid zijn de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens voorrang krijgen en welke gegevens worden gecombineerd om individuele klantenprofielen tot stand te brengen. Met de [!DNL Real-Time Customer Profile] API, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Als u met een samenvoegbeleid wilt werken met de API, gaat u naar de [eindhulplijn voor samenvoegbeleid](merge-policies.md).
+Wanneer u gegevens uit meerdere bronnen samenbrengt in [!DNL Experience Platform], samenvoegbeleid zijn de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens voorrang krijgen en welke gegevens worden gecombineerd om individuele klantenprofielen tot stand te brengen. Met de [!DNL Real-Time Customer Profile] API, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Als u wilt werken met samenvoegbeleid met de API, gaat u naar de [eindhulplijn voor samenvoegbeleid](merge-policies.md).
 
-Als u meer wilt weten over samenvoegingsbeleid en hun rol in het Platform, leest u eerst de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
+Als u meer wilt weten over samenvoegingsbeleid en hun rol binnen Platform, leest u eerst de [overzicht van samenvoegbeleid](../merge-policies/overview.md).
 
 ## Voorbeeldstatus voorvertonen ([!DNL Profile] voorvertoning) {#profile-preview}
 
-Aangezien de gegevens in Platform worden opgenomen, wordt een steekproefbaan in werking gesteld om de profieltelling en andere gegevens-verwante metriek van het Profiel van de Klant in real time bij te werken. De resultaten van deze voorbeeldtaak kunnen worden weergegeven met de opdracht `/previewsamplestatus` eindpunt, deel van Real-Time API van het Profiel van de Klant. Dit eindpunt kan ook worden gebruikt om van profieldistributies door zowel dataset als identiteit namespace een lijst te maken, evenals veelvoudige rapporten te produceren om zicht in de samenstelling van de Opslag van het Profiel van uw organisatie te bereiken.  Ga als volgt te werk om aan de slag te gaan `/profilepreviewstatus` eindpunt, verwijs naar [voorbeeldstatuseindhulplijn voorbeeld](preview-sample-status.md).
+Aangezien de gegevens in Platform worden opgenomen, wordt een steekproefbaan in werking gesteld om de profieltelling en andere gegevens-verwante metriek van het Profiel van de Klant in real time bij te werken. De resultaten van deze voorbeeldtaak kunnen worden weergegeven met de opdracht `/previewsamplestatus` eindpunt, deel van Real-Time API van het Profiel van de Klant. Dit eindpunt kan ook worden gebruikt om van profieldistributies door zowel dataset als identiteit namespace een lijst te maken, evenals veelvoudige rapporten te produceren om zicht in de samenstelling van de Opslag van het Profiel van uw organisatie te bereiken.  Om te beginnen met het gebruik van de `/profilepreviewstatus` eindpunt, verwijs naar [voorbeeldstatuseindhulplijn](preview-sample-status.md).
 
 ## Systeemtaken profiel {#profile-system-jobs}
 
@@ -64,4 +64,4 @@ Soms kan het nodig zijn gegevens bij te werken in de profielopslag van uw organi
 
 ## Volgende stappen {#next-steps}
 
-Beginnen het maken vraag gebruikend [!DNL Real-Time Customer Profile] API, lees de [gids Aan de slag](getting-started.md) dan selecteer één van de eindpuntgidsen om te leren hoe te om specifiek te gebruiken [!DNL Profile]-gerelateerde eindpunten. Werken met [!DNL Profile] gegevens die [!DNL Experience Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor het profiel van de klant in realtime](../ui/user-guide.md).
+Beginnen het maken vraag gebruikend [!DNL Real-Time Customer Profile] API, lees de [gids Aan de slag](getting-started.md) dan selecteer één van de eindpuntgidsen om te leren hoe te om specifiek te gebruiken [!DNL Profile]-gerelateerde eindpunten. Werken met [!DNL Profile] gegevens die de [!DNL Experience Platform] UI, gelieve te verwijzen naar [Gebruikershandleiding voor het profiel van de klant in realtime](../ui/user-guide.md).

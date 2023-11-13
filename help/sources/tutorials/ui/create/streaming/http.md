@@ -18,14 +18,14 @@ Deze zelfstudie bevat stappen voor het maken van een streamingbronverbinding met
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   - [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Een streamingverbinding maken
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -48,7 +48,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]**. Geef 
 - **[!UICONTROL Authentication]:** This property determines whether or not the streaming connection requires authentication. Verificatie zorgt ervoor dat gegevens worden verzameld van vertrouwde bronnen. Als u met Persoonlijk Identificeerbare Informatie (PII) werkt, zou dit bezit moeten worden aangezet. Deze eigenschap is standaard uitgeschakeld.
 - **[!UICONTROL XDM compatible]:** Deze eigenschap geeft aan of deze streamingverbinding gebeurtenissen verzendt die compatibel zijn met XDM-schema&#39;s. Deze eigenschap is standaard uitgeschakeld.
 
-Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en selecteer vervolgens **[!UICONTROL Next]** om verder te gaan.
+Selecteer **[!UICONTROL Connect to source]** en selecteer vervolgens **[!UICONTROL Next]** om verder te gaan.
 
 ![nieuwe rekening](../../../../images/tutorials/create/http/new.png)
 
@@ -68,9 +68,9 @@ Als uw gegevens zijn geüpload, kunt u de rechterkant van de interface gebruiken
 
 De [!UICONTROL Mapping] stap verschijnt, verstrekkend een interface om de brongegevens aan een dataset van het Platform in kaart te brengen.
 
-De [!DNL HTTP API] bron ondersteunt inname van JSON-bestanden. Voor JSON-bestanden is geen handmatige configuratie vereist als deze bestanden als XDM-klacht zijn gemarkeerd. Als niet, dan moet u de afbeelding uitdrukkelijk vormen.
+De [!DNL HTTP API] bron ondersteunt inname van JSON-bestanden. JSON-bestanden vereisen geen handmatige configuratie als deze zijn gemarkeerd als XDM-klap. Als niet, dan moet u de afbeelding uitdrukkelijk vormen.
 
-Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
+Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt een bestaande gegevensset gebruiken of een nieuwe gegevensset maken.
 
 ### Een nieuwe gegevensset maken
 
@@ -124,8 +124,8 @@ Nadat u de details voor de gegevensstroom hebt opgegeven, selecteert u **[!UICON
 
 De **[!UICONTROL Review]** wordt weergegeven, zodat u de details van de gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details zijn groep binnen de volgende categorieën:
 
-- **[!UICONTROL Connection]**: Hier worden de naam van de account, het bronplatform en de bronnaam weergegeven.
-- **[!UICONTROL Assign dataset and map fields]**: Toont de doeldataset en het schema dat de dataset aansluit.
+- **[!UICONTROL Connection]**: Hiermee geeft u de naam van de account, het bronplatform en de bronnaam weer.
+- **[!UICONTROL Assign dataset and map fields]**: Toont de doeldataset en het schema dat de dataset volgt.
 
 Nadat u hebt bevestigd dat de details juist zijn, selecteert u **[!UICONTROL Finish]**.
 
@@ -141,4 +141,4 @@ Als de verbinding is gemaakt, wordt de pagina met brondetails weergegeven. Deze 
 
 Door deze zelfstudie te volgen, hebt u een het stromen verbinding van HTTP gecreeerd, toelatend u om het het stromen eindpunt te gebruiken om tot een verscheidenheid van [!DNL Data Ingestion] API&#39;s. Voor instructies voor het maken van een streamingverbinding in de API leest u de [een zelfstudie over streamingverbindingen maken](../../../api/create/streaming/http.md).
 
-Lees de zelfstudie voor meer informatie over het streamen van gegevens naar het Platform. [streaming tijdreeksgegevens](../../../../../ingestion/tutorials/streaming-time-series-data.md) of de zelfstudie [streaming recordgegevens](../../../../../ingestion/tutorials/streaming-record-data.md).
+Lees de zelfstudie voor meer informatie over het streamen van gegevens naar Platform. [streaming tijdreeksgegevens](../../../../../ingestion/tutorials/streaming-time-series-data.md) of de zelfstudie [streaming recordgegevens](../../../../../ingestion/tutorials/streaming-record-data.md).

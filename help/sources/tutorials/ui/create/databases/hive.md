@@ -24,20 +24,20 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 Als u al een geldige [!DNL Hive] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/databases.md)
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL Hive] account op [!DNL Platform]moet u de volgende waarden opgeven:
+Voor toegang tot uw [!DNL Hive] account op [!DNL Platform]moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | Het IP-adres of de hostnaam van het [!DNL Hive] server. |
+| `host` | Het IP adres of hostnaam van [!DNL Hive] server. |
 | `username` | De gebruikersnaam die u gebruikt om toegang te krijgen tot de [!DNL Hive] server. |
 | `password` | Het wachtwoord dat overeenkomt met de gebruiker. |
 
@@ -59,7 +59,7 @@ De **[!UICONTROL Connect to Hive]** wordt weergegeven. Op deze pagina kunt u nie
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Hive] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Hive] referenties. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![verbinden](../../../../images/tutorials/create/hive/new.png)
 

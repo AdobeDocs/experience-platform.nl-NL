@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Marketo Engage;marketo engageren;Marketo;mapping
 solution: Experience Platform
-title: Velden toewijzen voor de Marketo Engage-bron
+title: Velden toewijzen aan de bron van het Marketo Engage
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Marketo Engage] veldtoewijzingen {#marketo-engage-field-mappings}
 
-De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [!DNL Marketo] datasets en hun overeenkomstige gebieden van de Gegevens van de Ervaring van het Model (XDM).
+De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [!DNL Marketo] datasets en hun overeenkomstige gebieden van het Gegevensmodel van de Ervaring (XDM).
 
 >[!TIP]
 >
@@ -21,7 +21,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 ## Activiteiten {#activities}
 
-De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als u standaardactiviteiten wilt gebruiken, moet u het schema bijwerken met de [schema automatisch genereren](../marketo/marketo-namespaces.md) omdat u nieuwe `activities` de gegevensstroom zonder uw schema bij te werken, zal de toewijzingsmalplaatjes ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nieuwe of bijgewerkte velden worden echter niet in het Platform opgenomen.
+De [!DNL Marketo] de bron ondersteunt nu aanvullende standaardactiviteiten . Als u standaardactiviteiten wilt gebruiken, moet u het schema bijwerken met de [schema automatisch genereren, hulpprogramma](../marketo/marketo-namespaces.md) omdat u nieuwe `activities` de gegevensstroom zonder uw schema bij te werken, zal de toewijzingsmalplaatjes ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nochtans, zullen om het even welke nieuwe of bijgewerkte gebieden niet in Platform worden opgenomen.
 
 Zie de documentatie op [XDM Experience Event-klasse](../../../../xdm/classes/experienceevent.md) voor meer informatie over de klasse XDM en XDM gebiedsgroep(en).
 
@@ -163,7 +163,7 @@ Lees de [Overzicht van XDM Business Campaign](../../../../xdm/classes/b2b/busine
 
 ## Lidmaatschap van programma {#program-memberships}
 
-Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne Member Details schema groep](../../../../xdm/field-groups/b2b-campaign-members/details.md) hulplijn.
+Lees de [Overzicht van XDM Business Campaign-leden](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees [XDM Business Campagne Member Details schema veldgroep](../../../../xdm/field-groups/b2b-campaign-members/details.md) hulplijn.
 
 | Brongegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -244,7 +244,7 @@ Lees de [Overzicht van XDM Business Marketing List](../../../../xdm/classes/b2b/
 
 {style="table-layout:auto"}
 
-## Statische lijstlidmaatschap {#static-list-memberships}
+## Statische lijstlidmaatschappen {#static-list-memberships}
 
 Lees de [Overzicht van leden van XDM Business Marketing List](../../../../xdm/classes/b2b/business-marketing-list-members.md) voor meer informatie over de Klasse XDM.
 
@@ -303,7 +303,7 @@ Lees de [Overzicht van XDM Business Opportunity](../../../../xdm/classes/b2b/bus
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
 | `id` | `opportunityKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Primaire identiteit. De waarde voor `"${MUNCHKIN_ID}"` wordt automatisch vervangen. |
-| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Secundaire identiteit. De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Secundaire identiteit De waarden voor `{CRM_ORG_ID}` en `{CRM_TYPE}` wordt automatisch vervangen. |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Relatie |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -411,8 +411,8 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 
 >[!NOTE]
 >
->De `to_object('ECID',arrays_to_objects('id',explode(ecids)))` bronveld is een berekend veld dat moet worden toegevoegd met het [!UICONTROL Add calculated field] in de gebruikersinterface van het Platform. Zie de zelfstudie aan [berekende velden toevoegen](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie .
+>De `to_object('ECID',arrays_to_objects('id',explode(ecids)))` bronveld is een berekend veld dat met het [!UICONTROL Add calculated field] in de gebruikersinterface van het platform. Zie de zelfstudie aan [berekende velden toevoegen](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie .
 
 ## Volgende stappen
 
-Door dit document te lezen hebt u meer inzicht gekregen in de toewijzingsrelatie tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie de zelfstudie aan [een [!DNL Marketo] bronverbinding](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow.
+Door dit document te lezen, hebt u meer inzicht gekregen in de toewijzingsrelatie tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie de zelfstudie aan [een [!DNL Marketo] bronverbinding](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow.

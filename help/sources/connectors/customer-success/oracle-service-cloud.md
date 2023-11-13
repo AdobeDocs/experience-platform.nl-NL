@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;oracle service cloud
 title: Overzicht van oracle Service Cloud Source Connector
-description: Leer hoe u Oracle Service Cloud kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
+description: Leer hoe u Oracle Service Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
 source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Cloud-bron voor oracle Service
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een systeem voor succes bij een klant van een andere fabrikant. Tot de ondersteuning voor succesproviders van klanten behoort ook Oracle Service Cloud.
 
@@ -23,13 +23,13 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 In de onderstaande documentatie vindt u informatie over hoe u Oracle Service Cloud kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
 
-## Servicekolk van Oracle verbinden met Platform met behulp van API&#39;s
+## Servicekolk van Oracle verbinden met platform met behulp van API&#39;s
 
 - [Een basisverbinding voor Oracle Service Cloud maken met de Flow Service API](../../tutorials/api/create/customer-success/oracle-service-cloud.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Maak een dataflow voor een bron van het klantsucces met behulp van de Flow Service API](../../tutorials/api/collect/customer-success.md)
 
-## De Cloud van de Dienst van het Oracle verbinden met Platform gebruikend UI
+## Cloud van de Dienst van het Oracle verbinden met Platform gebruikend UI
 
 - [Een Oracle Service Cloud-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/customer-success/oracle-service-cloud.md)
-- [Gegevensstroom maken voor een bronverbinding voor klantensucces in de gebruikersinterface](../../tutorials/ui/dataflow/customer-success.md)
+- [Gegevensstroom maken voor een bronverbinding voor klantensucces in UI](../../tutorials/ui/dataflow/customer-success.md)

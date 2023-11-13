@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klant ai segmenten
+keywords: Experience Platform;inzichten;klantenai;populaire onderwerpen;klantenai segmenten
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Klantsegmenten maken met voorspelde scores
@@ -20,7 +20,7 @@ Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid
 >
 >Om deze methode te gebruiken, moet het Profiel van de Klant in real time voor de dataset worden toegelaten.
 
-Klik in de gebruikersinterface van het Platform op **[!UICONTROL Segments]** in de linkernavigatie, en klik dan **[!UICONTROL Create segment]**.
+Klik in de interface van het platform op **[!UICONTROL Segments]** in de linkernavigatie, en klik dan **[!UICONTROL Create segment]**.
 
 ![](../images/user-guide/segments.png)
 
@@ -30,11 +30,11 @@ De **Segment Builder** wordt weergegeven. Van links **[!UICONTROL Fields]** en o
 
 In het midden van Segment Builder kunt u de **[!UICONTROL Score]** kenmerk op de *regelbouwcanvas* om een regel te definiëren.
 
-Onder de rechterhand *Segmenteigenschappen* een naam voor het segment opgeven.
+Rechts onder *Segmenteigenschappen* een naam voor het segment opgeven.
 
 ![](../images/user-guide/properties.png)
 
-Boven de linkerkant *Velden* kolom, klikt u op de knop **tandwiel** en selecteert u een *Samenvoegbeleid* in de vervolgkeuzelijst. Klikken **[!UICONTROL Save]** om het segment te maken.
+Boven de linkerkant *Velden* kolom, klikt u op de **tandwiel** en selecteert u een *Samenvoegbeleid* in de vervolgkeuzelijst. Klikken **[!UICONTROL Save]** om het segment te maken.
 
 ![](../images/user-guide/merge_policy.png)
 

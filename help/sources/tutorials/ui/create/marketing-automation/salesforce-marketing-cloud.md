@@ -1,5 +1,5 @@
 ---
-title: Sluit uw Salesforce-Marketing Cloud-account aan op Experience Platform via de gebruikersinterface
+title: Sluit uw Salesforce-account aan op Experience Platform via de gebruikersinterface
 description: Leer hoe u uw Salesforce-account via de gebruikersinterface kunt verbinden met Experience Platform.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
@@ -22,16 +22,16 @@ Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding met 
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 Als u al een [!DNL Salesforce Marketing Cloud] account, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [het brengen van de gegevens van de marketing automatisering aan Experience Platform gebruikend UI](../../dataflow/marketing-automation.md).
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL Salesforce Marketing Cloud] account op Platform, moet u de volgende waarden opgeven:
+Voor toegang tot uw [!DNL Salesforce Marketing Cloud] account op Platform, moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -43,7 +43,7 @@ Voor meer informatie over authenticatie voor [!DNL Salesforce Marketing Cloud], 
 
 ## Verbind uw [!DNL Salesforce Marketing Cloud] account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] Hiermee geeft u diverse bronnen weer die door het Experience Platform worden ondersteund.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] Hiermee geeft u diverse bronnen weer die door het Experience Platform worden ondersteund.
 
 U kunt de juiste categorie selecteren in de lijst met categorieën. U kunt de zoekbalk ook gebruiken om te filteren op een bepaalde bron.
 
@@ -57,7 +57,7 @@ De **[!UICONTROL Connect to Salesforce Marketing Cloud]** wordt weergegeven. Op 
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geef een naam voor uw account op, een optionele beschrijving en de verificatiegegevens die overeenkomen met uw [!DNL Salesforce Marketing Cloud] account.
 
-Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![De nieuwe accountinterface waar u een nieuw account voor Salesforce-Marketing Cloud kunt verifiëren.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 

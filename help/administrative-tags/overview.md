@@ -23,7 +23,7 @@ Bij labelen worden de volgende onderdelen gebruikt:
 | Terminologie | Definitie |
 | --- | --- |
 | Gearchiveerd | Een status voor een tag die de huidige koppelingen met objecten behoudt, maar die de tag beperkt van toepassing op andere objecten.  Gearchiveerde tags worden verborgen in de tagkiezer. |
-| Object | Een Experience Cloud-item waarop een tag kan worden toegepast.  Voorbeelden: Segment, Reis, Dataset. |
+| Object | An Experience Cloud item that can have a tag applied.  Voorbeelden: Segment, Reis, Dataset. |
 | Tag | Tags zijn metagegevens en kunnen worden beschouwd als trefwoorden die kunnen worden gekoppeld aan een segment, gegevensset, reis of andere objecten, zodat zoekopdrachten naar dat object en verwante objecten kunnen worden uitgevoerd. |
 | Tagcategorie | Tags voor categorieën groeperen in betekenisvolle sets voor een betere context of een beschrijving van het doel van de tag.  Beheerders beheren tagcategorieën en -tags binnen categorieën. |
 | Niet-gecategoriseerde tag | Een nieuwe tag die wordt gemaakt in de regel waar tags worden toegepast. Deze tags kunnen door elke gebruiker worden gemaakt en toegepast, maar zijn niet aan een categorie gebonden.  Beheerders kunnen deze tags naar een categorie verplaatsen om deze uit te lijnen met andere, vergelijkbare tags. |

@@ -79,12 +79,12 @@ Als de gegevensset een naam en beschrijving heeft, selecteert u **[!UICONTROL Fi
 
 Zodra de dataset wordt gecreeerd, wordt u gebracht de activiteitenpagina voor die dataset. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-De juiste spoorlijn bevat informatie met betrekking tot uw nieuwe dataset zoals dataset ID, naam, beschrijving, schema, en meer. Gelieve nota te nemen van **[!UICONTROL Dataset ID]**, omdat deze waarde vereist is om de workflow voor het exporteren van doelgroepen te voltooien.
+De juiste spoorlijn bevat informatie met betrekking tot uw nieuwe dataset zoals dataset ID, naam, beschrijving, schema, en meer. Noteer de **[!UICONTROL Dataset ID]**, omdat deze waarde vereist is om de workflow voor het exporteren van doelgroepen te voltooien.
 
 ![De pagina van de datasetactiviteit wordt getoond. De dataset-id wordt gemarkeerd, aangezien deze waarde moet worden genoteerd voor toekomstige stappen.](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Volgende stappen
 
-Nu u een dataset hebt gecreeerd die op wordt gebaseerd [!DNL XDM Individual Profile Union Schema]kunt u de gegevensset-id gebruiken om door te gaan met de [evalueren van en tot de resultaten van de segmentdefinitie toegang hebben](./evaluate-a-segment.md) zelfstudie.
+Nu u een dataset hebt gecreeerd die op [!DNL XDM Individual Profile Union Schema]kunt u de gegevensset-id gebruiken om door te gaan met de [evalueren van en tot de resultaten van de segmentdefinitie toegang hebben](./evaluate-a-segment.md) zelfstudie.
 
-Ga op dit moment terug naar de zelfstudie over de evaluatieresultaten voor segmentdefinitie en vul de resultaten in van de [profielen genereren voor publieksleden](./evaluate-a-segment.md#generate-profiles) stap van het exporteren van een publieksworkflow.
+Ga op dit moment terug naar de zelfstudie over de evaluatieresultaten voor segmentdefinitie en vul de resultaten in van de [profielen genereren voor gehoorleden](./evaluate-a-segment.md#generate-profiles) stap van het exporteren van een publieksworkflow.

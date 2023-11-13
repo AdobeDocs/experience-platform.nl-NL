@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;gegevens over cloudopsl
 solution: Experience Platform
 title: Een gegevensstroom maken voor Cloud Storage-bronnen met behulp van de Flow Service API
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe cloudopslag en het inbrengen van gegevens naar het platform met behulp van bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Maak een gegevensstroom voor bronnen voor cloudopslag met de [!DNL Flow Service] API
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een bron voor cloudopslag en het naar Platform brengen van deze gegevens met [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een bron voor cloudopslag en het naar platform brengen van deze gegevens [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -29,11 +29,11 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
    - [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Bevat belangrijke informatie die u moet weten om met succes vraag aan de Registratie API van het Schema uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn in het Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
-- [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../landing/api-guide.md).
 
 ## Een bronverbinding maken {#source}
 
@@ -93,10 +93,10 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `baseConnectionId` | De basis verbindings-id van de bron voor cloudopslag. |
-| `data.format` | De indeling van de gegevens die u naar het Platform wilt verzenden. Ondersteunde waarden zijn: `delimited`, `JSON`, en `parquet`. |
+| `data.format` | De indeling van de gegevens die u naar het platform wilt verzenden. Ondersteunde waarden zijn: `delimited`, `JSON`, en `parquet`. |
 | `data.properties` | (Optioneel) Een set eigenschappen die u op uw gegevens kunt toepassen wanneer u een bronverbinding maakt. |
 | `data.properties.columnDelimiter` | (Optioneel) Een scheidingsteken voor één tekenkolom dat u kunt opgeven bij het verzamelen van vlakke bestanden. Elke waarde van één teken is een toegestaan kolomscheidingsteken. Indien niet opgegeven, wordt een komma (`,`) wordt gebruikt als standaardwaarde. **Opmerking**: De `columnDelimiter` Deze eigenschap kan alleen worden gebruikt bij het opnemen van bestanden met scheidingstekens. |
-| `data.properties.encoding` | (Optioneel) Een eigenschap die het coderingstype definieert dat moet worden gebruikt bij het invoeren van gegevens naar het Platform. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` Deze parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
+| `data.properties.encoding` | (Optioneel) Een eigenschap die het coderingstype definieert dat moet worden gebruikt bij het opnemen van uw gegevens naar Platform. De ondersteunde coderingstypen zijn: `UTF-8` en `ISO-8859-1`. **Opmerking**: De `encoding` Deze parameter is alleen beschikbaar bij het opnemen van CSV-bestanden met scheidingstekens. Andere bestandstypen worden met de standaardcodering opgenomen. `UTF-8`. |
 | `data.properties.compressionType` | (Optioneel) Een eigenschap die het gecomprimeerde bestandstype voor inname definieert. De volgende bestandstypen worden ondersteund: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, en `tar`. **Opmerking**: De `compressionType` Deze eigenschap kan alleen worden gebruikt bij het opnemen van afgebakende of JSON-bestanden. |
 | `params.path` | Het pad van het bronbestand dat u opent. Deze parameter verwijst naar een afzonderlijk bestand of naar een volledige map.  **Opmerking**: U kunt een sterretje gebruiken in plaats van de bestandsnaam om de opname van een volledige map op te geven. Bijvoorbeeld: `/acme/summerCampaign/*.csv` wordt de gehele `/acme/summerCampaign/` map. |
 | `params.type` | Het bestandstype van het brongegevensbestand dat u opgeeft. Tekst gebruiken `file` om een afzonderlijk bestand in te voeren en type te gebruiken `folder` om een volledige map in te voeren. |
@@ -115,7 +115,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ### Reguliere expressies gebruiken om een specifieke set bestanden voor inname te selecteren {#regex}
 
-U kunt reguliere expressies gebruiken om een bepaalde set bestanden van uw bron naar het Platform in te voeren wanneer u een bronverbinding maakt.
+U kunt reguliere expressies gebruiken om een bepaalde set bestanden van uw bron naar platform in te voeren wanneer u een bronverbinding maakt.
 
 **API-indeling**
 
@@ -196,9 +196,9 @@ curl -X POST \
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../xdm/api/schemas.md).
 
@@ -680,7 +680,7 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een bronaansluiting gemaakt om gegevens van uw cloudopslag op een geplande basis te verzamelen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Aan de hand van deze zelfstudie hebt u een bronaansluiting gemaakt om gegevens van uw cloudopslag op een geplande basis te verzamelen. Inkomende gegevens kunnen nu worden gebruikt door downstreamplatformdiensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van de Data Science-werkruimte](../../../../data-science-workspace/home.md)

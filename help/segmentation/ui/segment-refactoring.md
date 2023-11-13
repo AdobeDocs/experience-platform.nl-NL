@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refactorgesegmentatie
+title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refactoring
 description: De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
@@ -20,7 +20,7 @@ Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking 
 
 ![De vroegere stijl van tijdbeperkingen wordt benadrukt in de Bouwer van het Segment.](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: Eén voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Yesterday]&quot;.
+Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Yesterday]&quot;.
 
 Het vorige segment is gelijkwaardig aan het volgende segment — beide gebeurtenis-vlakke tijdbeperkingen zijn verbonden gebruikend een exploitant AND. De eerste tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Training&quot; en die vandaag plaatsvindt, terwijl de tweede tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Huisdieren&quot; en die gisteren heeft plaatsgevonden.
 

@@ -38,7 +38,7 @@ Deze zelfstudie bevat stappen voor het maken van een *UURBRON* bronschakelaar di
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken *UURBRON* als u een Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om verbinding te maken *UURBRON* aan Platform, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Voor meer informatie over deze geloofsbrieven, zie *UURBRON* verificatiedocument
 
 ## Verbind uw *UURBRON* account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -62,13 +62,13 @@ Onder de **Streaming** categorie, selecteert u *UURBRON* en selecteer vervolgens
 
 >[!TIP]
 >
->De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het volledige scherm van de gebruikersinterface van het Platform vastlegt. Zie de handleiding voor informatie over het uploaden van uw screenshots [de documentatie ter controle verzenden](../documentation/github.md).
+>De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het gehele UI-scherm van het platform vastlegt. Zie de handleiding voor informatie over het uploaden van uw screenshots [de documentatie ter controle verzenden](../documentation/github.md).
 
 ![De catalogus met bronnen voor Experience Platforms](../assets/streaming/catalog.png)
 
 ## Gegevens selecteren
 
-De **[!UICONTROL Select data]** wordt weergegeven, zodat u een interface hebt waarmee u de gegevens kunt selecteren die u naar het Platform verzendt.
+De **[!UICONTROL Select data]** wordt weergegeven, zodat u een interface hebt waarmee u de gegevens kunt selecteren die u naar Platform verzendt.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -124,7 +124,7 @@ Ga naar het tabblad [!UICONTROL Dataflow activity] pagina van de gegevensstroom 
 
 *Workflows voor de overige stappen voor het maken van een gegevensstroom worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door deze zelfstudie te volgen, hebt u een verbinding tot stand gebracht met uw *UURBRON* account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens naar het Platform te brengen](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Door deze zelfstudie te volgen, hebt u een verbinding tot stand gebracht met uw *UURBRON* account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Aanvullende bronnen
 

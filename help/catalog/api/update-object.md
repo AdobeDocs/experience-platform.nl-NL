@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
@@ -57,7 +57,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Het uitvoeren van een verzoek van de GET voor deze dataset toont nu dat slechts `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
+Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Het uitvoeren van een GET verzoek voor deze dataset toont nu dat slechts `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
 
 ```json
 [
@@ -83,7 +83,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**

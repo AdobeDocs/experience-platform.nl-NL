@@ -807,7 +807,7 @@ GET /secrets/{SECRET_ID}/notes
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SECRET_ID}` | De id van het geheim waarvan u notities wilt weergeven. |
+| `{SECRET_ID}` | De id van het geheim waarvan u de notities wilt weergeven. |
 
 {style="table-layout:auto"}
 

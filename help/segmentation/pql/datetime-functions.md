@@ -52,7 +52,7 @@ person.birthdate.getMonth() = 6
 
 ## Huidig jaar
 
-De `currentYear` functie retourneert het huidige jaar als een geheel getal.
+De `currentYear` Deze functie retourneert het huidige jaar als een geheel getal.
 
 **Indeling**
 
@@ -70,7 +70,7 @@ product.saleYear = currentYear()
 
 ## Jaar ophalen
 
-De `getYear` Deze functie retourneert het jaar, als een geheel getal, op basis van een opgegeven tijdstempel.
+De `getYear` Deze functie retourneert het jaar als een geheel getal, gebaseerd op een opgegeven tijdstempel.
 
 **Indeling**
 
@@ -86,7 +86,7 @@ De volgende PQL-query controleert of het geboortejaar van de persoon in 1991, 19
 person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 ```
 
-## Huidige dag van de maand
+## Huidige dag van maand
 
 De `currentDayOfMonth` Deze functie retourneert de huidige dag van de maand als een geheel getal.
 

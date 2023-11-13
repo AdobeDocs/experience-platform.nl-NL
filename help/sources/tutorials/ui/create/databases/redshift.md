@@ -1,11 +1,11 @@
 ---
 title: Een Amazon Redshift Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Amazon Redshift-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
-badgeUltimate: label="Ultimate" type="Positive"
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '475'
 ht-degree: 1%
 
 ---
@@ -22,21 +22,21 @@ Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding met 
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   - [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 Als u al een geldige [!DNL Redshift] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/databases.md).
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL Redshift] account op Experience Platform, moet u de volgende waarden opgeven:
+Voor toegang tot uw [!DNL Redshift] account op Experience Platform, moet u de volgende waarden opgeven:
 
 | **Credentials** | **Beschrijving** |
 | -------------- | --------------- |
 | Server | De server die aan uw [!DNL Redshift] account. |
-| Poort | De haven van TCP die [!DNL Redshift] server gebruikt om naar clientverbindingen te luisteren. |
+| Poort | De haven van TCP die a [!DNL Redshift] server gebruikt om naar clientverbindingen te luisteren. |
 | Gebruikersnaam | De gebruikersnaam die aan uw [!DNL Redshift] account. |
 | Wachtwoord | Het wachtwoord dat aan uw [!DNL Redshift] account. |
 | Database | De [!DNL Redshift] database die u opent. |
@@ -63,7 +63,7 @@ De **[!UICONTROL Connect to Amazon Redshift]** wordt weergegeven. Op deze pagina
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Redshift] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Redshift] referenties. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![](../../../../images/tutorials/create/redshift/new.png)
 

@@ -22,13 +22,13 @@ Dit document verstrekt informatie over hoe u het zelf-identificatieonderzoek in 
 
 Lees voor meer informatie over Adobe Experience Platform de [Overzicht van Experience Platform](home.md).
 
-## Zelfidentificatieonderzoek in de gebruikersinterface van het Platform
+## Zelfidentificatieonderzoek in de gebruikersinterface van het platform
 
-De herinnering van het zelfidentificatienonderzoek verschijnt in het bodemrecht van de homepage van het Platform UI bij het ondertekenen binnen.
+De zelfidentificatiemethode van de enquêteherinnering verschijnt in het bodemrecht van de homepage van het Platform UI wanneer het ondertekenen binnen.
 
 Als u wilt beginnen met de enquête, selecteert u **[!UICONTROL Start]**.
 
-![De homepage van UI van het Platform met het pop-upbericht die u ertoe aanzetten om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
+![De homepage van UI van het Platform met het pop-upbericht die u ertoe aanzet om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
 
 Voor de eerste enquêtevraag selecteert u de functie die het beste uw werk beschrijft.
 
@@ -81,16 +81,16 @@ Als uw zelfidentificatie-enquête is voltooid, selecteert u **[!UICONTROL Done]*
 
 Werk uw taakfuncties en objecten bij met het voorkeurenmenu Experience Cloud. Als u het voorkeurenmenu wilt openen, selecteert u het profielpictogram in de bovenste navigatie en selecteert u vervolgens **[!UICONTROL Preferences]**.
 
-![De startpagina van de gebruikersinterface van het Platform met het profielpictogram en de voorkeursknoppen geselecteerd.](./images/survey/preferences.png)
+![De startpagina van de gebruikersinterface van het platform met het profielpictogram en de voorkeursknoppen geselecteerd.](./images/survey/preferences.png)
 
 Volgende, in [!UICONTROL General] in het menu met uw profielvoorkeuren selecteert u **[!UICONTROL Update your job functions and objectives]**.
 
-![De algemene sectie van de pagina met gebruikersinterfaceprofielvoorkeuren van het Platform](./images/survey/update.png)
+![Het algemene gedeelte van de pagina met voorkeuren voor platformgebruikersinterface](./images/survey/update.png)
 
 De zelfidentificatiecode wordt weergegeven, zodat u de reacties opnieuw kunt configureren en uw profiel kunt bijwerken.
 
-![De pagina met voorkeuren voor gebruikersinterfaceprofielen van het Platform waarop de zelfidentificatiecode-enquête wordt weergegeven, zodat een gebruiker zijn of haar persoonlijke profiel kan bijwerken.](./images/survey/new-survey.png)
+![De pagina met voorkeuren voor het gebruikersprofiel van het platform waarop de zelfidentificatie-enquête wordt weergegeven, zodat een gebruiker zijn persoonlijke profiel kan bijwerken.](./images/survey/new-survey.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu informatie over uw taakfuncties en -doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de gebruikersinterface van het Platform gebruikt. Lees voor meer informatie over de gebruikersinterface van het Platform de [Overzicht van Experience Platform](home.md).
+Door dit document te lezen, hebt u nu informatie over uw taakfuncties en -doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de interface van het platform gebruikt. Voor meer informatie over de interface van het Platform, lees [Overzicht van Experience Platform](home.md).

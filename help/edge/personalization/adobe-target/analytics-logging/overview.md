@@ -1,5 +1,5 @@
 ---
-title: Adobe Analytics for Target (A4T) Aanmelden bij de Web SDK van het Platform
+title: Adobe Analytics for Target (A4T)-aanmelding in de Platform Web SDK
 description: Leer hoe te om de inzameling van Adobe Analytics voor Doel (A4T) gegevens te controleren gebruikend het Web SDK van het Experience Platform.
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 ---
 
-# Aanmelden bij Adobe Analytics for Target (A4T) via de Web SDK van het Platform
+# Aanmelden bij Adobe Analytics for Target (A4T) via de Platform Web SDK
 
 Als u Adobe Target gebruikt voor personalisatie, kunt u kiezen welk systeem u wilt gebruiken voor het meten van de prestaties. Elk [Doelactiviteit](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) kunt u kiezen tussen Target-rapportage en Adobe Analytics-rapportage.
 
@@ -38,4 +38,4 @@ De registrerenmethode wordt bepaald door of u Adobe Analytics op uw gevormde heb
 Dit document verstrekte een korte inleiding aan de verschillende registrerenmethodes voor gegevens A4T in het Web SDK. Raadpleeg de volgende documentatie voor meer informatie over elk van deze methoden:
 
 * [Server-kant registreren voor A4T gegevens in het Web SDK van het Platform](./server-side.md)
-* [Clientregistratie voor A4T-gegevens in de Web SDK van het Platform](./client-side.md)
+* [Logboekregistratie aan de clientzijde voor A4T-gegevens in de Platform Web SDK](./client-side.md)

@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;bronschakelaars;bronschakelaar;bronnen;gegevensbronnen;gegevensbron;gegevensbronverbinding
 solution: Experience Platform
 title: Overzicht van bronconnectors
-description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 7c83a946ca30f1bf016cc42245d7d52f2c034f18
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Overzicht van bronconnectors
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens uit diverse bronnen invoeren, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 [!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -28,17 +28,17 @@ Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronn
 
 ## Adobe-gebouwde en partner-gebouwde bronnen {#adobe-and-partner-built-sources}
 
-Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door het gebruiken van [Bronnen-SDK](/help/sources/sources-sdk/overview.md). Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld de [Amazon S3-connector](/help/sources/connectors/cloud-storage/s3.md) wordt gemaakt door Adobe, terwijl de [RainFocus-connector](/help/sources/connectors/analytics/rainfocus.md) wordt gecreeerd en door het team RainFocus gehandhaafd.
+Sommige schakelaars in de de broncatalogus van het Experience Platform worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door te gebruiken [Bronnen-SDK](/help/sources/sources-sdk/overview.md). Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld de [Amazon S3-connector](/help/sources/connectors/cloud-storage/s3.md) wordt gemaakt door Adobe, terwijl de [RainFocus-connector](/help/sources/connectors/analytics/rainfocus.md) wordt gecreeerd en door het team RainFocus gehandhaafd.
 
-Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe geschreven en onderhouden connectors contact op met uw Adobe of de klantenservice.
+Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door de Adobe ontworpen en onderhouden connectors contact op met uw Adobe of de klantenservice.
 
 ## Typen bronnen
 
 Bronnen in Experience Platform worden gegroepeerd in de volgende categorieën:
 
-### Adobe-toepassingen {#adobe-applications}
+### Adoben {#adobe-applications}
 
-Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager, worden ingesloten. Zie de volgende verwante documenten voor meer informatie:
+Met Experience Platform kunnen gegevens uit andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager, worden ingevoerd. Zie de volgende verwante documenten voor meer informatie:
 
 - [Adobe Audience Manager-bronoverzicht](connectors/adobe-applications/audience-manager.md)
    - [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -49,7 +49,7 @@ Met Experience Platform kunnen gegevens van andere Adobe-toepassingen, zoals Ado
 - [Adobe Campaign Managed Cloud Services-bronoverzicht](connectors/adobe-applications/campaign.md)
    - [Een Adobe Campaign Managed Cloud Services-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Adobe Commerce-bronoverzicht](connectors/adobe-applications/commerce.md)
-- [Overzicht van de bron van Adobe-gegevensverzameling](connectors/adobe-applications/data-collection.md)
+- [Overzicht van de bron voor gegevensverzameling voor Adoben](connectors/adobe-applications/data-collection.md)
    - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] bronoverzicht](connectors/adobe-applications/marketo/marketo.md)
    - [Een [!DNL Marketo Engage] bronverbinding in de gebruikersinterface](./tutorials/ui/create/adobe-applications/marketo.md)
@@ -71,7 +71,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een ex
 
 ### Cloud Storage {#cloud-storage}
 
-Opslagbronnen in de cloud kunnen uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
@@ -221,8 +221,8 @@ Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees [op attri
 
 Door een van de bronnen met het label bèta (&quot;Beta&quot;) te gebruiken, bevestigt u hierbij dat de bèta wordt geleverd ***&quot;zoals is&quot; zonder enige garantie***.
 
-Adobe is niet verplicht het bètaprogramma te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden voorzichtig te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke bèta en/of begeleidende materialen. De bètaversie wordt beschouwd als vertrouwelijke informatie van Adobe.
+Adobe is niet verplicht het bètaprogramma te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden voorzichtig te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke bèta en/of begeleidende materialen. De bètaversie wordt beschouwd als vertrouwelijke informatie over Adobe.
 
-Elke &quot;feedback&quot; (informatie over de bètaversie, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de bètaversie, suggesties, verbeteringen en aanbevelingen) die u aan Adobe hebt gegeven, wordt toegewezen aan Adobe, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
+Elke &quot;feedback&quot; (informatie over de bètaversie, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de bètaversie, suggesties, verbeteringen en aanbevelingen) die u aan de Adobe verstrekt, wordt toegewezen aan de Adobe, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
 
 Verzend Open Feedback of maak een Support Ticket om uw suggesties te delen of een bug te melden en een functieverbetering te zoeken.

@@ -48,7 +48,7 @@ De **[!UICONTROL Performance summary]** op het tabblad worden de werkelijke chur
 
 ## Details van serviceinstantie
 
-Er zijn twee manieren om de details van de de dienstinstantie te bekijken: van het dashboard of in de service-instantie.
+Er zijn twee manieren om de details van de de dienstinstantie te bekijken: van het dashboard of binnen de de dienstinstantie.
 
 ### Service-exemplaar dashboard
 
@@ -58,8 +58,8 @@ Om een overzicht van de details van de de dienstinstantie binnen het dashboard t
 - **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** Kopieert de momenteel geselecteerde de dienstinstantie opstelling. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
 - **[!UICONTROL Delete]**: U kunt een de dienstinstantie, met inbegrip van om het even welke historische looppas schrappen.
 - **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die door dit exemplaar wordt gebruikt.
-- **[!UICONTROL Run Frequency]**: Hoe vaak en wanneer een scoring wordt uitgevoerd.
-- **[!UICONTROL Score definition]**: Een snel overzicht van het doel u voor deze instantie vormde.
+- **[!UICONTROL Run Frequency]**: Hoe vaak een scoring wordt uitgevoerd en wanneer.
+- **[!UICONTROL Score definition]**: Een snel overzicht van het doel dat u voor deze instantie hebt geconfigureerd.
 
 ![](../images/user-guide/service-instance-panel.png)
 
@@ -71,11 +71,11 @@ Om een overzicht van de details van de de dienstinstantie binnen het dashboard t
 
 ### Meer inzichten weergeven vervolgkeuzelijst
 
-De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. Selecteren **[!UICONTROL Show more]** in de rechterbovenhoek om een vervolgkeuzelijst te vullen. De details zijn vermeld zoals de scoredefinitie, toen het werd gecreeerd, het aandrijvingstype, en de gebruikte datasets. Voor meer informatie over de eigenschappen die worden vermeld, gaat u naar [Een AI-instantie van de klant configureren](./configure.md).
+De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. Selecteren **[!UICONTROL Show more]** in de rechterbovenhoek om een vervolgkeuzelijst te vullen. De details zijn vermeld zoals de scoredefinitie, toen het werd gecreeerd, het aandrijvingstype, en de gebruikte datasets. Ga voor meer informatie over de eigenschappen die worden vermeld naar [Een AI-instantie van de klant configureren](./configure.md).
 
 ![meer weergeven](../images/insights/landing-show-more.png)
 
-### Voorvertoningsvenster van AI-gegevensset
+### Voorvertoning van AI-gegevensset van klant
 
 Als de AI van de Klant meer dan één dataset gebruikt, een hyperlink geëtiketteerd **[!UICONTROL Multiple]** gevolgd door het aantal gegevenssets tussen haakjes `()` wordt opgegeven.
 
@@ -87,7 +87,7 @@ Als u de koppeling met meerdere gegevenssets selecteert, wordt de voorvertoning 
 
 ### Een instantie bewerken
 
-Selecteer **[!UICONTROL Edit]** in de navigatie rechtsboven.
+Als u een exemplaar wilt bewerken, selecteert u **[!UICONTROL Edit]** in de navigatie rechtsboven.
 
 ![Klik op de knop Bewerken](../images/insights/edit-button.png)
 
@@ -100,8 +100,8 @@ Het dialoogvenster Bewerken wordt weergegeven. In dit dialoogvenster kunt u de n
 De **[!UICONTROL More actions]** bevindt zich in de navigatie rechtsboven naast **[!UICONTROL Edit]**. Selecteren **[!UICONTROL More actions]** Hiermee opent u een vervolgkeuzelijst waarin u een van de volgende bewerkingen kunt selecteren:
 
 - **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** kopieert de de dienstinstantie opstelling. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
-- **[!UICONTROL Delete]**: Hiermee wordt de instantie verwijderd.
-- **[!UICONTROL Access scores]**: Selecteren **[!UICONTROL Access scores]** opent een dialoogvenster met een koppeling naar de [Downloadscores voor AI van de Klant](./download-scores.md) de zelfstudie, verstrekt de dialoog ook dataset identiteitskaart die voor het maken van API vraag wordt vereist.
+- **[!UICONTROL Delete]**: Verwijdert de instantie.
+- **[!UICONTROL Access scores]**: Selecteren **[!UICONTROL Access scores]** opent een dialoogvenster met een koppeling naar de [Downloadscores voor Customer AI](./download-scores.md) de zelfstudie, verstrekt de dialoog ook dataset identiteitskaart die voor het maken van API vraag wordt vereist.
 - **[!UICONTROL View run history]**: Er wordt een dialoogvenster weergegeven met een lijst van alle scores die zijn gekoppeld aan de service-instantie.
 
 ![meer acties](../images/insights/more-actions.png)
@@ -142,11 +142,11 @@ Bovendien, gebruikend boor-downs, kunt u een distributiefactor vergelijken als h
 
 ![](../images/insights/drilldown-compare.png)
 
-U ziet dat profielen met een lage conversiemogelijkheid waarschijnlijk geen recent bezoek hebben gebracht aan de webpagina&#39;s van adobe.com. De factor &quot;Dagen sinds laatste webVisit&quot; heeft slechts een dekking van 8%, vergeleken met 26% in profielen met gemiddelde neiging. Met deze getallen kunt u de verdeling binnen elk emmertje voor de factor vergelijken. Deze informatie kan worden gebruikt om te concluderen dat de recentie in webbezoek niet zo invloedrijk is in het emmertje met lage dichtheid als in het emmer met gemiddelde dichtheid.
+U ziet dat profielen met een lage conversiesnelheid waarschijnlijk geen recent bezoek hebben gebracht aan de adobe.com-webpagina&#39;s. De factor &quot;Dagen sinds laatste webVisit&quot; heeft slechts een dekking van 8%, vergeleken met 26% in profielen met gemiddelde neiging. Met deze getallen kunt u de verdeling binnen elk emmertje voor de factor vergelijken. Deze informatie kan worden gebruikt om te concluderen dat de recentie in webbezoek niet zo invloedrijk is in het emmertje met lage dichtheid als in het emmer met gemiddelde dichtheid.
 
 ### Een segment maken
 
-Het selecteren van **[!UICONTROL Create Segment]** de knoop in om het even welke emmers voor lage, middelmatige, en hoge neiging richt u aan de segmentbouwer opnieuw.
+De **[!UICONTROL Create Segment]** de knoop in om het even welke emmers voor lage, middelmatige, en hoge neiging richt u aan de segmentbouwer opnieuw.
 
 >[!NOTE]
 >
@@ -156,7 +156,7 @@ Het selecteren van **[!UICONTROL Create Segment]** de knoop in om het even welke
 
 ![Een segment maken](../images/insights/create-segment.png)
 
-De segmentbouwer wordt gebruikt om een segment te bepalen. Als u **[!UICONTROL Create Segment]** vanaf de pagina Insights voegt de Customer AI automatisch de geselecteerde buckets-informatie aan het segment toe. Als u het maken van het segment wilt voltooien, vult u gewoon de **Naam** en **Beschrijving** containers die in de juiste spoorstaaf van het segment worden gevestigd bouwer gebruikersinterface. Nadat u het segment een naam en een beschrijving hebt gegeven, selecteert u **[!UICONTROL Save]** in de rechterbovenhoek.
+De segmentbouwer wordt gebruikt om een segment te bepalen. Als u **[!UICONTROL Create Segment]** vanaf de pagina Insights voegt de Customer AI automatisch de geselecteerde buckets-informatie aan het segment toe. Als u het maken van het segment wilt voltooien, vult u gewoon de **Naam** en **Beschrijving** containers die in de juiste spoorstaaf van het segment worden gevestigd bouwer gebruikersinterface. Nadat u het segment een naam en een beschrijving hebt gegeven, selecteert u **[!UICONTROL Save]** rechtsboven.
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ De segmentbouwer wordt gebruikt om een segment te bepalen. Als u **[!UICONTROL C
 
 ![Segmentvulling in](../images/insights/segment-saving.png)
 
-Als u uw nieuwe segment wilt weergeven in de gebruikersinterface van het Platform, selecteert u **[!UICONTROL Segments]** in de linkernavigatie. De **[!UICONTROL Browse]** wordt weergegeven en worden alle beschikbare segmenten weergegeven.
+Als u uw nieuwe segment wilt weergeven in de interface van het platform, selecteert u **[!UICONTROL Segments]** in de linkernavigatie. De **[!UICONTROL Browse]** wordt weergegeven en worden alle beschikbare segmenten weergegeven.
 
 ![Alle segmenten](../images/insights/Segments-dashboard.png)
 
@@ -180,7 +180,7 @@ Als u de muis boven de regels houdt, worden de datum en de werkelijke/verwachte 
 
 ![Voorbeeld van een emmertje](../images/insights/churn_tab.png)
 
-U kunt het tijdkader filteren voor de verwachte en daadwerkelijke tarieven die worden getoond. Selecteer **kalenderpictogram** ![pictogram](../images/insights/calendar_icon.png)Selecteer vervolgens een nieuw datumbereik. De resultaten in elk van de emmers worden bijgewerkt om binnen het nieuwe datumbereik weer te geven.
+U kunt het tijdkader filteren voor de verwachte en daadwerkelijke tarieven die worden getoond. Selecteer de **kalenderpictogram** ![pictogram](../images/insights/calendar_icon.png)Selecteer vervolgens een nieuw datumbereik. De resultaten in elk van de emmers worden bijgewerkt om binnen het nieuwe datumbereik weer te geven.
 
 ![Datumkiezer](../images/insights/date_selector.png)
 
@@ -198,7 +198,7 @@ Naast het volgen van de voorspelde en daadwerkelijke resultaten in tijd op het H
 
 ### Liftdiagram
 
-![lift](../images/user-guide/lift-chart.png)
+![heft](../images/user-guide/lift-chart.png)
 
 De liftgrafiek meet de verbetering van het gebruik van een voorspellend model in plaats van een willekeurige gerichtheid.
 
@@ -225,10 +225,10 @@ De AUC weerspiegelt de sterkte van de verhouding tussen de rangschikking door sc
 
 ## Volgende stappen
 
-In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu doorgaan met de zelfstudie op [scores downloaden in Customer AI](./download-scores.md) of door de andere [Adobe Intelligente services](../../home.md) gidsen die worden aangeboden.
+In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu doorgaan met de zelfstudie op [scores downloaden in Customer AI](./download-scores.md) of door de ander bladeren [Adobe Intelligente Diensten](../../home.md) gidsen die worden aangeboden.
 
 ## Aanvullende bronnen
 
-In de volgende video wordt beschreven hoe u de uitvoer van de modellen en invloedrijke factoren kunt bekijken aan de hand van Customer AI.
+In de volgende video wordt beschreven hoe u de uitvoer van de modellen en invloedrijke factoren kunt bekijken aan de hand van de AI van de klant.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen; Protocol inzake bestandsoverdracht; bestandsoverdrachtprotocol
+keywords: Experience Platform;home;populaire onderwerpen; File Transfer Protocol; protocol voor bestandsoverdracht
 solution: Experience Platform
 title: Een FTP-basisverbinding maken met de Flow Service API
 type: Tutorial
@@ -33,7 +33,7 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 
 ### Vereiste referenties verzamelen
 
-Om [!DNL Flow Service] om verbinding te maken met [!DNL FTP]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
+Om [!DNL Flow Service] verbinding maken met [!DNL FTP]moet u waarden opgeven voor de volgende eigenschappen van de verbinding:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -44,13 +44,13 @@ Om [!DNL Flow Service] om verbinding te maken met [!DNL FTP]moet u waarden opgev
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL FTP] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL FTP] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 

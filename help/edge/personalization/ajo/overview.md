@@ -1,5 +1,5 @@
 ---
-title: Adobe Journey Optimizer gebruiken met de SDK van het Web van het Platform
+title: Adobe Journey Optimizer gebruiken met de Platform Web SDK
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe road optimizer;renderDecisions;surfaces;decisions;proposities;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Terminologie {#terminology}
 
-**[!UICONTROL Surface]**: Een weboppervlak is een webeigenschap die wordt geïdentificeerd door een URL waarbij [!DNL Adobe Journey Optimizer] ervaringsinhoud wordt geleverd.
+**[!UICONTROL Surface]**: Een weboppervlak is een webeigenschap die wordt geïdentificeerd door een URL waarbij de [!DNL Adobe Journey Optimizer] ervaringsinhoud wordt geleverd.
 
 **[!UICONTROL Propositions]**: In [!DNL Adobe Journey Optimizer], correleren voorstellen met de ervaring die is gekozen op basis van een [!DNL Journey Optimizer Campaign].
 
@@ -31,7 +31,7 @@ Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande st
 1. Ga door de [voorwaarden](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) van de [!DNL Adobe Journey Optimizer] [Web Experience Guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), met name:
    * Instellen [!DNL Adobe Experience Cloud Visual Editing Helper].
    * Inschakelen [!DNL Adobe Journey Optimizer] in uw [datastream](../../../datastreams/overview.md).
-   * De optie [!UICONTROL Active-On-Edge Merge Policy] optie.
+   * De optie [!UICONTROL Active-On-Edge Merge Policy] -optie.
 
 2. Voeg de `renderDecisions` aan uw gebeurtenissen. Set `renderDecisions` tot `true` voor automatische weergave van geleverde Journey Optimizer-inhoudsprofielen op de oppervlakken van uw webpagina.
 
@@ -42,7 +42,7 @@ Als u wilt beginnen met [!DNL Adobe Journey Optimizer]volgt u de onderstaande st
    })
    ```
 
-3. Geef desgewenst extra oppervlakken op in uw gebeurtenissen. Door gebrek, zal SDK van het Web automatisch de Weboppervlakte voor de huidige Web-pagina produceren en zal het in het verzoek aan het Netwerk van de Rand omvatten. Indien nodig kunnen aanvullende oppervlakken in het verzoek worden opgenomen door deze op te geven in het dialoogvenster `personalization.surfaces` de `sendEvent` of in het corresponderende **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuratie van de extensie van Web SDK.
+3. Geef desgewenst extra oppervlakken op in uw gebeurtenissen. Door gebrek, zal SDK van het Web automatisch de Weboppervlakte voor de huidige Web-pagina produceren en zal het in het verzoek aan het Netwerk van de Rand omvatten. Indien nodig kunnen aanvullende oppervlakken in het verzoek worden opgenomen door deze op te geven in het dialoogvenster `personalization.surfaces` van de `sendEvent` of in de bijbehorende **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuratie van de extensie van Web SDK.
 
    ```javascript
    alloy("sendEvent", {
@@ -90,7 +90,7 @@ Volg de [webcampagne ontwerpen](https://experienceleague.adobe.com/docs/journey-
 
 Zie de documentatie op [weergave van personalisatie-inhoud](../rendering-personalization-content.md) voor meer informatie .
 
-Adobe Journey Optimizer-voorstellingen voor weblaten worden op vergelijkbare wijze verwerkt als de `__view__` voorstellen voor het toepassingsgebied van de beslissing. Wanneer `renderDecisions` optie is ingesteld op `true` in de `sendEvent` bevel zullen deze automatisch door het Web SDK worden teruggegeven.
+Adobe Journey Optimizer-voorstellingen voor weblaten worden op vergelijkbare wijze verwerkt als de `__view__` voorstellen voor het toepassingsgebied van de beslissing. Specifiek, wanneer `renderDecisions` optie is ingesteld op `true` in de `sendEvent` bevel zullen deze automatisch door het Web SDK worden teruggegeven.
 
 Voorbeeld Journey Optimizer-inhoudsvoorstel:
 
@@ -145,6 +145,6 @@ Voorbeeld Journey Optimizer-inhoudsvoorstel:
 
 ## Foutopsporing {#debugging}
 
-Voor foutopsporing in Adobe Journey Optimizer-implementaties kunt u [[!DNL Web SDK] foutopsporing](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] foutopsporingssporen zijn beschikbaar bij het oplossen van problemen met [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Controleren op gebeurtenissen met de opdracht `AJO:` voorvoegsel.
+Voor foutopsporing in Adobe Journey Optimizer-implementaties kunt u [[!DNL Web SDK] foutopsporing](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] foutopsporingssporen zijn beschikbaar bij het oplossen van problemen met [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Controleren op gebeurtenissen met de opdracht `AJO:` voorvoegsel
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

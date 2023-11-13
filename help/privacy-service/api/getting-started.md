@@ -47,13 +47,13 @@ De **[!UICONTROL Add an API]** wordt weergegeven. Selecteren **[!UICONTROL Exper
 
 >[!TIP]
 >
->Selecteer **[!UICONTROL View docs]** om in een afzonderlijk browservenster naar het volledige venster te navigeren [Privacy Service API-naslagdocumentatie](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+>Selecteer de **[!UICONTROL View docs]** om in een afzonderlijk browservenster naar het volledige venster te navigeren [Privacy Service API-naslagdocumentatie](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 Selecteer vervolgens het verificatietype dat u wilt maken voor het genereren van toegangstokens en voor toegang tot de Privacy Service-API.
 
 >[!IMPORTANT]
 >
->Selecteer **[!UICONTROL OAuth Server-to-Server]** -methode, aangezien dit de enige methode is die wordt ondersteund om verder te gaan. De **[!UICONTROL Service Account (JWT)]** methode is afgekeurd. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](/help/landing/api-authentication.md#jwt).
+>Selecteer de **[!UICONTROL OAuth Server-to-Server]** -methode, aangezien dit de enige methode is die wordt ondersteund om verder te gaan. De **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](/help/landing/api-authentication.md#jwt).
 
 ![Selecteer Oauth Server-aan-Server authentificatiemethode.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
@@ -65,7 +65,7 @@ De laatste configuratiestap bestaat uit het selecteren van de productprofielen w
 >
 Productprofielen en de bijbehorende granulaire machtigingen worden door beheerders gemaakt en beheerd via Adobe Admin Console. Zie de handleiding op [Machtigingen voor Privacy Service](../permissions.md) voor meer informatie .
 
-Als u klaar bent, selecteert u **[!UICONTROL Save configured API]**.
+Selecteer **[!UICONTROL Save configured API]**.
 
 ![Eén enkel productprofiel dat wordt geselecteerd in de lijst voordat de configuratie wordt opgeslagen](../images/api/getting-started/select-product-profiles.png)
 

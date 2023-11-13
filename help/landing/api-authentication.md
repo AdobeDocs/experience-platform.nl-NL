@@ -6,7 +6,7 @@ description: Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen 
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2125'
+source-wordcount: '2124'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Experience Platform-API&#39;s verifiëren en openen
 
-Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API&#39;s. Aan het eind van dit leerprogramma, zult u de volgende geloofsbrieven hebben geproduceerd of verzameld die als kopballen in alle Platform API vraag worden vereist:
+Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API&#39;s. Aan het einde van deze zelfstudie hebt u de volgende gegevens gegenereerd of verzameld die als headers zijn vereist voor alle API-aanroepen van het platform:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -22,11 +22,11 @@ Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang t
 
 >[!TIP]
 >
->Naast de drie bovenstaande referenties is voor veel Platform-API&#39;s ook een geldige `{SANDBOX_NAME}` te verstrekken als koptekst. Zie de [sandboxen, overzicht](../sandboxes/home.md) voor meer informatie over sandboxen en de [sandboxbeheereindpunt](/help/sandboxes/api/sandboxes.md#list) documentatie voor informatie over het vermelden van de zandbakken beschikbaar aan uw organisatie.
+>Naast de drie bovenstaande referenties, vereisen veel platform-API&#39;s ook een geldige `{SANDBOX_NAME}` te verstrekken als koptekst. Zie de [sandboxen, overzicht](../sandboxes/home.md) voor meer informatie over sandboxen en de [sandboxbeheereindpunt](/help/sandboxes/api/sandboxes.md#list) documentatie voor informatie over het vermelden van de zandbakken beschikbaar aan uw organisatie.
 
 Om de veiligheid van uw toepassingen en gebruikers te handhaven, moeten alle verzoeken aan Experience Platform APIs worden voor authentiek verklaard en worden gemachtigd gebruikend normen zoals OAuth.
 
-In deze zelfstudie wordt uitgelegd hoe u de vereiste gegevens verzamelt voor het verifiëren van API-aanroepen van Platforms, zoals in het onderstaande stroomschema wordt beschreven. U kunt de meeste vereiste geloofsbrieven in eerste éénmalige opstelling verzamelen. Het toegangstoken, echter, moet om de 24 uur worden verfrist.
+In deze zelfstudie wordt uitgelegd hoe u de vereiste referenties kunt verzamelen voor het verifiëren van API-aanroepen van het platform, zoals hieronder in het stroomschema wordt beschreven. U kunt de meeste vereiste geloofsbrieven in eerste éénmalige opstelling verzamelen. Het toegangstoken, echter, moet om de 24 uur worden verfrist.
 
 ![](./images/api-authentication/authentication-flowchart.png)
 
@@ -66,7 +66,7 @@ Zie de handleiding op [gebruikersgroepen beheren in [!DNL Admin Console]](https:
 >
 >Als u dit document volgt vanuit de [Handleiding Privacy Service-API](../privacy-service/api/getting-started.md), kunt u nu terugkeren naar die gids om de toegangsgeloofsbrieven te produceren uniek aan [!DNL Privacy Service].
 
-Nadat u ontwikkelaars en gebruikers toegang tot Platform hebt gegeven door [!DNL Admin Console]De volgende stap bestaat uit het genereren van uw `{ORG_ID}` en `{API_KEY}` referenties in Adobe Developer Console. Deze geloofsbrieven moeten slechts eenmaal worden geproduceerd en kunnen in toekomstige Platform API vraag worden opnieuw gebruikt.
+Nadat u ontwikkelaars en gebruikers toegang tot Platform door hebt gegeven [!DNL Admin Console]De volgende stap bestaat uit het genereren van uw `{ORG_ID}` en `{API_KEY}` referenties in Adobe Developer Console. Deze geloofsbrieven moeten slechts eenmaal worden geproduceerd en kunnen in toekomstige vraag van Platform API worden opnieuw gebruikt.
 
 ### Experience Platform toevoegen aan een project {#add-platform-to-project}
 
@@ -94,7 +94,7 @@ Selecteer vervolgens het verificatietype dat u wilt maken voor het genereren van
 
 >[!IMPORTANT]
 >
->Selecteer de **[!UICONTROL OAuth Server-to-Server]** de enige methode die wordt ondersteund om verder te gaan. De **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](#jwt).
+>Selecteer de **[!UICONTROL OAuth Server-to-Server]** de enige methode die wordt ondersteund om verder te gaan. De **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Meer informatie ophalen in de sectie [!BADGE Vervangen]{type=negative}[Een JSON-webtoken (JWT) genereren](#jwt).
 
 ![Selecteer Experience Platform-API.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -142,7 +142,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## Een toegangstoken genereren {#generate-access-token}
 
-De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` referentie voor gebruik in Platform API vraag. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}`moet om de 24 uur een nieuw token worden gegenereerd om Platform API&#39;s te kunnen blijven gebruiken. Selecteren **[!UICONTROL Generate access token]**, zoals hieronder weergegeven.
+De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` referentie voor gebruik in platform API vraag. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}`moet om de 24 uur een nieuw token worden gegenereerd om door te gaan met het gebruik van platform-API&#39;s. Selecteren **[!UICONTROL Generate access token]**, zoals hieronder weergegeven.
 
 ![Toon hoe te om toegangstoken te produceren](././images/api-authentication/generate-access-token.gif)
 
@@ -154,7 +154,7 @@ U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te g
 
 >[!WARNING]
 >
-De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreëerd met de [OAuth Server-aan-Server authentificatiemethode](#select-oauth-server-to-server). Adobe raadt u ook aan uw bestaande integratie te migreren naar de methode OAuth. Lees de volgende belangrijke documentatie:
+De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreëerd met de [OAuth Server-aan-Server authentificatiemethode](#select-oauth-server-to-server). De Adobe adviseert ook dat u uw bestaande integraties aan de methode OAuth migreert. Lees de volgende belangrijke documentatie:
 > 
 * [Migratiehandleiding voor uw toepassingen van JWT naar OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Implementatiehandleiding voor nieuwe en oude toepassingen met OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -162,7 +162,7 @@ De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe i
 
 +++ Vervangen gegevens weergeven
 
-De volgende stap bestaat uit het genereren van een JSON Web Token (JWT) op basis van uw accountgegevens. Deze waarde wordt gebruikt om uw `{ACCESS_TOKEN}` referentie voor gebruik in Platform API vraag, die om de 24 uur opnieuw moet worden geproduceerd.
+De volgende stap bestaat uit het genereren van een JSON Web Token (JWT) op basis van uw accountgegevens. Deze waarde wordt gebruikt om uw `{ACCESS_TOKEN}` referentie voor gebruik in API-aanroepen van Platform, die elke 24 uur opnieuw moet worden gegenereerd.
 
 >[!IMPORTANT]
 >
@@ -184,7 +184,7 @@ De pagina wordt bijgewerkt om de gegenereerde JWT weer te geven, samen met een v
 
 **Een toegangstoken genereren**
 
-Nadat u een JWT hebt gegenereerd, kunt u deze gebruiken in een API-aanroep om uw `{ACCESS_TOKEN}`. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}`moet om de 24 uur een nieuw token worden gegenereerd om Platform API&#39;s te kunnen blijven gebruiken.
+Nadat u een JWT hebt gegenereerd, kunt u deze gebruiken in een API-aanroep om uw `{ACCESS_TOKEN}`. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}`moet om de 24 uur een nieuw token worden gegenereerd om door te gaan met het gebruik van platform-API&#39;s.
 
 **Verzoek**
 
@@ -220,9 +220,9 @@ U kunt dezelfde API-sleutel, clientgeheim en JWT gebruiken om een nieuw toegangs
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `token_type` | Het type token dat wordt geretourneerd. Deze waarde is altijd voor toegangstokens `bearer`. |
-| `access_token` | De gegenereerde `{ACCESS_TOKEN}`. Deze waarde, voorafgegaan door het woord `Bearer`is vereist als de `Authentication` header voor alle Platform API-aanroepen. |
-| `expires_in` | Het aantal milliseconden dat resteert tot het toegangstoken verloopt. Zodra deze waarde 0 bereikt, moet een nieuw toegangstoken worden geproduceerd om Platform APIs te blijven gebruiken. |
+| `token_type` | Het type of token dat wordt geretourneerd. Deze waarde is altijd voor toegangstokens `bearer`. |
+| `access_token` | De gegenereerde `{ACCESS_TOKEN}`. Deze waarde, voorafgegaan door het woord `Bearer`is vereist als de `Authentication` header voor alle API-aanroepen van Platform. |
+| `expires_in` | Het aantal milliseconden dat resteert tot het toegangstoken verloopt. Zodra deze waarde 0 bereikt, moet een nieuw toegangstoken worden geproduceerd om het blijven gebruiken van Platform APIs. |
 
 +++
 
@@ -381,6 +381,6 @@ Raadpleeg de aanvullende bronnen die hieronder zijn gekoppeld voor meer hulp bij
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u uw toegangsreferenties voor Platform-API&#39;s verzameld en getest. U kunt nu de voorbeeld-API-aanroepen volgen die via de [documentatie](../landing/documentation/overview.md).
+Door dit document te lezen, hebt u uw toegangsreferenties voor platform-API&#39;s verzameld en getest. U kunt nu de voorbeeld-API-aanroepen volgen die via de [documentatie](../landing/documentation/overview.md).
 
 Naast de authentificatiewaarden u in dit leerprogramma hebt verzameld, vereisen vele Platform APIs ook een geldig `{SANDBOX_NAME}` te verstrekken als koptekst. Zie het [sandboxoverzicht](../sandboxes/home.md) voor meer informatie.

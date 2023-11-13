@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Naleving van gegevensgebruik afdwingen voor een publiekssegment met behulp van API's
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven voor het afdwingen van definities van compatibiliteitssegmenten voor gegevensgebruik met behulp van API's.
+description: In deze zelfstudie worden de stappen beschreven voor het afdwingen van definities van compatibiliteitssegmenten voor gegevensgebruik met API's.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Compatibiliteit met gegevensgebruik afdwingen voor een segmentdefinitie met API&#39;s
+# Compatibiliteit met gegevensgebruik afdwingen voor een segmentdefinitie met behulp van API&#39;s
 
 Deze zelfstudie behandelt de stappen voor het afdwingen van de naleving van gegevensgebruik voor segmentdefinities die API&#39;s gebruiken.
 
@@ -20,11 +20,11 @@ Deze zelfstudie behandelt de stappen voor het afdwingen van de naleving van gege
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Adobe Experience Platform]:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] is een generische opslag van de raadplegingsentiteit, en wordt gebruikt om te beheren [!DNL Experience Data Model (XDM)] gegevens binnen [!DNL Platform]. Het profiel voegt gegevens over diverse activa van ondernemingsgegevens samen en verleent toegang tot die gegevens in een verenigde presentatie.
-   - [Beleid samenvoegen](../../profile/api/merge-policies.md): Regels die worden gebruikt door [!DNL Real-Time Customer Profile] om te bepalen welke gegevens onder bepaalde omstandigheden in één weergave kunnen worden samengevoegd. Het beleid van de fusie kan voor de doeleinden van het Beleid van Gegevens worden gevormd.
+   - [Beleid samenvoegen](../../profile/api/merge-policies.md): Regels gebruikt door [!DNL Real-Time Customer Profile] om te bepalen welke gegevens onder bepaalde omstandigheden in één weergave kunnen worden samengevoegd. Het beleid van de fusie kan voor de doeleinden van het Beleid van Gegevens worden gevormd.
 - [[!DNL Segmentation]](../home.md): Hoe [!DNL Real-Time Customer Profile] verdeelt een grote groep individuen in de profielopslag in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
-- [Gegevensbeheer](../../data-governance/home.md): Gegevensbeheer biedt de infrastructuur voor de etikettering en handhaving van gegevensgebruik, waarbij de volgende componenten worden gebruikt:
+- [Gegevensbeheer](../../data-governance/home.md): Gegevensbeheer biedt de infrastructuur voor de etikettering en handhaving van gegevensgebruik, met behulp van de volgende componenten:
    - [Labels voor gegevensgebruik](../../data-governance/labels/user-guide.md): Etiketten die worden gebruikt om gegevenssets en velden te beschrijven in termen van het gevoeligheidsniveau waarmee hun respectieve gegevens worden verwerkt.
-   - [Beleid voor gegevensgebruik](../../data-governance/policies/overview.md): Configuraties die aangeven welke marketingacties zijn toegestaan op gegevens die zijn gecategoriseerd door bepaalde labels voor gegevensgebruik.
+   - [Beleid voor gegevensgebruik](../../data-governance/policies/overview.md): Configuraties die aangeven welke marketingacties zijn toegestaan voor gegevens die zijn gecategoriseerd door bepaalde labels voor gegevensgebruik.
    - [Beleidshandhaving](../../data-governance/enforcement/overview.md): Hiermee kunt u beleid voor gegevensgebruik afdwingen en gegevensbewerkingen die beleidsovertredingen vormen, voorkomen.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -38,7 +38,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
+- Toestemming: houder `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -135,7 +135,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | De id van het samenvoegbeleid dat is verkregen in het dialoogvenster [vorige stap](#merge-policy). |
+| `{MERGE_POLICY_ID}` | De id van het samenvoegbeleid dat in het dialoogvenster [vorige stap](#merge-policy). |
 
 **Verzoek**
 
@@ -150,7 +150,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details van het samenvoegbeleid.
+Een succesvolle reactie retourneert de details van het samenvoegingsbeleid.
 
 ```json
 {
@@ -177,16 +177,16 @@ Een succesvolle reactie retourneert de details van het samenvoegbeleid.
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `schema.name` | De naam van het schema verbonden aan het fusiebeleid. |
-| `attributeMerge.type` | Het configuratietype van de gegevensbelangrijkheid voor het samenvoegbeleid. Als de waarde `dataSetPrecedence`, worden de datasets verbonden aan dit fusiebeleid vermeld onder `attributeMerge > data > order`. Als de waarde `timestampOrdered`, dan alle datasets verbonden aan het schema in `schema.name` worden gebruikt door het samenvoegbeleid. |
+| `attributeMerge.type` | Het configuratietype van de gegevensbelangrijkheid voor het samenvoegbeleid. Als de waarde `dataSetPrecedence`, worden de datasets verbonden aan dit fusiebeleid vermeld onder `attributeMerge > data > order`. Als de waarde `timestampOrdered`, dan alle datasets verbonden aan het schema in van verwijzingen wordt voorzien `schema.name` worden gebruikt door het samenvoegbeleid. |
 | `attributeMerge.data.order` | Als de `attributeMerge.type` is `dataSetPrecedence`, zal dit attribuut een serie die IDs van de datasets bevatten door dit fusiebeleid wordt gebruikt. Deze id&#39;s worden in de volgende stap gebruikt. |
 
 ## Gegevenssets evalueren voor beleidsovertredingen
 
 >[!NOTE]
 >
-> In deze stap wordt ervan uitgegaan dat u ten minste één actief beleid voor gegevensgebruik hebt dat voorkomt dat specifieke marketingacties worden uitgevoerd op gegevens die bepaalde labels bevatten. Als u geen toepasselijk gebruiksbeleid voor de datasets hebt die worden geëvalueerd, gelieve te volgen [zelfstudie over het maken van beleid](../../data-governance/policies/create.md) om er een te maken voordat u doorgaat met deze stap.
+> In deze stap wordt ervan uitgegaan dat u ten minste één actief beleid voor gegevensgebruik hebt dat voorkomt dat specifieke marketingacties worden uitgevoerd op gegevens die bepaalde labels bevatten. Als u geen van toepassing gebruiksbeleid voor de datasets hebt die worden geëvalueerd, gelieve te volgen [zelfstudie over het maken van beleid](../../data-governance/policies/create.md) om er een te maken voordat u doorgaat met deze stap.
 
-Zodra u identiteitskaarts van de brondatasets van het fusiebeleid hebt verkregen, kunt u gebruiken [Beleidsservice-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) deze gegevensreeksen te evalueren aan de hand van specifieke marketingacties om na te gaan of er sprake is van schendingen van het gegevensgebruiksbeleid.
+Zodra u identiteitskaarts van de brondatasets van het fusiebeleid hebt verkregen, kunt u gebruiken [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) deze gegevensreeksen te evalueren aan de hand van specifieke marketingacties om na te gaan of er sprake is van schendingen van het gegevensgebruiksbeleid.
 
 Om de datasets te evalueren, moet u de naam van de marketing actie in de weg van een verzoek van de POST verstrekken, terwijl het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het voorbeeld hieronder.
 
@@ -203,7 +203,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 **Verzoek**
 
-Het volgende verzoek test de `exportToThirdParty` het in de handel brengen van [vorige stap](#datasets). De aanvraaglading is een serie die IDs van elke dataset bevat.
+Het volgende verzoek test de `exportToThirdParty` het in de handel brengen van gegevens die in het kader van de [vorige stap](#datasets). De aanvraaglading is een serie die IDs van elke dataset bevat.
 
 ```shell
 curl -X POST \

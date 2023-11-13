@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Het Model van Gegevens van de ervaring (XDM) biedt u de flexibiliteit om uw gegevensmodel te beheren aangezien uw bedrijfsbehoeften veranderen door schemagebieden af te schilderen nadat de gegevens zijn opgenomen. De ongewenste gebieden kunnen worden verouderd om hen uit de mening te verwijderen UI en hen ook te verbergen van stroomafwaartse UIs. Met een selectievakje in de Schema-editor kunt u verouderde velden weergeven en, indien nodig, kunt u deze ook ontwaarderen.
 
-Aangezien de vervangen gebieden van UI door gebrek worden verborgen, stroomlijnt dit uw schema in de Redacteur van het Schema en verhindert ongewenste gebieden aan stroomafwaartse gebiedsdelen zoals de Bouwer van het Segment, reisontwerper, etc. worden toegevoegd. Veldveroudering is ook compatibel met oudere versies. Andere systemen die afgekeurde velden gebruiken, zoals publiek en query&#39;s, zullen deze blijven evalueren zoals bedoeld. Als een afgekeurd gebied in een bestaand publiek wordt gebruikt wordt het normaal behandeld, betekenend dat het gebied zoals verwacht op het canvas van de Bouwer van het Segment verschijnt of op om het even welke gegevens wordt geëvalueerd die op de afgekeurde gebieden beschikbaar zijn. Dit is een vaste wijziging die geen negatieve invloed heeft op bestaande gegevensstromen.
+Aangezien de vervangen gebieden van UI door gebrek worden verborgen, stroomlijnt dit uw schema in de Redacteur van het Schema en verhindert ongewenste gebieden aan stroomafwaartse gebiedsdelen zoals de Bouwer van het Segment, reisontwerper, etc. worden toegevoegd. Veldveroudering is ook compatibel met oudere versies. Andere systemen die afgekeurde velden gebruiken, zoals publiek en query&#39;s, zullen deze blijven evalueren zoals bedoeld. Als een afgekeurd gebied in een bestaand publiek wordt gebruikt wordt het normaal behandeld, betekenend dat het gebied zoals verwacht op het canvas van de Bouwer van het Segment verschijnt of op om het even welke gegevens wordt geëvalueerd beschikbaar op de afgekeurde gebieden. Dit is een vaste wijziging die geen negatieve invloed heeft op bestaande gegevensstromen.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ In dit document wordt beschreven hoe u velden voor verschillende XDM-bronnen kun
 
 ## Een veld verwijderen {#deprecate}
 
-Als u een aangepast veld wilt vervangen, navigeert u naar de Schema-editor voor het schema dat u wilt bewerken. Selecteer het veld dat u wilt vervangen in het dialoogvenster [!UICONTROL Structure] sectie van het canvas, gevolgd door **[!UICONTROL Deprecate]** van de [!UICONTROL Field Properties].
+Als u een aangepast veld wilt vervangen, navigeert u naar de Schema-editor voor het schema dat u wilt bewerken. Selecteer het veld dat u wilt vervangen in het dialoogvenster [!UICONTROL Structure] het canvas, gevolgd door **[!UICONTROL Deprecate]** van de [!UICONTROL Field Properties].
 
 ![De Schema-editor met een geselecteerd veld en de optie Vervangen gemarkeerd.](../images/tutorials/field-deprecation/deprecate-single-field.png)
 
@@ -37,11 +37,11 @@ Het veld wordt nu verwijderd uit de UI-weergave.
 
 >[!NOTE]
 >
->Zodra vervangen, stroomafwaartse UIs zoals de dashboards van de Segmentatie, Customer Journey Analytics, en Adobe Journey Optimizer niet meer tonen verouderde gebieden als deel van hun werkschema. Downstreamgebruikersinterface&#39;s hebben echter de optie om vervangen velden weer te geven als dat nodig is en het vervangen veld verder als normaal te behandelen. Raadpleeg de documentatie bij deze groep voor meer informatie. De vragen en het publiek die het afgekeurde gebied gebruiken zullen blijven zoals verwacht lopen.
+>Zodra vervangen, stroomafwaartse UIs zoals de dashboards van de Segmentatie, Customer Journey Analytics, en Adobe Journey Optimizer niet meer tonen verouderde gebieden als deel van hun werkschema. Downstreamgebruikersinterface&#39;s hebben echter de optie om vervangen velden weer te geven als dat nodig is en het vervangen veld verder als normaal te behandelen. Raadpleeg de documentatie bij deze groep voor meer informatie. De vragen en het publiek die het vervangen gebied gebruiken zullen blijven zoals verwacht lopen.
 
 ## Vervangen velden tonen {#show-deprecated}
 
-Als u eerder vervangen velden wilt weergeven, navigeert u naar het desbetreffende schema in de Schema-editor. Selecteer **[!UICONTROL Show deprecated fields]** Selectievakje in het dialoogvenster [!UICONTROL Composition] van het canvas.
+Als u eerder vervangen velden wilt weergeven, navigeert u naar het desbetreffende schema in de Schema-editor. Selecteer de **[!UICONTROL Show deprecated fields]** Selectievakje in het dialoogvenster [!UICONTROL Composition] van het canvas.
 
 Het vervangen veld wordt nu weergegeven in de UI-weergave. Selecteren **[!UICONTROL Save]** om uw instellingen te bevestigen.
 

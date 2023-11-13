@@ -29,7 +29,7 @@ Deze gids vereist een werkend inzicht in de volgende componenten van Platform:
 * [Bronnen](../../../../home.md): Met Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md): Platform biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met [!DNL Oracle Responsys] met de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Oracle Responsys] met de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
@@ -46,13 +46,13 @@ Voor meer informatie over verificatiereferenties voor [!DNL Oracle Responsys], z
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Oracle Responsys] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Oracle Responsys] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -116,4 +116,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 Aan de hand van deze zelfstudie hebt u een [!DNL Oracle Responsys] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om marketingautomatiseringsgegevens naar het Platform te brengen met de opdracht [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Maak een gegevensstroom om marketingautomatiseringsgegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/marketing-automation.md)

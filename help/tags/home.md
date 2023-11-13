@@ -24,7 +24,7 @@ Tags worden aangeboden aan [!DNL Adobe Experience Cloud] klanten als een opgenom
 ## Belangrijkste voordelen {#key-benefits}
 
 * Snellere waardetijd.
-* Betrouwbare gegevens via gecentraliseerde verzameling, organisatie en levering met behulp van gegevenselementen.
+* Betrouwbare gegevens via gecentraliseerde verzameling, organisatie en levering met gegevenselementen.
 * Dringende ervaringen door de integratie van gegevens en marketing technologie die regel bouwt.
 
 ## Belangrijkste kenmerken {#key-features}

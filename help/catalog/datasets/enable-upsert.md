@@ -17,18 +17,18 @@ Deze zelfstudie behandelt het proces waarbij een dataset met &quot;upsert&quot;m
 
 >[!NOTE]
 >
->De workflow die in deze zelfstudie wordt beschreven, werkt alleen voor batchopname. Raadpleeg de handleiding voor gestreamde opname-upserts op [gedeeltelijke rijupdates verzenden naar Real-Time Klantprofiel met Data Prep](../../data-prep/upserts.md).
+>De workflow die in deze zelfstudie wordt beschreven, werkt alleen voor batchopname. Raadpleeg de handleiding voor gestreamde opname-upserts [gedeeltelijke rijupdates verzenden naar Real-Time Klantprofiel met Data Prep](../../data-prep/upserts.md).
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor deze verwante onderwerpen [!DNL Platform] diensten:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 - [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful API die u toestaat om datasets tot stand te brengen en hen te vormen voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
 - [Inname in batch](../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -52,7 +52,7 @@ Wanneer het creëren van een nieuwe dataset, kunt u die dataset voor Profiel toe
 
 >[!NOTE]
 >
->Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Raadpleeg de zelfstudie voor informatie over het opzoeken of maken van een schema waarvoor profiel is ingeschakeld [het creëren van een schema gebruikend de Registratie API van het Schema](../../xdm/tutorials/create-schema-api.md).
+>Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Raadpleeg de zelfstudie voor informatie over het opzoeken of maken van een schema waarvoor profiel is ingeschakeld [een schema maken met de API voor het schemaregister](../../xdm/tutorials/create-schema-api.md).
 
 Om een dataset tot stand te brengen die voor Profiel en updates wordt toegelaten, gebruik een verzoek van de POST aan `/dataSets` eindpunt.
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Verzoek**
 
-Door beide opties op te nemen `unifiedIdentity` en de `unifiedProfile` krachtens `tags` in de aanvraaginstantie zal de dataset worden toegelaten voor [!DNL Profile] bij het maken. Binnen de `unifiedProfile` array, toevoegen `isUpsert:true` zal de capaciteit voor de dataset toevoegen om updates te steunen.
+Door zowel de `unifiedIdentity` en de `unifiedProfile` krachtens `tags` in de aanvraaginstantie zal de dataset worden toegelaten voor [!DNL Profile] bij het maken. Binnen de `unifiedProfile` array, toevoegen `isUpsert:true` zal de capaciteit voor de dataset toevoegen om updates te steunen.
 
 ```shell
 curl -X POST \
@@ -114,7 +114,7 @@ De volgende stappen behandelen hoe te om een bestaande profiel-Toegelaten datase
 
 >[!NOTE]
 >
->Om een bestaande profiel-Toegelaten dataset voor upsert te vormen, moet u eerst de dataset voor Profiel onbruikbaar maken en dan het naast opnieuw toelaten `isUpsert` tag. Als de bestaande dataset niet voor Profiel wordt toegelaten, kunt u rechtstreeks aan de stappen te werk gaan voor [het toelaten van de dataset voor Profiel en upsert](#enable-the-dataset). Als u onzeker bent, tonen de volgende stappen u hoe te om te controleren als de dataset reeds wordt toegelaten.
+>Om een bestaande profiel-Toegelaten dataset voor upsert te vormen, moet u eerst de dataset voor Profiel onbruikbaar maken en dan het naast opnieuw toelaten `isUpsert` -tag. Als de bestaande dataset niet voor Profiel wordt toegelaten, kunt u rechtstreeks aan de stappen te werk gaan voor [het toelaten van de dataset voor Profiel en upsert](#enable-the-dataset). Als u onzeker bent, tonen de volgende stappen u hoe te om te controleren als de dataset reeds wordt toegelaten.
 
 ### Controleren of de gegevensset is ingeschakeld voor profiel
 
@@ -179,7 +179,7 @@ Onder de `tags` eigenschap, kunt u zien dat `unifiedProfile` is aanwezig met de 
 
 ### De gegevensset voor profiel uitschakelen
 
-Om een profiel-Toegelaten dataset voor updates te vormen, moet u eerst onbruikbaar maken `unifiedProfile` en `unifiedIdentity` -tags en vervolgens weer inschakelen naast de `isUpsert` tag. Dit wordt gedaan gebruikend twee verzoeken van PATCH, één om onbruikbaar te maken en één om re-toe te laten.
+Om een profiel-toegelaten dataset voor updates te vormen, moet u eerst onbruikbaar maken `unifiedProfile` en `unifiedIdentity` -tags en vervolgens weer inschakelen naast de `isUpsert` -tag. Dit wordt gedaan gebruikend twee verzoeken van PATCH, één om onbruikbaar te maken en één om re-toe te laten.
 
 >[!WARNING]
 >
@@ -236,7 +236,7 @@ Een bestaande dataset kan voor de updates van het Profiel en van attributen word
 
 >[!IMPORTANT]
 >
->Wanneer het toelaten van uw dataset voor Profiel, gelieve te verzekeren het schema de dataset met wordt geassocieerd **ook** Profiel ingeschakeld. Als het schema niet profiel-toegelaten is, zal de dataset **niet** worden weergegeven als profiel-ingeschakeld in de gebruikersinterface van het Platform.
+>Wanneer het toelaten van uw dataset voor Profiel, gelieve te verzekeren het schema de dataset met wordt geassocieerd **ook** Profiel ingeschakeld. Als het schema niet profiel-toegelaten is, zal de dataset **niet** worden weergegeven als profiel-ingeschakeld in de gebruikersinterface van het platform.
 
 **API-indeling**
 
@@ -250,7 +250,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Verzoek**
 
-De verzoekende instantie omvat een `path` tot `unifiedProfile` instellen `value` de `enabled` en `isUpsert` tags, beide ingesteld op `true`en `path` tot `unifiedIdentity` instellen `value` de `enabled` tag ingesteld op `true`.
+De verzoekende instantie omvat een `path` tot `unifiedProfile` instellen `value` om de `enabled` en `isUpsert` tags, beide ingesteld op `true`en `path` tot `unifiedIdentity` instellen `value` om de `enabled` tag ingesteld op `true`.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \

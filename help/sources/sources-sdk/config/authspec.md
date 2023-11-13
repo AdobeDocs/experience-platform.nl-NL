@@ -14,7 +14,7 @@ ht-degree: 1%
 
 De verificatiespecificaties bepalen hoe Adobe Experience Platform-gebruikers verbinding kunnen maken met uw bron.
 
-De `authSpec` array bevat informatie over de verificatieparameters die zijn vereist om een bron te verbinden met een Platform. Om het even welke bepaalde bron kan veelvoudige verschillende types van authentificatie steunen.
+De `authSpec` array bevat informatie over de verificatieparameters die zijn vereist om een bron te verbinden met Platform. Om het even welke bepaalde bron kan veelvoudige verschillende types van authentificatie steunen.
 
 ## Verificatiespecificaties
 
@@ -175,7 +175,7 @@ Basisverificatie is een verificatietype waarmee u toegang krijgt tot uw toepassi
 | `authSpec.spec.properties` | Bevat informatie over de geloofsbrieven die voor de authentificatie worden gebruikt. |
 | `authSpec.spec.properties.username` | De gebruikersnaam van de account die aan uw toepassing is gekoppeld. |
 | `authSpec.spec.properties.password` | Het accountwachtwoord dat aan uw toepassing is gekoppeld. |
-| `authSpec.spec.required` | Hiermee geeft u de velden op die verplicht moeten worden ingevuld in het Platform. | `username` |
+| `authSpec.spec.required` | Hiermee geeft u de velden op die vereist zijn als verplichte waarden die in het platform moeten worden ingevoerd. | `username` |
 
 {style="table-layout:auto"}
 

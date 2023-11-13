@@ -53,25 +53,25 @@ Voordat u een [!DNL Customer.io] bronverbinding, zult u een bronschema vereisen 
 }
 ```
 
-### Een Platform maken voor [!DNL Customer.io] {#create-platform-schema}
+### Een platformschema maken voor [!DNL Customer.io] {#create-platform-schema}
 
-U moet ook ervoor zorgen dat u een schema van het Platform creeert voor uw bron te gebruiken. Zie de zelfstudie aan [een Platform-schema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+U moet ook ervoor zorgen dat u een schema van het Platform voor uw bron creeert te gebruiken. Zie de zelfstudie aan [een platformschema maken](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-![Screenshot van de gebruikersinterface van het Platform met een voorbeeldschema voor Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
+![Platform UI-screenshot met een voorbeeldschema voor Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## Verbind uw [!DNL Customer.io] account {#connect-account}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
 
 Gebruik de *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
 Ga naar de [!UICONTROL Marketing automation] categorie om de [!DNL Customer.io] bronkaart. Selecteer **[!UICONTROL Add data]**.
 
-![Screenshot van Platform-interface voor catalogus met Customer.io-kaart](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
+![Platform UI-screenshot voor catalogus met Customer.io-kaart](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Gegevens selecteren {#select-data}
 
-De **[!UICONTROL Select data]** wordt weergegeven, zodat u de gegevens kunt selecteren die u naar het Platform wilt brengen.
+De **[!UICONTROL Select data]** wordt weergegeven, zodat u een interface hebt waarmee u de gegevens kunt selecteren die u naar het platform wilt verzenden.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -156,11 +156,11 @@ In de [!DNL Customer.io] gebruikersinterface, voer uw [URL webhaak](#get-streami
 
 >[!TIP]
 >
->U kunt zich abonneren op verschillende gebeurtenissen voor uw rapporterende webhaak. Het bericht van elke gebeurtenis wordt aan het Platform toegevoegd wanneer een [!DNL Customer.io] er is voldaan aan de activeringscriteria voor actiefgebeurtenissen. Voor meer informatie over de verschillende gebeurtenissen raadpleegt u de [[!DNL Customer.io] documentatie bij gebeurtenissen](https://customer.io/docs/webhooks/#events).
+>U kunt zich abonneren op verschillende gebeurtenissen voor uw rapporterende webhaak. Het bericht van elke gebeurtenis wordt aan Platform geconsumeerd wanneer een [!DNL Customer.io] er is voldaan aan de activeringscriteria voor actiefgebeurtenissen. Voor meer informatie over de verschillende gebeurtenissen raadpleegt u de [[!DNL Customer.io] documentatie bij gebeurtenissen](https://customer.io/docs/webhooks/#events).
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Customer.io] gegevens naar Experience Platform. Als u de gegevens wilt controleren die worden ingevoerd, raadpleegt u de handleiding op [streaming gegevens controleren met de gebruikersinterface van het Platform](../../monitor-streaming.md).
+Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Customer.io] gegevens naar Experience Platform. Als u de gegevens wilt controleren die worden ingevoerd, raadpleegt u de handleiding op [streaming gegevens controleren met behulp van platforminterface](../../monitor-streaming.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -178,6 +178,6 @@ Om te controleren of u de bron correct hebt ingesteld en [!DNL Customer.io] de b
 
 ![Klant.io UI-screenshot met activiteitenlogboeken](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Customer.io] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de gebeurtenissen werden opgenomen die u binnen hebt geselecteerd [!DNL Customer.io].
+* Selecteer in de interface Platform de optie **[!UICONTROL View Dataflows]** naast de [!DNL Customer.io] kaartmenu in de broncatalogus. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die voor de gebeurtenissen werden opgenomen die u binnen hebt geselecteerd [!DNL Customer.io].
 
-![Schermopname van gebruikersinterface van Platform met ingesloten gebeurtenissen](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
+![Platform UI-screenshot met ingesloten gebeurtenissen](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

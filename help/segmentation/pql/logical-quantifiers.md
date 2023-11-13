@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Logische kwantoren van PQL
-description: Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in Profile Query Language (PQL) te bepalen.
+description: Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in de Taal van de Vraag van het Profiel (PQL) te bevestigen.
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt

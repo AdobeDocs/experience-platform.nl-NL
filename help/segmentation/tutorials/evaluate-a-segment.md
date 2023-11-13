@@ -19,16 +19,16 @@ Dit document bevat een zelfstudie voor het evalueren van segmentdefinities en he
 
 Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] diensten die betrokken zijn bij het creëren van een publiek. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, klantenprofiel in echt - tijd die op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u een publiek opbouwen op [!DNL Real-Time Customer Profile] gegevens.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Vereiste koppen
 
 Voor deze zelfstudie hebt u ook het volgende nodig: [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) om met succes vraag te maken aan [!DNL Platform] API&#39;s. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
+- Toestemming: houder `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -54,7 +54,7 @@ Als u nog niet de [een segmentdefinitie maken met de segmentatie-API](./create-a
 
 ## Geplande evaluatie {#scheduled-evaluation}
 
-Via een geplande evaluatie kan uw organisatie een terugkerend programma maken om exporttaken automatisch uit te voeren.
+Door geplande evaluatie, kan uw organisatie een terugkomende planning tot stand brengen om de uitvoerbanen automatisch in werking te stellen.
 
 >[!NOTE]
 >
@@ -159,12 +159,12 @@ De volgende stappen zijn vereist om uw publiek te exporteren:
 
 Wanneer het uitvoeren van een publiek, moet een doeldataset eerst worden gecreeerd. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
 
-Één van de belangrijkste overwegingen is het schema waarop de dataset wordt gebaseerd (`schemaRef.id` in de API voorbeeldaanvraag hieronder). Om een segmentdefinitie uit te voeren, moet de dataset gebaseerd zijn op [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de uniview, gelieve te zien [Realtime sectie van het Profiel van de Klant van de Klant van het Registratie van het Schema ontwikkelaarsgids](../../xdm/api/getting-started.md).
+Één van de belangrijkste overwegingen is het schema waarop de dataset wordt gebaseerd (`schemaRef.id` in de API voorbeeldaanvraag hieronder). Om een segmentdefinitie uit te voeren, moet de dataset op [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de uniview, gelieve te zien [Realtime sectie van het Profiel van de Klant van de Klant van het Registratie van het Schema ontwikkelaarsgids](../../xdm/api/getting-started.md).
 
 Er zijn twee manieren om de noodzakelijke dataset tot stand te brengen:
 
 - **API&#39;s gebruiken:** De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen [!DNL XDM Individual Profile Union Schema] met de [!DNL Catalog] API.
-- **De interface gebruiken:** Als u de opdracht [!DNL Adobe Experience Platform] gebruikersinterface om een dataset tot stand te brengen die verwijzingen het unieschema, de stappen in [UI-zelfstudie](../ui/overview.md) en ga vervolgens terug naar deze zelfstudie om door te gaan met de stappen voor [profielen voor publiek genereren](#generate-profiles).
+- **De gebruikersinterface gebruiken:** Als u de opdracht [!DNL Adobe Experience Platform] gebruikersinterface om een dataset tot stand te brengen die verwijzingen het unieschema, de stappen in [UI-zelfstudie](../ui/overview.md) en ga vervolgens terug naar deze zelfstudie om door te gaan met de stappen voor [profielen voor publiek genereren](#generate-profiles).
 
 Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u aan de stap rechtstreeks te werk gaan voor [profielen voor publiek genereren](#generate-profiles).
 

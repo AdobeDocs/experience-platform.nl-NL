@@ -29,7 +29,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 De volgende sectie bevat aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Teradata Vantage] met de [!DNL Flow Service] API.
 
@@ -48,7 +48,7 @@ Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Teradata Vantage] do
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Teradata Vantage] verificatiereferenties als onderdeel van de aanvraaginstantie.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Teradata Vantage] verificatiegegevens als onderdeel van de aanvraaginstantie.
 
 **API-indeling**
 
@@ -86,7 +86,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Teradata Vantage] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| `auth.params.connectionString` | De verbindingstekenreeks waarmee u verbinding maakt met uw [!DNL Teradata Vantage] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 | `connectionSpec.id` | De [!DNL Teradata Vantage] Verbindingsspecificatie-id: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
 
 **Antwoord**
@@ -103,4 +103,4 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 Aan de hand van deze zelfstudie hebt u een [!DNL Teradata Vantage] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om databasegegevens naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Maak een gegevensstroom om databasegegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/database-nosql.md)

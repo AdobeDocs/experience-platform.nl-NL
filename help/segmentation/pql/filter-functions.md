@@ -47,7 +47,7 @@ De `^` (up) operator staat u toe te verwijzen naar eigenschappen in de bovenste 
 | `{ARRAY}` | De array die wordt gefilterd. |
 | `{FILTER_1}` | De buitenste laag van het filtreren. |
 | `{FILTER_2}` | De binnenlaag van het filtreren |
-| `^{PROPERTY}` | De eigenschap waarop ook wordt gefilterd. Als gevolg van de `^`, controleert deze een eigenschap op basis van filter1. |
+| `^{PROPERTY}` | De eigenschap waarop ook wordt gefilterd. Door de `^`, controleert deze een eigenschap op basis van filter1. |
 
 **Voorbeeld**
 

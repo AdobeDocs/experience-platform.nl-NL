@@ -1,7 +1,7 @@
 ---
-keywords: Advertising Cloud;reclame-wolkuitbreiding; advertentiewolkenbestemming
+keywords: Advertising Cloud;adverteren, wolkenuitbreiding; adverteren, wolkenbestemming
 title: Adobe Advertising Cloud-extensie
-description: De extensie Adobe Advertising Cloud is een reclamebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De extensie Adobe Advertising Cloud is een reclamebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van de Adobe.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ Dit is het [!DNL Advertising Cloud] uitbreiding voor de uitvoering [!DNL Adverti
 
 Adobe Advertising Cloud is een advertentieverlenging in Adobe Experience Platform.
 
-Dit doel is een tagextensie. Zie voor meer informatie over de werking van extensies voor tags in het Platform de [overzicht van tagextensies](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie [overzicht van tagextensies](../launch-extensions/overview.md).
 
 ![Adobe Advertising Cloud-extensie](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Platform nodig. T
 
 De Adobe Advertising Cloud-extensie installeren:
 
-In de [Interface Platform](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [Platforminterface](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -48,7 +48,7 @@ U kunt de extensie ook rechtstreeks installeren in het dialoogvenster [UI voor g
 
 Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen. In de UI van de Inzameling van Gegevens, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Voor meer informatie over het instellen van regels voor uw extensies raadpleegt u het overzicht over [regels](../../../tags/ui/managing-resources/rules.md) in de tagdocumentatie.
 
-## De extensie configureren, upgraden en verwijderen {#configure-upgrade-delete}
+## Uitbreiding configureren, bijwerken en verwijderen {#configure-upgrade-delete}
 
 U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface voor gegevensverzameling.
 

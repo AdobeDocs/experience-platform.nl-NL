@@ -16,18 +16,18 @@ ht-degree: 1%
 >
 > De [!DNL Teradata Vantage] De bron is in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Teradata Vantage] bronaansluiting die gebruikmaakt van de Adobe Experience Platform-gebruikersinterface.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Teradata Vantage] bronaansluiting die de Adobe Experience Platform-gebruikersinterface gebruikt.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platform:
+Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
 
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Experience Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL Teradata Vantage] account op Platform, moet u de volgende verificatiewaarde opgeven:
+Voor toegang tot uw [!DNL Teradata Vantage] account op Platform, moet u de volgende verificatiewaarde opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -37,7 +37,7 @@ Raadpleeg voor meer informatie over aan de slag gaan [[!DNL Teradata Vantage] do
 
 ## Verbind uw [!DNL Teradata Vantage] account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
@@ -55,10 +55,10 @@ Als u een bestaande account wilt verbinden, selecteert u de optie [!DNL Teradata
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Teradata Vantage] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Teradata Vantage] referenties. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![](../../../../images/tutorials/create/teradata/new.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Teradata Vantage-account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens naar het Platform te brengen](../../dataflow/databases.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Teradata Vantage-account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](../../dataflow/databases.md).

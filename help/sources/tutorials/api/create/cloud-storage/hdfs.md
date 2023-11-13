@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Apache Hadoop Distributed File System] (hierna &quot;[!DNL HDFS]&quot;) het gebruik van de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand te brengen voor [!DNL Apache Hadoop Distributed File System] (hierna &quot;[!DNL HDFS]&quot;) gebruiken [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -40,13 +40,13 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL HDFS] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL HDFS] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -100,4 +100,4 @@ Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, i
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL HDFS] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u [verkennen van cloudopslag van derden met behulp van de Flow Service API](../../explore/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL HDFS] verbinding met de [!DNL Flow Service] API en hebben de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u [externe cloudopslag verkennen met de Flow Service API](../../explore/cloud-storage.md).

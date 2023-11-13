@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!DNL Salesforce]
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een CRM-systeem van derden. Ondersteuning voor CRM-providers omvat [!DNL Salesforce].
 
@@ -21,9 +21,9 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 ## Veldtoewijzing van [!DNL Salesforce] naar XDM
 
-Een bronverbinding tot stand brengen tussen [!DNL Salesforce] en Platform [!DNL Salesforce] brongegevensvelden moeten worden toegewezen aan de juiste XDM-doelvelden voordat ze in het Platform worden opgenomen.
+Een bronverbinding tot stand brengen tussen [!DNL Salesforce] en Platform, [!DNL Salesforce] brongegevensvelden moeten worden toegewezen aan hun juiste doel-XDM-velden voordat ze worden opgenomen in Platform.
 
-Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart brengen van velden tussen [!DNL Salesforce] gegevenssets en Platform:
+Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart brengen van velden tussen [!DNL Salesforce] Gegevensbestanden en platform:
 
 - [Contactpersonen](../adobe-applications/mapping/salesforce.md#contact)
 - [Leads](../adobe-applications/mapping/salesforce.md#lead)
@@ -39,11 +39,11 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 Als u de opdracht [!DNL Salesforce] bron als onderdeel van [!DNL B2B-CDP]moet u eerst een [!DNL Postman] hulpprogramma om uw [!DNL Salesforce] naamruimten en schema&#39;s. In de volgende documentatie vindt u aanvullende informatie over het instellen van de [!DNL Postman] nut:
 
 - U kunt de inzameling en het milieu van het nut van de naamruimte en van het schema auto-generatie van dit downloaden [GitHub-opslagplaats](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- Voor informatie over het gebruik van Platform APIs met inbegrip van details over hoe te om waarden voor vereiste kopballen te verzamelen en steekproefAPI vraag te lezen, zie de gids op [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
-- Raadpleeg de zelfstudie voor informatie over het genereren van referenties voor Platform-API&#39;s. [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md).
-- Voor informatie over het instellen [!DNL Postman] voor Platform-API&#39;s raadpleegt u de zelfstudie [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md).
+- Voor informatie over het gebruiken van Platform APIs met inbegrip van details over hoe te om waarden voor vereiste kopballen te verzamelen en steekproefAPI vraag te lezen, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
+- Raadpleeg de zelfstudie voor informatie over het genereren van uw referenties voor platform-API&#39;s [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md).
+- Voor informatie over het instellen [!DNL Postman] voor platform-API&#39;s raadpleegt u de zelfstudie [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md).
 
-Met een Platform ontwikkelaarsconsole en [!DNL Postman] nu kunt u de juiste omgevingswaarden op uw [!DNL Postman] milieu.
+Met een Platform Developer Console en [!DNL Postman] nu kunt u de juiste omgevingswaarden op uw [!DNL Postman] milieu.
 
 De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vullen van de tabel [!DNL Postman] milieu:
 
@@ -54,7 +54,7 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | `API_KEY` | Een unieke id die wordt gebruikt om aanroepen van Experience Platform-API&#39;s te verifiëren. Zie de zelfstudie aan [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md) voor informatie over hoe u uw `{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | Het toestemmingstoken dat wordt vereist om vraag aan Experience Platform APIs te voltooien. Zie de zelfstudie aan [Experience Platform-API&#39;s verifiëren en openen](../../../landing/api-authentication.md) voor informatie over hoe u uw `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Met betrekking tot [!DNL Marketo]Deze waarde is vast en wordt altijd ingesteld op: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | De `global` de container houdt alle standaardAdobe en de partner van het Experience Platform verstrekte klassen, de groepen van het schemagebied, gegevenstypes, en schema&#39;s. Met betrekking tot [!DNL Marketo], is deze waarde vast en is altijd ingesteld op `global`. | `global` |
+| `CONTAINER_ID` | De `global` de container houdt alle standaard Adobe en de partner van het Experience Platform verstrekte klassen, de groepen van het schemagebied, gegevenstypes, en schema&#39;s. Met betrekking tot [!DNL Marketo], is deze waarde vast en is altijd ingesteld op `global`. | `global` |
 | `PRIVATE_KEY` | Een referentie die wordt gebruikt voor het verifiëren van uw [!DNL Postman] -instantie naar Experience Platform-API&#39;s. Zie de zelfstudie over het instellen van de ontwikkelaarsconsole en [ontwikkelaarsconsole instellen en [!DNL Postman]](../../../landing/postman.md) voor instructies over hoe u uw {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Een referentie die wordt gebruikt om te integreren in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Het Identity Management System (IMS) biedt het framework voor verificatie van Adobe-services. Met betrekking tot [!DNL Marketo]Deze waarde is vast en wordt altijd ingesteld op: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
@@ -85,13 +85,13 @@ Een succesvol verzoek leidt tot B2B namespaces en schema&#39;s volgens bètaspec
 
 ## Verbinden [!DNL Salesforce] naar Platform met API&#39;s
 
-In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Salesforce] Platforms met API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Salesforce] naar Platform met API&#39;s of de gebruikersinterface:
 
 - [Een Salesforce-basisverbinding maken met de Flow Service API](../../tutorials/api/create/crm/salesforce.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een CRM-bron met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
 
-## Verbinden [!DNL Salesforce] naar Platform met de gebruikersinterface
+## Verbinden [!DNL Salesforce] naar Platform met behulp van UI
 
 - [Een Salesforce-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/salesforce.md)
 - [Een gegevensstroom maken voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)

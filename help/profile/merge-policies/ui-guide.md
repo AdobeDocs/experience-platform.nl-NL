@@ -24,9 +24,9 @@ Als u meer wilt weten over samenvoegingsbeleid en deze rol binnen het Experience
 
 Deze gids vereist een goed begrip van verscheidene belangrijke [!DNL Experience Platform] functies. Lees de documentatie voor de volgende services voordat u deze handleiding volgt:
 
-* [Klantprofiel in realtime](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Laat het Profiel van de Klant in real time toe door identiteiten van verschillende gegevensbronnen te overbruggen die in worden opgenomen [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
+* [Klantprofiel in realtime](../home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Schakelt het Real-Time Profiel van de Klant in door identiteiten te overbruggen van verschillende gegevensbronnen die worden opgenomen in [!DNL Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
 ## Samenvoegbeleid weergeven {#view-merge-policies}
 
@@ -52,12 +52,12 @@ De **[!UICONTROL New merge policy]** vereist dat u belangrijke informatie voor h
 
 De eerste stap in het werkschema staat u toe om uw samenvoegbeleid te vormen door basisinformatie te verstrekken. Deze informatie omvat:
 
-* **[!UICONTROL Name]**: De naam van uw samenvoegingsbeleid moet beschrijvend maar beknopt zijn.
-* **[!UICONTROL Schema class]**: De XDM-schemaklasse die aan het samenvoegbeleid is gekoppeld. This specifies the schema class for which this merge policy is created. Organisaties kunnen meerdere samenvoegbeleidsregels per schemaklasse maken. Alleen de [!UICONTROL XDM Individual Profile] is beschikbaar in de UI. U kunt een voorbeeld van het samenvoegingsschema voor de schemaklasse bekijken door te selecteren **[!UICONTROL View Union Schema]**. Zie de sectie over [weergeven, verenigingsschema](#view-union-schema) dat volgt .
+* **[!UICONTROL Name]**: De naam van het samenvoegingsbeleid moet beschrijvend maar beknopt zijn.
+* **[!UICONTROL Schema class]**: De XDM-schemaklasse die aan het samenvoegbeleid is gekoppeld. This specifies the schema class for which this merge policy is created. Organisaties kunnen meerdere samenvoegbeleidsregels per schemaklasse maken. Momenteel alleen de [!UICONTROL XDM Individual Profile] is beschikbaar in de UI. U kunt een voorbeeld van het samenvoegingsschema voor de schemaklasse bekijken door te selecteren **[!UICONTROL View Union Schema]**. Zie de sectie over [weergeven, verenigingsschema](#view-union-schema) dat volgt .
 * **[!UICONTROL ID stitching]**: In dit veld wordt gedefinieerd hoe de verwante identiteiten van een klant worden bepaald. Er zijn twee mogelijke waarden voor identiteitsstitching, en het is belangrijk om te begrijpen hoe het type van identiteitsstitching dat u selecteert uw gegevens zal beïnvloeden. Voor meer informatie raadpleegt u de [overzicht van samenvoegbeleid](overview.md).
    * **[!UICONTROL None]**: Geen identiteitsstitching uitvoeren.
    * **[!UICONTROL Private Graph]**: Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
-* **[!UICONTROL Default merge policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet de standaardinstelling voor uw organisatie is. Als de kiezer is ingeschakeld, wordt een waarschuwing weergegeven met de vraag of u het standaardsamenvoegbeleid van uw organisatie wilt wijzigen. Zie de [overzicht van samenvoegbeleid](overview.md) voor meer informatie over standaardbeleid voor samenvoegen.
+* **[!UICONTROL Default merge policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet het standaardbeleid voor uw organisatie is. Als de kiezer is ingeschakeld, wordt een waarschuwing weergegeven met de vraag of u het standaardsamenvoegbeleid van uw organisatie wilt wijzigen. Zie de [overzicht van samenvoegbeleid](overview.md) voor meer informatie over standaardbeleid voor samenvoegen.
   ![](../images/merge-policies/create-make-default.png)
 * **[!UICONTROL Active-On-Edge Merge Policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid aan de rand actief is. Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Een publiek kan alleen aan de rand worden geactiveerd (gemarkeerd als een randpubliek) als het is gekoppeld aan een samenvoegbeleid dat als actief aan de rand is gemarkeerd. Als een publiek **niet** gekoppeld aan een samenvoegbeleid dat aan de rand is gemarkeerd als actief, wordt het publiek niet gemarkeerd als actief aan de rand en wordt het gemarkeerd als een streaming publiek. Bovendien kan elke sandbox in een organisatie alleen **één** samenvoegbeleid dat op rand actief is.
 
@@ -71,7 +71,7 @@ Wanneer u een samenvoegbeleid maakt of bewerkt, kunt u het samenvoegingsschema v
 
 ![](../images/merge-policies/view-union-schema.png)
 
-Hierdoor wordt het [!UICONTROL View Union Schema] dialoog, die alle bijdragende schema&#39;s, identiteiten, en verhoudingen toont verbonden aan het unieschema. U kunt de dialoog gebruiken om het verenigingsschema te onderzoeken op de zelfde manier u door tot [!UICONTROL Union Schema] in de [!UICONTROL Profiles] van de gebruikersinterface van het Platform.
+Hierdoor wordt het [!UICONTROL View Union Schema] dialoog, die alle bijdragende schema&#39;s, identiteiten, en verhoudingen toont verbonden aan het unieschema. U kunt de dialoog gebruiken om het verenigingsschema te onderzoeken op de zelfde manier u door tot [!UICONTROL Union Schema] in de [!UICONTROL Profiles] van de platforminterface.
 
 Voor gedetailleerde informatie over unieschema&#39;s, met inbegrip van hoe met hen in interactie te staan in [!UICONTROL Union Schema] of de [!UICONTROL View Union Schema] in de workflow voor het samenvoegen van beleidsregels. Ga naar [UI-hulplijn verenigingsschema](../ui/union-schema.md).
 
@@ -105,7 +105,7 @@ U kunt tot 50 datasets van de datasetlijst selecteren om in het fusiebeleid te o
 >
 >Het getal tussen haakjes naast **[!UICONTROL Profile datasets]** (bijvoorbeeld `(37)` in de getoonde afbeelding) toont het totale aantal profielgegevenssets dat beschikbaar is voor selectie.
 
-Aangezien de datasets worden geselecteerd, worden zij toegevoegd aan **[!UICONTROL Select datasets]** sectie, die u toestaat om de datasets te slepen en te laten vallen en hen volgens uw gewenste belangrijkheid te ordenen. Aangezien de datasets in de lijst worden aangepast, zal rangschikken (1, 2, 3, enz.) naast de dataset bijwerken, tonend prioriteit (1 die de hoogste prioriteit wordt gegeven, dan 2, en verder).
+Aangezien de datasets worden geselecteerd, worden zij toegevoegd aan **[!UICONTROL Select datasets]** sectie, die u toestaat om de datasets te slepen en te laten vallen en hen volgens uw gewenste belangrijkheid te rangschikken. Aangezien de datasets in de lijst worden aangepast, zal rangschikken (1, 2, 3, enz.) naast de dataset bijwerken, tonend prioriteit (1 die de hoogste prioriteit wordt gegeven, dan 2, en verder).
 
 Als u een gegevensset selecteert, worden ook de **[!UICONTROL Union schema]** sectie, die de gebieden in het unieschema tonen waaraan elke dataset gegevens bijdraagt. Voor meer informatie over unieschema&#39;s, zoals hoe te met de visualisaties in UI in wisselwerking te staan, gelieve te verwijzen naar [UI-hulplijn verenigingsschema](../ui/union-schema.md)
 
@@ -159,7 +159,7 @@ De **[!UICONTROL Preview data]** de lijst toont de verslagen van het steekproefp
 
 ### Dataset-prioriteit {#dataset-precedence-review}
 
-Als u **[!UICONTROL Dataset precedence]** als samenvoegmethode voor uw samenvoegbeleid, omvatten de lijsten van Profiel en de datasets ExperienceEvent slechts de datasets van het Profiel en van de ExperienceEvent die u tijdens het creatiewerkschema selecteerde, respectievelijk. De orde van de datasets van het Profiel zou de belangrijkheid moeten aanpassen die u tijdens verwezenlijking specificeerde. Als dat niet het geval is, gebruikt u de [!UICONTROL Back] om terug te keren naar de vorige workflowstappen en de prioriteit aan te passen.
+Als u **[!UICONTROL Dataset precedence]** als samenvoegmethode voor uw samenvoegbeleid, omvatten de lijsten van Profiel en de datasets ExperienceEvent slechts de datasets van het Profiel en van de ExperienceEvent die u tijdens het creatiewerkschema selecteerde, respectievelijk. De volgorde van de profielgegevenssets moet overeenkomen met de prioriteit die u tijdens het maken hebt opgegeven. Als dat niet het geval is, gebruikt u de [!UICONTROL Back] om terug te keren naar de vorige workflowstappen en de prioriteit aan te passen.
 
 De **[!UICONTROL Preview data]** de lijst toont de verslagen van het steekproefprofiel gebruikend de geselecteerde datasets. Zo kunt u een voorvertoning bekijken van een klantprofiel voordat u het samenvoegbeleid opslaat.
 
@@ -173,7 +173,7 @@ Nadat u de workflow hebt voltooid om een nieuw samenvoegbeleid te maken, gaat u 
 
 ## Een samenvoegingsbeleid bewerken
 
-Van de [!UICONTROL Merge Policies] kunt u een bestaand samenvoegbeleid wijzigen dat is gemaakt voor de [!DNL XDM Individual Profile] door de **[!UICONTROL Policy name]** voor het samenvoegbeleid dat u wilt bewerken.
+Van de [!UICONTROL Merge Policies] kunt u een bestaand samenvoegbeleid wijzigen dat is gemaakt voor de [!DNL XDM Individual Profile] door de klasse **[!UICONTROL Policy name]** voor het samenvoegbeleid dat u wilt bewerken.
 
 ![Landingspagina van beleid samenvoegen](../images/merge-policies/select-edit.png)
 

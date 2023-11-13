@@ -44,7 +44,7 @@ Ga voor meer informatie over aan de slag gaan [dit Salesforce-document](https://
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -111,4 +111,4 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 Aan de hand van deze zelfstudie hebt u een [!DNL Salesforce] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Creeer een dataflow om de gegevens van CRM aan Platform te brengen gebruikend [!DNL Flow Service] API](../../collect/crm.md)
+* [Maak een gegevensstroom om CRM-gegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/crm.md)

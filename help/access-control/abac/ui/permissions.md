@@ -37,7 +37,7 @@ De volgende filters zijn beschikbaar voor rollen in UI:
 | [!UICONTROL Modified between] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. |
 | [!UICONTROL Modified by] | Filter op rolbepaling door een gebruiker van dropdown te selecteren. |
 
-Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** om alle filters te verwijderen.
+Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** alle filters verwijderen.
 
 ![flitsklare filters](../../images/flac-ui/flac-clear-filters.png)
 
@@ -45,13 +45,13 @@ Als u een filter wilt verwijderen, selecteert u de X op het vulpictogram voor he
 
 Selecteer de rol in het menu **[!UICONTROL Roles]** , die de pagina met details van de rol opent.
 
-![details](../../images/flac-ui/flac-details.png)
+![details van flac](../../images/flac-ui/flac-details.png)
 
 Het tabblad Details geeft een overzicht van de rol. Het overzicht toont de rolnaam, rolbeschrijving, de naam van de gebruiker die de rol creeerde en wijzigde, toen de rol werd gecreeerd en, en de toestemmingen verbonden aan de rol werd gewijzigd. De rolnaam en rolbeschrijving kunnen indien nodig worden gewijzigd.
 
 ## Labels voor een rol beheren
 
-Selecteer **[!UICONTROL Labels]** tab om de pagina met rollabels te openen, en selecteer vervolgens **[!UICONTROL Add labels]** om labels aan de rol toe te wijzen.
+Selecteer de **[!UICONTROL Labels]** tab om de pagina met rollabels te openen, en selecteer vervolgens **[!UICONTROL Add labels]** om labels aan de rol toe te wijzen.
 
 ![fc-labels](../../images/flac-ui/flac-labels.png)
 
@@ -71,7 +71,7 @@ Als u een label uit een rol wilt verwijderen, selecteert u de optie **X** naast 
 
 ## Sandboxen beheren voor rol
 
-Selecteer **[!UICONTROL Sandboxes]** om de pagina Rollen sandboxen te openen. Hier ziet u een lijst met sandboxen die aan de rol zijn toegevoegd.
+Selecteer de **[!UICONTROL Sandboxes]** om de pagina Rollen sandboxen te openen. Hier ziet u een lijst met sandboxen die aan de rol zijn toegevoegd.
 
 ![vlc-sandboxen](../../images/flac-ui/flac-sandboxes.png)
 
@@ -79,13 +79,13 @@ Als u meer sandboxen aan een rol wilt toevoegen, selecteert u **[!UICONTROL Edit
 
 ![flash-add-sandboxen](../../images/flac-ui/flac-add-sandboxes.png)
 
-Het volgende scherm zet u ertoe aan om te kiezen welke middeltoestemmingen die in zandbakken bestaan om in de rol te omvatten gebruikend dropdown. Als u klaar bent, selecteert u **[!UICONTROL Save and exit]**.
+Het volgende scherm zet u ertoe aan om te kiezen welke middeltoestemmingen die in zandbakken bestaan om in de rol te omvatten gebruikend dropdown. Selecteer **[!UICONTROL Save and exit]**.
 
 ![flash-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
 
 ## Gebruikers beheren voor rol
 
-Selecteer **[!UICONTROL Users]** tab om de pagina met rolgebruikers te openen, en selecteer vervolgens **[!UICONTROL Add Users]** om gebruikers aan de rol toe te wijzen.
+Selecteer de **[!UICONTROL Users]** tab om de pagina met rolgebruikers te openen, en selecteer vervolgens **[!UICONTROL Add Users]** om gebruikers aan de rol toe te wijzen.
 
 ![gebruikers van flac](../../images/flac-ui/flac-users.png)
 
@@ -103,7 +103,7 @@ Als u een gebruiker uit een rol wilt verwijderen, selecteert u de **X** naast de
 
 ## API-referenties voor rol beheren {#manage-api-credentials-for-role}
 
-Selecteer **[!UICONTROL API credentials]** tabblad om de pagina met rollen-API-referenties te openen en selecteer vervolgens **[!UICONTROL Add API credentials]** om API-referenties aan de rol toe te wijzen.
+Selecteer de **[!UICONTROL API credentials]** tabblad om de pagina met rollen-API-referenties te openen en selecteer vervolgens **[!UICONTROL Add API credentials]** om API-referenties aan de rol toe te wijzen.
 
 ![fc-api-credentials](../../images/flac-ui/flac-api-credentials.png)
 
@@ -129,7 +129,7 @@ U wordt teruggestuurd naar de **[!UICONTROL API credentials]** tab.
 
 Gebruikersgroepen zijn meerdere gebruikers die zijn gegroepeerd en die toegang hebben om dezelfde functies uit te voeren.
 
-Selecteer **[!UICONTROL User groups]** tab om de pagina met rolgebruikersgroepen te openen, en selecteer vervolgens **[!UICONTROL Add Groups]** om gebruikersgroepen toe te wijzen aan de rol.
+Selecteer de **[!UICONTROL User groups]** tabblad om de pagina Rollengroepen te openen en selecteer vervolgens **[!UICONTROL Add Groups]** om gebruikersgroepen toe te wijzen aan de rol.
 
 ![flash-user-groups](../../images/flac-ui/flac-user-groups.png)
 

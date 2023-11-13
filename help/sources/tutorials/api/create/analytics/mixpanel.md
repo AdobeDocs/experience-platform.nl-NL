@@ -15,16 +15,16 @@ Het volgende leerprogramma begeleidt u door de stappen om een bronverbinding en 
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Mixpanel] met de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Om verbinding te maken [!DNL Mixpanel] als u een Platform wilt maken, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Om verbinding te maken [!DNL Mixpanel] aan Platform, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ Voor meer informatie over het verifiëren van uw [!DNL Mixpanel] bron, zie [[!DN
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Mixpanel] verificatiereferenties als onderdeel van de aanvraaginstantie.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Mixpanel] verificatiegegevens als onderdeel van de aanvraaginstantie.
 
 **API-indeling**
 
@@ -81,7 +81,7 @@ curl -X POST \
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via het [!DNL Flow Service] API. |
-| `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
+| `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
 | `auth.params.` | Bevat de geloofsbrieven die worden vereist om uw bron voor authentiek te verklaren. |
 | `auth.params.username` | De gebruikersnaam die overeenkomt met uw [!DNL Mixpanel] account. |
 | `auth.params.password` | Het wachtwoord dat overeenkomt met uw [!DNL Mixpanel] account. |
@@ -116,7 +116,7 @@ Wanneer het uitvoeren van GET verzoeken om de het dossierstructuur en inhoud van
 | `{BASE_CONNECTION_ID}` | De id van de basisverbinding die in de vorige stap is gegenereerd. |
 | `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest`. |
 | `{OBJECT}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. Voor deze bron zou de waarde `json`. |
-| `fileType=json` | Het bestandstype van het bestand dat u naar het Platform wilt brengen. Momenteel `json` is het enige ondersteunde bestandstype. |
+| `fileType=json` | Het bestandstype van het bestand dat u naar Platform wilt verzenden. Momenteel `json` is het enige ondersteunde bestandstype. |
 | `{PREVIEW}` | Een booleaanse waarde die definieert of de inhoud van de verbinding voorvertoning ondersteunt. |
 | `{SOURCE_PARAMS}` | Bepaalt parameters voor het brondossier u aan Platform wilt brengen. Het geaccepteerde indelingstype ophalen voor `{SOURCE_PARAMS}`, moet u het gehele `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Opmerking**: In het onderstaande voorbeeld: `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` gecodeerd in base64 is gelijk aan `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
 
@@ -387,7 +387,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -398,9 +398,9 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md).
 
@@ -408,7 +408,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target-connection}
 
@@ -455,7 +455,7 @@ curl -X POST \
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met data Lake. Deze vaste ID is: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
-| `data.format` | Het formaat van de [!DNL Mixpanel] gegevens die u naar het Platform wilt brengen. |
+| `data.format` | Het formaat van de [!DNL Mixpanel] gegevens die u naar Platform wilt brengen. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 
@@ -561,7 +561,7 @@ curl -X POST \
 | --- | --- |
 | `xdmSchema` | De id van de [doel-XDM-schema](#target-schema) gegenereerd in een eerdere stap. |
 | `mappings.destinationXdmPath` | Het doel-XDM-pad waaraan het bronkenmerk wordt toegewezen. |
-| `mappings.sourceAttribute` | Het bronattribuut dat aan een bestemmingsXDM weg moet worden in kaart gebracht. |
+| `mappings.sourceAttribute` | Het bronkenmerk dat moet worden toegewezen aan een XDM-doelpad. |
 | `mappings.identity` | Een booleaanse waarde die aangeeft of de toewijzingsset wordt gemarkeerd voor [!DNL Identity Service]. |
 
 **Antwoord**
@@ -581,10 +581,10 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de 
 
 ## Een flow maken {#flow}
 
-De laatste stap op weg naar de [!DNL Mixpanel] aan Platform moet een gegevensstroom tot stand brengen. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap op weg naar het verzamelen van gegevens van [!DNL Mixpanel] aan Platform moet een gegevensstroom creëren. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source-connection)
-* [Doelverbinding-id](#target-connection)
+* [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
@@ -642,7 +642,7 @@ curl -X POST \
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
 | `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | De corresponderende versie van de flow specification-id. Deze waarde wordt standaard ingesteld op `1.0`. |
+| `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde wordt standaard ingesteld op `1.0`. |
 | `sourceConnectionIds` | De [bron-verbindings-id](#source-connection) gegenereerd in een eerdere stap. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) gegenereerd in een eerdere stap. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
@@ -664,7 +664,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom. Met
 }
 ```
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om uw gegevensstroom te controleren, bij te werken en te verwijderen.
 

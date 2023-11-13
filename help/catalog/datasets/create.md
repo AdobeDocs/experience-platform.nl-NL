@@ -20,7 +20,7 @@ Dit document bevat algemene stappen voor het maken van een gegevensset met Adobe
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Inname in batch](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] kunt u gegevens invoeren als batchbestanden.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan te maken [!DNL Platform] API&#39;s.
@@ -353,7 +353,7 @@ Een met succes voltooide partij keert een lege reactiekarakter en de Status 200 
 
 ## Inname van monitor
 
-Afhankelijk van de grootte van de gegevens, nemen de partijen variërende tijdsduur om in te nemen. U kunt de status van een batch controleren door een batch-id aan een batch toe te voegen `GET /batches` verzoek.
+Afhankelijk van de grootte van de gegevens, nemen de partijen variërende tijdsduur om in te nemen. U kunt de status van een batch controleren door de id van een batch aan een batch toe te voegen `GET /batches` verzoek.
 
 **API-indeling**
 

@@ -29,7 +29,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 **Verzoek**
 
-Het steekproefverzoek wint hieronder een lijst van datasets, met terug `limit` filter de respons op vijf resultaten verminderen en `properties` filter dat de eigenschappen beperkt die voor elke dataset worden getoond.
+Het steekproefverzoek wint hieronder een lijst van datasets, met terug `limit` filter de respons op vijf resultaten verminderen, en `properties` filter dat de eigenschappen beperkt die voor elke dataset worden getoond.
 
 ```shell
 curl -X GET \
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met [!DNL Catalog] objecten in de vorm van sleutel-waardeparen, gefilterd door de vraagparameters die in het verzoek worden verstrekt. Voor elk sleutel-waardepaar vertegenwoordigt de sleutel een unieke herkenningsteken voor [!DNL Catalog] voorwerp in kwestie, dat dan in een andere vraag kan worden gebruikt aan [bekijken dat specifiek object](look-up-object.md) voor meer informatie .
+Een geslaagde reactie retourneert een lijst met [!DNL Catalog] objecten in de vorm van sleutel-waardeparen, gefilterd door de vraagparameters die in het verzoek worden verstrekt. Voor elk sleutel-waardepaar vertegenwoordigt de sleutel een unieke herkenningsteken voor [!DNL Catalog] voorwerp in kwestie, dat dan in een andere vraag kan worden gebruikt aan [bekijken dat een specifiek object](look-up-object.md) voor meer informatie .
 
 >[!NOTE]
 >

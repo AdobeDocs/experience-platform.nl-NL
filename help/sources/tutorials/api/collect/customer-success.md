@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;verzamelen klantensucc
 solution: Experience Platform
 title: Een gegevensstroom maken voor de succesbronnen van de Klant met behulp van de Flow Service API
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in Platform met behulp van bronconnectors en API's.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Maak een gegevensstroom voor de bronnen van het klantsucces met behulp van de [!DNL Flow Service] API
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een succesbron van een klant en het naar Platform brengen van deze gegevens met behulp van [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een bron voor klantensucces en het overbrengen van gegevens naar Platform met behulp van [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../landing/api-guide.md).
 
 ## Een bronverbinding maken {#source}
 
@@ -135,9 +135,9 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../xdm/api/schemas.md).
 

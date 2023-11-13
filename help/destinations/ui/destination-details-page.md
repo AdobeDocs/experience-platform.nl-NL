@@ -24,7 +24,7 @@ In de gebruikersinterface van Adobe Experience Platform, kunt u de attributen en
 
 Voer de onderstaande stappen uit om meer informatie over een bestaand doel weer te geven.
 
-1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingen te bekijken.
+1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingen te bekijken.
 
    ![Bladeren door doelen](../assets/ui/details-page/browse-destinations.png)
 
@@ -53,7 +53,7 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | [!UICONTROL Activate audiences] | Selecteer dit besturingselement om te bewerken welk publiek wordt toegewezen aan het doel, om exportschema&#39;s bij te werken of om toegewezen kenmerken en identiteiten toe te voegen en te verwijderen. Zie de hulplijnen op [het activeren van publieksgegevens aan publiek die bestemmingen stromen](./activate-segment-streaming-destinations.md), [het activeren van publieksgegevens aan batch op profiel-gebaseerde bestemmingen](./activate-batch-profile-destinations.md), en [het activeren van publieksgegevens aan het stromen op profiel-gebaseerde bestemmingen](./activate-streaming-profile-destinations.md) voor meer informatie . |
 | [!UICONTROL Delete] | Hiermee kunt u deze gegevensstroom verwijderen en de toewijzing ongedaan maken van het publiek dat eerder is geactiveerd, indien aanwezig. |
 | [!UICONTROL Destination name] | Dit veld kan worden bewerkt om de naam van het doel bij te werken. |
-| [!UICONTROL Description] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel toe te voegen. |
+| [!UICONTROL Description] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel bij te werken of toe te voegen. |
 | [!UICONTROL Destination] | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie de [doelcatalogus](../catalog/overview.md) voor meer informatie . |
 | [!UICONTROL Status] | Geeft aan of het doel is in- of uitgeschakeld. |
 | [!UICONTROL Marketing actions] | Hiermee worden de marketingacties (gebruiksgevallen) aangegeven die voor deze bestemming gelden voor doeleinden van gegevensbeheer. |
@@ -78,10 +78,10 @@ De [!UICONTROL Dataflow runs] tab bevat metrische gegevens over uw gegevensstroo
 
 >[!NOTE]
 >
->* Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) en [Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingen.
+>* Functionaliteit voor het controleren van doelen wordt momenteel ondersteund voor alle doelen in Experience Platform *behalve* de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Aangepaste personalisatie](/help/destinations/catalog/personalization/custom-personalization.md) en [Soorten publiek Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingen.
 >* Voor de [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) doelen, de metriek met betrekking tot uitgesloten, mislukte en geactiveerde identiteiten worden geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
 
-![Dataflow-runweergave](../assets/ui/details-page/dataflow-runs.png)
+![Dataflow-run-weergave](../assets/ui/details-page/dataflow-runs.png)
 
 ### Runtimeduur gegevensstroom {#dataflow-runs-duration}
 
@@ -109,7 +109,7 @@ De [!UICONTROL Activation data] wordt een lijst weergegeven van soorten publiek 
 
 >[!TIP]
 >
->Selecteer **[!UICONTROL Activate audiences]** in de [rechterspoor](#right-rail).
+>Als u details wilt weergeven en bewerken over de kenmerken en identiteiten die aan een doel zijn toegewezen, selecteert u **[!UICONTROL Activate audiences]** in de [rechterspoor](#right-rail).
 
 ![Batchbestemming voor weergave van activeringsgegevens](../assets/ui/details-page/activation-data-batch.png)
 

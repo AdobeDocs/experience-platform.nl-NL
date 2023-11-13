@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Eindpunt segmenttaken
 
-Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een [segmentdefinitie](./segment-definitions.md)en alle [beleid samenvoegen](../../profile/api/merge-policies.md) bepalen hoe [!DNL Real-Time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
+Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een [segmentdefinitie](./segment-definitions.md), alsmede alle [beleid samenvoegen](../../profile/api/merge-policies.md) bepalen hoe [!DNL Real-Time Customer Profile] Hiermee voegt u overlappende kenmerken samen in uw profielfragmenten. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
 
 Deze handleiding bevat informatie die u helpt segmenttaken beter te begrijpen en voorbeelden van API-aanroepen voor het uitvoeren van basishandelingen met de API.
 
@@ -33,13 +33,13 @@ GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-**Parameters query**
+**Query-parameters**
 
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `start` | Geeft de beginverschuiving aan voor de geretourneerde segmenttaken. | `start=1` |
 | `limit` | Geeft het aantal segmenttaken op dat per pagina wordt geretourneerd. | `limit=20` |
-| `status` | Filtert de resultaten op basis van status. De ondersteunde waarden zijn NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELING | `status=NEW` |
+| `status` | Hiermee filtert u de resultaten op basis van de status. De ondersteunde waarden zijn NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELING | `status=NEW` |
 | `sort` | Hiermee worden de geretourneerde segmenttaken gesorteerd. Is geschreven in de notatie `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
 | `property` | Hiermee filtert u segmenttaken en haalt u exacte overeenkomsten op voor het opgegeven filter. Deze kan in een van de volgende indelingen worden geschreven: <ul><li>`[jsonObjectPath]==[value]` - filteren op de objecttoets</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filteren binnen de array</li></ul> | `property=segments~segmentId==workInUS` |
 
@@ -263,7 +263,7 @@ Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werki
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de segmenttaak. |
-| `status` | De huidige status voor de segmenttaak. Mogelijke waarden voor de status zijn &#39;NEW&#39;, &#39;PROCESSING&#39;, &#39;CANCELING&#39;, &#39;CANCELED&#39;, &#39;FAILED&#39; en &#39;SUCCEEDED&#39;. |
+| `status` | De huidige status voor de segmenttaak. Mogelijke waarden voor de status zijn &#39;NEW&#39;, &#39;PROCESSING&#39;, &#39;CANCELING&#39;, &#39;CANCELED&#39;, &#39;FAILED&#39; en &#39;SUCCED&#39;. |
 | `segments` | Een voorwerp dat informatie over de segmentdefinities bevat die binnen de segmentbaan zijn teruggekeerd. |
 | `segments.segment.id` | De id van de segmentdefinitie. |
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |
@@ -704,7 +704,7 @@ Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan worden in werki
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de segmenttaak. |
-| `status` | De huidige status voor de segmenttaak. Mogelijke waarden voor de status zijn &#39;NEW&#39;, &#39;PROCESSING&#39;, &#39;CANCELING&#39;, &#39;CANCELED&#39;, &#39;FAILED&#39; en &#39;SUCCEEDED&#39;. |
+| `status` | De huidige status voor de segmenttaak. Mogelijke waarden voor de status zijn &#39;NEW&#39;, &#39;PROCESSING&#39;, &#39;CANCELING&#39;, &#39;CANCELED&#39;, &#39;FAILED&#39; en &#39;SUCCED&#39;. |
 | `segments` | Een voorwerp dat informatie over de segmentdefinities bevat die binnen de segmentbaan zijn teruggekeerd. |
 | `segments.segment.id` | De id van de segmentdefinitie. |
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |
@@ -743,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Antwoord**
 
-Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van de `children.segments` attribuut verschilt afhankelijk als de segmentbaan voor meer dan 1500 segmentdefinities loopt.
+Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van `children.segments` attribuut verschilt afhankelijk als de segmentbaan voor meer dan 1500 segmentdefinities loopt.
 
 >[!NOTE]
 >
@@ -798,7 +798,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de segmenttaak. |
-| `status` | De huidige status voor de segmenttaak. Mogelijke waarden voor de status zijn &#39;NEW&#39;, &#39;PROCESSING&#39;, &#39;CANCELING&#39;, &#39;CANCELED&#39;, &#39;FAILED&#39; en &#39;SUCCEEDED&#39;. |
+| `status` | De huidige status voor de segmenttaak. Mogelijke waarden voor de status zijn &#39;NEW&#39;, &#39;PROCESSING&#39;, &#39;CANCELING&#39;, &#39;CANCELED&#39;, &#39;FAILED&#39; en &#39;SUCCED&#39;. |
 | `segments` | Een voorwerp dat informatie over de segmentdefinities bevat die binnen de segmentbaan zijn teruggekeerd. |
 | `segments.segment.id` | De id van de segmentdefinitie. |
 | `segments.segment.expression` | Een object dat informatie bevat over de expressie van de segmentdefinitie, geschreven in PQL. |

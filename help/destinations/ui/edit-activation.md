@@ -19,7 +19,7 @@ In Adobe Experience Platform kunt u verschillende componenten van bestaande acti
 
 Voer de onderstaande stappen uit om bestaande activeringsgegevens te bewerken:
 
-1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
+1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingsgegevens te bekijken.
 
    ![Bladeren door doelen](../assets/ui/edit-activation/browse-destinations.png)
 

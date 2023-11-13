@@ -24,20 +24,20 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [XDM-systeem (Experience Data Model)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [XDM-systeem (Experience Data Model)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [Klantprofiel in realtime](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   * [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+* [Klantprofiel in realtime](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 Als u al een geldige [!DNL Spark] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/databases.md)
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL Spark] account op [!DNL Platform]moet u de volgende waarden opgeven:
+Voor toegang tot uw [!DNL Spark] account op [!DNL Platform]moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | Het IP-adres of de hostnaam van het [!DNL Spark] server. |
+| `host` | Het IP adres of hostnaam van [!DNL Spark] server. |
 | `username` | De gebruikersnaam die u gebruikt om toegang te krijgen tot de [!DNL Spark] server. |
 | `password` | Het wachtwoord dat overeenkomt met de gebruiker. |
 
@@ -59,7 +59,7 @@ De **[!UICONTROL Connect to Spark]** wordt weergegeven. Op deze pagina kunt u ni
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Spark] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Spark] referenties. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![new](../../../../images/tutorials/create/spark/new.png)
 

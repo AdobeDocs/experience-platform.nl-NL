@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;cloudopslaggegevens;str
 solution: Experience Platform
 title: Een gegevensstroom voor streaming maken voor Raw-gegevens met de Flow Service API
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
+description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het overbrengen van deze gegevens naar het platform met behulp van bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
@@ -24,12 +24,12 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Bevat belangrijke informatie die u moet weten om met succes vraag aan de Registratie API van het Schema uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn in het Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming opname voor Platform biedt gebruikers een methode om gegevens van client- en server-side apparaten in real-time naar het Experience Platform te verzenden.
-- [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming opname for Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
+- [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../landing/api-guide.md).
 
 ### Een bronverbinding maken {#source}
 
@@ -41,7 +41,7 @@ Deze zelfstudie vereist ook dat u een geldige bron-verbindings-id hebt voor een 
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook het XDM-schema uit [!DNL Individual Profile] klasse.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook het XDM-schema uit [!DNL Individual Profile] klasse.
 
 Om een doelXDM schema tot stand te brengen, doe een verzoek van de POST aan `/schemas` het eindpunt van de [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -484,7 +484,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt voor het verzamelen van streaminggegevens via de streamingconnector. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt voor het verzamelen van streaminggegevens via de streamingconnector. Inkomende gegevens kunnen nu worden gebruikt door downstreamplatformdiensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van de Data Science-werkruimte](../../../../data-science-workspace/home.md)

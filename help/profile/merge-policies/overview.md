@@ -2,7 +2,7 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;samenvoegbeleid;UI;gebruikersinterface;geordende tijdstempel;prioriteit gegevensset
 title: Overzicht van beleid samenvoegen
 type: Documentation
-description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen.
+description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om de verenigde mening tot stand te brengen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Overzicht van beleid samenvoegen
 
-Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
+Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens voorrang krijgen en welke gegevens worden gecombineerd om een verenigde mening tot stand te brengen.
 
 Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Dit document biedt een overzicht van het samenvoegbeleid en de rol die deze spelen in Experience Platform.
 
@@ -21,13 +21,13 @@ Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid
 
 Deze gids vereist een goed begrip van verscheidene belangrijke [!DNL Experience Platform] functies. Lees de documentatie voor de volgende services voordat u deze handleiding volgt en samenvoegt met het beleid voor samenvoegen:
 
-* [Klantprofiel in realtime](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Laat het Profiel van de Klant in real time toe door identiteiten van verschillende gegevensbronnen te overbruggen die in worden opgenomen [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
+* [Klantprofiel in realtime](../home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Schakelt het Real-Time Profiel van de Klant in door identiteiten te overbruggen van verschillende gegevensbronnen die worden opgenomen in [!DNL Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
 ## Samenvoegingsbeleid
 
-Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren, zodat u een volledige, uniforme weergave van elk van uw individuele klanten kunt zien. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen.
+Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren, zodat u een volledige, uniforme weergave van elk van uw individuele klanten kunt zien. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen.
 
 Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken.
 
@@ -54,7 +54,7 @@ Om een samenvoegbeleid tot stand te brengen gebruikend **[!UICONTROL Dataset pre
 
 ### Tijdstempel geordend {#timestamp-ordered}
 
-Aangezien profielverslagen in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer **[!UICONTROL Timestamp ordered]** is geselecteerd als samenvoegmethode voor een samenvoegbeleid. Profielen worden samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
+Aangezien profielverslagen in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer **[!UICONTROL Timestamp ordered]** is geselecteerd als samenvoegmethode voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in Platform is opgenomen.
 
 ## Identiteitsstitatie {#id-stitching}
 
@@ -79,4 +79,4 @@ Als u een nieuw samenvoegbeleid creeert en het plaatst als gebrek, zal het vorig
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding weet u nu wat het samenvoegingsbeleid is en welke rol zij binnen Experience Platform spelen. Als u wilt beginnen te werken met samenvoegbeleid in de gebruikersinterface van het Experience Platform, raadpleegt u de [UI-hulplijn voor samenvoegbeleid](ui-guide.md). Als u met een samenvoegbeleid wilt werken met de API, gaat u naar de [API-eindplijn voor samenvoegbeleid](../api/merge-policies.md).
+Na het lezen van deze handleiding weet u nu wat het samenvoegingsbeleid is en welke rol zij binnen Experience Platform spelen. Als u wilt beginnen te werken met samenvoegbeleid in de gebruikersinterface van het Experience Platform, raadpleegt u de [UI-hulplijn voor samenvoegbeleid](ui-guide.md). Als u wilt werken met samenvoegbeleid met de API, gaat u naar de [API-eindplijn voor samenvoegbeleid](../api/merge-policies.md).

@@ -1,11 +1,11 @@
 ---
 title: Een Amazon Kinesis Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Amazon Kinesis-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
-badgeUltimate: label="Ultimate" type="Positive"
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '456'
 ht-degree: 1%
 
 ---
@@ -22,10 +22,10 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Zelfstudie Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+   - [Zelfstudie Schema-editor](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe u aangepaste schema&#39;s maakt met de gebruikersinterface van de Schema-editor.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 Als u al een geldige [!DNL Kinesis] verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie op [configureren, gegevensstroom](../../dataflow/streaming/cloud-storage-streaming.md).
 
@@ -36,7 +36,7 @@ Om uw [!DNL Kinesis] bronaansluiting, moet u waarden opgeven voor de volgende ve
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `accessKeyId` | De toegangstoets-id voor uw [!DNL Kinesis] account. |
-| `Secret access key` | De geheime toegangssleutel voor uw [!DNL Kinesis] account. |
+| `Secret access key` | De geheime toegangstoets voor uw [!DNL Kinesis] account. |
 | `region` | Het gebied van uw AWS-server. |
 
 Zie voor meer informatie over deze waarden [dit [!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
@@ -57,7 +57,7 @@ De **[!UICONTROL Connect to Amazon Kinesis]** wordt weergegeven. Op deze pagina 
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New Account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Kinesis] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New Account]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Kinesis] referenties. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
 
 ![](../../../../images/tutorials/create/kinesis/new.png)
 

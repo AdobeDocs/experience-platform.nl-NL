@@ -2,7 +2,7 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: API-eindpunt voor beleid samenvoegen
 type: Documentation
-description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
+description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Het eindpunt van beleid samenvoegen
 
-Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
+Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Bij het samenvoegen van deze gegevens gelden als samenvoegbeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens voorrang krijgen en welke gegevens worden gecombineerd om een verenigde mening tot stand te brengen.
 
 Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens van veelvoudige bronnen conflicten (bijvoorbeeld één fragment maakt een lijst van de klant als &quot;enig&quot;terwijl de andere klant als &quot;gehuwd&quot;een lijst maakt) bepaalt het fusiebeleid welke informatie om in het profiel voor het individu te omvatten.
 
@@ -27,7 +27,7 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van het 
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
-Het beleid van de fusie is privé aan uw organisatie, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. API-toegang [!DNL Profile] de gegevens vereisen een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een samenvoegbeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
+Het beleid van de fusie is privé aan uw organisatie, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. API-toegang [!DNL Profile] de gegevens vereisen een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
 
 Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklasse kan hebben, kan elke klasse slechts één standaardsamenvoegbeleid hebben. Om het even welk samenvoegbeleid dat als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de naam van de schemacategorie wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt.
 
@@ -71,7 +71,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `id` | Door het systeem gegenereerde unieke id die tijdens het maken is toegewezen |
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
-| `schema.name` | Deel van de [`schema`](#schema) object, `name` bevat de XDM-schemaklasse waarop het samenvoegbeleid betrekking heeft. Voor meer informatie over schema&#39;s en klassen, gelieve te lezen [XDM-documentatie](../../xdm/home.md). |
+| `schema.name` | Deel van de [`schema`](#schema) object, de `name` bevat de XDM-schemaklasse waarop het samenvoegbeleid betrekking heeft. Lees voor meer informatie over schema&#39;s en klassen de [XDM-documentatie](../../xdm/home.md). |
 | `version` | [!DNL Platform] onderhouden versie van samenvoegingsbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
 | `identityGraph` | [Identiteitsgrafiek](#identity-graph) object dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
 | `attributeMerge` | [Kenmerk samenvoegen](#attribute-merge) object dat aangeeft hoe in het samenvoegbeleid bij gegevensconflicten voorrang wordt gegeven aan profielkenmerken. |
@@ -114,7 +114,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
     }
 ```
 
-Wanneer `{IDENTITY_GRAPH_TYPE}` is een van de volgende:
+Wanneer `{IDENTITY_GRAPH_TYPE}` is één van het volgende:
 
 * **&quot;none&quot;:** Geen identiteitsstitching uitvoeren.
 * **&quot;pdg&quot;:** Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
@@ -139,10 +139,10 @@ Een profielfragment is de profielinformatie voor slechts één identiteit uit de
     }
 ```
 
-Wanneer `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
+Wanneer `{ATTRIBUTE_MERGE_TYPE}` is één van het volgende:
 
-* **`timestampOrdered`**: (standaardwaarde) Geef prioriteit aan het profiel dat het laatst is bijgewerkt. Met dit samenvoegtype `data` attribuut is not required.
-* **`dataSetPrecedence`**: Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer u dit samenvoegtype gebruikt, wordt `order` attribuut wordt vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
+* **`timestampOrdered`**: (standaard) Geef prioriteit aan het profiel dat het laatst is bijgewerkt. Met dit samenvoegtype `data` attribuut is not required.
+* **`dataSetPrecedence`**: Geef prioriteit aan profielfragmenten op basis van de gegevensset waaruit ze afkomstig zijn. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer u dit samenvoegtype gebruikt, wordt `order` attribuut wordt vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
    * **`order`**: Wanneer &quot;dataSetPrecision&quot; wordt gebruikt, wordt een `order` array moet worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De `order` De serie maakt een lijst van IDs van de datasets in orde van prioriteit.
 
 #### Voorbeeld `attributeMerge` object gebruiken `dataSetPrecedence` type
@@ -222,7 +222,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert de details van het samenvoegbeleid.
+Een succesvolle reactie retourneert de details van het samenvoegingsbeleid.
 
 ```json
 {
@@ -359,11 +359,11 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |---|---|
 | `default` | Een Booleaanse waarde die het resultaat is van filters, ongeacht of het samenvoegbeleid de standaardinstelling voor een schemaklasse is. |
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. Standaardwaarde: 20 |
-| `orderBy` | Hiermee geeft u het veld op waarin de resultaten moeten worden geordend als in `orderBy=name` of `orderBy=+name` op naam in oplopende volgorde te sorteren, of `orderBy=-name`om in aflopende volgorde te sorteren. Als u deze waarde weglaat, wordt de standaardsortering van `name` in oplopende volgorde. |
+| `orderBy` | Hiermee geeft u het veld op waarin de resultaten moeten worden geordend als in `orderBy=name` of `orderBy=+name` op naam in oplopende volgorde te sorteren, of `orderBy=-name`om in aflopende volgorde te sorteren. Als u deze waarde weglaat, wordt de standaardsortering van `name` in oplopende volgorde |
 | `isActiveOnEdge` | Een booleaanse waarde die filtert, bepaalt of het samenvoegbeleid al dan niet actief is op de rand. |
 | `schema.name` | Naam van het schema waarvoor om beschikbaar samenvoegbeleid terug te winnen. |
 | `identityGraph.type` | Hiermee filtert u de resultaten op basis van het type identiteitsgrafiek. Mogelijke waarden zijn &quot;none&quot; en &quot;pdg&quot; (privégrafiek). |
-| `attributeMerge.type` | Filterresultaten op basis van het gebruikte samenvoegtype voor kenmerken. Mogelijke waarden zijn &quot;timestampOrdered&quot; en &quot;dataSetPrecedence&quot;. |
+| `attributeMerge.type` | Filterresultaten op basis van het gebruikte samenvoegtype voor kenmerken. Mogelijke waarden zijn &quot;timestampOrdered&quot; en &quot;dataSetPrecision&quot;. |
 | `start` | Paginaverschuiving - geef de eerste id op voor de gegevens die moeten worden opgehaald. Standaardwaarde: 0 |
 | `version` | Geef dit op als u een specifieke versie van het samenvoegbeleid wilt gebruiken. Standaard wordt de nieuwste versie gebruikt. |
 

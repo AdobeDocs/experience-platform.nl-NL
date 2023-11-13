@@ -15,18 +15,18 @@ U kunt de `mode=draft` queryparameter in het dialoogvenster [[!DNL Flow Service]
 
 Concepten kunnen later worden bijgewerkt met nieuwe informatie en vervolgens worden gepubliceerd zodra ze gereed zijn, met behulp van de `op=publish` queryparameter.
 
-Deze zelfstudie bevat stappen voor het instellen van uw [!DNL Flow Service] Hiermee voegt u een status toe aan een concept en kunt u uw workflows pauzeren en opslaan zodat deze later kunnen worden voltooid.
+Deze zelfstudie bevat stappen voor het instellen van uw [!DNL Flow Service] Hiermee voegt u een status toe aan een concept en kunt u uw workflows pauzeren en opslaan om op een later tijdstip te worden voltooid.
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
 
 ### Controleren op ondersteuning voor conceptmodus
 
@@ -569,7 +569,7 @@ Een succesvolle reactie keert de stroom specifieke informatie voor uw bron terug
 
 ## Concepten van basisverbindingen maken {#create-a-draft-base-connection}
 
-Als u een conceptbasisverbinding wilt maken, vraagt u een POST aan de `/connections` van het [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+Als u een conceptbasisverbinding wilt maken, vraagt u een POST aan de `/connections` het eindpunt van de [!DNL Flow Service] API en `mode=draft` als een queryparameter.
 
 **API-indeling**
 
@@ -663,7 +663,7 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van bronverbindingen maken {#create-a-draft-source-connection}
 
-Als u een conceptbronverbinding wilt maken, vraagt u een POST aan de `/sourceConnections` van het [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+Als u een conceptbronverbinding wilt maken, vraagt u een POST aan de `/sourceConnections` het eindpunt van de [!DNL Flow Service] API en `mode=draft` als een queryparameter.
 
 **API-indeling**
 
@@ -759,7 +759,7 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van doelverbinding maken {#create-a-draft-target-connection}
 
-Als u een conceptdoelverbinding wilt maken, vraagt u een POST aan de `/targetConnections` van het [!DNL Flow Service] API en `mode=draft` als een queryparameter.
+Als u een conceptdoelverbinding wilt maken, vraagt u een POST aan de `/targetConnections` het eindpunt van de [!DNL Flow Service] API en `mode=draft` als een queryparameter.
 
 **API-indeling**
 

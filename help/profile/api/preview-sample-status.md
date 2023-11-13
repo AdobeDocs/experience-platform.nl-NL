@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API;voorvertoning;voorbeeld
-title: Voorbeeld van voorbeeldstatus (Profile Preview) API-eindpunt
+title: Voorbeeld van voorbeeldstatus (profiel voorvertoning) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
@@ -18,7 +18,7 @@ De resultaten van deze voorbeeldtaak kunnen worden weergegeven met de opdracht `
 
 >[!NOTE]
 >
->Er zijn schatting en voorproef eindpunten beschikbaar als deel van de Dienst API van de Segmentatie van Adobe Experience Platform die u toestaan om samenvatting-vlakke informatie betreffende segmentdefinities te bekijken helpen ervoor zorgen u het verwachte publiek isoleert. Ga naar de [handleiding voor voorvertoningen en schattingen van eindpunten](../../segmentation/api/previews-and-estimates.md), een deel van de [!DNL Segmentation] API-ontwikkelaarsgids.
+>Er zijn schatting en voorproef eindpunten beschikbaar als deel van de Dienst API van de Segmentatie van Adobe Experience Platform die u toestaan om samenvatting-vlakke informatie betreffende segmentdefinities te bekijken helpen ervoor zorgen u het verwachte publiek isoleert. Als u gedetailleerde stappen wilt vinden voor het werken met voorvertoningen en het schatten van eindpunten, gaat u naar de [handleiding voor voorvertoningen en schattingen van eindpunten](../../segmentation/api/previews-and-estimates.md), een deel van de [!DNL Segmentation] API-ontwikkelaarsgids.
 
 ## Aan de slag
 
@@ -30,7 +30,7 @@ Deze handleiding verwijst naar zowel &quot;profielfragmenten&quot; als &quot;sam
 
 Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, heeft uw organisatie waarschijnlijk veelvoudige profielfragmenten met betrekking tot die enige klant die in veelvoudige datasets verschijnt.
 
-Wanneer profielfragmenten in Platform worden opgenomen, worden ze samengevoegd (op basis van een samenvoegbeleid) om één profiel voor die klant te maken. Daarom is het totale aantal profielfragmenten waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel uit veelvoudige fragmenten bestaat.
+Wanneer profielfragmenten in Platform worden opgenomen, worden zij samengevoegd (die op een fusiebeleid worden gebaseerd) om één enkel profiel voor die klant tot stand te brengen. Daarom is het totale aantal profielfragmenten waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel uit veelvoudige fragmenten bestaat.
 
 Als u meer wilt weten over profielen en hun rol in het Experience Platform, leest u eerst de [Overzicht van het realtime klantprofiel](../home.md).
 
@@ -39,7 +39,7 @@ Als u meer wilt weten over profielen en hun rol in het Experience Platform, lees
 Als gegevens die voor het Profiel van de Klant in real time worden toegelaten worden opgenomen in [!DNL Platform], wordt het opgeslagen in de de gegevensopslag van het Profiel. Wanneer de opname van records in de profielwinkel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
 
 * Voor **workflows voor streaming gegevens**, wordt per uur gecontroleerd of de verhoging of verlaging van 5% is bereikt. Als dit het geval is, wordt er automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
-* Voor **batch-opname** Als aan de drempel van 5% voor verhogen of verlagen is voldaan, wordt binnen 15 minuten nadat een batch is ingevoerd in de profielopslag een taak uitgevoerd om het aantal bij te werken. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
+* Voor **batch-inname** Als aan de drempel van 5% voor verhogen of verlagen is voldaan, wordt binnen 15 minuten nadat een batch is ingevoerd in de profielopslag een taak uitgevoerd om het aantal bij te werken. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
 
 Het aantal profielen en de profielen op basis van naamruimtemetriek zijn ook beschikbaar in het dialoogvenster [!UICONTROL Profiles] van de gebruikersinterface van het Experience Platform. Ga voor informatie over hoe u toegang krijgt tot profielgegevens via de gebruikersinterface naar de [[!DNL Profile] UI-hulplijn](../ui/user-guide.md).
 
@@ -49,7 +49,7 @@ U kunt een verzoek van de GET tot uitvoeren `/previewsamplestatus` eindpunt om d
 
 Het aantal profielen wordt gegenereerd na het samenvoegen van profielfragmenten om één profiel voor elke afzonderlijke klant te vormen. Met andere woorden, wanneer profielfragmenten samen worden samengevoegd, wordt een getal van &quot;1&quot;-profiel geretourneerd omdat ze allemaal verwant zijn aan hetzelfde individu.
 
-Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. De voorbeeldtaak wordt regelmatig vernieuwd terwijl Profielgegevens worden opgenomen om een up-to-date totaal aantal profielen in Platform te bieden.
+Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. De voorbeeldtaak wordt regelmatig vernieuwd terwijl Profielgegevens worden opgenomen om een up-to-date totaal aantal profielen binnen Platform te bieden.
 
 **API-indeling**
 
@@ -74,7 +74,7 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 
 >[!NOTE]
 >
->In dit voorbeeldantwoord: `numRowsToRead` en `totalRows` zijn gelijk aan elkaar. Afhankelijk van het aantal profielen dat uw organisatie in Experience Platform heeft, kan dit het geval zijn. Over het algemeen verschillen deze twee getallen echter `numRowsToRead` het laagste getal is omdat het de steekproef vertegenwoordigt als een subset van het totale aantal profielen (`totalRows`).
+>In dit voorbeeldantwoord: `numRowsToRead` en `totalRows` zijn gelijk aan elkaar. Afhankelijk van het aantal profielen dat uw organisatie in Experience Platform heeft, kan dit het geval zijn. Over het algemeen verschillen deze twee getallen echter `numRowsToRead` het laagste aantal is omdat het de steekproef als ondergroep van het totale aantal profielen (`totalRows`).
 
 ```json
 {
@@ -102,10 +102,10 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 | `sampleJobRunning` | Een Booleaanse waarde die wordt geretourneerd `true` wanneer een voorbeeldtaak wordt uitgevoerd. Biedt transparantie in de latentie die optreedt wanneer een batchbestand wordt geüpload naar het moment dat het daadwerkelijk wordt toegevoegd aan de profielopslag. |
 | `cosmosDocCount` | Het totale aantal documenten in Cosmos. |
 | `totalFragmentCount` | Het totale aantal profielfragmenten in het profielarchief. |
-| `lastSuccessfulBatchTimestamp` | Laatste succesvolle tijdstempel voor batch-opname. |
+| `lastSuccessfulBatchTimestamp` | Tijdstempel voor laatste succes bij het invoeren van batch. |
 | `streamingDriven` | *Dit veld is afgekeurd en heeft geen betekenis voor de reactie.* |
 | `totalRows` | Het totale aantal samengevoegde profielen in Experience Platform, ook wel &#39;profieltelling&#39; genoemd. |
-| `lastBatchId` | Laatste batch-opname-id. |
+| `lastBatchId` | Laatste batch-inname-id. |
 | `status` | Status van laatste sample. |
 | `samplingRatio` | Verhouding van gesamplede profielen (`numRowsToRead`) naar totaal samengevoegde profielen (`totalRows`), uitgedrukt als een percentage in decimale notatie. |
 | `mergeStrategy` | Samenvoegingsstrategie gebruikt in de steekproef. |
@@ -124,7 +124,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 | Parameter | Beschrijving |
 |---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: YYYY-MM-DD. Voorbeeld: `date=2024-12-31` |
+| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
 
 **Verzoek**
 
@@ -223,7 +223,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | Parameter | Beschrijving |
 |---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: YYYY-MM-DD. Voorbeeld: `date=2024-12-31` |
+| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
 
 **Verzoek**
 
@@ -299,7 +299,7 @@ De reactie omvat een `data` array, met afzonderlijke objecten die de details voo
 | `fullIDsCount` | Het totale aantal samengevoegde profielen in de naamruimte. |
 | `fullIDsPercentage` | De `fullIDsCount` als percentage van het totale aantal samengevoegde profielen (de `totalRows` waarde die wordt geretourneerd in het dialoogvenster [status laatste sample](#view-last-sample-status)), uitgedrukt in decimale notatie. |
 | `code` | De `code` voor de naamruimte. Dit is te vinden wanneer u met naamruimten werkt met de opdracht [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) en wordt ook aangeduid als de [!UICONTROL Identity symbol] in de gebruikersinterface van het Experience Platform. Ga voor meer informatie naar de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md). |
-| `value` | De `id` waarde voor de naamruimte. Dit is te vinden wanneer u met naamruimten werkt met de opdracht [Identiteitsservice-API](../../identity-service/api/list-namespaces.md). |
+| `value` | De `id` waarde voor de naamruimte. Dit is te vinden wanneer u met naamruimten werkt met de opdracht [Identity Service API](../../identity-service/api/list-namespaces.md). |
 
 ## Genereer het overlappingsrapport voor de gegevensset
 
@@ -318,7 +318,7 @@ GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
 
 | Parameter | Beschrijving |
 |---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als meerdere rapporten op dezelfde datum zijn uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: YYYY-MM-DD. Voorbeeld: `date=2024-12-31` |
+| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als meerdere rapporten op dezelfde datum zijn uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
 
 **Verzoek**
 
@@ -371,7 +371,7 @@ Dit rapport bevat de volgende informatie:
 
 ## Rapport voor overlappende naamruimte genereren {#identity-overlap-report}
 
-De identiteitsnaamruimte overlapt rapport geeft inzicht in de samenstelling van de profielopslag van uw organisatie door de naamruimten die het meest bijdragen aan uw adresseerbare publiek (samengevoegde profielen) toegankelijk te maken. Dit omvat zowel de standaardnaamruimten die door Adobe worden verstrekt, als de naamruimten van de douaneidentiteit die door uw organisatie worden bepaald.
+De identiteitsnaamruimte overlapt rapport geeft inzicht in de samenstelling van de profielopslag van uw organisatie door de naamruimten die het meest bijdragen aan uw adresseerbare publiek (samengevoegde profielen) toegankelijk te maken. Dit omvat zowel de standaard identiteitsnaamruimten die door Adobe worden verstrekt, als de naamruimten van de douaneidentiteit die door uw organisatie worden bepaald.
 
 U kunt het overlappende rapport voor naamruimte genereren door een verzoek van de GET naar de `/previewsamplestatus/report/namespace/overlap` eindpunt.
 
@@ -384,7 +384,7 @@ GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 
 | Parameter | Beschrijving |
 |---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als meerdere rapporten op dezelfde datum zijn uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: YYYY-MM-DD. Voorbeeld: `date=2024-12-31` |
+| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als meerdere rapporten op dezelfde datum zijn uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
 
 **Verzoek**
 
@@ -444,7 +444,7 @@ Een succesvol verzoek retourneert HTTP Status 200 (OK) en de naamruimte overlapt
 | Eigenschap | Beschrijving |
 |---|---|
 | `data` | De `data` Het object bevat door komma&#39;s gescheiden lijsten met unieke combinaties van naamruimtecodes en hun respectievelijke profielaantallen. |
-| Namespace-codes | De `code` is een kort formulier voor elke naamruimtenaam van een identiteit. Een afbeelding van elk `code` het `name` kan worden gevonden met de [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). De `code` wordt ook aangeduid als de [!UICONTROL Identity symbol] in de gebruikersinterface van het Experience Platform. Ga voor meer informatie naar de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md). |
+| Namespace-codes | De `code` is een kort formulier voor elke naamruimtenaam van een identiteit. Een afbeelding van elk `code` aan het `name` kan worden gevonden met de [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). De `code` wordt ook aangeduid als de [!UICONTROL Identity symbol] in de gebruikersinterface van het Experience Platform. Ga voor meer informatie naar de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md). |
 | `reportTimestamp` | De tijdstempel van het rapport. Indien een `date` parameter werd verstrekt tijdens het verzoek, is het teruggekeerde rapport voor de verstrekte datum. Indien niet `date` parameter wordt verstrekt, is het meest recente rapport teruggekeerd. |
 
 ### Rapport voor overlappende naamruimte interpreteren
@@ -550,10 +550,10 @@ Een succesvolle aanvraag retourneert HTTP Status 200 (OK) en het rapport met nie
 | `data` | De `data` bevat de informatie die wordt geretourneerd voor het rapport met niet-ingestelde profielen. |
 | `totalNumberOfProfiles` | Het totale aantal unieke profielen in het profielarchief. Dit is gelijk aan het adresseerbare aantal. Het bevat zowel bekende als niet-gebonden profielen. |
 | `totalNumberOfEvents` | The total number of ExperienceEvents in the Profile Store. |
-| `unstitchedProfiles` | Een object met een uitsplitsing van niet-ingestelde profielen naar tijdsperiode. Het rapport met niet-opgeslagen profielen bevat een uitsplitsing van profielen voor tijdvakken van 7, 30, 60, 90 en 120 dagen. |
+| `unstitchedProfiles` | Een object met een uitsplitsing van niet-opgegeven profielen naar tijdsperiode. Het rapport met niet-opgeslagen profielen bevat een uitsplitsing van profielen voor tijdvakken van 7, 30, 60, 90 en 120 dagen. |
 | `countOfProfiles` | Het aantal niet-gekoppelde profielen voor de tijdsperiode of het aantal niet-gebonden profielen voor de naamruimte. |
 | `eventsAssociated` | Het aantal ExperienceEvents voor het tijdbereik of het aantal gebeurtenissen voor de naamruimte. |
-| `nsDistribution` | Een object dat afzonderlijke naamruimten bevat met de distributie van niet-gekoppelde profielen en gebeurtenissen voor elke naamruimte. Opmerking: Het totaal optellen `countOfProfiles` voor elke naamruimte van de identiteit in het dialoogvenster `nsDistribution` object is gelijk aan `countOfProfiles` voor de periode. Hetzelfde geldt voor `eventsAssociated` per naamruimte en het totaal `eventsAssociated` per tijdsperiode. |
+| `nsDistribution` | Een object dat afzonderlijke naamruimten bevat met de distributie van niet-gekoppelde profielen en gebeurtenissen voor elke naamruimte. Opmerking: het totaal optellen `countOfProfiles` voor elke naamruimte van de identiteit `nsDistribution` object is gelijk aan `countOfProfiles` voor de periode. Hetzelfde geldt voor `eventsAssociated` per naamruimte en het totaal `eventsAssociated` per tijdsperiode. |
 | `reportTimestamp` | De tijdstempel van het rapport. |
 
 ### Het rapport met niet-opgeslagen profielen interpreteren
@@ -592,5 +592,5 @@ Dit rapport bevat de volgende informatie:
 
 ## Volgende stappen
 
-Nu u weet hoe te om steekproefgegevens in de Opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproef eindpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt ervoor te zorgen dat u uw verwachte publiek isoleert. Ga voor meer informatie over het werken met voorvertoningen en schattingen met de segmentatie-API naar de [eindpuntgids voor voorvertoningen en schattingen](../../segmentation/api/previews-and-estimates.md).
+Nu u weet hoe te om steekproefgegevens in de Opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproef eindpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt u ervoor te zorgen dat u uw verwachte publiek isoleert. Ga voor meer informatie over het werken met voorvertoningen en schattingen met de segmentatie-API naar de [eindpuntgids voor voorvertoningen en schattingen](../../segmentation/api/previews-and-estimates.md).
 

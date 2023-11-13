@@ -17,7 +17,7 @@ U kunt een [!DNL Catalog] -object door de id op te geven in het pad van een DELE
 
 >[!WARNING]
 >
->Wees extra voorzichtig bij het verwijderen van objecten, omdat dit niet ongedaan kan worden gemaakt en onduidelijke wijzigingen kan veroorzaken op andere plaatsen in [!DNL Experience Platform].
+>Wees extra voorzichtig bij het verwijderen van objecten, omdat dit niet ongedaan kan worden gemaakt en onduidelijke wijzigingen kan veroorzaken in andere [!DNL Experience Platform].
 
 **API-indeling**
 
@@ -27,7 +27,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->De `DELETE /batches/{ID}` is afgekeurd. Als u een batch wilt verwijderen, moet u de opdracht [Batchverwerking-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>De `DELETE /batches/{ID}` eindpunt is afgekeurd. Als u een batch wilt verwijderen, moet u de opdracht [Batchverwerking-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parameter | Beschrijving |
 | --- | --- |

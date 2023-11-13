@@ -1,11 +1,11 @@
 ---
 title: Amazon Kinesis Source Connector - overzicht
 description: Leer hoe u Amazon Kinesis met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
-badgeUltimate: label="Ultimate" type="Positive"
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 >
 >De [!DNL Amazon Kinesis] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure]. U kunt uw gegevens van deze systemen overbrengen naar [!DNL Platform].
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform], en [!DNL Azure]. U kunt uw gegevens van deze systemen naar [!DNL Platform].
 
-Opslagbronnen in de cloud kunnen uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat het downloaden, opmaken of uploaden nodig is. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] stelt u in staat gegevens over te brengen van [!DNL Amazon Kinesis] in real time.
+Opslagbronnen in de cloud kunnen uw eigen gegevens in [!DNL Platform] zonder dat het downloaden, opmaken of uploaden nodig is. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] stelt u in staat gegevens over te brengen van [!DNL Amazon Kinesis] in real time.
 
 >[!NOTE]
 >
->De schaalfactor voor [!DNL Kinesis] moet worden verhoogd als u gegevens met een hoog volume moet innemen. Het maximale gegevensvolume dat u van uw [!DNL Kinesis] het account voor Platform is 4000 records per seconde. Neem contact op met uw Adobe als u de schaal wilt verhogen en meer gegevens over het volume wilt invoeren.
+>De schaalfactor voor [!DNL Kinesis] moet worden verhoogd als u gegevens met een hoog volume moet innemen. Het maximale gegevensvolume dat u van uw [!DNL Kinesis] account aan Platform is 4000 records per seconde. Neem contact op met uw Adobe als u de schaal wilt verhogen en meer gegevens over het volume wilt invoeren.
 
 ## Vereisten
 
@@ -37,7 +37,7 @@ A [!DNL Kinesis] voor het maken van een bronverbinding zijn de volgende machtigi
 - `DescribeStream`
 - `ListStreams`
 
-Deze machtigingen worden gerangschikt via de [!DNL Kinesis] -console en worden door het Platform gecontroleerd zodra u uw referenties hebt ingevoerd en uw gegevensstroom hebt geselecteerd.
+Deze machtigingen worden via de [!DNL Kinesis] -console en worden gecontroleerd door Platform nadat u uw referenties hebt ingevoerd en uw gegevensstroom hebt geselecteerd.
 
 In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die vereist zijn om een [!DNL Kinesis] bronverbinding.
 
@@ -82,20 +82,20 @@ Voor meer informatie over het beheren van toegang voor [!DNL Kinesis] gegevensst
 | `TRIM_HORIZON` | De gegevens worden gelezen vanaf de oudste gegevensrecord. |
 | `LATEST` | De gegevens worden gelezen vanaf de meest recente gegevensrecord. |
 
-A [!DNL Kinesis] UI-bron momenteel alleen ondersteund `TRIM_HORIZON`, terwijl de API beide ondersteunt `TRIM_HORIZON` en `LATEST` als modi om gegevens op te halen. De standaarditeratorwaarde die door het Platform wordt gebruikt voor de [!DNL Kinesis] bron is `TRIM_HORIZON`.
+A [!DNL Kinesis] UI-bron momenteel alleen ondersteund `TRIM_HORIZON`, terwijl de API beide ondersteunt `TRIM_HORIZON` en `LATEST` als modi om gegevens op te halen. De standaarditeratorwaarde die Platform gebruikt voor de [!DNL Kinesis] bron is `TRIM_HORIZON`.
 
 Raadpleeg de volgende secties voor meer informatie over iteratortypen [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
 ## Verbinden [!DNL Amazon Kinesis] tot [!DNL Platform]
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Amazon Kinesis] tot [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Amazon Kinesis] tot [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
 
 ### API&#39;s gebruiken
 
 - [Een Amazon Kinesis-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Streaming gegevens verzamelen met de Flow Service API](../../tutorials/api/collect/streaming.md)
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
 - [Een Amazon Kinesis-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

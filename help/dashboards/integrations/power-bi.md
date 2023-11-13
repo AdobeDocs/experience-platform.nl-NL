@@ -1,5 +1,5 @@
 ---
-title: Sjablonen voor rapporten van Power BI voor dashboards van Platforms
+title: Power BI rapportsjablonen voor platformdashboards
 description: Gebruik rapportsjablonen om gegevens van Experience Platforms te verkennen met behulp van Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
@@ -11,34 +11,34 @@ ht-degree: 0%
 
 # Sjablonen voor Power BI-rapporten voor dashboards
 
-Met de functie voor het rapportsjabloon van Power BI kunt u aansprekende rapporten maken die zijn gevuld met gegevens van Adobe Experience Platform. Het gestroomlijnde installatieproces installeert automatisch standaardwidgets voor Real-Time Klantprofiel, segmentatie, en bestemmingen. De installatie verbindt ook Power BI met uw gegevensmodellen zodat kunt u uw rapportmalplaatjes gemakkelijk aanpassen en uitbreiden. Deze rapporten kunnen over uw volledige organisatie zonder de ontvangers worden gedeeld die geloofsbrieven voor uw organisatie op Platform nodig hebben.
+Met de functie voor het rapportsjabloon van Power BI kunt u aansprekende rapporten maken die zijn gevuld met gegevens van Adobe Experience Platform. Het gestroomlijnde installatieproces installeert automatisch standaardwidgets voor Real-Time Klantprofiel, segmentatie, en bestemmingen. De installatie verbindt ook Power BI met uw gegevensmodellen zodat kunt u uw rapportmalplaatjes gemakkelijk aanpassen en uitbreiden. Deze rapporten kunnen over uw volledige organisatie worden gedeeld zonder de ontvangers die geloofsbrieven voor uw organisatie op Platform nodig hebben.
 
-In dit document vindt u instructies voor het tot stand brengen van een verbinding tussen Adobe Experience Platform en de toepassing Power BI en het gebruik van rapportsjablonen om belangrijke gegevens van het Platform met externe gebruikers te delen.
+Dit document bevat instructies voor het maken van een verbinding tussen Adobe Experience Platform en de toepassing Power BI en het gebruik van rapportsjablonen om belangrijke platformgegevensinzichten met externe gebruikers te delen.
 
 ## Aan de slag
 
-Voordat u verdergaat met deze zelfstudie, is het raadzaam een goed inzicht te hebben in [schemacompositie](../../xdm/schema/composition.md) in Experience Platform, en hoe de attributen in het Profiel van de Klant in real time door [samenvoegingsschema](../../xdm/schema/composition.md#union).
+Voordat u verdergaat met deze zelfstudie wordt u aangeraden een goed inzicht te hebben in [schemacompositie](../../xdm/schema/composition.md) in Experience Platform, en hoe de attributen in het Profiel van de Klant in real time door [samenvoegingsschema](../../xdm/schema/composition.md#union).
 
-Gebruikers moeten eerst de volgende machtigingen voor het Platform hebben verkregen om de Power BI-toepassingsintegratie te installeren:
+Gebruikers moeten eerst de volgende platformmachtigingen hebben verkregen om de Power BI-toepassingsintegratie te installeren:
 
 - Query&#39;s beheren
 - Sandboxen beheren
 
 Voor meer informatie over het toewijzen van deze machtigingen leest u de [toegangsbeheer](../../access-control/home.md) documentatie.
 
-U moet ook over een Power BI-account beschikken om deze zelfstudie te kunnen volgen. Als u een account wilt maken, navigeert u naar de [Power BI homepage](https://powerbi.microsoft.com/en-us/) en volgt u het aanmeldingsproces. Gebruikers van deze Power BI-account moeten ook de functie **Werkruimte maken** instellen binnen de instellingen voor Power BI. Deze instelling vindt u in de huurdersinstellingen van de beheerportal voor Power BI. Als uw account is opgegeven door uw huurder of werkgever, neemt u contact op met uw respectieve beheerder om deze instelling in te schakelen.
+U moet ook over een Power BI-account beschikken om deze zelfstudie te kunnen volgen. Als u een account wilt maken, navigeert u naar de [Power BI homepage](https://powerbi.microsoft.com/en-us/) en volgt u het aanmeldingsproces. Gebruikers van deze Power BI-account moeten ook **Werkruimte maken** instellen binnen de instellingen voor Power BI. Deze instelling vindt u in de huurdersinstellingen van de beheerportal voor Power BI. Als uw account is opgegeven door uw huurder of werkgever, neemt u contact op met uw respectieve beheerder om deze instelling in te schakelen.
 
 ![Met de Power BI Admin-portal maakt u werkruimte-instellingen.](../images/power-bi/create-workspace-settings.png)
 
 >[!NOTE]
 >
->Opdat het lusje van Dashboards in de linkernavigatie van Platform UI, en de mening van de Inventaris van het Dashboard zichtbaar is, moet u toegang tot om het even welk van het Profiel, Segmentatie of de dashboards van de Bestemming als deel van uw Platform vergunning hebben.
+>Als u het tabblad Dashboards wilt weergeven in de linkernavigatie van de interface van het platform en de weergave Dashboard Inventory wilt weergeven, moet u toegang hebben tot elk van de dashboards van het profiel, de segmentatie of de bestemming als onderdeel van uw Platform-licentie.
 
 ## De integratie van de Power BI-toepassing installeren
 
-Selecteer in de interface van het Platform de optie **[!UICONTROL Dashboards]** in de linkernavigatie om de [!UICONTROL Dashboards] werkruimte. De [!UICONTROL Browse] wordt een lijst weergegeven met momenteel beschikbare dashboardweergaven. Raadpleeg voor meer informatie over het weergeven van beschikbare dashboards de [inventarisdocumentatie](../inventory.md).
+Selecteer in de interface van het platform de optie **[!UICONTROL Dashboards]** in de linkernavigatie om de [!UICONTROL Dashboards] werkruimte. De [!UICONTROL Browse] wordt een lijst weergegeven met momenteel beschikbare dashboardweergaven. Raadpleeg voor meer informatie over het weergeven van beschikbare dashboards de [inventarisdocumentatie](../inventory.md).
 
-Selecteer vervolgens de **[!UICONTROL Integrations]** tab. De integratiepagina van de Power BI-toepassing wordt weergegeven. Selecteer **[!UICONTROL Install]** om de installatie te starten.
+Selecteer vervolgens de **[!UICONTROL Integrations]** tab. De integratiepagina van de Power BI-toepassing wordt weergegeven. Van hier, selecteer **[!UICONTROL Install]** om de installatie te starten.
 
 >[!NOTE]
 >
@@ -108,9 +108,9 @@ Nu het het rapportmalplaatje van de Power BI wordt geïnstalleerd, verschijnt he
 >
 >De beheerders van Power BI moeten ervoor zorgen dat de gebruikers de aangewezen toegangstoestemmingen hebben om deze dashboards in het milieu van de Power BI te bekijken.
 
-## Werkruimte Power BI
+## Power BI-werkruimte
 
-Nadat u zich hebt aangemeld [de werkruimte van de Power BI](https://dxt.powerbi.com), zijn de rapportmalplaatjes beschikbaar voor elk van de diensten waartot u toegang hebt. De rapportmalplaatjes omvatten profielen, segmenten, en bestemmingsdashboards **alleen** als zij de overeenkomstige meningstoestemmingen hebben.
+Na aanmelden [de werkruimte Power BI](https://dxt.powerbi.com), zijn de rapportmalplaatjes beschikbaar voor elk van de diensten waartot u toegang hebt. De rapportmalplaatjes omvatten profielen, segmenten, en bestemmingsdashboards **alleen** als zij de overeenkomstige meningstoestemmingen hebben.
 
 De standaardwidgets van profielen, segmenten, en bestemmingen zijn beschikbaar binnen de malplaatjerapporten van de Power BI door gebrek.
 
@@ -118,7 +118,7 @@ De standaardwidgets van profielen, segmenten, en bestemmingen zijn beschikbaar b
 >
 >U moet bewerkingsmachtigingen hebben ingeschakeld voor een bepaald dashboard om dat dashboard te kunnen installeren in de Power BI-omgeving.
 
-![Sjabloonrapport van Power BI met gebruik van standaard-Platform-profielwidgets.](../images/power-bi/profile-report-template.png)
+![Sjabloonrapport van profiel Power BI met gebruik van standaardwidgets voor platformprofielen.](../images/power-bi/profile-report-template.png)
 
 Nadat een dashboard in Power BI wordt geïnstalleerd, worden de rapportmalplaatjes getoond aan alle gebruikers door gebrek. Als u toegang tot om het even welke rapportmalplaatjes wilt beperken, zorg ervoor dat u toegang voor de gebruikers in kwestie van binnen het milieu van de Power BI onbruikbaar maakt.
 
@@ -136,7 +136,7 @@ Aangepaste widgets worden gemaakt via de widgetbibliotheek. Zie de [Overzicht va
 
 >[!IMPORTANT]
 >
->Nieuwe aangepaste widgets zijn **niet** wordt automatisch gesynchroniseerd tussen Adobe Experience Platform-dashboards en de Power BI-rapportsjablonen. Aangepaste widgets die in de gebruikersinterface van het Platform worden gemaakt, moeten handmatig opnieuw worden gemaakt in de Power BI-omgeving.
+>Nieuwe aangepaste widgets zijn **niet** wordt automatisch gesynchroniseerd tussen Adobe Experience Platform-dashboards en de Power BI-rapportsjablonen. Aangepaste widgets die in de gebruikersinterface van het platform worden gemaakt, moeten handmatig opnieuw worden gemaakt in de Power BI-omgeving.
 
 ### De aangepaste widget opnieuw maken in de Power BI-omgeving
 
@@ -148,7 +148,7 @@ Als u het dashboard wilt verwijderen, navigeert u naar het dashboardoverzicht en
 
 >[!NOTE]
 >
->Alleen de gebruiker die het Power BI-dashboard heeft geïnstalleerd, kan de integratie verwijderen uit de interface van het Platform.
+>Alleen de gebruiker die het Power BI-dashboard heeft geïnstalleerd, kan de integratie verwijderen uit de interface van het platform.
 
 ![Het bladertabblad van het Dashboards-overzichtsscherm wordt weergegeven met de knop Bladeren en het verwijderpictogram is gemarkeerd.](../images/power-bi/delete-power-bi-dashboard.png)
 
@@ -156,7 +156,7 @@ Er verschijnt een bevestigingspop-up. Selecteren **[!UICONTROL Delete]** om het 
 
 >[!IMPORTANT]
 >
->Als u het dashboard van het Power BI verwijdert uit de interface van het Platform, gebeurt dit **niet** verwijder de rapportmalplaatjes beschikbaar in uw milieu van de Power BI. Als u de informatie volledig wilt schrappen die in de het rapportmalplaatjes van de Power BI wordt gehouden, moet u login uw rekening van de Power BI en de rapportmalplaatjes van die milieu schrappen. Nadat een gebruiker het dashboard van het Power BI heeft verwijderd, kan hij of zij de hierboven beschreven installatie-instructies volgen.
+>Als u het dashboard van het Power BI verwijdert uit de platforminterface, gebeurt dit **niet** verwijder de rapportmalplaatjes beschikbaar in uw milieu van de Power BI. Als u de informatie volledig wilt schrappen die in de het rapportmalplaatjes van de Power BI wordt gehouden, moet u login uw rekening van de Power BI en de rapportmalplaatjes van die milieu schrappen. Nadat een gebruiker het dashboard van het Power BI heeft verwijderd, kan hij of zij de hierboven beschreven installatie-instructies volgen.
 
 ## Volgende stappen
 

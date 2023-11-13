@@ -1,7 +1,7 @@
 ---
 keywords: Catalogus;catalogus
 title: Overzicht van de doelcatalogus
-description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
+description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten oplossingen van de Adobe, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 6%
 
 # Overzicht van de doelcatalogus
 
-De bestemmingscatalogus verstrekt een lijst van beschikbare bestemmingsplatforms die klaar zijn om gegevens te ontvangen. Deze bestemmingsplatforms omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, Experience Platform uitbreidingen, en meer.
+De bestemmingscatalogus verstrekt een lijst van beschikbare bestemmingsplatforms die klaar zijn om gegevens te ontvangen. Deze doelplatforms omvatten oplossingen voor Adobe, advertentieplatforms, onderzoeksplatforms, e-mailmarketing platforms, Experience Platform uitbreidingen, en meer.
 
 Blader in de catalogus om te bepalen welke doelplatforms het beste zijn voor uw Gebruiksscenario&#39;s voor advertenties en personalisatie en stel vervolgens stromen in om uw publiek naar bestemmingen te activeren.
 

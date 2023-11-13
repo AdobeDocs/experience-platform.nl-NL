@@ -81,7 +81,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | De uitdrukking PQL om de gegevens door te vragen. |
 | `predicateType` | Het predikentype voor de vraaguitdrukking onder `predicateExpression`. Momenteel is de enige toegestane waarde voor deze eigenschap: `pql/text`. |
-| `predicateModel` | De naam van de [!DNL Experience Data Model] (XDM) schema-klasse waarop de profielgegevens zijn gebaseerd. |
+| `predicateModel` | De naam van [!DNL Experience Data Model] (XDM) schema-klasse waarop de profielgegevens zijn gebaseerd. |
 | `graphType` | Het grafiektype waarvan u de cluster wilt ophalen. De ondersteunde waarden zijn: `none` (voert geen identiteitsstitching uit) en `pdg` (Er wordt identiteitsstitching uitgevoerd op basis van uw persoonlijke identiteitsgrafiek). |
 
 **Antwoord**
@@ -100,7 +100,7 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `state` | De huidige status van de voorvertoningstaak. Bij het maken wordt de status &quot;NEW&quot; gebruikt. Vervolgens wordt de status &quot;RUNNING&quot; gebruikt totdat de verwerking is voltooid, waarna de status &quot;RESULT_READY&quot; of &quot;FAILED&quot; wordt. |
+| `state` | De huidige status van de voorvertoningstaak. Bij het maken wordt de status &quot;NIEUW&quot; gebruikt. Vervolgens wordt de status &quot;RUNNING&quot; gebruikt totdat de verwerking is voltooid, waarna de status &quot;RESULT_READY&quot; of &quot;FAILED&quot; wordt. |
 | `previewId` | De id van de voorvertoningstaak die voor opzoekdoeleinden moet worden gebruikt bij het weergeven van een schatting of voorvertoning, zoals in de volgende sectie wordt beschreven. |
 
 ## De resultaten van een specifieke voorvertoning ophalen {#get-preview}
@@ -182,7 +182,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
-Als u eenmaal een voorbeeldtaak hebt gemaakt, kunt u de bijbehorende taak gebruiken `previewId` op het pad van een verzoek van de GET aan de `/estimate` eindpunt om statistische informatie over de segmentdefinitie, met inbegrip van geprojecteerde publieksgrootte, betrouwbaarheidsinterval, en fout standaardafwijking te bekijken.
+Nadat u een voorvertoningstaak hebt gemaakt, kunt u de bijbehorende taak gebruiken `previewId` op het pad van een verzoek van de GET aan de `/estimate` eindpunt om statistische informatie over de segmentdefinitie, met inbegrip van geprojecteerde publieksgrootte, betrouwbaarheidsinterval, en fout standaardafwijking te bekijken.
 
 **API-indeling**
 

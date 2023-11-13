@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Toewijzingen doelveld
 
-In de volgende tabel worden de velden van een XDM-ervaringsgebeurtenisschema (Experience Data Model) en de corresponderende velden uit Adobe Target weergegeven waaraan ze moeten worden toegewezen. Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
+In de volgende tabel worden de velden van een XDM-ervaringsgebeurtenisschema (Experience Data Model) en de bijbehorende velden uit Adobe Target weergegeven waaraan ze moeten worden toegewezen. Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ In de volgende tabel worden de velden van een XDM-ervaringsgebeurtenisschema (Ex
 | **`dataSource`** | | Gevormd aan &quot;1&quot;voor alle cliënten. |
 | `dataSource._id` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | De unieke id van deze gegevensbron. Dit zou worden verstrekt door het individu of het systeem dat de gegevensbron creeerde. |
 | `dataSource.code` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Een sneltoets naar de volledige @id. U kunt ten minste een van de code of @id gebruiken. Soms wordt deze code de integratiecode van de gegevensbron genoemd. |
-| `dataSource.tags` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | De markeringen worden gebruikt om erop te wijzen hoe de aliassen die door een bepaalde gegevensbron worden vertegenwoordigd door toepassingen zouden moeten worden geïnterpreteerd die die aliassen gebruiken.<br><br>Voorbeelden:<br><ul><li>`isAVID`: Gegevensbronnen die de bezoeker-id&#39;s van Analytics vertegenwoordigen.</li><li>`isCRSKey`: Gegevensbronnen die aliassen vertegenwoordigen die als sleutels in CRS zouden moeten worden gebruikt.</li></ul>De markeringen worden geplaatst wanneer de gegevensbron wordt gecreeerd maar zij zijn ook inbegrepen in pijpleidingsberichten wanneer het van verwijzingen voorzien van een bepaalde gegevensbron. |
+| `dataSource.tags` | Een door het systeem gegenereerde waarde die niet kan worden doorgegeven met de aanvraag. | Tags worden gebruikt om aan te geven hoe aliassen die door een bepaalde gegevensbron worden vertegenwoordigd, door toepassingen met die aliassen moeten worden geïnterpreteerd.<br><br>Voorbeelden:<br><ul><li>`isAVID`: Gegevensbronnen die analytische bezoeker-id&#39;s vertegenwoordigen.</li><li>`isCRSKey`: Gegevensbronnen die aliassen vertegenwoordigen die als sleutels in CRS zouden moeten worden gebruikt.</li></ul>De markeringen worden geplaatst wanneer de gegevensbron wordt gecreeerd maar zij zijn ook inbegrepen in pijpleidingsberichten wanneer het van verwijzingen voorzien van een bepaalde gegevensbron. |
 | **`timestamp`** | Tijdstempel voor gebeurtenis |
 | **`channel`** | `context.channel` | Werkt alleen met weergave. De opties zijn &quot;web&quot; en &quot;mobiel&quot;, waarbij &quot;web&quot; de standaardwaarde is. |
 | **`endUserIds`** |
@@ -48,7 +48,7 @@ In de volgende tabel worden de velden van een XDM-ervaringsgebeurtenisschema (Ex
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
 | `experience.target.environmentID` | Interne toewijzing van het doel voor klant-bepaalde milieu&#39;s (zoals dev, qa, of prod). |
-| `experience.target.supplementalDataID` | Id die wordt gebruikt om Target-gebeurtenissen aan te sluiten met Analytics-gebeurtenissen |
+| `experience.target.supplementalDataID` | Id die wordt gebruikt om doelgebeurtenissen aan te sluiten met analytische gebeurtenissen |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | Lijst (array) van activiteiten waarvoor de bezoeker in aanmerking komt |

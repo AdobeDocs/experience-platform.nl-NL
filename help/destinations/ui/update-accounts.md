@@ -29,7 +29,7 @@ Voor batchbestemmingen kunt u de toegang of de geheime sleutel bijwerken als een
 
 Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar bestaande doelen.
 
-1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
+1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
 
    ![Het tabblad Accounts](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -37,7 +37,7 @@ Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar besta
 
    ![Bestemmingsaccounts filteren](../assets/ui/update-accounts/filter-accounts.png)
 
-3. De ovalen selecteren (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer ![Knop Details bewerken](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** om de accountgegevens te bewerken.
+3. De ovalen selecteren (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer de ![Knop Details bewerken](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** om de accountgegevens te bewerken.
 
    ![Account bewerken](../assets/ui/update-accounts/accounts-edit.png)
 
@@ -51,11 +51,11 @@ Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar besta
 
    ![Toegangstoets details bewerken](../assets/ui/update-accounts/edit-details-key.png)
 
-   * Voor accounts die een `Bearer token` verbindingstype, kunt u een nieuw dragertoken invoeren, indien nodig. U kunt ook de naam en beschrijving van uw account bijwerken.
+   * Voor accounts die gebruikmaken van een `Bearer token` verbindingstype, kunt u een nieuw dragertoken invoeren, indien nodig. U kunt ook de naam en beschrijving van uw account bijwerken.
 
    ![Token details van drager bewerken](../assets/ui/update-accounts/edit-details-bearer.png)
 
-   * Voor accounts die een `Server to server` verbindingstype kunt u de naam en beschrijving van uw account bijwerken.
+   * Voor accounts die gebruikmaken van een `Server to server` verbindingstype kunt u de naam en beschrijving van uw account bijwerken.
 
    ![Details van server naar server bewerken](../assets/ui/update-accounts/edit-details-s2s.png)
 

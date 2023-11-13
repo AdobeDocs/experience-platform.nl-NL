@@ -24,9 +24,9 @@ Als een klant zijn toestemming voor het delen van persoonlijke gegevens heeft in
 
 Het naleven van de waarden voor instemming van klanten vereist inzicht in de verschillende [!DNL Adobe Experience Platform] betrokken diensten. Voordat u met deze zelfstudie begint, moet u de volgende services gebruiken:
 
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in echt - tijd die op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u een publiek opbouwen op [!DNL Real-Time Customer Profile] gegevens.
 
 ## Goedgekeurde schemavelden
 
@@ -34,7 +34,7 @@ Om de instemming en voorkeuren van de klant te respecteren, maakt een van de sch
 
 Zie voor meer informatie over de structuur en het beoogde gebruik van elk van de kenmerken die door de veldgroep worden verschaft de [handleiding voor toestemmingen en voorkeuren](../xdm/field-groups/profile/consents.md). Voor geleidelijke instructies op hoe te om een gebiedsgroep aan een schema toe te voegen, verwijs naar [XDM UI-hulplijn](../xdm/ui/resources/schemas.md#add-field-groups).
 
-Nadat de veldgroep is toegevoegd aan een [Schema met profiel](../xdm/ui/resources/schemas.md#profile) en zijn gebieden zijn gebruikt om toestemmingsgegevens van uw ervaringstoepassing in te voeren, kunt u de verzamelde toestemmingsattributen in uw segmentregels gebruiken.
+Nadat de veldgroep is toegevoegd aan een [Schema met profiel ingeschakeld](../xdm/ui/resources/schemas.md#profile) en zijn gebieden zijn gebruikt om toestemmingsgegevens van uw ervaringstoepassing in te voeren, kunt u de verzamelde toestemmingsattributen in uw segmentregels gebruiken.
 
 ## Verwerking van toestemming in segmentatie
 
@@ -65,17 +65,17 @@ Eén methode is om klanten uit te sluiten die ervoor hebben gekozen hun gegevens
 
 ![](./images/opt-outs/collect.png)
 
-Onder **[!UICONTROL Attributes]** navigeer in het linkerspoor naar de **[!UICONTROL Consents and Preferences]** sectie selecteert u vervolgens **[!UICONTROL Share Data]**. De bijbehorende slepen **[!UICONTROL Choice Value]** in het canvas en selecteert u dezelfde waarden als voor de [!UICONTROL Data Collection] keuzevrijheid. Zorg ervoor dat een **[!UICONTROL Or]** er bestaat een relatie tussen de twee eigenschappen.
+Onder **[!UICONTROL Attributes]** navigeer in het linkerspoor naar de **[!UICONTROL Consents and Preferences]** sectie selecteert u vervolgens **[!UICONTROL Share Data]**. De bijbehorende slepen **[!UICONTROL Choice Value]** in het canvas en selecteert u dezelfde waarden als voor de [!UICONTROL Data Collection] keuzevrijheid. Zorg ervoor dat een **[!UICONTROL Or]** Er wordt een relatie tussen de twee eigenschappen tot stand gebracht.
 
 ![](./images/opt-outs/share.png)
 
-Met beide **[!UICONTROL Data Collection]** en **[!UICONTROL Share Data]** aan de segmentdefinitie toegevoegde toestemmingswaarden, klanten die ervoor gekozen hebben hun gegevens niet te gebruiken, zullen van het resulterende publiek worden uitgesloten. Van hier, kunt u de segmentdefinitie blijven aanpassen alvorens te selecteren **[!UICONTROL Save]** om het proces te voltooien.
+Met beide **[!UICONTROL Data Collection]** en **[!UICONTROL Share Data]** aan de segmentdefinitie toegevoegde toestemmingswaarden, klanten die ervoor gekozen hebben hun gegevens niet te gebruiken, zullen van het resulterende publiek worden uitgesloten. Vanaf hier kunt u de segmentdefinitie blijven aanpassen voordat u **[!UICONTROL Save]** om het proces te voltooien.
 
 ## Volgende stappen
 
 Door deze zelfstudie te volgen, zou u een beter inzicht in moeten hebben hoe te om klantentoestemmingen en voorkeur te respecteren wanneer het bouwen van segmentdefinities in Experience Platform.
 
-Raadpleeg de volgende documentatie voor meer informatie over het beheer van de toestemming in Platform:
+Raadpleeg de volgende documentatie voor meer informatie over het beheer van toestemming in Platform:
 
-* [Goedkeuring met gebruik van de Adobe-standaard](../landing/governance-privacy-security/consent/adobe/overview.md)
+* [Goedkeuring met behulp van de Adobe-standaard](../landing/governance-privacy-security/consent/adobe/overview.md)
 * [Goedkeuring verwerking gebruikend IAB TCF 2.0 norm](../landing/governance-privacy-security/consent/iab/overview.md)

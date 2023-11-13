@@ -19,7 +19,7 @@ Deze pagina beschrijft hoe te om Destination SDK te gebruiken om dossier het for
 
 ## Vereisten {#prerequisites}
 
-Lees de [Aan de slag met Destination SDK](../../getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
+Lees voordat u verdergaat met de onderstaande stappen de [Aan de slag met Destination SDK](../../getting-started.md) pagina voor informatie over het verkrijgen van de vereiste autorisatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 Adobe raadt u ook aan de volgende documentatie te lezen en bekend te maken voordat u verdergaat:
 
@@ -28,7 +28,7 @@ Adobe raadt u ook aan de volgende documentatie te lezen en bekend te maken voord
 
 ## Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
-Begin met het gebruik van de `/destination-server` eindpunt om te bepalen welke de configuratieopties van het dossierformatteren u opstelling voor de uitgevoerde dossiers wilt.
+Begin met het gebruik van de `/destination-server` eindpunt om te bepalen welke dossier het formatteren configuratieopties u opstelling voor de uitgevoerde dossiers wilt.
 
 Hieronder ziet u een voorbeeld van een configuratie van een doelserver voor een [!DNL Amazon S3] doel, met verschillende opties voor bestandsindeling geselecteerd.
 
@@ -116,7 +116,7 @@ In deze stap kunt u de weergegeven opties groeperen in elke gewenste volgorde, u
 
 ### De opties voor de bestandsindeling bepalen {#ordering}
 
-De volgorde waarin u de opmaakopties voor bestanden toevoegt als gegevensvelden van klanten in de doelconfiguratie, wordt weerspiegeld in de gebruikersinterface. De onderstaande configuratie wordt bijvoorbeeld weerspiegeld in de gebruikersinterface, waarbij de opties in de volgorde worden weergegeven **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
+De volgorde waarin u de opmaakopties voor bestanden toevoegt als gegevensvelden van klanten in de doelconfiguratie, wordt weerspiegeld in de gebruikersinterface. De onderstaande configuratie wordt bijvoorbeeld dienovereenkomstig weerspiegeld in de gebruikersinterface, waarbij de opties in de volgorde worden weergegeven **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
 
 ![Afbeelding met de volgorde van opties voor bestandsindeling in de gebruikersinterface van het Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -326,7 +326,7 @@ Om dit te doen, gebruik `namedEnum` object als hieronder weergegeven en een `def
 
 ![Het registreren van het scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
-### Opties voor voorwaardelijke bestandsindeling maken {#conditional-options}
+### Voorwaardelijke opties voor bestandsindeling maken {#conditional-options}
 
 U kunt opties voor voorwaardelijke bestandsindeling maken, die alleen in de activeringsworkflow worden weergegeven wanneer de gebruiker een bepaald bestandstype selecteert om te exporteren. In de onderstaande configuratie wordt bijvoorbeeld een voorwaardelijke groepering gemaakt voor CSV-bestandsopties. De CSV-bestandsopties worden alleen weergegeven wanneer de gebruiker CSV selecteert als het gewenste bestandstype voor exporteren.
 
@@ -716,7 +716,7 @@ Een succesvolle reactie keert de bestemmingsconfiguratie, met inbegrip van uniek
 ## Bekende beperkingen {#known-limitations}
 
 Een bepaalde combinatie van opties voor bestandsindeling kan tot ongewenste resultaten bij het exporteren van bestanden leiden.
-Adobe raadt u af de volgende combinatie van CSV-opties te selecteren:
+Adobe raadt u aan de volgende combinatie van CSV-opties niet te selecteren:
 
 ```
 nullValue -> ""

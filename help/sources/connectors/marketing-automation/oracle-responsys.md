@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >De [!DNL Oracle Responsys] De bron is in bèta. Zie de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie over het gebruik van bronnen met een bètalabel.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] diensten. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met [!DNL Platform] diensten. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 [!DNL Oracle Responsys] is een platform voor campagnebeheer over meerdere kanalen waarmee u geavanceerde intelligentie op schaal kunt leveren en aangepaste berichten kunt maken die passen bij de specifieke belangen en voorkeuren van uw klanten.
 
@@ -28,7 +28,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een de
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Oracle Responsys] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Oracle Responsys] naar Platform met API&#39;s of de gebruikersinterface:
 
 ## Verbinden [!DNL Oracle Responsys] naar Platform met API&#39;s
 
@@ -36,7 +36,7 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 * [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Een gegevensstroom maken voor een marketingautomatiseringsbron met behulp van de Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
-## Verbinden [!DNL Oracle Responsys] naar Platform met behulp van de gebruikersinterface
+## Verbinden [!DNL Oracle Responsys] naar Platform met behulp van UI
 
 * [Creeer een Oracle Resys bronverbinding in UI](../../tutorials/ui/create/marketing-automation/oracle-responsys.md)
 * [Een gegevensstroom maken voor een bronverbinding voor marketingautomatisering in de gebruikersinterface](../../tutorials/ui/dataflow/marketing-automation.md)

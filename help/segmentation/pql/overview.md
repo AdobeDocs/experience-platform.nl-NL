@@ -38,7 +38,7 @@ homeAddress.stateProvince = workAddress.stateProvince
 
 ### Expliciete verwijzing naar de eerste parameter
 
-In het onderstaande voorbeeld: `$1` verwijst naar de eerste parameter. Dientengevolge `$2` verwijst naar de tweede parameter, enz.
+In het onderstaande voorbeeld: `$1` verwijst naar de eerste parameter. Dientengevolge, `$2` verwijst naar de tweede parameter, enz.
 
 ```sql
 $1.homeAddress.stateProvince = $1.homeAddress.stateProvince
@@ -58,7 +58,7 @@ PQL biedt ondersteuning voor de volgende letterlijke typen:
 
 | Letterlijk | Definitie | Voorbeeld |
 | ------- | ---------- | ------- |
-| Tekenreeks | Een gegevenstype dat bestaat uit tekens die tussen dubbele aanhalingstekens staan. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
+| Tekenreeks | Een gegevenstype dat bestaat uit tekens die worden omringd door dubbele aanhalingstekens. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
 | Boolean | Een gegevenstype dat waar of onwaar is. | `true`, `false` |
 | Geheel | Een gegevenstype dat een geheel getal vertegenwoordigt. Het kan positief, negatief, of nul zijn. | `-201`, `0`, `412` |
 | Dubbel | A data type representing any real number. Het kan positief, negatief, of nul zijn. | `-51.24`, `3.14`, `0.6942058` |
@@ -83,8 +83,8 @@ In de volgende tabel worden de verschillende categorieën ondersteunde PQL-funct
 | Datum en tijd | Wordt gebruikt in combinatie met datum-, tijd- en datetime-objecten. Meer informatie over deze functies vindt u in het gedeelte [datum-/tijdfunctiedocument](./datetime-functions.md). |
 | Filter | Wordt gebruikt om gegevens binnen arrays te filteren. Meer informatie over deze functies vindt u in het gedeelte [filterfuncties, document](./filter-functions.md). |
 | Logische kwantoren | Wordt gebruikt om voorwaarden binnen een array te bevestigen. Meer informatie vindt u in de [document voor logische kwantoren](./logical-quantifiers.md). |
-| Diversen | Functies die niet in een van de bovenstaande categorieën passen, kunt u vinden in het gedeelte [document met diverse functies](./misc-functions.md). |
+| Overige | Functies die niet in een van de bovenstaande categorieën passen, kunt u vinden in het gedeelte [document met diverse functies](./misc-functions.md). |
 
 ## Volgende stappen
 
-Nu hebt u geleerd hoe te te gebruiken [!DNL Profile Query Language]kunt u PQL gebruiken bij het maken en wijzigen van segmentdefinities. Voor meer informatie over segmentatie, gelieve te lezen [segmentatieoverzicht](../home.md).
+Nu hebt u geleerd hoe te gebruiken [!DNL Profile Query Language], kunt u PQL gebruiken wanneer het creëren van en het wijzigen van segmentdefinities. Lees voor meer informatie over segmentatie de [segmentatieoverzicht](../home.md).

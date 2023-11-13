@@ -22,7 +22,7 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 
 Momenteel ondersteunt Experience Platform de onderstaande reclamebestemmingen.
 
-Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u [Verbindingen](../../destination-types.md#connections) op de pagina Doeltypen en -categorieën.
+Zie voor meer informatie over het verschil tussen verbindingen en extensies de [Verbindingen](../../destination-types.md#connections) op de pagina Doeltypen en -categorieën.
 
 ### Verbindingen
 
@@ -53,10 +53,10 @@ Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u
 * [OneTag-extensie knipperen](flashtalking.md)
 * [Google Ads-extensie](google-ads-extension.md)
 * [Google-tag-extensie](gtag-advertising.md)
-* [linkedIn Insight Tag-extensie](linkedin.md)
+* [LinkedIn Insight Tag-extensie](linkedin.md)
 * [Pinterest Conversion Tracking-extensie](pinterest-extension.md)
-* [Twitter Universal Website Tag-extensie](twitter-uwt.md)
+* [Twitter van Universal Website Tag-extensie](twitter-uwt.md)
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Als u een publiek naar advertentiebestemmingen voor uw campagnes wilt sturen, moet het Platform eerst verbinding maken met het doel. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Als u een publiek naar advertentiebestemmingen voor uw campagnes wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.

@@ -1,5 +1,5 @@
 ---
-keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; e-mailmarketingbestemmingen activeren; cloudopslagdoelen activeren
+keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; activeer e-mail marketing bestemmingen; activeer de bestemmingen van de wolkenopslag
 title: Stimulansen voor het streamen van exportdoelen voor profielen activeren
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door een publiek naar streaming op profiel gebaseerde doelen te sturen.
@@ -51,9 +51,9 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, schakelt u
 
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
-* **[!UICONTROL Segmentation Service]**: Soorten publiek dat binnen Experience Platform door de Segmenteringsdienst wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
-* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform wordt gegenereerd en als CSV-bestanden in het Platform wordt geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
-* Andere soorten soorten publiek, afkomstig van andere Adobe oplossingen, zoals [!DNL Audience Manager].
+* **[!UICONTROL Segmentation Service]**: publiek dat binnen Experience Platform door de Dienst van de Segmentatie wordt geproduceerd. Zie de [segmentatiedocumentatie](../../segmentation/ui/overview.md) voor meer informatie .
+* **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform is gegenereerd en als CSV-bestanden naar Platform is geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
+* Andere soorten soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager].
 
 ![Afbeelding die de selectie van selectievakjes markeert in de stap Soorten publiek selecteren van de activeringsworkflow.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
@@ -83,11 +83,11 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Als uw organisatie is aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
+Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
 
 ### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
 
-In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, raadpleegt u [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
+In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, leest u informatie over [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
 
 ![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
 

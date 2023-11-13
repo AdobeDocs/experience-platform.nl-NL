@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;dataset api;beheer gegevensgebruik;gegevensgebruik api
 solution: Experience Platform
 title: Labels voor gegevensgebruik voor gegevenssets beheren met API's
-description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
+description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API van de Catalogusservice die metagegevens van gegevenssets beheert.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Gegevensgebruikslabels voor gegevenssets beheren met behulp van API&#39;s
 
-De [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) staat u toe om gebruiksetiketten voor datasets toe te passen en uit te geven. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de [!DNL Catalog Service] API die gegevenssetmetagegevens beheert.
+De [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) kunt u gebruiksetiketten voor datasets toepassen en uitgeven. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de [!DNL Catalog Service] API die gegevenssetmetagegevens beheert.
 
 <!-- >[!IMPORTANT]
 >
@@ -105,7 +105,7 @@ Het verzoek van de POST van het voorbeeld hieronder werkt de volledige dataset m
 >
 >Als er momenteel labels voor de betrokken gegevensset bestaan, kunnen nieuwe labels alleen worden toegevoegd via een verzoek van de PUT, waarvoor een `If-Match` header. Nadat labels aan een gegevensset zijn toegevoegd, is de meest recente `etag` Deze waarde is vereist als u de labels later wilt bijwerken of verwijderen.
 
-Om de meest recente versie van de dataset-etiket entiteit terug te winnen, maak een [Verzoek om GET](#look-up) aan de `/datasets/{DATASET_ID}/labels` eindpunt. De huidige waarde wordt geretourneerd in de reactie onder een `etag` header. Wanneer het bijwerken van bestaande datasetetiketten, moeten de beste praktijken eerst een raadplegingsverzoek voor de dataset uitvoeren om zijn recentste te halen `etag` waarde vóór gebruik van die waarde in het dialoogvenster `If-Match` koptekst van uw volgende verzoek om PUT.
+Om de meest recente versie van de dataset-etiket entiteit terug te winnen, maak een [Verzoek om GET](#look-up) aan de `/datasets/{DATASET_ID}/labels` eindpunt. De huidige waarde wordt geretourneerd in de reactie onder een `etag` header. Wanneer het bijwerken van bestaande datasetetiketten, moeten de beste praktijken eerst een raadplegingsverzoek voor de dataset uitvoeren om zijn recentste te halen `etag` waarde vóór gebruik van die waarde in de `If-Match` koptekst van uw volgende verzoek om PUT.
 
 ```shell
 curl -X POST \
@@ -181,7 +181,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 De hieronder dataset waarop de verrichting van de PUT wordt toegepast had C1 optionalLabel op eigenschappen/person/properties/address gebied en C1, C2 optionalLabels op /properties/person/properties/name/properties/fullName gebied. Na de putoptie heeft het eerste veld geen label (label C1 verwijderd) en het tweede veld heeft alleen het label C1 (label C2 verwijderd)
 
-In het onderstaande voorbeeldscenario wordt een aanvraag voor een PUT gebruikt om labels te verwijderen die aan afzonderlijke velden zijn toegevoegd. Voordat het verzoek werd ingediend, `fullName` het veld had `C1` en `C2` toegepaste labels en de `address` veld had al een `C1` label toegepast. Het verzoek van de PUT treedt bestaande etiketten met voeten `C1, C2` van de `fullName` veld met een `C1` label gebruiken `optionalLabels.labels` parameter. Het verzoek negeert ook het `C1` van de `address` veld met een lege set veldlabels.
+In het onderstaande voorbeeldscenario wordt een aanvraag voor een PUT gebruikt om labels te verwijderen die aan afzonderlijke velden zijn toegevoegd. Voordat het verzoek werd ingediend, `fullName` het veld had `C1` en `C2` toegepaste labels en de `address` veld had al een `C1` label toegepast. De aanvraag PUT negeert bestaande labels `C1, C2` van de `fullName` veld met een `C1` label gebruiken `optionalLabels.labels` parameter. Het verzoek negeert ook het `C1` van de `address` veld met een lege set veldlabels.
 
 ```shell
 curl -X PUT \
@@ -230,7 +230,7 @@ curl -X PUT \
 | `entityId` | Dit identificeert de specifieke gegevenssetentiteit die moet worden bijgewerkt. De `entityId` moeten de volgende drie waarden bevatten:<br/><br/>`namespace`: Dit wordt gebruikt om botsingen van identiteitskaart te vermijden. De `namespace` is `AEP`.<br/>`id`: De id van de bron die wordt bijgewerkt. Dit heeft betrekking op de `datasetId`.<br/>`type`: Het type van de bron die wordt bijgewerkt. Dit zal altijd `dataset`. |
 | `labels` | Een lijst van de etiketten van het gegevensgebruik die u aan de volledige dataset wilt toevoegen. |
 | `parents` | De `parents` array bevat een lijst met `entityId`s dat deze dataset etiketten van zal erven. Datasets kunnen labels overnemen van schema&#39;s en/of gegevenssets. |
-| `optionalLabels` | Deze parameter wordt gebruikt om etiketten te verwijderen die eerder op een datasetgebied worden toegepast. Een lijst van om het even welke individuele gebieden binnen de dataset die u de etiketten uit wilt verwijderen. Elk item in deze array moet de volgende eigenschappen hebben: <br/><br/>`option`: Een object dat de [!DNL Experience Data Model] (XDM)-kenmerken van het veld. De volgende drie eigenschappen zijn vereist:<ul><li>id</code>: De URI $id</code> waarde van het schema dat aan het veld is gekoppeld.</li><li>contentType</code>: Het inhoudstype en het versienummer van het schema. Dit moet de vorm aannemen van een van de <a href="../../xdm/api/getting-started.md#accept">Koppen accepteren</a> voor een XDM opzoekverzoek.</li><li>schemaPath</code>: De weg aan het gebied binnen het schema van de dataset.</li></ul>`labels`: Deze waarde moet een subset van de bestaande toegepaste veldlabels bevatten of leeg zijn om alle bestaande veldlabels te verwijderen. De methoden PUT of POST retourneren nu een fout als de `optionalLabels` veld bevat nieuwe of gewijzigde labels. |
+| `optionalLabels` | Deze parameter wordt gebruikt om etiketten te verwijderen die eerder op een datasetgebied worden toegepast. Een lijst van om het even welke individuele gebieden binnen de dataset die u de etiketten wilt verwijderen. Elk item in deze array moet de volgende eigenschappen hebben: <br/><br/>`option`: Een object dat de eigenschap [!DNL Experience Data Model] (XDM)-kenmerken van het veld. De volgende drie eigenschappen zijn vereist:<ul><li><code>id</code>: De URI <code>$id</code> De waarde van het schema dat aan het veld is gekoppeld.</li><li><code>contentType</code>: Het inhoudstype en het versienummer van het schema. Dit moet de vorm aannemen van een van de <a href="../../xdm/api/getting-started.md#accept">Koppen accepteren</a> voor een XDM opzoekverzoek.</li><li><code>schemaPath</code>: De weg aan het gebied binnen het schema van de dataset.</li></ul>`labels`: Deze waarde moet een subset van de bestaande toegepaste veldlabels bevatten of leeg zijn om alle bestaande veldlabels te verwijderen. De methoden PUT of POST retourneren nu een fout als de `optionalLabels` veld bevat nieuwe of gewijzigde labels. |
 
 **Antwoord**
 

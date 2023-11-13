@@ -15,11 +15,11 @@ ht-degree: 2%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijde. Voor een lijst met beschikbare serverextensies raadpleegt u de [verwijzing naar extensies voor doorsturen van gebeurtenissen](../server/overview.md) in plaats daarvan.
+Hieronder volgt een lijst met documentatie voor tags van clientzijde. Voor een lijst met beschikbare serverextensies raadpleegt u de [verwijzing naar extensies voor doorsturen van gebeurtenissen](../server/overview.md) in plaats daarvan.
 
 >[!NOTE]
 >
->Elke extensienaam gevolgd door een sterretje (*) verwijst naar de vermelding van de extensie op Adobe Exchange, die installatie- en gebruiksinstructies bevat. Alle andere koppelingen verwijzen naar de documentatie van de extensie op Adobe Experience League.
+>Om het even welke uitbreidingsnaam die door een asterisk (*) wordt gevolgd verbindt met de lijst van de uitbreiding op de Uitwisseling van de Adobe, die installatie en gebruiksinstructies bevat. Alle andere koppelingen verwijzen naar de documentatie van de extensie op Adobe Experience League.
 
 * [Toegankelijke snelheidscijfers voor de site](https://exchange.adobe.com/apps/ec/103053)*
 * [Activity Map-klant](https://exchange.adobe.com/apps/ec/101531)*
@@ -34,7 +34,7 @@ Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijd
 * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)*
 * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
-* [Gegevenslaag Adobe-client](./client-data-layer/overview.md)
+* [Gegevenslaag client-Adobe](./client-data-layer/overview.md)
 * [Adobe ContextHub](./contexthub/overview.md)
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID Service](./id-service/overview.md)
@@ -44,8 +44,8 @@ Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijd
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobe Media Analytics voor audio en video](./media-analytics/overview.md)
 * [Adobe Media Analytics (3.x SDK)](./media-analytics-3x/overview.md)
-* [Adobe Privacy](./privacy/overview.md)
-* [Adobe Report Suite-kiezer](https://exchange.adobe.com/apps/ec/100640)*
+* [Privacy Adoben](./privacy/overview.md)
+* [Adobe Report Suite Selector](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
@@ -91,7 +91,7 @@ Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijd
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [Toewijzingstabel](https://exchange.adobe.com/apps/ec/103136)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
-* [Master eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)*
+* [Hoofd-eigenschappenbeheer](https://exchange.adobe.com/apps/ec/102992)*
 * [Monitor](https://exchange.adobe.com/apps/ec/106544)*
 * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)*
 * [OneTrust Consent-beheer voor cookies](https://exchange.adobe.com/apps/ec/100340)*
@@ -111,7 +111,7 @@ Hieronder volgt een lijst met documentatie voor tags-extensies aan de clientzijd
 * [TAGS van Loop Horizon](https://exchange.adobe.com/apps/ec/106092)*
 * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)*
 * [Verrijking van gegevens in Tealium](https://exchange.adobe.com/apps/ec/104217)*
-* [TMMData Foundation-Platform](https://exchange.adobe.com/apps/ec/100148)*
+* [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)*
 * [TrustArc Cookie-toegangsbeheer](https://exchange.adobe.com/apps/ec/107037)*
 * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)*
 * [Webvariaties](https://exchange.adobe.com/apps/ec/106769)*

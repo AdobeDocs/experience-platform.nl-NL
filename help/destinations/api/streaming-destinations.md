@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen; API-zelfstudies; streamingdoelen-API; Platform
+keywords: Experience Platform;home;populaire onderwerpen; API-zelfstudies; streamingdoelen-API; Platform
 solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API in Adobe Experience Platform
 description: In dit document wordt beschreven hoe u streaming doelen kunt maken met de Adobe Experience Platform API
@@ -34,9 +34,9 @@ Als u liever de gebruikersinterface in Platform gebruikt om verbinding te maken 
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is het registratiesysteem voor de gegevenslocatie en -lijn in het Experience Platform.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan het stromen bestemmingen in Platform te activeren.
 
@@ -53,19 +53,19 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste en optionele koppen {#gather-values}
 
-Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in Experience Platform raadpleegt u de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Zie voor meer informatie over sandboxen in Experience Platform de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
@@ -157,7 +157,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor profielservice - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Gebruik de specificatie-id van de verbinding voor profielservice - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
@@ -201,8 +201,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`: Gebruik de id die u in de vorige stap hebt gekregen.
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor profielservice - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{BASE_CONNECTION_ID}`: Gebruik de id die u in de vorige stap hebt verkregen.
+* `{CONNECTION_SPEC_ID}`: Gebruik de specificatie-id van de verbinding voor profielservice - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
@@ -269,13 +269,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id die u in de stap hebt opgehaald [Krijg de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
-* `{AUTHENTICATION_CREDENTIALS}`: Vul de naam van uw het stromen bestemming in: `Aws Kinesis authentication credentials` of `Azure EventHub authentication credentials`.
+* `{AUTHENTICATION_CREDENTIALS}`: vul de naam van uw streamingdoel in: `Aws Kinesis authentication credentials` of `Azure EventHub authentication credentials`.
 * `{ACCESS_ID}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Uw toegangs-id voor uw Amazon Kinesis-opslaglocatie.
 * `{SECRET_KEY}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Je geheime sleutel voor je Amazon Kinesis-opslaglocatie.
 * `{REGION}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Het gebied in uw [!DNL Amazon Kinesis] -account waar Platform uw gegevens stroomt.
 * `{SAS_KEY_NAME}`: *Voor [!DNL Azure Event Hubs] verbindingen.* Vul uw SAS-sleutelnaam in. Meer informatie over verifiëren bij [!DNL Azure Event Hubs] met SAS-toetsen in de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * `{SAS_KEY}`: *Voor [!DNL Azure Event Hubs] verbindingen.* Vul uw SAS-sleutel in. Meer informatie over verifiëren bij [!DNL Azure Event Hubs] met SAS-toetsen in de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`: *Voor [!DNL Azure Event Hubs] verbindingen.* Vul de [!DNL Azure Event Hubs] naamruimte waarin Platform uw gegevens streamt. Zie voor meer informatie [Een naamruimte voor gebeurtenishubs maken](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in de [!DNL Microsoft] documentatie.
+* `{EVENT_HUB_NAMESPACE}`: *Voor [!DNL Azure Event Hubs] verbindingen.* Vul de [!DNL Azure Event Hubs] naamruimte waarin Platform uw gegevens stroomt. Zie voor meer informatie [Een naamruimte voor gebeurtenishubs maken](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in de [!DNL Microsoft] documentatie.
 
 **Antwoord**
 
@@ -329,10 +329,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Gebruik de basisverbindings-id die u in de bovenstaande stap hebt verkregen.
-* `{CONNECTION_SPEC_ID}`: De verbindingsspecificaties gebruiken die u in de stap hebt verkregen [Krijg de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
-* `{NAME_OF_DATA_STREAM}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Geef de naam op van de bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Platform exporteert gegevens naar deze stream.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie die u in de stap hebt verkregen [Krijg de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
+* `{NAME_OF_DATA_STREAM}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Geef de naam op van de bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Platform zal gegevens naar deze stroom uitvoeren.
 * `{REGION}`: *Voor [!DNL Amazon Kinesis] verbindingen.* Het gebied in uw Amazon Kinesis-account waar Platform uw gegevens stroomt.
-* `{EVENT_HUB_NAME}`: *Voor [!DNL Azure Event Hubs] verbindingen.* Vul de [!DNL Azure Event Hub] naam waar het Platform uw gegevens zal stromen. Zie voor meer informatie [Een gebeurtenishub maken](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in de [!DNL Microsoft] documentatie.
+* `{EVENT_HUB_NAME}`: *Voor [!DNL Azure Event Hubs] verbindingen.* Vul de [!DNL Azure Event Hub] Naam waar Platform uw gegevens stroomt. Zie voor meer informatie [Een gebeurtenishub maken](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in de [!DNL Microsoft] documentatie.
 
 **Antwoord**
 
@@ -474,9 +474,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Gebruik in de URL de id van de gegevensstroom die u in de vorige stap hebt gemaakt. |
 | `{ETAG}` | Krijg de `{ETAG}` uit het antwoord in de vorige stap, [Een gegevensstroom maken](#create-dataflow). De antwoordindeling in de vorige stap heeft escape-aanhalingstekens. U moet de niet-beschermde waarden in de kopbal van het verzoek gebruiken. Zie het onderstaande voorbeeld: <br> <ul><li>Voorbeeld van reactie: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Waarde die u in uw verzoek wilt gebruiken: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> De labelwaarde wordt bijgewerkt bij elke geslaagde update van een gegevensstroom. |
-| `{SEGMENT_ID}` | Geef de gebruikers-id op die u naar dit doel wilt exporteren. Ga naar [een publieksdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
+| `{SEGMENT_ID}` | Geef de gebruikers-id op die u naar dit doel wilt exporteren. Ga voor het ophalen van gebruikers-id&#39;s voor het publiek dat u wilt activeren naar [een publieksdefinitie ophalen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in de API-naslaggids voor Experience Platforms. |
 | `{PROFILE_ATTRIBUTE}` | Bijvoorbeeld: `"person.lastName"` |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` bewerking. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` -bewerking. |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een publiek aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 | `id` | Geef de id op van het publiek dat u aan de doelgegevensstroom toevoegt. |
@@ -609,12 +609,12 @@ Als u op een meer gestroomlijnde manier verbinding wilt maken met de streamingdo
 
 [!DNL Postman] is een hulpmiddel dat u kunt gebruiken om API vraag te maken en bibliotheken van vooraf bepaalde vraag en milieu&#39;s te beheren.
 
-Voor deze specifieke zelfstudie gaat u als volgt te werk [!DNL Postman] verzamelingen zijn bijgevoegd :
+Voor deze specifieke zelfstudie wordt het volgende [!DNL Postman] verzamelingen zijn bijgevoegd :
 
 * [!DNL AWS Kinesis] [!DNL Postman] collectie
 * [!DNL Azure Event Hubs] [!DNL Postman] collectie
 
-Klikken [hier](../assets/api/streaming-destination/DestinationPostmanCollection.zip) om het archief met verzamelingen te downloaden.
+Klikken [hier](../assets/api/streaming-destination/DestinationPostmanCollection.zip) het archief met verzamelingen downloaden.
 
 Elke verzameling bevat de vereiste verzoeken en omgevingsvariabelen voor [!DNL AWS Kinesis], en [!DNL Azure Event Hub], respectievelijk.
 
@@ -630,11 +630,11 @@ Om met succes met de bestemmingen te verbinden gebruikend in bijlage [!DNL Postm
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van de Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes Platform met één van uw aangewezen het stromen bestemmingen verbonden en opstelling een gegevensstroom aan de respectieve bestemming. De uitgaande gegevens kunnen nu in de bestemming voor klantenanalyse of om het even welke andere gegevensverrichtingen worden gebruikt u zou willen uitvoeren. Raadpleeg de volgende pagina&#39;s voor meer informatie:
+Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met één van uw aangewezen het stromen bestemmingen en opstelling een gegevensstroom aan de respectieve bestemming. De uitgaande gegevens kunnen nu in de bestemming voor klantenanalyse of om het even welke andere gegevensverrichtingen worden gebruikt u zou willen uitvoeren. Raadpleeg de volgende pagina&#39;s voor meer informatie:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)

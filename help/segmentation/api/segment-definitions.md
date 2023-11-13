@@ -33,7 +33,7 @@ GET /segment/definitions
 GET /segment/definitions?{QUERY_PARAMETERS}
 ```
 
-**Parameters query**
+**Query-parameters**
 
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
@@ -204,7 +204,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 
 <!-- >[!NOTE]
@@ -341,9 +341,9 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
-| `description` | Een door mensen leesbare beschrijving van de definitie. |
+| `description` | Een leesbare beschrijving van de definitie. |
 | `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |
 
 ## Bulk haalt segmentdefinities op {#bulk-get}
@@ -474,9 +474,9 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
-| `description` | Een door mensen leesbare beschrijving van de definitie. |
+| `description` | Een leesbare beschrijving van de definitie. |
 | `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |
 
 ## Een specifieke segmentdefinitie verwijderen {#delete}
@@ -560,7 +560,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bijgewerkte segmentdefinitie terug. U ziet hoe het werkadresland is bijgewerkt van de VS (VS) naar Canada (CA).
+Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bijgewerkte segmentdefinitie terug. U ziet hoe het werkadresland is bijgewerkt van de Verenigde Staten naar Canada (CA).
 
 ```json
 {

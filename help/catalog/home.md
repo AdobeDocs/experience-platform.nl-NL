@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;catalogusservice;catalogus;Catalogusservice;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;Lineage;Lijn;Catalogus;Gegevensset inschakelen
 solution: Experience Platform
 title: Overzicht van Catalog Service
-description: Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de verbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+description: Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de gegevensverbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
@@ -47,7 +47,7 @@ Zie de [gegevensinvoer - overzicht](../ingestion/home.md) voor meer informatie .
 
 ## [!DNL Catalog] objecten
 
-Zoals in het vorige deel is uiteengezet, [!DNL Catalog] controleert meta-gegevens voor verscheidene soorten middelen en verrichtingen die door andere worden gebruikt [!DNL Platform] diensten. [!DNL Catalog] onderhoudt een eigen opslagruimte van &#39;objecten&#39; die deze metagegevens omvat. [!DNL Catalog] objecten zijn leesbare representaties van [!DNL Platform] gegevens waarmee u uw gegevens kunt zoeken, controleren en labelen zonder dat u toegang hoeft te krijgen tot de gegevens zelf.
+Zoals in het vorige deel is uiteengezet, [!DNL Catalog] controleert meta-gegevens voor verscheidene soorten middelen en verrichtingen die door andere worden gebruikt [!DNL Platform] diensten. [!DNL Catalog] onderhoudt een eigen opslagruimte van &#39;objecten&#39; die deze metagegevens inkapselen. [!DNL Catalog] objecten zijn leesbare representaties van [!DNL Platform] gegevens waarmee u uw gegevens kunt zoeken, controleren en labelen zonder dat u toegang hoeft te krijgen tot de gegevens zelf.
 
 In de volgende tabel worden de verschillende objecttypen beschreven die worden ondersteund door [!DNL Catalog]:
 

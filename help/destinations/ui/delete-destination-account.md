@@ -29,7 +29,7 @@ Deze zelfstudie behandelt de stappen om bestemmingsrekeningen te schrappen die n
 
 Voer de onderstaande stappen uit om bestaande doelaccounts te verwijderen.
 
-1. Aanmelden bij de [UI Experience Platform](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
+1. Aanmelden bij de [UI EXPERIENCE PLATFORM](https://platform.adobe.com/) en selecteert u **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteren **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
 
    ![Het tabblad Accounts](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -37,7 +37,7 @@ Voer de onderstaande stappen uit om bestaande doelaccounts te verwijderen.
 
    ![Filterdoelen](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. De ovalen selecteren (`...`) naast de naam van de account die u wilt verwijderen. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer ![Knop Verwijderen](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Delete]** om het gewenste account te verwijderen.
+3. De ovalen selecteren (`...`) naast de naam van de account die u wilt verwijderen. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, en **[!UICONTROL Delete]** de rekening. Selecteer de ![Knop Verwijderen](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Delete]** om het gewenste account te verwijderen.
 
    ![Doelaccount verwijderen](../assets/ui/delete-accounts/delete-accounts.png)
 

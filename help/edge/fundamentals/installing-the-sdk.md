@@ -16,7 +16,7 @@ Er zijn drie ondersteunde manieren om Adobe Experience Platform Web SDK te gebru
 
 1. De aangewezen manier om het Web SDK van Adobe Experience Platform te gebruiken is via de UI van de Inzameling van Gegevens of Experience Platform UI.
 1. De SDK van het Web van Adobe Experience Platform is ook beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik.
-1. Gebruik de NPM-bibliotheek die EcmaScript 5- en EcmaScript 2015 (ES6)-modules exporteert.
+1. Gebruik de NPM-bibliotheek die ECMAScript 5- en ECMAScript 2015 (ES6)-modules exporteert.
 
 ## Optie 1: De tagextensie installeren
 
@@ -71,7 +71,7 @@ Deze basiscode laadt, naast het maken van een algemene functie, ook aanvullende 
 
 ### Ondersteuning voor Internet Explorer {#support-internet-explore}
 
-Deze SDK gebruikt beloftes, die een methode zijn om de voltooiing van asynchrone taken mee te delen. De [beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementatie die door de SDK wordt gebruikt, wordt native ondersteund door alle doelbrowsers, behalve [!DNL Internet Explorer]. De SDK gebruiken op [!DNL Internet Explorer]moet u `window.Promise` [polygevuld](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Deze SDK gebruikt beloftes, die een methode zijn om de voltooiing van asynchrone taken mee te delen. De [beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementatie die door de SDK wordt gebruikt, wordt native ondersteund door alle doelbrowsers, behalve [!DNL Internet Explorer]. De SDK gebruiken op [!DNL Internet Explorer], moet u `window.Promise` [polygevuld](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Bepalen of u al `window.Promise` polygevuld:
 
@@ -132,7 +132,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->Het NPM-pakket is gebaseerd op CommonJS-modules; daarom wanneer het gebruiken van een bundelaar, zorg ervoor de bundelaar modules CommonJS steunt. Sommige bundels, zoals [Rollup](https://rollupjs.org)vereist een [insteekmodule](https://www.npmjs.com/package/@rollup/plugin-commonjs) die ondersteuning biedt voor CommonJS.
+>Het pakket NPM baseert zich op modules CommonJS; daarom, wanneer het gebruiken van een bundelaar, zorg ervoor de bundelaar modules CommonJS steunt. Sommige bundels, zoals [Rollup](https://rollupjs.org)vereist een [insteekmodule](https://www.npmjs.com/package/@rollup/plugin-commonjs) die ondersteuning biedt voor CommonJS.
 
 ### Het pakket gebruiken als een ECMAScript 5-module
 
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Ondersteuning voor Internet Explorer
 
-De Adobe Experience Platform SDK gebruikt beloftes, die een manier zijn om de voltooiing van asynchrone taken mee te delen. De [beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementatie die door de SDK wordt gebruikt, wordt native ondersteund door alle doelbrowsers, behalve [!DNL Internet Explorer]. De SDK gebruiken op [!DNL Internet Explorer]moet u `window.Promise` [polygevuld](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+De Adobe Experience Platform SDK gebruikt beloftes, die een manier zijn om de voltooiing van asynchrone taken mee te delen. De [beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementatie die door de SDK wordt gebruikt, wordt native ondersteund door alle doelbrowsers, behalve [!DNL Internet Explorer]. De SDK gebruiken op [!DNL Internet Explorer], moet u `window.Promise` [polygevuld](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Eén bibliotheek die u kunt gebruiken voor veelvuldige beloftes is promise-polyfill. Zie de [promise-polyfill-documentatie](https://www.npmjs.com/package/promise-polyfill) voor meer informatie over het installeren met NPM.
 

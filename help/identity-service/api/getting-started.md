@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsservice-api;handleiding voor ontwikkelaars van identiteitsservices;regio
 solution: Experience Platform
-title: Identiteitsservice-API-handleiding
+title: Identiteitsservice-API
 description: Met de Identiteitsservice-API kunnen ontwikkelaars de identificatie van uw klanten via verschillende apparaten, kanalen en in de buurt van realtime beheren met behulp van identiteitsgrafieken in Adobe Experience Platform. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
@@ -20,8 +20,8 @@ Adobe Experience Platform [!DNL Identity Service] beheert de cross-device, cross
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 - [[!DNL Identity Service]](../home.md): Oplost de fundamentele uitdaging die door de fragmentatie van gegevens van het klantenprofiel wordt gesteld. Het doet dit door identiteiten over apparaten en systemen te overbruggen waar de klanten met uw merk in wisselwerking staan.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, consumentenprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
 De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben aan met succes vraag aan [!DNL Identity Service] API.
 
@@ -33,7 +33,7 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
+- Toestemming: houder `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -70,7 +70,7 @@ Als u het gebied niet kunt vinden binnen uw organisatieprofiel, gelieve uw syste
 
 ## Met de [!DNL Identity Service] API
 
-De identiteitsparameters die in deze diensten worden gebruikt, kunnen op twee manieren worden uitgedrukt; composiet of XID.
+De parameters van de identiteit die in deze diensten worden gebruikt kunnen op één van twee manieren worden uitgedrukt; samenstelling of XID.
 
 Samengestelde identiteiten zijn constructies die zowel de ID-waarde als de naamruimte omvatten. Wanneer u samengestelde identiteiten gebruikt, kan de naamruimte worden opgegeven door een van de volgende namen (`namespace.code`) of ID (`namespace.id`).
 

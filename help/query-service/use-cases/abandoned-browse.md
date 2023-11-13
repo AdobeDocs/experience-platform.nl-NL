@@ -30,7 +30,7 @@ Deze workflowdemonstratie is gebaseerd op verschillende Adobe Experience Platfor
 * [Segmentatie](../../segmentation/home.md)
 * [Doelen](../../destinations/home.md)
 
-In het voorbeeld voor het verlaten van een browser wordt het gebruik van Adobe centraal gesteld [!DNL Analytics] gegevens om een bepaald actief publiek te creëren. Het publiek is verfijnd en omvat alle klanten die de afgelopen vier dagen door de website hebben gebladerd, maar geen aankoop hebben gedaan. Elk profiel in het publiek wordt dan gericht met het hoogst-prijs SKU dat uit het gedragspatroon van de klant resulteerde.
+Het voorbeeld voor het verlaten van een browser draait om het gebruik van Adobe [!DNL Analytics] gegevens om een bepaald actief publiek te creëren. Het publiek is verfijnd en omvat alle klanten die de afgelopen vier dagen door de website hebben gebladerd, maar geen aankoop hebben gedaan. Elk profiel in het publiek wordt dan gericht met het hoogst-prijs SKU dat uit het gedragspatroon van de klant resulteerde.
 
 De vraag zelf is zeer recept en omvat slechts gegevens die aan de criteria van het gebruiksgeval voor de segmentdefinitie voldoen. Hierdoor worden de prestaties verbeterd doordat de hoeveelheid [!DNL Analytics] gegevens die worden verwerkt. De gegevens worden ook op prijs gesorteerd van het hoogst naar het laagst en de hoogst geprijsde SKU gekozen die de gebruiker aan het doorbladeren was.
 
@@ -57,7 +57,7 @@ order by price desc)D;
 
 ## [!DNL Query Service] Voorbeeld van verlaten bestanden door bladeren met adobe Analytics {#video-example}
 
-De onderstaande videopresentatie biedt een holistische, realistische gebruiksmogelijkheid voor uw Experience Platform-gegevens die zijn toegespitst op [!DNL Query Service] en Adobe analytics integrations.
+De onderstaande videopresentatie biedt een holistische, realistische gebruiksmogelijkheid voor uw Experience Platform-gegevens die zijn gericht op [!DNL Query Service] en Adobe analytics integrations.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
@@ -73,9 +73,9 @@ Adobe Experience Platform biedt een gegevensopslagplaats en de benodigde hulpmid
 
 ## Volgende stappen
 
-Door dit document te lezen, moet u nu begrijpen hoe [!DNL Query Service] beïnvloedt niet alleen de kwaliteit van uw gegevens en het gemak van segmentatie maar ook zijn belang binnen uw gegevensarchitectuur voor het volledige werkschema van begin tot eind. Voor meer toepasbare SQL-voorbeelden die Adobe Analytics gebruiken met [!DNL Query Service], zie de [Adobe Analytics-variabelen voor handelsdoeleinden gebruiken hoofdletters/kleine letters](./merchandising-variables.md).
+Door dit document te lezen, moet u nu begrijpen hoe [!DNL Query Service] beïnvloedt niet alleen de kwaliteit van uw gegevens en het gemak van segmentatie maar ook zijn belang binnen uw gegevensarchitectuur voor het volledige werkschema van begin tot eind. Voor meer toepasbare SQL-voorbeelden die Adobe Analytics gebruiken met [!DNL Query Service], zie de [Voor Adobe Analytics-handelsvariabelen wordt hoofdlettergebruik gebruikt](./merchandising-variables.md).
 
-Andere documenten die de voordelen van [!DNL Query Service] volgens de strategische bedrijfsinzichten van uw organisatie [beide filters gebruiken](./bot-filtering.md) voorbeeld.
+Andere documenten die de voordelen van [!DNL Query Service] voor de strategische bedrijfsinzichten van uw organisatie: [beide filters gebruiken](./bot-filtering.md) voorbeeld.
 
 U kunt deze documenten ook gebruiken als [!DNL Query Service] functies:
 

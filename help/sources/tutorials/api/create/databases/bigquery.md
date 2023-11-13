@@ -1,11 +1,11 @@
 ---
 title: Een Google BigQuery Base-verbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Google BigQuery met behulp van de Flow Service API.
-badgeUltimate: label="Ultimate" type="Positive"
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '535'
 ht-degree: 1%
 
 ---
@@ -22,10 +22,10 @@ Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand t
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Google BigQuery] met de [!DNL Flow Service] API.
 
@@ -46,13 +46,13 @@ Raadpleeg deze voor meer informatie over deze waarden [[!DNL Google BigQuery] do
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Google BigQuery] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Google BigQuery] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -116,4 +116,4 @@ Een succesvol antwoord retourneert details van de zojuist gemaakte verbinding, i
 Aan de hand van deze zelfstudie hebt u een [!DNL Google BigQuery] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om databasegegevens naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Maak een gegevensstroom om databasegegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/database-nosql.md)

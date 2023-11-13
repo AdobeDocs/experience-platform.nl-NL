@@ -18,17 +18,17 @@ ht-degree: 0%
 >
 >De [!DNL OneTrust Integration] bron ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en niet cookies.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een platform voor toestemming en voorkeurenbeheer van derden. Tot de ondersteuning voor toestemmings- en voorkeursproviders behoren [!DNL OneTrust Integration].
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL OneTrust Integration] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL OneTrust Integration] naar Platform met API&#39;s of de gebruikersinterface:
 
 ## Verbinden [!DNL OneTrust Integration] naar Platform met API&#39;s
 
 - [Een [!DNL OneTrust Integration] bronverbinding en gegevensstroom met behulp van de Flow Service API](../../tutorials/api/create/consent-and-preferences/onetrust.md)
 
-## Verbinden [!DNL OneTrust Integration] naar Platform met behulp van de gebruikersinterface
+## Verbinden [!DNL OneTrust Integration] naar Platform met behulp van UI
 
 - [Een [!DNL OneTrust Integration] bronverbinding in de gebruikersinterface](../../tutorials/ui/create/consent-and-preferences/onetrust.md)
 - [Een gegevensstroom maken voor een verbinding met de bron voor toestemming en voorkeuren in de gebruikersinterface](../../tutorials/ui/dataflow/consent-and-preferences.md)

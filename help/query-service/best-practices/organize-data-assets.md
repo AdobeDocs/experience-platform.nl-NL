@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Dit document biedt richtlijnen over aanbevolen procedures voor het ordenen van gegevenselementen, zoals gegevenssets, weergaven en tijdelijke tabellen voor gebruik met de Adobe Experience Platform Query Service. Hierin wordt beschreven hoe u uw gegevens kunt structureren en hoe u deze gegevens kunt openen, bijwerken en verwijderen.
 
-Het is belangrijk om uw gegevenselementen logisch te ordenen binnen het Platform [!DNL Data Lake] als ze groeien. De Dienst van de vraag breidt SQL constructies uit die u toelaten om gegevensactiva binnen een zandbak logisch gezien te groeperen. Deze organisatiemethode staat voor het delen van gegevensactiva tussen schema&#39;s toe zonder de behoefte om hen fysiek te bewegen.
+Het is belangrijk dat u uw gegevenselementen logisch ordent binnen het Platform [!DNL Data Lake] als ze groeien. De Dienst van de vraag breidt SQL constructies uit die u toelaten om gegevensactiva binnen een zandbak logisch gezien te groeperen. Deze organisatiemethode staat voor het delen van gegevensactiva tussen schema&#39;s toe zonder de behoefte om hen fysiek te bewegen.
 
 ## Aan de slag
 
@@ -42,7 +42,7 @@ In het voorbeeld (iets afgekapt voor de beknoptheid) wordt deze methode getoond 
 
 Zodra een schema is gecreeerd om als container voor de gegevensactiva te handelen, kan elke dataset met één of meerdere schema&#39;s in het gegevensbestand worden geassocieerd door standaard SQL te gebruiken ALTER syntaxis van de LIJST.
 
-In het volgende voorbeeld wordt het volgende toegevoegd `dataset1`, `dataset2`, `dataset3` en `v1` aan de `databaseA.schema1` in het vorige voorbeeld gemaakte container.
+In het volgende voorbeeld wordt toegevoegd `dataset1`, `dataset2`, `dataset3` en `v1` aan de `databaseA.schema1` in het vorige voorbeeld gemaakte container.
 
 ```SQL
 ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
@@ -56,9 +56,9 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## Gegevenselementen openen vanuit de gegevenscontainer
 
-Door de databasenaam op de juiste manier te kwalificeren, [!DNL PostgreSQL] client kan verbinding maken met elke gegevensstructuur die u hebt gemaakt met het trefwoord SHOW. Zie voor meer informatie over het trefwoord SHOW de [sectie TONEN in de SQL-syntaxisdocumentatie](../sql/syntax.md#show).
+Door de databasenaam op de juiste manier te kwalificeren, [!DNL PostgreSQL] client kan verbinding maken met elke gegevensstructuur die u hebt gemaakt met het trefwoord SHOW. Zie voor meer informatie over het trefwoord SHOW de [Sectie TONEN in de SQL-syntaxisdocumentatie](../sql/syntax.md#show).
 
-&quot;all&quot; is de standaarddatabasenaam die elke database- en schemacontainer in een sandbox bevat. Wanneer u een [!DNL PostgreSQL] verbinding gebruiken `dbname="all"`, kunt u **alle** database en schema die u hebt gemaakt om uw gegevens op logische wijze te ordenen.
+&quot;all&quot; is de standaarddatabasenaam die elke database- en schemacontainer in een sandbox bevat. Wanneer u een [!DNL PostgreSQL] verbinding gebruiken `dbname="all"`, kunt u **alle** database en schema die u hebt gemaakt om uw gegevens logisch te ordenen.
 
 Alle databases weergeven onder `dbname="all"` geeft drie beschikbare databases weer.
 
@@ -84,7 +84,7 @@ databaseA      | schema2
 databaseB      | schema3
 ```
 
-Wanneer u een [!DNL PostgreSQL] verbinding gebruiken `dbname="databaseA"`kunt u elk schema openen dat aan die specifieke database is gekoppeld, zoals in het onderstaande voorbeeld wordt getoond.
+Wanneer u een [!DNL PostgreSQL] verbinding gebruiken `dbname="databaseA"`kunt u elk schema benaderen dat aan die specifieke database is gekoppeld, zoals in het onderstaande voorbeeld wordt getoond.
 
 ```sql
 SHOW DATABASES;

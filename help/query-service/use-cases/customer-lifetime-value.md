@@ -27,8 +27,8 @@ Deze gids wordt ontworpen om u te helpen uw klantenervaring beter begrijpen door
 
 Voor deze handleiding is een goed begrip vereist van de volgende onderdelen van Adobe Experience Platform:
 
-* [Query-service](../home.md): Verstrekt een gebruikersinterface en een RESTful API waar u SQL vragen kunt gebruiken om uw gegevens te analyseren en te verrijken.
-* [Segmenteringsservice](../../segmentation/home.md): Staat u toe om publiek van uw gegevens van het Profiel van de Klant in real time te produceren.
+* [Query-service](../home.md): Biedt een gebruikersinterface en een RESTful-API waarmee u SQL-query&#39;s kunt gebruiken om uw gegevens te analyseren en te verrijken.
+* [Segmenteringsservice](../../segmentation/home.md): Hiermee kunt u een publiek genereren op basis van uw gegevens in het realtime klantprofiel.
 
 ## Vereisten
 
@@ -73,7 +73,7 @@ Voorbeelden van aangepaste CLV-widgets die gebruik maken van decile-emmers, zijn
 
 ## Krachtig publiek maken en activeren {#create-and-activate-audiences}
 
-De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de handleiding van de Bouwer van het Segment UI om te leren hoe te [publiek maken en activeren in Platform](../../segmentation/ui/segment-builder.md). De gids verstrekt secties over hoe te:
+De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de handleiding van de Bouwer van het Segment UI om te leren hoe te [publiek maken en activeren in platform](../../segmentation/ui/segment-builder.md). De gids verstrekt secties over hoe te:
 
 * Maak segmentdefinities met een combinatie van kenmerken, gebeurtenissen en bestaand publiek als bouwstenen.
 * Gebruik het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmenteringsregels worden uitgevoerd.
@@ -85,13 +85,13 @@ Er is ook een [videozelfstudie voor het samenstellen van segmenten](https://expe
 
 ## Uw publiek activeren voor een e-mailcampagne {#activate-audience-for-campaign}
 
-Nadat u het publiek hebt samengesteld, kunt u het activeren op een bestemming. Platform biedt ondersteuning voor diverse ESP&#39;s (Email Service Providers) waarmee u uw marketingactiviteiten voor e-mail kunt beheren, zoals het verzenden van promotionele e-mailcampagnes.
+Nadat u het publiek hebt samengesteld, kunt u het activeren op een bestemming. Het platform biedt ondersteuning voor diverse ESP&#39;s (Email Service Providers) waarmee u uw e-mailmarketingactiviteiten kunt beheren, zoals het verzenden van promotionele e-mailcampagnes.
 
 Controleer de [Overzicht van e-mailmarketingdoelen](../../destinations/catalog/email-marketing/overview.md#connect-destination) voor een lijst van de gesteunde bestemmingen die u gegevens naar wilt uitvoeren (bijvoorbeeld [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) pagina).
 
 ## Bekijk de geretourneerde analysegegevens van uw campagne {#post-campaign-data-analysis}
 
-De gegevens uit bronnen kunnen nu [incrementeel verwerkt](../essential-concepts/incremental-load.md) als onderdeel van een geplande vernieuwing naar uw gegevensmodel in de versnelde gegevensopslag. Alle responsgebeurtenissen van klanten kunnen in Adobe Experience Platform worden opgenomen, zoals ze plaatsvinden of in batches. Afhankelijk van uw instellingen of bronconnectors, kan uw gegevensmodel één keer of meerdere keren per dag worden vernieuwd. Zie de [overzicht van batch-invoer-API](../../ingestion/batch-ingestion/api-overview.md) of de [overzicht van streaming opname](../../ingestion/streaming-ingestion/overview.md) voor meer informatie .
+De gegevens uit bronnen kunnen nu [incrementeel verwerkt](../essential-concepts/incremental-load.md) als onderdeel van een geplande vernieuwing naar uw gegevensmodel in de versnelde gegevensopslag. Alle responsgebeurtenissen van klanten kunnen in Adobe Experience Platform worden opgenomen, zoals ze plaatsvinden of in batches. Afhankelijk van uw instellingen of bronconnectors, kan uw gegevensmodel één keer of meerdere keren per dag worden vernieuwd. Zie de [overzicht van batch-invoer-API](../../ingestion/batch-ingestion/api-overview.md) of de [overzicht van het opnemen van streaming](../../ingestion/streaming-ingestion/overview.md) voor meer informatie .
 
 Zodra uw gegevensmodel wordt bijgewerkt, verstrekken uw douane dashboardwidgets zinvolle signalen die u toestaan om de waarde van het klantenleven te meten en te visualiseren.
 
@@ -107,11 +107,11 @@ Deze inzichten kunnen u beurtelings helpen uw bedrijfsstrategieën voor verdere 
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u beter inzicht in hoe u Real-time Customer Data Platform kunt gebruiken om de maatstaf van de levensduur van de klant (CLV) te volgen en visualiseren. Als u meer wilt weten over de vele gevallen van zakelijk gebruik die worden beschreven via Query Service en Experience Platform, kunt u het beste de volgende documenten lezen:
+Door dit document te lezen, hebt u beter inzicht in hoe u Real-time Customer Data Platform kunt gebruiken om de maatstaf van de levensduur van de klant (CLV) bij te houden en te visualiseren. Als u meer wilt weten over de vele gevallen van zakelijk gebruik die worden beschreven via Query Service en Experience Platform, kunt u het beste de volgende documenten lezen:
 
 * [Een voorbeeld van begin tot eind van verlaten doorbladert gebruiksgeval dat de veelzijdigheid en de voordelen van de Dienst van de Vraag aantoont.](./abandoned-browse.md)
 * [De Query-service en het leren van computers gebruiken om beide activiteiten te bepalen en te filteren op basis van echt internetverkeer voor bezoekers](./bot-filtering.md)
-* [Hoe te om een gelijke op uw gegevens van het Platform uit te voeren die resultaten van veelvoudige datasets door ongeveer een koord van uw keus combineert.](./fuzzy-match.md)
+* [Hoe te om een gelijke op uw gegevens van het Platform uit te voeren die resultaten van veelvoudige datasets door ongeveer het aanpassen van een koord van uw keus combineert.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

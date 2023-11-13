@@ -33,7 +33,7 @@ De modellen van de dienst kunnen worden uitgegeven, worden gekloond, en worden g
 
 - **[!UICONTROL Edit]**: Selecteren **[!UICONTROL Edit]** staat u toe om een bestaand de dienstmodel te wijzigen. U kunt de naam, de beschrijving, de status, het scoren frequentie van het model, en de extra kolommen van de scoredataset uitgeven.
 - **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** kopieert het geselecteerde servicemodel. Vervolgens kunt u de workflow wijzigen om kleine wijzigingen aan te brengen en de naam ervan wijzigen in een nieuw model.
-- **[!UICONTROL Delete]**: U kunt een de dienstmodel met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal uit Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
+- **[!UICONTROL Delete]**: U kunt een de dienstmodel met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal van Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
 - **[!UICONTROL Data source]**: Een koppeling naar de gebruikte gegevensset. Als meer dan één dataset door Attribution AI wordt gebruikt, &quot;Veelvoud&quot;die door het aantal datasets wordt gevolgd wordt getoond. Als u de hyperlink selecteert, wordt de voorvertoning van de datasets weergegeven.
 - **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een uitvoering mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 

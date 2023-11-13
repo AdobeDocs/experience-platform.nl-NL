@@ -21,7 +21,7 @@ AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Se
 
 ## Een instantie maken {#set-up-your-instance}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Services]** in de linkernavigatie. De **[!UICONTROL Services]** wordt weergegeven en geeft alle beschikbare services weer. Selecteer in de container voor AI van de Klant **[!UICONTROL Open]**.
+Selecteer in de interface Platform de optie **[!UICONTROL Services]** in de linkernavigatie. De **[!UICONTROL Services]** wordt weergegeven en geeft alle beschikbare services weer. Selecteer in de container voor AI van de Klant **[!UICONTROL Open]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden
 
 - **[!UICONTROL Edit]**: Selecteren **[!UICONTROL Edit]** staat u toe om een bestaande de dienstinstantie te wijzigen. U kunt de naam, de beschrijving en de scorefrequentie van de instantie bewerken.
 - **[!UICONTROL Clone]**: Selecteren **[!UICONTROL Clone]** Kopieert momenteel geselecteerde de opstelling van de de dienstinstantie. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
-- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal uit Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
+- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal van Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
 - **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die door dit exemplaar wordt gebruikt. Als de veelvoudige datasets worden gebruikt, opent het selecteren van de hyperlinktekst de datasetvoorproefpopover.
 - **[!UICONTROL Last run details]**: Dit wordt alleen weergegeven wanneer een uitvoering mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 - **[!UICONTROL Score definition]**: Een snel overzicht van het doel dat u voor deze instantie hebt geconfigureerd.

@@ -21,7 +21,7 @@ In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteun
 
 ## Algemene vragen
 
-De volgende vragen hebben betrekking op alle privacyregels die door Experience Cloud worden ondersteund.
+De volgende vragen hebben betrekking op alle privacyregels die door het Experience Cloud worden ondersteund.
 
 ### Welke gevolgen hebben de ondersteunde privacyregels?
 
@@ -31,7 +31,7 @@ De [privacyregels ondersteund door Experience Cloud](./overview.md) van toepassi
 
 Persoonsgegevens zijn alle informatie met betrekking tot een natuurlijke persoon of een betrokkene die kan worden gebruikt om de persoon direct of indirect te identificeren. Het kan van om het even wat van een naam, een foto, een e-mailadres, bankdetails, berichten op sociale voorzien van een netwerkwebsites, medische informatie, of een computerIP adres zijn.
 
-De volgende identificatiecodes worden vaak gebruikt in Experience Cloud-toepassingen en kunnen onderworpen zijn aan privacyregelgevingsvereisten:
+De volgende identificatiecodes worden vaak gebruikt in toepassingen van Experiencen Cloud en kunnen onderworpen zijn aan privacyregelgevingsvereisten:
 
 * Naam
 * Postadres
@@ -47,7 +47,7 @@ Persoonlijke informatie kan ook informatie over internet of andere elektronische
 * Zoekgeschiedenis
 * Informatie over de interactie van een consument met een website, toepassing of advertentie
 
-Hoewel de privacyregels betrekking hebben op persoonlijke informatie, is in een breed scala aan standaardcontractvoorwaarden bepaald dat gevoelige persoonlijke informatie (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mag worden ingevoerd en gebruikt in Experience Cloud-toepassingen.
+Hoewel de privacyregels een groot aantal persoonlijke gegevens bestrijken, wordt in de standaardcontractbepalingen van de Adobe bepaald dat gevoelige persoonlijke gegevens (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mogen worden ingevoerd en gebruikt in toepassingen van Experiencen Cloud.
 
 ### Wat is het verschil tussen een gegevenscontroller en een gegevensverwerker?
 
@@ -107,7 +107,7 @@ Als de gegevensbewerkingen van uw organisatie onder de rechtsbevoegdheid van de 
 
 ### Hoe kan ik verzoeken om privacy van consumenten ondersteunen als ik gegevens bijhoud die onder privacyregels vallen?
 
-Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de aangewezen wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie de [[!DNL Privacy Service] overzicht](../home.md) voor meer informatie . Voor informatie over hoe uw specifieke Experience Cloud-toepassingen privacyverzoeken kunnen naleven, raadpleegt u de handleiding op [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md).
+Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de toepasselijke wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie de [[!DNL Privacy Service] overzicht](../home.md) voor meer informatie . Voor informatie over hoe uw specifieke Experience Cloud toepassingen privacyverzoeken kunnen naleven, raadpleegt u de handleiding op [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -121,16 +121,16 @@ De volgende vragen hebben specifiek betrekking op de CCPA.
 
 Zoals bepaald door CCPA, zijn de volgende rollen op Adobe en zijn klanten van toepassing:
 
-* De klanten van Adobe (de partij die om de inzameling en het gebruik van persoonlijke informatie van de ingezetenen van Californië verzoekt) zouden als a worden beschouwd **Zakelijk**.
-* Adobe zou in zijn rol van dienstverlening als een **Serviceprovider**.
+* De klanten van de Adobe (de partij die om de inzameling en het gebruik van persoonlijke informatie van de ingezetenen van Californië verzoekt) zouden als een **Zakelijk**.
+* Adobe zou in zijn rol van dienstverrichting als een **Serviceprovider**.
 
-Als dienstverlener, verzamelt en verwerkt Adobe persoonlijke informatie namens de Zaken en is contractueel gebonden om die informatie slechts voor de specifieke doeleinden te gebruiken die in de overeenkomst worden vermeld.
+Als dienstverlener, verzamelt en verwerkt de Adobe persoonlijke informatie namens de Zaken en is contractueel gebonden om die informatie slechts voor de specifieke doeleinden te gebruiken die in de overeenkomst worden vermeld.
 
-Gezien deze relatie en de taal van het Adobe contract zou openbaarmaking van informatie aan Adobe waarschijnlijk niet worden beschouwd als een &quot;verkoop&quot; waarvoor bedrijven een kennisgeving moeten doen en toestemming moeten vragen.
+Gezien deze relatie en de contracttaal van de Adobe zouden bekendmakingen aan de Adobe waarschijnlijk niet worden beschouwd als een &quot;verkoop&quot; waarvoor bedrijven een aankondiging zouden moeten doen en toestemming zouden moeten vragen.
 
 Adobe-services kunnen echter worden gebruikt om bepaalde gegevens te delen en over te dragen aan derden. Deze overdrachten door derden kunnen worden beschouwd als een &quot;verkoop&quot; en vereisen wettelijk openbaarmaking en toestemming. Klanten moeten met hun juridische adviseur samenwerken om specifieke gebruiksgevallen te evalueren om toepasselijke vereisten te beoordelen.
 
-### Biedt Adobe andere hulpmiddelen aan die in het richten van vereisten kunnen nuttig zijn CCPA?
+### Biedt de Adobe andere hulpmiddelen aan die in het richten van vereisten kunnen nuttig zijn CCPA?
 
 Adobe Experience Cloud-toepassingen bieden functies voor gegevensbeheer en -beheer die nuttig kunnen zijn voor de privacybehoeften van bedrijven. Onder deze hulpmiddelen zijn het etiketteren van het gegevensgebruik, op rol-gebaseerde toegangscontroles, IP obfuscation, en het hakken mogelijkheden.
 

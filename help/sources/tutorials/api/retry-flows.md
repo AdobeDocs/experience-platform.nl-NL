@@ -26,7 +26,7 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
 
 ## Een mislukte gegevensstroomuitvoering opnieuw proberen
 

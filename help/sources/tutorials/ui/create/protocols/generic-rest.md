@@ -16,18 +16,18 @@ ht-degree: 1%
 >
 > De [!DNL Generic REST API] De bron is in bèta. Zie de [Overzicht van bronnen](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic REST API] bronaansluiting die gebruikmaakt van de Adobe Experience Platform-gebruikersinterface.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic REST API] bronaansluiting die de Adobe Experience Platform-gebruikersinterface gebruikt.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Platform:
+Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
-Om toegang te krijgen tot uw [!DNL Generic REST API] op Platform, moet u geldige geloofsbrieven voor het authentificatietype van uw keus verstrekken. Generieke REST API ondersteunt zowel OAuth 2-vernieuwingscode als basisverificatie. Zie de volgende lijsten voor informatie over de geloofsbrieven voor de twee gesteunde authentificatietypen.
+Voor toegang tot uw [!DNL Generic REST API] account op Platform, moet u geldige geloofsbrieven voor het authentificatietype van uw keus verstrekken. Generieke REST API ondersteunt zowel OAuth 2-vernieuwingscode als basisverificatie. Zie de volgende lijsten voor informatie over de geloofsbrieven voor de twee gesteunde authentificatietypen.
 
 #### Code voor 2 vernieuwen
 
@@ -53,7 +53,7 @@ Om toegang te krijgen tot uw [!DNL Generic REST API] op Platform, moet u geldige
 
 ## Maak verbinding met uw Generic REST API-account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
@@ -81,12 +81,12 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 ![](../../../../images/tutorials/create/generic-rest/oauth2.png)
 
-#### Verifiëren met basisverificatie
+#### Verifiëren met gebruik van basisverificatie
 
-Selecteer **[!UICONTROL Basic authentication]**, geef uw host, gebruikersnaam en wachtwoord op en selecteer vervolgens **[!UICONTROL Connect to source]**.
+Als u basisverificatie wilt gebruiken, selecteert u **[!UICONTROL Basic authentication]**, geef uw host, gebruikersnaam en wachtwoord op en selecteer vervolgens **[!UICONTROL Connect to source]**.
 
 ![](../../../../images/tutorials/create/generic-rest/basic-authentication.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw algemene REST API-account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens naar het Platform te brengen](../../dataflow/protocols.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw algemene REST API-account. U kunt nu verdergaan met de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar het platform](../../dataflow/protocols.md).

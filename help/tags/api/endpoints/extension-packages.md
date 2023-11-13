@@ -79,7 +79,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met extensiepakketten.
+Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
 ```json
 {
@@ -472,7 +472,7 @@ Een succesvolle reactie keert de details van het uitbreidingspakket, met inbegri
 
 ## Een extensiepakket maken {#create}
 
-Extensiepakketten worden gemaakt met een basisgereedschap Node.js en opgeslagen op uw lokale computer voordat ze worden verzonden naar de Reactor-API. Raadpleeg de handleiding voor meer informatie over het configureren van een extensiepakket op [aan de slag gaan met de ontwikkeling van extensies](../../extension-dev/getting-started.md).
+Extensiepakketten worden gemaakt met een basisgereedschap Node.js en opgeslagen op uw lokale computer voordat ze worden verzonden naar de Reactor-API. Raadpleeg de handleiding voor meer informatie over het configureren van een extensiepakket op [aan de slag gaan met extensieontwikkeling](../../extension-dev/getting-started.md).
 
 Nadat u het bestand met het extensiepakket hebt gemaakt, kunt u het verzenden naar de Reactor-API via een verzoek om POST.
 

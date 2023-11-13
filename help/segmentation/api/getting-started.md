@@ -17,9 +17,9 @@ Adobe Experience Platform [!DNL Segmentation Service] kunt u vanuit uw [!DNL Rea
 
 De ontwikkelaarshandleiding vereist een goed begrip van de verschillende [!DNL Experience Platform] diensten in verband met het gebruik van [!DNL Segmentation Service].
 
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Hiermee kunt u een publiek opbouwen op [!DNL Real-Time Customer Profile] gegevens.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../../xdm/schema/best-practices.md).
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u nodig hebt om te kunnen werken met de [!DNL Segmentation] API.
@@ -42,7 +42,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over het werken met sandboxen in [!DNL Experience Platform], zie de [sandboxen, overzichtsdocumentatie](../../sandboxes/home.md).
+>Voor meer informatie over het werken met sandboxen in [!DNL Experience Platform], zie de [sandboxen - documentatie](../../sandboxes/home.md).
 
 ## Volgende stappen
 

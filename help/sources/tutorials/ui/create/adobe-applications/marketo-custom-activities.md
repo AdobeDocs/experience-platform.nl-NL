@@ -1,6 +1,6 @@
 ---
-title: Een Marketo Engage-bronverbinding en gegevensstroom maken voor aangepaste activiteitgegevens in de gebruikersinterface
-description: Deze zelfstudie bevat stappen voor het maken van een Marketo Engage-bronverbinding en gegevensstroom in de gebruikersinterface om gegevens van aangepaste activiteiten over te brengen naar Adobe Experience Platform.
+title: Creeer een Verbinding van de Bron van het Marketo Engage en Dataflow voor de gegevens van de Activiteit van de Douane in UI
+description: Deze zelfstudie biedt stappen voor het maken van een Marketo Engage-bronverbinding en gegevensstroom in de gebruikersinterface om gegevens van aangepaste activiteiten over te brengen naar Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
@@ -22,12 +22,12 @@ Naast [standaardactiviteiten](../../../../connectors/adobe-applications/mapping/
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [B2B-naamruimten en hulpprogramma voor automatisch genereren van schema&#39;s](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Het B2B-hulpprogramma voor naamruimten en automatisch genereren van schema maakt het mogelijk om [!DNL Postman] om automatisch waarden te genereren voor uw B2B-naamruimten en -schema&#39;s. U moet eerst uw B2B-naamruimten en -schema&#39;s voltooien voordat u een [!DNL Marketo] bronverbinding en gegevensstroom.
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [Schema&#39;s maken en bewerken in de gebruikersinterface](../../../../../xdm/ui/resources/schemas.md): Leer om schema&#39;s in UI tot stand te brengen en uit te geven.
 * [Identiteitsnaamruimten](../../../../../identity-service/namespaces.md): Identiteitsnaamruimten zijn een component van [!DNL Identity Service] die dienen als indicatoren van de context waarop een identiteit betrekking heeft. Een volledig gekwalificeerde identiteit omvat een waarde van identiteitskaart en een namespace.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## Je aangepaste activiteitengegevens ophalen
 
@@ -41,7 +41,7 @@ De interface wordt bijgewerkt met een weergave van uw aangepaste activiteiten, i
 
 Selecteren **Velden** in de bovenste koptekst om de velden weer te geven die zijn gekoppeld aan uw aangepaste activiteit. Op deze pagina kunt u de namen, API-namen, beschrijvingen en gegevenstypen van de velden in uw aangepaste activiteit weergeven. Details betreffende afzonderlijke velden worden in een latere stap gebruikt wanneer u een schema maakt.
 
-![De pagina met gegevens over aangepaste activiteitsvelden van Marketo in de gebruikersinterface van de Marketo Engage.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
+![De pagina met gegevens over aangepaste activiteitsvelden van Marketo in de gebruikersinterface van het Marketo Engage.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
 
 ## Veldgroepen instellen voor aangepaste activiteiten in het B2B-activiteitenschema
 
@@ -91,13 +91,13 @@ De laatste stap bij het voorbereiden van uw schema is het toevoegen van individu
 
 Als de schema-instelling is voltooid, kunt u nu doorgaan met het maken van een gegevensstroom voor uw aangepaste activiteitengegevens.
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatiebalk voor toegang tot de [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
 Onder de [!UICONTROL Adobe applications] categorie, selecteert u **[!UICONTROL Marketo Engage]**. Selecteer vervolgens **[!UICONTROL Add data]** om een nieuwe [!DNL Marketo] dataflow.
 
-![De broncatalogus op Experience Platform UI met de geselecteerde bron van de Marketo Engage.](../../../../images/tutorials/create/marketo/catalog.png)
+![De broncatalogus op Experience Platform UI met het geselecteerde Marketo Engage bron.](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### Gegevens selecteren
 
@@ -154,7 +154,7 @@ Om de gegevens van de douaneactiviteit aan een bestaande gegevensstroom toe te v
 
 Zodra uw gegevensstroom volledig is, kunt u gebruiken [Query-service](../../../../../query-service/home.md) om activiteiten voor uw gegevens van de douaneactiviteit te filtreren.
 
-Wanneer aangepaste activiteiten in het Platform worden opgenomen, wordt de API-naam van de aangepaste activiteit automatisch gewijzigd `eventType`. Gebruiken `eventType={API_NAME}` om te filteren op aangepaste activiteitsgegevens.
+Wanneer aangepaste activiteiten worden opgenomen in Platform, wordt de API-naam van de aangepaste activiteit automatisch gewijzigd in `eventType`. Gebruiken `eventType={API_NAME}` om te filteren op aangepaste activiteitsgegevens.
 
 ```sql
 SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
@@ -169,8 +169,8 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 In de onderstaande afbeelding ziet u een voorbeeld van een SQL-instructie in het dialoogvenster [Query-editor](../../../../../query-service/ui/user-guide.md) dat filters voor de gegevens van de douaneactiviteit.
 
-![UI van het Platform die een vraagvoorbeeld voor douaneactiviteiten toont.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
+![Platform UI die een vraagvoorbeeld voor douaneactiviteiten toont.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een schema van het Platform voor [!DNL Marketo] gegevens van de douaneactiviteit en creeerde een gegevensstroom om die gegevens aan Platform te brengen. Voor algemene informatie over de [!DNL Marketo] bron, lees de [[!DNL Marketo] bronoverzicht](../../../../connectors/adobe-applications/marketo/marketo.md).
+Aan de hand van deze zelfstudie hebt u een platformschema ingesteld voor [!DNL Marketo] gegevens van de douaneactiviteit en creeerde een gegevensstroom om die gegevens aan Platform te brengen. Voor algemene informatie over de [!DNL Marketo] bron, lees de [[!DNL Marketo] bronoverzicht](../../../../connectors/adobe-applications/marketo/marketo.md).

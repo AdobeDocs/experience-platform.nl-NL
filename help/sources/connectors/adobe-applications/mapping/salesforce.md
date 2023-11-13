@@ -30,7 +30,7 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 | `Birthdate` | `person.birthDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Department` | `extendedWorkDetails.departments` |
-| `Email` | `workEmail.address` | Secundaire identiteit. |
+| `Email` | `workEmail.address` | Secundaire identiteit |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
@@ -82,7 +82,7 @@ Lees de [Overzicht van individueel XDM-profiel](../../../../xdm/classes/individu
 | `City` | `workAddress.city` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
-| `Email` | `workEmail.address` | Secundaire identiteit. |
+| `Email` | `workEmail.address` | Secundaire identiteit |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |

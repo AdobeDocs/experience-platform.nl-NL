@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{LIMIT}` | Een geheel getal dat het aantal objecten aangeeft dat moet worden geretourneerd, van 1 tot en met 100. |
+| `{LIMIT}` | Een geheel getal dat aangeeft hoeveel objecten moeten worden geretourneerd, van 1 tot en met 100. |
 
 **Verzoek**
 
@@ -75,7 +75,7 @@ Een succesvolle reactie keert een lijst van datasets terug, die tot het aantal w
 
 ## Weergegeven eigenschappen beperken
 
-Zelfs bij het filteren van het aantal objecten dat is geretourneerd met de opdracht `limit` parameter, kunnen de teruggekeerde voorwerpen zelf vaak meer informatie bevatten dan u eigenlijk nodig hebt. Als u de belasting van het systeem verder wilt verminderen, kunt u het beste reacties filteren en alleen de gewenste eigenschappen opnemen.
+Zelfs wanneer het filtreren van het aantal voorwerpen teruggekeerd gebruikend `limit` parameter, kunnen de teruggekeerde voorwerpen zelf vaak meer informatie bevatten dan u eigenlijk nodig hebt. Als u de belasting van het systeem verder wilt verminderen, kunt u het beste reacties filteren en alleen de gewenste eigenschappen opnemen.
 
 De `properties` parameterfilters reageren op objecten om alleen een set opgegeven eigenschappen te retourneren. De parameter kan worden ingesteld om een of meerdere eigenschappen te retourneren.
 
@@ -203,11 +203,11 @@ Het antwoord bevat een JSON-object dat twee items op hoofdniveau bevat (`limit=2
 
 Sommige catalogusobjecten ondersteunen het gebruik van een `tags` kenmerk. Tags kunnen informatie aan een object koppelen en later worden gebruikt om dat object op te halen. De keuze van de tags die u wilt gebruiken en hoe u deze wilt toepassen, is afhankelijk van uw organisatieprocessen.
 
-Er zijn enkele beperkingen waarmee u rekening kunt houden wanneer u tags gebruikt:
+Er zijn enkele beperkingen waarmee u rekening kunt houden bij het gebruik van tags:
 
 * De enige voorwerpen van de Catalogus die momenteel markeringen steunen zijn datasets, partijen, en verbindingen.
 * Tagnamen zijn uniek voor uw organisatie.
-* Adobe-processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
+* Adobe processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
 * De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform]en kan daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
    * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Identity Service]](../../identity-service/home.md).
@@ -240,7 +240,7 @@ Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap. De
 
 **API-indeling**
 
-Waarden voor de `tags` parameter heeft de vorm van sleutel-waardeparen, gebruikend het formaat `{TAG_NAME}:{TAG_VALUE}`. U kunt meerdere sleutelwaardeparen opgeven in de vorm van een door komma&#39;s gescheiden lijst. Wanneer veelvoudige markeringen worden verstrekt, wordt een EN verhouding verondersteld.
+Waarden voor de `tags` parameter heeft de vorm van sleutel-waardeparen, gebruikend het formaat `{TAG_NAME}:{TAG_VALUE}`. U kunt meerdere sleutelwaardeparen opgeven in de vorm van een lijst met komma&#39;s als scheidingsteken. Wanneer veelvoudige markeringen worden verstrekt, wordt een EN verhouding verondersteld.
 
 De parameter ondersteunt jokertekens (`*`) voor tagwaarden. Bijvoorbeeld een zoekreeks met `test*` Hiermee wordt een object geretourneerd waarvan de tagwaarde begint met &#39;&#39;test&#39;&#39;. Een zoektekenreeks die alleen uit een jokerteken bestaat, kan worden gebruikt om objecten te filteren op basis van het feit of ze een specifieke tag bevatten, ongeacht de waarde ervan.
 
@@ -330,7 +330,7 @@ GET /batches?createdAfter={TIMESTAMP_1}&createdBefore={TIMESTAMP_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{TIMESTAMP }` | Een gegevenstijdgeheel getal in Unix Epoch-tijd. |
+| `{TIMESTAMP }` | Een geheel getal in tijd in Unix Epoch. |
 
 **Verzoek**
 
@@ -522,7 +522,7 @@ Een succesvol antwoord bevat een lijst met gegevenssets, met uitzondering van ge
 
 ### Met de `property` parameter {#using-the-property-parameter}
 
-De `property` De vraagparameter verstrekt meer flexibiliteit voor op bezit-gebaseerd filtreren dan eenvoudige filters. Naast het filtreren gebaseerd op of een bezit een specifieke waarde heeft, `property` parameter kan andere vergelijkingsoperatoren gebruiken (zoals &quot;more-than&quot; (`>`) en &quot;kleiner dan&quot; (`<`)) en reguliere expressies om te filteren op eigenschapswaarden. Het filter kan ook filteren op het al dan niet bestaan van een eigenschap, ongeacht de waarde ervan.
+De `property` De vraagparameter verstrekt meer flexibiliteit voor op bezit-gebaseerd filtreren dan eenvoudige filters. Naast het filtreren gebaseerd op of een bezit een specifieke waarde heeft, `property` parameter kan andere vergelijkingsexploitanten (zoals &quot;meer dan&quot;(`>`) en &quot;kleiner dan&quot; (`<`)) en reguliere expressies om te filteren op eigenschapswaarden. Het kan ook filteren door of een eigenschap bestaat, ongeacht de waarde ervan.
 
 De `property` parameter kan om het even welke eigenschappen van niveauobjecten goedkeuren. `sampleKey` kan voor het filtreren worden gebruikt `?properties=subItem.sampleKey`.
 
@@ -549,15 +549,15 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 | `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Een voorwaardelijke expressie die aangeeft voor welke eigenschap query moet worden uitgevoerd en hoe de waarde ervan moet worden geëvalueerd. Hieronder vindt u voorbeelden. |
 
-De waarde van de `property` parameter ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:
+De waarde van `property` parameter ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:
 
 | Symbool(en) | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | (Geen) | Wanneer de eigenschapnaam wordt opgegeven zonder operator, worden alleen objecten geretourneerd waar de eigenschap bestaat, ongeacht de waarde ervan. | `property=name` |
-| ! | Voorvoegsel &quot;`!`&quot; aan de waarde van een `property` parameter retourneert alleen objecten waar de eigenschap dit doet **niet** bestaan. | `property=!name` |
+| ! | Een &quot;`!`&quot; aan de waarde van een `property` parameter retourneert alleen objecten waar de eigenschap dit doet **niet** bestaan. | `property=!name` |
 | ~ | Retourneert alleen objecten waarvan de eigenschapswaarden (tekenreeks) overeenkomen met een reguliere expressie die wordt opgegeven na de tilde (`~`). | `property=name~^example` |
 | == | Hiermee worden alleen objecten geretourneerd waarvan de eigenschapswaarden exact overeenkomen met de tekenreeks die wordt opgegeven na het symbool double equals (`==`). | `property=name==exampleName` |
-| != | Hiermee worden alleen objecten geretourneerd waarvan de eigenschapswaarden dat wel doen **niet** overeenkomende tekenreeks opgegeven na het symbool not equals (`!=`). | `property=name!=exampleName` |
+| != | Hiermee worden alleen objecten geretourneerd waarvan de eigenschapswaarden wel **niet** overeenkomende tekenreeks opgegeven na het symbool not equals (`!=`). | `property=name!=exampleName` |
 | &lt; | Retourneert alleen objecten waarvan de eigenschapswaarden kleiner zijn dan (maar niet gelijk zijn aan) een opgegeven hoeveelheid. | `property=version<1.0.0` |
 | &lt;= | Retourneert alleen objecten waarvan de eigenschapswaarden kleiner zijn dan (of gelijk zijn aan) een opgegeven hoeveelheid. | `property=version<=1.0.0` |
 | > | Retourneert alleen objecten waarvan de eigenschapswaarden groter zijn dan (maar niet gelijk zijn aan) een opgegeven hoeveelheid. | `property=version>1.0.0` |

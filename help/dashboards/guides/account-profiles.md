@@ -31,9 +31,9 @@ De profielgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Ontdek de [!UICONTROL Account Profiles] dashboard
 
-Ga naar de [!UICONTROL Account Profiles] dashboard in de interface van het Platform, selecteert u **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in het linkernavigatievenster.
+Ga naar de [!UICONTROL Account Profiles] het dashboard binnen UI van het Platform, uitgezocht **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in het linkernavigatievenster.
 
-![De gebruikersinterface van het Platform met accountprofielen in de linkernavigatie gemarkeerd en het overzichtstabblad weergegeven.](../images/account-profiles/account-profiles-dashboard.png)
+![De interface Platform met accountprofielen in de linkernavigatie is gemarkeerd en het tabblad Overzicht wordt weergegeven.](../images/account-profiles/account-profiles-dashboard.png)
 
 Van de [!UICONTROL Account Profiles] dashboard: [door de accountprofielen bladeren die in uw organisatie worden opgenomen](#browse-account-profiles), of [de volledige gegevens van uw accountprofiel in één oogopslag weergeven met widgets](#standard-widgets) die aspecten van de gegevens visualiseren.
 
@@ -41,11 +41,11 @@ Van de [!UICONTROL Account Profiles] dashboard: [door de accountprofielen blader
 
 De [!UICONTROL Browse] kunt u de alleen-lezen accountprofielen die in uw organisatie worden ingevoerd, doorzoeken en bekijken met een account-id van een verbonden onderneming of door de brongegevens rechtstreeks in te voeren. Hier ziet u belangrijke informatie die bij het accountprofiel hoort, zoals naam, industrie, inkomsten en het publiek.
 
-Selecteer [!UICONTROL Profile ID] uit de resultaten die op de [!UICONTROL Browse] om de [!UICONTROL Details] voor het accountprofiel.
+Selecteer de [!UICONTROL Profile ID] uit de resultaten die worden weergegeven op de [!UICONTROL Browse] om de [!UICONTROL Details] voor het accountprofiel.
 
-![Op het tabblad Accountprofielen worden de resultaten weergegeven en de profiel-id gemarkeerd.](../images/account-profiles/account-profiles-browse-tab.png)
+![Op het tabblad Accountprofielen worden de resultaten weergegeven en wordt de profiel-id gemarkeerd.](../images/account-profiles/account-profiles-browse-tab.png)
 
-De accountprofielgegevens die worden weergegeven op het tabblad [!UICONTROL Details] tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Zie de documentatie op [bladeren door accountprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) voor meer informatie over de weergavemogelijkheden van het accountprofiel in de gebruikersinterface van het Platform.
+De accountprofielgegevens die worden weergegeven op het tabblad [!UICONTROL Details] tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Zie de documentatie op [bladeren door accountprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) voor meer informatie over de weergavemogelijkheden van het accountprofiel in de gebruikersinterface van het platform.
 
 ## De [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 

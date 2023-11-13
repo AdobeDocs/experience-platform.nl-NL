@@ -42,7 +42,7 @@ Als u een gegevensset wilt maken, klikt u op **[!UICONTROL Create Dataset]** in 
 
 Op de **[!UICONTROL Create Dataset]** scherm, selecteer of u &quot;[!UICONTROL Create Dataset from Schema]&quot; of &quot;[!UICONTROL Create Dataset from CSV File]&quot;.
 
-Voor dit leerprogramma, zal een schema worden gebruikt om de dataset tot stand te brengen. Klikken **[!UICONTROL Create Dataset from Schema]** om door te gaan.
+Voor deze zelfstudie wordt een schema gebruikt om de dataset te maken. Klikken **[!UICONTROL Create Dataset from Schema]** om door te gaan.
 
 ![Gegevensbron selecteren](../images/tutorials/ingest-batch-data/create-dataset.png)
 
@@ -72,7 +72,7 @@ Als de gegevensset een naam en beschrijving heeft, klikt u op **[!UICONTROL Fini
 
 Er is nu een lege dataset gemaakt en u bent teruggestuurd naar de **[!UICONTROL Dataset Activity]** in de werkruimte Datasets. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-Rechts in de werkruimte Datasets ziet u de **[!UICONTROL Info]** tabblad met informatie over uw nieuwe gegevensset, zoals id van de gegevensset, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad Info bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
+Aan de rechterkant van de werkruimte Datasets ziet u de **[!UICONTROL Info]** tabblad met informatie over uw nieuwe gegevensset, zoals id van de gegevensset, naam, beschrijving, tabelnaam, schema, streaming en bron. Het tabblad Info bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
 
 Ook op het tabblad Info is een  **[!UICONTROL Profile]** knevel dat voor het toelaten van uw dataset voor gebruik met wordt gebruikt [!DNL Real-Time Customer Profile]. gebruik van deze schakeloptie, en [!DNL Real-Time Customer Profile], zal nader worden toegelicht in het volgende gedeelte.
 
@@ -112,13 +112,13 @@ Als u wilt beginnen met het toevoegen van gegevens aan de gegevensset, klikt u o
 
 ## Een bestand uploaden {#upload-file}
 
-Nadat u een Parquet- of JSON-bestand dat u wilt uploaden hebt gesleept en neergezet (of door een Parquet- of JSON-bestand hebt gebladerd en geselecteerd), [!DNL Platform] zal onmiddellijk beginnen het dossier te verwerken en **[!UICONTROL Uploading]** wordt weergegeven op het tabblad **[!UICONTROL Add Data]** tabblad met de voortgang van het uploaden van bestanden.
+Nadat u een Parquet- of JSON-bestand dat u wilt uploaden hebt gesleept en neergezet (of door het bestand hebt gebladerd en geselecteerd), [!DNL Platform] zal onmiddellijk beginnen het dossier te verwerken en **[!UICONTROL Uploading]** wordt weergegeven op het tabblad **[!UICONTROL Add Data]** tabblad met de voortgang van het uploaden van bestanden.
 
 ![Het dialoogvenster Uploaden](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## Dataset-meetgegevens
 
-Nadat het bestand is geüpload, wordt het **[!UICONTROL Dataset Activity]** geeft niet langer aan dat er geen batches zijn toegevoegd. In plaats daarvan **[!UICONTROL Dataset Activity]** op het tabblad ziet u nu de metriek van de gegevensset. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
+Nadat het bestand is geüpload, wordt het **[!UICONTROL Dataset Activity]** toont niet meer dat &quot;Er zijn geen batches toegevoegd&quot;. In plaats daarvan **[!UICONTROL Dataset Activity]** op het tabblad ziet u nu de metriek van de gegevensset. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
 
 Onder aan het tabblad vindt u een lijst met de **[!UICONTROL Batch ID]** van de gegevens die zojuist via de [&quot;Gegevens toevoegen aan gegevensset&quot;](#add-data-to-dataset) proces. Ook wordt informatie over de batch opgenomen, zoals de datum waarop de gegevens zijn ingevoerd, het aantal records dat is ingevoerd en de huidige status van de batch.
 
@@ -126,9 +126,9 @@ Onder aan het tabblad vindt u een lijst met de **[!UICONTROL Batch ID]** van de 
 
 ## Batchgegevens
 
-Klik op de knop **[!UICONTROL Batch ID]** om een **[!UICONTROL Batch Overview]**, met aanvullende gegevens over de partij. Zodra de batch klaar is met laden, wordt de informatie over de batch bijgewerkt om het aantal records dat wordt ingevoerd en de bestandsgrootte weer te geven. De status verandert ook in &quot;Voltooid&quot; of &quot;Mislukt&quot;. Als de batch niet in de **[!UICONTROL Error Code]** in de sectie worden details gegeven over eventuele fouten tijdens de inname.
+Klik op de knop **[!UICONTROL Batch ID]** om een **[!UICONTROL Batch Overview]**, met aanvullende gegevens over de partij. Zodra de batch klaar is met laden, wordt de informatie over de batch bijgewerkt om het aantal records dat wordt ingevoerd en de bestandsgrootte weer te geven. De status verandert ook in &quot;Voltooid&quot; of &quot;Mislukt&quot;. Als de batch mislukt, wordt de **[!UICONTROL Error Code]** in de sectie worden details gegeven over eventuele fouten tijdens de inname.
 
-Zie voor meer informatie en veelgestelde vragen over het innemen van batch de bijsluiter [Handleiding voor het oplossen van problemen met de inname van batterijen](../batch-ingestion/troubleshooting.md).
+Zie voor meer informatie en veelgestelde vragen over het innemen van batch de bijsluiter. [Handleiding voor het oplossen van problemen met de inname](../batch-ingestion/troubleshooting.md).
 
 Als u wilt terugkeren naar de **[!UICONTROL Dataset Activity]** scherm, klik de naam van de dataset (**[!UICONTROL Loyalty Details]**) in het breadcrumb.
 
@@ -150,6 +150,6 @@ Lees voor meer informatie over het gebruik van batches de [Overzicht van inname 
 
 >[!WARNING]
 >
->De [!DNL Platform] De interface die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+>De [!DNL Platform] De gebruikersinterface die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

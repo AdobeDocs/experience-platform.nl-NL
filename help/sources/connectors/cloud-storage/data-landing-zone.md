@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: Bron gegevenslandingszone
+title: Bron van gegevensaanlandingszone
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
 source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* -aansluiting in Experience Platform. Voor informatie over het verbinden met [!DNL Data Landing Zone] *doel* -aansluiting, verwijzen naar de [[!DNL Data Landing Zone] doeldocumentatiepagina](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* in Experience Platform. Voor informatie over het verbinden met [!DNL Data Landing Zone] *doel* -aansluiting, verwijzen naar de [[!DNL Data Landing Zone] doeldocumentatiepagina](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden in Platform te brengen. U hebt toegang tot [!DNL Data Landing Zone] container per sandbox, en het totale gegevensvolume over alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Platform Products and Services-licentie. Alle klanten van Platform en zijn toepassingsdiensten zoals [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], en [!DNL Adobe Real-Time Customer Data Platform] zijn voorzien van één [!DNL Data Landing Zone] container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of uw opdrachtregelinterface.
+[!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht, zodat u toegang hebt tot een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden om bestanden naar het platform te brengen. U hebt toegang tot [!DNL Data Landing Zone] container per sandbox, en het totale gegevensvolume over alle containers is beperkt tot de totale gegevens die worden geleverd bij uw licentie voor platformproducten en -services. Alle klanten van Platform en zijn toepassingsdiensten zoals [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], en [!DNL Adobe Real-Time Customer Data Platform] zijn voorzien van één [!DNL Data Landing Zone] container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of uw opdrachtregelinterface.
 
-[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn beveiligd met standaard [!DNL Azure Blob] beveiligingsmechanismen voor de opslag in rust en in doorvoer. Met SAS-verificatie hebt u veilig toegang tot uw [!DNL Data Landing Zone] via een openbare internetverbinding. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] container, wat betekent u geen lijsten van gewenste personen of dwars-regio montages voor uw netwerk moet vormen. Platform past een strikte vervaltijd van zeven dagen toe op alle bestanden die naar een [!DNL Data Landing Zone] container. Alle bestanden worden na zeven dagen verwijderd.
+[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn beveiligd met standaard [!DNL Azure Blob] beveiligingsmechanismen voor de opslag in rust en in doorvoer. Met SAS-verificatie hebt u veilig toegang tot uw [!DNL Data Landing Zone] via een openbare internetverbinding. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] container, wat betekent u geen lijsten van gewenste personen of dwars-regio montages voor uw netwerk moet vormen. Het platform past een strikte verlooptijd van zeven dagen toe op alle bestanden die naar een [!DNL Data Landing Zone] container. Alle bestanden worden na zeven dagen verwijderd.
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -29,14 +29,14 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden bij het
 - Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Daarnaast zijn er sommige ASCII- of Unicode-tekens, zoals besturingstekens (zoals `0x00` tot `0x1F`, `\u0081`, enzovoort) zijn ook niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, punt 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`zijn, hoewel geldig in NTFS-bestandsnamen, geen geldige Unicode-tekens. Daarnaast zijn er sommige ASCII- of Unicode-tekens, zoals besturingstekens (zoals `0x00` tot `0x1F`, `\u0081`, enzovoort) zijn ook niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [RFC 2616, afdeling 2.2: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
 ## De inhoud van uw gegevenslandingszone beheren{#manage-the-contents-of-your-data-landing-zone}
 
 U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container.
 
-In de [!DNL Azure Storage Explorer] UI, selecteer het verbindingspictogram in de linkernavigatie. De **Bron selecteren** wordt weergegeven, zodat u beschikt over opties voor het maken van een verbinding. Selecteren **[!DNL Blob container]** om verbinding te maken met [!DNL Data Landing Zone].
+In de [!DNL Azure Storage Explorer] UI, selecteer het verbindingspictogram in de linkernavigatie. De **Bron selecteren** wordt weergegeven, zodat u beschikt over opties voor het maken van een verbinding. Selecteren **[!DNL Blob container]** verbinding maken met [!DNL Data Landing Zone].
 
 ![select-resource](../../images/tutorials/create/dlz/select-resource.png)
 
@@ -48,13 +48,13 @@ Nadat u de verbindingsmethode hebt geselecteerd, moet u een **weergavenaam** en 
 
 >[!TIP]
 >
->U kunt uw [!DNL Data Landing Zone] referenties uit de broncatalogus in de gebruikersinterface van het Platform.
+>U kunt uw [!DNL Data Landing Zone] referenties uit de broncatalogus in de gebruikersinterface van het platform.
 
 Geef uw [!DNL Data Landing Zone] SAS URL en selecteer dan **Volgende**
 
 ![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
 
-De **Samenvatting** wordt weergegeven en krijgt u een overzicht van uw instellingen, inclusief informatie over uw [!DNL Blob] eindpunt en machtigingen. Indien gereed, selecteert u **Verbinden**.
+De **Samenvatting** wordt weergegeven en krijgt u een overzicht van uw instellingen, inclusief informatie over uw [!DNL Blob] eindpunt en toestemmingen. Indien klaar, selecteert u **Verbinden**.
 
 ![samenvatting](../../images/tutorials/create/dlz/summary.png)
 
@@ -62,11 +62,11 @@ Een geslaagde verbinding werkt uw [!DNL Azure Storage Explorer] UI met uw [!DNL 
 
 ![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
 
-Met uw [!DNL Data Landing Zone] container verbonden met [!DNL Azure Storage Explorer]kunt u nu bestanden uploaden naar uw [!DNL Data Landing Zone] container. Selecteer **Uploaden** en selecteer vervolgens **Bestanden uploaden**.
+Met uw [!DNL Data Landing Zone] container verbonden met [!DNL Azure Storage Explorer]kunt u nu bestanden uploaden naar uw [!DNL Data Landing Zone] container. Als u wilt uploaden, selecteert u **Uploaden** en selecteer vervolgens **Bestanden uploaden**.
 
 ![uploaden](../../images/tutorials/create/dlz/upload.png)
 
-Als u het bestand hebt geselecteerd dat u wilt uploaden, moet u vervolgens de [!DNL Blob] type dat u het als en uw gewenste bestemmingsfolder wilt uploaden. Als u klaar bent, selecteert u **Uploaden**.
+Als u het bestand hebt geselecteerd dat u wilt uploaden, moet u vervolgens de [!DNL Blob] type dat u het als en uw gewenste bestemmingsfolder wilt uploaden. Selecteer **Uploaden**.
 
 | [!DNL Blob] typen | Beschrijving |
 | --- | --- |
@@ -81,7 +81,7 @@ U kunt ook de opdrachtregelinterface van uw apparaat gebruiken en uploadbestande
 
 ### Een bestand uploaden met Bash
 
-In het volgende voorbeeld worden Bash en cURL gebruikt om een bestand te uploaden naar een [!DNL Data Landing Zone] met de [!DNL Azure Blob Storage] REST API:
+In het volgende voorbeeld worden Bash en cURL gebruikt om een bestand naar een [!DNL Data Landing Zone] met de [!DNL Azure Blob Storage] REST API:
 
 ```shell
 # Set Azure Blob-related settings
@@ -107,11 +107,11 @@ curl -v -X PUT \
 
 ### Een bestand uploaden met Python
 
-In het volgende voorbeeld wordt [!DNL Microsoft's] Python v12 SDK om een bestand te uploaden naar een [!DNL Data Landing Zone]:
+In het volgende voorbeeld wordt [!DNL Microsoft's] Python v12 SDK om een bestand naar een [!DNL Data Landing Zone]:
 
 >[!TIP]
 >
->In het onderstaande voorbeeld wordt de volledige SAS URI gebruikt om verbinding te maken met een [!DNL Azure Blob] -container, kunt u andere methoden en bewerkingen gebruiken voor verificatie. Zie dit [[!DNL Microsoft] document over de Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) voor meer informatie .
+>In het onderstaande voorbeeld wordt de volledige SAS URI gebruikt om verbinding te maken met een [!DNL Azure Blob] -container, kunt u andere methoden en bewerkingen gebruiken om te verifiëren. Zie dit [[!DNL Microsoft] document over de Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) voor meer informatie .
 
 ```py
 import os
@@ -158,9 +158,9 @@ In de onderstaande documentatie vindt u informatie over de manier waarop u gegev
 - [Een [!DNL Data Landing Zone] bronverbinding met behulp van de Flow Service API](../../tutorials/api/create/cloud-storage/data-landing-zone.md)
 - [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
-- [Verbinden [!DNL Data Landing Zone] naar Platform met behulp van de gebruikersinterface](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [Verbinden [!DNL Data Landing Zone] naar Platform met behulp van UI](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
 
 >[!IMPORTANT]

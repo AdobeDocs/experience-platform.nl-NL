@@ -38,13 +38,13 @@ Alvorens u vraag kunt maken aan [!DNL Server API]voldoet aan de volgende voorwaa
 
 ## Referenties verzamelen {#credentials}
 
-Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](../landing/api-authentication.md). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](../landing/api-authentication.md). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -71,6 +71,6 @@ Om dataset te vormen schrijf toestemmingen, ga naar [Admin Console](https://admi
 | `EXEG-0501-401` | Ongeldig token voor gebruikersautorisatie | Dit foutbericht wordt in een van de volgende situaties weergegeven: <ul><li>De API-aanroep ontbreekt `x-user-token` header.</li><li>De opgegeven gebruikerstoken heeft een ongeldige indeling.</li></ul> |
 | `EXEG-0502-401` | Ongeldig machtigingstoken | Dit foutbericht wordt weergegeven wanneer het opgegeven machtigingstoken een geldige indeling (JWT) heeft, maar de handtekening ongeldig is. Controleer de [verificatiezelfstudie](../landing/api-authentication.md) om te leren hoe u een geldig JWT-token kunt krijgen. |
 | `EXEG-0503-401` | Ongeldig machtigingstoken | Dit foutbericht wordt weergegeven wanneer de opgegeven machtigingstoken is verlopen. Ga door de [verificatiezelfstudie](../landing/api-authentication.md) om een nieuw token te genereren. |
-| `EXEG-0504-401` | Vereiste productcontext ontbreekt | Dit foutbericht wordt in een van de volgende situaties weergegeven:  <ul><li>Het ontwikkelaarsaccount heeft geen toegang tot de Adobe Experience Platform-productcontext.</li><li>Het bedrijfsaccount heeft nog geen recht op Adobe Experinece Platform.</li></ul> |
+| `EXEG-0504-401` | Vereiste productcontext ontbreekt | Dit foutbericht wordt in een van de volgende situaties weergegeven:  <ul><li>Het ontwikkelaarsaccount heeft geen toegang tot de Adobe Experience Platform-productcontext.</li><li>Het bedrijfsaccount heeft nog geen recht op een Adobe Experinece Platform.</li></ul> |
 | `EXEG-0505-401` | Vereiste tokenbereik van autorisatie ontbreekt | Deze fout is alleen van toepassing op verificatie van serviceaccounts. Het foutenbericht wordt getoond wanneer het teken van de de dienstvergunning inbegrepen in de vraag tot een de dienstrekening behoort die geen toegang tot heeft `acp.foundation` IMS-bereik. |
 | `EXEG-0506-401` | Sandbox niet toegankelijk voor schrijven | Dit foutbericht wordt weergegeven wanneer de ontwikkelaarsaccount niet beschikt over `WRITE` toegang tot de sandbox van het Experience Platform waarin de gegevensstroom is gedefinieerd. |

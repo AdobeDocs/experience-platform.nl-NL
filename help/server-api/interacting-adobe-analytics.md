@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Analytics-gegevensverzameling werkt door XDM-gegevens te vertalen naar een indeling die Adobe Analytics kan begrijpen. Verschillende XDM-velden zijn [automatisch toegewezen](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) naar variabelen Analytics.
 
-U kunt ook [XDM-waarden handmatig toewijzen](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) naar verouderde analytische variabelen.
+U kunt [XDM-waarden handmatig toewijzen](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) naar verouderde analytische variabelen.
 
 Om Adobe Analytics in staat te stellen gegevens van server API te ontvangen, moet u [configureren, gegevensstroom](../datastreams/overview.md#adobe-analytics-settings) om gebeurtenissen naar Adobe Analytics door te sturen, door de rapportsuite-id in te voeren in de configuratiepagina van de gegevensstroom.
 

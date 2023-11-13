@@ -1,11 +1,11 @@
 ---
 title: Google BigQuery Source Connector - Overzicht
 description: Leer hoe u Google BigQuery via API's of de gebruikersinterface met Adobe Experience Platform kunt verbinden.
-badgeUltimate: label="Ultimate" type="Positive"
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 >
 >De [!DNL Google BigQuery] De bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het Platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Ondersteuning voor databaseproviders omvat [!DNL Google BigQuery].
+[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Ondersteuning voor databaseproviders omvat [!DNL Google BigQuery].
 
 ## IP adres lijst van gewenste personen
 
@@ -35,16 +35,16 @@ Verbinding maken [!DNL Google BigQuery] aan Platform, moet u waarden voor de vol
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `project` | Het project is de organisatie op basisniveau voor uw [!DNL Google Cloud] middelen, waaronder [!DNL Google BigQuery]. |
-| `clientID` | De client-id is de helft van uw [!DNL Google BigQuery] OAuth 2.0 geloofsbrieven. |
-| `clientSecret` | Het clientgeheim is de andere helft van uw [!DNL Google BigQuery] OAuth 2.0 geloofsbrieven. |
+| `clientID` | De client-id is de helft van uw [!DNL Google BigQuery] OAuth 2.0 referenties. |
+| `clientSecret` | Het clientgeheim is de andere helft van uw [!DNL Google BigQuery] OAuth 2.0 referenties. |
 | `refreshToken` | Met het token Vernieuwen kunt u nieuwe toegangstokens voor uw API verkrijgen. Toegangstokens hebben beperkte levensduur en kunnen verlopen tijdens de uitvoering van uw project. U kunt gebruiken verfrist teken om verdere toegangstokens voor uw project voor authentiek te verklaren en te verzoeken wanneer nodig. |
 | `largeResultsDataSetId` | De vooraf gemaakte  [!DNL Google BigQuery] dataset ID die wordt vereist om steun voor grote resultaatreeksen toe te laten. |
 
 Voor gedetailleerde instructies over hoe te om geloofsbrieven te produceren OAuth 2.0 voor [!DNL Google] API&#39;s, zie het volgende [[!DNL Google] OAuth 2.0-verificatiegids](https://developers.google.com/identity/protocols/oauth2).
 
-## Verbinden [!DNL Google BigQuery] naar Platform
+## Verbinden [!DNL Google BigQuery] naar platform
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Google BigQuery] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Google BigQuery] naar Platform met API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
@@ -52,7 +52,7 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-### De gebruikersinterface gebruiken
+### UI gebruiken
 
 - [Een Google BigQuery-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/bigquery.md)
 - [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)

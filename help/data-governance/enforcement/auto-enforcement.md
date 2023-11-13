@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Automatische beleidshandhaving is alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Healthcare Shield** of **Adobe Privacy- en beveiligingsschild**.
+>Automatische beleidshandhaving is alleen beschikbaar voor organisaties die deze hebben aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**.
 
 Zodra het gegeven wordt geëtiketteerd en het beleid van het gegevensgebruik wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiek aan bestemmingen, dwingt Adobe Experience Platform automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
 
@@ -25,12 +25,12 @@ Zodra het gegeven wordt geëtiketteerd en het beleid van het gegevensgebruik wor
 
 ## Vereisten
 
-Deze handleiding vereist een goed begrip van de diensten van de Platform die betrokken zijn bij de automatische handhaving. Raadpleeg de volgende documentatie voor meer informatie voordat u doorgaat met deze handleiding:
+Deze gids vereist een goed begrip van de diensten van het Platform die bij automatische handhaving betrokken zijn. Raadpleeg de volgende documentatie voor meer informatie voordat u doorgaat met deze handleiding:
 
-* [Adobe Experience Platform Data Governance](../home.md): Het kader waardoor het Platform de naleving van het gegevensgebruik door het gebruik van etiketten en beleid afdwingt.
-* [Klantprofiel in realtime](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [Adobe Experience Platform Data Governance](../home.md): Het kader waardoor Platform de naleving van het gegevensgebruik door het gebruik van etiketten en beleid afdwingt.
+* [Klantprofiel in realtime](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): De segmenteringsengine binnen [!DNL Platform] gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
-* [Doelen](../../destinations/home.md): Doelen zijn vooraf gebouwde integraties met veelgebruikte toepassingen die het mogelijk maken om gegevens van Platform naadloos te activeren voor kanaalmarketingcampagnes, e-mailcampagnes, gerichte reclame en meer.
+* [Doelen](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en meer toestaan.
 
 ## Handelingenstroom {#flow}
 
@@ -53,20 +53,20 @@ Wanneer een publiek voor het eerst wordt geactiveerd, [!DNL Policy Service] cont
 
 ## Gegevensverbinding {#lineage}
 
-De verbinding van gegevens speelt een sleutelrol in hoe het beleid in Platform wordt afgedwongen. In algemene termen verwijst gegevenskoppeling naar de oorsprong van een set gegevens en naar wat er met de gegevens gebeurt (of waar deze naartoe worden verplaatst).
+De lijn van gegevens speelt een zeer belangrijke rol in hoe het beleid in Platform wordt afgedwongen. In algemene termen verwijst gegevenskoppeling naar de oorsprong van een set gegevens en naar wat er met de gegevens gebeurt (of waar deze naartoe worden verplaatst).
 
-In de context van het Beleid van Gegevens, laat lijn gegevensgebruiksetiketten toe om van schema&#39;s aan stroomafwaartse diensten te verspreiden die hun gegevens, zoals het Profiel van de Klant in real time en Doelen verbruiken. Hierdoor kan het beleid op verschillende belangrijke punten in de gegevensreis door het Platform worden geëvalueerd en afgedwongen, en wordt de gegevensconsument een context geboden waarin hij kan zien waarom een beleidsovertreding heeft plaatsgevonden.
+In de context van het Beleid van Gegevens, laat lijn gegevensgebruiksetiketten toe om van schema&#39;s aan stroomafwaartse diensten te verspreiden die hun gegevens, zoals het Profiel van de Klant in real time en Doelen verbruiken. Hierdoor kan het beleid op verschillende belangrijke punten in de gegevensreis door Platform worden geëvalueerd en afgedwongen, en wordt de gegevensconsument een context geboden waarin hij kan zien waarom een beleidsovertreding heeft plaatsgevonden.
 
 In Experience Platform gaat het bij de beleidshandhaving om de volgende begrotingslijn:
 
-1. Gegevens worden in het Platform opgenomen en opgeslagen **gegevenssets**.
+1. Gegevens worden opgenomen in Platform en opgeslagen in **gegevenssets**.
 1. Klantprofielen worden geïdentificeerd en samengesteld op basis van deze gegevenssets door gegevensfragmenten samen te voegen volgens de **samenvoegingsbeleid**.
 1. Groepen profielen zijn verdeeld in **publiek** op basis van gemeenschappelijke kenmerken.
-1. Soorten publiek wordt geactiveerd naar een lagere **bestemmingen**.
+1. Soorten publiek wordt geactiveerd naar een lagere laag **bestemmingen**.
 
 Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijdragen tot de handhaving van het beleid, zoals in de onderstaande tabel wordt aangegeven:
 
-| Gegevenslijnfase | Rol bij de handhaving van het beleid |
+| Gegevenslijnfase | Rol bij de handhaving van beleid |
 | --- | --- |
 | Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op het niveau van het schemagebied of het volledige datasetniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br>Eventuele toestemmingskenmerken die van uw klanten worden verzameld, worden ook in gegevenssets opgeslagen. Als u toegang tot toestemmingsbeleid hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van publiek worden uitgesloten die aan een bestemming worden geactiveerd. |
 | Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie de [overzicht van samenvoegbeleid](../../profile/merge-policies/overview.md) voor meer informatie . |
@@ -77,13 +77,13 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 >
 >Sommige beleidsregels voor gegevensgebruik kunnen twee of meer labels met een AND-relatie opgeven. Een beleid kan bijvoorbeeld een marketingactie beperken als labels `C1` EN `C2` beide aanwezig zijn, maar deze handeling niet beperkt indien slechts één van deze etiketten aanwezig is.
 >
->Wat de automatische handhaving betreft, wordt in het kader van gegevensbeheer de activering van afzonderlijke doelgroepen niet als een combinatie van gegevens beschouwd. Het voorbeeld `C1 AND C2` beleid is **NOT** worden afgedwongen als deze labels in afzonderlijke doelgroepen zijn opgenomen. In plaats daarvan wordt dit beleid alleen afgedwongen wanneer beide labels bij activering in hetzelfde publiek aanwezig zijn.
+>Wat de automatische handhaving betreft, wordt in het kader van gegevensbeheer de activering van afzonderlijke doelgroepen niet als een combinatie van gegevens beschouwd. Daarom is het voorbeeld `C1 AND C2` beleid is **NOT** worden afgedwongen als deze labels in afzonderlijke doelgroepen zijn opgenomen. In plaats daarvan wordt dit beleid alleen afgedwongen wanneer beide labels bij activering in hetzelfde publiek aanwezig zijn.
 
 Wanneer beleidsschendingen voorkomen, verstrekken de resulterende berichten die in UI verschijnen nuttige hulpmiddelen om de schending bijdragende gegevenslijn te onderzoeken helpen de kwestie oplossen. Meer details worden verstrekt in de volgende sectie.
 
 ## Beleidshandhavingsberichten {#enforcement}
 
-In de volgende secties worden de verschillende beleidshandhavingsberichten beschreven die in de gebruikersinterface van het Platform worden weergegeven:
+In de volgende secties worden de verschillende beleidshandhavingsberichten beschreven die in de interface van het Platform worden weergegeven:
 
 * [Beleidsschending gegevensgebruik](#data-usage-violation)
 * [Goedkeuring van het beleid](#consent-policy-evaluation)
@@ -130,11 +130,11 @@ Deze verbeteringen staan voor groter vertrouwen in uw marketing strategie toe aa
 
 Zodra u het **[!UICONTROL Review]** stap wanneer [een doel activeren](../../destinations/ui/activation-overview.md), selecteert u **[!UICONTROL View applied policies]**.
 
-![De knop toegepast beleid weergeven in de doelworkflow voor activeren](../images/enforcement/view-applied-policies.png)
+![De knop Toegepast beleid weergeven in de doelworkflow voor activeren](../images/enforcement/view-applied-policies.png)
 
-Er wordt een dialoogvenster voor beleidscontrole weergegeven waarin u een voorbeeld kunt zien van de invloed die het beleid voor uw toestemming heeft op het publiek van het geactiveerde publiek.
+Er wordt een dialoogvenster voor beleidscontrole weergegeven waarin u een voorbeeld kunt zien van de invloed die het beleid voor uw toestemming heeft op het publiek met toestemming van het geactiveerde publiek.
 
-![Dialoogvenster voor beleidscontrole voor toestemming in de gebruikersinterface van het Platform](../images/enforcement/consent-policy-check.png)
+![Dialoogvenster voor beleidscontrole voor toestemming in de gebruikersinterface van het platform](../images/enforcement/consent-policy-check.png)
 
 Het dialoogvenster toont het publiek met toestemming voor één publiek per keer. Om de beleidsevaluatie voor een verschillend publiek te bekijken, gebruik dropdown menu boven het diagram om van de lijst te selecteren.
 
@@ -162,7 +162,7 @@ Het publiek met toestemming wordt vertegenwoordigd door de centrale overlapping 
 
 ![Toestemming voor publiek in diagram markeren](../images/enforcement/consented-audience.png)
 
-#### Doorvoerbeheer
+#### Stroom run-handhaving
 
 Wanneer de gegevens aan een bestemming worden geactiveerd, tonen de gegevens van de stroomlooppas het aantal identiteiten die wegens actief toestemmingsbeleid werden uitgesloten.
 
@@ -170,11 +170,11 @@ Wanneer de gegevens aan een bestemming worden geactiveerd, tonen de gegevens van
 
 ## Beleidshandhaving voor geactiveerd publiek {#policy-enforcement-for-activated-audiences}
 
-De handhaving van het beleid is nog op publiek van toepassing nadat zij zijn geactiveerd, beperkt om het even welke veranderingen in een publiek of zijn bestemming die in een beleidsschending zouden resulteren. Door hoe [gegevensverbinding](#lineage) De werken in beleidshandhaving, kunnen om het even welke volgende acties potentieel een schending teweegbrengen:
+De handhaving van het beleid is nog op publiek van toepassing nadat zij zijn geactiveerd, beperkt om het even welke veranderingen in een publiek of zijn bestemming die in een beleidsschending zouden resulteren. Als gevolg van [gegevensverbinding](#lineage) De werken in beleidshandhaving, kunnen om het even welke volgende acties potentieel een schending teweegbrengen:
 
 * Labels voor gegevensgebruik bijwerken
 * Gegevenssets voor een publiek wijzigen
-* Voorspelingen voor publiek wijzigen
+* Voorspelingen voor het publiek wijzigen
 * Doelconfiguraties wijzigen
 
 Als een van de bovenstaande acties een schending veroorzaakt, wordt die actie verhinderd worden bewaard en een bericht van de beleidsschending wordt getoond, die ervoor zorgen dat uw geactiveerde publiek aan het beleid van het gegevensgebruik blijft voldoen wanneer wordt gewijzigd.

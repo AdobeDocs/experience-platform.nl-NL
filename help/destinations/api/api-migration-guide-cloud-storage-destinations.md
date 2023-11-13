@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* De functionaliteit die op deze pagina wordt beschreven, is beschikbaar voor klanten die de Real-Time CDP Premiere en Ultimate-pakketten hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+>* De functionaliteit die op deze pagina wordt beschreven, is beschikbaar voor klanten die de Real-Time CDP Premiere en Ultimate-pakketten hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
 
 ## Migratiecontext {#migration-context}
 
@@ -42,17 +42,17 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Merk op dat momenteel in het Experience Platform UI, u twee zij aan zij bestemmingskaarten van de drie bestemmingen kunt zien. Hieronder ziet u de [!DNL Amazon S3] oude en nieuwe bestemmingen. In alle gevallen worden de kaarten gemarkeerd met **Beta** Dit zijn de nieuwe doelkaarten.
+Merk op dat momenteel in het Experience Platform UI, u twee zij aan zij bestemmingskaarten van de drie bestemmingen kunt zien. Hieronder ziet u de [!DNL Amazon S3] oude en nieuwe bestemmingen. In alle gevallen worden de kaarten met **Beta** Dit zijn de nieuwe doelkaarten.
 
 ![Afbeelding van de twee Amazon S3-doelkaarten in een weergave Naast elkaar.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Hoewel deze bestemmingen met verbeterde functionaliteit aanvankelijk als bèta werden aangeboden, *Adobe verplaatst nu alle Real-Time CDP-klanten naar de nieuwe cloudopslagbestemmingen*. Voor klanten die al [!DNL Amazon S3], [!DNL Azure Blob], of SFTP, betekent dit dat bestaande dataflows naar de nieuwe kaarten worden gemigreerd. Lees verder voor meer informatie over de specifieke wijzigingen als onderdeel van de migratie.
+Hoewel deze bestemmingen met verbeterde functionaliteit aanvankelijk als bèta werden aangeboden, *Adobe verplaatst nu alle Real-Time CDP-klanten naar de nieuwe opslaglocaties voor de cloud*. Voor klanten die al [!DNL Amazon S3], [!DNL Azure Blob], of SFTP, betekent dit dat bestaande dataflows naar de nieuwe kaarten worden gemigreerd. Lees verder voor meer informatie over de specifieke wijzigingen als onderdeel van de migratie.
 
 ## Wie deze pagina van toepassing is op {#who-this-applies-to}
 
 Als u al het [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) Als u profielen wilt exporteren naar de Amazon S3-, Azure Blob- of SFTP-cloudopslagdoelen, is deze API-migratiegids op u van toepassing.
 
-Als er scripts worden uitgevoerd in uw [!DNL Amazon S3], [!DNL Azure Blob]of SFTP-opslaglocaties voor de cloud boven op de geëxporteerde bestanden vanuit Experience Platform, zich ervan bewust zijn dat sommige parameters veranderen wat betreft de verbinding en de stroomspecificaties van de nieuwe kaarten, en wat betreft de toewijzingsstap.
+Als u scripts in uw [!DNL Amazon S3], [!DNL Azure Blob]of SFTP-opslaglocaties voor de cloud boven op de geëxporteerde bestanden vanuit Experience Platform, zich ervan bewust zijn dat sommige parameters veranderen wat betreft de verbinding en de stroomspecificaties van de nieuwe kaarten, en wat betreft de toewijzingsstap.
 
 Als u bijvoorbeeld een script gebruikt om doelgegevens naar de [!DNL Amazon S3] doel, gebaseerd op de verbindingsspecificatie van [!DNL Amazon S3] doel, moet u er rekening mee houden dat de verbindingsspecificatie wordt gewijzigd, zodat u de filters moet bijwerken.
 
@@ -72,7 +72,7 @@ TBD if we keep this link but will likely remove it
 
 ## Samenvatting van achterwaarts incompatibele wijzigingen {#summary-backwards-incompatible-changes}
 
-Met de migratie naar de nieuwe bestemmingen, stroomt al uw bestaande dataflows aan [!DNL Amazon S3], [!DNL Azure Blob]en SFTP-doelen krijgen nu nieuwe doelverbindingen en basisverbindingen toegewezen. De stap voor profieltoewijzing verandert ook. Achteruit incompatibele wijzigingen worden samengevat in de onderstaande secties voor elke bestemming. Ook de opties weergeven [woordenlijst met bestemmingen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) voor meer informatie over de voorwaarden in onderstaande grafiek.
+Met de migratie naar de nieuwe bestemmingen, stroomt al uw bestaande dataflows aan [!DNL Amazon S3], [!DNL Azure Blob]en SFTP-doelen krijgen nu nieuwe doelverbindingen en basisverbindingen toegewezen. De stap voor profieltoewijzing verandert ook. Achteruit incompatibele wijzigingen worden samengevat in de onderstaande secties voor elke bestemming. Ook de optie [woordenlijst met bestemmingen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) voor meer informatie over de voorwaarden in onderstaande grafiek.
 
 ![Overzicht van migratiegids](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
@@ -672,7 +672,7 @@ De stap van de profielkiezer in alle drie de bestemmingen wordt vervangen door e
 
 ![Overzicht van migratiegids](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
-Let op het volgende `profileSelectors` object in de oudere voorbeelden wordt vervangen door de nieuwe `profileMapping` object.
+Let op het volgende `profileSelectors` -object in de oudere voorbeelden wordt vervangen door het nieuwe `profileMapping` object.
 
 Volledige informatie over het instellen van de `profileMapping` object in het [API-zelfstudie voor het exporteren van gegevens naar cloudopslagdoelen](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
@@ -788,12 +788,12 @@ U ontvangt herinneringse-mails van Adobe wanneer de migratiedatum nadert. Lees t
 
 ### Actiepunten {#action-items}
 
-Ter voorbereiding van de migratie van [!DNL Amazon S3], [!DNL Azure Blob]en SFTP-cloudopslagdoelen naar de nieuwe kaarten. Bereid u voor om uw scripts en geautomatiseerde API-aanroepen bij te werken, zoals hieronder wordt voorgesteld.
+Ter voorbereiding van de migratie van de [!DNL Amazon S3], [!DNL Azure Blob]en SFTP-cloudopslagdoelen naar de nieuwe kaarten. Bereid u voor om uw scripts en geautomatiseerde API-aanroepen bij te werken, zoals hieronder wordt voorgesteld.
 
-1. Werk om het even welke manuscripten of geautomatiseerde API vraag voor om het even welk bestaand bij [!DNL Amazon S3], [!DNL Azure Blob], of SFTP-cloudopslagdoelen uiterlijk 26 juli 2023. Alle geautomatiseerde API-aanroepen of scripts die gebruikmaken van de verouderde verbindingsspecificaties of flowspecificaties, moeten worden bijgewerkt naar de nieuwe verbindingsspecificaties of stroomspecificaties.
-2. Neem contact op met uw Adobe-accountvertegenwoordiger wanneer uw scripts vóór 26 juli zijn bijgewerkt.
-3. De `targetConnectionSpecId` kan als vlag worden gebruikt om te bepalen als dataflow aan de nieuwe bestemmingskaart is gemigreerd. U kunt uw scripts bijwerken met een `if` voorwaarde om de erfenis en bijgewerkte specificaties van de doelverbinding in te zien `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` en bepalen of uw gegevensstroom is gemigreerd. U kunt de verouderde en nieuwe verbindingsspecificaties-id&#39;s zien in de specifieke secties op deze pagina voor elke bestemming.
-4. Uw Adobe-accountteam zal u meer informatie geven over wanneer uw gegevensstromen worden gemigreerd.
+1. Scripts of automatische API-aanroepen bijwerken voor bestaande [!DNL Amazon S3], [!DNL Azure Blob], of SFTP-cloudopslagdoelen uiterlijk 26 juli 2023. Alle geautomatiseerde API-aanroepen of scripts die gebruikmaken van de verouderde verbindingsspecificaties of flowspecificaties, moeten worden bijgewerkt naar de nieuwe verbindingsspecificaties of stroomspecificaties.
+2. Neem contact op met de accountvertegenwoordiger van de Adobe wanneer uw scripts vóór 26 juli zijn bijgewerkt.
+3. Bijvoorbeeld de `targetConnectionSpecId` kan als vlag worden gebruikt om te bepalen als dataflow aan de nieuwe bestemmingskaart is gemigreerd. U kunt uw scripts bijwerken met een `if` voorwaarde om de erfenis en bijgewerkte specificaties van de doelverbinding in te zien `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` en bepalen of uw gegevensstroom is gemigreerd. U kunt de verouderde en nieuwe verbindingsspecificaties-id&#39;s zien in de specifieke secties op deze pagina voor elke bestemming.
+4. Het accountteam van uw Adobe bereikt meer informatie over wanneer uw gegevensstromen worden gemigreerd.
 5. Na 26 juli worden alle gegevensstromen gemigreerd. Al uw bestaande gegevensstromen zullen nu nieuwe stroomentiteiten (verbindingsspecificaties, stroom specs, basisverbindingen, en doelverbindingen) hebben. Om het even welke manuscripten of API vraag aan uw kant die de erfenisstroomentiteiten gebruiken zal ophouden werkend.
 
 ## Andere migratieoverwegingen {#other-considerations}

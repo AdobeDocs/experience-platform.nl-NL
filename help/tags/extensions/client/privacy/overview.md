@@ -1,6 +1,6 @@
 ---
 title: Overzicht van Adobe Privacy Extension
-description: Meer informatie over de extensie van de Adobe Privacy-tag in Adobe Experience Platform.
+description: Meer informatie over de extensie Adobe Privacy in Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 0%
 
 ---
 
-# Adobe Privacy-extensie - overzicht
+# Overzicht van Adobe Privacy-extensie
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Met de extensie van de Adobe Privacy-tag kunt u gebruikers-id&#39;s die aan eindgebruikers zijn toegewezen, verzamelen en verwijderen via Adobe-oplossingen op client-side apparaten. Verzamelde id&#39;s kunnen vervolgens worden verzonden naar [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) om de persoonlijke gegevens van de verwante persoon te openen of te verwijderen in ondersteunde Adobe Experience Cloud-toepassingen.
+Met de uitbreiding van de Adobe Privacy-tag kunt u gebruikers-id&#39;s die aan eindgebruikers zijn toegewezen, verzamelen en verwijderen door oplossingen te Adoben op client-side apparaten. Verzamelde id&#39;s kunnen vervolgens worden verzonden naar [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) om de persoonlijke gegevens van de verwante persoon te openen of te verwijderen in ondersteunde Adobe Experience Cloud-toepassingen.
 
 Deze gids behandelt hoe te om de uitbreiding van de Privacy van de Adobe in de UI van het Experience Platform of UI van de Inzameling van Gegevens te installeren en te vormen.
 
@@ -59,7 +59,7 @@ Als u klaar bent met het toevoegen van parameters voor de geselecteerde oplossin
 
 ## De extensie gebruiken {#using}
 
-De extensie Adobe Privacy biedt drie actietypen die kunnen worden gebruikt in een [regel](../../../ui/managing-resources/rules.md) wanneer zich een bepaalde gebeurtenis voordoet en aan de voorwaarden is voldaan:
+De uitbreiding van de Privacy van de Adobe verstrekt drie actietypes die in een [regel](../../../ui/managing-resources/rules.md) wanneer zich een bepaalde gebeurtenis voordoet en aan de voorwaarden is voldaan:
 
 * **[!UICONTROL Retrieve Identities]**: De opgeslagen identiteitsgegevens van de gebruiker worden opgehaald.
 * **[!UICONTROL Remove Identities]**: De opgeslagen identiteitsgegevens van de gebruiker worden verwijderd.
@@ -111,4 +111,4 @@ Nadat u de extensie hebt geïnstalleerd, kunt u deze uitschakelen of verwijderen
 
 ## Volgende stappen
 
-Deze handleiding behandelde het gebruik van de extensie van de Adobe Privacy-tag in de gebruikersinterface. Voor meer informatie over de functies die door de extensie worden geboden, waaronder voorbeelden van het gebruik ervan met onbewerkte code, raadpleegt u de [Overzicht van de Privacy JavaScript-bibliotheek](../../../../privacy-service/js-library.md) in de documentatie bij de Privacy Service.
+Deze handleiding behandelde het gebruik van de extensie Adobe Privacy in de gebruikersinterface. Voor meer informatie over de functies die door de extensie worden geboden, waaronder voorbeelden van het gebruik ervan met onbewerkte code, raadpleegt u de [Overzicht van de Privacy JavaScript-bibliotheek](../../../../privacy-service/js-library.md) in de documentatie bij de Privacy Service.

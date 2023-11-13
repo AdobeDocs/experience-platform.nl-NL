@@ -31,7 +31,7 @@ De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekk
 
 ### Segmentlidmaatschapstoewijzing
 
-De `segmentMembership` map slaat de resultaten van het evalueren van een segmentdefinitie op. Wanneer segmenttaken correct worden uitgevoerd met de opdracht [Segmentatie-API](https://www.adobe.io/experience-platform-apis/references/segmentation/), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welk vooraf geëvalueerd publiek op dat in Platform wordt opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan. Zie de zelfstudie aan [publiek maken met API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie .
+De `segmentMembership` map slaat de resultaten van de evaluatie van een segmentdefinitie op. Wanneer segmenttaken correct worden uitgevoerd met de opdracht [Segmentatie-API](https://www.adobe.io/experience-platform-apis/references/segmentation/), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welk vooraf geëvalueerd publiek op dat in Platform wordt opgenomen, dat voor integratie met andere oplossingen zoals Adobe Audience Manager toestaat. Zie de zelfstudie aan [publiek maken met API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie .
 
 ## Een lijst met vakbonden ophalen {#list}
 
@@ -68,7 +68,7 @@ De responsindeling is afhankelijk van `Accept` in de aanvraag verzonden. Het vol
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` in de responsstructuur. Als vakbonden zijn gedefinieerd, worden de gegevens voor elke samenvoeging als objecten in de array gegeven. Als er geen samenvoeging is gedefinieerd, wordt de HTTP-status 200 (OK) wel geretourneerd, maar wordt de waarde `results` array is leeg.
+Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` -array in de responsinstantie. Als vakbonden zijn gedefinieerd, worden de gegevens voor elke samenvoeging als objecten in de array gegeven. Als er geen samenvoeging is gedefinieerd, wordt de HTTP-status 200 (OK) wel geretourneerd, maar wordt de waarde `results` array zal leeg zijn.
 
 ```JSON
 {
@@ -124,7 +124,7 @@ curl -X GET \
 
 Voor verzoeken om opzoekingen door de Unie is een `version` worden opgenomen in de koptekst Accepteren.
 
-De volgende Accept- kopballen zijn beschikbaar voor de raadplegingen van het unieschema:
+De volgende Accept-koppen zijn beschikbaar voor samenvoegschema-lookups:
 
 | Accepteren | Beschrijving |
 | -------|------------ |
@@ -184,7 +184,7 @@ Om een schema voor zijn klasse in de unie te omvatten, `union` -tag moet worden 
 
 ## Schema&#39;s weergeven in een union {#list-schemas}
 
-Om te zien welke schema&#39;s deel van een specifieke vereniging uitmaken, kunt u een verzoek van de GET tot uitvoeren `/tenant/schemas` eindpunt. Met de `property` de vraagparameter, kunt u de reactie vormen om slechts schema&#39;s terug te keren die een bevatten `meta:immutableTags` en `meta:class` is gelijk aan de klasse waarvan u de unie opent.
+Om te zien welke schema&#39;s deel van een specifieke vereniging uitmaken, kunt u een verzoek van de GET tot uitvoeren `/tenant/schemas` eindpunt. Met de `property` de vraagparameter, kunt u de reactie vormen om slechts schema&#39;s terug te keren die een bevatten `meta:immutableTags` veld en `meta:class` is gelijk aan de klasse waarvan u de unie opent.
 
 **API-indeling**
 
@@ -200,7 +200,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Verzoek**
 
-Het volgende verzoek wint een lijst van alle schema&#39;s terug die deel van de unie voor de unie uitmaken [!DNL XDM Individual Profile] klasse.
+Het volgende verzoek wint een lijst van alle schema&#39;s terug die deel van de unie voor de [!DNL XDM Individual Profile] klasse.
 
 ```SHELL
 curl -X GET \

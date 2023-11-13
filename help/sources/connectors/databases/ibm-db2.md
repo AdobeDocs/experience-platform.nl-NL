@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >De IBM DB2-connector is in bèta. Zie de [Overzicht van bronnen](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform biedt native connectiviteit voor databaseproviders, zoals [!DNL Microsoft], MySQL en [!DNL Azure]. U kunt uw gegevens van deze systemen overbrengen naar [!DNL Platform].
+Adobe Experience Platform biedt native connectiviteit voor databaseproviders, zoals [!DNL Microsoft], MySQL en [!DNL Azure]. U kunt uw gegevens van deze systemen naar [!DNL Platform].
 
 Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. Ondersteuning voor databaseproviders omvat IBM DB2.
 

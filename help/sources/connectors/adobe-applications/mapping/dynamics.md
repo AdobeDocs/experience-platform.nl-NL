@@ -1,5 +1,5 @@
 ---
-title: Toewijzingsvelden voor Microsoft Dynamics
+title: Toewijzingsvelden voor Microsoft-dynamiek
 description: De onderstaande tabellen bevatten de toewijzingen tussen de bronvelden van Microsoft Dynamics en de bijbehorende XDM-velden.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
@@ -230,7 +230,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 {style="table-layout:auto"}
 
-## Aanhangsel
+## Bijlage
 
 De onderstaande secties bieden aanvullende informatie die u kunt gebruiken bij het configureren van B2B-toewijzingen voor uw [!DNL Microsoft] Bron dynamiek.
 
@@ -238,7 +238,7 @@ De onderstaande secties bieden aanvullende informatie die u kunt gebruiken bij h
 
 U kunt [berekende velden](../../../../data-prep/ui/mapping.md#calculated-fields) om een bronveld van het type picklist toe te wijzen van [!DNL Microsoft Dynamics] naar een doel-XDM-veld.
 
-De `genderCode` veld bevat twee opties:
+Bijvoorbeeld de `genderCode` veld bevat twee opties:
 
 | Waarde | Label |
 | --- | --- |

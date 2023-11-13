@@ -21,9 +21,9 @@ Alle geplande query&#39;s worden toegevoegd aan de lijst in de [!UICONTROL Sched
 
 ## Creeer een vraagprogramma&#39;s {#create-schedule}
 
-Om een programma aan een vraag toe te voegen, selecteer een vraagmalplaatje van of [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] om naar de Redacteur van de Vraag te navigeren.
+Om een programma aan een vraag toe te voegen, selecteer een vraagmalplaatje van of [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] om naar de Query Editor te navigeren.
 
-Lees de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
+Als u wilt weten hoe u planningen toevoegt met de API, leest u de [de geplande gids van het vraageindpunt](../api/scheduled-queries.md).
 
 Wanneer een opgeslagen query wordt benaderd vanuit de Query-editor, wordt [!UICONTROL Schedules] onder de naam van de query. Selecteer **[!UICONTROL Schedules]**.
 
@@ -39,17 +39,17 @@ De pagina met planningsdetails wordt weergegeven. Op deze pagina, kunt u de freq
 
 U kunt de volgende opties kiezen voor **[!UICONTROL Frequency]**:
 
-- **[!UICONTROL Hourly]**: De geplande vraag zal elk uur voor de datumperiode lopen u selecteerde.
-- **[!UICONTROL Daily]**: De geplande query wordt elke X dagen uitgevoerd op het moment en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd binnen is **UTC** en niet uw lokale tijdzone.
-- **[!UICONTROL Weekly]**: De geselecteerde query wordt uitgevoerd op de dagen van de week, tijd en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd binnen is **UTC** en niet uw lokale tijdzone.
-- **[!UICONTROL Monthly]**: De geselecteerde vraag zal elke maand op de dag, de tijd, en de datumperiode lopen u selecteerde. Houd er rekening mee dat de geselecteerde tijd binnen is **UTC** en niet uw lokale tijdzone.
-- **[!UICONTROL Yearly]**: De geselecteerde vraag zal elk jaar op de dag, de maand, de tijd, en de datumperiode lopen u selecteerde. Houd er rekening mee dat de geselecteerde tijd binnen is **UTC** en niet uw lokale tijdzone.
+- **[!UICONTROL Hourly]**: De geplande query wordt elk uur uitgevoerd voor de datumperiode die u hebt geselecteerd.
+- **[!UICONTROL Daily]**: De geplande query wordt elke X dagen uitgevoerd op het moment en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd in **UTC** en niet uw lokale tijdzone.
+- **[!UICONTROL Weekly]**: De geselecteerde query wordt uitgevoerd op de dagen van de week, tijd en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd in **UTC** en niet uw lokale tijdzone.
+- **[!UICONTROL Monthly]**: De geselecteerde query wordt elke maand uitgevoerd op de dag, tijd en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd in **UTC** en niet uw lokale tijdzone.
+- **[!UICONTROL Yearly]**: De geselecteerde query wordt elk jaar uitgevoerd op de dag, maand, tijd en de datumperiode die u hebt geselecteerd. Houd er rekening mee dat de geselecteerde tijd in **UTC** en niet uw lokale tijdzone.
 
 Voor de outputdataset, hebt u de optie om of een bestaande dataset te gebruiken of een nieuwe dataset tot stand te brengen.
 
 >[!IMPORTANT]
 >
-> Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, doet u **niet** de noodzaak om `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag, aangezien de datasets reeds worden geplaatst. Met inbegrip van `INSERT INTO` of `CREATE TABLE AS SELECT` als onderdeel van uw geplande query&#39;s resulteert in een fout.
+> Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, doet u **niet** de noodzaak om `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag, aangezien de datasets reeds worden geplaatst. Met inbegrip van: `INSERT INTO` of `CREATE TABLE AS SELECT` als onderdeel van uw geplande query&#39;s resulteert in een fout.
 
 Als u geen toegang tot geparameterized vragen hebt, ga op [een schema verwijderen of uitschakelen](#delete-schedule) sectie.
 
@@ -61,7 +61,7 @@ Als u geen toegang tot geparameterized vragen hebt, ga op [een schema verwijdere
 
 Als u een geplande vraag voor een parameterized vraag creeert, moet u de parameterwaarden voor deze vraaglooppas nu plaatsen.
 
-![De sectie van de Details van het Programma van de werkstroom van de programmaverwezenlijking met de benadrukte sectie van de Parameters van de Vraag.](../images/ui/query-schedules/scheduled-query-parameter.png)
+![De sectie van de Details van het Programma van de werkschema creatie met de benadrukte sectie van de Parameters van de Vraag.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
 Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om een schema te maken. U bent teruggekeerd aan de planningswerkruimte die details van het onlangs gecreeerde programma, met inbegrip van planningsidentiteitskaart, het programma zelf, en de de outputdataset van het programma toont. U kunt programmaidentiteitskaart gebruiken om meer informatie over de looppas van de geplande vraag zelf te zoeken. Lees voor meer informatie de [Geplande de eindpuntgids van vraaglooppas](../api/runs-scheduled-queries.md).
 
@@ -71,7 +71,7 @@ Nadat u al deze details hebt bevestigd, selecteert u **[!UICONTROL Save]** om ee
 
 U kunt een programma van de plannenwerkruimte van een bepaalde vraag of van schrappen [!UICONTROL Scheduled Queries] werkruimte die van alle geplande vragen een lijst maakt.
 
-Om toegang te krijgen tot [!UICONTROL Schedules] tabblad van de gekozen query, moet u de naam van een querysjabloon selecteren in het menu [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] tab. Dit navigeert aan de Redacteur van de Vraag voor die vraag. Vorm de Redacteur van de Vraag, selecteer **[!UICONTROL Schedules]** voor toegang tot de werkruimte voor schema&#39;s.
+Als u toegang wilt krijgen tot [!UICONTROL Schedules] tabblad van de gekozen query, moet u de naam van een querysjabloon selecteren in het menu [!UICONTROL Templates] of de [!UICONTROL Scheduled Queries] tab. Dit navigeert aan de Redacteur van de Vraag voor die vraag. Vorm de Redacteur van de Vraag, selecteer **[!UICONTROL Schedules]** voor toegang tot de werkruimte voor schema&#39;s.
 
 Selecteer een schema in de rijen met beschikbare schema&#39;s. U kunt de knevel gebruiken om de geplande vraag onbruikbaar te maken of toe te laten.
 
@@ -83,4 +83,4 @@ Selecteren **[!UICONTROL Delete a schedule]** om het uitgeschakelde schema te ve
 
 ![De planningswerkruimte met Uitschakelen programma en Schrapping benadrukt programma.](../images/ui/query-schedules/delete-schedule.png)
 
-Als alternatief kan de [!UICONTROL Scheduled Queries] het lusje biedt een inzameling van gealigneerde acties voor elke geplande vraag aan. Tot de beschikbare inline-acties behoren: [!UICONTROL Disable schedule] of [!UICONTROL Enable schedule], [!UICONTROL Delete schedule], en [!UICONTROL Subscribe] aan alarm voor de geplande vraag. Voor volledige instructies op hoe te om een geplande vraag door het geplande lusje van Vragen te schrappen of onbruikbaar te maken, te zien gelieve [geplande query-hulplijn controleren](./monitor-queries.md#inline-actions).
+Als alternatief kan de [!UICONTROL Scheduled Queries] tab biedt een verzameling inline-handelingen voor elke geplande query aan. Tot de beschikbare inline-acties behoren: [!UICONTROL Disable schedule] of [!UICONTROL Enable schedule], [!UICONTROL Delete schedule], en [!UICONTROL Subscribe] aan alarm voor de geplande vraag. Voor volledige instructies op hoe te om een geplande vraag door het geplande lusje van Vragen te schrappen of onbruikbaar te maken, te zien gelieve [geplande query-hulplijn controleren](./monitor-queries.md#inline-actions).

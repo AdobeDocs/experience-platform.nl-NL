@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # [!DNL Salesforce Marketing Cloud]
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van derde marketingautomatiseringssystemen. De ondersteuning voor leveranciers van marketingautomatisering omvat: [!DNL Salesforce Marketing Cloud].
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van derde marketingautomatiseringssystemen. De ondersteuning voor leveranciers van marketingautomatisering omvat [!DNL Salesforce Marketing Cloud].
 
 ## Vereisten
 
@@ -38,15 +38,15 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 ## Verbinden [!DNL Salesforce Marketing Cloud] naar Platform met API&#39;s
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Salesforce Marketing Cloud] naar Platform met API&#39;s:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Salesforce Marketing Cloud] naar Platform met API&#39;s:
 
 * [Een basisverbinding voor een Salesforce-Marketing Cloud maken met de Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Een gegevensstroom maken voor een marketingautomatiseringsbron met behulp van de Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
-## Verbinden [!DNL Salesforce Marketing Cloud] naar Platform met behulp van de gebruikersinterface
+## Verbinden [!DNL Salesforce Marketing Cloud] naar Platform met behulp van UI
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Salesforce Marketing Cloud] Platform met behulp van de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Salesforce Marketing Cloud] naar Platform met behulp van de gebruikersinterface:
 
 * [Een Salesforce-bronverbinding voor Marketingen Cloud maken in de gebruikersinterface](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Een gegevensstroom maken voor een bronverbinding voor marketingautomatisering in de gebruikersinterface](../../tutorials/ui/dataflow/marketing-automation.md)

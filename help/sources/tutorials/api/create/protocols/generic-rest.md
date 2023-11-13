@@ -26,10 +26,10 @@ Dit leerprogramma begeleidt u door de stappen om een basisverbinding tot stand t
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ### Vereiste referenties verzamelen
 
@@ -67,7 +67,7 @@ Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip 
 
 ### Een [!DNL Generic REST API] basisverbinding met OAuth 2-vernieuwingscode
 
-Om een identiteitskaart van de basisverbinding tot stand te brengen gebruikend OAuth 2 verfrist code, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw OAuth 2 geloofsbrieven.
+Om een identiteitskaart van de basisverbinding tot stand te brengen gebruikend OAuth 2 verfrist code, doe een POST verzoek aan `/connections` eindpunt terwijl het verstrekken van uw OAuth 2 geloofsbrieven.
 
 **API-indeling**
 
@@ -109,7 +109,7 @@ curl -X POST \
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan [!DNL Generic REST API]. Deze vaste ID is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
-| `auth.specName` | Het authentificatietype dat u gebruikt om uw bron aan Platform voor authentiek te verklaren. |
+| `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
 | `auth.params.host` | De basis-URL waarmee u verbinding maakt met uw [!DNL Generic REST API] bron. |
 | `auth.params.accessToken` | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
@@ -126,7 +126,7 @@ Met een geslaagde reactie wordt de nieuwe verbinding geretourneerd, inclusief de
 
 ### Een [!DNL Generic REST API] basisverbinding met basisverificatie
 
-Als u een [!DNL Generic REST API] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van uw basisauthentificatiegeloofsbrieven.
+Een [!DNL Generic REST API] basisverbinding die basisauthentificatie gebruikt, doe een verzoek van de POST aan `/connections` eindpunt van [!DNL Flow Service] API terwijl het verstrekken van uw basisauthentificatiegeloofsbrieven.
 
 **API-indeling**
 

@@ -1,11 +1,11 @@
 ---
 description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience Platform kunt gebruiken om uw gegevensverwerking voor B2B-gegevens te versnellen.
 title: Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface
-badge1: "Beta"
+badge1: "Bèta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2215'
+source-wordcount: '2216'
 ht-degree: 0%
 
 ---

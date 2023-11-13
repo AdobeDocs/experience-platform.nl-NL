@@ -26,7 +26,7 @@ De [!UICONTROL Consents and Preferences] veldgroep levert één objecttype veld,
 
 >[!TIP]
 >
->Zie de handleiding op [XDM-bronnen verkennen](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in het Platform UI te inspecteren.
+>Zie de handleiding op [XDM-bronnen verkennen](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel van XDM op te zoeken en zijn structuur in Platform UI te inspecteren.
 
 In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens dat [!UICONTROL Consents and Preferences] veldgroep kan verwerken. Raadpleeg de handleiding bij het dialoogvenster [Gegevenstype Inhoud en Voorkeuren](../../data-types/consents.md). De subsecties hieronder richten zich op de unieke attributen die de gebiedsgroep aan het gegevenstype toevoegt.
 

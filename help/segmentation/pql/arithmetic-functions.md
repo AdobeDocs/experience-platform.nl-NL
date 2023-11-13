@@ -68,7 +68,7 @@ De volgende vraag PQL vindt het verschil in prijs tussen twee verschillende prod
 product1.price - product2.price
 ```
 
-## Verdelen
+## Splitsen
 
 De `/` (delen) wordt gebruikt om het quotiënt van twee argumentuitdrukkingen te vinden.
 

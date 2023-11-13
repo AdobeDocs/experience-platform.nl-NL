@@ -20,7 +20,7 @@ Dit document fungeert als richtlijn voor het downloaden van scores voor AI-besta
 
 Met AI van de klant kunt u scores downloaden in de Parquet-bestandsindeling. Deze zelfstudie vereist dat u de sectie voor het downloaden van Klant AI-scores in het dialoogvenster [aan de slag](../getting-started.md) hulplijn.
 
-Daarnaast moet u een service-instantie met een geslaagde status hebben om toegang te krijgen tot scores voor de AIR-service. Om een nieuwe de dienstinstantie tot stand te brengen, bezoek [Een AI-instantie van de klant configureren](./configure.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
+Daarnaast moet u een service-instantie met een geslaagde status hebben om toegang te krijgen tot scores voor de AIR-service. Om een nieuwe de dienstinstantie te creëren, bezoek [Een AI-instantie van de klant configureren](./configure.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
 
 Er zijn momenteel twee manieren om AI-scores van klanten te downloaden:
 
@@ -63,7 +63,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In dit voorbeeld is de sleutelwaarde voor het geretourneerde object de batch-id `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieer de batch-id die u wilt gebruiken in de volgende API-aanroep.
+Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In dit voorbeeld is de sleutelwaarde voor het geretourneerde object de batch-id `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieer uw batch-id voor gebruik in de volgende API-aanroep.
 
 ```json
 {
@@ -237,7 +237,7 @@ De reactie bevat een gegevensarray die één item kan hebben, of een lijst met b
 | `_links.self.href` | De aanvraag-URL van de GET die wordt gebruikt om een bestand in uw map te downloaden. |
 
 
-Kopieer de `href` waarde voor elk bestandsobject in het dialoogvenster `data` -array en ga vervolgens verder met de volgende stap.
+De `href` waarde voor elk bestandsobject in het dialoogvenster `data` -array en ga vervolgens verder met de volgende stap.
 
 ## Bestandsgegevens downloaden
 

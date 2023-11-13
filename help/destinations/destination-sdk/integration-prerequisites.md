@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Om Destination SDK te gebruiken, zorg ervoor dat u aan de technische en partnerschapeerste vereisten voldoet die in de hieronder secties worden vermeld.
 
-## Technische en API-vereisten voor streamingdoelen {#streaming-prerequisites}
+## Technische vereisten/API-vereisten voor streamingdoelen {#streaming-prerequisites}
 
 1. U hebt een REST API eindpunt voor Adobe Experience Platform om de volgende types van gegevens te leveren aan:
    * Publiek lidmaatschapsinformatie;

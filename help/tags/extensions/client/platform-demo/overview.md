@@ -1,6 +1,6 @@
 ---
 title: Overzicht van Adobe Experience Platform Demo-extensie
-description: Meer informatie over de extensie Adobe Experience Platform Demo in Adobe Experience Platform.
+description: Meer informatie over de Adobe Experience Platform Demo-extensie in Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier volgt een snelle vergelijking van de huidige functies.
 
-| Demo-extensie Platform | Platform Web SDK |
+| Platform Demo-extensie | Platform Web SDK |
 | ------------------ | ----------- |
 | Ondersteuning voor aangepaste klant-id&#39;s | Ondersteuning voor aangepaste gebruikers-id&#39;s |
 | Interface voor clienttoewijzing voor XDM | Ingebouwde ECID (geen bezoeker.js nodig) |
@@ -51,9 +51,9 @@ Als u **[!UICONTROL Create a streaming connection]** er verschijnt een modaal ve
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-Het modaal bevat velden met vooraf ingevulde waarden die naar wens kunnen worden gewijzigd. Als u meerdere streamingverbindingen wilt maken, moet u er rekening mee houden dat de **[!UICONTROL Data Source]** veld moet uniek zijn. Een andere streamingverbinding maken met een **[!UICONTROL Data Source]** al gebruikt voor een andere verbinding zal mislukken.
+Het modaal bevat velden met vooraf ingevulde waarden die naar wens kunnen worden gewijzigd. Als u meerdere streamingverbindingen wilt maken, moet u er rekening mee houden dat de **[!UICONTROL Data Source]** het veld moet uniek zijn. Een andere streamingverbinding maken met een **[!UICONTROL Data Source]** al gebruikt voor een andere verbinding zal mislukken.
 
-Wanneer u een streamingeindpunt hebt geselecteerd, gebruikt u de URL en de bron van het streamingeindpunt.
+Nadat u een streamingeindpunt hebt geselecteerd, kiest u het streamingeindpunt URL en de bron.
 
 ![](../../../images/adobe-experience-platform-streaming-endpoint-selected.png)
 
@@ -61,7 +61,7 @@ Wanneer u een streamingeindpunt hebt geselecteerd, gebruikt u de URL en de bron 
 
 In deze sectie worden de actietypen beschreven die beschikbaar zijn in de Adobe Experience Platform-extensie.
 
-### Band verzenden {#send-beacon}
+### Bandbaken verzenden {#send-beacon}
 
 Dit is het handelingstype dat u gebruikt om gegevens naar de Adobe Experience Platform te verzenden.
 
@@ -85,13 +85,13 @@ Het veld Doelschema bevat het pad van een XDM-veld dat in het schema van de gege
 
 ### Selector schemaveld
 
-De extensie biedt ook de mogelijkheid om een doelschemaveld te selecteren met behulp van een visuele kiezer. Als u de doelknoop selecteert die naast de het gebiedsinput van het doelschema zit, zal een modaal worden getoond waar u de het schemaboom van de dataset zult zien. U kunt een veld kiezen en vervolgens de **Selecteren** en de invoer van het doelschemaveld wordt bijgewerkt met het juiste XDM-pad.
+De uitbreiding biedt ook de mogelijkheid om een gebied van het doelschema te selecteren gebruikend een visuele selecteur. Als u de doelknoop selecteert die naast de het gebiedsinput van het doelschema zit, zal een modaal worden getoond waar u de het schemaboom van de dataset zult zien. U kunt een veld kiezen en vervolgens de **Selecteren** en de invoer van het doelschemaveld wordt bijgewerkt met het juiste XDM-pad.
 
 ![](../../../images/adobe-experience-platform-send-beacon-schema-field-selector.png)
 
 ### Identiteitsvelden in de Adobe Experience Platform
 
-De schema&#39;s van de gegevens van het verslag en de reeksen gegevensschema&#39;s kunnen één of meerdere identiteitsgebieden bevatten. Identiteitsvelden worden aan elkaar gekoppeld om één identiteitsrepresentatie van een onderwerp te vormen en bevatten informatie zoals een CRM-id, Experience Cloud-id (ECID), browsercookie, advertentie-id of andere id&#39;s in verschillende domeinen.
+De schema&#39;s van de gegevens van het verslag en de reeksen gegevensschema&#39;s kunnen één of meerdere identiteitsgebieden bevatten. Identiteitsvelden worden samengevoegd tot één identiteitsrepresentatie van een onderwerp en bevatten informatie zoals een CRM-id, Experience Cloud-id (ECID), browsercookie, advertentie-id of andere id&#39;s in verschillende domeinen.
 
 Identiteitsvelden kunnen op twee manieren binnen het schema worden gedefinieerd:
 
@@ -116,7 +116,7 @@ Een identiteitssectie zal zichtbaar zijn als uw schema een `xdm:identityMap` vel
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section.png)
 
-De sectie voor identiteitstoewijzing kan meerdere rijen bevatten. Elke rij kan een bepaald identiteitstype bepalen. U kunt de volgende kenmerken definiëren voor een identiteit: type, authenticated state, primary en value.
+De sectie voor identiteitstoewijzing kan meerdere rijen bevatten. Elke rij kan een bepaald identiteitstype bepalen. U kunt de volgende kenmerken definiëren voor een identiteit: type, geverifieerde status, primair en waarde.
 
 Als u meerdere identiteiten hebt binnen de sectie voor identiteitstoewijzing, kan slechts één identiteit als primair worden gemarkeerd.
 

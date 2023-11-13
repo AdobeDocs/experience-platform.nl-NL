@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Integreer het Web SDK van het Platform om de gegevens van de klanteninstemming te verwerken
 
-Met de Adobe Experience Platform Web SDK kunt u de door CMP&#39;s (Consent Management Platforms) gegenereerde toestemmingssignalen van klanten ophalen en deze naar Adobe Experience Platform verzenden wanneer er een gebeurtenis plaatsvindt waarbij de toestemming wordt gewijzigd.
+Met de Adobe Experience Platform Web SDK kunt u de door CMP&#39;s (Consent Management Platforms) gegenereerde toestemmingssignalen van klanten ophalen en deze naar Adobe Experience Platform verzenden wanneer er zich een gebeurtenis voordoet waarbij toestemming wordt gewijzigd.
 
-**De SDK interface niet met CMP&#39;s uit het vak**. Het is aan u om te bepalen hoe te om SDK in uw website te integreren, naar toestemmingsveranderingen in CMP te luisteren, en het aangewezen bevel te roepen. Dit document biedt algemene richtlijnen voor het integreren van uw CMP met de Web SDK van het Platform.
+**De SDK interface niet met CMP&#39;s uit het vak**. Het is aan u om te bepalen hoe te om SDK in uw website te integreren, naar toestemmingsveranderingen in CMP te luisteren, en het aangewezen bevel te roepen. Dit document biedt algemene richtlijnen voor het integreren van uw CMP met de Platform Web SDK.
 
 ## Vereisten {#prerequisites}
 
-In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens over toestemming binnen uw CMP kunt genereren en dat u een gegevensset hebt gemaakt die machtigingsvelden bevat die voldoen aan de Adobe-standaard of de TCF 2.0-standaard (Transparency and Consent Framework). Als u deze dataset nog niet hebt gecreeerd, verwijs naar de volgende leerprogramma&#39;s alvorens aan deze gids terug te keren:
+In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens over Adobe binnen uw CMP kunt genereren en dat u een gegevensset hebt gemaakt die machtigingsvelden bevat die voldoen aan de standaard voor transparantie en instemming van IAB (TCF) 2.0. Als u deze dataset nog niet hebt gecreeerd, verwijs naar de volgende leerprogramma&#39;s alvorens aan deze gids terug te keren:
 
 * [Een gegevensset maken met de standaard Adobe](./adobe/dataset.md)
 * [Creeer een dataset gebruikend de norm TCF 2.0](./iab/dataset.md)
@@ -44,15 +44,15 @@ Nadat u een nieuwe gegevensstroom hebt gemaakt of een bestaande gegevensstroom h
 
 | Veld DataStream | Waarde |
 | --- | --- |
-| [!UICONTROL Sandbox] | De naam van het Platform [sandbox](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling de gegevensstroom bevat. |
-| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset die u bij het verzenden van gebeurtenisgegevens naar het gebruiken van SDK van plan bent. Terwijl u een gebeurtenisdataset moet verstrekken om een gegevensstroom van het Platform tot stand te brengen, gelieve te merken dat de toestemmingsgegevens die via gebeurtenissen worden verzonden niet in stroomafwaartse handhavingswerkschema&#39;s worden nageleefd. |
+| [!UICONTROL Sandbox] | De naam van het platform [sandbox](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling de gegevensstroom bevat. |
+| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset die u bij het verzenden van gebeurtenisgegevens naar het gebruiken van SDK van plan bent. Terwijl u een gebeurtenissendataset moet verstrekken om een gegevensstroom van het Platform tot stand te brengen, gelieve te merken dat de toestemmingsgegevens die via gebeurtenissen worden verzonden niet in stroomafwaartse handhavingswerkschema&#39;s worden nageleefd. |
 | [!UICONTROL Profile Dataset] | De [!DNL Profile]-enabled dataset met de gebieden van de klanteninstemming die u creeerde [eerder](#prerequisites). |
 
-Als u klaar bent, selecteert u **[!UICONTROL Save]** onder aan het scherm en doorgaan met het volgen van eventuele extra vragen om de configuratie te voltooien.
+Selecteer **[!UICONTROL Save]** onder aan het scherm en doorgaan met het volgen van eventuele extra vragen om de configuratie te voltooien.
 
-## De SDK van het Web Platform installeren en configureren
+## De Platform Web SDK installeren en configureren
 
-Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap Tag is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** tab. Selecteer vervolgens **[!UICONTROL Install]** onder de SDK-extensie van het Platform in de lijst met beschikbare extensies.
+Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap Tag is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** tab. Selecteer vervolgens **[!UICONTROL Install]** onder de extensie Platform SDK in de lijst met beschikbare extensies.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -78,7 +78,7 @@ Als het gebied van de gebruiker door CMP wordt bepaald, kunt u de volgende stapp
 1. Stel in de gebeurtenishandler een `adobeDefaultConsent` variabele gebaseerd op het gebied van de gebruiker, en laadt dan het manuscript van de markeringsbibliotheek gebruikend JavaScript.
 1. Stel een gegevenselement in dat gebruikmaakt van de `adobeDefaultConsent` JavaScript-variabele en gebruik dit gegevenselement als de standaardwaarde voor de toestemming voor de gebruiker.
 
-Selecteer **[!UICONTROL Data Elements]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Add Data Element]** om naar het dialoogvenster voor het maken van gegevenselementen te navigeren.
+Als u een gegevenselement wilt maken in de gebruikersinterface, selecteert u **[!UICONTROL Data Elements]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Add Data Element]** om naar het dialoogvenster voor het maken van gegevenselementen te navigeren.
 
 Van hieruit moet u een [!UICONTROL JavaScript Variable] gegevenselement gebaseerd op `adobeDefaultConsent`. Selecteren **[!UICONTROL Save]** wanneer gereed.
 
@@ -94,12 +94,12 @@ Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Z
 
 ## Opdrachten voor wijzigen van toestemming maken {#commands}
 
-Zodra u de uitbreiding SDK in uw website hebt geïntegreerd, kunt u beginnen te gebruiken het Web SDK van het Platform `setConsent` om toestemmingsgegevens naar het Platform te verzenden.
+Nadat u de SDK-extensie hebt geïntegreerd in uw website, kunt u de SDK van het web van het platform gaan gebruiken `setConsent` gebruiken om gegevens over toestemming naar Platform te verzenden.
 
 De `setConsent` voert twee handelingen uit:
 
 1. Hiermee werkt u de profielkenmerken van de gebruiker rechtstreeks bij in het archief Profiel. Hiermee worden geen gegevens naar het datumpigment verzonden.
-1. Hiermee maakt u een [Experience Event](../../../xdm/classes/experienceevent.md) dat een tijdstempelaccount van de gebeurtenis voor wijziging van de toestemming vastlegt. Deze gegevens worden rechtstreeks naar het datumpigment verzonden en kunnen worden gebruikt om wijzigingen in de voorkeur voor toestemming in de loop van de tijd bij te houden.
+1. Maakt een [Experience Event](../../../xdm/classes/experienceevent.md) dat een tijdstempelaccount van de gebeurtenis voor wijziging van de toestemming vastlegt. Deze gegevens worden rechtstreeks naar het datumpigment verzonden en kunnen worden gebruikt om wijzigingen in de voorkeur voor toestemming in de loop van de tijd bij te houden.
 
 ### Wanneer wordt u aangeroepen `setConsent`
 
@@ -117,7 +117,7 @@ Er zijn twee scenario&#39;s waarin `setConsent` moet op uw site worden aangeroep
 De `setConsent` bevel verwacht twee argumenten:
 
 1. Een tekenreeks die het opdrachttype aangeeft (in dit geval `"setConsent"`)
-1. Een object payload dat één eigenschap van het type array bevat: `consent`. De `consent` array moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de Adobe-standaard bevat.
+1. Een object payload dat één eigenschap van het type array bevat: `consent`. De `consent` array moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de standaard Adobe bevat.
 
 De vereiste toestemmingsgebieden voor de norm van de Adobe worden getoond in het volgende voorbeeld `setConsent` oproep:
 
@@ -202,11 +202,11 @@ var setConsent = function () {
 
 Alles [!DNL Platform SDK] de bevelen keren beloftes terug die erop wijzen of de vraag slaagde of ontbrak. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie de sectie over [afhandeling gelukt of mislukt](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in de handleiding voor het uitvoeren van SDK-opdrachten voor specifieke voorbeelden.
 
-Zodra u met succes hebt gemaakt `setConsent` Met de SDK kunt u via de profielviewer in de interface van het Platform controleren of gegevens in het archief Profiel worden gedownload. Zie de sectie over [bladeren door profielen op identiteit](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie .
+Zodra u met succes hebt gemaakt `setConsent` Met de SDK kunt u via de profielviewer in de interface van het platform controleren of gegevens in de opslag Profiel worden gedownload. Zie de sectie over [bladeren door profielen op identiteit](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie .
 
 ## Volgende stappen
 
 Door deze gids te volgen, hebt u de uitbreiding van SDK van het Web van het Platform gevormd om toestemmingsgegevens naar Experience Platform te verzenden. Raadpleeg voor hulp bij het testen van uw implementatie de documentatie voor de toestemmingsnorm die u implementeert:
 
-* [Adobe standaard](./adobe/overview.md#test)
+* [Adobe](./adobe/overview.md#test)
 * [TCF 2.0 standaard](./iab/overview.md#test)

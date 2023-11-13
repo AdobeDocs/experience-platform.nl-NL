@@ -29,7 +29,7 @@ v3.4.1
       * Cookie
       * Openingspagina
       * Parameter querytekenreeks
-      * Verkeersbron
+      * verkeersbron
       * Variabele
 * Wijzigt de afgevaardigde events/EntersView om de [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) in plaats van dat elementen die de viewport binnenkomen handmatig worden gedetecteerd.
 * Verwijdert code die DTM koekjes aan LocalStorage migreerde.
@@ -78,17 +78,17 @@ Er zijn nieuwe gegevenselementen toegevoegd:
 
 * Samengevoegd object - selecteer meerdere gegevenselementen die elk een object leveren. Deze objecten worden diep (recursief) samengevoegd om een nieuw object te maken.
 * Voorwaardelijke waarde - Retourneer een van twee waarden (conditionalValue of fallbackValue) op basis van het resultaat van de vergelijking.
-* Runtime Environment - Retourneer een van de volgende Launch-omgevingsvariabelen: het milieustadium, bibliotheek bouwt datum, bezitsnaam, bezits identiteitskaart, regelnaam, regel identiteitskaart, gebeurtenistype, gebeurtenisdetaillading, directe vraagherkenningsteken.
-* JavaScript-gereedschappen - Omsluitend voor veelgebruikte JavaScript-bewerkingen: eenvoudige tekenreeksmanipulatie (vervangen, subtekenreeks, regex-overeenkomst, eerste en laatste index, splitsen, segment), eenvoudige arraybewerkingen (segment, samenvoeging, pop, shift) en universele basisbewerkingen (segment, lengte).
+* Runtime Environment - Return one of the following Launch environment variables: environment stage, library build date, property name, property ID, rule name, rule id, event type, event detail payload, direct call identifier.
+* JavaScript-gereedschappen - Omsluitend voor veelvoorkomende JavaScript-bewerkingen: eenvoudige tekenreeksmanipulatie (vervangen, subtekenreeks, overeenkomst regex, eerste en laatste index, splitsing, segment), eenvoudige arraybewerkingen (segment, verbinding, pop, shift) en universele basisbewerkingen (segment, lengte).
 * Apparaatkenmerken - Retourapparaatkenmerken zoals venstergrootte of schermgrootte.
 
 ## 11 augustus 2021
 
 v3.0.0
 
-* PDCL-6153: Hiermee voegt u ondersteuning toe om de volledig gekwalificeerde URL voor aangepaste codehandelingen in de cache op betrouwbare wijze te verkrijgen.
+* PDCL-6153: Voegt steun toe om volledig - gekwalificeerde URL voor caching acties van de douanecode betrouwbaar te trekken.
 
-v3.0.0 van de Core-extensie is gekoppeld aan wijzigingen in [v27.2.0 van de webruntime van Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), waarmee gebruikers hun bibliotheek kunnen laden onder vele hostinggebieden met Adobe-beheer als het bedrijf van de gebruiker Premium CDN ondersteunt.
+v3.0.0 van de Core-extensie is gekoppeld aan wijzigingen in [v27.2.0 van de webruntime van Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), waardoor gebruikers hun bibliotheek onder veel door Adobe beheerde hostgebieden kunnen laden als het bedrijf van de gebruiker Premium CDN ondersteunt.
 
 Deze upgrade is optioneel en achterwaarts compatibel voor gebruikers zonder Premium CDN en is verplicht voor klanten die Premium CDN op hun bedrijf hebben ingeschakeld.
 
@@ -115,7 +115,7 @@ v2.0.5
 
 v2.0.4
 
-* Ondersteuning voor gegevenselement toegevoegd voor verschillende velden - Ondersteuning voor gegevenselement is toegevoegd aan de volgende gebeurtenissen: &#39;Time on Page&#39;, &#39;Enters Viewport&#39;, &#39;Hover&#39; en &#39;Media Time Played&#39;. alsmede de volgende voorwaarden: &#39;Time on Site&#39; en &#39;Value Comparison&#39;
+* Ondersteuning voor gegevenselement toegevoegd voor verschillende velden - Ondersteuning voor gegevenselement is toegevoegd aan de volgende gebeurtenissen: &#39;Tijd op pagina&#39;, &#39;Weergave voor invoer&#39;, &#39;Aanwijzer&#39; en &#39;Afspeeltijd media&#39;. alsmede de volgende voorwaarden: &#39;Time on Site&#39; en &#39;Value Comparison&#39;
 * Hiermee voegt u ondersteuning toe voor standaardgedrag voor ctrl/cmd + klikken en middenmuisklikken bij gebruik van Vertraging koppeling
 * **De vertraging van de gemarkeerde koppeling bij de klikgebeurtenis wordt niet meer ondersteund.** - meer informatie is te vinden op de [Blog gegevensverzameling](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) voor Adobe Experience Platform
 
@@ -141,7 +141,7 @@ v1.8.3
 
 v1.8.2
 
-* Probleem verholpen waarbij de aangepaste code een fout veroorzaakte voor HTML-code die tokens zonder tagnaam bevat (bijvoorbeeld opmerkingen).
+* Probleem verholpen waarbij de aangepaste code-actie een fout genereerde voor HTML-code die tokens zonder tagnaam bevat (bijvoorbeeld opmerkingen).
 
 ## 10 juli 2020
 
@@ -196,7 +196,7 @@ v1.4.3
 * **Invoervelden** - Invoervelden zijn nu veel langer!
 * **Aangepaste gebeurtenis** - Aangepast gebeurtenistype kan nu worden gebruikt bij gebeurtenissen die buiten het venster worden verzonden.
 * **Bug Fix** - Oplossing van een bug waarbij de voorwaarde van de Vergelijking van de Waarde geen 0 waarde zou bevatten.
-* **Bug Fix** - Het veld Exchange\_url is bijgewerkt, zodat u nu de lijst Core Extension in Adobe Exchange kunt bekijken.
+* **Bug Fix** - Het veld Exchange\_url is bijgewerkt, zodat u nu de lijst Core Extension kunt zien in Adobe Exchange.
 
 ## 8 januari 2019
 

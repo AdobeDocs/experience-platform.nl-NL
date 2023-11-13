@@ -34,7 +34,7 @@ In het onderstaande diagram ziet u de end-to-end workflow voor het activeren van
 
 ## Gebruiksscenario’s {#use-cases}
 
-### Flash verkopen of promoties
+### Verkoop of promoties van Flash
 
 Een online detailhandelaar bereidt een beperkte flitsverkoop voor en wil klanten op korte termijn op de hoogte brengen. Via de API voor ad-hocactivering van Experience Platforms kan het marketingteam op aanvraag soorten publiek exporteren en snel e-mails met speciale acties naar de klantenbasis sturen.
 
@@ -51,51 +51,51 @@ IT-beheerders kunnen de API voor ad-hocactivering van Experience Platforms gebru
 Houd rekening met de volgende instructies wanneer u de API voor ad-hocactivering gebruikt.
 
 * Op dit moment kan elke ad-hocactiveringstaak maximaal 80 soorten publiek activeren. Als u probeert meer dan 80 soorten publiek per taak te activeren, mislukt de taak. Dit gedrag kan in toekomstige versies worden gewijzigd.
-* Ad-hocactiveringstaken kunnen niet gelijktijdig met de geplande [doelgroepen exporttaken](../../segmentation/api/export-jobs.md). Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande doelexporttaak is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd.
+* Ad-hocactiveringstaken kunnen niet gelijktijdig met de geplande [doelgroepen exporttaken](../../segmentation/api/export-jobs.md). Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande doelexporttaak is voltooid. Zie [doelgegevensstroom controleren](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevensstroom bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd.
 * Voer niet meer dan één gelijktijdige ad-hocactiveringstaak per publiek uit.
 
 ## Segmenteringsoverwegingen {#segmentation-considerations}
 
 Adobe Experience Platform voert elke 24 uur een geplande segmentatietaak uit. De API voor ad-hocactivering wordt uitgevoerd op basis van de meest recente segmentatieresultaten.
 
-## Stap 1: Vereisten {#prerequisites}
+## Stap 1: Voorwaarden {#prerequisites}
 
 Voordat u aanroepen kunt uitvoeren naar de Adobe Experience Platform API&#39;s, moet u controleren of aan de volgende voorwaarden is voldaan:
 
 * U hebt een organisatie-account met toegang tot Adobe Experience Platform.
-* Je Experience Platform account heeft de `developer` en `user` rollen die zijn ingeschakeld voor het Adobe Experience Platform API-productprofiel. Neem contact op met uw [Admin Console](../../access-control/home.md) beheerder om deze rollen voor uw rekening toe te laten.
+* Je Experience Platform account heeft de `developer` en `user` rollen ingeschakeld voor het Adobe Experience Platform API-productprofiel. Neem contact op met uw [Admin Console](../../access-control/home.md) beheerder om deze rollen voor uw rekening toe te laten.
 * Je hebt een Adobe ID. Als je geen Adobe ID hebt, ga dan naar de [Adobe Developer Console](https://developer.adobe.com/console) en maak een nieuwe account.
 
 ## Stap 2: Referenties verzamelen {#credentials}
 
-Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
+* Toestemming: houder `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over sandboxen in Experience Platform raadpleegt u de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
+>Zie voor meer informatie over sandboxen in Experience Platform de [overzichtsdocumentatie van sandbox](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
-## Stap 3: Activeringsstroom maken in de gebruikersinterface van het Platform {#activation-flow}
+## Stap 3: De activeringsstroom maken in de gebruikersinterface van het platform {#activation-flow}
 
-Voordat u het publiek kunt activeren via de API voor ad-hocactivering, moet u eerst een activeringsstroom hebben geconfigureerd in de gebruikersinterface van het Platform voor het gekozen doel.
+Voordat u het publiek kunt activeren via de API voor ad-hocactivering, moet u eerst een activeringsstroom hebben geconfigureerd in de interface van het platform, voor de gekozen bestemming.
 
 Dit omvat het ingaan van in het activeringswerkschema, het selecteren van uw publiek, het vormen van een programma, en het activeren van hen. U kunt de UI of API gebruiken om een activeringsstroom tot stand te brengen:
 
-* [Gebruik de interface van het Platform om een activeringsstroom te creëren aan de uitvoerbestemmingen van het partijprofiel](../ui/activate-batch-profile-destinations.md)
+* [Gebruik Platform UI om een activeringsstroom tot stand te brengen aan de uitvoerbestemmingen van het partijprofiel](../ui/activate-batch-profile-destinations.md)
 * [Gebruik de Flow Service API om verbinding te maken met exportdoelen voor batchprofielen en gegevens te activeren](../api/connect-activate-batch-destinations.md)
 
-## Stap 4: Vraag de meest recente gebruikers-exporttaak-id aan (niet vereist in v2) {#segment-export-id}
+## Stap 4: Vraag de meest recente uitvoertaak-id voor het publiek aan (niet vereist in v2) {#segment-export-id}
 
 >[!IMPORTANT]
 >
@@ -126,9 +126,9 @@ Adobe Experience Platform voert elke 24 uur een geplande segmentatietaak uit. De
 
 >[!IMPORTANT]
 >
->Let op de volgende eenmalige beperking: Voordat u een ad-hocactiveringstaak uitvoert, moet u ervoor zorgen dat ten minste 20 minuten zijn verstreken vanaf het moment dat het publiek voor het eerst werd geactiveerd volgens het schema dat u instelt in [Stap 3 - de activeringsstroom van de Platform UI creëren](#activation-flow).
+>Let op de volgende eenmalige beperking: voordat u een ad-hocactiveringstaak uitvoert, moet u ervoor zorgen dat er ten minste 20 minuten zijn verstreken vanaf het moment dat het publiek voor het eerst werd geactiveerd volgens het schema dat u instelt in [Stap 3 - de activeringsstroom van het Platform UI creëren](#activation-flow).
 
-Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande doeluitvoertaak voor uw publiek is voltooid. Zie [doelgegevensbeheer](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevens bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd om een volledig bestand te exporteren.
+Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande doeluitvoertaak voor uw publiek is voltooid. Zie [doelgegevensstroom controleren](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe de status van activeringsstromen moet worden gecontroleerd. Als uw activeringsgegevensstroom bijvoorbeeld een **[!UICONTROL Processing]** status, wacht tot de bewerking is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd om een volledig bestand te exporteren.
 
 Nadat de doelexporttaak is voltooid, kunt u de activering activeren.
 
@@ -166,7 +166,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u het publiek wilt activeren. U kunt deze id&#39;s ophalen vanuit de gebruikersinterface van het Platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u het publiek wilt activeren. U kunt deze id&#39;s ophalen vanuit de interface van het platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van het publiek dat u wilt activeren naar het geselecteerde doel. |
 
 {style="table-layout:auto"}
@@ -203,9 +203,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u het publiek wilt activeren. U kunt deze id&#39;s ophalen vanuit de gebruikersinterface van het Platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | De id&#39;s van de doelinstanties waarop u het publiek wilt activeren. U kunt deze id&#39;s ophalen vanuit de interface van het platform door naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de gewenste doelrij om de doel-id in de rechtertrack te verhogen. Lees voor meer informatie de [documentatie van de werkruimte van doelen](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | De id&#39;s van het publiek dat u wilt activeren naar het geselecteerde doel. |
-| <ul><li>`exportId1`</li></ul> | De id die wordt geretourneerd in het antwoord van de [doelgroep exporteren](../../segmentation/api/export-jobs.md#retrieve-list) taak. Zie [Stap 4: De meest recente gebruikers-id voor exporttaken ophalen](#segment-export-id) voor instructies over hoe u deze id kunt vinden. |
+| <ul><li>`exportId1`</li></ul> | De id die wordt geretourneerd in het antwoord van de [doelgroep exporteren](../../segmentation/api/export-jobs.md#retrieve-list) taak. Zie [Stap 4: Vraag de nieuwste id voor het exporteren van de doeltaak aan](#segment-export-id) voor instructies over hoe u deze id kunt vinden. |
 
 {style="table-layout:auto"}
 
@@ -235,9 +235,9 @@ Een geslaagde reactie retourneert HTTP-status 200.
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de gids voor het oplossen van problemen met Platforms.
+Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Zie [API-statuscodes](../../landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
-### API-foutcodes en berichten die specifiek zijn voor de API voor ad-hocactivering {#specific-error-messages}
+### API-foutcodes en specifieke berichten voor de API voor ad-hocactivering {#specific-error-messages}
 
 Wanneer u de API voor ad-hocactivering gebruikt, kunt u foutberichten tegenkomen die specifiek zijn voor dit API-eindpunt. Bekijk de tabel om te begrijpen hoe u deze kunt aanpakken wanneer ze worden weergegeven.
 

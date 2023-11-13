@@ -26,12 +26,12 @@ Deze zelfstudie behandelt het proces waarbij een gegevensset wordt ingeschakeld 
 
 Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor deze verwante onderwerpen [!DNL Platform] diensten:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [[!DNL Identity Service]](../../identity-service/home.md): Inschakelen [!DNL Real-Time Customer Profile] door identiteiten te overbruggen van verschillende gegevensbronnen waarin [!DNL Platform].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+- [[!DNL Identity Service]](../../identity-service/home.md): Schakelt in [!DNL Real-Time Customer Profile] door identiteiten te overbruggen van verschillende gegevensbronnen waarin [!DNL Platform].
 - [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful API die u toestaat om datasets tot stand te brengen en hen te vormen voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -55,7 +55,7 @@ U kunt een dataset voor het Profiel en de Dienst van de Identiteit van de Klant 
 
 >[!NOTE]
 >
->Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Raadpleeg de zelfstudie voor informatie over het opzoeken of maken van een schema waarvoor profiel is ingeschakeld [het creëren van een schema gebruikend de Registratie API van het Schema](../../xdm/tutorials/create-schema-api.md).
+>Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Raadpleeg de zelfstudie voor informatie over het opzoeken of maken van een schema waarvoor profiel is ingeschakeld [een schema maken met de API voor het schemaregister](../../xdm/tutorials/create-schema-api.md).
 
 Om een dataset tot stand te brengen die voor Profiel wordt toegelaten, kunt u een verzoek van de POST aan `/dataSets` eindpunt.
 
@@ -214,7 +214,7 @@ Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie ter
 
 ## Gegevens in de dataset opnemen {#ingest-data-into-the-dataset}
 
-Beide [!DNL Real-Time Customer Profile] en [!DNL Identity Service] verbruikt XDM gegevens aangezien het in een dataset wordt opgenomen. Voor instructies over hoe te om gegevens in een dataset te uploaden, verwijs naar de zelfstudie op [maken van een gegevensset met behulp van API&#39;s](../../catalog/datasets/create.md). Wanneer u plant welke gegevens u naar uw [!DNL Profile]- toegelaten dataset, overweeg de volgende beste praktijken:
+Beide [!DNL Real-Time Customer Profile] en [!DNL Identity Service] verbruikt XDM gegevens aangezien het in een dataset wordt opgenomen. Raadpleeg de zelfstudie voor instructies over het uploaden van gegevens naar een gegevensset. [maken van een gegevensset met behulp van API&#39;s](../../catalog/datasets/create.md). Wanneer u plant welke gegevens u naar uw [!DNL Profile]- toegelaten dataset, overweeg de volgende beste praktijken:
 
 - Neem alle gegevens op die u als segmentatiecriteria wilt gebruiken.
 - Neem zoveel id&#39;s op als u uit uw profielgegevens kunt opvragen om uw identiteitsgrafiek te maximaliseren. Dit maakt [!DNL Identity Service] om identiteiten over datasets effectiever te binden.
@@ -225,4 +225,4 @@ Bij het voor het eerst uploaden van gegevens naar een nieuwe gegevensset of als 
 
 ## Gegevens die door Identity Service worden ingevoerd bevestigen {#confirm-data-ingest-by-identity-service}
 
-Elk opgenomen gegevensfragment dat meer dan één identiteit bevat, maakt een koppeling in uw persoonlijke identiteitsgrafiek. Voor meer informatie over identiteitsgrafieken en toegang tot identiteitsgegevens, gelieve te beginnen door te lezen [Overzicht van identiteitsservice](../../identity-service/home.md).
+Elk opgenomen gegevensfragment dat meer dan één identiteit bevat, maakt een koppeling in uw persoonlijke identiteitsgrafiek. Voor meer informatie over identiteitsgrafieken en toegang tot identiteitsgegevens, gelieve te beginnen door gelezen [Overzicht van identiteitsservice](../../identity-service/home.md).

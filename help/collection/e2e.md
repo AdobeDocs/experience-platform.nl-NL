@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Overzicht van end-to-end gegevensverzameling
 
-Adobe Experience Platform verzamelt en stuurt uw gegevens naar andere Adobe-producten en andere bestemmingen. Om gebeurtenisgegevens van uw toepassing naar het Netwerk van de Rand van het Experience Platform te verzenden, is het belangrijk om deze kerntechnologieën te begrijpen en hoe te om hen te vormen om uw gegevens aan de bestemmingen te leveren u vereist, wanneer u het vereist.
+Adobe Experience Platform verzamelt en stuurt uw gegevens naar andere producten van de Adobe en andere bestemmingen. Om gebeurtenisgegevens van uw toepassing naar het Netwerk van de Rand van het Experience Platform te verzenden, is het belangrijk om deze kerntechnologieën te begrijpen en hoe te om hen te vormen om uw gegevens aan de bestemmingen te leveren u vereist, wanneer u het vereist.
 
 Deze gids verstrekt een zelfstudie op hoog niveau van hoe te om een gebeurtenis door het Netwerk van de Rand te verzenden gebruikend de mogelijkheden van de gegevensinzameling van het Platform. Specifiek, doorloopt het leerprogramma de stappen om de de marktextensie van SDK van het Web van Adobe Experience Platform binnen UI van de Inzameling van Gegevens (vroeger Adobe Experience Platform Launch) te installeren en te vormen.
 
@@ -30,9 +30,9 @@ Dit leerprogramma gebruikt UI van de Inzameling van Gegevens om een schema tot s
 
 Zie de handleiding op [machtigingen voor gegevensverzameling beheren](./permissions.md) leren hoe u toegang tot eigendommen en eigendomsrechten kunt verlenen.
 
-Om de diverse producten van de Inzameling van Gegevens te gebruiken die in deze gids worden vermeld, moet u toegang tot gegevensstromen en de capaciteit ook hebben om schema&#39;s tot stand te brengen en te beheren. Als u toegang tot een van deze functies nodig hebt, neemt u contact op met uw Adobe-accountteam om u te helpen de benodigde toegang te krijgen. Houd er rekening mee dat als u Adobe Experience Platform niet hebt aangeschaft, Adobe u zonder extra kosten toegang krijgt tot de SDK.
+Om de diverse producten van de Inzameling van Gegevens te gebruiken die in deze gids worden vermeld, moet u toegang tot gegevensstromen en de capaciteit ook hebben om schema&#39;s tot stand te brengen en te beheren. Als u toegang tot een van deze functies nodig hebt, neemt u contact op met het accountteam van de Adobe om u te helpen de benodigde toegang te krijgen. Houd er rekening mee dat als u Adobe Experience Platform niet hebt aangeschaft, Adobe u zonder extra kosten toegang biedt tot de SDK.
 
-Als u al toegang tot Platform hebt, moet u ervoor zorgen dat u allen hebt [machtigingen](../access-control/home.md#permissions) onder de volgende categorieën ingeschakeld:
+Als u al toegang hebt tot Platform, moet u ervoor zorgen dat u allen hebt [machtigingen](../access-control/home.md#permissions) onder de volgende categorieën ingeschakeld:
 
 * Gegevensmodellering
 * Identiteiten
@@ -41,7 +41,7 @@ Zie de [overzicht van de interface voor toegangsbeheer](../access-control/ui/ove
 
 ## Procesoverzicht
 
-Het configureren van gegevensverzameling voor uw website kan als volgt worden samengevat:
+Het proces om gegevensinzameling voor uw website te vormen kan als volgt worden samengevat:
 
 1. [Een schema maken](#schema) om te bepalen hoe uw gegevens zullen worden gestructureerd wanneer wordt verzonden naar het Netwerk van de Rand.
 1. [Een gegevensstroom maken](#datastream) om te vormen welke bestemmingen u uw gegevens wilt worden verzonden naar.
@@ -59,11 +59,11 @@ De eerste stap in vestiging uw verrichtingen van de gegevensinzameling is een sc
 >
 >XDM-schema&#39;s zijn zeer aanpasbaar. In plaats van overdreven voorschrijvend te zijn, concentreren de hieronder geschetste stappen zich specifiek op de schemavereisten voor het Web SDK. Buiten deze parameters kunt u de resterende structuur van uw gegevens definiëren, hoe u dat ook wilt.
 
-Selecteer in de gebruikersinterface de optie **[!UICONTROL Schemas]** in de linkernavigatie. Van hier, kunt u een lijst van eerder gecreeerd schema&#39;s zien die tot uw organisatie behoren. Selecteer **[!UICONTROL Create schema]** selecteert u vervolgens **[!UICONTROL XDM ExperienceEvent]** in het vervolgkeuzemenu.
+Selecteer in de gebruikersinterface **[!UICONTROL Schemas]** in de linkernavigatie. Van hier, kunt u een lijst van eerder gecreeerd schema&#39;s zien die tot uw organisatie behoren. Selecteer **[!UICONTROL Create schema]** selecteert u vervolgens **[!UICONTROL XDM ExperienceEvent]** in het vervolgkeuzemenu.
 
 ![Werkruimte Schemas](./images/e2e/schemas.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd veldgroepen aan het schema toe te voegen. Om gebeurtenissen te verzenden die SDK van het Web gebruiken, moet u de gebiedsgroep toevoegen **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. Deze gebiedsgroep bevat definities voor gegevensattributen die automatisch door de bibliotheek van SDK van het Web worden verzameld.
+Er wordt een dialoogvenster weergegeven waarin u wordt gevraagd veldgroepen aan het schema toe te voegen. Om gebeurtenissen te verzenden die SDK van het Web gebruiken, moet u de gebiedsgroep toevoegen **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. Deze gebiedsgroep bevat definities voor gegevensattributen die automatisch door de bibliotheek van SDK van het Web worden verzameld.
 
 Gebruik de zoekbalk om de lijst te versmallen, zodat u deze veldgroep gemakkelijker kunt vinden. Nadat u deze hebt gevonden, selecteert u deze in de lijst voordat u de optie selecteert **[!UICONTROL Add field groups]**.
 
@@ -77,7 +77,7 @@ Het hoofdveld in de structuur selecteren dat u wilt openen **[!UICONTROL Schema 
 
 ![Geef het schema een naam](./images/e2e/name-schema.png)
 
-Als u meer velden aan het schema wilt toevoegen, selecteert u **[!UICONTROL Add]** onder de **[!UICONTROL Field groups]** in de linkerspoorstaaf.
+Als u meer velden aan het schema wilt toevoegen, selecteert u **[!UICONTROL Add]** onder de **[!UICONTROL Field groups]** in het linkerspoor.
 
 ![Veldgroepen toevoegen](./images/e2e/add-field-groups.png)
 
@@ -87,19 +87,19 @@ Als u meer velden aan het schema wilt toevoegen, selecteert u **[!UICONTROL Add]
 >
 >De beste praktijken moeten slechts gebieden voor gegevens toevoegen u op het verzenden door het Netwerk van de Rand van plan bent. Nadat u velden hebt toegevoegd aan een schema en dit hebt opgeslagen, kunnen alleen aanvullende wijzigingen in het schema worden aangebracht. Zie de sectie over de [regels voor schemaontwikkeling](../xdm/schema/composition.md#evolution) voor meer informatie .
 
-Nadat u de gewenste velden hebt toegevoegd, selecteert u **[!UICONTROL Save]** om het schema op te slaan.
+Nadat u de gewenste velden hebt toegevoegd, selecteert u **[!UICONTROL Save]** het schema opslaan.
 
 ![Het schema opslaan](./images/e2e/save-schema.png)
 
 ## Een gegevensstroom maken {#datastream}
 
-Een gegevensstroom is een configuratie die het Netwerk van de Rand vertelt waar u uw gegevens wilt worden verzonden. Specifiek, specificeert een gegevensstroom welke producten van Experience Cloud u de gegevens naar wilt verzenden, en hoe u de gegevens wilt worden behandeld en in elk product worden opgeslagen.
+Een gegevensstroom is een configuratie die het Netwerk van de Rand vertelt waar u uw gegevens wilt worden verzonden. Specifiek, specificeert een datastream welke producten van het Experience Cloud u de gegevens naar wilt verzenden, en hoe u de gegevens wilt worden behandeld en in elk product worden opgeslagen.
 
 >[!NOTE]
 >
->Als u wilt gebruiken [gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md) (ervan uitgaande dat uw organisatie een licentie heeft voor de functionaliteit), moet u deze voor een gegevensstroom inschakelen, op dezelfde manier als u Adobe-producten inschakelt. Details over dit proces worden besproken in een [sectie later](#event-forwarding).
+>Als u wilt gebruiken [gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md) (ervan uitgaande dat uw organisatie een licentie heeft voor de functionaliteit), moet u deze voor een gegevensstroom inschakelen, op dezelfde manier als u producten van de Adobe inschakelt. Details over dit proces worden besproken in een [sectie later](#event-forwarding).
 
-Selecteren **[!UICONTROL Datastreams]** in de linkernavigatie. Van hier kunt u een bestaande gegevensstroom van de lijst selecteren om uit te geven, of u kunt een nieuwe configuratie tot stand brengen door te selecteren **[!UICONTROL New Datastream]**.
+Selecteren **[!UICONTROL Datastreams]** in de linkernavigatie. Van hieruit kunt u een bestaande gegevensstroom selecteren in de lijst die u wilt bewerken, of u kunt een nieuwe configuratie maken door **[!UICONTROL New Datastream]**.
 
 ![Gegevensstromen](./images/e2e/datastreams.png)
 
@@ -111,7 +111,7 @@ Zodra u een schema en een gegevensstroom hebt gecreeerd, moet de volgende stap h
 
 >[!NOTE]
 >
->Deze sectie gebruikt de UI van de Inzameling van Gegevens om de de markeringsuitbreiding van SDK van het Web te vormen, maar u kunt het ook installeren en vormen gebruikend ruwe code in plaats daarvan. Raadpleeg de volgende hulplijnen voor meer informatie:
+>Deze sectie gebruikt UI van de Inzameling van Gegevens om de de markeringsuitbreiding van SDK van het Web te vormen, maar u kunt het ook installeren en vormen gebruikend ruwe code in plaats daarvan. Raadpleeg de volgende hulplijnen voor meer informatie:
 >
 >* [De SDK installeren](../edge/fundamentals/installing-the-sdk.md)
 >* [De SDK configureren](../edge/fundamentals/configuring-the-sdk.md)
@@ -135,7 +135,7 @@ Geef bij het maken van een nieuwe eigenschap een beschrijvende naam op en stel d
 
 ![Eigenschap maken](./images/e2e/create-property.png)
 
-De overzichtspagina voor de eigenschap wordt weergegeven. Selecteer **[!UICONTROL Extensions]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Catalog]**. Vind de lijst voor het Web SDK van het Platform (naar keuze gebruikend de onderzoeksbar om resultaten te beperken) en selecteer **[!UICONTROL Install]**.
+De overzichtspagina voor de eigenschap wordt weergegeven. Van hier, selecteer **[!UICONTROL Extensions]** in de linkernavigatie selecteert u vervolgens **[!UICONTROL Catalog]**. Zoek de lijst voor het Web SDK van het Platform (naar keuze het gebruiken van de onderzoeksbar om resultaten te beperken) en selecteer **[!UICONTROL Install]**.
 
 ![De SDK van het web installeren](./images/e2e/install-sdk.png)
 
@@ -151,15 +151,15 @@ Voordat u de SDK kunt installeren, moet u echter een gegevensstroom selecteren, 
 
 De SDK kan alleen gegevens naar het Edge-netwerk verzenden als die gegevens zijn toegewezen aan het XDM-schema dat u hebt gemaakt in een [vorige stap](#schema). Deze toewijzing wordt verwezenlijkt door het gebruik van een gegevenselement.
 
-Selecteer in de gebruikersinterface de optie **[!UICONTROL Data Elements]** selecteert u vervolgens **[!UICONTROL Create New Data Element]**.
+Selecteer in de gebruikersinterface **[!UICONTROL Data Elements]** selecteert u vervolgens **[!UICONTROL Create New Data Element]**.
 
 ![Nieuw gegevenselement maken](./images/e2e/data-elements.png)
 
-Selecteer in het volgende scherm de optie **[!UICONTROL Adobe Experience Platform Web SDK]** onder de [!UICONTROL Extension] vervolgkeuzelijst, selecteert u vervolgens **[!UICONTROL XDM object]** voor het gegevenstype data.
+Selecteer in het volgende scherm de optie **[!UICONTROL Adobe Experience Platform Web SDK]** onder de [!UICONTROL Extension] vervolgkeuzelijst, selecteert u vervolgens **[!UICONTROL XDM object]** voor het elementtype data.
 
 ![XDM-objecttype](./images/e2e/xdm-object.png)
 
-Het configuratiedialoogvenster wordt weergegeven voor het XDM-objecttype. Het dialoogvenster selecteert automatisch de sandbox van uw Platform en vanaf deze locatie ziet u alle schema&#39;s die in die sandbox zijn gemaakt. Selecteer het XDM-schema dat u eerder in de lijst hebt gemaakt.
+Het configuratiedialoogvenster wordt weergegeven voor het XDM-objecttype. In het dialoogvenster wordt automatisch de sandbox Platform geselecteerd. Vanuit deze sandbox kunt u alle schema&#39;s zien die in die sandbox zijn gemaakt. Selecteer het XDM-schema dat u eerder in de lijst hebt gemaakt.
 
 ![XDM-objecttype](./images/e2e/select-schema.png)
 
@@ -212,7 +212,7 @@ De pagina voor gebeurtenisconfiguratie wordt weergegeven. Als u een gebeurtenis 
 
 >[!NOTE]
 >
->Zie voor meer informatie over de verschillende gebeurtenistypen die worden geleverd door Adobe-webextensies, zoals hoe u ze kunt configureren de [Referentie voor Adobe-extensies](../tags/extensions/client/overview.md) in de tagdocumentatie.
+>Voor meer informatie over de verschillende gebeurtenistypen die door de uitbreidingen van het Web van de Adobe worden verstrekt, met inbegrip van hoe te om hen te vormen, zie [Referentie voor extensies Adoben](../tags/extensions/client/overview.md) in de tagdocumentatie.
 
 Met de gebeurtenis voor het verzenden van formulieren kunt u een [CSS-kiezer](https://www.w3schools.com/css/css_selectors.asp) om naar een specifiek element te verwijzen waarop de regel moet worden geactiveerd. In het onderstaande voorbeeld wordt de id `add-to-cart-form` wordt gebruikt, zodat deze regel alleen wordt geactiveerd voor het formulier &quot;Toevoegen aan winkelwagentje&quot;. Selecteren **[!UICONTROL Keep Changes]** om de gebeurtenis aan de regel toe te voegen.
 

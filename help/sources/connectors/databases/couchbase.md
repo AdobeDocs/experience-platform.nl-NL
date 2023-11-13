@@ -23,7 +23,7 @@ Adobe Experience Platform biedt native connectiviteit voor databaseproviders, zo
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) voor meer informatie.
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Couchbase] tot [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Couchbase] tot [!DNL Platform] API&#39;s of de gebruikersinterface gebruiken:
 
 ## Verbinden [!DNL Couchbase] tot [!DNL Platform] gebruiken, API&#39;s
 

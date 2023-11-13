@@ -75,7 +75,7 @@ Hier volgt een voorbeeld `segmentMembership` kaart die het systeem voor een bepa
 | `xdm:version` | De versie van het segment waarvoor dit profiel in aanmerking kwam. |
 | `xdm:lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
 | `xdm:validUntil` | Een tijdstempel waarin wordt aangegeven wanneer het segmentlidmaatschap niet langer geldig is. Als dit veld niet is ingesteld voor externe doelgroepen, wordt het segmentlidmaatschap slechts 30 dagen na de datum van `lastQualificationTime`. |
-| `xdm:status` | Een koordgebied dat erop wijst of het segmentlidmaatschap als deel van het huidige verzoek is gerealiseerd. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel komt in aanmerking voor het segment.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
+| `xdm:status` | Een koordgebied dat erop wijst of het segmentlidmaatschap als deel van het huidige verzoek is gerealiseerd. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel komt in aanmerking voor het segment.</li><li>`exited`: Het profiel verlaat het segment als onderdeel van de huidige aanvraag.</li></ul> |
 | `xdm:payload` | Sommige segmentlidmaatschappen omvatten een lading die extra waarden beschrijft die direct met het lidmaatschap verband houden. Voor elk lidmaatschap kan slechts één lading van een bepaald type worden verstrekt. `xdm:payloadType` Hiermee wordt het type lading aangegeven (`boolean`, `number`, `propensity`, of `string`), terwijl de eigenschap sibling de waarde voor het ladingstype bevat. |
 
 {style="table-layout:auto"}

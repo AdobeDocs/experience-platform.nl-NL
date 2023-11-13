@@ -27,7 +27,7 @@ Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stro
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [Doelen](../home.md): [!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met succes bij te werken met de [!DNL Flow Service] API.
 
@@ -37,13 +37,13 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Als u aanroepen wilt uitvoeren naar Platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar platform-API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle middelen in Experience Platform, met inbegrip van die welke toebehoren aan [!DNL Flow Service], geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -71,7 +71,7 @@ GET /flows/{FLOW_ID}
 
 **Verzoek**
 
-Het volgende verzoek wint informatie betreffende uw stroom ID terug.
+Met het volgende verzoek wordt informatie over uw flow-id opgehaald.
 
 ```shell
 curl -X GET \
@@ -449,7 +449,7 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## Een publiek toevoegen aan een gegevensstroom {#add-segment}
 
-Om een publiek aan de bestemmingsdataflow toe te voegen, voer een verzoek van PATCH aan de [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het publiek u wilt toevoegen.
+Om een publiek aan de bestemmingsdataflow toe te voegen, voer een verzoek van PATCH aan [!DNL Flow Service] API terwijl het verstrekken van uw stroom ID, versie, en het publiek u wilt toevoegen.
 
 **API-indeling**
 
@@ -494,18 +494,18 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` bewerking. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` -bewerking. |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een publiek aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value` | De nieuwe waarde waarmee u de parameter wilt bijwerken. |
 | `id` | Geef de id op van het publiek dat u aan de doelgegevensstroom toevoegt. |
 | `name` | **(Optioneel)**. Geef de naam op van het publiek dat u aan de doelgegevensstroom toevoegt. Dit veld is niet verplicht en u kunt een publiek toevoegen aan de doelgegevensstroom zonder de naam ervan op te geven. |
 | `filenameTemplate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Dit veld bepaalt de bestandsnaamindeling van de bestanden die naar uw doel worden geëxporteerd. <br> De volgende opties zijn beschikbaar: <br> <ul><li>`%DESTINATION_NAME%`: Verplicht. De geëxporteerde bestanden bevatten de doelnaam.</li><li>`%SEGMENT_ID%`: Verplicht. De geëxporteerde bestanden bevatten de id van het geëxporteerde publiek.</li><li>`%SEGMENT_NAME%`: **(Optioneel)**. De geëxporteerde bestanden bevatten de naam van het geëxporteerde publiek.</li><li>`DATETIME(YYYYMMdd_HHmmss)` of `%TIMESTAMP%`: **(Optioneel)**. Selecteer één van deze twee opties voor uw dossiers om de tijd te omvatten wanneer zij door Experience Platform worden geproduceerd.</li><li>`custom-text`: **(Optioneel)**. Vervang deze tijdelijke aanduiding door aangepaste tekst die u aan het einde van de bestandsnamen wilt toevoegen.</li></ul> <br> Raadpleeg voor meer informatie over het configureren van bestandsnamen de [bestandsnamen configureren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) in de activeringszelfstudie voor batchbestemmingen. |
-| `exportMode` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Voor meer informatie over de twee opties raadpleegt u [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
+| `exportMode` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteren `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Raadpleeg voor meer informatie over de twee opties [volledige bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [incrementele bestanden exporteren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in de activeringszelfstudie voor batchbestemmingen. |
 | `startDate` | Selecteer de datum waarop het publiek moet beginnen met het exporteren van profielen naar uw bestemming. |
 | `frequency` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. <br> <ul><li>Voor de `"DAILY_FULL_EXPORT"` u kunt de exportmodus `ONCE` of `DAILY`.</li><li>Voor de `"FIRST_FULL_THEN_INCREMENTAL"` u kunt de exportmodus `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist als u de optie `"DAILY_FULL_EXPORT"` in de `frequency` kiezer. <br> Verplicht. <br> <ul><li>Selecteren `"AFTER_SEGMENT_EVAL"` om de activeringstaak onmiddellijk uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Dit zorgt ervoor dat wanneer de activeringstaak wordt uitgevoerd, de meest recente profielen naar uw bestemming worden uitgevoerd.</li><li>Selecteren `"SCHEDULED"` om de activeringstaak op een vast tijdstip uit te voeren. Dit zorgt ervoor dat de gegevens van het Experience Platform profielgegevens tezelfdertijd elke dag worden uitgevoerd, maar de profielen u uitvoert kunnen niet de meest bijgewerkte zijn, afhankelijk van of de batch-segmentatietaak heeft voltooid alvorens de activeringstaak begint. Als u deze optie selecteert, moet u ook een `startTime` aangeven op welk tijdstip in UTC de dagelijkse uitvoer moet plaatsvinden.</li></ul> |
 | `endDate` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Niet van toepassing bij selectie `"exportMode":"DAILY_FULL_EXPORT"` en `"frequency":"ONCE"`. <br> Hiermee stelt u de datum in waarop publieksleden stoppen met exporteren naar de bestemming. |
-| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en naar uw bestemming moeten worden geëxporteerd. |
+| `startTime` | Voor *batchbestemmingen* alleen. Dit veld is alleen vereist wanneer u een publiek toevoegt aan een gegevensstroom in exportdoelen voor batchbestanden, zoals Amazon S3, SFTP of Azure Blob. <br> Verplicht. Selecteer het tijdstip waarop bestanden met leden van het publiek moeten worden gegenereerd en geëxporteerd naar uw bestemming. |
 
 **Antwoord**
 
@@ -564,8 +564,8 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` bewerking. |
-| `path` | Geeft aan welk bestaand publiek uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van publiek in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.segmentSelectors` eigenschap. Om het eerste publiek in dataflow te schrappen, gebruik `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` -bewerking. |
+| `path` | Geeft aan welk bestaand publiek uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van publiek in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.segmentSelectors` eigenschap. Als u het eerste publiek in de gegevensstroom wilt verwijderen, gebruikt u `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Antwoord**
@@ -644,7 +644,7 @@ Zie de voorbeelden hieronder voor meer voorbeelden van publiekscomponenten die u
 
 ## Werk de de uitvoerwijze van een publiek van gepland aan na publieksevaluatie bij {#update-export-mode}
 
-+++ Klik om een voorbeeld te zien waar een publiek wordt de uitvoer bijgewerkt van wordt geactiveerd elke dag op een bepaald tijdstip aan wordt geactiveerd elke dag nadat de de partijsegmentatietaak van het Platform voltooit.
++++ Klik om een voorbeeld te zien waarin een publieksexport wordt bijgewerkt van elke dag op een bepaald tijdstip tot elke dag nadat de batchsegmentatietaak van het platform is voltooid.
 
 Het publiek wordt elke dag om 16:00 UTC geëxporteerd.
 
@@ -784,7 +784,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een profielkenmerk aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` bewerking. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een profielkenmerk aan een gegevensstroom wilt toevoegen, gebruikt u de opdracht `add` -bewerking. |
 | `path` | Definieert het deel van de flow dat moet worden bijgewerkt. Wanneer u een profielkenmerk aan een gegevensstroom toevoegt, gebruikt u het pad dat in het voorbeeld is opgegeven. |
 | `value.path` | De waarde van het profielkenmerk dat u toevoegt aan de gegevensstroom. |
 
@@ -838,8 +838,8 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` bewerking. |
-| `path` | Geeft aan welk bestaand profielkenmerk uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van profielattributen in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.profileSelectors` eigenschap. Om het eerste publiek in dataflow te schrappen, gebruik `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | De verrichtingsvraag die wordt gebruikt om de actie te bepalen nodig om dataflow bij te werken. Bewerkingen omvatten: `add`, `replace`, en `remove`. Als u een publiek uit een gegevensstroom wilt verwijderen, gebruikt u de opdracht `remove` -bewerking. |
+| `path` | Geeft aan welk bestaand profielkenmerk uit de doelgegevensstroom moet worden verwijderd op basis van de index van de publiekskiezer. Om de orde van profielattributen in een dataflow terug te winnen, voer een vraag van de GET aan `/flows` en inspecteer de `transformations.profileSelectors` eigenschap. Als u het eerste publiek in de gegevensstroom wilt verwijderen, gebruikt u `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Antwoord**
@@ -855,7 +855,7 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van de Platform voor meer informatie over het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Zie [API-statuscodes](/help/landing/troubleshooting.md#api-status-codes) en [aanvragen, koptekstfouten](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie over het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 

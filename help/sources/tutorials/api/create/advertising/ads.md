@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-In deze zelfstudie worden de stappen doorlopen waarmee u een basisverbinding voor Google Ads kunt maken met de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In deze zelfstudie worden de stappen doorlopen waarmee u een basisverbinding voor Google Ads kunt maken met de opdracht [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -46,7 +46,7 @@ Het API-overzichtsdocument lezen voor [meer informatie over hoe je aan de slag g
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -120,4 +120,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 Aan de hand van deze zelfstudie hebt u een Google Ads-basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om advertentiegegevens naar het Platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/advertising.md)
+* [Maak een gegevensstroom om advertentiegegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/advertising.md)

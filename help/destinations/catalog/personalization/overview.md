@@ -18,14 +18,14 @@ Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag.
 
 ## Ondersteunde verpersoonlijkingsbestemmingen {#supported-destinations}
 
-Momenteel, steunt Platform de verpersoonlijkingsbestemmingen die hieronder worden vermeld. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel, steunt het Platform de verpersoonlijkingsbestemmingen die hieronder worden vermeld. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 **Verbindingen**
 
 * [Adobe Target](adobe-target-connection.md)
 * [Adobe Commerce](adobe-commerce.md)
-* [Aangepaste aanpassingsverbinding](custom-personalization.md)
-* [Verbinding met PEGA-client](pega.md)
+* [Aangepaste verpersoonlijkingsverbinding](custom-personalization.md)
+* [Verbinding met PEGA-client-beslissingshub](pega.md)
 * [Verbinding met Pega-profiel](pega-profile.md)
 
 **Extensies**
@@ -37,4 +37,4 @@ Momenteel, steunt Platform de verpersoonlijkingsbestemmingen die hieronder worde
 * [Experience Cloud ID Service-extensie](adobe-ecid.md)
 * [Verkenningsextensie](gainsight.md)
 * [Kickfire-extensie](kickfire.md)
-* [Marketo Web Personalization-extensie](marketo-web-personalization.md)
+* [Marketo Web Personalization extension](marketo-web-personalization.md)

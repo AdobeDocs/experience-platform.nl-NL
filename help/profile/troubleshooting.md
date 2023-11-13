@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen in realtime van klantprofielen
 
-Dit document biedt antwoorden op veelgestelde vragen over Real-Time klantprofiel en een gids voor probleemoplossing voor algemene fouten. Voor vragen en problemen met betrekking tot andere services in Adobe Experience Platform raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
+Dit document biedt antwoorden op veelgestelde vragen over Real-Time Klantprofiel en een gids voor probleemoplossing voor algemene fouten. Voor vragen en problemen met betrekking tot andere services in Adobe Experience Platform raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
 Met [!DNL Real-Time Customer Profile], kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Dit laat marketers toe om gecoördineerde, verenigbare, en relevante ervaringen voor klanten over veelvoudige kanalen te drijven.
 
@@ -23,17 +23,17 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Real-Time k
 
 ### Welke soorten gegevens worden geaccepteerd voor Real-Time Klantprofiel?
 
-Profiel accepteert beide **opnemen** en **tijdreeks** gegevens, mits de gegevens in kwestie ten minste één identiteitswaarde bevatten die de gegevens aan een unieke individuele persoon koppelt.
+Profiel accepteert beide **opnemen** en **tijdreeks** gegevens, zolang de gegevens in kwestie ten minste één identiteitswaarde bevatten die de gegevens aan een unieke individuele persoon associeert.
 
-Zoals alle diensten van het Platform, vereist het Profiel dat zijn gegevens semantisch onder een schema van de Gegevens van de Ervaring van het Model (XDM) worden gestructureerd. Dit schema moet een **primaire identiteit** gedefinieerd en ingeschakeld voor gebruik in profiel.
+Zoals alle diensten van het Platform, vereist het Profiel dat zijn gegevens semantisch onder een schema van de Gegevens van de Ervaring worden gestructureerd Model (XDM). Dit schema moet een **primaire identiteit** gedefinieerd en ingeschakeld voor gebruik in profiel.
 
 Als u niet bekend bent met XDM, start u met de [XDM-overzicht](../xdm/home.md) voor meer informatie. Raadpleeg de XDM-gebruikershandleiding voor meer informatie over [identiteitsvelden instellen](../xdm/tutorials/create-schema-ui.md#identity-field) en [een schema voor profiel inschakelen](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Waar worden profielgegevens opgeslagen?
 
-Het profiel van de Klant in real time handhaaft zijn eigen gegevensopslag (die als &quot;opslag van het Profiel&quot;wordt bedoeld), los van het meer van Gegevens dat andere opgenomen Platform gegevens bevat.
+Het profiel van de Klant in real time handhaaft zijn eigen gegevensopslag (die als &quot;opslag van het Profiel&quot;wordt bedoeld), los van het meer van Gegevens dat andere opgenomen gegevens van het Platform bevat.
 
-### Als ik al gegevens in het Platform heb ingevoerd, kan ik deze dan beschikbaar stellen in het archief met profielen?
+### Als ik al gegevens in Platform heb ingevoerd, kan ik het dan beschikbaar stellen in de opslag van het Profiel?
 
 Als de gegevens in een niet-Profiel dataset zijn opgenomen, moet u die gegevens in een profiel-Toegelaten dataset opnieuw opnemen om het in de opslag van het Profiel ter beschikking te stellen. Het is mogelijk om een bestaande dataset voor Profiel toe te laten, echter om het even welke gegevens die voorafgaand aan die configuratie werden opgenomen zullen nog niet in de opslag van het Profiel verschijnen.
 
@@ -49,7 +49,7 @@ Als u de id&#39;s kent van de profielentiteiten waartoe u toegang wilt hebben, k
 
 U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om toegang te krijgen tot de individuele profielen van klanten die voor een publiekslidmaatschap in aanmerking zijn gekomen. Zie de [Overzicht van segmentatieservice](../segmentation/home.md) voor meer informatie .
 
-#### De gebruikersinterface gebruiken
+#### UI gebruiken
 
 In de interface van het Experience Platform **[!UICONTROL Browse]** in de **[!UICONTROL Profiles]** in de werkruimte kunt u het totale aantal profielen weergeven en naar afzonderlijke profielen zoeken op basis van hun identiteitswaarde. Zie de [Gebruikershandleiding voor profielen](./ui/user-guide.md) voor meer informatie .
 
@@ -57,7 +57,7 @@ U kunt ook een lijst met uw doelgroepen weergeven onder de **[!UICONTROL Browse]
 
 ## Foutcodes
 
-Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werkt met de Real-Time Customer Profile API. Als de fout die u tegenkomt hier niet wordt vermeld, kunt u deze in het algemeen vinden [Handleiding voor het oplossen van problemen met Platforms](../landing/troubleshooting.md) in plaats daarvan.
+Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werkt met de Real-Time Customer Profile API. Als de fout die u tegenkomt hier niet wordt vermeld, kunt u deze in het algemeen vinden [Handleiding voor probleemoplossing voor platforms](../landing/troubleshooting.md) in plaats daarvan.
 
 ### Kan het opzoekschema van het berekende kenmerk voor het opgegeven pad niet opzoeken
 

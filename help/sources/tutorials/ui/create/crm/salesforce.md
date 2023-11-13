@@ -42,7 +42,7 @@ Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit
 
 ## Verbind uw [!DNL Salesforce] account
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar in de catalogus van bronnen van het Experience Platform.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot de bronwerkruimte toegang te hebben. De *[!UICONTROL Catalog]* het scherm toont een verscheidenheid van bronnen beschikbaar in de catalogus van bronnen van het Experience Platform.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook een specifieke bron zoeken met de zoekoptie.
 

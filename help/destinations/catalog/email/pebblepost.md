@@ -1,7 +1,7 @@
 ---
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: PebblePost-extensie
-description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van de Adobe.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] Met deze oplossing kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden geconverteerd. Marktdeelnemers kunnen het aangepaste gegevenspubliek dat ze in Adobe hebben gecreëerd, benutten om zich nu te richten op consumenten met een relevante, langere, in-home media-indruk. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
+[!DNL PebblePost's Programmatic Direct Mail®] Met deze oplossing kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden geconverteerd. Marktdeelnemers kunnen het door hen in de Adobe gecreëerde aangepaste gegevenspubliek benutten om zich nu te richten op consumenten met een relevante, langere, in-home media-indruk. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
 
 [!DNL PebblePost] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over PebblePost, lees [integratieblogbericht](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 
-Dit doel is een tagextensie. Zie voor meer informatie over de manier waarop tagextensies werken in Platform de [overzicht van tagextensies](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Raadpleeg voor meer informatie over de werking van tagextensies in Platform de klasse [overzicht van tagextensies](../launch-extensions/overview.md).
 
 ![PebblePost Extension](../../assets/catalog/email/pebblepost/catalog.png)
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 Als u het dialoogvenster [!DNL PebblePost] extensie:
 
-In de [Interface Platform](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [Platforminterface](https://platform.adobe.com/), ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -50,12 +50,12 @@ Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen.
 
 U kunt regels instellen voor geïnstalleerde extensies, zodat gebeurtenisgegevens alleen in bepaalde situaties naar de extensiebestemming worden verzonden. Voor meer informatie over het instellen van regels voor uw extensies raadpleegt u de [codedocumentatie](../../../tags/ui/managing-resources/rules.md).
 
-## De extensie configureren, upgraden en verwijderen {#configure-upgrade-delete}
+## Uitbreiding configureren, bijwerken en verwijderen {#configure-upgrade-delete}
 
 U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface voor gegevensverzameling.
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface van het Platform nog weergegeven **[!UICONTROL Install]** voor de extensie. Kies de installatieworkflow zoals beschreven in [Extensie installeren](#install-extension) om uw extensie te configureren of te verwijderen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface van het platform nog weergegeven **[!UICONTROL Install]** voor de extensie. Kies de installatieworkflow zoals beschreven in [Extensie installeren](#install-extension) om uw extensie te configureren of te verwijderen.
 
 Als u uw extensie wilt upgraden, raadpleegt u de handleiding op het tabblad [upgradeproces voor extensie](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

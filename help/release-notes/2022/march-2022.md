@@ -1,6 +1,6 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform, maart 2022
-description: In de release van maart 2022 staat Adobe Experience Platform vermeld.
+description: In de release van maart 2022 staat een opmerking voor Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
@@ -59,7 +59,7 @@ Als u meer wilt weten over de Real-Time CDP B2B Edition, raadpleegt u de [overzi
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van gebeurtenissen voor verschillende activiteiten van Platforms. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via de [!UICONTROL Alerts] in de gebruikersinterface van het Platform en kan ervoor kiezen waarschuwingsberichten te ontvangen binnen de gebruikersinterface zelf of via e-mailmeldingen.
 
 **Bijgewerkte functies**
 
@@ -69,7 +69,7 @@ Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van geb
 
 {style="table-layout:auto"}
 
-Raadpleeg voor meer informatie over waarschuwingen in Platform de [waarschuwingsoverzicht](../../observability/alerts/overview.md).
+Raadpleeg voor meer informatie over waarschuwingen in het platform de [waarschuwingsoverzicht](../../observability/alerts/overview.md).
 
 ## Dashboards {#dashboards}
 
@@ -104,17 +104,17 @@ Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organ
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de dashboards van Doelen in Platform, verwijs naar [Overzicht van doeldashboards](../../dashboards/guides/destinations.md).
+Raadpleeg voor meer informatie over doeldashboards in Platform de [Overzicht van doeldashboards](../../dashboards/guides/destinations.md).
 
 ## Gegevensverzameling {#data-collection}
 
-Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge Network kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+Platform biedt een reeks technologieën waarmee u gegevens van de klant aan de clientzijde kunt verzamelen en naar het Adobe Experience Platform Edge-netwerk kunt verzenden waar het kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geolocatie, cookie van eerste partij-id en synchronisatie van externe id. Zie de sectie over [configureren van een gegevensstroom](../../datastreams/overview.md#create) in de UI-gids voor gegevensstromen voor meer informatie. |
+| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geo-locatie, cookie van eerste-partijid en synchronisatie van externe id&#39;s. Zie de sectie over [configureren van een gegevensstroom](../../datastreams/overview.md#create) in de UI-gids voor gegevensstromen voor meer informatie. |
 | [Edge Network Server API](../../server-api/overview.md) | De server API staat klanten toe om met het Netwerk van de Rand van het Experience Platform in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te aandrijven. |
 
 Voor meer informatie over gegevensverzameling in Platform raadpleegt u de [overzicht van gegevensverzameling](../../collection/home.md).
@@ -135,7 +135,7 @@ Raadpleeg voor meer informatie over de beschikbare functies de [Overzicht van Qu
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor inname looppas te plaatsen, en gegevensopname door te beheren.
 
@@ -143,8 +143,8 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op het Platform voor B2B-gebruiksgevallen gebruiken. Zie de [broncatalogus](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
-| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de opdracht [!DNL Oracle Eloqua] bron voor naadloze invoer van gegevens uit uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) aan Platform. Zie de documentatie op [een [!DNL Oracle Eloqua] bronverbinding](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie . |
+| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op Platform gebruiken voor B2B-gebruiksgevallen. Zie de [broncatalogus](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
+| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de opdracht [!DNL Oracle Eloqua] bron voor naadloze invoer van gegevens uit uw [!DNL Oracle Eloqua] -exemplaar (account, campagne, contactpersonen) naar Platform. Zie de documentatie op [een [!DNL Oracle Eloqua] bronverbinding](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie . |
 | API-verbeteringen voor [!DNL Data Landing Zone] | De [!DNL Data Landing Zone] bron ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de [!DNL Flow Service] API. Zie de documentatie op [een [!DNL Data Landing Zone] bronverbinding](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) voor meer informatie . |
 
 {style="table-layout:auto"}

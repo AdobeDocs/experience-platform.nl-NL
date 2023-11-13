@@ -3,7 +3,7 @@ keywords: Experience Platform;thuis;populaire onderwerpen;crm;CRM
 solution: Experience Platform
 title: Creeer een Dataflow voor de Bronnen van CRM die de Dienst API van de Stroom gebruiken
 type: Tutorial
-description: Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een systeem van derdeCRM en het brengen van hen in Platform gebruikend bronschakelaars en APIs.
+description: Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een systeem van derdeCRM en het brengen van hen binnen aan Platform gebruikend bronschakelaars en APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Creeer een gegevensstroom voor de bronnen van CRM gebruikend [!DNL Flow Service] API
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een CRM-bron en het naar Platform brengen van deze gegevens met [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een CRM-bron en het overbrengen van gegevens naar Platform met [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -29,11 +29,11 @@ Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen
    * [Handleiding voor ontwikkelaars van het schema Register](../../../../xdm/api/getting-started.md): Bevat belangrijke informatie die u moet weten om met succes vraag aan de Registratie API van het Schema uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van verzoeken (met speciale aandacht voor de Accept-koptekst en de mogelijke waarden ervan).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn in het Experience Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Experience Platform invoeren.
-* [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één platforminstantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../landing/api-guide.md).
 
 ## Een bronverbinding maken {#source}
 
@@ -126,9 +126,9 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../xdm/api/schemas.md).
 
@@ -679,7 +679,7 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een systeem van CRM op een geplande basis te verzamelen. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten voor Platforms, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door dit leerprogramma te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een systeem van CRM op een geplande basis te verzamelen. Inkomende gegevens kunnen nu worden gebruikt door downstreamplatformdiensten zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 * [Overzicht van de Data Science-werkruimte](../../../../data-science-workspace/home.md)

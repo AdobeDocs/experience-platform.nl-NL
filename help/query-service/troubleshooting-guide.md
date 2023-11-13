@@ -23,7 +23,7 @@ De volgende lijst met antwoorden op veelgestelde vragen is onderverdeeld in de v
 - [PostSQL API-fouten](#postgresql-api-errors)
 - [REST API-fouten](#rest-api-errors)
 
-## Algemene vragen over Query Service {#general}
+## Algemene vragen van Query Service {#general}
 
 Deze sectie bevat informatie over prestaties, beperkingen en processen.
 
@@ -95,7 +95,7 @@ SELECT * FROM customers LIMIT 0;
 - Nadat u zich hebt aangemeld bij Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van UI om te navigeren naar [!UICONTROL Datasets] dashboard.
 - De datasets [!UICONTROL Browse] wordt geopend. Met de zoekbalk kunt u de beschikbare opties verfijnen. Selecteer een dataset van de getoonde lijst.
 
-![Het dashboard van Datasets in het Platform UI met de onderzoeksbar en een dataset benadrukte.](./images/troubleshooting/dataset-selection.png)
+![Het dashboard van Datasets in Platform UI met de onderzoeksbar en een dataset benadrukte.](./images/troubleshooting/dataset-selection.png)
 
 - De [!UICONTROL Datasets activity] wordt weergegeven. Selecteren **[!UICONTROL Preview dataset]** om een dialoog van het schema XDM en in tabelvorm mening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer informatie vindt u in het gedeelte [een voorbeeld bekijken van een gegevenssetdocumentatie](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![Het XDM-schema en de tabelweergave van de samengevoegde gegevens. De kolomnaam van een genestelde dataset wordt benadrukt in UI.](./images/troubleshooting/column-name.png)
 
-Zie de documentatie voor meer informatie over [hoe te werken met geneste gegevensstructuren](./essential-concepts/nested-data-structures.md) het gebruiken van de Redacteur van de Vraag of een derdecliënt.
+Zie de documentatie voor meer informatie over [hoe te werken met geneste gegevensstructuren](./essential-concepts/nested-data-structures.md) het gebruiken van de Redacteur van de Vraag of een derde cliënt.
 +++
 
 ### Hoe kan ik een vraag over een dataset versnellen die series bevat?
@@ -117,25 +117,25 @@ Zie de documentatie voor meer informatie over [hoe te werken met geneste gegeven
 
 +++Antwoord als de vraag lange tijd op een zeer kleine dataset heeft geduurd, gelieve klantensteun te contacteren.
 
-Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [Contact opnemen met de klantenondersteuning van Adobe](#customer-support) om dit proces te zijn.
+Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [Contact opnemen met de klantenondersteuning van de Adobe](#customer-support) om dit proces te zijn.
 +++
 
-### Hoe neem ik contact op met de klantenondersteuning van Adobe? {#customer-support}
+### Hoe neem ik contact op met de klantenondersteuning van de Adobe? {#customer-support}
 
 +++Antwoord
-[Een volledige lijst met telefoonnummers voor Adobe-klantenondersteuning](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de Adobe Help-pagina. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
+[Een volledige lijst met telefoonnummers voor klantenondersteuning van de Adobe](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de pagina Help bij de Adobe. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
 
 - Navigeren naar [https://www.adobe.com/](https://www.adobe.com/) in uw webbrowser.
 - Selecteer rechts van de bovenste navigatiebalk de optie **[!UICONTROL Sign In]**.
 
 ![De Adobe-website met Sign in gemarkeerd.](./images/troubleshooting/adobe-sign-in.png)
 
-- Gebruik uw Adobe ID en wachtwoord die bij uw Adobe-licentie zijn geregistreerd.
+- Gebruik uw Adobe ID en wachtwoord die bij uw Adobe licentie zijn geregistreerd.
 - Selecteren **[!UICONTROL Help & Support]** in de bovenste navigatiebalk.
 
-![Het bovenste vervolgkeuzemenu op de navigatiebalk met Help en ondersteuning, Enterprise Support en Contact met ons gemarkeerd.](./images/troubleshooting/help-and-support.png)
+![Het bovenste vervolgkeuzemenu op de navigatiebalk met Help en ondersteuning, Enterprise-ondersteuning en Contact met ons gemarkeerd.](./images/troubleshooting/help-and-support.png)
 
-Een vervolgkeuzelijst wordt weergegeven met een [!UICONTROL Help and support] sectie. Selecteren **[!UICONTROL Contact us]** om de virtuele assistent voor de klantenservice van Adobe te openen, of selecteer **[!UICONTROL Enterprise support]** voor specifieke hulp voor grote organisaties.
+Een vervolgkeuzelijst wordt weergegeven met een [!UICONTROL Help and support] sectie. Selecteren **[!UICONTROL Contact us]** om de Virtuele Medewerker van de Zorg van de Klant van de Adobe te openen, of selecteer **[!UICONTROL Enterprise support]** voor specifieke hulp voor grote organisaties.
 +++
 
 ### Hoe kan ik een sequentiële reeks taken uitvoeren, zonder dat ik vervolgens taken moet uitvoeren als de vorige taak niet succesvol is voltooid?
@@ -150,7 +150,7 @@ Zie de [anonieme blokdocumentatie](./essential-concepts/anonymous-block.md) voor
 +++Antwoord Er zijn twee manieren om aangepaste toewijzing te implementeren:
 
 1. Een combinatie van bestaande [Adobe-gedefinieerde functies](./sql/adobe-defined-functions.md) om na te gaan of aan de gebruiksbehoeften is voldaan.
-1. Als de bovenstaande suggestie niet voldoet aan uw gebruiksaanwijzing, dient u een combinatie van [vensterfuncties](./sql/adobe-defined-functions.md#window-functions). De functies van het venster kijken naar alle gebeurtenissen in een opeenvolging. Met deze gegevens kunt u ook de historische gegevens beoordelen en deze kunnen in elke combinatie worden gebruikt.
+1. Als de bovenstaande suggestie niet voldoet aan uw gebruiksaanwijzing, dient u een combinatie van [vensterfuncties](./sql/adobe-defined-functions.md#window-functions). Vensterfuncties kijken naar alle gebeurtenissen in een reeks. Met deze gegevens kunt u ook de historische gegevens beoordelen en deze kunnen in elke combinatie worden gebruikt.
 +++
 
 ### Mag ik mijn vragen templatiseren zodat ik ze gemakkelijk kan hergebruiken?
@@ -162,7 +162,7 @@ Zie de [anonieme blokdocumentatie](./essential-concepts/anonymous-block.md) voor
 
 +++Antwoord om foutenlogboeken voor een specifieke vraag terug te winnen, moet u eerst de Dienst API van de Vraag gebruiken om de details van het vraaglogboek te halen. De reactie van HTTP bevat vraag IDs die worden vereist om een vraagfout te onderzoeken.
 
-Gebruik het bevel van de GET om veelvoudige vragen terug te winnen. Informatie over het aanroepen van de API vindt u in de [voorbeeld API-aanroepdocumentatie](./api/queries.md#sample-api-calls).
+Gebruik het bevel van de GET om veelvoudige vragen terug te winnen. Informatie over het aanroepen van de API vindt u in de [voorbeeld-API-aanroepdocumentatie](./api/queries.md#sample-api-calls).
 
 Van de reactie, identificeer de vraag u wilt onderzoeken en een ander verzoek van de GET maken gebruikend zijn `id` waarde. Volledige instructies vindt u in het gedeelte [vraag door de documentatie van identiteitskaart terugwinnen](./api/queries.md#retrieve-a-query-by-id).
 
@@ -194,7 +194,7 @@ De [Referentiedocumentatie voor Query Service API](https://www.adobe.io/experien
 
 ### Wat betekent &quot;Fout bij valideren van schema&quot;?
 
-++ Antwoord Het bericht &quot;Fout die schema&quot;bevestigt betekent dat het systeem van een gebied binnen het schema niet kan de plaats bepalen. U moet het document met aanbevolen procedures lezen voor [gegevenselementen organiseren in Query Service](./best-practices/organize-data-assets.md) gevolgd door de [Tabel maken als geselecteerde documentatie](./sql/syntax.md#create-table-as-select).
+++ Antwoord Het bericht &quot;Fout die schema&quot;bevestigt betekent dat het systeem van een gebied binnen het schema niet kan de plaats bepalen. Lees het document met aanbevolen procedures voor [gegevenselementen organiseren in Query Service](./best-practices/organize-data-assets.md) gevolgd door de [Tabel maken als geselecteerde documentatie](./sql/syntax.md#create-table-as-select).
 
 In het volgende voorbeeld wordt het gebruik van een CTAS-syntaxis en een struct-gegevenstype getoond:
 
@@ -251,9 +251,9 @@ SELECT count(1) FROM myTableName
 
 +++
 
-### Kan ik mijn gegevens kopiëren?
+### Kan ik mijn gegevens bemonsteren?
 
-+++Antwoord Deze functie is momenteel een werk in uitvoering. Details worden beschikbaar gesteld in [releaseopmerkingen](../release-notes/latest/latest.md) en via dialoogvensters van de gebruikersinterface van het Platform als de functie gereed is voor release.
++++Antwoord Deze functie is momenteel een werk in uitvoering. Details worden beschikbaar gesteld in [releaseopmerkingen](../release-notes/latest/latest.md) en via de dialoogvensters van de gebruikersinterface van het platform als de functie gereed is voor release.
 +++
 
 ### Welke hulpfuncties worden gesteund door de Dienst van de Vraag?
@@ -261,7 +261,7 @@ SELECT count(1) FROM myTableName
 +++De Dienst van de Vraag van het Antwoord verstrekt verscheidene ingebouwde SQL helperfuncties om SQL functionaliteit uit te breiden. Zie het document voor een volledige lijst van [SQL-functies die worden ondersteund door Query Service](./sql/spark-sql-functions.md).
 +++
 
-### Alles native [!DNL Spark SQL] ondersteunde functies of zijn gebruikers beperkt tot alleen de wrapper [!DNL Spark SQL] functies van Adobe?
+### Alles native [!DNL Spark SQL] ondersteunde functies of zijn gebruikers beperkt tot alleen de wrapper [!DNL Spark SQL] functies van de Adobe?
 
 +++Antwoord tot nog toe, niet alle open-bron [!DNL Spark SQL] functies zijn getest op data Lake data. Nadat de tests en bevestigingen zijn uitgevoerd, worden ze toegevoegd aan de lijst met ondersteunde items. Raadpleeg de [lijst met ondersteunde [!DNL Spark SQL] functies](./sql/spark-sql-functions.md) om te controleren op een specifieke functie.
 +++
@@ -332,7 +332,7 @@ LIMIT 100;
 
 +++Antwoord Adobe Experience Platform houdt gegevens in UTC (Coordinated Universal Time) timestamp formaat voort. Een voorbeeld van de UTC-indeling is `2021-12-22T19:52:05Z`
 
-De Dienst van de vraag steunt ingebouwde SQL functies om een bepaalde timestamp in en van formaat om te zetten UTC. Beide `to_utc_timestamp()` en de `from_utc_timestamp()` methoden hebben twee parameters : tijdstempel en tijdzone.
+De Dienst van de vraag steunt ingebouwde SQL functies om een bepaalde timestamp in en van formaat om te zetten UTC. Beide `to_utc_timestamp()` en de `from_utc_timestamp()` methoden hebben twee parameters: tijdstempel en tijdzone.
 
 | Parameter | Beschrijving |
 |-----------|---------------|
@@ -519,7 +519,7 @@ WHERE T2.ID IS NULL
 
 ### Gebruiken wij TLS 1.2 voor alle verbindingen van Power BI cliënten aan de vraagdienst?
 
-++ + Antwoord Ja. Doorvoergegevens zijn altijd compatibel met HTTPS. De versie die momenteel wordt ondersteund, is TLS1.2.
+++ + Antwoord Ja. Doorvoergegevens zijn altijd compatibel met HTTPS. De momenteel ondersteunde versie is TLS1.2.
 +++
 
 ### Gebruikt een verbinding gemaakt op poort 80 nog https?
@@ -597,7 +597,7 @@ Deze sectie bevat informatie over het gebruik van hulpmiddelen van derden, zoals
 ### Waarom werken mijn niet-vervallende geloofsbrieven niet?
 
 +++Antwoord De waarde voor niet vervallende geloofsbrieven is de samengevoegde argumenten van `technicalAccountID` en de `credential` uit de configuratie-JSON-bestand. De wachtwoordwaarde heeft de vorm: `{{technicalAccountId}:{credential}}`.
-Raadpleeg de documentatie voor meer informatie over hoe u [Verbinding maken met externe clients met referenties](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
+Raadpleeg de documentatie voor meer informatie over hoe u [Verbinding maken met externe clients met gebruikersgegevens](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Welk soort redacteurs van derdeSQL kan ik met de Redacteur van de Dienst van de Vraag verbinden?
@@ -642,9 +642,9 @@ De volgende tabel bevat PSQL-foutcodes en de mogelijke oorzaken ervan.
 | **58000** | Query | Systeemfout | Interne systeemfout |
 | **0A000** | Query/opdracht | Niet ondersteund | De functie/functionaliteit in de query/opdracht wordt niet ondersteund |
 | **42501** | DROP TABLE-query | Droptable not created by Query Service | De lijst die wordt gelaten vallen werd niet gecreeerd door de Dienst van de Vraag gebruikend `CREATE TABLE` statement |
-| **42501** | DROP TABLE-query | Tabel niet gemaakt door de geverifieerde gebruiker | De lijst die wordt gelaten vallen werd niet gecreeerd door de momenteel het programma geopende gebruiker |
+| **42501** | DROP TABLE-query | Tabel niet gemaakt door de geverifieerde gebruiker | De tabel die wordt verwijderd, is niet gemaakt door de momenteel aangemelde gebruiker |
 | **42P01** | DROP TABLE-query | Tabel niet gevonden | De tabel die in de query is opgegeven, is niet gevonden |
-| **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: gelieve de `dbName` | Er zijn geen tabellen gevonden in de huidige database |
+| **42P12** | DROP TABLE-query | Geen tabel gevonden voor `dbName`: controleer de `dbName` | Geen tabellen gevonden in de huidige database |
 
 ### Waarom ontving ik een 58000 foutcode toen het gebruiken van de history_meta () methode op mijn lijst?
 

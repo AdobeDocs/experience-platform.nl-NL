@@ -19,7 +19,7 @@ Deze handleiding vereist een goed begrip van de [door de gebruiker gedefinieerde
 
 ## Real-Time CDP inzichtsrapporten en gebruiksgevallen
 
-Rapportering door Real-Time CDP biedt inzicht in uw profielgegevens en de relatie ervan met publiek en bestemmingen. Er zijn verschillende sterschemamodellen ontwikkeld om een aantal veelvoorkomende gevallen van marketinggebruik te beantwoorden en elk gegevensmodel kan meerdere gebruiksgevallen ondersteunen.
+Rapportering door Real-Time CDP biedt inzicht in uw profielgegevens en de relatie ervan met doelgroepen en doelgroepen. Er zijn verschillende sterschemamodellen ontwikkeld om een aantal veelvoorkomende gevallen van marketinggebruik te beantwoorden en elk gegevensmodel kan meerdere gebruiksgevallen ondersteunen.
 
 >[!IMPORTANT]
 >
@@ -144,7 +144,7 @@ GROUP BY
 
 +++
 
-### Publiek model {#audience-model}
+### Auditiemodel {#audience-model}
 
 Het publieksmodel bestaat uit de volgende datasets:
 
@@ -237,7 +237,7 @@ FROM
 
 +++
 
-#### Onlangs geactiveerd publiek gebruik
+#### Recentelijk geactiveerd publiek gebruikt draagtas
 
 De logica voor de [!UICONTROL Recently activated audiences] widget bevat een lijst met de soorten publiek die het laatst aan een doel zijn toegewezen. Deze lijst verstrekt een momentopname van het publiek en de bestemmingen die actief in gebruik in het systeem zijn en in het oplossen van problemen kunnen helpen om het even welke onjuiste afbeeldingen. Zie de [[!UICONTROL Recently activated audiences] widget-documentatie](./guides/destinations.md#recently-activated-audiences) voor meer informatie .
 
@@ -297,7 +297,7 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 ### Naamruimtemodel overlappen
 
-Het overlap naamruimtemodel bestaat uit de volgende gegevenssets:
+Het model van overlappende naamruimte bestaat uit de volgende gegevenssets:
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -310,7 +310,7 @@ De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
 #### Identiteitsoverlapping (profielen) gebruikt hoofdletters/kleine letters
 
-De logica die wordt gebruikt in de [!UICONTROL Identity overlap] widget geeft de overlapping van profielen in uw **Profielopslag** die de twee geselecteerde identiteiten bevatten. Zie voor meer informatie de [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Profiles] dashboarddocumentatie](./guides/profiles.md#identity-overlap).
+De logica die wordt gebruikt in de [!UICONTROL Identity overlap] widget geeft de overlapping van profielen in uw **Profielopslag** die de twee geselecteerde identiteiten bevatten. Zie de klasse [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Profiles] dashboarddocumentatie](./guides/profiles.md#identity-overlap).
 
 De SQL die de [!UICONTROL Identity overlap] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 
@@ -378,7 +378,7 @@ De afbeelding hieronder bevat de relevante gegevensvelden in elke gegevensset.
 
 #### Identiteitsoverlapping (publiek) gebruikt hoofdletters/kleine letters
 
-De logica die wordt gebruikt in de [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustreert de overlapping van profielen die de twee geselecteerde identiteiten voor een bepaald publiek bevatten. Zie voor meer informatie de [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Audiences] dashboarddocumentatie](./guides/audiences.md#identity-overlap).
+De logica die wordt gebruikt in de [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustreert de overlapping van profielen die de twee geselecteerde identiteiten voor een bepaald publiek bevatten. Zie de klasse [[!UICONTROL Identity overlap] widgetsectie van het dialoogvenster [!UICONTROL Audiences] dashboarddocumentatie](./guides/audiences.md#identity-overlap).
 
 De SQL die de [!UICONTROL Identity overlap] De widget wordt weergegeven in de sectie hieronder die kan worden samengevouwen.
 

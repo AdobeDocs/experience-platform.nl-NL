@@ -19,7 +19,7 @@ Als u wilt bepalen welke marketingacties op bepaalde gegevenssets en velden in A
 
 Als u klaar bent met het configureren van uw labels, beheerbeleid en marketingacties, kunt u [uw beleidshandhaving testen](#test) ervoor te zorgen dat het naar behoren functioneert.
 
-Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in de UI van het Platform te vormen en af te dwingen. Voor meer gedetailleerde informatie over de eigenschappen die in deze gids worden gebruikt, verwijs naar de overzichtsdocumentatie over de volgende onderwerpen:
+Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in het Platform UI te vormen en af te dwingen. Voor meer gedetailleerde informatie over de eigenschappen die in deze gids worden gebruikt, verwijs naar de overzichtsdocumentatie over de volgende onderwerpen:
 
 * [Adobe Experience Platform Data Governance](./home.md)
 * [Labels voor gegevensgebruik](./labels/overview.md)
@@ -34,9 +34,9 @@ Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in
 
 >[!IMPORTANT]
 >
->Labels kunnen niet langer op afzonderlijke velden op het niveau van de gegevensset worden toegepast. Deze workflow is vervangen door labels op schemaniveau. Nochtans, kunt u nog een volledige dataset etiketteren. Alle labels die eerder op afzonderlijke gegevenssetvelden zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van het Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](#migrate-labels) voor instructies over hoe te om dit te doen.
+>Labels kunnen niet langer op afzonderlijke velden op het niveau van de gegevensset worden toegepast. Deze workflow is vervangen door labels op schemaniveau. Nochtans, kunt u nog een volledige dataset etiketteren. Alle labels die eerder op afzonderlijke gegevenssetvelden zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de interface van het platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie over [eerder toegepaste labels migreren](#migrate-labels) voor instructies over hoe te om dit te doen.
 
-U kunt [labels toepassen op een schema](#schema-labels) zodat alle datasets die op dat schema worden gebaseerd de zelfde etiketten erven. Hierdoor kunt u de labels voor gegevensbeheer, toestemming en toegangsbeheer op één locatie beheren. Door beperkingen van het gegevensgebruik op het schemaniveau af te dwingen, verspreidt het effect zich stroomafwaarts aan alle datasets die op dat schema gebaseerd zijn. De etiketten die op het niveau van de schemagebied worden toegepast steunen het gebruikscituaties van het Beleid van Gegevens en zijn ontdekkbaar in de werkruimte Datasets [!UICONTROL Data Governance] onder de [!UICONTROL Field Name] als alleen-lezen labels.
+U kunt [labels toepassen op een schema](#schema-labels) zodat alle datasets die op dat schema worden gebaseerd de zelfde etiketten erven. Hierdoor kunt u de labels voor gegevensbeheer, toestemming en toegangsbeheer op één locatie beheren. Door beperkingen van het gegevensgebruik op het schemaniveau af te dwingen, verspreidt het effect zich stroomafwaarts aan alle datasets die op dat schema gebaseerd zijn. De etiketten die op het niveau van de schemagebied worden toegepast steunen het gebruikscituaties van het Beleid van Gegevens en zijn ontdekt in de werkruimte Datasets [!UICONTROL Data Governance] onder de [!UICONTROL Field Name] kolom als alleen-lezen labels.
 
 Als er een specifieke dataset is die u beperkingen van het gegevensgebruik wilt afdwingen, kunt u [labels rechtstreeks toepassen op die gegevensset](#dataset-labels) of specifieke velden binnen die gegevensset.
 
@@ -52,7 +52,7 @@ Selecteren **[!UICONTROL Datasets]** in de linkernavigatie, dan selecteer de naa
 
 ![De werkruimte van Datasets doorbladert lusje met Datasets en een benadrukte datasetrij.](./images/e2e/select-dataset.png)
 
-De detailweergave voor de gegevensset wordt weergegeven. Selecteer **[!UICONTROL Data governance]** om een lijst van de gebieden van de dataset en om het even welke etiketten te bekijken die reeds op hen zijn toegepast. Selecteer het potloodpictogram om de labels van gegevenssets te bewerken.
+De detailweergave voor de gegevensset wordt weergegeven. Selecteer de **[!UICONTROL Data governance]** om een lijst van de gebieden van de dataset en om het even welke etiketten te bekijken die reeds op hen zijn toegepast. Selecteer het potloodpictogram om de labels van gegevenssets te bewerken.
 
 ![Het tabblad Gegevensbeheer voor de gegevensset Loyalty-leden met het potloodpictogram gemarkeerd.](./images/e2e/edit-dataset-labels.png)
 
@@ -66,11 +66,11 @@ Selecteren **[!UICONTROL Schemas]** in de linkernavigatie, dan selecteer het sch
 
 >[!TIP]
 >
->Als u niet zeker bent welk schema op een bepaalde dataset van toepassing is, uitgezocht **[!UICONTROL Datasets]** in de linkernavigatie, dan selecteer de verbinding onder **[!UICONTROL Schema]** kolom voor de gewenste dataset. Selecteer de schemanaam in popover die lijkt om het schema in de Redacteur van het Schema te openen.
+>Als u niet zeker bent welk schema op een bepaalde dataset van toepassing is, selecteer **[!UICONTROL Datasets]** in de linkernavigatie, dan selecteer de verbinding onder **[!UICONTROL Schema]** kolom voor de gewenste dataset. Selecteer de schemanaam in popover die lijkt om het schema in de Redacteur van het Schema te openen.
 >
 >![Beeld dat een verbinding aan het schema van een dataset toont](./images/e2e/schema-from-dataset.png)
 
-De structuur van het schema wordt weergegeven in de Schema-editor. Selecteer hier de **[!UICONTROL Labels]** om een lijstmening van de gebieden van het schema en de etiketten te tonen die reeds op hen zijn toegepast. Schakel de selectievakjes in naast de velden waaraan u labels wilt toevoegen en selecteer vervolgens **[!UICONTROL Apply access and data governance labels]** in het rechterspoor.
+De structuur van het schema wordt weergegeven in de Schema-editor. Selecteer van hieruit de **[!UICONTROL Labels]** om een lijstmening van de gebieden van het schema en de etiketten te tonen die reeds op hen zijn toegepast. Schakel de selectievakjes in naast de velden waaraan u labels wilt toevoegen en selecteer vervolgens **[!UICONTROL Apply access and data governance labels]** in het rechterspoor.
 
 ![Het tabblad Labels van de werkruimte Schema met één schemaveld geselecteerd en de labels voor toegang en gegevensbeheer toegepast gemarkeerd.](./images/e2e/schema-field-label.png)
 
@@ -80,19 +80,19 @@ De structuur van het schema wordt weergegeven in de Schema-editor. Selecteer hie
 >
 >![Afbeelding waarin het potloodpictogram wordt weergegeven dat in de weergave Schema-labels wordt geselecteerd](./images/e2e/label-whole-schema.png)
 
-De [!UICONTROL Apply access and data governance labels] wordt weergegeven. Selecteer de labels die u wilt toepassen op het gekozen schemaveld. Als u klaar bent, selecteert u **[!UICONTROL Save]**.
+De [!UICONTROL Apply access and data governance labels] wordt weergegeven. Selecteer de labels die u wilt toepassen op het gekozen schemaveld. Selecteer **[!UICONTROL Save]**.
 
 ![Het dialoogvenster Toegangs- en gegevensbeheerlabels toepassen waarin meerdere labels worden weergegeven die aan een schemaveld worden toegevoegd.](./images/e2e/save-schema-labels.png)
 
 Ga als volgt te werk om labels toe te passen op verschillende velden (of verschillende schema&#39;s). Als u klaar bent, kunt u doorgaan naar de volgende stap van [beleid inzake gegevensbeheer inschakelen](#policy).
 
-### Labels migreren die eerder op datasetniveau zijn toegepast {#migrate-labels}
+### Labels migreren die eerder zijn toegepast op het niveau van de gegevensset {#migrate-labels}
 
 Selecteren **[!UICONTROL Dataset]** in de linkernavigatie, dan selecteer de naam van de dataset u etiketten van wilt migreren. U kunt optioneel het onderzoeksgebied gebruiken om onderaan de lijst van getoonde datasets te versmallen.
 
 ![Het tabblad Bladeren van de werkruimte Datasets met de Dataset Loyalty-leden gemarkeerd.](./images/e2e/select-dataset.png)
 
-De detailweergave voor de gegevensset wordt weergegeven. Selecteer **[!UICONTROL Data governance]** om een lijst van de gebieden van de dataset en om het even welke etiketten te bekijken die reeds op hen zijn toegepast. Selecteer het pictogram Annuleren naast een label dat u uit een veld wilt verwijderen. Er verschijnt een bevestigingsvenster. Selecteer [!UICONTROL Remove label] om je keuzes te bevestigen.
+De detailweergave voor de gegevensset wordt weergegeven. Selecteer de **[!UICONTROL Data governance]** om een lijst van de gebieden van de dataset en om het even welke etiketten te bekijken die reeds op hen zijn toegepast. Selecteer het pictogram Annuleren naast een label dat u uit een veld wilt verwijderen. Er verschijnt een bevestigingsvenster. Selecteer [!UICONTROL Remove label] om je keuzes te bevestigen.
 
 ![Het tabblad Gegevensbeheer van de werkruimte Datasets bevat een label voor een veld dat is gemarkeerd voor verwijdering.](./images/e2e/remove-label.png)
 
@@ -125,7 +125,7 @@ Er verschijnt een pop-up waarin u wordt gevraagd het type beleid te selecteren d
 
 Geef op het volgende scherm een **[!UICONTROL Name]** en optioneel **[!UICONTROL Description]** voor het beleid. Selecteer in de onderstaande tabel de labels waarop dit beleid moet controleren. Met andere woorden, dit zijn de labels die door het beleid niet kunnen worden gebruikt voor de marketingactie(s) die u in de volgende stap opgeeft.
 
-Als u meerdere labels selecteert, kunt u de opties in het rechterspoor gebruiken om te bepalen of alle labels aanwezig moeten zijn om te zorgen dat het beleid gebruiksbeperkingen afdwingt, of dat slechts een van de labels aanwezig moet zijn. Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+Als u meerdere labels selecteert, kunt u de opties in het rechterspoor gebruiken om te bepalen of alle labels aanwezig moeten zijn om te zorgen dat het beleid gebruiksbeperkingen afdwingt, of dat slechts een van de labels aanwezig moet zijn. Selecteer **[!UICONTROL Next]**.
 
 ![Beeld dat de basisconfiguratie van het beleid toont die in UI wordt voltooid](./images/e2e/configure-policy.png)
 
@@ -135,7 +135,7 @@ Selecteer in het volgende scherm de marketingacties waarvoor dit beleid de eerde
 
 Het definitieve scherm toont een samenvatting van de details van het beleid en de acties het zal beperken waarvoor etiketten. Selecteren **[!UICONTROL Finish]** om het beleid te creëren.
 
-![Afbeelding die het beleid dat wordt geconfigureerd, weergeeft in de gebruikersinterface](./images/e2e/confirm-policy.png)
+![Beeld dat het beleid dat in UI wordt bevestigd toont wordt gevormd](./images/e2e/confirm-policy.png)
 
 Het beleid wordt gemaakt, maar is ingesteld op [!UICONTROL Disabled] standaard. Selecteer het beleid in de lijst en stel de optie **[!UICONTROL Policy status]** schakelen naar **[!UICONTROL Enabled]** om het beleid mogelijk te maken.
 
@@ -147,7 +147,7 @@ Ga verder met de bovenstaande stappen om het gewenste beleid te maken en in te s
 
 Als uw toegelaten beleid nauwkeurig om te bepalen welke gegevens aan een bestemming kunnen worden geactiveerd, moet u specifieke marketing acties aan die bestemming toewijzen.
 
-Neem bijvoorbeeld een ingeschakeld beleid dat voorkomt dat gegevens een `C2` label dat voor de marketingactie wordt gebruikt &quot;[!UICONTROL Export to Third Party]&quot;. Wanneer het activeren van gegevens aan een bestemming, controleert het beleid welke marketing acties op de bestemming aanwezig zijn. Als &quot;[!UICONTROL Export to Third Party]&quot; aanwezig is, gegevens proberen te activeren met een `C2` resulteert in een beleidsovertreding. Als &quot;[!UICONTROL Export to Third Party]&quot; niet aanwezig is, wordt het beleid niet afgedwongen voor de bestemming en gegevens met `C2` etiketten kunnen vrij worden geactiveerd.
+Neem bijvoorbeeld een ingeschakeld beleid dat voorkomt dat gegevens een `C2` label dat niet voor de marketingactie wordt gebruikt &quot;[!UICONTROL Export to Third Party]&quot;. Wanneer het activeren van gegevens aan een bestemming, controleert het beleid welke marketing acties op de bestemming aanwezig zijn. Als &quot;[!UICONTROL Export to Third Party]&quot; aanwezig is, gegevens proberen te activeren met een `C2` resulteert in een beleidsovertreding. Als &quot;[!UICONTROL Export to Third Party]&quot; niet aanwezig is, wordt het beleid niet afgedwongen voor de bestemming en gegevens met `C2` etiketten kunnen vrij worden geactiveerd.
 
 Wanneer [verbinding maken met een doel in de UI](../destinations/ui/connect-destination.md)de **[!UICONTROL Governance]** stap in het werkschema staat u toe om de marketing acties te selecteren die op deze bestemming van toepassing zijn, die uiteindelijk bepalen welk beleid van gegevensbeheer voor de bestemming wordt afgedwongen.
 

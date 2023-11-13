@@ -34,7 +34,7 @@ Adobe Experience Platform ondersteunt de volgende e-mailmarketingdoelen:
 
 ## Verbinding maken met een nieuwe marketingbestemming voor e-mail {#connect-destination}
 
-Om publiek naar e-mailmarketing bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Als u een publiek naar marketingdoelen voor uw campagnes via e-mail wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
 
 ## Tips en trucs bij het activeren van het publiek naar marketingbestemmingen via e-mail {#best-practices}
 
@@ -71,7 +71,7 @@ Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt
 
 Sommige e-mailmarketingdoelen in de catalogus exporteren profielen op streamingwijze, via API-integratie met de bestemming.
 
-Andere doelen exporteren bestanden naar een locatie voor cloudopslag. Nadat het exporteren is voltooid, moet u gegevens importeren van de locatie voor cloudopslag naar uw marketingbestemming voor e-mail.
+Andere doelen exporteren bestanden naar een locatie voor cloudopslag. Nadat het exporteren is voltooid, moet u gegevens importeren van de opslaglocatie van de cloud naar uw marketingbestemming voor e-mail.
 
 Volg de koppelingen in het dialoogvenster [ondersteunde e-mailmarketingdoelen](#supported-destinations) sectie leren hoe u het publiek activeert voor elke e-mailmarketingbestemming.
 

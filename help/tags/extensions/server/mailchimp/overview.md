@@ -47,7 +47,7 @@ Na het aanmelden bij Mailchimp en het landen op de mening van het Dashboard, zou
 
 ### API-sleutel
 
-Om de API sleutel voor uw rekening te vinden, selecteer uw profielpictogram in Mailchimp UI, dan uitgezocht **Profiel**. U moet een URL zien zoals `https://us11.admin.mailchimp.com/account/profile/` maar met **uw** voorvoegsel in plaats van `us11`.
+Om de API sleutel voor uw rekening te vinden, selecteer uw profielpictogram in Mailchimp UI, dan uitgezocht **Profiel**. U moet een URL zien zoals `https://us11.admin.mailchimp.com/account/profile/` maar met **uw** prefix in plaats van `us11`.
 
 Selecteren **Extra&#39;s** vervolgens **API-sleutels**:
 
@@ -81,7 +81,7 @@ In deze sectie worden de stappen beschreven voor het installeren en configureren
 
 In een gebeurtenis die bezit door:sturen, [een [!UICONTROL Token] geheim](../../../ui/event-forwarding/secrets.md#token) gebeld `Mailchimp API Key`.
 
-Volgende, [een gegevenselement maken](../../../ui/managing-resources/data-elements.md#create-a-data-element) met de [!UICONTROL Core] en [!UICONTROL Secret] het elementtype van gegevens om naar `Mailchimp API Key` geheim dat je zojuist hebt gemaakt. Enter `Mailchimp Token` als de naam van het gegevenselement.
+Volgende, [een gegevenselement maken](../../../ui/managing-resources/data-elements.md#create-a-data-element) met de [!UICONTROL Core] en [!UICONTROL Secret] het elementtype van gegevens om naar `Mailchimp API Key` geheim dat je zojuist hebt gemaakt. Enter `Mailchimp Token` als naam voor gegevenselement.
 
 ### De extensie installeren en configureren
 
@@ -97,17 +97,17 @@ Het configuratiescherm wordt weergegeven. Onder **[!UICONTROL Mailchimp Server P
 
 ![Extensieconfiguratie](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-Onder **[!UICONTROL Mailchimp token]**, selecteert u het pictogram van het gegevenselement en kiest u de optie `Mailchimp Token` gegevenselement dat u eerder hebt gemaakt. Selecteren **[!UICONTROL Save]** om de wijzigingen op te slaan.
+Onder **[!UICONTROL Mailchimp token]**, selecteert u het pictogram van het gegevenselement en kiest u de optie `Mailchimp Token` gegevenselement dat u eerder hebt gemaakt. Selecteren **[!UICONTROL Save]** om de wijzigingen op te slaan
 
 De extensie is nu geïnstalleerd en geconfigureerd voor gebruik in uw eigenschap.
 
 ## Gegevensverzameling
 
-Wanneer u deze extensie in een [regel](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u vormen [Adobe Experience Platform Web SDK-extensie](../../client/web-sdk/overview.md) om die gegevens naar [!DNL Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis die bezit door:sturen.
+Wanneer u deze extensie in een [regel](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u vormen [Adobe Experience Platform Web SDK-extensie](../../client/web-sdk/overview.md) om die gegevens te verzenden naar [!DNL Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis die bezit door:sturen.
 
 De gegevens die door deze uitbreiding worden vereist kunnen van Web SDK als of gegevens worden verzonden XDM of niet-XDM. Raadpleeg de documentatie voor meer informatie over [XDM-gegevens verzenden](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
-Als een klant bijvoorbeeld een aankoop doet of zich registreert voor een gebeurtenis op uw site, kunt u een bevestigingsbericht verzenden via Mailchimp met deze extensie. Zodra u de vereiste informatie van Web SDK naar het Netwerk van de Rand verzendt, brengt de uitbreiding e-mail met Mailchimp in werking.
+Als een klant bijvoorbeeld een aankoop doet of zich registreert voor een gebeurtenis op uw site, kunt u een bevestigingsbericht verzenden via Mailchimp met deze extensie. Zodra u de vereiste informatie van SDK van het Web naar het Netwerk van de Rand verzendt, teweegbrengt de uitbreiding e-mail met Mailchimp.
 
 ![Configuratie van gebeurtenisactie toevoegen](../../../images/extensions/server/mailchimp/action-configurations.png)
 
@@ -132,7 +132,7 @@ In de onderstaande tabel vindt u meer details voor elke mogelijke waarde.
 >  
 >De **Voorbeeldpad** bovenstaande waarden zijn alleen voorbeelden. De veldnamen en [paden](../../../ui/event-forwarding/overview.md#data-element-path) van verwijzingen voorzien in die gegevenselementen kunnen in uw bezit verschillend zijn, afhankelijk van hoe u genoemd en Web SDK in de stappen hierboven vormde.
 
-In uw gebeurtenis die bezit door:sturen, kunt u een gegevenselement voor elk van de hierboven geschetste gebieden tot stand brengen. Nadat u de gegevenselementen hebt gemaakt, kunt u verwijzen naar de gegevenselementen in het dialoogvenster [!UICONTROL Add Event] actie van deze verlenging.
+In uw gebeurtenis die bezit door:sturen, kunt u een gegevenselement voor elk van de hierboven geschetste gebieden tot stand brengen. Nadat u de gegevenselementen hebt gemaakt, kunt u verwijzen naar de gegevenselementen in de [!UICONTROL Add Event] actie van deze verlenging.
 
 ![Configuratie van gebeurtenisactie toevoegen](../../../images/extensions/server/mailchimp/action-configurations.png)
 

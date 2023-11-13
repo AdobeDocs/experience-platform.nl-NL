@@ -32,7 +32,7 @@ Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../landing/api-guide.md).
 
 ## Brongegevens filteren
 
@@ -42,7 +42,7 @@ De volgende schetsen stappen om rij-vlakke gegevens voor uw bron te filtreren.
 
 Voordat u de API kunt gebruiken voor het filteren van gegevens op rijniveau voor een bron, moet u eerst de verbindingsspecificatie van uw bron details ophalen om te bepalen welke operatoren en taal door een specifieke bron worden ondersteund.
 
-Om de verbindingsspecificatie van een bepaalde bron terug te winnen, doe een verzoek van de GET aan `/connectionSpecs` van het [!DNL Flow Service] API terwijl het verstrekken van de bezitsnaam van uw bron als deel van uw vraagparameters.
+Om de verbindingsspecificatie van een bepaalde bron terug te winnen, doe een verzoek van de GET aan `/connectionSpecs` het eindpunt van de [!DNL Flow Service] API terwijl het verstrekken van de bezitsnaam van uw bron als deel van uw vraagparameters.
 
 **API-indeling**
 
@@ -52,7 +52,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMS}` | De optionele queryparameters waarmee u resultaten wilt filteren. U kunt de [!DNL Google BigQuery] verbindingsspecificatie toepassen `name` eigenschap en specificeren `"google-big-query"` in uw zoekopdracht. |
+| `{QUERY_PARAMS}` | De optionele queryparameters waarmee u resultaten wilt filteren. U kunt de [!DNL Google BigQuery] de verbindingsspecificatie door toepassing van `name` eigenschap en specificeren `"google-big-query"` in uw zoekopdracht. |
 
 **Verzoek**
 
@@ -155,7 +155,7 @@ In het onderstaande voorbeeld worden voorwaarden alleen toegepast op geselecteer
 
 ### Een voorbeeld van uw gegevens bekijken
 
-U kunt een voorvertoning van uw gegevens weergeven door een verzoek in te dienen bij de GET `/explore` van het [!DNL Flow Service] API tijdens `filters` als onderdeel van uw queryparameters en het opgeven van uw PQL-invoervoorwaarden in [!DNL Base64].
+U kunt een voorvertoning van uw gegevens weergeven door een verzoek in te dienen bij de GET `/explore` het eindpunt van de [!DNL Flow Service] API tijdens `filters` als onderdeel van uw queryparameters en het opgeven van uw PQL-invoervoorwaarden in [!DNL Base64].
 
 **API-indeling**
 
@@ -396,7 +396,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 }
 ```
 
-## Aanhangsel
+## Bijlage
 
 Deze sectie verstrekt verdere voorbeelden van verschillende ladingen voor het filtreren.
 

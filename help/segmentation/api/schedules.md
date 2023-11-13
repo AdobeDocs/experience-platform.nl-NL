@@ -234,7 +234,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Details bijwerken voor een specifiek schema {#update}
 
-U kunt een specifieke planning bijwerken door een PATCH-verzoek in te dienen bij de `/config/schedules` en het verstrekken van identiteitskaart van het programma u probeert om in de verzoekweg bij te werken.
+U kunt een specifieke planning bijwerken door een PATCH-verzoek in te dienen bij de `/config/schedules` eindpunt en het verstrekken van identiteitskaart van het programma u probeert om in de verzoekweg bij te werken.
 
 Met de PATCH-aanvraag kunt u een van de [state](#update-state) of de [uitsnijdschema](#update-schedule) voor een afzonderlijk schema.
 
@@ -250,7 +250,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van het schema u wilt bijwerken. |
+| `{SCHEDULE_ID}` | De `id` De waarde van het schema dat u wilt bijwerken. |
 
 **Verzoek**
 
@@ -273,7 +273,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de staat van het programma bijwerkt, moet u de waarde van plaatsen `path` naar &quot;/state&quot;. |
-| `value` | De bijgewerkte waarde van de staat van het programma. Deze waarde kan worden ingesteld op &quot;actief&quot; of &quot;inactief&quot; om het schema te activeren of deactiveren. Houd er rekening mee dat u **kan** maak een programma onbruikbaar als de organisatie voor het stromen is toegelaten. |
+| `value` | De bijgewerkte waarde van de staat van het programma. Deze waarde kan worden ingesteld op &quot;actief&quot; of &quot;inactief&quot; om het schema te activeren of deactiveren. Let op: **kan** maak een programma onbruikbaar als de organisatie voor het stromen is toegelaten. |
 
 **Antwoord**
 
@@ -291,7 +291,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van het schema u wilt bijwerken. |
+| `{SCHEDULE_ID}` | De `id` De waarde van het schema dat u wilt bijwerken. |
 
 **Verzoek**
 
@@ -352,7 +352,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 Na het lezen van deze gids hebt u nu een beter inzicht in hoe de programma&#39;s werken.
 
-## Aanhangsel {#appendix}
+## Bijlage {#appendix}
 
 In de volgende bijlage wordt de notatie van de expressie van een uitsnede beschreven die in de planningen wordt gebruikt.
 
@@ -387,9 +387,9 @@ De speciale tekens die zijn toegestaan, vertegenwoordigen de volgende betekeniss
 | `-` | Deze waarde wordt gebruikt om op te geven **inclusief** bereiken voor het veld. Als u bijvoorbeeld `9-15` in het veld Uren betekent dit dat de uren 9 , 10 , 11 , 12 , 13 , 14 en 15 moeten omvatten . |
 | `,` | Deze waarde wordt gebruikt om extra waarden op te geven. Als u bijvoorbeeld `MON, FRI, SAT` op de dag van het weekgebied, zou dit betekenen de dagen van de week maandag, vrijdag, en Zaterdag omvatten. |
 | `/` | Deze waarde wordt gebruikt om toenamen op te geven. De waarde die voor de `/` bepaalt waar het van stijgt, terwijl de waarde na wordt geplaatst `/` bepaalt hoeveel het met stijgt. Als u bijvoorbeeld `1/7` in het minutenveld betekent dit dat de notulen 1 , 8 , 15 , 22 , 29 , 36 , 43 , 50 en 57 bevatten . |
-| `L` | Deze waarde wordt gebruikt om op te geven `Last`en heeft een andere betekenis, afhankelijk van het veld waarin deze wordt gebruikt. Als het met de dag van het maandgebied wordt gebruikt, vertegenwoordigt het de laatste dag van de maand. Als het op zich met de dag van het weekgebied wordt gebruikt, vertegenwoordigt het de laatste dag van de week, die Zaterdag (`SAT`). Als het samen met de dag van het weekgebied, samen met een andere waarde wordt gebruikt, vertegenwoordigt het de laatste dag van dat type voor de maand. Als u bijvoorbeeld `5L` op de dag van de week zou het **alleen** de laatste vrijdag van de maand. |
+| `L` | Deze waarde wordt gebruikt om op te geven `Last`en heeft een andere betekenis, afhankelijk van het veld waarin deze wordt gebruikt. Als het met de dag van het maandgebied wordt gebruikt, vertegenwoordigt het de laatste dag van de maand. Als het op zich met de dag van het weekgebied wordt gebruikt, vertegenwoordigt het de laatste dag van de week, die Zaterdag (`SAT`). Als het samen met de dag van het weekgebied, samen met een andere waarde wordt gebruikt, vertegenwoordigt het de laatste dag van dat type voor de maand. Als u bijvoorbeeld `5L` op de dag van de week zou **alleen** omvat de laatste vrijdag van de maand. |
 | `W` | Deze waarde wordt gebruikt om de dichtste weekdag aan de bepaalde dag te specificeren. Als u bijvoorbeeld `18W` op de dag van het maandveld, en de 18e van die maand was een zaterdag, zou het op vrijdag 17e, de dichtstbijzijnde weekdag, in werking treden. Als de 18e van die maand een zondag was, zou het op maandag 19de, die dichtstbijzijnde weekdag is, in werking treden. Houd er rekening mee dat als u `1W` in de dag van het maandveld, en de dichtstbijzijnde weekdag in de voorafgaande maand, wordt de gebeurtenis nog steeds geactiveerd op de dichtstbijzijnde weekdag van de maand **huidig** maand.</br></br>Bovendien kunt u `L` en `W` om `LW`, waarin de laatste weekdag van de maand wordt vermeld. |
-| `#` | Deze waarde wordt gebruikt om de negende dag van de week in een maand te specificeren. De waarde die voor de `#` staat voor de dag van de week, terwijl de waarde na de `#` geeft aan welk exemplaar in de maand dit is. Als u bijvoorbeeld `1#3`, wordt de gebeurtenis op de derde zondag van de maand gestart. Houd er rekening mee dat als u `X#5` en er is geen vijfde van die dag van de week in die maand, zal het evenement **niet** worden geactiveerd. Als u bijvoorbeeld `1#5`en er is geen vijfde zondag in die maand, zal het evenement **niet** worden geactiveerd. |
+| `#` | Deze waarde wordt gebruikt om de negende dag van de week in een maand te specificeren. De waarde die voor de `#` staat voor de dag van de week, terwijl de waarde na de `#` geeft aan welk exemplaar in de maand dit is. Als u bijvoorbeeld `1#3`, wordt de gebeurtenis op de derde zondag van de maand gestart. Houd er rekening mee dat als u `X#5` en er is geen vijfde van die dag van de week in die maand, zal de gebeurtenis **niet** worden geactiveerd. Als u bijvoorbeeld `1#5`en er is geen vijfde zondag in die maand, zal het evenement **niet** worden geactiveerd. |
 
 ### Voorbeelden
 
@@ -399,9 +399,9 @@ In de volgende tabel ziet u voorbeelden van tekenreeksen voor snijexpressie en g
 | ---------- | ----------- |
 | `0 0 13 * * ?` | Het evenement gaat elke dag om 13.00 uur branden. |
 | `0 30 9 * * ? 2022` | Het evenement zal elke dag om 9.30 uur in 2022 plaatsvinden. |
-| `0 * 18 * * ?` | De gebeurtenis wordt elke minuut gestart, te beginnen om 18.00 uur en te eindigen om 18.59 uur, elke dag. |
+| `0 * 18 * * ?` | Het evenement wordt elke minuut gestart, vanaf 18.00 uur tot 18.59 uur, elke dag. |
 | `0 0/10 17 * * ?` | De gebeurtenis wordt elke 10 minuten gestart, van 17.00 tot 18.00 uur, elke dag. |
 | `0 13,38 5 ? 6 WED` | Het evenement gaat elke woensdag om 5.13 en om 5.38 uur van start. |
 | `0 30 12 ? * 4#3` | Het evenement gaat elke maand om 12:30 uur branden op de derde woensdag. |
-| `0 30 12 ? * 6L` | De gebeurtenis wordt elke maand om 12:30 uur om de laatste vrijdag afgespeeld. |
+| `0 30 12 ? * 6L` | Het evenement wordt elke maand om 12:30 uur om de laatste vrijdag afgespeeld. |
 | `0 45 11 ? * MON-THU` | Het evenement gaat elke maandag, dinsdag, woensdag en donderdag om 11.45 uur branden. |

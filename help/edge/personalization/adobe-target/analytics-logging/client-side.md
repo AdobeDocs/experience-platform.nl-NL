@@ -1,5 +1,5 @@
 ---
-title: Clientregistratie voor A4T-gegevens in de Web SDK van het Platform
+title: Logboekregistratie aan de clientzijde voor A4T-gegevens in de Platform Web SDK
 description: Leer hoe te om cliënt-zijregistreren voor Adobe Analytics voor Doel (A4T) toe te laten gebruikend het Web SDK van het Experience Platform.
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ---
 
-# Clientregistratie voor A4T-gegevens in de Web SDK van het Platform
+# Logboekregistratie aan de clientzijde voor A4T-gegevens in de Platform Web SDK
 
 ## Overzicht {#overview}
 
@@ -54,7 +54,7 @@ De stroom ziet er ongeveer als volgt uit:
 
 ![Logboekstroom aan de clientzijde](../assets/analytics-client-side-logging.png)
 
-Hieronder ziet u een voorbeeld van een `interact` reactie wanneer Analytics client-side logboekregistratie is ingeschakeld. Als het voorstel betrekking heeft op een activiteit waarvoor Analytics-rapportage wordt uitgevoerd, heeft het een `scopeDetails.characteristics.analyticsToken` eigenschap.
+Hier volgt een voorbeeld van een `interact` reactie wanneer Analytics client-side logboekregistratie is ingeschakeld. Als het voorstel betrekking heeft op een activiteit waarvoor Analytics-rapportage wordt uitgevoerd, heeft het een `scopeDetails.characteristics.analyticsToken` eigenschap.
 
 ```json
 {
@@ -421,7 +421,7 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Overzicht van implementatie {#implementation-summary}
 
-Samengevat, moeten de volgende stappen worden uitgevoerd wanneer het toepassen van de Form-Based activiteiten van de Composer van de Ervaring met het Web SDK van het Platform:
+Samengevat, moeten de volgende stappen worden uitgevoerd wanneer het toepassen van de Form-Based Composer van de Ervaring activiteiten met het Web SDK van het Platform:
 
 1. Verzend een gebeurtenis die op vorm-Gebaseerde de activiteitenvoorstellen van de Composer van de Ervaring haalt;
 1. Pas de inhoudswijzigingen toe op de pagina;

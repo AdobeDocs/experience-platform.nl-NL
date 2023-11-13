@@ -27,4 +27,4 @@ Adobe Experience Platform biedt momenteel ondersteuning voor de volgende sociale
 
 ## Verbinding maken met een nieuwe sociale bestemming {#connect-destination}
 
-Om publiek naar sociale bestemmingen voor uw campagnes te verzenden, moet het Platform eerst met de bestemming verbinden. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.
+Als u een publiek naar sociale doelen voor uw campagnes wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie de [zelfstudie over het maken van doelen](../../ui/connect-destination.md) voor gedetailleerde informatie over het opzetten van een nieuwe bestemming.

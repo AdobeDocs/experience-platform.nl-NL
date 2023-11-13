@@ -18,11 +18,11 @@ Segmentatie tussen meerdere entiteiten is een geavanceerde functie die beschikba
 
 De segmentatie van meerdere entiteiten vereist een goed begrip van de verschillende diensten van Adobe Experience Platform die bij segmentatie betrokken zijn. Lees de volgende documentatie voordat u doorgaat met deze handleiding:
 
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): Verstrekt een verenigd consumentenprofiel in echt - tijd, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Biedt een eenvormig consumentenprofiel in real-time, gebaseerd op geaggregeerde gegevens van meerdere bronnen.
    * [Profielhulplijnen](../profile/guardrails.md): Aanbevolen procedures voor het maken van gegevensmodellen die worden ondersteund door [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u een publiek opbouwen op basis van [!DNL Real-Time Customer Profile] gegevens.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
-   * [Basisbeginselen van de schemacompositie](../xdm/schema/composition.md#union): Leer beste praktijken voor het samenstellen van schema&#39;s die in Experience Platform moeten worden gebruikt. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../xdm/schema/best-practices.md).
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u een publiek opbouwen op [!DNL Real-Time Customer Profile] gegevens.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [Basisbeginselen van de schemacompositie](../xdm/schema/composition.md#union): Leer de beste werkwijzen voor het samenstellen van schema&#39;s die in Experience Platform moeten worden gebruikt. Als u de segmentatie het beste wilt gebruiken, moet u ervoor zorgen dat uw gegevens als profielen en gebeurtenissen worden opgenomen volgens de [best practices voor gegevensmodellering](../xdm/schema/best-practices.md).
 
 ## Gebruiksscenario’s
 

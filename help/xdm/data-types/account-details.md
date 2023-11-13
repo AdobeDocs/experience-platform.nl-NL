@@ -35,7 +35,7 @@ ht-degree: 4%
 | `primaryEmailDomain` | Tekenreeks | Het primaire e-maildomein dat de organisatie voor haar personeel gebruikt. |
 | `rating` | Dubbel | De berekende score of sterwaardering voor deze organisatie. `1` de maximaal mogelijke rating aangeeft, en `0` de minimaal mogelijke rating is. |
 | `tickerSymbol` | Tekenreeks | Het beurssymbool voor deze rekening. Maximaal 20 tekens. |
-| `twitterHandleUrl` | Tekenreeks | Een websitekoppeling naar de twitter-handgreep van de organisatie. |
+| `twitterHandleUrl` | Tekenreeks | Een websitekoppeling naar de greep van de twitter van de organisatie. |
 | `website` | Tekenreeks | De URL van de website van de organisatie. |
 
 {style="table-layout:auto"}

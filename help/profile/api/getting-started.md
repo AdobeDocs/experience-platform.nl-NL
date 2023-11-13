@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Gebruikend Echte - de eindpunten van het Profiel van de Klant van tijdProfiel, kunt u basisbewerkingen van CRUD tegen de gegevens van het Profiel uitvoeren, zoals het vormen van gegevens verwerkte attributen, de toegang tot entiteiten, het uitvoeren van de gegevens van het Profiel, en het schrappen van onnodige datasets of partijen.
 
-Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het werken met [!DNL Profile] gegevens. Voordat u begint te werken met de [!DNL Real-Time Customer Profile] API, raadpleeg de documentatie voor de volgende services:
+Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het werken met [!DNL Profile] gegevens. Voordat u met de [!DNL Real-Time Customer Profile] API, raadpleeg de documentatie voor de volgende services:
 
-* [[!DNL Real-Time Customer Profile]](../home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-Time Customer Profile]](../home.md): Verstrekt een verenigd, klantenprofiel in echt - tijd die op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Verbeter een beter beeld van uw klant en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Staat u toe om publiek van gegevens van het Profiel van de Klant in real time te bouwen.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Hiermee kunt u een publiek maken op basis van realtime gegevens in het klantprofiel.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan te maken [!DNL Profile] API-eindpunten.

@@ -17,7 +17,7 @@ In dit document worden de structuur en het gebruiksscenario van de veldgroep Ana
 
 >[!NOTE]
 >
->Vanwege de grootte en het aantal herhaalde elementen in deze veldgroep zijn veel van de velden in deze handleiding samengevouwen om ruimte te besparen. Als u de volledige structuur van deze veldgroep wilt bekijken, kunt u [omhoog het in Platform UI kijken](../../ui/explore.md) of bekijk het volledige schema in het [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>Vanwege de grootte en het aantal herhaalde elementen in deze veldgroep zijn veel van de velden in deze handleiding samengevouwen om ruimte te besparen. Als u de volledige structuur van deze veldgroep wilt bekijken, kunt u [opzoeken in de interface van het platform](../../ui/explore.md) of bekijk het volledige schema in het [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Groepsstructuur van veld
 
@@ -44,8 +44,8 @@ De veldgroep bevat één `_experience` object naar een schema, dat zelf één sc
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `eVars` | Object | Een object dat maximaal 250 conversievariabelen vastlegt ([eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html)). De eigenschappen van dit object worden scheefgetrokken `eVar1` tot `eVar250` en accepteert alleen tekenreeksen voor hun gegevenstype. |
-| `hierarchies` | Object | Een object dat maximaal vijf aangepaste hiërarchievariabelen vastlegt ([huurder](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html)). De eigenschappen van dit object worden scheefgetrokken `hier1` tot `hier5`, die zelf objecten met de volgende subeigenschappen zijn:<ul><li>`delimiter`: Het oorspronkelijke scheidingsteken dat is gebruikt om de lijst te genereren die is opgegeven onder `values`.</li><li>`values`: Een gescheiden lijst met namen op hiërarchisch niveau, weergegeven als een tekenreeks.</li></ul> |
-| `listProps` | Object | Een object dat maximaal 75 vastlegt [lijstprofielen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props). De eigenschappen van dit object worden scheefgetrokken `prop1` tot `prop75`, die zelf objecten met de volgende subeigenschappen zijn:<ul><li>`delimiter`: Het oorspronkelijke scheidingsteken dat is gebruikt om de lijst te genereren die is opgegeven onder `values`.</li><li>`values`: Een gescheiden lijst met waarden voor de eigenschap, weergegeven als een tekenreeks.</li></ul> |
+| `hierarchies` | Object | Een object dat maximaal vijf aangepaste hiërarchievariabelen vastlegt ([huurder](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html)). De eigenschappen van dit object worden scheefgetrokken `hier1` tot `hier5`, die zelf objecten met de volgende subeigenschappen zijn:<ul><li>`delimiter`: Het oorspronkelijke scheidingsteken dat wordt gebruikt om de lijst te genereren die wordt geleverd onder `values`.</li><li>`values`: Een gescheiden lijst met namen op hiërarchisch niveau, weergegeven als een tekenreeks.</li></ul> |
+| `listProps` | Object | Een object dat maximaal 75 vastlegt [lijstprofielen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props). De eigenschappen van dit object worden scheefgetrokken `prop1` tot `prop75`, die zelf objecten met de volgende subeigenschappen zijn:<ul><li>`delimiter`: Het oorspronkelijke scheidingsteken dat wordt gebruikt om de lijst te genereren die wordt geleverd onder `values`.</li><li>`values`: Een gescheiden lijst met waarden voor de eigenschap, weergegeven als een tekenreeks.</li></ul> |
 | `lists` | Object | Een object dat maximaal drie vastlegt [lijsten](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html). De eigenschappen van dit object worden scheefgetrokken `list1` tot `list3`. Elk van deze eigenschappen bevat één eigenschap `list` array van [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) gegevenstypen. |
 | `props` | Object | Een object dat maximaal 75 vastlegt [props](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html). De eigenschappen van dit object worden scheefgetrokken `prop1` tot `prop75` en accepteert alleen tekenreeksen voor hun gegevenstype. |
 | `postalCode` | Tekenreeks | Een door de klant opgegeven postcode. |
@@ -61,14 +61,14 @@ De veldgroep bevat één `_experience` object naar een schema, dat zelf één sc
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `firstWeb` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | De informatie met betrekking tot webpagina, koppeling en referentie van de eerste Experience Event voor deze eindgebruiker. |
-| `firstTimestamp` | Geheel | Een Unix-tijdstempel voor de eerste ExperienceEvent voor deze eindgebruiker. |
+| `firstWeb` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | De informatie over webpagina, koppeling en referentie van de eerste Experience Event voor deze eindgebruiker. |
+| `firstTimestamp` | Geheel | Een Unix timestamp voor eerste ExperienceEvent voor deze eindgebruiker. |
 
 ## `environment` {#environment}
 
 `environment` legt informatie vast over de browser en het besturingssysteem die de gebeurtenis hebben geactiveerd.
 
-![milieu](../../images/field-groups/analytics-full-extension/environment.png)
+![milieugebied](../../images/field-groups/analytics-full-extension/environment.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -103,4 +103,4 @@ Elk even object gebruikt de [[!UICONTROL Measure]](../../data-types/measure.md) 
 
 In dit document wordt de structuur en het gebruik van hoofdletters en kleine letters besproken voor de extensieveldgroep Analytics. Raadpleeg voor meer informatie over de veldgroep zelf de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
-Als u deze veldgroep gebruikt om analysegegevens te verzamelen met de SDK van het Web van Adobe Experience Platform, raadpleegt u de handleiding [configureren van een gegevensstroom](../../../datastreams/overview.md) om te leren hoe te om gegevens aan XDM op de serverzijde in kaart te brengen.
+Als u deze veldgroep gebruikt om analysegegevens te verzamelen met de SDK van het Web van Adobe Experience Platform, raadpleegt u de handleiding [configureren van een gegevensstroom](../../../datastreams/overview.md) om te leren hoe te om gegevens aan XDM op de server in kaart te brengen.

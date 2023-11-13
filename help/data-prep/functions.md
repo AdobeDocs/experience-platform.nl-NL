@@ -164,7 +164,7 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| samenvoegen | Retourneert het eerste niet-null-object in een bepaalde array. | <ul><li>INVOER: **Vereist** De array waarvan u het eerste object met een andere waarde dan null wilt zoeken.</li></ul> | kool(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
+| samenvoegen | Retourneert het eerste niet-null-object in een opgegeven array. | <ul><li>INVOER: **Vereist** De array waarvan u het eerste object met een andere waarde dan null wilt zoeken.</li></ul> | kool(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Hiermee wordt het eerste element van de opgegeven array opgehaald. | <ul><li>INVOER: **Vereist** De array waarvan u het eerste element wilt zoeken.</li></ul> | first (INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Hiermee wordt het laatste element van de opgegeven array opgehaald. | <ul><li>INVOER: **Vereist** De array waarvan u het laatste element wilt zoeken.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
 | add_to_array | Voegt elementen aan het einde van de array toe. | <ul><li>ARRAY: **Vereist** De array waaraan u elementen toevoegt.</li><li>WAARDEN: de elementen die u aan de array wilt toevoegen.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&quot;a&quot;, &quot;b&quot;], &quot;c&quot;, &quot;d&quot;) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;] |

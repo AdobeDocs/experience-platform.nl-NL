@@ -35,18 +35,18 @@ De volgende secties bevatten aanvullende informatie die u nodig hebt om verbindi
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Couchbase] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Couchbase] is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [this Couchbase document](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
+| `connectionString` | De verbindingstekenreeks waarmee u verbinding maakt met uw [!DNL Couchbase] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Couchbase] is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Voor meer informatie over het verkrijgen van een verbindingstekenreeks raadpleegt u [this Couchbase document](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Couchbase] is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` eindpunt terwijl het verstrekken van uw [!DNL Couchbase] verificatiereferenties als onderdeel van de aanvraagparameters.
+Om een identiteitskaart van de basisverbinding te creëren, doe een verzoek van de POST aan `/connections` als u uw [!DNL Couchbase] verificatiereferenties als onderdeel van de aanvraagparameters.
 
 **API-indeling**
 
@@ -84,7 +84,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een [!DNL Couchbase] account. Het patroon van de verbindingstekenreeks is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `auth.params.connectionString` | De verbindingstekenreeks waarmee verbinding wordt gemaakt met een [!DNL Couchbase] account. Het patroon van de verbindingstekenreeks is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
 | `connectionSpec.id` | De [!DNL Couchbase] Verbindingsspecificatie-id: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Antwoord**
@@ -103,4 +103,4 @@ Een geslaagde reactie retourneert de details van de nieuwe verbinding, inclusief
 Aan de hand van deze zelfstudie hebt u een [!DNL Couchbase] basisverbinding met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Ontdek de structuur en inhoud van uw gegevenslijsten gebruikend [!DNL Flow Service] API](../../explore/tabular.md)
-* [Maak een gegevensstroom om databasegegevens naar het Platform te brengen met de [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Maak een gegevensstroom om databasegegevens naar het platform te brengen met behulp van de [!DNL Flow Service] API](../../collect/database-nosql.md)

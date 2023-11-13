@@ -22,7 +22,7 @@ ht-degree: 0%
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `_repo` | Een object dat het volgende bevat [!UICONTROL DateTime] velden: <ul><li>`createDate`: De datum en tijd waarop de bron in de gegevensopslag werd gemaakt, bijvoorbeeld wanneer gegevens voor het eerst werden ingevoerd.</li><li>`modifyDate`: De datum en het tijdstip waarop de bron voor het laatst is gewijzigd.</li></ul> |
+| `_repo` | Een object dat het volgende bevat [!UICONTROL DateTime] velden: <ul><li>`createDate`: De datum en tijd waarop de bron in de gegevensopslag is gemaakt, bijvoorbeeld wanneer de gegevens voor het eerst zijn ingevoerd.</li><li>`modifyDate`: De datum en tijd waarop de bron voor het laatst is gewijzigd.</li></ul> |
 | `_id` | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br>Aangezien dit veld door het systeem wordt gegenereerd, wordt er geen expliciete waarde opgegeven tijdens het invoeren van gegevens. U kunt er echter desgewenst nog voor kiezen om uw eigen unieke id-waarden op te geven.<br><br>Het is belangrijk te onderscheiden dat dit veld **niet** een identiteit vertegenwoordigen die verband houdt met een individuele persoon, maar eerder met de gegevens zelf. Identiteitsgegevens betreffende een persoon moeten worden beperkt tot [identiteitsvelden](../schema/composition.md#identity) in plaats daarvan. |
 | `createdByBatchID` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. |
 | `description` | Een beschrijving voor de segmentdefinitie. |

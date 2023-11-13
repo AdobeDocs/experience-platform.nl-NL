@@ -17,9 +17,9 @@ Deze gids toont u hoe te om toestemmingen voor de eigenschappen van de gegevensi
 
 ## Aan de slag
 
-Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een **productprofielbeheerder**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen in een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise Administration guide voor meer informatie.
+Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimale rol die machtigingen kan verlenen of intrekken, is een **productprofielbeheerder**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen in een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel over [administratieve taken](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de Adobe Enterprise administration guide voor meer informatie.
 
-Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie voor meer informatie de [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
+Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Zie de klasse [Gebruikershandleiding voor Admin Consoles](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 ## Beschikbare machtigingen
 
@@ -34,10 +34,10 @@ De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensst
 | Sandboxes | (N.v.t.) | Afhankelijk van de [sandboxen](../sandboxes/home.md) die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingencategorie in Admin Console controleren. |
 | Gegevensmodellering | Schema&#39;s beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [XDM-schema&#39;s (Experience Data Model)](../xdm/home.md). |
 | Gegevensmodellering | Schema&#39;s weergeven | Hiermee verleent u alleen-lezen toegang tot schema&#39;s. |
-| Identity Management | Identiteitsnaamruimten beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [naamruimten](../identity-service/namespaces.md). |
+| Identity Management | Naamruimten beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [naamruimten](../identity-service/namespaces.md). |
 | Identity Management | Identiteitsnaamruimten weergeven | Hiermee wordt alleen-lezen toegang verleend tot naamruimten. |
-| Gegevensverzameling | Gegevensstromen beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [gegevensstromen](../datastreams/overview.md). |
-| Gegevensverzameling | Gegevensstromen weergeven | Biedt alleen-lezen toegang tot gegevensstreams. |
+| Dataverzameling | Gegevensstromen beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [datastreams](../datastreams/overview.md). |
+| Dataverzameling | Gegevensstromen weergeven | Biedt alleen-lezen toegang tot gegevensstreams. |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ Als u toegang wilt tot functies voor gegevensverzameling, moet u alle machtiging
 
 ![Afbeelding die de productkaart voor gegevensverzameling in Admin Console weergeeft](./images/permissions/platform-permission-card.png)
 
-Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor gedetailleerde instructies over het beheren van Platform toestemmingen.
+Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor gedetailleerde instructies over het beheren van de toestemmingen van het Platform.
 
 >[!NOTE]
 >
@@ -97,13 +97,13 @@ U kunt deze machtigingen beheren door u aan te melden bij de Admin Console en de
 
 #### Een productprofiel selecteren of maken
 
-In het volgende scherm wordt een lijst weergegeven met beschikbare productprofielen voor gegevensverzameling onder uw organisatie, waarbij het standaardprofiel **[!DNL Default Data Collection All Access]**. U kunt desgewenst het standaardproductprofiel bewerken of u kunt **[!UICONTROL New Profile]** om er een te maken. Als u veelvoudige rollen of gebruikersgroepen in uw organisatie hebt die verschillende niveaus van toegang vereisen, zou u een afzonderlijk productprofiel voor elk van hen moeten creëren.
+In het volgende scherm ziet u een lijst met beschikbare productprofielen voor gegevensverzameling onder uw organisatie, waarbij het standaardprofiel **[!DNL Default Data Collection All Access]**. U kunt desgewenst het standaardproductprofiel bewerken of u kunt **[!UICONTROL New Profile]** om er een te maken. Als u veelvoudige rollen of gebruikersgroepen in uw organisatie hebt die verschillende niveaus van toegang vereisen, zou u een afzonderlijk productprofiel voor elk van hen moeten creëren.
 
 ![Afbeelding met de productprofielen voor gegevensverzameling in Admin Console](./images/permissions/new-profile.png)
 
 Nadat u een productprofiel hebt geselecteerd of gemaakt, kunt u de opdracht **[!UICONTROL Edit]** Te starten pictogrammen [bewerken, machtigingen](#edit-permissions) voor het profiel, of selecteer **[!UICONTROL Users]** te beginnen tab [gebruikers toewijzen](#assign-users) naar het profiel.
 
-![Afbeelding met het tabblad Machtigingen voor een Admin Console met productprofielen](./images/permissions/edit-permission-categories.png)
+![Afbeelding met het tabblad Machtigingen voor een Admin Console met het productprofiel](./images/permissions/edit-permission-categories.png)
 
 #### Machtigingen voor het productprofiel bewerken {#edit-permissions}
 

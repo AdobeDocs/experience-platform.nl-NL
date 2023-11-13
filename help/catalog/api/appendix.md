@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Catalogusservice;Catalogus api;appendix
 solution: Experience Platform
-title: Bijlage Catalog Service API-handleiding
+title: Bijlage Catalog Service API Guide
 description: Dit document bevat aanvullende informatie die u helpt bij het werken met de Catalog-API in Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
@@ -103,10 +103,10 @@ Als de versies niet overeenkomen (het object is gewijzigd door een ander proces 
 
 ### Pragma
 
-Soms wilt u een object valideren zonder de informatie op te slaan. Met de `Pragma` header met een waarde van `validate-only` Hiermee kunt u POST- of PUT-aanvragen alleen verzenden voor validatiedoeleinden, zodat wijzigingen in de gegevens niet worden voortgezet.
+Het kan voorkomen dat u een object wilt valideren zonder de informatie op te slaan. Met de `Pragma` header met een waarde van `validate-only` Hiermee kunt u POST- of PUT-aanvragen alleen verzenden voor validatiedoeleinden, zodat wijzigingen in de gegevens niet worden voortgezet.
 
 ## Gegevenscompressie
 
 Compressie is een [!DNL Experience Platform] service die gegevens uit kleine bestanden samenvoegt in grotere bestanden zonder gegevens te wijzigen. Om prestatieredenen is het soms nuttig om een set kleine bestanden te combineren in grotere bestanden, zodat u sneller toegang hebt tot gegevens wanneer u hierom wordt gevraagd.
 
-Wanneer de bestanden in een geneste batch zijn gecomprimeerd, wordt de bijbehorende [!DNL Catalog] object wordt bijgewerkt voor controledoeleinden.
+Wanneer de bestanden in een geneste batch zijn gecomprimeerd, wordt de bijbehorende [!DNL Catalog] -object wordt bijgewerkt voor controledoeleinden.

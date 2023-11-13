@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # [!DNL Mixpanel]
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een externe analysetoepassing. Tot de ondersteuning van analyseproviders behoren: [!DNL Mixpanel].
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een analyseprogramma van derden. Tot de ondersteuning van analyseproviders behoren: [!DNL Mixpanel].
 
 [[!DNL Mixpanel]](https://www.mixpanel.com) is een hulpprogramma voor productanalyse waarmee u gegevens kunt vastleggen over de manier waarop gebruikers met een digitaal product werken. Met Mixpanel kunt u deze productgegevens analyseren aan de hand van eenvoudige, interactieve rapporten, waarmee u met een paar klikken de gegevens kunt opvragen en visualiseren.
 
@@ -26,11 +26,11 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 ## Verifieer uw [!DNL Mixpanel] account
 
-In deze sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd om uw account te verifiëren en uw account [!DNL Mixpanel] gegevens naar Platform.
+In deze sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd om uw account te verifiëren en uw account [!DNL Mixpanel] gegevens naar platform.
 
 Om een [!DNL Mixpanel] bronverbinding en gegevensstroom, u moet eerst een geldige [!DNL Mixpanel] account. Als u geen geldige [!DNL Mixpanel] account, zie de [register van Mixpanel](https://mixpanel.com/register/) pagina om uw account te maken.
 
-Wanneer u een [!DNL Mixpanel] account, naar de [!DNL Project Details] in de [!DNL Project Seettings] pagina van de [!DNL Mixpanel] UI om uw projectidentiteitskaart terug te winnen en uw timezone te vormen.
+Als u eenmaal een [!DNL Mixpanel] account, navigeer naar de [!DNL Project Details] in de [!DNL Project Seettings] pagina van de [!DNL Mixpanel] UI om uw projectidentiteitskaart terug te winnen en uw timezone te vormen.
 
 ![mixpanel-project-settings](../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png)
 
@@ -48,11 +48,11 @@ Tot slot creeer een Platform [schema](../../../xdm/schema/composition.md) vereis
 
 ## Verbinden [!DNL Mixpanel] naar Platform met API&#39;s
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Mixpanel] Platforms met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over de verbinding [!DNL Mixpanel] naar Platform met API&#39;s of de gebruikersinterface:
 
 * [Een bronverbinding en een gegevensstroom maken voor [!DNL Mixpanel] de Flow Service API gebruiken](../../tutorials/api/create/analytics/mixpanel.md)
 
-## Verbinden [!DNL Mixpanel] naar Platform met behulp van de gebruikersinterface
+## Verbinden [!DNL Mixpanel] naar Platform met behulp van UI
 
 * [Een [!DNL Mixpanel] bronverbinding in de gebruikersinterface](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Maak een gegevensstroom voor een bronverbinding van de klantensucces in UI](../../tutorials/ui/dataflow/analytics.md)

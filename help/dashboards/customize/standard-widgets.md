@@ -33,7 +33,7 @@ Deze gids vereist toegang tot [!UICONTROL Widget library] in Experience Platform
 
 ## Aan de slag met standaardwidgets {#standard-widgets}
 
-In de widgetbibliotheek **[!UICONTROL Standard]** tab bevat widgets die door Adobe zijn gemaakt, en die zijn onderverdeeld in categorieën op basis van de beschikbare dashboards.
+In de widgetbibliotheek **[!UICONTROL Standard]** tab bevat widgets die zijn gemaakt door Adobe, onderverdeeld in categorieën op basis van de beschikbare dashboards.
 
 De geselecteerde categorie komt overeen met het dashboard waaruit u de widgetbibliotheek hebt ingevoerd. Met andere woorden, als u de widgetbibliotheek hebt geselecteerd vanuit de [!UICONTROL Profiles] dashboard, het [!UICONTROL Profiles] wordt geselecteerd en de andere categorieën worden grijs weergegeven.
 
