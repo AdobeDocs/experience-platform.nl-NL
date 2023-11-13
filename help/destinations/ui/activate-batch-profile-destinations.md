@@ -4,7 +4,7 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
 workflow-type: tm+mt
 source-wordcount: '3620'
 ht-degree: 0%
@@ -30,7 +30,7 @@ In dit artikel wordt uitgelegd welke workflow vereist is om het publiek te activ
 
 Als u een publiek naar een bestemming wilt activeren, moet u [verbonden met een bestemming](./connect-destination.md). Als u dat nog niet hebt gedaan, gaat u naar de [doelcatalogus](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
 
-### Ondersteunde bestandsindelingen voor export {#supported-file-formats-export}
+## Ondersteunde bestandsindelingen voor export {#supported-file-formats-export}
 
 De volgende bestandsindelingen worden ondersteund bij het exporteren van soorten publiek:
 
