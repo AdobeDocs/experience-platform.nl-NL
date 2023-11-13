@@ -3,9 +3,9 @@ title: Marketo Measure Ultimate-bestemming
 description: Leer hoe u verbinding maakt met en gegevens activeert voor de Marketo Measure Ultimate-bestemming.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 > 
 >Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
-Lees de [(bètaversie) Gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md) zelfstudie voor uitgebreide instructies over het exporteren van datasets naar deze bestemming.
+Lees de [Gegevensbestanden exporteren](/help/destinations/ui/export-datasets.md) zelfstudie voor uitgebreide instructies over het exporteren van datasets naar deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 

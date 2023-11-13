@@ -4,9 +4,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3559'
+source-wordcount: '3620'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,18 @@ In dit artikel wordt uitgelegd welke workflow vereist is om het publiek te activ
 ## Vereisten {#prerequisites}
 
 Als u een publiek naar een bestemming wilt activeren, moet u [verbonden met een bestemming](./connect-destination.md). Als u dat nog niet hebt gedaan, gaat u naar de [doelcatalogus](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+
+### Ondersteunde bestandsindelingen voor export {#supported-file-formats-export}
+
+De volgende bestandsindelingen worden ondersteund bij het exporteren van soorten publiek:
+
+* CSV
+* JSON
+* Parquet
+
+Houd er rekening mee dat u bij het exporteren van CSV-bestanden flexibeler kunt omgaan met de structuur die u aan geëxporteerde bestanden wilt geven. Meer informatie over [bestandsindelingconfiguratie voor CSV-bestanden](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+Selecteer de gewenste bestandsindeling voor het exporteren wanneer [verbinding maken met het doel dat op een bestand is gebaseerd](/help/destinations/ui/connect-destination.md).
 
 ## Kies uw bestemming {#select-destination}
 
@@ -532,7 +544,7 @@ Als u tevreden bent met de selectie en er zijn geen beleidsovertredingen vastges
 
 ## Activering van publiek controleren {#verify}
 
-Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Experience Platform een `.csv` in de opslaglocatie die u hebt opgegeven. Er wordt een nieuw bestand verwacht dat op uw opslaglocatie wordt gemaakt volgens het schema dat u instelt in de workflow. De standaardbestandsindeling wordt hieronder weergegeven, maar u kunt [de componenten van de bestandsnaam bewerken](#file-names):
+Bij het exporteren van soorten publiek naar cloudopslagbestemmingen maakt Adobe Experience Platform een `.csv`, `.json`, of `.parquet` in de opslaglocatie die u hebt opgegeven. Er wordt een nieuw bestand verwacht dat op uw opslaglocatie wordt gemaakt volgens het schema dat u instelt in de workflow. De standaardbestandsindeling wordt hieronder weergegeven, maar u kunt [de componenten van de bestandsnaam bewerken](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Als u bijvoorbeeld een dagelijkse exportfrequentie selecteert, kunnen de bestanden die u op drie opeenvolgende dagen ontvangt er als volgt uitzien:

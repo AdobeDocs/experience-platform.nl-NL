@@ -2,9 +2,9 @@
 title: Configureerbare en algemene exportinstellingen in doelen
 description: Leer welke de uitvoermontages in bestemmingen configureerbaar op een bestemmingsniveau zijn en die vast zijn en niet kunnen worden uitgegeven.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Meer informatie over de verschillende opties en stappen in de activeringsworkflo
 * [Activeer publieksgegevens aan ondernemingsbestemmingen](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [De publieksgegevens van de activering aan het stromen publiek de uitvoerbestemmingen](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Bestanden op aanvraag exporteren naar batchbestemmingen](/help/destinations/ui/export-file-now.md)
-* [(bèta) Gegevenssets exporteren naar cloudopslagbestemmingen](/help/destinations/ui/export-datasets.md)
+* [Gegevenssets exporteren naar cloudopslagbestemmingen](/help/destinations/ui/export-datasets.md)
 
 ## Volgende stappen {#next-steps}
 
