@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toepassingen voor Privacy Service en Experience Cloud
 description: Dit document bevat een referentie voor het configureren van verschillende Experiencen Cloud voor bewerkingen met betrekking tot privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b73b6f1005dc8a9e647f706a1e98259131b17478
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '912'
 ht-degree: 7%
 
 ---
@@ -54,7 +54,6 @@ Hieronder volgt een lijst met [!DNL Experience Cloud] toepassingen die niet zijn
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Een overzicht van hoe een beheerder van de klantenprivacy of AEM beheerder GDPR- verzoeken kan behandelen. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Stappen voor het maken van GDPR toegang en schrappingsverzoeken gebruikend Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Zorg ervoor dat uw Magento&#39;s Commerce voldoen aan de vereisten van specifieke privacywetgeving. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Leer hoe privacyregels gelden voor Marketo. |
 | [Tags in Adobe Experience Platform](../tags/ui/client-side/consent.md) | Hoe ontwikkelaars uitbreidingen en de regelbouwer kunnen gebruiken om opt-in en opt-out oplossingen te bepalen. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Leer hoe Workfront persoonlijke gegevens verzamelt en hoe een betrokkene een privacyaanvraag kan indienen via een formulier. |
 

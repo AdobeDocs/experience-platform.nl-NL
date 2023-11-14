@@ -2,9 +2,9 @@
 title: Gebruik van batch-query's controleren
 description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van de Data Distiller-licentie van uw organisatie.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: a3a2377a873c0e54ba43a60e28f922e0cb9e9d01
+source-git-commit: f33629d73e9bc7273e6ee5170294618f3e9731a8
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ De [!UICONTROL Compute hours] Metrisch is slechts van toepassing op klanten met 
 
 >[!NOTE]
 >
->**De gegevens zijn beschikbaar met beperkingen**: De gegevens beginnen vanaf 1 oktober 2023 zonder trends.<br>De **backfill** van gegevens vanaf de begindatum van uw contract is een werk in uitvoering. Naar verwachting zal dit tegen het einde van het kalenderjaar beschikbaar zijn.
+>**De [!UICONTROL Compute hours] gegevens zijn beschikbaar met beperkingen**: De gegevens beginnen vanaf 1 oktober 2023 zonder trends.<br>De **backfill** van gegevens vanaf de begindatum van uw contract is een werk in uitvoering. Naar verwachting zal deze tegen het einde van het kalenderjaar beschikbaar zijn.
 
 ![Het dashboard voor licentiegebruik met de metrische aanduiding voor computeruren.](../images/data-distiller/compute-hours.png)
 
