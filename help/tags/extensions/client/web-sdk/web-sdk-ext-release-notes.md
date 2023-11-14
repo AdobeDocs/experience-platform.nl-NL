@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1794'
+source-wordcount: '1821'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,15 @@ ht-degree: 0%
 
 In dit document worden de releaseopmerkingen voor de tagextensie Adobe Experience Platform Web SDK besproken. Voor de meest recente releaseopmerkingen over de SDK zelf raadpleegt u de [Opmerkingen bij de release Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Versie 2.21.0 - 1 november 2023
+## Versie 2.21.3 - 10 november 2023
+
+Bevat versie 2.19.1 van het Web SDK van Adobe Experience Platform.
+
+**Oplossingen en verbeteringen**
+
+* Probleem verholpen waarbij de array proposities beschikbaar was in `Send event complete` gebeurtenissen waren altijd leeg.
+
+## Versie 2.21.2 - 1 november 2023
 
 **Nieuwe functies**
 
