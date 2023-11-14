@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -69,5 +69,6 @@ Met de verbindingsregels van de identiteitsgrafiek kunt u identiteitskaart van C
 Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
 
 * [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Identiteitsservice en realtime klantprofiel](identity-and-profile.md)
 * [Logica voor identiteitskoppeling](./identity-linking-logic.md)

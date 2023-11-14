@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Gids Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 51bb84f530ed941a67c4a4939e153f516d96ec25
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '132'
 ht-degree: 21%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 21%
    - [Identiteitsvelden definiëren in de gebruikersinterface](ui/label-identities.md)
 - [Koppelingsregels voor identiteitsgrafiek] {#identity-graph-linking-rules}
    - [Overzicht van functies](./identity-graph-linking-rules/overview.md)
+   - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
    - [Voorbeeldscenario&#39;s](./identity-graph-linking-rules/example-scenarios.md)
    - [Identiteitsservice en realtime klantprofiel](./identity-graph-linking-rules/identity-and-profile.md)
    - [Logica voor identiteitskoppeling](./identity-graph-linking-rules/identity-linking-logic.md)

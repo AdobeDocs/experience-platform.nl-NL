@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 0%
 ## Inhoudsopgave
 
 * [Overzicht](./overview.md)
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Voorbeeldscenario&#39;s](./example-scenarios.md)
 * [Identiteitsservice en realtime klantprofiel](identity-and-profile.md)
 * [Logica voor identiteitskoppeling](./identity-linking-logic.md)
@@ -39,13 +40,12 @@ Lees het document over meer informatie over gebruiksscenario&#39;s voor koppelin
 
 Met de regels voor identiteitsgrafiek kunt u:
 
-* Configureer limieten om te voorkomen dat twee verschillende personen-id&#39;s worden samengevoegd in één identiteitsgrafiek, zodat één identiteitsgrafiek slechts één persoon vertegenwoordigt.
-   * De grenzen die u vormt worden dan afgedwongen door algoritme van de identiteitsoptimalisering.
-* Configureer prioriteiten om onlinegebeurtenissen die door de geverifieerde persoon worden uitgevoerd, aan een bepaalde gebruiker te koppelen.
+* Maak één identiteitsgrafiek/samengevoegd profiel voor elke gebruiker door unieke naamruimten (limieten) te configureren. Hierdoor worden twee verschillende personen-id&#39;s niet samengevoegd tot één identiteitsgrafiek.
+* Online geverifieerde gebeurtenissen aan de persoon koppelen door prioriteiten te configureren
 
 ### Limieten
 
-U kunt naamruimtegrenzen gebruiken om het maximumaantal identiteiten te definiëren dat in een grafiek kan bestaan op basis van een bepaalde naamruimte. U kunt bijvoorbeeld instellen dat de grafiek maximaal één identiteit heeft met een CRM-id-naamruimte, waardoor het samenvoegen van twee verschillende personen-id&#39;s binnen dezelfde grafiek wordt voorkomen.
+Een unieke naamruimte is een id die een individu vertegenwoordigt, zoals CRM-id, aanmeldings-id en gehashte e-mail. Als een naamruimte als uniek is aangewezen, kan een grafiek slechts één identiteit met die naamruimte hebben (`limit=1`). Hierdoor wordt voorkomen dat twee verschillende personen-id&#39;s in dezelfde grafiek worden samengevoegd.
 
 * Als een limiet niet is geconfigureerd, kan dit leiden tot ongewenste samenvoegingen van grafieken, zoals twee identiteiten met een CRM-id-naamruimte in een grafiek.
 * Als een limiet niet is geconfigureerd, kan de grafiek zo veel naamruimten toevoegen als nodig is zolang de grafiek zich binnen de hulplijnen bevindt (50 identiteiten/grafiek).
@@ -60,6 +60,8 @@ Hieronder volgt een lijst met implicaties van het algoritme voor het koppelen va
 * De ECID wordt gekoppeld aan de laatst geverifieerde gebruiker als aan de volgende voorwaarden is voldaan:
    * Als CRM-id&#39;s worden samengevoegd met ECID (gedeeld apparaat).
    * Als de grenzen aan enkel één identiteitskaart van CRM worden gevormd.
+
+Lees het document op [algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md).
 
 ### Prioriteit
 
@@ -106,6 +108,7 @@ Als de volgende ervaringsgebeurtenissen in Experience Platform worden opgenomen,
 
 Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
 
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels](./example-scenarios.md)
 * [Identiteitsservice en realtime klantprofiel](identity-and-profile.md)
 * [Logica voor identiteitskoppeling](./identity-linking-logic.md)

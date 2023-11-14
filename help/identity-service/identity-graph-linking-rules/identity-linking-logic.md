@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '794'
 ht-degree: 2%
 
 ---
@@ -150,5 +150,6 @@ At `timestamp=4`, gebruikt een klant dezelfde tablet, meldt u zich aan bij zijn 
 Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
 
 * [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels](./example-scenarios.md)
 * [Identiteitsservice en realtime klantprofiel](identity-and-profile.md)

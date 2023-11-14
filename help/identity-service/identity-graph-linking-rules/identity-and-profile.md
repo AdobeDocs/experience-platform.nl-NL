@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -74,5 +74,6 @@ De Dienst van de identiteit neemt slechts gebieden op die als identiteit worden 
 Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
 
 * [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels](./example-scenarios.md)
 * [Logica voor identiteitskoppeling](./identity-linking-logic.md)
