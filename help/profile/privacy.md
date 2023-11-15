@@ -5,9 +5,9 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-Time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1728'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,14 @@ Voor meer informatie over naamruimten in [!DNL Experience Platform], zie de [Ove
 
 ## Verzoeken indienen {#submit}
 
-In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voor [!DNL Real-Time Customer Profile] met de [!DNL Privacy Service] API of UI. Voordat u deze secties leest, wordt u ten zeerste aangeraden de [Privacy Service-API](../privacy-service/api/getting-started.md) of [UI PRIVACY SERVICE](../privacy-service/ui/overview.md) documentatie voor volledige stappen over hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om ingediende gegevens van de gebruikersidentiteit in verzoek te formatteren lading.
+In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voor [!DNL Real-Time Customer Profile] met de [!DNL Privacy Service] API of UI. Voordat u deze secties leest, moet u de [Privacy Service-API](../privacy-service/api/getting-started.md) of [UI PRIVACY SERVICE](../privacy-service/ui/overview.md) documentatie. Deze documenten bevatten volledige stappen voor het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen voor nuttige taken.
 
 >[!IMPORTANT]
 >
 >Privacy Service kan alleen verwerken [!DNL Profile] gegevens die een samenvoegbeleid gebruiken dat geen identiteitsstitching uitvoert. Zie de sectie over [beleidsbeperkingen samenvoegen](#merge-policy-limitations) voor meer informatie .
 >
->Houd er rekening mee dat het voltooien van een privacyaanvraag veel tijd in beslag kan nemen **kan** worden gegarandeerd. Als er wijzigingen optreden in uw [!DNL Profile] terwijl een verzoek nog wordt verwerkt, kan ook niet worden gegarandeerd of die gegevens al dan niet worden verwerkt.
+>Merk op dat de privacyverzoeken asynchroon binnen de regelgevende vereisten worden verwerkt, en de hoeveelheid tijd die zij om nemen te voltooien kan variëren. Als er wijzigingen optreden in uw [!DNL Profile] gegevens terwijl een verzoek nog wordt verwerkt, is het niet gegarandeerd dat die inkomende verslagen ook in dat verzoek zullen worden verwerkt. Alleen profielen die zich op het moment dat de privacytaak wordt aangevraagd in het datumpomeer of de profielopslag bevinden, kunnen worden verwijderd. Als u profielgegevens opgeeft die betrekking hebben op het onderwerp van een verwijderingsverzoek tijdens de verwijdertaak, is het niet gegarandeerd dat alle profielfragmenten worden verwijderd.
+>Het is uw verantwoordelijkheid om op de hoogte te zijn van binnenkomende gegevens in Platform of de Dienst van het Profiel op het tijdstip van een verwijderingsverzoek, aangezien die gegevens in uw verslagopslag zullen worden opgenomen. U moet voorzichtig zijn met het opnemen van gegevens die zijn verwijderd of worden verwijderd.
 
 ### De API gebruiken
 
@@ -222,6 +223,6 @@ Privacy Service kan alleen verwerken [!DNL Profile] gegevens die een samenvoegbe
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u kennis gemaakt met de belangrijke concepten die betrekking hebben op het verwerken van privacyverzoeken in [!DNL Experience Platform]. Om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken, moet u de documentatie in deze handleiding blijven lezen.
+Door dit document te lezen, hebt u kennis gemaakt met de belangrijke concepten die betrekking hebben op het verwerken van privacyverzoeken in [!DNL Experience Platform]. Als u meer inzicht wilt in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken, blijft u de documentatie in deze handleiding lezen.
 
 Voor informatie over het verwerken van privacyverzoeken voor [!DNL Platform] middelen die niet door [!DNL Profile], zie het document op [verwerking van privacyverzoeken in het datumpigment](../catalog/privacy.md).
