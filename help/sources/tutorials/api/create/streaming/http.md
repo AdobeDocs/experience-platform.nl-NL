@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maak streamingverbinding;api-hulplijn;zelfstudie;maak een streamingverbinding;streaming opname;opname;
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
-description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API
+description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
+source-git-commit: f94a51e22731977e120351c3b3598570666a624d
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 De Flow Service wordt gebruikt om klantgegevens van verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om u door de stappen te lopen om een het stromen verbinding tot stand te brengen gebruikend [!DNL Flow Service] API.
+Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) om door de stappen te lopen u tot een het stromen verbinding leidt gebruikend [!DNL Flow Service] API.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert ervaringsgegevens.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert ervaringsgegevens.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Biedt een uniform, consumentenprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
 
 Bovendien, vereist het creëren van een het stromen verbinding u om een doelXDM schema en een dataset te hebben. Lees de zelfstudie voor meer informatie over het maken van deze [streaming recordgegevens](../../../../../ingestion/tutorials/streaming-record-data.md) of de zelfstudie [streaming tijdreeksgegevens](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 ### Platform-API&#39;s gebruiken
 
-Zie de handleiding voor informatie over hoe u aanroepen naar Platform-API&#39;s kunt uitvoeren [aan de slag met Platform-API&#39;s](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [aan de slag met platform-API&#39;s](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -36,9 +36,9 @@ Een basisverbinding geeft de bron aan en bevat de informatie die nodig is om de 
 
 ### Niet-geverifieerde verbinding
 
-Niet-geverifieerde verbindingen zijn de standaardstreamingverbindingen die u kunt maken wanneer u gegevens wilt streamen naar het Platform.
+Niet-geverifieerde verbindingen zijn de standaardstreamingverbindingen die u kunt maken wanneer u gegevens wilt streamen naar Platform.
 
-Als u een niet-geverifieerde basisverbinding wilt maken, vraagt u een POST om `/connections` eindpunt terwijl het verstrekken van een naam voor uw verbinding, het gegevenstype, en identiteitskaart van de de verbindingsspecificatie van HTTP API. Deze id is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Als u een niet-geverifieerde basisverbinding wilt maken, vraagt u een POST om `/connections` eindpunt terwijl het verstrekken van een naam voor uw verbinding, het gegevenstype, en identiteitskaart van de HTTP API verbindingsspecificatie. Deze id is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **API-indeling**
 
@@ -130,9 +130,9 @@ Een geslaagde reactie retourneert HTTP-status 201 met gegevens over de nieuwe ve
 
 ### Geverifieerde verbinding
 
-De voor authentiek verklaarde verbindingen zouden moeten worden gebruikt wanneer u tussen verslagen moet onderscheiden die uit vertrouwde op en niet-vertrouwde op bronnen komen. Gebruikers die gegevens met PII (Personeel Identified Information) willen verzenden, moeten een geverifieerde verbinding maken bij het streamen van gegevens naar het Platform.
+De voor authentiek verklaarde verbindingen zouden moeten worden gebruikt wanneer u tussen verslagen moet onderscheiden die uit vertrouwde op en niet-vertrouwde op bronnen komen. Gebruikers die gegevens met PII (Personeel Identified Information) willen verzenden, moeten een geverifieerde verbinding maken bij het streamen van gegevens naar Platform.
 
-Als u een geverifieerde basisverbinding wilt maken, moet u de opdracht `authenticationRequired` parameter in uw verzoek en specificeer zijn waarde als `true`. Tijdens deze stap kunt u ook een bron-id opgeven voor uw geverifieerde basisverbinding. Deze parameter is optioneel en gebruikt dezelfde waarde als de parameter `name` kenmerk, als dit niet wordt opgegeven.
+Als u een geverifieerde basisverbinding wilt maken, moet u de opdracht `authenticationRequired` parameter in uw verzoek en specificeer zijn waarde als `true`. Tijdens deze stap kunt u ook een bron-id opgeven voor uw geverifieerde basisverbinding. Deze parameter is optioneel en gebruikt dezelfde waarde als de `name` kenmerk, als dit niet wordt opgegeven.
 
 
 **API-indeling**
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.sourceId` | Een extra id die kan worden gebruikt bij het maken van een geverifieerde basisverbinding. Deze parameter is optioneel en gebruikt dezelfde waarde als de parameter `name` kenmerk, als dit niet wordt opgegeven. |
+| `auth.params.sourceId` | Een extra id die kan worden gebruikt bij het maken van een geverifieerde basisverbinding. Deze parameter is optioneel en gebruikt dezelfde waarde als de `name` kenmerk, als dit niet wordt opgegeven. |
 | `auth.params.authenticationRequired` | Deze parameter geeft aan of verificatie vereist is voor de streamingverbinding. Indien `authenticationRequired` is ingesteld op `true` dan moet de authentificatie voor de het stromen verbinding worden verstrekt. Indien `authenticationRequired` is ingesteld op `false` dan wordt de authentificatie niet vereist. |
 
 **Antwoord**
@@ -332,9 +332,9 @@ Een geslaagde reactie retourneert HTTP-status 201 met gedetailleerde informatie 
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van de Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doel-XDM-schema kan worden gemaakt door een verzoek van de POST uit te voeren naar de [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Een doelXDM schema kan tot stand worden gebracht door een POST verzoek aan te voeren [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie de zelfstudie op [een schema maken met de API](../../../../../xdm/api/schemas.md).
 
@@ -342,7 +342,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 Een doeldataset kan tot stand worden gebracht door een verzoek van de POST aan [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), op voorwaarde dat de id van het doelschema zich binnen de payload bevindt.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met behulp van de API](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [een gegevensset maken met de API](../../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target}
 
@@ -398,7 +398,7 @@ Een geslaagde reactie retourneert HTTP-status 201 met details van de nieuwe doel
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` van het [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
+Als u een toewijzingenset wilt maken, vraagt u een POST aan de `mappingSets` het eindpunt van de [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) terwijl u uw doel-XDM-schema aanbiedt `$id` en de details van de toewijzingssets die u wilt maken.
 
 **API-indeling**
 
@@ -443,7 +443,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze id is later vereist om een gegevensstroom te maken.
+Een geslaagde reactie retourneert details van de nieuwe toewijzing inclusief de unieke id (`id`). Deze id is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -562,10 +562,9 @@ Een geslaagde reactie retourneert HTTP-status 201 met details over de nieuwe geg
 }
 ```
 
-
 ## Post gegevens die aan Platform moeten worden opgenomen {#ingest-data}
 
-Nu u uw stroom hebt gecreeerd, kunt u uw JSON bericht naar het het stromen eindpunt verzenden u eerder creeerde.
+Nu u uw stroom hebt gecreeerd, kunt u uw JSON- bericht naar het het stromen eindpunt verzenden u eerder creeerde.
 
 **API-indeling**
 
@@ -576,6 +575,7 @@ POST /collection/{INLET_URL}
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{INLET_URL}` | De URL van het streamingeindpunt. U kunt deze URL ophalen door een GET-aanvraag in te dienen bij de `/connections` eindpunt terwijl het verstrekken van uw identiteitskaart van de basisverbinding. |
+| `{FLOW_ID}` | De id van de HTTP API-streaminggegevens. |
 
 **Verzoek**
 
@@ -584,9 +584,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -625,9 +624,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB Onbewerkte gegevens]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {
@@ -661,7 +659,7 @@ Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgen
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{BASE_CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
-| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
+| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan de Adobe de levenscyclus van deze record volgen via verschillende systemen en met foutopsporing. |
 | `receivedTimeMs` | Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
 
 
@@ -669,15 +667,15 @@ Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgen
 
 Door deze zelfstudie te volgen, hebt u een het stromen verbinding van HTTP gecreeerd, toelatend u om het stromen eindpunt te gebruiken om gegevens in Platform in te voeren. Voor instructies voor het maken van een streamingverbinding in de gebruikersinterface leest u de [een zelfstudie over streamingverbindingen maken](../../../ui/create/streaming/http.md).
 
-Lees de zelfstudie voor meer informatie over het streamen van gegevens naar het Platform. [streaming tijdreeksgegevens](../../../../../ingestion/tutorials/streaming-time-series-data.md) of de zelfstudie [streaming recordgegevens](../../../../../ingestion/tutorials/streaming-record-data.md).
+Lees de zelfstudie voor meer informatie over het streamen van gegevens naar Platform. [streaming tijdreeksgegevens](../../../../../ingestion/tutorials/streaming-time-series-data.md) of de zelfstudie [streaming recordgegevens](../../../../../ingestion/tutorials/streaming-record-data.md).
 
-## Aanhangsel
+## Bijlage
 
 Deze sectie bevat aanvullende informatie over het maken van streamingverbindingen met de API.
 
 ### Berichten verzenden naar een geverifieerde streamingverbinding
 
-Als verificatie is ingeschakeld voor een streamingverbinding, moet de client het volgende toevoegen: `Authorization` aan hun verzoek.
+Als verificatie is ingeschakeld voor een streamingverbinding, moet de client het volgende toevoegen `Authorization` aan hun verzoek.
 
 Als de `Authorization` header is not present, or an invalid/expired access token is sent, an HTTP 401 Unauthorised response will be returned, with a similar response as below:
 
