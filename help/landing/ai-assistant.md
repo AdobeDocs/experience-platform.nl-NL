@@ -5,9 +5,9 @@ badge: Alfa
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 09d17f6dad7bd7b1eda491e4fbd92e298243f3c3
+source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
 workflow-type: tm+mt
-source-wordcount: '2516'
+source-wordcount: '2563'
 ht-degree: 0%
 
 ---
@@ -63,19 +63,19 @@ Selecteer de **[!UICONTROL Assistant icon]** van de koptekst naar het deelvenste
 
 ![De homepage van UI van het Experience Platform met het Hulp geselecteerde pictogram.](./images/ai-assistant/ai-assistant.png)
 
-+++Onderliggende modus gebruiken
+<!-- +++Use immersive mode
 
-Te gebruiken [!DNL Immersive mode] Selecteer het focuspictogram in de koptekstnavigatie van de assistent.
+To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
-![selectieve onderdompeling](./images/ai-assistant/select-immersive.png)
+![select-immersive](./images/ai-assistant/select-immersive.png)
 
-In het midden van het scherm verschijnt een speciale pop-upinterface voor de assistent.
+A dedicated pop-up interface for Assistant appears at the center of your screen.
 
-![dompelmodus](./images/ai-assistant/immersive-mode.png)
+![immersive-mode](./images/ai-assistant/immersive-mode.png)
 
 +++
 
-Van hier, kunt u uw vraag in het tekstvakje en vraagMedewerker voor concepten betreffende gegevens of publiek invoeren. U kunt ook vragen stellen over uw gegevensobjecten om beter te begrijpen hoe u deze kunt gebruiken voor uw respectievelijke gebruiksscenario.
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### Voorbeeld: gebruik de assistent om het maken van het schema te versnellen
 
@@ -97,25 +97,45 @@ Een bepaald antwoord biedt hyperlinks naar entiteiten waarnaar wordt verwezen. S
 
 De Medewerker verstrekt u een manier om uw antwoord te bevestigen door zijn bron te bekijken. De verbindingen aan de documentatie worden verstrekt voor concept vragen, terwijl de vragen van het gegevensgebruik met een SQL vraag kunnen worden geverifieerd die aantoont hoe het antwoord werd gegevens verwerkt.
 
-![Opties die de assistent na het retourneren van een antwoord biedt.](./images/ai-assistant/options-post-answer.png)
-
-#### Verwante suggesties
-
-U kunt ook dieper in het onderwerp van uw vraag duiken door één van de verwante suggesties te selecteren die Medewerker verstrekt.
-
-![Verwante suggesties.](./images/ai-assistant/related-suggestions.png)
+![Opties die de assistent na het retourneren van een antwoord biedt.](./images/ai-assistant/options.png)
 
 #### Vervolgvraag
 
++++Selecteer om een voorbeeld van een vervolgvraag te bekijken
+
 U kunt meer over een bepaald onderwerp leren door een vervolgvraag te stellen. In het volgende voorbeeld, wordt de Medewerker gevraagd hoe eventType in segmentatie kan worden gebruikt.
 
-![Een vervolgvraag en antwoord die op de Medewerker voor Experience Platform worden getoond.](./images/ai-assistant/follow-up-answer.png)
+![Een vervolgvraag en antwoord die op de Medewerker voor Experience Platform worden getoond.](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### Vraag over gegevensgebruik
 
++++Selecteer om een voorbeeld van een vraag over gegevensgebruik te bekijken
+
 U kunt ook vragen stellen aan de assistent over uw gegevensgebruik. Wanneer u informatie invraagt over het gebruik van gegevens, moet u zich in een actieve zandbak bevinden opdat de Medewerker uw vraag beantwoordt.
 
+Voor reacties die informatie over gegevensgebruik bevatten, biedt Assistant koppelingen naar entiteiten in kwestie. Daarnaast geeft Assistant uitleg over de manier waarop het antwoord is berekend.
+
 ![Een vraag over gegevensgebruik, die vraagt hoeveel segmenten een gebruiker heeft.](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### Automatisch aanvullen gebruiken
+
++++Selecteren om een voorbeeld van automatisch aanvullen weer te geven
+
+Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. De aanbevelingen van Autocomplete zijn beschikbaar voor de volgende domeinen: segmenten, schema&#39;s, datasets, bronnen, en bestemmingen.
+
+Voer een plusteken in als u Automatisch aanvullen wilt gebruiken (**`+`**) als onderdeel van uw vraag. U kunt ook het plusteken (**`+`**) in het tekstinvoervak. Vervolgens wordt een venster weergegeven met een lijst met aanbevolen gegevensobjecten die in uw sandbox aanwezig zijn.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+Selecteer vervolgens het gegevensobject waarop u een query wilt uitvoeren om uw vraag te voltooien en verzend uw vraag.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## Bereik
 
@@ -168,13 +188,9 @@ U kunt de reactie verifiëren die de Medewerker gebruikend een aantal verschille
 
 Met elke reactie geeft Assistant citaten waar je naar kunt verwijzen voor verificatie of meer informatie.
 
-Selecteren **[!UICONTROL Show source]** voor een lijst van verbindingen aan documentatie die de Hulpverwijzingen om zijn reactie te berekenen.
+Selecteren **[!UICONTROL Show source]** voor een lijst van verbindingen aan documentatie die de Hulpverwijzingen om zijn reactie te berekenen. Wanneer u een koppeling naar de documentatie waarnaar wordt verwezen selecteert, wordt u doorverwezen naar de desbetreffende sectie van die bepaalde pagina, met de specifieke informatie gemarkeerd.
 
-![De verbindingen aan de bron die in de Medewerker wordt getoond.](./images/ai-assistant/sources.png)
-
-Voor reacties die informatie over gegevensgebruik bevatten, biedt Assistant koppelingen naar entiteiten in kwestie. Daarnaast geeft Assistant uitleg over de manier waarop het antwoord is berekend.
-
-![toelichting](./images/ai-assistant/explanation.png)
+![De verbindingen aan de bron die in de Medewerker wordt getoond.](./images/ai-assistant/show-sources.png)
 
 ## Feedback geven
 
@@ -208,7 +224,7 @@ Selecteer de duim onderaan pictogram om feedback te geven over wat op basis van 
 
 Selecteer het vlagpictogram om verdere rapporten over uw ervaring te verstrekken gebruikend de Medewerker.
 
-![Het venster met rapportresultaten.](./images/ai-assistant/report-results.png)
+![Het venster met rapportresultaten.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 
