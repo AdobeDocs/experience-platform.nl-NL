@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht gebruikersinterface Privacy Service
 description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '224'
 ht-degree: 1%
 
 ---
@@ -22,23 +22,24 @@ De gebruikersinterface van de Privacy Service [!DNL Privacy Service] kunt u priv
 
 >[!NOTE]
 >
->Voor informatie over het programmatisch beheren van nalevingsverzoeken met de Privacy Service-API raadpleegt u de [Handleiding Privacy Service-API](../api/overview.md).
+>Voor informatie over het programmatisch beheren van nalevingsverzoeken met de Privacy Service-API raadpleegt u de [Handleiding Privacy Service-API](../api/overview.md). Zie het document neen [beheren, machtigingen voor Privacy Service](../permissions.md) voor meer informatie .
 
 ## Aanmelden bij de [!DNL Privacy Service] UI
 
 >[!IMPORTANT]
 >
->U moet een Adobe ID hebben om te kunnen verifiëren bij de [!DNL Privacy Service] UI. Daarnaast moet u over systeembeheerdersrechten binnen uw organisatie beschikken.
+>U moet een Adobe ID hebben om te kunnen verifiëren bij de [!DNL Privacy Service] UI.
 
 Meld u aan bij [Adobe Experience Cloud](https://experience.adobe.com/) en selecteert u **[!UICONTROL Privacy UI]** onder het snelmenu.
 
-![](../images/ui-overview/quick-access.png)
+![Het dashboard van het Experience Cloud met de UI van de Privacy benadrukt.](../images/ui-overview/quick-access.png)
+
 
 ### Aanmelden bij [!DNL Experience Platform]
 
 Als u toegang hebt tot de gebruikersinterface van Adobe Experience Platform, kunt u ook [!DNL Privacy Service] UI door **[!UICONTROL Requests]** in de linkernavigatie.
 
-![](../images/ui-overview/platform.png)
+![De gebruikersinterface van Adobe Experience Platform met verzoeken die zijn gemarkeerd in de linkernavigatiebalk.](../images/ui-overview/platform.png)
 
 ## Volgende stappen
 
