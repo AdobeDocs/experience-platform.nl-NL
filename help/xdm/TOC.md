@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Hulp bij Experience Data Model (XDM) System
 breadcrumb-title: Handleiding voor Experience Data Model (XDM)
-user-guide-description: Onderzoek een overzicht van het systeem van de Gegevens van de Ervaring van het Model (XDM) binnen Experience Platform en leer hoe te om klassen en schemagebiedgroepen te gebruiken om ervaringsgegevens te standaardiseren.
+user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 

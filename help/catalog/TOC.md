@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Handleiding voor catalogi en gegevenssets
-user-guide-description: Onderzoek gegevenslijn, meta-gegevens, dossierbeschrijvingen, folders, en datasets binnen het meer van Gegevens en leer meer over het systeem van de Dienst van de Catalogus.
+user-guide-description: Onderzoek oorsprong van data, metadata, bestandsbeschrijvingen, mappen en datasets binnen het Data Lake en leer meer over het Catalog Service-systeem.
 feature: Catalog
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '119'
-ht-degree: 5%
+ht-degree: 23%
 
 ---
 

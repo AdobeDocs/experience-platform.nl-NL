@@ -2,15 +2,15 @@
 keywords: Experience Platform;home;populaire onderwerpen;API-foutcodes;API-foutcode;API voor foutcode;API voor foutcodes;API-aanvraagfout;API-probleemoplossing;API-fout
 solution: Experience Platform
 title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
-description: Hier vindt u antwoorden op veelgestelde vragen en een gids voor het oplossen van veelvoorkomende fouten in Adobe Experience Platform.
-landing-page-description: Hier vindt u antwoorden op veelgestelde vragen en een gids voor het oplossen van veelvoorkomende fouten in Adobe Experience Platform.
-short-description: Vind antwoorden op veelgestelde vragen en een gids voor het oplossen van veelvoorkomende problemen in Experience Platform.
+description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Experience Platform.
+landing-page-description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Experience Platform.
+short-description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '1906'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 

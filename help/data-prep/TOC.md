@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Handleiding Data Prep
-user-guide-description: Bereid uw gegevens voor voor opname in Adobe Experience Platform en leer hoe de Prep van Gegevens u kan helpen gegevens in kaart brengen, omzetten en bevestigen vandaag.
+user-guide-description: Bereid uw data voor voor opname in het Adobe Experience Platform en ontdek hoe het voorbereiden van data u vandaag kan helpen bij het toewijzen, transformeren en valideren van data.
 feature: Data Prep
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 15%
+ht-degree: 51%
 
 ---
 

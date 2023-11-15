@@ -1,6 +1,6 @@
 ---
 title: Aanbevolen werkwijzen voor gegevensbeheerlicenties
-description: Meer informatie over de beste praktijken en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
+description: Meer informatie over best practices en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt

@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Dataverzameling
 breadcrumb-title: Dataverzameling
-user-guide-description: Leer hoe te om cliënt-zijgegevensinzameling voor het Netwerk van de Rand van Adobe Experience Platform toe te laten en meer te weten te komen over de technologieën van de gegevensinzameling die worden gebruikt.
+user-guide-description: Leer meer over dataverzameling aan klantzijde voor het Adobe Experience Platform Edge-netwerk en ontdek meer over de technologieën die worden gebruikt voor dataverzameling.
 feature: Data Collection
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 21%
+ht-degree: 71%
 
 ---
 
