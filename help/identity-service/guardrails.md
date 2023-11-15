@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ In de volgende tabel worden de statische limieten weergegeven die worden toegepa
 | Guardrail | Limiet | Notities |
 | --- | --- | --- |
 | Aantal identiteiten in een grafiek | 50 | Wanneer een grafiek met 50 verbonden identiteiten wordt bijgewerkt, zal de Dienst van de Identiteit een &quot;eerste-binnen, eerste-uit&quot;mechanisme toepassen en de oudste identiteit schrapt om ruimte voor de nieuwste identiteit te maken. Verwijderen is gebaseerd op het type identiteit en het tijdstempel. De limiet wordt toegepast op sandboxniveau. Lees voor meer informatie de sectie over [begrip van de verwijderingslogica](#deletion-logic). |
+| Aantal koppelingen naar een identiteit voor één batch-opname | 50 | Eén batch kan afwijkende identiteiten bevatten die tot ongewenste samenvoegingen van grafieken leiden. Om dit te voorkomen, zal de Identiteitsdienst geen identiteiten opnemen die reeds met 50 of meer identiteiten verbonden zijn. |
 | Aantal identiteiten in een XDM-record | 20 | Het minimum aantal vereiste XDM-records is twee. |
 | Aantal aangepaste naamruimten | Geen | Het aantal aangepaste naamruimten dat u kunt maken, is niet beperkt. |
 | Aantal tekens voor een naamruimte, weergavenaam of identiteitssymbool | Geen | Er zijn geen limieten aan het aantal tekens van een naamruimte, weergavenaam of identiteitssymbool. |
@@ -42,7 +43,7 @@ In de volgende tabel worden de bestaande regels beschreven die u moet volgen om 
 
 | Naamruimte | Validatieregel | Systeemgedrag wanneer regel wordt overtreden |
 | --- | --- | --- |
-| ECID | <ul><li>De identiteitswaarde van een ECID moet precies 38 tekens zijn.</li><li>De identiteitswaarde van een ECID mag alleen uit getallen bestaan.</li></ul> | <ul><li>Als de identiteitswaarde van ECID niet precies 38 tekens is, wordt de record overgeslagen.</li><li>Als de identiteitswaarde van ECID niet-numerieke tekens bevat, wordt de record overgeslagen.</li></ul> |
+| ECID | <ul><li>De identiteitswaarde van een ECID moet precies 38 tekens zijn.</li><li>De identiteitswaarde van een ECID mag alleen uit getallen bestaan.</li><li>Identiteitswaarden mogen niet &#39;null&#39;, &#39;anoniem&#39;, &#39;invalid&#39; of een lege tekenreeks zijn (bijvoorbeeld: &#39;&quot;, &#39;&#39;, &#39;&#39;).</li></ul> | <ul><li>Als de identiteitswaarde van ECID niet precies 38 tekens is, wordt de record overgeslagen.</li><li>Als de identiteitswaarde van ECID niet-numerieke tekens bevat, wordt de record overgeslagen.</li><li>De identiteit wordt geblokkeerd.</li></ul> |
 | Niet-ECID | De identiteitswaarde mag niet langer zijn dan 1024 tekens. | Als de identiteitswaarde meer dan 1024 tekens bevat, wordt de record overgeslagen. |
 
 ### Naamnaamruimte-opname
@@ -114,6 +115,8 @@ Als u uw voor authentiek verklaarde gebeurtenissen tegen identiteitskaart van CR
 
 * [Identiteitskaart voor Experience Platform-tags configureren](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identiteitsgegevens in het Web SDK van het Experience Platform](../edge/identity/overview.md#using-identitymap)
+
+
 
 ## Volgende stappen
 
