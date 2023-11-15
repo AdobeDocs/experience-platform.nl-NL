@@ -4,9 +4,9 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
@@ -90,6 +90,7 @@ ht-degree: 2%
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
       * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
+      * [Pinterest-verbindingsupgrade](./catalog/advertising/pinterest-upgrade.md)
       * [Verbinding Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [(bèta) De verbinding van de handelsbank CRM](./catalog/advertising/tradedesk-emails.md)
