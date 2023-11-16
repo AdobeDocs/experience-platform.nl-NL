@@ -3,9 +3,9 @@ title: Pinterest migratie naar nieuwe API. Actie van de klant is vereist.
 description: Pinterest is bezig de API voor v4-adverteerders die momenteel door de Pinterest-bestemming in Real-Time CDP wordt gebruikt, te verouderen. Begrijp uw handelingspunten om naadloos overgang aan nieuwe API zonder onderbreking aan uw campagnes van Pinterest te maken.
 hide: true
 hidefromtoc: true
-source-git-commit: 10bf63677c66366c226d647b1174093c1704a8b9
+source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe geeft een nieuwe Pinterest-doelkaart vrij die gebruikmaakt van de Pinteres
 
 ## Moet ik iets doen om mijn actieve publiek te laten functioneren?
 
-Ja, zodra de Adobe de upgrade heeft voltooid (bedoeld op 16 november), moet u opnieuw verifiëren bij Pinterest met uw Pinterest-advertentieaccount in Adobe Experience Platform. Zie de gedetailleerde instructies hieronder.
+Ja, zodra de Adobe de upgrade heeft voltooid en de nieuwe Pinterest-bestemming heeft uitgebracht, moet u de verificatie opnieuw uitvoeren naar Pinterest met uw Pinterest-advertentieaccount in Real-Time CDP. Zie de gedetailleerde instructies hieronder.
 
 ### Opnieuw verifiëren bij Pinterest {#reauthenticate}
 
@@ -36,21 +36,19 @@ Ja, zodra de Adobe de upgrade heeft voltooid (bedoeld op 16 november), moet u op
    ![Details bewerken selecteren](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. Selecteren **[!UICONTROL Reconnect OAuth]** en meld u aan bij uw Pinterest-account.
    ![Selecteer OAuth opnieuw verbinden](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
-4. Laat de Adobe weten dat u opnieuw geautoriseerd bent aan de **[!UICONTROL (New) Pinterest]** bestemming.
+4. Ga naar het actiepunt in de onderstaande sectie
 
 ### Bestaande stromen naar oude bestemming uitschakelen en stromen naar nieuwe bestemming inschakelen {#disable-old-enable-new-flows}
 
-Vervolgens moet u bestaande stromen naar de oude kaart handmatig uitschakelen en stromen naar de nieuwe kaart inschakelen.
-
->[!IMPORTANT]
->
->Nadat u opnieuw hebt geverifieerd, kunt u naar de Adobe reiken en zullen wij deze tweede stap voor u uitvoeren. Voer de onderstaande stappen uit als u deze stap liever handmatig wilt uitvoeren:
+Dan moet u bestaande stromen aan de oude bestemmingskaart manueel onbruikbaar maken **[!UICONTROL (Deprecating) Pinterest]** en stromen naar de nieuwe kaart inschakelen **[!UICONTROL (New) Pinterest]**.
 
 1. Ga naar **[!UICONTROL Destinations > Browse]** en gebruik het filter op het scherm om het filter **[!UICONTROL (New) Pinterest]** en **[!UICONTROL (Deprecating) Pinterest]** alleen bestemmingen.
    ![Pinterest-gegevensstromen alleen filteren op het tabblad Bladeren](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Selecteer de naam van de hyperlinkverbinding (Loyalty-campagne in het bovenstaande voorbeeld) en schakel de optie **[!UICONTROL Enable]** schakelen naar **uit** voor de oude verbinding en **op** voor de nieuwe verbinding.
-   ![Schakel in en uit voor nieuwe verbindingen](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle.png)
-3. Vergelijk de geactiveerde publiekslijst in oude en nieuwe gegevensstroom en zorg ervoor dat u geen nieuw publiek in de oude stromen hebt die in de nieuwe stromen missen.
+2. Selecteer de naam van de hyperlinkverbinding (de Loyalty-campagne in het bovenstaande voorbeeld) naar de **[!UICONTROL (Deprecating) Pinterest]** doel en schakel **[!UICONTROL Enable]** schakelen naar **uit**.
+   ![Schakel in en uit voor nieuwe verbindingen](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-old-destination.png)
+3. Selecteer de naam van de hyperlinkverbinding (de Loyalty-campagne in het bovenstaande voorbeeld) naar de **[!UICONTROL (New) Pinterest]** doel en schakel **[!UICONTROL Enable]** schakelen naar **op**.
+   ![Schakel in en uit voor nieuwe verbindingen](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+4. Vergelijk de geactiveerde publiekslijst in oude en nieuwe gegevensstroom en zorg ervoor dat u geen nieuw publiek in de oude stromen hebt die in de nieuwe stromen missen.
 
 Hoewel er geen onderbrekingen in uw campagnes worden verwacht, moet u in de gebruikersinterface van Pinterest controleren of alles werkt zoals u had verwacht.
 
@@ -58,18 +56,22 @@ Hoewel er geen onderbrekingen in uw campagnes worden verwacht, moet u in de gebr
 
 Ja, zie hieronder:
 
-**Uiterlijk 16 november**: De nieuwe bestemming is klaar en u ziet twee Pinterest-kaarten naast elkaar in de catalogus. Alle bestaande gegevensstromen naar de huidige Pinterest-kaart worden naar de nieuwe bestemming gekopieerd.
+**Tegen 16 november 2023**: De nieuwe bestemming is klaar en u ziet twee Pinterest-kaarten naast elkaar in de catalogus. Alle bestaande gegevensstromen naar de huidige Pinterest-kaart worden naar de nieuwe bestemming gekopieerd.
 
 ![Oude en nieuwe Pinterest-bestemming naast elkaar](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
 >[!IMPORTANT]
 >
->Na 16 november, is de erfenisbestemming van Pinterest duidelijk **[!UICONTROL Deprecating]**. <span class="preview">Om het even welke veranderingen die u aan dataflows aan de (Aftredende) bestemming van Pinterest na 16 november aanbrengt zullen *niet* automatisch worden overgedragen naar de nieuwe bestemming van Pinterest. </span>
+>Na 16 november 2023 is de Pinterest-bestemming van de nalatenschap gemarkeerd **[!UICONTROL Deprecating]**. <span class="preview">Om het even welke veranderingen die u aan dataflows aan de (Aftredende) bestemming van Pinterest na 16 november aanbrengt zullen *niet* automatisch worden overgedragen naar de nieuwe bestemming van Pinterest. </span>
 >Wij *niet aanbevelen* dat u nieuw publiek aan de oude bestemming na 16 november activeert. Als u dat doet, zult u dan het [regelmatige activeringsstappen](/help/destinations/ui/activate-segment-streaming-destinations.md) om het publiek aan de nieuwe bestemming toe te voegen zodra de klantenacties worden genomen.
 
-**Uiterlijk op 15 december**: <span class="preview">Klantenactie</span>. U moet opnieuw verifiëren op Pinterest zodat de nieuwe kaart is aangesloten op Pinterest (instructies hierboven). Als u dat hebt gedaan, richt u ons dan tot u.
+**Tegen 15 december 2023**: <span class="preview">Actie van de klant 1</span>. U dient opnieuw te worden geverifieerd op Pinterest, zodat de nieuwe kaart is aangesloten op Pinterest. Volledige instructies weergeven in [deze sectie](#reauthenticate).
 
-De gegevensstromen naar Pinterest op de oude kaart moeten worden uitgeschakeld en de gegevens op de nieuwe kaart moeten worden ingeschakeld. U kunt dat handmatig doen in de gebruikersinterface, of u kunt naar de Adobe reiken en dat zullen we voor u doen.
+<span class="preview">Actie 2 van de klant</span>.Dan, moet u de gegevensstromen aan Pinterest in de oude kaart onbruikbaar maken en de gegevensstromen in de nieuwe kaart toelaten. Volledige instructies weergeven in [deze sectie](#disable-old-enable-new-flows).
+
+>[!IMPORTANT]
+>
+>Na 15 december 2023 garandeert Adobe de integriteit van gegevensstromen naar de oude **[!UICONTROL (Deprecating) Pinterest]** bestemming.
 
 ## Andere artikelen
 
