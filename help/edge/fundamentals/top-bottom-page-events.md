@@ -1,7 +1,7 @@
 ---
 title: Gebeurtenissen boven en onder aan de pagina gebruiken
 description: Dit artikel verklaart hoe te om bovenkant en bodem van paginagebeurtenissen in Web SDK te gebruiken.
-source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Door bovenkant en bodem van paginagebeurtenissen in Web SDK te gebruiken, kan he
 
 ## Boven aan pagina, gebeurtenisvoorbeeld {#top-of-page}
 
-Het codevoorbeeld hieronder illustreert een bovenkant van de configuratie van de paginagebeurtenis die om verpersoonlijking verzoekt maar geen vertoningsberichten voor automatisch teruggegeven voorstellingen verzendt. De weergavemeldingen worden verzonden als onderdeel van de gebeurtenis onderaan.
+Het codevoorbeeld hieronder illustreert een top van de configuratie van de paginagebeurtenis die om verpersoonlijking maar niet verzoekt [weergavegebeurtenissen verzenden](../personalization/display-events.md#send-sendEvent-calls) voor automatisch weergegeven voorstellingen. De [weergavegebeurtenissen](../personalization/display-events.md#send-sendEvent-calls) wordt verzonden als onderdeel van de gebeurtenis onderaan.
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 |---|---|---|
 | `type` | Vereist | Deze parameter instellen op `decisioning.propositionFetch`. Dit speciale gebeurtenistype instrueert Adobe Analytics deze gebeurtenis te laten vallen. Wanneer u Customer Journey Analytics gebruikt, kunt u ook een filter instellen om deze gebeurtenissen neer te zetten. |
 | `renderDecisions` | Vereist | Deze parameter instellen op `true`. Deze parameter vertelt Web SDK om besluiten terug te geven die door het Netwerk van de Rand zijn teruggekeerd. |
-| `personalization.sendDisplayEvent` | Vereist | Deze parameter instellen op `false`. Hiermee voorkomt u dat weergaveberichten worden verzonden. |
+| `personalization.sendDisplayEvent` | Vereist | Deze parameter instellen op `false`. Hiermee voorkomt u dat weergavegebeurtenissen worden verzonden. |
 
 >[!ENDTABS]
 
@@ -62,7 +62,7 @@ alloy("sendEvent", {
 
 >[!TAB Automatisch gerenderde voorstellingen]
 
-Het codevoorbeeld hieronder illustreert een bodem van de configuratie van de paginagebeurtenis die vertoningsberichten voor voorstellen verzendt die automatisch op de pagina werden teruggegeven maar waarvoor de vertoningsberichten binnen werden onderdrukt [bovenzijde van pagina](#top-of-page) gebeurtenis.
+Het codevoorbeeld hieronder illustreert een bodem van de configuratie van de paginagebeurtenis die vertoningsgebeurtenissen voor voorstellingen verzendt die automatisch op de pagina werden teruggegeven maar waarvoor de vertoningsgebeurtenissen werden onderdrukt binnen [bovenzijde van pagina](#top-of-page) gebeurtenis.
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ alloy("sendEvent", {
 
 | Paramter | Vereist/optioneel | Beschrijving |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | Vereist | Deze parameter instellen op `true`. Hierdoor kunnen weergavemeldingen worden verzonden die boven aan de paginagebeurtenis zijn onderdrukt. |
+| `personalization.includeRenderedPropositions` | Vereist | Deze parameter instellen op `true`. Hierdoor kunnen weergavegebeurtenissen worden verzonden die boven aan de paginagebeurtenis zijn onderdrukt. |
 | `xdm` | Optioneel | Gebruik deze sectie om alle gegevens op te nemen die u onder aan de paginagebeurtenis nodig hebt. |
 
 >[!TAB Handmatig gerenderde voorstellingen]
 
-In het onderstaande codevoorbeeld ziet u een onderkant van de configuratie van een paginagebeurtenis die weergavemeldingen verzendt voor voorstellen die handmatig op de pagina zijn weergegeven (bijvoorbeeld voor aangepaste beslissingsbereiken of oppervlakken).
+In het onderstaande codevoorbeeld ziet u een onderkant van de configuratie van een paginagebeurtenis die weergavegebeurtenissen verzendt voor voorstellen die handmatig op de pagina zijn weergegeven (bijvoorbeeld voor aangepaste beslissingsbereiken of oppervlakken).
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 | Paramter | Vereist/optioneel | Beschrijving |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet het voorstel opnemen `ID`, `scope`, en `scopeDetails`. Zie de documentatie over hoe u [handmatig personalisatie renderen](../personalization/rendering-personalization-content.md#manually) voor meer informatie over het opnemen van weergavemeldingen voor handmatig weergegeven inhoud. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginaklok worden opgenomen. |
+| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet het voorstel opnemen `ID`, `scope`, en `scopeDetails`. Zie de documentatie over hoe u [handmatig personalisatie renderen](../personalization/rendering-personalization-content.md#manually) voor meer informatie over hoe te om vertoningsgebeurtenissen voor manueel teruggegeven inhoud te registreren. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginaklok worden opgenomen. |
 | `xdm._experience.decisioning.propositionEventType` | Vereist | Deze parameter instellen op `display: 1`. |
 | `xdm` | Optioneel | Gebruik deze sectie om alle gegevens op te nemen die u onder aan de paginagebeurtenis nodig hebt. |
 
@@ -149,7 +149,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
