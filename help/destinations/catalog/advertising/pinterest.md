@@ -2,14 +2,19 @@
 title: Verbinding met pinterest Customer List
 description: Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '814'
 ht-degree: 1%
 
 ---
 
 # [!DNL Pinterest Customer List] verbinding
+
+>[!IMPORTANT]
+>
+>* Vanaf 16 november 2023 ziet u twee Pinterest-kaarten naast elkaar in de catalogus met bestemmingen. Dit komt door een upgrade naar de Pinterest-API voor adverteerders die wordt gebruikt om gegevens naar Pinterest te exporteren. De naam van de bestaande Pinterest-doelconnector is gewijzigd in **[!UICONTROL (Deprecating) Pinterest]** en een nieuwe kaart **[!UICONTROL (New) Pinterest]** is nu beschikbaar voor u.
+>* Gebruik de **[!UICONTROL (New) Pinterest]** verbinding maken in de catalogus voor campagnes met Pinterest. Als u actieve dataflows hebt voor de **[!UICONTROL (Deprecating) Pinterest]** doel, lees de [upgradedocumentatie](/help/destinations/catalog/advertising/pinterest-upgrade.md) om meer inzicht te krijgen in de actiepunten om ervoor te zorgen dat uw campagnes niet worden onderbroken.
 
 ## Overzicht {#overview}
 
@@ -71,7 +76,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Advertiser ID]**: Je Pinterest-advertentie-id.
+* **[!UICONTROL Ad Account ID]**: Je Pinterest-advertentie-id.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -95,3 +100,15 @@ Alles [!DNL Adobe Experience Platform] de bestemmingen zijn volgzaam met het bel
 ## Aanvullende bronnen {#additional-resources}
 
 Raadpleeg de [Pinterest Help Center-pagina](https://help.pinterest.com/en/business/article/audience-targeting) voor aanvullende informatie.
+
++++ Wijzigingen weergeven
+
+
+| Releasedatum | Type bijwerken | Beschrijving |
+|---|---|---|
+| November 2023 | Bijwerken van functionaliteit en documentatie | De Pinterest-bestemming in Real-Time CDP gebruikt nu de v5 Advertiser-API. |
+
+{style="table-layout:auto"}
+
+
++++
