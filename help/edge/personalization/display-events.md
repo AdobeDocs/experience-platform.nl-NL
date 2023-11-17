@@ -1,9 +1,9 @@
 ---
 title: Weergavegebeurtenissen beheren in Web SDK
-description: Dit artikel wat vertoningsgebeurtenissen zijn en hoe zij in Web SDK werken.
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+description: Dit artikel verklaart welke vertoningsgebeurtenissen zijn en hoe u hen in Web SDK kunt gebruiken.
+source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
