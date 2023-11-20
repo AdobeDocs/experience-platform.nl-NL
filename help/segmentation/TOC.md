@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
-source-git-commit: dd6cb79431ed6c0bb2326e60f1de3a6a4e435ed6
+source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 24%
+source-wordcount: '191'
+ht-degree: 23%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 24%
 
 - [Overzicht van segmentatieservice](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
+- [Segmenteringsgeleiding](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)

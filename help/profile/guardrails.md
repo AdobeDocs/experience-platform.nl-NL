@@ -1,18 +1,18 @@
 ---
-title: Standaardhulplijnen voor realtime klantprofielgegevens
+title: Standaardhulplijnen voor realtime gegevens en segmentatie van klantprofiel
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document bevat standaard gebruiks- en snelheidslimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties.
+description: Leer over prestaties en systeem-gedwongen gidsen voor profielgegevens en segmentatie om een optimaal gebruik van de functionaliteit van Real-Time CDP te verzekeren.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 4%
+source-wordcount: '2200'
+ht-degree: 2%
 
 ---
 
-# Standaardhulplijnen voor [!DNL Real-Time Customer Profile] data
+# Standaardhulplijnen voor [!DNL Real-Time Customer Profile] gegevens en segmentatie
 
 Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden op basis van gedragsinzichten en klantkenmerken in de vorm van realtime klantprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
 
@@ -108,16 +108,17 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 {style="table-layout:auto"}
 
-## Segmenteringsgeleiding
+## Segmenteringsgeleiding {#segmentation-guardrails}
 
 De instructies in deze sectie hebben betrekking op het aantal en de aard van de soorten publiek die een organisatie binnen Experience Platform kan maken, alsmede op het in kaart brengen en activeren van het publiek naar bestemmingen.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Soorten publiek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 soorten publiek hebben, zolang er in elke sandbox minder dan 4000 soorten publiek aanwezig zijn. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. |
-| Publiek randen per sandbox | 150 | Prestatiegerichting | Een organisatie kan in totaal meer dan 150 randsoorten publiek hebben, zolang er in elke afzonderlijke sandbox minder dan 150 randsoorten publiek zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. |
-| Streaming publiek per sandbox | 500 | Prestatiegerichting | Een organisatie kan in totaal meer dan 500 streamingdeelnemers hebben, zolang er in elke sandbox minder dan 500 streamingdeelnemers zijn. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. |
+| Soorten publiek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 soorten publiek hebben, zolang er in elke sandbox minder dan 4000 soorten publiek aanwezig zijn. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Meer informatie over [publiek maken](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
+| Publiek randen per sandbox | 150 | Prestatiegerichting | Een organisatie kan in totaal meer dan 150 randsoorten publiek hebben, zolang er in elke afzonderlijke sandbox minder dan 150 randsoorten publiek zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Meer informatie over [randpubliek](/help/segmentation/ui/edge-segmentation.md). |
+| Streaming publiek per sandbox | 500 | Prestatiegerichting | Een organisatie kan in totaal meer dan 500 streamingdeelnemers hebben, zolang er in elke sandbox minder dan 500 streamingdeelnemers zijn. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Meer informatie over [streaming publiek](/help/segmentation/ui/streaming-segmentation.md). |
 | Batchpubliek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 batchdoelgroepen hebben, zolang er in elke sandbox minder dan 4000 doelgroepen aanwezig zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
+| Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt niet meer dan 50 accountsoorten maken in een sandbox. Nadat u 50 publiek in een zandbak bereikt, **[!UICONTROL Create audience]** besturingselement is uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Meer informatie over [accountpubliek](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
