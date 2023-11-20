@@ -3,14 +3,18 @@ title: Pinterest migratie naar nieuwe API. Actie van de klant is vereist.
 description: Pinterest is bezig de API voor v4-adverteerders die momenteel door de Pinterest-bestemming in Real-Time CDP wordt gebruikt, te verouderen. Begrijp uw handelingspunten om naadloos overgang aan nieuwe API zonder onderbreking aan uw campagnes van Pinterest te maken.
 hide: true
 hidefromtoc: true
-source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
+source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
 
 # Pinterest-doelupgrade naar nieuwe API. Actie van de klant vereist voor 15 december 2023
+
+>[!IMPORTANT]
+>
+>De actiepunten van de klant op deze pagina zijn op u van toepassing als uw organisatie dataflows om gegevens naar Pinterest vóór 16 November 2023 heeft opgesteld, de datum waarop **[!UICONTROL (New) Pinterest]** Doel, met de nieuwste Pinterest API, is toegevoegd aan de doelcatalogus.
 
 ## Wat gebeurt er?
 
@@ -26,7 +30,7 @@ Adobe geeft een nieuwe Pinterest-doelkaart vrij die gebruikmaakt van de Pinteres
 
 ## Moet ik iets doen om mijn actieve publiek te laten functioneren?
 
-Ja, zodra de Adobe de upgrade heeft voltooid en de nieuwe Pinterest-bestemming heeft uitgebracht, moet u de verificatie opnieuw uitvoeren naar Pinterest met uw Pinterest-advertentieaccount in Real-Time CDP. Zie de gedetailleerde instructies hieronder.
+Ja, na 16 november 2023 moet u zich verifiëren bij de nieuwe Pinterest-bestemming met uw Pinterest-advertentieaccount in Real-Time CDP. Zie de gedetailleerde instructies hieronder.
 
 ### Opnieuw verifiëren bij Pinterest {#reauthenticate}
 
