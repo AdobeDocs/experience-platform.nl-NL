@@ -2,8 +2,9 @@
 keywords: gegevensbeheer rtcdp;rtcdp gegevensbeheer;beheer van realtime klantgegevensprofiel
 title: Overzicht van gegevensbeheer
 description: Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd.
+feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 1%
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 [!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) brengt gegevens van meerdere bedrijfssystemen samen, waardoor marketers hun klanten beter kunnen identificeren, begrijpen en betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk dat Real-Time CDP zich houdt aan het gebruiksbeleid bij het verwerken van uw gegevens.
 
-Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen Real-Time CDP, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
+Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Het speelt een sleutelrol binnen Real-Time CDP, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
 
 Real-Time CDP is gebouwd op Adobe Experience Platform en daarom wordt het grootste deel van de mogelijkheden voor gegevensbeheer opgenomen in de [!DNL Experience Platform] documentatie. Dit document is bedoeld als aanvulling op het [Overzicht van gegevensbeheer](../../data-governance/home.md) for [!DNL Experience Platform]en geeft een overzicht van de bestuursfuncties die beschikbaar zijn in Real-Time CDP. De volgende onderwerpen worden behandeld:
 
@@ -44,7 +45,7 @@ Marketingacties kunnen alleen worden geselecteerd wanneer u een bestemming voor 
 
 Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens in Real-Time CDP of waarvan u een beperking hebt ingesteld. Zie de sectie &quot;Beleid voor gegevensgebruik&quot; in de [!DNL Experience Platform] [Overzicht van gegevensbeheer](../../data-governance/home.md) voor meer informatie .
 
-Adobe Experience Platform biedt verschillende basisbeleidsregels voor veelvoorkomende gebruiksgevallen voor de ervaring van klanten. Dit beleid kan in UI worden bekeken door aan **[!UICONTROL Policies]** werkruimte en het selecteren van de **[!UICONTROL Browse]** tab. Zie de [beleidsgebruikershandleiding](../../data-governance/policies/user-guide.md) in de [!DNL Experience Platform] documentatie voor meer gedetailleerde stappen over het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
+Adobe Experience Platform biedt verschillende basisbeleidsregels voor veelvoorkomende gebruiksgevallen voor de ervaring van klanten. Dit beleid kan in UI worden bekeken door aan **[!UICONTROL Policies]** werkruimte en het selecteren van **[!UICONTROL Browse]** tab. Zie de [beleidsgebruikershandleiding](../../data-governance/policies/user-guide.md) in de [!DNL Experience Platform] documentatie voor meer gedetailleerde stappen over het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
 
 ## Compatibiliteit met gegevensgebruik afdwingen {#enforce}
 

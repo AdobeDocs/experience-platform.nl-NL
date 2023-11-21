@@ -1,9 +1,10 @@
 ---
 keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbeleid;realtime klantprofiel
-title: Klantprofiel in realtime begrijpen in Real-Time CDP
+title: Real-Time klantprofiel in Real-Time CDP
 description: Leer hoe u met Adobe Real-time Customer Data Platform gecoördineerde, consistente en relevante ervaringen voor uw klanten kunt aansturen met Real-Time Customer Profile.
+feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -32,9 +33,9 @@ Aangezien de klantengegevens samenkomen wordt het samengevoegd in één enkel pr
 
 Wanneer het brengen van klantengegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Zie voor meer informatie over samenvoegingsbeleid de [overzicht van samenvoegbeleid](merge-policies.md).
 
-## Profielviewer
+## Profile Viewer
 
-Met Platform kunt u eenvoudig klantprofielen bekijken en naar specifieke profielen zoeken met behulp van verschillende kenmerken. Voor meer informatie over het weergeven van profielen in Platform raadpleegt u de [bladeroverzicht van profiel](profile-browse.md).
+Met Platform kunt u eenvoudig klantprofielen bekijken en zoeken naar specifieke profielen met behulp van verschillende kenmerken. Voor meer informatie over het weergeven van profielen in het platform raadpleegt u de [bladeroverzicht van profiel](profile-browse.md).
 
 ## Volgende stappen
 

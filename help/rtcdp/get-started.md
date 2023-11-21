@@ -2,8 +2,9 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
 title: Aan de slag met Real-time Customer Data Platform
 description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-Time Customer Data Platform.
+feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '2328'
 ht-degree: 1%
@@ -24,7 +25,7 @@ In dit voorbeeld ziet u de kracht van Real-time Customer Data Platform, aangedre
 
 Luma, een atletisch kledingbedrijf, probeert altijd hun klantervaring te verbeteren. Ze hebben een nieuw initiatief om de verkoop van cadeautjes te verhogen. Ze willen ook de overbelichting verminderen, zoals irritante advertenties die klanten volgen.
 
-Momenteel besteden ze te veel aan media die zich richten op objecten die de bezoeker niet gaat kopen om verder te gaan. Luma wil iemand bijvoorbeeld niet opnieuw toewijzen met een object dat was bedoeld als eenmalige aankoop voor iemand anders.
+Momenteel besteden ze te veel aan media die zich richten op objecten die de bezoeker niet gaat kopen om verder te gaan. Luma wil iemand bijvoorbeeld niet opnieuw toewijzen met een object dat bedoeld was als eenmalige aankoop voor iemand anders.
 
 Op dit moment worden de gegevens van Luma verspreid over meerdere bronnen. Als gevolg daarvan staan zij voor grote uitdagingen:
 
@@ -71,7 +72,7 @@ Veel bezoekers van de website zijn waarschijnlijk herhaalde klanten die eerder b
 
 ### Eerste bezoek van nieuwe klant
 
-Een niet-geïdentificeerde bezoeker navigeert bijvoorbeeld naar het gedeelte Men op de site Luma en bekijkt een paar zwevende overhemden.
+Een niet-geïdentificeerde bezoeker navigeert bijvoorbeeld naar het gedeelte Men op de site Luma en bekijkt een paar zweethemden.
 
 ![afbeelding](assets/luma-sweatshirts.png)
 
@@ -108,7 +109,7 @@ Ze navigeert naar de homepage om nog wat meer te bladeren.
 
 Sarah ontvangt een persoonlijke homepage-ervaring die dynamisch wordt opgedaan, gebaseerd op haar [!DNL Real-Time Customer Profile] in Adobe Experience Platform.
 
-Ze ziet relevante inhoud, dankzij de personalisatie van Adobe Sensei in Adobe Target, die rekening houdt met haar eerdere aankopen en haar affiniteit voor het runnen van kleding en uitrusting. Luma maakt de inhoud van de mannencatalogus ook geschikt voor loopwerk voor mannen op basis van haar meest recente browse.
+Ze ziet relevante inhoud, dankzij de personalisatie van Adobe Sensei in Adobe Target, die rekening houdt met haar eerdere aankopen en haar affiniteit voor het runnen van kleding en uitrusting. Luma maakt de inhoud van de mannencatalogus ook op maat van het loopwerk voor mannen op basis van haar meest recente browse.
 
 Verder op de pagina ziet u Sarah als aanbevolen producten en een nieuwe aanbevolen lade op basis van haar meest recent bekeken artikelen.
 
@@ -203,9 +204,9 @@ Dankzij de krachtige Adobe Experience Platform-segmentatiemogelijkheden kunnen m
 
 <!-- ![image](assets/luma-segments.png) -->
 
-In dit scenario vertonen de recente interacties van Sarah op de site een ander gedrag dan haar eerdere acties. Meestal koopt ze vrouwenkleding. Het artikel in haar winkelwagentje is echter een groot sweatshirt van mannen.
+In dit scenario vertonen de recente interacties van Sarah op de site een ander gedrag dan haar eerdere acties. Meestal koopt ze vrouwenkleding. Het artikel in haar winkelwagen is echter een groot sweatshirt van mannen.
 
-Het gegevenswetenschappelijk team van Luma heeft modellen gemaakt rond de koopkracht. Eén model identificeert een plotselinge wijziging in de kledingcategorie (zoals mens/vrouw) of de grootte voor de bestaande consument. De verandering van het koopgedrag van Sarah suggereert dat ze niet voor zichzelf winkelt.
+Het gegevenswetenschappelijk team van Luma heeft modellen gemaakt rond de koopkracht. Eén model identificeert een plotselinge wijziging in de kledingcategorie (zoals mens/vrouw) of de grootte voor de bestaande consument. Sarah&#39;s verandering in koopgedrag suggereert dat ze niet voor zichzelf winkelt.
 
 <!-- ![image](assets/luma-gift.png) -->
 
@@ -269,7 +270,7 @@ Adobe Experience Platform omvat privacy en veiligheidscontroles om te bepalen of
 
 Als uw activiteit beleid schendt, verschijnt een waarschuwing. Deze waarschuwing bevat informatie over de gegevenslijn die u kan helpen identificeren waarom het beleid werd overtreden, en wat u kunt doen om de schending op te lossen.
 
-Met deze bedieningsorganen [!DNL Experience Platform] Luma helpt om zich aan de regels en de markt verantwoordelijk te houden. Deze controles zijn flexibel en kunnen worden gewijzigd om aan de vereisten van de veiligheids en governanceteams van de Luma te voldoen, die hen toestaan om regionale en organisatorische vereisten voor het beheren van bekende en onbekende klantengegevens op betrouwbare wijze te richten.
+Met deze bedieningsorganen [!DNL Experience Platform] Luma helpt om zich aan de regels en de markt verantwoordelijk te houden. Deze controles zijn flexibel en kunnen worden gewijzigd om aan de vereisten van de veiligheids en governanceteams van de Luma te voldoen, die hen toestaan om regionale en organisatorische vereisten voor het beheren van bekende en onbekende klantengegevens vertrouwelijk te behandelen.
 
 ### Gegevensflowcanvas
 

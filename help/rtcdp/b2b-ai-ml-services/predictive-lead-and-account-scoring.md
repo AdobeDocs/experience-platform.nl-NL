@@ -2,10 +2,12 @@
 title: Voorspelende lead- en accountscoring in Real-Time CDP B2B
 type: Documentation
 description: Een overzicht en meer informatie over de voorspellende lood en rekeningseigenschap in Experience Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '866'
 ht-degree: 0%
 
 ---
@@ -14,7 +16,7 @@ ht-degree: 0%
 
 B2B-marketers staan voor meerdere uitdagingen boven aan de marketingtrechter. Om doeltreffend te zijn, hebben B2B-marketers een geautomatiseerde manier nodig om het grote aantal mensen te kwalificeren, zodat zij zich kunnen richten op de doelstellingen met hoge waarde. De kwalificatie moet worden afgestemd op het uiteindelijke verkoopresultaat, en niet alleen op de marketingconversie.
 
-Rekeningen, zijn de uiteindelijke entiteiten die B2B producten en de diensten kopen. Om effectief te kunnen verhandelen en verkopen, moeten B2B-marketers niet alleen weten hoe groot de kans is dat de persoon, maar ook de rekening, kan kopen.
+Rekeningen, zijn de uiteindelijke entiteiten die B2B producten en de diensten kopen. Om effectief te kunnen verkopen en verkopen, moeten B2B-marketers niet alleen weten hoe groot de kans is dat de persoon, maar ook de account, het product kan kopen.
 
 Op rekening gebaseerde marketing, in het bijzonder, strategische rekeningen als marketingdoelstellingen. De neiging-aan-koele scores van de rekening helpen de B2B marktpartijen zeer om voorrang onder de rekeningen te geven om hun rendement op investering te maximaliseren.
 
@@ -78,8 +80,8 @@ Meerdere modellen worden ondersteund, waarbij de volgende vaste limieten zijn in
 
 De gegevenskwaliteitseisen zijn als volgt:
 
-* Idealiter zijn er twee jaar van de meest recente gegevens voor opleidingsdoeleinden.
-* De minimale gegevenslengte is zes maanden plus een voorspellingsvenster.
+* Idealiter zijn er twee jaar van meest recente gegevens voor opleidingsdoeleinden.
+* De minimumlengte van de vereiste gegevens is zes maanden plus voorspellingsvenster.
 * Voor elk voorspeldoel, zijn minstens 10 gekwalificeerde omzettingsgebeurtenissen vereist.
 
 De het scoren banen worden in werking gesteld dagelijks en de resultaten worden bewaard als profiel en rekeningsattributen, die dan in segmentdefinities en verpersoonlijking kunnen worden gebruikt. Inzichten van de out-of-the-box analyse zijn ook beschikbaar op het accountoverzichtdashboard.
@@ -88,7 +90,7 @@ Zie de documentatie voor meer informatie over hoe te [voorspelbare leads en acco
 
 ## Voorspelende resultaten voor leads en accounts weergeven {#how-to-view}
 
-Nadat de baan in werking wordt gesteld, worden de resultaten bewaard in een nieuwe systeemdataset voor elk model onder de naam `LeadsAI.Scores` - ***de score***. Elke groep van het scoreveld kan bij worden gevestigd `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Na de baanlooppas, worden de resultaten bewaard in een nieuwe systeemdataset voor elk model onder de naam `LeadsAI.Scores` - ***de score***. Elke groep van het scoreveld kan bij worden gevestigd `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | Kenmerk | Beschrijving |
 | --- | --- |
@@ -96,19 +98,19 @@ Nadat de baan in werking wordt gesteld, worden de resultaten bewaard in een nieu
 | Percentage | Deze waarde biedt informatie over de prestaties van een profiel ten opzichte van andere profielen met een vergelijkbare score. De percentages variëren van 1 tot 100. |
 | Modeltype | Het geselecteerde modeltype geeft aan of dit een persoon of een accountscore is. |
 | Score-datum | De datum waarop de scoring heeft plaatsgevonden. |
-| Influentiële factoren | Voorspelde redenen waarom een profiel waarschijnlijk wordt omgezet. Factoren bestaan uit de volgende kenmerken:<ul><li>Code: Het profiel of gedragskenmerk dat de voorspelde score van een profiel positief beïnvloedt.</li><li>Waarde: De waarde van het profiel of gedragskenmerk.</li><li>Belangrijk: Geeft het gewicht aan dat het profiel of het gedragskenmerk heeft op de voorspelde score (laag, gemiddeld, hoog).</li></ul> |
+| Influentiële factoren | Voorspelde redenen waarom een profiel waarschijnlijk wordt omgezet. Factoren bestaan uit de volgende kenmerken:<ul><li>Code: het profiel of gedragskenmerk dat de voorspelde score van een profiel positief beïnvloedt.</li><li>Waarde: de waarde van het profiel of gedragskenmerk.</li><li>Belang: geeft het gewicht aan dat het profiel of gedragskenmerk heeft op de voorspelde score (laag, gemiddeld, hoog).</li></ul> |
 
 ### Klantprofielscores weergeven
 
-Selecteer **[!UICONTROL Profiles]** onder de klantensectie in het linkerpaneel, en ga dan identiteitsnamespace en identiteitswaarde in. Als u klaar bent, selecteert u **[!UICONTROL View]**.
+Selecteer **[!UICONTROL Profiles]** onder de klantensectie in het linkerpaneel, en ga dan identiteitsnamespace en identiteitswaarde in. Selecteer **[!UICONTROL View]**.
 
 Selecteer vervolgens het profiel in de lijst.
 
 ![Klantprofiel](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-De **[!UICONTROL Detail]** De pagina bevat nu voorspellende scores. Klik op het diagrampictogram naast de voorspellende score.
+De **[!UICONTROL Detail]** De pagina bevat nu de voorspellende scores. Klik op het diagrampictogram naast de voorspellende score.
 
-![Voorspelscore voor klantprofiel](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![Voorspelende score voor klantprofiel](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 Een popup dialoog toont de score, de algemene scoreverdeling, de hoogste invloedrijke factoren voor deze score, en de definitie van het scoredoel.
 

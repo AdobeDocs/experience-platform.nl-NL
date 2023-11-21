@@ -2,10 +2,12 @@
 keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbeleid;realtime klantprofiel
 title: Gebruikersgids voor accountprofiel
 description: Door het gebruik van accountprofielen kunt u met Adobe Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -22,7 +24,7 @@ Als u meer wilt weten over de manier waarop accountprofielen worden gemaakt als 
 
 ## Overzicht van accountprofielen {#account-profiles-overview}
 
-Selecteren **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatiebalk om het overzicht van accountprofielen weer te geven. Onder de [!UICONTROL Overview] op het dashboard wordt een afbeelding of diagram weergegeven waarin widgets in één ingangspunt worden weergegeven.
+Selecteren **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie om het overzicht van accountprofielen weer te geven. Onder de [!UICONTROL Overview] op het dashboard wordt een afbeelding of diagram weergegeven waarin widgets in één ingangspunt worden weergegeven.
 
 ![Tabblad Overzicht waarin widgets worden weergegeven](images/b2b-account-profile-overview.png)
 
@@ -34,7 +36,7 @@ Zie de documentatie op de [[!UICONTROL Account Profiles]](../../dashboards/guide
 >
 > Alleen B2B AI-beheerders kunnen de &#39;lead to account matching&#39;-service inschakelen, uitschakelen en configureren. Wanneer u de service uitschakelt, worden de resultaten van de overeenkomst binnen 24 uur verwijderd.
 
-Selecteer **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie. Op de **[!UICONTROL Overview]** tab, selecteert u **[!UICONTROL Settings]** in de rechterbovenhoek.
+Selecteer **[!UICONTROL Profiles]** krachtens [!UICONTROL Accounts] in de linkernavigatie. Op de **[!UICONTROL Overview]** tab, selecteert u **[!UICONTROL Settings]** rechtsboven.
 
 ![Instellingen selecteren](images/b2b-configuring-accounts-profile.png)
 
@@ -46,7 +48,7 @@ De **[!UICONTROL Account settings]** wordt geopend. Selecteer hier de **[!UICONT
 
 ![Accountinstellingen configureren](images/b2b-configuring-account-settings.png)
 
-Voor meer informatie over het maken van overeenkomsten met accounts raadpleegt u de [Lood-aan-rekeningsovereenkomsten in Real-Time CDP B2B-overzicht](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Als u meer wilt weten over het maken van overeenkomsten met accounts, raadpleegt u de [Lood-aan-rekeningsovereenkomsten in Real-Time CDP B2B-overzicht](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Accountprofielen zoeken {#browse-account-profiles}
 
@@ -60,9 +62,9 @@ Op de **[!UICONTROL Browse]** kunt u accountprofielen verkennen aan de hand van 
 
 Selecteer **[!UICONTROL Connected enterprise source]** van de **[!UICONTROL Browse by]** en vervolgens een verbonden bron kiezen met de selectieknop naast het dialoogvenster **[!UICONTROL Source]** veld.
 
-![Door accountprofielen bladeren naar een verbonden ondernemingsbron](images/b2b-account-browse.png)
+![Door accountprofielen bladeren op basis van een verbonden ondernemingsbron](images/b2b-account-browse.png)
 
-Hierdoor wordt het **[!UICONTROL Select source]** , waarin u een bron kunt selecteren op basis van de verbindingen die uw organisatie tot stand heeft gebracht.
+Hierdoor wordt het **[!UICONTROL Select source]** , waarin u een bron kunt selecteren op basis van de verbindingen die uw organisatie heeft gemaakt.
 
 >[!NOTE]
 >
@@ -86,19 +88,19 @@ Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account ID]** met b
 
 ### Bladeren op [!UICONTROL Others] {#browse-by-others}
 
-Real-Time CDP, B2B Edition ondersteunt de mogelijkheid om een directe zoekopdracht uit te voeren door u een **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account ID]** voor een account dat u wilt bekijken. Door de bronnaam en -instantie rechtstreeks in te voeren, geeft u de context op die Experience Platform nodig heeft om de juiste accountprofielgegevens te zoeken en weer te geven.
+Real-Time CDP, B2B Edition ondersteunt de mogelijkheid om een directe zoekopdracht uit te voeren door u toe te staan een **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account ID]** voor een account dat u wilt bekijken. Door de bronnaam en -instantie rechtstreeks in te voeren, geeft u de context op die Experience Platform nodig heeft om de juiste accountprofielgegevens te zoeken en weer te geven.
 
 De mogelijkheid om een directe zoekopdracht uit te voeren is handig in omstandigheden waarin een bronverbinding rechtstreeks met de gegevens niet mogelijk is. Als uw organisatie bijvoorbeeld een beleid voor gegevensbeheer heeft dat directe verbinding met een CRM verhindert, kunt u die gegevens exporteren naar een systeem voor cloudopslag en deze vervolgens in Experience Platform opnemen.
 
-Een ander voorbeeld zou kunnen zijn dat u een transformatie op de gegevens uitvoert tussen de tijd het van een systeem verlaat en Platform ingaat. U kunt de directe raadplegingsfunctionaliteit gebruiken om context voor de gegevens te verstrekken (zoals specificerend dat het gegevens van Marketo is, ondanks het feit dat het uit een emmertje van Amazon S3, bijvoorbeeld) komt zodat het systeem weet waar te zoeken, en hoe te om behoorlijk terug te geven, de gegevens.
+Een ander voorbeeld zou kunnen zijn dat u een transformatie op de gegevens tussen de tijd uitvoert het een systeem verlaat en Platform ingaat. U kunt de directe raadplegingsfunctionaliteit gebruiken om context voor de gegevens te verstrekken (zoals specificerend dat het gegevens van Marketo is, ondanks het feit dat het uit een emmertje van Amazon S3, bijvoorbeeld) komt zodat het systeem weet waar te zoeken, en hoe te om behoorlijk terug te geven, de gegevens.
 
-Selecteer **[!UICONTROL Others]** van de **[!UICONTROL Browse by]** vervolgkeuzelijst, voert u vervolgens een **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account ID]** voor de account die u wilt bekijken.
+Als u een directe zoekopdracht wilt starten, selecteert u **[!UICONTROL Others]** van de **[!UICONTROL Browse by]** vervolgkeuzelijst, voert u vervolgens een **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, en **[!UICONTROL Account ID]** voor de account die u wilt bekijken.
 
 ![Bladeren door anderen](images/b2b-account-browse-adhoc.png)
 
 ## Accountprofieldetails weergeven {#view-account-profile-details}
 
-Nadat u de **[!UICONTROL Browse]** om een accountprofiel te zoeken, selecteert u de **[!UICONTROL Profile ID]** opent de **[!UICONTROL Detail]** voor het accountprofiel. De profielgegevens die worden weergegeven op het tabblad **[!UICONTROL Detail]** tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Dit omvat accountdetails zoals basiskenmerken en gegevens over sociale media.
+Nadat u de **[!UICONTROL Browse]** om een accountprofiel te zoeken, selecteert u de optie **[!UICONTROL Profile ID]** opent de **[!UICONTROL Detail]** voor het accountprofiel. De profielgegevens die worden weergegeven op de **[!UICONTROL Detail]** tabblad is samengevoegd vanuit meerdere profielfragmenten om een enkele weergave van de afzonderlijke account te vormen. Dit omvat accountdetails zoals basiskenmerken en gegevens over sociale media.
 
 De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeurskenmerken van het accountprofiel weer te geven.
 
@@ -126,7 +128,7 @@ De **[!UICONTROL People]** bevat een lijst met individuele personen die aan het 
 >
 >De [!UICONTROL People] wordt een lijst weergegeven met maximaal 25 personen die zijn gekoppeld aan het account. Voor rekeningen met meer dan 25 geassocieerde personen toont het systeem een willekeurige steekproef van 25 records.
 
-Naast het tonen van u een momentopname van informatie voor het contact, omvat elke vermelde persoon ook een **[!UICONTROL Profile ID]**, wat een klikbare verbinding is die u toestaat om het Profiel van de Klant in real time voor dat individu te onderzoeken. Voor meer informatie over het bekijken van individuele klantenprofielen met betrekking tot uw rekeningen, gelieve te bezoeken gelieve de gids voor [browserprofielen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
+Naast het tonen van u een momentopname van informatie voor het contact, omvat elke vermelde persoon ook een **[!UICONTROL Profile ID]**, wat een klikbare verbinding is die u toestaat om het Profiel van de Klant in real time voor dat individu te onderzoeken. Voor meer informatie over het bekijken van individuele klantenprofielen met betrekking tot uw rekeningen, gelieve de gids voor [browserprofielen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![Het tabblad Personen](images/b2b-account-people.png)
 
@@ -150,7 +152,6 @@ De **[!UICONTROL Related accounts]** bevat informatie over andere accounts die m
 >
 >* Een groep Verwante accounts kan maximaal 30 accountprofielen hebben. Als er meer dan 30 accountprofielen met elkaar zijn gevonden, worden deze willekeurig in meerdere groepen opgedeeld, elk met niet meer dan 30 leden. De groep Verwante accounts van een accountprofiel bevat altijd zichzelf.
 >* De [!UICONTROL Related accounts] wordt momenteel een lijst weergegeven met maximaal 25 verwante accounts die zijn gekoppeld aan het account waarin u bladert. Dit is een beperking die in een toekomstige update zal worden aangepakt. Ondanks deze UI-beperking worden bij gebruik van verwante accounts in segmentdefinities voor groepen van 30 gerelateerde accountprofielen alle profielen gebruikt voor het opgeven van doelen.
-
 
 Elke verwante rekening omvat informatie zoals de identiteitskaart en de naam van het rekeningsprofiel, zijn de sleutel van de rekeningsbron, en verdere informatie met betrekking tot homepage, adres, ouderrekening, telefoon, industrie, en jaarlijkse opbrengst.
 

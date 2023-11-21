@@ -2,10 +2,12 @@
 title: Beheer voorspellende leads en accountscoring in Real-Time CDP B2B
 type: Documentation
 description: Dit document bevat informatie over het beheer van de functie voor het voorspellen van leads en accounts in Experience Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '975'
 ht-degree: 2%
 
 ---
@@ -20,11 +22,11 @@ Dit leerprogramma begeleidt u door de stappen om scoredoelstellingen van de voor
 
 ## Een nieuwe score maken
 
-Als u een nieuwe score wilt maken, selecteert u de optie **[!UICONTROL Services]** in de zijbalk en selecteer **[!UICONTROL Create score]**.
+Als u een nieuwe score wilt maken, selecteert u de **[!UICONTROL Services]** in de zijbalk en selecteer **[!UICONTROL Create score]**.
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-De **[!UICONTROL Basic information]** wordt weergegeven en u wordt gevraagd een profieltype te selecteren, een naam en een optionele beschrijving in te voeren. Als u klaar bent, selecteert u **[!UICONTROL Next]**.
+De **[!UICONTROL Basic information]** wordt weergegeven en u wordt gevraagd een profieltype te selecteren, een naam en een optionele beschrijving in te voeren. Selecteer **[!UICONTROL Next]**.
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
@@ -40,7 +42,7 @@ De **[!UICONTROL Goal conditions]** wordt weergegeven. Selecteer de vervolgkeuze
 
 ![plas-target-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-De **[!UICONTROL Goal value]** wordt weergegeven. Vervolgens configureert u uw [!UICONTROL Goal specifics]. Selecteer [!UICONTROL Enter Field Value] en voer de waarde van uw doel in.
+De **[!UICONTROL Goal value]** wordt weergegeven. Vervolgens configureert u uw [!UICONTROL Goal specifics]. Selecteer de [!UICONTROL Enter Field Value] en voer de waarde van uw doel in.
 
 >[!NOTE]
 >
@@ -94,9 +96,9 @@ U bent teruggekeerd aan **[!UICONTROL Services]** tab. Selecteer de score om de 
 
 ## Een score klonen
 
-Als u een score wilt klonen, selecteert u een score in het menu **[!UICONTROL Services]** en selecteert u **[!UICONTROL Clone]** in het deelvenster Extra details aan de rechterkant van het scherm.
+Om een score te klonen, selecteer een score van **[!UICONTROL Services]** en selecteert u **[!UICONTROL Clone]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
-![plas-clone score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
+![plas-clone-score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
 De **[!UICONTROL Basic information]** wordt weergegeven. Het profieltype, de naam en de beschrijving worden gekloond op basis van de oorspronkelijke score. Wijzig deze details en selecteer **[!UICONTROL Next]**.
 
@@ -112,7 +114,7 @@ U bent teruggekeerd aan **[!UICONTROL Services]** Hier ziet u de zojuist gekloon
 
 ## Muziek verwijderen
 
-Als u een score wilt verwijderen, selecteert u een score in het menu **[!UICONTROL Services]** en selecteert u **[!UICONTROL Delete]** in het deelvenster Extra details aan de rechterkant van het scherm.
+Om een score te schrappen, selecteer een score van **[!UICONTROL Services]** en selecteert u **[!UICONTROL Delete]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
@@ -130,27 +132,27 @@ U bent teruggekeerd aan **[!UICONTROL Services]** waar u de score niet meer in d
 
 | Foutcode | Foutbericht |
 | --- | --- |
-| 401 | FOUT 401. De AI-pijpleiding van leads is gestopt: onvoldoende geldige accounts voor accountscoring. Aantal accounts: {}. |
-| 402 | FOUT 402. De AI-pijpleiding van leads is gestopt: niet genoeg geldige contacten voor contactscore. Aantal contactpersonen: {}. |
-| 403 | FOUT 403. De AI-pijpleiding van leads is gestopt: onvoldoende activiteitenvolume voor modeltraining. Aantal gebeurtenissen: {}. |
-| 404 | FOUT 404. De AI-pijpleiding van leads is gestopt: onvoldoende conversies voor modeltraining. Aantal conversies: {}. |
-| 405 | FOUT 405. De AI-pijpleiding van leads is gestopt: te weinig activiteit voor een geldige modelopleiding. Slechts {} procent van de accounts heeft een activiteit. |
-| 406 | FOUT 406. De AI-pijpleiding van leads is gestopt: te weinig activiteit voor een geldige modelopleiding. Slechts {} procent van de contacten heeft een activiteit. |
-| 407 | FOUT 407. De AI-pijpleiding van leads is gestopt: de typen scoring van gegevensactiviteiten komen niet overeen met de trainingsgegevens. |
-| 408 | FOUT 408. De AI-pijpleiding van leads is gestopt: de ontbrekende snelheid is te hoog voor activiteitsfuncties. Ontbrekend percentage: {}. |
-| 409 | FOUT 409. De AI-pijpleiding van leads is gestopt: test auc is te laag. Test AUC: {}. |
-| 410 | FOUT 410. De AI-pijpleiding van leads is gestopt: test auc is te laag na parameterinstelling. Test AUC: {}. |
-| 411 | FOUT 411. De AI-pijpleiding van leads is gestopt: de opleidingsgegevens hebben niet genoeg omzettingen om betrouwbaar model te produceren. conversies: {}. |
-| 412 | FOUT 412. De AI-pijpleiding van leads is gestopt: de testgegevens hebben geen conversie om de AUC-ROC te berekenen. |
+| 401 | FOUT 401. De AI-pijpleiding voor leads is gestopt: onvoldoende geldige accounts voor accountscoring. Aantal rekeningen: {}. |
+| 402 | FOUT 402. Leidt AI pijpleiding tegengehouden: niet genoeg geldige contacten voor contactscore. Aantal contactpersonen: {}. |
+| 403 | FOUT 403. De AI-pijplijn van leads is gestopt: onvoldoende activiteitenvolume voor modeltraining. Aantal gebeurtenissen: {}. |
+| 404 | FOUT 404. De AI-pijplijn van leads is gestopt: onvoldoende conversies voor modeltraining. Aantal omzettingen: {}. |
+| 405 | FOUT 405. De AI-pijplijn van leads is gestopt: de activiteit is te beperkt voor een geldige modeltraining. Alleen {} percent van rekeningen heeft activiteit. |
+| 406 | FOUT 406. De AI-pijplijn van leads is gestopt: de activiteit is te beperkt voor een geldige modeltraining. Alleen {} percent van contacten heeft activiteit. |
+| 407 | FOUT 407. De AI-pijplijn van leads is gestopt: de gegevenstypen van de scoring komen niet overeen met de trainingsgegevens. |
+| 408 | FOUT 408. AI-pijpleiding gestopt: ontbrekende snelheid is te hoog voor activiteitsfuncties. Ontbrekende frequentie: {}. |
+| 409 | FOUT 409. De AI-pijplijn van leads is gestopt: de auc van de test is te laag. Auc testen: {}. |
+| 410 | FOUT 410. De AI-pijplijn wordt gestopt: de auc van de test is te laag na het instellen van de parameter. Auc testen: {}. |
+| 411 | FOUT 411 De AI-pijplijn van leads is gestopt: de trainingsgegevens hebben onvoldoende conversies om een betrouwbaar model te produceren. conversies: {}. |
+| 412 | FOUT 412. AI-pijpleiding gestopt: testgegevens hebben geen conversie om AUC-ROC te berekenen. |
 
 | Waarschuwing/informatiecode | Bericht |
 | --- | --- |
-| 100 | INFO 100. Leads voor AI-kwaliteitscontrole: het aantal accounts is: {}. |
-| 101 | INFO 101. Leads AI-kwaliteitscontrole: het aantal contacten is: {}. |
-| 102 | INFO 102. Leads AI-kwaliteitscontrole: het aantal kansen is: {}. |
-| 103 | INFO 103. Leidt AI-kwaliteitscontrole: de testauc is laag . Start parameterinstelling. AUC van test: {}. |
-| 200 | WAARSCHUWING 200. Leads AI-kwaliteitscontrole: het ontbrekende percentage van firmografische functies is: {}. |
-| 201 | WAARSCHUWING 201. Leads voor AI-kwaliteitscontrole: het ontbrekende percentage activiteitsfuncties is: {}. |
+| 100 | INFO 100. Leidt AI-kwaliteitscontrole: het aantal rekeningen is: {}. |
+| 101 | INFO 101. Leidt AI-kwaliteitscontrole: het aantal contactpersonen is: {}. |
+| 102 | INFO 102. Leidt AI-kwaliteitscontrole: het aantal mogelijkheden is: {}. |
+| 103 | INFO 103. Leidt de AI-kwaliteitscontrole: de testauc is laag. Start parameterinstelling. Testauc: {}. |
+| 200 | Waarschuwing 200. Leidt de AI-kwaliteitscontrole: de ontbrekende snelheid van de firewallfuncties is: {}. |
+| 201 | Waarschuwing 201. Leidt AI-kwaliteitscontrole: de ontbrekende activiteitsfuncties zijn: {}. |
 
 ## Volgende stappen
 

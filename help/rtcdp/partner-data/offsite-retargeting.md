@@ -1,7 +1,8 @@
 ---
 title: Offsite opnieuw oprichten van niet-geverifieerde bezoekers
 description: Leer hoe te om niet voor authentiek verklaarde gebruikers opnieuw te richten door perspectief te gebruiken IDs om een gegevens verwerkt attribuut tot stand te brengen dat kan worden gebruikt om een publiek van niet voor authentiek verklaarde gebruikers tot stand te brengen.
-source-git-commit: 99516d0923e61c8c81f1933076f2d3e73b55544c
+feature: Use Cases, Customer Acquisition
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 0%

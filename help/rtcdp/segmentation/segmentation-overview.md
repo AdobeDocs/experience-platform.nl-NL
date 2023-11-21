@@ -2,8 +2,9 @@
 keywords: segmentatie; segmentatie rtcdp;realtime segmentering van klantgegevens
 title: Segmenteringsservice in Real-time Customer Data Platform
 description: Adobe Real-Time Customer Data Platformå is gebouwd boven op Adobe Experience Platform en gebruikt veel van de services en functionaliteit van het Experience Platform. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
+feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) biedt u de mogelijkheid om gegevens van meerdere bronnen over te brengen, zodat uw klanten een gecoördineerde en consistente ervaring kunnen opdoen. Het aanbieden van relevante gepersonaliseerde marketingcampagnes kan worden bereikt met behulp van de [!DNL Segmentation Service], deel van Adobe Experience Platform.
 
-Real-Time CDP is gebouwd op Adobe Experience Platform en gebruikt veel van de [!DNL Experience Platform] diensten en functionaliteit. Met de [!DNL Segmentation Service], kunt u op maat gemaakte marketing door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen verstrekken.
+Real-Time CDP is gebouwd op Adobe Experience Platform en gebruikt veel van de [!DNL Experience Platform] diensten en functionaliteit. Met de [!DNL Segmentation Service]kunt u op maat gemaakte marketing bieden door uw klanten te verdelen in kleinere groepen met vergelijkbare kenmerken.
 
 ## Segmentatie
 
@@ -22,7 +23,7 @@ De segmentatie is het proces om specifieke attributen of gedrag te bepalen die d
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] kunt u gemakkelijk tot segmenten leiden en toegang hebben, evenals verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren. Voor meer informatie over hoe te om de Bouwer van het Segment te gebruiken, gelieve te lezen [Handleiding Segment Builder](./segment-builder-guide.md).
+[!DNL Platform] kunt u gemakkelijk tot segmenten leiden en toegang hebben, evenals verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren. Lees voor meer informatie over het gebruik van de Segment Builder de [Handleiding Segment Builder](./segment-builder-guide.md).
 
 ## Customer AI
 
@@ -43,7 +44,7 @@ AI van de klant bevindt zich in de **[!UICONTROL Services]** tab onder **[!UICON
 
 ### Aan de slag met Customer AI
 
-Om aan de slag te gaan met Customer AI moet u de [zelfstudie over gegevensprestatie](../../intelligent-services/data-preparation.md) en vorm het inputschema dat op uw gebruiksgeval wordt gebaseerd. Nu moet u [een Customer AI-instantie configureren](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u kunt [uw inzichten en scores bekijken](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met de gegevens die op basis van uw model worden gegenereerd, kunt u segmenten maken voor gegevensactivering.
+Om aan de slag te gaan met Customer AI moet u de [zelfstudie over gegevensprestatie](../../intelligent-services/data-preparation.md) en vorm het inputschema dat op uw gebruiksgeval wordt gebaseerd. Nu moet u [een AI-instantie van een klant configureren](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u kunt [uw inzichten en scores bekijken](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met de gegevens die op basis van uw model worden gegenereerd, kunt u segmenten maken voor gegevensactivering.
 
 Als u meer wilt weten over AI van klanten, kunt u beginnen met een bezoek aan de [AI-overzicht van klant](../../intelligent-services/customer-ai/overview.md). Bovendien toont de volgende video hoe de AI van de Klant klantenprofielen met op AI-Gebaseerde eigenschappen verrijkt en klantensegmentatie en gerichte inspanningen toelaat.
 

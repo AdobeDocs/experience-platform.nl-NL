@@ -2,11 +2,13 @@
 title: Gerelateerde accounts in Real-Time CDP B2B Edition
 type: Documentation
 description: In Experience Platform Real-Time CDP B2B wordt een overzicht en meer informatie over de desbetreffende rekeningen gegeven.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 4%
+source-wordcount: '435'
+ht-degree: 3%
 
 ---
 
@@ -18,15 +20,15 @@ B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen,
 
 | Id | Naam | Website | Industrie | Staat | Telefoon | Heeft open kans met bedrag > `$1 million` |
 |---|---|---|---|---|---|---|
-| 1 | Acme | acme.com | Software | CA | (408)536-6000 |  |
+| 1 | Acme | acme.com | Software | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
-| 3 | Acme Inc |  |  | CA | (408)5366000 |  |
+| 3 | Acme Inc |   |   | CA | (408)5366000 |   |
 | 4 | Accme Consulting Service | `http://www.acme.com/consulting` | Technologisch advies | NY | (212)471-0904 | x |
-| 5 | IT benaderen |  |  | CA |  |  |
+| 5 | IT benaderen |   |   | CA |   |   |
 
 {style="table-layout:auto"}
 
-Met bijbehorende rekeningen [!DNL Real-Time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert.
+Met bijbehorende rekeningen, [!DNL Real-Time CDP B2B] Hier ziet u een lijst met accounts die vergelijkbaar zijn met het account waarin u bladert.
 
 ![Scherm met verwante accounts in de gebruikersinterface van het Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 

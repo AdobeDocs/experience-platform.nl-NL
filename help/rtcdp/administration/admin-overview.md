@@ -2,8 +2,9 @@
 keywords: rtcdp-beheeroverzicht;beheeroverzicht
 title: Real-time Customer Data Platform-beheeroverzicht
 description: Dit document biedt een overzicht van de beheermogelijkheden van Adobe Real-time Customer Data Platform, aangedreven door Adobe Experience Platform.
+feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 1%
@@ -12,11 +13,11 @@ ht-degree: 1%
 
 # Overzicht van Real-time Customer Data Platform-beheer
 
-Dit document biedt een overzicht van de beheermogelijkheden van [!DNL Adobe Real-Time Customer Data Platform], aangedreven door Adobe Experience Platform.
+Dit document biedt een overzicht van de beheermogelijkheden van [!DNL Adobe Real-Time Customer Data Platform], aangedreven door Adobe Experience Platform
 
 [!DNL Experience Platform] Hiermee kunnen beheerders op rollen gebaseerd toegangsbeheer voor gebruikers beheren en virtuele sandboxen voor toepassingsontwikkeling beheren.
 
-In de volgende secties vindt u een inleiding op de centrale componenten van [!DNL Experience Platform] beheermogelijkheden en bevat koppelingen naar [!DNL Experience Platform] documentatie waar meer gedetailleerde informatie wordt verstrekt.
+In de volgende secties vindt u een inleiding op de centrale componenten van [!DNL Experience Platform] beheermogelijkheden, en bevat koppelingen naar [!DNL Experience Platform] documentatie waar meer gedetailleerde informatie wordt verstrekt.
 
 ## Toegangsbeheer
 
@@ -26,7 +27,7 @@ Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../../ac
 
 >[!IMPORTANT]
 >
->Volg de stappen in het dialoogvenster [gebruikershandleiding voor toegangsbeheer](../../access-control/ui/overview.md), met name voor het beheer van details en aanvullende services voor een productprofiel.
+>Voor een gedetailleerde gids voor het verlenen van toegang tot Real-Time CDP-mogelijkheden, waaronder het inschakelen van zichtbaarheid in de gebruikersinterface, volgt u de stappen in het dialoogvenster [gebruikershandleiding voor toegangsbeheer](../../access-control/ui/overview.md), met name voor het beheer van details en aanvullende services voor een productprofiel.
 
 ## Sandboxes
 
