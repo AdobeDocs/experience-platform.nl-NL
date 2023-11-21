@@ -5,9 +5,9 @@ badge: Alfa
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
+source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
 workflow-type: tm+mt
-source-wordcount: '2563'
+source-wordcount: '2175'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,22 @@ Voor reacties die informatie over gegevensgebruik bevatten, biedt Assistant kopp
 
 +++
 
+#### Meervoudig draaien
+
++++Selecteren om een voorbeeld van meerdere keren te bekijken
+
+U kunt de multi-boommogelijkheden van Medewerker gebruiken om een natuurlijker gesprek tijdens uw ervaring te hebben. De assistent kan vervolgvragen beantwoorden aangezien de context van een vroegere interactie kan worden afgeleid.
+
+In het onderstaande voorbeeld wordt de assistent gevraagd om een lijst met de bestaande segmenten in de organisatie te maken als follow-up van een eerdere query over het totale aantal segmenten.
+
+![](./images/ai-assistant/multi-turn-one.png)
+
+Vervolgens ontvangt Assistant een ander vervolgverzoek. Deze keer, antwoordt de Medewerker door de bestaande segmenten te vermelden die door hun respectieve grootte worden bevolen.
+
+![](./images/ai-assistant/multi-turn-two.png)
+
++++
+
 #### Automatisch aanvullen gebruiken
 
 +++Selecteren om een voorbeeld van automatisch aanvullen weer te geven
@@ -174,9 +190,9 @@ U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke g
 
 | Type vraag | Beschrijving | Voorbeelden |
 | --- | --- | --- | 
-| Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerde segmenten?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerde segmenten worden gebruikt.</li><li>Toon me de segmenten die worden geactiveerd om {DESTINATION_ACCOUNT_NAME} en hebben meer dan 1000 profielen.</li><li>Toon me de attributen die in de geactiveerde segmenten worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Maak een lijst van de schema&#39;s die met geactiveerde segmenten verwant zijn en in vorig 1 jaar gecreeerd.</li></ul> |
-| Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van geactiveerde segmenten?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welke segmenten worden geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaatsegmenten weergeven.</li><li>Toon me de segmenten die aan worden geactiveerd {DESTINATION_ACCOUNT_NAME} en rangschikken op profielgrootte.</li><li>Wat is het percentage van de segmenten die niet zijn geactiveerd maar meer dan 100 profielen hebben. Laat me hun namen zien.</li><li>Geef me de bovenste 5 kenmerken weer die in geactiveerde segmenten worden gebruikt op basis van hun voorval.</li></ul> |
-| Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor {SEGMENT_NAME}?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welke segmenten zijn de afgelopen week gewijzigd?</li><li>Maak een lijst van de segmenten die de zelfde segmentdefinities samen met hun verwezenlijking datum hebben.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel segmenten van elke dataset zijn gecreeerd.</li><li>De segmentdefinitie en wijzigingsdatum weergeven van {SEGMENT_NAME}.</li></ul> |
+| Gegevensverbinding | Gebruik van een of meerdere objecten bijhouden over andere Experience Platforms | <ul><li>Welke gegevensset(s) gebruiken {SCHEMA_NAME} schema?</li><li>Hoeveel datasets zijn opgenomen gebruikend het zelfde schema?</li><li>Welke datasets zijn gebruikt in geactiveerde segmenten?</li><li>Maak een lijst van de schema&#39;s die attributen hebben die in geactiveerde segmenten worden gebruikt.</li><li>Toon me de segmenten die worden geactiveerd om {DESTINATION_ACCOUNT_NAME} en hebben meer dan 1000 profielen.</li><li>Toon me de attributen die in de geactiveerde segmenten worden gebruikt die na jan 2023 zijn gewijzigd.</li><li>Wat zijn de datasets die via worden opgenomen {SOURCE_NAME}?</li><li>Aan welke gegevensstromen is gekoppeld {DATAFLOW_NAME}</li><li>Maak een lijst van de schema&#39;s die met geactiveerde segmenten verwant zijn en in vorig 1 jaar gecreeerd.</li></ul> |
+| Distributie en aggregaties | Op samenvattingen gebaseerde vragen over het gebruik van Experience Platforms-objecten | <ul><li>Wat is het percentage van geactiveerde segmenten?</li><li>Hoeveel velden worden in segmentatie gebruikt?</li><li>Welke segmenten worden geactiveerd aan het meeste aantal bestemmingen?</li><li>Duplicaatsegmenten weergeven.</li><li>Toon me de segmenten die aan worden geactiveerd {DESTINATION_ACCOUNT_NAME} en rangschikken op profielgrootte.</li><li>Wat is het percentage van de segmenten die niet zijn geactiveerd maar meer dan 100 profielen hebben. Laat me hun namen zien.</li><li>Maak een lijst van de 3 bronschakelaars die gegevens in mijn datasets opnemen.</li><li>Geef me de bovenste 5 kenmerken weer die in geactiveerde segmenten worden gebruikt op basis van hun voorval.</li></ul> |
+| Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor {SEGMENT_NAME}?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welke segmenten zijn de afgelopen week gewijzigd?</li><li>Maak een lijst van de segmenten die de zelfde segmentdefinities samen met hun verwezenlijking datum hebben.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel segmenten van elke dataset zijn gecreeerd.</li><li>Welke bronrekeningen worden geassocieerd met dataset XYZ?</li><li>De segmentdefinitie en wijzigingsdatum weergeven van {SEGMENT_NAME}.</li></ul> |
 
 +++
 
@@ -237,56 +253,56 @@ Raadpleeg deze sectie voor meer informatie over de assistent voor Experience Pla
 ### Voorzorgsmaatregelen en beperkingen
 
 De volgende sectie schetst huidige waarschuwingen en beperkingen om te overwegen wanneer het gebruiken van Medewerker.
+<!-- 
+#### Conversational experience
 
-#### Gesprekkervaring
-
-U moet verscheidene nuances betreffende de gesprekservaring in overweging nemen wanneer het vragen van de Medewerker.
+You must consider several nuances regarding the conversational experience when querying the Assistant.
 
 >[!NOTE]
 >
->Deze beperkingen zijn tijdelijk en worden gedurende de gehele alpha verbeterd.
+>These limitations are temporary and are being improved upon throughout the course of the alpha.
 
 >[!BEGINTABS]
 
->[!TAB Kan context niet afleiden uit eerdere discussie]
+>[!TAB Unable to infer context from prior discussion]
 
-De assistent kan momenteel geen eerdere besprekingen als context voor een bepaalde vraag noemen. Zie de onderstaande tabel voor voorbeelden:
+The Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
 
-| Ambigueuze vraag | Vraag wissen | Opmerking |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Zijn er verschillende soorten?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Zijn er verschillende soorten **segmenten**?&quot;</li></ul> | De assistent kan niet afleiden wat &quot;zij&quot; betekent. |
-| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je meer toelichten?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Uitleggen wat een segment diepgaand is&quot;</li></ul> | De assistent kan op intelligente wijze niet verwijzen naar documentatie die is gebaseerd op &quot;meer&quot;. |
-| <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je me een voorbeeld geven?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een segment?&quot;</li><li>Vervolgvraag: &quot;Kan je me een voorbeeld geven van een segment?&quot;</li></ul> | De assistent kan niet afleiden waar u een voorbeeld van wilt. |
-| <ul><li>Eerste vraag: &quot;Wat is een batchsegment?&quot;</li><li>Vervolgvraag: &quot;Hoe vergelijk het met een streaming segment?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Wat is een batchsegment?&quot;</li><li>Vervolgvraag: &quot;Kan u een streaming segment vergelijken met een batch-segment?&quot;</li></ul> | De assistent kan niet concluderen waar &quot;het&quot; naar verwijst en kan het streamingsegment dus niet vergelijken. |
-| <ul><li>Eerste vraag: &quot;Hoeveel segmenten heb ik?&quot;</li><li>Vervolgvraag: &quot;Hoeveel van hen gebruiken Facebook als bestemming?&quot;</li></ul> | <ul><li>Eerste vraag: &quot;Hoeveel segmenten heb ik?&quot;</li><li>Vervolgvraag: &quot;Hoeveel segmenten die ik heb gebruiken Facebook als bestemming?&quot;</li></ul> | De assistent kan niet concluderen waar &quot;zij&quot; naar verwijst. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The Assistant cannot infer what "them" means. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The Assistant cannot intelligently reference documentation based on "more". |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The Assistant cannot infer what you want an example of.|
+| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
+| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The Assistant is cannot infer what "them" is referring to. |
 
 {style="table-layout:auto"}
 
->[!TAB Kan context niet afleiden van een pagina]
+>[!TAB Unable to infer context from a page]
 
-Wanneer het vragen van de Medewerker over een bepaald element van de Experience Platform UI pagina die u bent, moet u duidelijk het specifieke element binnen uw vraag bepalen.
+When asking the Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
 
-| Ambigueuze vraag | Vraag wissen | Opmerking |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| Wat doet dit? | &quot;Wat doet {PAGE_NAME} doen? | De assistent kan niet concluderen waar &quot;dit&quot; naar verwijst. U moet het specifieke pagina-element opgeven waar u om vraagt. |
-| &quot;Waarom zal het niet redden?&quot; | &quot;Waarom kan ik geen nieuwe sandbox opslaan met de naam {NAME}?&quot; | De assistent kan niet concluderen waarnaar &quot;het&quot; verwijst en kan niet weten dat u problemen hebt met een entiteit. |
+| "What does this do?" | "What does {PAGE_NAME} do? | The Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
+| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
 
 {style="table-layout:auto"}
 
-Voorts kan de Medewerker vragen betreffende foutenmeldingen slechts beantwoorden, aangezien de fout in Experience League wordt gedocumenteerd.
+Furthermore, the Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
 
->[!TAB dubbelzinnigheid]
+>[!TAB Ambiguity]
 
-U moet uw vragen duidelijk formuleren en deze in een product, toepassing of domein behandelen, aangezien de assistent momenteel geen vragen kan doorgeven.
+You must phrase your questions clearly and scope them within a product, application, or domain, as the Assistant currently cannot disambiguate questions.
 
-| Ambigueuze vraag | Vraag wissen | Opmerking |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| &quot;Hoe maak ik een filter? | Hoe maak ik een filter in de Taal van de Vraag van het Profiel? | U moet de eigenschap specificeren waarvoor u filtert omdat een verscheidenheid van de eigenschappen van het Experience Platform het filtreren steunt. |
-| &quot;Hoe begin ik? | Hoe begin ik met het gebruik van bestemmingen? | U moet duidelijkheid over uw doelstellingen en gebruiksgeval verstrekken omdat de te brede concepten in generische of onnodig specifieke antwoorden kunnen resulteren. |
+| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
+| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
 #### Beperkte kleine praatjes
 
