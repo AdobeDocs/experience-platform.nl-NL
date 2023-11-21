@@ -3,14 +3,14 @@ keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attrib
 title: Door de klant beheerde toetsen
 description: Leer hoe u door de klant beheerde sleutels voor Attribution AI instelt.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
 
-# Door de klant beheerde toetsen
+# Door de klant beheerde toetsen in Attribution AI
 
 Attribution AI biedt de optie voor [Gezondheidsschild](https://www.adobe.com/trust/compliance/hipaa-ready.html) en Privacy &amp; Security Shield-klanten gebruiken Azure Customer Managed Keys (CMK) die op uw Attribution AI-gegevens moeten worden toegepast. Het installatieproces is hetzelfde als [Adobe Experience Platform CMK instellen](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) en u kunt de stappen volgen die daar worden geschetst.
 

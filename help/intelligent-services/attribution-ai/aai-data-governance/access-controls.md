@@ -5,30 +5,30 @@ feature: Attribution AI
 title: Toegangsbeheer voor Attribution AI
 description: Dit document verstrekt informatie over op attributen-gebaseerd toegangsbeheer voor Attribution AI.
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 1%
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
-# Toegangsbeheer
+# Toegangsbeheer in Attribution AI
 
 Het toegangsbeheer voor Attribution AI wordt via Adobe Experience Platform in de [Adobe Admin Console](https://adminconsole.adobe.com/). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 
 Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../../../access-control/home.md).
 
-## Op kenmerken gebaseerd toegangsbeheer
+## Toegangsbeheer op basis van kenmerken
 
 >[!IMPORTANT]
 >
 >Toegangsbeheer op basis van kenmerken is momenteel alleen beschikbaar in een beperkte versie.
 
-[Op kenmerken gebaseerd toegangsbeheer](../../../access-control/abac/overview.md) is een mogelijkheid van Adobe Experience Platform die beheerders in staat stelt de toegang tot specifieke objecten en/of mogelijkheden te beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
+[Toegangsbeheer op basis van kenmerken](../../../access-control/abac/overview.md) is een mogelijkheid van Adobe Experience Platform die beheerders in staat stelt de toegang tot specifieke objecten en/of mogelijkheden te beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
 
 Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen met labels die bereik voor organisatie of gegevensgebruik definiëren. Parallel hieraan kunnen beheerders de gebruikers- en rolbeheerinterface gebruiken om toegangsbeleid te definiëren rondom XDM-schemavelden en de toegang die gebruikers of groepen gebruikers (interne, externe of externe gebruikers) krijgen beter te beheren. Bovendien, op attribuut-gebaseerde toegangsbeheer staat beheerders toe om toegang tot specifieke segmenten te beheren.
 
-Via attribuut-based toegangsbeheer, kunnen de beheerders gebruikers&#39; toegang tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+Via op kenmerken gebaseerde toegangscontrole kunnen beheerders de toegang van gebruikers tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) in alle workflows en bronnen van het Platform beheren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
 
 Wegens op attribuut-gebaseerde toegangsbeheer, zouden sommige gebieden en functionaliteiten toegang beperkt kunnen hebben en voor bepaalde de dienstmodellen van de Attribution AI niet beschikbaar zijn. Voorbeelden zijn Identiteit, Score Definition en Klonen.
 

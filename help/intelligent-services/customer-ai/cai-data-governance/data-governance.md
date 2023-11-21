@@ -5,14 +5,14 @@ feature: Customer AI
 title: Gegevensbeheer in AI van Klant
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
 
-# AI en gegevensbeheer van de klant
+# AI van de klant en gegevensbeheer in AI van de Klant
 
 Eventuele instellingen met betrekking tot gegevensbeheer in Customer AI worden overgenomen van Adobe Experience Platform.
 
