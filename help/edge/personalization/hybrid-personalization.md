@@ -3,9 +3,9 @@ title: Hybride verpersoonlijking die Web SDK en de Server API van het Netwerk va
 description: Dit artikel toont aan hoe u SDK van het Web samen met de Server API kunt gebruiken om hybride verpersoonlijking op uw Webeigenschappen op te stellen.
 keywords: personalisatie; hybride; server-API; server-side; hybride implementatie;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '838'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Wanneer u [configureren, een gegevensstroom](../../datastreams/overview.md) voor
 Het voorbeeld van deze implementatie gebruikt twee verschillende gegevensstromen:
 
 * Een gegevensstroom die voor Analytics wordt gevormd. Deze gegevensstroom wordt gebruikt voor de interactie van SDK van het Web.
-* Een tweede gegevensstroom zonder een configuratie Analytics. Deze gegevensstroom wordt gebruikt voor server API verzoeken.
+* Een tweede gegevensstroom zonder een configuratie Analytics. Deze gegevensstroom wordt gebruikt voor server API verzoeken. U moet deze gegevensstroom met de zelfde bestemmingsconfiguratie vormen zoals de gegevensstroom die u voor Analytics vormde.
 
 Op deze manier registreert de server-side aanvraag geen Analytics-gebeurtenissen, maar de client-side aanvragen wel. Dit leidt ertoe dat de verzoeken van de Analyse nauwkeurig worden geteld.
 
