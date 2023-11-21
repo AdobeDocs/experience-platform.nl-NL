@@ -5,9 +5,9 @@ feature: Customer AI
 title: Een AI-instantie van een klant configureren
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
 workflow-type: tm+mt
-source-wordcount: '2740'
+source-wordcount: '2737'
 ht-degree: 0%
 
 ---
@@ -197,15 +197,11 @@ U kunt belangrijke gegevenssetvelden voor profielen definiëren (met tijdstempel
 
 #### Profielkenmerken selecteren in de opname van Profiel exporteren
 
-U kunt er ook voor kiezen om profielkenmerken op te nemen uit de dagelijkse geëxporteerde momentopname van profiel. Deze kenmerken worden gesynchroniseerd met het exporteren van de profielmomentopname en geven de laatst beschikbare waarde weer.
+U kunt er ook voor kiezen om profielkenmerken op te nemen uit de dagelijkse geëxporteerde momentopname van profiel. Deze kenmerken worden gesynchroniseerd met het exporteren van de profielmomentopname en geven de laatst beschikbare waarde weer. Zij verschijnen automatisch en vereisen geen dataset om in de configuratiestap worden geselecteerd.
 
 >[!WARNING]
 >
-> Zorg ervoor dat u geen profielkenmerk selecteert dat wordt bijgewerkt als resultaat van het voorspellingsdoel of dat sterk is gecorreleerd met het voorspellingsdoel. Dit veroorzaakt gegevenslekkage en overmaat van het model. Een voorbeeld van een dergelijk kenmerk is `total_purchases_in_the_last_3_months` dat de conversie van aankopen voorspelt.
-
->[!NOTE]
->
->Ondersteuning voor het gebruik van profielkenmerken van de UPS-momentopname-export is op verzoek beschikbaar in de gebruikersinterface.
+> Selecteer geen profielkenmerk dat is bijgewerkt als resultaat van het voorspellingsdoel of dat sterk is gecorreleerd met het voorspellingsdoel. Dit leidt tot gegevenslekken en overmaat van het model. Bijvoorbeeld: `total_purchases_in_the_last_3_months` is een attribuut dat aankoopconversie voorspelt.
 
 ### Een voorbeeld van een aangepaste gebeurtenis toevoegen {#custom-event}
 
@@ -264,3 +260,5 @@ De volgende video is ontworpen ter ondersteuning van uw begrip van de configurat
 > De volgende video is verouderd. Raadpleeg de documentatie voor de meest actuele informatie.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
+<!-- comment -->

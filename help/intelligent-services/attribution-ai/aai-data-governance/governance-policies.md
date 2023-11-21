@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Governance-beleid voor Attribution AI
 description: Adobe Experience Platform biedt verschillende services en gereedschappen waarmee u uw verzamelde ervaringsgegevens op betrouwbare wijze kunt beheren.
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
 
-# Beleid inzake governance
+# Beleid inzake governance in Attribution AI
 
-Wanneer u de workflow hebt doorlopen om een model te maken en de configuratie van het model in te dienen, kunt u [beleidshandhaving](../../../data-governance/enforcement/auto-enforcement.md) controleert of er overtredingen zijn. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties binnen het Platform in overeenstemming zijn met het beleid voor gegevensgebruik.
+Wanneer u de workflow hebt doorlopen om een model te maken en de configuratie van het model in te dienen, kunt u [beleidshandhaving](../../../data-governance/enforcement/auto-enforcement.md) controleert of er overtredingen zijn. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties binnen het platform in overeenstemming zijn met het beleid voor gegevensgebruik.
 
 ## Pop-up Beleidsovertreding
 
