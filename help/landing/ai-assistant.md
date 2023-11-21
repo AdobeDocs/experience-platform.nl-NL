@@ -5,7 +5,7 @@ badge: Alfa
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
+source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
 workflow-type: tm+mt
 source-wordcount: '2175'
 ht-degree: 0%
@@ -77,7 +77,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### Voorbeeld: gebruik de assistent om het maken van het schema te versnellen
+### Voorbeeld: gebruik de assistent om het maken van het schema te versnellen {#example-use-case}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ De Medewerker verstrekt u een manier om uw antwoord te bevestigen door zijn bron
 
 ![Opties die de assistent na het retourneren van een antwoord biedt.](./images/ai-assistant/options.png)
 
-#### Vervolgvraag
+### Vervolgvraag {#follow-up-question}
 
 +++Selecteer om een voorbeeld van een vervolgvraag te bekijken
 
@@ -109,7 +109,7 @@ U kunt meer over een bepaald onderwerp leren door een vervolgvraag te stellen. I
 
 +++
 
-#### Vraag over gegevensgebruik
+### Vraag over gegevensgebruik {#data-usage-question}
 
 +++Selecteer om een voorbeeld van een vraag over gegevensgebruik te bekijken
 
@@ -121,7 +121,7 @@ Voor reacties die informatie over gegevensgebruik bevatten, biedt Assistant kopp
 
 +++
 
-#### Meervoudig draaien
+### Meervoudig draaien {#multi-turn}
 
 +++Selecteren om een voorbeeld van meerdere keren te bekijken
 
@@ -137,7 +137,7 @@ Vervolgens ontvangt Assistant een ander vervolgverzoek. Deze keer, antwoordt de 
 
 +++
 
-#### Automatisch aanvullen gebruiken
+### Automatisch aanvullen gebruiken {#use-auto-complete}
 
 +++Selecteren om een voorbeeld van automatisch aanvullen weer te geven
 
@@ -153,7 +153,7 @@ Selecteer vervolgens het gegevensobject waarop u een query wilt uitvoeren om uw 
 
 +++
 
-## Bereik
+## Bereik {#scope}
 
 De assistent kan vragen beantwoorden over de concepten Real-Time CDP en Experience Platform, maar ook over het specifieke gegevensgebruik voor je gebruikersaccount. De medewerker kan context ook afleiden die op de UI-pagina wordt gebaseerd die u binnen bent. Het kan identificeren:
 
@@ -163,13 +163,13 @@ De assistent kan vragen beantwoorden over de concepten Real-Time CDP en Experien
 * De bron (inclusief type en id) die u op uw scherm bekijkt.
 * Aangezien u bezig bent met een bepaald Experience Platform of Real-Time CDP-workflow, kan Assistant uw intentie afleiden.
 
-### Documentatie
+### Documentatie {#documentation}
 
 Momenteel geldt de documentatie-index voor Adobe Experience Platform (Real-Time CDP en Soorten publiek). De index wordt periodiek bijgewerkt.
 
 Het documentatiemodel wordt opgeleid op Experience Platform (Real-Time CDP en Soorten publiek). Vragen die buiten Adobe Experience Platform vallen, zoals vragen over andere producten van de Adobe, zoals Adobe Target en de Creative Cloud-suite, kunnen niet worden beantwoord.
 
-### Gegevensgebruik
+### Gegevensgebruik {#data-usage}
 
 U kunt Assistent-vragen stellen over uw gegevensgebruik in de volgende domeinen:
 
@@ -184,7 +184,7 @@ Voor vragen van gebruiksgegevens, kunnen de antwoorden niet op de huidige staat 
 
 U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke gegevens die betrekking hebben op objecten, zoals schema&#39;s, datasets, kenmerken, doelen en segmenten.
 
-### Voorbeeldvragen over gegevensgebruik
+### Voorbeeldvragen over gegevensgebruik {#example-data-usage-questions}
 
 +++Selecteren om een lijst met voorbeelden van vragen over gegevensgebruik weer te geven
 
@@ -196,11 +196,11 @@ U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke g
 
 +++
 
-## Het antwoord controleren
+## Het antwoord controleren {#verify-the-response}
 
 U kunt de reactie verifiëren die de Medewerker gebruikend een aantal verschillende manieren terugkeert.
 
-### Bijschriften voor documentatie
+### Bijschriften voor documentatie {#citations}
 
 Met elke reactie geeft Assistant citaten waar je naar kunt verwijzen voor verificatie of meer informatie.
 
@@ -208,7 +208,7 @@ Selecteren **[!UICONTROL Show source]** voor een lijst van verbindingen aan docu
 
 ![De verbindingen aan de bron die in de Medewerker wordt getoond.](./images/ai-assistant/show-sources.png)
 
-## Feedback geven
+## Feedback geven {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -246,11 +246,11 @@ Selecteer het vlagpictogram om verdere rapporten over uw ervaring te verstrekken
 
 +++
 
-## Aanvullende informatie
+## Aanvullende informatie {#additional-information}
 
 Raadpleeg deze sectie voor meer informatie over de assistent voor Experience Platform.
 
-### Voorzorgsmaatregelen en beperkingen
+### Voorzorgsmaatregelen en beperkingen {#caveats-and-limitations}
 
 De volgende sectie schetst huidige waarschuwingen en beperkingen om te overwegen wanneer het gebruiken van Medewerker.
 <!-- 
@@ -318,7 +318,7 @@ De assistent kan een onjuiste indruk geven van wat hij kan doen. De volgende typ
 | &quot;Weet je **x** taal?&quot; | De Medewerker steunt momenteel slechts Engels, maar kan &quot;ja&quot;antwoorden aangezien het onderliggende model het kan steunen. |
 | &quot;Kan je...?&quot; | De assistent kan ja antwoorden, hoewel dat niet het geval is. |
 
-### Tips
+### Tips {#tips}
 
 In de volgende sectie worden enkele tips en tijdelijke oplossingen beschreven die u in overweging kunt nemen bij het gebruik van de assistent.
 
