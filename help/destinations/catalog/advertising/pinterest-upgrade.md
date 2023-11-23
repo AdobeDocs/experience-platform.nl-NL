@@ -3,7 +3,8 @@ title: Pinterest migratie naar nieuwe API. Actie van de klant is vereist.
 description: Pinterest is bezig de API voor v4-adverteerders die momenteel door de Pinterest-bestemming in Real-Time CDP wordt gebruikt, te verouderen. Begrijp uw handelingspunten om naadloos overgang aan nieuwe API zonder onderbreking aan uw campagnes van Pinterest te maken.
 hide: true
 hidefromtoc: true
-source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
+exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%

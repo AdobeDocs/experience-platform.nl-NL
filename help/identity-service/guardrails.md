@@ -3,10 +3,10 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 1%
+source-wordcount: '1509'
+ht-degree: 0%
 
 ---
 
@@ -72,23 +72,6 @@ Wanneer een volledige grafiek met een nieuwe identiteit wordt bijgewerkt, werken
 >
 >Als de identiteit die u wilt verwijderen aan meerdere andere identiteiten in de grafiek is gekoppeld, worden de koppelingen die deze identiteit verbinden ook verwijderd.
 
->[!BEGINSHADEBOX]
-
-**Een visuele weergave van de verwijderingslogica**
-
-![Een voorbeeld van de oudste identiteit die wordt geschrapt om de recentste identiteit aan te passen](./images/graph-limits-v3.png)
-
-*Opmerkingen bij het diagram:*
-
-* `t` = timestamp.
-* De waarde van een tijdstempel komt overeen met de frequentie van een bepaalde identiteit. Bijvoorbeeld: `t1` de eerste gekoppelde identiteit (oudste) vertegenwoordigt en `t51` zou de nieuwste gekoppelde identiteit vertegenwoordigen.
-
-In dit voorbeeld verwijdert Identiteitsservice eerst de bestaande identiteit met de oudste tijdstempel voordat de grafiek aan de linkerkant kan worden bijgewerkt. Nochtans, omdat de oudste identiteit een apparatenidentiteitskaart is, slaat de Dienst van de Identiteit die identiteit over tot het aan namespace met een type krijgt dat hoger op de schrappingspriorlijst is, die in dit geval is `ecid-3`. Zodra de oudste identiteit met een hoger type van schrappingsprioriteit wordt verwijderd, wordt de grafiek dan bijgewerkt met een nieuwe verbinding, `ecid-51`.
-
-* In het zeldzame geval dat er twee identiteiten met het zelfde timestamp en identiteitstype zijn, zal de Dienst van de Identiteit de identiteitskaart sorteren op [XID](./api/list-native-id.md) en het schrappen van regels uitvoeren.
-
->[!ENDSHADEBOX]
-
 ### Gevolgen voor de uitvoering
 
 De volgende secties schetsen de implicaties die de schrappingslogica aan de Dienst van de Identiteit, het Profiel van de Klant in real time, en WebSDK heeft.
@@ -116,7 +99,83 @@ Als u uw voor authentiek verklaarde gebeurtenissen tegen identiteitskaart van CR
 * [Identiteitskaart voor Experience Platform-tags configureren](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identiteitsgegevens in het Web SDK van het Experience Platform](../edge/identity/overview.md#using-identitymap)
 
+### Voorbeeldscenario&#39;s
 
+#### Voorbeeld één: standaard grote grafiek
+
+*Opmerkingen bij het diagram:*
+
+* `t` = timestamp.
+* De waarde van een tijdstempel komt overeen met de frequentie van een bepaalde identiteit. Bijvoorbeeld: `t1` de eerste gekoppelde identiteit (oudste) vertegenwoordigt en `t51` zou de nieuwste gekoppelde identiteit vertegenwoordigen.
+
+In dit voorbeeld verwijdert Identiteitsservice eerst de bestaande identiteit met de oudste tijdstempel voordat de grafiek aan de linkerkant kan worden bijgewerkt. Nochtans, omdat de oudste identiteit een apparatenidentiteitskaart is, slaat de Dienst van de Identiteit die identiteit over tot het aan namespace met een type krijgt dat hoger op de schrappingspriorlijst is, die in dit geval is `ecid-3`. Zodra de oudste identiteit met een hoger type van schrappingsprioriteit wordt verwijderd, wordt de grafiek dan bijgewerkt met een nieuwe verbinding, `ecid-51`.
+
+* In het zeldzame geval dat er twee identiteiten met het zelfde timestamp en identiteitstype zijn, zal de Dienst van de Identiteit de identiteitskaart sorteren op [XID](./api/list-native-id.md) en het schrappen van regels uitvoeren.
+
+![Een voorbeeld van de oudste identiteit die wordt geschrapt om de recentste identiteit aan te passen](./images/graph-limits-v3.png)
+
+#### Voorbeeld twee: &quot;grafieksplitsing&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Binnenkomende gebeurtenis]
+
+*Opmerkingen bij het diagram:*
+
+* In het volgende diagram wordt ervan uitgegaan dat bij `timestamp=50`, 50 identiteiten bestaan in de identiteitsgrafiek.
+* `(...)` Hiermee worden de andere identiteiten aangegeven die al zijn gekoppeld in de grafiek.
+
+In dit voorbeeld wordt ECID:32110 opgenomen en gekoppeld aan een grote grafiek bij `timestamp=51`, waardoor de limiet van 50 identiteiten wordt overschreden.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB Verwijderingsproces]
+
+Dientengevolge, schrapt de Dienst van de Identiteit de oudste identiteit die op timestamp en identiteitstype wordt gebaseerd. In dit geval wordt ECID:35577 verwijderd.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB Grafiekuitvoer]
+
+Als gevolg van het verwijderen van ECID:35577 worden ook de randen die aan CRM-id:60013 en CRM-id:25212 zijn gekoppeld met de nu verwijderde ECID:35577 verwijderd. Door dit verwijderingsproces wordt de grafiek opgesplitst in twee kleinere grafieken.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### Voorbeeld drie: &quot;hub-and-speak&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Binnenkomende gebeurtenis]
+
+*Opmerkingen bij het diagram:*
+
+* In het volgende diagram wordt ervan uitgegaan dat bij `timestamp=50`, 50 identiteiten bestaan in de identiteitsgrafiek.
+* `(...)` Hiermee worden de andere identiteiten aangegeven die al zijn gekoppeld in de grafiek.
+
+Door middel van de verwijderingslogica kunnen sommige &quot;hub&quot;-identiteiten ook worden verwijderd. Deze hubidentiteiten verwijzen naar knopen die aan verscheidene individuele identiteiten verbonden zijn die anders losgemaakt zouden zijn.
+
+In het onderstaande voorbeeld wordt ECID:21011 opgenomen en gekoppeld aan de grafiek op `timestamp=51`, waardoor de limiet van 50 identiteiten wordt overschreden.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Verwijderingsproces]
+
+Dientengevolge, schrapt de Dienst van de Identiteit de oudste identiteit, die in dit geval ECID:35577 is. De schrapping van ECID:35577 leidt ook tot de schrapping van het volgende:
+
+* Het verband tussen CRM-ID: 60013 en de nu verwijderde ECID:35577, wat resulteert in een grafieksplitsingsscenario.
+* IDFA: 32110, IDFA: 02383, en de overige identiteiten vertegenwoordigd door `(...)`. Deze identiteiten worden verwijderd omdat ze individueel niet aan andere identiteiten zijn gekoppeld en daarom niet in een grafiek kunnen worden weergegeven.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Grafiekuitvoer]
+
+Ten slotte levert het verwijderingsproces twee kleinere grafieken op.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Volgende stappen
 
