@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -85,8 +85,8 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Toegang tot het lezen, maken, bewerken en verwijderen van waarschuwingsgeschiedenis. |
 | [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Alleen-lezen toegang voor het tabblad, overzicht en details van berekende kenmerken. |
 | [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Toegang tot het lezen, maken, verwijderen van concepten en het deactiveren van berekende kenmerken. |
-| [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Alleen-lezen toegang voor gegevenshygiëne. |
-| [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Toegang tot het lezen, maken, bewerken en verwijderen van gegevenshygiëne. |
+| [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Alleen-lezen toegang voor de levenscyclus van gegevens. |
+| [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Toegang tot de levenscyclus van gegevens lezen, maken, bewerken en verwijderen. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Toegang tot het lezen, maken, bewerken en verwijderen van schema&#39;s en gerelateerde bronnen. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Alleen-lezen toegang tot schema&#39;s en gerelateerde bronnen. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Toegang tot het lezen, maken, bewerken en verwijderen van schemarelaties. |
@@ -123,7 +123,7 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Toegang tot creëren, goedkeuren, en de handvatten van de partner verwerpen om twee organisaties te verbinden en toe te laten [!DNL Segment Match] stromen. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Toegang tot lezen, maken, bewerken en publiceren [!DNL Segment Match] voert met actieve partners uit. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Toegang tot lezen, maken, bewerken en verwijderen in [!DNL Data Science Workspace]. |
-| Gegevensbeheer | [!UICONTROL Apply Data Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
+| Gegevensbeheer | [!UICONTROL Manage Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
 | Gegevensbeheer | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
 | Gegevensbeheer | [!UICONTROL View Data Usage Policies] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
 | Gegevensbeheer | [!UICONTROL View User Activity Log] | Alleen-lezen toegang tot opgenomen weergave [auditlogboeken](../landing/governance-privacy-security/audit-logs/overview.md) van platformactiviteiten. |
