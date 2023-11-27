@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en systeem-gedwongen gidsen voor profielgegevens en segmentatie om een optimaal gebruik van de functionaliteit van Real-Time CDP te verzekeren.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
+source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '2226'
 ht-degree: 2%
 
 ---
@@ -119,6 +119,7 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 | Streaming publiek per sandbox | 500 | Prestatiegerichting | Een organisatie kan in totaal meer dan 500 streamingdeelnemers hebben, zolang er in elke sandbox minder dan 500 streamingdeelnemers zijn. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Meer informatie over [streaming publiek](/help/segmentation/ui/streaming-segmentation.md). |
 | Batchpubliek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 batchdoelgroepen hebben, zolang er in elke sandbox minder dan 4000 doelgroepen aanwezig zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
 | Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt niet meer dan 50 accountsoorten maken in een sandbox. Nadat u 50 publiek in een zandbak bereikt, **[!UICONTROL Create audience]** besturingselement is uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Meer informatie over [accountpubliek](/help/segmentation/ui/account-audiences.md). |
+| Gepubliceerde composities per sandbox | 10 | Prestatiegerichting | U kunt niet meer dan 10 gepubliceerde composities in een sandbox hebben. Meer informatie over [compositie van het publiek in de UI-gids](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 
