@@ -4,9 +4,9 @@ title: Bladeren door profielen in Real-time Customer Data Platform
 description: Met Adobe Real-time Customer Data Platform kunt u in real-time door de gegevens van het klantprofiel bladeren via de Adobe Experience Platform-gebruikersinterface.
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,8 @@ Als u deze verbeteringen wilt verkennen, voert u eerst de stappen uit die in het
 De profieldetails omvatten toegang tot [!UICONTROL Accounts], [!UICONTROL Opportunities], en [!UICONTROL Source records] tabbladen naast de standaardinformatie in het klantprofiel die ook is verbeterd met B2B-gebeurtenissen en -kenmerken.
 
 ![](images/b2b-profile-detail.png)
+
+Raadpleeg voor meer informatie over de profieldetails in de interface van het platform [sectie met details van de documentatie van het dashboard Profielen](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Het tabblad Accounts
 

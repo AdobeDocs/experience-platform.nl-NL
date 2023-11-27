@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een gegevensset configureren voor het vastleggen van toestemmings- en voorkeursgegevens
 description: Leer hoe u een XDM-schema (Experience Data Model) en een gegevensset configureert voor het vastleggen van toestemmings- en voorkeursgegevens in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
@@ -96,8 +96,8 @@ De veldgroep bevat één veld van het objecttype. `consents`, waarvan de subeige
 
 Als u gegevens met toestemming wilt verzamelen met de standaard Adobe, moet u een schema met profiel hebben dat de volgende twee veldgroepen bevat:
 
-* [!UICONTROL Consent and Preference Details]
-* [!UICONTROL IdentityMap] (vereist als het gebruiken van het Web van het Platform of Mobiele SDK om toestemmingssignalen te verzenden)
+* [[!UICONTROL Consent and Preference Details]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (vereist als het gebruiken van het Web van het Platform of Mobiele SDK om toestemmingssignalen te verzenden)
 
 Selecteer in de interface Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie, dan selecteer **[!UICONTROL Browse]** om een lijst met bestaande schema&#39;s weer te geven. Selecteer hier de naam van de [!DNL Profile]-enabled schema dat u toestemmingsgebieden aan wilt toevoegen. In de schermafbeeldingen in deze sectie wordt het schema &quot;Loyalty-leden&quot; gebruikt dat in het [zelfstudie Schema maken](../../../../xdm/tutorials/create-schema-ui.md) als voorbeeld.
 

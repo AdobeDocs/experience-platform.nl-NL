@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
 workflow-type: tm+mt
-source-wordcount: '4040'
+source-wordcount: '4571'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 De [!UICONTROL Browse] kunt u de alleen-lezen profielen die in uw organisatie worden opgenomen, doorzoeken en bekijken. Van hieruit kunt u belangrijke informatie zien die tot het profiel behoort met betrekking tot hun voorkeuren, gebeurtenissen uit het verleden, interacties en doelgroepen.
 
-Raadpleeg de documentatie over [browserprofielen in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+## Profieldetails {#profile-details}
+
+Als u het dialoogvenster [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte, selecteert u een [!UICONTROL Profile ID] in de lijst.
+
+![Op het tabblad Profielen bladeren wordt een profiel-id gemarkeerd.](../images/profiles/profile-id.png)
+
+De [!UICONTROL Profiles] [!UICONTROL Detail] in de werkruimte worden verschillende vooraf geconfigureerde widgets weergegeven die specifieke informatie over dat profiel overbrengen. Met deze informatie kunt u in één oogopslag de belangrijkste kenmerken van het profiel begrijpen. U kunt ook uw [!UICONTROL Profiles] [!UICONTROL Detail] door uw eigen widgets te maken. Zie de sectie over [hoe u widgets kunt toevoegen](#add-widgets) voor meer informatie .
+
+![De [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte met de [!UICONTROL Detail] gemarkeerd.](../images/profiles/profile-details-workspace.png)
+
+### Profieldetails, widgets {#widgets}
+
+De vooraf geconfigureerde profieldetails-widgets zijn als volgt:
+
+#### Klantprofiel {#customer-profile}
+
+De [!UICONTROL Customer profile] widget geeft de voor- en achternaam weer van de gebruiker die aan het profiel is gekoppeld, alsmede hun [!UICONTROL Profile ID]. Een profiel-id is een automatisch gegenereerde id die is gekoppeld aan een identiteitstype en die een profiel vertegenwoordigt. Voor meer informatie over identiteiten en naamruimten raadpleegt u de [overzicht van identiteiten](../../rtcdp/profile/identities-overview.md).
+
+![De profielwidget van de klant.](../images/profiles/customer-profile.png)
+
+#### Basiskenmerken {#basic-attributes}
+
+De [!UICONTROL Basic attributes] widget geeft de meestgebruikte kenmerken weer die worden gebruikt om een afzonderlijk profiel te definiëren.
+
+![De widget Standaardkenmerken.](../images/profiles/basic-attributes.png)
+
+#### Gekoppelde identiteiten {#linked-identities}
+
+De [!UICONTROL Linked identities] widget geeft alle andere identiteiten weer die aan het profiel zijn gekoppeld.
+
+Als u de identiteitsgegevens van het profiel in meer detail wilt weergeven en naar het dialoogvenster [!UICONTROL Identities] werkruimte, selecteert u **[!UICONTROL View identity graph]**.
+
+![De widget Gekoppelde identiteiten.](../images/profiles/linked-identities.png)
+
+#### Kanaalvoorkeuren {#channel-preferences}
+
+De [!UICONTROL Channel preferences] widget geeft de communicatiekanalen weer waarvan de gebruiker toestemming heeft gegeven om communicatie van te ontvangen. Een vinkje geeft elk kanaal aan dat de gebruiker heeft geaccepteerd om communicatie van te ontvangen.
+
+<!-- image needs a blue tick added below -->
+
+![De widget Kanaalvoorkeuren.](../images/profiles/channel-preferences.png)
+
+De toestemming van de klant en de contactvoorkeur zijn complexe onderwerpen. Als u wilt weten hoe toestemmings- en contextvoorkeuren kunnen worden verzameld, verwerkt en gefilterd in Experience Platform, kunt u het beste de volgende documenten lezen:
+
+* Om over de groepen van het schemagebied te leren die worden vereist om [gegevens over de toestemming verzamelen overeenkomstig de norm voor Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md), zie de documentatie op deze profiel-Toegelaten groepen van het schemagebied.
+   * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (vereist als het gebruiken van het Web van het Platform of Mobiele SDK om toestemmingssignalen te verzenden)
+* Als u wilt leren hoe u toestemming van klanten en voorkeursgegevens kunt verwerken met de standaard Adobe, raadpleegt u het overzicht over [verwerking van toestemming in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* Een gecombineerd beleid voor gegevensbeheer en instemming kan worden gebruikt om profielen voor segmentatie te filteren op basis van hun voorkeuren voor toestemming en uw vastgestelde organisatorische regels. Om te leren om dit gecombineerde beleid tot stand te brengen en te gebruiken, zie de gebruikersgids op [beleid voor gegevensgebruik beheren](../../data-governance/policies/user-guide.md#combine-policies).
+
+### Widgets toevoegen {#add-widgets}
+
+Aangepaste widgets toevoegen aan uw [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte, selecteert u **[!UICONTROL Customize profile details]**.
+
+![De werkruimte Profielgegevens met [!UICONTROL Customize profile details] gemarkeerd.](../images/profiles/customize-profile-details.png)
+
+U kunt de werkruimte nu bewerken door de widgets te vergroten of te verkleinen of te verplaatsen. Selecteren **[!UICONTROL Add widget]** om een widget met aangepaste kenmerken te maken.
+
+![De profielen [!UICONTROL Detail] werkruimte met [!UICONTROL Add widget] gemarkeerd.](../images/profiles/add-widget.png)
+
+De maker van de widget wordt weergegeven. Voer een beschrijvende naam voor de widget in het dialoogvenster [!UICONTROL Card title] tekstveld en selecteer **[!UICONTROL Add attributes]**.
+
+![Het canvas van de widget-maker met de [!UICONTROL Card title] veld en [!UICONTROL Add attributes] gemarkeerd.](../images/profiles/widget-creator.png)
+
+Er wordt een dialoogvenster weergegeven met een visualisatie van het samenvoegingsschema van het profiel. Gebruik het zoekveld of de schuifbalk om te zoeken naar de kenmerken waarover u met de widget wilt rapporteren. Schakel het selectievakje in voor alle kenmerken die u wilt opnemen. Selecteren **[!UICONTROL Select]** om door te gaan met de aanmaakworkflow.
+
+>[!TIP]
+>
+>Een selectie van het bovenste selectievakje bevat eventuele onderliggende elementen.
+
+![Het schema van de unie met het vakje van de loyaliteitsattributen en [!UICONTROL Select] gemarkeerd.](../images/profiles/union-schema-attributes.png)
+
+Er wordt een voorvertoning van de voltooide widget weergegeven op het canvas. Als u tevreden bent met de door u gekozen kenmerken, selecteert u **[!UICONTROL Save]** om je keuzes te bevestigen en terug te keren naar de [!UICONTROL Profiles] [!UICONTROL Detail] werkruimte. De nieuwe widget is nu zichtbaar in de werkruimte.
+
+![Het canvas van de maker van de widget met Opslaan gemarkeerd en de voorvertoning van de widget weergeven.](../images/profiles/widget-preview.png)
 
 ## Beleid samenvoegen {#merge-policies}
 
