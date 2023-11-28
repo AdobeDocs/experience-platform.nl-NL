@@ -3,12 +3,12 @@ title: Standaardhulplijnen voor realtime gegevens en segmentatie van klantprofie
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Leer over prestaties en systeem-gedwongen gidsen voor profielgegevens en segmentatie om een optimaal gebruik van de functionaliteit van Real-Time CDP te verzekeren.
+description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
 workflow-type: tm+mt
 source-wordcount: '2226'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
