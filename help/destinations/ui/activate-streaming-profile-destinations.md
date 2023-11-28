@@ -1,12 +1,12 @@
 ---
-keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; activeer e-mail marketing bestemmingen; activeer de bestemmingen van de wolkenopslag
 title: Stimulansen voor het streamen van exportdoelen voor profielen activeren
 type: Tutorial
 description: Leer hoe u de publieksgegevens die u in Adobe Experience Platform hebt, activeert door een publiek naar streaming op profiel gebaseerde doelen te sturen.
+badgeUltimate: label="Ultieme" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,13 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-In dit artikel wordt uitgelegd welke workflow is vereist voor het activeren van publieksgegevens in op Adobe Experience Platform gebaseerde streaming profielbestemmingen, zoals Amazon Kinesis.
+In dit artikel wordt uitgelegd welke workflow is vereist om publieksgegevens in Adobe Experience Platform te activeren voor streaming op profielen gebaseerde doelen (ook wel bekend als [ondernemingsbestemmingen](/help/destinations/destination-types.md#streaming-profile-export)).
+
+Dit artikel is van toepassing op de volgende drie bestemmingen:
+
+* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [HTTP API-bestemming](/help/destinations/catalog/streaming/http-destination.md).
 
 ## Vereisten {#prerequisites}
 
@@ -83,7 +89,15 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en beveiligingsschild van Adobe**, selecteert u **[!UICONTROL View applicable consent policies]** na te gaan welk toestemmingsbeleid wordt toegepast en hoeveel profielen als gevolg daarvan in de activering worden opgenomen. Meer informatie [goedkeuring beleidsevaluatie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie .
+[Goedkeuring van het beleid](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wordt momenteel niet gesteund in de uitvoer naar de drie ondernemingsbestemmingen - Amazon Kinesis, Azure Event Hubs, en HTTP API.
+
+Dit betekent dat profielen waarvoor geen toestemming is gegeven, als doelprofiel kunnen worden gebruikt *worden opgenomen* in de uitvoer naar deze drie bestemmingen.
+
+<!--
+
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+-->
 
 ### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
 
