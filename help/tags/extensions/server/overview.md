@@ -2,9 +2,9 @@
 title: Verwijzing naar extensies doorsturen van gebeurtenissen
 description: Documentatie zoeken voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
+source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -48,5 +48,5 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
-* [[!DNL Tiktok] Web Events API](https://exchange.adobe.com/apps/ec/109834)*
+* [[!DNL Tiktok] Web Events API](./tiktok/overview.md)
 * [[!DNL Zendesk] API voor gebeurtenissen](./zendesk/overview.md)
