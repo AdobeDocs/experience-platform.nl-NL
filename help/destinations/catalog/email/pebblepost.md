@@ -3,9 +3,9 @@ keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost p
 title: PebblePost-extensie
 description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van de Adobe.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: baa0ea072c80e141974bb595dfff149aa5de6270
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] Met deze oplossing kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden geconverteerd. Marktdeelnemers kunnen het door hen in de Adobe gecreëerde aangepaste gegevenspubliek benutten om zich nu te richten op consumenten met een relevante, langere, in-home media-indruk. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
+[!DNL PebblePost's Programmatic Direct Mail] Met deze oplossing kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden geconverteerd. Marktdeelnemers kunnen het door hen in de Adobe gecreëerde aangepaste gegevenspubliek benutten om zich nu te richten op consumenten met een relevante, langere, in-home media-indruk. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
 
-[!DNL PebblePost] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over PebblePost, lees [integratieblogbericht](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
+[!DNL PebblePost] is een e-mailextensie in Adobe Experience Platform.
 
 Dit doel is een tagextensie. Raadpleeg voor meer informatie over de werking van tagextensies in Platform de klasse [overzicht van tagextensies](../launch-extensions/overview.md).
 
