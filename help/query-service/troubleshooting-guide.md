@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4366'
 ht-degree: 1%
 
 ---
@@ -535,6 +535,16 @@ WHERE T2.ID IS NULL
 ### Steunt de Dienst van de Vraag het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel?
 
 +++Antwoord nr, de Dienst van de Vraag steunt niet het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel.
++++
+
+### Hoe vaak worden de gebruiksgegevens op het dashboard voor het gebruiksgebruik van licenties bijgewerkt voor Data Distiller?
+
+++ + Antwoord Het dashboard voor het gebruiksadres van de Distiller-computer van de vergunning voor Gegevens wordt vier keer per dag bijgewerkt, om de zes uur.
++++
+
+### Kan ik het CREATE bevel van de MENING zonder de toegang van Distiller van Gegevens gebruiken?
+
+++ + Antwoord ja, u kunt gebruiken `CREATE VIEW` zonder Data Distiller-toegang. Dit bevel verstrekt een logische mening van gegevens maar schrijft het niet terug naar het gegevens meer.
 +++
 
 ## Data exporteren {#exporting-data}

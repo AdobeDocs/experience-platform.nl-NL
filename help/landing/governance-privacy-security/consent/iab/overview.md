@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Experience Platform
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '2544'
 ht-degree: 0%
@@ -19,7 +19,7 @@ De [!DNL Transparency & Consent Framework] (TCF), zoals beschreven door [!DNL In
 >
 >Meer informatie over TCF 2.0 vindt u op de [IAB Europe-website](https://iabeurope.eu/tcf-2-0/), met inbegrip van ondersteunende materialen en technische specificaties.
 
-Adobe Experience Platform maakt deel uit van de geregistreerde [IAB TCF 2.0 leverancierslijst](https://iabeurope.eu/vendor-list-tcf-v2-0/), onder de ID **565**. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gegevens voor klanttoestemming verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze toestemmingsgegevens kunnen dan in rekening worden gebracht of de profielen in uitgevoerde publiekssegmenten, afhankelijk van hun gebruiksgeval inbegrepen zijn.
+Adobe Experience Platform maakt deel uit van de geregistreerde [IAB TCF 2.0 leverancierslijst](https://iabeurope.eu/vendor-list-tcf/), onder de ID **565**. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gegevens voor klanttoestemming verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze toestemmingsgegevens kunnen dan in rekening worden gebracht of de profielen in uitgevoerde publiekssegmenten, afhankelijk van hun gebruiksgeval inbegrepen zijn.
 
 >[!IMPORTANT]
 >

@@ -4,7 +4,7 @@ title: Privacy in Real-time Customer Data Platform
 description: Met Adobe Real-time Customer Data Platform kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen voldoen aan de privacyregels.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Document weergeven op [naleven van opt-out-verzoeken](../../segmentation/consent
 
 ## IAB TCF 2.0-ondersteuning
 
-[!DNL Real-Time CDP] is gebouwd op Adobe Experience Platform, dat deel uitmaakt van de geregistreerde [leverancierslijst](https://iabeurope.eu/vendor-list-tcf-v2-0/) voor de [!DNL Transparency & Consent Framework (TCF)], zoals uiteengezet door de [!DNL Interactive Advertising Bureau (IAB)]. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gedetailleerde gegevens over de toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze toestemmingsgegevens kunnen dan in rekening worden gebracht in of bepaalde profielen in uitgevoerde publiekssegmenten, afhankelijk van hun gebruiksgeval inbegrepen zijn.
+[!DNL Real-Time CDP] is gebouwd op Adobe Experience Platform, dat deel uitmaakt van de geregistreerde [leverancierslijst](https://iabeurope.eu/vendor-list-tcf/) voor de [!DNL Transparency & Consent Framework (TCF)], zoals uiteengezet door de [!DNL Interactive Advertising Bureau (IAB)]. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gedetailleerde gegevens over de toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze toestemmingsgegevens kunnen dan in rekening worden gebracht in of bepaalde profielen in uitgevoerde publiekssegmenten, afhankelijk van hun gebruiksgeval inbegrepen zijn.
 
 Zie het overzicht op [IAB TCF 2.0-ondersteuning in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie .
 

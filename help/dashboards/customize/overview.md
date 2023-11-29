@@ -3,9 +3,9 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Overzicht van dashboard-aanpassing
 description: Meer informatie over de manieren waarop u de gegevens die in uw Adobe Experience Platform-dashboards worden weergegeven, kunt aanpassen.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ De profielen, segmenten en doeldashboards die beschikbaar zijn in Adobe Experien
 
 >[!NOTE]
 >
->De widgets die worden weergegeven in het dialoogvenster [!UICONTROL License usage] het dashboard kan niet worden aangepast. Voor meer informatie over dit unieke dashboard leest u de [dashboarddocumentatie voor licentiegebruik](../guides/license-usage.md).
+>Alle updates van de dashboards worden uitgevoerd per organisatie en per sandbox.
 
 ## Het dashboard wijzigen
 
@@ -24,7 +24,7 @@ Selecteren **[!UICONTROL Modify dashboard]** in de dashboards van profielen, seg
 
 ## De widgetbibliotheek
 
-In de widgetbibliotheek in Experience Platform kunt u alle [standaard](#standard-widgets) en [aangepast](#custom-widgets) widgets beschikbaar voor uw organisatie. Vanuit het dashboard (bijvoorbeeld het dashboard voor profielen) kunt u **[!UICONTROL Modify dashboard]** om de **[!UICONTROL Widget library]** knop.
+In de widgetbibliotheek in het Experience Platform kunt u alle [standaard](#standard-widgets) en [aangepast](#custom-widgets) widgets beschikbaar voor uw organisatie. Vanuit het dashboard (bijvoorbeeld het dashboard voor profielen) kunt u **[!UICONTROL Modify dashboard]** om de **[!UICONTROL Widget library]** knop.
 
 ![Het dashboard Profielen met het dashboard Wijzigen gemarkeerd.](../images/customization/modify-dashboard.png)
 
@@ -34,9 +34,9 @@ Selecteren **[!UICONTROL Widget library]** om de widgetbibliotheek te openen en 
 
 ### Standaardwidgets {#standard-widgets}
 
-Standaardwidgets verwijzen naar de widgets die Adobe in uw dashboards kan gebruiken. Deze widgets zijn alleen-lezen en kunnen niet door uw organisatie worden bewerkt.
+Standaardwidgets verwijzen naar de widgets die door de Adobe kunnen worden gebruikt in uw dashboards. Deze widgets zijn alleen-lezen en kunnen niet door uw organisatie worden bewerkt.
 
-In de widgetbibliotheek **[!UICONTROL Standard]** bevat alle beschikbare standaardwidgets die door Adobe worden verschaft. U kunt de dashboards bijwerken gebruikend om het even welk van deze standaardmetriek. Raadpleeg de handleiding voor meer informatie over het toevoegen van standaardwidgets aan het dashboard [standaardwidgets gebruiken in dashboards](standard-widgets.md).
+In de widgetbibliotheek **[!UICONTROL Standard]** bevat alle beschikbare standaardwidgets die door de Adobe worden verschaft. U kunt de dashboards bijwerken gebruikend om het even welk van deze standaardmetriek. Raadpleeg de handleiding voor meer informatie over het toevoegen van standaardwidgets aan het dashboard [standaardwidgets gebruiken in dashboards](standard-widgets.md).
 
 ### Aangepaste widgets {#custom-widgets}
 
@@ -54,4 +54,4 @@ Voor stapsgewijze instructies voor het bewerken van het schema van uw organisati
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, kunt u beginnen met het aanpassen van de dashboards van uw Experience Platform door de grootte, vorm en orde van bestaande widgets te wijzigen, standaardwidgets toe te voegen die door Adobe worden verstrekt, of douanewidgets te creëren en te delen met uw organisatie.
+Nadat u dit document hebt gelezen, kunt u uw Experience Platforms-dashboards aanpassen door de grootte, vorm en volgorde van bestaande widgets te wijzigen, standaardwidgets toe te voegen die door de Adobe worden geboden, of aangepaste widgets te maken en te delen met uw organisatie.

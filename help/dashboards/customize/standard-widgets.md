@@ -3,9 +3,9 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Standaarddashboardwidgets
 description: Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets aan uw Adobe Experience Platform-dashboards.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,13 @@ ht-degree: 0%
 
 In Adobe Experience Platform kunt u de gegevens van uw organisatie bekijken en ermee communiceren met behulp van meerdere dashboards. U kunt bepaalde dashboards ook bijwerken door nieuwe widgets aan uw dashboardmening toe te voegen. Adobe biedt een selectie van standaardwidgets die u kunt toevoegen aan uw dashboards.
 
-De [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] dashboards hebben elk een standaard widget lading-uit wanneer een nieuwe instantie van het Platform wordt gecreeerd. Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] dashboards in Platform UI.
+De [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets), en [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) dashboards hebben elk een standaard widget lading-uit wanneer een nieuwe instantie van het Platform wordt gecreeerd. Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] dashboards in Platform UI.
 
 >[!NOTE]
 >
->Vanaf 26 juli 2023 [!UICONTROL Profiles], [!UICONTROL Audiences], en [!UICONTROL Destinations] De overzichtdashboards zijn teruggesteld aan een nieuwe gebrek widget lading-uit voor alle gebruikers die hun meningen in de voorafgaande zes maanden niet veranderden.
->Raadpleeg de documentatie in het dialoogvenster [Profielen](../guides/profiles.md#default-widgets), [Soorten publiek](../guides/audiences.md#default-widgets), en [Doelen](../guides/destinations.md#default-widgets) standaardwidgetsecties voor details waarop widgets zijn opgenomen als onderdeel van de standaard-widget-taaktaken.
+>Alle updates van de dashboards worden uitgevoerd per organisatie en per sandbox.
 
 Raadpleeg de handleiding voor meer informatie over aangepaste widgets [aangepaste widgets maken](custom-widgets.md).
-
->[!NOTE]
->
->De widgets die worden weergegeven in het dialoogvenster [!UICONTROL License usage] het dashboard kan niet worden aangepast. Voor meer informatie over dit unieke dashboard leest u de [dashboarddocumentatie voor licentiegebruik](../guides/license-usage.md).
 
 ## Widget-bibliotheek {#widget-library}
 

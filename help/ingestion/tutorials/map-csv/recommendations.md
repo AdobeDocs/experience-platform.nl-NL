@@ -2,9 +2,9 @@
 title: Een CSV-bestand toewijzen aan een XDM-schema met behulp van door AI gegenereerde Recommendations
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand met behulp van door AI gegenereerde aanbevelingen kunt toewijzen aan een XDM-schema.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
+source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '1035'
 ht-degree: 0%
 
 ---
@@ -21,16 +21,16 @@ Om CSV-gegevens in te nemen [!DNL Adobe Experience Platform], moeten de gegevens
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Platform]:
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] organiseert de gegevens van de klantenervaring.
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Platform] organiseert de gegevens van de klantenervaring.
    * Op zijn minst moet u het concept van [gedragingen in XDM](../../../xdm/home.md#data-behaviors), zodat u kunt besluiten of u uw gegevens aan een [!UICONTROL Profile] klasse (recordgedrag) of [!UICONTROL ExperienceEvent] klasse (tijdreeksgedrag).
 * [Inname in batch](../../batch-ingestion/overview.md): De methode waarbij [!DNL Platform] Hiermee worden gegevens uit door de gebruiker opgegeven gegevensbestanden opgenomen.
-* [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md): Een reeks mogelijkheden die u toestaan om opgenomen gegevens in kaart te brengen en om te zetten om aan schema&#39;s in overeenstemming te zijn XDM. De documentatie over [Functies Data Prep](../../../data-prep/functions.md) is specifiek relevant voor schema-toewijzing.
+* [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md): Een reeks mogelijkheden waarmee u ingesloten gegevens kunt toewijzen en transformeren om te voldoen aan XDM-schema&#39;s. De documentatie over [Functies Data Prep](../../../data-prep/functions.md) is specifiek relevant voor schema-toewijzing.
 
 ## Gegevens over gegevensstroom opgeven
 
 Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie. Op de **[!UICONTROL Catalog]** bekijken, naar de **[!UICONTROL Local system]** categorie. Selecteer onder **[!UICONTROL Local file upload]** de optie **[!UICONTROL Add data]**.
 
-![De [!UICONTROL Sources] catalogus in de gebruikersinterface van het Platform, met [!UICONTROL Add data] krachtens [!UICONTROL Local file upload] geselecteerd.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![De [!UICONTROL Sources] catalogus in de interface van het platform, met [!UICONTROL Add data] krachtens [!UICONTROL Local file upload] geselecteerd.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 De **[!UICONTROL Map CSV XDM schema]** wordt weergegeven, vanaf de **[!UICONTROL Dataflow detail]** stap.
 
@@ -47,7 +47,7 @@ U kunt naar keuze de volgende extra eigenschappen voor dataflow vormen alvorens 
 | [!UICONTROL Description] | Een beschrijving voor de gegevensstroom. |
 | [!UICONTROL Error diagnostics] | Als deze optie is ingeschakeld, worden foutberichten gegenereerd voor nieuw opgenomen batches, die kunnen worden weergegeven wanneer de bijbehorende batch in het dialoogvenster [API](../../batch-ingestion/api-overview.md). |
 | [!UICONTROL Partial ingestion] | Als deze optie is ingeschakeld, worden geldige records voor nieuwe batchgegevens opgenomen binnen een opgegeven foutdrempel. Deze drempel staat u toe om het percentage aanvaardbare fouten te vormen alvorens de volledige partij ontbreekt. |
-| [!UICONTROL Dataflow details] | Geef een naam en een optionele beschrijving op voor de gegevensstroom waarmee de CSV-gegevens in het Platform worden geplaatst. Aan de gegevensstroom wordt automatisch een standaardnaam toegewezen wanneer u deze workflow start. Het wijzigen van de naam is optioneel. |
+| [!UICONTROL Dataflow details] | Geef een naam en een optionele beschrijving voor de gegevensstroom op die de CSV-gegevens naar Platform overbrengt. Aan de gegevensstroom wordt automatisch een standaardnaam toegewezen wanneer u deze workflow start. Het wijzigen van de naam is optioneel. |
 | [!UICONTROL Alerts] | Selecteren in een lijst met [waarschuwingen in producten](../../../observability/alerts/overview.md) dat u betreffende de status van de gegevensstroom wilt ontvangen zodra het in werking is gesteld. |
 
 {style="table-layout:auto"}
@@ -72,7 +72,11 @@ De modellen van XML worden in werking gesteld om een nieuw schema te produceren 
 
 ![De [!UICONTROL Mapping] stap in UI, tonend alle CSV in kaart gebrachte gebieden en de resulterende schemastructuur.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
-Van hier kunt u optioneel [veldtoewijzingen bewerken](#edit-mappings) of [de veldgroepen wijzigen waaraan ze zijn gekoppeld](#edit-schema) afhankelijk van uw behoeften. Selecteer **[!UICONTROL Finish]** om de afbeelding te voltooien en de dataflow in werking te stellen u vroeger vormde. De CSV-gegevens worden in het systeem opgenomen en vullen een gegevensset in die is gebaseerd op de gegenereerde schemastructuur en die klaar is om te worden verbruikt door downstream-services van Platforms.
+>[!NOTE]
+>
+>U kunt alle velden in uw schema filteren op basis van verschillende criteria tijdens de toewijzingsworkflow van bron naar doel voor velden. Standaard worden alle toegewezen velden weergegeven. Als u de weergegeven velden wilt wijzigen, selecteert u het filterpictogram naast het invoerveld voor de zoekopdracht en kiest u een van de vervolgkeuzemogelijkheden.<br> ![De toewijzingsfase van de workflow voor het maken van het CSV-schema naar het XDM-schema met het filterpictogram en het vervolgkeuzemenu gemarkeerd.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "De toewijzingsfase van de workflow voor het maken van het CSV-schema naar het XDM-schema met het filterpictogram en het vervolgkeuzemenu gemarkeerd."){width="100" zoomable="yes"}
+
+Van hier kunt u optioneel [veldtoewijzingen bewerken](#edit-mappings) of [de veldgroepen wijzigen waaraan ze zijn gekoppeld](#edit-schema) afhankelijk van uw behoeften. Selecteer **[!UICONTROL Finish]** om de afbeelding te voltooien en de dataflow in werking te stellen u vroeger vormde. De gegevens CSV wordt opgenomen in het systeem en bevolkt een dataset die op de geproduceerde schemastructuur wordt gebaseerd, klaar om door de stroomafwaartse diensten van het Platform worden verbruikt.
 
 ![De [!UICONTROL Finish] knop die wordt geselecteerd, het CSV-toewijzingsproces voltooien.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
@@ -94,6 +98,6 @@ Wanneer u klaar bent met het aanpassen van de schemaaanbevelingen voor uw bronge
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om een Csv- dossier aan een XDM- schema in kaart te brengen gebruikend AI-Gegenereerde aanbevelingen, die u toestaan om die gegevens in Platform door partijopname te brengen.
+Deze gids behandelde hoe te om een Csv- dossier aan een XDM- schema in kaart te brengen gebruikend AI-Gegenereerde aanbevelingen, die u toestaan om die gegevens in Platform door partijingesetion te brengen.
 
 Voor stappen voor het toewijzen van een CSV-bestand aan een bestaand schema raadpleegt u de [bestaande schema-toewijzingsworkflow](./existing-schema.md). Voor informatie over het stromen gegevens aan Platform in real time door prebuilt bronverbindingen, verwijs naar [overzicht van bronnen](../../../sources/home.md).
