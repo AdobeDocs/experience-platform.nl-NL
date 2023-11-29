@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2022
 description: Opmerkingen bij de release van januari 2022 voor Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 2%
@@ -91,7 +91,7 @@ Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van d
 
 | Functie | Beschrijving |
 | --- | --- |
-| Anoniem blok | Het anonieme blokSQL bouwt staat u toe om de taken van de grote schaal van de gegevensvoorbereiding in de Dienst van de Vraag in kleinere taken te verdelen, dan hergebruik en hen in opeenvolging voor het stijgende laden van gegevens uit te voeren. Zie de klasse [voorbeeldquery&#39;s voor anonieme blokdocumentatie](../../query-service/essential-concepts/anonymous-block.md). |
+| Anoniem blok | Het anonieme blokSQL bouwt staat u toe om de taken van de grote schaal van de gegevensvoorbereiding in de Dienst van de Vraag in kleinere taken te verdelen, dan hergebruik en hen in opeenvolging voor het stijgende laden van gegevens uit te voeren. Zie de klasse [voorbeeldquery&#39;s voor anonieme blokdocumentatie](../../query-service/key-concepts/anonymous-block.md). |
 | Datasetorganisatie | Verstrekt een coherente, logische gegevensstructuur om uw gegevensactiva voor gebruik met de Dienst van de Vraag te organiseren aangezien de hoeveelheid gegevensactiva binnen de zandbak groeit. Zie de klasse [documentatie over gegevenselementen organiseren](../../query-service/best-practices/organize-data-assets.md). |
 
 Voor meer informatie over [!DNL Query Service], zie de [[!DNL Query Service] overzicht](../../query-service/home.md).

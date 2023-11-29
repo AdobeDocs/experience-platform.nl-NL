@@ -2,7 +2,7 @@
 title: Beste praktijken voor de Organisatie van gegevensactiva in de Dienst van de Vraag
 description: Dit document schetst een logisch middel om gegevens voor gebruiksgemak met de Dienst van de Vraag te organiseren.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een beter inzicht in de beste praktijken betreffende de organisatie en de structuur van uw gegevensactiva voor gebruik met de Dienst van de Vraag van Adobe Experience Platform. Het wordt geadviseerd verder te leren over de beste praktijken van de Dienst van de Vraag door te lezen over [documentatie over gegevensdeduplicatie](../essential-concepts/deduplication.md).
+Door dit document te lezen, hebt u nu een beter inzicht in de beste praktijken betreffende de organisatie en de structuur van uw gegevensactiva voor gebruik met de Dienst van de Vraag van Adobe Experience Platform. Het wordt geadviseerd verder te leren over de beste praktijken van de Dienst van de Vraag door te lezen over [documentatie over gegevensdeduplicatie](../key-concepts/deduplication.md).

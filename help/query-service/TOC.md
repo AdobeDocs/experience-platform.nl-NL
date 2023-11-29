@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -52,6 +52,15 @@ ht-degree: 14%
    - [Commerciële variabelen uit analysegegevens retourneren en gebruiken](use-cases/merchandising-variables.md)
    - [Het roll-uprapport voor een bezoeker weergeven](use-cases/roll-up-report-of-a-visitor.md)
    - [Web- en mobiele analysemogelijkheden](use-cases/analytics-insights.md)
+- Belangrijkste concepten {#key-concepts}
+   - [Werken met geneste gegevensstructuren](key-concepts/nested-data-structures.md)
+   - [Geneste gegevensstructuren samenvoegen](key-concepts/flatten-nested-data.md)
+   - [Anoniem blok](key-concepts/anonymous-block.md)
+   - [Inline-sjabloon](key-concepts/inline-templates.md)
+   - [Incrementeel laden](key-concepts/incremental-load.md)
+   - [Gegevensdeduplicatie](key-concepts/deduplication.md)
+   - [Gegevenssetvoorbeelden](key-concepts/dataset-samples.md)
+   - [Berekening van gegevenssetstatistieken](key-concepts/dataset-statistics.md)
 - Client verbinden met Query-service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [SSL-modi](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 14%
 - Best practices {#best-practices}
    - [Zoekopdracht uitvoeren](best-practices/writing-queries.md)
    - [Gegevensmiddelenorganisatie](./best-practices/organize-data-assets.md)
-- Essentiële concepten {#essential-concepts}
-   - [Werken met geneste gegevensstructuren](essential-concepts/nested-data-structures.md)
-   - [Geneste gegevensstructuren samenvoegen](essential-concepts/flatten-nested-data.md)
-   - [Anoniem blok](essential-concepts/anonymous-block.md)
-   - [Inline-sjabloon](essential-concepts/inline-templates.md)
-   - [Incrementeel laden](essential-concepts/incremental-load.md)
-   - [Gegevensdeduplicatie](essential-concepts/deduplication.md)
-   - [Gegevenssetvoorbeelden](essential-concepts/dataset-samples.md)
-   - [Berekening van gegevenssetstatistieken](essential-concepts/dataset-statistics.md)
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)

@@ -5,14 +5,14 @@ title: Algemene begeleiding voor de Uitvoering van de Vraag in de Dienst van de 
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 2%
 
 ---
 
-# Algemene richtlijnen voor het uitvoeren van query&#39;s in [!DNL Query Service]
+# Algemene richtlijnen voor query-uitvoering in [!DNL Query Service]
 
 In dit document worden belangrijke gegevens vermeld die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform [!DNL Query Service].
 
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] heeft twee modellen van vraaguitv
 
 ### Interactieve queryuitvoering
 
-De vragen kunnen interactief worden uitgevoerd door hen door voor te leggen [!DNL Query Service] UI of [via een verbonden client](../clients/overview.md). Bij uitvoering [!DNL Query Service] via een verbonden client een actieve sessie wordt uitgevoerd tussen de client en [!DNL Query Service] tot of de voorgelegde vraagwinst of tijden uit.
+De vragen kunnen interactief worden uitgevoerd door hen door voor te leggen [!DNL Query Service] UI of [via een verbonden client](../clients/overview.md). Bij uitvoering [!DNL Query Service] via een verbonden client een actieve sessie wordt uitgevoerd tussen de client en [!DNL Query Service] tot of de voorgelegde vraag terugkeert of tijden uit.
 
 De interactieve vraaguitvoering heeft de volgende beperkingen:
 
@@ -42,7 +42,7 @@ Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de
 
 ### Niet-interactieve query-uitvoering
 
-Vragen ingediend via [!DNL Query Service] API wordt niet-interactief uitgevoerd. Niet-interactieve uitvoering betekent dat [!DNL Query Service] ontvangt de API-aanroep en voert de query uit in de volgorde waarin deze is ontvangen. Niet-interactieve query&#39;s resulteren altijd in het genereren van een nieuwe dataset in [!DNL Experience Platform] om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
+Vragen ingediend via de [!DNL Query Service] API wordt niet-interactief uitgevoerd. Niet-interactieve uitvoering betekent dat: [!DNL Query Service] ontvangt de API-aanroep en voert de query uit in de volgorde waarin deze is ontvangen. Niet-interactieve query&#39;s resulteren altijd in het genereren van een nieuwe dataset in [!DNL Experience Platform] om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
 
 ## Een specifiek veld binnen een object openen
 
@@ -114,7 +114,7 @@ LIMIT 1
 (1 row)
 ```
 
-## Aanhalingstekens
+## Aanhalingen
 
 De enige citaten, de dubbele citaten, en de achtercitaten hebben verschillend gebruik binnen de vragen van de Dienst van de Vraag.
 
@@ -148,7 +148,7 @@ LIMIT 10
 
 ### Dubbele aanhalingstekens
 
-Het dubbele aanhalingsteken (`"`) wordt gebruikt om een id met spaties te declareren.
+Het dubbele citaat (`"`) wordt gebruikt om een id met spaties te declareren.
 
 De volgende query gebruikt dubbele aanhalingstekens om waarden uit opgegeven kolommen te retourneren wanneer één kolom een spatie in de id bevat:
 
@@ -271,7 +271,7 @@ In het volgende voorbeeld wordt aanvullende informatie voor het `web` kolom, en 
 
 U kunt zich bij veelvoudige datasets aansluiten samen om gegevens van andere datasets in uw vraag te omvatten.
 
-Het volgende voorbeeld zou zich bij de volgende twee datasets (`your_analytics_table` en `custom_operating_system_lookup`) en maakt een `SELECT` voor de bovenste 50 besturingssystemen op basis van het aantal paginaweergaven.
+Het volgende voorbeeld zou zich bij de volgende twee datasets (`your_analytics_table` en `custom_operating_system_lookup`) en maakt een `SELECT` voor de bovenste 50 besturingssystemen op aantal pagina&#39;s.
 
 **Query**
 
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Deduplicatie
 
-De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Lees voor meer informatie over deduplicatie de [Handleiding voor deduplicatie van Query Service](../essential-concepts/deduplication.md).
+De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Lees voor meer informatie over deduplicatie de [Handleiding voor deduplicatie van Query Service](../key-concepts/deduplication.md).
 
 ## De berekeningen van de tijdzone in de Dienst van de Vraag
 
@@ -324,7 +324,7 @@ Door dit document te lezen, bent u op enkele belangrijke overwegingen geïntrodu
 Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, gelieve de volgende documentatie van het gebruiksgeval te lezen:
 
 - [Analyseinzichten](../use-cases/analytics-insights.md)
-- [Een vernieuwd rapport van gebeurtenissen maken](../use-cases/trended-report-of-events.md)
+- [Een trended-rapport van gebeurtenissen maken](../use-cases/trended-report-of-events.md)
 - [Een roll-uprapport van een bezoeker weergeven](../use-cases/roll-up-report-of-a-visitor.md)
 - [De paginaweergaven van een gebruiker weergeven](../use-cases/list-visitor-sessions.md)
 - [Bezoekers weergeven op basis van hun aantal paginaweergaven](../use-cases/visitors-by-number-of-page-views.md)

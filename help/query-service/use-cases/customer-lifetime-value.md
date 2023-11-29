@@ -2,7 +2,7 @@
 title: Gegevenssignalen bijhouden om de levenswaarde van uw klant te genereren
 description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Controleer de [Overzicht van e-mailmarketingdoelen](../../destinations/catalog/e
 
 ## Bekijk de geretourneerde analysegegevens van uw campagne {#post-campaign-data-analysis}
 
-De gegevens uit bronnen kunnen nu [incrementeel verwerkt](../essential-concepts/incremental-load.md) als onderdeel van een geplande vernieuwing naar uw gegevensmodel in de versnelde gegevensopslag. Alle responsgebeurtenissen van klanten kunnen in Adobe Experience Platform worden opgenomen, zoals ze plaatsvinden of in batches. Afhankelijk van uw instellingen of bronconnectors, kan uw gegevensmodel één keer of meerdere keren per dag worden vernieuwd. Zie de [overzicht van batch-invoer-API](../../ingestion/batch-ingestion/api-overview.md) of de [overzicht van het opnemen van streaming](../../ingestion/streaming-ingestion/overview.md) voor meer informatie .
+De gegevens uit bronnen kunnen nu [incrementeel verwerkt](../key-concepts/incremental-load.md) als onderdeel van een geplande vernieuwing naar uw gegevensmodel in de versnelde gegevensopslag. Alle responsgebeurtenissen van klanten kunnen in Adobe Experience Platform worden opgenomen, zoals ze plaatsvinden of in batches. Afhankelijk van uw instellingen of bronconnectors, kan uw gegevensmodel één keer of meerdere keren per dag worden vernieuwd. Zie de [overzicht van batch-invoer-API](../../ingestion/batch-ingestion/api-overview.md) of de [overzicht van het opnemen van streaming](../../ingestion/streaming-ingestion/overview.md) voor meer informatie .
 
 Zodra uw gegevensmodel wordt bijgewerkt, verstrekken uw douane dashboardwidgets zinvolle signalen die u toestaan om de waarde van het klantenleven te meten en te visualiseren.
 

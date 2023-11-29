@@ -2,7 +2,7 @@
 title: Analyse van verkennende gegevens
 description: Leer hoe u Data Distiller kunt gebruiken om gegevens van een Python-laptop te verkennen en te analyseren.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 14%
@@ -42,7 +42,7 @@ df
 
 ## Een gesamplede versie van grote gegevenssets maken {#create-dataset-sample}
 
-Als de dataset u wenst te vragen zeer groot is, of als de nauwkeurige resultaten van verkennende vragen niet noodzakelijk zijn, gebruik [bemonsteringsfunctionaliteit](../../essential-concepts/dataset-samples.md) beschikbaar voor Distiller-query&#39;s voor gegevens. Dit is een proces in twee stappen:
+Als de dataset u wenst te vragen zeer groot is, of als de nauwkeurige resultaten van verkennende vragen niet noodzakelijk zijn, gebruik [bemonsteringsfunctionaliteit](../../key-concepts/dataset-samples.md) beschikbaar voor Distiller-query&#39;s voor gegevens. Dit is een proces in twee stappen:
 
 - Eerste, **analyseren** de dataset om een bemonsterde versie met een gespecificeerde steekproefverhouding te creëren
 - Daarna, vraag de bemonsterde versie van de dataset. Afhankelijk van de functies die u op de gesamplede dataset toepast, kunt u de uitvoer naar de getallen schalen naar de volledige dataset
