@@ -3,10 +3,10 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar realtime klantprofiel verzenden met Data Prep
 description: Leer hoe u updates van gedeeltelijke rijen naar Real-Time klantprofiel verzendt met Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 1%
+source-wordcount: '1225'
+ht-degree: 0%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 1%
 Streaming upserts in [!DNL Data Prep] staat u toe om gedeeltelijke rijupdates te verzenden naar [!DNL Real-Time Customer Profile] gegevens te maken en nieuwe identiteitskoppelingen te maken met één API-aanvraag.
 
 Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] PATCH vraagt tijdens inname. Gebaseerd op de input u verstrekt, [!DNL Data Prep] kunt u één API-lading verzenden en de gegevens omzetten naar beide [!DNL Real-Time Customer Profile] PATCH en [!DNL Identity Service] CREEER verzoeken.
+
+>[!WARNING]
+>
+>De berichten van de Update van de Entiteit van de Ingestie op het Model van de Gegevens van de Ervaring (XDM) (met verrichtingen JSON PATCH) voor de updates van het Profiel via de inlaat DCS zijn verouderd. Als alternatief kunt u [Raw-gegevens toevoegen aan de DCS-inlaat](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) en geeft u de benodigde gegevenstoewijzingen op om uw gegevens te transformeren in XDM-compatibele berichten voor profielupdates.
 
 Dit document bevat informatie over het streamen van upserts in [!DNL Data Prep].
 
