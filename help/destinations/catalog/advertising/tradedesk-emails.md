@@ -3,9 +3,9 @@ title: (Bèta) De handelsbank - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA25
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | Email | E-mailadressen (tekst wissen) | Invoer `email` als de doelidentiteit wanneer uw bronidentiteit een e-mailnaamruimte of attribuut is. |
-| Email_LC_SHA256 | E-mailadressen moeten worden gehasht met behulp van SHA256 en verlaagd. Zorg ervoor dat u alle [e-mailnormalisatie](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) vereiste regels. U kunt deze instelling later niet wijzigen. | Invoer `hashed_email` als de doelidentiteit wanneer uw bronidentiteit een naamruimte of attribuut Email_LC_SHA256 is. |
+| Email_LC_SHA256 | E-mailadressen moeten worden gehasht met behulp van SHA256 en verlaagd. U kunt deze instelling later niet wijzigen. | Invoer `hashed_email` als de doelidentiteit wanneer uw bronidentiteit een naamruimte of attribuut Email_LC_SHA256 is. |
 
 {style="table-layout:auto"}
 
