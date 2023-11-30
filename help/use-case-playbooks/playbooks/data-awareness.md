@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van gegevensbewustzijn in Use Case Playbooks
 description: Leer hoe u tijd sneller kunt waarderen door de elementen te kopiëren die in de uiteindelijke inspirerende sandbox zijn gegenereerd naar andere sandboxen.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 5b6b69d69a088f58d10f41debde859294285360d
+source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Overzicht van gegevensbewustzijn in Use Case Playbooks
 
-Afspeelboeken met hoofdletters/kleine letters zijn marketingsjablonen die zijn ontworpen om elementen te genereren, zoals publiek, schema&#39;s of ritten voor algemene gevallen van marketinggebruik. In Adobe Experience Platform verwijzen deze sjablonen naar diverse standaardvelden en veldgroepen. In bepaalde gevallen hebt u echter al uw eigen schema&#39;s, velden en veldgroepen ingesteld. Hierdoor kunnen sommige elementen die worden gegenereerd door de gebruikscasesjablonen, zoals ritten, niet compatibel zijn met uw gegevens. Lees deze zelfstudie om te begrijpen hoe u functies voor gegevensbewustzijn kunt gebruiken om de gegenereerde elementen beter uit te lijnen en aan te vullen met uw bestaande elementen.
+Afspeelboeken met hoofdletters/kleine letters zijn marketingsjablonen die zijn ontworpen om elementen te genereren, zoals publiek, schema&#39;s of ritten voor algemene gevallen van marketinggebruik. In Adobe Experience Platform verwijzen deze sjablonen naar diverse standaardvelden en veldgroepen. In bepaalde gevallen hebt u echter al uw eigen schema&#39;s, velden en veldgroepen ingesteld. Hierdoor kunnen sommige elementen die worden gegenereerd door de gebruikscasesjablonen, zoals ritten, niet compatibel zijn met uw gegevens. Lees deze zelfstudie om te begrijpen hoe u de functionaliteit voor gegevensbewustzijn kunt gebruiken om de gegenereerde elementen beter uit te lijnen en aan te vullen met uw bestaande elementen.
 
 ## Vereisten {#prerequisites}
 
@@ -45,7 +45,7 @@ Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segm
    >
    > Het pakket kan niet worden geïmporteerd terwijl het zich nog in de conceptmodus bevindt. Open daarom de detailpagina van het pakket en publiceer het pakket.
 
-5. Selecteer de **+** besturingselement om de workflow te starten voor het importeren van de elementen die door de afspeelknop van het gebruiksscenario worden gegenereerd in de map **[!UICONTROL Target sandbox]**. Selecteer een doelsandbox en bevestig de pakketnaam die u wilt importeren met de vervolgkeuzelijst. Voeg de taakdetails zoals taaknaam en taakbeschrijving toe voordat u verdergaat met de volgende stap.
+5. Selecteer de **+** de workflow beheren en starten om de elementen die worden gegenereerd door de afspeelmap met het gebruiksscenario te importeren in de **[!UICONTROL Target sandbox]**. Selecteer een doelsandbox en bevestig de pakketnaam die u wilt importeren met de vervolgkeuzelijst. Voeg de taakdetails zoals taaknaam en taakbeschrijving toe voordat u verdergaat met de volgende stap.
 
    ![Start de importworkflow, selecteer doel, bevestig het pakket en voeg taakdetails toe.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
@@ -59,7 +59,7 @@ Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segm
 
 ### Kaartschema&#39;s {#map-schemas}
 
-1. Wijs het eerste schema toe. Het dialoogvenster Schema-toewijzing geeft een vervolgkeuzelijst weer om het doelschema te selecteren. Als het bronschema een profielschema is, dan zijn er geen andere opties van het doelschema naast [individueel vakprofielschema](/help/xdm/classes/individual-profile.md). U kunt automatisch gegenereerde toewijzingsaanbevelingen tussen Brongegevens en Doelvelden zien wanneer de pagina voor het eerst wordt weergegeven. U kunt de toewijzingen bewerken door het doelveld te selecteren en vervolgens een nieuw veld te selecteren. Als u wijzigingen aanbrengt in de voorgestelde toewijzingen, gebruikt u de opdracht **Valideren** om de nieuwe toewijzingen te valideren en eventuele fouten weer te geven die aan de nieuwe toewijzingen kunnen worden gekoppeld. Selecteren **Opslaan** zodra de toewijzing is voltooid.
+1. Wijs het eerste schema toe. Het dialoogvenster Schema-toewijzing geeft een vervolgkeuzelijst weer om het doelschema te selecteren. Als het bronschema een profielschema is, dan zijn er geen andere opties van het doelschema naast [individueel vakprofielschema](/help/xdm/classes/individual-profile.md). U kunt automatisch gegenereerde toewijzingsaanbevelingen tussen Brongegevens en Doelvelden zien wanneer de pagina voor het eerst wordt weergegeven. U kunt de toewijzingen bewerken door het doelveld te selecteren en vervolgens een nieuw veld te selecteren. Als u de voorgestelde toewijzingen wijzigt, gebruikt u de opdracht **Valideren** om de nieuwe toewijzingen te valideren en eventuele fouten weer te geven die aan de nieuwe toewijzingen kunnen worden gekoppeld. Selecteren **Opslaan** zodra de toewijzing is voltooid.
 
    ![Dialoogvenster voor schematoewijzing met een vervolgkeuzelijst om een doelschema te selecteren.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
@@ -81,7 +81,7 @@ Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segm
 
    >[!NOTE]
    >
-   > U kunt geen actie ondernemen op enige activa behalve de schema&#39;s aangezien dit een inspirerende zandbak is maar zij verschijnen aangezien zij gebiedsdelen van het pakket zijn.
+   > U kunt geen elementen wijzigen, behalve de schema&#39;s, omdat dit een inspirerende sandbox is, maar wel omdat ze afhankelijk zijn van het pakket.
 
 ### Importstatus {#import-status}
 
@@ -89,7 +89,7 @@ Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segm
 
    ![Pagina met voortgang bij importeren](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. Tijdens het importeren van het pakket worden de elementen van het pakket gemaakt in de doelsandbox. Als de bewerking is voltooid, verwijzen ze naar de velden die u zojuist hebt toegewezen tijdens het importeren. Het proces is nu voltooid en de elementen van de inspirerende sandbox zijn nu ook aanwezig in de doelsandbox die u kunt testen.
+2. Tijdens het importeren van het pakket worden de elementen van het pakket gemaakt in de doelsandbox. Zodra deze bewerking is voltooid, verwijzen ze naar de velden die u tijdens het importeren hebt toegewezen. Het proces is nu voltooid en de elementen van de inspirerende sandbox zijn nu ook aanwezig in de doelsandbox die u kunt testen.
 
    ![Gegenereerde elementen in de doelsandbox](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
