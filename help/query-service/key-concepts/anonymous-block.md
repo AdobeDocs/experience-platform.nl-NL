@@ -2,9 +2,9 @@
 title: Anoniem blok in Query-service
 description: Het anonieme blok is een SQL syntaxis die door de Dienst van de Vraag van Adobe Experience Platform wordt gesteund, die u toestaat om een opeenvolging van vragen efficiënt uit te voeren
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## Anoniem blok met externe klanten {#third-party-clients}
+
+Bepaalde derdecliënten kunnen een afzonderlijke herkenningsteken vóór en na een SQL blok vereisen om erop te wijzen dat een deel van het manuscript als één enkele verklaring zou moeten worden behandeld. Als u een foutenmelding ontvangt wanneer het gebruiken van de Dienst van de Vraag met een derdecliënt, zou u naar de documentatie van de derdecliënt betreffende het gebruik van een SQL blok moeten verwijzen.
+
+Bijvoorbeeld: **DbVisualizer** vereist dat het scheidingsteken de enige tekst op de regel moet zijn. In DbVisualizer, is de standaardwaarde voor Begin Identifier `--/` en voor de End Identifier is het `/`. Een voorbeeld van een anoniem blok in DbVisualizer is hieronder te zien:
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+Voor DbVisualizer in het bijzonder, is er ook een optie in UI aan &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Zie de [DbVisualizer-documentatie](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) voor meer informatie .
+
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. [Voor meer informatie over het uitvoeren van query&#39;s](../best-practices/writing-queries.md), te lezen gelieve de gids over vraaguitvoering in de Dienst van de Vraag.
+Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. Lees de [handleiding voor query-uitvoering](../best-practices/writing-queries.md) voor meer informatie over het schrijven van vragen.
 
-U moet ook lezen over [hoe anoniem blok met het stijgende patroon van het ladingsontwerp wordt gebruikt](./incremental-load.md) om query-efficiëntie te verhogen.
+U moet ook lezen over [hoe anonieme blokken met het patroon van het stijgende ladingsontwerp worden gebruikt](./incremental-load.md) om query-efficiëntie te verhogen.

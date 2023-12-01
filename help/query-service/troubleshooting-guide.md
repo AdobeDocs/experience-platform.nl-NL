@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot de Query-service. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
+source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
 workflow-type: tm+mt
-source-wordcount: '4366'
+source-wordcount: '4432'
 ht-degree: 1%
 
 ---
@@ -545,6 +545,11 @@ WHERE T2.ID IS NULL
 ### Kan ik het CREATE bevel van de MENING zonder de toegang van Distiller van Gegevens gebruiken?
 
 ++ + Antwoord ja, u kunt gebruiken `CREATE VIEW` zonder Data Distiller-toegang. Dit bevel verstrekt een logische mening van gegevens maar schrijft het niet terug naar het gegevens meer.
++++
+
+### Kan ik anonieme blokken gebruiken in DbVisualizer?
+
+++ + Antwoord Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer informatie vindt u in het gedeelte [anonieme blokdocumentatie](./key-concepts/anonymous-block.md) of in [de officiële documentatie van DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## Data exporteren {#exporting-data}
