@@ -2,9 +2,9 @@
 title: De web SDK-tagextensie configureren
 description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web van het Experience Platform in de UI van Markeringen te vormen.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1488'
 ht-degree: 0%
 
 ---
@@ -85,13 +85,25 @@ Deze sectie staat u toe om het gedrag van SDK van het Web te bepalen wanneer het
 
 ## Aanpassingsinstellingen configureren {#personalization}
 
-In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen.
-
-U kunt de elementen die u wilt verbergen, opgeven in de voorverborgen stijleditor. Vervolgens kunt u het standaard voorverborgen fragment dat u wordt aangeboden, kopiëren en in het deelvenster `<head>` element van de site [!DNL HTML] code.
+In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Zo weet u zeker dat uw bezoekers alleen de gepersonaliseerde pagina zien.
 
 ![Afbeelding die de verpersoonlijkingsinstellingen van de Web SDK-tagextensie in de gebruikersinterface van Tags weergeeft](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL Migrate Target from at.js to the Web SDK]**: Gebruik deze optie om in te schakelen [!DNL Web SDK] lezen en schrijven van de nalatenschap `mbox` en `mboxEdgeCluster` cookies die worden gebruikt door at.js `1.x` of `2.x` bibliotheken. Dit helpt u het bezoekersprofiel te houden terwijl het bewegen van een pagina die SDK van het Web aan een pagina gebruikt die at.js gebruikt `1.x` of `2.x` en omgekeerd.
+
+### Stijl vooraf verbergen {#prehiding-style}
+
+Met de preHide style editor kunt u aangepaste CSS-regels definiëren om specifieke secties van een pagina te verbergen. Wanneer de pagina wordt geladen, gebruikt SDK van het Web deze stijl om de secties te verbergen die moeten worden gepersonaliseerd, wint de verpersoonlijking terug, dan unhides de gepersonaliseerde paginagedeelten. Op deze manier zien uw bezoekers de reeds gepersonaliseerde pagina&#39;s, zonder het proces van de personalisatieherwinning te zien.
+
+### Fragment vooraf verbergen {#prehiding-snippet}
+
+Het voorbeeldfragment is handig wanneer de Web SDK-bibliotheek asynchroon wordt geladen. In deze situatie, om het flikkeren te vermijden, adviseren wij het verbergen van de inhoud alvorens de bibliotheek van SDK van het Web wordt geladen.
+
+Als u het voorverborgen fragment wilt gebruiken, kopieert en plakt u het in het dialoogvenster `<head>` -element van uw pagina.
+
+>[!IMPORTANT]
+>
+>Als u het voorverborgen fragment gebruikt, wordt u aangeraden het zelfde fragment te gebruiken [!DNL CSS] als de regel die wordt gebruikt door de [stijl voorverbergen](#prehiding-style).
 
 ## Instellingen voor gegevensverzameling configureren {#data-collection}
 
