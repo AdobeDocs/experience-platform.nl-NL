@@ -3,9 +3,9 @@ title: Azure Event Hubs Source Connector - Overzicht
 description: Leer hoe u Azure Event Hubs met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Om de snelheid van opname op de kant van het Platform te verhogen, moet het Plat
 
 ## Een virtueel netwerk gebruiken om verbinding te maken met [!DNL Event Hubs] naar platform
 
-U kunt een virtueel netwerk instellen om verbinding te maken [!DNL Event Hubs] aan Platform terwijl het hebben van uw firewallmaatregelen toegelaten. Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs] netwerkregelsetdocument](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) en voert u de volgende stappen uit:
+U kunt een virtueel netwerk instellen om verbinding te maken [!DNL Event Hubs] aan Platform terwijl het hebben van uw firewallmaatregelen toegelaten. Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs] netwerkregelsetdocument](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) en voert u de volgende stappen uit:
 
 * Selecteren **Probeer het** vanuit het REST API-deelvenster;
 * Verifieer uw [!DNL Azure] account met uw referenties in dezelfde browser;
@@ -117,7 +117,7 @@ Zie de lijst hieronder voor verschillende gebieden van Platform subnets:
 }
 ```
 
-Zie het volgende [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) voor meer informatie over de reeksen van de netwerkregel.
+Zie het volgende [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) voor meer informatie over de reeksen van de netwerkregel.
 
 ## Verbinden [!DNL Event Hubs] naar platform
 

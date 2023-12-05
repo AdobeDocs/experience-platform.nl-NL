@@ -2,9 +2,9 @@
 title: Een Google Ads Base Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform met Google Ads kunt verbinden met behulp van de Flow Service API.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '727'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Om [!DNL Flow Service] Als u verbinding wilt maken met Google Ads, moet u waarde
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `clientCustomerId` | De client-id is het accountnummer dat overeenkomt met de Google Ads-clientaccount die u wilt beheren met de Google Ads-API. Deze id volgt de sjabloon van `123-456-7890`. |
-| `loginCustomerId` | De inlogklant-id is het accountnummer dat overeenkomt met uw Google Ads Manager-account en wordt gebruikt om rapportgegevens van een specifieke operationele klant op te halen. Voor meer informatie over de login identiteitskaart van de klant [Google Ads API-documentatie](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| `loginCustomerId` | De inlogklant-id is het accountnummer dat overeenkomt met uw Google Ads Manager-account en wordt gebruikt om rapportgegevens van een specifieke operationele klant op te halen. Voor meer informatie over de login identiteitskaart van de klant [Google Ads API-documentatie](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | `developerToken` | Met de ontwikkelaarstoken hebt u toegang tot de API voor Google Ads. U kunt dezelfde ontwikkelaarstoken gebruiken om aanvragen in te dienen voor al uw Google Ads-accounts. Haal de ontwikkelaarstoken op door [aanmelden bij uw beheerdersaccount](https://ads.google.com/home/tools/manager-accounts/) en navigeert vervolgens naar de [!DNL API Center] pagina. |
 | `refreshToken` | Het token Vernieuwen maakt deel uit van [!DNL OAuth2] verificatie. Dit teken staat u toe om uw toegangstokens na het verlopen opnieuw te produceren. |
 | `clientId` | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van [!DNL OAuth2] verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing te identificeren bij Google. |
