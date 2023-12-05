@@ -2,9 +2,9 @@
 title: Overzicht van id-naamruimte
 description: Meer informatie over naamruimten in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1778'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,24 @@ Naamruimten vereisen inzicht in verschillende Adobe Experience Platform-services
 
 ## Naamruimten voor identiteiten
 
+![Een illustratie van gegevenswerkstroom met de Dienst van de Identiteit.](images/identity-service-stitching.png)
+
 Een volledig gekwalificeerde identiteit omvat twee componenten: en **identiteitswaarde** en **naamruimte identity**. Als de waarde van een identiteit bijvoorbeeld `scott@acme.com`, dan verstrekt een namespace context aan deze waarde door het als e-mailadres te onderscheiden. Een naamruimte kan ook een onderscheid maken `555-123-456` als telefoonnummer, en `3126ABC` als CRM-ID. Hoofdzakelijk **een naamruimte biedt context aan een bepaalde identiteit**. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] Hiermee worden profielgegevens samengevoegd. Zowel de identiteitswaarde als de naamruimte moeten overeenkomen.
 
 Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar ze hebben dezelfde waarde voor de naamruimte E-mail, zodat Experience Platform kan zien dat deze fragmenten in feite dezelfde persoon zijn en de gegevens samenbrengt in de identiteitsgrafiek voor de persoon.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**Naamnaamruimte verklaard**
+
+Een andere manier om het concept van naamruimte beter te begrijpen, is het overwegen van echte wereldvoorbeelden zoals steden en hun overeenkomstige staten. Portland, Maine en Portland, Oregon zijn bijvoorbeeld twee verschillende plaatsen in de Verenigde Staten. Terwijl de steden dezelfde naam hebben, werkt de staat als naamruimte en biedt de noodzakelijke context die de twee steden van elkaar onderscheidt.
+
+Dezelfde logica toepassen op Identity Service:
+
+* In één oogopslag, de identiteitswaarde van: `1-234-567-8900` kan eruit zien als een telefoonnummer. Nochtans, vanuit een systeemperspectief, kon deze waarde als identiteitskaart van CRM worden gevormd. De Dienst van de identiteit zou geen manier hebben om de noodzakelijke context op deze identiteitswaarde zonder overeenkomstige namespace toe te passen.
+* Een ander voorbeeld is de identiteitswaarde van: `john@gmail.com`. Terwijl deze identiteitswaarde gemakkelijk kan worden verondersteld om een E-mail te zijn, is het volledig mogelijk dat het als identiteitskaart van douane namespace CRM wordt gevormd. Met naamruimte kunt u onderscheid maken `Email:john@gmail.com` van `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### Componenten van een naamruimte
 
