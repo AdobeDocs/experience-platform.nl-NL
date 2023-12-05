@@ -2,10 +2,10 @@
 title: Zendesk event forward extension
 description: Zendesk event forward extension for Adobe Experience Platform.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1263'
-ht-degree: 3%
+source-wordcount: '1162'
+ht-degree: 2%
 
 ---
 
@@ -32,7 +32,7 @@ Tot slot moet u een gebeurtenis tot stand brengen die geheim voor het API teken 
 
 ## De extensie installeren {#install}
 
-Als u de Zendesk-extensie wilt installeren in de gebruikersinterface, navigeert u naar **Gebeurtenis doorsturen** en selecteer een eigenschap waaraan u de extensie wilt toevoegen of waarvoor u een nieuwe eigenschap wilt maken.
+Als u de extensie Zendesk wilt installeren in de gebruikersinterface, navigeert u naar **Gebeurtenis doorsturen** en selecteer een eigenschap waaraan u de extensie wilt toevoegen of waarvoor u een nieuwe eigenschap wilt maken.
 
 Wanneer u de gewenste eigenschap hebt geselecteerd of gemaakt, navigeert u naar **Extensies** > **Catalogus**. Zoeken naar &quot;[!DNL Zendesk]&quot;, en selecteer dan **[!DNL Install]** over de extensie Zendesk.
 
@@ -70,12 +70,12 @@ Deze gegevenselementen moeten worden toegewezen zoals hieronder wordt vermeld.
 
 Naar de volgende toetsen kan worden verwezen binnen de `event` object bij toewijzing aan gegevenselementen:
 
-| `event` key | Type | Pad Platform | Beschrijving | Verplicht | Limieten |
+| `event` key | Type | Platformpad | Beschrijving | Verplicht | Limieten |
 | --- | --- | --- | --- | --- | --- |
-| `source` | Tekenreeks | `arc.event.xdm._extconndev.event_source` | De toepassing die de gebeurtenis heeft verzonden. | Ja | Niet gebruiken `Zendesk` als een waarde omdat het een beschermde bronnaam voor standaardgebeurtenissen van Zendesk is. Pogingen om het te gebruiken zullen in een fout resulteren.<br>De waarde mag niet langer zijn dan 40 tekens. |
-| `type` | Tekenreeks | `arc.event.xdm._extconndev.event_type` | Een naam voor het gebeurtenistype. Met dit veld kunt u verschillende soorten gebeurtenissen voor een bepaalde bron aangeven. U kunt bijvoorbeeld een set gebeurtenissen maken voor gebruikersaanmeldingen en een andere set voor winkelwagentjes. | Ja | De waarde mag niet langer zijn dan 40 tekens. |
-| `description` | Tekenreeks | `arc.event.xdm._extconndev.description` | Een beschrijving van de gebeurtenis. | Nee | (N.v.t.) |
-| `created_at` | Tekenreeks | `arc.event.xdm.timestamp` | Een ISO-8601-tijdstempel die de tijd weergeeft waarop de gebeurtenis is gemaakt. | Nee | (N.v.t.) |
+| `source` | String | `arc.event.xdm._extconndev.event_source` | De toepassing die de gebeurtenis heeft verzonden. | Ja | Niet gebruiken `Zendesk` als een waarde omdat het een beschermde bronnaam voor standaardgebeurtenissen van Zendesk is. Pogingen om het te gebruiken zullen in een fout resulteren.<br>De waarde mag niet langer zijn dan 40 tekens. |
+| `type` | String | `arc.event.xdm._extconndev.event_type` | Een naam voor het gebeurtenistype. U kunt dit veld gebruiken om verschillende soorten gebeurtenissen voor een bepaalde bron aan te geven. U kunt bijvoorbeeld een set gebeurtenissen maken voor gebruikersaanmeldingen en een andere set voor winkelwagentjes. | Ja | De waarde mag niet langer zijn dan 40 tekens. |
+| `description` | String | `arc.event.xdm._extconndev.description` | Een beschrijving van de gebeurtenis. | Nee | (N.v.t.) |
+| `created_at` | String | `arc.event.xdm.timestamp` | Een ISO-8601-tijdstempel die de tijd weergeeft waarop de gebeurtenis is gemaakt. | Nee | (N.v.t.) |
 | `properties` | Object | `arc.event.xdm._extconndev.EventProperties` | Een aangepast JSON-object met informatie over de gebeurtenis. | Ja | (N.v.t.) |
 
 {style="table-layout:auto"}
@@ -86,18 +86,18 @@ Naar de volgende toetsen kan worden verwezen binnen de `event` object bij toewij
 
 ### `profile` toetsen
 
-`profile` is een JSON-object dat de gebruiker vertegenwoordigt die de gebeurtenis heeft geactiveerd. Raadpleeg het Zendesk-document op het tabblad [anatomie van een profiel](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/) voor meer informatie over de eigenschappen die door de `profile` object.
+`profile` is een JSON-object dat de gebruiker vertegenwoordigt die de gebeurtenis heeft geactiveerd. Raadpleeg het Zendesk-document op het tabblad [anatomie van een profiel](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/) voor meer informatie over de eigenschappen die door de `profile` object.
 
 Naar de volgende toetsen kan worden verwezen binnen de `profile` object bij toewijzing aan gegevenselementen:
 
-| `profile` key | Type | Pad Platform | Beschrijving | Verplicht | Limieten |
+| `profile` key | Type | Platformpad | Beschrijving | Verplicht | Limieten |
 | --- | --- | --- | --- | --- | --- |
-| `source` | Tekenreeks | `arc.event.xdm._extconndev.profile_source` | Het product dat of de service die aan het profiel is gekoppeld, zoals `Support`, `CompanyName`, of `Chat`. | Ja | (N.v.t.) |
-| `type` | Tekenreeks | `arc.event.xdm._extconndev.profile_type` | Een naam voor het profieltype. U kunt dit veld gebruiken om verschillende soorten profielen voor een bepaalde bron te maken. U kunt bijvoorbeeld een set bedrijfsprofielen maken voor klanten en een andere voor werknemers. | Ja | De lengte van het profieltype mag niet langer zijn dan 40 tekens. |
-| `name` | Tekenreeks | `arc.event.xdm._extconndev.name` | De naam van de persoon uit het profiel | Nee | (N.v.t.) |
-| `user_id` | Tekenreeks | `arc.event.xdm._extconndev.user_id` | De gebruikersnaam van de persoon in Zendesk. | Nee | (N.v.t.) |
-| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | Een array met ten minste één id. Elke id bestaat uit een type en een waarde. | Ja | Zie de [Documentatie van Zendesk](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) voor meer informatie over de `identifiers` array. Alle velden en waarden moeten uniek zijn. |
-| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | Een object dat door de gebruiker gedefinieerde eigenschappen over de persoon bevat. | Nee | Zie de [Documentatie van Zendesk](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) voor meer informatie over profielkenmerken. |
+| `source` | String | `arc.event.xdm._extconndev.profile_source` | Het product dat of de service die aan het profiel is gekoppeld, zoals `Support`, `CompanyName`, of `Chat`. | Ja | (N.v.t.) |
+| `type` | String | `arc.event.xdm._extconndev.profile_type` | Een naam voor het profieltype. U kunt dit veld gebruiken om verschillende soorten profielen voor een bepaalde bron te maken. U kunt bijvoorbeeld een set bedrijfsprofielen maken voor klanten en een andere voor werknemers. | Ja | De lengte van het profieltype mag niet langer zijn dan 40 tekens. |
+| `name` | String | `arc.event.xdm._extconndev.name` | De naam van de persoon uit het profiel | Nee | (N.v.t.) |
+| `user_id` | String | `arc.event.xdm._extconndev.user_id` | De gebruikersnaam van de persoon in Zendesk. | Nee | (N.v.t.) |
+| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | Een array met ten minste één id. Elke id bestaat uit een type en een waarde. | Ja | Zie de [Documentatie van Zendesk](https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/#identifiers-array) voor meer informatie over de `identifiers` array. Alle velden en waarden moeten uniek zijn. |
+| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | Een object dat door de gebruiker gedefinieerde eigenschappen over de persoon bevat. | Nee | Zie de [Documentatie van Zendesk](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/#attributes) voor meer informatie over profielkenmerken. |
 
 {style="table-layout:auto"}
 
@@ -148,9 +148,9 @@ Tijdens het gebruik of het configureren van de extensie kunnen de onderstaande f
 In dit document wordt beschreven hoe u de Zendesk-gebeurtenis kunt installeren en configureren voor het doorsturen van de extensie in de gebruikersinterface. Raadpleeg de officiële documentatie voor meer informatie over het verzamelen van gebeurtenisgegevens in Zendesk:
 
 * [Aan de slag met gebeurtenissen](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
-* [Zendesk Events API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)
+* [Zendesk Events API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
 * [Informatie over de API voor gebeurtenissen](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
 * [Anatomie van een gebeurtenis](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
-* [Zendesk Profiles-API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/#profile-object)
-* [De API voor profielen](https://developer.zendesk.com/documentation/custom-data/profiles/about-the-profiles-api/)
-* [Anatomie van een profiel](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/)
+* [Zendesk Profiles API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
+* [De API voor profielen](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
+* [Anatomie van een profiel](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

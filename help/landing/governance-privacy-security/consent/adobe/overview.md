@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwerking van toestemming in Adobe Experience Platform
 description: Leer hoe u in Adobe Experience Platform goedkeuringssignalen voor klanten verwerkt met de Adobe 2.0-standaard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Zodra u uw CMP hebt gevormd om op toestemmings-verandering gebeurtenissen op uw 
 
 Als in uw mobiele toepassing de voorkeursinstellingen voor toestemming van de klant zijn vereist, kunt u de Experience Platform Mobile SDK integreren om toestemmingsinstellingen op te halen en bij te werken en deze naar Platform te verzenden wanneer de API voor toestemming wordt aangeroepen.
 
-Raadpleeg de documentatie bij de Mobile SDK voor [configureren van de mobiele extensie voor toestemming](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) en [de API voor toestemming gebruiken](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Raadpleeg de sectie voor meer informatie over het omgaan met privacyproblemen met de Mobile SDK [Privacy en GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+Raadpleeg de documentatie bij de Mobile SDK voor [configureren van de mobiele extensie voor toestemming](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) en [de API voor toestemming gebruiken](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Raadpleeg de sectie voor meer informatie over het omgaan met privacyproblemen met de Mobile SDK [Privacy en GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### Gegevens met XDM-compatibele machtigingen direct invoeren {#batch}
 

@@ -2,16 +2,16 @@
 title: Opmerkingen bij de release van Adobe Experience Platform Januari 2023
 description: De release van januari 2023 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '2334'
+source-wordcount: '2150'
 ht-degree: 3%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 25 januari 2023**
+**Releasedatum: donderdag 25 januari 2023**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
@@ -90,7 +90,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 **Nieuwe bestemmingen**
 
-| Bestemming | Beschrijving |
+| Doel | Beschrijving |
 | ----------- | ----------- |
 | [(Bèta) Adobe Experience Cloud-verbinding Soorten publiek](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Gebruik de [!UICONTROL (Beta) Adobe Experience Cloud Audiences] verbinding om segmenten van Experience Platform aan diverse oplossingen van het Experience Platform, zoals Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Doel, of Marketo te delen. |
 | [Verbinding met Pega-profiel](../../destinations/catalog/personalization/pega-profile.md) | Gebruik de [!DNL Pega Profile Connector] in Adobe Experience Platform om een live uitgaande verbinding met uw [!DNL Amazon] S3-opslag om profielgegevens periodiek naar CSV-bestanden vanuit Adobe Experience Platform naar uw eigen S3-emmers te exporteren. In [!DNL Pega Customer Decision Hub], kunt u gegevenstaken plannen om deze profielgegevens uit S3-opslag te importeren om de [!DNL Pega Customer Decision Hub] profiel. |
@@ -139,7 +139,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | --- | --- | --- |
 | Klasse | [[!UICONTROL Conversion]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Een klasse voor het bijhouden van conversiegegevens, zoals valutaomrekeningen. |
 | Veldgroep | [[!UICONTROL Currency Conversion Rate Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | Een veldgroep voor de [!UICONTROL Conversion] klasse, aanvullende gegevens over valutaomrekening vastleggen. |
-| Veldgroep | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Hiermee legt u details vast voor het evaluatieresultaat van het beleid voor meerdere toestemmingen, waaronder metagegevens over toetreders tot het toestemmingsbeleid en deze bestaan. |
+| Veldgroep | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | Hiermee legt u details vast voor het evaluatieresultaat van het beleid voor meerdere toestemmingen, waaronder metagegevens over toetreders tot het toestemmingsbeleid en deze bestaan. |
 
 **Bijgewerkte XDM-componenten**
 
@@ -149,7 +149,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 | Gegevenstype | [[!UICONTROL Decision Proposition Details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Toegevoegde `selectionStrategy` veld waarin de details van een selectiestrategie worden weergegeven. |
 | Veldgroep | [[!UICONTROL Experience Event - Proposition Interactions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | De veldgroep is nu compatibel met de [!UICONTROL Journey Step Event] klasse. |
 | Gegevenstype | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | De `ID` veld is hernoemd naar `name`. |
-| Gegevenstype | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Een wijziging in het patroon in de eigenschap voor het videosegment is omgekeerd. |
+| Gegevenstype | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | Een wijziging in het patroon in de eigenschap voor het videosegment is omgekeerd. |
 | Gegevenstype | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | De `droppedFrameCount` veld. |
 | Gegevenstype | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | De naam van de `isAuthorized` veld naar `authorized`, en de `type` naar een tekenreeks toen deze eerder een Booleaanse waarde had. |
 | Gegevenstype | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Verschillende nieuwe velden toegevoegd: `shipDate`, `trackingNumber`, en `trackingURL`. |

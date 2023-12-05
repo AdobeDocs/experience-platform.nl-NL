@@ -2,10 +2,10 @@
 title: Overzicht van Adobe Media-analyse voor audio- en videoextensie
 description: Meer informatie over de extensie Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 1%
+source-wordcount: '936'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Gebruik deze documentatie voor informatie over het installeren, het vormen, en h
 De uitbreiding Media Analytics (MA) voegt de kernJavaScript Media SDK (Media 2.x SDK) toe. Deze extensie biedt de functionaliteit voor het toevoegen van de `MediaHeartbeat` tracker-instantie naar een tagsite of -project. De extensie MA vereist twee extra extensies:
 
 * [Extensie Analytics](../analytics/overview.md)
-* [Experience Cloud ID-extensie](../id-service/overview.md)
+* [Extensie Experience Cloud-id](../id-service/overview.md)
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ De uitbreiding Media Analytics (MA) voegt de kernJavaScript Media SDK (Media 2.x
 Nadat u alle drie bovengenoemde uitbreidingen in uw markeringsproject hebt omvat, kunt u op één van twee manieren te werk gaan:
 
 * Gebruiken `MediaHeartbeat` API&#39;s van uw webtoepassing
-* Neem een spelerspecifieke extensie op of maak een extensie die specifieke media Player-gebeurtenissen toewijst aan de API&#39;s op het tabblad `MediaHeartbeat` tracker-instantie. Deze instantie wordt blootgesteld door de uitbreiding van MA.
+* Neem een spelerspecifieke extensie op of maak een extensie die specifieke media Player-gebeurtenissen toewijst aan de API&#39;s op het tabblad `MediaHeartbeat` tracker. Deze instantie wordt blootgesteld door de uitbreiding van MA.
 
 ## De extensie MA installeren en configureren
 
@@ -113,7 +113,7 @@ De extensie MA stelt de `get-instance` en `media-heartbeat` gedeelde modules aan
 
 >[!IMPORTANT]
 >
->Gedeelde modules zijn alleen toegankelijk via andere extensies. Met andere woorden, een webpagina/JS-toepassing heeft geen toegang tot de gedeelde modules of kan geen gebruik maken van `turbine` (zie codevoorbeeld hieronder) buiten een extensie.
+>Gedeelde modules zijn alleen toegankelijk via andere extensies. Een webpagina/JS-toepassing heeft dus geen toegang tot de gedeelde modules of kan deze gebruiken `turbine` (zie codevoorbeeld hieronder) buiten een extensie.
 
 1. **MediaHeartbone-instantie maken:** `get-instance` Gedeelde module
 
@@ -121,18 +121,19 @@ De extensie MA stelt de `get-instance` en `media-heartbeat` gedeelde modules aan
 
    * Een geldig gedelegeerd object dat deze functies toegankelijk maakt:
 
-      | Methode |  Beschrijving   |
-      | :--- | :--- |
-      | `getQoSObject()` | Hiermee wordt het `MediaObject` instantie die de huidige informatie QoS bevat. Deze methode wordt meerdere keren aangeroepen tijdens een afspeelsessie. De spelerimplementatie moet altijd de laatst beschikbare gegevens terugkeren QoS. |
-      | `getCurrentPlaybackTime()` | Retourneert de huidige positie van de afspeelkop. Voor het bijhouden van VOD wordt de waarde opgegeven in seconden vanaf het begin van het media-item. Voor het bijhouden van LIVE-/LIVE-waarden wordt de waarde opgegeven in seconden vanaf het begin van het programma. |
+     | Methode |  Beschrijving   |
+     | :--- | :--- |
+     | `getQoSObject()` | Hiermee wordt het `MediaObject` instantie die de huidige informatie QoS bevat. Deze methode wordt meerdere keren aangeroepen tijdens een afspeelsessie. De spelerimplementatie moet altijd de laatst beschikbare gegevens terugkeren QoS. |
+     | `getCurrentPlaybackTime()` | Retourneert de huidige positie van de afspeelkop. Voor het bijhouden van VOD wordt de waarde opgegeven in seconden vanaf het begin van het media-item. Voor het bijhouden van LIVE-/LIVE-waarden wordt de waarde opgegeven in seconden vanaf het begin van het programma. |
 
    * Een optioneel config-object dat deze eigenschappen toegankelijk maakt:
 
-      | Eigenschap | Beschrijving | Vereist |
-      | :--- | :--- | :--- |
-      | Onlinevideoprovider | Naam van het onlinevideoplatform waarmee inhoud wordt gedistribueerd. | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
-      | Naam speler | Naam van de mediaspeler in gebruik (bijvoorbeeld &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
-      | Kanaal | Channel name, eigenschap | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
+     | Eigenschap | Beschrijving | Vereist |
+     | :--- | :--- | :--- |
+     | Onlinevideoprovider | Naam van het online videoplatform waarmee inhoud wordt gedistribueerd. | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
+     | Naam speler | Naam van de mediaspeler in gebruik (bijvoorbeeld &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
+     | Kanaal | Channel name, eigenschap | Nee. Indien aanwezig, treedt de waarde met voeten die tijdens uitbreidingsconfiguratie wordt bepaald. |
+
    **Retourwaarde:** Een belofte die ofwel met een `MediaHeartbeat` -instantie of wordt door een foutbericht geweigerd.
 
 1. **Toegang tot MediaHeartbone-constanten:** `media-heartbeat` Gedeelde module
@@ -173,7 +174,7 @@ De extensie MA stelt de `get-instance` en `media-heartbeat` gedeelde modules aan
    ...
    ```
 
-1. Gebruik de Media Heartboard-instantie om de [JS-documentatie van Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html) en [JS API-documentatie](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om mediatracering te implementeren.
+1. Gebruik de Media Heartboard-instantie om de [JS-documentatie van Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) en [JS API-documentatie](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om mediatracering te implementeren.
 
 >[!NOTE]
 >
