@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Toegangsbeheer op basis van kenmerken Gebruikers beheren
 description: Dit document bevat informatie over het beheer van gebruikers en gebruikersgroepen via de machtigingsinterface in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Het tabblad Details geeft een overzicht van de gebruiker. In het overzicht worde
 
 ![FLAC-users-details](../../images/flac-ui/flac-users-details.png)
 
-Selecteer **[!UICONTROL Roles]** tabblad om de rollen weer te geven waaraan de gebruiker is toegewezen.
+Selecteer de **[!UICONTROL Roles]** tabblad om de rollen weer te geven waaraan de gebruiker is toegewezen.
 
 ![flash-users-rollen](../../images/flac-ui/flac-users-roles.png)
 
@@ -32,7 +32,7 @@ Selecteer **[!UICONTROL Roles]** tabblad om de rollen weer te geven waaraan de g
 >
 >Alleen systeembeheerders kunnen API-referenties weergeven en beheren in Machtigingen.
 
-De overgang naar Adobe Experience Platform-machtigingen bevat aanvullende stappen die moeten worden uitgevoerd voor de API-workflow voor ontwikkelaars die voorheen afhankelijk was van productprofielen. Zie de handleiding op [API-verificatie](../../../landing/api-authentication.md) voor meer informatie .
+De overgang naar Adobe Experience Platform-machtigingen bevat aanvullende stappen die moeten worden uitgevoerd voor de API-workflow voor ontwikkelaars die voorheen afhankelijk was van rollen. Zie de handleiding op [API-verificatie](../../../landing/api-authentication.md) voor meer informatie .
 
 ## Volgende stappen
 

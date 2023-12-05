@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1840'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Op attributen-gebaseerde toegangsbeheer impliceert de volgende componenten:
 | --- | --- |
 | Attributen | Attributen zijn de herkenningstekens die op de correlatie tussen een gebruiker en de middelen van het Platform wijzen die zij hebben toegang tot. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren. |
 | Labels | Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het in Platform wordt opgenomen, of zodra de gegevens voor gebruik in Platform beschikbaar worden. |
-| Toestemmingen | De toestemmingen omvatten de capaciteit om de eigenschappen van het Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets. |
+| Machtigingen | De toestemmingen omvatten de capaciteit om de eigenschappen van het Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets. |
 | Machtigingssets | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | Beleid | Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Het beleid kan of lokaal of globaal zijn, en kan ander beleid met voeten treden. |
 | Bron | Een bron is het element dat of het object dat een onderwerp kan of kan benaderen. Bronnen kunnen segmenten of schemavelden zijn. |
@@ -42,11 +42,11 @@ Op attributen-gebaseerde toegangsbeheer impliceert de volgende componenten:
 | Onderwerp | Een onderwerp is de gebruiker die toegang tot een bron aanvraagt om een handeling uit te voeren. |
 | Gebruikersgroepen | Gebruikersgroepen zijn meerdere gebruikers die zijn gegroepeerd en die toegang hebben om dezelfde functies uit te voeren. |
 
-## Toestemmingen
+## Machtigingen
 
 >[!IMPORTANT]
 >
->Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u toestemmingen op Adobe Experience Cloud, in plaats van de Profielen van het Product in Adobe Admin Console beginnen te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
+>Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u beginnen toestemmingen op Adobe Experience Cloud, in plaats van Rollen in Adobe Admin Console te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
 
 De toestemmingen zijn het gebied van Experience Cloud waar de beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
 
@@ -62,7 +62,7 @@ De volgende secties verstrekken informatie over hoe op attribuut-gebaseerde toeg
 
 ### Toegangsbeheer
 
-Platform hefboomwerkingen [Adobe Admin Console](https://adminconsole.adobe.com) productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. De toestemmingen controleren toegang tot een verscheidenheid van de mogelijkheden van het Platform, met inbegrip van gegevensmodellering, profielbeheer, en zandbakbeleid. Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u toestemmingen op Adobe Experience Cloud, in plaats van de Profielen van het Product in Adobe Admin Console beginnen te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
+Platform hefboomwerkingen [Adobe Admin Console](https://adminconsole.adobe.com) rollen om gebruikers met toestemmingen en zandbakken te verbinden. De toestemmingen controleren toegang tot een verscheidenheid van de mogelijkheden van het Platform, met inbegrip van gegevensmodellering, profielbeheer, en zandbakbeleid. Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u beginnen toestemmingen op Adobe Experience Cloud, in plaats van Rollen in Adobe Admin Console te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
 
 Er is beperkte beschikbaarheid voor op attribuut-gebaseerde toegangsbeheer voor klanten die Gezondheidszorg en/of de Schilden van de Privacy kopen. De functies van deze functionaliteit zijn onder andere:
 
@@ -74,7 +74,7 @@ De beleidswerkschema&#39;s voor alle Experience Platform-aangedreven toepassinge
 
 >[!IMPORTANT]
 >
->Uw productprofielen worden automatisch gemigreerd naar de interface voor machtigingen als uw organisatie is ingeschakeld. De productprofielen in Admin Console blijven op dit moment ongewijzigd. Gelieve **niet** pas uw productprofielen aan nadat uw organisatie is toegelaten.
+>Uw rollen worden automatisch gemigreerd aan de interface van Toestemmingen wanneer uw organisatie wordt toegelaten. De rollen in de Admin Console blijven op dit moment ongewijzigd. Gelieve **niet** wijzigt uw rollen nadat uw organisatie is toegelaten.
 
 Voor meer informatie over toegangsbeheer, zie [toegangsbeheeroverzicht](../home.md).
 
