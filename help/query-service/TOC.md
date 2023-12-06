@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 15%
+source-wordcount: '309'
+ht-degree: 13%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 15%
    - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
    - [Bezoekers weergeven op hun paginaweergaven](use-cases/visitors-by-number-of-page-views.md)
    - [Propensiteitsscore](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [Lambda, functievoorbeeld: soortgelijke records ophalen](use-cases/retrieve-similar-records.md)
    - [Commerciële variabelen uit analysegegevens retourneren en gebruiken](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Het roll-uprapport voor een bezoeker weergeven](use-cases/roll-up-report-of-a-visitor.md)
    - [Web- en mobiele analysemogelijkheden](use-cases/analytics-insights.md)
 - Belangrijkste concepten {#key-concepts}
@@ -92,12 +93,12 @@ ht-degree: 15%
    - [Zoeksjablonen](api/query-templates.md)
    - [Versnelde query&#39;s](api/accelerated-queries.md)
    - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
-- Gegevensbeheer {#data-governance}
+- Data Governance {#data-governance}
    - [Overzicht](data-governance/overview.md)
    - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
    - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
    - [Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema&#39;s](./data-governance/ad-hoc-schema-labels.md)
-- Best practices {#best-practices}
+- Aanbevolen procedures {#best-practices}
    - [Zoekopdracht uitvoeren](best-practices/writing-queries.md)
    - [Gegevensmiddelenorganisatie](./best-practices/organize-data-assets.md)
 - SQL-referentie {#sql}
