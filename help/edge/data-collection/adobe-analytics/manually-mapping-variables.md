@@ -4,9 +4,9 @@ description: Leer hoe te om variabelen in Adobe Analytics manueel in kaart te br
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Web SDK] kan bepaalde variabelen automatisch toewijzen, maar aangepaste variabelen moeten handmatig worden toegewezen.
 
-Voor XDM-gegevens die niet automatisch worden toegewezen aan [!DNL Analytics]kunt u [contextgegevens](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) om overeen te komen met uw [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Vervolgens kan het worden toegewezen aan [!DNL Analytics] gebruiken [verwerkingsvoorschriften](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) vullen [!DNL Analytics] variabelen.
+Voor XDM-gegevens die niet automatisch worden toegewezen aan [!DNL Analytics]kunt u [contextgegevens](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=nl) om overeen te komen met [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Vervolgens kan het worden toegewezen aan [!DNL Analytics] gebruiken [verwerkingsvoorschriften](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) vullen [!DNL Analytics] variabelen.
 
-U kunt ook een standaardset handelingen en productlijsten gebruiken om gegevens te verzenden of op te halen met Adobe Experience Platform Web SDK. Zie [Verzamelen van handel en productinformatie](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
+U kunt ook een standaardset handelingen en productlijsten gebruiken om gegevens te verzenden of op te halen met Adobe Experience Platform Web SDK. Ga hiervoor naar [Verzamelen van handel en productinformatie](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
 ## Contextgegevens
 
-Te gebruiken door [!DNL Analytics], XDM-gegevens worden afgevlakt met puntnotatie en beschikbaar gemaakt als `contextData`. In de volgende lijst met waardeparen ziet u een voorbeeld van de `context data` ziet er als volgt uit:
+Te gebruiken door [!DNL Analytics], XDM-gegevens worden afgevlakt met puntnotatie en beschikbaar gemaakt als `contextData`. In de volgende lijst met waardeparen ziet u een voorbeeld van wat de `context data` ziet er als volgt uit:
 
 ```json
 {
@@ -48,18 +48,17 @@ Te gebruiken door [!DNL Analytics], XDM-gegevens worden afgevlakt met puntnotati
 
 ## Verwerkingsregels
 
-Alle gegevens die door het Edge-netwerk worden verzameld, zijn toegankelijk via [verwerkingsvoorschriften](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). In [!DNL Analytics], kunt u verwerkingsregels gebruiken om contextgegevens in op te nemen [!DNL Analytics] variabelen.
+Alle gegevens die door het Edge-netwerk worden verzameld, zijn toegankelijk via [verwerkingsvoorschriften](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). In [!DNL Analytics]kunt u verwerkingsregels gebruiken om contextgegevens in te voegen [!DNL Analytics] variabelen.
 
-In de volgende regel is Adobe Analytics bijvoorbeeld ingesteld op vullen **Interne zoektermen (eVar2)** met de gegevens die **a.x._atag.search.term(Context Data)**.
+In de volgende regel is Adobe Analytics bijvoorbeeld ingesteld op vullen **Interne zoektermen (eVar2)** met de gegevens die aan **a.x._atag.search.term(Context Data)**.
 
-![](assets/examplerule.png)
-
+![Een voorbeeld van een regel wordt weergegeven in een UI-afbeelding voor analyse.](assets/examplerule.png)
 
 ## XDM-schema
 
 Adobe Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en dus waarde te verkrijgen van gegevens. [!DNL Analytics] contextgegevens werken met de structuur die door het schema wordt bepaald.
 
-In het volgende voorbeeld wordt getoond hoe het [`event` command](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html) kan worden gebruikt met de `xdm` om gegevens te verzenden en op te halen met Adobe Experience Platform Web SDK. In dit voorbeeld wordt `event` de opdracht komt overeen met de opdracht [ExperienceEvent Commerce — Details Schema](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) zodat de productListItems `name` en `SKU` waarden worden bijgehouden:
+In het volgende voorbeeld wordt getoond hoe het [`event` command](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html) kan worden gebruikt met de `xdm` om gegevens te verzenden en op te halen met Adobe Experience Platform Web SDK. In dit voorbeeld wordt `event` de opdracht komt overeen met de [ExperienceEvent Commerce — Details Schema](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) zodat de productListItems `name` en `SKU` waarden worden bijgehouden:
 
 
 ```javascript

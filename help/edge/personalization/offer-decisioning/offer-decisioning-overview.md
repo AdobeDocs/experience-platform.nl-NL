@@ -3,9 +3,9 @@ title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
 description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
 keywords: offer decisioning;besluit;Web SDK;Het Web SDK van het Platform;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken me
   >
   >U kunt de waarde van het beslissingsbereik kopiëren uit de **Overzicht van activiteiten** in de gebruikersinterface.
 
-  ![](assets/decision-scope-copy.png)
+  ![Instellingen voor beslissingskopie.](assets/decision-scope-copy.png)
 
 * **Gegevensstromen:** Lees voor meer informatie de [datastreams](../../../datastreams/overview.md) documentatie.
 

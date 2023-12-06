@@ -2,9 +2,9 @@
 title: Implementatie van één pagina
 description: Leer hoe u SPA weergaven implementeert in Adobe Journey Optimizer
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '866'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Deze sectie schetst twee voorbeelden die tonen hoe te om te roepen `sendEvent()`
 
 Het marketing team wil tests A/B op de volledige homepage in werking stellen.
 
-![](assets/web-spa-home.png)
+![Voorbeeldpagina van toepassing van één pagina.](assets/web-spa-home.png)
 
 A/B-tests uitvoeren op de hele thuislocatie, `sendEvent()` moet worden aangeroepen met de XDM `viewName` instellen op `home`:
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 Het marketingteam wil de tweede rij producten aanpassen door de kleur van het prijsetiket in rood te veranderen nadat een gebruiker klikt om alle producten van Men te zien.
 
-![](assets/web-spa-men-products.png)
+![Voorbeeldpagina van een toepassing van één pagina met gepersonaliseerde producten.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

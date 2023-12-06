@@ -2,12 +2,13 @@
 title: Niet-interactieve gegevensverzameling
 description: Leer hoe de Adobe Experience Platform Edge Network Server API niet-interactieve gegevensverzameling uitvoert.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
+
 
 # Niet-interactieve gegevensverzameling
 
@@ -90,16 +91,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Ja | ID van de gegevensstroom die door het eindpunt van de gegevensinzameling wordt gebruikt. |
-| `requestId` | `String` | Nee | Geef een externe id voor het overtrekken van aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
+| `requestId` | `String` | Nee | Geef een externe overtrekID voor aanvragen op. Als niets wordt verstrekt, zal het Netwerk van de Rand één voor u produceren en zal het terug in de reactielichaam/kopballen terugkeren. |
 | `silent` | `Boolean` | Nee | Optionele booleaanse parameter die aangeeft of het Edge-netwerk een `204 No Content` reageren met een lege lading of niet. Kritieke fouten worden gerapporteerd met behulp van de corresponderende HTTP-statuscode en -lading. |
-
 
 ### Antwoord {#response}
 
 Een geslaagde reactie retourneert een van de volgende statussen en een `requestID` indien in het verzoek geen informatie is verstrekt.
 
 * `202 Accepted` wanneer het verzoek met succes is verwerkt;
-* `204 No Content` wanneer de aanvraag met succes is verwerkt en de `silent` parameter is ingesteld op `true`;
+* `204 No Content` wanneer de aanvraag met succes is verwerkt en `silent` parameter is ingesteld op `true`;
 * `400 Bad Request` wanneer het verzoek niet correct is geformuleerd (bv. de verplichte primaire identiteit is niet gevonden).
 
 ```json

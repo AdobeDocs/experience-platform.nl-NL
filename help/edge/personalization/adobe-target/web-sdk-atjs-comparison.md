@@ -3,9 +3,9 @@ title: Het vergelijken bij.js met het Web SDK van het Experience Platform
 description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2167'
 ht-degree: 2%
 
 ---
@@ -857,7 +857,7 @@ De payload van Analytics (`tnta` token) moet worden opgenomen in de hit Analytic
 Logboekregistratie aan de serverkant van Analytics kan worden ingeschakeld door het instellen van `analyticsLogging: server_side` in de instellingen at.js of door de `window.targetglobalSettings` object.
 Vervolgens worden de gegevens als volgt gestroomd:
 
-![](assets/a4t-server-side-atjs.png)
+![Diagram met de workflow voor logboekregistratie aan de zijkant van de Analyse-server](assets/a4t-server-side-atjs.png)
 
 [Meer informatie](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -872,7 +872,7 @@ Web SDK ondersteunt ook:
 
 Logboekregistratie aan de clientzijde van Analytics wordt ingeschakeld wanneer Adobe Analytics is uitgeschakeld voor die DataStream-configuratie.
 
-![](assets/analytics-disabled-datastream-config.png)
+![Diagram dat de Analytics Client Logging workflow toont](assets/analytics-disabled-datastream-config.png)
 
 De klant heeft toegang tot het token Analytics (`tnta`) die met Analytics moet worden gedeeld met behulp van [API voor gegevensinvoer](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 door de `sendEvent` en doorloopt de resulterende array met voorstellingen.
@@ -910,19 +910,19 @@ alloy("sendEvent", {
 
 Hier is een diagram om te tonen hoe de gegevensstromen wanneer de Kant van de Cliënt van Analytics wordt toegelaten:
 
-![](assets/analytics-client-side-logging.png)
+![Gegevensstroomdiagram in logboekregistratie aan de clientzijde van Analyse](assets/analytics-client-side-logging.png)
 
 #### Logboekregistratie op de server voor Analytics
 
 Logboekregistratie aan de serverkant van Analytics wordt ingeschakeld wanneer Analytics is ingeschakeld voor die DataStream-configuratie.
 
-![](assets/analytics-enabled-datastream-config.png)
+![De UI van gegevensstromen die de montages van Analytics toont.](assets/analytics-enabled-datastream-config.png)
 
 Wanneer het Registreren van de Logboekregistraties van de Analyse van de Server de nuttige lading A4T wordt toegelaten die met Analytics moet worden gedeeld zodat Analytics rapporteert correcte beelden tonen en de omzettingen op het niveau van het Netwerk van de Rand worden gedeeld, zodat de klant geen extra verwerking hoeft te doen.
 
 Hieronder wordt beschreven hoe gegevens in onze systemen stromen wanneer de Logboekregistratie van de Analytics van de Server wordt toegelaten:
 
-![](assets/analytics-server-side-logging.png)
+![Diagram die de gegevensstroom in de Logboekregistratie van de Analytics van de Server tonen](assets/analytics-server-side-logging.png)
 
 ## Globale instellingen doel instellen
 
@@ -1130,9 +1130,9 @@ Web SDK ondersteunt doel-id van derden. Er zijn echter nog een paar stappen voor
 Met Identiteitskaart kunnen klanten meerdere identiteiten verzenden. Alle identiteiten worden naamruimte gegeven. Elke naamruimte kan een of meer identiteiten hebben. Een bepaalde identiteit kan als primair worden gemarkeerd.
 Met deze kennis in mening kunnen wij zien wat de noodzakelijke stappen aan opstellings Web sdk zijn om identiteitskaart van de Derde van het Doel te gebruiken.
 
-1. Opstelling namespace die identiteitskaart van de Derde van het Doel in de mening van de Configuratie van de Stroom van Gegevens zal bevatten:
+1. Opstelling namespace die identiteitskaart van de Derde van het Doel in de de configuratiepagina van de gegevensstroom zal bevatten:
 
-![](assets/mbox-3-party-id-setup.png)
+![De gebruikersinterface van gegevensstromen die het van de derde van het Doel namespace gebied toont](assets/mbox-3-party-id-setup.png)
 
 1. Verzend die identiteitsnaamruimte in elke sendEvent-opdracht als volgt:
 
@@ -1180,8 +1180,8 @@ window.targetPageParams = function() {
 
 ### Web SDK gebruiken
 
-Gebruikend Web SDK kunnen de klanten opstelling het bezit op een hoger niveau, wanneer vestiging de configuratie van de Stroom van Gegevens, onder Adobe Target namespace:
-![](assets/at-property-setup.png)
+Gebruikend Web SDK kunnen de klanten opstelling het bezit op een hoger niveau, wanneer vestiging de gegevensstroomconfiguratie, onder Adobe Target namespace:
+![De gebruikersinterface van gegevensstromen die de montages van Adobe Target toont.](assets/at-property-setup.png)
 Dit betekent elke vraag van het Doel voor die specifieke configuratie van de Stream van Gegevens die bezitstoken zal bevatten.
 
 ## Hoe kan ik een voorvoegsel toevoegen aan een box

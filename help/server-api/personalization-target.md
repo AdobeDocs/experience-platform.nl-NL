@@ -2,10 +2,10 @@
 title: Personalisatie via Adobe Target
 description: Leer hoe u de server-API gebruikt om persoonlijke ervaringen die in Adobe Target zijn gemaakt, te leveren en te renderen.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 0%
+source-wordcount: '591'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,6 @@ Zie de [gids over het toevoegen van de diensten aan een gegevensstroom](../datas
 Bij het configureren van de gegevensstroom kunt u (optioneel) waarden opgeven voor [!DNL Property Token], [!DNL Target Environment ID], en [!DNL Target Third Party ID Namespace].
 
 ![UI-afbeelding die het configuratiescherm van de datastream-service weergeeft, waarbij Adobe Target is geselecteerd](assets/target-datastream.png)
-
 
 ## Aangepaste parameters {#custom-parameters}
 
