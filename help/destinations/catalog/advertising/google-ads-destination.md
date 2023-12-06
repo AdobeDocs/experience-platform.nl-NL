@@ -1,12 +1,11 @@
 ---
-keywords: Google-advertenties;Google-advertenties;google-adwords;Google AdWords;Google Adwords
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een online advertentieservice waarmee bedrijven per klik reclame kunnen betalen voor zoekopdrachten, grafische weergaven, YouTube-video's en mobiele displays in de app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +28,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ads] bestemminge
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Google Ad Manager] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
+[!DNL Google Ads] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
