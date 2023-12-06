@@ -1,9 +1,9 @@
 ---
 title: Gebeurtenissen bijhouden met de Adobe Experience Platform Web SDK
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,9 @@ In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardig
 
 ## Niet-XDM-gegevens verzenden
 
-Gegevens die niet overeenkomen met een XDM-schema moeten worden verzonden met de opdracht `data` van de `sendEvent` gebruiken. Deze eigenschap wordt gesteund in versies 2.5.0 en hoger van het Web SDK.
+Gegevens die niet overeenkomen met een XDM-schema moeten worden verzonden met de opdracht `data` van de `sendEvent` gebruiken. Deze eigenschap wordt gesteund in versies 2.5.0 en hoger van het Web SDK. Als u deze optie gebruikt, moeten de gegevens via [Gegevensvoorvoegsel voor gegevensverzameling](../../datastreams/data-prep.md#create-mapping).
 
-Dit is handig als u een Adobe Target-profiel moet bijwerken of kenmerken van Target Recommendations moet verzenden. [Meer informatie over deze doelfuncties.](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-In de toekomst kunt u de volledige gegevenslaag onder de `data` en deze toewijzen aan de XDM-server.
+Deze functie is ook handig als u een Adobe Target-profiel moet bijwerken of kenmerken van Target Recommendations moet verzenden. Meer informatie over [Doelpersonalisatie](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **Profiel en Recommendations-kenmerken verzenden naar Adobe Target:**
 

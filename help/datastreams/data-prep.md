@@ -1,16 +1,40 @@
 ---
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
 
+
 # Gegevensvoorvoegsel voor gegevensverzameling
 
 Data Prep is een Adobe Experience Platform-service waarmee u gegevens kunt toewijzen, transformeren en valideren van en naar [Experience Data Model (XDM)](../xdm/home.md). Wanneer het vormen van een Platform toegelaten [datastream](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar het Netwerk van de Rand van het Platform.
+
+Alle gegevens die vanaf een webpagina worden verzonden, moeten als XDM in Experience Platform worden geplaatst. Er zijn 3 manieren om gegevens van een op pagina gegevenslaag aan XDM te vertalen die door Experience Platform wordt goedgekeurd:
+
+1. Hervorm de gegevenslaag in XDM op de Web-pagina zelf.
+2. Met de functionaliteit voor eigen gegevenselementen van tags kunt u de bestaande indeling van een webpagina voor gegevenslagen opnieuw opmaken in XDM.
+3. De bestaande indeling van de gegevenslaag van een webpagina via het Edge-netwerk opnieuw indelen in XDM, met Gegevensvoorinstelling voor gegevensverzameling.
+
+Deze handleiding is gericht op de derde optie.
+
+## Wanneer wordt Data Prep gebruikt voor gegevensverzameling {#when-to-use-data-prep}
+
+Er zijn twee gebruiksgevallen waarin Data Prep voor gegevensverzameling nuttig is:
+
+1. De website heeft een goed gevormde, bestuurde en onderhouden gegevenslaag en er is een voorkeur voor het rechtstreeks verzenden van deze laag naar het Edge-netwerk in plaats van het gebruik van JavaScript-manipulatie om deze om te zetten naar XDM op de pagina (via Tags-gegevenselementen of via handmatige JavaScript-manipulatie).
+2. Op de site wordt een ander coderingssysteem dan Tags geïmplementeerd.
+
+## Verzend een bestaande gegevenslaag naar het Netwerk van de Rand via WebSDK {#send-datalayer-via-websdk}
+
+De bestaande gegevenslaag moet worden verzonden met de `data` van de `sendEvent` gebruiken zoals beschreven in het dialoogvenster [Web SDK-documentatie](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+Als u Tags gebruikt, moet u de opdracht **[!UICONTROL Data]** van het **[!UICONTROL Send Event]** actietype, zoals beschreven in het dialoogvenster [Web SDK-tagextensiedocumentatie](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+De rest van deze gids zal zich op hoe te om de gegevenslaag aan normen in kaart te brengen XDM nadat het door WebSDK is verzonden.
 
 >[!NOTE]
 >
@@ -131,6 +155,10 @@ Als u eigenschappen wilt vastleggen van een gegevenselement van een XDM-object, 
 U kunt de optie selecteren om het object als een bestand te uploaden of het onbewerkte object in het tekstvak dat wordt weergegeven plakken. Als de JSON geldig is, wordt een voorvertoningsschema weergegeven in het rechterdeelvenster. Selecteren **[!UICONTROL Next]** om door te gaan.
 
 ![JSON-voorbeeld van verwachte binnenkomende gegevens](assets/data-prep/select-data.png)
+
+>[!NOTE]
+>
+> Gebruik een voorbeeld-JSON-object dat elk element in een gegevenslaag vertegenwoordigt dat op elke pagina kan worden gebruikt. Niet alle pagina&#39;s gebruiken bijvoorbeeld de gegevenslaagelementen van winkelwagentjes. De elementen voor de laag met winkelwagengegevens moeten echter wel worden opgenomen in dit voorbeeld van het JSON-object.
 
 ## [!UICONTROL Mapping]
 
