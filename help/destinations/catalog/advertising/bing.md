@@ -3,9 +3,9 @@ keywords: reclame; banden;
 title: Microsoft Bing-verbinding
 description: Met de bestemming van de Microsoft Bing-verbinding kunt u gerichte digitale campagnes doorvoeren via het gehele Microsoft Advertising Network, inclusief DisplayAdvertence, Search en Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '660'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ Als markator wil ik het publiek kunnen gebruiken dat is opgebouwd uit [!DNL Micr
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Microsoft Bing] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] ondersteunt de activering van het publiek op basis van de in de onderstaande tabel weergegeven identiteiten. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
 
-| Doelidentiteit | Beschrijving |
+| Identiteit | Beschrijving |
 |---|---|
 | GEMAAKT | Microsoft-advertentie-id |
 
