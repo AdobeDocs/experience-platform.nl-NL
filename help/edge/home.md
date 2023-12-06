@@ -1,28 +1,28 @@
 ---
 title: Adobe Experience Platform Web Software Development Kit (SDK) - Overzicht
 description: Leer hoe u de Adobe Experience Platform Web SDK gebruikt om de mogelijkheden van het platform in uw website te integreren.
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
 
-# Overzicht van Adobe Experience Platform Web SDK {#overview}
 
-Adobe Experience Platform Web Software Development Kit (SDK) is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud via het Adobe Experience Platform Edge Network kunnen communiceren met hun services. De Adobe biedt twee methodes aan om Web SDK uit te voeren:
+# Adobe Experience Platform Web SDK {#overview}
 
-* Handmatige implementatie met `alloy.js`. Deze gebruikershandleiding bevat documentatie voor deze implementatiemethode.
+De Adobe Experience Platform Web Software Development Kit (SDK) is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud via het Adobe Experience Platform Edge Network kunnen communiceren met hun services. De Adobe biedt twee methodes aan om Web SDK uit te voeren:
+
+* Handmatige implementatie met behulp van de `alloy.js` JavaScript-bibliotheek. Deze gebruikershandleiding bevat documentatie voor deze implementatiemethode.
 * De [Web SDK-tagextensie](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Zie [Zelfstudie Adobe Experience Cloud implementeren met Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) voor meer informatie .
 
-## Experience Platform Edge Network
+## Experience Platform Edge Network {#edge-network}
 
 De SDK van het Web van de Experience Platform maakt deel uit van een inzameling van hulpmiddelen die omhoog het Netwerk van de Rand van Adobe Experience Platform maken. Het Edge-netwerk bestaat uit de volgende onderdelen:
 
 * **[Experience Platform Web SDK](#overview):** Een JavaScript SDK en tagextensie om de implementatie van Adobe-technologieën aanzienlijk te vereenvoudigen.
-* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** Een uitbreiding van de mobiele SDK van v5 zodat klanten de nieuwe implementatiemethode kunnen gebruiken
-* **[Experience Platform Edge Network Server-API](../server-api/overview.md):** Een API die kan worden gebruikt voor diverse gevallen van gegevensverzameling, personalisatie, reclame en marketing. De server-API kan worden gebruikt op servers, IoT-apparaten, set-top boxes en diverse andere apparaten.
+* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/):** Een uitbreiding van de mobiele SDK van v5 zodat klanten de nieuwe implementatiemethode kunnen gebruiken
+* **[Experience Platform Edge Network Server-API](../server-api/overview.md):** Een API die kan worden gebruikt voor verschillende gevallen van gegevensverzameling, personalisatie, reclame en marketing. De server-API kan worden gebruikt op servers, IoT-apparaten, set-top boxes en verschillende andere apparaten.
 
 Het Edge-netwerk is een raamwerk voor gegevensverzameling met lage latentie, pluggable computergebruik en snelle gegevensactivering op alle adresseerbare kanalen. Het verstrekt één enkele geconsolideerde SDK voor elk kanaal (JavaScript, Mobiel, server-kant), dat gegevens naar een gemeenschappelijk domein van de Adobe verzendt (`adobedc.net`) en ontvangt één enkele terugverdientijd voor gegevens en ervaringslevering.
 

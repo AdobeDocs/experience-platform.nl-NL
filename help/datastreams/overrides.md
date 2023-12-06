@@ -1,10 +1,9 @@
 ---
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK te activeren.
-exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -13,23 +12,23 @@ ht-degree: 0%
 
 Met de gegevensstroom overschrijft kunt u aanvullende configuraties voor uw gegevensstromen definiëren. Deze configuraties worden via de SDK van het Web doorgegeven aan het Edge-netwerk.
 
-Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbrengen, zonder het creëren van een nieuwe gegevensstroom of het wijzigen van uw bestaande montages.
+Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbrengen, zonder een gegevensstroom te creëren of uw bestaande montages te wijzigen.
 
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
-1. Eerst moet u de configuratie van uw gegevensstroom overschrijven in het dialoogvenster [configuratiepagina gegevensstroom](configure.md).
+1. Eerst moet u de configuratieoverschrijving voor de gegevensstroom definiëren in het dialoogvenster [configuratiepagina gegevensstroom](configure.md).
 2. Dan, moet u de met voeten treedt naar het Netwerk van de Rand op één van de volgende manieren verzenden:
    * Via de `sendEvent` of `configure` [Web SDK](#send-overrides-web-sdk) opdrachten.
    * Via de web SDK [tagextensie](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * Via de mobiele SDK [sendEvent-API](#send-overrides-mobile-sdk) vraag.
+   * Via de mobiele SDK [sendEvent](#send-overrides-mobile-sdk) gebruiken.
 
 Dit artikel verklaart het proces van de de configuratieopheffing van begin tot eind van de gegevensstroom voor elk type van gesteunde opheffing.
 
 >[!IMPORTANT]
 >
->Gegevensstroomoverschrijvingen worden alleen ondersteund voor [Web SDK](../edge/home.md) en [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) integratie. [Server-API](../server-api/overview.md) Integraties bieden momenteel geen ondersteuning voor gegevensstroomoverschrijvingen.
+>Gegevensstroomoverschrijvingen worden alleen ondersteund voor [Web SDK](../edge/home.md) en [Mobile SDK](https://developer.adobe.com/client-sdks/home/) integratie. [Server-API](../server-api/overview.md) Integraties bieden momenteel geen ondersteuning voor gegevensstroomoverschrijvingen.
 ><br>
->De overrides van DataStream zouden moeten worden gebruikt wanneer u verschillende gegevens nodig hebt die naar verschillende gegevensstromen worden verzonden. U moet geen gegevensstroomoverschrijvingen gebruiken voor gevallen waarin u persoonlijke gegevens wilt gebruiken of voor toestemmingsgegevens.
+>De overrides van DataStream zouden moeten worden gebruikt wanneer u verschillende gegevens nodig hebt die naar verschillende gegevensstromen worden verzonden. Gebruik geen gegevensstroomoverschrijvingen voor gevallen van verpersoonlijking of toestemmingsgegevens.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -41,11 +40,11 @@ Een bedrijf heeft verschillende websites of subdomeinen voor verschillende lande
 
 Door gegevensstroomoverschrijvingen te gebruiken, kan het bedrijf dynamisch de stroom van gegevens aan verschillende gegevensstromen, in plaats van het standaardgedrag schakelen om gegevens naar één gegevensstroom te verzenden.
 
-Een veel voorkomend geval kan zijn dat gegevens naar een landspecifieke gegevensstroom worden verzonden en dat gegevens ook naar een algemene gegevensstroom worden verzonden waar klanten een belangrijke actie uitvoeren, zoals het plaatsen van een bestelling of het bijwerken van hun gebruikersprofiel.
+Een veelvoorkomend geval van gebruik kan het verzenden van gegevens naar een landspecifieke gegevensstroom en ook naar een globale gegevensstroom zijn waar klanten een belangrijke actie uitvoeren, zoals het plaatsen van een orde of het bijwerken van hun gebruikersprofiel.
 
 **Verschillende profielen en identiteiten voor verschillende bedrijfseenheden**
 
-Een bedrijf met veelvoudige bedrijfseenheden wil veelvoudige zandbakken van het Experience Platform gebruiken om gegevens op te slaan specifiek voor elke bedrijfseenheid.
+Een bedrijf met veelvoudige bedrijfseenheden wil veelvoudige Experience Platforms zandbakken gebruiken om gegevens op te slaan specifiek voor elke bedrijfseenheid.
 
 In plaats van gegevens naar een standaardgegevensstroom te verzenden, kan het bedrijf gegevensstroomoverschrijvingen gebruiken om ervoor te zorgen dat elke bedrijfseenheid zijn eigen gegevensstroom heeft om gegevens door te ontvangen.
 
@@ -124,9 +123,9 @@ Na [configureren van gegevensstroomoverschrijvingen](#configure-overrides) in de
 
 Als u Web SDK gebruikt, verzendt het verzenden van de overschrijvingen naar het Netwerk van de Rand via `edgeConfigOverrides` bevel is de tweede en definitieve stap van het activeren van de configuratieoverschrijvingen van de gegevensstroom.
 
-De gegevensstroomconfiguratieoverschrijvingen worden verzonden naar het Netwerk van de Rand door `edgeConfigOverrides` Web SDK, opdracht. Met deze opdracht maakt u gegevensstroomoverschrijvingen die worden doorgegeven aan de [!DNL Edge Network] op de volgende opdracht, of, in het geval van de `configure` voor elke aanvraag.
+De gegevensstroomconfiguratieoverschrijvingen worden verzonden naar het Netwerk van de Rand door `edgeConfigOverrides` Web SDK, opdracht. Met deze opdracht maakt u gegevensstroomoverschrijvingen die worden doorgegeven aan de [!DNL Edge Network] op de volgende opdracht. Als u het `configure` , worden de overschrijvingen voor elk verzoek overgegaan.
 
-De `edgeConfigOverrides` command maakt gegevensstroomoverschrijvingen die worden doorgegeven aan de [!DNL Edge Network] op de volgende opdracht, of, in het geval van `configure`, voor elk verzoek.
+De `edgeConfigOverrides` wordt gebruikt om gegevensstroomoverschrijvingen te maken die worden doorgegeven aan de [!DNL Edge Network] op de volgende opdracht.
 
 Wanneer een configuratieopheffing met wordt verzonden `configure` bevel, is het inbegrepen op de volgende bevelen van SDK van het Web.
 
@@ -246,7 +245,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
->[!TAB Android (Kotlin)]
+>[!TAB Android™ (Kotlin)]
 
 In dit voorbeeld wordt getoond hoe een gegevensstroom-id-overschrijving eruit ziet in een mobiele SDK [!DNL Android] integratie.
 

@@ -1,17 +1,16 @@
 ---
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
-exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
 
 # Gegevensvoorvoegsel voor gegevensverzameling
 
-Data Prep is een Adobe Experience Platform-service waarmee u gegevens kunt toewijzen, transformeren en valideren van en naar [Experience Data Model (XDM)](../xdm/home.md). Bij het configureren van een Platform ingeschakeld [datastream](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar het Netwerk van de Rand van het Platform.
+Data Prep is een Adobe Experience Platform-service waarmee u gegevens kunt toewijzen, transformeren en valideren van en naar [Experience Data Model (XDM)](../xdm/home.md). Wanneer het vormen van een Platform toegelaten [datastream](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar het Netwerk van de Rand van het Platform.
 
 >[!NOTE]
 >
@@ -33,7 +32,7 @@ Selecteren **[!UICONTROL Save and Add Mapping]** na de voltooiing van de basisco
 
 Als u eigenschappen rechtstreeks vanaf uw gegevenslaag wilt vastleggen, moet het JSON-object één basiseigenschap hebben `data`. De subeigenschappen van de `data` Het object moet vervolgens zo worden samengesteld dat het wordt toegewezen aan de eigenschappen van de gegevenslaag die u wilt vastleggen. Selecteer de onderstaande sectie om een voorbeeld weer te geven van een JSON-object met de juiste indeling `data` hoofdmap.
 
-+++Voorbeeld-JSON-bestand met `data` basis
++++JSON-voorbeeldbestand met `data` basis
 
 ```json
 {
@@ -98,7 +97,7 @@ Als u eigenschappen rechtstreeks vanaf uw gegevenslaag wilt vastleggen, moet het
 
 Als u eigenschappen wilt vastleggen van een gegevenselement van een XDM-object, zijn dezelfde regels van toepassing op het JSON-object, maar moet de eigenschap root worden ingesteld op `xdm` in plaats daarvan. Selecteer de onderstaande sectie om een voorbeeld weer te geven van een JSON-object met de juiste indeling `xdm` hoofdmap.
 
-+++Voorbeeld-JSON-bestand met `xdm` basis
++++JSON-voorbeeldbestand met `xdm` basis
 
 ```json
 {
@@ -137,14 +136,14 @@ U kunt de optie selecteren om het object als een bestand te uploaden of het onbe
 
 De **[!UICONTROL Mapping]** wordt weergegeven, zodat u de velden in uw brongegevens kunt toewijzen aan die van het doelgebeurtenisschema in Platform. Van hier, kunt u de afbeelding op twee manieren vormen:
 
-* [Nieuwe toewijzingsregels maken](#create-mapping) voor deze gegevensstroom door middel van een handmatig proces.
+* [Toewijzingsregels maken](#create-mapping) voor deze gegevensstroom via een handmatig proces.
 * [Toewijzingsregels importeren](#import-mapping) uit een bestaande gegevensstroom.
 
-### Nieuwe toewijzing maken {#create-mapping}
+### Toewijzingsregels maken {#create-mapping}
 
-Selecteer **[!UICONTROL Add new mapping]** om een nieuwe toewijzingsrij te maken.
+Als u een toewijzingsregel wilt maken, selecteert u **[!UICONTROL Add new mapping]**.
 
-![Nieuwe toewijzing toevoegen](assets/data-prep/add-new-mapping.png)
+![Een nieuwe toewijzing toevoegen](assets/data-prep/add-new-mapping.png)
 
 Selecteer het bronpictogram (![Bronpictogram](assets/data-prep/source-icon.png)) en selecteert u in het dialoogvenster dat wordt weergegeven het bronveld dat u wilt toewijzen in het beschikbare canvas. Als u een veld hebt gekozen, gebruikt u de opdracht **[!UICONTROL Select]** om door te gaan.
 
@@ -190,13 +189,13 @@ In het volgende scherm ziet u een voorvertoning van de opgeslagen toewijzingsreg
 
 >[!NOTE]
 >
->Als een bronveld in de geïmporteerde toewijzingsregels niet is opgenomen in de JSON-voorbeeldgegevens die u opgeeft [eerder verstrekt](#select-data), worden deze veldtoewijzingen niet opgenomen in de importbewerking.
+>Als een bronveld in de geïmporteerde toewijzingsregels niet is opgenomen in de JSON-voorbeeldgegevens die u [eerder verstrekt](#select-data), worden deze veldtoewijzingen niet opgenomen in de importbewerking.
 
 ### De toewijzing voltooien
 
-Ga verder met de bovenstaande stappen om de overige velden toe te wijzen aan het doelschema. Hoewel u niet alle beschikbare brongebieden moet in kaart brengen, om het even welke gebieden in het doelschema die zoals vereist worden geplaatst moeten worden in kaart gebracht om deze stap te voltooien. De **[!UICONTROL Required fields]** teller geeft aan hoeveel vereiste velden nog niet zijn toegewezen in de huidige configuratie.
+Ga verder met de bovenstaande stappen om de rest van de velden toe te wijzen aan het doelschema. Hoewel u niet alle beschikbare brongebieden moet in kaart brengen, om het even welke gebieden in het doelschema die zoals vereist worden geplaatst moeten worden in kaart gebracht om deze stap te voltooien. De **[!UICONTROL Required fields]** teller geeft aan hoeveel vereiste velden nog niet zijn toegewezen in de huidige configuratie.
 
-Als het aantal vereiste velden nul bereikt en u tevreden bent met de toewijzing, selecteert u **[!UICONTROL Save]** om uw wijzigingen te voltooien.
+Als het vereiste aantal velden nul heeft bereikt en u tevreden bent met de toewijzing, selecteert u **[!UICONTROL Save]** om uw wijzigingen te voltooien.
 
 ![Toewijzing voltooid](assets/data-prep/mapping-complete.png)
 

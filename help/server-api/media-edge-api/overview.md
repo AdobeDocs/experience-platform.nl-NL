@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge-API's
 description: Overzicht van mediarand-API's
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 4%
+source-wordcount: '331'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ Media Edge-API&#39;s zijn gebaseerd op de Adobe Experience Platform en bieden in
 
 ## Gegevensstromen voor het bijhouden van media optimaliseren
 
-Beide [Media Collection-API&#39;s](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html&amp;media-tracking-data-flows) en Media Edge-API&#39;s bieden mediatrackinggegevens als RESTful-services. Maar het gebruik van de Media Edge-service heeft de volgende voordelen:
+Beide [Media Collection-API&#39;s](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html#media-tracking-data-flows) en Media Edge-API&#39;s bieden mediatrackinggegevens als RESTful-services. Maar het gebruik van de Media Edge-service heeft de volgende voordelen:
 
 * Het is de eenvoudigste manier om XDM-schema&#39;s in uw gegevensstroom op te nemen.
 

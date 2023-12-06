@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Specificatie voor Media Edge Open API
 description: Dit document bevat een OAS-referentie (Open API Specification) van YAML of een Swagger-referentie. U kunt deze specificatie kopiëren en in een teruggevende hulpmiddel, zoals editor.swagger.io kleven om de informatie van de Rand van Media te bekijken API. Deze specificatie omvat parameters, voorbeelden, en schema voor elk eindpunt.
 exl-id: 14395fa4-14a6-4487-8645-1a19e5695349
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
+
 
 # Het API-specificatiebestand van de Open-API gebruiken voor Media Edge-API&#39;s
 

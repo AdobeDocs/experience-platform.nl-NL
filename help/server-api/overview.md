@@ -1,12 +1,9 @@
 ---
 title: Overzicht van Edge Network Server API
 description: Leer wat de Server API van het Netwerk van Edge is en hoe u het kunt gebruiken.
-seo-description: Learn what the Edge Network Server API is and how you can use it.
-keywords: gegevensverzameling;verzameling;Adobe Experience Platform Edge Network;server-API;
-exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -16,7 +13,7 @@ ht-degree: 0%
 
 Het Adobe Experience Platform Edge Network biedt klanten een geoptimaliseerde manier om te communiceren met Adobe Experience Cloud- of Adobe Experience Platform Edge-services.
 
-De [!DNL Edge Network Server API] kan worden gebruikt voor diverse gevallen van gegevensverzameling, personalisatie, reclame en marketing. De [!DNL Server API] kan op servers worden gebruikt, [!DNL IoT] apparaten, set-top boxes en een verscheidenheid aan andere apparaten.
+De [!DNL Edge Network Server API] kan worden gebruikt voor diverse gevallen van gegevensverzameling, personalisatie, reclame en marketing. De [!DNL Server API] kan op servers worden gebruikt, [!DNL IoT] apparaten, set-top boxes en verschillende andere apparaten.
 
 Aangezien de [!DNL Server API] is niet afhankelijk van bibliotheken die u wilt laden, maar biedt een bliksemsnelle manier om te communiceren met het Adobe Experience Platform Edge-netwerk en de ondersteunde oplossingen.
 
@@ -29,12 +26,12 @@ De voordelen van de [!DNL Server API] architectuur omvat:
 
 De [!DNL Server API] ondersteunt interactieve gegevensverzameling en batchgegevensverzameling via twee specifieke eindpunten:
 
-1. Het interactieve eindpunt steunt communicatie met de diensten van Adobe Experience Platform en van Adobe Experience Cloud die geavanceerde segmentatie, verpersoonlijking en andere marketing gebruiksgevallen steunen.
-2. Het batcheindpunt zal toestaan dat verzoeken in partij worden verzonden wanneer de gegevens moeten worden gecontroleerd zonder een reactie van de toepassingen te ontvangen die worden geroepen.
+1. Het interactieve eindpunt steunt communicatie met de diensten van Adobe Experience Platform en van Adobe Experience Cloud die geavanceerde segmentatie, verpersoonlijking, en andere marketing gebruiksgevallen steunen.
+2. Het batcheindpunt staat verzoeken toe om in partij worden verzonden wanneer de gegevens moeten worden gecontroleerd zonder een reactie van de toepassingen te ontvangen die worden geroepen.
 
 De [!DNL Server API] ondersteunt het volgende type verzoeken:
 
-* Voor authentiek verklaarde verzoeken via [Adobe I/O](https://developer.adobe.com/), met behulp van de nieuwe `server.adobedc.net` eindpunt.
+* Voor authentiek verklaarde verzoeken via [Adobe Developer](https://developer.adobe.com/), met de `server.adobedc.net` eindpunt.
 * Niet-geverifieerde aanvragen via de `edge.adobedc.net` eindpunt.
 
 Dit laat gebruiksgevallen toe die voor veilige, voor authentiek verklaarde inzameling van gevoelige gegevens, volgens het privacybeleid van uw organisatie toestaan. Naast verificatie biedt de server-API ondersteuning voor het markeren van gegevensstromen, zodat alleen geverifieerde communicatie via de API wordt geaccepteerd.

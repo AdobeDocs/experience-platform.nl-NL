@@ -1,18 +1,17 @@
 ---
 title: De SDK van Adobe Experience Platform Web installeren
 description: Leer hoe te om het Web SDK van het Experience Platform te installeren.
-keywords: web sdk installatie;installeren web sdk;Internet Explorer;promise;npm pakket
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
 
-# De SDK installeren {#installing-the-sdk}
 
-Er zijn drie ondersteunde manieren om Adobe Experience Platform Web SDK te gebruiken:
+# Web SDK installeren {#installing-the-sdk}
+
+Er zijn drie ondersteunde manieren om Adobe Experience Platform Web SDK te installeren:
 
 1. De aangewezen manier om het Web SDK van Adobe Experience Platform te gebruiken is via de UI van de Inzameling van Gegevens of Experience Platform UI.
 1. De SDK van het Web van Adobe Experience Platform is ook beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik.
@@ -30,9 +29,8 @@ URL-structuur: https://cdn1.adoberesources.net/alloy/[VERSIE]/alloy.min.js OR al
 
 Bijvoorbeeld:
 
-
 * Gepiliseerd: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
-* Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
+* Niet-geminimaliseerd: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 
 ### De code toevoegen {#adding-the-code}
@@ -77,7 +75,7 @@ Bepalen of u al `window.Promise` polygevuld:
 
 1. Uw website openen in [!DNL Internet Explorer].
 1. Open de foutopsporingsconsole van de browser.
-1. Type `window.Promise` in de console, dan druk binnengaan.
+1. Type `window.Promise` in de console en druk binnengaan.
 
 Als iets anders dan `undefined` wordt weergegeven, hebt u waarschijnlijk al een polyvulling `window.Promise`. Een andere manier om te bepalen of `window.Promise` wordt gevuld door uw website te laden nadat u de bovenstaande installatie-instructies hebt voltooid. Als de SDK een fout genereert die iets over een belofte vermeldt, hebt u waarschijnlijk niet gepolymeerd `window.Promise`.
 
@@ -97,7 +95,7 @@ Met deze tag wordt een script geladen dat ervoor zorgt dat `window.Promise` is e
 
 Zoals uitgelegd in de sectie [De code toevoegen](#adding-the-code)Met de basiscode die u hebt gekopieerd en in de HTML van uw website hebt geplakt, wordt een extern bestand geladen. Het externe bestand bevat de kernfunctionaliteit van de SDK. Elke opdracht die u probeert uit te voeren terwijl dit bestand wordt geladen, wordt in de wachtrij geplaatst en verwerkt nadat het bestand is geladen. Het asynchroon laden van het bestand is de best presterende installatiemethode.
 
-Onder bepaalde omstandigheden kunt u het bestand echter synchroon laden \(meer details over deze omstandigheden worden later gedocumenteerd\). Als u dit doet, wordt de rest van het HTML-document niet geparseerd en gerenderd door de browser totdat het externe bestand is geladen en uitgevoerd. Deze extra vertraging voordat primaire inhoud aan gebruikers wordt weergegeven, wordt doorgaans afgeraden, maar kan, afhankelijk van de omstandigheden, zinvol zijn.
+Onder bepaalde omstandigheden kunt u het bestand echter synchroon laden. Als u dit doet, wordt de rest van het HTML-document niet geparseerd en gerenderd door de browser totdat het externe bestand is geladen en uitgevoerd. Deze extra vertraging voordat primaire inhoud aan gebruikers wordt weergegeven, wordt doorgaans afgeraden, maar kan, afhankelijk van de omstandigheden, zinvol zijn.
 
 Als u het bestand synchroon in plaats van asynchroon wilt laden, verwijdert u de knop `async` kenmerk van de tweede `script` tag zoals hieronder weergegeven:
 
@@ -132,7 +130,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->Het pakket NPM baseert zich op modules CommonJS; daarom, wanneer het gebruiken van een bundelaar, zorg ervoor de bundelaar modules CommonJS steunt. Sommige bundels, zoals [Rollup](https://rollupjs.org)vereist een [insteekmodule](https://www.npmjs.com/package/@rollup/plugin-commonjs) die ondersteuning biedt voor CommonJS.
+>Het pakket NPM baseert zich op modules CommonJS; daarom, wanneer het gebruiken van een bundelaar, zorg ervoor dat de bundelaar modules CommonJS steunt. Sommige bundels, zoals [Rollup](https://rollupjs.org)vereist een [insteekmodule](https://www.npmjs.com/package/@rollup/plugin-commonjs) die ondersteuning biedt voor CommonJS.
 
 ### Het pakket gebruiken als een ECMAScript 5-module
 

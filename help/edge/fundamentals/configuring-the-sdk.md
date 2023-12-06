@@ -1,17 +1,15 @@
 ---
 title: De SDK van Adobe Experience Platform Web configureren
 description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
-seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
-exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 3%
+source-wordcount: '1088'
+ht-degree: 1%
 
 ---
 
-# Vorm de SDK van het Web van het Platform
+
+# Web SDK configureren
 
 De configuratie voor de SDK wordt uitgevoerd met de `configure` gebruiken.
 
@@ -38,7 +36,7 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 
 | Type | Vereist | Standaardwaarde |
 | -------- | ------------ | ----------------- |
-| Tekenreeks | Ja | Geen |
+| String | Ja | Geen |
 
 {style="table-layout:auto"}
 
@@ -56,7 +54,7 @@ Geeft aan welke contextcategorieën automatisch moeten worden verzameld, zoals b
 
 >[!IMPORTANT]
 >
->Alle contexteigenschappen, met uitzondering van `highEntropyUserAgentHints`, zijn standaard ingeschakeld. Als u contexteigenschappen manueel in uw configuratie van SDK van het Web specificeerde, moet u alle contexteigenschappen toelaten om de noodzakelijke informatie te blijven verzamelen.
+>Alle contexteigenschappen, behalve `highEntropyUserAgentHints`, zijn standaard ingeschakeld. Als u contexteigenschappen manueel in uw configuratie van SDK van het Web specificeerde, moet u alle contexteigenschappen toelaten om de noodzakelijke informatie te blijven verzamelen.
 
 Inschakelen [hoge entropieclienthints](user-agent-client-hints.md#enabling-high-entropy-client-hints) op uw plaatsing van SDK van het Web, moet u extra omvatten `highEntropyUserAgentHints` naast uw bestaande configuratie.
 
@@ -75,7 +73,7 @@ Als u bijvoorbeeld hoge entropientroy-clienthints wilt ophalen van westeigenscha
 
 Geeft aan of foutopsporing is ingeschakeld. Deze configuratie instellen op `true` schakelt de volgende functies in:
 
-| **Functie** | **-functie** |
+| **Functie** | **Functie** |
 | ---------------------- | ------------------ |
 | Logboek van console | Laat het zuiveren berichten toe om in de console van JavaScript van browser worden getoond |
 
@@ -83,7 +81,7 @@ Geeft aan of foutopsporing is ingeschakeld. Deze configuratie instellen op `true
 
 ### `edgeDomain` {#edge-domain}
 
-Vul dit veld met uw domein van de eerste partij. Zie voor meer informatie de [documentatie](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Vul dit veld met uw domein van de eerste partij. Zie voor meer informatie de [documentatie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html).
 
 Het domein is vergelijkbaar met `data.{customerdomain.com}` voor een website op www.{customerdomain.com}.
 
@@ -93,7 +91,7 @@ Pad na het edgeDomain dat wordt gebruikt voor communicatie en interactie met Ado
 
 | Type | Vereist | Standaardwaarde |
 | -------- | ------------ | ----------------- |
-| Tekenreeks | Nee | ee |
+| String | Nee | ee |
 
 {style="table-layout:auto"}
 
@@ -101,11 +99,11 @@ Pad na het edgeDomain dat wordt gebruikt voor communicatie en interactie met Ado
 
 | Type | Vereist | Standaardwaarde |
 | -------- | ------------ | ----------------- |
-| Tekenreeks | Ja | Geen |
+| String | Ja | Geen |
 
 {style="table-layout:auto"}
 
-Uw toegewezen [!DNL Experience Cloud] organisatie-id. Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u verschillende vormen `orgId` voor elke instantie.
+Uw toegewezen [!DNL Experience Cloud] organisatie-id. Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u een verschillende vormen `orgId` voor elke instantie.
 
 ## Gegevensverzameling
 
@@ -123,7 +121,7 @@ Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch word
 
 | Type | Vereist | Standaardwaarde |
 | -------- | ------------ | ----------------- |
-| -functie | Nee | () => undefined |
+| Functie | Nee | () => undefined |
 
 {style="table-layout:auto"}
 
@@ -133,17 +131,17 @@ Vorm callback die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt 
 
 | Type | Vereist | Standaardwaarde |
 | -------- | ------------ | ----------------- |
-| -functie | Nee | () => undefined |
+| Functie | Nee | () => undefined |
 
 {style="table-layout:auto"}
 
-Vorm callback die voor elke verbinding wordt geroepen klikt volgende gebeurtenis vlak alvorens het wordt verzonden. De callback verzendt een voorwerp met `xdm`, `clickedElement`, en `data` velden.
+Vorm een callback die voor elke verbinding wordt geroepen klikt volgende gebeurtenis vlak alvorens het wordt verzonden. De callback verzendt een voorwerp met `xdm`, `clickedElement`, en `data` velden.
 
 Wanneer het filtreren van de verbinding het volgen door de DOM elementenstructuur te gebruiken, kunt u gebruiken `clickElement` gebruiken. `clickedElement` is de DOM elementenknoop die werd geklikt en de boom van ouderknopen heeft ingekapseld.
 
 Als u wilt wijzigen welke gegevens worden verzonden, wijzigt u de `xdm` en/of `data` objecten. Binnen de callback, `xdm` heeft de gegevens al doorgegeven in de gebeurtenisopdracht en de automatisch verzamelde informatie.
 
-* Elke andere waarde dan `false` De gebeurtenis kan worden verwerkt en de callback kan worden verzonden.
+* Elke andere waarde dan `false` staat de gebeurtenis toe om en callback te verwerken die moeten worden verzonden.
 * Als de callback het `false` waarde, gebeurtenisverwerking wordt gestopt, zonder fout, en de gebeurtenis wordt niet verzonden. Met dit mechanisme kunnen bepaalde gebeurtenissen worden gefilterd door de gebeurtenisgegevens te bekijken en te retourneren `false` als de gebeurtenis niet moet worden verzonden.
 * Als callback een uitzondering genereert, wordt de verwerking voor de gebeurtenis gestopt en wordt de gebeurtenis niet verzonden.
 
@@ -160,8 +158,8 @@ Als u wilt wijzigen welke gegevens worden verzonden, wijzigt u de `xdm` en/of `d
 
 Hiermee stelt u de standaardtoestemming van de gebruiker in. Gebruik deze instelling als er nog geen voorkeur voor toestemming is opgeslagen voor de gebruiker. De andere geldige waarden zijn `"pending"` en `"out"`. Deze standaardwaarde wordt niet doorgevoerd in het profiel van de gebruiker. Het gebruikersprofiel wordt alleen bijgewerkt wanneer `setConsent` wordt aangeroepen.
 * `"in"`: Wanneer deze instelling is ingesteld of geen waarde is opgegeven, gaat het werk verder zonder voorkeuren voor gebruikerstoestemming.
-* `"pending"`: Wanneer deze instelling is ingesteld, wordt het werk in de wachtrij geplaatst totdat de gebruiker voorkeuren voor toestemming geeft.
-* `"out"`: Wanneer deze instelling is ingesteld, worden de werkzaamheden verwijderd totdat de gebruiker voorkeuren voor toestemming heeft ingesteld.
+* `"pending"`: Wanneer deze instelling is ingesteld, wordt de bewerking in de wachtrij geplaatst totdat de gebruiker voorkeuren voor toestemming geeft.
+* `"out"`: Wanneer deze instelling is ingesteld, wordt het werk verwijderd totdat de gebruiker voorkeuren voor toestemming heeft ingesteld.
 Nadat de voorkeuren van de gebruiker zijn opgegeven, gaat het werk door of wordt het afgebroken op basis van de voorkeuren van de gebruiker. Zie [Ondersteunende toestemming](../consent/supporting-consent.md) voor meer informatie .
 
 ## Persoonlijke opties {#personalization}
@@ -170,7 +168,7 @@ Nadat de voorkeuren van de gebruiker zijn opgegeven, gaat het werk door of wordt
 
 | Type | Vereist | Standaardwaarde |
 | -------- | ------------ | ----------------- |
-| Tekenreeks | Nee | Geen |
+| String | Nee | Geen |
 
 {style="table-layout:auto"}
 
@@ -236,4 +234,4 @@ Als de Bezoeker-API op de pagina is gedefinieerd, vraagt de SDK de Bezoeker-API 
 
 {style="table-layout:auto"}
 
-Hiermee schakelt u het instellen van cookies van derden voor Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext voortzetten om de zelfde bezoekersidentiteitskaart toe te laten om over plaatsen worden gebruikt. Gebruik deze optie als u veelvoudige plaatsen hebt of u gegevens met partners wilt delen; soms is deze optie echter om privacyredenen niet gewenst .
+Hiermee schakelt u het instellen van cookies van derden voor de Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext voortzetten om de zelfde bezoekersidentiteitskaart toe te laten om over plaatsen worden gebruikt. Gebruik deze optie als u meerdere sites hebt of gegevens wilt delen met partners. Deze optie is echter soms niet gewenst vanwege privacyredenen.

@@ -1,19 +1,17 @@
 ---
 title: Overzicht gegevensstromen
-description: Sluit de integratie van uw Experience Platform SDK aan clientzijde aan op Adobe-producten en bestemmingen van derden.
-keywords: configuratie;gegevensstreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;clientcode;Eigenschapcontrole;Doel-id;Cookie-doelen;url-doelen;Analytics Settings Blockreport suite ID;Data Prep;Data Prep;Mapper XDM Mapper;Mapper on Edge;
-exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+description: Leer hoe de gegevensstromen u helpen uw cliënt-zijintegratie van Experience Platform SDK met de producten van de Adobe en derdebestemmingen verbinden.
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 1%
+source-wordcount: '725'
+ht-degree: 0%
 
 ---
 
 
 # Overzicht gegevensstromen
 
-Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [configureren, opdracht](../edge/fundamentals/configuring-the-sdk.md) in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), worden in gegevensstreams alle andere configuraties voor de SDK afgehandeld. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+Een gegevensstroom vertegenwoordigt de server-zijconfiguratie wanneer het uitvoeren van het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de [vormen](../edge/fundamentals/configuring-the-sdk.md) bevel in SDK controleert dingen die op de cliënt (zoals moeten worden behandeld `edgeDomain`), kunnen gegevensstromen alle andere configuraties voor SDK behandelen. Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, `edgeConfigId` wordt gebruikt om naar de gegevensstroom te verwijzen. Hierdoor kunt u de serverconfiguratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
 U kunt gegevensstromen tot stand brengen en beheren door te selecteren **[!UICONTROL Datastreams]** in de linkernavigatie binnen de UI van Adobe Experience Platform of UI van de Inzameling van Gegevens.
 
@@ -41,25 +39,25 @@ Alle gegevens in doorvoer via het Edge-netwerk worden via beveiligde, gecodeerde
 
 ### Gegevensbeheer {#governance}
 
-De stromen van gegevensstromen hefboomwerkingen de ingebouwde mogelijkheden van het gegevensbeheer van het Experience Platform om gevoelige gegevens te verhinderen worden verzonden naar de niet-HIPAA-klaar diensten. Door specifieke gebieden te etiketteren die gevoelige gegevens in uw gegevensstroomschema&#39;s bevatten, kunt u korrelige controle nemen over welke gegevensgebieden voor specifieke doeleinden kunnen worden gebruikt.
+De stromen van gegevens gebruiken de Experience Platform ingebouwde mogelijkheden van het gegevensbeheer om gevoelige gegevens te verhinderen worden verzonden naar de niet-HIPAA-klaar diensten. Door specifieke gebieden te etiketteren die gevoelige gegevens in uw gegevensstroomschema&#39;s bevatten, kunt u korrelige controle nemen over welke gegevensgebieden voor specifieke doeleinden kunnen worden gebruikt.
 
 De volgende video verstrekt een kort overzicht van hoe de beperkingen van het gegevensgebruik voor gegevensstromen in UI worden gevormd en worden afgedwongen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
-In Experience Platform kunt u [labels voor gevoelig gegevensgebruik](../data-governance/labels/reference.md#sensitive) aan schema&#39;s en gebieden die gegevens bevatten die uw organisatie gevoelig acht. De `RHD` wordt gebruikt om beschermde gezondheidsinformatie (PHI) aan te geven, en `S1` label geeft geolocatiegegevens aan.
+In Experience Platform kunt u [labels voor gevoelig gegevensgebruik](../data-governance/labels/reference.md#sensitive) aan schema&#39;s en gebieden die gegevens bevatten die uw organisatie gevoelig acht. Bijvoorbeeld de `RHD` wordt gebruikt om beschermde gezondheidsinformatie (PHI) aan te geven, en `S1` label geeft geolocatiegegevens aan.
 
 >[!NOTE]
 >
 >Voor meer informatie over het toepassen van labels voor gegevensgebruik in de [!UICONTROL Schemas] tabblad in de gebruikersinterface van het Experience Platform of de gebruikersinterface van de gegevensverzameling, raadpleegt u de [zelfstudie over schemalabels](../xdm/tutorials/labels.md).
 
-Wanneer het creëren van een nieuwe gegevensstroom, als het geselecteerde schema gevoelige etiketten van het gegevensgebruik bevat, kan de gegevensstroom slechts worden gevormd om die gegevens naar HIPAA-klaar bestemmingen te verzenden. Momenteel, is de enige bestemming HIPAA-klaar die door gegevensstromen wordt gesteund Adobe Experience Platform. Andere bestemmingsdiensten met inbegrip van Adobe Target, Adobe Analytics, Adobe Audience Manager, gebeurtenis het door:sturen, en randbestemmingen zijn gehandicapt voor gegevensstromen die gevoelige etiketten van het gegevensgebruik bevatten.
+Wanneer u een gegevensstroom creeert, als het geselecteerde schema gevoelige etiketten van het gegevensgebruik bevat, kunt u de gegevensstroom slechts vormen om die gegevens naar bestemmingen te verzenden HIPAA-klaar. Momenteel, is de enige bestemming HIPAA-klaar die door gegevensstromen wordt gesteund Adobe Experience Platform. Andere bestemmingsdiensten met inbegrip van Adobe Target, Adobe Analytics, Adobe Audience Manager, gebeurtenis het door:sturen, en randbestemmingen zijn gehandicapt voor gegevensstromen die gevoelige etiketten van het gegevensgebruik bevatten.
 
 Als een schema in een bestaande gegevensstroom met de niet-HIPAA-klaar diensten wordt gebruikt, die een gevoelig etiket van het gegevensgebruik aan het schema proberen toe te voegen resulteert in een bericht van de beleidsschending en de actie wordt verhinderd. Het bericht specificeert welke datastream de schending teweegbracht en stelt voor om het even welke niet-HIPAA-klaar diensten uit de datastream te verwijderen om de kwestie op te lossen.
 
 ### Controlelogboeken
 
-In Experience Platform kunnen gegevensstroomactiviteiten worden gecontroleerd in de vorm van auditlogboeken. Een controlelogboek vertelt **wie** uitgevoerd **wat** actie, en **wanneer**, samen met andere contextuele gegevens die u kunnen helpen problemen met betrekking tot gegevensstromen oplossen om uw zaken te helpen aan het beleid en de regelgevende vereisten van het collectieve gegevensbeheer voldoen.
+In Experience Platform kunnen gegevensstroomactiviteiten worden gecontroleerd in de vorm van auditlogboeken. Auditlogboeken geven aan **wie** uitgevoerd **wat** actie, en **wanneer**, samen met andere contextuele gegevens die u kunnen helpen problemen met betrekking tot gegevensstromen oplossen om uw zaken te helpen aan het beleid en de regelgevende vereisten van het collectieve gegevensbeheer voldoen.
 
 Wanneer een gebruiker een gegevensstroom maakt, bijwerkt of verwijdert, wordt een controlelogboek gemaakt om de handeling op te nemen. Dit gebeurt ook wanneer een gebruiker een toewijzing maakt, bijwerkt of verwijdert via [Gegevensvoorvoegsel voor gegevensverzameling](./data-prep.md). Ongeacht of het een gegevensstroom of een afbeelding was die werd bijgewerkt, wordt het resulterende controlelogboek gecategoriseerd onder [!UICONTROL Datastreams] brontype.
 

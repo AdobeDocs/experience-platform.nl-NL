@@ -1,14 +1,13 @@
 ---
-title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
+title: Gebeurtenissen bijhouden met de Adobe Experience Platform Web SDK
 description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
+
 
 # Gebeurtenissen bijhouden
 
@@ -103,7 +102,7 @@ alloy("sendEvent", {
 
 ### Instelling `eventType` {#event-types}
 
-In XDM ExperienceEvent-schema&#39;s is er een optionele `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Raadpleeg de XDM-documentatie voor een [lijst met alle vooraf gedefinieerde gebeurtenistypen](../../xdm/classes/experienceevent.md#eventType).
+In XDM ExperienceEvent-schema&#39;s is er een optionele `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u verzendt. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Raadpleeg de XDM-documentatie voor een [lijst met alle vooraf gedefinieerde gebeurtenistypen](../../xdm/classes/experienceevent.md#eventType).
 
 Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de tagextensie gebruikt of u kunt ze altijd zonder tags doorgeven. Ze kunnen worden doorgegeven als onderdeel van het `xdm` -optie.
 
@@ -142,7 +141,7 @@ alloy("sendEvent", {
 >
 >De `datasetId` door de `sendEvent` is vervangen. Om een dataset ID met voeten te treden, gebruik [configuratieoverschrijvingen](../../datastreams/overrides.md) in plaats daarvan.
 
-In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de `datasetId` de optie `sendEvent` opdracht:
+In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de opdracht `datasetId` de optie `sendEvent` opdracht:
 
 
 
@@ -162,8 +161,9 @@ U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie [Exp
 
 ## De sendBeacon-API gebruiken
 
-Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, genaamd `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer u `sendBeacon`De browser doet de webaanvraag in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Adobe Experience Platform vertellen [!DNL Web SDK] te gebruiken `sendBeacon`, voegt u de optie toe `"documentUnloading": true` naar de gebeurtenisopdracht.  Hier volgt een voorbeeld:
+Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, genaamd `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer u `sendBeacon`De browser doet de webaanvraag in de algemene browsercontext. Dit betekent dat de browser het baken-verzoek op de achtergrond uitvoert en de paginanavigatie niet vasthoudt. Adobe Experience Platform vertellen [!DNL Web SDK] te gebruiken `sendBeacon`, voegt u de optie toe `"documentUnloading": true` naar de gebeurtenisopdracht.
 
+**Voorbeeld**
 
 ```javascript
 alloy("sendEvent", {
@@ -214,19 +214,19 @@ alloy("sendEvent", {
 
 De `sendEvent` bevel keert een belofte terug die met een wordt opgelost `result` object. De `result` object bevat de volgende eigenschappen:
 
-**voorstellen**: De persoonlijke voorkeur van de bezoeker is ingesteld op Aanpassen. [Meer weten over voorstellen?](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**besluiten**: Deze eigenschap is vervangen. Gebruik `propositions` in plaats daarvan.
-
-**bestemmingen**: Segmenten uit Adobe Experience Platform die kunnen worden gedeeld met externe personalisatieplatforms, contentbeheersystemen, servers en andere toepassingen die op websites van klanten worden uitgevoerd. [Meer informatie over doelen.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+| Eigenschap | Beschrijving |
+|---------|----------|
+| `propositions` | De personalisatie biedt de bezoeker aan voor heeft gekwalificeerd. [Meer weten over voorstellen?](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | Deze eigenschap is vervangen. Gebruiken `propositions` in plaats daarvan. |
+| `destinations` | Publiek van Adobe Experience Platform dat kan worden gedeeld met externe personalisatieplatforms, contentbeheersystemen, en servers, en andere toepassingen die op klantenwebsites worden uitgevoerd. [Meer informatie over doelen.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` is momenteel in Bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
+>De `destinations` eigenschap is in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 
 ## Gebeurtenissen globaal wijzigen {#modifying-events-globally}
 
-Als u velden wilt toevoegen aan, verwijderen uit of wijzigen uit de gebeurtenis, kunt u een `onBeforeEventSend` callback.  Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden.  Deze callback wordt doorgegeven in een gebeurtenisobject met een `xdm` veld.  Wijzigen `content.xdm` om de gegevens te wijzigen die met de gebeurtenis worden verzonden.
+Als u velden wilt toevoegen aan, verwijderen uit of wijzigen uit de gebeurtenis, kunt u een `onBeforeEventSend` callback. Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden. Deze callback wordt doorgegeven in een gebeurtenisobject met een `xdm` veld. Als u de gegevens wilt wijzigen die met de gebeurtenis worden verzonden, wijzigt u `content.xdm`.
 
 
 ```javascript
@@ -246,8 +246,8 @@ alloy("configure", {
 
 `xdm` velden worden in deze volgorde ingesteld:
 
-1. Waarden die als opties worden doorgegeven aan de gebeurtenisopdracht `alloy("sendEvent", { xdm: ... });`
-2. Automatisch verzamelde waarden.  (Zie [Automatische informatie](../data-collection/automatic-information.md).)
+1. Waarden die als opties worden doorgegeven aan de gebeurtenisopdracht `alloy("sendEvent", { xdm: ... });`.
+2. Automatisch verzamelde waarden. Zie [Automatische informatie](../data-collection/automatic-information.md).
 3. De in de `onBeforeEventSend` callback.
 
 Enkele opmerkingen over de `onBeforeEventSend` callback:
@@ -297,4 +297,4 @@ Elke andere geretourneerde waarde dan de booleaanse waarde `false` De gebeurteni
 
 ## Mogelijke uitvoerbare fouten
 
-Bij het verzenden van een gebeurtenis kan een fout optreden als de gegevens die worden verzonden te groot zijn (meer dan 32 kB voor de volledige aanvraag). In dit geval moet u de hoeveelheid gegevens die wordt verzonden, verminderen.
+Bij het verzenden van een gebeurtenis kan een fout optreden als de gegevens die worden verzonden te groot zijn (meer dan 32 kB voor de volledige aanvraag). In dat geval moet u de hoeveelheid gegevens die wordt verzonden, verminderen.

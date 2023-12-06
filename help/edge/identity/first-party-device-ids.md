@@ -1,17 +1,17 @@
 ---
-title: Eerste partij apparaat IDs in het Web SDK van het Platform
+title: Eerste-partij apparaat IDs in Web SDK
 description: Leer hoe u FPID's (First-party device ID's) voor de Adobe Experience Platform Web SDK configureert.
-exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
 
-# Eerste partij apparaat IDs in het Web SDK van het Platform
 
-De Adobe Experience Platform Web SDK wijst [Adobe Experience Cloud-id&#39;s (ECID&#39;s)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) aan websitebezoekers door middel van cookies, om het gedrag van de gebruiker te volgen. Als u browserbeperkingen voor de levensduur van cookies wilt compenseren, kunt u ervoor kiezen om uw eigen apparaat-id&#39;s in te stellen en te beheren. Deze worden ook wel FPID&#39;s (First-Party Device ID&#39;s) genoemd.
+# Eerste-partij apparaat IDs in Web SDK
+
+De Adobe Experience Platform Web SDK wijst [Adobe Experience Cloud-id&#39;s (ECID&#39;s)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) aan websitebezoekers door koekjes te gebruiken, om gebruikersgedrag te volgen. Als u browserbeperkingen voor de levensduur van cookies wilt compenseren, kunt u ervoor kiezen om uw eigen apparaat-id&#39;s in te stellen en te beheren. Deze worden ook wel FPID&#39;s (First-Party Device ID&#39;s) genoemd.
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ Deze gids veronderstelt u vertrouwd met bent hoe de identiteitsgegevens voor het
 
 ## FPID&#39;s gebruiken
 
-FPID&#39;s volgen bezoekers door het gebruik van cookies van de eerste partij. De eerste partijkoekjes zijn het meest efficiënt wanneer zij gebruikend een server worden geplaatst die hefboomwerkingen DNS [Een record](https://datatracker.ietf.org/doc/html/rfc1035) (voor IPv4) of [AAAA-record](https://datatracker.ietf.org/doc/html/rfc3596) (voor IPv6), in tegenstelling tot een DNS CNAME- of JavaScript-code.
+FPID&#39;s volgen bezoekers met behulp van cookies van de eerste partij. De eerste partijkoekjes zijn het meest efficiënt wanneer zij gebruikend een server worden geplaatst die DNS gebruikt [Een record](https://datatracker.ietf.org/doc/html/rfc1035) (voor IPv4) of [AAAA-record](https://datatracker.ietf.org/doc/html/rfc3596) (voor IPv6), in tegenstelling tot een DNS CNAME- of JavaScript-code.
 
 >[!IMPORTANT]
 >
->Een record of AAAA-record wordt alleen ondersteund voor het instellen en bijhouden van cookies. De primaire methode voor gegevensinzameling is door DNS CNAME. Met andere woorden, FPID&#39;s worden ingesteld met een A-record of AAAA-record en worden vervolgens naar de Adobe verzonden met een CNAME.
+>`A` of `AAAA` records worden alleen ondersteund voor het instellen en bijhouden van cookies. De primaire methode voor gegevensinzameling is door DNS CNAME. Met andere woorden, FPID&#39;s worden ingesteld met een A-record of AAAA-record en worden vervolgens naar de Adobe verzonden met een CNAME.
 >
 >De [Certificaatprogramma beheerd door Adobe](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wordt ook nog gesteund voor de inzameling van eerste-partijgegevens.
 
@@ -45,7 +45,7 @@ Het genereren van een UUID zal bijna altijd resulteren in een unieke, willekeuri
 
 ## Een cookie instellen met uw eigen server
 
-Wanneer u een cookie instelt met een server die u bezit, kunt u een aantal methoden gebruiken om te voorkomen dat het cookie wordt beperkt door het browserbeleid:
+Wanneer u een cookie instelt met een server die u bezit, kunt u verschillende methoden gebruiken om te voorkomen dat het cookie wordt beperkt door het browserbeleid:
 
 * Cookies genereren met scripttalen op de server
 * Cookies instellen als reactie op een API-aanvraag die is uitgevoerd naar een subdomein of ander eindpunt op de site
@@ -64,15 +64,15 @@ Ervan uitgaande dat de ECID uiteindelijk wordt beïnvloed door een beleid voor h
 
 ### De vervaldatum van de cookie instellen
 
-Het instellen van de vervaldatum van een cookie moet zorgvuldig worden overwogen wanneer u de FPID-functionaliteit implementeert. Bij het nemen van dit besluit moet u rekening houden met de landen of regio&#39;s waarin uw organisatie samen met de wetten en het beleid in elk van die regio&#39;s werkt.
+Het instellen van de vervaldatum van een cookie moet zorgvuldig worden overwogen wanneer u de FPID-functionaliteit implementeert. Wanneer u hierover beslist, moet u rekening houden met de landen of regio&#39;s waarin uw organisatie werkt, samen met de wetten en het beleid in elk van die regio&#39;s.
 
-Als onderdeel van dit besluit wilt u mogelijk een beleid voor het instellen van cookies in het hele bedrijf toepassen of een beleid dat varieert voor gebruikers in elke landinstelling waar u werkt.
+Als onderdeel van dit besluit wilt u mogelijk een beleid voor het instellen van cookies in het hele bedrijf toepassen of een beleid dat per landinstelling verschilt.
 
 Ongeacht de instelling die u kiest voor de aanvankelijke vervaldatum van een cookie, moet u logica opnemen die de vervaldatum van de cookie verlengt telkens wanneer een nieuw bezoek aan de site plaatsvindt.
 
 ## Gevolgen van cookie-vlaggen
 
-Er zijn verschillende cookievlaggen die van invloed zijn op de manier waarop cookies in verschillende browsers worden verwerkt:
+Er zijn verschillende cookiemarkeringen die van invloed zijn op de manier waarop cookies in verschillende browsers worden verwerkt:
 
 * [&quot;HTTPOnly&quot;](#http-only)
 * [&quot;Secure`](#secure)
@@ -82,7 +82,7 @@ Er zijn verschillende cookievlaggen die van invloed zijn op de manier waarop coo
 
 Cookies die zijn ingesteld met de `HTTPOnly` Markering kan niet worden benaderd met clientscripts. Dit betekent dat als u een `HTTPOnly` markering bij het instellen van de FPID, moet u een scripttaal aan serverzijde gebruiken om de cookiewaarde voor opname in de `identityMap`.
 
-Als u ervoor kiest om het Edge-netwerk van het platform de waarde van het FPID-cookie te laten lezen, stelt u de optie `HTTPOnly` De markering zorgt ervoor dat de waarde niet toegankelijk is voor clientscripts, maar geen negatieve invloed heeft op de mogelijkheid van het Platform Edge Network om de cookie te lezen.
+Als u ervoor kiest om het Edge-netwerk van het platform de waarde van het FPID-cookie te laten lezen, stelt u de optie `HTTPOnly` De vlag zorgt ervoor dat de waarde niet toegankelijk door om het even welke cliënt-zijmanuscripten is maar geen negatieve invloed op de capaciteit van het Netwerk van de Rand van het Platform zal hebben om het koekje te lezen.
 
 >[!NOTE]
 >
@@ -90,17 +90,17 @@ Als u ervoor kiest om het Edge-netwerk van het platform de waarde van het FPID-c
 
 ### `Secure` {#secure}
 
-Cookies die zijn ingesteld met de `Secure` wordt alleen naar de server verzonden met een gecodeerde aanvraag via het HTTPS-protocol. Met deze markering kunt u ervoor zorgen dat aanvallers van &#39;man-in-the-middle&#39; de waarde van het cookie niet gemakkelijk kunnen benaderen. Het is altijd verstandig om, indien mogelijk, de `Secure` markering.
+Cookies die zijn ingesteld met de `Secure` wordt alleen naar de server verzonden met een gecodeerde aanvraag via het HTTPS-protocol. Door deze markering te gebruiken, kunt u ervoor zorgen dat aanvallers van &#39;man in the middle&#39; de waarde van het cookie niet gemakkelijk kunnen benaderen. Het is altijd verstandig om, indien mogelijk, de `Secure` markering.
 
 ### `SameSite` {#same-site}
 
-De `SameSite` Met dit kenmerk kunnen servers bepalen of cookies worden verzonden met aanvragen die verwijzen naar andere sites. Het kenmerk biedt enige bescherming tegen valsemunterij op andere locaties. Er zijn drie mogelijke waarden: `Strict`, `Lax` en `None`. Raadpleeg uw interne team om te bepalen welke instelling geschikt is voor uw organisatie.
+De `SameSite` Met dit kenmerk kunnen servers bepalen of cookies worden verzonden met aanvragen die verwijzen naar andere sites. Het kenmerk biedt enige bescherming tegen valsemunterij op andere locaties. Er zijn drie mogelijke waarden: `Strict`, `Lax`, en `None`. Raadpleeg uw interne team om te bepalen welke instelling geschikt is voor uw organisatie.
 
 Indien niet `SameSite` kenmerk is opgegeven. De standaardinstelling voor sommige browsers is nu `SameSite=Lax`.
 
 ## FPID&#39;s gebruiken in `identityMap` {#identityMap}
 
-Hieronder ziet u hoe u een FPID als een eigen FPID instelt in de `identityMap`:
+Hieronder ziet u hoe u een FPID instelt in het dialoogvenster `identityMap`:
 
 ```json
 {
@@ -194,7 +194,7 @@ De foutenreactie die door het Netwerk van Edge in dit geval is teruggekeerd zou 
 
 ## ID-hiërarchie
 
-Wanneer zowel een ECID als een FPID aanwezig zijn, krijgt de ECID prioriteit bij het identificeren van de gebruiker. Hierdoor blijft een bestaande ECID in de cookie-winkel van de browser de primaire id en loopt het risico dat het aantal bestaande bezoekers wordt beïnvloed. Voor bestaande gebruikers wordt de FPID pas de primaire identiteit als de ECID verloopt of als gevolg van een browserbeleid of handmatig proces wordt verwijderd.
+Wanneer zowel een ECID als een FPID aanwezig zijn, krijgt de ECID prioriteit bij het identificeren van de gebruiker. Dit zorgt ervoor dat wanneer een bestaande ECID aanwezig is in de browser cookie store, deze de primaire id blijft en dat het aantal bestaande bezoekers niet kan worden beïnvloed. Voor bestaande gebruikers wordt de FPID pas de primaire identiteit als de ECID verloopt of als gevolg van een browserbeleid of handmatig proces wordt verwijderd.
 
 Identiteiten krijgen prioriteit in de volgende volgorde:
 
@@ -219,9 +219,9 @@ Om dit proces te illustreren, overweeg een scenario dat een klant impliceert die
 | --- | --- |
 | Eerste bezoek | Stel dat u het FPID-cookie nog niet hebt ingesteld. De ECID in de [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) wordt gebruikt om de bezoeker te identificeren. |
 | Tweede bezoek | De implementatie van de oplossing First-Party Device ID is gestart. De bestaande ECID is nog steeds aanwezig en blijft de primaire identificator voor bezoekersidentificatie. |
-| Derde bezoek | Tussen het tweede en het derde bezoek is voldoende tijd verstreken om de ECID te verwijderen vanwege het browserbeleid. Omdat de FPID echter is ingesteld met een DNS A-record, blijft de FPID bestaan. De FPID wordt nu beschouwd als de primaire id en wordt gebruikt om de ECID te verzenden, die naar het apparaat van de eindgebruiker wordt geschreven. De gebruiker wordt nu beschouwd als een nieuwe bezoeker in de oplossingen Adobe Experience Platform en Experience Cloud. |
-| Vierde bezoek | Tussen de derde en de vierde keer is er voldoende tijd verstreken om de ECID te verwijderen vanwege het browserbeleid. Net als bij het vorige bezoek blijft de FPID te wijten aan de wijze waarop zij is ingesteld. Deze keer wordt dezelfde ECID gegenereerd als het vorige bezoek. De gebruiker wordt gezien door het Experience Platform en de oplossingen van het Experience Cloud zoals de zelfde gebruiker zoals het vorige bezoek. |
-| Vijfde bezoek | Tussen de vierde en de vijfde keer dat de gebruiker het programma bezoekt, heeft de eindgebruiker alle cookies in zijn browser gewist. Er wordt een nieuwe FPID gegenereerd die wordt gebruikt om het maken van een nieuwe ECID te stimuleren. De gebruiker wordt nu beschouwd als een nieuwe bezoeker in de oplossingen Adobe Experience Platform en Experience Cloud. |
+| Derde bezoek | Tussen het tweede en derde bezoek is er voldoende tijd verstreken om de ECID te verwijderen vanwege het browserbeleid. Omdat de FPID echter is ingesteld met een DNS A-record, blijft de FPID bestaan. De FPID wordt nu beschouwd als de primaire id en wordt gebruikt om de ECID te verzenden, die naar het apparaat van de eindgebruiker wordt geschreven. De gebruiker wordt nu beschouwd als een nieuwe bezoeker in de oplossingen Adobe Experience Platform en Experience Cloud. |
+| Vierde bezoek | Tussen de derde en vierde keer is er voldoende tijd verstreken om de ECID te verwijderen vanwege het browserbeleid. Net als bij het vorige bezoek blijft de FPID te wijten aan de wijze waarop zij is ingesteld. Deze keer wordt dezelfde ECID gegenereerd als het vorige bezoek. De gebruiker wordt gezien door het Experience Platform en de oplossingen van het Experience Cloud zoals de zelfde gebruiker zoals het vorige bezoek. |
+| Vijfde bezoek | Tussen de vierde en de vijfde keer dat het programma wordt bezocht, heeft de eindgebruiker alle cookies in de browser gewist. Er wordt een nieuwe FPID gegenereerd die wordt gebruikt om het maken van een nieuwe ECID te stimuleren. De gebruiker wordt nu beschouwd als een nieuwe bezoeker in de oplossingen Adobe Experience Platform en Experience Cloud. |
 
 {style="table-layout:auto"}
 
@@ -235,11 +235,11 @@ Het begrip zaaien is uniek omdat de FPID die aan Adobe Experience Cloud wordt do
 
 ### Wanneer moet de apparaat-id van de eerste partij worden gegenereerd?
 
-Om potentiële bezoekersinflatie te verminderen, zou FPID moeten worden geproduceerd alvorens uw eerste verzoek te maken gebruikend het Web SDK van het Platform. Als u dit echter niet kunt doen, wordt er nog steeds een ECID gegenereerd voor die gebruiker en wordt deze gebruikt als primaire id. De gegenereerde FPID wordt pas de primaire id als de ECID niet meer aanwezig is.
+Om potentiële bezoekersinflatie te verminderen, zou FPID moeten worden geproduceerd alvorens uw eerste verzoek te maken gebruikend SDK van het Web. Als u dit echter niet kunt doen, wordt er nog steeds een ECID gegenereerd voor die gebruiker en wordt deze gebruikt als primaire id. De gegenereerde FPID wordt pas de primaire id als de ECID niet meer aanwezig is.
 
 ### Welke methodes van de gegevensinzameling steunen eerste-partij apparaat IDs?
 
-Momenteel steunt slechts het Web SDK van het Platform FPIDs.
+Momenteel steunt slechts Web SDK FPIDs.
 
 ### Worden FPIDs opgeslagen op om het even welk platform of Experience Cloud oplossingen?
 
