@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
+source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1683'
 ht-degree: 0%
 
 ---
@@ -136,11 +136,11 @@ Gebruik de controlevakjes links van de datasetnamen om de datasets te selecteren
 
 In de **[!UICONTROL Scheduling]** stap, kunt u een begindatum en een uitvoerkadentie voor uw datasetuitvoer plaatsen.
 
-De **[!UICONTROL Export incremental files]** wordt automatisch geselecteerd. Dit leidt tot de uitvoer waar het eerste dossier een volledige momentopname van de dataset is en de verdere dossiers zijn stijgende toevoegingen aan de dataset sinds de vorige uitvoer.
+De **[!UICONTROL Export incremental files]** wordt automatisch geselecteerd. Dit brengt de uitvoer van één of veelvoudige dossiers teweeg die een volledige momentopname van de dataset vertegenwoordigen. De volgende dossiers zijn stijgende toevoegingen aan de dataset sinds de vorige uitvoer.
 
 >[!IMPORTANT]
 >
->Het eerste geëxporteerde incrementele bestand bevat alle bestaande gegevens in de gegevensset, die als backfill werken.
+>De eerste incrementele bestandsuitvoer bevat alle bestaande gegevens in de dataset, die als backfill werken. Het exporteren kan een of meerdere bestanden bevatten.
 
 ![Workflow voor het exporteren van gegevenssets met de planningsstap.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -167,7 +167,7 @@ Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selec
 
 ## Controleren of gegevensset is geëxporteerd {#verify}
 
-Bij het exporteren van gegevenssets maakt Experience Platform een `.json` of `.parquet` in de opslaglocatie die u hebt opgegeven. Verwacht dat een nieuw bestand op uw opslaglocatie wordt gedeponeerd volgens het exportschema dat u hebt opgegeven.
+Bij het exporteren van gegevenssets maakt Experience Platform een of meerdere `.json` of `.parquet` bestanden op de opslaglocatie die u hebt opgegeven. Nieuwe bestanden worden naar verwachting op uw opslaglocatie gedeponeerd volgens het exportschema dat u hebt opgegeven.
 
 Experience Platform leidt tot een omslagstructuur in de opslagplaats u specificeerde, waar het de uitgevoerde datasetdossiers bewaart. Voor elke exporttijd wordt een nieuwe map gemaakt volgens het onderstaande patroon:
 
