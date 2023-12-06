@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een object in de API verwijderen
 description: U kunt een object Catalog verwijderen door de id ervan op te geven in het pad van een DELETE-aanvraag.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: d88336d314e767a068ef6524161baeb642a58433
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te verwijderen object. Geldige objecten zijn: <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te verwijderen object. Geldige objecten zijn: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**

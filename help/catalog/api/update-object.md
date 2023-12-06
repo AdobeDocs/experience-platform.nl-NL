@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Een catalogusobject bijwerken
 description: U kunt een deel van een object Catalog bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag. Dit document behandelt het gebruik van velden en het gebruik van JSON Patch-notatie voor het uitvoeren van PATCH-bewerkingen op Catalog-objecten.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 296a988a67871933723ad0474c113cb93fdbf255
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 1%
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
@@ -69,11 +69,7 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgew
 
 In het volgende voorbeeld wordt getoond hoe u een object kunt bijwerken met JSON Patch, zoals in [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
-<!-- (Include once API fundamentals guide is published) 
-
-For more information on JSON Patch syntax, see the [API fundamentals guide](). 
-
--->
+Zie voor meer informatie over de JSON Patch-syntaxis de [Handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md#json-patch).
 
 **API-indeling**
 
@@ -83,7 +79,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te bijwerken object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**

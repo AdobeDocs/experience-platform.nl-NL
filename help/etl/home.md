@@ -2,11 +2,11 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;ETL;etl;etl integraties;ETL-integratie
 solution: Experience Platform
 title: Ontwikkeling van ETL-integratie voor Adobe Experience Platform
-description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
+description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '4081'
+source-wordcount: '3978'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krac
 
 Deze handleiding bevat ook voorbeeld-API-aanroepen die moeten worden gebruikt bij het ontwerpen van een ETL-connector, met koppelingen naar documentatie die elke aanroep omschrijft [!DNL Experience Platform] de dienst, en het gebruik van zijn API, meer in detail.
 
-Een voorbeeldintegratie is beschikbaar op [!DNL GitHub] via de [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) onder de [!DNL Apache] Licentieversie 2.0.
+Er is een voorbeeldintegratie beschikbaar op [!DNL GitHub] via de [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) onder de [!DNL Apache] Licentieversie 2.0.
 
 ## Workflow
 
@@ -58,7 +58,7 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
+- Toestemming: houder `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -82,17 +82,17 @@ In UI, leidt de gebruiker tot de outputdataset door een datasetschema te selecte
 
 In ETL zal de gebruiker beginnen hun toewijzingstransformaties te ontwerpen nadat de aangewezen verbinding (gebruikend hun geloofsbrieven) wordt gevormd. Er wordt aangenomen dat het ETL-gereedschap al [!DNL Experience Platform] geïnstalleerde connectors (proces niet gedefinieerd in deze integratiegids).
 
-Er zijn in het dialoogvenster [ETL-workflow](./workflow.md). Hoewel de ETL-gereedschappen verschillende indelingen kunnen hebben, zijn de meeste toepassingen beschikbaar voor vergelijkbare functies.
+Mockups voor een voorbeeld van een ETL-tool en -workflow zijn beschikbaar in de [ETL-workflow](./workflow.md). Hoewel de ETL-gereedschappen verschillende indelingen kunnen hebben, zijn de meeste toepassingen beschikbaar voor vergelijkbare functies.
 
 >[!NOTE]
 >
->De ETL-aansluiting moet een tijdstempelfilter opgeven waarmee de datum voor het invoeren van gegevens en verschuiving (d.w.z. het venster waarvoor gegevens moeten worden gelezen) wordt aangegeven. Het ETL-hulpmiddel moet het gebruik van deze twee parameters in deze of een andere relevante interface ondersteunen. In Adobe Experience Platform worden deze parameters toegewezen aan beschikbare datums (indien aanwezig) of vastgelegde datums in het batchobject van de gegevensset.
+>De ETL-aansluiting moet een tijdstempelfilter opgeven waarmee de datum voor het invoeren van gegevens en verschuiving (d.w.z. Het venster waarvoor gegevens moeten worden gelezen). Het ETL-hulpmiddel moet het gebruik van deze twee parameters in deze of een andere relevante interface ondersteunen. In Adobe Experience Platform worden deze parameters toegewezen aan beschikbare datums (indien aanwezig) of vastgelegde datums in het batchobject van de gegevensset.
 
 ### Lijst met gegevenssets weergeven
 
 Gebruikend de bron van gegevens voor afbeelding, kan een lijst van alle beschikbare datasets worden gehaald gebruikend [[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-U kunt één API-verzoek indienen om alle beschikbare gegevenssets te bekijken (bijvoorbeeld `GET /dataSets`), met best practices om queryparameters op te nemen die de grootte van de reactie beperken.
+U kunt één API-verzoek indienen om alle beschikbare gegevenssets weer te geven (bijvoorbeeld `GET /dataSets`), met best practices om queryparameters op te nemen die de grootte van de reactie beperken.
 
 In gevallen waarin volledige gegevenssetinformatie wordt gevraagd, kan de antwoordlading voorbij 3 GB in grootte bereiken, die algemene prestaties kan vertragen. Daarom zal het gebruiken van vraagparameters om slechts de informatie te filtreren nodig maken [!DNL Catalog] efficiëntere zoekopdrachten.
 
@@ -168,7 +168,7 @@ Het &quot;schemaRef&quot;bezit van een dataset bevat URI die het XDM schema van 
 
 Het XDM-schema is het schema dat u gebruikt wanneer u de gebruiker een lijst moet geven met alle beschikbare velden waarnaar kan worden geschreven.
 
-De eerste &quot;schemaRef.id&quot;-waarde in het vorige reactieobject (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is een URI die verwijst naar een specifiek XDM-schema in het dialoogvenster [!DNL Schema Registry]. Het schema kan worden opgehaald door een opzoekverzoek (GET) in te dienen bij de [!DNL Schema Registry] API.
+De eerste &quot;schemaRef.id&quot;-waarde in het vorige reactieobject (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is een URI die verwijst naar een specifiek XDM-schema in het dialoogvenster [!DNL Schema Registry]. Het schema kan worden teruggewonnen door een raadpleging (GET) verzoek aan het [!DNL Schema Registry] API.
 
 >[!NOTE]
 >
@@ -194,7 +194,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
 ```
 
-De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag wordt verzonden. Voor opzoeken is ook een `version` worden opgenomen in de koptekst Accepteren. In de volgende tabel worden de beschikbare kopteksten voor zoekopdrachten geaccepteerd:
+De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag wordt verzonden. Voor opzoekverzoeken is ook een `version` worden opgenomen in de koptekst Accepteren. In de volgende tabel worden de beschikbare kopteksten voor zoekopdrachten geaccepteerd:
 
 | Accepteren | Beschrijving |
 | ------ | ----------- |
@@ -211,13 +211,13 @@ De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag 
 
 **Antwoord**
 
-Het JSON-schema dat wordt geretourneerd, beschrijft de structuur en veldniveaugegevens (&quot;type&quot;, &quot;format&quot;, &quot;minimum&quot;, &quot;maximum&quot;, enz.) van de gegevens, met serienummering gecodeerd als JSON. Als het gebruiken van een rangschikkingsformaat buiten JSON voor opname (zoals Parquet of Scala), [Handleiding voor het schemaregister](../xdm/tutorials/create-schema-api.md) bevat een tabel met het gewenste JSON-type (&quot;meta:xdmType&quot;) en de bijbehorende representatie in andere indelingen.
+Het JSON-schema dat wordt geretourneerd, beschrijft de structuur en veldniveaugegevens (&quot;type&quot;, &quot;format&quot;, &quot;minimum&quot;, &quot;maximum&quot;, enz.) van de gegevens, geserialiseerd als JSON. Als het gebruiken van een rangschikkingsformaat buiten JSON voor opname (zoals Parquet of Scala), [Handleiding voor het schemaregister](../xdm/tutorials/create-schema-api.md) bevat een tabel met het gewenste JSON-type (&quot;meta:xdmType&quot;) en de bijbehorende representatie in andere indelingen.
 
 Samen met deze lijst, [!DNL Schema Registry] De Gids van de ontwikkelaar bevat diepgaande voorbeelden van alle mogelijke vraag die kan worden gemaakt gebruikend [!DNL Schema Registry] API.
 
-### De eigenschap &quot;schema&quot; van de gegevensset (GEDEPRECEERD - EOL 2019-05-30)
+### De eigenschap &quot;schema&quot; van de gegevensset (VEROUDERD - EOL 2019-05-30)
 
-Datasets kunnen een &quot;schema&quot;bezit bevatten dat nu verouderd is en tijdelijk beschikbaar voor achterwaartse verenigbaarheid blijft. Bijvoorbeeld, een lijst (GET) verzoek gelijkend op eerder gemaakt, waar &quot;schema&quot;werd vervangen &quot;schemaRef&quot;in `properties` De vraagparameter, zou het volgende kunnen terugkeren:
+Datasets kunnen een eigenschap &quot;schema&quot; bevatten die nu is vervangen en tijdelijk beschikbaar blijft voor achterwaartse compatibiliteit. Bijvoorbeeld een lijst (GET) verzoek gelijkend op eerder gemaakt, waar &quot;schema&quot;werd vervangen &quot;schema&quot;in `properties` De vraagparameter, zou het volgende kunnen terugkeren:
 
 ```json
 {
@@ -257,13 +257,13 @@ Vergelijkbaar met de stappen voor [gegevenssetschema weergeven](#view-dataset-sc
 
 >[!NOTE]
 >
->Wanneer het &quot;schema&quot;gebied leeg is of helemaal ontbreekt, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en gebruiken [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) zoals getoond in vorige stappen aan [een gegevenssetschema weergeven](#view-dataset-schema).
+>Wanneer het &quot;schema&quot;gebied leeg is of volledig afwezig, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en gebruiken [Schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) zoals getoond in vorige stappen aan [een gegevenssetschema weergeven](#view-dataset-schema).
 
 ### De eigenschap &quot;observableSchema&quot;
 
 De eigenschap &quot;observableSchema&quot; van een dataset heeft een JSON-structuur die overeenkomt met die van het XDM-schema JSON. Het &quot;observableSchema&quot; bevat de velden die aanwezig waren in de binnenkomende invoerbestanden. Gegevens schrijven naar [!DNL Experience Platform], is een gebruiker niet vereist om elk gebied van het doelschema te gebruiken. In plaats daarvan moeten ze alleen die velden leveren die worden gebruikt.
 
-Het waarneembare schema is het schema dat u zou gebruiken als u de gegevens leest of een lijst van gebieden presenteert die beschikbaar zijn om van te lezen/in kaart te brengen.
+Het waarneembare schema is het schema dat u zou gebruiken als u de gegevens leest of een lijst presenteert met velden die beschikbaar zijn om van te lezen/in kaart te brengen.
 
 ```json
 {
@@ -286,7 +286,7 @@ Het waarneembare schema is het schema dat u zou gebruiken als u de gegevens lees
 
 ### Gegevens voorvertonen
 
-De ETL-toepassing kan een mogelijkheid bieden om gegevens voor te vertonen ([&quot;Figuur 8&quot;in het ETL- Werkschema](./workflow.md)). De API voor gegevenstoegang biedt verschillende opties voor het weergeven van voorvertoningen van gegevens.
+De ETL-toepassing kan een mogelijkheid bieden om gegevens voor te vertonen ([&quot;Figuur 8&quot;in het ETL- Werkschema](./workflow.md)). De API voor gegevenstoegang biedt verschillende opties voor het voorvertonen van gegevens.
 
 Aanvullende informatie, waaronder stapsgewijze instructies voor het voorvertonen van gegevens met behulp van de API voor gegevenstoegang, vindt u in de [zelfstudie over gegevenstoegang](../data-access/tutorials/dataset-data.md).
 
@@ -319,7 +319,7 @@ De reactie zal één dataset omvatten (`limit=1`) met de eigenschap &quot;files&
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
@@ -394,7 +394,7 @@ De reactie omvat identiteitskaart van het Dossier van de Dataset als top-level b
 
 De id&#39;s van het gegevenssetbestand die in de vorige reactie zijn geretourneerd, kunnen worden gebruikt in een GET-verzoek om meer bestandsgegevens op te halen via de [!DNL Data Access] API.
 
-De [overzicht van gegevenstoegang](../data-access/home.md) bevat informatie over het gebruik van de [!DNL Data Access] API.
+De [gegevenstoegangsoverzicht](../data-access/home.md) bevat informatie over het gebruik van de [!DNL Data Access] API.
 
 **API-indeling**
 
@@ -450,7 +450,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 Het antwoord op het bovenstaande verzoek bevat een voorvertoning van de inhoud van het bestand.
 
-Meer informatie over de [!DNL Data Access] API, met inbegrip van gedetailleerde verzoeken en reacties, is beschikbaar in [overzicht van gegevenstoegang](../data-access/home.md).
+Meer informatie over de [!DNL Data Access] API, met inbegrip van gedetailleerde verzoeken en reacties, is beschikbaar in [gegevenstoegangsoverzicht](../data-access/home.md).
 
 ### &quot;fileDescription&quot; ophalen uit gegevensset
 
@@ -491,7 +491,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Gegevens worden geschreven naar [!DNL Experience Platform] met de [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).  Het schrijven van gegevens is een asynchroon proces. Wanneer gegevens naar Adobe Experience Platform worden geschreven, wordt alleen een batch gemaakt en gemarkeerd als een succes nadat de gegevens volledig zijn geschreven.
+Gegevens worden geschreven naar [!DNL Experience Platform] met de [Batchverwerking-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).  Gegevens schrijven is een asynchroon proces. Wanneer gegevens naar Adobe Experience Platform worden geschreven, wordt alleen een batch gemaakt en gemarkeerd als een succes nadat de gegevens volledig zijn geschreven.
 
 Gegevens in [!DNL Experience Platform] moet worden geschreven in de vorm van Parquet-bestanden.
 
@@ -518,7 +518,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Details over het filteren van batches vindt u in het gedeelte [Zelfstudie over gegevenstoegang](../data-access/tutorials/dataset-data.md).
+Details over het filteren van batches vindt u in de [Zelfstudie over gegevenstoegang](../data-access/tutorials/dataset-data.md).
 
 ### Bestanden ophalen uit een batch
 
@@ -536,7 +536,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### Bestanden openen met bestands-id
 
-De unieke id van een bestand gebruiken (`{FILE_ID`), de [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) U kunt de specifieke details van het bestand openen, zoals de naam, grootte in bytes en een koppeling om het bestand te downloaden.
+De unieke id van een bestand gebruiken (`{FILE_ID`), [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) U kunt de specifieke details van het bestand openen, zoals de naam, grootte in bytes en een koppeling om het bestand te downloaden.
 
 **Verzoek**
 
@@ -548,7 +548,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key: {API_KEY}"
 ```
 
-De reactie kan naar één bestand of naar een map verwijzen. Nadere gegevens over de verschillende onderdelen zijn te vinden in het [[!DNL Data Access] zelfstudie](../data-access/tutorials/dataset-data.md).
+De reactie kan naar één bestand of naar een map verwijzen. De details over elk kunnen in worden gevonden [[!DNL Data Access] zelfstudie](../data-access/tutorials/dataset-data.md).
 
 ### Bestandsinhoud openen
 
@@ -600,7 +600,7 @@ Meer informatie over het maken van een batch, inclusief voorbeeldaanvragen en re
 
 ### Schrijven naar gegevensset
 
-Nadat een nieuwe partij met succes tot stand is gebracht, kunnen de dossiers dan aan een specifieke dataset worden geupload. U kunt meerdere bestanden in een batch plaatsen totdat deze worden gepromoot. Bestanden kunnen worden geüpload met de API voor het uploaden van kleine bestanden. als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden, kunt u de API voor het uploaden van grote bestanden gebruiken. Meer informatie over het gebruik van zowel het uploaden van grote als kleine bestanden vindt u in het gedeelte [Overzicht van inname in batch](../ingestion/batch-ingestion/overview.md).
+Nadat een nieuwe partij met succes tot stand is gebracht, kunnen de dossiers dan aan een specifieke dataset worden geupload. U kunt meerdere bestanden in een batch plaatsen totdat deze worden gepromoot. Bestanden kunnen worden geüpload met de API voor het uploaden van kleine bestanden. Als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden, kunt u de API voor het uploaden van grote bestanden gebruiken. Meer informatie over het gebruik van zowel het uploaden van grote als kleine bestanden vindt u in het gedeelte [Overzicht van inname in batch](../ingestion/batch-ingestion/overview.md).
 
 **Verzoek**
 
@@ -620,7 +620,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Door dit te doen, [!DNL Catalog] Invoer &quot;DataSetFile&quot; wordt gemaakt voor de voltooide bestanden en is gekoppeld aan de gegenereerde batch. De [!DNL Catalog] batch wordt vervolgens gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd om de beschikbare gegevens in te voeren.
 
-De gegevens worden eerst op de halteplaats op Adobe Experience Platform geland en vervolgens na catalogisering en validatie naar de uiteindelijke locatie verplaatst. Batches worden gemarkeerd als succesvol zodra alle gegevens naar een vaste locatie worden verplaatst.
+De gegevens worden eerst op de halteplaats op Adobe Experience Platform geland en vervolgens na catalogisering en validatie naar de uiteindelijke locatie verplaatst. De partijen zullen als succesvol worden gemerkt zodra alle gegevens naar een permanente plaats worden verplaatst.
 
 **Verzoek**
 
@@ -674,7 +674,7 @@ Nieuwe taken kunnen worden gepland als de vorige batch-&quot;status&quot;-waarde
 
 ### Laatste batchstatus ophalen op id
 
-Een individuele partijstatus kan door worden teruggewonnen [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) door een verzoek tot GET in te dienen met behulp van de `{BATCH_ID}`. De `{BATCH_ID}` gebruikt zou het zelfde zijn als identiteitskaart terugkwam toen de partij werd gecreeerd.
+Een individuele partijstatus kan door worden teruggewonnen [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) door een verzoek tot GET in te dienen met de `{BATCH_ID}`. De `{BATCH_ID}` gebruikt zou het zelfde zijn als identiteitskaart terugkwam toen de partij werd gecreeerd.
 
 **Verzoek**
 

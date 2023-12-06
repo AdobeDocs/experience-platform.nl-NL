@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een catalogusobject opzoeken
 description: Als u de unieke id voor een specifiek catalogusobject kent, kunt u een verzoek uitvoeren om de details van dat object weer te geven.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 0331b6bbd22255cab92c93070dda1ffaed5bbbcb
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt ophalen. |
 
 **Verzoek**
@@ -58,7 +58,7 @@ Een succesvol antwoord keert de gespecificeerde dataset met slechts gevraagde te
                 "sample_dataset"
             ]
         },
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     }
 }
 ```

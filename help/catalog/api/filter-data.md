@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Catalogusgegevens filteren met zoekopdrachtparameters
 description: De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
+source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2117'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{LIMIT}` | Een geheel getal dat aangeeft hoeveel objecten moeten worden geretourneerd, van 1 tot en met 100. |
 
 **Verzoek**
@@ -60,12 +60,12 @@ Een succesvolle reactie keert een lijst van datasets terug, die tot het aantal w
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
 | `{OBJECT_ID}` | De unieke id van een specifieke [!DNL Catalog] object dat wordt opgehaald. |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OFFSET}` | Een geheel getal dat het aantal objecten aangeeft waarmee de reactie moet worden verschoven. |
 
 **Verzoek**
@@ -393,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | De naam van een eigenschap waarop de resultaten moeten worden gesorteerd. |
 
 **Verzoek**
@@ -474,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | De naam van de eigenschap waarop u wilt filteren. |
 | `{VALUE}` | Een eigenschapwaarde die bepaalt welke resultaten moeten worden opgenomen (of uitgesloten, afhankelijk van de query). |
 
@@ -546,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] op te halen object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | Een voorwaardelijke expressie die aangeeft voor welke eigenschap query moet worden uitgevoerd en hoe de waarde ervan moet worden geëvalueerd. Hieronder vindt u voorbeelden. |
 
 De waarde van `property` parameter ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:

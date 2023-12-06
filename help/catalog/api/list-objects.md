@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Catalogusobjecten weergeven
 description: U kunt een lijst van alle beschikbare voorwerpen van een specifiek type door één enkele API vraag terugwinnen, met beste praktijken die filters omvatten die de grootte van de reactie beperken.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 409d052c119814a1cf6b79ff4448d1100b18e199
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
@@ -24,7 +24,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te vermelden object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type van [!DNL Catalog] te vermelden object. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. Meerdere parameters worden gescheiden door ampersands (`&`). Zie de handleiding op [catalogusgegevens filteren](filter-data.md) voor meer informatie . |
 
 **Verzoek**
@@ -53,24 +53,24 @@ Een geslaagde reactie retourneert een lijst met [!DNL Catalog] objecten in de vo
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
     },
     "5bda3a4228babc0000126377": {
         "name": "Sample Dataset 4",
-        "files": "@/dataSets/5bda3a4228babc0000126377/views/5bda3a4228babc0000126378/files"
+        "files": "@/dataSetFiles?dataSetId=5bda3a4228babc0000126377"
     },
     "5bde21511dd27b0000d24e95": {
         "name": "Sample Dataset 5",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bde21511dd27b0000d24e95/views/5bde21511dd27b0000d24e96/files"
+        "files": "@/dataSetFiles?dataSetId=5bde21511dd27b0000d24e95"
     }
 }
 ```
