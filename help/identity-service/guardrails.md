@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1507'
 ht-degree: 0%
 
 ---
@@ -37,14 +37,18 @@ In de volgende tabel worden de statische limieten weergegeven die worden toegepa
 | Aantal aangepaste naamruimten | Geen | Het aantal aangepaste naamruimten dat u kunt maken, is niet beperkt. |
 | Aantal tekens voor een naamruimte, weergavenaam of identiteitssymbool | Geen | Er zijn geen limieten aan het aantal tekens van een naamruimte, weergavenaam of identiteitssymbool. |
 
+{style="table-layout:auto"}
+
 ### Validatie van identiteitswaarden
 
 In de volgende tabel worden de bestaande regels beschreven die u moet volgen om ervoor te zorgen dat uw identiteitswaarde correct wordt gevalideerd.
 
 | Naamruimte | Validatieregel | Systeemgedrag wanneer regel wordt overtreden |
 | --- | --- | --- |
-| ECID | <ul><li>De identiteitswaarde van een ECID moet precies 38 tekens zijn.</li><li>De identiteitswaarde van een ECID mag alleen uit getallen bestaan.</li><li>Identiteitswaarden mogen niet &#39;null&#39;, &#39;anoniem&#39;, &#39;invalid&#39; of een lege tekenreeks zijn (bijvoorbeeld: &#39;&quot;, &#39;&#39;, &#39;&#39;).</li></ul> | <ul><li>Als de identiteitswaarde van ECID niet precies 38 tekens is, wordt de record overgeslagen.</li><li>Als de identiteitswaarde van ECID niet-numerieke tekens bevat, wordt de record overgeslagen.</li><li>De identiteit wordt geblokkeerd.</li></ul> |
-| Niet-ECID | De identiteitswaarde mag niet langer zijn dan 1024 tekens. | Als de identiteitswaarde meer dan 1024 tekens bevat, wordt de record overgeslagen. |
+| ECID | <ul><li>De identiteitswaarde van een ECID moet precies 38 tekens zijn.</li><li>De identiteitswaarde van een ECID mag alleen uit getallen bestaan.</li></ul> | <ul><li>Als de identiteitswaarde van ECID niet precies 38 tekens is, wordt de record overgeslagen.</li><li>Als de identiteitswaarde van ECID niet-numerieke tekens bevat, wordt de record overgeslagen.</li></ul> |
+| Niet-ECID | <ul><li>De identiteitswaarde mag niet langer zijn dan 1024 tekens.</li><li>Identiteitswaarden mogen niet &#39;null&#39;, &#39;anoniem&#39;, &#39;invalid&#39; of een lege tekenreeks zijn (bijvoorbeeld: &#39;&quot;, &#39;&#39;, &#39;&#39;).</li></ul> | <ul><li>Als de identiteitswaarde meer dan 1024 tekens bevat, wordt de record overgeslagen.</li><li>De identiteit wordt geblokkeerd.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### Naamnaamruimte-opname
 
@@ -105,7 +109,7 @@ Als u uw voor authentiek verklaarde gebeurtenissen tegen identiteitskaart van CR
 
 *Opmerkingen bij het diagram:*
 
-* `t` = timestamp.
+* `t` = tijdstempel.
 * De waarde van een tijdstempel komt overeen met de frequentie van een bepaalde identiteit. Bijvoorbeeld: `t1` de eerste gekoppelde identiteit (oudste) vertegenwoordigt en `t51` zou de nieuwste gekoppelde identiteit vertegenwoordigen.
 
 In dit voorbeeld verwijdert Identiteitsservice eerst de bestaande identiteit met de oudste tijdstempel voordat de grafiek aan de linkerkant kan worden bijgewerkt. Nochtans, omdat de oudste identiteit een apparatenidentiteitskaart is, slaat de Dienst van de Identiteit die identiteit over tot het aan namespace met een type krijgt dat hoger op de schrappingspriorlijst is, die in dit geval is `ecid-3`. Zodra de oudste identiteit met een hoger type van schrappingsprioriteit wordt verwijderd, wordt de grafiek dan bijgewerkt met een nieuwe verbinding, `ecid-51`.
