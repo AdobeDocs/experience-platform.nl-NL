@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;activering;problemen oplossen;instructies;richtlijnen;beperken
-title: Standaardinstructies voor activeringsgegevens
+title: Standaardinstructies voor gegevensactivering
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1657'
 ht-degree: 1%
 
 ---
 
-# Grails voor activeringsgegevens
+# Grails voor gegevensactivering
 
 Deze pagina bevat standaardgebruiks- en tarieflimieten voor activeringsgedrag. Bij het bekijken van de volgende instructies wordt aangenomen dat u de juiste instructies hebt [verbonden met bestemmingen](/help/destinations/ui/connect-destination.md).
 

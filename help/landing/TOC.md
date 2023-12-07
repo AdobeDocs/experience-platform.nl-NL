@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: a3ba26fd6ee7b473d74cc3cf3d142e0f3ff069bb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 19%
+source-wordcount: '276'
+ht-degree: 18%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 19%
    * [AI-assistent](ai-assistant.md)
 * Experience Platform-API&#39;s {#platform-apis}
    * [Aan de slag met platform-API&#39;s](api-guide.md)
-   * [ Platform-API&#39;s verifiëren en openen](api-authentication.md)
+   * [Platform-API&#39;s verifiëren en openen](api-authentication.md)
    * [API-basisbeginselen](api-fundamentals.md)
    * [Postman gebruiken met platform-API&#39;s](postman.md)
    * [API-naslagdocumenten](https://www.adobe.com/go/platform-api-reference-en)
@@ -74,6 +74,8 @@ ht-degree: 19%
 * Licentiegebruik en guardrails {#license}
    * [Aanbevolen best practices voor licentierechten voor gegevensbeheer](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Adobe Journey Optimizer guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Real-Time CDP guardrails](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2-gegevensmeermigratie](adls2-gen2-migration.md)
 * [Woordenlijst](glossary.md)

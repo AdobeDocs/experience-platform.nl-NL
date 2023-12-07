@@ -2,16 +2,16 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2022
 description: De release van augustus 2022 bevat opmerkingen voor Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
+source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '1952'
 ht-degree: 3%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 24 augustus 2022**
+**Releasedatum: donderdag 24 augustus 2022**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
@@ -100,7 +100,7 @@ Meer informatie over [!DNL Data Prep], zie de [[!DNL Data Prep] overzicht](../..
 
 **Nieuwe bestemmingen**
 
-| Bestemming | Beschrijving |
+| Doel | Beschrijving |
 | ----------- | ----------- |
 | [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) is een Sales Execution Platform met de meeste B2B-gegevens over koper-verkoper in de wereld en aanzienlijke investeringen in merkgebonden AI-technologieën om verkoopgegevens om te zetten in intelligentie. [!DNL Outreach] helpt organisaties hun verkoopbetrokkenheid te automatiseren en op inkomstenintelligentie te handelen om hun efficiency, voorspelbaarheid, en groei te verbeteren. |
 
@@ -116,7 +116,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Een op record gebaseerde klasse voor het maken van opzoekschema&#39;s voor Adobe Journey Optimizer. |
+| Klasse | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Een op record gebaseerde klasse voor het maken van opzoekschema&#39;s voor Adobe Journey Optimizer. |
 | Veldgroep | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Een omvattende veldgroep die verwijst naar alle objectspecifieke veldgroepen op een lager niveau voor Adobe Workfront. |
 
 {style="table-layout:auto"}
