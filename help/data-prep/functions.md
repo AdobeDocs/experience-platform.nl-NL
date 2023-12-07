@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
 workflow-type: tm+mt
-source-wordcount: '5221'
-ht-degree: 2%
+source-wordcount: '5080'
+ht-degree: 1%
 
 ---
 
@@ -43,7 +43,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Voegt de opgegeven tekenreeksen samen. | <ul><li>STRING: De tekenreeksen die worden samengevoegd.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | ontploffen | Splitst de tekenreeks op basis van een regex en retourneert een array met onderdelen. Kan optioneel regex opnemen om de tekenreeks te splitsen. Standaard wordt de splitsing omgezet in &quot;,&quot;. De volgende scheidingstekens **behoefte** te ontsnappen `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` Als u meerdere tekens opneemt als scheidingsteken, wordt het scheidingsteken behandeld als een scheidingsteken voor meerdere tekens. | <ul><li>STRING: **Vereist** De tekenreeks die moet worden gesplitst.</li><li>REGEX: *Optioneel* De reguliere expressie die kan worden gebruikt om de tekenreeks te splitsen.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hallo, daar!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
@@ -52,7 +52,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | substr | Retourneert een subtekenreeks van een bepaalde lengte. | <ul><li>INVOER: **Vereist** De invoertekenreeks.</li><li>START_INDEX: **Vereist** De index van de invoertekenreeks waar de subtekenreeks begint.</li><li>LENGTE: **Vereist** De lengte van de subtekenreeks.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;This is a substring test&quot;, 7, 8) | &quot; a subst&quot; |
 | lager /<br>lcase | Zet een tekenreeks om in kleine letters. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt omgezet in kleine letters.</li></ul> | lower (INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hallo&quot; |
 | upper /<br>kauwen | Zet een tekenreeks om in hoofdletters. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt omgezet in hoofdletters.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | HELLO |
-| split | Splitst een invoertekenreeks op een scheidingsteken. Het volgende scheidingsteken **behoeften** te ontsnappen `\`: `\`. Als u meerdere scheidingstekens opneemt, wordt de tekenreeks gesplitst **alle** van de scheidingstekens in de tekenreeks. | <ul><li>INVOER: **Vereist** De invoertekenreeks die wordt gesplitst.</li><li>SCHEIDINGSTEKEN: **Vereist** De tekenreeks die wordt gebruikt om de invoer te splitsen.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
+| split | Splitst een invoertekenreeks op een scheidingsteken. Het volgende scheidingsteken **behoeften** te ontsnappen `\`: `\`. Als u meerdere scheidingstekens opneemt, wordt de tekenreeks gesplitst **alle** van de scheidingstekens in de tekenreeks. **Opmerking:** Deze functie retourneert alleen indexen die niet &#39;null&#39; zijn van de tekenreeks, ongeacht de aanwezigheid van het scheidingsteken. Wanneer alle indexen, inclusief null, in de resulterende array zijn vereist, gebruikt u in plaats daarvan de functie &quot;explode&quot;. | <ul><li>INVOER: **Vereist** De invoertekenreeks die wordt gesplitst.</li><li>SCHEIDINGSTEKEN: **Vereist** De tekenreeks die wordt gebruikt om de invoer te splitsen.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | join | Hiermee wordt een lijst met objecten samengevoegd met het scheidingsteken. | <ul><li>SCHEIDINGSTEKEN: **Vereist** De tekenreeks die wordt gebruikt om de objecten te verbinden.</li><li>OBJECTEN: **Vereist** Een array van tekenreeksen die worden gekoppeld.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | Hiermee wordt de linkerzijde van een tekenreeks met de andere opgegeven tekenreeks geplakt. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt opgevuld. Deze tekenreeks kan null zijn.</li><li>TELLING: **Vereist** De grootte van de tekenreeks die moet worden opgevuld.</li><li>TOEVOEGEN: **Vereist** De tekenreeks waarmee de invoer moet worden geplakt. Als deze null of leeg is, wordt deze behandeld als één spatie.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzyzybat&quot; |
 | rpad | Hiermee wordt de rechterzijde van een tekenreeks overgeladen met de andere opgegeven tekenreeks. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt opgevuld. Deze tekenreeks kan null zijn.</li><li>TELLING: **Vereist** De grootte van de tekenreeks die moet worden opgevuld.</li><li>TOEVOEGEN: **Vereist** De tekenreeks waarmee de invoer moet worden geplakt. Als deze null of leeg is, wordt deze behandeld als één spatie.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -68,7 +68,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### Gewone expressiefuncties
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Haalt groepen uit de invoertekenreeks op basis van een reguliere expressie. | <ul><li>STRING: **Vereist** De tekenreeks waaruit de groepen worden geëxtraheerd.</li><li>REGEX: **Vereist** De reguliere expressie die moet overeenkomen met de groep.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;()[^,]+),[^,]*,([^,]+)&quot; | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | match_regex | Controleert of de tekenreeks overeenkomt met de ingevoerde reguliere expressie. | <ul><li>STRING: **Vereist** De tekenreeks die u controleert, komt overeen met de reguliere expressie.</li><li>REGEX: **Vereist** De reguliere expressie die u vergelijkt.</li></ul> | match_regex(STRING, REGEX) | match_regex(&quot;E259,E259B_009,1_1&quot;, &quot;()[^,]+),[^,]*,([^,]+)&quot; | true |
@@ -81,7 +81,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 1 van de Hash (SHA-1). | <ul><li>INVOER: **Vereist** The plain text to be hashed.</li><li>TEKEN: *Optioneel* De naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 256 van de Hash (SHA-256). | <ul><li>INVOER: **Vereist** The plain text to be hashed.</li><li>TEKEN: *Optioneel* De naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha256 (INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
@@ -97,7 +97,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | Retourneert het protocol van de opgegeven URL. Als de invoer ongeldig is, wordt null geretourneerd. | <ul><li>URL: **Vereist** De URL waaruit het protocol moet worden geëxtraheerd.</li></ul> | get_url_protocol &#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
 | get_url_host | Geeft als resultaat de host van de opgegeven URL. Als de invoer ongeldig is, wordt null geretourneerd. | <ul><li>URL: **Vereist** De URL waarvan de host moet worden opgehaald.</li></ul> | get_url_host &#x200B;(URL) | get_url_host &#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
@@ -115,10 +115,10 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven. Meer informatie over de `date` functie vindt u in de datumsectie van het dialoogvenster [handleiding voor gegevensverwerking](./data-handling.md#dates).
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Hiermee wordt de huidige tijd opgehaald. | | now() | now() | `2021-10-26T10:10:24Z` |
-| timestamp | Hiermee wordt de huidige Unix-tijd opgehaald. | | timestamp() | timestamp() | 1571850624571 |
+| tijdstempel | Hiermee wordt de huidige Unix-tijd opgehaald. | | timestamp() | timestamp() | 1571850624571 |
 | format | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | <ul><li>DATUM: **Vereist** De invoerdatum die u wilt opmaken als een ZonedDateTime-object.</li><li>INDELING: **Vereist** De notatie waarin de datum moet worden gewijzigd.</li></ul> | format(DATE, FORMAT) | formaat (2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | <ul><li>TIJDSTEMPEL: **Vereist** Het tijdstempel dat u wilt opmaken. Dit wordt geschreven in milliseconden.</li><li>INDELING: **Vereist** De indeling die u wilt instellen als tijdstempel.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | <ul><li>DATUM: **Vereist** De tekenreeks die de datum vertegenwoordigt.</li><li>INDELING: **Vereist** De tekenreeks die staat voor de indeling van de brondatum.**Opmerking:** Dit doet **niet** vertegenwoordigen de notatie waarin u de datumtekenreeks wilt omzetten. </li><li>DEFAULT_DATE: **Vereist** De geretourneerde standaarddatum als de opgegeven datum null is.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -138,7 +138,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Controleert of een object leeg is. | <ul><li>INVOER: **Vereist** Het object dat u wilt controleren, is leeg.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | arrays_to_object | Maakt een lijst met objecten. | <ul><li>INVOER: **Vereist** Een groep sleutel- en arrayparen.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
@@ -162,7 +162,7 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | samenvoegen | Retourneert het eerste niet-null-object in een opgegeven array. | <ul><li>INVOER: **Vereist** De array waarvan u het eerste object met een andere waarde dan null wilt zoeken.</li></ul> | kool(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Hiermee wordt het eerste element van de opgegeven array opgehaald. | <ul><li>INVOER: **Vereist** De array waarvan u het eerste element wilt zoeken.</li></ul> | first (INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
@@ -171,8 +171,8 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 | join_arrays | Combineert de arrays met elkaar. | <ul><li>ARRAY: **Vereist** De array waaraan u elementen toevoegt.</li><li>WAARDEN: de array(en) die u aan de bovenliggende array wilt toevoegen.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&quot;a&quot;, &quot;b&quot;], [&quot;c&quot;], [&quot;d&quot;, &quot;e&quot;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Neemt een lijst van input en zet het in een serie om. | <ul><li>INCLUDE_NULLS: **Vereist** Een booleaanse waarde die aangeeft of null al dan niet moet worden opgenomen in de responsarray.</li><li>WAARDEN: **Vereist** De elementen die in een array moeten worden omgezet.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Retourneert de grootte van de invoer. | <ul><li>INVOER: **Vereist** Het object waarvan u de grootte probeert te vinden.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| update_array_append | Deze functie wordt gebruikt om alle elementen in de volledige invoerarray toe te voegen aan het einde van de array in Profile. Deze functie is **alleen** van toepassing tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereist** De array die moet worden toegevoegd aan de array in het profiel.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | Deze functie wordt gebruikt om elementen in een array te vervangen. Deze functie is **alleen** van toepassing tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereist** De array die de array in het profiel moet vervangen.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| update_array_append | Deze functie wordt gebruikt om alle elementen in de volledige invoerarray toe te voegen aan het einde van de array in Profile. Deze functie is **alleen** van toepassing tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereist** De array die moet worden toegevoegd aan de array in het profiel.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123 456] |
+| upsert_array_replace | Deze functie wordt gebruikt om elementen in een array te vervangen. Deze functie is **alleen** van toepassing tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereist** De array die de array in het profiel moet vervangen.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123 456] |
 
 {style="table-layout:auto"}
 
@@ -182,7 +182,7 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decoderen | Op basis van een sleutel en een lijst met sleutelwaardeparen die als een array zijn samengevoegd, retourneert de functie de waarde als een sleutel wordt gevonden of retourneert deze een standaardwaarde als deze aanwezig is in de array. | <ul><li>TOETS: **Vereist** De sleutel die moet worden aangepast.</li><li>OPTIONS: **Vereist** Een samengevoegde array van sleutel/waardeparen. Optioneel kan een standaardwaarde aan het einde worden geplaatst.</li></ul> | decoderen (SLEUTEL, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Als stateCode gegeven &quot;ca&quot;, &quot;Californië&quot; is.<br>Als stateCode gegeven &quot;pa&quot; is, &quot;Pennsylvania&quot;.<br>Als stateCode niet het volgende aanpast, &quot;n.v.t.&quot;. |
 | iif | Evalueert een bepaalde booleaanse expressie en retourneert de opgegeven waarde op basis van het resultaat. | <ul><li>EXPRESSIE: **Vereist** De booleaanse expressie die wordt geëvalueerd.</li><li>TRUE_VALUE: **Vereist** De waarde die wordt geretourneerd als de expressie true oplevert.</li><li>FALSE_VALUE: **Vereist** De waarde die wordt geretourneerd als de expressie false oplevert.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Waar&quot; |
@@ -195,7 +195,7 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Geeft als resultaat het minimum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | <ul><li>OPTIONS: **Vereist** Een of meer objecten die met elkaar kunnen worden vergeleken.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Geeft als resultaat het maximum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | <ul><li>OPTIONS: **Vereist** Een of meer objecten die met elkaar kunnen worden vergeleken.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
@@ -208,11 +208,11 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| to_bigint | Zet een tekenreeks om in een BigInteger. | <ul><li>STRING: **Vereist** De tekenreeks die moet worden omgezet in een BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
-| to_decimal | Zet een tekenreeks om in een double. | <ul><li>STRING: **Vereist** De tekenreeks die in een Double moet worden omgezet.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
-| to_float | Zet een tekenreeks om in een zwevende waarde. | <ul><li>STRING: **Vereist** De tekenreeks die moet worden omgezet in een zwevende waarde.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
+| to_bigint | Zet een tekenreeks om in een BigInteger. | <ul><li>STRING: **Vereist** De tekenreeks die moet worden omgezet in een BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 1000000,34 |
+| to_decimal | Zet een tekenreeks om in een double. | <ul><li>STRING: **Vereist** De tekenreeks die in een Double moet worden omgezet.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
+| to_float | Zet een tekenreeks om in een zwevende waarde. | <ul><li>STRING: **Vereist** De tekenreeks die moet worden omgezet in een zwevende waarde.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Zet een tekenreeks om in een geheel getal. | <ul><li>STRING: **Vereist** De tekenreeks die in een geheel getal moet worden omgezet.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
 {style="table-layout:auto"}
@@ -223,7 +223,7 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Maak JSON-inhoud deserialize vanuit de opgegeven tekenreeks. | <ul><li>STRING: **Vereist** De JSON-tekenreeks die moet worden gedeserialiseerd.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Een object dat de JSON vertegenwoordigt. |
 
@@ -235,7 +235,7 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Hiermee genereert u een pseudo-willekeurige id. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | Deze functie neemt een FPID-tekenreeks en zet deze om in een ECID die in Adobe Experience Platform- en Adobe Experience Cloud-toepassingen moet worden gebruikt. | <ul><li>STRING: **Vereist** De FPID-tekenreeks die in ECID moet worden omgezet.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
@@ -255,13 +255,13 @@ Voor meer informatie over apparaatveldwaarden leest u de [lijst met apparaatveld
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extraheert de naam van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Extraheert de belangrijkste versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | Extraheert de versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
+| ua_os_version | Extraheert de versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1. |
 | ua_os_name_version | Extraheert de naam en de versie van het besturingssysteem uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_os_name_version &#x200B;(USER_AGENT) | ua_os_name_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | Extraheert de agentenversie uit het koord van de gebruikersagent. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_agent_version | Extraheert de agentenversie uit het koord van de gebruikersagent. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5,1 |
 | ua_agent_version_major | Extraheert de agentennaam en belangrijkste versie van het koord van de gebruikersagent. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extraheert de agentennaam uit het koord van de gebruikersagent. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extraheert de apparaatklasse uit de userAgent-tekenreeks. | <ul><li>USER_AGENT: **Vereist** De userAgent-tekenreeks.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 zoals Mac OS X) AppleWebKit/534.46 (KHTML, zoals Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefoon |
@@ -323,8 +323,8 @@ In de onderstaande tabel ziet u een lijst met gereserveerde tekens en de bijbeho
 | --- | --- |
 | spatie | %20 |
 | ! | %21 |
-| ’ | %22 |
-| # | %23 |
+| ’ | %2 |
+| Aantal | %23 |
 | $ | %24 |
 | % | %25 |
 | &amp; | %26 |
@@ -346,7 +346,7 @@ In de onderstaande tabel ziet u een lijst met gereserveerde tekens en de bijbeho
 | | | %5C |
 | ] | %5D |
 | ^ | %5E |
-| ` | %60 |
+| ` | %6 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
