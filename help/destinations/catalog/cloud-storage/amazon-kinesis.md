@@ -4,9 +4,9 @@ title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1949'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

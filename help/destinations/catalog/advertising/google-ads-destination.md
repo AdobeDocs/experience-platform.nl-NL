@@ -2,9 +2,9 @@
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een online advertentieservice waarmee bedrijven per klik reclame kunnen betalen voor zoekopdrachten, grafische weergaven, YouTube-video's en mobiele displays in de app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ads] bestemminge
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming wilt maken met [!DNL Google Ads] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Audience Manager of andere toepassingen), gelieve te richten aan de Raadpleging van de Adobe of de Zorg van de Klant om identiteitskaart syncs toe te laten. Als u eerder Google-integratie in Audience Manager had ingesteld, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+>Als u uw eerste bestemming wilt maken met [!DNL Google Ads] en hebben de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Audience Manager of andere toepassingen), bereik aan de Raadpleging van de Adobe of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder Google-integratie in Audience Manager had ingesteld, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -44,7 +44,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ads] bestemminge
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -70,16 +70,16 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
-> [!DNL Google] heeft nieuwe [!DNL Google Ads] cookie-integratie met externe leveranciers. Voor het uitvoeren van de stappen van de lijst van gewenste personen in de volgende sectie moet u een bestaande integratie hebben met [!DNL Google Ads]. De aanbevolen aanpak voor het gebruik van [!DNL Google Ads] een [!DNL Google Customer Match] integratie. Voor meer informatie over het maken van een [!DNL Google Customer Match] de zelfstudie over het maken van een [[!DNL Google Customer Match]](./google-customer-match.md) verbinding.
+> [!DNL Google] heeft nieuwe [!DNL Google Ads] cookie-integratie met externe leveranciers. Voor het uitvoeren van de stappen van de lijst van gewenste personen in de volgende sectie moet u bestaande integratie hebben met [!DNL Google Ads]. De aanbevolen aanpak voor het gebruik van [!DNL Google Ads] een [!DNL Google Customer Match] integratie. Voor meer informatie over het maken van een [!DNL Google Customer Match] integratie, lees de zelfstudie over het maken van een [[!DNL Google Customer Match]](./google-customer-match.md) verbinding.
 
 ### Aanbieding toestaan {#allow-listing}
 
 >[!NOTE]
 >
->Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ads] doel in Platform. Controleer of het hieronder beschreven proces voor het aanbieden van een aanbieding is voltooid door [!DNL Google] voordat u een doel maakt.
+>Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Ads] doel in Platform. Zorg ervoor dat het hieronder beschreven proces voor het aanbieden van objecten in een aanbieding is voltooid door [!DNL Google] voordat u een doel maakt.
 >De uitzondering op deze regel is [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
-Voordat u het dialoogvenster [!DNL Google Ads] doel in Platform, u moet contact opnemen [!DNL Google] voor Adobe die op de lijst van toegestane gegevensleveranciers moet worden geplaatst, en voor uw rekening die aan de lijst van gewenste personen moet worden toegevoegd. Contact [!DNL Google] en verstrekt de volgende informatie:
+Voordat u het dialoogvenster [!DNL Google Ads] doel in Platform, u moet contact opnemen [!DNL Google] voor Adobe die op de lijst van toegestane gegevensleveranciers moet worden gezet, en voor uw rekening die aan de lijst van gewenste personen moet worden toegevoegd. Contact [!DNL Google] en verstrekt de volgende informatie:
 
 * **Account-id**: De account-id van de Adobe met Google. Account-ID: 87933855.
 * **Klant-id**: De klant-id van de Adobe met Google. Klant-id: 89690775.
@@ -131,6 +131,6 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 Deze fout treedt op als de klantenaccounts niet voldoen aan de [voorwaarden](#prerequisites) of wanneer de klanten proberen de bestemming zonder het bestaan te vormen [!DNL Google Ads] account.
 
-[!DNL Google] heeft nieuwe [!DNL Google Ads] cookie-integratie met externe leveranciers. Om het [allow-list](#allow-listing) stappen, u moet een bestaande integratie hebben met [!DNL Google Ads].
+[!DNL Google] heeft nieuwe [!DNL Google Ads] cookie-integratie met externe leveranciers. Om het [lijst van gewenste personen](#allow-listing) stappen, u moet een bestaande integratie hebben met [!DNL Google Ads].
 
 De aanbevolen aanpak voor het gebruik van [!DNL Google Ads] een [[!DNL Google Customer Match]](google-customer-match.md) integratie.

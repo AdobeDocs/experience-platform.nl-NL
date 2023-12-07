@@ -2,16 +2,16 @@
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
 
 # [!DNL Destinations]-overzicht {#overview}
 
-![Overzicht van doelen banner](./assets/overview/destinations-overview-banner.png)
+![Banner Overzicht van doelen.](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
@@ -29,7 +29,7 @@ Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerst
 ## Doelstappen {#steps}
 
 * Kiezen uit een [zelfbedieningscatalogus](./catalog/overview.md) van alle bestemmingen beschikbaar in Platform.
-* Gebruik bestemmingen om profielen of publiek naar marketing automatiseringsplatforms, digitale reclameplatforms, en meer te verzenden.
+* Gebruik bestemmingen om publiek of datasets naar de platforms van de marketing automatisering, digitale reclameplatforms, en meer te verzenden.
 * De gegevens van het programma voeren regelmatig naar uw aangewezen bestemmingen uit.
 
 ## Besturingselementen {#controls}
@@ -39,12 +39,13 @@ De besturingselementen in de [werkruimte doelen](./ui/destinations-workspace.md)
 * Blader door de catalogus met doelplatforms waar u uw gegevens kunt activeren;
 * Gegevensstromen naar de doelen in de catalogus maken, bewerken, activeren en uitschakelen;
 * Maak een account op een opslaglocatie of koppel Platform aan de account op het doelplatform;
-* Selecteer welk publiek moet worden geactiveerd voor bestemmingen;
-* Selecteren [XDM-velden (Experience Data Model)](../xdm/home.md) om te exporteren wanneer een publiek wordt geactiveerd naar marketingbestemmingen via e-mail.
+* Selecteer welk publiek of welke datasets voor bestemmingen moeten worden geactiveerd;
+* Selecteren [XDM-velden (Experience Data Model)](../xdm/home.md) om te exporteren wanneer het publiek wordt geactiveerd naar bepaalde doelen, zoals marketingdoelen voor e-mail, CRM-platforms, opslaglocaties voor de cloud en meer.
+* Activeer verschillende soorten profielen en publiek aan bestemmingen - mensen, rekeningen, en vooruitzichten.
 
 ## Doeltypen en -categorieën {#types-and-categories}
 
-Met Experience Platform, kunt u gegevens aan diverse soorten bestemmingen activeren, om aan uw activeringsgebruiksgevallen te voldoen. De bestemmingen variëren van op API-Gebaseerde integratie, tot integratie met dossierontvangstsystemen, de bestemmingen van de profielraadpleging, en meer. Voor gedetailleerde informatie over alle beschikbare bestemmingen, zie [doeltypen en -categorieën, overzicht](./destination-types.md).
+Met Experience Platform, kunt u gegevens aan diverse soorten bestemmingen activeren, om aan uw activeringsgebruiksgevallen te voldoen. De bestemmingen variëren van op API-Gebaseerde integratie, tot integratie met dossierontvangstsystemen, de bestemmingen van de profielraadpleging, en meer. Voor gedetailleerde informatie over alle beschikbare bestemmingen, lees [doeltypen en -categorieën, overzicht](./destination-types.md).
 
 ## Adobe-gebouwde en partner-gebouwde bestemmingen {#adobe-and-partner-built-destinations}
 
@@ -54,7 +55,7 @@ Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties m
 
 ## Doelen en toegangscontroles {#access-controls}
 
-De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie voor informatie over de individuele machtigingen [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuift omlaag naar de onderkant van de pagina.
+De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Ga voor informatie over de individuele machtigingen naar [toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuift omlaag naar de tabel onder aan de pagina.
 
 De volgende lijst schetst de toestemmingen en toestemmingscombinaties die worden vereist om bepaalde acties op bestemmingen uit te voeren:
 
@@ -81,9 +82,11 @@ Voor meer informatie over hoe de bestemmingen met op attribuut-gebaseerde toegan
 
 Nadat u een verbinding met een doel hebt gemaakt en de activeringsworkflow hebt voltooid, kunt u de gegevens die u exporteert naar uw ontvangstsysteem controleren. Lees de [gids over het controleren van gegevensstromen aan bestemmingen in UI](/help/dataflows/ui/monitor-destinations.md) voor meer informatie .
 
-U kunt ook controleren of gegevens naar uw bestemming zijn gekomen. De meeste doeldocumentatiepagina&#39;s in de catalogus hebben een *Sectie Gegevens exporteren valideren*, die erop wijst hoe u in het bestemmingsplatform kunt controleren dat de gegevens met succes van Experience Platform worden gebracht.
+![Voorbeeld van de pagina Doelen die controleren.](./assets/overview/monitoring-page-example.png)
 
-## Beperkingen op gegevensbeheer bij het activeren van gegevens naar bestemmingen {#data-governance}
+U kunt ook controleren of gegevens naar uw bestemming zijn gekomen. De meeste doeldocumentatiepagina&#39;s in de catalogus hebben een *Sectie Gegevens exporteren valideren*, die erop wijst hoe u in het bestemmingsplatform kunt controleren dat de gegevens met succes van Experience Platform worden gebracht. Een voorbeeld van deze sectie weergeven voor de [Amazon Ads-bestemming](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+
+## Beperkingen inzake gegevensbeheer bij het activeren van gegevens naar bestemmingen {#data-governance}
 
 Het gegevensbeheer wordt afgedwongen voor platformbestemmingen via:
 

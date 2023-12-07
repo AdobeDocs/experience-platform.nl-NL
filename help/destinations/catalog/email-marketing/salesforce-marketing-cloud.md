@@ -1,11 +1,10 @@
 ---
-keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;salesforce bestemming
 title: Verbinding met Salesforce-Marketing Cloud
 description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -16,11 +15,11 @@ ht-degree: 0%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is een digitale marketingsuite die voorheen ExactTarget werd genoemd. Met deze suite kunt u reizen maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
 
-Om publieksgegevens te verzenden naar [!DNL Salesforce Marketing Cloud], moet u eerst [verbinden de bestemming](#connect-destination) in Platform, en dan [een gegevensimport instellen](#import-data-into-salesforce) vanaf uw opslaglocatie naar [!DNL Salesforce Marketing Cloud].
+Om publieksgegevens te verzenden naar [!DNL Salesforce Marketing Cloud], moet u eerst [verbinden met de bestemming](#connect-destination) in Platform, en dan [een gegevensimport instellen](#import-data-into-salesforce) vanaf uw opslaglocatie naar [!DNL Salesforce Marketing Cloud].
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -42,7 +41,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## IP adres lijst van gewenste personen {#allow-list}
 
-Bij het opzetten van e-mail marketing bestemmingen met de opslag van SFTP, adviseert de Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
+Wanneer vestiging e-mail marketing bestemmingen met de opslag van SFTP, adviseert de Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
 
 Zie [IP adres lijst van gewenste personen voor bestemmingen SFTP](../cloud-storage/ip-address-allow-list.md) als u Adobe IPs aan uw lijst van gewenste personen moet toevoegen.
 

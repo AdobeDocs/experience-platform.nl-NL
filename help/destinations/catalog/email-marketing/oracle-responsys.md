@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle responsys bestemming
 title: Verbinding oracle Responsys
 description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media te personaliseren.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Om publieksgegevens te verzenden naar [!DNL Oracle Responsys], moet u eerst [ver
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

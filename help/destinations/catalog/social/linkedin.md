@@ -3,10 +3,10 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 1%
+source-wordcount: '1061'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +38,7 @@ Een softwarebedrijf organiseert een conferentie en wil met deelnemers in contact
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

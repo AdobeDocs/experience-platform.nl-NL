@@ -3,10 +3,10 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 0%
+source-wordcount: '1094'
+ht-degree: 1%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie-
 
 Adobe Target is een personalisatieverbinding in de Adobe Experience Platform-bestemmingscatalogus.
 
+## Video-overzicht {#video-overview}
+
 Bekijk de onderstaande video voor een kort overzicht van het configureren van de Adobe Target-verbinding in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -41,7 +43,7 @@ Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te ge
 
 >[!IMPORTANT]
 >
->Voordat u een [!DNL Adobe Target] verbinding, lees de gids over hoe te [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/activate-edge-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platform componenten. Voor personalisatie op dezelfde pagina en op de volgende pagina moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
+>Voordat u een [!DNL Adobe Target] verbinding, lees de gids over hoe te [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking](../../ui/activate-edge-personalization-destinations.md). Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platform componenten. Als u gebruikstoepassingen van dezelfde pagina en volgende pagina wilt maken, moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
 
 ### Vereisten in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -54,7 +56,7 @@ Meer informatie over het verlenen van machtigingen voor [Doelpremie](https://exp
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -133,7 +135,7 @@ Lezen [Het publiek activeren voor verpersoonlijkingsdoelen van randen](../../ui/
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Adobe Target leest profielgegevens van het Adobe Experience Platform Edge Network, zodat er geen gegevens worden geëxporteerd.
+Adobe Target *leest* profielgegevens van het Adobe Experience Platform Edge-netwerk, zodat er geen gegevens worden geëxporteerd.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

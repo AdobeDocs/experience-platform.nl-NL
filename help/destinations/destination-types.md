@@ -3,9 +3,9 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Lees deze pagina om de verschillende typen en categorieën Adobe Experience Plat
 
 ## Doeltypen {#destination-types}
 
-In Adobe Experience Platform maken we onderscheid tussen verschillende doeltypen - verbindingen, gegevenssetexport en extensies. Er zijn verschillende typen verbindingsdoelen waarmee u gegevens kunt exporteren naar op API gebaseerde doelen.
+In Adobe Experience Platform maken we onderscheid tussen verschillende doeltypen - verbindingen, gegevenssetexport en extensies. Er zijn verscheidene soorten verbindingsbestemmingen, die u toestaan om gegevens naar op API-Gebaseerde bestemmingen, sociale bestemmingen, de platforms van CRM, en vele meer uit te voeren.
 
 Ten slotte kan ook een onderscheid worden gemaakt tussen openbare bestemmingen die beschikbaar zijn in alle organisaties in de lijst met bestemmingen, en particuliere bestemmingen die Real-Time CDP Ultimate-klanten kunnen maken om aan hun specifieke gevallen van exportgebruik te voldoen.
 
@@ -68,6 +68,21 @@ Meer informatie over hoe [vorm verpersoonlijkingsbestemmingen voor zelfde-pagina
 In de onderstaande video worden de bijzonderheden van de twee soorten doelen uitgelegd:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Typen geëxporteerde soorten publiek {#exported-audiences-types}
+
+U kunt drie soorten publiek van Experience Platform naar diverse bestemmingen uitvoeren:
+
+* Personen
+* Accountpubliek
+* Doelgroepen
+
+Meer informatie over de [verschillende soorten doelgroepen](/help/segmentation/ui/account-audiences.md#terminology).
+
+Een symbool op de doelkaart geeft aan welke soorten publiek u naar elk doel kunt exporteren.
+
+![Voorbeeld van doelkaart met symbolen die aangeven welke soorten publiek kunnen worden geëxporteerd.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## Dataset-exportdoelen {#dataset-export-destinations}
 

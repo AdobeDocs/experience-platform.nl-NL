@@ -3,9 +3,9 @@ keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van het luchtschip
 description: Geef naadloos de gegevens van het publiek van de Adobe door aan het luchtschip als kenmerken van het publiek voor doelwit binnen het luchtschip.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Voordat u uw publiek naar kunt sturen [!DNL Airship], moet u:
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

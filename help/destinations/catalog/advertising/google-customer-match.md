@@ -3,9 +3,9 @@ keywords: Google klant match;Google klant match;Google Customer Match
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichti
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -76,13 +76,13 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Voordat u een [!DNL Google Customer Match] bestemming in Experience Platform, zorg ervoor u leest en aan het beleid van Google hanteert voor het gebruiken [!DNL Customer Match], die in de [Google-ondersteuningsdocumentatie](https://support.google.com/google-ads/answer/6299717).
 
-Controleer vervolgens of [!DNL Google] account is geconfigureerd voor een [!DNL Standard] of hoger machtigingsniveau. Zie de [Google Ads-documentatie](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.
+Controleer vervolgens of uw [!DNL Google] account is geconfigureerd voor een [!DNL Standard] of hoger machtigingsniveau. Zie de [Google Ads-documentatie](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.
 
 ### Lijst van gewenste personen {#allowlist}
 
-Voordat u het dialoogvenster [!DNL Google Customer Match] doel in Experience Platform, zorg ervoor uw [!DNL Google Ads] voldoet aan de [[!DNL Google Customer Match] beleid](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Voordat u het dialoogvenster [!DNL Google Customer Match] doel in Experience Platform, zorg ervoor dat uw [!DNL Google Ads] voldoet aan de [[!DNL Google Customer Match] beleid](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Klanten met compatibele accounts worden automatisch door Google aangeboden.
+Klanten met compatibele accounts worden automatisch gevoegd op lijst van gewenste personen door Google.
 
 ## Vereisten voor id-afstemming {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## Video-overzicht {#video-overview}
+
+Bekijk de onderstaande video voor een uitleg van de voordelen en hoe u gegevens activeert naar Google Customer Match.
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbes
 
 In de **[!UICONTROL Segment schedule]** stap, moet u de [!UICONTROL App ID] wanneer verzenden [!DNL IDFA] of [!DNL GAID] publiek naar [!DNL Google Customer Match].
 
-![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![Het veld Google Customer Match App ID wordt gemarkeerd in de stap voor segmentplanning van de activeringsworkflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Voor meer informatie over het zoeken naar de [!DNL App ID], verwijst u naar de [Officiële Google-documentatie](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Voor meer informatie over het zoeken naar de [!DNL App ID], verwijst u naar de [Officiële Google-documentatie](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) of vraag uw Google-vertegenwoordiger.
 
 ### Voorbeeld van toewijzing: publieksgegevens activeren in [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,17 +200,17 @@ Doelvelden selecteren:
 * Selecteer de `IDFA` of `GAID` naamruimten als doelidentiteit wanneer uw bronnaamruimten `IDFA` of `GAID`.
 * Selecteer de `User_ID` naamruimte als doelidentiteit wanneer uw bronnaamruimte een aangepaste naamruimte is.
 
-![Identiteitskaart](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![Identiteitstoewijzing tussen bron- en doelvelden die wordt weergegeven in de stap Toewijzing van de activeringsworkflow.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 Gegevens uit naamruimten zonder hashing worden automatisch gehasht door [!DNL Platform] na activering.
 
 Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen.
 
-![Transformatie identiteitstoewijzing](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![Transformatiebeheer toepassen dat is gemarkeerd in de stap Toewijzing van de activeringsworkflow.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Controleren of publieksactivering is gelukt {#verify-activation}
 
-Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]** account. Het geactiveerde publiek wordt in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw publiek, alleen worden gevuld als er meer dan 100 actieve gebruikers zijn.
+Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]** account. Het geactiveerde publiek wordt in uw Google-account weergegeven als klantenlijsten. Afhankelijk van de grootte van uw publiek, bevolken sommige soorten publiek alleen als er meer dan 100 actieve gebruikers zijn om te dienen.
 
 Wanneer u een publiek toewijst aan beide [!DNL IDFA] en [!DNL GAID] mobiele id&#39;s, [!DNL Google Customer Match] maakt een apart publiek voor elke id-toewijzing. Uw [!DNL Google Ads] account toont twee verschillende segmenten, één voor de [!DNL IDFA]en een voor de [!DNL GAID] toewijzing.
 
@@ -216,9 +222,4 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Deze fout treedt op wanneer de klantenrekeningen niet aan [voorwaarden](#google-account-prerequisites). Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een [!DNL Standard] of hoger machtigingsniveau. Zie de [Google Ads-documentatie](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.
-
-## Aanvullende bronnen {#additional-resources}
-
-* [Integreren [!DNL Google Customer Match] - Videozelfstudie](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
-
+Deze fout treedt op wanneer de klantenrekeningen niet aan [voorwaarden](#google-account-prerequisites). Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst van toegestane partijen staat en geconfigureerd is voor een [!DNL Standard] of hoger machtigingsniveau. Zie de [Google Ads-documentatie](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor meer informatie.

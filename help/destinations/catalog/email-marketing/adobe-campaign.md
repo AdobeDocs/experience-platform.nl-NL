@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offline kanalen personaliseren en te leveren.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Als u publieksgegevens naar Adobe Campaign wilt verzenden, moet u eerst [verbind
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -42,7 +42,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## IP adres lijst van gewenste personen {#allow-list}
 
-Bij het opzetten van e-mail marketing bestemmingen met de opslag van SFTP, adviseert de Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
+Wanneer vestiging e-mail marketing bestemmingen met de opslag van SFTP, adviseert de Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
 
 Zie [IP adres lijst van gewenste personen voor bestemmingen SFTP](../cloud-storage/ip-address-allow-list.md) als u Adobe IPs aan uw lijst van gewenste personen moet toevoegen.
 
@@ -101,14 +101,14 @@ Wanneer het activeren van publiek aan deze bestemming, adviseert de Adobe dat u 
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Adobe Campaign] bestemmingen, [!DNL Platform] maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden [doelactivering controleren](../../ui/activate-batch-profile-destinations.md#verify) in de zelfstudie voor publieksactivering.
+Voor [!DNL Adobe Campaign] bestemmingen, [!DNL Platform] maakt een `.csv` in de opslaglocatie die u hebt opgegeven. Zie voor meer informatie over de bestanden de [doelactivering controleren](../../ui/activate-batch-profile-destinations.md#verify) in de zelfstudie voor publieksactivering.
 
 ## Gegevensimport instellen in Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
 >* Houd rekening met de [!DNL SFTP] opslaglimieten, opslaglimieten voor databases en limieten voor het actieve profiel zoals vastgelegd in uw Adobe Campaign-contract tijdens de uitvoering van deze integratie.
->* U moet uw geëxporteerde segmenten in Adobe Campaign plannen, importeren en toewijzen met [!DNL Campaign] workflows. Zie [Herhalende importbewerkingen instellen](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign Classic documentatie en [Informatie over gegevensbeheeractiviteiten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in Adobe Campaign Standard documentatie.
+>* U moet de geëxporteerde segmenten in Adobe Campaign plannen, importeren en toewijzen met [!DNL Campaign] workflows. Zie [Herhalende importbewerkingen instellen](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign Classic documentatie en [Informatie over gegevensbeheeractiviteiten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in Adobe Campaign Standard documentatie.
 >* De voorkeursmethode voor het verzenden van gegevens naar Adobe Campaign is: [!DNL Amazon S3] of [!DNL Azure Blob].
 
 Na verbinding [!DNL Platform] aan uw [!DNL Amazon S3] of [!DNL Azure Blob] -opslag, moet u de gegevensimport van uw opslaglocatie naar Adobe Campaign instellen. Raadpleeg de volgende Adobe Campaign-documentatiepagina&#39;s voor meer informatie hierover:

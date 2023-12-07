@@ -4,9 +4,9 @@ title: HTTP API-verbinding
 description: Gebruik de HTTP API bestemming in Adobe Experience Platform om profielgegevens naar derdeeindpunt van HTTP te verzenden om uw eigen analyses in werking te stellen of andere verrichtingen uit te voeren u op profielgegevens kunt nodig hebben die uit Experience Platform worden uitgevoerd.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2398'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De eindpunten van HTTP kunnen of de systemen van klanten of derdeoplossingen zij
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -73,7 +73,7 @@ De HTTP API bestemming steunt verscheidene authentificatietypen aan uw eindpunt 
 
 * HTTP-eindpunt zonder verificatie;
 * Toekenning aan toonder;
-* [OAuth 2.0-clientreferenties](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) verificatie met het lichaamsformulier, met [!DNL client ID], [!DNL client secret] en [!DNL grant type] in de hoofdtekst van de HTTP-aanvraag, zoals in het onderstaande voorbeeld wordt getoond.
+* [OAuth 2.0-clientreferenties](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) verificatie met het lichaamsformulier, met [!DNL client ID], [!DNL client secret], en [!DNL grant type] in de hoofdtekst van de HTTP-aanvraag, zoals in het onderstaande voorbeeld wordt getoond.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -113,7 +113,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 
 Als u **[!UICONTROL Bearer token]** autorisatietype voor verbinding met het HTTP-eindpunt, voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]**:
 
-![Afbeelding van het UI-scherm waarin u verbinding kunt maken met de HTTP API-bestemming met behulp van toventokenverificatie](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Afbeelding van het UI-scherm waarin u verbinding kunt maken met de HTTP API-bestemming met behulp van toventokenverificatie.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer token]**: voeg het token voor toonder in om te verifiëren bij uw HTTP-locatie.
 
@@ -121,7 +121,7 @@ Als u **[!UICONTROL Bearer token]** autorisatietype voor verbinding met het HTTP
 
 Als u **[!UICONTROL None]** authentificatietype om met uw eindpunt van HTTP te verbinden:
 
-![Afbeelding van het UI-scherm waar u verbinding kunt maken met de HTTP API-bestemming, zonder verificatie](../../assets/catalog/http/http-api-authentication-none.png)
+![Afbeelding van het UI-scherm waar u verbinding kunt maken met de HTTP API-bestemming, zonder verificatie.](../../assets/catalog/http/http-api-authentication-none.png)
 
 Wanneer u deze verificatie opent, hoeft u alleen **[!UICONTROL Connect to destination]** en de verbinding aan uw eindpunt wordt gevestigd.
 
@@ -129,7 +129,7 @@ Wanneer u deze verificatie opent, hoeft u alleen **[!UICONTROL Connect to destin
 
 Als u **[!UICONTROL OAuth 2 Password]** autorisatietype voor verbinding met het HTTP-eindpunt, voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]**:
 
-![Afbeelding van het UI-scherm waar u verbinding kunt maken met de HTTP API-bestemming met OAuth 2 met wachtwoordverificatie](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Afbeelding van het UI-scherm waarin u verbinding kunt maken met de HTTP API-bestemming met OAuth 2 met wachtwoordverificatie.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL Access Token URL]**: De URL aan uw zijde die toegangstokens uitgeeft en, naar keuze, tokens vernieuwt.
 * **[!UICONTROL Client ID]**: De [!DNL client ID] dat uw systeem aan Adobe Experience Platform toewijst.
@@ -141,7 +141,7 @@ Als u **[!UICONTROL OAuth 2 Password]** autorisatietype voor verbinding met het 
 
 Als u **[!UICONTROL OAuth 2 Client Credentials]** autorisatietype voor verbinding met het HTTP-eindpunt, voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]**:
 
-![Afbeelding van het UI-scherm waar u verbinding kunt maken met de HTTP API-bestemming met OAuth 2 met verificatie van clientreferenties](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Afbeelding van het UI-scherm waarin u verbinding kunt maken met de HTTP API-bestemming, met OAuth 2 met verificatie van clientreferenties.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL Access Token URL]**: De URL aan uw zijde die toegangstokens uitgeeft en, naar keuze, tokens vernieuwt.
 * **[!UICONTROL Client ID]**: De [!DNL client ID] dat uw systeem aan Adobe Experience Platform toewijst.
@@ -179,7 +179,7 @@ Als u **[!UICONTROL OAuth 2 Client Credentials]** autorisatietype voor verbindin
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![Afbeelding van het UI-scherm met voltooide velden voor de HTTP-doeldetails](../../assets/catalog/http/http-api-destination-details.png)
+![Afbeelding van het UI-scherm waarin de voltooide velden voor de HTTP-doeldetails worden weergegeven.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: Voer een naam in waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
@@ -232,7 +232,7 @@ Met betrekking tot de gegevens die voor een bepaald profiel worden geëxporteerd
 
 Bijvoorbeeld, overweeg dit dataflow aan een bestemming van HTTP waar drie publiek in dataflow wordt geselecteerd, en vier attributen worden in kaart gebracht aan de bestemming.
 
-![HTTP API-doeldatabase](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Een voorbeeld van een HTTP API doelgegevensstroom.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 Een profiel dat naar de bestemming wordt geëxporteerd, kan worden bepaald door een profiel dat in aanmerking komt voor of dat een van de *drie toegewezen segmenten*. Bij de gegevensexport moet u echter in de `segmentMembership` object (zie [Geëxporteerde gegevens](#exported-data) in de onderstaande sectie), kunnen andere niet-toegewezen doelgroepen worden weergegeven als dat specifieke profiel lid van die doelgroepen is en als deze hetzelfde samenvoegingsbeleid delen als het publiek dat de exportactie heeft geactiveerd. Als een profiel voor het **Klant met DeLorean Auto&#39;s** segment, maar ook lid van **&quot;Terug naar de toekomst&quot;** film en **Favorieten voor science fiction** segmenten, dan zullen deze andere twee soorten publiek ook in de `segmentMembership` -object van de gegevensexport, ook al worden deze niet toegewezen in de gegevensstroom, als deze hetzelfde samenvoegbeleid delen met de **Klant met DeLorean Auto&#39;s** segment.
 

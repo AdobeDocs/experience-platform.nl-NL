@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt of opslagplaats te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in het Experience Platform en kunnen via de API voor extra updates worden opgehaald.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 1%
+source-wordcount: '808'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform Destination SDK is een reeks configuratie APIs die u t
 
 De documentatie van de Destination SDK verstrekt instructies voor u om het Adobe Experience Platform Destination SDK te gebruiken om een productievere bestemmingsintegratie met Adobe Experience Platform te vormen, te testen en vrij te geven, en uw bestemming te hebben deel van de steeds groeiende bestemmingscatalogus worden. Door Destination SDK te gebruiken, kunt u uw eigen douane privé bestemming ook tot stand brengen om gegevens uit te voeren die aan uw behoeften worden aangepast.
 
-![Schermafbeelding van de gebruikersinterface van het Experience Platform, met de doelcatalogus](assets/destinations-catalog-overview.png)
+![Schermafbeelding van de gebruikersinterface van het Experience Platform en de doelcatalogus.](assets/destinations-catalog-overview.png)
 
 ## Productie- en aangepaste integratie {#productized-custom-integrations}
 
@@ -61,7 +61,7 @@ De toegang van Destination SDK varieert gebaseerd op uw status als partner of Ex
 | Type van partner of klant | Toegang tot Destination SDK |
 ---------|----------|
 | Independent Software Vendor (ISV) | Verbinden met [Adobe Technology Partner Program](https://partners.adobe.com/technologyprogram/experiencecloud.html) en verzoek om een Experience Platform-sandbox beschikbaar te maken voor toegang tot Destination SDK. |
-| Systeemintegrator (SI) | U dient op Gold- of Platinum-niveau te zijn in de [Partnerprogramma voor Adobe-oplossing](https://solutionpartners.adobe.com/home.html)en u krijgt een sandbox met Experience Platforms en toegang tot Destination SDK. |
+| Systeemintegrator (SI) | U dient op Gold- of Platinum-niveau te zijn in de [Partnerprogramma voor Adobe-oplossing](https://solutionpartners.adobe.com/home.html) om een sandbox van een Experience Platform aan te schaffen en toegang te krijgen tot Destination SDK. |
 | De klant van het Experience Platform op de [Real-Time CDP Ultimate-pakket](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Door gebrek, krijgt u toegang tot de zandbakken van het Experience Platform en Destination SDK, die u toestaan om privé bestemmingen voor uw organisatie te bouwen. |
 
 {style="table-layout:auto"}
@@ -79,7 +79,7 @@ Het proces om uw bestemming in Experience Platform te vormen wordt hieronder ges
 7. Voor productieve integratie, zodra goedgekeurd door Adobe, zal uw integratie verschijnen in [Catalogus Experience Platform](../catalog/overview.md).
 8. Volg hetzelfde proces als u uw integratie wilt bijwerken.
 
-## Referenties  {#reference}
+## Referentie {#reference}
 
 Adobe raadt u aan de volgende documentatie van het Experience Platform te lezen en te begrijpen:
 

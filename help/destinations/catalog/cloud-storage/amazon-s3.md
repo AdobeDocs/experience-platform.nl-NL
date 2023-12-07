@@ -2,9 +2,9 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Met de release van het Experience Platform van juli 2023 [!DNL Amazon S3] doel b
 ## Verbinding maken met uw [!DNL Amazon S3] opslag via API of UI {#connect-api-or-ui}
 
 * Als u verbinding wilt maken met uw [!DNL Amazon S3] opslaglocatie via de gebruikersinterface van het platform, lees de secties [Verbinden met de bestemming](#connect) en [Soorten publiek naar dit doel activeren](#activate) hieronder.
-* Als u verbinding wilt maken met uw [!DNL Amazon S3] opslagplaats programmatically, lees de [Activeer publiek aan op dossier-gebaseerde bestemmingen door de Zelfstudie van de Dienst van de Stroom te gebruiken API](../../api/activate-segments-file-based-destinations.md).
+* Als u verbinding wilt maken met uw [!DNL Amazon S3] opslagplaats programmatically, lees de gids over hoe te [activeer publiek aan op dossier-gebaseerde bestemmingen door de Zelfstudie van de Dienst van de Stroom te gebruiken API](../../api/activate-segments-file-based-destinations.md).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -47,7 +47,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 {style="table-layout:auto"}
 
-![Exporttype op basis van Amazon S3-profielen](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Op Amazon S3-profielen gebaseerd exporttype gemarkeerd in de UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Verbinden met de bestemming {#connect}
 
@@ -69,7 +69,7 @@ Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en s
 * **[!DNL Amazon S3]toegangstoets** en **[!DNL Amazon S3]geheime sleutel**: In [!DNL Amazon S3], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon S3] account. Meer informatie in het dialoogvenster [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Doelgegevens invullen {#destination-details}
 

@@ -1,12 +1,11 @@
 ---
-keywords: doelstreaming doelgroepen activeren;doelgroepen voor streaming;gegevens activeren
 title: De publieksgegevens van de activering aan het stromen bestemmingen
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het toe te wijzen aan streamingdoelen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -34,15 +33,15 @@ Als u een publiek naar een bestemming wilt activeren, moet u [verbonden met een 
 
 1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab.
 
-   ![Tabblad Doelcatalogus](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![Tabblad Doelcatalogus met verschillende streamingdoelen.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. Selecteren **[!UICONTROL Activate audiences]** op de kaart die overeenkomt met de bestemming waar u uw publiek wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-   ![Knoppen activeren](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![Activeer controle die in de catalogus van bestemmingen wordt benadrukt.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. Selecteer de doelverbinding die u wilt gebruiken om uw publiek te activeren en selecteer vervolgens **[!UICONTROL Next]**.
 
-   ![Doel selecteren](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![Een doelverbinding die in Uitgezochte bestemmingsstap wordt benadrukt.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Naar de volgende sectie gaan [uw publiek selecteren](#select-audiences).
 
@@ -56,7 +55,7 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 * **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform is gegenereerd en als CSV-bestanden naar Platform is geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
 * Andere soorten soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager].
 
-![Soorten publiek selecteren](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![Verschillende soorten publiek gemarkeerd in de stap Soorten publiek selecteren.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Kenmerken en identiteiten toewijzen {#mapping}
 
@@ -68,23 +67,23 @@ Voor sommige doelstreamingdoelen voor het publiek moet u bronkenmerken of naamru
 
 1. In de **[!UICONTROL Mapping]** pagina, selecteert u **[!UICONTROL Add new mapping]**.
 
-   ![Nieuwe toewijzing toevoegen](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![Nieuwe gemarkeerde toewijzingsbesturingselement toevoegen.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. Selecteer de pijl rechts van de knop **[!UICONTROL Source field]** vermelding.
 
-   ![Bronveld selecteren](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![Selecteer het besturingselement voor het bronveld gemarkeerd.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. In de **[!UICONTROL Select source field]** pagina gebruiken **[!UICONTROL Select attributes]** of de **[!UICONTROL Select identity namespace]** opties voor het schakelen tussen de twee categorieën beschikbare bronvelden. Via de beschikbare [!DNL XDM] profielkenmerken en naamruimten, selecteer de kenmerken die u wilt toewijzen aan het doel en kies vervolgens **[!UICONTROL Select]**.
 
-   ![Bronveldpagina selecteren](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![Selecteer de pagina met bronvelden waarop verschillende beschikbare bronvelden worden weergegeven.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. Selecteer de knop rechts van de knop **[!UICONTROL Target field]** vermelding.
 
-   ![Doelveld selecteren](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![Selecteer gemarkeerd doelveld.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. In de **[!UICONTROL Select target field]** pagina, selecteert u de naamruimte van de doelidentiteit waaraan u het bronveld wilt toewijzen en kiest u **[!UICONTROL Select]**.
 
-   ![Doelveldpagina selecteren](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![Selecteer de pagina met doelvelden met de beschikbare opties voor de toewijzingen van doelvelden.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. Herhaal stap 1 tot en met 5 om meer toewijzingen toe te voegen.
 
@@ -97,7 +96,7 @@ Voor sommige doelstreamingdoelen voor het publiek moet u bronkenmerken of naamru
 
 Wanneer u ongehashte bronkenmerken toewijst aan doelkenmerken die de bestemming verwacht te worden gehasht (bijvoorbeeld: `email_lc_sha256` of `phone_sha256`), controleert u **Transformatie toepassen** als u wilt dat Adobe Experience Platform de bronkenmerken bij activering automatisch hasht.
 
-![Identiteitskaart](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Transformatiebeheer toepassen dat is gemarkeerd in de stap Identiteitstoewijzing.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Het exporteren van publiek plannen {#scheduling}
 
@@ -114,19 +113,19 @@ Als u alle soorten publiek wilt zien die op uw doel worden geactiveerd, gebruikt
 
 1. Op de **[!UICONTROL Audience schedule]** pagina, selecteert u elk publiek en gebruikt u vervolgens de **[!UICONTROL Start date]** en **[!UICONTROL End date]** selecteurs om het tijdinterval voor het verzenden van gegevens naar uw bestemming te vormen.
 
-   ![Publiek schema](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![Het filter Audience-schema is gemarkeerd.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * Voor sommige doelen moet u de **[!UICONTROL Origin of audience]** voor elk publiek, gebruikend het drop-down menu onder de kalenderselecteurs. Als deze kiezer niet in uw doel is opgenomen, slaat u deze stap over.
 
-     ![Toewijzing-id](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![Vervolgkeuzelijst Toewijzings-id gemarkeerd.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * Voor sommige doelen moet u handmatig een toewijzing maken [!DNL Platform] publiek naar zijn tegenhanger in de doelbestemming. Om dit te doen, selecteer elk publiek, dan ga overeenkomstige publiekidentiteitskaart van het bestemmingsplatform in **[!UICONTROL Mapping ID]** veld. Sla deze stap over als dit veld niet in uw bestemming is opgenomen.
 
-     ![Toewijzing-id](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![Oorsprong van vervolgkeuzelijst voor publiek gemarkeerd.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * Voor sommige doelen moet u een **[!UICONTROL App ID]** bij activering [!DNL IDFA] of [!DNL GAID] publiek. Sla deze stap over als dit veld niet in uw bestemming is opgenomen.
 
-     ![Toepassings-id](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![Toepassings-id-vervolgkeuzelijst gemarkeerd.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. Selecteren **[!UICONTROL Next]** om naar de [!UICONTROL Review] pagina.
 
@@ -144,7 +143,7 @@ Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en b
 
 In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, leest u informatie over [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
 
-![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
+![Een voorbeeld van een schending van een gegevensbeleid die in het activeringswerkschema wordt getoond.](../assets/common/data-policy-violation.png)
 
 ### Filter publiek {#filter-audiences}
 

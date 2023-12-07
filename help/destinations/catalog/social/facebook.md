@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1908'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Profielen activeren voor uw [!DNL Facebook] campagnes voor doelgroepen, personal
 
 U kunt deze bestemming voor publiek gebruiken die zich over richt [!DNL Facebook's] apps die worden ondersteund door [!DNL Custom Audiences], inclusief [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], en [!DNL Messenger]. De selectie van de app waarin u de campagne wilt voeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager].
 
-![Facebook-bestemming in de gebruikersinterface van Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Facebook-bestemming in de gebruikersinterface van Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Gebruiksscenario’s
 
@@ -50,7 +50,7 @@ Vervolgens kunnen ze hun offline gegevens gebruiken, inclusief de bijbehorende i
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -123,7 +123,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 > Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen.
 > De **[!UICONTROL Apply transformation]** Deze optie wordt alleen weergegeven wanneer u kenmerken selecteert als bronvelden. Deze wordt niet weergegeven wanneer u naamruimten kiest.
 
-![Transformatie identiteitstoewijzing](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Transformatiebeheer toepassen dat is gemarkeerd in de toewijzingsstap.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Aangepaste naamruimten gebruiken {#custom-namespaces}
 
@@ -149,7 +149,7 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 
 1. Zoek het Facebook-doel in de doelcatalogus en selecteer **[!UICONTROL Set Up]**.
 2. Selecteer **[!UICONTROL Connect to destination]**.
-   ![Verifiëren voor Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![Verifieer aan de stap van Facebook die in het activeringswerkschema wordt getoond.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Voer uw Facebook-gebruikersgegevens in en selecteer **Aanmelden**.
 
 ### Doelgegevens invullen {#destination-details}
@@ -202,7 +202,7 @@ Zie [De publieksgegevens van de activering aan het stromen publiek de uitvoerbes
 
 In de **[!UICONTROL Segment schedule]** stap, moet u de [!UICONTROL Origin of audience] bij het verzenden van publiek naar [!DNL Facebook Custom Audiences].
 
-![Oorsprong facebook van het publiek](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Oorsprong van de vervolgkeuzelijst Publiek weergegeven in de activeringsstap van Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Voorbeeld van toewijzing: publieksgegevens activeren in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Doelvelden selecteren:
 > 
 >Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashkenmerken bevat, controleert u de **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] de gegevens bij activering automatisch hashen.
 
-![Identiteitskaart](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Transformatiebeheer toepassen dat is gemarkeerd in de toewijzingsstap.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -251,4 +251,4 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 Deze fout treedt op wanneer klanten nieuwe accounts gebruiken en [!DNL Facebook] machtigingen zijn nog niet actief.
 
-Als u de `400 Bad Request` foutbericht na het volgen van de stappen in [Voorwaarden voor facebook-accounts](#facebook-account-prerequisites), gelieve een paar dagen voor [!DNL Facebook] bevoegdheden om in werking te treden.
+Als u de `400 Bad Request` foutbericht na het volgen van de stappen in [Voorwaarden voor facebook-accounts](#facebook-account-prerequisites), kunt u enkele dagen [!DNL Facebook] bevoegdheden om in werking te treden.

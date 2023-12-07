@@ -2,9 +2,9 @@
 title: Verbinding Aangepast publiek twitters
 description: Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Voordat u uw [!DNL Twitter Custom Audiences] doel, zorg ervoor om de volgende Tw
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

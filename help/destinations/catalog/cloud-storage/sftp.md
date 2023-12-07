@@ -2,9 +2,9 @@
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbest
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -55,7 +55,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 {style="table-layout:auto"}
 
-![Op SFTP-profiel gebaseerd exporttype](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![Op SFTP-profiel gebaseerd exporttype dat is gemarkeerd in de catalogus met doelen.](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## Verbinden met de bestemming {#connect}
 
@@ -79,7 +79,7 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 
 Als u **[!UICONTROL SFTP with password]** verificatietype voor verbinding met uw SFTP-locatie:
 
-![Basisverificatie van SFTP-bestemming](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![De bestemming SFTP basisauthentificatie met wachtwoord.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Domain]**: Het adres van uw opslagplaats SFTP;
 * **[!UICONTROL Username]**: De gebruikersnaam die u wilt aanmelden bij uw SFTP-opslaglocatie;
@@ -87,12 +87,12 @@ Als u **[!UICONTROL SFTP with password]** verificatietype voor verbinding met uw
 * **[!UICONTROL Password]**: Het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Als u **[!UICONTROL SFTP with SSH key]** verificatietype voor verbinding met uw SFTP-locatie:
 
-![SSH-sleutelverificatie voor SFTP-bestemming](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SSH-sleutelverificatie voor SFTP-doel.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL Domain]**: Vul het IP-adres of de domeinnaam van uw SFTP-account in
 * **[!UICONTROL Port]**: De poort die wordt gebruikt door uw SFTP-opslaglocatie;
@@ -100,13 +100,13 @@ Als u **[!UICONTROL SFTP with SSH key]** verificatietype voor verbinding met uw 
 * **[!UICONTROL SSH Key]**: De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet een RSA-Geformatteerd, Base64-Gecodeerde koord zijn, en moet niet wachtwoord-beschermd zijn.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Doelgegevens {#destination-details}
 
 Na het vestigen van de authentificatieverbinding aan de plaats SFTP, verstrek de volgende informatie voor de bestemming:
 
-![Beschikbare bestemmingsdetails voor bestemming SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![De gebieden van de details van de bestemming voor de bestemming SFTP.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Ga een naam in die u helpt deze bestemming in het gebruikersinterface van het Experience Platform identificeren;
 * **[!UICONTROL Description]**: Voer een beschrijving in voor deze bestemming;

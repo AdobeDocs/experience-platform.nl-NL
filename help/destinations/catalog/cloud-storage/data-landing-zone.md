@@ -3,9 +3,9 @@ title: Bestemming landingszone gegevens
 description: Leer hoe u verbinding maakt met Data Landing Zone om het publiek te activeren en gegevenssets te exporteren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Het platform dwingt strikte tijd-aan-levende (TTL) zeven dagen op alle dossiers 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -62,11 +62,11 @@ U kunt [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/product
 
 In de [!DNL Azure Storage Explorer] UI, selecteer het verbindingspictogram in de linkernavigatiebar. De **Bron selecteren** wordt weergegeven, zodat u beschikt over opties voor het maken van een verbinding. Selecteren **[!DNL Blob container]** om verbinding te maken met uw [!DNL Data Landing Zone] opslag.
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Selecteer bron die is gemarkeerd in de Azure UI.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Selecteer vervolgens **URL voor gedeelde toegangshandtekening (SAS)** als uw verbindingsmethode, en selecteer dan **Volgende**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Selecteer verbindingsmethode die in de Azure UI wordt gemarkeerd.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Nadat u de verbindingsmethode hebt geselecteerd, moet u een **weergavenaam** en de **[!DNL Blob]SAS-URL van container** dat overeenkomt met uw [!DNL Data Landing Zone] container.
 
@@ -171,15 +171,15 @@ In het volgende antwoord worden bijgewerkte waarden voor uw `SASToken` en `SASUr
 
 Geef uw weergavenaam op (`containerName`) en [!DNL Data Landing Zone] SAS URL, zoals die in de hierboven beschreven API vraag is teruggekeerd, en dan selecteren **Volgende**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Voer verbindingsgegevens in die zijn gemarkeerd in de Azure UI.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 De **Samenvatting** wordt weergegeven en krijgt u een overzicht van uw instellingen, inclusief informatie over uw [!DNL Blob] eindpunt en toestemmingen. Indien klaar, selecteert u **Verbinden**.
 
-![samenvatting](/help/sources/images/tutorials/create/dlz/summary.png)
+![Overzicht van instellingen die worden weergegeven in de Azure UI.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Een geslaagde verbinding werkt uw [!DNL Azure Storage Explorer] UI met uw [!DNL Data Landing Zone] container.
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Overzicht van de DLZ gebruikerscontainer die in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 Met uw [!DNL Data Landing Zone] container verbonden met [!DNL Azure Storage Explorer]kunt u nu bestanden van het Experience Platform naar uw [!DNL Data Landing Zone] container. Als u bestanden wilt exporteren, moet u een verbinding tot stand brengen met de [!DNL Data Landing Zone] doel in de interface van het Experience Platform, zoals beschreven in de sectie hieronder.
 

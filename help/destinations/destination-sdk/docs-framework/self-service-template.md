@@ -2,7 +2,7 @@
 title: Zelfbedieningssjabloon voor documentatie // Vervangen door de naam van uw doel
 description: Gebruik deze sjabloon om openbare documentatie voor uw bestemming in de Adobe Experience Platform-catalogus te maken. // Vervang door de alinea in de sectie Overzicht
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Om u te helpen beter begrijpen hoe en wanneer u het *YourDestination* doel, hier
 
 *Voeg in deze sectie informatie toe over het publiek dat door uw bestemming wordt gesteund. We hebben de tabel vooraf gevuld met enkele standaardwaarden. Gebruik de `✓` en `X` tekens die aangeven of het type publiek door dit doel wordt ondersteund.*
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

@@ -3,10 +3,10 @@ title: Experience Cloud-doelgroepen
 description: Leer hoe u publiek kunt delen van Real-time Customer Data Platform naar verschillende Experience Cloud-apps.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1748'
-ht-degree: 1%
+source-wordcount: '1643'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ Als u het publiek naar andere oplossingen voor Adobe wilt sturen, gebruikt u de 
 
 >[!IMPORTANT]
 >
->Dit doel vervangt het [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) van Real-time Customer Data Platform naar diverse oplossingen voor Experiencen Cloud.
+>Dit doel vervangt het [integratie met het delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) van Real-time Customer Data Platform naar diverse oplossingen voor Experiencen Cloud.
 > 
->Als u al publiek deelt van Real-Time CDP naar Audience Manager en andere oplossingen voor Experiencen Cloud via de [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice om de oudere integratie uit te schakelen voordat u deze bestemming gebruikt.
+>Als u al publiek deelt van Real-Time CDP naar Audience Manager en andere oplossingen voor Experiencen Cloud via de [integratie met het delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice om de oudere integratie uit te schakelen voordat u deze bestemming gebruikt.
 
 ![De bestemming van het publiek van het Experience Cloud, die in de bestemmingscatalogus wordt benadrukt.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -45,9 +45,9 @@ In Audience Manager kunt u Real-Time CDP-publiek gebruiken voor het gebruik van 
 
 ### Kortere controle van het geëxporteerde publiek {#segments-control}
 
-Om te selecteren welk publiek aan Audience Manager en verder te exporteren, gebruik de nieuwe zelfbedieningspersoneel delend integratie via de bestemming van het Publiek van de Experience Cloud.  Op deze manier kunt u bepalen welk publiek u wilt delen met andere oplossingen voor Experiencen Cloud en welk publiek u uitsluitend in Real-Time CDP wilt houden.
+Om te selecteren welk publiek aan Audience Manager en verder te exporteren, gebruik de nieuwe zelf-dienst publiek-delende integratie via de bestemming van het Publiek van het Experience Cloud.  Op deze manier kunt u bepalen welk publiek u wilt delen met andere oplossingen voor Experiencen Cloud en welk publiek u uitsluitend in Real-Time CDP wilt houden.
 
-Dankzij de integratie van het oude publiek voor het delen van het publiek kon er geen korrelige controle worden verkregen over het publiek dat naar de Audience Manager en daarbuiten zou moeten worden geëxporteerd.
+De verouderde integratie met het delen van het publiek maakte geen korrelige controle mogelijk waarvan het publiek naar Audience Manager en verder moest worden uitgevoerd.
 
 ### Real-Time CDP-publiek delen met Adobe Analytics {#share-audiences-with-analytics}
 
@@ -80,7 +80,7 @@ Nochtans, adviseert de Adobe sterk het gebruiken van de volgende specifieke best
 
 ### Voor klanten die de oplossing voor het delen van het verouderde publiek gebruiken
 
-Als u al publiek deelt van Real-Time CDP naar Audience Manager en andere oplossingen voor Experiencen Cloud via de [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice om de oudere integratie uit te schakelen.
+Als u al publiek deelt van Real-Time CDP naar Audience Manager en andere oplossingen voor Experiencen Cloud via de [integratie met het delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), dient u contact op te nemen met de klantenservice om de oudere integratie uit te schakelen.
 
 De doorlooptijd om het uitstelticket op te lossen is zes werkdagen of minder. Nadat de bestaande oudere integratie is uitgeschakeld, kunt u doorgaan naar [een verbinding maken](#connect) via de zelfbedieningsdoelkaart.
 
@@ -94,7 +94,7 @@ Merk op de volgende bekende beperkingen en belangrijke callouts terwijl het gebr
 
 * Momenteel, wordt één enkele bestemming van het publiek van het Experience Cloud gesteund. Als u probeert een tweede doelverbinding te configureren, treedt er een fout op.
 * Wanneer u verbinding maakt met het doel, kunt u een optie weergeven op [gegevensstroomwaarschuwingen inschakelen](../../ui/alerts.md). Hoewel het zichtbaar is in de UI, **optie voor inschakelen van waarschuwingen wordt momenteel niet ondersteund**.
-* **Ondersteuning voor backfill voor het publiek**: De eerste export naar Audience Manager of andere oplossingen voor Experiencen Cloud omvat een historische bevolkingsgroep van het publiek. Gebruikers van de [integratie voor delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) die deze bestemming vormen zou een backfill verschil van ongeveer zes uur moeten verwachten.
+* **Ondersteuning voor backfill voor het publiek**: De eerste export naar Audience Manager of andere oplossingen voor Experiencen Cloud omvat een historische bevolkingsgroep van het publiek. Gebruikers van de [integratie met het delen van erfenis](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) die deze bestemming vormen zou een backfill verschil van ongeveer zes uur moeten verwachten.
 
 ### Latentie bij activering van publiek {#audience-activation-latency}
 

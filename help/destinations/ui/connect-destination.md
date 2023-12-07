@@ -1,12 +1,11 @@
 ---
-keywords: doel verbinden;doel verbindt;hoe te bestemming verbinden
 title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---

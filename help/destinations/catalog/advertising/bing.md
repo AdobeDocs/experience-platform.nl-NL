@@ -3,7 +3,7 @@ keywords: reclame; banden;
 title: Microsoft Bing-verbinding
 description: Met de bestemming van de Microsoft Bing-verbinding kunt u gerichte digitale campagnes doorvoeren via het gehele Microsoft Advertising Network, inclusief DisplayAdvertence, Search en Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Als markator wil ik het publiek kunnen gebruiken dat is opgebouwd uit [!DNL Micr
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

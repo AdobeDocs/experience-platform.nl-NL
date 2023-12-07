@@ -3,9 +3,9 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Naadloos gegevens van het publiek van de Adobe doorgeven aan het luchtschip als Poortcodes voor doelgroepen binnen het luchtschip.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Voordat je een Adobe Experience Platform-publiek kunt sturen naar [!DNL Airship]
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1687'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die op d
 
 Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren die in het schermafbeelding worden benadrukt en hieronder worden vermeld.
 
-![Doelen die de uitvoer van gegevenssets ondersteunen](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![De cataloguspagina die van bestemmingen toont welke bestemmingen dataset uitvoeren steunen.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -221,7 +221,7 @@ Raadpleeg de productbeschrijvingsdocumenten om te begrijpen hoeveel gegevens u p
 
 De gegevensuitvoerrechten voor verschillende aanvragen zijn niet additief. Dit betekent bijvoorbeeld dat als u Real-Time CDP Ultimate en Adobe Journey Optimizer Ultimate koopt, de uitvoerrechten voor profielen de hoogste van de twee rechten zijn, zoals beschreven in de productbeschrijvingen. Uw volumeregelingen worden berekend door het totale aantal gelicentieerde profielen te nemen en te vermenigvuldigen met 500 kB voor Real-Time CDP Premium of 700 kB voor Real-Time CDP Ultimate om te bepalen hoeveel gegevensvolume u hebt.
 
-Anderzijds, als u toe:voegen-ons zoals Gegevens Distiller koopt, vertegenwoordigt de grens van de gegevensuitvoer die u gerechtigd bent om de som van de productrij en de toe:voegen-op te stellen.
+Anderzijds, als u toe:voegen-ons zoals Gegevens Distiller kocht, vertegenwoordigt de grens van de gegevensuitvoer die u gerechtigd bent om te zijn de som van de productrij en de toe:voegen-op.
 
 U kunt uw profielexport bekijken en volgen op basis van uw contractuele limieten in het licentiedashboard.
 

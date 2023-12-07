@@ -1,11 +1,10 @@
 ---
-keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave en video 360;weergave 360;video 360;Video 360;Weergave 360;weergave en video
 title: Google Display & Video 360-verbinding
-description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
+description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om herrichtings- en doelgerichte digitale campagnes uit te voeren in verschillende bronnen voor weergave, video en mobiele inventaris.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -14,18 +13,18 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL Display & Video 360], voorheen bekend als [!DNL DoubleClick Bid Manager], is een hulpmiddel dat wordt gebruikt voor het uitvoeren van herrichtings- en doelgerichte digitale campagnes in verschillende bronnen voor weergave, video en mobiele inventaris.
+[!DNL Display & Video 360], voorheen bekend als [!DNL DoubleClick Bid Manager], is een hulpprogramma waarmee u doelgerichte digitale campagnes voor weergave, video en mobiele inventarisbronnen kunt uitvoeren.
 
 ## Doelspecificaties {#specifics}
 
 Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 360] bestemmingen:
 
 * Geactiveerd publiek wordt programmatically gecreeerd in het platform van Google.
-* De activering van publieksback-ups voor de [!DNL Google Display & Video 360] De bestemming zal 24-48 uur voorkomen nadat een publiek voor het eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is een reactie op het beleid van Google om 24 uur te wachten tot er gegevens zijn ingevoerd en is bedoeld om de overeenkomst tussen Real-Time CDP en [!DNL Google Display & Video 360]. Merk op dat dit een achtergrondconfiguratie is die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.
+* De activering van publieksback-ups voor de [!DNL Google Display & Video 360] De bestemming zal 24-48 uur voorkomen nadat een publiek voor het eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is een reactie op het beleid van Google om 24 uur te wachten tot er gegevens zijn ingevoerd en is bedoeld om de overeenkomst tussen Real-Time CDP en [!DNL Google Display & Video 360]. Dit is een achtergrondconfiguratie die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming wilt maken met Google Display &amp; Video 360 en de optie [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of Customer Care om ID syncs in te schakelen. Als u eerder Google-integratie in Audience Manager had ingesteld, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+>Als u uw eerste bestemming wilt maken met Google Display &amp; Video 360 en de optie [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in het verleden (met Adobe Audience Manager of andere toepassingen), dient u contact op te nemen met de Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder Google-integratie in Audience Manager had ingesteld, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -43,7 +42,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
@@ -70,7 +69,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >Aanbieding toestaan is verplicht voordat je eerste aanbieding wordt ingesteld [!DNL Google Display & Video 360] doel in Platform. Controleer of het hieronder beschreven proces voor het aanbieden van een aanbieding is voltooid door [!DNL Google] voordat u een doel maakt.
 >De uitzondering op deze regel is [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, is het niet nodig om het proces voor het toestaan van aanbiedingen opnieuw te doorlopen en je kunt doorgaan met de volgende stappen.
 
-Voordat u het dialoogvenster [!DNL Google Display & Video 360] Als u een account wilt maken in Platform, moet u contact opnemen met Google en vragen of Adobe moet worden opgenomen in de lijst met toegestane gegevensproviders en dat uw account aan de lijst van gewenste personen wordt toegevoegd. Neem contact op met Google en geef de volgende informatie op:
+Voordat u het dialoogvenster [!DNL Google Display & Video 360] Als u een account wilt maken in Platform, moet u contact opnemen met Google en vragen of Adobe moet worden opgenomen in de lijst met toegestane gegevensproviders en dat uw account moet worden toegevoegd aan de lijst van gewenste personen. Neem contact op met Google en geef de volgende informatie op:
 
 * **Account-id**: De account-id van de Adobe met Google. Account-ID: 87933855.
 * **Klant-id**: De klant-id van de Adobe met Google. Klant-id: 89690775.
@@ -97,7 +96,7 @@ while [opzetten](../../ui/connect-destination.md) voor deze bestemming moet u de
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Display & Video 360] bestemming, gelieve met uw te werken [!DNL Google Account Manager] of een Adobe die representatief is voor het accounttype dat u hebt.
+>Wanneer u een [!DNL Google Display & Video 360] doel, werken met uw [!DNL Google Account Manager] of een Adobe die representatief is voor het accounttype dat u hebt.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 

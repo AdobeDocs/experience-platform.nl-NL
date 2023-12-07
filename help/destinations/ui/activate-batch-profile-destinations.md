@@ -1,12 +1,11 @@
 ---
-keywords: activeer profielbestemmingen;activeer bestemmingen;activeer gegevens; activeer e-mail marketing bestemmingen; activeer de bestemmingen van de wolkenopslag
 title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruiken
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3620'
+source-wordcount: '3604'
 ht-degree: 0%
 
 ---
@@ -24,7 +23,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-In dit artikel wordt uitgelegd welke workflow vereist is om het publiek te activeren in op Adobe Experience Platform-batchprofielen gebaseerde bestemmingen, zoals cloudopslag en marketingdoelen voor e-mail.
+In dit artikel wordt uitgelegd welke workflow wordt vereist om het publiek in Adobe Experience Platform te activeren voor batchbestanddoelen, zoals cloudopslag en marketingdoelen voor e-mail.
 
 ## Vereisten {#prerequisites}
 
@@ -46,15 +45,15 @@ Selecteer de gewenste bestandsindeling voor het exporteren wanneer [verbinding m
 
 1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteert u de **[!UICONTROL Catalog]** tab.
 
-   ![Afbeelding die aangeeft hoe u het tabblad Doelcatalogus kunt openen](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![Afbeelding die aangeeft hoe u het tabblad Doelcatalogus kunt openen.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Selecteren **[!UICONTROL Activate audiences]** op de kaart die overeenkomt met de bestemming waar u uw publiek wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-   ![Afbeelding die de knop Soorten publiek activeren markeert](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![Activeer de besturingselementen voor doelgroepen die in de cataloguspagina zijn gemarkeerd.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Selecteer de doelverbinding die u wilt gebruiken om uw publiek te activeren en selecteer vervolgens **[!UICONTROL Next]**.
 
-   ![Afbeelding die aangeeft hoe een of meerdere doelen moeten worden geselecteerd om het publiek te activeren](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![Selectievakjes gemarkeerd om een of meerdere doelen te selecteren waarnaar het publiek moet worden geactiveerd.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Naar de volgende sectie gaan [uw publiek selecteren](#select-audiences).
 
@@ -68,7 +67,7 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 * **[!UICONTROL Custom upload]**: Soorten publiek dat buiten het Experience Platform is gegenereerd en als CSV-bestanden naar Platform is geüpload. Raadpleeg de documentatie over [een publiek importeren](../../segmentation/ui/overview.md#import-audience).
 * Andere soorten soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager].
 
-![Afbeelding markeren hoe een of meer soorten publiek moeten worden geselecteerd om te activeren](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Selectievakjes worden weergegeven wanneer u een of meer soorten publiek selecteert om te activeren.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 >title="Schema"
 >abstract="Gebruik het potloodpictogram om het bestandstype (volledige bestanden of incrementele bestanden) en de exportfrequentie in te stellen."
 
-[!DNL Adobe Experience Platform] exporteert gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van [!DNL CSV] bestanden. In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiernamen voor elk publiek vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+[!DNL Adobe Experience Platform] exporteert gegevens voor e-mailmarketing en cloudopslagdoelen als [verschillende bestandstypen](#supported-file-formats-export). In de **[!UICONTROL Scheduling]** pagina, kunt u het programma en de dossiernamen voor elk publiek vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 >
 >Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Selecteer de **[!UICONTROL Create schedule]** knoop die aan het publiek beantwoordt dat u naar uw bestemming wilt verzenden.
+Selecteer de **[!UICONTROL Create schedule]** controle die aan het publiek beantwoordt dat u naar uw bestemming wilt verzenden.
 
-![Afbeelding die de knop Planning maken markeert](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Creeer planningscontrole die in de Plannende stap wordt benadrukt.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Volledige bestanden exporteren {#export-full-files}
 
@@ -113,14 +112,14 @@ Selecteer de **[!UICONTROL Create schedule]** knoop die aan het publiek beantwoo
 
 Selecteren **[!UICONTROL Export full files]** om het exporteren van een bestand met een volledige opname van alle profielkwalificaties voor het geselecteerde publiek te activeren.
 
-![Afbeelding van de gebruikersinterface met de schakeloptie Volledige bestanden exporteren geselecteerd.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Selectie voor het exporteren van volledige bestanden.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Gebruik de **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
    * **[!UICONTROL Once]**: plant een eenmalige, volledige bestandsexport.
    * **[!UICONTROL Daily]**: Plan de volledige bestandsexport eenmaal per dag, elke dag, op het opgegeven tijdstip.
 
-1. Gebruik de **[!UICONTROL Time]** om te selecteren of de uitvoer onmiddellijk na publieksevaluatie of op een geplande basis, op een gespecificeerde tijd zou moeten gebeuren. Wanneer u de **[!UICONTROL Scheduled]** kunt u met de kiezer de tijd van de dag kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
+2. Gebruik de **[!UICONTROL Time]** om te selecteren of de uitvoer onmiddellijk na publieksevaluatie of op een geplande basis, op een gespecificeerde tijd zou moeten gebeuren. Wanneer u de **[!UICONTROL Scheduled]** kunt u met de kiezer de tijd van de dag kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ Gebruik de **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip
 
    ![Afbeelding die de optie Scheduled markeert in de activeringsstroom voor batchbestemmingen en die de tijdkiezer weergeeft.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. Gebruik de **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden. Voor dagelijkse exportbewerkingen kunt u het beste uw begin- en einddatum instellen zodat deze aansluiten op de duur van uw campagnes op de downstreamplatforms.
+3. Gebruik de **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden. Voor dagelijkse exportbewerkingen kunt u het beste uw begin- en einddatum instellen zodat deze aansluiten op de duur van uw campagnes op de downstreamplatforms.
 
    >[!IMPORTANT]
    >
    > Wanneer u een exportinterval selecteert, wordt de laatste dag van het interval niet in de exportbewerking opgenomen. Als u bijvoorbeeld een interval van 4-11 januari selecteert, wordt het laatste bestand op 10 januari geëxporteerd.
 
-1. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
+4. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
 
 ### Incrementele bestanden exporteren {#export-incremental-files}
 
@@ -151,22 +150,22 @@ Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te a
 >
 >Het eerste geëxporteerde incrementele bestand bevat alle profielen die in aanmerking komen voor een publiek en die als backfill functioneren.
 
-![Afbeelding van de gebruikersinterface met de schakeloptie Incrementele bestanden exporteren geselecteerd.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Selectie voor het exporteren van incrementele bestanden.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Gebruik de **[!UICONTROL Frequency]** om de exportfrequentie te selecteren:
 
    * **[!UICONTROL Daily]**: plant de incrementele bestandsuitvoer eenmaal per dag, elke dag, op het door u opgegeven tijdstip.
    * **[!UICONTROL Hourly]**: schema incrementele het dossieruitvoer om de 3, 6, 8, of 12 uur.
 
-1. Gebruik de **[!UICONTROL Time]** om de tijd van de dag te kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
+2. Gebruik de **[!UICONTROL Time]** om de tijd van de dag te kiezen, in [!DNL UTC] formaat, wanneer het exporteren moet plaatsvinden.
 
-1. Gebruik de **[!UICONTROL Date]** om het interval te kiezen waarin het exporteren moet plaatsvinden. De beste manier is om uw begin- en einddatum in te stellen op de duur van uw campagnes op uw downstreamplatforms.
+3. Gebruik de **[!UICONTROL Date]** om het interval te kiezen waarin het exporteren moet plaatsvinden. De beste manier is om uw begin- en einddatum in te stellen op de duur van uw campagnes op uw downstreamplatforms.
 
    >[!IMPORTANT]
    >
    >De laatste dag van het interval wordt niet in de uitvoer opgenomen. Als u bijvoorbeeld een interval van 4-11 januari selecteert, wordt het laatste bestand op 10 januari geëxporteerd.
 
-1. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
+4. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
 
 ### Bestandsnamen configureren {#file-names}
 
@@ -215,7 +214,7 @@ Nadat u alle soorten publiek hebt geconfigureerd, selecteert u **[!UICONTROL Nex
 
 In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de bestanden die naar de doelbestemming zijn geëxporteerd. Profielkenmerken en -identiteiten selecteren voor exporteren:
 
-1. In de **[!UICONTROL Mapping]** pagina, selecteert u **[!UICONTROL Add new field]**.
+1. In de **[!UICONTROL Mapping]** pagina, selecteert u **[!UICONTROL Add new mapping]**.
 
    ![Voeg nieuwe gebiedscontrole toe die in het kaartwerkschema wordt benadrukt.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -376,7 +375,7 @@ Als u geen deduplicatie gebruikt, bevat het exportbestand de volgende items.
 
 Uitdeduplicatie door de [!DNL Email] naamruimte, bevat het exportbestand de volgende vermeldingen. Profiel B is het meest recente profiel dat in aanmerking komt voor het publiek. Het is dus de enige profiel dat wordt geëxporteerd.
 
-| Email* | PersonalEmail | firstName | lastName |
+| E-mail* | PersonalEmail | firstName | lastName |
 |---|---|---|---|
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
@@ -434,7 +433,7 @@ Meer informatie over [exportgedrag profiel voor op bestanden gebaseerde doelen](
 
 Het selecteren van naamruimten voor exporteren, zoals wordt weergegeven in de onderstaande afbeelding, wordt momenteel niet ondersteund. Als u naamruimten selecteert die u wilt exporteren, wordt een fout weergegeven in het dialoogvenster **[!UICONTROL Review]** stap.
 
-![Niet-ondersteunde toewijzing van identiteitsuitvoer](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Niet-ondersteunde toewijzing die identiteitsexport weergeeft.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 Als tijdelijke oplossing kunt u:
 * Gebruik de oude opslagdoelen van de cloud voor de dataflows waar u naamruimten wilt opnemen in de exportbewerkingen
@@ -517,7 +516,7 @@ Selecteren **[!UICONTROL Next]** om naar [Controleren](#review) stap.
 
 Op de **[!UICONTROL Review]** , kunt u een overzicht van uw selectie zien. Selecteren **[!UICONTROL Cancel]** om de stroom op te delen, **[!UICONTROL Back]** om uw instellingen te wijzigen, of **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
-![Selectieoverzicht in de revisiestap.](../assets/ui/activate-batch-profile-destinations/review.png)
+![Selectieoverzicht weergegeven in de revisiestap.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ Als uw organisatie is aangeschaft **Adobe Gezondheidsschild** of **Privacy- en b
 
 In de **[!UICONTROL Review]** stap, controleert het Experience Platform ook om het even welke schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe u beleidsovertredingen kunt oplossen, leest u informatie over [beleidsovertredingen voor gegevensgebruik](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de sectie Documentatie inzake gegevensbeheer.
 
-![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
+![Een voorbeeld van een schending van gegevensbeleid dat in de activeringswerkstroom wordt getoond.](../assets/common/data-policy-violation.png)
 
 ### Filter publiek {#filter-audiences}
 

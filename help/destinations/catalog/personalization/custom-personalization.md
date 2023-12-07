@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaring met aangepaste bestemm
 title: Aangepaste verpersoonlijkingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats lopen een manier om publieksinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het gebruikersprofiellidmaatschap wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '871'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, **[!UICONTROL Custom Personalization]** doel vereist dat u de [Edge Network Server-API](/help/server-api/overview.md) wanneer het vormen van de bestemming voor op attribuut-gebaseerde verpersoonlijking. Alle API-aanroepen van de server moeten in een [geverifieerde context](../../../server-api/authentication.md).
+>Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, moet u [Edge Network Server-API](/help/server-api/overview.md) wanneer het vormen van **[!UICONTROL Custom Personalization]** doel voor op attribuut-gebaseerde verpersoonlijking. Alle API-aanroepen van de server moeten in een [geverifieerde context](../../../server-api/authentication.md).
 >
 ><br>Als u reeds SDK van het Web of Mobiele SDK voor uw integratie gebruikt, kunt u attributen via de Server API terugwinnen door een server-zijintegratie toe te voegen.
 >
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Deze bestemming verstrekt een manier om publieksinformatie van Adobe Experience Platform aan externe verpersoonlijkingsplatforms, inhoudsbeheersystemen, en servers, en andere toepassingen terug te winnen die op klantenwebsites lopen.
+Stel deze bestemming in om externe personalisatieplatforms, contentbeheersystemen en servers en andere toepassingen die op websites van klanten worden uitgevoerd, toe te staan om publieksinformatie van Adobe Experience Platform op te halen.
 
 ## Vereisten {#prerequisites}
 
@@ -43,7 +43,7 @@ Deze integratie wordt aangedreven door de [Adobe Experience Platform Web SDK](..
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

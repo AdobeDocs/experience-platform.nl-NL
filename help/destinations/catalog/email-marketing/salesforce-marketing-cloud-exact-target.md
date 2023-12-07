@@ -1,12 +1,11 @@
 ---
-keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;salesforce;api salesforce marketing cloudbestemming
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2983'
-ht-degree: 1%
+source-wordcount: '2803'
+ht-degree: 0%
 
 ---
 
@@ -94,7 +93,7 @@ Aangezien deze bestemming toegang tot vereist `[!DNL data extension]`, moet u ze
 
 ![De gebruikersinterface van de Salesforce-Marketing Cloud geeft de extensie van e-mailgegevens weer met toegestane machtigingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
-Om het niveau van toegang te beperken, kunt u individuele toegang ook met voeten treden door korrelvoorrechten te gebruiken.
+Om het niveau van toegang te beperken, kunt u individuele toegang ook met voeten treden door korrelige voorrechten te gebruiken.
 ![De gebruikersinterface van de Salesforce-Marketing Cloud geeft de extensie van de e-mailgegevens weer met korrelige machtigingen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 Zie de [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) en [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) pagina&#39;s voor gedetailleerde begeleiding.
@@ -106,8 +105,8 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL (API) Sales
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | Subdomein | Zie [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce Marketing Cloud] interface. | Als uw [!DNL Salesforce Marketing Cloud] domain is<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>u moet verstrekken `mcq4jrssqdlyc4lph19nnqgzzs84` als de waarde. |
-| Client-id | Zie de [!DNL Salesforce Marketing Cloud] [documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce Marketing Cloud] interface. | r23kxxxxxxxx0z05xxxxxx |
-| Clientgeheim | Zie de [!DNL Salesforce Marketing Cloud] [documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce Marketing Cloud] interface. | ipxxxxxxxxxxT4xxxxxxxxxx |
+| Client-id | Zie de [!DNL Salesforce Marketing Cloud] [documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce Marketing Cloud] interface. | r23kxxxxxx0z05xxxxxx |
+| Clientgeheim | Zie de [!DNL Salesforce Marketing Cloud] [documentatie](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) om te leren hoe u deze waarde kunt verkrijgen via de opdracht [!DNL Salesforce Marketing Cloud] interface. | ipxxxxxxxxT4xxxxxxxx |
 
 {style="table-layout:auto"}
 
@@ -134,7 +133,7 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL (API) Sales
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
-In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|

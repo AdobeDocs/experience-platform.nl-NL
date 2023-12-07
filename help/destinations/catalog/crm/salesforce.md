@@ -3,9 +3,9 @@ keywords: crm;CRM;crm bestemmingen;salesforce crm;salesforce crm bestemming
 title: Salesforce CRM-verbinding
 description: Met de Salesforce CRM-bestemming kunt u uw accountgegevens exporteren en deze activeren in Salesforce CRM voor uw zakelijke behoeften.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3010'
+source-wordcount: '2711'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is een populair CRM-platform (Customer Relationship Management) en biedt ondersteuning voor het volgende:
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is een populair CRM-platform (Customer Relationship Management) dat de hieronder beschreven typen profielen ondersteunt:
 
 * [Leads](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - Een voorbeeld is de naam van een persoon of bedrijf die (of niet) geïnteresseerd kan zijn in de producten of diensten die u verkoopt.
 * [Contactpersonen](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - Een contactpersoon is een persoon met wie een van uw vertegenwoordigers een relatie tot stand heeft gebracht en gekwalificeerd is als potentiële klant.
@@ -27,7 +27,7 @@ Wanneer [activeren, segmenten](#activate), kunt u tussen leads of contactpersone
 
 ## Gebruiksscenario’s {#use-cases}
 
-Als markeerteken kunt u uw gebruikers een persoonlijke ervaring bieden op basis van kenmerken uit hun Adobe Experience Platform-profielen. U kunt een publiek maken van uw offline gegevens en dit publiek naar Salesforce CRM sturen, zodat het in de feeds van de gebruiker wordt weergegeven zodra het publiek en de profielen in Adobe Experience Platform worden bijgewerkt.
+Als markeerteken kunt u uw gebruikers een persoonlijke ervaring bieden op basis van kenmerken uit hun Adobe Experience Platform-profielen. U kunt publiek van uw off-line gegevens bouwen en deze toehoorders naar Salesforce CRM verzenden, om het lidmaatschap van CRM bij te werken zodra het publiek en de profielen in Adobe Experience Platform worden bijgewerkt.
 
 ## Vereisten {#prerequisites}
 
