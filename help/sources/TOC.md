@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
-source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
+source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 7%
+source-wordcount: '993'
+ht-degree: 6%
 
 ---
 
@@ -35,10 +35,10 @@ ht-degree: 7%
          - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
          - [Handleiding voor verificatie van Marketo&#39;s Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Advertising {#advertising}
+   - Reclame {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
       - [Pinterest Adds](connectors/advertising/pinterest-ads.md)
-   - Analytics {#analytics}
+   - Analyse {#analytics}
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
@@ -91,6 +91,8 @@ ht-degree: 7%
       - [Snowflake Streaming-aansluiting](connectors/databases/snowflake-streaming.md)
       - [Snowflake-aansluiting](connectors/databases/snowflake.md)
       - [Teradata Vantage-connector](connectors/databases/teradata-vantage.md)
+   - Gegevenspartner {#data-partner}
+      - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Schopify](connectors/ecommerce/shopify.md)
@@ -115,10 +117,10 @@ ht-degree: 7%
       - [HTTP API-connector](connectors/streaming/http.md)
 - API-zelfstudies {#api-tutorials}
    - Een basisverbinding maken {#create}
-      - Advertising {#advertising}
+      - Reclame {#advertising}
          - [Google Adds](tutorials/api/create/advertising/ads.md)
          - [Pinterest Adds](tutorials/api/create/advertising/pinterest-ads.md)
-      - Analytics {#analytics}
+      - Analyse {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
       - Cloud-opslag {#cloud-storage}
@@ -233,10 +235,10 @@ ht-degree: 7%
          - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Aangepaste Marketo-activiteiten](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Advertising {#advertising}
+      - Reclame {#advertising}
          - [Google Adds](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Adds](tutorials/ui/create/advertising/pinterest-ads.md)
-      - Analytics {#analytics}
+      - Analyse {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
@@ -289,6 +291,8 @@ ht-degree: 7%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
+      - Gegevenspartner {#data-partner}
+         - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
