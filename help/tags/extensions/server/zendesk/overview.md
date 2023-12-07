@@ -2,7 +2,7 @@
 title: Zendesk event forward extension
 description: Zendesk event forward extension for Adobe Experience Platform.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # [!DNL Zendesk] Overzicht van de API-extensie voor gebeurtenissen
 
-[Zendesk](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel. De Zendesk [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) extensie gebruikt de [[!DNL Zendesk Events API]](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) om gebeurtenissen van het Adobe Experience Platform Edge Network naar Zendesk te verzenden voor verdere verwerking. U kunt de uitbreiding gebruiken om de interactie van het klantenprofiel voor gebruik in stroomafwaartse analyse en actie te verzamelen.
+[Zendesk](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel. De Zendesk [gebeurtenis doorsturen](../../../ui/event-forwarding/overview.md) extensie gebruikt de [[!DNL Zendesk Events API]](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) om gebeurtenissen van het Adobe Experience Platform Edge Network naar Zendesk te verzenden voor verdere verwerking. U kunt de uitbreiding gebruiken om de interactie van het klantenprofiel voor gebruik in stroomafwaartse analyse en actie te verzamelen.
 
 In dit document wordt beschreven hoe u de extensie in de gebruikersinterface kunt installeren en configureren.
 
@@ -66,7 +66,7 @@ Deze gegevenselementen moeten worden toegewezen zoals hieronder wordt vermeld.
 
 ### `event` toetsen
 
-`event` is een JSON-object dat de gebeurtenis vertegenwoordigt die door de gebruiker wordt geactiveerd. Raadpleeg het Zendesk-document op het tabblad [anatomie van een gebeurtenis](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/) voor meer informatie over de eigenschappen die door de `event` object.
+`event` is een JSON-object dat de gebeurtenis vertegenwoordigt die door de gebruiker wordt geactiveerd. Raadpleeg het Zendesk-document op het tabblad [anatomie van een gebeurtenis](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/) voor meer informatie over de eigenschappen die door de `event` object.
 
 Naar de volgende toetsen kan worden verwezen binnen de `event` object bij toewijzing aan gegevenselementen:
 
@@ -82,7 +82,7 @@ Naar de volgende toetsen kan worden verwezen binnen de `event` object bij toewij
 
 >[!NOTE]
 >
->Zie de [[!DNL Zendesk Events API] documentatie](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) voor aanvullende informatie over eigenschappen van gebeurtenissen.
+>Zie de [[!DNL Zendesk Events API] documentatie](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) voor aanvullende informatie over eigenschappen van gebeurtenissen.
 
 ### `profile` toetsen
 
@@ -147,10 +147,10 @@ Tijdens het gebruik of het configureren van de extensie kunnen de onderstaande f
 
 In dit document wordt beschreven hoe u de Zendesk-gebeurtenis kunt installeren en configureren voor het doorsturen van de extensie in de gebruikersinterface. Raadpleeg de officiële documentatie voor meer informatie over het verzamelen van gebeurtenisgegevens in Zendesk:
 
-* [Aan de slag met gebeurtenissen](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
+* [Aan de slag met gebeurtenissen](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
 * [Zendesk Events API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
-* [Informatie over de API voor gebeurtenissen](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
-* [Anatomie van een gebeurtenis](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
+* [Informatie over de API voor gebeurtenissen](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
+* [Anatomie van een gebeurtenis](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
 * [Zendesk Profiles API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
 * [De API voor profielen](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
 * [Anatomie van een profiel](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

@@ -1,11 +1,11 @@
 ---
-title: Insluitcodes testen met Adobe Experience Platform Debugger
-description: Leer hoe u met Foutopsporing op Platform verschillende insluitcodes voor Adobe Experience Platform op uw website lokaal kunt testen.
+title: Ingesloten codes testen met Adobe Experience Platform Debugger
+description: Leer hoe u met Platform Debugger verschillende insluitcodes voor Adobe Experience Platform op uw website lokaal kunt testen.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 3%
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
@@ -15,30 +15,29 @@ ht-degree: 3%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Raadpleeg het volgende [document](../../term-updates.md) voor een geconsolideerde referentie van de terminologische wijzigingen.
 
-Als u wijzigingen aanbrengt in uw tagbibliotheek die in Adobe Experience Platform is gemaakt, moet u deze wijzigingen testen voordat u de build implementeert in uw productieomgeving. Als u geen specifieke testomgeving of ontwikkelomgeving voor uw website hebt, kunt u Adobe Experience Platform Debugger gebruiken om verschillende insluitcodes op uw site lokaal te testen.
+Als u wijzigingen aanbrengt in uw tagbibliotheek die in Adobe Experience Platform is gemaakt, moet u deze wijzigingen testen voordat u de build implementeert in uw productieomgeving. Als u geen specifieke testomgeving of ontwikkelomgeving voor uw website hebt, kunt u Adobe Experience Platform Debugger gebruiken om verschillende insluitcodes in uw site lokaal te testen.
 
 ## Vereisten
 
 Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en insluitcodes voor tags. Zie de [Overzicht van omgevingen](./environments.md) voor meer informatie .
 
-Deze zelfstudie vereist ook dat u de browserextensie van Foutopsporing voor Platforms hebt geïnstalleerd. Foutopsporing voor Platforms is alleen beschikbaar voor Chrome- en Firefox-browsers. Gebruik een van de volgende koppelingen om de extensie te installeren voordat u de zelfstudie start:
+Deze zelfstudie vereist ook dat u de browserextensie van Foutopsporing voor platform hebt geïnstalleerd. Foutopsporing van platform is beschikbaar voor browser Chrome. Gebruik de volgende koppeling om de extensie te installeren voordat u de zelfstudie start:
 
-* [Foutopsporing Platform voor Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Foutopsporing voor Platform voor Firefox](https://addons.mozilla.org/nl/firefox/addon/adobe-experience-platform-dbg/)
+* [Platform Debugger voor Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-## Foutopsporing Platform openen op uw website
+## Platformfoutopsporing openen op uw website
 
-Navigeer met de browser van uw keuze naar uw website en open de extensie Foutopsporing Platform. De site waarmee Foutopsporing op Platform is verbonden, wordt onder in het venster weergegeven. Als er momenteel tags op uw site worden uitgevoerd, wordt deze weergegeven in de [!UICONTROL Summary] tab.
+Navigeer met de browser van uw keuze naar uw website en open de extensie Platform Debugger. De site waarmee Platform Debugger momenteel is verbonden, wordt onder in het venster weergegeven. Als er momenteel tags op uw site worden uitgevoerd, wordt deze weergegeven in de [!UICONTROL Summary] tab.
 
 ![](./images/embed-code-testing/summary.png)
 
 >[!NOTE]
 >
->Als Foutopsporing op Platform in eerste instantie geen verbinding maakt, moet u mogelijk het browsertabblad opnieuw laden dat uw website weergeeft voordat u het opnieuw probeert.
+>Als Platform Debugger aanvankelijk geen verbinding maakt, moet u mogelijk het browsertabblad dat uw website weergeeft opnieuw laden voordat u het opnieuw probeert.
 
 ## Insluitcodes vervangen
 
-Als Foutopsporing Platform verbinding heeft met uw site, selecteert u **[!UICONTROL Launch]** in de linkernavigatie. Hier ziet u informatie over de bibliotheek die momenteel op uw site wordt uitgevoerd, inclusief de omgeving en bijbehorende extensies. Selecteer **[!UICONTROL Configuration]** om besturingselementen voor het beheren van insluitcodes weer te geven.
+Als Foutopsporing van platform verbinding heeft met uw site, selecteert u **[!UICONTROL Launch]** in de linkernavigatie. Hier ziet u informatie over de bibliotheek die momenteel op uw site wordt uitgevoerd, inclusief de omgeving en bijbehorende extensies. Van hier, selecteer **[!UICONTROL Configuration]** besturingselementen voor het beheren van insluitcodes weergeven.
 
 ![](./images/embed-code-testing/launch-tab.png)
 
@@ -58,4 +57,4 @@ De **[!UICONTROL Configuration]** wordt opnieuw weergegeven, zodat u kunt zien d
 
 ## Volgende stappen
 
-In deze zelfstudie wordt besproken hoe u met behulp van Foutopsporing op Platform lokaal kunt schakelen tussen insluitcodes voor testdoeleinden. Zie de [Documentatie foutopsporing Platform](../../../debugger/home.md) voor meer informatie over de verschillende mogelijkheden ervan.
+Deze zelfstudie besprak hoe u lokaal kunt schakelen tussen insluitcodes voor testdoeleinden met behulp van Platform Debugger. Zie de [Documentatie bij platformfoutopsporing](../../../debugger/home.md) voor meer informatie over de verschillende mogelijkheden ervan.

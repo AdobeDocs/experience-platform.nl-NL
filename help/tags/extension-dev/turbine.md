@@ -2,9 +2,9 @@
 title: Variabele turbinevrij
 description: Leer meer over het turbineobject, een gratis variabele die specifieke informatie en hulpprogramma's voor de Adobe Experience Platform-tagruntime biedt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `turbineVersion` | De [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) in de huidige bibliotheek wordt gebruikt. |
-| `turbineBuildDate` | De ISO 8601-datum waarop de versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) in de container is gebruikt. |
+| `turbineBuildDate` | De ISO 8601-datum waarop de versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) gebruikt in de container is gemaakt. |
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
 
 {style="table-layout:auto"}
@@ -112,13 +112,13 @@ Hiermee wordt een module opgehaald die via een andere extensie is gedeeld. Als e
 turbine.logger.error('Error!');
 ```
 
-Het logboeknut wordt gebruikt om berichten aan de console te registreren. De berichten zullen slechts in de console tonen als het zuiveren door de gebruiker wordt aangezet. De geadviseerde manier om het zuiveren aan te zetten is het gebruiken van [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Als alternatief kan de gebruiker de volgende opdracht uitvoeren `_satellite.setDebug(true)` in de browserontwikkelaarsconsole. Het logger heeft de volgende methodes:
+Het logboeknut wordt gebruikt om berichten aan de console te registreren. De berichten zullen slechts in de console tonen als het zuiveren door de gebruiker wordt aangezet. De geadviseerde manier om het zuiveren aan te zetten is het gebruiken van [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Als alternatief kan de gebruiker de volgende opdracht uitvoeren `_satellite.setDebug(true)` in de browserontwikkelingsconsole. Het logger heeft de volgende methodes:
 
 * `logger.log(message: string)`: Logs a message to the console.
 * `logger.info(message: string)`: Logs an informational message to the console.
 * `logger.warn(message: string)`: Logs a warning message to the console.
 * `logger.error(message: string)`: Logs an error message to the console.
-* `logger.debug(message: string)`: Logs a zuivert bericht aan de console. (Alleen zichtbaar wanneer `verbose` het registreren wordt toegelaten binnen uw browser console.)
+* `logger.debug(message: string)`: Logs a debug message to the console. (Alleen zichtbaar wanneer `verbose` het registreren wordt toegelaten binnen uw browser console.)
 * `logger.deprecation(message: string)`: Logs een waarschuwingsbericht aan de console al dan niet de markering het zuiveren door de gebruiker wordt toegelaten.
 
 ## `onDebugChanged`
@@ -137,8 +137,8 @@ Een object met de volgende instellingen die door de gebruiker zijn gedefinieerd 
 
 * `propertySettings.domains: Array<String>`
 
-   Een array van domeinen waarop de eigenschap van toepassing is.
+  Een array van domeinen waarop de eigenschap van toepassing is.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   Extensieontwikkelaars dienen zich niet bezig te houden met deze instelling.
+  Extensieontwikkelaars dienen zich niet bezig te houden met deze instelling.

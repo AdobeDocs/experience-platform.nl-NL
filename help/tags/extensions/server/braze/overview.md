@@ -4,9 +4,9 @@ title: Braze Event Forwarding Extension
 description: Deze Adobe Experience Platform-gebeurtenis die extensie doorstuurt, verzendt Edge Network-gebeurtenissen naar Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ De extensie gebruikt twee van [!DNL Braze]API&#39;s en hun beperkingen worden hi
 
 ### Billable data points
 
-Extra aangepaste kenmerken verzenden naar [!DNL Braze] kan uw [!DNL Braze] verbruik van gegevenspunten. Raadpleeg uw [!DNL Braze] accountmanager voordat aanvullende aangepaste kenmerken worden verzonden. Zie de [!DNL Braze] documentatie over [factureerbare gegevenspunten](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) voor meer informatie .
+Extra aangepaste kenmerken verzenden naar [!DNL Braze] kan uw [!DNL Braze] verbruik van gegevenspunten. Raadpleeg uw [!DNL Braze] accountmanager voordat aanvullende aangepaste kenmerken worden verzonden. Zie de [!DNL Braze] documentatie over [factureerbare gegevenspunten](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) voor meer informatie .
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
