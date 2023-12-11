@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
+source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
 workflow-type: tm+mt
-source-wordcount: '2228'
-ht-degree: 3%
+source-wordcount: '2280'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden op basis van gedragsinzichten en klantkenmerken in de vorm van realtime klantprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
 
-Dit document bevat standaard gebruiks- en snelheidslimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
+Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
 >[!NOTE]
 >
@@ -89,10 +89,10 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximale grootte van ExperienceEvent | 10KB | Door het systeem afgedwongen geleiding | **De maximale grootte van een gebeurtenis is 10 kB.** De inname gaat door, maar alle gebeurtenissen die groter zijn dan 10 kB gaan verloren. |
-| Maximale recordgrootte profiel | 100KB | Door het systeem afgedwongen geleiding | **De maximale grootte van een profielrecord is 100 kB.** De inname gaat door, maar profielrecords die groter zijn dan 100 kB worden verwijderd. |
-| Maximale framegrootte profiel | 50MB | Door het systeem afgedwongen geleiding | **De maximale grootte van één profielfragment is 50 MB.** De segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welke ontbreken [profielfragment](#profile-fragments) dat groter is dan 50 MB. |
-| Maximale grootte voor profielopslag | 50MB | Prestatiegerichting | **De maximale grootte van een opgeslagen profiel is 50 MB.** Nieuw toevoegen [profielfragmenten](#profile-fragments) in een profiel dat groter is dan 50 MB, de systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
+| Maximale grootte van ExperienceEvent | 10 KB | Door het systeem afgedwongen geleiding | **De maximale grootte van een gebeurtenis is 10 kB.** De inname gaat door, maar alle gebeurtenissen die groter zijn dan 10 kB gaan verloren. |
+| Maximale recordgrootte profiel | 100 kB | Door het systeem afgedwongen geleiding | **De maximale grootte van een profielrecord is 100 kB.** De inname gaat door, maar profielrecords die groter zijn dan 100 kB worden verwijderd. |
+| Maximale framegrootte profiel | 50 MB | Door het systeem afgedwongen geleiding | **De maximale grootte van één profielfragment is 50 MB.** De segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welke ontbreken [profielfragment](#profile-fragments) dat groter is dan 50 MB. |
+| Maximale grootte voor profielopslag | 50 MB | Prestatiegerichting | **De maximale grootte van een opgeslagen profiel is 50 MB.** Nieuw toevoegen [profielfragmenten](#profile-fragments) in een profiel dat groter is dan 50 MB, de systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | 90 | Prestatiegerichting | **Het maximumaantal per dag ingenomen Profile of ExperienceEvent-batches is 90.** Dit houdt in dat het gecombineerde totaal van de elke dag ingeslikte Profile en ExperienceEvent batches niet meer dan 90 mag bedragen. Door extra batches in te voeren worden de systeemprestaties beïnvloed. |
 | Aantal ExperienceEvents per profielrecord | 5000 | Prestatiegerichting | **Het maximumaantal ExperienceEvents per profielrecord is 5000.** Profielen met meer dan 5000 ervaringGebeurtenissen zullen **niet** voor segmentatie in aanmerking worden genomen. |
 
@@ -102,7 +102,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Totale grootte voor alle dimensionale entiteiten | 5GB | Prestatiegerichting | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
+| Totale grootte voor alle dimensionale entiteiten | 5 GB | Prestatiegerichting | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
 | Datasets per dimensionaal eenheidschema | 5 | Prestatiegerichting | Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema. Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
 | Per dag ingenomen partijen van een Dimension-entiteit | 4 per entiteit | Prestatiegerichting | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
 
@@ -120,6 +120,7 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 | Batchpubliek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 batchdoelgroepen hebben, zolang er in elke sandbox minder dan 4000 doelgroepen aanwezig zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
 | Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt maximaal 50 accountsoorten gebruiken in een sandbox. Nadat u 50 publiek in een zandbak bereikt, **[!UICONTROL Create audience]** besturingselement is uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Meer informatie over [accountpubliek](/help/segmentation/ui/account-audiences.md). |
 | Gepubliceerde composities per sandbox | 10 | Prestatiegerichting | U kunt maximaal 10 gepubliceerde composities in een sandbox hebben. Meer informatie over [compositie van het publiek in de UI-gids](/help/segmentation/ui/audience-composition.md). |
+| Maximale doelgrootte | 30% | Prestatiegerichting | Het geadviseerde maximum lidmaatschap van een publiek is 30 percent van het totale aantal profielen in het systeem. Het is mogelijk een publiek te maken met meer dan 30% van de profielen als leden of met meerdere grote doelgroepen, maar dit heeft gevolgen voor de systeemprestaties. |
 
 {style="table-layout:auto"}
 
