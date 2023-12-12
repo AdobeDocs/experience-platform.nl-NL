@@ -2,9 +2,7 @@
 title: Maak een Merkury Enterprise Identity Resolution Source Connection en Dataflow in de gebruikersinterface
 description: Leer hoe u een Merkury Enterprise Identity Resolution-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: cc87bff5ea19e2ffc9958bd645b4736d05773e3c
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
 source-wordcount: '1944'
 ht-degree: 0%
