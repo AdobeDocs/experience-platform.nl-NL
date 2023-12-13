@@ -3,9 +3,9 @@ keywords: Experience Platform;query-service;Query-service;query
 title: Voorbeeld van gebruik van hoofdletters/kleine letters voor Adobe Experience Platform Query Service
 description: Een end-to-end voorbeeld om de veelzijdigheid en de voordelen van de Dienst van de Vraag van Adobe Experience Platform aan te tonen.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Dit document en de bijbehorende videopresentatie bieden een end-to-end workflow 
 * Manieren om de vraag te bouwen die op uw bestaande gegevensarchitectuur wordt gebaseerd.
 * Zorg voor gegevenskwaliteit die aan uw behoeften voldoet, en methoden om eventuele tekortkomingen te beperken.
 * Het proces om een vraag te plannen om bij een vastgestelde frequentie voor gebruik stroomafwaarts in segmentatie en bestemmingen voor verpersoonlijking te lopen.
-* Het gemak voor marketers om afgeleide kenmerken in hun publiek op te nemen door de kracht van [!DNL Query Service].
+* Het gemak voor marketers om afgeleide datasets in hun publiek door de macht van te omvatten [!DNL Query Service].
 
 ## Doelstellingen {#objectives}
 

@@ -1,25 +1,25 @@
 ---
-title: Hoofdlettergebruik van op decile gebaseerde afgeleide kenmerken
-description: Deze gids toont de stappen die worden vereist om de Dienst van de Vraag te gebruiken om op decile-Gebaseerde afgeleide attributen voor gebruik met uw gegevens van het Profiel tot stand te brengen.
+title: Het op decreet-gebaseerde Geval van het Gebruik van Datasets
+description: Deze gids toont de stappen die worden vereist om de Dienst van de Vraag te gebruiken om op decile-Gebaseerde afgeleide datasets voor gebruik met uw gegevens van het Profiel tot stand te brengen.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 1%
+source-wordcount: '1511'
+ht-degree: 0%
 
 ---
 
-# Gebruiksscenario voor op decile gebaseerde afgeleide kenmerken
+# Gebruiksgeval voor op een regel gebaseerde afgeleide gegevenssets
 
-De afgeleide attributen vergemakkelijken gecompliceerde gebruiksgevallen voor het analyseren van gegevens van het gegevensmeer die met andere stroomafwaartse diensten van het Platform kunnen worden gebruikt of in uw gegevens van het Profiel van de Klant in real time worden gepubliceerd.
+De afgeleide datasets vergemakkelijken gecompliceerde gebruiksgevallen voor het analyseren van gegevens van het gegevensmeer die met andere stroomafwaartse diensten van het Platform kunnen worden gebruikt of in uw gegevens van het Profiel van de Klant in real time worden gepubliceerd.
 
-In dit voorbeeldgebruik wordt getoond hoe u op decile gebaseerde afgeleide kenmerken kunt maken voor gebruik met uw gegevens in real-time klantprofiel. Gebruikend een scenario van de luchtvaartloyaliteit als voorbeeld, vertelt deze gids u hoe te om een dataset tot stand te brengen die categoriale deciles gebruikt om te segmenteren en publiek tot stand te brengen dat op gerangschikte attributen wordt gebaseerd.
+Dit voorbeeld gebruikt geval toont aan hoe te om op decile-gebaseerde afgeleide datasets voor gebruik met uw gegevens van het Profiel van de Klant in real time te creëren. Gebruikend een scenario van de luchtvaartloyaliteit als voorbeeld, vertelt deze gids u hoe te om een dataset tot stand te brengen die categoriale deciles gebruikt om te segmenteren en publiek tot stand te brengen dat op gerangschikte attributen wordt gebaseerd.
 
 De volgende belangrijke concepten worden geïllustreerd:
 
 * Schema maken voor decile bucketing.
 * Categorisch decile maken.
-* Creatie van complexe afgeleide kenmerken.
+* Opstellen van complexe afgeleide gegevenssets.
 * Berekening van tegels in een terugzoekperiode.
 * Een voorbeeldvraag om samenvoeging, rangschikking, en het toevoegen van unieke identiteiten aan te tonen om voor publiek toe te staan dat op deze decile emmers wordt geproduceerd.
 
@@ -27,22 +27,22 @@ De volgende belangrijke concepten worden geïllustreerd:
 
 Deze handleiding vereist een goed begrip van [query-uitvoering in Query-service](../best-practices/writing-queries.md) en de volgende onderdelen van Adobe Experience Platform:
 
-* [Overzicht van het realtime klantprofiel](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [Overzicht van het realtime klantprofiel](../../profile/home.md): Biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Een inleiding aan de schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) en de bouwstenen, principes, en beste praktijken voor het samenstellen van schema&#39;s.
 * [Hoe te om een schema voor het Profiel van de Klant in real time toe te laten](../../profile/tutorials/add-profile-data.md): In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe te voegen aan het realtime profiel van de klant.
-* [Een aangepast gegevenstype definiëren](../../xdm/api/data-types.md): De gegevenstypes worden gebruikt als verwijzing-type gebieden in klassen of de groepen van het schemagebied en staan voor het verenigbare gebruik van een multi-gebiedstructuur toe die overal in het schema kan worden omvat.
+* [Een aangepast gegevenstype definiëren](../../xdm/api/data-types.md): De gegevenstypen worden gebruikt als verwijzing-type gebieden in klassen of groepen van het schemagebied en staan voor het verenigbare gebruik van een multi-gebiedstructuur toe die overal in het schema kan worden omvat.
 
 ## Doelstellingen
 
-Het voorbeeld in dit document gebruikt deciles om afgeleide attributen te bouwen voor het rangschikken van gegevens van een schema van de luchtvaartloyaliteit. Met afgeleide kenmerken kunt u het nut van uw gegevens maximaliseren door een publiek te identificeren op basis van de hoogste &#39;n&#39; % voor een gekozen categorie.
+Het voorbeeld in dit document gebruikt deciles om afgeleide datasets te bouwen voor het rangschikken van gegevens van een schema van de luchtvaartloyaliteit. Met afgeleide datasets kunt u het nut van uw gegevens maximaliseren door een publiek te identificeren dat op de top &#39;n&#39; % voor een gekozen categorie wordt gebaseerd.
 
-## Op decile gebaseerde afgeleide kenmerken maken
+## Op decile gebaseerde afgeleide gegevenssets maken
 
 Om de rangschikking van deciles te bepalen die op een bepaalde afmeting en overeenkomstige metrisch wordt gebaseerd, moet een schema worden ontworpen om voor het decile knippen toe te staan.
 
 Deze gids gebruikt een dataset van de luchtvaartloyaliteit om aan te tonen hoe te om de Dienst van de Vraag te gebruiken om deciles te bouwen die op mijlen worden gebaseerd die over diverse terugkijkperiodes worden gevlogen.
 
-## De Dienst van de Vraag van het gebruik om deciles tot stand te brengen
+## De Dienst van de Vraag van het gebruik om deciles te creëren
 
 Gebruikend de Dienst van de Vraag, kunt u een dataset tot stand brengen die categorische deciles bevat, die dan kan worden gesegmenteerd om publiek tot stand te brengen dat op attributenrangschikking wordt gebaseerd. De concepten die in de volgende voorbeelden worden getoond kunnen worden toegepast om andere decile emmerdatasets tot stand te brengen, zolang een categorie wordt bepaald en metrisch beschikbaar is.
 
@@ -56,7 +56,7 @@ De aanvankelijke dataset van de luchtvaartloyaliteit voor dit voorbeeld is &quot
 
 **Voorbeeldgegevens**
 
-In de volgende tabel worden de voorbeeldgegevens in het dialoogvenster `_profilefoundationreportingstg` object dat voor dit voorbeeld wordt gebruikt. Het verstrekt context voor het gebruik van decile emmers om complexe afgeleide attributen tot stand te brengen.
+In de volgende tabel worden de voorbeeldgegevens in het dialoogvenster `_profilefoundationreportingstg` object dat voor dit voorbeeld wordt gebruikt. Het verstrekt context voor het gebruik van deegemmers om complexe afgeleide datasets tot stand te brengen.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ In de volgende tabel worden de voorbeeldgegevens in het dialoogvenster `_profile
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nieuw lid | 5000 | FLYER |
+| C435678623 | sfeldmark1vr@studiopress.com | 01-01-2022 | STATUS_MILES | Nieuw lid | 5000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILVER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILVER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | SILVER |
@@ -76,13 +76,13 @@ In de volgende tabel worden de voorbeeldgegevens in het dialoogvenster `_profile
 
 In de bovenstaande gegevens over de loyaliteit van de luchtvaartmaatschappij `.mileage` waarde bevat het aantal mijl dat een lid per vlucht aflegt. Dit gegeven wordt gebruikt om deciles voor het aantal mijlen tot stand te brengen die over levenraadplegingen en een verscheidenheid van terugzoekperiodes worden gevlogen. Voor dit doel wordt een dataset gecreeerd die deciles in een type van kaartgegevens voor elke raadplegingsperiode bevat en aangewezen decile voor elke raadplegingsperiode die onder wordt toegewezen `membershipNumber`.
 
-Creeer een &quot;Airline Loyalty Decile Schema&quot;om een decile dataset tot stand te brengen gebruikend de Dienst van de Vraag.
+Maak een &quot;Airline Loyalty Decile Schema&quot; om een decile dataset te maken met gebruik van Query Service.
 
 ![Een diagram van het &quot;Airline Loyalty Decile Schema&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
 
 ### Het schema inschakelen voor realtime-klantprofiel
 
-Gegevens die in Experience Platform worden opgenomen voor gebruik door Real-Time Klantprofiel moeten in overeenstemming zijn met [een XDM-schema (Experience Data Model) dat is ingeschakeld voor Profiel](../../xdm/ui/resources/schemas.md). Een schema kan alleen worden ingeschakeld voor Profiel als het de klasse XDM Individual Profile of XDM ExperienceEvent implementeert.
+Gegevens die in Experience Platform worden opgenomen voor gebruik door Real-Time Klantprofiel moeten voldoen aan [een XDM-schema (Experience Data Model) dat is ingeschakeld voor Profiel](../../xdm/ui/resources/schemas.md). Een schema kan alleen worden ingeschakeld voor Profiel als het de klasse XDM Individual Profile of XDM ExperienceEvent implementeert.
 
 [Laat uw schema voor gebruik in het Profiel van de Klant in real time toe gebruikend de Registratie API van het Schema](../../xdm/tutorials/create-schema-api.md) of de [Gebruikersinterface Schema-editor](../../xdm/tutorials/create-schema-ui.md).  Gedetailleerde instructies over hoe te om een schema voor Profiel toe te laten zijn beschikbaar in hun respectieve documentatie.
 
@@ -187,7 +187,7 @@ CREATE TABLE AS airline_loyality_decile
 
 Secties van de voorbeeldquery worden hieronder nader onderzocht.
 
-#### Termijnen
+#### Termijnen voor opzoeken
 
 Het gegevenstype decile bevat een emmertje voor 1, 3, 6, 9, 12, en levenlookbacks. De vraag gebruikt de raadplegingsperiodes van 1, 3, en 6 maanden, zodat zal elke sectie sommige &quot;herhaalde&quot;vragen bevatten om tijdelijke lijsten voor elke raadplegingsperiode tot stand te brengen.
 
@@ -214,9 +214,9 @@ Het blok wordt tweemaal herhaald in de sjabloon (`summed_miles_3` en `summed_mil
 
 Het is belangrijk om van de identiteit, de afmeting, en metrische kolommen voor de vraag nota te nemen (`membershipNumber`, `loyaltyStatus` en `totalMiles` respectievelijk).
 
-#### Rangorde
+#### Rangschikking
 
-Met Deciles kunt u categoriale bucketing uitvoeren. Als u het rangschikkingsnummer wilt maken, `NTILE` functie wordt gebruikt met een parameter van `10` binnen een VENSTER gegroepeerd door de `loyaltyStatus` veld. Dit resulteert in een rangorde van 1 tot 10. Stel de `ORDER BY` bepaling van de `WINDOW` tot `DESC` om ervoor te zorgen dat een `1` wordt gegeven aan de **grootste** metrisch binnen de afmeting.
+Met Deciles kunt u categoriale bucketing uitvoeren. Als u het rangschikkingsnummer wilt maken, `NTILE` functie wordt gebruikt met een parameter van `10` binnen een VENSTER gegroepeerd door de `loyaltyStatus` veld. Dit resulteert in een rangorde van 1 tot 10. Stel de `ORDER BY` bepaling van de `WINDOW` tot `DESC` om ervoor te zorgen dat een `1` wordt gegeven aan **grootste** binnen de dimensie.
 
 ```sql
 rankings_1 AS (
@@ -230,7 +230,7 @@ rankings_1 AS (
 
 #### Kaartaggregatie
 
-Met veelvoudige raadplegingsperiodes, moet u de decile emmer kaarten vooraf creëren gebruikend `MAP_FROM_ARRAYS` en `COLLECT_LIST` functies. In het voorbeeldfragment: `MAP_FROM_ARRAYS` maakt een kaart met twee toetsen (`loyaltyStatus`) en waarden (`decileBucket`). `COLLECT_LIST` retourneert een array met alle waarden in de opgegeven kolom.
+Met veelvoudige raadplegingsperiodes, moet u de decile emmer kaarten vooraf tot stand brengen gebruikend `MAP_FROM_ARRAYS` en `COLLECT_LIST` functies. In het voorbeeldfragment: `MAP_FROM_ARRAYS` maakt een kaart met twee toetsen (`loyaltyStatus`) en waarden (`decileBucket`). `COLLECT_LIST` retourneert een array met alle waarden in de opgegeven kolom.
 
 ```sql
 map_1 AS (
@@ -295,8 +295,8 @@ Een correlatie tussen het rangschikkende aantal en percentiel wordt gewaarborgd 
 
 ### De querysjabloon uitvoeren
 
-Stel de vraag in werking om de decile dataset te bevolken. U kunt de vraag als malplaatje ook bewaren en het plannen om bij een kadentie te lopen. Als de query als een sjabloon wordt opgeslagen, kan deze ook worden bijgewerkt met het patroon voor maken en invoegen dat verwijst naar het `table_exists` gebruiken. Meer informatie over het gebruik van de `table_exists`kunt u vinden in het dialoogvenster [SQL-syntaxishandleiding](../sql/syntax.md#table-exists).
+Stel de vraag in werking om de decile dataset te bevolken. U kunt de vraag als malplaatje ook bewaren en het plannen om bij een kadentie te lopen. Als de query als een sjabloon wordt opgeslagen, kan deze ook worden bijgewerkt met het patroon voor maken en invoegen dat verwijst naar het `table_exists` gebruiken. Meer informatie over het gebruik van de `table_exists`kan worden gevonden in [SQL-syntaxishandleiding](../sql/syntax.md#table-exists).
 
 ## Volgende stappen
 
-Het bovenstaande voorbeeld van het gebruik markeert de stappen waarmee u decile-kenmerken beschikbaar kunt maken in Real-Time Klantprofiel. Dit staat voor de Dienst van de Segmentatie, of via een gebruikersinterface of RESTful API, toe om publiek te kunnen produceren dat op deze decile emmers wordt gebaseerd. Zie de [Overzicht van segmentatieservice](../../segmentation/home.md) voor informatie over om, segmenten tot stand te brengen te evalueren en toegang te hebben.
+Het bovenstaande voorbeeld gebruikt benadrukt stappen om op decile-gebaseerde afgeleide datasets beschikbaar te maken in het Profiel van de Klant in real time. Dit staat voor de Dienst van de Segmentatie, of via een gebruikersinterface of RESTful API, toe om publiek te kunnen produceren dat op deze decile emmers wordt gebaseerd. Zie de [Overzicht van segmentatieservice](../../segmentation/home.md) voor informatie over om, segmenten tot stand te brengen te evalueren en toegang te hebben.

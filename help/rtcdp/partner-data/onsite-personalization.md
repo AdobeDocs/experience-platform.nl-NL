@@ -3,9 +3,9 @@ title: Onsite ervaringen voor onbekende bezoekers personaliseren met de erkennin
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '2588'
+source-wordcount: '2565'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Dit merk kiest ervoor om partnerherkenningstechnologie te gebruiken om de bezoek
 Wanneer het van plan zijn om partner-verstrekte attributen te gebruiken om gepersonaliseerde ervaringen aan uw voor authentiek verklaarde en niet voor authentiek verklaarde bezoekers te leveren, overweeg de volgende eerste vereisten in uw planningsproces:
 
 * Welke input wordt verwacht door de herkenningstechnologie van uw partner zodat kunnen zij op extra attributen laag?
-* In hoeverre bent u comfortabel om personalisatie op verschillende kanalen en voor verschillende gebruiksgevallen te leveren die op voorwaardelijk afgeleide attributen, tegenover deterministisch bevestigde attributen worden gebaseerd?
+* In hoeverre bent u comfortabel om personalisatie op verschillende kanalen en voor verschillende gebruiksgevallen te leveren die op voorwaardelijk afgeleide datasets, tegenover deterministisch bevestigde attributen worden gebaseerd?
 * Hoe moet de ervaring van een vooraf geverifieerde maar herkende bezoeker veranderen wanneer ze worden geverifieerd?
 
 ### UI-functionaliteit, platformcomponenten en Experiencen Cloud die u wilt gebruiken {#ui-functionality-and-elements}

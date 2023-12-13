@@ -2,9 +2,9 @@
 title: Gegevenssignalen bijhouden om de levenswaarde van uw klant te genereren
 description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ De volgende infografische weergave toont de cyclus van gegevensverzameling, mani
 
 ![De round-trip-infografische gegevens van observatie tot analyse tot actie.](../images/use-cases/infographic-use-case-cycle.png)
 
-Dit gebruiksgeval van begin tot eind toont aan hoe de gegevenssignalen kunnen worden gevangen en worden gewijzigd om de waarde afgeleide van de klantenlevensduur te berekenen. Deze afgeleide attributen kunnen dan op uw het profielgegevens van Real-Time CDP worden toegepast en zijn beschikbaar voor gebruik met user-defined dashboards om een dashboard voor inzicht analyse te bouwen. Via Data Distiller kunt u het Real-Time CDP-gegevensmodel voor inzichten uitbreiden en het op CLV gebaseerde kenmerk en dashboardinzichten gebruiken om een nieuw publiek te maken en het naar een gewenst doel te activeren. Deze krachtige doelgroepen kunnen dan worden gebruikt om uw volgende marketingcampagne te ondersteunen.
+Dit gebruiksgeval van begin tot eind toont aan hoe de gegevenssignalen kunnen worden gevangen en worden gewijzigd om de waarde afgeleide van de klantenlevensduur te berekenen. Deze afgeleide datasets kunnen dan op uw het profielgegevens van Real-Time CDP worden toegepast en zijn beschikbaar voor gebruik met user-defined dashboards om een dashboard voor inzicht analyse te bouwen. Via Data Distiller kunt u het Real-Time CDP-gegevensmodel voor inzichten uitbreiden en de op CLV gebaseerde datasets en dashboardinzichten gebruiken om een nieuw publiek te maken en het te activeren naar een gewenst doel. Deze krachtige doelgroepen kunnen dan worden gebruikt om uw volgende marketingcampagne te ondersteunen.
 
 Deze gids wordt ontworpen om u te helpen uw klantenervaring beter begrijpen door gegevenssignalen over zeer belangrijke aanraakpunten te meten die CLV drijven en een gelijkaardig gebruiksgeval in uw milieu uitvoeren. Het volledige proces wordt samengevat in de onderstaande afbeelding.
 
@@ -34,9 +34,9 @@ Voor deze handleiding is een goed begrip vereist van de volgende onderdelen van 
 
 Voor deze handleiding hebt u de [Data Distiller](../data-distiller/overview.md) SKU als onderdeel van uw pakketaanbieding. Neem contact op met uw vertegenwoordiger van de Adobe-service als u niet zeker weet of u dit doet.
 
-## Een afgeleid kenmerk maken {#create-derived-attribute}
+## Een afgeleide gegevensset maken {#create-derived-dataset}
 
-De eerste stap in het vestigen van uw CLV is een afgeleid attribuut van de gegevenssignalen tot stand te brengen die van gebruikersacties worden gevangen. Deze specifieke gebruikszaak wordt vastgelegd in een afzonderlijk document over een loyaliteitsregeling voor luchtvaartmaatschappijen. Zie de handleiding voor meer informatie over [Gebruik de Dienst van de Vraag om op decile gebaseerde afgeleide attributen voor gebruik met uw profielgegevens tot stand te brengen](./deciles-use-case.md). Het document bevat volledige voorbeelden en uitleg waarin de volgende stappen worden toegelicht:
+De eerste stap in het vestigen van uw CLV is een afgeleide dataset van de gegevenssignalen tot stand te brengen die van gebruikersacties worden gevangen. Deze specifieke gebruikszaak wordt vastgelegd in een afzonderlijk document over een loyaliteitsregeling voor luchtvaartmaatschappijen. Zie de handleiding voor meer informatie over [de Dienst van de Vraag van de gebruiks om op decile gebaseerde afgeleide datasets voor gebruik met uw profielgegevens te creëren](./deciles-use-case.md). Het document bevat volledige voorbeelden en uitleg waarin de volgende stappen worden toegelicht:
 
 * Creeer een schema om voor het decile emmering toe te staan.
 * Gebruik Query Service om deciles te maken.

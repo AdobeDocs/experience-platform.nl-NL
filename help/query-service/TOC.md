@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
+source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 13%
@@ -22,13 +22,13 @@ ht-degree: 13%
 - Data Distiller {#data-distiller}
    - [Overzicht](data-distiller/overview.md)
    - [Licentiegebruik](data-distiller/license-usage.md)
+   - Afgeleide datasets {#derived-datasets}
+      - [Overzicht](data-distiller/derived-datasets/overview.md)
+      - [Naadloze SQL-stroom](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Op decile gebaseerde afgeleide gegevenssets maken](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Winkel met query-versnelling {#query-accelerated-store}
       - [Verstuur versnelde vragen](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-   - Afgeleide kenmerken {#derived-attributes}
-      - [Overzicht](data-distiller/derived-attributes/overview.md)
-      - [Naadloze SQL-stroom](data-distiller/derived-attributes/seamless-sql-flow.md)
-      - [Op decile gebaseerde afgeleide kenmerken maken](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - Pijpleidingen met I/ML-functies {#ml-feature-pipelines}
       - [Overzicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Verbinding maken met Jupyter-laptops](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -43,7 +43,7 @@ ht-degree: 13%
    - [Een trended-rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
    - [Conceptanalyse](use-cases/consent-analysis.md)
    - [Levensduurwaarde van klant](use-cases/customer-lifetime-value.md)
-   - [Afgeleide kenmerken op basis van een bestand](use-cases/deciles-use-case.md)
+   - [Op decile gebaseerde afgeleide datasets](use-cases/deciles-use-case.md)
    - [Fuzzy match](use-cases/fuzzy-match.md)
    - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
    - [Bezoekers weergeven op hun paginaweergaven](use-cases/visitors-by-number-of-page-views.md)
