@@ -2,9 +2,9 @@
 title: Gegevensstromen maken en configureren
 description: Leer hoe te om uw cliënt-zijintegratie van SDK van het Web met andere producten van de Adobe en derdebestemmingen te verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2542'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ De montages van de geolocatie en van de netwerkraadpleging helpen u het niveau v
 
 Breid uit **[!UICONTROL Geolocation and network lookup]** om de hieronder beschreven instellingen te configureren.
 
-![Schermopname van de gebruikersinterface van het platform waarin het configuratiescherm van de gegevensstroom wordt weergegeven met de instellingen voor geolocatie en netwerkopzoekopdracht gemarkeerd.](assets/configure/geolookup.png)
+![Het configuratiescherm van de gegevensstroom met de geolocatie en de montages van de netwerkraadpleging benadrukt.](assets/configure/geolookup.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -63,7 +63,7 @@ De **[!UICONTROL Device Lookup]** Met instellingen kunt u apparaatspecifieke inf
 
 Breid uit **[!UICONTROL Device Lookup]** om de hieronder beschreven instellingen te configureren.
 
-![Schermopname van de gebruikersinterface van het platform die het scherm van de gegevensstroomconfiguratie met de benadrukte montages van de apparatenraadpleging toont.](assets/configure/device-lookup.png)
+![Het configuratiescherm van de gegevensstroom met de benadrukte montages van de apparatenraadpleging.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Als u vanaf hier uw gegevensstroom configureert voor Experience Platform, volgt 
 
 Nadat u een nieuwe gegevensstroom hebt geconfigureerd of een bestaande gegevensstroom hebt geselecteerd, wordt de detailpagina voor die gegevensstroom weergegeven. Hier vindt u meer informatie over de gegevensstroom, inclusief de bijbehorende id.
 
-![De pagina Details van een gemaakte gegevensstroom](assets/configure/view-details.png)
+![Detailpagina DataStream.](assets/configure/view-details.png)
 
 Vanuit het scherm met gegevensstroomdetails kunt u [toevoegen, services](#add-services) om functies in te schakelen van de Adobe Experience Cloud-producten waartoe u toegang hebt. U kunt de gegevensstroom ook uitgeven [basisconfiguratie](#create), werkt de [toewijzingsregels](./data-prep.md), [de gegevensstroom kopiëren](#copy), of deze volledig verwijderen.
 
@@ -117,11 +117,11 @@ Vanuit het scherm met gegevensstroomdetails kunt u [toevoegen, services](#add-se
 
 Selecteer op de detailpagina van een gegevensstroom de optie **[!UICONTROL Add Service]** om de beschikbare services voor die gegevensstroom toe te voegen.
 
-![Selecteer Service toevoegen om door te gaan](assets/configure/add-service.png)
+![Selecteer Service toevoegen om door te gaan.](assets/configure/add-service.png)
 
 Voor het volgende scherm, gebruik dropdown menu om de dienst te selecteren voor deze gegevensstroom te vormen. Alleen de services waartoe u toegang hebt, worden in deze lijst weergegeven.
 
-![Selecteer een service in de lijst](assets/configure/service-selection.png)
+![Selecteer een service in de lijst.](assets/configure/service-selection.png)
 
 Selecteer de gewenste service, vul de configuratieopties in die worden weergegeven en selecteer **[!UICONTROL Save]** om de dienst aan de datastream toe te voegen. Alle toegevoegde diensten verschijnen in de detailmening voor de gegevensstroom.
 
@@ -137,7 +137,7 @@ In de onderstaande subsecties worden de configuratieopties voor elke service bes
 
 Deze service bepaalt of en hoe gegevens naar Adobe Analytics worden verzonden. Meer informatie vindt u in de handleiding op [gegevens verzenden naar Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics-instellingen blokkeren](assets/configure/analytics-config.png)
+![Adobe Analytics-gegevensstroominstellingen.](assets/configure/analytics-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -148,7 +148,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Analytics worden verzonden. M
 
 Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzonden. Alles wat nodig is om gegevens naar de Audience Manager te verzenden, moet deze sectie inschakelen. De andere instellingen zijn optioneel, maar worden wel aangemoedigd.
 
-![Instellingenblok Adobe publiek beheren](assets/configure/audience-manager-config.png)
+![Adobe publiek beheert gegevensstroominstellingen.](assets/configure/audience-manager-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -167,7 +167,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzo
 
 Deze service bepaalt of en hoe gegevens naar Adobe Experience Platform worden verzonden.
 
-![Adobe Experience Platform-instellingenblok](assets/configure/platform-config.png)
+![Adobe Experience Platform-gegevensstroominstellingen.](assets/configure/platform-config.png)
 
 | Instelling | Beschrijving |
 |---| --- |
@@ -182,7 +182,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Experience Platform worden ve
 
 Deze service bepaalt of en hoe gegevens naar Adobe Target worden verzonden.
 
-![Adobe Target-instellingenblok](assets/configure/target-config.png)
+![Adobe Target-gegevensstroominstellingen.](assets/configure/target-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -195,7 +195,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Target worden verzonden.
 
 Deze service bepaalt of en hoe gegevens worden verzonden naar [gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md).
 
-![Het door:sturen van de gebeurtenis sectie van de configuratie UI](assets/configure/event-forwarding-config.png)
+![Het door:sturen van de gebeurtenis sectie van het de configuratiescherm van de gegevensstroom.](assets/configure/event-forwarding-config.png)
 
 | Instelling | Beschrijving |
 | --- | --- |
@@ -216,15 +216,15 @@ U kunt een kopie van een bestaande gegevensstroom maken en de details ervan desg
 
 Vanaf de hoofdpagina in het dialoogvenster [!UICONTROL Datastreams] werkruimte, selecteert u de ellips (**...**) voor de gegevensstroom in kwestie, dan selecteren **[!UICONTROL Copy]**.
 
-![Afbeelding die de [!UICONTROL Copy] optie die wordt geselecteerd in de lijstweergave van de gegevensstroom](assets/configure/copy-datastream-list.png)
+![Afbeelding die de optie Kopiëren weergeeft die wordt geselecteerd in de lijstweergave van de gegevensstroom.](assets/configure/copy-datastream-list.png)
 
 U kunt ook **[!UICONTROL Copy Datastream]** in de detailweergave van een bepaalde gegevensstroom.
 
-![Afbeelding die de [!UICONTROL Copy] optie die wordt geselecteerd uit de datastream detailweergave](assets/configure/copy-datastream-details.png)
+![De optie Kopiëren die wordt geselecteerd in de weergave met gegevensstroomdetails.](assets/configure/copy-datastream-details.png)
 
 Er wordt een bevestigingsdialoogvenster weergegeven waarin u wordt gevraagd een unieke naam op te geven voor de nieuwe gegevensstroom die moet worden gemaakt, en waarin u informatie kunt vinden over de configuratieopties waarover u de gegevens wilt kopiëren. Indien klaar, selecteert u **[!UICONTROL Copy]**.
 
-![Afbeelding van het bevestigingsvenster voor het kopiëren van een gegevensstroom](assets/configure/copy-datastream-confirm.png)
+![Bevestigingsdialoogvenster voor het kopiëren van een gegevensstroom.](assets/configure/copy-datastream-confirm.png)
 
 De hoofdpagina van de [!UICONTROL Datastreams] wordt de werkruimte opnieuw weergegeven met de nieuwe gegevensstroom die wordt weergegeven.
 

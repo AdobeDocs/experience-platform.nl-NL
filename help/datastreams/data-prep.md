@@ -1,13 +1,13 @@
 ---
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
-source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
-
 
 # Gegevensvoorvoegsel voor gegevensverzameling
 
@@ -154,7 +154,7 @@ Als u eigenschappen wilt vastleggen van een gegevenselement van een XDM-object, 
 
 U kunt de optie selecteren om het object als een bestand te uploaden of het onbewerkte object in het tekstvak dat wordt weergegeven plakken. Als de JSON geldig is, wordt een voorvertoningsschema weergegeven in het rechterdeelvenster. Selecteren **[!UICONTROL Next]** om door te gaan.
 
-![JSON-voorbeeld van verwachte binnenkomende gegevens](assets/data-prep/select-data.png)
+![JSON-voorbeeld van verwachte inkomende gegevens.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -171,25 +171,25 @@ De **[!UICONTROL Mapping]** wordt weergegeven, zodat u de velden in uw brongegev
 
 Als u een toewijzingsregel wilt maken, selecteert u **[!UICONTROL Add new mapping]**.
 
-![Een nieuwe toewijzing toevoegen](assets/data-prep/add-new-mapping.png)
+![Een nieuwe toewijzing toevoegen.](assets/data-prep/add-new-mapping.png)
 
 Selecteer het bronpictogram (![Bronpictogram](assets/data-prep/source-icon.png)) en selecteert u in het dialoogvenster dat wordt weergegeven het bronveld dat u wilt toewijzen in het beschikbare canvas. Als u een veld hebt gekozen, gebruikt u de opdracht **[!UICONTROL Select]** om door te gaan.
 
-![Het veld selecteren dat moet worden toegewezen in het bronschema](assets/data-prep/source-mapping.png)
+![Het veld selecteren dat in het bronschema moet worden toegewezen.](assets/data-prep/source-mapping.png)
 
 Selecteer vervolgens het schemapictogram (![Schema, pictogram](assets/data-prep/schema-icon.png)) om een vergelijkbaar dialoogvenster voor het doelgebeurtenisschema te openen. Kies het veld waaraan u de gegevens wilt toewijzen voordat u bevestigt met **[!UICONTROL Select]**.
 
-![Het veld selecteren dat moet worden toegewezen in het doelschema](assets/data-prep/target-mapping.png)
+![Het veld selecteren dat in het doelschema moet worden toegewezen.](assets/data-prep/target-mapping.png)
 
 De toewijzingspagina wordt opnieuw weergegeven met de voltooide veldtoewijzing weergegeven. De **[!UICONTROL Mapping progress]** sectie wordt bijgewerkt met het totale aantal velden dat is toegewezen.
 
-![Veld is toegewezen met voortgang weergegeven](assets/data-prep/field-mapped.png)
+![Veld is toegewezen met voortgang weerspiegeld.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Als u een array van objecten (in het bronveld) wilt toewijzen aan een array van verschillende objecten (in het doelveld), voegt u `[*]` na de arraynaam in de bron- en doelveldpaden, zoals hieronder wordt weergegeven.
 >
->![Array-objecttoewijzing](assets/data-prep/array-object-mapping.png)
+>![Toewijzing van Array-objecten.](assets/data-prep/array-object-mapping.png)
 
 ### Bestaande toewijzingsregels importeren {#import-mapping}
 
@@ -201,11 +201,11 @@ Als u eerder een gegevensstroom hebt gecreeerd, kunt u zijn gevormde toewijzings
 
 Selecteer **[!UICONTROL Import Mapping]**.
 
-![Afbeelding die de [!UICONTROL Import Mapping] knop die wordt geselecteerd](assets/data-prep/import-mapping-button.png)
+![De knop Toewijzing importeren die wordt geselecteerd.](assets/data-prep/import-mapping-button.png)
 
 Selecteer in het dialoogvenster dat wordt weergegeven de gegevensstroom waarvan u de toewijzingsregels wilt importeren. Wanneer de gegevensstroom is gekozen, selecteert u **[!UICONTROL Preview]**.
 
-![Afbeelding met een bestaande gegevensstroom die wordt geselecteerd](assets/data-prep/select-mapping-rules.png)
+![Een bestaande gegevensstroom selecteren.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Selecteer in het dialoogvenster dat wordt weergegeven de gegevensstroom waarvan 
 
 In het volgende scherm ziet u een voorvertoning van de opgeslagen toewijzingsregels voor de geselecteerde gegevensstroom. Zorg ervoor dat de weergegeven toewijzingen zijn wat u verwacht en selecteer **[!UICONTROL Import]** om de toewijzingen aan de nieuwe gegevensstroom te bevestigen en toe te voegen.
 
-![Afbeelding met de toewijzingsregels die moeten worden geïmporteerd](assets/data-prep/import-mapping-rules.png)
+![Toewijzingsregels die moeten worden geïmporteerd.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
