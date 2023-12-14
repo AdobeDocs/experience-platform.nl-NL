@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor gegevenstypen
 description: Het /datatypes eindpunt in de Registratie API van het Schema staat u toe om gegevenstypes programmatically te beheren XDM binnen uw ervaringstoepassing.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1247'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Gegevenstypen eindpunt
 
 Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als velden van het verwijzingstype in klassen of schemaveldgroepen. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Hoewel gelijkaardig aan gebiedsgroepen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd. De `/datatypes` in de [!DNL Schema Registry] Met API kunt u gegevenstypen programmatisch beheren binnen uw ervaringstoepassing.
+
+>[!NOTE]
+>
+>Als een veld is gedefinieerd als een specifiek gegevenstype, kunt u niet hetzelfde veld met een ander gegevenstype in een ander schema maken. Deze beperking geldt voor de huurder van uw organisatie.
 
 ## Aan de slag
 
@@ -35,7 +39,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarvan u gegevenstypen wilt ophalen: `global` voor gegevenstypen die door Adobe zijn gemaakt of `tenant` voor gegevenstypen die eigendom zijn van uw organisatie. |
+| `{CONTAINER_ID}` | De container waarvan u gegevenstypen wilt ophalen: `global` voor door Adoben gecreëerde gegevenstypen of `tenant` voor gegevenstypen die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de [bijgevoegd document](./appendix.md#query) voor een lijst met beschikbare parameters. |
 
 {style="table-layout:auto"}
@@ -109,7 +113,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin het gegevenstype is opgeslagen dat u wilt ophalen: `global` voor een door Adobe gemaakt gegevenstype of `tenant` voor een gegevenstype dat eigendom is van uw organisatie. |
+| `{CONTAINER_ID}` | De container waarin het gegevenstype is opgeslagen dat u wilt ophalen: `global` voor een door een Adobe gemaakt gegevenstype of `tenant` voor een gegevenstype dat eigendom is van uw organisatie. |
 | `{DATA_TYPE_ID}` | De `meta:altId` of URL-gecodeerd `$id` van het gegevenstype dat u wilt opzoeken. |
 
 {style="table-layout:auto"}

@@ -2,9 +2,9 @@
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,10 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 Als u wilt beginnen met het toevoegen van labels, moet u eerst [een bestaand schema selecteren om te bewerken](../ui/resources/schemas.md#edit) of [een nieuw schema maken](../ui/resources/schemas.md#create) om de structuur ervan weer te geven in de Schema-editor.
 
 Als u de labels voor een afzonderlijk veld wilt bewerken, selecteert u het veld op het canvas en selecteert u vervolgens **[!UICONTROL Manage access]** in het rechterspoor.
+
+>[!IMPORTANT]
+>
+>U kunt maximaal 300 labels toepassen op elk schema.
 
 ![Een veld selecteren in het canvas van de Schema-editor](../images/tutorials/labels/manage-access.png)
 

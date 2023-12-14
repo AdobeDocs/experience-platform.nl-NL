@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Beleidsgegevensmodel;Gegevensmodel;Gegevensmodel;Schema register;Schemaregister
 solution: Experience Platform
-title: Handleiding voor schema-registratie-API
+title: Handleiding voor schema-register
 description: Met de API voor het schemaregister kunnen ontwikkelaars programmatisch alle schema's en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1141'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 De [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot de Schemabibliotheek in Adobe Experience Platform, die een gebruikersinterface en RESTful API verstrekt waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn.
 
-De API van de Registratie van het Schema verstrekt verscheidene eindpunten die u toestaan om alle schema&#39;s en verwante middelen van de Gegevens van de Ervaring programmatically te beheren van het Gegevensmodel (XDM) beschikbaar aan u binnen Platform. Hieronder vallen ook de definities van Adobe, [!DNL Experience Platform] partners, en verkopers waarvan toepassingen u gebruikt.
+De API van de Registratie van het Schema verstrekt verscheidene eindpunten die u toestaan om alle schema&#39;s en verwante middelen van het Gegevensmodel van de Ervaring programmatically te beheren (XDM) beschikbaar aan u binnen Platform. Hieronder vallen ook de definities van Adobe, [!DNL Experience Platform] partners, en verkopers de waarvan toepassingen u gebruikt.
 
 Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthulplijnen voor meer informatie en raadpleeg de [gids Aan de slag](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lees steekproefAPI vraag, en meer.
 
@@ -23,13 +23,13 @@ Deze eindpunten worden hieronder beschreven. Ga naar de afzonderlijke eindpunthu
 >
 >XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Voordat u gaat werken met de API voor het schemaregister, wordt u ten zeerste aangeraden de [Officiële JSON-schemadocumentatie](https://json-schema.org/) voor een beter inzicht in deze onderliggende technologie.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de [Referentie voor schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Ga naar de [Referentie voor schema-register-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Schema&#39;s
 
-De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat van gegevens die in Platform worden opgenomen. Een schema bestaat uit een klasse en nul of meer groepen schemavelden. U kunt schema&#39;s maken, weergeven, bewerken en verwijderen met de opdracht `/schemas` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, zie [schema&#39;s eindpuntgids](./schemas.md).
+De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat van gegevens die in Platform worden opgenomen. Een schema bestaat uit een klasse en nul of meer groepen schemavelden. U kunt schema&#39;s maken, bekijken, uitgeven en schrappen gebruikend `/schemas` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, zie [schema&#39;s eindpuntgids](./schemas.md).
 
-Voor een geleidelijke gids over hoe te om een volledig schema in de Registratie API van het Schema manueel tot stand te brengen, met inbegrip van het creëren van en het toevoegen van gebiedsgroepen en gegevenstypes, zie [Zelfstudie over het maken van API-schema](../tutorials/create-schema-api.md).
+Voor een geleidelijke gids over hoe te om een volledig schema in de Registratie API van het Schema manueel te creëren, met inbegrip van het creëren van en het toevoegen van gebiedsgroepen en gegevenstypes, zie [Zelfstudie over het maken van API-schema](../tutorials/create-schema-api.md).
 
 Als u CSV-gegevens gebruikt, raadpleegt u de sectie over [CSV naar schemaomzetting](#csv-to-schema).
 
@@ -43,11 +43,15 @@ Een klasse definieert de basisstructuur van gemeenschappelijke eigenschappen die
 
 ## Veldgroepen
 
-Veldgroepen zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Zie de [eindgids voor veldgroepen](./field-groups.md) voor meer informatie over het werken met veldgroepen in de API.
+Veldgroepen zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Zie de [eindgids voor veldgroepen](./field-groups.md) om te leren werken met veldgroepen in de API.
 
 ## Datatypen
 
 Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als referentietypen in klassen of veldgroepen. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Hoewel gelijkaardig aan gebiedsgroepen in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd. Zie de [eindhulplijn gegevenstypen](./data-types.md) voor meer informatie over het werken met gegevenstypen in de API.
+
+>[!NOTE]
+>
+>Als een veld is gedefinieerd als een specifiek gegevenstype, kunt u niet hetzelfde veld met een ander gegevenstype in een ander schema maken. Deze beperking geldt voor de huurder van uw organisatie.
 
 ## Beschrijvers
 
@@ -55,9 +59,9 @@ Descriptors zijn reeksen meta-gegevens die aan specifieke gebieden binnen een sc
 
 ## Unies
 
-Terwijl het Platform u toestaat om schema&#39;s voor bepaalde gebruiksgevallen samen te stellen, staat het u ook toe om een &quot;unie&quot;van schema&#39;s samen te stellen die tot een specifieke klasse behoren. Een samenvoegingsschema voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkele vertegenwoordiging delen. Door een schema in te schakelen voor gebruik met [Klantprofiel in realtime](../../profile/home.md), wordt dat schema opgenomen in de union voor de desbetreffende klasse. Als zodanig kunnen unieschema&#39;s niet rechtstreeks worden bewerkt en alleen worden beïnvloed door het opnemen of uitsluiten van schema&#39;s voor gebruik in profiel.
+Terwijl Platform u toestaat om schema&#39;s voor bepaalde gebruiksgevallen samen te stellen, staat het u ook toe om een &quot;unie&quot;van schema&#39;s samen te stellen die tot een specifieke klasse behoren. Een samenvoegingsschema voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkele vertegenwoordiging delen. Door een schema in te schakelen voor gebruik met [Klantprofiel in realtime](../../profile/home.md), wordt dat schema opgenomen in de union voor de desbetreffende klasse. Als zodanig kunnen unieschema&#39;s niet rechtstreeks worden bewerkt en alleen worden beïnvloed door het opnemen of uitsluiten van schema&#39;s voor gebruik in profiel.
 
-Zie voor meer informatie over het weergeven van vakbonden in de API voor schemaregistratie [Punthandleiding voor vakbonden](./unions.md).
+Zie voor meer informatie over het weergeven van vakbonden in de API voor schemaregistratie [Punthulplijn voor vakbonden](./unions.md).
 
 ## CSV naar schemaomzetting {#csv-to-schema}
 
@@ -79,11 +83,11 @@ Zie de [eindgebruikershandleiding exporteren](./export.md) voor meer informatie 
 
 Als u het [export](#export) of [CSV naar schemaomzetting](./import.md) eindpunten om een exportlading te creëren, kunt u die lading naar een doelorganisatie en zandbak verzenden om de gespecificeerde middelen in te voeren.
 
-Zie de [hulplijn voor importeindpunt](./export.md) voor meer informatie over hoe u XDM-bronnen kunt genereren op basis van exportladingen.
+Zie de [hulplijn voor importeindpunt](./export.md) voor meer informatie over hoe u XDM-bronnen kunt genereren op basis van exportheffingen.
 
 ## Voorbeeldgegevens
 
-U kunt steekproefgegevens voor om het even welk gespecificeerd schema binnen de Bibliotheek van het Schema produceren. Het geretourneerde reactieobject kan vervolgens worden gebruikt als bron voor gegevensinvoer.
+U kunt voorbeeldgegevens genereren voor elk opgegeven schema in de Schemabibliotheek. Het geretourneerde reactieobject kan vervolgens worden gebruikt als bron voor gegevensinvoer.
 
 Zie de [eindgids met voorbeeldgegevens](./sample-data.md) voor meer informatie over het gebruik van dit eindpunt.
 

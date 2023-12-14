@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '4104'
+source-wordcount: '4106'
 ht-degree: 0%
 
 ---
@@ -222,7 +222,11 @@ Raadpleeg voor de meest recente lijst met beschikbare standaard XDM-veldgroepen 
 
 Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als referentieveldtypen in klassen of schema&#39;s. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Ze kunnen meerdere subvelden op dezelfde manier definiëren als veldgroepen, maar het belangrijkste verschil is dat gegevenstypen overal in een schema kunnen worden opgenomen door ze toe te voegen als het &quot;gegevenstype&quot; van een veld. Veldgroepen zijn alleen compatibel met bepaalde klassen, maar gegevenstypen kunnen in elke bovenliggende klasse of veldgroep worden opgenomen.
 
-[!DNL Experience Platform] verstrekt een aantal gemeenschappelijke gegevenstypes als deel van [!DNL Schema Registry] ondersteuning van het gebruik van standaardpatronen voor het beschrijven van gemeenschappelijke gegevensstructuren. Dit wordt nader toegelicht in de [!DNL Schema Registry] zelfstudies, waarbij het duidelijker wordt wanneer u de stappen doorloopt om gegevenstypen te definiëren.
+>[!NOTE]
+>
+>Als een veld is gedefinieerd als een specifiek gegevenstype, kunt u niet hetzelfde veld met een ander gegevenstype in een ander schema maken. Deze beperking geldt voor de huurder van uw organisatie.
+
+[!DNL Experience Platform] verstrekt een aantal gemeenschappelijke gegevenstypes als deel van [!DNL Schema Registry] ondersteuning van het gebruik van standaardpatronen voor het beschrijven van gemeenschappelijke gegevensstructuren. Dit wordt nader toegelicht in de [Zelfstudies voor schema-registratie](../tutorials/create-schema-api.md), waarbij het duidelijker wordt wanneer u door de stappen gaat om gegevenstypen te definiëren.
 
 De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de interface van het platform. Een van de velden die door de [!UICONTROL Demographic Details] veldgroep gebruikt &quot;[!UICONTROL Object]&quot; gegevenstype, zoals aangegeven door de tekst na het verticale streepje (`|`) naast de veldnaam. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
 
@@ -234,7 +238,7 @@ Voor de meest bijgewerkte lijst van beschikbare standaard XDM gegevenstypes, ver
 
 Een veld is de eenvoudigste bouwsteen van een schema. Velden bieden beperkingen met betrekking tot het type gegevens dat ze kunnen bevatten door een specifiek gegevenstype te definiëren. Deze basistypen definiëren één veld, terwijl de [gegevenstypen](#data-type) Met de eerder vermelde opties kunt u meerdere subvelden definiëren en dezelfde structuur voor meerdere velden opnieuw gebruiken in verschillende schema&#39;s. Naast het definiëren van het &quot;gegevenstype&quot; van een veld als een van de gegevenstypen die in het register zijn gedefinieerd, [!DNL Experience Platform] steunt fundamentele scalaire types zoals:
 
-* Tekenreeks
+* String
 * Geheel
 * Dubbel
 * Boolean
