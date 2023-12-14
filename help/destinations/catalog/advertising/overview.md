@@ -3,9 +3,9 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht van advertentiebestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,7 @@ Zie voor meer informatie over het verschil tussen verbindingen en extensies de [
 * [Google Customer Match-verbinding](google-customer-match.md)
 * [Microsoft Bing-verbinding](bing.md)
 * [Verbinding met pinterest Customer List](pinterest.md)
+* [PubMatic Connect-doel](pubmatic.md)
 * [(bèta) Snapchat Ads-verbinding](snap-inc.md)
 * [De verbinding van de handelsbureau](tradedesk.md)
 * [(bèta) De verbinding van de handelsbank CRM](tradedesk-emails.md)

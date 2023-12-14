@@ -4,10 +4,10 @@ user-guide-title: Handleiding voor bestemmingen
 user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 2%
+source-wordcount: '1188'
+ht-degree: 1%
 
 ---
 
@@ -91,6 +91,7 @@ ht-degree: 2%
       * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
       * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
       * [Pinterest-verbindingsupgrade](./catalog/advertising/pinterest-upgrade.md)
+      * [PubMatic Connect-verbinding](./catalog/advertising/pubmatic.md)
       * [Verbinding Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [(bèta) De verbinding van de handelsbank CRM](./catalog/advertising/tradedesk-emails.md)
@@ -228,7 +229,7 @@ ht-degree: 2%
          * [Historische profielkwalificaties](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
       * [Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen](./destination-sdk/functionality/rate-limiting-retry-policy.md)
       * [Metagegevensbeheer voor het publiek](./destination-sdk/functionality/audience-metadata-management.md)
-   * Handleidingen {#guides}
+   * Hulplijnen {#guides}
       * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/guides/configure-destination-instructions.md)
       * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/guides/submit-destination.md)
