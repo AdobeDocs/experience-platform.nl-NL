@@ -5,9 +5,9 @@ title: Een gegevensstroom voor streaming maken voor Raw-gegevens met de Flow Ser
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het overbrengen van deze gegevens naar het platform met behulp van bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -486,13 +486,15 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 
 Bekijk hieronder de voorbeeldlading voor voorbeelden van ruw of XDM-Volgzaam json die u voor opname kunt verzenden.
 
->[!TIP]
+>[!NOTE]
 >
->De volgende voorbeelden zijn van toepassing op alle drie:
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>U moet een vertraging van minstens ~5 minuten toevoegen tussen het maken van een gegevensstroom en het invoeren van streaming gegevens. Hierdoor kan de gegevensstroom volledig worden ingeschakeld, voordat er gegevens worden ingevoerd.
+
+De volgende voorbeelden zijn van toepassing op alle:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 

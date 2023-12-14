@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
 description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f94a51e22731977e120351c3b3598570666a624d
+source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -563,6 +563,10 @@ Een geslaagde reactie retourneert HTTP-status 201 met details over de nieuwe geg
 ```
 
 ## Post gegevens die aan Platform moeten worden opgenomen {#ingest-data}
+
+>[!NOTE]
+>
+>U moet een vertraging van minstens ~5 minuten toevoegen tussen het maken van een gegevensstroom en het invoeren van streaming gegevens. Hierdoor kan de gegevensstroom volledig worden ingeschakeld, voordat er gegevens worden ingevoerd.
 
 Nu u uw stroom hebt gecreeerd, kunt u uw JSON- bericht naar het het stromen eindpunt verzenden u eerder creeerde.
 
