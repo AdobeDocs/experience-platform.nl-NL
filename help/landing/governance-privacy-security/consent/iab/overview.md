@@ -4,9 +4,9 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Experience Platform
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
+source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '2505'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ De [!DNL Transparency & Consent Framework] (TCF), zoals beschreven door [!DNL In
 
 >[!NOTE]
 >
->Meer informatie over TCF 2.0 vindt u op de [IAB Europe-website](https://iabeurope.eu/tcf-2-0/), met inbegrip van ondersteunende materialen en technische specificaties.
+>Meer informatie over TCF 2.0 vindt u op de [IAB Europe-website](https://iabeurope.eu/), met inbegrip van ondersteunende materialen en technische specificaties.
 
 Adobe Experience Platform maakt deel uit van de geregistreerde [IAB TCF 2.0 leverancierslijst](https://iabeurope.eu/vendor-list-tcf/), onder de ID **565**. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gegevens voor klanttoestemming verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze toestemmingsgegevens kunnen dan in rekening worden gebracht of de profielen in uitgevoerde publiekssegmenten, afhankelijk van hun gebruiksgeval inbegrepen zijn.
 
@@ -25,24 +25,24 @@ Adobe Experience Platform maakt deel uit van de geregistreerde [IAB TCF 2.0 leve
 >
 >Platform kan slechts aan versie 2.0 van TCF (of groter) voldoen. Eerdere versies van TCF worden niet ondersteund.
 
-Dit document biedt een overzicht van hoe u uw gegevensbewerkingen en profielschema&#39;s kunt configureren om gegevens voor klanttoestemming te accepteren die door uw CMP worden gegenereerd, en hoe Platform keuzes voor gebruikerstoestemming laat zien wanneer u segmenten exporteert.
+Dit document biedt een overzicht van hoe u uw gegevensbewerkingen en profielschema&#39;s kunt configureren voor het accepteren van gegevens voor toestemming van klanten die zijn gegenereerd door uw CMP (Consent Management Platform). Ook wordt uitgelegd hoe Platform keuzes voor gebruikerstoestemming overbrengt bij het exporteren van segmenten.
 
 ## Vereisten
 
-Om deze gids te volgen, moet u een platform van het Beheer van de Toestemming (CMP), of commercieel of uw gebruiken, gebruiken dat geïntegreerd en volgzaam met IAB TCF is. Zie de [Lijst van conforme CMP&#39;s](https://iabeurope.eu/cmp-list/) voor meer informatie .
+Om deze gids te volgen, moet u CMP, of commercieel of uw gebruiken, die geïntegreerd en volgzaam met IAB TCF is. Zie de [Lijst van conforme CMP&#39;s](https://iabeurope.eu/cmp-list/) voor meer informatie .
 
 >[!IMPORTANT]
 >
->Als de id van uw CMP ongeldig is, blijven de gegevens ongewijzigd door Platform worden verwerkt. Om TCF 2.0 af te dwingen, moet u bevestigen dat uw CMP een geldige identiteitskaart heeft die met IAB TCF 2.0 is geregistreerd alvorens gegevens naar Platform te verzenden.
+>Als de id van uw CMP ongeldig is, verwerkt Platform uw gegevens ongewijzigd. Om TCF 2.0 af te dwingen, moet u bevestigen dat uw CMP een geldige identiteitskaart heeft die met IAB TCF 2.0 is geregistreerd alvorens gegevens naar Platform te verzenden.
 
 Deze gids vereist ook een werkend inzicht in de volgende diensten van het Platform:
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [Klantprofiel in realtime](../../../../profile/home.md): Hefboomwerkingen [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
+* [Klantprofiel in realtime](../../../../profile/home.md): Gebruikt [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-Time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende platformservices kunt integreren in uw klantgerichte website.
    * [Opdrachten voor SDK-toestemming](../../../../edge/consent/supporting-consent.md): Een gebruiksscenario-overzicht van de toestemmingsgerelateerde SDK-opdrachten die in deze handleiding worden getoond.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Hiermee kunt u delen [!DNL Real-Time Customer Profile] gegevens in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren als marketingstrategieën.
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Hiermee kunt u delen [!DNL Real-Time Customer Profile] gegevens in groepen personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
 
 Naast de hierboven vermelde diensten van het Platform, zou u ook vertrouwd moeten zijn met [bestemmingen](../../../../data-governance/home.md) en hun rol in het ecosysteem van het platform.
 
@@ -61,7 +61,7 @@ Het platform staat u toe om de gegevens van de klantentoestemming door het volge
 
 Naast SDK-opdrachten die worden geactiveerd door de haken voor wijziging van de CMP-toestemming, kunnen toestemmingsgegevens ook in het Experience Platform stromen via door de klant gegenereerde XDM-gegevens die rechtstreeks naar een [!DNL Profile]-enabled dataset.
 
-Alle segmenten die door Adobe Audience Manager met Platform worden gedeeld (via [!DNL Audience Manager] bronaansluiting of anderszins) kan ook toestemmingsgegevens bevatten, mits de desbetreffende velden op die segmenten zijn toegepast via [!DNL Experience Cloud Identity Service]. Voor meer informatie over het verzamelen van toestemmingsgegevens in [!DNL Audience Manager], zie het document op de [Adobe Audience Manager-insteekmodule voor IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Alle segmenten die door Adobe Audience Manager met Platform worden gedeeld (via [!DNL Audience Manager] bronaansluiting of anderszins) kan ook toestemmingsgegevens bevatten indien de desbetreffende velden op die segmenten zijn toegepast via [!DNL Experience Cloud Identity Service]. Voor meer informatie over het verzamelen van toestemmingsgegevens in [!DNL Audience Manager], zie het document op de [Adobe Audience Manager-insteekmodule voor IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 ### Goedkeuring stroomafwaarts
 
@@ -75,15 +75,15 @@ De rest van de secties in dit document verstrekken begeleiding op hoe te om Plat
 
 ## Bepalen hoe gegevens over klanttoestemming binnen uw CMP worden gegenereerd {#consent-data}
 
-Aangezien elk CMP-systeem uniek is, moet u de beste manier bepalen om uw klanten toestemming te geven wanneer ze met uw service communiceren. Een gemeenschappelijke manier om dit te bereiken is door het gebruik van een dialoog van de koekjesinstemming, gelijkend op het volgende voorbeeld:
+Aangezien elk CMP-systeem uniek is, moet u de beste manier bepalen om uw klanten toestemming te geven wanneer ze met uw service communiceren. Een dialoogvenster voor cookie-toestemming is een algemene manier om de instemming van de klant te verkrijgen. Hieronder ziet u een voorbeeld van een CMP-dialoogvenster.
 
-![](../../../images/governance-privacy-security/consent/iab/overview/cmp-dialog.png)
+![Een voorbeeld van het dialoogvenster Consent Management Platform.](../../../images/governance-privacy-security/consent/iab/overview/cmp-dialog.png)
 
 In dit dialoogvenster moet de klant de mogelijkheid hebben om in of uit te gaan van het volgende:
 
 | Goedkeuring, optie | Beschrijving |
 | --- | --- |
-| **Doelstellingen** | Doel bepaalt voor welke advertentietechnische doeleinden een merk de gegevens van een klant kan gebruiken. De volgende doeleinden moeten worden gekozen om Platform klant IDs te verwerken: <ul><li>**Doel 1**: Gegevens opslaan en/of openen op een apparaat</li><li>**Doel 10**: Producten ontwikkelen en verbeteren</li></ul> |
+| **Doelstellingen** | Doel bepaalt voor welke advertentietechnische doeleinden een merk de gegevens van een klant kan gebruiken. Voor Platform moeten de volgende doeleinden worden gekozen om klant-id&#39;s te verwerken: <ul><li>**Doel 1**: Gegevens opslaan en/of openen op een apparaat</li><li>**Doel 10**: Producten ontwikkelen en verbeteren</li></ul> |
 | **Machtigingen leverancier** | Naast technische doeleinden moet de dialoog de klant ook de mogelijkheid bieden om ervoor te kiezen om hun gegevens te gebruiken door specifieke leveranciers, waaronder Adobe Experience Platform (565). |
 
 ### Constante tekenreeksen {#consent-strings}
@@ -108,17 +108,17 @@ Raadpleeg voor meer informatie over het werken met samenvoegbeleid de [overzicht
 
 >[!NOTE]
 >
->Het gebruik van de Web SDK van het Experience Platform wordt vereist om toestemmingsgegevens in Adobe Experience Platform direct te verwerken. [!DNL Experience Cloud Identity Service] wordt momenteel niet ondersteund.
+>Het gebruik van het Web SDK van het Experience Platform wordt vereist om toestemmingsgegevens direct in Adobe Experience Platform te verwerken. [!DNL Experience Cloud Identity Service] wordt niet ondersteund.
 >
 >[!DNL Experience Cloud Identity Service] wordt echter nog steeds ondersteund voor de verwerking van toestemming in Adobe Audience Manager en naleving van TCF 2.0 vereist alleen dat de bibliotheek wordt bijgewerkt naar [versie 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
-Zodra u uw CMP hebt gevormd om toestemmingskoorden te produceren, moet u het Web SDK van het Experience Platform integreren om die koorden te verzamelen en hen te verzenden naar Platform. De Platform SDK verstrekt twee bevelen die kunnen worden gebruikt om TCF toestemmingsgegevens naar Platform (die in de hieronder subsecties worden verklaard) te verzenden, en zou moeten worden gebruikt wanneer een klant toestemmingsinformatie voor het eerst verstrekt, en om het even welk ogenblik dat de toestemming daarna verandert.
+Zodra u uw CMP hebt gevormd om toestemmingskoorden te produceren, moet u het Web SDK van het Experience Platform integreren om die koorden te verzamelen en hen te verzenden naar Platform. De Platform SDK verstrekt twee bevelen die kunnen worden gebruikt om TCF toestemmingsgegevens naar Platform (die in de hieronder subsecties worden verklaard) te verzenden. Deze bevelen zouden moeten worden gebruikt wanneer een klant toestemmingsinformatie voor het eerst verstrekt, en om het even welk ogenblik dat de toestemming daarna verandert.
 
 **De SDK interface niet met CMP&#39;s uit het vak**. Het is aan u om te bepalen hoe te om SDK in uw website te integreren, naar toestemmingsveranderingen in CMP te luisteren, en het aangewezen bevel te roepen.
 
-### Een nieuwe gegevensstroom maken
+### Een gegevensstroom maken
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een nieuwe gegevensstroom voor Platform maakt. De specifieke stappen voor hoe te om tot een nieuwe gegevensstroom te leiden worden verstrekt in [SDK-documentatie](../../../../datastreams/overview.md).
+SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een gegevensstroom voor Platform maakt. De specifieke stappen voor hoe te om een gegevensstroom tot stand te brengen worden verstrekt in [SDK-documentatie](../../../../datastreams/overview.md).
 
 Nadat u een unieke naam voor de gegevensstroom hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 
@@ -127,7 +127,7 @@ Nadat u een unieke naam voor de gegevensstroom hebt opgegeven, selecteert u de s
 | [!UICONTROL Sandbox] | De naam van het platform [sandbox](../../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling de gegevensstroom bevat. |
 | [!UICONTROL Streaming Inlet] | Een geldige streamingverbinding voor Experience Platform. Zie de zelfstudie aan [streaming verbinding maken](../../../../ingestion/tutorials/create-streaming-connection-ui.md) als u geen bestaande streaminginlaat hebt. |
 | [!UICONTROL Event Dataset] | Selecteer de [!DNL XDM ExperienceEvent] dataset die in [vorige stap](#datasets). Als u het [[!UICONTROL IAB TCF 2.0 Consent] veldgroep](../../../../xdm/field-groups/event/iab.md) in het schema van deze dataset, kunt u toestemming-verandering gebeurtenissen in tijd volgen gebruikend [`sendEvent`](#sendEvent) bevel, die dat gegevens in deze dataset opslaat. Houd er rekening mee dat de in deze gegevensset opgeslagen toestemmingswaarden **niet** gebruikt in automatische handhavingswerkstromen. |
-| [!UICONTROL Profile Dataset] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets). Wanneer wordt gereageerd op CMP visiewisselhaken met de functie [`setConsent`](#setConsent) bevel, zullen de verzamelde gegevens in deze dataset worden opgeslagen. Aangezien deze dataset profiel-toegelaten is, worden de toestemmingswaarden die in deze dataset worden opgeslagen gehouden tijdens automatische handhavingswerkschema&#39;s. |
+| [!UICONTROL Profile Dataset] | Selecteer de [!DNL XDM Individual Profile] dataset die in [vorige stap](#datasets). Wanneer wordt gereageerd op CMP visiewisselhaken met de functie [`setConsent`](#setConsent) bevel, worden de verzamelde gegevens opgeslagen in deze dataset. Aangezien deze dataset profiel-toegelaten is, worden de toestemmingswaarden die in deze dataset worden opgeslagen gehouden tijdens automatische handhavingswerkschema&#39;s. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -145,7 +145,12 @@ Nadat u de in de vorige sectie beschreven gegevensstroom hebt gemaakt, kunt u be
 
 Vele CMPs verstrekt uit-van-de-doos haken die aan toestemmings-verandering gebeurtenissen luisteren. Wanneer deze gebeurtenissen zich voordoen, kunt u de opdracht `setConsent` gebruiken om de gegevens van de toestemming van die klant bij te werken.
 
-De `setConsent` command verwacht twee argumenten: (1) een tekenreeks die het opdrachttype aangeeft (in dit geval &quot;setConsent&quot;) en (2) een payload die een `consent` array, die ten minste één object moet bevatten dat de vereiste toestemmingsvelden bevat, zoals hieronder wordt getoond:
+De `setConsent` bevel verwacht twee argumenten:
+
+1. Een tekenreeks die het opdrachttype aangeeft (in dit geval &quot;setConsent&quot;).
+1. Een lading die een `consent` array. De array moet ten minste één object bevatten dat de vereiste toestemmingsvelden bevat.
+
+De `setConsent` wordt hieronder weergegeven:
 
 ```js
 alloy("setConsent", {
@@ -163,7 +168,7 @@ alloy("setConsent", {
 | `standard` | De gebruikte toestemmingsnorm. Deze waarde moet worden ingesteld op `IAB` voor TCF 2.0 toestemmingsverwerking. |
 | `version` | Het versienummer van de krachtens `standard`. Deze waarde moet worden ingesteld op `2.0` voor TCF 2.0 toestemmingsverwerking. |
 | `value` | De basis-64-gecodeerde toestemmingstekenreeks die door CMP wordt geproduceerd. |
-| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. Om TCF 2.0 voor deze klant te dwingen, moet de waarde worden geplaatst aan `true`. Standaardwaarden: `true` indien niet gedefinieerd. |
+| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. Voor TCF 2.0 die voor deze klant moet worden afgedwongen, moet de waarde worden geplaatst aan `true`. Standaardwaarden: `true` indien niet gedefinieerd. |
 
 De `setConsent` gebruiken als onderdeel van een CMP-haak die wijzigingen in de toestemmingsinstellingen detecteert. In het volgende JavaScript ziet u hoe het `setConsent` kan worden gebruikt voor OneTrust&#39;s `OnConsentChanged` haak:
 
@@ -217,7 +222,7 @@ alloy("sendEvent", {
 | `consentStandard` | De gebruikte toestemmingsnorm. Deze waarde moet worden ingesteld op `IAB` voor TCF 2.0 toestemmingsverwerking. |
 | `consentStandardVersion` | Het versienummer van de krachtens `standard`. Deze waarde moet worden ingesteld op `2.0` voor TCF 2.0 toestemmingsverwerking. |
 | `consentStringValue` | De basis-64-gecodeerde toestemmingstekenreeks die door CMP wordt geproduceerd. |
-| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. Om TCF 2.0 voor deze klant te dwingen, moet de waarde worden geplaatst aan `true`. Standaardwaarden: `true` indien niet gedefinieerd. |
+| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. Voor TCF 2.0 die voor deze klant moet worden afgedwongen, moet de waarde worden geplaatst aan `true`. Standaardwaarden: `true` indien niet gedefinieerd. |
 
 ### Reacties in SDK verwerken
 
@@ -231,9 +236,9 @@ Alles [!DNL Platform SDK] de bevelen keren beloftes terug die erop wijzen of de 
 
 Zodra u de gegevens van de klantentoestemming hebt verzameld en publiekssegmenten gecreeerd die de vereiste toestemmingsattributen bevatten, kunt u TCF 2.0 naleving dan afdwingen wanneer het uitvoeren van die segmenten naar stroomafwaartse bestemmingen.
 
-Op voorwaarde dat de toestemmingsbepaling `gdprApplies` is ingesteld op `true` voor een reeks klantprofielen, worden om het even welke gegevens van die profielen die naar stroomafwaartse bestemmingen worden uitgevoerd gefiltreerd gebaseerd op de toestemmingsvoorkeur TCF voor elk profiel. Elk profiel dat niet voldoet aan de vereiste voorkeuren voor toestemming wordt tijdens het exportproces overgeslagen.
+Indien de instelling van de toestemming `gdprApplies` is ingesteld op `true` voor een reeks klantprofielen, worden om het even welke gegevens van die profielen die naar stroomafwaartse bestemmingen worden uitgevoerd gefiltreerd gebaseerd op de toestemmingsvoorkeur TCF voor elk profiel. Elk profiel dat niet voldoet aan de vereiste voorkeuren voor toestemming wordt tijdens het exportproces overgeslagen.
 
-Klanten moeten instemmen met de volgende doeleinden (zoals beschreven door [TCF 2.0-beleid](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) om hun profielen op te nemen in segmenten die naar bestemmingen worden uitgevoerd:
+Klanten moeten instemmen met de volgende doeleinden (zoals beschreven door [TCF 2.0-beleid](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) voor profielen die moeten worden opgenomen in segmenten die naar bestemmingen worden geëxporteerd:
 
 * **Doel 1**: Gegevens opslaan en/of openen op een apparaat
 * **Doel 10**: Producten ontwikkelen en verbeteren
@@ -242,14 +247,16 @@ TCF 2.0 vereist ook dat de bron van gegevens de de verkoperstoestemming van de b
 
 >[!NOTE]
 >
->Om het even welke segmenten die met Adobe Audience Manager worden gedeeld zullen de zelfde TCF 2.0 toestemmingswaarden zoals hun tegenhangers van het Platform bevatten. Sinds [!DNL Audience Manager] deelt dezelfde leverancier-id als Platform (565), dezelfde doeleinden en toestemming van de leverancier zijn vereist. Zie het document op de [Adobe Audience Manager-insteekmodule voor IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) voor meer informatie .
+>Om het even welke segmenten die met Adobe Audience Manager worden gedeeld bevatten de zelfde TCF 2.0 toestemmingswaarden zoals hun tegenhangers van het Platform. Sinds [!DNL Audience Manager] deelt dezelfde leverancier-id als Platform (565), dezelfde doeleinden en toestemming van de leverancier zijn vereist. Zie het document op de [Adobe Audience Manager-insteekmodule voor IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) voor meer informatie .
 
 ## Implementatie testen {#test-implementation}
 
-Zodra u uw implementatie TCF 2.0 hebt gevormd en segmenten naar bestemmingen uitgevoerd, zullen om het even welke gegevens die toestemmingsvereisten niet voldoen niet worden uitgevoerd. Nochtans, om te zien of de juiste klantenprofielen tijdens de uitvoer werden gefiltreerd, moet u de gegevensopslag op uw bestemmingen manueel controleren om te zien of werd de toestemming behoorlijk gehandhaafd.
+Zodra u uw implementatie TCF 2.0 hebt gevormd en segmenten naar bestemmingen uitgevoerd, zullen om het even welke gegevens die toestemmingsvereisten niet voldoen niet worden uitgevoerd. Om te zien of de correcte klantenprofielen tijdens de uitvoer werden gefiltreerd, moet u de gegevensopslag op uw bestemmingen manueel controleren om te zien of werd de toestemming behoorlijk afgedwongen.
 
-Het is belangrijk om op te merken dat als veelvoudige IDs omhoog een cluster maken en TCF 2.0 van toepassing is, de volledige cluster zal worden uitgesloten als zelfs één enkele identiteitskaart niet de correcte doeleinden en verkoperstoestemmingen bevat.
+>[!IMPORTANT]
+>
+>Als meerdere id&#39;s een cluster vormen en TCF 2.0 van toepassing is, wordt de gehele cluster uitgesloten als zelfs één id niet de juiste doelen en machtigingen van de leverancier bevat.
 
 ## Volgende stappen
 
-Dit document behandelde het proces om uw gegevensverrichtingen van het Platform te vormen om aan uw bedrijfsverplichtingen zoals die door TCF 2.0 worden geschetst te voldoen. Zie het overzicht op [bestuur, privacy en veiligheid](../../overview.md) voor meer informatie over de mogelijkheden van het platform op het gebied van privacy.
+Dit document behandelde het proces om uw gegevensverrichtingen van het Platform te vormen om aan uw bedrijfsverplichtingen te voldoen zoals die door TCF 2.0 worden geschetst. Zie het overzicht op [bestuur, privacy en veiligheid](../../overview.md) voor meer informatie over de mogelijkheden van het platform op het gebied van privacy.

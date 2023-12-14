@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;indiv
 title: IdentityMap-schemaveldgroep
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,24 @@ ht-degree: 0%
 
 [!UICONTROL IdentityMap] is een standaardschemagebiedgroep voor [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). De veldgroep bevat één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
 
-<img src="../../images/field-groups/identitymap.png" width="600" /><br />
+![Een schema van de [!UICONTROL IdentityMap] schemaveldgroep](../../images/field-groups/identitymap.png)
 
 Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan , waaronder de voordelen en nadelen .
+
+**voorbeeld**
+
+```JSON
+{
+    "identityMap":{
+        "ECID":[
+            {
+                "id":"83238819066235616291057085344313877718",
+                "authenticatedState":"ambiguous",
+                "primary":true
+            }
+        ]
+    }
+}
+```
+
+Voor meer informatie over de veldgroep raadpleegt u de [volledig schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) in de openbare XDM-opslagplaats.
