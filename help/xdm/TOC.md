@@ -4,18 +4,18 @@ user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 13%
+source-wordcount: '560'
+ht-degree: 10%
 
 ---
 
 
-# Experience Data Model (XDM) System {#xdm}
+# XDM-systeem (Experience Data Model) {#xdm}
 
 * [XDM System, overzicht](home.md)
-* Schema&#39;s {#schema}
+* Schemas {#schema}
    * [Basisbeginselen van de schemacompositie](schema/composition.md)
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
    * [Gevoelige en persoonlijke gegevens](./schema/sensitive-and-personal-data.md)
@@ -80,6 +80,7 @@ ht-degree: 13%
       * [Vluchtreservering](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 Toestemming](./field-groups/event/iab.md)
       * [Voorbehoud voor indiening](./field-groups/event/lodging-reservation.md)
+      * [Interactiegegevens van MediaAnalytics](./field-groups/event/mediaanalytics-interaction.md)
       * [Gegevens prijsaanvraag](./field-groups/event/quote-request-details.md)
       * [Reserveringsdetails](./field-groups/event/reservation-details.md)
       * [Sitetool - details](./field-groups/event/sitetool-details.md)
@@ -101,20 +102,25 @@ ht-degree: 13%
    * Provider {#provider}
       * [Gezondheidszorgverlener](./field-groups/provider/healthcare-provider.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
-* Datatypen {#data-types}
+* Gegevenstypen {#data-types}
    * [Accountgegevens](./data-types/account-details.md)
    * [Ad break](./data-types/ad-break.md)
+   * [Reclamedetails-informatie](./data-types/advertising-details-information.md)
+   * [Informatie over advertentiepod](./data-types/advertising-pod-details-information.md)
    * [Toepassing](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
    * [B2B-bron](./data-types/b2b-source.md)
+   * [Informatie over hoofdstukdetails](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
    * [Constante tekenreeks](./data-types/consent-string.md)
    * [Inhoud en voorkeuren](./data-types/consents.md)
    * [Valuta](./data-types/currency.md)
+   * [Informatie over aangepaste metagegevens](./data-types/custom-metadata-details-information.md)
    * [Apparaat](./data-types/device.md)
    * [E-mailadres](./data-types/email-address.md)
    * [Omgeving](./data-types/environment.md)
+   * [Foutgegevens](./data-types/error-details-information.md)
    * [Experience Channel](./data-types/experience-channel.md)
    * [Kenmerken externe bronsysteemcontrole](./data-types/external-source-system-audit-attributes.md)
    * [Financiële rekening](./data-types/financial-account.md)
@@ -134,24 +140,29 @@ ht-degree: 13%
    * [Toetswaardenpaar](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Meetlat](./data-types/measure.md)
+   * [Informatie over mediagegevens](./data-types/media-details-information.md)
+   * [Gebeurtenisgegevens media](./data-types/media-event-information.md)
    * [Volgorde](./data-types/order.md)
    * [Betalingsobject](./data-types/payment-item.md)
    * [Persoon](./data-types/person.md)
    * [Naam persoon](./data-types/person-name.md)
    * [Telefoonnummer](./data-types/phone-number.md)
    * [Context plaatsen](./data-types/place-context.md)
+   * [Statusgegevens speler](./data-types/player-state-data-information.md)
    * [Details van POI](./data-types/poi-details.md)
    * [POI-interactie](./data-types/poi-interaction.md)
    * [Postadres](./data-types/postal-address.md)
    * [Product lijstitem](./data-types/product-list-item.md)
+   * [Informatie over QoE-gegevens](./data-types/qoe-data-details-information.md)
    * [Zoeken](./data-types/search.md)
+   * [Informatie over sessiegegevens](./data-types/session-details-information.md)
    * [Abonnement](./data-types/subscription.md)
    * [Telecom-abonnement](./data-types/telecom-subscription.md)
    * [Transactie](./data-types/transaction.md)
    * [Webinformatie](./data-types/web-information.md)
    * [Webinteractie](./data-types/web-interaction.md)
    * [Webpaginadetails](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] Gebruikersinterface {#ui}
+* [!UICONTROL Schemas] UI {#ui}
    * [Overzicht](./ui/overview.md)
    * [XDM-bronnen verkennen](./ui/explore.md)
    * Bronnen maken en bewerken {#resources}
@@ -188,7 +199,7 @@ ht-degree: 13%
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Mixinen (afgekeurd)](api/mixins.md)
    * [Bijlage](api/appendix.md)
-* Lesbestanden {#tutorials}
+* Tutorials {#tutorials}
    * [Een schema maken in de gebruikersinterface](tutorials/create-schema-ui.md)
    * [Een schema maken in de API](tutorials/create-schema-api.md)
    * [Specifieke velden toevoegen aan een schema (API)](./tutorials/specific-fields-api.md)
