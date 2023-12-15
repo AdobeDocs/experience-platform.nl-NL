@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
-source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
+source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '313'
 ht-degree: 13%
 
 ---
@@ -26,9 +26,10 @@ ht-degree: 13%
       - [Overzicht](data-distiller/derived-datasets/overview.md)
       - [Naadloze SQL-stroom](data-distiller/derived-datasets/seamless-sql-flow.md)
       - [Op decile gebaseerde afgeleide gegevenssets maken](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Winkel met query-versnelling {#query-accelerated-store}
-      - [Verstuur versnelde vragen](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-      - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - Aanpasbare inzichten voor uitgebreide toepassingsrapportage {#customizable-insights}
+      - [Overzicht](data-distiller/customizable-insights/overview.md)
+      - [Verstuur versnelde vragen](data-distiller/customizable-insights/send-accelerated-queries.md)
+      - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - Pijpleidingen met I/ML-functies {#ml-feature-pipelines}
       - [Overzicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Verbinding maken met Jupyter-laptops](data-distiller/ml-feature-pipelines/establish-connection.md)

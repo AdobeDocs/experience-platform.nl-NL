@@ -2,16 +2,16 @@
 title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2022
 description: In de releaseopmerkingen van oktober 2022 voor Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1122'
 ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 26 oktober 2022**
+**Releasedatum: donderdag 26 oktober 2022**
 
 - [Door de klant beheerde sleutels](#cmk)
 - [Gegevensverzameling](#data-collection)
@@ -54,7 +54,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over
 
 **Nieuwe of bijgewerkte doelen** {#new-or-updated-destinations}
 
-| Bestemming | Beschrijving |
+| Doel | Beschrijving |
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | De lijn is een populair communicatie platform dat mensen, de diensten en de informatie verbindt en van een praatjeapp tot een hub voor vermaak, sociale, en dagelijkse activiteiten is gegroeid. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 is een op cloud gebaseerd bedrijfstoepassingsplatform dat de Planning van het Middel van de Onderneming (ERP) en het Beheer van de Verhouding van de Klant (CRM) samen met productiviteitstoepassingen en AI hulpmiddelen combineert, om van begin tot eind vlottere en meer gecontroleerde verrichtingen, beter groeipotentieel en lagere kosten te brengen. |
@@ -101,7 +101,7 @@ Met Query Service kunt u standaard-SQL gebruiken om gegevens in Adobe Experience
 | Functie | Beschrijving |
 | --- | --- |
 | De vragen van de monitor door Platform UI | De Query-service [!UICONTROL Scheduled Queries] biedt een verbeterde zichtbaarheid voor de status van alle querytaken via de gebruikersinterface. U kunt belangrijke informatie over de status van uw vraaglooppas nu vinden, met inbegrip van foutenmeldingen en codes indien zij ontbreken, van [!UICONTROL Scheduled Queries] tab. U kunt ook op alarm door UI voor om het even welk van deze vragen intekenen die op hun status worden gebaseerd. Zie de [Document met query&#39;s controleren](../../query-service/ui/monitor-queries.md) voor meer informatie over deze functie. |
-| Vraag versnelde het melden van inzichten gegevensmodel | Als deel van Gegevens Distiller SKU, staat de vraag versnelde opslag u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Met de opslag met versnelde query kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Adobe Real-time Customer Data Platform-gegevensmodellen om uw rapporteringsinzichten en hun visualisaties te verbeteren. Zie de [document met query-versnelde gegevens voor winkelrapporten](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) voor meer informatie over deze functie. |
+| Vraag versnelde het melden van inzichten gegevensmodel | Als deel van Gegevens Distiller SKU, staat de vraag versnelde opslag u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Met de opslag met versnelde query kunt u een aangepast gegevensmodel maken en/of uitbreiden op bestaande Adobe Real-time Customer Data Platform-gegevensmodellen om uw rapporteringsinzichten en hun visualisaties te verbeteren. Zie de [document met query-versnelde gegevens voor winkelrapporten](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) voor meer informatie over deze functie. |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: Gegevensbeheer in Query-service
 description: Dit overzicht behandelt de belangrijkste elementen van gegevensbeheer in de Dienst van de Vraag van het Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3118'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ De `CREATE VIEW` het sleutelwoord bepaalt een mening van een vraag maar de menin
 
 #### Creeer op gebied-gebaseerde toegangsbeperkingen op versnelde datasets {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Met de [attribuut-based toegangsbeheervermogen](../../access-control/abac/overview.md) u kunt organisatorische of gegevensgebruikswerkingsgebieden op feiten en afmetingsdatasets in bepalen [versnelde opslag](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Dit staat beheerders toe om toegang tot specifieke segmenten te beheren en beter de toegang te beheren die aan gebruikers of groepen gebruikers wordt gegeven.
+Met de [attribuut-based toegangsbeheervermogen](../../access-control/abac/overview.md) u kunt organisatorische of gegevensgebruikswerkingsgebieden op feiten en afmetingsdatasets in bepalen [versnelde opslag](../data-distiller/customizable-insights/send-accelerated-queries.md). Dit staat beheerders toe om toegang tot specifieke segmenten te beheren en beter de toegang te beheren die aan gebruikers of groepen gebruikers wordt gegeven.
 
 Om op gebied-gebaseerde toegangsbeperkingen op versnelde datasets tot stand te brengen, kunt u de vragen van de Dienst CTAS van de Vraag gebruiken om versnelde datasets tot stand te brengen en deze datasets te structureren die op bestaande XDM schema&#39;s of ad hoc schema&#39;s worden gebaseerd. Beheerders kunnen vervolgens [labels voor gegevensgebruik toevoegen en bewerken voor het schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) of [ad-hocschema](./ad-hoc-schema-labels.md#edit-governance-labels). U kunt labels op uw schema&#39;s toepassen, maken en bewerken via het menu [!UICONTROL Labels] werkruimte in de [!UICONTROL Schemas] UI.
 
