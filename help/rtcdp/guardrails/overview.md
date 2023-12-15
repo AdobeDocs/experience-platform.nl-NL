@@ -3,9 +3,9 @@ title: Real-Time CDP Guardrails
 description: Meer informatie over de gegevensgidsen in de verschillende services en gebieden van Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,12 @@ Begin hier en volg de onderstaande links om alle instructies in de verschillende
 * [Guardrails voor [!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * [Guardrails voor [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Guardrails voor gegevensactivering via bestemmingen](/help/destinations/guardrails.md)
+* [Guardrails voor Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->Zie ook [deze pagina](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) voor informatie over handleidingen voor andere Experience Platform-apps, zoals [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html) en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html), en [latentiediagrammen van begin tot eind](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor verschillende diensten van de Experience Platform.
+>Bovendien, bezoek [de blauwdrukken voor digitale ervaringen](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) voor nadere informatie, zoals [latentiediagrammen van begin tot eind](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor verschillende diensten van de Experience Platform.
+
 
 ## Typen guardrail {#guardrail-types}
 
@@ -46,6 +48,13 @@ Raadpleeg ook de onderstaande koppelingen naar productbeschrijving voor licentie
 * [Real-time Customer Data Platform (B2C Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2B Edition - Premiere en Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+## Guardrails voor andere toepassingen van Experience Platforms  {#guardrails-other-aep-apps}
+
+Voor andere toepassingen van Experience Platforms bestaan soortgelijke instructies. Ga naar de onderstaande koppelingen voor meer informatie:
+
+* [Adobe Journey Optimizer guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Customer Journey Analytics guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Volgende stappen
 
