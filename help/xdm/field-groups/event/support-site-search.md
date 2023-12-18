@@ -1,17 +1,17 @@
 ---
 title: Veldgroep Sitezoekprogramma ondersteunen
-description: Dit document biedt een overzicht van de veldgroep van het schema Zoeken van de website van de Steun.
+description: Leer over de het schemagebiedgroep van het Onderzoek van de Plaats van de Steun.
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '68'
 ht-degree: 1%
 
 ---
 
 # [!UICONTROL Support Site Search] schemaveldgroep
 
-[!UICONTROL Support Site Search] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Het verstrekt één enkele `siteKnowledge.supportSiteSearch` naar een schema dat informatie over een ondersteuningssite-zoekopdracht vastlegt.
+[!UICONTROL Support Site Search] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Het verstrekt één enkele `siteKnowledge.supportSiteSearch` naar een schema dat informatie over een steunplaatsonderzoek vastlegt.
 
 ![](../../images/field-groups/support-site-search.png)
 

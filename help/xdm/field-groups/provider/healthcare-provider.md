@@ -1,11 +1,11 @@
 ---
 title: Werkgebiedgroep Gezondheidszorgverlener
-description: Dit document biedt een overzicht van de veldgroep met het schema van de zorgleverancier.
+description: Leer over de het schemagebiedgroep van de Leverancier van de Gezondheid.
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 1%
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
@@ -17,17 +17,17 @@ ht-degree: 1%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `addressDetails` | Array van objecten | Hier worden de adresgegevens van de provider weergegeven. Elk object bevat de volgende eigenschappen: <ul><li>`address`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)): Het postadres van de provider.</li><li>`addressType`: (String) Het type adres dat aangeeft waar de provider services levert.</li></ul> |
+| `addressDetails` | Array van objecten | Hier worden de adresgegevens van de provider weergegeven. Elk object bevat de volgende eigenschappen: <ul><li>`address`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)): Het postadres van de aanbieder.</li><li>`addressType`: (String) Het type adres dat aangeeft waar de provider services levert.</li></ul> |
 | `emailAddress` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Het e-mailadres van de provider. |
 | `fax` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het faxnummer van de provider. |
 | `phoneNumber` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het telefoonnummer van de provider. |
 | `qualifications` | Array van objecten | Hier worden de certificeringen, licenties of opleidingen vermeld die betrekking hebben op het verlenen van zorg. Elk object bevat de volgende eigenschappen: <ul><li>`issuer`: ([[!UICONTROL Account details]](../../data-types/account-details.md)): De organisatie die de kwalificatie regelt en afgeeft.</li><li>`activePeriod`: (Geheel getal) Het jaar tot waar de kwalificatie geldig is.</li><li>`code`: (String) Een gecodeerde representatie van de kwalificatie.</li></ul> |
-| `classification` | Tekenreeks | De classificatie van de dienstverlener gebaseerd op klasse of categorie (zoals patiëntenzorg, niet patiëntenzorg, etc.). |
+| `classification` | String | De classificatie van de dienstverlener gebaseerd op klasse of categorie (zoals patiëntenzorg, niet patiëntenzorg, etc.). |
 | `isActive` | Boolean | Geeft aan of de provider actief is. |
 | `languages` | Array van tekenreeksen | Een lijst met talen die de provider gebruikt. |
-| `practiceGroupName` | Tekenreeks | De naam van de praktijkgroep voor de dienstverlener. |
-| `practiceGroupType` | Tekenreeks | Het type van praktijkgroep voor de dienstverlener. |
-| `practiceType` | Tekenreeks | Het praktijktype voor de dienstverlener. |
+| `practiceGroupName` | String | De naam van de praktijkgroep voor de dienstverlener. |
+| `practiceGroupType` | String | Het type van praktijkgroep voor de dienstverlener. |
+| `practiceType` | String | Het praktijktype voor de dienstverlener. |
 | `specialties` | Array van tekenreeksen | Een lijst van specialisaties die door deze leverancier worden aangeboden. |
 
 {style="table-layout:auto"}

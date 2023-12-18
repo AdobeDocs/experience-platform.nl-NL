@@ -1,11 +1,11 @@
 ---
 title: Sitetool Details schema Field Group
-description: Dit document biedt een overzicht van de veldgroep Sitetool Details.
+description: Meer informatie over de veldgroep Sitetool Details.
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 2%
+source-wordcount: '177'
+ht-degree: 0%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 2%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `dataGatheringEvent` | Object | Geeft aan of deze gebeurtenis samen met andere gerelateerde details een gebeurtenis voor het verzamelen van gegevens is. Bevat de volgende eigenschappen:<ul><li>`data`: (Kaart) Bevat de JSON-gegevens die worden verzameld en verzonden als onderdeel van de gebeurtenis quizzen, enquêtes of opiniepeilingen verzenden.</li><li>`isTrue`: (Boolean) Geeft aan of deze gebeurtenis een gebeurtenis voor het verzamelen van gegevens is, zoals quiz, enquête of opiniepeiling.</li><li>`score`: (Geheel getal) De score die door de actor is behaald op basis van gebeurtenisreacties.</li></ul> |
-| `actor` | Tekenreeks | Een persoon/lid die de handeling heeft verricht. |
-| `actorID` | Tekenreeks | Een unieke id voor de persoon/het lid die de handeling heeft uitgevoerd. |
+| `dataGatheringEvent` | Object | Geeft aan of deze gebeurtenis samen met andere gerelateerde details een gebeurtenis voor het verzamelen van gegevens is. Bevat de volgende eigenschappen:<ul><li>`data`: (Kaart) Bevat de JSON-gegevens die zijn verzameld en verzonden als onderdeel van de verzendgebeurtenis voor quiz, enquête of opiniepeiling.</li><li>`isTrue`: (Boolean) Geeft aan of deze gebeurtenis een gebeurtenis voor het verzamelen van gegevens is, zoals quiz, enquête of opiniepeiling.</li><li>`score`: (Geheel getal) De score die door de actor is behaald op basis van gebeurtenisreacties.</li></ul> |
+| `actor` | String | Een persoon/lid die de handeling heeft verricht. |
+| `actorID` | String | Een unieke id voor de persoon/het lid die de handeling heeft uitgevoerd. |
 | `isKeyEvent` | Boolean | Geeft aan of deze gebeurtenis een toetsgebeurtenis is. |
-| `name` | Tekenreeks | De naam van de sitetool, zoals chatbot, enquête, enzovoort. |
-| `section` | Tekenreeks | De relevante sectie van de sitetool, zoals hoofd of sub. |
+| `name` | String | De naam van de sitetool, zoals chatbot, enquête, enzovoort. |
+| `section` | String | De relevante sectie van de sitetool, zoals hoofd of sub. |
 
 {style="table-layout:auto"}
 

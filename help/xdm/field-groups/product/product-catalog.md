@@ -1,11 +1,11 @@
 ---
 title: Veld groep productcatalogusschema
-description: Dit document biedt een overzicht van de veldgroep met het schema van de productcatalogus.
+description: Meer informatie over de veldgroep Productcatalogusschema.
 exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '79'
-ht-degree: 3%
+source-wordcount: '65'
+ht-degree: 1%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 3%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `productCatalogDescription` | Tekenreeks | Een beschrijving voor de productcatalogus. |
-| `productCatalogName` | Tekenreeks | De naam van de productcatalogus. |
+| `productCatalogDescription` | String | Een beschrijving voor de productcatalogus. |
+| `productCatalogName` | String | De naam van de productcatalogus. |
 
 {style="table-layout:auto"}
 

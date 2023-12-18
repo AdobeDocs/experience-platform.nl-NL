@@ -1,11 +1,11 @@
 ---
 title: Balans van groep van het schemaveld
-description: Dit document biedt een overzicht van de veldgroep Balansoverdrachten.
+description: Leer over de het schemagebiedgroep van de Overdracht van het Saldo.
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 0%
+source-wordcount: '92'
+ht-degree: 1%
 
 ---
 

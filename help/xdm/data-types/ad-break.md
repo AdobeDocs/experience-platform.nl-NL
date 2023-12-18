@@ -1,11 +1,11 @@
 ---
 title: Gegevenstype Advertentie-einde
-description: Dit document biedt een overzicht van het XDM-gegevenstype (Ad break Experience Data Model).
+description: Leer over het gegevenstype Adbreak Experience Data Model (XDM).
 exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 2%
+source-wordcount: '98'
+ht-degree: 1%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 2%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `_dc.title` | Tekenreeks | Een vriendelijke naam voor het advertentieeinde. |
-| `_id` | Tekenreeks | Een unieke id voor het advertentie-einde. |
+| `_dc.title` | String | Een vriendelijke naam voor het advertentieeinde. |
+| `_id` | String | Een unieke id voor het advertentie-einde. |
 | `offset` | Geheel | De verschuiving, in seconden, van het advertentieeinde vanaf het begin van de primaire inhoud. |
 
 {style="table-layout:auto"}

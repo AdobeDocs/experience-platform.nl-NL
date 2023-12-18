@@ -1,10 +1,10 @@
 ---
 title: Gegevenstype voor zoeken interne site
-description: Dit document biedt een overzicht van het XDM-gegevenstype voor zoeken op interne site.
+description: Meer informatie over het XDM-gegevenstype voor zoeken op interne site.
 exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -26,15 +26,15 @@ ht-degree: 0%
 | `numberOfResults` | [!UICONTROL Integer] | Het totale aantal geretourneerde zoekresultaten. |
 | `postalCode` | [!UICONTROL String] | De postcode die voor de zoekopdracht wordt gebruikt, indien van toepassing. |
 | `productFindingMethods` | [!UICONTROL String] | De interne waarde van de het vraagtermijn van het plaatsenonderzoek met handelaardiserende band. Deze waarde geeft aan naar welke term is gezocht vlak voordat een product werd bekeken. |
-| `radiusDistance` | [!UICONTROL Integer] | Gecombineerd met `radiusType`, geeft de geselecteerde afstand van de zoekstraal aan. |
-| `radiusType` | [!UICONTROL Integer] | Het geselecteerde afstandstype `radiusDistance`, hetzij mijl of kilometer. |
+| `radiusDistance` | [!UICONTROL Integer] | Combineren met `radiusType`, geeft de geselecteerde afstand van de zoekstraal aan. |
+| `radiusType` | [!UICONTROL Integer] | Het geselecteerde afstandstype `radiusDistance`, hetzij kilometers of kilometers. |
 | `refinementInstances` | [!UICONTROL Integer] | Het aantal keren dat de interne sitezoekopdracht is verfijnd. |
 | `refinementType` | Array van tekenreeksen | Hier worden de verfijningstypen weergegeven die op de zoekresultaten worden toegepast. Voorbeelden zijn afdeling, merk, prijs, in-store, beoordeling, kleur, materiaal, enzovoort. |
 | `refinementValue` | [!UICONTROL String] | De waarde waarnaar de zoekopdracht is verfijnd. |
 | `resultsPageNumber` | [!UICONTROL Integer] | Voor gepagineerde zoekresultaten volgt deze waarde de pagina met resultaten die de bezoeker bekijkt. |
 | `resultsPerPage` | [!UICONTROL Integer] | Voor gepagineerde zoekresultaten houdt deze waarde bij hoeveel zoekresultaten per pagina worden weergegeven. |
 | `searchType` | [!UICONTROL String] | Vangt de methode van onderzoek die, indien toepasselijk wordt uitgevoerd. Voorbeelden zijn een &#39;type-ahead&#39;-zoekopdracht, een rechtstreeks getypte zoekopdracht of een ander type aangepaste zoekfunctionaliteit die een site mogelijk heeft. |
-| `sortOrder` | [!UICONTROL String] | Gecombineerd met `sortType`, geeft de sorteervolgorde van de zoekresultaten aan, in oplopende of aflopende volgorde. |
+| `sortOrder` | [!UICONTROL String] | Combineren met `sortType`, geeft de sorteervolgorde van de zoekresultaten aan, in oplopende of aflopende volgorde. |
 | `term` | [!UICONTROL String] | De interne zoekterm voor de site die door de bezoeker is ingevoerd. |
 
 {style="table-layout:auto"}

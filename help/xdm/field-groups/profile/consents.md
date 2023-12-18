@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: Inhoud en Voorkeuren voor schemaveldgroep
-description: Dit document bevat een overzicht van de veldgroep Inhoud en Voorkeuren.
+description: Meer informatie over de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---

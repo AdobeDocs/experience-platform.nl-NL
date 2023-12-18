@@ -1,17 +1,17 @@
 ---
 title: Geneesmiddelenklasse
-description: Dit document biedt een overzicht van de klasse Medication in Experience Data Model (XDM).
+description: Leer meer over de klasse Medication in Experience Data Model (XDM).
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Medication] class
 
-In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Medication] klasse geeft de minimumreeks eigenschappen weer die een stof definiëren die wordt gebruikt voor medische behandeling, met name een geneesmiddel of geneesmiddel.
+In Experience Data Model (XDM), [!UICONTROL Medication] klasse geeft de minimumreeks eigenschappen weer die een stof definiëren die wordt gebruikt voor medische behandeling, met name een geneesmiddel of geneesmiddel.
 
 ![Klassenstructuur](../images/classes/medication.png)
 

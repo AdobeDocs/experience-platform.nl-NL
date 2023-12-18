@@ -1,17 +1,17 @@
 ---
 title: Payer-klasse
-description: Dit document biedt een overzicht van de klasse Payer in het XDM-model (Experience Data Model).
+description: Leer over de klasse van de Laag in het Model van Gegevens van de Ervaring (XDM).
 exl-id: 8d3e0a6d-41eb-4ffe-81dd-c7b7d532a531
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '124'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Payer] class
 
-In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Payer] klasse geeft de minimumreeks eigenschappen weer die een betalingsdienstentiteit definiëren die gegevens verzamelt die betrekking hebben op verzekeringsondernemingen (zoals ziektekostenverzekeringen).
+In Experience Data Model (XDM), [!UICONTROL Payer] klasse geeft de minimumreeks eigenschappen weer die een betalingsdienstentiteit definiëren die gegevens verzamelt die betrekking hebben op verzekeringsondernemingen (zoals ziektekostenverzekeringen).
 
 ![Klassenstructuur](../images/classes/payer.png)
 

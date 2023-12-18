@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;telecom;subscription;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype Telecom-abonnement
-description: Dit document verstrekt een overzicht van het de gegevenstype van de Gegevens van de Ervaring van Telecom Model (XDM).
+description: Leer over het gegevenstype van de Gegevens van de Ervaring van Telecom Model (XDM).
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 8%
+source-wordcount: '564'
+ht-degree: 1%
 
 ---
 
@@ -27,28 +27,28 @@ ht-degree: 8%
 | --- | --- | --- |
 | `devices` | Array van objecten | Beschrijft een lijst van apparaten en/of toebehoren verbonden aan het plan. Zie de [sectie hieronder](#devices) voor meer informatie over de verwachte structuur van elk arrayitem. |
 | `subscriber` | [[!UICONTROL Person]](./person.md) | Beschrijft de eigenaar van het abonnement. |
-| `ID` | Tekenreeks | Een unieke id voor het abonnementsexemplaar. |
-| `billingPeriod` | Tekenreeks | De duur tussen factureringen. |
+| `ID` | String | Een unieke id voor het abonnementsexemplaar. |
+| `billingPeriod` | String | De duur tussen factureringen. |
 | `billingStartDate` | Datum | De datum waarop de factureringsperiode begint. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
-| `chargeMethod` | Tekenreeks | De manier waarop de facturering wordt ingesteld om de klant in rekening te brengen. |
-| `contractID` | Tekenreeks | De unieke id voor het contract dat dit abonnement regelt. |
-| `country` | Tekenreeks | Het land waarin de contractvoorwaarden voor de inschrijving en de overeenkomst zijn geworteld. |
+| `chargeMethod` | String | De manier waarop de facturering wordt ingesteld om de klant in rekening te brengen. |
+| `contractID` | String | De unieke id voor het contract dat dit abonnement regelt. |
+| `country` | String | Het land waarin de contractvoorwaarden voor de inschrijving en de overeenkomst zijn geworteld. |
 | `endDate` | Datum | De datum waarop de huidige abonnementsduur afloopt. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
 | `paymentDueDate` | Datum | De datum waarop de abonnementsbetaling verschuldigd is. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
-| `paymentMethod` | Tekenreeks | De betalingsmethode voor terugkerende betalingen. |
-| `paymentStatus` | Tekenreeks | De betalingsstatus van de rekening. |
-| `planName` | Tekenreeks | De leesbare naam voor het abonnement. |
-| `reason` | Tekenreeks | De algemene intentie van het lid voor het gebruik van het abonnement. |
-| `renew` | Tekenreeks | De overeengekomen manier waarop het abonnement na de einddatum kan worden voortgezet. |
+| `paymentMethod` | String | De betalingsmethode voor terugkerende betalingen. |
+| `paymentStatus` | String | De betalingsstatus van de rekening. |
+| `planName` | String | De leesbare naam voor het abonnement. |
+| `reason` | String | De algemene intentie van het lid voor het gebruik van het abonnement. |
+| `renew` | String | De overeengekomen manier waarop het abonnement na de einddatum kan worden voortgezet. |
 | `startDate` | Datum | De datum waarop het abonnement begint. De datumnotatie (zonder tijd) moet de [RFC 3339, punt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standaard. |
-| `status` | Tekenreeks | De huidige status van het abonnement. |
-| `subscriptionCategory` | Tekenreeks | De belangrijkste categorisering op hoofdniveau van dit type abonnement. |
-| `subscriptionSKU` | Tekenreeks | De voorraadbewaareenheid (SKU) voor het abonnement. |
-| `subscriptionSubCategory` | Tekenreeks | De specifieke subcategorisering van het abonnement. |
+| `status` | String | De huidige status van het abonnement. |
+| `subscriptionCategory` | String | De belangrijkste categorisering op hoofdniveau van dit type abonnement. |
+| `subscriptionSKU` | String | De voorraadbewaareenheid (SKU) voor het abonnement. |
+| `subscriptionSubCategory` | String | De specifieke subcategorisering van het abonnement. |
 | `term` | Geheel | De numerieke waarde van de abonnementstermijn. |
-| `termUnitOfTime` | Tekenreeks | De tijdseenheid voor de periode. |
-| `topUp` | Tekenreeks | Beschrijft de overeengekomen voorwaarden voor hoe de verbruiksaspecten van een abonnement tijdens een factureringsperiode worden teruggekocht. |
-| `type` | Tekenreeks | De omvang van het recht in verhouding tot het aantal personen dat onder het abonnement valt. |
+| `termUnitOfTime` | String | De tijdseenheid voor de periode. |
+| `topUp` | String | Beschrijft de overeengekomen voorwaarden voor hoe de verbruiksaspecten van een abonnement tijdens een factureringsperiode worden teruggekocht. |
+| `type` | String | De omvang van het recht in verhouding tot het aantal personen dat onder het abonnement valt. |
 
 {style="table-layout:auto"}
 
@@ -65,16 +65,16 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstyp
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `deviceFees` | Object | Een voorwerp dat om het even welke apparatenkosten voor punten zoals routers, modems, en ontvangers vangt. Verwacht de volgende eigenschappen:<ul><li>`amount`: Het monetaire bedrag zoals dat door de `currencyCode`.</li><li>`conversionDate`: De datum waarop de valutaomrekening heeft plaatsgevonden.</li><li>`currencyCode`: De [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) valutacode voor de `amount`.</li></ul> |
-| `ID` | Tekenreeks | Een unieke id voor het apparaat. |
-| `OS` | Tekenreeks | Het besturingssysteem van het apparaat. |
-| `deviceInsurance` | Tekenreeks | Geeft aan of een klant zich heeft aangemeld voor verzekering voor dit apparaat. |
-| `manufacturer` | Tekenreeks | De fabrikant van het apparaat. |
-| `name` | Tekenreeks | Een naam voor het apparaat. |
-| `paymentOptions` | Tekenreeks | Geeft aan of het apparaat in termijnen of tegen de volledige detailhandelsprijs wordt betaald. |
-| `serialNumber` | Tekenreeks | Het serienummer van het apparaat. |
-| `status` | Tekenreeks | De apparaatstatus. |
-| `storageCapacity` | Tekenreeks | De opslagcapaciteit van het apparaat. |
-| `type` | Tekenreeks | Het apparaattype. |
+| `deviceFees` | Object | Een voorwerp dat om het even welke apparatenkosten voor punten zoals routers, modems, en ontvangers vangt. Verwacht de volgende eigenschappen:<ul><li>`amount`: Het bedrag in geld zoals vertegenwoordigd door de `currencyCode`.</li><li>`conversionDate`: De datum waarop de valutaomrekening heeft plaatsgevonden.</li><li>`currencyCode`: De [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) valutacode voor de `amount`.</li></ul> |
+| `ID` | String | Een unieke id voor het apparaat. |
+| `OS` | String | Het apparaat besturingssysteem. |
+| `deviceInsurance` | String | Geeft aan of een klant zich heeft aangemeld voor verzekering voor dit apparaat. |
+| `manufacturer` | String | De apparaatfabrikant. |
+| `name` | String | Een naam voor het apparaat. |
+| `paymentOptions` | String | Geeft aan of het apparaat in termijnen of tegen de volledige detailhandelsprijs wordt betaald. |
+| `serialNumber` | String | Het serienummer van het apparaat. |
+| `status` | String | De apparaatstatus. |
+| `storageCapacity` | String | De opslagcapaciteit van het apparaat. |
+| `type` | String | Het apparaattype. |
 
 {style="table-layout:auto"}

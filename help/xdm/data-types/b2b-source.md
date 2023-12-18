@@ -1,11 +1,11 @@
 ---
 title: B2B-brongegevenstype
-description: Dit document biedt een overzicht van het gegevenstype B2B Source Experience Data Model (XDM).
+description: Leer over het B2B-gegevenstype (Source Experience Data Model).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 1%
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
@@ -15,16 +15,16 @@ ht-degree: 1%
 
 Wanneer u alleen op op tekenreeks gebaseerde id&#39;s vertrouwt, kan er sprake zijn van overlappingen tussen id&#39;s op meerdere systemen (een mogelijkheid kan bijvoorbeeld worden gegeven aan een tekenreeks-id op één CRM-systeem, maar die id kan verwijzen naar een totaal andere mogelijkheid). Dit kan leiden tot gegevensconflicten bij het samenvoegen van gegevens in [Klantprofiel in realtime](../../profile/home.md).
 
-De [!UICONTROL B2B Source] Met het gegevenstype kunt u de oorspronkelijke tekenreeks-id van een entiteit gebruiken en deze combineren met bronspecifieke contextafhankelijke informatie om ervoor te zorgen dat deze volledig uniek blijft in het Platform-systeem, ongeacht de bron waaruit deze afkomstig is.
+De [!UICONTROL B2B Source] Met het gegevenstype kunt u de oorspronkelijke tekenreeks-id van een entiteit gebruiken en deze combineren met bronspecifieke contextafhankelijke informatie om ervoor te zorgen dat deze volledig uniek blijft in het platformsysteem, ongeacht de bron waaruit deze afkomstig is.
 
 ![B2B-bronstructuur](../images/data-types/b2b-source.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `sourceID` | Tekenreeks | Een unieke id voor de bronrecord. |
-| `sourceInstanceID` | Tekenreeks | De instantie- of organisatie-id van de brongegevens. |
-| `sourceKey` | Tekenreeks | Een unieke id die bestaat uit de `sourceId`, `sourceInstanceId`, en `sourceType` samengevoegd in de volgende indeling: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Sommige bronschakelaars zoals Marketo voegen deze waarde automatisch voor bepaalde herkenningstekens samen. Andere moeten manueel worden aaneengeschakeld gebruikend [Gegevensprep `concat` function](../../data-prep/functions.md#string), bijvoorbeeld: `concat(id,"@${ORG_ID}.Marketo")` |
-| `sourceType` | Tekenreeks | De naam van het platform dat de brongegevens levert. |
+| `sourceID` | String | Een unieke id voor de bronrecord. |
+| `sourceInstanceID` | String | De instantie- of organisatie-id van de brongegevens. |
+| `sourceKey` | String | Een unieke id die bestaat uit de `sourceId`, `sourceInstanceId`, en `sourceType` samengevoegd in de volgende indeling: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Sommige bronschakelaars zoals Marketo voegen deze waarde automatisch voor bepaalde herkenningstekens samen. Andere moeten handmatig worden samengevoegd met de [Gegevensprep `concat` function](../../data-prep/functions.md#string), bijvoorbeeld: `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceType` | String | De naam van het platform dat de brongegevens levert. |
 
 {style="table-layout:auto"}
 

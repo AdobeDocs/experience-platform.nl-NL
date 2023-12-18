@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;apparaat;datatype;data-type;data-type;currency;
 solution: Experience Platform
 title: Gegevenstype valuta
-description: Dit document biedt een overzicht van het XDM-gegevenstype voor valuta.
+description: Leer meer over het gegevenstype Valuta XDM.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 1%
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `amount` | Dubbel | Het bedrag aan valuta zoals gedefinieerd door de `currencyCode`. |
 | `conversionDate` | DateTime | Een tijdstempel met het tijdstip waarop de valutaomrekening is uitgevoerd. |
-| `currencyCode` | Tekenreeks | Een ISO 4217-code die het type valuta aangeeft dat `amount` vertegenwoordigt. |
+| `currencyCode` | String | Een ISO 4217-code die het type valuta aangeeft dat `amount` vertegenwoordigt. |
 
 {style="table-layout:auto"}
 

@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;geo;circle;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype Geo-cirkel
-description: Dit document biedt een overzicht van het gegevenstype Geo Circle XDM.
+description: Meer informatie over het gegevenstype Geo Circle XDM.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 2%
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +20,6 @@ ht-degree: 2%
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `_schema.coordinates` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Beschrijft de geografische coördinaten van het centrum van de cirkel. |
-| `_schema.description` | Tekenreeks | Een beschrijving van wat de cirkel bevat. |
+| `_schema.description` | String | Een beschrijving van wat de cirkel bevat. |
 | `_schema.radius` | Dubbel | De lengte van de straal van de cirkel. Deze waarde is in overeenstemming met de [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) datum en wordt gemeten in meters. |
-| `_id` | Tekenreeks | Een unieke, door het systeem gegenereerde id voor de cirkel. |
+| `_id` | String | Een unieke, door het systeem gegenereerde id voor de cirkel. |

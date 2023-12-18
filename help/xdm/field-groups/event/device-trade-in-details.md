@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;field-groep;device;tradein;trade-in;trade in;
 solution: Experience Platform
 title: Device Trade-In Details-schemaveldgroep
-description: Dit document verstrekt een overzicht van de het schemagebiedgroep van Gegevens handel-binnen van het Apparaat.
+description: Leer over de handel-binnen het schemagebiedgroep van Details van het Apparaat.
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 1%
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 1%
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `tradeInValue` | [Valuta](../../data-types/currency.md) | De waarde van het apparaat dat wordt verhandeld. |
-| `newDeviceID` | Tekenreeks | De id van het nieuwe apparaat waarvoor wordt verhandeld. |
-| `originalDeviceID` | Tekenreeks | De id van het apparaat dat wordt verhandeld. |
+| `newDeviceID` | String | De id van het nieuwe apparaat waarvoor wordt verhandeld. |
+| `originalDeviceID` | String | De id van het apparaat dat wordt verhandeld. |
 
 {style="table-layout:auto"}
 

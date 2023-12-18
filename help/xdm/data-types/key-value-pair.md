@@ -1,11 +1,11 @@
 ---
 title: Gegevenstype sleutelwaardepaar
-description: Dit document biedt een overzicht van het XDM-gegevenstype (Key Value Pair Experience Data Model).
+description: Leer over het Zeer belangrijke gegevenstype van de Gegevens van de Ervaring van het Paar van de Waarde Model (XDM).
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
-source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 2%
+source-wordcount: '93'
+ht-degree: 1%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 2%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `key` | Tekenreeks | Een sleutel (naam) voor een algemene variabele of waarde. |
-| `value` | Tekenreeks | De waarde van de variabele. |
+| `key` | String | Een sleutel (naam) voor een algemene variabele of waarde. |
+| `value` | String | De waarde van de variabele. |
 
 {style="table-layout:auto"}
 

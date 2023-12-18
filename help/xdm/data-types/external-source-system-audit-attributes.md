@@ -1,11 +1,11 @@
 ---
 title: Kenmerken voor externe bronsysteemcontrole Gegevenstype
-description: Dit document biedt een overzicht van het gegevenstype XDM (External Source System Audit Attributes Experience Data Model).
+description: Leer over het Externe gegevenstype van de Attributen van de Controle van het Bronsysteem de Gegevensmodel van de Ervaring (XDM).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 2%
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 2%
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `externalKey` | [[!UICONTROL B2B Source]](./b2b-source.md) | Een samengestelde id voor de bron die voor controle wordt gebruikt. |
-| `createdBy` | Tekenreeks | De naam van de gebruiker die deze record heeft gemaakt. |
+| `createdBy` | String | De naam van de gebruiker die deze record heeft gemaakt. |
 | `createdDate` | DateTime | De datum waarop deze record is gemaakt. |
-| `externalID` | Tekenreeks | Externe unieke id voor de bron. Deze waarde wordt gebruikt om indien nodig te identificeren en te dedupliceren. |
+| `externalID` | String | Externe unieke id voor de bron. Deze waarde wordt gebruikt om indien nodig te identificeren en te dedupliceren. |
 | `lastActivityDate` | DateTime | De laatste activiteitsdatum voor het bronsysteem. |
 | `lastReferencedDate` | DateTime | De laatste datum waarnaar wordt verwezen voor het bronsysteem. |
-| `lastUpdatedBy` | Tekenreeks | De naam van de persoon die deze record het laatst heeft bijgewerkt. |
+| `lastUpdatedBy` | String | De naam van de persoon die deze record het laatst heeft bijgewerkt. |
 | `lastUpdatedDate` | DateTime | De laatste bijgewerkte datum voor het bronsysteem. |
 | `lastViewedDate` | DateTime | De laatst bekeken datum voor het bronsysteem. |
 

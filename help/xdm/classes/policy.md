@@ -1,17 +1,17 @@
 ---
 title: Beleidsklasse
-description: Dit document verstrekt een overzicht van de klasse van het Beleid in het Model van de Gegevens van de Ervaring (XDM).
+description: Leer over de klasse van het Beleid in het Model van Gegevens van de Ervaring (XDM).
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Policy] class
 
-In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Policy] klasse legt de minimumreeks eigenschappen vast die een verzekeringspolis definiëren.
+In Experience Data Model (XDM), [!UICONTROL Policy] klasse legt de minimumreeks eigenschappen vast die een verzekeringspolis definiëren.
 
 ![](../images/classes/policy.png)
 
@@ -30,7 +30,7 @@ In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Policy] klasse l
 | `_id` | [!UICONTROL String] | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br>Aangezien dit veld door het systeem wordt gegenereerd, wordt er geen expliciete waarde opgegeven tijdens het invoeren van gegevens. U kunt er echter desgewenst nog voor kiezen om uw eigen unieke id-waarden op te geven. |
 | `endDate` | [!UICONTROL DateTime] | De datum waarop de dekking van de verzekeringspolis eindigt (of eindigt). |
 | `hasAssignedBeneficiary` | [!UICONTROL Boolean] | Geeft aan of aan het beleid een begunstigde is toegewezen. |
-| `name` | [!UICONTROL String] | De naam van de verzekeringspolis. |
+| `name` | [!UICONTROL String] | De naam van de verzekeringsovereenkomst. |
 | `startDate` | [!UICONTROL DateTime] | De datum waarop de dekking van de verzekeringspolis begint (of is begonnen). |
 | `type` | [!UICONTROL String] | Het type verzekeringspolis, zoals thuis, auto, binnenplaats of boot. |
 

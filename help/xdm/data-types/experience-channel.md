@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;Webpagina-details;datatype;gegevenstype;gegevenstype;webpagina
 solution: Experience Platform
 title: Gegevenstype Ervaring Channel
-description: Dit document biedt een overzicht van het XDM-gegevenstype (Experience Channel Experience Data Model).
+description: Leer over het gegevenstype van het Gegevensmodel van de Ervaring van het kanaal van de Ervaring (XDM).
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 2%
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -15,21 +15,21 @@ ht-degree: 2%
 
 [!UICONTROL Experience channel] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een ervaringskanaal beschrijft. Een ervaringskanaal vertegenwoordigt een methode of pad voor het gebruik van digitale ervaringen.
 
-Er zijn veelvoudige ervaringskanalen, elk met verschillende beperkingen op hoe de inhoud wordt geleverd, en hoe de klanteninteractie kan worden waargenomen, en hoe de gegevens worden verzameld. Binnen een kanaal, kunnen de ervaringen aan specifieke plaatsen worden geleverd. De locaties en typen locaties in een kanaal verschillen van kanaal tot kanaal.
+Er zijn veelvoudige ervaringskanalen, elk met verschillende beperkingen op hoe de inhoud wordt geleverd, en hoe de klanteninteractie kan worden waargenomen, en hoe de gegevens worden verzameld. Binnen een kanaal, kunnen de ervaringen aan specifieke plaatsen worden geleverd. De locaties en typen locaties die in een kanaal aanwezig zijn, verschillen van kanaal tot kanaal.
 
 ![](../images/data-types/experience-channel.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `_id` | Tekenreeks | Een id die het kanaal op unieke wijze identificeert. Elk specifiek ervaringskanaal definieert een constante `@id`. |
-| `_type` | Tekenreeks | Verstrekt een ruw classificatielabel voor kanalen met gelijkaardige eigenschappen. |
+| `_id` | String | Een id die het kanaal uniek identificeert. Elk specifiek ervaringskanaal definieert een constante `@id`. |
+| `_type` | String | Verstrekt een ruw classificatielabel voor kanalen met gelijkaardige eigenschappen. |
 | `contentTypes` | Array van tekenreeksen | De inhoudstypen die dit kanaal kan leveren. |
 | `locationTypes` | Array van tekenreeksen | De typen locaties (virtuele locaties) waar dit kanaal uit bestaat en waaraan inhoud kan worden geleverd. |
-| `mediaAction` | Tekenreeks | Beschrijft een Actie van de Media van de Gebeurtenis van de Ervaring, als toepasselijk. |
-| `mediaType` | Tekenreeks | Beschrijft of het mediatype betaald, bezeten of verdiend is. |
+| `mediaAction` | String | Beschrijft een Actie van de Media van de Gebeurtenis van de Ervaring, als toepasselijk. |
+| `mediaType` | String | Beschrijft of het mediatype betaald, bezeten of verdiend is. |
 | `metricTypes` | Array van tekenreeksen | De metriek die in dit kanaal kan worden verzameld. |
-| `mode` | Tekenreeks | Hoe ervaringen worden opgedaan in dit kanaal. |
-| `typeAtSource` | Tekenreeks | Een aangepaste naam voor het kanaal. |
+| `mode` | String | Hoe ervaringen worden opgedaan in dit kanaal. |
+| `typeAtSource` | String | Een aangepaste naam voor het kanaal. |
 
 {style="table-layout:auto"}
 

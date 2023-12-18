@@ -1,26 +1,26 @@
 ---
 title: Productcategorie-schemaveldgroep
-description: Dit document geeft een overzicht van de veldgroep met het schema Productcategorie.
+description: Meer informatie over de veldgroep Productcategorieschema.
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 5%
+source-wordcount: '81'
+ht-degree: 1%
 
 ---
 
 # [!UICONTROL Product Category] schemaveldgroep
 
-[!UICONTROL Product Category] is een standaardschemagebiedgroep voor [[!UICONTROL Product] class](../../classes/product.md) waarmee eigenschappen worden vastgelegd die betrekking hebben op de categorie van een product.
+[!UICONTROL Product Category] is een standaardschemagebiedgroep voor [[!UICONTROL Product] class](../../classes/product.md) die eigenschappen met betrekking tot de categorie van een product vastleggen.
 
 ![](../../images/field-groups/product/product-category.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `productCategoryDescription` | Tekenreeks | Een beschrijving voor de productcategorie. |
-| `productCategoryName` | Tekenreeks | De naam van de productcategorie. |
-| `productSubcategoryDescription` | Tekenreeks | Een beschrijving voor de productsubcategorie. |
-| `productSubcategoryName` | Tekenreeks | De naam van de productsubcategorie. |
+| `productCategoryDescription` | String | Een beschrijving voor de productcategorie. |
+| `productCategoryName` | String | De naam van de productcategorie. |
+| `productSubcategoryDescription` | String | Een beschrijving voor de productsubcategorie. |
+| `productSubcategoryName` | String | De naam van de productsubcategorie. |
 
 {style="table-layout:auto"}
 

@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Gegevenstype van goedgekeurde tekenreeks
-description: Dit document biedt een overzicht van het XDM-gegevenstype voor tekenreeks met toestemming.
+description: Meer informatie over het XDM-gegevenstype voor tekenreeks met toestemming.
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 2%
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 2%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `consentStandard` | Tekenreeks | De standaard voor de toestemmingstekenreeks. Dit helpt de formaat van het toestemmingskoord bepalen zoals die door de diensten van het toestemmingsbeheer wordt geplaatst. |
-| `consentStandardVersion` | Tekenreeks | De versie van de toestemmingsnorm, die wordt gebruikt om het formaat van het toestemmingskoord nauwkeurig te bepalen zoals die door de diensten van het toestemmingsbeheer wordt geplaatst. |
-| `consentStringValue` | Tekenreeks | De tekenreeks voor volledige toestemming zoals verstrekt door de service voor het beheer van de toestemming. `consentStandard` en `consentStandardVersion` help bepalen hoe deze tekenreeks moet worden geparseerd. |
+| `consentStandard` | String | De standaard voor de toestemmingstekenreeks. Dit helpt de formaat van het toestemmingskoord bepalen zoals die door de diensten van het toestemmingsbeheer wordt geplaatst. |
+| `consentStandardVersion` | String | De versie van de toestemmingsnorm, die wordt gebruikt om het formaat van het toestemmingskoord nauwkeurig te bepalen zoals die door de diensten van het toestemmingsbeheer wordt geplaatst. |
+| `consentStringValue` | String | De tekenreeks voor volledige toestemming zoals verstrekt door de service voor het beheer van de toestemming. `consentStandard` en `consentStandardVersion` help bepalen hoe deze tekenreeks moet worden geparseerd. |
 | `containsPersonalData` | Boolean | Als dit veld waar is, betekent dit dat deze toestemmingsreeks moet worden verwerkt voor het afdwingen van toestemming. |
 | `gdprApplies` | Boolean | Als dit veld waar is, betekent dit dat er toestemming komt met persoonsgegevens. |
 

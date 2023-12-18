@@ -2,11 +2,11 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schemas;baken;interactiedetails;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype Geo-interactie
-description: Dit document biedt een overzicht van het XDM-gegevenstype voor Geo Interaction Details.
+description: Meer informatie over het XDM-gegevenstype Geo Interaction Details.
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---

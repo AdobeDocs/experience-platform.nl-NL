@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: Segmentdefinitieklasse
-description: Dit document biedt een overzicht van de definitieklasse Segment in het XDM (Experience Data Model).
+description: Leer over de de definitieklasse van het Segment in het Model van Gegevens van de Ervaring (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---

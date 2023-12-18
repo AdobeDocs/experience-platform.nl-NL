@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;
 solution: Experience Platform
 title: Detailsvakgroep handel
-description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van de Handel.
+description: Leer over de het schemagebiedgroep van de Details van de Handel.
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '154'
 ht-degree: 1%
 
 ---

@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;poi;poi details;punt van belang;punt details;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype interessdetails
-description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Details.
+description: Meer informatie over het XDM-gegevenstype Point of Interest Details.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 3%
+source-wordcount: '168'
+ht-degree: 0%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 3%
 | --- | --- | --- |
 | `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Beschrijft de bakkendetails actief voor de interactie POI. |
 | `geoInteractionDetails` | [[!UICONTROL Geo interaction details]](./geo-interaction-details.md) | Beschrijft de geo details actief voor de interactie POI. |
-| `category` | Tekenreeks | Een algemene categorie die door de beheerder van POI-definities is toegewezen voor het organiseren van de POI&#39;s. |
+| `category` | String | Een algemene categorie die door de beheerder van POI-definities is toegewezen voor het organiseren van de POI&#39;s. |
 | `distanceToPOICenter` | Dubbel | De geschatte afstand van het POI-middelpunt in meters. |
-| `locatingType` | Tekenreeks | Het mechanisme dat wordt gebruikt om locatie te bepalen. Tot de geaccepteerde waarden behoren: <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
-| `name` | Tekenreeks | Een naam die aan de POI is gegeven. |
-| `poiID` | Tekenreeks | Een unieke id van de POI. |
-| `type` | Tekenreeks | Het algemene type van POI die een typend die schema gebruikt door de beheerder van de POI definities wordt geselecteerd. |
+| `locatingType` | String | Het mechanisme dat wordt gebruikt om locatie te bepalen. Tot de geaccepteerde waarden behoren: <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
+| `name` | String | Een naam die aan de POI is gegeven. |
+| `poiID` | String | Een unieke id van de POI. |
+| `type` | String | Het algemene type van POI die een typend die schema gebruikt door de beheerder van de POI definities wordt geselecteerd. |
 
 {style="table-layout:auto"}
 

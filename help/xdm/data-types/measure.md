@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schema's;maatregel;datatype;data-type;data-type;
 solution: Experience Platform
 title: Gegevenstype meten
-description: Dit document verstrekt een overzicht van het het gegevenstype van het Model van de Gegevens van de Ervaring van de Meetlat (XDM).
+description: Leer over het gegevenstype van het Gegevensmodel van de Ervaring van de Meetlat (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `id` | Tekenreeks | De unieke id van deze maatregel. In geval van gegevensverzameling met communicatiekanalen met verlies, zoals mobiele apps of websites met offlinefunctionaliteit waarbij de verzending van maatregelen niet kan worden gegarandeerd, bevat deze eigenschap een door de klant gegenereerde, unieke id van de genomen maatregel. Het is de beste praktijk om dit voldoende lang te maken om voldoende willekeur te waarborgen. <br><br> Als gegevens zoals tijdstempel, apparaat-id, IP, MAC-adres of andere mogelijk door de gebruiker herkende waarden zijn opgenomen in het genereren van het dialoogvenster `id`, moet het resultaat worden gehasht. Dit zorgt ervoor dat geen PII in de waarde wordt gecodeerd, aangezien het doel niet is om een gebruiker of een apparaat te identificeren, maar de specifieke maatregel in tijd. |
+| `id` | String | De unieke id van deze maatregel. In geval van gegevensverzameling met communicatiekanalen met verlies, zoals mobiele apps of websites met offlinefunctionaliteit waarbij de verzending van maatregelen niet kan worden gegarandeerd, bevat deze eigenschap een door de klant gegenereerde, unieke id van de genomen maatregel. Het is de beste praktijk om dit voldoende lang te maken om voldoende willekeur te waarborgen. <br><br> Als gegevens zoals tijdstempel, apparaat-id, IP, MAC-adres of andere mogelijk door de gebruiker herkende waarden zijn opgenomen in het genereren van het dialoogvenster `id`, moet het resultaat worden gehasht. Dit zorgt ervoor dat geen PII in de waarde wordt gecodeerd, aangezien het doel niet is om een gebruiker of een apparaat te identificeren, maar de specifieke maatregel in tijd. |
 | `value` | Dubbel | De kwantificeerbare waarde van deze maatregel. |
 
 {style="table-layout:auto"}

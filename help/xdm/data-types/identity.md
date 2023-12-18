@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;identiteit;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype identiteit
-description: Dit document biedt een overzicht van het XDM-gegevenstype Identity.
+description: Leer over het Identiteit XDM gegevenstype.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 2%
+source-wordcount: '259'
+ht-degree: 1%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 2%
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `namespace` | Object | Een object dat één tekenreeksveld bevat (`code`), die de naamruimte aangeeft die is gekoppeld aan de opgegeven `id` kenmerk. |
-| `authenticatedState` | Tekenreeks | De geverifieerde status voor deze identiteit op het moment van de waargenomen Experience Event. Zie de [aanhangsel](#authenticatedState) voor aanvaarde waarden en definities. |
-| `id` | Tekenreeks | De identiteit van de consument in de verwante naamruimte. |
+| `authenticatedState` | String | De geverifieerde status voor deze identiteit op het moment van de waargenomen Experience Event. Zie de [aanhangsel](#authenticatedState) voor aanvaarde waarden en definities. |
+| `id` | String | De identiteit van de consument in de verwante naamruimte. |
 | `primary` | Boolean | Geeft aan of dit de primaire identiteit voor het individu is. Elke persoon kan slechts één primaire identiteit hebben. |
-| `xid` | Tekenreeks | Wanneer deze waarde aanwezig is, vertegenwoordigt deze een naamruimte-id die uniek is voor alle naamruimte-bereikid&#39;s in alle naamruimten. |
+| `xid` | String | Wanneer deze waarde aanwezig is, vertegenwoordigt deze een naamruimte-id die uniek is voor alle naamruimte-bereikid&#39;s in alle naamruimten. |
 
 {style="table-layout:auto"}
 

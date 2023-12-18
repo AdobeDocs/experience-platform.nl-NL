@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;
 solution: Experience Platform
 title: Web Details schema Field Group
-description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van het Web.
+description: Leer over de het schemagebiedgroep van de Details van het Web.
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---

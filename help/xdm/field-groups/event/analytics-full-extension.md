@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics ExperienceEvent Full Extension Schema Field Group
-description: Dit document biedt een overzicht van de veldgroep met het Adobe Analytics ExperienceEvent-schema voor volledige extensie.
+description: Leer meer over de Adobe Analytics ExperienceEvent Full Extension schema-veldgroep.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 1%
+source-wordcount: '792'
+ht-degree: 0%
 
 ---
 
@@ -48,8 +48,8 @@ De veldgroep bevat één `_experience` object naar een schema, dat zelf één sc
 | `listProps` | Object | Een object dat maximaal 75 vastlegt [lijstprofielen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props). De eigenschappen van dit object worden scheefgetrokken `prop1` tot `prop75`, die zelf objecten met de volgende subeigenschappen zijn:<ul><li>`delimiter`: Het oorspronkelijke scheidingsteken dat wordt gebruikt om de lijst te genereren die wordt geleverd onder `values`.</li><li>`values`: Een gescheiden lijst met waarden voor de eigenschap, weergegeven als een tekenreeks.</li></ul> |
 | `lists` | Object | Een object dat maximaal drie vastlegt [lijsten](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html). De eigenschappen van dit object worden scheefgetrokken `list1` tot `list3`. Elk van deze eigenschappen bevat één eigenschap `list` array van [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) gegevenstypen. |
 | `props` | Object | Een object dat maximaal 75 vastlegt [props](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html). De eigenschappen van dit object worden scheefgetrokken `prop1` tot `prop75` en accepteert alleen tekenreeksen voor hun gegevenstype. |
-| `postalCode` | Tekenreeks | Een door de klant opgegeven postcode. |
-| `stateProvince` | Tekenreeks | Een door de klant opgegeven staat of provincie. |
+| `postalCode` | String | Een door de klant opgegeven postcode. |
+| `stateProvince` | String | Een door de klant opgegeven staat of provincie. |
 
 {style="table-layout:auto"}
 
@@ -72,8 +72,8 @@ De veldgroep bevat één `_experience` object naar een schema, dat zelf één sc
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `browserIDStr` | Tekenreeks | De Adobe Analytics-id van de gebruikte browser (ook wel de [afmetingen browsertype](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)). |
-| `operatingSystemIDStr` | Tekenreeks | De Adobe Analytics-id van het gebruikte besturingssysteem (ook wel bekend als de [dimensie van besturingssysteemtype](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)). |
+| `browserIDStr` | String | De Adobe Analytics-id van de gebruikte browser (ook wel de [afmetingen browsertype](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)). |
+| `operatingSystemIDStr` | String | De Adobe Analytics-id van het gebruikte besturingssysteem (ook wel bekend als de [dimensie van besturingssysteemtype](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)). |
 
 ## Aangepaste gebeurtenisvelden {#events}
 

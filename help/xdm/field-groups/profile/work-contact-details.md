@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Schemaontwerp;mixin;mixin;het werkdetails;het profielwerk;
 solution: Experience Platform
-title: Werkgroep Contactgegevens schema
-description: Dit document biedt een overzicht van de veldgroep met het schema Contactgegevens werken.
+title: Werkgroep Contactgegevens-schema
+description: Leer over de het schemagebiedgroep van de Details van het Contact van het Werk.
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---

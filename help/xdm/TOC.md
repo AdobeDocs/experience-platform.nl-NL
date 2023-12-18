@@ -4,10 +4,10 @@ user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
-source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
+source-git-commit: f0d437743b33818c27de94eb522227bb950e60cb
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 10%
+source-wordcount: '588'
+ht-degree: 9%
 
 ---
 
@@ -58,16 +58,20 @@ ht-degree: 10%
       * [Gegevens van het lid in de gezondheidszorg](./field-groups/profile/healthcare-member-details.md)
       * [Loyalty-details](./field-groups/profile/loyalty-details.md)
       * [Persoonlijke contactgegevens](./field-groups/profile/personal-contact-details.md)
+      * [Verbetering van profielpartner (voorbeeld)](./field-groups/profile/profile-partner-enrichment.md)
       * [Details segmentlidmaatschap](./field-groups/profile/segmentation.md)
       * [Telecom-abonnement](./field-groups/profile/telecom-subscription.md)
       * [Contactgegevens werken](./field-groups/profile/work-contact-details.md)
       * [XDM Business Person-componenten](./field-groups/profile/business-person-components.md)
       * [XDM Business Person - Gegevens](./field-groups/profile/business-person-details.md)
+   * Afzonderlijk XDM-perspectiefprofiel {#prospect-profile}
+      * [Details partnerperspectief (voorbeeld)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
       * [Reclamegegevens](./field-groups/event/advertising-details.md)
       * [Toepassingsdetails](./field-groups/event/application-details.md)
       * [Balansoverdrachten](./field-groups/event/balance-transfers.md)
+      * [Boot Detection](./field-groups/event/bot-detection-information.md)
       * [Campagne marketing details](./field-groups/event/campaign-marketing-details.md)
       * [Kaarthandelingen](./field-groups/event/card-actions.md)
       * [Kanaaldetails](./field-groups/event/channel-details.md)
@@ -105,14 +109,18 @@ ht-degree: 10%
 * Gegevenstypen {#data-types}
    * [Accountgegevens](./data-types/account-details.md)
    * [Ad break](./data-types/ad-break.md)
+   * [Adres](./data-types/address.md)
    * [Reclamedetails-informatie](./data-types/advertising-details-information.md)
    * [Informatie over advertentiepod](./data-types/advertising-pod-details-information.md)
    * [Toepassing](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
    * [B2B-bron](./data-types/b2b-source.md)
+   * [Kar](./data-types/cart.md)
+   * [Categoriegegevens](./data-types/category-data.md)
    * [Informatie over hoofdstukdetails](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
+   * [Handelstoepassingsgebied](./data-types/commerce-scope.md)
    * [Constante tekenreeks](./data-types/consent-string.md)
    * [Inhoud en voorkeuren](./data-types/consents.md)
    * [Valuta](./data-types/currency.md)
@@ -153,9 +161,14 @@ ht-degree: 10%
    * [POI-interactie](./data-types/poi-interaction.md)
    * [Postadres](./data-types/postal-address.md)
    * [Product lijstitem](./data-types/product-list-item.md)
+   * [Object terugbetalen](./data-types/refund-item.md)
+   * [Aanvraaglijst](./data-types/requisition-list.md)
+   * [Retourneren](./data-types/return.md)
+   * [Item retourneren](./data-types/return-item.md)
    * [Informatie over QoE-gegevens](./data-types/qoe-data-details-information.md)
    * [Zoeken](./data-types/search.md)
    * [Informatie over sessiegegevens](./data-types/session-details-information.md)
+   * [Verzending](./data-types/shipping.md)
    * [Abonnement](./data-types/subscription.md)
    * [Telecom-abonnement](./data-types/telecom-subscription.md)
    * [Transactie](./data-types/transaction.md)

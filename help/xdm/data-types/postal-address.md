@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;adres;xdm:adres;datatype;data-type;gegevenstype;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;adres;xdm:adres;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype postadres
-description: Dit document biedt een overzicht van het XDM-gegevenstype voor postadres.
+description: Leer over het de gegevenstype van het Adres XDM van de Post.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 | `region` | Het gebied, het graafschap, of het districtsgedeelte van het adres. |
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
-| `stateProvince` | De staat of provincie van de observatie. De notatie volgt de [ISO 3166-2 (land en deelsector)](https://www.unece.org/cefact/locode/subdivisions.html) standaard. |
+| `stateProvince` | De staat of provincie van de observatie. De notatie volgt de [ISO 3166-2 (land en onderverdeling)](https://www.unece.org/cefact/locode/subdivisions.html) standaard. |
 | `status` | Geeft aan of het adres momenteel kan worden gebruikt. |
 | `statusReason` | Een beschrijving van de huidige `status`. |
 | `street1` - `street4` | Deze vier velden zijn bedoeld om informatie op het niveau van de primaire straat, het appartementnummer, het straatnummer en de straatnaam te bevatten. `street2` tot `street4` zijn optioneel. |

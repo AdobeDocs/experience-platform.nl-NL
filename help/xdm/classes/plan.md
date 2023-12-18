@@ -1,17 +1,17 @@
 ---
 title: Planningsklasse
-description: Dit document verstrekt een overzicht van de klasse van het Plan in het Model van de Gegevens van de Ervaring (XDM).
+description: Leer over de klasse van het Plan in het Model van Gegevens van de Ervaring (XDM).
 exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Plan] class
 
-In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Plan] klasse legt de minimumreeks eigenschappen vast die een regeling definiëren, zoals een ziektekostenplan of een verzekeringsplan.
+In Experience Data Model (XDM), [!UICONTROL Plan] klasse legt de minimumreeks eigenschappen vast die een regeling definiëren, zoals een ziektekostenplan of een verzekeringsplan.
 
 ![Klassenstructuur](../images/classes/plan.png)
 
@@ -23,4 +23,4 @@ In het Model van de Gegevens van de Ervaring (XDM), [!UICONTROL Plan] klasse leg
 
 {style="table-layout:auto"}
 
-De klasse kan worden uitgebreid met de [[!UICONTROL Healthcare Plan Details] veldgroep](../field-groups/plan/healthcare-plan-details.md) nadere bijzonderheden over een ziektekostenverzekering te verstrekken.
+De klasse kan worden uitgebreid met de [[!UICONTROL Healthcare Plan Details] veldgroep](../field-groups/plan/healthcare-plan-details.md) nadere bijzonderheden over een ziektekostenverzekeringsplan te verstrekken.

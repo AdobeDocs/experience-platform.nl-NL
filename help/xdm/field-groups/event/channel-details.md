@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;
 solution: Experience Platform
 title: Veld groep kanaaldetails
-description: Dit document biedt een overzicht van de veldgroep Kanaaldetails.
+description: Meer informatie over de veldgroep Kanaaldetails.
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---

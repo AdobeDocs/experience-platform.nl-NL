@@ -1,11 +1,11 @@
 ---
 title: XDM Business Person Components-schemaveldgroep
-description: Dit document biedt een overzicht van de XDM Business Person Components schema-veldgroep.
+description: Meer informatie over de XDM Business Person Components schemagroep.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 1%
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ De veldgroep biedt een basisniveau `personComponents` field, een array van objec
 >
 >U dient de inname-patronen te volgen zoals beschreven in het dialoogvenster [documentatie bronnen](../../../rtcdp/sources/b2b.md). Andere kaartmethoden in het veld werken niet gegarandeerd.
 >
->Elk object van de `personComponents` array wordt afzonderlijk verzonden tijdens standaard innamepatronen en vervolgens via Platform aan de array toegevoegd. Als u handmatig een array met objecten toevoegt aan de Business Person Component, wordt een fout geretourneerd.
+>Elk object van de `personComponents` array wordt afzonderlijk verzonden tijdens standaard innamepatronen en vervolgens aan de array toegevoegd door Platform. Als u handmatig een array met objecten toevoegt aan de Business Person Component, wordt een fout geretourneerd.
 >U zou het auto-generatienut moeten gebruiken wanneer het creëren van schema&#39;s voor uw B2B gegevens. Zie de documentatie voor instructies over het gebruik van de [B2B-naamruimte en hulpprogramma voor automatisch genereren van schema](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Als u het hulpprogramma voor automatisch genereren niet gebruikt en van plan bent het gegevensmodel handmatig toe te wijzen, moet u de documentatie op het tabblad [Adobe Real-time Customer Data Platform B2B Edition XDM-klassen](../../../rtcdp/schemas/b2b.md) voordat u uw gegevens toewijst.
 >
 >Zie de [end-to-end zelfstudie](../../../rtcdp/b2b-tutorial.md) voor informatie over aanbevolen workflows voor B2B-gegevens.
@@ -34,16 +34,16 @@ De veldgroep biedt een basisniveau `personComponents` field, een array van objec
 | `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Een samengestelde id voor de gerelateerde contactpersoon als deze lead is omgezet. |
 | `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Een samengestelde id voor het bronsysteem waaruit de gegevens van de persoon afkomstig zijn. |
 | `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Een samengestelde id voor de persoon. |
-| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | De werk-e-mailid van de persoon. |
-| `personGroupID` | Tekenreeks | Een groepsidentificatie voor de persoon. |
-| `personScore` | Tekenreeks | Een score die door een CRM-systeem voor de persoon wordt gegenereerd. |
-| `personSource` | Tekenreeks | Een unieke op tekenreeks gebaseerde id voor het bronsysteem waaruit de gegevens van de persoon afkomstig zijn. |
-| `personStatus` | Tekenreeks | De huidige handels- of verkoopstatus van de persoon. |
-| `personType` | Tekenreeks | Het type persoon in een B2B-context. |
-| `sourceAccountID` | Tekenreeks | Een unieke op tekenreeks gebaseerde id voor de account in het bronsysteem dat aan de persoon is gekoppeld. Dit veld wordt door het systeem gebruikt als een buitenlandse sleutel om de verschillende bedrijven op te zoeken waar deze persoon voor werkt. |
-| `sourceConvertedContactID` | Tekenreeks | Een unieke op tekenreeks gebaseerde id voor de gerelateerde contactpersoon als deze lead is omgezet. |
-| `sourceExternalID` | Tekenreeks | Een unieke op tekenreeks gebaseerde id voor het bronsysteem waaruit de gegevens van de persoon afkomstig zijn. |
-| `sourcePersonID` | Tekenreeks | Een unieke op tekenreeks gebaseerde id voor de persoon. |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | De werkmail-id van de persoon. |
+| `personGroupID` | String | Een groepsidentificatie voor de persoon. |
+| `personScore` | String | Een score die door een CRM-systeem voor de persoon wordt gegenereerd. |
+| `personSource` | String | Een unieke op tekenreeks gebaseerde id voor het bronsysteem waaruit de gegevens van de persoon afkomstig zijn. |
+| `personStatus` | String | De huidige handels- of verkoopstatus van de persoon. |
+| `personType` | String | Het type persoon in een B2B-context. |
+| `sourceAccountID` | String | Een unieke op tekenreeks gebaseerde id voor de account in het bronsysteem dat aan de persoon is gekoppeld. Dit veld wordt door het systeem gebruikt als een buitenlandse sleutel om de verschillende bedrijven op te zoeken waar deze persoon voor werkt. |
+| `sourceConvertedContactID` | String | Een unieke op tekenreeks gebaseerde id voor de gerelateerde contactpersoon als deze lead is omgezet. |
+| `sourceExternalID` | String | Een unieke op tekenreeks gebaseerde id voor het bronsysteem waaruit de gegevens van de persoon afkomstig zijn. |
+| `sourcePersonID` | String | Een unieke op tekenreeks gebaseerde id voor de persoon. |
 
 {style="table-layout:auto"}
 

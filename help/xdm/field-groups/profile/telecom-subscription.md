@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;telecommunicatie;telecommunicatie;Schema ontwerp;gebiedsgroep;De groep van het Gebied;
 solution: Experience Platform
 title: Telecom Subscription Schema Field Group
-description: Dit document verstrekt een overzicht van de het schemagebiedgroep van het Abonnement van Telecom.
+description: Leer over de het schemagroep van het Abonnement van Telecom.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 1%
+source-wordcount: '675'
+ht-degree: 0%
 
 ---
 
@@ -30,8 +30,8 @@ De veldgroep bevat één veld van het objecttype. `telecomSubscription`, waarvan
 | `mediaSubscription` | Array van objecten | Beschrijft de details van het media abonnementsplan, met inbegrip van het aantal kanalen en inbegrepen het stromen diensten. Zie de [sectie hieronder](#mediaSubscription) voor meer informatie . |
 | `mobileSubscription` | Array van objecten | Beschrijft mobiele details van het abonnementsabonnement, met inbegrip van het aantal lijnen, gegevenstarieven, kosten, en meer. Zie de [sectie hieronder](#mobileSubscription) voor meer informatie . |
 | `primarySubscriber` | [[!UICONTROL Person]](../../data-types/person.md) | Beschrijft de eigenaar van het abonnement. |
-| `bundleName` | Tekenreeks | Hiermee wordt de naam vastgelegd van elk type abonnementsbundel waarin de klant is ingeschreven, zoals `Internet + Media`. |
-| `primaryPartyID` | Tekenreeks | Een herkenningsteken voor de primaire persoon verantwoordelijk voor het abonnement, die typisch hun aantal van de apparatentelefoon zou kunnen zijn. |
+| `bundleName` | String | Hiermee wordt de naam vastgelegd van elk type abonnementsbundel waarin de klant is ingeschreven, zoals `Internet + Media`. |
+| `primaryPartyID` | String | Een herkenningsteken voor de primaire persoon verantwoordelijk voor het abonnement, die typisch hun aantal van de apparatentelefoon zou kunnen zijn. |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Beschrijft algemene details over het abonnement, met inbegrip van abonnementslengte, kosten, status, en meer. Beschrijft algemene details over het abonnement, met inbegrip van abonnementslengte, kosten, status, en meer. |
-| `connectionType` | Tekenreeks | Het verbindingstype voor het abonnement. |
+| `connectionType` | String | Het verbindingstype voor het abonnement. |
 | `dataCap` | Geheel | De limiet voor het maximale gegevensbereik van de account, in megabytes (MB). |
 | `downloadSpeed` | Geheel | De maximale downloadsnelheid die beschikbaar is voor het abonnement, in megabytes (MB). |
 | `selfSetup` | Boolean | Geeft aan of een klant in aanmerking komt voor de installatie van internet zonder bezoek van een technicus. |
@@ -71,7 +71,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | `callForwarding` | Boolean | Wijst erop of de eigenschappen van het landlineabonnement vraag door:sturen omvatten. |
 | `callWaiting` | Boolean | Wijst erop of de eigenschappen van het landlineabonnement vraag het wachten omvatten. |
 | `callerID` | Boolean | Wijst erop of de eigenschappen van het landlineabonnement bezoekersidentiteitskaart omvatten. |
-| `internationalCalling` | Boolean | Geeft aan of de abonnementsfuncties voor vaste netwerken internationale aanroepen bevatten. |
+| `internationalCalling` | Boolean | Geeft aan of de abonnementsfuncties van de vaste lijn een internationale aanroep bevatten. |
 | `minutes` | Geheel | Het aantal maandelijkse minuten dat beschikbaar is in het abonnement. |
 | `threeWayCalling` | Boolean | Wijst erop of de eigenschappen van het landlineabonnement driewegvraag omvatten. |
 | `unlimitedDomesticLongDistance` | Boolean | Geeft aan of de abonnementsfuncties voor vaste netwerken een onbeperkte binnenlandse aanroep over lange afstand bevatten. |
@@ -105,7 +105,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | `phoneNumber` | [[!UICONTROL Phone Number]](../../data-types/telecom-subscription.md) | Het telefoonnummer dat aan dit abonnement is toegewezen. |
 | `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Beschrijft algemene details over het abonnement, met inbegrip van abonnementslengte, kosten, status, en meer. |
 | `earlyUpgradeEnrollment` | Boolean | Geeft aan of de klant ervoor kiest een eerste upgrade uit te voeren. |
-| `planLevel` | Tekenreeks | De naam van het mobiele abonnement dat aan dit abonnement is toegewezen. |
+| `planLevel` | String | De naam van het mobiele abonnement dat aan dit abonnement is toegewezen. |
 | `portedNumber` | Boolean | Geeft aan of de klant zijn of haar nummer van een andere provider poorten. |
 
 {style="table-layout:auto"}

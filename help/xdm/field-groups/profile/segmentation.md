@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: Segment Membership Details Schema Field Group
-description: Dit document verstrekt een overzicht van de het schemagebiedgroep van de Details van het Lidmaatschap van het Segment.
+description: Leer over de het schemagebiedgroep van de Details van het Lidmaatschap van het Segment.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---

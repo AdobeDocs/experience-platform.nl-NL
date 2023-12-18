@@ -1,11 +1,11 @@
 ---
 title: Veldgroep aanbetalingsgegevens
-description: Dit document bevat een overzicht van de veldgroep van het schema Aanbetalingsgegevens.
+description: Meer informatie over de veldgroep van het schema voor aanbetalingsgegevens.
 exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 0%
+source-wordcount: '86'
+ht-degree: 1%
 
 ---
 

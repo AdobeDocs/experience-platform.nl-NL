@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schema's;adres;xdm:adres;datatype;data-type;gegevenstype;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;adres;xdm:adres;datatype;data-type;gegevenstype;
 solution: Experience Platform
 title: Gegevenstype van productlijst
-description: Dit document biedt een overzicht van het XDM-gegevenstype van het item in de productlijst.
+description: Meer informatie over het XDM-gegevenstype van het item in de productlijst.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ De waarden die in dit gegevenstype worden vastgelegd, kunnen afwijken van de pro
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `selectedOptions` | Array van objecten | Bevat aangepaste opties die zijn gekozen voor een configureerbaar product. Elk lijstitem is een object met de volgende eigenschappen:<ul><li>`attribute`: Een naam voor het configureerbare attribuut.</li><li>`value`: De waarde van het kenmerk.</li></ul> |
+| `selectedOptions` | Array van objecten | Bevat aangepaste opties die zijn gekozen voor een configureerbaar product. Elk lijstitem is een object met de volgende eigenschappen:<ul><li>`attribute`: Een naam voor het configureerbare kenmerk.</li><li>`value`: De waarde van het kenmerk.</li></ul> |
 | `SKU` | [!UICONTROL String] | Stock keeping unit (SKU), de unieke identificator voor een product dat door de verkoper wordt gedefinieerd. |
 | `_id` | [!UICONTROL String] | The line item identifier for this product entry. Het product zelf wordt geïdentificeerd door `product`. |
 | `currencyCode` | [!UICONTROL String] | De [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) alfabetische valutacode die wordt gebruikt voor de prijsstelling van het product. |
@@ -31,7 +31,7 @@ De waarden die in dit gegevenstype worden vastgelegd, kunnen afwijken van de pro
 | `product` | [!UICONTROL String] (URI) | De URI `$id` van het XDM-schema dat het product zelf vastlegt. |
 | `productAddMethod` | [!UICONTROL String] | De methode die door de bezoeker is gebruikt om een product-item aan de lijst toe te voegen. |
 | `productImageUrl` | [!UICONTROL String] | Een URL voor de hoofdafbeelding van het product. |
-| `quantity` | [!UICONTROL Integer] | Het aantal eenheden dat de klant heeft aangegeven te vragen voor het product. |
+| `quantity` | [!UICONTROL Integer] | Het aantal eenheden dat de klant heeft aangegeven van het product te verlangen. |
 | `unitOfMeasureCode` | [!UICONTROL String] | De norm [maateenheid](https://ucum.org/ucum) voor het product als gerelateerd aan de `quantity` eigenschap. |
 
 {style="table-layout:auto"}

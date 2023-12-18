@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;place context;placeContext;datatype;data-type;gegevenstype.
 solution: Experience Platform
 title: Contextgegevenstype plaatsen
-description: Dit document biedt een overzicht van het XDM-gegevenstype Context plaatsen.
+description: Meer informatie over het XDM-gegevenstype Context plaatsen.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 2%
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 | `POIinteraction` | [[!UICONTROL Point of interest interaction]](./poi-interaction.md) | Beschrijft details over de punt-van-belang (POI) interactie. |
 | `activePOIs` | Array van [[!UICONTROL Point of interest details]](./poi-details.md) | Beschrijft POIs die de gebeurtenis veroorzaakte. |
 | `geo` | [[!UICONTROL Geo]](./geo.md) | Beschrijft de geografische plaats waar de ervaring werd geleverd. |
-| `localTime` | DateTime | Een tijdstempel in [RFC 3339](https://tools.ietf.org/html/rfc3339) notatie die de lokale tijd aangeeft met een opgegeven verschuiving van de tijdzone. Het opmaakpatroon is `yyyy-MM-dd'T'HH:mm:ssXXX` (bijvoorbeeld `2001-07-04T12:08:56-07:00`). |
+| `localTime` | DateTime | Een tijdstempel in [RFC 339](https://tools.ietf.org/html/rfc3339) notatie die de lokale tijd aangeeft met een opgegeven verschuiving van de tijdzone. Het opmaakpatroon is `yyyy-MM-dd'T'HH:mm:ssXXX` (bijvoorbeeld `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Geheel | De huidige lokale tijdzone wordt in minuten verschoven van UTC voor de `localTime` waarde. Dit moet, indien van toepassing, de huidige DST-verschuiving omvatten. |
 
 {style="table-layout:auto"}

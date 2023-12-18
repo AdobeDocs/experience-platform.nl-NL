@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schemaontwerp;veldgroep;veldgroep;enduserids;eindgebruiker;eindgebruiker;ids;
 solution: Experience Platform
 title: Detailsveldgroep eindgebruiker - ID
-description: Dit document bevat een overzicht van de veldgroep Eindgebruikersgegevens.
+description: Meer informatie over de veldgroep Eindgebruikersdetails van het detailschema.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >De namen van verschillende groepen schemavelden zijn gewijzigd. Document weergeven op [veldgroepnaapupdates](../name-updates.md) voor meer informatie .
 
-[!UICONTROL End User ID Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), gebruikt om de identiteitsgegevens van een individu te beschrijven in verschillende Adobe-toepassingen. De veldgroep biedt een basisniveau `endUserIDs` object, dat zelf een alleen-lezen object bevat `_experience` veld waarvan de waarden automatisch worden bijgewerkt wanneer gegevens worden ingevoerd.
+[!UICONTROL End User ID Details] is een standaardschemagebiedgroep voor [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), gebruikt om de identiteitsgegevens van een individu te beschrijven in verschillende toepassingen van de Adobe. De veldgroep biedt een basisniveau `endUserIDs` object, dat zelf een alleen-lezen object bevat `_experience` veld waarvan de waarden automatisch worden bijgewerkt wanneer gegevens worden ingevoerd.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 

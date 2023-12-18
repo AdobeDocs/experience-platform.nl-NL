@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;fullName;xdm:fullName;person name;name;datatype;data-type;data-type; data-type;
 solution: Experience Platform
 title: Gegevenstype naam persoon
-description: Dit document biedt een overzicht van het XDM-gegevenstype Personnaam.
+description: Meer informatie over het XDM-gegevenstype Personaam.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen w
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `courtesyTitle` | Een afkorting van de titel, de eerlijkheid of de aanhef van een persoon (zoals `Mr.`, `Miss.`, of `Dr.`). |
-| `firstName` | Het eerste segment van de naam in de schrijfvolgorde dat het meest wordt geaccepteerd in de taal van de naam. |
+| `firstName` | Het eerste segment van de naam in de schrijfvolgorde wordt meestal geaccepteerd in de taal van de naam. |
 | `fullName` | De volledige naam van de persoon, in de schrijfvolgorde die het meest wordt aanvaard in de taal van de naam. |
 | `lastName` | Het laatste segment van de naam in de schrijfvolgorde dat het meest wordt geaccepteerd in de taal van de naam. |
 | `middleName` | Midden-, alternatieve of aanvullende namen opgegeven tussen de voornaam en achternaam. |

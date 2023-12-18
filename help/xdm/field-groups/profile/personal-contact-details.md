@@ -2,11 +2,11 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;persoonlijke details;Schema ontwerp;gebiedsgroep;De groep van het Gebied;
 solution: Experience Platform
 title: Persoonlijke veldgroep contactgegevens
-description: Dit document verstrekt een overzicht van de Persoonlijke het schemagebiedgroep van de Details van het Contact.
+description: Leer over de Persoonlijke het schemagebiedgroep van de Details van het Contact.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---

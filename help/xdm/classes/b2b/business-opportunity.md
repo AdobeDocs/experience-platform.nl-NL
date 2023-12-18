@@ -1,11 +1,11 @@
 ---
 title: XDM Business Opportunity-klasse
-description: Dit document biedt een overzicht van de XDM Business Opportunity-klasse in Experience Data Model (XDM).
+description: Meer informatie over de XDM Business Opportunity-klasse in Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 2%
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Deze klasse is bedoeld om te worden gebruikt door organisaties die toegang hebben tot [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). U moet toegang hebben tot Real-Time CDP B2B Edition om deze klasse te laten deelnemen aan [Klantprofiel in realtime](../../../profile/home.md).
+>Deze klasse is bedoeld om te worden gebruikt door organisaties met toegang tot [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). U moet toegang hebben tot Real-Time CDP B2B Edition om deze klasse te laten deelnemen aan [Klantprofiel in realtime](../../../profile/home.md).
 
 [!UICONTROL XDM Business Opportunity] is een standaardklasse van de Gegevens van de Ervaring van het Model (XDM) die de minimum vereiste eigenschappen van een bedrijfskans vangt.
 
@@ -24,14 +24,14 @@ ht-degree: 2%
 | `accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Een samengestelde id voor de account waaraan deze kans is gekoppeld. |
 | `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Als de kans uit een extern bronsysteem komt, vangt dit voorwerp controleattributen voor dat systeem. |
 | `opportunityKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Een samengestelde id voor de opportuniteitsentiteit. |
-| `_id` | Tekenreeks | Een unieke id voor de record. Dit is een door het systeem gegenereerde waarde die los staat van de `opportunityID`. |
-| `accountID` | Tekenreeks | Een unieke id voor het account waaraan deze kans is gekoppeld. |
-| `isDeleted` | Boolean | Geeft aan of deze entiteit voor de marketinglijst is verwijderd in Marketo Engage.<br><br>Wanneer u de [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
-| `opportunityDescription` | Tekenreeks | Een beschrijving van de mogelijkheid. |
-| `opportunityID` | Tekenreeks | Een unieke id voor de opportuniteitsentiteit. |
-| `opportunityName` | Tekenreeks | De naam van de opportuniteit. |
-| `opportunityStage` | Tekenreeks | De verkoopfase van de opportuniteit. |
-| `opportunityType` | Tekenreeks | Het soort kans. |
+| `_id` | String | Een unieke id voor de record. Dit is een door het systeem gegenereerde waarde die los staat van de `opportunityID`. |
+| `accountID` | String | Een unieke id voor het account waaraan deze kans is gekoppeld. |
+| `isDeleted` | Boolean | Geeft aan of deze marketinglijstentiteit in het Marketo Engage is verwijderd.<br><br>Wanneer u de opdracht [Marketo-bronaansluiting](../../../sources/connectors/adobe-applications/marketo/marketo.md), worden alle records die in Marketo worden verwijderd, automatisch weergegeven in Real-Time klantprofiel. In het Data Lake kunnen echter nog steeds gegevens over deze profielen worden bewaard. Door in te stellen `isDeleted` tot `true`, kunt u het gebied gebruiken om uit te filteren welke verslagen uit uw bronnen zijn geschrapt wanneer het vragen van het meer van Gegevens. |
+| `opportunityDescription` | String | Een beschrijving van de mogelijkheid. |
+| `opportunityID` | String | Een unieke id voor de opportuniteitsentiteit. |
+| `opportunityName` | String | De naam van de mogelijkheid. |
+| `opportunityStage` | String | De verkoopfase van de mogelijkheid. |
+| `opportunityType` | String | Het soort kans. |
 
 {style="table-layout:auto"}
 

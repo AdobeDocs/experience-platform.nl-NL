@@ -1,10 +1,10 @@
 ---
-title: Upgradedetails in het schemaveld
-description: Dit document biedt een overzicht van de veldgroep voor het bijwerken van details in het schema.
+title: Upgradedetails in het schemaveld Groep
+description: Meer informatie over de veldgroep voor het schema Details van upgrade.
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---

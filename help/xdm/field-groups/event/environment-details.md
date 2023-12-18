@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;milieu;omgevingsdetails;
 solution: Experience Platform
 title: Environment Details Schema Field Group
-description: Dit document biedt een overzicht van de veldgroep met de gegevens van het schema ExperienceEvent Environment.
+description: Leer over de het schemagebiedgroep van de Details van het Milieu ExperienceEvent.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---

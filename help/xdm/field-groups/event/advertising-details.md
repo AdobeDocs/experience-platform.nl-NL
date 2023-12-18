@@ -1,11 +1,11 @@
 ---
 title: Advertentiedetails-schema-veldgroep
-description: Dit document biedt een overzicht van de veldgroep met het schema Advertising Details.
+description: Meer informatie over de veldgroep Advertising Details.
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 1%
+source-wordcount: '964'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `adAssetReference` | Object | Hiermee legt u elementgegevens over de advertentie vast. Zie de [onderafdeling](#adAssetReference) voor meer informatie over de structuur van dit object. |
 | `adAssetViewDetails` | Object | Hiermee legt u weergavedetails voor het afspelen van de advertentie vast. Zie de [onderafdeling](#adAssetViewDetails) voor meer informatie over de structuur van dit object. |
-| `adViewability` | Object | Vangt het aantal indrukken die door eind - gebruikers zoals spelervolume, bibliotheekversie, vensterstatus, en de afmetingen van de advertentiepoort worden gezien. Zie de [onderafdeling](#adViewability) voor meer informatie over de structuur van dit object. |
+| `adViewability` | Object | Vangt het aantal beelden die door eind - gebruikers zoals spelervolume, bibliotheekversie, vensterstatus, en de afmetingen van de advertentiepoort worden gezien. Zie de [onderafdeling](#adViewability) voor meer informatie over de structuur van dit object. |
 | `clicks` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal klikhandelingen op de advertentie. |
 | `completes` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een getimed media-element is gecontroleerd tot voltooiing. Dit betekent niet noodzakelijkerwijs dat de eindgebruiker de hele video heeft bekeken omdat deze mogelijk vooruit is overgeslagen. |
 | `conversions` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een vooraf gedefinieerde actie (of acties) een gebeurtenis voor prestatiebeoordeling heeft geactiveerd. |
@@ -30,7 +30,7 @@ ht-degree: 1%
 | `starts` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een digitale video is afgespeeld. |
 | `thirdQuartiles` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een digitale video die 75% van zijn duur bij normale snelheid heeft gespeeld. |
 | `timePlayed` | [[!UICONTROL Measure]](../../data-types/measure.md) | De hoeveelheid tijd die door een eindgebruiker aan een specifiek getimed media middel wordt doorgebracht. |
-| `downloadedPlayback` | Boolean | Wanneer ingesteld op `true`, geeft aan dat de hit wordt gegenereerd als gevolg van het afspelen van een gedownloade advertentiesessie. |
+| `downloadedPlayback` | Boolean | Wanneer ingesteld op `true`, geeft aan dat de hit wordt gegenereerd omdat een gedownloade advertentiesessie wordt afgespeeld. |
 
 {style="table-layout:auto"}
 
@@ -42,15 +42,15 @@ De `adAssetReference` worden de elementgegevens van de advertentie vastgelegd.
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `_dc.title` | Tekenreeks | De vriendelijke en leesbare naam van het advertentiemiddel. |
+| `_dc.title` | String | De vriendelijke en leesbare naam van het advertentiemiddel. |
 | `_xmpDM.duration` | Geheel | De lengte of duur van het element in seconden. |
-| `_id` | Tekenreeks | Een unieke id van het advertentiemiddel, na de [Advertentievorm](https://datatracker.ietf.org/doc/html/rfc8107). |
-| `advertiser` | Tekenreeks | De onderneming of het merk waarvan het product in de advertentie wordt vermeld. |
-| `campaign` | Tekenreeks | De id van de advertentiecampagne. |
-| `creativeID` | Tekenreeks | De id van de advertentie. |
-| `creativeURL` | Tekenreeks | De URL van de advertentie. |
-| `placementID` | Tekenreeks | De plaatsing-id van de advertentie. |
-| `siteID` | Tekenreeks | De id van de advertentiesite. |
+| `_id` | String | Een unieke id van het advertentiemiddel, na de [Advertentievorm](https://datatracker.ietf.org/doc/html/rfc8107). |
+| `advertiser` | String | De onderneming of het merk waarvan het product in de advertentie wordt vermeld. |
+| `campaign` | String | De id van de advertentiecampagne. |
+| `creativeID` | String | De id van de advertentie. |
+| `creativeURL` | String | De URL van de advertentie. |
+| `placementID` | String | De plaatsing-id van de advertentie. |
+| `siteID` | String | De id van de advertentiesite. |
 
 {style="table-layout:auto"}
 
@@ -62,9 +62,9 @@ De `adAssetViewDetails` worden weergavegegevens voor het afspelen van de adverte
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `adBreak` | [[!UICONTROL Ad break]](../../data-types/ad-break.md) | Beschrijft hoe een vastgestelde advertentie in getimed media wordt opgenomen. |
+| `adBreak` | [[!UICONTROL Ad break]](../../data-types/ad-break.md) | Beschrijft hoe een getimed advertentie in getimed media wordt opgenomen. |
 | `index` | Geheel | De index van de advertentie binnen het bovenliggende element en het einde. De eerste advertentie heeft bijvoorbeeld index `0` en de tweede advertentie heeft index `1`. |
-| `playerName` | Tekenreeks | De naam van de speler die verantwoordelijk is voor het renderen van de advertentie. |
+| `playerName` | String | De naam van de speler die verantwoordelijk is voor het renderen van de advertentie. |
 
 {style="table-layout:auto"}
 

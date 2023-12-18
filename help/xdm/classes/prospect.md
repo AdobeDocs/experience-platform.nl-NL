@@ -1,10 +1,10 @@
 ---
 title: Afzonderlijke XDM-perspectiefprofielklasse
-description: Dit document biedt een overzicht van de klasse XDM Individual Prospect Profile in Experience Data Model (XDM).
+description: Leer meer over de klasse van het Profiel van het Individuele Vooruitzicht XDM in het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---

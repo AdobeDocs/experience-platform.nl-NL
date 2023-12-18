@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Schema ontwerp;gebiedsgroep;field groep;persoon;persoondetails;profiel persoondetails;persoon; persoon
 solution: Experience Platform
 title: Demografische details schema-veldgroep
-description: Dit document biedt een overzicht van de veldgroep Demographic Details.
+description: Leer over de Demographic het schemagebiedgroep van Details.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 2%
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -26,12 +26,12 @@ ht-degree: 2%
 | --- | --- | --- |
 | `person.name` | [Naam persoon](../../data-types/person-name.md) | Een object waarvan de subvelden verschillende elementen van de naam van een persoon beschrijven. |
 | `person.birthDate` | Datum | De volledige datum waarop een persoon is geboren, in de vorm van een tijdstempel van ISO 8601. |
-| `person.birthDayAndMonth` | Tekenreeks | De dag en de maand waarin een persoon is geboren, in de notatie MM-DD. Dit veld moet worden gebruikt wanneer de dag en de maand van de geboorte van een persoon bekend is, maar niet het jaar. |
-| `person.birthYear` | Geheel | Het jaar waarin een persoon werd geboren, inclusief de eeuw (zoals 1989). Dit veld moet worden gebruikt wanneer alleen de leeftijd van de persoon bekend is, niet de volledige geboortedatum. |
-| `person.gender` | Tekenreeks | De genderidentiteit van de persoon. |
-| `person.martialStatus` | Tekenreeks | Beschrijft de verhouding van een persoon met significante andere. |
-| `person.nationality` | Tekenreeks | De juridische relatie tussen een persoon en zijn staat die wordt vertegenwoordigd door middel van de ISO 3166-1 Alpha-2-code. |
-| `person.taxId` | Tekenreeks | De belasting-/fiscale ID van de persoon, zoals het TIN in de VS of het CIF/NIF in Spanje. |
+| `person.birthDayAndMonth` | String | De dag en de maand waarin een persoon is geboren, in de notatie MM-DD. Dit veld moet worden gebruikt wanneer de dag en de maand van de geboorte van een persoon bekend is, maar niet het jaar. |
+| `person.birthYear` | Geheel | Het jaar waarin een persoon geboren is, inclusief de eeuw (zoals 1989). Dit veld moet worden gebruikt wanneer alleen de leeftijd van de persoon bekend is, niet de volledige geboortedatum. |
+| `person.gender` | String | De genderidentiteit van de persoon. |
+| `person.martialStatus` | String | Beschrijft de verhouding van een persoon met significante andere. |
+| `person.nationality` | String | De juridische relatie tussen een persoon en zijn staat die wordt vertegenwoordigd door middel van de ISO 3166-1 Alpha-2 code. |
+| `person.taxId` | String | De belasting-/fiscale ID van de persoon, zoals het TIN in de VS of het CIF/NIF in Spanje. |
 
 {style="table-layout:auto"}
 
