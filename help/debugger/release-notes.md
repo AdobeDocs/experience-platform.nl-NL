@@ -4,14 +4,21 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;ervaring met de extensie Foutopsporing in platform;chroom;extensie;releaseopmerkingen
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
+source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '704'
 ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Debugger
+
+## Versie 1.5.4 - 19 december 2023
+
+### Oplossingen en verbeteringen
+
+* Probleem verholpen waarbij instellingen niet werden behouden.
+* Probleem verholpen waarbij Foutopsporing vastliep tijdens het bekijken van Analytics Nabewerkte hits.
 
 ## Versie 1.5.3 - 6 december 2023
 
@@ -25,6 +32,14 @@ ht-degree: 1%
 * Probleem verholpen waarbij Activity Map gegevens zouden ontbreken in de tabel met analyseverzoeken.
 * Probleem verholpen waarbij het weergeven van het doelspoor ertoe zou leiden dat het programma vastloopt.
 * Er is een waarschuwing toegevoegd wanneer Foutopsporing geen infrastructuur op pagina in Firefox kan instellen.
+
+## Versie 1.5.2 - 10 november 2023
+
+(alleen Firefox)
+
+### Oplossingen en verbeteringen
+
+* De indeling van bestanden is bijgewerkt.
 
 ## Versie 1.5.1 - 2 november 2023
 
