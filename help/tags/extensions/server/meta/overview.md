@@ -2,9 +2,9 @@
 title: Overzicht van de extensie Meta Conversions API
 description: Meer informatie over de API-extensie Meta Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
+source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
 workflow-type: tm+mt
-source-wordcount: '2449'
+source-wordcount: '2419'
 ht-degree: 0%
 
 ---
@@ -114,6 +114,12 @@ Wanneer u gedeelde gebeurtenissen verzendt, moet u een gebeurtenis-id en een naa
 >
 >* De functie Snel starten is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
 >* Deze eigenschap is voor netto nieuwe implementaties en steunt momenteel niet auto installerende uitbreidingen en configuraties op bestaande markeringen en gebeurtenis die eigenschappen door:sturen.
+
+>[!NOTE]
+>
+>Om het even welke bestaande cliënt kan de snelstartwerkschema&#39;s gebruiken om een verwijzings implementatie tot stand te brengen die voor het volgende kan worden gebruikt:
+>* Gebruik dit als het begin van een gloednieuwe implementatie.
+>* Haal voordeel uit het als verwijzingsimplementatie die u kunt onderzoeken om te zien hoe het is gevormd en dan in uw huidige productieimplementaties repliceert.
 
 Met de functie Snel starten kunt u eenvoudig en efficiënt werken met de API voor metaconversie en de Pixel-extensies Meta. Dit hulpmiddel automatiseert veelvoudige stappen die in Adobe markeringen en gebeurtenis door:sturen worden uitgevoerd, beduidend verminderend de opstellingstijd.
 
