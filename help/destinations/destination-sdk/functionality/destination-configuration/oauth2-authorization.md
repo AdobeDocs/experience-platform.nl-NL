@@ -2,10 +2,10 @@
 description: Deze pagina beschrijft de diverse OAuth 2 vergunningsstromen die door Destination SDK worden gesteund, en verstrekt instructies aan opstelling OAuth 2 vergunning voor uw bestemming.
 title: OAuth 2-vergunning
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 3%
+source-wordcount: '2181'
+ht-degree: 0%
 
 ---
 
@@ -33,11 +33,16 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ### Vereisten in uw systeem {#prerequisites}
 
-Als eerste stap moet u in uw systeem een app voor Adobe Experience Platform maken of op een andere manier Experience Platform in uw systeem registreren. Het doel is een cliëntidentiteitskaart en cliëntgeheim te produceren, die nodig zijn om Experience Platform aan uw bestemming voor authentiek te verklaren. Als onderdeel van deze configuratie in uw systeem hebt u de Adobe Experience Platform OAuth 2 omleiding/callback-URL&#39;s nodig, die u uit de onderstaande lijst kunt halen.
+Als eerste stap moet u in uw systeem een app voor Adobe Experience Platform maken of op een andere manier Experience Platform in uw systeem registreren. Het doel is een cliëntidentiteitskaart en cliëntgeheim te produceren, die nodig zijn om Experience Platform aan uw bestemming voor authentiek te verklaren.
+
+Als onderdeel van deze configuratie in uw systeem hebt u de Adobe Experience Platform OAuth 2 omleiding/callback-URL&#39;s nodig, die u uit de onderstaande lijst kunt halen.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
@@ -111,13 +116,13 @@ Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijn
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `authType` | Tekenreeks | Gebruik &quot;OAUTH2&quot;. |
-| `grant` | Tekenreeks | Gebruik &quot;OAUTH2_AUZATION_CODE&quot;. |
-| `accessTokenUrl` | Tekenreeks | De URL aan uw zijde, die toegangstokens uitgeeft en, naar keuze, tokens verfrist. |
-| `authorizationUrl` | Tekenreeks | De URL van uw verificatieserver, waar u de gebruiker omleidt om zich aan te melden bij uw toepassing. |
-| `refreshTokenUrl` | Tekenreeks | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak, `refreshTokenUrl` is gelijk aan `accessTokenUrl`. |
-| `clientId` | Tekenreeks | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
-| `clientSecret` | Tekenreeks | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
+| `authType` | String | Gebruik &quot;OAUTH2&quot;. |
+| `grant` | String | Gebruik &quot;OAUTH2_AUZATION_CODE&quot;. |
+| `accessTokenUrl` | String | De URL aan uw zijde, die toegangstokens uitgeeft en, naar keuze, tokens verfrist. |
+| `authorizationUrl` | String | De URL van uw verificatieserver, waar u de gebruiker omleidt om zich aan te melden bij uw toepassing. |
+| `refreshTokenUrl` | String | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak, `refreshTokenUrl` is gelijk aan `accessTokenUrl`. |
+| `clientId` | String | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
+| `clientSecret` | String | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
 | `scope` | Lijst met tekenreeksen | *Optioneel*. Plaats het werkingsgebied van wat het toegangstoken Experience Platform toestaat om op uw middelen uit te voeren. Voorbeeld: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
@@ -156,11 +161,11 @@ Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijn
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `authType` | Tekenreeks | Gebruik &quot;OAUTH2&quot;. |
-| `grant` | Tekenreeks | Gebruik &quot;OAUTH2_PASSWORD&quot;. |
-| `accessTokenUrl` | Tekenreeks | De URL aan uw zijde, die toegangstokens uitgeeft en, naar keuze, tokens verfrist. |
-| `clientId` | Tekenreeks | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
-| `clientSecret` | Tekenreeks | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
+| `authType` | String | Gebruik &quot;OAUTH2&quot;. |
+| `grant` | String | Gebruik &quot;OAUTH2_PASSWORD&quot;. |
+| `accessTokenUrl` | String | De URL aan uw zijde, die toegangstokens uitgeeft en, naar keuze, tokens verfrist. |
+| `clientId` | String | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
+| `clientSecret` | String | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
 | `scope` | Lijst met tekenreeksen | *Optioneel*. Plaats het werkingsgebied van wat het toegangstoken Experience Platform toestaat om op uw middelen uit te voeren. Voorbeeld: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
@@ -197,12 +202,12 @@ Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijn
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `authType` | Tekenreeks | Gebruik &quot;OAUTH2&quot;. |
-| `grant` | Tekenreeks | Gebruik &quot;OAUTH2_CLIENT_CREDENTIALS&quot;. |
-| `accessTokenUrl` | Tekenreeks | De URL van uw verificatieserver, die een toegangstoken en een optioneel vernieuwingstoken uitgeeft. |
-| `refreshTokenUrl` | Tekenreeks | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak, `refreshTokenUrl` is gelijk aan `accessTokenUrl`. |
-| `clientId` | Tekenreeks | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
-| `clientSecret` | Tekenreeks | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
+| `authType` | String | Gebruik &quot;OAUTH2&quot;. |
+| `grant` | String | Gebruik &quot;OAUTH2_CLIENT_CREDENTIALS&quot;. |
+| `accessTokenUrl` | String | De URL van uw verificatieserver, die een toegangstoken en een optioneel vernieuwingstoken uitgeeft. |
+| `refreshTokenUrl` | String | *Optioneel.* De URL aan uw zijde, die vernieuwt tokens uitgeeft. Vaak, `refreshTokenUrl` is gelijk aan `accessTokenUrl`. |
+| `clientId` | String | De client-id die door uw systeem aan Adobe Experience Platform wordt toegewezen. |
+| `clientSecret` | String | Het clientgeheim dat uw systeem aan Adobe Experience Platform toewijst. |
 | `scope` | Lijst met tekenreeksen | *Optioneel*. Plaats het werkingsgebied van wat het toegangstoken Experience Platform toestaat om op uw middelen uit te voeren. Voorbeeld: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
@@ -355,15 +360,15 @@ U kunt de volgende parameters gebruiken in `authenticationDataFields` om uw OAut
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `authenticationDataFields.name` | Tekenreeks | De naam van het aangepaste veld. |
-| `authenticationDataFields.title` | Tekenreeks | Een titel die u voor het aangepaste veld kunt opgeven. |
-| `authenticationDataFields.description` | Tekenreeks | Een beschrijving van het aangepaste gegevensveld dat u hebt ingesteld. |
-| `authenticationDataFields.type` | Tekenreeks | Hiermee definieert u het type van het veld Aangepaste gegevens. <br> Geaccepteerde waarden: `string`, `boolean`, `integer` |
+| `authenticationDataFields.name` | String | De naam van het aangepaste veld. |
+| `authenticationDataFields.title` | String | Een titel die u voor het aangepaste veld kunt opgeven. |
+| `authenticationDataFields.description` | String | Een beschrijving van het aangepaste gegevensveld dat u hebt ingesteld. |
+| `authenticationDataFields.type` | String | Hiermee definieert u het type van het veld Aangepaste gegevens. <br> Geaccepteerde waarden: `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | Boolean | Geeft aan of het veld met aangepaste gegevens is vereist in de machtigingsstroom. |
-| `authenticationDataFields.format` | Tekenreeks | Wanneer u `"format":"password"`, versleutelt de Adobe de waarde van het veld met machtigingsgegevens. Indien gebruikt met `"fieldType": "CUSTOMER"`Hiermee verbergt u ook de invoer in de gebruikersinterface wanneer de gebruiker in het veld typt. |
-| `authenticationDataFields.fieldType` | Tekenreeks | Wijst erop of de input uit de partner (u) of van de gebruiker komt, wanneer zij opstelling uw bestemming in Experience Platform. |
-| `authenticationDataFields.value` | Tekenreeks. Booleaans. Geheel | De waarde van het veld met aangepaste gegevens. De waarde komt overeen met het gekozen type `authenticationDataFields.type`. |
-| `authenticationDataFields.authenticationResponsePath` | Tekenreeks | Geeft aan naar welk veld van het API-antwoordpad u verwijst. |
+| `authenticationDataFields.format` | String | Wanneer u `"format":"password"`, versleutelt de Adobe de waarde van het veld met machtigingsgegevens. Indien gebruikt met `"fieldType": "CUSTOMER"`Hiermee verbergt u ook de invoer in de gebruikersinterface wanneer de gebruiker in het veld typt. |
+| `authenticationDataFields.fieldType` | String | Wijst erop of de input uit de partner (u) of van de gebruiker komt, wanneer zij opstelling uw bestemming in Experience Platform. |
+| `authenticationDataFields.value` | String. Booleaans. Geheel | De waarde van het veld met aangepaste gegevens. De waarde komt overeen met het gekozen type `authenticationDataFields.type`. |
+| `authenticationDataFields.authenticationResponsePath` | String | Geeft aan naar welk veld van het API-antwoordpad u verwijst. |
 
 {style="table-layout:auto"}
 
@@ -445,21 +450,21 @@ U kunt de volgende parameters gebruiken in `accessTokenRequest` om uw token aan 
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `accessTokenRequest.destinationServerType` | Tekenreeks | Gebruik `URL_BASED`. |
-| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarde in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.urlBasedDestination.url.value` is een constante. </li></li> |
-| `accessTokenRequest.urlBasedDestination.url.value` | Tekenreeks | De URL waar het Experience Platform om het toegangstoken verzoekt. |
-| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.httpTemplate.requestBody.value` is een constante. </li></li> |
-| `accessTokenRequest.httpTemplate.requestBody.value` | Tekenreeks | Gebruik de sjabloontaal om velden in de HTTP-aanvraag aan te passen aan het eindpunt van het toegangstoken. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
-| `accessTokenRequest.httpTemplate.httpMethod` | Tekenreeks | Specificeert de methode die van HTTP wordt gebruikt om uw eindpunt van het toegangstoken te roepen. In de meeste gevallen is deze waarde `POST`. |
-| `accessTokenRequest.httpTemplate.contentType` | Tekenreeks | Specificeert het inhoudstype van de vraag van HTTP aan uw toegangstoken eindpunt. <br> Bijvoorbeeld: `application/x-www-form-urlencoded` of `application/json`. |
-| `accessTokenRequest.httpTemplate.headers` | Tekenreeks | Specificeert als om het even welke kopballen aan de vraag van HTTP aan uw toegangstoken eindpunt zouden moeten worden toegevoegd. |
-| `accessTokenRequest.responseFields.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.responseFields.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.responseFields.value` is een constante. </li></li> |
-| `accessTokenRequest.responseFields.value` | Tekenreeks | De malplaatjetaal van het gebruik om tot gebieden in de reactie van HTTP van uw toegangstoken eindpunt toegang te hebben. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
-| `accessTokenRequest.validations.name` | Tekenreeks | Geeft de naam aan die u voor deze validatie hebt opgegeven. |
-| `accessTokenRequest.validations.actualValue.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.actualValue.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.validations.actualValue.value` is een constante. </li></li> |
-| `accessTokenRequest.validations.actualValue.value` | Tekenreeks | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
-| `accessTokenRequest.validations.expectedValue.templatingStrategy` | Tekenreeks | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.expectedValue.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.validations.expectedValue.value` is een constante. </li></li> |
-| `accessTokenRequest.validations.expectedValue.value` | Tekenreeks | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
+| `accessTokenRequest.destinationServerType` | String | Gebruiken `URL_BASED`. |
+| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | String | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarde in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.urlBasedDestination.url.value` is een constante. </li></li> |
+| `accessTokenRequest.urlBasedDestination.url.value` | String | De URL waar het Experience Platform om het toegangstoken verzoekt. |
+| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | String | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.httpTemplate.requestBody.value` is een constante. </li></li> |
+| `accessTokenRequest.httpTemplate.requestBody.value` | String | Gebruik de sjabloontaal om velden in de HTTP-aanvraag aan te passen aan het eindpunt van het toegangstoken. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
+| `accessTokenRequest.httpTemplate.httpMethod` | String | Specificeert de methode die van HTTP wordt gebruikt om uw eindpunt van het toegangstoken te roepen. In de meeste gevallen is deze waarde `POST`. |
+| `accessTokenRequest.httpTemplate.contentType` | String | Specificeert het inhoudstype van de vraag van HTTP aan uw toegangstoken eindpunt. <br> Bijvoorbeeld: `application/x-www-form-urlencoded` of `application/json`. |
+| `accessTokenRequest.httpTemplate.headers` | String | Specificeert als om het even welke kopballen aan de vraag van HTTP aan uw toegangstoken eindpunt zouden moeten worden toegevoegd. |
+| `accessTokenRequest.responseFields.templatingStrategy` | String | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.responseFields.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.responseFields.value` is een constante. </li></li> |
+| `accessTokenRequest.responseFields.value` | String | De malplaatjetaal van het gebruik om tot gebieden in de reactie van HTTP van uw toegangstoken eindpunt toegang te hebben. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
+| `accessTokenRequest.validations.name` | String | Geeft de naam aan die u voor deze validatie hebt opgegeven. |
+| `accessTokenRequest.validations.actualValue.templatingStrategy` | String | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.actualValue.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.validations.actualValue.value` is een constante. </li></li> |
+| `accessTokenRequest.validations.actualValue.value` | String | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
+| `accessTokenRequest.validations.expectedValue.templatingStrategy` | String | <ul><li>Gebruiken `PEBBLE_V1` als u sjablonen gebruikt voor de waarden in `accessTokenRequest.validations.expectedValue.value`.</li><li> Gebruiken `NONE` als de waarde in het veld `accessTokenRequest.validations.expectedValue.value` is een constante. </li></li> |
+| `accessTokenRequest.validations.expectedValue.value` | String | Gebruik een sjabloontaal voor toegang tot velden in de HTTP-respons. Voor informatie over het gebruik van sjablonen om velden aan te passen, raadpleegt u de [sjabloonconventies](#templating-conventions) sectie. |
 
 {style="table-layout:auto"}
 
