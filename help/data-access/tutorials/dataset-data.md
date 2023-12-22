@@ -3,34 +3,34 @@ keywords: Experience Platform;home;populaire onderwerpen;toegang tot gegevens;AP
 solution: Experience Platform
 title: Gegevens gegevensset weergeven met de API voor gegevenstoegang
 type: Tutorial
-description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
+description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. In dit document worden enkele unieke functies van de API voor gegevenstoegang geïntroduceerd, zoals pagineren en gedeeltelijke downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1364'
 ht-degree: 0%
 
 ---
 
 # Gegevenssetgegevens weergeven met [!DNL Data Access] API
 
-Dit document biedt een stapsgewijze zelfstudie over het zoeken naar, toegang krijgen tot en downloaden van gegevens die zijn opgeslagen in een gegevensset met behulp van de [!DNL Data Access] API in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van worden geïntroduceerd [!DNL Data Access] API, zoals pagineren en gedeeltelijke downloads.
+Gebruik dit geleidelijke leerprogramma leren hoe te om van, tot gegevens toegang te hebben en te downloaden die binnen een dataset worden opgeslagen gebruikend [!DNL Data Access] API in Adobe Experience Platform. In dit document worden enkele unieke kenmerken van het [!DNL Data Access] API, zoals pagineren en gedeeltelijke downloads.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van hoe u een gegevensset kunt maken en vullen. Zie de [zelfstudie over het maken van gegevenssets](../../catalog/datasets/create.md) voor meer informatie .
+Deze zelfstudie vereist een goed begrip van hoe u een dataset maakt en vult. Zie de [zelfstudie over het maken van gegevenssets](../../catalog/datasets/create.md) voor meer informatie .
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u moet weten om met succes vraag aan Platform APIs te maken.
 
-### API-voorbeeldaanroepen lezen
+### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
 Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de conventies die worden gebruikt in documentatie voor voorbeeld-API-aanroepen raadpleegt u de sectie over [voorbeeld-API-aanroepen lezen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] gids voor probleemoplossing.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Om vraag te maken aan [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../landing/api-authentication.md). Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste kopteksten in alle [!DNL Experience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
+- Toestemming: houder `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -48,19 +48,20 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Sequentiediagram
 
-Deze zelfstudie volgt de stappen die in het onderstaande volgordediagram worden beschreven en markeert de kernfunctionaliteit van de [!DNL Data Access] API.</br>
-![](../images/sequence_diagram.png)
+Deze zelfstudie volgt de stappen die in het onderstaande volgordediagram worden beschreven en markeert de kernfunctionaliteit van de [!DNL Data Access] API.
 
-De [!DNL Catalog] Met API kunt u informatie over batches en bestanden ophalen. De [!DNL Data Access] Met API kunt u deze bestanden openen en downloaden via HTTP als volledige of gedeeltelijke downloads, afhankelijk van de grootte van het bestand.
+![Een opeenvolgingsdiagram van de de kernfunctionaliteit van API van de Toegang van Gegevens.](../images/sequence_diagram.png)
+
+Als u informatie over batches en bestanden wilt ophalen, gebruikt u de opdracht [!DNL Catalog] API. Als u deze bestanden wilt openen en downloaden via HTTP als volledige of gedeeltelijke downloads, afhankelijk van de grootte van het bestand, gebruikt u de opdracht [!DNL Data Access] API.
 
 ## De gegevens zoeken
 
-Voordat u begint met het gebruik van de [!DNL Data Access] API, moet u de plaats van de gegevens identificeren die u wilt toegang hebben. In de [!DNL Catalog] API, zijn er twee eindpunten die u kunt gebruiken om de meta-gegevens van een organisatie te doorbladeren en identiteitskaart van een partij of een dossier terug te winnen dat u wilt toegang hebben:
+Voordat u begint met het gebruik van [!DNL Data Access] API, moet u de plaats van de gegevens identificeren die u wilt toegang hebben tot. In de [!DNL Catalog] API, zijn er twee eindpunten die u kunt gebruiken om de meta-gegevens van een organisatie te doorbladeren en identiteitskaart van een partij of een dossier terug te winnen dat u wilt toegang hebben:
 
 - `GET /batches`: Retourneert een lijst met batches onder uw organisatie
-- `GET /dataSetFiles`: Hiermee wordt een lijst met bestanden binnen uw organisatie geretourneerd
+- `GET /dataSetFiles`: Geeft een lijst met bestanden onder uw organisatie
 
-Voor een uitgebreide lijst met eindpunten in het dialoogvenster [!DNL Catalog] API, gelieve te verwijzen naar [API-naslag](https://www.adobe.io/experience-platform-apis/references/catalog/).
+Voor een uitgebreide lijst met eindpunten in het dialoogvenster [!DNL Catalog] API, verwijs naar [API-naslag](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Een lijst met batches in uw organisatie ophalen
 
@@ -105,9 +106,9 @@ De reactie omvat een voorwerp dat van alle partijen met betrekking tot de organi
 }
 ```
 
-### De lijst met batches filteren
+### De lijst met batches filteren {#filter-batches-list}
 
-Filters moeten vaak een bepaalde batch zoeken om relevante gegevens voor een bepaald gebruiksgeval op te halen. Parameters kunnen worden toegevoegd aan een `GET /batches` verzoek om de geretourneerde reactie te filteren. De onderstaande aanvraag retourneert alle batches die na een opgegeven tijd zijn gemaakt, binnen een bepaalde gegevensset, gesorteerd op het tijdstip waarop ze zijn gemaakt.
+Filters moeten vaak een bepaalde batch zoeken om relevante gegevens voor een bepaald gebruiksgeval op te halen. Parameters kunnen aan een `GET /batches` verzoek om de geretourneerde reactie te filteren. De onderstaande aanvraag retourneert alle batches die na een opgegeven tijd zijn gemaakt, binnen een bepaalde gegevensset, gesorteerd op het tijdstip waarop ze zijn gemaakt.
 
 **API-indeling**
 
@@ -191,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Een volledige lijst met parameters en filters vindt u in de [Referentie voor catalogus-API](https://www.adobe.io/experience-platform-apis/references/catalog/).
+Een volledige lijst met parameters en filters vindt u in de [Referentie voor catalogus-API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Een lijst ophalen van alle bestanden die tot een bepaalde batch behoren
 
@@ -250,7 +251,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 De reactie bevat een gegevensarray met alle bestanden in de opgegeven batch. Naar bestanden wordt verwezen door hun bestands-id, die u vindt onder de `dataSetFileId` veld.
 
-## Een bestand openen met een bestands-id
+## Een bestand openen met een bestands-id {#access-file-with-file-id}
 
 Als u een unieke bestands-id hebt, kunt u de opdracht [!DNL Data Access] API voor toegang tot de specifieke gegevens over het bestand, zoals de naam, grootte in bytes en een koppeling om het te downloaden.
 
@@ -276,7 +277,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 Afhankelijk van of de bestands-id naar een afzonderlijk bestand of naar een map verwijst, kan de geretourneerde gegevensarray één item of een lijst met bestanden bevatten die tot die map behoren. Elk bestandselement bevat details zoals de naam van het bestand, de grootte in bytes en een koppeling om het bestand te downloaden.
 
-**Zaak 1: Bestand-id verwijst naar één bestand**
+**Hoofd-kleine letter 1: de bestands-id verwijst naar één bestand**
 
 **Antwoord**
 
@@ -305,7 +306,7 @@ Afhankelijk van of de bestands-id naar een afzonderlijk bestand of naar een map 
 | `{FILE_NAME}.parquet` | De naam van het bestand. |
 | `_links.self.href` | De URL waarmee het bestand moet worden gedownload. |
 
-**Zaak 2: Bestand-id verwijst naar een map**
+**Hoofd-kleine letter 2: de bestands-id verwijst naar een map**
 
 **Antwoord**
 
@@ -380,8 +381,9 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 **Antwoord**
 
 De antwoordheaders bevatten de metagegevens van het bestand waarnaar wordt gevraagd, waaronder:
+
 - `Content-Length`: Geeft de grootte van de payload in bytes aan
-- `Content-Type`: Geeft het bestandstype aan.
+- `Content-Type`: Geeft het type bestand aan.
 
 ## De inhoud van een bestand openen
 
@@ -410,11 +412,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 **Antwoord**
 
-Met een succesvol antwoord wordt de inhoud van het bestand geretourneerd.
+Als de reactie is gelukt, wordt de inhoud van het bestand geretourneerd.
 
-## Gedeeltelijke inhoud van een bestand downloaden
+## Gedeeltelijke inhoud van een bestand downloaden {#download-partial-file-contents}
 
-De [!DNL Data Access] API staat voor het downloaden van dossiers in brokken toe. Een bereikkoptekst kan worden opgegeven tijdens een `GET /files/{FILE_ID}` verzoek om een specifieke reeks bytes uit een bestand te downloaden. Als het bereik niet wordt opgegeven, downloadt de API standaard het gehele bestand.
+Als u een specifieke reeks bytes uit een bestand wilt downloaden, geeft u een bereikkoptekst op tijdens een `GET /files/{FILE_ID}` verzoek aan de [!DNL Data Access] API. Als het bereik niet is opgegeven, downloadt de API standaard het gehele bestand.
 
 Het HEAD-voorbeeld in het dialoogvenster [vorige sectie](#retrieve-the-metadata-of-a-file) geeft de grootte van een specifiek bestand in bytes.
 
@@ -449,12 +451,12 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 De hoofdtekst van de reactie bevat de eerste 100 bytes van het bestand (zoals opgegeven door de header &quot;Range&quot; in de aanvraag) samen met HTTP Status 206 (Partiële inhoud). De reactie omvat ook de volgende kopteksten:
 
 - Content-Length: 100 (het aantal geretourneerde bytes)
-- Inhoudstype: application/parquet (er is een Parquet-bestand aangevraagd; het type reactie-inhoud is daarom `parquet`)
-- Inhoudsbereik: bytes 0-99/249058 (het gevraagde bereik (0-99) van het totale aantal bytes (249058))
+- Inhoudstype: toepassing/parquet (er is een Parquet-bestand aangevraagd, daarom is het type inhoud van het antwoord `parquet`)
+- Content-Range: bytes 0-99/249058 (het gevraagde bereik (0-99) van het totale aantal bytes (249058))
 
-## Paginering van API-reactie configureren
+## Paginering van API-reactie configureren {#configure-response-pagination}
 
-Reacties binnen de [!DNL Data Access] API&#39;s worden gepagineerd. Standaard is het maximumaantal items per pagina 100. U kunt parameters voor paginering gebruiken om het standaardgedrag te wijzigen.
+Reacties binnen de [!DNL Data Access] API worden gepagineerd. Standaard is het maximumaantal items per pagina 100. U kunt het standaardgedrag met het pagineren parameters wijzigen.
 
 - `limit`: U kunt het aantal items per pagina volgens uw vereisten opgeven met de parameter &quot;limit&quot;.
 - `start`: De verschuiving kan worden ingesteld door de queryparameter &quot;start&quot;.

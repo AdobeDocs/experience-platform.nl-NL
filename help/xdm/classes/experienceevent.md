@@ -4,22 +4,22 @@ solution: Experience Platform
 title: XDM ExperienceEvent-klasse
 description: Leer meer over de klasse XDM ExperienceEvent en best practices voor het modelleren van gebeurtenisgegevens.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
-source-wordcount: '2610'
+source-wordcount: '2607'
 ht-degree: 0%
 
 ---
 
 # [!DNL XDM ExperienceEvent] class
 
-[!DNL XDM ExperienceEvent] is een standaardklasse van het Gegevensmodel van de Ervaring (XDM) die u toestaat om een timestamped momentopname van het systeem tot stand te brengen wanneer een specifieke gebeurtenis voorkomt of een bepaalde reeks voorwaarden zijn bereikt.
+[!DNL XDM ExperienceEvent] is een standaard XDM-klasse (Experience Data Model). Gebruik deze klasse om een momentopname met tijdstempels van het systeem te maken wanneer een specifieke gebeurtenis voorkomt of een bepaalde reeks voorwaarden is bereikt.
 
 Een ervaringsgebeurtenis is een feitenverslag van wat voorkwam, met inbegrip van het tijdstip en de identiteit van de betrokken persoon. Gebeurtenissen kunnen expliciet (direct waarneembare menselijke acties) of impliciet (zonder directe menselijke actie) zijn en worden geregistreerd zonder aggregatie of interpretatie. Raadpleeg voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van het platform de [XDM-overzicht](../home.md#data-behaviors).
 
-De [!DNL XDM ExperienceEvent] De klasse zelf verstrekt verscheidene op tijd-reeksen betrekking hebbende gebieden aan een schema. Twee van deze velden (`_id` en `timestamp`) zijn **vereist** voor alle schema&#39;s die op de klasse worden gebaseerd, terwijl de rest facultatief is. De waarden van sommige velden worden automatisch ingevuld wanneer gegevens worden ingevoerd.
+De [!DNL XDM ExperienceEvent] De klasse zelf verstrekt verscheidene op tijd-reeksen betrekking hebbende gebieden aan een schema. Twee van deze velden (`_id` en `timestamp`) zijn **vereist** voor alle schema&#39;s die op deze klasse worden gebaseerd, terwijl de rest facultatief is. De waarden van sommige velden worden automatisch ingevuld wanneer gegevens worden ingevoerd.
 
-![De structuur van XDM ExperienceEvent zoals deze wordt weergegeven in de interface van het Platform](../images/classes/experienceevent/structure.png)
+![De structuur van XDM ExperienceEvent zoals deze wordt weergegeven in de gebruikersinterface van het platform.](../images/classes/experienceevent/structure.png)
 
 | Eigenschap | Beschrijving |
 | --- | --- |
@@ -27,7 +27,7 @@ De [!DNL XDM ExperienceEvent] De klasse zelf verstrekt verscheidene op tijd-reek
 | `eventMergeId` | Als u de [Adobe Experience Platform Web SDK](../../edge/home.md) om gegevens in te voeren, vertegenwoordigt dit identiteitskaart van de opgenomen partij die het verslag om veroorzaakte te creëren. Dit veld wordt automatisch ingevuld door het systeem bij het invoeren van gegevens. Het gebruik van dit gebied buiten de context van een implementatie van SDK van het Web wordt niet gesteund. |
 | `eventType` | Een tekenreeks die het type of de categorie voor de gebeurtenis aangeeft. Dit gebied kan worden gebruikt als u verschillende gebeurtenistypen binnen het zelfde schema en de dataset wilt onderscheiden, zoals het onderscheiden van een gebeurtenis van de productmening van toe:voegen-aan-winkelwagentje voor een detailhandelsbedrijf.<br><br>Standaardwaarden voor deze eigenschap worden gegeven in het gedeelte [aanhangsel](#eventType), met een beschrijving van het beoogde gebruik. Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen voor gebeurtenistypen kunt gebruiken om de gebeurtenissen die u bijhoudt, te categoriseren.<br><br>`eventType` beperkt u tot het gebruik van slechts één gebeurtenis per hit op uw toepassing en daarom moet u berekende velden gebruiken om het systeem te laten weten welke gebeurtenis het belangrijkst is. Zie de sectie over [aanbevolen procedures voor berekende velden](#calculated). |
 | `producedBy` | Een tekenreekswaarde die de producent of oorsprong van de gebeurtenis beschrijft. Dit veld kan worden gebruikt om bepaalde gebeurtenisproducenten uit te filteren als dat voor segmentatiedoeleinden nodig is.<br><br>Sommige voorgestelde waarden voor deze eigenschap zijn opgenomen in het dialoogvenster [aanhangsel](#producedBy). Dit veld is een uitbreidbare opsomming. Dit houdt in dat u ook uw eigen tekenreeksen kunt gebruiken om verschillende gebeurtenisproducenten te vertegenwoordigen. |
-| `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor het individu waarop de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Voor een juist gebruik van dit veld voor [Klantprofiel in realtime](../../profile/home.md)Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan . |
+| `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor het individu waarop de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. U kunt dit veld op de juiste wijze gebruiken voor [Klantprofiel in realtime](../../profile/home.md)Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in het dialoogvenster [grondbeginselen van de schemacompositie](../schema/composition.md#identityMap) voor meer informatie over het gebruik ervan . |
 | `timestamp`<br>**(Vereist)** | Een ISO 8601-tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden, opgemaakt volgens [RFC 3339 — Sectie 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Deze tijdstempel moet in het verleden voorkomen. Zie de onderstaande sectie over [tijdstempels](#timestamps) voor beste praktijken op het gebruik van dit gebied. |
 
 {style="table-layout:auto"}
@@ -50,7 +50,7 @@ Door de klasse-vlakke timestamp gescheiden van andere verwante datetime waarden 
 
 Bepaalde interacties in uw ervaringstoepassingen kunnen resulteren in meerdere gerelateerde gebeurtenissen die technisch dezelfde tijdstempel voor de gebeurtenis hebben en daarom kunnen worden weergegeven als één gebeurtenisrecord. Als een klant bijvoorbeeld een product op uw website weergeeft, kan dit resulteren in een gebeurtenisrecord met twee mogelijke `eventType` waarden: een &quot;product view&quot;-gebeurtenis (`commerce.productViews`) of een algemene gebeurtenis &quot;paginaweergave&quot; (`web.webpagedetails.pageViews`). In deze gevallen kunt u berekende velden gebruiken om de belangrijkste kenmerken vast te leggen wanneer meerdere gebeurtenissen in één keer worden vastgelegd.
 
-[Adobe Experience Platform Data Prep](../../data-prep/home.md) staat u toe om, gegevens aan en van XDM in kaart te brengen om te zetten en te bevestigen. De beschikbare [toewijzingsfuncties](../../data-prep/functions.md) Wordt geleverd door de service. U kunt logische operatoren aanroepen om gegevens uit records met meerdere gebeurtenissen bij het opnemen in het Experience Platform prioriteit te geven, te transformeren en/of te consolideren. In het bovenstaande voorbeeld kunt u `eventType` als een berekend veld dat voorrang geeft aan een &quot;productweergave&quot; boven een &quot;paginaweergave&quot; wanneer deze beide voorkomen.
+Gebruiken [Adobe Experience Platform Data Prep](../../data-prep/home.md) om gegevens toe te wijzen, om te zetten en te bevestigen aan en van XDM. De beschikbare [toewijzingsfuncties](../../data-prep/functions.md) Wordt geleverd door de service. U kunt logische operatoren aanroepen om gegevens uit records met meerdere gebeurtenissen bij het opnemen in het Experience Platform prioriteit te geven, te transformeren en/of te consolideren. In het bovenstaande voorbeeld kunt u `eventType` als een berekend veld dat voorrang geeft aan een &quot;productweergave&quot; boven een &quot;paginaweergave&quot; wanneer deze beide voorkomen.
 
 Als u gegevens handmatig via de gebruikersinterface in Platform opneemt, raadpleegt u de handleiding [berekende velden](../../data-prep/ui/mapping.md#calculated-fields) voor specifieke stappen voor het maken van berekende velden.
 
@@ -140,7 +140,7 @@ In de volgende tabel worden de toegestane waarden voor `eventType`, alsmede de d
 | `leadOperation.changeEngagementCampaignCadence` | Deze gebeurtenis volgt wanneer er een wijziging is opgetreden in hoe vaak een lead wordt gebruikt als onderdeel van een campagne. |
 | `leadOperation.convertLead` | Deze gebeurtenis volgt wanneer een lead werd geconverteerd. |
 | `leadOperation.interestingMoment` | Deze gebeurtenis volgt wanneer een interessant moment voor een persoon werd opgenomen. |
-| `leadOperation.mergeLeads` | Deze gebeurtenis volgt wanneer informatie van veelvoudige lood, die naar de zelfde entiteit verwijzen, werd geconsolideerd. |
+| `leadOperation.mergeLeads` | Deze gebeurtenis volgt wanneer informatie van meerdere leads die naar dezelfde entiteit verwijzen, zijn geconsolideerd. |
 | `leadOperation.newLead` | Deze gebeurtenis volgt wanneer een lead is gemaakt. |
 | `leadOperation.scoreChanged` | Deze gebeurtenis volgt wanneer de waarde van het score-kenmerk van de lead is gewijzigd. |
 | `leadOperation.statusInCampaignProgressionChanged` | Deze gebeurtenis wordt bijgehouden wanneer de status van een lead in een campagne is gewijzigd. |

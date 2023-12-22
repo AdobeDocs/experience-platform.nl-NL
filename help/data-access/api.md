@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API-handleiding voor gegevenstoegang
 description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 1%
@@ -15,24 +15,24 @@ ht-degree: 1%
 
 De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van opgenomen datasets binnen wordt geconcentreerd [!DNL Experience Platform].
 
-![Toegang tot gegevens op Experience Platform](images/Data_Access_Experience_Platform.png)
+![Een diagram van hoe de Toegang van Gegevens de ontdekkbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform vergemakkelijkt.](images/Data_Access_Experience_Platform.png)
 
 ## API-specificatieverwijzing
 
-De naslagdocumentatie voor de Swagger-API is te vinden [hier](https://www.adobe.io/experience-platform-apis/references/data-access/).
+De naslagdocumentatie voor de Swagger-API is te vinden [hier](https://developer.adobe.com/experience-platform-apis/references/data-access/).
 
-## Terminologie
+## Terminologie {#terminology}
 
-Een beschrijving van enkele veelgebruikte termen in dit document.
+De tabel bevat een beschrijving van enkele termen die in dit document worden gebruikt.
 
 | Term | Beschrijving |
 | ----- | ------------ |
-| Gegevensset | Een verzameling gegevens met een schema en velden. |
+| Gegevensset | Een verzameling gegevens die een schema en velden bevat. |
 | Batch | Een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. |
 
-## Lijst met bestanden in een batch ophalen
+## Lijst met bestanden in een batch ophalen {#retrieve-list-of-files-in-a-batch}
 
-Door een batch-id (batchID) te gebruiken, kan de API voor gegevenstoegang een lijst ophalen met bestanden die tot die bepaalde batch behoren.
+Als u een lijst wilt ophalen met bestanden die tot een bepaalde batch behoren, gebruikt u de batch-id (batchID) met de API voor gegevenstoegang.
 
 **API-indeling**
 
@@ -93,7 +93,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-De `"data"` array bevat een lijst met alle bestanden in de opgegeven batch. Elk geretourneerd bestand heeft een eigen unieke id (`{FILE_ID}`) in de `"dataSetFileId"` veld. Deze unieke id kan vervolgens worden gebruikt om het bestand te openen of te downloaden.
+De `"data"` array bevat een lijst met alle bestanden in de opgegeven batch. Elk geretourneerd bestand heeft een eigen unieke id (`{FILE_ID}`) in de `"dataSetFileId"` veld. Met deze unieke id kunt u het bestand openen of downloaden.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
@@ -102,7 +102,7 @@ De `"data"` array bevat een lijst met alle bestanden in de opgegeven batch. Elk 
 
 ## Bestanden in een batch openen en downloaden
 
-Door een bestand-id te gebruiken (`{FILE_ID}`), kan de API voor gegevenstoegang worden gebruikt voor toegang tot specifieke gegevens van een bestand, zoals de naam, grootte in bytes en een koppeling die moet worden gedownload.
+Gebruik een bestand-id (`{FILE_ID}`) met de API voor gegevenstoegang, inclusief de naam, grootte in bytes en een koppeling om te downloaden.
 
 De reactie bevat een gegevensarray. Afhankelijk van het feit of het bestand waarnaar de id verwijst een afzonderlijk bestand of een map is, kan de geretourneerde gegevensarray één item of een lijst met bestanden bevatten die tot die map behoren. Elk bestandselement bevat de details van het bestand.
 
@@ -150,8 +150,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `data.name` | Naam van het bestand (bijvoorbeeld profielen.csv). |
-| `data.length` | Grootte van het bestand (in bytes). |
+| `data.name` | De naam van het bestand (bijvoorbeeld `profiles.csv`). |
+| `data.length` | De bestandsgrootte (in bytes). |
 | `data._links.self.href` | De URL waarmee het bestand moet worden gedownload. |
 
 **Mapreactie**
@@ -197,12 +197,12 @@ Wanneer een map wordt geretourneerd, bevat deze een array van alle bestanden in 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `data.name` | Naam van het bestand (bijvoorbeeld profielen.csv). |
+| `data.name` | De naam van het bestand (bijvoorbeeld `profiles.csv`). |
 | `data._links.self.href` | De URL waarmee het bestand moet worden gedownload. |
 
-## De inhoud van een bestand openen
+## De inhoud van een bestand openen {#access-file-contents}
 
-De [!DNL Data Access] API kan ook worden gebruikt om tot de inhoud van een dossier toegang te hebben. Deze kan vervolgens worden gebruikt om de inhoud naar een externe bron te downloaden.
+U kunt ook de opdracht [!DNL Data Access] API voor toegang tot de inhoud van een bestand. U kunt de inhoud vervolgens downloaden naar een externe bron.
 
 **API-indeling**
 
@@ -227,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{FILE_ID}` | De id van het bestand in een gegevensset. |
-| `{FILE_NAME}` | De volledige naam van het bestand (bijvoorbeeld profielen.csv). |
+| `{FILE_NAME}` | De volledige naam van het bestand (bijvoorbeeld `profiles.csv`). |
 
 **Antwoord**
 
@@ -235,8 +235,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Aanvullende codevoorbeelden
 
-Voor extra monsters raadpleegt u de [zelfstudie over gegevenstoegang](tutorials/dataset-data.md).
+Raadpleeg voor meer voorbeelden de [zelfstudie over gegevenstoegang](tutorials/dataset-data.md).
 
-## Abonneren op gebeurtenissen voor gegevensinvoer
+## Abonneren op gebeurtenissen voor gegevensinvoer {#subscribe-to-data-ingestion-events}
 
-[!DNL Platform] maakt specifieke gebeurtenissen van hoge waarde beschikbaar voor abonnement via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie aan [abonneren op gegevensinvoer](../ingestion/quality/subscribe-events.md) voor meer informatie .
+U kunt zich abonneren op specifieke gebeurtenissen met een hoge waarde via de [Adobe Developer Console](https://developer.adobe.com/console/). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie aan [abonneren op gegevensinvoer](../ingestion/quality/subscribe-events.md) voor meer informatie .
