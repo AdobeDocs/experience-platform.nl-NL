@@ -2,9 +2,9 @@
 title: Pijpleidingen met I/ML-functies
 description: Leer hoe u Data Distiller kunt gebruiken om uw computerleerleidingen te verrijken met functies die zijn afgeleid van Adobe Experience Platform-gegevens. Transformeer onbewerkte gegevens in functies en lever de functiegegevens om een model op te leiden of te scoren dat uw marketinggebruik ondersteunt.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpi
 
 ![An infographic detailing the AI-ML feature pipe.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. Met Data Distiller krachtige vraagmogelijkheden, kunt u zinvolle eigenschappen uit de rijke gedragsgegevens halen beschikbaar in het Experience Platform en de gedistilleerde eigenschapgegevens brengen in uw machine het leren milieu zonder de behoefte om grote volumes van gebeurtenisgegevens buiten het Experience Platform te kopiëren.
-2. Lees de voorbereide eigenschapdataset in uw aangewezen machine het leren hulpmiddelen en combineer met andere eigenschappen die uit ondernemingsgegevens worden afgeleid om aangepaste modellen te trainen, te experimenteren, te stemmen en op te stellen die aan uw zaken worden aangepast.
-3. Genereer scores, voorspellingen of aanbevelingen van uw modellen en retourneer de uitvoer naar het Experience Platform om de ervaringen van klanten te optimaliseren via Real-time Customer Data Platform en Adobe Journey Optimizer.
+- Met Data Distiller krachtige vraagmogelijkheden, kunt u zinvolle eigenschappen uit de rijke gedragsgegevens halen beschikbaar in het Experience Platform. U kunt de gedistilleerde eigenschapgegevens dan brengen in uw machine het leren milieu zonder de behoefte om grote volumes van gebeurtenisgegevens buiten het Experience Platform te kopiëren.
+- Lees de voorbereide eigenschapdataset in uw aangewezen machine het leren hulpmiddelen en combineer met andere eigenschappen die uit ondernemingsgegevens worden afgeleid om aangepaste modellen te trainen, te experimenteren, te stemmen en op te stellen die aan uw zaken worden aangepast.
+- Genereer scores, voorspellingen of aanbevelingen van uw modellen en retourneer de uitvoer naar het Experience Platform om de ervaringen van klanten te optimaliseren via Real-time Customer Data Platform en Adobe Journey Optimizer.
 
 ## Vereisten {#prerequisites}
 
@@ -43,10 +43,13 @@ Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten a
 
 In de documenten die in deze reeks handleidingen zijn opgenomen, worden de basisstappen beschreven voor het maken van functiepijpleidingen van Experience Platform naar aangepaste modellen in de leeromgeving van uw computer. U kunt nu een verbinding tot stand brengen tussen Data Distiller en uw [!DNL Jupyter Notebook].
 
-- [Verbinding maken met Data Distiller via een [!DNL Python] notebook](./establish-connection.md)
-- [Gegevenssets verkennen en analyseren](./exploratory-analysis.md)
-- [Engineer-functies voor machinaal leren](./feature-engineering.md)
-- [Gegevensbestanden met functies exporteren](./export-data.md)
+- **Instellen**: [Verbinding maken met Data Distiller via een [!DNL Python] notebook](./establish-connection.md)
+
+De onderstaande documentatie komt overeen met de stappen in de bovenstaande afbeelding.
+
+- **Stap 1**: [Gegevenssets verkennen en analyseren](./exploratory-analysis.md)
+- **Stap 2**: [Engineer-functies voor machinaal leren](./feature-engineering.md)
+- **Stap 3**: [Gegevensbestanden met functies exporteren](./export-data.md)
 
 ## Aanvullende bronnen
 

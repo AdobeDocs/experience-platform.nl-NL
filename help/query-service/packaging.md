@@ -2,9 +2,9 @@
 title: Packaging van Query Service
 description: Het volgende document schetst de verpakking van mogelijkheden en producten beschikbaar voor de Dienst van de Vraag en benadrukt de verschillen tussen ad hoc en partijvragen.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 47f02f6d1d4017dfe0fccddcd137487e064b3039
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -23,18 +23,6 @@ De mogelijkheden van de Dienst van de vraag worden verpakt met de volgende produ
 - **Platformgebaseerde toepassingen** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics en Adobe Journey Optimizer): toegang tot Query Service voor het uitvoeren van ad-hocquery&#39;s wordt vanaf het begin geboden bij elke variatie en elk niveau van platformgebaseerde toepassingen.
 - **[!DNL Data Distiller]** (add-on-pakket dat u kunt kopen met Adobe Real-Time CDP, Customer Journey Analytics en Adobe Journey Optimizer): toegang tot Query Service voor het uitvoeren van batchquery&#39;s wordt geleverd bij [!DNL Data Distiller].
 
-## Terminologie {#terminology}
-
-De volgende sectie verstrekt definities voor zeer belangrijke termijnen met betrekking tot het verpakken van de Dienst van de Vraag:
-
-- **Opslag gegevensopslag**: Het datumpeer dient hoofdzakelijk de volgende doeleinden:
-   - fungeert als testgebied voor gegevens aan boord in Experience Platform;
-   - fungeert als de gegevensopslag op lange termijn voor alle gegevens van het Experience Platform;
-   - Hiermee worden gebruiksgevallen ingeschakeld, zoals gegevensanalyse en gegevenswetenschap.
-- **Gegevens exporteren**: De [gegevensset](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html) Welke typen u kunt exporteren, is afhankelijk van uw toepassing, productlaag en eventuele aangeschafte invoegtoepassingen. De afgeleide datasets kunnen door de Gegevens Distiller van de Dienst van de Vraag worden gecreeerd toe:voegen-on, en kunnen worden [geëxporteerd uit Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activation-overview.html) tot een groot aantal bestemmingen, waaronder [cloudopslagbestemmingen](/help/destinations/ui/export-datasets.md).
-- **Versnelde query&#39;s**: Versnelde query&#39;s retourneren resultaten op basis van geaggregeerde gegevens om de wachttijd voor de resultaten te verminderen en een meer interactieve uitwisseling van informatie te bieden. Stateless query&#39;s die aan de accelerated store zijn gemaakt, zijn alleen beschikbaar als onderdeel van de Data Distiller-add-on.
-- **Rekenuren**: De rekenuren zijn metrisch gebruikt om het aftasten en het schrijven van gegevens met partijvragen te volgen gebruikend de Dienst API van de Vraag. Het wordt berekend in uren per jaar en wordt gemeten over alle zandbakken. Het aantal Compute uren die aan uw organisatie wordt verstrekt wordt bepaald in het overeenkomst scoping proces.
-
 ## Rechten {#entitlements}
 
 De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op hoe worden gebaseerd zij verpakt:
@@ -47,9 +35,9 @@ De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op 
 | Maximale uitvoeringstijd | 10 minuten | 24 uur |
 | Licentiemetrisch | **Query-gebruiker gelijktijdig**: <ul><li>1 gelijktijdige gebruiker (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 gelijktijdige gebruikers (Customer Journey Analytics) &#x200B;</li></ul> **Query gelijktijdig**: <ul><li>1 gelijktijdige uitgevoerde vraag (alle toepassingen) &#x200B;</li></ul> **Extra add-on voor gebruikers van ad-hocquery&#39;s** kan worden aangeschaft om de geautoriseerde ad-hocqueryrechten van klanten te verhogen. <ul><li>+5 extra gebruikers per verpakking</li><li>+1 extra gelijktijdige lopende vraag per pak</li></ul> | **Rekenuren**: <ul><li>Variabele (bereik gebaseerd op de rechten van de klant)</li></ul> **Rekenuren** is een maatregel van de hoeveelheid tijd die door de motor van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd. |
 | Versneld vraag en rapporteringsgebruik | Nee | Ja - Met gelijktijdige versnelde query&#39;s kunt u gegevens lezen uit de versnelde opslag en weergave in uw dashboards. Er wordt ook een speciale machtiging voor het opslaan van rapportagemodellen en gegevenssets in de versnelde opslag verstrekt. |
-| Opslagcapaciteit gegevensopslag | Ja - Uw totale opslagrechten zijn afhankelijk van uw platformgebaseerde licenties voor toepassingen. Bijvoorbeeld Real-Time CDP, AJO, CJA enzovoort. | Ja - Er is een extra opslagmachtiging opgegeven om uw onbewerkte en afgeleide gegevenssets voor Data Distiller te behouden voor gebruik van gegevensgevallen na een vervaldatum van zeven dagen voor gegevens.<br>De opslagcapaciteit van het gegevensmeergeheugen wordt gemeten in terabytes (TB) en hangt af van de hoeveelheid Rekenuren die u hebt gekocht. |
-| Exportrecht voor gegevens | Ja - Uw totale exportmachtiging is afhankelijk van uw platformgebaseerde toepassingslicenties. Bijvoorbeeld Real-Time CDP, AJO, CJA enzovoort. | Ja - Er worden aanvullende uitvoerrechten verleend om de uitvoer van afgeleide gegevenssets die met Data Distiller zijn gemaakt, mogelijk te maken.<br>Uw jaarlijkse toelage voor het exporteren van gegevens wordt gemeten in terabytes (TB) en hangt af van de hoeveelheid Rekenuren die u hebt gekocht. |
-| Interface voor query-uitvoering | <ul><li>Gebruikersinterface Query Service</li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li></ul> | <ul><li>Gebruikersinterface Query Service </li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li><li>REST-API’s </li></ul> |
+| Opslagcapaciteit gegevensopslag | Uw totale opslagrechten zijn afhankelijk van uw platformgebaseerde toepassingslicenties. Bijvoorbeeld Real-Time CDP, AJO, CJA enzovoort. | Ja - Er is een extra opslagmachtiging opgegeven om uw onbewerkte en afgeleide gegevenssets voor Data Distiller te behouden voor gebruik van gegevensgevallen na een vervaldatum van zeven dagen voor gegevens.<br>De opslagcapaciteit van het gegevensmeergeheugen wordt gemeten in terabytes (TB) en hangt af van de hoeveelheid Rekenuren die u hebt gekocht. Raadpleeg de productbeschrijving voor meer informatie. |
+| Exportrecht voor gegevens | Uw totale exportmachtiging is afhankelijk van uw platformgebaseerde toepassingslicenties. Bijvoorbeeld Real-Time CDP, AJO, CJA enzovoort. | Ja - Er worden aanvullende uitvoerrechten verleend om de uitvoer van afgeleide gegevenssets die met Data Distiller zijn gemaakt, mogelijk te maken.<br>Uw jaarlijkse toelage voor het exporteren van gegevens wordt gemeten in terabytes (TB) en hangt af van de hoeveelheid Rekenuren die u hebt gekocht. Zie de productbeschrijving voor meer informatie. |
+| Interface voor query-uitvoering | <ul><li>Gebruikersinterface Query Service</li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li></ul> | <ul><li>Gebruikersinterface Query Service </li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li><li>REST API&#39;s</li></ul> |
 | Zoekresultaten geretourneerd via | Gebruikersinterface client | Afgeleide dataset die in het gegevensmeer wordt opgeslagen |
 | Resulterende limiet | <ul><li>Gebruikersinterface van Query-service - 100 rijen</li><li>Externe klanten - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | <ul><li>De Dienst UI van de vraag - het aantal outputrijen kan zijn [geconfigureerd met een interface-instelling](./ui/user-guide.md#result-count) tot tussen 50-500 rijen.</li><li>Externe clients (geen bovengrens voor rijen)</li><li>[!DNL PostgresSQL] client (geen bovenlimiet voor rijen)</li><li>REST API&#39;s (geen bovengrens voor rijen)</li></ul> |
 | Dataset-capaciteit lezen | Ja | Ja |
@@ -70,7 +58,7 @@ Nadat u de [!DNL Data Distiller] toe:voegen-aan, [!DNL Write Dataset] toestemmin
 
 In de volgende tabel worden de effecten van de [!DNL Manage Queries] machtiging:
 
-| Machtiging | -functie |
+| Machtiging | Functie |
 |---|---|
 | [!DNL Manage Queries] (zonder toestemming voor schrijven van gegevens) | Biedt toegang tot ad-hocquery&#39;s |
 | [!DNL Manage Queries] (met schrijfmachtiging) | Biedt toegang tot het uitvoeren van batchquery&#39;s |
