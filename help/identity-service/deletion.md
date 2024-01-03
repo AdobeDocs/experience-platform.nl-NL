@@ -2,9 +2,9 @@
 title: Verwijderen in identiteitsservice
 description: Dit document biedt een overzicht van de verschillende methoden waarmee u uw identiteitsgegevens in Experience Platform kunt verwijderen en om duidelijk te maken hoe identiteitsgrafieken worden beïnvloed.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -22,29 +22,29 @@ Dit document biedt een overzicht van de verschillende methoden waarmee u uw iden
 In het onderstaande document wordt verwezen naar de volgende kenmerken van Experience Platform:
 
 * [Identiteitsservice](home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-   * [Identiteitsgrafiek](./ui/identity-graph-viewer.md): Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
+   * [Naamgrafiek](./ui/identity-graph-viewer.md): Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
    * [Identiteitsnaamruimten](namespaces.md): Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde &#39;name&#39;<span>@email.com&quot; als e-mailadres of &quot;443522&quot; als een numerieke CRM-id.
 * [Catalogusservice](../catalog/home.md): Onderzoek de gegevenslijn, meta-gegevens, dossierbeschrijvingen, folders, en datasets binnen het gegevensmeer.
-* [Gegevenshygiëne](../hygiene/home.md): Beheer uw opgeslagen gegevens van de consument door geautomatiseerde datasetvervaldatums te plannen of individuele verslagen van één dataset of alle datasets te schrappen.
-* [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Beheer verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, niet te verkopen of te verwijderen.
+* [Gegevenshygiëne](../hygiene/home.md): Beheer uw opgeslagen consumentengegevens door automatische gegevenssetvervaldatums te plannen of individuele verslagen van één dataset of alle datasets te schrappen.
+* [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Beheer verzoeken van klanten om toegang te krijgen tot, te stoppen met de verkoop of hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te verwijderen.
 * [Klantprofiel in realtime](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Eén enkele identiteitsschrapping
 
-Met één aanvraag voor het verwijderen van identiteiten kunt u een identiteit binnen een grafiek verwijderen. Dit leidt tot het verwijderen van koppelingen die zijn gekoppeld aan één gebruikersidentiteit die is gekoppeld aan een naamruimte voor identiteiten. U kunt gebruikmaken van mechanismen die worden geleverd door [Privacy Service](../privacy-service/home.md) voor gebruiksgevallen zoals verzoeken van klanten om gegevensverwijdering en naleving van privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR).
+Met één aanvraag voor het verwijderen van identiteiten kunt u een identiteit binnen een grafiek verwijderen. Dit leidt tot het verwijderen van koppelingen die zijn gekoppeld aan één gebruikersidentiteit die is gekoppeld aan een naamruimte voor identiteiten. U kunt mechanismen gebruiken die worden geleverd door [Privacy Service](../privacy-service/home.md) voor gebruiksgevallen zoals verzoeken van klanten om gegevensverwijdering en naleving van privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR).
 
 In de volgende secties worden de mechanismen beschreven die u kunt gebruiken voor verzoeken om één identiteit te verwijderen in Experience Platform.
 
 ### Eén identiteitsverwijdering in Privacy Service
 
-Privacy Service verwerkt verzoeken van klanten om toegang, om zich uit verkoop te laten of om hun persoonsgegevens te verwijderen, zoals die zijn omschreven in privacyregels zoals de General Data Protection Regulation (GDPR) en de California Consumer Privacy Act (CCPA). Met Privacy Service kunt u taakaanvragen verzenden via de API of de gebruikersinterface. Wanneer het Experience Platform een schrappingsverzoek van Privacy Service ontvangt, verzendt het Platform bevestiging aan Privacy Service dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De verwijdering van de individuele identiteit is gebaseerd op de opgegeven naamruimte en/of ID-waarde. Bovendien wordt de verwijdering uitgevoerd voor alle sandboxen die bij een bepaalde organisatie horen. Lees voor meer informatie de handleiding op [verwerking van privacyverzoeken in identiteitsservice](privacy.md).
+Privacy Service verwerkt verzoeken van klanten om toegang, om zich uit verkoop te laten of om hun persoonsgegevens te verwijderen, zoals die zijn omschreven in privacyregels zoals de General Data Protection Regulation (GDPR) en de California Consumer Privacy Act (CCPA). Met Privacy Service kunt u taakaanvragen verzenden via de API of de gebruikersinterface. Wanneer het Experience Platform een schrappingsverzoek van Privacy Service ontvangt, verzendt het Platform bevestiging aan Privacy Service dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De verwijdering van de individuele identiteit is gebaseerd op de opgegeven naamruimte en/of ID-waarde. Bovendien worden alle sandboxen die bij een bepaalde organisatie horen, verwijderd. Lees voor meer informatie de handleiding op [verwerking van privacyverzoeken in identiteitsservice](privacy.md).
 
 In de onderstaande tabel wordt een uitsplitsing gegeven van één enkele identiteitsschrapping in de Privacy Service:
 
 | Eén identiteit verwijderen | Privacyservice |
 | --- | --- |
 | Gebruikskwesties | Alleen gegevensprivacyverzoeken (GDPR, CCPA). |
-| Geschatte vertraging | Dagen tot weken |
+| Geschatte latentie | Dagen tot weken |
 | Betrokken services | Eén identiteitsverwijdering in Privacy Service stelt u in staat te selecteren of gegevens worden verwijderd uit Identiteitsservice, Real-Time Klantprofiel of Gegevensbestand. |
 | Verwijderingspatronen | Verwijder een identiteit uit Identiteitsservice. |
 
@@ -67,7 +67,7 @@ De onderstaande tabel geeft een overzicht van de verschillen tussen gegevenssetv
 | Gegevensset verwijderen | Catalogusservice | Gegevenshygiëne |
 | --- | --- | --- |
 | Gebruikskwesties | Schrap volledige datasets en hun bijbehorende identiteitsinformatie in Platform. | Beheer van in Experience Platform opgeslagen gegevens. |
-| Geschatte vertraging | Dagen | Dagen |
+| Geschatte latentie | Dagen | Dagen |
 | Betrokken services | De schrapping van de gegevensreeks door de Dienst van de Catalogus schrapt gegevens van de Dienst van de Identiteit, het Profiel van de Klant in real time, en het gegevenspeer. | De schrapping van de gegevensreeks door de hygiëne van Gegevens schrapt gegevens van de Dienst van de Identiteit, het Profiel van de Klant in real time, en het gegevenspeer. |
 | Verwijderingspatroon | Verbonden identiteiten verwijderen uit de identiteitsdienst die door een bepaalde gegevensset is ingesteld. | Schrap verbonden identiteiten van de Dienst van de Identiteit die door een bepaalde dataset wordt gevestigd, die op vervalprogramma wordt gebaseerd. |
 

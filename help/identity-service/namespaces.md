@@ -2,9 +2,9 @@
 title: Overzicht van id-naamruimte
 description: Meer informatie over naamruimten in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1770'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ Naamruimten vereisen inzicht in verschillende Adobe Experience Platform-services
 * [[!DNL Privacy Service]](../privacy-service/home.md): Identiteitsnaamruimten worden gebruikt in nalevingsverzoeken voor wettelijke privacyregels zoals de algemene gegevensbeschermingsverordening (GDPR). Elk privacyverzoek wordt ingediend met betrekking tot een naamruimte om te bepalen welke gegevens van de consument moeten worden beïnvloed.
 
 ## Naamruimten voor identiteiten
-
-![Een illustratie van gegevenswerkstroom met de Dienst van de Identiteit.](images/identity-service-stitching.png)
 
 Een volledig gekwalificeerde identiteit omvat twee componenten: en **identiteitswaarde** en **naamruimte identity**. Als de waarde van een identiteit bijvoorbeeld `scott@acme.com`, dan verstrekt een namespace context aan deze waarde door het als e-mailadres te onderscheiden. Een naamruimte kan ook een onderscheid maken `555-123-456` als telefoonnummer, en `3126ABC` als CRM-ID. Hoofdzakelijk **een naamruimte biedt context aan een bepaalde identiteit**. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] Hiermee worden profielgegevens samengevoegd. Zowel de identiteitswaarde als de naamruimte moeten overeenkomen.
 

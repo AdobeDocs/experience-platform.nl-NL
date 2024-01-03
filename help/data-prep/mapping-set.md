@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van toewijzingssets
 description: Leer hoe u toewijzingssets kunt gebruiken met Adobe Experience Platform Data Prep.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -19,10 +19,10 @@ Een toewijzingsset is een set toewijzingen waarmee gegevens van het ene schema n
 
 Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-- [Gegevensprep](./home.md): Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
-- [Gegevensstromen](../dataflows/home.md): Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile]en [!DNL Destinations].
+- [Gegevensprep](./home.md): Data Prep staat gegevensingenieurs toe om gegevens in kaart te brengen, om te zetten en te bevestigen aan en van het Model van de Gegevens van de Ervaring (XDM).
+- [Gegevensstromen](../dataflows/home.md): Gegevensstromen zijn een weergave van gegevenstaken die gegevens verplaatsen over het hele platform. Dataflows worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, aan [!DNL Identity] en [!DNL Profile], en [!DNL Destinations].
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): De methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
+- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Het gestandaardiseerde kader waarbinnen [!DNL Experience Platform] organiseert de gegevens van de klantenervaring.
 
 ## Syntaxis toewijzingsset
 
@@ -74,8 +74,8 @@ De volgende JSON is een voorbeeld van een typische toewijzingenset:
 | `outputSchema` | Het XDM-schema waaraan de invoergegevens moeten voldoen, wordt getransformeerd. |
 | `mappings` | Een serie van gebied aan gebied afbeeldingen van het bronschema aan het bestemmingsschema. |
 | `sourceType` | Voor elke vermelde afbeelding, zijn `sourceType` kenmerk geeft het type bron aan dat moet worden toegewezen. Kan één van `ATTRIBUTE`, `STATIC`, of `EXPRESSION`: <ul><li> `ATTRIBUTE` wordt gebruikt voor alle waarden die in het bronpad worden gevonden. </li><li>`STATIC` wordt gebruikt voor waarden die in het bestemmingspad worden geïnjecteerd. Deze waarde blijft constant en wordt niet beïnvloed door het bronschema.</li><li> `EXPRESSION` wordt gebruikt voor een expressie die tijdens runtime wordt opgelost. Een lijst met beschikbare expressies vindt u in het dialoogvenster [handleiding voor toewijzingsfuncties](./functions.md).</li> </ul> |
-| `source` | Voor elke vermelde afbeelding wordt de `source` Dit kenmerk geeft het veld aan dat u wilt toewijzen. Meer informatie over hoe te om uw bron te vormen kan in worden gevonden [bronsectie](#sources). |
-| `destination` | Voor elke vermelde afbeelding wordt de `destination` kenmerk geeft het veld aan, of het pad naar het veld, waar de waarde wordt geëxtraheerd uit het `source` wordt geplaatst. Meer informatie over hoe te om uw bestemmingen te vormen kan in worden gevonden [doelsectie](#destination). |
+| `source` | Voor elke vermelde afbeelding wordt de `source` Dit kenmerk geeft het veld aan dat u wilt toewijzen. Meer informatie over hoe te om uw bron te vormen kan in worden gevonden [overzicht van bronnen](../sources/home.md). |
+| `destination` | Voor elke vermelde afbeelding wordt de `destination` kenmerk geeft het veld aan, of het pad naar het veld, waar de waarde wordt geëxtraheerd uit het `source` wordt geplaatst. Meer informatie over hoe te om uw bestemmingen te vormen kan in worden gevonden [doeloverzicht](../destinations/home.md). |
 | `mappings.name` | (*Optioneel*) Een naam voor de toewijzing. |
 | `mappings.description` | (*Optioneel*) Een beschrijving van de toewijzing. |
 
@@ -85,9 +85,9 @@ In een afbeelding worden de `source` Dit kan een veld, expressie of statische wa
 
 ### Veld in kolomgegevens
 
-Wanneer u een veld toewijst aan kolomgegevens, zoals een CSV-bestand, gebruikt u de opdracht `ATTRIBUTE` brontype. Als het veld `.` binnen de naam ervan gebruiken `\` om aan de waarde te ontsnappen. Hieronder vindt u een voorbeeld van deze toewijzing:
+Wanneer u een veld toewijst aan kolomgegevens, zoals een CSV-bestand, gebruikt u de opdracht `ATTRIBUTE` brontype. Als het veld `.` binnen de naam ervan gebruiken `\` om de waarde te verwijderen. Hieronder vindt u een voorbeeld van deze toewijzing:
 
-**Voorbeeld-CSV-bestand:**
+**CSV-bestand voorbeeld:**
 
 ```csv
 Full.Name, Email
@@ -116,7 +116,7 @@ John Smith, js@example.com
 
 ### Veld in geneste gegevens
 
-Wanneer u een veld in geneste gegevens toewijst, zoals een JSON-bestand, gebruikt u de opdracht `ATTRIBUTE` brontype. Als het veld `.` binnen de naam ervan gebruiken `\` om aan de waarde te ontsnappen. Hieronder vindt u een voorbeeld van deze toewijzing:
+Wanneer u een veld in geneste gegevens toewijst, zoals een JSON-bestand, gebruikt u de opdracht `ATTRIBUTE` brontype. Als het veld `.` binnen de naam ervan gebruiken `\` om de waarde te verwijderen. Hieronder vindt u een voorbeeld van deze toewijzing:
 
 **Voorbeeld-JSON-bestand**
 
@@ -298,7 +298,7 @@ Met de `ATTRIBUTE` brontype, kunt u door series herhaling en kaart hen aan een d
 
 ### Constante waarde
 
-Als u een constante of een statische waarde wilt toewijzen, gebruikt u de opdracht `STATIC` brontype.  Wanneer u de `STATIC` brontype, de `source` vertegenwoordigt de hard-gecodeerde waarde die u aan wilt toewijzen `destination`. Hieronder vindt u een voorbeeld van deze toewijzing:
+Als u een constante of een statische waarde wilt toewijzen, gebruikt u de opdracht `STATIC` brontype.  Wanneer u de opdracht `STATIC` brontype, de `source` vertegenwoordigt de hard-gecodeerde waarde die u aan wilt toewijzen `destination`. Hieronder vindt u een voorbeeld van deze toewijzing:
 
 **Voorbeeld-JSON-bestand**
 
@@ -329,7 +329,7 @@ Als u een constante of een statische waarde wilt toewijzen, gebruikt u de opdrac
 
 ### Expressies
 
-Als u een expressie wilt toewijzen, gebruikt u de opdracht `EXPRESSION` brontype. Een lijst met geaccepteerde functies vindt u in de [handleiding voor toewijzingsfuncties](./functions.md). Wanneer u de `EXPRESSION` brontype, de `source` vertegenwoordigt de functie u wilt oplossen. Hieronder vindt u een voorbeeld van deze toewijzing:
+Als u een expressie wilt toewijzen, gebruikt u de opdracht `EXPRESSION` brontype. Een lijst met geaccepteerde functies vindt u in het dialoogvenster [handleiding voor toewijzingsfuncties](./functions.md). Wanneer u de opdracht `EXPRESSION` brontype, de `source` vertegenwoordigt de functie u wilt oplossen. Hieronder vindt u een voorbeeld van deze toewijzing:
 
 **Voorbeeld-JSON-bestand**
 
@@ -466,7 +466,7 @@ Wanneer u de `source` Volg het onderstaande voorbeeld voor een waarde van een sp
 
 ### Iteratieve arraybewerking
 
-Wanneer u arrays herhaaldelijk wilt doorlopen en de waarden aan het doel wilt toewijzen, kunt u een jokertekenindex gebruiken (`[*]`). Hieronder ziet u een voorbeeld:
+Wanneer u arrays doorloopt en de waarden aan het doel wilt toewijzen, kunt u een jokertekenindex gebruiken (`[*]`). Hieronder ziet u een voorbeeld:
 
 ```json
 {
