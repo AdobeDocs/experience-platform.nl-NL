@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: d47ec6fca05191f532b5a2e94f1943c4337258ed
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1228'
 ht-degree: 1%
 
 ---
@@ -153,6 +153,10 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentdefin
 
 U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan `/segment/definitions` eindpunt.
 
+>[!IMPORTANT]
+>
+>Segmentdefinities gemaakt via de API **kan** worden bewerkt met Segment Builder.
+
 **API-indeling**
 
 ```http
@@ -204,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 
 <!-- >[!NOTE]
@@ -341,7 +345,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 | `description` | Een leesbare beschrijving van de definitie. |
 | `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |
@@ -474,7 +478,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 | `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een van de `id` of `name` veld. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
-| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Een expressie die overeenkomt met het type dat wordt aangegeven in `expression.format`. |
 | `description` | Een leesbare beschrijving van de definitie. |
 | `evaluationInfo` | Een object dat aangeeft welk type evaluatie, batch, streaming (ook wel doorlopend genoemd) of rand (ook wel synchroon genoemd), de segmentdefinitie wordt uitgevoerd. |

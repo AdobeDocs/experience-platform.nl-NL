@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
+source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
 workflow-type: tm+mt
-source-wordcount: '3700'
+source-wordcount: '3723'
 ht-degree: 0%
 
 ---
@@ -72,17 +72,17 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 
 | Actie | Oorsprong | Beschrijving |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmenteringsservice | Hiermee kunt u Segment Builder openen om uw publiek te bewerken. Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md). |
-| [!UICONTROL Open composition] | Samenstelling publiek | Hiermee kunt u de compositie van het publiek openen om uw publiek te zien. Lees voor meer informatie over de samenstelling van het publiek de [gebruikerscompositie-gebruikersgids](./audience-composition.md). |
-| [!UICONTROL Activate to destination] | Segmenteringsservice | Hiermee activeert u het publiek naar een bestemming. Voor meer gedetailleerde informatie over het activeren van een publiek naar een bestemming, gelieve te lezen [activeringsoverzicht](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u uw publiek delen met andere platformgebruikers. Lees voor meer informatie over deze functie de [Overzicht van afstemming van segment](./segment-match/overview.md). |
-| [!UICONTROL Manage tags] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u de door de gebruiker gedefinieerde tags beheren die bij het publiek horen. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
-| [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u bepalen tot welke map het publiek behoort. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
+| [!UICONTROL Edit] | Segmenteringsservice | Opent de Bouwer van het Segment om uw publiek uit te geven. Houd er rekening mee dat als uw publiek via de API is gemaakt **niet** kan het uitgeven gebruikend de Bouwer van het Segment. Voor meer informatie over het gebruik van de Segment Builder leest u de [Handleiding voor de gebruikersinterface van Segment Builder](./segment-builder.md). |
+| [!UICONTROL Open composition] | Samenstelling publiek | Opent de samenstelling van het Publiek om uw publiek te zien. Lees voor meer informatie over de samenstelling van het publiek de [gebruikerscompositie-gebruikersgids](./audience-composition.md). |
+| [!UICONTROL Activate to destination] | Segmenteringsservice | Hiermee activeert u het publiek naar een doel. Voor meer gedetailleerde informatie over het activeren van een publiek naar een bestemming, gelieve te lezen [activeringsoverzicht](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Deelt uw publiek met andere gebruikers van het Platform. Lees voor meer informatie over deze functie de [Overzicht van afstemming van segment](./segment-match/overview.md). |
+| [!UICONTROL Manage tags] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de door de gebruiker gedefinieerde tags die bij het publiek horen. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
+| [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Beheert tot welke map het publiek behoort. Lees voor meer informatie over deze functie de sectie over [filteren en labelen](#manage-audiences). |
 | [!UICONTROL Copy] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee dupliceert u het geselecteerde publiek. |
-| [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u de toegangslabels beheren die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Apply access labels] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de toegangslabels die bij het publiek horen. Voor meer informatie over toegangslabels, te lezen gelieve de documentatie over [beheren, labels](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archive] | Aangepaste upload | Hiermee archiveert u het geselecteerde publiek. |
 | [!UICONTROL Delete] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verwijdert u het geselecteerde publiek. |
-| [!UICONTROL Add to package] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee kunt u het publiek tussen sandboxen verplaatsen. Lees voor meer informatie over deze functie de [gereedschapshandleiding voor sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Add to package] | Auditie, Aangepaste upload, Segmentatieservice | Hiermee verplaatst u het publiek tussen sandboxen. Lees voor meer informatie over deze functie de [gereedschapshandleiding voor sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -341,13 +341,13 @@ De **[!UICONTROL Audience details]** wordt weergegeven. U kunt informatie over u
 
 Wanneer u het extern gegenereerde publiek importeert, moet u een van de kolommen selecteren als primair identiteitsveld en de naamruimtewaarde opgeven. Houd er rekening mee dat alle overige velden in aanmerking worden genomen **payload-kenmerken**. Deze kenmerken worden in overweging genomen **niet duurzaam**, aangezien zij alleen voor personalisatie met dit publiek in verband worden gebracht, en **niet** is verbonden met het profiel.
 
-![De pagina [!UICONTROL Audience details] wordt weergegeven.](../images/ui/overview/import-audience-audience-details.png)
+![De [!UICONTROL Audience details] wordt weergegeven.](../images/ui/overview/import-audience-audience-details.png)
 
 Nadat u de publieksdetails hebt ingevuld, selecteert u **[!UICONTROL Next]**.
 
 ![De [!UICONTROL Next] wordt gemarkeerd op de knop [!UICONTROL Audience details] pagina.](../images/ui/overview/import-audience-filled-details.png)
 
-De pagina **[!UICONTROL Review]** wordt weergegeven. U kunt de details van uw onlangs ingevoerde extern geproduceerde publiek herzien.
+De **[!UICONTROL Review]** wordt weergegeven. U kunt de details van uw onlangs ingevoerde extern geproduceerde publiek herzien.
 
 ![De [!UICONTROL Review] wordt weergegeven, met daarin details over het nieuwe, extern gegenereerde publiek.](../images/ui/overview/import-audience-review-details.png)
 
