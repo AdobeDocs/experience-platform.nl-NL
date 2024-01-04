@@ -2,7 +2,7 @@
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
+source-git-commit: 5ec22fcf0f4c48efc28a3abd343bb00a19756281
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 0%
@@ -51,7 +51,7 @@ De verwachte latentie voor Analytics Data on Platform wordt beschreven in de ond
 | -------------- | ---------------- |
 | Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **niet** ingeschakeld) | &lt; 2 minuten |
 | Nieuwe gegevens naar [!DNL Real-Time Customer Profile] (A4T **is** ingeschakeld) | tot 30 minuten |
-| Nieuwe gegevens voor Data Lake | &lt; 90 minuten |
+| Nieuwe gegevens voor Data Lake | &lt; 2,25 uur |
 | Terugvulling van gebeurtenissen van minder dan 10 miljard | &lt; 4 weken |
 
 De back-up van Analytics voor productiesandboxen wordt standaard ingesteld op 13 maanden. Voor analysegegevens in niet-productiesandboxen wordt de backfill ingesteld op drie maanden. De limiet van 10 miljard gebeurtenissen die in bovenstaande tabel worden genoemd, is strikt in verhouding tot de verwachte latentie.
