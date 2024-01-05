@@ -3,11 +3,11 @@ title: Overzicht van regels voor identiteitsgrafiek
 description: Leer over de Regels van de Vereniging van de Grafiek van Identiteit in de Dienst van de Identiteit.
 hide: true
 hidefromtoc: true
-badge: Alfa
+badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -69,12 +69,16 @@ Lees het document op [algoritme voor identiteitsoptimalisatie](./identity-optimi
 >
 >Naamruimteprioriteiten zijn momenteel niet beschikbaar voor alfa.
 
-U kunt naamruimteprioriteit gebruiken om te definiëren welke naamruimten belangrijker zijn dan andere. De hiërarchie die u instelt voor de naamruimten wordt vervolgens gebruikt om de primaire identiteiten te definiëren en profielfragmenten op te slaan. Als de prioritaire montages worden gevormd, dan zal het primaire identiteit plaatsen op Web SDK niet meer worden gebruikt om te bepalen welke profielfragmenten worden opgeslagen.
+U kunt naamruimteprioriteit gebruiken om te definiëren welke naamruimten belangrijker zijn dan andere. De prioriteit die u voor uw namespaces plaatst wordt dan gebruikt om primaire identiteiten te bepalen, die de identiteit is die profielfragmenten (attributen en gebeurtenisgegevens) in het Profiel van de Klant in real time opslaat. Als de prioritaire montages worden gevormd, dan zal het primaire identiteit plaatsen op Web SDK niet meer worden gebruikt om te bepalen welke profielfragmenten worden opgeslagen.
 
 * De grenzen en de prioriteit zijn onafhankelijke configuraties en doen **niet** elkaar beïnvloeden:
    * Limieten is een configuratie voor identiteitsgrafieken in Identiteitsservice.
    * Prioriteit is een profielfragmentconfiguratie op Real-Time Klantprofiel.
    * Prioriteit **niet** invloed hebben op de handleidingen van het identiteitsdiagram.
+* **De prioriteit van Namespace is een numerieke waarde** toegewezen aan een naamruimte die het relatieve belang ervan aangeeft. Dit is een eigenschap van een naamruimte.
+* **Primaire identiteit is de identiteit waarin een profielfragment wordt opgeslagen**. Een profielfragment is een record met gegevens waarin informatie over een bepaalde gebruiker wordt opgeslagen: kenmerken (gewoonlijk opgenomen via CRM-records) of gebeurtenissen (gewoonlijk opgenomen via ervaringsgebeurtenissen of online gegevens).
+* De prioriteit Namespace bepaalt de primaire identiteit voor ervaringsgebeurtenissen.
+   * Voor profielverslagen, kunt u de schemawerkruimte in de UI van het Experience Platform gebruiken om identiteitsgebieden, met inbegrip van de primaire identiteit te bepalen. Lees de handleiding op [identiteitsvelden definiëren in de gebruikersinterface](../../xdm/ui/fields/identity.md) voor meer informatie .
 
 >[!BEGINSHADEBOX]
 
