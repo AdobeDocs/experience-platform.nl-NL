@@ -4,9 +4,9 @@ title: Abonneren op Adobe I/O-gebeurtenismeldingen
 description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook referentieinformatie over de beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over hoe de geretourneerde gebeurtenisgegevens voor elke toepasselijke gebeurtenis moeten worden geïnterpreteerd. [!DNL Platform] service.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 49f4cf07d2f002e45e27dffac4fd0049446bc68f
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Observability Insights] Hiermee kunt u zich abonneren op Adobe I/O Event-meldingen met betrekking tot Adobe Experience Platform-activiteiten. Deze gebeurtenissen worden naar een geconfigureerde webhaak verzonden om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken.
 
-Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook referentieinformatie over de beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over hoe de geretourneerde gebeurtenisgegevens voor elke toepasselijke gebeurtenis moeten worden geïnterpreteerd. [!DNL Platform] service.
+In dit document worden de stappen beschreven waarmee u zich kunt abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook referentieinformatie over beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over hoe u teruggestuurde gebeurtenisgegevens voor elke toepasselijke gebeurtenis kunt interpreteren [!DNL Platform] service.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ U kunt uw webhaak configureren met behulp van de client van uw keuze. Voor een t
 
 ![](../images/notifications/webhook-url.png)
 
-Tijdens het eerste validatieproces [!DNL I/O Events] verzendt `challenge` de vraagparameter in een verzoek van de GET aan de webhaak. U moet uw webhaak vormen om de waarde van deze parameter in de antwoordlading terug te keren. Selecteer **[!DNL Edit]** in de rechterbovenhoek en voert u vervolgens `$request.query.challenge$` krachtens **[!DNL Response body]** voordat u selecteert **[!DNL Save]**.
+Tijdens het eerste validatieproces [!DNL I/O Events] verzendt een `challenge` de vraagparameter in een verzoek van de GET aan de webhaak. U moet uw webhaak vormen om de waarde van deze parameter in de antwoordlading terug te keren. Als u Webhaak.site gebruikt, selecteert u **[!DNL Edit]** in de rechterbovenhoek en voert u vervolgens `$request.query.challenge$` krachtens **[!DNL Response body]** voordat u selecteert **[!DNL Save]**.
 
 ![](../images/notifications/response-challenge.png)
 
@@ -39,7 +39,11 @@ Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en m
 
 ## Abonneren op gebeurtenissen
 
-Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Selecteer **[!UICONTROL Add event]**.
+>[OPMERKING!]
+>
+>Het bericht voor het invoeren van gegevens wordt afgekeurd van het abonnement voor Adobe-IO. Gebruik in plaats daarvan de opdracht **Bronnen: Run-info over stroom** I/O-gebeurtenis.
+
+Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Van hier, selecteer **[!UICONTROL Add event]**.
 
 ![](../images/notifications/add-event-button.png)
 
@@ -58,15 +62,14 @@ In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u
 >
 >Raadpleeg de volgende documentatie als u niet zeker weet op welke gebeurtenissen u zich moet abonneren voor de service waarmee u werkt:
 >
->* [Meldingen van Platforms](./rules.md)
+>* [Platformmeldingen](./rules.md)
 >* [Privacys Service](../../privacy-service/privacy-events.md)
-
 
 ![](../images/notifications/choose-event-subscriptions.png)
 
 In het volgende scherm wordt u gevraagd een JSON Web Token (JWT) te maken. U wordt gegeven de optie om een zeer belangrijk paar automatisch te produceren, of uw eigen openbare sleutel te uploaden die in de terminal wordt geproduceerd.
 
-In deze zelfstudie wordt de eerste optie gevolgd. Selecteer het optievak voor **[!UICONTROL Generate a key pair]** Selecteer vervolgens de **[!UICONTROL Generate keypair]** in de rechterbenedenhoek.
+In deze zelfstudie wordt de eerste optie gevolgd. Selecteer het optievak voor **[!UICONTROL Generate a key pair]** en selecteert u vervolgens de **[!UICONTROL Generate keypair]** in de rechterbenedenhoek.
 
 ![](../images/notifications/generate-keypair.png)
 
@@ -80,7 +83,7 @@ Geef in het volgende scherm een naam en beschrijving voor de gebeurtenisregistra
 
 ![](../images/notifications/registration-details.png)
 
-Verder omlaag op hetzelfde scherm onder [!UICONTROL How to receive events] kunt u desgewenst configureren hoe gebeurtenissen moeten worden ontvangen. **[!UICONTROL Webhook]** kunt u een aangepast webhaadres opgeven om gebeurtenissen te ontvangen, terwijl **[!UICONTROL Runtime action]** kunt u hetzelfde doen met [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Verder omlaag op hetzelfde scherm onder [!UICONTROL How to receive events] kunt u desgewenst configureren hoe gebeurtenissen moeten worden ontvangen. **[!UICONTROL Webhook]** kunt u een aangepast webhaadres opgeven om gebeurtenissen te ontvangen, terwijl **[!UICONTROL Runtime action]** staat u toe om het zelfde te doen gebruikend [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
 Voor deze zelfstudie selecteert u **[!UICONTROL Webhook]** en geef de URL op van de webhaak die u eerder hebt gemaakt. Als u klaar bent, selecteert u **[!UICONTROL Save configured events]** om de gebeurtenisregistratie te voltooien.
 
