@@ -4,9 +4,9 @@ title: Abonneren op Adobe I/O-gebeurtenismeldingen
 description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook referentieinformatie over de beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over hoe de geretourneerde gebeurtenisgegevens voor elke toepasselijke gebeurtenis moeten worden geïnterpreteerd. [!DNL Platform] service.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 49f4cf07d2f002e45e27dffac4fd0049446bc68f
+source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en m
 
 ## Abonneren op gebeurtenissen
 
->[OPMERKING!]
+>[!NOTE]
 >
 >Het bericht voor het invoeren van gegevens wordt afgekeurd van het abonnement voor Adobe-IO. Gebruik in plaats daarvan de opdracht **Bronnen: Run-info over stroom** I/O-gebeurtenis.
 
