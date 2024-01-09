@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,10 @@ Toegevoegde gebruikers worden weergegeven onder **[!UICONTROL Users]** tab.
 Als u een gebruiker uit een rol wilt verwijderen, selecteert u de **X** naast de gebruikersnaam.
 
 ![gebruikers van flac-remove](../../images/flac-ui/flac-remove-users.png)
+
+De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en het leiden van gebruikers voor die rol te steunen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## API-referenties voor rol beheren {#manage-api-credentials-for-role}
 

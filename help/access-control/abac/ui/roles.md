@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Toegangsbeheer op basis van kenmerken maakt een rol
 description: Dit document bevat informatie over het beheer van rollen via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebru
 
 ## Een nieuwe rol maken
 
-Als u een nieuwe rol wilt maken, selecteert u de optie **[!UICONTROL Roles]** op de zijbalk en selecteert u **[!UICONTROL Create Role]**.
+Als u een nieuwe rol wilt maken, selecteert u de **[!UICONTROL Roles]** op de zijbalk en selecteert u **[!UICONTROL Create Role]**.
 
-![nieuwe rol](../../images/flac-ui/flac-new-role.png)
+![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
 De **[!UICONTROL Create a new role]** wordt weergegeven en u wordt gevraagd een naam en een optionele beschrijving in te voeren.
 
-Als u klaar bent, selecteert u **[!UICONTROL Confirm]**.
+Selecteer **[!UICONTROL Confirm]**.
 
 ![flash-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
@@ -38,7 +38,7 @@ Klik op de relevante bron en sleep deze naar het hoofddeelvenster.
 
 ![toegevoegde flash-resources](../../images/flac-ui/flac-additional-resources-added.png)
 
-Selecteer de bronmachtigingen die u in de rol wilt opnemen via het vervolgkeuzemenu. Herhaal dit voor alle bronnen die u voor de rol wilt opnemen. Als u klaar bent, selecteert u **[!UICONTROL Save and exit]**.
+Selecteer de bronmachtigingen die u in de rol wilt opnemen via het vervolgkeuzemenu. Herhaal dit voor alle bronnen die u voor de rol wilt opnemen. Selecteer **[!UICONTROL Save and exit]**.
 
 ![flash-save-resources](../../images/flac-ui/flac-save-resources.png)
 
@@ -48,13 +48,17 @@ De nieuwe rol is gemaakt en u wordt omgeleid naar de **[!UICONTROL Roles]** pagi
 
 Zie de secties op [machtigingen voor een rol beheren](#manage-permissions-for-a-role) voor meer informatie over hoe te om roltoestemmingen te beheren zodra zij worden gecreeerd.
 
+De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en het leiden van gebruikers voor die rol te steunen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Een rol dupliceren
 
 Als u een bestaande rol wilt dupliceren, selecteert u de rol in het menu **[!UICONTROL Roles]** tab. U kunt ook de filteroptie gebruiken om de resultaten te filteren om de rol te zoeken die u wilt dupliceren.
 
-![flash-duplicate-rol](../../images/flac-ui/flac-duplicate-role.png)
+![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
-Selecteer vervolgens **[!UICONTROL Duplicate]** vanaf de rechterbovenhoek van het scherm.
+Selecteer vervolgens **[!UICONTROL Duplicate]** rechtsboven in het scherm.
 
 ![flac-duplicaat](../../images/flac-ui/flac-duplicate.png)
 
