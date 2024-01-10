@@ -2,10 +2,10 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 1%
+source-wordcount: '2701'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +27,36 @@ Op dit moment worden alleen op profielen gebaseerde soorten publiek ondersteund.
 
 Ja, extern gegenereerde, vooraf gebouwde doelgroepen worden ondersteund met Poorten publiek. Op dit moment kunt u een extern gegenereerd publiek importeren via een CSV-bestand. In de toekomst kunt u een publiek toevoegen via batch- of streaminggebaseerde bronconnectors.
 
+### Welke toestemmingen moet ik hebben om extern geproduceerd publiek te uploaden?
+
+Als u extern gegenereerde soorten publiek wilt uploaden, hebt u zowel de machtigingen &quot;Beheren publiek/segmenten&quot; als &quot;Gegevenssets beheren&quot; nodig. Er zijn geen specifieke op rol-gebaseerde controles vereist om extern geproduceerd publiek te uploaden.
+
+### Wat gebeurt er als ik een extern gegenereerd publiek upload?
+
+Wanneer u een extern gegenereerd publiek uploadt, worden de volgende items gemaakt:
+
+- Gegevensset
+   - De dataset zal binnen de datasetinventaris zichtbaar zijn, en de naam van de dataset zal zijn **zelfde** als de naam van het extern gegenereerde publiek dat u hebt geüpload.
+- Batchtaak
+   - Een batchtaak zal **automatisch** uitgevoerd wanneer u een extern gegenereerd publiek uploadt. Dit betekent dat je dat doet **niet** moet wachten tot de dagelijkse segmentatietaak wordt uitgevoerd om het extern gegenereerde publiek te activeren.
+- Ad-hocschema
+   - A **new** XDM-schema wordt gemaakt voor gebruik met het extern gegenereerde publiek. De velden in dit XDM-schema worden benoemd voor gebruik met de gegevensset die ook is gemaakt.
+
+### Wat is een extern gegenereerd publiek dat bestaat uit deze gegevens en wat gebeurt er met deze gegevens als het wordt geïmporteerd naar Platform?
+
+Tijdens de workflow voor het importeren van externe doelgroepen moet u opgeven welke kolom in het CSV-bestand overeenkomt met **Primaire identiteit**. Een voorbeeld van een primaire identiteit is e-mailadres, ECID of een naamruimte die specifiek is voor de organisatie.
+
+De gegevens die aan deze primaire identiteitskolom zijn gekoppeld, **alleen** gegevens die aan het profiel zijn gekoppeld. Als er geen bestaande profielen zijn die overeenkomen met de gegevens in de primaire identiteitskolom, wordt een nieuw profiel gemaakt. Dit profiel is echter in wezen een zwevend profiel, aangezien **nee** attributen of ervaringsgebeurtenissen worden aan dit profiel gekoppeld.
+
+Alle andere gegevens binnen het extern gegenereerde publiek worden in aanmerking genomen **payload-kenmerken**. Deze kenmerken kunnen **alleen** worden gebruikt voor personalisatie en verrijking tijdens activering, en **niet** gekoppeld aan een profiel. Deze kenmerken worden echter opgeslagen in het datumpigment.
+
+Terwijl naar het extern gegenereerde publiek kan worden verwezen bij het maken van soorten publiek met de Segment Builder, kunnen de afzonderlijke profielkenmerken **kan** worden gebruikt.
+
 ### Kan ik extern gegenereerde publieksgegevens combineren met een bestaand profiel in Platform?
 
 Ja, het extern gegenereerde publiek wordt samengevoegd met het bestaande profiel in Platform als de primaire id&#39;s overeenkomen. Het kan 24 uur duren voordat deze gegevens met elkaar in overeenstemming zijn. Als profielgegevens nog niet bestaan, wordt een nieuw profiel gemaakt wanneer de gegevens worden ingevoerd.
 
-## Kan ik een extern gegenereerd publiek gebruiken om andere soorten publiek op te bouwen?
+### Kan ik een extern gegenereerd publiek gebruiken om andere soorten publiek op te bouwen?
 
 Ja, elk extern gegenereerd publiek wordt weergegeven in de publieksinventaris en kan worden gebruikt bij het opbouwen van publiek binnen het [Segment Builder](./ui/segment-builder.md).
 
@@ -45,13 +70,33 @@ Wanneer u uw publiek echter toewijst aan batchbestemmingen of op bestanden gebas
 
 Lees de handleiding voor meer informatie over deze mogelijkheid [publieksgegevens activeren om exportdoelen voor batchprofielen te maken](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
-### Kan ik extern gegenereerde publiek activeren naar Adobe Journey Optimizer?
+### Bestaat er een specifiek fusiebeleid voor extern gegenereerde doelgroepen?
 
-Op dit moment, nee. Deze mogelijkheid zal echter in de nabije toekomst beschikbaar zijn.
+Het organisatiespecifieke standaard samenvoegingsbeleid wordt automatisch toegepast wanneer het uploaden van extern geproduceerd publiek. U kunt echter wel het samenvoegbeleid wijzigen dat wordt toegepast op het extern gegenereerde publiek tijdens de workflow voor het importpubliek.
+
+### Waar kan ik extern gegenereerde publiek activeren?
+
+Een extern gegenereerd publiek kan aan elke RTCDP-bestemming worden toegewezen en kan in Adobe Journey Optimizer-campagnes worden gebruikt.
+
+### Hoe snel zijn extern gegenereerde doelgroepen klaar voor activering?
+
+Als de gegevens van het extern gegenereerde publiek worden geactiveerd voor een streamingdoel, zijn deze binnen twee uur beschikbaar.
+
+Als de gegevens worden geactiveerd voor een batchbestemming, worden de gegevens van het extern gegenereerde publiek gesynchroniseerd met de volgende segmentatietaak van 24 uur.
 
 ### Kan ik een extern gegenereerd publiek verwijderen?
 
-Op dit moment, nee. U kunt dit publiek deactiveren of archiveren. In deze status worden profielen **zal** actief blijven voor gebruik in downstreamtoepassingen. Ondersteuning voor het verwijderen van extern gegenereerde soorten publiek wordt toegevoegd aan een volgende release.
+Op dit moment kunt u alleen een extern gegenereerd publiek deactiveren. In deze status worden profielen **zal** actief blijven voor gebruik in downstreamtoepassingen. Ondersteuning voor het verwijderen van extern gegenereerde soorten publiek wordt toegevoegd aan een volgende release.
+
+### Wat moet ik doen als ik per ongeluk een extern gegenereerd publiek heb geüpload?
+
+Als u per ongeluk een extern gegenereerd publiek hebt geüpload en u de gegevens wilt verwijderen, kunt u de aan het publiek gekoppelde profielen wissen door een CSV-bestand met één rij en geen gegevens te uploaden.
+
+### Hoe lang duurt het extern gegenereerde publiek?
+
+De huidige gegevensvervaldatum voor extern gegenereerd publiek is **dertig dagen**. Deze gegevensvervaldatum is gekozen om de hoeveelheid overtollige gegevens te verminderen die binnen uw organisatie worden opgeslagen.
+
+Nadat de gegevensvervalperiode overgaat, zal de bijbehorende dataset nog zichtbaar binnen de datasetinventaris zijn, maar u zult **niet** kan het publiek activeren en het aantal profielen wordt weergegeven als nul.
 
 ### Wat vertegenwoordigen de verschillende levenscyclusstaten?
 
@@ -124,13 +169,13 @@ In de volgende sectie worden vragen over Audience Composition weergegeven.
 
 Zowel de Samenstelling van het publiek als de Bouwer van het Segment hebben belangrijke rollen in de verwezenlijking van het gebouwpubliek in Platform.
 
-De Segment Builder is geschikter voor het publiek **creatie** (voor het opbouwen van een volledig publiek), terwijl Audience Composition geschikter is voor het publiek **kromming** (voor het maken van nieuwe doelgroepen op basis van een bestaand publiek).
+De Segment Builder is geschikter voor het publiek **creatie** (voor het opbouwen van een volledig publiek), terwijl Audience Composition geschikter is voor het publiek **curatele en personalisatie** (voor het maken van nieuwe doelgroepen op basis van een bestaand publiek).
 
 De volgende tabel illustreert het verschil tussen de twee services:
 
 | Segment Builder | Samenstelling publiek |
 | --------------- | -------------------- |
-| <ul><li>Eenmalige doelgroep</li><li>Creeert de basisblokken van publiek van profiel, tijdreeksen, en multi-entiteitsgegevens</li><li>Gebruikt om te maken **één** publiek</li></ul> | <ul><li>Multi-stage publiek genereren, met gebruik van op set gebaseerde bewerkingen</li><li>Gebruikt het publiek dat door de Bouwer van het Segment wordt gecreeerd en past opties van de gegevensverrijking zoals het rangschikken van profielattributen toe</li><li>Gebruikt om te maken **meerdere** publiek in één keer</li></ul> |
+| <ul><li>Eenmalige doelgroep</li><li>Creeert de basisblokken van publiek van profiel, tijdreeksen, en multi-entiteitsgegevens</li><li>Gebruikt om te maken **één** publiek</li></ul> | <ul><li>Multi-stage publiek genereren, met gebruik van op set gebaseerde bewerkingen</li><li>Gebruikt het publiek dat door de Bouwer van de Segment wordt gecreeerd en past opties van de gegevensverrijking zoals het rangschikken van profielattributen en het verdelen in sub-publiek toe</li><li>Gebruikt om te maken **meerdere** publiek in één keer</li></ul> |
 
 Voor meer informatie over de Segment Builder leest u de [Handleiding Segment Builder](./ui/segment-builder.md). Voor meer informatie over Audience Composition leest u de [Hulplijn Audience Composition](./ui/audience-composition.md).
 
@@ -152,11 +197,35 @@ De compositiecomponent die als volgt plaatst volgt een stijve structuur:
 
 1. U **altijd** beginnen met de [!UICONTROL Audience] blokkeren om uw startactiviteit te selecteren. U kunt maximaal **één** [!UICONTROL Audience] blokkeren.
 2. U kunt desgewenst een [!UICONTROL Exclude] blok dat volgt op het [!UICONTROL Audience] blokkeren.
-3. U kunt desgewenst een [!UICONTROL Enrich] blok dat volgt op het [!UICONTROL Exclude] blokkeren.
+3. U kunt desgewenst een [!UICONTROL Enrich] blok dat volgt op het [!UICONTROL Exclude] blokkeren. U kunt alleen **één** [!UICONTROL Enrich] blok per compositie.
 4. U kunt desgewenst een [!UICONTROL Rank] of [!UICONTROL Split] blokkeren. U kunt **alleen** hebben één van deze blokken per samenstelling.
 5. U **altijd** met een [!UICONTROL Save] blokkeren om uw publiek op te slaan.
 
+Daarnaast zijn de volgende beperkingen (?) toepassen bij het gebruik van deze blokken:
+
+- Blok splitsen
+   - Alleen dit blok ondersteunt **String** gegevenstypen. Het blok Splitsen doet dit **niet** ondersteuning bieden voor het gegevenstype date of boolean.
+   - Bovendien doet dit blok **niet** verrijkingskenmerken ondersteunen.
+- Blok uitsluiten
+   - Dit blok doet **niet** ondersteuning bieden voor het gegevenstype date of boolean.
+- Rank blok
+   - Dit blok doet **niet** verrijkingskenmerken ondersteunen.
+
 Lees voor meer informatie over het gebruik van Audience Composition de [Handleiding voor compositie van publiek](./ui/audience-composition.md).
+
+### Wanneer wordt het publiek gecreeerd gebruikend de Samenstelling van het Publiek bewaard en geëvalueerd?
+
+Soorten publiek worden automatisch opgeslagen tijdens het maken ervan in Audience Composition. De aanmaaktijd van het publiek is de eerste keer dat deze automatische opslag plaatsvindt.
+
+Nadat het publiek is gemaakt, kan het tot 24 uur duren om te worden geëvalueerd.
+
+### Wanneer kan ik het publiek gebruiken dat ik heb gemaakt?
+
+De doelgroep die is gemaakt in Audience Composition zal **onmiddellijk** verschijnt in het Portaal van het Publiek. Als u het echter in Adobe Journey Optimizer wilt gebruiken, moet u minstens 24 uur wachten na de evaluatie.
+
+### Zijn evaluatietaken zichtbaar in de sectie monitoring?
+
+Momenteel zijn evaluatietaken **niet** weergegeven in de besturingsinterface.
 
 ### Kan ik een Samenstelling van het Publiek in een andere samenstelling gebruiken?
 
@@ -164,7 +233,11 @@ Nee, publiek gemaakt met Audience Composition **kan** worden gebruikt als input 
 
 ### Hoe werkt splitsen in Audience Composition?
 
-Door het publiek te splitsen kunt u het publiek verder onderbrengen in kleinere groepen. Deze splitsing dwingt de fracties tot wederzijdse exclusiviteit. Dit betekent dat als een record voldoet aan de criteria van meerdere gesplitste paden, de record de opdracht **first** pad van links en **niet** toegewezen aan een van de andere paden.
+Door het publiek te splitsen kunt u het publiek verder onderbrengen in kleinere groepen.
+
+Bij splitsing naar kenmerk is er sprake van wederzijdse exclusiviteit tussen de groepen. Dit betekent dat als een record voldoet aan de criteria van meerdere gesplitste paden, de record de opdracht **first** pad van links en **niet** toegewezen aan een van de andere paden.
+
+Bij splitsen op percentage zijn splitsingen **willekeurig** gereed. Dit betekent dat de profielen willekeurig worden toegewezen aan elk pad. De splitsing is **niet** blijvend, zodat zou het profiel in een verschillende sub-publiek op elke evaluatie kunnen zijn.
 
 Lees voor meer informatie over het blok Splitsen de [Handleiding voor compositie van publiek](./ui/audience-composition.md#split).
 

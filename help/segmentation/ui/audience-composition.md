@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1677'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ De **[!UICONTROL Composition properties]** wordt weergegeven. U kunt hier detail
 
 >[!NOTE]
 >
->Als u **niet** Als u de compositie een titel geeft, krijgt deze de titel &quot;Compositie&quot;, gevolgd door de datum en tijd waarop de compositie wordt gemaakt.
+>Als u **niet** Als u de compositie een titel geeft, krijgt deze de titel &quot;Compositie&quot;, gevolgd door de datum en tijd waarop de compositie wordt gemaakt. Bovendien, elke samenstelling **moet** hebben een eigen unieke naam.
 
 Nadat u de details van uw compositie hebt bijgewerkt, selecteert u **[!UICONTROL Save]** om deze updates te bevestigen. Het canvas van de publiekscompositie verschijnt opnieuw.
 
