@@ -3,10 +3,10 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: e46ac94a2328b045d7270b2498d6cb7ef5f0464b
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 1%
+source-wordcount: '1740'
+ht-degree: 0%
 
 ---
 
@@ -15,6 +15,14 @@ ht-degree: 1%
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie [Opmerkingen bij de release Web SDK-tag](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versie 2.19.2 - 10 januari 2024
+
+**Oplossingen en verbeteringen**
+
+* Probleem verholpen waarbij identiteitsfouten andere fouten maskeerden en identiteitsfouten veranderden in waarschuwingen.
+* Probleem verholpen waarbij de onderzijde van pagina-aanroepen nooit zou worden verzonden wanneer er een bovenzijde van de pagina-aanroep met renderDecisions was ingesteld op false.
+* Probleem verholpen waarbij de SDK van het Web geen domeinoverschrijdende identiteiten kon lezen wanneer er meerdere parameters voor de adobe_mc-queryreeks waren.
 
 ## Versie 2.19.1 - 10 november 2023
 
