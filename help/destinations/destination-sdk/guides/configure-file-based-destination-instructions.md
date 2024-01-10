@@ -2,9 +2,9 @@
 description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
 title: Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Lees de onderstaande stappen voordat u verdergaat [Aan de slag met Destination S
 
 Beginnen met [een server- en bestandsconfiguratie maken](../authoring-api/destination-server/create-destination-server.md) met de `/destinations-server` eindpunt.
 
-Hieronder ziet u een voorbeeldconfiguratie voor een [!DNL Amazon S3] bestemming. Andere soorten op dossier-gebaseerde bestemmingen vormen, zie hun overeenkomstige [serverconfiguraties](../functionality/destination-server/server-specs.md).
+Hieronder ziet u een voorbeeldconfiguratie voor een [!DNL Amazon S3] bestemming. Voor meer details over de gebieden die in de configuratie worden gebruikt en om andere soorten op dossier-gebaseerde bestemmingen te vormen, zie hun overeenkomstige [serverconfiguraties](../functionality/destination-server/server-specs.md).
 
 **API-indeling**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -116,7 +116,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 Hieronder getoond is een voorbeeld van een bestemmingsconfiguratie, die door te gebruiken wordt gecreeerd `/destinations` API-eindpunt.
 
-Om de server en dossierconfiguratie in stap 1 met deze bestemmingsconfiguratie te verbinden, voeg instantieidentiteitskaart van de server en malplaatjeconfiguratie als toe `destinationServerId` hier.
+Om de server en dossierconfiguratie van stap 1 aan deze bestemmingsconfiguratie te verbinden, voeg toe `instance ID` van de server en bestandsconfiguratie als `destinationServerId` hier.
 
 **API-indeling**
 
@@ -124,7 +124,7 @@ Om de server en dossierconfiguratie in stap 1 met deze bestemmingsconfiguratie t
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ Voor sommige bestemmingen, vereist Destination SDK dat u een configuratie van pu
 
 Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bestemmingsconfiguratie verbinden u in stap 2 creeerde. Voeg instanceID van uw configuratie van publieksmeta-gegevens aan uw bestemmingsconfiguratie als toe `audienceTemplateId`.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bes
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bes
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bes
 ## Stap 4: De authentificatie van de opstelling {#set-up-authentication}
 
 Afhankelijk van of u opgeeft `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"authenticationRule": "PLATFORM_AUTHENTICATION"` in de bestemmingsconfiguratie hierboven, kunt u opstellingsauthentificatie voor uw bestemming door `/destination` of de `/credentials` eindpunt.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` is gemeenschappelijker van de twee authentificatieregels en is te gebruiken als u gebruikers vereist om één of andere vorm van authentificatie aan uw bestemming te verstrekken alvorens zij opstelling een verbinding kunnen en gegevens uitvoeren.
 
 * Als u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in de bestemmingsconfiguratie, zie de volgende secties voor de authentificatietypen die door Destination SDK voor op dossier-gebaseerde bestemmingen worden gesteund:
 
@@ -384,10 +418,10 @@ Afhankelijk van of u opgeeft `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o
 
 Nadat u de bestemming hebt ingesteld met de eindpunten van de configuratie in de vorige stappen, kunt u de opdracht [doeltestgereedschap](../testing-api/batch-destinations/file-based-destination-testing-overview.md) om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
 
-Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van publiek in Experience Platform:
+Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om publiek tot stand te brengen, dat u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van publiek in Experience Platform:
 
-* [Een pagina met publieksdocumentatie maken](/help/segmentation/ui/overview.md#create-segment)
-* [Een doorlichting van een publieksvideo maken](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Een publiek maken - documentatiepagina](/help/segmentation/ui/overview.md#create-segment)
+* [Een publiek maken - videodoorloop](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Stap 6: Uw doel publiceren {#publish-destination}
 
