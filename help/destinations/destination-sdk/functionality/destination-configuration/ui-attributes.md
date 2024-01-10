@@ -2,16 +2,16 @@
 description: Leer hoe te om de attributen UI, zoals de documentatiekoppeling, de categorie van de bestemmingskaart, en het type en de frequentie van de bestemmingsverbinding, voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: UI-kenmerken
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '794'
 ht-degree: 0%
 
 ---
 
 # UI-kenmerken
 
-De attributen UI bepalen de visuele elementen die de Adobe voor uw bestemmingskaart in het gebruikersinterface van Adobe Experience Platform zou moeten tonen, zoals het embleem van het bestemmingsplatform, een verbinding aan de documentatiepagina, een bestemmingsbeschrijving en zijn categorie en type.
+De attributen UI bepalen de visuele elementen die de Adobe voor uw bestemmingskaart in het gebruikersinterface van Adobe Experience Platform zou moeten tonen, zoals een embleem, een verbinding aan de documentatiepagina, een bestemmingsbeschrijving en zijn categorie en type.
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
@@ -21,10 +21,10 @@ Om te begrijpen waar deze component in een integratie past die met Destination S
 Wanneer [een doel maken](../../authoring-api/destination-configuration/create-destination-configuration.md) door Destination SDK, de `uiAttributes` de sectie bepaalt de volgende visuele eigenschappen van uw bestemmingskaart:
 
 * De URL van de pagina met doeldocumentatie in het dialoogvenster [doelcatalogus](../../../catalog/overview.md).
-* De URL waar u het pictogram hebt gehost dat in de cataloguskaart van de doelen moet worden weergegeven.
 * De categorie waaronder uw bestemming in Platform UI zichtbaar zal zijn.
 * De gegevensexportfrequentie voor uw bestemming.
 * Het verbindingstype van de bestemming, zoals Amazon S3, Azure Blob, enz.
+* De URL waar u het pictogram hebt gehost dat in de cataloguskaart van de doelen moet worden weergegeven.
 
 U kunt UI-kenmerken configureren via de `/authoring/destinations` eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -82,14 +82,6 @@ Gebruikers kunnen de lijst met doelcategorieën aan de linkerkant van het scherm
 
 ![UI-afbeelding die de locatie van de doelcategorie weergeeft.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` is een tekenreeksparameter die naar het type verbinding verwijst, afhankelijk van het doel. Ondersteunde waarden: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -114,9 +106,17 @@ Hiervoor kunt u de opdracht `isBeta: "true"` parameter in de UI attributensectie
 
 ![UI-afbeelding met een doelkaart gemarkeerd als bèta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
+### `icon` {#icon}
+
+U kunt een logopictogram aan uw bestemming, zoals aangetoond in het hieronder beeld toevoegen.
+
+![UI-afbeelding die de pictogramlocatie weergeeft.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+Als u een logo aan uw doelkaart wilt toevoegen, moet u de gewenste afbeelding delen met het team van Adoben wanneer u [de bestemming ter controle verzenden](../../guides/submit-destination.md#logo).
+
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben welke attributen UI u voor uw bestemming kunt vormen en waar de gebruikers hen in Platform UI zullen zien.
+Na het lezen van dit artikel, zou u een beter inzicht moeten hebben in welke attributen UI u voor uw bestemming kunt vormen en waar de gebruikers hen in Platform UI zullen zien.
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 
