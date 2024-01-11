@@ -3,9 +3,9 @@ title: IP adres lijst van gewenste personen SFTP bestemmingen
 type: Documentation
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw server veilig uit te voeren SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,17 @@ De Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste perso
 
 * `52.252.71.64/29`
 
+## Canada-klanten
+
+* `20.220.135.16/29`
+
 ## EMEA-klanten
 
 * `51.137.8.208/29`
+
+## Britse klanten
+
+* `20.26.133.96/29`
 
 ## APAC-klanten
 
