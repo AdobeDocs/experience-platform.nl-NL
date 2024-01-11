@@ -1,14 +1,15 @@
 ---
 title: Lambda-functievoorbeeld - soortgelijke records ophalen
 description: Leer hoe te om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch en gelijkenis drempel worden gebaseerd. Deze workflow kan betekenisvolle relaties of overlappingen tussen verschillende gegevenssets benadrukken.
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 2%
 
 ---
 
-# Lambda-functievoorbeeld: soortgelijke records ophalen
+# Lambda, functievoorbeeld: soortgelijke records ophalen
 
 Los verscheidene gemeenschappelijke gebruiksgevallen door de lambdfuncties van Distiller van Gegevens te gebruiken om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen. U kunt deze handleiding gebruiken om producten van verschillende datasets te identificeren die een significante gelijkenis in hun kenmerken of eigenschappen hebben. De methodologie in dit document biedt oplossingen voor onder andere gegevensdeduplicatie, koppeling van records, aanbevelingssystemen, het opvragen van informatie en tekstanalyse.
 
