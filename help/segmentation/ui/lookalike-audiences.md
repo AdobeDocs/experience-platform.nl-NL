@@ -2,11 +2,10 @@
 solution: Experience Platform
 title: Soortgelijke soorten publiek
 description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Platform kunt kiezen met behulp van look-alike-soorten publiek.
-badgeLimitedAvailability: label="Beperkte beschikbaarheid" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2177'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Let op: look-alike inzichten en look-alike publiek bevinden zich in **beperkte beschikbaarheid**.
+>Zichtbare inzichten en het kijkachtige publiek zijn alleen beschikbaar in de **B2C-editie**.
 
 In Adobe Experience Platform bieden look-alike-gebruikers intelligente inzichten op elk van uw doelgroepen en maken ze gebruik van op computers gebaseerde inzichten om klanten met een hoge waarde te identificeren en als doel in te stellen met uw marketingcampagnes.
 
@@ -29,6 +28,15 @@ Zorg ervoor dat u de volgende concepten begrijpt voordat u aan de slag gaat met 
 - **Labeljauwmodel**: Een model dat lijkt op een computer is een leermodel dat is opgeleid voor elk in aanmerking komend basispubliek zonder dat de klant daar iets mee doet. Elk model ziet er hetzelfde uit en creëert de invloedrijke factoren en grafieken van de gelijkenis. Een look-alike-model doet dit **niet** wordt gescoord.
 - **Kijk-als publiek**: Een publiek dat op look-alike lijkt is het publiek dat wordt gecreeerd wanneer een blik-gelijkaardig model met een geselecteerde gelijkenisdrempel op het basispubliek wordt toegepast. U kunt veelvoudige blik-alike publiek tot stand brengen gebruikend het zelfde blik-als model. Het publiek ziet er hetzelfde uit: wat wordt er gescoord.
 - **Totale adresseerbare publieksgrootte**: De totale adresseerbare publieksgrootte is het totale aantal profielen in de afgelopen 30 dagen minus de populatie van het basispubliek in de afgelopen 30 dagen. Bijvoorbeeld, als een klant 10 miljoen profielen in de afgelopen 30 dagen heeft, en het basispubliek 1 miljoen profielen in de afgelopen 30 dagen heeft, is de totale adresseerbare publieksgrootte 9 miljoen profielen.
+
+## Subsidiabiliteit {#eligibility}
+
+Voor het gebruik van look-alike inzichten, het basispubliek **moet** voldoen aan de volgende subsidiabiliteitscriteria:
+
+- Het basispubliek **moet** worden gemaakt in Platform.
+   - Extern gegenereerde doelgroepen zijn **niet** geschikt voor look-alike inzichten.
+- Het basispubliek **moet** bevindt zich op het standaardsamenvoegbeleid.
+- Het basispubliek **moet** geen velden gebruiken die zijn beperkt door gegevensbeheer.
 
 ## Modeldetails van het model {#details}
 
@@ -75,7 +83,7 @@ Zichtbare inzichten zijn ingebouwd met de pagina met publieksdetails. Als u de l
 
 ![De knop Soorten publiek wordt gemarkeerd en het basispubliek dat wordt gebruikt voor modellering op basis van look-alike.](../images/ui/lookalike-audiences/browse.png)
 
-De pagina met publieksdetails wordt weergegeven. Selecteren **[!UICONTROL Look-alike insights]** om de kijkachtige inzichten van het publiek te bekijken. De pagina **[!UICONTROL Look-alike insights]** wordt weergegeven. Deze pagina heeft drie hoofdelementen: de gelijkenis en de bereikgrafiek, het kijkachtige publiek en de invloedrijke factoren.
+De pagina met publieksdetails wordt weergegeven. Selecteren **[!UICONTROL Look-alike insights]** om de kijkachtige inzichten van het publiek te bekijken. De **[!UICONTROL Look-alike insights]** wordt weergegeven. Deze pagina heeft drie hoofdelementen: de gelijkenis en de bereikgrafiek, het kijkachtige publiek en de invloedrijke factoren.
 
 ![Het tabblad Zichtbare inzichten wordt gemarkeerd en geeft de look-alike inzichten voor het basispubliek weer.](../images/ui/lookalike-audiences/look-alike-insights.png)
 
@@ -177,13 +185,19 @@ De pagina met publieksdetails wordt weergegeven. Lees voor meer informatie over 
 
 ## Gegevensvelden uitsluiten van modellering als vergelijkbaar {#exclude}
 
+>[!IMPORTANT]
+>
+> **U** ervoor zorgen dat gegevens, inclusief gevoelige gegevens, op de juiste wijze worden geëtiketteerd en dat het beleid voor gegevensgebruik is gedefinieerd en ingeschakeld om te voldoen aan de wettelijke en bestuursrechtelijke verplichtingen waaronder u werkt. U zou zich ook moeten bewust zijn dat de gegevensgebieden of segmentlidmaatschap die zijn **niet** rechtstreeks gecorreleerd met gegevensvelden die typisch worden geassocieerd met gevoelige of beschermde gegevenstypen kan een bron van potentiële afwijking zijn. **U** zijn verantwoordelijk voor het analyseren van uw gegevens om de juiste beleidsregels voor gegevensgebruik op uw gegevens te identificeren, te labelen en toe te passen, inclusief gegevensvelden die als proxy kunnen dienen voor gevoelige of beveiligde gegevenstypen en die van modellering moeten worden uitgesloten.
+
 De blik-gelijkaardig publiek kan worden gevormd om gegevensgebieden uit te sluiten die voor de &quot;van de Gegevens actie&quot;van de marketing van Gegevens worden beperkt door de relevante etiketten en het beleid van het gegevensgebruik toe te passen. Gegevens die zijn gelabeld als beperkt in gebruik voor gegevenswetenschap, worden uit overweging genomen wanneer u een kijkachtig publieksmodel opleidt en wanneer u een kijkachtig publiek uit het opgeleide model genereert. 
+
+>[!NOTE]
+>
+>Het kan tot 48 uur duren voordat wijzigingen in de labels voor gegevensgebruik op het basispubliek van kracht worden.
 
 Het standaard &quot;C9&quot;etiket kan worden gebruikt om gegevens te etiketteren die niet voor gegevenswetenschap zouden moeten worden gebruikt en kunnen worden afgedwongen door het standaardbeleid &quot;van de Gegevens van de Beperking&quot;toe te laten. U kunt ook aanvullende beleidsregels maken om gegevens te beperken met andere labels, waaronder gevoelige labels, voor gebruik in gegevenswetenschap. Lees voor meer informatie over het beheer van het beleid voor gegevensgebruik de [UI-gids voor gegevensgebruiksbeleid](../../data-governance/policies/user-guide.md). Lees voor meer informatie over het beheren van labels voor gegevensgebruik de [UI-handleiding voor gegevensgebruikslabels](../../data-governance/labels/user-guide.md).
 
 Standaard wordt bij het modelleringsproces voor look-alike-soorten publiek geen rekening gehouden met **alle** gebied, dataset, of publiek dat op het toegelaten privacybeleid voor uw organisatie wordt gebaseerd. Als het basispubliek geen contractetiketten heeft, zal het modelleringsproces uitsluiten **alle** gebied, dataset, of publiek dat op het toegelaten privacybeleid voor uw organisatie wordt gebaseerd.
-
-Houd er rekening mee dat **u** ervoor zorgen dat gegevens, inclusief gevoelige gegevens, op de juiste wijze worden geëtiketteerd en dat het beleid voor gegevensgebruik is gedefinieerd en ingeschakeld om te voldoen aan wettelijke en bestuursrechtelijke verplichtingen waaronder u werkt. U zou zich ook moeten bewust zijn dat de gegevensgebieden of segmentlidmaatschap die zijn **niet** rechtstreeks gecorreleerd met gegevensvelden die typisch worden geassocieerd met gevoelige of beschermde gegevenstypen kan een bron van potentiële afwijking zijn. **U** zijn verantwoordelijk voor het analyseren van uw gegevens om de juiste beleidsregels voor gegevensgebruik op uw gegevens te identificeren, te labelen en toe te passen, inclusief gegevensvelden die als proxy kunnen dienen voor gevoelige of beveiligde gegevenstypen en die van modellering moeten worden uitgesloten.
 
 ## Volgende stappen
 
