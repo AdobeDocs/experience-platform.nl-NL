@@ -2,9 +2,9 @@
 title: Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2356'
+source-wordcount: '2574'
 ht-degree: 0%
 
 ---
@@ -176,6 +176,25 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >abstract="Bepaal rij en kolom-vlakke het filtreren regels wanneer het verzenden van gegevens naar het Profiel van de Klant in real time. Filteren op rijniveau gebruiken om voorwaarden toe te passen en te bepalen op welke gegevens **include for Profile ingestion**. Gebruik filters op kolomniveau om de kolommen met gegevens te selecteren die u wilt gebruiken **uitsluiten voor opnemen van profiel**. Filterregels zijn niet van toepassing op gegevens die naar een datumpeer worden verzonden."
 
 Nadat u de toewijzingen voor uw [!DNL Analytics] de gegevens van de rapportreeks, kunt u het filtreren regels en voorwaarden toepassen om gegevens te omvatten of uit te sluiten van opname aan het Profiel van de Klant in real time. Ondersteuning voor filteren is alleen beschikbaar voor [!DNL Analytics] gegevens en gegevens worden alleen gefilterd voordat ze worden ingevoerd [!DNL Profile.] Alle gegevens worden opgenomen in het data Lake.
+
+>[!BEGINSHADEBOX]
+
+**Aanvullende informatie over de gegevens van de Analytics van de Prep en het filtreren van Gegevens voor het Profiel van de Klant in real time**
+
+* U kunt de het filtreren functionaliteit voor gegevens gebruiken die naar Profiel gaan, maar niet voor gegevens die naar gegevens meer gaan.
+* U kunt filteren voor live-gegevens gebruiken, maar u kunt geen backfill-gegevens filteren.
+   * De [!DNL Analytics] geen back-up van gegevens in profiel maken.
+* Als u de configuraties van de Prep van Gegevens tijdens de aanvankelijke opstelling van gebruikt [!DNL Analytics] stroom, worden die veranderingen toegepast op automatisch 13 maanden backfill.
+   * Dit is echter niet het geval voor filteren, omdat filteren alleen is gereserveerd voor live-gegevens.
+* Gegevensvoorinstelling wordt toegepast op streaming- en batchinvoerpaden. Als u een bestaande configuratie van de Prep van Gegevens wijzigt, worden die veranderingen dan toegepast op nieuwe inkomende gegevens over zowel het stromen als de weg van de partijopname.
+   * Nochtans, zijn om het even welke configuraties van de Prep van Gegevens niet op gegevens van toepassing die reeds in Experience Platform zijn opgenomen, ongeacht of het stromen of partijgegevens is.
+* Standaardkenmerken van Analytics worden altijd automatisch toegewezen. Daarom kunt u geen transformaties toepassen op standaardkenmerken.
+   * U kunt standaardkenmerken echter wel uitfilteren zolang deze niet zijn vereist in Identiteitsservice of Profiel.
+* U kunt filteren op kolomniveau niet gebruiken om vereiste velden en identiteitsvelden te filteren.
+* Hoewel u secundaire identiteiten kunt uitfilteren, met name HULP en AACCustomID, kunt u ECID niet uitfilteren.
+* Wanneer een transformatiefout optreedt, resulteert de corresponderende kolom in NULL.
+
+>[!ENDSHADEBOX]
 
 #### Filteren op rijniveau
 
