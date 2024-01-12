@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere ondernemingsbronnen samen om klantenprofielen te creëren, doelgroepsegmenten van die profielen te maken, en die segmenten aan bestemmingen van derden te activeren.
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 18%
+source-wordcount: '287'
+ht-degree: 14%
 
 ---
 
 
 # Real-time Customer Data Platform Help {#rtcdp}
 
-* [Real-Time CDP-overzicht](overview.md)
-* [Overzicht van Real-Time CDP B2B Edition](b2b-overview.md)
+* [Real-Time CDP-documentatie](home.md)
 * Aan de slag {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Real-Time CDP-overzicht](overview.md)
       * [Aan de slag met Real-Time CDP](get-started.md)
-      * [Startpagina](home-page-dashboards.md)
+      * [Homepage](home-page-dashboards.md)
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
+      * [Overzicht van Real-Time CDP B2B Edition](b2b-overview.md)
       * [Voorbeeld van gebruik](./b2b-use-case.md)
       * [Volledige zelfstudie](./b2b-tutorial.md)
       * [Real-Time CDP B2B Edition-instructies](b2b-guardrails.md)
@@ -61,7 +62,7 @@ ht-degree: 18%
    * Voorspelend lood en account scoring {#predictive-lead-and-account-scoring-intro}
       * [Overzicht van voorsprong en accountscoring](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Voorspelende leads en accountscoring beheren](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
-* Schema&#39;s {#schemas}
+* Schemas {#schemas}
    * [Overzicht van schema&#39;s](schemas/overview.md)
    * [Schemas in Real-Time CDP B2B Edition](schemas/b2b.md)
 * Segmenten {#segmentation}
@@ -73,6 +74,7 @@ ht-degree: 18%
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)
 * Gebruiksscenario’s {#use-cases}
+   * [Overzicht van ondersteunde gebruiksgevallen](/help/rtcdp/use-case-guides/overview.md)
    * Personalisatie, inzichten en betrokkenheid {#personalization-insights-engagement}
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Klantenovername {#customer-acquisition}
@@ -82,4 +84,4 @@ ht-degree: 18%
    * Profielverrijking {#profile-enrichment}
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
-* [Woordenlijst voor Experience Platform](https://www.adobe.com/go/platform-glossary-en)
+* [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)
