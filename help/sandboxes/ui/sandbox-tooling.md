@@ -2,9 +2,9 @@
 title: Sandboxen
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: '1731'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ De onderstaande tabel bevat [!DNL Adobe Journey Optimizer] objecten die momentee
 
 | Platform | Object | Details |
 | --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | Audience | Een publiek kan als afhankelijk voorwerp van het reisvoorwerp worden gekopieerd. U kunt een nieuw publiek maken of een bestaand publiek in de doelsandbox opnieuw gebruiken. |
+| [!DNL Adobe Journey Optimizer] | Doelgroep | Een publiek kan als afhankelijk voorwerp van het reisvoorwerp worden gekopieerd. U kunt een nieuw publiek maken of een bestaand publiek in de doelsandbox opnieuw gebruiken. |
 | [!DNL Adobe Journey Optimizer] | Schema | De schema&#39;s die in de reis worden gebruikt kunnen als afhankelijke voorwerpen worden gekopieerd. U kunt een nieuw schema selecteren of een bestaand schema in de doelzandbak opnieuw gebruiken. |
 | [!DNL Adobe Journey Optimizer] | Reis - canvasdetails | De representatie van de reis op het canvas omvat de objecten in de reis, zoals voorwaarden, handelingen, gebeurtenissen, leestekens, enzovoort, die worden gekopieerd. De sprongactiviteit wordt uitgesloten van het exemplaar. |
 | [!DNL Adobe Journey Optimizer] | Gebeurtenis | De gebeurtenissen en gebeurtenisdetails die in de reis worden gebruikt worden gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox. |
@@ -67,19 +67,14 @@ Aangepaste identiteitstypen worden niet ondersteund als afhankelijke objecten wa
 >Alle uitvoeracties worden in de auditlogboeken opgenomen.
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="Pakket opslaan en afsluiten"
->abstract="Als u het pakket wilt afsluiten en opslaan, kunnen gebruikers gewoon de optie Vorige gebruiken."
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Een object verwijderen"
->abstract="De gebruiker moet de rij selecteren en vervolgens de rij verwijderen met de verwijderoptie (beschikbaar gemaakt bij selectie)."
+>abstract="Als u een object uit het pakket wilt verwijderen, selecteert u de rij die u wilt verwijderen en gebruikt u vervolgens de verwijderoptie die bij de selectie beschikbaar wordt gemaakt. U kunt geen objecten verwijderen uit gepubliceerde pakketten."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Vervalinstellingen van pakket"
->abstract="De datum is vastgesteld op 90 dagen vanaf vandaag. Deze datum blijft wijzigen totdat het pakket is gepubliceerd. Als een gebruiker het pakket morgen als concept-status bezoekt, wordt de datum met +1 dag verplaatst (tenzij de gebruiker dit heeft ingesteld)."
+>abstract="Pakketten verlopen na een periode van inactiviteit in de status van het concept. De standaarddatum is ingesteld op 90 dagen vanaf vandaag. Deze datum blijft wijzigen totdat het pakket is gepubliceerd. Als u het pakket morgen als concept-status bezoekt, wordt de datum met +1 dag verplaatst, tenzij u dit handmatig instelt."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
