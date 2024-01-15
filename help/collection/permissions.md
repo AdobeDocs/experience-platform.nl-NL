@@ -2,10 +2,10 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1252'
-ht-degree: 2%
+source-wordcount: '1263'
+ht-degree: 1%
 
 ---
 
@@ -56,9 +56,10 @@ Machtigingen onder Adobe Experience Platform Data Collection beheren toegang tot
 | Eigendomsrechten | Eigenschap bewerken | Biedt de mogelijkheid om de basisconfiguratie te bewerken voor de eigenschappen waartoe een gebruiker toegang heeft. |
 | Eigendomsrechten | Omgevingen beheren | Biedt de mogelijkheid om de [omgevingen](../tags/ui/publishing/environments.md) voor de eigenschappen waartoe een gebruiker toegang heeft. |
 | Eigendomsrechten | Extensies beheren | Biedt de mogelijkheid om de [extensions](../tags/ui/managing-resources/extensions/overview.md) voor de eigenschappen waartoe een gebruiker toegang heeft. |
-| Eigendomsrechten | Publicatie | Biedt de mogelijkheid om een bibliotheekbuild te publiceren als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
+| Eigendomsrechten | Publiceren | Biedt de mogelijkheid om een bibliotheekbuild te publiceren als onderdeel van de [publicatiestroom](../tags/ui/publishing/publishing-flow.md). |
 | Bedrijfsrechten | Extensies ontwikkelen | Biedt de mogelijkheid extensiepakketten te maken en te wijzigen die eigendom zijn van uw organisatie, inclusief persoonlijke releases en verzoeken om openbare release. |
-| Bedrijfsrechten | Extensies beheren | Deze machtiging is alleen van toepassing als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en via pushberichten. Op deze manier kunt u de apps beheren die Adobe Experience Cloud kent, samen met de vereiste pushgegevens die nodig zijn om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification-service. |
+| Bedrijfsrechten | App Configurations beheren | Deze machtiging is alleen van toepassing als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en via pushberichten. Op deze manier kunt u de apps beheren die Adobe Experience Cloud kent, samen met de vereiste pushgegevens die nodig zijn om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification-service. |
+| Bedrijfsrechten | Eigenschappen beheren | Hiermee kunt u tags (webeigenschap), gebeurtenissen doorsturen (eigenschap edge) en mobiele eigenschappen maken en beheren. |
 
 {style="table-layout:auto"}
 
