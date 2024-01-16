@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Leer analyses, marketing en advertenties te implementeren en beheren om de klantervaring te verbeteren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 13%
+source-wordcount: '770'
+ht-degree: 15%
 
 ---
 
@@ -308,7 +308,7 @@ ht-degree: 13%
       * [Profiel](./api/endpoints/profile.md)
       * [Zoeken](./api/endpoints/search.md)
       * [Geheimen](./api/endpoints/secrets.md)
-   * Handleidingen {#guides}
+   * Hulplijnen {#guides}
       * [Id&#39;s van beschrijvingsbestanden delegeren](./api/guides/delegate-descriptor-ids.md)
       * [Waarden versleutelen](./api/guides/encrypting-values.md)
       * [Foutafhandeling](./api/guides/error-handling.md)
@@ -321,10 +321,5 @@ ht-degree: 13%
 * [Veelgestelde vragen](./faq.md)
 * [Terminologie-updates](./term-updates.md)
 * [Ondersteuning voor Internet Explorer 10 en 11 wordt afgeschaft](./ie-deprecation.md)
-* Aanvullende informatie {#release-notes}
-   * [Laatste](./release-notes/current.md)
-   * [Opmerkingen bij de release 2021](./release-notes/2021.md)
-   * [Opmerkingen bij de release 2020](./release-notes/2020.md)
-   * [Opmerkingen bij de release 2019](./release-notes/2019.md)
-   * [Opmerkingen bij de release 2018](./release-notes/2018.md)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
 
