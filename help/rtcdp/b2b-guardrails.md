@@ -6,9 +6,9 @@ description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybri
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 | Geen geneste verouderde relaties | 0 | Zacht | U moet geen relatie maken tussen twee niet-[!DNL XDM Individual Profile] schema&#39;s. De mogelijkheid om relaties te maken wordt niet aanbevolen voor schema&#39;s die geen deel uitmaken van de [!DNL Profile] samenvoegingsschema. |
 | Alleen B2B-objecten kunnen deelnemen aan een vele-op-één relatie | 0 | Hard | Het systeem ondersteunt alleen vele-op-één relaties tussen B2B-objecten. Raadpleeg de zelfstudie voor meer informatie over veel-op-één relaties [B2B-schemarelaties definiëren](../xdm/tutorials/relationship-b2b.md). |
 | Maximale diepte van geneste relaties tussen B2B-objecten | 3 | Hard | De maximale diepte van geneste relaties tussen B2B-objecten is 3. Dit betekent dat in een hoogst genest schema, u geen verhouding tussen B2B voorwerpen zou moeten hebben die meer dan 3 niveaus diep worden genest. |
+| Eén schema voor elke dimensie-entiteit | 1 | Hard | Elke dimensie-entiteit moet één schema hebben. Het proberen om dimensie-entiteiten te gebruiken die van meer dan één schema worden gecreeerd kan segmentatieresultaten beïnvloeden. Van verschillende dimensie-entiteiten wordt verwacht dat ze afzonderlijke schema&#39;s hebben. |
 
 ## Limieten voor gegevensgrootte
 
@@ -93,7 +94,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Totale grootte voor alle dimensionale entiteiten | 5GB | Zacht | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
+| Totale grootte voor alle dimensionale entiteiten | 5 GB | Zacht | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
 | Datasets per dimensionaal eenheidschema | 5 | Zacht | Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema. Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
 | Per dag ingenomen partijen van een Dimension-entiteit | 4 per entiteit | Zacht | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
 
