@@ -1,13 +1,13 @@
 ---
 title: Eerste-partij apparaat IDs in Web SDK
 description: Leer hoe u FPID's (First-party device ID's) voor de Adobe Experience Platform Web SDK configureert.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
-
 
 # Eerste-partij apparaat IDs in Web SDK
 
@@ -16,6 +16,11 @@ De Adobe Experience Platform Web SDK wijst [Adobe Experience Cloud-id&#39;s (ECI
 >[!NOTE]
 >
 >De steun van eerste-partijapparaat identiteitskaart is slechts beschikbaar wanneer het verzenden van gegevens naar het Netwerk van de Rand van het Platform via het Web SDK van het Platform.
+
+>[!IMPORTANT]
+>
+>Apparaat-id&#39;s van de eerste partij zijn niet compatibel met de [cookies van andere leveranciers](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) functionaliteit in Web SDK.
+>U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
 
 Dit document behandelt hoe te om eerste-partijapparaat IDs voor uw implementatie van SDK van het Web van het Platform te vormen.
 

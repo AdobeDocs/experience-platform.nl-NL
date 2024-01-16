@@ -2,9 +2,9 @@
 title: De web SDK-tagextensie configureren
 description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web van het Experience Platform in de UI van Markeringen te vormen.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1522'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,10 @@ Deze sectie staat u toe om het gedrag van SDK van het Web te bepalen wanneer het
 * **[!UICONTROL Migrate ECID from VisitorAPI]**: Deze optie is standaard ingeschakeld. Wanneer deze functie is ingeschakeld, kan de SDK de `AMCV` en `s_ecid` cookies en stel de `AMCV` cookie gebruikt door [!DNL Visitor.js]. Deze eigenschap is belangrijk wanneer het migreren aan Web SDK, aangezien sommige pagina&#39;s nog kunnen gebruiken [!DNL Visitor.js]. Met deze optie kan de SDK hetzelfde blijven gebruiken [!DNL ECID] zodat gebruikers niet als twee afzonderlijke gebruikers worden geïdentificeerd.
 * **[!UICONTROL Use third-party cookies]**: Wanneer deze optie wordt toegelaten, probeert SDK van het Web om een gebruikersherkenningsteken in een derdekoekje op te slaan. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK alleen de id op in het domein van de eerste partij.
 
+  >[!IMPORTANT]
+  >>Cookies van derden zijn niet compatibel met de [apparaat-id van eerste partij](../../../../edge/identity/first-party-device-ids.md) functionaliteit in Web SDK.
+U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
+  >
 ## Aanpassingsinstellingen configureren {#personalization}
 
 In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Zo weet u zeker dat uw bezoekers alleen de gepersonaliseerde pagina zien.
@@ -103,7 +107,7 @@ Als u het voorverborgen fragment wilt gebruiken, kopieert en plakt u het in het 
 
 >[!IMPORTANT]
 >
->Als u het voorverborgen fragment gebruikt, wordt u aangeraden het zelfde fragment te gebruiken [!DNL CSS] als de regel die wordt gebruikt door de [stijl voorverbergen](#prehiding-style).
+Als u het voorverborgen fragment gebruikt, wordt u aangeraden het zelfde fragment te gebruiken [!DNL CSS] als de regel die wordt gebruikt door de [stijl voorverbergen](#prehiding-style).
 
 ## Instellingen voor gegevensverzameling configureren {#data-collection}
 
@@ -130,7 +134,7 @@ Als alternatief voor het overgaan van de met voeten treedt door een bevel van SD
 
 >[!IMPORTANT]
 >
-> DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwikkelings-, staging- en productieomgevingen hebben allemaal verschillende overschrijvingen. U kunt de instellingen tussen de instellingen kopiëren met behulp van de speciale opties die in het onderstaande scherm worden weergegeven.
+DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwikkelings-, staging- en productieomgevingen hebben allemaal verschillende overschrijvingen. U kunt de instellingen tussen de instellingen kopiëren met behulp van de speciale opties die in het onderstaande scherm worden weergegeven.
 
 ![Afbeelding die de configuratie van de gegevensstroom overschrijft in de webSDK-tagextensiepagina.](assets/datastream-overrides.png)
 
