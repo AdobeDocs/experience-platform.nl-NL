@@ -4,14 +4,14 @@ description: In de releaseopmerkingen van oktober 2023 voor Adobe Experience Pla
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1046'
 ht-degree: 3%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 25 oktober 2023**
+**Releasedatum: donderdag 25 oktober 2023**
 
 Updates voor bestaande functies in Experience Platform:
 
@@ -58,7 +58,7 @@ Lees voor meer informatie over gegevensverzameling de [overzicht van gegevensver
 
 **Nieuwe of bijgewerkte doelen** {#new-updated-destinations}
 
-| Bestemming | Nieuw of Bijgewerkt | Beschrijving |
+| Doel | Nieuw of Bijgewerkt | Beschrijving |
 | ----------- |----------------|----------- |
 | [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nieuw | Gebruik de bestemming van de Moweer om uw gegevens van de Adobe (gebruikersattributen, segmenten en gebeurtenissen) aan MoEngage in real time te verbinden en in kaart te brengen. Klanten kunnen vervolgens op deze gegevens reageren en persoonlijke, doelgerichte ervaringen bieden. |
 | [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nieuw | Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe Experience Platform als input in de Qualtrics Experience ID om uw klanten beter te begrijpen en gerichte outreach toe te laten om de kloof te dichten wanneer het aankomt op het begrijpen van intent, emotie en ervaringsstuurprogramma&#39;s. |
