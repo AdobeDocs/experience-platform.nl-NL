@@ -2,10 +2,10 @@
 title: Verwijzing naar satellietobject
 description: Leer meer over het client-side _satelliet object en de verschillende functies die u ermee kunt uitvoeren in tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 309f3cce82c5d6c7f10c08b05da6d9c6c44631b6
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -62,6 +62,10 @@ var rule = _satellite.getVar('return event rule', event);
 
 ## `setVar`
 
+>[!NOTE]
+>
+>De `setVar` code is volledig gescheiden van een gegevenselement dat in Codes is opgegeven.
+
 **Code**
 
 ```javascript
@@ -96,7 +100,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Als de [!DNL Adobe Experience Cloud ID] Als de extensie op de eigenschap is geïnstalleerd, retourneert deze methode de instantie van de bezoeker-id. Zie de [Documentatie Experience Cloud ID-service](https://experienceleague.adobe.com/docs/id-service/using/home.html) voor meer informatie .
+Als de [!DNL Adobe Experience Cloud ID] Als de extensie op de eigenschap is geïnstalleerd, retourneert deze methode de instantie van de bezoeker-id. Zie de [Documentatie Experience Cloud ID Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) voor meer informatie .
 
 ## `logger`
 
@@ -138,7 +142,7 @@ _satellite.logger.deprecation(message: string)
 _satellite.logger.deprecation('This method is no longer supported, please use [new example] instead.');
 ```
 
-Dit registreert een waarschuwing aan de browser console. Het bericht wordt weergegeven of foutopsporing van tags is ingeschakeld door de gebruiker.
+Dit registreert een waarschuwing aan de browser console. Het bericht wordt weergegeven of foutopsporing van tags al dan niet is ingeschakeld door de gebruiker.
 
 ## `cookie` {#cookie}
 
@@ -218,7 +222,7 @@ Dit biedt de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) in 
 
 ### `turbineBuildDate`
 
-De ISO 8601-datum waarop de versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) in de container is gebruikt.
+De ISO 8601-datum waarop de versie van [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) gebruikt in de container is gemaakt.
 
 ### `buildDate`
 
