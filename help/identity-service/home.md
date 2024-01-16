@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van identiteitsservice
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Lees, voordat u op de details van Identity Service gaat duiken, de volgende tabe
 | --- | --- |
 | Identiteit | Een identiteit is gegevens die uniek zijn voor een entiteit. Dit is doorgaans een echt object, zoals een individuele persoon, een hardwareapparaat of een webbrowser (vertegenwoordigd door een cookie). Een volledig gekwalificeerde identiteit bestaat uit twee elementen: een **naamruimte identity** en **identiteitswaarde**. |
 | Naamruimte identiteit | Een naamruimte voor identiteiten is de context van een bepaalde identiteit. Bijvoorbeeld een naamruimte van `Email` kan overeenkomen met **julien<span>@acme.com**. Een naamruimte van `Phone` kan overeenkomen met `555-555-1234`. Lees voor meer informatie de [Overzicht van naamruimte in identiteit](./namespaces.md) |
-| Identiteitswaarde | Een identiteitswaarde is een koord dat een real-world entiteit vertegenwoordigt en binnen de Dienst van de Identiteit door namespace gecategoriseerd is. Bijvoorbeeld de e-mail **julien<span>@acme.com** kan worden gecategoriseerd als `Email` naamruimte. |
+| Identiteitswaarde | Een identiteitswaarde is een koord dat een real-world entiteit vertegenwoordigt en binnen de Dienst van de Identiteit door namespace gecategoriseerd is. De identiteitswaarde (tekenreeks) **julien<span>@acme.com** kan worden gecategoriseerd als `Email` naamruimte. |
 | Identiteitstype | Een identiteitstype is een component van een naamruimte voor identiteiten. Het identiteitstype geeft aan of identiteitsgegevens al dan niet zijn gekoppeld in een identiteitsgrafiek. |
 | Koppeling | Een koppeling of een koppeling is een methode om vast te stellen dat twee verschillende identiteiten dezelfde entiteit vertegenwoordigen. Bijvoorbeeld een koppeling tussen &quot;`Email` = julien<span>@acme.com&quot; en &quot;`Phone` = 555-555-1234&quot; betekent dat beide identiteiten dezelfde entiteit vertegenwoordigen. Dit suggereert dat de klant die met uw merk met zowel het e-mailadres van julien als interactie heeft gehad<span>@acme.com en het telefoonnummer 555-555-1234 is hetzelfde. |
 | Identiteitsservice | De Dienst van de identiteit is de dienst binnen Experience Platform die (of unlinks) identiteiten verbindt om identiteitsgrafieken te handhaven. |
@@ -91,7 +91,7 @@ Bekijk het volgende voorbeeld:
 * Als u zich vervolgens met dezelfde gegevens aanmeldt bij dezelfde e-commercewebsite, maar de webbrowser op uw telefoon gebruikt in plaats van de webbrowser op uw laptop, wordt een nieuwe ECID geregistreerd in Identity Service.
 * De identiteitsservice verwerkt deze nieuwe gebeurtenis achter de schermen als `{CRM_ID:ABC, ECID:456}`, waarbij CRM_ID: ABC staat voor uw geverifieerde klant-id en ECID:456 staat voor de webbrowser op uw mobiele apparaat.
 
-Gezien de bovenstaande scenario&#39;s legt de Identiteitsdienst een verband tussen `CRM_ID:ABC, ECID:123`, alsmede `{CRM_ID:ABC, ECID:456}`. Dit resulteert in een identiteitsgrafiek waarbij u drie identiteiten &quot;bezit&quot;: één voor persoon-id (CRM-id) en twee voor cookie-id&#39;s (ECID&#39;s).
+Gezien de bovenstaande scenario&#39;s legt de Identiteitsdienst een verband tussen `{CRM_ID:ABC, ECID:123}`, alsmede `{CRM_ID:ABC, ECID:456}`. Dit resulteert in een identiteitsgrafiek waarbij u drie identiteiten &quot;bezit&quot;: één voor persoon-id (CRM-id) en twee voor cookie-id&#39;s (ECID&#39;s).
 
 ## Identiteitsgrafieken
 
