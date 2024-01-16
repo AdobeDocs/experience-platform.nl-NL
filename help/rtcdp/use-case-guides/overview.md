@@ -2,7 +2,7 @@
 title: Gebruiksscenario's in Real-Time CDP
 description: Bekijk voorbeelden van gebruiksgevallen voor verschillende services om optimaal gebruik te maken van uw Real-Time CDP-implementatie.
 feature: Use Cases
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Als cookies van andere leveranciers binnen enkele jaren verdwijnen, kan de onder
 
 Adobe Real-Time CDP verleent uitgebreide steun voor partnerherkenningstekens, die u toestaan om publiek van vooruitzichten tot stand te brengen, bekende publiek met attributen van partners verrijkt, en veel meer.
 
-De gesteunde gebruiksgevallen kunnen in klantenverwerving en profielverrijkingsgevallen worden gegroepeerd. Raadpleeg de onderstaande documentatiekoppelingen voor uitgebreide implementatiegegevens.
+De voorbeelden van het steekproefgebruik kunnen in klantenverwerving en profielverrijkingsgevallen worden gegroepeerd. Raadpleeg de onderstaande documentatiekoppelingen voor uitgebreide implementatiegegevens.
 
 ### Klantenovername {#customer-acquisition}
 
