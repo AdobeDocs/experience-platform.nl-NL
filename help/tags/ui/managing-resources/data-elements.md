@@ -2,10 +2,10 @@
 title: Gegevenselementen
 description: Gegevenselementen zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 1%
+source-wordcount: '1593'
+ht-degree: 0%
 
 ---
 
@@ -52,7 +52,7 @@ U kunt gegevenselementen in douanescripts gebruiken door `_satellite` objectsynt
 
 `_satellite.getVar('data element name');`
 
-## Een data-element maken {#create-a-data-element}
+## Een gegevenselement maken {#create-a-data-element}
 
 De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen kunt u een gegevenswoordenboek (of gegevenskaart) maken van veelgebruikte items op een pagina, ongeacht de oorsprong ervan (queryreeksen, URL&#39;s of cookiewaarden) voor elk object dat zich op uw site bevindt.
 
@@ -91,9 +91,11 @@ Wanneer u elementen maakt of bewerkt, kunt u deze opslaan en samenstellen [actie
 
 ## Typen gegevenselementen {#types-of-data-elements}
 
-Gegevenselementen worden bepaald door de extensie. Er is geen limiet aan de typen die kunnen worden gemaakt.
+>[!NOTE]
+>
+>Gegevenselementen worden bepaald door de extensie. Er is geen limiet aan de typen die kunnen worden gemaakt.
 
-De volgende secties beschrijven de types van gegevenselementen beschikbaar in de uitbreiding van de Kern. Andere extensies gebruiken andere typen gegevenselementen.
+In de volgende secties worden de typen gegevenselementen beschreven die beschikbaar zijn in de **Kernextensie**. Andere extensies gebruiken andere typen gegevenselementen.
 
 ### Cookie
 
@@ -198,7 +200,7 @@ U kunt een van de volgende paginakenmerken selecteren voor gebruik in het gegeve
 * Hostnaam
 * Pathname
 * Protocol
-* Referrer
+* Referenter
 * Titel
 
 ### Tekenreeksparameter van query
@@ -240,7 +242,7 @@ Net als Pagina-info gebruikt dit gegevenselement gangbare gedragstypen om logica
 
 Selecteer een van de volgende kenmerken voor bezoekersgedrag:
 
-* Landingspagina
+* Openingspagina
 * verkeersbron
 * Minuten op site
 * Aantal sessies
