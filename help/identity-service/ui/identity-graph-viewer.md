@@ -2,20 +2,20 @@
 title: Identity Graph Viewer
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
+source-git-commit: d4ed36bd036218fcc3428ef420490b68c9cdb121
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
 
-# Identiteitsgrafiekviewer
+# Naamgrafiekviewer
 
 Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat. Alle grafieken van de klantenidentiteit worden collectief beheerd en door de Dienst van de Identiteit van Adobe Experience Platform in bijna real time bijgewerkt, in antwoord op klantenactiviteit.
 
-Met de identiteitsgrafiekviewer in de gebruikersinterface van het Platform kunt u visualiseren en beter begrijpen welke klantidentiteiten aan elkaar zijn gekoppeld en op welke manieren. Met de viewer kunt u naar verschillende delen van de grafiek slepen en hiermee communiceren, zodat u complexe identiteitsrelaties kunt onderzoeken, efficiënter kunt werken en kunt profiteren van meer transparantie bij het gebruik van informatie.
+Met de viewer voor identiteitsgrafieken in de gebruikersinterface van Platform kunt u visualiseren en beter begrijpen welke klantenidentiteiten aan elkaar zijn gekoppeld en op welke manieren. Met de viewer kunt u naar verschillende delen van de grafiek slepen en hiermee communiceren, zodat u complexe identiteitsrelaties kunt onderzoeken, efficiënter kunt werken en kunt profiteren van meer transparantie bij het gebruik van informatie.
 
-Het volgende document bevat stappen voor het openen en gebruiken van de viewer voor identiteitsgrafieken in de gebruikersinterface van het Platform.
+In het volgende document worden stappen beschreven voor het openen en gebruiken van de viewer voor identiteitsgrafieken in de interface van het platform.
 
 ## Video over zelfstudie
 
@@ -28,17 +28,17 @@ De volgende video is bedoeld als ondersteuning voor uw begrip van de viewer voor
 Als u met de viewer voor identiteitsgrafieken werkt, moet u de verschillende betrokken Adobe Experience Platform-services begrijpen. Voordat u begint te werken met de identiteitsgrafiekviewer, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Identity Service]](../home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-- [Klantprofiel in realtime](../../profile/home.md): Identiteitsgrafieken worden gebruikt door Real-Time Klantprofiel om een uitvoerige en unieke mening van uw klantenattributen en gedrag tot stand te brengen.
+- [Klantprofiel in realtime](../../profile/home.md): Identiteitsgrafieken worden gebruikt door Real-Time Klantprofiel om een uitgebreide en unieke weergave van de kenmerken en het gedrag van uw klanten te maken.
 
 ### Terminologie
 
 - **Identiteit (knooppunt):** Een identiteit of een knoop is gegevens uniek aan een entiteit, typisch een persoon. Een identiteit bestaat uit een naamruimte voor identiteiten en een identiteitswaarde. Een volledig gekwalificeerde identiteit kan bijvoorbeeld bestaan uit een naamruimte voor identiteiten **E-mail**, gecombineerd met een identiteitswaarde van **robijn<span>@email.com**.
 - **Koppeling (rand):** Een koppeling of rand vertegenwoordigt de verbinding tussen identiteiten. Identiteitskoppelingen bevatten eigenschappen zoals voor het eerst ingestelde en laatst bijgewerkte tijdstempels. De eerste vastgestelde tijdstempel definieert de datum en het tijdstip waarop een nieuwe identiteit aan een bestaande identiteit is gekoppeld. De laatste bijgewerkte tijdstempel definieert de datum en tijd waarop een bestaande identiteitskoppeling voor het laatst is bijgewerkt.
-- **Grafiek (cluster):** Een grafiek of een cluster is een groep identiteiten en koppelingen die een persoon vertegenwoordigen.
+- **Grafiek:** Een grafiek of een cluster is een groep identiteiten en koppelingen die een persoon vertegenwoordigen.
 
 ## De viewer voor identiteitsgrafieken openen {#access-identity-graph-viewer}
 
-Selecteer in de gebruikersinterface van het Platform de optie **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Identity Graph]** in de lijst met tabbladen in de koptekst.
+Selecteer in de interface Platform de optie **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Identity Graph]** in de lijst met tabbladen in de koptekst.
 
 ![De werkruimte Identiteiten in de interface van het Experience Platform, met het geselecteerde lusje van de Grafiek van de Identiteit.](../images/graph-viewer/identity-graph.png)
 
@@ -60,7 +60,7 @@ In de identiteitsgrafiek worden alle identiteiten weergegeven die zijn gekoppeld
 
 >[!IMPORTANT]
 >
->Voor een identiteitsgrafiek moeten minimaal twee gekoppelde identiteiten worden gegenereerd en moet een geldige naamruimte en waardecombinatie worden gegenereerd. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 150. Zie de [aanhangsel](#appendix) zie hieronder voor meer informatie .
+>Voor een identiteitsgrafiek moeten minimaal twee gekoppelde identiteiten worden gegenereerd en moet een geldige naamruimte en waardecombinatie worden gegenereerd. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 50. Zie de [aanhangsel](#appendix) zie hieronder voor meer informatie .
 
 ![De identiteitsgrafiekviewer met vijf gekoppelde identiteiten.](../images/graph-viewer/graph.png)
 
@@ -105,7 +105,7 @@ U kunt de schuifregelaar ook aanpassen om de oudste herhaling van de grafiek te 
 
 ![De tijdstempelschuifregelaar van de grafiekviewer is aangepast aan de eerste nieuwe koppeling.](../images/graph-viewer/slider-three.png)
 
-## Aanhangsel
+## Bijlage
 
 In de volgende sectie vindt u aanvullende informatie over het werken met de viewer voor identiteitsgrafieken.
 
@@ -115,7 +115,7 @@ Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. H
 
 - De geselecteerde naamruimte moet een identiteitswaarde bevatten.
 - Voor het genereren van de identiteitsgrafiekviewer zijn minimaal twee gekoppelde identiteiten vereist. Het is mogelijk dat er slechts één identiteitswaarde en geen verbonden identiteiten zijn, en in dit geval zou de waarde slechts bestaan in [!DNL Profile] viewer.
-- De viewer voor identiteitsgrafieken kan het maximumaantal van 150 identiteiten niet overschrijden.
+- De viewer voor identiteitsgrafieken kan het maximum van 50 identiteiten niet overschrijden.
 
 ![foutscherm](../images/graph-viewer/error-screen.png)
 
@@ -135,12 +135,12 @@ Selecteer in het voorvertoningsvenster een vingerafdrukpictogram om de identitei
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van het Platform. Raadpleeg voor meer informatie over de identiteiten in Platform de [Overzicht van identiteitsservice](../home.md)
+Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten in de interface van het Platform kunt verkennen. Raadpleeg voor meer informatie over identiteiten in Platform de [Overzicht van identiteitsservice](../home.md)
 
 ## Changelog
 
 | Datum | Actie |
 | ---- | ------ |
-| 2021-01 | <ul><li>Toegevoegde ondersteuning voor het streamen van ingesloten gegevens en niet-productiesandbox.</li><li>Kleine correcties.</li></ul> |
-| 2021-02 | <ul><li>De de grafiekkijker van de identiteit wordt toegankelijk gemaakt door datasetvoorproef.</li><li>Kleine correcties.</li><li>De viewer voor identiteitsgrafieken is algemeen beschikbaar.</li></ul> |
+| 01-2021 | <ul><li>Toegevoegde ondersteuning voor het streamen van ingesloten gegevens en niet-productiesandbox.</li><li>Kleine oplossingen voor problemen.</li></ul> |
+| 02-2021 | <ul><li>De de grafiekkijker van de identiteit wordt toegankelijk gemaakt door datasetvoorproef.</li><li>Kleine oplossingen voor problemen.</li><li>De viewer voor identiteitsgrafieken is algemeen beschikbaar.</li></ul> |
 | 2023-01 | <ul><li>UI-updates.</li></ul> |
