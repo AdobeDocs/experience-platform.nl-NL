@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ec47f07f20e0f4ccda4c791882361bdc7a77aa98
+source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 1%
@@ -36,7 +36,7 @@ De volgende services van het Experience Platform zijn betrokken bij het modeller
 Dit document bevat twee typen standaardlimieten:
 
 | Het type Guardrail | Beschrijving |
-|----------|---------|
+| -------------- | ----------- |
 | **Prestatiegarantie (Zachte limiet)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
 | **Door het systeem afgedwongen geleiding (harde limiet)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
 
@@ -55,7 +55,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 ### Primaire entiteitsinstructies
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Gegevenssets voor de klasse XDM Individueel profiel | 20 | Prestatiegerichting | Een maximum van 20 datasets die hefboomwerking de individuele klasse van het Profiel XDM wordt geadviseerd. |
 | Gegevenssets voor de klasse XDM ExperienceEvent | 20 | Prestatiegerichting | Een maximum van 20 datasets die hefboomwerking de klasse XDM ExperienceEvent wordt geadviseerd. |
 | Gegevenssets van Adobe Analytics-rapportsuite ingeschakeld voor profiel | 1 | Prestatiegerichting | Een maximum van één (1) dataset van de het rapportreeks van Analytics zou voor Profiel moeten worden toegelaten. Het proberen om veelvoudige datasets van de het rapportreeks van Analytics voor Profiel toe te laten kan onbedoelde gevolgen voor gegevenskwaliteit hebben. Zie de sectie over [Adobe Analytics-gegevenssets](#aa-datasets) in het aanhangsel. |
@@ -70,7 +70,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 ### Garanties voor entiteiten van Dimension
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Geen gegevens uit tijdreeksen toegestaan voor niet-[!DNL XDM Individual Profile] entiteiten | 0 | Door het systeem afgedwongen geleiding | **Gegevens uit tijdreeksen zijn niet toegestaan voor niet-tijdreeksen[!DNL XDM Individual Profile] entiteiten in de profielservice.** Als een reeks gegevensreeksen met een niet-reeks wordt geassocieerd[!DNL XDM Individual Profile] ID, de dataset zou niet moeten worden toegelaten voor [!DNL Profile]. |
 | Geen geneste relaties | 0 | Prestatiegerichting | U moet geen relatie maken tussen twee niet-[!DNL XDM Individual Profile] schema&#39;s. De mogelijkheid om relaties te maken wordt niet aanbevolen voor schema&#39;s die geen deel uitmaken van de [!DNL Profile] samenvoegingsschema. |
 | JSON-diepte voor veld primaire id | 4 | Prestatiegerichting | De aanbevolen maximale JSON-diepte voor het veld primaire id is 4. Dit betekent dat in een hoogst genest schema, u geen gebied als primaire identiteitskaart zou moeten selecteren als het meer dan 4 niveaus diep wordt genesteld. Een veld op het vierde geneste niveau kan als primaire id worden gebruikt. |
@@ -88,7 +88,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 ### Primaire entiteitsinstructies
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Maximale grootte van ExperienceEvent | 10 KB | Door het systeem afgedwongen geleiding | **De maximale grootte van een gebeurtenis is 10 kB.** De inname gaat door, maar alle gebeurtenissen die groter zijn dan 10 kB gaan verloren. |
 | Maximale recordgrootte profiel | 100 kB | Door het systeem afgedwongen geleiding | **De maximale grootte van een profielrecord is 100 kB.** De inname gaat door, maar profielrecords die groter zijn dan 100 kB worden verwijderd. |
 | Maximale framegrootte profiel | 50 MB | Door het systeem afgedwongen geleiding | **De maximale grootte van één profielfragment is 50 MB.** De segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welke ontbreken [profielfragment](#profile-fragments) dat groter is dan 50 MB. |
@@ -101,7 +101,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 ### Garanties voor entiteiten van Dimension
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Totale grootte voor alle dimensionale entiteiten | 5 GB | Prestatiegerichting | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
 | Datasets per dimensionaal eenheidschema | 5 | Prestatiegerichting | Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema. Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
 | Per dag ingenomen partijen van een Dimension-entiteit | 4 per entiteit | Prestatiegerichting | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
@@ -113,7 +113,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 De instructies in deze sectie hebben betrekking op het aantal en de aard van de soorten publiek die een organisatie binnen Experience Platform kan maken, alsmede op het in kaart brengen en activeren van het publiek naar bestemmingen.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Soorten publiek per sandbox | 4000 | Prestatiegerichting | Een organisatie kan in totaal meer dan 4000 soorten publiek hebben, zolang er in elke sandbox minder dan 4000 soorten publiek aanwezig zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Meer informatie over [publiek maken](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
 | Publiek randen per sandbox | 150 | Prestatiegerichting | Een organisatie kan in totaal meer dan 150 randsoorten publiek hebben, zolang er in elke afzonderlijke sandbox minder dan 150 randsoorten publiek zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Meer informatie over [randpubliek](/help/segmentation/ui/edge-segmentation.md). |
 | Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | De segmentatie van de rand steunt een piekwaarde van 1500 binnenkomende gebeurtenissen per seconde die het Netwerk van de Rand van Adobe Experience Platform ingaan. De segmentatie van de rand kan tot 350 milliseconden vergen om een binnenkomende gebeurtenis te verwerken nadat het het Netwerk van de Rand van Adobe Experience Platform ingaat. Meer informatie over [randpubliek](/help/segmentation/ui/edge-segmentation.md). |
