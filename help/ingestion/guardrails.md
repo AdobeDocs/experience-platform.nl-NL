@@ -3,9 +3,9 @@ keywords: Experience Platform;problemen oplossen;instructies;richtlijnen;
 title: Guardrails voor gegevensinname
 description: Dit document biedt richtlijnen voor het opnemen van gegevens in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4debc301b930643565b25218f4822a67e88063bb
+source-git-commit: d0ee51340e1175e2820fea69269a8cb6e9d85c1c
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ In de volgende tabel worden de instructies beschreven waarmee u rekening moet ho
 
 | Type opname | Richtsnoeren | Notities |
 | --- | --- | --- |
-| Streaming bronnen | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>Streaming bronnen ondersteunen tussen 4000 en 5000 aanvragen per seconde wanneer een nieuwe bronverbinding wordt gemaakt. **Opmerking**: Het kan tot 30 minuten duren voor streaming gegevens volledig zijn verwerkt tot data Lake.</li><li>U kunt tussen 4000 en 5000 verzoeken per seconde aan gegevens verwerken meer. **Opmerking**: Het kan tot 30 minuten duren voor streaming gegevens volledig zijn verwerkt tot data Lake.</li></ul> | Streaming bronnen zoals [!DNL Kafka], [!DNL Azure Event Hubs], en [!DNL Amazon Kinesis] niet de [!DNL Data Collection Core Service] (DCCS) route en kan verschillende productiegrenzen hebben. Zie de [overzicht van bronnen](../sources/home.md) voor een catalogus met bronnen die u kunt gebruiken voor gegevensinvoer. |
+| Streaming bronnen | <ul><li>De maximale recordgrootte is 1 MB, waarbij de aanbevolen grootte 10 kB is.</li><li>Streaming bronnen ondersteunen tussen de 4000 en 5000 aanvragen per seconde bij het opnemen naar het data-meer. Dit geldt voor zowel nieuw gemaakte bronverbindingen als bestaande bronverbindingen. **Opmerking**: Het kan tot 30 minuten duren voor streaming gegevens volledig zijn verwerkt tot data Lake.</li><li>Streaming bronnen ondersteunen maximaal 1500 aanvragen per seconde bij het opnemen van gegevens naar profiel of streaming segmentatie.</li></ul> | Streaming bronnen zoals [!DNL Kafka], [!DNL Azure Event Hubs], en [!DNL Amazon Kinesis] niet de [!DNL Data Collection Core Service] (DCCS) route en kan verschillende productiegrenzen hebben. Zie de [overzicht van bronnen](../sources/home.md) voor een catalogus met bronnen die u kunt gebruiken voor gegevensinvoer. |
 
 ## Volgende stappen
 
