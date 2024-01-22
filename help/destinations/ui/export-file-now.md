@@ -3,9 +3,9 @@ title: (Bèta) de dossiers van de uitvoer op bestelling aan partijbestemmingen g
 type: Tutorial
 description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met behulp van de interface van het Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 ## **[!UICONTROL Export file now]**-overzicht {#overview}
 

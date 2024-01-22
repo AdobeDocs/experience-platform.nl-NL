@@ -3,10 +3,10 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;sendGrid;sendGrid bestemming
 title: SendGrid-verbinding
 description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij exporteren en deze activeren in SendGrid voor uw bedrijfsbehoeften.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 1%
+source-wordcount: '1475'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +75,7 @@ Marketing teams die SendGrid gebruiken, kunnen een mailinglijst maken in SendGri
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
@@ -115,7 +115,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 >* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
 Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
@@ -145,16 +145,16 @@ De uitgebreide lijst met ondersteunde kenmerktoewijzingen die kan worden ingeste
 
 | Bronveld | Doelveld | Type | Beschrijving | Limieten |
 |---|---|---|---|---|
-| xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | Tekenreeks | De eerste regel van het adres. | Max. lengte:<br/> 100 tekens |
-| xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | Tekenreeks | Een optionele tweede regel voor het adres. | Max. lengte:<br/> 100 tekens |
+| xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | String | De eerste regel van het adres. | Max. lengte:<br/> 100 tekens |
+| xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | String | Een optionele tweede regel voor het adres. | Max. lengte:<br/> 100 tekens |
 | xdm:<br/> _extcondev.alternatieve_e-mails | xdm:<br/> alternatieve_e-mails | Array van tekenreeks | Extra e-mailberichten die aan de contactpersoon zijn gekoppeld. | <ul><li>Max. 5 items</li><li>Min.: 0 items</li></ul> |
-| xdm:<br/> homeAddress.city | xdm:<br/> stad | Tekenreeks | De stad van de contactpersoon. | Max. lengte:<br/> 60 tekens |
-| xdm:<br/> homeAddress.country | xdm:<br/> land | Tekenreeks | Het land van de contactpersoon. Kan een volledige naam of een afkorting zijn. | Max. lengte:<br/> 50 tekens |
-| identityMap:<br/> E-mail | Identiteit:<br/> external_id | Tekenreeks | Het primaire e-mailadres van de contactpersoon. Dit is een geldige e-mail. | Max. lengte:<br/> 254 tekens |
-| xdm:<br/> person.name.firstName | xdm:<br/> first_name | Tekenreeks | De naam van de contactpersoon | Max. lengte:<br/> 50 tekens |
-| xdm:<br/> person.name.lastName | xdm:<br/> last_name | Tekenreeks | De familienaam van de contactpersoon | Max. lengte:<br/> 50 tekens |
-| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | Tekenreeks | De postcode of andere postcode van de contactpersoon. | |
-| xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_Province_region | Tekenreeks | De staat, provincie of regio van de contactpersoon. | Max. lengte:<br/> 50 tekens |
+| xdm:<br/> homeAddress.city | xdm:<br/> stad | String | De stad van de contactpersoon. | Max. lengte:<br/> 60 tekens |
+| xdm:<br/> homeAddress.country | xdm:<br/> land | String | Het land van de contactpersoon. Kan een volledige naam of een afkorting zijn. | Max. lengte:<br/> 50 tekens |
+| identityMap:<br/> E-mail | Identiteit:<br/> external_id | String | Het primaire e-mailadres van de contactpersoon. Dit is een geldige e-mail. | Max. lengte:<br/> 254 tekens |
+| xdm:<br/> person.name.firstName | xdm:<br/> first_name | String | De naam van de contactpersoon | Max. lengte:<br/> 50 tekens |
+| xdm:<br/> person.name.lastName | xdm:<br/> last_name | String | De familienaam van de contactpersoon | Max. lengte:<br/> 50 tekens |
+| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | String | De postcode of andere postcode van de contactpersoon. | |
+| xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_Province_region | String | De staat, provincie of regio van de contactpersoon. | Max. lengte:<br/> 50 tekens |
 
 ## De gegevensexport valideren in SendGrid {#validate}
 

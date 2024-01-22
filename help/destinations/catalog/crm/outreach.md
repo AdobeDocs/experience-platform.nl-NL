@@ -3,9 +3,9 @@ keywords: crm;CRM;crm bestemmingen;Outreach;Outreach crm destination
 title: Verbinding buiten bereik
 description: Met de Outreach-bestemming kunt u uw accountgegevens exporteren en deze activeren binnen Outreach voor uw bedrijfsbehoeften.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 >* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
 Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](../../ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
@@ -154,7 +154,7 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
    * **[!UICONTROL Select identity namespace]**: selecteer deze optie om het bronveld toe te wijzen aan een naamruimte in de lijst.
      ![Het schermschot van het platform UI die van het Doel afbeelding toont gebruikend OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
-   * Voeg de volgende afbeelding toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie: |XDM-profielschema|[!DNL Outreach] Instantie| Verplicht| |—|—|—| |`Oid`|`OutreachId`| Ja |
+   * Voeg de volgende afbeelding toe tussen uw XDM-profielschema en uw [!DNL Outreach] -instantie: |XDM-profielschema|[!DNL Outreach] Instance| Verplicht| |—|—|—| |`Oid`|`OutreachId`| Ja |
 
    * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het dialoogvenster [!UICONTROL Attribute name] veld. Zie [[!DNL Outreach] prospectiedocumentatie](https://api.outreach.io/api/v2/docs#prospect) voor een uitgebreide lijst met ondersteunde kenmerken.
      ![Platform UI-screenshot met doeltoewijzing via LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)

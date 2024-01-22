@@ -3,9 +3,9 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->* Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
->* Om met een bestemming te verbinden die de uitvoer van datasets steunt, hebt u nodig **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Om met een bestemming te verbinden die de uitvoer van datasets steunt, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 ## Overzicht {#overview}
 

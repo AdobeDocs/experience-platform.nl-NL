@@ -2,9 +2,9 @@
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
+source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
@@ -57,16 +57,22 @@ Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties m
 
 De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Ga voor informatie over de individuele machtigingen naar [toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuift omlaag naar de tabel onder aan de pagina.
 
-De volgende lijst schetst de toestemmingen en toestemmingscombinaties die worden vereist om bepaalde acties op bestemmingen uit te voeren:
+De volgende lijst schetst de toestemmingen en toestemmingscombinaties die worden vereist om bepaalde acties op bestemmingen uit te voeren.
 
 | Machtigingsniveau | Beschrijving |
 | ---- | ---- |
-| **[!UICONTROL Manage Destinations]** | Om met bestemmingen te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en toelaat [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en te verbergen [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]** | Om tot het bestemmingslusje in de UI van het Experience Platform toegang te hebben, hebt u nodig **[!UICONTROL View Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Om met bestemmingen te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om het publiek aan bestemmingen te activeren en toelaat [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** | Om publiek toe te voegen of te verwijderen uit bestaande gegevensstromen zonder het hebben van toegang tot [toewijzingsstap](ui/activate-batch-profile-destinations.md#mapping) van de workflow hebt u de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Om datasets naar bestemmingen uit te voeren, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Identity Graph]** | Om te exporteren *identiteiten* aan bestemmingen, hebt u nodig **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
+
+Het diagram hieronder toont visueel welke toestemmingen u afhankelijk van de verrichtingen nodig hebt die u op bestemmingen wilt uitvoeren.
+
+![Diagram die de vereiste toestemmingen tonen om bepaalde acties op bestemmingen uit te voeren.](/help/destinations/assets/overview/permissions-diagram.png)
 
 Voor meer informatie over toegangscontroles, zie [Gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md).
 

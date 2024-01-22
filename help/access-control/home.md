@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1536'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Voor meer gedetailleerde stappen op hoe te om toegangsbeheer in Experience Platf
 
 Alle aanroepen naar Experience Platform-API&#39;s worden gevalideerd voor machtigingen en retourneren fouten als de juiste machtigingen niet worden gevonden in de huidige gebruikerscontext. Binnen UI, zullen de elementen worden verborgen of worden veranderd afhankelijk van toestemmingen die aan de huidige gebruiker worden verleend.
 
-## Toestemmingen {#platform-permissions}
+## Machtigingen {#platform-permissions}
 
 [!UICONTROL Permissions] verstrekt een centrale plaats voor het beheren van de toegang van het Experience Platform voor uw organisatie. Doorheen [!UICONTROL Permissions]kunt u groepen gebruikers toegangsmachtigingen verlenen voor verschillende mogelijkheden van het Experience Platform, zoals [!UICONTROL Manage Datasets], [!UICONTROL View Datasets], of [!UICONTROL Manage Profiles].
 
@@ -48,7 +48,7 @@ In de [!UICONTROL Roles] sectie, worden de toestemmingen toegewezen aan gebruike
 
 Experience Platform komt met twee pre-gevormde standaardrollen. De volgende tabel geeft een overzicht van de inhoud van elk standaardprofiel, inclusief de sandbox waartoe ze toegang verlenen en de machtigingen die ze binnen het bereik van die sandbox verlenen.
 
-| Rol | Toegang tot sandbox | Toestemmingen |
+| Rol | Toegang tot sandbox | Machtigingen |
 | --- | --- | --- |
 | Standaardproductie, alle toegang | Productie | Alle toestemmingen van toepassing op Experience Platform, behalve de toestemmingen van het Beleid Sandbox. |
 | Sandbox-beheerders | N.v.t. | Verleent toegang slechts tot de toestemmingen van het Beleid Sandbox. |
@@ -112,11 +112,11 @@ De volgende lijst schetst de beschikbare toestemmingen voor Experience Platform 
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Toegang tot het lezen, maken, bewerken en verwijderen van sandboxen. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Alleen-lezen toegang voor sandboxen die tot uw organisatie behoren. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Mogelijkheid om een sandbox opnieuw in te stellen. |
-| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Toegang tot het lezen, maken en verwijderen van doelactiveringsstromen en doelaccounts. |
-| [!DNL Destinations] | [!UICONTROL View Destinations] | Alleen-lezen toegang tot beschikbare doelen in de **[!UICONTROL Catalog]** tab en geverifieerde doelen in het dialoogvenster **[!UICONTROL Browse]** tab. |
-| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren. Hiermee schakelt u de toewijzingsstap in de activeringsworkflow in. Voor deze machtiging is een van beide vereist [!UICONTROL View Destinations] of [!UICONTROL Manage Destinations] toe te kennen aan de gebruiker die gegevens aan bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren, zonder het tonen van [toewijzingsstap](../destinations/ui/activate-batch-profile-destinations.md#mapping). Gebruikers kunnen segmenten toevoegen en verwijderen in activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. Voor deze machtiging is de opdracht [!UICONTROL Activate Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Mogelijkheid om gegevenssets te lezen, te maken, te bewerken en uit te schakelen. Mogelijkheid om gegevens ook te activeren naar actieve datasets die zijn gemaakt. |
+| [!DNL Destinations] | [!UICONTROL View Destinations] | Alleen-lezen toegang tot beschikbare weergavedoelen in de **[!UICONTROL Catalog]** tab en geverifieerde doelen in het dialoogvenster **[!UICONTROL Browse]** tab. |
+| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Toegang tot het lezen, creëren, en schrappen van bestemmingsverbindingen en bestemmingsrekeningen. |
+| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren. Hiermee schakelt u de toewijzingsstap in de activeringsworkflow in. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Biedt gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren, zonder het tonen van [toewijzingsstap](../destinations/ui/activate-batch-profile-destinations.md#mapping). Gebruikers kunnen segmenten toevoegen en verwijderen in activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
+| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Mogelijkheid om gegevenssets te lezen, te maken, te bewerken en uit te schakelen. Mogelijkheid om gegevens ook te activeren naar actieve datasets die zijn gemaakt. Deze toestemming vereist ook [!UICONTROL View Destinations] Toestemming om aan de gebruiker te worden verleend die gegevens aan bestemmingen zal activeren. |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid om doelen te ontwerpen met [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot bronnen lezen, maken, bewerken en uitschakelen. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen in het dialoogvenster **[!UICONTROL Catalog]** tabblad en geverifieerde bronnen in het dialoogvenster **[!UICONTROL Browse]** tab. |

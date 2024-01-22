@@ -5,9 +5,9 @@ description: Leer hoe u het publiek van een account activeert voor doelen
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selectee
 
 ### Vereiste machtigingen {#permissions}
 
-Als u het publiek van een account wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+Als u het publiek van een account wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]** en **[!UICONTROL Activate Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Blader in de doelcatalogus om ervoor te zorgen dat u over de benodigde machtigingen beschikt om het accountpubliek te activeren. Als een doel een **[!UICONTROL Activate]** controle, dan hebt u de aangewezen toestemmingen.
 

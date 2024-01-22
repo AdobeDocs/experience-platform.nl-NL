@@ -4,9 +4,9 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4324'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ De volgende secties verstrekken extra informatie die u moet weten om gegevens aa
 
 ### Vereiste machtigingen {#permissions}
 
-Als u profielen wilt exporteren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, en **[!UICONTROL Activate Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+Als u profielen wilt exporteren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
@@ -99,7 +99,7 @@ Lees voor beschrijvingen van de termen die u in deze API-zelfstudie zult tegenko
 
 Voordat u de workflow voor het exporteren van profielen start, moet u de specificaties van de verbinding en de stroom identificeren van het doel waarnaar u het publiek wilt exporteren. Gebruik de onderstaande tabel ter referentie.
 
-| Bestemming | Verbindingsspecificatie | Stroomspecificatie |
+| Doel | Verbindingsspecificatie | Stroomspecificatie |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
@@ -970,7 +970,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `specName` | Gebruik `SFTP with Password`. |
+| `specName` | Gebruiken `SFTP with Password`. |
 | `domain` | Het IP-adres of de domeinnaam van uw SFTP-opslaglocatie. |
 | `username` | De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie. |
 | `password` | Het wachtwoord voor aanmelding bij uw SFTP-opslaglocatie. |
@@ -1016,7 +1016,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `specName` | Gebruik `SFTP with Password`. |
+| `specName` | Gebruiken `SFTP with Password`. |
 | `domain` | Het IP-adres of de domeinnaam van uw SFTP-opslaglocatie. |
 | `username` | De gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie. |
 | `sshKey` | De persoonlijke SSH-sleutel die wordt gebruikt om u aan te melden bij uw SFTP-opslaglocatie. De persoonlijke sleutel moet zijn opgemaakt als een Base64-gecodeerde tekenreeks en mag niet met een wachtwoord zijn beveiligd. |

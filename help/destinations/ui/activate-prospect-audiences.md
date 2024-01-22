@@ -3,9 +3,9 @@ title: Activeren het potentiële publiek aan bestemmingen
 type: Tutorial
 description: Leer hoe te om perspectiefpubliek aan bestemmingen te activeren
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selectee
 
 ### Vereiste machtigingen {#permissions}
 
-Als u een publiek met perspectief wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+Als u een publiek met perspectief wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]** en **[!UICONTROL Activate Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om perspectiefpubliek te activeren, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** controle, dan hebt u de aangewezen toestemmingen.
 

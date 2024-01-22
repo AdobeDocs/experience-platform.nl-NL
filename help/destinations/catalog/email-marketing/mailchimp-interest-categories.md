@@ -3,9 +3,9 @@ title: Mailchimp-rentecategorieën
 description: Mailchimp (ook wel Intuit Mailchimp genoemd) is een populair marketingplatform voor automatisering en marketing via e-mail dat door bedrijven wordt gebruikt om contactpersonen (klanten, klanten of andere belanghebbenden) te beheren en met hen te spreken via mailinglijsten en marketingcampagnes via e-mail. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2205'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u nodig **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 
 Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dialoogvenster [zelfstudie over doelconfiguratie](../../ui/connect-destination.md). In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
@@ -152,7 +152,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions). Lees de [toegangsbeheeroverzicht](/help/access-control/ui/overview.md) of neem contact op met de productbeheerder om de vereiste machtigingen te verkrijgen.
 >* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 
 Lezen [Profielen en doelgroepen activeren voor het streamen van doelgroepen voor het exporteren van bestanden](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies voor het activeren van het publiek naar deze bestemming.
@@ -167,7 +167,7 @@ Uw XDM-velden op de juiste wijze toewijzen aan de [!DNL Mailchimp Interest Categ
 1. In de **[!UICONTROL Select source field]** venster, kiest u de **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
 1. In de **[!UICONTROL Select target field]** venster, kiest u de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select attributes]** categorie en selecteer een kenmerk in de lijst met kenmerken die zijn ingevuld in het menu [!DNL Mailchimp] API. *Alle aangepaste kenmerken die u aan de geselecteerde [!DNL Mailchimp] Het publiek is ook beschikbaar voor selectie als doelvelden.*
 
-   De toewijzingen beschikbaar tussen uw XDM-profielschema en [!DNL Mailchimp Interest Categories] zijn als volgt: | Bronveld | Doelveld | Opmerkingen | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Verplicht: Ja | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+   De toewijzingen beschikbaar tussen uw XDM-profielschema en [!DNL Mailchimp Interest Categories] zijn als volgt: | Bronveld | Doelveld | Notities | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Verplicht: Ja | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
    Daarnaast `ADDRESS` is een speciaal doelveld dat bekend staat als a `merge field` binnen uw [!DNL Mailchimp] publiek. De [[!DNL Mailchimp] documentatie](https://mailchimp.com/developer/marketing/docs/merge-fields/) Hiermee definieert u de vereiste toetsen als `addr1`, `city`, `state`, en `zip`en de optionele toetsen `addr2` en `country`. De waarden voor deze velden moeten tekenreeksen zijn. Indien een van de `ADDRESS` veldtoewijzingen aanwezig zijn, de bestemming gaat de `ADDRESS` aan [!DNL Mailchimp] API voor bijwerken. Alle `ADDRESS` velden die niet zijn toegewezen, hebben standaard de waarde `NULL` behalve het land dat in gebreke blijft `US`.
 

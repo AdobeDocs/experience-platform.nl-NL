@@ -5,9 +5,9 @@ title: Verbinden met batchbestemmingen en gegevens activeren met de Flow Service
 description: Stapsgewijze instructies voor het gebruik van de Flow Service API voor het maken van een batch-cloudopslag of e-mailmarketingbestemming in het Experience Platform en het activeren van gegevens
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '3433'
+source-wordcount: '3396'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->* Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL Manage Destinations]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions).
+>* Als u verbinding wilt maken met een doel, hebt u de **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
 >
->* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
+>* Als u gegevens wilt activeren, hebt u de opdracht **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [toegangsbeheermachtigingen](/help/access-control/home.md#permissions).
 >
 >* Om te exporteren *identiteiten*, hebt u de **[!UICONTROL View Identity Graph]** [toegangsbeheermachtiging](/help/access-control/home.md#permissions). <br> ![Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecteer naamruimte voor identiteit die in de workflow wordt gemarkeerd om het publiek naar bestemmingen te activeren."){width="100" zoomable="yes"}
 >
@@ -126,7 +126,7 @@ Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unie
 
 Voor uw verwijzing, bevat de lijst hieronder de verbindingsspecificaties - IDs voor algemeen gebruikte partijbestemmingen:
 
-| Bestemming | Verbinding, specificatie-id |
+| Doel | Verbinding, specificatie-id |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
@@ -928,7 +928,7 @@ curl -X POST \
 
 Voor uw verwijzing, bevat de lijst hieronder de stroom specifieke IDs voor algemeen gebruikte partijbestemmingen:
 
-| Bestemming | Stroom-specificatie-id |
+| Doel | Stroom-specificatie-id |
 ---------|----------|
 | Alle cloudopslagbestemmingen ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) en [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
 | [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
