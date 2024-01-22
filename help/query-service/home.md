@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Query Service
 description: Leer over de rol van de Dienst van de Vraag binnen Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
+source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -29,7 +29,7 @@ De Dienst van de vraag wisselt en kan met de veelvoudige diensten van het Experi
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzicht te krijgen in gegevens die in het Experience Platform zijn opgeslagen. Gegevenswetenschappers kunnen de [!DNL Data Science Workspace] recepten op te bouwen op basis van gegevens uit de registratie- en tijdreeksen over klanten en hun activiteiten. Deze recepten maken voorspellingen mogelijk, zoals het kopen van neiging en aanbevolen aanbiedingen die de betrokkene waarschijnlijk zal waarderen en gebruiken. U kunt SQL gebruiken binnen [!DNL Data Science Workspace] door de Dienst van de Vraag in te integreren [!DNL JupyterLab] Adobe Analytics-gegevens verkennen, transformeren en analyseren. Lees de [[!DNL Data Science Workspace] overzicht](../data-science-workspace/home.md) en de [Verbindingsgids voor Jypiter-laptop](./clients/jupyter-notebook.md) voor meer informatie over hoe [!DNL Data Science Workspace] communiceert met de Dienst van de Vraag.
+Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzicht te krijgen in gegevens die in het Experience Platform zijn opgeslagen. Gegevenswetenschappers kunnen de [!DNL Data Science Workspace] recepten op te bouwen op basis van gegevens uit de registratie- en tijdreeksen over klanten en hun activiteiten. Deze recepten maken voorspellingen mogelijk, zoals het kopen van neiging en aanbevolen aanbiedingen die de betrokkene waarschijnlijk zal waarderen en gebruiken. U kunt SQL gebruiken binnen [!DNL Data Science Workspace] door de Dienst van de Vraag in te integreren [!DNL JupyterLab] Adobe Analytics-gegevens verkennen, transformeren en analyseren. Lees de [[!DNL Data Science Workspace] overzicht](../data-science-workspace/home.md) en de [Verbindingshandleiding voor Jupyter-laptop](./clients/jupyter-notebook.md) voor meer informatie over hoe [!DNL Data Science Workspace] communiceert met de Dienst van de Vraag.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
