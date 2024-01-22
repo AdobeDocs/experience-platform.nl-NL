@@ -4,9 +4,9 @@ title: Identiteiten in Real-time Customer Data Platform
 description: Met de Adobe Experience Platform Identity Service kunt u uw klanten en hun gedrag beter zien door identiteiten tussen apparaten en systemen te combineren.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Identiteitsnaamruimten zijn een component van [!DNL Identity Service] en dienen 
 
 ## Identiteitsgrafieken
 
-Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteitsnamespaces, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat. Alle grafieken met klantidentiteit worden gezamenlijk beheerd en bijgewerkt door [!DNL Identity Service] in bijna real time, in antwoord op klantenactiviteit.
+Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten, die u voorzien van een visuele vertegenwoordiging van hoe uw klant met uw merk over verschillende kanalen interactie aangaat. Alle grafieken van de klantenidentiteit worden collectief beheerd en bijgewerkt door de Dienst van de Identiteit, in antwoord op klantenactiviteit.
 
-[!DNL Identity Service] beheert een identiteitsgrafiek zichtbaar door slechts uw organisatie en gebouwd die op uw gegevens wordt gebouwd, die als privé grafiek wordt bedoeld. [!DNL Identity Service] Hiermee vergroot u de persoonlijke grafiek wanneer een opgenomen gegevensrecord meer dan één identiteit bevat, waardoor een relatie tussen de gevonden identiteiten wordt toegevoegd.
+[!DNL Identity Service] beheert een identiteitsgrafiek die alleen zichtbaar is voor uw organisatie en die is gebaseerd op uw gegevens. [!DNL Identity Service] Hiermee vergroot u de grafiek wanneer een opgenomen gegevensrecord meer dan één identiteit bevat, waardoor een relatie tussen de gevonden identiteiten wordt toegevoegd.
 
 ## Volgende stappen
 
