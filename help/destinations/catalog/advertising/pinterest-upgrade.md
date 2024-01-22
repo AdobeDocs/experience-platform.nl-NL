@@ -4,9 +4,9 @@ description: Pinterest is bezig de API voor v4-adverteerders die momenteel door 
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 3968c8e2a0ebd2084a7047fb41e2b85c5da7a6e7
+source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ We hebben vastgesteld dat uw organisatie actieve gegevensstromen heeft om het pu
 
 ## Wat is het plan?
 
-Adobe geeft een nieuwe Pinterest-doelkaart vrij die gebruikmaakt van de Pinterest API v5 en de bestaande gegevensstromen in de nieuwe verbinding behoudt.
+Adobe heeft een nieuwe Pinterest-doelkaart uitgebracht die gebruikmaakt van de Pinterest API v5 en de bestaande gegevensstromen in de nieuwe verbinding behoudt.
 
 ## Moet ik iets doen om mijn actieve publiek te laten functioneren?
 
@@ -45,7 +45,7 @@ Ja, voor 18 januari 2024 moet u zich verifiëren bij de nieuwe Pinterest-bestemm
 
 ### Stroom naar nieuwe bestemming inschakelen {#disable-old-enable-new-flows}
 
-Vervolgens moet u de gegevensstroom naar de nieuwe kaart inschakelen **[!UICONTROL (New) Pinterest]**.
+Vervolgens moet u de gegevensstromen naar de nieuwe  **[!UICONTROL Pinterest]** kaart.
 
 1. Ga naar **[!UICONTROL Destinations > Browse]** en gebruik het filter op het scherm om het filter **[!UICONTROL Pinterest]** alleen bestemming.
    ![Pinterest-gegevensstromen alleen filteren op het tabblad Bladeren](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
@@ -66,14 +66,18 @@ Ja, zie hieronder:
 
 ![Oude en nieuwe Pinterest-bestemming naast elkaar](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
+<!--
+
 >[!IMPORTANT]
 >
->Na 16 november 2023 is de Pinterest-bestemming van de nalatenschap gemarkeerd **[!UICONTROL Deprecating]**. <span class="preview">Om het even welke veranderingen die u aan dataflows aan de (Aftredende) bestemming van Pinterest na 16 november aanbrengt zullen *niet* automatisch worden overgedragen naar de nieuwe bestemming van Pinterest. </span>
->Wij *niet aanbevelen* dat u nieuw publiek aan de oude bestemming na 16 november activeert. Als u dat doet, zult u dan het [regelmatige activeringsstappen](/help/destinations/ui/activate-segment-streaming-destinations.md) om het publiek aan de nieuwe bestemming toe te voegen zodra de klantenacties worden genomen.
+>After November 16th, 2023 the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
+>For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
+
+-->
 
 **Tegen 15 december 2023**: <span class="preview">Actie van de klant 1</span>. U dient opnieuw te worden geverifieerd op Pinterest, zodat de nieuwe kaart is aangesloten op Pinterest. Volledige instructies weergeven in [deze sectie](#reauthenticate).
 
-<span class="preview">Actie 2 van de klant</span>.Dan, moet u de gegevensstromen aan Pinterest in de oude kaart onbruikbaar maken en de gegevensstromen in de nieuwe kaart toelaten. Volledige instructies weergeven in [deze sectie](#disable-old-enable-new-flows).
+<span class="preview">Actie 2 van de klant</span>.Dan, moet u de gegevensstromen in de nieuwe kaart toelaten. Volledige instructies weergeven in [deze sectie](#disable-old-enable-new-flows).
 
 <!--
 
@@ -83,8 +87,12 @@ Ja, zie hieronder:
 
 -->
 
-**Na 18 januari 2024**: <span class="preview">Pinterest heeft de toegang tot de V4-API voor adverteerders uitgeschakeld. Om het even welke klanten van Real-Time CDP die niet aan de nieuwe bestemming hebben bevorderd zullen nu hun gegevensstromen aan de bestemming van Pinterest ontbreken. [Opnieuw verifiëren bij Pinterest](#reauthenticate) en [de gegevensstromen inschakelen](#disable-old-enable-new-flows) naar de bijgewerkte bestemming om uw campagnes naar Pinterest te hervatten</span>.
+**Na 18 januari 2024**: <span class="preview">Pinterest heeft de toegang tot de V4-API voor adverteerders uitgeschakeld. Om het even welke klanten van Real-Time CDP die niet aan de nieuwe bestemming hebben bevorderd zullen nu hun gegevensstromen aan de bestemming van Pinterest ontbreken. [Opnieuw verifiëren bij Pinterest](#reauthenticate) en [de gegevensstromen inschakelen](#disable-old-enable-new-flows) naar de geüpgrade bestemming om uw campagnes naar Pinterest te hervatten.</span>
 
-## Andere artikelen
+<!--
 
-Nadat u de dataflows op de nieuwe bestemmingskaart toelaat en de dataflows op de oude bestemmingskaarten onbruikbaar maakt, zou u geen verstoring in uw campagnes of in de aantallen gekwalificeerde profielen in het publiek moeten zien die uit Adobe Real-Time CDP komen.
+## Other items to note
+
+After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
+
+-->
