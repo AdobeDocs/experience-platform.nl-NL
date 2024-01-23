@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Media Edge-API's
 description: Overzicht van mediarand-API's
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
+source-git-commit: b247790a155c04301215b03dad2f2765a1afd8fe
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 1%
@@ -42,7 +42,7 @@ In de volgende tabel ziet u een mogelijke API-service voor Adobe voor verschille
 
 >[!NOTE]
 >
-> De dienst van API van de Inzameling van Media voor Analtyics ontvangt nog XDM gegevens, maar is niet geoptimaliseerd voor het voor zover de dienst van de Rand van Media is. Afhankelijk van de gegevens die van de Speler van Media worden verzonden, kunnen sommige Analytics-slechts gegevens ook door de dienst van de Rand van Media worden verpletterd API.
+> De dienst van API van de Inzameling van Media voor Analytics ontvangt nog XDM gegevens, maar is niet geoptimaliseerd voor het voor zover de dienst van de Rand van Media is. Afhankelijk van de gegevens die van de Speler van Media worden verzonden, kunnen sommige Analytics-slechts gegevens ook door de dienst van de Rand van Media worden verpletterd API.
 
 In de volgende afbeelding ziet u de gegevensstromen voor de twee API-services:
 
