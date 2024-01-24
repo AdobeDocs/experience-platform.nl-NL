@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1677'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,10 @@ Als u per kenmerk uitschakelt, kunt u selecteren welke kenmerken u wilt uitsluit
 Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype dat u wilt uitsluiten, gevolgd door **[!UICONTROL Select]** om deze aan uw uitsluitingsblok toe te voegen.
 
 ![Er wordt een lijst met kenmerken weergegeven.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>Als u deze optie niet instelt op kenmerk, kunt u alleen **één** waarde die moet worden uitgesloten. Als u een scheidingsteken gebruikt, zoals een komma of puntkomma, wordt die exacte waarde alleen uitgesloten. Stel de waarde bijvoorbeeld in als `red, blue` leidt tot uitsluiting van de term `red, blue` van het kenmerk, maar **niet** resulteert in het uitsluiten van de term `red` of `blue`.
 
 ## [!UICONTROL Enrich] {#enrich-block}
 

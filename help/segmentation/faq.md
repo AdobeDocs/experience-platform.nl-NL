@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2726'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,7 @@ In het volgende diagram worden de verschillende levenscyclusstatussen beschreven
 | Gepubliceerd | Een publiek in de **Gepubliceerd** staat is een publiek dat klaar voor gebruik over alle stroomafwaartse diensten is. | Ja | Ja | Ja | Kan worden geïmporteerd of bijgewerkt. | Evalueerd met batch-, streaming- of randsegmentatie. | Ja |
 | Inactief | Een publiek in de **Inactief** state is een publiek dat momenteel niet in gebruik is. Het bestaat nog steeds binnen Platform, maar het zal **niet** kan worden gebruikt totdat het als concept wordt gemarkeerd of gepubliceerd. | Nee, maar kan wel worden weergegeven. | Nee | Nee | Niet meer bijgewerkt. | Niet meer geëvalueerd of bijgewerkt door Platform. | Ja |
 | Verwijderd | Een publiek in de **Verwijderd** status is een publiek dat is verwijderd. Het kan enkele minuten duren voordat de gegevens daadwerkelijk zijn verwijderd. | Nee | Nee | Nee | Onderliggende gegevens worden verwijderd. | Er vindt geen gegevensevaluatie of -uitvoering plaats nadat de verwijdering is voltooid. | Nee |
+| Actief | Deze status is **verouderd** en wordt vervangen door **Gepubliceerd** status. | N.v.t. | N.v.t. | N.v.t. | N.v.t. | N.v.t. | N.v.t. |
 
 ### Hoe zal het Portaal van het Publiek en de Samenstelling van het Publiek met de versie van de Gegevens van de Partner van Real-Time CDP in wisselwerking staan?
 
