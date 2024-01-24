@@ -4,9 +4,9 @@ title: Homepage van Real-time Customer Data Platform en dashboards
 description: Dashboards, startpagina en eerste gebruikerservaring van Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,13 @@ De [!UICONTROL Getting started with Real-Time Customer Profile] widget bestaat u
 
 ![De startpagina van de platformgebruikersinterface met de widget Aan de slag](assets/platform-home/getting-started-widget.png)
 
-## Metrisch dashboard
+## Metrisch dashboard {#metrics-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_home_metrics_totalProfiles"
+>title="Totaal aantal profielen"
+>abstract="Het totale aantal profielen dat uw organisatie binnen het Experience Platform heeft. Dit aantal is gebaseerd op het samenvoegbeleid van uw organisatie en omvat geen profielfragmenten. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Meer informatie in documentatie"
 
 Op het dashboard Metrics wordt actuele informatie over de gegevens van het Experience Platform weergegeven. Het dashboard bestaat uit twee gedeelten:
 
@@ -44,7 +50,7 @@ Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profiele
 
 * **Totaal aantal schema&#39;s**: De **Totaal schema&#39;s** de teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
 * **Totaal aantal gegevenssets**: De **Totaal aantal gegevensbestanden** de teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in [!DNL Platform]. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees [Overzicht van gegevenssets](../catalog/datasets/overview.md).
-* **Totaal aantal profielen**: De **Profielen** het totale aantal personen met profielen in het deelvenster [!DNL Real-Time Customer Profile]. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in Verenigd Profiel wordt geplaatst. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Voor meer informatie over profielen leest u de [Overzicht van het realtime klantprofiel](../profile/home.md).
+* **Totaal aantal profielen**: De **Profielen** het aantal toont het totale aantal profielen uw organisatie binnen Experience Platform heeft. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals ingesteld in de configuratie van het samenvoegbeleid in Real-Time Klantprofiel. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Voor meer informatie over profielen leest u de [Overzicht van het realtime klantprofiel](../profile/home.md).
 * **Totaal aantal segmenten**: **Segmenten** toont het totale aantal segmenten die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe segmenten worden gecreeerd. Voor meer informatie over segmenten leest u de [Overzicht van segmentatieservice](../segmentation/home.md).
 
 ### Recente objecten
