@@ -2,9 +2,9 @@
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
+source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,12 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 >id="platform_schemas_editgovernancelabels"
 >title="Regelgevingslabels bewerken"
 >abstract="Pas een label toe op een schemaveld om het gebruiksbeleid aan te geven dat van toepassing is op de gegevens in dat specifieke veld."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_labelusageacknowledgement"
+>title="Gebruik van label"
+>abstract="Houd rekening met de volgende downstreameffecten voordat u de labels voor dit object bewerkt:<br>Beleid voor governance: gebruik labels om te bepalen of gegevens kunnen worden geactiveerd naar downstreambestemmingen. Onjuist labelgebruik kan voorkomen dat gegevens stroomafwaarts toegankelijk zijn.<br>Beleid voor instemming: gebruik labels om toestemming en voorkeuren van klanten af te dwingen wanneer u profielen in segmenten opneemt. Onjuist labelgebruik kan voorkomen dat gegevens stroomafwaarts toegankelijk zijn.<br>Het beleid van de toegang: Op attributen-gebaseerde toegangsbeheer gebruikt etiketten om te bepalen welke gebruikersrollen tot specifieke activa kunnen toegang hebben. Onbedoeld labelgebruik kan voorkomen dat sommige personen in uw organisatie middelen gebruiken waartoe zij eerder toegang hadden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html" text="Overzicht van toegangsbeheer op basis van kenmerken"
 
 Als u wilt beginnen met het toevoegen van labels, moet u eerst [een bestaand schema selecteren om te bewerken](../ui/resources/schemas.md#edit) of [een nieuw schema maken](../ui/resources/schemas.md#create) om de structuur ervan weer te geven in de Schema-editor.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2320'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,13 @@ Voor meer informatie over de concepten en kenmerken van [!DNL Query Service], zi
 [!DNL Query Editor] verstrekt flexibele uitvoering van vragen door met te verbinden [!DNL Query Service]en query&#39;s worden alleen uitgevoerd als deze verbinding actief is.
 
 ## Toegang tot het [!DNL Query Editor] {#accessing-query-editor}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_create_datagovernance"
+>title="Verplichting tot gegevensbeheer"
+>abstract="Vergeet niet dat u als enige verantwoordelijk bent voor het naleven van het beleid voor gegevensbeheer van uw organisatie en voor het voldoen aan uw wettelijke vereisten. Experience Platform biedt tools voor gegevensbeheer waarmee u uw gegevensgebruiksverplichtingen kunt beheren. Pas de juiste labels voor gegevensgebruik toe voordat u gegevens opvraagt of verwerkt. Raadpleeg de documentatie voor meer informatie over de tools en best practices voor gegevensbeheer."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Overzicht van gegevensbeheer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Overzicht van labels voor gegevensbeheer"
 
 In de [!DNL Experience Platform] UI, selecteer **[!UICONTROL Queries]** in het navigatiemenu links om het dialoogvenster [!DNL Query Service] werkruimte. Selecteer vervolgens **[!UICONTROL Create Query]** rechtsboven in het scherm. Deze koppeling is beschikbaar op alle pagina&#39;s in het dialoogvenster [!DNL Query Service] werkruimte.
 
@@ -101,7 +108,7 @@ De redacteur van de Vraag heeft een maximum 50.000 rijoutput. Nochtans, worden s
 
 ![De Redacteur van de Vraag met het SQL inputgebied en Spel benadrukt.](../images/ui/query-editor/editor.png)
 
-Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met grenzen op de teruggekeerde rijen ontwikkelt. Bijvoorbeeld, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nadat u hebt gecontroleerd dat uw vraag de verwachte output veroorzaakt, verwijder de grenzen en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren.
+Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met grenzen op de teruggekeerde rijen ontwikkelt. Bijvoorbeeld: `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nadat u hebt gecontroleerd dat uw vraag de verwachte output veroorzaakt, verwijder de grenzen en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren.
 
 ## Schrijfgereedschappen in [!DNL Query Editor] {#writing-tools}
 
