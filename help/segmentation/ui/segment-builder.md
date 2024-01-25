@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
 workflow-type: tm+mt
-source-wordcount: '3281'
+source-wordcount: '3354'
 ht-degree: 0%
 
 ---
@@ -78,8 +78,8 @@ Neem bijvoorbeeld een situatie waarin u twee rapportsuites met de volgende varia
 | eVar3 | URL | Paginanaam |
 | eVar4 | Zoekvoorwaarden | Productnaam |
 | event1 | Klikken | Paginaweergaven |
-| event2 | Paginaweergaven | Toevoegingen aan winkelwagen |
-| event3 | Toevoegingen aan winkelwagen | Betalingen |
+| event2 | Paginaweergaven | Extra winkelwagentjes |
+| event3 | Extra winkelwagentjes | Afbeeldingen |
 | event4 | Aankopen | Aankopen |
 
 In dit geval, kon u de twee rapportreeksen met het volgende schema in kaart brengen:
@@ -265,7 +265,11 @@ Terwijl u de segmentdefinitie blijft maken, kunt u een gepagineerde voorvertonin
 
 >[!NOTE]
 >
->De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het genereren van schattingen voor segmentdefinities vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmentdefinities.
+>De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt.
+>
+>Bovendien is deze schatting gebaseerd op het tijdstip waarop de laatste voorbeeldtaak voor het profiel is uitgevoerd. Dit betekent dat als u een relatieve datumfunctie zoals &quot;Vandaag&quot;of &quot;Deze week&quot;gebruikt, de schatting zijn berekeningen van de laatste runtime van de profielsteekproefbaan zal baseren. Als vandaag bijvoorbeeld 24 januari is en de laatste voorbeeldtaak voor het profiel op 22 januari is uitgevoerd, wordt de relatieve datumfunctie &#39;Gisteren&#39; gebaseerd op 21 januari en niet op 23 januari.
+>
+>Meer informatie over het genereren van schattingen voor segmentdefinities vindt u in de [schatting van generatiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van de zelfstudie voor het maken van segmentdefinities.
 
 U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram selecteren ![mappictogram met een vergrootglas](../images/ui/segment-builder/segment-evaluation-select-icon.png) om een lijst van de beschikbare evaluatiemethodes van de segmentdefinitie te zien.
 
