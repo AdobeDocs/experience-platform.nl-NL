@@ -2,9 +2,9 @@
 title: Een bronverbinding en gegevensstroom maken voor SugarCRM-accounts en -contactpersonen met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met SugarCRM-accounts en -contactpersonen met behulp van de Flow Service API.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
 workflow-type: tm+mt
-source-wordcount: '2160'
+source-wordcount: '2104'
 ht-degree: 0%
 
 ---
@@ -350,6 +350,8 @@ Een geslaagde reactie retourneert een structuur zoals hieronder.
 ```
 
 >[!TAB Contactpersonen]
+
+Een geslaagde reactie retourneert een structuur zoals hieronder.
 
 ```json
 {
