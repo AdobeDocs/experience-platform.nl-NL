@@ -3,9 +3,9 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | [!UICONTROL Category] | Geeft het doeltype aan. Zie de [doelcatalogus](../catalog/overview.md) voor meer informatie . |
 | [!UICONTROL Connection type] | Hiermee geeft u de vorm aan waarmee uw publiek naar het doel wordt gestuurd. Mogelijke waarden zijn [!UICONTROL Cookie] en [!UICONTROL Profile-based]. |
 | [!UICONTROL Frequency] | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Mogelijke waarden zijn [!UICONTROL Streaming] en [!UICONTROL Batch]. |
-| [!UICONTROL Identity] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA`, of `email`. Voor meer informatie over geaccepteerde naamruimten raadpleegt u de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md). |
+| [!UICONTROL Identity] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA`, of `email`. Voor meer informatie over geaccepteerde naamruimten raadpleegt u de [Overzicht van naamruimte in identiteit](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Created by] | Geeft de gebruiker aan die deze bestemming heeft gemaakt. |
 | [!UICONTROL Created] | Hiermee wordt de UTC-datetime aangegeven waarop deze bestemming is gemaakt. |
 

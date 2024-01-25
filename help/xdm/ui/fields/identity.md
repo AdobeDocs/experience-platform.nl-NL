@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identiteitsvelden definiëren in de gebruikersinterface
 description: Leer hoe u een identiteitsveld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 0%
@@ -20,7 +20,7 @@ In het Model van Gegevens van de Ervaring (XDM), vertegenwoordigt een identiteit
 Identiteitsvelden zijn een cruciale component in de manier waarop identiteitsgrafieken van klanten worden samengesteld in Platform. Dit beïnvloedt uiteindelijk de manier waarop in realtime-klantprofiel afzonderlijke gegevensfragmenten worden samengevoegd om een volledig beeld van de klant te krijgen. Voordat u identiteitsvelden in uw schema&#39;s definieert, raadpleegt u de volgende documentatie voor meer informatie over de belangrijkste services en concepten met betrekking tot identiteitsvelden:
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bruggen identiteiten over apparaten en systemen, die datasets verbinden samen op de identiteitsgebieden worden gebaseerd die door de schema&#39;s XDM worden bepaald zij met in overeenstemming zijn.
-   * [Identiteitsnaamruimten](../../../identity-service/namespaces.md): Naamruimten voor identiteiten definiëren de verschillende typen identiteitsgegevens die betrekking kunnen hebben op één persoon en die een vereiste component zijn voor elk identiteitsveld.
+   * [Identiteitsnaamruimten](../../../identity-service/features/namespaces.md): Naamruimten voor identiteiten definiëren de verschillende typen identiteitsgegevens die betrekking kunnen hebben op één persoon en die een vereiste component zijn voor elk identiteitsveld.
 * [Klantprofiel in realtime](../../../profile/home.md): Hefboomt de grafieken van de klantenidentiteit om een verenigd consumentenprofiel te verstrekken dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd, die in dichtbij-real-time wordt bijgewerkt.
 
 ## Een identiteitsveld definiëren {#define-a-identity-field}
@@ -56,6 +56,6 @@ Als u een primaire identiteit voor het schema hebt gedefinieerd, kunt u nu doorg
 
 ## Volgende stappen
 
-Deze gids besprak hoe te om een identiteitsgebied in UI te bepalen. Aangezien het gegeven gebruikend dit schema wordt opgenomen, zullen de grafieken van uw klantenidentiteit worden bijgewerkt om op de de identiteitsgebieden van het schema te wijzen. Zie de handleiding op de [identiteitsgrafiekviewer](../../../identity-service/ui/identity-graph-viewer.md) om te leren hoe u de persoonlijke grafiek van uw organisatie kunt verkennen in de gebruikersinterface.
+Deze gids besprak hoe te om een identiteitsgebied in UI te bepalen. Aangezien het gegeven gebruikend dit schema wordt opgenomen, zullen de grafieken van uw klantenidentiteit worden bijgewerkt om op de de identiteitsgebieden van het schema te wijzen. Zie de handleiding op de [identiteitsgrafiekviewer](../../../identity-service/features/identity-graph-viewer.md) om te leren hoe u de persoonlijke grafiek van uw organisatie kunt verkennen in de gebruikersinterface.
 
 Zie het overzicht op [velden definiëren in de gebruikersinterface](./overview.md#special) leren hoe u andere XDM-veldtypen definieert in het dialoogvenster [!DNL Schema Editor].

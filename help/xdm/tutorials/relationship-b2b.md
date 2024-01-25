@@ -2,9 +2,9 @@
 title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B Edition
 description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B Edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1332'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Om hiermee rekening te houden, bevatten alle standaard B2B-klassen &quot;sleutel
 
 >[!NOTE]
 >
->Wanneer [een XDM-veld instellen als identiteit](../ui/fields/identity.md)moet u een naamruimte voor identiteit opgeven om de identiteit onder te definiëren. Dit kan een standaardnaamruimte zijn die door de Adobe wordt geboden of een aangepaste naamruimte die door uw organisatie wordt gedefinieerd. In de praktijk is de naamruimte gewoon een contextafhankelijke tekenreeks en kan deze worden ingesteld op elke gewenste waarde, mits deze voor uw organisatie van belang is voor het categoriseren van het identiteitstype. Zie het overzicht op [naamruimten](../../identity-service/namespaces.md) voor meer informatie .
+>Wanneer [een XDM-veld instellen als identiteit](../ui/fields/identity.md)moet u een naamruimte voor identiteit opgeven om de identiteit onder te definiëren. Dit kan een standaardnaamruimte zijn die door de Adobe wordt geboden of een aangepaste naamruimte die door uw organisatie wordt gedefinieerd. In de praktijk is de naamruimte gewoon een contextafhankelijke tekenreeks en kan deze worden ingesteld op elke gewenste waarde, mits deze voor uw organisatie van belang is voor het categoriseren van het identiteitstype. Zie het overzicht op [naamruimten](../../identity-service/features/namespaces.md) voor meer informatie .
 
 Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk schema dat in dit leerprogramma wordt gebruikt alvorens een verhouding is bepaald. Let op waar de primaire identiteiten zijn gedefinieerd in de schemastructuur en de aangepaste naamruimten die ze gebruiken.
 

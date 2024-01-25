@@ -2,10 +2,10 @@
 description: Leer hoe te om de gesteunde doelidentiteiten voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie naamruimte voor identiteit
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 1%
+source-wordcount: '837'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +17,13 @@ Bij het maken van een bestemming via Destination SDK, naast [het vormen van een 
 
 Wanneer u dit doet, kunnen gebruikers naast de kenmerken van het doelprofiel ook doelidentiteiten selecteren.
 
-Voor meer informatie over naamruimten in Experience Platform raadpleegt u de [documentatie over naamruimten](../../../../identity-service/namespaces.md).
+Voor meer informatie over naamruimten in Experience Platform raadpleegt u de [documentatie over naamruimten](../../../../identity-service/features/namespaces.md).
 
 Wanneer het vormen van identiteitsnamespaces voor uw bestemming, kunt u de afbeelding van de doelidentiteit verfijnen die door uw bestemming wordt gesteund, zoals:
 
 * Gebruikers toestaan XDM-kenmerken toe te wijzen aan naamruimten.
-* Toestaan dat gebruikers een kaart maken [standaardnaamruimten](../../../../identity-service/namespaces.md#standard) naar uw eigen naamruimten.
-* Toestaan dat gebruikers een kaart maken [aangepaste naamruimten](../../../../identity-service/namespaces.md#manage-namespaces) naar uw eigen naamruimten.
+* Toestaan dat gebruikers een kaart maken [standaardnaamruimten](../../../../identity-service/features/namespaces.md#standard) naar uw eigen naamruimten.
+* Toestaan dat gebruikers een kaart maken [aangepaste naamruimten](../../../../identity-service/features/namespaces.md#manage-namespaces) naar uw eigen naamruimten.
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in [configuratieopties](../configuration-options.md) documentatie of bekijk de gids over hoe te [gebruik Destination SDK om een op dossier-gebaseerde bestemming te vormen](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,9 +55,9 @@ Wanneer het bepalen van de doelidentiteiten die uw bestemming steunt, kunt u de 
 |---------|----------|---|------|
 | `acceptsAttributes` | Boolean | Optioneel | Geeft aan of klanten standaardprofielkenmerken kunnen toewijzen aan de identiteit die u configureert. |
 | `acceptsCustomNamespaces` | Boolean | Optioneel | Geeft aan of klanten aangepaste naamruimten kunnen toewijzen aan de naamruimte van de identiteit die u configureert. |
-| `acceptedGlobalNamespaces` | - | Optioneel | Geeft aan welke [standaardnaamruimten](../../../../identity-service/namespaces.md#standard) (bijvoorbeeld [!UICONTROL IDFA]) kunnen klanten toewijzen aan de identiteit die u configureert. |
-| `transformation` | Tekenreeks | Optioneel | Hiermee geeft u het dialoogvenster [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) Schakel het selectievakje in in de interface van het platform wanneer het bronveld een XDM-kenmerk of een naamruimte voor een aangepaste identiteit is. Gebruik deze optie om gebruikers de mogelijkheid te geven bronkenmerken bij het exporteren te hashen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))`. |
-| `requiredTransformation` | Tekenreeks | Optioneel | Wanneer klanten deze naamruimte voor de bronidentiteit selecteren, [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) schakelt u deze optie automatisch in op de toewijzing en klanten kunnen deze niet uitschakelen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))`. |
+| `acceptedGlobalNamespaces` | - | Optioneel | Geeft aan welke [standaardnaamruimten](../../../../identity-service/features/namespaces.md#standard) (bijvoorbeeld [!UICONTROL IDFA]) kunnen klanten toewijzen aan de identiteit die u configureert. |
+| `transformation` | String | Optioneel | Hiermee geeft u het dialoogvenster [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) Schakel het selectievakje in in de interface van het platform wanneer het bronveld een XDM-kenmerk of een naamruimte voor een aangepaste identiteit is. Gebruik deze optie om gebruikers de mogelijkheid te geven bronkenmerken bij het exporteren te hashen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))`. |
+| `requiredTransformation` | String | Optioneel | Wanneer klanten deze naamruimte voor de bronidentiteit selecteren, [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) schakelt u deze optie automatisch in op de toewijzing en klanten kunnen deze niet uitschakelen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ U moet aangeven welke [!DNL Platform] id&#39;s die klanten kunnen exporteren naa
 Naamruimten vereisen geen 1-op-1-overeenkomst tussen [!DNL Platform] en uw bestemming.
 Klanten kunnen bijvoorbeeld een [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL IDFA] naamruimte vanaf uw bestemming, of ze kunnen hetzelfde toewijzen [!DNL Platform] [!DNL IDFA] naamruimte naar een [!DNL Customer ID] naamruimte in uw doel.
 
-Meer informatie over identiteiten in het dialoogvenster [Overzicht van naamruimte in identiteit](../../../../identity-service/namespaces.md).
+Meer informatie over identiteiten in het dialoogvenster [Overzicht van naamruimte in identiteit](../../../../identity-service/features/namespaces.md).
 
 ## Toewijzingsoverwegingen
 

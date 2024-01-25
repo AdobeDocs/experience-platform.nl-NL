@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Inhoud en Voorkeuren voor schemaveldgroep
 description: Meer informatie over de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
@@ -106,7 +106,7 @@ In het volgende JSON-bestand wordt een voorbeeld getoond van het type gegevens d
 >* Als de klant de optie op kanaalniveau heeft uitgeschakeld, worden gelijkwaardige toestemmingen of voorkeuren in `idSpecific` worden genegeerd.
 >* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld, of de klant heeft ervoor gekozen, worden de equivalente toestemmingen of voorkeuren in `idSpecific` zijn vereerd.
 
-Elke toets in het dialoogvenster `idSpecific` -object staat voor een specifieke naamruimte die door Adobe Experience Platform Identity Service wordt herkend. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-Time Klantprofiel te reduceren. Voor meer informatie over naamruimten raadpleegt u de [Overzicht van naamruimte in identiteit](../../../identity-service/namespaces.md) in de documentatie van de identiteitsdienst.
+Elke toets in het dialoogvenster `idSpecific` -object staat voor een specifieke naamruimte die door Adobe Experience Platform Identity Service wordt herkend. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-Time Klantprofiel te reduceren. Voor meer informatie over naamruimten raadpleegt u de [Overzicht van naamruimte in identiteit](../../../identity-service/features/namespaces.md) in de documentatie van de identiteitsdienst.
 
 De sleutels voor elk namespacevoorwerp vertegenwoordigen de unieke identiteitswaarden waarvoor de klant voorkeur heeft geplaatst. Elke identiteitswaarde kan een volledige reeks toestemmingen en voorkeur bevatten, die op de zelfde manier wordt geformatteerd zoals `consents`.
 

@@ -3,7 +3,7 @@ title: (Bèta) De handelsbank - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -38,11 +38,11 @@ Voordat u het publiek kunt activeren op [!DNL The Trade Desk], moet u contact op
 
 ## Vereisten voor ID-afstemming {#id-matching-requirements}
 
-Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen. Lees de [Overzicht van naamruimte van id](/help/identity-service/namespaces.md) voor meer informatie .
+Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen. Lees de [Overzicht van naamruimte van id](/help/identity-service/features/namespaces.md) voor meer informatie .
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de sectie met vereisten voor id-afstemming en gebruik de juiste naamruimten voor normale tekst en gehashte e-mailadressen.
 

@@ -3,9 +3,9 @@ title: Eigen profielen aanvullen met door partners verstrekte attributen
 description: Leer hoe u eigen profielen kunt aanvullen met kenmerken van vertrouwde gegevenspartners om uw databasis te verbeteren, nieuwe inzichten in uw klantenbestand te verkrijgen en uw doelgroepen beter te optimaliseren.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1248'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ Bekijk hieronder het videoleerprogramma voor een analyse van hoe te om het eerst
 1. Als **klant**, geeft u licenties voor kenmerken van de **gegevenspartner**.
 2. Als **klant**, breidt u uw profielgegevens en governancemodel uit om **partner**-provided attributes.
 3. Als **klant**, bevindt u zich aan boord van het publiek dat u wilt verrijken met de gegevenspartner. Over het algemeen worden deze doelgroepen afgezet tegen invoer-id&#39;s, zoals PII-elementen (Personeel Identified Information), zoals e-mail, naam, adres of andere elementen.
-4. De **partner** voegt gelicentieerde kenmerken toe voor de profielen waarmee ze kunnen overeenkomen. Optioneel: [Partner-id](/help/identity-service/namespaces.md) kan in partner worden omvat en worden opgenomen scoped identiteitskaart namespace.
+4. De **partner** voegt gelicentieerde kenmerken toe voor de profielen waarmee ze kunnen overeenkomen. Optioneel: [Partner-id](/help/identity-service/features/namespaces.md) kan in partner worden omvat en worden opgenomen scoped identiteitskaart namespace.
 5. Als **klant**, laadt u kenmerken van de gegevenspartner in klantprofielen in Real-Time CDP.
 
 ## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien 
 
 >[!TIP]
 >
->Als u ervoor kiest om uw klantprofielen aan te vullen met een op personen gebaseerde id van de gegevensleverancier, kunt u een nieuw identiteitstype van het type maken **[[!UICONTROL Partner ID]](/help/identity-service/namespaces.md)**.
+>Als u ervoor kiest om uw klantprofielen aan te vullen met een op personen gebaseerde id van de gegevensleverancier, kunt u een nieuw identiteitstype van het type maken **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**.
 >
->Lees meer over Partner ID in [sectie met identiteitstypen](/help/identity-service/namespaces.md).
+>Lees meer over Partner ID in [sectie met identiteitstypen](/help/identity-service/features/namespaces.md).
 >Meer informatie [identiteitsvelden definiëren](/help/xdm/ui/fields/identity.md) in de gebruikersinterface van het Experience Platform.
 
 ### Exporteer het publiek dat u wilt verrijken wanneer u PII (Personal Identified Information) of PII (hashed-PII) uitschakelt {#export-audiences}
@@ -130,7 +130,7 @@ Sommige geadviseerde bronschakelaars voor dit doel zouden kunnen zijn:
 
 Houd rekening met de volgende beperkingen wanneer u het op deze pagina beschreven gebruiksgeval bekijkt:
 
-* Als u om Partner IDs te gebruiken selecteert, ben zich ervan bewust dat deze IDs niet wanneer het bouwen van uw wordt gebruikt [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md).
+* Als u om Partner IDs te gebruiken selecteert, ben zich ervan bewust dat deze IDs niet wanneer het bouwen van uw wordt gebruikt [identiteitsgrafiek](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 

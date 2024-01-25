@@ -3,7 +3,7 @@ title: Mailchimp-rentecategorieën
 description: Mailchimp (ook wel Intuit Mailchimp genoemd) is een populair marketingplatform voor automatisering en marketing via e-mail dat door bedrijven wordt gebruikt om contactpersonen (klanten, klanten of andere belanghebbenden) te beheren en met hen te spreken via mailinglijsten en marketingcampagnes via e-mail. Gebruik deze schakelaar om uw contacten te sorteren die op hun belangen en voorkeur worden gebaseerd.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2205'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Raadpleeg bovendien de [!DNL Mailchimp] [tarieflimieten](https://mailchimp.com/d
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Mailchimp] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Mailchimp] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

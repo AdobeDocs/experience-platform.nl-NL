@@ -3,7 +3,7 @@ title: (API) Oracle Eloqua-verbinding
 description: Met de Eloqua-bestemming (API) van het Oracle kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw bedrijfsbehoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1965'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Zie de [Aanmelden bij [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saa
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Oracle Eloqua] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Oracle Eloqua] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Verplicht |
 |---|---|---|

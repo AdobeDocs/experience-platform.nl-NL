@@ -5,16 +5,16 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 2%
+source-wordcount: '1135'
+ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 24 februari 2021**
+**Releasedatum: donderdag 24 februari 2021**
 
 Nieuwe functies in Adobe Experience Platform:
 
@@ -38,25 +38,25 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inform
 
 | Functie | Beschrijving |
 | --- | --- |
-| Profielen, segmenten, doelen en gebruiksdashboards voor licenties (bèta) | **Opmerking: De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.**<br/><br/> De dashboards verstrekken out-of-the-box rapportering over de gegevens van uw organisatie en zijn direct gebouwd in de markeringswerkschema binnen Platform. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken. |
+| Profielen, segmenten, doelen en gebruiksdashboards voor licenties (bèta) | **Opmerking: de dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.**<br/><br/> De dashboards verstrekken out-of-the-box rapportering over de gegevens van uw organisatie en zijn direct gebouwd in de markeringswerkschema binnen Platform. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
+De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe oplossingen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| JupyterLab EDA-laptop | De exploratieve gegevensanalyse (EDA) Python-laptop is nu beschikbaar in Jupyterlab. Deze laptop is ontworpen om u te helpen bij het ontdekken van patronen in gegevens, het controleren van de hygiëne van gegevens en het samenvatten van de relevante gegevens voor voorspellende modellen. Zie de zelfstudie aan [het verkennen van web-based gegevens voor voorspellende modellen](../../data-science-workspace/jupyterlab/eda-notebook.md) voor meer informatie . |
+| JupyterLab EDA-laptop | De exploratieve gegevensanalyse (EDA) Python-laptop is nu beschikbaar in Jupyterlab. Deze laptop is ontworpen om u te helpen bij het ontdekken van patronen in gegevens, het controleren van de hygiëne van gegevens en het samenvatten van de relevante gegevens voor voorspellende modellen. Zie de zelfstudie aan [het verkennen van webgegevens voor voorspellende modellen](../../data-science-workspace/jupyterlab/eda-notebook.md) voor meer informatie . |
 
-Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, verwijs naar [Overzicht van de Data Science Workspace](../../data-science-workspace/home.md).
+Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, verwijs naar [Overzicht van de Data Science-werkruimte](../../data-science-workspace/home.md).
 
 ## [!DNL Dataflows] {#dataflows}
 
 In Adobe Experience Platform worden gegevens uit een groot aantal verschillende bronnen opgenomen, binnen het Experience Platform geanalyseerd en geactiveerd voor een groot aantal verschillende bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
 
-Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door wordt gebruikt [!DNL Identity Service] en [!DNL Real-Time Customer Profile] voordat deze uiteindelijk worden geactiveerd op [!DNL Destinations].
+Dataflows zijn een weergave van gegevenstaken die gegevens over het hele platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door wordt gebruikt [!DNL Identity Service] en [!DNL Real-Time Customer Profile] voordat deze uiteindelijk worden geactiveerd op [!DNL Destinations].
 
 **Nieuwe functies**
 
@@ -72,7 +72,7 @@ Voor meer algemene informatie over gegevensstromen raadpleegt u de [gegevensstro
 
 **Nieuwe bestemmingen**
 
-| Bestemming | Beschrijving |
+| Doel | Beschrijving |
 | ----------- | ----------- |
 | [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | De [!DNL LinkedIn Matched Audiences] Met de verbinding kunt u het publiek activeren in het dialoogvenster [!DNL LinkedIn] sociaal platform. |
 
@@ -102,7 +102,7 @@ Adobe Experience Platform [!DNL Identity Service] helpt u om een beter beeld van
 
 | Functie | Beschrijving |
 | --- | --- |
-| Identiteitsgrafiekviewer | Met de viewer voor identiteitsgrafieken kunt u identiteiten valideren en visualiseren die in de gebruikersinterface aan elkaar zijn gekoppeld, zodat de foutopsporing en de transparantie kunnen worden verbeterd. Zie de [identiteitsgrafiekviewer-document](../../identity-service/ui/identity-graph-viewer.md) voor meer informatie . |
+| Naamgrafiekviewer | Met de viewer voor identiteitsgrafieken kunt u identiteiten valideren en visualiseren die in de gebruikersinterface aan elkaar zijn gekoppeld, zodat de foutopsporing en de transparantie kunnen worden verbeterd. Zie de [identiteitsgrafiekviewer-document](../../identity-service/features/identity-graph-viewer.md) voor meer informatie . |
 
 Meer algemene informatie over [!DNL Identity Service], verwijst u naar de [Overzicht van identiteitsservice](../../identity-service/home.md).
 
@@ -114,13 +114,13 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Berekende kenmerken (alfa) | ***Opmerking: Deze functionaliteit bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.*** <br/><br/>Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Vervolgens kunt u de aggregaten in segmentatie, activering en personalisatie gebruiken. Voorbeelden van deze functies zijn count, sum, average, min, max, true/false. Berekende kenmerken zijn momenteel alleen beschikbaar via de API. |
+| Berekende kenmerken (Alpha) | ***Opmerking: deze functionaliteit bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.*** <br/><br/>Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Vervolgens kunt u de aggregaten in segmentatie, activering en personalisatie gebruiken. Voorbeelden van deze functies zijn count, sum, average, min, max, true/false. Berekende kenmerken zijn momenteel alleen beschikbaar via de API. |
 
-Voor meer informatie over het profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] om te beginnen met het lezen van de [Overzicht van het realtime klantprofiel](../../profile/home.md).
+Voor meer informatie over het profiel van de Klant in real time, met inbegrip van zelfstudies en beste praktijken voor het werken met [!DNL Profile] gegevens, eerst de [Overzicht van het realtime klantprofiel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -128,7 +128,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Google PubSub] | U kunt nu verbinding maken [!DNL Google PubSub] tot [!DNL Experience Platform] met de [!DNL Flow Service] API of UI. Zie de [[!DNL Google PubSub] connectoroverzicht](../../sources/connectors/cloud-storage/google-pubsub.md) voor meer informatie . |
-| [!DNL Oracle Object Storage] | U kunt nu verbinding maken [!DNL Oracle Object Storage] tot [!DNL Experience Platform] met de [!DNL Flow Service] API of UI. Zie de [[!DNL Oracle Object Storage] connectoroverzicht](../../sources/connectors/cloud-storage/oracle-object-storage.md) voor meer informatie . |
+| [!DNL Google PubSub] | U kunt nu verbinding maken [!DNL Google PubSub] tot [!DNL Experience Platform] met de [!DNL Flow Service] API of de interface. Zie de [[!DNL Google PubSub] connectoroverzicht](../../sources/connectors/cloud-storage/google-pubsub.md) voor meer informatie . |
+| [!DNL Oracle Object Storage] | U kunt nu verbinding maken [!DNL Oracle Object Storage] tot [!DNL Experience Platform] met de [!DNL Flow Service] API of de interface. Zie de [[!DNL Oracle Object Storage] connectoroverzicht](../../sources/connectors/cloud-storage/oracle-object-storage.md) voor meer informatie . |
 
 Voor meer algemene informatie over bronnen raadpleegt u de [overzicht van bronnen](../../sources/home.md).

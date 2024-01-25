@@ -4,7 +4,7 @@ title: Kwalitatieve automatisering
 description: Synchroniseer ervaring en operationele klantgegevens om personalisatie op schaal te ontgrendelen. Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe Experience Platform als input in de iD van de Ervaring van Qualtrics om uw klanten beter te begrijpen en gerichte outreach toe te laten om de hiaat te sluiten wanneer het aankomt op inzicht in bedoeling, emotie en ervaringsbestuurders.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1120'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Hieronder vindt u de noodzakelijke stappen voor het verkrijgen van een API-token
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-*Kwalitatieve automatisering* ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+*Kwalitatieve automatisering* ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

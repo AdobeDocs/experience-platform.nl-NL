@@ -3,7 +3,7 @@ title: Salesforce-accountservice voor Marketing Cloud
 description: Leer hoe u de Salesforce Marketing Cloud Account Engagement (voorheen Pardot genoemd)-bestemming kunt gebruiken om uw accountgegevens te exporteren en deze te activeren in Salesforce Marketing Cloud Account Engagement voor uw zakelijke behoeften.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1474'
 ht-degree: 1%
@@ -72,7 +72,7 @@ Zie de [!DNL Marketing Cloud Account Engagement] [tarieflimieten](https://develo
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Marketing Cloud Account Engagement] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

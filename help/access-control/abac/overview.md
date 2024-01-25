@@ -3,7 +3,7 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Voor meer informatie over [!DNL Destinations], verwijst u naar de [[!DNL Destina
 
 Adobe Experience Platform [!DNL Identity Service] helpt u een beter inzicht te krijgen in uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-Als deel van op attribuut-gebaseerde toegangsbeheer, `view-identity-graph` Met deze machtiging kunt u bepalen welke gebruikers in uw organisatie toegang hebben tot de identiteitsgrafiek via de gebruikersinterface of API&#39;s. Zie de handleiding voor meer informatie over [de viewer voor identiteitsgrafieken gebruiken](../../identity-service/ui/identity-graph-viewer.md).
+Als deel van op attribuut-gebaseerde toegangsbeheer, `view-identity-graph` Met deze machtiging kunt u bepalen welke gebruikers in uw organisatie toegang hebben tot de identiteitsgrafiek via de gebruikersinterface of API&#39;s. Zie de handleiding voor meer informatie over [de viewer voor identiteitsgrafieken gebruiken](../../identity-service/features/identity-graph-viewer.md).
 
 Voor meer informatie over [!DNL Identity Service], verwijst u naar de [[!DNL Identity Service] overzicht](../../identity-service/home.md).
 

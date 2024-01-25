@@ -3,7 +3,7 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;sendGrid;sendGrid bestemming
 title: SendGrid-verbinding
 description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij exporteren en deze activeren in SendGrid voor uw bedrijfsbehoeften.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1475'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Voordat u gegevens naar de SendGrid-bestemming kunt activeren, moet u een [schem
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-SendGrid ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+SendGrid ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

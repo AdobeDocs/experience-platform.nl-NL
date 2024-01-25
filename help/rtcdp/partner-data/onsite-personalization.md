@@ -3,7 +3,7 @@ title: Onsite ervaringen voor onbekende bezoekers personaliseren met de erkennin
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2565'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Als u dit geval met succes wilt implementeren, moet u meerdere gebieden van Real
    * [Tags](/help/tags/home.md)
    * [Gegevensstromen](/help/datastreams/overview.md)
 * Gegevensbeheer in Real-Time CDP
-   * [Identiteiten](/help/identity-service/namespaces.md)
+   * [Identiteiten](/help/identity-service/features/namespaces.md)
    * [Schema&#39;s](/help/xdm/home.md)
    * [Labels voor gegevensgebruik](/help/data-governance/labels/overview.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ U kunt nu integreren met een aanpassingsengine om persoonlijke inhoud weer te ge
 
 Houd rekening met de volgende beperkingen wanneer u het op deze pagina beschreven gebruiksgeval bekijkt:
 
-* Als u Partner IDs gebruikt, ben zich ervan bewust dat deze IDs niet wanneer het bouwen van uw wordt gebruikt [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md).
+* Als u Partner IDs gebruikt, ben zich ervan bewust dat deze IDs niet wanneer het bouwen van uw wordt gebruikt [identiteitsgrafiek](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 

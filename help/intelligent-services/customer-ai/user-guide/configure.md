@@ -5,9 +5,9 @@ feature: Customer AI
 title: Een AI-instantie van een klant configureren
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2737'
+source-wordcount: '2740'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteer
 
 >[!NOTE]
 >
-> Als er geen geldig identiteitstype (naamruimte) bestaat voor een gegevensset, moet u een primaire identiteit instellen en deze toewijzen aan een naamruimte voor identiteit met behulp van de [schema-editor](../../../xdm/schema/composition.md#identity). Ga voor meer informatie over naamruimten en identiteiten naar de [Naamruimten identiteitsservice](../../../identity-service/namespaces.md) documentatie.
+> Als er geen geldig identiteitstype (naamruimte) bestaat voor een gegevensset, moet u een primaire identiteit instellen en deze toewijzen aan een naamruimte voor identiteit met behulp van de [schema-editor](../../../xdm/schema/composition.md#identity). Ga voor meer informatie over naamruimten en identiteiten naar de [Naamruimten identiteitsservice](../../../identity-service/features/namespaces.md) documentatie.
 
 ## Doel definiëren {#define-a-goal}
 
@@ -207,7 +207,7 @@ U kunt er ook voor kiezen om profielkenmerken op te nemen uit de dagelijkse geë
 
 In het volgende voorbeeld worden een aangepast gebeurtenis- en profielkenmerk toegevoegd aan een Customer AI-instantie. Het doel van de AI-instantie van de klant is te voorspellen hoe waarschijnlijk het is dat een klant in de komende 60 dagen een ander Luma-product zal kopen. Doorgaans zijn productgegevens gekoppeld aan een SKU van het product. In dit geval is de SKU `prd1013`. Nadat het AI-model van de Klant is opgeleid/gecodeerd, kan deze SKU worden gekoppeld aan een gebeurtenis en worden weergegeven als een invloedrijke factor voor een aandrijfsegment.
 
-De AI van de klant past automatisch eigenschapgeneratie zoals &quot;Dagen toe aangezien&quot;of &quot;Aantal&quot;tegen douanegebeurtenissen zoals **Aankoop bekijken**. Als deze gebeurtenis werd beschouwd als een invloedrijke factor voor de reden waarom klanten een hoge, gemiddelde of lage propensiteit hebben, geeft de AI deze als `Days since prd1013 purchase` of `Count of prd1013 purchase`. Door deze gebeurtenis als een aangepaste gebeurtenis te maken, kunt u de gebeurtenis een nieuwe naam geven, waardoor de resultaten veel beter leesbaar worden. Bijvoorbeeld, `Days since Watch purchase`. Daarnaast gebruikt de AI van de Klant deze gebeurtenis in zijn training en scoring, zelfs als de gebeurtenis geen standaardgebeurtenis is. Dit betekent dat u meerdere gebeurtenissen kunt toevoegen die volgens u van invloed kunnen zijn en uw model verder kunt aanpassen door gegevens zoals reserveringen, bezoekerslogboeken en andere gebeurtenissen op te nemen. Door deze gegevenspunten toe te voegen, vergroot u de nauwkeurigheid en nauwkeurigheid van uw AI-model van de klant.
+De AI van de klant past automatisch eigenschapgeneratie zoals &quot;Dagen toe aangezien&quot;of &quot;Aantal&quot;tegen douanegebeurtenissen zoals **Aankoop bekijken**. Als deze gebeurtenis werd beschouwd als een invloedrijke factor voor de reden waarom klanten een hoge, gemiddelde of lage propensiteit hebben, geeft de AI deze als `Days since prd1013 purchase` of `Count of prd1013 purchase`. Door deze gebeurtenis als een aangepaste gebeurtenis te maken, kunt u de gebeurtenis een nieuwe naam geven, waardoor de resultaten veel beter leesbaar worden. Bijvoorbeeld: `Days since Watch purchase`. Daarnaast gebruikt de AI van de Klant deze gebeurtenis in zijn training en scoring, zelfs als de gebeurtenis geen standaardgebeurtenis is. Dit betekent dat u meerdere gebeurtenissen kunt toevoegen die volgens u van invloed kunnen zijn en uw model verder kunt aanpassen door gegevens zoals reserveringen, bezoekerslogboeken en andere gebeurtenissen op te nemen. Door deze gegevenspunten toe te voegen, vergroot u de nauwkeurigheid en nauwkeurigheid van uw AI-model van de klant.
 
 ![voorbeeld van een aangepaste gebeurtenis](../images/user-guide/custom-event-name.png)
 

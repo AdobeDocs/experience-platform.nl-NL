@@ -2,7 +2,7 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 1%
@@ -34,7 +34,7 @@ De toestemmingen onder Adobe Experience Platform omvatten toegang tot gegevensst
 | Sandboxes | (N.v.t.) | Afhankelijk van de [sandboxen](../sandboxes/home.md) die onder uw organisatie zijn gecreeerd, kunt u toegang tot elk van hen door deze toestemmingencategorie in Admin Console controleren. |
 | Gegevensmodellering | Schema&#39;s beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [XDM-schema&#39;s (Experience Data Model)](../xdm/home.md). |
 | Gegevensmodellering | Schema&#39;s weergeven | Hiermee verleent u alleen-lezen toegang tot schema&#39;s. |
-| Identity Management | Naamruimten beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [naamruimten](../identity-service/namespaces.md). |
+| Identity Management | Naamruimten beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [naamruimten](../identity-service/features/namespaces.md). |
 | Identity Management | Identiteitsnaamruimten weergeven | Hiermee wordt alleen-lezen toegang verleend tot naamruimten. |
 | Dataverzameling | Gegevensstromen beheren | Biedt de mogelijkheid om te bekijken, maken en bewerken [datastreams](../datastreams/overview.md). |
 | Dataverzameling | Gegevensstromen weergeven | Biedt alleen-lezen toegang tot gegevensstreams. |

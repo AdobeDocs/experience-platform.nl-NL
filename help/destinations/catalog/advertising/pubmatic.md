@@ -2,7 +2,7 @@
 title: PubMatic Connect
 description: PubMatic maximaliseert klantenwaarde door de programmatic digitale marketing leveringsketen van de toekomst te leveren. PubMatic Connect combineert platformtechnologie en toegewijde service om te verbeteren hoe inventarisatie en gegevens worden verpakt en getransformeerd.
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Praat met uw [!DNL PubMatic] Accountmanager om ervoor te zorgen dat uw account c
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL PubMatic Connect] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL PubMatic Connect] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --------------- | ------ | --- |

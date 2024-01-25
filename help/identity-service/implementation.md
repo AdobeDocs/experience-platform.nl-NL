@@ -1,9 +1,9 @@
 ---
 title: Implementatiehandleiding voor identiteitsservice
 description: Leer hoe gegevens die aan Adobe Experience Platform zijn verstrekt worden verwerkt voordat ze door Identity Service worden gebruikt om identiteitsgrafieken samen te stellen.
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Afhankelijk van uw strategie van de de gegevensinzameling van ondernemingsgegeve
 
 ## Extra naamruimten maken
 
-Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u mogelijk extra naamruimten maken om uw identiteiten correct te categoriseren. Lees voor meer informatie de handleiding op [aangepaste naamruimten voor uw organisatie maken](./namespaces.md).
+Hoewel Experience Platform verschillende standaardnaamruimten biedt, moet u mogelijk extra naamruimten maken om uw identiteiten correct te categoriseren. Lees voor meer informatie de handleiding op [aangepaste naamruimten voor uw organisatie maken](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te
 >
 >* Array- en toewijzingsvelden worden niet ondersteund en kunnen niet worden gemarkeerd en gelabeld als identiteitsvelden.
 >* De naamruimte van resulterende identiteiten wordt opgegeven op het moment dat het veld wordt gelabeld.
+
+Lees voor meer informatie de handleiding op [identiteitsvelden definiëren in de gebruikersinterface](../xdm/ui/fields/identity.md).
 
 ## Een dataset voor Identiteitsservice configureren
 

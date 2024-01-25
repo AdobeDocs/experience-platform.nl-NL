@@ -2,9 +2,9 @@
 title: Aanbevolen werkwijzen voor gegevensbeheerlicenties
 description: Meer informatie over best practices en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2264'
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ De opslag van het Profiel is samengesteld uit de volgende componenten:
 | Profielfragmenten | Elk klantprofiel bestaat uit meerdere **profielfragmenten** die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige **profielfragmenten** verwant met die enige klant die in veelvoudige datasets verschijnt. Wanneer deze fragmenten in Platform worden opgenomen, worden ze aan elkaar gehecht met behulp van de identiteitsgrafiek om één profiel voor die klant te maken. **Profielfragmenten** bestaan uit een naamruimte van de identiteit als de id, met de bijbehorende recordgegevens en/of tijdreeksgegevens. |
 | Opnamegegevens (kenmerken) | Een profiel is een weergave van een onderwerp, een organisatie of een individu, dat uit vele **Attributen** (ook bekend als **recordgegevens**). Het profiel van een product kan bijvoorbeeld een SKU en een beschrijving bevatten, terwijl het profiel van een persoon informatie bevat zoals voornaam, achternaam en e-mailadres. **Gegevens opnemen** is gewoonlijk laag/matig in volume, maar waardevol voor lange periodes. |
 | Gegevens uit tijdreeksen (gedrag) | **Gegevens uit tijdreeksen** biedt informatie over een gebruikersgedrag. Vertegenwoordigd door het standaard model van de Gegevens van de Ervaring van het Schema (XDM) [!DNL ExperienceEvent]Gegevens uit tijdreeksen kunnen gebeurtenissen beschrijven, zoals items die aan een winkelwagentje worden toegevoegd, koppelingen waarop wordt geklikt en weergegeven video&#39;s. De waarde van gedrag kan in de loop der tijd afnemen. |
-| Naamruimte (identiteiten) | Wanneer klantgegevens worden samengevoegd, worden deze samengevoegd tot één profiel door middel van het gebruik van **naamruimten** en de mogelijkheid om deze identiteiten bij elkaar te houden wanneer meer informatie over de gebruiker bekend wordt. Zie de [Overzicht van naamruimten](../../identity-service/namespaces.md) voor meer informatie . |
+| Naamruimte (identiteiten) | Wanneer klantgegevens worden samengevoegd, worden deze samengevoegd tot één profiel door middel van het gebruik van **naamruimten** en de mogelijkheid om deze identiteiten bij elkaar te houden wanneer meer informatie over de gebruiker bekend wordt. Zie de [Overzicht van naamruimten](../../identity-service/features/namespaces.md) voor meer informatie . |
 
 {style="table-layout:auto"}
 

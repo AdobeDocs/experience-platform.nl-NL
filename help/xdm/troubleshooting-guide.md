@@ -4,18 +4,18 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '1937'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor probleemoplossing voor XDM-systemen
 
-Dit document geeft antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) en XDM System in Adobe Experience Platform, met inbegrip van een het oplossen van problemengids voor gemeenschappelijke fouten. Voor vragen en problemen met betrekking tot andere services van Platforms raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
+Dit document geeft antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) en XDM System in Adobe Experience Platform, met inbegrip van een het oplossen van problemengids voor gemeenschappelijke fouten. Voor vragen en problemen met betrekking tot andere platformservices raadpleegt u de [Handleiding voor het oplossen van problemen met Experience Platforms](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** is een open-source specificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantervaring definieert. De methode [!DNL Experience Platform] is gebouwd, **XDM-systeem**, operaliseert [!DNL Experience Data Model] schema&#39;s voor gebruik door [!DNL Platform] diensten. De **[!DNL Schema Registry]** biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]** binnen [!DNL Experience Platform]. Zie de [XDM-documentatie](home.md) voor meer informatie .
+**[!DNL Experience Data Model](XDM)** is een open-source specificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantervaring definieert. De methode waarop [!DNL Experience Platform] is gebouwd, **XDM-systeem**, operaliseert [!DNL Experience Data Model] schema&#39;s voor gebruik door [!DNL Platform] diensten. De **[!DNL Schema Registry]** biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]** binnen [!DNL Experience Platform]. Zie de [XDM-documentatie](home.md) voor meer informatie .
 
 ## Veelgestelde vragen
 
@@ -23,9 +23,9 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over XDM System 
 
 ### Hoe voeg ik velden toe aan een schema?
 
-U kunt velden toevoegen aan een schema met behulp van een schemaveldgroep. Elke veldgroep is compatibel met een of meer klassen, zodat de veldgroep kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industrieveldgroepen hun eigen vooraf gedefinieerde velden biedt, kunt u uw eigen velden aan een schema toevoegen door aangepaste veldgroepen te maken met behulp van de API of de gebruikersinterface.
+U kunt velden aan een schema toevoegen met een schemaveldgroep. Elke veldgroep is compatibel met een of meer klassen, zodat de veldgroep kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industrieveldgroepen hun eigen vooraf gedefinieerde velden biedt, kunt u uw eigen velden aan een schema toevoegen door aangepaste veldgroepen te maken met behulp van de API of de gebruikersinterface.
 
-Voor meer informatie over het maken van veldgroepen in het dialoogvenster [!DNL Schema Registry] API, zie [eindhulplijn veldgroep](api/field-groups.md#create). Als u UI gebruikt, zie [Zelfstudie Schema Editor](./tutorials/create-schema-ui.md).
+Voor meer informatie over het maken van veldgroepen in het dialoogvenster [!DNL Schema Registry] API, zie [eindhulplijn veldgroep](api/field-groups.md#create). Als u UI gebruikt, zie [Zelfstudie Schema-editor](./tutorials/create-schema-ui.md).
 
 ### Wat zijn de beste toepassingen voor veldgroepen versus gegevenstypen?
 
@@ -37,7 +37,7 @@ Voor meer informatie over het maken van veldgroepen in het dialoogvenster [!DNL 
 
 Alles [!DNL Schema Registry] resources (schema&#39;s, veldgroepen, gegevenstypen, klassen) hebben een URI die fungeert als een unieke id voor referentie- en opzoekdoeleinden. Wanneer u een schema in de API weergeeft, vindt u dit in het bovenste niveau `$id` en `meta:altId` kenmerken.
 
-Zie voor meer informatie de [resource-id](api/getting-started.md#resource-identification) in de [!DNL Schema Registry] API-handleiding.
+Zie de klasse [resource-id](api/getting-started.md#resource-identification) in de [!DNL Schema Registry] API-handleiding.
 
 ### Wanneer begint een schema het breken van veranderingen te verhinderen?
 
@@ -45,9 +45,9 @@ Het breken kan veranderingen in een schema worden aangebracht zolang het nooit i
 
 ### Wat is de maximumgrootte van een lang gebiedstype?
 
-Een lang veldtype is een geheel getal met een maximale grootte van 53(+1) bits, waardoor het een mogelijk bereik heeft tussen -9007199254740992 en 9007199254740992. Dit komt door een beperking van de manier waarop JavaScript-implementaties van JSON lange gehele getallen vertegenwoordigen.
+Een lang veldtype is een geheel getal met een maximale grootte van 53(+1) bits, waardoor het een mogelijk bereik heeft tussen -9007199254740992 en 900719925474092. Dit komt door een beperking van de manier waarop JavaScript-implementaties van JSON lange gehele getallen vertegenwoordigen.
 
-Zie het document over [Beperkingen voor XDM-veldtypen](./schema/field-constraints.md).
+Zie het document over voor meer informatie over veldtypen [Beperkingen voor XDM-veldtypen](./schema/field-constraints.md).
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
@@ -61,13 +61,13 @@ In de API worden identiteiten vastgesteld door identiteitsbeschrijvers te maken.
 
 De beschrijvers van de identiteit worden gecreeerd door een verzoek van de POST aan het /descriptors eindpunt. Als dit lukt, ontvangt u een HTTP Status 201 (Gemaakt) en een reactieobject met de details van de nieuwe descriptor.
 
-Zie het document op [beschrijvingen](api/descriptors.md) in de [!DNL Schema Registry] ontwikkelaarshandleiding.
+Zie het document over voor meer informatie over het maken van identiteitsbeschrijvers in de API [beschrijvingen](api/descriptors.md) in de [!DNL Schema Registry] ontwikkelaarshandleiding.
 
 #### Identiteiten definiëren in de gebruikersinterface
 
 Open het schema in de Schema-editor en selecteer het veld in het dialoogvenster **[!UICONTROL Structure]** in de editor die u als een identiteit wilt markeren. Onder **[!UICONTROL Field Properties]** aan de rechterkant selecteert u de **[!UICONTROL Identity]** selectievakje.
 
-Zie de sectie over het [identiteitsvelden definiëren](./tutorials/create-schema-ui.md#identity-field) in de zelfstudie van de Schema-editor.
+Zie de sectie over het beheren van identiteiten in de interface voor meer informatie [identiteitsvelden definiëren](./tutorials/create-schema-ui.md#identity-field) in de zelfstudie van de Schema-editor.
 
 ### Heeft mijn schema een primaire identiteit nodig?
 
@@ -121,7 +121,7 @@ Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werk
 }
 ```
 
-Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinden. De bron kan zijn verwijderd of het pad in de API-aanroep is ongeldig. Controleer of u een geldig pad voor uw API-aanroep hebt ingevoerd voordat u het opnieuw probeert. U kunt willen controleren dat u correcte identiteitskaart voor het middel bent ingegaan, en dat de weg behoorlijk namespaced met de aangewezen container (globaal of huurder) is.
+Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinden. De bron kan zijn verwijderd of het pad in de API-aanroep is ongeldig. Controleer of u een geldig pad voor uw API-aanroep hebt ingevoerd voordat u het opnieuw probeert. U kunt willen controleren dat u correcte identiteitskaart voor het middel bent ingegaan, en dat de weg behoorlijk genoemd met de aangewezen container (globaal of huurder) is.
 
 >[!NOTE]
 >
@@ -136,8 +136,7 @@ Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinde
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-
-Zie voor meer informatie over het samenstellen van opzoekpaden in de API de [container](./api/getting-started.md#container) en [resource-id](api/getting-started.md#resource-identification) in de [!DNL Schema Registry] ontwikkelaarshandleiding.
+Zie voor meer informatie over het samenstellen van opzoekpaden in de API de [container](./api/getting-started.md#container) en [resource-id](api/getting-started.md#resource-identification) secties in de [!DNL Schema Registry] ontwikkelaarshandleiding.
 
 ### Titel is niet uniek
 
@@ -181,14 +180,13 @@ De middelen die door uw organisatie worden bepaald moeten hun gebieden onder uw 
 
 >[!NOTE]
 >
->Afhankelijk van de specifieke aard van de naamruimtefout kan deze fout een van de volgende methoden gebruiken `type` URI&#39;s samen met verschillende berichtdetails:
+>Afhankelijk van de specifieke aard van de naamruimtefout kan deze fout een van de volgende mogelijkheden gebruiken: `type` URI&#39;s samen met verschillende berichtdetails:
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1020-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1021-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1022-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1023-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
-
 
 Gedetailleerde voorbeelden van juiste gegevensstructuren voor XDM-bronnen vindt u in de handleiding Schema Registry API:
 
@@ -213,7 +211,7 @@ Gedetailleerde voorbeelden van juiste gegevensstructuren voor XDM-bronnen vindt 
 }
 ```
 
-De verzoeken van de GET in [!DNL Schema Registry] API vereist een `Accept` zodat het systeem kan bepalen hoe de reactie wordt opgemaakt. Deze fout treedt op wanneer een vereiste `Accept` header is ongeldig of ontbreekt.
+De verzoeken van de GET in [!DNL Schema Registry] API vereist een `Accept` zodat het systeem kan bepalen hoe de reactie wordt opgemaakt. Deze fout treedt op wanneer een `Accept` header is ongeldig of ontbreekt.
 
 Afhankelijk van het eindpunt gebruikt u, `detailed-message` eigenschap geeft aan wat een geldige waarde is `Accept` header moet eruit zien als een succesvol antwoord . Zorg ervoor dat u de juiste gegevens hebt ingevoerd en `Accept` -header die compatibel is met de API-aanvraag die u wilt uitvoeren, voordat u het opnieuw probeert.
 
@@ -225,7 +223,6 @@ Afhankelijk van het eindpunt gebruikt u, `detailed-message` eigenschap geeft aan
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
-
 
 Voor lijsten met compatibele Accept-headers voor verschillende API-aanvragen raadpleegt u de bijbehorende secties in het dialoogvenster [Handleiding voor ontwikkelaars van het schema Register](./api/overview.md).
 
@@ -277,7 +274,7 @@ Om schema&#39;s toe te laten die relatiebeschrijvers voor gebruik binnen bevatte
 
 Zorg ervoor dat de `xdm:namespace` De waarde van het de identiteitsgebied van het verwijzingsschema past dat van aan `xdm:identityNamespace` in de ID-beschrijving van de bronveld om dit probleem op te lossen.
 
-Zie de sectie over een lijst met standaardnaamruimtecodes voor identiteiten [standaardnaamruimten](../identity-service/namespaces.md) in het naamruimteoverzicht van de identiteit.
+Zie de sectie over een lijst met standaardnaamruimtecodes voor identiteiten [standaardnaamruimten](../identity-service/features/namespaces.md) in het naamruimteoverzicht van de identiteit.
 
 #### Het schema moet een identityMap of primaire identiteit bevatten
 

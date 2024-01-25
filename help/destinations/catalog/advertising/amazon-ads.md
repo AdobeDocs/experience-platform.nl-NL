@@ -3,7 +3,7 @@ title: Amazon Adds
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Als u de Amazon Ads-verbinding met Adobe Experience Platform wilt gebruiken, moe
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De *Amazon Adds* De verbinding steunt de activering van identiteiten die in de hieronder lijst worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md). Ga voor meer informatie over de identiteiten die worden ondersteund door Amazon Ads naar de [Amazon DSP Ondersteuningscentrum](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+De *Amazon Adds* De verbinding steunt de activering van identiteiten die in de hieronder lijst worden beschreven. Meer informatie over [identiteiten](/help/identity-service//features/namespaces.md). Ga voor meer informatie over de identiteiten die worden ondersteund door Amazon Ads naar de [Amazon DSP Ondersteuningscentrum](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

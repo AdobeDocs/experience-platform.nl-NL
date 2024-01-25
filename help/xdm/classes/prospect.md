@@ -2,7 +2,7 @@
 title: Afzonderlijke XDM-perspectiefprofielklasse
 description: Leer meer over de klasse van het Profiel van het Individuele Vooruitzicht XDM in het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
@@ -23,7 +23,7 @@ In Experience Data Model (XDM), [!UICONTROL XDM Individual Prospect Profile] de 
 | `_id` | [!UICONTROL String] | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br>Aangezien dit veld door het systeem wordt gegenereerd, levert het tijdens het invoeren van gegevens geen expliciete waarde op. U kunt echter desgewenst ook uw eigen unieke id-waarden opgeven. |
 | `createdByBatchID` | [!UICONTROL String] | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. |
 | `modifiedByBatchID` | [!UICONTROL String] | De id van de laatst opgenomen batch die ervoor zorgde dat de record werd bijgewerkt. |
-| `partnerID` | [!UICONTROL String] | Typisch, een uniek pseudoniem herkenningsteken dat een individueel vooruitzicht identificeert. Zie de documentatie op [identiteitstypen](../../identity-service/namespaces.md#identity-type) voor meer informatie over de Partner ID en de andere identiteitstypen die beschikbaar zijn in Adobe Experience Platform. |
+| `partnerID` | [!UICONTROL String] | Typisch, een uniek pseudoniem herkenningsteken dat een individueel vooruitzicht identificeert. Zie de documentatie op [identiteitstypen](../../identity-service/features/namespaces.md#identity-type) voor meer informatie over de Partner ID en de andere identiteitstypen die beschikbaar zijn in Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL String] | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | [!UICONTROL String] | De id van de gebruiker die de record als laatste heeft gewijzigd. Wanneer de record wordt gemaakt, worden de `modifiedByUser` waarde wordt ingesteld als de `createdByUser` waarde. |
 

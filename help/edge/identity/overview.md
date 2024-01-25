@@ -1,17 +1,17 @@
 ---
 title: Identiteitsgegevens in Web SDK
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
 
 ---
 
-
 # Identiteitsgegevens in Web SDK
 
-De Adobe Experience Platform Web SDK gebruikt [Adobe Experience Cloud-id&#39;s (ECID&#39;s)](../../identity-service/ecid.md) om het gedrag van de bezoeker bij te houden. Met behulp van ECID&#39;s kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan. Hierdoor worden alle treffers die tijdens en tussen websessies plaatsvinden, aan een specifiek apparaat gekoppeld.
+De Adobe Experience Platform Web SDK gebruikt [Adobe Experience Cloud-id&#39;s (ECID&#39;s)](../../identity-service/features/ecid.md) om het gedrag van de bezoeker bij te houden. Met behulp van ECID&#39;s kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan. Hierdoor worden alle treffers die tijdens en tussen websessies plaatsvinden, aan een specifiek apparaat gekoppeld.
 
 Dit document biedt een overzicht van hoe u ECID&#39;s kunt beheren met de Platform Web SDK.
 
@@ -104,7 +104,7 @@ alloy("sendEvent", {
 >Adobe raadt aan naamruimten te verzenden die een persoon vertegenwoordigen, zoals `CRMID`, als primaire identiteit.
 
 
-Elke eigenschap binnen `identityMap` staat voor identiteiten die tot een bepaalde [naamruimte identity](../../identity-service/namespaces.md). De eigenschapsnaam moet het naamruimtesymbool voor de identiteit zijn. Dit symbool wordt weergegeven in de Adobe Experience Platform-gebruikersinterface onder &quot;[!UICONTROL Identities]&quot;. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
+Elke eigenschap binnen `identityMap` staat voor identiteiten die tot een bepaalde [naamruimte identity](../../identity-service/features/namespaces.md). De eigenschapsnaam moet het naamruimtesymbool voor de identiteit zijn. Dit symbool wordt weergegeven in de Adobe Experience Platform-gebruikersinterface onder &quot;[!UICONTROL Identities]&quot;. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
 
 >[!IMPORTANT]
 >

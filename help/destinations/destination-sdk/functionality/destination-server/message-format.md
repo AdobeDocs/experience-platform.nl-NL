@@ -2,9 +2,9 @@
 description: Deze pagina is gericht op de berichtindeling en de profieltransformatie in gegevens die van Adobe Experience Platform naar bestemmingen worden geëxporteerd.
 title: Berichtindeling
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2489'
 ht-degree: 0%
 
 ---
@@ -380,7 +380,7 @@ Profiel 2:
 
 ### Identiteiten {#identities}
 
-Voor informatie over identiteiten in Experience Platform, zie [Overzicht naamruimte identiteit](../../../../identity-service/namespaces.md).
+Voor informatie over identiteiten in Experience Platform, zie [Overzicht naamruimte identiteit](../../../../identity-service/features/namespaces.md).
 
 **Invoer**
 
@@ -1203,7 +1203,7 @@ De context die aan de sjabloon wordt gegeven, bevat `input`  (de profielen/gegev
 
 In de onderstaande tabel vindt u een beschrijving van de functies in de bovenstaande voorbeelden.
 
-| -functie | Beschrijving | Voorbeeld |
+| Functie | Beschrijving | Voorbeeld |
 |---------|----------|----------|
 | `input.profile` | Het profiel, weergegeven als een [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Volgt het partnerXDM schema dat hierboven verder op deze pagina wordt vermeld. |
 | `hasSegments` | Deze functie neemt een kaart van namespace publiek IDs als parameter. De functie retourneert `true` als er minstens één publiek op de kaart staat (ongeacht zijn status), en `false` anders. U kunt deze functie gebruiken om te beslissen of u een overzicht van het publiek doorloopt of niet. | `hasSegments(input.profile.segmentMembership)` |
@@ -1212,9 +1212,9 @@ In de onderstaande tabel vindt u een beschrijving van de functies in de bovensta
 | `destination.namespaceSegmentTimestamps` | Retourneert de tijd waarop een publiek in UNIX-tijdstempelindeling is gemaakt, bijgewerkt of geactiveerd. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: retourneert de tijd waarop het segment met de id `seg-id-1`van de `ups` naamruimte, gemaakt in UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1`van de `ups` naamruimte, is bijgewerkt in UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1`van de `ups` naamruimte, is geactiveerd naar de bestemming, in UNIX-tijdstempelindeling.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: retourneert de tijd waarop de publieksactivering op de bestemming is bijgewerkt, in UNIX-tijdstempelindeling.</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | Retourneert alleen het publiek dat de status heeft `realized`, in alle naamruimten. | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | Retourneert alleen het publiek dat de status heeft `exited`, in alle naamruimten. | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **Afgeschaft. Vervangen door`destination.namespaceSegmentAliases`** <br><br> Wijs van publiek IDs in Adobe Experience Platform namespace aan publiekalias in het systeem van de partner toe. | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **Afgeschaft. Vervangen door`destination.namespaceSegmentNames`** <br><br>  Wijs van publieksnamen in Adobe Experience Platform namespace aan publieksnamen in het systeem van de partner toe. | `destination.segmentNames["seg-name-1"]` |
-| `destination.segmentTimestamps` | **Afgeschaft. Vervangen door`destination.namespaceSegmentTimestamps`** <br><br> Retourneert de tijd waarop een publiek in UNIX-tijdstempelindeling is gemaakt, bijgewerkt of geactiveerd. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is gemaakt in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is bijgewerkt, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is geactiveerd naar de bestemming, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: retourneert de tijd waarop de publieksactivering op de bestemming is bijgewerkt, in UNIX-tijdstempelindeling.</li></ul> |
+| `destination.segmentAliases` | **Vervangen. Vervangen door`destination.namespaceSegmentAliases`** <br><br> Wijs van publiek IDs in Adobe Experience Platform namespace aan publiekalias in het systeem van de partner toe. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Vervangen. Vervangen door`destination.namespaceSegmentNames`** <br><br>  Wijs van publieksnamen in Adobe Experience Platform namespace aan publieksnamen in het systeem van de partner toe. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **Vervangen. Vervangen door`destination.namespaceSegmentTimestamps`** <br><br> Retourneert de tijd waarop een publiek in UNIX-tijdstempelindeling is gemaakt, bijgewerkt of geactiveerd. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is gemaakt in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is bijgewerkt, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: retourneert de tijd waarop het publiek de id gebruikt `seg-id-1` is geactiveerd naar de bestemming, in UNIX-tijdstempelindeling.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: retourneert de tijd waarop de publieksactivering op de bestemming is bijgewerkt, in UNIX-tijdstempelindeling.</li></ul> |
 
 {style="table-layout:auto"}
 

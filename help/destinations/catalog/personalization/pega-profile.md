@@ -3,7 +3,7 @@ title: Pega Profile Connector
 description: Gebruik de Pega Profile Connector voor Amazon S3 in Adobe Experience Platform om profielgegevens volledig of incrementeel of beide te exporteren naar de Amazon S3-cloudopslag. In de Hub van het Beslissingsbesluit van de Klant van Pega, kunnen de gegevensbanen in de Ontwerper van het Profiel van de Klant worden gepland om profielgegevens van de opslag van Amazon S3 periodiek in te voeren.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platfo
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] biedt ondersteuning voor de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Zie voor meer informatie [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Pega Customer Decision Hub] biedt ondersteuning voor de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Zie voor meer informatie [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving |
 |---|---|

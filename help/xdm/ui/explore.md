@@ -5,7 +5,7 @@ title: De Middelen van het Schema in UI onderzoeken
 description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '954'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Als het veld dat u inspecteert een opsommingsveld is, geeft de rechterspoorstaaf
 
 Wanneer het inspecteren van schema&#39;s die identiteitsgebieden bevatten, zijn deze gebieden vermeld in het linkerspoor onder de klasse of de gebiedsgroep die hen aan het schema verstrekt. Selecteer de naam van het identiteitsveld in de linkerrail om het veld op het canvas weer te geven, ongeacht hoe diep het veld is genest.
 
-Identiteitsvelden worden op het canvas gemarkeerd met een vingerafdrukpictogram (![Pictogramafbeelding voor vingerafdruk](../images/ui/explore/identity-symbol.png)). Als u de naam van het identiteitsveld selecteert, kunt u aanvullende informatie weergeven, zoals de [naamruimte identity](../../identity-service/namespaces.md) en of het veld de primaire identiteit voor het schema is.
+Identiteitsvelden worden op het canvas gemarkeerd met een vingerafdrukpictogram (![Pictogramafbeelding voor vingerafdruk](../images/ui/explore/identity-symbol.png)). Als u de naam van het identiteitsveld selecteert, kunt u aanvullende informatie weergeven, zoals de [naamruimte identity](../../identity-service/features/namespaces.md) en of het veld de primaire identiteit voor het schema is.
 
 ![](../images/ui/explore/identity-field.png)
 

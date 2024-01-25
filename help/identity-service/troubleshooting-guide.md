@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Handleiding voor probleemoplossing voor identiteitsservice
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2166'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor het oplossen van problemen met identiteitsservice
 
-Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service]en een gids voor probleemoplossing voor algemene fouten. Voor vragen en problemen met betrekking tot [!DNL Platform] API&#39;s in het algemeen, raadpleegt u de [Handleiding voor problemen met de Adobe Experience Platform API](../landing/troubleshooting.md).
+Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service]en een gids voor probleemoplossing voor algemene fouten. Voor vragen en problemen met betrekking tot [!DNL Platform] API&#39;s in het algemeen, zie de [Handleiding voor problemen met de Adobe Experience Platform API](../landing/troubleshooting.md).
 
-Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verzamelt deze gefragmenteerde identiteiten, zodat u een volledig inzicht in het gedrag van de klant krijgt zodat u in real-time een ongekende digitale ervaring kunt opdoen. Zie voor meer informatie de [Overzicht van identiteitsservice](./home.md).
+Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verzamelt deze gefragmenteerde identiteiten, zodat u een volledig inzicht in het gedrag van de klant krijgt zodat u in real-time een ongekende digitale ervaring kunt opdoen. Zie de klasse [Overzicht van identiteitsservice](./home.md).
 
 ## Veelgestelde vragen
 
@@ -33,19 +33,19 @@ Door bepaalde gegevensvelden als identiteiten te labelen in uw record- en tijdre
 
 Een bekende identiteit verwijst naar een identiteitswaarde die zelfstandig of met andere informatie kan worden gebruikt om een individuele persoon te identificeren, te contacteren of te bepalen. Voorbeelden van bekende identiteiten zijn bijvoorbeeld e-mailadressen, telefoonnummers en CRM-id&#39;s.
 
-Een anonieme identiteit verwijst naar een identiteitswaarde die niet zelfstandig of met andere informatie kan worden gebruikt om een individuele persoon (zoals een koekjesidentiteitskaart) te identificeren, te contacteren of de plaats te bepalen.
+Een anonieme identiteit verwijst naar een identiteitswaarde die niet zelfstandig of met andere informatie kan worden gebruikt om een individuele persoon (zoals een koekjesidentiteitskaart) te identificeren, te contacteren of te bepalen.
 
 ## Wat is een persoonlijke identiteitsgrafiek?
 
 Een persoonlijke identiteitsgrafiek is een persoonlijke kaart van relaties tussen verbonden en verbonden identiteiten, die alleen zichtbaar is voor uw organisatie.
 
-Wanneer meer dan één identiteit inbegrepen in om het even welke gegevens die van een het stromen eindpunt worden opgenomen of naar een dataset worden verzonden die voor wordt toegelaten [!DNL Identity Service], zijn deze identiteiten gekoppeld in de persoonlijke identiteitsgrafiek. [!DNL Identity Service] gebruikt deze grafiek om een bepaalde consument of entiteit aan de genre identiteiten te helpen, waardoor identiteitsstitching en het samenvoegen van profielen mogelijk worden.
+Wanneer meer dan één identiteit inbegrepen in om het even welke gegevens die van een het stromen eindpunt worden opgenomen of naar een dataset worden verzonden die voor wordt toegelaten [!DNL Identity Service], zijn deze identiteiten gekoppeld in de persoonlijke identiteitsgrafiek. [!DNL Identity Service] gebruikt deze grafiek om een bepaalde consument of entiteit aan de genre identiteiten te binden, waardoor identiteitsstitching en het samenvoegen van profielen mogelijk worden.
 
-## Hoe maak ik veelvoudige identiteitsgebieden binnen een XDM schema?
+## Hoe creeer ik veelvoudige identiteitsgebieden binnen een XDM schema?
 
 [Experience Data Model (XDM)](../xdm/home.md) schema&#39;s ondersteunen meerdere identiteitsvelden. Elk gegevensveld van het type `string` binnen een schema dat de klasse XDM Individual Profile of XDM ExperienceEvent uitvoert kan als identiteitsgebied worden geëtiketteerd. Als deze velden zijn gelabeld, worden alle gegevens in deze velden toegevoegd aan het identiteitsoverzicht van het profiel.
 
-Voor stappen over hoe te om een gebied XDM als identiteitsgebied te etiketteren gebruikend het gebruikersinterface, zie [Identiteitsgedeelte](../xdm/tutorials/create-schema-ui.md) in de zelfstudie Schema-editor. Als u de API gebruikt, raadpleegt u de [Sectie Identiteitsbeschrijving](../xdm/tutorials/create-schema-api.md) in de Schema Registry API zelfstudie.
+Voor stappen over hoe te om een gebied XDM als identiteitsgebied te etiketteren gebruikend het gebruikersinterface, zie [Identiteitsgedeelte](../xdm/tutorials/create-schema-ui.md) in de zelfstudie Schema-editor. Als u de API gebruikt, zie [Sectie Identiteitsbeschrijving](../xdm/tutorials/create-schema-api.md) in de Schema Registry API zelfstudie.
 
 ## Zijn er contexten waarin sommige gebieden niet als identiteiten zouden moeten worden geëtiketteerd?
 
@@ -61,7 +61,7 @@ Met de [`/cluster/members` eindpunt](./api/list-cluster-identites.md) in de iden
 
 Een identiteitsnaamruimte geeft context voor hoe identiteitsvelden betrekking hebben op de identiteit van een klant. Identiteitsvelden onder de naamruimte E-mail moeten bijvoorbeeld een standaard e-mailindeling hebben (naam)<span>@emailprovider.com) terwijl velden die de naamruimte Telefoon gebruiken, moeten voldoen aan een standaardtelefoonnummer (zoals 987-555-1234 in Noord-Amerika).
 
-Naamruimten maken onderscheid tussen vergelijkbare identiteitswaarden tussen verschillende CRM-systemen. Neem bijvoorbeeld een profiel dat een numerieke identificatie bevat die is gekoppeld aan het beloningsprogramma van uw bedrijf. Een naamruimte van &quot;Loyalty&quot; zou deze waarde scheiden van een vergelijkbare numerieke id voor uw eCommerce-systeem dat ook in hetzelfde profiel wordt weergegeven.
+Naamruimten onderscheiden vergelijkbare identiteitswaarden tussen verschillende CRM-systemen. Neem bijvoorbeeld een profiel dat een numerieke identificatie bevat die is gekoppeld aan het beloningsprogramma van uw bedrijf. Een naamruimte van &quot;Loyalty&quot; zou deze waarde scheiden van een vergelijkbare numerieke id voor uw eCommerce-systeem dat ook in hetzelfde profiel wordt weergegeven.
 
 Zie de [Overzicht van naamruimte in identiteit](./home.md) voor meer informatie .
 
@@ -69,19 +69,19 @@ Zie de [Overzicht van naamruimte in identiteit](./home.md) voor meer informatie 
 
 Identiteitsvelden moeten worden gekoppeld aan een bestaande naamruimte voor identiteiten wanneer deze worden gemaakt. Nieuwe naamruimten moeten [gemaakt met de API](#how-do-i-create-a-custom-namespace-for-my-organization) voordat u ze aan identiteitsvelden koppelt.
 
-Voor stapsgewijze instructies voor het definiëren van een naamruimte bij het maken van een identiteitsdescriptor met de API, raadpleegt u de sectie over [een descriptor maken](../xdm/tutorials/create-schema-ui.md) in de de ontwikkelaarsgids van het Registratie van het Schema. Voor het markeren van een schemagebied als identiteit in UI, volg de stappen in [Zelfstudie Schema Editor](../xdm/tutorials/create-schema-api.md).
+Voor stapsgewijze instructies voor het definiëren van een naamruimte bij het maken van een identiteitsdescriptor met de API, raadpleegt u de sectie over [een descriptor maken](../xdm/tutorials/create-schema-ui.md) in de de ontwikkelaarsgids van het Registratie van het Schema. Voor het markeren van een schemagebied als identiteit in UI, volg de stappen in [Zelfstudie Schema-editor](../xdm/tutorials/create-schema-api.md).
 
 ## Wat zijn de standaardnaamruimten van Experience Platform? {#standard-namespaces}
 
-Standaardnaamruimten zijn naamruimten die beschikbaar zijn voor alle organisaties. Zie de [Overzicht van naamruimten](./namespaces.md) voor een volledige lijst met beschikbare standaardnaamruimten.
+Standaardnaamruimten zijn naamruimten die beschikbaar zijn voor alle organisaties. Zie de [Overzicht van naamruimten](./features/namespaces.md) voor een volledige lijst met beschikbare standaardnaamruimten.
 
 ## Waar kan ik de lijst van identiteitsnamespaces beschikbaar voor mijn organisatie vinden?
 
-Met de [Identiteitsservice-API](https://www.adobe.io/experience-platform-apis/references/identity-service), kunt u alle beschikbare naamruimten voor uw organisatie weergeven door een GET-aanvraag in te dienen bij de `/idnamespace/identities` eindpunt. Zie de sectie over [lijst beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice-API voor meer informatie.
+Met de [Identity Service API](https://www.adobe.io/experience-platform-apis/references/identity-service), kunt u alle beschikbare naamruimten voor uw organisatie weergeven door een GET-aanvraag in te dienen bij de `/idnamespace/identities` eindpunt. Zie de sectie over [lijst met beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice-API voor meer informatie.
 
 ## Hoe maak ik een aangepaste naamruimte voor mijn organisatie?
 
-Met de [Identiteitsservice-API](https://www.adobe.io/experience-platform-apis/references/identity-service)kunt u een aangepaste naamruimte voor uw organisatie maken door een POST aan te vragen bij de `/idnamespace/identities` eindpunt. Zie de sectie over [een aangepaste naamruimte maken](./api/create-custom-namespace.md) in het overzicht van de Identiteitsservice-API voor meer informatie.
+Met de [Identity Service API](https://www.adobe.io/experience-platform-apis/references/identity-service)kunt u een aangepaste naamruimte voor uw organisatie maken door een POST aan te vragen bij de `/idnamespace/identities` eindpunt. Zie de sectie over [een aangepaste naamruimte maken](./api/create-custom-namespace.md) in het overzicht van de Identiteitsservice-API voor meer informatie.
 
 ## Wat zijn samengestelde identiteiten en XIDs?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## Waarom heb ik geen toegang tot de pagina of API&#39;s van de identiteitsgrafiek?
 
-De beheerder van het Platform moet u voorzien van `view-identity-graph` toestemming om identiteitsgrafiekgegevens weer te geven. Zonder deze toestemming, zult u een toestemmingsontkend bericht op de pagina van de kijker van de identiteitsgrafiek en wanneer het roepen van Platform APIs ontvangen. Zie de [toegangsbeheer](../access-control/home.md) voor meer informatie over machtigingen.
+Uw beheerder van het Platform moet u voorzien van `view-identity-graph` toestemming om identiteitsgrafiekgegevens weer te geven. Zonder deze toestemming, zult u een toestemmingsontkend bericht op de pagina van de kijker van de identiteitsgrafiek en wanneer het roepen van Platform APIs ontvangen. Zie de [toegangsbeheer](../access-control/home.md) voor meer informatie over machtigingen.
 
 ## Problemen oplossen
 
@@ -294,7 +294,7 @@ Hieronder volgt een lijst met foutberichten die betrekking hebben op [!DNL Ident
 }
 ```
 
-[!DNL Identity Service] alleen identiteiten verbruikt voor record- of tijdreeksgegevens die voldoen aan de [!DNL Profile] of [!DNL ExperienceEvent] , respectievelijk. Gegevens invoeren voor [!DNL Identity Service] die zich niet aan een van beide klassen houdt, zal deze fout veroorzaken.
+[!DNL Identity Service] alleen identiteiten verbruikt voor record- of tijdreeksgegevens die voldoen aan de [!DNL Profile] of [!DNL ExperienceEvent] , respectievelijk. Gegevens invoeren voor [!DNL Identity Service] die zich niet aan een van beide klassen houdt, zal deze fout teweegbrengen.
 
 ### Er waren 0 geldige identiteiten in de eerste 100 rijen van de verwerkte partij
 

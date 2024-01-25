@@ -2,9 +2,9 @@
 title: Identiteitsverwerking in de workflow voor doelactivering
 description: Leer hoe identiteitsexport wordt verwerkt in de activeringsworkflow, afhankelijk van het doeltype
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Elke bestemming in de [catalogus](/help/destinations/catalog/overview.md) is lic
 
 Voor [bestandsgebaseerde doelen](/help/destinations/destination-types.md#file-based) (bijvoorbeeld [!DNL Amazon S3], SFTP, de meeste e-mailmarketing bestemmingen zoals [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), is de identiteitsopstelling in de meeste van deze bestemmingen open, betekenend dat u om het even welke identiteit in niet moet selecteren [Kenmerken selecteren](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) stap van de batchactiveringsworkflow.
 
-Als u ervoor kiest id&#39;s toe te voegen aan uw geëxporteerde bestanden, moet u niet vergeten dat er slechts één identiteit uit het menu [naamruimte identity](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) kan worden geselecteerd in een exportbewerking. Wanneer u een identiteit selecteert om te exporteren, wordt deze automatisch geselecteerd als een [mandatory, kenmerk](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) en [deduplicatie-sleutel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+Als u ervoor kiest id&#39;s toe te voegen aan uw geëxporteerde bestanden, moet u niet vergeten dat er slechts één identiteit uit het menu [naamruimte identity](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) kan worden geselecteerd in een exportbewerking. Wanneer u een identiteit selecteert om te exporteren, wordt deze automatisch geselecteerd als een [mandatory, kenmerk](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) en [deduplicatie-sleutel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![Een identiteit die is geselecteerd als verplicht kenmerk en een deduplicatietoets.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

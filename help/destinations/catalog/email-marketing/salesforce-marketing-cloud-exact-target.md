@@ -2,7 +2,7 @@
 title: (API) Verbinding met Salesforce-Marketing Cloud
 description: Met de Salesforce-Marketing Cloud (voorheen ExactTarget genoemd) kunt u uw accountgegevens exporteren en activeren binnen de Salesforce-Marketing Cloud voor uw zakelijke behoeften.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2803'
 ht-degree: 0%
@@ -125,7 +125,7 @@ Noteer de onderstaande items voordat u deze verifieert voor de [!DNL (API) Sales
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL (API) Salesforce Marketing Cloud] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL (API) Salesforce Marketing Cloud] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

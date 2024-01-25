@@ -2,9 +2,9 @@
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van het Experience Platform worden gesteund.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2931'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Met betrekking tot de gegevens die voor een bepaald profiel worden geëxporteerd
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen publiek de status wijzigt (van `null` tot `realized` of van `realized` tot `exiting`) of toegewezen kenmerken worden bijgewerkt, wordt een doelexport uitgeschakeld.</li><li>Een wijziging in het identiteitsoverzicht wordt gedefinieerd als een identiteit die wordt toegevoegd/verwijderd voor de [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md) van het profiel, voor naamruimten die zijn toegewezen voor exporteren.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, voor kenmerken die aan het doel zijn toegewezen.</li></ul> | <ul><li>Het publiek dat aan de bestemming in kaart wordt gebracht en is veranderd zal in omvatten `segmentMembership` object. In sommige scenario&#39;s zouden zij gebruikend veelvoudige vraag kunnen worden uitgevoerd. Ook, in sommige scenario&#39;s, zouden sommige publiek dat niet is veranderd in de vraag ook kunnen worden omvat. In elk geval worden alleen toegewezen soorten publiek geëxporteerd.</li><li>Alle identiteiten van namespaces die aan de bestemming in in kaart worden gebracht `identityMap` -object wordt ook opgenomen.</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen publiek de status wijzigt (van `null` tot `realized` of van `realized` tot `exiting`) of toegewezen kenmerken worden bijgewerkt, wordt een doelexport uitgeschakeld.</li><li>Een wijziging in het identiteitsoverzicht wordt gedefinieerd als een identiteit die wordt toegevoegd/verwijderd voor de [identiteitsgrafiek](/help/identity-service/features/identity-graph-viewer.md) van het profiel, voor naamruimten die zijn toegewezen voor exporteren.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, voor kenmerken die aan het doel zijn toegewezen.</li></ul> | <ul><li>Het publiek dat aan de bestemming in kaart wordt gebracht en is veranderd zal in omvatten `segmentMembership` object. In sommige scenario&#39;s zouden zij gebruikend veelvoudige vraag kunnen worden uitgevoerd. Ook, in sommige scenario&#39;s, zouden sommige publiek dat niet is veranderd in de vraag ook kunnen worden omvat. In elk geval worden alleen toegewezen soorten publiek geëxporteerd.</li><li>Alle identiteiten van namespaces die aan de bestemming in in kaart worden gebracht `identityMap` -object wordt ook opgenomen.</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -147,7 +147,7 @@ In alle bovenstaande exportsituaties bevatten de geëxporteerde bestanden de pro
 
 Niet alle updates op een profiel kwalificeren een profiel dat moet worden opgenomen in incrementele bestandsexport. Als bijvoorbeeld een kenmerk is toegevoegd aan of verwijderd uit een profiel, wordt het profiel niet opgenomen in de exportbewerking. Alleen profielen waarvoor de `segmentMembership` Het kenmerk is gewijzigd, wordt opgenomen in geëxporteerde bestanden. Met andere woorden, alleen als het profiel onderdeel wordt van het publiek of uit het publiek wordt verwijderd, wordt het opgenomen in incrementele exportbewerkingen.
 
-En als een nieuwe identiteit (nieuw e-mailadres, telefoonnummer, ECID enzovoort) wordt toegevoegd aan een profiel in het dialoogvenster [identiteitsgrafiek](/help/identity-service/ui/identity-graph-viewer.md), die geen reden is om het profiel op te nemen in een nieuwe incrementele bestandsuitvoer.
+En als een nieuwe identiteit (nieuw e-mailadres, telefoonnummer, ECID enzovoort) wordt toegevoegd aan een profiel in het dialoogvenster [identiteitsgrafiek](/help/identity-service/features/identity-graph-viewer.md), die geen reden is om het profiel op te nemen in een nieuwe incrementele bestandsuitvoer.
 
 Als een nieuw publiek aan een bestemmingstoewijzing wordt toegevoegd, beïnvloedt dat geen kwalificaties en de uitvoer voor een ander segment. De programma&#39;s van de uitvoer worden gevormd individueel per publiek en de dossiers worden afzonderlijk uitgevoerd voor elk segment, zelfs als het publiek aan de zelfde bestemmingsdataflow is toegevoegd.
 

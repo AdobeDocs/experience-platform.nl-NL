@@ -2,7 +2,7 @@
 title: Verbinding met PEGA-client-beslissingshub
 description: Gebruik de bestemming van de Hub van het Beslissingshub van de Klant van Pega in Adobe Experience Platform om profielattributen en gegevens van het publiekslidmaatschap naar de Hub van het Besluit van de Klant van Pega voor volgende-best-actie beslissing te verzenden.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Voordat u deze bestemming kunt gebruiken om gegevens uit Adobe Experience Platfo
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] biedt ondersteuning voor de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Zie voor meer informatie [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Pega Customer Decision Hub] biedt ondersteuning voor de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Zie voor meer informatie [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving |
 |---|---|

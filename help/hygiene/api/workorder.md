@@ -2,9 +2,9 @@
 title: Eindpunt van API voor werkvolgorde
 description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor identiteiten programmatically te beheren.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ curl -X POST \
 | `datasetId` | Als u uit één enkele dataset schrapt, moet deze waarde identiteitskaart van de dataset in kwestie zijn. Als u uit alle datasets schrapt, plaats de waarde aan `ALL`.<br><br>Als u één enkele dataset specificeert, moet het bijbehorende schema van de Gegevens van de Ervaring van de dataset van het Model (XDM) een primaire bepaalde identiteit hebben. Als de dataset geen primaire identiteit heeft, dan moet het een identiteitskaart hebben om door een verzoek van de Levenscyclus van Gegevens te worden gewijzigd.<br>Als er een identiteitsoverzicht bestaat, wordt deze weergegeven als een veld op hoofdniveau met de naam `identityMap`.<br>Merk op dat een datasetrij vele identiteiten in zijn identiteitskaart kan hebben, maar slechts één kan als primair worden gemerkt. `"primary": true` moet worden opgenomen om de `id` om overeen te komen met een primaire identiteit. |
 | `displayName` | De weergavenaam voor het verzoek om het verwijderen van records. |
 | `description` | Een beschrijving voor het verzoek om record te verwijderen. |
-| `identities` | Een array met de identiteiten van ten minste één gebruiker van wie u de gegevens wilt verwijderen. Elke identiteit bestaat uit een [naamruimte identity](../../identity-service/namespaces.md) en een waarde:<ul><li>`namespace`: Bevat één tekenreekseigenschap, `code`, die staat voor de naamruimte identity. </li><li>`id`: De identiteitswaarde.</ul>Indien `datasetId` geeft één gegevensset aan, elke entiteit onder `identities` moet dezelfde naamruimte gebruiken als de primaire identiteit van het schema.<br><br>Indien `datasetId` is ingesteld op `ALL`de `identities` array is niet beperkt tot één naamruimte omdat elke dataset anders kan zijn. Uw verzoeken blijven echter beperkt tot de naamruimten die beschikbaar zijn voor uw organisatie, zoals gerapporteerd door [Identiteitsservice](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | Een array met de identiteiten van ten minste één gebruiker van wie u de gegevens wilt verwijderen. Elke identiteit bestaat uit een [naamruimte identity](../../identity-service/features/namespaces.md) en een waarde:<ul><li>`namespace`: Bevat één tekenreekseigenschap, `code`, die staat voor de naamruimte identity. </li><li>`id`: De identiteitswaarde.</ul>Indien `datasetId` geeft één gegevensset aan, elke entiteit onder `identities` moet dezelfde naamruimte gebruiken als de primaire identiteit van het schema.<br><br>Indien `datasetId` is ingesteld op `ALL`de `identities` array is niet beperkt tot één naamruimte omdat elke dataset anders kan zijn. Uw verzoeken blijven echter beperkt tot de naamruimten die beschikbaar zijn voor uw organisatie, zoals gerapporteerd door [Identiteitsservice](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 

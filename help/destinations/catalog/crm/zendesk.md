@@ -3,7 +3,7 @@ title: Zendesk-verbinding
 description: Met de Zendesk-bestemming kunt u uw accountgegevens exporteren en activeren in Zendesk voor uw zakelijke behoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 1%
@@ -48,7 +48,7 @@ De [Prijs- en snelheidslimieten](https://developer.zendesk.com/api-reference/sal
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Zendesk] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Zendesk] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Voorbeeld | Beschrijving | Verplicht |
 |---|---|---|---|

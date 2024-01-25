@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Voorbeeld van voorbeeldstatus (profiel voorvertoning) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2863'
+source-wordcount: '2901'
 ht-degree: 0%
 
 ---
@@ -208,7 +208,7 @@ De reactie omvat een `data` array, die een lijst met gegevenssetobjecten bevat. 
 
 U kunt een verzoek van de GET tot uitvoeren `/previewsamplestatus/report/namespace` eindpunt om de uitsplitsing naar naamruimte van de identiteit in alle samengevoegde profielen in uw profielarchief weer te geven. Dit omvat zowel de standaardidentiteiten die door Adobe worden verstrekt, als de douaneidentiteiten die door uw organisatie worden bepaald.
 
-Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Om meer te leren, begin door te lezen [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md).
+Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Om meer te leren, begin door te lezen [Overzicht van naamruimte in identiteit](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ De reactie omvat een `data` array, met afzonderlijke objecten die de details voo
 | `fullIDsFragmentCount` | Het totale aantal profielfragmenten in de naamruimte. |
 | `fullIDsCount` | Het totale aantal samengevoegde profielen in de naamruimte. |
 | `fullIDsPercentage` | De `fullIDsCount` als percentage van het totale aantal samengevoegde profielen (de `totalRows` waarde die wordt geretourneerd in het dialoogvenster [status laatste sample](#view-last-sample-status)), uitgedrukt in decimale notatie. |
-| `code` | De `code` voor de naamruimte. Dit is te vinden wanneer u met naamruimten werkt met de opdracht [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) en wordt ook aangeduid als de [!UICONTROL Identity symbol] in de gebruikersinterface van het Experience Platform. Ga voor meer informatie naar de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md). |
+| `code` | De `code` voor de naamruimte. Dit is te vinden wanneer u met naamruimten werkt met de opdracht [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) en wordt ook aangeduid als de [!UICONTROL Identity symbol] in de gebruikersinterface van het Experience Platform. Ga voor meer informatie naar de [Overzicht van naamruimte in identiteit](../../identity-service/features/namespaces.md). |
 | `value` | De `id` waarde voor de naamruimte. Dit is te vinden wanneer u met naamruimten werkt met de opdracht [Identity Service API](../../identity-service/api/list-namespaces.md). |
 
 ## Genereer het overlappingsrapport voor de gegevensset
@@ -444,7 +444,7 @@ Een succesvol verzoek retourneert HTTP Status 200 (OK) en de naamruimte overlapt
 | Eigenschap | Beschrijving |
 |---|---|
 | `data` | De `data` Het object bevat door komma&#39;s gescheiden lijsten met unieke combinaties van naamruimtecodes en hun respectievelijke profielaantallen. |
-| Namespace-codes | De `code` is een kort formulier voor elke naamruimtenaam van een identiteit. Een afbeelding van elk `code` aan het `name` kan worden gevonden met de [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). De `code` wordt ook aangeduid als de [!UICONTROL Identity symbol] in de gebruikersinterface van het Experience Platform. Ga voor meer informatie naar de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md). |
+| Namespace-codes | De `code` is een kort formulier voor elke naamruimtenaam van een identiteit. Een afbeelding van elk `code` aan het `name` kan worden gevonden met de [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). De `code` wordt ook aangeduid als de [!UICONTROL Identity symbol] in de gebruikersinterface van het Experience Platform. Ga voor meer informatie naar de [Overzicht van naamruimte in identiteit](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | De tijdstempel van het rapport. Indien een `date` parameter werd verstrekt tijdens het verzoek, is het teruggekeerde rapport voor de verstrekte datum. Indien niet `date` parameter wordt verstrekt, is het meest recente rapport teruggekeerd. |
 
 ### Rapport voor overlappende naamruimte interpreteren

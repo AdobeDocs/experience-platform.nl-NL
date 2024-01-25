@@ -2,9 +2,9 @@
 title: Overzicht controlelogboeken
 description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe Experience Platform heeft uitgevoerd.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1261'
 ht-degree: 3%
 
 ---
@@ -50,8 +50,8 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 | [Datatypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Bestemming](../../../destinations/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>Gegevensset activeren</li><li>Gegevensset verwijderen</li><li>Profiel activeren</li><li>Profiel verwijderen</li></ul> |
 | [Veldgroep](../../../xdm/schema/composition.md#field-group) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [Identiteitsgrafiek](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Weergave</li></ul> |
-| [Naamruimte identiteit](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Maken</li><li>Bijwerken</li></ul> |
+| [Identiteitsgrafiek](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Weergave</li></ul> |
+| [Naamruimte identiteit](../../../identity-service/features/namespaces.md) | <ul><li>Maken</li><li>Bijwerken</li></ul> |
 | [Samenvoegbeleid](../../../profile/merge-policies/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Productprofiel](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Uitvoeren</li></ul> |

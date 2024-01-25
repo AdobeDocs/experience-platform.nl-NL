@@ -2,9 +2,9 @@
 title: Records verwijderen
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Voor het verwijderen van records moet u goed begrijpen hoe identiteitsvelden in 
 Raadpleeg de volgende documentatie voor meer informatie over identiteiten in Platform:
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bruggen identiteiten over apparaten en systemen, die datasets verbinden samen op de identiteitsgebieden worden gebaseerd die door de schema&#39;s XDM worden bepaald zij met in overeenstemming zijn.
-* [Identiteitsnaamruimten](../../identity-service/namespaces.md): Naamruimten voor identiteiten definiëren de verschillende typen of identiteitsgegevens die betrekking kunnen hebben op één persoon en die een vereiste component zijn voor elk identiteitsveld.
+* [Identiteitsnaamruimten](../../identity-service/features/namespaces.md): Naamruimten voor identiteiten definiëren de verschillende typen of identiteitsgegevens die betrekking kunnen hebben op één persoon en die een vereiste component zijn voor elk identiteitsveld.
 * [Klantprofiel in realtime](../../profile/home.md): Hiermee gebruikt u identiteitsgrafieken om uniforme consumentenprofielen te bieden op basis van geaggregeerde gegevens van meerdere bronnen, die in vrijwel realtime zijn bijgewerkt.
 * [Experience Data Model (XDM)](../../xdm/home.md): Verstrekt standaarddefinities en structuren voor de gegevens van het Platform door het gebruik van schema&#39;s. Alle datasets van het Platform zijn in overeenstemming met een specifiek schema XDM, en het schema bepaalt welke gebieden identiteiten zijn.
 * [Identiteitsvelden](../../xdm/ui/fields/identity.md): Leer hoe een identiteitsveld wordt gedefinieerd in een XDM-schema.

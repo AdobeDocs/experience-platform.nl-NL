@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met streaming-inname
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1020'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor het oplossen van problemen bij het streamen
 
-In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform. Voor vragen en problemen met betrekking tot andere problemen [!DNL Platform] services, inclusief services die overal worden aangetroffen [!DNL Platform] API&#39;s, raadpleeg de [Handleiding voor het oplossen van problemen met Experience Platforms](../../landing/troubleshooting.md).
+In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform. Voor vragen en problemen met betrekking tot andere [!DNL Platform] services, inclusief services die overal worden aangetroffen [!DNL Platform] API&#39;s, raadpleeg de [Handleiding voor het oplossen van problemen met Experience Platforms](../../landing/troubleshooting.md).
 
-Adobe Experience Platform [!DNL Data Ingestion] biedt RESTful-API&#39;s die u kunt gebruiken om gegevens in te voeren [!DNL Experience Platform]. De opgenomen gegevens worden gebruikt om individuele klantenprofielen in bijna real time bij te werken, toestaand u om gepersonaliseerde, relevante ervaringen over veelvoudige kanalen te leveren. Lees de [Overzicht van gegevensinname](../home.md) voor meer informatie over de dienst en de verschillende innamemethoden. Voor stappen over het gebruik van streaming opname-API&#39;s leest u de [overzicht van streaming opname](../streaming-ingestion/overview.md).
+Adobe Experience Platform [!DNL Data Ingestion] biedt RESTful-API&#39;s die u kunt gebruiken om gegevens in te voeren [!DNL Experience Platform]. De opgenomen gegevens worden gebruikt om individuele klantenprofielen in bijna real time bij te werken, toestaand u om gepersonaliseerde, relevante ervaringen over veelvoudige kanalen te leveren. Lees de [Overzicht van gegevensinname](../home.md) voor meer informatie over de dienst en de verschillende innamemethoden. Voor stappen over het gebruik van streaming opname-API&#39;s leest u de [overzicht van het opnemen van streaming](../streaming-ingestion/overview.md).
 
 ## Veelgestelde vragen
 
@@ -63,11 +63,11 @@ Als uw gegevens niet zijn ingevoerd en u wilt deze herstellen van [!DNL Platform
 
 ### Waarom zijn mijn streaminggegevens niet beschikbaar in het Data Lake?
 
-Er zijn diverse redenen waarom het niet mogelijk is dat de ingestie van de partij de [!DNL Data Lake], zoals ongeldige opmaak, ontbrekende gegevens of systeemfouten. Om te bepalen waarom de batch is mislukt, moet u de batch ophalen met de [!DNL Data Ingestion Service API] en bekijk de details. Voor gedetailleerde stappen bij het terugwinnen van een ontbroken partij, zie de gids op [ophalen van mislukte batches](../quality/retrieve-failed-batches.md).
+Er zijn diverse redenen waarom het niet mogelijk is dat de ingestie van de partij de [!DNL Data Lake], zoals ongeldige opmaak, ontbrekende gegevens of systeemfouten. Om te bepalen waarom de batch is mislukt, moet u de batch ophalen met de [!DNL Data Ingestion Service API] en bekijk de details. Zie de handleiding voor gedetailleerde stappen voor het ophalen van een mislukte batch [ophalen van mislukte batches](../quality/retrieve-failed-batches.md).
 
 ### Hoe parseer ik de reactie die voor het API verzoek is teruggekeerd?
 
-U kunt een reactie parseren door eerst de antwoordcode van de server te controleren om te bepalen of uw verzoek werd goedgekeurd. Als een geslaagde antwoordcode wordt geretourneerd, kunt u de `responses` matrixobject om de status van de ingangstaak te bepalen.
+U kunt een reactie parseren door eerst de antwoordcode van de server te controleren om te bepalen of uw verzoek werd goedgekeurd. Als een geslaagde antwoordcode wordt geretourneerd, kunt u vervolgens de `responses` matrixobject om de status van de ingangstaak te bepalen.
 
 Een geslaagde API-aanvraag voor één bericht retourneert statuscode 200. Een geslaagde (of gedeeltelijk succesvolle) API-aanvraag voor berichten in batches retourneert statuscode 207.
 
@@ -97,6 +97,6 @@ De volgende JSON is een voorbeeld van een reactieobject voor een API-aanvraag me
 
 Indien [!DNL Real-Time Customer Profile] Hiermee wordt een bericht afgewezen. Dit is vooral te wijten aan onjuiste identiteitsgegevens. Dit kan het resultaat zijn van het opgeven van een ongeldige waarde of naamruimte voor een identiteit.
 
-Er zijn twee typen naamruimten: standaard en aangepast. Wanneer u aangepaste naamruimten gebruikt, moet u ervoor zorgen dat de naamruimte is geregistreerd binnen [!DNL Identity Service]. Zie de [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md) voor meer informatie over het gebruik van standaard- en aangepaste naamruimten.
+Er zijn twee typen naamruimten: standaard en aangepast. Wanneer u aangepaste naamruimten gebruikt, moet u ervoor zorgen dat de naamruimte is geregistreerd binnen [!DNL Identity Service]. Zie de [Overzicht van naamruimte in identiteit](../../identity-service/features/namespaces.md) voor meer informatie over het gebruik van standaard- en aangepaste naamruimten.
 
 U kunt de [[!DNL Experience Platform UI]](https://platform.adobe.com) om meer informatie te zien over waarom een bericht ontbrak het opnemen. Klikken **[!UICONTROL Monitoring]** in de linkernavigatie, dan bekijk **[!UICONTROL Streaming end-to-end]** om berichtenbatches te bekijken die tijdens een geselecteerde tijdsperiode zijn gestreamd.

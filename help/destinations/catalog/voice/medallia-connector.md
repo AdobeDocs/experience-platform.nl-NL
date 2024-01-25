@@ -2,7 +2,7 @@
 title: verbinding met Medallia
 description: Activeer profielen voor gerichte Media enquêtes en koppel inzameling terug om klantenbehoeften en verwachtingen beter te begrijpen.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Werk samen met uw Media-leveringsteam om deze gegevens te verkrijgen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Medallia ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+Medallia ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

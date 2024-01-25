@@ -4,7 +4,7 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4324'
 ht-degree: 0%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Beschikbare identiteiten weergeven die moeten worden gebruikt in het invoerschema
 
-De reactie retourneert de identiteiten die u kunt gebruiken bij het maken van het invoerschema. Merk op dat deze reactie beide retourneert [standaard](/help/identity-service/namespaces.md#standard) en [aangepast](/help/identity-service/namespaces.md#manage-namespaces) naamruimten die u instelt in Experience Platform.
+De reactie retourneert de identiteiten die u kunt gebruiken bij het maken van het invoerschema. Merk op dat deze reactie beide retourneert [standaard](/help/identity-service/features/namespaces.md#standard) en [aangepast](/help/identity-service/features/namespaces.md#manage-namespaces) naamruimten die u instelt in Experience Platform.
 
 ```json
 [

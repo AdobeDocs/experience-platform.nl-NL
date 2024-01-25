@@ -4,7 +4,7 @@ title: Identiteiten in Real-time Customer Data Platform
 description: Met de Adobe Experience Platform Identity Service kunt u uw klanten en hun gedrag beter zien door identiteiten tussen apparaten en systemen te combineren.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Nu, in plaats van vijf afzonderlijke klanten die met uw merk over vijf verschill
 
 ## Identiteitsnaamruimten
 
-Identiteitsnaamruimten zijn een component van [!DNL Identity Service] en dienen als indicatoren die extra context aan klantenidentiteiten verstrekken. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. [!DNL Experience Platform] kunt u id-naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Voor meer informatie over het weergeven van profielen raadpleegt u de [bladeroverzicht van profiel](profile-browse.md). Zie voor meer informatie over naamruimten de categorie [Overzicht van naamruimte in identiteit](../../identity-service/namespaces.md).
+Identiteitsnaamruimten zijn een component van [!DNL Identity Service] en dienen als indicatoren die extra context aan klantenidentiteiten verstrekken. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. [!DNL Experience Platform] kunt u id-naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Voor meer informatie over het weergeven van profielen raadpleegt u de [bladeroverzicht van profiel](profile-browse.md). Zie voor meer informatie over naamruimten de categorie [Overzicht van naamruimte in identiteit](../../identity-service/features/namespaces.md).
 
 ## Identiteitsgrafieken
 

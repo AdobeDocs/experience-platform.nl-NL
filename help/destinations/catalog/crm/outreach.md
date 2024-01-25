@@ -3,7 +3,7 @@ keywords: crm;CRM;crm bestemmingen;Outreach;Outreach crm destination
 title: Verbinding buiten bereik
 description: Met de Outreach-bestemming kunt u uw accountgegevens exporteren en deze activeren binnen Outreach voor uw bedrijfsbehoeften.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Zie de [[!DNL Outreach] documentatie](https://api.outreach.io/api/v2/docs#rate-l
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Outreach] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Outreach] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

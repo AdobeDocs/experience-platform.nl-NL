@@ -3,7 +3,7 @@ keywords: mobiel; bruin; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Als markator wil ik gebruikers in een mobiele betrokkenheidsbestemming als doel 
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| external_id | Aangepast [!DNL Braze] id die het toewijzen van om het even welke identiteit steunt. | U kunt elke [identiteit](../../../identity-service/namespaces.md) aan de [!DNL Braze] doel, zolang u het aan de [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Aangepast [!DNL Braze] id die het toewijzen van om het even welke identiteit steunt. | U kunt elke [identiteit](../../../identity-service/features/namespaces.md) aan de [!DNL Braze] doel, zolang u het aan de [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

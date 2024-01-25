@@ -2,7 +2,7 @@
 title: Magnetische Inc-verbinding
 description: Leer hoe u verbinding maakt met het Snapchat Ads Platform en uw publiek exporteert vanuit Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Als u deze bestemming wilt gebruiken, moet u een account voor Snapchat Ads hebbe
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De *Magnetische Inc.* doel ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+De *Magnetische Inc.* doel ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 Alle id&#39;s die naar de *Magnetische Inc.* het doel moet worden gehasht in formaat SHA-256. Om gewone tekstherkenningstekens te hakken alvorens hen naar de bestemming te verzenden, controleer **[!UICONTROL Apply transformation]** optie bij het toewijzen van doel-id&#39;s voor het doel.
 

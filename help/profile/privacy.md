@@ -5,9 +5,9 @@ title: Privacy-aanvraagverwerking in realtime-klantprofiel
 type: Documentation
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-Time Klantprofiel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Identity Service] brugt de gegevens van de klant
 
 De Dienst van de identiteit handhaaft een opslag van globaal bepaalde (standaard) en user-defined (douane) identiteitsnamespaces. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
-Voor meer informatie over naamruimten in [!DNL Experience Platform], zie de [Overzicht van naamruimte in identiteit](../identity-service/namespaces.md).
+Voor meer informatie over naamruimten in [!DNL Experience Platform], zie de [Overzicht van naamruimte in identiteit](../identity-service/features/namespaces.md).
 
 ## Verzoeken indienen {#submit}
 

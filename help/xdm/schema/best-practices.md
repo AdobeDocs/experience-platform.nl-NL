@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3083'
 ht-degree: 0%
@@ -206,7 +206,7 @@ Als u niet zeker bent of een bepaald gebied noodzakelijk is om in een schema te 
 
 In Experience Platform, worden de gebieden XDM duidelijk als identiteiten gebruikt om informatie over individuele klanten te verbinden die uit veelvoudige gegevensbronnen komen. Hoewel een schema meerdere velden kan hebben die zijn gemarkeerd als identiteiten, moet één primaire identiteit worden gedefinieerd om het schema in te schakelen [!DNL Real-Time Customer Profile]. Zie de sectie over [identiteitsvelden](./composition.md#identity) in de grondbeginselen van schemacompositie voor meer gedetailleerde informatie over het gebruiksgeval van deze gebieden.
 
-Wanneer het ontwerpen van uw schema&#39;s, zijn om het even welke primaire sleutels in uw relationele gegevensbestandlijsten waarschijnlijk kandidaten voor primaire identiteiten. Andere voorbeelden van toepasselijke identiteitsvelden zijn e-mailadressen van klanten, telefoonnummers, account-id&#39;s en [ECID](../../identity-service/ecid.md).
+Wanneer het ontwerpen van uw schema&#39;s, zijn om het even welke primaire sleutels in uw relationele gegevensbestandlijsten waarschijnlijk kandidaten voor primaire identiteiten. Andere voorbeelden van toepasselijke identiteitsvelden zijn e-mailadressen van klanten, telefoonnummers, account-id&#39;s en [ECID](../../identity-service/features/ecid.md).
 
 ### Toepassingsschema-veldgroepen Adoben {#adobe-application-schema-field-groups}
 

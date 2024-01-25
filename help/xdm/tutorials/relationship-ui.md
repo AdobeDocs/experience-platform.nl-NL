@@ -5,9 +5,9 @@ title: Een relatie tussen twee schema's definiëren met de Schema-editor
 description: Dit document verstrekt een zelfstudie voor het bepalen van een verband tussen twee schema's gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Het referentieschema &quot;[!DNL Hotels]&quot; is gebaseerd op een aangepaste &q
 
 >[!NOTE]
 >
->Als u wilt leren hoe u aangepaste naamruimten kunt maken, raadpleegt u de [Identiteitsdocumentatie](../../identity-service/namespaces.md#manage-namespaces).
+>Als u wilt leren hoe u aangepaste naamruimten kunt maken, raadpleegt u de [Identiteitsdocumentatie](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Een relatieveldgroep maken
 

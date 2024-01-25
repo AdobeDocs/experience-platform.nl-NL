@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Handleiding voor Attribution AI UI
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2392'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteer
 
 >[!NOTE]
 >
-> Als er geen geldig identiteitstype (naamruimte) bestaat voor een gegevensset, moet u een primaire identiteit instellen en deze toewijzen aan een naamruimte voor identiteit met behulp van de [schema-editor](../../xdm/schema/composition.md#identity). Ga voor meer informatie over naamruimten en identiteiten naar de [Naamruimten identiteitsservice](../../identity-service/namespaces.md) documentatie.
+> Als er geen geldig identiteitstype (naamruimte) bestaat voor een gegevensset, moet u een primaire identiteit instellen en deze toewijzen aan een naamruimte voor identiteit met behulp van de [schema-editor](../../xdm/schema/composition.md#identity). Ga voor meer informatie over naamruimten en identiteiten naar de [Naamruimten identiteitsservice](../../identity-service/features/namespaces.md) documentatie.
 
 ## Media-kanaal en campagnevelden toewijzen {#aai-mapping}
 

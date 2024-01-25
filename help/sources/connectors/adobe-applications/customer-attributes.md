@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van de Source Connector voor klantkenmerken
 description: Leer hoe u klantkenmerken met behulp van API's of de gebruikersinterface kunt verbinden met Adobe Experience Platform
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ De [!DNL Customer Attributes] De bron leidt automatisch tot de dataset voor gege
 
 ## Identiteiten
 
-De primaire identiteit van een dataset is bevat in de eerste kolom van het Csv- dossier van de brongegevens. De [!DNL Customer Attributes] de bron veronderstelt dat de identiteit altijd aan in kaart wordt gebracht [`CORE` namespace](../../../identity-service/namespaces.md), een door het systeem gegenereerde naamruimte die door [[!DNL Identity Service]](../../../identity-service/home.md).
+De primaire identiteit van een dataset is bevat in de eerste kolom van het Csv- dossier van de brongegevens. De [!DNL Customer Attributes] de bron veronderstelt dat de identiteit altijd aan in kaart wordt gebracht [`CORE` namespace](../../../identity-service/features/namespaces.md), een door het systeem gegenereerde naamruimte die door [[!DNL Identity Service]](../../../identity-service/home.md).
 
 U kunt geen bestaande naamruimte voor de identiteit selecteren wanneer u [!DNL Customer Attributes] bron omdat [!DNL Customer Attributes] veronderstelt dat de primaire identiteit voor het schema altijd in de identiteitskaart is. [!DNL Customer Attributes] maakt vervolgens op geautomatiseerde wijze de toewijzing van de bron-id aan de UUID van de identiteitskaart.
 

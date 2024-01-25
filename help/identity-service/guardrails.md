@@ -3,7 +3,7 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 0%
@@ -186,7 +186,7 @@ Ten slotte levert het verwijderingsproces twee kleinere grafieken op.
 Zie de volgende documentatie voor meer informatie over [!DNL Identity Service]:
 
 * [[!DNL Identity Service]-overzicht](home.md)
-* [Naamgrafiekviewer](ui/identity-graph-viewer.md)
+* [Naamgrafiekviewer](features/identity-graph-viewer.md)
 
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 

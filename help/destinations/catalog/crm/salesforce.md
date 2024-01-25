@@ -3,7 +3,7 @@ keywords: crm;CRM;crm bestemmingen;salesforce crm;salesforce crm bestemming
 title: Salesforce CRM-verbinding
 description: Met de Salesforce CRM-bestemming kunt u uw accountgegevens exporteren en deze activeren in Salesforce CRM voor uw zakelijke behoeften.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2712'
 ht-degree: 0%
@@ -123,7 +123,7 @@ Als uw [!DNL Salesforce] de accountbeheerder heeft IP-beperkingen afgedwongen, u
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Salesforce CRM] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+[!DNL Salesforce CRM] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

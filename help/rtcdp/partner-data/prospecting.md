@@ -3,9 +3,9 @@ title: Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van c
 description: Leer hoe u nieuwe klanten kunt aantrekken en aanwerven via het zoeken naar gebruiksgevallen, zonder te vertrouwen op cookies van derden.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2027'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ Lees de onderstaande secties door, die koppelingen naar verdere documentatie bev
 
 Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, maakt u gebruik van de volgende Real-Time CDP-functionaliteit en UI-elementen (vermeld in de volgorde waarin u deze wilt gebruiken). Zorg ervoor dat u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen voor al deze gebieden hebt of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
-* [Identiteiten](/help/identity-service/namespaces.md)
+* [Identiteiten](/help/identity-service/features/namespaces.md)
 * [Schema&#39;s](/help/xdm/home.md)
 * [Labels voor gegevensgebruik](/help/data-governance/labels/overview.md)
 * [Gegevenssets](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Begin door een nieuw identiteitstype voor de profielen te creëren die u van de 
 
 ![Creeer een nieuwe identiteitskaart van identiteitskaart van de Partner namespace.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Meer informatie over naamruimten voor partnerid vindt u in het dialoogvenster [sectie met identiteitstypen](/help/identity-service/namespaces.md).
+* Meer informatie over naamruimten voor partnerid vindt u in het dialoogvenster [sectie met identiteitstypen](/help/identity-service/features/namespaces.md).
 * Meer informatie [identiteitsvelden definiëren](/help/xdm/ui/fields/identity.md) in de gebruikersinterface van het Experience Platform.
 
 #### Een nieuw schema maken met de opdracht **[!UICONTROL XDM Individual Prospect Profile]** class
@@ -126,7 +126,7 @@ Het schema is nog niet ingeschakeld voor het profiel. Schakel de profielknop in 
 
 Overweeg labels voor gegevensbeheer van derden toe te voegen aan alle velden die het schema vormen. Dit is belangrijk om een verantwoord gebruik van gegevens van derden te waarborgen en het risico van gegevenslekkage tot een minimum te beperken. Meer informatie over [labels voor gegevensbeheer van derden](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
-Volg de onderstaande stappen om dit te doen:
+Hiervoor voert u de volgende stappen uit:
 
 1. Ga naar het schema dat u hebt gemaakt en selecteer het **[!UICONTROL Labels]** tab.
 2. Selecteer alle gebieden in dit schema gebruikend checkbox knoop bij zeer bovenkant en klik dan het potloodpictogram op het recht om de etiketten van het gegevensbeheer op dit schema toe te passen.

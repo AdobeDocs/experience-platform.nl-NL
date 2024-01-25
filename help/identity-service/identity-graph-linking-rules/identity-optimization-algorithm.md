@@ -3,9 +3,9 @@ title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 hide: true
 hidefromtoc: true
-badge: Alfa
+badge: Alpha
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
 source-wordcount: '1319'
 ht-degree: 1%
@@ -134,5 +134,5 @@ Lees de volgende documentatie voor meer informatie over koppelingsregels voor id
 
 * [Overzicht van regels voor identiteitsgrafiek](./overview.md)
 * [Voorbeeldscenario&#39;s voor het configureren van identiteitsgrafiek-koppelingsregels](./example-scenarios.md)
-* [Logica voor identiteitskoppeling](./identity-linking-logic.md)
-* [Identiteitsservice en realtime klantprofiel](identity-and-profile.md)
+* [Logica voor identiteitskoppeling](../features/identity-linking-logic.md)
+* [Identiteitsservice en realtime klantprofiel](../identity-and-profile.md)

@@ -2,7 +2,7 @@
 title: Adobe Advertising Cloud DSP-verbinding
 description: Adobe Advertising Cloud DSP is een geïntegreerde bestemming voor Adobe Real-time Customer Data Platform, zodat u geautoriseerde voorstanders kunt delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Een mediabedrijf met een DSP account voert een herrichtingscampagne namens zijn 
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De Adobe Advertising Cloud DSP-bestemming ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+De Adobe Advertising Cloud DSP-bestemming ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|

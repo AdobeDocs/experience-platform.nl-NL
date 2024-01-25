@@ -3,11 +3,11 @@ title: Voorbeeldscenario's voor het configureren van identiteitsinstellingen
 description: Leer over voorbeeldscenario's voor het vormen van de Montages van de Identiteit.
 hide: true
 hidefromtoc: true
-badge: Alfa
+badge: Alpha
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -70,5 +70,5 @@ Lees de volgende documentatie voor meer informatie over koppelingsregels voor id
 
 * [Overzicht van regels voor identiteitsgrafiek](./overview.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
-* [Identiteitsservice en realtime klantprofiel](identity-and-profile.md)
-* [Logica voor identiteitskoppeling](./identity-linking-logic.md)
+* [Identiteitsservice en realtime klantprofiel](../identity-and-profile.md)
+* [Logica voor identiteitskoppeling](../features/identity-linking-logic.md)

@@ -5,9 +5,9 @@ description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt geb
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Segmentdefinities bevatten informatie zoals de naam, beschrijving, expressie (in
 
 De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Met naamruimten kan Platform aangeven waar een publiek vandaan komt.
 
-Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](../../identity-service/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteit maakt, voegt u de brongegevens toe aan de naamruimte voor identiteit en markeert u de naamruimte [!UICONTROL Type] als **[!UICONTROL Non-people identifier]**.
+Volg de instructies in het dialoogvenster [Naamruimtehulplijn voor identiteit](../../identity-service/features/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteit maakt, voegt u de brongegevens toe aan de naamruimte voor identiteit en markeert u de naamruimte [!UICONTROL Type] als **[!UICONTROL Non-people identifier]**.
 
 ![De id van de niet-persoon wordt gemarkeerd in het modaal van de naamruimte Naam maken.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
