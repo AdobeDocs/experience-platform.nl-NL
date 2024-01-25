@@ -1,11 +1,11 @@
 ---
 title: Aanvullende informatie over Adobe Experience Platform
-description: In de releaseopmerkingen van oktober 2023 voor Adobe Experience Platform.
+description: Aanvullende informatie voor de versie van oktober 2023 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
