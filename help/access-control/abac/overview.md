@@ -3,14 +3,19 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Kenmerk-Gebaseerd Overzicht van het Toegangsbeheer
 description: Dit document bevat informatie over op kenmerken gebaseerd toegangsbeheer in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
+source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
 
-# Overzicht van toegangsbeheer op basis van kenmerken
+# Overzicht van toegangsbeheer op basis van kenmerken {#attribute-based-access-control-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_accesscontrol_abac_labelusageaccesspolicy"
+>title="Toegangsbeleid voor gebruik van label"
+>abstract=""
 
 Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform waarmee beheerders de toegang tot specifieke objecten en/of mogelijkheden kunnen beheren op basis van kenmerken. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een schemaveld of -segment wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
 

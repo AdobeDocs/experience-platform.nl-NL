@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Overzicht gegevensbeheer
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogisering, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 2b16ecb840e63baa244d8061a0349a9e39e726b2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
 
-# Overzicht van gegevensbeheer
+# Overzicht van gegevensbeheer {#data-governance-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_datagovernance_framework"
+>title="Verplichting tot gegevensbeheer"
+>abstract="Vergeet niet dat u als enige verantwoordelijk bent voor het naleven van het beleid voor gegevensbeheer van uw organisatie en voor het voldoen aan uw wettelijke vereisten. Experience Platform biedt tools voor gegevensbeheer waarmee u uw gegevensgebruiksverplichtingen kunt beheren. Pas de juiste labels voor gegevensgebruik toe voordat u gegevens opvraagt of verwerkt. Raadpleeg de documentatie voor meer informatie over de tools en best practices voor gegevensbeheer."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Overzicht van gegevensbeheer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Overzicht van labels voor gegevensbeheer"
 
 Een van de kernmogelijkheden van Adobe Experience Platform is om gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketeers klanten beter kunnen identificeren, begrijpen en betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk ervoor te zorgen dat uw gegevens binnen [!DNL Platform] zijn compatibel met het beleid voor gegevensgebruik.
 
