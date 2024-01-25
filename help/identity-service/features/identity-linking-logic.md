@@ -2,9 +2,9 @@
 title: Identity Service Linking Logic
 description: Leer hoe de Dienst van de Identiteit verschillende identiteiten verbindt om een uitvoerige mening van een klant tot stand te brengen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
+source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,17 @@ Er zijn twee soorten identiteiten die aan elkaar worden gekoppeld:
 
 * **Profielrecords**: Deze identiteiten komen gewoonlijk van CRM-systemen.
 * **Experience Events**: Deze identiteiten komen gewoonlijk uit implementatie WebSDK of de bron van Adobe Analytics.
+
+## Semantische betekenis van het tot stand brengen van verbindingen
+
+Een identiteit vertegenwoordigt een echte entiteit. Als er een verband tussen twee identiteiten is vastgesteld, betekent dit dat de twee identiteiten aan elkaar zijn gekoppeld. Hieronder volgen enkele voorbeelden die dit concept illustreren:
+
+| Actie | Koppelingen tot stand gebracht | Betekenis |
+| --- | --- | --- |
+| Een eindgebruiker meldt zich aan gebruikend een computer. | CRM-id en ECID zijn aan elkaar gekoppeld. | Een persoon (CRM-id) heeft een apparaat met een browser (ECID). |
+| Een eindgebruiker bladert anoniem met een iPhone. | IDFA is gekoppeld aan ECID. | Het Apple-hardwareapparaat (IDFA), zoals een iPhone, is gekoppeld aan de browser (ECID). |
+| Een eindgebruiker meldt zich aan gebruikend Google Chrome, en toen Firefox. | CRM-id is gekoppeld aan twee verschillende ECID&#39;s. | Een persoon (CRM-id) is gekoppeld aan twee webbrowsers (**Opmerking**: Elke browser heeft een eigen ECID). |
+| Een gegevensingenieur neemt een verslag van CRM op dat twee gebieden duidelijk als identiteit omvat: identiteitskaart van CRM en E-mail. | CRM-id en e-mail zijn gekoppeld. | Een persoon (CRM-id) is gekoppeld aan het e-mailadres. |
 
 ## Understanding the Identity Service linking logic
 
@@ -85,10 +96,13 @@ U hebt WebSDK ook uitgevoerd en een dataset WebSDK (de Gebeurtenis van de Ervari
 | `t=3` | ECID:44675 | Homepage weergeven |
 | `t=4` | ECID:44675, CRM-id: 31260XYZ | Aankoopgeschiedenis weergeven |
 
+De primaire identiteit voor elke gebeurtenis wordt bepaald op basis van [hoe u gegevenselelementtypen configureert](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*` - Denotes field that is marked as identity, with ECID are marked as primary.
->* Standaard wordt de personeels-ID (in dit geval de CRM-ID) aangewezen als de primaire identiteit. Als de persoon-id niet bestaat, wordt de cookie-id (in dit geval de ECID) de primaire identiteit.
+>* Als u identiteitskaart van CRM als primaire selecteert, dan voor authentiek verklaarde gebeurtenissen (gebeurtenissen met identiteitskaart die identiteitskaart en ECID bevatten) zal een primaire identiteit van identiteitskaart van CRM hebben. Voor niet-geverifieerde gebeurtenissen (gebeurtenissen met alleen de ECID in het identiteitsoverzicht) heeft de primaire identiteit van ECID. Adobe raadt deze optie aan.
+>
+>* Als u de ECID als primaire id selecteert, ongeacht de verificatiestatus, wordt de ECID de primaire identiteit.
 
 In dit voorbeeld:
 
