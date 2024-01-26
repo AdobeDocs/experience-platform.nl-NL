@@ -4,9 +4,9 @@ title: De juiste afspeelboek ontdekken
 description: Leer hoe u de juiste playbook kunt vinden voor uw gebruikscase en hoe u afspeelboeken kunt inschakelen.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,11 @@ De mindmap begint met een definitie van wie in de gebruikersreis wordt bereikt e
 
 
 ### Samenvatting {#summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_assets"
+>title="Assets"
+>abstract="Dit zijn de elementen die worden gegenereerd door dit afspeelboek. Nadat u een instantie van het afspeelboek hebt gemaakt, kunt u de elementen in de inspirerende sandbox bekijken en deze desgewenst naar andere sandboxen promoten."
 
 Inspect de overzichtssectie om te begrijpen welke activa worden geproduceerd zodra u instanties van playbook creeert. De elementen die voor elk afspeelboek worden gegenereerd, worden aangepast aan het gebruiksscenario dat in het afspeelboek wordt ingeschakeld. Meer informatie over alle items in de overzichtssectie vindt u hieronder.
 
