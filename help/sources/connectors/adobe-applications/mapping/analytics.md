@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 description: Wijs Adobe Analytics-velden toe aan XDM-velden met behulp van de Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: bb07d45df3ca585b2ca4af07cc991ac0b1e4df12
+source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2388'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het X
 | `m_keywords` | `search.keywords` | string | De variabele die in de afmeting van het Sleutelwoord wordt gebruikt. |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | integer | De numerieke id die het besturingssysteem van de bezoeker vertegenwoordigt. Dit is gebaseerd op de user_agent kolom. |
 | `m_page_url` | `web.webPageDetails.URL` | string | De URL van de paginaklok. |
-| `m_pagename_no_url` | `web.webPageDetails.name` | string | Een variabele die wordt gebruikt om de afmetingen Pagina&#39;s te vullen. |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | string | Gelijk aan 1 op treffers die een paginanaam hebben. Dit lijkt op de metrische weergave van Adobe Analytics-paginaweergaven. |
 | `m_referrer` | `web.webReferrer.URL` | string | De pagina-URL van de vorige pagina. |
 | `m_search_page_num` | `search.pageDepth` | integer | Wordt gebruikt door de afmeting Alle zoekpaginaranalen. Hiermee geeft u aan op welke pagina met zoekresultaten uw site is weergegeven voordat de gebruiker op uw site heeft geklikt. |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string | Staatvariabele. |
@@ -152,7 +152,7 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 | `m_page_event_var1` | `web.webInteraction.URL` | string | Een variabele die alleen wordt gebruikt in aanvragen voor het bijhouden van koppelingen. Deze variabele bevat de URL van de downloadkoppeling, de afsluitkoppeling of de aangepaste koppeling waarop is geklikt. |
 | `m_page_event_var2` | `web.webInteraction.name` | string | Een variabele die alleen wordt gebruikt in aanvragen voor het bijhouden van koppelingen. Hier wordt de aangepaste naam van de koppeling weergegeven, als deze is opgegeven. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | boolean | Een variabele die wordt gebruikt om de pagina&#39;s te vullen die niet worden gevonden. Deze variabele moet leeg zijn of &quot;ErrorPage&quot; bevatten. |
-| `m_pagename_no_url` | `web.webPageDetails.pageViews.value` | getal | De naam van de pagina (indien ingesteld). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
+| `m_pagename_no_url` | `web.webPageDetails.name` | getal | De naam van de pagina (indien ingesteld). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
 | `m_paid_search` | `search.isPaid` | boolean | Een vlag die wordt geplaatst als de treffer betaalde onderzoeksopsporing aanpast. |
 | `m_product_list` | `productListItems[].items` | array | De productlijst, zoals die door de productvariabele wordt overgegaan. | {SKU (tekenreeks), quantity (geheel getal), priceTotal (getal)} |
 | `m_ref_type` | `web.webReferrer.type` | string | Een numerieke id die het verwijzingstype voor de treffer vertegenwoordigt.<br/>`1`: In uw site<br/>`2`: Overige websites<br/>`3`: Zoekprogramma&#39;s<br/>`4`: Harde schijf<br/>`5`: USENET<br/>`6`: Typed/Bookmark (geen referentie)<br/>`7`: e-mail<br/>`8`: Geen JavaScript<br/>`9`: Sociale netwerken |
@@ -203,7 +203,7 @@ Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van d
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | string | Een variabele die wordt gebruikt in de oorspronkelijke dimensie van de Pagina van de Ingang. De paginanaam van de ingangspagina van de bezoeker. |
 | `post_keywords` | `search.keywords` | string | De trefwoorden die voor de hit zijn verzameld. |
 | `post_page_url` | `web.webPageDetails.URL` | string | De URL van de paginaklok. |
-| `post_pagename_no_url` | `web.webPageDetails.name` | string | Een variabele die wordt gebruikt om de afmetingen Pagina&#39;s te vullen. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | string | Gelijk aan 1 op treffers die een paginanaam hebben. Dit lijkt op de metrische weergave van Adobe Analytics-paginaweergaven. |
 | `post_purchaseid` | `commerce.order.purchaseID` | string | Variabele die wordt gebruikt om aankopen uniek te identificeren. |
 | `post_referrer` | `web.webReferrer.URL` | string | De URL van de vorige pagina. |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string | Staatvariabele. |
@@ -233,11 +233,11 @@ Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van d
 | `post_latitude` | `placeContext.geo._schema.latitude` | getal | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | getal | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | string | Het type hit dat wordt verzonden in de afbeeldingsaanvraag (klik op Standaard, Koppeling downloaden, Koppeling afsluiten of Aangepaste koppeling). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | getal | Het type hit dat wordt verzonden in de afbeeldingsaanvraag (klik op Standaard, Koppeling downloaden, Koppeling afsluiten of Aangepaste koppeling). |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | getal | Komt overeen met 1 als de hit een klik op de koppeling is. Dit is vergelijkbaar met de metrische waarde voor Pagina-gebeurtenissen in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | Deze variabele wordt alleen gebruikt in aanvragen voor het bijhouden van koppelingen. Dit is de URL van de downloadkoppeling, de afsluitkoppeling of de aangepaste koppeling waarop is geklikt. |
 | `post_page_event_var2` | `web.webInteraction.name` | string | Deze variabele wordt alleen gebruikt in aanvragen voor het bijhouden van koppelingen. Dit is de aangepaste naam van de koppeling. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | Dit wordt gebruikt om de pagina&#39;s te vullen die niet zijn gevonden. Deze variabele moet leeg zijn of &quot;ErrorPage&quot; bevatten |
-| `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | getal | De naam van de pagina (indien ingesteld). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | getal | De naam van de pagina (indien ingesteld). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
 | `post_product_list` | `productListItems[].items` | array | De productlijst, zoals die door de productvariabele wordt overgegaan. | {SKU (tekenreeks), quantity (geheel getal), priceTotal (getal)} |
 | `post_search_engine` | `search.searchEngine` | string | De numerieke id die staat voor het zoekprogramma waarmee de bezoeker naar uw site is doorverwezen. |
 | `mvvar1_instances` | `.list.items[]` | Object | Lijst met variabelewaarden. Bevat een lijst met gescheiden waarden, afhankelijk van de implementatie. |
