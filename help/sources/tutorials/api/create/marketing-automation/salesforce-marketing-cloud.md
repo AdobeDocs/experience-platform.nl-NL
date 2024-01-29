@@ -2,7 +2,7 @@
 title: Creeer een Verbinding van de Basis van de Marketing Cloud Salesforce gebruikend de Dienst API van de Stroom
 description: Leer hoe u uw Salesforce-Marketing Cloud met behulp van de Flow Service API voor Experience Platform verifieert.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
+source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Om [!DNL Flow Service] om te verbinden met [!DNL Salesforce Marketing Cloud]moet
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | De hostserver van uw toepassing. Dit is vaak uw subdomein. **Opmerking:** Wanneer u uw `host` waarde, moet u de `{subdomain}.rest.marketingcloudapis.com`. Als de host-URL bijvoorbeeld `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, hoeft u alleen maar in te voeren `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` als uw hostwaarde. |
+| `host` | De hostserver van uw toepassing. Dit is vaak uw subdomein. **Opmerking:** Wanneer u uw `host` waarde, moet u de `{subdomain}.rest.marketingcloudapis.com`. Als de host-URL bijvoorbeeld `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`, hoeft u alleen maar in te voeren `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als uw hostwaarde. |
 | `clientId` | De client-id die aan uw [!DNL Salesforce Marketing Cloud] toepassing. |
 | `clientSecret` | Het clientgeheim dat aan uw [!DNL Salesforce Marketing Cloud] toepassing. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
