@@ -4,10 +4,10 @@ type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badgeUltimate: label="Ultieme" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
+source-git-commit: 4de2193a45fc2925af310b5e2475eabe26d13adc
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 2%
+source-wordcount: '768'
+ht-degree: 1%
 
 ---
 
@@ -21,18 +21,22 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Snowflake] bronaanslu
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
 
 * [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele partitie maken [!DNL Platform] in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
-Voor toegang tot uw account voor Snowflaken op [!DNL Platform]moet u de volgende verificatiewaarde opgeven:
+U moet waarden opgeven voor de volgende referentie-eigenschappen om uw [!DNL Snowflake] bron.
+
+>[!BEGINTABS]
+
+>[!TAB Verificatie met accountsleutel]
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| Account | De volledige accountnaam die aan uw [!DNL Snowflake] account. Volledig gekwalificeerd [!DNL Snowflake] de naam van uw account bevat uw accountnaam, regio en cloudplatform. Bijvoorbeeld, `cj12345.east-us-2.azure`. Raadpleeg deze voor meer informatie over accountnamen [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
+| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor een ander account [!DNL Snowflake] organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name`. Voor meer informatie over accountnamen leest u de [!DNL Snowflake] documentatie over [account-id&#39;s](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Warehouse | De [!DNL Snowflake] Het pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] Het pakhuis is onafhankelijk van elkaar en moet individueel worden betreden wanneer het brengen van gegevens naar Platform. |
 | Database | De [!DNL Snowflake] Het gegevensbestand bevat de gegevens u het Platform wilt brengen. |
 | Gebruikersnaam | De gebruikersnaam voor de [!DNL Snowflake] account. |
@@ -40,7 +44,24 @@ Voor toegang tot uw account voor Snowflaken op [!DNL Platform]moet u de volgende
 | Rol | De standaardtoegangsbeheerrol die in de [!DNL Snowflake] sessie. De rol zou een bestaande moeten zijn die reeds aan de gespecificeerde gebruiker is toegewezen. De standaardrol is `PUBLIC`. |
 | Verbindingstekenreeks | De verbindingstekenreeks waarmee u verbinding maakt met uw [!DNL Snowflake] -instantie. Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
+>[!TAB Verificatie sleutelpaar]
+
+Om zeer belangrijk-paarauthentificatie te gebruiken, moet u een zeer belangrijk paar met 2048 bits RSA produceren en dan de volgende waarden verstrekken wanneer het creëren van een rekening voor uw [!DNL Snowflake] bron.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor een ander account [!DNL Snowflake] organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name`. Voor meer informatie over accountnamen leest u de [!DNL Snowflake] documentatie over [account-id&#39;s](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Gebruikersnaam | De gebruikersnaam van uw [!DNL Snowflake] account. |
+| Persoonlijke sleutel | De [!DNL Base64-]gecodeerde persoonlijke sleutel van uw [!DNL Snowflake] account. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven wanneer u verificatie uitvoert op basis van een Experience Platform. |
+| Wachtwoordgroep voor persoonlijke sleutel | Persoonlijke sleutel passphrase is een extra laag van veiligheid die u moet gebruiken wanneer het voor authentiek verklaren met een gecodeerde privé sleutel. U hoeft de wachtwoordzin niet op te geven als u een niet-gecodeerde persoonlijke sleutel gebruikt. |
+| Database | De [!DNL Snowflake] database die de gegevens bevat die u aan het Experience Platform wilt toevoegen. |
+| Warehouse | De [!DNL Snowflake] Het pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] Het pakhuis is onafhankelijk van elkaar en moet individueel worden betreden wanneer het brengen van gegevens naar Platform. |
+
 Zie voor meer informatie over deze waarden [dit Snowflake-document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!ENDTABS]
+
+Om tot uw rekening van de Snowflake op Experience Platform toegang te hebben, moet u de volgende authentificatiewaarde verstrekken:
 
 >[!NOTE]
 >
@@ -48,27 +69,43 @@ Zie voor meer informatie over deze waarden [dit Snowflake-document](https://docs
 
 ## Uw Snowflake-account verbinden
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte. De [!UICONTROL Catalog] in het scherm worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de interface Platform de optie **[!UICONTROL Sources]** van de linkernavigatie om tot [!UICONTROL Sources] werkruimte.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
 Onder de [!UICONTROL Databases] categorie, selecteert u **[!UICONTROL Snowflake]** en selecteer vervolgens **[!UICONTROL Add data]**.
 
-![](../../../../images/tutorials/create/snowflake/catalog.png)
+![De catalogus met bronnen [!DNL Snowflake] gemarkeerd.](../../../../images/tutorials/create/snowflake/catalog.png)
 
 De **[!UICONTROL Connect to Snowflake]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de Snowflake-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om verder te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de optie [!DNL Snowflake] account waarmee u verbinding wilt maken en selecteer **[!UICONTROL Next]** om verder te gaan.
 
-![](../../../../images/tutorials/create/snowflake/existing.png)
+![De bestaande accountinterface in de workflow voor bronnen.](../../../../images/tutorials/create/snowflake/existing.png)
 
 ### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL New account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en de gegevens van de Snowflake op. Selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding tot stand brengen.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geef vervolgens een naam en een optionele beschrijving voor uw nieuwe [!DNL Snowflake] account.
 
-![](../../../../images/tutorials/create/snowflake/new.png)
+![De nieuwe accountinterface in de workflow voor bronnen.](../../../../images/tutorials/create/snowflake/new.png)
+
+>[!BEGINTABS]
+
+>[!TAB Verificatie met accountsleutel]
+
+Als u verificatie met accountsleutels wilt gebruiken, geeft u de verbindingstekenreeks op in het invoerformulier en selecteert u vervolgens **[!UICONTROL Connect to source]**.
+
+![De verificatieinterface van de accountsleutel.](../../../../images/tutorials/create/snowflake/connection-string.png)
+
+>[!TAB Verificatie sleutelpaar]
+
+Om zeer belangrijk-paarauthentificatie te gebruiken, verstrek waarden voor uw rekening, gebruikersbenaming, privé sleutel, privé zeer belangrijke passphrase, gegevensbestand, en pakhuis, dan uitgezocht **[!UICONTROL Connect to source]**.
+
+![De account key-pair authenticatie interface.](../../../../images/tutorials/create/snowflake/key-pair.png)
+
+>[!ENDTABS]
 
 ## Volgende stappen
 
