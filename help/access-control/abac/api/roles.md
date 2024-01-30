@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Rollen API-eindpunt
 description: Het /rollen eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om rollen in Adobe Experience Platform programmatically te beheren.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -440,13 +440,13 @@ curl -X PUT \
 
 **Antwoord**
 
-Met succes wordt de bijgewerkte rol geretourneerd, inclusief nieuwe waarden voor de naam, beschrijving en het roltype.
+Een succesvolle reactie keert uw bijgewerkte rol, met inbegrip van nieuwe waarden voor zijn naam, beschrijving, en roltype terug.
 
 ```json
 {
   "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
-  "name": "Administrator Role",
-  "description": "Role with permission sets for admin type of access",
+  "name": "Administrator role for ACME",
+  "description": "New administrator role for ACME",
   "roleType": "user-defined",
   "permissionSets": [
     "manage-datasets",
@@ -486,7 +486,7 @@ Om de onderwerpen bij te werken verbonden aan een rol, doe een verzoek van de PA
 **API-indeling**
 
 ```http
-PATCH /roles/{ROLE_ID}
+PATCH /roles/{ROLE_ID}/subjects
 ```
 
 | Parameter | Beschrijving |
@@ -520,7 +520,34 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
+Een succesvolle reactie retourneert uw bijgewerkte rol, inclusief nieuwe waarden voor de onderwerpen.
+
+```json
+{
+  "subjects": [
+    [
+      {
+        "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID",
+        "subjectType": "user"
+      }
+    ]
+  ],
+  "_page": {
+    "limit": 1,
+    "count": 1
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects",
+      "templated": true
+    },
+    "page": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+      "templated": true
+    }
+  }
+}
+```
 
 ## Een rol verwijderen {#delete}
 

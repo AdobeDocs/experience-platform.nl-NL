@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-eindpunt voor toegangsbeheerbeleid
 description: Het /policies eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om beleid in Adobe Experience Platform programmatically te beheren.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1433'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen o
 
 >[!IMPORTANT]
 >
->Dit eindpunt moet niet worden verward met het `/policies` in de [Beleidsservice-API](../../../data-governance/api/policies.md), die wordt gebruikt voor het beheer van beleidsregels voor gegevensgebruik.
+>Dit eindpunt moet niet worden verward met het `/policies` in de [Policy Service API](../../../data-governance/api/policies.md), die wordt gebruikt voor het beheer van beleidsregels voor gegevensgebruik.
 
 ## Aan de slag
 
@@ -180,35 +180,49 @@ Een succesvol verzoek keert informatie over gevraagde beleidsidentiteitskaart te
 
 ```json
 {
-    "id": "13138ef6-c007-495d-837f-0a248867e219",
-    "imsOrgId": "{IMS_ORG}",
-    "createdBy": "{CREATED_BY}",
-    "createdAt": 1652859368555,
-    "modifiedBy": "{MODIFIED_BY}",
-    "modifiedAt": 1652890780206,
-    "name": "Documentation-Copy",
-    "description": "xyz",
-    "status": "active",
-    "subjectCondition": null,
-    "rules": [
+  "policies": [
+    {
+      "id": "7019068e-a3a0-48ce-b56b-008109470592",
+      "imsOrgId": "5555467B5D8013E50A494220@AdobeOrg",
+      "createdBy": "example@AdobeID",
+      "createdAt": 1652892767559,
+      "modifiedBy": "example@AdobeID",
+      "modifiedAt": 1652895736367,
+      "name": "schema-field",
+      "description": "schema-field",
+      "status": "inactive",
+      "subjectCondition": null,
+      "rules": [
         {
-            "effect": "Permit",
-            "resource": "orgs/{IMS_ORG}/sandboxes/ro-sand/schemas/*/schema-fields/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"and\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/xql/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.read",
+            "com.adobe.action.write",
+            "com.adobe.action.view"
+          ]
         },
         {
-            "effect": "Deny",
-            "resource": "orgs/{IMS_ORG}/sandboxes/*/segments/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Permit",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/*/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.delete"
+          ]
+        },
+        {
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/delete-sandbox-adfengine-test-8/segments/*",
+          "condition": "{\"!\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}",
+          "actions": [
+            "com.adobe.action.write"
+          ]
         }
-    ],
-    "_etag": "\"0300d43c-0000-0200-0000-62851c9c0000\""
+      ],
+      "etag": "\"0300593f-0000-0200-0000-62852ff80000\""
+    }
+  ]
 }
 ```
 
@@ -261,7 +275,7 @@ curl -X POST \
           "resource": "/orgs/{IMS_ORG}/sandboxes/*",
           "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
           "actions": [
-            "read"
+            "com.adobe.action.read"
           ]
         }
       ]
@@ -301,7 +315,7 @@ Een succesvol verzoek keert het pas gecreëerde beleid, met inbegrip van zijn un
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -322,7 +336,7 @@ Een succesvol verzoek keert het pas gecreëerde beleid, met inbegrip van zijn un
 
 ## Een beleid bijwerken op basis van beleids-id {#put}
 
-Om de regels van een individueel beleid bij te werken, doe een verzoek van de PUT aan `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid dat u in de verzoekweg wilt bijwerken.
+Om de regels van een individueel beleid bij te werken, doe een PUT verzoek aan `/policies` eindpunt terwijl het verstrekken van identiteitskaart van het beleid dat u in de verzoekweg wilt bijwerken.
 
 **API-indeling**
 
@@ -352,7 +366,7 @@ curl -X PUT \
         "resource": "/orgs/{IMS_ORG}/sandboxes/*",
         "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
         "actions": [
-          "read"
+          "com.adobe.action.read"
         ]
       }
     ]
@@ -381,7 +395,7 @@ Een geslaagde reactie retourneert het bijgewerkte beleid.
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -405,7 +419,7 @@ PATCH /policies/{POLICY_ID}
 
 **Verzoek**
 
-Het volgende verzoek vervangt de waarde van `/description` in beleids-id `c3863937-5d40-448d-a7be-416e538f955e`.
+De waarde van `/description` in beleids-id `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X PATCH \
@@ -452,7 +466,7 @@ Een succesvolle reactie keert identiteitskaart van het gevraagd beleid met bijge
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],

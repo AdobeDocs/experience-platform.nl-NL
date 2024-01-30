@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -155,9 +155,9 @@ De **[!UICONTROL Remove user group]** wordt weergegeven en u wordt gevraagd het 
 
 U wordt teruggestuurd naar de **[!UICONTROL User groups]** tab.
 
-## Gebruikers aan Experience Platform toevoegen via een productprofiel
+## Gebruikers aan Experience Platform toevoegen via een rol
 
-Als u een gebruiker aan een productprofiel wilt toevoegen, meldt u zich aan bij de Admin Console en selecteert u **[!UICONTROL Add users]**
+Als u een gebruiker aan een rol wilt toevoegen, meldt u zich aan bij de Admin Console en selecteert u **[!UICONTROL Add users]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
