@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
 workflow-type: tm+mt
-source-wordcount: '2251'
+source-wordcount: '2464'
 ht-degree: 0%
 
 ---
@@ -85,13 +85,13 @@ De uitvoering van veelvoudige vragen in een opeenvolging elk produceert een logb
 ### Geselecteerde query uitvoeren {#execute-selected-query}
 
 Als u meerdere query&#39;s hebt geschreven maar slechts één query moet uitvoeren, kunt u de gekozen query markeren en de opdracht
-[!UICONTROL Run selected query] pictogram. Dit pictogram is standaard uitgeschakeld, tenzij u een query in de editor selecteert.
+[!UICONTROL Run selected query] pictogram. Dit pictogram wordt standaard uitgeschakeld totdat u de querysyntaxis in de editor selecteert.
 
 ![De Query-editor met de [!UICONTROL Run selected query] gemarkeerd.](../images/ui/query-editor/run-selected-query.png)
 
 ### Resultaattelling {#result-count}
 
-De redacteur van de Vraag heeft een maximum 50.000 rijoutput. Nochtans, worden slechts 50 rijen getoond in één keer in de console van de Redacteur van de Vraag. Als u het aantal rijen wilt wijzigen dat in de console wordt weergegeven, selecteert u de optie **[!UICONTROL Result count]** en kies 50, 100, 150, 300 en 500 waarden.
+De redacteur van de Vraag heeft een maximum 50.000 rijoutput. U kunt het aantal rijen kiezen die tegelijkertijd in de console van de Redacteur van de Vraag worden getoond. Als u het aantal rijen wilt wijzigen dat in de console wordt weergegeven, selecteert u de optie **[!UICONTROL Result count]** en selecteer de opties 50, 100, 150, 300 en 500.
 
 ![De Redacteur van de Vraag met de drop-down van het Aantal van het Resultaat benadrukt.](../images/ui/query-editor/result-count.png)
 
@@ -101,7 +101,7 @@ De redacteur van de Vraag heeft een maximum 50.000 rijoutput. Nochtans, worden s
 
 ![De Redacteur van de Vraag met het SQL inputgebied en Spel benadrukt.](../images/ui/query-editor/editor.png)
 
-Om uw ontwikkelingstijd te minimaliseren, adviseert men dat u uw vragen met grenzen op de teruggekeerde rijen ontwikkelt. Bijvoorbeeld: `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nadat u hebt gecontroleerd dat uw vraag de verwachte output veroorzaakt, verwijder de grenzen en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren.
+Om uw ontwikkelingstijd te minimaliseren, wordt u geadviseerd om uw vragen met grenzen op het aantal teruggekeerde rijen te ontwikkelen. Bijvoorbeeld: `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nadat u hebt gecontroleerd dat uw vraag de verwachte output veroorzaakt, verwijder de grenzen en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren.
 
 ## Schrijfgereedschappen in [!DNL Query Editor] {#writing-tools}
 
@@ -123,6 +123,12 @@ De [!UICONTROL Format text] maakt uw query leesbaarder door gestandaardiseerde s
 
 ![De Query-editor met [!UICONTROL Format text] en de SQL-instructies gemarkeerd.](../images/ui/query-editor/format-text.png)
 
+<!-- ### Undo text {#undo-text}
+
+If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
+
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+
 ### SQL kopiëren {#copy-sql}
 
 Selecteer het kopieerpictogram om SQL van de Redacteur van de Vraag aan uw klembord te kopiëren. Deze kopieerfunctie is beschikbaar voor zowel querysjablonen als nieuwe query&#39;s in de Query Editor.
@@ -134,6 +140,10 @@ Selecteer het kopieerpictogram om SQL van de Redacteur van de Vraag aan uw klemb
 De [!DNL Query Editor] stelt automatisch potentiële SQL sleutelwoorden samen met lijst of kolomdetails voor de vraag voor aangezien u het schrijft. De functie voor automatisch aanvullen is standaard ingeschakeld en kan op elk gewenst moment worden uitgeschakeld of ingeschakeld door de optie [!UICONTROL Syntax auto-complete] knevel aan het hoogste recht van de Redacteur van de Vraag.
 
 De auto-volledige configuratie het plaatsen is per gebruiker en voor de opeenvolgende logins voor die gebruiker herinnerd.
+
+>[!NOTE]
+>
+>De schakeloptie voor automatisch aanvullen met syntaxis is alleen beschikbaar voor de oudere versie van de Query Editor.
 
 ![De Redacteur van de vraag met de syntaxis auto-volledige knevel benadrukt.](../images/ui/query-editor/auto-complete-toggle.png)
 
@@ -159,21 +169,47 @@ Als u de functie voor automatisch aanvullen wilt uitschakelen, selecteert u de j
 
 [!DNL Query Editor] valideert automatisch een vraag aangezien u het schrijft, verstrekkend generische SQL bevestiging en specifieke uitvoeringsbevestiging. Als een rode onderstreping onder de query wordt weergegeven (zoals in de onderstaande afbeelding wordt getoond), vertegenwoordigt deze een fout binnen de query.
 
+<!-- ... Image below needs updating couldn't replicate the effect -->
+
 ![De invoer van de Redacteur van de Vraag tonend in rood onderstreepte SQL om op een fout te wijzen.](../images/ui/query-editor/syntax-error-highlight.png)
 
 Wanneer fouten worden ontdekt, kunt u de specifieke foutenmeldingen bekijken door over de SQL code te hangen.
+
+<!-- ... Image below needs updating couldn't replicate the effect -->
 
 ![Een dialoogvenster met een foutbericht.](../images/ui/query-editor/linting-error.png)
 
 ### Query-details {#query-details}
 
-Als u een query wilt weergeven in de Query-editor, selecteert u een opgeslagen sjabloon in het menu [!UICONTROL Templates] tab. Het deelvenster met querydetails bevat meer informatie en gereedschappen voor het beheer van de geselecteerde query.
+Als u een query wilt weergeven in de Query-editor, selecteert u een opgeslagen sjabloon in het menu [!UICONTROL Templates] tab. Het deelvenster met querydetails bevat meer informatie en gereedschappen voor het beheer van de geselecteerde query. Het toont ook nuttige meta-gegevens zoals de laatste tijd dat de vraag werd gewijzigd en wie het, indien van toepassing wijzigde.
+
+>[!NOTE]
+>
+>De [!UICONTROL View schedule], [!UICONTROL Add schedule] en [!UICONTROL Delete query] opties zijn alleen beschikbaar nadat de query als sjabloon is opgeslagen. De [!UICONTROL Add schedule] neemt u rechtstreeks aan de planningsbouwer van de Redacteur van de Vraag. De [!UICONTROL View schedule] neemt u rechtstreeks naar de planningsinventaris voor die vraag. Zie de documentatie van vraagprogramma&#39;s leren hoe te [vraagprogramma&#39;s in UI creëren](./query-schedules.md#create-schedule).
 
 ![De Query-editor met het deelvenster met querydetails gemarkeerd.](../images/ui/query-editor/query-details.png)
 
-Dit paneel staat u toe om een outputdataset direct van UI te produceren, de getoonde vraag te schrappen of te noemen, en een programma aan de vraag toe te voegen.
+Van het detailspaneel kunt u een outputdataset direct van UI produceren, schrapt of noemt de getoonde vraag, bekijkt het programma van de vraaglooppas, en voegt de vraag aan een programma toe.
 
-In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste keer dat de query werd gewijzigd en de laatste keer dat deze werd gewijzigd, indien van toepassing. Als u een gegevensset wilt genereren, selecteert u **[!UICONTROL Output Dataset]**. De **[!UICONTROL Output Dataset]** wordt weergegeven. Voer een naam en beschrijving in en selecteer **[!UICONTROL Run Query]**. De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** op het tabblad [!DNL Query Service] gebruikersinterface op [!DNL Platform].
+Om een outputdataset te produceren, selecteer **[!UICONTROL Run as CTAS]**. De **[!UICONTROL Enter output dataset details]** wordt weergegeven. Voer een naam en beschrijving in en selecteer **[!UICONTROL Run as CTAS]**. De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** Tabblad Bladeren. Zie [de documentatie van meningsdatasets](../../catalog/datasets/user-guide.md#view-datasets) om meer over beschikbare datasets voor uw organisatie te leren.
+
+>[!NOTE]
+>
+>De [!UICONTROL Run as CTAS] optie is alleen beschikbaar als de query **niet** is gepland.
+
+![De [!UICONTROL Enter output dataset details] in.](../images/ui/query-editor/output-dataset-details.png)
+
+Nadat u de opdracht **[!UICONTROL Run as CTAS]** actie, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de werkruimte van vraaglogboeken te navigeren. Zie de [documentatie met querylogbestanden](./query-logs.md) voor meer informatie over vraaglogboeken.
+
+### Vragen opslaan {#saving-queries}
+
+De [!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Als u een query wilt opslaan, selecteert u **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
+
+>[!NOTE]
+>
+>Vragen die zijn genoemd en opgeslagen in de Query-editor, zijn beschikbaar als sjablonen in het dashboard Query [!UICONTROL Templates] tab. Zie de [sjabloondocumentatie](./query-templates.md) voor meer informatie .
+
+Als u een query opslaat in de Query Editor, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de vragen te navigeren die werkruimte plannen. Zie de [documentatie met planningquery&#39;s](./query-schedules.md) om te leren hoe vragen op een douanecadence in werking te stellen.
 
 ### Geplande query&#39;s {#scheduled-queries}
 
@@ -185,13 +221,6 @@ Zie de documentatie van vraagprogramma&#39;s leren hoe te [vraagprogramma&#39;s 
 
 Alle geplande query&#39;s worden toegevoegd aan de lijst in de [!UICONTROL Scheduled queries] tab. Van die werkruimte kunt u het statuut van alle geplande vraagbanen door UI controleren. Op de [!UICONTROL Scheduled queries] kunt u belangrijke informatie over uw vraaglooppas vinden en aan alarm intekenen. De beschikbare informatie bevat de status, de planningsdetails en foutberichten/codes als een uitvoering is mislukt. Zie de [Geplande query&#39;s controleren](./monitor-queries.md) voor meer informatie .
 
-### Vragen opslaan {#saving-queries}
-
-De [!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Als u een query wilt opslaan, selecteert u **[!UICONTROL Save]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query met de opdracht **[!UICONTROL Query Details]** deelvenster.
-
->[!NOTE]
->
->Vragen die zijn genoemd en opgeslagen in de Query-editor, zijn beschikbaar als sjablonen in het dashboard Query [!UICONTROL Templates] tab. Zie de [sjabloondocumentatie](./query-templates.md) voor meer informatie .
 
 ### Hoe te om vorige vragen te vinden {#previous-queries}
 
@@ -219,7 +248,7 @@ De console biedt informatie over de status en werking van [!DNL Query Service]. 
 
 ### Zoekresultaten {#query-results}
 
-Nadat een vraag is voltooid, worden de resultaten getoond in **[!UICONTROL Results]** tab, naast de **[!UICONTROL Console]** tab. In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie de [het produceren van datasetleerprogramma](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten te produceren in [!DNL Query Editor].
+Nadat een vraag is voltooid, worden de resultaten getoond in **[!UICONTROL Results]** tab, naast de **[!UICONTROL Console]** tab. In deze weergave wordt de tabeluitvoer van de query weergegeven. Afhankelijk van uw keuze worden tussen 50 en 500 rijen met resultaten weergegeven [aantal resultaten](#result-count). In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie de [het produceren van datasetleerprogramma](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten te produceren in [!DNL Query Editor].
 
 ![Het lusje van Resultaten van de console van de Redacteur van de Vraag die de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
 

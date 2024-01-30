@@ -5,9 +5,9 @@ title: Uitvoergegevens genereren op basis van zoekresultaten
 type: Tutorial
 description: Met Adobe Experience Platform Query Service kunt u gegevenssets maken vanuit de gebruikersinterface. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -24,17 +24,17 @@ Ga als volgt te werk om gegevenssets te maken van de gebruikersinterface van Ado
 
 2. In Platform UI, navigeer aan **[!UICONTROL Queries]** gevolgd door de **[!UICONTROL Templates]** en selecteert u de query die u hebt gemaakt. Voor meer informatie over hoe te om vragen te bekijken die voor uw organisatie binnen de UI van het Platform werden gecreeerd en werden bewaard, lees [[!DNL Query Service] overzicht](./overview.md#browse).
 
-3. Selecteer in het deelvenster Query-details de optie **[!UICONTROL Output dataset]**.
+3. Selecteer in het deelvenster Query-details de optie **[!UICONTROL Run as CTAS]**.
 
-   ![Het lusje van de Malplaatjes van de Werkruimte van Vragen met Uitvoer benadrukte dataset van de Output.](../images/ui/create-datasets/output-dataset.png)
+   ![De werkruimte Query&#39;s [!UICONTROL Templates] tabblad met Selecteren [!UICONTROL Run as CTAS] gemarkeerd.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. Voer in het dialoogvenster dat wordt weergegeven een naam in voor de gegevensset die is toegevoegd met uw LDAP-id. De naam van de gegevensset hoeft niet uniek of SQL-veilig te zijn. Merk op dat de lijstnaam voor uw dataset zal worden geproduceerd gebaseerd op de datasetnaam u hier creeert.
 
-5. Voer vervolgens een beschrijving in voor uw gegevensset in het dialoogvenster [!UICONTROL Description] veld en selecteer **[!UICONTROL Run query]**.
+5. Voer vervolgens een beschrijving in voor uw gegevensset in het dialoogvenster [!UICONTROL Description] veld en selecteer **[!UICONTROL Run as CTAS]**.
 
-   ![De datasetdialoog van de Output met de datasetdetails en de looppasvraag benadrukte](../images/ui/create-datasets/run-query.png)
+   ![Het dialoogvenster Uitvoergegevensset met de gegevens van de gegevensset en [!UICONTROL Run as CTAS] gemarkeerd](../images/ui/create-datasets/run-query.png)
 
-6. Wanneer de query is uitgevoerd, navigeert u naar **[!UICONTROL Datasets]** om de dataset te bekijken u hebt gecreeerd. Meer over leren hoe te om gemeenschappelijke acties uit te voeren wanneer het werken met datasets binnen de Platform UI, zie [UI-gids voor gegevensbestanden](../../catalog/datasets/user-guide.md).
+6. Wanneer de query is uitgevoerd, navigeert u naar **[!UICONTROL Datasets]** om de dataset te bekijken u hebt gecreeerd. Meer over leren hoe te om gemeenschappelijke acties uit te voeren wanneer het werken met datasets binnen Platform UI, zie [UI-gids voor gegevensbestanden](../../catalog/datasets/user-guide.md).
 
 Nadat een dataset wordt gecreeerd, kan het als een andere dataset in worden betreden [!DNL Data Lake] en worden gebruikt voor diverse gebruiksgevallen.
 
@@ -52,4 +52,4 @@ Datasets die met deze functie worden gemaakt, worden gegenereerd met een ad-hocs
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, moet u nu weten hoe u het kunt gebruiken [!DNL Query Service] om datasets van het Platform UI te produceren. Voor meer informatie over hoe te om tot, schrijven, en vragen binnen de Platform UI uit te voeren, zie [[!DNL Query Service] Overzicht van gebruikersinterface](./overview.md).
+Nadat u dit document hebt gelezen, moet u nu weten hoe u het kunt gebruiken [!DNL Query Service] om datasets van het Platform UI te produceren. Voor meer informatie over hoe te om tot, schrijven, en vragen binnen het Platform UI uit te voeren, zie [[!DNL Query Service] Overzicht van gebruikersinterface](./overview.md).

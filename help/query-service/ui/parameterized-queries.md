@@ -2,9 +2,9 @@
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -47,21 +47,17 @@ SELECT
 
 Navigeer naar de Query-editor om de geparametereerde query in de UI te maken. Zie de sectie over [De Query-editor openen](./user-guide.md#accessing-query-editor) voor meer instructies.
 
-Gebruik de `'$'` Plaats om een vraagparameter in uw vraag in de tekstredacteur in te gaan. Voeg vervolgens de ontbrekende waarde voor de toets in het dialoogvenster [!UICONTROL Query parameters] onder de editor. De query kan niet worden uitgevoerd als u geen waarde toevoegt aan een van de vereiste toetsen. Een waarschuwingspictogram (![Een waarschuwingspictogram](../images/ui/parameterized-queries/alert-icon.png)) wordt weergegeven in de sectie Query Parameters naast lege [!UICONTROL Value] invoervelden.
+Gebruik de `'$'` Plaats om een vraagparameter in uw vraag in de tekstredacteur in te gaan. Selecteer vervolgens de **[!UICONTROL Query parameters]** tabblad naast het tabblad [!UICONTROL Console] Voeg de ontbrekende waarde voor de sleutel toe. De query kan niet worden uitgevoerd als u geen waarde toevoegt aan een van de vereiste toetsen. Een waarschuwingspictogram (![Een waarschuwingspictogram](../images/ui/parameterized-queries/alert-icon.png)) wordt weergegeven in de sectie Query Parameters naast lege [!UICONTROL Value] invoervelden.
+
+>[!NOTE]
+>
+>Als uw vraag geen parameters neemt, kunt u onnodige parameters binnen de Redacteur van de Vraag nog ingaan. De redacteur van de Vraag negeert alle onnodige sleutel-waarde paren en zij hebben geen effect op de uitvoering of de resultaten van de vraag.
 
 ![De redacteur van de Vraag met een parameterized vraag en de benadrukte sectie van de Parameters van de Vraag.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >Tabs wijzigen van [!UICONTROL Query parameters] tot [!UICONTROL Console] om de consoleoutput van de vraag te bekijken.
-
-Als u een parameter verwijdert en de query opnieuw probeert uit te voeren nadat deze al is uitgevoerd, wordt een foutbericht weergegeven in het dialoogvenster [!UICONTROL Query parameters] gedeelte om u te waarschuwen.
-
->[!NOTE]
->
->Als uw vraag geen parameters neemt, kunt u onnodige parameters binnen de Redacteur van de Vraag nog ingaan. De redacteur van de Vraag negeert alle onnodige sleutel-waarde paren en zij hebben geen effect op de uitvoering of de resultaten van de vraag.
-
-![De redacteur van de Vraag met een leeg waardegebied en de fout van vraagparameters benadrukt.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Gegevens over querylogbestanden gebruiken om parameterwaarden te controleren {#check-parameter-values}
 

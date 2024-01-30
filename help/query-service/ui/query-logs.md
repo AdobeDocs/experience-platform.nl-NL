@@ -2,9 +2,9 @@
 title: Query-logbestanden
 description: Logboeken van de vraag worden automatisch geproduceerd telkens als een vraag wordt uitgevoerd en beschikbaar door UI om met het oplossen van problemen te helpen. Dit document schetst hoe te om de sectie van de Logboeken van de Dienst van de Vraag van UI te gebruiken en te navigeren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,13 @@ Elke rij vertegenwoordigt logboekgegevens voor een vraaglooppas verbonden aan ee
 
 ![De werkruimte van het Logboek van Vragen met een geselecteerde rij en de logboekgegevens in juiste sidebar benadrukt.](../images/ui/query-log/log-details.png)
 
-In het paneel van logboekdetails, kunt u een nieuwe outputdataset selecteren en de volledige SQL vraag zien of kopiëren die in de looppas werd gebruikt.
+In het deelvenster met loggegevens kunt u allerlei handelingen uitvoeren. U kunt de vraag als CTAS in werking stellen, die tot een nieuwe outputdataset leidt, de volledige SQL vraag zien of kopiëren die in de looppas werd gebruikt, of de vraag schrappen.
 
-![De werkruimte van het Logboek van Vragen met een geselecteerde rij en de benadrukte outputdataset en SQL vraag.](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>De optie om [!UICONTROL Run as CTAS] is alleen beschikbaar voor een SELECT-query.
+
+![De werkruimte van het Logboek van Vragen met een geselecteerde rij, Looppas als CTAS, schrapt vraag en het benadrukte pictogram van het exemplaar SQL.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
