@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API-documentatie
 breadcrumb-title: Edge Network Server API-documentatie
 user-guide-description: Gebruik de Edge Network Server-API voor gegevensverzameling, personalisatie, advertenties en het maken van gebruiksscenario's met Experience Cloud of Experience Platform Edge-services.
 feature: Data Collection
-source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
+source-git-commit: f7b6154166ccd7989c563115e99717937cfe9a5d
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 42%
+source-wordcount: '76'
+ht-degree: 55%
 
 ---
 
@@ -30,8 +30,3 @@ ht-degree: 42%
 * [Tips voor locatie](location-hints.md)
 * [Foutafhandeling](error-handling.md)
 * [Problemen oplossen](troubleshooting.md)
-* Media Edge-API&#39;s {#media-edge-apis}
-   * [Overzicht van de Media Edge API](media-edge-api/overview.md)
-   * [Media Edge API aan de slag](media-edge-api/getting-started.md)
-   * [Problemen met de Media Edge API oplossen](media-edge-api/troubleshooting.md)
-   * [Bron voor de specificatie Media Edge API Open API](media-edge-api/swagger.md)
