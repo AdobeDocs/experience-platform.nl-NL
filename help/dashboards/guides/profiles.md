@@ -4,9 +4,9 @@ title: Handleiding voor het dashboard voor profielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4571'
+source-wordcount: '4666'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 >
 >Wijzigingen of updates die zijn aangebracht in de gegevens nadat de momentopname is gemaakt, worden pas in het dashboard weergegeven als de volgende momentopname is gemaakt.
 
-## Het dashboard Profielen verkennen
+## Het dashboard Profielen verkennen {#explore-dashboard}
 
 Als u naar het dashboard Profielen in de interface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overview]** om het dashboard weer te geven.
 
@@ -37,7 +37,7 @@ Als u naar het dashboard Profielen in de interface van het platform wilt naviger
 
 ![Het dashboard Profielen Experience Platform met profielen en overzicht gemarkeerd.](../images/profiles/dashboard-overview.png)
 
-### Het dashboard Profielen wijzigen
+### Het dashboard Profielen wijzigen {#modify-dashboard}
 
 U kunt de weergave van het dashboard Profielen wijzigen door **[!UICONTROL Modify dashboard]**. U kunt widgets verplaatsen, toevoegen, vergroten, verkleinen en verwijderen van het dashboard en toegang krijgen tot de **[!UICONTROL Widget library]** om beschikbare widgets te verkennen en aangepaste widgets voor uw organisatie te maken.
 
@@ -50,6 +50,10 @@ Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren
 ![Het dashboardoverzicht Profielen met de toegevoegde widget gemarkeerd.](../images/profiles/profiles-overview-add-widget.png)
 
 In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+
+### SQL weergeven {#view-sql}
+
+U kunt SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op worden gevisualiseerd [!UICONTROL Overview] werkruimte. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Voor meer informatie over deze functie raadpleegt u de [SQL UI-handleiding weergeven](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 

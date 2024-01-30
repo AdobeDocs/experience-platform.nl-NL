@@ -4,7 +4,7 @@ user-guide-title: Hulp bij Adobe Experience Platform-dashboards
 breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
-source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
+source-git-commit: 643e70bb2e55c2fad89fdf784298f7ac6f98397e
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 27%
@@ -38,4 +38,5 @@ ht-degree: 27%
    * [Power BI](integrations/power-bi.md)
 * [Gegevensbestanden van het query-dashboard](query.md)
 * [Real-time Customer Data Platform Insights-gegevensmodel](cdp-insights-data-model.md)
+* [SQL met inzicht weergeven](view-sql.md)
 * [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)

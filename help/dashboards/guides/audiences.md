@@ -4,9 +4,9 @@ title: Handleiding voor publiek dashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het publiek dat uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2952'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren
 ![De [!UICONTROL Audiences] dashboard-overzicht met [!UICONTROL Add widget] gemarkeerd.](../images/audiences/audiences-overview-add-widget.png)
 
 In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+
+### SQL weergeven {#view-sql}
+
+U kunt SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op worden gevisualiseerd [!UICONTROL Overview] werkruimte. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Voor meer informatie over deze functie raadpleegt u de [SQL UI-handleiding weergeven](../view-sql.md).
 
 ## Een publiek selecteren {#select-audience}
 

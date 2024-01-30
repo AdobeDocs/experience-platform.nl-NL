@@ -4,9 +4,9 @@ title: Doeldashboardgids
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '2974'
+source-wordcount: '3046'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ Selecteren **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren
 ![Het dashboardoverzicht Doelen met de markering Widget toevoegen.](../images/destinations/destinations-overview-add-widget.png)
 
 In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Raadpleeg de documentatie bij de widgetbibliotheek voor informatie over het toevoegen van widgets [Een widget toevoegen](../customize/widget-library.md#add-widgets).
+
+### SQL weergeven {#view-sql}
+
+U kunt SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op worden gevisualiseerd [!UICONTROL Overview] werkruimte. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Voor meer informatie over deze functie raadpleegt u de [SQL UI-handleiding weergeven](../view-sql.md).
 
 ## Standaardwidgets {#default-widgets}
 
