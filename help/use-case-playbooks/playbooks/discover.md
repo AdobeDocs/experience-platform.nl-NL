@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: De juiste afspeelboek ontdekken
 description: Leer hoe u de juiste playbook kunt vinden voor uw gebruikscase en hoe u afspeelboeken kunt inschakelen.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
 
-# (bèta) Ontdek het juiste afspeelboek
-
->[!AVAILABILITY]
->
->Deze functionaliteit is momenteel in Bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# De juiste afspeelboek ontdekken
 
 Als u een afspeelboek wilt gebruiken, navigeert u naar **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Blader en gebruik de verschillende zoek- en filteropties op de pagina om een bepaald afspeelboek te selecteren en aan de slag te gaan.
 
@@ -48,7 +43,6 @@ Gebruik de sectie mindmap in een afspeelboek om te begrijpen welke stappen van d
 De mindmap begint met een definitie van wie in de gebruikersreis wordt bereikt en beschrijft bij elke stap als iets door Adobe, zoals een nieuw bericht of een herinnering wordt geleverd, of als het iets is dat de gerichte persoon deed dat het volgende bericht of de gebeurtenis teweegbracht.
 
 ![De afspeelmindmap is gemarkeerd.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### Samenvatting {#summary}
 

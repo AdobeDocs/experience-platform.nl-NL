@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Afspeelboekinstanties maken, delen en opnieuw gebruiken
 description: Leer hoe u playbook-instanties kunt maken, delen en opnieuw gebruiken om uw marketinggebruikskwestie te voltooien.
-badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
 
-# (bètaversie) Afspeelboekinstanties maken, delen en opnieuw gebruiken
-
->[!AVAILABILITY]
->
->Deze functionaliteit is momenteel in Bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Afspeelboekinstanties maken, delen en opnieuw gebruiken
 
 Als u een afspeelboek wilt gebruiken, navigeert u naar **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Blader en gebruik de verschillende zoek- en filteropties op de pagina om een bepaald afspeelboek te selecteren en aan de slag te gaan.
 
@@ -48,7 +43,7 @@ Nadat u een instantie hebt gemaakt op basis van een afspeelboek, kunt u deze per
 
 Het is belangrijk om te begrijpen dat de gegenereerde elementen verschillen op basis van het gebruiksgeval dat u inschakelt:
 
-* Er worden verschillende elementen gegenereerd voor verschillende typen afspeelboeken. Deze elementen worden specifiek gemaakt voor het gebruik dat wordt gemaakt via de afspeelmap. Een afspeelboek genereert bijvoorbeeld een schema, een segment, een reis en berichten. Een ander playbook produceert een schema, een segment, en een bestemming om gegevens aan te activeren.
+* Er worden verschillende elementen gegenereerd voor verschillende typen afspeelboeken. Deze elementen worden specifiek gemaakt voor het gebruik dat wordt gemaakt via de afspeelmap. Een afspeelboek genereert bijvoorbeeld een schema, een publiek, een reis en berichten. Een ander playbook produceert een schema, een publiek, en een bestemming om gegevens aan te activeren.
 * De elementen zelf verschillen per afspeelboek. Bijvoorbeeld voor **[!UICONTROL Send A Birthday Message To Guests]** playbook, heeft het publiek dat wordt gecreeerd de regel `birthday=today AND year=any`.
 
 Om een voorbeeld te illustreren, voor **[!UICONTROL Abandoned Cart: Merchandise]** playbook, kunt u zien dat een specifieke reis wordt gecreeerd die de berichten omvat die voor dit gebruiksgeval worden gecreeerd.
@@ -67,7 +62,7 @@ Het hierboven beschreven gedrag geldt voor alle elementen die worden gemaakt, be
 >
 >Test in de ontwikkelingssandbox en ga naar productie als u klaar bent.
 >
->Wanneer objecten zijn gegenereerd, kunt u in de ontwikkelingssandboxen blijven testen door gegevens toe te voegen. U kunt de elementen zo lang testen als u wilt in de ontwikkelingssandbox en u kunt de elementlogica (segmentdefinities, reizen, schema&#39;s, enzovoort) in de productiesandbox herhalen wanneer u klaar bent.
+>Wanneer objecten zijn gegenereerd, kunt u in de ontwikkelingssandboxen blijven testen door gegevens toe te voegen. U kunt de elementen zo lang testen als u wilt in de ontwikkelingssandbox en u kunt de elementlogica (publieksdefinities, reizen, schema&#39;s, enzovoort) in de productiesandbox herhalen wanneer u klaar bent. U kunt naar de ontwikkelingssandbox en vervolgens naar de productiesandbox gaan met de [functionaliteit voor gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Afspeelboeken opnieuw gebruiken {#reuse-playbooks}
 
