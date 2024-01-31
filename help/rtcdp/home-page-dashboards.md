@@ -4,9 +4,9 @@ title: Homepage van Real-time Customer Data Platform en dashboards
 description: Dashboards, startpagina en eerste gebruikerservaring van Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
+source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '885'
 ht-degree: 1%
 
 ---
@@ -25,10 +25,10 @@ Dit document biedt een overzicht van de Real-Time CDP-startpagina en het dashboa
 
 De [!UICONTROL Getting started with Real-Time Customer Profile] widget bestaat uit vier secties:
 
-* **Gegevens opnemen in platform**: Deze widget stuurt u naar de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren in het Experience Platform. Lees voor meer informatie de [overzicht van bronnen](../sources/home.md)
-* **Modelgegevensstructuren**: Deze widget leidt u naar het schema&#39;s-overzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of bouwstenen tot stand te brengen die de structuur van uw gegevens beschrijven. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
-* **Segmentpubliek**: Deze widget leidt u naar de [!DNL Segment Builder] in de gebruikersinterface. Gebruik de [!DNL Segment Builder] om met de gegevenselementen van het Profiel in wisselwerking te staan en regels voor uw segmenten te bepalen. Lees voor meer informatie de [Overzicht van segmentatieservice](../segmentation/home.md).
-* **Gegevens verzenden naar doelen**: Deze widget stuurt u naar de doelcatalogus. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en segmenten verzenden naar. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md)
+* **Gegevens opnemen in platform**: Deze widget stuurt u naar de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren in het Experience Platform. Selecteren **[Bronnen configureren]** om naar de broncatalogus te navigeren. Lees voor meer informatie de [overzicht van bronnen](../sources/home.md).
+* **Modelgegevensstructuren**: Deze widget leidt u naar het schema&#39;s-overzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of een blauwdruk tot stand te brengen die de structuur van uw gegevens beschrijven. Selecteren **[!UICONTROL Create schema]** om naar de interface van de schemaverwezenlijking te navigeren. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
+* **Stimulerend publiek**: Deze widget stuurt u naar de egment Builder in de UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteren **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Lees voor meer informatie de [Overzicht van segmentatieservice](../segmentation/home.md).
+* **Gegevens verzenden naar doelen**: Deze widget stuurt u naar de doelcatalogus. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en segmenten verzenden naar. Selecteren **[!UICONTROL Set up destinations]** om naar de doelcatalogus te navigeren. Lees voor meer informatie de [Overzicht van doelen](../destinations/home.md).
 
 ![De startpagina van de platformgebruikersinterface met de widget Aan de slag](assets/platform-home/getting-started-widget.png)
 
@@ -48,10 +48,10 @@ Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profiele
 
 ![De leaderboard-sectie in de UI-startpagina van het platform.](assets/platform-home/leaderboard.png)
 
-* **Totaal aantal schema&#39;s**: De **Totaal schema&#39;s** de teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
-* **Totaal aantal gegevenssets**: De **Totaal aantal gegevensbestanden** de teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in [!DNL Platform]. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees [Overzicht van gegevenssets](../catalog/datasets/overview.md).
-* **Totaal aantal profielen**: De **Profielen** het aantal toont het totale aantal profielen uw organisatie binnen Experience Platform heeft. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals ingesteld in de configuratie van het samenvoegbeleid in Real-Time Klantprofiel. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Voor meer informatie over profielen leest u de [Overzicht van het realtime klantprofiel](../profile/home.md).
-* **Totaal aantal segmenten**: **Segmenten** toont het totale aantal segmenten die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe segmenten worden gecreeerd. Voor meer informatie over segmenten leest u de [Overzicht van segmentatieservice](../segmentation/home.md).
+* **Totaal aantal schema&#39;s**: De **Totaal aantal schema&#39;s** de teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Lees voor meer informatie de [overzicht van schema&#39;s](../xdm/home.md).
+* **Totaal aantal gegevenssets**: De **Totaal aantal gegevenssets** de teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Experience Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees [Overzicht van gegevenssets](../catalog/datasets/overview.md).
+* **Totaal aantal profielen**: De **Profielen** het aantal toont het totale aantal profielen uw organisatie binnen Experience Platform heeft. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Deze telling gebruikt het gebrek [samenvoegingsbeleid](profile/merge-policies.md) zoals ingesteld in de configuratie van het samenvoegbeleid in Real-Time Klantprofiel. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Selecteren **[!UICONTROL Profiles]** om naar de overzichtspagina Profielen te navigeren en alle afmetingen van uw profiel weer te geven. Voor meer informatie over profielen leest u de [Overzicht van het realtime klantprofiel](../profile/home.md).
+* **Totaal publiek**: De **Totaal publiek** de teller toont het totale aantal publiek dat voor uw organisatie wordt gecreeerd. Dit nummer wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Lees voor meer informatie over het publiek de [Overzicht van segmentatieservice](../segmentation/home.md).
 
 ### Recente objecten
 
