@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
+source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
 workflow-type: tm+mt
-source-wordcount: '2464'
+source-wordcount: '2488'
 ht-degree: 0%
 
 ---
@@ -120,6 +120,10 @@ Om uw ontwikkelingstijd te minimaliseren, wordt u geadviseerd om uw vragen met g
 ### Tekst opmaken {#format-text}
 
 De [!UICONTROL Format text] maakt uw query leesbaarder door gestandaardiseerde syntaxisopmaak toe te voegen. Selecteren **[!UICONTROL Format text]** om alle tekst binnen de Redacteur van de Vraag te standaardiseren.
+
+>[!NOTE]
+>
+>De [!UICONTROL Format text] werkt niet met anonieme blokken. Als u wilt weten hoe u een of meer SQL-instructies opeenvolgend kunt koppelen, raadpleegt u de [anonieme blokdocumentatie](../key-concepts/anonymous-block.md).
 
 ![De Query-editor met [!UICONTROL Format text] en de SQL-instructies gemarkeerd.](../images/ui/query-editor/format-text.png)
 
