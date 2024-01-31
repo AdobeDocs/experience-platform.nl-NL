@@ -3,9 +3,9 @@ title: Real-Time CDP-productdocumentatie
 description: Leer hoe je Adobe Real-Time CDP gebruikt.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1065'
 ht-degree: 2%
 
 ---
@@ -20,17 +20,17 @@ Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Be
 
 >[!BEGINTABS]
 
+>[!TAB Hoofdletters gebruiken]
+
+De [!UICONTROL Use Case Playbooks] Deze functionaliteit is nu algemeen beschikbaar voor alle Real-Time CDP- en Adobe Journey Optimizer-klanten. [!UICONTROL Use Case Playbooks] zijn ontworpen om gebruikers te helpen bij het overwinnen van uitdagingen wanneer ze met Real-time Customer Data Platform of Adobe Journey Optimizer beginnen. Als u niet zeker weet waar u moet beginnen of hoe u de juiste middelen voor uw gewenste gebruiksscenario&#39;s kunt maken, kunt u met Afspeelboeken voor hoofdletters en kleine letters inspiratie bieden en verschillende middelen maken die u kunt testen en importeren in productieomgevingen wanneer u klaar bent.
+
+[![afbeelding](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Gereedschap Sandbox]
 
 Met de gereedschapfunctie van de sandbox kunt u de configuratienauwkeurigheid in de verschillende sandboxen verbeteren en configuraties naadloos exporteren en importeren tussen sandboxen. U kunt de functie voor gereedschappen in de sandbox gebruiken om verschillende objecten te selecteren en deze te exporteren naar een pakket.
 
 [![afbeelding](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (Beperkte GA) Accountpubliek activeren]
-
-Real-Time CDP B2B-klanten kunnen nu activeren [accountpubliek](/help/segmentation/ui/account-audiences.md) naar bepaalde bestemmingen.
-
-[![afbeelding](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB Berekende kenmerken]
 
