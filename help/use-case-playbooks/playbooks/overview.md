@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Overzicht van afspeelboeken gebruiken
 description: Leer hoe u de functie Hoofdletters gebruiken in Experience Platform kunt gebruiken om aan de slag te gaan met verschillende gebruikssituaties voor marketingdoeleinden
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 0%
@@ -34,7 +34,6 @@ Wat u in deze documentatiehandleiding zult vinden:
 * Verschillende elementen maken die u kunt gebruiken, testen en promoten tot productie wanneer u klaar bent.
 
 ![Weergave van alle afspeelboeken](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 Elke playbook omvat informatie over het specifieke gebruiksgeval dat het oplost.
 
