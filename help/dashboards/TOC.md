@@ -4,10 +4,10 @@ user-guide-title: Hulp bij Adobe Experience Platform-dashboards
 breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
-source-git-commit: 643e70bb2e55c2fad89fdf784298f7ac6f98397e
+source-git-commit: 45b11ddbd3c938a042cc625aba9fabbd2064f980
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 27%
+source-wordcount: '90'
+ht-degree: 28%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 27%
    * [Doelgroepen](guides/audiences.md)
    * [Doelen](guides/destinations.md)
    * [Licentiegebruik](guides/license-usage.md)
+* Beschikbare inzichten {#insights}
+   * [Profielen](insights/profiles.md)
+   * [Doelgroepen](insights/audiences.md)
+   * [Doelen](insights/destinations.md)
 * dashboards aanpassen {#customize}
    * [Overzicht van aanpassingen](customize/overview.md)
    * [Dashboards wijzigen](customize/modify.md)
