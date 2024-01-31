@@ -2,9 +2,10 @@
 solution: Experience Platform
 title: Beschikbare Use Case Playbooks voor Real-time Customer Data Platform en Adobe Journey Optimizer.
 description: Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer.
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+role: User
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -54,18 +55,18 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 
 | Naam van afspeelboek | Beschrijving |
 | ------------- | ----------- |
-| Verlaten auto: Merchandise - voor activering | Zoek ventilatoren opnieuw nadat ze uw website of app hebben verlaten nadat ze de artikelen aan het winkelwagentje hebben toegevoegd. |
-| Verlaten winkelwagen: product - voor activering | Winkelaars ophalen nadat ze uw website of app hebben verlaten nadat ze producten aan de winkelwagen hebben toegevoegd. |
-| Afgewezen winkelwagentje: reservering - voor activering | Gasten opnieuw oppakken nadat ze uw website of app hebben verlaten en een nieuwe reservering aan het winkelwagentje hebben toegevoegd. |
-| Aanbieding van bestemming - voor activering | Gasten van het doel om een reserve tijdens een aan de gang zijnde reisbestemmingsbevordering te maken. |
-| Aanbieding voor games - Voor activering | Streef fans aan om tickets te kopen voor een toekomstig spel. |
+| Afgewezen winkelwagentje: Merchandise—voor activering | Zoek ventilatoren opnieuw nadat ze uw website of app hebben verlaten nadat ze de artikelen aan het winkelwagentje hebben toegevoegd. |
+| Afgewezen winkelwagen: product—voor activering | Winkelaars ophalen nadat ze uw website of app hebben verlaten nadat ze producten aan de winkelwagen hebben toegevoegd. |
+| Afgewezen winkelwagentje: reservering—voor activering | Gasten opnieuw oppakken nadat ze uw website of app hebben verlaten en een nieuwe reservering aan het winkelwagentje hebben toegevoegd. |
+| Doelbevordering—Voor activering | Gasten van het doel om een reserve tijdens een aan de gang zijnde reisbestemmingsbevordering te maken. |
+| Aanbieding voor games—Voor activering | Streef fans aan om tickets te kopen voor een toekomstig spel. |
 | De aankoop van koopwaar tijdens game verhogen - voor activering | Streef fans aan om goederen te kopen terwijl ze dicht bij de gamesite zijn. |
-| Aankoop van product verhogen tijdens bezoek aan winkel - Voor activering | Winkelaars moeten goederen kopen terwijl ze in de buurt van de winkel zijn. |
-| De aankoop van producten en services tijdens het verblijf verhogen - voor activering | Gegadigden van het doel om producten en de diensten te kopen terwijl zij in het bezit zijn. |
-| Productpromotie - Voor activering | Kopers moeten producten kopen tijdens een doorlopende productpromotiecampagne. |
-| Verstuur een verjaardagsbericht naar ventilatoren - voor activering | Streef fans op hun verjaardag met een &quot;Happy Birthday&quot;-bericht en een exclusief aanbod. |
-| Verstuur een verjaardagsbericht naar gasten - voor activering | De gasten van het doel op hun verjaardag met een &quot;Happy Birthday&quot;bericht en een exclusief aanbod. |
-| Verstuur een verjaardagsbericht naar kopers - voor activering | De consumenten van het doel op hun verjaardag met een &quot;Happy Birthday&quot;bericht en een exclusief aanbod. |
+| De aanschaf van een product verhogen tijdens het bezoek aan de winkel—Voor activering | Winkelaars moeten goederen kopen terwijl ze in de buurt van de winkel zijn. |
+| De aankoop van producten en services tijdens het verblijf verhogen—voor activering | Gegadigden van het doel om producten en de diensten te kopen terwijl zij in het bezit zijn. |
+| Productpromotie—Voor activering | Kopers moeten producten kopen tijdens een doorlopende productpromotiecampagne. |
+| Verstuur een verjaardagsbericht naar ventilatoren—voor activering | Streef fans op hun verjaardag met een &quot;Happy Birthday&quot;-bericht en een exclusief aanbod. |
+| Verstuur een verjaardagsbericht naar gasten—voor activering | De gasten van het doel op hun verjaardag met een &quot;Happy Birthday&quot;bericht en een exclusief aanbod. |
+| Verstuur een verjaardagsbericht naar kopers—voor activering | De consumenten van het doel op hun verjaardag met een &quot;Happy Birthday&quot;bericht en een exclusief aanbod. |
 
 {style="table-layout:auto"}
 

@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: Overzicht van gegevensbewustzijn in Use Case Playbooks
 description: Leer hoe u tijd sneller kunt waarderen door de elementen te kopiëren die in de uiteindelijke inspirerende sandbox zijn gegenereerd naar andere sandboxen.
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
 
-# Overzicht van gegevensbewustzijn in Use Case Playbooks
+# Door afspeelboeken gegenereerde elementen publiceren naar andere sandboxen {#publish-to-other-sandboxes}
 
 Afspeelboeken met hoofdletters/kleine letters zijn marketingsjablonen die zijn ontworpen om elementen te genereren, zoals publiek, schema&#39;s of ritten voor veelvoorkomende gevallen van marketinggebruik. U kunt de elementen die door afspeelboeken zijn gemaakt, testen in de inspirerende sandbox en als u klaar bent, kunt u de elementen importeren in andere ontwikkelingssandboxen voor verdere tests met de gegevens die beschikbaar zijn in die sandboxen. Als u tevreden bent met het testen, kunt u de elementen van ontwikkelingssandboxen verplaatsen naar productiesandboxen.
 
@@ -97,7 +98,3 @@ Wanneer u een instantie maakt, genereert u een set elementen, zoals ritten, segm
 ## Volgende stappen
 
 Nadat u deze handleiding hebt gelezen, hebt u nu een beter inzicht in hoe u de afspeelboeken van hoofdletters en kleine letters samen met [sandbox, gereedschap](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) om uitvoerbare reizen tot stand te brengen die uw schema&#39;s van verwijzingen voorzien. Meer informatie over de algemene [Real-Time CDP-gebruikskwesties](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### Meer hulp over dit onderwerp
-
-[Gereedschap Sandbox](/help/sandboxes/ui/sandbox-tooling.md)

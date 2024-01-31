@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Aan de slag
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
@@ -65,7 +66,7 @@ Om schema&#39;s tot stand te brengen en te beheren, gebruik de gegevens modeller
 
 **Machtigingen voor bestemmingen**
 
-Om bestemmingen tot stand te brengen en te leiden, gebruik de toestemmingen van Doelen; **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, UICONTROL Destination Authoring*.
+Om bestemmingen tot stand te brengen en te leiden, gebruik de toestemmingen van Doelen; **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, **[!UICONTROL Destination Authoring]**.
 
 **Vergunningen voor reizen**
 

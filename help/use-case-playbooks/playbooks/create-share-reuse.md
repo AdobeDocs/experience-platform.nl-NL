@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Afspeelboekinstanties maken, delen en opnieuw gebruiken
 description: Leer hoe u playbook-instanties kunt maken, delen en opnieuw gebruiken om uw marketinggebruikskwestie te voltooien.
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -73,6 +74,12 @@ Door veelvoudige instanties van zelfde playbook te creëren, kunt u het zelfde g
 U kunt de gegenereerde instantie en elementen delen met andere teamleden. Hiervoor kopieert u de URL-koppeling van de browser en deelt u deze met uw team om een overzicht van de gegenereerde elementen te krijgen.
 
 ![URL die is gemarkeerd in een weergave voor afspeelboeken met gebruikerscase.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## De videoanalyse van het playbook proces van begin tot eind
+
+Bekijk deze video om te leren om instanties van een Hoofdlettergebruik Playbook van begin tot eind te ontdekken, tot stand te brengen, te publiceren en problemen op te lossen, evenals hoe te om de activa te kopiëren die door playbook in andere zandbakken worden geproduceerd die in uw organisatie worden gevestigd.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## Volgende stappen {#next-steps}
 

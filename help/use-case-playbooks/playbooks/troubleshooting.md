@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Bekende beperkingen en problemen met afspeelboeken oplossen
 description: Meer informatie over de bekende problemen en algemene problemen met afspeelboeken en hoe u deze problemen kunt oplossen
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 0%
 
 # Problemen oplossen en bekende beperkingen {#troubleshooting-known-limitations}
 
+Leer hoe te om fouten problemen op te lossen wanneer het werken met de Hoofdletters van het Gebruik en de bekende beperkingen van de algemene beschikbaarheidsversie begrijpen.
+
 ## Problemen oplossen {#troubleshooting}
+
+Suggesties voor het oplossen van problemen weergeven voor algemene fouten wanneer u werkt met Hoofdletters gebruiken
 
 ### Adobe Journey Optimizer-oppervlakken niet geconfigureerd
 
@@ -35,7 +40,7 @@ Er worden een aantal bekende beperkingen weergegeven wanneer u een instantie van
 
 * Wanneer u de opdracht [functionaliteit voor gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md) om het schema van de inspirerende zandbak aan de ontwikkelingszandbak te bevorderen, zou u sommige fouten kunnen zien gelijkend op hieronder:
 
-![schemafouten](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![Fouten weergegeven in de workflow voor schematoewijzing.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Dit komt doordat sommige velden die zijn gegenereerd vanuit uw schema, niet aanwezig zijn in het schema in de ontwikkelingssandbox waarnaar u kopieert. Kijk eens wat die velden zijn. Ga vervolgens terug naar de ontwikkelingssandbox waar u kunt:
 
