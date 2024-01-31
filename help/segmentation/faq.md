@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2733'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Ja, extern gegenereerde, vooraf gebouwde doelgroepen worden ondersteund met Poor
 
 ### Welke toestemmingen moet ik hebben om extern geproduceerd publiek te uploaden?
 
-Als u extern gegenereerde soorten publiek wilt uploaden, hebt u zowel de machtigingen &quot;Beheren publiek/segmenten&quot; als &quot;Gegevenssets beheren&quot; nodig. Er zijn geen specifieke op rol-gebaseerde controles vereist om extern geproduceerd publiek te uploaden.
+Als u extern gegenereerde soorten publiek wilt uploaden, moet u beschikken over de machtigingen &quot;Soorten publiek/segmenten weergeven&quot;, &quot;Soorten publiek/segmenten beheren&quot;, &quot;Gegevenssets weergeven&quot;, &quot;Gegevenssets beheren&quot;, &quot;Bronnen weergeven&quot; en &quot;Bronnen beheren&quot;. Er zijn geen specifieke op rol-gebaseerde controles vereist om extern geproduceerd publiek te uploaden.
 
 ### Wat gebeurt er als ik een extern gegenereerd publiek upload?
 
