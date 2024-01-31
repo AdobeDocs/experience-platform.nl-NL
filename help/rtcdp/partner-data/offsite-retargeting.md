@@ -3,9 +3,9 @@ title: Offsite opnieuw oprichten van niet-geverifieerde bezoekers
 description: Leer hoe te om niet voor authentiek verklaarde gebruikers opnieuw te richten door perspectief te gebruiken IDs om een gegevens verwerkt attribuut tot stand te brengen dat kan worden gebruikt om een publiek van niet voor authentiek verklaarde gebruikers tot stand te brengen.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ De **[!UICONTROL Create computed attribute]** wordt weergegeven. Op deze pagina 
 
 Voor dit gebruiksgeval, kunt u een gegevens verwerkt attribuut tot stand brengen dat, als partneridentiteitskaart bestaat, de meest recente waarde van partneridentiteitskaart binnen de laatste 24 uren krijgt.
 
-Gebruikend de onderzoeksbar, kunt u van de &quot;identiteitskaart van de Partner&quot;gebeurtenis de plaats bepalen en toevoegen aan het gegevens verwerkte attributencanvas.
+Gebruikend de onderzoeksbar, kunt u van de &quot;identiteitskaart van de Partner&quot;gebeurtenis de plaats bepalen en toevoegen die [u tijdens het onsite gebruik van personalisatie hebt gemaakt](#get-data-in) op het berekende kenmerkencanvas.
 
 ![De [!UICONTROL Events] en de zoekbalk worden gemarkeerd.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -109,7 +109,7 @@ Selecteer de zojuist toegevoegde **[!UICONTROL Page View]** gebeurtenis. De teru
 
 Nadat u de gebeurtenis hebt toegevoegd, moet u een kenmerk toevoegen. Aangezien u met ongeautoriseerde bezoekers werkt, kunt u het berekende attribuut toevoegen u enkel creeerde. Met dit nieuwe berekende kenmerk kunt u partner-id&#39;s koppelen aan een publiek.
 
-Om het berekende attribuut toe te voegen, onder **[!UICONTROL Attributes]**, selecteert u **[!UICONTROL XDM Individual Profile]**, gevolgd door **[!UICONTROL _atag]**, **[!UICONTROL SystemComputedAttributes]**, en **[!UICONTROL PartnerID]**. Voeg nu de **[!UICONTROL Value]** van het berekende kenmerk aan de sectie attributes van het canvas.
+Om het berekende attribuut toe te voegen, onder **[!UICONTROL Attributes]**, selecteert u **[!UICONTROL XDM Individual Profile]**, gevolgd door **[huurder-id van uw organisatie](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, en **[!UICONTROL PartnerID]**. Voeg nu de **[!UICONTROL Value]** van het berekende kenmerk aan de sectie attributes van het canvas.
 
 ![Het mapparkeren voor toegang tot het berekende kenmerk wordt weergegeven.](../assets/offsite-retargeting/access-computed-attribute.png)
 
