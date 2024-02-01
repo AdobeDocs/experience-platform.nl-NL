@@ -2,7 +2,7 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Opmerkingen bij de release van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ee30e00bceb392b775d15ca2cad95b746698dc4
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 3%
@@ -46,7 +46,7 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe mapfuncties | <ul><li>`object_to_map`: Gebruik de `object_to_map` functie om kaartgegevenstypen te maken. Deze functie ondersteunt verschillende syntaxis. Lees voor meer informatie de handleiding op [functies voor hiërarchieën - objecten](../../data-prep/functions.md#objects). </li><li>`to_map`: Gebruik de `to_map` gebruiken om een kaart met bepaalde veldnaam en waardeparen te maken met behulp van objecten. Lees voor meer informatie de handleiding op [functies voor hiërarchieën - kaarten](../../data-prep/functions.md#objects). </li><li>`array_to_map`: Gebruik de `array_to_map` functie voor het maken van een kaart met opgegeven veldnaam- en waardeparen met behulp van objectarrays. Lees voor meer informatie de handleiding op [functies voor hiërarchieën - kaarten](../../data-prep/functions.md#objects). |
+| Nieuwe mapfuncties | <ul><li>`object_to_map`: Gebruik de `object_to_map` functie om kaartgegevenstypen te maken. Deze functie ondersteunt verschillende syntaxis. Lees voor meer informatie de handleiding op [functies voor hiërarchieën - objecten](../../data-prep/functions.md#objects). </li><li>`to_map`: Gebruik de `to_map` gebruiken om een kaart met bepaalde veldnaam en waardeparen te maken met behulp van objecten. Lees voor meer informatie de handleiding op [functies voor hiërarchieën - kaarten](../../data-prep/functions.md#map). </li><li>`array_to_map`: Gebruik de `array_to_map` functie voor het maken van een kaart met opgegeven veldnaam- en waardeparen met behulp van objectarrays. Lees voor meer informatie de handleiding op [functies voor hiërarchieën - kaarten](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
