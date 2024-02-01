@@ -2,9 +2,9 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -13,12 +13,17 @@ ht-degree: 0%
 
 ## Doelwijziging {#changelog}
 
-Met de release van het Experience Platform van juli 2023 [!DNL Amazon S3] doel biedt nieuwe functionaliteit, zoals hieronder wordt weergegeven:
++++ Wijzigingen weergeven
 
-* [Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md).
-* Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
-* Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* [Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
+| Releasedatum | Type bijwerken | Beschrijving |
+|---|---|---|
+| Januari 2024 | Bijwerken van functionaliteit en documentatie | De Amazon S3 bestemmingsschakelaar steunt nu een nieuw verondersteld rolauthentificatietype. Lees meer over het onderwerp in de [verificatiesectie](#assumed-role-authentication). |
+| Juli 2023 | Bijwerken van functionaliteit en documentatie | Met de release van het Experience Platform van juli 2023 [!DNL Amazon S3] doel biedt nieuwe functionaliteit, zoals hieronder wordt weergegeven: <br><ul><li>[Ondersteuning voor gegevensexport](/help/destinations/ui/export-datasets.md)</li><li>Extra [naamgevingsopties voor bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Mogelijkheid om aangepaste bestandsheaders in uw geëxporteerde bestanden in te stellen via de [verbeterde toewijzingsstap](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Mogelijkheid om de opmaak van geëxporteerde CSV-gegevensbestanden aan te passen](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+
+{style="table-layout:auto"}
+
++++
 
 ## Verbinding maken met uw [!DNL Amazon S3] opslag via API of UI {#connect-api-or-ui}
 
@@ -64,12 +69,37 @@ Als u verbinding wilt maken met dit doel, voert u de stappen uit die in het dial
 >title="Openbare RSA-sleutel"
 >abstract="U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte sleutel in de documentatiekoppeling hieronder."
 
-Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**.
+Als u zich wilt verifiëren bij de bestemming, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]**. De Amazon S3-bestemming ondersteunt twee verificatiemethoden:
+
+* Toegangstoets en geheime sleutelverificatie
+* Veronderstelde rolauthentificatie
+
+#### Toegangstoets en geheime sleutelverificatie
+
+Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime sleutel wilt invoeren, zodat Experience Platform gegevens kan exporteren naar uw Amazon S3-eigenschappen.
+
+![Afbeelding van de vereiste velden bij het selecteren van de toegangstoets en de verificatie met de geheime sleutel.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3]toegangstoets** en **[!DNL Amazon S3]geheime sleutel**: In [!DNL Amazon S3], een `access key - secret access key` paar om Platform toegang tot uw te verlenen [!DNL Amazon S3] account. Meer informatie in het dialoogvenster [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
   ![Afbeelding met een voorbeeld van een PGP-sleutel met de juiste notatie in de gebruikersinterface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### Veronderstelde rol {#assumed-role-authentication}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_assumed_role"
+>title="Veronderstelde rolauthentificatie"
+>abstract="Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet met Adobe wilt delen. In plaats daarvan maakt Experience Platform verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang. Plak de ARN van de rol die u in AWS voor de Adobe gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` "
+
+![Afbeelding van de vereiste velden bij het selecteren van aangenomen rolverificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+
+Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet met Adobe wilt delen. In plaats daarvan maakt Experience Platform verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang.
+
+Om dit te doen, moet u in de console van AWS een veronderstelde gebruiker voor Adobe met [rechten vereist](#required-s3-permission) om naar uw Amazon S3 emmers te schrijven. Een **[!UICONTROL Trusted entity]** in AWS met de Adobe account **[!UICONTROL 670664943635]**. Raadpleeg voor meer informatie de [AWS-documentatie over het maken van rollen](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+* **[!DNL Role]**: Plak de ARN van de rol die u in AWS voor de Adobe gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
 ### Doelgegevens invullen {#destination-details}
 

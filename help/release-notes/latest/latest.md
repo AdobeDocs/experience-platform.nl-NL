@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Opmerkingen bij de release van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '1027'
 ht-degree: 3%
 
 ---
@@ -75,6 +75,14 @@ Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestem
 | Doel | Beschrijving |
 | ----------- | ----------- |
 | [Publicatieverbinding](../../destinations/catalog/advertising/pubmatic.md) | Gebruik deze bestemming om publieksgegevens naar te verzenden [!DNL PubMatic Connect] platform. |
+
+{style="table-layout:auto"}
+
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+
+| Functionaliteit | Beschrijving |
+| ----------- | ----------- |
+| Nieuw **overgenomen rol** verificatietype voor Amazon S3-doelen | Gebruik het nieuwe veronderstelde type van rolauthentificatie wanneer het verbinden van Experience Platform met uw emmers van Amazon S3 als u geen rekeningssleutels en geheime sleutels met Experience Platform wilt delen. Lees meer over de nieuwe authentificatiemethode in [verificatiesectie](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) van de Amazon S3 documentatie. |
 
 {style="table-layout:auto"}
 
