@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
 description: Dit document introduceert de toewijzingsfuncties die worden gebruikt met Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
+source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
 workflow-type: tm+mt
-source-wordcount: '5080'
+source-wordcount: '5459'
 ht-degree: 1%
 
 ---
@@ -151,6 +151,9 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | map_get_values | Neemt een kaart en een zeer belangrijke input. Als de invoer één toets is, retourneert de functie de waarde die aan die toets is gekoppeld. Als de invoer een tekenreeksarray is, retourneert de functie alle waarden die overeenkomen met de opgegeven sleutels. Als de inkomende kaart dubbele sleutels heeft, moet de terugkeerwaarde de sleutels dedupliceren en unieke waarden terugkeren. | <ul><li>KAART: **Vereist** De invoerkaartgegevens.</li><li>TOETS:  **Vereist** De sleutel kan een enkele tekenreeks of een tekenreeks-array zijn. Als een ander primitief type (data/number) wordt opgegeven, wordt het behandeld als een tekenreeks.</li></ul> | get_values(MAP, KEY) | Zie de [aanhangsel](#map_get_values) voor een codevoorbeeld. | |
 | map_has_keys | Als een of meer invoersleutels worden opgegeven, retourneert de functie true. Als een tekenreeks-array wordt opgegeven als invoer, retourneert de functie waar op de eerste key die wordt gevonden. | <ul><li>KAART:  **Vereist** De gegevens van de invoerkaart</li><li>TOETS:  **Vereist** De sleutel kan een enkele tekenreeks of een tekenreeks-array zijn. Als een ander primitief type (data/number) wordt opgegeven, wordt het behandeld als een tekenreeks.</li></ul> | map_has_keys(MAP, KEY) | Zie de [aanhangsel](#map_has_keys) voor een codevoorbeeld. | |
 | add_to_map | Accepteert minstens twee invoeren. Om het even welk aantal kaarten kan als input worden verstrekt. De Prep van gegevens keert één enkele kaart terug die alle zeer belangrijk-waardeparen van alle input heeft. Als één of meerdere sleutels (in de zelfde kaart of over kaarten) worden herhaald, dedupliceert Prep van Gegevens de sleutels zodat het eerste zeer belangrijk-waardepaar in de orde voortduurt dat zij in de input werden overgegaan. | KAART: **Vereist** De invoerkaartgegevens. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Zie de [aanhangsel](#add_to_map) voor een codevoorbeeld. | |
+| object_to_map (Syntaxis 1) | Gebruik deze functie om gegevenstypen Kaart te maken. | <ul><li>TOETS: **Vereist** Toetsen moeten een tekenreeks zijn. Als er andere primitieve waarden zijn opgegeven, zoals gehele getallen of datums, worden deze automatisch omgezet in tekenreeksen en worden ze als tekenreeksen behandeld.</li><li>ANY_TYPE: **Vereist** Verwijst naar elk ondersteund XDM-gegevenstype, behalve Kaarten.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ...) | Zie de [aanhangsel](#object_to_map) voor een codevoorbeeld. | |
+| object_to_map (syntaxis 2) | Gebruik deze functie om gegevenstypen Kaart te maken. | <ul><li>OBJECT: **Vereist** U kunt een binnenkomend object of objectarray opgeven en een kenmerk binnen het object aanwijzen als sleutel.</li></ul> | object_to_map(OBJECT) | Zie de [aanhangsel](#object_to_map) voor een codevoorbeeld. |
+| object_to_map (syntaxis 3) | Gebruik deze functie om gegevenstypen Kaart te maken. | <ul><li>OBJECT: **Vereist** U kunt een binnenkomend object of objectarray opgeven en een kenmerk binnen het object aanwijzen als sleutel.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Zie de [aanhangsel](#object_to_map) voor een codevoorbeeld. |
 
 {style="table-layout:auto"}
 
@@ -173,6 +176,20 @@ Zie de sectie voor informatie over de functie voor het kopiëren van objecten [o
 | size_of | Retourneert de grootte van de invoer. | <ul><li>INVOER: **Vereist** Het object waarvan u de grootte probeert te vinden.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | update_array_append | Deze functie wordt gebruikt om alle elementen in de volledige invoerarray toe te voegen aan het einde van de array in Profile. Deze functie is **alleen** van toepassing tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereist** De array die moet worden toegevoegd aan de array in het profiel.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123 456] |
 | upsert_array_replace | Deze functie wordt gebruikt om elementen in een array te vervangen. Deze functie is **alleen** van toepassing tijdens updates. Indien gebruikt in de context van tussenvoegsels, keert deze functie de input zoals is terug. | <ul><li>ARRAY: **Vereist** De array die de array in het profiel moet vervangen.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123 456] |
+
+{style="table-layout:auto"}
+
+### Hiërarchieën - Toewijzen {#map}
+
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
+| Functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | Deze functie neemt een objectarray en een sleutel als invoer en retourneert een kaart van het veld van de sleutel met de waarde als sleutel en het arrayelement als waarde. | <ul><li>INVOER: **Vereist** De objectarray waarvan u het eerste object met een andere waarde dan null wilt zoeken.</li><li>TOETS:  **Vereist** De sleutel moet een veldnaam zijn in de objectarray en het object als waarde.</li></ul> | array_to_map(OBJECT[] INVOER, SLEUTEL) | Lees de [aanhangsel](#object_to_map) voor een codevoorbeeld. |
+| object_to_map | Deze functie neemt een voorwerp als argument en keert een kaart van zeer belangrijk-waardeparen terug. | <ul><li>INVOER: **Vereist** De objectarray waarvan u het eerste object met een andere waarde dan null wilt zoeken.</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address) where input is &quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;,City : \&quot;san jose\&quot;,State : \&quot;CA\&quot;,type: \&quot;office\&quot;} | Retourneert een kaart met opgegeven veldnaam- en waardeparen of null als de invoer null is. Bijvoorbeeld: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | Deze functie neemt een lijst van ke-value paren en keert een kaart van zeer belangrijk-waardeparen terug. | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;)&quot; | Retourneert een kaart met opgegeven veldnaam- en waardeparen of null als de invoer null is. Bijvoorbeeld: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -455,3 +472,150 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 ```
 
 +++
+
+#### object_to_map {#object_to_map}
+
+**Syntaxis 1**
+
++++Selecteren om voorbeeld weer te geven
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**Syntaxis 2**
+
++++Selecteren om voorbeeld weer te geven
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+```
+
++++
+
+**Syntaxis 3**
+
++++Selecteren om voorbeeld weer te geven
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++Selecteren om voorbeeld weer te geven
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+
