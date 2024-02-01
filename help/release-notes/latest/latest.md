@@ -2,9 +2,9 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Opmerkingen bij de release van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
+source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1467'
 ht-degree: 3%
 
 ---
@@ -19,9 +19,11 @@ Nieuwe functies in Adobe Experience Platform:
 
 Updates voor bestaande functies in Experience Platform:
 
-- [Dashboards](#dashboards)
+- [Toegangsbeheer op basis van kenmerken](#abac)
 - [Gegevensvoorbereiding](#data-prep)
+- [Dashboards](#dashboards)
 - [Doelen](#destinations)
+- [Identiteitsservice](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
@@ -37,6 +39,22 @@ Aan de slag met [!UICONTROL Use Case Playbooks], lees de volgende documentatiepa
 - Informatie ophalen over alle [vereiste machtigingen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) om playbooks en de activa te gebruiken die door playbooks worden geproduceerd.
 - Begrijp het [functionaliteit voor gegevensbewustzijn](/help/use-case-playbooks/playbooks/data-awareness.md) waarmee u gegenereerde elementen naar andere sandboxomgevingen kunt kopiëren
 - Get [tips voor problemen](/help/use-case-playbooks/playbooks/troubleshooting.md) als u fouten of problemen ondervindt bij het gebruik van hoofdletters en kleine letters.
+
+## Toegangsbeheer op basis van kenmerken {#abac}
+
+Toegangsbeheer op basis van kenmerken is een mogelijkheid van Adobe Experience Platform die privacybewuste merken meer flexibiliteit biedt om gebruikerstoegang te beheren. Afzonderlijke objecten zoals schemavelden en segmenten kunnen worden toegewezen aan gebruikersrollen. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
+
+Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot, gevoelige persoonlijke gegevens (SPD), persoonlijk identificeerbare informatie (PII) en ander aangepast type van gegevens over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+
+**Nieuwe of bijgewerkte documentatie**
+
+| Documentatie bijwerken | Beschrijving |
+| --- | --- |
+| Nieuwe API eindpunten gedocumenteerd voor op attributen-gebaseerd toegangsbeheer | De [Referentiedocumentatie van Access Control API](https://developer.adobe.com/experience-platform-apis/references/access-control/) omvat nu op attribuut-gebaseerde API rollen, beleid, en producteindpunten van toegangsbeheer. Deze eindpunten kunnen worden gebruikt om relevante rollen, beleid, en producten voor een gebruiker op bepaalde middelen in een gespecificeerde zandbak terug te winnen. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie [op attributen-gebaseerd toegangsbeheeroverzicht](../../access-control/abac/overview.md). Voor een uitvoerige gids over het op attributen-gebaseerde toegangsbeheerwerkschema, lees [attribuut-based toegangsbeheergids van begin tot eind](../../access-control/abac/end-to-end-guide.md).
 
 ## Gegevensvoorbereiding {#data-prep}
 
@@ -88,6 +106,20 @@ Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestem
 
 Voor meer algemene informatie over bestemmingen raadpleegt u de [Overzicht van doelen](../../destinations/home.md).
 
+## Identiteitsservice {#identity-service}
+
+De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+
+**Nieuwe of bijgewerkte documentatie**
+
+| Documentatie bijwerken | Beschrijving |
+| --- | --- |
+| Herstructurering van documenten | De documentatie van de identiteitsdienst is geherstructureerd om de presentatie en duidelijkheid van concepten binnen de identiteitsdienst te verbeteren:<ul><li>Ga naar [Overzicht van identiteitsservice-pagina](../../identity-service/home.md) voor een uitgebreide terminologiegids, een gebruiksgeval voorbeeld die een typische klantenreis, een specificatie van hoe de Dienst van de Identiteit identificeert samen verbindt, en een samenvatting van de rol die de Dienst van de Identiteit binnen het ecosysteem van de Experience Platform plaatst.</li><li>Lees de handleiding op [inzicht krijgen in de relatie tussen Identiteitsservice en Real-Time Klantprofiel](../../identity-service/identity-and-profile.md) voor een gedetailleerd overzicht van de manier waarop de twee diensten samenwerken en de verschillen tussen hun doelstellingen, processen, input, en output.</li><li>Zie de [Logica-handleiding voor identiteitsservice-koppeling](../../identity-service/features/identity-linking-logic.md) voor uitleg en visualisatie van het gedrag van de identiteitsgrafiek worden verschillende scenario&#39;s en tijdstempels gegeven.</li></ul> |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over Identiteitsservice leest u de [Overzicht van identiteitsservice](../../identity-service/home.md).
+
 ## Real-Time Customer Data Platform {#rtcdp}
 
 Gebouwd op Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen met intelligente besluitvorming door de klantenreis te activeren. [!DNL Real-Time CDP] combineert veelvoudige bronnen van ondernemingsgegevens om klantenprofielen in real time tot stand te brengen. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
@@ -98,7 +130,18 @@ Gebouwd op Experience Platform, Real-time Customer Data Platform ([!DNL Real-Tim
 | --- | --- |
 | Updates van de [Homepage van Real-Time CDP](https://experience.adobe.com) | <ul><li>**Profielwidget**: U kunt nu de widget Profielen gebruiken om naar de overzichtspagina Profielen te navigeren en om profielgegevens voor uw organisatie weer te geven.</li><li>**Metrische kaart van profiel**: De metriekkaart van het Profiel in het dashboard van de homepage toont nu het totale aantal profielen in uw organisatie, afhankelijk van uw respectieve samenvoegingsbeleid.</li><li>**Schemaswidget**: U kunt nu de widget schema&#39;s gebruiken om naar de workflow voor het maken van schema&#39;s in de gebruikersinterface te navigeren.</li></ul> |
 
-Lees voor meer informatie over Real-Time CDP de [Real-Time CDP-overzicht](../../rtcdp/overview.md).
+{style="table-layout:auto"}
+
+**Nieuwe of bijgewerkte documentatie**
+
+| Documentatie bijwerken | Beschrijving |
+| --- | --- |
+| Nieuwe Real-Time CDP-documentatiewebsite | Ga naar [nieuwe Real-Time CDP-documentatiehomepage](/help/rtcdp/home.md) voor informatie over hoe u in één oogopslag aan de slag kunt gaan met het product, de guardrails, de draagtas van het monstergebruik en nog veel meer. |
+| Voorbeeld Real-Time CDP-gebruiksscenario&#39;s - overzicht | Ga naar [nieuwe voorbeeldpagina met voorbeelden bekijken](/help/rtcdp/use-case-guides/overview.md) voor een verzameling voorbeelden van gebruiksgevallen die uw organisatie met Real-Time CDP kan bereiken. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over Real-Time CDP leest u de [Real-Time CDP-overzicht](../../rtcdp/overview.md).
 
 ## Klantprofiel in realtime {#profile}
 
