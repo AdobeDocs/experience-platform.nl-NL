@@ -2,10 +2,10 @@
 title: Aanvullende informatie over Adobe Experience Platform
 description: Opmerkingen bij de release van januari 2024 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 3%
+source-wordcount: '1542'
+ht-degree: 2%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 | Functie | Beschrijving |
 | --- | --- |
-| SQL weergeven | U kunt SQL nu achter uw Profielen, Soorten publiek, Doelen, en aangepaste inzichten bekijken en dan de vraag op bestelling door de Redacteur van de Vraag uitvoeren. inspiratie halen uit de SQL van meer dan 40 bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Lees voor meer informatie de handleiding op [inzicht weergeven in SQL](../../dashboards/view-sql.md). |
+| SQL weergeven | U kunt SQL nu achter uw Profielen, Soorten publiek, Doelen, en aangepaste inzichten met de knevel van SQL van de Mening bekijken SQL, dan de vraag op bestelling door de Redacteur van de Vraag uitvoeren. Als u toegang krijgt tot de SQL die uw Real-time Customer Data Platform-inzichten kracht geeft, kunt u beter begrijpen wat de logica achter de analyse van uw gegevensmodel is. Deze transparantie maakt uw Adobe in real time CDP gegevens toegankelijker, begrijpelijker, en beïnvloedend voor besluitvorming.<br>inspiratie halen uit de SQL van meer dan 40 bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. SQL is ook beschikbaar voor uw [Profielen](../../dashboards/insights/profiles.md), [Soorten publiek](../../dashboards/insights/audiences.md), en [Doelen](../../dashboards/insights/destinations.md) inzichten in de documentatie van het Experience League. Deze documenten benadrukken de zaken van het bedrijfsgebruik die met de standaardinzichten kunnen worden beantwoord. Lees voor meer informatie de handleiding op [inzicht weergeven in SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
