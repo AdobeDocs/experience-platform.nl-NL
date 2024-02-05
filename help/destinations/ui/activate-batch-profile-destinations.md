@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
 workflow-type: tm+mt
-source-wordcount: '3604'
+source-wordcount: '3636'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,12 @@ Gebruik de **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip
 
 4. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
 
-### Incrementele bestanden exporteren {#export-incremental-files}
+### Incrementele bestanden exporteren
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Bestandsnaam configureren"
+>abstract="Voor op een bestand gebaseerde doelen wordt een unieke bestandsnaam per publiek gegenereerd. Met de bestandsnaameditor kunt u een unieke bestandsnaam maken en bewerken of de standaardnaam behouden."
 
 Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te activeren waarbij het eerste bestand een volledige momentopname is van alle profielkwalificaties voor het geselecteerde publiek, en volgende bestanden zijn incrementele profielkwalificaties sinds de vorige exportbewerking.
 
@@ -167,7 +172,7 @@ Selecteren **[!UICONTROL Export incremental files]** om een exportbewerking te a
 
 4. Selecteren **[!UICONTROL Create]** om het programma op te slaan.
 
-### Bestandsnamen configureren {#file-names}
+### Bestandsnamen configureren
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"

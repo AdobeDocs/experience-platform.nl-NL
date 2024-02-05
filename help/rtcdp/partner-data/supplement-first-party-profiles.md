@@ -3,7 +3,7 @@ title: Eigen profielen aanvullen met door partners verstrekte attributen
 description: Leer hoe u eigen profielen kunt aanvullen met kenmerken van vertrouwde gegevenspartners om uw databasis te verbeteren, nieuwe inzichten in uw klantenbestand te verkrijgen en uw doelgroepen beter te optimaliseren.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Adobe begrijpt dat er geen uniforme benadering is en maakt naadloze interoperabi
 
 Bijvoorbeeld, volg de stappen in dit gebruiksgeval worden beschreven wanneer u uw klantenverslagen met demografische en intentsignalen moet verrijken die.
 
-## Vereisten en planning {#prerequisites-and-planning}
+## Vereisten en planning
 
 Aangezien u overweegt om uw eigen first-party profielen met attributen van gegevenspartners aan te vullen, zou u de volgende details over de lijn van de gegevensverrijking met de gegevenspartner moeten bespreken en richten:
 
