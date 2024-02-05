@@ -4,9 +4,9 @@ title: Aan de slag
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,12 @@ Bekijk deze video voor meer informatie over de stappen die nodig zijn om uw sand
 
 ## Een ontwikkelingssandbox maken {#create-development-sandbox}
 
-In Use Case Playbooks (Hoofdlettergebruik) wordt een speciaal type ontwikkelsandbox gebruikt. Om aan de slag te gaan en toegang te krijgen tot [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionaliteit, [een nieuwe ontwikkelingssandbox maken](/help/sandboxes/ui/user-guide.md#create) (zorg ervoor dat u geen productiesandbox selecteert) met de naam (niet de titel) die of `-ucp` of `-UCP` in het achtervoegsel, zoals hieronder getoond.
+In Use Case Playbooks is een speciaal type ontwikkelingssandbox gebruikt. Om aan de slag te gaan en toegang te krijgen tot [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionaliteit, [een nieuwe ontwikkelingssandbox maken](/help/sandboxes/ui/user-guide.md#create) (zorg ervoor dat u geen productiesandbox selecteert) met de naam (niet de titel) die of `-ucp` of `-UCP` in het achtervoegsel, zoals hieronder getoond.
+
+>[!IMPORTANT]
+>
+>Wanneer u een nieuwe ontwikkelingssandbox maakt, moet u ervoor zorgen dat de naam `-ucp` of `-UCP` in het achtervoegsel.
+
 
 ![Een ontwikkelingssandbox maken voor gebruik van afspeelboeken met hoofdletters en kleine letters](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
