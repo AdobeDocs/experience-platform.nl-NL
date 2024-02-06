@@ -3,9 +3,9 @@ title: Opdrachten voor Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 keywords: Voer bevelen uit;commandName;Promises;getLibraryInfo;response voorwerpen;toestemming;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
+source-git-commit: ffc60e83285188bc5b0f6eb7a20fafee16d51d4d
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Opdrachten worden uitgevoerd met de volgende syntaxis.
 alloy("commandName", options);
 ```
 
-De `commandName` vertelt de SDK wat te doen, terwijl `options` Dit zijn de parameters en de gegevens die u in een opdracht wilt doorgeven. Omdat de beschikbare opties van het bevel afhangen, gelieve de documentatie voor meer details over elk bevel te raadplegen.
+De `commandName` vertelt de SDK wat hij moet doen, terwijl `options` Dit zijn de parameters en de gegevens die u in een opdracht wilt doorgeven. Omdat de beschikbare opties van het bevel afhangen, gelieve de documentatie voor meer details over elk bevel te raadplegen.
 
 ## Een nota over beloften
 
@@ -35,7 +35,7 @@ Elke keer dat een opdracht wordt uitgevoerd, wordt een belofte geretourneerd. De
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
@@ -78,4 +78,4 @@ alloy("getLibraryInfo")
 
 ### Toestemming
 
-Indien een gebruiker voor een bepaald doel geen toestemming heeft gegeven, wordt de belofte nog steeds opgelost; het reactieobject bevat echter alleen de informatie die kan worden verstrekt in de context van wat de gebruiker heeft toegestaan .
+Als een gebruiker geen toestemming voor een bepaald doel heeft gegeven, wordt de belofte nog steeds opgelost. Het responsobject bevat echter alleen de informatie die kan worden verstrekt in de context van wat de gebruiker heeft toegestaan.
