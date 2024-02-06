@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3232'
 ht-degree: 0%
 
 ---
@@ -231,13 +231,27 @@ Voor Adobe Analytics is ECID de primaire standaardidentiteit. Als een klant geen
 
 ## Velden voor gegevensvalidatie {#data-validation-fields}
 
-Als u wilt voorkomen dat slechte gegevens worden opgenomen in Platform, kunt u het beste de criteria voor validatie op veldniveau definiëren wanneer u uw schema&#39;s maakt. Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in de Schema-editor om het dialoogvenster [!UICONTROL Field properties] zijbalk. Zie de documentatie op [type-specifieke veldeigenschappen](../ui/fields/overview.md#type-specific-properties) voor een exacte beschrijving van de beschikbare velden.
+Wanneer u gegevens in het gegevenspeer opneemt, wordt de gegevensbevestiging slechts afgedwongen voor beperkte gebieden. Als u een bepaald veld tijdens een batch-opname wilt valideren, moet u het veld markeren als beperkt in het XDM-schema. Om te voorkomen dat slechte gegevens in Platform worden opgenomen, wordt u aangeraden de criteria voor validatie op veldniveau te definiëren wanneer u uw schema&#39;s maakt.
+
+>[!IMPORTANT]
+>
+>Validatie geldt niet voor geneste kolommen. Als de veldindeling zich in een arraykolom bevindt, worden de gegevens niet gevalideerd.
+
+Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in de Schema-editor om het dialoogvenster **[!UICONTROL Field properties]** zijbalk. Zie de documentatie op [type-specifieke veldeigenschappen](../ui/fields/overview.md#type-specific-properties) voor een exacte beschrijving van de beschikbare velden.
 
 ![De Schema-editor met de beperkingsvelden gemarkeerd in het dialoogvenster [!UICONTROL Field properties] zijbalk.](../images/best-practices/data-validation-fields.png)
 
->[!TIP]
->
->Hieronder volgt een verzameling suggesties voor gegevensmodellering bij het maken van een schema:<br><ul><li>**Denk aan primaire identiteiten**: Voor Adobe-producten zoals web SDK, mobiele SDK, Adobe Analytics en Adobe Journey Optimizer wordt de opdracht `identityMap` Veld fungeert vaak als primaire identiteit. Wijs geen extra velden aan als primaire identiteiten voor dat schema.</li><li>**Vermijd gebruik `_id` als identiteit**: gebruik de `_id` veld in Experience Event schema&#39;s als een identiteit. Het is bedoeld voor een unieke registratie, niet voor gebruik als identiteit.</li><li>**Lengtebeperkingen instellen**: Het wordt aanbevolen minimale en maximale lengte in te stellen voor velden die zijn gemarkeerd als identiteiten. Deze beperkingen helpen consistentie en gegevenskwaliteit te behouden.</li><li>**Patronen toepassen op consistente waarden**: Als uw identiteitswaarden een specifiek patroon volgen, zou u moeten gebruiken [!UICONTROL Pattern] instellen om deze beperking af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.</li><li>**Limiet voor variabelen in analyseschema**: Een analyseschema moet normaal gesproken slechts één eVar hebben die als een identiteit is opgegeven. Als u meer dan één eVar als identiteit wilt gebruiken, moet u controleren of de gegevensstructuur kan worden geoptimaliseerd.</li><li>**De unieke kenmerken van een geselecteerd veld garanderen**: Het gekozen veld moet uniek zijn in vergelijking met de primaire identiteit in het schema. Als dit niet het geval is, merk het dan niet als een identiteit. Als bijvoorbeeld meerdere klanten hetzelfde e-mailadres kunnen opgeven, is die naamruimte geen geschikte identiteit. Dit beginsel is ook van toepassing op andere naamruimten zoals telefoonnummers.</li></ul>
+### Tips om de gegevensintegriteit te behouden {#data-integrity-tips}
+
+Hieronder volgt een verzameling suggesties voor het behoud van gegevensintegriteit wanneer u een schema maakt.
+
+* **Denk aan primaire identiteiten**: Voor Adobe-producten zoals web SDK, mobiele SDK, Adobe Analytics en Adobe Journey Optimizer wordt de opdracht `identityMap` Veld fungeert vaak als primaire identiteit. Wijs geen extra velden aan als primaire identiteiten voor dat schema.
+* **Vermijd gebruik `_id` als identiteit**: gebruik de `_id` veld in Experience Event schema&#39;s als een identiteit. Het is bedoeld voor een unieke registratie, niet voor gebruik als identiteit.
+* **Lengtebeperkingen instellen**: Het wordt aanbevolen minimale en maximale lengte in te stellen voor velden die zijn gemarkeerd als identiteiten. Er wordt een waarschuwing weergegeven als u een aangepaste naamruimte wilt toewijzen aan een identiteitsveld zonder te voldoen aan de minimale en maximale lengte. Deze beperkingen helpen consistentie en gegevenskwaliteit te behouden.
+* **Patronen toepassen op consistente waarden**: Als uw identiteitswaarden een specifiek patroon volgen, zou u moeten gebruiken **[!UICONTROL Pattern]** instellen om deze beperking af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.
+* **Limiet voor eVars in analyseschema&#39;s**: Een analyseschema moet normaal gesproken slechts één eVar hebben die als een identiteit is opgegeven. Als u meer dan één eVar als identiteit wilt gebruiken, moet u controleren of de gegevensstructuur kan worden geoptimaliseerd.
+* **De unieke kenmerken van een geselecteerd veld garanderen**: Het gekozen veld moet uniek zijn in vergelijking met de primaire identiteit in het schema. Als dit niet het geval is, merk het dan niet als een identiteit. Als bijvoorbeeld meerdere klanten hetzelfde e-mailadres kunnen opgeven, is die naamruimte geen geschikte identiteit. Dit beginsel is ook van toepassing op andere naamruimten zoals telefoonnummers.
+* **Beperkt triggerwaarschuwingen voor aangepaste naamruimtevelden**: Stel beperkingen in om een waarschuwing te activeren wanneer een schemaveld wordt gemarkeerd met een aangepaste naamruimte zonder de minimale en maximale lengte op te geven. De waarschuwing dient als een belangrijke waarschuwing voor het handhaven van gegevensintegriteit. Zie de [type-specifieke veldeigenschappen](../ui/fields/overview.md#type-specific-properties) documentatie voor informatie over hoe te om beperkingen op een bepaald gebied te plaatsen.
 
 ## Volgende stappen
 
