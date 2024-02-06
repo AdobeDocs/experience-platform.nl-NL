@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services-verbinding
 description: Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 0%
 Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen. [Aan de slag met campagne](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Campagne gebruiken om:
+
 * De personalisatie en de betrokkenheid van de aandrijving door één enkele toegankelijk mening van de klant;
 * E-mail, mobiel, online en offline kanalen integreren in de reis van de klant,
 * Automatiseer de levering van betekenisvolle en geschikte berichten en aanbiedingen.
@@ -32,6 +33,7 @@ Campagne gebruiken om:
 >* Voor elk segment kunt u maximaal twintig velden toevoegen aan [map](#map) naar Adobe Campaign,
 >* Gegevensbewaring op Azure Blob Storage Data Landing Zone (DLZ): 7 dag,
 >* De activeringsfrequentie bedraagt minimaal 3 uur.
+>* De maximale lengte van de bestandsnaam die door deze verbinding wordt ondersteund, is 255 tekens. Wanneer u [de naam van het geëxporteerde bestand configureren](../../ui/activate-batch-profile-destinations.md#configure-file-names)moet u ervoor zorgen dat de bestandsnaam niet langer is dan 255 tekens. Als u de maximale lengte van de bestandsnaam overschrijdt, treden activeringsfouten op.
 
 ## Gebruiksscenario’s {#use-cases}
 
