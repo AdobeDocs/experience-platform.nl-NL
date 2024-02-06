@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3723'
 ht-degree: 0%
@@ -331,7 +331,7 @@ De **[!UICONTROL Import audience CSV]** wordt weergegeven. U kunt een CSV-bestan
 
 >[!NOTE]
 >
->Het externe gegenereerde publiek **moet** zijn in CSV-indeling, hebben een **maximum** van 11 kolommen en kleiner dan 1 GB.
+>Het externe gegenereerde publiek **moet** zijn in CSV-indeling, hebben een **maximum** van 25 kolommen en kleiner dan 1 GB.
 
 Nadat u het CSV-bestand hebt geselecteerd dat u wilt importeren, wordt een lijst met voorbeeldgegevens weergegeven voor dit extern gegenereerde publiek. Nadat u hebt bevestigd dat de voorbeeldgegevens juist zijn, selecteert u **[!UICONTROL Next]**.
 

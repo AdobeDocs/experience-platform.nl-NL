@@ -1,9 +1,9 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform januari 2024
 description: Opmerkingen bij de release van januari 2024 voor Adobe Experience Platform.
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1646'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,7 @@ Updates voor bestaande functies in Experience Platform:
 - [Identiteitsservice](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Klantprofiel in realtime](#profile)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Hoofdletters gebruiken {#use-case-playbooks}
@@ -155,6 +156,21 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 {style="table-layout:auto"}
 
 Lees voor meer informatie over Real-Time Customer Profile de [Profieloverzicht](../../profile/home.md)
+
+## Segmenteringsservice {#segmentation}
+
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Extern gegenereerde publieksupload | Het maximumaantal kolommen is verhoogd tot **25**. |
+| Schatting opbouwen | Schattingen en gekwalificeerde profielen worden nu weergegeven in de sectie met publiekseigenschappen. Voor meer informatie over deze wijziging raadpleegt u de [Handleiding voor de gebruikersinterface van Segment Builder](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over [!DNL Segmentation Service], zie de [Overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 

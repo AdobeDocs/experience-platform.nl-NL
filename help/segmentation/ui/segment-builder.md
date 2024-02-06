@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '3354'
+source-wordcount: '3484'
 ht-degree: 0%
 
 ---
@@ -255,9 +255,17 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >abstract="U kunt de ramingen van uw segmentdefinitie verfrissen om onmiddellijk een voorproef van te zien hoeveel profielen voor de voorgestelde segmentdefinitie zouden kwalificeren. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
-Bij het samenstellen van een segmentdefinitie worden de **[!UICONTROL Segment Properties]** aan de rechterkant van de werkruimte wordt een schatting weergegeven van de grootte van de resulterende segmentdefinitie, zodat u de segmentdefinitie naar wens kunt aanpassen voordat u het publiek zelf gaat maken.
+Bij het samenstellen van een segmentdefinitie worden de **[!UICONTROL Audience properties]** aan de rechterkant van de werkruimte wordt een schatting weergegeven van de grootte van de resulterende segmentdefinitie, zodat u de segmentdefinitie naar wens kunt aanpassen voordat u het publiek zelf gaat maken.
 
-De **[!UICONTROL Segment Properties]** de sectie is ook waar u belangrijke informatie over uw segmentdefinitie, met inbegrip van zijn naam, beschrijving, en evaluatietype kunt specificeren. De definitienamen van het segment worden gebruikt om uw segmentdefinitie onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
+**[!UICONTROL Qualified Profiles]** Hiermee wordt de **werkelijk** aantal profielen die de regels van de segmentdefinitie aanpassen. Dit aantal werkt om de 24 uur bij, nadat de baan van de segmentevaluatie is gelopen.
+
+De tijdstempel voor gekwalificeerde profielen geeft de meest recente **partij** segmentevaluatietaak en is **niet** weergegeven voor segmentdefinities die zijn geëvalueerd met behulp van streaming of randsegmentatie. Als u de segmentdefinitie uitgeeft, zal het aantal gekwalificeerde profielen het zelfde blijven tot de volgende baan van de segmentevaluatie in werking wordt gesteld.
+
+**[!UICONTROL Estimated Profiles]** geeft een **benaderen** aantal profielen gebaseerd op **voorbeeldtaak**. U kunt een bijgewerkte versie van deze waarde zien nadat u de nieuwe regels of voorwaarden hebt toegevoegd en **[!UICONTROL Refresh estimate]**. Als u de informatiballon selecteert, krijgt u de foutdrempel en de meest recente tijd van de voorbeeldtaak.
+
+![Gekwalificeerde profielen en geschatte profielen worden gemarkeerd in de sectie Eigenschappen van publiek.](../images/ui/segment-builder/audience-estimates.png)
+
+De **[!UICONTROL Audience properties]** de sectie is ook waar u belangrijke informatie over uw segmentdefinitie, met inbegrip van zijn naam, beschrijving, en evaluatietype kunt specificeren. De definitienamen van het segment worden gebruikt om uw segmentdefinitie onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
 
 Terwijl u de segmentdefinitie blijft maken, kunt u een gepagineerde voorvertoning van het publiek weergeven door **[!UICONTROL View Profiles]**.
 
