@@ -3,27 +3,40 @@ solution: Experience Platform
 title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refactoring
 description: De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
-# Tijd beperkte reactoring
+# Tijd beperkte reactoring {#refactorization}
 
-De release van oktober 2020 voor Adobe Experience Platform heeft prestatiewijzigingen geïntroduceerd in Adobe Experience Platform Segmentation Service die nieuwe beperkingen toevoegt aan het gebruik van de OR en AND logische operatoren. Deze wijzigingen zijn van invloed op pas gemaakte of bewerkte segmenten die zijn gemaakt met de gebruikersinterface van Segment Builder. Deze gids verklaart hoe te om deze veranderingen te verlichten.
+>[!CONTEXTUALHELP]
+>id="platform_audiences_segmentBuilder_constraints"
+>title="Tijd beperkte reactoring"
+>abstract="De regel-niveau en groep-vlakke tijdbeperkingen zijn verwijderd om tijdbeperkingsgebruik te verduidelijken. Schrijf de restrictie opnieuw als een beperking op canvasniveau of op kaartniveau."
 
-Vóór de versie van Oktober 2020, verwijzen alle regel-niveau, groep-niveau, en gebeurtenis-vlakke tijdbeperkingen overtollig naar zelfde timestamp. Om tijdbeperkingsgebruik te verduidelijken, zijn regel-niveau en groep-vlakke tijdbeperkingen verwijderd. Om deze verandering aan te passen, moeten alle tijdbeperkingen als gebeurtenis-vlakke tijdbeperkingen worden herschreven.
+De release van januari 2024 voor Adobe Experience Platform heeft wijzigingen aangebracht in Adobe Experience Platform Segmentation Service die nieuwe beperkingen toevoegen aan waar tijdbeperkingen kunnen worden gedefinieerd. Deze wijzigingen zijn van invloed op pas gemaakte of bewerkte segmenten die zijn gemaakt met de gebruikersinterface van Segment Builder. Deze gids verklaart hoe te om deze veranderingen te verlichten.
 
-Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking zijn gekoppeld.
+Vóór de versie van Januari 2024, verwijzen alle regel-niveau, groep-niveau, en canvas-vlakke tijdbeperkingen overtollig naar zelfde timestamp. Om tijdbeperkingsgebruik te verduidelijken, zijn regel-niveau en groep-vlakke tijdbeperkingen verwijderd. Om deze wijziging aan te kunnen, gelden alle tijdsbeperkingen **moet** herschrijven als **canvasniveau** of **kaartniveau** tijdbeperkingen.
 
-![De vroegere stijl van tijdbeperkingen wordt benadrukt in de Bouwer van het Segment.](../images/ui/segment-refactoring/former-time-constraint.png)
+Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking zijn gekoppeld. Bij deze recente update wordt een tijdbeperking nu toegevoegd aan een regel **fout**.
 
-Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Yesterday]&quot;.
+![De regel-vlakke tijdbeperking wordt benadrukt. De fout die vervolgens optreedt, wordt ook gemarkeerd. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
-Het vorige segment is gelijkwaardig aan het volgende segment — beide gebeurtenis-vlakke tijdbeperkingen zijn verbonden gebruikend een exploitant AND. De eerste tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Training&quot; en die vandaag plaatsvindt, terwijl de tweede tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Huisdieren&quot; en die gisteren heeft plaatsgevonden.
+Tijdbeperkingen kunnen nu alleen op canvasniveau of op kaartniveau worden toegepast.
 
-![De nieuwe stijl van tijdbeperkingen wordt benadrukt in de Bouwer van het Segment.](../images/ui/segment-refactoring/time-constraint-1.png) ![De nieuwe stijl van tijdbeperkingen wordt benadrukt in de Bouwer van het Segment.](../images/ui/segment-refactoring/time-constraint-2.png)
+Wanneer u een tijdbeperking op canvasniveau toepast, kunt u nog steeds alle beschikbare tijdbeperkingen selecteren.
 
-Dit refactoring van tijdbeperkingen beïnvloedt ook tijdbeperkingen die gebruikend een exploitant OF worden verbonden.
+>[!NOTE]
+>
+>Als er alleen **één** -kaart op het canvas, waarbij de tijdbeperking wordt toegepast op de kaart: **equivalent** om de tijdbeperking toe te passen op canvasniveau.
+>
+>Als er **meerdere** kaarten op het canvas, die tijdbeperking op canvasniveau toepast zal die tijdbeperking op **alles** kaarten op het canvas.
+
+![De tijdbeperking op canvasniveau wordt gemarkeerd.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+
+Als u een tijdbeperking op kaartniveau wilt toepassen, selecteert u de specifieke kaart waarop u de tijdbeperking wilt toepassen. De **[!UICONTROL Event Rules]** wordt weergegeven. U kunt nu de tijdbeperking selecteren die u op de kaart wilt toepassen.
+
+![De tijdbeperking op kaartniveau wordt gemarkeerd.](../images/ui/segment-refactoring/card-time-constraint.png)
