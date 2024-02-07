@@ -2,9 +2,9 @@
 title: Sluit uw Salesforce-account aan op Experience Platform via de gebruikersinterface
 description: Leer hoe u uw Salesforce-account via de gebruikersinterface kunt verbinden met Experience Platform.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
+source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Voor toegang tot uw [!DNL Salesforce Marketing Cloud] account op Platform, moet 
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| Host | De hostserver van uw toepassing. Dit is vaak uw subdomein. **Opmerking:** Wanneer u uw `host` waarde, moet u de `{subdomain}.rest.marketingcloudapis.com`. Als de host-URL bijvoorbeeld `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`, hoeft u alleen maar in te voeren `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als uw hostwaarde. |
+| Host | De hostserver van uw toepassing. Dit is vaak uw subdomein. **Opmerking:** Wanneer u uw `host` waarde, moet u de `{subdomain}.rest.marketingcloudapis.com`. Als de host-URL bijvoorbeeld `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, dan moet u `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als uw hostwaarde. |
 | Client-id | De client-id die aan uw [!DNL Salesforce Marketing Cloud] toepassing. |
 | Clientgeheim | Het clientgeheim dat aan uw [!DNL Salesforce Marketing Cloud] toepassing. |
 
