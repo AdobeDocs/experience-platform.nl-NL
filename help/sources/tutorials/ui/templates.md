@@ -5,7 +5,7 @@ badge1: "Bèta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2216'
+source-wordcount: '2198'
 ht-degree: 0%
 
 ---
@@ -216,7 +216,7 @@ Door gebrek, worden de auto-geproduceerde dataflows geplaatst aan een ontwerpsta
 
 ![Een vervolgkeuzevenster met de optie voor voorvertoningstoewijzingen geselecteerd.](../../images/tutorials/templates/preview.png)
 
-Er wordt een voorvertoningspagina weergegeven waarmee u de toewijzingsrelatie tussen de brongegevensvelden en de doelschemavelden kunt controleren. Zodra u de afbeeldingen van uw gegevensstroom hebt bekeken. Selecteer **[!UICONTROL Got it.]**
+Er wordt een voorvertoningspagina weergegeven waarmee u de toewijzingsrelatie tussen de brongegevensvelden en de doelschemavelden kunt controleren. Zodra u de afbeeldingen van uw gegevensstroom hebt bekeken. Selecteren **[!UICONTROL Got it.]**
 
 ![Het voorvertoningsvenster voor toewijzingen.](../../images/tutorials/templates/preview-mappings.png)
 

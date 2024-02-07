@@ -6,7 +6,7 @@ description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van h
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1369'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 >
 >Onthoud dat alle velden die u aan een klasse toevoegt, worden gebruikt in alle schema&#39;s waarin die klasse wordt gebruikt. Daarom moet u zorgvuldig overwegen welke velden handig zijn in alle gevallen waarin het schema wordt gebruikt. Als u van plan bent een gebied toe te voegen dat slechts gebruik in sommige schema&#39;s onder deze klasse kan zien, kunt u het aan die schema&#39;s willen toevoegen door [een veldgroep maken](./field-groups.md#create) in plaats daarvan.
 
-An **[!UICONTROL Untitled Field]** wordt de tijdelijke aanduiding weergegeven in het canvas en wordt de rechterrails bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]**.
+An **[!UICONTROL Untitled Field]** wordt de tijdelijke aanduiding weergegeven in het canvas en wordt de rechterrails bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Onder **[!UICONTROL Assign to]**, selecteert u **[!UICONTROL Class]**.
 
 ![Een naamloos veld op het canvas van de schema-editor met de veldeigenschap Toewijzen aan klasse geselecteerd en gemarkeerd.](../../images/ui/resources/classes/assign-to-class.png)
 
