@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;vereni
 title: Real-Time API-handleiding voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '881'
 ht-degree: 1%
 
 ---
@@ -31,10 +31,6 @@ Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenis
 Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde in een profielkenmerk opslaat. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Deze berekende kenmerkwaarden kunnen dan in een profiel worden bekeken, worden gebruikt om een publiek tot stand te brengen, of door een aantal verschillende toegangspatronen worden betreden.
 
 U kunt berekende kenmerken maken, weergeven, bewerken en verwijderen met de opdracht `ca/attributes/` eindpunt. Als u wilt weten hoe u berekende kenmerken gebruikt, raadpleegt u de [overzicht van berekende kenmerken](../computed-attributes/overview.md). Ga voor API-bewerkingen naar de [API-eindpuntgids voor berekende kenmerken](../computed-attributes/api.md).
-
-## Edge-prognoses {#edge-projections}
-
-Adobe Experience Platform maakt het mogelijk om de ervaringen van klanten in real time aan te passen door gegevens gemakkelijk toegankelijk te maken op strategisch gelegen servers die &quot;randen&quot; worden genoemd. De [!DNL Real-Time Customer Profile] API biedt eindpunten voor het werken met randen via componenten die &#39;projecties&#39; worden genoemd. Dit omvat projectieconfiguraties om te bepalen welke gegevens aan elke rand moeten worden geprojecteerd, evenals projectiebestemmingen om te bepalen waar te om een projectie te leiden. Voor meer informatie over het werken met randprojecties gaat u naar de [projectieconfiguraties en de gids voor eindpunten van bestemmingen](edge-projections.md).
 
 ## Entiteiten ([!DNL Profile] toegang) {#entities}
 

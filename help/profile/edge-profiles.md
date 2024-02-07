@@ -2,10 +2,10 @@
 title: Edge-profielen
 description: Meer informatie over Edge-profielen en de bijbehorende terminologie, beschikbare gebieden voor randprofielen en de beschikbare services voor randprofielen.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 1%
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
@@ -61,7 +61,7 @@ Met de Express Profile Service (XPS) worden de profielen aan de verschillende ra
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Voor meer informatie over randprojecties leest u de [eindhulplijn voor randprojecties](./api/edge-projections.md). Lees voor meer informatie over Adobe Experience Edge de [Overzicht van rand](../edge/home.md).
+Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Lees voor meer informatie over Adobe Experience Edge de [Overzicht van rand](../edge/home.md).
 
 ## Bijlage
 
@@ -77,6 +77,4 @@ Bovendien heeft elk Edge-profiel een schemakenmerk dat het UAR-gebied (User Acti
 
 ### Hoe werkt gegevensvervaltijden met randprofielen?
 
-Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel op de rand blijft voordat het wordt verwijderd. Vervaldatum gegevens **rollen**, wat betekent dat telkens als het profiel op rand wordt betreden, de tijd van de gegevensvervaldatum terugstelt.
-
-U kunt gegevensvervaldatum toevoegen aan uw Edge-profielen door deze toe te voegen aan de [randprojectie](./api/edge-projections.md). De gegevensvervaldatum duurt standaard 14 dagen, maar kan worden ingesteld op minimaal 1 uur en maximaal 90 dagen.
+Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel op de rand blijft voordat het wordt verwijderd. Vervaldatum gegevens **rollen**, wat betekent dat telkens als het profiel op rand wordt betreden, de tijd van de gegevensvervaldatum terugstelt. De gegevensvervaldatum duurt standaard 14 dagen.

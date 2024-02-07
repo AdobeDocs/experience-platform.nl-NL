@@ -4,9 +4,9 @@ title: Handleiding voor het oplossen van problemen in realtime-klantprofiel
 type: Documentation
 description: Dit document bevat antwoorden op veelgestelde vragen over Real-Time klantprofiel en een gids voor probleemoplossing voor algemene fouten bij het werken met profielgegevens met Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -122,18 +122,6 @@ Deze fout treedt op wanneer een ongeldige lading voor een verwijdersysteembaan w
 ```
 
 Deze fout treedt op wanneer een geldige batch niet kan worden gevonden tijdens een poging een aanvraag tot verwijderen van profielgegevens te maken. Controleer of u de juiste id hebt ingevoerd voor een gegevensset waarvoor profiel is ingeschakeld voordat u het opnieuw probeert.
-
-### De projectiebestemming is nog niet gecreeerd
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-Deze fout treedt op wanneer de `destinationId` in een `POST /config/projections` request is invalid. Controleer of u een geldige doel-id hebt opgegeven voordat u het opnieuw probeert. Als u een nieuwe bestemming wilt maken, voert u de stappen uit die in het dialoogvenster [Handleiding voor ontwikkelaars van profielen](./api/edge-projections.md#create-a-destination).
 
 ### Niet-ondersteund mediatype
 

@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Handleiding voor Real-time klantprofiel
 user-guide-description: Voeg klantgegevens samen om een uniform beeld te krijgen van klantinteracties via verschillende kanalen.
 feature: Profiles
-source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 19%
+source-wordcount: '129'
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,6 @@ ht-degree: 19%
 * [!DNL Profile] API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
-   * [Edge-prognoses](api/edge-projections.md)
    * [Entiteiten ([!DNL Profile] toegang)](api/entities.md)
    * [Exporttaken ([!DNL Profile] export)](api/export-jobs.md)
    * [Voorbeeldstatus voorvertonen ([!DNL Profile] voorvertoning)](api/preview-sample-status.md)
@@ -45,7 +44,7 @@ ht-degree: 19%
 * Unieregelingen {#union-schemas}
    * [UI-hulplijn verenigingsschema](ui/union-schema.md)
    * [Overzicht van Unieschema (video)](video/union-schemas-overview.md)
-* Lesbestanden {#tutorials}
+* Tutorials {#tutorials}
    * [Gegevens toevoegen aan realtime klantprofiel](tutorials/add-profile-data.md)
    * [Een gegevensset voor profiel configureren](tutorials/dataset-configuration.md)
    * [Genereer het overlappingsrapport voor de gegevensset](tutorials/dataset-overlap-report.md)
