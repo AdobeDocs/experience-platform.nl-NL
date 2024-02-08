@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van identiteitsservice
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Lees, voordat u op de details van Identity Service gaat duiken, de volgende tabe
 | Term | Definitie |
 | --- | --- |
 | Identiteit | Een identiteit is gegevens die uniek zijn voor een entiteit. Dit is doorgaans een echt object, zoals een individuele persoon, een hardwareapparaat of een webbrowser (vertegenwoordigd door een cookie). Een volledig gekwalificeerde identiteit bestaat uit twee elementen: een **naamruimte identity** en **identiteitswaarde**. |
-| Naamruimte identiteit | Een naamruimte voor identiteiten is de context van een bepaalde identiteit. Bijvoorbeeld een naamruimte van `Email` kan overeenkomen met **julien<span>@acme.com**. Een naamruimte van `Phone` kan overeenkomen met `555-555-1234`. Lees voor meer informatie de [Overzicht van naamruimte in identiteit](./features/namespaces.md) |
+| Naamruimte identiteit | Een naamruimte voor identiteiten is de context van een bepaalde identiteit. Bijvoorbeeld een naamruimte van `Email` kan overeenkomen met de identiteitswaarde: **julien<span>@acme.com**. Een naamruimte van `Phone` kan overeenkomen met de identiteitswaarde: `555-555-1234`. Lees voor meer informatie de [Overzicht van naamruimte in identiteit](./features/namespaces.md). |
 | Identiteitswaarde | Een identiteitswaarde is een koord dat een real-world entiteit vertegenwoordigt en binnen de Dienst van de Identiteit door namespace gecategoriseerd is. De identiteitswaarde (tekenreeks) **julien<span>@acme.com** kan worden gecategoriseerd als `Email` naamruimte. |
 | Identiteitstype | Een identiteitstype is een component van een naamruimte voor identiteiten. Het identiteitstype geeft aan of identiteitsgegevens al dan niet zijn gekoppeld in een identiteitsgrafiek. |
 | Koppeling | Een koppeling of een koppeling is een methode om vast te stellen dat twee verschillende identiteiten dezelfde entiteit vertegenwoordigen. Bijvoorbeeld een koppeling tussen &quot;`Email` = julien<span>@acme.com&quot; en &quot;`Phone` = 555-555-1234&quot; betekent dat beide identiteiten dezelfde entiteit vertegenwoordigen. Dit suggereert dat de klant die met uw merk met zowel het e-mailadres van julien als interactie heeft gehad<span>@acme.com en het telefoonnummer 555-555-1234 is hetzelfde. |
