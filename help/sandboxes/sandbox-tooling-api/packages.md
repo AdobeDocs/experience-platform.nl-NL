@@ -2,10 +2,10 @@
 title: API-eindpunt voor sandbox Tooling Packages
 description: Het /packages eindpunt in Sandbox Tooling API staat u toe om pakketten in Adobe Experience Platform programmatically te beheren.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 3%
+source-wordcount: '1531'
+ht-degree: 1%
 
 ---
 
@@ -55,10 +55,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving | Type | Vereist |
 | --- | --- | --- | --- |
-| `name` | De naam van het pakket. | Tekenreeks | Ja |
-| `description` | Een beschrijving voor meer informatie over het pakket. | Tekenreeks | Nee |
-| `packageType` | Het pakkettype is **GEDEELTELIJK** om aan te geven dat u specifieke artefacten in een pakket opneemt. | Tekenreeks | JA |
-| `sourceSandbox` | De bronsandbox van het pakket. | Tekenreeks | Nee |
+| `name` | De naam van het pakket. | String | Ja |
+| `description` | Een beschrijving voor meer informatie over het pakket. | String | Nee |
+| `packageType` | Het pakkettype is **GEDEELTELIJK** om aan te geven dat u specifieke artefacten in een pakket opneemt. | String | JA |
+| `sourceSandbox` | De bronsandbox van het pakket. | String | Nee |
 | `expiry` | Het tijdstempel dat de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf de aanmaakdatum. Het veld voor het verstrijken van de reactie is een tijdperk in UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
 | `artifacts` | Een lijst met artefacten die naar het pakket moeten worden geëxporteerd. De `artifacts` waarde moet **null** of **leeg**, wanneer de `packageType` is `FULL`. | Array | Nee |
 
@@ -136,8 +136,8 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket dat moet worden bijgewerkt. | Tekenreeks | Ja |
-| `action` | Als u artefacten aan het pakket wilt toevoegen, moet de actiewaarde **ADD**. Deze handeling wordt alleen ondersteund voor **GEDEELTELIJK** pakkettypen. | Tekenreeks | Ja |
+| `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
+| `action` | Als u artefacten aan het pakket wilt toevoegen, moet de actiewaarde **ADD**. Deze handeling wordt alleen ondersteund voor **GEDEELTELIJK** pakkettypen. | String | Ja |
 | `artifacts` | Een lijst met artefacten die in het pakket moeten worden toegevoegd. Het pakket wordt niet gewijzigd als de lijst **null** of **leeg**. Artefacten worden gedupliceerd voordat ze aan het pakket worden toegevoegd. | Array | Nee |
 | `expiry` | Het tijdstempel dat de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf het moment dat de PUT-API wordt aangeroepen als de vervaldatum niet is opgegeven in de payload. Het veld voor het verstrijken van de reactie is een tijdperk in UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
 
@@ -215,8 +215,8 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket dat moet worden bijgewerkt. | Tekenreeks | Ja |
-| `action` | Als u artefacten uit een pakket wilt verwijderen, moet de actiewaarde **DELETE**. Deze handeling wordt alleen ondersteund voor **GEDEELTELIJK** pakkettypen. | Tekenreeks | Ja |
+| `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
+| `action` | Als u artefacten uit een pakket wilt verwijderen, moet de actiewaarde **DELETE**. Deze handeling wordt alleen ondersteund voor **GEDEELTELIJK** pakkettypen. | String | Ja |
 | `artifacts` | Een lijst met artefacten die uit het pakket moeten worden verwijderd. Het pakket wordt niet gewijzigd als de lijst **null** of **leeg**. | Array | Nee |
 
 **Antwoord**
@@ -290,10 +290,10 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket dat moet worden bijgewerkt. | Tekenreeks | Ja |
-| `action` | Als u de metagegevensvelden in een pakket wilt bijwerken, moet de actiewaarde **BIJWERKEN**. Deze handeling wordt alleen ondersteund voor **GEDEELTELIJK** pakkettypen. | Tekenreeks | Ja |
+| `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
+| `action` | Als u de metagegevensvelden in een pakket wilt bijwerken, moet de actiewaarde **BIJWERKEN**. Deze handeling wordt alleen ondersteund voor **GEDEELTELIJK** pakkettypen. | String | Ja |
 | `name` | De bijgewerkte naam van het pakket. Dubbele pakketnamen zijn niet toegestaan. | Array | Ja |
-| `sourceSandbox` | De bronsandbox moet tot dezelfde organisatie behoren als die is opgegeven in de header van de aanvraag. | Tekenreeks | Ja |
+| `sourceSandbox` | De bronsandbox moet tot dezelfde organisatie behoren als die is opgegeven in de header van de aanvraag. | String | Ja |
 
 **Antwoord**
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **Verzoek**
 
-Met de volgende aanvraag wordt het pakket opgehaald met de {PACKAGE_ID} verstrekt. De lading is een kaart van substituties waar, als een ingang bestaat, de sleutel is `artifactId` door het pakket wordt verstrekt, en het alternatief is de waarde. Als de kaart of lading **leeg**, worden geen vervangingen uitgevoerd.
+Met de volgende aanvraag worden pakketten opgehaald die moeten worden geïmporteerd. De lading is een kaart van substituties waar, als een ingang bestaat, de sleutel is `artifactId` door het pakket wordt verstrekt, en het alternatief is de waarde. Als de kaart of lading **leeg**, worden geen vervangingen uitgevoerd.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -775,8 +775,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving | Type | Verplicht |
 | --- | --- | --- | --- |
-| `id` | De id van het pakket. | Tekenreeks | Ja |
-| `alternatives` | `alternatives` vertegenwoordigen de toewijzingen van bronsandboxartefacten aan de bestaande doelsandboxartefacten. Omdat deze elementen al aanwezig zijn, voorkomt de importtaak dat deze artefacten in de doelsandbox worden gemaakt. | Tekenreeks | Nee |
+| `alternatives` | `alternatives` vertegenwoordigen de toewijzingen van bronsandboxartefacten aan de bestaande doelsandboxartefacten. Omdat deze elementen al aanwezig zijn, voorkomt de importtaak dat deze artefacten in de doelsandbox worden gemaakt. | String | Nee |
 
 **Antwoord**
 
