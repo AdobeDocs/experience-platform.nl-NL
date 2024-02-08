@@ -1,13 +1,13 @@
 ---
 title: Assistent voor Adobe Experience Platform
 description: Leer hoe u met Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
-badge: Alfa
+badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
+source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Assistent voor Adobe Experience Platform is momenteel in Alpha. De functie en documentatie kunnen worden gewijzigd.
 
-De assistent voor Adobe Experience Platform is een UI-functie waarmee u door de concepten Experience Platform en Real-time Customer Data Platform en gebruiksinformatie over uw objecten kunt navigeren en deze kunt begrijpen.
+De assistent is een UI-functie waarmee u door Adobe Experience Platform en Real-time Customer Data Platform concepten en gebruiksinformatie over uw objecten kunt navigeren en deze kunt begrijpen.
 
 U kunt de Medewerker vragen voor informatie zoals:
 
@@ -26,7 +26,7 @@ U kunt de Medewerker vragen voor informatie zoals:
 * Statussen en metriek van de bestaande gegevensobjecten in uw organisatie.
 * Gebruik voorbeelden en nuances van het geval om uw gegevensvoorwerpen, met inbegrip van attributen, datasets, bestemmingen, schema&#39;s, segmenten, en bronnen beter te begrijpen.
 
-Dit document bevat informatie over de manier waarop u Assistant kunt gebruiken om vragen te stellen en antwoorden te ontvangen over concepten van Experience Platforms en Real-Time CDP.
+Lees de onderstaande handleiding voor meer informatie over het gebruik van Assistant voor het navigeren naar en begrijpen van uw Experience Platform- en Real-Time CDP-workflows.
 
 >[!BEGINSHADEBOX]
 
@@ -55,101 +55,125 @@ Er zijn twee klassen vragen om te overwegen alvorens Medewerker te vragen:
 
 >[!ENDSHADEBOX]
 
-## De Medewerker van de toegang voor Experience Platform in UI
+## De Medewerker van de toegang in de UI van het Experience Platform
 
-U kunt tot Medewerker van de kopbalnavigatie in de UI van het Experience Platform toegang hebben.
+Als u Assistant wilt starten, selecteert u de optie **[!UICONTROL Assistant icon]** in de bovenste koptekst van de gebruikersinterface van het Experience Platform.
 
-Selecteer de **[!UICONTROL Assistant icon]** van de koptekst naar het deelvenster Assistent starten.
+![De homepage van het Experience Platform, met het Hulp geselecteerde pictogram en de Hulp open interface.](./images/ai-assistant/ai-assistant.png)
 
-![De homepage van UI van het Experience Platform met het Hulp geselecteerde pictogram.](./images/ai-assistant/ai-assistant.png)
+De interface van de Medewerker verschijnt, onmiddellijk verstrekkend u van informatie om te beginnen. U kunt de opties gebruiken die onder [!UICONTROL Ideas to get started] om vragen en bevelen zoals te beantwoorden:
 
-<!-- +++Use immersive mode
+* [!UICONTROL Which of my segments are activated?]
+* [!UICONTROL What is a schema?]
+* [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![The &quot;Ideeën to get started&quot; section of Assistant.](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+Om met Medewerker in wisselwerking te staan, gebruik het inputvakje om in uw vragen of bevelen te typen. U kunt ook de opdracht (**`+`**) gebruiken om de functie Automatisch aanvullen en het bladwijzerpictogram te gebruiken voor toegang tot uw query&#39;s en opdrachten met bladwijzer.
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![Het invoervak Assistent is gemarkeerd.](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### Voorbeeld: gebruik de assistent om het maken van het schema te versnellen {#example-use-case}
+## Voorbeeld van hoofdletters/kleine letters gebruiken: gebruik de assistent om het maken van het schema te versnellen
 
 >[!NOTE]
 >
->In de volgende voorbeeldworkflow wordt het proces voor het maken van het ExperienceEvent-schema gebruikt om te laten zien hoe u Assistant kunt gebruiken wanneer u de gebruikersinterface van het Experience Platform gebruikt.
+>De volgende workflow is een voorbeeld waarin het proces voor het maken van een ervaringsgebeurtenisschema wordt gebruikt om te laten zien hoe u Assistant kunt gebruiken wanneer de gebruikersinterface van het Experience Platform wordt gebruikt.
 
-Overweeg een gebruiksgeval waarin u een **Apparaathandel in gebeurtenisschema**. Tijdens het aanmaakproces van het ExperienceEvent-schema komt u tegen `eventType` veld. U kunt nu de workflow verlaten en de documentatie in het dialoogvenster [grondbeginselen van een schemacompositie](../xdm/schema/composition.md)U kunt Assistant ook gebruiken om directe antwoorden op uw vragen op te halen.
+Overweeg een gebruiksgeval waarin u een **Apparaathandel in gebeurtenisschema**. Tijdens het proces van het creëren van het gebeurtenisschema, komt u tegen `eventType` veld. &quot;Op dit punt kunt u de workflow afsluiten en verwijzen naar de [grondbeginselen van een schemacompositie](../xdm/schema/composition.md) documentatie, of u kunt Medewerker gebruiken om antwoorden op uw vragen terug te winnen en extra middelen door de documentatiekoppelingen te vinden die door Medewerker worden aanbevolen.&quot;
 
 Om te beginnen voert u uw vraag in het tekstvak in. In het onderstaande voorbeeld wordt Assistent de vraag gesteld: &quot;**Wat is het eventType-veld in een ExperienceEvent-schema?**&quot;
 
-![De assistent voor Experience Platform met de volgende vraag voorbereid voor het vragen: &quot;Wat is het eventType-veld in een ExperienceEvent-schema?](./images/ai-assistant/question.png)
+![Assistent voor Experience Platform met de volgende vraag voorbereid voor query: &quot;Wat is het veld eventType in een ExperienceEvent-schema?](./images/ai-assistant/question.png)
 
 De medewerker vraagt dan zijn kennisbasis en berekent een antwoord. Na enkele ogenblikken retourneert de assistent een antwoord en verwante suggesties die u kunt gebruiken als follow-upaanwijzingen.
 
-Een bepaald antwoord biedt hyperlinks naar entiteiten waarnaar wordt verwezen. Selecteer in het onderstaande voorbeeld de optie **[!UICONTROL Schemas]** om een lijst van de referenced schema&#39;s te bekijken, of **[!UICONTROL Segments]** om een lijst van de referenced segmenten te bekijken.
-
 ![Assistent voor Experience Platform met een antwoord op de vorige query.](./images/ai-assistant/answer.png)
 
-De Medewerker verstrekt u een manier om uw antwoord te bevestigen door zijn bron te bekijken. De verbindingen aan de documentatie worden verstrekt voor concept vragen, terwijl de vragen van het gegevensgebruik met een SQL vraag kunnen worden geverifieerd die aantoont hoe het antwoord werd gegevens verwerkt.
+Nadat u een reactie hebt ontvangen van de assistent, kunt u een aantal opties selecteren om te bepalen hoe u wilt doorgaan.
 
-![Opties die de assistent na het retourneren van een antwoord biedt.](./images/ai-assistant/options.png)
+### Uw query opslaan {#save-your-query}
 
-### Vervolgvraag {#follow-up-question}
++++Selecteren om een voorbeeld te bekijken van hoe u een query opslaat
 
-+++Selecteer om een voorbeeld van een vervolgvraag te bekijken
+Als u de query wilt opslaan, selecteert u het bladwijzerpictogram naast uw vraag.
 
-U kunt meer over een bepaald onderwerp leren door een vervolgvraag te stellen. In het volgende voorbeeld, wordt de Medewerker gevraagd hoe eventType in segmentatie kan worden gebruikt.
+![Screenshot van een geselecteerde bladwijzer.](./images/ai-assistant/save-your-query.png)
 
-![Een vervolgvraag en antwoord die op de Medewerker voor Experience Platform worden getoond.](./images/ai-assistant/follow-up-question.png)
+Als u de opgeslagen query wilt openen, selecteert u het bladwijzerpictogram onder het invoervak en selecteert u de query die u wilt uitvoeren.
 
-+++
-
-### Vraag over gegevensgebruik {#data-usage-question}
-
-+++Selecteer om een voorbeeld van een vraag over gegevensgebruik te bekijken
-
-U kunt ook vragen stellen aan de assistent over uw gegevensgebruik. Wanneer u informatie invraagt over het gebruik van gegevens, moet u zich in een actieve zandbak bevinden opdat de Medewerker uw vraag beantwoordt.
-
-Voor reacties die informatie over gegevensgebruik bevatten, biedt Assistant koppelingen naar entiteiten in kwestie. Daarnaast geeft Assistant uitleg over de manier waarop het antwoord is berekend.
-
-![Een vraag over gegevensgebruik, die vraagt hoeveel segmenten een gebruiker heeft.](./images/ai-assistant/data-usage-question.png)
+![Screenshot van bladwijzerpictogram en een lijst met opgeslagen query&#39;s.](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### Meervoudig draaien {#multi-turn}
+### Gegevens in uw sandbox weergeven {#view-data-in-your-sandbox}
 
-+++Selecteren om een voorbeeld van meerdere keren te bekijken
++++Selecteren om voorbeeld weer te geven
 
-U kunt de multi-boommogelijkheden van Medewerker gebruiken om een natuurlijker gesprek tijdens uw ervaring te hebben. De assistent kan vervolgvragen beantwoorden aangezien de context van een vroegere interactie kan worden afgeleid.
+Afhankelijk van uw query biedt Assistant aanvullende informatie over de gegevens in uw sandbox. Als u wilt zien hoe de reactie op uw query op uw sandbox wordt toegepast, selecteert u **[!UICONTROL In your sandbox].**
 
-In het onderstaande voorbeeld wordt de assistent gevraagd om een lijst met de bestaande segmenten in de organisatie te maken als follow-up van een eerdere query over het totale aantal segmenten.
+Tijdens deze stap kan de assistent directe koppelingen naar de UI-pagina&#39;s van bepaalde objecten in kwestie maken. In het onderstaande voorbeeld biedt Assistant directe koppelingen naar de [!UICONTROL Schemas] en [!UICONTROL Segments] UI-pagina&#39;s.
 
-![](./images/ai-assistant/multi-turn-one.png)
+![Screenshot van de optie &quot;In uw sandbox&quot;.](./images/ai-assistant/in-your-sandbox.png)
 
-Vervolgens ontvangt Assistant een ander vervolgverzoek. Deze keer, antwoordt de Medewerker door de bestaande segmenten te vermelden die door hun respectieve grootte worden bevolen.
++++
 
-![](./images/ai-assistant/multi-turn-two.png)
+### Het antwoord controleren {#verify-the-response}
+
+++ + selecteren om een voorbeeld te bekijken van hoe te om bronnen te tonen
+
+Als u citaties wilt weergeven en de reactie van de assistent wilt valideren, selecteert u **[!UICONTROL Show sources]**. Assistant biedt koppelingen naar documentatie die het antwoord van de assistent bevestigt. U kunt ook de query&#39;s gebruiken die de assistent onder [!UICONTROL Related suggestions] om onderwerpen met betrekking tot uw originele vraag verder te onderzoeken.
+
+![Screenshot van &quot;Show sources&quot;.](./images/ai-assistant/show-sources.png)
+
++++
+
+### Gegevensgebruik en visualisatie {#data-usage-and-visualization}
+
++++Selecteren om een voorbeeld weer te geven van vragen over gegevensgebruik en gegevensvisualisatie
+
+U kunt contact opnemen met Assistent over uw gegevensgebruik. Assistent moet zich in een actieve sandbox bevinden om een vraag over gegevensgebruik te kunnen beantwoorden met betrekking tot gegevens in uw organisatie.
+
+![Opvolgingsvraag over gegevensgebruik.](./images/ai-assistant/data-usage-question.png)
+
+Als de assistent een vraag over gegevensgebruik weergeeft, geeft hij ook een uitleg van de manier waarop hij het antwoord heeft berekend. In het onderstaande voorbeeld beschrijft Assistant de stappen die zijn uitgevoerd om segmenten met meer dan 1000 profielen en hun respectieve activeringsstatus weer te geven.
+
+![Follow-upvraag over segmenten die illustreren hoe Assistant het antwoord heeft berekend.](./images/ai-assistant/results-explained.png)
+
+Bovendien geeft Assistant grafieken weer om uw gegevens te visualiseren. U kunt filters en wijzigingen aan uw vragen ook verstrekken, en u kunt Medewerker instrueren om zijn bevindingen terug te geven die op de filters worden gebaseerd die u omvat. Bijvoorbeeld, kunt u Medewerker vragen om u een trend van de telsegmenten in de orde van hun gecreeerde datum te tonen, segmenten met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
+
+![Follow-upvraag ter illustratie van gegevensvisualisatie.](./images/ai-assistant/data-visualization.png)
 
 +++
 
 ### Automatisch aanvullen gebruiken {#use-auto-complete}
 
-+++Selecteren om een voorbeeld van automatisch aanvullen weer te geven
++++Select om een voorbeeld van automatisch aanvullen te bekijken
 
 Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. De aanbevelingen van Autocomplete zijn beschikbaar voor de volgende domeinen: segmenten, schema&#39;s, datasets, bronnen, en bestemmingen.
 
-Voer een plusteken in als u Automatisch aanvullen wilt gebruiken (**`+`**) als onderdeel van uw vraag. U kunt ook het plusteken (**`+`**) in het tekstinvoervak. Vervolgens wordt een venster weergegeven met een lijst met aanbevolen gegevensobjecten die in uw sandbox aanwezig zijn.
+U kunt de functie voor automatisch aanvullen gebruiken door het plusteken (**`+`**) in uw zoekopdracht. U kunt ook het plusteken (**`+`**) onder aan het tekstinvoervak. Er wordt een venster weergegeven met een lijst met aanbevolen gegevensobjecten uit uw sandbox.
 
-![](./images/ai-assistant/autocomplete-options.png)
+![Voorbeeld van automatisch aanvullen](./images/ai-assistant/auto-complete-one.png)
 
 Selecteer vervolgens het gegevensobject waarop u een query wilt uitvoeren om uw vraag te voltooien en verzend uw vraag.
 
-![](./images/ai-assistant/autocomplete-question.png)
+![Voorbeeld van automatisch aanvullen met vraag en antwoord](./images/ai-assistant/auto-complete-two.png)
+
++++
+
+### Meerdere keren gebruiken {#use-multi-turn}
+
++++Selecteren om een voorbeeld van meerdere keren te bekijken
+
+U kunt de multi-boommogelijkheden van Medewerker gebruiken om een natuurlijker gesprek tijdens uw ervaring te hebben. Assistent kan vervolgvragen beantwoorden, gegeven. die context kan worden afgeleid uit een eerdere interactie.
+
+In het onderstaande voorbeeld wordt Assistant gevraagd naar het totale aantal gegevensstromen in de huidige organisatie.
+
+![Voorbeeld van meerdere bochten](./images/ai-assistant/multi-turn-one.png)
+
+Vervolgens ontvangt Assistant een ander vervolgverzoek. Deze keer reageert de assistent door de gegevens weer te geven die momenteel in uw organisatie bestaan.
+
+![Voorbeeld van meerdere keren draaien met vraag en antwoord](./images/ai-assistant/multi-turn-two.png)
 
 +++
 
@@ -195,18 +219,6 @@ U moet zich aanmelden bij een sandbox om informatie te krijgen over specifieke g
 | Object opzoeken | Haal een Experience Platform-object of de eigenschappen ervan op of open het object. | <ul><li>Welke datasets hebben geen schema verbonden aan hen</li><li>De kenmerken weergeven die worden gebruikt voor {SEGMENT_NAME}?</li><li>Geef me de lijst van schema&#39;s die profiel toegelaten zijn maar niet sinds hun verwezenlijking zijn gewijzigd.</li><li>Welke segmenten zijn de afgelopen week gewijzigd?</li><li>Maak een lijst van de segmenten die de zelfde segmentdefinities samen met hun verwezenlijking datum hebben.</li><li>Welke datasets toegelaten profiel zijn en ook omvatten hoeveel segmenten van elke dataset zijn gecreeerd.</li><li>Welke bronrekeningen worden geassocieerd met dataset XYZ?</li><li>De segmentdefinitie en wijzigingsdatum weergeven van {SEGMENT_NAME}.</li></ul> |
 
 +++
-
-## Het antwoord controleren {#verify-the-response}
-
-U kunt de reactie verifiëren die de Medewerker gebruikend een aantal verschillende manieren terugkeert.
-
-### Bijschriften voor documentatie {#citations}
-
-Met elke reactie geeft Assistant citaten waar je naar kunt verwijzen voor verificatie of meer informatie.
-
-Selecteren **[!UICONTROL Show source]** voor een lijst van verbindingen aan documentatie die de Hulpverwijzingen om zijn reactie te berekenen. Wanneer u een koppeling naar de documentatie waarnaar wordt verwezen selecteert, wordt u doorverwezen naar de desbetreffende sectie van die bepaalde pagina, met de specifieke informatie gemarkeerd.
-
-![De verbindingen aan de bron die in de Medewerker wordt getoond.](./images/ai-assistant/show-sources.png)
 
 ## Feedback geven {#feedback}
 
